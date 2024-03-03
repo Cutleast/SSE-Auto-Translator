@@ -1,0 +1,344 @@
+[
+    {
+        "editor_id": "ccMTYSSE001_ArmorKOTNGauntlets",
+        "type": "ARMO FULL",
+        "original": "Gauntlets of the Crusader",
+        "string": "Guanteletes del cruzado"
+    },
+    {
+        "editor_id": "ccMTYSSE001_ArmorKOTNBoots",
+        "type": "ARMO FULL",
+        "original": "Boots of the Crusader",
+        "string": "Botas del cruzado"
+    },
+    {
+        "editor_id": "ccMTYSSE001_ArmorKOTNHelmetReforged",
+        "type": "ARMO FULL",
+        "original": "Reforged Helm of the Crusader",
+        "string": "Yelmo reforjado del cruzado"
+    },
+    {
+        "editor_id": "ccMTYSSE001_ArmorKOTNHelmet",
+        "type": "ARMO FULL",
+        "original": "Helm of the Crusader",
+        "string": "Yelmo del cruzado"
+    },
+    {
+        "editor_id": "ccMTYSSE001_ArmorKOTNCuirass",
+        "type": "ARMO FULL",
+        "original": "Cuirass of the Crusader",
+        "string": "Coraza del cruzado"
+    },
+    {
+        "editor_id": "ccMTYSSE001_ArmorKOTNShieldBack",
+        "type": "ARMO FULL",
+        "original": "Fastened Shield of the Crusader",
+        "string": "Escudo con amarre del cruzado"
+    },
+    {
+        "editor_id": "ccMTYSSE001_ArmorKOTNBootsReforged",
+        "type": "ARMO FULL",
+        "original": "Reforged Boots of the Crusader",
+        "string": "Botas reforjadas del cruzado"
+    },
+    {
+        "editor_id": "ccMTYSSE001_KOTNMace",
+        "type": "WEAP FULL",
+        "original": "Mace of the Crusader",
+        "string": "Maza del cruzado"
+    },
+    {
+        "editor_id": "ccMTYSSE001_ArmorKOTNCuirassReforged",
+        "type": "ARMO FULL",
+        "original": "Reforged Cuirass of the Crusader",
+        "string": "Coraza reforjada del cruzado"
+    },
+    {
+        "editor_id": "ccMTYSSE001_KOTNSword",
+        "type": "WEAP FULL",
+        "original": "Sword of the Crusader",
+        "string": "Espada del cruzado"
+    },
+    {
+        "editor_id": "ccMTYSSE001_ArmorKOTNShield",
+        "type": "ARMO FULL",
+        "original": "Shield of the Crusader",
+        "string": "Escudo del cruzado"
+    },
+    {
+        "editor_id": "ccMTYSSE001_ArmorKOTNGauntletsReforged",
+        "type": "ARMO FULL",
+        "original": "Reforged Gauntlets of the Crusader",
+        "string": "Guanteletes reforjados del cruzado"
+    },
+    {
+        "editor_id": "ccMTYSSE001_EnchShieldWard",
+        "type": "ENCH FULL",
+        "original": "Spellbreaker",
+        "string": "Anulador de hechizos"
+    },
+    {
+        "editor_id": "ccMTYSSE001_EnchArmorCrusaderCuirass",
+        "type": "ENCH FULL",
+        "original": "Divine Crusader Cuirass",
+        "string": "Coraza del cruzado divino"
+    },
+    {
+        "editor_id": "ccMTYSSE001_AbHolyAura",
+        "type": "MGEF FULL",
+        "original": "Holy Aura",
+        "string": "Aura sagrada"
+    },
+    {
+        "editor_id": "ccMTYSSE001_WardEffect",
+        "type": "MGEF FULL",
+        "original": "Ward - Deflection",
+        "string": "Custodia: desv\u00edo"
+    },
+    {
+        "editor_id": "ccMTYSSE001_AbHolyAura",
+        "type": "MGEF DNAM",
+        "original": "10% Armor bonus, and 10% reduced damage from undead while wearing matched set.",
+        "string": "10% de bonificaci\u00f3n de armadura y 10% de da\u00f1o reducido de los no muertos al vestir el conjunto completo."
+    },
+    {
+        "editor_id": "ccMTYSSE001_StartupQuest_Alt",
+        "type": "QUST NNAM",
+        "original": "Obtain the Relics of the Crusader",
+        "string": "Obt\u00e9n las reliquias del cruzado."
+    },
+    {
+        "editor_id": "ccMTYSSE001_StartupQuest_Alt",
+        "type": "QUST FULL",
+        "original": "Relics of the Crusader",
+        "string": "Reliquias del cruzado"
+    },
+    {
+        "editor_id": "ccMTYSSE001_EnchArmorHelm",
+        "type": "ENCH FULL",
+        "original": "Divine Crusader Helm",
+        "string": "Yelmo del cruzado divino"
+    },
+    {
+        "editor_id": "ccMTYSSE001_EnchArmorBoots",
+        "type": "ENCH FULL",
+        "original": "Divine Crusader Boots",
+        "string": "Botas del cruzado divino"
+    },
+    {
+        "editor_id": "ccMTYSSE001_WardEffect",
+        "type": "MGEF DNAM",
+        "original": "While blocking, creates a ward that protects against spells for up to <mag> points.",
+        "string": "Durante el bloqueo, crea una custodia contra los hechizos de hasta <mag> puntos."
+    },
+    {
+        "editor_id": "ccMTYSSE001_Perk_MatchingSet_HolyAura",
+        "type": "PERK FULL",
+        "original": "Holy Aura",
+        "string": "Aura sagrada"
+    },
+    {
+        "editor_id": "ccMTYSSE001_EnchArmorGauntlets",
+        "type": "ENCH FULL",
+        "original": "Divine Crusader Gauntlets",
+        "string": "Guanteletes del cruzado divino"
+    },
+    {
+        "editor_id": "ccMTYSSE001_Spell_MatchingSet_HolyAura",
+        "type": "SPEL FULL",
+        "original": "Holy Aura",
+        "string": "Aura sagrada"
+    },
+    {
+        "editor_id": "ccMTYSSE001_LvlBanditBoss01",
+        "type": "NPC_ FULL",
+        "original": "Oren",
+        "string": "Orenn"
+    },
+    {
+        "editor_id": "ccMTYSSE001_StartupQuest_Alt",
+        "type": "QUST NNAM",
+        "original": "Obtain the Reforged Relics of the Crusader",
+        "string": "Obt\u00e9n las reliquias reforjadas del cruzado."
+    },
+    {
+        "editor_id": "ccMTYSSE001_EnchArmorBoots_Light",
+        "type": "ENCH FULL",
+        "original": "Reforged Divine Crusader Boots",
+        "string": "Botas reforjadas del cruzado divino"
+    },
+    {
+        "editor_id": "ccMTYSSE001_AbHolyAura_Light",
+        "type": "MGEF FULL",
+        "original": "Holy Aura",
+        "string": "Aura sagrada"
+    },
+    {
+        "editor_id": "ccMTYSSE001_EnchArmorHelm_Light",
+        "type": "ENCH FULL",
+        "original": "Reforged Divine Crusader Helm",
+        "string": "Yelmo reforjado del cruzado divino"
+    },
+    {
+        "editor_id": "ccMTYSSE001_EnchArmorCrusaderCuirass_Light",
+        "type": "ENCH FULL",
+        "original": "Reforged Divine Crusader Cuirass",
+        "string": "Coraza reforjada del cruzado divino"
+    },
+    {
+        "editor_id": "ccMTYSSE001_EnchArmorGauntlets_Light",
+        "type": "ENCH FULL",
+        "original": "Reforged Divine Crusader Gauntlets",
+        "string": "Guanteletes reforjados del cruzado divino"
+    },
+    {
+        "editor_id": "ccMTYSSE001_AbHolyAura_Light",
+        "type": "MGEF DNAM",
+        "original": "10% Armor bonus, and 10% reduced damage from undead while wearing matched set.",
+        "string": "10% de bonificaci\u00f3n de armadura y 10% de da\u00f1o reducido de los no muertos al vestir el conjunto completo."
+    },
+    {
+        "editor_id": "ccMTYSSE001_KOTNJournal",
+        "type": "BOOK FULL",
+        "original": "Viparth's Journal",
+        "string": "Diario de Viparth"
+    },
+    {
+        "editor_id": "ccMTYSSE001_CrusaderAbEffect02",
+        "type": "MGEF FULL",
+        "original": "Relics of the Crusader",
+        "string": "Reliquias del cruzado"
+    },
+    {
+        "editor_id": "ccMTYSSE001_CrusaderAbEffect01",
+        "type": "MGEF FULL",
+        "original": "Shrine Pray Reset Effect",
+        "string": "Efecto de restablecimiento por rezar en capilla"
+    },
+    {
+        "editor_id": "ccMTYSSE001_CrusaderShrineNameZenithar",
+        "type": "MESG FULL",
+        "original": "Shrine of Zenithar",
+        "string": "Capilla de Zenithar"
+    },
+    {
+        "editor_id": "ccMTYSSE001_CrusaderShrineNameJulianos",
+        "type": "MESG FULL",
+        "original": "Shrine of Julianos",
+        "string": "Capilla de Julianos"
+    },
+    {
+        "editor_id": "ccMTYSSE001_CrusaderAbEffect04",
+        "type": "MGEF FULL",
+        "original": "Check on Equip",
+        "string": "Comprobar al equipar"
+    },
+    {
+        "editor_id": "ccMTYSSE001_CrusaderShrineNameKynareth",
+        "type": "MESG FULL",
+        "original": "Shrine of Kynareth",
+        "string": "Capilla de Kynareth"
+    },
+    {
+        "editor_id": "ccMTYSSE001_CrusaderShrineNameMara",
+        "type": "MESG FULL",
+        "original": "Shrine of Mara",
+        "string": "Capilla de Mara"
+    },
+    {
+        "editor_id": "ccMTYSSE001_Quest",
+        "type": "QUST NNAM",
+        "original": "Pray at the shrines (<Global=ccMTYSSE001_CrusaderGlobalShrines>/9)",
+        "string": "Reza en las capillas (<Global=ccMTYSSE001_CrusaderGlobalShrines>/9)."
+    },
+    {
+        "editor_id": "ccMTYSSE001_CrusaderShrineNameDibella",
+        "type": "MESG FULL",
+        "original": "Shrine of Dibella",
+        "string": "Capilla de Dibella"
+    },
+    {
+        "editor_id": "ccMTYSSE001_CrusaderAbEffect03",
+        "type": "MGEF FULL",
+        "original": "Check If Armor Equipped",
+        "string": "Comprobar si se lleva armadura"
+    },
+    {
+        "editor_id": "ccMTYSSE001_CrusaderShrineNameStendarr",
+        "type": "MESG FULL",
+        "original": "Shrine of Stendarr",
+        "string": "Capilla de Stendarr"
+    },
+    {
+        "editor_id": "ccMTYSSE001_CrusaderShrineNameArkay",
+        "type": "MESG FULL",
+        "original": "Shrine of Arkay",
+        "string": "Capilla de Arkay"
+    },
+    {
+        "editor_id": "ccMTYSSE001_CrusaderShrineNameTalos",
+        "type": "MESG FULL",
+        "original": "Shrine of Talos",
+        "string": "Capilla de Talos"
+    },
+    {
+        "editor_id": "ccMTYSSE001_ShrineActivator",
+        "type": "ACTI FULL",
+        "original": "Shrine of Akatosh",
+        "string": "Capilla de Akatosh"
+    },
+    {
+        "editor_id": "ccMTYSSE001_Quest",
+        "type": "QUST FULL",
+        "original": "The Pilgrim's Path",
+        "string": "La Senda del Peregrino"
+    },
+    {
+        "editor_id": "ccMTYSSE001_AbilityCrusaderCheck",
+        "type": "SPEL FULL",
+        "original": "Relics of the Crusader",
+        "string": "Reliquias del cruzado"
+    },
+    {
+        "editor_id": "ccMTYSSE001_CrusaderAbEffect02",
+        "type": "MGEF DNAM",
+        "original": "Stamina and health regenerates <300> points more slowly. Carry weight reduced by <mag>.",
+        "string": "El aguante y la salud se regeneran  <300> puntos m\u00e1s lentamente. La capacidad de carga se reduce en <mag>."
+    },
+    {
+        "editor_id": "ccMTYSSE001_StartupQuest_Alt",
+        "type": "QUST CNAM",
+        "original": "I've reclaimed the Relics of the Crusader.",
+        "string": "He recuperado las reliquias del cruzado."
+    },
+    {
+        "editor_id": "ccMTYSSE001_Perk_MatchingSet_HolyAura",
+        "type": "PERK DESC",
+        "original": "Additional 10% Armor bonus, and 10% reduced damage from undead creatures or Daedra if wearing a matched set of Divine Crusader Armor.",
+        "string": "10% de bonificaci\u00f3n de armadura y 10% de da\u00f1o reducido de las criaturas no muertas de Daedra al vestir el conjunto completo de la armadura del cruzado divino."
+    },
+    {
+        "editor_id": "ccMTYSSE001_StartupQuest_Alt",
+        "type": "QUST CNAM",
+        "original": "Bandits have stolen the fabled Relics of the Crusader.  I should find and reclaim them.",
+        "string": "Los bandidos han robado las legendarias reliquias del cruzado. Deber\u00eda buscarlas y recuperarlas."
+    },
+    {
+        "editor_id": "ccMTYSSE001_KOTNJournal",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\nSo the other day me and the boys robbed this caravan full of monks. Real easy, except there wasn't any loot. But one monk, he was a squealing type. Put a knife to his throat and he sang like nirnroot.\n\nThe monk tells us there's a secret compartment in the carriage. We pop it open, and find the shiniest set of weapons and armor I ever laid my eyes upon. The kind you have to squint to look at it. \n\nWhen we got back to camp, first thing I did was try on a boot. Funny thing is, it didn't fit. I swear it was the right size, but Remy laughs and snatches it from me, saying some rubbish about how only real warriors can wear real armor.\n\nExcept jokes on him, they wouldn't fit him neither. Soon the whole crew is trying on the set, but no matter the piece, no matter the size, they can't keep it on. Some manage to get it on for a second, right up until the color goes out of their face.\n\nAnd it ain't just the armor. You try and swing one of the weapons, and you feel sick to your stomach. Like the thing don't want you wielding it.\n\nSo we're all sitting by the campfire, out of ideas, when Orenn, the new blood, gets the idea to have their kin Eigorn try the armor on. Everyone laughs.\n\nThe kid ain't even one of the crew, just some green little bastard who decided to tag along for the raid. Like Orenn, they ain't even killed their first man yet. But lo and behold, the kid tries on a boot, and the damn thing fits.\n\n\"I guess Eigorn's part of the crew now,\" Orenn says, but the pup ain't having it. Turns out, they ain't wanna do the work! They don't even LIKE being a bandit. \n\nSo I tell Orenn, either the kid fights with us, or I cut their throat. I'm about to do it, when Orenn, that bloody traitor, picks up the big shiny mace and nearly clobbers my head off. \n\nLuckily the rest of the crew was there to keep that mace from turning my skull to porridge. But that's when I get the idea to try the armor on Orenn. And by the Nine, it fits that bastard too.\n\nWhich brings us to where we are now. The two of them are following orders, sure, but I don't trust them one bit. It's not just about the armor. Orenn's been talking nonsense for a while now, saying we should let people go like they ain't bloody witnesses, and other bleeding heart shit you just don't do.\n\nRemy pointed out that we just need them to wear the armor, and look all intimidating like. The crew will do the rest. But that ain't gonna cut it. I want to test them. If we get into a fight, I need to know the person standing next to me is willing to kill a man if they have to.\n\nAnd if either of them refuse, we kill them both.</font>",
+        "string": "<font face=\"$HandwrittenFont\">\nEl otro d\u00eda, los chicos y yo robamos la caravana de unos monjes. Fue pan comido, pero no encontramos ning\u00fan bot\u00edn. Eso s\u00ed, hab\u00eda un monje que no paraba de chillar. Le puse un cuchillo en la garganta y cant\u00f3 como una ra\u00edz de nirn.\n\nNos dijo que el carruaje ten\u00eda un compartimiento secreto. Lo abrimos y, en su interior, encontramos la armadura y las armas m\u00e1s radiantes que he visto en mi vida. Tanto, que hab\u00eda que entornar los ojos para mirarlas.\n\nAl volver al campamento, lo primero que hice fue probarme una bota. Y lo curioso es que no me val\u00eda, aunque juro que era de mi talla exacta. Remy se ech\u00f3 a re\u00edr y me la quit\u00f3 diciendo no s\u00e9 qu\u00e9 tonter\u00edas de que las armaduras de verdad son solo para guerreros de verdad.\n\nPero, \u00a1ja!, a \u00e9l tampoco le entraba. Toda la banda lo intent\u00f3, pero ninguna de las piezas le estaba bien a ninguno de ellos. Algunos lograron ponerse alguna durante un momento, pero entonces se les fue todo el color de la cara y tuvieron que quit\u00e1rsela.\n\nY no era solo la armadura. Cuando intentabas esgrimir cualquiera de las armas, se te revolv\u00edan las tripas. Como si no quisieran que las tocases.\n\nConque nos quedamos all\u00ed sentados, alrededor del fuego, sin saber qu\u00e9 hacer, hasta que a Orenn, el nuevo, se le ocurri\u00f3 la idea de que se probase la armadura Eigorn, un pariente suyo. Todos nos mondamos de la risa.\n\nEl chico ni siquiera pertenece a la banda, era solo un manguarri\u00e1n que se nos hab\u00eda juntado para el ataque. Al igual que Orenn, a\u00fan no ha matado a nadie. Pero no te lo pierdas: fue probarse la bota y la condenada le entr\u00f3.\n\n\"Parece que ahora Eigorn forma parte de la banda\", dijo Orenn, pero el cachorro dijo que no. \u00a1Resulta que no le interesa el trabajo! Ni siquiera le gusta ser bandido. \n\nAs\u00ed que le dije a Orenn que, si el ni\u00f1o no luchaba con nosotros, le rajaba el gaznate. Y me dispon\u00eda a hacerlo cuando Orenn, el muy traidor, cogi\u00f3 la enorme maza brillante y casi me revienta la cabeza. \n\nPor suerte, el resto de la banda estaba a mano para impedir que me convirtiese el cr\u00e1neo en unas gachas. Pero entonces se me ocurri\u00f3 la idea de probarle la armadura a Orenn. Y, por los Nueve, al muy gusano s\u00ed que le entr\u00f3.\n\nY as\u00ed es como estamos donde estamos: los dos obedecen las \u00f3rdenes, s\u00ed, pero no me f\u00edo un pelo de ellos. Y no es solo por la armadura. Orenn lleva ya un tiempo diciendo disparates, como que deber\u00edamos dejar que la gente a la que robamos se marche y otras barbaridades que no se hacen.\n\nRemy le ha dicho que solo tiene que llevar la armadura y dar miedo con ella. Que los dem\u00e1s ya nos ocupamos del resto. Pero no lo tengo nada claro. Quiero ponerlos a prueba. Si vamos a meternos en una pelea, necesito saber que quien lucha a mi lado est\u00e1 dispuesto a matar en caso necesario.\n\nY si se niega alguno de los dos, habr\u00e1 que matarlos.</font>"
+    },
+    {
+        "editor_id": "ccMTYSSE001_Quest",
+        "type": "QUST CNAM",
+        "original": "I have committed acts that have made me unfit to wear the Crusader's Relics. I will need to make a pilgrimage to nine shrines in order to repent.",
+        "string": "Por los actos que he cometido, no puedo seguir llevando las Reliquias del cruzado. Debo peregrinar a nueve capillas para expresar mi arrepentimiento."
+    },
+    {
+        "editor_id": "ccMTYSSE001_CrusaderRelicsShrine",
+        "type": "MESG DESC",
+        "original": "Your crimes have made you unfit to wield the Crusader's Relics. Make the pilgrimage to repent your sins and once again seek the favor of the gods.\n",
+        "string": "Debido a tus cr\u00edmenes, no puedes seguir llevando las Reliquias del cruzado. Ve en peregrinaci\u00f3n para arrepentirte de tus pecados y granjearte de nuevo el favor de los dioses.\n"
+    }
+]

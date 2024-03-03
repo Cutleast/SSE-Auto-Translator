@@ -1,0 +1,146 @@
+[
+    {
+        "editor_id": "ccBGSSSE035_NixHoundMeatCooked",
+        "type": "ALCH FULL",
+        "original": "Cooked Nix-Hound Meat",
+        "string": "Carne di nix-hound cotta"
+    },
+    {
+        "editor_id": "ccBGSSSE035_PetGivePlayerItemEffect",
+        "type": "MGEF FULL",
+        "original": "Scrounger Effect",
+        "string": "Effetto Scroccone"
+    },
+    {
+        "editor_id": "ccBGSSSE035_PetAcquireQuest",
+        "type": "QUST NNAM",
+        "original": "Read the Notice of Sale",
+        "string": "Leggi la nota di vendita"
+    },
+    {
+        "editor_id": "ccBGSSSE035_LetterOfSale_Revus",
+        "type": "BOOK FULL",
+        "original": "Notice of Sale - Nix-Hound",
+        "string": "Nota di vendita - Nix-hound"
+    },
+    {
+        "editor_id": "ccBGSSSE035_PetGiveItemAbility",
+        "type": "SPEL FULL",
+        "original": "Scrounger Ability",
+        "string": "Abilit\u00e0 Scroccone"
+    },
+    {
+        "editor_id": "ccBGSSSE035_PetAcquireQuest",
+        "type": "QUST FULL",
+        "original": "My Pet Nix-Hound",
+        "string": "Il mio piccolo nix-hound"
+    },
+    {
+        "editor_id": "ccBGSSSE035_SpellTomeSummonPet",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Teleport Pet Nix-Hound",
+        "string": "Tomo magico: Teletrasporta nix-hound"
+    },
+    {
+        "editor_id": "ccBGSSSE035_LetterOfSale_Geldis",
+        "type": "BOOK FULL",
+        "original": "Notice of Sale - Nix-Hound",
+        "string": "Nota di vendita - Nix-hound"
+    },
+    {
+        "editor_id": "ccBGSSSE035_FoodNixHoundMeat",
+        "type": "ALCH FULL",
+        "original": "Nix-Hound Meat",
+        "string": "Carne di nix-hound"
+    },
+    {
+        "editor_id": "ccBGSSSE035_SummonPetEffect",
+        "type": "MGEF FULL",
+        "original": "Teleport Nix-Hound",
+        "string": "Teletrasporta il nix-hound"
+    },
+    {
+        "editor_id": "ccBGSSSE035_PetAcquireQuest",
+        "type": "QUST NNAM",
+        "original": "Purchase the Nix-Hound",
+        "string": "Acquista il nix-hound"
+    },
+    {
+        "editor_id": "ccBGSSSE035_SummonPetEffect",
+        "type": "MGEF DNAM",
+        "original": "Teleports Nix-Hound",
+        "string": "Teletrasporta il nix-hound"
+    },
+    {
+        "editor_id": "ccBGSSSE035_EncNixHoundEnemy",
+        "type": "NPC_ FULL",
+        "original": "Nix-Hound",
+        "string": "Nix-hound"
+    },
+    {
+        "editor_id": "ccBGSSSE035_PetAcquireQuest",
+        "type": "QUST NNAM",
+        "original": "Meet the Nix-Hound",
+        "string": "Incontra il nix-hound"
+    },
+    {
+        "editor_id": "ccBGSSSE035_SummonPetSpell",
+        "type": "SPEL FULL",
+        "original": "Teleport Pet: Nix-Hound",
+        "string": "Teletrasporta animale: nix-hound"
+    },
+    {
+        "editor_id": "ccBGSSSE035_LetterOfSale_Revus",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>To Whom It May Concern,\n\nIn recent years, Nix-Hounds have been slowly repopulating the island of Solstheim.  Though quite dangerous when encountered in the wild, I've learned to tame them.  They make a good pet, and can even help take some of the load off your back during your travels.\n\nI currently have one for sale.  Please see me if you are interested.\n\nSigned,\nRevus Sarvani\n</font>",
+        "string": "<font face='$HandwrittenFont'>A chiunque possa interessare,\n\nrecentemente i nix-hound hanno lentamente ripopolato l'isola di Solstheim. Sebbene siano molto pericolosi se incontrati allo stato brado, ho trovato il modo di addomesticarli. Sono brave bestie e possono perfino trasportare parte del carico del padrone durante gli spostamenti.\n\nAttualmente ne ho uno in vendita. Se pu\u00f2 interessare, contattatemi.\n\nFirmato:\nRevus Sarvani\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE035_MSGPetFoundItem",
+        "type": "MESG DESC",
+        "original": "Nix-Hound found something...",
+        "string": "Il nix-hound ha trovato qualcosa..."
+    },
+    {
+        "editor_id": "ccBGSSSE035_PetAcquireQuest",
+        "type": "QUST CNAM",
+        "original": "I've purchased a tamed Nix-Hound on Solstheim.  I can bring it with me, ask it to carry items, or send it to any of my homes.",
+        "string": "Ho comprato un nix-hound addomesticato a Solstheim. Pu\u00f2 accompagnarmi e posso chiedergli di portare le mie cose oppure di raggiungere una delle mie abitazioni."
+    },
+    {
+        "editor_id": "ccBGSSSE035_SpellTomeSummonPet",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nTeleport Pet: Nix-Hound",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nTeletrasporta animale: nix-hound"
+    },
+    {
+        "editor_id": "ccBGSSSE035_LetterOfSale_Geldis",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>To Whom It May Concern,\n\nIn recent years, Nix-Hounds have been slowly repopulating the island of Solstheim.  Though quite dangerous when encountered in the wild, Revus Sarvani had learned to tame them.  His unfortunate passing has left him with an orphaned tamed Nix-Hound, which I am selling on his behalf.\n\nThey make a good pet, and can even help take some of the load off your back during your travels.\n\nPlease see me at the Retching Netch in Raven Rock if you are interested.\n\nSigned,\nGeldis Sadri\nThe Retching Netch Corner Club\n</font>",
+        "string": "<font face='$HandwrittenFont'>A chiunque possa interessare,\n\nrecentemente i nix-hound hanno lentamente ripopolato l'isola di Solstheim. Sebbene siano molto pericolosi se incontrati allo stato brado, Revus Sarvani ha trovato il modo di addomesticarli. La sua dipartita ha lasciato orfano un nix-hound ormai abituato all'uomo, e che ho l'incarico di vendere.\n\nSono brave bestie e possono perfino trasportare parte del carico del padrone durante gli spostamenti.\n\nIncontriamoci al Conato Volante di Roccia del corvo, se interessati.\n\nFirmato:\nGeldis Sadri\nLa taverna del Conato Volante\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE035_PetAcquireQuest",
+        "type": "QUST CNAM",
+        "original": "I've purchased a tamed Nix-Hound.  I should meet it and bring it with me.",
+        "string": "Ho comprato un nix-hound addomesticato. Dovrei incontrarlo e portarlo con me."
+    },
+    {
+        "editor_id": "ccBGSSSE035_PetAcquireQuest",
+        "type": "QUST CNAM",
+        "original": "A tamed Nix-Hound is for sale on Solstheim, which could be useful to me.  I should consider purchasing it.",
+        "string": "A Solstheim c'\u00e8 un nix-hound in vendita. Potrebbe essermi utile. Dovrei considerarne l'acquisto."
+    },
+    {
+        "editor_id": "ccBGSSSE035_PetAcquireQuest",
+        "type": "QUST CNAM",
+        "original": "I've received a Notice of Sale from Solstheim.  I should read it and see what it's about.",
+        "string": "Ho ricevuto una nota di vendita da Solstheim. Dovrei leggerla e scoprire di che si tratta."
+    },
+    {
+        "editor_id": "ccBGSSSE035_MSGNotEnoughGold",
+        "type": "MESG DESC",
+        "original": "You do not have enough gold to purchase the Nix-Hound.",
+        "string": "Non hai abbastanza oro per comprare il nix-hound."
+    }
+]

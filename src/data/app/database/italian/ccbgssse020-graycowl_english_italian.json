@@ -1,0 +1,494 @@
+[
+    {
+        "editor_id": "ccBGSSSE020ArmorGrayCowl",
+        "type": "ARMO FULL",
+        "original": "Gray Cowl of Nocturnal",
+        "string": "Cappa grigia di Nocturnal"
+    },
+    {
+        "editor_id": "ccBGSSSE020FakeDeedActivator",
+        "type": "ACTI RNAM",
+        "original": "Place Deed",
+        "string": "Posiziona atto"
+    },
+    {
+        "editor_id": "ccBGSSSE020_DetectLifeEnemyInteriorConcSelf",
+        "type": "MGEF FULL",
+        "original": "Detect Life Enemy Interior",
+        "string": "Individuazione vitale nemico interno"
+    },
+    {
+        "editor_id": "ccBGSSSE020_DialoguePostQuest",
+        "type": "QUST FULL",
+        "original": "Dialogue Block",
+        "string": "Blocco dialoghi"
+    },
+    {
+        "editor_id": "ccBGSSSE020_DetectLifeEnemyExteriorConcSelf",
+        "type": "MGEF FULL",
+        "original": "Detect Life Enemy Exterior",
+        "string": "Individuazione vitale nemico esterno"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "Check the barrel for further instructions",
+        "string": "Controlla la botte per ulteriori istruzioni"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "Pick up the forged deed",
+        "string": "Raccogli l'atto contraffatto"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "(Optional) Search Nivenor's corpse for the strongbox key",
+        "string": "(Facoltativo) Perquisisci il cadavere di Nivenor in cerca della chiave del forziere"
+    },
+    {
+        "editor_id": "ccBGSSSE020FakeDeedActivator",
+        "type": "ACTI FULL",
+        "original": "Dresser",
+        "string": "Cassettone"
+    },
+    {
+        "editor_id": "ccBGSSSE020_DetectLifeBaseEffect",
+        "type": "MGEF FULL",
+        "original": "Detect Life Base",
+        "string": "Individuazione vitale base"
+    },
+    {
+        "editor_id": "ccBGSSSE020_WIThief",
+        "type": "NPC_ FULL",
+        "original": "Thief",
+        "string": "Ladro"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Note01",
+        "type": "BOOK FULL",
+        "original": "Thief's Note",
+        "string": "Nota del ladro"
+    },
+    {
+        "editor_id": "ccBGSSSE020_BYOHChildrensDoll",
+        "type": "MISC FULL",
+        "original": "Antique Nordic Doll",
+        "string": "Antica bambola nord"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the Stranger's Final Instructions",
+        "string": "Leggi le istruzioni finali dello straniero"
+    },
+    {
+        "editor_id": "ccBGSSSE020_DetectLife",
+        "type": "SPEL FULL",
+        "original": "Detect Life",
+        "string": "Individuazione vitale"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Note04",
+        "type": "BOOK FULL",
+        "original": "The Sword of Clan Ice-Blade",
+        "string": "La spada del clan delle Blade di ghiaccio"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "Speak the code phrase to a beggar",
+        "string": "Recita la frase in codice a una mendicante"
+    },
+    {
+        "editor_id": "ccBGSSSE020_DetectLifeFriendExteriorConcSelf",
+        "type": "MGEF FULL",
+        "original": "Detect Life Friend Exterior",
+        "string": "Individuazione vitale amico esterno"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Note07",
+        "type": "BOOK FULL",
+        "original": "Stranger's Final Instructions",
+        "string": "Istruzioni finali dello straniero"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Note06",
+        "type": "BOOK FULL",
+        "original": "Stranger's Final Instructions",
+        "string": "Istruzioni finali dello straniero"
+    },
+    {
+        "editor_id": "ccBGSSSE020_DetectLifeBaseEffectAbility",
+        "type": "MGEF FULL",
+        "original": "Detect Life Base",
+        "string": "Individuazione vitale base"
+    },
+    {
+        "editor_id": "ccBGSSSE020_LandDeedTitleFAKE",
+        "type": "MISC FULL",
+        "original": "Forged Deed",
+        "string": "Atto contraffatto"
+    },
+    {
+        "editor_id": "ccBGSSSE020_StrangerNPC",
+        "type": "NPC_ FULL",
+        "original": "Stranger",
+        "string": "Straniero"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "Obtain the Ancestral Sword",
+        "string": "Ottieni la spada ancestrale"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Note02",
+        "type": "BOOK FULL",
+        "original": "Stranger's Note",
+        "string": "Nota dello straniero"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST FULL",
+        "original": "The Gray Cowl of Nocturnal",
+        "string": "La Cappa grigia di Nocturnal"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "Place the forged deed on the dresser",
+        "string": "Posiziona l'atto contraffatto sul cassettone"
+    },
+    {
+        "editor_id": "ccBGSSSE020_BoyChild",
+        "type": "NPC_ FULL",
+        "original": "Smaref Ice-Blade",
+        "string": "Smaref Blade di ghiaccio"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "(Optional) Find the key on the corpse with the lantern",
+        "string": "(Facoltativo) Trova la chiave sul cadavere con la lanterna"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "(Optional) Persuade or purchase the deed from Gisli",
+        "string": "(Facoltativo) Acquista l'atto da Gisli o persuadila a dartelo"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "(Optional) Investigate Erikur's House",
+        "string": "(Facoltativo) Indaga presso la casa di Erikur"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "Steal the land deed from Gisli",
+        "string": "Ruba l'atto di propriet\u00e0 da Gisli"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "Search the thief's body",
+        "string": "Perquisisci il corpo del ladro"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the Stranger's Instructions",
+        "string": "Leggi le istruzioni dello straniero"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the Stranger's Note",
+        "string": "Leggi la nota dello straniero"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "Retrieve the instructions from Bolli's House",
+        "string": "Recupera le istruzioni da casa di Bolli"
+    },
+    {
+        "editor_id": "ccBGSSSE020_SkullsEyeKey",
+        "type": "KEYM FULL",
+        "original": "Silverdrift Chest Key",
+        "string": "Chiave del baule di Silverdrift"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "(Optional) Convince Nivenor to give you her keys",
+        "string": "(Facoltativo) Convinci Nivenor a darti le chiavi"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the thief's note",
+        "string": "Leggi la nota del ladro"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "Travel to the cemetery in Riften",
+        "string": "Raggiungi il cimitero di Riften"
+    },
+    {
+        "editor_id": "ccBGSSSE020_GFJournal",
+        "type": "BOOK FULL",
+        "original": "Stranger's Journal",
+        "string": "Diario dello straniero"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "Meet the Stranger at the tomb of the Gray Fox",
+        "string": "Incontra lo straniero alla tomba della Volpe Grigia"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Note05",
+        "type": "BOOK FULL",
+        "original": "Stranger's Instructions",
+        "string": "Istruzioni dello straniero"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Note03",
+        "type": "BOOK FULL",
+        "original": "Letter to Gisli",
+        "string": "Lettera a Gisli"
+    },
+    {
+        "editor_id": "ccBGSSSE020_NivenorJournal",
+        "type": "BOOK FULL",
+        "original": "Nivenor's Journal",
+        "string": "Diario di Nivenor"
+    },
+    {
+        "editor_id": "ccBGSSSE020_EnchGrayCowl",
+        "type": "ENCH FULL",
+        "original": "Fortify Sneak",
+        "string": "Fortifica Furtivit\u00e0"
+    },
+    {
+        "editor_id": "ccBGSSSE020_LandDeedTitleREAL",
+        "type": "MISC FULL",
+        "original": "Land Title and Deed",
+        "string": "Titolo fondiario e atto"
+    },
+    {
+        "editor_id": "ccBGSSSE020_DetectLifeFriendInteriorConcSelf",
+        "type": "MGEF FULL",
+        "original": "Detect Life Friend Interior",
+        "string": "Individuazione vitale amico interno"
+    },
+    {
+        "editor_id": "ccBGSSSE020_StrongboxKey",
+        "type": "KEYM FULL",
+        "original": "Nivenor's Strongbox Key",
+        "string": "Chiave del forziere di Nivenor"
+    },
+    {
+        "editor_id": "ccBGSSSE020_DetectLifeBaseEffect",
+        "type": "MGEF DNAM",
+        "original": "Nearby living creatures, but not undead, machines or daedra, can be seen through walls. Turns guards hostile.",
+        "string": "Le creature viventi nelle vicinanze, a eccezione di non-morti, daedra o automi, sono visibili attraverso i muri. Le guardie diventano ostili."
+    },
+    {
+        "editor_id": "ccBGSSSE020_DetectLifeBaseEffectAbility",
+        "type": "MGEF DNAM",
+        "original": "Nearby living creatures, but not undead, machines or daedra, can be seen through walls. Turns guards hostile.",
+        "string": "Le creature viventi nelle vicinanze, a eccezione di non-morti, daedra o automi, sono visibili attraverso i muri. Le guardie diventano ostili."
+    },
+    {
+        "editor_id": "ccBGSSSE020_EnchTurnUndeadFFContact",
+        "type": "MGEF FULL",
+        "original": "Clan Ice-Blade Enchantment",
+        "string": "Incantamento del clan delle Blade di ghiaccio"
+    },
+    {
+        "editor_id": "ccBGSSSE020_NameDisplay",
+        "type": "MESG FULL",
+        "original": "Pjofr Ice-Blade",
+        "string": "Pjofr Blade di ghiaccio"
+    },
+    {
+        "editor_id": "ccBGSSSE020_DLC2NordicSword",
+        "type": "WEAP FULL",
+        "original": "Ancestral Sword of Clan Ice-Blade",
+        "string": "Spada ancestrale del clan delle Blade di ghiaccio"
+    },
+    {
+        "editor_id": "ccBGSSSE020_DetectLifeFollower",
+        "type": "SPEL FULL",
+        "original": "Detect Life",
+        "string": "Individuazione vitale"
+    },
+    {
+        "editor_id": "ccBGSSSE020_DetectLifeFriendExteriorConcSelf_Guard",
+        "type": "MGEF FULL",
+        "original": "Detect Life Guard Exterior",
+        "string": "Individuazione vitale guardia esterno"
+    },
+    {
+        "editor_id": "ccBGSSSE020_DetectLifeFriendExteriorConcSelf_Follower",
+        "type": "MGEF FULL",
+        "original": "Detect Life Follower",
+        "string": "Individuazione vitale seguace"
+    },
+    {
+        "editor_id": "ccBGSSSE020_DetectLifeBackup",
+        "type": "SPEL FULL",
+        "original": "Detect Life",
+        "string": "Individuazione vitale"
+    },
+    {
+        "editor_id": "SilverdriftLair01",
+        "type": "CELL FULL",
+        "original": "Silverdrift Lair",
+        "string": "Tana di Silverdrift"
+    },
+    {
+        "editor_id": "SolitudeErikursHouse",
+        "type": "CELL FULL",
+        "original": "Erikur's House",
+        "string": "Casa di Erikur"
+    },
+    {
+        "editor_id": "RiftenBollisHouse",
+        "type": "CELL FULL",
+        "original": "Bolli's House",
+        "string": "Casa di Bolli"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST CNAM",
+        "original": "At the Riften cemetery, I found a thief loitering near a tombstone. On his body was a note that mentioned the Gray Fox was dead, and his cowl was to be passed on to a new owner. I spoke to a beggar who handed me a note informing me of a job. But first I must find a way into a strongbox in Bolli's House.",
+        "string": "Al cimitero di Riften ho trovato un ladro che rovistava vicino a una lapide. Sul suo corpo ho trovato una nota che diceva che la Volpe Grigia era morta e la sua cappa doveva trovare un nuovo padrone. Ho parlato con una mendicante che mi ha passato una nota che parlava di un lavoro. Prima devo trovare il modo di aprire un forziere a casa di Bolli."
+    },
+    {
+        "editor_id": "ccBGSSSE020_GFJournal",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\nThe curse of the Gray Cowl is said to strip you of your identity, wiping you from all of recorded history. \n\nBut the curse was broken long ago. The truth is, it wasn't Nocturnal that robbed me of my life. It was my selfishness.\n\nI wore the cowl out of pure greed. I left my family because I loved only myself.\n\nThen my sister passed, leaving her son an orphan. The last of the Ice-Blades, heir to a fortune, and easy prey for the wolves.\n\nWith the boy in danger, it's time I took responsibility as the head of this clan. But if I'm to be his father, I have to stop being a stranger. I must pass the cowl onto another, and in doing so, the Gray Fox must die. \n\nUntil then, I come to this grave every night bringing flowers, to ask my sister for forgiveness.</font>",
+        "string": "<font face=\"$HandwrittenFont\">\nSi dice che la maledizione della Cappa grigia ti strappi via l'identit\u00e0, cancellandoti da qualsiasi documento scritto. \n\nMa la maledizione \u00e8 stata interrotta tanto tempo fa. La verit\u00e0 \u00e8 che non \u00e8 stata Nocturnal a sottrarmi la vita. \u00c8 stato il mio egoismo.\n\nHo indossato la cappa per avidit\u00e0. Ho abbandonato la mia famiglia perch\u00e9 pensavo solo a me stesso.\n\nPoi mia sorella \u00e8 morta, lasciando solo suo figlio. L'ultimo delle Blade di ghiaccio, unico erede di una vera fortuna e facile preda dei lupi.\n\nCon il ragazzo in pericolo, \u00e8 arrivato il momento di prendermi le mie responsabilit\u00e0 come capo del clan. Ma se dovr\u00f2 fargli da padre, non potr\u00f2 pi\u00f9 essere uno straniero. Devo passare la cappa a qualcun altro e, per farlo, la Volpe Grigia deve morire. \n\nFino ad allora, porter\u00f2 dei fiori su questa tomba ogni giorno, nel tentativo di farmi perdonare da mia sorella.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST CNAM",
+        "original": "At the Riften cemetery, I found a thief loitering near a tombstone. On his body was a note that mentioned the Gray Fox was dead, and his cowl was to be passed on to a new owner. I should speak to a beggar and try to learn more.",
+        "string": "Al cimitero di Riften ho trovato un ladro che rovistava vicino a una lapide. Sul suo corpo ho trovato una nota che diceva che la Volpe Grigia era morta e la sua cappa doveva trovare un nuovo padrone. Dovrei parlare con una mendicante per saperne di pi\u00f9."
+    },
+    {
+        "editor_id": "ccBGSSSE020_Note06",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\nYou're good. For whatever reason, picking her pocket was not an option, so you found another way.\n\nNow you'll need to put those skills to the test and more. In Silverdrift Lair is a tomb that houses an ancient Nord clan. Near a large chest is a corpse with a lantern, its candle still burning. It holds a key. \n\nWhen you have the key, open the chest and you'll find a sword that can raise the dead. \n\nWhen you find it, bring it to the grave of the Gray Fox in Riften. It's a small, unmarked headstone on the east side of the cemetery. Complete the task, and maybe you'll even get to meet him.\n\n-- A Stranger",
+        "string": "<font face=\"$HandwrittenFont\">\nSei abile. Per qualche motivo non hai potuto borseggiarla, ma hai trovato un altro modo.\n\nAdesso le tua abilit\u00e0 verranno messe alla prova ancor di pi\u00f9. Alla Tana di Silverdrift c'\u00e8 una tomba che ospita un antico clan nord. Vicino a un grande baule c'\u00e8 un cadavere con una lanterna e la candela ancora accesa. L\u00ec troverai una chiave. \n\nQuando avrai trovato la chiave, apri il baule e troverai una spada capace di risvegliare i morti. \n\nQuando la trovi, portala alla tomba della Volpe Grigia a Riften. \u00c8 una piccola lapide senza nome nella parte orientale del cimitero. Completa l'incarico e forse riuscirai a incontrarla.\n\n-- Uno straniero"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST CNAM",
+        "original": "At the Riften cemetery, I found a thief loitering near a tombstone. On his body was a note that mentioned the Gray Fox was dead, and his cowl was to be passed on to a new owner. I spoke to a beggar who handed me a note informing me of a job. I managed to find further instructions in a strongbox at Bolli's house.",
+        "string": "Al cimitero di Riften ho trovato un ladro che rovistava vicino a una lapide. Sul suo corpo ho trovato una nota che diceva che la Volpe Grigia era morta e la sua cappa doveva trovare un nuovo padrone. Ho parlato con una mendicante che mi ha passato una nota che parlava di un lavoro. Sono riuscito a trovare altre informazioni in un forziere a casa di Bolli."
+    },
+    {
+        "editor_id": "ccBGSSSE020_Note01",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"17\">\nThe Fox told me he wore the cowl to forget himself, and start a new life.\n\nYet I'm the one who can't remember. Every time we meet, he's a stranger to me. Or was it a she? \n\nIt doesn't matter. I spoke his words to a beggar, told her \"Shadow hide you.\" She slipped me a note that confirms my suspicions. The Gray Fox is dead. And now that I've seen his headstone, I know for a fact his time is over, and the cowl will be passed on.\n\nI'm gonna be the next one to wear it. And when I do, I'll become so rich I won't need any memories. I'll just buy new ones.",
+        "string": "<font face=\"$HandwrittenFont\" size=\"17\">\nLa Volpe mi ha detto che ha indossato la cappa per dimenticarsi di s\u00e9 stesso, per iniziare una nuova vita.\n\nEppure sono io a non ricordare. Ogni volta che ci incontriamo, per me \u00e8 come uno straniero. O forse \u00e8 una straniera? \n\nNon importa. Ho riferito le sue parole a una mendicante, le ho detto: \"Le ombre ti nascondono\". Lei mi ha passato una nota che conferma i miei sospetti. La Volpe Grigia \u00e8 morta. E ora che ho visto la sua lapide, so per certo che questa volta \u00e8 finita e la cappa trover\u00e0 un nuovo padrone.\n\nSar\u00f2 io a indossarla. E quando lo far\u00f2, diventer\u00f2 talmente ricco che i ricordi non mi serviranno. Ne comprer\u00f2 di nuovi."
+    },
+    {
+        "editor_id": "ccBGSSSE020_NivenorJournal",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\nI've always despised my husband's charity, but at least it was just coin. Then he let that stranger into our home for dinner.\n\nHe was an odd sort, prone to forgetfulness and a wandering eye. I wasn't sure if he was staring at my bosom or the amulet around my neck, but stare he did. It wasn't entirely unwelcome, but I wasn't about to flirt in front of my husband.\n\nBesides, it turns out he wasn't staring at me at all. He actually wanted to know about the creepy doll behind me, and asked if I was expecting. \n\nI told him I wasn't, and the doll was for one of Bolli's charity cases. Erikur in Solitude asked us to take in a child for reasons that are beyond me. I told Bolli I wanted nothing to do with the urchin, but my husband is stubborn when it comes to his bleeding heart. \n\nLuckily, a few days after the dinner, the boy just disappeared, and I know better than to care.</font>",
+        "string": "<font face=\"$HandwrittenFont\">\nSono sempre stata contraria agli atti benefici di mio marito, ma finora si era trattato solo di soldi. Poi ha invitato quello straniero a casa per cena.\n\nEra un tipo strano, sembrava avere problemi di memoria ma l'occhio vispo. Non capivo se mi fissava il seno o l'amuleto che portavo al collo, ma qualcosa fissava. Le sue attenzioni non erano del tutto sgradite, ma certamente non potevo mettermi a fare la civetta davanti a mio marito.\n\nAlla fine si scopre che non stava guardando affatto me. Voleva informazioni su una bambolina raccapricciante alle mie spalle e mi ha chiesto se ero incinta. \n\nGli ho detto di no e che la bambola era per una delle iniziative benefiche di Bolli. Erikur, a Solitude, ci ha chiesto di occuparci di un bambino per ragioni a me sconosciute. Ho detto a Bolli che non volevo essere coinvolta, ma mio marito \u00e8 molto testardo quando si tratta di queste cose. \n\nFortunatamente, pochi giorni dopo la cena, il ragazzo \u00e8 scomparso e non voglio sapere dov'\u00e8 finito.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST CNAM",
+        "original": "It's rumored that the Gray Fox is buried in the cemetery in Riften. If so, he may have been buried with his cowl. At the cemetery, I found a thief loitering near a tombstone. On his body was a note.",
+        "string": "Si dice che la Volpe Grigia sia sepolta nel cimitero di Riften. Se fosse vero, potrebbe essere stata sepolta con la sua cappa. Al cimitero ho trovato un ladro che rovistava vicino a una lapide. Sul suo corpo ho trovato una nota."
+    },
+    {
+        "editor_id": "ccBGSSSE020_Note02",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\"><font face=\"$HandwrittenFont\" size=\"19\">\nYou're here about a job.\n\nYou don't know what it's for, but I'm sure you're intrigued. It's all right, you don't need to know everything just yet. \n\nThere's a strongbox in Bolli's house, placed on a dresser next to his bed. Find a way to crack it open. Your instructions for the job are inside.\n\n-- A Stranger",
+        "string": "<font face=\"$HandwrittenFont\"><font face=\"$HandwrittenFont\" size=\"19\">\nSei qui per un lavoro.\n\nNon sai di che si tratta, ma sicuramente ti intriga. Va bene cos\u00ec, non \u00e8 ancora il momento di sapere tutto. \n\nC'\u00e8 un forziere a casa di Bolli, in un cassettone vicino al suo letto. Trova un modo per aprirlo. L\u00ec troverai le istruzioni per il tuo lavoro.\n\n-- Uno straniero"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST CNAM",
+        "original": "It's rumored that the Gray Fox is buried in the cemetery in Riften. If so, he may have been buried with his cowl. At the cemetery, I found a thief loitering near a tombstone.",
+        "string": "Si dice che la Volpe Grigia sia sepolta nel cimitero di Riften. Se fosse vero, potrebbe essere stata sepolta con la sua cappa. Al cimitero ho trovato un ladro che rovistava vicino a una lapide."
+    },
+    {
+        "editor_id": "ccBGSSSE020_Note03",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\nConstruction on the port east of Jehanna has been approved and will begin once the transfer of land is official. The boy's consent should suffice, as the head of the Ice-Blade clan has long been absent and the mother has taken ill, per your brother's instruction.\n\nThe deed is enclosed with this letter. Sending the boy to Riften before he's old enough to grasp what happened is a good idea. Not the orphanage though. It's best he live in comfort lest he suspect our motives.\n\nStill, it's a dangerous gambit, made more complicated should the rightful heir return. Your brother would kill me for saying this, but if you have the chance, it may be worth selling the venture for the right price. This has been more trouble than it's worth.\n\n-- M",
+        "string": "<font face=\"$HandwrittenFont\">\nLa costruzione al porto est di Jehanna \u00e8 stata approvata e inizier\u00e0 una volta che il passaggio di propriet\u00e0 sar\u00e0 ufficiale. Il consenso del ragazzo dovrebbe essere sufficiente vista la lunga assenza del capo del clan e la malattia della madre, come da istruzioni di tuo fratello.\n\nL'atto \u00e8 allegato a questa lettera. Mandare il ragazzo a Riften prima che sia abbastanza grande da capire cosa \u00e8 successo \u00e8 una buona idea. Non in un orfanotrofio per\u00f2. \u00c8 meglio che viva una vita agiata, cos\u00ec non sospetter\u00e0 di noi.\n\nResta comunque un azzardo, ancor pi\u00f9 complicato se dovesse tornare l'erede legittimo. Tuo fratello mi ucciderebbe se sapesse che te l'ho detto, ma se ne hai la possibilit\u00e0 forse ti converrebbe vendere tutto al prezzo giusto. Abbiamo avuto pi\u00f9 problemi di quanto ci aspettassimo.\n\n-- M"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST CNAM",
+        "original": "At the Riften cemetery, I found a thief loitering near a tombstone. On his body was a note that mentioned the Gray Fox was dead, and his cowl was to be passed on to a new owner. After some trials, I met with the Stranger who revealed himself to be the real Gray Fox. After some brief words, he handed me the Gray Cowl as a reward and left the city with a young child.",
+        "string": "Al cimitero di Riften ho trovato un ladro che rovistava vicino a una lapide. Sul suo corpo ho trovato una nota che diceva che la Volpe Grigia era morta e la sua cappa doveva trovare un nuovo padrone. Dopo alcune prove, ho incontrato uno straniero che si \u00e8 rivelato essere la Volpe Grigia in persona. Dopo un breve scambio di battute, mi ha dato la cappa grigia come ricompensa e ha lasciato la citt\u00e0 insieme a un bambino."
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST CNAM",
+        "original": "At the Riften cemetery, I found a thief loitering near a tombstone. On his body was a note that mentioned the Gray Fox was dead, and his cowl was to be passed on to a new owner. To prove my worth, I retrieved a note in a strongbox that had details on a job in Solitude. I finished the job and received further instructions to retrieve an ancestral item in Silverdrift Lair.",
+        "string": "Al cimitero di Riften ho trovato un ladro che rovistava vicino a una lapide. Sul suo corpo ho trovato una nota che diceva che la Volpe Grigia era morta e la sua cappa doveva trovare un nuovo padrone. Per provare il mio valore, ho recuperato una nota in un forziere che parlava di un lavoro a Solitude. Ho completato il lavoro e ho ricevuto ulteriori istruzioni per recuperare un oggetto ancestrale alla Tana di Silverdrift."
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST CNAM",
+        "original": "At the Riften cemetery, I found a thief loitering near a tombstone. On his body was a note that mentioned the Gray Fox was dead, and his cowl was to be passed on to a new owner. After some investigating, I found a note in a strongbox that has details on a job in Solitude. If I perform the task in question, I may be rewarded.",
+        "string": "Al cimitero di Riften ho trovato un ladro che rovistava vicino a una lapide. Sul suo corpo ho trovato una nota che diceva che la Volpe Grigia era morta e la sua cappa doveva trovare un nuovo padrone. Dopo aver indagato, ho recuperato una nota in un forziere che parlava di un lavoro a Solitude. Se completo l'incarico potrei ricevere una ricompensa."
+    },
+    {
+        "editor_id": "ccBGSSSE020_Note07",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\nYou're good. You picked her pockets clean and made the switch. \n\nNow you'll need to put those skills to the test and more. In Silverdrift Lair is a tomb that houses an ancient Nord clan. Near a large chest is a corpse with a lantern, its candle still burning. It holds a key.\n\nWhen you have the key, open the chest and you'll find a sword that can raise the dead. \n\nWhen you find it, bring it to the grave of the Gray Fox in Riften. It's a small, unmarked headstone on the east side of the cemetery. Complete the task, and maybe you'll even get to meet him.\n\n-- A Stranger",
+        "string": "<font face=\"$HandwrittenFont\">\nSei abile. L'hai borseggiata e hai effettuato lo scambio. \n\nAdesso le tua abilit\u00e0 verranno messe alla prova ancor di pi\u00f9. Alla Tana di Silverdrift c'\u00e8 una tomba che ospita un antico clan nord. Vicino a un grande baule c'\u00e8 un cadavere con una lanterna e la candela ancora accesa. L\u00ec troverai una chiave.\n\nQuando avrai trovato la chiave, apri il baule e troverai una spada capace di risvegliare i morti. \n\nQuando la trovi, portala alla tomba della Volpe Grigia a Riften. \u00c8 una piccola lapide senza nome nella parte orientale del cimitero. Completa l'incarico e forse riuscirai a incontrarla.\n\n-- Uno straniero"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Note05",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\nYou've made it this far, which proves you're ready for the real work.\n\nBut first, let's go over why you're here. You may have heard the Gray Fox is dead. It's true. But the Fox lives on in the one who wears the cowl. This job will tell me if that person is you.\n\nWho am I? That's not important. Just a stranger who wants to see the cowl passed on to someone who deserves it.\n\nAs you might expect, the job won't be easy. It requires fast thinking and fast fingers. But get it done, and you'll be worthy of being the next Gray Fox.\n\nTake the forged deed in the strongbox, then find a woman named Gisli in Solitude. On her should be the real document. You'll relieve her of this burden, then place the fake in Erikur's House. She'll think she misplaced it.\n\nWhen the job is done, find the barrel behind the Winking Skeever for further instructions.\n\n-- A Stranger",
+        "string": "<font face=\"$HandwrittenFont\">\nSei arrivato fin qui, quindi sei pronto per il vero lavoro.\n\nMa prima, parliamo del perch\u00e9 sei qui. Probabilmente avrai sentito dire che la Volpe Grigia \u00e8 morta. \u00c8 vero. Ma la Volpe vive in colui che indossa la cappa. Questo lavoro mi dir\u00e0 se questa persona puoi essere tu.\n\nChi sono? Non \u00e8 importante. Solo uno straniero che vuole vedere la cappa indosso a qualcuno che se la merita.\n\nCome avrai gi\u00e0 capito, il lavoro non sar\u00e0 semplice. Dovrai avere dita e mente agili. Ma se ci riuscirai, sarai degno di essere la prossima Volpe Grigia.\n\nPrendi l'atto contraffatto dal forziere, poi trova una donna di nome Gisli a Solitude. Lei ha il documento originale. Sottraile questo fardello e posiziona il falso a casa di Erikur. Lei penser\u00e0 di averlo messo fuori posto.\n\nQuando avrai finito, trova la botte dietro lo Skeever Ammiccante per ricevere ulteriori istruzioni.\n\n-- Uno straniero"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST CNAM",
+        "original": "At the Riften cemetery, I found a thief loitering near a tombstone. On his body was a note that mentioned the Gray Fox was dead, and his cowl was to be passed on to a new owner. To prove my worth, I underwent a series of trials to retrieve items for a Stranger. Having found them all, I must now return to Riften so I can hand it and the deed over at the grave of the Gray Fox.",
+        "string": "Al cimitero di Riften ho trovato un ladro che rovistava vicino a una lapide. Sul suo corpo ho trovato una nota che diceva che la Volpe Grigia era morta e la sua cappa doveva trovare un nuovo padrone. Per provare il mio valore, ho intrapreso una serie di prove per recuperare degli oggetti per uno straniero. Avendoli trovati tutti, devo tornare al cimitero di Riften per consegnarli insieme all'atto alla tomba della Volpe Grigia."
+    },
+    {
+        "editor_id": "ccBGSSSE020_Note04",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\nTo my descendants,\n\nThe ancestral sword of Clan Ice-Blade has an enchantment that dulls the blade for anyone save those descended from our bloodline. \n\nIt serves as definitive proof of one's ancestry above all other claims.\n\nSygrold Ice-Blade",
+        "string": "<font face=\"$HandwrittenFont\">\nAi miei eredi,\n\nLa spada ancestrale del clan delle Blade di ghiaccio \u00e8 incantata in modo che i suoi colpi siano smorzati a meno che non venga brandita da un discendente della nostra famiglia. \n\nIn questo modo si potr\u00e0 provare senza dubbio la propria provenienza.\n\nSygrold Blade di ghiaccio"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST CNAM",
+        "original": "At the Riften cemetery, I found a thief loitering near a tombstone. On his body was a note that mentioned the Gray Fox was dead, and his cowl was to be passed on to a new owner. I then spoke to a beggar who handed me a note.",
+        "string": "Al cimitero di Riften ho trovato un ladro che rovistava vicino a una lapide. Sul suo corpo ho trovato una nota che diceva che la Volpe Grigia era morta e la sua cappa doveva trovare un nuovo padrone. Ho parlato con una mendicante che mi ha passato una nota."
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST CNAM",
+        "original": "It's rumored that the Gray Fox is buried in the cemetery in Riften. If so, he may have been buried with his cowl. ",
+        "string": "Si dice che la Volpe Grigia sia sepolta nel cimitero di Riften. Se fosse vero, potrebbe essere stata sepolta con la sua cappa. "
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST CNAM",
+        "original": "It's rumored that the Gray Fox is buried in the cemetery in Riften. If so, he may have been buried with his cowl.",
+        "string": "Si dice che la Volpe Grigia sia sepolta nel cimitero di Riften. Se fosse vero, potrebbe essere stata sepolta con la sua cappa."
+    }
+]

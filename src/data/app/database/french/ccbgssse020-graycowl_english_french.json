@@ -1,0 +1,506 @@
+[
+    {
+        "editor_id": "ccBGSSSE020ArmorGrayCowl",
+        "type": "ARMO FULL",
+        "original": "Gray Cowl of Nocturnal",
+        "string": "Capuche grise de Nocturne"
+    },
+    {
+        "editor_id": "ccBGSSSE020FakeDeedActivator",
+        "type": "ACTI RNAM",
+        "original": "Place Deed",
+        "string": "Placer le titre de propri\u00e9t\u00e9"
+    },
+    {
+        "editor_id": "ccBGSSSE020_DetectLifeEnemyInteriorConcSelf",
+        "type": "MGEF FULL",
+        "original": "Detect Life Enemy Interior",
+        "string": "D\u00e9tection des ennemis vivants (int\u00e9rieur)"
+    },
+    {
+        "editor_id": "ccBGSSSE020_DialoguePostQuest",
+        "type": "QUST FULL",
+        "original": "Dialogue Block",
+        "string": "Bloc de discussion"
+    },
+    {
+        "editor_id": "ccBGSSSE020_DetectLifeEnemyExteriorConcSelf",
+        "type": "MGEF FULL",
+        "original": "Detect Life Enemy Exterior",
+        "string": "D\u00e9tection des ennemis vivants (ext\u00e9rieur)"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "Check the barrel for further instructions",
+        "string": "Fouillez le tonneau pour obtenir davantage d'informations."
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "Pick up the forged deed",
+        "string": "R\u00e9cup\u00e9rez le titre de propri\u00e9t\u00e9 falsifi\u00e9."
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "(Optional) Search Nivenor's corpse for the strongbox key",
+        "string": "(Optionnel) Fouillez le cadavre de Nivenor pour d\u00e9nicher la cl\u00e9 du coffre."
+    },
+    {
+        "editor_id": "ccBGSSSE020FakeDeedActivator",
+        "type": "ACTI FULL",
+        "original": "Dresser",
+        "string": "Commode"
+    },
+    {
+        "editor_id": "ccBGSSSE020_DetectLifeBaseEffect",
+        "type": "MGEF FULL",
+        "original": "Detect Life Base",
+        "string": "D\u00e9tection des vivants de base"
+    },
+    {
+        "editor_id": "ccBGSSSE020_WIThief",
+        "type": "NPC_ FULL",
+        "original": "Thief",
+        "string": "Voleur"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Note01",
+        "type": "BOOK FULL",
+        "original": "Thief's Note",
+        "string": "Note du voleur"
+    },
+    {
+        "editor_id": "ccBGSSSE020_BYOHChildrensDoll",
+        "type": "MISC FULL",
+        "original": "Antique Nordic Doll",
+        "string": "Poup\u00e9e nordique antique"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the Stranger's Final Instructions",
+        "string": "Lisez les derni\u00e8res instructions de l'\u00e9tranger."
+    },
+    {
+        "editor_id": "ccBGSSSE020_DetectLife",
+        "type": "SPEL FULL",
+        "original": "Detect Life",
+        "string": "D\u00e9tection des vivants"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Note04",
+        "type": "BOOK FULL",
+        "original": "The Sword of Clan Ice-Blade",
+        "string": "L'\u00e9p\u00e9e du clan Lamegivre"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "Speak the code phrase to a beggar",
+        "string": "Dites le code \u00e0 un mendiant."
+    },
+    {
+        "editor_id": "ccBGSSSE020_DetectLifeFriendExteriorConcSelf",
+        "type": "MGEF FULL",
+        "original": "Detect Life Friend Exterior",
+        "string": "D\u00e9tection des alli\u00e9s vivants (ext\u00e9rieur)"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Note07",
+        "type": "BOOK FULL",
+        "original": "Stranger's Final Instructions",
+        "string": "Derni\u00e8res instructions de l'\u00e9tranger"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Note06",
+        "type": "BOOK FULL",
+        "original": "Stranger's Final Instructions",
+        "string": "Derni\u00e8res instructions de l'\u00e9tranger"
+    },
+    {
+        "editor_id": "ccBGSSSE020_DetectLifeBaseEffectAbility",
+        "type": "MGEF FULL",
+        "original": "Detect Life Base",
+        "string": "D\u00e9tection des vivants de base"
+    },
+    {
+        "editor_id": "ccBGSSSE020_LandDeedTitleFAKE",
+        "type": "MISC FULL",
+        "original": "Forged Deed",
+        "string": "Titre de propri\u00e9t\u00e9 falsifi\u00e9"
+    },
+    {
+        "editor_id": "ccBGSSSE020_StrangerNPC",
+        "type": "NPC_ FULL",
+        "original": "Stranger",
+        "string": "\u00c9tranger"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "Obtain the Ancestral Sword",
+        "string": "Obtenez l'\u00e9p\u00e9e ancestrale."
+    },
+    {
+        "editor_id": "ccBGSSSE020_Note02",
+        "type": "BOOK FULL",
+        "original": "Stranger's Note",
+        "string": "Note de l'\u00e9tranger"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST FULL",
+        "original": "The Gray Cowl of Nocturnal",
+        "string": "La capuche grise de Nocturne"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "Place the forged deed on the dresser",
+        "string": "Placez le titre de propri\u00e9t\u00e9 falsifi\u00e9 sur la commode."
+    },
+    {
+        "editor_id": "ccBGSSSE020_BoyChild",
+        "type": "NPC_ FULL",
+        "original": "Smaref Ice-Blade",
+        "string": "Smaref Lamegivre"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "(Optional) Find the key on the corpse with the lantern",
+        "string": "(Optionnel) Trouvez la cl\u00e9 sur le cadavre \u00e0 l'aide de la lanterne."
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "(Optional) Persuade or purchase the deed from Gisli",
+        "string": "(Optionnel) Soutirez ou achetez le titre de propri\u00e9t\u00e9 \u00e0 Gisli."
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "(Optional) Investigate Erikur's House",
+        "string": "(Optionnel) Inspectez la maison d'Erikur."
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "Steal the land deed from Gisli",
+        "string": "Volez le titre de propri\u00e9t\u00e9 \u00e0 Gisli."
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "Search the thief's body",
+        "string": "Fouillez le corps du voleur."
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the Stranger's Instructions",
+        "string": "Lisez les instructions de l'\u00e9tranger."
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the Stranger's Note",
+        "string": "Lisez la note de l'\u00e9tranger."
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "Retrieve the instructions from Bolli's House",
+        "string": "Retrouvez les instructions dans la maison de Bolli."
+    },
+    {
+        "editor_id": "ccBGSSSE020_SkullsEyeKey",
+        "type": "KEYM FULL",
+        "original": "Silverdrift Chest Key",
+        "string": "Cl\u00e9 du coffre de Brisargent"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "(Optional) Convince Nivenor to give you her keys",
+        "string": "(Optionnel) Persuadez Nivenor de vous donner ses cl\u00e9s."
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the thief's note",
+        "string": "Lisez la note du voleur."
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "Travel to the cemetery in Riften",
+        "string": "Rendez-vous au cimeti\u00e8re de Faillaise."
+    },
+    {
+        "editor_id": "ccBGSSSE020_GFJournal",
+        "type": "BOOK FULL",
+        "original": "Stranger's Journal",
+        "string": "Journal de l'\u00e9tranger"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST NNAM",
+        "original": "Meet the Stranger at the tomb of the Gray Fox",
+        "string": "Retrouvez l'\u00e9tranger \u00e0 la tombe du Renard gris."
+    },
+    {
+        "editor_id": "ccBGSSSE020_Note05",
+        "type": "BOOK FULL",
+        "original": "Stranger's Instructions",
+        "string": "Instructions de l'\u00e9tranger"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Note03",
+        "type": "BOOK FULL",
+        "original": "Letter to Gisli",
+        "string": "Lettre \u00e0 Gisli"
+    },
+    {
+        "editor_id": "ccBGSSSE020_NivenorJournal",
+        "type": "BOOK FULL",
+        "original": "Nivenor's Journal",
+        "string": "Journal de Nivenor"
+    },
+    {
+        "editor_id": "ccBGSSSE020_EnchGrayCowl",
+        "type": "ENCH FULL",
+        "original": "Fortify Sneak",
+        "string": "Renfort de furtivit\u00e9"
+    },
+    {
+        "editor_id": "ccBGSSSE020_LandDeedTitleREAL",
+        "type": "MISC FULL",
+        "original": "Land Title and Deed",
+        "string": "Titre et acte de propri\u00e9t\u00e9"
+    },
+    {
+        "editor_id": "ccBGSSSE020_DetectLifeFriendInteriorConcSelf",
+        "type": "MGEF FULL",
+        "original": "Detect Life Friend Interior",
+        "string": "D\u00e9tection des alli\u00e9s vivants (int\u00e9rieur)"
+    },
+    {
+        "editor_id": "ccBGSSSE020_StrongboxKey",
+        "type": "KEYM FULL",
+        "original": "Nivenor's Strongbox Key",
+        "string": "Cl\u00e9 du coffre de Nivenor"
+    },
+    {
+        "editor_id": "ccBGSSSE020_DetectLifeBaseEffect",
+        "type": "MGEF DNAM",
+        "original": "Nearby living creatures, but not undead, machines or daedra, can be seen through walls. Turns guards hostile.",
+        "string": "Les cr\u00e9atures vivantes \u00e0 proximit\u00e9 sont visibles \u00e0 travers les murs, \u00e0 l'exception des morts-vivants, des machines ou des Daedra. Les gardes deviennent hostiles."
+    },
+    {
+        "editor_id": "ccBGSSSE020_DetectLifeBaseEffectAbility",
+        "type": "MGEF DNAM",
+        "original": "Nearby living creatures, but not undead, machines or daedra, can be seen through walls. Turns guards hostile.",
+        "string": "Les cr\u00e9atures vivantes \u00e0 proximit\u00e9 sont visibles \u00e0 travers les murs, \u00e0 l'exception des morts-vivants, des machines ou des Daedra. Les gardes deviennent hostiles."
+    },
+    {
+        "editor_id": "ccBGSSSE020_EnchTurnUndeadFFContact",
+        "type": "MGEF FULL",
+        "original": "Clan Ice-Blade Enchantment",
+        "string": "Enchantement du clan Lamegivre"
+    },
+    {
+        "editor_id": "ccBGSSSE020_NameDisplay",
+        "type": "MESG FULL",
+        "original": "Pjofr Ice-Blade",
+        "string": "Pjofr Lamegivre"
+    },
+    {
+        "editor_id": "ccBGSSSE020_DLC2NordicSword",
+        "type": "WEAP FULL",
+        "original": "Ancestral Sword of Clan Ice-Blade",
+        "string": "\u00c9p\u00e9e ancestrale du clan Lamegivre"
+    },
+    {
+        "editor_id": "ccBGSSSE020_DetectLifeFollower",
+        "type": "SPEL FULL",
+        "original": "Detect Life",
+        "string": "D\u00e9tection des vivants"
+    },
+    {
+        "editor_id": "ccBGSSSE020_DetectLifeFriendExteriorConcSelf_Guard",
+        "type": "MGEF FULL",
+        "original": "Detect Life Guard Exterior",
+        "string": "D\u00e9tection des gardes vivants (ext\u00e9rieur)"
+    },
+    {
+        "editor_id": "ccBGSSSE020_DetectLifeFriendExteriorConcSelf_Follower",
+        "type": "MGEF FULL",
+        "original": "Detect Life Follower",
+        "string": "D\u00e9tection d'acolyte vivant"
+    },
+    {
+        "editor_id": "ccBGSSSE020_DetectLifeBackup",
+        "type": "SPEL FULL",
+        "original": "Detect Life",
+        "string": "D\u00e9tection des vivants"
+    },
+    {
+        "editor_id": "CTest",
+        "type": "CELL FULL",
+        "original": "Quick Test Cell",
+        "string": "Cellule test rapide"
+    },
+    {
+        "editor_id": "SilverdriftLair01",
+        "type": "CELL FULL",
+        "original": "Silverdrift Lair",
+        "string": "Repaire de Brisargent"
+    },
+    {
+        "editor_id": "SolitudeErikursHouse",
+        "type": "CELL FULL",
+        "original": "Erikur's House",
+        "string": "Maison d'Erikur"
+    },
+    {
+        "editor_id": "RiftenWorld",
+        "type": "WRLD FULL",
+        "original": "Riften",
+        "string": "Faillaise"
+    },
+    {
+        "editor_id": "RiftenBollisHouse",
+        "type": "CELL FULL",
+        "original": "Bolli's House",
+        "string": "Maison de Bolli"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST CNAM",
+        "original": "At the Riften cemetery, I found a thief loitering near a tombstone. On his body was a note that mentioned the Gray Fox was dead, and his cowl was to be passed on to a new owner. I spoke to a beggar who handed me a note informing me of a job. But first I must find a way into a strongbox in Bolli's House.",
+        "string": "Une fois au cimeti\u00e8re de Faillaise, j'ai crois\u00e9 un voleur qui tra\u00eenait pr\u00e8s d'une tombe. Sur sa d\u00e9pouille se trouvait une note mentionnant la mort du Renard gris et racontant que sa capuche allait \u00eatre l\u00e9gu\u00e9e \u00e0 un nouveau propri\u00e9taire. J'ai parl\u00e9 \u00e0 un mendiant qui m'a tendu une note concernant une mission. Toutefois, avant cela, je dois trouver un moyen d'acc\u00e9der au coffre dans la maison de Bolli."
+    },
+    {
+        "editor_id": "ccBGSSSE020_GFJournal",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\nThe curse of the Gray Cowl is said to strip you of your identity, wiping you from all of recorded history. \n\nBut the curse was broken long ago. The truth is, it wasn't Nocturnal that robbed me of my life. It was my selfishness.\n\nI wore the cowl out of pure greed. I left my family because I loved only myself.\n\nThen my sister passed, leaving her son an orphan. The last of the Ice-Blades, heir to a fortune, and easy prey for the wolves.\n\nWith the boy in danger, it's time I took responsibility as the head of this clan. But if I'm to be his father, I have to stop being a stranger. I must pass the cowl onto another, and in doing so, the Gray Fox must die. \n\nUntil then, I come to this grave every night bringing flowers, to ask my sister for forgiveness.</font>",
+        "string": "<font face=\"$HandwrittenFont\">\nLa l\u00e9gende raconte que la mal\u00e9diction de la Capuche grise efface l'identit\u00e9 de son porteur, et le fait dispara\u00eetre de tout registre. \n\nMais cette mal\u00e9diction n'a plus cours depuis bien longtemps. En r\u00e9alit\u00e9, ce n'est pas Nocturne qui a g\u00e2ch\u00e9 ma vie. Ce fut mon \u00e9go\u00efsme.\n\nJ'ai port\u00e9 la capuche par pure avidit\u00e9. J'ai abandonn\u00e9 ma famille parce que je n'aimais que moi.\n\nPuis ma soeur d\u00e9c\u00e9da, laissant son fils orphelin. Le dernier des Lamegivre, h\u00e9ritier d'une fortune. Un pauvre agneau en proie \u00e0 tous les loups.\n\nAu vu du danger qu'il encourait, je compris qu'il \u00e9tait temps que je prenne ma responsabilit\u00e9 \u00e0 la t\u00eate du clan. Mais pour endosser le r\u00f4le de p\u00e8re, il me faut cesser d'\u00eatre un \u00e9tranger. Je dois transmettre la capuche \u00e0 quelqu'un d'autre, et, ainsi, \u00e9liminer le Renard gris.\n\nEn attendant, je me rends sur cette tombe chaque soir pour y d\u00e9poser des fleurs, et implorer son pardon \u00e0 ma soeur.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST CNAM",
+        "original": "At the Riften cemetery, I found a thief loitering near a tombstone. On his body was a note that mentioned the Gray Fox was dead, and his cowl was to be passed on to a new owner. I should speak to a beggar and try to learn more.",
+        "string": "Une fois au cimeti\u00e8re de Faillaise, j'ai crois\u00e9 un voleur qui tra\u00eenait pr\u00e8s d'une tombe. Sur sa d\u00e9pouille se trouvait une note mentionnant la mort du Renard gris et racontant que sa capuche allait \u00eatre l\u00e9gu\u00e9e \u00e0 un nouveau propri\u00e9taire. Je devrais parler \u00e0 un mendiant, et essayer d'en savoir plus."
+    },
+    {
+        "editor_id": "ccBGSSSE020_Note06",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\nYou're good. For whatever reason, picking her pocket was not an option, so you found another way.\n\nNow you'll need to put those skills to the test and more. In Silverdrift Lair is a tomb that houses an ancient Nord clan. Near a large chest is a corpse with a lantern, its candle still burning. It holds a key. \n\nWhen you have the key, open the chest and you'll find a sword that can raise the dead. \n\nWhen you find it, bring it to the grave of the Gray Fox in Riften. It's a small, unmarked headstone on the east side of the cemetery. Complete the task, and maybe you'll even get to meet him.\n\n-- A Stranger",
+        "string": "<font face=\"$HandwrittenFont\">\nBeau travail. Pour je ne sais quelle raison, vous n'avez pas envisag\u00e9 de la voler \u00e0 la tire, et avez donc trouv\u00e9 une alternative.\n\nIl va vous falloir d\u00e9sormais mettre ce talent, et d'autres, \u00e0 l'\u00e9preuve. Au Repaire de Brisargent se trouve une crypte dans laquelle repose un ancien clan nordique. Pr\u00e8s d'un grand coffre g\u00eet un cadavre avec une lanterne qui continue d'\u00e9clairer. Fouillez-le pour trouver une cl\u00e9.\n\nUne fois en votre possession, ouvrez le coffre. Ce dernier contient une \u00e9p\u00e9e capable de ranimer les morts-vivants.\n\nLorsque vous l'aurez trouv\u00e9e, rapportez-la \u00e0 la tombe du Renard gris \u00e0 Faillaise. Il s'agit d'une petite st\u00e8le vierge \u00e0 l'est du cimeti\u00e8re. Accomplissez cette mission, et vous aurez peut-\u00eatre la chance de le rencontrer en personne.\n\n- Un \u00e9tranger"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST CNAM",
+        "original": "At the Riften cemetery, I found a thief loitering near a tombstone. On his body was a note that mentioned the Gray Fox was dead, and his cowl was to be passed on to a new owner. I spoke to a beggar who handed me a note informing me of a job. I managed to find further instructions in a strongbox at Bolli's house.",
+        "string": "Une fois au cimeti\u00e8re de Faillaise, j'ai crois\u00e9 un voleur qui tra\u00eenait pr\u00e8s d'une tombe. Sur sa d\u00e9pouille se trouvait une note mentionnant la mort du Renard gris et racontant que sa capuche allait \u00eatre l\u00e9gu\u00e9e \u00e0 un nouveau propri\u00e9taire. J'ai parl\u00e9 \u00e0 un mendiant qui m'a tendu une note concernant une mission. J'ai r\u00e9ussi \u00e0 trouver de plus amples informations dans un coffre \u00e0 l'int\u00e9rieur de la maison de Bolli."
+    },
+    {
+        "editor_id": "ccBGSSSE020_Note01",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"17\">\nThe Fox told me he wore the cowl to forget himself, and start a new life.\n\nYet I'm the one who can't remember. Every time we meet, he's a stranger to me. Or was it a she? \n\nIt doesn't matter. I spoke his words to a beggar, told her \"Shadow hide you.\" She slipped me a note that confirms my suspicions. The Gray Fox is dead. And now that I've seen his headstone, I know for a fact his time is over, and the cowl will be passed on.\n\nI'm gonna be the next one to wear it. And when I do, I'll become so rich I won't need any memories. I'll just buy new ones.",
+        "string": "<font face=\"$HandwrittenFont\" size=\"17\">\nLe Renard gris m'indiqua qu'il avait port\u00e9 la capuche pour oublier sa propre identit\u00e9, et commencer une nouvelle vie.\n\nPourtant, c'est moi qui n'arrive pas \u00e0 me souvenir de lui. \u00c0 chacune de nos rencontres, il m'appara\u00eet comme un \u00e9tranger. Ou peut-\u00eatre \u00e9tait-ce une \u00e9trang\u00e8re\u00a0?\n\nPeu importe. J'ai parl\u00e9 \u00e0 la mendiante, et lui ai dit, selon ses instructions\u00a0: \"Les ombres vous prot\u00e8gent\". Elle me glissa une note qui confirma mes soup\u00e7ons. Le Renard gris est mort. Et maintenant que j'ai vu sa st\u00e8le, j'ai la certitude qu'il n'est plus de ce monde, et que sa capuche sera l\u00e9gu\u00e9e.\n\nJe serai le prochain \u00e0 la porter. Et une fois en ma possession, je deviendrai si riche que je n'aurai pas besoin de souvenirs. J'aurai juste \u00e0 m'en acheter de nouveaux."
+    },
+    {
+        "editor_id": "ccBGSSSE020_NivenorJournal",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\nI've always despised my husband's charity, but at least it was just coin. Then he let that stranger into our home for dinner.\n\nHe was an odd sort, prone to forgetfulness and a wandering eye. I wasn't sure if he was staring at my bosom or the amulet around my neck, but stare he did. It wasn't entirely unwelcome, but I wasn't about to flirt in front of my husband.\n\nBesides, it turns out he wasn't staring at me at all. He actually wanted to know about the creepy doll behind me, and asked if I was expecting. \n\nI told him I wasn't, and the doll was for one of Bolli's charity cases. Erikur in Solitude asked us to take in a child for reasons that are beyond me. I told Bolli I wanted nothing to do with the urchin, but my husband is stubborn when it comes to his bleeding heart. \n\nLuckily, a few days after the dinner, the boy just disappeared, and I know better than to care.</font>",
+        "string": "<font face=\"$HandwrittenFont\">\nJ'ai toujours m\u00e9pris\u00e9 les actes de charit\u00e9 de mon mari, mais au moins il ne s'agissait que d'argent. Jusqu'au jour o\u00f9 il invita cet \u00e9tranger \u00e0 d\u00eener chez nous.\n\nIl s'agissait d'un gar\u00e7on \u00e9trange, l'air \u00e9tourdi et le regard absent. Je n'arrivais pas \u00e0 savoir s'il scrutait mon d\u00e9collet\u00e9 ou l'amulette autour de mon cou, mais une chose est s\u00fbre\u00a0: son regard ne me quittait pas. Bien que la situation n'\u00e9tait pas totalement d\u00e9plaisante, je ne pouvais me permettre de badiner \u00e0 c\u00f4t\u00e9 de mon mari.\n\nJe compris plus tard qu'il ne me fixait pas personnellement. Ce qui l'int\u00e9ressait \u00e9tait cette \u00e9trange poup\u00e9e derri\u00e8re moi. Il me demanda alors si j'attendais un enfant.\n\nJe lui r\u00e9pondis que non, et que cette poup\u00e9e \u00e9tait destin\u00e9e \u00e0 l'une des oeuvres de charit\u00e9 de Bolli. \u00c0 Solitude, Erikur nous demanda d'accueillir un enfant pour des raisons qui me sont inconnues. J'indiquai \u00e0 Bolli que je ne voulais aucunement avoir affaire \u00e0 ce gamin, mais il est bien trop t\u00eatu quand il s'agit d'aider son prochain.\n\nHeureusement, quelques jours apr\u00e8s le d\u00eener, l'enfant disparut, et je ferais mieux de ne pas m'en soucier.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST CNAM",
+        "original": "It's rumored that the Gray Fox is buried in the cemetery in Riften. If so, he may have been buried with his cowl. At the cemetery, I found a thief loitering near a tombstone. On his body was a note.",
+        "string": "On raconte que le Renard Gris est enterr\u00e9 dans le cimeti\u00e8re de Faillaise. Si ces rumeurs sont vraies, sa tombe pourrait contenir sa capuche. Une fois l\u00e0-bas, j'ai crois\u00e9 un voleur qui tra\u00eenait pr\u00e8s d'une tombe. Sur sa d\u00e9pouille se trouvait une note."
+    },
+    {
+        "editor_id": "ccBGSSSE020_Note02",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\"><font face=\"$HandwrittenFont\" size=\"19\">\nYou're here about a job.\n\nYou don't know what it's for, but I'm sure you're intrigued. It's all right, you don't need to know everything just yet. \n\nThere's a strongbox in Bolli's house, placed on a dresser next to his bed. Find a way to crack it open. Your instructions for the job are inside.\n\n-- A Stranger",
+        "string": "<font face=\"$HandwrittenFont\"><font face=\"$HandwrittenFont\" size=\"19\">\nVous \u00eates l\u00e0 pour la mission.\n\nVous ne savez pas ce que vous devez faire, mais je suis s\u00fbr que cela vous intrigue. Aucun probl\u00e8me, vous n'avez pas besoin de tout savoir pour l'instant.\n\nIl y a un coffre dans la maison de Bolli. Il se trouve sur une commode, pr\u00e8s de son lit. Trouvez un moyen de l'ouvrir. Les instructions concernant la mission se trouvent \u00e0 l'int\u00e9rieur.\n\n- Un \u00e9tranger"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST CNAM",
+        "original": "It's rumored that the Gray Fox is buried in the cemetery in Riften. If so, he may have been buried with his cowl. At the cemetery, I found a thief loitering near a tombstone.",
+        "string": "On raconte que le Renard Gris est enterr\u00e9 dans le cimeti\u00e8re de Faillaise. Si ces rumeurs sont vraies, sa tombe pourrait contenir sa capuche. Une fois l\u00e0-bas, je suis tomb\u00e9 sur un voleur qui tra\u00eenait pr\u00e8s d'une tombe."
+    },
+    {
+        "editor_id": "ccBGSSSE020_Note03",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\nConstruction on the port east of Jehanna has been approved and will begin once the transfer of land is official. The boy's consent should suffice, as the head of the Ice-Blade clan has long been absent and the mother has taken ill, per your brother's instruction.\n\nThe deed is enclosed with this letter. Sending the boy to Riften before he's old enough to grasp what happened is a good idea. Not the orphanage though. It's best he live in comfort lest he suspect our motives.\n\nStill, it's a dangerous gambit, made more complicated should the rightful heir return. Your brother would kill me for saying this, but if you have the chance, it may be worth selling the venture for the right price. This has been more trouble than it's worth.\n\n-- M",
+        "string": "<font face=\"$HandwrittenFont\">\nLes travaux au port est de Jehanna ont \u00e9t\u00e9 approuv\u00e9s et commenceront d\u00e8s lors que le transfert de propri\u00e9t\u00e9 sera officiel. Le consentement du gar\u00e7on devrait suffire, \u00e9tant donn\u00e9 que le chef du clan Lamegivre est absent depuis longtemps, et que sa m\u00e8re est malade, tel qu'indiqu\u00e9 dans le message de votre fr\u00e8re.\n\nJe joins le titre de propri\u00e9t\u00e9 \u00e0 cette lettre. Envoyer le gar\u00e7on \u00e0 Faillaise avant qu'il ne soit assez vieux pour comprendre ce qui lui arrive est une excellente id\u00e9e, mais pas l'orphelinat. Il vaut mieux qu'il vive confortablement, afin d'\u00e9viter d'\u00e9veiller des soup\u00e7ons quant \u00e0 nos motivations.\n\nPour autant, il s'agit d'un pari risqu\u00e9, et il pourrait l'\u00eatre encore davantage si l'h\u00e9ritier l\u00e9gal revenait. Votre fr\u00e8re me tuerait s'il lisait mes mots, mais si vous en avez l'occasion, il pourrait valoir la peine de vendre notre petite entreprise \u00e0 un bon prix. Nous avons eu assez d'ennuis comme cela.\n\n- M."
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST CNAM",
+        "original": "At the Riften cemetery, I found a thief loitering near a tombstone. On his body was a note that mentioned the Gray Fox was dead, and his cowl was to be passed on to a new owner. After some trials, I met with the Stranger who revealed himself to be the real Gray Fox. After some brief words, he handed me the Gray Cowl as a reward and left the city with a young child.",
+        "string": "Une fois au cimeti\u00e8re de Faillaise, j'ai rencontr\u00e9 un voleur qui tra\u00eenait pr\u00e8s d'une tombe. Sur sa d\u00e9pouille se trouvait une note mentionnant la mort du Renard gris et racontant que sa capuche allait \u00eatre l\u00e9gu\u00e9e \u00e0 un nouveau propri\u00e9taire. J'ai accompli plusieurs \u00e9preuves, puis ai fini par rencontrer l'\u00e9tranger qui s'est av\u00e9r\u00e9 \u00eatre le vrai Renard gris. Apr\u00e8s avoir \u00e9chang\u00e9 quelques mots, il m'a donn\u00e9 la capuche grise comme r\u00e9compense, puis a quitt\u00e9 la ville accompagn\u00e9 d'un jeune enfant."
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST CNAM",
+        "original": "At the Riften cemetery, I found a thief loitering near a tombstone. On his body was a note that mentioned the Gray Fox was dead, and his cowl was to be passed on to a new owner. To prove my worth, I retrieved a note in a strongbox that had details on a job in Solitude. I finished the job and received further instructions to retrieve an ancestral item in Silverdrift Lair.",
+        "string": "Une fois au cimeti\u00e8re de Faillaise, j'ai crois\u00e9 un voleur qui tra\u00eenait pr\u00e8s d'une tombe. Sur sa d\u00e9pouille se trouvait une note mentionnant la mort du Renard gris et racontant que sa capuche allait \u00eatre l\u00e9gu\u00e9e \u00e0 un nouveau propri\u00e9taire. Pour prouver ma valeur, j'ai trouv\u00e9 une note contenue dans un coffre et indiquant les d\u00e9tails d'une mission \u00e0 Solitude. Une fois accomplie, j'ai re\u00e7u d'autres instructions m'enjoignant de retrouver un objet ancestral enfoui dans le Repaire de Brisargent."
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST CNAM",
+        "original": "At the Riften cemetery, I found a thief loitering near a tombstone. On his body was a note that mentioned the Gray Fox was dead, and his cowl was to be passed on to a new owner. After some investigating, I found a note in a strongbox that has details on a job in Solitude. If I perform the task in question, I may be rewarded.",
+        "string": "Une fois au cimeti\u00e8re de Faillaise, j'ai crois\u00e9 un voleur qui tra\u00eenait pr\u00e8s d'une tombe. Sur sa d\u00e9pouille se trouvait une note mentionnant la mort du Renard gris et racontant que sa capuche allait \u00eatre l\u00e9gu\u00e9e \u00e0 un nouveau propri\u00e9taire. Pour prouver ma valeur, j'ai trouv\u00e9 une note contenue dans un coffre et indiquant les d\u00e9tails d'une mission \u00e0 Solitude. Si je parviens \u00e0 l'accomplir, j'obtiendrai peut-\u00eatre une r\u00e9compense."
+    },
+    {
+        "editor_id": "ccBGSSSE020_Note07",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\nYou're good. You picked her pockets clean and made the switch. \n\nNow you'll need to put those skills to the test and more. In Silverdrift Lair is a tomb that houses an ancient Nord clan. Near a large chest is a corpse with a lantern, its candle still burning. It holds a key.\n\nWhen you have the key, open the chest and you'll find a sword that can raise the dead. \n\nWhen you find it, bring it to the grave of the Gray Fox in Riften. It's a small, unmarked headstone on the east side of the cemetery. Complete the task, and maybe you'll even get to meet him.\n\n-- A Stranger",
+        "string": "<font face=\"$HandwrittenFont\">\nBeau travail. Vous avez subtilis\u00e9 le document, et avez proc\u00e9d\u00e9 \u00e0 l'\u00e9change.\n\nIl va vous falloir d\u00e9sormais mettre ce talent, et d'autres, \u00e0 l'\u00e9preuve. Au Repaire de Brisargent se trouve une crypte dans laquelle repose un ancien clan nordique. Pr\u00e8s d'un grand coffre g\u00eet un cadavre avec une lanterne qui continue d'\u00e9clairer. Fouillez-le pour trouver une cl\u00e9.\n\nUne fois en votre possession, ouvrez le coffre. Ce dernier contient une \u00e9p\u00e9e capable de ranimer les morts-vivants.\n\nLorsque vous l'aurez trouv\u00e9e, rapportez-la \u00e0 la tombe du Renard gris \u00e0 Faillaise. Elle est surmont\u00e9e d'une petite st\u00e8le vierge \u00e0 l'est du cimeti\u00e8re. Accomplissez cette mission, et vous aurez peut-\u00eatre la chance de le rencontrer en personne.\n\n- Un \u00e9tranger"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Note05",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\nYou've made it this far, which proves you're ready for the real work.\n\nBut first, let's go over why you're here. You may have heard the Gray Fox is dead. It's true. But the Fox lives on in the one who wears the cowl. This job will tell me if that person is you.\n\nWho am I? That's not important. Just a stranger who wants to see the cowl passed on to someone who deserves it.\n\nAs you might expect, the job won't be easy. It requires fast thinking and fast fingers. But get it done, and you'll be worthy of being the next Gray Fox.\n\nTake the forged deed in the strongbox, then find a woman named Gisli in Solitude. On her should be the real document. You'll relieve her of this burden, then place the fake in Erikur's House. She'll think she misplaced it.\n\nWhen the job is done, find the barrel behind the Winking Skeever for further instructions.\n\n-- A Stranger",
+        "string": "<font face=\"$HandwrittenFont\">\nVous avez, avec brio, accompli les \u00e9preuves jusqu'ici. Il est donc temps de passer aux choses s\u00e9rieuses.\n\nMais avant tout, voil\u00e0 pourquoi vous \u00eates ici. Vous avez probablement entendu parler du d\u00e9c\u00e8s du Renard gris. C'est la v\u00e9rit\u00e9. Mais il vit au travers de celui ou celle qui porte sa capuche. Cette mission r\u00e9v\u00e9lera si vous \u00eates cette personne.\n\nMon nom\u00a0? Ce n'est pas important. Je ne suis qu'un \u00e9tranger qui souhaite que la capuche soit transmise \u00e0 quelqu'un de m\u00e9ritant.\n\nComme vous pouvez l'imaginer, la mission ne sera pas simple. Elle requiert une certaine vivacit\u00e9 d'esprit, et de la dext\u00e9rit\u00e9. Mais si vous r\u00e9ussissez, vous aurez prouv\u00e9 que vous \u00eates digne d'\u00eatre le prochain Renard gris.\n\nR\u00e9cup\u00e9rez le titre de propri\u00e9t\u00e9 falsifi\u00e9 dans le coffre, puis cherchez une femme nomm\u00e9e Gisli, \u00e0 Solitude. Le v\u00e9ritable document devrait \u00eatre en sa possession. Subtilisez-le, puis d\u00e9posez la copie falsifi\u00e9e dans la maison d'Erikur. Elle pensera l'avoir \u00e9gar\u00e9.\n\nUne fois la mission termin\u00e9e, cherchez le tonneau derri\u00e8re le Ragnard pervers pour obtenir d'autres instructions.\n\n- Un \u00e9tranger"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST CNAM",
+        "original": "At the Riften cemetery, I found a thief loitering near a tombstone. On his body was a note that mentioned the Gray Fox was dead, and his cowl was to be passed on to a new owner. To prove my worth, I underwent a series of trials to retrieve items for a Stranger. Having found them all, I must now return to Riften so I can hand it and the deed over at the grave of the Gray Fox.",
+        "string": "Une fois au cimeti\u00e8re de Faillaise, j'ai crois\u00e9 un voleur qui tra\u00eenait pr\u00e8s d'une tombe. Sur sa d\u00e9pouille se trouvait une note mentionnant la mort du Renard gris et racontant que sa capuche allait \u00eatre l\u00e9gu\u00e9e \u00e0 un nouveau propri\u00e9taire. Pour prouver ma valeur, j'ai accompli toute une s\u00e9rie d'\u00e9preuves consistant \u00e0 retrouver des objets pour l'\u00e9tranger. Maintenant que je les ai tous r\u00e9cup\u00e9r\u00e9s, je devrais les rapporter, avec le titre de propri\u00e9t\u00e9, \u00e0 la tombe du Renard gris \u00e0 Faillaise."
+    },
+    {
+        "editor_id": "ccBGSSSE020_Note04",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\nTo my descendants,\n\nThe ancestral sword of Clan Ice-Blade has an enchantment that dulls the blade for anyone save those descended from our bloodline. \n\nIt serves as definitive proof of one's ancestry above all other claims.\n\nSygrold Ice-Blade",
+        "string": "<font face=\"$HandwrittenFont\">\n\u00c0 mes descendants,\n\nL'\u00e9p\u00e9e ancestrale du clan Lamegivre est empreinte d'un enchantement qui \u00e9mousse la lame entre les mains de tout porteur, sauf ceux de notre lign\u00e9e.\n\nIl permet de prouver la l\u00e9gitim\u00e9 d'un ascendant \u00e0 revendiquer son h\u00e9ritage.\n\nSygrold Lamegivre"
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST CNAM",
+        "original": "At the Riften cemetery, I found a thief loitering near a tombstone. On his body was a note that mentioned the Gray Fox was dead, and his cowl was to be passed on to a new owner. I then spoke to a beggar who handed me a note.",
+        "string": "Une fois au cimeti\u00e8re de Faillaise, j'ai crois\u00e9 un voleur qui tra\u00eenait pr\u00e8s d'une tombe. Sur sa d\u00e9pouille se trouvait une note mentionnant la mort du Renard gris et racontant que sa capuche allait \u00eatre l\u00e9gu\u00e9e \u00e0 un nouveau propri\u00e9taire. J'ai ensuite parl\u00e9 \u00e0 un mendiant qui m'a tendu une note."
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST CNAM",
+        "original": "It's rumored that the Gray Fox is buried in the cemetery in Riften. If so, he may have been buried with his cowl. ",
+        "string": "On raconte que le Renard Gris est enterr\u00e9 dans le cimeti\u00e8re de Faillaise. Si ces rumeurs sont vraies, sa tombe pourrait contenir sa capuche. "
+    },
+    {
+        "editor_id": "ccBGSSSE020_Quest",
+        "type": "QUST CNAM",
+        "original": "It's rumored that the Gray Fox is buried in the cemetery in Riften. If so, he may have been buried with his cowl.",
+        "string": "On raconte que le Renard Gris est enterr\u00e9 dans le cimeti\u00e8re de Faillaise. Si ces rumeurs sont vraies, sa tombe pourrait contenir sa capuche."
+    }
+]

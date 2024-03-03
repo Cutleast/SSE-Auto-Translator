@@ -1,0 +1,488 @@
+[
+    {
+        "editor_id": "ccBGSSSE037_CorkbulbRoot",
+        "type": "INGR FULL",
+        "original": "Corkbulb Root",
+        "string": "\u041a\u043e\u0440\u0435\u043d\u044c \u043f\u0440\u043e\u0431\u043e\u0447\u043d\u0438\u043a\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE037_HackleLoLeaf",
+        "type": "INGR FULL",
+        "original": "Hackle-Lo Leaf",
+        "string": "\u041b\u0438\u0441\u0442 \u0445\u0430\u043a\u043b\u044c\u043b\u043e\u0443"
+    },
+    {
+        "editor_id": "ccBGSSSE037_CongealedPutrescence",
+        "type": "INGR FULL",
+        "original": "Congealed Putrescence",
+        "string": "\u0417\u0430\u0442\u0432\u0435\u0440\u0434\u0435\u0432\u0448\u0430\u044f \u0433\u043d\u0438\u043b\u044c"
+    },
+    {
+        "editor_id": "ccBGSSSE037_KagoutiHide",
+        "type": "INGR FULL",
+        "original": "Kagouti Hide",
+        "string": "\u0428\u043a\u0443\u0440\u0430 \u043a\u0430\u0433\u0443\u0442\u0438"
+    },
+    {
+        "editor_id": "ccBGSSSE037_StoneflowerPetals",
+        "type": "INGR FULL",
+        "original": "Stoneflower Petals",
+        "string": "\u041b\u0435\u043f\u0435\u0441\u0442\u043a\u0438 \u043a\u0430\u043c\u0435\u043d\u0435\u0432\u043a\u0438"
+    },
+    {
+        "editor_id": "ccBGSSSE037_WormsHeadCap",
+        "type": "INGR FULL",
+        "original": "Worm's Head Cap",
+        "string": "\u0428\u043b\u044f\u043f\u043a\u0430 \u0433\u043e\u043b\u043e\u0432\u044b \u0447\u0435\u0440\u0432\u044f"
+    },
+    {
+        "editor_id": "ccBGSSSE037_SloadSoap",
+        "type": "INGR FULL",
+        "original": "Sload Soap",
+        "string": "\u041c\u044b\u043b\u043e \u0441\u043b\u043e\u0430\u0434"
+    },
+    {
+        "editor_id": "ccBGSSSE037_VoidEssence",
+        "type": "INGR FULL",
+        "original": "Void Essence",
+        "string": "\u042d\u0441\u0441\u0435\u043d\u0446\u0438\u044f \u043f\u0443\u0441\u0442\u043e\u0442\u044b"
+    },
+    {
+        "editor_id": "ccBGSSSE037_DaedraSilk",
+        "type": "INGR FULL",
+        "original": "Daedra Silk",
+        "string": "\u0428\u0435\u043b\u043a \u0434\u0430\u044d\u0434\u0440\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE037_LuminousRussula",
+        "type": "INGR FULL",
+        "original": "Luminous Russula",
+        "string": "\u0421\u0432\u0435\u0442\u044f\u0449\u0430\u044f\u0441\u044f \u0441\u044b\u0440\u043e\u0435\u0436\u043a\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE037_WatchersEyeBlind",
+        "type": "INGR FULL",
+        "original": "Blind Watcher's Eye",
+        "string": "\u0421\u043b\u0435\u043f\u043e\u0439 \u0433\u043b\u0430\u0437 \u0434\u043e\u0437\u043e\u0440\u043d\u043e\u0433\u043e"
+    },
+    {
+        "editor_id": "ccBGSSSE037_DreughWax",
+        "type": "INGR FULL",
+        "original": "Dreugh Wax",
+        "string": "\u0414\u0440\u0435\u0443\u0433\u0441\u043a\u0438\u0439 \u0432\u043e\u0441\u043a"
+    },
+    {
+        "editor_id": "ccBGSSSE037_KreshFiber",
+        "type": "INGR FULL",
+        "original": "Kresh Fiber",
+        "string": "\u0412\u043e\u043b\u043e\u043a\u043d\u043e \u043a\u0440\u0435\u0448\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE037_CodaFlower",
+        "type": "INGR FULL",
+        "original": "Coda Flower",
+        "string": "\u0426\u0432\u0435\u0442\u043e\u043a \u043a\u043e\u0434\u044b"
+    },
+    {
+        "editor_id": "ccBGSSSE037_WelkyndStone",
+        "type": "ALCH FULL",
+        "original": "Welkynd Stone",
+        "string": "\u0412\u0435\u043b\u043a\u0438\u043d\u0434\u0441\u043a\u0438\u0439 \u043a\u0430\u043c\u0435\u043d\u044c"
+    },
+    {
+        "editor_id": "ccBGSSSE037_FungusStalk",
+        "type": "INGR FULL",
+        "original": "Fungus Stalk",
+        "string": "\u0413\u0440\u0438\u0431\u043d\u0430\u044f \u0442\u0440\u0430\u0432\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE037_FlameStalk",
+        "type": "INGR FULL",
+        "original": "Flame Stalk",
+        "string": "\u041e\u0433\u043d\u0435\u043d\u043d\u044b\u0439 \u0433\u0440\u0438\u0431"
+    },
+    {
+        "editor_id": "ccBGSSSE037_MinotaurHorn",
+        "type": "INGR FULL",
+        "original": "Minotaur Horn",
+        "string": "\u0420\u043e\u0433 \u043c\u0438\u043d\u043e\u0442\u0430\u0432\u0440\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE037_RedKelpGasBladder",
+        "type": "INGR FULL",
+        "original": "Red Kelp Gas Bladder",
+        "string": "\u0413\u0430\u0437\u043e\u0432\u044b\u0439 \u043f\u0443\u0437\u044b\u0440\u044c \u043a\u0440\u0430\u0441\u043d\u043e\u0439 \u0432\u043e\u0434\u043e\u0440\u043e\u0441\u043b\u0438"
+    },
+    {
+        "editor_id": "ccBGSSSE037_GnarlBark",
+        "type": "INGR FULL",
+        "original": "Gnarl Bark",
+        "string": "\u041a\u043e\u0440\u0430 \u0433\u043d\u0430\u0440\u043b\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE037_FirePetal",
+        "type": "INGR FULL",
+        "original": "Fire Petal",
+        "string": "\u041e\u0433\u043d\u0435\u043d\u043d\u044b\u0439 \u043b\u0435\u043f\u0435\u0441\u0442\u043e\u043a"
+    },
+    {
+        "editor_id": "ccBGSSSE037_ElytraIchor",
+        "type": "INGR FULL",
+        "original": "Elytra Ichor",
+        "string": "\u0418\u0445\u043e\u0440 \u044d\u043b\u0438\u0442\u0440\u044b"
+    },
+    {
+        "editor_id": "ccBGSSSE037_OgresTeeth",
+        "type": "INGR FULL",
+        "original": "Ogre's Teeth",
+        "string": "\u0417\u0443\u0431\u044b \u043e\u0433\u0440\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE037_DaedrothTeeth",
+        "type": "INGR FULL",
+        "original": "Daedroth Teeth",
+        "string": "\u0417\u0443\u0431\u044b \u0434\u0430\u044d\u0434\u0440\u043e\u0442\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE037_Comberry",
+        "type": "INGR FULL",
+        "original": "Comberry",
+        "string": "\u041a\u043e\u043c\u0443\u043d\u0438\u043a\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE037_WitheringMoon",
+        "type": "INGR FULL",
+        "original": "Withering Moon",
+        "string": "\u0423\u0441\u044b\u0445\u0430\u044e\u0449\u0430\u044f \u043b\u0443\u043d\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE037_WispStalkCaps",
+        "type": "INGR FULL",
+        "original": "Wisp Stalk Caps",
+        "string": "\u0428\u043b\u044f\u043f\u043a\u0438 \u0433\u0438\u0444\u043e\u043b\u043e\u043c\u044b"
+    },
+    {
+        "editor_id": "ccBGSSSE037_Roobrush",
+        "type": "INGR FULL",
+        "original": "Roobrush",
+        "string": "\u0420\u0443\u0431\u0440\u0430\u0448"
+    },
+    {
+        "editor_id": "ccBGSSSE037_ImpGall",
+        "type": "INGR FULL",
+        "original": "Imp Gall",
+        "string": "\u0416\u0435\u043b\u0447\u044c \u0431\u0435\u0441\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE037_BittergreenPetals",
+        "type": "INGR FULL",
+        "original": "Bittergreen Petals",
+        "string": "\u041b\u0435\u043f\u0435\u0441\u0442\u043a\u0438 \u0433\u043e\u0440\u044c\u043a\u043e\u043b\u0438\u0441\u0442\u043d\u0438\u043a\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE037_ScribJerky",
+        "type": "INGR FULL",
+        "original": "Scrib Jerky",
+        "string": "\u0412\u044f\u043b\u0435\u043d\u0430\u044f \u0441\u043a\u0440\u0438\u0431\u044f\u0442\u0438\u043d\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE037_Marshmerrow",
+        "type": "INGR FULL",
+        "original": "Marshmerrow",
+        "string": "\u0411\u043e\u043b\u043e\u0442\u043d\u044b\u0439 \u0442\u0440\u043e\u0441\u0442\u043d\u0438\u043a"
+    },
+    {
+        "editor_id": "ccBGSSSE037_Saltrice",
+        "type": "INGR FULL",
+        "original": "Saltrice",
+        "string": "\u0421\u043e\u043b\u0435\u043d\u044b\u0439 \u0440\u0438\u0441"
+    },
+    {
+        "editor_id": "ccBGSSSE037_ScalonFin",
+        "type": "INGR FULL",
+        "original": "Scalon Fin",
+        "string": "\u041f\u043b\u0430\u0432\u043d\u0438\u043a \u0441\u043a\u0435\u0439\u043b\u043e\u043d\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE037_BunglersBane",
+        "type": "INGR FULL",
+        "original": "Bungler's Bane",
+        "string": "\u0411\u0430\u043d\u0433\u043b\u0435\u0440 \u0431\u0435\u0439\u043d"
+    },
+    {
+        "editor_id": "ccBGSSSE037_DaedraVenin",
+        "type": "INGR FULL",
+        "original": "Daedra Venin",
+        "string": "\u042f\u0434 \u0434\u0430\u044d\u0434\u0440\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE037_HydnumAzureGiantSpore",
+        "type": "INGR FULL",
+        "original": "Hydnum Azure Giant Spore",
+        "string": "\u0413\u0438\u0433\u0430\u043d\u0442\u0441\u043a\u0430\u044f \u0441\u043f\u043e\u0440\u0430 \u0435\u0436\u043e\u0432\u0438\u043a\u0430 \u043b\u0430\u0437\u0443\u0440\u043d\u043e\u0433\u043e"
+    },
+    {
+        "editor_id": "ccBGSSSE037_Chokeweed",
+        "type": "INGR FULL",
+        "original": "Chokeweed",
+        "string": "\u0423\u0434\u0443\u0448\u0430\u0439\u043a\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE037_AsterBloomCore",
+        "type": "INGR FULL",
+        "original": "Aster Bloom Core",
+        "string": "\u0426\u0432\u0435\u0442\u043e\u043a \u0430\u0441\u0442\u0440\u044b"
+    },
+    {
+        "editor_id": "ccBGSSSE037_BlisterPodCap",
+        "type": "INGR FULL",
+        "original": "Blister Pod Cap",
+        "string": "\u0428\u043b\u044f\u043f\u043a\u0430 \u0432\u043e\u043b\u0434\u044b\u0440\u043d\u0438\u043a\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE037_AlocasiaFruit",
+        "type": "INGR FULL",
+        "original": "Alocasia Fruit",
+        "string": "\u041f\u043b\u043e\u0434 \u0430\u043b\u043e\u043a\u0430\u0437\u0438\u0438"
+    },
+    {
+        "editor_id": "ccBGSSSE037_HyphaFacia",
+        "type": "INGR FULL",
+        "original": "Hypha Facia",
+        "string": "\u0413\u0430\u0439\u0444\u0430 \u0444\u0430\u0446\u0438\u044f"
+    },
+    {
+        "editor_id": "ccBGSSSE037_HungerTongue",
+        "type": "INGR FULL",
+        "original": "Hunger Tongue",
+        "string": "\u042f\u0437\u044b\u043a \u0430\u043b\u0447\u0443\u0449\u0435\u0433\u043e"
+    },
+    {
+        "editor_id": "ccBGSSSE037_WatchersEye",
+        "type": "INGR FULL",
+        "original": "Watcher's Eye",
+        "string": "\u0413\u043b\u0430\u0437 \u0434\u043e\u0437\u043e\u0440\u043d\u043e\u0433\u043e"
+    },
+    {
+        "editor_id": "ccBGSSSE037_GoldKanet",
+        "type": "INGR FULL",
+        "original": "Gold Kanet",
+        "string": "\u0417\u043e\u043b\u043e\u0442\u043e\u0439 \u043a\u0430\u043d\u0435\u0442"
+    },
+    {
+        "editor_id": "ccBGSSSE037_ScribJelly",
+        "type": "INGR FULL",
+        "original": "Scrib Jelly",
+        "string": "\u0421\u043a\u0440\u0438\u0431\u043e\u0432\u043e\u0435 \u0436\u0435\u043b\u0435"
+    },
+    {
+        "editor_id": "ccBGSSSE037_BogBeacon",
+        "type": "INGR FULL",
+        "original": "Bog Beacon",
+        "string": "\u0411\u043e\u043b\u043e\u0442\u043d\u0430\u044f \u043c\u0438\u0442\u0440\u0443\u043b\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE037_Redwort",
+        "type": "INGR FULL",
+        "original": "Redwort Flower",
+        "string": "\u0426\u0432\u0435\u0442\u043e\u043a \u0440\u0435\u0434\u0432\u043e\u0440\u0442\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE037_QA_CuriosChest",
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "\u0421\u0443\u043d\u0434\u0443\u043a"
+    },
+    {
+        "editor_id": "ccBGSSSE037_PoisonedFoodAppleRed",
+        "type": "ALCH FULL",
+        "original": "Poisoned Red Apple",
+        "string": "\u041e\u0442\u0440\u0430\u0432\u043b\u0435\u043d\u043d\u043e\u0435 \u043a\u0440\u0430\u0441\u043d\u043e\u0435 \u044f\u0431\u043b\u043e\u043a\u043e"
+    },
+    {
+        "editor_id": "ccBGSSSE037_Chokeberry",
+        "type": "INGR FULL",
+        "original": "Chokeberry",
+        "string": "\u0410\u0440\u043e\u043d\u0438\u044f"
+    },
+    {
+        "editor_id": "ccBGSSSE037_CorkbulbBolt",
+        "type": "AMMO FULL",
+        "original": "Corkbulb Bolt",
+        "string": "\u041f\u0440\u043e\u0431\u043a\u043e\u0432\u044b\u0439 \u0431\u043e\u043b\u0442"
+    },
+    {
+        "editor_id": "ccBGSSSE037_Ambrosia",
+        "type": "INGR FULL",
+        "original": "Ambrosia",
+        "string": "\u0410\u043c\u0431\u0440\u043e\u0437\u0438\u044f"
+    },
+    {
+        "editor_id": "ccBGSSSE037_Lichor",
+        "type": "INGR FULL",
+        "original": "Lichor",
+        "string": "\u041b\u0438\u0445\u043e\u0440"
+    },
+    {
+        "editor_id": "ccBGSSSE037_BoltCorkbulbProjectile",
+        "type": "PROJ FULL",
+        "original": "Corkbulb Bolt",
+        "string": "\u041f\u0440\u043e\u0431\u043a\u043e\u0432\u044b\u0439 \u0431\u043e\u043b\u0442"
+    },
+    {
+        "editor_id": "ccBGSSSE037_ArrowCorkbulbProjectile",
+        "type": "PROJ FULL",
+        "original": "Corkbulb Arrow",
+        "string": "\u041f\u0440\u043e\u0431\u043a\u043e\u0432\u0430\u044f \u0441\u0442\u0440\u0435\u043b\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE037_CorkbulbArrow",
+        "type": "AMMO FULL",
+        "original": "Corkbulb Arrow",
+        "string": "\u041f\u0440\u043e\u0431\u043a\u043e\u0432\u0430\u044f \u0441\u0442\u0440\u0435\u043b\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE037_IronBolt",
+        "type": "AMMO FULL",
+        "original": "Iron Bolt",
+        "string": "\u0416\u0435\u043b\u0435\u0437\u043d\u044b\u0439 \u0431\u043e\u043b\u0442"
+    },
+    {
+        "editor_id": "ccBGSSSE037_SilverBolt",
+        "type": "AMMO FULL",
+        "original": "Silver Bolt",
+        "string": "\u0421\u0435\u0440\u0435\u0431\u0440\u044f\u043d\u044b\u0439 \u0431\u043e\u043b\u0442"
+    },
+    {
+        "editor_id": "ccBGSSSE037_BoltSilverProjectile",
+        "type": "PROJ FULL",
+        "original": "Silver Bolt",
+        "string": "\u0421\u0435\u0440\u0435\u0431\u0440\u044f\u043d\u044b\u0439 \u0431\u043e\u043b\u0442"
+    },
+    {
+        "editor_id": "ccBGSSSE037_OrcishBolt",
+        "type": "AMMO FULL",
+        "original": "Orcish Bolt",
+        "string": "\u041e\u0440\u043e\u0447\u0438\u0439 \u0431\u043e\u043b\u0442"
+    },
+    {
+        "editor_id": "ccBGSSSE037_BoltIronProjectile",
+        "type": "PROJ FULL",
+        "original": "Iron Bolt",
+        "string": "\u0416\u0435\u043b\u0435\u0437\u043d\u044b\u0439 \u0431\u043e\u043b\u0442"
+    },
+    {
+        "editor_id": "ccBGSSSE037_BonemoldBolt",
+        "type": "AMMO FULL",
+        "original": "Bonemold Bolt",
+        "string": "\u041a\u043e\u0441\u0442\u044f\u043d\u043e\u0439 \u0431\u043e\u043b\u0442"
+    },
+    {
+        "editor_id": "ccBGSSSE037_BoltBonemoldProjectile",
+        "type": "PROJ FULL",
+        "original": "Bonemold Bolt",
+        "string": "\u041a\u043e\u0441\u0442\u044f\u043d\u043e\u0439 \u0431\u043e\u043b\u0442"
+    },
+    {
+        "editor_id": "ccBGSSSE037_BoltOrcishProjectile",
+        "type": "PROJ FULL",
+        "original": "Orcish Bolt",
+        "string": "\u041e\u0440\u043e\u0447\u0438\u0439 \u0431\u043e\u043b\u0442"
+    },
+    {
+        "editor_id": "ccBGSSSE037_PoisonedPerk",
+        "type": "PERK FULL",
+        "original": "Poisoned",
+        "string": "\u041d\u043e\u0441\u0438\u0442\u0435\u043b\u044c \u044f\u0434\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE037_AlchDamageHealthDuration",
+        "type": "MGEF DNAM",
+        "original": "Causes <mag> points of poison damage for <dur> seconds.",
+        "string": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 <mag> \u0435\u0434. \u0443\u0440\u043e\u043d\u0430 \u044f\u0434\u043e\u043c \u0432 \u0442\u0435\u0447\u0435\u043d\u0438\u0435 <dur> \u0441."
+    },
+    {
+        "editor_id": "ccBGSSSE037_HeartofOrderIngredient",
+        "type": "INGR FULL",
+        "original": "Heart of Order",
+        "string": "\u0421\u0435\u0440\u0434\u0446\u0435 \u041f\u043e\u0440\u044f\u0434\u043a\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE037_SilverboltPerk",
+        "type": "PERK FULL",
+        "original": "Silverbolt Perk",
+        "string": "\u0421\u043f\u043e\u0441\u043e\u0431\u043d\u043e\u0441\u0442\u044c \"\u0421\u0435\u0440\u0435\u0431\u0440\u044f\u043d\u044b\u0439 \u0431\u043e\u043b\u0442\""
+    },
+    {
+        "editor_id": "ccBGSSSE037_RareCuriosQuest",
+        "type": "QUST FULL",
+        "original": "Rare Curios",
+        "string": "\u0420\u0435\u0434\u043a\u043e\u0441\u0442\u0438"
+    },
+    {
+        "editor_id": "ccBGSSSE037_LightFFSelf",
+        "type": "MGEF DNAM",
+        "original": "Emits a small light that lasts for <dur> seconds.",
+        "string": "\u0421\u043e\u0437\u0434\u0430\u0435\u0442 \u043d\u0435\u0431\u043e\u043b\u044c\u0448\u043e\u0439 \u043e\u0433\u043e\u043d\u0435\u043a, \u043a\u043e\u0442\u043e\u0440\u044b\u0439 \u0441\u0432\u0435\u0442\u0438\u0442 <dur> \u0441."
+    },
+    {
+        "editor_id": "ccBGSSSE037_PoisonedFoodAppleGreen",
+        "type": "ALCH FULL",
+        "original": "Poisoned Green Apple",
+        "string": "\u041e\u0442\u0440\u0430\u0432\u043b\u0435\u043d\u043d\u043e\u0435 \u0437\u0435\u043b\u0435\u043d\u043e\u0435 \u044f\u0431\u043b\u043e\u043a\u043e"
+    },
+    {
+        "editor_id": "ccBGSSSE037_LightFFSelf",
+        "type": "MGEF FULL",
+        "original": "Light",
+        "string": "\u0421\u0432\u0435\u0442"
+    },
+    {
+        "editor_id": "ccBGSSSE037_AlchDamageHealthDuration",
+        "type": "MGEF FULL",
+        "original": "Apple Poisoning",
+        "string": "\u041e\u0442\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u044f\u0431\u043b\u043e\u043a\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE037_VarlaStone",
+        "type": "SLGM FULL",
+        "original": "Flawed Varla Stone",
+        "string": "\u041f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u043d\u044b\u0439 \u043a\u0430\u043c\u0435\u043d\u044c \u0432\u0430\u0440\u043b\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE037_RaceBretonAbsorbSpellChance",
+        "type": "MGEF DNAM",
+        "original": "Absorb <mag>% of the magicka from hostile spells for <dur> seconds.",
+        "string": "\u041f\u043e\u0433\u043b\u043e\u0449\u0430\u0435\u0442 <mag>% \u043c\u0430\u0433\u0438\u0438 \u043e\u0442 \u0432\u0440\u0430\u0436\u0435\u0441\u043a\u0438\u0445 \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0439, \u0434\u0435\u0439\u0441\u0442\u0432\u0443\u0435\u0442 <dur> \u0441."
+    },
+    {
+        "editor_id": "ccBGSSSE037_NightEyeEffect",
+        "type": "MGEF FULL",
+        "original": "Night Eye",
+        "string": "\u041d\u043e\u0447\u043d\u043e\u0439 \u0433\u043b\u0430\u0437"
+    },
+    {
+        "editor_id": "ccBGSSSE037_RaceBretonAbsorbSpellChance",
+        "type": "MGEF FULL",
+        "original": "Spell Absorption",
+        "string": "\u041f\u043e\u0433\u043b\u043e\u0449\u0435\u043d\u0438\u0435 \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0439"
+    },
+    {
+        "editor_id": "ccBGSSSE037_NightEyeEffect",
+        "type": "MGEF DNAM",
+        "original": "Improved night vision for <dur> seconds.",
+        "string": "\u0412\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u044c \u0432\u0438\u0434\u0435\u0442\u044c \u0432 \u0442\u0435\u043c\u043d\u043e\u0442\u0435 \u0432 \u0442\u0435\u0447\u0435\u043d\u0438\u0435 <dur> \u0441."
+    },
+    {
+        "editor_id": "ccBGSSSE037_SilverboltPerk",
+        "type": "PERK DESC",
+        "original": "Silver damage against werewolves and the undead.",
+        "string": "\u0421\u0435\u0440\u0435\u0431\u0440\u043e \u043d\u0430\u043d\u043e\u0441\u0438\u0442 \u0443\u0440\u043e\u043d \u0432\u0435\u0440\u0432\u043e\u043b\u044c\u0444\u0430\u043c \u0438 \u043d\u0435\u0436\u0438\u0442\u0438."
+    },
+    {
+        "editor_id": "ccBGSSSE037_PoisonedPerk",
+        "type": "PERK DESC",
+        "original": "Silently harm enemies by placing poisoned apples in their pockets.",
+        "string": "\u0412\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u0441\u043a\u0440\u044b\u0442\u043d\u043e \u043d\u0430\u043d\u043e\u0441\u0438\u0442\u044c \u0443\u0440\u043e\u043d \u0432\u0440\u0430\u0433\u0430\u043c, \u043f\u043e\u0434\u0431\u0440\u0430\u0441\u044b\u0432\u0430\u044f \u0438\u043c \u0432 \u043a\u0430\u0440\u043c\u0430\u043d\u044b \u043e\u0442\u0440\u0430\u0432\u043b\u0435\u043d\u043d\u044b\u0435 \u044f\u0431\u043b\u043e\u043a\u0438."
+    }
+]

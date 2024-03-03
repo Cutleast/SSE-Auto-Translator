@@ -1,0 +1,236 @@
+[
+    {
+        "editor_id": "ccCBHSSE001_QAChest",
+        "type": "CONT FULL",
+        "original": "All Unarmed Weapons",
+        "string": "Ca\u0142a bro\u0144 do cios\u00f3w wr\u0119cz"
+    },
+    {
+        "editor_id": "ccCBHSSE001_DwarvenGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Dwarven Gauntlets",
+        "string": "Krasnoludzkie r\u0119kawice pi\u0119\u015bciarza"
+    },
+    {
+        "editor_id": "ccCBHSSE001_StuddedGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Leather Bracers",
+        "string": "Sk\u00f3rzane karwasze pi\u0119\u015bciarza"
+    },
+    {
+        "editor_id": "ccCBHSSE001_ElvenGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Elven Gauntlets",
+        "string": "Elfie r\u0119kawice pi\u0119\u015bciarza"
+    },
+    {
+        "editor_id": "ccCBHSSE001_GlassGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Glass Gauntlets",
+        "string": "Szklane r\u0119kawice pi\u0119\u015bciarza"
+    },
+    {
+        "editor_id": "ccCBHSSE001_EbonyGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Ebony Gauntlets",
+        "string": "Ebonowe r\u0119kawice pi\u0119\u015bciarza"
+    },
+    {
+        "editor_id": "ccCBHSSE001_NordPlateGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Steel Plate Gauntlets",
+        "string": "Stalowe p\u0142ytowe r\u0119kawice pi\u0119\u015bciarza"
+    },
+    {
+        "editor_id": "ccCBHSSE001_SteelGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Steel Gauntlets",
+        "string": "Stalowe r\u0119kawice pi\u0119\u015bciarza"
+    },
+    {
+        "editor_id": "ccCBHSSE001_HideGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Hide Bracers",
+        "string": "Rzemienne karwasze pi\u0119\u015bciarza"
+    },
+    {
+        "editor_id": "ccCBHSSE001_DragonscaleGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Dragonscale Gauntlets",
+        "string": "R\u0119kawice pi\u0119\u015bciarza ze smoczej \u0142uski"
+    },
+    {
+        "editor_id": "ccCBHSSE001_BanditGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Fur Bracers",
+        "string": "Futrzane karwasze pi\u0119\u015bciarza"
+    },
+    {
+        "editor_id": "ccCBHSSE001_OrcishGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Orcish Gauntlets",
+        "string": "Orkowe r\u0119kawice pi\u0119\u015bciarza"
+    },
+    {
+        "editor_id": "ccCBHSSE001_ScaledGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Scaled Bracers",
+        "string": "\u0141uskowe karwasze pi\u0119\u015bciarza"
+    },
+    {
+        "editor_id": "ccCBHSSE001_DaedricGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Daedric Gauntlets",
+        "string": "Daedryczne r\u0119kawice pi\u0119\u015bciarza"
+    },
+    {
+        "editor_id": "ccCBHSSE001_DragonplateGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Dragonplate Gauntlets",
+        "string": "Smocze p\u0142ytowe r\u0119kawice pi\u0119\u015bciarza"
+    },
+    {
+        "editor_id": "ccCBHSSE001_IronGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Iron Gauntlets",
+        "string": "\u017belazne r\u0119kawice pi\u0119\u015bciarza"
+    },
+    {
+        "editor_id": "ccCBHSSE001_EnchArmorFortifyUnarmed03",
+        "type": "ENCH FULL",
+        "original": "Fortify Unarmed",
+        "string": "Premia do walki bez broni"
+    },
+    {
+        "editor_id": "ccCBHSSE001_EnchArmorFortifyUnarmed07",
+        "type": "ENCH FULL",
+        "original": "Fortify Unarmed",
+        "string": "Premia do walki bez broni"
+    },
+    {
+        "editor_id": "ccCBHSSE001_EnchArmorFortifyUnarmed05",
+        "type": "ENCH FULL",
+        "original": "Fortify Unarmed",
+        "string": "Premia do walki bez broni"
+    },
+    {
+        "editor_id": "ccCBHSSE001_EnchArmorFortifyUnarmed08",
+        "type": "ENCH FULL",
+        "original": "Fortify Unarmed",
+        "string": "Premia do walki bez broni"
+    },
+    {
+        "editor_id": "ccCBHSSE001_EnchArmorFortifyUnarmed04",
+        "type": "ENCH FULL",
+        "original": "Fortify Unarmed",
+        "string": "Premia do walki bez broni"
+    },
+    {
+        "editor_id": "ccCBHSSE001_EnchArmorFortifyUnarmed06",
+        "type": "ENCH FULL",
+        "original": "Fortify Unarmed",
+        "string": "Premia do walki bez broni"
+    },
+    {
+        "editor_id": "ccCBHSSE001_EnchArmorFortifyUnarmed02",
+        "type": "ENCH FULL",
+        "original": "Fortify Unarmed",
+        "string": "Premia do walki bez broni"
+    },
+    {
+        "editor_id": "ccCBHSSE001_StuddedGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Leather Bracers",
+        "string": "Sk\u00f3rzane karwasze pi\u0119\u015bciarza"
+    },
+    {
+        "editor_id": "ccCBHSSE001_BanditGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Fur Bracers",
+        "string": "Futrzane karwasze pi\u0119\u015bciarza"
+    },
+    {
+        "editor_id": "ccCBHSSE001_NordPlateGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Steel Plate Gauntlets",
+        "string": "Stalowe p\u0142ytowe r\u0119kawice pi\u0119\u015bciarza"
+    },
+    {
+        "editor_id": "ccCBHSSE001_ElvenGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Elven Gauntlets",
+        "string": "Elfie r\u0119kawice pi\u0119\u015bciarza"
+    },
+    {
+        "editor_id": "ccCBHSSE001_IronGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Iron Gauntlets",
+        "string": "\u017belazne r\u0119kawice pi\u0119\u015bciarza"
+    },
+    {
+        "editor_id": "ccCBHSSE001_ScaledGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Scaled Bracers",
+        "string": "\u0141uskowe karwasze pi\u0119\u015bciarza"
+    },
+    {
+        "editor_id": "ccCBHSSE001_EbonyGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Ebony Gauntlets",
+        "string": "Ebonowe r\u0119kawice pi\u0119\u015bciarza"
+    },
+    {
+        "editor_id": "ccCBHSSE001_HideGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Hide Bracers",
+        "string": "Rzemienne karwasze pi\u0119\u015bciarza"
+    },
+    {
+        "editor_id": "ccCBHSSE001_DwarvenGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Dwarven Gauntlets",
+        "string": "Krasnoludzkie r\u0119kawice pi\u0119\u015bciarza"
+    },
+    {
+        "editor_id": "ccCBHSSE001_OrcishGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Orcish Gauntlets",
+        "string": "Orkowe r\u0119kawice pi\u0119\u015bciarza"
+    },
+    {
+        "editor_id": "ccCBHSSE001_DaedricGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Daedric Gauntlets",
+        "string": "Daedryczne r\u0119kawice pi\u0119\u015bciarza"
+    },
+    {
+        "editor_id": "ccCBHSSE001_DragonscaleGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Dragonscale Gauntlets",
+        "string": "R\u0119kawice pi\u0119\u015bciarza ze smoczej \u0142uski"
+    },
+    {
+        "editor_id": "ccCBHSSE001_DragonplateGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Dragonplate Gauntlets",
+        "string": "Smocze p\u0142ytowe r\u0119kawice pi\u0119\u015bciarza"
+    },
+    {
+        "editor_id": "ccCBHSSE001_GlassGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Glass Gauntlets",
+        "string": "Szklane r\u0119kawice pi\u0119\u015bciarza"
+    },
+    {
+        "editor_id": "ccCBHSSE001_SteelGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Steel Gauntlets",
+        "string": "Stalowe r\u0119kawice pi\u0119\u015bciarza"
+    },
+    {
+        "editor_id": "QASmoke",
+        "type": "CELL FULL",
+        "original": "Editor Smoke Test Cell",
+        "string": "Test kom\u00f3rki dymu w edytorze"
+    }
+]

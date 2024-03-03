@@ -1,0 +1,308 @@
+[
+    {
+        "editor_id": "ccBGSSSE021LordsMail",
+        "type": "ARMO FULL",
+        "original": "Lord's Mail",
+        "string": "Kolczuga W\u0142adcy"
+    },
+    {
+        "editor_id": "ccBGSSSE021_ArmorAbsorbHealth_Spell",
+        "type": "SPEL FULL",
+        "original": "Lord's Mail Absorb Health",
+        "string": "Absorpcja Zdrowia - Kolczuga W\u0142adcy"
+    },
+    {
+        "editor_id": "ccBGSSSE021_ArmorAsborbHealthCloak_Effect",
+        "type": "MGEF FULL",
+        "original": "Lord's Mail Cloak",
+        "string": "Maskowanie - Kolczuga W\u0142adcy"
+    },
+    {
+        "editor_id": "ccBGSSSE021_ArmorAbsorbHealth_FFContact_Effect",
+        "type": "MGEF FULL",
+        "original": "Lord's Mail Absorb Health",
+        "string": "Absorpcja Zdrowia - Kolczuga W\u0142adcy"
+    },
+    {
+        "editor_id": "ccBGSSSE021_ArmorAbsorbHealthCloak_Ench",
+        "type": "ENCH FULL",
+        "original": "Lord's Mail",
+        "string": "Kolczuga W\u0142adcy"
+    },
+    {
+        "editor_id": "ccBGSSSE021_EnchResistMagicConstantSelf",
+        "type": "MGEF DNAM",
+        "original": "Increases Magic Resistance by <mag>%.",
+        "string": "Zwi\u0119ksza odporno\u015b\u0107 na magi\u0119 o <mag>%."
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMail_KynarethsBaneDisease",
+        "type": "SPEL FULL",
+        "original": "Bane of Kynareth",
+        "string": "Kl\u0105twa Kynaret"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailDiseaseUncleansed",
+        "type": "MGEF DNAM",
+        "original": "Wearer suffers a reduction of <50> points to Health, Stamina, and Magicka.",
+        "string": "Nosz\u0105cy ma o <50> pkt. mniejsze zdrowie, kondycj\u0119 i magi\u0119."
+    },
+    {
+        "editor_id": "ccBGSSSE021_DisDamageMagicka",
+        "type": "MGEF FULL",
+        "original": "Reduced Magicka",
+        "string": "Zmniejszona magia"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailDescription",
+        "type": "MGEF DNAM",
+        "original": "Opponents in melee range have <5> points of health absorbed per second.  Increases Poison Resistance by <75>%.  Increases Magic Resistance by <17>%.",
+        "string": "Absorpcja <5> pkt. zdrowia na sekund\u0119 od przeciwnik\u00f3w znajduj\u0105cych si\u0119 na wyci\u0105gni\u0119cie r\u0119ki. Zwi\u0119kszona o <75>% odporno\u015b\u0107 na trucizny i o <17>% odporno\u015b\u0107 na magi\u0119 ."
+    },
+    {
+        "editor_id": "ccBGSSSE021_ChestKey",
+        "type": "KEYM FULL",
+        "original": "Key to Alik'r Mercenary Chest",
+        "string": "Klucz do skrzyni najemnik\u00f3w Alik`r"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "type": "QUST NNAM",
+        "original": "Read the Emperor's Letter",
+        "string": "Przeczytaj list cesarza"
+    },
+    {
+        "editor_id": "ccBGSSSE021_EnchResistPoisonConstantSelf",
+        "type": "MGEF FULL",
+        "original": "Resist Poison",
+        "string": "Odporno\u015b\u0107 na trucizny"
+    },
+    {
+        "editor_id": "ccBGSSSE021_DisDamageHealth",
+        "type": "MGEF FULL",
+        "original": "Reduced Health",
+        "string": "Zmniejszone zdrowie"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "type": "QUST FULL",
+        "original": "Gift of Kynareth",
+        "string": "Dar Kynaret"
+    },
+    {
+        "editor_id": "ccBGSSSE021_EncAlikrBoss2HM01",
+        "type": "NPC_ FULL",
+        "original": "Majid the Mad",
+        "string": "Majid Szalony"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "type": "QUST NNAM",
+        "original": "Confront the Alik'r Mercenaries",
+        "string": "Zmierz si\u0119 z najemnikami Alik`r"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuestNote",
+        "type": "BOOK FULL",
+        "original": "Letter to General Tullius",
+        "string": "List do genera\u0142a Tulliusa"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "type": "QUST NNAM",
+        "original": "Cleanse the Lord's Mail in Solitude",
+        "string": "Oczy\u015b\u0107 Kolczug\u0119 W\u0142adcy w Samotni."
+    },
+    {
+        "editor_id": "ccBGSSSE021_DisDamageMagicka",
+        "type": "MGEF DNAM",
+        "original": "Drains <mag> points of Magicka.",
+        "string": "Zmniejsza magi\u0119 o <mag> pkt."
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "type": "QUST NNAM",
+        "original": "Retrieve the Lord's Mail",
+        "string": "Zdob\u0105d\u017a Kolczug\u0119 W\u0142adcy"
+    },
+    {
+        "editor_id": "ccBGSSSE021_DisDamageStamina",
+        "type": "MGEF FULL",
+        "original": "Reduced Stamina",
+        "string": "Zmniejszona kondycja"
+    },
+    {
+        "editor_id": "ccBGSSSE021_DisDamageStamina",
+        "type": "MGEF DNAM",
+        "original": "Drains <mag> points from stamina.",
+        "string": "Zmniejsza kondycj\u0119 o <mag> pkt."
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailDescription",
+        "type": "MGEF FULL",
+        "original": "Lord's Mail",
+        "string": "Kolczuga W\u0142adcy"
+    },
+    {
+        "editor_id": "ccBGSSSE021_EnchResistPoisonConstantSelf",
+        "type": "MGEF DNAM",
+        "original": "Increases Poison Resistance by <mag>%.",
+        "string": "Zwi\u0119ksza odporno\u015b\u0107 na trucizny o <mag>%."
+    },
+    {
+        "editor_id": "ccBGSSSE021_DisDamageHealth",
+        "type": "MGEF DNAM",
+        "original": "Reduces Health by <mag>.",
+        "string": "Zmniejsza zdrowie o <mag> pkt."
+    },
+    {
+        "editor_id": "ccBGSSSE021_ChestLordsMail",
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Skrzynia"
+    },
+    {
+        "editor_id": "ccBGSSSE021_EncRedguardMercMissileM01",
+        "type": "NPC_ FULL",
+        "original": "Alik'r Mercenary",
+        "string": "Najemnik Alik`r"
+    },
+    {
+        "editor_id": "ccBGSSSE021_EnchResistMagicConstantSelf",
+        "type": "MGEF FULL",
+        "original": "Resist Magic",
+        "string": "Odporno\u015b\u0107 na magi\u0119"
+    },
+    {
+        "editor_id": "ccBGSSSE021_EncRedguardMercMagicM01",
+        "type": "NPC_ FULL",
+        "original": "Alik'r Mercenary",
+        "string": "Najemnik Alik`r"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailDiseaseUncleansed",
+        "type": "MGEF FULL",
+        "original": "Lord's Mail (Cursed)",
+        "string": "Kolczuga W\u0142adcy (przekl\u0119ta)"
+    },
+    {
+        "editor_id": "ccBGSSSE021_RedguardClothesGreen",
+        "type": "ARMO FULL",
+        "original": "Redguard Clothes",
+        "string": "Ubi\u00f3r Redgarda"
+    },
+    {
+        "editor_id": "ccBGSSSE021_RedguardHoodGreen",
+        "type": "ARMO FULL",
+        "original": "Redguard Hood",
+        "string": "Kaptur Redgarda"
+    },
+    {
+        "editor_id": "ccBGSSSE021_RedguardClothesTan",
+        "type": "ARMO FULL",
+        "original": "Redguard Clothes",
+        "string": "Ubi\u00f3r Redgarda"
+    },
+    {
+        "editor_id": "ccBGSSSE021_ChestArmorNote",
+        "type": "BOOK FULL",
+        "original": "Majid - Please Read",
+        "string": "Majidzie - prosz\u0119, przeczytaj"
+    },
+    {
+        "editor_id": "ccBGSSSE021_RedguardHoodTan",
+        "type": "ARMO FULL",
+        "original": "Redguard Hood",
+        "string": "Kaptur Redgarda"
+    },
+    {
+        "editor_id": "ccBGSSSE021_InvisibleShrineOfKynarethActivator",
+        "type": "ACTI FULL",
+        "original": "Shrine of Kynareth",
+        "string": "Kapliczka Kynaret"
+    },
+    {
+        "editor_id": "ccBGSSSE021_ArmorCursed_Ench",
+        "type": "ENCH FULL",
+        "original": "Lord's Mail (Cursed)",
+        "string": "Kolczuga W\u0142adcy (przekl\u0119ta)"
+    },
+    {
+        "editor_id": "ccBGSSSE021_RedguardHoodRed",
+        "type": "ARMO FULL",
+        "original": "Redguard Hood",
+        "string": "Kaptur Redgarda"
+    },
+    {
+        "editor_id": "ccBGSSSE021LordsMail_Cursed",
+        "type": "ARMO FULL",
+        "original": "Lord's Mail (Cursed)",
+        "string": "Kolczuga W\u0142adcy (przekl\u0119ta)"
+    },
+    {
+        "editor_id": "SolitudeCastleDour",
+        "type": "CELL FULL",
+        "original": "Castle Dour",
+        "string": "Zamek Dour"
+    },
+    {
+        "editor_id": "SolitudeTempleoftheDivines",
+        "type": "CELL FULL",
+        "original": "Temple of the Divines",
+        "string": "Niebia\u0144ska \u015awi\u0105tynia"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "type": "QUST CNAM",
+        "original": "I've confronted the Alik'r mercenaries and found a locked chest.  I just need to find the key...",
+        "string": "Po starciu z najemcami Alik`r uda\u0142o mi si\u0119 znale\u017a\u0107 zamkni\u0119t\u0105 skrzyni\u0119. Musz\u0119 tylko dowiedzie\u0107 si\u0119, gdzie jest klucz..."
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "type": "QUST CNAM",
+        "original": "A letter from the Emperor pertaining to an Imperial artifact was found at Castle Dour.  I should read it and find out what it's about.",
+        "string": "Na zamku Dour znaleziono list od cesarza dotycz\u0105cy cesarskiego artefaktu. Musz\u0119 go przeczyta\u0107 i dowiedzie\u0107 si\u0119, o co chodzi."
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "type": "QUST CNAM",
+        "original": "The Lord's Mail has been retreived, blessed by Kynareth, and can now be worn safely.",
+        "string": "Kolczuga W\u0142adcy zosta\u0142a odzyskana i pob\u0142ogos\u0142awiona przez Kynaret. Mo\u017cna j\u0105 teraz nosi\u0107 bezpiecznie."
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMail_KynarethsBaneDisease",
+        "type": "SPEL DESC",
+        "original": "Wearer suffers a reduction of <50> points to Health, Stamina, and Magicka.",
+        "string": "Nosz\u0105cy ma o <50> pkt. mniejsze zdrowie, kondycj\u0119 i magi\u0119."
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "type": "QUST CNAM",
+        "original": "I've retrieved The Lord's Mail, the legendary Imperial armor.  Before it can be worn, it must be cleansed at the shrine of Kynareth in Solitude.",
+        "string": "Uda\u0142o mi si\u0119 zdoby\u0107 Kolczug\u0119 W\u0142adcy, legendarny cesarski pancerz. Zanim b\u0119dzie go mo\u017cna za\u0142o\u017cy\u0107, musi zosta\u0107 oczyszczony w kapliczce Kynaret, w Samotni."
+    },
+    {
+        "editor_id": "ccBGSSSE021_MessageCleanseSuccess",
+        "type": "MESG DESC",
+        "original": "The Lord's Mail has been cleansed",
+        "string": "Kolczuga W\u0142adcy zosta\u0142a oczyszczona"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuestNote",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"16\">\n15th of Last Seed, 4E 201\n\nGeneral Tullius,\n\nDuring these times of war, I strongly believe it is important to inspire our population through a show of military strength and pageantry.  To the younger among us, nothing is as inspiring as the sight of an Imperial Soldier wearing the finest armors our Empire has ever set its hands to.\n\nIt is for this reason I am formally requesting that several Imperial relics be placed back into the service of the Empire, and distributed among high ranking officials. We must do all we can to inspire awe, and help galvanize the image of our cause among the populace.\n\nIt has come to my attention that a paticular artifact, the Armor of Morihaus, Gift of Kynareth, also known as The Lord's Mail, has recently gone missing.  It is believed a group of Redguard mercenaries have stolen it with the aim to sell to the highest bidder.  They were last seen traveling south of Fort Greymoor.\n\nFind these mercenaries, and reclaim The Lord's Mail.  Wear it proudly.  Show the people that Kynareth favors the realm of the Empire.\n\nEmperor Titus Mede II\n</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"16\">\n15. Ostatniego Siewu, 4E 201\n\nGenerale Tulliusie,\n\nNasta\u0142 czas wojny, a ja \u015bwi\u0119cie wierz\u0119, \u017ce trzeba inspirowa\u0107 mieszka\u0144c\u00f3w ceremonialnymi pokazami si\u0142y wojskowej. Dla m\u0142odzie\u0144c\u00f3w nie ma nic bardziej inspiruj\u0105cego ni\u017c widok \u017co\u0142nierza w najlepszym pancerzu, jakim dysponuje nasze cesarstwo.\n\nZ tego te\u017c wzgl\u0119du oficjalnie poprosi\u0142em o przywr\u00f3cenie kilku cesarskich artefakt\u00f3w z powrotem do dyspozycji dla cesarskiego wojska. Zosta\u0142y one rozdzielone pomi\u0119dzy wa\u017cne osobisto\u015bci. Musimy zrobi\u0107 wszystko, aby wzbudzi\u0107 podziw i odpowiednio ukszta\u0142towa\u0107 sw\u00f3j wizerunek w\u015br\u00f3d populacji.\n\nDowiedzia\u0142em si\u0119, \u017ce pewien artefakt, Pancerz Morihausa, dar Kynaret, zwany tak\u017ce Kolczug\u0105 W\u0142adcy, zagin\u0105\u0142 jaki\u015b czas temu. Istniej\u0105 podejrzenia, \u017ce to grupa najemnik\u00f3w, Redgard\u00f3w, ukrad\u0142a kolczug\u0119 i zamierza j\u0105 sprzeda\u0107 temu, kto zap\u0142aci najwi\u0119cej. Widziano ich ostatnio, jak podr\u00f3\u017cowali na po\u0142udnie od fortu Szara Przysta\u0144.\n\nZnajd\u017a tych najemnik\u00f3w i odzyskaj Kolczug\u0119 W\u0142adcy. No\u015b j\u0105 z dum\u0105. Poka\u017c ludowi, \u017ce Kynaret jest \u0142askawa dla cesarstwa.\n\nCesarz Titus Mede II\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "type": "QUST CNAM",
+        "original": "I've found a letter addressed to General Tullius from the Emperor of Tamriel instructing that The Lord's Mail, a treasured Imperial relic, be found and reclaimed.  A band of Redguard mercenaries are rumored to have taken it.  I should locate their whereabouts and see if I can obtain the artifact.",
+        "string": "Wpad\u0142 mi w r\u0119ce list od cesarza Tamriel do genera\u0142a Tulliusa. Mo\u017cna w nim wyczyta\u0107, \u017ce Kolczuga W\u0142adcy, cesarski artefakt, ma zosta\u0107 odnaleziona i odzyskana. Pono\u0107 wykrad\u0142a j\u0105 grupa redgardzkich najemnik\u00f3w. Musz\u0119 ich odnale\u017a\u0107 i sprawdzi\u0107, czy zdo\u0142am odzyska\u0107 artefakt."
+    },
+    {
+        "editor_id": "ccBGSSSE021_ChestArmorNote",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"16\">\nMajid,\n\nAs we discussed, this armor is extremely valuable.  Please protect it at all costs.  You and your men should sleep in shifts in order to prevent any surprises, and dispose of anyone you do not recognize.  We cannot be found out.\n\nThe buyer will be traveling to meet you in the coming days.  We stand to make a small fortune, and you and your men will get the proper cut of the profits, as agreed.  The loss of such an artifact will bring disgrace to the Empire, and we should all be proud.\n\nPlease be aware, it is extremely important that you do not put this armor on.  I did not believe the stories, but when I put it on I was overcome with an uneasy fatigue.  Do not tell the prospective buyer about this lest they change their minds.  Let them seek out Kynareth's blessing themselves.\n</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"16\">\nMajidzie,\n\nTak jak rozmawiali\u015bmy, ten pancerz jest niezwykle cenny. Chro\u0144 go za wszelk\u0105 cen\u0119. Twoi ludzie powinni spa\u0107 na zmiany, aby zapobiec wszelkim niespodziankom, i likwidowa\u0107 ka\u017cdego, kogo nie rozpoznasz. Nie mo\u017cemy zosta\u0107 odkryci.\n\nW ci\u0105gu kilku dni przyb\u0119dzie kupiec, kt\u00f3ry ma si\u0119 z tob\u0105 spotka\u0107. Chcemy zbi\u0107 ma\u0142\u0105 fortun\u0119, a ty i twoi ludzie otrzymacie stosown\u0105 cz\u0119\u015b\u0107 zysku, tak jak to uzgodnili\u015bmy. Utrata tego artefaktu przyniesie ha\u0144b\u0119 cesarstwu, a wi\u0119c powinni\u015bmy by\u0107 z siebie dumni.\n\nJeszcze jedna, bardzo wa\u017cna sprawa - absolutnie nie zak\u0142adaj tego pancerza. Ja nie wierzy\u0142em opowie\u015bciom, ale kiedy go za\u0142o\u017cy\u0142em, pojawi\u0142o si\u0119 u mnie niepokoj\u0105ce zm\u0119czenie. Nie m\u00f3w o tym kupcowi, bo jeszcze zmieni zdanie. Niech sam odkryje b\u0142ogos\u0142awie\u0144stwo Kynaret.\n</font>"
+    }
+]

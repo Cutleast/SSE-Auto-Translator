@@ -1,0 +1,1148 @@
+[
+    {
+        "editor_id": "ccEEJSSE001_BakingSurfaceTrigger",
+        "type": "ACTI RNAM",
+        "original": "Use",
+        "string": "Benutzen"
+    },
+    {
+        "editor_id": "ccEEJSSE001_BakingSurfaceTrigger",
+        "type": "ACTI FULL",
+        "original": "Baking Surface",
+        "string": "Backoberfl\u00e4che"
+    },
+    {
+        "editor_id": "ccEEJSSE002_Basket2",
+        "type": "MISC FULL",
+        "original": "Basket",
+        "string": "Korb"
+    },
+    {
+        "editor_id": "ccEEJSSE002_IngredientsCupboard",
+        "type": "CONT FULL",
+        "original": "Cupboard",
+        "string": "Schrank"
+    },
+    {
+        "editor_id": "ccEEJSSE002_Platter",
+        "type": "MISC FULL",
+        "original": "Platter",
+        "string": "Tablett"
+    },
+    {
+        "editor_id": "ccEEJSSE002_LargeSackNRS",
+        "type": "CONT FULL",
+        "original": "Sack",
+        "string": "Sack"
+    },
+    {
+        "editor_id": "ccEEJSSE002_LargeJug",
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "Krug"
+    },
+    {
+        "editor_id": "ccEEJSSE002_ChildBedR",
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "Bett"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SilverJug",
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "Krug"
+    },
+    {
+        "editor_id": "ccEEJSSE002_NarrowBench",
+        "type": "FURN FULL",
+        "original": "Bench",
+        "string": "Bank"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SilverJugLg",
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "Krug"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SilverCandleStick1Misc",
+        "type": "MISC FULL",
+        "original": "Candlestick",
+        "string": "Kerzenhalter"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SilverCup",
+        "type": "MISC FULL",
+        "original": "Cup",
+        "string": "Tasse"
+    },
+    {
+        "editor_id": "ccEEJSSE002_GobletSilver",
+        "type": "MISC FULL",
+        "original": "Goblet",
+        "string": "Becher"
+    },
+    {
+        "editor_id": "ccEEJSSE002MageTowerMain",
+        "type": "CELL FULL",
+        "original": "Myrwatch",
+        "string": "Myrwacht"
+    },
+    {
+        "editor_id": "ccEEJSSE002_JugDwemer",
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "Krug"
+    },
+    {
+        "editor_id": "ccEEJSSE002_NordJug",
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "Krug"
+    },
+    {
+        "editor_id": "ccEEJSSE002_OvenMarker",
+        "type": "FURN FULL",
+        "original": "Baking Surface",
+        "string": "Backoberfl\u00e4che"
+    },
+    {
+        "editor_id": "ccEEJSSE002_AllForge",
+        "type": "FURN FULL",
+        "original": "All Forge",
+        "string": "Universalschmiede"
+    },
+    {
+        "editor_id": "ccEEJSSE002_Basket1",
+        "type": "MISC FULL",
+        "original": "Basket",
+        "string": "Korb"
+    },
+    {
+        "editor_id": "ccEEJSSE002_ArmChair",
+        "type": "FURN FULL",
+        "original": "Armchair",
+        "string": "Sessel"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SilverCandleStick3Misc",
+        "type": "MISC FULL",
+        "original": "Candlestick",
+        "string": "Kerzenhalter"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SilverCandleStick2Misc",
+        "type": "MISC FULL",
+        "original": "Candlestick",
+        "string": "Kerzenhalter"
+    },
+    {
+        "editor_id": "ccEEJSSE002_PortalDoor",
+        "type": "DOOR FULL",
+        "original": "Portal",
+        "string": "Portal"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DoubleBed",
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "Bett"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SilverUrn",
+        "type": "MISC FULL",
+        "original": "Urn",
+        "string": "Urne"
+    },
+    {
+        "editor_id": "ccEEJSSE002MageTowerSecond",
+        "type": "CELL FULL",
+        "original": "Myrwatch Gallery",
+        "string": "Galerie Myrwacht"
+    },
+    {
+        "editor_id": "ccEEJSSE002_Pitcher",
+        "type": "MISC FULL",
+        "original": "Jeweled Pitcher",
+        "string": "Juwelenbesetzter Krug"
+    },
+    {
+        "editor_id": "ccEEJSSE002_ChildBedL",
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "Bett"
+    },
+    {
+        "editor_id": "ccEEJSSE002_Bookcase",
+        "type": "CONT FULL",
+        "original": "Bookcase",
+        "string": "B\u00fccherschrank"
+    },
+    {
+        "editor_id": "ccEEJSSE002_NobleCupboard",
+        "type": "CONT FULL",
+        "original": "Cupboard",
+        "string": "Schrank"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SilverBowl01",
+        "type": "MISC FULL",
+        "original": "Bowl",
+        "string": "Sch\u00fcssel"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SmeltingPot",
+        "type": "FURN FULL",
+        "original": "Smelting Pot",
+        "string": "Schmelztopf"
+    },
+    {
+        "editor_id": "ccEEJSSE002_PortalGemWhiteActivator",
+        "type": "ACTI FULL",
+        "original": "Diamond Paragon",
+        "string": "Diamantenglanzst\u00fcck"
+    },
+    {
+        "editor_id": "ccEEJSSE002_AurielsShieldActivator",
+        "type": "ACTI FULL",
+        "original": "Auriel's Shield",
+        "string": "Auriels Schild"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskShockActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskOtarActivator",
+        "type": "ACTI FULL",
+        "original": "Otar",
+        "string": "Otar"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskFrostActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_Curio2",
+        "type": "CONT FULL",
+        "original": "Cabinet",
+        "string": "Schrank"
+    },
+    {
+        "editor_id": "ccEEJSSE002_GauldurStaffActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerINTLocation",
+        "type": "LCTN FULL",
+        "original": "Myrwatch",
+        "string": "Myrwacht"
+    },
+    {
+        "editor_id": "ccEEJSSE002_PortalGemPurpleActivator",
+        "type": "ACTI FULL",
+        "original": "Amethyst Paragon",
+        "string": "Amethystglanzst\u00fcck"
+    },
+    {
+        "editor_id": "ccEEJSSE002_AurielsBowActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskVolsungActivator",
+        "type": "ACTI FULL",
+        "original": "Volsung",
+        "string": "Volsung"
+    },
+    {
+        "editor_id": "ccEEJSSE002_WuuthradActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_BladeofSacrificeActivator",
+        "type": "ACTI FULL",
+        "original": "Blade of Sacrifice",
+        "string": "Klinge der Opferung"
+    },
+    {
+        "editor_id": "ccEEJSSE002_StaffWorkbench",
+        "type": "FURN FULL",
+        "original": "Staff Enchanter",
+        "string": "Stabverzauberer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DawnguardRuneHammerActivator",
+        "type": "ACTI FULL",
+        "original": "Dawnguard Rune Hammer",
+        "string": "D\u00e4mmerwachtrunenhammer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_Barrel",
+        "type": "CONT FULL",
+        "original": "Barrel",
+        "string": "Fass"
+    },
+    {
+        "editor_id": "ccEEJSSE002_PortalGemGreenActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_KeeningActivator",
+        "type": "ACTI FULL",
+        "original": "Keening",
+        "string": "Seelenklinge"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SackEmptyNRS",
+        "type": "CONT FULL",
+        "original": "Large Sack",
+        "string": "Gro\u00dfer Sack"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MothJarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DawnguardShieldActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_HarkonSwordActivator",
+        "type": "ACTI FULL",
+        "original": "Harkon's Sword",
+        "string": "Harkons Schwert"
+    },
+    {
+        "editor_id": "ccEEJSSE002_ButterflyJarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskFireActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SoulGemBarrel",
+        "type": "CONT FULL",
+        "original": "Barrel",
+        "string": "Fass"
+    },
+    {
+        "editor_id": "ccEEJSSE002_UrnSilver",
+        "type": "CONT FULL",
+        "original": "Urn",
+        "string": "Urne"
+    },
+    {
+        "editor_id": "ccEEJSSE002_TestStongBox",
+        "type": "CONT FULL",
+        "original": "Test Items",
+        "string": "Testgegenst\u00e4nde"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskKrosisActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_AetherialShieldActivator",
+        "type": "ACTI FULL",
+        "original": "Aetherial Shield",
+        "string": "Aetherischer Schild"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SpiderControlRodActivator",
+        "type": "ACTI FULL",
+        "original": "Spider Control Rod",
+        "string": "Stab der Spinnenbeherrschung"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskKonahrikActivator",
+        "type": "ACTI FULL",
+        "original": "Konahrik",
+        "string": "Konahrik"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SanguineRoseActivator",
+        "type": "ACTI FULL",
+        "original": "Sanguine Rose",
+        "string": "Sanguines Rose"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DawnguardRuneHammerActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SkullofCorruptionActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskHevnoraakActivator",
+        "type": "ACTI FULL",
+        "original": "Hevnoraak",
+        "string": "Hevnoraak"
+    },
+    {
+        "editor_id": "ccEEJSSE002_AetherialShieldActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SpellbreakerActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_TorstenSkullActivator",
+        "type": "ACTI FULL",
+        "original": "Torsten's Skull Key",
+        "string": "Torstens Totenkopfschl\u00fcssel"
+    },
+    {
+        "editor_id": "ccEEJSSE002_StaffofMagnusActivator",
+        "type": "ACTI FULL",
+        "original": "Staff of Magnus",
+        "string": "Stab des Magnus"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskShockActivator",
+        "type": "ACTI FULL",
+        "original": "Zahkriisos",
+        "string": "Zahkriisos"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskKrosisActivator",
+        "type": "ACTI FULL",
+        "original": "Krosis",
+        "string": "Krosis"
+    },
+    {
+        "editor_id": "ccEEJSSE002_ChampionsCudgelActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SpellbreakerActivator",
+        "type": "ACTI FULL",
+        "original": "Spellbreaker",
+        "string": "Zauberbrecher"
+    },
+    {
+        "editor_id": "ccEEJSSE002_BloodskalBladeActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "[05000FA2]",
+        "type": "REFR FULL",
+        "original": "Myrwatch",
+        "string": "Myrwacht"
+    },
+    {
+        "editor_id": "ccEEJSSE002_WuuthradActivator",
+        "type": "ACTI FULL",
+        "original": "Wuuthrad",
+        "string": "Wuuthrad"
+    },
+    {
+        "editor_id": "ccEEJSSE002_BladeofSacrificeActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_BloodskalBladeActivator",
+        "type": "ACTI FULL",
+        "original": "Bloodskal Blade",
+        "string": "Blutskaldenklinge"
+    },
+    {
+        "editor_id": "ccEEJSSE002_AurielsShieldActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DawnguardRuneAxeActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SoulrenderActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskVolsungActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_GauldurStaffActivator",
+        "type": "ACTI FULL",
+        "original": "Staff of Jyrik Gauldurson",
+        "string": "Stab von Jyrik Gauldurson"
+    },
+    {
+        "editor_id": "ccEEJSSE002_GlassBowoftheStagPrinceActivator",
+        "type": "ACTI FULL",
+        "original": "Glass Bow of the Stag Prince",
+        "string": "Glasbogen des Hirschprinzen"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MehrunesRazorActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_InitiatesEwerActivator",
+        "type": "ACTI FULL",
+        "original": "Initiate's Ewer",
+        "string": "Krug des Initianten"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskKonahrikActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_ShieldofYsgramorActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskVokunActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskOtarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_WabbajackActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DragonflyJarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DragonflyJarActivator",
+        "type": "ACTI FULL",
+        "original": "Dragonfly in a Jar",
+        "string": "Libelle im Glas"
+    },
+    {
+        "editor_id": "ccEEJSSE002_WabbajackActivator",
+        "type": "ACTI FULL",
+        "original": "Wabbajack",
+        "string": "Wabbajack"
+    },
+    {
+        "editor_id": "ccEEJSSE002_PortalGemBlueActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskMorokeiActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_BloodscytheActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SpiderControlRodActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MehrunesRazorActivator",
+        "type": "ACTI FULL",
+        "original": "Mehrunes' Razor",
+        "string": "Mehrunes' Klinge"
+    },
+    {
+        "editor_id": "ccEEJSSE002_KeeningActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_BladeofWoeActivator",
+        "type": "ACTI FULL",
+        "original": "Blade of Woe",
+        "string": "Klinge des Wehklagens"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskVokunActivator",
+        "type": "ACTI FULL",
+        "original": "Vokun",
+        "string": "Vokun"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DawnguardShieldActivator",
+        "type": "ACTI FULL",
+        "original": "Dawnguard Rune Shield",
+        "string": "Runenschild"
+    },
+    {
+        "editor_id": "ccEEJSSE002_BeeJarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_NettlebaneActivator",
+        "type": "ACTI FULL",
+        "original": "Nettlebane",
+        "string": "Nesselfluch"
+    },
+    {
+        "editor_id": "ccEEJSSE002_ShieldofYsgramorActivator",
+        "type": "ACTI FULL",
+        "original": "Shield of Ysgramor",
+        "string": "Schild von Ysgramor"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskMorokeiActivator",
+        "type": "ACTI FULL",
+        "original": "Morokei",
+        "string": "Morokei"
+    },
+    {
+        "editor_id": "ccEEJSSE002_BeeJarActivator",
+        "type": "ACTI FULL",
+        "original": "Bee in a Jar",
+        "string": "Biene im Glas"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskRahgotActivator",
+        "type": "ACTI FULL",
+        "original": "Rahgot",
+        "string": "Rahgot"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskNahkriinActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_LargeFlat_NRS",
+        "type": "CONT FULL",
+        "original": "Sack",
+        "string": "Sack"
+    },
+    {
+        "editor_id": "ccEEJSSE002_TargeoftheBloodedActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SkullofCorruptionActivator",
+        "type": "ACTI FULL",
+        "original": "Skull of Corruption",
+        "string": "Sch\u00e4del der Korruption"
+    },
+    {
+        "editor_id": "ccEEJSSE002_AurielsBowActivator",
+        "type": "ACTI FULL",
+        "original": "Auriel's Bow",
+        "string": "Auriels Bogen"
+    },
+    {
+        "editor_id": "ccEEJSSE002_StaffofMagnusActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_BladeofWoeActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SanguineRoseActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_KahvozeinsFangActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerEXTLocation",
+        "type": "LCTN FULL",
+        "original": "Myrwatch",
+        "string": "Myrwacht"
+    },
+    {
+        "editor_id": "ccEEJSSE002_TorstenSkullActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SearekSkullActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_GlassBowoftheStagPrinceActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_InitiatesEwerActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_PortalGemredActivator",
+        "type": "ACTI FULL",
+        "original": "Ruby Paragon",
+        "string": "Rubinglanzst\u00fcck"
+    },
+    {
+        "editor_id": "ccEEJSSE002_FireflyJarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_PortalGemBlueActivator",
+        "type": "ACTI FULL",
+        "original": "Sapphire Paragon",
+        "string": "Saphirglanzst\u00fcck"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MothJarActivator",
+        "type": "ACTI FULL",
+        "original": "Moth in a Jar",
+        "string": "Motte im Glas"
+    },
+    {
+        "editor_id": "ccEEJSSE002_FireflyJarActivator",
+        "type": "ACTI FULL",
+        "original": "Firefly in a Jar",
+        "string": "Gl\u00fchw\u00fcrmchen im Glas"
+    },
+    {
+        "editor_id": "ccEEJSSE002_ButterflyJarActivator",
+        "type": "ACTI FULL",
+        "original": "Butterfly in a Jar",
+        "string": "Schmetterling im Glas"
+    },
+    {
+        "editor_id": "ccEEJSSE002_ChampionsCudgelActivator",
+        "type": "ACTI FULL",
+        "original": "Champion's Cudgel",
+        "string": "Kn\u00fcppel des Champions"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskHevnoraakActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskWoodenActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_BlackBowActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_PortalGemGreenActivator",
+        "type": "ACTI FULL",
+        "original": "Emerald Paragon",
+        "string": "Smaragdglanzst\u00fcck"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskFrostActivator",
+        "type": "ACTI FULL",
+        "original": "Dukaan",
+        "string": "Dukaan"
+    },
+    {
+        "editor_id": "ccEEJSSE002_PortalGemPurpleActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DawnguardRuneAxeActivator",
+        "type": "ACTI FULL",
+        "original": "Dawnguard Rune Axe",
+        "string": "D\u00e4mmerwachtrunenaxt"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskFireActivator",
+        "type": "ACTI FULL",
+        "original": "Ahzidal",
+        "string": "Ahzidal"
+    },
+    {
+        "editor_id": "ccEEJSSE002_PortalGemWhiteActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_Curio1",
+        "type": "CONT FULL",
+        "original": "Cabinet",
+        "string": "Schrank"
+    },
+    {
+        "editor_id": "ccEEJSSE002_TargeoftheBloodedActivator",
+        "type": "ACTI FULL",
+        "original": "Targe of the Blooded",
+        "string": "Schild des Blutigen"
+    },
+    {
+        "editor_id": "ccEEJSSE002_KahvozeinsFangActivator",
+        "type": "ACTI FULL",
+        "original": "Kahvozein's Fang",
+        "string": "Kahvozeins Zahn"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskNahkriinActivator",
+        "type": "ACTI FULL",
+        "original": "Nahkriin",
+        "string": "Nahkriin"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SackSmallFlat_NRS",
+        "type": "CONT FULL",
+        "original": "Sack",
+        "string": "Sack"
+    },
+    {
+        "editor_id": "ccEEJSSE002_BlackBowActivator",
+        "type": "ACTI FULL",
+        "original": "Dwarven Black Bow of Fate",
+        "string": "Schwarzer Zwergenbogen des Schicksals"
+    },
+    {
+        "editor_id": "ccEEJSSE002_Enchanter",
+        "type": "FURN FULL",
+        "original": "Arcane Enchanter",
+        "string": "Arkaner Verzauberer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskWoodenActivator",
+        "type": "ACTI FULL",
+        "original": "Wooden Mask",
+        "string": "Holzmaske"
+    },
+    {
+        "editor_id": "ccEEJSSE002_HarkonSwordActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_PortalGemredActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskRahgotActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_BloodscytheActivator",
+        "type": "ACTI FULL",
+        "original": "Bloodscythe",
+        "string": "Blutschwinge"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SearekSkullActivator",
+        "type": "ACTI FULL",
+        "original": "Saerek's Skull Key",
+        "string": "Saereks Totenkopfschl\u00fcssel"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SoulrenderActivator",
+        "type": "ACTI FULL",
+        "original": "Soulrender",
+        "string": "Seelenrei\u00dfer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_NettlebaneActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerKey",
+        "type": "KEYM FULL",
+        "original": "Enchanted Tower Key",
+        "string": "Verzauberter Turmschl\u00fcssel"
+    },
+    {
+        "editor_id": "ccEEJSSE002_LoreNotes",
+        "type": "BOOK FULL",
+        "original": "Sindnar's Tower Notes",
+        "string": "Sindnars Notizen zum Turm"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SummonGhost",
+        "type": "SPEL FULL",
+        "original": "Summon Tower Ghost",
+        "string": "Turmgeist beschw\u00f6ren"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DarkElfJournal",
+        "type": "BOOK FULL",
+        "original": "Hans's Journal",
+        "string": "Hans' Tagebuch"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "type": "QUST NNAM",
+        "original": "Enter Myrwatch",
+        "string": "Betritt Myrwacht."
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "type": "QUST NNAM",
+        "original": "Investigate Myrwatch",
+        "string": "Sieh dich in Myrwacht um."
+    },
+    {
+        "editor_id": "ccEEJSSE002_SummonGhostEffect",
+        "type": "MGEF DNAM",
+        "original": "Summons the ghost of the Mage's Tower",
+        "string": "Beschw\u00f6rt den Geist des Magierturms."
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "type": "QUST NNAM",
+        "original": "Activate the seal",
+        "string": "Aktiviere das Siegel."
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "type": "QUST NNAM",
+        "original": "Find a way inside the tower",
+        "string": "Finde einen Weg in den Turm."
+    },
+    {
+        "editor_id": "ccEEJSSE002_GhostMageNordF",
+        "type": "NPC_ FULL",
+        "original": "Elianora",
+        "string": "Elianora"
+    },
+    {
+        "editor_id": "ccEEJSSE002_EyeNote",
+        "type": "BOOK FULL",
+        "original": "The Eye",
+        "string": "Das Auge"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "type": "QUST NNAM",
+        "original": "Follow the hare",
+        "string": "Folge dem Hasen."
+    },
+    {
+        "editor_id": "ccEEJSSE002_SummonGhostEffect",
+        "type": "MGEF FULL",
+        "original": "Tower Ghost",
+        "string": "Turmgeist"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "type": "QUST FULL",
+        "original": "Myrwatch",
+        "string": "Myrwacht"
+    },
+    {
+        "editor_id": "ccEEJSSE002_LoreJournal",
+        "type": "BOOK FULL",
+        "original": "Anora's Journal",
+        "string": "Anoras Tagebuch"
+    },
+    {
+        "editor_id": "ccEEJSSE002_CorpseBanditDarkElfMale",
+        "type": "NPC_ FULL",
+        "original": "Hans",
+        "string": "Hans"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "type": "QUST NNAM",
+        "original": "Read Hans's journal",
+        "string": "Lies Hans' Tagebuch."
+    },
+    {
+        "editor_id": "ccEEJSSE002_StaffEnchanterPerk",
+        "type": "PERK FULL",
+        "original": "Staff Enchanting Mult",
+        "string": "Staff Enchanting Mult"
+    },
+    {
+        "editor_id": "Tamriel",
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Himmelsrand"
+    },
+    {
+        "editor_id": "CTest",
+        "type": "CELL FULL",
+        "original": "Quick Test Cell",
+        "string": "Schnelle Testzelle"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DisplayLackMsg",
+        "type": "MESG DESC",
+        "original": "You do not have the required item.",
+        "string": "Dir fehlt der notwendige Gegenstand."
+    },
+    {
+        "editor_id": "ccEEJSSE002_EyeNote",
+        "type": "BOOK DESC",
+        "original": "\n<p align='center'>\n<img src='img://Textures/creationclub/ccEEJSSE002/Books/ccEEJSSE002_Eye.png' width='300' height='300'>\n</p>",
+        "string": "\n<p align='center'>\n<img src='img://Textures/creationclub/ccEEJSSE002/Books/ccEEJSSE002_Eye.png' width='300' height='300'>\n</p>"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DarkElfJournal",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\n\"When the eye is doused in flames, the hair will light the way.\"\n\nI've heard that fool Sindnar say it over and over, breath stinking of ale, as if it were a limerick. Given his dark hood you might think it was a dangerous spell. But so long as no one's hair caught on fire or found imps in their cupboards, the words were harmless. Just the mad ramblings of a drunk.\n\nOf the inn patrons, only I bothered to humor him. We bonded over a bottle of Honningbrew and the bucket with which we had history.\n\nSo when the Elf bit the dust, it was only natural he left his things to me. Among them were countless pieces of junk, including full ownership of the bucket, and a spell tome written in some long dead language. \n\nBut as soon as I started cursing the old fool for willing me his trash, out slipped two items of value, a map and notes to a tower deep in the swamps. It was only after reading it that I realized his drunken words weren't part of any limerick. They were instructions. A way in.\n\nNow that I'm here, things are getting even more clear. The hair part still doesn't make a lick of sense, but the eye is the stone seal, that much I'm sure. Yet nothing I do seems to work. I've doused it in the fire from my torch. I've chopped kindling for hours and built a bonfire high enough to scorch the bloody moon. Still, nothing.\n\nMaybe the seal can only be broken with magic. Well, if that drunken fool can learn to cast spells, so can I. I've got the bastard's tome, I just need to make sense of the words.\n\nBut I better be quick. The fire seems to be attracting all sorts of creatures from the belly of this unholy marsh. Hopefully I can manage to survive long enough to discover whatever treasure lies within.\n</font>",
+        "string": "<font face=\"$HandwrittenFont\">\nWenn das Auge in Flammen aufgeht, wird das lange Ohr den Weg weisen.\n\nIch habe diesen Narren Sindnar das wieder und wieder sagen h\u00f6ren, mit seinem stinkenden Bieratem, als w\u00e4re es ein Gedicht. Seine dunkle Kapuze k\u00f6nnte zu der Annahme verleiten, es sei ein gef\u00e4hrlicher Zauber. Aber solange niemandes Ohren ins Unermessliche wuchsen, waren es ja harmlose Worte. Das wirre Gebrabbel eines Betrunkenen.\n\nVon allen G\u00e4sten der Herberge gab nur ich mir die M\u00fche, auf ihn einzugehen. Wir fanden Gemeinsamkeiten in einer Flasche Honigbr\u00e4u und dem uns vertrauten Eimer.\n\nAls der Elf also ins Gras biss, ergab es Sinn, dass er seine Dinge mir \u00fcberlie\u00df. Dazu geh\u00f6rte eine un\u00fcberschaubare Menge M\u00fcll, einschlie\u00dflich der vollst\u00e4ndigen Eigentumsrechte bez\u00fcglich des Eimers, sowie ein Zauberbuch, das in einer l\u00e4ngst ausgestorbenen Sprache verfasst war.\n\nDoch als ich den alten Narren gerade daf\u00fcr verfluchte, mir seinen Unrat \u00fcberlassen zu haben, fielen mir zwei wertvolle Gegenst\u00e4nde entgegen: eine Karte und Notizen zu einem Turm tief in den S\u00fcmpfen. Erst, als ich diese gelesen hatte, wurde mir klar, dass seine betrunkenen Worte kein Gedicht gewesen waren. Es war eine Anleitung. Ein Weg hinein.\n\nNachdem ich nun hier bin, wird die Sache sogar noch klarer. Das mit dem langen Ohr ergibt nach wie vor keinen Sinn, doch beim Auge handelt es sich um das Steinsiegel, da bin ich mir sicher. Jedoch scheint nichts, was ich tue, etwas zu bewirken. Ich habe versucht, es mit meiner Fackel in Brand zu setzen. Ich habe stundenlang Kleinholz gehackt und ein Feuer gemacht, das so hoch aufragte, dass es den Mond h\u00e4tte ansengen k\u00f6nnen. Ohne Ergebnis.\n\nVielleicht kann das Siegel nur mit Magie gebrochen werden. Nun, wenn der betrunkene Narr Zauber lernen kann, dann kann ich das auch. Ich habe den Folianten des kleinen Schufts, ich muss nur die Worte entschl\u00fcsseln.\n\nIch sollte mich aber beeilen. Das Feuer scheint allerhand Kreaturen aus dem Innersten dieses unheimlichen Sumpfs anzulocken. Hoffentlich kann ich lange genug \u00fcberleben, um zu entdecken, was sich drinnen f\u00fcr Sch\u00e4tze verbergen m\u00f6gen.\n</font>"
+    },
+    {
+        "editor_id": "ccEEJSSE002_LoreNotes",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\nDeep in the swamps of Hjaalmarch, where the branches are gnarled and the mist is thick, lies a tower of unknown provenance.\n\nFew in the province dare speak the name Myrwatch, and those that do couch their words with apprehension and fear. Yet the mystery of the tower only piques my interest further, and so I have made it my life's work to discover its secrets.\n\nWhat I can deduce of its past comes from its present. From the cut of the stone to the wards that surround it, every piece is a clue, a signature that can be traced back to a pen and hand.\n\nThe stone seal that guards the entrance is none other than the Eye of Magnus, a symbol born from the legacy of Shalidor. Its burning gaze can be found not just in Myrwatch, but outside the College of Winterhold.\n\nCould it be the mages here were cast out from the college, and set out to carve their own path? This is but a theory, and yet, one I feel has merit.\n\nNevertheless, without access to the mind of its occupants, true insight will remain frustratingly out of grasp.\n</font>",
+        "string": "<font face=\"$HandwrittenFont\">\nTief in den S\u00fcmpfen der Hjaalmarsch, in den verworrenen Zweigen und dem dicken Nebel, liegt ein Turm unbekannter Herkunft.\n\nNur wenige in der Region wagen es, den Namen Myrwacht auszusprechen, und wer es tut, spricht z\u00f6gerlich und voller Furcht. Doch reizt mich die geheimnisumwobene Natur des Turms gerade, und so habe ich es zur Aufgabe meines Lebens erkl\u00e4rt, seine Mysterien zu ergr\u00fcnden.\n\nWas ich \u00fcber seine Vergangenheit wei\u00df, kann ich aus der Gegenwart herleiten. Von der Art, wie die Steine behauen wurden, bis hin zu den Schutzzaubern um ihn herum: Jedes Teil ist ein Hinweis, eine Handschrift, die sich zur federf\u00fchrenden Hand zur\u00fcckverfolgen l\u00e4sst.\n\nDas Steinsiegel, das den Eingang sch\u00fctzt, ist das Auge von Magnus, ein Symbol aus dem Verm\u00e4chtnis von Shalidor. Sein brennender Blick findet sich nicht nur in Myrwacht, sondern auch vor der Akademie der Winterfeste.\n\nIst es m\u00f6glich, dass diese Magier aus der Akademie versto\u00dfen wurden und hier ihren eigenen Weg gefunden haben? Dies ist nur eine Hypothese, doch daf\u00fcr spricht einiges.\n\nDennoch wird mir die wahre Erkenntnis verwehrt bleiben, wenn ich keinen Einblick in die Gedanken der Bewohner erhalte, wie frustrierend.\n</font>"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "type": "QUST CNAM",
+        "original": "I've found a mysterious tower in the swamps of Hjaalmarch. After finding my way inside, it appears to be an elaborate home built for a powerful mage. I may be able to make use of the lodgings in my travels through Skyrim. ",
+        "string": "Ich habe einen geheimnisvollen Turm in den S\u00fcmpfen der Hjaalmarsch gefunden. Nachdem ich hineingefunden hatte, sah er mir nach dem aufwendigen Heim eines m\u00e4chtigen Magiers aus. Ich k\u00f6nnte diese Unterkunft auf meinen Reisen durch Himmelsrand nutzen."
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "type": "QUST CNAM",
+        "original": "I've found a mysterious tower in the swamps of Hjaalmarch. However, the door to tower is locked. A journal on a nearby body indicates I need to activate a stone seal to light the way.",
+        "string": "Ich habe einen geheimnisvollen Turm in den S\u00fcmpfen der Hjaalmarsch gefunden. Die T\u00fcr ist jedoch verriegelt. Das Tagebuch, das ich bei einer Leiche in der N\u00e4he gefunden habe, besagt, dass ich ein Steinsiegel aktivieren muss, um den Weg zu erleuchten."
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "type": "QUST CNAM",
+        "original": "I've found a mysterious tower in the swamps of Hjaalmarch. Activating a seal by the front door summoned a ghostly apparition which unlocked the tower.",
+        "string": "Ich habe einen geheimnisvollen Turm in den S\u00fcmpfen der Hjaalmarsch gefunden. Nachdem ich das Siegel an der T\u00fcr aktivierte, tauchte eine geisterhafte Erscheinung auf und entriegelte den Turm."
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "type": "QUST CNAM",
+        "original": "I've found a mysterious tower in the swamps of Hjaalmarch. However, the door to tower is locked. A journal on a nearby body indicates I need to activate a stone seal. Activating it summoned a ghostly apparition which unlocked the tower.",
+        "string": "Ich habe einen geheimnisvollen Turm in den S\u00fcmpfen der Hjaalmarsch gefunden. Die T\u00fcr ist jedoch verriegelt. Das Tagebuch, das ich bei einer Leiche in der N\u00e4he gefunden habe, besagt, dass ich ein Steinsiegel aktivieren muss, um den Weg zu erleuchten. Nachdem ich es aktivierte, tauchte eine geisterhafte Erscheinung auf und entriegelte den Turm."
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "type": "QUST CNAM",
+        "original": "I've found a mysterious tower in the swamps of Hjaalmarch. However, the door to tower is locked. A journal on a nearby body indicates I need to activate a stone seal. Activating it summoned a ghostly apparition. I should follow it and see where it leads.",
+        "string": "Ich habe einen geheimnisvollen Turm in den S\u00fcmpfen der Hjaalmarsch gefunden. Die T\u00fcr ist jedoch verriegelt. Das Tagebuch, das ich bei einer Leiche in der N\u00e4he gefunden habe, besagt, dass ich ein Steinsiegel aktivieren muss, um den Weg zu erleuchten. Nachdem ich es aktivierte, tauchte eine geisterhafte Erscheinung auf. Ich sollte ihr folgen und sehen, wo sie mich hinf\u00fchrt."
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "type": "QUST CNAM",
+        "original": "I've found a mysterious tower in the swamps of Hjaalmarch. However, the door to tower is locked. I should investigate the area to see if there's a way in.",
+        "string": "Ich habe einen geheimnisvollen Turm in den S\u00fcmpfen der Hjaalmarsch gefunden. Die T\u00fcr ist jedoch verriegelt. Ich sollte mich in der Umgebung umsehen. Vielleicht gibt es einen Weg hinein."
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "type": "QUST CNAM",
+        "original": "I've heard rumors of a mysterious tower somewhere east of Morthal. If it's abandoned, I may be able to make of use of it.",
+        "string": "Ich habe Ger\u00fcchte \u00fcber einen geheimnisvollen Turm irgendwo \u00f6stlich von Morthal geh\u00f6rt. Wenn dieser jetzt leer steht, kann ich ihn m\u00f6glicherweise nutzen."
+    },
+    {
+        "editor_id": "ccEEJSSE002_LoreJournal",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\n<b>1st of Morning Star, 3E 423</b>\nA wise mage once told me the power of a spell lies in one's conviction. \n\nIt's evident to me now that the college has lost all desire and purpose, and has become feckless under its current stewardship.\n\nThe Arch-Mage Shalidor believed the halls to be a proving ground where a mage could test the limits of their abilities. Now the college is a tomb of knowledge, where grand spells and lofty ideals are left to wither and rot. \n\nWe should not let the outside world dictate how we conduct ourselves. Placating their ignorance is not a virtue. The augurs speak of a great war on the horizon, and we should be doing everything in our power to prepare for it. \n\nThat is why Teel-Ja and I have chosen to leave. We know the road ahead will be hard, but one thing we do not lack is the conviction to see it through.\n[pagebreak]\n<b>23rd of Rain's Hand, 3E 428</b>\nConstruction of the tower is almost complete. Teel-Ja accused me of being impatient, a crime which I've been guilty of more often than not. Between us he has always been the tortoise, and I the hare. Still, our needs are pressing. The coming war will not wait for the mortar to dry.\n\nThe location has much to do with the delays, but that can't be helped. The Nords are distrustful of magic by nature, and some would frown upon our efforts. Others might take a more violent approach. For that reason, we've put a ward on the door that requires magic to dispel.\n\nWe've chosen to honor Shalidor in much of what we do, including the seal outside the door. Teel-Ja seemed pleased with the idea of setting it on fire, while others seemed uncomfortable with the idea. I warned them that pride is the enemy of progress. If we are to survive in the coming storm, we must not be bound by tradition. We must be willing to set it aflame.\n[pagebreak]\n<b>11th of First Seed, 3E 429</b>\nIt's been a year since construction has finished, yet there is still much that needs to be done. The tower is only the foundation for our defense. Our minds and our magic must serve as its ramparts, and for them to hold we must amplify our strength.\n\nAs such, I have sent scouts throughout Tamriel to find powerful artifacts that may help us in our efforts; artifacts the college wizards refused to obtain out of cowardice or comfort. Many of these relics played a role in preventing calamities of the past. Perhaps it is their destiny as much as ours to stand between the world and its ruin.\n\n[pagebreak]\n<b>17th of Frost Fall, 3E 429</b>\nWe've had little luck finding artifacts of note. Based on the information I've culled from the Arcanaeum records, I know there are several here in Skyrim, including the Staff of Gauldur. We must endeavor to find them all.\n\nMore concerning, however, is the disposition and morale of the mages. Even Teel-Ja seems to have fallen into the trappings of routine and idleness. It is hard to convince weary souls to explore yet another ruin when the task has been stripped of all urgency.\n[pagebreak]\n<b>29th of Sun's Height, 3E 433</b>\nIt's now halfway through the year 433, more than ten years since we left the college. Yet all remains blissfully calm. One of the new acolytes even suggested abandoning her training to become a cook, happily showing me her spell for preserving apple pies. I reminded her that she is here to study battle magic, not pastries. She will have more than enough time to indulge her sweet tooth when her youth is behind her.\n\nIt is why we've devoted half the library to the placement of powerful artifacts, to serve as a reminder of our pursuit. Yet seeing the racks as they are now, collecting only dust, makes me wonder if I've led us all astray. \n[pagebreak]\nAs leader of this guild, I have the training to fight and the knowledge of what's to come. What I don't have, sadly, is the conviction that it will.\n[pagebreak]\n<b>28th of Last Seed, 3E 433</b>\nA courier came by with news from Cyrodiil. Emperor Septim is dead. The Gates of Oblivion have opened. Divines help us all.\n</font>\n\n",
+        "string": "<font face=\"$HandwrittenFont\">\n<b>1. Morgenstern 3\u00c4 423</b>\nEin weiser Magier sagte mir einst, dass die Macht eines Zaubers in der \u00dcberzeugung des Wirkenden liegt.\n\nMir zeigt sich jetzt, dass der Akademie jegliches Streben nach Bestimmung abhanden gekommen ist, und sie unter ihrer aktuellen Leitung nutzlos geworden ist.\n\nDer Erzmagier Shalidor glaubte, dass ihre Hallen ein Pr\u00fcfgel\u00e4nde seien, auf dem ein Magier die Grenzen seiner F\u00e4higkeiten erproben k\u00f6nne. Jetzt ist die Akademie ein Grab des Wissens, wo gro\u00dfe Zauber und hehre Ideale verk\u00fcmmern und verrotten.\n\nWir sollten uns von der Au\u00dfenwelt nicht diktieren lassen, wie wir unsere Angelegenheiten handhaben. Diese Leute in ihrer Ignoranz zu beschwichtigen, ist nicht erstrebenswert. Die Auguren reden davon, dass uns ein gro\u00dfer Krieg bevorsteht, und wir sollten alles in unserer Macht Stehende tun, um uns darauf vorzubereiten.\n\nDeshalb haben Teel-Ja und ich uns entschlossen, zu gehen. Wir wissen, dass uns ein m\u00fchsamer Weg bevorsteht, doch an der Entschlossenheit, ihn bis zum Ende zu gehen, fehlt es uns eindeutig nicht.\n[pagebreak]\n<b>23. Regenhand, 3\u00c4 428</b>\nDer Bau des Turms ist fast vollendet. Teel-Ja warf mir vor, ungeduldig zu sein, was ich mir sicher schon \u00f6fter habe zuschulden kommen lassen. Von uns beiden war er immer eher die Schildkr\u00f6te und ich der Hase. Dennoch dr\u00e4ngt die Zeit. Der bevorstehende Krieg wird nicht abwarten, bis der M\u00f6rtel getrocknet ist.\n\nDer Standort verursacht die Verz\u00f6gerungen zum gro\u00dfen Teil, aber das k\u00f6nnen wir nicht \u00e4ndern. Es liegt in der Natur der Nord, Magie nicht zu trauen, und einige von ihnen w\u00fcrden unsere Anstrengungen missbilligen. Andere w\u00fcrden vielleicht gewaltt\u00e4tig darauf reagieren. Aus diesem Grund haben wir die T\u00fcr mit einem Zauberschutz versehen, der nur mit Magie aufgehoben werden kann.\n\nWir haben uns entschieden, Shalidor in unserem Tun zu ehren. Dazu geh\u00f6rt auch das Siegel an der T\u00fcr. Teel-Ja gefiel die Idee, es in Brand zu stecken, w\u00e4hrend sie anderen nicht so recht geheuer war. Ich habe sie gewarnt, dass Stolz dem Fortschritt im Weg steht. Wenn wir den heraufziehenden Sturm \u00fcberleben wollen, d\u00fcrfen wir uns nicht von Traditionen fesseln lassen. Wir m\u00fcssen bereit sein, sie niederzubrennen.\n[pagebreak]\n<b>11. Erste Saat, 3\u00c4 429</b>\nEin Jahr ist es her, seit wir den Bau fertiggestellt haben, doch es gibt noch so viel zu tun. Der Turm ist nur das Fundament unserer Verteidigung. Unser Verstand und unsere Magie m\u00fcssen das Bollwerk sein, und wir m\u00fcssen unsere Kraft vergr\u00f6\u00dfern, wenn es standhalten soll.\n\nDaher habe ich Sp\u00e4her nach ganz Tamriel entsandt, um m\u00e4chtige Artefakte zu finden, die uns helfen k\u00f6nnen. Artefakte, welche die Zauberer der Akademie aus Feigheit oder Bequemlichkeit nicht suchen wollten. Und dank unserer Bem\u00fchungen in Morrowind konnten wir den Ring des Hexers finden, den einst der legend\u00e4re Erzmagier Syrabane trug.\n\nDen Legenden zufolge setzte Syrabane die Macht des Rings ein, um die Thrassische Pest auszumerzen, die ganz Tamriel bedrohte. Vielleicht ist es die Bestimmung des Rings, die Welt vor ihrem Untergang zu bewahren.\n\n[pagebreak]\n<b>17. Frostfall, 3\u00c4 429</b>\nWir hatten kaum Erfolg dabei, weitere bedeutsame Artefakte zu finden. Aufgrund der Informationen, die ich den Aufzeichnungen des Arcanaeums entziehen konnte, wei\u00df ich, dass es hier in Himmelsrand mehrere gibt, wie den Stab des Gauldur. Wir m\u00fcssen uns bem\u00fchen, sie alle zu finden.\n\nMehr jedoch besorgt mich die Gesinnung und Arbeitsmoral der Magier. Selbst Teel-Ja scheint Routine und Unt\u00e4tigkeit zum Opfer gefallen zu sein. Es ist schwer, m\u00fcde Seelen zu \u00fcberzeugen, noch eine Ruine zu erkunden, wenn der Aufgabe keinerlei Dringlichkeit mehr innewohnt.\n[pagebreak]\n<b>29. Sonnenh\u00f6he, 3\u00c4 433</b>\nDas Jahr 433 ist nun zur H\u00e4lfte vor\u00fcber und es ist mehr als zehn Jahre her, dass wir die Akademie verlassen haben. Doch alles bleibt weiterhin herrlich ruhig. Eine der neuen Sch\u00fclerinnen schlug sogar vor, ihre Ausbildung aufzugeben, um K\u00f6chin zu werden, und zeigte mir zufrieden ihren Zauber zur Haltbarmachung von Apfelkuchen. Ich habe sie daran erinnert, dass sie hier ist, um Kampfmagie zu erlernen und nicht die Konditorei. Sie wird noch genug Zeit zum Naschen haben, wenn ihre Jugend hinter ihr liegt.\n\nDaher haben wir die halbe Bibliothek der Platzierung m\u00e4chtiger Artefakte gewidmet, als Erinnerung an unsere Aufgabe. Doch wenn ich mir die Regale jetzt ansehen, wie sie leer stehen und Staub ansammeln, frage ich mich, ob ich uns alle in die Irre geleitet habe.\n[pagebreak]\nAls Anf\u00fchrer dieser Gilde bin ich zum K\u00e4mpfen ausgebildet und habe das Wissen dar\u00fcber, was uns bevorsteht. Was mir allerdings fehlt, ist die \u00dcberzeugung, auch daran zu glauben.\n[pagebreak]\n<b>28. Letzte Saat, 3\u00c4 433</b>\nEin Kurier kam mit Neuigkeiten aus Cyrodiil. Kaiser Septim ist tot. Die Tore zum Reich des Vergessens haben sich ge\u00f6ffnet. M\u00f6gen die G\u00f6ttlichen uns allen beistehen.\n</font>\n\n"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "type": "QUST CNAM",
+        "original": "I've heard rumors of a mysterious tower somewhere east of Morthal. If it's abandoned, I may be able to make of use of it. When I reached the tower, I found a journal that may provide clues on how to enter it.",
+        "string": "Ich habe Ger\u00fcchte \u00fcber einen geheimnisvollen Turm irgendwo \u00f6stlich von Morthal geh\u00f6rt. Wenn dieser jetzt leer steht, kann ich ihn m\u00f6glicherweise nutzen. Als ich den Turm erreichte, fand ich ein Tagebuch, das wom\u00f6glich Hinweise darauf enth\u00e4lt, wie man hineinkommt."
+    },
+    {
+        "editor_id": "ccEEJSSE002_DoorUnlockedMsg",
+        "type": "MESG DESC",
+        "original": "The tower door was unlocked by mysterious forces.",
+        "string": "Die T\u00fcr des Turms wurde von geheimnisvollen Kr\u00e4ften entriegelt."
+    }
+]

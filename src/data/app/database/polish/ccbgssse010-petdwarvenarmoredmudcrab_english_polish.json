@@ -1,0 +1,158 @@
+[
+    {
+        "editor_id": "ccBGSSSE010_PetDwarvenMudcrab",
+        "type": "NPC_ FULL",
+        "original": "Dwarven Armored Mudcrab",
+        "string": "Krasnoludzki opancerzony krab b\u0142otny"
+    },
+    {
+        "editor_id": "ccBGSSSE010_PetPurchaseQuest",
+        "type": "QUST NNAM",
+        "original": "Read Notice of Sale",
+        "string": "Przeczytaj informacj\u0119 o sprzeda\u017cy"
+    },
+    {
+        "editor_id": "ccBGSSSE010_PetControlQuest",
+        "type": "QUST FULL",
+        "original": "Mudcrab Control Quest",
+        "string": "Zadanie kontrolne kraba b\u0142otnego"
+    },
+    {
+        "editor_id": "ccBGSSSE010_OwnershipDeedDwarvenPet",
+        "type": "BOOK FULL",
+        "original": "Ownership Deed - Mudcrab",
+        "string": "Akt w\u0142asno\u015bci - krab b\u0142otny"
+    },
+    {
+        "editor_id": "ccBGSSSE010_LetterFromCalcelmo",
+        "type": "BOOK FULL",
+        "original": "Notice of Sale - Dwarven Mudcrab",
+        "string": "Informacja o sprzeda\u017cy - krasnoludzki krab b\u0142otny"
+    },
+    {
+        "editor_id": "ccBGSSSE010_PetPurchaseQuest",
+        "type": "QUST NNAM",
+        "original": "Purchase the Mudcrab",
+        "string": "Kup kraba b\u0142otnego"
+    },
+    {
+        "editor_id": "ccBGSSSE010_PetPurchaseQuest",
+        "type": "QUST FULL",
+        "original": "My Pet Mudcrab",
+        "string": "M\u00f3j chowaniec - krab b\u0142otny"
+    },
+    {
+        "editor_id": "ccBGSSSE010_PetDwarvenMudcrab",
+        "type": "NPC_ SHRT",
+        "original": "Mudcrab",
+        "string": "Krab b\u0142otny"
+    },
+    {
+        "editor_id": "ccBGSSSE010_PetPurchaseQuest",
+        "type": "QUST NNAM",
+        "original": "Meet your new pet",
+        "string": "Poznaj swojego nowego chowa\u0144ca"
+    },
+    {
+        "editor_id": "ccBGSSSE010_PetDwarvenMudcrabRace",
+        "type": "RACE FULL",
+        "original": "Dwarven Mudcrab Pet",
+        "string": "Chowaniec - krasnoludzki krab b\u0142otny"
+    },
+    {
+        "editor_id": "ccBGSSSE010_PetGiveItemEffect",
+        "type": "MGEF FULL",
+        "original": "Scrounger Effect",
+        "string": "Efekt towaru z odzysku"
+    },
+    {
+        "editor_id": "ccBGSSSE010_SpellTomeSummonMudcrab",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Teleport Pet Mudcrab",
+        "string": "Ksi\u0119ga czar\u00f3w: Teleportuj chowa\u0144ca - kraba b\u0142otnego"
+    },
+    {
+        "editor_id": "ccBGSSSE010_SummonMudcrabSpell",
+        "type": "SPEL FULL",
+        "original": "Teleport Pet: Dwarven Mudcrab",
+        "string": "Teleportuj chowa\u0144ca: krasnoludzki krab b\u0142otny"
+    },
+    {
+        "editor_id": "ccBGSSSE010_PetGiveItemAbility",
+        "type": "SPEL FULL",
+        "original": "Scrounger Ability",
+        "string": "Zdolno\u015b\u0107 towaru z odzysku"
+    },
+    {
+        "editor_id": "ccBGSSSE010_SummonMudcrabEffect",
+        "type": "MGEF FULL",
+        "original": "Teleport Dwarven Mudcrab",
+        "string": "Teleportuj krasnoludzkiego kraba b\u0142otnego"
+    },
+    {
+        "editor_id": "ccBGSSSE010_SummonMudcrabEffect",
+        "type": "MGEF DNAM",
+        "original": "Teleports pet Dwarven Mudcrab.",
+        "string": "Teleportuje chowa\u0144ca - krasnoludzkiego kraba b\u0142otnego."
+    },
+    {
+        "editor_id": "ccBGSSSE010_MagicResist100",
+        "type": "SPEL FULL",
+        "original": "Pet Magic Resistance",
+        "string": "Chowaniec - odporno\u015b\u0107 na magi\u0119"
+    },
+    {
+        "editor_id": "MarkarthUnderStoneKeep",
+        "type": "CELL FULL",
+        "original": "Understone Keep",
+        "string": "Gr\u00f3d Podkamie\u0144"
+    },
+    {
+        "editor_id": "ccBGSSSE010_PetPurchaseQuest",
+        "type": "QUST CNAM",
+        "original": "I've received a Notice of Sale from Calcelmo.  I should read it and see what it's about.",
+        "string": "Dotar\u0142 do mnie list od Calcelma odno\u015bnie sprzeda\u017cy. Chyba musz\u0119 go przeczyta\u0107 i sprawdzi\u0107, o co chodzi."
+    },
+    {
+        "editor_id": "ccBGSSSE010_PetPurchaseQuest",
+        "type": "QUST CNAM",
+        "original": "I've purchased a Pet Dwarven Mudcrab from Calcelmo.  I should talk to him, and either send him to his new home, or bring him with me.",
+        "string": "Chowaniec - krab b\u0142otny nale\u017c\u0105cy kiedy\u015b do Calcelma jest teraz m\u00f3j. Musz\u0119 z nim porozmawia\u0107 i odes\u0142a\u0107 do nowego domu albo zabra\u0107 z sob\u0105."
+    },
+    {
+        "editor_id": "ccBGSSSE010_PetPurchaseQuest",
+        "type": "QUST CNAM",
+        "original": "Calcelmo found a Dwarven Armored Mudcrab during his excavations, and offered to sell him to me.  I obliged, and now keep him as a pet, who I can bring with me, or send to any of my homes, or main cities.",
+        "string": "W trakcie wykopalisk, Calcelmo znalaz\u0142 krasnoludzkiego opancerzonego kraba b\u0142otnego. Zaoferowa\u0142, \u017ce mi go sprzeda. Teraz chowaniec nale\u017cy do mnie - mog\u0119 go zabra\u0107 z sob\u0105, odes\u0142a\u0107 do dowolnego z moich dom\u00f3w albo do jednego z g\u0142\u00f3wnych miast."
+    },
+    {
+        "editor_id": "ccBGSSSE010_OwnershipDeedDwarvenPet",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>This deed signifies ownership of the Dwarven Mudcrab to the undersigned.  Ownership may only be transferred with an accompanying Bill of Sale.\n\nP.S. He will follow you anywhere you go, but he's cautious of aggressive strangers.  He's smart and fast, so you can dismiss him to stay at any of your owned homes, just inside a city, or right where he stands, if you think it makes him a good home.\n\nFrom time to time he may also dig up something useful or valuable!  Lastly, I've included a Spell Tome so you can summon him to your location at any time.\n\nI hope you enjoy him.  Back to work for me.\n\n-Calcelmo\n</font>",
+        "string": "<font face=\"$HandwrittenFont\">Niniejszy akt przypisuje w\u0142asno\u015b\u0107 krasnoludzkiego kraba b\u0142otnego ni\u017cej podpisanej osobie. W\u0142asno\u015b\u0107 mo\u017ce by\u0107 przekazana jedynie wraz z odpowiedni\u0105 umow\u0105 sprzeda\u017cy.\n\nP.S. B\u0119dzie on za tob\u0105 wsz\u0119dzie chodzi\u0142, ale nieco obawia si\u0119 agresywnych nieznajomych. Jest m\u0105dry i szybki, a wi\u0119c mo\u017cesz mu kaza\u0107 pozosta\u0107 w dowolnym posiadanym domu, w mie\u015bcie lub tam, gdzie akurat stoi, o ile tylko uwa\u017casz, \u017ce b\u0119dzie to dla niego dobry dom.\n\nOd czasu do czasu mo\u017ce wykopa\u0107 co\u015b u\u017cytecznego lub cennego! Dorzuc\u0119 te\u017c ksi\u0119g\u0119 czar\u00f3w, dzi\u0119ki kt\u00f3rej wezwiesz go do siebie w ka\u017cdej chwili.\n\nMam nadziej\u0119, \u017ce b\u0119dzie ci wiernie s\u0142u\u017cy\u0142. Ja wracam do pracy.\n\n-Calcelmo\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE010_PetPurchaseQuest",
+        "type": "QUST CNAM",
+        "original": "Calcelmo has found a Dwarven Armored Mudcrab during his excavations, and has offered to sell him to me.  I should head to Understone Keep to speak with him, and purchase the Mudcrab.",
+        "string": "W trakcie wykopalisk Calcelmo znalaz\u0142 krasnoludzkiego opancerzonego kraba b\u0142otnego. Zaoferowa\u0142, \u017ce mi go sprzeda. Musz\u0119 rusza\u0107 do grodu Podkamie\u0144, porozmawia\u0107 z nim i kupi\u0107 kraba b\u0142otnego."
+    },
+    {
+        "editor_id": "ccBGSSSE010_LetterFromCalcelmo",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"17\">\nDuring my excavations, I came across a quite peculiar little fellow - a Mudcrab, clad in plated Dwarven armor.  He's quite friendly, but with all of my studies I have no time to take care of such a thing.\n\nFrom what I have seen, you seem to be quite trustworthy.  Would you be interested in purchasing him?  If so, please meet with me in my laboratory in Understone Keep.\n\n-Calcelmo\n</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"17\">\nW trakcie wykopalisk pojawi\u0142 si\u0119 pewien interesuj\u0105cy maluszek - krab b\u0142otny w krasnoludzkiej zbroi p\u0142ytowej. Jest dosy\u0107 przyjazny, ale w zwi\u0105zku ze swoimi badaniami nie mam czasu si\u0119 nim zajmowa\u0107.\n\nZ tego, co wiem, wydajesz si\u0119 by\u0107 osob\u0105 godn\u0105 zaufania. Mo\u017ce go kupisz? Je\u015bli tak, spotkajmy si\u0119 w moim laboratorium w grodzie Podkamie\u0144.\n\n-Calcelmo\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE010_SpellTomeSummonMudcrab",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nTeleport Pet: Dwarven Mudcrab",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nTeleportuj chowa\u0144ca: krasnoludzki krab b\u0142otny"
+    },
+    {
+        "editor_id": "ccBGSSSE010_MudcrabGivePlayerItemMsg",
+        "type": "MESG DESC",
+        "original": "Dwarven Mudcrab found something...",
+        "string": "Krasnoludzki krab b\u0142otny co\u015b znalaz\u0142..."
+    }
+]

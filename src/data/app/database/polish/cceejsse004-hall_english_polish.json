@@ -1,0 +1,1016 @@
+[
+    {
+        "editor_id": "EEJSSE004_RubyClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_PortalGemWhiteActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE004_GlassClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_SpellbreakerActivator",
+        "type": "ACTI FULL",
+        "original": "Spellbreaker",
+        "string": "\u0141amacz czar\u00f3w"
+    },
+    {
+        "editor_id": "ccEEJSSE004_AurielsBowActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_DawnguardRuneHammerActivator",
+        "type": "ACTI FULL",
+        "original": "Dawnguard Rune Hammer",
+        "string": "M\u0142ot runiczny Obro\u0144c\u00f3w \u015awitu"
+    },
+    {
+        "editor_id": "ccEEJSSE004_DPMaskNahkriinActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_MaceOfMolagBalActivator",
+        "type": "ACTI FULL",
+        "original": "Mace of Molag Bal",
+        "string": "Bu\u0142awa Molag Bala"
+    },
+    {
+        "editor_id": "ccEEJSSE004_KagrumezBowActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_SaereksSkullKeyKeyActivator",
+        "type": "ACTI FULL",
+        "original": "Saerek's Skull Key",
+        "string": "Klucz-czaszka Saereka"
+    },
+    {
+        "editor_id": "ccEEJSSE004_SingleBedR",
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "\u0141\u00f3\u017cko"
+    },
+    {
+        "editor_id": "ccEEJSSE004_GeneralFalxHammerActivator",
+        "type": "ACTI FULL",
+        "original": "Champion's Cudgel",
+        "string": "Pa\u0142ka Czempiona"
+    },
+    {
+        "editor_id": "ccEEJSSE004_BloodskalBladeActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_ButterflyJarActivator",
+        "type": "ACTI FULL",
+        "original": "Butterfly in a Jar",
+        "string": "Motyl w s\u0142oiku"
+    },
+    {
+        "editor_id": "ccEEJSSE004_GeneralFalxHammerActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_TestItems",
+        "type": "CONT FULL",
+        "original": "Test Items",
+        "string": "Przedmioty testowe"
+    },
+    {
+        "editor_id": "ccEEJSSE004_Jug2",
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "Dzban"
+    },
+    {
+        "editor_id": "ccEEJSSE004_DPMaskHevnoraakActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_HaknirSword1Activator",
+        "type": "ACTI FULL",
+        "original": "Bloodscythe",
+        "string": "Krwawa Kosa"
+    },
+    {
+        "editor_id": "ccEEJSSE004_DPMaskVokunActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_DawnguardRuneShieldActivator",
+        "type": "ACTI FULL",
+        "original": "Dawnguard Rune Shield",
+        "string": "Runiczna tarcza Obro\u0144c\u00f3w \u015awitu"
+    },
+    {
+        "editor_id": "ccEEJSSE004_DPMaskRahgotActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_DPMaskFireActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_DawnbreakerActivator",
+        "type": "ACTI FULL",
+        "original": "Dawnbreaker",
+        "string": "Przed\u015bwit"
+    },
+    {
+        "editor_id": "ccEEJSSE004_PortalGemWhiteActivator",
+        "type": "ACTI FULL",
+        "original": "Diamond Paragon",
+        "string": "Diamentowy talizman"
+    },
+    {
+        "editor_id": "ccEEJSSE004_PortalGemredActivator",
+        "type": "ACTI FULL",
+        "original": "Ruby Paragon",
+        "string": "Rubinowy talizman"
+    },
+    {
+        "editor_id": "ccEEJSSE004_Jug",
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "Dzban"
+    },
+    {
+        "editor_id": "ccEEJSSE004_DPMaskMorokeiActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_DawnguardRuneAxeActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_DPMaskKrosisActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_MothJarActivator",
+        "type": "ACTI FULL",
+        "original": "Moth in a Jar",
+        "string": "\u0106ma w s\u0142oiku"
+    },
+    {
+        "editor_id": "EEJSSE004_SapphireClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_PortalGemredActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_KolbjornSkullActivator",
+        "type": "ACTI FULL",
+        "original": "Kolbjorn Skull",
+        "string": "Czaszka Kolbjorn"
+    },
+    {
+        "editor_id": "ccEEJSSE004_SaereksSkullKeyKeyActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_DPMaskOtarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_DPMaskKonahrikActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_Cup",
+        "type": "MISC FULL",
+        "original": "Cup",
+        "string": "Kubek"
+    },
+    {
+        "editor_id": "EEJSSE004_IvoryClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_MiraaksSwordActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_AurielsBowActivator",
+        "type": "ACTI FULL",
+        "original": "Auriel's Bow",
+        "string": "\u0141uk Auriela"
+    },
+    {
+        "editor_id": "EEJSSE004_SapphireClawActivator",
+        "type": "ACTI FULL",
+        "original": "Sapphire Dragon Claw",
+        "string": "Szpon szafirowego smoka"
+    },
+    {
+        "editor_id": "ccEEJSSE004_PortalGemBlueActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE004_RubyClawActivator",
+        "type": "ACTI FULL",
+        "original": "Ruby Dragon Claw",
+        "string": "Szpon rubinowego smoka"
+    },
+    {
+        "editor_id": "ccEEJSSE004_DPMaskVolsungActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_DPMaskFrostActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_InitiatesEwerActivator",
+        "type": "ACTI FULL",
+        "original": "Initiate's Ewer",
+        "string": "Dzban Nowicjusza"
+    },
+    {
+        "editor_id": "EEJSSE004_GoldenClawActivator",
+        "type": "ACTI FULL",
+        "original": "Golden Dragon Claw",
+        "string": "Szpon z\u0142otego smoka"
+    },
+    {
+        "editor_id": "ccEEJSSE004_HarkonsSwordActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE004_CoralClawActivator",
+        "type": "ACTI FULL",
+        "original": "Coral Dragon Claw",
+        "string": "Szpon koralowego smoka"
+    },
+    {
+        "editor_id": "EEJSSE004_EbonyClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_RalisPickaxeActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_DragonflyJarActivator",
+        "type": "ACTI FULL",
+        "original": "Dragonfly in a Jar",
+        "string": "Wa\u017cka w s\u0142oiku"
+    },
+    {
+        "editor_id": "ccEEJSSE004_Bookcase",
+        "type": "CONT FULL",
+        "original": "Bookcase",
+        "string": "Rega\u0142"
+    },
+    {
+        "editor_id": "ccEEJSSE004_Basket5",
+        "type": "MISC FULL",
+        "original": "Basket",
+        "string": "Kosz"
+    },
+    {
+        "editor_id": "ccEEJSSE004_PortalGemPurpleActivator",
+        "type": "ACTI FULL",
+        "original": "Amethyst Paragon",
+        "string": "Ametystowy talizman"
+    },
+    {
+        "editor_id": "ccEEJSSE004_UrnBronze",
+        "type": "CONT FULL",
+        "original": "Urn",
+        "string": "Urna"
+    },
+    {
+        "editor_id": "ccEEJSSE004_BeeJarActivator",
+        "type": "ACTI FULL",
+        "original": "Bee in a Jar",
+        "string": "Pszczo\u0142a w s\u0142oiku"
+    },
+    {
+        "editor_id": "ccEEJSSE004_FireflyJarActivator",
+        "type": "ACTI FULL",
+        "original": "Torchbug in a Jar",
+        "string": "Pochodnik w s\u0142oiku"
+    },
+    {
+        "editor_id": "ccEEJSSE004_DPMaskShockActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_PortalGemPurpleActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_AurielsShielfActivator",
+        "type": "ACTI FULL",
+        "original": "Auriel's Shield",
+        "string": "Tarcza Auriela"
+    },
+    {
+        "editor_id": "ccEEJSSE004_PortalGemGreenActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE004_IronClawActivator",
+        "type": "ACTI FULL",
+        "original": "Iron Dragon Claw",
+        "string": "Szpon \u017celaznego smoka"
+    },
+    {
+        "editor_id": "ccEEJSSE004_TorstensSkullKeyActivator",
+        "type": "ACTI FULL",
+        "original": "Torsten's Skull Key",
+        "string": "Klucz-czaszka Torstena"
+    },
+    {
+        "editor_id": "ccEEJSSE004_AetherialShieldActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE004_DiamondClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE004_IronClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE004_EmeraldClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_DragonbaneActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_FireflyJarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_DawnbreakerActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_BarrelEmpty_Snow",
+        "type": "CONT FULL",
+        "original": "Barrel",
+        "string": "Beczka"
+    },
+    {
+        "editor_id": "EEJSSE004_CoralClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_BeeJarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_DragonbaneActivator",
+        "type": "ACTI FULL",
+        "original": "Dragonbane",
+        "string": "Zguba Smok\u00f3w"
+    },
+    {
+        "editor_id": "EEJSSE004_EmeraldClawActivator",
+        "type": "ACTI FULL",
+        "original": "Emerald Dragon Claw",
+        "string": "Szpon szmaragdowego smoka"
+    },
+    {
+        "editor_id": "EEJSSE004_IvoryClawActivator",
+        "type": "ACTI FULL",
+        "original": "Ivory Dragon Claw",
+        "string": "Szpon ko\u015bcianego smoka"
+    },
+    {
+        "editor_id": "ccEEJSSE004_Bowl",
+        "type": "MISC FULL",
+        "original": "Bowl",
+        "string": "Miska"
+    },
+    {
+        "editor_id": "ccEEJSSE004_RuefulAxeActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_EbonyBladeActivator",
+        "type": "ACTI FULL",
+        "original": "Ebony Blade",
+        "string": "Ebonowe Ostrze"
+    },
+    {
+        "editor_id": "ccEEJSSE004_Plate",
+        "type": "MISC FULL",
+        "original": "Plate",
+        "string": "Talerz"
+    },
+    {
+        "editor_id": "ccEEJSSE004_DawnguardRuneShieldActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_PortalGemBlueActivator",
+        "type": "ACTI FULL",
+        "original": "Sapphire Paragon",
+        "string": "Szafirowy talizman"
+    },
+    {
+        "editor_id": "ccEEJSSE004_StagPrinceBowActivator",
+        "type": "ACTI FULL",
+        "original": "Glass Bow of the Stag Prince",
+        "string": "Szklany \u0142uk Ksi\u0119cia Jeleni"
+    },
+    {
+        "editor_id": "ccEEJSSE004_PortalGemGreenActivator",
+        "type": "ACTI FULL",
+        "original": "Emerald Paragon",
+        "string": "Szmaragdowy talizman"
+    },
+    {
+        "editor_id": "ccEEJSSE004_Vase",
+        "type": "MISC FULL",
+        "original": "Vase",
+        "string": "Wazon"
+    },
+    {
+        "editor_id": "ccEEJSSE004_ArmChair",
+        "type": "FURN FULL",
+        "original": "Armchair",
+        "string": "Fotel"
+    },
+    {
+        "editor_id": "ccEEJSSE004_WoodenChair",
+        "type": "FURN FULL",
+        "original": "Chair",
+        "string": "Krzes\u0142o"
+    },
+    {
+        "editor_id": "ccEEJSSE004_SingleBedL",
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "\u0141\u00f3\u017cko"
+    },
+    {
+        "editor_id": "ccEEJSSE004_MiraaksSwordActivator",
+        "type": "ACTI FULL",
+        "original": "Miraak's Sword",
+        "string": "Miecz Miraaka"
+    },
+    {
+        "editor_id": "ccEEJSSE004_VolendrungActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_MiraaksStaffActivator",
+        "type": "ACTI FULL",
+        "original": "Miraak's Staff",
+        "string": "Kostur Miraaka"
+    },
+    {
+        "editor_id": "ccEEJSSE004_DPMaskWoodenActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_BronzeBowl",
+        "type": "MISC FULL",
+        "original": "Bowl",
+        "string": "Miska"
+    },
+    {
+        "editor_id": "ccEEJSSE004_MothJarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_DPMaskMorokeiActivator",
+        "type": "ACTI FULL",
+        "original": "Morokei",
+        "string": "Morokej"
+    },
+    {
+        "editor_id": "ccEEJSSE004_Basket1",
+        "type": "MISC FULL",
+        "original": "Basket",
+        "string": "Kosz"
+    },
+    {
+        "editor_id": "ccEEJSSE004_MiraaksStaffActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_Basket3",
+        "type": "MISC FULL",
+        "original": "Basket",
+        "string": "Kosz"
+    },
+    {
+        "editor_id": "ccEEJSSE004_StagPrinceBowActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_FancyGoblet",
+        "type": "MISC FULL",
+        "original": "Goblet",
+        "string": "Puchar"
+    },
+    {
+        "editor_id": "EEJSSE004_GlassClawActivator",
+        "type": "ACTI FULL",
+        "original": "Glass Dragon Claw",
+        "string": "Szpon szklanego smoka"
+    },
+    {
+        "editor_id": "EEJSSE004_DiamondClawActivator",
+        "type": "ACTI FULL",
+        "original": "Diamond Dragon Claw",
+        "string": "Szpon diamentowego smoka"
+    },
+    {
+        "editor_id": "EEJSSE004_GoldenClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_RalisPickaxeActivator",
+        "type": "ACTI FULL",
+        "original": "Hoarfrost",
+        "string": "Szron"
+    },
+    {
+        "editor_id": "ccEEJSSE004_BloodskalBladeActivator",
+        "type": "ACTI FULL",
+        "original": "Bloodskal Blade",
+        "string": "Ostrze Krwiopuszcza"
+    },
+    {
+        "editor_id": "EEJSSE004_EbonyClawActivator",
+        "type": "ACTI FULL",
+        "original": "Ebony Dragon Claw",
+        "string": "Szpon ebonowego smoka"
+    },
+    {
+        "editor_id": "ccEEJSSE004_ShieldOfYsgramorActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_DPMaskWoodenActivator",
+        "type": "ACTI FULL",
+        "original": "Wooden Mask",
+        "string": "Drewniana maska"
+    },
+    {
+        "editor_id": "ccEEJSSE004_Bed",
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "\u0141\u00f3\u017cko"
+    },
+    {
+        "editor_id": "ccEEJSSE004_DragonflyJarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_HaknirSword1Activator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_Pot",
+        "type": "MISC FULL",
+        "original": "Pot",
+        "string": "Garnek"
+    },
+    {
+        "editor_id": "ccEEJSSE004_HaknirSword2Activator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_ButterflyJarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_HarkonsSwordActivator",
+        "type": "ACTI FULL",
+        "original": "Harkon's Sword",
+        "string": "Miecz Harkona"
+    },
+    {
+        "editor_id": "ccEEJSSE004_Vase2",
+        "type": "MISC FULL",
+        "original": "Vase",
+        "string": "Wazon"
+    },
+    {
+        "editor_id": "ccEEJSSE004_RuefulAxeActivator",
+        "type": "ACTI FULL",
+        "original": "Rueful Axe",
+        "string": "Sm\u0119tny top\u00f3r"
+    },
+    {
+        "editor_id": "ccEEJSSE004_TorstensSkullKeyActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_Wardrobe",
+        "type": "CONT FULL",
+        "original": "Wardrobe",
+        "string": "Szafa"
+    },
+    {
+        "editor_id": "ccEEJSSE004_Urn",
+        "type": "CONT FULL",
+        "original": "Urn",
+        "string": "Urna"
+    },
+    {
+        "editor_id": "ccEEJSSE004_RuinsUrnEmpty",
+        "type": "CONT FULL",
+        "original": "Burial Urn",
+        "string": "Urna pogrzebowa"
+    },
+    {
+        "editor_id": "ccEEJSSE004_Drawers",
+        "type": "CONT FULL",
+        "original": "Drawers",
+        "string": "Szuflady"
+    },
+    {
+        "editor_id": "ccEEJSSE004_DawnguardRuneAxeActivator",
+        "type": "ACTI FULL",
+        "original": "Dawnguard Rune Axe",
+        "string": "Runiczny top\u00f3r Obro\u0144c\u00f3w \u015awitu"
+    },
+    {
+        "editor_id": "ccEEJSSE004_NarrowDresser",
+        "type": "CONT FULL",
+        "original": "Drawers",
+        "string": "Szuflady"
+    },
+    {
+        "editor_id": "ccEEJSSE004_BarrelFood01_Snow",
+        "type": "CONT FULL",
+        "original": "Barrel",
+        "string": "Beczka"
+    },
+    {
+        "editor_id": "ccEEJSSE004_MaceOfMolagBalActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_KagrumezBowActivator",
+        "type": "ACTI FULL",
+        "original": "Dwarven Black Bow of Fate",
+        "string": "Krasnoludzki Czarny \u0141uk Losu"
+    },
+    {
+        "editor_id": "ccEEJSSE004_AurielsShielfActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_MaskofMiraakActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_KolbjornSkullActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_EmptyJar",
+        "type": "MISC FULL",
+        "original": "Glass Jar",
+        "string": "Szklany s\u0142\u00f3j"
+    },
+    {
+        "editor_id": "ccEEJSSE004_SpellbreakerActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_ShieldOfYsgramorActivator",
+        "type": "ACTI FULL",
+        "original": "Shield of Ysgramor",
+        "string": "Tarcza Ysgramora"
+    },
+    {
+        "editor_id": "ccEEJSSE004_Platter",
+        "type": "MISC FULL",
+        "original": "Platter",
+        "string": "Taca"
+    },
+    {
+        "editor_id": "ccEEJSSE004_TargeOfTheBloodedActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_DawnguardRuneHammerActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_AetherialShieldActivator",
+        "type": "ACTI FULL",
+        "original": "Aetherial Shield",
+        "string": "Tarcza z eterium"
+    },
+    {
+        "editor_id": "ccEEJSSE004_HaknirSword2Activator",
+        "type": "ACTI FULL",
+        "original": "Soulrender",
+        "string": "Rozdzieracz Dusz"
+    },
+    {
+        "editor_id": "ccEEJSSE004_InitiatesEwerActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_EbonyBladeActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_TargeOfTheBloodedActivator",
+        "type": "ACTI FULL",
+        "original": "Targe Of The Blooded",
+        "string": "Tarcza Zakrwawionych"
+    },
+    {
+        "editor_id": "ccEEJSSE004_BladeofYsgramorActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "ccEEJSSE004_ChestSnow",
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Skrzynia"
+    },
+    {
+        "editor_id": "ccEEJSSE004_ArmChairDining",
+        "type": "FURN FULL",
+        "original": "Armchair",
+        "string": "Fotel"
+    },
+    {
+        "editor_id": "ccEEJSSE004_Note01b",
+        "type": "BOOK FULL",
+        "original": "Warrior's Challenge",
+        "string": "Wyzwanie wojowniczki"
+    },
+    {
+        "editor_id": "ccEEJSSE004_Note02",
+        "type": "BOOK FULL",
+        "original": "Eydvina's Note",
+        "string": "Wiadomo\u015b\u0107 Eydviny"
+    },
+    {
+        "editor_id": "ccEEJSSE004_HouseQuest",
+        "type": "QUST FULL",
+        "original": "House Quest",
+        "string": "Zadanie domu"
+    },
+    {
+        "editor_id": "ccEEJSSE004_Quest",
+        "type": "QUST NNAM",
+        "original": "Take the key to Hendraheim",
+        "string": "We\u017a klucz do Hendraheim"
+    },
+    {
+        "editor_id": "ccEEJSSE004_Note01",
+        "type": "BOOK FULL",
+        "original": "Warrior's Challenge",
+        "string": "Wyzwanie wojowniczki"
+    },
+    {
+        "editor_id": "ccEEJSSE004_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the Warrior's Challenge",
+        "string": "Przeczytaj wyzwanie wojowniczki"
+    },
+    {
+        "editor_id": "ccEEJSSE004_Quest",
+        "type": "QUST NNAM",
+        "original": "Defeat the warrior",
+        "string": "Pokonaj wojowniczk\u0119"
+    },
+    {
+        "editor_id": "ccEEJSSE004_Quest",
+        "type": "QUST NNAM",
+        "original": "Enter Hendraheim",
+        "string": "Wejd\u017a do Hendraheim"
+    },
+    {
+        "editor_id": "ccEEJSSE004_Quest",
+        "type": "QUST NNAM",
+        "original": "Speak to the warrior at Hendraheim",
+        "string": "Porozmawiaj z wojowniczk\u0105 w Hendraheim"
+    },
+    {
+        "editor_id": "ccEEJSSE004_Quest",
+        "type": "QUST NNAM",
+        "original": "Await news from a courier",
+        "string": "Czekaj na wie\u015bci od pos\u0142a\u0144ca"
+    },
+    {
+        "editor_id": "ccEEJSSE004_Warrior",
+        "type": "NPC_ FULL",
+        "original": "Eydvina Shield-Hearth",
+        "string": "Eydvina P\u0142on\u0105ca Tarcza"
+    },
+    {
+        "editor_id": "ccEEJSSE004_HendraheimKey",
+        "type": "KEYM FULL",
+        "original": "Key to Hendraheim",
+        "string": "Klucz do Hendraheim"
+    },
+    {
+        "editor_id": "CTest",
+        "type": "CELL FULL",
+        "original": "Quick Test Cell",
+        "string": "Szybka kom\u00f3rka testowa"
+    },
+    {
+        "editor_id": "ccEEJSSE004_DisplayLackMsg",
+        "type": "MESG DESC",
+        "original": "You do not have the required item.",
+        "string": "Nie masz wymaganego przedmiotu."
+    },
+    {
+        "editor_id": "ccEEJSSE004_Quest",
+        "type": "QUST CNAM",
+        "original": "I received a letter regarding a warrior home nestled in the mountains north of Bilegulch Mine. I defeated the owner in single combat, and should now search her body for a key.",
+        "string": "Dotar\u0142 do mnie list, w kt\u00f3rym napisano o domu wojownik\u00f3w, le\u017c\u0105cym w g\u00f3rach na p\u00f3\u0142noc od Kopalni W\u0105wozu \u017b\u00f3\u0142ci. Uda\u0142o mi si\u0119 pokona\u0107 jego mieszkank\u0119 i teraz musz\u0119 przeszuka\u0107 jej cia\u0142o - by\u0107 mo\u017ce ma przy sobie klucz."
+    },
+    {
+        "editor_id": "ccEEJSSE004_Note02",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">When the world was young, things were simpler.\n\nIt was us or them. We fought to survive, and in death we found glory. \n\nNow we fight our own Shield-Sisters and Brothers, for banners that change with the wind.\n\nWhen I killed Hjarek on the battlefield, I vowed not to take up arms again. I found honor in this choice, but shame in its consequence.\n\nThe bards do not sing tales of those who die in their homes, slain by time. If I am to see him again, I must stand eye to eye with Tsun on the Whalebone Bridge, and earn my place in the Hall of Valor.\n\nI miss you, brother. Wait for me in Sovngarde.",
+        "string": "<font face=\"$HandwrittenFont\">Kiedy \u015bwiat by\u0142 m\u0142ody, wszystko by\u0142o prostsze.\n\nMy albo oni. Walczyli\u015bmy o przetrwanie, w \u015bmierci odnajdowali\u015bmy chwa\u0142\u0119.\n\nTeraz walczymy z w\u0142asnymi bra\u0107mi i siostrami od Tarczy. Dla proporc\u00f3w, kt\u00f3re zwracaj\u0105 si\u0119, gdzie wieje wiatr.\n\nPo zabiciu Hjarka na polu bitwy, moim \u015blubowaniem by\u0142o nigdy wi\u0119cej nie chwyta\u0107 za bro\u0144. To by\u0142 honorowy wyb\u00f3r, ale o ha\u0144bi\u0105cych konsekwencjach.\n\nBardowie nie \u015bpiewaj\u0105 pie\u015bni o tych, kt\u00f3rzy umieraj\u0105 w domu, pokonani przez czas. Je\u015bli mam go zn\u00f3w zobaczy\u0107, musz\u0119 stan\u0105\u0107 oko w oko z Tsunem na Fiszbinowym Mo\u015bcie i zyska\u0107 miejsce w Izbie Chwa\u0142y.\n\nT\u0119skni\u0119 za tob\u0105, bracie. Czekaj na mnie w Sovngardzie."
+    },
+    {
+        "editor_id": "ccEEJSSE004_Quest",
+        "type": "QUST CNAM",
+        "original": "Couriers often deliver notices to travelers across Skyrim. I received one such letter and should read it to find out more.",
+        "string": "Pos\u0142a\u0144cy cz\u0119sto dostarczaj\u0105 informacje podr\u00f3\u017cnikom z ca\u0142ego Skyrim. Jeden z takich list\u00f3w dotar\u0142 do mnie. Czas go przeczyta\u0107 i dowiedzie\u0107 si\u0119 wi\u0119cej."
+    },
+    {
+        "editor_id": "ccEEJSSE004_Quest",
+        "type": "QUST CNAM",
+        "original": "I received a letter regarding a warrior home nestled in the mountains north of Bilegulch Mine. I defeated the owner in single combat and took the key to the house.",
+        "string": "Dotar\u0142 do mnie list, w kt\u00f3rym napisano o domu wojownik\u00f3w, le\u017c\u0105cym w g\u00f3rach na p\u00f3\u0142noc od Kopalni W\u0105wozu \u017b\u00f3\u0142ci. Uda\u0142o mi si\u0119 pokona\u0107 jego mieszkank\u0119 i wzi\u0105\u0107 klucz do domu."
+    },
+    {
+        "editor_id": "ccEEJSSE004_Quest",
+        "type": "QUST CNAM",
+        "original": "Couriers often deliver notices to travelers across Skyrim. If I head to a major hold, perhaps I will receive information that may concern me.",
+        "string": "Pos\u0142a\u0144cy cz\u0119sto dostarczaj\u0105 listy podr\u00f3\u017cnikom z ca\u0142ego Skyrim. Je\u015bli rusz\u0119 do g\u0142\u00f3wnej twierdzy, by\u0107 mo\u017ce otrzymam wa\u017cne dla mnie informacje."
+    },
+    {
+        "editor_id": "ccEEJSSE004_Quest",
+        "type": "QUST CNAM",
+        "original": "I received a letter regarding Hendraheim, a warrior home nestled in the mountains north of Bilegulch Mine. After defeating the owner in single combat, I took the key to the house and claimed it for myself.",
+        "string": "Dotar\u0142 do mnie list, w kt\u00f3rym napisano o Hendraheim, domu wojownik\u00f3w, le\u017c\u0105cym w g\u00f3rach na p\u00f3\u0142noc od Kopalni W\u0105wozu \u017b\u00f3\u0142ci. Uda\u0142o mi si\u0119 pokona\u0107 jego mieszkank\u0119, wzi\u0105\u0107 klucz do domu i przej\u0105\u0107 go na w\u0142asno\u015b\u0107."
+    },
+    {
+        "editor_id": "ccEEJSSE004_Quest",
+        "type": "QUST CNAM",
+        "original": "I received a letter regarding a warrior home nestled in the mountains north of Bilegulch Mine. The owner seems interested in bequeathing the home to me, but has first asked that I prove my worthiness in battle.",
+        "string": "Dotar\u0142 do mnie list, w kt\u00f3rym napisano o domu wojownik\u00f3w, le\u017c\u0105cym w g\u00f3rach na p\u00f3\u0142noc od Kopalni W\u0105wozu \u017b\u00f3\u0142ci. Mieszkanka najwyra\u017aniej jest gotowa zapisa\u0107 mi dom w testamencie, ale najpierw musz\u0119 udowodni\u0107 swoj\u0105 zr\u0119czno\u015b\u0107 w walce."
+    },
+    {
+        "editor_id": "ccEEJSSE004_Note01",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">Long ago, my ancestors built a great hall on the mountainside, north of Bilegulch Mine. They called it Hendraheim, a warrior's home that rivaled Sovngarde itself.\n\nAs the last of my clan, I wish to bequeath this home to a true warrior, and a fellow Nord. I've heard you're a worthy fighter, but I would like you to prove it with your blade.\n\nEydvina Shield-Hearth",
+        "string": "<font face=\"$HandwrittenFont\">Wiele lat temu, moi przodkowie wznie\u015bli na zboczu g\u00f3ry, na p\u00f3\u0142noc od Kopalni W\u0105wozu \u017b\u00f3\u0142ci, pot\u0119\u017cny dw\u00f3r. Nazwali go Hendraheim, dom wojownika, kt\u00f3ry m\u00f3g\u0142 mierzy\u0107 si\u0119 z samym Sovngardem.\n\nJako ostatnia z mojego klanu, chc\u0119 go zostawi\u0107 w spadku prawdziwemu wojownikowi, tak\u017ce nordowi. S\u0142ysza\u0142am, \u017ce potrafisz pos\u0142ugiwa\u0107 si\u0119 mieczem, ale chc\u0119 to sprawdzi\u0107 sama.\n\nEydvina P\u0142on\u0105ca Tarcza"
+    },
+    {
+        "editor_id": "ccEEJSSE004_Note01b",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">Long ago, my ancestors built a great hall on the mountainside, north of Bilegulch Mine. They called it Hendraheim, a warrior's home that rivaled Sovngarde itself.\n\nAs the last of my clan, I wish to bequeath this home to a true warrior. You are not a Nord, yet I've heard your prowess in battle rivals that of our most legendary fighters. I ask you to prove it with your blade.\n\nEydvina Shield-Hearth",
+        "string": "<font face=\"$HandwrittenFont\">Wiele lat temu, moi przodkowie wznie\u015bli na zboczu g\u00f3ry, na p\u00f3\u0142noc od Kopalni W\u0105wozu \u017b\u00f3\u0142ci, pot\u0119\u017cny dw\u00f3r. Nazwali go Hendraheim, dom wojownika, kt\u00f3ry m\u00f3g\u0142 mierzy\u0107 si\u0119 z samym Sovngardem.\n\nJako ostatnia z mojego klanu, chc\u0119 go zostawi\u0107 w spadku prawdziwemu wojownikowi. Trudno mi przyjdzie przekaza\u0107 go komu\u015b, kto nie jest nordem, ale s\u0142ysza\u0142am, \u017ce potrafisz pos\u0142ugiwa\u0107 si\u0119 mieczem niczym legendarni wojownicy. Prosz\u0119 ci\u0119 o udowodnienie tego.\n\nEydvina P\u0142on\u0105ca Tarcza"
+    }
+]

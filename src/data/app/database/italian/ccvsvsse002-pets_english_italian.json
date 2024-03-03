@@ -1,0 +1,596 @@
+[
+    {
+        "editor_id": "ccVSVSSE002_FoxRace",
+        "type": "RACE FULL",
+        "original": "Fox",
+        "string": "Volpe"
+    },
+    {
+        "editor_id": "ccVSVSSE002_SPELL_CommandSpider",
+        "type": "SPEL FULL",
+        "original": "Command Spider",
+        "string": "Controlla il ragno"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Buy <Alias=AliasGoat> from <Alias=AliasFarmer>",
+        "string": "Acquista <Alias=AliasGoat> da <Alias=AliasFarmer>"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MGEF_WebTrap",
+        "type": "MGEF FULL",
+        "original": "Paralyze",
+        "string": "Paralisi"
+    },
+    {
+        "editor_id": "ccVSVSSE002_PotentFrostbiteVenom",
+        "type": "ALCH FULL",
+        "original": "Potent Frostbite Venom",
+        "string": "Veleno congelante potente"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Find the tamed spider",
+        "string": "Trova il ragno addomesticato"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "type": "QUST FULL",
+        "original": "Pets of Skyrim",
+        "string": "Animali di Skyrim"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MGEF_CommandSpider",
+        "type": "MGEF FULL",
+        "original": "Command Spider",
+        "string": "Controlla il ragno"
+    },
+    {
+        "editor_id": "ccVSVSSE002_DeadThief",
+        "type": "NPC_ FULL",
+        "original": "Thief",
+        "string": "Ladro"
+    },
+    {
+        "editor_id": "ccVSVSSE002_SPELL_WebTrap",
+        "type": "SPEL FULL",
+        "original": "Web Trap",
+        "string": "Trappola di tela"
+    },
+    {
+        "editor_id": "ccVSVSSE002_SpiderRace",
+        "type": "RACE FULL",
+        "original": "Frostbite Spider",
+        "string": "Ragno congelante"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Feed <Alias=AliasFox> a sweet roll",
+        "string": "Dai da mangiare un involtino dolce a <Alias=AliasFox>"
+    },
+    {
+        "editor_id": "ccVSVSSE002_Instructions_Skeever",
+        "type": "BOOK FULL",
+        "original": "Pickpocket's Journal",
+        "string": "Diario del borseggiatore"
+    },
+    {
+        "editor_id": "CronvangrHall01",
+        "type": "CELL FULL",
+        "original": "Cronvangr Cave",
+        "string": "Caverna di Cronvangr"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Find a treat for the rabbit",
+        "string": "Trova un bocconcino per il coniglio"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Find <Alias=AliasGoat> the goat",
+        "string": "Trova <Alias=AliasGoat> la capra"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Feed <Alias=AliasRabbit> a carrot",
+        "string": "Dai da mangiare una carota a <Alias=AliasRabbit>"
+    },
+    {
+        "editor_id": "ccVSVSSE002_Instructions_Rabbit",
+        "type": "BOOK FULL",
+        "original": "Notes on Tamed Rabbit",
+        "string": "Note sul coniglio addomesticato"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Find the tamed skeever",
+        "string": "Trova lo skeever addomesticato"
+    },
+    {
+        "editor_id": "ccVSVSSE002_Rabbit",
+        "type": "NPC_ FULL",
+        "original": "Thistle",
+        "string": "Cardo"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Free <Alias=AliasSkeever> from its cage",
+        "string": "Libera <Alias=AliasSkeever> dalla gabbia"
+    },
+    {
+        "editor_id": "RiftenRatway01",
+        "type": "CELL FULL",
+        "original": "The Ratway",
+        "string": "Il Ratway"
+    },
+    {
+        "editor_id": "ccVSVSSE002_SkinRabbit",
+        "type": "ARMO FULL",
+        "original": "Rabbit",
+        "string": "Coniglio"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Find out more about the goat",
+        "string": "Scopri di pi\u00f9 sulla capra"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Find out more about the fox",
+        "string": "Scopri di pi\u00f9 sulla volpe"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Free <Alias=AliasSpider> from its cage",
+        "string": "Libera <Alias=AliasSpider> dalla gabbia"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MGEF_CommandSpider",
+        "type": "MGEF DNAM",
+        "original": "Command your pet spider to spin a web trap at the target location. Only <1> web trap can be active at a time.",
+        "string": "Ordina al tuo ragno di tessere una trappola di tela alla posizione del bersaglio. Pu\u00f2 essere attiva solo <1> trappola di tela a volta."
+    },
+    {
+        "editor_id": "ccVSVSSE002_CageKey_Spider",
+        "type": "KEYM FULL",
+        "original": "Spider Cage Key",
+        "string": "Chiave della gabbia del ragno"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Find a key to the skeever cage",
+        "string": "Trova la chiave per la gabbia dello skeever"
+    },
+    {
+        "editor_id": "ccVSVSSE002_RabbitRace",
+        "type": "RACE FULL",
+        "original": "Rabbit",
+        "string": "Coniglio"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Find the tamed fox",
+        "string": "Trova la volpe addomesticata"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Find the tamed rabbit",
+        "string": "Trova il coniglio addomesticato"
+    },
+    {
+        "editor_id": "ccVSVSSE002_GoatRace",
+        "type": "RACE FULL",
+        "original": "Goat",
+        "string": "Capra"
+    },
+    {
+        "editor_id": "ccVSVSSE002_Collar",
+        "type": "ARMO FULL",
+        "original": "Animal Collar",
+        "string": "Collare per animale"
+    },
+    {
+        "editor_id": "ccVSVSSE002_Instructions_Fox",
+        "type": "BOOK FULL",
+        "original": "Thief's Journal",
+        "string": "Diario del ladro"
+    },
+    {
+        "editor_id": "ccVSVSSE002_Fox",
+        "type": "NPC_ FULL",
+        "original": "Sweet Roll",
+        "string": "Involtino dolce"
+    },
+    {
+        "editor_id": "ccVSVSSE002_Vampire",
+        "type": "NPC_ FULL",
+        "original": "Vampire Naturalist",
+        "string": "Vampiro sperimentatore"
+    },
+    {
+        "editor_id": "ccVSVSSE002_Instructions_Goat",
+        "type": "BOOK FULL",
+        "original": "Halvar's Journal",
+        "string": "Diario di Halvar"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Find a key to the spider cage",
+        "string": "Trova la chiave per la gabbia del ragno"
+    },
+    {
+        "editor_id": "ccVSVSSE002_SaddleBags",
+        "type": "ARMO FULL",
+        "original": "Animal Pack",
+        "string": "Borsa per animali"
+    },
+    {
+        "editor_id": "ccVSVSSE002_Instructions_Spider",
+        "type": "BOOK FULL",
+        "original": "Vampire Naturalist's Journal",
+        "string": "Diario del vampiro sperimentatore"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MGEF_StaggerCont",
+        "type": "MGEF FULL",
+        "original": "Stagger Push",
+        "string": "Spinta sbilanciante"
+    },
+    {
+        "editor_id": "ccVSVSSE002_SkinGoat",
+        "type": "ARMO FULL",
+        "original": "Goat",
+        "string": "Capra"
+    },
+    {
+        "editor_id": "ccVSVSSE002_CageKey_Skeever",
+        "type": "KEYM FULL",
+        "original": "Skeever Cage Key",
+        "string": "Chiave della gabbia dello skeever"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MGEF_TeleportSkeever",
+        "type": "MGEF DNAM",
+        "original": "Teleports Skritch the skeever",
+        "string": "Teletrasporta Zanna lo skeever"
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_PickpocketName",
+        "type": "MESG FULL",
+        "original": "Pickpocket",
+        "string": "Borseggio"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Greet <Alias=AliasGoat> the goat",
+        "string": "Saluta <Alias=AliasGoat> la capra"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Find out more about <Alias=AliasGoat>",
+        "string": "Scopri di pi\u00f9 su <Alias=AliasGoat>"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MGEF_TeleportSpider",
+        "type": "MGEF FULL",
+        "original": "Teleport Arachnia",
+        "string": "Teletrasporta Arachnia"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Check the notices at the Bannered Mare",
+        "string": "Controlla gli annunci alla Giumenta Bardata"
+    },
+    {
+        "editor_id": "ccVSVSSE002_SPELL_TeleportSkeever",
+        "type": "SPEL FULL",
+        "original": "Teleport Pet: Skritch",
+        "string": "Teletrasporta animale: Skritch"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MGEF_TeleportGoat",
+        "type": "MGEF DNAM",
+        "original": "Teleports Hilda the goat",
+        "string": "Teletrasporta Hilda la capra"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Purchase a tamed goat from <Alias=AliasFarmer>",
+        "string": "Compra una capra addomesticata da <Alias=AliasFarmer>"
+    },
+    {
+        "editor_id": "ccVSVSSE002_SPELL_TeleportSpider",
+        "type": "SPEL FULL",
+        "original": "Teleport Pet: Arachnia",
+        "string": "Teletrasporta animale: Arachnia"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MGEF_TeleportRabbit",
+        "type": "MGEF DNAM",
+        "original": "Teleports Thistle the rabbit",
+        "string": "Teletrasporta Cardo il coniglio"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MGEF_TeleportFox",
+        "type": "MGEF DNAM",
+        "original": "Teleports Sweet Roll the fox",
+        "string": "Teletrasporta Involtino la volpe"
+    },
+    {
+        "editor_id": "ccVSVSSE002_SPELL_TeleportRabbit",
+        "type": "SPEL FULL",
+        "original": "Teleport Pet: Thistle",
+        "string": "Teletrasporta animale: Cardo"
+    },
+    {
+        "editor_id": "ccVSVSSE002_Collar_dummy",
+        "type": "MISC FULL",
+        "original": "Animal Collar",
+        "string": "Collare per animale"
+    },
+    {
+        "editor_id": "ccVSVSSE002_Notice_Goat",
+        "type": "BOOK FULL",
+        "original": "For Sale",
+        "string": "In vendita"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MGEF_TeleportRabbit",
+        "type": "MGEF FULL",
+        "original": "Teleport Thistle",
+        "string": "Teletrasporta Cardo"
+    },
+    {
+        "editor_id": "ccVSVSSE002_SPELL_TeleportFox",
+        "type": "SPEL FULL",
+        "original": "Teleport Pet: Sweet Roll",
+        "string": "Teletrasporta animale: Involtino"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MGEF_TeleportSkeever",
+        "type": "MGEF FULL",
+        "original": "Teleport Skritch",
+        "string": "Teletrasporta Skritch"
+    },
+    {
+        "editor_id": "ccVSVSSE002_SPELL_TeleportGoat",
+        "type": "SPEL FULL",
+        "original": "Teleport Pet: Hilda",
+        "string": "Teletrasporta animale: Hilda"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MGEF_TeleportGoat",
+        "type": "MGEF FULL",
+        "original": "Teleport Hilda",
+        "string": "Teletrasporta Hilda"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MGEF_TeleportFox",
+        "type": "MGEF FULL",
+        "original": "Teleport Sweet Roll",
+        "string": "Teletrasporta Involtino"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MGEF_TeleportSpider",
+        "type": "MGEF DNAM",
+        "original": "Teleports Arachnia the spider",
+        "string": "Teletrasporta Arachnia il ragno"
+    },
+    {
+        "editor_id": "ccVSVSSE002_Saddlebags_dummy",
+        "type": "MISC FULL",
+        "original": "Animal Pack",
+        "string": "Borsa per animali"
+    },
+    {
+        "editor_id": "ccVSVSSE002_EnchFortifyCarryConstantSelf",
+        "type": "MGEF DNAM",
+        "original": "Carrying capacity increased by <mag> points.",
+        "string": "Fortifica Peso trasportabile"
+    },
+    {
+        "editor_id": "ccVSVSSE002_ENCH_FortifyCarry",
+        "type": "ENCH FULL",
+        "original": "Fortify Carry Weight",
+        "string": "Potenziamento Peso trasportabile"
+    },
+    {
+        "editor_id": "ccVSVSSE002_EnchFortifyCarryConstantSelf",
+        "type": "MGEF FULL",
+        "original": "Fortify Carry Weight",
+        "string": "Il peso trasportabile aumenta di <mag> punti."
+    },
+    {
+        "editor_id": "WhiterunBanneredMare",
+        "type": "CELL FULL",
+        "original": "The Bannered Mare",
+        "string": "La Giumenta Bardata"
+    },
+    {
+        "editor_id": "ccVSVSSE002_Instructions_Fox",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><div align=\"left\">\n<b>4th of First Seed</b>\nI guess being Bosmer really does give me a way with animals! This little fox wandered up to me today, bold as brass, and started begging for treats. I didn't have anything on me at the time but a sweet roll, but it seemed to like that well enough. I wonder if this gift with animals works on horses - it would make stealing them dead easy.\n\n<b>15th of First Seed</b>\nThe furry nuisance won't leave me alone! It's been following me everywhere, even down into the sewers. At least it's quiet enough that it won't alert the guards...\n\n<b>1st of Rain's Hand</b>\nThe fox has a real nose for sniffing out valuables. Just this morning she dug a silver locket out of the mud - I never would have seen it if she hadn't started pawing at the ground. She must be attracted to shiny things. Can't say I blame her, really.\n\n<b>9th of Rain's Hand</b>\nFinding Sweet Roll has turned out to be the best stroke of luck I've had in a while. She's got better eyes and instincts than any thief I've ever met, including Vex. I can't remember the last time my coin purse was this heavy - I'm starting to jingle like a battalion of Imperials when I walk.\n\n<b>25th of Rain's Hand</b>\nI think I'll try out this animal-taming thing on the wolves outside of town. Some of the other thieves have been eyeing me recently; they would think twice about jumping me if I had a wolf at my heels. ",
+        "string": "<font face='$HandwrittenFont'><div align=\"left\">\n<b>4 Primo Seme</b>\nA quanto pare essere un bosmer mi d\u00e0 davvero una marcia in pi\u00f9 con gli animali! Oggi mi si \u00e8 avvicinata una piccola volpe, tutta spavalda, e ha iniziato a chiedermi dei bocconcini. Non avevo niente con me se non un involtino dolce, ma \u00e8 sembrato piacerle. Mi chiedo se questo dono con gli animali funzioni anche con i cavalli, rubarli sarebbe un gioco da ragazzi.\n\n<b>15 Primo Seme</b>\nQuesta piccola seccatura pelosa non mi lascia in pace! Mi segue ovunque, anche nelle fogne. Almeno \u00e8 silenziosa e non allerta le guardie...\n\n<b>1 Mano della Pioggia</b>\nLa volpe \u00e8 davvero brava a trovare oggetti di valore. Proprio stamattina ha trovato un medaglione d'argento nel fango, non l'avrei mai visto se non avesse iniziato a grattare il terreno. Deve essere attratta dalle cose luccicanti. Non posso darle torto.\n\n<b>9 Mano della Pioggia</b>\nTrovare Involtino \u00e8 stato un gran bel colpo di fortuna. Quella volpe ha pi\u00f9 occhio e istinto di qualsiasi ladro abbia mai incontrato, compreso Vex. Credo che la mia borsa non sia mai stata cos\u00ec pesante. Tintinno come un battaglione di imperiali quando cammino.\n\n<b>25 Mano della Pioggia</b>\nProver\u00f2 questa cosa del domare gli animali sui lupi fuori citt\u00e0. Gli altri ladri mi hanno messo gli occhi addosso, ma ci penserebbero due volte prima di aggredirmi se mi vedessero andare in giro con un lupo. "
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_FoundItem_rabbit",
+        "type": "MESG DESC",
+        "original": "<Alias=PetRabbit> found something!",
+        "string": "<Alias=PetRabbit> ha trovato qualcosa!"
+    },
+    {
+        "editor_id": "ccVSVSSE002_Instructions_Goat",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\nCame into town a few days ago looking for work. The folks here are nice enough, and there's plenty of wheat and potatoes needing to be harvested, so I've got a steady supply of coin coming in. \n\nI don't think I'm going to need my old pack goat Hilda for much longer...all my bones are starting to creak, and my adventuring days are long over. Now I just need to find someone willing to take care of her. Maybe get a few coins for her too - there's strength in those old bones of hers yet.\n\nAh, how I'm going to miss wandering the wilds of Skyrim! I saw so many strange and wonderful things out there - pine trees as tall as mountains, old nord tombs, I once even stumbled across a wandering spirit made of pure ice!\n\nEven ran across a few folks trying their hand at taming different types of creatures. Don't know why they'd want anything but a loyal dog or trusty goat like my Hilda though - some of them beasts out in the wild just aren't meant to be tamed.\n\nRan across an alchemist with a pet rabbit, and almost got robbed by a thief with a tame fox, but I suppose a rabbit or a fox could be docile enough. But that pickpocket trying to train a skeever must have been as mad as old Sheo'. And I don't want to think too hard about the vampire that almost made a meal out of me...could have sworn it had a trained frostbite spider! Gives me the shivers just thinking about it.",
+        "string": "<font face='$HandwrittenFont'>\nSono arrivato in citt\u00e0 un paio di giorni fa in cerca di lavoro. La gente di qui \u00e8 abbastanza gentile, il grano e le patate da raccogliere non mancano, quindi avr\u00f2 una fonte di denaro costante. \n\nNon penso che avr\u00f2 bisogno della mia vecchia capra Hilda ancora per molto... le mie ossa cominciano a scricchiolare, i miei giorni da avventuriero sono finiti da un pezzo. Devo solo trovare qualcuno disposto a prendersi cura di lei. Magari riuscir\u00f2 a farci qualche soldo, ha ancora forza in quelle vecchie ossa.\n\nAh, quanto mi mancher\u00e0 girovagare per Skyrim! Ho visto tante cose strane e straordinarie. Pini alti come montagne, antiche tombe nord, una volta mi sono anche imbattuto in uno spirito fatto di ghiaccio!\n\nHo anche incontrato alcune persone che provavano a domare diversi tipi di creature. Non capisco perch\u00e9 dovrebbero volere qualcosa di diverso da un cane fedele o dalla mia capra Hilda, alcune bestie non sono fatte per essere domate.\n\nHo incontrato un alchimista con un coniglio e sono quasi stato derubato da un ladro con una volpe addomesticata, ma almeno quelli sono abbastanza docili. Quel borseggiatore che provava ad addestrare uno skeever dev'essere stato pazzo quanto il vecchio Sheo'. E non voglio neanche pensare a quel vampiro che mi ha quasi mangiato... giurerei che aveva con lui un ragno congelante! Mi vengono i brividi solo a pensarci."
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "type": "QUST CNAM",
+        "original": "*Add log entry here*",
+        "string": "*Aggiungi annotazione*"
+    },
+    {
+        "editor_id": "ccVSVSSE002_SaddleBags",
+        "type": "ARMO DESC",
+        "original": "Equip on a pet goat or skeever to increase its carryweight by 40.",
+        "string": "Equipaggiala su una capra o su uno skeever per aumentare la sua capacit\u00e0 di portare pesi di 40 unit\u00e0."
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_NoCombatUse",
+        "type": "MESG DESC",
+        "original": "You can't use that in combat",
+        "string": "Non utilizzabile in combattimento"
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_FetchFailed_rabbit",
+        "type": "MESG DESC",
+        "original": "<Alias=PetRabbit> couldn't find anything...",
+        "string": "<Alias=PetRabbit> non ha trovato nulla..."
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_FoundItem_goat",
+        "type": "MESG DESC",
+        "original": "<Alias=PetGoat> has milk to collect!",
+        "string": "<Alias=PetGoat> deve essere munta!"
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_FoundItem_skeever",
+        "type": "MESG DESC",
+        "original": "<Alias=PetSkeever> found something!",
+        "string": "<Alias=PetSkeever> ha trovato qualcosa!"
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_FoundItem_spider",
+        "type": "MESG DESC",
+        "original": "<Alias=PetSpider> has venom to harvest!",
+        "string": "<Alias=PetSpider> ha del veleno pronto per la raccolta!"
+    },
+    {
+        "editor_id": "ccVSVSSE002_Instructions_Skeever",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\nI ain't been having no luck at lifting gold off them rich merchants in the market, and those thieves guild s'wits don't want me. Said I'm too clumsy. I'm running out of food and skooma, may need to start killing some of the skeevers down here for meat...\n\nOne of the skooma dealers at the docks told me he knew a guy from Morrowind who trained a nix hound to distract his marks - helped him steal a heaping pile of gold, he said. Don't know if I believe a word of it, but what else am I going to do? Might as well give it a try.\n\nToo bad there ain't any nix hounds around here. Plenty of skeevers, though...I'm gonna need to catch some anyway for food, might as well have a go at training one first.",
+        "string": "<font face='$HandwrittenFont'>\nNon sono riuscito ad alleggerire del loro oro quei ricchi mercanti al mercato, e la gilda dei ladri non mi vuole. Dicono che sono troppo goffo. Sto finendo il cibo e la skooma, sar\u00f2 costretto a uccidere qualche skeever per poter mangiare...\n\nUno dei trafficanti di skooma al porto mi ha detto che conosceva uno a Morrowind che aveva addestrato un Nix-hound per distrarre le sue vittime; \u00e8 riuscito a fare una montagna d'oro, a quanto pare. Non so se crederci, ma che altro posso fare? Vale la pena di provarci.\n\nPeccato che non ci sia neanche un Nix-hound da queste parti. Ma \u00e8 pieno di skeever in compenso... Dovr\u00f2 comunque catturarne qualcuno per mangiare, potrei anche provare ad addomesticarne uno."
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_QuestDone_Rabbit",
+        "type": "MESG DESC",
+        "original": "<Alias=AliasRabbit> the rabbit is now available to be recruited as your pet!\n<Alias=AliasRabbit> can be commanded to lead you to nearby ingredients. <Alias=AliasRabbit> also has a chance to find an ingredient once per day.",
+        "string": "Adesso puoi reclutare il coniglio <Alias=AliasRabbit> come tuo animale!\n<Alias=AliasRabbit> pu\u00f2 condurti agli ingredienti nelle vicinanze, se glielo ordini. <Alias=AliasRabbit> pu\u00f2 anche trovare un ingrediente al giorno."
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_FoundItem_fox",
+        "type": "MESG DESC",
+        "original": "<Alias=PetFox> found something!",
+        "string": "<Alias=PetFox> ha trovato qualcosa!"
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_FetchFailed_skeever",
+        "type": "MESG DESC",
+        "original": "<Alias=PetSkeever> couldn't find anything...",
+        "string": "<Alias=PetSkeever> non ha trovato nulla..."
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_QuestDone_Fox",
+        "type": "MESG DESC",
+        "original": "<Alias=AliasFox> the fox is now available to be recruited as your pet!\n<Alias=AliasFox> can be commanded to lead you to nearby valuable items. <Alias=AliasFox> also has a chance to find a shiny item once per day.",
+        "string": "Adesso puoi reclutare la volpe <Alias=AliasFox> come tuo animale!\n<Alias=AliasFox> pu\u00f2 condurti agli oggetti preziosi nelle vicinanze, se glielo ordini. <Alias=AliasFox> pu\u00f2 anche trovare un oggetto scintillante al giorno."
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_QuestDone_Spider",
+        "type": "MESG DESC",
+        "original": "<Alias=AliasSpider> the spider is now available to be recruited as your pet!\n<Alias=AliasSpider> can be commanded to spin a sticky web trap to slow down your enemies. Potent venom can also be collected from <Alias=AliasSpider> once per day.",
+        "string": "Adesso puoi reclutare il ragno <Alias=AliasSpider> come tuo animale!\n<Alias=AliasSpider> pu\u00f2 tessere una trappola di tela per rallentare il nemico, se glielo ordini. Una volta al giorno puoi anche raccogliere da <Alias=AliasSpider> del potente veleno."
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_CommandFailed_Spider",
+        "type": "MESG DESC",
+        "original": "<Alias=PetSpider> couldn't spin a web trap there...",
+        "string": "<Alias=PetSpider> non ha potuto tessere una trappola di tela l\u00ec..."
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_QuestDone_Goat",
+        "type": "MESG DESC",
+        "original": "<Alias=AliasGoat> the goat is now available to be recruited as your pet!\n<Alias=AliasGoat> can carry lots of items, and can be equipped with a pack to carry even more. A jug of milk can also be collected from <Alias=AliasGoat> once per day.",
+        "string": "Adesso puoi reclutare la capra <Alias=AliasGoat> come tuo animale!\n<Alias=AliasGoat> pu\u00f2 trasportare molti oggetti, e pu\u00f2 essere equipaggiata con una borsa per trasportarne ancora di pi\u00f9. Da <Alias=AliasGoat> si pu\u00f2 anche ottenere una brocca di latte al giorno."
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_FetchFailed_fox",
+        "type": "MESG DESC",
+        "original": "<Alias=PetFox> couldn't find anything...",
+        "string": "<Alias=PetFox> non ha trovato nulla..."
+    },
+    {
+        "editor_id": "ccVSVSSE002_PetControlQuest_Skeever",
+        "type": "QUST CNAM",
+        "original": "Recruit stage",
+        "string": "Reclutamento"
+    },
+    {
+        "editor_id": "ccVSVSSE002_Instructions_Rabbit",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\n<b>14th of Second Seed</b>\nThe rabbits here seem particularly adept at sniffing out potion ingredients. I recently found one nibbling on my thistle plants and managed to capture it. It is my hope that I will be able to train it to lead me to the most bountiful flora.\n\n<b>22nd of Second Seed</b>\nThe rabbit (which I have decided to name Thistle, in honor of the carefully cultivated plants it managed to destroy) is showing great promise. It has proven to be quite tame and even rather intelligent. Getting it to respond to commands, however, can be a bit of a trial. I've resorted to plying it with carrots. ",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\n<b>14 Secondo Seme</b>\nI conigli della zona sembrano abbastanza abili a trovare ingredienti per le pozioni. Recentemente ne ho trovato uno che stava rosicchiando la mia pianta di cardi e sono riuscito a catturarlo. Spero di riuscire ad addestrarlo e che mi conduca a un ricco bottino.\n\n<b>22 Secondo Seme</b>\nIl coniglio (che ho deciso di chiamare Cardo, in memoria della bella pianta che avevo coltivato che \u00e8 riuscito a distruggere) sembra molto promettente. Si \u00e8 dimostrato abbastanza docile e anche piuttosto intelligente. Farlo rispondere agli ordini, per\u00f2, \u00e8 pi\u00f9 difficile. Sto provando ad addestrarlo con delle carote. "
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_NotFollowing_Spider",
+        "type": "MESG DESC",
+        "original": "<Alias=PetSpider> must be your companion in order to give it commands",
+        "string": "<Alias=PetSpider> deve essere il tuo compagno per potergli dare ordini"
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_QuestDone_Skeever",
+        "type": "MESG DESC",
+        "original": "<Alias=AliasSkeever> the skeever is now available to be recruited as your pet!\n<Alias=AliasSkeever> can be commanded to lead you to nearby food items. <Alias=AliasSkeever> also has a chance to find food once per day.",
+        "string": "Adesso puoi reclutare lo skeever <Alias=AliasSkeever> come tuo animale!\n<Alias=AliasSkeever> pu\u00f2 condurti al cibo nelle vicinanze, se glielo ordini. <Alias=AliasSkeever> pu\u00f2 anche trovare cibo una volta al giorno."
+    },
+    {
+        "editor_id": "ccVSVSSE002_Instructions_Spider",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><div align=\"left\">\nWhile my siblings may be obsessed with the taste that fear imbues in the blood of mortals, I find that pain lends a much more potent sweetness. And nothing is quite so capable of causing pain as the venom of a frostbite spider.\n\nBut alas, the usual method of harvesting frostbite venom involves killing the spider - a costly and dangerous venture. Far too little venom can be obtained through violent methods for the experiments I wish to conduct. \n\nTo that end, I have captured a frostbite spider from deeper in the cave so that I may regularly collect its venom, which seems to be unusually potent. I discovered that it appears to have some measure of intelligence, and I have been attempting to teach it to obey certain orders. Oh how delicious it would be to have a tamed spider entangle my prey on command!\n\nI think I will name it Arachnia. ",
+        "string": "<font face='$HandwrittenFont'><div align=\"left\">\nSebbene i miei fratelli siano ossessionati con il sapore che la paura conferisce al sangue dei mortali, io trovo che il dolore gli dia una dolcezza molto pi\u00f9 accentuata. E niente causa dolore come il veleno di un ragno congelante.\n\nAhim\u00e8, il metodo classico per raccogliere il veleno di ragno congelante richiede di ucciderne uno, un'impresa pericolosa. Con metodi violenti si otterrebbe troppo poco veleno per i miei esperimenti. \n\nA questo scopo, ho catturato un ragno congelante dalle profondit\u00e0 della caverna cos\u00ec posso raccoglierne il veleno regolarmente, e sembra insolitamente potente. A quanto pare il ragno \u00e8 anche intelligente, sto provando a insegnargli a obbedire ad alcuni ordini. Sarebbe delizioso avere un ragno addomesticato che intrappoli le mie prede a comando!\n\nPenso che lo chiamer\u00f2 Arachnia. "
+    },
+    {
+        "editor_id": "ccVSVSSE002_Notice_Goat",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\n<font size=\"40\">For Sale</font>\n\nOne tamed mountain goat. Able to carry a hefty amount of weight to the Throat of the World and back again. Gives good milk. \n\nIf interested in purchasing, see Halvar in Rorikstead. \n\n- Halvar",
+        "string": "<font face=\"$HandwrittenFont\">\n<font size=\"40\">In vendita</font>\n\nCapra addomesticata di montagna. Pu\u00f2 trasportare carichi pesanti fino alla Gola del Mondo e ritorno. Fornisce buon latte. \n\nSe interessati all'acquisto, contattate Halvar a Rorikstead. \n\n- Halvar"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "type": "QUST CNAM",
+        "original": "After reading Halvar's journal on his adventures throughout Skyrim, I've discovered that there are many other tame animal companions out there in the wild. I should set out to find them.",
+        "string": "Dopo aver letto il diario di Halvar e le sue avventure in giro per Skyrim, ho scoperto che possono essere addomesticati altri animali. Devo andare a cercarli."
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "type": "QUST CNAM",
+        "original": "I found a notice in the Bannered Mare offering a tamed goat for sale. I need to talk to Halvar in Rorikstead to purchase it.",
+        "string": "Alla Giumenta Bardata, ho trovato un annuncio di vendita di una capra addomesticata. Per comprarla devo parlare con Halvar a Rorikstead."
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "type": "QUST CNAM",
+        "original": "The journey through Skyrim can be hard and long, and I could use the companionship of a loyal animal. I should inquire in town to see if there are any tamed animals for sale.",
+        "string": "Il viaggio attraverso Skyrim pu\u00f2 essere difficile e lungo, sarebbe bello avere la compagnia di un animale fedele. Dovrei chiedere in citt\u00e0 se ci sono animali addomesticati in vendita."
+    }
+]

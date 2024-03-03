@@ -1,0 +1,200 @@
+[
+    {
+        "editor_id": "ccBGSSSE054_ArmorBladesBoots",
+        "type": "ARMO FULL",
+        "original": "Orcish Plate Boots",
+        "string": "Orkische Plattenstiefel"
+    },
+    {
+        "editor_id": "ccBGSSSE054_ArmorBladesHelmet",
+        "type": "ARMO FULL",
+        "original": "Orcish Plate Helmet",
+        "string": "Orkischer Plattenhelm"
+    },
+    {
+        "editor_id": "ccBGSSSE054_ArmorBladesCuirass",
+        "type": "ARMO FULL",
+        "original": "Orcish Plate Armor",
+        "string": "Orkische Plattenr\u00fcstung"
+    },
+    {
+        "editor_id": "ccBGSSSE054_ArmorBladesGauntlets",
+        "type": "ARMO FULL",
+        "original": "Orcish Plate Gauntlets",
+        "string": "Orkische Plattenpanzerhandschuhe"
+    },
+    {
+        "editor_id": "ccBGSSSE054_DossierOrcish",
+        "type": "BOOK FULL",
+        "original": "Guard's Dossier: Yakhtu gra-Orkulg",
+        "string": "Wachdossier: Yakhtu gra-Orkulg"
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "type": "QUST NNAM",
+        "original": "Examine the body",
+        "string": "Untersuche die Leiche."
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "type": "QUST NNAM",
+        "original": "Find the blacksmith in Embershard Mine",
+        "string": "Finde die Schmiedin in der Glutsplittermine."
+    },
+    {
+        "editor_id": "ccBGSSSE054_YakhtuKey",
+        "type": "KEYM FULL",
+        "original": "Yakhtu's Key",
+        "string": "Yakhtus Schl\u00fcssel"
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "type": "QUST FULL",
+        "original": "Smith 'N Slash",
+        "string": "Hiebeschmiede"
+    },
+    {
+        "editor_id": "ccBGSSSE054_Yakhtu",
+        "type": "NPC_ FULL",
+        "original": "Yakhtu gra-Orkulg",
+        "string": "Yakhtu gra-Orkulg"
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "type": "QUST NNAM",
+        "original": "Search for a dossier at the Guard Barracks in Whiterun",
+        "string": "Suche in den Wachunterk\u00fcnften in Wei\u00dflauf nach einem Dossier."
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the journal",
+        "string": "Lies das Tagebuch."
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the guard's dossier",
+        "string": "Lies das Dossier der Wache."
+    },
+    {
+        "editor_id": "ccBGSSSE054_YakhtuJournal",
+        "type": "BOOK FULL",
+        "original": "Yakhtu's Journal",
+        "string": "Yakhtus Tagebuch"
+    },
+    {
+        "editor_id": "ccBGSSSE054_Yakhtu",
+        "type": "NPC_ SHRT",
+        "original": "Yakhtu",
+        "string": "Yakhtu"
+    },
+    {
+        "editor_id": "ccBGSSSE054_YakhtuTreasBanditChest",
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Truhe"
+    },
+    {
+        "editor_id": "ccBGSSSE054_MiscQuest",
+        "type": "QUST NNAM",
+        "original": "Search for a dossier at the Guard Barracks in Whiterun",
+        "string": "Suche in den Wachunterk\u00fcnften in Wei\u00dflauf nach einem Dossier."
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "type": "QUST NNAM",
+        "original": "Retrieve the Orcish Plate Armor",
+        "string": "Beschaffe die Orkische Plattenr\u00fcstung."
+    },
+    {
+        "editor_id": "ccBGSSSE054_ArmorBladesCuirassE",
+        "type": "ARMO FULL",
+        "original": "Orcish Plate Armor",
+        "string": "Orkische Plattenr\u00fcstung"
+    },
+    {
+        "editor_id": "ccBGSSSE054_ArmorBladesGauntletsE",
+        "type": "ARMO FULL",
+        "original": "Orcish Plate Gauntlets",
+        "string": "Orkische Plattenpanzerhandschuhe"
+    },
+    {
+        "editor_id": "ccBGSSSE054_ArmorBladesHelmetE",
+        "type": "ARMO FULL",
+        "original": "Orcish Plate Helmet",
+        "string": "Orkischer Plattenhelm"
+    },
+    {
+        "editor_id": "ccBGSSSE054_ArmorBladesBootsE",
+        "type": "ARMO FULL",
+        "original": "Orcish Plate Boots",
+        "string": "Orkische Plattenstiefel"
+    },
+    {
+        "editor_id": "EmbershardMine01",
+        "type": "CELL FULL",
+        "original": "Embershard Mine",
+        "string": "Glutsplittermine"
+    },
+    {
+        "editor_id": "WhiterunGuardHouse",
+        "type": "CELL FULL",
+        "original": "Guard Barracks",
+        "string": "Wachunterk\u00fcnfte"
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "type": "QUST CNAM",
+        "original": "At Embershard Mine, I found an Orc blacksmith forging weapons for bandits. I managed to eliminate her and read a journal on her body. It mentioned crafting valuable Orcish Plate armor for bandits.",
+        "string": "In der Glutsplittermine habe ich eine Orkschmiedin gefunden, die Waffen f\u00fcr Banditen herstellt. Ich konnte sie eliminieren und habe ein Tagebuch gelesen, das ich bei ihrer Leiche gefunden hatte. Darin wurde die Herstellung wertvoller Orkischer Plattenr\u00fcstung f\u00fcr Banditen erw\u00e4hnt."
+    },
+    {
+        "editor_id": "ccBGSSSE054_YakhtuJournal",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\nI nearly turned around and went back to Cyrodiil because Bjormund wouldn't shut up. From dawn to dusk it was Skyrim this and Skyrim that. We hadn't even crossed the mountains yet, and I felt like I'd spent an eternity in the place. But by Malacath, he kept going.\n\nHe went on about all the different legends and the hundreds of Ragnars involved in them. He talked for hours about his family, and for days about his mead. Sometimes he even sang about them. Silence was not an option. Perhaps if they put that on my bounty, I might have been okay with the rest of it. \n\nBut as a blacksmith, there was one story I didn't get tired of. The one about the Skyforge.\n\n\"It's an ancient relic, watched over by a great stone eagle,\" he said. \"Come spring, you will be forging weapons under its wings,\" he said.\n\nI ate it up, even though I knew it was a lie. The Skyforge was for legendary smiths, and I was a wanted criminal. Unless the guard decide to quit looking for us, I was going to spend the rest of my life crafting Orcish Plate for bandits, idiots who didn't deserve my work and lacked the brains to value it.\n\nMaybe that's what pissed me off the most about Bjormund's tales of hearth and home. We weren't going to be welcome in Skyrim, or anywhere for that matter. We were Crimson Dirks. We had a home, and now it was gone.</font>",
+        "string": "<font face=\"$HandwrittenFont\">\nIch wollte fast schon umkehren und nach Cyrodiil zur\u00fcckkehren, da Bjormund einfach nicht den Mund halten konnte. Von morgens bis abends ging es immer nur um Himmelsrand. Wir hatten noch nicht einmal das Gebirge \u00fcberquert, da kam es mir schon vor, als w\u00e4ren wir bereits eine Ewigkeit an diesem Ort gewesen. Aber bei Malacath, er wollte einfach nicht aufh\u00f6ren.\n\nEr erz\u00e4hlte von all den verschiedenen Legenden und den Hunderten Ragnars, die damit zu tun hatten. Er sprach stundenlang \u00fcber seine Familie und tagelang \u00fcber seinen Met. Manchmal sang er sogar. Stille war ein Fremdwort f\u00fcr ihn. H\u00e4tten sie das auf mein Kopfgeld aufgeschlagen, w\u00e4re der Rest f\u00fcr mich vielleicht in Ordnung gewesen.\n\nAber als Schmiedin konnte ich mir eine dieser Geschichten immer wieder anh\u00f6ren: die \u00fcber die Himmelsschmiede.\n\n\"Das ist ein uraltes Relikt, bewacht von einem gro\u00dfen Steinadler\", sagte er. \"Wenn der Fr\u00fchling kommt, schmiedet Ihr Waffen unter seinen Fl\u00fcgeln.\"\n\nDas gefiel mir, obwohl ich wusste, dass es eine L\u00fcge war. Die Himmelsschmiede war f\u00fcr legend\u00e4re Handwerker gedacht und ich war eine gesuchte Kriminelle. Falls die Wache nicht aufh\u00f6ren w\u00fcrde, nach uns zu suchen, w\u00fcrde ich den Rest meines Lebens damit verbringen, orkische Plattenr\u00fcstungen f\u00fcr Banditen herzustellen - f\u00fcr Idioten, die meine Arbeit nicht verdienten und denen es an Hirnschmalz mangelte, um sie \u00fcberhaupt wertsch\u00e4tzen zu k\u00f6nnen.\n\nVielleicht war es das, was mich an Bjormunds Geschichten \u00fcber Heim und Herd so w\u00fctend machte. Wir w\u00fcrden in Himmelsrand und auch anderswo nicht willkommen sein. Wir waren Blutrote Langdolche. Wir hatten ein Zuhause gehabt, das es nun nicht mehr gab.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "type": "QUST CNAM",
+        "original": "Bandits have long been an issue for the people Skyrim. At the Guard House in Whiterun, I found a dossier that might have information on their whereabouts.",
+        "string": "Banditen stellen schon seit langer Zeit ein Problem f\u00fcr Himmelsrand dar. Im Wachhaus in Wei\u00dflauf habe ich ein Dossier gefunden, in dem vielleicht Informationen \u00fcber ihre Aufenthaltsorte stehen k\u00f6nnten."
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "type": "QUST CNAM",
+        "original": "Bandits have long been an issue for the people Skyrim. If I visit the Guard House in Whiterun, I might find some information on them.",
+        "string": "Banditen stellen schon seit langer Zeit ein Problem f\u00fcr Himmelsrand dar. Im Wachhaus in Wei\u00dflauf erhalte ich vielleicht Informationen \u00fcber sie."
+    },
+    {
+        "editor_id": "ccBGSSSE054_DossierOrcish",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\nStatus: Active (Capture or Kill), High Priority\n\nDescription: Female, Orc, late 40s\n\nBackground:\nYakhtu gra-Orkulg was a former blacksmith at the Stash 'N Slash in the Imperial City, a shop she inherited from her father. She was contacted by the Crimson Dirks and recruited to forge arms for the bandits as well as launder sacked goods through her shop. When the Imperial City guard issued a warrant for her arrest, she fled the city with another member of the bandit gang.  \n\nOperational Notes:\nYakhtu was originally thought to have fled to High Rock and taken refuge in an Orc Stronghold. However, according to our informant, she actually traveled with another agent to Skyrim. Reports of unusually well made weapons and armor being peddled out of Embershard Mine may be related. This information should be forwarded to Commander Caius in Whiterun as the mine falls under his jurisdiction.</font>",
+        "string": "<font face='$HandwrittenFont'>\nStatus: Aktiv (festnehmen oder t\u00f6ten), hohe Wichtigkeit\n\nBeschreibung: Weiblich, Ork, Ende 40\n\nHintergrund:\nYakhtu gra-Orkulg war eine ehemalige Schmiedin im Laden \"Hiebeschmiede\" in der Kaiserstadt, den sie von ihrem Vater geerbt hatte. Die Blutroten Langdolche nahmen Kontakt zu ihr auf und rekrutierten sie, um Waffen f\u00fcr die Banditen fertigen zu lassen und gepl\u00fcnderte Waren in ihrem Laden zu waschen. Als die Kaiserliche Wache einen Haftbefehl f\u00fcr sie erlie\u00df, floh sie mit einem weiteren Mitglied der Bande aus der Stadt.\n\nOperative Anmerkungen:\nEs wurde urspr\u00fcnglich davon ausgegangen, dass Yakhtu nach Hochfels geflohen war und in einer Orkfestung Zuflucht gefunden hatte. Laut unserem Informanten ist sie jedoch mit einem anderen Agenten nach Himmelsrand gereist. Berichte \u00fcber ungew\u00f6hnlich gute Waffen und R\u00fcstungen, die aus der Glutsplittermine heraus verkauft werden, k\u00f6nnten damit in Verbindung stehen. Diese Informationen sollten an Kommandant Caius weitergeleitet werden, da die Mine unter seinen Zust\u00e4ndigkeitsbereich f\u00e4llt.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "type": "QUST CNAM",
+        "original": "At Embershard Mine, I found an Orc blacksmith forging weapons for bandits. I managed to eliminate her and read a journal on her body. It mentioned crafting valuable Orcish Plate armor for bandits. I defeated a bandit wearing the armor and claimed it for myself.",
+        "string": "In der Glutsplittermine habe ich eine Orkschmiedin gefunden, die Waffen f\u00fcr Banditen herstellt. Ich konnte sie eliminieren und habe ein Tagebuch gelesen, das ich bei ihrer Leiche gefunden hatte. Darin wurde die Herstellung wertvoller Orkischer Plattenr\u00fcstung f\u00fcr Banditen erw\u00e4hnt. Ich habe einen Banditen in besagter R\u00fcstung bezwungen und sie an mich genommen."
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "type": "QUST CNAM",
+        "original": "Bandits have long been an issue for the people Skyrim. At the Guard House in Whiterun, I found a dossier that has information on an Orc blacksmith forging weapons for bandits at Embershard Mine.",
+        "string": "Banditen stellen schon seit langer Zeit ein Problem f\u00fcr Himmelsrand dar. Im Wachhaus in Wei\u00dflauf habe ich ein Dossier gefunden, das Informationen \u00fcber eine Orkschmiedin enth\u00e4lt, die in der Glutsplittermine Waffen f\u00fcr Banditen herstellt."
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "type": "QUST CNAM",
+        "original": "At Embershard Mine, I found an Orc blacksmith forging weapons for bandits. I managed to eliminate her. I should check her body to see what else I can uncover.",
+        "string": "In der Glutsplittermine habe ich eine Orkschmiedin gefunden, die Waffen f\u00fcr Banditen herstellt. Ich konnte sie eliminieren. Ich sollte ihre Leiche untersuchen und sehen, was ich noch finden kann."
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "type": "QUST CNAM",
+        "original": "At Embershard Mine, I found an Orc blacksmith forging weapons for bandits. I managed to eliminate her and found a journal on her body.",
+        "string": "In der Glutsplittermine habe ich eine Orkschmiedin gefunden, die Waffen f\u00fcr Banditen herstellt. Ich konnte sie eliminieren und habe bei ihrer Leiche ein Tagebuch gefunden."
+    }
+]

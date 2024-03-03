@@ -1,0 +1,164 @@
+[
+    {
+        "editor_id": "ccBGSSSE043_ElvenCrossbow",
+        "type": "WEAP FULL",
+        "original": "Elven Crossbow",
+        "string": "Ballesta \u00e9lfica"
+    },
+    {
+        "editor_id": "ccBGSSSE043_EbonyCrossbowEnhanced",
+        "type": "WEAP FULL",
+        "original": "Enhanced Ebony Crossbow",
+        "string": "Ballesta de \u00e9bano mejorada"
+    },
+    {
+        "editor_id": "ccBGSSSE043Interior01",
+        "type": "CELL FULL",
+        "original": "Ironback Hideout Cellar",
+        "string": "S\u00f3tano del escondite de Loma de Hierro"
+    },
+    {
+        "editor_id": "ccBGSSSE043_VampireHunterQuest",
+        "type": "QUST FULL",
+        "original": "Night Hunter",
+        "string": "Cazador nocturno"
+    },
+    {
+        "editor_id": "ccBGSSSE043_BarredDoor",
+        "type": "DOOR FULL",
+        "original": "Barred Door",
+        "string": "Puerta enrejada"
+    },
+    {
+        "editor_id": "ccBGSSSE043_FarmBTrapdoor01",
+        "type": "DOOR FULL",
+        "original": "Trapdoor",
+        "string": "Trampilla"
+    },
+    {
+        "editor_id": "ccBGSSSE043_VampireHunterQuest",
+        "type": "QUST NNAM",
+        "original": "Investigate rumors of a lone vampire hunter",
+        "string": "Investiga los rumores de un cazador de vampiros solitario."
+    },
+    {
+        "editor_id": "ccBGSSSE043_KragrashBodyContainer3",
+        "type": "CONT FULL",
+        "original": "Burnt Corpse",
+        "string": "Mont\u00f3n de cenizas"
+    },
+    {
+        "editor_id": "ccBGSSSE043_VampireHunterQuest",
+        "type": "QUST NNAM",
+        "original": "Find the vampire hunter's final resting place",
+        "string": "Encuentra el lugar de descanso final del cazador de vampiros."
+    },
+    {
+        "editor_id": "ccBGSSSE043_VampireHunterQuest",
+        "type": "QUST NNAM",
+        "original": "Search the remains",
+        "string": "Busca entre los restos."
+    },
+    {
+        "editor_id": "ccBGSSSE043_VampireHunterQuest",
+        "type": "QUST NNAM",
+        "original": "Enter Ironback Hideout Cellar",
+        "string": "Entra en el s\u00f3tano del escondite de Loma de Hierro."
+    },
+    {
+        "editor_id": "ccBGSSSE043_FarmBTrapdoor02",
+        "type": "DOOR FULL",
+        "original": "Trapdoor",
+        "string": "Trampilla"
+    },
+    {
+        "editor_id": "ccBGSSSE043_EbonyCrossbow",
+        "type": "WEAP FULL",
+        "original": "Ebony Crossbow",
+        "string": "Ballesta de \u00e9bano"
+    },
+    {
+        "editor_id": "ccBGSSSE043_TrapDoorKey",
+        "type": "KEYM FULL",
+        "original": "Ironback Hideout Cellar Key",
+        "string": "Llave del s\u00f3tano del escondite de Loma de Hierro"
+    },
+    {
+        "editor_id": "ccBGSSSE043_VampireHunterJournal",
+        "type": "BOOK FULL",
+        "original": "Kragrash's Letter",
+        "string": "Carta de Kragrash"
+    },
+    {
+        "editor_id": "ccBGSSSE043_ElvenCrossbowEnhanced",
+        "type": "WEAP FULL",
+        "original": "Enhanced Elven Crossbow",
+        "string": "Ballesta \u00e9lfica mejorada"
+    },
+    {
+        "editor_id": "ccBGSSSE043_EbonyCrossbowEnhanced",
+        "type": "WEAP DESC",
+        "original": "Attacks with this crossbow ignore 50% of armor.",
+        "string": "Los ataques con esta ballesta ignoran el 50% de la armadura."
+    },
+    {
+        "editor_id": "ccBGSSSE043_VampireHunterQuest",
+        "type": "QUST CNAM",
+        "original": "I've found what appears to be Kragrash's remains. I should search for the cellar key mentioned in his letter.",
+        "string": "He encontrado lo que parecen ser los restos de Kragrash. Deber\u00eda buscar la llave del s\u00f3tano que mencionaba en su carta."
+    },
+    {
+        "editor_id": "ccBGSSSE043_VampireHunterQuest",
+        "type": "QUST CNAM",
+        "original": "I've heard rumors of a vampire hunter that patrols the mountains west of Solitude near Ironback Hideout. I should keep an eye out if I find myself in the area.",
+        "string": "He o\u00eddo rumores sobre un cazador de vampiros que patrulla por las monta\u00f1as que hay al oeste de Soledad. Podr\u00eda ser un aliado competente. Deber\u00eda ir en su busca."
+    },
+    {
+        "editor_id": "ccBGSSSE043_VampireHunterQuest",
+        "type": "QUST CNAM",
+        "original": "I've stumbled upon a strange set of remains: a crossbow, dwarven oil, and a burnt corpse. Juding by the crossbow, this may have been the vampire hunter I've heard rumors about. I should search the area.",
+        "string": "Me he topado con unos restos extra\u00f1os: una trampa para osos, una ballesta, un mont\u00f3n de cenizas de lo que antes fue una persona. A juzgar por la ballesta, puede que se trate del cazador de vampiros sobre el que he o\u00eddo hablar. Deber\u00eda inspeccionar la zona."
+    },
+    {
+        "editor_id": "ccBGSSSE043_VampireHunterJournal",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>\nTo whomever finds this letter, hear my story.\n\nMy name is Kragrash. I have been a hunter in these parts for the last six years. Once a week, I travel to Solitude to sell meat and skins. \n\nOn one such trip I spotted a collapsed figure by the roadside, slumped up against a log. I quickly realized that this was Enthiris, a kind soul I would trade and travel with each winter.\n\nHis skin was white as a sheet. His sunken face and bite marks on his neck and arms made it clear that this was the work of vampires. Enthiris never deserved such a fate.\n\nI carried him to Solitude to raise the city guard. When I arrived, they acted with indifference as cold as the corpse I laid before them. They had seen this before, they said. They offered to bury him, but their interest in the matter ended there. It was then I decided that, at night, I would begin to hunt more dangerous game.\n\nI have slain over a dozen of the fanged wretches in the months since. In fact, I'd become quite proficient at the task.\n\nUntil one night, I found a lone vampire prowling the woods. He stopped to rest, seemingly unable to catch his breath. Whether it was from thirst or exhaustion, I couldn't be sure. Still, such monsters deserve no pity. So I hid in the brush nearby, drew my crossbow, and lined up the killing shot.\n\nSuddenly, two of the devils pounced from both sides, clawing and biting. I had been led into a trap.\n\nI managed to escape, but my wounds were grave. Worse, I knew from the burning in my veins that I now had the illness that would soon consume me, turn me into one of them.\n\nSo now, on what should be my final day as a mortal, I pen this letter, and walk to my favorite overlook south of the Thalmor Embassy to watch the morning sunrise one last time.\n\nI now pass the torch to you, dear reader. Seek out my remains. Among my effects you should find a key. Open my cellar and take up arms I have stored there. Use them to keep travelers safe from the vampire menace as I once did.\n</font>\n\n",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\nQuienquiera que encuentre esta carta, que escuche mi historia.\n\nMe llamo Kragrash. Llevo seis a\u00f1os cazando en este territorio. Una vez a la semana, viajo a Soledad para vender la carne y las pieles. \n\nEn uno de esos trayectos, encontr\u00e9 a un viajero junto al camino, desplomado contra un tronco. Ten\u00eda la piel tan blanca como una s\u00e1bana. Su rostro hundido y las marcas de mordeduras en el cuello y los brazos dejaban claro que aquello era obra de vampiros.\n\nLe llev\u00e9 a Soledad para reunir a la guardia de la ciudad. Cuando llegu\u00e9, actuaron con una indiferencia tan fr\u00eda como el cuerpo que tend\u00ed frente a ellos. Dijeron que ya hab\u00edan visto eso antes. Se ofrecieron a enterrarle, pero all\u00ed acababa su inter\u00e9s en el asunto. Fue entonces cuando decid\u00ed que, de noche, cazar\u00eda presas m\u00e1s peligrosas.\n\nEn los meses transcurridos desde entonces, acab\u00e9 con m\u00e1s de una docena de esos miserables con colmillos. De hecho, llegu\u00e9 a ser bastante eficiente.\n\nHasta que una noche, encontr\u00e9 a un vampiro que merodeaba por los bosques. Se detuvo a descansar, y parec\u00eda no poder recuperar el aliento. Si era por sed o agotamiento, no pod\u00eda estar seguro. Aun as\u00ed, tales monstruos no merecen compasi\u00f3n. De modo que me escond\u00ed entre la maleza que hab\u00eda cerca, tens\u00e9 la ballesta y apunt\u00e9 para conseguir el tiro mortal.\n\nDe repente, dos de esos diablos me atacaron desde ambos lados, ara\u00f1\u00e1ndome y mordi\u00e9ndome. Me hab\u00edan tendido una trampa.\n\nConsegu\u00ed escapar, pero estaba herido de gravedad. Y lo que era peor, sab\u00eda por la quemaz\u00f3n que sent\u00eda en las venas que ahora padec\u00eda la enfermedad que pronto me consumir\u00eda y me convertir\u00eda en uno de ellos.\n\nAs\u00ed que ahora, en el que deber\u00eda ser mi \u00faltimo d\u00eda, escribo esta carta y luego me dirigir\u00e9 a mi atalaya favorita, al sur de la embajada de Thalmor, para contemplar el amanecer. Me llevar\u00e9 una de mis trampas para osos, con la que me atrapar\u00e9 la pierna, porque ya no conf\u00edo en poder evitar convertirme y huir despu\u00e9s. Espero que el sol acabe conmigo r\u00e1pidamente. Me siento afortunado de poder ver un \u00faltimo amanecer.\n\nAhora te paso la antorcha, querido lector. Busca mis restos. Entre mis pertenencias, deber\u00edas encontrar una llave. Abre mi s\u00f3tano y ll\u00e9vate las armas que he guardado all\u00ed. \u00dasalas para mantener a salvo a los viajeros de la amenaza de los vampiros, tal y como hice yo.\n</font>\n\n"
+    },
+    {
+        "editor_id": "ccBGSSSE043_VampireHunterQuest",
+        "type": "QUST CNAM",
+        "original": "I've gained access to the vampire hunter's cellar, which contains all of his former equipment.",
+        "string": "He conseguido acceder al s\u00f3tano del cazador de vampiros, que conten\u00eda su antiguo equipo."
+    },
+    {
+        "editor_id": "ccBGSSSE043_VampireHunterQuest",
+        "type": "QUST CNAM",
+        "original": "I've gained access to Kragrash's cellar, which contains all of his former vampire hunting equipment.",
+        "string": "He conseguido acceder al s\u00f3tano del Kragrash, que conten\u00eda su antiguo equipo para cazar vampiros."
+    },
+    {
+        "editor_id": "ccBGSSSE043_VampireHunterQuest",
+        "type": "QUST CNAM",
+        "original": "I've found what appears to be the key to a cellar in Ironback Hideout on the vampire hunter's remains. I should go there and investigate.",
+        "string": "Entre los restos del cazador de vampiros he encontrado lo que parece ser la llave de un s\u00f3tano en el escondite de Loma de Hierro. Deber\u00eda ir a investigar."
+    },
+    {
+        "editor_id": "ccBGSSSE043_VampireHunterQuest",
+        "type": "QUST CNAM",
+        "original": "I've found the key to Kragrash's cellar. I should return to Ironback Hideout and investigate.",
+        "string": "He encontrado la llave del s\u00f3tano de Kragrash. Deber\u00eda regresar al escondite de Loma de Hierro para investigar."
+    },
+    {
+        "editor_id": "ccBGSSSE043_ElvenCrossbowEnhanced",
+        "type": "WEAP DESC",
+        "original": "Attacks with this crossbow ignore 50% of armor.",
+        "string": "Los ataques con esta ballesta ignoran el 50% de la armadura."
+    },
+    {
+        "editor_id": "ccBGSSSE043_VampireHunterQuest",
+        "type": "QUST CNAM",
+        "original": "I found a letter penned by Kragrash, the vampire hunter. While out on a hunt, he was wounded and contracted vampirism. On the day he would become a vampire, he went into the mountains to watch a final sunrise. He left his equipment in his cellar, which remains locked. The letter promised a key to his cellar should be among his remains.",
+        "string": "He encontrado una carta escrita por Kragrash, el cazador de vampiros. En una salida de caza, result\u00f3 herido y contrajo el vampirismo. El d\u00eda que se iba a convertir en vampiro, fue a las monta\u00f1as para disfrutar de un \u00faltimo amanecer. Dej\u00f3 su equipo en el s\u00f3tano, que sigue cerrado. La carta promet\u00eda que entre sus restos encontrar\u00eda la llave del s\u00f3tano."
+    }
+]

@@ -1,0 +1,134 @@
+[
+    {
+        "editor_id": "ccBGSSSE060_ArmorDragonscaleCuirass",
+        "type": "ARMO FULL",
+        "original": "Studded Dragonscale Armor",
+        "string": "\u0106wiekowany smoczy \u0142uskowy pancerz"
+    },
+    {
+        "editor_id": "ccBGSSSE060_ArmorDragonscaleBoots",
+        "type": "ARMO FULL",
+        "original": "Studded Dragonscale Boots",
+        "string": "\u0106wiekowane smocze \u0142uskowe buty"
+    },
+    {
+        "editor_id": "ccBGSSSE060_ArmorDragonscaleGauntlets",
+        "type": "ARMO FULL",
+        "original": "Studded Dragonscale Gauntlets",
+        "string": "\u0106wiekowane smocze \u0142uskowe r\u0119kawice"
+    },
+    {
+        "editor_id": "ccBGSSSE060_ArmorDragonscaleHelmet",
+        "type": "ARMO FULL",
+        "original": "Studded Dragonscale Helmet",
+        "string": "\u0106wiekowany smoczy \u0142uskowy he\u0142m"
+    },
+    {
+        "editor_id": "ccBGSSSE060_MiscQuest",
+        "type": "QUST NNAM",
+        "original": "Read the book at Candlehearth Hall",
+        "string": "Przeczytaj ksi\u0119g\u0119 w Gospodzie pod Knotem"
+    },
+    {
+        "editor_id": "ccBGSSSE060_Quest",
+        "type": "QUST NNAM",
+        "original": "Defeat the skeleton warrior",
+        "string": "Pokonaj szkieletowego wojownika"
+    },
+    {
+        "editor_id": "ccBGSSSE060_Quest",
+        "type": "QUST NNAM",
+        "original": "Retrieve the armor",
+        "string": "Zabierz pancerz"
+    },
+    {
+        "editor_id": "ccBGSSSE060_Bookv4",
+        "type": "BOOK FULL",
+        "original": "The Crimson Dirks, v4",
+        "string": "Szkar\u0142atne Sztylety, w4"
+    },
+    {
+        "editor_id": "ccBGSSSE060_Ulfnir",
+        "type": "NPC_ FULL",
+        "original": "Ulfnir Bone-Skin",
+        "string": "Ulfnir Ko\u015bciosk\u00f3rny"
+    },
+    {
+        "editor_id": "ccBGSSSE060_Key",
+        "type": "KEYM FULL",
+        "original": "Overlook Key",
+        "string": "Klucz do punktu widokowego"
+    },
+    {
+        "editor_id": "ccBGSSSE060_Quest",
+        "type": "QUST NNAM",
+        "original": "Pick up the Overlook Key",
+        "string": "We\u017a klucz do punktu widokowego"
+    },
+    {
+        "editor_id": "ccBGSSSE060_LovePoemforZaharia",
+        "type": "BOOK FULL",
+        "original": "Poem for Zaharia",
+        "string": "Wiersz dla Zaharii"
+    },
+    {
+        "editor_id": "ccBGSSSE060_Quest",
+        "type": "QUST FULL",
+        "original": "Tilted Scales",
+        "string": "Nachylone \u0142uski"
+    },
+    {
+        "editor_id": "ccBGSSSE060_Quest",
+        "type": "QUST NNAM",
+        "original": "Investigate Yorgrim's Overlook",
+        "string": "Zbadaj punkt widokowy w Yorgrim"
+    },
+    {
+        "editor_id": "WindhelmCandlehearthHall",
+        "type": "CELL FULL",
+        "original": "Candlehearth Hall",
+        "string": "Gospoda pod Knotem"
+    },
+    {
+        "editor_id": "ccBGSSSE060_Quest",
+        "type": "QUST CNAM",
+        "original": "At Candlehearth Hall in Windhelm, I found a book that mentioned a set of valuable armor may have been stashed away at Yorgrim's Overlook. Upon reaching the overlook I was attacked by an armed skeleton. I defeated the undead creature and retrieved his armor from a nearby chest.",
+        "string": "W Gospodzie pod Knotem w Wichrowym Tronie znajdowa\u0142a si\u0119 ksi\u0119ga, wspominaj\u0105ca o zestawie cennego pancerza, kt\u00f3ry zosta\u0142 zabrany z punktu widokowego w Yorgrim. Po dotarciu na miejsce, zaatakowa\u0142 mnie uzbrojony szkielet. Uda\u0142o mi si\u0119 pokona\u0107 t\u0119 nieumar\u0142\u0105 istot\u0119 i zabra\u0107 pancerz z pobliskiej skrzyni."
+    },
+    {
+        "editor_id": "ccBGSSSE060_Quest",
+        "type": "QUST CNAM",
+        "original": "At Candlehearth Hall in Windhelm, I found a book that mentioned a set of valuable armor may have been stashed away at Yorgrim's Overlook. Upon reaching the overlook I was attacked by an armed skeleton.",
+        "string": "W Gospodzie pod Knotem w Wichrowym Tronie znajdowa\u0142a si\u0119 ksi\u0119ga, wspominaj\u0105ca o zestawie cennego pancerza, kt\u00f3ry zosta\u0142 zabrany z punktu widokowego w Yorgrim. Po dotarciu na miejsce, zaatakowa\u0142 mnie uzbrojony szkielet."
+    },
+    {
+        "editor_id": "ccBGSSSE060_LovePoemforZaharia",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"17\">\nZaharia, my desert flower\nYou are the seed from which love sprouts\nI would break the Green Pact itself\nto pluck you from the ground\n\nOh Zaharia, your very name is a spell\nthat burns hotter than dragon fire\nThus I bring you this armor of scales\nso that I may stand inside your flame\n</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"17\">\nZahario, m\u00f3j kwiecie pustyni,\nTy\u015b ziarnem, z kt\u00f3rego wyrasta mi\u0142o\u015b\u0107.\nZ\u0142ama\u0142bym sam Zielony Pakt\nby zerwa\u0107 ci\u0119 z ziemi.\n\nOch, Zahario, samo twe imi\u0119 jest zakl\u0119ciem,\nco p\u0142onie gor\u0119cej ni\u017c smoczy oddech.\nJa za\u015b przynios\u0119 ci smocz\u0105 \u0142usk\u0119,\nbym m\u00f3g\u0142 sta\u0107 w twym p\u0142omieniu.\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE060_Quest",
+        "type": "QUST CNAM",
+        "original": "At Candlehearth Hall in Windhelm, I found a book that mentioned a set of valuable armor may have been stashed away at Yorgrim's Overlook. Upon reaching the overlook I was attacked by an armed skeleton. I defeated the undead creature and found a key on his body.",
+        "string": "W Gospodzie pod Knotem w Wichrowym Tronie znajdowa\u0142a si\u0119 ksi\u0119ga, wspominaj\u0105ca o zestawie cennego pancerza, kt\u00f3ry zosta\u0142 zabrany z punktu widokowego w Yorgrim. Po dotarciu na miejsce, zaatakowa\u0142 mnie uzbrojony szkielet. Uda\u0142o mi si\u0119 pokona\u0107 t\u0119 nieumar\u0142\u0105 istot\u0119 - przy jej ciele znajdowa\u0142 si\u0119 klucz."
+    },
+    {
+        "editor_id": "ccBGSSSE060_Quest",
+        "type": "QUST CNAM",
+        "original": "At Candlehearth Hall in Windhelm, I found a book that mentioned a set of valuable armor may have been stashed away at Yorgrim's Overlook. I should head to the barrow and see what I can uncover.",
+        "string": "W Gospodzie pod Knotem w Wichrowym Tronie znajdowa\u0142a si\u0119 ksi\u0119ga, wspominaj\u0105ca o zestawie cennego pancerza, kt\u00f3ry zosta\u0142 zabrany z punktu widokowego w Yorgrim. Musz\u0119 rusza\u0107 do kurhanu i sprawdzi\u0107, co si\u0119 tam dzieje."
+    },
+    {
+        "editor_id": "ccBGSSSE060_Quest",
+        "type": "QUST CNAM",
+        "original": "At Candlehearth Hall in Windhelm, I found a book that mentioned a set of valuable armor may have been stashed away at Yorgrim's Overlook. Upon reaching the overlook I was attacked by an armed skeleton. I defeated the undead creature and can now investigate the area for the armor.",
+        "string": "W Gospodzie pod Knotem w Wichrowym Tronie znajdowa\u0142a si\u0119 ksi\u0119ga, wspominaj\u0105ca o zestawie cennego pancerza, kt\u00f3ry zosta\u0142 zabrany z punktu widokowego w Yorgrim. Po dotarciu na miejsce, zaatakowa\u0142 mnie uzbrojony szkielet. Uda\u0142o mi si\u0119 pokona\u0107 t\u0119 nieumar\u0142\u0105 istot\u0119 - musz\u0119 teraz przeszuka\u0107 okolic\u0119 i sprawdzi\u0107, czy gdzie\u015b nie ma pancerza."
+    },
+    {
+        "editor_id": "ccBGSSSE060_Bookv4",
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\n<p align=\"center\">\n\n\nThe Crimson Dirks\nBook Four\n\n\nby \nGathers-the-Coin\n</p>\n\n\n\n[pagebreak]\n<p align=\"left\">\n<img src='img://Textures/Interface/Books/Illuminated_Letters/T_letter.png'>he tavern fell into silence. Casival squinted at the young Bosmer, trying to get a read on his mood. Just hours earlier the lad had embarked on the biggest quest of his life, the kind of endeavor that turns squires into warriors, boys into men.\n\n\"Well, what did she say?\" he asked the young bandit.\n\n\"She said she would only wed me,\" Fathrys said, \"if I brought her the scale of a dragon.\"\n\nThe tavern burst into laughter, patrons smacking their tankards against the wood.\n\n\"What?\" Fathrys replied, clearly confused, \"What's so funny?\"\n\n\"I'm sorry lad,\" said Casival, \"but I think that's her way of saying 'No.'\"\n\nFathrys was crestfallen. It had taken nearly all of his courage to confess his love to Zaharia. What meager defenses remained in his youthful frame, Casival could not guess, but they stood little chance against this latest assault. In fact, with each passing second Fathrys' shoulders slumped further and further into his chest, until he was more Guar than man. Taking pity, Casival decided to massage the boy's ego with a tale of his first rejection, when a familiar voice croaked at the pair from across the room.\n\n\"A dragon scale, you say?\" \n\nNot a soul had realized Antonius was in the tavern, mostly because the bandit mage was a permanent fixture. From dusk to dawn he teetered upon his wobbly chair, drinking all manner of spirits by his lonesome. Over time he began to blend into the scenery, like an odor that only strangers could smell.\n\n\"By the Nine, do you know where I can find one?\" Fathrys beamed with shoulders out, his once gloomy face resurrected with life.\n\n\"I'm a wizard, am I not?\" Antonius said, before letting out a dignified belch.\n\n\"A bandit wizard,\" Casival interjected, \"and with all due respect to you and your profession, I don't think you're helping.\"\n\n\"Nonsense, Casival,\" scolded the mage, nearly tripping over his own feet as he sat at the table, \"The boy needs a dragon scale, and I aim to help him find one.\"\n\n\"But the dragons have been extinct for centuries upon centuries,\" Casival said.\n\n\"You really are a bad student,\" scoffed Antonius, jabbing his finger into the Dunmer's forehead, \"this is why Tyra favors Edward over you. At least he pays attention.\"\n\n\"Forgive me, mage.\"\n\n\"Only the Divines can forgive you, my son. Drink this bottle, and it'll take you to them.\"\n\n\"What about the dragon scale?\" Fathrys whined, growing impatient.\n\n\"Oh right, that. Well, it just so happens, there's an old Nord legend about a warrior named Ulfnir Bone-Skin,\" Antonius explained, flecks of spit flying out of his mouth, \"who slew the serpent wyrm Vithrelnaak and fashioned a powerful armor from his scales. When he died, instead of giving his armor away to his ungrateful pupils, he did what any self-respecting warrior would do, and buried himself with it.\"\n\n\"Well, that's too bad,\" said Casival, hoping to derail this runaway carriage, \"surely it would've been emptied out by grave robbers by now.\"\n\n\"You would think,\" Antonius screamed, raising his voice for no reason, \"but they say Ulfnir's corpse haunts the barrow near Yorgrim's Overlook, and kills anyone who dares try and take his armor.\"\n\n\"I see! So it's a challenge!\" Fathrys exclaimed, \"In order to wear Ulfnir's armor, one must first best him as a warrior!\"\n\n\"Either that, or he just doesn't want some random stranger wearing his clothes. How would you feel if I showed up to your home wearing your undergarments? But yes, you kill Ulfnir, you get your dragon scale. You get your dragon scale, and you get your wench.\"\n\n\"She's not a wench. She's the most amazing woman in all of Mundus, and I'm going to marry her!\"\n\n\"Sure, whatever.\"\n\nCasival breathed a deep sigh as Fathrys' heart grew ill with hope. The only saving grace was that Windhelm was thousands of leagues away, and Fathrys was still a pup. Perhaps when he was ready for the work, a word or two with Tyra could send him further away still. Yet whatever remedy he devised would be temporary. He had seen that look too many times to deny what would come next.\n\nA fortnight later, Casival returned to the tavern. It was the same as it ever was, for the most part. The wenches tended to the patrons, and the patrons to their stress. The bards sang tales old and new, and the drunkards, not knowing the lyrics, still saw fit to join them. Antonius was perched in the corner as always, a bottle in each hand and several more on the ground. \n\nIt was like any other Fredas, save for the empty seat beside him. \n\nHe would break the news to Tyra in the morning. The Bosmer would not return.</p>\n",
+        "string": "[pagebreak]\n<p align=\"center\">\n\n\nSzkar\u0142atne Sztylety\nKsi\u0119ga Czwarta\n\n\nautorstwa \nGathersa-Monety\n</p>\n\n\n\n[pagebreak]\n<p align=\"left\">\n<img src='img://Textures/Interface/Books/Illuminated_Letters/W_letter.png'> gospodzie zapanowa\u0142a cisza. Casival zerkn\u0105\u0142 na m\u0142odego bosmera, pr\u00f3buj\u0105c odczyta\u0107 jego nastr\u00f3j. Kilka godzin wcze\u015bniej, ch\u0142opak wyruszy\u0142 na najwi\u0119ksz\u0105 wypraw\u0119 swego \u017cycia, tak\u0105 kt\u00f3ra zmienia giermk\u00f3w w wojownik\u00f3w, a ch\u0142opc\u00f3w w m\u0119\u017cczyzn.\n\n\u201eNo i? I co powiedzia\u0142a?\u201d zapyta\u0142 m\u0142odego bandyt\u0119.\n\n\u201eRzek\u0142a, \u017ce wyjdzie za mnie tylko wtedy,\u201d stwierdzi\u0142 Fathrys \u201egdy przynios\u0119 jej smocz\u0105 \u0142usk\u0119\u201d.\n\nCa\u0142a gospoda wybuch\u0142a \u015bmiechem. Bywalcy zacz\u0119li uderza\u0107 kuflami o drewno.\n\n\u201eNo co?\u201d zapyta\u0142 Fathrys, najwyra\u017aniej zmieszany. \u201eCo was tak \u015bmieszy?\u201d\n\n\u201ePrzykro mi, ch\u0142opcze\u201d powiedzia\u0142 Casival. \u201eAle to chyba by\u0142a odmowa\u201d.\n\nFathrys by\u0142 zdruzgotany. Musia\u0142 si\u0119 wspi\u0105\u0107 na wy\u017cyny swej odwagi, aby wyzna\u0107 mi\u0142o\u015b\u0107 Zaharii. Casival nie umia\u0142 zgadn\u0105\u0107, ile samozaparcia tkwi\u0142o jeszcze w jego m\u0142odzie\u0144czej duszy, ale po tym ataku nie mia\u0142 ju\u017c praktycznie \u017cadnych szans. Prawd\u0119 m\u00f3wi\u0105c, z ka\u017cd\u0105 mijaj\u0105c\u0105 sekund\u0105 ramiona Fathrysa zapada\u0142y si\u0119 coraz bardziej, a\u017c sta\u0142 si\u0119 bardziej guarem ni\u017c cz\u0142owiekiem. Casivalowi zrobi\u0142o si\u0119 go \u017cal i postanowi\u0142 podnie\u015b\u0107 ch\u0142opaka na duchu opowie\u015bci\u0105 o swoim pierwszym odrzuceniu. Jednak w tym momencie z drugiego ko\u0144ca sali dobieg\u0142 go znajomy g\u0142os.\n\n\u201eSmocza \u0142uska, powiadasz?\u201d \n\nNikt nie zdawa\u0142 sobie sprawy, \u017ce w gospodzie jest Antonius, pewnie dlatego, \u017ce ten bandycki mag by\u0142 tu zawsze. Od zmierzchu do \u015bwitu buja\u0142 si\u0119 na krze\u015ble i w samotno\u015bci pi\u0142 r\u00f3\u017cnego rodzaju alkohole. Z czasem wtopi\u0142 si\u0119 w sceneri\u0119, niczym od\u00f3r, kt\u00f3ry wyczuwali ju\u017c tylko nowoprzybyli.\n\n\u201eNa dziewi\u0119\u0107 b\u00f3stw, czy wiesz gdzie mog\u0119 j\u0105 znale\u017a\u0107?\u201d Fathrys zn\u00f3w si\u0119 wyprostowa\u0142, a jego ponura twarz o\u017cywi\u0142a si\u0119.\n\n\u201eJestem czarodziejem, czy\u017c nie?\u201d powiedzia\u0142 Antonius i zdrowo sobie bekn\u0105\u0142.\n\n\u201eBandyt\u0105 czarodziejem\u201d wtr\u0105ci\u0142 si\u0119 Casival. \u201eI z ca\u0142ym szacunkiem dla ciebie i twojej profesji, chyba mu nie pomagasz\u201d.\n\n\u201eNonsens, Casivalu\u201d zruga\u0142 go mag, niemal potykaj\u0105c si\u0119 o w\u0142asne stopy podczas siadania przy stole. \u201eCh\u0142opak potrzebuje smoczej \u0142uski i ja zamierzam mu pom\u00f3c w odnalezieniu jej\u201d.\n\n\u201eAle przecie\u017c smoki wygin\u0119\u0142y wiele wiek\u00f3w temu\u201d powiedzia\u0142 Casival.\n\n\u201eKiepski z ciebie ucze\u0144\u201d zbeszta\u0142 go Antonius, d\u017agaj\u0105c przy okazji dunmera w czo\u0142o. \u201eTo w\u0142a\u015bnie dlatego Tyra woli Edwarda. On przynajmniej s\u0142ucha\u201d.\n\n\u201eWybacz mi, magu\u201d.\n\n\u201eTylko bogowie mog\u0105 ci wybaczy\u0107, m\u00f3j synu. Poci\u0105gnij z tej butelki, a zabior\u0119 ci\u0119 do nich\u201d.\n\n\u201eA co ze smocz\u0105 \u0142usk\u0105?\u201d zaj\u0119cza\u0142 Fathrys, coraz bardziej niecierpliwy.\n\n\u201eAha, to. C\u00f3\u017c, tak si\u0119 sk\u0142ada, \u017ce istnieje stara norska legenda o wojowniku imieniem Ulfnir Ko\u015bciosk\u00f3rny\u201d wyja\u015bni\u0142 Antonius, przy okazji pluj\u0105c na wszystkich wok\u00f3\u0142. \u201eUlfnir zg\u0142adzi\u0142 w\u0119\u017cowego smoka Vithrelnaaka, a z jego \u0142usek wyku\u0142 pot\u0119\u017cny pancerz. Po \u015bmierci, zamiast przekaza\u0107 go swoim niewdzi\u0119cznym uczniom, Ulfnir zrobi\u0142 to, co zrobi\u0142by na jego miejscu ka\u017cdy szanuj\u0105cy si\u0119 wojownik. Czyli kaza\u0142 si\u0119 w nim pochowa\u0107\u201d.\n\n\u201eA to pech\u201d wtr\u0105ci\u0142 si\u0119 Casival, pr\u00f3buj\u0105c powstrzyma\u0107 Antoniusa, zanim b\u0119dzie za p\u00f3\u017ano. \u201eZ ca\u0142\u0105 pewno\u015bci\u0105 zrabowa\u0142y go ju\u017c cmentarne hieny\u201d.\n\n\u201eMo\u017cna by\u0142oby si\u0119 tego spodziewa\u0107\u201d krzykn\u0105\u0142 Antonius, podnosz\u0105c g\u0142os bez powodu. \u201eAle m\u00f3wi\u0105, \u017ce trup Ulfnira nawiedza kurhan przy Punkcie Widokowym Yorgrima i zabija ka\u017cdego, kto odwa\u017cy si\u0119 podnie\u015b\u0107 r\u0119k\u0119 na jego pancerz\u201d.\n\n\u201eRozumiem! A wi\u0119c czeka mnie wyzwanie!\u201d zakrzykn\u0105\u0142 Fathrys. \u201eAby m\u00f3c za\u0142o\u017cy\u0107 pancerz Ulfnira, trzeba go najpierw pokona\u0107!\u201d\n\n\u201eBy\u0107 mo\u017ce. A mo\u017ce on po prostu nie chce, \u017ceby jaki\u015b losowy nieznajomy paradowa\u0142 w jego stroju. Jak ty by\u015b si\u0119 czu\u0142, gdybym ja pojawi\u0142 si\u0119 w twoim domu i pr\u00f3bowa\u0142 za\u0142o\u017cy\u0107 twoj\u0105 bielizn\u0119? No ale tak, je\u015bli zabijesz Ulfnira, zdob\u0119dziesz smocz\u0105 \u0142usk\u0119. A je\u015bli zdob\u0119dziesz smocz\u0105 \u0142usk\u0119, zdob\u0119dziesz te\u017c swoj\u0105 dzierlatk\u0119\u201d.\n\n\u201eOna nie jest dzierlatk\u0105. To najwspanialsza kobieta w ca\u0142ym Mundus i zamierzam j\u0105 po\u015blubi\u0107!\u201d\n\n\u201eJasne, jak tam sobie chcesz\u201d.\n\nCasival g\u0142\u0119boko westchn\u0105\u0142, widz\u0105c jak serce Fathrysa przepe\u0142nia pr\u00f3\u017cna nadzieja. Jedyn\u0105 pociech\u0105 by\u0142 fakt, \u017ce Wichrowy Tron le\u017ca\u0142 tysi\u0105ce lig stamt\u0105d, a Fathrys wci\u0105\u017c mia\u0142 mleko pod nosem. Mo\u017ce gdyby by\u0142 got\u00f3w do pracy, Casival zamieni\u0142by s\u0142\u00f3wko z Tyr\u0105, aby ta odes\u0142a\u0142a ch\u0142opaka jeszcze dalej. Ale ka\u017cde rozwi\u0105zanie, kt\u00f3re przychodzi\u0142o mu do g\u0142owy by\u0142o tymczasowe. Zbyt wiele razy to widzia\u0142, aby zaprzecza\u0107 temu, co mia\u0142o sta\u0107 si\u0119 teraz.\n\nDwa tygodnie p\u00f3\u017aniej Casival wr\u00f3ci\u0142 do gospody. W wi\u0119kszo\u015bci by\u0142o tam jak zawsze - dziewki us\u0142ugiwa\u0142y bywalcom, a bywalcy si\u0119 zapominali o stresie. Bardowie \u015bpiewali pie\u015bni stare i nowe, a pijacy, cho\u0107 nie znali s\u0142\u00f3w, i tak im wt\u00f3rowali. Antonius jak zwykle tkwi\u0142 w rogu - w obu r\u0119kach trzyma\u0142 butelki, a pod stopami mia\u0142 kilka kolejnych. \n\nBy\u0142o tu jak w ka\u017cde Fredas, opr\u00f3cz pustego miejsca obok niego. \n\nO poranku przekaza\u0142 wie\u015bci Tyrze. Bosmer nie wr\u00f3ci.</p>\n"
+    }
+]

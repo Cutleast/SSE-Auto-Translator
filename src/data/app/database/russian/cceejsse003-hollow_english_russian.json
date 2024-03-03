@@ -1,0 +1,896 @@
+[
+    {
+        "editor_id": "EEJSSE003_RubyClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemWhiteActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "EEJSSE003_GlassClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_ArmChair",
+        "type": "FURN FULL",
+        "original": "Armchair",
+        "string": "\u041a\u0440\u0435\u0441\u043b\u043e"
+    },
+    {
+        "editor_id": "ccEEJSSE003_NightingaleBowActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_Basket03",
+        "type": "MISC FULL",
+        "original": "Basket",
+        "string": "\u041a\u043e\u0440\u0437\u0438\u043d\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskNahkriinActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_GrimseverActivator",
+        "type": "ACTI FULL",
+        "original": "Grimsever",
+        "string": "\u041b\u044e\u0442\u044b\u0439"
+    },
+    {
+        "editor_id": "ccEEJSSE003_NightingaleBowActivator",
+        "type": "ACTI FULL",
+        "original": "Nightingale Bow",
+        "string": "\u0421\u043e\u043b\u043e\u0432\u044c\u0438\u043d\u044b\u0439 \u043b\u0443\u043a"
+    },
+    {
+        "editor_id": "ccEEJSSE003_ThiefHouseINTLocation",
+        "type": "LCTN FULL",
+        "original": "Shadowfoot Sanctum",
+        "string": "\u0421\u0432\u044f\u0442\u0438\u043b\u0438\u0449\u0435 \u0422\u0435\u043d\u0435\u0432\u0438\u043a\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE003_NightingaleBladeActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_Platter",
+        "type": "MISC FULL",
+        "original": "Platter",
+        "string": "\u0411\u043b\u044e\u0434\u043e"
+    },
+    {
+        "editor_id": "ccEEJSSE003_Smelter",
+        "type": "FURN FULL",
+        "original": "Smelter",
+        "string": "\u041f\u043b\u0430\u0432\u0438\u043b\u044c\u043d\u044f"
+    },
+    {
+        "editor_id": "ccEEJSSE003_ButterflyJarActivator",
+        "type": "ACTI FULL",
+        "original": "Butterfly in a Jar",
+        "string": "\u0411\u0430\u0431\u043e\u0447\u043a\u0430 \u0432 \u0431\u0430\u043d\u043a\u0435"
+    },
+    {
+        "editor_id": "ccEEJSSE003_Cabinet",
+        "type": "DOOR FULL",
+        "original": "Cabinet",
+        "string": "\u0428\u043a\u0430\u0444"
+    },
+    {
+        "editor_id": "ccEEJSSE003_TestItems",
+        "type": "CONT FULL",
+        "original": "Test Items",
+        "string": "\u0422\u0435\u0441\u0442\u043e\u0432\u044b\u0435 \u043f\u0440\u0435\u0434\u043c\u0435\u0442\u044b"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskHevnoraakActivator",
+        "type": "ACTI FULL",
+        "original": "Hevnoraak",
+        "string": "\u0425\u0435\u0432\u043d\u043e\u0440\u0430\u043a"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskShockActivator",
+        "type": "ACTI FULL",
+        "original": "Zahkriisos",
+        "string": "\u0417\u0430\u043a\u0440\u0438\u0441\u043e\u0448"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskHevnoraakActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BronzeJugLg",
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "\u041a\u0443\u0432\u0448\u0438\u043d"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskVokunActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BronzeCandleStick1Misc",
+        "type": "MISC FULL",
+        "original": "Candlestick",
+        "string": "\u041f\u043e\u0434\u0441\u0432\u0435\u0447\u043d\u0438\u043a"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskRahgotActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskKonahrikActivator",
+        "type": "ACTI FULL",
+        "original": "Konahrik",
+        "string": "\u041a\u043e\u043d\u0430\u0440\u0438\u043a"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskFireActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BronzeUrn",
+        "type": "MISC FULL",
+        "original": "Urn",
+        "string": "\u0423\u0440\u043d\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemWhiteActivator",
+        "type": "ACTI FULL",
+        "original": "Diamond Paragon",
+        "string": "\u0411\u0440\u0438\u043b\u043b\u0438\u0430\u043d\u0442\u043e\u0432\u044b\u0439 \u043f\u0430\u0440\u0430\u0433\u043e\u043d"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemredActivator",
+        "type": "ACTI FULL",
+        "original": "Ruby Paragon",
+        "string": "\u0420\u0443\u0431\u0438\u043d\u043e\u0432\u044b\u0439 \u043f\u0430\u0440\u0430\u0433\u043e\u043d"
+    },
+    {
+        "editor_id": "ccEEJSSE002_PitcherDUPLICATE001",
+        "type": "MISC FULL",
+        "original": "Jeweled Pitcher",
+        "string": "\u0414\u0440\u0430\u0433\u043e\u0446\u0435\u043d\u043d\u044b\u0439 \u043a\u0443\u0432\u0448\u0438\u043d"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskMorokeiActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_ModelShipActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskKrosisActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_MothJarActivator",
+        "type": "ACTI FULL",
+        "original": "Moth in a Jar",
+        "string": "\u041c\u043e\u0442\u044b\u043b\u0435\u043a \u0432 \u0431\u0430\u043d\u043a\u0435"
+    },
+    {
+        "editor_id": "EEJSSE003_SapphireClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemredActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_EESMapActivator",
+        "type": "ACTI FULL",
+        "original": "East Empire Shipping Map",
+        "string": "\u041c\u043e\u0440\u0441\u043a\u0430\u044f \u043a\u0430\u0440\u0442\u0430 \u0412\u043e\u0441\u0442\u043e\u0447\u043d\u043e\u0439 \u0438\u043c\u043f\u0435\u0440\u0441\u043a\u043e\u0439 \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0438"
+    },
+    {
+        "editor_id": "ccEEJSSE003_ModelShipActivator",
+        "type": "ACTI FULL",
+        "original": "Model Ship",
+        "string": "\u041c\u043e\u0434\u0435\u043b\u044c \u043a\u043e\u0440\u0430\u0431\u043b\u044f"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskFrostActivator",
+        "type": "ACTI FULL",
+        "original": "Dukaan",
+        "string": "\u0414\u0443\u043a\u0430\u043d"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskOtarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskKonahrikActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BronzeCandleStick2Misc",
+        "type": "MISC FULL",
+        "original": "Candlestick",
+        "string": "\u041f\u043e\u0434\u0441\u0432\u0435\u0447\u043d\u0438\u043a"
+    },
+    {
+        "editor_id": "ccEEJSSE003_SpiderControlRodActivator",
+        "type": "ACTI FULL",
+        "original": "Spider Control Rod",
+        "string": "\u0416\u0435\u0437\u043b \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u044f \u043f\u0430\u0443\u043a\u0430\u043c\u0438"
+    },
+    {
+        "editor_id": "EEJSSE003_IvoryClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_Bookcase",
+        "type": "CONT FULL",
+        "original": "Bookcase",
+        "string": "\u041a\u043d\u0438\u0436\u043d\u044b\u0439 \u0448\u043a\u0430\u0444"
+    },
+    {
+        "editor_id": "ccEEJSSE003_LargeChest",
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "\u0421\u0443\u043d\u0434\u0443\u043a"
+    },
+    {
+        "editor_id": "EEJSSE003_SapphireClawActivator",
+        "type": "ACTI FULL",
+        "original": "Sapphire Dragon Claw",
+        "string": "\u0421\u0430\u043f\u0444\u0438\u0440\u043e\u0432\u044b\u0439 \u0434\u0440\u0430\u043a\u043e\u043d\u0438\u0439 \u043a\u043e\u0433\u043e\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemBlueActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "EEJSSE003_RubyClawActivator",
+        "type": "ACTI FULL",
+        "original": "Ruby Dragon Claw",
+        "string": "\u0420\u0443\u0431\u0438\u043d\u043e\u0432\u044b\u0439 \u0434\u0440\u0430\u043a\u043e\u043d\u0438\u0439 \u043a\u043e\u0433\u043e\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskFireActivator",
+        "type": "ACTI FULL",
+        "original": "Ahzidal",
+        "string": "\u0410\u0437\u0438\u0434\u0430\u043b"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskVolsungActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskFrostActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_Pitcher",
+        "type": "MISC FULL",
+        "original": "Jeweled Pitcher",
+        "string": "\u0414\u0440\u0430\u0433\u043e\u0446\u0435\u043d\u043d\u044b\u0439 \u043a\u0443\u0432\u0448\u0438\u043d"
+    },
+    {
+        "editor_id": "EEJSSE003_GoldenClawActivator",
+        "type": "ACTI FULL",
+        "original": "Golden Dragon Claw",
+        "string": "\u0417\u043e\u043b\u043e\u0442\u043e\u0439 \u0434\u0440\u0430\u043a\u043e\u043d\u0438\u0439 \u043a\u043e\u0433\u043e\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BronzeJug",
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "\u041a\u0443\u0432\u0448\u0438\u043d"
+    },
+    {
+        "editor_id": "EEJSSE003_CoralClawActivator",
+        "type": "ACTI FULL",
+        "original": "Coral Dragon Claw",
+        "string": "\u041a\u043e\u0440\u0430\u043b\u043b\u043e\u0432\u044b\u0439 \u0434\u0440\u0430\u043a\u043e\u043d\u0438\u0439 \u043a\u043e\u0433\u043e\u0442\u044c"
+    },
+    {
+        "editor_id": "EEJSSE003_EbonyClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_MiscSackLargeFlat03",
+        "type": "CONT FULL",
+        "original": "Large Sack",
+        "string": "\u0411\u043e\u043b\u044c\u0448\u043e\u0439 \u043c\u0435\u0448\u043e\u043a"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DragonflyJarActivator",
+        "type": "ACTI FULL",
+        "original": "Dragonfly in a Jar",
+        "string": "\u0421\u0442\u0440\u0435\u043a\u043e\u0437\u0430 \u0432 \u0431\u0430\u043d\u043a\u0435"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskShockActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_Basket05",
+        "type": "MISC FULL",
+        "original": "Basket",
+        "string": "\u041a\u043e\u0440\u0437\u0438\u043d\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemPurpleActivator",
+        "type": "ACTI FULL",
+        "original": "Amethyst Paragon",
+        "string": "\u0410\u043c\u0435\u0442\u0438\u0441\u0442\u043e\u0432\u044b\u0439 \u043f\u0430\u0440\u0430\u0433\u043e\u043d"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DoubleBed",
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "\u041a\u0440\u043e\u0432\u0430\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BeeJarActivator",
+        "type": "ACTI FULL",
+        "original": "Bee in a Jar",
+        "string": "\u041f\u0447\u0435\u043b\u0430 \u0432 \u0431\u0430\u043d\u043a\u0435"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskNahkriinActivator",
+        "type": "ACTI FULL",
+        "original": "Nahkriin",
+        "string": "\u041d\u0430\u043a\u0440\u0438\u043d"
+    },
+    {
+        "editor_id": "ccEEJSSE003_FireflyJarActivator",
+        "type": "ACTI FULL",
+        "original": "Torchbug in a Jar",
+        "string": "\u0421\u0432\u0435\u0442\u043b\u044f\u0447\u043e\u043a \u0432 \u0431\u0430\u043d\u043a\u0435"
+    },
+    {
+        "editor_id": "ccEEJSSE003_GobletBronze",
+        "type": "MISC FULL",
+        "original": "Goblet",
+        "string": "\u041a\u0443\u0431\u043e\u043a"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemPurpleActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_LeftEyeoftheFalmerActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemGreenActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "EEJSSE003_IronClawActivator",
+        "type": "ACTI FULL",
+        "original": "Iron Dragon Claw",
+        "string": "\u0416\u0435\u043b\u0435\u0437\u043d\u044b\u0439 \u0434\u0440\u0430\u043a\u043e\u043d\u0438\u0439 \u043a\u043e\u0433\u043e\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_Basket01",
+        "type": "MISC FULL",
+        "original": "Basket",
+        "string": "\u041a\u043e\u0440\u0437\u0438\u043d\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BronzeBowl2",
+        "type": "MISC FULL",
+        "original": "Bowl",
+        "string": "\u041c\u0438\u0441\u043a\u0430"
+    },
+    {
+        "editor_id": "EEJSSE003_DiamondClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "EEJSSE003_IronClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "EEJSSE003_EmeraldClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BronzeCup",
+        "type": "MISC FULL",
+        "original": "Cup",
+        "string": "\u0427\u0430\u0448\u043a\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE003_FireflyJarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_NobleCupboard",
+        "type": "CONT FULL",
+        "original": "Cupboard",
+        "string": "\u0411\u0443\u0444\u0435\u0442"
+    },
+    {
+        "editor_id": "ccEEJSSE003_QueenBeeStatueActivator",
+        "type": "ACTI FULL",
+        "original": "Queen Bee Statue",
+        "string": "\u0421\u0442\u0430\u0442\u0443\u044d\u0442\u043a\u0430 \u043f\u0447\u0435\u043b\u044b"
+    },
+    {
+        "editor_id": "EEJSSE003_CoralClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_NightingaleBladeActivator",
+        "type": "ACTI FULL",
+        "original": "Nightingale Blade",
+        "string": "\u0421\u043e\u043b\u043e\u0432\u044c\u0438\u043d\u044b\u0439 \u043a\u043b\u0438\u043d\u043e\u043a"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BeeJarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_HonningbrewDecanterActivator",
+        "type": "ACTI FULL",
+        "original": "Honningbrew Decanter",
+        "string": "\u0413\u0440\u0430\u0444\u0438\u043d \u0441 \u043c\u0435\u0434\u043e\u043c \u0425\u043e\u043d\u043d\u0438\u043d\u0433\u0430"
+    },
+    {
+        "editor_id": "EEJSSE003_EmeraldClawActivator",
+        "type": "ACTI FULL",
+        "original": "Emerald Dragon Claw",
+        "string": "\u0418\u0437\u0443\u043c\u0440\u0443\u0434\u043d\u044b\u0439 \u0434\u0440\u0430\u043a\u043e\u043d\u0438\u0439 \u043a\u043e\u0433\u043e\u0442\u044c"
+    },
+    {
+        "editor_id": "EEJSSE003_IvoryClawActivator",
+        "type": "ACTI FULL",
+        "original": "Ivory Dragon Claw",
+        "string": "\u041a\u043e\u0441\u0442\u044f\u043d\u043e\u0439 \u0434\u0440\u0430\u043a\u043e\u043d\u0438\u0439 \u043a\u043e\u0433\u043e\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_EmptyJar",
+        "type": "MISC FULL",
+        "original": "Glass Jar",
+        "string": "\u0421\u0442\u0435\u043a\u043b\u044f\u043d\u043d\u0430\u044f \u0431\u0430\u043d\u043a\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PuzzleCubeActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_GreyFoxBustActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_HonningbrewDecanterActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskRahgotActivator",
+        "type": "ACTI FULL",
+        "original": "Rahgot",
+        "string": "\u0420\u0430\u0433\u043e\u0442"
+    },
+    {
+        "editor_id": "ccEEJSSE003_Barrel",
+        "type": "CONT FULL",
+        "original": "Barrel",
+        "string": "\u0411\u043e\u0447\u043a\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE003_LeftEyeoftheFalmerActivator",
+        "type": "ACTI FULL",
+        "original": "Left Eye of the Falmer",
+        "string": "\u041b\u0435\u0432\u044b\u0439 \u0413\u043b\u0430\u0437 \u0444\u0430\u043b\u043c\u0435\u0440\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE003_TeleportHollowMessage",
+        "type": "MESG FULL",
+        "original": "Sewer Entrance to Shadowfoot Sanctum",
+        "string": "\u0412\u0445\u043e\u0434 \u0432 \u0441\u0432\u044f\u0442\u0438\u043b\u0438\u0449\u0435 \u0422\u0435\u043d\u0435\u0432\u0438\u043a\u0430 \u0447\u0435\u0440\u0435\u0437 \u043a\u043e\u043b\u043b\u0435\u043a\u0442\u043e\u0440"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemBlueActivator",
+        "type": "ACTI FULL",
+        "original": "Sapphire Paragon",
+        "string": "\u0421\u0430\u043f\u0444\u0438\u0440\u043e\u0432\u044b\u0439 \u043f\u0430\u0440\u0430\u0433\u043e\u043d"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SmithingChest",
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "\u0421\u0443\u043d\u0434\u0443\u043a"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemGreenActivator",
+        "type": "ACTI FULL",
+        "original": "Emerald Paragon",
+        "string": "\u0418\u0437\u0443\u043c\u0440\u0443\u0434\u043d\u044b\u0439 \u043f\u0430\u0440\u0430\u0433\u043e\u043d"
+    },
+    {
+        "editor_id": "ccEEJSSE003_TeleportRiftenMessage",
+        "type": "MESG FULL",
+        "original": "Sewer Exit to Riften",
+        "string": "\u0412\u044b\u0445\u043e\u0434 \u0432 \u0420\u0438\u0444\u0442\u0435\u043d \u0447\u0435\u0440\u0435\u0437 \u043a\u043e\u043b\u043b\u0435\u043a\u0442\u043e\u0440"
+    },
+    {
+        "editor_id": "ccEEJSSE004_BronzeBowl",
+        "type": "MISC FULL",
+        "original": "Bowl",
+        "string": "\u041c\u0438\u0441\u043a\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE003_LargeJug",
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "\u041a\u0443\u0432\u0448\u0438\u043d"
+    },
+    {
+        "editor_id": "ccEEJSSE003Interior01",
+        "type": "CELL FULL",
+        "original": "Shadowfoot Sanctum",
+        "string": "\u0421\u0432\u044f\u0442\u0438\u043b\u0438\u0449\u0435 \u0422\u0435\u043d\u0435\u0432\u0438\u043a\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskKrosisActivator",
+        "type": "ACTI FULL",
+        "original": "Krosis",
+        "string": "\u041a\u0440\u043e\u0441\u0438\u0441"
+    },
+    {
+        "editor_id": "ccEEJSSE003_ThiefHouseKey",
+        "type": "KEYM FULL",
+        "original": "Key to Shadowfoot Sanctum",
+        "string": "\u041a\u043b\u044e\u0447 \u043e\u0442 \u0441\u0432\u044f\u0442\u0438\u043b\u0438\u0449\u0430 \u0422\u0435\u043d\u0435\u0432\u0438\u043a\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE003_AllForge",
+        "type": "FURN FULL",
+        "original": "Anvil",
+        "string": "\u041d\u0430\u043a\u043e\u0432\u0430\u043b\u044c\u043d\u044f"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskWoodenActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskVokunActivator",
+        "type": "ACTI FULL",
+        "original": "Vokun",
+        "string": "\u0412\u043e\u043a\u0443\u043d"
+    },
+    {
+        "editor_id": "ccEEJSSE003_SmallUrn2",
+        "type": "CONT FULL",
+        "original": "Small Urn",
+        "string": "\u041c\u0430\u043b\u0435\u043d\u044c\u043a\u0430\u044f \u0443\u0440\u043d\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE003_MothJarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskMorokeiActivator",
+        "type": "ACTI FULL",
+        "original": "Morokei",
+        "string": "\u041c\u043e\u0440\u043e\u043a\u0435\u0438"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BronzePlate",
+        "type": "MISC FULL",
+        "original": "Plate",
+        "string": "\u0422\u0430\u0440\u0435\u043b\u043a\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE003_ChillrendActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskOtarActivator",
+        "type": "ACTI FULL",
+        "original": "Otar",
+        "string": "\u041e\u0442\u0430\u0440"
+    },
+    {
+        "editor_id": "ccEEJSSE003_SpiderControlRodActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PuzzleCubeActivator",
+        "type": "ACTI FULL",
+        "original": "Dwemer Puzzle Cube",
+        "string": "\u0414\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0438\u0439 \u043a\u0443\u0431-\u0433\u043e\u043b\u043e\u0432\u043e\u043b\u043e\u043c\u043a\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE003_RightEyeoftheFalmerActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "EEJSSE003_GlassClawActivator",
+        "type": "ACTI FULL",
+        "original": "Glass Dragon Claw",
+        "string": "\u0421\u0442\u0435\u043a\u043b\u044f\u043d\u043d\u044b\u0439 \u0434\u0440\u0430\u043a\u043e\u043d\u0438\u0439 \u043a\u043e\u0433\u043e\u0442\u044c"
+    },
+    {
+        "editor_id": "EEJSSE003_DiamondClawActivator",
+        "type": "ACTI FULL",
+        "original": "Diamond Dragon Claw",
+        "string": "\u0410\u043b\u043c\u0430\u0437\u043d\u044b\u0439 \u0434\u0440\u0430\u043a\u043e\u043d\u0438\u0439 \u043a\u043e\u0433\u043e\u0442\u044c"
+    },
+    {
+        "editor_id": "EEJSSE003_GoldenClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_ChillrendActivator",
+        "type": "ACTI FULL",
+        "original": "Chillrend",
+        "string": "\u041e\u0445\u043b\u0430\u0434\u0438\u0442\u0435\u043b\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_GrimseverActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "EEJSSE003_EbonyClawActivator",
+        "type": "ACTI FULL",
+        "original": "Ebony Dragon Claw",
+        "string": "\u042d\u0431\u043e\u043d\u0438\u0442\u043e\u0432\u044b\u0439 \u0434\u0440\u0430\u043a\u043e\u043d\u0438\u0439 \u043a\u043e\u0433\u043e\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_QueenBeeStatueActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskWoodenActivator",
+        "type": "ACTI FULL",
+        "original": "Wooden Mask",
+        "string": "\u0414\u0435\u0440\u0435\u0432\u044f\u043d\u043d\u0430\u044f \u043c\u0430\u0441\u043a\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE003_EESMapActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskVolsungActivator",
+        "type": "ACTI FULL",
+        "original": "Volsung",
+        "string": "\u0412\u043e\u043b\u044c\u0441\u0443\u043d\u0433"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DragonflyJarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_JeweledGoblet",
+        "type": "MISC FULL",
+        "original": "Jeweled Goblet",
+        "string": "\u0414\u0440\u0430\u0433\u043e\u0446\u0435\u043d\u043d\u044b\u0439 \u043a\u0443\u0431\u043e\u043a"
+    },
+    {
+        "editor_id": "ccEEJSSE003_ChildBedR",
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "\u041a\u0440\u043e\u0432\u0430\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_SmallUrn",
+        "type": "CONT FULL",
+        "original": "Small Urn",
+        "string": "\u041c\u0430\u043b\u0435\u043d\u044c\u043a\u0430\u044f \u0443\u0440\u043d\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE003_ButterflyJarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_MiscSackLargeNRS",
+        "type": "CONT FULL",
+        "original": "Large Sack",
+        "string": "\u0411\u043e\u043b\u044c\u0448\u043e\u0439 \u043c\u0435\u0448\u043e\u043a"
+    },
+    {
+        "editor_id": "ccEEJSSE003_GreyFoxBustActivator",
+        "type": "ACTI FULL",
+        "original": "Bust of the Gray Fox",
+        "string": "\u0411\u044e\u0441\u0442 \u0421\u0435\u0440\u043e\u0433\u043e \u041b\u0438\u0441\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE003_RightEyeoftheFalmerActivator",
+        "type": "ACTI FULL",
+        "original": "Right Eye of the Falmer",
+        "string": "\u041f\u0440\u0430\u0432\u044b\u0439 \u0413\u043b\u0430\u0437 \u0444\u0430\u043b\u043c\u0435\u0440\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE003_JeweledShip",
+        "type": "MISC FULL",
+        "original": "Jeweled Ship Model",
+        "string": "\u0414\u0440\u0430\u0433\u043e\u0446\u0435\u043d\u043d\u0430\u044f \u043c\u043e\u0434\u0435\u043b\u044c \u043a\u043e\u0440\u0430\u0431\u043b\u044f"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BronzeCandleStick3Misc",
+        "type": "MISC FULL",
+        "original": "Candlestick",
+        "string": "\u041f\u043e\u0434\u0441\u0432\u0435\u0447\u043d\u0438\u043a"
+    },
+    {
+        "editor_id": "ccEEJSSE003_RiftenRWDoorLoad01",
+        "type": "DOOR FULL",
+        "original": "Door",
+        "string": "\u0414\u0432\u0435\u0440\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE003_HouseQuest",
+        "type": "QUST NNAM",
+        "original": "Enter Shadowfoot Sanctum",
+        "string": "\u0412\u043e\u0439\u0442\u0438 \u0432 \u0441\u0432\u044f\u0442\u0438\u043b\u0438\u0449\u0435 \u0422\u0435\u043d\u0435\u0432\u0438\u043a\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE003_HouseInitQuest",
+        "type": "QUST FULL",
+        "original": "House Enable Quest",
+        "string": "\u0417\u0430\u0434\u0430\u043d\u0438\u0435 - \u043f\u043e\u043a\u0443\u043f\u043a\u0430 \u0434\u043e\u043c\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE003_HouseQuest",
+        "type": "QUST NNAM",
+        "original": "Purchase a home in the Riften Ratways",
+        "string": "\u041a\u0443\u043f\u0438\u0442\u044c \u0434\u043e\u043c \u0432 \u0420\u0438\u0444\u0442\u0435\u043d\u0435 \u0432 \u041a\u0440\u044b\u0441\u0438\u043d\u043e\u0439 \u043d\u043e\u0440\u0435"
+    },
+    {
+        "editor_id": "ccEEJSSE003_HouseQuest",
+        "type": "QUST FULL",
+        "original": "Shadowfoot Sanctum",
+        "string": "\u0421\u0432\u044f\u0442\u0438\u043b\u0438\u0449\u0435 \u0422\u0435\u043d\u0435\u0432\u0438\u043a\u0430"
+    },
+    {
+        "editor_id": "[05000F72]",
+        "type": "REFR FULL",
+        "original": "Riften Docks",
+        "string": "\u0420\u0438\u0444\u0442\u0435\u043d - \u0434\u043e\u043a\u0438"
+    },
+    {
+        "editor_id": "ccEEJSSE003_Note",
+        "type": "BOOK FULL",
+        "original": "Note to Vekel",
+        "string": "\u0417\u0430\u043f\u0438\u0441\u043a\u0430 \u0434\u043b\u044f \u0412\u0435\u043a\u0435\u043b\u0430"
+    },
+    {
+        "editor_id": "Tamriel",
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "\u0421\u043a\u0430\u0439\u0440\u0438\u043c"
+    },
+    {
+        "editor_id": "RiftenRatwayLocation",
+        "type": "LCTN FULL",
+        "original": "Riften Ratway",
+        "string": "\u0420\u0438\u0444\u0442\u0435\u043d - \u041a\u0440\u044b\u0441\u0438\u043d\u0430\u044f \u043d\u043e\u0440\u0430"
+    },
+    {
+        "editor_id": "RiftenRatway01",
+        "type": "CELL FULL",
+        "original": "The Ratway",
+        "string": "\u041a\u0440\u044b\u0441\u0438\u043d\u0430\u044f \u043d\u043e\u0440\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DisplayLackMsg",
+        "type": "MESG DESC",
+        "original": "You do not have the required item.",
+        "string": "\u0423 \u0432\u0430\u0441 \u043d\u0435\u0442 \u043d\u0443\u0436\u043d\u043e\u0433\u043e \u043f\u0440\u0435\u0434\u043c\u0435\u0442\u0430."
+    },
+    {
+        "editor_id": "ccEEJSSE003_HouseQuest",
+        "type": "QUST CNAM",
+        "original": "After meeting with the Thieves Guild in the Ragged Flagon, I purchased a home in the Ratways from Vekel. I should find the location and make myself at home.",
+        "string": "\u041f\u043e\u0441\u043b\u0435 \u0432\u0441\u0442\u0440\u0435\u0447\u0438 \u0441 \u0413\u0438\u043b\u044c\u0434\u0438\u0435\u0439 \u0432\u043e\u0440\u043e\u0432 \u0432 \u0411\u0443\u0439\u043d\u043e\u0439 \u0444\u043b\u044f\u0433\u0435 \u0412\u0435\u043a\u0435\u043b \u043f\u0440\u043e\u0434\u0430\u043b \u043c\u043d\u0435 \u0434\u043e\u043c \u0432 \u041a\u0440\u044b\u0441\u0438\u043d\u043e\u0439 \u043d\u043e\u0440\u0435. \u041d\u0430\u0434\u043e \u043d\u0430\u0439\u0442\u0438 \u044d\u0442\u043e \u043c\u0435\u0441\u0442\u043e \u0438 \u043e\u0431\u0443\u0441\u0442\u0440\u043e\u0438\u0442\u044c\u0441\u044f \u0442\u0430\u043c."
+    },
+    {
+        "editor_id": "ccEEJSSE003_HouseQuest",
+        "type": "QUST CNAM",
+        "original": "After meeting with the Thieves Guild in the Ragged Flagon, I purchased a home in the Ratways from Vekel. I found the entrance to Shadowfoot Sanctum and can now settle in.",
+        "string": "\u041f\u043e\u0441\u043b\u0435 \u0432\u0441\u0442\u0440\u0435\u0447\u0438 \u0441 \u0413\u0438\u043b\u044c\u0434\u0438\u0435\u0439 \u0432\u043e\u0440\u043e\u0432 \u0432 \u0411\u0443\u0439\u043d\u043e\u0439 \u0444\u043b\u044f\u0433\u0435 \u0412\u0435\u043a\u0435\u043b \u043f\u0440\u043e\u0434\u0430\u043b \u043c\u043d\u0435 \u0434\u043e\u043c \u0432 \u041a\u0440\u044b\u0441\u0438\u043d\u043e\u0439 \u043d\u043e\u0440\u0435. \u041d\u0430\u0439\u0434\u044f \u0432\u0445\u043e\u0434 \u0432 \u0441\u0432\u044f\u0442\u0438\u043b\u0438\u0449\u0435 \u0422\u0435\u043d\u0435\u0432\u0438\u043a\u0430, \u044f \u043c\u043e\u0433\u0443 \u043e\u0431\u0443\u0441\u0442\u0440\u0430\u0438\u0432\u0430\u0442\u044c\u0441\u044f \u043d\u0430 \u043d\u043e\u0432\u043e\u043c \u043c\u0435\u0441\u0442\u0435."
+    },
+    {
+        "editor_id": "ccEEJSSE003_HouseQuest",
+        "type": "QUST CNAM",
+        "original": "Not every home in Skyrim is built above ground. If I'm ever in the need of a more discreet hideout, I should head over to Riften and talk to those in the know.",
+        "string": "\u041d\u0435 \u0432\u0441\u0435 \u0434\u043e\u043c\u0430 \u0432 \u0421\u043a\u0430\u0439\u0440\u0438\u043c\u0435 \u043f\u043e\u0441\u0442\u0440\u043e\u0435\u043d\u044b \u043d\u0430 \u0437\u0435\u043c\u043b\u0435. \u0415\u0441\u043b\u0438 \u043c\u043d\u0435 \u043f\u043e\u043d\u0430\u0434\u043e\u0431\u0438\u0442\u0441\u044f \u0442\u0430\u0439\u043d\u043e\u0435 \u0443\u0431\u0435\u0436\u0438\u0449\u0435, \u043c\u043d\u0435 \u0441\u043b\u0435\u0434\u0443\u0435\u0442 \u043e\u0442\u043f\u0440\u0430\u0432\u0438\u0442\u044c\u0441\u044f \u0432 \u0420\u0438\u0444\u0442\u0435\u043d \u0438 \u043f\u043e\u0433\u043e\u0432\u043e\u0440\u0438\u0442\u044c \u0441\u043e \u0437\u043d\u0430\u044e\u0449\u0438\u043c\u0438 \u043b\u044e\u0434\u044c\u043c\u0438."
+    },
+    {
+        "editor_id": "ccEEJSSE003_Note",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\n\nVekel,\n\nThere's gotta be someone in the guild we can sell the Ratway home to, so I cleared out that manhole exit in the crafting room. It can be used to quickly access the dockside, possibly to evade.. unwanted guests.\n\nBjorn\n\n",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\n\n\u0412\u0435\u043a\u0435\u043b.\n\n\u0412 \u0433\u0438\u043b\u044c\u0434\u0438\u0438 \u043d\u0430\u0432\u0435\u0440\u043d\u044f\u043a\u0430 \u043d\u0430\u0439\u0434\u0435\u0442\u0441\u044f \u043a\u0442\u043e-\u043d\u0438\u0431\u0443\u0434\u044c, \u043a\u043e\u043c\u0443 \u043c\u044b \u043c\u043e\u0436\u0435\u043c \u043f\u0440\u043e\u0434\u0430\u0442\u044c \u0434\u043e\u043c \u0432 \u041a\u0440\u044b\u0441\u0438\u043d\u043e\u0439 \u043d\u043e\u0440\u0435, \u0442\u0430\u043a \u0447\u0442\u043e \u044f \u0440\u0430\u0441\u0447\u0438\u0441\u0442\u0438\u043b \u043f\u043e\u0434\u0445\u043e\u0434 \u043a \u043a\u0440\u0443\u0433\u043b\u043e\u043c\u0443 \u043b\u0430\u0437\u0443 \u0432 \u043c\u0430\u0441\u0442\u0435\u0440\u0441\u043a\u043e\u0439. \u041f\u043e \u043d\u0435\u043c\u0443 \u043c\u043e\u0436\u043d\u043e \u0431\u044b\u0441\u0442\u0440\u043e \u043f\u043e\u043f\u0430\u0441\u0442\u044c \u0432 \u0434\u043e\u043a\u0438, \u0435\u0441\u043b\u0438 \u043f\u043e\u043d\u0430\u0434\u043e\u0431\u0438\u0442\u0441\u044f \u0438\u0437\u0431\u0435\u0436\u0430\u0442\u044c... \u043d\u0435\u0437\u0432\u0430\u043d\u044b\u0445 \u0433\u043e\u0441\u0442\u0435\u0439.\n\n\u0411\u044c\u043e\u0440\u043d\n\n"
+    }
+]

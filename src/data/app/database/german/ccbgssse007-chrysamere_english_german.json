@@ -1,0 +1,140 @@
+[
+    {
+        "editor_id": "ccBGSSSE007_Chrysamere_Effect",
+        "type": "MGEF FULL",
+        "original": "Chrysamere",
+        "string": "Chrysamere"
+    },
+    {
+        "editor_id": "ccBGSSSE007_Quest",
+        "type": "QUST NNAM",
+        "original": "Find the Lost Paladin",
+        "string": "Finde den verlorenen Paladin."
+    },
+    {
+        "editor_id": "ccBGSSSE007_Chrysamere_abAbsorbMagicka",
+        "type": "SPEL FULL",
+        "original": "Chrysamere - Absorb Magicka",
+        "string": "Chrysamere - Magicka absorbieren"
+    },
+    {
+        "editor_id": "ccBGSSSE007_FortifyHealRateCombat",
+        "type": "MGEF FULL",
+        "original": "Fortified Combat Healing",
+        "string": "Verst\u00e4rkte Kampfheilung"
+    },
+    {
+        "editor_id": "ccBGSSSE007_EnchChrysamere",
+        "type": "ENCH FULL",
+        "original": "Chrysamere Enchantment",
+        "string": "Chrysamere-Verzauberung"
+    },
+    {
+        "editor_id": "ccBGSSSE007_Chrysamere_abRegenHealth",
+        "type": "SPEL FULL",
+        "original": "Chrysamere - regen health",
+        "string": "Chrysamere - Gesundheit regenerieren"
+    },
+    {
+        "editor_id": "ccBGSSSE007_Chrysamere_AbsorbSpellChance",
+        "type": "MGEF DNAM",
+        "original": "When equipped grants <15>% resist fire, <10>% absorb magic, slow health regen during combat.",
+        "string": "Gew\u00e4hrt, wenn ausger\u00fcstet, <15> Prozent Feuerresistenz, <10> Prozent Magicka absorbieren und langsame Gesundheitsregeneration im Kampf."
+    },
+    {
+        "editor_id": "ccBGSSSE007_Chrysamere_Effect",
+        "type": "MGEF DNAM",
+        "original": "When equipped grants <15>% resist fire, <10>% absorb magic, slow health regen during combat.",
+        "string": "Gew\u00e4hrt, wenn ausger\u00fcstet, <15> Prozent Feuerresistenz, <10> Prozent Magicka absorbieren und langsame Gesundheitsregeneration im Kampf."
+    },
+    {
+        "editor_id": "ccBGSSSE007_LvlGhostPaladin",
+        "type": "NPC_ FULL",
+        "original": "Lost Paladin",
+        "string": "Verlorener Paladin"
+    },
+    {
+        "editor_id": "ccBGSSSE007Chrysamere",
+        "type": "WEAP FULL",
+        "original": "Chrysamere",
+        "string": "Chrysamere"
+    },
+    {
+        "editor_id": "ccBGSSSE007_Chrysamere_abResistFire",
+        "type": "SPEL FULL",
+        "original": "Chrysamere - Resist Fire",
+        "string": "Chrysamere - Feuerresistenz"
+    },
+    {
+        "editor_id": "ccBGSSSE007_Quest",
+        "type": "QUST FULL",
+        "original": "The Lost Paladin",
+        "string": "Der verlorene Paladin"
+    },
+    {
+        "editor_id": "ccBGSSSE007_Chrysamere_AbsorbSpellChance",
+        "type": "MGEF FULL",
+        "original": "Chrysamere",
+        "string": "Zauberabsorption"
+    },
+    {
+        "editor_id": "ccBGSSSE007_AbResistFire",
+        "type": "MGEF FULL",
+        "original": "Resist Fire",
+        "string": "Feuerresistenz"
+    },
+    {
+        "editor_id": "ccBGSSSE007_FortifyHealRateCombat",
+        "type": "MGEF DNAM",
+        "original": "Slow health regen during combat.",
+        "string": "Gew\u00e4hrt, wenn ausger\u00fcstet, <15> Prozent Feuerresistenz, <10> Prozent Magicka absorbieren und langsame Gesundheitsregeneration im Kampf."
+    },
+    {
+        "editor_id": "ccBGSSSE007_AbResistFire",
+        "type": "MGEF DNAM",
+        "original": "<15>% resist fire.",
+        "string": "Gew\u00e4hrt, wenn ausger\u00fcstet, <15> Prozent Feuerresistenz, <10> Prozent Magicka absorbieren und langsame Gesundheitsregeneration im Kampf."
+    },
+    {
+        "editor_id": "ccBGSSSE007_Chrysamere_ChrysamerePlayerEffects",
+        "type": "SPEL FULL",
+        "original": "Chrysamere",
+        "string": "Chrysamere"
+    },
+    {
+        "editor_id": "Tamriel",
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Himmelsrand"
+    },
+    {
+        "editor_id": "Forelhost01",
+        "type": "CELL FULL",
+        "original": "Forelhost Stronghold",
+        "string": "Sch\u00fctzburg"
+    },
+    {
+        "editor_id": "Forelhost03",
+        "type": "CELL FULL",
+        "original": "Forelhost Refectory",
+        "string": "Speisesaal der Sch\u00fctzburg"
+    },
+    {
+        "editor_id": "Forelhost02",
+        "type": "CELL FULL",
+        "original": "Forelhost Crypt",
+        "string": "Krypta der Sch\u00fctzburg"
+    },
+    {
+        "editor_id": "ccBGSSSE007_Quest",
+        "type": "QUST CNAM",
+        "original": "I've heard a rumor about the location of the Lost Paladin, the last warrior to wield Chrysamere.",
+        "string": "Ich h\u00f6rte ein Ger\u00fccht \u00fcber den Aufenthaltsort des verlorenen Paladins, des letztes Kriegers, der Chrysamere f\u00fchrte."
+    },
+    {
+        "editor_id": "ccBGSSSE007_Quest",
+        "type": "QUST CNAM",
+        "original": "I fought the ghost of the Lost Paladin and claimed Chrysamere for myself.",
+        "string": "Ich habe den Geist des verlorenen Paladins bek\u00e4mpft und Chrysamere errungen."
+    }
+]

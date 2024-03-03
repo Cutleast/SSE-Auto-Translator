@@ -1,0 +1,74 @@
+[
+    {
+        "editor_id": "ccBGSSSE006_Quest",
+        "type": "QUST FULL",
+        "original": "If I had a Hammer",
+        "string": "Si tuviera un martillo..."
+    },
+    {
+        "editor_id": "ccBGSSSE006StendarsHammer",
+        "type": "WEAP FULL",
+        "original": "Stendarr's Hammer",
+        "string": "Martillo de Stendarr"
+    },
+    {
+        "editor_id": "ccBGSSSE006_Quest",
+        "type": "QUST NNAM",
+        "original": "Steal Stendarr's Hammer",
+        "string": "Roba el martillo de Stendarr."
+    },
+    {
+        "editor_id": "ccBGSSSE006_DamageStamina",
+        "type": "MGEF DNAM",
+        "original": "Drains <mag> points from stamina.",
+        "string": "Consume <mag> puntos de aguante."
+    },
+    {
+        "editor_id": "ccBGSSSE006_EnchDamageFFContact",
+        "type": "MGEF FULL",
+        "original": "Smite Damage",
+        "string": "Da\u00f1o por castigo"
+    },
+    {
+        "editor_id": "ccBGSSSE006_EnchDrainHealth",
+        "type": "ENCH FULL",
+        "original": "Absorb Health",
+        "string": "Absorber salud"
+    },
+    {
+        "editor_id": "ccBGSSSE006_DrainStamina",
+        "type": "SPEL FULL",
+        "original": "Smite",
+        "string": "Absorci\u00f3n de aguante"
+    },
+    {
+        "editor_id": "ccBGSSSE006_DamageStamina",
+        "type": "MGEF FULL",
+        "original": "Reduced Stamina",
+        "string": "Aguante reducido"
+    },
+    {
+        "editor_id": "ccBGSSSE006_EnchDamageFFContact",
+        "type": "MGEF DNAM",
+        "original": "Damages the target for <mag> points. Depletes <20> Stamina from wielder per hit.",
+        "string": "Inflige un da\u00f1o de <mag> puntos al objetivo. El portador pierde <20> de aguante por impacto."
+    },
+    {
+        "editor_id": "MarkarthWizardsQuarters01",
+        "type": "CELL FULL",
+        "original": "Dwemer Museum",
+        "string": "Museo dwemer"
+    },
+    {
+        "editor_id": "ccBGSSSE006_Quest",
+        "type": "QUST CNAM",
+        "original": "I have successfully stolen Stendarr's Hammer from the Dwarven Museum in Markarth.",
+        "string": "He conseguido robar el martillo de Stendarr del museo de los enanos de Markarth."
+    },
+    {
+        "editor_id": "ccBGSSSE006_Quest",
+        "type": "QUST CNAM",
+        "original": "Rumor has it that Stendarr's Hammer has been found deep under Markarth. They say it is in the Dwarven Museum there.",
+        "string": "Se rumorea que el martillo de Stendarr se encontr\u00f3 en lo m\u00e1s profundo de Markarth. Dicen que est\u00e1 all\u00ed, en el museo de los enanos."
+    }
+]

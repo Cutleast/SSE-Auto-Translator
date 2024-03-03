@@ -1,0 +1,296 @@
+[
+    {
+        "editor_id": "ccEDHSSE001_NorCirclet",
+        "type": "ARMO FULL",
+        "original": "Nordic Circlet",
+        "string": "\u041d\u043e\u0440\u0434\u0441\u043a\u0438\u0439 \u043e\u0431\u0440\u0443\u0447"
+    },
+    {
+        "editor_id": "ccEDHSSE001_NorRing",
+        "type": "ARMO FULL",
+        "original": "Nordic Ring",
+        "string": "\u041d\u043e\u0440\u0434\u0441\u043a\u043e\u0435 \u043a\u043e\u043b\u044c\u0446\u043e"
+    },
+    {
+        "editor_id": "ccEDHSSE001_NorAmulet",
+        "type": "ARMO FULL",
+        "original": "Nordic Amulet",
+        "string": "\u041d\u043e\u0440\u0434\u0441\u043a\u0438\u0439 \u0430\u043c\u0443\u043b\u0435\u0442"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorAmuletHealth05",
+        "type": "ARMO FULL",
+        "original": "Nordic Amulet of Extreme Health",
+        "string": "\u041d\u043e\u0440\u0434\u0441\u043a\u0438\u0439 \u0430\u043c\u0443\u043b\u0435\u0442 \u0432\u0435\u043b\u0438\u043a\u043e\u0433\u043e \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044f"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorRingStamina05",
+        "type": "ARMO FULL",
+        "original": "Nordic Ring of Extreme Stamina",
+        "string": "\u041d\u043e\u0440\u0434\u0441\u043a\u043e\u0435 \u043a\u043e\u043b\u044c\u0446\u043e \u0432\u0435\u043b\u0438\u043a\u043e\u0433\u043e \u0437\u0430\u043f\u0430\u0441\u0430 \u0441\u0438\u043b"
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmansJournal",
+        "type": "BOOK FULL",
+        "original": "Hugin Ice-Shaper's Notebook",
+        "string": "\u0417\u0430\u043f\u0438\u0441\u0438 \u0425\u0443\u0433\u0438\u043d\u0430 \u041b\u0435\u0434\u044f\u043d\u043e\u0433\u043e \u041a\u0440\u043e\u044f"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorAmuletHealth06",
+        "type": "ARMO FULL",
+        "original": "Nordic Amulet of Peerless Health",
+        "string": "\u041d\u043e\u0440\u0434\u0441\u043a\u0438\u0439 \u0430\u043c\u0443\u043b\u0435\u0442 \u043d\u0435\u0441\u0440\u0430\u0432\u043d\u0435\u043d\u043d\u043e\u0433\u043e \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044f"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorRingStamina02",
+        "type": "ARMO FULL",
+        "original": "Nordic Ring of Stamina",
+        "string": "\u041d\u043e\u0440\u0434\u0441\u043a\u043e\u0435 \u043a\u043e\u043b\u044c\u0446\u043e \u0437\u0430\u043f\u0430\u0441\u0430 \u0441\u0438\u043b"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorAmuletHealth02",
+        "type": "ARMO FULL",
+        "original": "Nordic Amulet of Health",
+        "string": "\u041d\u043e\u0440\u0434\u0441\u043a\u0438\u0439 \u0430\u043c\u0443\u043b\u0435\u0442 \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044f"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorCircletMagicka03",
+        "type": "ARMO FULL",
+        "original": "Nordic Circlet of Major Magicka",
+        "string": "\u041d\u043e\u0440\u0434\u0441\u043a\u0438\u0439 \u043e\u0431\u0440\u0443\u0447 \u043d\u0430\u0441\u0442\u043e\u044f\u0449\u0435\u0439 \u043c\u0430\u0433\u0438\u0438"
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "type": "QUST NNAM",
+        "original": "Read Hugin Ice-Shaper's Notebook",
+        "string": "\u041f\u0440\u043e\u0447\u0435\u0441\u0442\u044c \u0437\u0430\u043f\u0438\u0441\u0438 \u0425\u0443\u0433\u0438\u043d\u0430 \u041b\u0435\u0434\u044f\u043d\u043e\u0433\u043e \u041a\u0440\u043e\u044f"
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "type": "QUST FULL",
+        "original": "Nordic Jewelry",
+        "string": "\u041d\u043e\u0440\u0434\u0441\u043a\u0438\u0435 \u0434\u0440\u0430\u0433\u043e\u0446\u0435\u043d\u043d\u043e\u0441\u0442\u0438"
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanSatchel",
+        "type": "CONT FULL",
+        "original": "Satchel",
+        "string": "\u041a\u043e\u0448\u0435\u043b\u044c"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorAmuletHealth04",
+        "type": "ARMO FULL",
+        "original": "Nordic Amulet of Eminent Health",
+        "string": "\u041d\u043e\u0440\u0434\u0441\u043a\u0438\u0439 \u0430\u043c\u0443\u043b\u0435\u0442 \u0438\u0441\u0442\u0438\u043d\u043d\u043e\u0433\u043e \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044f"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorAmuletHealth01",
+        "type": "ARMO FULL",
+        "original": "Nordic Amulet of Minor Health",
+        "string": "\u041d\u043e\u0440\u0434\u0441\u043a\u0438\u0439 \u0430\u043c\u0443\u043b\u0435\u0442 \u043c\u0430\u043b\u043e\u0433\u043e \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044f"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorAmuletHealth03",
+        "type": "ARMO FULL",
+        "original": "Nordic Amulet of Major Health",
+        "string": "\u041d\u043e\u0440\u0434\u0441\u043a\u0438\u0439 \u0430\u043c\u0443\u043b\u0435\u0442 \u043d\u0430\u0441\u0442\u043e\u044f\u0449\u0435\u0433\u043e \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044f"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorCircletMagicka04",
+        "type": "ARMO FULL",
+        "original": "Nordic Circlet of Extreme Magicka",
+        "string": "\u041d\u043e\u0440\u0434\u0441\u043a\u0438\u0439 \u043e\u0431\u0440\u0443\u0447 \u0432\u0435\u043b\u0438\u043a\u043e\u0439 \u043c\u0430\u0433\u0438\u0438"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorRingStamina01",
+        "type": "ARMO FULL",
+        "original": "Nordic Ring of Minor Stamina",
+        "string": "\u041d\u043e\u0440\u0434\u0441\u043a\u043e\u0435 \u043a\u043e\u043b\u044c\u0446\u043e \u043c\u0430\u043b\u043e\u0433\u043e \u0437\u0430\u043f\u0430\u0441\u0430 \u0441\u0438\u043b"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorCircletMagicka05",
+        "type": "ARMO FULL",
+        "original": "Nordic Circlet of Extreme Magicka",
+        "string": "\u041d\u043e\u0440\u0434\u0441\u043a\u0438\u0439 \u043e\u0431\u0440\u0443\u0447 \u0432\u0435\u043b\u0438\u043a\u043e\u0439 \u043c\u0430\u0433\u0438\u0438"
+    },
+    {
+        "editor_id": "ccEDHSSE001_NorJewelryEnchanting",
+        "type": "PERK FULL",
+        "original": "Nordic Jewelry Enchanting",
+        "string": "\u0417\u0430\u0447\u0430\u0440\u043e\u0432\u0430\u043d\u0438\u0435 \u043d\u043e\u0440\u0434\u0441\u043a\u0438\u0445 \u0434\u0440\u0430\u0433\u043e\u0446\u0435\u043d\u043d\u043e\u0441\u0442\u0435\u0439"
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "type": "QUST NNAM",
+        "original": "Travel to Solstheim",
+        "string": "\u041e\u0442\u043f\u0440\u0430\u0432\u0438\u0442\u044c\u0441\u044f \u043d\u0430 \u0421\u043e\u043b\u0441\u0442\u0435\u0439\u043c"
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "type": "QUST NNAM",
+        "original": "Craft a piece of Nordic Jewelry at a forge",
+        "string": "\u0421\u043e\u0437\u0434\u0430\u0442\u044c \u043d\u043e\u0440\u0434\u0441\u043a\u0443\u044e \u0434\u0440\u0430\u0433\u043e\u0446\u0435\u043d\u043d\u043e\u0441\u0442\u044c \u0432 \u043a\u0443\u0437\u043d\u0438\u0446\u0435"
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "type": "QUST NNAM",
+        "original": "Inspect the area",
+        "string": "\u041e\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u043e\u043a\u0440\u0435\u0441\u0442\u043d\u043e\u0441\u0442\u0438"
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "type": "QUST NNAM",
+        "original": "Find the craftsman in Raven Rock",
+        "string": "\u041d\u0430\u0439\u0442\u0438 \u0440\u0435\u043c\u0435\u0441\u043b\u0435\u043d\u043d\u0438\u043a\u0430 \u0432 \u0412\u043e\u0440\u043e\u043d\u044c\u0435\u0439 \u0421\u043a\u0430\u043b\u0435"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorRingStamina06",
+        "type": "ARMO FULL",
+        "original": "Nordic Ring of Peerless Stamina",
+        "string": "\u041d\u043e\u0440\u0434\u0441\u043a\u043e\u0435 \u043a\u043e\u043b\u044c\u0446\u043e \u043d\u0435\u0441\u0440\u0430\u0432\u043d\u0435\u043d\u043d\u043e\u0433\u043e \u0437\u0430\u043f\u0430\u0441\u0430 \u0441\u0438\u043b"
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "type": "QUST NNAM",
+        "original": "Read the Certificate of Authenticity",
+        "string": "\u041f\u0440\u043e\u0447\u0435\u0441\u0442\u044c \u0441\u0432\u0438\u0434\u0435\u0442\u0435\u043b\u044c\u0441\u0442\u0432\u043e \u043e \u043f\u043e\u0434\u043b\u0438\u043d\u043d\u043e\u0441\u0442\u0438"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorRingStamina04",
+        "type": "ARMO FULL",
+        "original": "Nordic Ring of Eminent Stamina",
+        "string": "\u041d\u043e\u0440\u0434\u0441\u043a\u043e\u0435 \u043a\u043e\u043b\u044c\u0446\u043e \u0438\u0441\u0442\u0438\u043d\u043d\u043e\u0433\u043e \u0437\u0430\u043f\u0430\u0441\u0430 \u0441\u0438\u043b"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorCircletMagicka06",
+        "type": "ARMO FULL",
+        "original": "Nordic Circlet of Peerless Magicka",
+        "string": "\u041d\u043e\u0440\u0434\u0441\u043a\u0438\u0439 \u043e\u0431\u0440\u0443\u0447 \u043d\u0435\u0441\u0440\u0430\u0432\u043d\u0435\u043d\u043d\u043e\u0439 \u043c\u0430\u0433\u0438\u0438"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorCircletMagicka02",
+        "type": "ARMO FULL",
+        "original": "Nordic Circlet of Magicka",
+        "string": "\u041d\u043e\u0440\u0434\u0441\u043a\u0438\u0439 \u043e\u0431\u0440\u0443\u0447 \u043c\u0430\u0433\u0438\u0438"
+    },
+    {
+        "editor_id": "ccEDHSSE001_Craftsman",
+        "type": "NPC_ FULL",
+        "original": "Hugin Ice-Shaper",
+        "string": "\u0425\u0443\u0433\u0438\u043d \u041b\u0435\u0434\u044f\u043d\u043e\u0439 \u041a\u0440\u043e\u0439"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorCircletMagicka01",
+        "type": "ARMO FULL",
+        "original": "Nordic Circlet of Minor Magicka",
+        "string": "\u041d\u043e\u0440\u0434\u0441\u043a\u0438\u0439 \u043e\u0431\u0440\u0443\u0447 \u043c\u0430\u043b\u043e\u0439 \u043c\u0430\u0433\u0438\u0438"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorRingStamina03",
+        "type": "ARMO FULL",
+        "original": "Nordic Ring of Major Stamina",
+        "string": "\u041d\u043e\u0440\u0434\u0441\u043a\u043e\u0435 \u043a\u043e\u043b\u044c\u0446\u043e \u043d\u0430\u0441\u0442\u043e\u044f\u0449\u0435\u0433\u043e \u0437\u0430\u043f\u0430\u0441\u0430 \u0441\u0438\u043b"
+    },
+    {
+        "editor_id": "ccEDHSSE001_Certificate",
+        "type": "BOOK FULL",
+        "original": "Certificate of Authenticity",
+        "string": "\u0421\u0432\u0438\u0434\u0435\u0442\u0435\u043b\u044c\u0441\u0442\u0432\u043e \u043e \u043f\u043e\u0434\u043b\u0438\u043d\u043d\u043e\u0441\u0442\u0438"
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "type": "QUST NNAM",
+        "original": "Purchase a piece of Nordic Jewelry",
+        "string": "\u041a\u0443\u043f\u0438\u0442\u044c \u043d\u043e\u0440\u0434\u0441\u043a\u0443\u044e \u0434\u0440\u0430\u0433\u043e\u0446\u0435\u043d\u043d\u043e\u0441\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEDHSSE001_LvlBanditMelee1H",
+        "type": "NPC_ FULL",
+        "original": "Reaver",
+        "string": "\u0420\u0430\u0437\u0431\u043e\u0439\u043d\u0438\u043a"
+    },
+    {
+        "editor_id": "ccEDHSSE001_LvlBanditMissile",
+        "type": "NPC_ FULL",
+        "original": "Reaver",
+        "string": "\u0420\u0430\u0437\u0431\u043e\u0439\u043d\u0438\u043a"
+    },
+    {
+        "editor_id": "DLC2SolstheimWorld",
+        "type": "WRLD FULL",
+        "original": "Solstheim",
+        "string": "\u0421\u043e\u043b\u0441\u0442\u0435\u0439\u043c"
+    },
+    {
+        "editor_id": "DLC2RRAlorHouse",
+        "type": "CELL FULL",
+        "original": "Alor House",
+        "string": "\u0414\u043e\u043c \u0410\u043b\u043e\u0440\u0430"
+    },
+    {
+        "editor_id": "RiftenWorld",
+        "type": "WRLD FULL",
+        "original": "Riften",
+        "string": "\u0420\u0438\u0444\u0442\u0435\u043d"
+    },
+    {
+        "editor_id": "SolitudeRadiantRaiment",
+        "type": "CELL FULL",
+        "original": "Radiant Raiment",
+        "string": "\u0421\u0438\u044f\u044e\u0449\u0438\u0435 \u043e\u0434\u0435\u0436\u0434\u044b"
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmansJournal",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\n<font alpha='#4C'>Finding naturally occurring</font><font alpha='#80'> raw pieces</font> of a suitable size and <font alpha='#80'>shape is </font><font alpha='#4C'>unlikely</font><font alpha='#25'>         re                   eth      ha    ot     e     ed</font>\n\n<font alpha='#26'>perha   t  re are some alter   ive methods I hav  </font><font alpha='#25'>not yet expl    </font><font alpha='#4C'>I quickly</font><font alpha='#80'> discovered grinding with </font>traditional methods is nearly impossible, but this material fascinates me. I am<font alpha='#80'> determined to incorporate </font><font alpha='#4C'>it into my work</font><font alpha='#25'>      t    lects   f the su   ce w  h</font>\n\n<font alpha='#25'>     sha    are m    re  l    n s   e than     is       </font><font alpha='#4C'>Shattering large chunks with an </font><font alpha='#80'> application of violent force</font> after repeated bouts of extreme heating and cooling (note: magical methods are the most viable) yields far more material to select from.\n\nIn addition, the shards are more regular in shape than debris left by a pickaxe. The amount of waste is disappointing, but<font alpha='#80'> the cost may </font><font alpha='#4C'>be offset</font><font alpha='#25'>         sel   ed a collec   n   of p  ces for        f   e  r   c     </font>\n\n<font alpha='#4C'>Further shaping by using a </font><font alpha='#80'> second appropriately sized </font>piece of stalhrim yields particularly satisfactory results. The product is quite rough, but <font alpha='#80'>has sort of a </font><font alpha='#4C'>naturalistic appeal </font><font alpha='#25'>   a few des   s. Some   ng is s  ll m  s ng</font>\n\n<font alpha='#25'>      o   t       t   o     b     h s  s   of  at     st   a   </font><font alpha='#4C'> set in quicksilver with a </font><font alpha='#80'> traditional </font>Nordic motif. Perfection. With a bit of hired help, I have adequate materials to reproduce the design and distribute to the mainland. \n\nI <font alpha='#80'>will finally make</font><font alpha='#4C'> a name for myself!</font>",
+        "string": "<font face='$HandwrittenFont'>\n<font alpha='#4C'>\u041d\u0430\u0439\u0442\u0438 \u043d\u0435\u043e\u0431\u0440\u0430\u0431\u043e\u0442\u0430\u043d\u043d\u044b\u0435</font><font alpha='#80'> \u043a\u0443\u0441\u043a\u0438 \u043f\u043e\u0440\u043e\u0434\u044b</font> \u043f\u043e\u0434\u0445\u043e\u0434\u044f\u0449\u0435\u0433\u043e \u0440\u0430\u0437\u043c\u0435\u0440\u0430 \u0438 <font alpha='#80'>\u0444\u043e\u0440\u043c\u044b </font><font alpha='#4C'>\u043c\u0430\u043b\u043e\u0432\u0435\u0440\u043e\u044f\u0442\u043d\u043e</font><font alpha='#25'>          \u0438\u043c\u0435                   \u0435\u0442\u043e\u0434      \u043d\u0435    \u043b\u0438     \u0449\u0435     \u044b\u0442\u044b</font>\n\n<font alpha='#26'>\u0432\u043e\u0437\u043c\u043e\u0436  \u0435\u0441 \u044c \u0434\u0440\u0443  \u0435 \u043c\u0435\u0442\u043e\u0434\u044b, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u044f \u0435\u0449\u0435 \u043d\u0435 \u0438\u0441\u043f  </font><font alpha='#25'>\u0430\u043b    </font><font alpha='#4C'>\u042f \u043f\u043e\u0447\u0442\u0438</font><font alpha='#80'> \u0441\u0440\u0430\u0437\u0443 \u043f\u043e\u043d\u044f\u043b, \u0447\u0442\u043e</font> \u0442\u0440\u0430\u0434\u0438\u0446\u0438\u043e\u043d\u043d\u044b\u0435 \u043c\u0435\u0442\u043e\u0434\u044b \u043e\u0431\u0440\u0430\u0431\u043e\u0442\u043a\u0438 \u0437\u0434\u0435\u0441\u044c \u043d\u0435 \u0433\u043e\u0434\u044f\u0442\u0441\u044f, \u043d\u043e \u043c\u0430\u0442\u0435\u0440\u0438\u0430\u043b \u0432\u0441\u0435 \u0436\u0435 \u043f\u043e\u0442\u0440\u044f\u0441\u0430\u044e\u0449\u0438\u0439. \u042f<font alpha='#80'> \u043d\u0430\u043c\u0435\u0440\u0435\u043d \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u044c </font><font alpha='#4C'>\u0435\u0433\u043e \u0432 \u0440\u0430\u0431\u043e\u0442\u0435</font><font alpha='#25'>      \u043d    \u044b\u0431\u0440\u0430\u043d   \u043c\u043e\u0436\u0435\u0442, \u043f\u043e   \u0430\u0442 \u0441  \u043e\u043c</font>\n\n<font alpha='#25'>     \u0441\u043a\u0438    \u0431\u043e\u043b\u0435\u0435 \u0443    \u0432\u044b  \u043e    \u0430 \u0431  \u043a\u0435, \u0447\u0435\u043c    \u0431\u044b       </font><font alpha='#4C'>\u041f\u0440\u0435\u0434\u043f\u043e\u0447\u0442\u0438\u0442\u0435\u043b\u044c\u043d\u043e \u0440\u0430\u0441\u043a\u0430\u043b\u044b\u0432\u0430\u0442\u044c \u0431\u043e\u043b\u044c\u0448\u0438\u0435 \u043a\u0443\u0441\u043a\u0438 \u043f\u043e\u0440\u043e\u0434\u044b \u0441 </font><font alpha='#80'>\u043f\u0440\u0438\u043c\u0435\u043d\u0435\u043d\u0438\u0435\u043c \u0441\u0438\u043b\u044b</font> \u043f\u043e\u0441\u043b\u0435 \u043d\u0435\u043e\u0434\u043d\u043e\u043a\u0440\u0430\u0442\u043d\u043e\u0433\u043e \u0447\u0435\u0440\u0435\u0434\u043e\u0432\u0430\u043d\u0438\u044f \u043d\u0430\u0433\u0440\u0435\u0432\u0430\u043d\u0438\u044f \u0438 \u043e\u0445\u043b\u0430\u0436\u0434\u0435\u043d\u0438\u044f (\u043f\u0440\u0438\u043c.: \u043d\u0430\u0438\u0431\u043e\u043b\u0435\u0435 \u044d\u0444\u0444\u0435\u043a\u0442\u0438\u0432\u043d\u044b \u043c\u0430\u0433\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u0441\u043f\u043e\u0441\u043e\u0431\u044b). \u0412 \u0442\u0430\u043a\u043e\u043c \u0441\u043b\u0443\u0447\u0430\u0435 \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e \u043f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u043a\u0443\u0434\u0430 \u0431\u043e\u043b\u0435\u0435 \u0440\u0430\u0437\u043d\u043e\u043e\u0431\u0440\u0430\u0437\u043d\u0443\u044e \u0432\u044b\u0431\u043e\u0440\u043a\u0443 \u043c\u0430\u0442\u0435\u0440\u0438\u0430\u043b\u0430.\n\n\u041a\u0440\u043e\u043c\u0435 \u0442\u043e\u0433\u043e, \u0442\u0430\u043a\u0438\u0435 \u043e\u0441\u043a\u043e\u043b\u043a\u0438 \u0438\u043c\u0435\u044e\u0442 \u0431\u043e\u043b\u0435\u0435 \u043f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u0443\u044e \u0444\u043e\u0440\u043c\u0443, \u0447\u0435\u043c \u043e\u0441\u043a\u043e\u043b\u043a\u0438, \u043f\u043e\u043b\u0443\u0447\u0435\u043d\u043d\u044b\u0435 \u043f\u0440\u0438 \u0434\u043e\u0431\u044b\u0447\u0435. \u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u043e\u0442\u0445\u043e\u0434\u043e\u0432, \u0443\u0432\u044b, \u0432\u0435\u043b\u0438\u043a\u043e, \u043d\u043e<font alpha='#80'> \u0446\u0435\u043d\u0430 \u043d\u0430 \u0433\u043e\u0442\u043e\u0432\u043e\u0435 </font><font alpha='#4C'>\u0438\u0437\u0434\u0435\u043b\u0438\u0435 \u043c\u043e\u0436\u0435\u0442 \u0432\u043e\u0437\u043c\u0435\u0441\u0442\u0438\u0442\u044c </font><font alpha='#25'>         \u0432\u044b\u0431  \u043b \u043d\u0435\u0441\u043a\u043e\u043b\u044c   \u043a\u0443   \u043e\u0432  \u0434\u043b\u044f \u0438        \u0438\u044f  \u0430  \u0446\u0435   \u0442\u0435     </font>\n\n<font alpha='#4C'>\u0414\u0430\u043b\u044c\u043d\u0435\u0439\u0448\u0435\u0435 \u043f\u0440\u0438\u0434\u0430\u043d\u0438\u0435 \u0444\u043e\u0440\u043c\u044b \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e</font><font alpha='#80'> \u0432\u0442\u043e\u0440\u043e\u0433\u043e \u043a\u0443\u0441\u043a\u0430 \u0441\u0442\u0430\u043b\u0433\u0440\u0438\u043c\u0430 </font>\u043f\u043e\u0434\u0445\u043e\u0434\u044f\u0449\u0435\u0439 \u0444\u043e\u0440\u043c\u044b \u0434\u0430\u0435\u0442 \u0441\u0440\u0430\u0432\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u043e \u0443\u0434\u043e\u0432\u043b\u0435\u0442\u0432\u043e\u0440\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u0440\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u044b. \u0418\u0437\u0434\u0435\u043b\u0438\u0435 \u0438\u043c\u0435\u0435\u0442 \u0433\u0440\u0443\u0431\u0443\u044e \u043f\u043e\u0432\u0435\u0440\u0445\u043d\u043e\u0441\u0442\u044c, <font alpha='#80'>\u043d\u043e \u043c\u043e\u0436\u0435\u0442 \u043f\u043e\u043d\u0440\u0430\u0432\u0438\u0442\u044c\u0441\u044f \u043b\u044e\u0431\u0438\u0442\u0435\u043b\u044f\u043c </font><font alpha='#4C'>\u043d\u0435\u043e\u0431\u0440\u0430\u0431\u043e\u0442\u0430\u043d\u043d\u044b\u0445 \u043a\u0430\u043c\u043d\u0435\u0439 </font><font alpha='#25'>   \u0435\u0441\u043a\u043e\u043b\u044c \u0442\u0432\u0435   \u0439. \u041d\u043e \u0447\u0435   \u043e \u0432\u0441\u0435   \u0449\u0435 \u043d  \u0432 \u0435\u0442</font>\n\n</font><font alpha='#25'>      \u043e   \u0442      \u0442   \u043e     \u0432     \u0435 \u0433\u043e  \u043d\u0435   \u0434\u043b\u044f  \u043d\u0430     \u0436\u043d\u043e   \u0431\u044b   </font><font alpha='#4C'> \u0432 \u0440\u0442\u0443\u0442\u0438 \u0438 \u0443\u043a\u0440\u0430\u0448\u0435\u043d\u043e </font><font alpha='#80'>\u0442\u0440\u0430\u0434\u0438\u0446\u0438\u043e\u043d\u043d\u044b\u043c \u043d\u043e\u0440\u0434\u0441\u043a\u0438\u043c \u043e\u0440\u043d\u0430\u043c\u0435\u043d\u0442\u043e\u043c. \u0421\u043e\u0432\u0435\u0440\u0448\u0435\u043d\u043d\u0430\u044f \u0440\u0430\u0431\u043e\u0442\u0430. \u0411\u043b\u0430\u0433\u043e\u0434\u0430\u0440\u044f \u043f\u043e\u043c\u043e\u0449\u0438 \u0441\u043e \u0441\u0442\u043e\u0440\u043e\u043d\u044b \u043c\u043d\u0435 \u0443\u0434\u0430\u043b\u043e\u0441\u044c \u0440\u0430\u0437\u0434\u043e\u0431\u044b\u0442\u044c \u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u044b\u0435 \u043c\u0430\u0442\u0435\u0440\u0438\u0430\u043b\u044b \u0434\u043b\u044f \u0440\u0430\u0431\u043e\u0442\u044b \u0438 \u043f\u0435\u0440\u0435\u043f\u0440\u0430\u0432\u0438\u0442\u044c \u0438\u0437\u0434\u0435\u043b\u0438\u0435 \u043d\u0430 \u043c\u0430\u0442\u0435\u0440\u0438\u043a. \n\n\u042f <font alpha='#80'>\u043d\u0430\u043a\u043e\u043d\u0435\u0446-\u0442\u043e</font><font alpha='#4C'> \u043f\u0440\u043e\u0441\u043b\u0430\u0432\u043b\u044e\u0441\u044c! </font>"
+    },
+    {
+        "editor_id": "ccEDHSSE001_Certificate",
+        "type": "BOOK DESC",
+        "original": "\n<p align='center'><img src='img://Textures/Interface/Books/Illuminated_Letters/C_letter.png'><font color='#910000'><font size='30'>ertificate of Authenticity</font></font>\n\nThis item is certified to be of the highest quality Nordic stahlrim, hand selected for its purity, color, and magical affinity. Guaranteed to retain its luster and resist weathering for years to come.\n\n<font face='$HandwrittenFont'>Crafted by Hugin Ice-Shaper of Raven Rock, Master Artisan</font></p>",
+        "string": "\n<p align='center'><img src='img://Textures/Interface/Books/Illuminated_Letters/C_letter.png'><font color='#910000'><font size='30'>\u0421\u0432\u0438\u0434\u0435\u0442\u0435\u043b\u044c\u0441\u0442\u0432\u043e \u043e \u043f\u043e\u0434\u043b\u0438\u043d\u043d\u043e\u0441\u0442\u0438</font></font>\n\n\u042d\u0442\u043e\u0442 \u043f\u0440\u0435\u0434\u043c\u0435\u0442 \u044f\u0432\u043b\u044f\u0435\u0442\u0441\u044f \u0432\u044b\u043f\u043e\u043b\u043d\u0435\u043d\u043d\u044b\u043c \u0438\u0437 \u043d\u043e\u0440\u0434\u0441\u043a\u043e\u0433\u043e \u0441\u0442\u0430\u043b\u0433\u0440\u0438\u043c\u0430 \u0432\u044b\u0441\u043e\u0447\u0430\u0439\u0448\u0435\u0433\u043e \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u0430, \u043e\u0442\u043e\u0431\u0440\u0430\u043d\u043d\u043e\u0433\u043e \u0437\u0430 \u0447\u0438\u0441\u0442\u043e\u0442\u0443, \u0446\u0432\u0435\u0442 \u0438 \u043c\u0430\u0433\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u0441\u0432\u043e\u0439\u0441\u0442\u0432\u0430. \u0418\u0437\u0433\u043e\u0442\u043e\u0432\u0438\u0442\u0435\u043b\u044c \u0433\u0430\u0440\u0430\u043d\u0442\u0438\u0440\u0443\u0435\u0442, \u0447\u0442\u043e \u043f\u0440\u0435\u0434\u043c\u0435\u0442 \u043d\u0430 \u0434\u043e\u043b\u0433\u0438\u0435 \u0433\u043e\u0434\u044b \u0441\u043e\u0445\u0440\u0430\u043d\u0438\u0442 \u0441\u0432\u043e\u0439 \u0431\u043b\u0435\u0441\u043a \u0438 \u043d\u0435 \u0431\u0443\u0434\u0435\u0442 \u043f\u043e\u0434\u0432\u0435\u0440\u0436\u0435\u043d \u0432\u043b\u0438\u044f\u043d\u0438\u044e \u0432\u0440\u0435\u043c\u0435\u043d\u0438.\n\n<font face='$HandwrittenFont'>\u0418\u0437\u0433\u043e\u0442\u043e\u0432\u043b\u0435\u043d\u043e \u0425\u0443\u0433\u0438\u043d\u043e\u043c \u041b\u0435\u0434\u044f\u043d\u044b\u043c \u041a\u0440\u043e\u0435\u043c, \u043c\u0430\u0441\u0442\u0435\u0440\u043e\u043c-\u0440\u0435\u043c\u0435\u0441\u043b\u0435\u043d\u043d\u0438\u043a\u043e\u043c</font></p>"
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "type": "QUST CNAM",
+        "original": "I have located the craftsman, but a pair of bandits seem to have found him first. I should search the area before anything of value is lost.",
+        "string": "\u041c\u043d\u0435 \u0443\u0434\u0430\u043b\u043e\u0441\u044c \u043d\u0430\u0439\u0442\u0438 \u0440\u0435\u043c\u0435\u0441\u043b\u0435\u043d\u043d\u0438\u043a\u0430, \u043d\u043e, \u043f\u043e\u0445\u043e\u0436\u0435, \u043f\u0430\u0440\u0430 \u0431\u0430\u043d\u0434\u0438\u0442\u043e\u0432 \u043c\u0435\u043d\u044f \u043e\u043f\u0435\u0440\u0435\u0434\u0438\u043b\u0430. \u041d\u0443\u0436\u043d\u043e \u043e\u0431\u044b\u0441\u043a\u0430\u0442\u044c \u043e\u043a\u0440\u0435\u0441\u0442\u043d\u043e\u0441\u0442\u0438, \u043f\u043e\u043a\u0430 \u0446\u0435\u043d\u043d\u043e\u0441\u0442\u0438 \u043d\u0435 \u043f\u0440\u043e\u043f\u0430\u043b\u0438 \u043d\u0430\u0432\u0441\u0435\u0433\u0434\u0430."
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "type": "QUST CNAM",
+        "original": "Hugin Ice-Shaper met an untimely fate. I recovered his belongings before they could be looted by reavers. With what is left of his notes, perhaps I can continue his work.",
+        "string": "\u0425\u0443\u0433\u0438\u043d \u041b\u0435\u0434\u044f\u043d\u043e\u0439 \u041a\u0440\u043e\u0439 \u0431\u0435\u0437\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u043e \u043f\u043e\u0433\u0438\u0431. \u041c\u043d\u0435 \u0443\u0434\u0430\u043b\u043e\u0441\u044c \u043d\u0430\u0439\u0442\u0438 \u0435\u0433\u043e \u0432\u0435\u0449\u0438 \u043f\u0440\u0435\u0436\u0434\u0435, \u0447\u0435\u043c \u0434\u043e \u043d\u0438\u0445 \u0434\u043e\u0431\u0440\u0430\u043b\u0438\u0441\u044c \u0440\u0430\u0437\u0431\u043e\u0439\u043d\u0438\u043a\u0438. \u0412\u043e\u0437\u043c\u043e\u0436\u043d\u043e, \u043f\u043e \u0435\u0433\u043e \u0437\u0430\u043f\u0438\u0441\u044f\u043c \u044f \u0441\u043c\u043e\u0433\u0443 \u043f\u0440\u043e\u0434\u043e\u043b\u0436\u0438\u0442\u044c \u0435\u0433\u043e \u0440\u0430\u0431\u043e\u0442\u0443."
+    },
+    {
+        "editor_id": "ccEDHSSE001_NorJewelryEnchanting",
+        "type": "PERK DESC",
+        "original": "Frost enchantments are 25% stronger.",
+        "string": "\u0417\u0430\u0447\u0430\u0440\u043e\u0432\u0430\u043d\u0438\u044f \u0441 \u044d\u0444\u0444\u0435\u043a\u0442\u043e\u043c \u0445\u043e\u043b\u043e\u0434\u0430 \u043d\u0430 25% \u0441\u0438\u043b\u044c\u043d\u0435\u0435."
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "type": "QUST CNAM",
+        "original": "I've heard traders are selling unique jewelry from Solstheim. I should see what they have to offer.",
+        "string": "\u0413\u043e\u0432\u043e\u0440\u044f\u0442, \u0447\u0442\u043e \u0442\u043e\u0440\u0433\u043e\u0432\u0446\u044b \u0438\u043d\u043e\u0433\u0434\u0430 \u043f\u0440\u043e\u0434\u0430\u044e\u0442 \u0443\u043d\u0438\u043a\u0430\u043b\u044c\u043d\u044b\u0435 \u0434\u0440\u0430\u0433\u043e\u0446\u0435\u043d\u043d\u043e\u0441\u0442\u0438 c \u0421\u043e\u043b\u0441\u0442\u0435\u0439\u043c\u0430. \u041d\u0430\u0434\u043e \u0443\u0437\u043d\u0430\u0442\u044c, \u0447\u0442\u043e \u0443 \u043d\u0438\u0445 \u0435\u0441\u0442\u044c."
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "type": "QUST CNAM",
+        "original": "This jewelry is made exclusively by a man named Hugin Ice-Shaper in Solstheim with rare stalhrim ore. Perhaps the craftsman has more items for sale. I should visit him in Raven Rock.",
+        "string": "\u0422\u0430\u043a\u0438\u0435 \u0434\u0440\u0430\u0433\u043e\u0446\u0435\u043d\u043d\u043e\u0441\u0442\u0438 \u0438\u0437\u0433\u043e\u0442\u0430\u0432\u043b\u0438\u0432\u0430\u0435\u0442 \u0438\u0437 \u0440\u0435\u0434\u043a\u043e\u0439 \u0441\u0442\u0430\u043b\u0433\u0440\u0438\u043c\u043e\u0432\u043e\u0439 \u0440\u0443\u0434\u044b \u0442\u043e\u043b\u044c\u043a\u043e \u043e\u0434\u0438\u043d \u0447\u0435\u043b\u043e\u0432\u0435\u043a \u2013 \u0425\u0443\u0433\u0438\u043d \u041b\u0435\u0434\u044f\u043d\u043e\u0439 \u041a\u0440\u043e\u0439 c \u0421\u043e\u043b\u0441\u0442\u0435\u0439\u043c\u0430. \u0412\u043e\u0437\u043c\u043e\u0436\u043d\u043e, \u0443 \u043d\u0435\u0433\u043e \u0435\u0441\u0442\u044c \u0435\u0449\u0435 \u043f\u0440\u0435\u0434\u043c\u0435\u0442\u044b \u043d\u0430 \u043f\u0440\u043e\u0434\u0430\u0436\u0443. \u041d\u0443\u0436\u043d\u043e \u043d\u0430\u0432\u0435\u0441\u0442\u0438\u0442\u044c \u0435\u0433\u043e \u0432 \u0412\u043e\u0440\u043e\u043d\u044c\u0435\u0439 \u0421\u043a\u0430\u043b\u0435."
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "type": "QUST CNAM",
+        "original": "I stumbled on a bandit attack near Raven Rock. I should search the area before anything of value is lost.",
+        "string": "\u0411\u043b\u0438\u0437 \u0412\u043e\u0440\u043e\u043d\u044c\u0435\u0439 \u0421\u043a\u0430\u043b\u044b \u043d\u0430 \u043c\u0435\u043d\u044f \u043d\u0430\u043f\u0430\u043b\u0438 \u0431\u0430\u043d\u0434\u0438\u0442\u044b. \u041d\u0443\u0436\u043d\u043e \u043e\u0431\u044b\u0441\u043a\u0430\u0442\u044c \u043e\u043a\u0440\u0435\u0441\u0442\u043d\u043e\u0441\u0442\u0438, \u043f\u043e\u043a\u0430 \u0446\u0435\u043d\u043d\u043e\u0441\u0442\u0438 \u043d\u0435 \u043f\u0440\u043e\u043f\u0430\u043b\u0438 \u043d\u0430\u0432\u0441\u0435\u0433\u0434\u0430."
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "type": "QUST CNAM",
+        "original": "Using Hugin Ice-Shaper's notes, I learned to forge my own pieces of Nordic Jewelry.",
+        "string": "\u0421 \u043f\u043e\u043c\u043e\u0449\u044c\u044e \u0437\u0430\u043f\u0438\u0441\u0435\u0439 \u0425\u0443\u0433\u0438\u043d\u0430 \u041b\u0435\u0434\u044f\u043d\u043e\u0433\u043e \u041a\u0440\u043e\u044f \u043c\u043d\u0435 \u0443\u0434\u0430\u043b\u043e\u0441\u044c \u043d\u0430\u0443\u0447\u0438\u0442\u044c\u0441\u044f \u0438\u0437\u0433\u043e\u0442\u0430\u0432\u043b\u0438\u0432\u0430\u0442\u044c \u043d\u043e\u0440\u0434\u0441\u043a\u0438\u0435 \u0434\u0440\u0430\u0433\u043e\u0446\u0435\u043d\u043d\u043e\u0441\u0442\u0438."
+    }
+]

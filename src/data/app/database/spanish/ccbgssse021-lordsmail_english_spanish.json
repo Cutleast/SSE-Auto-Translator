@@ -1,0 +1,308 @@
+[
+    {
+        "editor_id": "ccBGSSSE021LordsMail",
+        "type": "ARMO FULL",
+        "original": "Lord's Mail",
+        "string": "Cota del Se\u00f1or"
+    },
+    {
+        "editor_id": "ccBGSSSE021_ArmorAbsorbHealth_Spell",
+        "type": "SPEL FULL",
+        "original": "Lord's Mail Absorb Health",
+        "string": "Absorci\u00f3n de salud de la Cota del Se\u00f1or"
+    },
+    {
+        "editor_id": "ccBGSSSE021_ArmorAsborbHealthCloak_Effect",
+        "type": "MGEF FULL",
+        "original": "Lord's Mail Cloak",
+        "string": "Manto de la Cota del Se\u00f1or"
+    },
+    {
+        "editor_id": "ccBGSSSE021_ArmorAbsorbHealth_FFContact_Effect",
+        "type": "MGEF FULL",
+        "original": "Lord's Mail Absorb Health",
+        "string": "Absorci\u00f3n de salud de la Cota del Se\u00f1or"
+    },
+    {
+        "editor_id": "ccBGSSSE021_ArmorAbsorbHealthCloak_Ench",
+        "type": "ENCH FULL",
+        "original": "Lord's Mail",
+        "string": "Cota del Se\u00f1or"
+    },
+    {
+        "editor_id": "ccBGSSSE021_EnchResistMagicConstantSelf",
+        "type": "MGEF DNAM",
+        "original": "Increases Magic Resistance by <mag>%.",
+        "string": "Aumenta la resistencia a la magia en un <mag>%."
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMail_KynarethsBaneDisease",
+        "type": "SPEL FULL",
+        "original": "Bane of Kynareth",
+        "string": "Perdici\u00f3n de Kynareth"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailDiseaseUncleansed",
+        "type": "MGEF DNAM",
+        "original": "Wearer suffers a reduction of <50> points to Health, Stamina, and Magicka.",
+        "string": "El portador sufre una reducci\u00f3n de <50> puntos de salud, aguante y magia."
+    },
+    {
+        "editor_id": "ccBGSSSE021_DisDamageMagicka",
+        "type": "MGEF FULL",
+        "original": "Reduced Magicka",
+        "string": "Magia reducida"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailDescription",
+        "type": "MGEF DNAM",
+        "original": "Opponents in melee range have <5> points of health absorbed per second.  Increases Poison Resistance by <75>%.  Increases Magic Resistance by <17>%.",
+        "string": "A los rivales al alcance de cuerpo a cuerpo se les absorben <5> puntos de salud por segundo. Aumenta la resistencia al veneno en un <75>%. Aumenta la resistencia a la magia en un <17>%."
+    },
+    {
+        "editor_id": "ccBGSSSE021_ChestKey",
+        "type": "KEYM FULL",
+        "original": "Key to Alik'r Mercenary Chest",
+        "string": "Llave del cofre del mercenario Alik'r"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "type": "QUST NNAM",
+        "original": "Read the Emperor's Letter",
+        "string": "Leer la carta del emperador"
+    },
+    {
+        "editor_id": "ccBGSSSE021_EnchResistPoisonConstantSelf",
+        "type": "MGEF FULL",
+        "original": "Resist Poison",
+        "string": "Resistencia al veneno"
+    },
+    {
+        "editor_id": "ccBGSSSE021_DisDamageHealth",
+        "type": "MGEF FULL",
+        "original": "Reduced Health",
+        "string": "Salud reducida"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "type": "QUST FULL",
+        "original": "Gift of Kynareth",
+        "string": "Don de Kynareth"
+    },
+    {
+        "editor_id": "ccBGSSSE021_EncAlikrBoss2HM01",
+        "type": "NPC_ FULL",
+        "original": "Majid the Mad",
+        "string": "Majid el Loco"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "type": "QUST NNAM",
+        "original": "Confront the Alik'r Mercenaries",
+        "string": "Enfrentarse a los mercenarios Alik'r"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuestNote",
+        "type": "BOOK FULL",
+        "original": "Letter to General Tullius",
+        "string": "Carta al general Tulio"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "type": "QUST NNAM",
+        "original": "Cleanse the Lord's Mail in Solitude",
+        "string": "Purificar la Cota del Se\u00f1or en Soledad"
+    },
+    {
+        "editor_id": "ccBGSSSE021_DisDamageMagicka",
+        "type": "MGEF DNAM",
+        "original": "Drains <mag> points of Magicka.",
+        "string": "Consume <mag> puntos de magia."
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "type": "QUST NNAM",
+        "original": "Retrieve the Lord's Mail",
+        "string": "Recuperar la Cota del Se\u00f1or"
+    },
+    {
+        "editor_id": "ccBGSSSE021_DisDamageStamina",
+        "type": "MGEF FULL",
+        "original": "Reduced Stamina",
+        "string": "Aguante reducido"
+    },
+    {
+        "editor_id": "ccBGSSSE021_DisDamageStamina",
+        "type": "MGEF DNAM",
+        "original": "Drains <mag> points from stamina.",
+        "string": "Consume <mag> puntos de aguante."
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailDescription",
+        "type": "MGEF FULL",
+        "original": "Lord's Mail",
+        "string": "Cota del Se\u00f1or"
+    },
+    {
+        "editor_id": "ccBGSSSE021_EnchResistPoisonConstantSelf",
+        "type": "MGEF DNAM",
+        "original": "Increases Poison Resistance by <mag>%.",
+        "string": "Aumenta la resistencia al veneno en un <mag>%."
+    },
+    {
+        "editor_id": "ccBGSSSE021_DisDamageHealth",
+        "type": "MGEF DNAM",
+        "original": "Reduces Health by <mag>.",
+        "string": "Reduce la salud en <mag>."
+    },
+    {
+        "editor_id": "ccBGSSSE021_ChestLordsMail",
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Cofre"
+    },
+    {
+        "editor_id": "ccBGSSSE021_EncRedguardMercMissileM01",
+        "type": "NPC_ FULL",
+        "original": "Alik'r Mercenary",
+        "string": "Mercenario Alik'r"
+    },
+    {
+        "editor_id": "ccBGSSSE021_EnchResistMagicConstantSelf",
+        "type": "MGEF FULL",
+        "original": "Resist Magic",
+        "string": "Resistencia a la magia"
+    },
+    {
+        "editor_id": "ccBGSSSE021_EncRedguardMercMagicM01",
+        "type": "NPC_ FULL",
+        "original": "Alik'r Mercenary",
+        "string": "Mercenario Alik'r"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailDiseaseUncleansed",
+        "type": "MGEF FULL",
+        "original": "Lord's Mail (Cursed)",
+        "string": "Cota del Se\u00f1or (maldita)"
+    },
+    {
+        "editor_id": "ccBGSSSE021_RedguardClothesGreen",
+        "type": "ARMO FULL",
+        "original": "Redguard Clothes",
+        "string": "Ropa de guardia rojo"
+    },
+    {
+        "editor_id": "ccBGSSSE021_RedguardHoodGreen",
+        "type": "ARMO FULL",
+        "original": "Redguard Hood",
+        "string": "Capucha de guardia rojo"
+    },
+    {
+        "editor_id": "ccBGSSSE021_RedguardClothesTan",
+        "type": "ARMO FULL",
+        "original": "Redguard Clothes",
+        "string": "Ropa de guardia rojo"
+    },
+    {
+        "editor_id": "ccBGSSSE021_ChestArmorNote",
+        "type": "BOOK FULL",
+        "original": "Majid - Please Read",
+        "string": "Majid - Leer"
+    },
+    {
+        "editor_id": "ccBGSSSE021_RedguardHoodTan",
+        "type": "ARMO FULL",
+        "original": "Redguard Hood",
+        "string": "Capucha de guardia rojo"
+    },
+    {
+        "editor_id": "ccBGSSSE021_InvisibleShrineOfKynarethActivator",
+        "type": "ACTI FULL",
+        "original": "Shrine of Kynareth",
+        "string": "Capilla de Kynareth"
+    },
+    {
+        "editor_id": "ccBGSSSE021_ArmorCursed_Ench",
+        "type": "ENCH FULL",
+        "original": "Lord's Mail (Cursed)",
+        "string": "Cota del Se\u00f1or (maldita)"
+    },
+    {
+        "editor_id": "ccBGSSSE021_RedguardHoodRed",
+        "type": "ARMO FULL",
+        "original": "Redguard Hood",
+        "string": "Capucha de guardia rojo"
+    },
+    {
+        "editor_id": "ccBGSSSE021LordsMail_Cursed",
+        "type": "ARMO FULL",
+        "original": "Lord's Mail (Cursed)",
+        "string": "Cota del Se\u00f1or (maldita)"
+    },
+    {
+        "editor_id": "SolitudeCastleDour",
+        "type": "CELL FULL",
+        "original": "Castle Dour",
+        "string": "Castillo Severo"
+    },
+    {
+        "editor_id": "SolitudeTempleoftheDivines",
+        "type": "CELL FULL",
+        "original": "Temple of the Divines",
+        "string": "Templo de los Divinos"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "type": "QUST CNAM",
+        "original": "I've confronted the Alik'r mercenaries and found a locked chest.  I just need to find the key...",
+        "string": "Me he enfrentado a los mercenarios Alik'r y he encontrado un cofre cerrado. Solo tengo que dar con la llave..."
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "type": "QUST CNAM",
+        "original": "A letter from the Emperor pertaining to an Imperial artifact was found at Castle Dour.  I should read it and find out what it's about.",
+        "string": "Una carta del emperador relacionada con un artefacto imperial hallado en Castillo Severo. Deber\u00eda leerla y averiguar de qu\u00e9 se trata."
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "type": "QUST CNAM",
+        "original": "The Lord's Mail has been retreived, blessed by Kynareth, and can now be worn safely.",
+        "string": "La Cota del Se\u00f1or ha sido recuperada y bendecida por Kynareth. Ahora no es peligroso pon\u00e9rsela."
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMail_KynarethsBaneDisease",
+        "type": "SPEL DESC",
+        "original": "Wearer suffers a reduction of <50> points to Health, Stamina, and Magicka.",
+        "string": "El portador sufre una reducci\u00f3n de <50> puntos de salud, aguante y magia."
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "type": "QUST CNAM",
+        "original": "I've retrieved The Lord's Mail, the legendary Imperial armor.  Before it can be worn, it must be cleansed at the shrine of Kynareth in Solitude.",
+        "string": "He recuperado la Cota del Se\u00f1or, la legendaria armadura imperial. Antes de poder llevarla, debe ser purificada en la capilla de Kynareth de Soledad."
+    },
+    {
+        "editor_id": "ccBGSSSE021_MessageCleanseSuccess",
+        "type": "MESG DESC",
+        "original": "The Lord's Mail has been cleansed",
+        "string": "La Cota del Se\u00f1or ha sido purificada."
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuestNote",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"16\">\n15th of Last Seed, 4E 201\n\nGeneral Tullius,\n\nDuring these times of war, I strongly believe it is important to inspire our population through a show of military strength and pageantry.  To the younger among us, nothing is as inspiring as the sight of an Imperial Soldier wearing the finest armors our Empire has ever set its hands to.\n\nIt is for this reason I am formally requesting that several Imperial relics be placed back into the service of the Empire, and distributed among high ranking officials. We must do all we can to inspire awe, and help galvanize the image of our cause among the populace.\n\nIt has come to my attention that a paticular artifact, the Armor of Morihaus, Gift of Kynareth, also known as The Lord's Mail, has recently gone missing.  It is believed a group of Redguard mercenaries have stolen it with the aim to sell to the highest bidder.  They were last seen traveling south of Fort Greymoor.\n\nFind these mercenaries, and reclaim The Lord's Mail.  Wear it proudly.  Show the people that Kynareth favors the realm of the Empire.\n\nEmperor Titus Mede II\n</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"16\">\nDecimoquinto d\u00eda de \u00daltima semilla, 201 de la Cuarta Era\n\nGeneral Tulio:\n\nDurante estos tiempos de guerra, creo firmemente que es importante inspirar a la poblaci\u00f3n mediante una exhibici\u00f3n de fuerza y esplendor militares. Para los m\u00e1s j\u00f3venes entre nosotros, nada inspira m\u00e1s que la visi\u00f3n de un soldado imperial llevando la mejor armadura que nuestro Imperio haya tenido jam\u00e1s.\n\nPor esta raz\u00f3n voy a solicitar formalmente que varias reliquias imperiales vuelvan a ponerse al servicio del Imperio y se distribuyan entre oficiales de alto rango. Debemos hacer todo lo posible para inspirar asombro y ayudar a galvanizar la imagen de nuestra causa entre el pueblo.\n\nHe notado que cierto artefacto, la Armadura de Morihaus, Don de Kynareth, tambi\u00e9n conocida como la Cota del Se\u00f1or, ha desaparecido recientemente. Se cree que un grupo de mercenarios de la Guardia Roja la ha robado con el prop\u00f3sito de vend\u00e9rsela al mejor postor. Fueron vistos por \u00faltima vez viajando hacia el sur del fuerte P\u00e1ramo Gris.\n\nEncuentra a estos mercenarios y recupera la Cota del Se\u00f1or. Ll\u00e9vala con orgullo. Demuestra al pueblo que Kynareth favorece al reino del Imperio.\n\nEmperador Tito Mede II\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "type": "QUST CNAM",
+        "original": "I've found a letter addressed to General Tullius from the Emperor of Tamriel instructing that The Lord's Mail, a treasured Imperial relic, be found and reclaimed.  A band of Redguard mercenaries are rumored to have taken it.  I should locate their whereabouts and see if I can obtain the artifact.",
+        "string": "He encontrado una carta del emperador de Tamriel dirigida al general Tulio, en la que ordena la recuperaci\u00f3n de la Cota del Se\u00f1or, una valiosa reliquia imperial. Se rumorea que una banda de mercenarios de la Guardia Roja se ha apropiado de ella. Deber\u00eda averiguar d\u00f3nde se encuentran para ver si puedo hacerme con el artefacto."
+    },
+    {
+        "editor_id": "ccBGSSSE021_ChestArmorNote",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"16\">\nMajid,\n\nAs we discussed, this armor is extremely valuable.  Please protect it at all costs.  You and your men should sleep in shifts in order to prevent any surprises, and dispose of anyone you do not recognize.  We cannot be found out.\n\nThe buyer will be traveling to meet you in the coming days.  We stand to make a small fortune, and you and your men will get the proper cut of the profits, as agreed.  The loss of such an artifact will bring disgrace to the Empire, and we should all be proud.\n\nPlease be aware, it is extremely important that you do not put this armor on.  I did not believe the stories, but when I put it on I was overcome with an uneasy fatigue.  Do not tell the prospective buyer about this lest they change their minds.  Let them seek out Kynareth's blessing themselves.\n</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"16\">\nMajid:\n\nComo hablamos, esta armadura es extremadamente valiosa. Por favor, prot\u00e9gela a cualquier precio. Tus hombres y t\u00fa deber\u00edais dormir por turnos para impedir sorpresas y liquidar a todo aquel al que no reconozc\u00e1is. No podemos ser descubiertos.\n\nEl comprador viajar\u00e1 para encontrarse contigo en los pr\u00f3ximos d\u00edas. Haremos una peque\u00f1a fortuna y tus hombres y t\u00fa recibir\u00e9is la parte correspondiente de los beneficios, tal y como acordamos. La p\u00e9rdida de un artefacto como este traer\u00e1 la desgracia al Imperio y todos deber\u00edamos enorgullecernos por ello.\n\nTen en cuenta que es extremadamente importante que no te pongas la armadura. No me creo las historias, pero cuando me la puse, me invadi\u00f3 una molesta fatiga. No le hables de esto al posible comprador, para que no cambie de opini\u00f3n. Que busque \u00e9l mismo la bendici\u00f3n de Kynareth.\n</font>"
+    }
+]

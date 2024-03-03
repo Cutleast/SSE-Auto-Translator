@@ -1,0 +1,254 @@
+[
+    {
+        "editor_id": "ccQDRSSE002_ShelterAct",
+        "type": "ACTI RNAM",
+        "original": "Use",
+        "string": "Usar"
+    },
+    {
+        "editor_id": "ccQDRSSE002_ShelterAct",
+        "type": "ACTI FULL",
+        "original": "Shelter",
+        "string": "Refugio"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BuildCampEffect",
+        "type": "MGEF FULL",
+        "original": "Build Camp",
+        "string": "Construir campamento"
+    },
+    {
+        "editor_id": "ccQDRSSE002_ShelterOptionMsg",
+        "type": "MESG ITXT",
+        "original": "Cancel",
+        "string": "Cancelar"
+    },
+    {
+        "editor_id": "ccQDRSSE002_ShelterOptionMsg",
+        "type": "MESG ITXT",
+        "original": "Sleep",
+        "string": "Dormir"
+    },
+    {
+        "editor_id": "ccQDRSSE002_ShelterOptionMsg",
+        "type": "MESG ITXT",
+        "original": "Break Camp",
+        "string": "Deshacer campamento"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampfireFurn",
+        "type": "FURN FULL",
+        "original": "Campfire",
+        "string": "Hoguera"
+    },
+    {
+        "editor_id": "ccQDRSSE002_MainQuest",
+        "type": "QUST FULL",
+        "original": "Camping Quest",
+        "string": "Misi\u00f3n de acampada"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingSupplies",
+        "type": "ALCH FULL",
+        "original": "Camping Supplies",
+        "string": "Suministros de acampada"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BuildCampEffect",
+        "type": "MGEF DNAM",
+        "original": "Build a campsite when outdoors.",
+        "string": "Monta un campamento al aire libre."
+    },
+    {
+        "editor_id": "ccQDRSSE002_BedrollNoSandbox",
+        "type": "FURN FULL",
+        "original": "Bed Roll Ground",
+        "string": "Terreno para saco de dormir"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BuildCampPrompt",
+        "type": "MESG ITXT",
+        "original": "Ok",
+        "string": "Aceptar"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BuildCampPrompt",
+        "type": "MESG ITXT",
+        "original": "Cancel",
+        "string": "Cancelar"
+    },
+    {
+        "editor_id": "ccQDRSSE002_LoadScreen2",
+        "type": "LSCR DESC",
+        "original": "You can cook some meals over the open flames of your campfire at campsites that you build.",
+        "string": "Puedes cocinar algunos alimentos en el fuego de la hoguera de tu campamento."
+    },
+    {
+        "editor_id": "ccQDRSSE002_InCityCheckSpell",
+        "type": "SPEL FULL",
+        "original": "In City Check Spell",
+        "string": "Hechizo de control en la ciudad"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BreakCampPrompt",
+        "type": "MESG ITXT",
+        "original": "Cancel",
+        "string": "Cancelar"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingHelp",
+        "type": "MESG FULL",
+        "original": "Camping",
+        "string": "Campamento"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampMapMarkerRefSolstheim001",
+        "type": "REFR FULL",
+        "original": "Campsite",
+        "string": "Campamento"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampMapMarkerRefTamriel001",
+        "type": "REFR FULL",
+        "original": "Campsite",
+        "string": "Campamento"
+    },
+    {
+        "editor_id": "ccQDRSSE002_LoadScreen1",
+        "type": "LSCR DESC",
+        "original": "If you build a campsite, its location will be marked on your map, so you can fast travel to it later.",
+        "string": "Si montas un campamento, su posici\u00f3n quedar\u00e1 marcada en el mapa, para que puedas viajar r\u00e1pidamente a \u00e9l m\u00e1s tarde."
+    },
+    {
+        "editor_id": "ccQDRSSE002_InCityCheckEffect",
+        "type": "MGEF FULL",
+        "original": "In City Check",
+        "string": "Control en la ciudad"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BreakCampPrompt",
+        "type": "MESG ITXT",
+        "original": "Ok",
+        "string": "Aceptar"
+    },
+    {
+        "editor_id": "ccQDRSSE002_SwimCheckEffect",
+        "type": "MGEF FULL",
+        "original": "Swimming Check",
+        "string": "Control de nataci\u00f3n"
+    },
+    {
+        "editor_id": "ccQDRSSE002_IdleQuest",
+        "type": "QUST FULL",
+        "original": "Camping Idle Quest",
+        "string": "Misi\u00f3n de acampada inactiva"
+    },
+    {
+        "editor_id": "ccQDRSSE002_SwimCheckSpell",
+        "type": "SPEL FULL",
+        "original": "Swim Check Spell",
+        "string": "Hechizo de control de nataci\u00f3n"
+    },
+    {
+        "editor_id": "ccQDRSSE002_Chair",
+        "type": "FURN FULL",
+        "original": "Crate",
+        "string": "Caja"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedHereMsg",
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite here.",
+        "string": "Aqu\u00ed no puedes montar un campamento."
+    },
+    {
+        "editor_id": "ccQDRSSE002_ShelterOptionMsg",
+        "type": "MESG DESC",
+        "original": "What do you do?",
+        "string": "\u00bfQu\u00e9 haces?"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BuildCampPrompt",
+        "type": "MESG DESC",
+        "original": "Build a campsite here?",
+        "string": "\u00bfMontar un campamento aqu\u00ed?"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedCombatMsg",
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite while in combat.",
+        "string": "No puedes montar un campamento mientras combates."
+    },
+    {
+        "editor_id": "ccQDRSSE002_BreakCampPrompt",
+        "type": "MESG DESC",
+        "original": "Are you sure you want to break camp?",
+        "string": "\u00bfSeguro que quieres deshacer el campamento?"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedGenericMsg",
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite right now.",
+        "string": "Ahora mismo no puedes montar un campamento."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedInteriorMsg",
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite while indoors.",
+        "string": "No puedes montar un campamento dentro de otro edificio."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedMountedMsg",
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite while mounted.",
+        "string": "No puedes montar un campamento mientras sigas en una montura."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedCityMsg",
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite in cities or towns.",
+        "string": "No puedes montar un campamento en ciudades o aldeas."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedSwimmingMsg",
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite while swimming.",
+        "string": "No puedes montar un campamento mientras nadas."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedGroundMsg",
+        "type": "MESG DESC",
+        "original": "You don't have enough level terrain to camp here.",
+        "string": "Este terreno no es lo bastante llano para montar un campamento."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedSpaceMsg",
+        "type": "MESG DESC",
+        "original": "You don't have enough space to build a campsite here.",
+        "string": "No hay suficiente espacio para montar un campamento."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedJumpingMsg",
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite while in the air.",
+        "string": "No puedes montar un campamento mientras est\u00e1s en el aire."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedSittingMsg",
+        "type": "MESG DESC",
+        "original": "You can't build a camp while using something else.",
+        "string": "No puedes montar un campamento mientras est\u00e9s usando otro objeto."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingHelp",
+        "type": "MESG DESC",
+        "original": "Campsites allow you to stay rested and warm while exploring the wilderness. Create Camping Supplies at a forge. You can use Camping Supplies to build a campsite while outdoors.\n\nWhile at your campsite, you can sleep in your makeshift shelter or cook a limited number of meals over the campfire.\n\nYour campsite's location is marked on your map, so you can find and fast travel to it later.\n\nOnly one campsite can be built at a time. Building a new campsite will remove the previous one, and your campsite's map marker will be updated to the new campsite.",
+        "string": "Los campamentos te permiten descansar y mantenerte caliente mientras exploras lo desconocido. Crea suministros de acampada en una forja. Puedes usar los suministros de acampada para montar un campamento mientras est\u00e1s al aire libre.\n\nMientras est\u00e9s en tu campamento, podr\u00e1s dormir en tu refugio provisional o cocinar un n\u00famero limitado de comidas en la hoguera.\n\nLa posici\u00f3n de tu campamento est\u00e1 marcada en el mapa, para que puedas localizarlo y viajar r\u00e1pidamente a \u00e9l m\u00e1s tarde.\n\nSolo puedes tener montado un campamento a la vez. Si montas uno nuevo, se eliminar\u00e1 el anterior y el marcador de campamento en el mapa se actualizar\u00e1 con la nueva posici\u00f3n."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingTutorialMsg",
+        "type": "MESG DESC",
+        "original": "Campsites allow you to rest and stay warm while exploring the wilderness. You can cook a limited number of meals over the campfire. Your campsite is marked on your map so you can locate and fast travel to it later.",
+        "string": "Los campamentos te permiten descansar y mantenerte caliente mientras exploras lo desconocido. Puedes cocinar un n\u00famero limitado de comidas en la hoguera. Tu campamento aparece marcado en el mapa para que puedas localizarlo y viajar r\u00e1pidamente a \u00e9l m\u00e1s tarde."
+    }
+]

@@ -1,0 +1,638 @@
+[
+    {
+        "editor_id": "EEJSSE001_AlchemySatchel",
+        "type": "CONT FULL",
+        "original": "Apothecary's Satchel",
+        "string": "Torba aptekarza"
+    },
+    {
+        "editor_id": "0EEJSSE001House",
+        "type": "CELL FULL",
+        "original": "Tundra Homestead",
+        "string": "Farma w Tundrze"
+    },
+    {
+        "editor_id": "EEJSSE001_NobleBedDbl",
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "\u0141\u00f3\u017cko"
+    },
+    {
+        "editor_id": "EEJSSE001_Safe",
+        "type": "CONT FULL",
+        "original": "Safe",
+        "string": "Sejf"
+    },
+    {
+        "editor_id": "EEJSSE001_CraftingAlchemyWorkbenchTabletop",
+        "type": "FURN FULL",
+        "original": "Alchemy Lab",
+        "string": "Laboratorium alchemiczne"
+    },
+    {
+        "editor_id": "EEJSSE001_NobleCupboard",
+        "type": "CONT FULL",
+        "original": "Cupboard",
+        "string": "Kredens"
+    },
+    {
+        "editor_id": "EEJSSE001_SmallChest",
+        "type": "CONT FULL",
+        "original": "Small Chest",
+        "string": "Ma\u0142a skrzynia"
+    },
+    {
+        "editor_id": "EEJSSE001_LargeSackNRS",
+        "type": "CONT FULL",
+        "original": "Sack",
+        "string": "Worek"
+    },
+    {
+        "editor_id": "EEJSSE001_DisplayCaseLgAngledTabletop",
+        "type": "DOOR FULL",
+        "original": "Display Case",
+        "string": "Gablota"
+    },
+    {
+        "editor_id": "EEJSSE001_Armchair",
+        "type": "FURN FULL",
+        "original": "Armchair",
+        "string": "Fotel"
+    },
+    {
+        "editor_id": "EEJSSE001_Basket03",
+        "type": "MISC FULL",
+        "original": "Basket",
+        "string": "Kosz"
+    },
+    {
+        "editor_id": "EEJSSE001_Basket01",
+        "type": "MISC FULL",
+        "original": "Basket",
+        "string": "Kosz"
+    },
+    {
+        "editor_id": "EEJSSE001_MiscJug",
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "Dzban"
+    },
+    {
+        "editor_id": "[05000B8A]",
+        "type": "REFR FULL",
+        "original": "Tundra Homestead",
+        "string": "Farma w Tundrze"
+    },
+    {
+        "editor_id": "EEJSSE001_PlatterNordic",
+        "type": "MISC FULL",
+        "original": "Platter",
+        "string": "Taca"
+    },
+    {
+        "editor_id": "EEJSSE001_OvenMarker",
+        "type": "FURN FULL",
+        "original": "Baking Surface",
+        "string": "Taca do pieczenia"
+    },
+    {
+        "editor_id": "EEJSSE001_EbonyClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_PortalGemredActivator",
+        "type": "ACTI FULL",
+        "original": "Ruby Paragon",
+        "string": "Rubinowy talizman"
+    },
+    {
+        "editor_id": "EEJSSE001_HouseIntLocation",
+        "type": "LCTN FULL",
+        "original": "Tundra Homestead",
+        "string": "Farma w Tundrze"
+    },
+    {
+        "editor_id": "EEJSSE001_PortalGemBlueActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_AurielsShieldActivator",
+        "type": "ACTI FULL",
+        "original": "Auriel's Shield",
+        "string": "Tarcza Auriela"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskNahkriinActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_DragonflyJarActivator",
+        "type": "ACTI FULL",
+        "original": "Dragonfly in a Jar",
+        "string": "Wa\u017cka w s\u0142oiku"
+    },
+    {
+        "editor_id": "EEJSSE001_IvoryClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskWoodenActivator",
+        "type": "ACTI FULL",
+        "original": "Wooden Mask",
+        "string": "Drewniana maska"
+    },
+    {
+        "editor_id": "EEJSSE001_HangingTundraCotton",
+        "type": "FLOR RNAM",
+        "original": "Harvest",
+        "string": "Zbierz"
+    },
+    {
+        "editor_id": "EEJSSE001_HangingLavenderHarvestable",
+        "type": "FLOR RNAM",
+        "original": "Harvest",
+        "string": "Zbierz"
+    },
+    {
+        "editor_id": "EEJSSE001_ButterflyJarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "0EEJSSE001HouseBasement",
+        "type": "CELL FULL",
+        "original": "Tundra Homestead, Cellar",
+        "string": "Farma w Tundrze, piwnica"
+    },
+    {
+        "editor_id": "EEJSSE001_TorstenSkullActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_GlassClawActivator",
+        "type": "ACTI FULL",
+        "original": "Glass Dragon Claw",
+        "string": "Szpon szklanego smoka"
+    },
+    {
+        "editor_id": "EEJSSE001_GlassClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskRahgotActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_SmithingChestNRS",
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Skrzynia"
+    },
+    {
+        "editor_id": "EEJSSE001_BeeJarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_CoralClawActivator",
+        "type": "ACTI FULL",
+        "original": "Coral Dragon Claw",
+        "string": "Szpon koralowego smoka"
+    },
+    {
+        "editor_id": "EEJSSE001_PortalGemGreenActivator",
+        "type": "ACTI FULL",
+        "original": "Emerald Paragon",
+        "string": "Szmaragdowy talizman"
+    },
+    {
+        "editor_id": "EEJSSE001_PortalGemGreenActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_MothJarActivator",
+        "type": "ACTI FULL",
+        "original": "Moth in a Jar",
+        "string": "\u0106ma w s\u0142oiku"
+    },
+    {
+        "editor_id": "EEJSSE001_MiscJugDwemer",
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "Dzban"
+    },
+    {
+        "editor_id": "EEJSSE001_InitiatesEwerActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskHevnoraakActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_EbonyClawActivator",
+        "type": "ACTI FULL",
+        "original": "Ebony Dragon Claw",
+        "string": "Szpon hebanowego smoka"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskFrostActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_Goblet01Dwemer",
+        "type": "MISC FULL",
+        "original": "Goblet",
+        "string": "Puchar"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskVolsungActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_FireflyJarActivator",
+        "type": "ACTI FULL",
+        "original": "Firefly in a Jar",
+        "string": "\u015awietlik w s\u0142oiku"
+    },
+    {
+        "editor_id": "EEJSSE001_SapphireClawActivator",
+        "type": "ACTI FULL",
+        "original": "Sapphire Dragon Claw",
+        "string": "Szpon szafirowego smoka"
+    },
+    {
+        "editor_id": "EEJSSE001_HangingTundraCotton",
+        "type": "FLOR FULL",
+        "original": "Dried Tundra Cotton",
+        "string": "Wysuszona bawe\u0142na z tundry"
+    },
+    {
+        "editor_id": "EEJSSE001_IvoryClawActivator",
+        "type": "ACTI FULL",
+        "original": "Ivory Dragon Claw",
+        "string": "Szpon ko\u015bcianego smoka"
+    },
+    {
+        "editor_id": "EEJSSE001_IngredientsCupboard",
+        "type": "CONT FULL",
+        "original": "Cupboard",
+        "string": "Kredens"
+    },
+    {
+        "editor_id": "EEJSSE001_RubyClawActivator",
+        "type": "ACTI FULL",
+        "original": "Ruby Dragon Claw",
+        "string": "Szpon rubinowego smoka"
+    },
+    {
+        "editor_id": "EEJSSE001_DragonflyJarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_TorstenSkullActivator",
+        "type": "ACTI FULL",
+        "original": "Torsten's Skull Key",
+        "string": "Klucz-czaszka Torstena"
+    },
+    {
+        "editor_id": "EEJSSE001_AurielsShieldActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_SearekSkullActivator",
+        "type": "ACTI FULL",
+        "original": "Saerek's Skull Key",
+        "string": "Klucz-czaszka Saereka"
+    },
+    {
+        "editor_id": "EEJSSE001_GoldenClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_PortalGemPurpleActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_MothJarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskVokunActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_SapphireClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_HangingLavenderHarvestable",
+        "type": "FLOR FULL",
+        "original": "Dried Lavender",
+        "string": "Wysuszona lawenda"
+    },
+    {
+        "editor_id": "EEJSSE001_RubyClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskKrosisActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_EmeraldClawActivator",
+        "type": "ACTI FULL",
+        "original": "Emerald Dragon Claw",
+        "string": "Szpon szmaragdowego smoka"
+    },
+    {
+        "editor_id": "EEJSSE001_PortalGemWhiteActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_IronClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_DiamondClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_GlazedCup01Dwemer",
+        "type": "MISC FULL",
+        "original": "Cup",
+        "string": "Kubek"
+    },
+    {
+        "editor_id": "EEJSSE001_ButterflyJarActivator",
+        "type": "ACTI FULL",
+        "original": "Butterfly in a Jar",
+        "string": "Motyl w s\u0142oiku"
+    },
+    {
+        "editor_id": "EEJSSE001_PortalGemWhiteActivator",
+        "type": "ACTI FULL",
+        "original": "Diamond Paragon",
+        "string": "Diamentowy talizman"
+    },
+    {
+        "editor_id": "EEJSSE001_PortalGemredActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskMorokeiActivator",
+        "type": "ACTI FULL",
+        "original": "Morokei",
+        "string": "Morokej"
+    },
+    {
+        "editor_id": "EEJSSE001_InitiatesEwerActivator",
+        "type": "ACTI FULL",
+        "original": "Initiate's Ewer",
+        "string": "Dzban nowicjusza"
+    },
+    {
+        "editor_id": "EEJSSE001_GoldenClawActivator",
+        "type": "ACTI FULL",
+        "original": "Golden Dragon Claw",
+        "string": "Szpon z\u0142otego smoka"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskFireActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_PortalGemPurpleActivator",
+        "type": "ACTI FULL",
+        "original": "Amethyst Paragon",
+        "string": "Ametystowy talizman"
+    },
+    {
+        "editor_id": "EEJSSE001_CoralClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_BeeJarActivator",
+        "type": "ACTI FULL",
+        "original": "Bee in a Jar",
+        "string": "Pszczo\u0142a w s\u0142oiku"
+    },
+    {
+        "editor_id": "EEJSSE001_IronClawActivator",
+        "type": "ACTI FULL",
+        "original": "Iron Dragon Claw",
+        "string": "Szpon \u017celaznego smoka"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskShockActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_SearekSkullActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskOtarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskWoodenActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_FireflyJarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskKonahrikActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_EmeraldClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_PortalGemBlueActivator",
+        "type": "ACTI FULL",
+        "original": "Sapphire Paragon",
+        "string": "Szafirowy talizman"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskMorokeiActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umie\u015b\u0107"
+    },
+    {
+        "editor_id": "EEJSSE001_DiamondClawActivator",
+        "type": "ACTI FULL",
+        "original": "Diamond Dragon Claw",
+        "string": "Szpon diamentowego smoka"
+    },
+    {
+        "editor_id": "EEJSSE001_BookcaseLOW",
+        "type": "CONT FULL",
+        "original": "Cupboard",
+        "string": "Kredens"
+    },
+    {
+        "editor_id": "EEJSSE001_NobleBedChildL",
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "\u0141\u00f3\u017cko"
+    },
+    {
+        "editor_id": "EEJSSE001_HouseExtLocation",
+        "type": "LCTN FULL",
+        "original": "Tundra Homestead",
+        "string": "Farma w Tundrze"
+    },
+    {
+        "editor_id": "EEJSSE001_BYOHHouseNobleCupboard01",
+        "type": "CONT FULL",
+        "original": "Dresser",
+        "string": "Komoda"
+    },
+    {
+        "editor_id": "EEJSSE001_NobleBedChildR",
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "\u0141\u00f3\u017cko"
+    },
+    {
+        "editor_id": "EEJSSE001_WRDoor02",
+        "type": "DOOR FULL",
+        "original": "Door",
+        "string": "Drzwi"
+    },
+    {
+        "editor_id": "ccEEJSSE001_TundraHomesteadKey",
+        "type": "KEYM FULL",
+        "original": "Key to Tundra Homestead",
+        "string": "Klucz do Farmy w Tundrze"
+    },
+    {
+        "editor_id": "ccEEJSSE001_Quest",
+        "type": "QUST NNAM",
+        "original": "Visit Tundra Homestead, your new house",
+        "string": "Odwied\u017a Farm\u0119 w Tundrze, sw\u00f3j nowy dom"
+    },
+    {
+        "editor_id": "ccEEJSSE001BakingSurfaceTrigger",
+        "type": "ACTI RNAM",
+        "original": "Use",
+        "string": "U\u017cyj"
+    },
+    {
+        "editor_id": "ccEEJSSE001BakingSurfaceTrigger",
+        "type": "ACTI FULL",
+        "original": "Baking Surface",
+        "string": "Taca do pieczenia"
+    },
+    {
+        "editor_id": "ccEEJSSE001_WinterholdBookCase01LessBooks",
+        "type": "CONT FULL",
+        "original": "Bookcase",
+        "string": "Rega\u0142"
+    },
+    {
+        "editor_id": "ccEEJSSE001GrantNoteActivator",
+        "type": "ACTI FULL",
+        "original": "Homestead For Sale",
+        "string": "Domostwo na sprzeda\u017c"
+    },
+    {
+        "editor_id": "ccEEJSSE001_NoticeOfSale",
+        "type": "BOOK FULL",
+        "original": "Homestead For Sale",
+        "string": "Domostwo na sprzeda\u017c"
+    },
+    {
+        "editor_id": "ccEEJSSE001GrantNoteActivator",
+        "type": "ACTI RNAM",
+        "original": "Read",
+        "string": "Czytaj"
+    },
+    {
+        "editor_id": "EEJSSE001_DisplayLackMsg",
+        "type": "MESG DESC",
+        "original": "You do not have the required item.",
+        "string": "Nie masz wymaganego przedmiotu."
+    },
+    {
+        "editor_id": "ccEEJSSE001_NoticeOfSale",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\n<font size='24'><p align='center'>HOMESTEAD FOR SALE</p></font>\n<font size='18'><p>This home, and its surrounding environs, is available for purchase.\n\nI have had many cherished adventures in Skyrim, but now I am afraid I must leave it behind. The war has made life difficult on all of us, and I fear that the worst is yet to come.\n\nI have entrusted the steward in Dragonsreach with managing the sale of my homestead. If interested, please seek him out.</p></font>",
+        "string": "<font face=\"$HandwrittenFont\">\n<font size='24'><p align='center'>DOMOSTWO NA SPRZEDA\u017b</p></font>\n<font size='18'><p>Ten dom, wraz z dzia\u0142k\u0105, jest wystawiony na sprzeda\u017c.\n\nMam na koncie wiele ciekawych przyg\u00f3d w Skyrim, ale obawiam si\u0119, \u017ce musz\u0119 zostawi\u0107 to wszystko. Wojna by\u0142a trudna dla nas wszystkich, a ja martwi\u0119 si\u0119, \u017ce najgorsze dopiero przed nami.\n\nM\u00f3j zarz\u0105dca w Smoczej Przystani zajmuje si\u0119 w\u0142a\u015bnie sprzeda\u017c\u0105 mojego domostwa. Je\u015bli interesuje ci\u0119 ta oferta, odnajd\u017a go.</p></font>"
+    }
+]

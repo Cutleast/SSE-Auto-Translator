@@ -1,0 +1,494 @@
+[
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherCuirassBoiled",
+        "type": "ARMO FULL",
+        "original": "Boiled Netch Leather Armor",
+        "string": "Armadura de cuero de netch hervido"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherShieldTower",
+        "type": "ARMO FULL",
+        "original": "Netch Leather Tower Shield",
+        "string": "Escudo alto de cuero de netch"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherCuirass",
+        "type": "ARMO FULL",
+        "original": "Netch Leather Armor",
+        "string": "Armadura de cuero de netch"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherHelmet",
+        "type": "ARMO FULL",
+        "original": "Netch Leather Helmet",
+        "string": "Yelmo de cuero de netch"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherBoots",
+        "type": "ARMO FULL",
+        "original": "Netch Leather Boots",
+        "string": "Botas de cuero de netch"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherHelmetBoiled",
+        "type": "ARMO FULL",
+        "original": "Boiled Netch Leather Helmet",
+        "string": "Yelmo de cuero de netch hervido"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST FULL",
+        "original": "More than you can Chew",
+        "string": "Una digesti\u00f3n dif\u00edcil"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherShield",
+        "type": "ARMO FULL",
+        "original": "Netch Leather Shield",
+        "string": "Escudo de cuero de netch"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherGauntlets",
+        "type": "ARMO FULL",
+        "original": "Netch Leather Bracers",
+        "string": "Brazales de cuero de netch"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST NNAM",
+        "original": "Help the Riekling hunting party kill the Netch",
+        "string": "Ayuda a la partida de caza riekling a matar al netch."
+    },
+    {
+        "editor_id": "ccBGSSSE041_DLC2LvlRieklingMeleeChiefDEAD",
+        "type": "NPC_ FULL",
+        "original": "Riekling Tribe Leader",
+        "string": "L\u00edder de la tribu riekling"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST NNAM",
+        "original": "Examine the tribe leader's corpse",
+        "string": "Examina el cad\u00e1ver del l\u00edder de la tribu."
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST NNAM",
+        "original": "Return to the tribe leader",
+        "string": "Vuelve con el l\u00edder de la tribu."
+    },
+    {
+        "editor_id": "ccBGSSSE041_DLC2NetchLeather",
+        "type": "MISC FULL",
+        "original": "Giant Bull Netch Leather",
+        "string": "Cuero de netch macho gigante"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST NNAM",
+        "original": "Obtain the crafting guide and painted netch armor",
+        "string": "Consigue la gu\u00eda de artesan\u00eda y la armadura de netch pintada."
+    },
+    {
+        "editor_id": "ccBGSSSE041_RieklingKey",
+        "type": "KEYM FULL",
+        "original": "Key to Riekling Chest",
+        "string": "Llave del cofre de los rieklings"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST NNAM",
+        "original": "Retrieve a piece of netch leather",
+        "string": "Consigue un pedazo de cuero de netch."
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST NNAM",
+        "original": "Meet with the Riekling tribe leader",
+        "string": "Re\u00fanete con el l\u00edder de la tribu riekling."
+    },
+    {
+        "editor_id": "ccBGSSSE041_DLC2EncNetchBull",
+        "type": "NPC_ FULL",
+        "original": "Giant Bull Netch",
+        "string": "Netch macho gigante"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST NNAM",
+        "original": "(Optional) Craft imitation netch leather at a tanning rack",
+        "string": "(Opcional) Fabrica cuero de netch de imitaci\u00f3n en un soporte para curtir pieles."
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the peddler's journal",
+        "string": "Lee el diario del buhonero."
+    },
+    {
+        "editor_id": "ccBGSSSE041_RieklingChiefName",
+        "type": "MESG FULL",
+        "original": "Riekling Tribe Leader",
+        "string": "L\u00edder de la tribu riekling"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST NNAM",
+        "original": "Inspect the Riekling sketch",
+        "string": "Inspecciona el dibujo de los rieklings."
+    },
+    {
+        "editor_id": "ccBGSSSE041_DLC2NetchLeatherFake",
+        "type": "MISC FULL",
+        "original": "Imitation Netch Leather",
+        "string": "Cuero de netch de imitaci\u00f3n"
+    },
+    {
+        "editor_id": "ccBGSSSE041_DLC2NetchLeatherBetty",
+        "type": "MISC FULL",
+        "original": "Giant Betty Netch Leather",
+        "string": "Cuero de netch hembra gigante"
+    },
+    {
+        "editor_id": "ccBGSSSE041_NetchLeatherCraftGuide",
+        "type": "BOOK FULL",
+        "original": "Crafting with Netch Leather",
+        "string": "Artesan\u00eda con cuero de netch"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST NNAM",
+        "original": "(Optional) Search Fort Hraggstad for the netch leather armor set",
+        "string": "(Opcional) Buscar la armadura de cuero de netch en el fuerte Hraggstad."
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST NNAM",
+        "original": "Tan a piece of netch leather at a tanning rack",
+        "string": "(Opcional) Curte un pedazo de cuero de netch en un soporte para curtir pieles."
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the crafting guide",
+        "string": "Lee la gu\u00eda de artesan\u00eda."
+    },
+    {
+        "editor_id": "ccBGSSSE041_RieklingSketch",
+        "type": "BOOK FULL",
+        "original": "Riekling Hunting Party Sketch",
+        "string": "Dibujo de la partida de caza riekling"
+    },
+    {
+        "editor_id": "ccBGSSSE041_PurpleDye",
+        "type": "MISC FULL",
+        "original": "Purple Dye",
+        "string": "Tinte morado"
+    },
+    {
+        "editor_id": "ccBGSSSE041_DLC2EncNetchCalf",
+        "type": "NPC_ FULL",
+        "original": "Netch Calf",
+        "string": "Cr\u00eda de netch"
+    },
+    {
+        "editor_id": "ccBGSSSE041_TreasCorpseCommonerDarkElfM",
+        "type": "NPC_ FULL",
+        "original": "Dark Elf",
+        "string": "Elfo oscuro"
+    },
+    {
+        "editor_id": "ccBGSSSE041_NetchJournal",
+        "type": "BOOK FULL",
+        "original": "Peddler's Journal",
+        "string": "Diario del buhonero"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST NNAM",
+        "original": "Investigate the camp in Solstheim",
+        "string": "Investiga el campamento de Solstheim."
+    },
+    {
+        "editor_id": "ccBGSSSE041_RieklingBettyName",
+        "type": "MESG FULL",
+        "original": "Giant Betty Netch",
+        "string": "Netch hembra gigante"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST NNAM",
+        "original": "(Optional) Give the Riekling tribe leader the imitation leather",
+        "string": "(Opcional) Dale al l\u00edder de la tribu riekling el cuero de imitaci\u00f3n."
+    },
+    {
+        "editor_id": "ccBGSSSE041_DLC2LvlMountedRieklingBoss",
+        "type": "NPC_ FULL",
+        "original": "Riekling Rider",
+        "string": "Jinete riekling"
+    },
+    {
+        "editor_id": "ccBGSSSE041_SpitPotClosed01",
+        "type": "CONT FULL",
+        "original": "Pot",
+        "string": "Olla"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST NNAM",
+        "original": "Save the Netch from the Riekling hunting party",
+        "string": "Salva al netch de la partida de caza riekling."
+    },
+    {
+        "editor_id": "ccBGSSSE041_DLC2NetchLeatherCraft",
+        "type": "MISC FULL",
+        "original": "Tanned Netch Leather",
+        "string": "Cuero de netch curtido"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST NNAM",
+        "original": "Craft a set of netch leather armor",
+        "string": "Crea una armadura de cuero de netch."
+    },
+    {
+        "editor_id": "ccBGSSSE041_BlindingSpeedEnchantment",
+        "type": "ENCH FULL",
+        "original": "Blinding Speed",
+        "string": "Velocidad cegadora"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherBootsBlindingSpeed",
+        "type": "ARMO FULL",
+        "original": "Boots of Blinding Speed",
+        "string": "Botas de velocidad cegadora"
+    },
+    {
+        "editor_id": "ccBGSSSE041_EnchBlankEffect",
+        "type": "MGEF FULL",
+        "original": "Blank Effect",
+        "string": "Efecto vac\u00edo"
+    },
+    {
+        "editor_id": "ccBGSSSE041_FortifySpeedMultFFSelfArea",
+        "type": "MGEF DNAM",
+        "original": "Provides the wearer with blinding speed.",
+        "string": "Confiere a quien las lleva una velocidad cegadora."
+    },
+    {
+        "editor_id": "ccBGSSSE041_FortifySpeedMultFFSelfArea",
+        "type": "MGEF FULL",
+        "original": "Fast",
+        "string": "Rapidez"
+    },
+    {
+        "editor_id": "ccBGSSSE041_MiscQuest",
+        "type": "QUST NNAM",
+        "original": "Read the netch leather crafting guide",
+        "string": "Lee la gu\u00eda de artesan\u00eda de cuero de netch."
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherShield_Shadow",
+        "type": "ARMO FULL",
+        "original": "Shadowed Netch Leather Shield",
+        "string": "Escudo de cuero de netch ennegrecido"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherBoots_Shadow",
+        "type": "ARMO FULL",
+        "original": "Shadowed Netch Leather Boots",
+        "string": "Botas de cuero de netch ennegrecidas"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherCuirass_Shadow",
+        "type": "ARMO FULL",
+        "original": "Shadowed Netch Leather Armor",
+        "string": "Armadura de cuero de netch ennegrecida"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherBoots_Painted",
+        "type": "ARMO FULL",
+        "original": "Painted Netch Leather Boots",
+        "string": "Botas de cuero de netch pintadas"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherShieldTower_Shadow",
+        "type": "ARMO FULL",
+        "original": "Shadowed Netch Leather Tower Shield",
+        "string": "Escudo alto de cuero de netch ennegrecido"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherGauntlets_Shadow",
+        "type": "ARMO FULL",
+        "original": "Shadowed Netch Leather Bracers",
+        "string": "Brazales de cuero de netch ennegrecidos"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherCuirassBoiled_Painted",
+        "type": "ARMO FULL",
+        "original": "Painted Netch Leather Armor",
+        "string": "Armadura de cuero de netch pintada"
+    },
+    {
+        "editor_id": "ccBGSSSE041_MiscQuest",
+        "type": "QUST NNAM",
+        "original": "(Optional) Search Fort Hraggstad for the netch leather armor set",
+        "string": "(Opcional) Busca la armadura de cuero de netch en el fuerte Hraggstad."
+    },
+    {
+        "editor_id": "ccBGSSSE041_MiscQuest",
+        "type": "QUST NNAM",
+        "original": "Craft a set of netch leather armor",
+        "string": "Crea una armadura de cuero de netch."
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherHelmet_Shadow",
+        "type": "ARMO FULL",
+        "original": "Shadowed Netch Leather Helmet",
+        "string": "Yelmo de cuero de netch ennegrecido"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherHelmetBoiled_Painted",
+        "type": "ARMO FULL",
+        "original": "Painted Netch Leather Helmet",
+        "string": "Yelmo de cuero de netch pintado"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherGauntlets_Painted",
+        "type": "ARMO FULL",
+        "original": "Painted Netch Leather Bracers",
+        "string": "Brazales de cuero de netch pintados"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherHelmetBoiled_Shadow",
+        "type": "ARMO FULL",
+        "original": "Shadowed Boiled Netch Leather Helmet",
+        "string": "Yelmo de cuero hervido de netch ennegrecido"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherCuirassBoiled_Shadow",
+        "type": "ARMO FULL",
+        "original": "Shadowed Boiled Netch Leather Armor",
+        "string": "Armadura de cuero hervido de netch ennegrecido"
+    },
+    {
+        "editor_id": "FortHraggstad01",
+        "type": "CELL FULL",
+        "original": "Fort Hraggstad",
+        "string": "Fuerte Hraggstad"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST CNAM",
+        "original": "On the northern coast of Solstheim, I found a camp belonging to a peddler. According to his journal, he was selling leather to a tribe of Rieklings on an island to the west. After interacting with the Rieklings I managed to obtain the crafting guide mentioned by the peddler. The guide has tips on how to craft the armor, as well as the location of a full set in Fort Hraggstad.",
+        "string": "En la costa septentrional de Solstheim, he encontrado el campamento de un buhonero. Seg\u00fan su diario, estaba vendiendo cuero a una tribu de rieklings que vive en una isla al oeste. Tras interactuar con ellos, he conseguido hacerme con la gu\u00eda de artesan\u00eda que mencionaba el buhonero. Contiene instrucciones para elaborar la armadura, y adem\u00e1s indica d\u00f3nde hay una completa en el fuerte Hraggstad."
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST CNAM",
+        "original": "On the northern coast of Solstheim, I found a camp belonging to a peddler. According to his journal, he was selling leather to a tribe of Rieklings on an island to the west. After meeting with the tribe leader, I decided to craft some imitation netch leather. It may be enough to fool the Riekling tribe.",
+        "string": "En la costa septentrional de Solstheim, he encontrado el campamento de un buhonero. Seg\u00fan su diario, estaba vendiendo cuero a una tribu de rieklings que vive en una isla al oeste. Tras hablar con el l\u00edder de la tribu, he decidido fabricar algo de cuero de netch de imitaci\u00f3n. Puede que baste para enga\u00f1ar a los rieklings."
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST CNAM",
+        "original": "On the northern coast of Solstheim, I found a camp belonging to a peddler. According to his journal, he was selling leather to a tribe of Rieklings on an island to the west. On the island I spoke to the tribe leader who handed me a map. The map led me south, where a hunting party has engaged a Giant Bull Netch.",
+        "string": "En la costa septentrional de Solstheim, he encontrado el campamento de un buhonero. Seg\u00fan su diario, estaba vendiendo cuero a una tribu de rieklings que vive en una isla al oeste. En la isla he hablado con el l\u00edder de la tribu, que me ha entregado un mapa. Este me ha llevado hasta el sur, donde hab\u00eda una partida de caza enfrent\u00e1ndose a un netch macho gigante."
+    },
+    {
+        "editor_id": "ccBGSSSE041_RieklingChiefName",
+        "type": "MESG DESC",
+        "original": "Riekling Chief",
+        "string": "Jefe riekling"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST CNAM",
+        "original": "On the northern coast of Solstheim, I found a camp belonging to a peddler. According to his journal, he was selling leather to a tribe of Rieklings on an island to the west. After interacting with the Rieklings I managed to convince the tribe leader to give me a key to a nearby chest. Inside should be the crafting guide mentioned by the peddler. ",
+        "string": "En la costa septentrional de Solstheim, he encontrado el campamento de un buhonero. Seg\u00fan su diario, estaba vendiendo cuero a una tribu de rieklings que vive en una isla al oeste. Tras interactuar con ellos, he conseguido convencer al l\u00edder de la tribu de que me d\u00e9 la llave de un cofre que hay cerca. Dentro deber\u00eda de estar la gu\u00eda de artesan\u00eda que mencionaba el buhonero. "
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST CNAM",
+        "original": "On the northern coast of Solstheim, I found a camp belonging to a peddler. According to his journal, he was selling leather to a tribe of Rieklings on an island to the west. On the island I spoke to the tribe leader who handed me a map. Apparently there is a hunting party searching for a netch to the south.",
+        "string": "En la costa septentrional de Solstheim, he encontrado el campamento de un buhonero. Seg\u00fan su diario, estaba vendiendo cuero a una tribu de rieklings que vive en una isla al oeste. En la isla he hablado con el l\u00edder de la tribu, que me ha entregado un mapa. Parece ser que al sur hay una partida de caza en busca de un netch."
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST CNAM",
+        "original": "On the northern coast of Solstheim, I found a camp belonging to a peddler. According to his journal, he was selling leather to a tribe of Rieklings on an island to the west. After interacting with the Rieklings I managed to obtain the crafting guide mentioned by the peddler. ",
+        "string": "En la costa septentrional de Solstheim, he encontrado el campamento de un buhonero. Seg\u00fan su diario, estaba vendiendo cuero a una tribu de rieklings que vive en una isla al oeste. Tras interactuar con ellos, he conseguido hacerme con la gu\u00eda de artesan\u00eda que mencionaba el buhonero. "
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST CNAM",
+        "original": "On the northern coast of Solstheim, I found a camp belonging to a peddler. I've picked up a journal off his corpse which may provide more information on what he was doing here.",
+        "string": "En la costa septentrional de Solstheim, he encontrado el campamento de un buhonero. Su cad\u00e1ver llevaba un diario en el que podr\u00eda encontrar m\u00e1s informaci\u00f3n sobre lo que estaba haciendo aqu\u00ed."
+    },
+    {
+        "editor_id": "ccBGSSSE041_RieklingBettyName",
+        "type": "MESG DESC",
+        "original": "Giant Betty Netch",
+        "string": "Netch hembra gigante"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST CNAM",
+        "original": "On the northern coast of Solstheim, I found a camp belonging to a peddler. According to his journal, he was selling leather to a tribe of Rieklings on an island to the west. On the island I spoke to the tribe leader who handed me a map.",
+        "string": "En la costa septentrional de Solstheim, he encontrado el campamento de un buhonero. Seg\u00fan su diario, estaba vendiendo cuero a una tribu de rieklings que vive en una isla al oeste. En la isla he hablado con el l\u00edder de la tribu, que me ha entregado un mapa."
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST CNAM",
+        "original": "On the northern coast of Solstheim, I found a camp belonging to a peddler. According to his journal, he was selling leather to a tribe of Rieklings on an island to the west. After interacting with the Rieklings I managed to obtain the crafting guide mentioned by the peddler. Using the guide, I was able to acquire a full set of netch leather armor.",
+        "string": "En la costa septentrional de Solstheim, he encontrado el campamento de un buhonero. Seg\u00fan su diario, estaba vendiendo cuero a una tribu de rieklings que vive en una isla al oeste. Tras interactuar con ellos, he conseguido hacerme con la gu\u00eda de artesan\u00eda que mencionaba el buhonero. Siguiendo las instrucciones de la gu\u00eda, he podido hacerme con una armadura de cuero de netch completa."
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST CNAM",
+        "original": "On the northern coast of Solstheim, I found a camp belonging to a peddler. According to his journal, he was selling leather to a tribe of Rieklings on an island to the west. On the island I spoke to the tribe leader who handed me a map. The map led me south, where a hunting party was fighting a Giant Bull Netch. I managed to pick up a piece of leather from the corpse of one of the netches.",
+        "string": "En la costa septentrional de Solstheim, he encontrado el campamento de un buhonero. Seg\u00fan su diario, estaba vendiendo cuero a una tribu de rieklings que vive en una isla al oeste. En la isla he hablado con el l\u00edder de la tribu, que me ha entregado un mapa. Este me ha llevado hasta el sur, donde hab\u00eda una partida de caza enfrent\u00e1ndose a un netch macho gigante. He conseguido arrancar un pedazo de cuero del cad\u00e1ver de uno de los netches."
+    },
+    {
+        "editor_id": "ccBGSSSE041_NetchJournal",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"20\">\nI first met them little blue fetchers about a year ago, on one of the islands to the north. I offered them a few things in trade, hoping it'd give them enough reason not to jab their spears through my skull.\n\nI showed them my best goods - a sapphire, a silver candlestick, and a rug made of fine tundra cotton, but they didn't want none of that. They were way more interested in my belt. So I gave it to their leader, praying it'd make him reconsider boiling me alive. But it turns out it wasn't me he was fixing to boil, but my belt.\n\nNow I've heard of soldiers on the brink of starvation eating leather strips to survive. So it ain't like you can't put a belt to the pot, should it come to that.\n\nBut them little scribs were chewing that stuff like it was cooked up by the Gourmet. In fact, their leader wanted me to throw my boots into the pot, seeing as they was leather too.\n\nI tried to tell the little monster that my whole armor was made of netch leather. Ain't the same as hide from some old Nord cow. Something got lost in translation though, because they thought it was some holy relic and started painting their little marks on it. \n\nAs they were taking the armor back to their huts, I tried to explain that it wasn't special, even showed him some sketches on netch leather crafting, but their leader thought it was a cookbook and took that too. On top of that, he wants me to sell him raw netch leather so the whole clan can bloody eat it.\n\nSo now to keep these stupid ash blighters from killing themselves, I'm bringing them leather from the mainland and dyeing it purple with a mountain flower and a bit of charcoal. Of course, I could just let them eat the stuff and leave them to the horkers, but some of the junk they got is valuable, and best of all, they don't know it. \n\nNow if I can just get the horkers on this island to shut up, I'd have a perfect little spot to set up my business.</font>\n",
+        "string": "<font face=\"$HandwrittenFont\" size=\"20\">\nConoc\u00ed a esos bichejos azules hace como un a\u00f1o, en una de las islas al norte de aqu\u00ed. Les ofrec\u00ed unas cuantas cosas en trueque para intentar evitar que me atravesaran el cr\u00e1neo con sus lanzas.\n\nLes ense\u00f1\u00e9 mis mejores mercanc\u00edas: un zafiro, un candelero de plata y una alfombra de algod\u00f3n de la tundra de primera calidad, pero no les interesaba nada de aquello. Les llamaba m\u00e1s la atenci\u00f3n mi cintur\u00f3n. As\u00ed pues, se lo di a su l\u00edder con la esperanza de que se lo pensase dos veces antes de cocerme vivo. Pero result\u00f3 que lo que quer\u00eda cocer era el propio cintur\u00f3n.\n\nEs verdad que se cuentan historias sobre soldados que han comido tiras de cuero para no morir de hambre. Por eso, no me parec\u00eda tan raro echar un cintur\u00f3n a la olla en caso de necesidad.\n\nPero los muy animales estaban masticando aquello como si fuese un plato exquisito. De hecho, su l\u00edder tambi\u00e9n quer\u00eda echar mis botas a la olla, porque vio que estaban hechas de cuero igualmente.\n\nIntent\u00e9 explicarle a aquel monstruito que toda mi armadura estaba hecha de cuero de netch. No es como la piel de las vacas n\u00f3rdicas. Pero hubo alg\u00fan malentendido en la traducci\u00f3n, porque creyeron que era alguna clase de reliquia sagrada y empezaron a pintar sus peque\u00f1as marcas sobre ella. \n\nMientras se llevaban la armadura hacia sus casetas, intent\u00e9 explicar que no era especial, e incluso les mostr\u00e9 algunos bocetos sobre c\u00f3mo elaborar cuero de netch, pero el l\u00edder pens\u00f3 que era un libro de cocina y se lo llev\u00f3 tambi\u00e9n. Por si eso fuera poco, quiere que le venda cuero de netch sin curtir para que todo el maldito clan pueda com\u00e9rselo.\n\nAs\u00ed que ahora, para evitar que estos desgraciados se envenenen, les traigo cuero del continente y lo ti\u00f1o de morado con una flor de monta\u00f1a y un poco de carb\u00f3n. Por supuesto, podr\u00eda darles el de verdad para que se lo comieran y dejar sus cuerpos a los horkers, pero algunos de los cachivaches que tienen son valiosos, y lo mejor de todo es que no lo saben. \n\nCuando consiga hacer callar de una vez los horkers de esta isla, tendr\u00e9 un lugar perfecto para montar mi negocio.</font>\n"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST CNAM",
+        "original": "On the northern coast of Solstheim, I found a camp belonging to a peddler. According to his journal, he was selling leather to a tribe of Rieklings on an island to the west. After arriving on the island, I was able to obtain the key to a nearby chest. Inside should be the crafting guide mentioned by the peddler. ",
+        "string": "En la costa septentrional de Solstheim, he encontrado el campamento de un buhonero. Seg\u00fan su diario, estaba vendiendo cuero a una tribu de rieklings que vive en una isla al oeste. Tras llegar a la isla, he conseguido hacerme con la llave de un cofre que hay cerca. Dentro deber\u00eda de estar la gu\u00eda de artesan\u00eda que mencionaba el buhonero. "
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST CNAM",
+        "original": "On the northern coast of Solstheim, I found a camp belonging to a peddler. According to his journal, he was selling leather to a tribe of Rieklings on an island to the west. I should visit the island and investigate.",
+        "string": "En la costa septentrional de Solstheim, he encontrado el campamento de un buhonero. Seg\u00fan su diario, estaba vendiendo cuero a una tribu de rieklings que vive en una isla al oeste. Deber\u00eda visitar la isla e investigar."
+    },
+    {
+        "editor_id": "ccBGSSSE041_NetchLeatherCraftGuide",
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\n<p align=\"center\">\n\n\nCrafting with Netch Leather\n\n\n\nby\nAlma Merisan\n</p>\n\n\n[pagebreak]\n<p align=\"left\">\n<img src='img://Textures/Interface/Books/Illuminated_Letters/D_letter.png'>espite having a powdery, velvet texture, netch leather is actually somewhat venomous to the touch. When worn, one can still feel the tingling sensation from active nematocysts underneath the now dormant tentacle barbs. \n\nHowever, when crafted properly, the effect is somewhat pleasant. While some opt for a strict boil, curing the leather in a low temperature stove can harden it without overactivating the poison. In addition, tanning the leather at a rack can help maintain durability, as well as add color to your armor.\n\nOf course, if crafting netch leather armor proves too difficult, a trip to Solitude might help you find a set. Everyone who has read The Rear Guard knows of Cascabel Hall. Yet while the castle no longer stands, some say leftover crates of netch leather armor were sent over to Fort Hraggstad after the battle. You may even be able to take the armor apart and learn a thing or two about the process.",
+        "string": "[pagebreak]\n<p align=\"center\">\n\n\nArtesan\u00eda con cuero de Netch\n\n\n\nde\nAlma Merisan\n</p>\n\n\n[pagebreak]\n<p align=\"left\">\n<img src='img://Textures/Interface/Books/Illuminated_Letters/A_letter.png'> pesar de su textura fina y aterciopelada, el cuero de netch en realidad es algo venenoso al contacto con la piel. Al llevarlo puesto se siente el hormigueo de los nematocistos activos bajo las p\u00faas ahora inactivas de los tent\u00e1culos. \n\nSin embargo, si se sabe trabajar produce un efecto incluso agradable. Aunque algunos prefieren hervirlo concienzudamente, el cuero se puede endurecer, sin sobreactivar el veneno, cur\u00e1ndolo en una estufa a baja temperatura. Adem\u00e1s, si se curte en un soporte, se vuelve m\u00e1s resistente y aportar\u00e1 color a cualquier armadura.\n\nPor supuesto, si la elaboraci\u00f3n de una armadura de cuero de netch te resulta demasiado dif\u00edcil, siempre puedes viajar a Soledad. Cualquiera que haya le\u00eddo El defensor de la retaguardia conocer\u00e1 el basti\u00f3n de Cascabel. Aunque el castillo ya no existe, se dice que despu\u00e9s de la batalla se enviaron algunas cajas sobrantes de armaduras de cuero de netch al fuerte Hraggstad. Incluso podr\u00edas desmontar una de ellas y aprender un par de cosas sobre c\u00f3mo se fabrican."
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST CNAM",
+        "original": "On the northern coast of Solstheim, I found a camp belonging to a peddler. According to his journal, he was selling leather to a tribe of Rieklings on an island to the west. After arriving on the island I fought the tribe of Rieklings and killed the tribe leader.",
+        "string": "En la costa septentrional de Solstheim, he encontrado el campamento de un buhonero. Seg\u00fan su diario, estaba vendiendo cuero a una tribu de rieklings que vive en una isla al oeste. En la isla he hablado con su jefe, que me ha entregado un mapa. Tras llegar a la isla, he luchado contra la tribu de rieklings y matado al l\u00edder de la tribu."
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST CNAM",
+        "original": "I've heard the islands around Solstheim are worth exploring. If I head to the coastal areas, I might find something worth investigating.",
+        "string": "Me han recomendado explorar las islas que rodean Solstheim. Si me dirijo a las zonas de costa, quiz\u00e1 encuentre algo que valga la pena investigar."
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST CNAM",
+        "original": "On the northern coast of Solstheim, I found a camp belonging to a peddler. According to his journal, he was selling leather to a tribe of Rieklings on an island to the west. After interacting with the Rieklings I managed to obtain the crafting guide mentioned by the peddler and a full set of netch leather armor.",
+        "string": "En la costa septentrional de Solstheim, he encontrado el campamento de un buhonero. Seg\u00fan su diario, estaba vendiendo cuero a una tribu de rieklings que vive en una isla al oeste. Tras interactuar con ellos, he conseguido hacerme con la gu\u00eda de artesan\u00eda que mencionaba el buhonero y con una armadura de cuero de netch completa."
+    }
+]

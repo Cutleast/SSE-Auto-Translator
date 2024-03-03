@@ -1,0 +1,554 @@
+[
+    {
+        "editor_id": "ccBGSSSE034_MountUnicorn",
+        "type": "NPC_ FULL",
+        "original": "Unicorn",
+        "string": "Einhorn"
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorse07_BrownSpotted",
+        "type": "NPC_ FULL",
+        "original": "Wild Horse",
+        "string": "Wildpferd"
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorseMap",
+        "type": "MISC FULL",
+        "original": "Map of Wild Horses",
+        "string": "Wildpferdkarte"
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse05_RedBrown",
+        "type": "QUST FULL",
+        "original": "Find Horse 01",
+        "string": "Finde Pferd 01"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName15",
+        "type": "MESG FULL",
+        "original": "Loki",
+        "string": "Loki"
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorse05_RedBrown",
+        "type": "NPC_ FULL",
+        "original": "Wild Horse",
+        "string": "Wildpferd"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseLocationJournal",
+        "type": "BOOK FULL",
+        "original": "Wild Horse Notes",
+        "string": "Hinweise zu Wildpferden"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName20",
+        "type": "MESG FULL",
+        "original": "Lightning",
+        "string": "Blitz"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseTameDamageStamina",
+        "type": "MGEF FULL",
+        "original": "Damage Stamina",
+        "string": "Ausdauer senken"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName11",
+        "type": "MESG FULL",
+        "original": "Ran",
+        "string": "Ran"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName24",
+        "type": "MESG FULL",
+        "original": "River",
+        "string": "Fluss"
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse02_Black",
+        "type": "QUST FULL",
+        "original": "Find Horse 02",
+        "string": "Finde Pferd 02"
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse05_RedBrown",
+        "type": "QUST NNAM",
+        "original": "Find and tame the Red Horse",
+        "string": "Finde und z\u00e4hme das rote Pferd."
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse02_Black",
+        "type": "QUST NNAM",
+        "original": "Find and tame the Black Horse",
+        "string": "Finde und z\u00e4hme das schwarze Pferd."
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse01_Chestnut",
+        "type": "QUST FULL",
+        "original": "Find Horse 01",
+        "string": "Finde Pferd 01"
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorse02_Black",
+        "type": "NPC_ FULL",
+        "original": "Wild Horse",
+        "string": "Wildpferd"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName21",
+        "type": "MESG FULL",
+        "original": "Dagger",
+        "string": "Dolch"
+    },
+    {
+        "editor_id": "ccBGSSSE034_UnicornQuest",
+        "type": "QUST NNAM",
+        "original": "Find information about the Unicorn",
+        "string": "Finde Informationen \u00fcber das Einhorn."
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName25",
+        "type": "MESG FULL",
+        "original": "Glade",
+        "string": "Lichtung"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName18",
+        "type": "MESG FULL",
+        "original": "Foresti",
+        "string": "Foresti"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName17",
+        "type": "MESG FULL",
+        "original": "Yngvi",
+        "string": "Yngvi"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseTameDamageStamina",
+        "type": "MGEF DNAM",
+        "original": "Drain the target's Stamina by <mag> points.",
+        "string": "Entzieht dem Ziel <mag> Punkte Ausdauer."
+    },
+    {
+        "editor_id": "ccBGSSSE034_UnicornQuest",
+        "type": "QUST NNAM",
+        "original": "Find and tame the Unicorn",
+        "string": "Finde und z\u00e4hme das Einhorn."
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName07",
+        "type": "MESG FULL",
+        "original": "Skadi",
+        "string": "Skadi"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName06",
+        "type": "MESG FULL",
+        "original": "Hildr",
+        "string": "Hildr"
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse07_BrownSpotted",
+        "type": "QUST NNAM",
+        "original": "Find and tame the Dapple Brown Horse",
+        "string": "Finde und z\u00e4hme das braun gescheckte Pferd."
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName14",
+        "type": "MESG FULL",
+        "original": "Balder",
+        "string": "Balder"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName16",
+        "type": "MESG FULL",
+        "original": "Tyr",
+        "string": "Tyr"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName27",
+        "type": "MESG FULL",
+        "original": "Kara",
+        "string": "Kara"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName10",
+        "type": "MESG FULL",
+        "original": "Vor",
+        "string": "Vor"
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorse03_GreyBlack",
+        "type": "NPC_ FULL",
+        "original": "Wild Horse",
+        "string": "Wildpferd"
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse06_WhiteSpotted",
+        "type": "QUST NNAM",
+        "original": "Find and tame the White Spotted Horse",
+        "string": "Finde und z\u00e4hme das wei\u00df gefleckte Pferd."
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorse06_WhiteSpotted",
+        "type": "NPC_ FULL",
+        "original": "Wild Horse",
+        "string": "Wildpferd"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName28",
+        "type": "MESG FULL",
+        "original": "Hjalte",
+        "string": "Hjalte"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName04",
+        "type": "MESG FULL",
+        "original": "Aesir",
+        "string": "Aesir"
+    },
+    {
+        "editor_id": "ccBGSSSE034_PlayersHorseName",
+        "type": "MESG FULL",
+        "original": "<Alias=Player>'s Tamed Horse",
+        "string": "<Alias=Player>s gez\u00e4hmtes Pferd"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HelpWildHorseTutorial",
+        "type": "MESG FULL",
+        "original": "Wild Horse",
+        "string": "Wildpferd"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName02",
+        "type": "MESG FULL",
+        "original": "Freki",
+        "string": "Freki"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName12",
+        "type": "MESG FULL",
+        "original": "Heimdall",
+        "string": "Heimdall"
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse03_GreyBlack",
+        "type": "QUST FULL",
+        "original": "Find Horse 03",
+        "string": "Finde Pferd 03"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName30",
+        "type": "MESG FULL",
+        "original": "Tormod",
+        "string": "Tormod"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName19",
+        "type": "MESG FULL",
+        "original": "Thunder",
+        "string": "Donner"
+    },
+    {
+        "editor_id": "ccBGSSSE034_UnicornSoransJournal",
+        "type": "BOOK FULL",
+        "original": "Soran's Journal",
+        "string": "Sorans Tagebuch"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName29",
+        "type": "MESG FULL",
+        "original": "Rigmor",
+        "string": "Rigmor"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName05",
+        "type": "MESG FULL",
+        "original": "Aura",
+        "string": "Aura"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName26",
+        "type": "MESG FULL",
+        "original": "Hildr",
+        "string": "Hildr"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName22",
+        "type": "MESG FULL",
+        "original": "Magni",
+        "string": "Magni"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName09",
+        "type": "MESG FULL",
+        "original": "Vernandi",
+        "string": "Vernandi"
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorsesQuest",
+        "type": "QUST FULL",
+        "original": "Horse Whisperer",
+        "string": "Pferdefl\u00fcsterer"
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse01_Chestnut",
+        "type": "QUST NNAM",
+        "original": "Find and tame the Chestnut Horse",
+        "string": "Finde und z\u00e4hme das kastanienbraune Pferd."
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorse04_Pale",
+        "type": "NPC_ FULL",
+        "original": "Wild Horse",
+        "string": "Wildpferd"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName01",
+        "type": "MESG FULL",
+        "original": "Alvis",
+        "string": "Alvis"
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse04_Pale",
+        "type": "QUST FULL",
+        "original": "Find Horse 01",
+        "string": "Finde Pferd 01"
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorsesQuest",
+        "type": "QUST NNAM",
+        "original": "Purchase a map of wild horse locations",
+        "string": "Kaufe eine Karte mit Orten, an denen sich Wildpferde aufhalten."
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName03",
+        "type": "MESG FULL",
+        "original": "Heidrun",
+        "string": "Heidrun"
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse06_WhiteSpotted",
+        "type": "QUST FULL",
+        "original": "Find Horse 01",
+        "string": "Finde Pferd 01"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName13",
+        "type": "MESG FULL",
+        "original": "Gunnar",
+        "string": "Gunnar"
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse03_GreyBlack",
+        "type": "QUST NNAM",
+        "original": "Find and tame the Grey Spotted Horse",
+        "string": "Finde und z\u00e4hme das grau gefleckte Pferd."
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName08",
+        "type": "MESG FULL",
+        "original": "Sol",
+        "string": "Sol"
+    },
+    {
+        "editor_id": "ccBGSSSE034_UnicornQuest",
+        "type": "QUST FULL",
+        "original": "Creature of Legend",
+        "string": "Kreatur aus Legenden"
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse04_Pale",
+        "type": "QUST NNAM",
+        "original": "Find and tame the Pale Mare",
+        "string": "Finde und z\u00e4hme die helle M\u00e4hre."
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorse01_Chestnut",
+        "type": "NPC_ FULL",
+        "original": "Wild Horse",
+        "string": "Wildpferd"
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse07_BrownSpotted",
+        "type": "QUST FULL",
+        "original": "Find Horse 01",
+        "string": "Finde Pferd 01"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName23",
+        "type": "MESG FULL",
+        "original": "Whisper",
+        "string": "Fl\u00fcstern"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseActivationPerk",
+        "type": "PERK EPF2",
+        "original": "Tame",
+        "string": "Z\u00e4hmen"
+    },
+    {
+        "editor_id": "Tamriel",
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Himmelsrand"
+    },
+    {
+        "editor_id": "WinterholdCollegeArcanaeum",
+        "type": "CELL FULL",
+        "original": "The Arcanaeum",
+        "string": "Das Arcanaeum"
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorsesQuest",
+        "type": "QUST CNAM",
+        "original": "I've acquired a map and a journal with locations of where wild horses have been known to roam. I should find and tame them. Afterward I can bring them to a stable to add a saddle or change their name.",
+        "string": "Ich habe eine Karte und ein Tagebuch mit Orten erhalten, an denen sich bekannterma\u00dfen Wildpferde aufhalten. Ich sollte sie finden und z\u00e4hmen. Danach kann ich sie zu einem Stall bringen, um sie zu satteln oder ihnen neue Namen zu geben."
+    },
+    {
+        "editor_id": "ccBGSSSE034_UnicornQuest",
+        "type": "QUST CNAM",
+        "original": "A wildlife scholar is rumored to have tracked down a legendary Unicorn. The last of these creatures was supposed to have been slain long ago. I should investigate and see what I can find.",
+        "string": "Ein Wildtiergelehrter hat laut Ger\u00fccht ein legend\u00e4res Einhorn aufgesp\u00fcrt. Man war davon ausgegangen, dass die letzte dieser Kreaturen eigentlich schon vor langer Zeit erlegt worden war. Ich sollte dem nachgehen, um zu sehen, was ich herausfinden kann."
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse06_WhiteSpotted",
+        "type": "QUST CNAM",
+        "original": "Find the horses.",
+        "string": "Finde die Pferde."
+    },
+    {
+        "editor_id": "ccBGSSSE034_UnicornSoransJournal",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\nJournal of Soran Hariksen, Wildlife Scholar\n\n<b>14th of Rain's Hand, 4E 201</b>\nIn my duty to document all living creatures in Skyrim, the long-lost Unicorn has never been far from my mind. It is said that long ago the very last of its kind was sacrificed to Hircine. However, rumors of sightings in Tamriel have surfaced in recent times.\n\nIndeed, while these claims echo mostly from taverns in the late hours, one can wonder at the validity of such claims.\n\nI've chronicled the habits of Mudcrabs and Rabbits long enough. This old man is quite ready for something a little more interesting.\n\n<b>3rd of Second Seed, 4E 201</b>\nI have spoken with several hunters who swear by the Divines that they have seen a Unicorn during their travels. All have tried to approach it for a closer look, or to take it as a prize, but it has evaded them all.\n\nI continue my research with skepticism. If this is indeed true, how could this be? Was the last unicorn not truly the last, or is some other force at work?\n\n<b>18th of Second Seed, 4E 201</b>\nWhile studying the mating habits of Salmon is certainly enlightening, I have become quite obsessed with my pursuit of the elusive Unicorn.\n\nI spoke with a hostler who said that during one of his horse taming expeditions he too saw something that closely resembled the fabled Unicorn, though he was unsure. He is a man is of great integrity, so I took his word in good faith.\n\nI decided then to speak with Tolfdir at the College of Winterhold. Being a wise man with deep knowledge of such things, I hoped he might have some insight. I was correct in my assumption.\n\nAccording to Tolfdir, the Psijic Order have appeared from time-to-time throughout history to assist with situations they believe are extremely important. While he cannot personally say for certain, he believes they may have intervened after the last Unicorn was sacrificed, transporting another through time in order to set right what they believed was a wrongdoing.\n\nI am more motivated than ever to see this creature with my own two eyes.\n\n<b>24th of Second Seed, 4E 201</b>\nThe last sighting of the Unicorn was rumored to be in a dense forest area near Riften. As old as I am, an energy filled my bones that I haven't felt since I was a young man.\n\nI hiked up the ridge of the mountains there, and set up a very small camp. I was cautious to not set any fires or make much noise, lest I scare it away.\n\nAfter waiting two nights, through this morning's early fog, I finally saw the majestic creature for the first time. I still cannot believe my own two eyes. It lingered long enough for me to see it clearly, its brilliant coat and distinct horn shimmering in the morning light.\n\nI watched its movements for nearly thirty minutes, enough time to draw a rough depiction for my library. This is absolutely the crowning achievement of my scholarly life.\n\nI've decided to turn this information over to the College of Winterhold rather than publish it to the general population. I would like to ensure this creature remain protected, and I believe they are the most capable of such a task.",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\nTagebuch von Soran Hariksen, Wildtiergelehrter\n\n<b>14. Regenhand, 4\u00c4 201</b>\nBei meiner Aufgabe, alle Lebewesen in Himmelsrand zu dokumentieren, musste ich immer wieder an das seit langem verschollene Einhorn denken. Angeblich wurde das Allerletzte seiner Art vor langer Zeit Hircine geopfert, allerdings gab es j\u00fcngst immer wieder Ger\u00fcchte \u00fcber Sichtungen in Tamriel.\n\nObwohl diese Behauptungen zugegebenerma\u00dfen meist zu sp\u00e4ter Stunde in diversen Tavernen aufgestellt werden, muss man sich dennoch fragen, ob ihnen eine gewisse Stichhaltigkeit zu eigen ist.\n\nLange genug habe ich das Verhalten von Schlammkrabben und Kaninchen aufgezeichnet. Diesem alten Mann steht nun wirklich der Sinn nach etwas, das ein wenig interessanter ist.\n\n<b>3. Zweite Saat, 4\u00c4 201</b>\nIch habe mit mehreren J\u00e4gern gesprochen, die bei den G\u00f6ttlichen schw\u00f6ren, dass sie auf ihren Reisen ein Einhorn gesehen haben. Alle wollten einen n\u00e4heren Blick darauf werfen oder es als Troph\u00e4e in Anspruch nehmen, jedoch konnte es stets entkommen.\n\nIch f\u00fchre meine Nachforschungen mit einer gewissen Skepsis fort. Wie ist das m\u00f6glich, falls diese Behauptungen stimmen? War das letzte Einhorn doch nicht das letzte oder ist hier eine andere Macht am Werk?\n\n<b>18. Zweite Saat, 4\u00c4 201</b>\nObwohl das Studium des Paarungsverhaltens von Lachsen unbestreitbar \u00e4u\u00dferst erhellend ist, hat sich meine Besch\u00e4ftigung mit dem schwer zu findenden Einhorn zu einer Besessenheit entwickelt.\n\nIch habe mit einem Stallknecht gesprochen, der behauptet, auf einem seiner Streifz\u00fcge zum Z\u00e4hmen von Pferden ebenfalls etwas gesehen zu haben, dass dem sagenumwobenen Einhorn \u00e4hnelt. Ganz sicher war er sich jedoch nicht. Da er ein Mann von gro\u00dfer Redlichkeit ist, schenke ich seinen Worten Glauben.\n\nDanach habe ich beschlossen, mit Tolfdir an der Akademie von Winterfeste zu sprechen. Ich erhoffte mir, von diesem weisen Mann mit umfangreichem Wissen \u00fcber derartige Dinge einige Einblicke zu erhalten - und meine Annahme hat sich als richtig erwiesen.\n\nNach Aussage von Tolfdir ist der Psijic-Orden von Zeit zu Zeit immer wieder aufgetaucht, um bei Situationen zu helfen, die seine Mitglieder als \u00e4u\u00dferst wichtig erachteten. Obwohl er es nicht mit Sicherheit sagen kann, glaubt er, dass der Orden nach der Opferung des letzten Einhorns eingegriffen haben k\u00f6nnte. Durch den Transport eines anderen Einhorns durch die Zeit sollte wohl seiner Meinung nach das in Ordnung gebracht werden, was der Orden als Missetat erachtet hatte.\n\nNun bin ich motivierter denn je, diese Kreatur mit eigenen Augen zu sehen.\n\n<b>24. Zweite Saat, 4\u00c4 201</b>\nDie letzte Sichtung des Einhorns soll Ger\u00fcchten zufolge in einem dichten Wald in der N\u00e4he von Rifton stattgefunden haben. Trotz meines Alters wurden meine Knochen von einer Energie erf\u00fcllt, die ich zum letzten Mal als junger Mann gesp\u00fcrt hatte.\n\n\u00dcber den Gebirgskamm wanderte ich dorthin und schlug ein ziemlich kleines Lager auf. Ich war bedacht darauf, kein Feuer zu entz\u00fcnden und keine Ger\u00e4usche zu machen, um das Einhorn nicht zu verscheuchen.\n\nNachdem ich zwei N\u00e4chte gewartet hatte, sah ich im Morgennebel endlich zum ersten Mal diese majest\u00e4tische Kreatur. Ich kann es immer noch nicht ganz glauben. Das Einhorn verweilte lang genug, dass ich sein strahlendes Fell und das charakteristische Horn im morgendlichen Licht schimmern sehen konnte.\n\nNahezu 30 Minuten lang beobachtete ich seine Bewegungen - genug, um eine behelfsm\u00e4\u00dfige Abbildung f\u00fcr meine Bibliothek zu zeichnen. Dies ist wahrlich der kr\u00f6nende Abschluss meines Lebens als Gelehrter.\n\nIch habe beschlossen, diese Informationen der Akademie von Winterfeste zukommen zu lassen, statt sie f\u00fcr die Allgemeinheit zu ver\u00f6ffentlichen. Ich m\u00f6chte daf\u00fcr sorgen, dass diese Kreatur gesch\u00fctzt bleibt, und ich glaube, dass die Akademie f\u00fcr diese Aufgabe am besten geeignet ist."
+    },
+    {
+        "editor_id": "ccBGSSSE034_MessageSaddleChanged",
+        "type": "MESG DESC",
+        "original": "Horse's saddle has been changed.",
+        "string": "Der Sattel des Pferds wurde gewechselt."
+    },
+    {
+        "editor_id": "ccBGSSSE034_MessageNotEnoughGold",
+        "type": "MESG DESC",
+        "original": "You do not have enough gold.",
+        "string": "Du hast nicht gen\u00fcgend Gold."
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseLocationJournal",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\nSpotted Grey - Near Markarth, north of Salvius Farm.\n\nDapple Brown - Near Solitude, across the river from Katla's Farm, near a Dragon Mound.\n\nChestnut - East of Helgen, not far from the roadside.\n\nRed - West of Whiterun, in the open planes.\n\nSpotted White - Lower Eastmarch, in the cliffs north of Shore's Stone.\n\nPale Mare - East of Windhelm, north of Hollyfrost Farm, in the forest nearing the shoreline.\n\nBlack - West of Falkreath, past the nearby ruins.\n\nIf I had the coin, I'd hire a wizard to use Detect Life and help me find these horses.\n</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\nGrau gefleckt - in der N\u00e4he von Markarth, n\u00f6rdlich des Salviushofs.\n\nBraun gescheckt - in der N\u00e4he von Einsamkeit, auf der anderen Seite des Flusses bei Katlas Hof, in der N\u00e4he eines Drachenh\u00fcgels.\n\nKastanienbraun - \u00d6stlich von Helgen, nicht weit von der Stra\u00dfe entfernt.\n\nRot - Westlich von Wei\u00dflauf, auf dem freien Feld.\n\nWei\u00df gefleckt - Unteres Ostmarsch, in den Klippen n\u00f6rdlich von Shors Stein.\n\nHelle M\u00e4hre - \u00d6stlich von Windhelm, n\u00f6rdlich des Frostdistelhofs, im Wald in der N\u00e4he des Ufers.\n\nSchwarz - Westlich von Falkenring, hinter den nahegelegenen Ruinen.\n\nWenn ich die Mittel h\u00e4tte, w\u00fcrde ich einen Zauberer anheuern, der mir mit Leben entdecken hilft, diese Pferde zu finden.\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorsesQuest",
+        "type": "QUST CNAM",
+        "original": "Hostlers in Skyrim have begun taming wild horses in order to keep up with the demand. I should speak with a hostler and see if they can give me some information. Perhaps I could find and tame some of them myself.",
+        "string": "Stallknechte in Himmelsrand haben begonnen, Wildpferde zu z\u00e4hmen, um mit der Nachfrage Schritt zu halten. Ich sollte mit einem von ihnen sprechen und versuchen, Informationen zu bekommen. Vielleicht k\u00f6nnte ich selbst einige Pferde finden und z\u00e4hmen."
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse04_Pale",
+        "type": "QUST CNAM",
+        "original": "Find the horses.",
+        "string": "Finde die Pferde."
+    },
+    {
+        "editor_id": "ccBGSSSE034_MessageNoHorsesOwned",
+        "type": "MESG DESC",
+        "original": "You do not currently own a horse.",
+        "string": "Du besitzt aktuell kein Pferd."
+    },
+    {
+        "editor_id": "ccBGSSSE034_MessageCantChangeSaddle",
+        "type": "MESG DESC",
+        "original": "Current horse cannot have its saddle changed.",
+        "string": "Der Sattel des aktuellen Pferds kann nicht gewechselt werden."
+    },
+    {
+        "editor_id": "ccBGSSSE034_UnicornQuest",
+        "type": "QUST CNAM",
+        "original": "I found the journal of wildlife scholar Soran Hariksen at the College of Winterhold, which contained details on the whereabouts of the Unicorn. I should locate it to see if I can tame it, and take care of it as my own.",
+        "string": "Ich habe das Tagebuch des Wildtiergelehrten Soran Hariksan in der Akademie von Winterfeste gefunden. Dieses enth\u00e4lt Einzelheiten zum Aufenthaltsort des Einhorns. Ich sollte es aufsp\u00fcren und versuchen, es zu z\u00e4hmen, um es selbst zu behalten."
+    },
+    {
+        "editor_id": "ccBGSSSE034_MessageNameChanged",
+        "type": "MESG DESC",
+        "original": "Horse has been renamed.",
+        "string": "Das Pferd hat einen neuen Namen erhalten."
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse05_RedBrown",
+        "type": "QUST CNAM",
+        "original": "Find the horses.",
+        "string": "Finde die Pferde."
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse01_Chestnut",
+        "type": "QUST CNAM",
+        "original": "Find the horse.",
+        "string": "Finde das Pferd."
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse07_BrownSpotted",
+        "type": "QUST CNAM",
+        "original": "Find the horses.",
+        "string": "Finde die Pferde."
+    },
+    {
+        "editor_id": "ccBGSSSE034_HelpWildHorseTutorial",
+        "type": "MESG DESC",
+        "original": "Wild horses will buck until tamed. Stay mounted until they submit. If you are thrown, try again. Once tamed, you can add a saddle and rename them at any stable.\n\nWhen changing horses, tamed horses will return to the location where they were found.",
+        "string": "Wildpferde buckeln, solang sie nicht gez\u00e4hmt sind. Bleib aufgesessen, bis sie sich f\u00fcgen. Wenn du abgeworfen wirst, versuche es erneut. Nach dem Z\u00e4hmen kannst du das Pferd satteln und ihm in einem beliebigen Stall einen neuen Namen geben.\n\nBeim Wechseln von Pferden kehren gez\u00e4hmte Pferde zu dem Ort zur\u00fcck, an dem du sie gefunden hast."
+    },
+    {
+        "editor_id": "ccBGSSSE034_MessageSaddleRemoved",
+        "type": "MESG DESC",
+        "original": "Horse's saddle has been removed.",
+        "string": "Der Sattel des Pferds wurde entfernt."
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorseMessageTamed",
+        "type": "MESG DESC",
+        "original": "Horse has been successfully tamed.",
+        "string": "Das Pferd wurde erfolgreich gez\u00e4hmt."
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseTameSpellDrainStamina",
+        "type": "SPEL DESC",
+        "original": "Raises all dead around you to fight for you.",
+        "string": "L\u00e4sst die Toten in deiner N\u00e4he auferstehen und f\u00fcr dich k\u00e4mpfen."
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse03_GreyBlack",
+        "type": "QUST CNAM",
+        "original": "Find the horses.",
+        "string": "Finde die Pferde."
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse02_Black",
+        "type": "QUST CNAM",
+        "original": "Find the horses.",
+        "string": "Finde die Pferde."
+    },
+    {
+        "editor_id": "ccBGSSSE034_UnicornQuest",
+        "type": "QUST CNAM",
+        "original": "A wildlife scholar was able to track down and verify the existence of a Unicorn. Using information that I found in his journal, I located the Unicorn, tamed it, and claimed it as my own. If I need to find it again, it will be at the College of Winterhold courtyard.",
+        "string": "Ein Wildtiergelehrter konnte ein Einhorn aufsp\u00fcren und seine Existenz nachweisen. Mit den Informationen aus seinem Tagebuch habe ich es gefunden, gez\u00e4hmt und f\u00fcr mich beansprucht. Wenn ich es erneut finden muss, h\u00e4lt es sich im Innenhof der Akademie von Winterfeste auf."
+    },
+    {
+        "editor_id": "ccBGSSSE034_MessageMustBeTamedRename",
+        "type": "MESG DESC",
+        "original": "Horse must be tamed to change its name.",
+        "string": "Das Pferd muss gez\u00e4hmt werden, damit du seinen Namen \u00e4ndern kannst."
+    },
+    {
+        "editor_id": "ccBGSSSE034_MessageMustBeTamedSaddle",
+        "type": "MESG DESC",
+        "original": "Horse must be tamed to change saddles.",
+        "string": "Das Pferd muss gez\u00e4hmt werden, damit du den Sattel wechseln kannst."
+    }
+]

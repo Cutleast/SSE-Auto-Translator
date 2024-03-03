@@ -1,0 +1,104 @@
+[
+    {
+        "editor_id": "ccVSVSSE001_Reindeer",
+        "type": "NPC_ FULL",
+        "original": "Reindeer",
+        "string": "Renna"
+    },
+    {
+        "editor_id": "ccVSVSSE001_ReindeerRace",
+        "type": "RACE FULL",
+        "original": "Horse",
+        "string": "Cavallo"
+    },
+    {
+        "editor_id": "ccVSVSSE001_hat",
+        "type": "ARMO FULL",
+        "original": "Saturalia Hat",
+        "string": "Cappello di Saturalia"
+    },
+    {
+        "editor_id": "ccVSVSSE001_ReindeerStablesFaction",
+        "type": "FACT FULL",
+        "original": "Reindeer Stables Faction",
+        "string": "Fazione Stalle della renna"
+    },
+    {
+        "editor_id": "ccVSVSSE001_boots",
+        "type": "ARMO FULL",
+        "original": "Saturalia Boots",
+        "string": "Stivali di Saturalia"
+    },
+    {
+        "editor_id": "ccVSVSSE001_ServicesReindeerMerchant",
+        "type": "FACT FULL",
+        "original": "Reindeer Merchant",
+        "string": "Mercante di renne"
+    },
+    {
+        "editor_id": "ccVSVSSE001_coat",
+        "type": "ARMO FULL",
+        "original": "Saturalia Clothes",
+        "string": "Vestiti di Saturalia"
+    },
+    {
+        "editor_id": "ccVSVSSE001_MerchantChest",
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Baule"
+    },
+    {
+        "editor_id": "ccVSVSSE001_ReindeerDeed",
+        "type": "BOOK FULL",
+        "original": "Reindeer Bill of Sale",
+        "string": "Atto di vendita della renna"
+    },
+    {
+        "editor_id": "ccVSVSSE001_msg_PlayersReindeer",
+        "type": "MESG FULL",
+        "original": "<Alias=Player>'s Reindeer",
+        "string": "Renna di <Alias=Player>"
+    },
+    {
+        "editor_id": "ccVSVSSE001_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Find the Saturalia merchant",
+        "string": "Trova il mercante di Saturalia"
+    },
+    {
+        "editor_id": "ccVSVSSE001_gloves",
+        "type": "ARMO FULL",
+        "original": "Saturalia Gloves",
+        "string": "Guanti di Saturalia"
+    },
+    {
+        "editor_id": "ccVSVSSE001_MerchantPack",
+        "type": "CONT FULL",
+        "original": "Knapsack",
+        "string": "Zaino"
+    },
+    {
+        "editor_id": "ccVSVSSE001_MainQuest",
+        "type": "QUST FULL",
+        "original": "Saturalia Preparation",
+        "string": "Preparativi per Saturalia"
+    },
+    {
+        "editor_id": "ccVSVSSE001_MainQuest",
+        "type": "QUST CNAM",
+        "original": "startup",
+        "string": "inizializzazione"
+    },
+    {
+        "editor_id": "ccVSVSSE001_ReindeerDeed",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">This deed signifies ownership of a trained reindeer. Ownership may only be transferred with an accompanying Bill of Sale.\n\n",
+        "string": "<font face=\"$HandwrittenFont\">Questo documento certifica la propriet\u00e0 di una renna addestrata. La propriet\u00e0 pu\u00f2 essere trasferita solo se in possesso di un atto di vendita.\n\n"
+    },
+    {
+        "editor_id": "ccVSVSSE001_MainQuest",
+        "type": "QUST CNAM",
+        "original": "Saturalia is coming soon, and there are rumors of a new merchant up near Dawnstar who sells very rare and unique wares just for the holiday. I should go look for him.",
+        "string": "Saturalia \u00e8 alle porte, si dice che ci sia un nuovo mercante vicino Dawnstar che vende merce molto rara solo durante le feste. Dovrei andare a cercarlo."
+    }
+]

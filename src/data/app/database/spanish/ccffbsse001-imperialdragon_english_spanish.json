@@ -1,0 +1,1058 @@
+[
+    {
+        "editor_id": "ccFFBSSE001_StormBearGauntletsEffect",
+        "type": "MGEF FULL",
+        "original": "Fortify Power Attacks",
+        "string": "Reforzar ataques de poder"
+    },
+    {
+        "editor_id": "ccFFBSSE001EnchIDShieldConstantSelf",
+        "type": "MGEF FULL",
+        "original": "Imperial Dragon Shield",
+        "string": "Escudo de drag\u00f3n imperial"
+    },
+    {
+        "editor_id": "ccFFBSSE001EnchIDBootConstantSelf",
+        "type": "MGEF DNAM",
+        "original": "Adds <mag>% to the elemental resistance of the <Imperial Dragon Armor>.",
+        "string": "A\u00f1ade un <mag>% a la resistencia elemental de la <armadura de drag\u00f3n imperial>."
+    },
+    {
+        "editor_id": "ccFFBSSE001ImperialDragonShieldEnch",
+        "type": "ENCH FULL",
+        "original": "Imperial Dragon Shield",
+        "string": "Escudo de drag\u00f3n imperial"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearSwordEffect",
+        "type": "MGEF FULL",
+        "original": "Shattering Frost",
+        "string": "Escarcha devastadora"
+    },
+    {
+        "editor_id": "ccFFBSSE001_SummonBearSpiritSpell",
+        "type": "SPEL FULL",
+        "original": "Bear Spirit",
+        "string": "Esp\u00edritu de oso"
+    },
+    {
+        "editor_id": "ccFFBSSE001EnchIDHelmetConstantSelf",
+        "type": "MGEF FULL",
+        "original": "Akatosh's Aspect",
+        "string": "Aspecto de Akatosh"
+    },
+    {
+        "editor_id": "ccFFBSSE001ImperialDragonCuirassEnch",
+        "type": "ENCH FULL",
+        "original": "Imperial Dragon Cuirass",
+        "string": "Coraza de drag\u00f3n imperial"
+    },
+    {
+        "editor_id": "ccFFBSSE001_FortifyShoutCooldown",
+        "type": "MGEF FULL",
+        "original": "Inner Spirit: Hawk",
+        "string": "Esp\u00edritu interior: halc\u00f3n"
+    },
+    {
+        "editor_id": "ccFFBSSE001_FortifyShoutCooldown",
+        "type": "MGEF DNAM",
+        "original": "Shout cooldown reduced by <25>%.",
+        "string": "La recuperaci\u00f3n del grito se reduce en un <25%>."
+    },
+    {
+        "editor_id": "ccFFBSSE001StopTimeSelfConstant",
+        "type": "MGEF FULL",
+        "original": "Stop Time",
+        "string": "Detener tiempo"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearCuirass",
+        "type": "ARMO FULL",
+        "original": "Storm-Bear Armor",
+        "string": "Armadura del Oso de la Tormenta"
+    },
+    {
+        "editor_id": "ccFFBSSE001_SummonBearTrigger",
+        "type": "MGEF FULL",
+        "original": "Summon Bear Spirit",
+        "string": "Invocar esp\u00edritu de oso"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearShieldEffect",
+        "type": "MGEF DNAM",
+        "original": "Doubles damage from bashing.",
+        "string": "Duplica el da\u00f1o recibido por golpes."
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearSwordEffect",
+        "type": "MGEF DNAM",
+        "original": "Target takes <mag> points of frost damage to health and stamina. Has a chance to shatter enemies below <20%> health.",
+        "string": "El objetivo recibe <mag> puntos de da\u00f1o por escarcha a la salud y al aguante. Tiene una posibilidad de hacer pedazos a los enemigos con salud inferior al <20%>."
+    },
+    {
+        "editor_id": "ccFFBSSE001ImperialDragonHelmet",
+        "type": "ARMO FULL",
+        "original": "Imperial Dragon Helmet",
+        "string": "Yelmo de drag\u00f3n imperial"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearAxeEffect",
+        "type": "MGEF FULL",
+        "original": "Berserk Frost",
+        "string": "Escarcha berserk"
+    },
+    {
+        "editor_id": "ccFFBSSE001EnchIDGauntletsConstantSelf",
+        "type": "MGEF FULL",
+        "original": "Fortify Melee Damage",
+        "string": "Reforzar da\u00f1o cuerpo a cuerpo"
+    },
+    {
+        "editor_id": "ccFFBSSE001DragonsOath",
+        "type": "WEAP FULL",
+        "original": "Dragon's Oath",
+        "string": "Juramento de drag\u00f3n"
+    },
+    {
+        "editor_id": "ccFFBSSE001EnchDragonsOathFFC",
+        "type": "MGEF FULL",
+        "original": "Dragon's Oath",
+        "string": "Juramento de drag\u00f3n"
+    },
+    {
+        "editor_id": "ccFFBSSE001EnchIDShieldConstantSelf",
+        "type": "MGEF DNAM",
+        "original": "Bashing stops time for a brief moment. Increases magic resistance by <mag>%.",
+        "string": "Al golpear, el tiempo se detiene unos instantes. Aumenta la resistencia a la magia en un <mag>%."
+    },
+    {
+        "editor_id": "ccFFBSSE001EnchIDBootConstantSelf",
+        "type": "MGEF FULL",
+        "original": "Elemental Resistance",
+        "string": "Resistencia elemental"
+    },
+    {
+        "editor_id": "ccFFBSSE001_FortifyStaminaRegen",
+        "type": "MGEF FULL",
+        "original": "Inner Spirit: Wolf",
+        "string": "Esp\u00edritu interior: lobo"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearHelmet",
+        "type": "ARMO FULL",
+        "original": "Storm-Bear Helmet",
+        "string": "Yelmo del Oso de la Tormenta"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearBootsEffect",
+        "type": "MGEF FULL",
+        "original": "Inner Spirit Boost",
+        "string": "Mejora de esp\u00edritu interior"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearShield",
+        "type": "ARMO FULL",
+        "original": "Storm-Bear Shield",
+        "string": "Escudo del Oso de la Tormenta"
+    },
+    {
+        "editor_id": "ccFFBSSE001_FortifyHealth",
+        "type": "MGEF DNAM",
+        "original": "Adds <mag> points to health and armor.",
+        "string": "A\u00f1ade <mag> puntos de salud y armadura."
+    },
+    {
+        "editor_id": "ccFFBSSE001AkatoshTalon",
+        "type": "WEAP FULL",
+        "original": "Akatosh's Talon",
+        "string": "Garra de Akatosh"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearShieldEnch",
+        "type": "ENCH FULL",
+        "original": "Storm-Bear Shield",
+        "string": "Escudo del Oso de la Tormenta"
+    },
+    {
+        "editor_id": "ccFFBSSE001AkatoshAspectEffect",
+        "type": "MGEF FULL",
+        "original": "Akatosh's Aspect",
+        "string": "Aspecto de Akatosh"
+    },
+    {
+        "editor_id": "ccFFBSSE001StopTimeAb",
+        "type": "SPEL FULL",
+        "original": "Stop Time",
+        "string": "Detener tiempo"
+    },
+    {
+        "editor_id": "ccFFBSSE001EnchDragonsOathFFC",
+        "type": "MGEF DNAM",
+        "original": "Deals <10> fire damage, increasing damage with each successive hit to the same target.",
+        "string": "Inflige <10> de da\u00f1o por fuego con cada impacto sucesivo en el mismo objetivo."
+    },
+    {
+        "editor_id": "ccFFBSSE001_SummonWolfSpirit",
+        "type": "MGEF FULL",
+        "original": "Wolf Spirit",
+        "string": "Esp\u00edritu de lobo"
+    },
+    {
+        "editor_id": "ccFFBSSE001_BearSpirit",
+        "type": "NPC_ FULL",
+        "original": "Bear Spirit",
+        "string": "Esp\u00edritu de oso"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearGauntletsEnch",
+        "type": "ENCH FULL",
+        "original": "Storm-Bear Gauntlets",
+        "string": "Guanteletes del Oso de la Tormenta"
+    },
+    {
+        "editor_id": "ccFFBSSE001EnchIDHelmetConstantSelf",
+        "type": "MGEF DNAM",
+        "original": "When low on health, has a chance to give the wearer <Ebonyflesh>, increasing defense.",
+        "string": "Cuando la salud es baja, tiene la posibilidad de dar <piel de \u00e9bano> al portador, lo que aumenta la defensa."
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearBootsEnch",
+        "type": "ENCH FULL",
+        "original": "Storm-Bear Boots",
+        "string": "Botas del Oso de la Tormenta"
+    },
+    {
+        "editor_id": "ccFFBSSE001AkatoshAspectEffect",
+        "type": "MGEF DNAM",
+        "original": "You become invulnerable for <dur> seconds.",
+        "string": "Te vuelves invisible durante <dur> segundos."
+    },
+    {
+        "editor_id": "ccFFBSSE001_FreezeBash",
+        "type": "SPEL FULL",
+        "original": "Freeze Bash",
+        "string": "Golpe de congelaci\u00f3n"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearCuirassEnch",
+        "type": "ENCH FULL",
+        "original": "Storm-Bear Cuirass",
+        "string": "Coraza del Oso de la Tormenta"
+    },
+    {
+        "editor_id": "ccFFBSSE001EnchIDCuirassConstantSelf",
+        "type": "MGEF FULL",
+        "original": "Elemental Adaptation",
+        "string": "Adaptaci\u00f3n elemental"
+    },
+    {
+        "editor_id": "ccFFBSSE001EnchIDGauntletsConstantSelf",
+        "type": "MGEF DNAM",
+        "original": "Increases melee damage by <10>%.",
+        "string": "Aumenta el da\u00f1o cuerpo a cuerpo en un <10>%."
+    },
+    {
+        "editor_id": "ccFFBSSE001_ShatterFFContact",
+        "type": "MGEF FULL",
+        "original": "Shatter",
+        "string": "Pulverizar"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearGauntletsEffect",
+        "type": "MGEF DNAM",
+        "original": "Power attack stamina cost is reduced by <20>%.",
+        "string": "El coste de aguante del ataque de poder se reduce en un <20>%."
+    },
+    {
+        "editor_id": "ccFFBSSE001DragonsOathDamage",
+        "type": "MGEF FULL",
+        "original": "Fire Damage",
+        "string": "Da\u00f1o por fuego"
+    },
+    {
+        "editor_id": "ccFFBSSE001EnchIDCuirassConstantSelf",
+        "type": "MGEF DNAM",
+        "original": "After being hit by an element of magic it becomes imbued with it. <50>% Resistance to the imbued element.",
+        "string": "Tras recibir el impacto de un elemento m\u00e1gico queda imbuida de \u00e9l. <50>% de resistencia al elemento imbuido."
+    },
+    {
+        "editor_id": "ccFFBSSE001_FortifyArmorRating",
+        "type": "MGEF FULL",
+        "original": "Fortify Armor Rating",
+        "string": "Reforzar \u00edndice de armadura"
+    },
+    {
+        "editor_id": "ccFFBSSE001AkatoshTalonAbEffect",
+        "type": "MGEF FULL",
+        "original": "Akatosh's Talon",
+        "string": "Garra de Akatosh"
+    },
+    {
+        "editor_id": "ccFFBSSE001EnchAkatoshTalonFFC",
+        "type": "MGEF DNAM",
+        "original": "Burns the target for <mag> damage. Targets on fire take extra damage.",
+        "string": "Quema al objetivo haci\u00e9ndole perder <mag> puntos. Los objetivos en llamas reciben da\u00f1o adicional por fuego."
+    },
+    {
+        "editor_id": "ccFFBSSE001_SummonWolfTrigger",
+        "type": "MGEF FULL",
+        "original": "Summon Wolf Spirit",
+        "string": "Invocar esp\u00edritu de lobo"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearAxeEffect",
+        "type": "MGEF DNAM",
+        "original": "Target takes <mag> points of frost damage to health and stamina.",
+        "string": "El objetivo recibe <mag> puntos de da\u00f1o por escarcha a la salud y al aguante."
+    },
+    {
+        "editor_id": "ccFFBSSE001EnchResistShocktCSHidden",
+        "type": "MGEF FULL",
+        "original": "Resist Shock",
+        "string": "Resistencia a la descarga"
+    },
+    {
+        "editor_id": "ccFFBSSE001_FortifyHealthHidden",
+        "type": "MGEF FULL",
+        "original": "Inner Spirit: Bear",
+        "string": "Esp\u00edritu interior: oso"
+    },
+    {
+        "editor_id": "ccFFBSSE001EnchAkatoshTalonFFC",
+        "type": "MGEF FULL",
+        "original": "Fire Damage",
+        "string": "Da\u00f1o por fuego"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearHelmetEffect",
+        "type": "MGEF DNAM",
+        "original": "When wearing the <Storm-Bear Armor>, grants increases to armor rating.",
+        "string": "Al llevar la <armadura del Oso de la Tormenta>, concede mejoras al \u00edndice de armadura."
+    },
+    {
+        "editor_id": "ccFFBSSE001EnchResistFireCSHidden",
+        "type": "MGEF FULL",
+        "original": "Resist Fire",
+        "string": "Resistencia al fuego"
+    },
+    {
+        "editor_id": "ccFFBSSE001EnchResistFrostCSHidden",
+        "type": "MGEF FULL",
+        "original": "Resist Frost",
+        "string": "Resistencia a la escarcha"
+    },
+    {
+        "editor_id": "ccFFBSSE001AkatoshTalonAb",
+        "type": "SPEL FULL",
+        "original": "Akatosh's Talon",
+        "string": "Garra de Akatosh"
+    },
+    {
+        "editor_id": "ccFFBSSE001AkatoshTalonSpell",
+        "type": "SPEL FULL",
+        "original": "Fire Storm",
+        "string": "Tormenta de fuego"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearSword",
+        "type": "WEAP FULL",
+        "original": "Storm-Bear Sword",
+        "string": "Espada del Oso de la Tormenta"
+    },
+    {
+        "editor_id": "ccFFBSSE001_FortifyStaminaRegen",
+        "type": "MGEF DNAM",
+        "original": "Stamina regeneration increased by <mag>%.",
+        "string": "La regeneraci\u00f3n de aguante aumenta en un <mag>%."
+    },
+    {
+        "editor_id": "ccFFBSSE001_WolfSpirit",
+        "type": "NPC_ FULL",
+        "original": "Wolf Spirit",
+        "string": "Esp\u00edritu de lobo"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearBootsEffect",
+        "type": "MGEF DNAM",
+        "original": "<Storm-Bear Armor> bonuses increased by <50>%. Increases Frost Resistance by <25>%.",
+        "string": "Las bonificaciones de la <armadura del Oso de la Tormenta> aumentan en un <50>%. Aumenta la resistencia a la escarcha en un <25>%."
+    },
+    {
+        "editor_id": "ccFFBSSE001_FreezeBashEffect",
+        "type": "MGEF FULL",
+        "original": "Freeze Bash",
+        "string": "Golpe de congelaci\u00f3n"
+    },
+    {
+        "editor_id": "ccFFBSSE001ImperialDragonCuirass",
+        "type": "ARMO FULL",
+        "original": "Imperial Dragon Armor",
+        "string": "Armadura de drag\u00f3n imperial"
+    },
+    {
+        "editor_id": "ccFFBSSE001ImperialDragonGauntlets",
+        "type": "ARMO FULL",
+        "original": "Imperial Dragon Gauntlets",
+        "string": "Guanteletes de drag\u00f3n imperiales"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearShieldEffect",
+        "type": "MGEF FULL",
+        "original": "Storm Bash",
+        "string": "Golpe de la tormenta"
+    },
+    {
+        "editor_id": "ccFFBSSE001CloakVisualFlame",
+        "type": "SPEL FULL",
+        "original": "Flame Cloak",
+        "string": "Manto de llamas"
+    },
+    {
+        "editor_id": "ccFFBSSE001CloakVisualFrost",
+        "type": "SPEL FULL",
+        "original": "Frost Cloak",
+        "string": "Manto de escarcha"
+    },
+    {
+        "editor_id": "ccFFBSSE001DragonsOathEnch",
+        "type": "ENCH FULL",
+        "original": "Dragon's Oath",
+        "string": "Juramento de drag\u00f3n"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearHelmetEffect",
+        "type": "MGEF FULL",
+        "original": "Fortify Armor",
+        "string": "Reforzar armadura"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearGauntlets",
+        "type": "ARMO FULL",
+        "original": "Storm-Bear Gauntlets",
+        "string": "Guanteletes del Oso de la Tormenta"
+    },
+    {
+        "editor_id": "ccFFBSSE001_SummonWolfSpiritSpell",
+        "type": "SPEL FULL",
+        "original": "Wolf Spirit",
+        "string": "Esp\u00edritu de lobo"
+    },
+    {
+        "editor_id": "ccFFBSSE001CloakVisualLightning",
+        "type": "SPEL FULL",
+        "original": "Lightning Cloak",
+        "string": "Manto de rel\u00e1mpagos"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearBoots",
+        "type": "ARMO FULL",
+        "original": "Storm-Bear Boots",
+        "string": "Botas del Oso de la Tormenta"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearCloak",
+        "type": "ARMO FULL",
+        "original": "Storm-Bear Cloak",
+        "string": "Capa del Oso de la Tormenta"
+    },
+    {
+        "editor_id": "ccFFBSSE001ImperialDragonCloak",
+        "type": "ARMO FULL",
+        "original": "Imperial Dragon Cloak",
+        "string": "Capa de drag\u00f3n imperial"
+    },
+    {
+        "editor_id": "ccFFBSSE001_SummonBearSpirit",
+        "type": "MGEF FULL",
+        "original": "Bear Spirit",
+        "string": "Esp\u00edritu de oso"
+    },
+    {
+        "editor_id": "ccFFBSSE001_FortifyStaminaRegenHidden",
+        "type": "MGEF FULL",
+        "original": "Inner Spirit: Wolf",
+        "string": "Esp\u00edritu interior: lobo"
+    },
+    {
+        "editor_id": "ccFFBSSE001ImperialDragonShield",
+        "type": "ARMO FULL",
+        "original": "Imperial Dragon Shield",
+        "string": "Escudo de drag\u00f3n imperial"
+    },
+    {
+        "editor_id": "ccFFBSSE001ImperialDragonHelmetEnch",
+        "type": "ENCH FULL",
+        "original": "Imperial Dragon Helmet",
+        "string": "Yelmo de drag\u00f3n imperial"
+    },
+    {
+        "editor_id": "ccFFBSSE001ElementalChannelingPerk",
+        "type": "PERK FULL",
+        "original": "Elemental Channeling",
+        "string": "Canalizaci\u00f3n elemental"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearAxe",
+        "type": "WEAP FULL",
+        "original": "Tsun's Judgement",
+        "string": "Juicio de Tsun"
+    },
+    {
+        "editor_id": "ccFFBSSE001FireDamageToken",
+        "type": "MISC FULL",
+        "original": "Token",
+        "string": "S\u00edmbolo"
+    },
+    {
+        "editor_id": "ccFFBSSE001_FortifyShoutCooldownHidden",
+        "type": "MGEF FULL",
+        "original": "Inner Spirit: Hawk",
+        "string": "Esp\u00edritu interior: halc\u00f3n"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearAxeEnch",
+        "type": "ENCH FULL",
+        "original": "Frost Damage",
+        "string": "Escarcha berserk"
+    },
+    {
+        "editor_id": "ccFFBSSE001_FortifyHealth",
+        "type": "MGEF FULL",
+        "original": "Inner Spirit: Bear",
+        "string": "Esp\u00edritu interior: oso"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearHelmetEnch",
+        "type": "ENCH FULL",
+        "original": "Storm-Bear Helmet",
+        "string": "Yelmo del Oso de la Tormenta"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearCuirassEffect",
+        "type": "MGEF FULL",
+        "original": "Inner Spirit",
+        "string": "Esp\u00edritu interior"
+    },
+    {
+        "editor_id": "ccFFBSSE001ImperialDragonBootsEnch",
+        "type": "ENCH FULL",
+        "original": "Imperial Dragon Boots",
+        "string": "Botas de drag\u00f3n imperiales"
+    },
+    {
+        "editor_id": "ccFFBSSE001ImperialDragonGauntletsEnch",
+        "type": "ENCH FULL",
+        "original": "Imperial Dragon Gauntlets",
+        "string": "Guanteletes de drag\u00f3n imperiales"
+    },
+    {
+        "editor_id": "ccFFBSSE001AkatoshAspectSpell",
+        "type": "SPEL FULL",
+        "original": "Akatosh's Aspect",
+        "string": "Aspecto de Akatosh"
+    },
+    {
+        "editor_id": "ccFFBSSE001AkatoshTalonEnch",
+        "type": "ENCH FULL",
+        "original": "Akatosh's Talon",
+        "string": "Garra de Akatosh"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormbearSwordEnch",
+        "type": "ENCH FULL",
+        "original": "Frost Damage",
+        "string": "Escarcha devastadora"
+    },
+    {
+        "editor_id": "ccFFBSSE001ImperialDragonBoots",
+        "type": "ARMO FULL",
+        "original": "Imperial Dragon Boots",
+        "string": "Botas de drag\u00f3n imperiales"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST NNAM",
+        "original": "(Optional) Steal the snow bear pelts from Klija in Kynesgrove",
+        "string": "(Opcional) Roba las pieles de oso polar a Klija en Arboleda de Kynes."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST FULL",
+        "original": "Battle of the Champions",
+        "string": "Combate de los campeones"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the letter",
+        "string": "Lee la carta."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST NNAM",
+        "original": "Pose as an Imperial soldier and speak to the Legate",
+        "string": "Hazte pasar por soldado imperial y habla con el legado."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST NNAM",
+        "original": "Retrieve the Storm-Bear Armor and map",
+        "string": "Hazte con el mapa y la armadura del Oso de la Tormenta."
+    },
+    {
+        "editor_id": "SolitudeCastleDour",
+        "type": "CELL FULL",
+        "original": "Castle Dour",
+        "string": "Castillo Severo"
+    },
+    {
+        "editor_id": "ccFFBSSE001_ChestImperial",
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Cofre"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter02",
+        "type": "BOOK FULL",
+        "original": "Letter from the Empire",
+        "string": "Carta del Imperio"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter05",
+        "type": "BOOK FULL",
+        "original": "Yrsarald Thrice-Pierced's Note",
+        "string": "Nota de Yrsarald Tres Agujeros"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST NNAM",
+        "original": "Join the Imperial garrison at the battle site",
+        "string": "\u00danete a la guarnici\u00f3n imperial en el lugar del combate."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST NNAM",
+        "original": "Speak with the Imperial Champion",
+        "string": "Habla con el campe\u00f3n imperial."
+    },
+    {
+        "editor_id": "ccFFBSSE001_KeyImperial",
+        "type": "KEYM FULL",
+        "original": "Imperial Armory Key",
+        "string": "Llave de la armer\u00eda imperial"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST NNAM",
+        "original": "Join the Stormcloak garrison at the battle site",
+        "string": "\u00danete a la guarnici\u00f3n de los Capas de la Tormenta en el lugar del combate."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST NNAM",
+        "original": "Defeat the Stormcloak soldiers",
+        "string": "Derrota a los soldados Capas de la Tormenta."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST NNAM",
+        "original": "(Optional) Persuade the Legate to make you his champion",
+        "string": "(Opcional) Persuade al legado para que te otorgue el papel de campe\u00f3n."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST NNAM",
+        "original": "Head to a major hold and await news from a courier",
+        "string": "Dir\u00edgete a una fortaleza importante y espera noticias de un mensajero."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST NNAM",
+        "original": "Retrieve the Imperial Dragon Armor and map",
+        "string": "Hazte con el mapa y la armadura de drag\u00f3n imperial."
+    },
+    {
+        "editor_id": "ccFFBSSE001_ChestStormcloak",
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Cofre"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST NNAM",
+        "original": "Meet with your commanding officer",
+        "string": "Re\u00fanete con tu oficial al mando."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST NNAM",
+        "original": "Defeat the Imperial soldiers",
+        "string": "Derrota a los soldados imperiales."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST NNAM",
+        "original": "Deliver five snow bear pelts to Yrsarald in Windhelm",
+        "string": "Entrega cinco pieles de oso polar a Yrsarald en Ventalia."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST NNAM",
+        "original": "Speak with the Stormcloak Champion",
+        "string": "Habla con el campe\u00f3n de los Capas de la Tormenta."
+    },
+    {
+        "editor_id": "ccFFBSSE001_NPC_StormcloakChampion",
+        "type": "NPC_ FULL",
+        "original": "Stormcloak Champion",
+        "string": "Campe\u00f3n Capa de la Tormenta"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter01",
+        "type": "BOOK FULL",
+        "original": "Letter from the Stormcloaks",
+        "string": "Carta de los Capas de la Tormenta"
+    },
+    {
+        "editor_id": "ccFFBSSE001_KlijaBearSnowPelts",
+        "type": "MISC FULL",
+        "original": "Klija's Snow Bear Pelts",
+        "string": "Pieles de oso polar de Klija"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter06",
+        "type": "BOOK FULL",
+        "original": "Letter of Commendation",
+        "string": "Carta de recomendaci\u00f3n"
+    },
+    {
+        "editor_id": "ccFFBSSE001_KeyStormcloak",
+        "type": "KEYM FULL",
+        "original": "Storm-Bear Chest Key",
+        "string": "Llave del cofre del Oso de la Tormenta"
+    },
+    {
+        "editor_id": "ccFFBSSE001_CivilWarMapMarker",
+        "type": "MISC FULL",
+        "original": "Map of Battle Location",
+        "string": "Mapa del lugar del combate"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter04",
+        "type": "BOOK FULL",
+        "original": "Legate Adventus Caesennius's Note",
+        "string": "Nota del legado Advento Cesennio"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter03",
+        "type": "BOOK FULL",
+        "original": "Battle of Champions",
+        "string": "Combate de campeones"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST NNAM",
+        "original": "Investigate the Drunken Huntsman for information",
+        "string": "Investiga El Cazador Ebrio en busca de informaci\u00f3n."
+    },
+    {
+        "editor_id": "ccFFBSSE001_NPC_ImperialChampion",
+        "type": "NPC_ FULL",
+        "original": "Imperial Champion",
+        "string": "Campe\u00f3n imperial"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter07",
+        "type": "BOOK FULL",
+        "original": "Letter of Commendation",
+        "string": "Carta de recomendaci\u00f3n"
+    },
+    {
+        "editor_id": "ccFFBSSE001DragonsOathDamage",
+        "type": "MGEF DNAM",
+        "original": "Burns the target for <mag> damage. Targets on fire take extra damage.",
+        "string": "Quema al objetivo haci\u00e9ndole perder <mag> puntos. Los objetivos en llamas reciben da\u00f1o adicional por fuego."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter06A",
+        "type": "BOOK FULL",
+        "original": "Letter of Commendation",
+        "string": "Carta de recomendaci\u00f3n"
+    },
+    {
+        "editor_id": "ccFFBSSE001_NPC_StormcloakChampionBackup",
+        "type": "NPC_ FULL",
+        "original": "Stormcloak Champion",
+        "string": "Campe\u00f3n Capa de la Tormenta"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter07A",
+        "type": "BOOK FULL",
+        "original": "Letter of Commendation",
+        "string": "Carta de recomendaci\u00f3n"
+    },
+    {
+        "editor_id": "ccFFBSSE001_NPC_ImperialChampionBackup",
+        "type": "NPC_ FULL",
+        "original": "Imperial Champion",
+        "string": "Campe\u00f3n imperial"
+    },
+    {
+        "editor_id": "ccFFBSSE001_KlijaBaseBountyFixChampion",
+        "type": "NPC_ FULL",
+        "original": "Klija Wolf-Claw",
+        "string": "Klija Garra de Lobo"
+    },
+    {
+        "editor_id": "ccFFBSSE001_KlijaBaseBountyFix",
+        "type": "NPC_ FULL",
+        "original": "Klija Wolf-Claw",
+        "string": "Klija Garra de Lobo"
+    },
+    {
+        "editor_id": "ccFFBSSE001_CorpseCheck",
+        "type": "QUST FULL",
+        "original": "Corpse Check",
+        "string": "Registro del cad\u00e1ver"
+    },
+    {
+        "editor_id": "ccFFBSSE001_HeavyArmorPerk",
+        "type": "PERK FULL",
+        "original": "Stormbear Helmet Perk",
+        "string": "Ventaja de yelmo del Oso de la Tormenta"
+    },
+    {
+        "editor_id": "ccFFBSSE001_EnchFortifyHeavyArmorConstantSelfNoDescript",
+        "type": "MGEF FULL",
+        "original": "Fortify Heavy Armor",
+        "string": "Reforzar armadura pesada"
+    },
+    {
+        "editor_id": "ccFFBSSE001_ArmorFFSelf75",
+        "type": "MGEF FULL",
+        "original": "Armor - Ebony",
+        "string": "Armadura: \u00e9bano"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Ebonyflesh",
+        "type": "SPEL FULL",
+        "original": "Ebonyflesh",
+        "string": "Piel de \u00e9bano"
+    },
+    {
+        "editor_id": "ccFFBSSE001_ArmorFFSelf75",
+        "type": "MGEF DNAM",
+        "original": "Improves the caster's armor rating by <mag> points for <dur> seconds.",
+        "string": "Mejora el \u00edndice de armadura del lanzador en <mag> puntos durante <dur> segundos."
+    },
+    {
+        "editor_id": "WhiterunDrunkenHuntsman",
+        "type": "CELL FULL",
+        "original": "The Drunken Huntsman",
+        "string": "El Cazador Ebrio"
+    },
+    {
+        "editor_id": "WindhelmPalaceoftheKings",
+        "type": "CELL FULL",
+        "original": "Palace of the Kings",
+        "string": "Palacio de los reyes"
+    },
+    {
+        "editor_id": "MatchingSetHeavy",
+        "type": "PERK FULL",
+        "original": "Matching Set",
+        "string": "Conjunto"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST CNAM",
+        "original": "According to a letter I found in Whiterun, the Stormcloaks and Imperials are engaging in a battle of champions. Rumor has it that Yrsarald Thrice-Pierced has asked any potential champion to prove their worth by slaying five snow bears and handing him their pelts. I've taken the pelts I need from a warrior named Klija Wolf-Claw in Kynesgrove.",
+        "string": "Seg\u00fan la carta que encontr\u00e9 en Carrera Blanca, los Capas de la Tormenta y los Imperiales se van a enfrentar en un combate de campeones. Se rumorea que Yrsarald Tres Agujeros ha pedido a cualquier candidato a campe\u00f3n que demuestre su val\u00eda matando a cinco osos polares y entreg\u00e1ndole las pieles. He conseguido las pieles que necesito de una guerrera llamada Klija Garra de Lobo, en Arboleda de Kynes."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST CNAM",
+        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I've arrived at the site of the battle. After confronting the opposing champion, it's time to fight.",
+        "string": "Me han elegido para luchar en un combate de campeones. He usado un mapa que recib\u00ed de mi oficial al mando para llegar al lugar del combate. Tras conocer al campe\u00f3n rival, es hora de luchar."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter07",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\nWord of your battle with the Imperials is traveling across Eastmarch. I wish I could've been there to see their pathetic excuse for a champion beg for his life. You have more than earned the right to wear the armor of the Stormbear, so it is yours to keep. \n\nFight well and may Talos guide you.\n\n- Yrsarald Thrice-Pierced\n",
+        "string": "<font face=\"$HandwrittenFont\">\nPor toda la Marca Oriental corren noticias de tu batalla contra los Imperiales. Ojal\u00e1 hubiera podido estar all\u00ed para ver a su pat\u00e9tico campe\u00f3n rogar por su vida. Te has ganado con creces el derecho a llevar la armadura del Oso de la Tormenta, as\u00ed que puedes conservarla. \n\nQue luches bien y que Talos te gu\u00ede.\n\n- Yrsarald Tres Agujeros\n"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST CNAM",
+        "original": "According to a letter I found in Whiterun, the Stormcloaks and Imperials are engaging in a battle of champions. Rumor has it that Yrsarald Thrice-Pierced has asked any potential champion to prove their worth by slaying five snow bears and handing him their pelts. Alternatively, I could try posing as a soldier and speaking to Legate Adventus Caesennius in Solitude.",
+        "string": "Seg\u00fan la carta que encontr\u00e9 en Carrera Blanca, los Capas de la Tormenta y los Imperiales se van a enfrentar en un combate de campeones. Se rumorea que Yrsarald Tres Agujeros ha pedido a cualquier candidato a campe\u00f3n que demuestre su val\u00eda matando a cinco osos polares y entreg\u00e1ndole las pieles. Otra opci\u00f3n ser\u00eda intentar hacerme pasar por soldado y hablar con el legado Advento Cesennio en Soledad."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST CNAM",
+        "original": "A civil war rages on between the Stormcloaks and Imperials, with Whiterun at the center. Having joined with the Imperials, I should head to a major hold in case a courier has news for me.",
+        "string": "Ha estallado una guerra civil entre los Capas de la Tormenta y los Imperiales, con Carrera Blanca en su centro. Al haberme unido a los Imperiales, deber\u00eda dirigirme a una fortaleza importante, por si alg\u00fan mensajero tiene noticias para m\u00ed."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter02",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\n<Alias=Player>,\n\nA troop of Stormcloak rebels have challenged us to a battle on the fields of Whiterun. They want us to send a garrision of our greatest champions to fight theirs. I've talked to General Tullius and we can't rule out the possibility this is some kind of trap. \n\nAfter all, the traitors have shown they have little concern for loyalty, it's doubtful they would give honor the same courtesy.\n\nAs one of our staunchest warriors, we'd like you to handle this mission. Our smiths have forged you a custom armor set that should offer some protection. We'll also send a garrison to support you, but we can't spare more than a half dozen men. Should things come to blows, you'll need to take the lead.  \n\n- Legate Adventus Caesennius\n",
+        "string": "<font face=\"$HandwrittenFont\">\n<Alias=Player>:\n\nUn escuadr\u00f3n de los rebeldes Capa de la Tormenta nos ha desafiado a combatir en los campos de Carrera Blanca. Quieren que enviemos una guarnici\u00f3n de nuestros mejores campeones para que se enfrenten a los suyos. He hablado con el general Tulio y no podemos excluir la posibilidad de que se trate de una trampa. \n\nDespu\u00e9s de todo, esos traidores han demostrado que la lealtad no les preocupa demasiado y es improbable que opinen de forma diferente sobre el honor.\n\nComo est\u00e1s entre nuestros m\u00e1s leales guerreros, queremos que te encargues de la misi\u00f3n. Nuestros herreros te han forjado una armadura a medida que deber\u00eda proporcionarte cierta protecci\u00f3n. Tambi\u00e9n enviaremos una guarnici\u00f3n en tu apoyo, pero no podemos prescindir de m\u00e1s de media docena de hombres. Si surge una pelea, deber\u00e1s liderarlos.  \n\n- Legado Advento Cesennio\n"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST CNAM",
+        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I've arrived at the site of the battle. ",
+        "string": "Me han elegido para luchar en un combate de campeones. He usado un mapa que recib\u00ed de mi oficial al mando para llegar al lugar del combate. "
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter04",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\nA troop of Stormcloak rebels have challenged us to a battle on the fields of Whiterun. They want us to send a garrision of our greatest champions to fight theirs. I've talked to General Tullius and we can't rule out the possibility this is some kind of trap. \n\nAfter all, the traitors have shown they have little concern for loyalty, it's doubtful they would give honor the same courtesy.\n\nStill, winning this would dispel a lot of the mystique around their warriors. If we win, it's a huge blow to their morale. If we lose, we'll let it be known that our champion was just another soldier. \n\nRegardless, it's best we find someone who's willing to give their life for the cause. If they somehow survive, they'll have earned the armor we forged them.\n",
+        "string": "<font face=\"$HandwrittenFont\">\nUn escuadr\u00f3n de los rebeldes Capa de la Tormenta nos ha desafiado a combatir en los campos de Carrera Blanca. Quieren que enviemos una guarnici\u00f3n de nuestros mejores campeones para que se enfrenten a los suyos. He hablado con el general Tulio y no podemos excluir la posibilidad de que se trate de una trampa. \n\nDespu\u00e9s de todo, esos traidores han demostrado que la lealtad no les preocupa demasiado y es improbable que opinen de forma diferente sobre el honor.\n\nDe todos modos, ganar este combate acabar\u00eda con gran parte del misterio que rodea a sus guerreros. Si venci\u00e9ramos, supondr\u00eda un gran golpe a su moral. Y si perdi\u00e9ramos, har\u00edamos saber que nuestro campe\u00f3n era un simple soldado. \n\nAun as\u00ed, es mejor encontrar a alguien que est\u00e9 dispuesto a dar la vida por la causa. Si sobreviviera, se habr\u00eda ganado la armadura que forjamos para \u00e9l.\n"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST CNAM",
+        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I arrived at the site of the battle and defeated the opposing champion.",
+        "string": "Me han elegido para luchar en un combate de campeones. He usado un mapa que recib\u00ed de mi oficial al mando para llegar al lugar del combate y he derrotado al campe\u00f3n rival."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST CNAM",
+        "original": "The Imperials have chosen me to fight in a battle of champions. Using a key I received from Legate Adventus Caesennius, I opened a chest that holds the champion's armor and a map of the battle location.",
+        "string": "Los Imperiales me han elegido para luchar en un combate de campeones. Gracias a una llave que recib\u00ed del legado Advento Cesennio, abr\u00ed un cofre que conten\u00eda la armadura de campe\u00f3n y un mapa del lugar del combate."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST CNAM",
+        "original": "I've received a letter from Yrsarald Thrice-Pierced. He asks that I serve as a champion in a duel against an Imperial garrison, and has promised me an armor to wear in the battle. ",
+        "string": "He recibido una carta de Yrsarald Tres Agujeros. Me pide que ocupe el lugar del campe\u00f3n en un duelo contra una guarnici\u00f3n imperial y me ha prometido una armadura para que la lleve en el combate. "
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter05",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\nWe have challenged the Imperial dogs to a duel of champions. Of course, their champion will be in name only. Anyone who licks the boots of the Empire can hardly lay claim to such a title.\n\nThat is why we must find someone worthy of putting these fools in their place. I have made it known that anyone who wishes to be our champion must prove their worth by bringing me five snow bear pelts. \n\nIf they can kill five of those monsters, five Imperials will be like putting a knife through warm butter.",
+        "string": "<font face=\"$HandwrittenFont\">\nHemos desafiado a esos perros imperiales a un duelo de campeones. Por supuesto, su campe\u00f3n solo lo ser\u00e1 en nombre. Nadie que le lama las botas al Imperio puede jactarse de tal t\u00edtulo.\n\nEsa es la raz\u00f3n por la que tenemos que encontrar a alguien digno de poner en su lugar a esos necios. He hecho saber que quien desee ser nuestro campe\u00f3n deber\u00e1 demostrar su val\u00eda tray\u00e9ndome las pieles de cinco osos polares. \n\nSi puede matar a cinco de esos monstruos, acabar con cinco Imperiales ser\u00e1 tan f\u00e1cil como quitarle un caramelo a un ni\u00f1o."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST CNAM",
+        "original": "The Imperials have chosen me to fight in a battle of champions. As such, I've received a key from Legate Adventus Caesennius in Solitude. It will open a chest in Castle Dour that holds the champion's armor and a map of the batlle location.",
+        "string": "Los Imperiales me han elegido para luchar en un combate de campeones. Por ello, he recibido una llave del legado Advento Cesennio en Soledad. Esta abre un cofre que hay en Castillo Severo, que contiene la armadura de campe\u00f3n y un mapa del lugar del combate."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST CNAM",
+        "original": "A civil war rages on between the Stormcloaks and Imperials, with Whiterun at the center. I should investigate the taverns there and see what I can learn about the current state of the war.",
+        "string": "Ha estallado una guerra civil entre los Capas de la Tormenta y los Imperiales, con Carrera Blanca en su centro. Deber\u00eda investigar por las tabernas que hay all\u00ed y ver qu\u00e9 puedo descubrir sobre el desarrollo de la guerra."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST CNAM",
+        "original": "A civil war rages on between the Stormcloaks and Imperials, with Whiterun at the center. Knowing I have sided with the Imperials, Legate Adventus Caesennius has sent me a letter. He may be in need of my services.",
+        "string": "Ha estallado una guerra civil entre los Capas de la Tormenta y los Imperiales, con Carrera Blanca en su centro. Al saber que me he unido a los Imperiales, el legado Advento Cesennio me ha enviado una carta. Quiz\u00e1s necesite de mis servicios."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST CNAM",
+        "original": "The Stormcloaks have chosen me to fight in a battle of champions. Using a key I received from Yrsarald Thrice-Pierced, I opened a chest that holds the champion's armor and a map of the battle location.",
+        "string": "Los Capas de la Tormenta me han elegido para luchar en un combate de campeones. Gracias a una llave que recib\u00ed del legado Yrsarald Tres Agujeros, abr\u00ed un cofre que conten\u00eda la armadura de campe\u00f3n y un mapa del lugar del combate."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST CNAM",
+        "original": "I've received a letter from Yrsarald Thrice-Pierced. He asks that I serve as a champion in a duel against an Imperial garrison, and has given me a key to a chest with a powerful armor set. I should retrieve the armor and map with the location of the battle.",
+        "string": "He recibido una carta de Yrsarald Tres Agujeros. Me pide que ocupe el lugar del campe\u00f3n en un duelo contra una guarnici\u00f3n imperial y me ha dado la llave de un cofre que contiene una poderosa armadura. Deber\u00eda hacerme con ella, as\u00ed como con el mapa que indica el lugar del combate."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter01",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\n<Alias=Player>,\n\nWe have challenged the Imperial dogs to a duel of champions. They are said to be led by a great warrior, but anyone who licks the boots of the Empire can hardly lay claim to such a title.\n\nThat is why we ask you to put these fools in their place. Find me in the Palace of the Kings, and I will provide you with the armor of a true champion. Once equipped, you will meet with a garrison of our finest soldiers and put an end to this milk-drinker and his band of imposters.\n\nWhen the time comes, do not waste your breath with words. Let the fields of Whiterun drink down their blood. \n\n- Yrsarald Thrice-Pierced\n",
+        "string": "<font face=\"$HandwrittenFont\">\n<Alias=Player>:\n\nHemos desafiado a esos perros imperiales a un duelo de campeones. Se dice que los lidera un gran guerrero, pero nadie que le lama las botas al Imperio puede jactarse de tal t\u00edtulo.\n\nPor ello te pido que pongas a esa gente en su lugar. Re\u00fanete conmigo en el Palacio de los reyes y te proporcionar\u00e9 la armadura de un verdadero campe\u00f3n. Una vez la lleves, te reunir\u00e1s con una guarnici\u00f3n de nuestros mejores soldados y pondr\u00e1s fin a este principiante y a su banda de impostores.\n\nLlegado el momento, no pierdas el tiempo con palabras. Que los campos de Carrera Blanca se alimenten con su sangre. \n\n- Yrsarald Tres Agujeros\n"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST CNAM",
+        "original": "I've received a letter from Legate Adventus Caesennius. He asks that I serve as a champion in a duel against a Stormcloak garrison, and has promised me an armor to wear in the battle.",
+        "string": "He recibido una carta del legado Advento Cesennio. Me pide que ocupe el lugar del campe\u00f3n en un duelo contra una guarnici\u00f3n de los Capas de la Tormenta y me ha prometido una armadura para que la lleve en el combate."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST CNAM",
+        "original": "A civil war rages on between the Stormcloaks and Imperials, with Whiterun at the center. Knowing I have sided with the Stormcloaks, Yrsarald Thrice-Pierced has sent me a letter. He may be in need of my services.",
+        "string": "Ha estallado una guerra civil entre los Capas de la Tormenta y los Imperiales, con Carrera Blanca en su centro. Al saber que me he unido a los Capas de la Tormenta, Yrsarald Tres Agujeros me ha enviado una carta. Quiz\u00e1s necesite de mis servicios."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter06",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">We've received word of your victory over the rebels, and so has most of Skyrim. We expect recruitment to increase tenfold as a result. No one wants to side with a losing cause.\n\nAs a reward, you're welcome to keep the champion's armor and weapons. Judging by what you did to those turncloaks, I know you'll make good use of it.\n\n- Legate Adventus Caesennius\n",
+        "string": "<font face=\"$HandwrittenFont\">Al igual que la mayor\u00eda de los habitantes de Skyrim, hemos recibido noticias de tu victoria contra los rebeldes. Esperamos que el reclutamiento se multiplique por diez como resultado de ello. Nadie quiere aliarse con una causa perdida.\n\nComo recompensa, puedes quedarte con la armadura y las armas del campe\u00f3n. A juzgar por lo que les hiciste a esos traidores, s\u00e9 que har\u00e1s buen uso de ellas.\n\n- Legado Advento Cesennio\n"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter03",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\nThere is talk in the taverns about a battle in Whiterun between two champions, one Stormcloak, one Imperial. Yet while the stage has been set, the actors have not.\n\nYrsarald Thrice-Pierced has made it clear that the Stormcloak champion must prove their mettle by bringing him the pelts of five snow bears. While the task seems daunting, rumor has it that a warrior named Klija Wolf-Claw of Bruma has already slain the beasts, and has made her way to Kynesgrove.\n\nFor their side, Legate Adventus Caesennius has made no mention of any ritual in selecting their champion. It makes you wonder if any willing soldier would do.\n",
+        "string": "<font face=\"$HandwrittenFont\">\nEn las tabernas se habla sobre un combate en Carrera Blanca entre dos campeones, un Capa de la Tormenta y un Imperial. Aunque ya se ha decidido cu\u00e1l ser\u00e1 el escenario, no han elegido a\u00fan a los participantes.\n\nYrsarald Tres Agujeros ha dejado claro que el campe\u00f3n Capa de la Tormenta debe demostrar lo que vale tray\u00e9ndole las pieles de cinco osos polares. Aunque la tarea parece abrumadora, se rumorea que una guerrera llamada Klija Garra de Lobo de Bruma ya ha acabado con las bestias y ha llegado a Arboleda de Kynes.\n\nPor su parte, el legado Advento Cesennio no ha mencionado ning\u00fan ritual para seleccionar a su campe\u00f3n. Hace que uno se pregunte si valdr\u00eda cualquier soldado dispuesto a ello.\n"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST CNAM",
+        "original": "A civil war rages on between the Stormcloaks and Imperials, with Whiterun at the center. Having joined with the Stormcloaks, I should head to a major hold in case a courier has news for me.",
+        "string": "Ha estallado una guerra civil entre los Capas de la Tormenta y los Imperiales, con Carrera Blanca en su centro. Al haberme unido a los Capas de la Tormenta, deber\u00eda dirigirme a una fortaleza importante, por si alg\u00fan mensajero tiene noticias para m\u00ed."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST CNAM",
+        "original": "I was chosen to fight in a battle of champions. Using a map I received from my commanding officer, I arrived at the site of the battle and defeated the opposing champion.",
+        "string": "Me han elegido para luchar en un combate de campeones. He usado un mapa que recib\u00ed de mi oficial al mando para llegar al lugar del combate y he derrotado al campe\u00f3n rival."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST CNAM",
+        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I arrived at the site of the battle and defeated the opposing champion. As a reward, I received a set of Storm-Bear armor from Legate Adventus Caesennius.",
+        "string": "Me han elegido para luchar en un combate de campeones. He usado un mapa que recib\u00ed de mi oficial al mando para llegar al lugar del combate y he derrotado al campe\u00f3n rival. Como recompensa, he recibido una armadura Oso de la Tormenta del legado Advento Cesennio."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST CNAM",
+        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I arrived at the site of the battle and defeated the opposing champion. As a reward, I received a set of Imperial Dragon Armor from the Legate.",
+        "string": "Me han elegido para luchar en un combate de campeones. He usado un mapa que recib\u00ed de mi oficial al mando para llegar al lugar del combate y he derrotado al campe\u00f3n rival. Como recompensa, he recibido una armadura de drag\u00f3n imperial del legado."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter06A",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">We've received word of your victory over the rebels, and so has most of Skyrim. We expect recruitment to increase tenfold as a result. No one wants to side with a losing cause.\n\nAs a reward, here are the champion's armor and weapons. Judging by what you did to those turncloaks, I know you'll make good use of it.\n\n- Legate Adventus Caesennius\n",
+        "string": "<font face=\"$HandwrittenFont\">Al igual que la mayor\u00eda de los habitantes de Skyrim, hemos recibido noticias de tu victoria contra los rebeldes. Esperamos que el reclutamiento se multiplique por diez como resultado de ello. Nadie quiere aliarse con una causa perdida.\n\nComo recompensa, aqu\u00ed tienes la armadura y las armas del campe\u00f3n. A juzgar por lo que les hiciste a esos traidores, s\u00e9 que har\u00e1s buen uso de ellas.\n\n- Legado Advento Cesennio\n"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter07A",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\nWord of your battle with the Imperials is traveling across Eastmarch. I wish I could've been there to see their pathetic excuse for a champion beg for his life. You have more than earned the right to wear the armor of the Stormbear, which I give to you now. \n\nFight well and may Talos guide you.\n\n- Yrsarald Thrice-Pierced\n",
+        "string": "<font face=\"$HandwrittenFont\">\nPor toda la Marca Oriental corren noticias de tu batalla contra los Imperiales. Ojal\u00e1 hubiera podido estar all\u00ed para ver a su pat\u00e9tico campe\u00f3n rogar por su vida. Te has ganado con creces el derecho a llevar la armadura del Oso de la Tormenta, que ahora te entrego. \n\nQue luches bien y que Talos te gu\u00ede.\n\n- Yrsarald Tres Agujeros\n"
+    },
+    {
+        "editor_id": "ccFFBSSE001_HeavyArmorPerk",
+        "type": "PERK DESC",
+        "original": "Increases armor rating for Heavy Armor by 20%.",
+        "string": "Aumenta el \u00edndice de armadura para la armadura pesada en un 20%."
+    },
+    {
+        "editor_id": "ccFFBSSE001_CorpseCheck",
+        "type": "QUST CNAM",
+        "original": "Stormbear",
+        "string": "Oso de la Tormenta"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "type": "QUST CNAM",
+        "original": "A civil war rages on between the Stormcloaks and Imperials, with Whiterun at the center. Having taken a side, I should speak with my commanding officer to see if I can fight as a champion.",
+        "string": "Ha estallado una guerra civil entre los Capas de la Tormenta y los Imperiales, con Carrera Blanca en su centro. Ya he decidido a qui\u00e9n soy leal, deber\u00eda hablar con mi oficial al mando para ver si puedo luchar como campe\u00f3n."
+    },
+    {
+        "editor_id": "MatchingSetHeavy",
+        "type": "PERK DESC",
+        "original": "Additional 25% Armor bonus if wearing a matched set of Heavy Armor.",
+        "string": "25% de bonificaci\u00f3n adicional a la armadura si se lleva un conjunto completo de armadura pesada."
+    }
+]

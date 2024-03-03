@@ -1,0 +1,158 @@
+[
+    {
+        "editor_id": "ccBGSSSE004_Paralyze1",
+        "type": "SPEL FULL",
+        "original": "Paralyze",
+        "string": "L\u00e4hmen"
+    },
+    {
+        "editor_id": "ccBGSSSE004_ReduceCarryWeight",
+        "type": "MGEF FULL",
+        "original": "Reduce Carry Weight",
+        "string": "Tragekapazit\u00e4t reduzieren"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Quest",
+        "type": "QUST FULL",
+        "original": "The Edge of Ruin",
+        "string": "Die Schwelle des Ruins"
+    },
+    {
+        "editor_id": "ccBGSSSE004_BowBaseEffect",
+        "type": "MGEF DNAM",
+        "original": "Randomly applies one of these effects to the target: Frost, Demoralize, Frenzy, Drain Magicka, Paralyze.",
+        "string": "Wendet zuf\u00e4llig einen der folgenden Effekte auf das Ziel an: Frost, Entmutigen, Erz\u00fcrnen, Magicka entziehen, L\u00e4hmen"
+    },
+    {
+        "editor_id": "ccBGSSSE004_DrainMagickaEffect",
+        "type": "MGEF FULL",
+        "original": "Drain Magicka",
+        "string": "Magicka entziehen"
+    },
+    {
+        "editor_id": "ccBGSSSE004_BowBaseEffect",
+        "type": "MGEF FULL",
+        "original": "Bow Base Effect",
+        "string": "Bogen-Grundeffekt"
+    },
+    {
+        "editor_id": "ccBGSSSE004_InfluenceAggUpFFContact",
+        "type": "MGEF DNAM",
+        "original": "Creatures and people up to level <mag> will attack anything nearby for <dur> seconds.",
+        "string": "Kreaturen und Personen bis zu Stufe <mag> greifen <dur> Sekunden lang jeden in ihrer N\u00e4he an."
+    },
+    {
+        "editor_id": "ccBGSSSE004_ReduceCarryWeight",
+        "type": "MGEF DNAM",
+        "original": "Reduce carrying capacity increases by <mag> for <dur> seconds.",
+        "string": "Die Reduzierung der Tragf\u00e4higkeit wird <dur> Sekunden lang um <mag> Punkte erh\u00f6ht."
+    },
+    {
+        "editor_id": "ccBGSSSE004_RuinsEdgeBow",
+        "type": "WEAP FULL",
+        "original": "Ruin's Edge",
+        "string": "Schwelle des Ruins"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Quest",
+        "type": "QUST NNAM",
+        "original": "Find Ruin's Edge",
+        "string": "Finde \"Schwelle des Ruins\"."
+    },
+    {
+        "editor_id": "ccBGSSSE004_InfluenceAggUpFFContact",
+        "type": "MGEF FULL",
+        "original": "Fury",
+        "string": "Raserei"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Paralyze15",
+        "type": "SPEL FULL",
+        "original": "Paralyze",
+        "string": "L\u00e4hmen"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Demoralize",
+        "type": "SPEL FULL",
+        "original": "Demoralize",
+        "string": "Entmutigen"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Frenzy",
+        "type": "SPEL FULL",
+        "original": "Frenzy",
+        "string": "Erz\u00fcrnen"
+    },
+    {
+        "editor_id": "ccBGSSSE004_DrainMagicka",
+        "type": "SPEL FULL",
+        "original": "Frenzy",
+        "string": "Erz\u00fcrnen"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Burden",
+        "type": "SPEL FULL",
+        "original": "Burden",
+        "string": "Belasten"
+    },
+    {
+        "editor_id": "ccBGSSSE004_SlowFFContact",
+        "type": "MGEF FULL",
+        "original": "Slow",
+        "string": "Verlangsamen"
+    },
+    {
+        "editor_id": "ccBGSSSE002_EnchInfluenceConfDownFFContactLow",
+        "type": "MGEF FULL",
+        "original": "Fear",
+        "string": "Furcht"
+    },
+    {
+        "editor_id": "ccBGSSSE002_EnchInfluenceConfDownFFContactLow",
+        "type": "MGEF DNAM",
+        "original": "Creatures and people up to level <mag> flee from combat for <dur> seconds.",
+        "string": "Kreaturen und Personen bis zu Stufe <mag> fliehen f\u00fcr <dur> Sekunden aus dem Kampf."
+    },
+    {
+        "editor_id": "ccBGSSSE004_EnchFrostDamageFFContact",
+        "type": "MGEF DNAM",
+        "original": "Target takes <mag> points of frost damage to Health and Stamina.",
+        "string": "Das Ziel erleidet <mag> Punkte Frostschaden auf Gesundheit und Ausdauer."
+    },
+    {
+        "editor_id": "ccBGSSSE004_Frost",
+        "type": "SPEL FULL",
+        "original": "Frost",
+        "string": "Frost"
+    },
+    {
+        "editor_id": "ccBGSSSE004_EnchFrostDamageFFContact",
+        "type": "MGEF FULL",
+        "original": "Frost Damage",
+        "string": "Frostschaden"
+    },
+    {
+        "editor_id": "ccBGSSSE004_LvlRuinsEdgeBoss",
+        "type": "NPC_ FULL",
+        "original": "Bandit Chief",
+        "string": "Banditenanf\u00fchrer"
+    },
+    {
+        "editor_id": "StonyCreekCave01",
+        "type": "CELL FULL",
+        "original": "Stony Creek Cave",
+        "string": "Steinbachh\u00f6hle"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Quest",
+        "type": "QUST CNAM",
+        "original": "I've found Ruin's Edge.",
+        "string": "Ich habe \"Schwelle des Ruins\" gefunden."
+    },
+    {
+        "editor_id": "ccBGSSSE004_Quest",
+        "type": "QUST CNAM",
+        "original": "I found a map to the location of the fabled bow, Ruin's Edge.",
+        "string": "Ich habe eine Karte gefunden, die mich zu dem ber\u00fchmten Bogen \"Schwelle des Ruins\" f\u00fchrt."
+    }
+]

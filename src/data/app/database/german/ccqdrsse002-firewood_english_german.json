@@ -1,0 +1,266 @@
+[
+    {
+        "editor_id": "ccQDRSSE002_ShelterAct",
+        "type": "ACTI RNAM",
+        "original": "Use",
+        "string": "Benutzen"
+    },
+    {
+        "editor_id": "ccQDRSSE002_ShelterAct",
+        "type": "ACTI FULL",
+        "original": "Shelter",
+        "string": "Unterschlupf"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BuildCampEffect",
+        "type": "MGEF FULL",
+        "original": "Build Camp",
+        "string": "Lager errichten"
+    },
+    {
+        "editor_id": "ccQDRSSE002_ShelterOptionMsg",
+        "type": "MESG ITXT",
+        "original": "Cancel",
+        "string": "Abbrechen"
+    },
+    {
+        "editor_id": "ccQDRSSE002_ShelterOptionMsg",
+        "type": "MESG ITXT",
+        "original": "Sleep",
+        "string": "Schlafen"
+    },
+    {
+        "editor_id": "ccQDRSSE002_ShelterOptionMsg",
+        "type": "MESG ITXT",
+        "original": "Break Camp",
+        "string": "Lager abbrechen"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampfireFurn",
+        "type": "FURN FULL",
+        "original": "Campfire",
+        "string": "Lagerfeuer"
+    },
+    {
+        "editor_id": "ccQDRSSE002_MainQuest",
+        "type": "QUST FULL",
+        "original": "Camping Quest",
+        "string": "Lagerquest"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingSupplies",
+        "type": "ALCH FULL",
+        "original": "Camping Supplies",
+        "string": "Lagerutensilien"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BuildCampEffect",
+        "type": "MGEF DNAM",
+        "original": "Build a campsite when outdoors.",
+        "string": "Errichte im Freien ein Lager."
+    },
+    {
+        "editor_id": "ccQDRSSE002_BedrollNoSandbox",
+        "type": "FURN FULL",
+        "original": "Bed Roll Ground",
+        "string": "Schlafsack, Boden"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BuildCampPrompt",
+        "type": "MESG ITXT",
+        "original": "Ok",
+        "string": "OK"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BuildCampPrompt",
+        "type": "MESG ITXT",
+        "original": "Cancel",
+        "string": "Abbrechen"
+    },
+    {
+        "editor_id": "ccQDRSSE002_LoadScreen2",
+        "type": "LSCR DESC",
+        "original": "You can cook some meals over the open flames of your campfire at campsites that you build.",
+        "string": "\u00dcber den offenen Flammen des Lagerfeuers in den von dir errichteten Lagern kannst du eine begrenzte Anzahl Gerichte kochen."
+    },
+    {
+        "editor_id": "ccQDRSSE002_InCityCheckSpell",
+        "type": "SPEL FULL",
+        "original": "In City Check Spell",
+        "string": "In-Stadt-\u00dcberpr\u00fcfungszauber"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BreakCampPrompt",
+        "type": "MESG ITXT",
+        "original": "Cancel",
+        "string": "Abbrechen"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingHelp",
+        "type": "MESG FULL",
+        "original": "Camping",
+        "string": "Lagern"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampMapMarkerRefSolstheim001",
+        "type": "REFR FULL",
+        "original": "Campsite",
+        "string": "Lager"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampMapMarkerRefTamriel001",
+        "type": "REFR FULL",
+        "original": "Campsite",
+        "string": "Lager"
+    },
+    {
+        "editor_id": "ccQDRSSE002_LoadScreen1",
+        "type": "LSCR DESC",
+        "original": "If you build a campsite, its location will be marked on your map, so you can fast travel to it later.",
+        "string": "Wenn du ein Lager errichtest, wird dessen Standort auf deiner Karte markiert, damit du es sp\u00e4ter per Schnellreise erreichen kannst."
+    },
+    {
+        "editor_id": "ccQDRSSE002_InCityCheckEffect",
+        "type": "MGEF FULL",
+        "original": "In City Check",
+        "string": "In-Stadt-\u00dcberpr\u00fcfung"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BreakCampPrompt",
+        "type": "MESG ITXT",
+        "original": "Ok",
+        "string": "OK"
+    },
+    {
+        "editor_id": "ccQDRSSE002_SwimCheckEffect",
+        "type": "MGEF FULL",
+        "original": "Swimming Check",
+        "string": "Schwimm-\u00dcberpr\u00fcfung"
+    },
+    {
+        "editor_id": "ccQDRSSE002_IdleQuest",
+        "type": "QUST FULL",
+        "original": "Camping Idle Quest",
+        "string": "Lagerquest (Unt\u00e4tig)"
+    },
+    {
+        "editor_id": "ccQDRSSE002_SwimCheckSpell",
+        "type": "SPEL FULL",
+        "original": "Swim Check Spell",
+        "string": "Schwimm-\u00dcberpr\u00fcfungszauber"
+    },
+    {
+        "editor_id": "ccQDRSSE002_Chair",
+        "type": "FURN FULL",
+        "original": "Crate",
+        "string": "Kiste"
+    },
+    {
+        "editor_id": "DLC2SolstheimWorld",
+        "type": "WRLD FULL",
+        "original": "Solstheim",
+        "string": "Solstheim"
+    },
+    {
+        "editor_id": "Tamriel",
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Himmelsrand"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedHereMsg",
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite here.",
+        "string": "Du kannst hier kein Lager errichten."
+    },
+    {
+        "editor_id": "ccQDRSSE002_ShelterOptionMsg",
+        "type": "MESG DESC",
+        "original": "What do you do?",
+        "string": "Was willst du tun?"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BuildCampPrompt",
+        "type": "MESG DESC",
+        "original": "Build a campsite here?",
+        "string": "Hier ein Lager errichten?"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedCombatMsg",
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite while in combat.",
+        "string": "Du kannst w\u00e4hrend eines Kampfes kein Lager errichten."
+    },
+    {
+        "editor_id": "ccQDRSSE002_BreakCampPrompt",
+        "type": "MESG DESC",
+        "original": "Are you sure you want to break camp?",
+        "string": "Willst du das Lager wirklich abbrechen?"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedGenericMsg",
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite right now.",
+        "string": "Du kannst gerade kein Lager errichten."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedInteriorMsg",
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite while indoors.",
+        "string": "Du kannst im Inneren von Geb\u00e4uden kein Lager errichten."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedMountedMsg",
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite while mounted.",
+        "string": "Du kannst auf einem Pferd kein Lager errichten."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedCityMsg",
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite in cities or towns.",
+        "string": "Du kannst keine Lager in St\u00e4dten oder D\u00f6rfern errichten."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedSwimmingMsg",
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite while swimming.",
+        "string": "Du kannst beim Schwimmen kein Lager errichten."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedGroundMsg",
+        "type": "MESG DESC",
+        "original": "You don't have enough level terrain to camp here.",
+        "string": "Der Boden ist hier nicht eben genug, um ein Lager zu errichten."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedSpaceMsg",
+        "type": "MESG DESC",
+        "original": "You don't have enough space to build a campsite here.",
+        "string": "Du hast nicht gen\u00fcgend Platz, um ein Lager zu errichten."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedJumpingMsg",
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite while in the air.",
+        "string": "Du kannst in der Luft kein Lager errichten."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedSittingMsg",
+        "type": "MESG DESC",
+        "original": "You can't build a camp while using something else.",
+        "string": "Du kannst kein Lager errichten, wenn du gerade etwas anderes verwendest."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingHelp",
+        "type": "MESG DESC",
+        "original": "Campsites allow you to stay rested and warm while exploring the wilderness. Create Camping Supplies at a forge. You can use Camping Supplies to build a campsite while outdoors.\n\nWhile at your campsite, you can sleep in your makeshift shelter or cook a limited number of meals over the campfire.\n\nYour campsite's location is marked on your map, so you can find and fast travel to it later.\n\nOnly one campsite can be built at a time. Building a new campsite will remove the previous one, and your campsite's map marker will be updated to the new campsite.",
+        "string": "In einem Lager kannst du auch auf langen Reisen durch die Wildnis ausgeruht und warm bleiben. Stelle an einer Schmiede Lagerutensilien her. Du kannst diese dann verwenden, um im Freien ein Lager zu errichten.\n\nIn deinem Lager kannst du in einer behelfsm\u00e4\u00dfigen Unterschlupf schlafen oder \u00fcber dem Lagerfeuer eine begrenzte Anzahl Gerichte kochen.\n\nDer Standort deines Lagers ist auf deiner Karte markiert, damit du es finden und per Schnellreise erreichen kannst.\n\nDu kannst nur ein Lager gleichzeitig errichten. Stellst du ein neues auf, wird das vorherige entfernt und die Kartenmarkierung des Lagers wird aktualisiert und zeigt auf dein neues Lager."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingTutorialMsg",
+        "type": "MESG DESC",
+        "original": "Campsites allow you to rest and stay warm while exploring the wilderness. You can cook a limited number of meals over the campfire. Your campsite is marked on your map so you can locate and fast travel to it later.",
+        "string": "In einem Lager kannst du auch auf langen Reisen durch die Wildnis ausgeruht und warm bleiben. \u00dcber dem Lagerfeuer kannst du eine begrenzte Anzahl Gerichte kochen. Der Standort deines Lagers ist auf deiner Karte markiert, damit du es finden und per Schnellreise erreichen kannst."
+    }
+]

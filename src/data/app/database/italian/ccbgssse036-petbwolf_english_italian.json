@@ -1,0 +1,224 @@
+[
+    {
+        "editor_id": "ccBGSSSE036_EncBoneWolf",
+        "type": "NPC_ FULL",
+        "original": "Bone Wolf",
+        "string": "Lupo d'ossa"
+    },
+    {
+        "editor_id": "ccBGSSSE036_AcquisitionNote",
+        "type": "BOOK FULL",
+        "original": "Letter from Bolgeir Bearclaw",
+        "string": "Lettera da un ammiratore preoccupato"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST NNAM",
+        "original": "Find the necromancer and the strange creatures",
+        "string": "Trova il negromante e le strane creature"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST NNAM",
+        "original": "Take the totem to the caged wolf",
+        "string": "Porta il totem alla gabbia del lupo"
+    },
+    {
+        "editor_id": "ccBGSSSE036_NecroJornal",
+        "type": "BOOK FULL",
+        "original": "Necromancer's Journal",
+        "string": "Diario del negromante"
+    },
+    {
+        "editor_id": "ccBGSSSE036_EncNecromancerThrall02",
+        "type": "NPC_ FULL",
+        "original": "Thrall Wolf",
+        "string": "Lupo servo"
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfFGivePerkAbility",
+        "type": "SPEL FULL",
+        "original": "Bone Wolf's Revenge",
+        "string": "La vendetta del lupo d'ossa"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST FULL",
+        "original": "Let Sleeping Wolves Lie",
+        "string": "Non svegliare il lupo che dorme"
+    },
+    {
+        "editor_id": "ccBGSSSE036_CageKey",
+        "type": "KEYM FULL",
+        "original": "Key to Wolf Cage",
+        "string": "Chiave per la gabbia del lupo"
+    },
+    {
+        "editor_id": "ccBGSSSE036_Necromancer",
+        "type": "NPC_ FULL",
+        "original": "Necromancer",
+        "string": "Negromante"
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfGiveItemSpell",
+        "type": "SPEL FULL",
+        "original": "Bone Wolf's Gift",
+        "string": "Abilit\u00e0 regalo del lupo d'ossa"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfPerkEffect",
+        "type": "MGEF DNAM",
+        "original": "Increases damage on the undead by 25% while Bone Wolf is in your company.",
+        "string": "Aumenta il danno su tutti i non morti del 25% mentre il lupo d'ossa \u00e8 al tuo fianco."
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfFollowPerk",
+        "type": "PERK FULL",
+        "original": "Bone Wolf's Revenge",
+        "string": "La vendetta del lupo d'ossa"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfSummonEffect",
+        "type": "MGEF DNAM",
+        "original": "Teleports Bone Wolf to your side.",
+        "string": "Teletrasporta il lupo d'ossa al tuo fianco"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST NNAM",
+        "original": "Defeat the necromancer",
+        "string": "Sconfiggi il negromante"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfPerkEffect",
+        "type": "MGEF FULL",
+        "original": "Bone Wolf's Revenge",
+        "string": "La vendetta del lupo d'ossa"
+    },
+    {
+        "editor_id": "ccBGSSE036_ConjureBoneWolfSpell",
+        "type": "SPEL FULL",
+        "original": "Teleport Pet: Bone Wolf",
+        "string": "Teletrasporta animale: lupo d'ossa"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfSummonEffect",
+        "type": "MGEF FULL",
+        "original": "Summon Bone Wolf",
+        "string": "Evoca il lupo d'ossa"
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfCompanionRace",
+        "type": "RACE FULL",
+        "original": "Dog",
+        "string": "Cane"
+    },
+    {
+        "editor_id": "ccBGSSSE036_TOTEM",
+        "type": "MISC FULL",
+        "original": "Totem Bone",
+        "string": "Osso totem"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfGiftEffect",
+        "type": "MGEF FULL",
+        "original": "Bone Wolf's Gift",
+        "string": "Effetto regalo del lupo d'ossa"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST NNAM",
+        "original": "Read the note from Bolgeir Bearclaw",
+        "string": "Leggi il messaggio dell'ammiratore preoccupato"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST NNAM",
+        "original": "Search the necromancer",
+        "string": "Cerca il negromante"
+    },
+    {
+        "editor_id": "ccBGSSSE036_EncNecromancerThrall01",
+        "type": "NPC_ FULL",
+        "original": "Thrall Wolf",
+        "string": "Lupo servo"
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfBlessing",
+        "type": "SPEL FULL",
+        "original": "Bone Wolf's Reward",
+        "string": "Ricompensa del lupo d'ossa"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST CNAM",
+        "original": "Bone Wolf appears calm and content now that I've returned his totem. It appears he will follow me if I wish. Some may consider him strange to look upon, but there may be something deeper about him beyond his appearance.",
+        "string": "Il lupo d'ossa sembra calmo e felice adesso che gli ho riportato il suo totem. A quanto pare mi seguir\u00e0, se voglio. Alcuni potrebbero pensare che sia bizzarro, ma potrebbe esserci qualcosa di pi\u00f9 dietro l'aspetto esteriore."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST CNAM",
+        "original": "In a cage nearby, there is another of these strange creatures, who I suspect the totem belongs to. I should take it to him.",
+        "string": "Sembra che il negromante attingesse il suo potere da questi lupi non morti, consumando i loro totem. L'ho fermato prima che potesse consumarne un terzo. In un gabbia vicina, c'\u00e8 un'altra di queste creature, penso che il totem appartenga a lui. Dovrei riportarglielo."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST CNAM",
+        "original": "I have discovered the necromancer's location. The strange creatures mentioned in the note appear to be undead wolves, raised by the dark arts of the necromancer. Putting a stop to these experiments should prevent him from raising more.",
+        "string": "Ho scoperto la posizione del negromante. Le strane creature di cui si parlava nella nota sembrano essere lupi non morti, allevati grazie alle arti oscure del negromante. Mettere fine a questi esperimenti dovrebbe impedirgli di allevarne altri."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST CNAM",
+        "original": "The necromancer is dead. I should search his body for any clues.",
+        "string": "Il negromante \u00e8 morto. Dovrei controllare il suo cadavere per trovare degli indizi."
+    },
+    {
+        "editor_id": "ccBGSSSE036_AcquisitionNote",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\nFriend, we seek your aid. \n\nA dark necromancer has been attacking innocents along the northern coast,  accompanied by strange creatures who do his every bidding. I trust you can help us with this troublesome matter and investigate on our behalf.\n\nBolgeir Bearclaw\n</font>",
+        "string": "<font face=\"$HandwrittenFont\">\nAmico mio, richiediamo il tuo aiuto. \n\nUn negromante sta attaccando degli innocenti lungo la costa settentrionale, ed \u00e8 accompagnato da delle strane creature che seguono i suoi ordini. Spero che potrai aiutarci con questo problema e indagare sulla faccenda.\n\nUn ammiratore preoccupato\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST CNAM",
+        "original": "Bolgeir Bearclaw has informed me that a dark necromancer has been attacking innocents somewhere along the northern coast. The note also tells of strange creatures that accompany him. I should search the coast and see if I can unravel this mystery.",
+        "string": "Un ammiratore preoccupato mi ha informato che, sulla costa settentrionale, un negromante sta attaccando degli innocenti. La nota parla anche di alcune strane creature che lo seguono. Dovrei controllare la costa e provare a risolvere il mistero."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST CNAM",
+        "original": "I have a note from Bolgeir Bearclaw. I should read it and find out if there's anything he needs assistance with.",
+        "string": "Ho ricevuto un messaggio da un ammiratore preoccupato. Dovrei leggerlo."
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfGivePlayerItemMsg",
+        "type": "MESG DESC",
+        "original": "Bone Wolf has found you something.",
+        "string": "Il lupo d'ossa ha trovato qualcosa."
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfBlessing",
+        "type": "SPEL DESC",
+        "original": "Bone Wolf thanks you for the dragon bone",
+        "string": "Il lupo d'ossa ti ringrazia per l'osso di drago"
+    },
+    {
+        "editor_id": "ccBGSSSE036_NecroJornal",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\nThis is truly remarkable. Through my experiments with these undead wolves, I have discovered a method to increase my power. \n\nBy consuming their totems; objects that bind them between life and death itself, \nI can bind their spirits to my own life force.\n\nI have already consumed two totems and their hosts are now completely under my control. But this is not enough, I need a third totem to be sure.\n</font>",
+        "string": "<font face=\"$HandwrittenFont\">\nDavvero notevole. Grazie ai miei esperimenti con i lupi non morti, ho scoperto un metodo per ottenere l'immortalit\u00e0. \n\nConsumando i loro totem; oggetti che li tengono in bilico tra la vita e la morte stessa, \nposso legare i loro spiriti alla mia forza vitale.\n\nSe loro sono in vita, niente pu\u00f2 ferirmi. \n\nHo gi\u00e0 consumato due totem e i loro ospiti sono del tutto sotto il mio controllo. Ma non basta, mi serve un terzo totem per essere sicuro.\n\nCon tutto questo potere, sar\u00f2 inarrestabile.\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfFollowPerk",
+        "type": "PERK DESC",
+        "original": "Spells and attacks are more effective against the undead and necromancers.",
+        "string": "Tutti gli incantesimi e gli attacchi sono pi\u00f9 efficaci contro i non morti e i negromanti."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST CNAM",
+        "original": "I have encountered a dark necromancer and two undead wolves. These  creatures appear to be controlled by the necromancer. Putting a stop to these experiments should prevent him from raising more. ",
+        "string": "Ho incontrato un negromante e due lupi non morti. A quanto pare queste due creature erano sotto il controllo del negromante. Mettere fine ai suoi esperimenti dovrebbe impedirgli di allevarne altri. "
+    }
+]

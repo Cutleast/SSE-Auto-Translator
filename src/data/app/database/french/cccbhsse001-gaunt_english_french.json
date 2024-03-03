@@ -1,0 +1,230 @@
+[
+    {
+        "editor_id": "ccCBHSSE001_QAChest",
+        "type": "CONT FULL",
+        "original": "All Unarmed Weapons",
+        "string": "Toutes les armes de combat \u00e0 mains nues"
+    },
+    {
+        "editor_id": "ccCBHSSE001_DwarvenGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Dwarven Gauntlets",
+        "string": "Gantelets dwemers du bagarreur"
+    },
+    {
+        "editor_id": "ccCBHSSE001_StuddedGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Leather Bracers",
+        "string": "Gantelets de cuir du bagarreur"
+    },
+    {
+        "editor_id": "ccCBHSSE001_ElvenGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Elven Gauntlets",
+        "string": "Gantelets elfiques du bagarreur"
+    },
+    {
+        "editor_id": "ccCBHSSE001_GlassGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Glass Gauntlets",
+        "string": "Gantelets de verre du bagarreur"
+    },
+    {
+        "editor_id": "ccCBHSSE001_EbonyGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Ebony Gauntlets",
+        "string": "Gantelets d'\u00e9bonite du bagarreur"
+    },
+    {
+        "editor_id": "ccCBHSSE001_NordPlateGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Steel Plate Gauntlets",
+        "string": "Gantelets de plates d'acier du bagarreur"
+    },
+    {
+        "editor_id": "ccCBHSSE001_SteelGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Steel Gauntlets",
+        "string": "Gantelets d'acier du bagarreur"
+    },
+    {
+        "editor_id": "ccCBHSSE001_HideGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Hide Bracers",
+        "string": "Gantelets en peau du bagarreur"
+    },
+    {
+        "editor_id": "ccCBHSSE001_DragonscaleGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Dragonscale Gauntlets",
+        "string": "Gantelets draconiques du bagarreur"
+    },
+    {
+        "editor_id": "ccCBHSSE001_BanditGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Fur Bracers",
+        "string": "Gantelets de fourrure du bagarreur"
+    },
+    {
+        "editor_id": "ccCBHSSE001_OrcishGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Orcish Gauntlets",
+        "string": "Gantelets orques du bagarreur"
+    },
+    {
+        "editor_id": "ccCBHSSE001_ScaledGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Scaled Bracers",
+        "string": "Gantelets d'\u00e9cailles du bagarreur"
+    },
+    {
+        "editor_id": "ccCBHSSE001_DaedricGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Daedric Gauntlets",
+        "string": "Gantelets daedras du bagarreur"
+    },
+    {
+        "editor_id": "ccCBHSSE001_DragonplateGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Dragonplate Gauntlets",
+        "string": "Gantelets pendragon du bagarreur"
+    },
+    {
+        "editor_id": "ccCBHSSE001_IronGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Iron Gauntlets",
+        "string": "Gantelets de fer du bagarreur"
+    },
+    {
+        "editor_id": "ccCBHSSE001_EnchArmorFortifyUnarmed03",
+        "type": "ENCH FULL",
+        "original": "Fortify Unarmed",
+        "string": "Renfort de combat \u00e0 mains nues"
+    },
+    {
+        "editor_id": "ccCBHSSE001_EnchArmorFortifyUnarmed07",
+        "type": "ENCH FULL",
+        "original": "Fortify Unarmed",
+        "string": "Renfort de combat \u00e0 mains nues"
+    },
+    {
+        "editor_id": "ccCBHSSE001_EnchArmorFortifyUnarmed05",
+        "type": "ENCH FULL",
+        "original": "Fortify Unarmed",
+        "string": "Renfort de combat \u00e0 mains nues"
+    },
+    {
+        "editor_id": "ccCBHSSE001_EnchArmorFortifyUnarmed08",
+        "type": "ENCH FULL",
+        "original": "Fortify Unarmed",
+        "string": "Renfort de combat \u00e0 mains nues"
+    },
+    {
+        "editor_id": "ccCBHSSE001_EnchArmorFortifyUnarmed04",
+        "type": "ENCH FULL",
+        "original": "Fortify Unarmed",
+        "string": "Renfort de combat \u00e0 mains nues"
+    },
+    {
+        "editor_id": "ccCBHSSE001_EnchArmorFortifyUnarmed06",
+        "type": "ENCH FULL",
+        "original": "Fortify Unarmed",
+        "string": "Renfort de combat \u00e0 mains nues"
+    },
+    {
+        "editor_id": "ccCBHSSE001_EnchArmorFortifyUnarmed02",
+        "type": "ENCH FULL",
+        "original": "Fortify Unarmed",
+        "string": "Renfort de combat \u00e0 mains nues"
+    },
+    {
+        "editor_id": "ccCBHSSE001_StuddedGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Leather Bracers",
+        "string": "Gantelets de cuir du bagarreur"
+    },
+    {
+        "editor_id": "ccCBHSSE001_BanditGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Fur Bracers",
+        "string": "Gantelets de fourrure du bagarreur"
+    },
+    {
+        "editor_id": "ccCBHSSE001_NordPlateGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Steel Plate Gauntlets",
+        "string": "Gantelets de plates d'acier du bagarreur"
+    },
+    {
+        "editor_id": "ccCBHSSE001_ElvenGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Elven Gauntlets",
+        "string": "Gantelets elfiques du bagarreur"
+    },
+    {
+        "editor_id": "ccCBHSSE001_IronGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Iron Gauntlets",
+        "string": "Gantelets de fer du bagarreur"
+    },
+    {
+        "editor_id": "ccCBHSSE001_ScaledGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Scaled Bracers",
+        "string": "Gantelets d'\u00e9cailles du bagarreur"
+    },
+    {
+        "editor_id": "ccCBHSSE001_EbonyGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Ebony Gauntlets",
+        "string": "Gantelets d'\u00e9bonite du bagarreur"
+    },
+    {
+        "editor_id": "ccCBHSSE001_HideGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Hide Bracers",
+        "string": "Gantelets en peau du bagarreur"
+    },
+    {
+        "editor_id": "ccCBHSSE001_DwarvenGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Dwarven Gauntlets",
+        "string": "Gantelets dwemers du bagarreur"
+    },
+    {
+        "editor_id": "ccCBHSSE001_OrcishGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Orcish Gauntlets",
+        "string": "Gantelets orques du bagarreur"
+    },
+    {
+        "editor_id": "ccCBHSSE001_DaedricGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Daedric Gauntlets",
+        "string": "Gantelets daedras du bagarreur"
+    },
+    {
+        "editor_id": "ccCBHSSE001_DragonscaleGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Dragonscale Gauntlets",
+        "string": "Gantelets draconiques du bagarreur"
+    },
+    {
+        "editor_id": "ccCBHSSE001_DragonplateGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Dragonplate Gauntlets",
+        "string": "Gantelets pendragon du bagarreur"
+    },
+    {
+        "editor_id": "ccCBHSSE001_GlassGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Glass Gauntlets",
+        "string": "Gantelets de verre du bagarreur"
+    },
+    {
+        "editor_id": "ccCBHSSE001_SteelGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Steel Gauntlets",
+        "string": "Gantelets d'acier du bagarreur"
+    }
+]

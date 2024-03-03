@@ -1,0 +1,146 @@
+[
+    {
+        "editor_id": "BGSSSE018ShadowrendClaymore",
+        "type": "WEAP FULL",
+        "original": "Shadowrend",
+        "string": "Rozdarty Cie\u0144"
+    },
+    {
+        "editor_id": "BGSSSE018ShadowrendEnchAxe",
+        "type": "ENCH FULL",
+        "original": "Shadowrend FX Ench",
+        "string": "Wzmocnione efekty Rozdartego Cienia"
+    },
+    {
+        "editor_id": "BGSSSE018ShadowrendBattleaxe",
+        "type": "WEAP FULL",
+        "original": "Shadowrend",
+        "string": "Rozdarty Cie\u0144"
+    },
+    {
+        "editor_id": "BGSSSE018ShadowrendFXAxe",
+        "type": "MGEF FULL",
+        "original": "Shadowrend FX",
+        "string": "Efekty Rozdartego Cienia"
+    },
+    {
+        "editor_id": "BGSSSE018ShadowrendEnchSword",
+        "type": "ENCH FULL",
+        "original": "Shadowrend FX Ench",
+        "string": "Wzmocnione efekty Rozdartego Cienia"
+    },
+    {
+        "editor_id": "BGSSSE018ShadowrendFXSword",
+        "type": "MGEF FULL",
+        "original": "Shadowrend FX",
+        "string": "Efekty Rozdartego Cienia"
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendActivatorWeaponAxe",
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "We\u017a"
+    },
+    {
+        "editor_id": "BGSSSE018_AbGhostShadowrend",
+        "type": "MGEF FULL",
+        "original": "Shadowrend Ghost Visuals",
+        "string": "Efekty wizualne ducha Rozdartego Cienia"
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendQuest",
+        "type": "QUST FULL",
+        "original": "Through a Glass, Darkly",
+        "string": "Poprzez szk\u0142o, w mroku"
+    },
+    {
+        "editor_id": "BGSSSE018_AbscondSpellShadowrendMagicEffect",
+        "type": "MGEF FULL",
+        "original": "Abscond Spell Magic Effect",
+        "string": "Efekt magiczny zakl\u0119cia ucieczki"
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendActivatorWeapon",
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "We\u017a"
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendDoppelgangerName",
+        "type": "MESG FULL",
+        "original": "<Alias=Player>'s Shadow",
+        "string": "Cie\u0144 postaci <Alias=Player>"
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendActivatorWeaponAxe",
+        "type": "ACTI FULL",
+        "original": "Shadowrend",
+        "string": "Rozdarty Cie\u0144"
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendActivatorWeapon",
+        "type": "ACTI FULL",
+        "original": "Shadowrend",
+        "string": "Rozdarty Cie\u0144"
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendQuest",
+        "type": "QUST NNAM",
+        "original": "Retrieve Shadowrend",
+        "string": "Wyci\u0105gnij Rozdarty Cie\u0144"
+    },
+    {
+        "editor_id": "BGSSSE018_AbscondSpellShadowrend",
+        "type": "SPEL FULL",
+        "original": "Abscond Spell",
+        "string": "Zakl\u0119cie ucieczki"
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendQuest",
+        "type": "QUST NNAM",
+        "original": "Go to Eastmarch Geysers",
+        "string": "Ruszaj do gejzer\u00f3w we Wschodniej Marchii"
+    },
+    {
+        "editor_id": "BGSSSE018_GhostAbilityShadowrend",
+        "type": "SPEL FULL",
+        "original": "Ghost Ability",
+        "string": "Zdolno\u015b\u0107 ducha"
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendQuest",
+        "type": "QUST NNAM",
+        "original": "Return to Eastmarch Geysers",
+        "string": "Wr\u00f3\u0107 do gejzer\u00f3w we Wschodniej Marchii"
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendQuest",
+        "type": "QUST NNAM",
+        "original": "Defeat your Shadow",
+        "string": "Pokonaj sw\u00f3j cie\u0144"
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendDoppelgangerName",
+        "type": "MESG DESC",
+        "original": "Doppelganger",
+        "string": "Sobowt\u00f3r"
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendQuest",
+        "type": "QUST CNAM",
+        "original": "I have defeated my shadow and feel at peace.  I should retrieve the weapon from its remains.",
+        "string": "Czuj\u0119 wewn\u0119trzny spok\u00f3j. A jednak m\u00f3j cie\u0144 nie odszed\u0142 w ca\u0142o\u015bci. Na jego \u015bladzie le\u017cy bro\u0144, r\u00f3wnie realna jak wszystko wok\u00f3\u0142 mnie."
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendQuest",
+        "type": "QUST CNAM",
+        "original": "An inner voice is telling me I must confront a darkness within myself. I am drawn toward a geyser pool in Eastmarch. Perhaps answers lie there.",
+        "string": "G\u0142os wewn\u0119trzny m\u00f3wi mi, \u017ce opr\u00f3cz mierzenia si\u0119 z otaczaj\u0105cym mnie z\u0142em, musz\u0119 te\u017c walczy\u0107 z nim wewn\u0105trz siebie. G\u0142os m\u00f3wi mi, \u017ce mam wyruszy\u0107 do jeziorka gejzer\u00f3w we Wschodniej Marchii. Tam by\u0107 mo\u017ce uzyskam odpowiedzi."
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendQuest",
+        "type": "QUST CNAM",
+        "original": "The weapon I attempted to take has pulled something from within me - a dark shadow of myself. I must defeat this doppelganger.",
+        "string": "Si\u0119gam po bro\u0144, ale zamiast tego wyci\u0105gam co\u015b ze swego wn\u0119trza. M\u00f3j wewn\u0119trzny cie\u0144 nie potrzebuje ju\u017c reszty mnie, by istnie\u0107. W zwi\u0105zku z tym, ch\u0119tnie ze mn\u0105 sko\u0144czy."
+    }
+]

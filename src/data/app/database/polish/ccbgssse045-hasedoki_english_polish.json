@@ -1,0 +1,278 @@
+[
+    {
+        "editor_id": "ccBGSSSE045_SmugglerNote",
+        "type": "BOOK FULL",
+        "original": "Smuggler's Trade Notes",
+        "string": "Notatki handlowe przemytnika"
+    },
+    {
+        "editor_id": "ccBGSSSE045_SmugglerLedger",
+        "type": "BOOK FULL",
+        "original": "Smuggler's Ledger",
+        "string": "Notes przemytnika"
+    },
+    {
+        "editor_id": "ccBGSSSE045_WardConcSelf50",
+        "type": "MGEF FULL",
+        "original": "Ward of Hasedoki",
+        "string": "Zakl\u0119cie Hasedoki"
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "type": "QUST NNAM",
+        "original": "Retrieve the necromancer's staff",
+        "string": "Zdob\u0105d\u017a kostur nekromantki"
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "type": "QUST NNAM",
+        "original": "Find the necromancers in Brittleshin Pass",
+        "string": "Odszukaj nekromantki na Prze\u0142\u0119czy Kruchej Piszczeli"
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the smuggler's ledger",
+        "string": "Przejrzyj notes przemytnika"
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the smuggler's trade notes",
+        "string": "Przeczytaj notatki handlowe przemytnika"
+    },
+    {
+        "editor_id": "ccBGSSSE045_HasedokiKnockback",
+        "type": "MGEF FULL",
+        "original": "Knockback",
+        "string": "Odepchni\u0119cie"
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "type": "QUST FULL",
+        "original": "The Staff of Hasedoki",
+        "string": "Kostur Hasedoki"
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "type": "QUST NNAM",
+        "original": "Kill or pickpocket the Orc",
+        "string": "Zabij maga bojowego ork\u00f3w"
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "type": "QUST NNAM",
+        "original": "Go to the site of the ambush",
+        "string": "Id\u017a na miejsce zasadzki"
+    },
+    {
+        "editor_id": "ccBGSSSE045_BookTheLightandtheDark",
+        "type": "BOOK FULL",
+        "original": "The Light and the Dark",
+        "string": "\u015awiat\u0142o i ciemno\u015b\u0107"
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "type": "QUST NNAM",
+        "original": "Investigate the Smuggler's Den",
+        "string": "Zbadaj kryj\u00f3wk\u0119 przemytnika"
+    },
+    {
+        "editor_id": "ccBGSSSE045_IvaraNote",
+        "type": "BOOK FULL",
+        "original": "Ivara's Notes",
+        "string": "Notatki Ivary"
+    },
+    {
+        "editor_id": "ccBGSSSE045_BookToRaisetheLiving",
+        "type": "BOOK FULL",
+        "original": "To Raise the Living",
+        "string": "By wskrzesi\u0107 \u017cyj\u0105cych"
+    },
+    {
+        "editor_id": "ccBGSSSE045_EnchSoulTrapFFAimedArea",
+        "type": "MGEF DNAM",
+        "original": "If target dies within <dur> seconds, fills a soul gem.",
+        "string": "Nape\u0142nia klejnot duszy, je\u015bli cel umrze w ci\u0105gu <dur> s."
+    },
+    {
+        "editor_id": "ccBGSSSE045_BookArkaytheEnemy",
+        "type": "BOOK FULL",
+        "original": "Arkay the Enemy",
+        "string": "Arkay Wr\u00f3g"
+    },
+    {
+        "editor_id": "ccBGSSSE045_WardConcSelf50",
+        "type": "MGEF DNAM",
+        "original": "While not attacking, creates a ward that protects against spells for up to <mag> points.",
+        "string": "Gdy nie atakujesz, tworzy zakl\u0119cie, kt\u00f3re chroni przed czarami, nawet do <mag> pkt."
+    },
+    {
+        "editor_id": "ccBGSSSE045_ModigAlchemySatchel",
+        "type": "CONT FULL",
+        "original": "Modig's Satchel",
+        "string": "Sakwa Modiga"
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "type": "QUST NNAM",
+        "original": "Check the Orc's body for clues",
+        "string": "Sprawd\u017a cia\u0142o orka i poszukaj \u015blad\u00f3w"
+    },
+    {
+        "editor_id": "ccBGSSSE045_EnchSoulTrapFFAimedArea",
+        "type": "MGEF FULL",
+        "original": "Soul Trap",
+        "string": "Pu\u0142apka Duszy"
+    },
+    {
+        "editor_id": "ccBGSSSE045_StaffEnchHasedoki",
+        "type": "ENCH FULL",
+        "original": "Soul Sacrifice",
+        "string": "Ofiara duszy"
+    },
+    {
+        "editor_id": "ccBGSSSE045_HasedokiKnockback",
+        "type": "MGEF DNAM",
+        "original": "Knocks back the target on impact.",
+        "string": "Odpycha wrog\u00f3w znajduj\u0105cych si\u0119 na drodze do celu."
+    },
+    {
+        "editor_id": "ccBGSSSE045_StaffofHasedoki",
+        "type": "WEAP FULL",
+        "original": "Staff of Hasedoki",
+        "string": "Kostur Hasedoki"
+    },
+    {
+        "editor_id": "ccBGSSSE045_IvaraofOlenveld",
+        "type": "NPC_ FULL",
+        "original": "Ivara of Olenveld",
+        "string": "Ivara z Olenveld"
+    },
+    {
+        "editor_id": "ccBGSSSE045_WardHasedoki",
+        "type": "SPEL FULL",
+        "original": "Ward of Hasedoki",
+        "string": "Zakl\u0119cie Hasedoki"
+    },
+    {
+        "editor_id": "ccBGSSSE045_DummyStaffEffect",
+        "type": "MGEF FULL",
+        "original": "Ward of Hasedoki",
+        "string": "Zakl\u0119cie Hasedoki"
+    },
+    {
+        "editor_id": "ccBGSSSE045_DummyStaffEffect",
+        "type": "MGEF DNAM",
+        "original": "While not attacking, creates a ward that protects against spells for up to <mag> points.",
+        "string": "Gdy nie atakujesz, tworzy zakl\u0119cie, kt\u00f3re chroni przed czarami, nawet do <mag> pkt."
+    },
+    {
+        "editor_id": "BrittleShinPass01",
+        "type": "CELL FULL",
+        "original": "Brittleshin Pass",
+        "string": "Prze\u0142\u0119cz Kruchej Piszczeli"
+    },
+    {
+        "editor_id": "ccBGSSSE045_IvaraNote",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>\nThe journey from Olenveld was long but worth the trip. We'll have a far easier time finding what we need to open the portal to the Soul Cairn.\n\nThe pass is remote and yet there are no shortage of travelers looking for a shortcut across the mountains. As such, we'll have plenty of blood and bonemeal at our disposal, but we'll need void salts and soul gem fragments to complete the ritual.\n\nLushak suggested we contact the local smugglers for help with the latter. She'd been in contact with one about the Staff of Hasedoki. If the wizard truly bonded his soul to the stave as the legends suggest, releasing him might provide a worthy offering to the Ideal Masters.\n\nIn any case, adding the ingredients to the list should be an easy task.\n</font>\n\n",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\nDroga z Olenveldu by\u0142a d\u0142uga, ale warta zachodu. Znacznie \u0142atwiej przyjdzie nam znale\u017a\u0107 rzeczy potrzebne do otwarcia portalu do Kopca Dusz.\n\nPrzej\u015bcie le\u017cy daleko, a jednak nie brakuje podr\u00f3\u017cnik\u00f3w, kt\u00f3rzy szukaj\u0105 skr\u00f3tu przez g\u00f3ry. W zwi\u0105zku z tym, mamy do dyspozycji mn\u00f3stwo krwi i startych ko\u015bci, ale potrzebne jeszcze b\u0119d\u0105 sole pustki i fragmenty klejnotu duszy, aby odprawi\u0107 rytua\u0142.\n\nLushak sugerowa\u0142a skontaktowanie si\u0119 z miejscowymi przemytnikami w tej drugiej sprawie. Rozmawia\u0142a ju\u017c z jednym z nich w sprawie kostura Hasedoki. Skoro czarodziej naprawd\u0119 zwi\u0105za\u0142 swoj\u0105 dusz\u0119 z lask\u0105, jak to g\u0142osi\u0142y legendy, uwolnienie go mog\u0142oby by\u0107 cenn\u0105 ofiar\u0105 dla Idealnych Mistrz\u00f3w.\n\nTak czy inaczej, dodanie sk\u0142adnik\u00f3w do listy powinno by\u0107 \u0142atwe.\n</font>\n\n"
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "type": "QUST CNAM",
+        "original": "I've heard rumors of smugglers near Whiterun trading black market items. I should investigate the area to see what I can uncover.",
+        "string": "Pono\u0107 w okolicach Bia\u0142ej Grani pojawili si\u0119 przemytnicy handluj\u0105cy towarami z czarnego rynku. Czas sprawdzi\u0107 okolic\u0119 i zobaczy\u0107, czego si\u0119 dowiem."
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "type": "QUST CNAM",
+        "original": "On the road west of Whiterun I encountered and killed a hostile Orc besieged by bandits. On his body was a ledger that offered additional clues. According to the ledger, the current owners of the staff are two necromancers holed up in Brittleshin Pass. ",
+        "string": "Na drodze na zach\u00f3d od Bia\u0142ej Grani pojawi\u0142 si\u0119 wrogi ork atakowany przez bandyt\u00f3w. Uda\u0142o mi si\u0119 go zg\u0142adzi\u0107. Przy jego truchle le\u017ca\u0142 notes z dodatkowymi wskaz\u00f3wkami. Wedle notesu, obecne w\u0142a\u015bcicielki kostura s\u0105 nekromantkami, kt\u00f3re zaszy\u0142y si\u0119 przy Prze\u0142\u0119czy Kruchej Piszczeli. "
+    },
+    {
+        "editor_id": "ccBGSSSE045_BookToRaisetheLiving",
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\n<p align=\"center\">\n\n\nTo Raise the Living\n\n\nby\nShagrub Gilgar\n</p>\n\n\n\n[pagebreak]\n<p align=\"left\">\n\"Why live in a tomb?\"\n\nThe child latched onto the Orc's cloak with a gentle tug, doing all he could to charm a response. \n\n\"Just as the Emperor has the Blades at his side, so must we have the dead.\"\n\n\"And the staff? What is that for? Is it powerful?\"\n\n\"It's powerful,\" the Orc replied, \"In fact, it once belonged to the wizard Hasedoki, a great mage who is said to have no equal.\"\n\n\"If he had no equal, then what killed him?\"\n\nThe Orc glanced briefly at the staff's head, as if waiting for Hasedoki himself to speak. Yet its countenance remained stuck in that playful stare, halfway between laughter and mockery. She would have to respond in his place.\n\nUfkul Gilgar had spent the last ten years contemplating the same question before settling on her answer. Throughout much of that time, her life had mirrored Hasedoki's, traveling the world in search of one who could challenge her. It was custom that bequeathed her the staff, and destiny that made her wield it. But even with fate beside her, the staff provided little comfort, knowing the ending it designed.\n\n\"There's only one thing that could kill a wizard as powerful as Hasedoki,\" she replied.\n\n\"Is it a cliff racer? A magic sword? The undead?\" \n\n\"Time.\"\n\nShe spoke from experience. Time grew the day with emptiness and yet made all things seem fleeting. So long as it passed, contentment would morph into boredom, and love would fade into loneliness. \n\nAs a necromancer, she had the tools to defy death. She had no similar solution for life. \n\nPerhaps the mortals had already divined an answer. For them it was not magic, but children who allowed them to delay time's inexorable march. Now that she was a mother, the loneliness no longer consumed her, even though that too was  temporary. And just as the staff was passed on to her by her father, when the time came, she would do the same for her son. It may have been why Hasedoki bound his soul to the staff, so that his spirit would be one with whoever wielded it.\n\nUkful placed the staff in the child's hands and watched as he scuttled through the tomb, swinging it around like a blunt instrument. It's possible the boy would be free of the same curse, the boredom that plagued his ancestors and Hasedoki before them. Morrowind was home to a great many wizards. Somewhere in that group was a worthy challenger.\n\nAnd if not, there would still be time for the next child.",
+        "string": "[pagebreak]\n<p align=\"center\">\n\n\nBy wskrzesi\u0107 \u017cyj\u0105cych\n\n\nautor:\nShagrub Gilgar\n</p>\n\n\n\n[pagebreak]\n<p align=\"left\">\n\u201ePo co mieszka\u0107 w grobowcu?\u201d\n\nDziecko delikatnie poci\u0105gn\u0119\u0142o za szat\u0119 orczycy, pr\u00f3buj\u0105c zwr\u00f3ci\u0107 na siebie uwag\u0119. \n\n\u201eTak, jak Cesarz ma u boku Ostrza, tak i my musimy mie\u0107 martwych\u201d.\n\n\u201eA kostur? Po co on nam? Jest taki pot\u0119\u017cny?\u201d\n\n\u201ePot\u0119\u017cny\u201d, odpowiedzia\u0142a orczyca. \u201ePrawd\u0119 m\u00f3wi\u0105c, niegdy\u015b nale\u017ca\u0142 do czarownika Hasedoki, wielkiego, pono\u0107 niezr\u00f3wnanego maga\u201d.\n\n\u201eSkoro by\u0142 niezr\u00f3wnany, to czemu zgin\u0105\u0142?\u201d\n\nOrczyca zerkn\u0119\u0142a przelotnie na g\u0142owic\u0119 kostura, jakby czeka\u0142a, a\u017c przem\u00f3wi sam Hasedoki. Na jej obliczu widnia\u0142a rozbawiona mina, jakby po\u0142\u0105czenie \u015bmiechu i drwiny. Musia\u0142a sama odpowiedzie\u0107 zamiast niego.\n\nUfkul Gilgar sp\u0119dzi\u0142a ostatnich dziesi\u0119\u0107 lat, pr\u00f3buj\u0105c odpowiedzie\u0107 na to samo pytanie. Przez wi\u0119kszo\u015b\u0107 tego czasu jej \u017cycie odzwierciedla\u0142o \u017cycie Hasedoki - przemierzy\u0142a ca\u0142y \u015bwiat, szukaj\u0105c tego, kto rzuci jej wyzwanie. Kostur przypad\u0142 jej w udziale zgodnie ze zwyczajem, a przeznaczenie spowodowa\u0142o, \u017ce teraz go dzier\u017cy\u0142a. Ale cho\u0107 los wydawa\u0142 si\u0119 jej sprzyja\u0107, kostur by\u0142 marnym pocieszeniem, bior\u0105c pod uwag\u0119, jaki los spotka\u0142 jego poprzedniego w\u0142a\u015bciciela.\n\n\u201eCzarodzieja tak pot\u0119\u017cnego jak Hasedoki zabi\u0107 mog\u0142a tylko jedna rzecz\u201d, odpowiedzia\u0142a.\n\n\u201eNurek? Magiczny miecz? Nieumar\u0142y?\u201d \n\n\u201eCzas\u201d.\n\nM\u00f3wi\u0142a z do\u015bwiadczenia. Czas wype\u0142nia\u0142 dzie\u0144 pustk\u0105, a jednocze\u015bnie mija\u0142 niezwykle szybko. Z up\u0142ywem czasu, zadowolenie przechodzi\u0142o w nud\u0119, a mi\u0142o\u015b\u0107... w samotno\u015b\u0107. \n\nBy\u0142a nekromantk\u0105, a wi\u0119c mia\u0142a mo\u017cliwo\u015bci pokonania \u015bmierci. Nie potrafi\u0142a jednak pokona\u0107 \u017cycia. \n\nBy\u0107 mo\u017ce \u015bmiertelnicy ju\u017c znale\u017ali odpowied\u017a. Dla nich to nie magia, ale dzieci pozwala\u0142y im op\u00f3\u017ani\u0107 niepowstrzymany up\u0142yw czasu. Teraz, kiedy zosta\u0142a matk\u0105, samotno\u015b\u0107 ju\u017c jej nie doskwiera\u0142a, cho\u0107 i to rozwi\u0105zanie by\u0142o tymczasowe. Tak jak kiedy\u015b otrzyma\u0142a kostur od ojca, tak i nadejdzie czas, \u017ce ona sama przeka\u017ce go synowi. Mo\u017ce to w\u0142a\u015bnie dlatego Hasedoki zwi\u0105za\u0142 sw\u0105 dusz\u0119 z kosturem? \u017beby jego dusza zawsze mia\u0142a towarzysza - tego, kto w danej chwili go dzier\u017cy?\n\nUfkul wr\u0119czy\u0142a dziecku kostur i patrzy\u0142a, jak \u015bmiga ono po grobowcu, machaj\u0105c nim niczym t\u0119p\u0105 pa\u0142k\u0105. Mo\u017ce ch\u0142opiec uwolni si\u0119 od tej kl\u0105twy, tej nudy, kt\u00f3ra toczy\u0142a jego przodk\u00f3w, a wcze\u015bniej Hasedoki? W Morrowind mieszka\u0142o wielu wspania\u0142ych mag\u00f3w. Gdzie\u015b w\u015br\u00f3d nich musia\u0142 si\u0119 znale\u017a\u0107 godny przeciwnik.\n\nA nawet je\u015bli nie, wci\u0105\u017c b\u0119dzie czas na kolejne dziecko."
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "type": "QUST CNAM",
+        "original": "I've killed the necromancer Ivara of Olenveld.",
+        "string": "Uda\u0142o mi si\u0119 zabi\u0107 nekromantk\u0119 Ivar\u0119 z Olenveld."
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "type": "QUST CNAM",
+        "original": "On the road west of Whiterun I encountered and killed an Orc besieged by bandits. I should check his body for clues on where he was headed.",
+        "string": "Na drodze na zach\u00f3d od Bia\u0142ej Grani pojawi\u0142 si\u0119 wrogi ork atakowany przez bandyt\u00f3w. Musz\u0119 przeszuka\u0107 jego cia\u0142o i dowiedzie\u0107 si\u0119, dok\u0105d zmierza\u0142."
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "type": "QUST CNAM",
+        "original": "Inside Brittleshin Pass I was attacked by two necromancers, Ivara of Olenveld and Lushak gra-Ragdam. In their possession was the artifact they purchased from the smugglers, the Staff of Hasedoki. After defeating them both, I retrieved the staff from the body of Ivara.",
+        "string": "Na Prze\u0142\u0119czy Kruchej Piszczeli zaatakowa\u0142y mnie dwie nekromantki - Ivara z Olenveld i Lushak gra-Ragdam. Mia\u0142y przy sobie artefakt kupiony od przemytnik\u00f3w - Kostur Hasedoki. Po pokonaniu tej dw\u00f3jki, z cia\u0142a Ivary uda\u0142o mi si\u0119 zabra\u0107 kostur."
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "type": "QUST CNAM",
+        "original": "Inside Brittleshin Pass I was attacked by two necromancers, Ivara of Olenveld and Lushak gra-Ragdam. In their possession was the artifact they purchased from the smugglers, the Staff of Hasedoki. ",
+        "string": "Na Prze\u0142\u0119czy Kruchej Piszczeli zaatakowa\u0142y mnie dwie nekromantki - Ivara z Olenveld i Lushak gra-Ragdam. Mia\u0142y przy sobie artefakt kupiony od przemytnik\u00f3w - Kostur Hasedoki. "
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "type": "QUST CNAM",
+        "original": "On the road west of Whiterun I've encountered a hostile Orc besieged by bandits. It appears conversation is not an option.",
+        "string": "Na drodze na zach\u00f3d od Bia\u0142ej Grani pojawi\u0142 si\u0119 wrogi ork atakowany przez bandyt\u00f3w. Najwyra\u017aniej rozmowa nie wchodzi w gr\u0119."
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "type": "QUST CNAM",
+        "original": "On the road west of Whiterun I encountered an Orc besieged by bandits. I've found a smuggler's ledger on his person that may tell me where he was headed.",
+        "string": "Na drodze na zach\u00f3d od Bia\u0142ej Grani pojawi\u0142 si\u0119 wrogi ork atakowany przez bandyt\u00f3w. Przy jego truchle le\u017ca\u0142 notes przemytnika, z kt\u00f3rego mog\u0119 si\u0119 dowiedzie\u0107, dok\u0105d zmierza\u0142."
+    },
+    {
+        "editor_id": "ccBGSSSE045_BookArkaytheEnemy",
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\n<p align=\"center\">\n\n\nArkay the Enemy\n\n\nby\nKW\n</p>\n\n\n\n[pagebreak]\n<p align=\"left\">\n<img src='img://Textures/Interface/Books/Illuminated_Letters/H_letter.png'>ear me, children. Once I was a lowly man such as yourselves. By my will I entered the ranks of the gods. By your unquestioning devotion, you can share my glory.\n\nMost Necromancers are fools and weaklings. Fodder for the witchhunters. But you, my servants, you are among the chosen. In the days to come, few will dare to stand against your might. But one obstacle remains. His name is Arkay.\n\nHe was also a man who entered the ranks of the gods. The similarities between his mortal life and my own astonish even me. It is only proper that we should be enemies.\n\nArkay's Blessing prevents the souls of men, beastmen, and elves from being used without consent. Arkay's Law prevents those buried with the proper rituals from being raised to serve my children's will. As you know, my children, Arkay's Blessing is flexible to those with daring, but Arkay's Law is unwavering.\n\nTo the Scholars: Humiliate the priests of Arkay. Reveal the primitive burial customs to be mere superstition. Befriend kings with honeyed words and bind them to your will. Look to my children in Cyrodiil for guidance.\n\nTo the Priests: Use your servants sparingly, let none be seen by the living. Let the memories of the undead waste away from the people. Send missionaries to the unbound dead, to the Vampires and the Liches. Let all the nations of dead carry my banner and my banner alone.\n\nTo the Hidden: Wait, as always, in the darkness.\n\nFor soon we shall strike. The Temples of Arkay will be torn stone from stone. The blood of his priests will sate our thirst; their bones will rise as our servants. The name Arkay will be struck from the records. Only I shall hold sway over life and death. Only one name shall be whispered in fear. The name of your lord and master.\n\nKW\n",
+        "string": "[pagebreak]\n<p align=\"center\">\n\n\nArkay Wr\u00f3g\n\n\nautor:\nKW\n</p>\n\n\n\n[pagebreak]\n<p align=\"left\">\n<img src='img://Textures/Interface/Books/Illuminated_Letters/W_letter.png'>ys\u0142uchajcie mnie, drogie dzieci. By\u0142em niegdy\u015b n\u0119dznikiem, jak i wy. Jednak dzi\u0119ki swej silnej woli, wszed\u0142em w szeregi bog\u00f3w. Je\u015bli po\u015bwi\u0119cicie mi si\u0119 do reszty, zyskacie udzia\u0142 w mej chwale.\n\nWi\u0119kszo\u015b\u0107 nekromant\u00f3w to s\u0142abi g\u0142upcy. Pokarm dla pogromc\u00f3w wied\u017am. Ale wy, moi s\u0142udzy, jeste\u015bcie wybrani. W najbli\u017cszych dniach niewielu odwa\u017cy si\u0119 sprzeciwi\u0107 waszej pot\u0119dze. Pozostaje jednak ostatnia przeszkoda. Jej imi\u0119 - Arkay.\n\nOn tak\u017ce by\u0142 cz\u0142owiekiem, kt\u00f3ry wszed\u0142 w szeregi bog\u00f3w. Podobie\u0144stwa pomi\u0119dzy moim i jego \u017cyciem \u015bmiertelnym zadziwiaj\u0105 nawet mnie. To by\u0142o pewne, musieli\u015bmy zosta\u0107 wrogami.\n\nB\u0142ogos\u0142awie\u0144stwo Arkaya zapobiega zniewoleniu ludzi, bestii i elf\u00f3w. Prawo Arkaya nie pozwala wskrzesza\u0107 pogrzebanych z w\u0142a\u015bciwym rytua\u0142em tak, aby s\u0142u\u017cyli moim dzieciom. A jak wiecie, moje dzieci, b\u0142ogos\u0142awie\u0144stwo Arkaya odwa\u017cni mog\u0105 nagi\u0105\u0107 - prawo Arkaya jest niez\u0142omne.\n\nDo m\u0119drc\u00f3w: poni\u017cajcie kap\u0142an\u00f3w Arkaya. Twierd\u017acie, \u017ce prymitywne obrz\u0119dy poch\u00f3wku s\u0105 jedynie przes\u0105dem. Prawcie kr\u00f3lom mi\u0142e s\u0142owa i naginajcie ich do swojej woli. Je\u015bli potrzebujecie wskaza\u0144, odnajd\u017acie moje dzieci w Cyrodiil.\n\nDo kap\u0142an\u00f3w: oszcz\u0119dzajcie swoje s\u0142ugi, aby nie by\u0142y widoczne dla \u017cyj\u0105cych. Oby wspomnienie o nieumar\u0142ych zatar\u0142o si\u0119 w\u015br\u00f3d ludu. Wysy\u0142ajcie misjonarzy do niezwi\u0105zanych umar\u0142ych, do wampir\u00f3w i lisz\u00f3w. Oby wszystkie narody umar\u0142ych sprzymierzy\u0142y si\u0119 pod moim sztandarem, wy\u0142\u0105cznie pod nim.\n\nDo ukrytych: Jak zawsze, czekajcie w mroku.\n\nWkr\u00f3tce uderzymy. \u015awi\u0105tynie Arkaya zostan\u0105 zburzone, nie zostanie kamie\u0144 na kamieniu. Krew jego kap\u0142an\u00f3w nasyci nasze pragnienie. Ich ko\u015bci powstan\u0105 jako nasi s\u0142udzy. Imi\u0119 Arkaya zostanie us\u00f3ni\u0119te [sic] z wszelkich poda\u0144. Tylko ja b\u0119d\u0119 panowa\u0142 nad \u017cyciem i \u015bmierci\u0105. Tylko jedno imi\u0119 b\u0119dzie szeptane ze strachem. Imi\u0119 waszego pana i w\u0142adcy.\n\nKW\n"
+    },
+    {
+        "editor_id": "ccBGSSSE045_BookTheLightandtheDark",
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\n<p align=\"center\">\n\n\nThe Light and the Dark\n\n\nby\nIrek Unterge\n</p>\n\n\n\n[pagebreak]\n<p align=\"left\">\n\"Yes, children, it is no accident that this land of Tamriel has been called 'The Arena'.\" The old man altered his position on the large rock that bore his weight, and straightened his long gray robe. Rheumy eyes lost their focus as they gazed out over the sun-warmed valley in the mountains of High Rock. For a moment he saw a vision of ancient horrors instead of the fresh greenery of spring. A chill washed over his aged bones.\n\n\"Is this a suitable topic for the young and innocent?\" he asked himself. The young must be taught, but must they learn of such things now, when they should be playing in the sunlight? This is a tale for the dreary winter, with the wind howling outside a walled town and the doors and windows closed and bolted against the blast and cold and -- other things.\n\nHe glanced with affection at his two grandchildren: the little towheaded boy with a hint of mischief dancing in his eyes even on those rare occasions when sitting quietly, and his older sister. A serene lass, the old man thought. Her hair like a dark flame and her slightly pointed ears were the only obvious signs of elven blood. So like her grandmother, the old man thought. The past is past, and I'shira had brought him so much peace and happiness after a lifetime of battle. He forced his thoughts back to the present.\n\n\"Sorry, children. I was remembering things. Old people do that, you know.\"\n\n\"Are you going to tell us the story of Jagar Tharn and the Emperor and the Eternal Champion?\" His grandson asked. \"That's my favorite!\"\n\n\"Not exactly, son. They were a part of it, in a way. As are I'ric and Moraelyn and Edward and Reymon and many others. Even the gods play a part. This is a far older story, and even the priests won't tell it my way. They have their own interpretations, and their fears as well. I'm too old and have seen too much to have any fear left, except that our people will forget. And forgetting is dangerous. So I, and a few others, carry this tale and try to spread it among the younger generations. You aren't really old enough to understand it all, but I can feel that my end is not far off. I must ask you to remember anyway. In a few years, perhaps, if I still live, we can discuss it again. If not, well, you must seek out others who know, and compare notes.\"\n\n\"You talk as if you are going to die, Granther,\" his granddaughter spoke up. \"That can't happen. You will live forever!\"\n\nChuckling, \"I'm afraid not, dear. But I have a little while left, enough for the story\".\n\nThe children settled back against the bole of a large oak, knowing that the old man could not be hurried. Leaning forward, he began:\n\n\"Long, long ago, before there were any people at all; even before the gods, Tamriel was chosen as a battleground by two -- things. It is difficult to find words that fit them well. I call them the Light and the Dark. Others use different names. Good and Evil, Bird and Serpent, Order and Chaos. None of these names really apply. It suffices that they are opposites, and totally antithetical. Neither is really good or evil, as we know the words. They are immortal since they do not really live, but they do exist. Even the gods and their daedric enemies are pale reflections of the eternal conflict between them. It's as though their struggle creates energies that distort their surroundings, and those energies are so powerful that life can appear, like an eddy in a stream.\"\n\n\"Do demons and trolls come from the Dark, Grandpa?\"\n\n\"Not exactly, son. The undead evils we know, and the demons that live on Oblivion tend to align with the Dark. Their natures are more akin to it. Humans and the other peoples of Tamriel, even the misunderstood Dark Elves, are more aligned with the Light. Our evils are not always of the Dark, but some are, and these are the truly dangerous ones. Jagar Tharn was almost wholly aligned with the Dark, and that is really why he was so monstrous. It was not because he was a black mage, as some would have it.\"\n\n\"Did his magic come from the Dark, Granther?\" The girl's interest was piqued by mention of magic. Her heritage is beginning to show itself, thought the old man.\n\n\"No, magic power comes directly from the energies swirling about both entities. These energies are impersonal and all mixed up. Black magic is more a matter of intent than effect. The Mages' Guild holds that a fireball, say, directed against a creature intent on causing harm, is not black magic; but the same spell directed at one seeking peace is. In this, they are right. Destruction of a fire daedra strengthens the Light and weakens the Dark just a little. In the same manner, destruction of a unicorn strengthens the Dark.\"\n\n\"What about the gods? Do they come from the Light?\" The boy's eyes were animated, but tinged with apprehension. He adored stories of the gods and goddesses of Tamriel's pantheon, and the heroes who served them.\n\nThe old man chuckled. \"The gods have an unusual origin, if some of the oldest tales are true. The oldest inhabitants of this world -- no one seems to be sure what race they were -- had a system of myths that they believed in for a thousand years. The people of et'Ada believed for so long and so well, that their beliefs may, just may, have drawn upon the energies surrounding Tamriel to bring the gods themselves into being. If that is so, the conflict between the Light and the Dark provided the energy, and the et'Adans the structure, that created the gods of Tamriel. No one really knows since it was so long ago and so little survives from that time. It no longer matters; the gods have their own existence now, and mostly align with the Light, except for a few who are, shall we say, a little ambiguous.\"\n\n\"Why do we have to remember, Granther? What is the danger you spoke of? If the Light and Dark are so big and powerful, can we influence them? Should we try? What should we fight for?\"\n\n\"I see that your critical faculties are developing, Solara. That is good. The answer is simple, but quite large enough for mere mortals like us. The Light and Dark are evenly matched, and perhaps will never resolve their conflict. Mortals and the beings of the Aetherius sometimes can perceive traces of them. Therein lies the danger; to most of us the Light is more congenial, even inspiring, and moves us to behavior that we would call good. To creatures like us, the Dark is -- horrible. Those who have visions of it are often driven mad, and the ones who are not would be better dead. The Dark is to us a monstrous emptiness, an emptiness that sucks the soul toward it -- to be twisted, maimed, and ultimately destroyed. What we can see of it seems utterly evil. Perhaps somewhere else this would not be so, but in our world, it is.\"\n\nThe old man paused to gather his thoughts, gazing once more at the fresh new life of spring. \"What we must do is never to forget that the Dark is always there, beckoning to the weak-souled among us. Should it gain ascendancy over Tamriel, through agents perverted by its awful attraction, terrible things could happen. All that we hold beautiful or desirable, even love itself, would be swept away. Peace and hope would be no more. For Tamriel, that would be the worst possible disaster. What I saw during Jagar's reign nearly killed me, almost destroyed my mind. When he was destroyed, I thought the worst was over, but it was not. The forces of the Dark are on the march again, and new heroes must rise to join the Eternal Champion in the fight against them.\"\n\nThe old man and the two children sat in silence for several minutes. Finally, the children assisted their grandfather to his feet, and they walked slowly away. Toward home, and hearth, and lunch.\n",
+        "string": "[pagebreak]\n<p align=\"center\">\n\n\n\u015awiat\u0142o i ciemno\u015b\u0107\n\n\nautor:\nIrek Unterge\n</p>\n\n\n\n[pagebreak]\n<p align=\"left\">\n\u201eTak, dzieci, to nie przypadek, \u017ce kraina Tamriel zwana jest aren\u0105\u201d. Starzec poprawi\u0142 swoj\u0105 pozycj\u0119 na wielkim g\u0142azie, na kt\u00f3rym siedzia\u0142, i wyg\u0142adzi\u0142 swoj\u0105 d\u0142ug\u0105, szar\u0105 szat\u0119. Za\u0142zawione oczy straci\u0142y ostro\u015b\u0107, podczas gdy on patrzy\u0142 na sk\u0105pan\u0105 w s\u0142o\u0144cu dolin\u0119 w g\u00f3rach Wysokiej Ska\u0142y. Przez chwil\u0119 ogarn\u0119\u0142a go wizja staro\u017cytnych okropie\u0144stw zast\u0119puj\u0105ca zielon\u0105 bujno\u015b\u0107 wiosny. Przez jego wiekowe ko\u015bci przeszed\u0142 zimny dreszcz.\n\n\u201eCzy to w\u0142a\u015bciwy temat dla m\u0142odych i niewinnych?\u201d, zapyta\u0142 sam siebie. M\u0142odych nale\u017cy uczy\u0107, ale czy musz\u0105 poznawa\u0107 takie rzeczy teraz, kiedy powinni bawi\u0107 si\u0119 w \u015bwietle s\u0142o\u0144ca? To jest opowie\u015b\u0107 na mro\u017an\u0105 zim\u0119, kiedy wiatr wyje na zewn\u0105trz, a my siedzimy przy zamkni\u0119tych drzwiach i oknach, za wysokimi murami miasta. Gdy jeste\u015bmy chronieni przed podmuchami wiatru, ch\u0142odem i... innymi rzeczami.\n\nSpojrza\u0142 z mi\u0142o\u015bci\u0105 na dw\u00f3jk\u0119 swoich wnucz\u0105t: m\u0142odego blond ch\u0142opca, z psotami ta\u0144cz\u0105cymi w oczach nawet w tych rzadkich przypadkach, gdy siedzia\u0142 spokojnie, i jego starsz\u0105 siostr\u0119. \u201ePogodna dziewoja\u201d, pomy\u015bla\u0142 starzec. Jej w\u0142osy by\u0142y niczym ciemny p\u0142omie\u0144, a lekko spiczaste uszy zdradza\u0142y domieszk\u0119 krwi elfickiej. \u201eJaka\u017c ona podobna do matki\u201d, pomy\u015bla\u0142 starzec. Ale przesz\u0142o\u015b\u0107 to przesz\u0142o\u015b\u0107, a I'shira da\u0142a mu tyle spokoju i szcz\u0119\u015bcia po \u017cyciu pe\u0142nym bitew. Wr\u00f3ci\u0142 my\u015blami do tera\u017aniejszo\u015bci.\n\nWybaczcie, dzieci. Wspomina\u0142em sobie. Starzy ludzie tak maj\u0105...\n\n\u201eOpowiesz nam histori\u0119 o Jagarze Tharnie i Cesarzu i Wiecznym Czempionie?\u201d, zapyta\u0142 wnuk. \u201eUwielbiam j\u0105!\u201d\n\nNie do ko\u0144ca, synu. W jakim\u015b sensie byli jej cz\u0119\u015bci\u0105. Tak samo jak I'ric i Moraelyn i Edward i Reymon i wielu innych. Nawet bogowie si\u0119 w ni\u0105 wmieszali. To znacznie starsza opowie\u015b\u0107 i nawet kap\u0142ani nie opowiadaj\u0105 jej tak, jak ja. Maj\u0105 w\u0142asne interpretacje i w\u0142asne obawy. Jestem za stary i widzia\u0142em zbyt wiele, aby pozosta\u0142 we mnie jaki\u015b strach. Boj\u0119 si\u0119 jedynie, \u017ce ludzie zapomn\u0105, a zapomnienie jest niebezpieczne. A wi\u0119c, wraz z kilkoma innymi, nosz\u0119 w sobie t\u0119 opowie\u015b\u0107 i staram si\u0119 j\u0105 przekazywa\u0107 m\u0142odszym pokoleniom. Nie jeste\u015b do\u015b\u0107 doros\u0142y, by zrozumie\u0107 j\u0105 w ca\u0142o\u015bci, ale czuj\u0119, \u017ce niewiele mi ju\u017c zosta\u0142o. Musz\u0119 ci\u0119 prosi\u0107, \u017ceby\u015b zapami\u0119ta\u0142 to, co potrafisz. Za kilka lat, by\u0107 mo\u017ce, je\u015bli b\u0119d\u0119 jeszcze \u017cy\u0142, zn\u00f3w o niej porozmawiamy. Je\u015bli nie, c\u00f3\u017c, musisz odszuka\u0107 innych, kt\u00f3rzy j\u0105 znaj\u0105, i por\u00f3wna\u0107 to, co zapami\u0119tasz.\n\nOdezwa\u0142a si\u0119 wnuczka: \u201eM\u00f3wisz, jakby\u015b zamierza\u0142 umrze\u0107, Grantherze. A to niemo\u017cliwe, przecie\u017c b\u0119dziesz \u017cy\u0142 wiecznie!\u201d\n\nDziadek si\u0119 za\u015bmia\u0142: \u201eObawiam si\u0119, \u017ce nie, kochana. Ale zosta\u0142o mi jeszcze troch\u0119 \u017cycia, zd\u0105\u017c\u0119 opowiedzie\u0107 histori\u0119\u201d.\n\nDzieci usadowi\u0142y si\u0119 przy pniu du\u017cego d\u0119bu, wiedz\u0105c, \u017ce dziadka nie wolno pogania\u0107. Pochyli\u0142 si\u0119 do przodu i zacz\u0105\u0142:\n\n\u201eDawno, dawno temu, zanim nie by\u0142o jeszcze \u017cadnych ludzi, nawet przed bogami, Tamriel zosta\u0142 wybrany na pole bitwy przez dwie... istoty. Trudno znale\u017a\u0107 s\u0142owa, by dobrze je opisa\u0107. Ja zw\u0119 je \u015bwiat\u0142em i ciemno\u015bci\u0105. Inni u\u017cywaj\u0105 innych nazw - dobro i z\u0142o, ptak i w\u0105\u017c, porz\u0105dek i chaos. \u017badne z tych imion nie jest do ko\u0144ca w\u0142a\u015bciwe. Wystarczy wiedzie\u0107, \u017ce s\u0105 przeciwie\u0144stwami, absolutnymi antytezami. \u017badne z nich nie jest tak naprawd\u0119 dobre ani z\u0142e w naszym znaczeniu tych s\u0142\u00f3w. S\u0105 nie\u015bmiertelne, gdy\u017c tak naprawd\u0119 nie \u017cyj\u0105, a jednak istniej\u0105. Nawet bogowie i ich daedryczni wrogowie s\u0105 jedynie marnymi odzwierciedleniami wiecznego konfliktu pomi\u0119dzy nimi. Ich sp\u00f3r tworzy jakby energi\u0119 zak\u0142\u00f3caj\u0105c\u0105 otoczenie. Energia ta jest tak pot\u0119\u017cna, \u017ce potrafi dawa\u0107 pocz\u0105tek \u017cyciu, niczym wir w strumieniu\u201d.\n\n\u201eDziadku, czy demony i trolle powstaj\u0105 z mroku?\u201d\n\n\u201eNie do ko\u0144ca, synu. Nieumar\u0142e potwory, kt\u00f3re znamy, demony \u017cyj\u0105ce w Otch\u0142ani, cz\u0119sto zwracaj\u0105 si\u0119 ku mrokowi. Taka ju\u017c ich natura. Ludzie i inne ludy Tamriel, nawet niezrozumiane Mroczne Elfy, zwracaj\u0105 si\u0119 bardziej ku \u015bwiat\u0142u. Ale nasi \u00ab\u017ali\u00bb nie zawsze s\u0142u\u017c\u0105 ciemno\u015bci, a ci kt\u00f3rzy to robi\u0105, s\u0105 naprawd\u0119 niebezpieczni. Jagar Tharn niemal ca\u0142kowicie pogr\u0105\u017cy\u0142 si\u0119 w ciemno\u015bci i to w\u0142a\u015bnie dlatego by\u0142 taki potworny. Niekt\u00f3rzy uwa\u017caj\u0105, \u017ce to dlatego, \u017ce by\u0142 czarnym magiem, ale to nieprawda\u201d.\n\n\u201eCzy jego magia pochodzi\u0142a z ciemno\u015bci, Grantherze?\u201d, zainteresowa\u0142a si\u0119 dziewczynka na wspomnienie o magii. \u201eJej pochodzenie zaczyna si\u0119 objawia\u0107\u201d, pomy\u015bla\u0142 starzec.\n\n\u201eNie, magiczna moc pochodzi bezpo\u015brednio z energii wiruj\u0105cych wok\u00f3\u0142 obu istot. Energie te s\u0105 nieosobowe i pomieszane. Czarna magia to bardziej kwestia zamiar\u00f3w ni\u017c efektu. Gildia Mag\u00f3w twierdzi, \u017ce - powiedzmy - ognista kula skierowana ku stworzeniu, kt\u00f3re chce nam zrobi\u0107 krzywd\u0119, nie jest czarn\u0105 magi\u0105. Z kolei rzucenie tego samego zakl\u0119cia w kogo\u015b pokojowo nastawionego ju\u017c ni\u0105 jest. W tym sensie Gildia si\u0119 nie myli. Zniszczenie daedry ognia odrobin\u0119 wzmacnia \u015bwiat\u0142o i os\u0142abia ciemno\u015b\u0107. Tak samo zg\u0142adzenie jednoro\u017cca wzmacnia mrok\u201d.\n\n\u201eA co z bogami? Czy oni pochodz\u0105 od \u015bwiat\u0142a?\u201d Oczy ch\u0142opca by\u0142y pobudzone, ale wida\u0107, \u017ce si\u0119 powstrzymywa\u0142. Uwielbia\u0142 historie o bogach i boginiach z panteonu Tamriel oraz o bohaterach, kt\u00f3rzy im s\u0142u\u017cyli.\n\nStarzec za\u015bmia\u0142 si\u0119. \u201ePochodzenie bog\u00f3w jest naprawd\u0119 interesuj\u0105ce, je\u015bli wierzy\u0107 najstarszym podaniom. Dawni mieszka\u0144cy tego \u015bwiata, a nikt nie jest pewny ich rasy, mieli zbi\u00f3r mit\u00f3w, w kt\u00f3re wierzyli przez tysi\u0105ce lat. Lud et'Ada wierzy\u0142 tak d\u0142ugo i z tak\u0105 \u017carliwo\u015bci\u0105, \u017ce... c\u00f3\u017c, jego przekonania mog\u0142y... mog\u0142y przyci\u0105gn\u0105\u0107 energie otaczaj\u0105ce Tamriel i powo\u0142a\u0107 bog\u00f3w do \u017cycia. Je\u015bli tak by\u0142o, to konflikt pomi\u0119dzy \u015bwiat\u0142em a ciemno\u015bci\u0105 dostarczy\u0142 energii, a et'Adani struktury, kt\u00f3ra stworzy\u0142a bog\u00f3w Tamriel. Nikt nie wie tego do ko\u0144ca, gdy\u017c by\u0142o to bardzo dawno temu i nie zachowa\u0142y si\u0119 praktycznie \u017cadne przekazy. Niewa\u017cne zreszt\u0105 - bogowie istniej\u0105 i w wi\u0119kszo\u015bci sk\u0142aniaj\u0105 si\u0119 ku \u015bwiat\u0142u, z wyj\u0105tkiem tych, powiedzmy, nieco mniej jednoznacznych\u201d.\n\n\u201eDlaczego musimy o tym pami\u0119ta\u0107, Grantherze? O jakim niebezpiecze\u0144stwie wspomina\u0142e\u015b? Skoro \u015bwiat\u0142o i ciemno\u015b\u0107 s\u0105 takie pot\u0119\u017cne, czy mo\u017cemy na nie wp\u0142ywa\u0107? Powinni\u015bmy pr\u00f3bowa\u0107? O co powinni\u015bmy walczy\u0107?\u201d\n\n\u201eWidz\u0119, \u017ce wykszta\u0142casz w sobie krytyczne my\u015blenie, Solaro. To dobrze. Odpowied\u017a jest prosta, ale dosy\u0107 onie\u015bmielaj\u0105ca dla zwyk\u0142ych \u015bmiertelnik\u00f3w, takich jak my. \u015awiat\u0142o i ciemno\u015b\u0107 dor\u00f3wnuj\u0105 sobie i prawdopodobnie konflikt ten na zawsze pozostanie nierozstrzygni\u0119ty. \u015amiertelnicy i istoty eteryczne czasem odczuwaj\u0105 ich \u015blady. I tu w\u0142a\u015bnie powstaje niebezpiecze\u0144stwo - dla wi\u0119kszo\u015bci z nas \u015bwiat\u0142o jest bardziej przyjemne, wr\u0119cz inspiruj\u0105ce, i prowadzi nas ku zachowaniu, kt\u00f3re nazywamy \u00abdobrym\u00bb. Dla takich istot jak my, ciemno\u015b\u0107 jest... przera\u017caj\u0105ca. Ci, kt\u00f3rzy jej do\u015bwiadcz\u0105, cz\u0119sto szalej\u0105, a je\u015bli nawet nie, to woleliby umrze\u0107. Ciemno\u015b\u0107 jest dla nas potworn\u0105 pustk\u0105. Pustk\u0105 przyci\u0105gaj\u0105c\u0105 nasz\u0105 dusz\u0119, aby j\u0105 splugawi\u0107, torturowa\u0107, a\u017c wreszcie zniszczy\u0107. To, co wiemy o ciemno\u015bci, to absolutne z\u0142o. Mo\u017ce gdzie indziej tak by nie by\u0142o, ale w naszym \u015bwiecie tak w\u0142a\u015bnie jest\u201d.\n\nStarzec przerwa\u0142, aby zebra\u0107 my\u015bli i jeszcze raz zerkn\u0105\u0142 na \u015bwie\u017co\u015b\u0107 wiosny. \u201eNie mo\u017cemy nigdy zapomina\u0107, \u017ce ciemno\u015b\u0107 istnieje, \u017ce wzywa s\u0142abszych po\u015br\u00f3d nas. Gdyby zyska\u0142a w\u0142adz\u0119 nad Tamriel, poprzez swoich s\u0142ugus\u00f3w skuszonych przekl\u0119tym czarem, mog\u0142oby doj\u015b\u0107 do przera\u017caj\u0105cych rzeczy. Wszystko, co dla nas pi\u0119kne i po\u017c\u0105dane, nawet sama mi\u0142o\u015b\u0107, zosta\u0142oby zniszczone. Zapomnieliby\u015bmy o pokoju i nadziei. Dla Tamriel, to by\u0142aby najgorsza katastrofa. To, co widzia\u0142em podczas panowania Jagara, niemal mnie zabi\u0142o, niemal zniszczy\u0142o m\u00f3j umys\u0142. Kiedy on sam zosta\u0142 zniszczony, my\u015bla\u0142em, \u017ce najgorsze ju\u017c za nami, ale tak nie by\u0142o. Si\u0142y ciemno\u015bci zn\u00f3w maszeruj\u0105, a nowi bohaterowie musz\u0105 powsta\u0107 i do\u0142\u0105czy\u0107 do Wiecznego Czempiona, aby zwalczy\u0107 mrok\u201d.\n\nStarzec i dwoje dzieci siedzieli przez kilka minut w ciszy. Wreszcie, wnucz\u0119ta pomog\u0142y dziadkowi wsta\u0107 i powoli wszyscy odeszli. W kierunku domu, pieca i obiadu.\n"
+    },
+    {
+        "editor_id": "ccBGSSSE045_SmugglerNote",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\nThe new source has been a real boon. Skooma, poisons, black soul gems, you name it. We've got a line to a wide range of goods, and an even wider range of clients. Which reminds me, someone needs to tell Ahkari where she can stick her bottles of sugared cat piss. We're done.\n\nMeanwhile we're filling up our coffers faster than we can empty them. We're drinking day and night and still haven't gone through half the gold from that Morrowind job for the corpse fondlers. With Argonian patrols up and down the border, we can charge an arm, leg, and a tail for every crate that comes in. As for the zombie petters, they were pretty pleased the staff wasn't damaged. Creepy looking thing too, was glad to be rid of it. \n\nIt's a shame we couldn't hold out a couple more days though. This morning another buyer came by the camp, an Orc with a face so lumpy he must've jumped head first off the top of Dragonsreach.\n\nTurns out he was looking for the same staff, offering to pay double. I told him we could have something better for him on the next boat from Solstheim, but he was pretty sodding clear there was only one staff he wanted to buy. Makes sense. The only thing uglier than this Orc was that staff. Maybe he wants to hold it up when he shaves so he doesn't feel so bad for being born.\n\nAnyways, I sold him the information on the buyers, and sent him on his way. Couldn't get him to trade any of the valuables on his carriage, but it's all right. There's more than one way to part a fool and his things.\n\nI told the boys to cut him off on the road west of Whiterun, at the burnt down house between the watchtower and Fort Greymoor. Given how obsessed he was about that staff, it'll be easy to catch him off guard.\n\n</font>\n",
+        "string": "<font face='$HandwrittenFont'>\nNowe \u017ar\u00f3d\u0142o to prawdziwa \u017cy\u0142a z\u0142ota. Skooma, trucizny, czarne klejnoty duszy, co tylko chcesz. Mamy dost\u0119p do du\u017cej liczby towar\u00f3w i nawet wi\u0119kszej liczby klient\u00f3w. Aha, kto\u015b musi powiedzie\u0107 Ahkari, gdzie mo\u017ce sobie wsadzi\u0107 te butelki s\u0142odzonych kocich szczyn. Do\u015b\u0107 tego.\n\nTymczasem wype\u0142niamy kufry szybciej, ni\u017c jeste\u015bmy w stanie je opr\u00f3\u017cni\u0107. Pijemy dzie\u0144 i noc, a jeszcze nawet nie wydali\u015bmy po\u0142owy z\u0142ota za t\u0119 robot\u0119 w Morrowind dla mi\u0142o\u015bniczek umarlak\u00f3w. Granic\u0119 patroluj\u0105 liczne patrole argo\u0144skie, a wi\u0119c mo\u017cemy pobiera\u0107 wysokie op\u0142aty za ka\u017cd\u0105 skrzynk\u0119, kt\u00f3ra przychodzi. Co do wielbicielek zombiak\u00f3w, by\u0142y bardzo zadowolone, \u017ce kostur nie by\u0142 uszkodzony. Dziwacznie wygl\u0105da\u0142. Ciesz\u0119 si\u0119, \u017ce si\u0119 go pozby\u0142em. \n\nSzkoda, \u017ce nie dali\u015bmy rady zosta\u0107 tam jeszcze kilka dni. Dzi\u015b rano w obozie zn\u00f3w pojawi\u0142 si\u0119 klient, ork z g\u0119b\u0105 tak parszyw\u0105, \u017ce chyba musia\u0142 skoczy\u0107 na g\u0142\u00f3wk\u0119 ze szczytu Smoczej Przystani.\n\nNajwyra\u017aniej szuka\u0142 tego samego kostura i oferowa\u0142 podw\u00f3jn\u0105 cen\u0119. Powiedzia\u0142em mu, \u017ce na kolejnej \u0142odzi z Solstheim znajd\u0119 dla niego co\u015b lepszego. On jednak naciska\u0142, \u017ce chce kupi\u0107 ten konkretny kostur. W sumie wszystko si\u0119 zgadza. Jedyn\u0105 rzecz\u0105 brzydsz\u0105 od tego orka by\u0142a ta laska. Mo\u017ce chce j\u0105 trzyma\u0107 przy goleniu, \u017ceby nie czu\u0107 si\u0119 tak \u017ale, \u017ce si\u0119 urodzi\u0142.\n\nTak czy inaczej, sprzeda\u0142em mu informacje o klientkach i wys\u0142a\u0142em w dalsz\u0105 drog\u0119. Nie uda\u0142o mi si\u0119 go nam\u00f3wi\u0107 do sprzedania kosztowno\u015bci, kt\u00f3re mia\u0142 na wozie, ale to nic. Znam spos\u00f3b, \u017ceby pozbawi\u0107 tego g\u0142upca jego rzeczy.\n\nKaza\u0142em ch\u0142opakom zaskoczy\u0107 go na drodze na zach\u00f3d od Bia\u0142ej Grani, przy spalonym domu pomi\u0119dzy stra\u017cnic\u0105 a Fortem Szara Przysta\u0144. Bior\u0105c pod uwag\u0119, jak\u0105 mia\u0142 obsesj\u0119 na punkcie tej laski, raczej nie b\u0119dzie zbyt ostro\u017cny.\n\n</font>\n"
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "type": "QUST CNAM",
+        "original": "I've found a smuggler's note which detailed the sale of a powerful staff to a necromancer somewhere west of Whiterun. While the location was not written in the note, it was apparently sold to an Orc who was interested in obtaining the staff. As the smuggler's planned to ambush and rob the Orc, I should go to the location and find out what happened.",
+        "string": "Uda\u0142o mi si\u0119 zdoby\u0107 notatk\u0119 przemytnika opisuj\u0105c\u0105 sprzeda\u017c pot\u0119\u017cnego kostura nekromantce, gdzie\u015b na zach\u00f3d od Bia\u0142ej Grani. Miejsce jej pobytu nie zosta\u0142o zapisane w notatce, ale najwyra\u017aniej zna\u0142 je ork, kt\u00f3ry by\u0142 zainteresowany odkupieniem kostura. Przemytnik planowa\u0142 zasadzk\u0119 i napadni\u0119cie na orka, a wi\u0119c czas ruszy\u0107 na miejsce pu\u0142apki i sprawdzi\u0107, co ostatecznie si\u0119 wydarzy\u0142o."
+    },
+    {
+        "editor_id": "ccBGSSSE045_SmugglerLedger",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'> \n\nItems:\nDozen bottles of skooma\n\nDelivered to: \nDelvin Mallory, Riften\n\nSmuggler's Fee: \nFifty septims and a favor. Knowing Delvin, the discount is worth it, at least this time around.\n\n[pagebreak]\n\nItems: \nStaff of Hasedoki, void salts, soul gems, bonemeal\n\nDelivered to: \nIvara of Olenveld and Lushak gra-Ragdam, Brittleshin Pass\n\nSmuggler's Fee:\nJust gold and gems for now. It was tough sneaking in some of the items on the list, but the zombie lovers were happy with the haul. They say they're trying to open a portal to something called the Soul Cairn. If there's loot to be had inside, it might be a good idea to line up some buyers.\n\n[pagebreak]\n\nItems:\nCane, book\n\nDelivered to: \nBandits, White River Watch\n\nSmuggler's Fee:\nHajvarr paid with a dagger and some farmer clothes with the blood still on it. The cane was a foot short, but it serves the bastard right for not paying in gold. I told him if he wants better service, he's going to have to learn how to fight with his eyes open.</font>\n",
+        "string": "<font face='$HandwrittenFont'> \n\nPrzedmioty:\nTuzin butelek skoomy\n\nDostarczy\u0107 do: \nDelvina Mallory'ego w P\u0119kninie\n\nWynagrodzenie przemytnika: \nPi\u0119\u0107dziesi\u0105t septim\u00f3w i przys\u0142uga. Znaj\u0105c Delvina, rabat jest tego wart, przynajmniej tym razem.\n\n[pagebreak]\n\nPrzedmioty: \nKostur Hasedoki, sole pustki, klejnoty duszy, starte ko\u015bci\n\nDostarczy\u0107 do: \nIvary z Oldenveld i Lushak gra-Ragdam, na Prze\u0142\u0119czy Kruchej Piszczeli\n\nWynagrodzenie przemytnika:\nP\u00f3ki co, jedynie z\u0142oto i klejnoty. Trudno by\u0142o znale\u017a\u0107 cz\u0119\u015b\u0107 przedmiot\u00f3w z listy, ale mi\u0142o\u015bniczki zombie by\u0142y zadowolone. Twierdz\u0105, \u017ce pr\u00f3buj\u0105 otworzy\u0107 portal do jakiego\u015b Kopca Dusz. Je\u015bli wewn\u0105trz znajduj\u0105 si\u0119 \u0142upy, warto powiadomi\u0107 potencjalnych kupc\u00f3w.\n\n[pagebreak]\n\nPrzedmioty:\nLaska, ksi\u0105\u017cka\n\nDostarczy\u0107 do: \nBandyt\u00f3w w Stra\u017cnicy Bia\u0142ej Rzeki\n\nWynagrodzenie przemytnika:\nHajvarr zap\u0142aci\u0142 sztyletem i jeszcze zakrwawionymi ubraniami rolniczymi. Laska by\u0142a o stop\u0119 za kr\u00f3tka, ale to bardzo dobrze - dra\u0144 przecie\u017c nie zap\u0142aci\u0142 z\u0142otem, jak by\u0142o um\u00f3wione. Powiedzia\u0142em mu, \u017ce je\u015bli chce lepszej us\u0142ugi, musi si\u0119 nauczy\u0107, jak walczy\u0107 z otwartymi oczami.</font>\n"
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "type": "QUST CNAM",
+        "original": "I've found a smuggler's note which may provide further information on their transactions.",
+        "string": "Uda\u0142o mi si\u0119 znale\u017a\u0107 notatk\u0119 przemytnika, kt\u00f3ra mo\u017ce ujawni\u0107 wi\u0119cej szczeg\u00f3\u0142\u00f3w na temat jego transakcji."
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "type": "QUST CNAM",
+        "original": "I've killed the necromancer Lushak gra-Ragdam.",
+        "string": "Uda\u0142o mi si\u0119 zabi\u0107 nekromantk\u0119 Lushak gra-Ragdam."
+    }
+]

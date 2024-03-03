@@ -1,0 +1,92 @@
+[
+    {
+        "editor_id": "BGSSSE018_ShadowrendActivatorWeaponAxe",
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "Prendi"
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendQuest",
+        "type": "QUST FULL",
+        "original": "Through a Glass, Darkly",
+        "string": "Attraverso uno specchio oscuro"
+    },
+    {
+        "editor_id": "BGSSSE018_AbscondSpellShadowrendMagicEffect",
+        "type": "MGEF FULL",
+        "original": "Abscond Spell Magic Effect",
+        "string": "Effetto magico incantesimo Latitante"
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendActivatorWeapon",
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "Prendi"
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendDoppelgangerName",
+        "type": "MESG FULL",
+        "original": "<Alias=Player>'s Shadow",
+        "string": "Ombra di <Alias=Player>"
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendQuest",
+        "type": "QUST NNAM",
+        "original": "Retrieve Shadowrend",
+        "string": "Recupera Shadowrend"
+    },
+    {
+        "editor_id": "BGSSSE018_AbscondSpellShadowrend",
+        "type": "SPEL FULL",
+        "original": "Abscond Spell",
+        "string": "Incantesimo Latitante"
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendQuest",
+        "type": "QUST NNAM",
+        "original": "Go to Eastmarch Geysers",
+        "string": "Vai ai geyser di Eastmarch"
+    },
+    {
+        "editor_id": "BGSSSE018_GhostAbilityShadowrend",
+        "type": "SPEL FULL",
+        "original": "Ghost Ability",
+        "string": "Abilit\u00e0 del fantasma"
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendQuest",
+        "type": "QUST NNAM",
+        "original": "Return to Eastmarch Geysers",
+        "string": "Torna ai geyser di Eastmarch"
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendQuest",
+        "type": "QUST NNAM",
+        "original": "Defeat your Shadow",
+        "string": "Sconfiggi la tua ombra"
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendDoppelgangerName",
+        "type": "MESG DESC",
+        "original": "Doppelganger",
+        "string": "Sosia"
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendQuest",
+        "type": "QUST CNAM",
+        "original": "I have defeated my shadow and feel at peace.  I should retrieve the weapon from its remains.",
+        "string": "Sento come una pace interiore, ma la mia ombra non \u00e8 svanita nella sua interezza. La sua arma, solida come tutto ci\u00f2 che mi circonda, giace sui suoi resti."
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendQuest",
+        "type": "QUST CNAM",
+        "original": "An inner voice is telling me I must confront a darkness within myself. I am drawn toward a geyser pool in Eastmarch. Perhaps answers lie there.",
+        "string": "Una voce mi consiglia di affrontare non solo i demoni del mondo esterno, ma anche quelli che ho dentro. Questa voce mi dice di recarmi presso un geyser vicino a Eastmarch. L\u00e0 dovrei trovare delle risposte."
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendQuest",
+        "type": "QUST CNAM",
+        "original": "The weapon I attempted to take has pulled something from within me - a dark shadow of myself. I must defeat this doppelganger.",
+        "string": "L'arma che ho recuperato ha risvegliato qualcosa dentro me. Un'ombra, che non ha pi\u00f9 bisogno del resto del mio essere per esistere e che, pertanto, ha scelto di eliminare."
+    }
+]

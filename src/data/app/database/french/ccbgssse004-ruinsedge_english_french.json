@@ -1,0 +1,158 @@
+[
+    {
+        "editor_id": "ccBGSSSE004_Paralyze1",
+        "type": "SPEL FULL",
+        "original": "Paralyze",
+        "string": "Paralysie"
+    },
+    {
+        "editor_id": "ccBGSSSE004_ReduceCarryWeight",
+        "type": "MGEF FULL",
+        "original": "Reduce Carry Weight",
+        "string": "R\u00e9duction de charge maximale"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Quest",
+        "type": "QUST FULL",
+        "original": "The Edge of Ruin",
+        "string": "Au bord de la ruine"
+    },
+    {
+        "editor_id": "ccBGSSSE004_BowBaseEffect",
+        "type": "MGEF DNAM",
+        "original": "Randomly applies one of these effects to the target: Frost, Demoralize, Frenzy, Drain Magicka, Paralyze.",
+        "string": "Applique al\u00e9atoirement un de ces effets \u00e0 la cible\u00a0: Glace, D\u00e9moralisation, Fr\u00e9n\u00e9sie, Ponction de magie, Paralysie"
+    },
+    {
+        "editor_id": "ccBGSSSE004_DrainMagickaEffect",
+        "type": "MGEF FULL",
+        "original": "Drain Magicka",
+        "string": "Ponction de magie"
+    },
+    {
+        "editor_id": "ccBGSSSE004_BowBaseEffect",
+        "type": "MGEF FULL",
+        "original": "Bow Base Effect",
+        "string": "Effet de base de l'arc"
+    },
+    {
+        "editor_id": "ccBGSSSE004_InfluenceAggUpFFContact",
+        "type": "MGEF DNAM",
+        "original": "Creatures and people up to level <mag> will attack anything nearby for <dur> seconds.",
+        "string": "Les cr\u00e9atures et les personnages de niveau <mag> et inf\u00e9rieur attaquent tout le monde aux alentours pendant <dur> secondes."
+    },
+    {
+        "editor_id": "ccBGSSSE004_ReduceCarryWeight",
+        "type": "MGEF DNAM",
+        "original": "Reduce carrying capacity increases by <mag> for <dur> seconds.",
+        "string": "R\u00e9duit les augmentations de la capacit\u00e9 de port de <mag> pendant <dur> secondes."
+    },
+    {
+        "editor_id": "ccBGSSSE004_RuinsEdgeBow",
+        "type": "WEAP FULL",
+        "original": "Ruin's Edge",
+        "string": "Borderuine"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Quest",
+        "type": "QUST NNAM",
+        "original": "Find Ruin's Edge",
+        "string": "Trouvez Borderuine"
+    },
+    {
+        "editor_id": "ccBGSSSE004_InfluenceAggUpFFContact",
+        "type": "MGEF FULL",
+        "original": "Fury",
+        "string": "Furie"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Paralyze15",
+        "type": "SPEL FULL",
+        "original": "Paralyze",
+        "string": "Paralysie"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Demoralize",
+        "type": "SPEL FULL",
+        "original": "Demoralize",
+        "string": "D\u00e9moralisation"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Frenzy",
+        "type": "SPEL FULL",
+        "original": "Frenzy",
+        "string": "Fr\u00e9n\u00e9sie"
+    },
+    {
+        "editor_id": "ccBGSSSE004_DrainMagicka",
+        "type": "SPEL FULL",
+        "original": "Frenzy",
+        "string": "Fr\u00e9n\u00e9sie"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Burden",
+        "type": "SPEL FULL",
+        "original": "Burden",
+        "string": "Fardeau"
+    },
+    {
+        "editor_id": "ccBGSSSE004_SlowFFContact",
+        "type": "MGEF FULL",
+        "original": "Slow",
+        "string": "Lenteur"
+    },
+    {
+        "editor_id": "ccBGSSSE002_EnchInfluenceConfDownFFContactLow",
+        "type": "MGEF FULL",
+        "original": "Fear",
+        "string": "Peur"
+    },
+    {
+        "editor_id": "ccBGSSSE002_EnchInfluenceConfDownFFContactLow",
+        "type": "MGEF DNAM",
+        "original": "Creatures and people up to level <mag> flee from combat for <dur> seconds.",
+        "string": "Les cr\u00e9atures et les personnages de niveau <mag> et inf\u00e9rieur fuient le combat pendant <dur> secondes."
+    },
+    {
+        "editor_id": "ccBGSSSE004_EnchFrostDamageFFContact",
+        "type": "MGEF DNAM",
+        "original": "Target takes <mag> points of frost damage to Health and Stamina.",
+        "string": "La sant\u00e9 et la vigueur de la cible subissent <mag> points de d\u00e9g\u00e2ts de glace."
+    },
+    {
+        "editor_id": "ccBGSSSE004_Frost",
+        "type": "SPEL FULL",
+        "original": "Frost",
+        "string": "Glace"
+    },
+    {
+        "editor_id": "ccBGSSSE004_EnchFrostDamageFFContact",
+        "type": "MGEF FULL",
+        "original": "Frost Damage",
+        "string": "D\u00e9g\u00e2ts de glace"
+    },
+    {
+        "editor_id": "ccBGSSSE004_LvlRuinsEdgeBoss",
+        "type": "NPC_ FULL",
+        "original": "Bandit Chief",
+        "string": "Chef des bandits"
+    },
+    {
+        "editor_id": "StonyCreekCave01",
+        "type": "CELL FULL",
+        "original": "Stony Creek Cave",
+        "string": "Grotte de la Crique pierreuse"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Quest",
+        "type": "QUST CNAM",
+        "original": "I've found Ruin's Edge.",
+        "string": "J'ai trouv\u00e9 Borderuine."
+    },
+    {
+        "editor_id": "ccBGSSSE004_Quest",
+        "type": "QUST CNAM",
+        "original": "I found a map to the location of the fabled bow, Ruin's Edge.",
+        "string": "J'ai trouv\u00e9 une carte qui m\u00e8ne \u00e0 l'emplacement de Borderuine, l'arc l\u00e9gendaire."
+    }
+]

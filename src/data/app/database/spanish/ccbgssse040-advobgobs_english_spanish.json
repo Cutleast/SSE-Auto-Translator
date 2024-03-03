@@ -1,0 +1,350 @@
+[
+    {
+        "editor_id": "ccBGSSSE040_StaffGoblinTotem",
+        "type": "WEAP FULL",
+        "original": "Goblin Totem Staff",
+        "string": "Bast\u00f3n t\u00f3tem de trasgo"
+    },
+    {
+        "editor_id": "ccBGSSSE040_GoblinBodyPartData",
+        "type": "BPTD BPTN",
+        "original": "Torso",
+        "string": "Tronco"
+    },
+    {
+        "editor_id": "ccBGSSSE040_EncGoblin01Melee",
+        "type": "NPC_ FULL",
+        "original": "Goblin",
+        "string": "Trasgo"
+    },
+    {
+        "editor_id": "ccBGSSSE040_EncGoblin03Melee",
+        "type": "NPC_ FULL",
+        "original": "Goblin",
+        "string": "Trasgo"
+    },
+    {
+        "editor_id": "ccBGSSSE040_EncGoblin02Melee",
+        "type": "NPC_ FULL",
+        "original": "Goblin",
+        "string": "Trasgo"
+    },
+    {
+        "editor_id": "ccBGSSSE040_GoblinBodyPartData",
+        "type": "BPTD BPTN",
+        "original": "Head",
+        "string": "Cabeza"
+    },
+    {
+        "editor_id": "ccBGSSSE040_SpearOfBitterMercy",
+        "type": "WEAP FULL",
+        "original": "Spear of Bitter Mercy",
+        "string": "Lanza de Amarga Misericordia"
+    },
+    {
+        "editor_id": "ccBGSSSE040_AbGoblin",
+        "type": "SPEL FULL",
+        "original": "Goblin Abilities",
+        "string": "Aptitudes de trasgo"
+    },
+    {
+        "editor_id": "ccBGSSSE040Interior01",
+        "type": "CELL FULL",
+        "original": "Gromm's Pass",
+        "string": "Paso de Gromm"
+    },
+    {
+        "editor_id": "ccBGSSSE040_BYOHHouseIngredientMushroom01",
+        "type": "MISC FULL",
+        "original": "Steel-Blue Entoloma (3)",
+        "string": "Entoloma azul acero (3)"
+    },
+    {
+        "editor_id": "ccBGSSSE040_Mushroom01",
+        "type": "INGR FULL",
+        "original": "Steel-Blue Entoloma",
+        "string": "Entoloma azul acero"
+    },
+    {
+        "editor_id": "ccBGSSSE040_FloraMushroom01",
+        "type": "FLOR RNAM",
+        "original": "Harvest",
+        "string": "Cosechar"
+    },
+    {
+        "editor_id": "ccBGSSSE040_WeaponSpeed",
+        "type": "MGEF FULL",
+        "original": "Slow Weapon",
+        "string": "Arma lenta"
+    },
+    {
+        "editor_id": "ccBGSSSE040_AbBitterMercy",
+        "type": "SPEL FULL",
+        "original": "Goblin Abilities",
+        "string": "Aptitudes de trasgo"
+    },
+    {
+        "editor_id": "ccBGSSSE040_ConjureStormAtronach",
+        "type": "SPEL FULL",
+        "original": "Conjure Storm Atronach",
+        "string": "Conjurar atronach de la tormenta"
+    },
+    {
+        "editor_id": "ccBGSSSE040_GoblinSpeed",
+        "type": "MGEF FULL",
+        "original": "Slow",
+        "string": "Ralentizar"
+    },
+    {
+        "editor_id": "ccBGSSSE040_FloraMushroom01",
+        "type": "FLOR FULL",
+        "original": "Steel-Blue Entoloma",
+        "string": "Entoloma azul acero"
+    },
+    {
+        "editor_id": "ccBGSSSE040_BYOHHouseIngrdMushroom",
+        "type": "TREE FULL",
+        "original": "Steel-Blue Entoloma",
+        "string": "Entoloma azul acero"
+    },
+    {
+        "editor_id": "ccBGSSSE040_NorThroneShadow",
+        "type": "FURN FULL",
+        "original": "Throne",
+        "string": "Trono"
+    },
+    {
+        "editor_id": "ccBGSSSE040_GoblinFaction",
+        "type": "FACT FULL",
+        "original": "Goblin",
+        "string": "Trasgo"
+    },
+    {
+        "editor_id": "ccBGSSSE040_GoblinFollowerFaction",
+        "type": "FACT FULL",
+        "original": "Goblin",
+        "string": "Trasgo"
+    },
+    {
+        "editor_id": "ccBGSSSE040_Blorc",
+        "type": "NPC_ FULL",
+        "original": "Blue God",
+        "string": "Dios azul"
+    },
+    {
+        "editor_id": "ccBGSSSE040_Quest",
+        "type": "QUST FULL",
+        "original": "Blue in the Face",
+        "string": "El rostro azul"
+    },
+    {
+        "editor_id": "ccBGSSSE040_GoblinArenaFaction",
+        "type": "FACT FULL",
+        "original": "Goblin",
+        "string": "Trasgo"
+    },
+    {
+        "editor_id": "ccBGSSSE040_PlayerAllyFaction",
+        "type": "FACT FULL",
+        "original": "Goblin",
+        "string": "Trasgo"
+    },
+    {
+        "editor_id": "ccBGSSSE040_Quest",
+        "type": "QUST NNAM",
+        "original": "Look for information at the Bee and Barb",
+        "string": "Busca informaci\u00f3n en La abeja y el dardo."
+    },
+    {
+        "editor_id": "ccBGSSSE040_EncGoblin02MeleeArena",
+        "type": "NPC_ FULL",
+        "original": "Goblin",
+        "string": "Trasgo"
+    },
+    {
+        "editor_id": "ccBGSSSE040_Quest",
+        "type": "QUST NNAM",
+        "original": "Kill the Blue God",
+        "string": "Mata al dios azul."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Quest",
+        "type": "QUST NNAM",
+        "original": "Speak to the Goblin",
+        "string": "Habla con el trasgo."
+    },
+    {
+        "editor_id": "ccBGSSSE040_EncGoblin01MeleeArena",
+        "type": "NPC_ FULL",
+        "original": "Goblin",
+        "string": "Trasgo"
+    },
+    {
+        "editor_id": "ccBGSSSE040_Quest",
+        "type": "QUST NNAM",
+        "original": "Investigate the cave",
+        "string": "Investiga la cueva."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Quest",
+        "type": "QUST NNAM",
+        "original": "Head to Gromm's Pass",
+        "string": "Dir\u00edgete al paso de Gromm."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the Blue God's journal",
+        "string": "Lee el diario del dios azul."
+    },
+    {
+        "editor_id": "ccBGSSSE040_QuestStartNote",
+        "type": "BOOK FULL",
+        "original": "Letter to Clexius",
+        "string": "Carta para Clexius"
+    },
+    {
+        "editor_id": "ccBGSSSE040_BlorcJournal",
+        "type": "BOOK FULL",
+        "original": "Blue God's Journal",
+        "string": "Diario del dios azul"
+    },
+    {
+        "editor_id": "ccBGSSSE040_EncGoblin04Hammer",
+        "type": "NPC_ FULL",
+        "original": "Goblin",
+        "string": "Trasgo"
+    },
+    {
+        "editor_id": "ccBGSSE040_TestRiekling",
+        "type": "NPC_ FULL",
+        "original": "Riekling Warrior",
+        "string": "Guerrero riekling"
+    },
+    {
+        "editor_id": "ccBGSSSE040_GoblinIronHelmet",
+        "type": "ARMO FULL",
+        "original": "Gogh's Iron Helmet",
+        "string": "Yelmo de hierro de Gogh"
+    },
+    {
+        "editor_id": "ccBGSSSE040_EnchSpear",
+        "type": "MGEF FULL",
+        "original": "Dummy Spear Effect",
+        "string": "Prueba de efecto de lanza"
+    },
+    {
+        "editor_id": "ccBGSSSE040_GoblinArmorIronCuirass",
+        "type": "ARMO FULL",
+        "original": "Gogh's Iron Armor",
+        "string": "Armadura de hierro de Gogh"
+    },
+    {
+        "editor_id": "ccBGSSSE040_GoblinLeatherHelmet",
+        "type": "ARMO FULL",
+        "original": "Gogh's Leather Helmet",
+        "string": "Yelmo de cuero de Gogh"
+    },
+    {
+        "editor_id": "ccBGSSSE040_GoblinArmorLeatherCuirass",
+        "type": "ARMO FULL",
+        "original": "Gogh's Leather Armor",
+        "string": "Armadura de cuero de Gogh"
+    },
+    {
+        "editor_id": "ccBGSSSE040_GoblinSkullHelmet",
+        "type": "ARMO FULL",
+        "original": "Gogh's Skull Mask",
+        "string": "M\u00e1scara de calavera de Gogh"
+    },
+    {
+        "editor_id": "[05000BDF]",
+        "type": "REFR FULL",
+        "original": "Gromm's Pass",
+        "string": "Paso de Gromm"
+    },
+    {
+        "editor_id": "ccBGSSSE040_Quest",
+        "type": "QUST NNAM",
+        "original": "Free the Goblin from the pit",
+        "string": "Libera al trasgo del foso."
+    },
+    {
+        "editor_id": "ccBGSSSE040_FloraMushroom02",
+        "type": "FLOR RNAM",
+        "original": "Harvest",
+        "string": "Cosechar"
+    },
+    {
+        "editor_id": "ccBGSSSE040_FloraMushroom02",
+        "type": "FLOR FULL",
+        "original": "Steel-Blue Entoloma",
+        "string": "Entoloma azul acero"
+    },
+    {
+        "editor_id": "ccBGSSSE040_GoblinArmorLoinCloth",
+        "type": "ARMO FULL",
+        "original": "Gogh's Loin Cloth",
+        "string": "Taparrabos de Gogh"
+    },
+    {
+        "editor_id": "RiftenBeeandBarb",
+        "type": "CELL FULL",
+        "original": "The Bee and Barb",
+        "string": "La abeja y el dardo"
+    },
+    {
+        "editor_id": "ccBGSSSE040_BlorcJournal",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\n<u>Day 1</u>\nThe tribe demanded I prove myself as a hunter. They want me to trap some game and return to the Stronghold, probably for a celebratory feast. It shouldn't be too hard. I already set up a snare by the water. Now I can just sit back and let the food come to me.\n\n<u>Day 2</u>\nMy snare trap doesn't seem to be working. I tied it to a stick just like they said. Clearly Lob gave me a flimsy rope. Either that or the sticks out here are no good. I don't know how they expect me to hunt with such broken tools.\n[pagebreak]\n<u>Day 3</u>\nIt's only been a few days, but I already feel like giving up. I'm hungry and I've gone through all the bread Atub gave me. By Malacath, they really expect me to die out here. \n\n<u>Day 5</u>\nThe rabbits here are too nimble to chase down. I thought I could just grab one if I put some bait in my pockets, but problem is, I don't have any bait. I shouldn't have eaten all the carrots in my sack but I was starving.\n\n<u>Day 6</u>\nMalacath's blessings, I'm alive! I found a cave south of my camp full of strange blue mushrooms, which I immediately ate. I remember Atub saying something about some mushrooms being poisonous, but I didn't get sick so what does she know. Anyways, I ended up filling my sack with them. If I come back with a full stomach maybe I can convince the others we don't need to hunt.\n\n<u>Day 7</u>\nI came back to Largashbur with my sack full of mushrooms and one by one they spit them out and mocked my hunting skills.\n\nIf that wasn't humiliating enough, Chief Yamarz took a hammer and crushed the sack, then dumped the contents on my head. None of my tribe mates bothered to defend me, they just stood there and laughed. \n\nNow Yamarz says I have to go back out there and catch something with some legs. It's not fair. When's the last time he caught anything?\n\n<u>Day 8</u>\nI'm so hungry. Hunting is impossible. Maybe I'll just die. That'll teach them to leave me out here alone.\n[pagebreak]\n<u>Day 9</u>\nBy Malacath, what just happened? I went back to the cave to pick some more mushrooms, when something must've tripped me because I fell into a pit.\n\nI yelled out for help, but instead of getting rescued, I was quickly surrounded by a horde of green monsters, hissing and gnashing their teeth. I figured that was it. They were going to eat me. \n\nBut before I could scream, one of them dropped to his knees and started bowing! The others followed.\n\nCould they be goblins? You never see them this far north. In any case, they seem to be treating me like an honored guest. \n\n<u>Day 11</u>\nBlessings of Malacath, it turns out they think I'm a god! They don't seem to treat other Orcs the same, so it must be the blue stains on my face. I need to thank Yamarz for dumping that sack on my head. I think I'll do that, right before I have my goblins claw open his face.\n\n<u>Day 15</u>\nMy army grows by the day. Soon we'll have enough numbers to overrun the Stronghold. For now I have them collecting blue mushrooms from Cyrodiil so I can maintain the ruse, although some of them might be starting to suspect.\n\nThe other day I think one of them saw me use a stick to spread blue paint on my back. I'll need to keep a close eye on him.\n\n<u>Day 18</u>\nI figured out who it was that saw me, it's that nasty little runt with the funny-looking spear. It seems he's the hunter of the group. He reminds me of every Orc back at Largashbur who laughed in my face.\n\nI tried to grab the spear from him but he must've done something to it because it was too heavy to lift. I don't know if it's Hircine or Malacath that's protecting him, but he needs to learn that goblins only have one god. The Blue God. Me. \n[pagebreak]\n<u>Day 21</u>\nThe tunnel the goblins were using to come here from Cyrodiil's collapsed. No matter. My army is nearly big enough to take the Stronghold, and once that's done I can sell Yamarz's things for a whole wagon full of paint. Before I do that though, I need to make an example of the non-believer. \n\nOnce he's dealt with, it'll show all the other goblins what happens when you question your god.",
+        "string": "<font face='$HandwrittenFont'>\n<u>D\u00eda 1</u>\nLa tribu exige que demuestre mi val\u00eda como cazador. Quieren que atrape alguna presa y vuelva a la fortaleza, probablemente para celebrarlo con un fest\u00edn. No me parece dif\u00edcil. Ya he preparado una trampa junto al agua. Ahora no tengo m\u00e1s que sentarme y esperar a que acuda la comida.\n\n<u>D\u00eda 2</u>\nParece que la trampa no funciona. La at\u00e9 a un palo como me dijeron. Est\u00e1 claro que Lob no me ha dado una cuerda muy resistente. O eso, o los palos que hay por aqu\u00ed no sirven para nada. No s\u00e9 c\u00f3mo esperan que cace nada con estas herramientas rotas.\n[pagebreak]\n<u>D\u00eda 3</u>\nNo han pasado m\u00e1s que unos d\u00edas y ya quiero rendirme. Tengo hambre, y me he terminado todo el pan que me dio Atub. Por Malacath, de verdad que esperan que me quede aqu\u00ed a morir. \n\n<u>D\u00eda 5</u>\nLos conejos se mueven demasiado r\u00e1pido, no puedo ir tras ellos. Pens\u00e9 que quiz\u00e1 podr\u00eda atrapar alguno si me pon\u00eda cebo en los bolsillos, pero el problema es que no tengo cebo. No deber\u00eda haberme comido todas las zanahorias que llevaba en el saco, pero ten\u00eda mucha hambre.\n\n<u>D\u00eda 6</u>\n\u00a1Loado sea Malacath, sigo vivo! Encontr\u00e9 una cueva al sur de mi campamento, llena de extra\u00f1as setas azules. Me las com\u00ed inmediatamente. Recuerdo que Atub dijo algo de que hay setas venenosas, pero no me han sentado mal, as\u00ed que qu\u00e9 sabr\u00e1 ella. En fin, el caso es que al final llen\u00e9 el saco de setas. Si vuelvo con el est\u00f3mago lleno, quiz\u00e1 pueda convencer a los dem\u00e1s de que no hace falta cazar.\n\n<u>D\u00eda 7</u>\nHe vuelto a Largashbur con el saco lleno de setas, y todos las escupieron uno a uno y se burlaron de mis habilidades como cazador.\n\nPor si eso no fuera suficiente humillaci\u00f3n, el jefe Yamarz aplast\u00f3 el saco con un martillo y despu\u00e9s me lo vaci\u00f3 sobre la cabeza. Ninguno de mis compa\u00f1eros de tribu movi\u00f3 un dedo para defenderme. Se quedaron parados ri\u00e9ndose. \n\nAhora Yamarz dice que tengo que volver ah\u00ed fuera y cazar algo que tenga patas. No es justo. \u00bfCu\u00e1ndo fue la \u00faltima vez que caz\u00f3 \u00e9l algo?\n\n<u>D\u00eda 8</u>\nQu\u00e9 hambre tengo. Es imposible cazar nada. A lo mejor me muero y ya est\u00e1. As\u00ed aprender\u00e1n a no dejarme aqu\u00ed solo.\n[pagebreak]\n<u>D\u00eda 9</u>\nPor Malacath, \u00bfqu\u00e9 ha pasado? Volv\u00ed a la cueva a por m\u00e1s setas, pero deb\u00ed de tropezar con algo, porque ca\u00ed a un foso.\n\nPed\u00ed ayuda a gritos, pero en vez de venir nadie a rescatarme, lo que pas\u00f3 fue que me rode\u00f3 una horda de monstruos verdes que siseaban y hac\u00edan rechinar los dientes. Pens\u00e9 que era mi fin. Que me iban a comer. \n\n\u00a1Pero antes de darme tiempo a gritar, uno se puso de rodillas y empez\u00f3 a hacer reverencias! Luego se pusieron a hacer lo mismo los dem\u00e1s.\n\n\u00bfPodr\u00edan ser trasgos? Nunca se ven tan al norte. En cualquier caso, parec\u00eda que me trataban como a un invitado de honor. \n\n<u>D\u00eda 11</u>\n\u00a1Loado sea Malacath, resulta que me han tomado por un dios! Parece que no tratan igual a otros orcos, debe de ser por las manchas azules que tengo en la cara. Tengo que darle las gracias a Yamarz por vaciarme el saco encima. Creo que lo har\u00e9 justo antes de ordenar a mis trasgos que le desgarren la cara.\n\n<u>D\u00eda 15</u>\nMi ej\u00e9rcito es m\u00e1s numeroso con cada d\u00eda que pasa. Pronto tendr\u00e9 suficientes tropas como para asaltar la fortaleza. Por ahora les he encargado recoger setas azules de Cyrodiil para mantener el enga\u00f1o, aunque algunos podr\u00edan estar empezando a sospechar.\n\nCreo que el otro d\u00eda uno me vio ponerme pintura azul por la espalda con un palo. Tendr\u00e9 que vigilarlo de cerca.\n\n<u>D\u00eda 18</u>\nYa s\u00e9 qui\u00e9n fue el que me vio, fue ese canijo desagradable de la lanza rara. Parece que es el cazador del grupo. Me recuerda a todos los orcos de Largashbur que se rieron en mi cara.\n\nHe intentado quit\u00e1rsela, pero debe de haber hecho algo con ella, porque pesaba demasiado como para levantarla. No s\u00e9 si lo protege Hircine o Malacath, pero va a tener que aprender que los trasgos solo tienen un dios. El dios azul. Yo. \n[pagebreak]\n<u>D\u00eda 21</u>\nSe ha derrumbado el t\u00fanel que usaban los trasgos para venir desde Cyrodiil. No pasa nada. Ya casi tengo un ej\u00e9rcito lo suficientemente grande como para tomar la fortaleza, y cuando lo haga vender\u00e9 las cosas de Yamarz para comprarme una carreta entera de pintura. Pero antes de eso, tengo que dar ejemplo con el hereje. \n\nCuando me encargue de \u00e9l, todos los dem\u00e1s trasgos sabr\u00e1n lo que pasa cuando pones en duda a tu dios."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Quest",
+        "type": "QUST CNAM",
+        "original": "I traveled to Gromm's Pass and proceeded to investigate the cave's interior. Inside I found an arena pit and several goblins, as well as an Orc who served as their shaman.",
+        "string": "He viajado al paso de Gromm y he procedido a investigar el interior de la cueva. Dentro hab\u00eda un foso de combate y varios trasgos, as\u00ed como un orco que ejerc\u00eda de cham\u00e1n."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Quest",
+        "type": "QUST CNAM",
+        "original": "There are often rumors in Riften of strange creatures coming across the border from Cyrodiil. I should head to the inn and see what information I can find.",
+        "string": "En Riften, a menudo hay rumores sobre criaturas que llegan desde Cyrodiil cruzando la frontera. Deber\u00eda dirigirme a la taberna, a ver qu\u00e9 informaci\u00f3n encuentro."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Quest",
+        "type": "QUST CNAM",
+        "original": "I traveled to Gromm's Pass and proceeded to investigate the cave's interior. Inside I found an arena pit and several goblins, as well as an Orc who served as their shaman. I killed the Orc while a lone goblin fought for his life in the pit.",
+        "string": "He viajado al paso de Gromm y he procedido a investigar el interior de la cueva. Dentro hab\u00eda un foso de combate y varios trasgos, as\u00ed como un orco que ejerc\u00eda de cham\u00e1n. He matado al orco mientras un trasgo luchaba por su vida en el foso."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Quest",
+        "type": "QUST CNAM",
+        "original": "I traveled to Gromm's Pass and proceeded to investigate the cave's interior.",
+        "string": "He viajado al paso de Gromm y he procedido a investigar el interior de la cueva."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Quest",
+        "type": "QUST CNAM",
+        "original": "I traveled to Gromm's Pass and proceeded to investigate the cave's interior. Inside I found an arena pit and several goblins, as well as an Orc who served as their shaman. I killed the Orc and read the journal on his person, then recruited the goblin in the pit.",
+        "string": "He viajado al paso de Gromm y he procedido a investigar el interior de la cueva. Dentro hab\u00eda un foso de combate y varios trasgos, as\u00ed como un orco que ejerc\u00eda de cham\u00e1n. He matado al orco y he le\u00eddo el diario que llevaba, y luego he reclutado al trasgo del foso."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Quest",
+        "type": "QUST CNAM",
+        "original": "I traveled to Gromm's Pass and proceeded to investigate the cave's interior. Inside I found an arena pit and several goblins, as well as an Orc who served as their shaman. I killed the Orc and read the journal on his person.",
+        "string": "He viajado al paso de Gromm y he procedido a investigar el interior de la cueva. Dentro hab\u00eda un foso de combate y varios trasgos, as\u00ed como un orco que ejerc\u00eda de cham\u00e1n. He matado al orco y he le\u00eddo el diario que llevaba."
+    },
+    {
+        "editor_id": "ccBGSSSE040_QuestStartNote",
+        "type": "BOOK DESC",
+        "original": "<div align=\"left\"><font face='$HandwrittenFont'>\nDear Clexius,\n\nIt's as you feared. The news here in Riften is troubling on many levels. \n\nNow, I've studied goblins all my life, and while customs differ from tribe to tribe, one thing has always held true. They are beholden to their shamans, and removing them will turn the entire tribe docile.\n\nMoreover, we have seen this method work in practice, most famously with the Three Feather tribe near Bruma. Yet still the rumors persist of goblin activity near the border.\n\nMost disturbing is the news that the \"Blue God\" himself is leading them. Could it be Malacath himself in some form?\n\nRegardless, if some Daedric being has found its way to this realm, this is a cause for concern. I'll be heading to Gromm's Pass in the morning to investigate.\n\nFaithfully yours, \nAvanessa Calladius\n",
+        "string": "<div align=\"left\"><font face='$HandwrittenFont'>\nQuerido Clexius:\n\nEs como tem\u00edas. Las noticias aqu\u00ed en Riften son preocupantes por varios motivos. \n\nLlevo toda la vida estudiando a los trasgos, y aunque cada tribu tiene sus propias costumbres, todas tienen en com\u00fan una cosa. Son leales a sus chamanes, y sin ellos la tribu entera se vuelve d\u00f3cil.\n\nLo que es m\u00e1s, ya hemos visto poner en pr\u00e1ctica este m\u00e9todo, sobre todo con la tribu de los Tres Plumas, cerca de Bruma. Sin embargo, sigue habiendo rumores sobre trasgos cerca de la frontera.\n\nLo m\u00e1s preocupante es la noticia de que siguen al \"dios azul\". \u00bfPodr\u00eda estar gui\u00e1ndolos el mism\u00edsimo Malacath bajo alguna forma?\n\nAdem\u00e1s, ser\u00eda un problema que alg\u00fan ser da\u00e9drico hubiera logrado abrirse paso hasta esta dimensi\u00f3n. Por la ma\u00f1ana me acercar\u00e9 al paso de Gromm a investigar.\n\nAtentamente, \nAvanessa Calladius\n"
+    },
+    {
+        "editor_id": "ccBGSSSE040_Quest",
+        "type": "QUST CNAM",
+        "original": "I found a note at the Bee and Barb that implied goblins were spotted in Skyrim near the border to Cyrodiil. The writer of the note claimed she was on her way to Gromm's Pass to investigate.",
+        "string": "He encontrado en La abeja y el dardo una nota que daba a entender que se hab\u00edan visto trasgos en Skyrim, cerca de la frontera con Cyrodiil. La autora afirmaba ir de camino al paso de Gromm para investigar."
+    }
+]

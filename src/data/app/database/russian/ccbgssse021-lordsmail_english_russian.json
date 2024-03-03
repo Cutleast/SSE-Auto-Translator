@@ -1,0 +1,320 @@
+[
+    {
+        "editor_id": "ccBGSSSE021LordsMail",
+        "type": "ARMO FULL",
+        "original": "Lord's Mail",
+        "string": "\u041a\u043e\u043b\u044c\u0447\u0443\u0433\u0430 \u043b\u043e\u0440\u0434\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE021_ArmorAbsorbHealth_Spell",
+        "type": "SPEL FULL",
+        "original": "Lord's Mail Absorb Health",
+        "string": "\u041a\u043e\u043b\u044c\u0447\u0443\u0433\u0430 \u043b\u043e\u0440\u0434\u0430 \u043f\u043e\u0433\u043b\u043e\u0449\u0430\u0435\u0442 \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u0435"
+    },
+    {
+        "editor_id": "ccBGSSSE021_ArmorAsborbHealthCloak_Effect",
+        "type": "MGEF FULL",
+        "original": "Lord's Mail Cloak",
+        "string": "\u041a\u043e\u043b\u044c\u0447\u0443\u0436\u043d\u044b\u0439 \u043f\u043b\u0430\u0449 \u043b\u043e\u0440\u0434\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE021_ArmorAbsorbHealth_FFContact_Effect",
+        "type": "MGEF FULL",
+        "original": "Lord's Mail Absorb Health",
+        "string": "\u041a\u043e\u043b\u044c\u0447\u0443\u0433\u0430 \u043b\u043e\u0440\u0434\u0430 \u043f\u043e\u0433\u043b\u043e\u0449\u0430\u0435\u0442 \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u0435"
+    },
+    {
+        "editor_id": "ccBGSSSE021_ArmorAbsorbHealthCloak_Ench",
+        "type": "ENCH FULL",
+        "original": "Lord's Mail",
+        "string": "\u041a\u043e\u043b\u044c\u0447\u0443\u0433\u0430 \u043b\u043e\u0440\u0434\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE021_EnchResistMagicConstantSelf",
+        "type": "MGEF DNAM",
+        "original": "Increases Magic Resistance by <mag>%.",
+        "string": "\u0423\u0432\u0435\u043b\u0438\u0447\u0438\u0432\u0430\u0435\u0442 \u0441\u043e\u043f\u0440\u043e\u0442\u0438\u0432\u043b\u0435\u043d\u0438\u0435 \u043c\u0430\u0433\u0438\u0438 \u043d\u0430 <mag>%."
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMail_KynarethsBaneDisease",
+        "type": "SPEL FULL",
+        "original": "Bane of Kynareth",
+        "string": "\u041f\u0440\u043e\u043a\u043b\u044f\u0442\u0438\u0435 \u041a\u0438\u043d\u0430\u0440\u0435\u0442"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailDiseaseUncleansed",
+        "type": "MGEF DNAM",
+        "original": "Wearer suffers a reduction of <50> points to Health, Stamina, and Magicka.",
+        "string": "\u041d\u043e\u0441\u0438\u0442\u0435\u043b\u044c \u0431\u0443\u0434\u0435\u0442 \u0442\u0435\u0440\u044f\u0442\u044c \u043f\u043e <50> \u0435\u0434. \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044f, \u0437\u0430\u043f\u0430\u0441\u0430 \u0441\u0438\u043b \u0438 \u043c\u0430\u0433\u0438\u0438."
+    },
+    {
+        "editor_id": "ccBGSSSE021_DisDamageMagicka",
+        "type": "MGEF FULL",
+        "original": "Reduced Magicka",
+        "string": "\u041c\u0430\u0433\u0438\u044f \u0443\u043c\u0435\u043d\u044c\u0448\u0435\u043d\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailDescription",
+        "type": "MGEF DNAM",
+        "original": "Opponents in melee range have <5> points of health absorbed per second.  Increases Poison Resistance by <75>%.  Increases Magic Resistance by <17>%.",
+        "string": "\u0423 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u043e\u0432 \u0432 \u0431\u043b\u0438\u0436\u043d\u0435\u043c \u0431\u043e\u044e \u0431\u0443\u0434\u0435\u0442 \u043f\u043e\u0433\u043b\u043e\u0449\u0430\u0442\u044c\u0441\u044f \u043f\u043e <5> \u0435\u0434. \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044f \u0432 \u0441\u0435\u043a\u0443\u043d\u0434\u0443. \u0421\u043e\u043f\u0440\u043e\u0442\u0438\u0432\u043b\u0435\u043d\u0438\u0435 \u044f\u0434\u0430\u043c \u0443\u0432\u0435\u043b\u0438\u0447\u0438\u0432\u0430\u0435\u0442\u0441\u044f \u043d\u0430 <75>%. \u0421\u043e\u043f\u0440\u043e\u0442\u0438\u0432\u043b\u0435\u043d\u0438\u0435 \u043c\u0430\u0433\u0438\u0438 \u0443\u0432\u0435\u043b\u0438\u0447\u0438\u0432\u0430\u0435\u0442\u0441\u044f \u043d\u0430 <17>%."
+    },
+    {
+        "editor_id": "ccBGSSSE021_ChestKey",
+        "type": "KEYM FULL",
+        "original": "Key to Alik'r Mercenary Chest",
+        "string": "\u041a\u043b\u044e\u0447 \u043e\u0442 \u0441\u0443\u043d\u0434\u0443\u043a\u0430 \u043d\u0430\u0435\u043c\u043d\u0438\u043a\u043e\u0432-\u0430\u043b\u0438\u043a'\u0440\u0446\u0435\u0432"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "type": "QUST NNAM",
+        "original": "Read the Emperor's Letter",
+        "string": "\u041f\u0440\u043e\u0447\u0435\u0441\u0442\u044c \u043f\u0438\u0441\u044c\u043c\u043e \u0438\u043c\u043f\u0435\u0440\u0430\u0442\u043e\u0440\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE021_EnchResistPoisonConstantSelf",
+        "type": "MGEF FULL",
+        "original": "Resist Poison",
+        "string": "\u0421\u043e\u043f\u0440\u043e\u0442\u0438\u0432\u043b\u0435\u043d\u0438\u0435 \u044f\u0434\u0430\u043c"
+    },
+    {
+        "editor_id": "ccBGSSSE021_DisDamageHealth",
+        "type": "MGEF FULL",
+        "original": "Reduced Health",
+        "string": "\u0417\u0434\u043e\u0440\u043e\u0432\u044c\u0435 \u0443\u043c\u0435\u043d\u044c\u0448\u0435\u043d\u043e"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "type": "QUST FULL",
+        "original": "Gift of Kynareth",
+        "string": "\u0414\u0430\u0440 \u041a\u0438\u043d\u0430\u0440\u0435\u0442"
+    },
+    {
+        "editor_id": "ccBGSSSE021_EncAlikrBoss2HM01",
+        "type": "NPC_ FULL",
+        "original": "Majid the Mad",
+        "string": "\u0411\u0435\u0437\u0443\u043c\u0435\u0446 \u041c\u0430\u0434\u0436\u0438\u0434"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "type": "QUST NNAM",
+        "original": "Confront the Alik'r Mercenaries",
+        "string": "\u041d\u0430\u043f\u0430\u0441\u0442\u044c \u043d\u0430 \u043d\u0430\u0435\u043c\u043d\u0438\u043a\u043e\u0432-\u0430\u043b\u0438\u043a'\u0440\u0446\u0435\u0432"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuestNote",
+        "type": "BOOK FULL",
+        "original": "Letter to General Tullius",
+        "string": "\u041f\u0438\u0441\u044c\u043c\u043e \u0433\u0435\u043d\u0435\u0440\u0430\u043b\u0443 \u0422\u0443\u043b\u043b\u0438\u044e"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "type": "QUST NNAM",
+        "original": "Cleanse the Lord's Mail in Solitude",
+        "string": "\u041e\u0447\u0438\u0441\u0442\u0438\u0442\u044c \u041a\u043e\u043b\u044c\u0447\u0443\u0433\u0443 \u043b\u043e\u0440\u0434\u0430 \u0432 \u0421\u043e\u043b\u0438\u0442\u044c\u044e\u0434\u0435"
+    },
+    {
+        "editor_id": "ccBGSSSE021_DisDamageMagicka",
+        "type": "MGEF DNAM",
+        "original": "Drains <mag> points of Magicka.",
+        "string": "\u041e\u0442\u043d\u0438\u043c\u0430\u0435\u0442 <mag> \u0435\u0434. \u043c\u0430\u0433\u0438\u0438."
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "type": "QUST NNAM",
+        "original": "Retrieve the Lord's Mail",
+        "string": "\u041d\u0430\u0439\u0442\u0438 \u041a\u043e\u043b\u044c\u0447\u0443\u0433\u0443 \u043b\u043e\u0440\u0434\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE021_DisDamageStamina",
+        "type": "MGEF FULL",
+        "original": "Reduced Stamina",
+        "string": "\u0417\u0430\u043f\u0430\u0441 \u0441\u0438\u043b \u0443\u043c\u0435\u043d\u044c\u0448\u0435\u043d"
+    },
+    {
+        "editor_id": "ccBGSSSE021_DisDamageStamina",
+        "type": "MGEF DNAM",
+        "original": "Drains <mag> points from stamina.",
+        "string": "\u041e\u0442\u043d\u0438\u043c\u0430\u0435\u0442 <mag> \u0435\u0434. \u0437\u0430\u043f\u0430\u0441\u0430 \u0441\u0438\u043b."
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailDescription",
+        "type": "MGEF FULL",
+        "original": "Lord's Mail",
+        "string": "\u041a\u043e\u043b\u044c\u0447\u0443\u0433\u0430 \u043b\u043e\u0440\u0434\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE021_EnchResistPoisonConstantSelf",
+        "type": "MGEF DNAM",
+        "original": "Increases Poison Resistance by <mag>%.",
+        "string": "\u0423\u0432\u0435\u043b\u0438\u0447\u0438\u0432\u0430\u0435\u0442 \u0441\u043e\u043f\u0440\u043e\u0442\u0438\u0432\u043b\u0435\u043d\u0438\u0435 \u044f\u0434\u0430\u043c \u043d\u0430 <mag>%."
+    },
+    {
+        "editor_id": "ccBGSSSE021_DisDamageHealth",
+        "type": "MGEF DNAM",
+        "original": "Reduces Health by <mag>.",
+        "string": "\u0423\u043c\u0435\u043d\u044c\u0448\u0430\u0435\u0442 \u0437\u0430\u043f\u0430\u0441 \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044f \u043d\u0430 <mag> \u0435\u0434."
+    },
+    {
+        "editor_id": "ccBGSSSE021_ChestLordsMail",
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "\u0421\u0443\u043d\u0434\u0443\u043a"
+    },
+    {
+        "editor_id": "ccBGSSSE021_EncRedguardMercMissileM01",
+        "type": "NPC_ FULL",
+        "original": "Alik'r Mercenary",
+        "string": "\u041d\u0430\u0435\u043c\u043d\u0438\u043a \u0438\u0437 \u0410\u043b\u0438\u043a'\u0440\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE021_EnchResistMagicConstantSelf",
+        "type": "MGEF FULL",
+        "original": "Resist Magic",
+        "string": "\u0421\u043e\u043f\u0440\u043e\u0442\u0438\u0432\u043b\u0435\u043d\u0438\u0435 \u043c\u0430\u0433\u0438\u0438"
+    },
+    {
+        "editor_id": "ccBGSSSE021_EncAlikrBoss2HM01",
+        "type": "NPC_ SHRT",
+        "original": "Majid",
+        "string": "\u041c\u0430\u0434\u0436\u0438\u0434"
+    },
+    {
+        "editor_id": "ccBGSSSE021_EncRedguardMercMagicM01",
+        "type": "NPC_ FULL",
+        "original": "Alik'r Mercenary",
+        "string": "\u041d\u0430\u0435\u043c\u043d\u0438\u043a \u0438\u0437 \u0410\u043b\u0438\u043a'\u0440\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailDiseaseUncleansed",
+        "type": "MGEF FULL",
+        "original": "Lord's Mail (Cursed)",
+        "string": "\u041a\u043e\u043b\u044c\u0447\u0443\u0433\u0430 \u043b\u043e\u0440\u0434\u0430 (\u043f\u0440\u043e\u043a\u043b\u044f\u0442\u0430)"
+    },
+    {
+        "editor_id": "ccBGSSSE021_RedguardClothesGreen",
+        "type": "ARMO FULL",
+        "original": "Redguard Clothes",
+        "string": "\u0420\u0435\u0434\u0433\u0430\u0440\u0434\u0441\u043a\u0430\u044f \u043e\u0434\u0435\u0436\u0434\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE021_RedguardHoodGreen",
+        "type": "ARMO FULL",
+        "original": "Redguard Hood",
+        "string": "\u0420\u0435\u0434\u0433\u0430\u0440\u0434\u0441\u043a\u0438\u0439 \u043a\u0430\u043f\u044e\u0448\u043e\u043d"
+    },
+    {
+        "editor_id": "ccBGSSSE021_RedguardClothesTan",
+        "type": "ARMO FULL",
+        "original": "Redguard Clothes",
+        "string": "\u0420\u0435\u0434\u0433\u0430\u0440\u0434\u0441\u043a\u0430\u044f \u043e\u0434\u0435\u0436\u0434\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE021_ChestArmorNote",
+        "type": "BOOK FULL",
+        "original": "Majid - Please Read",
+        "string": "\u041c\u0430\u0434\u0436\u0438\u0434 \u2013 \u043f\u0440\u043e\u0447\u0438\u0442\u0430\u0439, \u043f\u043e\u0436\u0430\u043b\u0443\u0439\u0441\u0442\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE021_RedguardHoodTan",
+        "type": "ARMO FULL",
+        "original": "Redguard Hood",
+        "string": "\u0420\u0435\u0434\u0433\u0430\u0440\u0434\u0441\u043a\u0438\u0439 \u043a\u0430\u043f\u044e\u0448\u043e\u043d"
+    },
+    {
+        "editor_id": "ccBGSSSE021_InvisibleShrineOfKynarethActivator",
+        "type": "ACTI FULL",
+        "original": "Shrine of Kynareth",
+        "string": "\u0421\u0432\u044f\u0442\u0438\u043b\u0438\u0449\u0435 \u041a\u0438\u043d\u0430\u0440\u0435\u0442"
+    },
+    {
+        "editor_id": "ccBGSSSE021_ArmorCursed_Ench",
+        "type": "ENCH FULL",
+        "original": "Lord's Mail (Cursed)",
+        "string": "\u041a\u043e\u043b\u044c\u0447\u0443\u0433\u0430 \u043b\u043e\u0440\u0434\u0430 (\u043f\u0440\u043e\u043a\u043b\u044f\u0442\u0430)"
+    },
+    {
+        "editor_id": "ccBGSSSE021_RedguardHoodRed",
+        "type": "ARMO FULL",
+        "original": "Redguard Hood",
+        "string": "\u0420\u0435\u0434\u0433\u0430\u0440\u0434\u0441\u043a\u0438\u0439 \u043a\u0430\u043f\u044e\u0448\u043e\u043d"
+    },
+    {
+        "editor_id": "ccBGSSSE021LordsMail_Cursed",
+        "type": "ARMO FULL",
+        "original": "Lord's Mail (Cursed)",
+        "string": "\u041a\u043e\u043b\u044c\u0447\u0443\u0433\u0430 \u043b\u043e\u0440\u0434\u0430 (\u043f\u0440\u043e\u043a\u043b\u044f\u0442\u0430)"
+    },
+    {
+        "editor_id": "SolitudeCastleDour",
+        "type": "CELL FULL",
+        "original": "Castle Dour",
+        "string": "\u041c\u0440\u0430\u0447\u043d\u044b\u0439 \u0437\u0430\u043c\u043e\u043a"
+    },
+    {
+        "editor_id": "Tamriel",
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "\u0421\u043a\u0430\u0439\u0440\u0438\u043c"
+    },
+    {
+        "editor_id": "SolitudeTempleoftheDivines",
+        "type": "CELL FULL",
+        "original": "Temple of the Divines",
+        "string": "\u0425\u0440\u0430\u043c \u0411\u043e\u0433\u043e\u0432"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "type": "QUST CNAM",
+        "original": "I've confronted the Alik'r mercenaries and found a locked chest.  I just need to find the key...",
+        "string": "\u041f\u043e\u0441\u043b\u0435 \u0441\u0445\u0432\u0430\u0442\u043a\u0438 \u0441 \u043d\u0430\u0435\u043c\u043d\u0438\u043a\u0430\u043c\u0438-\u0430\u043b\u0438\u043a'\u0440\u0446\u0430\u043c\u0438 \u043c\u043d\u0435 \u0434\u043e\u0441\u0442\u0430\u043b\u0441\u044f \u0437\u0430\u043f\u0435\u0440\u0442\u044b\u0439 \u0441\u0443\u043d\u0434\u0443\u043a. \u0422\u0435\u043f\u0435\u0440\u044c \u043d\u0443\u0436\u043d\u043e \u043d\u0430\u0439\u0442\u0438 \u043a\u043b\u044e\u0447..."
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "type": "QUST CNAM",
+        "original": "A letter from the Emperor pertaining to an Imperial artifact was found at Castle Dour.  I should read it and find out what it's about.",
+        "string": "\u041f\u0438\u0441\u044c\u043c\u043e \u0438\u043c\u043f\u0435\u0440\u0430\u0442\u043e\u0440\u0430 \u043e\u0431 \u0430\u0440\u0442\u0435\u0444\u0430\u043a\u0442\u0435, \u043e\u0431\u043d\u0430\u0440\u0443\u0436\u0435\u043d\u043d\u043e\u043c \u0432 \u041c\u0440\u0430\u0447\u043d\u043e\u043c \u0437\u0430\u043c\u043a\u0435... \u041d\u0443\u0436\u043d\u043e \u043f\u0440\u043e\u0447\u0438\u0442\u0430\u0442\u044c \u0435\u0433\u043e \u0438 \u0443\u0437\u043d\u0430\u0442\u044c \u0432\u0441\u0435 \u043f\u043e\u0434\u0440\u043e\u0431\u043d\u043e\u0441\u0442\u0438."
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "type": "QUST CNAM",
+        "original": "The Lord's Mail has been retreived, blessed by Kynareth, and can now be worn safely.",
+        "string": "\u041a\u043e\u043b\u044c\u0447\u0443\u0433\u0430 \u043b\u043e\u0440\u0434\u0430 \u043d\u0430\u0439\u0434\u0435\u043d\u0430, \u0431\u043b\u0430\u0433\u043e\u0441\u043b\u043e\u0432\u043b\u0435\u043d\u0430 \u041a\u0438\u043d\u0430\u0440\u0435\u0442, \u0438 \u0442\u0435\u043f\u0435\u0440\u044c \u0435\u0435 \u043c\u043e\u0436\u043d\u043e \u043d\u043e\u0441\u0438\u0442\u044c \u0431\u0435\u0437 \u043e\u043f\u0430\u0441\u043a\u0438."
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMail_KynarethsBaneDisease",
+        "type": "SPEL DESC",
+        "original": "Wearer suffers a reduction of <50> points to Health, Stamina, and Magicka.",
+        "string": "\u041d\u043e\u0441\u0438\u0442\u0435\u043b\u044c \u0431\u0443\u0434\u0435\u0442 \u0442\u0435\u0440\u044f\u0442\u044c \u043f\u043e <50> \u0435\u0434. \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044f, \u0437\u0430\u043f\u0430\u0441\u0430 \u0441\u0438\u043b \u0438 \u043c\u0430\u0433\u0438\u0438."
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "type": "QUST CNAM",
+        "original": "I've retrieved The Lord's Mail, the legendary Imperial armor.  Before it can be worn, it must be cleansed at the shrine of Kynareth in Solitude.",
+        "string": "\u041c\u043d\u0435 \u0434\u043e\u0441\u0442\u0430\u043b\u0430\u0441\u044c \u041a\u043e\u043b\u044c\u0447\u0443\u0433\u0430 \u043b\u043e\u0440\u0434\u0430, \u043b\u0435\u0433\u0435\u043d\u0434\u0430\u0440\u043d\u044b\u0439 \u0438\u043c\u043f\u0435\u0440\u0441\u043a\u0438\u0439 \u0434\u043e\u0441\u043f\u0435\u0445. \u041d\u043e \u043f\u0440\u0435\u0436\u0434\u0435 \u0447\u0435\u043c \u043d\u043e\u0441\u0438\u0442\u044c \u0435\u0435, \u043a\u043e\u043b\u044c\u0447\u0443\u0433\u0443 \u043d\u0443\u0436\u043d\u043e \u043e\u0447\u0438\u0441\u0442\u0438\u0442\u044c \u0432 \u0441\u0432\u044f\u0442\u0438\u043b\u0438\u0449\u0435 \u041a\u0438\u043d\u0430\u0440\u0435\u0442 \u0432 \u0421\u043e\u043b\u0438\u0442\u044c\u044e\u0434\u0435."
+    },
+    {
+        "editor_id": "ccBGSSSE021_MessageCleanseSuccess",
+        "type": "MESG DESC",
+        "original": "The Lord's Mail has been cleansed",
+        "string": "\u041a\u043e\u043b\u044c\u0447\u0443\u0433\u0430 \u043b\u043e\u0440\u0434\u0430 \u043f\u043e\u0447\u0438\u0449\u0435\u043d\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuestNote",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"16\">\n15th of Last Seed, 4E 201\n\nGeneral Tullius,\n\nDuring these times of war, I strongly believe it is important to inspire our population through a show of military strength and pageantry.  To the younger among us, nothing is as inspiring as the sight of an Imperial Soldier wearing the finest armors our Empire has ever set its hands to.\n\nIt is for this reason I am formally requesting that several Imperial relics be placed back into the service of the Empire, and distributed among high ranking officials. We must do all we can to inspire awe, and help galvanize the image of our cause among the populace.\n\nIt has come to my attention that a paticular artifact, the Armor of Morihaus, Gift of Kynareth, also known as The Lord's Mail, has recently gone missing.  It is believed a group of Redguard mercenaries have stolen it with the aim to sell to the highest bidder.  They were last seen traveling south of Fort Greymoor.\n\nFind these mercenaries, and reclaim The Lord's Mail.  Wear it proudly.  Show the people that Kynareth favors the realm of the Empire.\n\nEmperor Titus Mede II\n</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"16\">\n15-\u0439 \u0434\u0435\u043d\u044c \u041f\u043e\u0441\u043b\u0435\u0434\u043d\u0435\u0433\u043e \u0437\u0435\u0440\u043d\u0430, 4E 201\n\n\u0413\u0435\u043d\u0435\u0440\u0430\u043b \u0422\u0443\u043b\u043b\u0438\u0439!\n\n\u0412 \u044d\u0442\u043e \u0432\u043e\u0435\u043d\u043d\u043e\u0435 \u0432\u0440\u0435\u043c\u044f \u043e\u0441\u043e\u0431\u0435\u043d\u043d\u043e \u0432\u0430\u0436\u043d\u043e \u0432\u0434\u043e\u0445\u043d\u043e\u0432\u043b\u044f\u0442\u044c \u043d\u0430\u0448 \u043d\u0430\u0440\u043e\u0434 \u043f\u044b\u0448\u043d\u044b\u043c\u0438 \u0437\u0440\u0435\u043b\u0438\u0449\u0430\u043c\u0438 \u0438 \u0434\u0435\u043c\u043e\u043d\u0441\u0442\u0440\u0430\u0446\u0438\u0435\u0439 \u043c\u043e\u0433\u0443\u0449\u0435\u0441\u0442\u0432\u0430 \u043d\u0430\u0448\u0435\u0439 \u0430\u0440\u043c\u0438\u0438. \u041c\u043e\u043b\u043e\u0434\u0435\u0436\u044c \u043e\u0441\u043e\u0431\u0435\u043d\u043d\u043e \u0432\u043f\u0435\u0447\u0430\u0442\u043b\u044f\u0435\u0442 \u0432\u0438\u0434 \u0438\u043c\u043f\u0435\u0440\u0441\u043a\u0438\u0445 \u0441\u043e\u043b\u0434\u0430\u0442, \u043e\u0431\u043b\u0430\u0447\u0435\u043d\u043d\u044b\u0439 \u0432 \u043b\u0443\u0447\u0448\u0438\u0435 \u0434\u043e\u0441\u043f\u0435\u0445\u0438 \u043d\u0430\u0448\u0435\u0439 \u0438\u043c\u043f\u0435\u0440\u0438\u0438.\n\n\u0412 \u044d\u0442\u043e\u0439 \u0441\u0432\u044f\u0437\u0438 \u044f \u043e\u0444\u0438\u0446\u0438\u0430\u043b\u044c\u043d\u043e \u0442\u0440\u0435\u0431\u0443\u044e \u0432\u0435\u0440\u043d\u0443\u0442\u044c \u0432 \u0434\u0435\u0439\u0441\u0442\u0432\u0443\u044e\u0449\u0443\u044e \u0430\u0440\u043c\u0438\u044e \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u043e \u0438\u043c\u043f\u0435\u0440\u0441\u043a\u0438\u0445 \u0440\u0435\u043b\u0438\u043a\u0432\u0438\u0439, \u0438 \u0440\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0438\u0442\u044c \u0438\u0445 \u0441\u0440\u0435\u0434\u0438 \u0432\u044b\u0441\u043e\u043a\u043e\u043f\u043e\u0441\u0442\u0430\u0432\u043b\u0435\u043d\u043d\u044b\u0445 \u043e\u0444\u0438\u0446\u0435\u0440\u043e\u0432. \u041c\u044b \u0434\u043e\u043b\u0436\u043d\u044b \u0432\u044b\u0437\u044b\u0432\u0430\u0442\u044c \u0432 \u043d\u0430\u0440\u043e\u0434\u0435 \u0431\u043b\u0430\u0433\u043e\u0433\u043e\u0432\u0435\u043d\u0438\u0435 \u0438 \u0432\u043e\u0441\u0442\u043e\u0440\u0433, \u0438 \u043f\u0440\u0435\u0434\u0430\u043d\u043d\u043e\u0441\u0442\u044c \u043d\u0430\u0448\u0435\u043c\u0443 \u0434\u0435\u043b\u0443.\n\n\u042f \u043e\u0431\u043d\u0430\u0440\u0443\u0436\u0438\u043b, \u0447\u0442\u043e \u043d\u0435\u0434\u0430\u0432\u043d\u043e \u043f\u0440\u043e\u043f\u0430\u043b \u043e\u0434\u0438\u043d \u0438\u0437 \u0430\u0440\u0442\u0435\u0444\u0430\u043a\u0442\u043e\u0432, \u0430 \u0438\u043c\u0435\u043d\u043d\u043e \u0411\u0440\u043e\u043d\u044f \u041c\u043e\u0440\u0438\u0445\u0430\u0443\u0441\u0430, \u0414\u0430\u0440 \u041a\u0438\u043d\u0430\u0440\u0435\u0442, \u0442\u0430\u043a\u0436\u0435 \u0438\u0437\u0432\u0435\u0441\u0442\u043d\u044b\u0439 \u043a\u0430\u043a \u041a\u043e\u043b\u044c\u0447\u0443\u0433\u0430 \u043b\u043e\u0440\u0434\u0430. \u0418\u0437\u0432\u0435\u0441\u0442\u043d\u043e, \u0447\u0442\u043e \u0435\u0433\u043e \u043f\u043e\u0445\u0438\u0442\u0438\u043b\u0430 \u0431\u0430\u043d\u0434\u0430 \u043d\u0430\u0435\u043c\u043d\u0438\u043a\u043e\u0432-\u0440\u0435\u0434\u0433\u0430\u0440\u0434\u043e\u0432, \u0447\u0442\u043e\u0431\u044b \u043f\u0440\u043e\u0434\u0430\u0442\u044c \u0442\u043e\u043c\u0443, \u043a\u0442\u043e \u0431\u043e\u043b\u044c\u0448\u0435 \u0437\u0430\u043f\u043b\u0430\u0442\u0438\u0442. \u0418\u0445 \u0432\u0438\u0434\u0435\u043b\u0438 \u043d\u0430 \u0434\u043e\u0440\u043e\u0433\u0435 \u043a \u044e\u0433\u0443 \u043e\u0442 \u0444\u043e\u0440\u0442\u0430 \u0413\u0440\u0435\u0439\u043c\u0443\u0440.\n\n\u041d\u0430\u0439\u0434\u0438\u0442\u0435 \u044d\u0442\u0438\u0445 \u043d\u0430\u0435\u043c\u043d\u0438\u043a\u043e\u0432 \u0438 \u0432\u0435\u0440\u043d\u0438\u0442\u0435 \u041a\u043e\u043b\u044c\u0447\u0443\u0433\u0443 \u043b\u043e\u0440\u0434\u0430. \u041d\u043e\u0441\u0438\u0442\u0435 \u0435\u0435 \u0441 \u0434\u043e\u0441\u0442\u043e\u0438\u043d\u0441\u0442\u0432\u043e\u043c. \u041f\u043e\u043a\u0430\u0436\u0438\u0442\u0435 \u043d\u0430\u0440\u043e\u0434\u0443, \u0447\u0442\u043e \u041a\u0438\u043d\u0430\u0440\u0435\u0442 \u0431\u043b\u0430\u0433\u043e\u0441\u043b\u043e\u0432\u043b\u044f\u0435\u0442 \u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u0438\u043c\u043f\u0435\u0440\u0438\u0438.\n\n\u0418\u043c\u043f\u0435\u0440\u0430\u0442\u043e\u0440 \u0422\u0438\u0442 \u041c\u0438\u0434 II\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "type": "QUST CNAM",
+        "original": "I've found a letter addressed to General Tullius from the Emperor of Tamriel instructing that The Lord's Mail, a treasured Imperial relic, be found and reclaimed.  A band of Redguard mercenaries are rumored to have taken it.  I should locate their whereabouts and see if I can obtain the artifact.",
+        "string": "\u041a\u043e \u043c\u043d\u0435 \u043f\u043e\u043f\u0430\u043b\u043e \u043f\u0438\u0441\u044c\u043c\u043e \u0438\u043c\u043f\u0435\u0440\u0430\u0442\u043e\u0440\u0430 \u0422\u0430\u043c\u0440\u0438\u044d\u043b\u044f, \u0430\u0434\u0440\u0435\u0441\u043e\u0432\u0430\u043d\u043d\u043e\u0435 \u0433\u0435\u043d\u0435\u0440\u0430\u043b\u0443 \u0422\u0443\u043b\u043b\u0438\u044e, \u0432 \u043a\u043e\u0442\u043e\u0440\u043e\u043c \u0442\u043e\u0442 \u0442\u0440\u0435\u0431\u0443\u0435\u0442 \u043d\u0430\u0439\u0442\u0438 \u0438 \u0432\u0435\u0440\u043d\u0443\u0442\u044c \u041a\u043e\u043b\u044c\u0447\u0443\u0433\u0443 \u043b\u043e\u0440\u0434\u0430, \u0434\u0440\u0430\u0433\u043e\u0446\u0435\u043d\u043d\u0443\u044e \u0438\u043c\u043f\u0435\u0440\u0441\u043a\u0443\u044e \u0440\u0435\u043b\u0438\u043a\u0432\u0438\u044e, \u043f\u043e\u0445\u0438\u0449\u0435\u043d\u043d\u0443\u044e, \u043f\u043e \u0441\u043b\u0443\u0445\u0430\u043c, \u0431\u0430\u043d\u0434\u043e\u0439 \u043d\u0430\u0435\u043c\u043d\u0438\u043a\u043e\u0432-\u0440\u0435\u0434\u0433\u0430\u0440\u0434\u043e\u0432. \u041d\u0443\u0436\u043d\u043e \u043d\u0430\u0439\u0442\u0438 \u0438\u0445 \u0438 \u0437\u0430\u0431\u0440\u0430\u0442\u044c \u0430\u0440\u0442\u0435\u0444\u0430\u043a\u0442!"
+    },
+    {
+        "editor_id": "ccBGSSSE021_ChestArmorNote",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"16\">\nMajid,\n\nAs we discussed, this armor is extremely valuable.  Please protect it at all costs.  You and your men should sleep in shifts in order to prevent any surprises, and dispose of anyone you do not recognize.  We cannot be found out.\n\nThe buyer will be traveling to meet you in the coming days.  We stand to make a small fortune, and you and your men will get the proper cut of the profits, as agreed.  The loss of such an artifact will bring disgrace to the Empire, and we should all be proud.\n\nPlease be aware, it is extremely important that you do not put this armor on.  I did not believe the stories, but when I put it on I was overcome with an uneasy fatigue.  Do not tell the prospective buyer about this lest they change their minds.  Let them seek out Kynareth's blessing themselves.\n</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"16\">\n\u041c\u0430\u0434\u0436\u0438\u0434!\n\n\u0415\u0449\u0435 \u0440\u0430\u0437 \u043d\u0430\u043f\u043e\u043c\u0438\u043d\u0430\u044e, \u0447\u0442\u043e \u044d\u0442\u0430 \u0431\u0440\u043e\u043d\u044f \u0447\u0440\u0435\u0437\u0432\u044b\u0447\u0430\u0439\u043d\u043e \u0446\u0435\u043d\u043d\u0430. \u0417\u0430\u0449\u0438\u0449\u0430\u0439 \u0435\u0435 \u0432\u0441\u0435\u043c\u0438 \u0441\u0440\u0435\u0434\u0441\u0442\u0432\u0430\u043c\u0438. \u041f\u0443\u0441\u0442\u044c \u0442\u0432\u043e\u0438 \u043b\u044e\u0434\u0438 \u043a\u0430\u0440\u0430\u0443\u043b\u044f\u0442 \u043f\u043e \u043e\u0447\u0435\u0440\u0435\u0434\u0438, \u0447\u0442\u043e\u0431\u044b \u0432\u0430\u0441 \u043d\u0435 \u0437\u0430\u0441\u0442\u0430\u043b\u0438 \u0432\u0440\u0430\u0441\u043f\u043b\u043e\u0445. \u0423\u0431\u0438\u0432\u0430\u0439\u0442\u0435 \u0432\u0441\u0435\u0445 \u043d\u0435\u0437\u043d\u0430\u043a\u043e\u043c\u0446\u0435\u0432 \u2013 \u043d\u0430\u0441 \u043d\u0435 \u0434\u043e\u043b\u0436\u043d\u044b \u043e\u0431\u043d\u0430\u0440\u0443\u0436\u0438\u0442\u044c.\n\n\u041f\u043e\u043a\u0443\u043f\u0430\u0442\u0435\u043b\u044c \u043e\u0442\u043f\u0440\u0430\u0432\u0438\u0442\u0441\u044f \u0432\u0430\u043c \u043d\u0430\u0432\u0441\u0442\u0440\u0435\u0447\u0443 \u0438 \u043f\u0440\u0438\u0431\u0443\u0434\u0435\u0442 \u043d\u0430 \u0434\u043d\u044f\u0445. \u041c\u044b \u043e\u0437\u043e\u043b\u043e\u0442\u0438\u043c\u0441\u044f! \u0422\u044b \u0438 \u0442\u0432\u043e\u0438 \u043b\u044e\u0434\u0438 \u0442\u043e\u0436\u0435 \u0431\u0443\u0434\u0435\u0442\u0435 \u043d\u0435 \u0432 \u043d\u0430\u043a\u043b\u0430\u0434\u0435, \u043a\u0430\u043a \u043c\u044b \u0438 \u0434\u043e\u0433\u043e\u0432\u0430\u0440\u0438\u0432\u0430\u043b\u0438\u0441\u044c. \u0414\u043b\u044f \u0438\u043c\u043f\u0435\u0440\u0438\u0438 \u0431\u0443\u0434\u0435\u0442 \u043f\u043e\u0437\u043e\u0440\u043e\u043c \u043b\u0438\u0448\u0438\u0442\u044c\u0441\u044f \u0442\u0430\u043a\u043e\u0433\u043e \u0430\u0440\u0442\u0435\u0444\u0430\u043a\u0442\u0430, \u0442\u0430\u043a \u0447\u0442\u043e \u043d\u0430\u043c \u0431\u0443\u0434\u0435\u0442 \u0447\u0435\u043c \u0433\u043e\u0440\u0434\u0438\u0442\u044c\u0441\u044f.\n\n\u0422\u044b \u0434\u043e\u043b\u0436\u0435\u043d \u043f\u043e\u043d\u0438\u043c\u0430\u0442\u044c, \u0447\u0442\u043e \u043e\u0447\u0435\u043d\u044c \u0432\u0430\u0436\u043d\u043e \u043d\u0435 \u043d\u0430\u0434\u0435\u0432\u0430\u0442\u044c \u044d\u0442\u0443 \u0431\u0440\u043e\u043d\u044e. \u042f \u043d\u0435 \u0432\u0435\u0440\u044e \u0432 \u0434\u043e\u0441\u0443\u0436\u0438\u0435 \u0440\u043e\u0441\u0441\u043a\u0430\u0437\u043d\u0438, \u043d\u043e \u043a\u043e\u0433\u0434\u0430 \u044f \u043d\u0430\u0434\u0435\u043b \u0435\u0435, \u043c\u0435\u043d\u044f \u043e\u0445\u0432\u0430\u0442\u0438\u043b\u0430 \u043f\u0440\u043e\u0442\u0438\u0432\u043e\u0435\u0441\u0442\u0435\u0441\u0442\u0432\u0435\u043d\u043d\u0430\u044f \u0441\u043b\u0430\u0431\u043e\u0441\u0442\u044c. \u041d\u043e \u043d\u0435 \u0433\u043e\u0432\u043e\u0440\u0438 \u043e\u0431 \u044d\u0442\u043e\u043c \u043f\u043e\u043a\u0443\u043f\u0430\u0442\u0435\u043b\u044e, \u0447\u0442\u043e\u0431 \u043e\u043d \u043d\u0435 \u043f\u0435\u0440\u0435\u0434\u0443\u043c\u0430\u043b. \u041f\u0443\u0441\u0442\u044c \u0441\u0430\u043c \u043f\u043e\u0442\u043e\u043c \u0438\u0449\u0435\u0442 \u0431\u043b\u0430\u0433\u043e\u0441\u043b\u043e\u0432\u0435\u043d\u0438\u044f \u041a\u0438\u043d\u0430\u0440\u0435\u0442.\n</font>"
+    }
+]

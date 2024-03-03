@@ -1,0 +1,512 @@
+[
+    {
+        "editor_id": "ccSBJSSE001_RedguardShield",
+        "type": "ARMO FULL",
+        "original": "Remnant Shield",
+        "string": "Scudo da Reduce"
+    },
+    {
+        "editor_id": "ccSBJSSE001_Zulfiqar",
+        "type": "WEAP FULL",
+        "original": "Remnant Scimitar",
+        "string": "Scimitarra da Reduce"
+    },
+    {
+        "editor_id": "ccEDHSSE003_RedguardEliteHelmAgent",
+        "type": "ARMO FULL",
+        "original": "Remnant Agent Hood",
+        "string": "Cappuccio da agente Reduce"
+    },
+    {
+        "editor_id": "ccEDHSSE003_RedguardEliteBoots",
+        "type": "ARMO FULL",
+        "original": "Remnant Boots",
+        "string": "Stivali da Reduce"
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST NNAM",
+        "original": "Defeat Azadi in an unarmed brawl",
+        "string": "Sconfiggi Azadi in una rissa a mani nude"
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST FULL",
+        "original": "Interception",
+        "string": "Intercettazione"
+    },
+    {
+        "editor_id": "ccEDHSSE003_FijehLetterPersuasion",
+        "type": "BOOK FULL",
+        "original": "Fijeh's Letter to <Alias=Player>",
+        "string": "Lettera di Fijeh a <Alias=Player>"
+    },
+    {
+        "editor_id": "ccEDHSSE003_RedguardEliteM01",
+        "type": "NPC_ FULL",
+        "original": "Remnant Warrior",
+        "string": "Guerriero Reduce"
+    },
+    {
+        "editor_id": "ccEDHSSE003_Book_TheAlikr",
+        "type": "BOOK FULL",
+        "original": "The Alik'r",
+        "string": "L'Alik'r"
+    },
+    {
+        "editor_id": "ccEDHSSE003_RedguardEliteBootsAgent",
+        "type": "ARMO FULL",
+        "original": "Remnant Agent Boots",
+        "string": "Stivali da agente Reduce"
+    },
+    {
+        "editor_id": "ccEDHSSE003_RedguardEliteFaction",
+        "type": "FACT FULL",
+        "original": "Remnant",
+        "string": "Reduce"
+    },
+    {
+        "editor_id": "ccSBJSSE001_RedguardShieldUnplayable",
+        "type": "ARMO FULL",
+        "original": "Remnant Shield",
+        "string": "Scudo da Reduce"
+    },
+    {
+        "editor_id": "ccEDHSSE003_FijehInstructions",
+        "type": "BOOK FULL",
+        "original": "Fijeh's Instructions",
+        "string": "Istruzioni di Fijeh"
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST NNAM",
+        "original": "Read Azadi's note",
+        "string": "Leggi la nota di Azadi"
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST NNAM",
+        "original": "Join the Remnant warriors to begin the assault",
+        "string": "Unisciti ai guerrieri Reduci per iniziare l'assalto"
+    },
+    {
+        "editor_id": "ccEDHSSE003_Spy2Note",
+        "type": "BOOK FULL",
+        "original": "Sirayar's Note",
+        "string": "Nota di Sirayar"
+    },
+    {
+        "editor_id": "ccEDHSSE003_RedguardEliteArmorAgent",
+        "type": "ARMO FULL",
+        "original": "Remnant Agent Armor",
+        "string": "Armatura da agente Reduce"
+    },
+    {
+        "editor_id": "ccEDHSSE003_SupplyChestName",
+        "type": "MESG FULL",
+        "original": "Remnant Supply Chest",
+        "string": "Baule di scorte Reduce"
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST NNAM",
+        "original": "Return to Fijeh",
+        "string": "Torna da Fijeh"
+    },
+    {
+        "editor_id": "ccEDHSSE003_RedguardEliteHostageFaction",
+        "type": "FACT FULL",
+        "original": "Remnant Hostage",
+        "string": "Reduce ostaggio"
+    },
+    {
+        "editor_id": "ccEDHSSE003_RedguardEliteF01",
+        "type": "NPC_ FULL",
+        "original": "Remnant Warrior",
+        "string": "Guerriero Reduce"
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST NNAM",
+        "original": "Approach the caravan alone",
+        "string": "Avvicinati alla carovana da solo"
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST NNAM",
+        "original": "Obtain the Remnant equipment from the supply chest",
+        "string": "Ottieni l'equipaggiamento da Reduce dal baule di scorte"
+    },
+    {
+        "editor_id": "ccEDHSSE003_RedguardEliteGlovesUnplayable",
+        "type": "ARMO FULL",
+        "original": "Remnant Gloves",
+        "string": "Guanti da Reduce"
+    },
+    {
+        "editor_id": "ccEDHSSE003_RedguardEliteArmorUnplayable",
+        "type": "ARMO FULL",
+        "original": "Remnant Armor",
+        "string": "Armatura da Reduce"
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST NNAM",
+        "original": "Read Sirayar's note",
+        "string": "Leggi la nota di Sirayar"
+    },
+    {
+        "editor_id": "ccEDHSSE003_BookTheEbonArm",
+        "type": "BOOK FULL",
+        "original": "The Ebon Arm",
+        "string": "Il braccio d'ebano"
+    },
+    {
+        "editor_id": "ccSBJSSE001_ZulfiqarUnplayable",
+        "type": "WEAP FULL",
+        "original": "Remnant Scimitar",
+        "string": "Scimitarra da Reduce"
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST NNAM",
+        "original": "Find the Remnant spy in front of Vilemyr Inn in Ivarstead",
+        "string": "Trova la spia Reduce davanti alla locanda Vilemyr a Ivarstead"
+    },
+    {
+        "editor_id": "ccEDHSSE003_RedguardEliteGlovesAgent",
+        "type": "ARMO FULL",
+        "original": "Remnant Agent Gloves",
+        "string": "Guanti da agente Reduce"
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST NNAM",
+        "original": "Read Josla's note",
+        "string": "Leggi la nota di Josla"
+    },
+    {
+        "editor_id": "ccEDHSSE003_RedguardEliteBootsUnplayable",
+        "type": "ARMO FULL",
+        "original": "Remnant Boots",
+        "string": "Stivali da Reduce"
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST NNAM",
+        "original": "Wait to be contacted by courier",
+        "string": "Aspetta che il corriere ti contatti"
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST NNAM",
+        "original": "Read Fijeh's instructions",
+        "string": "Leggi le istruzioni di Fijeh"
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST NNAM",
+        "original": "Talk to Fijeh",
+        "string": "Parla con Fijeh"
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST NNAM",
+        "original": "Travel to Purewater Run",
+        "string": "Raggiungi Via di Acquepure"
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST NNAM",
+        "original": "Read Fijeh's letter",
+        "string": "Leggi la lettera di Fijeh"
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST NNAM",
+        "original": "Find the Remnant spy behind the Miner's Barracks in Karthwasten",
+        "string": "Trova la spia Reduce dietro al Capanno del minatore a Karthwasten"
+    },
+    {
+        "editor_id": "ccEDHSSE003_RedguardEliteSupplyChestKey",
+        "type": "KEYM FULL",
+        "original": "Remnant Supply Chest Key",
+        "string": "Chiave del baule di scorte Reduce"
+    },
+    {
+        "editor_id": "ccEDHSSE003_CaravanFaction",
+        "type": "FACT FULL",
+        "original": "Ismal Caravan",
+        "string": "Carovana di Ismal"
+    },
+    {
+        "editor_id": "ccEDHSSE003_RedguardEliteHelm",
+        "type": "ARMO FULL",
+        "original": "Remnant Hood",
+        "string": "Cappuccio da Reduce"
+    },
+    {
+        "editor_id": "ccEDHSSE003_BrawlerNote",
+        "type": "BOOK FULL",
+        "original": "Azadi's Note",
+        "string": "Nota di Azadi"
+    },
+    {
+        "editor_id": "ccEDHSSE003_FijehLetterBrawl",
+        "type": "BOOK FULL",
+        "original": "Fijeh's Letter to <Alias=Player>",
+        "string": "Lettera di Fijeh a <Alias=Player>"
+    },
+    {
+        "editor_id": "ccEDHSSE003_RedguardEliteGloves",
+        "type": "ARMO FULL",
+        "original": "Remnant Gloves",
+        "string": "Guanti da Reduce"
+    },
+    {
+        "editor_id": "ccEDHSSE003_RedguardEliteM02",
+        "type": "NPC_ FULL",
+        "original": "Remnant Warrior",
+        "string": "Guerriero Reduce"
+    },
+    {
+        "editor_id": "ccEDHSSE003_RedguardEliteSupplyChest",
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Baule"
+    },
+    {
+        "editor_id": "ccEDHSSE003_RedguardEliteArmor",
+        "type": "ARMO FULL",
+        "original": "Remnant Armor",
+        "string": "Armatura da Reduce"
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST NNAM",
+        "original": "Free the hostage",
+        "string": "Libera l'ostaggio"
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST NNAM",
+        "original": "Speak to the fighter in Shor's Stone",
+        "string": "Parla con il combattente a Pietra di Shor"
+    },
+    {
+        "editor_id": "ccSBJSSE001_ZulfiqarFire04",
+        "type": "WEAP FULL",
+        "original": "Remnant Scimitar of Fire",
+        "string": "Scimitarra del fuoco da Reduce"
+    },
+    {
+        "editor_id": "ccEDHSSE003_Spy1Note",
+        "type": "BOOK FULL",
+        "original": "Josla's Note",
+        "string": "Nota di Josla"
+    },
+    {
+        "editor_id": "ccEDHSSE003_Boneshaver",
+        "type": "WEAP FULL",
+        "original": "Boneshaver",
+        "string": "Mietiossa"
+    },
+    {
+        "editor_id": "ccEDHSSE003_BleedingDamage",
+        "type": "MGEF FULL",
+        "original": "Bleeding Damage",
+        "string": "Danni da sanguinamento"
+    },
+    {
+        "editor_id": "ccEDHSSE003_BleedingDamage",
+        "type": "MGEF DNAM",
+        "original": "Attacks cause <mag> points of extra bleeding damage for <dur> seconds.",
+        "string": "Gli attacchi causano <mag> punti di danno da sanguinamento aggiuntivi per <dur> secondi."
+    },
+    {
+        "editor_id": "ccEDHSSE003_EnchWeaponBleedingDamage",
+        "type": "ENCH FULL",
+        "original": "Bleeding Damage",
+        "string": "Danni da sanguinamento"
+    },
+    {
+        "editor_id": "PurewaterRun01",
+        "type": "CELL FULL",
+        "original": "Purewater Run",
+        "string": "Via di Acquepure"
+    },
+    {
+        "editor_id": "ccEDHSSE003_Spy1Note",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\"><font size='18'>\n    Overheard that a Hammerfell noble from Sentinel would be crossing the border in the next few days, and paid a hefty coin purse to the Thalmor to ensure safe passage. Said he was traveling by wagon all the way to Blacklight in Morrowind.\n\n    It has to be Ismal. And if it is, Rakeed is with him, and he's in trouble. Blacklight is a huge city, easy to hide in. If we don't find him before they make it to Blacklight, we may never see Rakeed again.</font>",
+        "string": "<font face=\"$HandwrittenFont\"><font size='18'>\n Ho sentito dire che un nobile di Hammerfell proveniente da Sentinel attraverser\u00e0 il confine nei prossimi giorni e ha pagato una bella somma ai Thalmor per assicurarsi un passaggio sicuro. Ha detto che avrebbe viaggiato su un carro fino alla citt\u00e0 di Blacklight a Morrowind.\n\n Dev'essere Ismal. E se \u00e8 cos\u00ec, Rakeed \u00e8 con lui ed \u00e8 in pericolo. Blacklight \u00e8 una citt\u00e0 enorme in cui \u00e8 facile nascondersi. Se non li troviamo prima del loro arrivo a Blacklight, potremmo non rivedere pi\u00f9 Rakeed.</font>"
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST CNAM",
+        "original": "I have gathered information from both of the Remnant spies that reside in Skyrim. It seems that the Thalmor will be transporting Rakeed to Morrowind very soon, crossing the border into Skyrim from the southwest and traveling the road near Sunderstone Gorge. I should return to Purewater Run and discuss the next step with Fijeh.",
+        "string": "Ho raccolto informazioni da entrambe le spie Reduci che vivono a Skyrim. Sembra che i Thalmor porteranno Rakeed a Morrowind molto presto, attraversando il confine con Skyrim da sud-ovest e prendendo la strada vicino alla Gola di Sunderstone. Devo tornare a Via di Acquepure e parlare con Fijeh su come proseguire."
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST CNAM",
+        "original": "Fijeh has requested that I gather intelligence about the whereabouts of the captured Remnant from two spies, in Karthwasten and Ivarstead, by speaking a special phrase to them: \"The ravens take flight once more.\"",
+        "string": "Fijeh mi ha chiesto di recuperare informazioni sul Reduce scomparso da due spie a Karthwasten e Ivarstead. Devo presentarmi con una frase speciale: \"I corvi si alzano in volo ancora una volta.\""
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST CNAM",
+        "original": "I spoke the secret phrase to Sirayar, a Remnant spy in Ivarstead. He handed me a note that should contain information about the whereabouts of the captured Remnant.",
+        "string": "Ho detto la frase segreta a Sirayar, la spia Reduce a Ivarstead. Mi ha dato una nota che dovrebbe contenere delle informazioni sulla posizione del Reduce catturato."
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST CNAM",
+        "original": "I received a letter from someone named Fijeh by courier. I should read what it has to say.",
+        "string": "Ho ricevuto tramite il corriere una lettera di un certo Fijeh. Dovrei leggerla e vedere cosa c'\u00e8 scritto."
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST CNAM",
+        "original": "A fighter in Shor's Stone has been rumored to have been causing trouble by trying to start fights with anyone who passes by. I should see if there's a way to get him to stop being such a nuisance.",
+        "string": "Ho sentito parlare di un combattente a Pietra di Shor che vuole battersi con chiunque gli passi davanti. Devo trovare un modo per impedirgli di dare fastidio alla gente."
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST CNAM",
+        "original": "After speaking to a Remnant spy, I learned that Rakeed will be transported to Morrowind through Skyrim by crossing the border to the southwest from Hammerfell, and should be traveling the road near Sunderstone Gorge. I should seek out the spy in Karthwasten to learn more.",
+        "string": "Dopo aver parlato con la spia Reduce, ho scoperto che Rakeed verr\u00e0 trasportato a Morrowind tramite Skyrim, attraversando il confine a sud-ovest di Hammerfell e viaggiando sulla strada vicino alla Gola di Sunderstone. Devo trovare la spia di Karthwasten per saperne di pi\u00f9."
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST CNAM",
+        "original": "I convinced Azadi to stop bothering the residents of Shor's Stone without a fight. He handed me a note, and then vanished into thin air. I should read what the note has to say.",
+        "string": "Ho convinto Azadi a smettere di importunare gli abitanti di Pietra di Shor senza combattere. Mi ha dato una nota e poi \u00e8 sparito. Dovrei leggere la nota e scoprire cosa c'\u00e8 scritto."
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST CNAM",
+        "original": "I defeated Azadi in an unarmed brawl. After the fight, he handed me a note, and then vanished into thin air. I should read what the note has to say.",
+        "string": "Ho sconfitto Azadi in una lotta a mani nude. Dopo lo scontro, mi ha dato una nota e poi \u00e8 sparito. Dovrei leggere la nota e scoprire cosa c'\u00e8 scritto."
+    },
+    {
+        "editor_id": "ccEDHSSE003_CraftingUnlocked",
+        "type": "MESG DESC",
+        "original": "New equipment available with Advanced Armors and Steel Smithing.",
+        "string": "Nuovo equipaggiamento disponibile con armature avanzate e forgiatura dell'acciaio."
+    },
+    {
+        "editor_id": "ccEDHSSE003_FijehInstructions",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\"><font size='18'>\n    We have agents that have lived in Skyrim for over 20 years, ever since the Aldmeri Dominion withdrew from Hammerfell. If the Thalmor ever plot to betray the terms of the Second Treaty, we will know, and we will be ready.\n\n    Gather intelligence from two Remnants regarding the whereabouts of Rakeed. One should be found behind the Miner's Barracks in Karthwasten. The other should be waiting for you in front of Vilemyr Inn in Ivarstead. They will respond to the phrase, \"The ravens take flight once more.\"\n\n    Report back to me when the job is done. We've no time to waste.\n\n--Fijeh</font>",
+        "string": "<font face=\"$HandwrittenFont\"><font size='18'>\n Abbiamo agenti che vivono a Skyrim da pi\u00f9 di 20 anni, da quando il Regno degli aldmeri si ritir\u00f2 da Hammerfell. Se i Thalmor dovessero progettare di non rispettare i termini del secondo trattato, lo sapremmo e saremmo pronti.\n\n Raccogli informazioni dei due Reduci sulla posizione di Rakeed. Uno dovrebbe essere dietro al Capanno del minatore a Karthwasten. L'altro ti aspetta davanti alla locanda Vilemyr a Ivarstead. Ti riconosceranno se pronuncerai la frase, \"I corvi si alzano in volo ancora una volta.\"\n\n Quando hai finito, torna da me. Non abbiamo tempo da perdere.\n\n--Fijeh</font>"
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST CNAM",
+        "original": "Rakeed has been rescued from the Thalmor caravan. I should speak to Fijeh one last time now that the mission is complete.",
+        "string": "Ho salvato Rakeed dalla carovana dei Thalmor. Devo parlare con Fijeh un'ultima volta ora che la missione \u00e8 stata completata."
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST CNAM",
+        "original": "I met the Remnant warriors near Ismal's caravan. We now need to find Rakeed and free him from the Thalmor.",
+        "string": "Ho incontrato i guerrieri Reduci vicino alla carovana di Ismal. Ora dobbiamo trovare Rakeed e liberarlo dai Thalmor."
+    },
+    {
+        "editor_id": "ccEDHSSE003_FijehLetterPersuasion",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\"><font size='16'>\n<Alias=Player>,\n\n    I've been watching your exploits for some time. I've long known of your prowess in battle, but after seeing the cunning and discretion you displayed in your encounter with Azadi, I think you're exactly the kind of person we need right now.\n\n    We are known as Remnants. Some call us \"the Eyes that Watch.\"  For decades, we have helped steer the destiny of Hammerfell. We are a mirage, a constant and formless threat to our enemies on the horizon.  I, Fijeh, serve as their leader.\n\n    Though the Dominion withdrew from Hammerfell years ago, the Thalmor continue to strike at us in secret. We received word from the city of Sentinel that one of our own, Rakeed, has been taken hostage by the Thalmor. They have been aided by Ismal, a powerful noble and traitor to his people.\n\n    There is no doubt that they will try to extract what Rakeed knows about Sentinel's defenses. We have to stop them before that happens.\n\n    We've learned that Rakeed may be transported across Skyrim soon. It's vital that we intercept him from the Thalmor before it's too late.\n\n    I need someone like you who can move freely throughout Skyrim and not arouse suspicion. Speak to me in Purewater Run in the hills of Markarth. I await your arrival.\n\n--Fijeh</font>",
+        "string": "<font face=\"$HandwrittenFont\"><font size='16'>\n<Alias=Player>,\n\n ti osservo ormai da un po' di tempo. Conoscevo gi\u00e0 il tuo coraggio in battaglia, ma dopo averti visto all'opera nell'incontro con Azadi, credo tu sia proprio il tipo di persona che ci serve.\n\n Noi siamo i Reduci. Alcuni ci chiamano \"gli occhi che osservano\". Per decenni abbiamo aiutato a definire il destino di Hammerfell. Siamo un miraggio, una minaccia costante e immateriale per i nostri nemici all'orizzonte. Io, Fijeh, sono il capo.\n\n Anche se il Regno si \u00e8 ritirato da Hammerfell anni fa, i Thalmor continuano a colpirci in segreto. Abbiamo saputo da Sentinel che uno dei nostri, Rakeed, \u00e8 stato preso in ostaggio dai Thalmor. Sono stati aiutati da Ismal, un potente nobile che ha tradito il suo popolo.\n\n Senza dubbio proveranno ad estorcere a Rakeed informazioni sulle difese di Sentinel. Dobbiamo fermarli prima che succeda.\n\n Abbiamo saputo che Rakeed potrebbe essere portato attraverso Skyrim molto presto. \u00c8 fondamentale intercettarli prima che sia troppo tardi.\n\n Ho bisogno di qualcuno come te, che possa muoversi liberamente a Skyrim senza destare sospetti. Incontriamoci a Via di Acquepure, sulle colline di Markarth. Ti aspetto.\n\n--Fijeh</font>"
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST CNAM",
+        "original": "I've begun my assault on Ismal's caravan in my attempt to free Rakeed.",
+        "string": "Ho iniziato l'assalto alla carovana di Ismal nel tentativo di salvare Rakeed."
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST CNAM",
+        "original": "Fijeh has handed me a key to the Remnant supply chest. We plan to attack Ismal's caravan as soon as everyone is gathered at the attack location. Alternatively, I can approach the caravan and get the job done myself.",
+        "string": "Fijeh mi ha dato la chiave del baule di scorte dei Reduci. Abbiamo intenzione di attaccare la carovana di Ismal non appena saremo tutti in posizione. Altrimenti potrei avvicinarmi alla carovana e fare tutto da solo."
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST CNAM",
+        "original": "After speaking to a Remnant spy, I learned that Rakeed will be transported through Skyrim very soon under heavy Thalmor guard by caravan, along with the Hammerfell noble that aided in his capture. Their destination is the city of Blacklight in Morrowind. I should seek out the spy in Ivarstead to learn more.",
+        "string": "Dopo aver parlato con la spia Reduce, ho scoperto che Rakeed verr\u00e0 trasportato attraverso Skyrim in una carovana Thalmor, insieme al nobile di Hammerfell che li ha aiutati a catturarlo. Sono diretti verso la citt\u00e0 di Blacklight a Morrowind. Devo trovare la spia di Karthwasten per saperne di pi\u00f9."
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST CNAM",
+        "original": "I received a letter from Fijeh, who seemed to know about my encounter with Azadi. Fijeh and Azadi are members of a secretive group of spies and warriors from Hammerfell called the Remnants. Fijeh is trying to rescue a fellow Remnant that was captured by the Thalmor, aided by a Thalmor sympathizer. Fijeh would like my assistance in helping track down his brother in arms. He asked to meet in Purewater Run, in the hills near Markarth.",
+        "string": "Ho ricevuto una lettera da Fijeh, che sembrava essere a conoscenza del mio incontro con Azadi. Fijeh e Azadi sono membri di un gruppo segreto di spie e guerrieri di Hammerfell, i Reduci. Fijeh sta provando a salvare un altro Reduce catturato dai Thalmor con l'aiuto di un complice. Fijeh vorrebbe il mio aiuto per ritracciare il suo compagno d'armi. Mi ha chiesto di incontrarci a Via di Acquepure, sulle colline vicino a Markarth."
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST CNAM",
+        "original": "I met Fijeh in Purewater Run. He handed me a set of instructions detailing the next step of the mission to rescue Rakeed.",
+        "string": "Ho incontrato Fijeh a Via di Acquepure. Mi ha dato una serie di istruzioni su come proseguire per salvare Rakeed."
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST CNAM",
+        "original": "Azadi's note was mysterious, only saying that \"they\" would somehow contact me. I should expect to receive a letter from a courier soon.",
+        "string": "La nota di Azadi era molto misteriosa, diceva solo che \"loro\" mi avrebbero contattato in qualche modo. Presto potrei ricevere una lettera da un corriere."
+    },
+    {
+        "editor_id": "ccEDHSSE003_BrawlerNote",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\"><p align='center'>\n\n\n\n\n\nWe'll be in touch.\n</p></font>",
+        "string": "<font face=\"$HandwrittenFont\"><p align='center'>\n\n\n\n\n\nTeniamoci in contatto.\n</p></font>"
+    },
+    {
+        "editor_id": "ccEDHSSE003_BookTheEbonArm",
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\n<p align=\"center\">\n\n\nThe Ebon Arm\n\n\n\nby\nWitten Rol\n</p>\n\n\n\n[pagebreak]\n<p align=\"left\">\n<img src='img://Textures/Interface/Books/Illuminated_Letters/T_letter.png'>he ground shakes. The great armies continue to wage their unrelenting battle. The battlefield is red, the rivers flow crimson, the sky reflects a deep pink. In the distance lightning flashes, and thunder sounds. Two huge ravens begin circling the field; their blackness is vibrant against the various shades of red in this vista of death and suffering. The bright lashes of light and rumbling begin to increase. The redness surrounding the battlefield begins giving way to a golden glow from the east, almost like a summer's setting sun. From the false sunset a massive golden stallion and single rider approach. All become suddenly still on the field of battle as both sides recognize Reymon Ebonarm, God of War, and the companion and protector of all warriors, also known as the Black Knight and his mighty steed War Master.\n<br>\n    He rides into the middle of the blood soaked field and dismounts. He is a very imposing figure. His very tall and heavily muscled body is encased in ebony armor. His ebony helmet does not hide the flowing reddish blonde hair and beard which appear almost as shimmering gold, nor does it shield the steel blue eyes that seem to pierce all they fall upon. In his left hand he carries a massive ebony tower shield on which is emblazoned a fiery red rose. As he raises his right arm, all see an arm and a magnificent ebony blade which are extensions of each other. The fused arm and sword are a result and symbol of the wounds suffered by this god during titanic battles in the youth of this world.\n<br>\n    The ravens come to rest on his shoulders. And, as the point of the ebony blade seemingly touches the sky, lightning flashes, thunder roars. Then total quiet descends and a shudder rolls through both armies.\n<br>\n    The leaders of both armies approach Reymon Ebonarm and kneel. In turn they tell their reasons for this war. Each asks for the favor of the Black Knight for their cause. Reymon Ebonarm listens, but there is no acknowledgment that he has chosen to favor one side or the other in this fight. However, each of the leaders has heard the other state his position. And, each now knows that this war is baseless. They embrace and turn to their armies. They instruct their forces to bury their dead, tend their wounded and return to their homes.\n<br>\n    Reymon Ebonarm mounts his great golden stallion, War Master, and again raises the ebony blade skyward and extends the huge rose emblazoned ebony shield to both armies. A massive chorus of cheers rises from the armies. The ravens again take to the air. Lightning and thunder follow him as he rides into the sunset followed by the two birds.\n<br>\n    The armies do as they have been bidden. They care for their wounded and bury their dead. As they retreat towards their homes each warrior is sure that the great God Reymon Ebonarm, the Black Knight, has responded to their individual prayers for intervention. Each side has won, neither has lost.\n<br>\n    As the armies depart the field, the rivers begin to run clear, and a single red rose begins to bloom near the grave of a fallen hero.\n<br>",
+        "string": "[pagebreak]\n<p align=\"center\">\n\n\nIl braccio d'ebano\n\n\n\ndi\nWitten Rol\n</p>\n\n\n\n[pagebreak]\n<p align=\"left\">\n<img src='img://Textures/Interface/Books/Illuminated_Letters/L_letter.png'>a terra trema. I grandi eserciti continuano a condurre la loro battaglia implacabile. Il campo di battaglia \u00e8 rosso, i fiumi scorrono cremisi, il cielo riflette un colore rosa scuro. In lontananza si vedono lampi e si odono tuoni. Due enormi corvi hanno iniziato a girare in tondo sopra il campo, neri come il carbone si stagliano sulle sfumature di rosso in questo cielo di morte e sofferenza. I lampi di luce e il rimbombo iniziano ad aumentare. Il rosso che circonda il campo di battaglia lascia spazio a un bagliore dorato proveniente da est, come un tramonto d'estate. Da questo falso tramonto arriva al galoppo un enorme stallone dorato con il suo cavaliere. All'improvviso tutto si ferma sul campo di battaglia ed entrambi gli eserciti riconoscono Reymon Ebonarm, dio della guerra e protettore di tutti i guerrieri, conosciuto anche come Cavaliere Nero in sella al suo potente destriero War Master.\n<br>\n Arriva al galoppo fino al centro del campo intriso di sangue prima di smontare da cavallo. \u00c8 una figura davvero imponente. Il suo corpo alto e muscoloso \u00e8 racchiuso in un'armatura d'ebano. L'elmo d'ebano non nasconde i fluenti capelli biondi e la barba che sembra fatta d'oro, o gli occhi blu che sembrano perforare tutto quello su cui si posano. Nella mano sinistra stringe un enorme scudo a torre con incisa una rosa rossa fiammeggiante. Il suo braccio destro si allunga in una magnifica lama d'ebano, una estensione dell'altro. La spada e il braccio fusi insieme sono il simbolo delle ferite patite dal dio durante le battaglie titaniche agli inizi del mondo.\n<br>\n I corvi vanno a posarsi sulle sue spalle. E, appena la punta della spada tocca il cielo, si scatenano tuoni e fulmini. Poi la quiete e un brivido travolge entrambi gli eserciti.\n<br>\n I capi degli eserciti si avvicinano a Reymon Ebonarm e si inginocchiano. A turno, spiegano le motivazioni che li hanno spinti alla guerra. Ognuno cerca di accaparrarsi il favore del Cavaliere Nero a proprio vantaggio. Reymon Ebonarm ascolta, ma non sembra aver deciso di parteggiare per uno o per l'altro schieramento in questa guerra. A questo punto per\u00f2, entrambi i capi hanno ascoltato le ragioni dell'avversario. Ed entrambi capiscono che questa guerra non ha fondamento. Si abbracciano e tornano dai loro eserciti. Danno ordine ai soldati di seppellire i morti, curare i feriti e tornare a casa.\n<br>\n Reymon Ebonarm monta sul suo grande stallone dorato, War Master, e di nuovo solleva la spada e lo scudo con la rosa rossa verso entrambi gli eserciti. Dalle due parti si sollevano urla di gioia. I corvi prendono nuovamente il volo. Fulmini e saette lo seguono mentre cavalca verso il tramonto con i due uccelli al seguito.\n<br>\n Gli eserciti eseguono gli ordini. Curano i feriti e seppelliscono i morti. Mentre torna verso casa, ogni guerriero \u00e8 convinto che il grande dio Reymon Ebonarm, il Cavaliere Nero, abbia risposto alle proprie preghiere. Hanno vinto entrambi gli schieramenti, non ha perso nessuno.\n<br>\n Mentre gli eserciti abbandonano il campo, i fiumi tornano limpidi e una rosa rossa fiorisce a fianco della tomba di un eroe caduto.\n<br>"
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST CNAM",
+        "original": "I accepted Azadi's challenge in Shor's Stone, and must now defeat him in an unarmed brawl. Perhaps if I beat some sense into him, he will go someplace else.",
+        "string": "Ho accettato la sfida di Azadi a Pietra di Shor e ora devo sconfiggerlo in una lotta a mani nude. Forse posso inculcargli un po' di buon senso a suon di pugni e farlo andare altrove."
+    },
+    {
+        "editor_id": "ccEDHSSE003_Book_TheAlikr",
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\n<p align=\"center\">\n\n\nThe Alik'r\n\n\n\nby\nEnric Milres\n</p>\n\n\n\n[pagebreak]\n<p align=\"left\">\n<img src='img://Textures/Interface/Books/Illuminated_Letters/I_letter.png'> might never have gone to the Alik'r Desert had I not met Weltan in a little tavern in Sentinel. Weltan is a Redguard poet whose verse I had read, but only in translation. He chooses to write in the old language of the Redguards, not in Tamrielic. I once asked him why.\n<br>\n    \"The Tamrielic word for the divinely rich child of rot, silky, pressed sour milk is... cheese,\" said Weltan, a huge smile spreading like a tide over his lampblack face. \"The Old Redguard word for it is mluo. Tell me, if you were a poet fluent in both languages, which word would you use?\"\n<br>\n    I am a child of the cities, and I would tell him tales of the noise and corruption, wild nights and energy, culture and decadence. He listened with awed appreciation of the city of my birth: white-marbled Imperial City where all the citizenry are convinced of their importance because of the proximity of the Emperor and the lustration of the streets. They say that a beggar on the boulevards of the Imperial City is a man living in a palace. Over spiced ale, I regaled Weltan with descriptions of the swarming marketplace of Riverhold; of dark, brooding Mournhold; of the mold-encrusted villas of Lilmoth; the wonderful, dangerous alleys of Helstrom; the stately avenues of grand old Solitude. For all this, he marvelled, inquired, and commented.\n<br>\n    \"I feel as if I know your home, the Alik'r Desert, from your poems even though I've never been there.\" I told him.\n<br>\n    \"Oh, but you don't. No poem can express the Alik'r. It may prepare you for a visit far better than the best guide book can. But if you want to know Tamriel and be a true citizen of the planet, you must go and feel the desert yourself.\"\n<br>\n    It took me a little over a year to break off engagements, save money (my greatest challenge), and leave the urban life for the Alik'r Desert. I brought several books of Weltan's poems as my travel guide.\n<br>\n    \"A sacred flame rises above the fire, The ghosts of great men and women without names, Cities long dead rise and fall in the flame, The Dioscori Song of Revelation, Bursting walls and deathless rock, Fiery sand that heals and destroys.\"\n<br>\n    These first six lines from my friend's \"On the Immortality of Dust\" prepared me for my first image of the Alik'r Desert, though they hardly do it justice. My poor pen cannot duplicate the severity, grandeur, ephemera and permanence of the Alik'r.\n<br>\n    All the principalities and boundaries the nations have placed on the land dissolve under the moving sand in the desert. I could never tell if I was in Antiphyllos or Bergama, and few of the inhabitants could tell me. For them, and so it came to me, we were simply in the Alik'r. No. We are part of the Alik'r. That is closer to the philosophy of the desert people.\n<br>\n    I saw the sacred flame of which Weltan wrote on my first morning in the desert: a vast, red mist that seemed to come from the deep mystery of Tamriel. Long before the noon sun, the mist had disappeared. Then I saw the cities of Weltan. The ruins of the Alik'r rise from the sand by one blast of the unbounded wind and are covered by the next. Nothing in the desert lasts, but nothing dies forever.\n<br>\n    At daylight, I hid myself in tents, and thought about the central character of the Redguards that would cause them to adopt this savage, eternal land. They are warriors by nature. As a group, there are none better. Nothing for them has worth unless they have struggled for it. No one fought them for the desert, but the Alik'r is a great foe. The battle goes on. It is a war without rancor, a holy war in the sense the phrase should always imply.\n<br>\n    By night, I could contemplate the land itself in its relative serenity. But the serenity was superficial. The stones themselves burned with a heat and a light that comes not from the sun, nor the moons Jone and Jode. The power of the stones comes from the beat of the heart of Tamriel itself.\n<br>\n    Two years I spent in the Alik'r.\n<br>\n    As write this, I am back in Sentinel. We are at war with the kingdom of Daggerfall for the possession of a grass-covered rock that belongs to the water of the Iliac Bay. All my fellow poets, writers, and artists are despondent for the greed and pride that brought these people into battle. It is a low point, a tragedy. In the words of Old Redguard, an ajcea, a spiral down.\n<br>\n    Yet, I cannot be sorrowful. In the years I spent in the glories of the Alik'r, I have seen the eternal stones that live on while men go dead. I have found my inner eye in the tractless, formless, changeless and changeable land. Inspiration and hope, like the stones of the desert, are eternal though men be not.\n<br>",
+        "string": "[pagebreak]\n<p align=\"center\">\n\n\nL'Alik'r\n\n\n\ndi\nEnric Milres\n</p>\n\n\n\n[pagebreak]\n<p align=\"left\">\n<img src='img://Textures/Interface/Books/Illuminated_Letters/S_letter.png'>e non avessi incontrato Weltan in una piccola taverna a Sentinel, non sarei mai andato nel deserto Alik'r. Weltan \u00e8 un poeta redguard di cui avevo letto le opere, ma solo tradotte. Ha scelto di comporre nella vecchia lingua dei redguard, non in tamrielico. Una volta gli chiesi perch\u00e9.\n<br>\n    \"La parola tamrielica per il divino frutto del setoso latte fermentato e pressato \u00e8... formaggio,\" disse Weltan mentre un enorme sorriso si allargava sul volto. \"La vecchia parola redguard per lo stesso oggetto \u00e8 mluo. Dimmi, se tu fossi un poeta che parla fluentemente entrambe le lingue, quale sceglieresti?\"\n<br>\n Io sono un figlio della citt\u00e0 e gli raccontavo storie di rumore e corruzione, notti selvagge ed energia, cultura e decadenza. Lui mi ascoltava, rapito dalla mia citt\u00e0 natia: la marmorea Citt\u00e0 Imperiale, in cui tutti i cittadini si sentono importanti per la loro vicinanza all'imperatore e per la pulizia delle strade. Dicono che un mendicante su un viale della Citt\u00e0 Imperiale \u00e8 come un uomo comune che vive in un palazzo. Dietro un boccale di birra speziata, descrivevo a Weltan l'affollato mercato di Riverhold, l'oscura Mournhold, le ville incrostate di muffa di Lilmoth, i meravigliosi quanto pericolosi vicoli di Helstrom e i viali signorili di Solitude. Per ogni cosa si mostrava meravigliato e non risparmiava domande e commenti.\n<br>\n \"\u00c8 come se conoscessi la tua terra, il deserto Alik'r, dalle tue poesia anche se non ci sono mai stato.\" Gli dissi.\n<br>\n \"Oh, ma non \u00e8 cos\u00ec. Nessuna poesia pu\u00f2 catturare l'essenza dell'Alik'r. Certo, pu\u00f2 prepararti a visitarlo meglio di qualunque guida. Ma se vuoi conoscere davvero Tamriel ed essere un cittadino del mondo, devi andare a visitare il deserto in persona.\"\n<br>\n Mi ci \u00e8 voluto un po' pi\u00f9 di anno per liberarmi dagli impegni, mettere da parte il denaro (l'impresa pi\u00f9 difficile) e lasciare la vita urbana per il deserto Alik'r. Ho portato con me diversi libri di poesie di Weltan come guide.\n<br>\n \"Una fiamma sacra si solleva dal fuoco, I fantasmi di grandi uomini e donne senza nome, Citt\u00e0 a lungo perdute rinascono e muoiono nelle fiamme, La canzone della rivelazione di Dioscori, Mura esplose pietra immortale, Sabbia infuocata che cura e distrugge.\"\n<br>\n Queste prime sei righe di \"L'immortalit\u00e0 della polvere\" del mio amico, mi avevano preparato alla prima cosa che vidi del deserto Alik'r, anche se non riuscivano a fargli giustizia. La mia debole penna non pu\u00f2 replicare il rigore, la grandiosit\u00e0, l'effimero e la persistenza dell'Alik'r.\n<br>\n Tutti i principati e i confini che le nazioni hanno posizionato su questa terra, scompaiono sotto la sabbia in continuo movimento del deserto. Non riuscivo mai a capire se fossi ad Antiphyllos o Bergama, e solo pochi abitanti riuscivano a capire la differenza. Per loro, cos\u00ec mi rispondevano, erano semplicemente nell'Alik'r. No. Noi siamo parte dell'Alik'r. Questa era la filosofia degli abitanti del deserto.\n<br>\n Durante la mia prima mattina nel deserto, ho visto la fiamma sacra di cui parlava Weltan: un'estesa nebbia rossa che sembrava venire dai misteri pi\u00f9 profondi di Tamriel. Ben prima che si facesse mezzogiorno, la nebbia era sparita. Poi ho visitato le citt\u00e0 di Weltan. Le rovine dell'Alik'r vengono svelata da una folata di vento e ricoperte dalla successiva. Nel deserto niente sopravvive, ma niente muore per sempre.\n<br>\n Durante il giorno mi sono nascosto nelle tende e ho pensato al personaggio che port\u00f2 i redguard a vivere in questa terra selvaggia ed eterna. Sono guerrieri di natura. Non esiste un gruppo migliore. Per loro niente ha valore a meno che non se lo siano conquistato. Nessuno combatte per loro nel deserto, ma l'Alik'r \u00e8 un nemico senza pari. La battaglia continua. \u00c8 una guerra senza rancore, una guerra sacra nel senso originario del termine.\n<br>\n Durante la notte ho potuto contemplare la terra nella sua serenit\u00e0. Serenit\u00e0 solo superficiale. Le pietre bruciavano di un calore e una luce che non provengono n\u00e9 dal sole n\u00e9 dalle lune Jone e Jode. Il potere delle pietre viene dal battito del cuore di Tamriel.\n<br>\n Ho passato due anni nell'Alik'r.\n<br>\n Nel momento in cui scrivo, sono tornato a Sentinel. Siamo in guerra con il regno di Daggerfall per il possesso di un roccia coperta d'erba che appartiene alle acque della baia di Iliac. Tutti i miei amici poeti, scrittori e artisti sono scoraggiati dall'avidit\u00e0 e dall'orgoglio che ci hanno portati in battaglia. \u00c8 un momento triste, una tragedia. Per usare le parole dei vecchi redguard, una ajcea, una spirale verso il basso.\n<br>\n Eppure non riesco a essere triste. Negli anni che ho passato nell'Alik'r, ho visto le pietre eterne che vivono mentre gli uomini muoiono. Ho trovato il mio occhio interiore in quella terra senza forma, in continuo cambiamento e sempre uguale a se stessa. L'ispirazione e la speranza, come le pietre del deserto, sono eterne al contrario degli uomini.\n<br>"
+    },
+    {
+        "editor_id": "ccEDHSSE003_FijehLetterBrawl",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\"><font size='16'>\n<Alias=Player>,\n\n    I've been watching your exploits for some time. I've long known of your cunning nature, but after seeing the sheer might you demonstrated in your encounter with Azadi, I think you're exactly the kind of person we need right now.\n\n    We are known as Remnants. Some call us \"the Eyes that Watch.\"  For decades, we have helped steer the destiny of Hammerfell. We are a mirage, a constant and formless threat to our enemies on the horizon.  I, Fijeh, serve as their leader.\n\n    Though the Dominion withdrew from Hammerfell years ago, the Thalmor continue to strike at us in secret. We received word from the city of Sentinel that one of our own, Rakeed, has been taken hostage by the Thalmor. They have been aided by Ismal, a powerful noble and traitor to his people.\n\n    There is no doubt that they will try to extract what Rakeed knows about Sentinel's defenses. We have to stop them before that happens.\n\n    We've learned that Rakeed may be transported across Skyrim soon. It's vital that we intercept him from the Thalmor before it's too late.\n\n    I need someone like you who can move freely throughout Skyrim and not arouse suspicion. Speak to me in Purewater Run in the hills of Markarth. I await your arrival.\n\n--Fijeh</font>",
+        "string": "<font face=\"$HandwrittenFont\"><font size='16'>\n<Alias=Player>,\n\n ti osservo ormai da un po' di tempo. Conoscevo gi\u00e0 le tue abilit\u00e0, ma dopo averti visto all'opera nell'incontro con Azadi, credo tu sia proprio il tipo di persona che ci serve.\n\n Noi siamo i Reduci. Alcuni ci chiamano \"gli occhi che osservano\". Per decenni abbiamo aiutato a definire il destino di Hammerfell. Siamo un miraggio, una minaccia costante e immateriale per i nostri nemici all'orizzonte. Io, Fijeh, sono il capo.\n\n Anche se il Regno si \u00e8 ritirato da Hammerfell anni fa, i Thalmor continuano a colpirci in segreto. Abbiamo saputo da Sentinel che uno dei nostri, Rakeed, \u00e8 stato preso in ostaggio dai Thalmor. Sono stati aiutati da Ismal, un potente nobile che ha tradito il suo popolo.\n\n Senza dubbio proveranno ad estorcere a Rakeed informazioni sulle difese di Sentinel. Dobbiamo fermarli prima che succeda.\n\n Abbiamo saputo che Rakeed potrebbe essere portato attraverso Skyrim molto presto. \u00c8 fondamentale intercettarli prima che sia troppo tardi.\n\n Ho bisogno di qualcuno come te, che possa muoversi liberamente a Skyrim senza destare sospetti. Incontriamoci a Via di Acquepure, sulle colline di Markarth. Ti aspetto.\n\n--Fijeh</font>"
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST CNAM",
+        "original": "I spoke the secret phrase to Josla, a Remnant spy in Karthwasten. She handed me a note that should contain information about the whereabouts of the captured Remnant.",
+        "string": "Ho detto la frase segreta a Sirayar, la spia Reduce a Karthwasten. Mi ha dato una nota che dovrebbe contenere delle informazioni sulla posizione del Reduce catturato."
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST CNAM",
+        "original": "Fijeh thanked me and paid me for my efforts. And with that, Fijeh cast an invisibility spell and disappeared along with Rakeed. I searched the supply chest that Fijeh gave me a key to unlock, and discovered a set of Remnant weapons and armor.",
+        "string": "Fijeh mi ha ringraziato e mi ha pagato per i miei servigi. Poi ha lanciato un incantesimo dell'invisibilit\u00e0 ed \u00e8 scomparso con Rakeed. Ho cercato il baule di scorte da aprire con la chiave che mi ha dato Fijeh e ho trovato un set di armi e armatura da Reduce."
+    },
+    {
+        "editor_id": "ccEDHSSE003_Spy2Note",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\"><font size='18'>\n    Met a hunter from far out west. Bought him a drink and found out a wagon was headed up toward Skyrim along the southwestern border from Hammerfell. He should pass by Sunderstone Gorge on his way through.\n\n    Not a lot of folks on that road these days. Still, he didn't say how many there were or what they looked like. We need to find out more before we know for sure it's Ismal.</font>",
+        "string": "<font face=\"$HandwrittenFont\"><font size='18'>\n A ovest ho incontrato un cacciatore. Gli ho offerto da bere e ho scoperto che un carro stava risalendo Skyrim seguendo il confine sud-occidentale da Hammerfell. Sul suo tragitto dovrebbe passare dalla Gola di Sunderstone.\n\n Quella strada non \u00e8 molto frequentata. Non mi ha detto in quanti sono e che aspetto abbiano. Dobbia saperne di pi\u00f9 prima di essere certi che si tratti di Ismal.</font>"
+    },
+    {
+        "editor_id": "ccEDHSSE003_Quest",
+        "type": "QUST CNAM",
+        "original": "Fijeh thanked me and paid me for my efforts. And with that, Fijeh cast an invisibility spell and disappeared along with Rakeed. I should investigate the Remnant supply chest that Fijeh gave me a key to unlock.",
+        "string": "Fijeh mi ha ringraziato e mi ha pagato per i miei servigi. Poi ha lanciato un incantesimo dell'invisibilit\u00e0 ed \u00e8 scomparso con Rakeed. Devo trovare il baule di scorte da aprire con la chiave che mi ha dato Fijeh."
+    }
+]

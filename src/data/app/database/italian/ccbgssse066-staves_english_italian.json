@@ -1,0 +1,2774 @@
+[
+    {
+        "editor_id": "ccBGSSSE066_WoodenStaffWar",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of War",
+        "string": "Bastone della Guerra di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_EbonyStaffJudgment",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Judgment",
+        "string": "Bastone del Giudizio d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchPeaceSILVER",
+        "type": "ENCH FULL",
+        "original": "Staff of Peace",
+        "string": "Bastone della Pace"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchJudgmentSTEELthousand",
+        "type": "ENCH FULL",
+        "original": "Staff of Judgement",
+        "string": "Bastone del Giudizio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchShamingSILVER",
+        "type": "ENCH FULL",
+        "original": "Staff of Shaming",
+        "string": "Bastone della Vergogna"
+    },
+    {
+        "editor_id": "ccBGSSSE066_DreughStaffPeace",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Peace",
+        "string": "Bastone della Pace di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchJudgmentGLASSthousand",
+        "type": "ENCH FULL",
+        "original": "Staff of Judgement",
+        "string": "Bastone del Giudizio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchPeaceGLASS",
+        "type": "ENCH FULL",
+        "original": "Staff of Peace",
+        "string": "Bastone della Pace"
+    },
+    {
+        "editor_id": "ccBGSSSE066_DreughStaffAncestors",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Ancestors",
+        "string": "Bastone degli Antenati di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SummonDraugrMs",
+        "type": "MGEF FULL",
+        "original": "Summon Ancestor Ghost",
+        "string": "Evoca un Antenato Fantasma"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchPeaceEBONY",
+        "type": "ENCH FULL",
+        "original": "Staff of Peace",
+        "string": "Bastone della Pace"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchWarWOOD",
+        "type": "ENCH FULL",
+        "original": "Staff of War",
+        "string": "Bastone della Guerra"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchShamingGLASS",
+        "type": "ENCH FULL",
+        "original": "Staff of Shaming",
+        "string": "Bastone della Vergogna"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SummonDraugrMx",
+        "type": "MGEF FULL",
+        "original": "Summon Ancestor Ghost",
+        "string": "Evoca un Antenato Fantasma"
+    },
+    {
+        "editor_id": "ccBGSSSE066_WoodenStaffJudgment",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Judgment",
+        "string": "Bastone del Giudizio di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SummonDraugrMel",
+        "type": "MGEF DNAM",
+        "original": "Summons an Ancestral Ghost for <dur> seconds.",
+        "string": "Evoca un Antenato Fantasma per <dur> secondi."
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchChasteningEBONY",
+        "type": "ENCH FULL",
+        "original": "Staff of Chastening",
+        "string": "Bastone del Castigo"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchPeaceDAEDRIC",
+        "type": "ENCH FULL",
+        "original": "Staff of Peace",
+        "string": "Bastone della Pace"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SummonDraugrMel",
+        "type": "MGEF FULL",
+        "original": "Summon Ancestor Ghost",
+        "string": "Evoca un Antenato Fantasma"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchWarGLASS",
+        "type": "ENCH FULL",
+        "original": "Staff of War",
+        "string": "Bastone della Guerra"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchWarEBONY",
+        "type": "ENCH FULL",
+        "original": "Staff of War",
+        "string": "Bastone della Guerra"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchChasteningWOOD",
+        "type": "ENCH FULL",
+        "original": "Staff of Chastening",
+        "string": "Bastone del Castigo"
+    },
+    {
+        "editor_id": "ccBGSSSE066_BarrierFireConcAimed",
+        "type": "MGEF FULL",
+        "original": "Wall of Frost and Flames",
+        "string": "Muro di Ghiaccio e Fuoco"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SummonDraugrWarlock",
+        "type": "NPC_ FULL",
+        "original": "Ancestor Ghost",
+        "string": "Antenato Fantasma"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchJudgmentEBONY",
+        "type": "ENCH FULL",
+        "original": "Staff of Judgement",
+        "string": "Bastone del Giudizio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_DreughStaffJudgment",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Judgment",
+        "string": "Bastone del Giudizio di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchShamingDREUGH",
+        "type": "ENCH FULL",
+        "original": "Staff of Shaming",
+        "string": "Bastone della Vergogna"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SummonDraugrMelee",
+        "type": "NPC_ FULL",
+        "original": "Ancestor Ghost",
+        "string": "Antenato Fantasma"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SummonDraugrMixed",
+        "type": "NPC_ FULL",
+        "original": "Ancestor Ghost",
+        "string": "Antenato Fantasma"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchWarDREUGH",
+        "type": "ENCH FULL",
+        "original": "Staff of War",
+        "string": "Bastone della Guerra"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTemplateDaedric",
+        "type": "WEAP FULL",
+        "original": "Unenchanted Daedric Staff",
+        "string": "Bastone disincantato daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_DaedricStaffShaming",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Shaming",
+        "string": "Bastone della Vergogna daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_FireDamageConcAimed",
+        "type": "MGEF DNAM",
+        "original": "Elemental damage that does <mag> points per second to Health, Magicka, and Stamina. Targets on fire take extra damage.",
+        "string": "Danno elementale che infligge <mag> punti di danno al secondo a salute, magicka e vigore. I bersagli in fiamme subiscono ulteriori danni."
+    },
+    {
+        "editor_id": "ccBGSSSE066_WoodenStaffChastening",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Chastening",
+        "string": "Bastone del Castigo di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SilverStaffWar",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of War",
+        "string": "Bastone della Guerra d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SummonDraugrMs",
+        "type": "MGEF DNAM",
+        "original": "Summons an Ancestral Ghost for <dur> seconds.",
+        "string": "Evoca un Antenato Fantasma per <dur> secondi."
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffAncestorsWOOD",
+        "type": "ENCH FULL",
+        "original": "Summon Ancestor Ghost",
+        "string": "Evoca un Antenato Fantasma"
+    },
+    {
+        "editor_id": "ccBGSSSE066_EbonyStaffWar",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of War",
+        "string": "Bastone della Guerra d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffAncestorsGLASS",
+        "type": "ENCH FULL",
+        "original": "Summon Ancestor Ghost",
+        "string": "Evoca un Antenato Fantasma"
+    },
+    {
+        "editor_id": "ccBGSSSE066_EbonyStaffPeace",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Peace",
+        "string": "Bastone della Pace d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchChasteningDAEDRIC",
+        "type": "ENCH FULL",
+        "original": "Staff of Chastening",
+        "string": "Bastone del Castigo"
+    },
+    {
+        "editor_id": "ccBGSSSE066_EbonyStaffChastening",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Chastening",
+        "string": "Bastone del Castigo d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffAncestorsSILVER",
+        "type": "ENCH FULL",
+        "original": "Summon Ancestor Ghost",
+        "string": "Evoca un Antenato Fantasma"
+    },
+    {
+        "editor_id": "ccBGSSSE066_EbonyStaffForefathers",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of the Forefathers",
+        "string": "Bastone degli Antenati d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_GlassStaffJudgment",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Judgment",
+        "string": "Bastone del Giudizio di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffAncestorsDAEDRIC",
+        "type": "ENCH FULL",
+        "original": "Summon Ancestor Ghost",
+        "string": "Evoca un Antenato Fantasma"
+    },
+    {
+        "editor_id": "ccBGSSSE066_WoodenStaffPeace",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Peace",
+        "string": "Bastone della Pace di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SummonDraugrMx",
+        "type": "MGEF DNAM",
+        "original": "Summons an Ancestral Ghost for <dur> seconds.",
+        "string": "Evoca un Antenato Fantasma per <dur> secondi."
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchPeaceWOOD",
+        "type": "ENCH FULL",
+        "original": "Staff of Peace",
+        "string": "Bastone della Pace"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SummonDraugrW",
+        "type": "MGEF FULL",
+        "original": "Summon Ancestor Ghost",
+        "string": "Evoca un Antenato Fantasma"
+    },
+    {
+        "editor_id": "ccBGSSSE066_DreughStaffWar",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of War",
+        "string": "Bastone della Guerra di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SummonDraugrBs",
+        "type": "MGEF FULL",
+        "original": "Summon Ancestor Ghost",
+        "string": "Evoca un Antenato Fantasma"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchJudgmentWOODthousand",
+        "type": "ENCH FULL",
+        "original": "Staff of Judgement",
+        "string": "Bastone del Giudizio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffAncestorsDREUGH",
+        "type": "ENCH FULL",
+        "original": "Summon Ancestor Ghost",
+        "string": "Evoca un Antenato Fantasma"
+    },
+    {
+        "editor_id": "ccBGSSSE066_DaedricStaffJudgment",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Judgment",
+        "string": "Bastone del Giudizio daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_DaedricStaffForefathers",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of the Forefathers",
+        "string": "Bastone degli Antenati daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SummonDraugrBs",
+        "type": "MGEF DNAM",
+        "original": "Summons an Ancestral Ghost for <dur> seconds.",
+        "string": "Evoca un Antenato Fantasma per <dur> secondi."
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchShamingDAEDRIC",
+        "type": "ENCH FULL",
+        "original": "Staff of Shaming",
+        "string": "Bastone della Vergogna"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SummonDraugrW",
+        "type": "MGEF DNAM",
+        "original": "Summons an Ancestral Ghost for <dur> seconds.",
+        "string": "Evoca un Antenato Fantasma per <dur> secondi."
+    },
+    {
+        "editor_id": "ccBGSSSE066_DreughStaffShaming",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Shaming",
+        "string": "Bastone della Vergogna di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SilverStaffShaming",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Shaming",
+        "string": "Bastone della Vergogna d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchJudgmentSILVERthousand",
+        "type": "ENCH FULL",
+        "original": "Staff of Judgement",
+        "string": "Bastone del Giudizio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_DaedricStaffWar",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of War",
+        "string": "Bastone della Guerra daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTemplateWood",
+        "type": "WEAP FULL",
+        "original": "Unenchanted Wooden Staff",
+        "string": "Bastone disincantato di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_WoodenStaffShaming",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Shaming",
+        "string": "Bastone della Vergogna di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_GlassStaffWar",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of War",
+        "string": "Bastone della Guerra di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SteelStaffWar",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of War",
+        "string": "Bastone della Guerra d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffAncestorsSTEEL",
+        "type": "ENCH FULL",
+        "original": "Summon Ancestor Ghost",
+        "string": "Evoca un Antenato Fantasma"
+    },
+    {
+        "editor_id": "ccBGSSSE066_GlassStaffShaming",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Shaming",
+        "string": "Bastone della Vergogna di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_GlassStaffPeace",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Peace",
+        "string": "Bastone della Pace di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_GlassStaffChastening",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Chastening",
+        "string": "Bastone del Castigo di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchChasteningDreugh",
+        "type": "ENCH FULL",
+        "original": "Staff of Chastening",
+        "string": "Bastone del Castigo"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchChasteningSTEEL",
+        "type": "ENCH FULL",
+        "original": "Staff of Chastening",
+        "string": "Bastone del Castigo"
+    },
+    {
+        "editor_id": "ccBGSSSE066_EbonyStaffShaming",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Shaming",
+        "string": "Bastone della Vergogna d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchShamingSTEEL",
+        "type": "ENCH FULL",
+        "original": "Staff of Shaming",
+        "string": "Bastone della Vergogna"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SteelStaffPeace",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Peace",
+        "string": "Bastone della Pace d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SteelStaffShaming",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Shaming",
+        "string": "Bastone della Vergogna d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTemplateSilver",
+        "type": "WEAP FULL",
+        "original": "Unenchanted Silver Staff",
+        "string": "Bastone disincantato d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchChasteningSilver",
+        "type": "ENCH FULL",
+        "original": "Staff of Chastening",
+        "string": "Bastone del Castigo"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SteelStaffJudgment",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Judgment",
+        "string": "Bastone del Giudizio d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SteelStaffChastening",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Chastening",
+        "string": "Bastone del Castigo d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchJudgmentDAEDRIC",
+        "type": "ENCH FULL",
+        "original": "Staff of Judgement",
+        "string": "Bastone del Giudizio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchWarSILVER",
+        "type": "ENCH FULL",
+        "original": "Staff of War",
+        "string": "Bastone della Guerra"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTemplateDreugh",
+        "type": "WEAP FULL",
+        "original": "Unenchanted Dreugh Staff",
+        "string": "Bastone disincantato di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SilverStaffPeace",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Peace",
+        "string": "Bastone della Pace d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchPeaceSTEEL",
+        "type": "ENCH FULL",
+        "original": "Staff of Peace",
+        "string": "Bastone della Pace"
+    },
+    {
+        "editor_id": "ccBGSSSE066_WoodenStaffAncestors",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Ancestors",
+        "string": "Bastone degli Antenati di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SummonDraugrMissile",
+        "type": "NPC_ FULL",
+        "original": "Ancestor Ghost",
+        "string": "Antenato Fantasma"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SilverStaffAncestors",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Ancestors",
+        "string": "Bastone degli Antenati d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_DaedricStaffPeace",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Peace",
+        "string": "Bastone della Pace daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchChasteningGLASS",
+        "type": "ENCH FULL",
+        "original": "Staff of Chastening",
+        "string": "Bastone del Castigo"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTemplateSteel",
+        "type": "WEAP FULL",
+        "original": "Unenchanted Steel Staff",
+        "string": "Bastone disincantato d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchWarDAEDRIC",
+        "type": "ENCH FULL",
+        "original": "Staff of War",
+        "string": "Bastone della Guerra"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SteelStaffAncestors",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Ancestors",
+        "string": "Bastone degli Antenati d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchPeaceDREUGH",
+        "type": "ENCH FULL",
+        "original": "Staff of Peace",
+        "string": "Bastone della Pace"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchShamingEBONY",
+        "type": "ENCH FULL",
+        "original": "Staff of Shaming",
+        "string": "Bastone della Vergogna"
+    },
+    {
+        "editor_id": "ccBGSSSE066_BarrierFireConcAimed",
+        "type": "MGEF DNAM",
+        "original": "Sprayed on the ground, it creates a wall of ice and fire that does <50> points of elemental damage per second.",
+        "string": "Lanciato sul terreno, crea un muro di ghiaccio e fuoco che infligge <50> punti di danno elementale al secondo."
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchWarSTEEL",
+        "type": "ENCH FULL",
+        "original": "Staff of War",
+        "string": "Bastone della Guerra"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTemplateEbony",
+        "type": "WEAP FULL",
+        "original": "Unenchanted Ebony Staff",
+        "string": "Bastone disincantato d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffAncestorsEBONY",
+        "type": "ENCH FULL",
+        "original": "Summon Ancestor Ghost",
+        "string": "Evoca un Antenato Fantasma"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchJudgmentDREUGHthousand",
+        "type": "ENCH FULL",
+        "original": "Staff of Judgement",
+        "string": "Bastone del Giudizio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SilverStaffJudgment",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Judgment",
+        "string": "Bastone del Giudizio d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_GlassStaffAncestors",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Ancestors",
+        "string": "Bastone degli Antenati di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTemplateGlass",
+        "type": "WEAP FULL",
+        "original": "Unenchanted Glass Staff",
+        "string": "Bastone disincantato di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_FireDamageConcAimed",
+        "type": "MGEF FULL",
+        "original": "Elemental Damage",
+        "string": "Danno elementale"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SilverStaffChastening",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Chastening",
+        "string": "Bastone del Castigo d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchShamingWOODthousand",
+        "type": "ENCH FULL",
+        "original": "Staff of Shaming",
+        "string": "Bastone della Vergogna"
+    },
+    {
+        "editor_id": "ccBGSSSE066_Quest",
+        "type": "QUST FULL",
+        "original": "Seeder Quest",
+        "string": "Missione semina"
+    },
+    {
+        "editor_id": "ccBGSSSE066_DaedricStaffChastening",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Chastening",
+        "string": "Bastone del Castigo daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_DreughStaffChastening",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Chastening",
+        "string": "Bastone del Castigo di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_WoodenStaffPeace02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Peace",
+        "string": "Bastone della Pace di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_WoodenStaffChastening02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Chastening",
+        "string": "Bastone del Castigo di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTemplateWood02",
+        "type": "WEAP FULL",
+        "original": "Unenchanted Wooden Staff",
+        "string": "Bastone disincantato di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_WoodenStaffAncestors02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Ancestors",
+        "string": "Bastone degli Antenati di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_WoodenStaffShaming02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Shaming",
+        "string": "Bastone della Vergogna di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_WoodenStaffJudgment02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Judgment",
+        "string": "Bastone del Giudizio di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_WoodenStaffWar02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of War",
+        "string": "Bastone della Guerra di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFrostbiteEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Frostbite",
+        "string": "Bastone della Morsa Gelida d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureStormAtronachWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of the Storm Atronach",
+        "string": "Bastone dell'Atronach della Tempesta di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffHealingHandsWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of the Healing Hand",
+        "string": "Bastone delle Mani Curative di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFrostbiteWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Frostbite",
+        "string": "Bastone della Morsa Gelida di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRallyWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Inspiration",
+        "string": "Bastone dell'Ispirazione di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFlameAtronachSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of the Flame Atronach",
+        "string": "Bastone dell'Atronach della Fiamma d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffHealOtherDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Mending",
+        "string": "Bastone della Guarigione di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRepelLesserUndeadSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Repulsion",
+        "string": "Bastone della Repulsione d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffLightningBoltWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Lightning Bolts",
+        "string": "Bastone dei Dardi Elettrici di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffBanishDaedraEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Banishing",
+        "string": "Bastone del Bando d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffMagelightSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Magelight",
+        "string": "Bastone della Luce Magica d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFrostAtronachWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of the Frost Atronach",
+        "string": "Bastone dell'Atronach del Ghiaccio di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnGreaterUndeadWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Grand Staff of Turning",
+        "string": "Bastone Supremo dello Scacciare di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFearDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Fear",
+        "string": "Bastone della Paura daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnUndeadWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Turning",
+        "string": "Bastone dello Scacciare di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFamiliarSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of the Familiar",
+        "string": "Bastone del Famiglio d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIceStormDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Ice Storms",
+        "string": "Bastone delle Tempeste di Ghiaccio di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCommandDaedraGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Daedric Command",
+        "string": "Bastone del Controllo Daedrico di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIcySpearWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Icy Spear",
+        "string": "Bastone della Lancia Gelida di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFireballGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Fireballs",
+        "string": "Bastone delle Palle di Fuoco di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRepelLesserUndeadWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Repulsion",
+        "string": "Bastone della Repulsione di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIceSpikeWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Ice Spikes",
+        "string": "Bastone delle Punte di Ghiaccio di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRepelUndeadSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Grand Staff of Repulsion",
+        "string": "Bastone Supremo della Repulsione d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFireboltGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Firebolts",
+        "string": "Bastone dei Dardi di Fuoco di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffDreadZombieWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Dread Zombies",
+        "string": "Bastone dello Zombi del Terrore di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCommandDaedraEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Daedric Command",
+        "string": "Bastone del Controllo Daedrico d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnLesserUndeadDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Minor Staff of Turning",
+        "string": "Bastone Minore dello Scacciare daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFearSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Fear",
+        "string": "Bastone della Paura d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnUndeadDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Turning",
+        "string": "Bastone dello Scacciare daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFireballDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Fireballs",
+        "string": "Bastone delle Palle di Fuoco daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofFlamesGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of the Flame Wall",
+        "string": "Bastone del muro di Fiamma di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffLightningBoltEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Lightning Bolts",
+        "string": "Bastone dei Dardi Elettrici d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnUndeadDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Turning",
+        "string": "Bastone dello Scacciare di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCalmEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Calm",
+        "string": "Bastone della Calma d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIceStormDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Ice Storms",
+        "string": "Bastone delle Tempeste di Ghiaccio daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFearSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Fear",
+        "string": "Bastone della Paura d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFrostAtronachEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of the Frost Atronach",
+        "string": "Bastone dell'Atronach del Ghiaccio d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofFlamesWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of the Flame Wall",
+        "string": "Bastone del muro di Fiamma di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFlamesDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Flames",
+        "string": "Bastone delle Fiamme daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCalmGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Calm",
+        "string": "Bastone della Calma di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCommandDaedraSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Daedric Command",
+        "string": "Bastone del Controllo Daedrico d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofFlamesEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of the Flame Wall",
+        "string": "Bastone del muro di Fiamma d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnLesserUndeadWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Minor Staff of Turning",
+        "string": "Bastone Minore dello Scacciare di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffChainLightningDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Chain Lightning",
+        "string": "Bastone della Catena di Fulmini di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCourageSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Courage",
+        "string": "Bastone del Coraggio d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnGreaterUndeadDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Grand Staff of Turning",
+        "string": "Bastone Supremo dello Scacciare daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffSoulTrapWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Soul Trapping",
+        "string": "Bastone della Trappola dell'Anima di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFamiliarDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of the Familiar",
+        "string": "Bastone del Famiglio di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffDreadZombieGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Dread Zombies",
+        "string": "Bastone dello Zombi del Terrore di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffReanimateCorpseEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Reanimation",
+        "string": "Bastone della Rianimazione d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFireboltSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Firebolts",
+        "string": "Bastone dei Dardi di Fuoco d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffParalyzeGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Paralysis",
+        "string": "Bastone della Paralisi di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFearWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Fear",
+        "string": "Bastone della Paura di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFlameAtronachWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of the Flame Atronach",
+        "string": "Bastone dell'Atronach della Fiamma di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureStormAtronachDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of the Storm Atronach",
+        "string": "Bastone dell'Atronach della Tempesta daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffReanimateCorpseDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Reanimation",
+        "string": "Bastone della Rianimazione di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFlamesEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Flames",
+        "string": "Bastone delle Fiamme d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffMagelightWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Magelight",
+        "string": "Bastone della Luce Magica di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofStormsWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of the Storm Wall",
+        "string": "Bastone del Muro di Tempesta di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffExpelDaedraSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Expulsion",
+        "string": "Bastone Scaccia-Daedra d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFlamesSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Flames",
+        "string": "Bastone delle Fiamme d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRevenantGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Revenants",
+        "string": "Bastone del Revenant di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffExpelDaedraGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Expulsion",
+        "string": "Bastone Scaccia-Daedra di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFrostbiteSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Frostbite",
+        "string": "Bastone della Morsa Gelida d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFireboltWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Firebolts",
+        "string": "Bastone dei Dardi di Fuoco di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFrostbiteWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Frostbite",
+        "string": "Bastone della Morsa Gelida di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffSparksGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Sparks",
+        "string": "Bastone delle Scintille di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffHealingHandsWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of the Healing Hand",
+        "string": "Bastone delle Mani Curative di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFearDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Fear",
+        "string": "Bastone della Paura di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCourageWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Courage",
+        "string": "Bastone del Coraggio di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRevenantWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Revenants",
+        "string": "Bastone del Revenant di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffHealingHandsSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of the Healing Hand",
+        "string": "Bastone delle Mani Curative d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnUndeadWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Turning",
+        "string": "Bastone dello Scacciare di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffThunderboltSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Thunderbolts",
+        "string": "Bastone della Folgore d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofFrostDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of the Frost Wall",
+        "string": "Bastone del Muro di Ghiaccio daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofFlamesDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of the Flame Wall",
+        "string": "Bastone del muro di Fiamma daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofFlamesWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of the Flame Wall",
+        "string": "Bastone del muro di Fiamma di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIncinerateSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Incineration",
+        "string": "Bastone dell'Incenerimento d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffHealingHandsEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of the Healing Hand",
+        "string": "Bastone delle Mani Curative d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofFrostWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of the Frost Wall",
+        "string": "Bastone del Muro di Ghiaccio di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRoutSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Vanquishment",
+        "string": "Bastone della Conquista d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCalmSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Calm",
+        "string": "Bastone della Calma d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFrostbiteGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Frostbite",
+        "string": "Bastone della Morsa Gelida di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCalmWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Calm",
+        "string": "Bastone della Calma di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofFlamesDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of the Flame Wall",
+        "string": "Bastone del muro di Fiamma di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffBanishDaedraDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Banishing",
+        "string": "Bastone del Bando daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffHealOtherGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Mending",
+        "string": "Bastone della Guarigione di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffThunderboltEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Thunderbolts",
+        "string": "Bastone della Folgore d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRaiseZombieDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Zombies",
+        "string": "Bastone degli Zombi di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffSoulTrapSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Soul Trapping",
+        "string": "Bastone della Trappola dell'Anima d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIncinerateDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Incineration",
+        "string": "Bastone dell'Incenerimento di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffHealOtherSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Mending",
+        "string": "Bastone della Guarigione d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFlameAtronachDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of the Flame Atronach",
+        "string": "Bastone dell'Atronach della Fiamma di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureStormAtronachWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of the Storm Atronach",
+        "string": "Bastone dell'Atronach della Tempesta di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFlamesDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Flames",
+        "string": "Bastone delle Fiamme di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofFrostSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of the Frost Wall",
+        "string": "Bastone del Muro di Ghiaccio d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffParalyzeSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Paralysis",
+        "string": "Bastone della Paralisi d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffHealOtherWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Mending",
+        "string": "Bastone della Guarigione di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIceSpikeWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Ice Spikes",
+        "string": "Bastone delle Punte di Ghiaccio di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRevenantSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Revenants",
+        "string": "Bastone del Revenant d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFrenzyWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Frenzy",
+        "string": "Bastone della Frenesia di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFlameAtronachSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of the Flame Atronach",
+        "string": "Bastone dell'Atronach della Fiamma d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRepelUndeadDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Grand Staff of Repulsion",
+        "string": "Bastone Supremo della Repulsione daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffBanishDaedraSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Banishing",
+        "string": "Bastone del Bando d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFrostbiteDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Frostbite",
+        "string": "Bastone della Morsa Gelida daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffMagelightSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Magelight",
+        "string": "Bastone della Luce Magica d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffSoulTrapWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Soul Trapping",
+        "string": "Bastone della Trappola dell'Anima di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFamiliarWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of the Familiar",
+        "string": "Bastone del Famiglio di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnUndeadGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Turning",
+        "string": "Bastone dello Scacciare di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFurySteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Fury",
+        "string": "Bastone della Furia d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIcySpearSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Icy Spear",
+        "string": "Bastone della Lancia Gelida d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRoutWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Vanquishment",
+        "string": "Bastone della Conquista di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffLightningBoltSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Lightning Bolts",
+        "string": "Bastone dei Dardi Elettrici d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFireballDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Fireballs",
+        "string": "Bastone delle Palle di Fuoco di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIcySpearSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Icy Spear",
+        "string": "Bastone della Lancia Gelida d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFireballEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Fireballs",
+        "string": "Bastone delle Palle di Fuoco d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFireboltSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Firebolts",
+        "string": "Bastone dei Dardi di Fuoco d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffHealingHandsSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of the Healing Hand",
+        "string": "Bastone delle Mani Curative d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFamiliarWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of the Familiar",
+        "string": "Bastone del Famiglio di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIceSpikeDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Ice Spikes",
+        "string": "Bastone delle Punte di Ghiaccio daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFrenzySteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Frenzy",
+        "string": "Bastone della Frenesia d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffMagelightWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Magelight",
+        "string": "Bastone della Luce Magica di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnLesserUndeadGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Minor Staff of Turning",
+        "string": "Bastone Minore dello Scacciare di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIceSpikeDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Ice Spikes",
+        "string": "Bastone delle Punte di Ghiaccio di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCourageEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Courage",
+        "string": "Bastone del Coraggio d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffThunderboltWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Thunderbolts",
+        "string": "Bastone della Folgore di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofFrostWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of the Frost Wall",
+        "string": "Bastone del Muro di Ghiaccio di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFamiliarEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of the Familiar",
+        "string": "Bastone del Famiglio d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFlameAtronachEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of the Flame Atronach",
+        "string": "Bastone dell'Atronach della Fiamma d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnLesserUndeadDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Minor Staff of Turning",
+        "string": "Bastone Minore dello Scacciare di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCalmWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Calm",
+        "string": "Bastone della Calma di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFamiliarGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of the Familiar",
+        "string": "Bastone del Famiglio di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffDreadZombieSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Dread Zombies",
+        "string": "Bastone dello Zombi del Terrore d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnLesserUndeadSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Minor Staff of Turning",
+        "string": "Bastone Minore dello Scacciare d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffDreadZombieDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Dread Zombies",
+        "string": "Bastone dello Zombi del Terrore daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIcySpearEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Icy Spear",
+        "string": "Bastone della Lancia Gelida d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffLightningBoltGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Lightning Bolts",
+        "string": "Bastone dei Dardi Elettrici di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIceSpikeGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Ice Spikes",
+        "string": "Bastone delle Punte di Ghiaccio di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofFrostGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of the Frost Wall",
+        "string": "Bastone del Muro di Ghiaccio di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCalmDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Calm",
+        "string": "Bastone della Calma daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffBanishDaedraSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Banishing",
+        "string": "Bastone del Bando d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFuryEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Fury",
+        "string": "Bastone della Furia d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIceStormWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Ice Storms",
+        "string": "Bastone delle Tempeste di Ghiaccio di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureStormAtronachSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of the Storm Atronach",
+        "string": "Bastone dell'Atronach della Tempesta d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRepelUndeadDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Grand Staff of Repulsion",
+        "string": "Bastone Supremo della Repulsione di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnUndeadSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Turning",
+        "string": "Bastone dello Scacciare d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFuryGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Fury",
+        "string": "Bastone della Furia di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFearEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Fear",
+        "string": "Bastone della Paura d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffLightningBoltDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Lightning Bolts",
+        "string": "Bastone dei Dardi Elettrici di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffExpelDaedraWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Expulsion",
+        "string": "Bastone Scaccia-Daedra di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureStormAtronachEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of the Storm Atronach",
+        "string": "Bastone dell'Atronach della Tempesta d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffSoulTrapDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Soul Trapping",
+        "string": "Bastone della Trappola dell'Anima daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffBanishDaedraGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Banishing",
+        "string": "Bastone del Bando di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffLightningBoltDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Lightning Bolts",
+        "string": "Bastone dei Dardi Elettrici daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SummonDraugrBossFIX",
+        "type": "NPC_ FULL",
+        "original": "Ancestor Ghost",
+        "string": "Antenato Fantasma"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCourageDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Courage",
+        "string": "Bastone del Coraggio di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffParalyzeWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Paralysis",
+        "string": "Bastone della Paralisi di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffHealOtherEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Mending",
+        "string": "Bastone della Guarigione d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofStormsDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of the Storm Wall",
+        "string": "Bastone del Muro di Tempesta di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCourageSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Courage",
+        "string": "Bastone del Coraggio d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFireballWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Fireballs",
+        "string": "Bastone delle Palle di Fuoco di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofFlamesSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of the Flame Wall",
+        "string": "Bastone del muro di Fiamma d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFrostAtronachSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of the Frost Atronach",
+        "string": "Bastone dell'Atronach del Ghiaccio d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRevenantDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Revenants",
+        "string": "Bastone del Revenant daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofStormsWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of the Storm Wall",
+        "string": "Bastone del Muro di Tempesta di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofStormsSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of the Storm Wall",
+        "string": "Bastone del Muro di Tempesta d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffHealOtherDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Mending",
+        "string": "Bastone della Guarigione daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFireboltEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Firebolts",
+        "string": "Bastone dei Dardi di Fuoco d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofStormsGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of the Storm Wall",
+        "string": "Bastone del Muro di Tempesta di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRallyEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Inspiration",
+        "string": "Bastone dell'Ispirazione d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofStormsEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of the Storm Wall",
+        "string": "Bastone del Muro di Tempesta d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCourageDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Courage",
+        "string": "Bastone del Coraggio daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFrostbiteSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Frostbite",
+        "string": "Bastone della Morsa Gelida d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffParalyzeEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Paralysis",
+        "string": "Bastone della Paralisi d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFireballWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Fireballs",
+        "string": "Bastone delle Palle di Fuoco di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffReanimateCorpseSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Reanimation",
+        "string": "Bastone della Rianimazione d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIncinerateDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Incineration",
+        "string": "Bastone dell'Incenerimento daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofStormsSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of the Storm Wall",
+        "string": "Bastone del Muro di Tempesta d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRepelUndeadGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Grand Staff of Repulsion",
+        "string": "Bastone Supremo della Repulsione di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRepelLesserUndeadDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Repulsion",
+        "string": "Bastone della Repulsione di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFrostAtronachDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of the Frost Atronach",
+        "string": "Bastone dell'Atronach del Ghiaccio di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffMagelightGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Magelight",
+        "string": "Bastone della Luce Magica di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRepelLesserUndeadEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Repulsion",
+        "string": "Bastone della Repulsione d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRepelLesserUndeadGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Repulsion",
+        "string": "Bastone della Repulsione di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIncinerateEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Incineration",
+        "string": "Bastone dell'Incenerimento d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffDreadZombieSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Dread Zombies",
+        "string": "Bastone dello Zombi del Terrore d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffHealOtherWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Mending",
+        "string": "Bastone della Guarigione di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRepelLesserUndeadWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Repulsion",
+        "string": "Bastone della Repulsione di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffThunderboltDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Thunderbolts",
+        "string": "Bastone della Folgore daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRepelLesserUndeadDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Repulsion",
+        "string": "Bastone della Repulsione daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFireballSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Fireballs",
+        "string": "Bastone delle Palle di Fuoco d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRepelUndeadSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Grand Staff of Repulsion",
+        "string": "Bastone Supremo della Repulsione d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRepelUndeadWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Grand Staff of Repulsion",
+        "string": "Bastone Supremo della Repulsione di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofStormsDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of the Storm Wall",
+        "string": "Bastone del Muro di Tempesta daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIcySpearDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Icy Spear",
+        "string": "Bastone della Lancia Gelida di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFrostbiteDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Frostbite",
+        "string": "Bastone della Morsa Gelida di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRepelUndeadWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Grand Staff of Repulsion",
+        "string": "Bastone Supremo della Repulsione di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRaiseZombieDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Zombies",
+        "string": "Bastone degli Zombi daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFrostAtronachDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of the Frost Atronach",
+        "string": "Bastone dell'Atronach del Ghiaccio daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFrenzyWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Frenzy",
+        "string": "Bastone della Frenesia di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRallyDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Inspiration",
+        "string": "Bastone dell'Ispirazione di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRevenantDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Revenants",
+        "string": "Bastone del Revenant di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRevenantEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Revenants",
+        "string": "Bastone del Revenant d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRevenantSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Revenants",
+        "string": "Bastone del Revenant d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRevenantWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Revenants",
+        "string": "Bastone del Revenant di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffParalyzeSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Paralysis",
+        "string": "Bastone della Paralisi d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRoutDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Vanquishment",
+        "string": "Bastone della Conquista daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofFlamesSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of the Flame Wall",
+        "string": "Bastone del muro di Fiamma d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRoutDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Vanquishment",
+        "string": "Bastone della Conquista di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnGreaterUndeadSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Grand Staff of Turning",
+        "string": "Bastone Supremo dello Scacciare d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRoutEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Vanquishment",
+        "string": "Bastone della Conquista d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRoutGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Vanquishment",
+        "string": "Bastone della Conquista di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFurySilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Fury",
+        "string": "Bastone della Furia d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffLightningBoltSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Lightning Bolts",
+        "string": "Bastone dei Dardi Elettrici d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffSoulTrapDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Soul Trapping",
+        "string": "Bastone della Trappola dell'Anima di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCourageWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Courage",
+        "string": "Bastone del Coraggio di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFearWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Fear",
+        "string": "Bastone della Paura di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRoutSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Vanquishment",
+        "string": "Bastone della Conquista d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffSoulTrapEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Soul Trapping",
+        "string": "Bastone della Trappola dell'Anima d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffSoulTrapGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Soul Trapping",
+        "string": "Bastone della Trappola dell'Anima di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffSoulTrapSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Soul Trapping",
+        "string": "Bastone della Trappola dell'Anima d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffBanishDaedraWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Banishing",
+        "string": "Bastone del Bando di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFireboltDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Firebolts",
+        "string": "Bastone dei Dardi di Fuoco di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffSparksDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Sparks",
+        "string": "Bastone delle Scintille daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffSparksDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Sparks",
+        "string": "Bastone delle Scintille di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffExpelDaedraDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Expulsion",
+        "string": "Bastone Scaccia-Daedra daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofFrostSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of the Frost Wall",
+        "string": "Bastone del Muro di Ghiaccio d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffSparksEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Sparks",
+        "string": "Bastone delle Scintille d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFlamesWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Flames",
+        "string": "Bastone delle Fiamme di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRaiseZombieSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Zombies",
+        "string": "Bastone degli Zombi d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffSparksSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Sparks",
+        "string": "Bastone delle Scintille d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffReanimateCorpseDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Reanimation",
+        "string": "Bastone della Rianimazione daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffSparksSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Sparks",
+        "string": "Bastone delle Scintille d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffParalyzeDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Paralysis",
+        "string": "Bastone della Paralisi di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffSparksWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Sparks",
+        "string": "Bastone delle Scintille di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffMagelightDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Magelight",
+        "string": "Bastone della Luce Magica daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFuryWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Fury",
+        "string": "Bastone della Furia di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffSparksWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Sparks",
+        "string": "Bastone delle Scintille di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRepelUndeadEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Grand Staff of Repulsion",
+        "string": "Bastone Supremo della Repulsione d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffParalyzeDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Paralysis",
+        "string": "Bastone della Paralisi daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffThunderboltDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Thunderbolts",
+        "string": "Bastone della Folgore di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffThunderboltGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Thunderbolts",
+        "string": "Bastone della Folgore di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFamiliarSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of the Familiar",
+        "string": "Bastone del Famiglio d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffExpelDaedraSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Expulsion",
+        "string": "Bastone Scaccia-Daedra d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffThunderboltSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Thunderbolts",
+        "string": "Bastone della Folgore d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffThunderboltWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Thunderbolts",
+        "string": "Bastone della Folgore di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffHealingHandsGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of the Healing Hand",
+        "string": "Bastone delle Mani Curative di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFrenzyDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Frenzy",
+        "string": "Bastone della Frenesia di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnGreaterUndeadDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Grand Staff of Turning",
+        "string": "Bastone Supremo dello Scacciare di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureStormAtronachSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of the Storm Atronach",
+        "string": "Bastone dell'Atronach della Tempesta d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCommandDaedraWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Daedric Command",
+        "string": "Bastone del Controllo Daedrico di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnGreaterUndeadGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Grand Staff of Turning",
+        "string": "Bastone Supremo dello Scacciare di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCommandDaedraDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Daedric Command",
+        "string": "Bastone del Controllo Daedrico di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFuryDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Fury",
+        "string": "Bastone della Furia di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIceStormWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Ice Storms",
+        "string": "Bastone delle Tempeste di Ghiaccio di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFlameAtronachGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of the Flame Atronach",
+        "string": "Bastone dell'Atronach della Fiamma di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRallySilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Inspiration",
+        "string": "Bastone dell'Ispirazione d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnGreaterUndeadWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Grand Staff of Turning",
+        "string": "Bastone Supremo dello Scacciare di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnLesserUndeadEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Minor Staff of Turning",
+        "string": "Bastone Minore dello Scacciare d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnLesserUndeadWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Minor Staff of Turning",
+        "string": "Bastone Minore dello Scacciare di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRallyDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Inspiration",
+        "string": "Bastone dell'Ispirazione daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCalmDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Calm",
+        "string": "Bastone della Calma di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCommandDaedraSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Daedric Command",
+        "string": "Bastone del Controllo Daedrico d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnLesserUndeadSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Minor Staff of Turning",
+        "string": "Bastone Minore dello Scacciare d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffChainLightningWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Chain Lightning",
+        "string": "Bastone della Catena di Fulmini di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIceStormEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Ice Storms",
+        "string": "Bastone delle Tempeste di Ghiaccio d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffDreadZombieEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Dread Zombies",
+        "string": "Bastone dello Zombi del Terrore d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRallyGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Inspiration",
+        "string": "Bastone dell'Ispirazione di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffChainLightningEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Chain Lightning",
+        "string": "Bastone della Catena di Fulmini d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffChainLightningWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Chain Lightning",
+        "string": "Bastone della Catena di Fulmini di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFrenzyDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Frenzy",
+        "string": "Bastone della Frenesia daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffParalyzeWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Paralysis",
+        "string": "Bastone della Paralisi di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFrostAtronachGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of the Frost Atronach",
+        "string": "Bastone dell'Atronach del Ghiaccio di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFearGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Fear",
+        "string": "Bastone della Paura di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRaiseZombieSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Zombies",
+        "string": "Bastone degli Zombi d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFlamesWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Flames",
+        "string": "Bastone delle Fiamme di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffReanimateCorpseWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Reanimation",
+        "string": "Bastone della Rianimazione di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureStormAtronachDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of the Storm Atronach",
+        "string": "Bastone dell'Atronach della Tempesta di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureStormAtronachGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of the Storm Atronach",
+        "string": "Bastone dell'Atronach della Tempesta di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffBanishDaedraWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Banishing",
+        "string": "Bastone del Bando di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIceStormGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Ice Storms",
+        "string": "Bastone delle Tempeste di Ghiaccio di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFlamesSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Flames",
+        "string": "Bastone delle Fiamme d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRoutWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Vanquishment",
+        "string": "Bastone della Conquista di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffReanimateCorpseSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Reanimation",
+        "string": "Bastone della Rianimazione d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRaiseZombieWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Zombies",
+        "string": "Bastone degli Zombi di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIceSpikeSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Ice Spikes",
+        "string": "Bastone delle Punte di Ghiaccio d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFuryDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Fury",
+        "string": "Bastone della Furia daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRallySteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Inspiration",
+        "string": "Bastone dell'Ispirazione d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIceStormSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Ice Storms",
+        "string": "Bastone delle Tempeste di Ghiaccio d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffReanimateCorpseWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Reanimation",
+        "string": "Bastone della Rianimazione di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFireballSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Fireballs",
+        "string": "Bastone delle Palle di Fuoco d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFlameAtronachDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of the Flame Atronach",
+        "string": "Bastone dell'Atronach della Fiamma daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffBanishDaedraDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Banishing",
+        "string": "Bastone del Bando di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffDreadZombieDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Dread Zombies",
+        "string": "Bastone dello Zombi del Terrore di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffReanimateCorpseGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Reanimation",
+        "string": "Bastone della Rianimazione di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofFrostDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of the Frost Wall",
+        "string": "Bastone del Muro di Ghiaccio di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnGreaterUndeadEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Grand Staff of Turning",
+        "string": "Bastone Supremo dello Scacciare d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffChainLightningDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Chain Lightning",
+        "string": "Bastone della Catena di Fulmini daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCommandDaedraDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Daedric Command",
+        "string": "Bastone del Controllo Daedrico daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffLightningBoltWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Lightning Bolts",
+        "string": "Bastone dei Dardi Elettrici di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFlameAtronachWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of the Flame Atronach",
+        "string": "Bastone dell'Atronach della Fiamma di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFrostAtronachSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of the Frost Atronach",
+        "string": "Bastone dell'Atronach del Ghiaccio d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFireboltDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Firebolts",
+        "string": "Bastone dei Dardi di Fuoco daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCourageGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Courage",
+        "string": "Bastone del Coraggio di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffExpelDaedraDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Expulsion",
+        "string": "Bastone Scaccia-Daedra di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffExpelDaedraEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Expulsion",
+        "string": "Bastone Scaccia-Daedra d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffChainLightningSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Chain Lightning",
+        "string": "Bastone della Catena di Fulmini d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffMagelightEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Magelight",
+        "string": "Bastone della Luce Magica d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffMagelightDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Magelight",
+        "string": "Bastone della Luce Magica di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffExpelDaedraWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Expulsion",
+        "string": "Bastone Scaccia-Daedra di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFireboltWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Firebolts",
+        "string": "Bastone dei Dardi di Fuoco di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFrenzyGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Frenzy",
+        "string": "Bastone della Frenesia di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIncinerateSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Incineration",
+        "string": "Bastone dell'Incenerimento d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIncinerateGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Incineration",
+        "string": "Bastone dell'Incenerimento di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIncinerateWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Incineration",
+        "string": "Bastone dell'Incenerimento di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRepelLesserUndeadSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Repulsion",
+        "string": "Bastone della Repulsione d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFamiliarDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of the Familiar",
+        "string": "Bastone del Famiglio daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRallyWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Inspiration",
+        "string": "Bastone dell'Ispirazione di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFrostAtronachWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of the Frost Atronach",
+        "string": "Bastone dell'Atronach del Ghiaccio di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIcySpearDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Icy Spear",
+        "string": "Bastone della Lancia Gelida daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffChainLightningSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Chain Lightning",
+        "string": "Bastone della Catena di Fulmini d'acciaio"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIceStormSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Ice Storms",
+        "string": "Bastone delle Tempeste di Ghiaccio d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffChainLightningGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Chain Lightning",
+        "string": "Bastone della Catena di Fulmini di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnGreaterUndeadSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Grand Staff of Turning",
+        "string": "Bastone Supremo dello Scacciare d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRaiseZombieWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Zombies",
+        "string": "Bastone degli Zombi di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIncinerateWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Incineration",
+        "string": "Bastone dell'Incenerimento di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCalmSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Calm",
+        "string": "Bastone della Calma d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffDreadZombieWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Dread Zombies",
+        "string": "Bastone dello Zombi del Terrore di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRaiseZombieGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Zombies",
+        "string": "Bastone degli Zombi di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffHealingHandsDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of the Healing Hand",
+        "string": "Bastone delle Mani Curative di dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffHealingHandsDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of the Healing Hand",
+        "string": "Bastone delle Mani Curative daedrico"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFuryWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Fury",
+        "string": "Bastone della Furia di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnUndeadSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Turning",
+        "string": "Bastone dello Scacciare d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFrenzySilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Frenzy",
+        "string": "Bastone della Frenesia d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIcySpearGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Icy Spear",
+        "string": "Bastone della Lancia Gelida di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCommandDaedraWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Daedric Command",
+        "string": "Bastone del Controllo Daedrico di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIcySpearWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Icy Spear",
+        "string": "Bastone della Lancia Gelida di legno"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIceSpikeEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Ice Spikes",
+        "string": "Bastone delle Punte di Ghiaccio d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofFrostEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of the Frost Wall",
+        "string": "Bastone del Muro di Ghiaccio d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnUndeadEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Turning",
+        "string": "Bastone dello Scacciare d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffHealOtherSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Mending",
+        "string": "Bastone della Guarigione d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFlamesGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Flames",
+        "string": "Bastone delle Fiamme di vetro"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFrenzyEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Frenzy",
+        "string": "Bastone della Frenesia d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRaiseZombieEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Zombies",
+        "string": "Bastone degli Zombi d'ebano"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIceSpikeSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Ice Spikes",
+        "string": "Bastone delle Punte di Ghiaccio d'acciaio"
+    }
+]

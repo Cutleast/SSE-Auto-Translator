@@ -1,0 +1,692 @@
+[
+    {
+        "editor_id": "ccBGSSSE013_EnchDawnfangDescriptionFX",
+        "type": "MGEF FULL",
+        "original": "Dawnfang Description Effect",
+        "string": "Descrizione effetto Zannalba"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Dawnfang",
+        "type": "WEAP FULL",
+        "original": "Dawnfang",
+        "string": "Zannalba"
+    },
+    {
+        "editor_id": "ccBGSSSE013_DawnfangBladeEnch",
+        "type": "ENCH FULL",
+        "original": "Dawnfang FX",
+        "string": "Zannalba FX"
+    },
+    {
+        "editor_id": "ccBGSSSE013_EnchDawnfangKillIncrementFX",
+        "type": "MGEF FULL",
+        "original": "Dawnfang Kill Count Increment Effect",
+        "string": "Incremento conteggio uccisioni Zannalba"
+    },
+    {
+        "editor_id": "ccBGSSSE013_EncSkelMelee1H",
+        "type": "NPC_ FULL",
+        "original": "Cursed Smuggler",
+        "string": "Contrabbandiere maledetto"
+    },
+    {
+        "editor_id": "ccBGSSSE013_RedGuardian",
+        "type": "NPC_ FULL",
+        "original": "The Guardian",
+        "string": "Il Guardiano"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Journal",
+        "type": "BOOK FULL",
+        "original": "Sellonus's Confession",
+        "string": "Confessione di Sellonus"
+    },
+    {
+        "editor_id": "ccBGSSSE013_BlueGuardianFinalWifeScene",
+        "type": "NPC_ FULL",
+        "original": "The Guardian",
+        "string": "Il Guardiano"
+    },
+    {
+        "editor_id": "ccBGSSSE013_StoryCorpseSmugglerRigid",
+        "type": "NPC_ FULL",
+        "original": "Smuggler",
+        "string": "Contrabbandiere"
+    },
+    {
+        "editor_id": "ccBGSSSE013_AbGhosttRED",
+        "type": "MGEF FULL",
+        "original": "Ghost Visuals Red",
+        "string": "Visione fantasma rosso"
+    },
+    {
+        "editor_id": "ccBGSSSE013_TreasCorpseSmugglerRigid",
+        "type": "NPC_ FULL",
+        "original": "Smuggler",
+        "string": "Contrabbandiere"
+    },
+    {
+        "editor_id": "ccBGSSSE013_DawnfangDayNightSpell",
+        "type": "SPEL FULL",
+        "original": "Dawnfang Day Night Effects",
+        "string": "Effetti giorno notte Zannalba"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Tomb",
+        "type": "ACTI FULL",
+        "original": "Tomb of the Guardian's Wife",
+        "string": "Tomba della moglie del Guardiano"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Skeleton01AmbushMelee2H",
+        "type": "NPC_ FULL",
+        "original": "Cursed Smuggler",
+        "string": "Contrabbandiere maledetto"
+    },
+    {
+        "editor_id": "ccBGSSSE013_DuskfangMonitorMGEF",
+        "type": "MGEF FULL",
+        "original": "Duskfang Effect",
+        "string": "Effetto Zannacrepuscolo"
+    },
+    {
+        "editor_id": "ccBGSSSE013_GhostAbilityRed",
+        "type": "SPEL FULL",
+        "original": "Red Ghost Ability",
+        "string": "Abilit\u00e0 del fantasma rosso"
+    },
+    {
+        "editor_id": "ccBGSSSE013_GreenLASTSTAND",
+        "type": "NPC_ FULL",
+        "original": "The Guardian",
+        "string": "Aspetto della paura"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Note2",
+        "type": "BOOK FULL",
+        "original": "Guild Mage's Note",
+        "string": "Nota del mago della gilda"
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "type": "QUST NNAM",
+        "original": "Find a way to free the sword",
+        "string": "Trova un modo per liberare la spada"
+    },
+    {
+        "editor_id": "ccBGSSSE013_GuildMemberCorpse",
+        "type": "NPC_ FULL",
+        "original": "Skeleton",
+        "string": "Scheletro"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Note4",
+        "type": "BOOK FULL",
+        "original": "Guild Mage's Missive",
+        "string": "Missiva del mago della gilda"
+    },
+    {
+        "editor_id": "ccBGSSSE013_JournalGuild01",
+        "type": "BOOK FULL",
+        "original": "Sellonus's Journal Vol. 1",
+        "string": "Diario di Sellonus, Volume 1"
+    },
+    {
+        "editor_id": "ccBGSSSE013_EnchFireDamageFFContact",
+        "type": "MGEF DNAM",
+        "original": " ",
+        "string": ""
+    },
+    {
+        "editor_id": "ccBGSSSE013_EnchAbsorbHealthFFContact",
+        "type": "MGEF FULL",
+        "original": "Dawnfang Absorb Health",
+        "string": "Assorbi salute Zannalba"
+    },
+    {
+        "editor_id": "ccBGSSSE013_JournalGuild03",
+        "type": "BOOK FULL",
+        "original": "Sellonus's Journal Vol. 3",
+        "string": "Diario di Sellonus, Volume 3"
+    },
+    {
+        "editor_id": "ccBGSSSE013_AbGhosttGREEN",
+        "type": "MGEF FULL",
+        "original": "Ghost Visuals",
+        "string": "Visione fantasma"
+    },
+    {
+        "editor_id": "ccBGSSSE013Lair",
+        "type": "CELL FULL",
+        "original": "The Guardian Vault",
+        "string": "La cripta del Guardiano"
+    },
+    {
+        "editor_id": "ccBGSSSE013_JournalGuild02",
+        "type": "BOOK FULL",
+        "original": "Sellonus's Journal Vol. 2",
+        "string": "Diario di Sellonus, Volume 2"
+    },
+    {
+        "editor_id": "ccBGSSSE013_VaultEntrance001",
+        "type": "DOOR FULL",
+        "original": "Sewer Grid",
+        "string": "Griglia fognaria"
+    },
+    {
+        "editor_id": "ccBGSSSE013_StoryGuildMemberCorpse",
+        "type": "NPC_ FULL",
+        "original": "Guild Mage",
+        "string": "Mago della gilda"
+    },
+    {
+        "editor_id": "ccBGSSSE013_EnchFrostDamageFFContact",
+        "type": "MGEF FULL",
+        "original": "Duskfang Frost Damage",
+        "string": "Danno da gelo Zannacrepuscolo"
+    },
+    {
+        "editor_id": "ccBGSSSE013_DuskfangName",
+        "type": "MESG FULL",
+        "original": "Duskfang",
+        "string": "Zannacrepuscolo"
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "type": "QUST NNAM",
+        "original": "Find the ghost in the Ratway",
+        "string": "Trova il fantasma nel Ratway"
+    },
+    {
+        "editor_id": "ccBGSSSE013_GreenGuardian",
+        "type": "NPC_ FULL",
+        "original": "The Guardian",
+        "string": "Il Guardiano"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Note3",
+        "type": "BOOK FULL",
+        "original": "Guild Mage's Warning",
+        "string": "Avvertimento del mago della gilda"
+    },
+    {
+        "editor_id": "ccBGSSSE013_INITIALNote",
+        "type": "BOOK FULL",
+        "original": "Public Notice",
+        "string": "Avviso pubblico"
+    },
+    {
+        "editor_id": "ccBGSSSE013_GhostAbilityGreen",
+        "type": "SPEL FULL",
+        "original": "Green Ghost Ability",
+        "string": "Abilit\u00e0 del fantasma verde"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Note1",
+        "type": "BOOK FULL",
+        "original": "Guild Mage's Last Words",
+        "string": "Ultime parole del mago della gilda"
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "type": "QUST NNAM",
+        "original": "Investigate rumors of ghosts in the Riften Ratway",
+        "string": "Indaga sulle voci sul fantasma del Ratway di Riften"
+    },
+    {
+        "editor_id": "ccBGSSSE013_RedLASTSTAND",
+        "type": "NPC_ FULL",
+        "original": "The Guardian",
+        "string": "Aspetto della rabbia"
+    },
+    {
+        "editor_id": "ccBGSSSE013_EnchFireDamageFFContact",
+        "type": "MGEF FULL",
+        "original": "Dawnfang Fire Damage",
+        "string": "Danno da fuoco Zannalba"
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "type": "QUST FULL",
+        "original": "A Soul Divided",
+        "string": "Un'anima divisa"
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "type": "QUST NNAM",
+        "original": "Follow the ghost",
+        "string": "Segui il fantasma"
+    },
+    {
+        "editor_id": "ccBGSSSE013_EnchAbsorbMagickaFFContact",
+        "type": "MGEF FULL",
+        "original": "Duskfang Magicka Drain",
+        "string": "Prosciuga magicka Zannacrepuscolo"
+    },
+    {
+        "editor_id": "ccBGSSSE013_SmugNote1",
+        "type": "BOOK FULL",
+        "original": "Old Smuggler's Note",
+        "string": "Vecchia nota del contrabbandiere"
+    },
+    {
+        "editor_id": "ccBGSSSE013_BlueGuardian",
+        "type": "NPC_ FULL",
+        "original": "The Guardian",
+        "string": "Il Guardiano"
+    },
+    {
+        "editor_id": "ccBGSSSE013_WifeGhost",
+        "type": "NPC_ FULL",
+        "original": "Ghostly Apparition",
+        "string": "Apparizione spettrale"
+    },
+    {
+        "editor_id": "ccBGSSSE013_DawnfangMonitorMGEF",
+        "type": "MGEF FULL",
+        "original": "Dawnfang Effect",
+        "string": "Effetto Zannalba"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Skeleton01AmbushMelee1HShield",
+        "type": "NPC_ FULL",
+        "original": "Cursed Smuggler",
+        "string": "Contrabbandiere maledetto"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Tomb",
+        "type": "ACTI RNAM",
+        "original": "Touch",
+        "string": "Tocca"
+    },
+    {
+        "editor_id": "ccBGSSSE013_SkeletonMeleeMissile",
+        "type": "NPC_ FULL",
+        "original": "Cursed Smuggler",
+        "string": "Contrabbandiere maledetto"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Note5",
+        "type": "BOOK FULL",
+        "original": "Guild Mage's Scribble",
+        "string": "Scarabocchio del mago della gilda"
+    },
+    {
+        "editor_id": "ccBGSSSE013_DawnfangMonitorAliasMGEF",
+        "type": "MGEF FULL",
+        "original": "Dawnfang Effect",
+        "string": "Effetto Zannalba"
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "type": "QUST NNAM",
+        "original": "Defeat the Guardian",
+        "string": "Sconfiggi il Guardiano"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Smugleader",
+        "type": "BOOK FULL",
+        "original": "Verrick's Note",
+        "string": "Nota di Verrick"
+    },
+    {
+        "editor_id": "ccBGSSSE013_SmugNote",
+        "type": "BOOK FULL",
+        "original": "Torn Smuggler's Note",
+        "string": "Nota strappata del contrabbandiere"
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "type": "QUST NNAM",
+        "original": "Investigate the north chamber",
+        "string": "Esplora la sala settentrionale"
+    },
+    {
+        "editor_id": "ccBGSSSE013_EnchDawnfangDescriptionFX",
+        "type": "MGEF DNAM",
+        "original": "In daytime, deals <7> points of fire damage. At night, deals <7> points of frost damage. After killing 12 creatures, absorbs <5> points of health or magicka. <Global=ccBGSSSE013_KillCountGlobal> creatures killed.",
+        "string": "Durante il giorno, infligge <7> punti di danno da fuoco. Durante la notte, infligge <7> punti di danno da gelo. Dopo aver ucciso 12 creature, assorbe <5> punti di salute o magicka. <Global=ccBGSSSE013_KillCountGlobal> creature uccise."
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "type": "QUST NNAM",
+        "original": "Return to the sword chamber",
+        "string": "Torna nella sala della spada"
+    },
+    {
+        "editor_id": "ccBGSSSE013_JailDoor",
+        "type": "DOOR FULL",
+        "original": "Door",
+        "string": "Porta"
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "type": "QUST NNAM",
+        "original": "Investigate the vault",
+        "string": "Esplora la cripta"
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "type": "QUST NNAM",
+        "original": "Retrieve the sword",
+        "string": "Recupera la spada"
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "type": "QUST NNAM",
+        "original": "Investigate the east chamber",
+        "string": "Esplora la sala orientale"
+    },
+    {
+        "editor_id": "ccBGSSSE013_ChamberDoor",
+        "type": "DOOR FULL",
+        "original": "Door",
+        "string": "Porta"
+    },
+    {
+        "editor_id": "ccBGSSSE013_DoorActivator1",
+        "type": "ACTI FULL",
+        "original": "The Guardian Vault",
+        "string": "La cripta del Guardiano"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Wifenote",
+        "type": "BOOK FULL",
+        "original": "Letter from Home",
+        "string": "Lettera da casa"
+    },
+    {
+        "editor_id": "ccBGSSSE013_BloodthirstBladeEnch",
+        "type": "ENCH FULL",
+        "original": "Bloodthirst",
+        "string": "Sanguinaria"
+    },
+    {
+        "editor_id": "ccBGSSSE013_BloodthirstQuest",
+        "type": "QUST NNAM",
+        "original": "Investigate Faldar's Tooth",
+        "string": "Indaga presso Dente di Faldar"
+    },
+    {
+        "editor_id": "ccBGSSSE013_WeaponSpeed",
+        "type": "MGEF DNAM",
+        "original": "Increases attack speed by <7%>.",
+        "string": "Aumenta la velocit\u00e0 d'attacco del <7%>."
+    },
+    {
+        "editor_id": "ccBGSSSE013_BloodthirstQuest",
+        "type": "QUST NNAM",
+        "original": "Retrieve Bloodthirst from Broken Fang Cave",
+        "string": "Recupera Sanguinaria dalla Caverna della Zanna Rotta"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Note6",
+        "type": "BOOK FULL",
+        "original": "Cage Bandit's Note",
+        "string": "Nota del bandito in gabbia"
+    },
+    {
+        "editor_id": "ccBGSSSE013_EnchBloodthirst",
+        "type": "MGEF DNAM",
+        "original": "Increases speed by <7%>. Targets take additional bleed damage.",
+        "string": "Aumenta la velocit\u00e0 del <7%>. I bersagli subiscono danni da sanguinamento aggiuntivi."
+    },
+    {
+        "editor_id": "ccBGSSSE013_EnchBloodthirst",
+        "type": "MGEF FULL",
+        "original": "Bloodthirst Display Effect",
+        "string": "Effetto Sanguinaria"
+    },
+    {
+        "editor_id": "ccBGSSSE013_BloodthirstAbility",
+        "type": "SPEL FULL",
+        "original": "Bloodthirst Ability",
+        "string": "Abilit\u00e0 Sanguinaria"
+    },
+    {
+        "editor_id": "ccBGSSSE013_DoorActivator2",
+        "type": "ACTI FULL",
+        "original": "The Ratway",
+        "string": "Il Ratway"
+    },
+    {
+        "editor_id": "ccBGSSSE013_DoorActivator1",
+        "type": "ACTI RNAM",
+        "original": "Open",
+        "string": "Apri"
+    },
+    {
+        "editor_id": "ccBGSSSE013_DoorActivator2",
+        "type": "ACTI RNAM",
+        "original": "Open",
+        "string": "Apri"
+    },
+    {
+        "editor_id": "ccBGSSSE013_WeaponSpeed",
+        "type": "MGEF FULL",
+        "original": "Bloodthirst Speed",
+        "string": "Velocit\u00e0 Sanguinaria"
+    },
+    {
+        "editor_id": "ccBGSSSE013_BloodthirstQuest",
+        "type": "QUST FULL",
+        "original": "Bloodthirst",
+        "string": "Sanguinaria"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Bloodthirst",
+        "type": "WEAP FULL",
+        "original": "Bloodthirst",
+        "string": "Sanguinaria"
+    },
+    {
+        "editor_id": "ccBGSSSE013_DawnFangControl",
+        "type": "QUST FULL",
+        "original": "Dawnfang Control Quest",
+        "string": "Missione controllo Zannalba"
+    },
+    {
+        "editor_id": "ccBGSSSE013_GuardianRealName",
+        "type": "MESG FULL",
+        "original": "Lorant Bouchard",
+        "string": "Emile Bouchard"
+    },
+    {
+        "editor_id": "ccBGSSSE013_LairLocation",
+        "type": "LCTN FULL",
+        "original": "The Guardian Vault",
+        "string": "La cripta del Guardiano"
+    },
+    {
+        "editor_id": "ccBGSSSE013_DawnfangBarrier",
+        "type": "ACTI FULL",
+        "original": "Barrier",
+        "string": "Spada"
+    },
+    {
+        "editor_id": "ccBGSSSE013_NoteActivator",
+        "type": "ACTI FULL",
+        "original": "Public Notice",
+        "string": "Avviso pubblico"
+    },
+    {
+        "editor_id": "RiftenRatway01",
+        "type": "CELL FULL",
+        "original": "The Ratway",
+        "string": "Il Ratway"
+    },
+    {
+        "editor_id": "BrokenFangCave01",
+        "type": "CELL FULL",
+        "original": "Broken Fang Cave",
+        "string": "Caverna della Zanna Rotta"
+    },
+    {
+        "editor_id": "FaldarsTooth01",
+        "type": "CELL FULL",
+        "original": "Faldar's Tooth",
+        "string": "Dente di Faldar"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Note5",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\n\nWE ARE DOOMED\n\nTHERE IS NO HOPE</font>",
+        "string": "<font face='$HandwrittenFont'>\n\nSIAMO SPACCIATI\n\nNON ABBIAMO SPERANZE</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Note4",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\nWe have to try to contain him or die trying. \n\nShe is the key to everything, for her death defined him and drove him insane. Perhaps we can use her remains to summon her spirit and calm him.</font>",
+        "string": "<font face='$HandwrittenFont'>\nDobbiamo cercare di fermarlo o moriremo provandoci. \n\nLei \u00e8 la chiave di tutto, la sua morte ha inciso troppo su di lui e lo ha fatto impazzire. Forse possiamo usare i suoi resti per evocarne lo spirito e farlo calmare.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Note2",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\nHow could this have happened? Our plan should have worked. But who could foresee that his weapon would interfere with our simple enchantments. And now we have become ensnared in our own trap.\n\nWhat is this weapon and what does it herald?\n</font>",
+        "string": "<font face='$HandwrittenFont'>\nCom'\u00e8 potuto succedere? Il nostro piano avrebbe dovuto funzionare. Chi poteva prevedere che quell'arma avrebbe interferito con i nostri incantesimi? Adesso siamo tutti vittime della nostra stessa trappola.\n\nChe arma \u00e8 questa e di cosa \u00e8 portatrice?\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Journal",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>\n<b>7th of Morning Star, 4E 171</b><font size='10'>\n\n<font size='18'>My son, I do not have long for this world, but before the winter night embraces me, I would confess a great regret that has burdened my heart for many years.<font size='10'>\n\n<font size='18'>Long ago, my brethren and I were commissioned to hunt down and ensnare a dark and powerful renegade captain. A man who, once a proud soldier, had become corrupted by a powerful artifact, and turned to great darkness of deed. We fulfilled our commission, but not without great cost, for I alone managed to survive the encounter.<font size='10'>\n\n<font size='18'>But, in the many years that have followed this venture, I have often wondered if our deed in ensnaring him was equally evil. For with our combined enchantments, we have bound him to an eternity of misery, for we bound him to the guardianship of the very thing that drove him insane, the artifact. A powerful weapon that now, despite his yearning for it, he cannot yield while he lives.<font size='10'>\n\n<font size='18'>It is a cruel fate for a once great man, for he was just that until grief and anger laid him bare to such utter corruption and malice. That story is a sad tale indeed.<font size='10'>\n\n<font size='18'>But now, these many years on, my heart sees the truth, and I would undo that which was done and free him from his misery. But alas, it is too late for me to take on such a quest. Therefore I pray that you, my son, will do this task in my stead.<font size='10'>\n[pagebreak]\n<font size='18'>I beg you as a father's last wish, seek him out and set him free.<font size='10'>\n\n<font size='18'>Your father,\n\nSellonus</font>",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\n<b>7 Stella del Mattino, 4E 171</b><font size='10'>\n\n<font size='18'>Figliolo, non mi resta molto tempo prima che la fredda notte invernale mi avvolga, ma voglio confessarti un grande rimpianto che mi assilla da tanti anni.<font size='10'>\n\n<font size='18'>Tanto tempo fa, a me e a mio fratello venne chiesto di dare la caccia e intrappolare un oscuro e potente capitano in fuga. Un uomo che, da grande soldato che era, fu corrotto da un potente manufatto e sopraffatto dall'oscurit\u00e0. Abbiamo portato a termine la missione, ma non senza perdite. Infatti solo io riuscii a sopravvivere all'incontro.<font size='10'>\n\n<font size='18'>Negli anni a seguire, mi sono spesso domandato se abbiamo fatto la cosa giusta intrappolandolo. Con i nostri incantesimi, lo abbiamo costretto all'eterna sofferenza, mettendolo a guardia dello stesso oggetto che lo aveva fatto impazzire, il manufatto. Un'arma potente che, per quanto lo voglia, non potr\u00e0 mai brandire finch\u00e9 \u00e8 in vita.<font size='10'>\n\n<font size='18'>\u00c8 un destino crudele per un grand'uomo, perch\u00e9 tale era prima che il dolore e la rabbia lo rendessero corrotto e malvagio. Una storia molto triste.<font size='10'>\n\n<font size='18'>Ma adesso, dopo tutti questi anni, finalmente il mio cuore \u00e8 riuscito a capire cos'\u00e8 giusto e vorrei liberarlo dalla sua sofferenza. Purtroppo, per me \u00e8 ormai troppo tardi. Ti prego, figliolo, porta a termine questa missione al posto mio.<font size='10'>\n[pagebreak]\n<font size='18'>Te lo chiedo come mio ultimo desiderio, trovalo e liberalo.<font size='10'>\n\n<font size='18'>Tuo padre,\n\nSellonus</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE013_SmugNote1",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\nDamn these mages with their magic! Things were good here, life was sweet and profits were aplenty before the boss agreed to help these fools with their trap. This venture will cost us the shirts off our backs I'll wager.</font>",
+        "string": "<font face='$HandwrittenFont'>\nAl diavolo i maghi e la loro magia! Le cose ci andavano bene, la vita procedeva tranquilla e le entrate non mancavano, prima che accettassimo di aiutare questi idioti con la loro trappola. Scommetto che stavolta ci rimetteremo la pelle.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE013_INITIALNote",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\n<font size=\"25\">\nWARNING - STAY OUT OF THE RATWAY!</font>\n\nIt has come to our attention that some misguided citizens have been venturing into the Ratway late at night. To complicate matters, others have seen fit to spread rumors of their disappearance, stirring up talk of ghosts and phantoms haunting the sewers.\n\nWe would remind you that the Ratway is a not a safe place for commoners, and any talk of ghosts is nothing more than tavern gossip. We will investigate the matter shortly, but in the meantime, take heed and do not enter the Ratway!\n\n--The Riften Guard</font>",
+        "string": "<font face=\"$HandwrittenFont\">\n<font size=\"25\">\nATTENZIONE - STARE ALLA LARGA DAL RATWAY!</font>\n\nSiamo venuti a conoscenza del fatto che alcuni cittadini scellerati si sono avventurati nel Ratway durante la notte. Come se non bastasse, altri hanno ritenuto giusto spargere delle voci sulla loro scomparsa, alimentando storie su fantasmi e spettri che infesterebbero le fogne.\n\nVi ricordiamo che il Ratway non \u00e8 un posto sicuro per i cittadini e che le voci sui fantasmi sono totalmente infondate. Indagheremo sulla questione, ma nel frattempo, fate attenzione e non entrate nel Ratway!\n\n--La Guardia di Riften</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE013_JournalGuild01",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'><b>\n14th of Last Seed, 4E 130</b><font size='10'>\n \n<font size='18'>Our guild has been commissioned to capture and restrain a renegade Blades captain. Many tall tales have been spoken of his cruelty and malice, some even claiming he is part serpent. In addition to bearing the arms of his former employers, it is said that he wields an Akaviri weapon of dark magic. The combination makes him quite formidable.<font size='10'>\n\n<font size='18'>Thankfully, the guild has great experience in dealing with such things and we will win the day!\n[pagebreak]\n<b>6th of Hearthfire, 4E 130</b><font size='10'>\n\n<font size='18'>We encountered our foe but all did not go as planned and he escaped us. He was more powerful than we had imagined and many lives were lost as a result of our misjudgment.<font size='10'>\n\n<font size='18'>However, I am now convinced that his dreaded blade is the source of his power, as I have witnessed first hand the dark magic it yields, for the blade drinks both lifeforce and mana from any that befall it.<font size='10'>\n\n<font size='18'>We must think of a way to separate our foe from the source of his power.\n[pagebreak]\n<b>2nd of Suns Dusk, 4E 130</b><font size='10'>\n\n<font size='18'>We have devised a means to separate our foe from his blade and we must now set a trap and lure him to us. I am certain that it will work, but to be sure I must think of an incentive to draw him to us.<font size='10'>\n\n<font size='18'>I think it would be prudent to research this former Captain in more depth.\n[pagebreak]\n<b>13th of Suns Dusk, 4E 130</b><font size='10'>\n\n<font size='18'>Upon reading what I have regarding our Captain, my heart almost feels pity for him. It would seem that his madness and malice stem from the loss of his wife. The records reveal that it was after this tragic event that the darkness of the soul overcame him.<font size='10'>\n\n<font size='18'>However, pity will not save lives. He must be stopped in all event! Therefore, I have decided to acquire the remains of his loved one, in the hope that this will draw him to us.</font>",
+        "string": "<font face='$HandwrittenFont'><font size='18'><b>\n14 Ultimo Seme, 4E 130</b><font size='10'>\n\n<font size='18'>Alla nostra gilda \u00e8 stato chiesto di catturare e intrappolare un capitano delle Blade in fuga. Molte storie narrano della sua crudelt\u00e0, alcune dicono addirittura che sia in parte serpente. Oltre ad avere con s\u00e9 le armi del suo lavoro precedente, si dice che abbia un'arma akaviri molto potente. Questa combinazione lo rende un uomo molto pericoloso.<font size='10'>\n\n<font size='18'>Per fortuna, la gilda ha molta esperienza in questo genere di missioni e ne usciremo vincitori!\n[pagebreak]\n<b>6 Focolare, 4E 130</b><font size='10'>\n\n<font size='18'>Abbiamo incontrato il nostro nemico, ma le cose si sono messe male e ci \u00e8 sfuggito. \u00c8 pi\u00f9 forte di quanto pensassimo e questo errore di giudizio ci \u00e8 costato molte vite.<font size='10'>\n\n<font size='18'>Ciononostante, adesso sono sicuro che l'arma che porta \u00e8 la fonte del suo potere. Ho visto con i miei occhi la magia oscura di cui \u00e8 capace: la spada si nutre della forza vitale degli uomini che ferisce.<font size='10'>\n\n<font size='18'>Dobbiamo trovare un modo per separare il nostro nemico dalla sua fonte di potere.\n[pagebreak]\n<b>2 Luce del Crepuscolo, 4E 130</b><font size='10'>\n\n<font size='18'>Abbiamo studiato un piano per separare il nostro nemico dalla sua spada, dobbiamo preparare una trappola e attirarlo. Sono certo che funzioner\u00e0, ma abbiamo bisogno di qualcosa che lo attiri a noi.<font size='10'>\n\n<font size='18'>Dovremmo svolgere ulteriori ricerche su questo capitano.\n[pagebreak]\n<b>13 Luce del Crepuscolo, 4E 130</b><font size='10'>\n\n<font size='18'>Dopo aver letto tutte le informazioni che abbiamo sul capitano, provo quasi piet\u00e0 per lui. La sua pazzia e crudelt\u00e0 nascono dalla perdita della moglie. Sembra che sia stato questo evento tragico a scatenare l'oscurit\u00e0 della sua anima.<font size='10'>\n\n<font size='18'>Ma la piet\u00e0 non salva vite. Dev'essere fermato a tutti i costi! Ho deciso di procurarmi i resti della sua amata, nel tentavo di attirarlo a noi.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE013_JournalGuild03",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'><b>22nd of Morning Star, 4E 131</b><font size='10'>\n\n<font size='18'>What was done cannot be undone! We did what we set out to do and our commission was fulfilled, but at such a horrid cost for all of us.<font size='10'>\n\n<font size='18'>Together we endeavored to lay a trap here, with the aid of the inhabitant smugglers, and ensnare him. Knowing something of his past, we brought with us the remains of his dear departed wife, hoping that this alone would lure him into our grasp. Our plan worked, but something went horribly wrong! \n[pagebreak]\nPerhaps it was a mishap of our magic or the deeper magic of the weapon he wielded, I know not which with any certainty. All I know is that for some reason, our enchantment caused his being to divide, and we suddenly found ourselves caught in a battle with three where there had once been one!<font size='10'>\n\n<font size='18'>But with great effort we managed to separate and contain these divisions within the chambers of this vault. But this was a small victory, if any at all, for I have yet to determine the true cost of it. \n[pagebreak]\nI know not how many of my guild survived the deed, for I cannot break the seals to these doors without undoing all that we have achieved. All I can do is await their return and pray.<font size='10'>\n\n<font size='18'>There is at least some comfort in knowing that our foe can no longer wield his blade, for he and the magical shield are one. He is bound to it. He is now both its prisoner and its guardian!\n[pagebreak]\n<b>23rd of Morning Star, 4E 131</b><font size='10'>\n\n<font size='18'>Alas, our casualties were too high. For although we have trapped him here in this vault, it is now clear to me that only I and one other may live to tell this tale. However, there is no time to grieve the loss of our guild, for we must seal this place shut and report to the council at once. They must be informed of what has happened here.<font size='10'>\n\n <font size='18'>My colleague is severely wounded, but hopefully he has strength yet to assist me, for we must not fail!</font>",
+        "string": "<font face='$HandwrittenFont'><font size='18'><b>22 Stella del Mattino, 4E 131</b><font size='10'>\n\n<font size='18'>Ci\u00f2 che \u00e8 fatto \u00e8 fatto! Siamo riusciti a mettere in pratica il nostro piano e la missione \u00e8 compiuta, ma a un costo veramente terribile.<font size='10'>\n\n<font size='18'>Abbiamo preparato la trappola con l'aiuto dei contrabbandieri e l'abbiamo bloccato. Grazie a quello che sapevamo sul suo passato, ci siamo procurati i resti della moglie, sperando di riuscire a attirarlo a noi. Il piano ha funzionato, ma qualcosa \u00e8 andato terribilmente storto! \n[pagebreak]\nForse \u00e8 stato un errore nei nostri incantesimi, o forse la magia della sua arma era ancora pi\u00f9 potente di quanto pensassimo, non so di preciso cosa sia successo. Quello che so \u00e8 che in qualche modo la sua essenza si \u00e8 divisa e ci siamo ritrovati a combattere con tre nemici al posto di uno!<font size='10'>\n\n<font size='18'>Dopo grandi sforzi siamo riusciti a intrappolarli nelle camere di quella che sar\u00e0 la sua cripta. Ma non riesco a gioire di questa vittoria, sempre che lo sia, perch\u00e9 devo ancora capire quanto ci \u00e8 costata. \n[pagebreak]\nSo che solo pochi della mia gilda sono sopravvissuti, ma non posso togliere i sigilli alle camere senza mandare all'aria ci\u00f2 che abbiamo ottenuto. Non mi resta che aspettare e pregare.<font size='10'>\n\n<font size='18'>Almeno sappiamo che il nostro nemico non potr\u00e0 pi\u00f9 brandire la spada, ormai \u00e8 tutt'uno con lo scudo magico. Sono legati. Adesso ne \u00e8 prigioniero e guardiano!\n[pagebreak]\n<b>23 Stella del Mattino, 4E 131</b><font size='10'>\n\n<font size='18'>Purtroppo le nostre perdite sono state altissime. Siamo riusciti a intrappolarlo, ma solo io e forse un altro mio compagno sopravvivremo per raccontarlo. Non abbiamo tempo per piangere la scomparsa della nostra gilda, dobbiamo sigillare questo posto e fare subito rapporto al consiglio. Devono sapere cos'\u00e8 successo.<font size='10'>\n\n <font size='18'>Il mio collega \u00e8 ferito gravemente, ma forse riuscir\u00e0 ad aiutarmi. Non possiamo fallire!</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Note1",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\n\nI am done. My wounds are too deep, and so I have chosen to remain and lock this area. All I can do is pray that Sellonus made it out and sealed this dreaded place shut forever. At least then my death will not be in vain.\n\n</font>",
+        "string": "<font face='$HandwrittenFont'>\n\nSono spacciato. Le mie ferite sono troppo gravi, quindi ho deciso di rimanere indietro e bloccare la zona. Spero che Sellonus sia scappato e abbia sigillato questo posto per sempre. Almeno la mia morte non sar\u00e0 vana.\n\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Note3",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\nI warned them to be cautious. No matter how perfect the incantation, magic is the husband of chaos. We let our guard down, and this abomination is the result of our hubris.\n\nAnd to make matters worse, he has divided into three. Divines help us all. \n</font>",
+        "string": "<font face='$HandwrittenFont'>\nLi avevo avvertiti di fare attenzione. Non importa quanto sia perfetto l'incantesimo, dietro la magia si cela sempre il caos. Abbiamo abbassato la guardia e questo abominio \u00e8 il risultato della nostra arroganza.\n\nA peggiorare le cose, si \u00e8 diviso in tre. Che i Divini ci aiutino. \n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE013_JournalGuild02",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'><b>1st of Evenings Star, 4E 130</b><font size='10'>\n\n<font size='18'>We have secured a location that will serve us well; an old partially abandoned smugglers' hideout in Riften. One of the council members, Sychelle Gatharian, had done prior business with the inhabitants, and pointed us in their direction. \n\nIt was a prudent choice, as these small band of unsavory entrepreneurs seem more than happy to assist us with our venture, for they have a love of gold above all else. With this much aid, building our trap should be accomplished reasonably quickly. Once this is done we will bring her remains to us and draw our spider out!\n[pagebreak]\n<font size='18'><b>18th of Morning Star, 4E 131</b><font size='10'>\n\n<font size='18'>It is done. Now all we can do is wait.<font size='10'>\n\n<font size='18'>When he arrives we will incapacitate him with our magic and separate him from his blade. We will then channel his life force and mana into our constructed device, which will use his own energy to shield the weapon from him. In essence he will become bound to it, for whilst he lives, the shield will hold. \n[pagebreak]\nHopefully this plan will work and we can avoid bloodshed, for given what we now know of him, we do not wish his death.<font size='10'>\n\n<font size='18'>Perhaps, there is even hope that, without his blade, we can rehabilitate him, for despite his crimes, I do pity the poor soul.</font>",
+        "string": "<font face='$HandwrittenFont'><font size='18'><b>1 Stella della Sera, 4E 130</b><font size='10'>\n\n<font size='18'>Abbiamo trovato un luogo perfetto per il nostro scopo, un vecchio covo di contrabbandieri a Riften. Uno dei membri del consiglio, Sychelle Gatharian, aveva fatto degli affari con gli occupanti precedenti e ce lo ha indicato. \n\n\u00c8 stata un'ottima scelta, questo piccolo gruppo di imprenditori \u00e8 pi\u00f9 che felice di aiutarci, in nome dell'amore per l'oro. Con il loro aiuto, dovremmo riuscire a costruire la trappola in fretta. A quel punto, andremo a prendere i resti della moglie per attrarre la nostra preda!\n[pagebreak]\n<font size='18'><b>18 Stella del Mattino, 4E 131</b><font size='10'>\n\n<font size='18'>\u00c8 pronta. Adesso dobbiamo soltanto aspettare.<font size='10'>\n\n<font size='18'>Appena si presenter\u00e0 lo bloccheremo con la nostra magia e lo separeremo dalla spada. Poi incanaleremo la sua forza vitale e il suo mana in uno strumento che abbiamo creato che user\u00e0 la sua stessa energia per tenerlo lontano dall'arma. In pratica rimarranno legati, ma finch\u00e9 vivr\u00e0 non potr\u00e0 brandire la spada. \n[pagebreak]\nSperiamo che il piano funzioni e di evitare spargimenti di sangue. Per ci\u00f2 che sappiamo di lui, vorremmo evitare di ucciderlo.<font size='10'>\n\n<font size='18'>Forse senza spada riusciremo a riportarlo sulla retta via. Anche se, a causa dei crimini che ha commesso, temo che sia troppo tardi per la sua anima.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Smugleader",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\nI met Sychelle Gatharian on a Morndas, outside the docks in the rain. Should've taken it as a sign.\n\nWe'd done business before, she and I. Smuggling black soul gems, corpses, the kind of dark and dishonest things that would make grown men sleep in pairs. But this was different. This was big.\n\nThe sword she gave me was like nothing I'd ever seen. Teeth like a slaughterfish and a blood red gem in the center. I said it must've been one of a kind. That's when she smiled and told me there was another. \n\nMy job was to swap them.\n\nWe sealed the venture with a coin, of which more was promised later. The mage told me I'd be contacted in a week. A group of her associates would pay us to use the hideout to kill some captain, after which, I'd make the switch. \n\nShe told me to keep this a secret from the mages, which made me pause, but the details didn't matter much to me. All I wanted to know was the number on the ledger. It was enough.\n\nMonths later and the deal has turned rotten. The mages underestimated their own magic, and we our greed. Now we're all paying the price for our stupidity. \n\nSome tried to fight their way out, but the bastard won't die. I'm beginning to think he can't. On top of that, every man that he's felled has risen to fight beside him, making him that much harder to kill.\n\nI guess I have no one to blame but myself. I should've trusted my gut from the start. Mage jobs always have a bad stink on them, but this one smelled especially foul. But I wanted that gold so bad I convinced myself and the men it was moon sugar. \n\nThe funny thing is, I don't even have Bloodthirst anymore. I lost it at the pits at Faldar's Tooth, thinking I could just kill the mages and Gatharian once I got my hands on the other one. But when the spell went bad, the guild sealed the captain in these chambers, and us along with him.\n\nNow all I have left is a festering wound, an empty stomach, and the mage's coin to show for it.\n\nChances are, this coin is probably the only thing that will ever make it out of here. But oh, could it tell you a story. \n\nBecause this coin has bought a lot of lives.\n\nIt's sold a lot of dreams, and spilled a lot of blood.\n\nI know now the coin is cursed. Yet for some reason, I can't let it go.</font>",
+        "string": "<font face='$HandwrittenFont'>\nHo incontrato Sychelle Gatharian su un Morndas, al porto sotto la pioggia. Dovevo capirlo che era un segno.\n\nAvevamo gi\u00e0 fatto affari insieme. Le vendevo gemme dell'anima nere, cadaveri, cose oscure e terribili che spaventerebbero anche un uomo adulto. Ma stavolta era diverso. Questa era una cosa grossa.\n\nNon avevo mai visto una spada come quella che mi diede. Una lama con i denti di un pesce macellaio e una gemma rosso sangue incastonata al centro. Le ho detto che doveva essere unica. A quel punto mi sorrise e mi disse che ne esisteva un'altra. \n\nIo dovevo scambiarle.\n\nAbbiamo chiuso l'accordo con una moneta e la promessa di molte altre. La maga mi disse che sarei stato contattato entro una settimana. Un gruppo di suoi colleghi ci avrebbero pagato per usare il nostro nascondiglio e uccidere un capitano, dopodich\u00e9 avrei dovuto effettuare lo scambio. \n\nMi ha detto di non dirlo agli altri maghi, al che mi sono insospettito, ma ho deciso di non soffermarmi su questo dettaglio. Mi interessavano solo i numeri sul registro. Ed erano abbastanza alti.\n\nMesi dopo l'accordo era andato in fumo. I maghi avevano sottovalutato la loro stessa magia e la nostra avidit\u00e0. Adesso paghiamo tutti il prezzo della nostra stupidaggine. \n\nAlcuni hanno provato a uscire combattendo, ma quel bastardo non vuole morire. Comincio a pensare che non possa essere ammazzato. Oltretutto, ogni uomo che ha ucciso \u00e8 resuscitato e ha iniziato a combattere al suo fianco, rendendo ancora pi\u00f9 difficile ucciderlo.\n\n\u00c8 tutta colpa mia, mi sarei dovuto fidare del mio istinto. Gli affari con i maghi nascondono sempre qualcosa, ma questo \u00e8 stato il peggiore di tutti. Volevo l'oro, lo volevo a tal punto da aver convinto i miei uomini e me stesso che sarebbe stata una passeggiata. \n\nLa cosa divertente \u00e8 che non ho pi\u00f9 neanche Sanguinaria. L'ho persa nelle fosse di Dente di Faldar, pensavo di poter uccidere i maghi e Gatharian dopo aver messo le mani sull'altra spada. Quando le cose si sono messe male, la gilda ha sigillato il capitano in queste stanze e noi con lui.\n\nOra non mi rimane che una ferita infetta, lo stomaco vuoto e quella moneta.\n\nCon molta probabilit\u00e0, questa moneta sar\u00e0 l'unica cosa che lascer\u00e0 questo posto. Oh, quante storie potrebbe raccontare. \n\nQuesta moneta ha comprato tante vite.\n\nVenduto tanti sogni e versato tanto sangue.\n\nSo che questa moneta \u00e8 maledetta, eppure non so perch\u00e9 non riesco a separarmene.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE013_SmugNote",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>\nI can't resist him...\n\nThose eyes...those terrible eyes!\n\nSo full of anger, fear and remorse...\n\nThe only escape is death.</font>",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\nNon posso resistergli...\n\nQuegli occhi... quegli occhi terribili!\n\nPieni di rabbia, paura, rimorso...\n\nL'unica via di fuga \u00e8 la morte.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "type": "QUST CNAM",
+        "original": "I have vanquished the Guardian. I should return to the sword chamber to see if his defeat has affected the shield.",
+        "string": "Ho sconfitto il Guardiano. Dovrei tornare alla sala della spada per vedere se la sua disfatta ha avuto effetto sullo scudo."
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "type": "QUST CNAM",
+        "original": "I have encountered the Guardian once more, only this time he was empowered with dark magic. Once again, upon nearing defeat, he vanished and the vault reacted to this magic. I should return to the sword chamber to see if more of this vault has now become accessible.",
+        "string": "Ho incontrato nuovamente il Guardiano, ma questa volta aveva il potere della magia oscura. Ancora una volta, dopo averlo sconfitto, \u00e8 scomparso e la cripta ha reagito alla sua magia. Dovrei tornare alla sala della spada per vedere se altre stanze sono diventate accessibili."
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "type": "QUST CNAM",
+        "original": "I found the ghostly woman, but as I drew near to her, she approached a nearby sewer entrance and vanished before my eyes. I should follow her and see where the sewer entrance leads.",
+        "string": "Ho trovato il fantasma della donna ma, appena ho provato ad avvicinarmi, si \u00e8 diretta verso un'entrata delle fogne ed \u00e8 sparita. Dovrei seguirla per vedere dove porta quell'entrata alle fogne."
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "type": "QUST CNAM",
+        "original": "I've heard rumors about a ghostly apparition that has been haunting the Ratway in Riften. I should investigate the area and see if I can learn more.",
+        "string": "Ho sentito parlare di un fantasma che infesta il Ratway a Riften. Devo esplorare la zona per saperne di pi\u00f9."
+    },
+    {
+        "editor_id": "ccBGSSSE013_LockedDoorMSG",
+        "type": "MESG DESC",
+        "original": "This door is controlled elsewhere.",
+        "string": "Questa porta \u00e8 controllata altrove."
+    },
+    {
+        "editor_id": "ccBGSSSE013_EndGame02MSG",
+        "type": "MESG DESC",
+        "original": "The vault is sealed.",
+        "string": "La cripta \u00e8 sigillata."
+    },
+    {
+        "editor_id": "ccBGSSSE013_LockedDoorMagicMSG",
+        "type": "MESG DESC",
+        "original": "This door is controlled by magic.",
+        "string": "Questa porta \u00e8 controllata dalla magia."
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "type": "QUST CNAM",
+        "original": "Upon returning to the sword chamber, I witnessed what appeared to be a reconciliation between the Guardian and the woman, for I saw their spirits embrace and fade away. Perhaps in defeating him, I have actually freed his spirit from his binds to the sword and this vault. Now he is free and so too is the sword. ",
+        "string": "Dopo essere tornato nella sala della spada, ho assistito alla riappacificazione tra il Guardiano e la donna. I loro fantasmi si sono abbracciati e sono svaniti. Forse sconfiggendolo ho liberato la sua anima dal legame che aveva con la spada e con questa cripta. Ora il Guardiano \u00e8 libero, cos\u00ec come lo \u00e8 la spada. "
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "type": "QUST CNAM",
+        "original": "I have battled a strange warrior in the depths of this vault, but he vanished before I could strike my killing blow. However, when he vanished, there was a great burst of magic energy and the ground shook beneath me. I should head back to the sword chamber where perhaps I may encounter him again.",
+        "string": "Nel cuore della cripta ho combattuto contro uno strano guerriero, ma \u00e8 sparito prima che potessi dargli il colpo di grazia. Quando \u00e8 sparito c'\u00e8 stata un'esplosione di magia e il terreno a cominciato a tremare. Dovrei tornare nella sala della spada, dove potrei incontrarlo di nuovo."
+    },
+    {
+        "editor_id": "ccBGSSSE013_ShieldActMSG",
+        "type": "MESG DESC",
+        "original": "A magical barrier blocks your way.",
+        "string": "Una barriera magica ti impedisce di passare."
+    },
+    {
+        "editor_id": "ccBGSSSE013_Wifenote",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\nMy dearest Lorant,\n\nI know that there is no power that will stop them from taking you away from me and into battle upon foreign fields, for I understand that this is your duty as a captain of the Blades. As your wife, I should respect such things. Nevertheless, the fear that you may never return troubles me. \n\nKnow that I think of you always. We are bound together, in this life and in the next.\n\nYour beloved,\n\nEmma</font>",
+        "string": "<font face='$HandwrittenFont'>\n\nCarissimo Emile, so di non poterti impedire di allontanarti da me e di andare a combattere, perch\u00e9 \u00e8 tuo dovere e da moglie devo rispettarlo. Ciononostante, sono tormentata dalla paura di perderti. \n\nTi spedisco il ciondolo di famiglia, intriso di magia protettiva. Spero che lo indosserai e penserai a me. Non posso impedirti di svolgere il tuo dovere, ma posso provare a proteggerti e sperare di rivederti ancora una volta.\n\nLa tua amata,\n\nEmma</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE013_GuardianHitMSG",
+        "type": "MESG DESC",
+        "original": "Your attack has no effect.",
+        "string": "Il tuo attacco non ha effetto."
+    },
+    {
+        "editor_id": "ccBGSSSE013_Note6",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\n\nBoss found a buyer for that sword we looted going through the crates downstairs. Says we're to deliver it to Broken Fang Cave come morning. \n\nTruth is the thing creeps me out, I'm glad to be rid of it. \n</font>",
+        "string": "<font face='$HandwrittenFont'>\n\nIl capo ha trovato un acquirente per la spada che abbiamo trovato ieri nelle casse al piano di sotto. Dice che dobbiamo consegnarla alla Caverna della Zanna Rotta domani mattina. \n\nA dire la verit\u00e0 mi mette i brividi, sono contento di liberarmene. \n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "type": "QUST CNAM",
+        "original": "I've heard rumors about a ghostly apparition that has been haunting the Ratway in Riften. I should head there and see if I can learn more.",
+        "string": "Ho sentito parlare di un fantasma che infesta il Ratway a Riften. Devo andarci per saperne di pi\u00f9."
+    }
+]

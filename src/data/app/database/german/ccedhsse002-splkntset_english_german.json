@@ -1,0 +1,596 @@
+[
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntSteelCuirass",
+        "type": "ARMO FULL",
+        "original": "Steel Spell Knight Armor",
+        "string": "Stahlr\u00fcstung des Bannritters"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteBoots",
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Boots",
+        "string": "Ebenerzstiefel des Bannritters"
+    },
+    {
+        "editor_id": "ccEDHSSE002_QAChest",
+        "type": "CONT FULL",
+        "original": "Spell Knight Chest",
+        "string": "Truhe des Bannritters"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteHelmet",
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Helmet",
+        "string": "Ebenerzhelm des Bannritters"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteGauntlets",
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Gauntlets",
+        "string": "Ebenerzpanzerhandschuhe des Bannritters"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntIronCuirass",
+        "type": "ARMO FULL",
+        "original": "Iron Spell Knight Armor",
+        "string": "Eisenr\u00fcstung des Bannritters"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntIronBoots",
+        "type": "ARMO FULL",
+        "original": "Iron Spell Knight Boots",
+        "string": "Eisenstiefel des Bannritters"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntIronGauntlets",
+        "type": "ARMO FULL",
+        "original": "Iron Spell Knight Gauntlets",
+        "string": "Eisenpanzerhandschuhe des Bannritters"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntSteelBoots",
+        "type": "ARMO FULL",
+        "original": "Steel Spell Knight Boots",
+        "string": "Stahlstiefel des Bannritters"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntSteelGauntlets",
+        "type": "ARMO FULL",
+        "original": "Steel Spell Knight Gauntlets",
+        "string": "Stahlhandschuhe des Bannritters"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntIronHelmet",
+        "type": "ARMO FULL",
+        "original": "Iron Spell Knight Helmet",
+        "string": "Eisenhelm des Bannritters"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntSteelHelmet",
+        "type": "ARMO FULL",
+        "original": "Steel Spell Knight Helmet",
+        "string": "Stahlhelm des Bannritters"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteCuirass",
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Armor",
+        "string": "Ebenerzr\u00fcstung des Bannritters"
+    },
+    {
+        "editor_id": "ccEDHSSE002_HumanHeart",
+        "type": "INGR FULL",
+        "original": "Simon Rodayne's Heart",
+        "string": "Simon Rodaynes Herz"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "type": "QUST NNAM",
+        "original": "Return the heart to the knight's tomb",
+        "string": "Bringe das Herz zum Rittersgrab zur\u00fcck."
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightTomb",
+        "type": "ACTI RNAM",
+        "original": "Place Heart",
+        "string": "Herz platzieren"
+    },
+    {
+        "editor_id": "ccEDHSSE002_SpellKnight02",
+        "type": "NPC_ SHRT",
+        "original": "Simon",
+        "string": "Simon"
+    },
+    {
+        "editor_id": "ccEDHSSE002_BeldamaMessage",
+        "type": "MESG FULL",
+        "original": "Beldama Witch",
+        "string": "Beldamahexe"
+    },
+    {
+        "editor_id": "ccEDHSSE002_CorruptedHumanHeart",
+        "type": "INGR FULL",
+        "original": "Corrupted Human Heart",
+        "string": "Korrumpiertes Menschenherz"
+    },
+    {
+        "editor_id": "ccEDHSSE002_HeartMessage",
+        "type": "MESG FULL",
+        "original": "Simon Rodayne's Heart",
+        "string": "Simon Rodaynes Herz"
+    },
+    {
+        "editor_id": "ccEDHSSE002_MarkarthCoffin01container",
+        "type": "CONT FULL",
+        "original": "Grave",
+        "string": "Grab"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "type": "QUST NNAM",
+        "original": "Investigate the Silver-Blood Inn",
+        "string": "Stelle Nachforschungen im Gasthaus Silber-Blut an."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the Forsworn Shaman's note",
+        "string": "Lies die Nachricht des Schamanen der Abgeschworenen."
+    },
+    {
+        "editor_id": "ccEDHSSE002_BriarHeartNote",
+        "type": "BOOK FULL",
+        "original": "Forsworn Shaman's Note",
+        "string": "Nachricht des Schamanen der Abgeschworenen"
+    },
+    {
+        "editor_id": "ccEDHSSE002_DaenellaMessage",
+        "type": "MESG FULL",
+        "original": "Daenella",
+        "string": "Daenella"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "type": "QUST NNAM",
+        "original": "Search Karthspire for the stolen heart",
+        "string": "Suche in Karthspitze nach dem gestohlenen Herzen."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "type": "QUST NNAM",
+        "original": "Defeat the Forsworn",
+        "string": "Besiege die Abgeschworenen."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "type": "QUST NNAM",
+        "original": "Search the hills for the knight's tomb",
+        "string": "Suche in den H\u00fcgeln nach dem Rittersgrab."
+    },
+    {
+        "editor_id": "ccEDHSSE002_SpellKnight02",
+        "type": "NPC_ FULL",
+        "original": "Simon Rodayne",
+        "string": "Simon Rodayne"
+    },
+    {
+        "editor_id": "ccEDHSSE002_CoffinMessage",
+        "type": "MESG FULL",
+        "original": "Knight's Grave",
+        "string": "Rittersgrab"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "type": "QUST NNAM",
+        "original": "Defeat the Corrupted Knight",
+        "string": "Besiege den korrumpierten Ritter."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "type": "QUST NNAM",
+        "original": "(Optional) Purify the heart at the altar",
+        "string": "(Optional) L\u00e4utere das Herz am Altar."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "type": "QUST NNAM",
+        "original": "Look for the knight's ghost in the area south of Markarth",
+        "string": "Suche im Gebiet s\u00fcdlich von Markarth nach dem Geist des Ritters."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "type": "QUST FULL",
+        "original": "Crypt of the Heart",
+        "string": "Krypta des Herzens"
+    },
+    {
+        "editor_id": "ccEDHSSE002_defaultDisableSelfOnActivate",
+        "type": "ACTI RNAM",
+        "original": "Place Heart",
+        "string": "Herz platzieren"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Daenella",
+        "type": "NPC_ FULL",
+        "original": "Daenella",
+        "string": "Daenella"
+    },
+    {
+        "editor_id": "ccEDHSSE002_SpellKnight",
+        "type": "NPC_ FULL",
+        "original": "Ghost Knight",
+        "string": "Geisterritter"
+    },
+    {
+        "editor_id": "ccEDHSSE002_WarMagesShornhelm",
+        "type": "BOOK FULL",
+        "original": "Crypt of the Heart - Draft",
+        "string": "Krypta des Herzens"
+    },
+    {
+        "editor_id": "ccEDHSSE002_QuestStartNote",
+        "type": "BOOK FULL",
+        "original": "Ghost Sighting",
+        "string": "Geistererscheinung"
+    },
+    {
+        "editor_id": "ccEDHSSE002_SpellKnight03",
+        "type": "NPC_ FULL",
+        "original": "Simon Rodayne",
+        "string": "Simon Rodayne"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "type": "QUST NNAM",
+        "original": "Follow the ghost",
+        "string": "Folge dem Geist."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "type": "QUST NNAM",
+        "original": "Retrieve the knight's armor",
+        "string": "Nimm die R\u00fcstung des Ritters."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "type": "QUST NNAM",
+        "original": "Search the Forsworn Shaman",
+        "string": "Durchsuche den Schamanen der Abgeschworenen."
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightTomb",
+        "type": "ACTI FULL",
+        "original": "Knight's Grave",
+        "string": "Rittersgrab"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteCuirassWHITE",
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Armor",
+        "string": "Ebenerzr\u00fcstung des Bannritters"
+    },
+    {
+        "editor_id": "ccEDHSSE002_SpellKnightIron",
+        "type": "NPC_ FULL",
+        "original": "Knight of the Crypt",
+        "string": "Ritter der Krypta"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteHelmetWHITE",
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Helmet",
+        "string": "Ebenerzhelm des Bannritters"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteBootsWHITE",
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Boots",
+        "string": "Ebenerzstiefel des Bannritters"
+    },
+    {
+        "editor_id": "ccEDHSSE002_HagNote",
+        "type": "BOOK FULL",
+        "original": "Beldama Witch's Note",
+        "string": "Nachricht der Beldamahexe"
+    },
+    {
+        "editor_id": "ccEDHSSE002_SpellKnight03",
+        "type": "NPC_ SHRT",
+        "original": "Simon",
+        "string": "Simon"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteGauntletsWHITE",
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Gauntlets",
+        "string": "Ebenerzpanzerhandschuhe des Bannritters"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteHelmetBLACK",
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Helmet",
+        "string": "Ebenerzhelm des Bannritters"
+    },
+    {
+        "editor_id": "ccEDHSSE002_SpellKnightSteel",
+        "type": "NPC_ FULL",
+        "original": "Knight of the Crypt",
+        "string": "Ritter der Krypta"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightNote",
+        "type": "BOOK FULL",
+        "original": "Knight Captain's Orders",
+        "string": "Befehle des Ritterhauptmanns"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteGauntletsBLACK",
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Gauntlets",
+        "string": "Ebenerzpanzerhandschuhe des Bannritters"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteCuirassBLACK",
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Armor",
+        "string": "Ebenerzr\u00fcstung des Bannritters"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteBootsBLACK",
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Boots",
+        "string": "Ebenerzstiefel des Bannritters"
+    },
+    {
+        "editor_id": "ccEDHSSE002_DaenellaCorpse",
+        "type": "NPC_ FULL",
+        "original": "Daenella",
+        "string": "Daenella"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightArmorActivatorGauntlets",
+        "type": "ACTI FULL",
+        "original": "Ebony Spell Knight Gauntlets",
+        "string": "Elitehandschuhe des Bannritters"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "type": "QUST NNAM",
+        "original": "Retrieve the knight's armor",
+        "string": "Beschaffe die R\u00fcstung des Ritters."
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightArmorActivatorBoots",
+        "type": "ACTI FULL",
+        "original": "Ebony Spell Knight Boots",
+        "string": "Elitestiefel des Bannritters"
+    },
+    {
+        "editor_id": "ccEDHSSE002_BeldamaMessage02",
+        "type": "MESG FULL",
+        "original": "Beldama Ward Mother",
+        "string": "Beldama-Schutzmutter"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightArmorActivatorCuirass",
+        "type": "ACTI FULL",
+        "original": "Ebony Spell Knight Cuirass",
+        "string": "Elitebrustpanzer des Bannritters"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightArmorActivatorHelm",
+        "type": "ACTI FULL",
+        "original": "Ebony Spell Knight Helmet",
+        "string": "Elitehelm des Bannritters"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightArmorActivatorHelm",
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "Nehmen"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightArmorActivatorCuirass",
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "Nehmen"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightArmorActivatorBoots",
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "Nehmen"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightArmorActivatorGauntlets",
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "Nehmen"
+    },
+    {
+        "editor_id": "ccEDHSSE002_LvlForswornShaman",
+        "type": "NPC_ FULL",
+        "original": "Forsworn Shaman",
+        "string": "Forsworn Shaman"
+    },
+    {
+        "editor_id": "ccEDHSSE002_LvlForswornMeleeFemale",
+        "type": "NPC_ FULL",
+        "original": "Forsworn Ravager",
+        "string": "Forsworn Ravager"
+    },
+    {
+        "editor_id": "ccEDHSSE002_LvlForswornBoss",
+        "type": "NPC_ FULL",
+        "original": "Forsworn Briarheart",
+        "string": "Forsworn Briarheart"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ShrineofMara",
+        "type": "ACTI FULL",
+        "original": "Shrine of Mara",
+        "string": "Shrine of Mara"
+    },
+    {
+        "editor_id": "Tamriel",
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Himmelsrand"
+    },
+    {
+        "editor_id": "MarkarthSilverBloodInn",
+        "type": "CELL FULL",
+        "original": "Silver-Blood Inn",
+        "string": "Gasthaus Silber-Blut"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "type": "QUST CNAM",
+        "original": "I found a knight's tomb in Markarth surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire. At Karthspire, I found two hagravens conducting a ritual with the heart at its center. I retrieved the heart and returned it to the knight's tomb. ",
+        "string": "Ich habe in Markarth ein Rittersgrab gefunden, um das drei Abgeschworene standen, und diese im Kampf besiegt. Der Schamane hatte eine Nachricht bei sich, die andeutete, dass sie das Grab gesch\u00e4ndet und das Herz des Ritters nach Karthspitze gebracht haben. In Karthspitze fand ich zwei Hexenraben, die mit dem Herz ein Ritual vollzogen. Ich nahm das Herz an mich und brachte es zum Grab des Ritters zur\u00fcck. "
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "type": "QUST CNAM",
+        "original": "I found a book at the Silver-Blood Inn that mentions the ghost of a Breton knight named Simon Rodayne. According to the book, he haunts the river below his tomb, south of Markarth. At the river, I found the presence of a ghost who wandered off further south. I followed the ghost up the hill when it vanished. The knight's tomb must be somewhere in the surrounding area.",
+        "string": "Ich habe im Gasthaus Silber-Blut ein Buch gefunden, in dem der Geist eines bretonischen Ritters namens Simon Rodayne erw\u00e4hnt wird. Darin hei\u00dft es, er w\u00fcrde den Fluss unterhalb seines Grabes heimsuchen, s\u00fcdlich von Markarth. Beim Fluss stie\u00df ich auf eine Erscheinung, die weiter nach S\u00fcden wanderte. Ich folgte dem Geist h\u00fcgelaufw\u00e4rts, als er auf einmal verschwand. Das Grab des Ritters muss irgendwo in der n\u00e4heren Umgebung liegen."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "type": "QUST CNAM",
+        "original": "I found a book at the Silver-Blood Inn that mentions the ghost of a Breton knight named Simon Rodayne. According to the book, he haunts the river below his tomb, south of Markarth. After following the ghost and climbing up to the top of the mountain, I found a tomb surrounded by three Forsworn.",
+        "string": "Ich habe im Gasthaus Silber-Blut ein Buch gefunden, in dem der Geist eines bretonischen Ritters namens Simon Rodayne erw\u00e4hnt wird. Darin hei\u00dft es, er w\u00fcrde den Fluss unterhalb seines Grabes heimsuchen, s\u00fcdlich von Markarth. Nachdem ich dem Geist gefolgt und bis zum Gipfel des Berges geklettert war, fand ich ein Grab, um das drei Abgeschworene standen."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "type": "QUST CNAM",
+        "original": "I found a book at the Silver-Blood Inn that mentions the ghost of a Breton knight named Simon Rodayne. According to the book, he haunts the river below his tomb, south of Markarth. At the river, I found the presence of a ghost who wandered off further south.",
+        "string": "Ich habe im Gasthaus Silber-Blut ein Buch gefunden, in dem der Geist eines bretonischen Ritters namens Simon Rodayne erw\u00e4hnt wird. Darin hei\u00dft es, er w\u00fcrde den Fluss unterhalb seines Grabes heimsuchen, s\u00fcdlich von Markarth. Beim Fluss stie\u00df ich auf eine Erscheinung, die weiter nach S\u00fcden wanderte."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "type": "QUST CNAM",
+        "original": "I found a knight's tomb in Markarth surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire. At Karthspire, I found two hagravens conducting a ritual with the heart at its center. I retrieved the heart and returned it to the knight's tomb. The heart was still corrupted, however, and the knight's ghost turned hostile as a result.",
+        "string": "Ich habe in Markarth ein Rittersgrab gefunden, um das drei Abgeschworene standen, und diese im Kampf besiegt. Der Schamane hatte eine Nachricht bei sich, die andeutete, dass sie das Grab gesch\u00e4ndet und das Herz des Ritters nach Karthspitze gebracht haben. In Karthspitze fand ich zwei Hexenraben, die mit dem Herz ein Ritual vollzogen. Ich nahm das Herz an mich und brachte es zum Grab des Ritters zur\u00fcck, es war jedoch immer noch korrumpiert und der Geist des Ritters griff mich an."
+    },
+    {
+        "editor_id": "ccEDHSSE002_BeldamaMessage",
+        "type": "MESG DESC",
+        "original": "Beldama Witch",
+        "string": "Beldamahexe"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "type": "QUST CNAM",
+        "original": "I investigated the area south of Markarth and was confronted by a ghost. After following the ghost and climbing up to the top of the mountain, I found a tomb surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire.",
+        "string": "Ich habe die Gegend s\u00fcdlich von Markarth erkundet und bin dabei auf einen Geist gesto\u00dfen. Nachdem ich ihm gefolgt und bis zum Gipfel des Berges geklettert war, fand ich ein Grab, um das drei Abgeschworene standen, und besiegte diese im Kampf. Der Schamane hatte eine Nachricht bei sich, die andeutete, dass sie das Grab gesch\u00e4ndet und das Herz des Ritters nach Karthspitze gebracht haben."
+    },
+    {
+        "editor_id": "ccEDHSSE002_HeartMessage",
+        "type": "MESG DESC",
+        "original": "Simon Rodayne's Heart",
+        "string": "Simon Rodaynes Herz"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "type": "QUST CNAM",
+        "original": "I found a book at the Silver-Blood Inn that mentions the ghost of a Breton knight named Simon Rodayne. According to the book, he haunts the river below his tomb, south of Markarth. After following the ghost and climbing up to the top of the mountain, I found a tomb surrounded by three Forsworn, and defeated them in battle.",
+        "string": "Ich habe im Gasthaus Silber-Blut ein Buch gefunden, in dem der Geist eines bretonischen Ritters namens Simon Rodayne erw\u00e4hnt wird. Darin hei\u00dft es, er w\u00fcrde den Fluss unterhalb seines Grabes heimsuchen, s\u00fcdlich von Markarth. Nachdem ich dem Geist gefolgt und bis zum Gipfel des Berges geklettert war, fand ich ein Grab, um das drei Abgeschworene standen, und besiegte diese im Kampf."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "type": "QUST CNAM",
+        "original": "I found a book at the Silver-Blood Inn that mentions the ghost of a Breton knight named Simon Rodayne. According to the book, he haunts the river below his tomb, south of Markarth. I should investigate the area and see what I can find.",
+        "string": "Ich habe im Gasthaus Silber-Blut ein Buch gefunden, in dem der Geist eines bretonischen Ritters namens Simon Rodayne erw\u00e4hnt wird. Darin hei\u00dft es, er w\u00fcrde den Fluss unterhalb seines Grabes heimsuchen, s\u00fcdlich von Markarth. Ich sollte das Gebiet erkunden."
+    },
+    {
+        "editor_id": "ccEDHSSE002_CoffinMessage",
+        "type": "MESG DESC",
+        "original": "Knight's Grave",
+        "string": "Rittersgrab"
+    },
+    {
+        "editor_id": "ccEDHSSE002_DaenellaMessage",
+        "type": "MESG DESC",
+        "original": "Daenella",
+        "string": "Daenella"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "type": "QUST CNAM",
+        "original": "I found a knight's tomb in Markarth surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire. At Karthspire, I found two hagravens conducting a ritual with the heart at its center. I retrieved the heart and returned it to the knight's tomb. The heart was still corrupted, however, and the knight's ghost turned hostile as a result. I defeated the knight and can now retrieve his armor from the tomb.",
+        "string": "Ich habe in Markarth ein Rittersgrab gefunden, um das drei Abgeschworene standen, und diese im Kampf besiegt. Der Schamane hatte eine Nachricht bei sich, die andeutete, dass sie das Grab gesch\u00e4ndet und das Herz des Ritters nach Karthspitze gebracht haben. In Karthspitze fand ich zwei Hexenraben, die mit dem Herz ein Ritual vollzogen. Ich nahm das Herz an mich und brachte es zum Grab des Ritters zur\u00fcck, es war jedoch immer noch korrumpiert und der Geist des Ritters griff mich an. Ich habe den Ritter besiegt und kann nun seine R\u00fcstung aus seinem Grab holen."
+    },
+    {
+        "editor_id": "ccEDHSSE002_QuestStartNote",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\nI've heard a lot of strange tales in the Reach. Witches turning men into frogs, wolves the size of bears, things like that. There's even a story about an old knight's tomb, and a ghost haunting the Reach.\n\nNow, normally I brush off such talk. The emptier the bottle, the taller the tale. \n\nBut what I saw last night changed my mind. I was heading south toward Dushnikh Yal, to set up camp and mine the hills in the morning. I had just crossed the river, when I saw something come out of the fog. \n\nIt was just like in the stories. He looked like a man cast from the moonlight. I could see him, and at the same, I could see right through him. Not only that, he was dressed in some armor I've never seen, and bade me to follow him up the hillside. \n\nBut I did no such thing. Instead I dropped my knapsack, turned tail and ran. Call me a snowback, a milk-drinker, I don't care. No good can come from following the dead. There's is a place no man wants to visit.\n</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\nIch habe in Reach eine Menge seltsamer Geschichten geh\u00f6rt. Von Hexen, die M\u00e4nner in Fr\u00f6sche verwandeln, von W\u00f6lfen, die so gro\u00df waren wie B\u00e4ren, und so weiter. Es gibt sogar eine Erz\u00e4hlung von einem alten Rittersgrab und einem Geist, der Reach heimsuchen soll.\n\nNormalerweise beachte ich solches Gerede gar nicht. Je leerer die Flasche, desto wilder die Geschichte. \n\nAber gestern Nacht habe ich etwas gesehen, das meine Meinung ge\u00e4ndert hat. Ich war auf dem Weg nach Dushnikh Yal im S\u00fcden, um dort ein Lager zu errichten und am Morgen in den H\u00fcgeln Steine zu schlagen. Ich hatte gerade den Fluss \u00fcberquert, als ich bemerkte, dass etwas aus dem Nebel kam. \n\nEs war genau wie in den Geschichten. Er sah aus wie ein Mann, der ganz aus Mondlicht bestand. Ich konnte ihn sehen und gleichzeitig einfach durch ihn hindurchblicken. Nicht nur das, er trug eine R\u00fcstung, wie ich sie noch nie gesehen hatte, und gebot mir, ihm den H\u00fcgel hinauf zu folgen. \n\nDas habe ich nat\u00fcrlich nicht getan. Stattdessen lie\u00df ich meinen Rucksack fallen, machte auf dem Absatz kehrt und rannte davon. Nennt mich einen Hasenfu\u00df, einen Milchtrinker, ist mir v\u00f6llig einerlei. Es kann nichts Gutes dabei herauskommen, den Toten zu folgen. Es gibt einen Ort, den kein Lebender besuchen will.\n</font>"
+    },
+    {
+        "editor_id": "ccEDHSSE002_WarMagesShornhelm",
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\n<p align=\"center\">\n<font face='$HandwrittenFont'>\n\nCrypt of the Heart\n\n\n\nby \nAriana Dumas\n</p>\n\n\n\n[pagebreak]\n<p align=\"left\">\n<font face='$HandwrittenFont'>When it comes to tales of bravery and valor, few have a greater claim than the Knightly Orders of High Rock. Like the Knights of the Rose in Wayrest, many serve as royal guardians and protectors of the realm. It is through their defense of king and country that their fame resounds.\n\nYet others swear an oath of a different kind. Not bound by the walls of their kingdom, they scour the hills in search of Reachmen, witches, and Forsworn, pledging to deliver justice where savagery and chaos rule.\n\nOne such group refers to themselves as the Order of the Crypt. At first glance, the name might seem ironic, but the Crypt of Hearts they swore to protect went beyond the underground chamber in Shornhelm. The knights pledged to protect the hearts entombed in all of us, lest they be replaced with the briars of the unholy.\n\nYet despite the air of nobility they carried, in the Reach these knights were known by a different name; The War Mages of Shornhelm. For they gave no mercy to the wicked, and the land they tread was riven with scars made of fire and sword.\n\nWhy the knights chose to extend beyond the kingdom is a matter of debate. Much of it can be traced to a blood feud, and the death of a knight named Simon Rodayne. Tricked by the witch Daenalla, a Sister of the Beldama Coven, his heart was stolen and replaced with a briarheart. In retaliation, his acolytes drove the coven further and further east, killing any Reachmen who would dare give them quarter. \n\nYet in huts small and muddy with smoke, the oral histories tell a different story. They say Simon gave his heart willingly to the witch, and together they fled the wrath of both their clans, knowing they would receive neither understanding nor forgiveness.\n\nWhen Simon died, Daenalla returned his heart to him, and buried him at the altar where they wed. Such was the pain of her loss that she wept from the Morning to the Evening Star, until her tears flooded the canyon below and became one with the river Karth. \n\nTo this day, Simon's ghost is said to haunt the pass below his grave, watching over the river which bears his beloved's tears.\n\nWhether any of that is true or simply the embellishments of history, none can say with certainty. However, it is worth noting that the grave itself exists. Whether the heart inside belongs to Simon or another, is a question for its keeper.</p></font>",
+        "string": "[pagebreak]\n<p align=\"center\">\n<font face='$HandwrittenFont'>\n\nKrypta des Herzens\n\n\n\nvon \nAriana Dumas\n</p>\n\n\n\n[pagebreak]\n<p align=\"left\">\n<font face='$HandwrittenFont'>Nur wenige k\u00f6nnen es in Heldenmut und Tapferkeit mit dem Ritterorden von Hochfels aufnehmen. Wie die Ritter der Rose in Wegesruh dienen viele von ihnen als k\u00f6nigliche Garde und Besch\u00fctzer des Reichs und ihren weit und breit bekannten Ruhm verdanken sie ihrer unerm\u00fcdlichen Verteidigung von K\u00f6nigreich und Vaterland.\n\nAndere schw\u00f6ren jedoch einen anderen Eid und streifen jenseits der Grenzen ihres K\u00f6nigreichs auf der Suche nach B\u00fcrgern von Reach, Hexen und Abgeschworenen durch die H\u00fcgel, um Gerechtigkeit walten zu lassen, wo Brutalit\u00e4t und Chaos herrscht.\n\nEine dieser Gruppen nennt sich selbst \"Orden der Krypta\". Auf den ersten Blick mag dieser Name ironisch erscheinen, doch die Krypta des Herzens, die sie zu besch\u00fctzen schworen, liegt jenseits der unterirdischen Kammer in Shornhelm. Die Ritter gelobten, die Herzen zu sch\u00fctzen, die in unser aller Brust eingeschlossen sind, auf dass sie nicht mit den Dornen der Unheiligen ersetzt werden.\n\nTrotz ihres vornehmen Auftretens kannte man diese Ritter in Reach indes unter einem anderen Namen - als die \"Kriegsmagier von Shornhelm\". Denn sie verfolgten die Frevler ohne jede Gnade und das Land war zerrissen von den Narben ihrer Feuer und Schwerter.\n\nWeshalb diese Ritter beschlossen hatten, ihr K\u00f6nigreich zu verlassen, ist nach wie vor umstritten. Vieles deutet auf eine Blutfehde und den Tod eines Ritters namens Simon Rodayne hin. Eine gewisse Hexe Daenalla, eine Schwester des Beldama-Zirkels, hatte sein Herz gestohlen und mit einem Dornenherz ersetzt. Zur Rache trieben seine Glaubensbr\u00fcder den Zirkel weiter nach Osten und t\u00f6teten alle Bewohner von Reach, die es wagten, ihnen die Stirn zu bieten. \n\nIn kleinen, verrauchten H\u00fctten wird jedoch eine ganz andere Geschichte \u00fcberliefert. Hier hei\u00dft es, Simon habe der Hexe sein Herz freiwillig geschenkt und sie seien gemeinsam vor dem Zorn ihrer beiden Orden geflohen, da sie wussten, dass sie dort weder Verst\u00e4ndnis noch Vergebung finden w\u00fcrden.\n\nAls Simon starb, gab Daenalla ihm sein Herz zur\u00fcck und begrub ihn vor dem Altar, an dem sie verm\u00e4hlt worden waren. Ihre Trauer war so gro\u00df, dass sie vom Morgen- bis zum Abendstern weinte, bis ihre Tr\u00e4nen die Schlucht unter ihr \u00fcberfluteten und sich mit dem Fluss Karth vereinten. \n\nMan erz\u00e4hlt sich, dass Simons Geist bis zum heutigen Tage den Pass unter seinem Grab heimsucht und \u00fcber den Fluss wacht, in dem die Tr\u00e4nen seiner Geliebten flie\u00dfen.\n\nOb in der Geschichte auch nur ein K\u00f6rnchen Wahrheit steckt oder sie schlichtweg ausgeschm\u00fcckt wurde, ist ungewiss. Anzumerken sei allerdings, dass das Grab wahrhaftig existiert. Ob das darin bestattete Herz aber tats\u00e4chlich Simon geh\u00f6rt, kann nur sein untoter H\u00fcter selbst beantworten.</p></font>"
+    },
+    {
+        "editor_id": "ccEDHSSE002_BriarHeartNote",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\nWe've killed the traitor and given the knight's heart to the mother. She's gone back to Karthspire to perform the ritual.\n\nWe'll stand watch until she returns, and drain the blood of any knights who interfere.\n</font>",
+        "string": "<font face='$HandwrittenFont'>\nWir haben die Verr\u00e4terin get\u00f6tet und der Mutter das Herz des Ritters \u00fcbergeben. Sie ist nach Karthspitze aufgebrochen, um das Ritual zu vollziehen.\n\nWir wachen hier bis zu ihrer R\u00fcckkehr und bluten alle Ritter aus, die uns in die Quere kommen.\n</font>"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "type": "QUST CNAM",
+        "original": "I investigated the area south of Markarth and was confronted by a ghost. After following the ghost and climbing up to the top of the mountain, I found a tomb surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that may provide additional clues.",
+        "string": "Ich habe die Gegend s\u00fcdlich von Markarth erkundet und bin dabei auf einen Geist gesto\u00dfen. Nachdem ich ihm gefolgt und bis zum Gipfel des Berges geklettert war, fand ich ein Grab, um das drei Abgeschworene standen, und besiegte diese im Kampf. Der Schamane hatte eine Nachricht bei sich, die vielleicht weitere Hinweise enth\u00e4lt."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "type": "QUST CNAM",
+        "original": "I investigated the area south of Markarth and was confronted by a ghost. After following the ghost and climbing up to the top of the mountain, I found a tomb surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire. At Karthspire, I found two hagravens conducting a ritual with the heart at its center. I retrieved the heart and can now return it to the knight's tomb.",
+        "string": "Ich habe die Gegend s\u00fcdlich von Markarth erkundet und bin dabei auf einen Geist gesto\u00dfen. Nachdem ich ihm gefolgt und bis zum Gipfel des Berges geklettert war, fand ich ein Grab, um das drei Abgeschworene standen, und besiegte diese im Kampf. Der Schamane hatte eine Nachricht bei sich, die andeutete, dass sie das Grab gesch\u00e4ndet und das Herz des Ritters nach Karthspitze gebracht haben. In Karthspitze fand ich zwei Hexenraben, die mit dem Herz ein Ritual vollzogen. Ich nahm das Herz an mich und kann es nun zum Grab des Ritters zur\u00fcckbringen."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "type": "QUST CNAM",
+        "original": "I investigated the area south of Markarth and was confronted by a ghost. After following the ghost and climbing up to the top of the mountain, I found a tomb surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire. At Karthspire, I found two hagravens conducting a ritual with the heart at its center. I retrieved the heart and returned it to the knight's tomb.",
+        "string": "Ich habe die Gegend s\u00fcdlich von Markarth erkundet und bin dabei auf einen Geist gesto\u00dfen. Nachdem ich ihm gefolgt und bis zum Gipfel des Berges geklettert war, fand ich ein Grab, um das drei Abgeschworene standen, und besiegte diese im Kampf. Der Schamane hatte eine Nachricht bei sich, die andeutete, dass sie das Grab gesch\u00e4ndet und das Herz des Ritters nach Karthspitze gebracht haben. In Karthspitze fand ich zwei Hexenraben, die mit dem Herz ein Ritual vollzogen. Ich nahm das Herz an mich und brachte es zum Grab des Ritters zur\u00fcck."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "type": "QUST CNAM",
+        "original": "The inns of Skyrim are a good place to look for rumors. Being on the western border, Markarth is one of the busiest holds in Skyrim. I should head to the inn there and see what I can find.",
+        "string": "Die Gasth\u00e4user von Himmelsrand sind eine gute Quelle f\u00fcr Ger\u00fcchte. Markarth an der Westk\u00fcste ist eines der gesch\u00e4ftigsten F\u00fcrstent\u00fcmer von Himmelsrand. Ich sollte zum dortigen Gasthaus gehen und sehen, was ich herausfinden kann."
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightNote",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\nWe've received reports that the Beldama witches have resurfaced in the Reach.\n\nI'm calling upon all willing and able knights to cleanse the land of witches, hags, and Reachmen. Remember always the death of our sworn brother, Simon Rodayne, for the Order of the Crypt, and for all of Shornhelm.\n\n-- Knight Captain Rainore\n</font>",
+        "string": "<font face='$HandwrittenFont'>\nWir haben Berichte empfangen, dass die Beldamahexen wieder in Reach gesichtet wurden.\n\nIch fordere alle Ritter auf, die f\u00e4hig und bereit sind, das Land von Hexen, Druden und Bewohnern von Reach zu befreien. Gedenket immer des Todes unseres eidgeschworenen Bruders Simon Rodayne - f\u00fcr den Orden der Krypta und f\u00fcr ganz Shornhelm.\n\n-- Ritterhauptmann Rainore\n</font>"
+    },
+    {
+        "editor_id": "ccEDHSSE002_HagNote",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\nWe have stalked our sister Daenella for years, reading the feathers and bones, for not even a witch of Beldama can escape the eye of the coven. \n\nUsing the crow's sight, we found her upon an altar in the Reach. Time and age did little to fool us. She is the one who betrayed us to the knights. \n\nSuch an act deserves a cruel death, but simply killing the traitor will not be enough for the ward mother's vengeance. \n\nWe will corrupt her beloved's heart and return it tainted, damning his soul for eternity. She will know this as she dies upon the rock.\n</font>",
+        "string": "<font face='$HandwrittenFont'>\nWir haben unsere Schwester Daenella jahrelang beobachtet und in den Federn und Knochen gelesen, denn nicht einmal eine Hexe von Beldama kann sich vor dem Auge des Zirkels verstecken. \n\nMit der Kr\u00e4hensicht fanden wir sie bei einem Altar in Reach. Zeit und Alter konnten uns nicht t\u00e4uschen. Sie ist es, die uns an die Ritter verraten hat. \n\nSie verdient ein grausames Ende, aber die Verr\u00e4terin einfach zu t\u00f6ten, wird der Schutzmutter nicht zur Rache gereichen. \n\nWir werden das Herz ihres Geliebten verderben und es befleckt zur\u00fcckgeben, um seine Seele auf alle Ewigkeit zu verdammen. Mit diesem Wissen wird sie auf dem Felsen sterben.\n</font>"
+    },
+    {
+        "editor_id": "ccEDHSSE002_BeldamaMessage02",
+        "type": "MESG DESC",
+        "original": "Beldama Ward Mother",
+        "string": "Beldama-Schutzmutter"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "type": "QUST CNAM",
+        "original": "I found a knight's tomb in Markarth surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire. At Karthspire, I found two hagravens conducting a ritual with the heart at its center. I retrieved the heart and returned it to the knight's tomb. The heart was still corrupted, however, and the knight's ghost turned hostile as a result. I defeated the knight and took his armor for myself.",
+        "string": "Ich habe in Markarth ein Rittersgrab gefunden, um das drei Abgeschworene standen, und diese im Kampf besiegt. Der Schamane hatte eine Nachricht bei sich, die andeutete, dass sie das Grab gesch\u00e4ndet und das Herz des Ritters nach Karthspitze gebracht haben. In Karthspitze fand ich zwei Hexenraben, die mit dem Herz ein Ritual vollzogen. Ich nahm das Herz an mich und brachte es zum Grab des Ritters zur\u00fcck, es war jedoch immer noch korrumpiert und der Geist des Ritters griff mich an. Ich habe den Ritter besiegt und seine R\u00fcstung f\u00fcr mich behalten."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "type": "QUST CNAM",
+        "original": "I found a knight's tomb in Markarth surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire. At Karthspire, I found two hagravens conducting a ritual with the heart at its center. I retrieved the heart and returned it to the knight's tomb. After purifying the heart, I saw a visage of the knight and the witch reunited once more. ",
+        "string": "Ich habe in Markarth ein Rittersgrab gefunden, um das drei Abgeschworene standen, und diese im Kampf besiegt. Der Schamane hatte eine Nachricht bei sich, die andeutete, dass sie das Grab gesch\u00e4ndet und das Herz des Ritters nach Karthspitze gebracht haben. In Karthspitze fand ich zwei Hexenraben, die mit dem Herz ein Ritual vollzogen. Ich nahm das Herz an mich und brachte es zum Grab des Ritters zur\u00fcck. Nachdem ich es gel\u00e4utert hatte, sah ich eine Erscheinung: Der Ritter und seine Hexe waren wieder vereint. "
+    }
+]

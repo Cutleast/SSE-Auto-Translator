@@ -1,0 +1,152 @@
+[
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "type": "QUST NNAM",
+        "original": "Retrieve the Headman's Cleaver",
+        "string": "Retrouvez le Fendoir de chef"
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "type": "QUST NNAM",
+        "original": "Ask an innkeeper for work",
+        "string": "Demandez du travail \u00e0 un aubergiste"
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "type": "QUST NNAM",
+        "original": "Eliminate the bandits in Lost Knife Hideout",
+        "string": "\u00c9liminez les bandits de la Cachette du Couteau perdu"
+    },
+    {
+        "editor_id": "ccBGSSSE068_InnkeepLetter",
+        "type": "BOOK FULL",
+        "original": "Letter from Shogarz gra-Batul",
+        "string": "Lettre \u00e9crite par Shogarz gra-Batul"
+    },
+    {
+        "editor_id": "ccBGSSSE068_Journal",
+        "type": "BOOK FULL",
+        "original": "Shurgoz's Journal",
+        "string": "Journal de Shurgoz"
+    },
+    {
+        "editor_id": "ccBGSSSE068_GreencapBanditBoss",
+        "type": "MESG FULL",
+        "original": "Darkwater Snake",
+        "string": "Serpent du Sombreflot"
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "type": "QUST FULL",
+        "original": "Blood in the Water",
+        "string": "Du sang dans l'eau"
+    },
+    {
+        "editor_id": "ccBGSSSE068_GreencapBanditName",
+        "type": "MESG FULL",
+        "original": "Greencap Bandit",
+        "string": "Capuche verte"
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the Letter from Shogarz gra-Batul",
+        "string": "Lisez la lettre \u00e9crite par Shogarz gra-Batul"
+    },
+    {
+        "editor_id": "ccBGSSSE068_LvlBanditBossOrcM",
+        "type": "NPC_ FULL",
+        "original": "Bandit Chief",
+        "string": "Chef des bandits"
+    },
+    {
+        "editor_id": "ccBGSSSE068_BloodfallBlade",
+        "type": "WEAP FULL",
+        "original": "Headman's Cleaver",
+        "string": "Fendoir de chef"
+    },
+    {
+        "editor_id": "ccBGSSSE068b_Journal",
+        "type": "BOOK FULL",
+        "original": "Urzog's Journal",
+        "string": "Journal d'Urzog"
+    },
+    {
+        "editor_id": "ccBGSSSE068_EnchWeaponBloodfallBlade",
+        "type": "ENCH FULL",
+        "original": "Stamina Damage",
+        "string": "D\u00e9g\u00e2ts de vigueur"
+    },
+    {
+        "editor_id": "ccBGSSSE068_EnchStaminaDamageFFContact",
+        "type": "MGEF FULL",
+        "original": "Stamina Damage",
+        "string": "D\u00e9g\u00e2ts de vigueur"
+    },
+    {
+        "editor_id": "ccBGSSSE068_EnchStaminaDamageFFContact",
+        "type": "MGEF DNAM",
+        "original": "Does <mag> points of Stamina damage. Targets bleed <2> points for 5 seconds.",
+        "string": "Inflige <mag> point(s) de d\u00e9g\u00e2ts de vigueur. La cible saigne pendant 5\u00a0secondes."
+    },
+    {
+        "editor_id": "LostKnifeHideout01",
+        "type": "CELL FULL",
+        "original": "Lost Knife Cave",
+        "string": "Grotte du Couteau perdu"
+    },
+    {
+        "editor_id": "LostKnifeHideout02",
+        "type": "CELL FULL",
+        "original": "Lost Knife Hideout",
+        "string": "Cachette du Couteau perdu"
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "type": "QUST CNAM",
+        "original": "I received a note from a vassal of the Bloodfall Queen stating a group of bandits have stolen her weapon. I made my way to Lost Knife Hideout and retrieved the Headman's Cleaver from the bandits.",
+        "string": "J'ai re\u00e7u une note d'un vassal de la Reine des Chutes de sang indiquant qu'un groupe de bandits a d\u00e9rob\u00e9 son arme. J'ai voyag\u00e9 jusqu'\u00e0 la Cachette du Couteau perdu et ai retrouv\u00e9 la lame des Chutes de sang que gardaient les bandits."
+    },
+    {
+        "editor_id": "ccBGSSSE068_InnkeepLetter",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">To all capable warriors,\n\nA group of bandits have stolen something of great value to my family's kingdom, the Headman's Cleaver, and fled to Skyrim like cowards. We believe they're remnant members of the Greencap Bandits, who have been a thorn in the Queen's side from the day she was born. \n\nOur sources tell us they're holed up in Lost Knife Hideout, and as the Queen's strongest knight, I have been tasked with retrieving it. However, if I don't survive, I ask that you eliminate these bandits in her name. The Queen will gladly bestow the cleaver to the one who vanquishes her oldest enemy.\n\nShogarz gra-Batul",
+        "string": "<font face=\"$HandwrittenFont\">\u00c0 toute personne capable de se battre,\n\nUn groupe de bandits s'est empar\u00e9 du Fendoir de chef, un objet de grande valeur dans le royaume de ma famille, avant de s'enfuir vers Bordeciel comme des l\u00e2ches. Nous pensons qu'il s'agit des derniers membres des Capuches vertes, une v\u00e9ritable source d'ennuis pour la reine depuis qu'elle est n\u00e9e.\n\nNos informateurs nous ont indiqu\u00e9 qu'ils se terrent dans la Cachette du Couteau perdu. En tant que meilleur chevalier de la reine, j'ai pour mission de les retrouver. Toutefois, si je devais y perdre la vie, je vous demande d'\u00e9liminer ces bandits en son nom. La reine accordera avec joie le fendoir \u00e0 quiconque terrassera ses plus vieux ennemis.\n\nShogarz gra-Batul"
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "type": "QUST CNAM",
+        "original": "Talking to innkeepers has always been a good way to find work. I should head to the local inn and see if there's anything worthwhile.",
+        "string": "Parler aux aubergistes a toujours \u00e9t\u00e9 une bonne fa\u00e7on de trouver du travail. Je devrais me rendre \u00e0 l'auberge du coin et voir si je peux y apprendre quoi que ce soit d'utile."
+    },
+    {
+        "editor_id": "ccBGSSSE068_Journal",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenBold\">\nI've long suspected the \"Darkwater Snake\" is my older brother, Urzog. The fact that he would take on that moniker made it all the more obvious. \n\nIt may be that same poison that ran in grandfather's blood is what made him betray us. Are we doomed to repeat the mistakes of our ancestors? Sometimes I wonder.\n</font>",
+        "string": "<font face=\"$HandwrittenBold\">\nJ'ai longtemps suspect\u00e9 que le \"Serpent du Sombreflot\" \u00e9tait mon fr\u00e8re a\u00een\u00e9, Urzog. Le fait qu'il adopte un tel sobriquet rend la chose encore plus \u00e9vidente.\n\nPeut-\u00eatre est-ce le m\u00eame poison qui coulait dans les veines de grand-p\u00e8re qui l'a pouss\u00e9 \u00e0 nous trahir. Sommes-nous condamn\u00e9s \u00e0 r\u00e9p\u00e9ter les erreurs de nos anc\u00eatres\u00a0? Parfois, je me le demande.\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "type": "QUST CNAM",
+        "original": "Talking to innkeepers has always been a good way to find work. I received a note from one that may provide a lead.",
+        "string": "Parler aux aubergistes a toujours \u00e9t\u00e9 une bonne fa\u00e7on de trouver du travail. L'un d'entre eux m'a donn\u00e9 une note qui pourrait me fournir une piste."
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "type": "QUST CNAM",
+        "original": "I received a note from a vassal of the Bloodfall Queen stating a group of bandits have stolen her weapon. I made my way to Lost Knife Hideout and encountered their leader.",
+        "string": "J'ai re\u00e7u une note d'un vassal de la Reine des Chutes de sang indiquant qu'un groupe de bandits a d\u00e9rob\u00e9 son arme. J'ai voyag\u00e9 jusqu'\u00e0 la Cachette du Couteau perdu et ai rencontr\u00e9 leur chef."
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "type": "QUST CNAM",
+        "original": "I received a note from a vassal of the Bloodfall Queen stating a group of bandits have stolen her weapon. I should head to Lost Knife Hideout to see what's become of it.",
+        "string": "J'ai re\u00e7u une note d'un vassal de la Reine des Chutes de sang indiquant qu'un groupe de bandits a d\u00e9rob\u00e9 son arme. Je devrais me rendre \u00e0 la Cachette du Couteau perdu et d\u00e9couvrir ce qu'elle est devenue."
+    },
+    {
+        "editor_id": "ccBGSSSE068b_Journal",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenBold\">\nI've always beaten my little brother in everything. Cards, I had the better hands. Brawls, likewise. When we raced up the ramparts of the old castle, I would always be the first to reach the peak.\n\nMother said the difference between myself and my brother was that he was a perfectionist, and I was a conquerer. She said I wanted to beat him at everything, and it drove me to become a great warrior.\n\nBut my brother didn't care for competition. As a perfectionist, he simply wanted to sharpen his skills, and would work with others if he thought it would better himself.\n\nMother said that's why he would make the better ruler. My brother would forever try to improve our standing, whereas I was content being better than the next man.\n\nWell, little did she know the next man was him.\n\nI'm going to enjoy killing you little brother. Grandfather's venom may have failed to reach mother's veins, but it will still reach her heart.</font>",
+        "string": "<font face=\"$HandwrittenBold\">\nJ'ai toujours surpass\u00e9 mon petit fr\u00e8re dans tout. Aux cartes, j'avais plus de chance. Au combat, plus de force. Lorsque nous faisions la course sur les remparts du vieux ch\u00e2teau, j'\u00e9tais toujours le premier \u00e0 atteindre le sommet.\n\nM\u00e8re disait que la diff\u00e9rence entre lui et moi, c'est qu'il \u00e9tait perfectionniste, et que moi j'\u00e9tais conqu\u00e9rant. Elle ajoutait que je voulais le battre dans tout et que cela m'avait permis de devenir un grand guerrier.\n\nToutefois, mon fr\u00e8re ne s'int\u00e9ressait gu\u00e8re \u00e0 la comp\u00e9tition. En tant que perfectionniste, il cherchait simplement \u00e0 aff\u00fbter ses comp\u00e9tences et acceptait de collaborer avec autrui si cela pouvait lui permettre de s'am\u00e9liorer.\n\nM\u00e8re disait que c'\u00e9tait pour cela qu'il ferait un meilleur dirigeant. Mon fr\u00e8re cherchait sans cesse \u00e0 dorer notre blason, tandis que moi, j'\u00e9tais heureux de surpasser mon voisin.\n\nEh bien, elle ne se doutait pas que ce voisin, c'\u00e9tait mon fr\u00e8re.\n\nJe vais prendre du plaisir \u00e0 te tuer petit fr\u00e8re. Le poison de grand-p\u00e8re a peut-\u00eatre \u00e9chou\u00e9 \u00e0 atteindre les veines de notre m\u00e8re, mais il ne ratera pas son coeur.</font>"
+    }
+]

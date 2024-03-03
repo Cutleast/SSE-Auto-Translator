@@ -1,0 +1,1892 @@
+[
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonLightningBolt",
+        "type": "SPEL FULL",
+        "original": "Storm Call Lightning Bolt",
+        "string": "Sturmruf - Blitz"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_StaffLever01",
+        "type": "ACTI FULL",
+        "original": "Register of Spring",
+        "string": "Fr\u00fchlingsregister"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonConduitLever",
+        "type": "ACTI FULL",
+        "original": "Conduit Control Gem",
+        "string": "Leitungssteuerungsedelstein"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_EnchStaff01",
+        "type": "ENCH FULL",
+        "original": "Summon Autumn",
+        "string": "Herbst beschw\u00f6ren"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_EnchStaff03",
+        "type": "ENCH FULL",
+        "original": "Summon Summer",
+        "string": "Sommer beschw\u00f6ren"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Staff03",
+        "type": "WEAP FULL",
+        "original": "Karstangz-Gravuun",
+        "string": "Karstangz-Gravuun"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_StaffLever04",
+        "type": "ACTI FULL",
+        "original": "Register of Winter",
+        "string": "Winterregister"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_EffectStaff02",
+        "type": "MGEF FULL",
+        "original": "Spring Staff",
+        "string": "Fr\u00fchlingsstab"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonPollenEnch",
+        "type": "ENCH FULL",
+        "original": "Toxic Pollen Damage",
+        "string": "Giftpollenschaden"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonPoisonImodEffect",
+        "type": "MGEF FULL",
+        "original": "Toxic Runoff",
+        "string": "Giftabfluss"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonSummerSpell",
+        "type": "MGEF FULL",
+        "original": "Flame Cloak",
+        "string": "Flammenmantel"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonPlayerCornMessage3",
+        "type": "MESG FULL",
+        "original": "You place the wheat in the depository.",
+        "string": "Du legst den Weizen im Lager ab."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_SphereFrost",
+        "type": "NPC_ FULL",
+        "original": "Frosted Dwarven Sphere",
+        "string": "Reifbedeckte Zwergensph\u00e4re"
+    },
+    {
+        "editor_id": "MODSkykkilllerMagicEffectSummer",
+        "type": "MGEF FULL",
+        "original": "Clear Skies",
+        "string": "Wolkenlose Himmel"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST NNAM",
+        "original": "Disable the Conduit of Winter",
+        "string": "Deaktiviere die Winterleitung."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_StaffLever03",
+        "type": "ACTI FULL",
+        "original": "Register of Autumn",
+        "string": "Herbstregister"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonPlayerCornMessage1",
+        "type": "MESG FULL",
+        "original": "You pick up the wheat.",
+        "string": "Du nimmst den Weizen mit."
+    },
+    {
+        "editor_id": "MODSkykkilllerMagicEffectWinter",
+        "type": "MGEF FULL",
+        "original": "Clear Skies",
+        "string": "Wolkenlose Himmel"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonAutumnSpell",
+        "type": "MGEF DNAM",
+        "original": "For <dur> seconds nearby opponents take <8> points of shock damage and half magicka damage.",
+        "string": "Umstehende Ziele erleiden <dur> Sekunden lang <8> Punkte Blitzschaden und halb so viel Magickaschaden."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST NNAM",
+        "original": "Shut down the Weather Witch",
+        "string": "Schalte die Wetterhexe ab."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonWaterEnch",
+        "type": "ENCH FULL",
+        "original": "Toxic Runoff Damage",
+        "string": "Giftabflussschaden"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonElberrosBook",
+        "type": "BOOK FULL",
+        "original": "Forgotten Seasons, v1",
+        "string": "Vergessene Jahreszeiten, V1"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonSummerLocation",
+        "type": "LCTN FULL",
+        "original": "Summer",
+        "string": "Sommer"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBossSpell_Autumn",
+        "type": "SPEL FULL",
+        "original": "Autumn Spell",
+        "string": "Herbstzauber"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_EffectStaff04",
+        "type": "MGEF FULL",
+        "original": "Winter Staff",
+        "string": "Winterstab"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonSpiderControlExplosion",
+        "type": "EXPL FULL",
+        "original": "Dwarven Spider Mover Explosion",
+        "string": "Zwergenspinnen-Antriebsexplosion"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST NNAM",
+        "original": "Defeat the Sky Orchestrator",
+        "string": "Besiege den Himmelsorchestrator."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST NNAM",
+        "original": "Gather the different types of wheat and place them in the depositories",
+        "string": "Sammle die verschiedenen Weizensorten und lagere sie ein."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonSpell_Winter",
+        "type": "SPEL FULL",
+        "original": "Winter Spell",
+        "string": "Winterzauber"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST NNAM",
+        "original": "Use the control rod to direct the spider to the service waypoints",
+        "string": "Nutze den Stab der Spinnenbeherrschung, um die Spinne zu den Wartungspunkten zu dirigieren."
+    },
+    {
+        "editor_id": "ccTWBSSE001DwarvenPuzzleDungeon01",
+        "type": "CELL FULL",
+        "original": "Runoff Caverns",
+        "string": "Abflussh\u00f6hlen"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST NNAM",
+        "original": "Kill the spriggans that control the obstructing roots",
+        "string": "T\u00f6te die Zweiglinge, die diese blockierenden Wurzeln kontrollieren."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST NNAM",
+        "original": "Find and read the mage's notes on each facility",
+        "string": "Finde die Notizen des Magiers zu jeder Anlage, und lies sie dir sorgf\u00e4ltig durch."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonDepositWheat1C",
+        "type": "ACTI FULL",
+        "original": "Wheat Depository",
+        "string": "Weizenbeh\u00e4lter"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST NNAM",
+        "original": "Disable the Conduit of Autumn",
+        "string": "Deaktiviere die Herbstleitung."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonControlRod",
+        "type": "WEAP FULL",
+        "original": "Spider Control Rod",
+        "string": "Stab der Spinnenbeherrschung"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonPlayerCornMessage2",
+        "type": "MESG FULL",
+        "original": "You're already carrying too much wheat.",
+        "string": "Du hast bereits zu viel Weizen bei dir."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST NNAM",
+        "original": "Disable the Conduit of Summer",
+        "string": "Deaktiviere die Sommerleitung."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST NNAM",
+        "original": "Disable the Conduit of Spring",
+        "string": "Deaktiviere die Fr\u00fchlingsleitung."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonSpiderControlEffect",
+        "type": "MGEF DNAM",
+        "original": "Directs the repair spider to the target.",
+        "string": "Lenkt die Reparaturspinne zum Ziel."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheatItem1",
+        "type": "MISC FULL",
+        "original": "Glowing Red Wheat",
+        "string": "Leuchtend roter Weizen"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonSpiderControlEnch",
+        "type": "ENCH FULL",
+        "original": "Spider Control",
+        "string": "Spinnenbeherrschung"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST NNAM",
+        "original": "Investigate the mage's camp",
+        "string": "Untersuche das Lager des Magiers."
+    },
+    {
+        "editor_id": "ccTWBSSE001DwarvenPuzzleDungeon03",
+        "type": "CELL FULL",
+        "original": "Vardnknd Skykiller Gallery",
+        "string": "Vardnknd-Himmelst\u00f6ter-Galerie"
+    },
+    {
+        "editor_id": "ccTWBSSE001DwarvenPuzzleDungeonSeason03",
+        "type": "CELL FULL",
+        "original": "Summer's Chords",
+        "string": "Sommerfanfaren"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonDeadMercenary",
+        "type": "NPC_ FULL",
+        "original": "Mercenary",
+        "string": "S\u00f6ldner"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST NNAM",
+        "original": "Investigate the ruin",
+        "string": "Untersuche die Ruine."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_GreatWizard",
+        "type": "NPC_ FULL",
+        "original": "Elberon",
+        "string": "Elberon"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonAutumnSpell",
+        "type": "MGEF FULL",
+        "original": "Shock Cloak",
+        "string": "Blitzmantel"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonPlayerCornMessage4",
+        "type": "MESG FULL",
+        "original": "You don't have any wheat to deposit.",
+        "string": "Du hast keinen Weizen zum Ablegen."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_EffectStaff01",
+        "type": "MGEF FULL",
+        "original": "Autumn Staff",
+        "string": "Herbststab"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_StaffLever02",
+        "type": "ACTI FULL",
+        "original": "Register of Summer",
+        "string": "Sommerregister"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonElberrosBookSummer",
+        "type": "BOOK FULL",
+        "original": "Log of Elberon the Great, Vol 3",
+        "string": "Notizen von Elberon dem Gro\u00dfen, Band III"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST FULL",
+        "original": "Forgotten Seasons",
+        "string": "Vergessene Jahreszeiten"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheat1",
+        "type": "ACTI FULL",
+        "original": "Glowing Red Wheat",
+        "string": "Leuchtend roter Weizen"
+    },
+    {
+        "editor_id": "ccTWBSSE001DwarvenPuzzleDungeonSeason04",
+        "type": "CELL FULL",
+        "original": "Autumn's Bells",
+        "string": "Herbstglocken"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonSpell_Summer",
+        "type": "SPEL FULL",
+        "original": "Summer Spell",
+        "string": "Sommerzauber"
+    },
+    {
+        "editor_id": "MODSkykkilllerMagicEffectAutumn",
+        "type": "MGEF FULL",
+        "original": "Clear Skies",
+        "string": "Wolkenlose Himmel"
+    },
+    {
+        "editor_id": "ccTWBSSE001DwarvenPuzzleDungeonSeason02",
+        "type": "CELL FULL",
+        "original": "Spring's Symphony",
+        "string": "Fr\u00fchlingsinfonie"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonPollenImodEffect",
+        "type": "MGEF FULL",
+        "original": "Choking Pollen",
+        "string": "Erstickende Pollen"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonSummerRespawnLever",
+        "type": "ACTI FULL",
+        "original": "Repair Spider Release Lever",
+        "string": "Reparaturspinnenhebel"
+    },
+    {
+        "editor_id": "ccTWBSSE001DwarvenPuzzleDungeonSeason01",
+        "type": "CELL FULL",
+        "original": "Winter's Chimes",
+        "string": "Winterkl\u00e4nge"
+    },
+    {
+        "editor_id": "ccTWBSSE001DwarvenPuzzleDungeon02",
+        "type": "CELL FULL",
+        "original": "Vardnknd Gallery",
+        "string": "Vardnknd-Galerie"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_CenturionFrost",
+        "type": "NPC_ FULL",
+        "original": "Frosted Dwarven Centurion",
+        "string": "Reifbedeckter Zwergenzenturio"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_SpiderSummer",
+        "type": "NPC_ FULL",
+        "original": "Repair Spider",
+        "string": "Reparaturspinne"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_SprigganSpring",
+        "type": "NPC_ FULL",
+        "original": "Blooming Spriggan",
+        "string": "Bl\u00fchender Zweigling"
+    },
+    {
+        "editor_id": "MODSkykkilllerMagicEffectSpring",
+        "type": "MGEF FULL",
+        "original": "Clear Skies",
+        "string": "Wolkenlose Himmel"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Staff02",
+        "type": "WEAP FULL",
+        "original": "Karstangz-Koor",
+        "string": "Karstangz-Koor"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonWinterSpell",
+        "type": "MGEF FULL",
+        "original": "Frost Cloak",
+        "string": "Frostmantel"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Staff01",
+        "type": "WEAP FULL",
+        "original": "Karstangz-Vah",
+        "string": "Karstangz-Vah"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_SpiderBoss",
+        "type": "NPC_ FULL",
+        "original": "The Sky Orchestrator",
+        "string": "Himmelsorchestrator"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_EffectStaff03",
+        "type": "MGEF FULL",
+        "original": "Summer Staff",
+        "string": "Sommerstab"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_SprigganBoss",
+        "type": "NPC_ FULL",
+        "original": "Enraged Spriggan",
+        "string": "W\u00fctender Zweigling"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_SpiderFrost",
+        "type": "NPC_ FULL",
+        "original": "Frosted Dwarven Spider",
+        "string": "Reifbedeckte Zwergenspinne"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonCoolingLever",
+        "type": "ACTI FULL",
+        "original": "Coolant Release Lever",
+        "string": "K\u00fchlmittelhebel"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBossSpell_Spring",
+        "type": "SPEL FULL",
+        "original": "Spring Spell",
+        "string": "SprintFX Spell"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_RepairSpider",
+        "type": "NPC_ FULL",
+        "original": "Repair Spider",
+        "string": "Reparaturspinne"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonElberrosBookSpring",
+        "type": "BOOK FULL",
+        "original": "Log of Elberon the Great, Vol 2",
+        "string": "Notizen von Elberon dem Gro\u00dfen, Band II"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonSpiderControlMover",
+        "type": "ACTI FULL",
+        "original": "Trap Linker",
+        "string": "Fallenverbindung"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Staff04",
+        "type": "WEAP FULL",
+        "original": "Karstangz-Odus",
+        "string": "Karstangz-Odus"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_StaffPedestal",
+        "type": "ACTI FULL",
+        "original": "Altar of the Seasons",
+        "string": "Altar der Jahreszeiten"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonSpiderControlEffect",
+        "type": "MGEF FULL",
+        "original": "Spider Control",
+        "string": "Spinnenbeherrschung"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_EnchStaff02",
+        "type": "ENCH FULL",
+        "original": "Summon Spring",
+        "string": "Fr\u00fchling beschw\u00f6ren"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_CenturionAutumn",
+        "type": "NPC_ FULL",
+        "original": "Harvest Dwarven Centurion",
+        "string": "Ernte-Zwergenzenturio"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_EnchStaff04",
+        "type": "ENCH FULL",
+        "original": "Summon Winter",
+        "string": "Winter beschw\u00f6ren"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonSpringSpell",
+        "type": "MGEF FULL",
+        "original": "SprigganFX Ability",
+        "string": "SprigganFX Ability"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonPoisonWater",
+        "type": "SPEL FULL",
+        "original": "Toxic Water Imagespace",
+        "string": "Toxic Water Imagespace"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonElberrosBookWinter",
+        "type": "BOOK FULL",
+        "original": "Log of Elberon the Great, Vol 5",
+        "string": "Notizen von Elberon dem Gro\u00dfen, Band V"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonToxicEffectLingering",
+        "type": "MGEF FULL",
+        "original": "Lingering Poison Damage",
+        "string": "Dauerhafter Giftschaden"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonSummerSpell",
+        "type": "MGEF DNAM",
+        "original": "For <dur> seconds, opponents in melee range take <8> points fire damage per second. Targets on fire take extra damage.",
+        "string": "Gegner in Nahkampfreichweite erleiden <dur> Sekunden lang <8> Punkte Feuerschaden pro Sekunde. Brennende Ziele erleiden zus\u00e4tzlichen Schaden."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonWinterSpell",
+        "type": "MGEF DNAM",
+        "original": "For <dur> seconds, opponents in melee range take <8> points frost damage and Stamina damage per second.",
+        "string": "Gegner in Nahkampfreichweite erleiden <dur> Sekunden lang <8> Punkte Frost- und Ausdauerschaden pro Sekunde."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonElberrosBookFall",
+        "type": "BOOK FULL",
+        "original": "Log of Elberon the Great, Vol 4",
+        "string": "Notizen von Elberon dem Gro\u00dfen, Band IV"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonPoisonPollen",
+        "type": "SPEL FULL",
+        "original": "Toxic Pollen Imagespace",
+        "string": "Toxic Pollen Imagespace"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonSkinHarvester",
+        "type": "ARMO FULL",
+        "original": "DwarvenSteamHarvester",
+        "string": "DwarvenSteamHarvester"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheatItemSURV1",
+        "type": "MISC FULL",
+        "original": "Glowing Red Wheat",
+        "string": "Leuchtend roter Weizen"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_StaffEffectWinter",
+        "type": "MGEF FULL",
+        "original": "Winter Staff",
+        "string": "Winterstab"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_HorsePart_RightBackLeg",
+        "type": "MISC FULL",
+        "original": "Horse Right Back Leg",
+        "string": "Rechter Pferdehinterlauf"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_HorsePart_LeftFrontLeg",
+        "type": "MISC FULL",
+        "original": "Horse Left Front Leg",
+        "string": "Linker Pferdevorderlauf"
+    },
+    {
+        "editor_id": "ccTWBSSE001_abDwarvenHorseFX",
+        "type": "SPEL FULL",
+        "original": "Dworse abilities",
+        "string": "Zwergenpferd-F\u00e4higkeiten"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_AbWinter",
+        "type": "SPEL FULL",
+        "original": "Winter's Grip",
+        "string": "Wintergriff"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_BugMGEF",
+        "type": "MGEF FULL",
+        "original": "Dwarven Drone Fly",
+        "string": "Zwergendrohnenfliege"
+    },
+    {
+        "editor_id": "ccTBWSSE001_HorseFX",
+        "type": "MGEF FULL",
+        "original": "Dwarven Horse FX",
+        "string": "Dwarven Horse FX"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_FrostAtronach",
+        "type": "NPC_ FULL",
+        "original": "Frost Atronach",
+        "string": "Frost-Atronach"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_HorsePart_Head",
+        "type": "MISC FULL",
+        "original": "Horse Head",
+        "string": "Pferdekopf"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_LvlMercMissile",
+        "type": "NPC_ FULL",
+        "original": "Mercenary Archer",
+        "string": "S\u00f6ldnerbogensch\u00fctze"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_AbAutmn",
+        "type": "SPEL FULL",
+        "original": "Autumn's Cloak",
+        "string": "Herbstmantel"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_HorsePart_RightFrontLeg",
+        "type": "MISC FULL",
+        "original": "Horse Right Front Leg",
+        "string": "Rechter Pferdevorderlauf"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_LvlMercWizard",
+        "type": "NPC_ FULL",
+        "original": "Mercenary Wizard",
+        "string": "S\u00f6ldnerzauberer"
+    },
+    {
+        "editor_id": "AbFortifyRestoration",
+        "type": "MGEF FULL",
+        "original": "Fortify Restoration",
+        "string": "Wiederherstellung verst\u00e4rken"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_IceWraith",
+        "type": "NPC_ FULL",
+        "original": "Ice Wraith",
+        "string": "Eisgeist"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_StaffEffectAutumn",
+        "type": "MGEF FULL",
+        "original": "Autumn Staff",
+        "string": "Herbststab"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_StaffEffectSpring",
+        "type": "MGEF FULL",
+        "original": "Spring Staff",
+        "string": "Fr\u00fchlingsstab"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_LvlMercMisHoldPos",
+        "type": "NPC_ FULL",
+        "original": "Mercenary Archer",
+        "string": "S\u00f6ldnerbogensch\u00fctze"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_LvlMercMelee",
+        "type": "NPC_ FULL",
+        "original": "Mercenary Warrior",
+        "string": "S\u00f6ldnerkrieger"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_DwarvenHorse",
+        "type": "NPC_ FULL",
+        "original": "Dwarven Horse",
+        "string": "Zwergenpferd"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_LvlMercWizHoldPos",
+        "type": "NPC_ FULL",
+        "original": "Mercenary Wizard",
+        "string": "S\u00f6ldnerzauberer"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_StaffEffectSummer",
+        "type": "MGEF FULL",
+        "original": "Summer Staff",
+        "string": "Sommerstab"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_HorsePart_LeftBackLeg",
+        "type": "MISC FULL",
+        "original": "Horse Left Back Leg",
+        "string": "Linker Pferdehinterlauf"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_AbSpring",
+        "type": "SPEL FULL",
+        "original": "Spring's Step",
+        "string": "Fr\u00fchlingsschritt"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_AbSum",
+        "type": "SPEL FULL",
+        "original": "Summer's Embrace",
+        "string": "Umarmung des Sommers"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_FlameAtronach",
+        "type": "NPC_ FULL",
+        "original": "Flame Atronach",
+        "string": "Feuer-Atronach"
+    },
+    {
+        "editor_id": "ccTWBSSE001_DwarvenHorseTorsoActivator",
+        "type": "ACTI FULL",
+        "original": "Broken Dwarven Horse",
+        "string": "Kaputtes Zwergenpferd"
+    },
+    {
+        "editor_id": "ccTWBSSE001_EnchCrownSpring",
+        "type": "ENCH FULL",
+        "original": "Spring's Blessing",
+        "string": "Fr\u00fchlingssegen"
+    },
+    {
+        "editor_id": "ccTWBSSE001_EnchMaskAutumn",
+        "type": "ENCH FULL",
+        "original": "Autumn's Grace",
+        "string": "Herbstanmut"
+    },
+    {
+        "editor_id": "ccTWBSSE001_EnchCrownAutumn",
+        "type": "ENCH FULL",
+        "original": "Autumn's Blessing",
+        "string": "Herbstsegen"
+    },
+    {
+        "editor_id": "ccTWBSSE001_ArmorCrownSpring",
+        "type": "ARMO FULL",
+        "original": "Dwarven Crown of Spring",
+        "string": "Zwergenkrone des Fr\u00fchlings"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonHorseQuest",
+        "type": "QUST FULL",
+        "original": "The Dwarven Horse",
+        "string": "Das Zwergenpferd"
+    },
+    {
+        "editor_id": "ccTWBSSE001_EnchCrownWinter",
+        "type": "ENCH FULL",
+        "original": "Winter's Blessing",
+        "string": "Wintersegen"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonHorseMessageFail",
+        "type": "MESG FULL",
+        "original": "You haven't got all the pieces to rebuild the horse with.",
+        "string": "Du hast nicht alle Teile, um das Pferd zusammenzusetzen."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonHorseQuest",
+        "type": "QUST NNAM",
+        "original": "Recover the head of the Dwarven Horse",
+        "string": "Finde den Kopf des Zwergenpferds."
+    },
+    {
+        "editor_id": "ccTWBSSE001_DeconstructAutumn",
+        "type": "MISC FULL",
+        "original": "Remove Mask",
+        "string": "Maske entfernen"
+    },
+    {
+        "editor_id": "ccTWBSSE001_DeconstructSpring",
+        "type": "MISC FULL",
+        "original": "Remove Mask",
+        "string": "Maske entfernen"
+    },
+    {
+        "editor_id": "ccTWBSSE001_ArmorMaskWinter",
+        "type": "ARMO FULL",
+        "original": "Dwarven Winter Visage",
+        "string": "Zwergengesicht des Winters"
+    },
+    {
+        "editor_id": "ccTWBSSE001_ArmorCrownWinter",
+        "type": "ARMO FULL",
+        "original": "Dwarven Crown of Winter",
+        "string": "Zwergenkrone des Winters"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_SpiderBossFAKE",
+        "type": "NPC_ FULL",
+        "original": "The Sky Orchestrator",
+        "string": "Himmelsorchestrator"
+    },
+    {
+        "editor_id": "ccTWBSSE001_ArmorMaskAutumn",
+        "type": "ARMO FULL",
+        "original": "Dwarven Autumn Visage",
+        "string": "Zwergengesicht des Herbstes"
+    },
+    {
+        "editor_id": "ccTWBSSE001_ArmorMaskSpring",
+        "type": "ARMO FULL",
+        "original": "Dwarven Spring Visage",
+        "string": "Zwergengesicht des Fr\u00fchlings"
+    },
+    {
+        "editor_id": "ccTWBSSE001_EnchMaskSpring",
+        "type": "ENCH FULL",
+        "original": "Spring's Grace",
+        "string": "Fr\u00fchlingsanmut"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST NNAM",
+        "original": "Find the entrance to the Dwarven ruin",
+        "string": "Finde den Eingang zur Zwergenruine."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonMapMarker",
+        "type": "REFR FULL",
+        "original": "Runoff Caverns",
+        "string": "Abflussh\u00f6hlen"
+    },
+    {
+        "editor_id": "ccTWBSSE001_ArmorCrownAutumn",
+        "type": "ARMO FULL",
+        "original": "Dwarven Crown of Autumn",
+        "string": "Zwergenkrone des Herbstes"
+    },
+    {
+        "editor_id": "ccTWBSSE001_EnchMaskWinter",
+        "type": "ENCH FULL",
+        "original": "Winter's Grace",
+        "string": "Winteranmut"
+    },
+    {
+        "editor_id": "ccTWBSSE001_DeconstructWinter",
+        "type": "MISC FULL",
+        "original": "Remove Mask",
+        "string": "Maske entfernen"
+    },
+    {
+        "editor_id": "ccTWBSSE001_ArmorCrownOpen",
+        "type": "ARMO FULL",
+        "original": "Dwarven Crown",
+        "string": "Zwergenkrone"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBeam",
+        "type": "MGEF FULL",
+        "original": "Dwarven Beam Effect",
+        "string": "Dwarven Beam Effect"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonControlRodReward",
+        "type": "WEAP FULL",
+        "original": "Spider Control Rod",
+        "string": "Stab der Spinnenbeherrschung"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonHorseQuest",
+        "type": "QUST NNAM",
+        "original": "Recover the right back leg of the Dwarven Horse",
+        "string": "Finde den rechten Hinterlauf des Zwergenpferds."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonCalmStaff",
+        "type": "ENCH FULL",
+        "original": "Calm Spider",
+        "string": "Spinne beruhigen"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_SprigganNonHostile",
+        "type": "NPC_ FULL",
+        "original": "Spriggan",
+        "string": "Zweigling"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonHorseQuest",
+        "type": "QUST NNAM",
+        "original": "Recover the left back leg of the Dwarven Horse",
+        "string": "Finde den linken Hinterlauf des Zwergenpferds."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonHorseQuest",
+        "type": "QUST NNAM",
+        "original": "Recover the right front leg of the Dwarven Horse",
+        "string": "Finde den rechten Vorderlauf des Zwergenpferds."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonLocation",
+        "type": "LCTN FULL",
+        "original": "Vardnknd",
+        "string": "Vardnknd"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleGeneratorBeam",
+        "type": "SPEL FULL",
+        "original": "DwarvenLightBeam",
+        "string": "DwarvenLightBeam"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonHorseQuest",
+        "type": "QUST NNAM",
+        "original": "Return all the pieces to the Dwarven Horse's frame",
+        "string": "Bringe alle Teile zum K\u00f6rper des Zwergenpferds zur\u00fcck."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonHorseQuest",
+        "type": "QUST NNAM",
+        "original": "Recover the left front leg of the Dwarven Horse",
+        "string": "Finde den linken Vorderlauf des Zwergenpferds."
+    },
+    {
+        "editor_id": "dlcDwarvenPuzzleDungeon_Rabbit",
+        "type": "NPC_ FULL",
+        "original": "Rabbit",
+        "string": "Kaninchen"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_ArmorEnch",
+        "type": "ENCH FULL",
+        "original": "Season's Shield",
+        "string": "Jahreszeitenschild"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_BossArmor",
+        "type": "ARMO FULL",
+        "original": "Ward of the Seasons",
+        "string": "Bewahrer der Jahreszeiten"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_DeerSpring",
+        "type": "NPC_ FULL",
+        "original": "Deer",
+        "string": "Reh"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_WeaknessShock",
+        "type": "MGEF FULL",
+        "original": "Conductive Helmet",
+        "string": "Leithelm"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Crownench",
+        "type": "ENCH FULL",
+        "original": "Dwarven Crown",
+        "string": "Zwergenkrone"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_BugDead",
+        "type": "MSTT FULL",
+        "original": "Deactivated Dwarven Insect",
+        "string": "Deaktiviertes Zwergeninsekt"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_AutumnGoat",
+        "type": "NPC_ FULL",
+        "original": "Goat",
+        "string": "Ziege"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_AutumnCow",
+        "type": "NPC_ FULL",
+        "original": "Cow",
+        "string": "Kuh"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_AutumnHare2",
+        "type": "NPC_ FULL",
+        "original": "Rabbit",
+        "string": "Kaninchen"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_AutumnChicken",
+        "type": "NPC_ FULL",
+        "original": "Chicken",
+        "string": "Huhn"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST NNAM",
+        "original": "Find a way through the icy reservoirs to reach the Conduit of Winter",
+        "string": "Finde einen Weg durch die eisigen Reservoirs, um die Winterleitung zu erreichen."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_SprigganSpringMatron",
+        "type": "NPC_ FULL",
+        "original": "Blooming Spriggan",
+        "string": "Bl\u00fchender Zweigling"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_SprigganSpringMatronKey",
+        "type": "NPC_ FULL",
+        "original": "Blooming Spriggan Matron",
+        "string": "Bl\u00fchende Zweiglingmatrone"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonWheatChest",
+        "type": "CONT FULL",
+        "original": "Equipment Storage Chest",
+        "string": "Ausr\u00fcstungs-Aufbewahrungstruhe"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_SpringMaskKey",
+        "type": "KEYM FULL",
+        "original": "Vardnknd Spring Key",
+        "string": "Vardnknd-Fr\u00fchlingsschl\u00fcssel"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_CarrySpell",
+        "type": "MGEF FULL",
+        "original": "Weight",
+        "string": "Gewicht"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonCrownQuest",
+        "type": "QUST FULL",
+        "original": "The Dwarven Crown",
+        "string": "Die Zwergenkrone"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonCrownQuest",
+        "type": "QUST NNAM",
+        "original": "Find the Mask of Spring",
+        "string": "Finde die Maske des Fr\u00fchlings."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonLightningBoltLow",
+        "type": "SPEL FULL",
+        "original": "Storm Call Lightning Bolt",
+        "string": "Sturmruf - Blitz"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonCrownQuest",
+        "type": "QUST NNAM",
+        "original": "Find the Mask of Winter",
+        "string": "Finde die Maske des Winters."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonCrownQuest",
+        "type": "QUST NNAM",
+        "original": "Find the Mask of Autumn",
+        "string": "Finde die Maske des Herbstes."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheatItemSURV2",
+        "type": "MISC FULL",
+        "original": "White Molded Wheat",
+        "string": "Wei\u00dfer Schimmelweizen"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheat3",
+        "type": "ACTI FULL",
+        "original": "Blue Luminous Wheat",
+        "string": "Blau leuchtender Weizen"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheatItemSURV4",
+        "type": "MISC FULL",
+        "original": "Orange-encrusted Wheat",
+        "string": "Orangeverkrusteter Weizen"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheatItemSURV6",
+        "type": "MISC FULL",
+        "original": "Sickly Green Wheat",
+        "string": "Kr\u00e4nklich gr\u00fcner Weizen"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheatItem3",
+        "type": "MISC FULL",
+        "original": "Blue Luminous Wheat",
+        "string": "Blau leuchtender Weizen"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheatItem6",
+        "type": "MISC FULL",
+        "original": "Sickly Green Wheat",
+        "string": "Kr\u00e4nklich gr\u00fcner Weizen"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonDepositWheat4D",
+        "type": "ACTI FULL",
+        "original": "Wheat Depository",
+        "string": "Weizenbeh\u00e4lter"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheat2",
+        "type": "ACTI FULL",
+        "original": "White Molded Wheat",
+        "string": "Wei\u00dfer Schimmelweizen"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheat5",
+        "type": "ACTI FULL",
+        "original": "Off-Color Wheat",
+        "string": "Seltsam gef\u00e4rbter Weizen"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheatItem2",
+        "type": "MISC FULL",
+        "original": "White Molded Wheat",
+        "string": "Wei\u00dfer Schimmelweizen"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonDepositWheat5E",
+        "type": "ACTI FULL",
+        "original": "Wheat Depository",
+        "string": "Weizenbeh\u00e4lter"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheatItem5",
+        "type": "MISC FULL",
+        "original": "Off-Color Wheat",
+        "string": "Seltsam gef\u00e4rbter Weizen"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonCrownQuest",
+        "type": "QUST NNAM",
+        "original": "Use a forge to slot a mask into the Dwarven Crown",
+        "string": "Nutze eine Schmiede, um die Zwergenkrone mit einer Maske zu versehen."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheatItemSURV3",
+        "type": "MISC FULL",
+        "original": "Blue Luminous Wheat",
+        "string": "Blau leuchtender Weizen"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheat6",
+        "type": "ACTI FULL",
+        "original": "Sickly Green Wheat",
+        "string": "Kr\u00e4nklich gr\u00fcner Weizen"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonDepositWheat6F",
+        "type": "ACTI FULL",
+        "original": "Wheat Depository",
+        "string": "Weizenbeh\u00e4lter"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheatItemSURV5",
+        "type": "MISC FULL",
+        "original": "Off-color Wheat",
+        "string": "Andersfarbiger Weizen"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonDepositWheat3A",
+        "type": "ACTI FULL",
+        "original": "Wheat Depository",
+        "string": "Weizenbeh\u00e4lter"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheatItem4",
+        "type": "MISC FULL",
+        "original": "Orange-Encrusted Wheat",
+        "string": "Orange verkrusteter Weizen"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheat4",
+        "type": "ACTI FULL",
+        "original": "Orange-Encrusted Wheat",
+        "string": "Orange verkrusteter Weizen"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonDepositWheat2B",
+        "type": "ACTI FULL",
+        "original": "Wheat Depository",
+        "string": "Weizenbeh\u00e4lter"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_ElberrosApprentice",
+        "type": "NPC_ FULL",
+        "original": "Elberon's Apprentice",
+        "string": "Elberons Lehrling"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_ElberrosApprentice",
+        "type": "NPC_ SHRT",
+        "original": "Apprentice",
+        "string": "Lehrling"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonLightningBoltNone",
+        "type": "SPEL FULL",
+        "original": "Storm Call Lightning Bolt",
+        "string": "Sturmruf - Blitz"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_ShockWeakness",
+        "type": "MGEF FULL",
+        "original": "Weakness to Shock",
+        "string": "Anf\u00e4lligkeit f\u00fcr Blitz"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonCrownQuest",
+        "type": "QUST NNAM",
+        "original": "Retrieve the Dwarven Crown",
+        "string": "Beschaffe die Zwergenkrone."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_PoisonWeakness",
+        "type": "MGEF DNAM",
+        "original": "Target is <mag>% weaker to poison for <dur> seconds.",
+        "string": "Das Ziel ist <dur> Sekunden lang um <mag> Prozent anf\u00e4lliger gegen\u00fcber Gift."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_FrostBreath",
+        "type": "SHOU FULL",
+        "original": "Frozen Steam Breath",
+        "string": "Gefrorener Dampfatem"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_StaffPoisonEff",
+        "type": "MGEF FULL",
+        "original": "Poison Fire",
+        "string": "Giftfeuer"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Staffspell1",
+        "type": "SPEL FULL",
+        "original": "Summon Autumn",
+        "string": "Herbst beschw\u00f6ren"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_FrostbreathEFF",
+        "type": "MGEF FULL",
+        "original": "Frozen Breath",
+        "string": "Gefrorener Atem"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_PoisonWeakness",
+        "type": "MGEF FULL",
+        "original": "Weakness to Poison",
+        "string": "Anf\u00e4lligkeit f\u00fcr Gift"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_FrostWeakness",
+        "type": "MGEF DNAM",
+        "original": "Target is <mag>% weaker to frost damage for <dur> seconds.",
+        "string": "Das Ziel ist <dur> Sekunden lang um <mag> Prozent anf\u00e4lliger gegen\u00fcber Frostschaden."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_FireWeakness",
+        "type": "MGEF FULL",
+        "original": "Weakness to Fire",
+        "string": "Anf\u00e4lligkeit f\u00fcr Feuer"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonCalmSpider",
+        "type": "MGEF DNAM",
+        "original": "Creatures and people up to level <mag> won't fight for <dur> seconds.",
+        "string": "Kreaturen und Personen bis zu Stufe <mag> k\u00e4mpfen <dur> Sekunden lang nicht."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_FireWeakness",
+        "type": "MGEF DNAM",
+        "original": "Target is <mag>% weaker to fire damage for <dur> seconds.",
+        "string": "Das Ziel ist <dur> Sekunden lang um <mag> Prozent anf\u00e4lliger gegen\u00fcber Feuerschaden."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Staffspell4",
+        "type": "SPEL FULL",
+        "original": "Summon Winter",
+        "string": "Winter beschw\u00f6ren"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_FrostWeakness",
+        "type": "MGEF FULL",
+        "original": "Weakness to Frost",
+        "string": "Anf\u00e4lligkeit f\u00fcr Frost"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_ShockWeakness",
+        "type": "MGEF DNAM",
+        "original": "Target is <mag>% weaker to shock damage for <dur> seconds.",
+        "string": "Das Ziel ist <dur> Sekunden lang um <mag> Prozent anf\u00e4lliger gegen\u00fcber Schockschaden."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_FrostSpell",
+        "type": "SPEL FULL",
+        "original": "Frozen Steam Breath",
+        "string": "Gefrorener Dampfatem"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonCalmSpider",
+        "type": "MGEF FULL",
+        "original": "Calm",
+        "string": "Bes\u00e4nftigen"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Staffspell3",
+        "type": "SPEL FULL",
+        "original": "Summon Summer",
+        "string": "Sommer beschw\u00f6ren"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Staffspell2",
+        "type": "SPEL FULL",
+        "original": "Summon Spring",
+        "string": "Fr\u00fchling beschw\u00f6ren"
+    },
+    {
+        "editor_id": "DLCDwarven_SkinRabbit4",
+        "type": "ARMO FULL",
+        "original": "Rabbit",
+        "string": "Kaninchen"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_AutumnHare1",
+        "type": "NPC_ FULL",
+        "original": "Rabbit",
+        "string": "Kaninchen"
+    },
+    {
+        "editor_id": "DLCDwarven_SkinRabbit6",
+        "type": "ARMO FULL",
+        "original": "Rabbit",
+        "string": "Kaninchen"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_AutumnHare3",
+        "type": "NPC_ FULL",
+        "original": "Rabbit",
+        "string": "Kaninchen"
+    },
+    {
+        "editor_id": "DLCDwarven_SkinRabbit1",
+        "type": "ARMO FULL",
+        "original": "Rabbit",
+        "string": "Kaninchen"
+    },
+    {
+        "editor_id": "DLCDwarven_SkinRabbit2",
+        "type": "ARMO FULL",
+        "original": "Rabbit",
+        "string": "Kaninchen"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_AutumnHare4",
+        "type": "NPC_ FULL",
+        "original": "Rabbit",
+        "string": "Kaninchen"
+    },
+    {
+        "editor_id": "DLCDwarven_SkinRabbit3",
+        "type": "ARMO FULL",
+        "original": "Rabbit",
+        "string": "Kaninchen"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_AutumnHare6",
+        "type": "NPC_ FULL",
+        "original": "Rabbit",
+        "string": "Kaninchen"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_AutumnHare5",
+        "type": "NPC_ FULL",
+        "original": "Rabbit",
+        "string": "Kaninchen"
+    },
+    {
+        "editor_id": "DLCDwarven_SkinRabbit5",
+        "type": "ARMO FULL",
+        "original": "Rabbit",
+        "string": "Kaninchen"
+    },
+    {
+        "editor_id": "ccTWBSSE001_MercNote01_RunoffCaverns",
+        "type": "BOOK FULL",
+        "original": "Mercenary's Note",
+        "string": "Notiz des S\u00f6ldners"
+    },
+    {
+        "editor_id": "ccTWBSSE001_RunoffCavernsTreasureRoomKey",
+        "type": "KEYM FULL",
+        "original": "Runoff Caverns Gate Key",
+        "string": "Abflussh\u00f6hlen-Torschl\u00fcssel"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonMainAreaLocation",
+        "type": "LCTN FULL",
+        "original": "Vardnknd",
+        "string": "Vardnknd"
+    },
+    {
+        "editor_id": "ccTWBSSE001_MageNote02_DwarvenCrown",
+        "type": "BOOK FULL",
+        "original": "Dwarven Crown Journal",
+        "string": "Zwergenkronen-Tagebuch"
+    },
+    {
+        "editor_id": "ccTWBSSE001_MercNote04_Autumn",
+        "type": "BOOK FULL",
+        "original": "Note on Autumn",
+        "string": "Notiz zum Herbst"
+    },
+    {
+        "editor_id": "ccTWBSSE001_MercNote02_Spring",
+        "type": "BOOK FULL",
+        "original": "Note on Spring",
+        "string": "Notiz zum Fr\u00fchling"
+    },
+    {
+        "editor_id": "ccTWBSSE001_MercNote03_Summer",
+        "type": "BOOK FULL",
+        "original": "Note on Summer",
+        "string": "Notiz zum Sommer"
+    },
+    {
+        "editor_id": "ccTWBSSE001_MercNote05_Winter",
+        "type": "BOOK FULL",
+        "original": "Note on Winter",
+        "string": "Notiz zum Winter"
+    },
+    {
+        "editor_id": "ccTWBSSE001_MageNote01_Seasons",
+        "type": "BOOK FULL",
+        "original": "Elberon's Journal",
+        "string": "Elberons Tagebuch"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonWinterLocation",
+        "type": "LCTN FULL",
+        "original": "Winter",
+        "string": "Winter"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonAutumnGrass",
+        "type": "TREE FULL",
+        "original": "Spiky Grass",
+        "string": "Stachelgras"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonGourdCluster01",
+        "type": "TREE FULL",
+        "original": "Wild Gourds",
+        "string": "Wilde K\u00fcrbisse"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonSpikyGrass01",
+        "type": "TREE FULL",
+        "original": "Wild Spiky Grass",
+        "string": "Wildes Stachelgras"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonSpikyGrassPod01",
+        "type": "INGR FULL",
+        "original": "Wild Grass Pod",
+        "string": "Wildgrassamen"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonFoodGourd",
+        "type": "ALCH FULL",
+        "original": "Wild Gourd",
+        "string": "Wilder K\u00fcrbis"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonDwarvenHorseDialog",
+        "type": "QUST FULL",
+        "original": "Dwarven Horse Dialog",
+        "string": "Zwergenpferd-Dialog"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonDwarvenDartwing",
+        "type": "ALCH FULL",
+        "original": "Dwarven Drone Fly",
+        "string": "Zwergendrohnenfliege"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_BugMGEF",
+        "type": "MGEF DNAM",
+        "original": "Summons a Dwarven Drone Fly for <dur> seconds, then returns to your inventory.",
+        "string": "Beschw\u00f6rt f\u00fcr <dur> Sekunden eine Zwergendrohnenfliege und kehrt anschlie\u00dfend in dein Inventar zur\u00fcck."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST NNAM",
+        "original": "Read the mage's journal",
+        "string": "Lies das Tagebuch des Magiers."
+    },
+    {
+        "editor_id": "ccTWBSSE001_MercNote06_DwarvenBugNote",
+        "type": "BOOK FULL",
+        "original": "Note on the Dwarven Drone Fly",
+        "string": "Notiz zur Zwergendrohnenfliege"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_SeasonsPerk",
+        "type": "MGEF DNAM",
+        "original": "Barter prices are <10>% better when raining. With a full set of Light Armor equipped, stamina regenerates <5>% faster in clear or clement weather. <10>% chance of a critical hit that does <10>% more critical damage with bows when overcast. With a full set of Heavy Armor equipped, armor rating increased by <10>% when snowing.",
+        "string": "Handelspreise sind bei Regen <10> Prozent besser. Bei einer kompletten, ausger\u00fcsteten leichten R\u00fcstung regeneriert sich Ausdauer <5> Prozent schneller, wenn es sonnig ist. <10>-Prozent-Chance auf einen kritischen Treffer, der <10> Prozent mehr kritischen Schaden mit B\u00f6gen verursacht, wenn es wolkig ist. Bei einer kompletten, ausger\u00fcsteten schweren R\u00fcstung erh\u00f6ht sich der R\u00fcstungswert um <10> Prozent, wenn es schneit."
+    },
+    {
+        "editor_id": "ccTWBSSE001_DweDoorLarge01LoadMinUse",
+        "type": "DOOR FULL",
+        "original": "Door",
+        "string": "T\u00fcr"
+    },
+    {
+        "editor_id": "ccTWBSSE001_SeasonsPerkz",
+        "type": "PERK FULL",
+        "original": "Turn of the Seasons",
+        "string": "Wechsel der Jahreszeiten"
+    },
+    {
+        "editor_id": "ccTWBSSE001_SummerAbilitySeasons",
+        "type": "SPEL FULL",
+        "original": "Turn of the Seasons",
+        "string": "Wechsel der Jahreszeiten"
+    },
+    {
+        "editor_id": "ccTWBSSE001_SeasonsPerk",
+        "type": "BOOK FULL",
+        "original": "Turn of the Seasons",
+        "string": "Wechsel der Jahreszeiten"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_SeasonsPerk",
+        "type": "MGEF FULL",
+        "original": "Turn of the Seasons",
+        "string": "Wechsel der Jahreszeiten"
+    },
+    {
+        "editor_id": "ccTWBSSE001_DummySpellSeasons",
+        "type": "SPEL FULL",
+        "original": "Turn of the Seasons",
+        "string": "Wechsel der Jahreszeiten"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest02",
+        "type": "QUST FULL",
+        "original": "Book Quest Item",
+        "string": "Buch-Questgegenstand"
+    },
+    {
+        "editor_id": "ccTWBSSE001_ConduitGem",
+        "type": "MISC FULL",
+        "original": "Vardnknd Conduit Gem",
+        "string": "Vardnknd-Leitungsedelstein"
+    },
+    {
+        "editor_id": "ccTWBSSE001_AbWeaknessShockConstant",
+        "type": "MGEF FULL",
+        "original": "Dummy Effect",
+        "string": "Dummy Effect"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_LvlMercCamp",
+        "type": "NPC_ FULL",
+        "original": "Mercenary",
+        "string": "Mercenary"
+    },
+    {
+        "editor_id": "Tamriel",
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Himmelsrand"
+    },
+    {
+        "editor_id": "CTest",
+        "type": "CELL FULL",
+        "original": "Quick Test Cell",
+        "string": "Schnelle Testzelle"
+    },
+    {
+        "editor_id": "RiftenJail02",
+        "type": "CELL FULL",
+        "original": "Sewer",
+        "string": "Abwasserkanal"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonPlayerCornMessage2",
+        "type": "MESG DESC",
+        "original": "You're already carrying too much wheat.",
+        "string": "Du hast bereits zu viel Weizen bei dir."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonElberrosBook",
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\n<p align=\"center\">\n\n\nForgotten Seasons\nMy Journey Through the Ancient World of The Dwarves Vol. 1\n\n\nby \nElberon Blackthorn</p>[pagebreak]\n<p align=\"left\"></p>[pagebreak]<p align=\"left\">\n<img src='img://Textures/Interface/Books/Illuminated_Letters/A_letter.png'>fter having saved the town of Tanglehaven with my patented snake oil serum, word of my deeds soon spread, and one of my helpful admirers pointed me in the direction of an old system of caverns. But lo, it was not a simple naturally formed cave, but Vardnknd, a long forgotten Dwarven ruin. \n\nA storm of great intensity had ravaged the region recently, and the locals all thought that some curse lay upon the caves, and they spewed out bad weather because of this. But Elberon Blackthorn is nothing if not well read, and I was well-versed with the legends surrounding those caves. You see, I had been looking for Vardnknd for a long time, because deep within it contained a Karstanghz-Beharn, better known as a Weather Witch. \n\nThese legendary devices were said to be able to control the weather, and Vardnknd's was the strongest of them all. But why did they make it? To terrorize innocents? To help in times of underground drought? Either way, a storm now raged across the region, and it was obvious who was at fault. To save the locals, and to claim the power of the weather for my own, me and my trusted band of mercenaries dove towards the problem with the same bravery and skill I approach everything in life with. \n\nInside, evidence of the storm's rampage could still be seen and felt. Pipes spewed a poisonous ooze into the streams, rubble lay about, and most tellingly, a massive indoor storm raged. The Weather Witch had gone mad! Alas, the door to the main gallery was sealed shut. But with my impressive knowledge of the Dwarves and their infernal sciences, I was able to quickly deduce the issue. \n\nYou see, dear readers, while the storm raged, it drew its power from magic derived from each of the four seasons. Yes, the Dwarves had in this very ruin undertaken a massive analysis of spring, summer, autumn, and winter, and tied to each of them a conduit that would focus their natural energies into the gallery, allowing the weather to be controlled! All one had to do was enter each part of the facility and disconnect those conduits. Only then could I enter the main gallery and shut down the Weather Witch!\n\nThis first volume details my intrepid adventure into each of these seasonal sub-facilities, as well as my harrowing escape. It also serves as a manual on how to shut down the conduits which I aim to document in my next volume. \n\nThus armed with this information and my benefactor's funding, my apprentice and I have once more endeavored into the heart of this ruin, this time with more men and hopefully, with more satisfactory results.</font>\n</p>\n[pagebreak]\n</p>\n\n<p align=\"center\"><img src='img://Textures/Interface/Books/Illuminated_Letters/A_letter.png'>utumn</p><p align=\"left\">\nAs I trundled into the halls of Autumn, a marvelous sight unfolded. Before me lay an enormous stretch of farmland, decrepit and overgrown, but a farm nevertheless. Strange fruits and grains grew in plots, while emaciated chickens ran about, all the while tended by enormous double-bladed centurions. Did the Dwemer find it amusing that the surface-people had a whole season dedicated just to harvest, or did they do this as a mockery to some forgotten god of the feast? Whatever the case, I aimed to examine a piece of this Dwarven wheat myself. \n\nThe harvest glowed with a foul light, the grains as stiff as a rock. Yet as dense as the wheat was, I observed the bladed centurions cutting through it with little effort and carrying them off to a set of depositories near the entrance. While no doubt the blades of these machines would make short work of flesh and armor, my men nevertheless valiantly served as a distraction as I made my escape. Perhaps if I had more time, or more men, I could carry the heavy wheat over to the depository, and sate whatever freakish endeavors the Dwarves had begun.\n[pagebreak]\n</p>\n<p align=\"center\"><img src='img://Textures/Interface/Books/Illuminated_Letters/S_letter.png'>pring</p><p align=\"left\">\nSpring greeted me with a splash of color as beautiful flowers were scattered across the halls of metal and stone. There were even animals sauntering about, feeding off the vegetation warmed by the artificial light. Unfortunately, our journey through this horrific sight of beauty was soon delayed by a most peculiar obstruction. \n\nThick, gnarled roots blocked the passageways, halting our progress. Perhaps the Dwemer had found nature to be cumbersome, and saw spring as nothing more than a season of suffering. While the mercenaries labored to cut through the bark, my strong perception allowed me to notice strange spriggans shambling through the artificial forests. As I brushed aside it, the roots quivered, as if their tendrils were an extension of the forest creature. Were these spriggans the tenders of the gardens, or just a consequence of its existence? Regardless, if we could somehow sever the connection between the spriggans and the roots, we might find a way deeper into the ruins.\n[pagebreak]\n</p>\n<p align=\"center\"><img src='img://Textures/Interface/Books/Illuminated_Letters/S_letter.png'>ummer</p><p align=\"left\">\nSummer was a maze of tunnels and pipes, and no doubt centuries of neglect had left the place in a state of pure chaos. Lava spewed from every stone orifice I could see, and unbearable heat made for a precarious journey, causing many of the lesser mercenaries to turn back to cooler times. But the Dwemer had predicted such superheat, for this unbearable weather was undoubtedly what summer meant to them. \n\nAs I pulled myself through the swelter, I noticed repair spiders darting to and fro, lowering bridges that granted access to side sections of the chamber. It seems that within each section is a service waypoint that releases some sort of magical coolant, reducing the heat from impossible to merely annoying. Perhaps if I could find a way to direct the spiders to the various waypoints in the area, I could drop the temperature to a more manageable level.\n[pagebreak]\n</p>\n<p align=\"center\"><img src='img://Textures/Interface/Books/Illuminated_Letters/W_letter.png'>inter</p><p align=\"left\">\nWinter was, not to my surprise, home to a great indoor blizzard and what the mercenaries thought of as artificial stone mountains. Yet they were not mountains, but great towering silos of frozen water. And the cold! Not even the highest mountains compared to such chills, and we were soon trading furs amongst ourselves to keep warm! \n\nIt became clear that to progress through this area, I would need to dive through the unfrozen waters that surrounded the towers, snaking up and around the structure like the ice wraiths that call this place home. As clever a solution as any solution thought up by me, but not one I could risk at the moment. Perhaps when we return to this ruin, I can find someone less important to brave it.</p>\n\n",
+        "string": "[pagebreak]\n<p align=\"center\">\n\n\nVergessene Jahreszeiten\nMeine Reise durch die alte Welt der Zwerge, Band I\n\n\nvon \nElberon Schwarzdorn</p>[pagebreak]\n<p align=\"left\"></p>[pagebreak]<p align=\"left\">\n<img src='img://Textures/Interface/Books/Illuminated_Letters/N_letter.png'>achdem ich die Stadt Rankenhort mit meinem patentierten Schlangen\u00f6lserum gerettet hatte, machten die Erz\u00e4hlungen von meinen Taten schnell die Runde, und einer meiner hilfsbereiten Bewunderer zeigte mir den Weg zu einem alten H\u00f6hlensystem. Doch es war keine nat\u00fcrliche H\u00f6hle, sondern Vardnknd, eine lange vergessene Zwergenruine. \n\nDie Region war kurz zuvor von einem gewaltigen Sturm heimgesucht worden, und die Leute in der N\u00e4he dachten alle, dass irgendein Fluch auf den H\u00f6hlen l\u00e4ge, und sie deswegen schlechtes Wetter ausspuckten. Aber Elberon Schwarzdorn ist au\u00dferordentlich belesen, und ich kannte mich gut mit den Legenden aus, die sich um diese H\u00f6hlen rankten. Ich hatte Vardnknd vor langer Zeit schon einmal gesucht, weil irgendwo in ihren Tiefen eine Karstanghz-Beharn leben soll, auch bekannt als Wetterhexe. \n\nDiese legend\u00e4ren Konstrukte sollen angeblich das Wetter kontrollieren k\u00f6nnen, und das Exemplar von Vardnknd war das m\u00e4chtigste von allen. Aber warum wurde es \u00fcberhaupt gebaut? Um Unschuldige zu terrorisieren? Um in Zeiten einer unterirdischen D\u00fcrre zu helfen? Wie die Antwort auch lauten mag, jetzt w\u00fctete ein Sturm in der Gegend und es war offensichtlich, wessen Schuld es war. Um die Einheimischen zu retten und die Macht des Wetters f\u00fcr mich selbst zu nutzen, nahm ich mich gemeinsam mit meiner vertrauten Gruppe S\u00f6ldner des Problems an, und zwar mit demselben Mut und derselben Finesse, mit denen ich alles im Leben angehe. \n\nIm Inneren sah und sp\u00fcrte man die Spuren, die der tosende Sturm hinterlassen hatte. Rohre spuckten eine giftige Fl\u00fcssigkeit in die B\u00e4che, \u00fcberall lag Schutt herum, und vor allem tobte ein gewaltiger Sturm. Die Wetterhexe spielte verr\u00fcckt! Zu allem Ungl\u00fcck war auch noch die T\u00fcr zur Hauptgalerie verschlossen. Doch mit meinem umfangreichen Wissen \u00fcber die Zwerge und ihre h\u00f6llischen Wissenschaften war ich in der Lage, das Problem schnell zu erkennen. \n\nSeht Ihr, liebe Leser, w\u00e4hrend der Sturm w\u00fctete, zog er seine Kraft aus der Magie der vier Jahreszeiten. Ja, die Zwerge hatten in dieser Ruine aufw\u00e4ndige Forschungen rund um die vier Jahreszeiten Fr\u00fchling, Sommer, Herbst und Winter durchgef\u00fchrt und jede von ihnen mit einer Leitung verbunden, um ihre nat\u00fcrliche Energie in die Galerie zu leiten und so das Wetter zu kontrollieren! Wir brauchten also nur in den jeweiligen Bereich der Anlage zu gehen und diese Leitungen kappen. Dann w\u00fcrde ich die Hauptgalerie betreten und der Wetterhexe den Garaus machen k\u00f6nnen!\n\nDer erste Band beschreibt meinen unerschrockenen Vorsto\u00df in die einzelnen Bereiche der Jahreszeiten und meine waghalsige Flucht. Des Weiteren dient er als Anleitung, wie die Leitungen gekappt werden k\u00f6nnen, worauf ich im zweiten Band n\u00e4her eingehe. \n\nMit diesem Wissen und dem Geld meines Wohlt\u00e4ters bewaffnet, haben mein Lehrling und ich uns ein weiteres Mal in das Herz der Ruine vorgewagt, doch diesmal mit mehr M\u00e4nnern und hoffentlich einem besseren Ende.</font>\n</p>\n[pagebreak]\n</p>\n\n<p align=\"center\"><img src='img://Textures/Interface/Books/Illuminated_Letters/H_letter.png'>erbst</p><p align=\"left\">\nAls ich die Hallen des Herbstes betrat, bot sich mir ein sagenhafter Anblick. Vor mir erstreckten sich riesige Felder, v\u00f6llig verwahrlost und zugewachsen, doch es war ein Bauernhof. An manchen Stellen wuchsen seltsame Fr\u00fcchte und eigenartiges Getreide, w\u00e4hrend \u00fcberall ausgemergelte H\u00fchner umherliefen, beh\u00fctet von gewaltigen Zenturios mit zwei Klingen. Hatten die Dwemer es am\u00fcsant gefunden, dass die Bewohner der Oberfl\u00e4che eine ganze Jahreszeit der Ernte widmeten, oder war das alles nichts als eine Verspottung irgendeines vergessenen Festgottes? Wie auch immer, ich wollte selbst ein wenig von diesem Zwergenweizen untersuchen. \n\nDie Ernte erstrahlte in einem verdorbenen Licht, die K\u00f6rner hart wie Stein. Doch so dicht der Weizen auch stand, die klingenbewehrten Zenturios pfl\u00fcgten m\u00fchelos durch ihn hindurch und luden ihn in einigen Lagerst\u00e4tten unweit des Eingangs ab. Obgleich die Klingen dieser Maschinen mit Fleisch und R\u00fcstung kurzen Prozess machen w\u00fcrden, lenkten meine M\u00e4nner die mechanischen Unget\u00fcme unerschrocken ab, w\u00e4hrend ich die Flucht ergriff. H\u00e4tte ich mehr Zeit oder M\u00e4nner gehabt, dann h\u00e4tte ich den schweren Weizen selbst zum Lager bringen k\u00f6nnen, um zu Ende zu bringen, was auch immer die Zwerge begonnen hatten.\n[pagebreak]\n</p>\n<p align=\"center\"><img src='img://Textures/Interface/Books/Illuminated_Letters/F_letter.png'>r\u00fchling</p><p align=\"left\">\nDer Fr\u00fchling begr\u00fc\u00dfte mich mit bunten Farben in Gestalt prachtvoller Blumen, die in den Hallen aus Metall und Stein verstreut waren. Ich sah sogar Tiere umherstreunen, die sich von den Pflanzen unter dem k\u00fcnstlichen Licht ern\u00e4hrten. Ungl\u00fccklicherweise wurde unsere Reise durch diese schrecklich sch\u00f6nen Hallen durch ein h\u00f6chst eigent\u00fcmliches Hindernis j\u00e4h unterbrochen. \n\nDicke, knorrige Wurzeln versperrten uns den Weg. Vielleicht hatten die Dwemer die Natur als schwerf\u00e4llig und den Fr\u00fchling als eine Jahreszeit des Leidens empfunden. W\u00e4hrend sich meine S\u00f6ldner durch das Holz arbeiteten, bemerkte ich einige merkw\u00fcrdige Zweiglinge, die durch die k\u00fcnstlichen W\u00e4lder huschten. Als ich sie ber\u00fchrte, ging ein Zittern durch die Wurzeln, als w\u00e4ren sie Teil einer Waldkreatur. Waren diese Zweiglinge die H\u00fcter der G\u00e4rten oder nur eine Folge ihrer Existenz? Wie dem auch sei, wenn es uns gel\u00e4nge, die Verbindung zwischen den Zweiglingen und den Wurzeln zu trennen, w\u00fcrde sich der Weg tiefer in die Ruinen vielleicht \u00f6ffnen.\n[pagebreak]\n</p>\n<p align=\"center\"><img src='img://Textures/Interface/Books/Illuminated_Letters/S_letter.png'>ommer</p><p align=\"left\">\nDer Sommer war ein Labyrinth aus Tunneln und Rohren. Jahrhunderte der Vernachl\u00e4ssigung hatten diesen Ort in einem Zustand des reinen Chaos hinterlassen. Lava sprudelte aus jeder \u00d6ffnung im Gestein und die unertr\u00e4gliche Hitze machte die Reise zu einer gewaltigen Anstrengung. Viele der schw\u00e4cheren S\u00f6ldner mussten umkehren. Doch die Dwemer m\u00fcssen auf diese enorme Hitze vorbereitet gewesen sein, denn dieses gnadenlose Wetter war zweifellos das, was der Sommer f\u00fcr sie bedeutete. \n\nAls ich mich durch diesen Schmelztiegel schleppte, bemerkte ich Reparaturspinnen, die hin- und her huschten und Br\u00fccken absenkten, die Zugang zu den Seiten der Kammer gew\u00e4hrten. Innerhalb jedes Abschnitts schien es einen Punkt zu geben, der eine Art magisches K\u00fchlmittel freisetzte, das die Hitze von unertr\u00e4glich auf l\u00e4stig reduzierte. Wenn es mir gel\u00e4nge, die Spinnen zu diesen Punkten zu leiten, k\u00f6nnte ich die Temperatur vielleicht auf ein ertr\u00e4glicheres Niveau bringen.\n[pagebreak]\n</p>\n<p align=\"center\"><img src='img://Textures/Interface/Books/Illuminated_Letters/W_letter.png'>inter</p><p align=\"left\">\nDer Winter bot, wenig \u00fcberraschend f\u00fcr mich, einem tosenden Schneesturm und, wie die S\u00f6ldner vermuteten, k\u00fcnstlichen Bergen eine Heimat. Doch es waren keine Berge, sondern riesenhafte Silos mit gefrorenem Wasser. Und diese K\u00e4lte! Nicht einmal auf den h\u00f6chsten Gipfeln herrschten solch eisige Temperaturen, und schon bald teilten wir uns unsere Felle, um einander zu w\u00e4rmen. \n\nSchnell wurde klar, dass ich durch das noch nicht gefrorene Wasser rund um die T\u00fcrme tauchen musste, um diesen Bereich zu durchqueren. Ich w\u00fcrde mich diese T\u00fcrme hochschl\u00e4ngeln m\u00fcssen wie die Eisgeister, die hier lebten. Der Plan war so klug wie jeder meiner Pl\u00e4ne, doch ich konnte jetzt niemanden entbehren. Wenn wir in diese Ruine zur\u00fcckkehren, habe ich vielleicht jemanden dabei, dessen Tod ich verkraften k\u00f6nnte.</p>\n\n"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST CNAM",
+        "original": "The path to the Conduit of Spring is blocked by thick roots. I'll need to find a way to move them aside.",
+        "string": "Der Weg zur Fr\u00fchlingsleitung ist durch dicke Wurzeln versperrt. Ich muss einen Weg finden, sie zur Seite zu bewegen."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST CNAM",
+        "original": "The facility that studied winter has been ravaged by a permanent blizzard. I should be able to navigate through each icy water reservoir to reach the Conduit of Winter.",
+        "string": "Die Anlage, die den Winter studierte, wurde von einem anhaltenden Schneesturm verw\u00fcstet. Ich m\u00fcsste in der Lage sein, mich durch die eisigen Wasserreservoirs zu bewegen, um zur Winterleitung zu gelangen."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonPlayerCornMessage3",
+        "type": "MESG DESC",
+        "original": "You place the wheat in the depository.",
+        "string": "Du legst den Weizen im Lager ab."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonPlayerCornMessage4",
+        "type": "MESG DESC",
+        "original": "You don't have any wheat to deposit.",
+        "string": "Du hast keinen Weizen zum Ablegen."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST CNAM",
+        "original": "I defeated the Sky Orchestrator. The violent weather seems to have ceased as a result.",
+        "string": "Ich habe den Himmelsorchestrator besiegt. Das extreme Wetter scheint deshalb abgeklungen zu sein."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonPlayerCornMessage1",
+        "type": "MESG DESC",
+        "original": "You pick up the wheat.",
+        "string": "Du nimmst den Weizen mit."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonElberrosBookSummer",
+        "type": "BOOK DESC",
+        "original": "<p align=\"left\">\n<font face='$HandwrittenFont'>Summer was a maze of tunnels and pipes, and no doubt centuries of neglect had left the place in a state of pure haywire. Lava spewed from every stone orifice I could see, and unbearable heat made for a precarious journey, and many of the lesser mercenaries turned back to cooler times. But the dwemer had predicted such superheat, indeed no doubt this unbearable weather was what summer meant to them. Even as I pulled myself through the swelter, I noticed repair spiders darting to and fro, ignoring me and heading into side sections, which revealed great levers. Flipping them released some sort of magical coolant, reducing the heat from impossible to merely annoying. Perhaps if enough of these spiders were directed to overheated sections and enough coolant levers flipped, I thought, I could find out what secrets this section of summer beheld.\n\n",
+        "string": "<p align=\"left\">\n<font face='$HandwrittenFont'>Der Sommer war ein Labyrinth aus Tunneln und Rohren. Jahrhunderte der Vernachl\u00e4ssigung hatten diesen Ort in einem Zustand des reinen Chaos hinterlassen. Lava sprudelte aus jeder \u00d6ffnung im Gestein und die unertr\u00e4gliche Hitze machte die Reise zu einer gewaltigen Anstrengung. Viele der schw\u00e4cheren S\u00f6ldner mussten umkehren. Doch die Dwemer m\u00fcssen auf diese Hitze vorbereitet gewesen sein, denn dieses gnadenlose Wetter war zweifellos das, was der Sommer f\u00fcr sie bedeutete. Als ich mich durch diesen Schmelztiegel schleppte, bemerkte ich Reparaturspinnen, die hin und her huschten, mich aber ignorierten und in den Seitenbereichen verschwanden, wo ich gro\u00dfe Hebel entdeckte. Durch Bet\u00e4tigen dieser Hebel wurde eine Art magisches K\u00fchlmittel freigesetzt, das die Hitze von unertr\u00e4glich auf l\u00e4stig reduzierte. Wenn vielleicht gen\u00fcgend dieser Spinnen in \u00fcberhitzte Abschnitte geleitet und ausreichend K\u00fchlhebel bet\u00e4tigt werden konnten, w\u00fcrde ich vielleicht herausfinden, welche Geheimnisse dieser Sommerabschnitt barg.\n\n"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST CNAM",
+        "original": "To reach the Conduit of Autumn, I need to open a massive door. The door seems connected somehow to the pipes and depositories nearby.",
+        "string": "Um zur Herbstleitung zu gelangen, muss ich eine gewaltige T\u00fcr \u00f6ffnen. Sie scheint irgendwie mit den Rohren und Lagerst\u00e4tten in der N\u00e4he verbunden zu sein."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST CNAM",
+        "original": "With all the conduits deactivated, I should be able to proceed and shut down the source of this inclement weather.",
+        "string": "Da alle Leitungen deaktiviert sind, sollte ich in der Lage sein, weiterzugehen und die Quelle dieses unbarmherzigen Wetters auszuschalten."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST CNAM",
+        "original": "It seems a mage had set up camp in the heart of the ruins. Unfortunately, he was struck by lightning before I could reach him. Maybe I can find out more about these ruins by inspecting his remains. ",
+        "string": "Scheinbar hat ein Magier mitten in den Ruinen sein Lager aufgeschlagen. Leider wurde er von einem Blitz getroffen, bevor ich ihn erreichen konnte. Vielleicht finde ich mehr \u00fcber diese Ruinen heraus, wenn ich seine \u00dcberreste untersuche. "
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST CNAM",
+        "original": "According to the mage's journal, Vardnknd contains a device capable of controlling the weather. However, without a steward to manage it, the storm has increased in size and threatens to affect weather outside of the ruins. Left unchecked, it could spread to the rest of Skyrim. It seems the only way to shut down the system is to disable four separate conduits in sub-facilities throughout the ruins.",
+        "string": "Dem Tagebuch des Magiers zufolge gibt es in Vardnknd ein Konstrukt, mit dem das Wetter beeinflusst werden kann. Unbeaufsichtigt hat der Sturm jedoch extrem an Gr\u00f6\u00dfe gewonnen und droht, auch das Wetter au\u00dferhalb der Ruinen zu beeinflussen. Wird er nicht aufgehalten, k\u00f6nnte er sich auf ganz Himmelsrand ausbreiten. Das System l\u00e4sst sich wohl nur ausschalten, indem die vier Leitungen, die zu separaten Teilen der Anlage in den Ruinen f\u00fchren, deaktiviert werden."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST CNAM",
+        "original": "I've discovered a strange Dwemer ruin, where a mercenary party has been attacked by hostile machines. I should investigate.",
+        "string": "Ich habe eine seltsame Dwemerruine entdeckt, wo eine S\u00f6ldnergruppe von feindseligen Maschinen angegriffen wurde. Ich sollte die Sache untersuchen."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST CNAM",
+        "original": "The Conduit of Summer appears to be powered by heat. In order to disable it, I'll need to activate service waypoints that supply coolant to the facility. However, with the pathways blocked, I'll first need to use a control rod to direct a repair spider to the waypoints.",
+        "string": "Die Sommerleitung scheint durch W\u00e4rme betrieben zu werden. Um sie auszuschalten muss ich Wartungspunkte aktivieren, die der Anlage K\u00fchlmittel zuf\u00fchren. Da der Weg jedoch versperrt ist, muss ich zun\u00e4chst einen Stab der Spinnenbeherrschung nutzen, um eine Reparaturspinne zu den Punkten zu leiten."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonElberrosBookWinter",
+        "type": "BOOK DESC",
+        "original": "<p align=\"left\">\n<font face='$HandwrittenFont'>Winter was, not to my surprise, home to a great indoor blizzard and what the mercenaries thought of as artificial stone mountains. Yet they were not mountains, but great towering silos of frozen water. And the cold! Not even the high mountains compared to such chills, and we were soon trading furs amongst ourselves to keep warm! Yet just as soon as the wind had picked up, it died down, the temperature dropping and the icy waters unfreezing, yet still cold. It became clear that if I was to progress through these silos, I would have to take advantage of the variable chill, quickly crossing through paths formed by the ice floes as impromptu bridges. As clever a solution as any solution thought up by me. \n",
+        "string": "<p align=\"left\">\n<font face='$HandwrittenFont'>Der Winter bot, wenig \u00fcberraschend f\u00fcr mich, einem tosenden Schneesturm und, wie die S\u00f6ldner vermuteten, k\u00fcnstlichen Bergen eine Heimat. Doch es waren keine Berge, sondern riesenhafte Silos mit gefrorenem Wasser. Und diese K\u00e4lte! Nicht einmal auf den h\u00f6chsten Gipfeln herrschten solch eisige Temperaturen, und schon bald teilten wir uns unsere Felle, um einander zu w\u00e4rmen. Sobald Wind aufkam, flaute er auch schon wieder ab, die Temperatur fiel und das eisige Wasser taute auf, war jedoch noch kalt. Mir wurde klar, dass ich, wenn ich diese Silos durchqueren wollte, die wechselhafte K\u00e4lte nutzen und rasch den Wegen folgen muss, die die Eisschollen bildeten, wie behelfsm\u00e4\u00dfige Br\u00fccken. Der Plan war so klug wie jeder meiner Pl\u00e4ne. \n"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonElberrosBookFall",
+        "type": "BOOK DESC",
+        "original": "<p align=\"left\">\n<font face='$HandwrittenFont'>As I trundled into the halls of Autumn, a marvelous sight unfolded. Before me lay an enormous stretch of farmland, decrepit and overgrown, but a farm nevertheless. Strange fruits and grains grew in plots, while emaciated chickens ran about all the while tended by massive double-bladed centurions. Did the dwemer find it amusing that the surface-peoples had a whole season dedicated just to harvest, or did they do this as a mockery to some forgotten god of the feast? Whatever the case, I aimed to sample a piece of dwarven produce myself. \nThough the fruit smelled delicious, it was as hard as a rock, and the insides glowed with a foul light. Yet as dense as the harvest was, I observed the bladed centurions cutting through it with little effort and carrying them off to a hopper at the far end of the fields. While no doubt the blades of these machines would make short work of flesh and armor, my men nevertheless valiantly served as a distraction as I carried the heavy wheat over to the depository, hoping that these offerings would satiate whatever freakish endeavors the dwarves had begun, and gain me access to the rest of the farms.",
+        "string": "<p align=\"left\">\n<font face='$HandwrittenFont'>Als ich die Hallen des Herbstes betrat, bot sich mir ein sagenhafter Anblick. Vor mir erstreckten sich riesige Felder, v\u00f6llig verwahrlost und zugewachsen, doch es war ein Bauernhof. An manchen Stellen wuchsen seltsame Fr\u00fcchte und eigenartiges Getreide, w\u00e4hrend \u00fcberall ausgemergelte H\u00fchner umherliefen, beh\u00fctet von riesigen Zenturios mit zwei Klingen. Hatten die Dwemer es am\u00fcsant gefunden, dass die Bewohner der Oberfl\u00e4che eine ganze Jahreszeit der Ernte widmeten, oder war das alles nichts als eine Verspottung irgendeines vergessenen Festgottes? Wie auch immer, ich wollte selbst eine Probe dieses Zwergenweizens mitnehmen. \nEr schmeckte k\u00f6stlich, doch er war hart wie Stein und sein Inneres erstrahlte in einem merkw\u00fcrdigen Licht. Doch so dicht der Weizen auch stand, die klingenbewehrten Zenturios pfl\u00fcgten m\u00fchelos durch ihn hindurch und f\u00fcllten ihn in einen Trichter am anderen Ende der Felder. Obgleich die Klingen dieser Maschinen mit Fleisch und R\u00fcstung kurzen Prozess machen w\u00fcrden, lenkten meine M\u00e4nner die mechanischen Unget\u00fcme unerschrocken ab, w\u00e4hrend ich den schweren Weizen zum Lager hin\u00fcbertrug und dabei hoffte, dass diese Opfergaben ruhigstellen w\u00fcrden, was auch immer die Zwerge an verr\u00fcckten Unternehmungen angefangen hatten, damit ich Zugang zu den restlichen Bauernh\u00f6fen vordringen konnte."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST CNAM",
+        "original": "At the center of the ruin I have encountered an enormous Dwarven machine. As the weather seems to obey it, perhaps destroying it will stop the storm.",
+        "string": "Im Zentrum der Ruine habe ich eine riesige Zwergenmaschine entdeckt. Da das Wetter ihr zu gehorchen scheint, endet der Sturm vielleicht, wenn ich sie zerst\u00f6re."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonElberrosBookSpring",
+        "type": "BOOK DESC",
+        "original": "<p align=\"left\">\n<font face='$HandwrittenFont'>Spring greeted me with a splash of color, as beautiful flowers grew everywhere. And I do mean everywhere dear reader, as they were wild and hostile, covering the floors and even a few unfortunate corpses. This horrific sight of beauty was soon ruined by the choking air. Thick, toxic pollen floated everywhere, spewed out by the various flowers. Perhaps the dwemer had allergies to surface flora, and saw Spring as nothing more than a season of suffering. While the mercenaries coughed and vomited from the effects, my strong constitution allowed me to notice strange spriggans shambling through the artificial forests. Where they passed, the buds receded, and the air was clean and breathable. Were these the tenders of the gardens, or just a consequence of its existence? Regardless, I endeavored to follow the path of the spriggans, leading me deeper into the ruins.\n",
+        "string": "<p align=\"left\">\n<font face='$HandwrittenFont'>Der Fr\u00fchling begr\u00fc\u00dfte mich mit bunten Farben in Gestalt prachtvoller Blumen, die \u00fcberall wuchsen. Und ich meine wirklich \u00fcberall, werter Leser. Sie waren wild und feindselig und bedeckten den gesamten Boden und sogar einige ungl\u00fcckselige Leichen. Dieser schreckliche Anblick der Sch\u00f6nheit wurde jedoch durch die erstickende Luft getr\u00fcbt. \u00dcberall schwebten gro\u00dfe, giftige Pollen, die von den verschiedenen Blumen ausgespuckt wurden. Vielleicht hatten die Dwemer Allergien vor Oberfl\u00e4chenpflanzen und sahen den Fr\u00fchling lediglich als eine Jahreszeit des Leidens. W\u00e4hrend die S\u00f6ldner husteten und sich \u00fcbergaben, bemerkte ich aufgrund meiner starken Konstitution seltsame Zweiglinge, die durch den k\u00fcnstlichen Wald watschelten. Dort, wo sie vorbeigingen, zogen sich die Knospen zur\u00fcck und die Luft war sauber und atembar. Waren dies die H\u00fcter des Gartens oder lediglich ein Ergebnis seines Bestehens? Ich folgte den Zweiglingen und drang tiefer in die Ruinen ein.\n"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Staff02",
+        "type": "WEAP DESC",
+        "original": "Does <45> points of fire damage. Target is <50%> weaker to fire for <10> seconds.",
+        "string": "Verursacht <45> Punkte Feuerschaden. Ziel ist die n\u00e4chsten <10> Sekunden lang <50 Prozent> anf\u00e4lliger gegen\u00fcber Feuer."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Staff04",
+        "type": "WEAP DESC",
+        "original": "Does <45> points of ice damage. Target is <50%> weaker to frost damage for <10> seconds.",
+        "string": "Verursacht <45> Punkte Eisschaden. Ziel ist die n\u00e4chsten <10> Sekunden lang <50 Prozent> anf\u00e4lliger gegen\u00fcber Frostschaden."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Staff03",
+        "type": "WEAP DESC",
+        "original": "Does <45> points of shock damage. Target is <50%> weaker to shock spells for the next <10> seconds.",
+        "string": "Verursacht <45> Punkte Blitzschaden. Ziel ist die n\u00e4chsten <10> Sekunden lang <50 Prozent> anf\u00e4lliger gegen\u00fcber Blitzzauber."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Staff01",
+        "type": "WEAP DESC",
+        "original": "Does <45> points of poison damage. Target is <50%> weaker to poison for the next <10> seconds.",
+        "string": "Verursacht <45> Punkte Giftschaden. Ziel ist die n\u00e4chsten <10> Sekunden lang <50 Prozent> anf\u00e4lliger gegen\u00fcber Gift."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonHorseMessageStart",
+        "type": "MESG DESC",
+        "original": "This looks like part of some sort of Dwarven Automaton Horse. It's missing all its legs and its head, but it seems like these were designed to easily fit together. Maybe there are other pieces out there.",
+        "string": "Das sieht aus wie eine Art zwergisches Maschinenpferd. Es fehlen die Beine und der Kopf, aber es sieht so aus, als k\u00f6nnte man sie leicht ersetzen. Vielleicht gibt es irgendwo noch mehr Teile davon."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonHorseMessageFail",
+        "type": "MESG DESC",
+        "original": "You haven't got all the pieces to rebuild the horse with.",
+        "string": "Du hast nicht alle Teile, um das Pferd zusammenzusetzen."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonHorseQuest",
+        "type": "QUST CNAM",
+        "original": "I have found all the pieces of the Dwarven Horse and can now rebuild it.",
+        "string": "Ich habe alle Teile des Zwergenpferds gefunden und kann es nun wieder zusammensetzen."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonHorseQuest",
+        "type": "QUST CNAM",
+        "original": "I've found parts for what appears to be a Dwarven Horse. However, several pieces are missing from the set. Perhaps I can find the missing pieces somewhere nearby.",
+        "string": "Ich habe Teile von etwas gefunden, das wie ein Zwergenpferd aussieht. Doch mehrere Teile fehlen. Vielleicht finde ich sie ja in der N\u00e4he."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonHorseQuest",
+        "type": "QUST CNAM",
+        "original": "Dwarven horse startup stage.",
+        "string": "Zwergenpferd-Anfangsphase."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonHorseMessageComplete",
+        "type": "MESG DESC",
+        "original": "You fit the pieces into the Dwarven Horse.",
+        "string": "Du setzt die Teile in das Zwergenpferd ein."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST CNAM",
+        "original": "I've heard tales of a lost Dwarven ruin southwest of Markarth. While such ruins are not uncommon in Skyrim, this one was rumored to let one control the sky itself. If my travels take me south of Rorikstead, I should keep an eye out for anything that might resemble an entrance.",
+        "string": "Ich habe Geschichten von einer verschollenen Zwergenruine s\u00fcdwestlich von Markarth geh\u00f6rt. W\u00e4hrend solche Ruinen in Himmelsrand nicht selten sind, soll man Ger\u00fcchten zufolge mit dieser den Himmel selbst kontrollieren k\u00f6nnen. Wenn mich meine Reisen in den S\u00fcden von Rorikstatt f\u00fchren, sollte ich die Augen nach allem offen halten, was wie ein Eingang aussieht."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonControlRodReward",
+        "type": "WEAP DESC",
+        "original": "Calms dwarven spiders for <30> seconds.",
+        "string": "Beruhigt Zwergenspinnen f\u00fcr <30> Sekunden."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonHorseQuest",
+        "type": "QUST CNAM",
+        "original": "I found the intact remains of a Dwarven Horse. However, several pieces were missing from the set. After investigating the ruins of Vardnknd, I was able to find the pieces and reassemble the horse.",
+        "string": "Ich habe die intakten \u00dcberreste eines Zwergenpferds gefunden. Jedoch haben einige Teile gefehlt. Nachdem ich die Ruinen von Vardnknd untersucht hatte, konnte ich die Teile finden und das Pferd wieder zusammensetzen."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonCrownQuest",
+        "type": "QUST CNAM",
+        "original": "I've found all three masks for the Dwarven Crown. If I go to a forge, I should be able to add and remove them as I see fit.",
+        "string": "Ich habe alle drei Masken f\u00fcr die Zwergenkrone gefunden. Wenn ich in eine Schmiede gehe, sollte ich sie nach Belieben anbringen und entfernen k\u00f6nnen."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonCrownQuest",
+        "type": "QUST CNAM",
+        "original": "I've encountered a wizard wearing a strange looking Dwarven Crown. The slots in the facing suggest a separate piece can be attached.",
+        "string": "Ich habe einen Zauberer getroffen, der eine seltsame Zwergenkrone trug. Die Schlitze au\u00dfen deuten darauf hin, dass ein separates Teil angef\u00fcgt werden kann."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonCrownQuest",
+        "type": "QUST CNAM",
+        "original": "I affixed a mask to the crown. I should be able to change which mask is affixed at any forge.",
+        "string": "Ich habe die Krone mit einer Maske versehen. Ich sollte in jeder Schmiede die angebrachte Maske tauschen k\u00f6nnen."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Staffspell3",
+        "type": "SPEL DESC",
+        "original": "Brings forth a season of sun and warmth for <60> seconds.",
+        "string": "Erzeugt eine Jahreszeit von Sonne und W\u00e4rme f\u00fcr <60> Sekunden."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonControlFail",
+        "type": "MESG DESC",
+        "original": "The Control Rod only works in Vardnknd's Summer section.",
+        "string": "Der Stab der Beherrschung funktioniert nur in Vardnknds Sommer."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Staffspell4",
+        "type": "SPEL DESC",
+        "original": "Brings forth a season of snow and ice for <60> seconds.",
+        "string": "Erzeugt eine Jahreszeit von Schnee und Eis f\u00fcr <60> Sekunden."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Staffspell1",
+        "type": "SPEL DESC",
+        "original": "Brings forth a season of change and harvest for <60> seconds.",
+        "string": "Erzeugt eine Jahreszeit von Ver\u00e4nderung und Ernte f\u00fcr <60> Sekunden."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Staffspell2",
+        "type": "SPEL DESC",
+        "original": "Brings forth a season of growth and fertility for <60> seconds.",
+        "string": "Erzeugt eine Jahreszeit von Wachstum und Fruchtbarkeit f\u00fcr <60> Sekunden."
+    },
+    {
+        "editor_id": "ccTWBSSE001_MercNote01_RunoffCaverns",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>It's been two days since we've heard from the mage.\n\nHe told us to wait here at camp, but everyone's tired of stripping spiders for loot. The mage promised us fortune and glory, but if the fool got himself killed, none of us get paid. That's a problem.\n\nStill, I'm not sure we should leave just yet. Something about this place feels off.\nMaybe it's the air. One minute it's dry enough to crack your throat. Other times, it's wet enough to drown you. In most ruins, it's easy to lose track of time. But here, I feel like I'm losing my mind.\n\nLast night I decided to step outside and take a breath. Maybe just seeing the sun again would help me keep my wits. When I got back to camp, sweating from the heat, I told one of the other mercs she should do the same. She told me she already did, but it was too damn cold. I wasn't sure what she meant until I saw the snow on her boot.",
+        "string": "<font face='$HandwrittenFont'><font size='18'>Es ist zwei Tage her, seit wir von dem Magier geh\u00f6rt haben.\n\nEr sagte uns, wir sollten hier beim Lager warten, doch wir sind es leid, st\u00e4ndig Spinnen zu t\u00f6ten und auf gute Beute zu hoffen. Der Magier versprach uns Ruhm und Reichtum, doch wenn er umgekommen ist, bekommt keiner von uns sein Geld. Das ist ein Problem.\n\nDennoch bin ich mir nicht sicher, ob wir schon gehen sollten. Irgendetwas hier f\u00fchlt sich merkw\u00fcrdig an.\nVielleicht ist es die Luft. Im einen Moment trocknet einem die Kehle aus, und im anderen ist es so feucht, dass man das Gef\u00fchl hat, zu ertrinken. In den meisten Ruinen verliert man schnell sein Zeitgef\u00fchl. Aber hier f\u00fchle ich mich, als w\u00fcrde ich den Verstand verlieren.\n\nLetzte Nacht bin ich nach drau\u00dfen gegangen, um frische Luft zu schnappen. Vielleicht w\u00fcrde es mir helfen, klar bei Kopf zu sein, wenn ich die Sonne sehe. Als ich wieder ins Lager kam, von der Hitze vollkommen verschwitzt, riet ich einer S\u00f6ldnerin, es mir gleichzutun. Sie erwiderte, das mache sie bereits, dass es aber viel zu kalt sei. Ich wusste erst nicht, was sie damit meinte, bis ich den Schnee auf einem ihrer Stiefel bemerkte."
+    },
+    {
+        "editor_id": "ccTWBSSE001_MageNote02_DwarvenCrown",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>\nOne of the curiosities the mercs uncovered during their excavation was an ornate Dwarven headpiece, which I quickly deduced to be a crown.\n\nAs leader of this expedition, the responsibility of wearing said crown naturally fell to me. However, upon adorning it, I noticed the piece was incomplete. \n\nAccording to legend, the crown's boon was said to turn with the seasons, as if it were guided by the moon and stars. However, it seems the enchantments are actually tied not to the crown itself, but the masks that slot into its facing.\n \nIf memory serves me correctly, there are three masks in total. Spring, Autumn, and Winter. What became of the Summer mask, I do not know, but perhaps the Mid Year heat made it too unbearable to wear.\n",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\nEine der Kuriosit\u00e4ten, die die S\u00f6ldner bei ihrer Suche entdeckten, war ein zwergischer Kopfschmuck, in dem ich schnell eine Krone erkannte.\n\nAls Anf\u00fchrer dieser Expedition oblag die Verantwortung, die besagte Krone zu tragen, nat\u00fcrlich mir. Doch als ich sie voller Bewunderung betrachtete, fiel mir auf, dass ein St\u00fcck an ihr fehlte. \n\nDie Legende besagt, dass sich die Krone im Einklang mit den Jahreszeiten ver\u00e4ndert, als w\u00fcrde sie von Mond und Sternen geleitet. Doch es scheint, dass die Verzauberungen nicht mit der Krone selbst verbunden sind, sondern mit den Masken der einzelnen Jahreszeiten.\n\nWenn ich mich recht entsinne, gibt es insgesamt drei Masken. Fr\u00fchling, Herbst und Winter. Was mit der Sommermaske ist, wei\u00df ich nicht, aber vielleicht war sie in der Sommerhitze einfach zu hei\u00df, um getragen zu werden.\n"
+    },
+    {
+        "editor_id": "ccTWBSSE001_MercNote05_Winter",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>Two steps into winter and I can't feel my toes.\n\nNow the mage says we're gonna have to jump fifty feet into water so cold it'll crack your bones. This is all Bjorn's fault, I wanted to try the Summer room but I drew the sodding short straw.\n",
+        "string": "<font face='$HandwrittenFont'><font size='18'>Der Winter hat gerade erst angefangen, und schon sp\u00fcre ich meine Zehen nicht mehr.\n\nJetzt, so der Magier, m\u00fcssen wir zwanzig Meter tief ins eiskalte Wasser springen. Das ist alles Bjorns Schuld. Ich wollte ja den Sommerraum ausprobieren, aber dann habe ich den bl\u00f6den kurzen Halm gezogen.\n"
+    },
+    {
+        "editor_id": "ccTWBSSE001_MercNote04_Autumn",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>Mage says we have to harvest wheat and stuff it in the depositories. \n\nOnly I don't know which wheat goes in which container. Seems like the symbols on the signs and the depositories might be a clue, but they all look the same and it's making my head hurt.\n\nShor's Bones, this isn't what I signed up for. If I wanted to work on a farm I'd go back to Rorikstead. The treasure better be worth it.",
+        "string": "<font face='$HandwrittenFont'><font size='18'>Der Magier sagt, wir m\u00fcssen Weizen ernten und einlagern. \n\nNur wei\u00df ich nicht, welcher Weizen in welches Lager kommt. Vielleicht sind die Symbole auf den Schildern und den Lagern ein Hinweis, aber die sehen alle gleich aus und mir brummt schon der Sch\u00e4del.\n\nBei Shors Knochen! Daf\u00fcr hab ich meine Unterschrift nicht hergegeben. Wenn ich auf einem Bauernhof arbeiten will, gehe ich nach Rorikstatt zur\u00fcck. Hoffentlich ist der Schatz die ganze M\u00fche wert."
+    },
+    {
+        "editor_id": "ccTWBSSE001_MercNote02_Spring",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>Trying to make it inside, but thick roots are barring the way.\n\nThe boss says the branches are connected to the spriggans, so stabbing one might make them flinch. But it's kind of hard to stab what you can't see.",
+        "string": "<font face='$HandwrittenFont'><font size='18'>Ich versuche, es hineinzuschaffen, aber dicke Wurzeln versperren mir den Weg.\n\nDer Boss sagt, die \u00c4ste w\u00e4ren mit den Zweiglingen verbunden. Wenn ich also einen von ihnen pikse, w\u00fcrden sich die \u00c4ste vielleicht bewegen. Allerdings ist es nicht so einfach, etwas zu piksen, was man gar nicht sieht."
+    },
+    {
+        "editor_id": "ccTWBSSE001_MageNote01_Seasons",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='17'>\nI've split the mercs into groups and explained how to disable the conduits in each season, using simple words for their infinitesimally small minds. To their credit, some of them decided to take notes.\n\nIt would be easier if they simply read the account of my previous expedition. Of course, doing so would make them aware of the horrible fate that befell their predecessors.\n\nI've also told the men to be on the lookout for other curiosities, such as Dwarven insects, Dwarven mounts, and three Dwarven Crown masks we uncovered in our last foray.\n\nHowever, the main prize in this tomb of inclement weather is the Turn of the Seasons, a magical spell that legends say is cast not by the spellcaster, but by the the weather itself! \n\nOnce you read this tome and are imbued with its power, they say the rain will grant you a silver tongue, as charming as a spring romance. Summer's sweltering heat fills you with stamina when dressed in light armor, whereas winter's snow offers a boon to heavy armor wearers. Meanwhile, the clouds are a gift to hunters, their bows cutting through the autumn wind. \n\nSuch a prize must be deep within the ruins, perhaps in the chamber of the one who orchestrated this unholy sky.\n</font>",
+        "string": "<font face='$HandwrittenFont'><font size='17'>\nIch habe die S\u00f6ldner in Gruppen aufgeteilt und ihnen erkl\u00e4rt, wie sie die Leitungen in den Abschnitten der Jahreszeiten kappen k\u00f6nnen, indem ich einfache Worte f\u00fcr ihren unendlich kleinen Geist benutzte. Es ehrt sie, dass manche sich sogar Notizen machten.\n\nEs w\u00e4re einfacher gewesen, wenn sie den Bericht \u00fcber meine letzte Expedition gelesen h\u00e4tten. Dann w\u00fcssten sie von dem schrecklichen Schicksal, das ihre Vorg\u00e4nger erlitten hatten.\n\nIch sagte den M\u00e4nnern auch, dass sie nach anderen Kuriosit\u00e4ten Ausschau halten sollten, wie zum Beispiel Zwergeninsekten, Zwergenreittieren und drei Zwergenkronenmasken, die wir bei unserem letzten Streifzug gefunden hatten.\n\nAber der Hauptpreis in diesem Grab aus rauem Wetter ist der Wechsel der Jahreszeiten, ein Zauber, der laut Legende nicht von einem Magier sondern vom Wetter selbst gewirkt wird! \n\nWenn du dieses Buch liest und dich seine Kraft durchdringt, so hei\u00dft es, verleiht dir der Regen eine silberne Zunge, so charmant wie eine Fr\u00fchlingsromanze. Die kochende Sommerhitze erf\u00fcllt dich mit Ausdauer, wenn du leichte R\u00fcstung tr\u00e4gst, w\u00e4hrend der Schnee im Winter allen Tr\u00e4gern von schwerer R\u00fcstung einen Vorteil verschafft. Derweil sind die Wolken ein Geschenk an J\u00e4ger, deren Pfeile durch den Herbstwind schneiden. \n\nEin solcher Preis muss tief in den Ruinen liegen, vielleicht in der Kammer desjenigen, der diesen unheiligen Himmel aus der Taufe gehoben hat.\n</font>"
+    },
+    {
+        "editor_id": "ccTWBSSE001_MercNote03_Summer",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>The boss says we can use one of those control rods to make the metal crawlies open the way. \n\nSupposedly you just point the thing at one of those round waypoints and the spider does the rest, but I don't know how to fire the rod. I just hope I figure it out before I collapse from all this heat. I can almost smell my blood cooking.",
+        "string": "<font face='$HandwrittenFont'><font size='18'>Der Boss sagt, wir k\u00f6nnen einen dieser Steuerungsst\u00e4be benutzen, damit die Metallkrabbler den Weg freigeben. \n\nMan muss damit wohl einfach nur auf einen dieser runden Wegpunkte zeigen, und die Spinne erledigt den Rest, aber ich wei\u00df nicht, wie man den Stab aktiviert. Ich hoffe nur, ich bekomme es heraus, bevor die Hitze mich umbringt. Ich kann beinahe mein Blut kochen sp\u00fcren."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST CNAM",
+        "original": "I discovered a journal on the mage's body. I should inspect it to learn more about what lies ahead in these strange ruins.",
+        "string": "Ich habe bei der Leiche des Magiers ein Tagebuch entdeckt. Ich sollte es mir ansehen, um mehr dar\u00fcber zu erfahren, was mich in diesen seltsamen Ruinen erwartet."
+    },
+    {
+        "editor_id": "ccTWBSSE001_MercNote06_DwarvenBugNote",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>With spring comes pollen, mold, and the specter of disease. The Dwemer knew this as well, and took steps to counter it.\n\nIf you spot a Dwarven Drone Fly buzzing about, good! You're already leagues ahead of the average mercenary, being both literate and attentive. \n\nSimply toss one in the air and these miniature metal insects will aerate the space around you, granting you resistance to poison and improving your stamina. As an added bonus, they'll also alleviate you of any excuses should you feel the need to turn back.",
+        "string": "<font face='$HandwrittenFont'><font size='18'>Der Fr\u00fchling bringt Pollen, Schimmel und andere Krankheitsursachen mit sich. Die Dwemer wussten das auch und unternahmen Schritte dagegen.\n\nWenn Ihr eine Zwergendrohnenfliege herumschwirren seht, gut! Ihr seid jedem gew\u00f6hnlichen S\u00f6ldner bereits meilenweit enteilt, denn Ihr seid sowohl gebildet als auch aufmerksam. \n\nWerft einfach eine in die Luft, dann wird das kleine Metallinsekt Eure unmittelbare Umgebung mit Sauerstoff anreichern und Euch Widerstand gegen Gift verleihen sowie Eure Ausdauer erh\u00f6hen. Als zus\u00e4tzliches Extra habt Ihr dank ihnen nun keine Entschuldigung mehr, falls Ihr das Gef\u00fchl habt, umkehren zu m\u00fcssen."
+    },
+    {
+        "editor_id": "ccTWBSSE001_SeasonsPerk",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\n",
+        "string": "<font face='$HandwrittenFont'><font size='40'><p align='center'>\n"
+    }
+]

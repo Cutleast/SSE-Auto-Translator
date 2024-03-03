@@ -1,0 +1,74 @@
+[
+    {
+        "editor_id": "ccBGSSSE006_Quest",
+        "type": "QUST FULL",
+        "original": "If I had a Hammer",
+        "string": "H\u00e4tte ich nur einen Hammer."
+    },
+    {
+        "editor_id": "ccBGSSSE006StendarsHammer",
+        "type": "WEAP FULL",
+        "original": "Stendarr's Hammer",
+        "string": "Stendarrs Hammer"
+    },
+    {
+        "editor_id": "ccBGSSSE006_Quest",
+        "type": "QUST NNAM",
+        "original": "Steal Stendarr's Hammer",
+        "string": "Stiehl Stendarrs Hammer."
+    },
+    {
+        "editor_id": "ccBGSSSE006_DamageStamina",
+        "type": "MGEF DNAM",
+        "original": "Drains <mag> points from stamina.",
+        "string": "Entzieht <mag> Punkte Ausdauer."
+    },
+    {
+        "editor_id": "ccBGSSSE006_EnchDamageFFContact",
+        "type": "MGEF FULL",
+        "original": "Smite Damage",
+        "string": "Schmetterschaden"
+    },
+    {
+        "editor_id": "ccBGSSSE006_EnchDrainHealth",
+        "type": "ENCH FULL",
+        "original": "Absorb Health",
+        "string": "Gesundheit absorbieren"
+    },
+    {
+        "editor_id": "ccBGSSSE006_DrainStamina",
+        "type": "SPEL FULL",
+        "original": "Smite",
+        "string": "Ausdauer entziehen"
+    },
+    {
+        "editor_id": "ccBGSSSE006_DamageStamina",
+        "type": "MGEF FULL",
+        "original": "Reduced Stamina",
+        "string": "Ausdauer verringert"
+    },
+    {
+        "editor_id": "ccBGSSSE006_EnchDamageFFContact",
+        "type": "MGEF DNAM",
+        "original": "Damages the target for <mag> points. Depletes <20> Stamina from wielder per hit.",
+        "string": "F\u00fcgt dem Ziel <mag> Schaden zu. Jeder Schlag kostet den Tr\u00e4ger <20> Ausdauer."
+    },
+    {
+        "editor_id": "MarkarthWizardsQuarters01",
+        "type": "CELL FULL",
+        "original": "Dwemer Museum",
+        "string": "Dwemermuseum"
+    },
+    {
+        "editor_id": "ccBGSSSE006_Quest",
+        "type": "QUST CNAM",
+        "original": "I have successfully stolen Stendarr's Hammer from the Dwarven Museum in Markarth.",
+        "string": "Ich habe erfolgreich Stendarrs Hammer aus dem Zwergenmuseum in Markarth gestohlen."
+    },
+    {
+        "editor_id": "ccBGSSSE006_Quest",
+        "type": "QUST CNAM",
+        "original": "Rumor has it that Stendarr's Hammer has been found deep under Markarth. They say it is in the Dwarven Museum there.",
+        "string": "Ger\u00fcchten zufolge wurde Stendarrs Hammer tief unter Markarth gefunden. Es hei\u00dft, er w\u00fcrde im Zwergenmuseum aufbewahrt."
+    }
+]

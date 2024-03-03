@@ -1,0 +1,896 @@
+[
+    {
+        "editor_id": "ccBGSSSE001_TreasCorpseCommonerBretonMaleFisherman",
+        "type": "NPC_ FULL",
+        "original": "Adventurer",
+        "string": "\u5192\u967a\u8005"
+    },
+    {
+        "editor_id": "ccBGSSSE001_BYOHHouseKnapsack_FishingGear",
+        "type": "CONT FULL",
+        "original": "Knapsack",
+        "string": "\u30ca\u30c3\u30d7\u30b5\u30c3\u30af"
+    },
+    {
+        "editor_id": "ccBGSSSE001_BYOHHouseInteriorPartHallwayCupboard01",
+        "type": "MISC FULL",
+        "original": "Cupboard",
+        "string": "\u6238\u68da"
+    },
+    {
+        "editor_id": "DLC2Frossel01",
+        "type": "CELL FULL",
+        "original": "Frossel",
+        "string": "\u30d5\u30ed\u30c3\u30bb\u30eb"
+    },
+    {
+        "editor_id": "DLC2SolstheimWorld",
+        "type": "WRLD FULL",
+        "original": "Solstheim",
+        "string": "\u30bd\u30eb\u30b9\u30bb\u30a4\u30e0"
+    },
+    {
+        "editor_id": "ccBGSSSE001_FishingFurniture01",
+        "type": "ACTI RNAM",
+        "original": "Use",
+        "string": "\u4f7f\u3046"
+    },
+    {
+        "editor_id": "ccBGSSSE001_VampireDrain",
+        "type": "SPEL FULL",
+        "original": "Drain Life",
+        "string": "\u751f\u547d\u4f4e\u4e0b"
+    },
+    {
+        "editor_id": "ccBGSSSE001_MudcrabRaceFrenzied",
+        "type": "RACE FULL",
+        "original": "MudCrab",
+        "string": "\u30de\u30c3\u30c9\u30af\u30e9\u30d6"
+    },
+    {
+        "editor_id": "ccBGSSSE001_BYOHHouseInteriorPartHallwayWallSconce01",
+        "type": "MISC FULL",
+        "original": "Wall Sconce",
+        "string": "\u58c1\u639b\u3051\u7528\u71ed\u53f0"
+    },
+    {
+        "editor_id": "ccBGSSSE001_MiscFalkreath_Guard",
+        "type": "NPC_ FULL",
+        "original": "Falkreath Guard",
+        "string": "\u30d5\u30a1\u30eb\u30af\u30ea\u30fc\u30b9\u885b\u5175"
+    },
+    {
+        "editor_id": "ccBGSSSE001_MiscWhiterunChest",
+        "type": "CONT FULL",
+        "original": "Strong Box",
+        "string": "\u91d1\u5eab"
+    },
+    {
+        "editor_id": "ccBGSSSE001ReelLineAct",
+        "type": "ACTI RNAM",
+        "original": "Use",
+        "string": "\u4f7f\u3046"
+    },
+    {
+        "editor_id": "ccPlaceholder18Interior01",
+        "type": "CELL FULL",
+        "original": "Creation Club Cell",
+        "string": "Creation Club\u30bb\u30eb"
+    },
+    {
+        "editor_id": "ccBGSSSE001_BYOHHouseInteriorPartAquariumMountedMudcrab01",
+        "type": "MISC FULL",
+        "original": "Mounted Mudcrab",
+        "string": "\u30de\u30c3\u30c9\u30af\u30e9\u30d6\u306e\u98fe\u308a"
+    },
+    {
+        "editor_id": "ccBGSSSE001_FoodSalmon",
+        "type": "ALCH FULL",
+        "original": "Salmon",
+        "string": "\u30b5\u30b1"
+    },
+    {
+        "editor_id": "ccBGSSSE001_HorkerDrainCloakEffect",
+        "type": "MGEF FULL",
+        "original": "Drain Effect To Look For Targets",
+        "string": "\u5438\u53ce\u306e\u76ee\u6a19\u635c\u7d22\u52b9\u679c"
+    },
+    {
+        "editor_id": "ccBGSSSE001_InvisibillityFFSelfWeaker",
+        "type": "MGEF DNAM",
+        "original": "Caster is invisible for <dur> seconds. Activating an object or attacking will break the spell.",
+        "string": "\u8853\u8005\u304c <dur> \u79d2\u9593\u3001\u900f\u660e\u306b\u306a\u308b\u3002\u30aa\u30d6\u30b8\u30a7\u30af\u30c8\u3092\u4f5c\u52d5\u3055\u305b\u308b\u304b\u3001\u653b\u6483\u306b\u3088\u3063\u3066\u546a\u6587\u304c\u89e3\u3051\u308b\u3002"
+    },
+    {
+        "editor_id": "ccBGSSSE001_HorkerDrainCloakAbility",
+        "type": "SPEL FULL",
+        "original": "AE Soul Drain",
+        "string": "AE\u30bd\u30a6\u30eb\u30fb\u30c9\u30ec\u30a4\u30f3"
+    },
+    {
+        "editor_id": "ccBGSSSE001_MiscDwarvenFishermanJournal",
+        "type": "BOOK FULL",
+        "original": "Fisherman's Journal",
+        "string": "\u6f01\u6c11\u306e\u65e5\u8a18"
+    },
+    {
+        "editor_id": "ccBGSSSE001_FortifySpeedMultFFSelf",
+        "type": "MGEF FULL",
+        "original": "Fast",
+        "string": "\u9ad8\u901f"
+    },
+    {
+        "editor_id": "ccBGSSSE001MiscWindhelmPlaceFishAct",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u7f6e\u304f"
+    },
+    {
+        "editor_id": "ccBGSSSE001_FishingFurniture01_TemperateLake",
+        "type": "ACTI RNAM",
+        "original": "Use",
+        "string": "\u4f7f\u3046"
+    },
+    {
+        "editor_id": "ccBGSSSE001_CloakAbsorbHealthEffect",
+        "type": "MGEF DNAM",
+        "original": "Absorb <mag> points of health per second from the target.",
+        "string": "\u5bfe\u8c61\u304b\u3089 <mag> \u30dd\u30a4\u30f3\u30c8\u306e\u4f53\u529b\u30921\u79d2\u3054\u3068\u306b\u5438\u53ce\u3059\u308b\u3002"
+    },
+    {
+        "editor_id": "ccBGSSSE001_BYOHHouseSatchelPearls",
+        "type": "CONT FULL",
+        "original": "Satchel",
+        "string": "\u304b\u3070\u3093"
+    },
+    {
+        "editor_id": "ccBGSSSE001_MiscSolitude_CoinPurseLarge",
+        "type": "FLOR RNAM",
+        "original": "Take",
+        "string": "\u53d6\u308b"
+    },
+    {
+        "editor_id": "ccBGSSSE001_MiscSolitude_CoinPurseLarge",
+        "type": "FLOR FULL",
+        "original": "Coin Purse",
+        "string": "\u5c0f\u92ad\u5165\u308c"
+    },
+    {
+        "editor_id": "ccBGSSSE001_BYOHHouseInteriorPartHallwayWallShelf",
+        "type": "MISC FULL",
+        "original": "Wall Shelf",
+        "string": "\u58c1\u306e\u68da"
+    },
+    {
+        "editor_id": "ccBGSSSE001_MiscSack02LargeEmpty_NoRespawn",
+        "type": "CONT FULL",
+        "original": "Large Sack",
+        "string": "\u5927\u304d\u306a\u888b"
+    },
+    {
+        "editor_id": "ccBGSSSE001FeastEnableTrigger",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u7f6e\u304f"
+    },
+    {
+        "editor_id": "ccBGSSSE001_FishingFurniture01_Cave",
+        "type": "ACTI RNAM",
+        "original": "Use",
+        "string": "\u4f7f\u3046"
+    },
+    {
+        "editor_id": "ccBGSSSE001_FishingFurniture01_TemperateStream",
+        "type": "ACTI RNAM",
+        "original": "Use",
+        "string": "\u4f7f\u3046"
+    },
+    {
+        "editor_id": "ccBGSSSE001_HorkerRaceVampire",
+        "type": "RACE FULL",
+        "original": "Horker",
+        "string": "\u30db\u30fc\u30ab\u30fc"
+    },
+    {
+        "editor_id": "ccBGSSSE001_HorkerCloakAbsorb",
+        "type": "SPEL FULL",
+        "original": "Drain Life",
+        "string": "\u751f\u547d\u4f4e\u4e0b"
+    },
+    {
+        "editor_id": "ccBGSSSE001_FishingFurniture01_Arctic",
+        "type": "ACTI RNAM",
+        "original": "Use",
+        "string": "\u4f7f\u3046"
+    },
+    {
+        "editor_id": "ccBGSSSE001_BYOHHouseInteriorPartHallwayShelfTall01",
+        "type": "MISC FULL",
+        "original": "Tall Shelf",
+        "string": "\u80cc\u306e\u9ad8\u3044\u68da"
+    },
+    {
+        "editor_id": "ccBGSSSE001_CloakAbsorbHealthEffect",
+        "type": "MGEF FULL",
+        "original": "Drain Life",
+        "string": "\u751f\u547d\u4f4e\u4e0b"
+    },
+    {
+        "editor_id": "ccBGSSSE001_MerchantRiftenGrandPlazaViriyaChest",
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "\u5b9d\u7bb1"
+    },
+    {
+        "editor_id": "ccBGSSSE001MoveDetectAct",
+        "type": "ACTI RNAM",
+        "original": "Use",
+        "string": "\u4f7f\u3046"
+    },
+    {
+        "editor_id": "ccBGSSSE001_HelpFishingLongXbox",
+        "type": "MESG FULL",
+        "original": "Fishing",
+        "string": "\u91e3\u308a"
+    },
+    {
+        "editor_id": "ccBGSSSE001_TripodfishFlora",
+        "type": "FLOR RNAM",
+        "original": "Catch",
+        "string": "\u53d6\u308b"
+    },
+    {
+        "editor_id": "ccBGSSSE001_HelpFishingLong",
+        "type": "MESG FULL",
+        "original": "Fishing",
+        "string": "\u91e3\u308a"
+    },
+    {
+        "editor_id": "ccBGSSSE001_fishTankRoomLeftMsg",
+        "type": "MESG FULL",
+        "original": "Book Shelf",
+        "string": "\u672c\u68da"
+    },
+    {
+        "editor_id": "ccBGSSSE001_ViriyaMudcrabPetRace",
+        "type": "RACE FULL",
+        "original": "MudCrab",
+        "string": "\u30de\u30c3\u30c9\u30af\u30e9\u30d6"
+    },
+    {
+        "editor_id": "ccBGSSSE001_FoodSlaughterfish",
+        "type": "ALCH FULL",
+        "original": "Slaughterfish",
+        "string": "\u30b9\u30ed\u30fc\u30bf\u30fc\u30d5\u30a3\u30c3\u30b7\u30e5"
+    },
+    {
+        "editor_id": "ccBGSSSE001_BucketfishFlora01B",
+        "type": "FLOR RNAM",
+        "original": "Catch",
+        "string": "\u53d6\u308b"
+    },
+    {
+        "editor_id": "ccBGSSSE001_BucketfishFlora01A",
+        "type": "FLOR RNAM",
+        "original": "Catch",
+        "string": "\u53d6\u308b"
+    },
+    {
+        "editor_id": "ccBGSSSE001_GuardDawnstarSons",
+        "type": "NPC_ FULL",
+        "original": "Dawnstar Guard",
+        "string": "\u30c9\u30fc\u30f3\u30b9\u30bf\u30fc\u885b\u5175"
+    },
+    {
+        "editor_id": "ccBGSSSE001_FishingSuppliesVendorChestWhiterun",
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "\u5b9d\u7bb1"
+    },
+    {
+        "editor_id": "ccBGSSSE001CrabMQ4ReloadCatapultTrig",
+        "type": "ACTI RNAM",
+        "original": "Reload",
+        "string": "\u30ed\u30fc\u30c9"
+    },
+    {
+        "editor_id": "ccBGSSSE001_FishingSuppliesVendorChestWhiterunBelethor",
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "\u5b9d\u7bb1"
+    },
+    {
+        "editor_id": "DLC01FalmerValley",
+        "type": "WRLD FULL",
+        "original": "Forgotten Vale",
+        "string": "\u5fd8\u308c\u3089\u308c\u305f\u8c37"
+    },
+    {
+        "editor_id": "ccBGSSSE001_JuvenileMudcrab",
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "\u53d6\u308b"
+    },
+    {
+        "editor_id": "DLC1DimHollowCrypt02",
+        "type": "CELL FULL",
+        "original": "Dimhollow Cavern",
+        "string": "\u30c7\u30a3\u30e0\u30db\u30ed\u30a6\u6d1e\u7a9f"
+    },
+    {
+        "editor_id": "DLC2RRTheRetchingNetch",
+        "type": "CELL FULL",
+        "original": "The Retching Netch",
+        "string": "\u30ec\u30c3\u30c1\u30f3\u30b0\u30fb\u30cd\u30c3\u30c1"
+    },
+    {
+        "editor_id": "ccBGSSSE001_FishingSuppliesVendorChestHaafingar",
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "\u5b9d\u7bb1"
+    },
+    {
+        "editor_id": "ccBGSSSE001_MudcrabRaceFlamingPot",
+        "type": "RACE FULL",
+        "original": "MudCrab",
+        "string": "\u30de\u30c3\u30c9\u30af\u30e9\u30d6"
+    },
+    {
+        "editor_id": "DLC1HunterHQWorld",
+        "type": "WRLD FULL",
+        "original": "Dayspring Canyon",
+        "string": "\u30c7\u30a4\u30b9\u30d7\u30ea\u30f3\u30b0\u5ce1\u8c37"
+    },
+    {
+        "editor_id": "ccBGSSSE001_CrabMQ4FireCatapultTrig",
+        "type": "ACTI RNAM",
+        "original": "Fire",
+        "string": "\u708e"
+    },
+    {
+        "editor_id": "ccBGSSSE001_FishingSuppliesVendorChestPaleWinterhold",
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "\u5b9d\u7bb1"
+    },
+    {
+        "editor_id": "ccBGSSSE001_BarrelCrabMeat",
+        "type": "CONT FULL",
+        "original": "Barrel",
+        "string": "\u6a3d"
+    },
+    {
+        "editor_id": "ccBGSSSE001CrabMQ4ReloadCatapultTrig",
+        "type": "ACTI FULL",
+        "original": "Catapult",
+        "string": "\u6295\u77f3\u5668"
+    },
+    {
+        "editor_id": "DLC2Benkongerike02",
+        "type": "CELL FULL",
+        "original": "Benkongerike Great Hall",
+        "string": "\u30d9\u30f3\u30b3\u30f3\u30b8\u30a7\u30ea\u30b1\u5927\u5e83\u9593"
+    },
+    {
+        "editor_id": "ccBGSSSE001_FishingSuppliesVendorChestEastmarch",
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "\u5b9d\u7bb1"
+    },
+    {
+        "editor_id": "ccBGSSSE001_FishingSuppliesVendorChestReach",
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "\u5b9d\u7bb1"
+    },
+    {
+        "editor_id": "ccBGSSSE001_JuvenileMudcrabFlora",
+        "type": "FLOR RNAM",
+        "original": "Catch",
+        "string": "\u53d6\u308b"
+    },
+    {
+        "editor_id": "ccBGSSSE001_GuardDawnstarSonsQuestEssential",
+        "type": "NPC_ FULL",
+        "original": "Dawnstar Guard",
+        "string": "\u30c9\u30fc\u30f3\u30b9\u30bf\u30fc\u885b\u5175"
+    },
+    {
+        "editor_id": "ccBGSSSE001_FishingSuppliesVendorChestFalkreath",
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "\u5b9d\u7bb1"
+    },
+    {
+        "editor_id": "ccBGSSSE001_BarrelCrabMeat_NoRespawn",
+        "type": "CONT FULL",
+        "original": "Barrel",
+        "string": "\u6a3d"
+    },
+    {
+        "editor_id": "ccBGSSSE001_CrabMQ4FireCatapultTrig",
+        "type": "ACTI FULL",
+        "original": "Catapult",
+        "string": "\u6295\u77f3\u5668"
+    },
+    {
+        "editor_id": "ccBGSSSE001_FishingSuppliesVendorChestRift",
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "\u5b9d\u7bb1"
+    },
+    {
+        "editor_id": "DLC1AncestorsGladeWorld",
+        "type": "WRLD FULL",
+        "original": "Ancestor Glade",
+        "string": "\u5148\u4eba\u306e\u6e7f\u5730"
+    },
+    {
+        "editor_id": "DLC1HunterCave01",
+        "type": "CELL FULL",
+        "original": "Dead Drop Falls",
+        "string": "\u30c7\u30c3\u30c9\u30c9\u30ed\u30c3\u30d7\u30fb\u30d5\u30a9\u30fc\u30eb\u30ba"
+    },
+    {
+        "editor_id": "DLC1DarkfallCave01",
+        "type": "CELL FULL",
+        "original": "Darkfall Cave",
+        "string": "\u30c0\u30fc\u30af\u30d5\u30a9\u30fc\u30eb\u6d1e\u7a9f"
+    },
+    {
+        "editor_id": "ChillwindDepths01",
+        "type": "CELL FULL",
+        "original": "Chillwind Depths",
+        "string": "\u51b7\u98a8\u30f6\u6df5"
+    },
+    {
+        "editor_id": "RiftenFishery",
+        "type": "CELL FULL",
+        "original": "Riften Fishery",
+        "string": "\u30ea\u30d5\u30c6\u30f3\u6c34\u7523"
+    },
+    {
+        "editor_id": "BYOHHouseInteriorPart185VampireCoffin01",
+        "type": "MISC FULL",
+        "original": "Coffin",
+        "string": "\u68fa"
+    },
+    {
+        "editor_id": "BYOHHouse2Location",
+        "type": "LCTN FULL",
+        "original": "Windstad Manor",
+        "string": "\u30a6\u30a3\u30f3\u30c9\u30b9\u30bf\u30c3\u30c9\u90b8"
+    },
+    {
+        "editor_id": "DawnstarLocation",
+        "type": "LCTN FULL",
+        "original": "Dawnstar",
+        "string": "\u30c9\u30fc\u30f3\u30b9\u30bf\u30fc"
+    },
+    {
+        "editor_id": "WhiterunLocation",
+        "type": "LCTN FULL",
+        "original": "Whiterun",
+        "string": "\u30db\u30ef\u30a4\u30c8\u30e9\u30f3"
+    },
+    {
+        "editor_id": "RiftenLocation",
+        "type": "LCTN FULL",
+        "original": "Riften",
+        "string": "\u30ea\u30d5\u30c6\u30f3"
+    },
+    {
+        "editor_id": "MarkarthLocation",
+        "type": "LCTN FULL",
+        "original": "Markarth",
+        "string": "\u30de\u30eb\u30ab\u30eb\u30b9"
+    },
+    {
+        "editor_id": "BroodCavern01",
+        "type": "CELL FULL",
+        "original": "Brood Cavern",
+        "string": "\u5e7c\u9b54\u306e\u6d1e\u7a9f"
+    },
+    {
+        "editor_id": "ClearspringTarnLocation",
+        "type": "LCTN FULL",
+        "original": "Clearspring Tarn",
+        "string": "\u30af\u30ea\u30a2\u30b9\u30d7\u30ea\u30f3\u30b0\u5c0f\u6e56"
+    },
+    {
+        "editor_id": "BYOHHouseInteriorPart021WallShelvesx2_02",
+        "type": "MISC FULL",
+        "original": "Wall Shelves (2)",
+        "string": "\u58c1\u306e\u68da(2)"
+    },
+    {
+        "editor_id": "ReachwaterRock01",
+        "type": "CELL FULL",
+        "original": "Reachwater Rock",
+        "string": "\u30ea\u30fc\u30c1\u30a6\u30a9\u30fc\u30bf\u30fc\u30ed\u30c3\u30af"
+    },
+    {
+        "editor_id": "FalkreathGrayPineGoods",
+        "type": "CELL FULL",
+        "original": "Gray Pine Goods",
+        "string": "\u30b0\u30ec\u30a4\u30fb\u30d1\u30a4\u30f3\u30fb\u30b0\u30c3\u30ba"
+    },
+    {
+        "editor_id": "BYOHHouse3PaleBasement",
+        "type": "CELL FULL",
+        "original": "Heljarchen Hall, Cellar",
+        "string": "\u30d8\u30ea\u30e4\u30fc\u30b1\u30f3\u30fb\u30db\u30fc\u30eb\u306e\u5730\u4e0b\u5ba4"
+    },
+    {
+        "editor_id": "BYOHHouse1FalkreathBasement",
+        "type": "CELL FULL",
+        "original": "Lakeview Manor, Cellar",
+        "string": "\u30ec\u30a4\u30af\u30d3\u30e5\u30fc\u90b8\u306e\u5730\u4e0b\u5ba4"
+    },
+    {
+        "editor_id": "BYOHHouse2HjaalmarchBasement",
+        "type": "CELL FULL",
+        "original": "Windstad Manor, Cellar",
+        "string": "\u30a6\u30a3\u30f3\u30c9\u30b9\u30bf\u30c3\u30c9\u90b8\u306e\u5730\u4e0b\u5ba4"
+    },
+    {
+        "editor_id": "DLC2DamphallMine01",
+        "type": "CELL FULL",
+        "original": "Damphall Mine",
+        "string": "\u30c0\u30f3\u30d7\u30db\u30fc\u30eb\u9271\u5c71"
+    },
+    {
+        "editor_id": "JaphetsFolly01",
+        "type": "CELL FULL",
+        "original": "Sea Cave",
+        "string": "\u6d77\u98df\u6d1e"
+    },
+    {
+        "editor_id": "MorthalLocation",
+        "type": "LCTN FULL",
+        "original": "Morthal",
+        "string": "\u30e2\u30fc\u30b5\u30eb"
+    },
+    {
+        "editor_id": "Tamriel",
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "\u30b9\u30ab\u30a4\u30ea\u30e0"
+    },
+    {
+        "editor_id": "DLC2BristlebackCave01",
+        "type": "CELL FULL",
+        "original": "Bristleback Cave",
+        "string": "\u30d6\u30ea\u30b9\u30c8\u30eb\u30d0\u30c3\u30af\u6d1e\u7a9f"
+    },
+    {
+        "editor_id": "LvlFisherman",
+        "type": "NPC_ FULL",
+        "original": "Fisherman",
+        "string": "\u6f01\u6c11"
+    },
+    {
+        "editor_id": "RiverwoodRiverwoodTrader",
+        "type": "CELL FULL",
+        "original": "Riverwood Trader",
+        "string": "\u30ea\u30d0\u30fc\u30a6\u30c3\u30c9\u30fb\u30c8\u30ec\u30fc\u30c0\u30fc"
+    },
+    {
+        "editor_id": "SolitudeBitsandPieces",
+        "type": "CELL FULL",
+        "original": "Bits and Pieces",
+        "string": "\u30d3\u30c3\u30c4\u30fb\u30a2\u30f3\u30c9\u30fb\u30d4\u30fc\u30bb\u30ba"
+    },
+    {
+        "editor_id": "SolitudeWorld",
+        "type": "WRLD FULL",
+        "original": "Solitude",
+        "string": "\u30bd\u30ea\u30c1\u30e5\u30fc\u30c9"
+    },
+    {
+        "editor_id": "AlftandZCell",
+        "type": "CELL FULL",
+        "original": "Alftand Ruined Tower",
+        "string": "\u30a2\u30eb\u30d5\u30bf\u30f3\u30c9\u306e\u673d\u3061\u305f\u5854"
+    },
+    {
+        "editor_id": "WhiterunWorld",
+        "type": "WRLD FULL",
+        "original": "Whiterun",
+        "string": "\u30db\u30ef\u30a4\u30c8\u30e9\u30f3"
+    },
+    {
+        "editor_id": "ClearspringTarn01",
+        "type": "CELL FULL",
+        "original": "Clearspring Cave",
+        "string": "\u30af\u30ea\u30a2\u30b9\u30d7\u30ea\u30f3\u30b0\u6d1e\u7a9f"
+    },
+    {
+        "editor_id": "ShadowgreenCavernWorld",
+        "type": "WRLD FULL",
+        "original": "Shadowgreen Cavern",
+        "string": "\u30b7\u30e3\u30c9\u30a6\u30b0\u30ea\u30fc\u30f3\u6d1e\u7a9f"
+    },
+    {
+        "editor_id": "RiftenPawnedPrawn",
+        "type": "CELL FULL",
+        "original": "Pawned Prawn",
+        "string": "\u30d7\u30ed\u30fc\u30f3\u8cea\u5c4b"
+    },
+    {
+        "editor_id": "BrinewaterGrottoWorld",
+        "type": "WRLD FULL",
+        "original": "Brinewater Grotto",
+        "string": "\u30d6\u30e9\u30a4\u30f3\u30a6\u30a9\u30fc\u30bf\u30fc\u6d1e\u7a9f"
+    },
+    {
+        "editor_id": "SolitudeProudspireManor",
+        "type": "CELL FULL",
+        "original": "Proudspire Manor",
+        "string": "\u30d7\u30e9\u30a6\u30c9\u30b9\u30d1\u30a4\u30e4\u30fc\u90b8"
+    },
+    {
+        "editor_id": "MarkarthArnleifandSonsTradingCompany",
+        "type": "CELL FULL",
+        "original": "Arnleif and Sons Trading Company",
+        "string": "\u30a2\u30fc\u30f3\u30ea\u30fc\u30d5\u30fb\u30a2\u30f3\u30c9\u30fb\u30b5\u30f3\u30ba\u8cbf\u6613\u4f1a\u793e"
+    },
+    {
+        "editor_id": "EmbershardMine01",
+        "type": "CELL FULL",
+        "original": "Embershard Mine",
+        "string": "\u30a8\u30f3\u30d0\u30fc\u30b7\u30e3\u30fc\u30c9\u9271\u5c71"
+    },
+    {
+        "editor_id": "00000000|08512|0|0",
+        "type": "**** ****",
+        "original": "Dawnstar Barracks",
+        "string": "\u30c9\u30fc\u30f3\u30b9\u30bf\u30fc\u306e\u5175\u820e"
+    },
+    {
+        "editor_id": "DruadachRedoubt01",
+        "type": "CELL FULL",
+        "original": "Druadach Redoubt Cave",
+        "string": "\u30c9\u30eb\u30a2\u30c0\u30c3\u30c1\u8981\u585e\u306e\u6d1e\u7a9f"
+    },
+    {
+        "editor_id": "Ustengrav02",
+        "type": "CELL FULL",
+        "original": "Ustengrav Depths",
+        "string": "\u30a6\u30b9\u30c6\u30f3\u30b0\u30e9\u30d6\u306e\u6df1\u90e8"
+    },
+    {
+        "editor_id": "MorthalMoorsideInn",
+        "type": "CELL FULL",
+        "original": "Moorside Inn",
+        "string": "\u5bbf\u5c4b\u300c\u30e0\u30fc\u30a2\u30b5\u30a4\u30c9\u300d"
+    },
+    {
+        "editor_id": "BrokenOarGrotto01",
+        "type": "CELL FULL",
+        "original": "Broken Oar Grotto",
+        "string": "\u30d6\u30ed\u30fc\u30af\u30f3\u30fb\u30aa\u30fc\u30eb\u6d1e\u7a9f"
+    },
+    {
+        "editor_id": "SolitudeWinkingSkeever",
+        "type": "CELL FULL",
+        "original": "The Winking Skeever",
+        "string": "\u30a6\u30a3\u30f3\u30ad\u30f3\u30b0\u30fb\u30b9\u30ad\u30fc\u30f4\u30a1\u30fc"
+    },
+    {
+        "editor_id": "SnaplegCave01",
+        "type": "CELL FULL",
+        "original": "Snapleg Cave",
+        "string": "\u811a\u6298\u308a\u6d1e\u7a9f"
+    },
+    {
+        "editor_id": "WhiterunBelethorsGeneralGoods",
+        "type": "CELL FULL",
+        "original": "Belethor's General Goods",
+        "string": "\u30d9\u30ec\u30bd\u30a2\u4e00\u822c\u96d1\u8ca8\u5e97"
+    },
+    {
+        "editor_id": "WinterholdRanmirshouse",
+        "type": "CELL FULL",
+        "original": "Birna's Oddments",
+        "string": "\u30d3\u30eb\u30ca\u30fb\u30aa\u30c9\u30e1\u30f3\u30c8"
+    },
+    {
+        "editor_id": "EldergleamSanctuaryWorld",
+        "type": "WRLD FULL",
+        "original": "Eldergleam Sanctuary",
+        "string": "\u30a8\u30eb\u30c0\u30fc\u30b0\u30ea\u30fc\u30e0\u8056\u57df"
+    },
+    {
+        "editor_id": "RiftenWorld",
+        "type": "WRLD FULL",
+        "original": "Riften",
+        "string": "\u30ea\u30d5\u30c6\u30f3"
+    },
+    {
+        "editor_id": "Darkshade01",
+        "type": "CELL FULL",
+        "original": "Darkshade",
+        "string": "\u30c0\u30fc\u30af\u30b7\u30a7\u30a4\u30c9"
+    },
+    {
+        "editor_id": "LostProspectMine01",
+        "type": "CELL FULL",
+        "original": "Lost Prospect Mine",
+        "string": "\u30ed\u30b9\u30c8\u30d7\u30ed\u30b9\u30da\u30af\u30c8\u9271\u5c71"
+    },
+    {
+        "editor_id": "LostKnifeHideout01",
+        "type": "CELL FULL",
+        "original": "Lost Knife Cave",
+        "string": "\u30ed\u30b9\u30c8\u30ca\u30a4\u30d5\u6d1e\u7a9f"
+    },
+    {
+        "editor_id": "DeepwoodRedoubtWorld",
+        "type": "WRLD FULL",
+        "original": "Deepwood Vale",
+        "string": "\u30c7\u30a3\u30fc\u30d7\u30a6\u30c3\u30c9\u8c37"
+    },
+    {
+        "editor_id": "MarkarthSilverBloodInn",
+        "type": "CELL FULL",
+        "original": "Silver-Blood Inn",
+        "string": "\u5bbf\u5c4b\u300c\u30b7\u30eb\u30d0\u30fc\u30d6\u30e9\u30c3\u30c9\u300d"
+    },
+    {
+        "editor_id": "ShimmermistCave01",
+        "type": "CELL FULL",
+        "original": "Shimmermist Cave",
+        "string": "\u30b7\u30de\u30fc\u30df\u30b9\u30c8\u6d1e\u7a9f"
+    },
+    {
+        "editor_id": "WhiterunCarlottaValentiasHouse",
+        "type": "CELL FULL",
+        "original": "Carlotta Valentia's House",
+        "string": "\u30ab\u30eb\u30ed\u30c3\u30bf\u30fb\u30f4\u30a1\u30ec\u30f3\u30b7\u30a2\u306e\u5bb6"
+    },
+    {
+        "editor_id": "Blackreach",
+        "type": "WRLD FULL",
+        "original": "Blackreach",
+        "string": "\u30d6\u30e9\u30c3\u30af\u30ea\u30fc\u30c1"
+    },
+    {
+        "editor_id": "aaaMarkers",
+        "type": "CELL FULL",
+        "original": "Marker Storage Unit",
+        "string": "\u30de\u30fc\u30ab\u30fc\u30fb\u30b9\u30c8\u30ec\u30fc\u30b8\u30fb\u30e6\u30cb\u30c3\u30c8"
+    },
+    {
+        "editor_id": "WindhelmSadrisUsedWares",
+        "type": "CELL FULL",
+        "original": "Sadri's Used Wares",
+        "string": "\u30b5\u30c9\u30ea\u306e\u53e4\u7269\u5546"
+    },
+    {
+        "editor_id": "RiftenHaelgasBunkhouse",
+        "type": "CELL FULL",
+        "original": "Haelga's Bunkhouse",
+        "string": "\u30d8\u30eb\u30ac\u306e\u5bbf\u820e"
+    },
+    {
+        "editor_id": "MarkarthWorld",
+        "type": "WRLD FULL",
+        "original": "Markarth",
+        "string": "\u30de\u30eb\u30ab\u30eb\u30b9"
+    },
+    {
+        "editor_id": "FalkreathBarracksJail",
+        "type": "CELL FULL",
+        "original": "Falkreath Jail",
+        "string": "\u30d5\u30a1\u30eb\u30af\u30ea\u30fc\u30b9\u76e3\u7344"
+    },
+    {
+        "editor_id": "FalkreathBarracks",
+        "type": "CELL FULL",
+        "original": "Falkreath Barracks",
+        "string": "\u30d5\u30a1\u30eb\u30af\u30ea\u30fc\u30b9\u5175\u820e"
+    },
+    {
+        "editor_id": "FXAmbWaterSalmon01A",
+        "type": "FLOR RNAM",
+        "original": "Catch",
+        "string": "\u53d6\u308b"
+    },
+    {
+        "editor_id": "FXAmbWaterSalmon01A",
+        "type": "FLOR FULL",
+        "original": "Salmon",
+        "string": "\u30b5\u30b1"
+    },
+    {
+        "editor_id": "FXAmbWaterSalmon01B",
+        "type": "FLOR FULL",
+        "original": "Salmon",
+        "string": "\u30b5\u30b1"
+    },
+    {
+        "editor_id": "FXAmbWaterSalmon01B",
+        "type": "FLOR RNAM",
+        "original": "Catch",
+        "string": "\u53d6\u308b"
+    },
+    {
+        "editor_id": "FXAmbWaterSalmon02B",
+        "type": "FLOR RNAM",
+        "original": "Catch",
+        "string": "\u53d6\u308b"
+    },
+    {
+        "editor_id": "FXAmbWaterSalmon02B",
+        "type": "FLOR FULL",
+        "original": "Salmon",
+        "string": "\u30b5\u30b1"
+    },
+    {
+        "editor_id": "FXAmbWaterSalmon02A",
+        "type": "FLOR FULL",
+        "original": "Salmon",
+        "string": "\u30b5\u30b1"
+    },
+    {
+        "editor_id": "FXAmbWaterSalmon02A",
+        "type": "FLOR RNAM",
+        "original": "Catch",
+        "string": "\u53d6\u308b"
+    },
+    {
+        "editor_id": "FCAmbWaterfallSalmon01",
+        "type": "ACTI FULL",
+        "original": "Salmon",
+        "string": "\u30b5\u30b1"
+    },
+    {
+        "editor_id": "FCAmbWaterfallSalmon02",
+        "type": "ACTI FULL",
+        "original": "Salmon",
+        "string": "\u30b5\u30b1"
+    },
+    {
+        "editor_id": "DeadFXSalmon02",
+        "type": "FLOR RNAM",
+        "original": "Harvest",
+        "string": "\u53d6\u308b"
+    },
+    {
+        "editor_id": "DeadFXSalmon01",
+        "type": "FLOR FULL",
+        "original": "Salmon",
+        "string": "\u30b5\u30b1"
+    },
+    {
+        "editor_id": "DeadFXSalmon01",
+        "type": "FLOR RNAM",
+        "original": "Harvest",
+        "string": "\u53ce\u7a6b"
+    },
+    {
+        "editor_id": "DeadFXSalmon02",
+        "type": "FLOR FULL",
+        "original": "Salmon",
+        "string": "\u30b5\u30b1"
+    },
+    {
+        "editor_id": "FCAmbWaterfallSalmon01",
+        "type": "ACTI RNAM",
+        "original": "Catch",
+        "string": "\u53d6\u308b"
+    },
+    {
+        "editor_id": "FCAmbWaterfallSalmon02",
+        "type": "ACTI RNAM",
+        "original": "Catch",
+        "string": "\u6355\u307e\u3048\u308b"
+    },
+    {
+        "editor_id": "ccBGSSSE001_CrabMQ4InvulnerableMsg",
+        "type": "MESG DESC",
+        "original": "Your attack has no effect.",
+        "string": "\u653b\u6483\u306f\u5168\u304f\u52b9\u679c\u304c\u3042\u308a\u307e\u305b\u3093\u3002"
+    }
+]

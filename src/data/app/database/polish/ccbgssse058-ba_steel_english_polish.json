@@ -1,0 +1,206 @@
+[
+    {
+        "editor_id": "ccBGSSSE058_ArmorBladesBoots",
+        "type": "ARMO FULL",
+        "original": "Steel Soldier Boots",
+        "string": "Stalowe \u017co\u0142nierskie buty"
+    },
+    {
+        "editor_id": "ccBGSSSE058_ArmorBladesShield",
+        "type": "ARMO FULL",
+        "original": "Blades Steel Shield",
+        "string": "Stalowa tarcza Ostrzy"
+    },
+    {
+        "editor_id": "ccBGSSSE058_ArmorBladesGauntlets",
+        "type": "ARMO FULL",
+        "original": "Steel Soldier Gauntlets",
+        "string": "Stalowe \u017co\u0142nierskie r\u0119kawice"
+    },
+    {
+        "editor_id": "ccBGSSSE058_ArmorBladesHelmet",
+        "type": "ARMO FULL",
+        "original": "Steel Soldier Helmet",
+        "string": "Stalowy \u017co\u0142nierski he\u0142m"
+    },
+    {
+        "editor_id": "ccBGSSSE058_ArmorBladesCuirass",
+        "type": "ARMO FULL",
+        "original": "Steel Soldier Armor",
+        "string": "Stalowa \u017co\u0142nierska zbroja"
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "type": "QUST FULL",
+        "original": "Over the Edge",
+        "string": "Na kraw\u0119dzi"
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "type": "QUST NNAM",
+        "original": "Retrieve the armor",
+        "string": "Zabierz pancerz"
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "type": "QUST NNAM",
+        "original": "Defeat Peladius",
+        "string": "Pokonaj Peladiusa"
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "type": "QUST NNAM",
+        "original": "Go to Dragon Bridge",
+        "string": "Udaj si\u0119 na Smoczymost"
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "type": "QUST NNAM",
+        "original": "Confront Aldepius at the inn",
+        "string": "Porozmawiaj z Aldepiusem w gospodzie"
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "type": "QUST NNAM",
+        "original": "Search for the body down river",
+        "string": "Poszukaj cia\u0142a w dolnym biegu rzeki"
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the Guard's Note on Aldepius",
+        "string": "Przeczytaj notatk\u0119 stra\u017cnika na temat Aldepiusa"
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "type": "QUST NNAM",
+        "original": "Look for a note at the Four Shields Tavern",
+        "string": "Znajd\u017a notatk\u0119 w gospodzie Pod Czterema Tarczami"
+    },
+    {
+        "editor_id": "ccBGSSSE058_PeladiusDossier",
+        "type": "BOOK FULL",
+        "original": "Guard's Note on Aldepius",
+        "string": "Notatka stra\u017cnika na temat Aldepiusa"
+    },
+    {
+        "editor_id": "ccBGSSSE058_Note01",
+        "type": "BOOK FULL",
+        "original": "Suicide at Dragon Bridge",
+        "string": "Samob\u00f3jstwo na Smoczymo\u015bcie"
+    },
+    {
+        "editor_id": "ccBGSSSE058_Confession01",
+        "type": "BOOK FULL",
+        "original": "Aldepius' Confession",
+        "string": "Wyznanie Aldepiusa"
+    },
+    {
+        "editor_id": "ccBGSSSE058_GuardDragonBridgeSons",
+        "type": "NPC_ FULL",
+        "original": "Guard",
+        "string": "Stra\u017cnik"
+    },
+    {
+        "editor_id": "ccBGSSSE058_GuardDragonBridgeImperial",
+        "type": "NPC_ FULL",
+        "original": "Guard",
+        "string": "Stra\u017cnik"
+    },
+    {
+        "editor_id": "ccBGSSSE058_MiscQuest",
+        "type": "QUST NNAM",
+        "original": "Look for a note at the Four Shields Tavern",
+        "string": "Znajd\u017a notatk\u0119 w gospodzie Pod Czterema Tarczami"
+    },
+    {
+        "editor_id": "ccBGSSSE058_ArmorBladesBootsEnchanted",
+        "type": "ARMO FULL",
+        "original": "Steel Soldier Boots",
+        "string": "Stalowe \u017co\u0142nierskie buty"
+    },
+    {
+        "editor_id": "ccBGSSSE058_ArmorBladesGauntletsEnchanted",
+        "type": "ARMO FULL",
+        "original": "Steel Soldier Gauntlets",
+        "string": "Stalowe \u017co\u0142nierskie r\u0119kawice"
+    },
+    {
+        "editor_id": "ccBGSSSE058_ArmorBladesHelmetEnchanted",
+        "type": "ARMO FULL",
+        "original": "Steel Soldier Helmet",
+        "string": "Stalowy \u017co\u0142nierski he\u0142m"
+    },
+    {
+        "editor_id": "ccBGSSSE058_ArmorBladesCuirassEnchanted",
+        "type": "ARMO FULL",
+        "original": "Steel Soldier Armor",
+        "string": "Stalowa \u017co\u0142nierska zbroja"
+    },
+    {
+        "editor_id": "DragonBridgeFourShieldsTavern",
+        "type": "CELL FULL",
+        "original": "Four Shields Tavern",
+        "string": "Gospoda Pod Czterema Tarczami"
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "type": "QUST CNAM",
+        "original": "I visited the Four Shields Tavern in Dragon Bridge, and found a note mentioning a recent suicide. I found a body under the bridge which implicated one of the guards as a double agent. At the inn, I found a confession from Peladius, who asked that I give him a warrior's death, to which I obliged.",
+        "string": "W gospodzie Pod Czterema Tarczami w Smoczymo\u015bcie by\u0142a notatka wspominaj\u0105ca o niedawnym samob\u00f3jstwie. Uda\u0142o mi si\u0119 znale\u017a\u0107 cia\u0142o pod mostem, co sugerowa\u0142o, \u017ce jeden ze stra\u017cnik\u00f3w jest podw\u00f3jnym agentem. Peladius zostawi\u0142 w gospodzie pisemne wyznanie, w kt\u00f3rym poprosi\u0142 o \u015bmier\u0107 wojownika. Nie pozosta\u0142o mi nic innego jak przysta\u0107 na jego pro\u015bb\u0119."
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "type": "QUST CNAM",
+        "original": "I visited the Four Shields Tavern in Dragon Bridge, and found a note mentioning a recent suicide. I found a body under the bridge which implicated one of the guards as a double agent. I should head back to the inn and confront him.",
+        "string": "W gospodzie Pod Czterema Tarczami w Smoczymo\u015bcie by\u0142a notatka wspominaj\u0105ca o niedawnym samob\u00f3jstwie. Uda\u0142o mi si\u0119 znale\u017a\u0107 cia\u0142o pod mostem, co sugerowa\u0142o, \u017ce jeden ze stra\u017cnik\u00f3w jest podw\u00f3jnym agentem. Musz\u0119 wr\u00f3ci\u0107 do gospody i z nim porozmawia\u0107."
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "type": "QUST CNAM",
+        "original": "I visited the Four Shields Tavern in Dragon Bridge, and found a note mentioning a recent suicide. I found a body under the bridge which implicated one of the guards as a double agent. At the inn, I found a confession from Peladius, who asked that I give him a warrior's death.",
+        "string": "W gospodzie Pod Czterema Tarczami w Smoczymo\u015bcie by\u0142a notatka wspominaj\u0105ca o niedawnym samob\u00f3jstwie. Uda\u0142o mi si\u0119 znale\u017a\u0107 cia\u0142o pod mostem, co sugerowa\u0142o, \u017ce jeden ze stra\u017cnik\u00f3w jest podw\u00f3jnym agentem. Peladius zostawi\u0142 w gospodzie pisemne wyznanie, w kt\u00f3rym poprosi\u0142 o \u015bmier\u0107 wojownika."
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "type": "QUST CNAM",
+        "original": "I visited the Four Shields Tavern in Dragon Bridge, and found a note mentioning a recent suicide. I found a body under the bridge which implicated one of the guards as a double agent. At the inn, I found a confession from Peladius, who asked that I give him a warrior's death. He will be waiting for me at Dragon Bridge.",
+        "string": "W gospodzie Pod Czterema Tarczami w Smoczymo\u015bcie by\u0142a notatka wspominaj\u0105ca o niedawnym samob\u00f3jstwie. Uda\u0142o mi si\u0119 znale\u017a\u0107 cia\u0142o pod mostem, co sugerowa\u0142o, \u017ce jeden ze stra\u017cnik\u00f3w jest podw\u00f3jnym agentem. Peladius zostawi\u0142 w gospodzie pisemne wyznanie, w kt\u00f3rym poprosi\u0142 o \u015bmier\u0107 wojownika. B\u0119dzie na mnie czeka\u0107 na Smoczymo\u015bcie."
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "type": "QUST CNAM",
+        "original": "I visited the Four Shields Tavern in Dragon Bridge, and found a note mentioning a recent suicide. I found a body under the bridge with a note that might provide some clues as to what happened.",
+        "string": "W gospodzie Pod Czterema Tarczami w Smoczymo\u015bcie by\u0142a notatka wspominaj\u0105ca o niedawnym samob\u00f3jstwie. Uda\u0142o mi si\u0119 znale\u017a\u0107 cia\u0142o pod mostem, a tak\u017ce notatk\u0119, kt\u00f3ra powinna rzuci\u0107 nieco \u015bwiat\u0142a na t\u0119 spraw\u0119."
+    },
+    {
+        "editor_id": "ccBGSSSE058_PeladiusDossier",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\nI am beginning to suspect Aldepius is not who he claims to be.\n\nHe seemed rather old for a new recruit, but it wasn't until he started asking about our bandit informant that I began to suspect something was amiss. Still, I would've forgiven this as natural curiosity had he not asked to meet him.\n\nSo I checked with the list of the garrison, and no one by the name Aldepius is on it. I don't know who he is, but he's not a member of the guard. He's stationed at Dragon Bridge at the moment, when my shift is over I'm going to confront him about it.\n</font>",
+        "string": "<font face='$HandwrittenFont'>\nZaczynam podejrzewa\u0107, \u017ce Aldepius nie jest osob\u0105, za kt\u00f3r\u0105 si\u0119 podaje.\n\nWydaje si\u0119 do\u015b\u0107 stary jak na nowego rekruta, ale dopiero, kiedy zacz\u0105\u0142 wypytywa\u0107 o naszego informatora bandyt\u00f3w, przysz\u0142o mi do g\u0142owy, \u017ce co\u015b jest nie tak. Nie by\u0142oby w tym nawet nic dziwnego, gdyby nie poprosi\u0142 o spotkanie z nim.\n\nNa li\u015bcie \u017co\u0142nierzy garnizonu nie ma \u017cadnej osoby o imieniu Aldepius. Nie wiem, kim jest ten cz\u0142owiek, ale na pewno nie cz\u0142onkiem stra\u017cy. Obecnie stacjonuje na Smoczymo\u015bcie, ale kiedy tylko moja zmiana dobiegnie ko\u0144ca, zamierzam doprowadzi\u0107 do konfrontacji.\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE058_Note01",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\n<font size='18'>One of the locals who frequents the inn has been reported missing. I was about to tell the innkeeper to report it to the guard, but Aldepius said he saw the person in question leap off Dragon Bridge. \n\nA sad state of affairs, but not our concern.\n</font>",
+        "string": "<font face='$HandwrittenFont'>\n<font size='18'>Jeden z miejscowych, kt\u00f3ry cz\u0119sto odwiedza\u0142 karczm\u0119, zagin\u0105\u0142. Karczmarz mia\u0142 to ju\u017c zg\u0142osi\u0107 stra\u017cy, ale Aldepius powiedzia\u0142, \u017ce widzia\u0142 jak ta osoba skoczy\u0142a ze Smoczymostu.\n\nBardzo to przykre, ale to nie nasza sprawa.\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "type": "QUST CNAM",
+        "original": "I've heard the Four Shields Tavern in Dragon Bridge is a good spot to relax and find work. I should investigate it and see if I can learn anything new.",
+        "string": "Podobno gospoda Pod Czterema Tarczami w Smoczymo\u015bcie to \u015bwietne miejsce na odpoczynek i znalezienie pracy. Zajrz\u0119 tam i sprawdz\u0119, czy uda mi si\u0119 dowiedzie\u0107 czego\u015b ciekawego."
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "type": "QUST CNAM",
+        "original": "I visited the Four Shields Tavern in Dragon Bridge, and found a note mentioning a recent suicide. I should investigate the area below the bridge to see what I can find out about the deceased.",
+        "string": "W gospodzie Pod Czterema Tarczami w Smoczymo\u015bcie by\u0142a notatka wspominaj\u0105ca o niedawnym samob\u00f3jstwie. Musz\u0119 zbada\u0107 obszar pod mostem, by dowiedzie\u0107 si\u0119 wi\u0119cej na temat zmar\u0142ej osoby."
+    },
+    {
+        "editor_id": "ccBGSSSE058_Confession01",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\n<font size='18'>I should've made sure that body sunk to the bottom of the river, but in my old age I've gotten sloppy.\n\nI guess I should come clean. My real name is Peladius. I'm a bandit. At least, I used to be, until our group was betrayed by one of our own. I started this whole charade because I wanted to know who.\n\nBut to be honest, it doesn't matter anymore. There was never any honor among thieves. I lost what little claim I had to it, the day I joined Tyra's crew. \n\nThen again, maybe I can still have an honorable death.\n\nMeet me at Dragon Bridge. We can settle this there.\n</font>",
+        "string": "<font face='$HandwrittenFont'>\n<font size='18'>Powinienem by\u0142 si\u0119 upewni\u0107, \u017ce to cia\u0142o p\u00f3jdzie na dno rzeki, ale na staro\u015b\u0107 robi\u0119 si\u0119 nieuwa\u017cny.\n\nChyba powinienem wszystko wyzna\u0107. Naprawd\u0119 nazywam si\u0119 Peladius. Jestem bandyt\u0105. A przynajmniej by\u0142em nim, dop\u00f3ki naszej bandy nie zdradzi\u0142 jeden z naszych. Zacz\u0105\u0142em t\u0119 ca\u0142\u0105 maskarad\u0119, bo chcia\u0142em si\u0119 dowiedzie\u0107, kto to by\u0142.\n\nSzczerze m\u00f3wi\u0105c, nie ma to ju\u017c znaczenia. Nie ma honoru w\u015br\u00f3d z\u0142odziei. Ca\u0142y m\u00f3j honor przepad\u0142, kiedy do\u0142\u0105czy\u0142em do ekipy Tyry. \n\nZ drugiej strony, mo\u017ce wci\u0105\u017c zas\u0142uguj\u0119 na honorow\u0105 \u015bmier\u0107.\n\nSpotkajmy si\u0119 na Smoczymo\u015bcie. Tam to za\u0142atwimy.\n</font>"
+    }
+]

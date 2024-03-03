@@ -1,0 +1,152 @@
+[
+    {
+        "editor_id": "ccBGSSSE064_ArmorElvenMailCuirass",
+        "type": "ARMO FULL",
+        "original": "Elven Hunter Armor",
+        "string": "Pancerz elfiego \u0142owcy"
+    },
+    {
+        "editor_id": "ccBGSSSE064_ArmorElvenMailBoots",
+        "type": "ARMO FULL",
+        "original": "Elven Hunter Boots",
+        "string": "Buty elfiego \u0142owcy"
+    },
+    {
+        "editor_id": "ccBGSSSE064_ArmorElvenMailGauntlets",
+        "type": "ARMO FULL",
+        "original": "Elven Hunter Gauntlets",
+        "string": "R\u0119kawice elfiego \u0142owcy"
+    },
+    {
+        "editor_id": "ccBGSSSE064_Quest",
+        "type": "QUST NNAM",
+        "original": "Search Aesrael's body",
+        "string": "Przeszukaj cia\u0142o Aesraela"
+    },
+    {
+        "editor_id": "ccBGSSSE064_Quest",
+        "type": "QUST FULL",
+        "original": "Once a Hunter",
+        "string": "Niegdy\u015b \u0142owca"
+    },
+    {
+        "editor_id": "ccBGSSSE064_Quest",
+        "type": "QUST NNAM",
+        "original": "Retrieve the armor",
+        "string": "Zabierz pancerz"
+    },
+    {
+        "editor_id": "ccBGSSSE064_BountyLetter",
+        "type": "BOOK FULL",
+        "original": "Guard's Bounty Letter Draft",
+        "string": "Szkic listu dotycz\u0105cego nagrody wyznaczonej przez gwardi\u0119"
+    },
+    {
+        "editor_id": "ccBGSSSE064_Quest",
+        "type": "QUST NNAM",
+        "original": "Kill Aesrael",
+        "string": "Zabij Aesraela"
+    },
+    {
+        "editor_id": "ccBGSSSE064_Wolf",
+        "type": "NPC_ FULL",
+        "original": "Dusk",
+        "string": "Zmierzch"
+    },
+    {
+        "editor_id": "ccBGSSSE064_MiscQuest",
+        "type": "QUST NNAM",
+        "original": "Look for bounty information at the Falkreath Barracks",
+        "string": "Szukaj informacji o nagrodach w koszarach Falkretu"
+    },
+    {
+        "editor_id": "ccBGSSSE064_GuardDossier",
+        "type": "BOOK FULL",
+        "original": "Guard Dossier: Aesrael",
+        "string": "Dossier gwardii: Aesrael"
+    },
+    {
+        "editor_id": "ccBGSSSE064_ElvenNote",
+        "type": "BOOK FULL",
+        "original": "Aesrael's Journal",
+        "string": "Dziennik Aesraela"
+    },
+    {
+        "editor_id": "ccBGSSSE064_Key",
+        "type": "KEYM FULL",
+        "original": "Aesrael's Key",
+        "string": "Klucz Aesraela"
+    },
+    {
+        "editor_id": "ccBGSSSE064_BountyLetterNote",
+        "type": "BOOK FULL",
+        "original": "Guard's Note",
+        "string": "Notatka stra\u017cnika"
+    },
+    {
+        "editor_id": "ccBGSSSE064_BookV7",
+        "type": "BOOK FULL",
+        "original": "The Crimson Dirks, v7",
+        "string": "Szkar\u0142atne Sztylety, w7"
+    },
+    {
+        "editor_id": "FalkreathBarracks",
+        "type": "CELL FULL",
+        "original": "Falkreath Barracks",
+        "string": "Koszary Falkret"
+    },
+    {
+        "editor_id": "ccBGSSSE064_GuardDossier",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\nStatus: Active (Capture or Kill), High Priority\n\nDescription: Male, High Elf, age unknown\n\nBackground:\nA member of the Crimson Dirks, a notorious group of bandits and marauders originally based in Cyrodiil. Little else is known about the target, although some intelligence suggests he was often used as an information gatherer for the bandits.\n\nOperational Notes:\nIt was originally thought that an Altmer might attempt to blend into wealthier circles, but according to our informant, he's done the opposite. He's stripped his armor and gone native, hunting game in the forests south of Sunderstone Gorge. He should still be considered dangerous, however, and it would be wise to put up a bounty when his identity is confirmed.\n</font>",
+        "string": "<font face='$HandwrittenFont'>\nStatus: Zlecenie aktywne (pojma\u0107 lub zabi\u0107), wysoki priorytet\n\nOpis: M\u0119\u017cczyzna, elf wysokiego rodu, wiek nieznany\n\nHistoria:\nCz\u0142onek Szkar\u0142atnych Sztylet\u00f3w, grupy poszukiwanych bandyt\u00f3w i rzezimieszk\u00f3w, pierwotnie pochodz\u0105cych z Cyrodiil. Wi\u0119cej o celu nie wiadomo, cho\u0107 z danych wywiadowczych wynika, \u017ce cz\u0119sto zbiera\u0142 informacje dla bandyt\u00f3w.\n\nUwagi:\nPocz\u0105tkowo uwa\u017cano, \u017ce ten altmer mo\u017ce spr\u00f3bowa\u0107 dosta\u0107 si\u0119 do bardziej zamo\u017cnych kr\u0119g\u00f3w, ale zgodnie ze s\u0142owami informatora, zrobi\u0142 co\u015b wr\u0119cz przeciwnego. Zdj\u0105\u0142 pancerz i zaszy\u0142 si\u0119 w dziczy - poluje na zwierzyn\u0119 w lasach na p\u00f3\u0142noc od Rozpadliny Rozdartej Ska\u0142y. Nale\u017cy uzna\u0107 go za niebezpiecznego. Po potwierdzeniu to\u017csamo\u015bci, m\u0105drze by\u0142oby wyznaczy\u0107 nagrod\u0119 za jego g\u0142ow\u0119.\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE064_Quest",
+        "type": "QUST CNAM",
+        "original": "At the barracks in Falkreath, I found information implicating a hunter to the south of Sunderstone Gorge. Apparently in another life, he was a notorious bandit. After reading the note, I found a camp in the area and killed the High Elf.",
+        "string": "W koszarach w Falkrecie uda\u0142o mi si\u0119 znale\u017a\u0107 informacje wskazuj\u0105ce, \u017ce na po\u0142udnie od Rozpadliny Rozdartej Ska\u0142y znajduje si\u0119 \u0142owca. Najwyra\u017aniej w innym \u017cyciu by\u0142 poszukiwanym bandyt\u0105. Po przeczytaniu informacji, we wskazanym miejscu uda\u0142o mi si\u0119 odszuka\u0107 obozowisko i zabi\u0107 elfa wysokiego rodu."
+    },
+    {
+        "editor_id": "ccBGSSSE064_Quest",
+        "type": "QUST CNAM",
+        "original": "At the barracks in Falkreath, I found information implicating a hunter to the south of Sunderstone Gorge. Apparently in another life, he was a notorious bandit. I should investigate the camps in the area and see what I can find.",
+        "string": "W koszarach w Falkrecie uda\u0142o mi si\u0119 znale\u017a\u0107 informacje wskazuj\u0105ce, \u017ce na po\u0142udnie od Rozpadliny Rozdartej Ska\u0142y znajduje si\u0119 \u0142owca. Najwyra\u017aniej w innym \u017cyciu by\u0142 poszukiwanym bandyt\u0105. Musz\u0119 przeszuka\u0107 obozowiska w pobli\u017cu i sprawdzi\u0107, co uda mi si\u0119 odnale\u017a\u0107."
+    },
+    {
+        "editor_id": "ccBGSSSE064_ElvenNote",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\nI didn't choose to be alone. A fish doesn't choose to swim, and a bird doesn't choose to fly. They just are, and so was I.\n\nWhen the guard raided our hideout, I didn't shed any tears. We were always going to be lost children, orphaned by the world if not by each other.\n\nThe others fled to the cities, but I sought the stillness of the forest, with only the moon and stars to keep me company. That is, until the day I met the wolf.\n\nWhen I found its leg caught in a bear trap, my first thought was to put it out of its misery. Yet for some reason I treated the wound, and fed the beast until it recovered.\n\nI don't know why I saved it. Perhaps part of me misses the others, and longs for a companion. \n\nI'm no stranger to solitude. I've spent years relying on no one save myself. But it seems at the end of the day, I'm still that boy at the orphanage, parked at the window sill, staring out into an empty street.</font>",
+        "string": "<font face='$HandwrittenFont'>\nNie wybra\u0142em \u017cycia w samotno\u015bci. Ryba nie wybiera \u017cycia w morzu, a ptak nie wybiera \u017cycia w przestworzach. Tak po prostu jest. I tak by\u0142o ze mn\u0105.\n\nKiedy gwardia zaatakowa\u0142a nasz\u0105 kryj\u00f3wk\u0119, nie p\u0142aka\u0142em. Zawsze mieli\u015bmy by\u0107 zagubionymi dzie\u0107mi, osieroconymi przez \u015bwiat, ale nie przez siebie nawzajem.\n\nPozostali uciekli do miast, ale ja szuka\u0142em spokoju lasu, gdzie towarzyszy\u0142y mi tylko ksi\u0119\u017cyc i gwiazdy. Do dnia, w kt\u00f3rym spotka\u0142em wilka.\n\nKiedy zobaczy\u0142em, \u017ce noga utkn\u0119\u0142a mu we wnykach, chcia\u0142em skr\u00f3ci\u0107 jego m\u0119ki. Ale z jakiego\u015b powodu zaj\u0105\u0142em si\u0119 ran\u0105 i karmi\u0142em besti\u0119, a\u017c ta odzyska\u0142a si\u0142y.\n\nNie wiem, dlaczego go ocali\u0142em. Mo\u017ce cz\u0119\u015b\u0107 mnie pragnie towarzystwa. Brakuje jej innych. \n\nSamotno\u015b\u0107 to dla mnie codzienno\u015b\u0107. Sp\u0119dzi\u0142em ca\u0142e lata, jedynie we w\u0142asnym towarzystwie. Ale najwyra\u017aniej wci\u0105\u017c jestem tym ch\u0142opcem z sieroci\u0144ca, siedz\u0105cym na parapecie, wygl\u0105daj\u0105cym na pust\u0105 ulic\u0119.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE064_BountyLetter",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\n<font size=\"40\">Bounty</font>\n\nBy order of <Alias=Jarl>:\n\nTo all able bodied men and women of Falkreath. A wanted bandit has been hiding in the forests south of Sunderstone Gorge, posing as a hunter. Rumor has it that he is accompanied by a fearsome wolf. \n\nA reward will be offered to anyone who kills him.\n\n--<Alias=Steward>",
+        "string": "<font face=\"$HandwrittenFont\">\n<font size=\"40\">Nagroda!</font>\n\n<Alias=Jarl> wystosowa\u0142 odezw\u0119:\n\nDo wszystkich zdrowych m\u0119\u017cczyzn i kobiet z Falkretu. W lasach na po\u0142udnie od Rozpadliny Rozdartej Ska\u0142y ukrywa si\u0119 poszukiwany bandyta, udaj\u0105cy \u0142owczego. Pono\u0107 towarzyszy mu budz\u0105cy groz\u0119 wilk. \n\nOsob\u0119, kt\u00f3ra go zabije, czeka szczodra nagroda.\n\n--<Alias=Steward>"
+    },
+    {
+        "editor_id": "ccBGSSSE064_Quest",
+        "type": "QUST CNAM",
+        "original": "At the barracks in Falkreath, I found information implicating a hunter to the south of Sunderstone Gorge. Apparently in another life, he was a notorious bandit. After reading the note, I found a camp in the area and killed the High Elf. On his body was a key to a nearby chest. Inside the chest I found a valuable set of armor.",
+        "string": "W koszarach w Falkrecie uda\u0142o mi si\u0119 znale\u017a\u0107 informacje wskazuj\u0105ce, \u017ce na po\u0142udnie od Rozpadliny Rozdartej Ska\u0142y znajduje si\u0119 \u0142owca. Najwyra\u017aniej w innym \u017cyciu by\u0142 poszukiwanym bandyt\u0105. Po przeczytaniu informacji, we wskazanym miejscu uda\u0142o mi si\u0119 odszuka\u0107 obozowisko i zabi\u0107 elfa wysokiego rodu. Przy jego ciele znajdowa\u0142 si\u0119 klucz do pobliskiej skrzyni. Wewn\u0105trz znajdowa\u0142 si\u0119 cenny zestaw pancerza."
+    },
+    {
+        "editor_id": "ccBGSSSE064_Quest",
+        "type": "QUST CNAM",
+        "original": "At the barracks in Falkreath, I found information implicating a hunter to the south of Sunderstone Gorge. Apparently in another life, he was a notorious bandit. After reading the note, I found a camp in the area and killed the High Elf. On his body was a key to a nearby chest.",
+        "string": "W koszarach w Falkrecie uda\u0142o mi si\u0119 znale\u017a\u0107 informacje wskazuj\u0105ce, \u017ce na po\u0142udnie od Rozpadliny Rozdartej Ska\u0142y znajduje si\u0119 \u0142owca. Najwyra\u017aniej w innym \u017cyciu by\u0142 poszukiwanym bandyt\u0105. Po przeczytaniu informacji, we wskazanym miejscu uda\u0142o mi si\u0119 odszuka\u0107 obozowisko i zabi\u0107 elfa wysokiego rodu. Przy jego ciele znajdowa\u0142 si\u0119 klucz do pobliskiej skrzyni."
+    },
+    {
+        "editor_id": "ccBGSSSE064_BountyLetterNote",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\nThe steward will have to sign off on it, but I was thinking we should have the bandit's possessions serve as a reward in lieu of gold. According to the informant, he might be carrying valuables with him. I'll bring it up with the Steward when I have her sign the bounty.\n\nBesides, the more gold we save on bounty hunters, the more we have for the guard. I still haven't gotten approval for the funds to have Lod fix my shield. At this rate, I might as well just use the lid from my pot.",
+        "string": "<font face=\"$HandwrittenFont\">\nNamiestnik b\u0119dzie musia\u0142 to potwierdzi\u0107, ale wydaje mi si\u0119, \u017ce rzeczy nale\u017c\u0105ce do bandyty mog\u0105 by\u0107 uznane za nagrod\u0119 zamiast z\u0142ota. Wedle s\u0142\u00f3w informatora, \u0142otr mo\u017ce mie\u0107 przy sobie wiele kosztowno\u015bci. Porusz\u0119 t\u0119 spraw\u0119 z namiestnikiem, kiedy b\u0119dzie przyznawa\u0142 nagrod\u0119.\n\nPoza tym, im wi\u0119cej z\u0142ota zaoszcz\u0119dzimy na \u0142owcach nagr\u00f3d, tym wi\u0119cej zostanie na gwardi\u0119. Wci\u0105\u017c nie otrzyma\u0142em przydzia\u0142u funduszy na napraw\u0119 tarczy przez Loxa. Jak tak dalej p\u00f3jdzie, b\u0119d\u0119 musia\u0142 u\u017cywa\u0107 pokrywy od nocnika."
+    },
+    {
+        "editor_id": "ccBGSSSE064_BookV7",
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\n<p align=\"center\">\n\n\nThe Crimson Dirks\nBook Seven\n\nby \nGathers-the-Coin\n</p>\n\n\n\n[pagebreak]\n<p align=\"left\">\n<img src='img://Textures/Interface/Books/Illuminated_Letters/T_letter.png'>he assassin's trail stretched further into the woods. Aesrael took the lead, with the Argonian and the Bosmer in close pursuit, following the thread of tangled brush and loose mud. As he knelt to study the tracks, a hint of jazbay bloomed on his tongue, a side effect of the Night-Eye that the mages could not explain. \n\nThe tracks seemed to pause around a great oak tree, as if their owner had stopped to rethink his method of escape. Thumbing the crook of his chin, Aesrael listened for the footsteps of his fellow bandits, not wanting to turn his head. The assassin was close.\n\nHours prior, the night began with a toast. A courier had brought news of merchandise coming in from jobs in the Highlands and the Gold Coast. It was the first sign of charity Stendarr had showed them in months, ever since the guard and the East Empire Company had taken a special interest in squashing their operations. With all their leads dried up, the Crimson Dirks were left to sacking caravans and petty thievery, the kind of work they were willing to do but always resented. \n\nHowever, with this latest news their coffers would be as full as their cups. In addition to obtaining a cache of valuables from a Daedric cult, they had raided warehouses holding enchanted swords from Anvil, Colovian furs from Chorrol, along with crates of silks and fine robes weighted with perfume. \n\nIn order to launder the goods, the bandits, led by the Dunmer scribe Casival, made contact with a merchant noble, knowing he had connections across Cyrodiil. That night, they solidified the pact over a flask of wine and a gourmet feast. It was a landmark occasion for this group of rogues and misfits, to be legitimized in their dealings by a class above their own.\n\nAt that moment, the end of the Crimson Dirks might've seemed like the furthest thing from reality. Now, with Casival wounded and the merchant dead, it seemed almost inevitable. \n\n\"The trail ends here,\" Aesrael said, motioning to the trunk of the looming oak.\n\n\"Maybe the tree ate him,\" quipped the Bosmer, his Argonian partner Pale-Eyes trailing behind him.\n\n\"You jest, Ehlhiel,\" replied Pale-Eyes, \"but in this one's village, there is a story of a Hist, corrupted by magic, that would kidnap and devour the hatchlings.\"\n\n\"Okay, I have to ask,\" the Bosmer replied, \"Why are there so many stories about monsters that eat children? Are parents so inept they have to constantly frighten their young into behaving, or are children really that delicious?\"\n\n\"I feel like as a Bosmer,\" countered the Argonian, \"you would know better than I.\"\n\n\"Quiet, you two,\" warned Aesrael, \"He's here.\"\n\nAesrael knew this was no time for banter. He could feel the taste of jazbay dim in his mouth. The Night-Eye would not last much longer, and when the spell snapped, their eyes would be ill-adjusted to the sudden darkness.\n\nThe assassin knew this as well. He had counted the seconds left in the spell and baited them to this point, where the long trees shrouded the moonlight. He had wagered on the fleeting light in the eyes of his pursuers, knowing his had yet to expire. He knew that blinded by the night, the Altmer would raise his hand and use the last of his magicka to recast the spell. And in that moment, he struck. \n\nThe assassin's dagger aimed for Aesrael's neck, slicing at the seam between his armor. He knew the Elf's left arm would be occupied by the spell casting, unable to guard his naked artery. And when he fell, the others would turn to his falling corpse, giving him ample distraction to kill them both. All of this seemed as academic as the death of the merchant, the one whom just hours ago they had failed to protect.\n\nAnd yet, inches away from its mark, his dagger was stopped cold. The assassin tried to wrestle it free, only to find it clenched in the Altmer's fist.\n\nIt was a feint. The Elf had raised his hand, but never cast the spell. \n\nDropping the dagger, the assassin leapt back, having given away his position for no more than a bloody hand. Aesrael and the others rushed to subdue him, but he was far too quick. With his remaining dagger, he slit his own throat, taking the secrets of his masters to the grave.\n\n\"So, who wants to explain this to the boss?\" Ehlhiel quipped, trying to lighten the mood, \"Because I've got a list of about thirty people I like to blame in situations like this.\"\n\n\"There are no words that can justify the depth of our failure,\" Aesrael grumbled, wrapping his wound, \"we lost the merchant and his killer. Casival is wounded. But perhaps, despite all this, we can learn something from the corpse.\"\n\n\"An assassin this skilled,\" remarked Pale-Eyes, \"must work for the East Empire Company.\"\n\n\"Worse,\" said Aesrael, examining the cut of his armor, \"it seems our merchant friend was dealing with more than just bandits, but the Thalmor as well. Because this man we killed isn't with the company. He's a Spectre.\"\n\nEhlhiel's face grew dim with the implication. It was one thing to make an enemy of the guards in the city, the East Empire Company, the Clan Mothers and even the Great Houses of Morrowind, but this was altogether different. \n\nIt was not the size or strength of their foe, but their knowledge they feared, and the Penitus Oculatus were spies of the highest order. If the Empire had been tracking the merchant's dealings, it was only a matter of time before their identities would be discovered and shared with all who opposed them.\n\nThe only question was, how much time was left.\n\n",
+        "string": "[pagebreak]\n<p align=\"center\">\n\n\nSzkar\u0142atne Sztylety\nKsi\u0119ga si\u00f3dma\n\nautorstwa \nGathersa-Monety\n</p>\n\n\n\n[pagebreak]\n<p align=\"left\">\n<img src='img://Textures/Interface/Books/Illuminated_Letters/T_letter.png'>rop zab\u00f3jcy prowadzi\u0142 dalej ku drzewom. Aesrael szed\u0142 pierwszy, a argo\u0144czyk i bosmer pod\u0105\u017cali blisko za nim, \u015bledz\u0105c przydeptane krzewy i naruszone b\u0142oto. Kiedy przykl\u0105k\u0142, by przyjrze\u0107 im si\u0119 bli\u017cej, na jego j\u0119zyku rozkwit\u0142 \u015blad winogron jazbay, efekt uboczny Nocnego Wzroku, kt\u00f3rego czarodzieje wyja\u015bni\u0107 nie potrafili. \n\n\u015alady wydawa\u0142y si\u0119 przystawa\u0107 przy wielkim d\u0119bie, jakby \u015bcigany zatrzyma\u0142 si\u0119 i zacz\u0105\u0142 zastanawia\u0107 nad sposobem ucieczki. Aesrael potar\u0142 czubek brody kciukiem i zacz\u0105\u0142 nas\u0142uchiwa\u0107 krok\u00f3w swoich towarzyszy, bandyt\u00f3w. Nie odwraca\u0142 jednak g\u0142owy. Zab\u00f3jca by\u0142 blisko.\n\nKilka godzin wcze\u015bniej, noc rozpocz\u0119\u0142a si\u0119 od toastu. Pos\u0142aniec przyni\u00f3s\u0142 wie\u015bci o towarach, sp\u0142ywaj\u0105cych z rob\u00f3t na Wy\u017cynach i Z\u0142otym Wybrze\u017cu. By\u0142a to pierwsza oznaka \u0142askawo\u015bci Stendarra od wielu miesi\u0119cy, od czasu gdy gwardia i ca\u0142a Kompania Wschodniocesarska postanowi\u0142y rozp\u0119dzi\u0107 ich na cztery wiatry. Praktycznie wszystkie \u017ar\u00f3d\u0142a wysch\u0142y, a Szkar\u0142atne Sztylety musia\u0142y zacz\u0105\u0107 napada\u0107 na karawany i trudni\u0107 si\u0119 drobnymi kradzie\u017cami. Oczywi\u015bcie byli w tym biegli, ale szczerze tego nie cierpieli. \n\nNajnowsze wiadomo\u015bci wskazywa\u0142y jednak, \u017ce wkr\u00f3tce ich skrzynie wype\u0142ni\u0105 si\u0119 po brzegi. Opr\u00f3cz przej\u0119cia \u0142adunku kosztowno\u015bci od daedrycznego kultu, zaatakowali te\u017c magazyny pe\u0142ne zakl\u0119tych miecz\u00f3w z Kowad\u0142a, kolowia\u0144skich futer z Chorrol, bel jedwabiu oraz przepi\u0119knych szat, spryskanych wonno\u015bciami. \n\nAby wypra\u0107 te zdobycze, bandyci, prowadzeni przez dunmerskiego skryb\u0119, Casivala, nawi\u0105zali kontakt ze szlachetnie urodzonym kupcem, kt\u00f3ry mia\u0142 wiele kontakt\u00f3w w ca\u0142ym Cyrodiil. Tej nocy, dobili targu flaszeczk\u0105 wina i wspania\u0142\u0105 uczt\u0105. By\u0142o to niezwykle wa\u017cne wydarzenie dla tej grupy \u0142otr\u00f3w i wyrzutk\u00f3w - ich dzia\u0142ania by\u0142y legitymizowane przez klas\u0119 wy\u017csz\u0105.\n\nW tamtym momencie koniec Szkar\u0142atnych Sztylet\u00f3w wydawa\u0142 si\u0119 by\u0107 absolutnie niemo\u017cliwy. Ale teraz Casival by\u0142 ranny, a kupiec nie \u017cy\u0142. \u201eNiemo\u017cliwy\u201d zmieni\u0142 si\u0119 w \u201eniemal nieunikniony\u201d. \n\n\u201eTutaj trop si\u0119 urywa\u201d powiedzia\u0142 Aesrael, wskazuj\u0105c na wynurzaj\u0105cy si\u0119 pie\u0144 d\u0119bu.\n\n\u201eDrzewo go zjad\u0142o?\u201d za\u017cartowa\u0142 bosmer, a jego argo\u0144ski partner, Blade Oko, pojawi\u0142 si\u0119 tu\u017c za nim.\n\n\u201e\u017bartujesz sobie, Ehlhielu\u201d odpowiedzia\u0142 Blade Oko, \u201eale w tej w\u0142a\u015bnie wiosce kr\u0105\u017cy opowie\u015b\u0107 o hi\u015bcie splugawionym magi\u0105, kt\u00f3ry porywa\u0142 i po\u017cera\u0142 dzieciaki\u201d.\n\n\u201eNo dobrze, w takim razie zapytam\u201d zaripostowa\u0142 bosmer, \u201edlaczego istnieje tyle opowie\u015bci o potworach, zjadaj\u0105cych dzieci? Czy rodzice s\u0105 tak nieporadni, \u017ce musz\u0105 ca\u0142y czas straszy\u0107 swoje latoro\u015ble, \u017ceby by\u0142y grzeczne? Czy dzieci s\u0105 po prostu takie smaczne?\u201d\n\n\u201eWydaje mi si\u0119, \u017ce jako bosmer\u201d skontrowa\u0142 argo\u0144czyk, \u201ewiesz na ten temat znacznie wi\u0119cej ni\u017c ja\u201d.\n\n\u201eUspok\u00f3jcie si\u0119\u201d warkn\u0105\u0142 Aesrael. \u201eOn tu jest\u201d.\n\nAesrael wiedzia\u0142, \u017ce to nie czas na sprzeczki. Czu\u0142 smak winogron jazbay w ustach. Nocny Wzrok wkr\u00f3tce przestanie dzia\u0142a\u0107, a bez zakl\u0119cia ich oczy b\u0119d\u0105 nieprzyzwyczajone do nag\u0142ego mroku.\n\nZab\u00f3jca dobrze o tym wiedzia\u0142. Liczy\u0142 sekundy do wyczerpania si\u0119 zakl\u0119cia i zwabi\u0142 ich w to miejsce, gdzie wysokie drzewa zakrywa\u0142y \u015bwiat\u0142o ksi\u0119\u017cyca. Uzna\u0142, \u017ce warto odkry\u0107 si\u0119 przed prze\u015bladowcami, bo ma wi\u0119kszy zapas Nocnego Wzroku ni\u017c oni. Wiedzia\u0142, \u017ce kiedy noc ich o\u015blepi, altmer podniesie d\u0142o\u0144 i u\u017cyje reszty magii, aby ponownie rzuci\u0107 zakl\u0119cie. I w tym momencie zaatakowa\u0142. \n\nOstrze sztyletu zab\u00f3jcy mierzy\u0142o w szyj\u0119 Aesraela, prosto w miejsce \u0142\u0105czenia p\u0142yt jego pancerza. Wiedzia\u0142, \u017ce lewa r\u0119ka elfa b\u0119dzie zaj\u0119ta rzucaniem zakl\u0119cia i nie zdo\u0142a zakry\u0107 ods\u0142oni\u0119tej t\u0119tnicy. Kiedy dow\u00f3dca padnie, pozostali zwr\u00f3c\u0105 si\u0119 ku jego cia\u0142u, a on b\u0119dzie m\u00f3g\u0142 skorzysta\u0107 z zamieszania i zabi\u0107 ich obu. To wszystko wydawa\u0142o si\u0119 by\u0107 tak proste, jak zabicie kupca, kt\u00f3rego zaledwie kilka godzin temu ta tr\u00f3jka nie zdo\u0142a\u0142a obroni\u0107.\n\nA jednak, cho\u0107 by\u0142 zaledwie kilka cali od celu, sztylet si\u0119 zatrzyma\u0142. Zab\u00f3jca pr\u00f3bowa\u0142 go wyrwa\u0107, ale pi\u0119\u015b\u0107 altmera trzyma\u0142a mocno.\n\nTo by\u0142a zmy\u0142ka. Elf podni\u00f3s\u0142 r\u0119k\u0119, ale nie rzuci\u0142 zakl\u0119cia. \n\nZab\u00f3jca upu\u015bci\u0142 sztylet i skoczy\u0142 do ty\u0142u - odkry\u0142 swoje po\u0142o\u017cenie, ale wida\u0107 by\u0142o zaledwie jego zakrwawion\u0105 r\u0119k\u0119. Aesrael z pozosta\u0142ymi ruszyli, aby go z\u0142apa\u0107, ale on by\u0142 zdecydowanie za szybki. Drugim sztyletem szybko podci\u0105\u0142 sobie gard\u0142o, zabieraj\u0105c sekrety swoich pan\u00f3w do grobu.\n\n\u201eTo kto si\u0119 zg\u0142asza na ochotnika, \u017ceby opowiedzie\u0107 o tym szefowej?\u201d za\u017cartowa\u0142 Ehlhiel, chc\u0105c nieco obni\u017cy\u0107 napi\u0119cie. \u201eMam gotow\u0105 list\u0119 co najmniej trzydziestu os\u00f3b, na kt\u00f3re zrzucam win\u0119 w podobnych sytuacjach\u201d.\n\n\u201eNie ma s\u0142\u00f3w, kt\u00f3re zdo\u0142aj\u0105 usprawiedliwi\u0107 t\u0119 pora\u017ck\u0119\u201d warkn\u0105\u0142 Aesrael i zacz\u0105\u0142 opatrywa\u0107 ran\u0119. \u201eStracili\u015bmy kupca i jego zab\u00f3jc\u0119. Casival jest ranny. Ale mo\u017ce, mimo wszystko, uda nam si\u0119 czego\u015b dowiedzie\u0107 z tego trupa\u201d.\n\n\u201eTak zwinny zab\u00f3jca\u201d stwierdzi\u0142 Blade oko, \u201emusia\u0142 pracowa\u0107 dla Kompanii Wschodniocesarskiej\u201d.\n\n\u201eGorzej\u201d powiedzia\u0142 Aesrael, ogl\u0105daj\u0105c wyszczerbienie na pancerzu. \u201eWygl\u0105da na to, \u017ce nasz przyjaciel, kupiec, wsp\u00f3\u0142pracowa\u0142 nie tylko z bandytami, ale te\u017c z thalmorczykami. Cz\u0142owiek, kt\u00f3rego zabili\u015bmy nie pracuje dla kompanii. To widmo\u201d.\n\nPo tej konotacji twarz Ehlhiela si\u0119 zachmurzy\u0142a. Co innego, zadrze\u0107 z miejskimi gwardzistami, Kompani\u0105 Wschodniocesarsk\u0105, Matkami Klanowymi czy nawet Wielkimi Rodami Morrowind, ale to by\u0142a naprawd\u0119 powa\u017cna sprawa. \n\nNie chodzi\u0142o o wielko\u015b\u0107 czy pot\u0119g\u0119 wroga. Chodzi\u0142o o jego wiedz\u0119, a Penitus Oculatus byli szpiegami najwy\u017cszej pr\u00f3by. Je\u015bli Cesarstwo \u015bledzi\u0142o poczynania kupca, jedynie kwesti\u0105 czasu by\u0142o, kiedy ich to\u017csamo\u015b\u0107 zostanie odkryta i przekazana wszystkim przeciwnikom.\n\nJedyne pytanie brzmia\u0142o - ile czasu im pozosta\u0142o?\n\n"
+    }
+]

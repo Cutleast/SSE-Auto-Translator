@@ -1,0 +1,806 @@
+[
+    {
+        "editor_id": "ccBGSSSE014_FireSpellEffect",
+        "type": "MGEF DNAM",
+        "original": "Casts a stream of long-distance fireballs in an arc. Impact creates a wall of fire that does <50> points of fire damage per second.",
+        "string": "Lancia un flusso di palle di fuoco che compie una parabola. L'impatto crea un muro di fuoco che infligge <50> punti di danno da fuoco al secondo."
+    },
+    {
+        "editor_id": "ccBGSSSE014_ShockEffectCloak",
+        "type": "MGEF FULL",
+        "original": "Unbounded Storms",
+        "string": "Tempeste non vincolate"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ParalysisRune",
+        "type": "SPEL FULL",
+        "original": "Paralysis Rune",
+        "string": "Runa della Paralisi"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_UnboundedIce",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Unbounded Freezing",
+        "string": "Tomo magico: Congelamento non vincolato"
+    },
+    {
+        "editor_id": "ccBGSSSE014_UnboundedFlames",
+        "type": "SPEL FULL",
+        "original": "Unbounded Flames",
+        "string": "Fiamme non vincolate"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ShockBoltStorm",
+        "type": "MGEF FULL",
+        "original": "Storm Lightning",
+        "string": "Tempesta di fulmini"
+    },
+    {
+        "editor_id": "ccBGSSSE014SkyShockHazard",
+        "type": "HAZD FULL",
+        "original": "Shock",
+        "string": "Elettricit\u00e0"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ShockBoltSpell",
+        "type": "SPEL FULL",
+        "original": "Storm Call Lightning Bolt",
+        "string": "Richiamo della tempesta - Fulmine"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ShockBoltStormFX",
+        "type": "MGEF FULL",
+        "original": "Shock Bolt Storm",
+        "string": "Tempesta di saette"
+    },
+    {
+        "editor_id": "ccBGSSSE014_IceSpellParalyzeEffect",
+        "type": "MGEF FULL",
+        "original": "Unbounded Freeze",
+        "string": "Congelamento non vincolato"
+    },
+    {
+        "editor_id": "ccBGSSSE014_RuneParalysisFFLocation",
+        "type": "MGEF FULL",
+        "original": "Paralysis Rune",
+        "string": "Runa della Paralisi"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_UnboundedLightning",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Unbounded Storms",
+        "string": "Tomo magico: Tempeste non vincolate"
+    },
+    {
+        "editor_id": "ccBGSSSE014_UnboundedStorms",
+        "type": "SPEL FULL",
+        "original": "Unbounded Storms",
+        "string": "Tempeste non vincolate"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FireSpellEffect",
+        "type": "MGEF FULL",
+        "original": "Unbounded Flames",
+        "string": "Fiamme non vincolate"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Alter_ParalysisRune",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Paralysis Rune",
+        "string": "Tomo magico: Runa della Paralisi"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ShockEffectCloak",
+        "type": "MGEF DNAM",
+        "original": "Targets in melee range take <40> points of shock damage per second to Health, and half that to Magicka.  Random lightning strikes deal an additional <30> damage.",
+        "string": "I bersagli vicini subiscono <40> punti di danno da elettricit\u00e0 al secondo alla salute e met\u00e0 del danno alla magicka. Fulmini casuali infliggono <30> danni aggiuntivi."
+    },
+    {
+        "editor_id": "ccBGSSSE014_UnboundedFreeze_IceSpellEffect",
+        "type": "MGEF FULL",
+        "original": "Unbounded Freeze",
+        "string": "Congelamento non vincolato"
+    },
+    {
+        "editor_id": "ccBGSSSE014_RuneParalysisFFLocation",
+        "type": "MGEF DNAM",
+        "original": "Cast on a nearby surface, it explodes when enemies are nearby, immobilizing them for <dur> seconds.",
+        "string": "Lanciato su una superficie vicina, esplode quando i nemici sono nei paraggi, immobilizzandoli per <dur> secondi."
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_UnboundedFire",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Unbounded Flames",
+        "string": "Tomo magico: Fiamme non vincolate"
+    },
+    {
+        "editor_id": "ccBGSSSE014_UnboundedFreeze",
+        "type": "SPEL FULL",
+        "original": "Unbounded Freezing",
+        "string": "Congelamento non vincolato"
+    },
+    {
+        "editor_id": "ccBGSSSE014_EnchRobesFortifyConjurationAndIllusion01",
+        "type": "ENCH FULL",
+        "original": "Fortify Conjuration & Illusion",
+        "string": "Fortifica Evocazione e Illusione"
+    },
+    {
+        "editor_id": "ccBGSSSE014_EnchRobesFortifyConjurationAndIllusion02",
+        "type": "ENCH FULL",
+        "original": "Fortify Conjuration & Illusion",
+        "string": "Fortifica Evocazione e Illusione"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange_Ench02",
+        "type": "ARMO FULL",
+        "original": "Apprentice Robes of Conjuration & Illusion",
+        "string": "Vesti da apprendista di Evocazione e Illusione"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackBlue_Ench01",
+        "type": "ARMO FULL",
+        "original": "Novice Robes of Destruction & Alteration",
+        "string": "Vesti da principiante di Distruzione e Alterazione"
+    },
+    {
+        "editor_id": "ccBGSSSE014_LightningCloakDmg",
+        "type": "SPEL FULL",
+        "original": "Lightning Cloak Drain",
+        "string": "Prosciuga manto elettrico"
+    },
+    {
+        "editor_id": "ccBGSSSE014_EnchRobesFortifyDestructionAndAlteration01",
+        "type": "ENCH FULL",
+        "original": "Fortify Destruction and Alteration",
+        "string": "Fortifica Distruzione e Alterazione"
+    },
+    {
+        "editor_id": "ccBGSSSE014_EnchRobesFortifyDestructionAndAlteration04",
+        "type": "ENCH FULL",
+        "original": "Fortify Destruction and Alteration",
+        "string": "Fortifica Distruzione e Alterazione"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackBlue_Ench02",
+        "type": "ARMO FULL",
+        "original": "Apprentice Robes of Destruction & Alteration",
+        "string": "Vesti da apprendista di Distruzione e Alterazione"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FrostDamageConcAimedCloak",
+        "type": "MGEF DNAM",
+        "original": "A blast of cold that does <mag> points of damage per second to Health and Stamina.",
+        "string": "Una scarica gelida che infligge <mag> punti di danno al secondo a salute e vigore."
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange_Ench05",
+        "type": "ARMO FULL",
+        "original": "Master Robes of Conjuration & Illusion",
+        "string": "Vesti da maestro di Evocazione e Illusione"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackBlue_Ench03",
+        "type": "ARMO FULL",
+        "original": "Adept Robes of Destruction & Alteration",
+        "string": "Vesti da specialista di Distruzione e Alterazione"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackBlue_Ench04",
+        "type": "ARMO FULL",
+        "original": "Expert Robes of Destruction & Alteration",
+        "string": "Vesti da esperto di Distruzione e Alterazione"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FrostDamageConcAimedCloak",
+        "type": "MGEF FULL",
+        "original": "Unbounded Frostbite",
+        "string": "Morsa Gelida non vincolata"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange",
+        "type": "ARMO FULL",
+        "original": "Mage Robes",
+        "string": "Vesti da mago"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange_Ench01",
+        "type": "ARMO FULL",
+        "original": "Novice Robes of Conjuration & Illusion",
+        "string": "Vesti da principiante di Evocazione e Illusione"
+    },
+    {
+        "editor_id": "ccBGSSSE014_EnchRobesFortifyDestructionAndAlteration03",
+        "type": "ENCH FULL",
+        "original": "Fortify Destruction and Alteration",
+        "string": "Fortifica Distruzione e Alterazione"
+    },
+    {
+        "editor_id": "ccBGSSSE014_EnchRobesFortifyDestructionAndAlteration05",
+        "type": "ENCH FULL",
+        "original": "Fortify Destruction and Alteration",
+        "string": "Fortifica Distruzione e Alterazione"
+    },
+    {
+        "editor_id": "ccBGSSSE014_EnchRobesFortifyConjurationAndIllusion05",
+        "type": "ENCH FULL",
+        "original": "Fortify Conjuration & Illusion",
+        "string": "Fortifica Evocazione e Illusione"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FrostCloakDmg",
+        "type": "SPEL FULL",
+        "original": "Frost Cloak Freeze",
+        "string": "Manto Gelido"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackBlue",
+        "type": "ARMO FULL",
+        "original": "Mage Robes",
+        "string": "Vesti da mago"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange_Ench04",
+        "type": "ARMO FULL",
+        "original": "Expert Robes of Conjuration & Illusion",
+        "string": "Vesti da esperto di Evocazione e Illusione"
+    },
+    {
+        "editor_id": "ccBGSSSE014_UnboundedFreeze_IceSpellEffect",
+        "type": "MGEF DNAM",
+        "original": "A freezing wind envelops the caster, knocking down nearby enemies and freezing them for <50> points of damage per second to Health and Stamina.",
+        "string": "Un vento gelido avvolge colui che lancia l'incantesimo e scaglia i nemici a terra, congelandoli e infliggendo <50> punti di danno al secondo a salute e vigore."
+    },
+    {
+        "editor_id": "ccBGSSSE014_EnchRobesFortifyDestructionAndAlteration02",
+        "type": "ENCH FULL",
+        "original": "Fortify Destruction and Alteration",
+        "string": "Fortifica Distruzione e Alterazione"
+    },
+    {
+        "editor_id": "ccBGSSSE014_EnchRobesFortifyConjurationAndIllusion03",
+        "type": "ENCH FULL",
+        "original": "Fortify Conjuration & Illusion",
+        "string": "Fortifica Evocazione e Illusione"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackBlue_Ench05",
+        "type": "ARMO FULL",
+        "original": "Master Robes of Destruction & Alteration",
+        "string": "Vesti da maestro di Distruzione e Alterazione"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange_Ench03",
+        "type": "ARMO FULL",
+        "original": "Adept Robes of Conjuration & Illusion",
+        "string": "Vesti da specialista di Evocazione e Illusione"
+    },
+    {
+        "editor_id": "ccBGSSSE014_EnchRobesFortifyConjurationAndIllusion04",
+        "type": "ENCH FULL",
+        "original": "Fortify Conjuration & Illusion",
+        "string": "Fortifica Evocazione e Illusione"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ShockDamageConcAimed",
+        "type": "MGEF FULL",
+        "original": "Sparks",
+        "string": "Scintille"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ShockDamageConcAimed",
+        "type": "MGEF DNAM",
+        "original": "Lightning that does <mag> points of shock damage to Health and Magicka per second.",
+        "string": "Un fulmine che infligge <mag> punti di danno da elettricit\u00e0 al secondo a salute e magicka."
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental02Bolt",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Elemental Bolt",
+        "string": "Tomo magico: Dardo elementale"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea04",
+        "type": "MGEF FULL",
+        "original": "Elemental Flare",
+        "string": "Fiamma elementale"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellPack_StartupQuest",
+        "type": "QUST FULL",
+        "original": "The Lost Library",
+        "string": "La biblioteca perduta"
+    },
+    {
+        "editor_id": "ccBGSSSE014_PrideOfHirstaang_SummonBear_PlayerEffects",
+        "type": "MGEF FULL",
+        "original": "Pride of Hirstaang",
+        "string": "Orgoglio di Hirstaang"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea03",
+        "type": "MGEF DNAM",
+        "original": "An elemental explosion for <mag> points of fire damage, <mag> points of shock damage, and half as much damage to stamina.",
+        "string": "Un'esplosione elementale che infligge <mag> punti di danno da fuoco, <mag> punti di danno da elettricit\u00e0 e met\u00e0 del danno al vigore."
+    },
+    {
+        "editor_id": "ccBGSSSE014_Oblivion_Absorb01_ChokingGrasp",
+        "type": "SPEL FULL",
+        "original": "Choking Grasp",
+        "string": "Stretta soffocante"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FF_Self_FortifyHealRate_NoUI",
+        "type": "MGEF FULL",
+        "original": "Regenerate Health",
+        "string": "Rigenera salute"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb01_ChokingGrasp",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Choking Grasp",
+        "string": "Tomo magico: Stretta soffocante"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Alter_FenriksWelcome",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Fenrik's Welcome",
+        "string": "Tomo magico: Accoglienza di Fenrik"
+    },
+    {
+        "editor_id": "ccBGSSSE014_MarasWrath_FlameCloakDmg",
+        "type": "SPEL FULL",
+        "original": "Flames",
+        "string": "Fiamme"
+    },
+    {
+        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_25",
+        "type": "MGEF DNAM",
+        "original": "Absorb <mag> points of health per second from target, for <dur> seconds.",
+        "string": "Assorbe dal bersaglio <mag> punti di salute al secondo per <dur> secondi."
+    },
+    {
+        "editor_id": "ccBGSSSE014_OrumsAquaticEscape_InvisibillityFFSelf",
+        "type": "MGEF FULL",
+        "original": "Orum's Aquatic Escape",
+        "string": "Fuga acquatica di Orum"
+    },
+    {
+        "editor_id": "ccBGSSSE014_Oblivion_PrideOfHirstaang",
+        "type": "SPEL FULL",
+        "original": "Pride of Hirstaang",
+        "string": "Orgoglio di Hirstaang"
+    },
+    {
+        "editor_id": "ccBGSSSE014_PrideOfHirstaang_SummonBear_PlayerEffects",
+        "type": "MGEF DNAM",
+        "original": "Summons a Bear for <dur> seconds wherever the caster is pointing. Resist <50>% of frost damage for <60> seconds. Health regenerates <50>% faster for <60> seconds.",
+        "string": "Evoca un orso per <dur> secondi nel punto indicato da colui che lancia l'incantesimo. Resistenza ai danni da gelo (<50>%) per <60> secondi. La salute si rigenera pi\u00f9 velocemente del <50>% per <60> secondi."
+    },
+    {
+        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_75",
+        "type": "MGEF FULL",
+        "original": "Absorb Health",
+        "string": "Assorbi salute"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Illus_Adept_OrumsAquaticEscape",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Orum's Aquatic Escape",
+        "string": "Tomo magico: Fuga acquatica di Orum"
+    },
+    {
+        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_50",
+        "type": "MGEF DNAM",
+        "original": "Absorb <mag> points of health per second from target, for <dur> seconds.",
+        "string": "Assorbe dal bersaglio <mag> punti di salute al secondo per <dur> secondi."
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellPack_StartupQuest",
+        "type": "QUST NNAM",
+        "original": "Find the Lost Library of Spell Tomes",
+        "string": "Trova la biblioteca perduta dei tomi magici"
+    },
+    {
+        "editor_id": "ccBGSSSE014_MarasWrath_ConfDownConcAimed",
+        "type": "MGEF FULL",
+        "original": "Turn Undead Fear",
+        "string": "Paura di Scacciare non-morti"
+    },
+    {
+        "editor_id": "ccBGSSSE014_HazardShockSpell01",
+        "type": "SPEL FULL",
+        "original": "Shock",
+        "string": "Elettricit\u00e0"
+    },
+    {
+        "editor_id": "ccBGSSSE014_Oblivion_Elemental03Burst",
+        "type": "SPEL FULL",
+        "original": "Elemental Burst",
+        "string": "Scarica elementale"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FenriksWelcome_UnlockDoorAdeptFFSelf",
+        "type": "MGEF DNAM",
+        "original": "Caster becomes invisible and can open locks with level Expert and below for <dur> seconds.  Activating an object or attacking will break the spell.",
+        "string": "Colui che lancia l'incantesimo diventa invisibile e pu\u00f2 scassinare serrature di livello Esperto o inferiore per <dur> secondi. Attivare un oggetto o attaccare qualcuno spezza l'incantesimo."
+    },
+    {
+        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea04",
+        "type": "MGEF DNAM",
+        "original": "An elemental explosion for <mag> points of fire damage, <mag> points of shock damage, and half as much damage to stamina.",
+        "string": "Un'esplosione elementale che infligge <mag> punti di danno da fuoco, <mag> punti di danno da elettricit\u00e0 e met\u00e0 del danno al vigore."
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_MarasWrath",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Mara's Wrath",
+        "string": "Tomo magico: Furia di Mara"
+    },
+    {
+        "editor_id": "ccBGSSSE014_Oblivion_Absorb04_TouchOfDeath",
+        "type": "SPEL FULL",
+        "original": "Touch of Death",
+        "string": "Tocco della morte"
+    },
+    {
+        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_00",
+        "type": "MGEF DNAM",
+        "original": "Absorb <mag> points of health per second from target, for <dur> seconds.",
+        "string": "Assorbe dal bersaglio <mag> punti di salute al secondo per <dur> secondi."
+    },
+    {
+        "editor_id": "ccBGSSSE014_MarasWrath_FireCloakFFSelf",
+        "type": "MGEF FULL",
+        "original": "Mara's Wrath",
+        "string": "Furia di Mara"
+    },
+    {
+        "editor_id": "ccBGSSSE014_Oblivion_PrideOfHirstaang_SecondaryEffects",
+        "type": "SPEL FULL",
+        "original": "Pride of Hirstaang",
+        "string": "Orgoglio di Hirstaang"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea01",
+        "type": "MGEF FULL",
+        "original": "Elemental Flare",
+        "string": "Fiamma elementale"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_ConjureExpert_PrideOfHirstaang",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Pride of Hirstaang",
+        "string": "Tomo magico: Orgoglio di Hirstaang"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea03",
+        "type": "MGEF FULL",
+        "original": "Elemental Flare",
+        "string": "Fiamma elementale"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FenriksWelcome_UnlockDoorAdeptFFSelf",
+        "type": "MGEF FULL",
+        "original": "Fenrik's Welcome",
+        "string": "Accoglienza di Fenrik"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FenriksWelcomePerk",
+        "type": "PERK EPF2",
+        "original": "Fenrik's Welcome: Unlock",
+        "string": "Accoglienza di Fenrik: apri"
+    },
+    {
+        "editor_id": "ccBGSSSE014_Oblivion_Elemental01Flare",
+        "type": "SPEL FULL",
+        "original": "Elemental Flare",
+        "string": "Fiamma elementale"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FenriksWelcomePerk",
+        "type": "PERK FULL",
+        "original": "Fenrik's Welcome",
+        "string": "Accoglienza di Fenrik"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental03Burst",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Elemental Burst",
+        "string": "Tomo magico: Scarica elementale"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental04Blast",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Elemental Blast",
+        "string": "Tomo magico: Esplosione elementale"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb03_HangmansNoose",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Hangman's Noose",
+        "string": "Tomo magico: Cappio del carnefice"
+    },
+    {
+        "editor_id": "ccBGSSSE014_Oblivion_OrumsAquaticEscape",
+        "type": "SPEL FULL",
+        "original": "Orum's Aquatic Escape",
+        "string": "Fuga acquatica di Orum"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea02",
+        "type": "MGEF DNAM",
+        "original": "An elemental explosion for <mag> points of fire damage, <mag> points of shock damage, and half as much damage to stamina.",
+        "string": "Un'esplosione elementale che infligge <mag> punti di danno da fuoco, <mag> punti di danno da elettricit\u00e0 e met\u00e0 del danno al vigore."
+    },
+    {
+        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea01",
+        "type": "MGEF DNAM",
+        "original": "An elemental explosion for <mag> points of fire damage, <mag> points of shock damage, and half as much damage to stamina.",
+        "string": "Un'esplosione elementale che infligge <mag> punti di danno da fuoco, <mag> punti di danno da elettricit\u00e0 e met\u00e0 del danno al vigore."
+    },
+    {
+        "editor_id": "ccBGSSSE014_Oblivion_MarasWrath",
+        "type": "SPEL FULL",
+        "original": "Mara's Wrath",
+        "string": "Furia di Mara"
+    },
+    {
+        "editor_id": "ccBGSSSE014_Oblivion_Absorb03_HangmansNoose",
+        "type": "SPEL FULL",
+        "original": "Hangman's Noose",
+        "string": "Cappio del carnefice"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ShockBarrierHazard01",
+        "type": "HAZD FULL",
+        "original": "Shock",
+        "string": "Elettricit\u00e0"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FF_Self_FortifyHealRate_NoUI",
+        "type": "MGEF DNAM",
+        "original": "Health regenerates <mag>% faster for <dur> seconds.",
+        "string": "La salute si rigenera pi\u00f9 velocemente (<mag>%) per <dur> secondi."
+    },
+    {
+        "editor_id": "ccBGSSSE014_Oblivion_Elemental04Blast",
+        "type": "SPEL FULL",
+        "original": "Elemental Blast",
+        "string": "Esplosione elementale"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FF_Self_ResistFrost_NoUI",
+        "type": "MGEF DNAM",
+        "original": "Resist <mag>% of frost damage for <dur> seconds.",
+        "string": "Resistenza ai danni da gelo (<mag>%) per <dur> secondi."
+    },
+    {
+        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea02",
+        "type": "MGEF FULL",
+        "original": "Elemental Flare",
+        "string": "Fiamma elementale"
+    },
+    {
+        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_25",
+        "type": "MGEF FULL",
+        "original": "Absorb Health",
+        "string": "Assorbi salute"
+    },
+    {
+        "editor_id": "ccBGSSSE014_BossChestSpellTomesAll",
+        "type": "CONT FULL",
+        "original": "Ancient Tome Chest",
+        "string": "Baule di tomi antichi"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental01Flare",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Elemental Flare",
+        "string": "Tomo magico: Fiamma elementale"
+    },
+    {
+        "editor_id": "ccBGSSSE014_Oblivion_Elemental02Bolt",
+        "type": "SPEL FULL",
+        "original": "Elemental Bolt",
+        "string": "Dardo elementale"
+    },
+    {
+        "editor_id": "ccBGSSSE014_MarasWrath_FireCloakFFSelf",
+        "type": "MGEF DNAM",
+        "original": "For <dur> seconds, opponents in melee range take <16> points fire damage per second.  Undead up to level <26> flee for <dur> seconds.",
+        "string": "Per <dur> secondi, gli avversari molto vicini subiscono <16> punti di danno da fuoco al secondo. I non-morti fino al livello <26> scappano per <dur> secondi."
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb02_Strangulation",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Strangulation",
+        "string": "Tomo magico: Strangolamento"
+    },
+    {
+        "editor_id": "ccBGSSSE014_Oblivion_FenriksWelcome",
+        "type": "SPEL FULL",
+        "original": "Fenrik's Welcome",
+        "string": "Accoglienza di Fenrik"
+    },
+    {
+        "editor_id": "ccBGSSSE014_OrumsAquaticEscape_InvisibillityFFSelf",
+        "type": "MGEF DNAM",
+        "original": "Caster is invisible for <dur> seconds. Activating an object or attacking will break the spell. Can breathe water for <dur> seconds. Improved night vision for <dur> seconds.",
+        "string": "Colui che lancia l'incantesimo diventa invisibile per <dur> secondi. Attivare un oggetto o attaccare qualcuno spezza l'incantesimo. Puoi respirare sott'acqua per <dur> secondi. La visione notturna \u00e8 migliorata per <dur> secondi."
+    },
+    {
+        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_75",
+        "type": "MGEF DNAM",
+        "original": "Absorb <mag> points of health per second from target, for <dur> seconds.",
+        "string": "Assorbe dal bersaglio <mag> punti di salute al secondo per <dur> secondi."
+    },
+    {
+        "editor_id": "ccBGSSSE014_FF_Self_ResistFrost_NoUI",
+        "type": "MGEF FULL",
+        "original": "Resist Frost",
+        "string": "Resistenza al gelo"
+    },
+    {
+        "editor_id": "ccBGSSSE_TomesStrongBox_QA",
+        "type": "CONT FULL",
+        "original": "Strong Box BGSSSE014",
+        "string": "Forziere BGSSSE014"
+    },
+    {
+        "editor_id": "ccBGSSSE014_Oblivion_Absorb02_Strangulation",
+        "type": "SPEL FULL",
+        "original": "Strangulation",
+        "string": "Strangolamento"
+    },
+    {
+        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_50",
+        "type": "MGEF FULL",
+        "original": "Absorb Health",
+        "string": "Assorbi salute"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SummonBear",
+        "type": "NPC_ FULL",
+        "original": "Bear",
+        "string": "Orso"
+    },
+    {
+        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_00",
+        "type": "MGEF FULL",
+        "original": "Absorb Health",
+        "string": "Assorbi salute"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb04_TouchOfDeath",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Touch of Death",
+        "string": "Tomo magico: Tocco della morte"
+    },
+    {
+        "editor_id": "ccBGSSSE014_OrumsAquaticEscape_WaterbreathingFFSelf",
+        "type": "MGEF FULL",
+        "original": "Water Breathing",
+        "string": "Respiro sott'acqua"
+    },
+    {
+        "editor_id": "ccBGSSSE014_OrumsAquaticEscape_NightEyeEffect",
+        "type": "MGEF FULL",
+        "original": "Night Eye",
+        "string": "Visione notturna"
+    },
+    {
+        "editor_id": "HobsFallCave01",
+        "type": "CELL FULL",
+        "original": "Hob's Fall Cave",
+        "string": "Caverna di Hob"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_UnboundedIce",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nUnbounded Freezing",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nCongelamento non vincolato"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Alter_ParalysisRune",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nParalysis Rune",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nRuna della paralisi"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_UnboundedLightning",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nUnbounded Storms",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nTempeste non vincolate"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_UnboundedFire",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nUnbounded Flames",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nFiamme non vincolate"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Illus_Adept_OrumsAquaticEscape",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nOrum's Aquatic Escape",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nFuga acquatica di Orum"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental03Burst",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nElemental Burst",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nEsplosione elementale"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb02_Strangulation",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nStrangulation",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nStrangolamento"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_ConjureExpert_PrideOfHirstaang",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nPride of Hirstaang",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nOrgoglio di Hirstaang"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental01Flare",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nElemental Flare",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nFiammata elementale"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb04_TouchOfDeath",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nTouch of Death",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nTocco della morte"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellPack_StartupQuest",
+        "type": "QUST CNAM",
+        "original": "I've found the fabled chest filled with long-lost ancient spell tomes in Hob's Fall Cave.",
+        "string": "Ho trovato il leggendario baule pieno di antichi tomi magici dimenticati nella Caverna di Hob."
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellPack_StartupQuest",
+        "type": "QUST CNAM",
+        "original": "I've heard tales of a long-lost ancient library of spell tomes, rumored to be somewhere in the area of Winterhold.  I should explore the area and see what I can find.",
+        "string": "Ho sentito parlare di un'antica biblioteca perduta piena di tomi magici che dovrebbe trovarsi dalle parti di Winterhold. Devo esplorare la zona per saperne di pi\u00f9."
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Alter_FenriksWelcome",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nFenrik's Welcome",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nAccoglienza di Fenrik"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb01_ChokingGrasp",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nChoking Grasp",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nStretta soffocante"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb03_HangmansNoose",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nHangman's Noose",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nCappio del carnefice"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_MarasWrath",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nMara's Wrath",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nFuria di Mara"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental02Bolt",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nElemental Bolt",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nDardo elementale"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental04Blast",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nElemental Blast",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nScarica elementale"
+    }
+]

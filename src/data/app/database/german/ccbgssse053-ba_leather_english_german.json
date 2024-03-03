@@ -1,0 +1,218 @@
+[
+    {
+        "editor_id": "ccBGSSSE053_ArmorBladesBoots",
+        "type": "ARMO FULL",
+        "original": "Leather Scout Boots",
+        "string": "Lederkundschafterstiefel"
+    },
+    {
+        "editor_id": "ccBGSSSE053_ArmorBladesGauntlets",
+        "type": "ARMO FULL",
+        "original": "Leather Scout Gauntlets",
+        "string": "Lederkundschafterhandschuhe"
+    },
+    {
+        "editor_id": "ccBGSSSE053_ArmorBladesHelmet",
+        "type": "ARMO FULL",
+        "original": "Leather Scout Helmet",
+        "string": "Lederkundschafterhelm"
+    },
+    {
+        "editor_id": "ccBGSSSE053_ArmorBladesCuirass",
+        "type": "ARMO FULL",
+        "original": "Leather Scout Armor",
+        "string": "Lederkundschafterr\u00fcstung"
+    },
+    {
+        "editor_id": "ccBGSSSE053_EhlhielNote",
+        "type": "BOOK FULL",
+        "original": "Ehlhiel's Journal",
+        "string": "Ehlhiels Tagebuch"
+    },
+    {
+        "editor_id": "ccBGSSSE053_Zaharia",
+        "type": "NPC_ FULL",
+        "original": "Zaharia",
+        "string": "Zaharia"
+    },
+    {
+        "editor_id": "ccBGSSSE053_ZahariaNote",
+        "type": "BOOK FULL",
+        "original": "Zaharia's Note",
+        "string": "Zaharias Notiz"
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "type": "QUST NNAM",
+        "original": "Inspect the body",
+        "string": "Untersuche die Leiche."
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "type": "QUST NNAM",
+        "original": "Defeat Zaharia",
+        "string": "Besiege Zaharia."
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "type": "QUST NNAM",
+        "original": "Defeat Ehlhiel",
+        "string": "Besiege Ehlhiel."
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "type": "QUST NNAM",
+        "original": "(Optional) Disrupt Zaharia's plan and remove the letter",
+        "string": "(Optional) Durchkreuze Zaharias Plan und entferne den Brief."
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "type": "QUST NNAM",
+        "original": "Go to Lost Echo Cave",
+        "string": "Begib dich zur H\u00f6hle des Verlorenen Echos."
+    },
+    {
+        "editor_id": "ccBGSSSE053_Dossier",
+        "type": "BOOK FULL",
+        "original": "Guard's Dossier: Ehlhiel",
+        "string": "Wachdossier: Ehlhiel"
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "type": "QUST NNAM",
+        "original": "Look for a note at Cliffside Retreat",
+        "string": "Suche in der Klippenflucht nach einer Notiz."
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "type": "QUST FULL",
+        "original": "Double-Edged",
+        "string": "Zweischneidig"
+    },
+    {
+        "editor_id": "ccBGSSSE053_Ehlhiel",
+        "type": "NPC_ FULL",
+        "original": "Ehlhiel",
+        "string": "Ehlhiel"
+    },
+    {
+        "editor_id": "ccBGSSSE053_MeetNote",
+        "type": "BOOK FULL",
+        "original": "Note to Ehlhiel",
+        "string": "Nachricht an Ehlhiel"
+    },
+    {
+        "editor_id": "ccBGSSSE053_ZahariaALIVE",
+        "type": "NPC_ FULL",
+        "original": "Zaharia",
+        "string": "Zaharia"
+    },
+    {
+        "editor_id": "ccBGSSSE053_MiscQuest",
+        "type": "QUST NNAM",
+        "original": "Look for a note at Cliffside Retreat",
+        "string": "Suche in der Klippenflucht nach einer Notiz."
+    },
+    {
+        "editor_id": "ccBGSSSE053_ArmorBladesCuirassEnchanted",
+        "type": "ARMO FULL",
+        "original": "Leather Scout Armor",
+        "string": "Lederkundschafterr\u00fcstung"
+    },
+    {
+        "editor_id": "ccBGSSSE053_ArmorBladesBootsEnchanted",
+        "type": "ARMO FULL",
+        "original": "Leather Scout Boots",
+        "string": "Lederkundschafterstiefel"
+    },
+    {
+        "editor_id": "ccBGSSSE053_ArmorBladesHelmetEnchanted",
+        "type": "ARMO FULL",
+        "original": "Leather Scout Helmet",
+        "string": "Lederkundschafterhelm"
+    },
+    {
+        "editor_id": "ccBGSSSE053_ArmorBladesGauntletsEnchanted",
+        "type": "ARMO FULL",
+        "original": "Leather Scout Gauntlets",
+        "string": "Lederkundschafterhandschuhe"
+    },
+    {
+        "editor_id": "LostEchoCave01",
+        "type": "CELL FULL",
+        "original": "Lost Echo Cave",
+        "string": "H\u00f6hle des Verlorenen Echos"
+    },
+    {
+        "editor_id": "Tamriel",
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Himmelsrand"
+    },
+    {
+        "editor_id": "SolitudeTempleoftheDivines",
+        "type": "CELL FULL",
+        "original": "Temple of the Divines",
+        "string": "Tempel der G\u00f6ttlichen"
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "type": "QUST CNAM",
+        "original": "At Cliffside Retreat, I found a dossier that implies a Blades agent has become an asset of the Thalmor. The accompanying note said that another agent, Zaharia, intended to enact revenge by arranging a meeting at Lost Echo Cave. I traveled to the cave and was attacked by a hostile agent, whom I defeated.",
+        "string": "In der Klippenflucht habe ich ein Dossier gefunden, das darauf hindeutet, dass ein Agent der Klingen f\u00fcr die Thalmor spioniert. In der beigef\u00fcgten Notiz stand, dass Zaharia, eine weitere Agentin, durch Arrangieren eines Treffens in der H\u00f6hle des Verlorenen Echos Rache nehmen wollte. Ich habe mich zur H\u00f6hle begeben, wo ich von einem feindseligen Agenten angegriffen wurde, den ich besiegt habe."
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "type": "QUST CNAM",
+        "original": "At Cliffside Retreat, I found a dossier that implies a Blades agent has become an asset of the Thalmor. The accompanying note said that another agent, Zaharia, intended to enact revenge by arranging a meeting at Lost Echo Cave. I traveled to the cave and was attacked by a hostile agent.",
+        "string": "In der Klippenflucht habe ich ein Dossier gefunden, das darauf hindeutet, dass ein Agent der Klingen f\u00fcr die Thalmor spioniert. In der beigef\u00fcgten Notiz stand, dass Zaharia, eine weitere Agentin, durch Arrangieren eines Treffens in der H\u00f6hle des Verlorenen Echos Rache nehmen wollte. Ich habe mich zur H\u00f6hle begeben, wo ich von einem feindseligen Agenten angegriffen wurde."
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "type": "QUST CNAM",
+        "original": "At Cliffside Retreat, I found a dossier that implies a Blades agent has become an asset of the Thalmor. The accompanying note says that another agent, Zaharia, intends to enact revenge by arranging a meeting at Lost Echo Cave. I decided to save the Thalmor agent by intercepting the note at the Temple of Divines.",
+        "string": "In der Klippenflucht habe ich ein Dossier gefunden, das darauf hindeutet, dass ein Agent der Klingen f\u00fcr die Thalmor spioniert. In der beigef\u00fcgten Notiz steht, dass Zaharia, eine weitere Agentin, durch Arrangieren eines Treffens in der H\u00f6hle des Verlorenen Echos Rache nehmen will. Ich habe beschlossen, den Thalmor-Agenten durch Entfernen der Notiz im Tempel der G\u00f6ttlichen zu retten."
+    },
+    {
+        "editor_id": "ccBGSSSE053_MeetNote",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>\nSomething's come up. Meet me at Lost Echo Cave. \n\nCome alone.\n</font>\n\n",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\nEs hat sich etwas ergeben. Trefft mich in der H\u00f6hle des Verlorenen Echos.\n\nKommt allein.\n</font>\n\n"
+    },
+    {
+        "editor_id": "ccBGSSSE053_Dossier",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\nStatus: Asset (cooperative), Active\n\nDescription: Male, Bosmer, late 30s\n\nBackground:\nEhlhiel was adopted by the Crimson Dirks at a young age and trained at their hideout in the Heartlands of Cyrodiil. Some intelligence suggests his parents may have been killed by the bandits, and the child taken in as hostage.\n\nOperational Notes:\nOriginally identified as a possible mole due to his background, Ehlhiel was fed the information regarding his parents and recruited as an asset. In the years following, he proved to be a valuable source of information in identifying bandit groups, as well as helping the Imperial City guard expunge the Crimson Dirks from Cyrodiil.\n\nCurrently, Ehlhiel continues to serve both the East Empire Company and the guard captains in Skyrim by providing information on fugitives that fled north after the purge. Meetings can be set up by placing a note behind the Shrine of Akatosh in Solitude. Any additional contact should be arranged through the appropriate channels.</font>",
+        "string": "<font face='$HandwrittenFont'>\nStatus: Spion (kooperativ), aktiv\n\nBeschreibung: M\u00e4nnlich, Bosmer, Ende 30\n\nHintergrund:\nEhlhiel wurde in jungen Jahren von den Blutroten Langdolchen aufgenommen und in deren Unterschlupf im Herzland von Cyrodiil ausgebildet. Einige Informationen deuten darauf hin, dass seine Eltern vielleicht von den Banditen get\u00f6tet worden waren und diese das Kind als Geisel genommen hatten.\n\nOperative Anmerkungen:\nDem urspr\u00fcnglich aufgrund seiner Vorgeschichte als m\u00f6glichen Maulwurf bestimmten Ehlhiel wurden die Informationen \u00fcber seine Eltern mitgeteilt, um ihn als Spion zu rekrutieren. In den darauffolgenden Jahren erwies er sich als wertvolle Quelle zur Identifizierung von Banditengruppen. Dar\u00fcber hinaus half er der Kaiserlichen Wache, die Blutroten Langdolche in Cyrodiil auszul\u00f6schen.\n\nDerzeit arbeitet Ehlhiel sowohl f\u00fcr die Ost-Kaiserliche Handelsgesellschaft als auch die Wachhauptm\u00e4nner in Himmelsrand und liefert Informationen \u00fcber Personen, die nach der S\u00e4uberung nach Norden geflohen sind. Treffen k\u00f6nnen durch das Platzieren einer Notiz hinter dem Schrein von Akatosh in Einsamkeit arrangiert werden. Weitere Kontakte sollten \u00fcber die entsprechenden Kan\u00e4le erfolgen.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "type": "QUST CNAM",
+        "original": "At Cliffside Retreat, I found a dossier that implies a Blades agent has become an asset of the Thalmor. The accompanying note says that another agent, Zaharia, intends to enact revenge by arranging a meeting at Lost Echo Cave. I can save the Thalmor agent by intercepting her note, or try to help Zaharia by going to the cave.",
+        "string": "In der Klippenflucht habe ich ein Dossier gefunden, das darauf hindeutet, dass ein Agent der Klingen f\u00fcr die Thalmor spioniert. In der beigef\u00fcgten Notiz steht, dass Zaharia, eine weitere Agentin, durch Arrangieren eines Treffens in der H\u00f6hle des Verlorenen Echos Rache nehmen will. Ich kann den Thalmor-Agenten durch Entfernen der Notiz retten oder Zaharia helfen, indem ich mich zur H\u00f6hle begebe."
+    },
+    {
+        "editor_id": "ccBGSSSE053_EhlhielNote",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>\nTyra was too stubborn to realize it. The Crimson Dirks were done. They knew our names and our faces. If the city guard didn't catch us, it'd be The East Empire Company, or any of the other guilds and Great Houses we pissed off along the way. The way I see it, I just gave them a head start.\n\nMy job was to set the hideout ablaze, and let the Legionnaires pick off the bandits while they burned. Just goes to show how cowardly the tin men in uniform really are. They were never one for a fair fight or a fair deal, but hey, neither was I.\n\nThe guard captain was too busy smelling his own wind to realize we were burning long dead corpses. The Crimson Dirks were already gone. \n\nIt was an even trade. A head start for a head start. So long as I kept my part of the bargain, they wouldn't find out about theirs. \n\nStill, it was only a matter of time before they caught on. And while they weren't aware of my part in the escape, now they want me to help with their capture. They've put everything I've told them into neat little dossiers, which they can pass around to the captains. I wonder if they even have one on me.\n\nI only told Pale-Eyes about the cost of our freedom. The rest of them wouldn't understand. They couldn't deal with the guilt. But I had to tell somebody, because as it turns out, neither could I.</font>",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\nTyra war zu starrk\u00f6pfig, um es zu erkennen. Die Blutroten Langdolche waren erledigt. Man kannte unsere Namen und Gesichter. H\u00e4tte die Stadtwache uns nicht geschnappt, w\u00e4re es die Ost-Kaiserliche Handelsgesellschaft gewesen - oder irgendeine der anderen Gilden oder ein gro\u00dfes Haus, das wir ver\u00e4rgert hatten. So wie ich es sehe, hatte ich ihnen nur einen Vorsprung verschafft.\n\nIch hatte die Aufgabe, den Unterschlupf anzuz\u00fcnden, damit die Legion\u00e4re die brennenden Banditen einen nach dem anderen ausschalten konnten. Das zeigt mal wieder, wie feige die Blechm\u00e4nner in Uniform eigentlich sind. Einen ehrenhaften Kampf oder Handel konnte man von ihnen nicht erwarten - von mir allerdings auch nicht.\n\nDer Hauptmann der Wache war zu besch\u00e4ftigt mit sich selbst, um zu erkennen, dass wir Leichen verbrannten, die schon lange tot gewesen waren. Die Blutroten Langdolche waren bereits fort.\n\nEs war ein ausgeglichener Handel: ein Vorsprung f\u00fcr einen Vorsprung. Solange ich mich an meinen Teil der Abmachung hielt, w\u00fcrden sie nichts \u00fcber ihren herausfinden.\n\nTrotzdem war es nur eine Frage der Zeit, bis sie Wind davon bekommen w\u00fcrden. Und obwohl ihnen meine Rolle bei der Flucht nicht bewusst war, wollen sie nun, dass ich ihnen helfe, sie zu schnappen. Sie haben alles, was ich ihnen gesagt habe, in h\u00fcbschen kleinen Dossiers niedergeschrieben, die sie den Hauptm\u00e4nnern zukommen lassen k\u00f6nnen. Ich frage mich, ob es vielleicht sogar eines \u00fcber mich gibt.\n\nNur Blass-Auge hatte ich vom Preis unserer Freiheit erz\u00e4hlt. Die anderen h\u00e4tten es nicht verstanden. Sie h\u00e4tten mit der Schuld nicht umgehen k\u00f6nnen. Aber ich musste es jemandem sagen, denn wie sich herausgestellt hat, kann auch ich damit nicht umgehen.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE053_ZahariaNote",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>\n\"Asset.\" \n\nThat's what the dossier called him. It took a while before I got past that word and found a way to stomach the rest of it. At the time, I was hurt. Now, I'm just mad.\n\nIt all started when I killed this officer on a lark. It probably wasn't the smartest thing. They're like cockroaches, you can't kill them all. But I'd be lying if I said it didn't feel good to try.\n\nSo it wasn't like I knew what he was up to when I confronted him. I didn't expect to find anything useful on his corpse either. But then I found the dossier, and now I know the truth. Ehlhiel betrayed us. \n\nFinding the traitorous bastard won't be easy, but I've got a plan. The dossier says they arrange meetings with him by placing a note at the Temple of the Divines, underneath a vase of tundra cotton. I'll place one there and have him meet me at Lost Echo Cave. Then I'll gut the lying little weasel and show him just how much of an asset he really is.</font>\n\n",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\n\"Spion\".\n\nSo wurde er im Dossier genannt. Es dauerte eine Weile, bevor ich \u00fcber dieses Wort hinausgelangte und einen Weg fand, den Rest zu verdauen. Damals war ich verletzt. Mittlerweile bin ich nur noch w\u00fctend.\n\nAlles begann, als ich zum Spa\u00df diesen Offizier t\u00f6tete. Besonders intelligent war das wahrscheinlich nicht. Die sind wie Kakerlaken, man kann sie nicht alle erledigen. Aber ich w\u00fcrde l\u00fcgen, wenn ich behauptete, es h\u00e4tte sich nicht gut angef\u00fchlt, es zu versuchen.\n\nAls ich ihm gegen\u00fcbertrat, wusste ich nicht, was er vorhatte. Ich erwartete auch nicht, irgendetwas N\u00fctzliches an seiner Leiche zu finden. Doch dann war da dieses Dossier und nun kenne ich die Wahrheit. Ehlhiel hat uns verraten.\n\nDiesen treulosen Mistkerl zu finden, wird nicht leicht, aber ich habe einen Plan. Laut Dossier arrangieren sie Treffen mit ihm, indem sie im Tempel der G\u00f6ttlichen unter einer Vase mit Tundrabaumwolle eine Notiz ablegen. Das werde ich auch tun und mich mit ihm in der H\u00f6hle des Verlorenen Echos treffen. Dann weide ich diesen verlogenen kleinen Verr\u00e4ter aus und zeige ihm, was einen Spion wie ihn erwartet.</font>\n\n"
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "type": "QUST CNAM",
+        "original": "At Cliffside Retreat, I found a dossier that implies a Blades agent has become an asset of the Thalmor. The accompanying note says that another agent, Zaharia, intends to enact revenge by arranging a meeting at Lost Echo Cave. I traveled to the cave and was attacked by a hostile agent.",
+        "string": "In der Klippenflucht habe ich ein Dossier gefunden, das darauf hindeutet, dass ein Agent der Klingen f\u00fcr die Thalmor spioniert. In der beigef\u00fcgten Notiz steht, dass Zaharia, eine weitere Agentin, durch Arrangieren eines Treffens in der H\u00f6hle des Verlorenen Echos Rache nehmen will. Ich habe mich zur H\u00f6hle begeben, wo ich von einem feindseligen Agenten angegriffen wurde."
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "type": "QUST CNAM",
+        "original": "Hunters in Skyrim are known to have retreats in the mountains with supplies and food. If I'm ever in the area near Solitude, I should stop by Cliffside Retreat.",
+        "string": "J\u00e4ger in Himmelsrand haben in den Bergen R\u00fcckzugsorte mit Vorr\u00e4ten und Lebensmitteln. Falls ich in der N\u00e4he von Einsamkeit bin, sollte ich in der Klippenflucht Halt machen."
+    }
+]

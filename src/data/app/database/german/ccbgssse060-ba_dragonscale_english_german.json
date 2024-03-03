@@ -1,0 +1,152 @@
+[
+    {
+        "editor_id": "ccBGSSSE060_ArmorDragonscaleCuirass",
+        "type": "ARMO FULL",
+        "original": "Studded Dragonscale Armor",
+        "string": "Beschlagene Drachenschuppenr\u00fcstung"
+    },
+    {
+        "editor_id": "ccBGSSSE060_ArmorDragonscaleBoots",
+        "type": "ARMO FULL",
+        "original": "Studded Dragonscale Boots",
+        "string": "Beschlagene Drachenschuppenstiefel"
+    },
+    {
+        "editor_id": "ccBGSSSE060_ArmorDragonscaleGauntlets",
+        "type": "ARMO FULL",
+        "original": "Studded Dragonscale Gauntlets",
+        "string": "Beschlagene Drachenschuppenhandschuhe"
+    },
+    {
+        "editor_id": "ccBGSSSE060_ArmorDragonscaleHelmet",
+        "type": "ARMO FULL",
+        "original": "Studded Dragonscale Helmet",
+        "string": "Beschlagener Drachenschuppenhelm"
+    },
+    {
+        "editor_id": "ccBGSSSE060_Fathrys",
+        "type": "NPC_ FULL",
+        "original": "Fathrys",
+        "string": "Fathrys"
+    },
+    {
+        "editor_id": "ccBGSSSE060_MiscQuest",
+        "type": "QUST NNAM",
+        "original": "Read the book at Candlehearth Hall",
+        "string": "Lies das Buch im Haus Kerzenschein."
+    },
+    {
+        "editor_id": "ccBGSSSE060_Quest",
+        "type": "QUST NNAM",
+        "original": "Defeat the skeleton warrior",
+        "string": "Besiege den Skelettkrieger."
+    },
+    {
+        "editor_id": "ccBGSSSE060_Quest",
+        "type": "QUST NNAM",
+        "original": "Retrieve the armor",
+        "string": "Besorge die R\u00fcstung."
+    },
+    {
+        "editor_id": "ccBGSSSE060_Bookv4",
+        "type": "BOOK FULL",
+        "original": "The Crimson Dirks, v4",
+        "string": "Die Blutroten Langdolche, Buch 4"
+    },
+    {
+        "editor_id": "ccBGSSSE060_Ulfnir",
+        "type": "NPC_ SHRT",
+        "original": "Ulfnir",
+        "string": "Ulfnir"
+    },
+    {
+        "editor_id": "ccBGSSSE060_Ulfnir",
+        "type": "NPC_ FULL",
+        "original": "Ulfnir Bone-Skin",
+        "string": "Ulfnir Knochen-Haut"
+    },
+    {
+        "editor_id": "ccBGSSSE060_Key",
+        "type": "KEYM FULL",
+        "original": "Overlook Key",
+        "string": "Aufsichtspunktschl\u00fcssel"
+    },
+    {
+        "editor_id": "ccBGSSSE060_Quest",
+        "type": "QUST NNAM",
+        "original": "Pick up the Overlook Key",
+        "string": "Sammle den Aussichtspunktschl\u00fcssel ein."
+    },
+    {
+        "editor_id": "ccBGSSSE060_LovePoemforZaharia",
+        "type": "BOOK FULL",
+        "original": "Poem for Zaharia",
+        "string": "Gedicht f\u00fcr Zaharia"
+    },
+    {
+        "editor_id": "ccBGSSSE060_Quest",
+        "type": "QUST FULL",
+        "original": "Tilted Scales",
+        "string": "Geneigte Schuppen"
+    },
+    {
+        "editor_id": "ccBGSSSE060_Quest",
+        "type": "QUST NNAM",
+        "original": "Investigate Yorgrim's Overlook",
+        "string": "Untersuche den Aussichtspunkt von Yorgrim."
+    },
+    {
+        "editor_id": "Tamriel",
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Himmelsrand"
+    },
+    {
+        "editor_id": "WindhelmCandlehearthHall",
+        "type": "CELL FULL",
+        "original": "Candlehearth Hall",
+        "string": "Haus Kerzenschein"
+    },
+    {
+        "editor_id": "ccBGSSSE060_Quest",
+        "type": "QUST CNAM",
+        "original": "At Candlehearth Hall in Windhelm, I found a book that mentioned a set of valuable armor may have been stashed away at Yorgrim's Overlook. Upon reaching the overlook I was attacked by an armed skeleton. I defeated the undead creature and retrieved his armor from a nearby chest.",
+        "string": "Im Haus Kerzenschein in Windhelm fand ich ein Buch, in dem von einer wertvollen R\u00fcstung die Rede ist, die m\u00f6glicherweise in der N\u00e4he des Aussichtspunkts von Yorgrim versteckt wurde. Als ich den Aussichtspunkt erreichte, wurde ich von einem bewaffneten Skelett angegriffen. Ich besiegte die untote Kreatur und fand seine R\u00fcstung in einer Truhe in der N\u00e4he."
+    },
+    {
+        "editor_id": "ccBGSSSE060_Quest",
+        "type": "QUST CNAM",
+        "original": "At Candlehearth Hall in Windhelm, I found a book that mentioned a set of valuable armor may have been stashed away at Yorgrim's Overlook. Upon reaching the overlook I was attacked by an armed skeleton.",
+        "string": "Im Haus Kerzenschein in Windhelm fand ich ein Buch, in dem von einer wertvollen R\u00fcstung die Rede ist, die m\u00f6glicherweise in der N\u00e4he des Aussichtspunkts von Yorgrim versteckt wurde. Als ich den Aussichtspunkt erreichte, wurde ich von einem bewaffneten Skelett angegriffen."
+    },
+    {
+        "editor_id": "ccBGSSSE060_LovePoemforZaharia",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"17\">\nZaharia, my desert flower\nYou are the seed from which love sprouts\nI would break the Green Pact itself\nto pluck you from the ground\n\nOh Zaharia, your very name is a spell\nthat burns hotter than dragon fire\nThus I bring you this armor of scales\nso that I may stand inside your flame\n</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"17\">\nZaharia, meine W\u00fcstenblume,\nIhr seid der Samen, aus dem meine Liebe w\u00e4chst.\nIch w\u00fcrde selbst den Gr\u00fcnen Pakt brechen,\num Euch vom Boden zu pfl\u00fccken.\n\nAch, Zaharia, Euer Name ist ein Zauber,\nder hei\u00dfer brennt als Drachenfeuer.\nIch bringe Euch diese R\u00fcstung aus Schuppen,\num mich Eurer Flamme n\u00e4hern zu d\u00fcrfen.\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE060_Quest",
+        "type": "QUST CNAM",
+        "original": "At Candlehearth Hall in Windhelm, I found a book that mentioned a set of valuable armor may have been stashed away at Yorgrim's Overlook. Upon reaching the overlook I was attacked by an armed skeleton. I defeated the undead creature and found a key on his body.",
+        "string": "Im Haus Kerzenschein in Windhelm fand ich ein Buch, in dem von einer wertvollen R\u00fcstung die Rede ist, die m\u00f6glicherweise in der N\u00e4he des Aussichtspunkts von Yorgrim versteckt wurde. Als ich den Aussichtspunkt erreichte, wurde ich von einem bewaffneten Skelett angegriffen. Ich besiegte die untote Kreatur und fand einen Schl\u00fcssel bei ihr."
+    },
+    {
+        "editor_id": "ccBGSSSE060_Quest",
+        "type": "QUST CNAM",
+        "original": "At Candlehearth Hall in Windhelm, I found a book that mentioned a set of valuable armor may have been stashed away at Yorgrim's Overlook. I should head to the barrow and see what I can uncover.",
+        "string": "Im Haus Kerzenschein in Windhelm fand ich ein Buch, in dem von einer wertvollen R\u00fcstung, die m\u00f6glicherweise in der N\u00e4he des Aussichtspunkts von Yorgrim versteckt wurde. Ich sollte zum Grabh\u00fcgel gehen und sehen, was ich dort finden kann."
+    },
+    {
+        "editor_id": "ccBGSSSE060_Quest",
+        "type": "QUST CNAM",
+        "original": "At Candlehearth Hall in Windhelm, I found a book that mentioned a set of valuable armor may have been stashed away at Yorgrim's Overlook. Upon reaching the overlook I was attacked by an armed skeleton. I defeated the undead creature and can now investigate the area for the armor.",
+        "string": "Im Haus Kerzenschein in Windhelm fand ich ein Buch, in dem von einer wertvollen R\u00fcstung die Rede ist, die m\u00f6glicherweise in der N\u00e4he des Aussichtspunkts von Yorgrim versteckt wurde. Als ich den Aussichtspunkt erreichte, wurde ich von einem bewaffneten Skelett angegriffen. Ich besiegte die untote Kreatur und kann jetzt nach der R\u00fcstung suchen."
+    },
+    {
+        "editor_id": "ccBGSSSE060_Bookv4",
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\n<p align=\"center\">\n\n\nThe Crimson Dirks\nBook Four\n\n\nby \nGathers-the-Coin\n</p>\n\n\n\n[pagebreak]\n<p align=\"left\">\n<img src='img://Textures/Interface/Books/Illuminated_Letters/T_letter.png'>he tavern fell into silence. Casival squinted at the young Bosmer, trying to get a read on his mood. Just hours earlier the lad had embarked on the biggest quest of his life, the kind of endeavor that turns squires into warriors, boys into men.\n\n\"Well, what did she say?\" he asked the young bandit.\n\n\"She said she would only wed me,\" Fathrys said, \"if I brought her the scale of a dragon.\"\n\nThe tavern burst into laughter, patrons smacking their tankards against the wood.\n\n\"What?\" Fathrys replied, clearly confused, \"What's so funny?\"\n\n\"I'm sorry lad,\" said Casival, \"but I think that's her way of saying 'No.'\"\n\nFathrys was crestfallen. It had taken nearly all of his courage to confess his love to Zaharia. What meager defenses remained in his youthful frame, Casival could not guess, but they stood little chance against this latest assault. In fact, with each passing second Fathrys' shoulders slumped further and further into his chest, until he was more Guar than man. Taking pity, Casival decided to massage the boy's ego with a tale of his first rejection, when a familiar voice croaked at the pair from across the room.\n\n\"A dragon scale, you say?\" \n\nNot a soul had realized Antonius was in the tavern, mostly because the bandit mage was a permanent fixture. From dusk to dawn he teetered upon his wobbly chair, drinking all manner of spirits by his lonesome. Over time he began to blend into the scenery, like an odor that only strangers could smell.\n\n\"By the Nine, do you know where I can find one?\" Fathrys beamed with shoulders out, his once gloomy face resurrected with life.\n\n\"I'm a wizard, am I not?\" Antonius said, before letting out a dignified belch.\n\n\"A bandit wizard,\" Casival interjected, \"and with all due respect to you and your profession, I don't think you're helping.\"\n\n\"Nonsense, Casival,\" scolded the mage, nearly tripping over his own feet as he sat at the table, \"The boy needs a dragon scale, and I aim to help him find one.\"\n\n\"But the dragons have been extinct for centuries upon centuries,\" Casival said.\n\n\"You really are a bad student,\" scoffed Antonius, jabbing his finger into the Dunmer's forehead, \"this is why Tyra favors Edward over you. At least he pays attention.\"\n\n\"Forgive me, mage.\"\n\n\"Only the Divines can forgive you, my son. Drink this bottle, and it'll take you to them.\"\n\n\"What about the dragon scale?\" Fathrys whined, growing impatient.\n\n\"Oh right, that. Well, it just so happens, there's an old Nord legend about a warrior named Ulfnir Bone-Skin,\" Antonius explained, flecks of spit flying out of his mouth, \"who slew the serpent wyrm Vithrelnaak and fashioned a powerful armor from his scales. When he died, instead of giving his armor away to his ungrateful pupils, he did what any self-respecting warrior would do, and buried himself with it.\"\n\n\"Well, that's too bad,\" said Casival, hoping to derail this runaway carriage, \"surely it would've been emptied out by grave robbers by now.\"\n\n\"You would think,\" Antonius screamed, raising his voice for no reason, \"but they say Ulfnir's corpse haunts the barrow near Yorgrim's Overlook, and kills anyone who dares try and take his armor.\"\n\n\"I see! So it's a challenge!\" Fathrys exclaimed, \"In order to wear Ulfnir's armor, one must first best him as a warrior!\"\n\n\"Either that, or he just doesn't want some random stranger wearing his clothes. How would you feel if I showed up to your home wearing your undergarments? But yes, you kill Ulfnir, you get your dragon scale. You get your dragon scale, and you get your wench.\"\n\n\"She's not a wench. She's the most amazing woman in all of Mundus, and I'm going to marry her!\"\n\n\"Sure, whatever.\"\n\nCasival breathed a deep sigh as Fathrys' heart grew ill with hope. The only saving grace was that Windhelm was thousands of leagues away, and Fathrys was still a pup. Perhaps when he was ready for the work, a word or two with Tyra could send him further away still. Yet whatever remedy he devised would be temporary. He had seen that look too many times to deny what would come next.\n\nA fortnight later, Casival returned to the tavern. It was the same as it ever was, for the most part. The wenches tended to the patrons, and the patrons to their stress. The bards sang tales old and new, and the drunkards, not knowing the lyrics, still saw fit to join them. Antonius was perched in the corner as always, a bottle in each hand and several more on the ground. \n\nIt was like any other Fredas, save for the empty seat beside him. \n\nHe would break the news to Tyra in the morning. The Bosmer would not return.</p>\n",
+        "string": "[pagebreak]\n<p align=\"center\">\n\n\nDie Blutroten Langdolche\nBuch IV\n\n\nvon \nSammelt-M\u00fcnzen\n</p>\n\n\n\n[pagebreak]\n<p align=\"left\">\n<img src='img://Textures/Interface/Books/Illuminated_Letters/I_letter.png'>n der Taverne wurde es still. Casival sah den jungen Bosmer pr\u00fcfend an. Wie wohl seine Stimmung war? Vor nur wenigen Stunden war der Junge die gr\u00f6\u00dfte Aufgabe seines Lebens angetreten, eine Aufgabe, wie sie Knappen zu Kriegern und Jungen zu M\u00e4nnern macht.\n\nUnd, was hat sie gesagt? fragte er den jungen Banditen.\n\nSie sagte, sie w\u00fcrde mich nur heiraten, erz\u00e4hlte Fathrys, \"wenn ich ihr eine Drachenschuppe bringe.\"\n\nIn der Taverne brach Gel\u00e4chter aus und die Anwesenden lie\u00dfen ihre Kr\u00fcge auf das Holz krachen.\n\nWas? antwortete Fathrys, offensichtlich verwirrt. \"Was ist denn so lustig?\"\n\nTut mir leid, Junge, sagte Casival, \"aber damit hat sie wohl 'Nein' gesagt.\"\n\nFathrys war niedergeschlagen. Es hatte ihn fast seinen ganzen Mut gekostet, Zaharia seine Liebe zu gestehen. Casival konnte nicht einsch\u00e4tzen, welch kl\u00e4glicher Stolz noch in seinem jugendlichen K\u00f6rper \u00fcbrig waren, doch gegen diesen neuesten Angriff hatte er keine Chance. Tats\u00e4chlich sackten Fathrys' Schultern mit jeder verstreichenden Sekunde weiter nach unten, bis er mehr einem Guar als einem Mann \u00e4hnelte. Aus Mitleid beschloss Casival, das Selbstwertgef\u00fchl des Jungen mit einer Geschichte von seiner ersten Abfuhr wiederaufzubauen, als eine vertraute Stimme vom anderen Ende des Raums zu den beiden her\u00fcberkr\u00e4chzte.\n\nEine Drachenschuppe, sagt Ihr? \n\nNiemand hatte gemerkt, dass Antonius in der Taverne war. Gr\u00f6\u00dftenteils lag das daran, dass der Banditenmagier zum Inventar geh\u00f6rte. Von Sonnenuntergang bis zum Morgengrauen wippte er auf seinem wackeligen Stuhl und trank ganz allein die verschiedensten Schn\u00e4pse. Mit der Zeit geh\u00f6rte er zum Hintergrund, wie ein Geruch, den nur Fremde sp\u00fcren k\u00f6nnen.\n\nBei den Neun, wisst Ihr, wo ich eine finden kann? Fathrys strahlte erfreut. Seine Schultern waren straff und sein ehemals d\u00fcsterer Gesichtsausdruck war wieder lebendig geworden.\n\nBin ich ein Zauberer, oder nicht? fragte Antonius und r\u00fclpste w\u00fcrdevoll.\n\nEin Banditenzauberer, warf Casival ein, \"und bei allem Respekt f\u00fcr Euch und Euren Beruf finde ich nicht, dass Ihr hier helft.\"\n\nUnsinn, Casival, schimpfte der Magier, und stolperte fast \u00fcber seine eigenen F\u00fc\u00dfe, als er sich an den Tisch setzte. \"Der Junge braucht eine Drachenschuppe und ich will ihm helfen, eine zu finden.\"\n\nAber die Drachen sind schon seit vielen Jahrhunderten ausgestorben, sagte Casival.\n\nIhr seid wirklich kein guter Sch\u00fcler, spottete Antonius und tippte mit seinem Finger gegen die Stirn des Dunmer. \"Deshalb mag Tyra Edward mehr als Euch. Er passt wenigstens auf.\"\n\nVergebt mir, Magier.\n\nNur die G\u00f6ttlichen k\u00f6nnen Euch vergeben, mein Sohn. Trinkt aus dieser Flasche, dann gelangt Ihr zu ihnen.\n\nUnd die Drachenschuppe? quengelte Fathrys ungeduldig.\n\nAch ja, die. Zuf\u00e4lligerweise gibt es eine alte Nordlegende \u00fcber einen Krieger namens Ulfnir Knochen-Haut, erkl\u00e4rte Antonius so eifrig, dass ihm die Spucke aus dem Mund flog. \"Er t\u00f6tete einen Schlangenlindwurm namens Vithrelnaak und stellte aus seinen Schuppen eine m\u00e4chtige R\u00fcstung her. Als er starb, tat er das, was alle Krieger tun, die etwas auf sich halten. Statt die R\u00fcstung seinen undankbaren Sch\u00fclern zu vererben, lie\u00df er sich mit ihr begraben.\"\n\nDas ist wirklich schade, sagte Casival, in der Hoffnung, diesen Wagen zum Entgleisen zu bringen: \"Die haben sich mittlerweile sicher Grabr\u00e4uber geholt.\"\n\nDas denkt man vielleicht, schrie Antonius und wurde ohne guten Grund pl\u00f6tzlich laut, \"aber angeblich sucht Ulfnirs Leiche das H\u00fcgelgrab in der N\u00e4he des Aussichtspunkts von Yorgrim heim und t\u00f6tet alle, die versuchen, seine R\u00fcstung zu stehlen.\"\n\nIch verstehe! Dann ist es eine Herausforderung! rief Fathrys. \"Um Ulfnirs R\u00fcstung zu tragen, muss man ihn erst im Kampf besiegen!\"\n\nEntweder das oder er will einfach nicht, dass irgendein dahergelaufener Fremder seine Kleidung tr\u00e4gt. Was w\u00fcrdet Ihr sagen, wenn ich bei Euch daheim in Eurer Unterw\u00e4sche erscheinen w\u00fcrde? Aber ja, wenn Ihr Ulfnir t\u00f6tet, bekommt Ihr Eure Drachenschuppe. Ihr bekommt Eure Drachenschuppe und Euer Weibsbild.\n\nSie ist kein Weibsbild. Sie ist die wunderbarste Frau in ganz Mundus und ich werde sie heiraten!\n\nKlar, wenn Ihr meint.\n\nIn Fathrys' Herz wuchs die Hoffnung und Casival stie\u00df einen langen Seufzer aus. Zum Gl\u00fcck war Windhelm weit entfernt und Fathrys noch jung. Wenn er alt genug f\u00fcr die Arbeit war, w\u00fcrde vielleicht ein Wort in Tyras Ohr gen\u00fcgen, um ihn noch weiter wegzuschicken. Doch egal, welche L\u00f6sung er ersann, sie w\u00fcrde nicht von Dauer sein. Solche Blicke hatte er schon zu oft gesehen. Es war sinnlos zu leugnen, was als N\u00e4chstes geschehen w\u00fcrde.\n\nZwei Wochen sp\u00e4ter war Casival wieder in der Taverne. Es war wie immer, mehr oder weniger. Die M\u00e4gde k\u00fcmmerten sich um die Kunden und die Kunden um ihre Probleme. Der Barde sang neue und alte Lieder und die S\u00e4ufer glaubten mitsingen zu k\u00f6nnen, obwohl sie den Text nicht kannten. Wie immer hockte Antonius in der Ecke, eine Flasche in jeder Hand und weitere auf dem Boden. \n\nBis auf den leeren Stuhl neben ihm war es ein Fredas wie jeder andere. \n\nAm n\u00e4chsten Morgen w\u00fcrde er es Tyra sagen. Der Bosmer w\u00fcrde nicht mehr kommen.</p>\n"
+    }
+]

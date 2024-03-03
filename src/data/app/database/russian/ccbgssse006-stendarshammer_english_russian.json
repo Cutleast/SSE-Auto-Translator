@@ -1,0 +1,74 @@
+[
+    {
+        "editor_id": "ccBGSSSE006_Quest",
+        "type": "QUST FULL",
+        "original": "If I had a Hammer",
+        "string": "\u0411\u044b\u043b \u0431\u044b \u0443 \u043c\u0435\u043d\u044f \u041c\u043e\u043b\u043e\u0442"
+    },
+    {
+        "editor_id": "ccBGSSSE006StendarsHammer",
+        "type": "WEAP FULL",
+        "original": "Stendarr's Hammer",
+        "string": "\u041c\u043e\u043b\u043e\u0442 \u0421\u0442\u0435\u043d\u0434\u0430\u0440\u0440\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE006_Quest",
+        "type": "QUST NNAM",
+        "original": "Steal Stendarr's Hammer",
+        "string": "\u0423\u043a\u0440\u0430\u0441\u0442\u044c \u041c\u043e\u043b\u043e\u0442 \u0421\u0442\u0435\u043d\u0434\u0430\u0440\u0440\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE006_DamageStamina",
+        "type": "MGEF DNAM",
+        "original": "Drains <mag> points from stamina.",
+        "string": "\u041e\u0442\u043d\u0438\u043c\u0430\u0435\u0442 <mag> \u0435\u0434. \u0437\u0430\u043f\u0430\u0441\u0430 \u0441\u0438\u043b."
+    },
+    {
+        "editor_id": "ccBGSSSE006_EnchDamageFFContact",
+        "type": "MGEF FULL",
+        "original": "Smite Damage",
+        "string": "\u0421\u043e\u043a\u0440\u0443\u0448\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439 \u0443\u0440\u043e\u043d"
+    },
+    {
+        "editor_id": "ccBGSSSE006_EnchDrainHealth",
+        "type": "ENCH FULL",
+        "original": "Absorb Health",
+        "string": "\u041f\u043e\u0433\u043b\u043e\u0449\u0435\u043d\u0438\u0435 \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044f"
+    },
+    {
+        "editor_id": "ccBGSSSE006_DrainStamina",
+        "type": "SPEL FULL",
+        "original": "Smite",
+        "string": "\u0412\u044b\u0441\u0430\u0441\u044b\u0432\u0430\u043d\u0438\u0435 \u0437\u0430\u043f\u0430\u0441\u0430 \u0441\u0438\u043b"
+    },
+    {
+        "editor_id": "ccBGSSSE006_DamageStamina",
+        "type": "MGEF FULL",
+        "original": "Reduced Stamina",
+        "string": "\u0417\u0430\u043f\u0430\u0441 \u0441\u0438\u043b \u0443\u043c\u0435\u043d\u044c\u0448\u0435\u043d"
+    },
+    {
+        "editor_id": "ccBGSSSE006_EnchDamageFFContact",
+        "type": "MGEF DNAM",
+        "original": "Damages the target for <mag> points. Depletes <20> Stamina from wielder per hit.",
+        "string": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u0446\u0435\u043b\u0438 <mag> \u0435\u0434. \u0443\u0440\u043e\u043d\u0430. \u0423\u043c\u0435\u043d\u044c\u0448\u0430\u0435\u0442 \u0437\u0430\u043f\u0430\u0441 \u0441\u0438\u043b \u0432\u043b\u0430\u0434\u0435\u043b\u044c\u0446\u0430 \u043d\u0430 <20> \u0435\u0434. \u0437\u0430 \u0443\u0434\u0430\u0440."
+    },
+    {
+        "editor_id": "MarkarthWizardsQuarters01",
+        "type": "CELL FULL",
+        "original": "Dwemer Museum",
+        "string": "\u041c\u0443\u0437\u0435\u0439 \u0434\u0432\u0435\u043c\u0435\u0440\u043e\u0432"
+    },
+    {
+        "editor_id": "ccBGSSSE006_Quest",
+        "type": "QUST CNAM",
+        "original": "I have successfully stolen Stendarr's Hammer from the Dwarven Museum in Markarth.",
+        "string": "\u042f \u0441\u0443\u043c\u0435\u043b \u043f\u043e\u0445\u0438\u0442\u0438\u0442\u044c \u041c\u043e\u043b\u043e\u0442 \u0421\u0442\u0435\u043d\u0434\u0430\u0440\u0440\u0430 \u0438\u0437 \u043c\u0443\u0437\u0435\u044f \u0434\u0432\u0435\u043c\u0435\u0440\u043e\u0432 \u0432 \u041c\u0430\u0440\u043a\u0430\u0440\u0442\u0435."
+    },
+    {
+        "editor_id": "ccBGSSSE006_Quest",
+        "type": "QUST CNAM",
+        "original": "Rumor has it that Stendarr's Hammer has been found deep under Markarth. They say it is in the Dwarven Museum there.",
+        "string": "\u0413\u043e\u0432\u043e\u0440\u044f\u0442, \u0433\u0434\u0435-\u0442\u043e \u0432 \u043f\u043e\u0434\u0437\u0435\u043c\u0435\u043b\u044c\u044f\u0445 \u043f\u043e\u0434 \u041c\u0430\u0440\u043a\u0430\u0440\u0442\u043e\u043c \u043d\u0430\u0448\u043b\u0438 \u041c\u043e\u043b\u043e\u0442 \u0421\u0442\u0435\u043d\u0434\u0430\u0440\u0440\u0430. \u041f\u043e \u0441\u043b\u0443\u0445\u0430\u043c, \u0435\u0433\u043e \u043e\u0442\u043f\u0440\u0430\u0432\u0438\u043b\u0438 \u0432 \u043c\u0443\u0437\u0435\u0439 \u0434\u0432\u0435\u043c\u0435\u0440\u043e\u0432."
+    }
+]

@@ -1,0 +1,152 @@
+[
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "type": "QUST NNAM",
+        "original": "Retrieve the Headman's Cleaver",
+        "string": "Recupera la Mannaia del Capotrib\u00f9"
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "type": "QUST NNAM",
+        "original": "Ask an innkeeper for work",
+        "string": "Chiedi lavoro a un locandiere"
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "type": "QUST NNAM",
+        "original": "Eliminate the bandits in Lost Knife Hideout",
+        "string": "Elimina i banditi al Nascondiglio della lama smarrita"
+    },
+    {
+        "editor_id": "ccBGSSSE068_InnkeepLetter",
+        "type": "BOOK FULL",
+        "original": "Letter from Shogarz gra-Batul",
+        "string": "Lettera di Shogarz gra-Batul"
+    },
+    {
+        "editor_id": "ccBGSSSE068_Journal",
+        "type": "BOOK FULL",
+        "original": "Shurgoz's Journal",
+        "string": "Diario di Shurgoz"
+    },
+    {
+        "editor_id": "ccBGSSSE068_GreencapBanditBoss",
+        "type": "MESG FULL",
+        "original": "Darkwater Snake",
+        "string": "Serpente di Acquescure"
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "type": "QUST FULL",
+        "original": "Blood in the Water",
+        "string": "Sangue nell'acqua"
+    },
+    {
+        "editor_id": "ccBGSSSE068_GreencapBanditName",
+        "type": "MESG FULL",
+        "original": "Greencap Bandit",
+        "string": "Bandito Cappaverde"
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the Letter from Shogarz gra-Batul",
+        "string": "Leggi la lettera di Shogarz gra-Batul"
+    },
+    {
+        "editor_id": "ccBGSSSE068_LvlBanditBossOrcM",
+        "type": "NPC_ FULL",
+        "original": "Bandit Chief",
+        "string": "Capo dei banditi"
+    },
+    {
+        "editor_id": "ccBGSSSE068_BloodfallBlade",
+        "type": "WEAP FULL",
+        "original": "Headman's Cleaver",
+        "string": "Mannaia del Capotrib\u00f9"
+    },
+    {
+        "editor_id": "ccBGSSSE068b_Journal",
+        "type": "BOOK FULL",
+        "original": "Urzog's Journal",
+        "string": "Diario di Urzog"
+    },
+    {
+        "editor_id": "ccBGSSSE068_EnchWeaponBloodfallBlade",
+        "type": "ENCH FULL",
+        "original": "Stamina Damage",
+        "string": "Danno al vigore"
+    },
+    {
+        "editor_id": "ccBGSSSE068_EnchStaminaDamageFFContact",
+        "type": "MGEF FULL",
+        "original": "Stamina Damage",
+        "string": "Danno al vigore"
+    },
+    {
+        "editor_id": "ccBGSSSE068_EnchStaminaDamageFFContact",
+        "type": "MGEF DNAM",
+        "original": "Does <mag> points of Stamina damage. Targets bleed <2> points for 5 seconds.",
+        "string": "Infligge <mag> punti di danno al vigore. I bersagli sanguinano subendo <2> danni per 5 secondi."
+    },
+    {
+        "editor_id": "LostKnifeHideout01",
+        "type": "CELL FULL",
+        "original": "Lost Knife Cave",
+        "string": "Caverna della lama smarrita"
+    },
+    {
+        "editor_id": "LostKnifeHideout02",
+        "type": "CELL FULL",
+        "original": "Lost Knife Hideout",
+        "string": "Nascondiglio della lama smarrita"
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "type": "QUST CNAM",
+        "original": "I received a note from a vassal of the Bloodfall Queen stating a group of bandits have stolen her weapon. I made my way to Lost Knife Hideout and retrieved the Headman's Cleaver from the bandits.",
+        "string": "Ho ricevuto una nota da un vassallo della Regina Sanguinaria, in cui dice che un gruppo di banditi ha rubato la sua arma. Ho raggiunto il Nascondiglio della lama smarrita e ho recuperato la Lama Sanguinaria dai banditi."
+    },
+    {
+        "editor_id": "ccBGSSSE068_InnkeepLetter",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">To all capable warriors,\n\nA group of bandits have stolen something of great value to my family's kingdom, the Headman's Cleaver, and fled to Skyrim like cowards. We believe they're remnant members of the Greencap Bandits, who have been a thorn in the Queen's side from the day she was born. \n\nOur sources tell us they're holed up in Lost Knife Hideout, and as the Queen's strongest knight, I have been tasked with retrieving it. However, if I don't survive, I ask that you eliminate these bandits in her name. The Queen will gladly bestow the cleaver to the one who vanquishes her oldest enemy.\n\nShogarz gra-Batul",
+        "string": "<font face=\"$HandwrittenFont\">A tutti i guerrieri disponibili,\n\nUn gruppo di banditi ha rubato un cimelio del regno della mia famiglia, la Mannaia del Capotrib\u00f9, ed \u00e8 scappato a Skyrim. Crediamo che siano gli ultimi membri dei banditi Cappaverde, una spina nel fianco della Regina fin dal giorno in cui \u00e8 nata. \n\nLe nostre fonti ci hanno comunicato che sono rintanati al Nascondiglio della lama smarrita e, in veste di cavaliere pi\u00f9 forte della Regina, sono stato incaricato di ritrovarla. Se non dovessi sopravvivere, vi chiedo di eliminare questi banditi in suo nome. La Regina sar\u00e0 felice di donare la mannaia a chiunque annienti il suo nemico pi\u00f9 antico.\n\nShogarz gra-Batul"
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "type": "QUST CNAM",
+        "original": "Talking to innkeepers has always been a good way to find work. I should head to the local inn and see if there's anything worthwhile.",
+        "string": "Parlare con i locandieri \u00e8 sempre stato un buon metodo per trovare lavoro. Dovrei andare alla locanda e vedere se c'\u00e8 qualcosa di interessante."
+    },
+    {
+        "editor_id": "ccBGSSSE068_Journal",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenBold\">\nI've long suspected the \"Darkwater Snake\" is my older brother, Urzog. The fact that he would take on that moniker made it all the more obvious. \n\nIt may be that same poison that ran in grandfather's blood is what made him betray us. Are we doomed to repeat the mistakes of our ancestors? Sometimes I wonder.\n</font>",
+        "string": "<font face=\"$HandwrittenBold\">\nDa molto tempo sospetto che il \"Serpente di Acquescure\" sia mio fratello maggiore, Urzog. Il fatto che abbia assunto questo soprannome lo conferma. \n\nSar\u00e0 stato lo stesso veleno che scorreva nel sangue di nostro nonno a costringerlo a tradirci. Siamo condannati a ripetere gli errori dei nostri antenati? A volte me lo chiedo davvero.\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "type": "QUST CNAM",
+        "original": "Talking to innkeepers has always been a good way to find work. I received a note from one that may provide a lead.",
+        "string": "Parlare con i locandieri \u00e8 sempre stato un buon metodo per trovare lavoro. Ho ricevuto una nota che potrebbe portare a una pista."
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "type": "QUST CNAM",
+        "original": "I received a note from a vassal of the Bloodfall Queen stating a group of bandits have stolen her weapon. I made my way to Lost Knife Hideout and encountered their leader.",
+        "string": "Ho ricevuto una nota da un vassallo della Regina Sanguinaria, in cui dice che un gruppo di banditi ha rubato la sua arma. Ho raggiunto il Nascondiglio della lama smarrita e ho incontrato il loro capo."
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "type": "QUST CNAM",
+        "original": "I received a note from a vassal of the Bloodfall Queen stating a group of bandits have stolen her weapon. I should head to Lost Knife Hideout to see what's become of it.",
+        "string": "Ho ricevuto una nota da un vassallo della Regina Sanguinaria, in cui dice che un gruppo di banditi ha rubato la sua arma. Devo raggiungere il Nascondiglio della lama smarrita e scoprire che fine ha fatto."
+    },
+    {
+        "editor_id": "ccBGSSSE068b_Journal",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenBold\">\nI've always beaten my little brother in everything. Cards, I had the better hands. Brawls, likewise. When we raced up the ramparts of the old castle, I would always be the first to reach the peak.\n\nMother said the difference between myself and my brother was that he was a perfectionist, and I was a conquerer. She said I wanted to beat him at everything, and it drove me to become a great warrior.\n\nBut my brother didn't care for competition. As a perfectionist, he simply wanted to sharpen his skills, and would work with others if he thought it would better himself.\n\nMother said that's why he would make the better ruler. My brother would forever try to improve our standing, whereas I was content being better than the next man.\n\nWell, little did she know the next man was him.\n\nI'm going to enjoy killing you little brother. Grandfather's venom may have failed to reach mother's veins, but it will still reach her heart.</font>",
+        "string": "<font face=\"$HandwrittenBold\">\nHo sempre battuto il mio fratellino in tutto. A carte avevo sempre la meglio. Cos\u00ec anche nella lotta. Quando facevamo a gara sui bastioni del vecchio castello, ero sempre il primo ad arrivare pi\u00f9 in alto.\n\nNostra madre diceva che la differenza tra me e mio fratello era che lui era un perfezionista e io un conquistatore. Diceva che volevo batterlo sempre in tutto e che questo mi avesse fatto diventare un grande guerriero.\n\nMa a mio fratello non interessava la competizione. Perfezionista com'era, gli interessava solo migliorare le sue abilit\u00e0 e lo avrebbe fatto tranquillamente con altri se avesse pensato di trarne un profitto maggiore.\n\nNostra madre diceva che lui sarebbe stato un sovrano migliore. Mio fratello avrebbe sempre provato a migliorarsi, mentre io mi accontento di essere migliore del mio prossimo.\n\nBeh, non poteva immaginare che il mio prossimo fosse proprio lui.\n\nSar\u00e0 divertente ucciderti, fratellino. Il veleno del nonno non sar\u00e0 arrivato nelle vene di nostra madre, ma le arriver\u00e0 comunque al cuore.</font>"
+    }
+]

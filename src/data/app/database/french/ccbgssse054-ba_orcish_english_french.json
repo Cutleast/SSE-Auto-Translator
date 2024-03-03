@@ -1,0 +1,188 @@
+[
+    {
+        "editor_id": "ccBGSSSE054_ArmorBladesBoots",
+        "type": "ARMO FULL",
+        "original": "Orcish Plate Boots",
+        "string": "Bottes de plates orques"
+    },
+    {
+        "editor_id": "ccBGSSSE054_ArmorBladesHelmet",
+        "type": "ARMO FULL",
+        "original": "Orcish Plate Helmet",
+        "string": "Casque de plates orque"
+    },
+    {
+        "editor_id": "ccBGSSSE054_ArmorBladesCuirass",
+        "type": "ARMO FULL",
+        "original": "Orcish Plate Armor",
+        "string": "Armure de plates orque"
+    },
+    {
+        "editor_id": "ccBGSSSE054_ArmorBladesGauntlets",
+        "type": "ARMO FULL",
+        "original": "Orcish Plate Gauntlets",
+        "string": "Gantelets de plates orques"
+    },
+    {
+        "editor_id": "ccBGSSSE054_DossierOrcish",
+        "type": "BOOK FULL",
+        "original": "Guard's Dossier: Yakhtu gra-Orkulg",
+        "string": "Dossier de la garde\u00a0: Yakhtu gra-Orkulg"
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "type": "QUST NNAM",
+        "original": "Examine the body",
+        "string": "Examinez le corps"
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "type": "QUST NNAM",
+        "original": "Find the blacksmith in Embershard Mine",
+        "string": "Trouvez la forgeronne dans la mine de Rougebraise"
+    },
+    {
+        "editor_id": "ccBGSSSE054_YakhtuKey",
+        "type": "KEYM FULL",
+        "original": "Yakhtu's Key",
+        "string": "Cl\u00e9 de Yakhtu"
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "type": "QUST FULL",
+        "original": "Smith 'N Slash",
+        "string": "La Hache qui tranche"
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "type": "QUST NNAM",
+        "original": "Search for a dossier at the Guard Barracks in Whiterun",
+        "string": "Cherchez un dossier dans les baraquements \u00e0 Blancherive"
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the journal",
+        "string": "Lisez le journal"
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the guard's dossier",
+        "string": "Lisez le dossier de la garde"
+    },
+    {
+        "editor_id": "ccBGSSSE054_YakhtuJournal",
+        "type": "BOOK FULL",
+        "original": "Yakhtu's Journal",
+        "string": "Journal de Yakhtu"
+    },
+    {
+        "editor_id": "ccBGSSSE054_YakhtuTreasBanditChest",
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Coffre"
+    },
+    {
+        "editor_id": "ccBGSSSE054_MiscQuest",
+        "type": "QUST NNAM",
+        "original": "Search for a dossier at the Guard Barracks in Whiterun",
+        "string": "Cherchez un dossier dans les baraquements \u00e0 Blancherive"
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "type": "QUST NNAM",
+        "original": "Retrieve the Orcish Plate Armor",
+        "string": "R\u00e9cup\u00e9rez l'armure de plates orque"
+    },
+    {
+        "editor_id": "ccBGSSSE054_ArmorBladesCuirassE",
+        "type": "ARMO FULL",
+        "original": "Orcish Plate Armor",
+        "string": "Armure de plates orque"
+    },
+    {
+        "editor_id": "ccBGSSSE054_ArmorBladesGauntletsE",
+        "type": "ARMO FULL",
+        "original": "Orcish Plate Gauntlets",
+        "string": "Gantelets de plates orques"
+    },
+    {
+        "editor_id": "ccBGSSSE054_ArmorBladesHelmetE",
+        "type": "ARMO FULL",
+        "original": "Orcish Plate Helmet",
+        "string": "Casque de plates orque"
+    },
+    {
+        "editor_id": "ccBGSSSE054_ArmorBladesBootsE",
+        "type": "ARMO FULL",
+        "original": "Orcish Plate Boots",
+        "string": "Bottes de plates orques"
+    },
+    {
+        "editor_id": "EmbershardMine01",
+        "type": "CELL FULL",
+        "original": "Embershard Mine",
+        "string": "Mine de Rougebraise"
+    },
+    {
+        "editor_id": "WhiterunGuardHouse",
+        "type": "CELL FULL",
+        "original": "Guard Barracks",
+        "string": "Baraquements des gardes"
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "type": "QUST CNAM",
+        "original": "At Embershard Mine, I found an Orc blacksmith forging weapons for bandits. I managed to eliminate her and read a journal on her body. It mentioned crafting valuable Orcish Plate armor for bandits.",
+        "string": "J'ai trouv\u00e9 dans la Mine de Rougebraise une orque forgeronne qui fabrique des armes pour des bandits. J'ai r\u00e9ussi \u00e0 l'\u00e9liminer et ai lu le journal sur sa d\u00e9pouille. Il mentionnait la conception d'armures de plates orques inestimables \u00e0 l'attention de bandits."
+    },
+    {
+        "editor_id": "ccBGSSSE054_YakhtuJournal",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\nI nearly turned around and went back to Cyrodiil because Bjormund wouldn't shut up. From dawn to dusk it was Skyrim this and Skyrim that. We hadn't even crossed the mountains yet, and I felt like I'd spent an eternity in the place. But by Malacath, he kept going.\n\nHe went on about all the different legends and the hundreds of Ragnars involved in them. He talked for hours about his family, and for days about his mead. Sometimes he even sang about them. Silence was not an option. Perhaps if they put that on my bounty, I might have been okay with the rest of it. \n\nBut as a blacksmith, there was one story I didn't get tired of. The one about the Skyforge.\n\n\"It's an ancient relic, watched over by a great stone eagle,\" he said. \"Come spring, you will be forging weapons under its wings,\" he said.\n\nI ate it up, even though I knew it was a lie. The Skyforge was for legendary smiths, and I was a wanted criminal. Unless the guard decide to quit looking for us, I was going to spend the rest of my life crafting Orcish Plate for bandits, idiots who didn't deserve my work and lacked the brains to value it.\n\nMaybe that's what pissed me off the most about Bjormund's tales of hearth and home. We weren't going to be welcome in Skyrim, or anywhere for that matter. We were Crimson Dirks. We had a home, and now it was gone.</font>",
+        "string": "<font face=\"$HandwrittenFont\">\nJ'ai failli rebrousser chemin vers Cyrodiil parce que Bjormund ne voulait pas la fermer deux minutes. Du matin au soir, c'\u00e9tait Bordeciel ceci, Bordeciel cela. Nous n'avions m\u00eame pas encore franchi les montagnes, et j'avais l'impression qu'une \u00e9ternit\u00e9 s'\u00e9tait \u00e9coul\u00e9e. Mais que Malacath m'en soit t\u00e9moin, il jacassait, encore et encore.\n\nIl m'a racont\u00e9 en d\u00e9tail toutes les l\u00e9gendes locales, et les centaines de Ragnars qui \u00e9taient impliqu\u00e9s. Il m'a parl\u00e9 de sa famille pendant des heures, et de l'hydromel pendant des jours. Parfois, il a m\u00eame chant\u00e9 \u00e0 leur sujet. Le silence n'\u00e9tait pas une option. Peut-\u00eatre que si ma prime avait \u00e9t\u00e9 plus \u00e9lev\u00e9e, j'aurais mieux support\u00e9 tout \u00e7a. \n\nEn revanche, en tant que forgeronne, il y avait une histoire que je ne me lassais pas d'entendre\u00a0: celle \u00e0 propos de la Forgeciel.\n\n\"C'est une ancienne relique, surplomb\u00e9e par un grand aigle de pierre\", qu'il disait. \"Viens au printemps, tu pourras forger des armes sous ses ailes\", qu'il disait.\n\nJe l'ai cru, m\u00eame si je savais que c'\u00e9tait un mensonge. La Forgeciel \u00e9tait r\u00e9serv\u00e9e aux forgerons l\u00e9gendaires, et j'\u00e9tais une criminelle recherch\u00e9e. \u00c0 moins que la garde ne d\u00e9cide d'abandonner les recherches, j'allais passer le reste de mes jours \u00e0 fabriquer des armures de plates orques pour des bandits, des idiots qui ne m\u00e9ritent pas mon travail et n'ont pas la jugeote n\u00e9cessaire pour l'appr\u00e9cier \u00e0 sa juste valeur.\n\nJe crois que c'est ce qui m'\u00e9nervait le plus \u00e0 propos des histoires de Bjormund. Nous n'allions pas \u00eatre les bienvenus \u00e0 Bordeciel, ou n'importe o\u00f9 ailleurs. Nous \u00e9tions des Dagues Empourpr\u00e9es. Nous avions une maison, et elle avait disparu.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "type": "QUST CNAM",
+        "original": "Bandits have long been an issue for the people Skyrim. At the Guard House in Whiterun, I found a dossier that might have information on their whereabouts.",
+        "string": "Les bandits ont longtemps pos\u00e9 probl\u00e8me pour les habitants de Bordeciel. J'ai trouv\u00e9 un dossier au poste de garde, \u00e0 Blancherive, qui pourrait contenir des informations utiles sur l'endroit o\u00f9 ils se trouvent."
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "type": "QUST CNAM",
+        "original": "Bandits have long been an issue for the people Skyrim. If I visit the Guard House in Whiterun, I might find some information on them.",
+        "string": "Les bandits ont longtemps pos\u00e9 probl\u00e8me pour les habitants de Bordeciel. Si je venais \u00e0 visiter le poste de garde de Blancherive, je trouverais peut-\u00eatre des informations sur eux."
+    },
+    {
+        "editor_id": "ccBGSSSE054_DossierOrcish",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\nStatus: Active (Capture or Kill), High Priority\n\nDescription: Female, Orc, late 40s\n\nBackground:\nYakhtu gra-Orkulg was a former blacksmith at the Stash 'N Slash in the Imperial City, a shop she inherited from her father. She was contacted by the Crimson Dirks and recruited to forge arms for the bandits as well as launder sacked goods through her shop. When the Imperial City guard issued a warrant for her arrest, she fled the city with another member of the bandit gang.  \n\nOperational Notes:\nYakhtu was originally thought to have fled to High Rock and taken refuge in an Orc Stronghold. However, according to our informant, she actually traveled with another agent to Skyrim. Reports of unusually well made weapons and armor being peddled out of Embershard Mine may be related. This information should be forwarded to Commander Caius in Whiterun as the mine falls under his jurisdiction.</font>",
+        "string": "<font face='$HandwrittenFont'>\nStatut\u00a0: active (morte ou vive), priorit\u00e9 haute\n\nDescription\u00a0: femme, Orque, proche des 50 ans\n\nAnt\u00e9c\u00e9dents\u00a0:\nYakhtu gra-Orkulg \u00e9tait une ancienne forgeronne \u00e0 la Hache qui tranche dans la Cit\u00e9 imp\u00e9riale, une boutique qu'elle a h\u00e9rit\u00e9e de son p\u00e8re. Elle a \u00e9t\u00e9 contact\u00e9e par les Dagues Empourpr\u00e9es et recrut\u00e9e pour forger des armes aux bandits ainsi que blanchir des biens par le biais de sa boutique. Lorsque la garde de la Cit\u00e9 imp\u00e9riale a lanc\u00e9 un mandat d'arr\u00eat \u00e0 son encontre, elle a fui la ville avec un autre bandit.  \n\nNotes op\u00e9rationnelles\u00a0:\nOn pensait que Yakhtu avait fui vers Haute-Roche et s'\u00e9tait r\u00e9fugi\u00e9e dans une forteresse orque. Cependant, d'apr\u00e8s notre informateur, elle aurait en fait ralli\u00e9 Bordeciel avec un autre agent. \u00c7a a peut-\u00eatre un rapport avec le fait que des armes et armures extr\u00eamement bien forg\u00e9es sortent en ce moment de la mine de Rougebraise. Cette information devrait \u00eatre communiqu\u00e9e au Commandant Caius \u00e0 Blancherive, car la mine se trouve sous sa juridiction."
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "type": "QUST CNAM",
+        "original": "At Embershard Mine, I found an Orc blacksmith forging weapons for bandits. I managed to eliminate her and read a journal on her body. It mentioned crafting valuable Orcish Plate armor for bandits. I defeated a bandit wearing the armor and claimed it for myself.",
+        "string": "J'ai trouv\u00e9 dans la Mine de Rougebraise une orque forgeronne qui fabrique des armes pour des bandits. J'ai r\u00e9ussi \u00e0 l'\u00e9liminer et ai lu le journal sur sa d\u00e9pouille. Il mentionnait la conception d'armures de plates orques inestimables \u00e0 l'attention de bandits. J'ai vaincu un bandit qui portait l'une d'entre elles et me la suis appropri\u00e9e."
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "type": "QUST CNAM",
+        "original": "Bandits have long been an issue for the people Skyrim. At the Guard House in Whiterun, I found a dossier that has information on an Orc blacksmith forging weapons for bandits at Embershard Mine.",
+        "string": "Les bandits ont longtemps pos\u00e9 probl\u00e8me pour les habitants de Bordeciel. J'ai trouv\u00e9 un dossier au poste de garde, \u00e0 Blancherive, concernant une orque forgeronne qui fabriquerait des armes pour des bandits dans la Mine de Rougebraise."
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "type": "QUST CNAM",
+        "original": "At Embershard Mine, I found an Orc blacksmith forging weapons for bandits. I managed to eliminate her. I should check her body to see what else I can uncover.",
+        "string": "J'ai trouv\u00e9 dans la Mine de Rougebraise une orque forgeronne qui fabrique des armes pour des bandits. J'ai r\u00e9ussi \u00e0 l'\u00e9liminer. Je devrais fouiller sa d\u00e9pouille et voir ce que je peux y d\u00e9couvrir."
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "type": "QUST CNAM",
+        "original": "At Embershard Mine, I found an Orc blacksmith forging weapons for bandits. I managed to eliminate her and found a journal on her body.",
+        "string": "J'ai trouv\u00e9 dans la Mine de Rougebraise une orque forgeronne qui fabrique des armes pour des bandits. J'ai r\u00e9ussi \u00e0 l'\u00e9liminer et ai trouv\u00e9 un journal sur sa d\u00e9pouille."
+    }
+]

@@ -1,0 +1,158 @@
+[
+    {
+        "editor_id": "ccBGSSSE004_Paralyze1",
+        "type": "SPEL FULL",
+        "original": "Paralyze",
+        "string": "Parali\u017c"
+    },
+    {
+        "editor_id": "ccBGSSSE004_ReduceCarryWeight",
+        "type": "MGEF FULL",
+        "original": "Reduce Carry Weight",
+        "string": "Zmniejszony ud\u017awig"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Quest",
+        "type": "QUST FULL",
+        "original": "The Edge of Ruin",
+        "string": "Skraj Zniszczenia"
+    },
+    {
+        "editor_id": "ccBGSSSE004_BowBaseEffect",
+        "type": "MGEF DNAM",
+        "original": "Randomly applies one of these effects to the target: Frost, Demoralize, Frenzy, Drain Magicka, Paralyze.",
+        "string": "Losowo nak\u0142ada na cel jeden z nast\u0119puj\u0105cych efekt\u00f3w: mr\u00f3z, brzemi\u0119, zniech\u0119cenie, sza\u0142, wyssanie magii, parali\u017c."
+    },
+    {
+        "editor_id": "ccBGSSSE004_DrainMagickaEffect",
+        "type": "MGEF FULL",
+        "original": "Drain Magicka",
+        "string": "Wyssanie Magii"
+    },
+    {
+        "editor_id": "ccBGSSSE004_BowBaseEffect",
+        "type": "MGEF FULL",
+        "original": "Bow Base Effect",
+        "string": "Podstawowy efekt \u0142uku"
+    },
+    {
+        "editor_id": "ccBGSSSE004_InfluenceAggUpFFContact",
+        "type": "MGEF DNAM",
+        "original": "Creatures and people up to level <mag> will attack anything nearby for <dur> seconds.",
+        "string": "Istoty i ludzie na maksymalnie <mag>. poziomie b\u0119d\u0105 atakowa\u0107 wszystko w pobli\u017cu przez <dur> s."
+    },
+    {
+        "editor_id": "ccBGSSSE004_ReduceCarryWeight",
+        "type": "MGEF DNAM",
+        "original": "Reduce carrying capacity increases by <mag> for <dur> seconds.",
+        "string": "Zmniejsza ud\u017awig o <mag> pkt. przez <dur> s."
+    },
+    {
+        "editor_id": "ccBGSSSE004_RuinsEdgeBow",
+        "type": "WEAP FULL",
+        "original": "Ruin's Edge",
+        "string": "Skraj Zniszczenia"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Quest",
+        "type": "QUST NNAM",
+        "original": "Find Ruin's Edge",
+        "string": "Odszukaj Skraj Zniszczenia"
+    },
+    {
+        "editor_id": "ccBGSSSE004_InfluenceAggUpFFContact",
+        "type": "MGEF FULL",
+        "original": "Fury",
+        "string": "Furia"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Paralyze15",
+        "type": "SPEL FULL",
+        "original": "Paralyze",
+        "string": "Parali\u017c"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Demoralize",
+        "type": "SPEL FULL",
+        "original": "Demoralize",
+        "string": "Zniech\u0119cenie"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Frenzy",
+        "type": "SPEL FULL",
+        "original": "Frenzy",
+        "string": "Sza\u0142"
+    },
+    {
+        "editor_id": "ccBGSSSE004_DrainMagicka",
+        "type": "SPEL FULL",
+        "original": "Frenzy",
+        "string": "Sza\u0142"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Burden",
+        "type": "SPEL FULL",
+        "original": "Burden",
+        "string": "Brzemi\u0119"
+    },
+    {
+        "editor_id": "ccBGSSSE004_SlowFFContact",
+        "type": "MGEF FULL",
+        "original": "Slow",
+        "string": "Spowolnienie"
+    },
+    {
+        "editor_id": "ccBGSSSE002_EnchInfluenceConfDownFFContactLow",
+        "type": "MGEF FULL",
+        "original": "Fear",
+        "string": "Strach"
+    },
+    {
+        "editor_id": "ccBGSSSE002_EnchInfluenceConfDownFFContactLow",
+        "type": "MGEF DNAM",
+        "original": "Creatures and people up to level <mag> flee from combat for <dur> seconds.",
+        "string": "Istoty i ludzie na maksymalnie <mag>. poziomie uciekaj\u0105 od walki przez <dur> s."
+    },
+    {
+        "editor_id": "ccBGSSSE004_EnchFrostDamageFFContact",
+        "type": "MGEF DNAM",
+        "original": "Target takes <mag> points of frost damage to Health and Stamina.",
+        "string": "Cel traci <mag> pkt. zdrowia i kondycji od obra\u017ce\u0144 od mrozu."
+    },
+    {
+        "editor_id": "ccBGSSSE004_Frost",
+        "type": "SPEL FULL",
+        "original": "Frost",
+        "string": "Mr\u00f3z"
+    },
+    {
+        "editor_id": "ccBGSSSE004_EnchFrostDamageFFContact",
+        "type": "MGEF FULL",
+        "original": "Frost Damage",
+        "string": "Obra\u017cenia od mrozu"
+    },
+    {
+        "editor_id": "ccBGSSSE004_LvlRuinsEdgeBoss",
+        "type": "NPC_ FULL",
+        "original": "Bandit Chief",
+        "string": "Herszt bandyt\u00f3w"
+    },
+    {
+        "editor_id": "StonyCreekCave01",
+        "type": "CELL FULL",
+        "original": "Stony Creek Cave",
+        "string": "Jaskinia Kamiennego Potoku"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Quest",
+        "type": "QUST CNAM",
+        "original": "I've found Ruin's Edge.",
+        "string": "Uda\u0142o mi si\u0119 odnale\u017a\u0107 Skraj Zniszczenia."
+    },
+    {
+        "editor_id": "ccBGSSSE004_Quest",
+        "type": "QUST CNAM",
+        "original": "I found a map to the location of the fabled bow, Ruin's Edge.",
+        "string": "Uda\u0142o mi si\u0119 odnale\u017a\u0107 map\u0119 wskazuj\u0105c\u0105 miejsce ukrycia s\u0142ynnego \u0142uku o nazwie Skraj Zniszczenia."
+    }
+]

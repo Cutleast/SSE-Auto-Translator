@@ -1,0 +1,176 @@
+[
+    {
+        "editor_id": "ccBGSSSE056_ArmorBladesCuirass",
+        "type": "ARMO FULL",
+        "original": "Silver Armor",
+        "string": "Armure d'argent"
+    },
+    {
+        "editor_id": "ccBGSSSE056_ArmorBladesBoots",
+        "type": "ARMO FULL",
+        "original": "Silver Boots",
+        "string": "Bottes d'argent"
+    },
+    {
+        "editor_id": "ccBGSSSE056_ArmorBladesHelmet",
+        "type": "ARMO FULL",
+        "original": "Silver Helmet",
+        "string": "Casque d'argent"
+    },
+    {
+        "editor_id": "ccBGSSSE056_ArmorBladesGauntlets",
+        "type": "ARMO FULL",
+        "original": "Silver Gauntlets",
+        "string": "Gantelets d'argent"
+    },
+    {
+        "editor_id": "ccBGSSSE056_Quest",
+        "type": "QUST NNAM",
+        "original": "Retrieve the armor from the Hut",
+        "string": "R\u00e9cup\u00e9rez l'armure dans la hutte"
+    },
+    {
+        "editor_id": "ccBGSSSE056_EECGuard",
+        "type": "NPC_ FULL",
+        "original": "East Empire Warden",
+        "string": "Garde de l'Empire oriental"
+    },
+    {
+        "editor_id": "ccBGSSSE056_PrisonNote",
+        "type": "BOOK FULL",
+        "original": "M'Sharra's Confession",
+        "string": "Aveux de M'Sharra"
+    },
+    {
+        "editor_id": "ccBGSSSE056_EECCaptain",
+        "type": "NPC_ FULL",
+        "original": "Imperial Captain",
+        "string": "Capitaine imp\u00e9rial"
+    },
+    {
+        "editor_id": "ccBGSSSE056_Quest",
+        "type": "QUST NNAM",
+        "original": "Search for a note at the Bannered Mare",
+        "string": "Cherchez une note \u00e0 la Jument pavois\u00e9e"
+    },
+    {
+        "editor_id": "ccBGSSSE056_Key",
+        "type": "KEYM FULL",
+        "original": "M'Sharra's Key",
+        "string": "Cl\u00e9 de M'Sharra"
+    },
+    {
+        "editor_id": "ccBGSSSE056_CatNote",
+        "type": "BOOK FULL",
+        "original": "M'Sharra's Diary",
+        "string": "Journal de M'Sharra"
+    },
+    {
+        "editor_id": "ccBGSSSE056_Quest",
+        "type": "QUST NNAM",
+        "original": "Inspect Dragonsreach Dungeon for clues on M'Sharra",
+        "string": "Examinez le donjon de Fort-Dragon pour trouver des indices sur M'Sharra"
+    },
+    {
+        "editor_id": "ccBGSSSE056_Quest",
+        "type": "QUST FULL",
+        "original": "When the Cat's Away",
+        "string": "Quand le chat n'est pas l\u00e0"
+    },
+    {
+        "editor_id": "ccBGSSSE056_MiscQuest",
+        "type": "QUST NNAM",
+        "original": "Search for a note at the Bannered Mare",
+        "string": "Cherchez une note \u00e0 la Jument pavois\u00e9e"
+    },
+    {
+        "editor_id": "ccBGSSSE056_BookV2",
+        "type": "BOOK FULL",
+        "original": "The Crimson Dirks, v2",
+        "string": "Les Dagues Empourpr\u00e9es, vol.\u00a02"
+    },
+    {
+        "editor_id": "ccBGSSSE056_SmithingBonus",
+        "type": "PERK FULL",
+        "original": "Smithing",
+        "string": "Forgeage"
+    },
+    {
+        "editor_id": "ccBGSSSE056_MatchingSetHeavy",
+        "type": "PERK FULL",
+        "original": "Matching Set",
+        "string": "Panoplie uniforme"
+    },
+    {
+        "editor_id": "Tamriel",
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Bordeciel"
+    },
+    {
+        "editor_id": "WhiterunDragonsreachBasement",
+        "type": "CELL FULL",
+        "original": "Dragonsreach Dungeon",
+        "string": "Donjon de Fort-Dragon"
+    },
+    {
+        "editor_id": "LundsHut01",
+        "type": "CELL FULL",
+        "original": "Lund's Hut",
+        "string": "Hutte de Lund"
+    },
+    {
+        "editor_id": "WhiterunBanneredMare",
+        "type": "CELL FULL",
+        "original": "The Bannered Mare",
+        "string": "La Jument pavois\u00e9e"
+    },
+    {
+        "editor_id": "ccBGSSSE056_Quest",
+        "type": "QUST CNAM",
+        "original": "I found a note at the Bannered Mare written by a Khajiit named M'Sharra. She claims to have been a warrior in another life, and decided to start a fight with the guards so she could relive some of her past glory. While she was no longer present, I found a note next to the evidence chest that implies she left an armor set in an abandoned hut near Rorikstead.",
+        "string": "J'ai trouv\u00e9 une note \u00e0 la Jument pavois\u00e9e \u00e9crite par une Khajiit d\u00e9nomm\u00e9e M'Sharra. Elle pr\u00e9tend avoir \u00e9t\u00e9 une guerri\u00e8re dans une autre vie, ce qui l'a pouss\u00e9e \u00e0 se battre avec les gardes pour vivre \u00e0 nouveau sa gloire pass\u00e9e. Bien qu'elle n'\u00e9tait plus l\u00e0, j'ai trouv\u00e9 une note pr\u00e8s du coffre de preuves indiquant qu'elle aurait cach\u00e9 un ensemble d'armure dans une hutte abandonn\u00e9e pr\u00e8s de Rorikbourg."
+    },
+    {
+        "editor_id": "ccBGSSSE056_Quest",
+        "type": "QUST CNAM",
+        "original": "People from across Tamriel have migrated to Skyrim in the wake of the Great War. Perhaps if I poke around the tavern in Whiterun, I can learn some of their stories.",
+        "string": "Des habitants de tout Tamriel ont migr\u00e9 vers Bordeciel aux pr\u00e9mices de la Grande guerre. Peut-\u00eatre qu'en laissant tra\u00eener une oreille \u00e0 la taverne de Blancherive, je pourrai en savoir plus sur eux."
+    },
+    {
+        "editor_id": "ccBGSSSE056_Quest",
+        "type": "QUST CNAM",
+        "original": "I found a note at the Bannered Mare written by a Khajiit named M'Sharra. She claims to have been a warrior in another life, and decided to start a fight with the guards so she could relive some of her past glory. While she was no longer present, I found a note next to the evidence chest that implies she left an armor set in an abandoned hut near Rorikstead. Inside the hut was a set of silver armor.",
+        "string": "J'ai trouv\u00e9 une note \u00e0 la Jument pavois\u00e9e \u00e9crite par une Khajiit d\u00e9nomm\u00e9e M'Sharra. Elle pr\u00e9tend avoir \u00e9t\u00e9 une guerri\u00e8re dans une autre vie, ce qui l'a pouss\u00e9e \u00e0 se battre avec les gardes pour vivre \u00e0 nouveau sa gloire pass\u00e9e. Bien qu'elle n'\u00e9tait plus l\u00e0, j'ai trouv\u00e9 une note pr\u00e8s du coffre de preuves indiquant qu'elle aurait cach\u00e9 un ensemble d'armure dans une hutte abandonn\u00e9e pr\u00e8s de Rorikbourg. \u00c0 l'int\u00e9rieur de la hutte se trouvait un ensemble d'armure d'argent."
+    },
+    {
+        "editor_id": "ccBGSSSE056_PrisonNote",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>\nM'Sharra enjoyed her fight with the guard. Plus, her new home is better than the last. It is a very tiny cage, but she does not beg for food. It is given.\n\nStill, M'Sharra longs to see the night sky. When she was a kitten, the elders warned her that if she stared too long at the moons, they would grow shy, and M'Sharra would never see them again. This made her sad, and so M'Sharra vowed to stop looking at the sky, and kept her head down toward the dirt where the beggars belonged.\n\nOne day, she tried to steal the silver out of the pockets of a Nord named Tyra. When she heard Khajiit's story, she took pity on the kitten, and told her that the moons were not the timid creatures she had believed. She said that as long as Khajiit held her head up high, they would shine brighter than any star.\n\nFrom that day on she spent her life in service to the Crimson Dirks. And when she was ready, her new litter-mates forged her an armor made of silver, and in its heart, the piece Tyra had in her pocket so many moons ago.\n\nM'Sharra hid the armor in a hut, northwest of Rorikstead. At times, M'Sharra has longed to retrieve it, and wear it proudly. \n\nBut she must be careful not to let sentiment cloud her judgment. M'Sharra suspects she is being followed. So she will leave the armor for another. Besides, it is not the silver in the armor or the moonlight in the sky that M'Sharra treasures, but the friends she has lost. Perhaps in death, she will see them again.</font>",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\nM'Sharra a appr\u00e9ci\u00e9 son combat contre le garde. De plus, son nouveau foyer est mieux que l'ancien. C'est une toute petite cage, mais plus besoin de mendier pour manger, on la nourrit.\n\nPour autant, M'Sharra veut revoir le ciel \u00e9toil\u00e9. Lorsqu'elle n'\u00e9tait qu'un chaton, les anciens lui racontaient que si elle fixait les lunes trop longtemps, ces derni\u00e8res, de honte, se d\u00e9roberaient \u00e0 jamais \u00e0 la vue de tous. Cette pens\u00e9e lui fit de la peine. Elle se jura de ne plus jamais regarder le ciel et baissa son regard vers le sol, l\u00e0 o\u00f9 les mendiants vivent.\n\nUn jour, elle essaya de subtiliser l'argent des poches d'une Nordique nomm\u00e9e Tyra. \u00c9mue par l'histoire de la Khajiit qu'elle venait d'entendre, cette derni\u00e8re lui indiqua que les lunes n'\u00e9taient pas les cr\u00e9atures timides qu'elle imaginait. Elle lui dit que tant qu'elle garderait la t\u00eate haute, ces astres continueraient \u00e0 briller autant que les \u00e9toiles.\n\nDepuis ce jour, elle passa sa vie \u00e0 servir les Dagues Empourpr\u00e9es. Et lorsqu'elle fut pr\u00eate, sa camarade de chambr\u00e9e lui forgea une armure d'argent. En son coeur se trouvait la pi\u00e8ce contenue dans la poche de Tyra de nombreuses lunes auparavant.\n\nM'Sharra a cach\u00e9 l'armure dans une hutte, au nord-ouest de Rorikbourg. Parfois, M'Sharra r\u00eaverait de la r\u00e9cup\u00e9rer, et de la porter fi\u00e8rement. \n\nMais elle doit faire attention \u00e0 ne pas laisser ses sentiments alt\u00e9rer son jugement. M'Sharra pense qu'elle est suivie. Elle va donc laisser l'armure \u00e0 quelqu'un d'autre. Dans tous les cas, ce n'est pas l'argent de l'armure ou la lueur de la lune dans la ciel qui importent \u00e0 M'Sharra. Ce sont les amis qu'elle a perdus. Peut-\u00eatre qu'elle les reverra dans la mort.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE056_Quest",
+        "type": "QUST CNAM",
+        "original": "I found a note at the Bannered Mare written by a Khajiit named M'Sharra. She claims to have been a warrior in another life, and decided to start a fight with the guards so she could relive some of her past glory. I should visit the dungeon to see what became of her.",
+        "string": "J'ai trouv\u00e9 une note \u00e0 la Jument pavois\u00e9e \u00e9crite par une Khajiit d\u00e9nomm\u00e9e M'Sharra. Elle pr\u00e9tend avoir \u00e9t\u00e9 une guerri\u00e8re dans une autre vie, ce qui l'a pouss\u00e9e \u00e0 se battre avec les gardes pour vivre \u00e0 nouveau sa gloire pass\u00e9e. Je devrais inspecter le donjon pour d\u00e9couvrir ce qui lui est arriv\u00e9."
+    },
+    {
+        "editor_id": "ccBGSSSE056_CatNote",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>\nM'Sharra has a secret. \n\nNot a bad secret, like the Battle-Born's secret affair. Not a boring secret, like the shopkeeper who hates his sister. M'Sharra's secret is too good to be believed.\n\nM'Sharra did not always spend her days like this, a cat who pretends to be a dog. No, M'Sharra used to be a bandit warrior, a member of the Crimson Dirks - famous rogues wanted by the East Empire Company, the Clan Mothers of Elsweyr, and lawbringers from here to the Summerset Isles. If the guards only knew, they would come kill her. That is why M'Sharra can never tell.\n\nBut her time is short. She longs for company. The other day she took to begging outside the city, and saw her litter-mate, Zaharia, walk through the gates. M'Sharra called her by name, but the Redguard ignored her. M'Sharra is sure she heard her, and it made her sad to know this.\n\nM'Sharra does not want to die a rug. Perhaps she will do something mischievous, and get the Whiterun guards to attack. Then she will be a warrior once more.</font>",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\nM'Sharra cache un secret. \n\nPas du genre n\u00e9faste, comme celui de l'histoire du Guerrier-N\u00e9. Pas aussi ennuyeux que celui du marchand qui ha\u00efssait sa soeur. Le secret de M'Sharra est trop beau pour \u00eatre vrai.\n\nElle n'avait pas toujours \u00e9t\u00e9 ce f\u00e9lin qui se prend pour un chien. Au contraire, M'Sharra avait \u00e9t\u00e9 autrefois un bandit membre des Dagues Empourpr\u00e9es, les c\u00e9l\u00e8bres ren\u00e9gats recherch\u00e9s par la Compagnie de l'Empire oriental, les M\u00e8res de clan d'Eslweyr et les Bras de la Loi d'ici jusqu'\u00e0 l'Archipel de l'automne. Si les gardes l'apprenaient, ils viendraient mettre un terme \u00e0 sa vie. C'est la raison pour laquelle M'Sharra ne pourra jamais en parler.\n\nMais le temps presse. Elle voudrait de la compagnie. L'autre jour, elle se mit \u00e0 mendier hors de la ville et aper\u00e7ut sa camarade, Zaharia, traverser les portes de la ville. M'Sharra l'appela par son nom, mais la Rougegarde l'ignora. M'Sharra est certaine qu'elle l'avait entendue, et cela l'attrista davantage.\n\nM'Sharra ne veut pas finir en carpette. Peut-\u00eatre qu'elle accomplira un acte r\u00e9pr\u00e9hensible, et que les gardes de Blancherive l'attaqueront. Alors, elle deviendra une guerri\u00e8re une fois de plus.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE056_BookV2",
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\n<p align=\"center\">\n\n\nThe Crimson Dirks\nBook Two\n\n\nby \nGathers-the-Coin\n</p>\n\n\n\n[pagebreak]\n<p align=\"left\">\n<img src='img://Textures/Interface/Books/Illuminated_Letters/I_letter.png'>n the year following its inception, the Crimson Dirks had more than tripled in size, and now numbered fifteen. \n\nTyra Blood-Fire had found her blacksmith in the Imperial City, an Orc named Yakhtu. She had recruited cunning battlemages in the Breton twins, Erwan and Edward. In Elsweyr she met M'Sharra, a street thief who had grown into a capable blade. There were the Wood Elf archers, Fathrys and Ehlhiel - one a hopeless romantic, the other cynical beyond his years. There was the Argonian Pale-Eyes, a loyal and true soul, and the Redguard Zaharia, a born leader of men. And lastly, she found her muscle in the Orc warrior Urgnok, and in the Nords Skjol and Bjormund, their bodies as unbreakable as the ice of their ancestors. \n\nAltogether it had the makings of a full-fledged organization, rivaling that of any major guild. They had members pulling off jobs from Bruma to Dune, raiding warehouses and pillaging farms. With every crate added to their coffers, Tyra hoped their influence could spider across the breadth of Tamriel, earning both fear and respect amongst those who plied their trade in the shadows.\n\nAs bandits, however, they would rely first and foremost on the sacking of caravans. They would stalk the highways and thoroughfares for carriages full of goods, and quickly relieve them of their belongings. For this task the Khajiit, M'Sharra, found herself best suited. Her eyes were keen at identifying a heavy wagon, from the spin of its wheels to the tracks carving through the dirt. She could spot a weary guard by the slump of his shoulders or the pace of his gait. Her eyes saw clearly even in the dead of night, while others were slaves to the light of their torches.\n\nAnd what she lacked in strength, the other bandits were willing to provide. \n\nOn this night, however, their victims put up little fight, their numbers comprised of monks and priests who were all too ready to unite with their makers. The wagon they plundered was destined for a temple, and its crates full of treasures that offered more tribute than gold.\n\n\"Do you think Tyra would like this?\" asked M'Sharra, popping her head out from behind the wagon, an Amulet of Talos dangling from her ear.  \n\n\"A bandit has no need for gods or prayer,\" grumbled Urgnok, wiping the blood from his battleaxe, \"it's a terrible gift.\"\n\n\"Nonsense,\" countered Bjormund, unloading a crate, \"all Nords love Talos, almost as much as they love mead!\"\n\n\"Of course you would say that, frost licker,\" snarled Urgnok, \"but by Malacath, Tyra is not like the rest of you idiots. She has taste.\"\n\nIf Tyra were like any other Nord, Urgnok would have never pledged her his axe. In his mind, the Nords were pale-faced, poetry loving giants who ate with their fingers and drank from a horn. Tyra, however, did not think or feel or smell like the other Nords did, and more importantly, did not fight like them. She preferred the acrid bite of a sujamma bottle to a snowback's honeyed drink, and despised poetry in all its forms. He surmised she might've been from Morrowind, but the Orc was not the type to pry into another's business.\n\n\"Oh?\" said M'Sharra with a mischievous grin, the amulet swaying as her ears perked up, \"and what are you planning to get her, Urgnok?\"\n\n\"What? Why would I get her anything?\" the Orc replied coldly, \"you'll all be dead in a year anyway.\"\n\nM'Sharra blanched at the words, unsure if the Orc was making a joke or speaking prophecy. While hardly a mage, Urgnok was known to dabble in dark magic, wearing tribal scars and marks on his body, and totems of bone around his neck. Unlike with the blacksmith Yakhtu, his anger seemed to stem not from the hardened nature of his blood, but something deeper and personal, and it colored every conversation they had. The others stewed in silence at his remarks until the young Bosmer, Fathrys, broke the ice.\n\n\"Speaking of which, did you want anything for the holidays, Zaharia?\" he mewled, a rose of blush affecting his soft brown skin. The Redguard, in return, paid him little heed as she examined the wagon's horses.\n\n\"If you want to get me a Saturalia gift,\" said Zaharia, pointing at the arrows lodged in the wagon's side, \"work on your aim. I'll feel better about having you at my back when you can kill more than planks of wood.\"\n\n\"That is all well and good,\" interrupted M'Sharra, \"but there is a far more important matter than life and death, for this Khajiit still does not have a suitable present.\"\n\n\"If it's from the heart,\" Fathrys said, eyes fixated on the Redguard, \"the amulet will be good enough.\"\n\nTwo weeks later on a cold Saturalia night, Tyra Blood-Fire awoke to the sound of a crackling fire. A note was placed on her private safe, which she opened to find an amulet wrapped in cloth. The Khajiit had snuck into her room earlier and left the gift and the fire behind, as proof of both her generosity and skill. \n\nTyra was not religious by nature, but as she stood in that warm, reddish glow, something about the Amulet of Talos resonated with her. Perhaps it was the letter she received from Peladius that morning, about an encounter with the Thalmor in Dune. In that instance, a thought crept into her mind and soon blossomed into an idea. The following day she beckoned the blacksmith to her chambers, the idea having matured into a plan.\n\n\"I want you to forge me more of these amulets,\" Tyra said, placing the axe-shaped necklace on the table before her. \n\nThe blacksmith picked up the artifact and studied its make, thumbing across the intricate patterns grooved into the piece. Unlike other amulets, it was simple yet ornate, its blades casting a neutral tone that neither reflected nor absorbed the surrounding candlelight.\n \n\"This is made with dragonbone and scales,\" Yakhtu replied, \"hard to come by these days, but a replica should be simple enough. I guess my only question is, why? Seems odd for bandits to turn to the Divines for help.\"\n\n\"Last week, there was a trade caravan traveling on the Silver Road, torched by Thalmor Justiciars,\" Tyra said, \"Apparently they killed the merchant on suspicion of Talos worship. And it's not just here. I've gotten word from Peladius that the Thalmor are making an effort to eliminate anyone and everyone in possession of these amulets, whether it be men in the streets or wagons on the road.\"\n\n\"Wagons,\" replied Yakhtu, \"like the ones we sack.\"\n\n\"Exactly. The amulets aren't armor or jewelry or tribute,\" said Tyra, \"they're a motive. We place one on every caravan we sack, and torch the wagons when we're done looting them. The guards blame the Thalmor, and we keep the spoils.\"\n\nYakhtu nodded and took her leave, mind set on forging the amulets. Tyra knew well enough that the smith didn't need the artifact with her, having already committed it to memory. The blacksmith's genius was different from the others - quiet, removed, and matched only by her insatiable work ethic. The amulets would be done by daybreak, and there was no need for this one to be included.\n\nTyra returned the amulet to the safe, when she noticed another item nestled amongst the piles of gold and gems. It was the tooth of an Orc chief, one typically earned by besting its owner in single combat. \n\nTyra herself knew of one such Orc, a son who had been forced to kill his father against his will. Heartbroken, the son wore this tooth as a keepsake around his neck, fearing the day he would have to slay his future children. Until one day the son met a Nord bandit, who became Blood-Kin of the tribe and challenged him to a duel. \n\nThe bandit bested the Orc in single combat, and recognizing the pain that haunted him, freed him from his duties as chief. She asked not for his tooth, but his blade when the time came. Yet it wasn't until after the Nord formed the Crimson Dirks that she returned to that Orc, and asked him to make good on his oath.\n\nTyra smiled as she recalled the memory. She didn't know Urgnok had pulled the tooth, but it didn't surprise her in the least.\n",
+        "string": "[pagebreak]\n<p align=\"center\">\n\n\nLes Dagues Empourpr\u00e9es\nLivre\u00a0II\n\n\npar \nTire-sou\n</p>\n\n\n\n[pagebreak]\n<p align=\"left\">\n<img src='img://Textures/Interface/Books/Illuminated_Letters/U_letter.png'>ne ann\u00e9e apr\u00e8s leur cr\u00e9ation, les Dagues Empourpr\u00e9es avaient plus que tripl\u00e9 de volume. Ils comptaient d\u00e9sormais 15\u00a0membres dans leurs rangs. \n\nTyra Feudesang avait d\u00e9got\u00e9 Yakhtu, une Orque forgeronne, dans la Cit\u00e9 imp\u00e9riale Elle avait recrut\u00e9 les jumeaux br\u00e9tons Erwan et Edward, des mages-guerriers astucieux. En Elsweyr, elle avait rencontr\u00e9 M'Sharra, une voleuse vagabonde qui \u00e9tait devenue une combattante redoutable. Il y avait aussi les Elfe des bois, Fathrys et Ehlhiel\u00a0: l'un romantique, l'autre d'un cynisme que seul son \u00e2ge \u00e9galait. On retrouvait \u00e9galement Yeux-P\u00e2les, un Argonien loyal et sinc\u00e8re, ainsi que Zaharia, une Rougegarde dot\u00e9e d'un sens du commandement in\u00e9gal\u00e9. Pour finir, elle avait recrut\u00e9 le gros bras qu'\u00e9tait Urgnok, un guerrier orque, ainsi que Skjol et Bjormund, dont les corps \u00e9taient aussi r\u00e9sistants que la glace de leurs anc\u00eatres. \n\nEnsemble, ils formaient une organisation \u00e0 part enti\u00e8re capable de rivaliser avec toutes les guildes les plus importantes. Leurs membres accomplissaient des t\u00e2ches de Bruma jusqu'\u00e0 Dune, assaillant les entrep\u00f4ts et pillant les fermes. \u00c0 chaque caisse qui venait s'ajouter \u00e0 leur coffre, Tyra esp\u00e9rait que leur influence pourrait s'\u00e9tendre dans tout Tamriel, instillant la peur et le respect dans le c\u0153ur de ceux qui exer\u00e7aient leur activit\u00e9 dans l'ombre.\n\nToutefois, \u00e9tant des bandits, ils se consacraient surtout au pillage de caravanes. Ils r\u00f4daient pr\u00e8s des grandes routes et art\u00e8res \u00e0 la recherche de convois remplis de marchandises, afin de les en soulager. C'\u00e9tait M'Sharra, la Khajiit, qui correspondait le mieux \u00e0 cette t\u00e2che. Sa vision aff\u00fbt\u00e9e lui permettait d'identifier facilement les convois charg\u00e9s, observant le mouvement de leurs roues ainsi que les traces qu'ils laissaient dans la boue. Elle \u00e9tait capable de d\u00e9celer la fatigue d'un garde \u00e0 la position de ses \u00e9paules et \u00e0 son allure. Ses yeux pouvaient percer l'obscurit\u00e9 de la nuit, quand d'autres \u00e9taient esclaves de la lumi\u00e8re de leurs torches.\n\nEt s'il fallait faire appel \u00e0 la force, les autres bandits venaient lui pr\u00eater main-forte. \n\nCette nuit-l\u00e0, cependant, leurs victimes n'oppos\u00e8rent que peu de r\u00e9sistance. Leurs rangs se composaient de moines et de pr\u00eatres trop prompts \u00e0 rejoindre leurs cr\u00e9ateurs. Le convoi qu'ils avaient pill\u00e9 devait se rendre jusqu'\u00e0 un temple, et les tr\u00e9sors qu'il contenait \u00e9taient bien plus pr\u00e9cieux que de l'or.\n\n\"Tu crois que Tyra aimera \u00e7a\u00a0?\" demanda M'Sharra, sortant sa t\u00eate de l'arri\u00e8re du convoi, une amulette de Talos pendant \u00e0 son oreille.  \n\n\"Un bandit n'a nul besoin de dieux ou de pri\u00e8res, grommela Urgnok, essuyant le sang sur sa hache d'armes. C'est un pi\u00e8tre cadeau.\"\n\n\"N'importe quoi, r\u00e9pliqua Bjormund en d\u00e9chargeant une caisse. Tous les Nordiques adorent Talos, autant que l'hydromel\u00a0!\"\n\n\"J'\u00e9tais s\u00fbr que tu dirais \u00e7a, bouffeur de glace, grogna Urgnok. Mais par Malacath, Tyra n'est pas comme vous autres, bande de cr\u00e9tins. C'est une femme de go\u00fbt.\"\n\nSi Tyra avait \u00e9t\u00e9 une Nordique lambda, Urgnok ne lui aurait jamais pr\u00eat\u00e9 all\u00e9geance. Dans son esprit, les Nordiques \u00e9taient de p\u00e2les adorateurs des g\u00e9ants, qui mangeaient avec leurs doigts et buvaient dans une corne. Tyra, toutefois, ne pensait, ni ne ressentait ou ne sentait comme les autres Nordiques. Elle ne combattait pas non plus comme eux. Elle pr\u00e9f\u00e9rait l'acidit\u00e9 piquante d'une bouteille de sujamma \u00e0 la boisson miell\u00e9e des nuques givr\u00e9es. Elle m\u00e9prisait, par ailleurs, la po\u00e9sie sous toutes ses formes. Il pr\u00e9sumait qu'elle devait venir de Morrowind, mais l'Orque n'\u00e9tait pas du genre \u00e0 s'immiscer dans les affaires d'autrui.\n\n\"Oh\u00a0? r\u00e9pondit M'Sharra en affichant un sourire espi\u00e8gle, l'amulette se balan\u00e7ant sur son oreille qui se redressait. Et que comptes-tu lui rapporter, Urgnok\u00a0?\"\n\n\"Quoi\u00a0? Pourquoi lui apporterais-je quoi que ce soit\u00a0? riposta l'Orque avec froideur. Vous serez tous morts d'ici un an, de toute mani\u00e8re.\"\n\nM'Sharra bl\u00eamit en entendant ces mots. Elle ne savait pas si son interlocuteur plaisantait, ou s'il faisait r\u00e9f\u00e9rence \u00e0 une quelconque proph\u00e9tie. Sans \u00eatre un mage accompli, Urgnok \u00e9tait r\u00e9put\u00e9 pour tremper dans la magie noire. Son corps \u00e9tait recouvert de cicatrices et de marques, et il arborait des reliques d'os autour du cou. \u00c0 la diff\u00e9rence de Yakthu la forgeronne, sa col\u00e8re semblait provenir non pas de la nature irascible de son sang, mais plut\u00f4t de quelque chose de plus profond et personnel qui transpirait dans chacune de leurs conversations. Les autres se turent en entendant sa remarque jusqu'\u00e0 ce que le jeune Bosmer, Fathrys, brise la glace.\n\n\"D'ailleurs, tu voudrais un cadeau en particulier pour les f\u00eates, Zaharia\u00a0? bredouilla-t-il, le rouge montant \u00e0 ses joues l\u00e9g\u00e8rement h\u00e2l\u00e9es. La Rougegarde, en retour, ne lui pr\u00eata que peu d'attention tandis qu'elle inspectait les chevaux du convoi.\n\n\"Si tu veux m'offrir un cadeau de Saturalia, r\u00e9torqua Zaharia, pointant du doigt les fl\u00e8ches nich\u00e9es dans la structure du wagon, travaille ta pr\u00e9cision. Je me sentirai mieux en ta pr\u00e9sence lorsque tu seras capable de tuer autre chose que des planches de bois.\"\n\n\"C'est bien beau tout \u00e7a, interrompit M'Sharra, mais il y a quelque chose de plus important que la vie et la mort\u00a0: cette Khajiit doit trouver un pr\u00e9sent convenable.\"\n\n\"Si \u00e7a vient du c\u0153ur, ajouta Fathrys en fixant la Rougegarde du regard, l'amulette fera l'affaire.\"\n\nDeux semaines plus tard, lors d'une nuit froide de Saturalia, Tyra Feudesang se r\u00e9veilla au son d'un feu cr\u00e9pitant. Une note \u00e9tait pos\u00e9e pr\u00e8s de son coffre-fort personnel. Elle l'ouvrit pour d\u00e9couvrir une amulette emball\u00e9e dans du tissu. La Khajiit s'\u00e9tait infiltr\u00e9e dans sa chambre un peu plus t\u00f4t, avait allum\u00e9 un feu puis d\u00e9pos\u00e9 son cadeau, \u00e0 la fois pour prouver sa g\u00e9n\u00e9rosit\u00e9 et son talent. \n\nTyra n'\u00e9tait pas de nature d\u00e9vote, mais alors qu'elle se tenait pr\u00e8s de la lueur chaleureuse de l'\u00e2tre, quelque chose dans l'amulette de Talos r\u00e9sonna en elle. Peut-\u00eatre \u00e9tait-ce la lettre qu'elle avait re\u00e7ue de P\u00e9ladius ce matin, mentionnant une rencontre avec le Thalmor \u00e0 Dune. \u00c0 ce moment pr\u00e9cis, une pens\u00e9e lui traversa l'esprit, faisant germer en elle une id\u00e9e. Le jour suivant, elle convoqua la forgeronne dans ses quartiers apr\u00e8s avoir laiss\u00e9 m\u00fbrir son plan.\n\n\"J'aimerais que tu me forges d'autres amulettes comme celle-ci,\" ordonna Tyra, d\u00e9posant le collier en forme de hache sur la table devant elle. \n\nLa forgeronne empoigna l'artefact et \u00e9tudia sa conception, effleurant les motifs complexes grav\u00e9s sur l'objet. \u00c0 la diff\u00e9rence d'autres amulettes, elle \u00e9tait simple mais orn\u00e9e. Les lames qui la composaient \u00e9taient d'un ton neutre, ne r\u00e9fl\u00e9chissant, ni n'absorbant la lueur de la bougie qui l'enveloppait.\n \n\"Elle est faite \u00e0 partir d'os de dragon et d'\u00e9cailles, r\u00e9pondit Yakhtu. Difficile d'obtenir ces mat\u00e9riaux par les temps qui courent, mais je devrais pouvoir assez facilement en faire une r\u00e9plique. J'aurai une seule question\u00a0: pourquoi\u00a0? \u00c7a semble \u00e9trange pour des bandits de se tourner vers les Divins pour demander de l'aide.\"\n\n\"La semaine derni\u00e8re, des Justiciars Thalmor avaient mis le feu \u00e0 une caravane marchande qui voyageait sur la Route d'argent, expliqua Tyra. A priori, le marchand \u00e9tait un adorateur de Talos. C'est pour cela qu'ils l'ont tu\u00e9. Et \u00e7a n'arrive pas qu'ici. P\u00e9ladius m'a racont\u00e9 que le Thalmor s'\u00e9vertue \u00e0 \u00e9liminer quiconque poss\u00e8de ces amulettes, qu'il s'agisse de bougres dans les rues, ou de convois sur la route.\"\n\n\"Des convois, r\u00e9torqua Yakhtu. Comme ceux que nous pillons.\"\n\n\"Exactement. Les amulettes ne sont pas des armures, des bijoux ou un tribut, ajouta Tyra. Elles sont un motif. Pla\u00e7ons l'une d'entre elles dans chacune des caravanes que nous prenons d'assaut, et br\u00fblons-les d\u00e8s lors que nous avons termin\u00e9 de les piller. Les gardes accusent le Thalmor, et nous gardons le magot.\"\n\nYakhtu acquies\u00e7a puis prit cong\u00e9, bien d\u00e9termin\u00e9e \u00e0 forger ces amulettes. Tyra savait bien que la forgeronne n'avait pas besoin d'emporter l'amulette avec elle\u00a0: elle \u00e9tait d\u00e9j\u00e0 grav\u00e9e dans sa m\u00e9moire. Son g\u00e9nie n'avait rien \u00e0 voir avec celui des autres\u00a0: elle \u00e9tait calme, discr\u00e8te et son acharnement au travail n'avait d'\u00e9gale que son \u00e9thique. Avant la tomb\u00e9e de la nuit, les amulettes seraient pr\u00eates, sans nul besoin d'y ajouter celle-ci.\n\nTyra repla\u00e7a l'amulette dans son coffre-fort, tandis qu'elle remarqua qu'un autre objet tr\u00f4nait pr\u00e8s des piles d'or et de gemmes. Il s'agissait de la dent d'un chef orque, le genre que l'on obtient en battant son propri\u00e9taire en combat singulier. \n\nTyra connaissait personnellement un Orque qui avait d\u00fb tuer son p\u00e8re contre sa volont\u00e9. Le c\u0153ur bris\u00e9, il avait port\u00e9 cette dent autour de son cou en souvenir, craignant le jour o\u00f9 il aurait \u00e0 terrasser ses futurs enfants. Jusqu'au jour o\u00f9 l'Orque rencontra un bandit nordique, lequel s'int\u00e9gra \u00e0 la tribu et le d\u00e9fia en duel. \n\nLe bandit d\u00e9fit l'Orque au combat et, ressentant la douleur qui l'habitait, le lib\u00e9ra de son devoir de chef. Elle ne r\u00e9clama pas sa dent, mais plut\u00f4t son \u00e9p\u00e9e au moment venu. Toutefois, ce ne fut qu'une fois qu'elle eut fond\u00e9 les Dagues Empourpr\u00e9es qu'elle retourna voir l'Orque, et lui demanda de respecter son serment.\n\nTyra esquissa un sourire en ressassant ce souvenir. Elle ne savait pas qu'Urgnok avait extrait cette dent, mais au final, cela ne la surprit pas tant que \u00e7a.\n"
+    },
+    {
+        "editor_id": "ccBGSSSE056_MatchingSetHeavy",
+        "type": "PERK DESC",
+        "original": "Additional 25% Armor bonus if wearing a matched set of Heavy Armor.",
+        "string": "Bonus d'armure de 25\u00a0% si vous portez un ensemble d'armure lourde uniforme."
+    }
+]

@@ -1,0 +1,2774 @@
+[
+    {
+        "editor_id": "ccBGSSSE066_WoodenStaffWar",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of War",
+        "string": "B\u00e2ton de bois de guerre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_EbonyStaffJudgment",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Judgment",
+        "string": "B\u00e2ton d'\u00e9bonite du jugement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchPeaceSILVER",
+        "type": "ENCH FULL",
+        "original": "Staff of Peace",
+        "string": "B\u00e2ton de paix"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchJudgmentSTEELthousand",
+        "type": "ENCH FULL",
+        "original": "Staff of Judgement",
+        "string": "B\u00e2ton du jugement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchShamingSILVER",
+        "type": "ENCH FULL",
+        "original": "Staff of Shaming",
+        "string": "B\u00e2ton d'humiliation"
+    },
+    {
+        "editor_id": "ccBGSSSE066_DreughStaffPeace",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Peace",
+        "string": "B\u00e2ton dreugh de paix"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchJudgmentGLASSthousand",
+        "type": "ENCH FULL",
+        "original": "Staff of Judgement",
+        "string": "B\u00e2ton du jugement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchPeaceGLASS",
+        "type": "ENCH FULL",
+        "original": "Staff of Peace",
+        "string": "B\u00e2ton de paix"
+    },
+    {
+        "editor_id": "ccBGSSSE066_DreughStaffAncestors",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Ancestors",
+        "string": "B\u00e2ton dreugh des anc\u00eatres"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SummonDraugrMs",
+        "type": "MGEF FULL",
+        "original": "Summon Ancestor Ghost",
+        "string": "Invocation de fant\u00f4me ancestral"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchPeaceEBONY",
+        "type": "ENCH FULL",
+        "original": "Staff of Peace",
+        "string": "B\u00e2ton de paix"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchWarWOOD",
+        "type": "ENCH FULL",
+        "original": "Staff of War",
+        "string": "B\u00e2ton de guerre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchShamingGLASS",
+        "type": "ENCH FULL",
+        "original": "Staff of Shaming",
+        "string": "B\u00e2ton d'humiliation"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SummonDraugrMx",
+        "type": "MGEF FULL",
+        "original": "Summon Ancestor Ghost",
+        "string": "Invocation de fant\u00f4me ancestral"
+    },
+    {
+        "editor_id": "ccBGSSSE066_WoodenStaffJudgment",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Judgment",
+        "string": "B\u00e2ton de bois du jugement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SummonDraugrMel",
+        "type": "MGEF DNAM",
+        "original": "Summons an Ancestral Ghost for <dur> seconds.",
+        "string": "Invoque un fant\u00f4me ancestral pendant <dur>\u00a0secondes."
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchChasteningEBONY",
+        "type": "ENCH FULL",
+        "original": "Staff of Chastening",
+        "string": "B\u00e2ton de ch\u00e2timent"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchPeaceDAEDRIC",
+        "type": "ENCH FULL",
+        "original": "Staff of Peace",
+        "string": "B\u00e2ton de paix"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SummonDraugrMel",
+        "type": "MGEF FULL",
+        "original": "Summon Ancestor Ghost",
+        "string": "Invocation de fant\u00f4me ancestral"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchWarGLASS",
+        "type": "ENCH FULL",
+        "original": "Staff of War",
+        "string": "B\u00e2ton de guerre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchWarEBONY",
+        "type": "ENCH FULL",
+        "original": "Staff of War",
+        "string": "B\u00e2ton de guerre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchChasteningWOOD",
+        "type": "ENCH FULL",
+        "original": "Staff of Chastening",
+        "string": "B\u00e2ton de ch\u00e2timent"
+    },
+    {
+        "editor_id": "ccBGSSSE066_BarrierFireConcAimed",
+        "type": "MGEF FULL",
+        "original": "Wall of Frost and Flames",
+        "string": "Mur de glace et de flammes"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SummonDraugrWarlock",
+        "type": "NPC_ FULL",
+        "original": "Ancestor Ghost",
+        "string": "Fant\u00f4me ancestral"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchJudgmentEBONY",
+        "type": "ENCH FULL",
+        "original": "Staff of Judgement",
+        "string": "B\u00e2ton du jugement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_DreughStaffJudgment",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Judgment",
+        "string": "B\u00e2ton dreugh du jugement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchShamingDREUGH",
+        "type": "ENCH FULL",
+        "original": "Staff of Shaming",
+        "string": "B\u00e2ton d'humiliation"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SummonDraugrMelee",
+        "type": "NPC_ FULL",
+        "original": "Ancestor Ghost",
+        "string": "Fant\u00f4me ancestral"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SummonDraugrMixed",
+        "type": "NPC_ FULL",
+        "original": "Ancestor Ghost",
+        "string": "Fant\u00f4me ancestral"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchWarDREUGH",
+        "type": "ENCH FULL",
+        "original": "Staff of War",
+        "string": "B\u00e2ton de guerre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTemplateDaedric",
+        "type": "WEAP FULL",
+        "original": "Unenchanted Daedric Staff",
+        "string": "B\u00e2ton daedra non enchant\u00e9"
+    },
+    {
+        "editor_id": "ccBGSSSE066_DaedricStaffShaming",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Shaming",
+        "string": "B\u00e2ton daedra d'humiliation"
+    },
+    {
+        "editor_id": "ccBGSSSE066_FireDamageConcAimed",
+        "type": "MGEF DNAM",
+        "original": "Elemental damage that does <mag> points per second to Health, Magicka, and Stamina. Targets on fire take extra damage.",
+        "string": "Une attaque \u00e9l\u00e9mentaire qui inflige <mag> points de d\u00e9g\u00e2ts de sant\u00e9, de magie et de vigueur par seconde. Les cibles qui s'enflamment subissent des d\u00e9g\u00e2ts suppl\u00e9mentaires."
+    },
+    {
+        "editor_id": "ccBGSSSE066_WoodenStaffChastening",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Chastening",
+        "string": "B\u00e2ton de bois de ch\u00e2timent"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SilverStaffWar",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of War",
+        "string": "B\u00e2ton d'argent de guerre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SummonDraugrMs",
+        "type": "MGEF DNAM",
+        "original": "Summons an Ancestral Ghost for <dur> seconds.",
+        "string": "Invoque un fant\u00f4me ancestral pendant <dur>\u00a0secondes."
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffAncestorsWOOD",
+        "type": "ENCH FULL",
+        "original": "Summon Ancestor Ghost",
+        "string": "Invocation de fant\u00f4me ancestral"
+    },
+    {
+        "editor_id": "ccBGSSSE066_EbonyStaffWar",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of War",
+        "string": "B\u00e2ton d'\u00e9bonite de guerre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffAncestorsGLASS",
+        "type": "ENCH FULL",
+        "original": "Summon Ancestor Ghost",
+        "string": "Invocation de fant\u00f4me ancestral"
+    },
+    {
+        "editor_id": "ccBGSSSE066_EbonyStaffPeace",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Peace",
+        "string": "B\u00e2ton d'\u00e9bonite de paix"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchChasteningDAEDRIC",
+        "type": "ENCH FULL",
+        "original": "Staff of Chastening",
+        "string": "B\u00e2ton de ch\u00e2timent"
+    },
+    {
+        "editor_id": "ccBGSSSE066_EbonyStaffChastening",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Chastening",
+        "string": "B\u00e2ton d'\u00e9bonite de ch\u00e2timent"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffAncestorsSILVER",
+        "type": "ENCH FULL",
+        "original": "Summon Ancestor Ghost",
+        "string": "Invocation de fant\u00f4me ancestral"
+    },
+    {
+        "editor_id": "ccBGSSSE066_EbonyStaffForefathers",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of the Forefathers",
+        "string": "B\u00e2ton d'\u00e9bonite des a\u00efeuls"
+    },
+    {
+        "editor_id": "ccBGSSSE066_GlassStaffJudgment",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Judgment",
+        "string": "B\u00e2ton de verre du jugement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffAncestorsDAEDRIC",
+        "type": "ENCH FULL",
+        "original": "Summon Ancestor Ghost",
+        "string": "Invocation de fant\u00f4me ancestral"
+    },
+    {
+        "editor_id": "ccBGSSSE066_WoodenStaffPeace",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Peace",
+        "string": "B\u00e2ton de bois de paix"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SummonDraugrMx",
+        "type": "MGEF DNAM",
+        "original": "Summons an Ancestral Ghost for <dur> seconds.",
+        "string": "Invoque un fant\u00f4me ancestral pendant <dur>\u00a0secondes."
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchPeaceWOOD",
+        "type": "ENCH FULL",
+        "original": "Staff of Peace",
+        "string": "B\u00e2ton de paix"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SummonDraugrW",
+        "type": "MGEF FULL",
+        "original": "Summon Ancestor Ghost",
+        "string": "Invocation de fant\u00f4me ancestral"
+    },
+    {
+        "editor_id": "ccBGSSSE066_DreughStaffWar",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of War",
+        "string": "B\u00e2ton dreugh de guerre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SummonDraugrBs",
+        "type": "MGEF FULL",
+        "original": "Summon Ancestor Ghost",
+        "string": "Invocation de fant\u00f4me ancestral"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchJudgmentWOODthousand",
+        "type": "ENCH FULL",
+        "original": "Staff of Judgement",
+        "string": "B\u00e2ton du jugement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffAncestorsDREUGH",
+        "type": "ENCH FULL",
+        "original": "Summon Ancestor Ghost",
+        "string": "Invocation de fant\u00f4me ancestral"
+    },
+    {
+        "editor_id": "ccBGSSSE066_DaedricStaffJudgment",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Judgment",
+        "string": "B\u00e2ton daedra du jugement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_DaedricStaffForefathers",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of the Forefathers",
+        "string": "B\u00e2ton daedra des a\u00efeuls"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SummonDraugrBs",
+        "type": "MGEF DNAM",
+        "original": "Summons an Ancestral Ghost for <dur> seconds.",
+        "string": "Invoque un fant\u00f4me ancestral pendant <dur>\u00a0secondes."
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchShamingDAEDRIC",
+        "type": "ENCH FULL",
+        "original": "Staff of Shaming",
+        "string": "B\u00e2ton d'humiliation"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SummonDraugrW",
+        "type": "MGEF DNAM",
+        "original": "Summons an Ancestral Ghost for <dur> seconds.",
+        "string": "Invoque un fant\u00f4me ancestral pendant <dur>\u00a0secondes."
+    },
+    {
+        "editor_id": "ccBGSSSE066_DreughStaffShaming",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Shaming",
+        "string": "B\u00e2ton dreugh d'humiliation"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SilverStaffShaming",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Shaming",
+        "string": "B\u00e2ton d'argent d'humiliation"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchJudgmentSILVERthousand",
+        "type": "ENCH FULL",
+        "original": "Staff of Judgement",
+        "string": "B\u00e2ton du jugement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_DaedricStaffWar",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of War",
+        "string": "B\u00e2ton daedra de guerre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTemplateWood",
+        "type": "WEAP FULL",
+        "original": "Unenchanted Wooden Staff",
+        "string": "B\u00e2ton de bois non enchant\u00e9"
+    },
+    {
+        "editor_id": "ccBGSSSE066_WoodenStaffShaming",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Shaming",
+        "string": "B\u00e2ton de bois d'humiliation"
+    },
+    {
+        "editor_id": "ccBGSSSE066_GlassStaffWar",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of War",
+        "string": "B\u00e2ton de verre de guerre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SteelStaffWar",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of War",
+        "string": "B\u00e2ton d'acier de guerre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffAncestorsSTEEL",
+        "type": "ENCH FULL",
+        "original": "Summon Ancestor Ghost",
+        "string": "Invocation de fant\u00f4me ancestral"
+    },
+    {
+        "editor_id": "ccBGSSSE066_GlassStaffShaming",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Shaming",
+        "string": "B\u00e2ton de verre d'humiliation"
+    },
+    {
+        "editor_id": "ccBGSSSE066_GlassStaffPeace",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Peace",
+        "string": "B\u00e2ton de verre de paix"
+    },
+    {
+        "editor_id": "ccBGSSSE066_GlassStaffChastening",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Chastening",
+        "string": "B\u00e2ton de verre de ch\u00e2timent"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchChasteningDreugh",
+        "type": "ENCH FULL",
+        "original": "Staff of Chastening",
+        "string": "B\u00e2ton de ch\u00e2timent"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchChasteningSTEEL",
+        "type": "ENCH FULL",
+        "original": "Staff of Chastening",
+        "string": "B\u00e2ton de ch\u00e2timent"
+    },
+    {
+        "editor_id": "ccBGSSSE066_EbonyStaffShaming",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Shaming",
+        "string": "B\u00e2ton d'\u00e9bonite d'humiliation"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchShamingSTEEL",
+        "type": "ENCH FULL",
+        "original": "Staff of Shaming",
+        "string": "B\u00e2ton d'humiliation"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SteelStaffPeace",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Peace",
+        "string": "B\u00e2ton d'acier de paix"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SteelStaffShaming",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Shaming",
+        "string": "B\u00e2ton d'acier d'humiliation"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTemplateSilver",
+        "type": "WEAP FULL",
+        "original": "Unenchanted Silver Staff",
+        "string": "B\u00e2ton d'argent non enchant\u00e9"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchChasteningSilver",
+        "type": "ENCH FULL",
+        "original": "Staff of Chastening",
+        "string": "B\u00e2ton de ch\u00e2timent"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SteelStaffJudgment",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Judgment",
+        "string": "B\u00e2ton d'acier du jugement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SteelStaffChastening",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Chastening",
+        "string": "B\u00e2ton d'acier de ch\u00e2timent"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchJudgmentDAEDRIC",
+        "type": "ENCH FULL",
+        "original": "Staff of Judgement",
+        "string": "B\u00e2ton du jugement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchWarSILVER",
+        "type": "ENCH FULL",
+        "original": "Staff of War",
+        "string": "B\u00e2ton de guerre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTemplateDreugh",
+        "type": "WEAP FULL",
+        "original": "Unenchanted Dreugh Staff",
+        "string": "B\u00e2ton dreugh non enchant\u00e9"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SilverStaffPeace",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Peace",
+        "string": "B\u00e2ton d'argent de paix"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchPeaceSTEEL",
+        "type": "ENCH FULL",
+        "original": "Staff of Peace",
+        "string": "B\u00e2ton de paix"
+    },
+    {
+        "editor_id": "ccBGSSSE066_WoodenStaffAncestors",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Ancestors",
+        "string": "B\u00e2ton de bois des anc\u00eatres"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SummonDraugrMissile",
+        "type": "NPC_ FULL",
+        "original": "Ancestor Ghost",
+        "string": "Fant\u00f4me ancestral"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SilverStaffAncestors",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Ancestors",
+        "string": "B\u00e2ton d'argent des anc\u00eatres"
+    },
+    {
+        "editor_id": "ccBGSSSE066_DaedricStaffPeace",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Peace",
+        "string": "B\u00e2ton daedra de paix"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchChasteningGLASS",
+        "type": "ENCH FULL",
+        "original": "Staff of Chastening",
+        "string": "B\u00e2ton de ch\u00e2timent"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTemplateSteel",
+        "type": "WEAP FULL",
+        "original": "Unenchanted Steel Staff",
+        "string": "B\u00e2ton d'acier non enchant\u00e9"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchWarDAEDRIC",
+        "type": "ENCH FULL",
+        "original": "Staff of War",
+        "string": "B\u00e2ton de guerre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SteelStaffAncestors",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Ancestors",
+        "string": "B\u00e2ton d'acier des anc\u00eatres"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchPeaceDREUGH",
+        "type": "ENCH FULL",
+        "original": "Staff of Peace",
+        "string": "B\u00e2ton de paix"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchShamingEBONY",
+        "type": "ENCH FULL",
+        "original": "Staff of Shaming",
+        "string": "B\u00e2ton d'humiliation"
+    },
+    {
+        "editor_id": "ccBGSSSE066_BarrierFireConcAimed",
+        "type": "MGEF DNAM",
+        "original": "Sprayed on the ground, it creates a wall of ice and fire that does <50> points of elemental damage per second.",
+        "string": "Dispers\u00e9 au sol, cr\u00e9e un mur de givre et de feu qui inflige <50>\u00a0points de d\u00e9g\u00e2ts \u00e9l\u00e9mentaires par seconde."
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchWarSTEEL",
+        "type": "ENCH FULL",
+        "original": "Staff of War",
+        "string": "B\u00e2ton de guerre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTemplateEbony",
+        "type": "WEAP FULL",
+        "original": "Unenchanted Ebony Staff",
+        "string": "B\u00e2ton d'\u00e9bonite non enchant\u00e9"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffAncestorsEBONY",
+        "type": "ENCH FULL",
+        "original": "Summon Ancestor Ghost",
+        "string": "Invocation de fant\u00f4me ancestral"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchJudgmentDREUGHthousand",
+        "type": "ENCH FULL",
+        "original": "Staff of Judgement",
+        "string": "B\u00e2ton du jugement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SilverStaffJudgment",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Judgment",
+        "string": "B\u00e2ton d'argent du jugement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_GlassStaffAncestors",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Ancestors",
+        "string": "B\u00e2ton de verre des anc\u00eatres"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTemplateGlass",
+        "type": "WEAP FULL",
+        "original": "Unenchanted Glass Staff",
+        "string": "B\u00e2ton de verre non enchant\u00e9"
+    },
+    {
+        "editor_id": "ccBGSSSE066_FireDamageConcAimed",
+        "type": "MGEF FULL",
+        "original": "Elemental Damage",
+        "string": "D\u00e9g\u00e2ts \u00e9l\u00e9mentaires"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SilverStaffChastening",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Chastening",
+        "string": "B\u00e2ton d'argent de ch\u00e2timent"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffEnchShamingWOODthousand",
+        "type": "ENCH FULL",
+        "original": "Staff of Shaming",
+        "string": "B\u00e2ton d'humiliation"
+    },
+    {
+        "editor_id": "ccBGSSSE066_Quest",
+        "type": "QUST FULL",
+        "original": "Seeder Quest",
+        "string": "Qu\u00eate du semeur"
+    },
+    {
+        "editor_id": "ccBGSSSE066_DaedricStaffChastening",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Chastening",
+        "string": "B\u00e2ton daedra de ch\u00e2timent"
+    },
+    {
+        "editor_id": "ccBGSSSE066_DreughStaffChastening",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Chastening",
+        "string": "B\u00e2ton dreugh de ch\u00e2timent"
+    },
+    {
+        "editor_id": "ccBGSSSE066_WoodenStaffPeace02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Peace",
+        "string": "B\u00e2ton de bois de paix"
+    },
+    {
+        "editor_id": "ccBGSSSE066_WoodenStaffChastening02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Chastening",
+        "string": "B\u00e2ton de bois de ch\u00e2timent"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTemplateWood02",
+        "type": "WEAP FULL",
+        "original": "Unenchanted Wooden Staff",
+        "string": "B\u00e2ton de bois non enchant\u00e9"
+    },
+    {
+        "editor_id": "ccBGSSSE066_WoodenStaffAncestors02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Ancestors",
+        "string": "B\u00e2ton de bois des anc\u00eatres"
+    },
+    {
+        "editor_id": "ccBGSSSE066_WoodenStaffShaming02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Shaming",
+        "string": "B\u00e2ton de bois d'humiliation"
+    },
+    {
+        "editor_id": "ccBGSSSE066_WoodenStaffJudgment02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Judgment",
+        "string": "B\u00e2ton de bois du jugement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_WoodenStaffWar02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of War",
+        "string": "B\u00e2ton de bois de guerre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFrostbiteEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Frostbite",
+        "string": "B\u00e2ton d'\u00e9bonite de froid mordant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureStormAtronachWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of the Storm Atronach",
+        "string": "B\u00e2ton de bois d'Atronach de foudre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffHealingHandsWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of the Healing Hand",
+        "string": "B\u00e2ton de bois de toucher apaisant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFrostbiteWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Frostbite",
+        "string": "B\u00e2ton de bois de froid mordant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRallyWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Inspiration",
+        "string": "B\u00e2ton de bois d'inspiration"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFlameAtronachSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of the Flame Atronach",
+        "string": "B\u00e2ton d'acier d'Atronach de feu"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffHealOtherDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Mending",
+        "string": "B\u00e2ton dreugh de soulagement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRepelLesserUndeadSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Repulsion",
+        "string": "B\u00e2ton d'argent de fl\u00e9au"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffLightningBoltWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Lightning Bolts",
+        "string": "B\u00e2ton de bois d'\u00e9clair foudroyant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffBanishDaedraEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Banishing",
+        "string": "B\u00e2ton d'\u00e9bonite de bannissement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffMagelightSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Magelight",
+        "string": "B\u00e2ton d'argent de rayonnement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFrostAtronachWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of the Frost Atronach",
+        "string": "B\u00e2ton de bois d'Atronach de glace"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnGreaterUndeadWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Grand Staff of Turning",
+        "string": "Grand b\u00e2ton de bois de p\u00e9ril"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFearDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Fear",
+        "string": "B\u00e2ton daedra de peur"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnUndeadWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Turning",
+        "string": "B\u00e2ton de bois de p\u00e9ril"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFamiliarSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of the Familiar",
+        "string": "B\u00e2ton d'argent de familier"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIceStormDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Ice Storms",
+        "string": "B\u00e2ton dreugh de temp\u00eate de glace"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCommandDaedraGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Daedric Command",
+        "string": "B\u00e2ton de verre de manipulation de Daedra"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIcySpearWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Icy Spear",
+        "string": "B\u00e2ton de bois de Lance gel\u00e9e"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFireballGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Fireballs",
+        "string": "B\u00e2ton de verre de boule de feu"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRepelLesserUndeadWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Repulsion",
+        "string": "B\u00e2ton de bois de fl\u00e9au"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIceSpikeWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Ice Spikes",
+        "string": "B\u00e2ton de bois de stalactite"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRepelUndeadSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Grand Staff of Repulsion",
+        "string": "Grand b\u00e2ton d'argent de fl\u00e9au"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFireboltGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Firebolts",
+        "string": "B\u00e2ton de verre d'\u00e9clair enflamm\u00e9"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffDreadZombieWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Dread Zombies",
+        "string": "B\u00e2ton de bois de surzombie"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCommandDaedraEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Daedric Command",
+        "string": "B\u00e2ton d'\u00e9bonite de manipulation de Daedra"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnLesserUndeadDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Minor Staff of Turning",
+        "string": "Faible b\u00e2ton daedra de p\u00e9ril"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFearSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Fear",
+        "string": "B\u00e2ton d'acier de peur"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnUndeadDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Turning",
+        "string": "B\u00e2ton daedra de p\u00e9ril"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFireballDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Fireballs",
+        "string": "B\u00e2ton daedra de boule de feu"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofFlamesGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of the Flame Wall",
+        "string": "B\u00e2ton de verre de mur de feu"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffLightningBoltEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Lightning Bolts",
+        "string": "B\u00e2ton d'\u00e9bonite d'\u00e9clair foudroyant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnUndeadDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Turning",
+        "string": "B\u00e2ton dreugh de p\u00e9ril"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCalmEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Calm",
+        "string": "B\u00e2ton d'\u00e9bonite calmant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIceStormDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Ice Storms",
+        "string": "B\u00e2ton daedra de temp\u00eate de glace"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFearSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Fear",
+        "string": "B\u00e2ton d'argent de peur"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFrostAtronachEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of the Frost Atronach",
+        "string": "B\u00e2ton d'\u00e9bonite d'Atronach de glace"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofFlamesWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of the Flame Wall",
+        "string": "B\u00e2ton de bois de mur de feu"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFlamesDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Flames",
+        "string": "B\u00e2ton daedra de flammes"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCalmGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Calm",
+        "string": "B\u00e2ton de verre calmant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCommandDaedraSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Daedric Command",
+        "string": "B\u00e2ton d'acier de manipulation de Daedra"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofFlamesEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of the Flame Wall",
+        "string": "B\u00e2ton d'\u00e9bonite de mur de feu"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnLesserUndeadWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Minor Staff of Turning",
+        "string": "Faible b\u00e2ton de bois de p\u00e9ril"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffChainLightningDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Chain Lightning",
+        "string": "B\u00e2ton dreugh d'\u00e9clairs multiples"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCourageSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Courage",
+        "string": "B\u00e2ton d'argent de courage"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnGreaterUndeadDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Grand Staff of Turning",
+        "string": "Grand b\u00e2ton daedra de p\u00e9ril"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffSoulTrapWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Soul Trapping",
+        "string": "B\u00e2ton de bois de capture d'\u00e2me"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFamiliarDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of the Familiar",
+        "string": "B\u00e2ton dreugh de familier"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffDreadZombieGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Dread Zombies",
+        "string": "B\u00e2ton de verre de surzombie"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffReanimateCorpseEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Reanimation",
+        "string": "B\u00e2ton d'\u00e9bonite de r\u00e9animation"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFireboltSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Firebolts",
+        "string": "B\u00e2ton d'argent d'\u00e9clair enflamm\u00e9"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffParalyzeGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Paralysis",
+        "string": "B\u00e2ton de verre de paralysie"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFearWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Fear",
+        "string": "B\u00e2ton de bois de peur"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFlameAtronachWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of the Flame Atronach",
+        "string": "B\u00e2ton de bois d'Atronach de feu"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureStormAtronachDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of the Storm Atronach",
+        "string": "B\u00e2ton daedra d'Atronach de foudre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffReanimateCorpseDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Reanimation",
+        "string": "B\u00e2ton dreugh de r\u00e9animation"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFlamesEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Flames",
+        "string": "B\u00e2ton d'\u00e9bonite de flammes"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffMagelightWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Magelight",
+        "string": "B\u00e2ton de bois de rayonnement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofStormsWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of the Storm Wall",
+        "string": "B\u00e2ton de bois de mur de foudre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffExpelDaedraSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Expulsion",
+        "string": "B\u00e2ton d'acier d'expulsion"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFlamesSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Flames",
+        "string": "B\u00e2ton d'argent de flammes"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRevenantGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Revenants",
+        "string": "B\u00e2ton de verre de revenant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffExpelDaedraGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Expulsion",
+        "string": "B\u00e2ton de verre d'expulsion"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFrostbiteSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Frostbite",
+        "string": "B\u00e2ton d'argent de froid mordant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFireboltWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Firebolts",
+        "string": "B\u00e2ton de bois d'\u00e9clair enflamm\u00e9"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFrostbiteWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Frostbite",
+        "string": "B\u00e2ton de bois de froid mordant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffSparksGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Sparks",
+        "string": "B\u00e2ton de verre d'\u00e9tincelles"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffHealingHandsWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of the Healing Hand",
+        "string": "B\u00e2ton de bois de toucher apaisant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFearDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Fear",
+        "string": "B\u00e2ton dreugh de peur"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCourageWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Courage",
+        "string": "B\u00e2ton de bois de courage"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRevenantWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Revenants",
+        "string": "B\u00e2ton de bois de revenant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffHealingHandsSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of the Healing Hand",
+        "string": "B\u00e2ton d'acier de toucher apaisant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnUndeadWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Turning",
+        "string": "B\u00e2ton de bois de p\u00e9ril"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffThunderboltSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Thunderbolts",
+        "string": "B\u00e2ton d'argent de tonnerre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofFrostDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of the Frost Wall",
+        "string": "B\u00e2ton daedra de mur de glace"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofFlamesDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of the Flame Wall",
+        "string": "B\u00e2ton daedra de mur de feu"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofFlamesWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of the Flame Wall",
+        "string": "B\u00e2ton de bois de mur de feu"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIncinerateSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Incineration",
+        "string": "B\u00e2ton d'argent d'incin\u00e9ration"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffHealingHandsEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of the Healing Hand",
+        "string": "B\u00e2ton d'\u00e9bonite de toucher apaisant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofFrostWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of the Frost Wall",
+        "string": "B\u00e2ton de bois de mur de glace"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRoutSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Vanquishment",
+        "string": "B\u00e2ton d'argent de d\u00e9route"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCalmSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Calm",
+        "string": "B\u00e2ton d'acier calmant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFrostbiteGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Frostbite",
+        "string": "B\u00e2ton de verre de froid mordant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCalmWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Calm",
+        "string": "B\u00e2ton de bois calmant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofFlamesDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of the Flame Wall",
+        "string": "B\u00e2ton dreugh de mur de feu"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffBanishDaedraDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Banishing",
+        "string": "B\u00e2ton daedra de bannissement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffHealOtherGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Mending",
+        "string": "B\u00e2ton de verre de soulagement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffThunderboltEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Thunderbolts",
+        "string": "B\u00e2ton d'\u00e9bonite de tonnerre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRaiseZombieDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Zombies",
+        "string": "B\u00e2ton dreugh d'outre-tombe"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffSoulTrapSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Soul Trapping",
+        "string": "B\u00e2ton d'acier de capture d'\u00e2me"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIncinerateDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Incineration",
+        "string": "B\u00e2ton dreugh d'incin\u00e9ration"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffHealOtherSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Mending",
+        "string": "B\u00e2ton d'acier de soulagement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFlameAtronachDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of the Flame Atronach",
+        "string": "B\u00e2ton dreugh d'Atronach de feu"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureStormAtronachWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of the Storm Atronach",
+        "string": "B\u00e2ton de bois d'Atronach de foudre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFlamesDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Flames",
+        "string": "B\u00e2ton dreugh de flammes"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofFrostSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of the Frost Wall",
+        "string": "B\u00e2ton d'acier de mur de glace"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffParalyzeSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Paralysis",
+        "string": "B\u00e2ton d'argent de paralysie"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffHealOtherWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Mending",
+        "string": "B\u00e2ton de bois de soulagement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIceSpikeWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Ice Spikes",
+        "string": "B\u00e2ton de bois de stalactite"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRevenantSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Revenants",
+        "string": "B\u00e2ton d'acier de revenant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFrenzyWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Frenzy",
+        "string": "B\u00e2ton de bois de fr\u00e9n\u00e9sie"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFlameAtronachSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of the Flame Atronach",
+        "string": "B\u00e2ton d'argent d'Atronach de feu"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRepelUndeadDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Grand Staff of Repulsion",
+        "string": "Grand b\u00e2ton daedra de fl\u00e9au"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffBanishDaedraSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Banishing",
+        "string": "B\u00e2ton d'argent de bannissement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFrostbiteDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Frostbite",
+        "string": "B\u00e2ton daedra de froid mordant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffMagelightSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Magelight",
+        "string": "B\u00e2ton d'acier de rayonnement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffSoulTrapWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Soul Trapping",
+        "string": "B\u00e2ton de bois de capture d'\u00e2me"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFamiliarWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of the Familiar",
+        "string": "B\u00e2ton de bois de familier"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnUndeadGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Turning",
+        "string": "B\u00e2ton de verre de p\u00e9ril"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFurySteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Fury",
+        "string": "B\u00e2ton d'acier de furie"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIcySpearSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Icy Spear",
+        "string": "B\u00e2ton d'argent de Lance gel\u00e9e"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRoutWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Vanquishment",
+        "string": "B\u00e2ton de bois de d\u00e9route"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffLightningBoltSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Lightning Bolts",
+        "string": "B\u00e2ton d'acier d'\u00e9clair foudroyant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFireballDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Fireballs",
+        "string": "B\u00e2ton dreugh de boule de feu"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIcySpearSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Icy Spear",
+        "string": "B\u00e2ton d'acier de Lance gel\u00e9e"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFireballEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Fireballs",
+        "string": "B\u00e2ton d'\u00e9bonite de boule de feu"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFireboltSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Firebolts",
+        "string": "B\u00e2ton d'acier d'\u00e9clair enflamm\u00e9"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffHealingHandsSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of the Healing Hand",
+        "string": "B\u00e2ton d'argent de toucher apaisant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFamiliarWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of the Familiar",
+        "string": "B\u00e2ton de bois de familier"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIceSpikeDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Ice Spikes",
+        "string": "B\u00e2ton daedra de stalactite"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFrenzySteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Frenzy",
+        "string": "B\u00e2ton d'acier de fr\u00e9n\u00e9sie"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffMagelightWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Magelight",
+        "string": "B\u00e2ton de bois de rayonnement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnLesserUndeadGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Minor Staff of Turning",
+        "string": "Faible b\u00e2ton de verre de p\u00e9ril"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIceSpikeDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Ice Spikes",
+        "string": "B\u00e2ton dreugh de stalactite"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCourageEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Courage",
+        "string": "B\u00e2ton d'\u00e9bonite de courage"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffThunderboltWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Thunderbolts",
+        "string": "B\u00e2ton de bois de tonnerre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofFrostWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of the Frost Wall",
+        "string": "B\u00e2ton de bois de mur de glace"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFamiliarEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of the Familiar",
+        "string": "B\u00e2ton d'\u00e9bonite de familier"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFlameAtronachEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of the Flame Atronach",
+        "string": "B\u00e2ton d'\u00e9bonite d'Atronach de feu"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnLesserUndeadDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Minor Staff of Turning",
+        "string": "Faible b\u00e2ton dreugh de p\u00e9ril"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCalmWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Calm",
+        "string": "B\u00e2ton de bois calmant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFamiliarGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of the Familiar",
+        "string": "B\u00e2ton de verre de familier"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffDreadZombieSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Dread Zombies",
+        "string": "B\u00e2ton d'acier de surzombie"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnLesserUndeadSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Minor Staff of Turning",
+        "string": "Faible b\u00e2ton d'argent de p\u00e9ril"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffDreadZombieDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Dread Zombies",
+        "string": "B\u00e2ton daedra de surzombie"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIcySpearEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Icy Spear",
+        "string": "B\u00e2ton d'\u00e9bonite de Lance gel\u00e9e"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffLightningBoltGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Lightning Bolts",
+        "string": "B\u00e2ton de verre d'\u00e9clair foudroyant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIceSpikeGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Ice Spikes",
+        "string": "B\u00e2ton de verre de stalactite"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofFrostGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of the Frost Wall",
+        "string": "B\u00e2ton de verre de mur de glace"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCalmDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Calm",
+        "string": "B\u00e2ton daedra calmant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffBanishDaedraSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Banishing",
+        "string": "B\u00e2ton d'acier de bannissement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFuryEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Fury",
+        "string": "B\u00e2ton d'\u00e9bonite de furie"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIceStormWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Ice Storms",
+        "string": "B\u00e2ton de bois de temp\u00eate de glace"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureStormAtronachSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of the Storm Atronach",
+        "string": "B\u00e2ton d'acier d'Atronach de foudre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRepelUndeadDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Grand Staff of Repulsion",
+        "string": "Grand b\u00e2ton dreugh de fl\u00e9au"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnUndeadSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Turning",
+        "string": "B\u00e2ton d'acier de p\u00e9ril"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFuryGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Fury",
+        "string": "B\u00e2ton de verre de furie"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFearEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Fear",
+        "string": "B\u00e2ton d'\u00e9bonite de peur"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffLightningBoltDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Lightning Bolts",
+        "string": "B\u00e2ton dreugh d'\u00e9clair foudroyant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffExpelDaedraWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Expulsion",
+        "string": "B\u00e2ton de bois d'expulsion"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureStormAtronachEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of the Storm Atronach",
+        "string": "B\u00e2ton d'\u00e9bonite d'Atronach de foudre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffSoulTrapDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Soul Trapping",
+        "string": "B\u00e2ton daedra de capture d'\u00e2me"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffBanishDaedraGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Banishing",
+        "string": "B\u00e2ton de verre de bannissement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffLightningBoltDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Lightning Bolts",
+        "string": "B\u00e2ton daedra d'\u00e9clair foudroyant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_SummonDraugrBossFIX",
+        "type": "NPC_ FULL",
+        "original": "Ancestor Ghost",
+        "string": "Fant\u00f4me ancestral"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCourageDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Courage",
+        "string": "B\u00e2ton dreugh de courage"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffParalyzeWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Paralysis",
+        "string": "B\u00e2ton de bois de paralysie"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffHealOtherEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Mending",
+        "string": "B\u00e2ton d'\u00e9bonite de soulagement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofStormsDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of the Storm Wall",
+        "string": "B\u00e2ton dreugh de mur de foudre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCourageSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Courage",
+        "string": "B\u00e2ton d'acier de courage"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFireballWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Fireballs",
+        "string": "B\u00e2ton de bois de boule de feu"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofFlamesSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of the Flame Wall",
+        "string": "B\u00e2ton d'acier de mur de feu"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFrostAtronachSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of the Frost Atronach",
+        "string": "B\u00e2ton d'argent d'Atronach de glace"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRevenantDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Revenants",
+        "string": "B\u00e2ton daedra de revenant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofStormsWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of the Storm Wall",
+        "string": "B\u00e2ton de bois de mur de foudre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofStormsSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of the Storm Wall",
+        "string": "B\u00e2ton d'acier de mur de foudre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffHealOtherDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Mending",
+        "string": "B\u00e2ton daedra de soulagement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFireboltEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Firebolts",
+        "string": "B\u00e2ton d'\u00e9bonite d'\u00e9clair enflamm\u00e9"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofStormsGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of the Storm Wall",
+        "string": "B\u00e2ton de verre de mur de foudre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRallyEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Inspiration",
+        "string": "B\u00e2ton d'\u00e9bonite d'inspiration"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofStormsEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of the Storm Wall",
+        "string": "B\u00e2ton d'\u00e9bonite de mur de foudre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCourageDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Courage",
+        "string": "B\u00e2ton daedra de courage"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFrostbiteSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Frostbite",
+        "string": "B\u00e2ton d'acier de froid mordant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffParalyzeEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Paralysis",
+        "string": "B\u00e2ton d'\u00e9bonite de paralysie"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFireballWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Fireballs",
+        "string": "B\u00e2ton de bois de boule de feu"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffReanimateCorpseSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Reanimation",
+        "string": "B\u00e2ton d'acier de r\u00e9animation"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIncinerateDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Incineration",
+        "string": "B\u00e2ton daedra d'incin\u00e9ration"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofStormsSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of the Storm Wall",
+        "string": "B\u00e2ton d'argent de mur de foudre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRepelUndeadGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Grand Staff of Repulsion",
+        "string": "Grand b\u00e2ton de verre de fl\u00e9au"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRepelLesserUndeadDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Repulsion",
+        "string": "B\u00e2ton dreugh de fl\u00e9au"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFrostAtronachDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of the Frost Atronach",
+        "string": "B\u00e2ton dreugh d'Atronach de glace"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffMagelightGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Magelight",
+        "string": "B\u00e2ton de verre de rayonnement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRepelLesserUndeadEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Repulsion",
+        "string": "B\u00e2ton d'\u00e9bonite de fl\u00e9au"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRepelLesserUndeadGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Repulsion",
+        "string": "B\u00e2ton de verre de fl\u00e9au"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIncinerateEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Incineration",
+        "string": "B\u00e2ton d'\u00e9bonite d'incin\u00e9ration"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffDreadZombieSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Dread Zombies",
+        "string": "B\u00e2ton d'argent de surzombie"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffHealOtherWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Mending",
+        "string": "B\u00e2ton de bois de soulagement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRepelLesserUndeadWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Repulsion",
+        "string": "B\u00e2ton de bois de fl\u00e9au"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffThunderboltDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Thunderbolts",
+        "string": "B\u00e2ton daedra de tonnerre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRepelLesserUndeadDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Repulsion",
+        "string": "B\u00e2ton daedra de fl\u00e9au"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFireballSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Fireballs",
+        "string": "B\u00e2ton d'acier de boule de feu"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRepelUndeadSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Grand Staff of Repulsion",
+        "string": "Grand b\u00e2ton d'acier de fl\u00e9au"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRepelUndeadWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Grand Staff of Repulsion",
+        "string": "Grand b\u00e2ton de bois de fl\u00e9au"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofStormsDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of the Storm Wall",
+        "string": "B\u00e2ton daedra de mur de foudre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIcySpearDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Icy Spear",
+        "string": "B\u00e2ton dreugh de Lance gel\u00e9e"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFrostbiteDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Frostbite",
+        "string": "B\u00e2ton dreugh de froid mordant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRepelUndeadWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Grand Staff of Repulsion",
+        "string": "Grand b\u00e2ton de bois de fl\u00e9au"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRaiseZombieDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Zombies",
+        "string": "B\u00e2ton daedra d'outre-tombe"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFrostAtronachDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of the Frost Atronach",
+        "string": "B\u00e2ton daedra d'Atronach de glace"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFrenzyWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Frenzy",
+        "string": "B\u00e2ton de bois de fr\u00e9n\u00e9sie"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRallyDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Inspiration",
+        "string": "B\u00e2ton dreugh d'inspiration"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRevenantDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Revenants",
+        "string": "B\u00e2ton dreugh de revenant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRevenantEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Revenants",
+        "string": "B\u00e2ton d'\u00e9bonite de revenant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRevenantSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Revenants",
+        "string": "B\u00e2ton d'argent de revenant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRevenantWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Revenants",
+        "string": "B\u00e2ton de bois de revenant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffParalyzeSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Paralysis",
+        "string": "B\u00e2ton d'acier de paralysie"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRoutDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Vanquishment",
+        "string": "B\u00e2ton daedra de d\u00e9route"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofFlamesSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of the Flame Wall",
+        "string": "B\u00e2ton d'argent de mur de feu"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRoutDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Vanquishment",
+        "string": "B\u00e2ton dreugh de d\u00e9route"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnGreaterUndeadSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Grand Staff of Turning",
+        "string": "Grand b\u00e2ton d'acier de p\u00e9ril"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRoutEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Vanquishment",
+        "string": "B\u00e2ton d'\u00e9bonite de d\u00e9route"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRoutGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Vanquishment",
+        "string": "B\u00e2ton de verre de d\u00e9route"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFurySilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Fury",
+        "string": "B\u00e2ton d'argent de furie"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffLightningBoltSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Lightning Bolts",
+        "string": "B\u00e2ton d'argent d'\u00e9clair foudroyant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffSoulTrapDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Soul Trapping",
+        "string": "B\u00e2ton dreugh de capture d'\u00e2me"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCourageWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Courage",
+        "string": "B\u00e2ton de bois de courage"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFearWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Fear",
+        "string": "B\u00e2ton de bois de peur"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRoutSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Vanquishment",
+        "string": "B\u00e2ton d'acier de d\u00e9route"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffSoulTrapEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Soul Trapping",
+        "string": "B\u00e2ton d'\u00e9bonite de capture d'\u00e2me"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffSoulTrapGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Soul Trapping",
+        "string": "B\u00e2ton de verre de capture d'\u00e2me"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffSoulTrapSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Soul Trapping",
+        "string": "B\u00e2ton d'argent de capture d'\u00e2me"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffBanishDaedraWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Banishing",
+        "string": "B\u00e2ton de bois de bannissement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFireboltDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Firebolts",
+        "string": "B\u00e2ton dreugh d'\u00e9clair enflamm\u00e9"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffSparksDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Sparks",
+        "string": "B\u00e2ton daedra d'\u00e9tincelles"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffSparksDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Sparks",
+        "string": "B\u00e2ton dreugh d'\u00e9tincelles"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffExpelDaedraDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Expulsion",
+        "string": "B\u00e2ton daedra d'expulsion"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofFrostSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of the Frost Wall",
+        "string": "B\u00e2ton d'argent de mur de glace"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffSparksEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Sparks",
+        "string": "B\u00e2ton d'\u00e9bonite d'\u00e9tincelles"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFlamesWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Flames",
+        "string": "B\u00e2ton de bois de flammes"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRaiseZombieSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Zombies",
+        "string": "B\u00e2ton d'argent d'outre-tombe"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffSparksSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Sparks",
+        "string": "B\u00e2ton d'argent d'\u00e9tincelles"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffReanimateCorpseDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Reanimation",
+        "string": "B\u00e2ton daedra de r\u00e9animation"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffSparksSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Sparks",
+        "string": "B\u00e2ton d'acier d'\u00e9tincelles"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffParalyzeDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Paralysis",
+        "string": "B\u00e2ton dreugh de paralysie"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffSparksWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Sparks",
+        "string": "B\u00e2ton de bois d'\u00e9tincelles"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffMagelightDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Magelight",
+        "string": "B\u00e2ton daedra de rayonnement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFuryWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Fury",
+        "string": "B\u00e2ton de bois de furie"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffSparksWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Sparks",
+        "string": "B\u00e2ton de bois d'\u00e9tincelles"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRepelUndeadEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Grand Staff of Repulsion",
+        "string": "Grand b\u00e2ton d'\u00e9bonite de fl\u00e9au"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffParalyzeDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Paralysis",
+        "string": "B\u00e2ton daedra de paralysie"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffThunderboltDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Thunderbolts",
+        "string": "B\u00e2ton dreugh de tonnerre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffThunderboltGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Thunderbolts",
+        "string": "B\u00e2ton de verre de tonnerre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFamiliarSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of the Familiar",
+        "string": "B\u00e2ton d'acier de familier"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffExpelDaedraSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Expulsion",
+        "string": "B\u00e2ton d'argent d'expulsion"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffThunderboltSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Thunderbolts",
+        "string": "B\u00e2ton d'acier de tonnerre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffThunderboltWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Thunderbolts",
+        "string": "B\u00e2ton de bois de tonnerre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffHealingHandsGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of the Healing Hand",
+        "string": "B\u00e2ton de verre de toucher apaisant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFrenzyDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Frenzy",
+        "string": "B\u00e2ton dreugh de fr\u00e9n\u00e9sie"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnGreaterUndeadDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Grand Staff of Turning",
+        "string": "Grand b\u00e2ton dreugh de p\u00e9ril"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureStormAtronachSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of the Storm Atronach",
+        "string": "B\u00e2ton d'argent d'Atronach de foudre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCommandDaedraWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Daedric Command",
+        "string": "B\u00e2ton de bois de manipulation de Daedra"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnGreaterUndeadGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Grand Staff of Turning",
+        "string": "Grand b\u00e2ton de verre de p\u00e9ril"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCommandDaedraDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Daedric Command",
+        "string": "B\u00e2ton dreugh de manipulation de Daedra"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFuryDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Fury",
+        "string": "B\u00e2ton dreugh de furie"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIceStormWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Ice Storms",
+        "string": "B\u00e2ton de bois de temp\u00eate de glace"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFlameAtronachGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of the Flame Atronach",
+        "string": "B\u00e2ton de verre d'Atronach de feu"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRallySilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Inspiration",
+        "string": "B\u00e2ton d'argent d'inspiration"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnGreaterUndeadWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Grand Staff of Turning",
+        "string": "Grand b\u00e2ton de bois de p\u00e9ril"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnLesserUndeadEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Minor Staff of Turning",
+        "string": "Faible b\u00e2ton d'\u00e9bonite de p\u00e9ril"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnLesserUndeadWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Minor Staff of Turning",
+        "string": "Faible b\u00e2ton de bois de p\u00e9ril"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRallyDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Inspiration",
+        "string": "B\u00e2ton daedra d'inspiration"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCalmDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Calm",
+        "string": "B\u00e2ton dreugh calmant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCommandDaedraSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Daedric Command",
+        "string": "B\u00e2ton d'argent de manipulation de Daedra"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnLesserUndeadSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Minor Staff of Turning",
+        "string": "Faible b\u00e2ton d'acier de p\u00e9ril"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffChainLightningWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Chain Lightning",
+        "string": "B\u00e2ton de bois d'\u00e9clairs multiples"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIceStormEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Ice Storms",
+        "string": "B\u00e2ton d'\u00e9bonite de temp\u00eate de glace"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffDreadZombieEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Dread Zombies",
+        "string": "B\u00e2ton d'\u00e9bonite de surzombie"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRallyGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Inspiration",
+        "string": "B\u00e2ton de verre d'inspiration"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffChainLightningEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Chain Lightning",
+        "string": "B\u00e2ton d'\u00e9bonite d'\u00e9clairs multiples"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffChainLightningWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Chain Lightning",
+        "string": "B\u00e2ton de bois d'\u00e9clairs multiples"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFrenzyDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Frenzy",
+        "string": "B\u00e2ton daedra de fr\u00e9n\u00e9sie"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffParalyzeWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Paralysis",
+        "string": "B\u00e2ton de bois de paralysie"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFrostAtronachGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of the Frost Atronach",
+        "string": "B\u00e2ton de verre d'Atronach de glace"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFearGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Fear",
+        "string": "B\u00e2ton de verre de peur"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRaiseZombieSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Zombies",
+        "string": "B\u00e2ton d'acier d'outre-tombe"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFlamesWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Flames",
+        "string": "B\u00e2ton de bois de flammes"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffReanimateCorpseWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Reanimation",
+        "string": "B\u00e2ton de bois de r\u00e9animation"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureStormAtronachDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of the Storm Atronach",
+        "string": "B\u00e2ton dreugh d'Atronach de foudre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureStormAtronachGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of the Storm Atronach",
+        "string": "B\u00e2ton de verre d'Atronach de foudre"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffBanishDaedraWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Banishing",
+        "string": "B\u00e2ton de bois de bannissement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIceStormGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Ice Storms",
+        "string": "B\u00e2ton de verre de temp\u00eate de glace"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFlamesSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Flames",
+        "string": "B\u00e2ton d'acier de flammes"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRoutWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Vanquishment",
+        "string": "B\u00e2ton de bois de d\u00e9route"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffReanimateCorpseSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Reanimation",
+        "string": "B\u00e2ton d'argent de r\u00e9animation"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRaiseZombieWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Zombies",
+        "string": "B\u00e2ton de bois d'outre-tombe"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIceSpikeSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Ice Spikes",
+        "string": "B\u00e2ton d'argent de stalactite"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFuryDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Fury",
+        "string": "B\u00e2ton daedra de furie"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRallySteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Inspiration",
+        "string": "B\u00e2ton d'acier d'inspiration"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIceStormSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Ice Storms",
+        "string": "B\u00e2ton d'acier de temp\u00eate de glace"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffReanimateCorpseWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Reanimation",
+        "string": "B\u00e2ton de bois de r\u00e9animation"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFireballSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Fireballs",
+        "string": "B\u00e2ton d'argent de boule de feu"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFlameAtronachDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of the Flame Atronach",
+        "string": "B\u00e2ton daedra d'Atronach de feu"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffBanishDaedraDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Banishing",
+        "string": "B\u00e2ton dreugh de bannissement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffDreadZombieDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Dread Zombies",
+        "string": "B\u00e2ton dreugh de surzombie"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffReanimateCorpseGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Reanimation",
+        "string": "B\u00e2ton de verre de r\u00e9animation"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofFrostDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of the Frost Wall",
+        "string": "B\u00e2ton dreugh de mur de glace"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnGreaterUndeadEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Grand Staff of Turning",
+        "string": "Grand b\u00e2ton d'\u00e9bonite de p\u00e9ril"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffChainLightningDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Chain Lightning",
+        "string": "B\u00e2ton daedra d'\u00e9clairs multiples"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCommandDaedraDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Daedric Command",
+        "string": "B\u00e2ton daedra de manipulation de Daedra"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffLightningBoltWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Lightning Bolts",
+        "string": "B\u00e2ton de bois d'\u00e9clair foudroyant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFlameAtronachWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of the Flame Atronach",
+        "string": "B\u00e2ton de bois d'Atronach de feu"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFrostAtronachSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of the Frost Atronach",
+        "string": "B\u00e2ton d'acier d'Atronach de glace"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFireboltDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Firebolts",
+        "string": "B\u00e2ton daedra d'\u00e9clair enflamm\u00e9"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCourageGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Courage",
+        "string": "B\u00e2ton de verre de courage"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffExpelDaedraDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Expulsion",
+        "string": "B\u00e2ton dreugh d'expulsion"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffExpelDaedraEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Expulsion",
+        "string": "B\u00e2ton d'\u00e9bonite d'expulsion"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffChainLightningSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Chain Lightning",
+        "string": "B\u00e2ton d'argent d'\u00e9clairs multiples"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffMagelightEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Magelight",
+        "string": "B\u00e2ton d'\u00e9bonite de rayonnement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffMagelightDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of Magelight",
+        "string": "B\u00e2ton dreugh de rayonnement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffExpelDaedraWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Expulsion",
+        "string": "B\u00e2ton de bois d'expulsion"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFireboltWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Firebolts",
+        "string": "B\u00e2ton de bois d'\u00e9clair enflamm\u00e9"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFrenzyGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Frenzy",
+        "string": "B\u00e2ton de verre de fr\u00e9n\u00e9sie"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIncinerateSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Incineration",
+        "string": "B\u00e2ton d'acier d'incin\u00e9ration"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIncinerateGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Incineration",
+        "string": "B\u00e2ton de verre d'incin\u00e9ration"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIncinerateWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Incineration",
+        "string": "B\u00e2ton de bois d'incin\u00e9ration"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRepelLesserUndeadSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Repulsion",
+        "string": "B\u00e2ton d'acier de fl\u00e9au"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFamiliarDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of the Familiar",
+        "string": "B\u00e2ton daedra de familier"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRallyWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Inspiration",
+        "string": "B\u00e2ton de bois d'inspiration"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffConjureFrostAtronachWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of the Frost Atronach",
+        "string": "B\u00e2ton de bois d'Atronach de glace"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIcySpearDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of Icy Spear",
+        "string": "B\u00e2ton daedra de Lance gel\u00e9e"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffChainLightningSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Chain Lightning",
+        "string": "B\u00e2ton d'acier d'\u00e9clairs multiples"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIceStormSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Ice Storms",
+        "string": "B\u00e2ton d'argent de temp\u00eate de glace"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffChainLightningGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Chain Lightning",
+        "string": "B\u00e2ton de verre d'\u00e9clairs multiples"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnGreaterUndeadSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Grand Staff of Turning",
+        "string": "Grand b\u00e2ton d'argent de p\u00e9ril"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRaiseZombieWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Zombies",
+        "string": "B\u00e2ton de bois d'outre-tombe"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIncinerateWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Incineration",
+        "string": "B\u00e2ton de bois d'incin\u00e9ration"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCalmSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Calm",
+        "string": "B\u00e2ton d'argent calmant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffDreadZombieWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Dread Zombies",
+        "string": "B\u00e2ton de bois de surzombie"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRaiseZombieGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Zombies",
+        "string": "B\u00e2ton de verre d'outre-tombe"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffHealingHandsDreugh",
+        "type": "WEAP FULL",
+        "original": "Dreugh Staff of the Healing Hand",
+        "string": "B\u00e2ton dreugh de toucher apaisant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffHealingHandsDaedric",
+        "type": "WEAP FULL",
+        "original": "Daedric Staff of the Healing Hand",
+        "string": "B\u00e2ton daedra de toucher apaisant"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFuryWood02",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Fury",
+        "string": "B\u00e2ton de bois de furie"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnUndeadSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Turning",
+        "string": "B\u00e2ton d'argent de p\u00e9ril"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFrenzySilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Frenzy",
+        "string": "B\u00e2ton d'argent de fr\u00e9n\u00e9sie"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIcySpearGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Icy Spear",
+        "string": "B\u00e2ton de verre de Lance gel\u00e9e"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffCommandDaedraWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Daedric Command",
+        "string": "B\u00e2ton de bois de manipulation de Daedra"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIcySpearWood01",
+        "type": "WEAP FULL",
+        "original": "Wooden Staff of Icy Spear",
+        "string": "B\u00e2ton de bois de Lance gel\u00e9e"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIceSpikeEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Ice Spikes",
+        "string": "B\u00e2ton d'\u00e9bonite de stalactite"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffWallofFrostEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of the Frost Wall",
+        "string": "B\u00e2ton d'\u00e9bonite de mur de glace"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffTurnUndeadEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Turning",
+        "string": "B\u00e2ton d'\u00e9bonite de p\u00e9ril"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffHealOtherSilver",
+        "type": "WEAP FULL",
+        "original": "Silver Staff of Mending",
+        "string": "B\u00e2ton d'argent de soulagement"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFlamesGlass",
+        "type": "WEAP FULL",
+        "original": "Glass Staff of Flames",
+        "string": "B\u00e2ton de verre de flammes"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffFrenzyEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Frenzy",
+        "string": "B\u00e2ton d'\u00e9bonite de fr\u00e9n\u00e9sie"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffRaiseZombieEbony",
+        "type": "WEAP FULL",
+        "original": "Ebony Staff of Zombies",
+        "string": "B\u00e2ton d'\u00e9bonite d'outre-tombe"
+    },
+    {
+        "editor_id": "ccBGSSSE066_StaffIceSpikeSteel",
+        "type": "WEAP FULL",
+        "original": "Steel Staff of Ice Spikes",
+        "string": "B\u00e2ton d'acier de stalactite"
+    }
+]

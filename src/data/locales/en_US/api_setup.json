@@ -1,0 +1,8 @@
+{
+    "sso_setup": "Single-Sign-On (Browser)",
+    "manual_setup": "Manual Setup",
+    "insert_api_key": "Insert your API Key",
+    "check_api_key": "Check API Key",
+    "start_sso": "Click here to login to Nexus Mods via Browser",
+    "sso_successful": "Successfully logged into Nexus Mods"
+}

@@ -1,0 +1,818 @@
+[
+    {
+        "editor_id": "EEJSSE003_RubyClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemWhiteActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "EEJSSE003_GlassClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_ArmChair",
+        "type": "FURN FULL",
+        "original": "Armchair",
+        "string": "Poltrona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_NightingaleBowActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_Basket03",
+        "type": "MISC FULL",
+        "original": "Basket",
+        "string": "Cesta"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskNahkriinActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_GrimseverActivator",
+        "type": "ACTI FULL",
+        "original": "Grimsever",
+        "string": "Tagliateste"
+    },
+    {
+        "editor_id": "ccEEJSSE003_NightingaleBowActivator",
+        "type": "ACTI FULL",
+        "original": "Nightingale Bow",
+        "string": "Arco Nightingale"
+    },
+    {
+        "editor_id": "ccEEJSSE003_ThiefHouseINTLocation",
+        "type": "LCTN FULL",
+        "original": "Shadowfoot Sanctum",
+        "string": "Santuario di Shadowfoot"
+    },
+    {
+        "editor_id": "ccEEJSSE003_NightingaleBladeActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_Platter",
+        "type": "MISC FULL",
+        "original": "Platter",
+        "string": "Vassoio"
+    },
+    {
+        "editor_id": "ccEEJSSE003_Smelter",
+        "type": "FURN FULL",
+        "original": "Smelter",
+        "string": "Crogiolo"
+    },
+    {
+        "editor_id": "ccEEJSSE003_ButterflyJarActivator",
+        "type": "ACTI FULL",
+        "original": "Butterfly in a Jar",
+        "string": "Farfalla in vasetto"
+    },
+    {
+        "editor_id": "ccEEJSSE003_Cabinet",
+        "type": "DOOR FULL",
+        "original": "Cabinet",
+        "string": "Armadietto"
+    },
+    {
+        "editor_id": "ccEEJSSE003_TestItems",
+        "type": "CONT FULL",
+        "original": "Test Items",
+        "string": "Oggetti di prova"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskHevnoraakActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BronzeJugLg",
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "Boccale"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskVokunActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BronzeCandleStick1Misc",
+        "type": "MISC FULL",
+        "original": "Candlestick",
+        "string": "Candeliere"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskRahgotActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskFireActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BronzeUrn",
+        "type": "MISC FULL",
+        "original": "Urn",
+        "string": "Urna"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemWhiteActivator",
+        "type": "ACTI FULL",
+        "original": "Diamond Paragon",
+        "string": "Modello di diamante"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemredActivator",
+        "type": "ACTI FULL",
+        "original": "Ruby Paragon",
+        "string": "Modello di rubino"
+    },
+    {
+        "editor_id": "ccEEJSSE002_PitcherDUPLICATE001",
+        "type": "MISC FULL",
+        "original": "Jeweled Pitcher",
+        "string": "Caraffa ingioiellata"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskMorokeiActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_ModelShipActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskKrosisActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_MothJarActivator",
+        "type": "ACTI FULL",
+        "original": "Moth in a Jar",
+        "string": "Falena in vasetto"
+    },
+    {
+        "editor_id": "EEJSSE003_SapphireClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemredActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_EESMapActivator",
+        "type": "ACTI FULL",
+        "original": "East Empire Shipping Map",
+        "string": "Mappa navale della Compagnia Orientale"
+    },
+    {
+        "editor_id": "ccEEJSSE003_ModelShipActivator",
+        "type": "ACTI FULL",
+        "original": "Model Ship",
+        "string": "Modellino di nave"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskOtarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskKonahrikActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BronzeCandleStick2Misc",
+        "type": "MISC FULL",
+        "original": "Candlestick",
+        "string": "Candeliere"
+    },
+    {
+        "editor_id": "ccEEJSSE003_SpiderControlRodActivator",
+        "type": "ACTI FULL",
+        "original": "Spider Control Rod",
+        "string": "Bacchetta Comanda ragno"
+    },
+    {
+        "editor_id": "EEJSSE003_IvoryClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_Bookcase",
+        "type": "CONT FULL",
+        "original": "Bookcase",
+        "string": "Libreria"
+    },
+    {
+        "editor_id": "ccEEJSSE003_LargeChest",
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Baule"
+    },
+    {
+        "editor_id": "EEJSSE003_SapphireClawActivator",
+        "type": "ACTI FULL",
+        "original": "Sapphire Dragon Claw",
+        "string": "Artiglio di Drago di Zaffiro"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemBlueActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "EEJSSE003_RubyClawActivator",
+        "type": "ACTI FULL",
+        "original": "Ruby Dragon Claw",
+        "string": "Artiglio di Drago di Rubino"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskVolsungActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskFrostActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_Pitcher",
+        "type": "MISC FULL",
+        "original": "Jeweled Pitcher",
+        "string": "Caraffa ingioiellata"
+    },
+    {
+        "editor_id": "EEJSSE003_GoldenClawActivator",
+        "type": "ACTI FULL",
+        "original": "Golden Dragon Claw",
+        "string": "Artiglio di Drago d'Oro"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BronzeJug",
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "Boccale"
+    },
+    {
+        "editor_id": "EEJSSE003_CoralClawActivator",
+        "type": "ACTI FULL",
+        "original": "Coral Dragon Claw",
+        "string": "Artiglio di Drago di Corallo"
+    },
+    {
+        "editor_id": "EEJSSE003_EbonyClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_MiscSackLargeFlat03",
+        "type": "CONT FULL",
+        "original": "Large Sack",
+        "string": "Sacco grande"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DragonflyJarActivator",
+        "type": "ACTI FULL",
+        "original": "Dragonfly in a Jar",
+        "string": "Libellula in vasetto"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskShockActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_Basket05",
+        "type": "MISC FULL",
+        "original": "Basket",
+        "string": "Cesta"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemPurpleActivator",
+        "type": "ACTI FULL",
+        "original": "Amethyst Paragon",
+        "string": "Modello di ametista"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DoubleBed",
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "Letto"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BeeJarActivator",
+        "type": "ACTI FULL",
+        "original": "Bee in a Jar",
+        "string": "Ape in vasetto"
+    },
+    {
+        "editor_id": "ccEEJSSE003_FireflyJarActivator",
+        "type": "ACTI FULL",
+        "original": "Torchbug in a Jar",
+        "string": "Lucciola in vasetto"
+    },
+    {
+        "editor_id": "ccEEJSSE003_GobletBronze",
+        "type": "MISC FULL",
+        "original": "Goblet",
+        "string": "Calice"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemPurpleActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_LeftEyeoftheFalmerActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemGreenActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "EEJSSE003_IronClawActivator",
+        "type": "ACTI FULL",
+        "original": "Iron Dragon Claw",
+        "string": "Artiglio di Drago di Ferro"
+    },
+    {
+        "editor_id": "ccEEJSSE003_Basket01",
+        "type": "MISC FULL",
+        "original": "Basket",
+        "string": "Cesta"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BronzeBowl2",
+        "type": "MISC FULL",
+        "original": "Bowl",
+        "string": "Ciotola"
+    },
+    {
+        "editor_id": "EEJSSE003_DiamondClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "EEJSSE003_IronClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "EEJSSE003_EmeraldClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BronzeCup",
+        "type": "MISC FULL",
+        "original": "Cup",
+        "string": "Coppa"
+    },
+    {
+        "editor_id": "ccEEJSSE003_FireflyJarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_NobleCupboard",
+        "type": "CONT FULL",
+        "original": "Cupboard",
+        "string": "Armadio"
+    },
+    {
+        "editor_id": "ccEEJSSE003_QueenBeeStatueActivator",
+        "type": "ACTI FULL",
+        "original": "Queen Bee Statue",
+        "string": "Statua dell'ape regina"
+    },
+    {
+        "editor_id": "EEJSSE003_CoralClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_NightingaleBladeActivator",
+        "type": "ACTI FULL",
+        "original": "Nightingale Blade",
+        "string": "Spada Nightingale"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BeeJarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_HonningbrewDecanterActivator",
+        "type": "ACTI FULL",
+        "original": "Honningbrew Decanter",
+        "string": "Decantatore Honningbrew"
+    },
+    {
+        "editor_id": "EEJSSE003_EmeraldClawActivator",
+        "type": "ACTI FULL",
+        "original": "Emerald Dragon Claw",
+        "string": "Artiglio di Drago di Smeraldo"
+    },
+    {
+        "editor_id": "EEJSSE003_IvoryClawActivator",
+        "type": "ACTI FULL",
+        "original": "Ivory Dragon Claw",
+        "string": "Artiglio di Drago d'Avorio"
+    },
+    {
+        "editor_id": "ccEEJSSE003_EmptyJar",
+        "type": "MISC FULL",
+        "original": "Glass Jar",
+        "string": "Vasetto di vetro"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PuzzleCubeActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_GreyFoxBustActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_HonningbrewDecanterActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_Barrel",
+        "type": "CONT FULL",
+        "original": "Barrel",
+        "string": "Barile"
+    },
+    {
+        "editor_id": "ccEEJSSE003_LeftEyeoftheFalmerActivator",
+        "type": "ACTI FULL",
+        "original": "Left Eye of the Falmer",
+        "string": "Occhio sinistro dei Falmer"
+    },
+    {
+        "editor_id": "ccEEJSSE003_TeleportHollowMessage",
+        "type": "MESG FULL",
+        "original": "Sewer Entrance to Shadowfoot Sanctum",
+        "string": "Entrata fognaria per il santuario Shadowfoot"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemBlueActivator",
+        "type": "ACTI FULL",
+        "original": "Sapphire Paragon",
+        "string": "Modello di zaffiro"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SmithingChest",
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Baule"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemGreenActivator",
+        "type": "ACTI FULL",
+        "original": "Emerald Paragon",
+        "string": "Modello di smeraldo"
+    },
+    {
+        "editor_id": "ccEEJSSE003_TeleportRiftenMessage",
+        "type": "MESG FULL",
+        "original": "Sewer Exit to Riften",
+        "string": "Uscita fognaria per Riften"
+    },
+    {
+        "editor_id": "ccEEJSSE004_BronzeBowl",
+        "type": "MISC FULL",
+        "original": "Bowl",
+        "string": "Ciotola"
+    },
+    {
+        "editor_id": "ccEEJSSE003_LargeJug",
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "Boccale"
+    },
+    {
+        "editor_id": "ccEEJSSE003Interior01",
+        "type": "CELL FULL",
+        "original": "Shadowfoot Sanctum",
+        "string": "Santuario di Shadowfoot"
+    },
+    {
+        "editor_id": "ccEEJSSE003_ThiefHouseKey",
+        "type": "KEYM FULL",
+        "original": "Key to Shadowfoot Sanctum",
+        "string": "Chiave del santuario di Shadowfoot"
+    },
+    {
+        "editor_id": "ccEEJSSE003_AllForge",
+        "type": "FURN FULL",
+        "original": "Anvil",
+        "string": "Incudine"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskWoodenActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_SmallUrn2",
+        "type": "CONT FULL",
+        "original": "Small Urn",
+        "string": "Piccola urna"
+    },
+    {
+        "editor_id": "ccEEJSSE003_MothJarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BronzePlate",
+        "type": "MISC FULL",
+        "original": "Plate",
+        "string": "Piatto"
+    },
+    {
+        "editor_id": "ccEEJSSE003_ChillrendActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_SpiderControlRodActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PuzzleCubeActivator",
+        "type": "ACTI FULL",
+        "original": "Dwemer Puzzle Cube",
+        "string": "Cubo puzzle Dwemer"
+    },
+    {
+        "editor_id": "ccEEJSSE003_RightEyeoftheFalmerActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "EEJSSE003_GlassClawActivator",
+        "type": "ACTI FULL",
+        "original": "Glass Dragon Claw",
+        "string": "Artiglio di Drago di Vetro"
+    },
+    {
+        "editor_id": "EEJSSE003_DiamondClawActivator",
+        "type": "ACTI FULL",
+        "original": "Diamond Dragon Claw",
+        "string": "Artiglio di Drago di Diamante"
+    },
+    {
+        "editor_id": "EEJSSE003_GoldenClawActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_ChillrendActivator",
+        "type": "ACTI FULL",
+        "original": "Chillrend",
+        "string": "Squarcio gelido"
+    },
+    {
+        "editor_id": "ccEEJSSE003_GrimseverActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "EEJSSE003_EbonyClawActivator",
+        "type": "ACTI FULL",
+        "original": "Ebony Dragon Claw",
+        "string": "Artiglio di Drago d'Ebano"
+    },
+    {
+        "editor_id": "ccEEJSSE003_QueenBeeStatueActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskWoodenActivator",
+        "type": "ACTI FULL",
+        "original": "Wooden Mask",
+        "string": "Maschera di legno"
+    },
+    {
+        "editor_id": "ccEEJSSE003_EESMapActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DragonflyJarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_JeweledGoblet",
+        "type": "MISC FULL",
+        "original": "Jeweled Goblet",
+        "string": "Calice ingioiellato"
+    },
+    {
+        "editor_id": "ccEEJSSE003_ChildBedR",
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "Letto"
+    },
+    {
+        "editor_id": "ccEEJSSE003_SmallUrn",
+        "type": "CONT FULL",
+        "original": "Small Urn",
+        "string": "Piccola urna"
+    },
+    {
+        "editor_id": "ccEEJSSE003_ButterflyJarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Posiziona"
+    },
+    {
+        "editor_id": "ccEEJSSE003_MiscSackLargeNRS",
+        "type": "CONT FULL",
+        "original": "Large Sack",
+        "string": "Sacco grande"
+    },
+    {
+        "editor_id": "ccEEJSSE003_GreyFoxBustActivator",
+        "type": "ACTI FULL",
+        "original": "Bust of the Gray Fox",
+        "string": "Busto della Volpe Grigia"
+    },
+    {
+        "editor_id": "ccEEJSSE003_RightEyeoftheFalmerActivator",
+        "type": "ACTI FULL",
+        "original": "Right Eye of the Falmer",
+        "string": "Occhio destro dei Falmer"
+    },
+    {
+        "editor_id": "ccEEJSSE003_JeweledShip",
+        "type": "MISC FULL",
+        "original": "Jeweled Ship Model",
+        "string": "Modellino navale ingioiellato"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BronzeCandleStick3Misc",
+        "type": "MISC FULL",
+        "original": "Candlestick",
+        "string": "Candeliere"
+    },
+    {
+        "editor_id": "ccEEJSSE003_RiftenRWDoorLoad01",
+        "type": "DOOR FULL",
+        "original": "Door",
+        "string": "Porta"
+    },
+    {
+        "editor_id": "ccEEJSSE003_HouseQuest",
+        "type": "QUST NNAM",
+        "original": "Enter Shadowfoot Sanctum",
+        "string": "Entra nel santuario di Shadowfoot"
+    },
+    {
+        "editor_id": "ccEEJSSE003_HouseInitQuest",
+        "type": "QUST FULL",
+        "original": "House Enable Quest",
+        "string": "Missione per attivare la casa"
+    },
+    {
+        "editor_id": "ccEEJSSE003_HouseQuest",
+        "type": "QUST NNAM",
+        "original": "Purchase a home in the Riften Ratways",
+        "string": "Acquista una casa nei Ratway di Riften"
+    },
+    {
+        "editor_id": "ccEEJSSE003_HouseQuest",
+        "type": "QUST FULL",
+        "original": "Shadowfoot Sanctum",
+        "string": "Santuario di Shadowfoot"
+    },
+    {
+        "editor_id": "[05000F72]",
+        "type": "REFR FULL",
+        "original": "Riften Docks",
+        "string": "Porto di Riften"
+    },
+    {
+        "editor_id": "ccEEJSSE003_Note",
+        "type": "BOOK FULL",
+        "original": "Note to Vekel",
+        "string": "Nota per Vekel"
+    },
+    {
+        "editor_id": "RiftenRatwayLocation",
+        "type": "LCTN FULL",
+        "original": "Riften Ratway",
+        "string": "Ratway, Riften"
+    },
+    {
+        "editor_id": "RiftenRatway01",
+        "type": "CELL FULL",
+        "original": "The Ratway",
+        "string": "Il Ratway"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DisplayLackMsg",
+        "type": "MESG DESC",
+        "original": "You do not have the required item.",
+        "string": "Non hai l'oggetto richiesto."
+    },
+    {
+        "editor_id": "ccEEJSSE003_HouseQuest",
+        "type": "QUST CNAM",
+        "original": "After meeting with the Thieves Guild in the Ragged Flagon, I purchased a home in the Ratways from Vekel. I should find the location and make myself at home.",
+        "string": "Dopo aver incontrato la Gilda dei Ladri a La Caraffa Logora, ho acquistato una casa nei Ratway da Vekel. Devo trovarla e sistemarmi."
+    },
+    {
+        "editor_id": "ccEEJSSE003_HouseQuest",
+        "type": "QUST CNAM",
+        "original": "After meeting with the Thieves Guild in the Ragged Flagon, I purchased a home in the Ratways from Vekel. I found the entrance to Shadowfoot Sanctum and can now settle in.",
+        "string": "Dopo aver incontrato la Gilda dei Ladri a La Caraffa Logora, ho acquistato una casa nei Ratway da Vekel. Ho trovato l'entrata del santuario di Shadowfoot e adesso posso sistemarmi."
+    },
+    {
+        "editor_id": "ccEEJSSE003_HouseQuest",
+        "type": "QUST CNAM",
+        "original": "Not every home in Skyrim is built above ground. If I'm ever in the need of a more discreet hideout, I should head over to Riften and talk to those in the know.",
+        "string": "Non tutte le case di Skyrim sono costruite in superficie. Se dovessi aver mai bisogno di un nascondiglio dovrei andare a Riften e parlare con chi di dovere."
+    },
+    {
+        "editor_id": "ccEEJSSE003_Note",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\n\nVekel,\n\nThere's gotta be someone in the guild we can sell the Ratway home to, so I cleared out that manhole exit in the crafting room. It can be used to quickly access the dockside, possibly to evade.. unwanted guests.\n\nBjorn\n\n",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\n\nVekel,\n\nDeve esserci qualcuno della gilda a cui possiamo vendere la casa nel Ratway, ho quindi liberato il tombino d'uscita nella stanza per la creazione. Si pu\u00f2 usare per accedere velocemente al porto e evitare... ospiti sgraditi.\n\nBjorn\n\n"
+    }
+]

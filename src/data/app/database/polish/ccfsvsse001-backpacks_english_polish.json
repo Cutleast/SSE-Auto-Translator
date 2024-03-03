@@ -1,0 +1,134 @@
+[
+    {
+        "editor_id": "ccFSVSSE001_Backpack_Mage",
+        "type": "ARMO FULL",
+        "original": "Mage Backpack",
+        "string": "Plecak maga"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_HunterFullBedroll",
+        "type": "ARMO FULL",
+        "original": "Hunter Backpack with Bedroll",
+        "string": "Plecak \u0142owcy z pos\u0142aniem"
+    },
+    {
+        "editor_id": "ccFSVSSE001_EnchBackpackAdventurer",
+        "type": "ENCH FULL",
+        "original": "Adventurer Backpack",
+        "string": "Plecak poszukiwacza przyg\u00f3d"
+    },
+    {
+        "editor_id": "ccFSVSSE001_EnchBackpackFortifyCarry",
+        "type": "ENCH FULL",
+        "original": "Fortify Carry Weight",
+        "string": "Premia do ud\u017awigu"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_Fine",
+        "type": "ARMO FULL",
+        "original": "Fine Leather Backpack",
+        "string": "Porz\u0105dny sk\u00f3rzany plecak"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_BasicBedroll",
+        "type": "ARMO FULL",
+        "original": "Leather Backpack with Bedroll",
+        "string": "Sk\u00f3rzany plecak z pos\u0142aniem"
+    },
+    {
+        "editor_id": "ccFSVSSE001_EnchBackpackHunter",
+        "type": "ENCH FULL",
+        "original": "Hunter Backpack",
+        "string": "Plecak \u0142owcy"
+    },
+    {
+        "editor_id": "ccFSVSSE001_EnchBackpackThief",
+        "type": "ENCH FULL",
+        "original": "Thief Backpack",
+        "string": "Plecak z\u0142odzieja"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_ThiefBedroll",
+        "type": "ARMO FULL",
+        "original": "Dark Leather Backpack with Bedroll",
+        "string": "Ciemny sk\u00f3rzany plecak z pos\u0142aniem"
+    },
+    {
+        "editor_id": "ccFSVSSE001_QAChestBackpacks",
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Skrzynia"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_Thief",
+        "type": "ARMO FULL",
+        "original": "Dark Leather Backpack",
+        "string": "Ciemny sk\u00f3rzany plecak"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_ThiefFull",
+        "type": "ARMO FULL",
+        "original": "Thief Backpack",
+        "string": "Plecak z\u0142odzieja"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_Basic",
+        "type": "ARMO FULL",
+        "original": "Leather Backpack",
+        "string": "Sk\u00f3rzany plecak"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_ThiefFullBedroll",
+        "type": "ARMO FULL",
+        "original": "Thief Backpack with Bedroll",
+        "string": "Plecak z\u0142odzieja z pos\u0142aniem"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_HunterBedroll",
+        "type": "ARMO FULL",
+        "original": "Fur Backpack with Bedroll",
+        "string": "Futrzany plecak z pos\u0142aniem"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_Hunter",
+        "type": "ARMO FULL",
+        "original": "Fur Backpack",
+        "string": "Futrzany plecak"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_MageBedroll",
+        "type": "ARMO FULL",
+        "original": "Mage Backpack with Bedroll",
+        "string": "Plecak maga z pos\u0142aniem"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_FineBedroll",
+        "type": "ARMO FULL",
+        "original": "Fine Leather Backpack with Bedroll",
+        "string": "Porz\u0105dny sk\u00f3rzany plecak z pos\u0142aniem"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_AdventurerBedroll",
+        "type": "ARMO FULL",
+        "original": "Adventurer Backpack with Bedroll",
+        "string": "Plecak poszukiwacza przyg\u00f3d z pos\u0142aniem"
+    },
+    {
+        "editor_id": "ccFSVSSE001_EnchBackpackMage",
+        "type": "ENCH FULL",
+        "original": "Mage Backpack",
+        "string": "Plecak maga"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_Adventurer",
+        "type": "ARMO FULL",
+        "original": "Adventurer Backpack",
+        "string": "Plecak poszukiwacza przyg\u00f3d"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_HunterFull",
+        "type": "ARMO FULL",
+        "original": "Hunter Backpack",
+        "string": "Plecak \u0142owcy"
+    }
+]

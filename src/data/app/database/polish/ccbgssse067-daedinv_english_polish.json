@@ -1,0 +1,1628 @@
+[
+    {
+        "editor_id": "ccBGSSSE067_WelkyndStone",
+        "type": "MISC FULL",
+        "original": "Welkynd Stone",
+        "string": "Kamie\u0144 Welkynd"
+    },
+    {
+        "editor_id": "ccBGSSSE067_OrcAdventurer",
+        "type": "NPC_ FULL",
+        "original": "Orc Adventurer",
+        "string": "Ork poszukiwacz przyg\u00f3d"
+    },
+    {
+        "editor_id": "ccBGSSSE067Rielle02",
+        "type": "CELL FULL",
+        "original": "Rielle Crypt",
+        "string": "Krypta Rielle"
+    },
+    {
+        "editor_id": "ccBGSSSE067_DaedricHorseFireFXSpell",
+        "type": "SPEL FULL",
+        "original": "Flame Atronach abilities",
+        "string": "Zdolno\u015bci atronacha ognia"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AbFactionMythicDawnSneak",
+        "type": "SPEL FULL",
+        "original": "Mythic Dawn Faction",
+        "string": "Frakcja Mitycznego Brzasku"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ConjureSummonDaedricHorse",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Conjure Daedric Horse",
+        "string": "Ksi\u0119ga czar\u00f3w: Przywo\u0142anie daedrycznego konia"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AbFXDaedricHorseFX",
+        "type": "MGEF FULL",
+        "original": "Daedric Fire FX",
+        "string": "Efekt daedrycznego ognia"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlMythicDawnPatrol",
+        "type": "NPC_ FULL",
+        "original": "Mythic Dawn Guard",
+        "string": "Stra\u017cnik Mitycznego Brzasku"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note03_MythicDawnOrders",
+        "type": "BOOK FULL",
+        "original": "Mythic Dawn Orders",
+        "string": "Rozkazy Mitycznego Brzasku"
+    },
+    {
+        "editor_id": "ccBGSSSE067_SummonHorseEffect",
+        "type": "MGEF DNAM",
+        "original": "Summons a Daedric Horse to act as your steed.",
+        "string": "Przywo\u0142uje daedrycznego konia jako twojego wierzchowa."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note02_StrangersJournal",
+        "type": "BOOK FULL",
+        "original": "Skorvild's Journal",
+        "string": "Dziennik Skorvilda"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AyleidCrown",
+        "type": "ARMO FULL",
+        "original": "Ayleid Crown of Rielle",
+        "string": "Ayleidzka Korona Rielle"
+    },
+    {
+        "editor_id": "ccBGSSSE067_OblivionGateDoor",
+        "type": "DOOR FULL",
+        "original": "Oblivion Gate",
+        "string": "Wrota Otch\u0142ani"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AltarActivator",
+        "type": "ACTI FULL",
+        "original": "Altar",
+        "string": "O\u0142tarz"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AbMythicDawnFactionSneak",
+        "type": "MGEF FULL",
+        "original": "Mythic Dawn No Translate",
+        "string": "Mityczny Brzask Nie T\u0142umaczy\u0107"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note01_StrangersPlea",
+        "type": "BOOK FULL",
+        "original": "Stranger's Plea",
+        "string": "B\u0142aganie nieznajomego"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AltarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place Great Welkynd Stone",
+        "string": "Umie\u015b\u0107 Wielki Kamie\u0144 Welkynd"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlMythicDawnCultistMelee",
+        "type": "NPC_ FULL",
+        "original": "Mythic Dawn Cultist",
+        "string": "Kultysta Mitycznego Brzasku"
+    },
+    {
+        "editor_id": "ccBGSSSE067_DaedricHorseMount",
+        "type": "NPC_ FULL",
+        "original": "Daedric Horse",
+        "string": "Daedryczny ko\u0144"
+    },
+    {
+        "editor_id": "ccBGSSSE067_DaedricMaceScourge",
+        "type": "WEAP FULL",
+        "original": "Scourge",
+        "string": "Zmora"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlMythicDawnCultistMagic",
+        "type": "NPC_ FULL",
+        "original": "Mythic Dawn Cultist",
+        "string": "Kultysta Mitycznego Brzasku"
+    },
+    {
+        "editor_id": "ccBGSSSE067_SummonDaedricHorse",
+        "type": "SPEL FULL",
+        "original": "Summon Daedric Horse",
+        "string": "Przywo\u0142aj daedrycznego konia"
+    },
+    {
+        "editor_id": "ccBGSSSE067_DaedricLongswordTorment",
+        "type": "WEAP FULL",
+        "original": "Torment",
+        "string": "Udr\u0119ka"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AyleidLichBossAmbush",
+        "type": "NPC_ FULL",
+        "original": "Norion the Undying",
+        "string": "Norion Nie\u015bmiertelny"
+    },
+    {
+        "editor_id": "ccBGSSSE067_SummonHorseEffect",
+        "type": "MGEF FULL",
+        "original": "Summon Daedric Horse",
+        "string": "Przywo\u0142aj daedrycznego konia"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note04_MythicDawnVonosJournal",
+        "type": "BOOK FULL",
+        "original": "Vonos' Journal",
+        "string": "Dziennik Vonosa"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ContainerPunished01",
+        "type": "CONT FULL",
+        "original": "The Punished",
+        "string": "Ukarani"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightMelee2H",
+        "type": "NPC_ FULL",
+        "original": "Wight",
+        "string": "Strzyga"
+    },
+    {
+        "editor_id": "ccBGSSSE067_HarradaRootStanding01",
+        "type": "ACTI RNAM",
+        "original": "Harvest",
+        "string": "Zbierz"
+    },
+    {
+        "editor_id": "ccBGSSSE067_FloraSpiddalStickDead01",
+        "type": "FLOR RNAM",
+        "original": "Harvest",
+        "string": "Zbierz"
+    },
+    {
+        "editor_id": "ccBGSSSE067_DeadlandsLocation",
+        "type": "LCTN FULL",
+        "original": "Deadlands",
+        "string": "Kraina martwych"
+    },
+    {
+        "editor_id": "ccBGSSSE067_HarradaRootHanging01",
+        "type": "ACTI FULL",
+        "original": "Harrada Root",
+        "string": "Korze\u0144 harrada"
+    },
+    {
+        "editor_id": "ccBGSSSE067_IngredientBloodgrass",
+        "type": "INGR FULL",
+        "original": "Bloodgrass",
+        "string": "Krwawa trawa"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MessageHarvestFailed",
+        "type": "MESG FULL",
+        "original": "Harvest Failed",
+        "string": "Zbieranie nieudane"
+    },
+    {
+        "editor_id": "ccBGSSSE067_HarradaRootHanging02",
+        "type": "ACTI FULL",
+        "original": "Harrada Root",
+        "string": "Korze\u0144 harrada"
+    },
+    {
+        "editor_id": "ccBGSSSE067_FloraBloodGrass02",
+        "type": "FLOR FULL",
+        "original": "Blood Grass",
+        "string": "Krwawa trawa"
+    },
+    {
+        "editor_id": "ccBGSSSE067_FloraBloodGrass02",
+        "type": "FLOR RNAM",
+        "original": "Harvest",
+        "string": "Zbierz"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightAmbushMelee1H",
+        "type": "NPC_ SHRT",
+        "original": "Wight",
+        "string": "Strzyga"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightMelee2H",
+        "type": "NPC_ SHRT",
+        "original": "Wight",
+        "string": "Strzyga"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlMythicDawnPatrol",
+        "type": "NPC_ SHRT",
+        "original": "Guard",
+        "string": "Stra\u017cnik"
+    },
+    {
+        "editor_id": "ccBGSSSE067Plants",
+        "type": "CELL FULL",
+        "original": "DaedricPlantTestCell",
+        "string": "Kom\u00f3rkaTestowaDaedrycznejRo\u015bliny"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightMelee1H",
+        "type": "NPC_ SHRT",
+        "original": "Wight",
+        "string": "Strzyga"
+    },
+    {
+        "editor_id": "ccBGSSSE067_TreeSpiddalStick01",
+        "type": "TREE FULL",
+        "original": "Spiddal Stick",
+        "string": "Spiddalski kij"
+    },
+    {
+        "editor_id": "ccbgssse067_ContainerFleshyPod02",
+        "type": "CONT FULL",
+        "original": "Fleshy Pod",
+        "string": "Cielista kapsu\u0142a"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightMelee1H",
+        "type": "NPC_ FULL",
+        "original": "Wight",
+        "string": "Strzyga"
+    },
+    {
+        "editor_id": "ccBGSSSE067_FloraBloodGrass01",
+        "type": "FLOR RNAM",
+        "original": "Harvest",
+        "string": "Zbierz"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MythicDawnRedScarCavernLocation",
+        "type": "LCTN FULL",
+        "original": "Red Scar Cavern",
+        "string": "Grota Czerwonej Blizny"
+    },
+    {
+        "editor_id": "ccBGSSSE067_HarradaRootStanding01",
+        "type": "ACTI FULL",
+        "original": "Harrada Root",
+        "string": "Korze\u0144 harrada"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightMissileHoldPosition256",
+        "type": "NPC_ FULL",
+        "original": "Wight",
+        "string": "Strzyga"
+    },
+    {
+        "editor_id": "ccBGSSSE067_HarradaRootGround01",
+        "type": "ACTI FULL",
+        "original": "Harrada Root",
+        "string": "Korze\u0144 harrada"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlMythicDawnCultistMagic",
+        "type": "NPC_ SHRT",
+        "original": "Cultist",
+        "string": "Kultysta"
+    },
+    {
+        "editor_id": "ccBGSSSE067_FloraSpiddalStickDead01",
+        "type": "FLOR FULL",
+        "original": "Spiddal Stick",
+        "string": "Spiddalski kij"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightAmbushMissile",
+        "type": "NPC_ FULL",
+        "original": "Wight",
+        "string": "Strzyga"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightAmbushWarlock",
+        "type": "NPC_ SHRT",
+        "original": "Wight",
+        "string": "Strzyga"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightAmbushWarlock",
+        "type": "NPC_ FULL",
+        "original": "Wight",
+        "string": "Strzyga"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightAmbushMissile",
+        "type": "NPC_ SHRT",
+        "original": "Wight",
+        "string": "Strzyga"
+    },
+    {
+        "editor_id": "ccBGSSSE067_HarradaRootHanging02",
+        "type": "ACTI RNAM",
+        "original": "Harvest",
+        "string": "Zbierz"
+    },
+    {
+        "editor_id": "ccBGSSSE067_FloraBloodGrass01",
+        "type": "FLOR FULL",
+        "original": "Blood Grass",
+        "string": "Krwawa trawa"
+    },
+    {
+        "editor_id": "ccBGSSSE067_HarradaRootGround01",
+        "type": "ACTI RNAM",
+        "original": "Harvest",
+        "string": "Zbierz"
+    },
+    {
+        "editor_id": "ccBGSSSE067_IngredientSpiddalStick",
+        "type": "INGR FULL",
+        "original": "Spiddal Stick",
+        "string": "Spiddalski kij"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlMythicDawnCultistMelee",
+        "type": "NPC_ SHRT",
+        "original": "Cultist",
+        "string": "Kultysta"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightMissileHoldPosition256",
+        "type": "NPC_ SHRT",
+        "original": "Wight",
+        "string": "Strzyga"
+    },
+    {
+        "editor_id": "ccBGSSSE067_HarradaRootHanging01",
+        "type": "ACTI RNAM",
+        "original": "Harvest",
+        "string": "Zbierz"
+    },
+    {
+        "editor_id": "ccbgssse067_ContainerFleshyPod01",
+        "type": "CONT FULL",
+        "original": "Fleshy Pod",
+        "string": "Cielista kapsu\u0142a"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightAmbushMelee1H",
+        "type": "NPC_ FULL",
+        "original": "Wight",
+        "string": "Strzyga"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlMythicDawnGuard",
+        "type": "NPC_ FULL",
+        "original": "Mythic Dawn Guard",
+        "string": "Stra\u017cnik Mitycznego Brzasku"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "Locate the Sigil Stone in the Deadlands",
+        "string": "Znajd\u017a kamie\u0144 piecz\u0119tuj\u0105cy w krainie martwych"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MessageConfirmSigilStone",
+        "type": "MESG ITXT",
+        "original": "Do Nothing",
+        "string": "Nic nie r\u00f3b"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "Place the Ayleid Elemental Shards",
+        "string": "Umie\u015b\u0107 ayleidzkie od\u0142amki \u017cywio\u0142\u00f3w"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "Place the Great Welkynd Stone",
+        "string": "Umie\u015b\u0107 Wielki Kamie\u0144 Welkynd"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "Take the Sigil Stone",
+        "string": "We\u017a kamie\u0144 piecz\u0119tuj\u0105cy"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightAmbushMelee2H",
+        "type": "NPC_ SHRT",
+        "original": "Wight",
+        "string": "Strzyga"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MythicDawnDeadArgonianM",
+        "type": "NPC_ FULL",
+        "original": "Mythic Dawn",
+        "string": "Mityczny Brzask"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "Enter the secret chamber",
+        "string": "Wejd\u017a do tajnej komnaty"
+    },
+    {
+        "editor_id": "ccBGSSSE067_GateBarrierScrollEffect",
+        "type": "MGEF FULL",
+        "original": "Scroll of Oblivion",
+        "string": "Zw\u00f3j Otch\u0142ani"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlMythicDawnGuard",
+        "type": "NPC_ SHRT",
+        "original": "Mythic Dawn",
+        "string": "Mityczny Brzask"
+    },
+    {
+        "editor_id": "ccBGSSSE067_RielleElementShard01Earth",
+        "type": "MISC FULL",
+        "original": "Elemental Shard - Sercen",
+        "string": "Od\u0142amek \u017cywio\u0142\u00f3w - Sercen"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "Read Skorvild's Journal",
+        "string": "Przeczytaj dziennik Skorvilda"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "Read Janus' Journal",
+        "string": "Przeczytaj dziennik Janusa"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MessageConfirmSigilStone",
+        "type": "MESG ITXT",
+        "original": "Take Sigil Stone",
+        "string": "We\u017a kamie\u0144 piecz\u0119tuj\u0105cy"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MessageConfirmSigilStone",
+        "type": "MESG FULL",
+        "original": "Take Sigil Stone",
+        "string": "We\u017a kamie\u0144 piecz\u0119tuj\u0105cy"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ContainerPunished02",
+        "type": "CONT FULL",
+        "original": "The Punished",
+        "string": "Ukarani"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlMythicDawnCultistExplorer",
+        "type": "NPC_ SHRT",
+        "original": "Mythic Dawn",
+        "string": "Mityczny Brzask"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlWightMeleeAllMale",
+        "type": "NPC_ SHRT",
+        "original": "Wight",
+        "string": "Strzyga"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "Defeat the Dremora Valkynaz",
+        "string": "Pokonaj dremor\u0119 Valkynaza"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the Mythic Dawn Orders",
+        "string": "Przeczytaj rozkazy Mitycznego Brzasku"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlMythicDawnCultistExplorer",
+        "type": "NPC_ FULL",
+        "original": "Mythic Dawn Explorer",
+        "string": "Odkrywca Mitycznego Brzasku"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "Retrieve Scourge",
+        "string": "Zabierz Zmor\u0119"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AyleidElementalShardHolder01",
+        "type": "ACTI FULL",
+        "original": "Elemental Shard Holder",
+        "string": "Oprawa na od\u0142amek \u017cywio\u0142\u00f3w"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note07_MythicDawnJournalShardsJanus",
+        "type": "BOOK FULL",
+        "original": "Janus' Journal",
+        "string": "Dziennik Janusa"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MessageConfirmWelkyndStone",
+        "type": "MESG ITXT",
+        "original": "Do Nothing",
+        "string": "Nic nie r\u00f3b"
+    },
+    {
+        "editor_id": "ccBGSSSE067_RielleElementShard04Light",
+        "type": "MISC FULL",
+        "original": "Elemental Shard - Alata",
+        "string": "Od\u0142amek \u017cywio\u0142\u00f3w - Alata"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MessageConfirmWelkyndStone",
+        "type": "MESG ITXT",
+        "original": "Place Great Welkynd Stone",
+        "string": "Umie\u015b\u0107 Wielki Kamie\u0144 Welkynd"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MessageConfirmWelkyndStone",
+        "type": "MESG FULL",
+        "original": "Place Great Welkynd Stone",
+        "string": "Umie\u015b\u0107 Wielki Kamie\u0144 Welkynd"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LS_OblivionGate",
+        "type": "LSCR DESC",
+        "original": "The Oblivion Crisis was a war with the Daedra at the end of the Third Era. Aided by the Mythic Dawn, the Daedric Prince Mehrunes Dagon opened many Oblivion Gates throughout Tamriel, and nearly caused its destruction. The war was ultimately won by Martin Septim and the Hero of Kvatch.",
+        "string": "Kryzys Otch\u0142ani by\u0142 wojn\u0105 z daedrami na koniec trzeciej ery. Wspomagany przez Mityczny Brzask, daedryczny ksi\u0105\u017c\u0119 Mehrunes Dagon otworzy\u0142 w ca\u0142ym Tamriel wiele Wr\u00f3t Otch\u0142ani i niemal doprowadzi\u0142 do jego zniszczenia. Wojna ostatecznie zosta\u0142a wygrana przez Martina Septima i Bohatera Kvatch."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "Escape the Deadlands",
+        "string": "Ucieknij z krainy martwych"
+    },
+    {
+        "editor_id": "ccBGSSSE067_SigilStoneWeakActivator",
+        "type": "ACTI FULL",
+        "original": "Weakened Sigil Stone",
+        "string": "Os\u0142abiony kamie\u0144 piecz\u0119tuj\u0105cy"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ARGreatWelkyndStoneACT01",
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "We\u017a"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "Retrieve Torment",
+        "string": "Zabierz Udr\u0119k\u0119"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "Defeat the Mythic Dawn Assassins",
+        "string": "Pokonaj zab\u00f3jc\u00f3w Mitycznego Brzasku"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "(Optional) Find the missing Vigilants (<Global=ccBGSSSE067_QuestVigilantRescueCounter>/3)",
+        "string": "(Opcjonalne) Znajd\u017a brakuj\u0105cych Stra\u017cnik\u00f3w (<Global=ccBGSSSE067_QuestVigilantRescueCounter>/3)"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "Use the Scroll of Liminal Breach",
+        "string": "U\u017cyj zwoju wy\u0142omu granicznego"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "Read Vonos' Journal",
+        "string": "Przeczytaj dziennik Vonosa"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "Take the Great Welkynd Stone",
+        "string": "We\u017a Wielki Kamie\u0144 Welkynd"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "Retrieve Vonos' Journal",
+        "string": "Zabierz dziennik Vonosa"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "(Optional) Wear a set of Mythic Dawn robes",
+        "string": "(Opcjonalne) Za\u0142\u00f3\u017c szat\u0119 Mitycznego Brzasku"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlVigilantEnforcer",
+        "type": "NPC_ FULL",
+        "original": "Vigil Enforcer",
+        "string": "Najemnik Stra\u017cy"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the Vigil Enforcer's Journal",
+        "string": "Przeczytaj dziennik najemnika Stra\u017cy"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "Locate the Ayleid Elemental Shard Holders",
+        "string": "Znajd\u017a oprawy na ayleidzkie od\u0142amki \u017cywio\u0142\u00f3w"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MythicDawnChamberKey",
+        "type": "KEYM FULL",
+        "original": "Mythic Dawn Chamber Key",
+        "string": "Klucz do komnaty Mitycznego Brzasku"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "Search Norion's remains",
+        "string": "Przeszukaj szcz\u0105tki Noriona"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "Defeat Norion the Undying",
+        "string": "Pokonaj Noriona Nie\u015bmiertelnego"
+    },
+    {
+        "editor_id": "ccBGSSSE067_SigilStoneWeakActivator",
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "We\u017a"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "Retrieve the Ayleid Elemental Shards (<Global=ccBGSSSE067_QuestShardCounter>/4)",
+        "string": "Zbierz ayleidzkie od\u0142amki \u017cywio\u0142\u00f3w (<Global=ccBGSSSE067_QuestShardCounter>/4)"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "Meet Skorvild at the Shrine to Stendarr",
+        "string": "Spotkaj si\u0119 ze Skorvildem przy kapliczce Stendarra"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "Search Rielle for clues about the secret chamber",
+        "string": "Przeszukaj Rielle i dowiedz si\u0119 czego\u015b o tajnej komnacie"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "Search the bodies for information",
+        "string": "Przeszukaj cia\u0142a i uzyskaj informacje"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "Defeat Valkyn Skoria",
+        "string": "Pokonaj Valkyna Skori\u0119"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "Await news from a courier",
+        "string": "Czekaj na wie\u015bci od pos\u0142a\u0144ca"
+    },
+    {
+        "editor_id": "ccBGSSSE067_RielleElementShard03Air",
+        "type": "MISC FULL",
+        "original": "Elemental Shard - Wel",
+        "string": "Od\u0142amek \u017cywio\u0142\u00f3w - Wel"
+    },
+    {
+        "editor_id": "ccBGSSSE067_GateBarrierScrollEffect",
+        "type": "MGEF DNAM",
+        "original": "Permits the caster pass through the Liminal Barrier.",
+        "string": "Pozwala rzucaj\u0105cemu zakl\u0119cie przej\u015b\u0107 przez barier\u0119 graniczn\u0105."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "Find clues to the Oblivion Gate's location",
+        "string": "Odszukaj informacje dotycz\u0105ce po\u0142o\u017cenia Wr\u00f3t Otch\u0142ani"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST FULL",
+        "original": "The Cause",
+        "string": "Przyczyna"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MythicDawnDeadDarkElfM",
+        "type": "NPC_ FULL",
+        "original": "Mythic Dawn",
+        "string": "Mityczny Brzask"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note05_VigilantMythicDawnLocation",
+        "type": "BOOK FULL",
+        "original": "Vigilant Enforcer's Journal",
+        "string": "Dziennik Stra\u017cnika Stendarra"
+    },
+    {
+        "editor_id": "ccBGSSSE067_DaedricThrone01",
+        "type": "FURN FULL",
+        "original": "Daedric Throne",
+        "string": "Daedryczny tron"
+    },
+    {
+        "editor_id": "ccBGSSSE067MythicDawnCave01",
+        "type": "CELL FULL",
+        "original": "Red Scar Cavern",
+        "string": "Grota Czerwonej Blizny"
+    },
+    {
+        "editor_id": "ccBGS_ARGate01",
+        "type": "ACTI FULL",
+        "original": "Gate",
+        "string": "Z\u0142y od\u0142amek"
+    },
+    {
+        "editor_id": "ccBGSSSE067_RielleElementShard02Water",
+        "type": "MISC FULL",
+        "original": "Elemental Shard - Nen",
+        "string": "Od\u0142amek \u017cywio\u0142\u00f3w - Nen"
+    },
+    {
+        "editor_id": "ccBGS_ARChest02Loot",
+        "type": "CONT FULL",
+        "original": "Ayleid Cask",
+        "string": "Klucz Rielle"
+    },
+    {
+        "editor_id": "ccBGS_ARChest01Loot",
+        "type": "CONT FULL",
+        "original": "Ayleid Cask",
+        "string": "Strzyga"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlWightMeleeAllMale",
+        "type": "NPC_ FULL",
+        "original": "Wight",
+        "string": "Strzyga"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ARGreatWelkyndStoneACT01",
+        "type": "ACTI FULL",
+        "original": "Great Welkynd Stone",
+        "string": "Wielki Kamie\u0144 Welkynd"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "Locate the Oblivion Gate",
+        "string": "Znajd\u017a Wrota Otch\u0142ani"
+    },
+    {
+        "editor_id": "ccBGSSSE067_SigilStoneWeak",
+        "type": "MISC FULL",
+        "original": "Weakaned Sigil Stone",
+        "string": "Os\u0142abiony kamie\u0144 piecz\u0119tuj\u0105cy"
+    },
+    {
+        "editor_id": "ccBGSSSE067MythicDawnCave02",
+        "type": "CELL FULL",
+        "original": "Mythic Dawn Temple",
+        "string": "\u015awi\u0105tynia Mitycznego Brzasku"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the Stranger's Plea",
+        "string": "Przeczytaj pro\u015bb\u0119 nieznajomego"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note06_MythicDawnExpeditionJournal",
+        "type": "BOOK FULL",
+        "original": "Excavation Leader's Journal",
+        "string": "Dziennik kierownika wykopalisk"
+    },
+    {
+        "editor_id": "ccBGSSSE067_GateBarrierScroll01",
+        "type": "SCRL FULL",
+        "original": "Scroll of Liminal Breach",
+        "string": "Zw\u00f3j wy\u0142omu granicznego"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "Search for clues in the Mythic Dawn camp",
+        "string": "Poszukaj \u015blad\u00f3w w obozie Mitycznego Brzasku"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ARGreatWelkyndStoneItem01",
+        "type": "MISC FULL",
+        "original": "Great Welkynd Stone",
+        "string": "Wielki Kamie\u0144 Welkynd"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LS_Ayleids",
+        "type": "LSCR DESC",
+        "original": "The Ayleids were a race of powerful Elves, whose culture was rich with magic and mystery. They were the first to establish an empire in Tamriel, but have not been seen since the First Era. Their ancient ruins dot the landscape of Cyrodiil.",
+        "string": "Ayleidzi byli ras\u0105 pot\u0119\u017cnych elf\u00f3w, a ich kultur\u0119 przepe\u0142nia\u0142a magia i tajemnice. Jako pierwsi za\u0142o\u017cyli cesarstwo w Tamriel, ale nie widziano ich od czas\u00f3w pierwszej ery. Ich staro\u017cytne ruiny znale\u017a\u0107 mo\u017cna w ca\u0142ym Cyrodiil."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST NNAM",
+        "original": "Defeat Vonos",
+        "string": "Pokonaj Vonosa"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ConjureDremoraLordScourge",
+        "type": "SPEL FULL",
+        "original": "Conjure Dremora Lord",
+        "string": "Przywo\u0142anie w\u0142adcy dremor"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ScourgeSummonDremoraCooldownEffect",
+        "type": "MGEF FULL",
+        "original": "Summon Dremora Cooldown (no translate)",
+        "string": "Regeneracja przywo\u0142ania dremory (nie t\u0142umaczy\u0107)"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlWightMissileAllMale",
+        "type": "NPC_ FULL",
+        "original": "Wight",
+        "string": "Strzyga"
+    },
+    {
+        "editor_id": "ccBGSSSE067_EnchBanishFFContact",
+        "type": "MGEF FULL",
+        "original": "Banish",
+        "string": "Wyp\u0119dzenie"
+    },
+    {
+        "editor_id": "ccBGSSSE067_EnchWeaponScourge",
+        "type": "ENCH FULL",
+        "original": "Banish",
+        "string": "Wyp\u0119dzenie"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MessageChooseStone",
+        "type": "MESG ITXT",
+        "original": "Take Sigil Stone (close gate)",
+        "string": "We\u017a kamie\u0144 piecz\u0119tuj\u0105cy (zamknij wrota)"
+    },
+    {
+        "editor_id": "ccBGSSSE067_EnchFireDamageFFContact_NoShader",
+        "type": "MGEF DNAM",
+        "original": "Burns the target for <mag> points. Targets on fire take extra damage.",
+        "string": "Zadaje celowi <mag> pkt. obra\u017ce\u0144 od ognia. P\u0142on\u0105ce cele odnosz\u0105 dodatkowe obra\u017cenia."
+    },
+    {
+        "editor_id": "ccBGSSSE067_AbScourgeSummonDremora",
+        "type": "SPEL FULL",
+        "original": "Scourge Abilities",
+        "string": "Zdolno\u015bci zmory"
+    },
+    {
+        "editor_id": "ccBGSSSE067_SummonEncDremoraLordScourge",
+        "type": "NPC_ FULL",
+        "original": "Dremora Lord",
+        "string": "W\u0142adca dremor"
+    },
+    {
+        "editor_id": "ccBGSSSE067DeadlandsWorld",
+        "type": "WRLD FULL",
+        "original": "Deadlands",
+        "string": "Kraina martwych"
+    },
+    {
+        "editor_id": "ccBGSSSE067_EnchFireDamageFFContact_NoShader",
+        "type": "MGEF FULL",
+        "original": "Fire Damage",
+        "string": "Obra\u017cenia od ognia"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MessageChooseStone",
+        "type": "MESG ITXT",
+        "original": "Use Great Welkynd Stone (charge gate)",
+        "string": "U\u017cyj Wielkiego Kamienia Welkynd (do\u0142aduj bram\u0119)"
+    },
+    {
+        "editor_id": "ccBGSSSE067_EnchBanishFFContact",
+        "type": "MGEF DNAM",
+        "original": "Summoned Daedra up to level <mag> are sent back to Oblivion.",
+        "string": "Przywo\u0142ane daedry na maks. <mag>. poziomie s\u0105 odsy\u0142ane z powrotem do Otch\u0142ani."
+    },
+    {
+        "editor_id": "ccBGSSSE067_SummonDremoraLordScourge",
+        "type": "MGEF FULL",
+        "original": "Conjure Dremora Lord",
+        "string": "Przywo\u0142anie w\u0142adcy dremor"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AbScourgeSummonDremoraEffect",
+        "type": "MGEF FULL",
+        "original": "Summon Dremora",
+        "string": "Przywo\u0142anie dremory"
+    },
+    {
+        "editor_id": "ccBGSSSE067DeadlandsRegion",
+        "type": "REGN RDMP",
+        "original": "The Deadlands",
+        "string": "Kraina martwych"
+    },
+    {
+        "editor_id": "ccBGSSSE067_EnchScourgeFireDamageFFContact",
+        "type": "MGEF FULL",
+        "original": "Fire Damage",
+        "string": "Obra\u017cenia od ognia"
+    },
+    {
+        "editor_id": "ccBGSSSE067_EnchWeaponFireDamage06_NoShader",
+        "type": "ENCH FULL",
+        "original": "Fire Damage",
+        "string": "Obra\u017cenia od ognia"
+    },
+    {
+        "editor_id": "ccBGSSSE067_SummonDremoraLordScourge",
+        "type": "MGEF DNAM",
+        "original": "Summons a Dremora Lord for <dur> seconds.",
+        "string": "Przywo\u0142uje na <dur> s w\u0142adc\u0119 dremor."
+    },
+    {
+        "editor_id": "ccBGSSSE067_MessageChooseStone",
+        "type": "MESG FULL",
+        "original": "Sigil Stone Altar",
+        "string": "O\u0142tarz kamienia piecz\u0119tuj\u0105cego"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ScourgeConjureDremoraCooldown",
+        "type": "SPEL FULL",
+        "original": "Scourge Cooldown",
+        "string": "Regeneracja zmory"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MessageChooseStone",
+        "type": "MESG ITXT",
+        "original": "Do Nothing",
+        "string": "Nic nie r\u00f3b"
+    },
+    {
+        "editor_id": "ccBGSSSE067_EnchScourgeFireDamageFFContact",
+        "type": "MGEF DNAM",
+        "original": "Burns the target for <mag> points. Targets on fire take extra damage. Summons a Dremora Lord once per combat encounter.",
+        "string": "Zadaje celowi <mag> pkt. obra\u017ce\u0144 od ognia. P\u0142on\u0105ce cele odnosz\u0105 dodatkowe obra\u017cenia. Raz na starcie przyzywa w\u0142adc\u0119 dremor."
+    },
+    {
+        "editor_id": "ccBGSSSE067_DaedricHorseEnemyAmbush",
+        "type": "NPC_ FULL",
+        "original": "Daedric Horse",
+        "string": "Daedryczny ko\u0144"
+    },
+    {
+        "editor_id": "ccBGSSSE067_SigilOrWelkyndActivator",
+        "type": "ACTI FULL",
+        "original": "Sigil Stone Altar",
+        "string": "O\u0142tarz kamienia piecz\u0119tuj\u0105cego"
+    },
+    {
+        "editor_id": "ccBGSSSE067_DaedricHorseRunScene",
+        "type": "NPC_ FULL",
+        "original": "Daedric Horse",
+        "string": "Daedryczny ko\u0144"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlWightMissileAllMale",
+        "type": "NPC_ SHRT",
+        "original": "Wight",
+        "string": "Strzyga"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "type": "QUST FULL",
+        "original": "The Consequences",
+        "string": "Konsekwencje"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "type": "QUST NNAM",
+        "original": "Enter the Oblivion Gate",
+        "string": "Przejd\u017a przez Wrota Otch\u0142ani"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "type": "QUST NNAM",
+        "original": "Retrieve Scourge",
+        "string": "Zabierz Zmor\u0119"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ShardMessageBox",
+        "type": "MESG ITXT",
+        "original": "Light (Alata)",
+        "string": "\u015awiat\u0142o (Alata)"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ShardMessageBox",
+        "type": "MESG FULL",
+        "original": "Elemental Shard Holder",
+        "string": "Oprawa na od\u0142amek \u017cywio\u0142\u00f3w"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ShardMessageBox",
+        "type": "MESG ITXT",
+        "original": "Do Nothing",
+        "string": "Nic nie r\u00f3b"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ShardMessageBox",
+        "type": "MESG ITXT",
+        "original": "Air (Wel)",
+        "string": "Powietrze (Wel)"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ShardMessageBox",
+        "type": "MESG ITXT",
+        "original": "Water (Nen)",
+        "string": "Woda (Nen)"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note08_VigilantSecuretheGate",
+        "type": "BOOK FULL",
+        "original": "Vigil's Orders",
+        "string": "Rozkazy stra\u017cy"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "type": "QUST NNAM",
+        "original": "Retrieve Vonos' Journal",
+        "string": "Zabierz dziennik Vonosa"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ShardMessageBox",
+        "type": "MESG ITXT",
+        "original": "Earth (Sercen)",
+        "string": "Ziemia (Sercen)"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "type": "QUST NNAM",
+        "original": "Retrieve Torment",
+        "string": "Zabierz Udr\u0119k\u0119"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "type": "QUST NNAM",
+        "original": "Read Vonos' Journal",
+        "string": "Przeczytaj dziennik Vonosa"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "type": "QUST NNAM",
+        "original": "Defeat the Dremora Valkynaz",
+        "string": "Pokonaj dremor\u0119 Valkynaza"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightMelee1HLord",
+        "type": "NPC_ FULL",
+        "original": "Wight Lord",
+        "string": "W\u0142adca strzyg"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightMelee2HLord",
+        "type": "NPC_ SHRT",
+        "original": "Wight",
+        "string": "Strzyga"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightMelee1HLord",
+        "type": "NPC_ SHRT",
+        "original": "Wight",
+        "string": "Strzyga"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightMelee2HLord",
+        "type": "NPC_ FULL",
+        "original": "Wight Lord",
+        "string": "W\u0142adca strzyg"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightAmbushMelee2HLord",
+        "type": "NPC_ SHRT",
+        "original": "Wight",
+        "string": "Strzyga"
+    },
+    {
+        "editor_id": "ccBGSSSE067_TreasAyleidUrn02",
+        "type": "CONT FULL",
+        "original": "Urn",
+        "string": "Urna"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightAmbushMelee2HLord",
+        "type": "NPC_ FULL",
+        "original": "Wight Lord",
+        "string": "W\u0142adca strzyg"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AbLichHealthMonitorEffect",
+        "type": "MGEF FULL",
+        "original": "Blank",
+        "string": "Puste"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightAmbushMissileStay",
+        "type": "NPC_ SHRT",
+        "original": "Wight",
+        "string": "Strzyga"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightAmbushWarlockLord",
+        "type": "NPC_ FULL",
+        "original": "Wight Lord",
+        "string": "W\u0142adca strzyg"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightAmbushMissileStay",
+        "type": "NPC_ FULL",
+        "original": "Wight",
+        "string": "Strzyga"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightAmbushWarlockLord",
+        "type": "NPC_ SHRT",
+        "original": "Wight",
+        "string": "Strzyga"
+    },
+    {
+        "editor_id": "ccBGSSSE067_TreasAyleidUrn01",
+        "type": "CONT FULL",
+        "original": "Urn",
+        "string": "Urna"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MapMarkerRedScarCavern",
+        "type": "REFR FULL",
+        "original": "Red Scar Cavern",
+        "string": "Grota Czerwonej Blizny"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AbWight",
+        "type": "SPEL FULL",
+        "original": "Wight Abilities No Translate",
+        "string": "Zdolno\u015bci strzygi Nie T\u0142umaczy\u0107"
+    },
+    {
+        "editor_id": "ccBGSSSE067_WightRace",
+        "type": "RACE FULL",
+        "original": "Wight",
+        "string": "Strzyga"
+    },
+    {
+        "editor_id": "[051D67E7]",
+        "type": "REFR FULL",
+        "original": "Deadlands",
+        "string": "Kraina martwych"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MapMarkerVarlaisCavern",
+        "type": "REFR FULL",
+        "original": "Varlais Cavern",
+        "string": "Jaskinia Varlais"
+    },
+    {
+        "editor_id": "ccBGSSSE067_WelkyndStoneIngestible",
+        "type": "ALCH FULL",
+        "original": "Welkynd Stone",
+        "string": "Kamie\u0144 Welkynd"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LichDeathFX01",
+        "type": "SPEL FULL",
+        "original": "Lich Death FX No Translate",
+        "string": "Efekt \u015bmierci licza Nie t\u0142umaczy\u0107"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LichDeathEffect",
+        "type": "MGEF FULL",
+        "original": "Lich Death Effect No Translate",
+        "string": "Efekt \u015bmierci licza Nie t\u0142umaczy\u0107"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LichDeathEffect",
+        "type": "MGEF DNAM",
+        "original": "Lich Death Effect No Translate",
+        "string": "Efekt \u015bmierci licza Nie t\u0142umaczy\u0107"
+    },
+    {
+        "editor_id": "ccBGSSSE067_OpenedElsewhereMessage",
+        "type": "MESG FULL",
+        "original": "Gate Barred",
+        "string": "Brama zablokowana"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ARUrn01LootSpecial",
+        "type": "CONT FULL",
+        "original": "Ayleid Urn",
+        "string": "Ayleidzka urna"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ARUrn01Loot",
+        "type": "CONT FULL",
+        "original": "Ayleid Urn",
+        "string": "Ayleidzka urna"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ConjureAyleidLichEffect",
+        "type": "MGEF FULL",
+        "original": "Conjure Ayleid Lich",
+        "string": "Przywo\u0142anie ayleidzkiego licza"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note09_TornPage",
+        "type": "BOOK FULL",
+        "original": "Torn Note",
+        "string": "Podarty li\u015bcik"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AyleidLichStaff01",
+        "type": "WEAP FULL",
+        "original": "Staff of Ehlno Ede",
+        "string": "Kostur Ehlno Ede"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AbsorbStaminaConcAimed",
+        "type": "MGEF FULL",
+        "original": "Drain Stamina",
+        "string": "Wyssanie kondycji"
+    },
+    {
+        "editor_id": "ccBGSSSE067_EnchLichStaff",
+        "type": "ENCH FULL",
+        "original": "Staff of Ehlno Ede",
+        "string": "Kostur Ehlno Ede"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ConjureAyleidLichEffect",
+        "type": "MGEF DNAM",
+        "original": "Summons an Ayleid Lich for <dur> seconds.",
+        "string": "Przywo\u0142uje ayleidzkiego licza na <dur> s."
+    },
+    {
+        "editor_id": "ccBGSSSE067_ConjureEncAyleidLich",
+        "type": "NPC_ FULL",
+        "original": "Ayleid Lich",
+        "string": "Ayleidzki licz"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "type": "QUST NNAM",
+        "original": "Return to Tamriel",
+        "string": "Wr\u00f3\u0107 do Tamriel"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "type": "QUST NNAM",
+        "original": "Escape Red Scar Cavern",
+        "string": "Ucieknij z Groty Czerwonej Blizny"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AbsorbStaminaConcAimed",
+        "type": "MGEF DNAM",
+        "original": "Absorb <mag> points of stamina per second from the target.",
+        "string": "Wch\u0142ania <mag> pkt. kondycji celu na sekund\u0119."
+    },
+    {
+        "editor_id": "ccBGSSSE067_ConjureAyleidLichTome",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Conjure Ayleid Lich",
+        "string": "Ksi\u0119ga czar\u00f3w: Przywo\u0142anie ayleidzkiego licza"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ConjureAyleidLichSpell",
+        "type": "SPEL FULL",
+        "original": "Conjure Ayleid Lich",
+        "string": "Przywo\u0142anie ayleidzkiego licza"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AtrFrgConjureLichRecipeNote",
+        "type": "BOOK FULL",
+        "original": "Atronach Forge Recipe",
+        "string": "Receptura ku\u017ani atronach\u00f3w"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AyleidBench01",
+        "type": "FURN FULL",
+        "original": "Bench",
+        "string": "\u0141awka"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ConjureSummonDaedricHorse",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nConjure Daedric Horse",
+        "string": "<font face='$HandwrittenFont'><font size='40'><p align='center'>\nPrzywo\u0142aj daedrycznego konia"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note03_MythicDawnOrders",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\nThere have been whispers of traitors among our ranks. Pathetic attempts to sabotage our mission. But nothing will stand in the way of Lord Dagon's Valkyn.\n\nYour duty is to seek out those who oppose us, and eradicate them.\n\nAcolyte Skorvild and Priestess Enakain have gone missing. Find them. If there is any scent of betrayal they must be swiftly destroyed.\n\nAfterward, travel to the excavation camp to await further instruction, but take the utmost precaution. The Vigil of Stendarr have increased their activity, and may be aware of our presence.\n\nThe dawn is breaking.\n\n-Vonos\n</font>\n",
+        "string": "<font face='$HandwrittenFont'>\nKr\u0105\u017c\u0105 pog\u0142oski o zdrajcach w naszych szeregach. O \u017ca\u0142osnych pr\u00f3bach pokrzy\u017cowania nam plan\u00f3w. Nic jednak nie stanie na drodze Valkyn, stra\u017cy lorda Dagona.\n\nWaszym obowi\u0105zkiem jest odnale\u017a\u0107 naszych wrog\u00f3w i natychmiast ich zniszczy\u0107.\n\nAkolita Skorvild i kap\u0142anka Enakain znikn\u0119li. Odnajd\u017acie ich. Je\u015bli wyczujecie jakikolwiek \u015blad zdrady, natychmiast ich zabijcie.\n\nNast\u0119pnie ruszajcie do obozu przy wykopaliskach i czekajcie na dalsze instrukcje. Post\u0119pujcie ostro\u017cnie. Stra\u017c Stendarra jest bardzo aktywna i mo\u017ce wiedzie\u0107, gdzie si\u0119 znajdujecie.\n\nBrzask jest blisko.\n\n- Vonos\n</font>\n"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note02_StrangersJournal",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"20\">\nIf you are reading this, it means they may have reached me first. The Mythic Dawn do not tolerate desertion. A fitting end for my transgressions, I suppose. \n\nIf you know of the Mythic Dawn, you may have heard that the cult was eradicated long ago, after the Oblivion Crisis of the 3rd era came to an end. This was true until perhaps one year past.\n\nAs discord began to sow in the lands of Skyrim, the whispers of Mehrunes Dagon made their way to the ears and mind of a fervent worshipper named Vonos. These whispers led him deep underground to an ancient Mythic Dawn temple, long since collapsed, where rumors spoke of an Oblivion Gate, lying in ruin for centuries.\n\nVonos soon made a pact with Mehrunes Dagon, and began to quietly reform the Mythic Dawn as its new leader. He began to cultivate more members to the cause, and I myself fell victim to the promise of such power.\n\nAfter the Oblivion Crisis, the gates throughout Skyrim were buried deep within the lands. However, with much effort, we retrieved many of these pieces, and successfully rebuilt an Oblivion Gate.\n\nVonos, a master of conjuration, has been working tirelessly to open the gate and give Mehrunes Dagon's troops a doorway into Tamriel.\n\nAs dictated by the pact, the cleansing of the Oblivion Gate required a personal blood sacrifice from each of us to prove our devotion. Blinded by ambition, I offered up my own brother, Sune. A simple farmer who could not harm a Dartwing.\n\nWatching the knife penetrate his body sent shock and horror through my entire being. The blood that spilled from his loins was that of my blood. In that moment I realized what I had done. It was not power that bewitched me, but deceit.\n\nAs an Acolyte I was not privy to much information, but I know that Vonos is searching for a powerful, ancient artifact that is necessary to open the gate. What that artifact might be, I do not know. I heard something about an excavation camp to the southwest of Ivarstead, near a mountain pass. Perhaps more information can be found there.\n\nLastly, in order to keep its location secret, all but the highest priests in the order are blindfolded when taken to and from the Oblivion Gate, so I have no further information to give as to its whereabouts. I only know it was a cave. I wish I could tell you more.\n\nI've been on the run day and night, and now the Vigil of Stendarr are also on my trail. I can only imagine what they might do to someone like me, so I come to you with my plea, someone who might better understand my plight.\n\nPlease stop the Mythic Dawn however you can. For myself, my forsaken brother, and the whole of Tamriel.\n\n-Skorvild\n</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"20\">\nJe\u015bli to czytasz, to znaczy \u017ce oni pierwsi mnie odnale\u017ali. Mityczny Brzask nie toleruje dezercji. To chyba stosowny koniec moich wyst\u0119pk\u00f3w. \n\nJe\u015bli wiesz, czym jest Mityczny Brzask, mo\u017ce Ci si\u0119 wydawa\u0107, \u017ce ten kult zosta\u0142 wypleniony wiele lat temu, po Kryzysie Otch\u0142ani i zako\u0144czeniu trzeciej ery. Tak by\u0142o, przynajmniej jeszcze rok temu.\n\nJednak w Skyrim zacz\u0119\u0142y si\u0119 szerzy\u0107 niepokoje, a do uszu i umys\u0142u gorliwego czciciela imieniem Vonos trafi\u0142y szepty Mehrunesa Dagona. Poprowadzi\u0142y go g\u0142\u0119boko pod ziemi\u0119, do staro\u017cytnej \u015bwi\u0105tyni Mitycznego Brzasku, kt\u00f3ra dawno temu si\u0119 zawali\u0142a. To tam pono\u0107 od wiek\u00f3w znajduj\u0105 si\u0119 zburzone szcz\u0105tki Wr\u00f3t Otch\u0142ani.\n\nVonos szybko zawar\u0142 pakt z Mehrunesem Dagonem i po cichu rozpocz\u0105\u0142 odbudowywanie Mitycznego Brzasku, kt\u00f3rego sta\u0142 si\u0119 przyw\u00f3dc\u0105. Zacz\u0105\u0142 przyci\u0105ga\u0107 kolejnych cz\u0142onk\u00f3w, a i ja pad\u0142em ofiar\u0105 jego obietnic. Tak, by\u0142em \u017c\u0105dny w\u0142adzy.\n\nPo Kryzysie Otch\u0142ani wrota w ca\u0142ym Skyrim zosta\u0142y pogrzebane g\u0142\u0119boko w ziemi. Jednak z ogromnym wysi\u0142kiem uda\u0142o nam si\u0119 odkry\u0107 wiele ich fragment\u00f3w i z powodzeniem odbudowa\u0107 t\u0119 bram\u0119.\n\nVonos, mistrz przywo\u0142ywania, pracowa\u0142 bez wytchnienia, aby otworzy\u0107 wrota i stworzy\u0107 wojskom Mehrunesa Dagona przej\u015bcie do Tamriel.\n\nZgodnie z paktem, oczyszczenie Wr\u00f3t Otch\u0142ani wymaga\u0142o od ka\u017cdego z nas ofiary z krwi. W ten spos\u00f3b mieli\u015bmy udowodni\u0107 swoj\u0105 lojalno\u015b\u0107. Za\u015blepiony ambicj\u0105, postanowi\u0142em z\u0142o\u017cy\u0107 w ofierze w\u0142asnego brata, Sune. Prostego rolnika, kt\u00f3ry nie skrzywdzi\u0142by nawet ostroskrzydlaka.\n\nKiedy patrzy\u0142em, jak n\u00f3\u017c przebija jego cia\u0142o, przeszed\u0142 przeze mnie straszliwy dreszcz. Krew, kt\u00f3ra wyp\u0142yn\u0119\u0142a z jego trzewi, by\u0142a moj\u0105 w\u0142asn\u0105. W tym momencie zrozumia\u0142em, co uczyni\u0142em. To nie w\u0142adza mnie za\u015blepi\u0142a, ale oszustwo.\n\nB\u0119d\u0105c akolit\u0105, nie mia\u0142em dost\u0119pu do zbyt wielu informacji, ale wiem, \u017ce Vonos szuka pot\u0119\u017cnego, staro\u017cytnego artefaktu, kt\u00f3ry jest potrzebny do otwarcia bramy. C\u00f3\u017c to mo\u017ce by\u0107 za przedmiot? Tego nie wiem. S\u0142ysza\u0142em co\u015b o obozowisku i wykopaliskach na po\u0142udniowy zach\u00f3d od Ivarstead, niedaleko przesmyku g\u00f3rskiego. By\u0107 mo\u017ce tam mo\u017cna znale\u017a\u0107 wi\u0119cej informacji.\n\nWreszcie, aby zachowa\u0107 tajemnic\u0119 tego miejsca, najwy\u017csi kap\u0142ani zakonu musz\u0105 mie\u0107 zawi\u0105zane oczy, kiedy przychodz\u0105 i odchodz\u0105 od Wr\u00f3t Otch\u0142ani, a wi\u0119c nie wiem nic wi\u0119cej o ich po\u0142o\u017ceniu. Mog\u0119 powiedzie\u0107 tylko, \u017ce znajduj\u0105 si\u0119 one w jaskini. Chcia\u0142bym przekaza\u0107 Ci co\u015b wi\u0119cej.\n\nUciekam dniem i noc\u0105, ale \u015bcigaj\u0105 mnie te\u017c Stra\u017cnicy Stendarra. Mog\u0119 tylko podejrzewa\u0107, co zrobi\u0105 komu\u015b takiemu jak ja, a wi\u0119c zwracam si\u0119 z pro\u015bb\u0105 do Ciebie. Mo\u017ce Ty lepiej zrozumiesz moje po\u0142o\u017cenie.\n\nProsz\u0119, za wszelk\u0105 cen\u0119 powstrzymaj Mityczny Brzask. Dla mnie, mego nieszcz\u0119snego brata i ca\u0142ego Tamriel.\n\n- Skorvild\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note01_StrangersPlea",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\n<Alias=Player>, \n\nI come to you with an urgent plea. I have done unspeakable things which I have come to regret, and the consequences are imminent. If you know of the Oblivion Crisis, then you know I make no jest when I say the fate of Tamriel is at stake.\n\nIt would be safer for us to speak further in person. Please meet me at the Shrine to Stendarr, located bewteen Fort Greymoor and Rorikstead. I will lay bare my sins in Stendarr's presence. Perhaps he will grant me forgiveness.\n\n-Skorvild</font>\n",
+        "string": "<font face='$HandwrittenFont'>\n<Alias=Player>, \n\npisz\u0119 do Ciebie z piln\u0105 pro\u015bb\u0105. Uczyni\u0142em straszliwe rzeczy, kt\u00f3rych teraz \u017ca\u0142uj\u0119, a kt\u00f3rych konsekwencje wkr\u00f3tce mnie dopadn\u0105. Je\u015bli wiesz, co to Kryzys Otch\u0142ani, to wiesz te\u017c, \u017ce nie \u017cartuj\u0119, m\u00f3wi\u0105c, \u017ce stawk\u0105 jest los Tamriel.\n\nNajbezpieczniej by\u0142oby porozmawia\u0107 osobi\u015bcie. Spotkaj si\u0119 ze mn\u0105, prosz\u0119, przy kapliczce Stendarra znajduj\u0105cej si\u0119 pomi\u0119dzy Fortem Szara Przysta\u0144 a Rorikstead. W obecno\u015bci Stendarra wyznam swe grzechy. By\u0107 mo\u017ce wtedy mi je odpu\u015bci.\n\n- Skorvild</font>\n"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note04_MythicDawnVonosJournal",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\n<b>3rd Mid Year, 4E 200</b>\n\nThe voice of Mehrunes Dagon permeates my dreams. At first it was a whisper, but has become a roar inside my skull. The seeds of strife and violence plague this land, the soil enriched by the blood of battle. \"Tamriel will soon be ripe again for the taking, for my vengeance is at hand\" the voice says to me.\n\nI must heed his voice. What must I do, my Lord?\n\n<b>12th Mid Year, 4E 200</b>\n\nI have spent countless hours, countless days in prayer to Dagon and have heard nothing. I finally took rest, and had another dream. Dreams of fire, of smoke. Heat upon heat. I was descending into a cavern, further and further down. The heat began to cook and blister my skin.\n\nBut I kept moving, ever downward. Fire and smoke, heat and rock. And then I saw it. The very mouth of Dagon. An Oblivion Gate.\n\nWith a blinding flash I then began to have visions of Akatosh, visions of Dragons. What could be the meaning of this?\n\nI awoke covered in sweat, and with a deep sense of purpose. I feel drawn eastward. I must heed the call.\n\n<b>15th Sun's Height, 4E 200</b>\n\nDagon's voice has lead me to a cavern, deep within the Velothi Mountains. His worshippers used to gather here. I feel their presence. I feel his power.\n\nAn Oblivion Gate is buried here. I can feel it. \n\nIt is my destiny to reach it. I will spend night and day with pickaxe in hand until it is freed from this prison of stone.\n[pagebreak]\n\n<b>6th Hearthfire 4E 200</b>\n\nFor nearly two months I have toiled, digging deeper and deeper, stopping only to rest. Stone by stone, inching ever closer to my destiny. Ever closer to the fires of Oblivion.\n\nOthers have begun to heed Dagon's call, and have found their way here, to me, to our Lord. We are the high priests of the new order, the chosen few who are attuned to his will.\n\nAs we traverse deeper, the remnants of an ancient Mythic Dawn temple are revealed like diamond from the rock.\n\nPriest Vitus was the first to discover the gate's stone. My ecstasy was short lived, however, when I found like every other gate, it had been destroyed. Still, I could feel its power like heat against my skin. Many other pieces like this are scattered throughout the lands of Skyrim. Buried deep. Lost to time. We shall find them. We shall open the jaws of Oblivion once again.\n[pagebreak]\n\n<b>4th Morning Star 4E 201</b>\n\nVisions of Dragons cloud my dreams once more. Images of Martin Septim and Akatosh that make my blood burn with anger and vengeance. Black wings unfurling against a red sky.\n\nI do not yet understand the meaning of these visions, but Dagon's hatred has become a burning coal in the pit of my stomach, driving me ever forward.\n[pagebreak]\n\n<b>21st Second Seed 4E 201</b>\n\nOver the last several months we have searched the deepest reaches of Skyrim, and have retrieved enough remnants of the various shattered Oblivion Gates to make one whole again. Its very presence inspires power, awe, and reverence.\n \nA pact must now be made. Dagon requires that each of us offer a personal sacrifice, a blood offering to prove our dedication. With each soul cast into the fires of Oblivion, his power grows.\n\nThe Liminal Barrier is weak here, and the turmoil and conflict boiling in the lands only weakens it further. I must now summon a Dremora Lord to acquire a Sigil Stone, and find a way to open the gate.\n\n<b>10th Sun's Height 4E 201</b>\n\nI have performed the rites as dictated in Liminal Bridges, and successfully penetrated the barrier into the realm of Oblivion, but my attempts to use the gate as a vessel of trans-liminal attunement have failed. The portal to Oblivion is thin and temporary, as one might expect. I have smelled the sweet sulfur of the Deadlands, but only for fleeting moments of time.\n\nI have studied all there is to know of the Mysterium Xarxes. I have been to Dawnstar on countless occasions to observe its last remaining page. Yet the necessary piece has remained a mystery.\n\nAs I pray to Dagon for guidance and confer with his Dremora, I understand now that a Sigil Stone is simply not powerful enough on its own. Something stronger may be required to open the gate. But what kind of artifact could hold such power?\n\nI have dispatched the most loyal of my disciples to all corners of Tamriel to search for any artifact or source of power worthy of becoming the key to Oblivion. I must remain patient and trust Dagon's will.\n[pagebreak]\n\n<b>20th Sun's Height, 4E 201</b>\n\nI have received word from my scouts that a Great Welkynd Stone may be hidden within Rielle, an ancient Ayleid ruin. Could this be the source of power needed to open the gate? It very well may be. How delicious the irony - an object once used against Dagon becoming the very thing that unleashes his power back into the mortal realm.\n\nMy scouts are working diligently to uncover any further information they can. And as I continue to pray to Dagon for guidance, his voice says to me \"Patience, all shall be revealed in time.\"\n\n<b>2nd Last Seed, 4E 201</b>\n\nCurse the Vigil of Stendarr. They have blocked the Pale Pass through the Jerall Mountains, making access to Rielle an impossibility. We cannot risk exposing our plans. We must find another way.\n\nIf we cannot make our way into Cyrodiil by road, we will do so by force directly through the mountains. We have done it once to get to this sacred place, and we shall do it again. I have dispatched a team to begin excavation immediately.\n\n<b>14th Last Seed, 4E 201</b>\n\nFevered visions haunt my dreams once more, and as the time draws near I now understand what must be done.\n\nThe Dragonborn Prophecy foretells a chosen one will come forth, their blood and soul blessed by Akatosh himself. The Dovahkiin.\n\nThe Time Wound will open, and Alduin the World Eater shall also return.\n\nThough both are fragments of Akatosh's soul, these two will wage war against one another. And as children of Akatosh they will reap the vengeance of Mehrunes Dagon.\n\nBut pain and suffering nor death will satisfy. Only the ultimate betrayal will suffice...\n\nTo open the Oblivion Gate, a ritual of the highest order must be carefully designed. An artifact of untold power must be corrupted, a great sacrifice made, and above all, the Dragonborn must become the unwitting instrument of Dagon's will.\n\nI will become the sacrifice, the final step. And as the Dovahkiin takes my life with blade in one hand and Great Welkynd Stone in the other, they will complete the ritual and become the very key to opening the gate. \n\nThis ultimate betrayal will shatter the Liminal Barrier, opening the Oblivion Gate and giving Dagon a foothold into the mortal realm while he rebuilds his armies.\n\nIt is a divine plan beyond anything I could have comprehended. The world will be bathed in the fires of Oblivion, and the blood of mortals will be on the hands of Akatosh.\n\nNone can be made aware of this plan. It is too fragile, too perfect.\n\n<b>17th Last Seed, 4E 201</b>\n\nIt has begun. Alduin has returned. \n\nSkorvild has been missing for several days. After witnessing his brother being sacrificed, his spirit broke and he deserted the order, just as I planned.\n\nHe will seek out the Dragonborn for help. And once his role has been fulfilled, he will be slaughtered.\n\nThe Dragonborn in their arrogance will continue to be the embodiment of ambition, much to Dagon's pleasure. They will no doubt seek to obtain the Great Welkynd Stone. They will then return to me. And when they do, the final act of the ritual will begin.\n\nPriestess Enakain has been taken captive by the Vigil of Stendarr, but she too serves a greater purpose. Her spirit will not break, but she will lead the Vigil where they need to be to aid the Dragonborn. Where they will utterly fail, the Dovahkiin will succeed.\n\nTheir success will be short lived. The Sigil Stone has been destroyed, ensuring the gate will remain open. Moreover, two of Dagon's Dremora Valkynaz, Gatanas and Methats, are waiting in the Deadlands to lead the assault. They are the heralds of the coming siege, and through their works we will unleash a scourge of torment upon our Lord's enemies.\n\nThe dawn is breaking.\n</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\n<b>3 \u015ar\u00f3drocza, 4E 200</b>\n\nG\u0142os Mehrunesa Dagona m\u00f3wi do mnie w snach. Najpierw to by\u0142 ledwie szept, ale teraz w mej czaszce rozbrzmiewa ryk. Krain\u0119 t\u0119 tocz\u0105 nasiona niepokoj\u00f3w i przemocy. Gleba jest u\u017cy\u017aniana krwi\u0105 zabitych w bitwie. \u201eTamriel wkr\u00f3tce b\u0119dzie gotowe do zdobycia, a moja zemsta jest blisko\u201d - m\u00f3wi g\u0142os.\n\nMusz\u0119 go wys\u0142ucha\u0107. Co mam uczyni\u0107, m\u00f3j Panie?\n\n<b>12 \u015ar\u00f3drocza, 4E 200</b>\n\nSp\u0119dzi\u0142em niezliczone godziny, dni, modl\u0105c si\u0119 do Dagona, ale nie otrzyma\u0142em odpowiedzi. Wreszcie si\u0119 zdrzemn\u0105\u0142em i zn\u00f3w nawiedzi\u0142 mnie sen. Sen o ogniu, o dymie. O \u017carze. Schodzi\u0142em do pieczary, w d\u00f3\u0142 i w d\u00f3\u0142. Gor\u0105co zacz\u0119\u0142o mnie piec i pali\u0107 moj\u0105 sk\u00f3r\u0119.\n\nAle szed\u0142em dalej, ci\u0105gle w g\u0142\u0105b. Ogie\u0144 i dym, \u017car i ska\u0142y. I wtedy je zobaczy\u0142em. Usta Dagona. Wrota Otch\u0142ani.\n\nPojawi\u0142 si\u0119 o\u015blepiaj\u0105cy b\u0142ysk i nawiedzi\u0142y mnie wizje Akatosha, wizje smok\u00f3w. C\u00f3\u017c to wszystko mo\u017ce znaczy\u0107?\n\nObudzi\u0142em si\u0119 spocony, ale nareszcie mia\u0142em cel. Przyci\u0105ga mnie wsch\u00f3d. Musz\u0119 odpowiedzie\u0107 na wezwanie.\n\n<b>15 Pe\u0142ni S\u0142o\u0144ca, 4E 200</b>\n\nG\u0142os Dagona doprowadzi\u0142 mnie do pieczary g\u0142\u0119boko w g\u00f3rach Velothi. Tutaj zbierali si\u0119 niegdy\u015b jego wyznawcy. Czuj\u0119 ich obecno\u015b\u0107. Czuj\u0119 jego moc.\n\nTutaj pogrzebane s\u0105 Wrota Otch\u0142ani. Czuj\u0119 to. \n\nMoim przeznaczeniem jest do nich dotrze\u0107. Przez wiele nocy i dni b\u0119d\u0119 pracowa\u0142 z kilofem w d\u0142oni, a\u017c wrota zostan\u0105 uwolnione ze swojego kamiennego wi\u0119zienia.\n[pagebreak]\n\n<b>6 Domowego Ogniska 4E 200</b>\n\nOd niemal dw\u00f3ch miesi\u0119cy ci\u0119\u017cko pracuj\u0119, kopi\u0119 g\u0142\u0119biej i g\u0142\u0119biej. Przestaj\u0119 jedynie, gdy musz\u0119 nieco odpocz\u0105\u0107. Kamie\u0144 po kamieniu, centymetr po centymetrze zbli\u017cam si\u0119 do swego przeznaczenia. Do ogni Otch\u0142ani.\n\nTak\u017ce inni us\u0142yszeli wezwanie Dagona i dotarli tu, do mnie, do naszego Pana. Jeste\u015bmy wysokimi kap\u0142anami nowego zakonu, wybra\u0144cami spe\u0142niaj\u0105cymi jego wol\u0119.\n\nKopi\u0105c coraz g\u0142\u0119biej, dotarli\u015bmy do pozosta\u0142o\u015bci staro\u017cytnej \u015bwi\u0105tyni Mitycznego Brzasku. To jak diament ukryty w skale.\n\nKap\u0142an Vitus znalaz\u0142 pierwszy fragment strzaskanych Wr\u00f3t Otch\u0142ani. Czuj\u0119 ich moc, niczym ciep\u0142o na sk\u00f3rze. Wiele innych podobnych fragment\u00f3w rozrzuconych jest po ca\u0142ym Skyrim. Strzaskane i zakopane. Utracone w czasie. Ale znajdziemy je. Zn\u00f3w otworzymy usta Otch\u0142ani.\n[pagebreak]\n\n<b>4 Gwiazdy Porannej 4E 201</b>\n\nW snach zn\u00f3w pojawi\u0142y si\u0119 wizje smok\u00f3w. Obrazy Martina Septima i Akatosha, kt\u00f3re powoduj\u0105, \u017ce krew burzy mi si\u0119 od gniewu i ch\u0119ci zemsty. Czarne skrzyd\u0142a przys\u0142aniaj\u0105 czerwone niebo.\n\nNie rozumiem jeszcze tych wizji, ale nienawi\u015b\u0107 Dagona sta\u0142a si\u0119 w\u0119gielkiem \u017carz\u0105cym si\u0119 we wn\u0119trzu mych trzewi. Sprawia, \u017ce wci\u0105\u017c pr\u0119 naprz\u00f3d.\n[pagebreak]\n\n<b>21 Drugiego Siewu 4E 201</b>\n\nPrzez ostatnich kilka miesi\u0119cy przeszukiwali\u015bmy najdalsze zakamarki Skyrim i zdobyli\u015bmy do\u015b\u0107 szcz\u0105tk\u00f3w r\u00f3\u017cnych strzaskanych Wr\u00f3t Otch\u0142ani, aby zbudowa\u0107 z nich nowe. Ta \u015bwiadomo\u015b\u0107 wyzwala we mnie poczucie w\u0142adzy, zachwytu i czci.\n \nTrzeba teraz podpisa\u0107 pakt. Dagon wymaga od nas osobistej ofiary z krwi, kt\u00f3ra ma udowodni\u0107 nasz\u0105 lojalno\u015b\u0107. Kiedy dusza zostaje wrzucona do ognia Otch\u0142ani, jego si\u0142a wzrasta.\n\nBariera graniczna jest tu s\u0142aba, a chaos i konflikty tocz\u0105ce te krainy jeszcze j\u0105 os\u0142abiaj\u0105. Musz\u0119 teraz przywo\u0142a\u0107 w\u0142adc\u0119 dremor, zdoby\u0107 kamie\u0144 piecz\u0119tuj\u0105cy i znale\u017a\u0107 spos\u00f3b na otwarcie wr\u00f3t.\n\n<b>10 Pe\u0142ni S\u0142o\u0144ca 4E 201</b>\n\nPrzeprowadzi\u0142em rytua\u0142y opisane w Mostach Granicznych i z powodzeniem przerwa\u0142em barier\u0119 do wymiaru Otch\u0142ani. Niestety, moje pr\u00f3by u\u017cycia wr\u00f3t jako \u015brodka do transgranicznego dostrojenia nie powiod\u0142y si\u0119. Portal do Otch\u0142ani jest s\u0142aby i tymczasowy, zreszt\u0105 mo\u017cna si\u0119 by\u0142o tego spodziewa\u0107. Czu\u0142em s\u0142odk\u0105 siark\u0119 krainy martwych, ale by\u0142 to zapach bardzo ulotny.\n\nPrzeczyta\u0142em dok\u0142adnie Mysterium Xarxes, Mityczny Brzask. By\u0142em niezliczon\u0105 ilo\u015b\u0107 razy w Gwie\u017adzie Zarannej, aby dok\u0142adnie zbada\u0107 ostatni\u0105 dost\u0119pn\u0105 stron\u0119. Jednak klucz do otwarcia wr\u00f3t wci\u0105\u017c jest dla mnie tajemnic\u0105.\n\nModl\u0119 si\u0119 do Dagona o pomoc i naradzam si\u0119 z jego dremor\u0105. Najwyra\u017aniej kamie\u0144 piecz\u0119tuj\u0105cy jest po prostu zbyt s\u0142aby. Do otwarcia wr\u00f3t mo\u017ce by\u0107 potrzebne co\u015b pot\u0119\u017cniejszego. Ale jaki artefakt ma tak\u0105 moc?\n\nWys\u0142a\u0142em najbardziej lojalnych wyznawc\u00f3w do najdalszych zak\u0105tk\u00f3w Tamriel. Maj\u0105 szuka\u0107 artefaktu lub \u017ar\u00f3d\u0142a mocy, kt\u00f3re mog\u0142yby otworzy\u0107 Wrota Otch\u0142ani. Musz\u0119 by\u0107 cierpliwy i ufa\u0107 Dagonowi.\n[pagebreak]\n\n<b>20 Pe\u0142ni S\u0142o\u0144ca, 4E 201</b>\n\nZwiadowcy donie\u015bli mi, \u017ce w Rielle, staro\u017cytnych ayleidzkich ruinach, mo\u017ce by\u0107 ukryty Wielki Kamie\u0144 Welkynd. Czy to \u017ar\u00f3d\u0142o mocy potrzebne do otwarcia wr\u00f3t? By\u0107 mo\u017ce. Co za ironia - obiekt u\u017cyty niegdy\u015b przeciwko Dagonowi okaza\u0142 si\u0119 tym, kt\u00f3ry uwolni na nowo jego moc w wymiarze \u015bmiertelnik\u00f3w.\n\nMoi zwiadowcy pracuj\u0105 dzie\u0144 i noc, aby zdoby\u0107 wi\u0119cej informacji. Ja wci\u0105\u017c modl\u0119 si\u0119 do Dagona o porad\u0119, ale jego g\u0142os m\u00f3wi jedynie: \u201eCierpliwo\u015bci. Z czasem wszystko zostanie wyja\u015bnione\u201d.\n\n<b>2 Ostatniego Siewu, 4E 201</b>\n\nNiech b\u0119dzie przekl\u0119ta Stra\u017c Stendarra. Zablokowali Blad\u0105 Prze\u0142\u0119cz w g\u00f3rach Jerall, przez co nie spos\u00f3b si\u0119 dosta\u0107 do Rielle. Nie mo\u017cemy ryzykowa\u0107 ujawnienia swoich plan\u00f3w. Musimy znale\u017a\u0107 inn\u0105 drog\u0119.\n\nJe\u015bli nie damy rady dotrze\u0107 do Cyrodiil traktem, musimy to zrobi\u0107, przedzieraj\u0105c si\u0119 bezpo\u015brednio przez g\u00f3ry. Ju\u017c raz nam si\u0119 to uda\u0142o, gdy wyruszali\u015bmy w to \u015bwi\u0119te miejsce, i zrobimy to ponownie. Wys\u0142a\u0142em oddzia\u0142, kt\u00f3ry ma natychmiast rozpocz\u0105\u0107 wykopaliska.\n\n<b>14 Ostatniego Siewu, 4E 201</b>\n\nW moich snach zn\u00f3w pojawiaj\u0105 si\u0119 gor\u0105czkowe wizje. Coraz bardziej rozumiem, co trzeba uczyni\u0107.\n\nPrzepowiednia Smoczego Dzieci\u0119cia zaiste jest prawdziwa. Przyb\u0119dzie wybraniec, a jego krew i dusza zostan\u0105 pob\u0142ogos\u0142awione przez samego Akatosha. Dovahkiin.\n\nRana Czasu si\u0119 otworzy, wr\u00f3ci te\u017c Alduin, Po\u017ceracz \u015awiat\u00f3w.\n\nCho\u0107 oboje s\u0105 fragmentami duszy Akatosha, b\u0119d\u0105 ze sob\u0105 walczy\u0107. I jako dzieci Akatosha doznaj\u0105 zemsty Mehrunesa Dagona.\n\nAle b\u00f3l i cierpienie, a nawet \u015bmier\u0107, nie wystarcz\u0105. Musi si\u0119 dokona\u0107 ostateczna zdrada...\n\nAby otworzy\u0107 Wrota Otch\u0142ani, trzeba dok\u0142adnie zaplanowa\u0107 rytua\u0142 najwy\u017cszego porz\u0105dku. Artefakt o niewypowiedzianej mocy musi zosta\u0107 splugawiony, a wielka ofiara z\u0142o\u017cona, a przede wszystkim, Smocze Dzieci\u0119 ma sta\u0107 si\u0119 nie\u015bwiadomym narz\u0119dziem woli Dagona.\n\nB\u0119d\u0119 ofiar\u0105, ostatnim krokiem. A kiedy Dovahkiin odbierze mi \u017cycie z mieczem w jednej r\u0119ce i Wielkim Kamieniem Welkynd w drugiej, doko\u0144czy rytua\u0142 i stanie si\u0119 kluczem do otwarcia bramy. \n\nOstateczna zdrada strzaska barier\u0119 graniczn\u0105, otworzy Wrota Otch\u0142ani i da Dagonowi przycz\u00f3\u0142ek w krainie \u015bmiertelnik\u00f3w, w kt\u00f3rym odbuduje on swoje armie.\n\nTo boski plan,kt\u00f3rego dot\u0105d nie rozumia\u0142em. \u015awiat zostanie sk\u0105pany w p\u0142omieniach Otch\u0142ani, a krew \u015bmiertelnik\u00f3w splami r\u0119ce Akatosha.\n\nNikt nie mo\u017ce pozna\u0107 planu. Jest zbyt delikatny, zbyt idealny.\n\n<b>17 Ostatniego Siewu, 4E 201</b>\n\nZacz\u0119\u0142o si\u0119. Alduin wr\u00f3ci\u0142. \n\nKilka dni temu zagin\u0105\u0142 Skorvild. Kiedy zobaczy\u0142, jak jego brat zostaje z\u0142o\u017cony w ofierze, jego dusza si\u0119 za\u0142ama\u0142a i porzuci\u0142 zakon, tak jak zaplanowa\u0142em.\n\nOdszuka Smocze Dzieci\u0119 i poprosi je o pomoc. A kiedy wykona swoje zadanie, zostanie zabity.\n\nAroganckie Smocze Dzieci\u0119 b\u0119dzie pod\u0105\u017ca\u0142o za swoj\u0105 ambicj\u0105, ku uciesze Dagona. Bez w\u0105tpienia spr\u00f3buje zdoby\u0107 Wielki Kamie\u0144 Welkynd. P\u00f3\u017aniej wr\u00f3ci do mnie. A kiedy to zrobi, rozpocznie si\u0119 ostatni akt rytua\u0142u.\n\nKap\u0142anka Enakain zosta\u0142a pojmana przez Stra\u017c Stendarra, ale ona te\u017c s\u0142u\u017cy wy\u017cszemu celowi. Jej dusza si\u0119 nie z\u0142amie, ale poprowadzi Stra\u017c tam, gdzie b\u0119dzie ona pomocna Smoczemu Dzieci\u0119ciu. Tam, gdzie Stra\u017c zawiedzie, Dovahkiin osi\u0105gnie sukces.\n\nSukces kr\u00f3tkotrwa\u0142y. Kamie\u0144 piecz\u0119tuj\u0105cy zosta\u0142 zniszczony, co sprawi, \u017ce wrota pozostan\u0105 otwarte. Co wi\u0119cej, dwie dremory Valkynaz Dagona, Gatanas i Methats, czekaj\u0105 w krainie martwych, by zaatakowa\u0107. S\u0105 zwiastunami nadchodz\u0105cego obl\u0119\u017cenia i przez swoje dzie\u0142o uwolni\u0105 fal\u0119 cierpienia na wrogach naszego Pana.\n\nBrzask jest blisko.\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MessageHarvestFailed",
+        "type": "MESG DESC",
+        "original": "This has already been harvested.",
+        "string": "To zosta\u0142o ju\u017c zebrane."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST CNAM",
+        "original": "I found and retrieved the Great Welkynd Stone from within Rielle, and defeated the Ayleid Lich guardian, but the Mythic Dawn will stop at nothing to bring Mehrunes Dagon into power. I should search for any clues nearby that might lead me to the location of the Oblivion Gate.",
+        "string": "Uda\u0142o mi si\u0119 odnale\u017a\u0107 oraz zebra\u0107 Wielki Kamie\u0144 Welkynd z Rielle i pokona\u0107 ayleidzkiego stra\u017cnika licz\u00f3w, ale Mityczny Brzask zrobi wszystko, aby odda\u0107 w\u0142adz\u0119 Mehrunesowi Dagonowi. Musz\u0119 poszuka\u0107 \u015blad\u00f3w w okolicy \u2013 mo\u017ce wska\u017c\u0105 mi one lokalizacj\u0119 Wr\u00f3t Otch\u0142ani."
+    },
+    {
+        "editor_id": "ccBGSSSE067_MessageConfirmWelkyndStone",
+        "type": "MESG DESC",
+        "original": "Place the Great Welkynd Stone (recharge the Oblivion Gate?)",
+        "string": "Umie\u015b\u0107 Wielki Kamie\u0144 Welkynd (do\u0142aduje Wrota Otch\u0142ani?)"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST CNAM",
+        "original": "I placed the four Ayleid Elemental Shards in their holders, and a passage to a hidden chamber opened. I should investigate and see if I can locate the Great Welkynd Stone.",
+        "string": "Po umieszczeniu aleyidzkich od\u0142amk\u00f3w \u017cywio\u0142\u00f3w w oprawach, otworzy\u0142o si\u0119 przej\u015bcie do ukrytej komnaty. Musz\u0119 do niej wej\u015b\u0107 i sprawdzi\u0107, czy zdo\u0142am odnale\u017a\u0107 Wielki Kamie\u0144 Welkynd."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note07_MythicDawnJournalShardsJanus",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\n<b>15th Last Seed, 4E 201</b>\n\nI was called upon to assist with the Rielle expedition, and have been studying urgently and without rest. I was entrusted with a page from an ancient Ayleid text, retrieved from a researcher in Bruma. \n\nMy Ayleidoon is not very good, but I was able to understand something about elemental shards, and \"sleeping guardians\" within the ruins. None of this would be a problem if Vonos had granted me more time, but he and our Lord are impatient. But I will make do. My research is what matters.\n\nThe Ayleids believed the four elements to be Air, Water, Earth, and Light. From what I understand, shards representing these four elements may serve as \"keys\" to certain hidden chambers. It is fascinating to ponder how many Great Welkynd Stones may be hidden among ruins thought to be barren.\n\nIf there is a hidden chamber within Rielle, this might be how they are opened. But how? Where? At the cost of their lives, many of our disciples have searched nearly every corner of the ruin, but have yet to discover anything. I will study the texts further.\n\t\n<b>17th Last Seed, 4E 201</b>\n\nVonos has issued urgent orders to descend upon Rielle with the last of our expedition team to try and find the Great Welkynd Stone. I am to go with them and lead the team. The Vigil of Stendarr are assumed to be on our trail so we must act quickly.\n\nI must not allow this latest wrinkle to deter my research. It is almost within my grasp.\n\n<b>17th Last Seed, 4E 201</b>\n\nWoe to those who entered before me and met their fate. I imagined not the horrors that awaited me. \n\nOur persistence in this expedition has awoken Ayleid Wights - guardians who have lied in wait for untold centuries, sealed in their sarcophagi, awakening to protect the ancient powers within.\n\nAnd yet, all is not lost. I found four Welkynd Stone holders in the Rielle Crypt, each colored gold and positioned to the north, south, east, and west. The directions correspond to each of the four elements.\n\nNorth, upward to the Air (Wel) in the sky.\n\nSouth, for the Earth (Sercen) under our feet.\n\nEast, for the Light (Alata) of the rising sun.\n\nWest, for when the Water (Nen) devours it.\n\nA diagram in the Ayleid text matches this pattern. If these shards are retrieved and placed in the correct holders, I believe the secret chamber containing the Great Welkynd Stone will make itself known.\n\nMy team has been slain, and I have been injured. A pity, as I have heard rumors of an area underneath the college where this stone could have been put to better use. I just need to hold out a little longer...</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\n<b>15 Ostatniego Siewu, 4E 201</b>\n\nWezwano mnie do pomocy przy ekspedycji do Rielle. Bez wytchnienia badam spraw\u0119. Powierzono mi stron\u0119 ze staro\u017cytnego tekstu ayleidzkiego, przej\u0119tego od badacza z Brumy. \n\nM\u00f3j ayleidzki nie jest zbyt dobry, ale uda\u0142o mi si\u0119 zrozumie\u0107 co\u015b o od\u0142amkach \u017cywio\u0142\u00f3w i \u201e\u015bpi\u0105cych stra\u017cnikach\u201d w ruinach. Nie by\u0142by to problem gdyby Vonos da\u0142 mi wi\u0119cej czasu, ale razem z naszym Panem s\u0105 niecierpliwi. Dam rad\u0119. Najwa\u017cniejsze s\u0105 moje badania.\n\nAyleidzi uwa\u017cali, \u017ce cztery \u017cywio\u0142y sprawcze to powietrze, woda, ziemia i \u015bwiat\u0142o. Z tego, co rozumiem, od\u0142amki reprezentuj\u0105ce te cztery \u017cywio\u0142y mog\u0105 by\u0107 \u201ekluczami\u201d do ukrytych komnat. To fascynuj\u0105ce - ile\u017c Wielkich Kamieni Welkynd mog\u0142o pozosta\u0107 ukrytych w ruinach, kt\u00f3re dawno zosta\u0142y przetrz\u0105\u015bni\u0119te.\n\nJe\u015bli w Rielle znajduje si\u0119 tajna komnata, by\u0107 mo\u017ce w\u0142a\u015bnie w ten spos\u00f3b da si\u0119 j\u0105 otworzy\u0107. Ale jak? Gdzie? Wielu z naszych wyznawc\u00f3w straci\u0142o \u017cycie, przetrz\u0105saj\u0105c dos\u0142ownie ka\u017cdy zak\u0105tek ruin. Jak dot\u0105d jednak niczego nie znale\u017ali\u015bmy. Musz\u0119 nadal studiowa\u0107 teksty.\n\t\n<b>17 Ostatniego Siewu, 4E 201</b>\n\nVonos wys\u0142a\u0142 pilny rozkaz - mam zej\u015b\u0107 do Rielle z ostatnim oddzia\u0142em ekspedycyjnym i spr\u00f3bowa\u0107 odnale\u017a\u0107 Wielki Kamie\u0144 Welkynd. B\u0119d\u0119 prowadzi\u0142 ludzi. Pono\u0107 Stra\u017c Stendarra wpad\u0142a na nasz trop, a wi\u0119c musimy dzia\u0142a\u0107 szybko.\n\nNie mog\u0119 teraz pozwoli\u0107, aby ostatnia przeszkoda zniweczy\u0142a moje badania. Zwyci\u0119stwo jest niemal w zasi\u0119gu r\u0119ki.\n\n<b>17 Ostatniego Siewu, 4E 201</b>\n\nBiada tym, kt\u00f3rzy weszli tu przede mn\u0105 i dokonali \u017cywota. Nie wyobra\u017ca\u0142em sobie, jakie okropie\u0144stwa czekaj\u0105 tu na mnie. \n\nNasza ekspedycja przebudzi\u0142a ayleidzkie strzygi - stra\u017cniczki czekaj\u0105ce w ukryciu od wielu wiek\u00f3w, zamkni\u0119te w sarkofagach, budz\u0105ce si\u0119 jedynie, aby chroni\u0107 staro\u017cytne moce drzemi\u0105ce w ruinach.\n\nAle nie wszystko jest jeszcze stracone. Znalaz\u0142em cztery oprawy kamienia Welkynd w krypcie Rielle - maj\u0105 z\u0142ote kolory i umieszczone s\u0105 w kierunku p\u00f3\u0142nocnym, po\u0142udniowym, wschodnim i zachodnim.\n\nP\u00f3\u0142noc wskazuje w g\u00f3r\u0119, ku powietrzu (Wel) w niebiosach.\n\nPo\u0142udnie wskazuje ziemi\u0119 (Sercen) pod naszymi stopami.\n\nWsch\u00f3d to \u015bwiat\u0142o (Alata), jak wschodz\u0105ce s\u0142o\u0144ce.\n\nZach\u00f3d to woda (Nen) po\u017ceraj\u0105ca je.\n\nDiagram w ayleidzkim tek\u015bcie pasuje do tego wzoru. Je\u015bli uda si\u0119 odnale\u017a\u0107 od\u0142amki i umie\u015bci\u0107 we w\u0142a\u015bciwych oprawach, ujawni si\u0119 tajna komnata skrywaj\u0105ca Wielki Kamie\u0144 Welkynd. Tak przynajmniej uwa\u017cam.\n\nMoi towarzysze zostali zg\u0142adzeni, a ja jestem ranny. Szkoda, bo s\u0142ysza\u0142em plotki o obszarze pod akademi\u0105, gdzie tego kamienia mo\u017cna by\u0142o u\u017cy\u0107 w lepszy spos\u00f3b. Musz\u0119 tylko wytrzyma\u0107 jeszcze nieco d\u0142u\u017cej...</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST CNAM",
+        "original": "I found the Oblivion Gate and defeated the leader of the Mythic Dawn, Vonos. It appears this was an elaborate ritual designed to decieve me, and killing Vonos was the final step. I have become an unwitting instrument of Mehrunes Dagon, and my actions have opened the Oblivion Gate.",
+        "string": "Uda\u0142o mi si\u0119 odnale\u017a\u0107 Wrota Otch\u0142ani i pokona\u0107 przyw\u00f3dc\u0119 Mitycznego Brzasku, Vonosa. Jednak najwyra\u017aniej by\u0142 to skomplikowany rytua\u0142, kt\u00f3ry mia\u0142 mnie zwie\u015b\u0107, a zabicie Vonosa okaza\u0142o si\u0119 jego ostatnim etapem. By\u0107 mo\u017ce jestem nie\u015bwiadomym instrumentem w r\u0119kach Mehrunesa Dagona, a moje dzia\u0142ania otworzy\u0142y Wrota Otch\u0142ani."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST CNAM",
+        "original": "I've found the repaired Oblivion Gate deep inside Red Scar Cavern, the Mythic Dawn hideout. The leader of the Mythic Dawn, Vonos, will stop at nothing to bring Mehrunes Dagon to power, and must be defeated.",
+        "string": "G\u0142\u0119boko w Grocie Czerwonej Blizny znajdowa\u0142y si\u0119 naprawione Wrota Otch\u0142ani. Przyw\u00f3dca Mitycznego Brzasku, Vonos, zrobi wszystko, aby odda\u0107 w\u0142adz\u0119 Mehrunesowi Dagonowi. Trzeba go pokona\u0107."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST CNAM",
+        "original": "Gate Open",
+        "string": "Brama otwarta"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST CNAM",
+        "original": "The Mythic Dawn have been searching an Ayleid ruin where a Great Welkynd Stone is rumored to be hidden within a secret chamber. They have been unable to find this chamber, but one of the explorers discovered Ayleid Elemental Shards may be the keys to opening it. I should find the shards.",
+        "string": "Mityczny Brzask przeszukiwa\u0142 ayleidzkie ruiny, gdzie pono\u0107 w tajnej komnacie znajduje si\u0119 Wielki Kamie\u0144 Welkynd. Jak dot\u0105d nie uda\u0142o im si\u0119 jej odnale\u017a\u0107, ale jeden z odkrywc\u00f3w ujawni\u0142, \u017ce kluczami do jej otwarcia mog\u0105 by\u0107 ayleidzkie od\u0142amki \u017cywio\u0142\u00f3w. Musz\u0119 je odnale\u017a\u0107."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST CNAM",
+        "original": "A courier has delivered a letter from a stranger. It looks like a plea for help. I should read it and see what it says.",
+        "string": "Pos\u0142aniec przekaza\u0142 mi list od nieznajomego. Wygl\u0105da to na b\u0142aganie o pomoc. Musz\u0119 go przeczyta\u0107."
+    },
+    {
+        "editor_id": "ccBGSSSE067_MessageConfirmSigilStone",
+        "type": "MESG DESC",
+        "original": "Take the Sigil Stone (close the Oblivion Gate?)",
+        "string": "We\u017a kamie\u0144 piecz\u0119tuj\u0105cy (zamknie Wrota Otch\u0142ani?)"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST CNAM",
+        "original": "The Mythic Dawn have been searching for a secret chamber within an Ayleid ruin that may contain a Great Welkynd Stone. I found four Ayleid Elemental Shards that may help me gain access to this chamber. I should return them to their holders.",
+        "string": "Mityczny Brzask szuka\u0142 tajnej komnaty w aleydzkich ruinach. Prawdopodobnie znajduje si\u0119 w niej Wielki Kamie\u0144 Welkynd. Uda\u0142o mi si\u0119 odnale\u017a\u0107 cztery ayleidzkie od\u0142amki \u017cywio\u0142\u00f3w, kt\u00f3re mog\u0105 mi pom\u00f3c w zyskaniu dost\u0119pu do tej komnaty. Musz\u0119 umie\u015bci\u0107 je w oprawach."
+    },
+    {
+        "editor_id": "ccBGSSSE067_IncorrectShardMessage",
+        "type": "MESG DESC",
+        "original": "You don't have the correct shard for this holder.",
+        "string": "Nie posiadasz w\u0142a\u015bciwego od\u0142amka dla tej oprawy."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST CNAM",
+        "original": "The stranger who sent me the letter, Skorvild, was apparently murdered by two Mythic Dawn assassins before I could meet with him. They ambushed me when I arrived, but I defeated them. I should look around to find any additional information.",
+        "string": "Nieznajomy, kt\u00f3ry wys\u0142a\u0142 mi list, Skorvild, najwyra\u017aniej zosta\u0142 zamordowany przez dw\u00f3ch zab\u00f3jc\u00f3w Mitycznego Brzasku, zanim si\u0119 spotkali\u015bmy. Zab\u00f3jcy zastawili pu\u0142apk\u0119 tak\u017ce na mnie, ale uda\u0142o mi si\u0119 ich pokona\u0107. Musz\u0119 si\u0119 rozejrze\u0107 i poszuka\u0107 jakich\u015b informacji."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST CNAM",
+        "original": "I've found the weakened Sigil Stone within the Deadlands, and now must make a decision. If I take the Sigil Stone, the gate will close and the Mythic Dawn will be defeated. However, if I place the Great Welkynd stone on the altar, it will recharge the gate, and seal it open...",
+        "string": "W krainie martwych znajdowa\u0142 si\u0119 os\u0142abiony kamie\u0144 piecz\u0119tuj\u0105cy. Musz\u0119 teraz podj\u0105\u0107 decyzj\u0119. Je\u015bli go wezm\u0119, brama si\u0119 zamknie i Mityczny Brzask zostanie pokonany. Je\u015bli jednak po\u0142o\u017c\u0119 Wielki Kamie\u0144 Welkynd na o\u0142tarzu, do\u0142aduj\u0119 bram\u0119, a piecz\u0119\u0107 si\u0119 otworzy..."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST CNAM",
+        "original": "A stranger informed me that the Mythic Dawn reformed and unearthed an ancient Oblivion Gate. They were searching for a Great Welkynd Stone to charge the gate, which I found within Rielle before they could. I infiltrated the Mythic Dawn's hideout and went inside the Deadlands to find the Sigil Stone. I defeated two of Mehrunes Dagon's champions, and retrieved the Sigil Stone, thereby closing the portal and destroying the gate.",
+        "string": "Nieznajomy poinformowa\u0142 mnie, \u017ce Mityczny Brzask si\u0119 odrodzi\u0142 i ujawni\u0142 staro\u017cytne Wrota Otch\u0142ani. Szukaj\u0105 teraz Wielkiego Kamienia Welkynd, aby na\u0142adowa\u0107 bram\u0119. Kamie\u0144 znajdowa\u0142 si\u0119 w Rielle i jest teraz w moim posiadaniu. Uda\u0142o mi si\u0119 zinfiltrowa\u0107 kryj\u00f3wk\u0119 Mitycznego Brzasku i ruszy\u0107 do krainy martwych w poszukiwaniu kamienia piecz\u0119tuj\u0105cego. Po pokonaniu czempion\u00f3w Mehrunesa Dagona i przej\u0119ciu kamienia piecz\u0119tuj\u0105cego, portal zosta\u0142 zamkni\u0119ty, a brama zniszczona."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note05_VigilantMythicDawnLocation",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\n<b>14th Sun's Height, 4E 201</b>\n\nOur spies in the cities have reported hearing whispers of the Mythic Dawn among the populace. Though the last of those abominations were slain hundreds of years ago, we must take all reports seriously, and stay alert.\n\n<b>25th Sun's Height, 4E 201</b>\n\nWord from our agents in Cyrodiil say that a band of mysterious travelers descended upon Bruma, where they asked a well-known researcher many questions about the Ayleids. The ruins of Rielle specifically. They also asked about Great Welkynd Stones, which haven't been seen for hundreds of years.\n\nI'm sending a few scouts to the Pale Pass to keep an eye on things. If there is darkness at play, the light of the Vigil will find it.\n\n<b>2nd Last Seed, 4E 201</b>\n\nThe same group of questionable travelers was seen traversing the Pale Pass into Bruma again. This time under the cover of night. They were followed but were lost in the shadow. Our agents set up a blockade to stop and question all who passed, but the group was not seen traveling through there again.\n\nIf they did return to Skyrim, they would have had to do so through the Jerall Mountains by moonlight. Stendarr have mercy upon anyone lost among those jagged slopes in the darkness.\n\n<b>3rd Last Seed, 4E 201</b>\n\nThe researcher in Bruma has gone missing, and I must assume it was at the hand of these mysterious travelers. If the rumors of the Mythic Dawn are true, Stendarr help us if they get their hands on a Great Welkynd Stone. What could they possibly need such a powerful artifact for?\n\nI have dispatched agents and spies to every corner of Skyrim to inquire among the townsfolk and track anyone who is remotely suspicious.\n\n<b>10th Last Seed, 4E 201</b>\n\nWe have begun following a man named Skorvild. We believe he may be a Daedra worshipper, and possibly a member of the Mythic Dawn. His brother was recently reported missing, along with numerous others in the same time frame.\n\nWe will follow his movements closely.\n\n<b>16th Last Seed, 4E 201</b>\n\nAfter several weeks of observing various suspects, we decided to capture an individual believed to be a high ranking member of the Mythic Dawn. She was clothed plainly, and kept the guise of a merchant by day.\n\nWe searched her quarters and found red robes bearing the sun symbol of Mehrunes Dagon. We also found a journal which claims than an Oblivion Gate has been reforged, and attempts to open it are underway.\n\nI have decided to call for reinforcements. If what I read is true, the Vigil of Stendarr alone may not be enough to stop what is unfolding.\n\nThis Mythic Dawn priest would not yield any information, and died during interrogation. It was a slow death, but the Vigil has no mercy for Daedra worshippers.\n\nCan the power of a Great Welkynd Stone be corrupted and used for their twisted purpose? This cannot happen. We must find this Oblivion Gate.\n\nWithin the journal was a torn page, containing the following:\n\n\"In the shade of Velothi, where rivers run black\nShor's Stone at our feet, Whiteshore at our back\n\nWindhelm on our shoulders, beyond the fair night\nBefore the dawn rises, red scars bleed the light\"\n\nThis could be a clue as to their location. I will send someone to investigate while I prepare a small regiment and determine our next move.\n\n<b>17th Last Seed, 4E 201</b>\n\nThree of my agents who were observing suspects went missing overnight. I believe they have been captured by the Mythic Dawn. Stendarr have mercy upon them. We should have been more careful when capturing one of their priests, but we needed to act quickly.\n\nI have assembled a group to descend upon Rielle. We must act now. We may be able to ambush the daedra worshipers.\n\nLastly, one of my scouts believes the riddle does indeed point to the location where the Mythic Dawn are hiding. We need to approach with caution, lest we be outnumbered.\n\nBlessings of Stendarr upon us.\n</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\n<b>14 Pe\u0142ni S\u0142o\u0144ca, 4E 201</b>\n\nNasi szpiedzy w miastach donosz\u0105 o pog\u0142oskach o Mitycznym Brzasku w\u015br\u00f3d ludno\u015bci. Cho\u0107 ostatni z tych wykoleje\u0144c\u00f3w zosta\u0142 zabity setki lat temu, musimy powa\u017cnie podchodzi\u0107 do wszystkich tego typu zg\u0142osze\u0144, a wi\u0119c miejcie si\u0119 na baczno\u015bci.\n\n<b>25 Pe\u0142ni S\u0142o\u0144ca, 4E 201</b>\n\nNasi agenci w Cyrodiil donosz\u0105, \u017ce z Brumy zesz\u0142a grupa tajemniczych podr\u00f3\u017cnik\u00f3w. Znanemu badaczowi zadawali wiele pyta\u0144 o Ayleid\u00f3w, a szczeg\u00f3lnie o ruiny Rielle. Pytali te\u017c o Wielkie Kamienie Welkynd, kt\u00f3re nie by\u0142y widziane od setek lat.\n\nWysy\u0142am kilku zwiadowc\u00f3w na Blad\u0105 Prze\u0142\u0119cz, \u017ceby mieli na wszystko oko. Je\u015bli to sprawka mroku, \u015bwiat\u0142o Stra\u017cy j\u0105 ujawni.\n\n<b>2 Ostatniego Siewu, 4E 201</b>\n\nTa sama grupa podejrzanych podr\u00f3\u017cnik\u00f3w zn\u00f3w by\u0142a widziana na Bladej Prze\u0142\u0119czy. Podr\u00f3\u017cowali do Brumy, tym razem pod os\u0142on\u0105 nocy. \u015aledzono ich, ale znikn\u0119li w mroku. Nasi agenci ustawili blokad\u0119, aby zatrzyma\u0107 i przes\u0142ucha\u0107 wszystkich przechodz\u0105cych tamt\u0119dy, ale grupy tej wi\u0119cej nie widziano.\n\nJe\u015bli wr\u00f3cili do Skyrimu, musieli to zrobi\u0107 przez g\u00f3ry Jerall, przy \u015bwietle ksi\u0119\u017cyca. Niech Stendarr oka\u017ce \u0142ask\u0119 wszystkim tym, kt\u00f3rzy zgubi\u0105 si\u0119 w\u015br\u00f3d tych wzg\u00f3rz po zmroku.\n\n<b>3 Ostatniego Siewu, 4E 201</b>\n\nBadacz z Brumy zagin\u0105\u0142 i musz\u0119 za\u0142o\u017cy\u0107, \u017ce mieli z tym zwi\u0105zek ci tajemniczy podr\u00f3\u017cnicy. Je\u015bli pog\u0142oski o Mitycznym Brzasku s\u0105 prawdziwe, niech nam Stendarr dopomo\u017ce, gdy po\u0142o\u017c\u0105 swoje \u0142apy na Wielkim Kamieniu Welkynd. Po co potrzebny im tak pot\u0119\u017cny artefakt?\n\nWys\u0142a\u0142em agent\u00f3w i szpieg\u00f3w, aby zajrzeli pod ka\u017cdy kamie\u0144 w Skyrimie i rozpytali mieszka\u0144c\u00f3w o wszystkich, kt\u00f3rzy wydaj\u0105 si\u0119 cho\u0107 odrobin\u0119 podejrzani.\n\n<b>10 Ostatniego Siewu, 4E 201</b>\n\nZacz\u0119li\u015bmy \u015bledzi\u0107 cz\u0142owieka imieniem Skorvild. Uwa\u017camy, \u017ce mo\u017ce by\u0107 czcicielem daedr, a mo\u017ce nawet cz\u0142onkiem Mitycznego Brzasku. Jego brat niedawno zagin\u0105\u0142, wraz z kilkoma innymi osobami.\n\nBacznie \u015bledzimy poczynania Skorvilda.\n\n<b>16 Ostatniego Siewu, 4E 201</b>\n\nPo kilku tygodniach obserwacji r\u00f3\u017cnych podejrzanych, zdecydowali\u015bmy si\u0119 pojma\u0107 osob\u0119 uznawan\u0105 za wysoko postawion\u0105 cz\u0142onkini\u0119 Mitycznego Brzasku. Dla niepoznaki ubrana by\u0142a w niepozorne szaty handlarki.\n\nPrzeszukali\u015bmy jej kwater\u0119 i znale\u017ali\u015bmy czerwon\u0105 szat\u0119 z symbolem s\u0142o\u0144ca Mehrunesa Dagona. By\u0142 tam te\u017c dziennik, z kt\u00f3rego wynika\u0142o, \u017ce Brama Otch\u0142ani zosta\u0142a przekuta i trwaj\u0105 w\u0142a\u015bnie pr\u00f3by otwarcia jej.\n\nZdecydowa\u0142em si\u0119 wezwa\u0107 wsparcie. Je\u015bli to, co przeczyta\u0142em, jest prawd\u0105, Stra\u017c Stendarra mo\u017ce nie wystarczy\u0107 do powstrzymania tego, co tu si\u0119 szykuje.\n\nKap\u0142anka Mitycznego Brzasku nie chcia\u0142a wyjawi\u0107 dalszych informacji i zmar\u0142a podczas przes\u0142uchania. Zgin\u0119\u0142a powoln\u0105 \u015bmierci\u0105, gdy\u017c Stra\u017c nie ma lito\u015bci dla czcicieli daedr.\n\nBy\u0107 mo\u017ce moc Wielkiego Kamienia Welkynd ma by\u0107 u\u017cyta, by zaspokoi\u0107 wynaturzone potrzeby Mitycznego Brzasku? To nie mo\u017ce si\u0119 wydarzy\u0107. Musimy znale\u017a\u0107 te Wrota Otch\u0142ani.\n\nZ dziennika wydarto jedn\u0105 stron\u0119, ale da si\u0119 z niej odczyta\u0107:\n\n\u201eW cieniu Velothi, gdzie czarne p\u0142yn\u0105 rzeki\nU st\u00f3p Ska\u0142a Shora, Bia\u0142y Brzeg daleki\n\nWichrowy Tron na ramionach i tak pi\u0119kna noc\nNim pojawi si\u0119 brzask, czerwie\u0144 zyska moc\u201d.\n\nTo mo\u017ce by\u0107 wskaz\u00f3wka dotycz\u0105ca po\u0142o\u017cenia Wr\u00f3t Otch\u0142ani. Kto\u015b musi to zbada\u0107, a ja o \u015bwicie przygotuj\u0119 ma\u0142y oddzia\u0142 i zdecyduj\u0119 o naszym kolejnym kroku.\n\n<b>17 Ostatniego Siewu, 4E 201</b>\n\nTr\u00f3jka z moich agent\u00f3w, kt\u00f3rzy obserwowali podejrzanych, zagin\u0119\u0142a ostatniej nocy. Prawdopodobnie zostali pojmani przez Mityczny Brzask. Niech Stendarr si\u0119 nad nimi zlituje. Powinni\u015bmy byli by\u0107 bardziej ostro\u017cni po pojmaniu kap\u0142anki, ale musieli\u015bmy dzia\u0142a\u0107 szybko.\n\nZebra\u0142em oddzia\u0142, kt\u00f3ry zejdzie do Rielle. Nie ma na co czeka\u0107. Mo\u017ce uda nam si\u0119 zaskoczy\u0107 wyznawc\u00f3w daedr.\n\nJeden z moich zwiadowc\u00f3w uwa\u017ca, \u017ce wiersz rzeczywi\u015bcie dotyczy miejsca, w kt\u00f3rym ukrywa si\u0119 Mityczny Brzask. Musimy by\u0107 ostro\u017cni, bo wr\u00f3g ma przewag\u0119 liczebn\u0105.\n\nNiech Stendarr nam b\u0142ogos\u0142awi.\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST CNAM",
+        "original": "Gate Closed",
+        "string": "Wrota zamkni\u0119te"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST CNAM",
+        "original": "The Mythic Dawn have repaired an Oblivion Gate, but need a Great Welkynd Stone to open it. To avoid the Vigilants of Stendarr they've excavated a back way into an ancient Ayleid ruin where such a stone is rumored to be hidden. A journal at their camp mentioned something about a secret chamber. I should investigate the ruin and see if I can find it before they do.",
+        "string": "Mityczny Brzask naprawi\u0142 Wrota Otch\u0142ani, ale potrzebuje Wielkiego Kamienia Welkynd, aby je otworzy\u0107. Aby unikn\u0105\u0107 Stra\u017cnik\u00f3w Stendarra, Mityczny Brzask przekopa\u0142 staro\u017cytne ayleidzkie ruiny, gdzie pono\u0107 schowany jest kamie\u0144. Dziennik w ich obozowisku wspomina\u0142 co\u015b o ukrytej komnacie. Musz\u0119 zbada\u0107 ruiny i odnale\u017a\u0107 kamie\u0144 przed Mitycznym Brzaskiem."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST CNAM",
+        "original": "A stranger asked for my help, but he was killed before I arrived. I was then ambushed by two assassins. I learned that the Mythic Dawn have reemerged, and that they've somehow reassembled an Oblivion gate, but need a powerful artifact to open it. A camp was mentioned in the notes I found. I should go there to see what I can find.",
+        "string": "Nieznajomy poprosi\u0142 mnie o pomoc, ale zosta\u0142 zabity, zanim uda\u0142o mi si\u0119 przyby\u0107. Nast\u0119pnie zaatakowa\u0142o mnie dw\u00f3ch zab\u00f3jc\u00f3w. Okazuje si\u0119, \u017ce Mityczny Brzask si\u0119 odrodzi\u0142 i w jaki\u015b spos\u00f3b odbudowa\u0142 Wrota Otch\u0142ani. Do ich otwarcia potrzebny jest jednak pot\u0119\u017cny artefakt. W odnalezionych przeze mnie notatkach jest mowa o obozowisku. Musz\u0119 je odnale\u017a\u0107 i przetrz\u0105sn\u0105\u0107."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note06_MythicDawnExpeditionJournal",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"20\">\n<b>2nd Sun's Height, 4E 201</b>\n\nThe dawn is breaking. Vonos has successfully pierced the veil of the liminal barrier.\n\nBut there is much work to be done. We have unearthed an anchor point, but must still reconstruct the gate itself. And even when it is complete, the veil of the liminal barrier remains. Vonos in his infinite wisdom continues to work day and night to find a way to break it.\n\nIt may be but a singular gateway, but Valkyn Gatanas and Methats await us on the other side, preparing to march for our Lord.\n\nI will keep the faith, for Lord Dagon.\n[pagebreak]\n\n<b>10th Sun's Height, 4E 201</b>\n\nVonos has been studying all known information about the Mysterium Xarxes, consulting with Dagon's Dremora, and experimenting tirelessly, but is still unable to open the gate.\n\nHowever, he believes that an object may exist which could be strong enough to hold the portal open. What kind of artifact could hold such power? Even a thousand Soul Gems would likely dissolve in the presence of a Sigil Stone.\n\nWe must redouble our efforts. I have sent additional scouts to Solstheim and Cyrodiil to learn anything they can.\n\n<b>20th Sun's Height, 4E 201</b>\n\nOne of my scouts has returned from Bruma with promising information. The ancient Ayleids are well known for their Welkynd Stones, rare aetherial fragments comprised of powerful meteoric glass. A Great Welkynd Stone, the most powerful of these stones, was typically held within the heart of each Ayleid city, but these stones have long since been plundered or lost to time.\n\nResearchers have speculated for centuries that more Great Welkynd Stones may exist, but none have ever been found. The last Great Welkynd Stone seen on record was in the Third Era; when it was snatched and used to bring the downfall of our Lord.\n\nThen, it was ultimately Mehrunes' undoing, but irony may be smiling upon us. Something of such power could be exactly what we need to bring the gate to full power.\n\nOne researcher has set their sights on the ancient Ayleid ruin of Rielle as such a place where a Great Welkynd Stone may exist. Many have explored its depths through the years, though none have ever found a trace of such a thing.\n\nCould a Great Welkynd Stone truly be hidden deep within Rielle? I've told my scouts to capture this researcher and bring him to me. We must learn all we can.\n\n<b>2nd Last Seed, 4E 201</b>\n\nMy scouts captured the Ayleid researcher from Bruma, but upon returning, the Vigil of Stendarr were seen guarding the Pale Pass. My scouts had to detour through the wilderness of the Jerall Mountains to avoid them. Could the Vigil be aware of our movements? Is there a traitor among us? We cannot risk any sort of confrontation with the Vigil until we have the full might of Dagon behind us. There is too much at stake.\n\nWhile interrogating the researcher I learned that Rielle is structurally weak, making entry difficult. With the Vigil blocking the Pale Pass, this greatly inhibits our expedition. He also spoke of other dangers, but I dare not repeat them, lest I give substance to his ravings.\n\nWe must find a way into Rielle. Vonos and I have agreed that we have no time to waste. I have selected only our most trusted disciples to set up a base camp in the mountains west of Ivarstead. We will operate under the darkness of night to excavate our own pathway through the Jerall Mountains and into Rielle. It will take time, but it is the only way.\n\n<b>14th Last Seed, 4E 201</b>\n\nAfter much blood and sweat, we finally breached Rielle through its northwest corner, but the challenges within have proven to be quite deadly. The only man who returned alive claimed he barely escaped the clutches of an undead monster.  Several have gone inside only to never return, and I am unsure how many more souls I can spare.\n\nAll this and yet no signs of a secret chamber or Welkynd Stone.\n\nThere are legible portions of untranslated words on the pages retrieved from the researcher in Bruma. I've summoned one of my best scholars, Janus, to assist me in my Ayleid studies. Perhaps there is something we are missing.\n[pagebreak]\n\n<b>15th Last Seed, 4E 201</b>\n\nAccording to the books Magic from the Sky, and Glories and Laments, the ancient Ayleids believed that Nirn was composed of four basic elements -- Earth, Water, Air, and Light. Janus and I feel this is extremely important, may be the key to obtaining the stone. The incomplete texts recovered from the researcher in Bruma make mention of previously unseen Elemental Shards. But what are they? Where are they? We will prepare another team to descend upon Rielle with this information.\n\nWe're running low on supplies and may need to delay the search if we lose any more men.\n[pagebreak]\n\n<b>17th Last Seed, 4E 201</b>\t\n\nVonos has sent an urgent communication. The Vigilants of Stendarr have increased their presence and have been seen questioning townsfolk. Acolyte Skorvild and Priestess Enakain have gone missing, their whereabouts unknown.\n\nIt is best for us to assume the Vigil knows of our plans. There is no time left to delay. Janus must join one last expedition team to locate the Great Welkynd Stone. I will send the last of my guards along with him as protection.\n\nThis is our last chance. Dagon, give us strength.\n</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"20\">\n<b>2 Pe\u0142ni S\u0142o\u0144ca, 4E 201</b>\n\nBrzask jest blisko. Vonosowi uda\u0142o si\u0119 przebi\u0107 ca\u0142un bariery granicznej.\n\nAle jest jeszcze mn\u00f3stwo pracy do wykonania. Odkopali\u015bmy punkt zakotwiczenia, ale wci\u0105\u017c musimy odbudowa\u0107 sam\u0105 bram\u0119. A nawet kiedy zostanie uko\u0144czona, pozostaje jeszcze bariera graniczna. Vonos, w swej niesko\u0144czonej m\u0105dro\u015bci, pracuje dzie\u0144 i noc, aby znale\u017a\u0107 spos\u00f3b na jej prze\u0142amanie.\n\nTo b\u0119dzie w\u0105skie przej\u015bcie, ale Valkyn Gatanas i Methats czekaj\u0105 po drugiej stronie, przygotowuj\u0105c marsz dla naszego Pana.\n\nTrwamy w wierze dla lorda Dagona.\n[pagebreak]\n\n<b>10 Pe\u0142ni S\u0142o\u0144ca, 4E 201</b>\n\nVonos bada\u0142 wszystkie znane informacje o Mysterium Xarxes, Mitycznym Brzasku. Konsultowa\u0142 si\u0119 z dremor\u0105 Dagona i eksperymentowa\u0142 bez wytchnienia, ale wci\u0105\u017c nie mo\u017ce otworzy\u0107 bramy.\n\nUwa\u017ca jednak, \u017ce istnieje obiekt, kt\u00f3ry jest wystarczaj\u0105co silny, aby to zrobi\u0107. C\u00f3\u017c za artefakt mo\u017ce mie\u0107 tak\u0105 moc? Nawet tysi\u0105c klejnot\u00f3w duszy prawdopodobnie rozwia\u0142oby si\u0119 w powietrzu w obecno\u015bci kamienia piecz\u0119tuj\u0105cego.\n\nMusimy podwoi\u0107 wysi\u0142ki. Do Solstheim i Cyrodiil wys\u0142ani zostali kolejni zwiadowcy. Maj\u0105 donosi\u0107 o wszystkim, czego zdo\u0142aj\u0105 si\u0119 dowiedzie\u0107.\n\n<b>20 Pe\u0142ni S\u0142o\u0144ca, 4E 201</b>\n\nJeden z moich zwiadowc\u00f3w powr\u00f3ci\u0142 z Brumy z ciekawymi informacjami. Staro\u017cytni Ayleidzi s\u0105 znani z wydobywania kamieni Welkynd, rzadkich fragment\u00f3w eteru, zbudowanych z pot\u0119\u017cnego szk\u0142a meteorytowego. Wielkie Kamienie Welkynd, najpot\u0119\u017cniejsze z nich, zwykle by\u0142y przetrzymywane w sercu ka\u017cdego miasta Ayleid\u00f3w, ale zosta\u0142y one wykradzione i zagin\u0119\u0142y w odm\u0119tach czasu.\n\nOd wiek\u00f3w badacze spekulowali, czy Wielkie Kamienie Welkynd jeszcze gdzie\u015b istniej\u0105, ale jak dot\u0105d \u017cadnego nie uda\u0142o si\u0119 odnale\u017a\u0107. Ostatnia wzmianka o Wielkim Kamieniu Welkynd pochodzi z trzeciej ery - zosta\u0142 on skradziony i u\u017cyty do pokonania naszego Pana.\n\nOstatecznie doprowadzi\u0142o to do upadku Mehrunesa, ale, o ironio, tym razem los mo\u017ce si\u0119 do nas u\u015bmiechn\u0105\u0107. W\u0142a\u015bnie czego\u015b tak pot\u0119\u017cnego potrzebujemy, aby w pe\u0142ni zasili\u0107 wrota.\n\nJeden z badaczy koncentruje si\u0119 na staro\u017cytnych ayleidzkich ruinach Rielle, gdzie mo\u017ce znajdowa\u0107 si\u0119 Wielki Kamie\u0144 Welkynd. Wielu bada\u0142o te g\u0142\u0119biny przez lata, a nikt nawet nie znalaz\u0142 jego \u015bladu.\n\nCzy artefakt jest ukryty g\u0142\u0119boko w Rielle? Zwiadowcy maj\u0105 pojma\u0107 tego badacza i przyprowadzi\u0107 go do mnie. Musimy wszystkiego si\u0119 dowiedzie\u0107.\n\n<b>2 Ostatniego Siewu, 4E 201</b>\n\nMoi zwiadowcy pojmali badacza Ayleid\u00f3w z Brumy, ale podczas powrotu okaza\u0142o si\u0119, \u017ce Stra\u017c Stendarra pilnuje Bladej Prze\u0142\u0119czy. Aby jej unikn\u0105\u0107, zwiadowcy musieli i\u015b\u0107 naoko\u0142o, przez dzikie g\u00f3ry Jerall. Czy\u017cby Stra\u017c \u015bledzi\u0142a nasze ruchy? Czy w\u015br\u00f3d nas jest zdrajca? Nie mo\u017cemy ryzykowa\u0107 \u017cadnej konfrontacji ze Stra\u017c\u0105 do czasu, gdy wspiera\u0107 nas b\u0119dzie pe\u0142na moc Dagona. Stawka jest zbyt wysoka.\n\nPodczas przes\u0142uchania badacza okaza\u0142o si\u0119, \u017ce konstrukcja Rielle jest bardzo os\u0142abiona, przez co wej\u015bcie b\u0119dzie trudne. Stra\u017c blokuje Blad\u0105 Prze\u0142\u0119cz, co znacznie ogranicza mo\u017cliwo\u015bci naszej ekspedycji. Badacz m\u00f3wi\u0142 te\u017c o innych niebezpiecze\u0144stwach, ale nie odwa\u017c\u0119 si\u0119 ich powt\u00f3rzy\u0107, szczeg\u00f3lnie \u017ce uwa\u017cam je za wymys\u0142y.\n\nMusimy znale\u017a\u0107 spos\u00f3b, by dosta\u0107 si\u0119 do Rielle. Wraz z Vonosem uznali\u015bmy, \u017ce nie ma czasu do stracenia. Dobrali\u015bmy najwierniejszych wyznawc\u00f3w i za\u0142o\u017cyli\u015bmy ob\u00f3z w g\u00f3rach, na zach\u00f3d od Ivarstead. B\u0119dziemy dzia\u0142a\u0107 pod os\u0142on\u0105 nocy i wytyczymy szlak przez g\u00f3ry Jerall, a\u017c do Rielle. Zajmie to sporo czasu, ale to jedyny spos\u00f3b.\n\n<b>14 Ostatniego Siewu, 4E 201</b>\n\nWylali\u015bmy mn\u00f3stwo krwi i potu, ale wreszcie dostali\u015bmy si\u0119 do wn\u0119trza Rielle od p\u00f3\u0142nocno-zachodniego rogu. Czekaj\u0105ce tam na nas wyzwania okaza\u0142y si\u0119 by\u0107 dosy\u0107 zab\u00f3jcze. Jedyny cz\u0142owiek, kt\u00f3ry uszed\u0142 z \u017cyciem z pierwszego wypadu, twierdzi, \u017ce cudem wymkn\u0105\u0142 si\u0119 ze szpon\u00f3w nieumar\u0142ego potwora. Kilku naszych ludzi wesz\u0142o do wn\u0119trza i nie wr\u00f3ci\u0142o, a ja nie wiem, ile jeszcze dusz mog\u0119 po\u015bwi\u0119ci\u0107.\n\nTyle wyrzecze\u0144, a wci\u0105\u017c nie ma \u015bladu tajemnej komnaty ani kamienia Welkynd. Ale Dagon do mnie szepcze.\n\nNa stronach przej\u0119tych od badacza z Brumy mamy jeszcze sporo czytelnych, ale nieprzet\u0142umaczonych s\u0142\u00f3w. Wezwali\u015bmy jednego z naszych najlepszych uczonych, Janusa, kt\u00f3ry ma mi pom\u00f3c w badaniach nad Ayleidami. By\u0107 mo\u017ce jest tam co\u015b, co przegapili\u015bmy.\n[pagebreak]\n\n<b>15 Ostatniego Siewu, 4E 201</b>\n\nWedle ksi\u0105g \u201eMagia z Niebios\u201d oraz \u201eChwa\u0142a i Lament\u201d staro\u017cytni Ayleidzi wierzyli, \u017ce Nirn zosta\u0142 zbudowany z czterech podstawowych \u017cywio\u0142\u00f3w - ziemi, wody, powietrza i \u015bwiat\u0142a. Z Janusem uwa\u017camy, \u017ce to niezwykle wa\u017cne i mo\u017ce by\u0107 kluczem do zdobycia kamienia. Niekompletne teksty przej\u0119te od badacza z Brumy wspominaj\u0105 o wcze\u015bniej nieznanych od\u0142amkach \u017cywio\u0142\u00f3w. Ale czym one s\u0105? Gdzie s\u0105? Zgromadzimy wszystkie informacje i przygotujemy kolejny oddzia\u0142 do zej\u015bcia do Rielle.\n\nZaczyna brakowa\u0107 nam zapas\u00f3w, a je\u015bli stracimy kolejnych ludzi, by\u0107 mo\u017ce trzeba b\u0119dzie op\u00f3\u017ani\u0107 poszukiwania.\n[pagebreak]\n\n<b>17 Ostatniego Siewu, 4E 201</b>\t\n\nVonos przys\u0142a\u0142 pilny list. Stra\u017c Stendarra zwi\u0119kszy\u0142a swoj\u0105 obecno\u015b\u0107 w okolicy i pono\u0107 przepytuje mieszka\u0144c\u00f3w wiosek. Akolita Skorvild oraz kap\u0142anka Enakain zagin\u0119li i nie wiadomo, gdzie przebywaj\u0105.\n\nChyba musimy za\u0142o\u017cy\u0107, \u017ce Stra\u017c zna nasze plany. Nie mo\u017cemy d\u0142u\u017cej zwleka\u0107. Janus musi do\u0142\u0105czy\u0107 do ostatniej ekspedycji i zlokalizowa\u0107 Wielki Kamie\u0144 Welkynd. Dam mu swoich ostatnich \u017co\u0142nierzy, aby go strzegli.\n\nNie b\u0119dziemy mieli innych szans. Dagonie, daj nam si\u0142\u0119.\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST CNAM",
+        "original": "I received a letter from someone named Skorvild claiming to be a reformed member of the Mythic Dawn. He mentioned the Oblivion Crisis and asked me to meet him at the Shrine to Stendarr. I should go there and see what he has to say.",
+        "string": "Dotar\u0142 do mnie list od cz\u0142owieka imieniem Skorvild. Twierdzi on, \u017ce jest zreformowanym cz\u0142onkiem Mitycznego Brzasku. Wspomina o Kryzysie Otch\u0142ani i prosi o spotkanie przy kapliczce Stendarra. Musz\u0119 tam wyruszy\u0107 i dowiedzie\u0107 si\u0119, czego chce."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST CNAM",
+        "original": "A stranger informed me that the Mythic Dawn reformed and unearthed an ancient Oblivion Gate. They were searching for a Great Welkynd Stone to charge the gate, which I found within Rielle before they could. I infiltrated the Mythic Dawn's hideout and went inside the Deadlands to find the Sigil Stone. Rather than remove the stone and close the portal, I decided to follow the will of Mehrunes Dagon by using the Great Welkynd Stone to charge the gate and protect the Sigil Stone.",
+        "string": "Nieznajomy poinformowa\u0142 mnie, \u017ce Mityczny Brzask si\u0119 odrodzi\u0142 i ujawni\u0142 staro\u017cytne Wrota Otch\u0142ani. Szukaj\u0105 teraz Wielkiego Kamienia Welkynd, aby na\u0142adowa\u0107 bram\u0119. Kamie\u0144 znajdowa\u0142 si\u0119 w Rielle i jest teraz w moim posiadaniu. Uda\u0142o mi si\u0119 zinfiltrowa\u0107 kryj\u00f3wk\u0119 Mitycznego Brzasku i ruszy\u0107 do krainy martwych w poszukiwaniu kamienia piecz\u0119tuj\u0105cego. Zamiast usuwa\u0107 kamie\u0144 i zamkn\u0105\u0107 portal, post\u0119puj\u0119 zgodnie z wol\u0105 Mehrunesa Dagona - u\u017cywam Wielkiego Kamienia Welkynd, aby na\u0142adowa\u0107 bram\u0119 i ochroni\u0107 kamie\u0144 piecz\u0119tuj\u0105cy."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST CNAM",
+        "original": "Centuries have passed since the Oblivion Crisis, yet remnants of that era may still exist in Skyrim. I should pay attention to any news or rumors.",
+        "string": "Od czasu Kryzysu Otch\u0142ani min\u0119\u0142y wieki, ale pozosta\u0142o\u015bci tej ery wci\u0105\u017c znale\u017a\u0107 mo\u017cna w Skyrim. Musz\u0119 nas\u0142uchiwa\u0107 wszelkich wie\u015bci i pog\u0142osek."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST CNAM",
+        "original": "While searching for clues about the Mythic Dawn's whereabouts I found a journal on a dead Vigilant of Stendarr. They learned of the Mythic Dawn's plot by capturing and interrogating a priest, and were able to decipher the location of the Oblivion Gate. I should go there and see if I can get inside. Wearing a set of Mythic Dawn robes might make it easier, but I need to be careful.",
+        "string": "Podczas szukania informacji o miejscu pobytu Mitycznego Brzasku w me r\u0119ce wpad\u0142 dziennik martwego Stra\u017cnika Stendarra. Pono\u0107 Stra\u017cnicy z\u0142apali i przes\u0142uchali kap\u0142ana, a tym samym poznali plany Mitycznego Brzasku. Uda\u0142o im si\u0119 odszuka\u0107 po\u0142o\u017cenie Wr\u00f3t Otch\u0142ani. Musz\u0119 tam wyruszy\u0107 i sprawdzi\u0107, czy zdo\u0142am wej\u015b\u0107 do \u015brodka. Za\u0142o\u017cenie szat Mitycznego Brzasku u\u0142atwi mi spraw\u0119, ale musz\u0119 uwa\u017ca\u0107."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST CNAM",
+        "original": "I gained access to the secret chamber within Rielle and retrieved the Great Welkynd Stone, but was ambushed by an Ayleid Lich. I need to defeat him in order to escape.",
+        "string": "Uda\u0142o mi si\u0119 wej\u015b\u0107 do tajnej komnaty w Rielle i zabra\u0107 z niej Wielki Kamie\u0144 Welkynd. Wtedy jednak zaskoczy\u0142 mnie ayleidzki licz. Musz\u0119 go pokona\u0107, aby uciec."
+    },
+    {
+        "editor_id": "ccBGSSSE067_MessageChooseStone",
+        "type": "MESG DESC",
+        "original": "What would you like to do?",
+        "string": "Co chcesz zrobi\u0107?"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "type": "QUST CNAM",
+        "original": "I have become an unwitting instrument of Mehrunes Dagon, and my actions have opened the Oblivion Gate. After entering the gate, I vanquished two powerful Dremora, heralds of a coming siege, and retrieved their weapons. I must now try to escape the Deadlands and Red Scar Cavern.",
+        "string": "Okaza\u0142o si\u0119, \u017ce jestem nie\u015bwiadomym narz\u0119dziem w r\u0119kach Mehrunesa Dagona, a moje dzia\u0142ania otworzy\u0142y Wrota Otch\u0142ani. Po przej\u015bciu przez bram\u0119 uda\u0142o mi si\u0119 zg\u0142adzi\u0107 dwie pot\u0119\u017cne dremory, zwiastuny nadchodz\u0105cego obl\u0119\u017cenia, i przej\u0105\u0107 ich uzbrojenie. Musz\u0119 teraz spr\u00f3bowa\u0107 uciec z krainy martwych i Groty Czerwonej Blizny."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "type": "QUST CNAM",
+        "original": "I found the Oblivion Gate and defeated the leader of the Mythic Dawn, Vonos. However, it seems his death has triggered the opening of the gate. I found a journal on his corpse that may explain why.",
+        "string": "Uda\u0142o mi si\u0119 odnale\u017a\u0107 Wrota Otch\u0142ani i pokona\u0107 przyw\u00f3dc\u0119 Mitycznego Brzasku, Vonosa. Jednak jego \u015bmier\u0107 chyba sprawi\u0142a, \u017ce wrota si\u0119 otworzy\u0142y. Przy ciele Vonosa znajdowa\u0142 si\u0119 dziennik, kt\u00f3ry mo\u017ce to wszystko wyja\u015bni\u0107."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "type": "QUST CNAM",
+        "original": "I found the Oblivion Gate and defeated the leader of the Mythic Dawn, Vonos. It appears this was an elaborate ritual designed to decieve me, and killing Vonos was the final step. I have become an unwitting instrument of Mehrunes Dagon, and my actions have opened the Oblivion Gate.",
+        "string": "Uda\u0142o mi si\u0119 odnale\u017a\u0107 Wrota Otch\u0142ani i pokona\u0107 przyw\u00f3dc\u0119 Mitycznego Brzasku, Vonosa. Jednak najwyra\u017aniej by\u0142 to skomplikowany rytua\u0142, kt\u00f3ry mia\u0142 mnie zwie\u015b\u0107, a zabicie Vonosa okaza\u0142o si\u0119 jego ostatnim etapem. By\u0107 mo\u017ce jestem nie\u015bwiadomym instrumentem w r\u0119kach Mehrunesa Dagona, a moje dzia\u0142ania otworzy\u0142y Wrota Otch\u0142ani."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note08_VigilantSecuretheGate",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\nThe Vigil is the last line of defense between the light and darkness. If the defilers manage to open the gate, then we are bound by Stendarr to not let a single abomination pass through it.  \n\nFind the gate, and secure it. Whatever it takes, we must hold the line.</font>\n",
+        "string": "<font face='$HandwrittenFont'>\nStra\u017c jest ostatni\u0105 lini\u0105 defensywy pomi\u0119dzy \u015bwiat\u0142em i ciemno\u015bci\u0105. Je\u015bli tym plugawcom uda si\u0119 otworzy\u0107 wrota, musimy dotrzyma\u0107 przysi\u0119gi Stendarrowi i nie pozwoli\u0107, aby cho\u0107 jedno z tych paskudztw dosta\u0142o si\u0119 na nasz \u015bwiat. \n\nNale\u017cy znale\u017a\u0107 i zabezpieczy\u0107 te wrota. Musimy zrobi\u0107 wszystko, aby utrzyma\u0107 lini\u0119 obrony.</font>\n"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "type": "QUST CNAM",
+        "original": "I found the Oblivion Gate and defeated the leader of the Mythic Dawn, Vonos. It appears this was an elaborate ritual designed to decieve me, and killing Vonos was the final step. I have become an unwitting instrument of Mehrunes Dagon, and my actions have opened the Oblivion Gate. I entered the gate and found myself in the Deadlands.",
+        "string": "Uda\u0142o mi si\u0119 odnale\u017a\u0107 Wrota Otch\u0142ani i pokona\u0107 przyw\u00f3dc\u0119 Mitycznego Brzasku, Vonosa. Jednak najwyra\u017aniej by\u0142 to skomplikowany rytua\u0142, kt\u00f3ry mia\u0142 mnie zwie\u015b\u0107, a zabicie Vonosa okaza\u0142o si\u0119 jego ostatnim etapem. By\u0107 mo\u017ce jestem nie\u015bwiadomym instrumentem w r\u0119kach Mehrunesa Dagona, a moje dzia\u0142ania otworzy\u0142y Wrota Otch\u0142ani - kt\u00f3re prowadzi\u0142y do krainy martwych."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "type": "QUST CNAM",
+        "original": "I found the Oblivion Gate and defeated the leader of the Mythic Dawn, Vonos. However, it seems his death has triggered the opening of the gate. I should inspect his corpse and see if I can discover why.",
+        "string": "Uda\u0142o mi si\u0119 odnale\u017a\u0107 Wrota Otch\u0142ani i pokona\u0107 przyw\u00f3dc\u0119 Mitycznego Brzasku, Vonosa. Jednak jego \u015bmier\u0107 sprawi\u0142a chyba, \u017ce wrota si\u0119 otworzy\u0142y. Musz\u0119 zbada\u0107 jego cia\u0142o i dowiedzie\u0107 si\u0119, o co tu chodzi."
+    },
+    {
+        "editor_id": "ccBGSSSE067_ShardMessageBox",
+        "type": "MESG DESC",
+        "original": "Place a shard in the holder?",
+        "string": "Umie\u015bci\u0107 od\u0142amek w oprawie?"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "type": "QUST CNAM",
+        "original": "I found the Oblivion Gate and defeated the leader of the Mythic Dawn, Vonos. It appears this was an elaborate ritual designed to decieve me, and killing Vonos was the final step. I have become an unwitting instrument of Mehrunes Dagon, and my actions have opened the Oblivion Gate. I entered the gate and defeated a Dremora Valkynaz wielding the weapon Torment.",
+        "string": "Uda\u0142o mi si\u0119 odnale\u017a\u0107 Wrota Otch\u0142ani i pokona\u0107 przyw\u00f3dc\u0119 Mitycznego Brzasku, Vonosa. Jednak najwyra\u017aniej by\u0142 to skomplikowany rytua\u0142, kt\u00f3ry mia\u0142 mnie zwie\u015b\u0107, a zabicie Vonosa okaza\u0142o si\u0119 jego ostatnim etapem. By\u0107 mo\u017ce jestem nie\u015bwiadomym instrumentem w r\u0119kach Mehrunesa Dagona, a moje dzia\u0142ania otworzy\u0142y Wrota Otch\u0142ani. Po przej\u015bciu przez wrota uda\u0142o mi si\u0119 pokona\u0107 dremor\u0119 Valkynaza dzier\u017c\u0105cego bro\u0144 - Udr\u0119k\u0119."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "type": "QUST CNAM",
+        "original": "I found the Oblivion Gate and defeated the leader of the Mythic Dawn, Vonos. It appears this was an elaborate ritual designed to deceive me, and killing Vonos was the final step. I have become an unwitting instrument of Mehrunes Dagon, and my actions have opened the Oblivion Gate.",
+        "string": "Uda\u0142o mi si\u0119 odnale\u017a\u0107 Wrota Otch\u0142ani i pokona\u0107 przyw\u00f3dc\u0119 Mitycznego Brzasku, Vonosa. Jednak najwyra\u017aniej by\u0142 to skomplikowany rytua\u0142, kt\u00f3ry mia\u0142 mnie zwie\u015b\u0107, a zabicie Vonosa okaza\u0142o si\u0119 jego ostatnim etapem. By\u0107 mo\u017ce jestem nie\u015bwiadomym instrumentem w r\u0119kach Mehrunesa Dagona, a moje dzia\u0142ania otworzy\u0142y Wrota Otch\u0142ani."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "type": "QUST CNAM",
+        "original": "I found the Oblivion Gate and defeated the leader of the Mythic Dawn, Vonos. It appears this was an elaborate ritual designed to decieve me, and killing Vonos was the final step. I have become an unwitting instrument of Mehrunes Dagon, and my actions have opened the Oblivion Gate. I entered the gate and defeated a Dremora Valkynaz wielding the weapon Scourge.",
+        "string": "Uda\u0142o mi si\u0119 odnale\u017a\u0107 Wrota Otch\u0142ani i pokona\u0107 przyw\u00f3dc\u0119 Mitycznego Brzasku, Vonosa. Najwyra\u017aniej by\u0142 to skomplikowany rytua\u0142, kt\u00f3ry mia\u0142 mnie zwie\u015b\u0107, a zabicie Vonosa by\u0142o jego ostatnim etapem. By\u0107 mo\u017ce jestem nie\u015bwiadomym instrumentem w r\u0119kach Mehrunesa Dagona, a moje dzia\u0142ania otworzy\u0142y Wrota Otch\u0142ani. Po przej\u015bciu przez wrota uda\u0142o mi si\u0119 pokona\u0107 dremor\u0119 Valkynaza dzier\u017c\u0105cego bro\u0144 - Zmor\u0119."
+    },
+    {
+        "editor_id": "ccBGSSSE067_OpenedElsewhereMessage",
+        "type": "MESG DESC",
+        "original": "This gate is opened elsewhere.",
+        "string": "T\u0119 bram\u0119 otwiera si\u0119 gdzie indziej."
+    },
+    {
+        "editor_id": "ccBGSSSE067_AtrFrgConjureLichRecipeNote",
+        "type": "BOOK DESC",
+        "original": "<p align='center'><font face='$HandwrittenFont'><font size='18'>\n\n\n\nGreat Welkynd Stone\n\nVoid Salts\n\nRuined Book\n\nBone Meal\n</font></p>\n",
+        "string": "<p align='center'><font face='$HandwrittenFont'><font size='18'>\n\n\n\nWielki Kamie\u0144 Welkynd\n\nSole pustki\n\nZniszczona ksi\u0105\u017cka\n\nKo\u015bciana strawa\n</font></p>\n"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note09_TornPage",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\nIn the shade of Velothi, where rivers run black\nShor's Stone at our feet, Whiteshore at our back\n\nWindhelm on our shoulders, beyond the fair night\nBefore the dawn rises, red scars bleed the light.</font>\n",
+        "string": "<font face='$HandwrittenFont'>\nW cieniu Velothi, gdzie czarne p\u0142yn\u0105 rzeki\nU st\u00f3p Ska\u0142a Shora, Bia\u0142y Brzeg daleki\n\nWichrowy Tron na ramionach i tak pi\u0119kna noc\nNim pojawi si\u0119 brzask, czerwie\u0144 zyska moc</font>\n"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AtrFrgConjureLichRecipeNote",
+        "type": "BOOK CNAM",
+        "original": "Tome - Conjure Ayleid Lich",
+        "string": "Ksi\u0119ga \u2013 Przywo\u0142anie ayleidzkiego licza"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ConjureAyleidLichTome",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nConjure Ayleid Lich",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nPrzywo\u0142aj ayleidzkiego licza"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "type": "QUST CNAM",
+        "original": "While attempting to stop the Mythic Dawn I myself became an unwitting instrument of Mehrunes Dagon. Killing their leader opened an Oblivion Gate leading into the Deadlands. There I vanquished two powerful Dremora and retrieved their weapons, preventing a siege. I escaped the Deadlands, and the Vigil of Stendarr have secured Red Scar Cavern.",
+        "string": "Pr\u00f3ba powstrzymania Mitycznego Brzasku okaza\u0142a si\u0119 by\u0107 pu\u0142apk\u0105 Mehrunesa Dagona, kt\u00f3ry mnie zwi\u00f3d\u0142. Zabicie ich przyw\u00f3dcy otworzy\u0142o Wrota Otch\u0142ani do krainy martwych. Po zg\u0142adzeniu dw\u00f3ch pot\u0119\u017cnych dremor i przej\u0119ciu ich broni, uda\u0142o mi si\u0119 zapobiec obl\u0119\u017ceniu oraz uciec z krainy martwych, a Stra\u017c Stendarra zabezpieczy\u0142a Grot\u0119 Czerwonej Blizny."
+    }
+]

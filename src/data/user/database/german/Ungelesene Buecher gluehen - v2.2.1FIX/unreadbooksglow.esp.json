@@ -1,0 +1,82 @@
+[
+    {
+        "editor_id": "UBGSettingsSpell",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "{Unread Books Glow Settings}",
+        "string": "Ungelesene Bücher glühen - Einstellungen",
+        "status": "TranslationComplete"
+    },
+    {
+        "editor_id": "UBGSettingsMsg",
+        "index": null,
+        "type": "MESG ITXT",
+        "original": "Medium [Default]",
+        "string": "Mittel [Default]",
+        "status": "TranslationComplete"
+    },
+    {
+        "editor_id": "UBGNotification2Msg",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "See Magic -> Powers -> [Settings]",
+        "string": "Siehe Magie -> Kräfte -> [Settings]",
+        "status": "TranslationComplete"
+    },
+    {
+        "editor_id": "UBGSettingsSpell",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Select this, then cast it like a spell to change brightness settings.",
+        "string": "Wähle dies und rufe mit dem Zauber die Einstellungen auf.",
+        "status": "TranslationComplete"
+    },
+    {
+        "editor_id": "UBGSettingsEffect",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Unread Books Glow Settings",
+        "string": "Ungelesene Bücher glühen - Einstellungen",
+        "status": "TranslationComplete"
+    },
+    {
+        "editor_id": "UBGNotification1LocalizedMsg",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "$UBG Unread Books Glow loaded",
+        "string": "$UBG Ungelesene Bücher glühen geladen",
+        "status": "TranslationComplete"
+    },
+    {
+        "editor_id": "UBGSettingsMsg",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Change settings for the \"Unread Books Glow\" mod",
+        "string": "Verändere die Einstellungen für die \"Ungelesene Bücher glühen\"-Mod.",
+        "status": "TranslationComplete"
+    },
+    {
+        "editor_id": "UBG13BookAliasDisplayNameMsg",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "* <BaseName>",
+        "string": "* <BaseName>",
+        "status": "TranslationComplete"
+    },
+    {
+        "editor_id": "UBGNotification1Msg",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Unread Books Glow loaded",
+        "string": "Ungelesene Bücher glühen geladen",
+        "status": "TranslationComplete"
+    },
+    {
+        "editor_id": "UBGSettingsMsg",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Unread Books Glow Mod Settings",
+        "string": "Ungelesene Bücher glühen Einstellungen",
+        "status": "TranslationComplete"
+    }
+]

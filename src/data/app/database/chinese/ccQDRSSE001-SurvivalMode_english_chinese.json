@@ -1,0 +1,1316 @@
+[
+    {
+        "editor_id": "doomSteedAbility",
+        "type": "SPEL FULL",
+        "original": "The Steed Stone",
+        "string": "\u99ff\u99ac\u4e4b\u77f3"
+    },
+    {
+        "editor_id": "BYOHFoodAppleDumpling01",
+        "type": "ALCH FULL",
+        "original": "Apple Dumpling",
+        "string": "\u860b\u679c\u9903\u5b50"
+    },
+    {
+        "editor_id": "Survival_FoodRestoreHungerLarge",
+        "type": "MGEF FULL",
+        "original": "Restore Hunger Large",
+        "string": "\u6062\u5fa9\u98e2\u9913\u5927"
+    },
+    {
+        "editor_id": "Survival_FoodRestoreHungerSmall",
+        "type": "MGEF FULL",
+        "original": "Restore Hunger Small",
+        "string": "\u6062\u5fa9\u98e2\u9913\u5c0f"
+    },
+    {
+        "editor_id": "Survival_FoodRestoreCold",
+        "type": "MGEF FULL",
+        "original": "Restore Cold",
+        "string": "\u6062\u5fa9\u5bd2\u51b7"
+    },
+    {
+        "editor_id": "Survival_FoodRestoreHungerVerySmall",
+        "type": "MGEF FULL",
+        "original": "Restore Hunger Very Small",
+        "string": "\u6062\u5fa9\u98e2\u9913\u6975\u5c0f"
+    },
+    {
+        "editor_id": "Survival_FoodFortifyWarmth",
+        "type": "MGEF FULL",
+        "original": "Fortify Warmth",
+        "string": "\u52a0\u5f37\u4fdd\u6696"
+    },
+    {
+        "editor_id": "Survival_FoodRestoreHungerMedium",
+        "type": "MGEF FULL",
+        "original": "Restore Hunger Medium",
+        "string": "\u6062\u5fa9\u98e2\u9913\u4e2d"
+    },
+    {
+        "editor_id": "FoodRestoreHealth",
+        "type": "MGEF FULL",
+        "original": "Restore Health",
+        "string": "\u6062\u5fa9\u751f\u547d\u529b"
+    },
+    {
+        "editor_id": "Survival_abRacialKhajiit",
+        "type": "SPEL FULL",
+        "original": "Fortify Warmth",
+        "string": "\u52a0\u5f37\u4fdd\u6696"
+    },
+    {
+        "editor_id": "BYOHFoodButter",
+        "type": "ALCH FULL",
+        "original": "Butter",
+        "string": "\u5976\u6cb9"
+    },
+    {
+        "editor_id": "Survival_ShrineGoldOfferingMessage",
+        "type": "MESG ITXT",
+        "original": "No",
+        "string": "\u5426"
+    },
+    {
+        "editor_id": "Survival_DamageLockpickPickpocket",
+        "type": "MGEF DNAM",
+        "original": "Picking locks and picking pockets is <mag>% harder.",
+        "string": "\u958b\u9396\u548c\u6252\u7aca\u7684\u96e3\u5ea6\u63d0\u9ad8<mag>%\u3002"
+    },
+    {
+        "editor_id": "Survival_AbLowerCarryWeight",
+        "type": "MGEF FULL",
+        "original": "Lower Carry Weight",
+        "string": "\u6e1b\u8f15\u8ca0\u91cd\u529b"
+    },
+    {
+        "editor_id": "Survival_abLowerCarryWeightSpell",
+        "type": "SPEL FULL",
+        "original": "Lower Carry Weight",
+        "string": "\u6e1b\u8f15\u8ca0\u91cd"
+    },
+    {
+        "editor_id": "FoodRestoreHealth",
+        "type": "MGEF DNAM",
+        "original": "Restore <mag> points of Health.",
+        "string": "\u6062\u5fa9<mag>\u9ede\u751f\u547d\u529b\u3002"
+    },
+    {
+        "editor_id": "BYOHFoodWineBottle03",
+        "type": "ALCH FULL",
+        "original": "Surilie Brothers Wine",
+        "string": "\u8607\u745e\u5229\u5144\u5f1f\u8461\u8404\u9152"
+    },
+    {
+        "editor_id": "Survival_NeedColdQuest",
+        "type": "QUST FULL",
+        "original": "Cold",
+        "string": "\u5bd2\u51b7"
+    },
+    {
+        "editor_id": "Survival_DamageOnehandedTwohanded",
+        "type": "MGEF DNAM",
+        "original": "You are <mag>% less effective with melee weapons.",
+        "string": "\u8fd1\u6230\u6b66\u5668\u4f7f\u7528\u6548\u679c\u6e1b\u5f31<mag>%\u3002"
+    },
+    {
+        "editor_id": "Survival_ShrineGoldOfferingMessage",
+        "type": "MESG ITXT",
+        "original": "Yes",
+        "string": "\u662f"
+    },
+    {
+        "editor_id": "ExtraPockets",
+        "type": "PERK FULL",
+        "original": "Extra Pockets",
+        "string": "\u984d\u5916\u53e3\u888b"
+    },
+    {
+        "editor_id": "BYOHFoodSalmonCooked02",
+        "type": "ALCH FULL",
+        "original": "Salmon Steak",
+        "string": "\u9bad\u9b5a\u6392"
+    },
+    {
+        "editor_id": "PerkExtraPockets",
+        "type": "SPEL FULL",
+        "original": "Extra Pockets",
+        "string": "\u984d\u5916\u53e3\u888b"
+    },
+    {
+        "editor_id": "Survival_DamageLockpickPickpocket",
+        "type": "MGEF FULL",
+        "original": "Reduced Lockpick & Pickpocket",
+        "string": "\u964d\u4f4e\u958b\u9396\u8207\u6252\u7aca"
+    },
+    {
+        "editor_id": "BYOHFoodJazbayCrostata",
+        "type": "ALCH FULL",
+        "original": "Jazbay Crostata",
+        "string": "\u67b6\u5b50\u7063\u8461\u8404\u6d3e"
+    },
+    {
+        "editor_id": "Survival_FortifyWarmthConstant",
+        "type": "MGEF FULL",
+        "original": "Fortify Warmth",
+        "string": "\u52a0\u5f37\u4fdd\u6696"
+    },
+    {
+        "editor_id": "Survival_abRacialNord",
+        "type": "SPEL FULL",
+        "original": "Fortify Warmth",
+        "string": "\u52a0\u5f37\u4fdd\u6696"
+    },
+    {
+        "editor_id": "BYOHFoodFlour",
+        "type": "ALCH FULL",
+        "original": "Sack of Flour",
+        "string": "\u4e00\u5305\u9eb5\u7c89"
+    },
+    {
+        "editor_id": "BYOHFoodSnowberryCrostata",
+        "type": "ALCH FULL",
+        "original": "Snowberry Crostata",
+        "string": "\u96ea\u6f3f\u679c\u6d3e"
+    },
+    {
+        "editor_id": "TrapDiseaseAtaxia",
+        "type": "SPEL FULL",
+        "original": "Ataxia",
+        "string": "\u904b\u52d5\u5931\u8abf\u75c7"
+    },
+    {
+        "editor_id": "Survival_StartPrompt",
+        "type": "MESG ITXT",
+        "original": "No",
+        "string": "\u5426"
+    },
+    {
+        "editor_id": "Survival_HelpColdHigh",
+        "type": "MESG FULL",
+        "original": "Cold",
+        "string": "\u5bd2\u51b7"
+    },
+    {
+        "editor_id": "DLC2DiseaseDroops",
+        "type": "SPEL FULL",
+        "original": "Droops",
+        "string": "\u59d4\u9761\u75c7"
+    },
+    {
+        "editor_id": "Survival_DisDamageOnehandedTwohanded",
+        "type": "MGEF FULL",
+        "original": "Reduced Weapon skills",
+        "string": "\u964d\u4f4e\u6b66\u5668\u6280\u80fd"
+    },
+    {
+        "editor_id": "DisDamageOnehandedTwohanded",
+        "type": "MGEF DNAM",
+        "original": "You are <mag>% less effective with melee weapons.",
+        "string": "\u8fd1\u6230\u6b66\u5668\u4f7f\u7528\u6548\u679c\u6e1b\u5f31<mag>%\u3002"
+    },
+    {
+        "editor_id": "DisDamageOnehandedTwohanded",
+        "type": "MGEF FULL",
+        "original": "Reduced Weapon skills",
+        "string": "\u964d\u4f4e\u6b66\u5668\u6280\u80fd"
+    },
+    {
+        "editor_id": "DiseaseRockjoint",
+        "type": "SPEL FULL",
+        "original": "Rockjoint",
+        "string": "\u95dc\u7bc0\u77f3\u5316\u75c5"
+    },
+    {
+        "editor_id": "FoodRestoreHealthDuration",
+        "type": "MGEF DNAM",
+        "original": "Restore <mag> points of Health per second for <dur> seconds.",
+        "string": "\u6bcf\u79d2\u6062\u5fa9<mag>\u9ede\u751f\u547d\u529b\uff0c\u6301\u7e8c<dur>\u79d2\u3002"
+    },
+    {
+        "editor_id": "Survival_DisDamagePickpocketLockpick",
+        "type": "MGEF FULL",
+        "original": "Reduced Lockpick & Pickpocket",
+        "string": "\u964d\u4f4e\u958b\u9396\u8207\u6252\u7aca"
+    },
+    {
+        "editor_id": "Survival_DLC2DisDamage1and2Handed",
+        "type": "MGEF FULL",
+        "original": "Reduced Weapon Damage",
+        "string": "\u964d\u4f4e\u6b66\u5668\u50b7\u5bb3"
+    },
+    {
+        "editor_id": "DisDamagePickpocketLockpick",
+        "type": "MGEF DNAM",
+        "original": "Picking locks and picking pockets is <mag>% harder.",
+        "string": "\u958b\u9396\u548c\u6252\u7aca\u7684\u96e3\u5ea6\u63d0\u9ad8<mag>%\u3002"
+    },
+    {
+        "editor_id": "Survival_StartPrompt",
+        "type": "MESG ITXT",
+        "original": "Yes",
+        "string": "\u662f"
+    },
+    {
+        "editor_id": "DLC2DisDamage1and2Handed",
+        "type": "MGEF DNAM",
+        "original": "One-handed and two-handed weapon damage is <mag>% lower.",
+        "string": "\u55ae\u624b\u548c\u96d9\u624b\u6b66\u5668\u50b7\u5bb3\u964d\u4f4e<mag>%\u3002"
+    },
+    {
+        "editor_id": "DLC2DisDamage1and2Handed",
+        "type": "MGEF FULL",
+        "original": "Reduced Weapon Damage",
+        "string": "\u964d\u4f4e\u6b66\u5668\u50b7\u5bb3"
+    },
+    {
+        "editor_id": "DisDamagePickpocketLockpick",
+        "type": "MGEF FULL",
+        "original": "Reduced Lockpick & Pickpocket",
+        "string": "\u964d\u4f4e\u958b\u9396\u8207\u6252\u7aca"
+    },
+    {
+        "editor_id": "DiseaseAtaxia",
+        "type": "SPEL FULL",
+        "original": "Ataxia",
+        "string": "\u904b\u52d5\u5931\u8abf\u75c7"
+    },
+    {
+        "editor_id": "TrapDiseaseRockjoint",
+        "type": "SPEL FULL",
+        "original": "Rockjoint",
+        "string": "\u95dc\u7bc0\u77f3\u5316\u75c5"
+    },
+    {
+        "editor_id": "FoodRestoreHealthDuration",
+        "type": "MGEF FULL",
+        "original": "Restore Health",
+        "string": "\u6062\u5fa9\u751f\u547d\u529b"
+    },
+    {
+        "editor_id": "Survival_DisFoodPoisoningStamina",
+        "type": "MGEF DNAM",
+        "original": "Stamina regenerates <mag>% slower.",
+        "string": "\u7cbe\u529b\u6062\u5fa9\u901f\u5ea6\u6e1b\u7de9<mag>%\u3002"
+    },
+    {
+        "editor_id": "Survival_DisDamagePickpocketLockpick2",
+        "type": "MGEF FULL",
+        "original": "Reduced Lockpick & Pickpocket",
+        "string": "\u964d\u4f4e\u958b\u9396\u8207\u6252\u7aca"
+    },
+    {
+        "editor_id": "BYOHFoodClamChowder",
+        "type": "ALCH FULL",
+        "original": "Clam Chowder",
+        "string": "\u86e4\u870a\u5207\u9054\u6e6f"
+    },
+    {
+        "editor_id": "Survival_DisDamageMagickaRegen",
+        "type": "MGEF FULL",
+        "original": "Reduced Magicka Regen",
+        "string": "\u964d\u4f4e\u6cd5\u529b\u6062\u5fa9"
+    },
+    {
+        "editor_id": "Survival_abWarmthTorch",
+        "type": "SPEL FULL",
+        "original": "Torch",
+        "string": "\u706b\u628a"
+    },
+    {
+        "editor_id": "FoodBeefStew",
+        "type": "ALCH FULL",
+        "original": "Beef Stew",
+        "string": "\u725b\u8089\u6e6f"
+    },
+    {
+        "editor_id": "Survival_DisDamagePickpocketLockpick3",
+        "type": "MGEF FULL",
+        "original": "Reduced Lockpick & Pickpocket",
+        "string": "\u964d\u4f4e\u958b\u9396\u8207\u6252\u7aca"
+    },
+    {
+        "editor_id": "Survival_TrapDisDamageMagickaRegen",
+        "type": "MGEF FULL",
+        "original": "Reduced Magicka Regen",
+        "string": "\u964d\u4f4e\u6cd5\u529b\u6062\u5fa9"
+    },
+    {
+        "editor_id": "Survival_DisDamageOnehandedTwohanded2",
+        "type": "MGEF FULL",
+        "original": "Reduced Weapon skills",
+        "string": "\u964d\u4f4e\u6b66\u5668\u6280\u80fd"
+    },
+    {
+        "editor_id": "FoodVegetableSoup",
+        "type": "ALCH FULL",
+        "original": "Vegetable Soup",
+        "string": "\u852c\u83dc\u6e6f"
+    },
+    {
+        "editor_id": "FoodHorkerStew",
+        "type": "ALCH FULL",
+        "original": "Horker Stew",
+        "string": "\u6d77\u8c61\u6e6f"
+    },
+    {
+        "editor_id": "Survival_DisDamageMagickaRegen2",
+        "type": "MGEF FULL",
+        "original": "Reduced Magicka Regen",
+        "string": "\u964d\u4f4e\u6cd5\u529b\u6062\u5fa9"
+    },
+    {
+        "editor_id": "Survival_HelpSurvivalModeLong",
+        "type": "MESG FULL",
+        "original": "Survival Mode",
+        "string": "\u751f\u5b58\u6a21\u5f0f"
+    },
+    {
+        "editor_id": "Survival_DLC2DisDamage1and2Handed3",
+        "type": "MGEF FULL",
+        "original": "Reduced Weapon Damage",
+        "string": "\u964d\u4f4e\u6b66\u5668\u50b7\u5bb3"
+    },
+    {
+        "editor_id": "FoodCabbagePotatoSoup",
+        "type": "ALCH FULL",
+        "original": "Cabbage Potato Soup",
+        "string": "\u6372\u5fc3\u83dc\u99ac\u9234\u85af\u6e6f"
+    },
+    {
+        "editor_id": "Survival_TrapDisDamagePickpocketLockpick",
+        "type": "MGEF FULL",
+        "original": "Reduced Lockpick & Pickpocket",
+        "string": "\u964d\u4f4e\u958b\u9396\u8207\u6252\u7aca"
+    },
+    {
+        "editor_id": "FoodPotatoSoup",
+        "type": "ALCH FULL",
+        "original": "Potato Soup",
+        "string": "\u99ac\u9234\u85af\u6e6f"
+    },
+    {
+        "editor_id": "Survival_DLC2DisDamage1and2Handed2",
+        "type": "MGEF FULL",
+        "original": "Reduced Weapon Damage",
+        "string": "\u964d\u4f4e\u6b66\u5668\u50b7\u5bb3"
+    },
+    {
+        "editor_id": "Survival_HelpSurvivalModeLongXbox",
+        "type": "MESG FULL",
+        "original": "Survival Mode",
+        "string": "\u751f\u5b58\u6a21\u5f0f"
+    },
+    {
+        "editor_id": "FoodAppleCabbageStew",
+        "type": "ALCH FULL",
+        "original": "Apple Cabbage Stew",
+        "string": "\u860b\u679c\u6372\u5fc3\u83dc\u6e6f"
+    },
+    {
+        "editor_id": "FoodTomatoSoup",
+        "type": "ALCH FULL",
+        "original": "Tomato Soup",
+        "string": "\u756a\u8304\u6e6f"
+    },
+    {
+        "editor_id": "FoodVenisonStew",
+        "type": "ALCH FULL",
+        "original": "Venison Stew",
+        "string": "\u9e7f\u8089\u6e6f"
+    },
+    {
+        "editor_id": "Survival_RestedMarriageSkillEffect",
+        "type": "MGEF DNAM",
+        "original": "All skills improve <15>% faster.",
+        "string": "\u6240\u6709\u6280\u80fd\u63d0\u5347\u901f\u5ea6\u52a0\u5feb<15>%\u3002"
+    },
+    {
+        "editor_id": "Survival_DisDamageMagickaRegen3",
+        "type": "MGEF FULL",
+        "original": "Reduced Magicka Regen",
+        "string": "\u964d\u4f4e\u6cd5\u529b\u6062\u5fa9"
+    },
+    {
+        "editor_id": "Survival_DisDamageOnehandedTwohanded3",
+        "type": "MGEF FULL",
+        "original": "Reduced Weapon skills",
+        "string": "\u964d\u4f4e\u6b66\u5668\u6280\u80fd"
+    },
+    {
+        "editor_id": "DiseaseBoneBreakFever",
+        "type": "SPEL FULL",
+        "original": "Bone Break Fever",
+        "string": "\u9aa8\u75db\u71b1"
+    },
+    {
+        "editor_id": "Survival_TrapDisDamageOnehandedTwohanded",
+        "type": "MGEF FULL",
+        "original": "Reduced Weapon skills",
+        "string": "\u964d\u4f4e\u6b66\u5668\u6280\u80fd"
+    },
+    {
+        "editor_id": "Survival_ResistColdTorchEffect",
+        "type": "MGEF FULL",
+        "original": "Fortify Warmth",
+        "string": "\u52a0\u5f37\u4fdd\u6696"
+    },
+    {
+        "editor_id": "Survival_AbResistFrost",
+        "type": "MGEF FULL",
+        "original": "Resist Frost",
+        "string": "\u5bd2\u971c\u6297\u6027"
+    },
+    {
+        "editor_id": "BYOHFoodMudcrabLegsCooked",
+        "type": "ALCH FULL",
+        "original": "Steamed Mudcrab Legs",
+        "string": "\u84b8\u6ce5\u6cbc\u87f9\u817f"
+    },
+    {
+        "editor_id": "BYOHFoodMilk",
+        "type": "ALCH FULL",
+        "original": "Jug of Milk",
+        "string": "\u4e00\u58fa\u725b\u5976"
+    },
+    {
+        "editor_id": "BYOHFoodMudcrabLegs",
+        "type": "ALCH FULL",
+        "original": "Mudcrab Legs",
+        "string": "\u6ce5\u6cbc\u87f9\u817f"
+    },
+    {
+        "editor_id": "BYOHFoodJuniperBerryCrostata",
+        "type": "ALCH FULL",
+        "original": "Juniper Berry Crostata",
+        "string": "\u675c\u677e\u5b50\u6d3e"
+    },
+    {
+        "editor_id": "BYOHFoodPotatoBread01A",
+        "type": "ALCH FULL",
+        "original": "Potato Bread",
+        "string": "\u99ac\u9234\u85af\u9eb5\u5305"
+    },
+    {
+        "editor_id": "Survival_FoodFortifyWarmth",
+        "type": "MGEF DNAM",
+        "original": "[SURV=Warmth is increased by <mag> points for <dur> seconds.]",
+        "string": "[\u751f\u5b58\u6a21\u5f0f=\u4fdd\u6696\u63d0\u5347<mag>\u9ede\uff0c\u6301\u7e8c<dur>\u79d2\u3002]"
+    },
+    {
+        "editor_id": "Survival_PenaltyMagickaEffect",
+        "type": "MGEF FULL",
+        "original": "Reduced Magicka",
+        "string": "\u6e1b\u5c11\u6cd5\u529b"
+    },
+    {
+        "editor_id": "BYOHFoodWineBottle04",
+        "type": "ALCH FULL",
+        "original": "Argonian Bloodwine",
+        "string": "\u4e9e\u9f8d\u4eba\u8840\u8461\u8404\u9152"
+    },
+    {
+        "editor_id": "Survival_DiseaseBrainRot1",
+        "type": "SPEL FULL",
+        "original": "Brain Rot",
+        "string": "\u8166\u90e8\u8150\u58de"
+    },
+    {
+        "editor_id": "Survival_DiseaseBoneBreakFever1",
+        "type": "SPEL FULL",
+        "original": "Bone Break Fever",
+        "string": "\u9aa8\u75db\u71b1"
+    },
+    {
+        "editor_id": "DiseaseBrainRot",
+        "type": "SPEL FULL",
+        "original": "Brain Rot",
+        "string": "\u8166\u90e8\u8150\u58de"
+    },
+    {
+        "editor_id": "MGRJzargo1Scroll",
+        "type": "SCRL FULL",
+        "original": "J'zargo's Flame Cloak Scroll",
+        "string": "\u7d2e\u683c\u7684\u70c8\u7130\u6597\u7bf7\u5377\u8ef8"
+    },
+    {
+        "editor_id": "BYOHFoodChickenDumpling01",
+        "type": "ALCH FULL",
+        "original": "Chicken Dumpling",
+        "string": "\u96de\u8089\u9903\u5b50"
+    },
+    {
+        "editor_id": "BYOHFoodLavenderDumpling01",
+        "type": "ALCH FULL",
+        "original": "Lavender Dumpling",
+        "string": "\u85b0\u8863\u8349\u9903\u5b50"
+    },
+    {
+        "editor_id": "DLC2FoodAshYam",
+        "type": "ALCH FULL",
+        "original": "Ash Yam",
+        "string": "\u7070\u71fc\u85af"
+    },
+    {
+        "editor_id": "DLC2Sujamma",
+        "type": "ALCH FULL",
+        "original": "Sujamma",
+        "string": "\u8607\u8cc8\u746a\u9152\u98f2"
+    },
+    {
+        "editor_id": "DLC2Flin",
+        "type": "ALCH FULL",
+        "original": "Flin",
+        "string": "\u98db\u4ee4"
+    },
+    {
+        "editor_id": "DLC2Shein",
+        "type": "ALCH FULL",
+        "original": "Shein",
+        "string": "\u4ed9\u98f2"
+    },
+    {
+        "editor_id": "DLC2Matze",
+        "type": "ALCH FULL",
+        "original": "Matze",
+        "string": "\u9b54\u8cc7"
+    },
+    {
+        "editor_id": "DLC2RRF04Sujamma",
+        "type": "ALCH FULL",
+        "original": "Sadri's Sujamma",
+        "string": "\u85a9\u5fb7\u91cc\u7684\u8607\u8cc8\u746a"
+    },
+    {
+        "editor_id": "FoodCheeseWheel02B",
+        "type": "ALCH FULL",
+        "original": "Sliced Eidar Cheese",
+        "string": "\u7f3a\u584a\u827e\u9054\u4e73\u916a"
+    },
+    {
+        "editor_id": "DLC1BloodPotion",
+        "type": "ALCH FULL",
+        "original": "Potion of Blood",
+        "string": "\u9bae\u8840\u85e5\u6c34"
+    },
+    {
+        "editor_id": "BYOHFoodGarlicBread01",
+        "type": "ALCH FULL",
+        "original": "Garlic Bread",
+        "string": "\u5927\u849c\u9eb5\u5305"
+    },
+    {
+        "editor_id": "BYOHFoodBraidedBread01",
+        "type": "ALCH FULL",
+        "original": "Braided Bread",
+        "string": "\u8fae\u5b50\u9eb5\u5305"
+    },
+    {
+        "editor_id": "flameCloak",
+        "type": "SPEL FULL",
+        "original": "Flame Cloak",
+        "string": "\u70c8\u7130\u6597\u7bf7"
+    },
+    {
+        "editor_id": "00000000|01FDF|0|0",
+        "type": "**** ****",
+        "original": "J'zargo's Flame Cloak",
+        "string": "\u7d2e\u683c\u7684\u70c8\u7130\u6597\u7bf7"
+    },
+    {
+        "editor_id": "FoodBeef",
+        "type": "ALCH FULL",
+        "original": "Raw Beef",
+        "string": "\u751f\u725b\u8089"
+    },
+    {
+        "editor_id": "DLC2RRFavor01EmberbrandWine",
+        "type": "ALCH FULL",
+        "original": "Emberbrand Wine",
+        "string": "\u9918\u706b\u724c\u8461\u8404\u9152"
+    },
+    {
+        "editor_id": "FlameCloakScroll",
+        "type": "SCRL FULL",
+        "original": "Scroll of Flame Cloak",
+        "string": "\u70c8\u7130\u6597\u7bf7\u5377\u8ef8"
+    },
+    {
+        "editor_id": "Ale",
+        "type": "ALCH FULL",
+        "original": "Ale",
+        "string": "\u9ea5\u82bd\u9152"
+    },
+    {
+        "editor_id": "MarriageRested",
+        "type": "SPEL FULL",
+        "original": "Lover's Comfort",
+        "string": "\u611b\u4eba\u7684\u6170\u85c9"
+    },
+    {
+        "editor_id": "DLC2FoodAshfireMead",
+        "type": "ALCH FULL",
+        "original": "Ashfire Mead",
+        "string": "\u9918\u71fc\u8702\u871c\u9152"
+    },
+    {
+        "editor_id": "FoodCarrot",
+        "type": "ALCH FULL",
+        "original": "Carrot",
+        "string": "\u80e1\u863f\u8514"
+    },
+    {
+        "editor_id": "FoodMarriageMeal",
+        "type": "ALCH FULL",
+        "original": "Homecooked Meal",
+        "string": "\u5bb6\u5e38\u83dc"
+    },
+    {
+        "editor_id": "FoodCheeseWheel02A",
+        "type": "ALCH FULL",
+        "original": "Eidar Cheese Wheel",
+        "string": "\u827e\u9054\u4e73\u916a"
+    },
+    {
+        "editor_id": "DLC2FoodBoarMeat",
+        "type": "ALCH FULL",
+        "original": "Boar Meat",
+        "string": "\u91ce\u8c6c\u8089"
+    },
+    {
+        "editor_id": "DLC2FoodAshHopperMeat",
+        "type": "ALCH FULL",
+        "original": "Ash Hopper Meat",
+        "string": "\u7070\u71fc\u8df3\u87f2\u8089"
+    },
+    {
+        "editor_id": "DLC2FoodHorkerAshYamStew",
+        "type": "ALCH FULL",
+        "original": "Horker and Ash Yam Stew",
+        "string": "\u6d77\u8c61\u71c9\u7070\u71fc\u85af\u6e6f"
+    },
+    {
+        "editor_id": "DLC2FoodBoarMeatCooked",
+        "type": "ALCH FULL",
+        "original": "Cooked Boar Meat",
+        "string": "\u719f\u91ce\u8c6c\u8089"
+    },
+    {
+        "editor_id": "DLC2FoodAshHopperLeg",
+        "type": "ALCH FULL",
+        "original": "Ash Hopper Leg",
+        "string": "\u7070\u71fc\u8df3\u87f2\u817f"
+    },
+    {
+        "editor_id": "AleWhiterunQuest",
+        "type": "ALCH FULL",
+        "original": "Argonian Ale",
+        "string": "\u4e9e\u9f8d\u4eba\u9ea5\u82bd\u9152"
+    },
+    {
+        "editor_id": "MQ201Drink",
+        "type": "ALCH FULL",
+        "original": "Colovian Brandy",
+        "string": "\u514b\u7f85\u7dad\u4e9e\u767d\u862d\u5730"
+    },
+    {
+        "editor_id": "FoodBoiledCremeTreat",
+        "type": "ALCH FULL",
+        "original": "Boiled Creme Treat",
+        "string": "\u5976\u6cb9\u7f8e\u5473\u9905"
+    },
+    {
+        "editor_id": "RiftenSpecial02",
+        "type": "ALCH FULL",
+        "original": "White-Gold Tower",
+        "string": "\u767d\u91d1\u5854"
+    },
+    {
+        "editor_id": "RiftenSpecial01",
+        "type": "ALCH FULL",
+        "original": "Velvet LeChance",
+        "string": "\u52d2\u5e38\u65af\u5929\u9d5d\u7d68"
+    },
+    {
+        "editor_id": "FoodSlaughterfishCooked",
+        "type": "ALCH FULL",
+        "original": "Seared Slaughterfish",
+        "string": "\u78b3\u70e4\u98df\u4eba\u9b5a"
+    },
+    {
+        "editor_id": "FreeformDragonBridgeMead",
+        "type": "ALCH FULL",
+        "original": "Dragon's Breath Mead",
+        "string": "\u9f8d\u606f\u9152"
+    },
+    {
+        "editor_id": "DiseaseRattles",
+        "type": "SPEL FULL",
+        "original": "Rattles",
+        "string": "\u97ff\u5c3e\u6bd2"
+    },
+    {
+        "editor_id": "FoodLeeksGrilled",
+        "type": "ALCH FULL",
+        "original": "Grilled Leeks",
+        "string": "\u70e4\u97ed\u83dc"
+    },
+    {
+        "editor_id": "FavorFoodMarkarthSpicedBeef",
+        "type": "ALCH FULL",
+        "original": "Spiced Beef",
+        "string": "\u9999\u6599\u725b\u8089"
+    },
+    {
+        "editor_id": "FoodApple02",
+        "type": "ALCH FULL",
+        "original": "Green Apple",
+        "string": "\u9752\u860b\u679c"
+    },
+    {
+        "editor_id": "FirebrandWine",
+        "type": "ALCH FULL",
+        "original": "Firebrand Wine",
+        "string": "\u706b\u724c\u8461\u8404\u9152"
+    },
+    {
+        "editor_id": "PowerDarkElfFlameCloak",
+        "type": "SPEL FULL",
+        "original": "Ancestor's Wrath",
+        "string": "\u5148\u7956\u4e4b\u6012"
+    },
+    {
+        "editor_id": "FavorSorexRum",
+        "type": "ALCH FULL",
+        "original": "Stros M'Kai Rum",
+        "string": "\u65af\u5716\u723e\u65af\uff0e\u9081\u51f1\u862d\u59c6\u9152"
+    },
+    {
+        "editor_id": "DiseaseWitbane",
+        "type": "SPEL FULL",
+        "original": "Witbane",
+        "string": "\u9b54\u969c\u75c7"
+    },
+    {
+        "editor_id": "FoodTomato",
+        "type": "ALCH FULL",
+        "original": "Tomato",
+        "string": "\u756a\u8304"
+    },
+    {
+        "editor_id": "FoodPotatoesBaked",
+        "type": "ALCH FULL",
+        "original": "Baked Potatoes",
+        "string": "\u70e4\u99ac\u9234\u85af"
+    },
+    {
+        "editor_id": "FoodWineAlto",
+        "type": "ALCH FULL",
+        "original": "Alto Wine",
+        "string": "\u963f\u723e\u6258\u9152"
+    },
+    {
+        "editor_id": "FoodMammothCheeseBowl",
+        "type": "ALCH FULL",
+        "original": "Mammoth Cheese Bowl",
+        "string": "\u9577\u6bdb\u8c61\u4e73\u916a\u7cca"
+    },
+    {
+        "editor_id": "DisDamageStamina",
+        "type": "MGEF FULL",
+        "original": "Reduced Stamina",
+        "string": "\u964d\u4f4e\u7cbe\u529b"
+    },
+    {
+        "editor_id": "FoodSweetroll",
+        "type": "ALCH FULL",
+        "original": "Sweet Roll",
+        "string": "\u751c\u6372"
+    },
+    {
+        "editor_id": "FoodWineAltoA",
+        "type": "ALCH FULL",
+        "original": "Alto Wine",
+        "string": "\u963f\u723e\u6258\u9152"
+    },
+    {
+        "editor_id": "RiftenSpecial03",
+        "type": "ALCH FULL",
+        "original": "Cliff Racer",
+        "string": "\u5ced\u58c1\u9ce5"
+    },
+    {
+        "editor_id": "FoodWineBottle02",
+        "type": "ALCH FULL",
+        "original": "Wine",
+        "string": "\u8461\u8404\u9152"
+    },
+    {
+        "editor_id": "DisDamageStaminaRegen",
+        "type": "MGEF FULL",
+        "original": "Reduced Stamina Regen",
+        "string": "\u964d\u4f4e\u7cbe\u529b"
+    },
+    {
+        "editor_id": "FoodBlackBriarMead",
+        "type": "ALCH FULL",
+        "original": "Black-Briar Mead",
+        "string": "\u9ed1\u68d8\u871c\u9152"
+    },
+    {
+        "editor_id": "WEDL03CyrodilicBrandy",
+        "type": "ALCH FULL",
+        "original": "Cyrodilic Brandy",
+        "string": "\u8cfd\u745e\u8fea\u723e\u767d\u862d\u5730"
+    },
+    {
+        "editor_id": "FoodCharredSkeeverMeat",
+        "type": "ALCH FULL",
+        "original": "Charred Skeever Meat",
+        "string": "\u78b3\u70e4\u60e1\u9f20\u8089"
+    },
+    {
+        "editor_id": "FoodHonningbrewMead",
+        "type": "ALCH FULL",
+        "original": "Honningbrew Mead",
+        "string": "\u8702\u871c\u9152"
+    },
+    {
+        "editor_id": "FoodCheeseWedge02",
+        "type": "ALCH FULL",
+        "original": "Eidar Cheese Wedge",
+        "string": "\u827e\u9054\u4e73\u916a\u5207\u584a"
+    },
+    {
+        "editor_id": "FoodBread01A",
+        "type": "ALCH FULL",
+        "original": "Bread",
+        "string": "\u9eb5\u5305"
+    },
+    {
+        "editor_id": "FoodCheeseWedge01",
+        "type": "ALCH FULL",
+        "original": "Goat Cheese Wedge",
+        "string": "\u5c71\u7f8a\u4e73\u916a\u5207\u584a"
+    },
+    {
+        "editor_id": "FoodWineBottle02A",
+        "type": "ALCH FULL",
+        "original": "Wine",
+        "string": "\u8461\u8404\u9152"
+    },
+    {
+        "editor_id": "FoodCheeseWheel01A",
+        "type": "ALCH FULL",
+        "original": "Goat Cheese Wheel",
+        "string": "\u5c71\u7f8a\u4e73\u916a"
+    },
+    {
+        "editor_id": "FoodPie",
+        "type": "ALCH FULL",
+        "original": "Apple Pie",
+        "string": "\u860b\u679c\u6d3e"
+    },
+    {
+        "editor_id": "FoodLeek",
+        "type": "ALCH FULL",
+        "original": "Leek",
+        "string": "\u97ed\u83dc"
+    },
+    {
+        "editor_id": "FoodBeefCooked",
+        "type": "ALCH FULL",
+        "original": "Cooked Beef",
+        "string": "\u716e\u725b\u8089"
+    },
+    {
+        "editor_id": "FoodHoneyNutTreat",
+        "type": "ALCH FULL",
+        "original": "Honey Nut Treat",
+        "string": "\u8702\u871c\u5805\u679c\u4e32"
+    },
+    {
+        "editor_id": "FoodApple",
+        "type": "ALCH FULL",
+        "original": "Red Apple",
+        "string": "\u7d05\u860b\u679c"
+    },
+    {
+        "editor_id": "FoodSolitudeSpicedWine",
+        "type": "ALCH FULL",
+        "original": "Spiced Wine",
+        "string": "\u9999\u6599\u9152"
+    },
+    {
+        "editor_id": "FoodMead",
+        "type": "ALCH FULL",
+        "original": "Nord Mead",
+        "string": "\u8afe\u5fb7\u871c\u9152"
+    },
+    {
+        "editor_id": "FoodCheeseWheel01B",
+        "type": "ALCH FULL",
+        "original": "Sliced Goat Cheese",
+        "string": "\u7f3a\u584a\u5c71\u7f8a\u4e73\u916a"
+    },
+    {
+        "editor_id": "PowerArgonianHistskin",
+        "type": "SPEL FULL",
+        "original": "Histskin",
+        "string": "\u5e0c\u6a39\u4e4b\u819a"
+    },
+    {
+        "editor_id": "FoodCabbage",
+        "type": "ALCH FULL",
+        "original": "Cabbage",
+        "string": "\u6372\u5fc3\u83dc"
+    },
+    {
+        "editor_id": "FoodLongTaffyTreat",
+        "type": "ALCH FULL",
+        "original": "Long Taffy Treat",
+        "string": "\u592a\u5983\u7cd6\u689d"
+    },
+    {
+        "editor_id": "FoodPotato",
+        "type": "ALCH FULL",
+        "original": "Potato",
+        "string": "\u99ac\u9234\u85af"
+    },
+    {
+        "editor_id": "DisDamageMagickaRegen",
+        "type": "MGEF FULL",
+        "original": "Reduced Magicka Regen",
+        "string": "\u964d\u4f4e\u6cd5\u529b\u6062\u5fa9"
+    },
+    {
+        "editor_id": "DisDamageMagicka",
+        "type": "MGEF FULL",
+        "original": "Damage Magicka",
+        "string": "\u964d\u4f4e\u6cd5\u529b"
+    },
+    {
+        "editor_id": "FoodBread01B",
+        "type": "ALCH FULL",
+        "original": "Bread",
+        "string": "\u9eb5\u5305"
+    },
+    {
+        "editor_id": "FoodHorkerMeat",
+        "type": "ALCH FULL",
+        "original": "Horker Meat",
+        "string": "\u6d77\u8c61\u8089"
+    },
+    {
+        "editor_id": "FoodRabbit",
+        "type": "ALCH FULL",
+        "original": "Raw Rabbit Leg",
+        "string": "\u91ce\u5154\u817f"
+    },
+    {
+        "editor_id": "FoodSalmon",
+        "type": "ALCH FULL",
+        "original": "Salmon Meat",
+        "string": "\u9bad\u9b5a\u8089"
+    },
+    {
+        "editor_id": "FoodHorkerMeatCooked",
+        "type": "ALCH FULL",
+        "original": "Horker Loaf",
+        "string": "\u6d77\u8c61\u8089\u6392"
+    },
+    {
+        "editor_id": "FoodPheasant",
+        "type": "ALCH FULL",
+        "original": "Pheasant Breast",
+        "string": "\u96de\u80f8\u8089"
+    },
+    {
+        "editor_id": "FoodSalmonCooked01",
+        "type": "ALCH FULL",
+        "original": "Salmon Steak",
+        "string": "\u9bad\u9b5a\u6392"
+    },
+    {
+        "editor_id": "FoodMammothMeatCooked",
+        "type": "ALCH FULL",
+        "original": "Mammoth Steak",
+        "string": "\u9577\u6bdb\u8c61\u8089\u6392"
+    },
+    {
+        "editor_id": "FoodVenisonCooked",
+        "type": "ALCH FULL",
+        "original": "Venison Chop",
+        "string": "\u9e7f\u6392"
+    },
+    {
+        "editor_id": "FoodHorseMeat",
+        "type": "ALCH FULL",
+        "original": "Horse Meat",
+        "string": "\u99ac\u8089"
+    },
+    {
+        "editor_id": "FoodHorseMeatCooked",
+        "type": "ALCH FULL",
+        "original": "Horse Haunch",
+        "string": "\u99ac\u817f\u8089"
+    },
+    {
+        "editor_id": "FoodMammothMeat",
+        "type": "ALCH FULL",
+        "original": "Mammoth Snout",
+        "string": "\u9577\u6bdb\u8c61\u7684\u9577\u9f3b"
+    },
+    {
+        "editor_id": "FoodPheasantCooked",
+        "type": "ALCH FULL",
+        "original": "Pheasant Roast",
+        "string": "\u70e4\u91ce\u96de"
+    },
+    {
+        "editor_id": "FoodVenison",
+        "type": "ALCH FULL",
+        "original": "Venison",
+        "string": "\u9e7f\u8089"
+    },
+    {
+        "editor_id": "FoodGoatMeatCooked",
+        "type": "ALCH FULL",
+        "original": "Leg of Goat Roast",
+        "string": "\u78b3\u70e4\u7f8a\u817f"
+    },
+    {
+        "editor_id": "FoodRabbitCooked",
+        "type": "ALCH FULL",
+        "original": "Rabbit Haunch",
+        "string": "\u5154\u817f\u8089"
+    },
+    {
+        "editor_id": "FoodGoatMeat",
+        "type": "ALCH FULL",
+        "original": "Leg of Goat",
+        "string": "\u5c71\u7f8a\u817f"
+    },
+    {
+        "editor_id": "FoodCabbageSoup",
+        "type": "ALCH FULL",
+        "original": "Cabbage Soup",
+        "string": "\u6372\u5fc3\u83dc\u6e6f"
+    },
+    {
+        "editor_id": "FoodClamMeat",
+        "type": "ALCH FULL",
+        "original": "Clam Meat",
+        "string": "\u86e4\u8089"
+    },
+    {
+        "editor_id": "FoodDogMeat",
+        "type": "ALCH FULL",
+        "original": "Dog Meat",
+        "string": "\u72d7\u8089"
+    },
+    {
+        "editor_id": "FoodBlackBriarMeadPrivateReserve",
+        "type": "ALCH FULL",
+        "original": "Black-Briar Reserve",
+        "string": "\u9ed1\u68d8\u9673\u9152"
+    },
+    {
+        "editor_id": "FoodElsweyrFondue",
+        "type": "ALCH FULL",
+        "original": "Elsweyr Fondue",
+        "string": "\u827e\u65af\u7dad\u723e\u8d77\u53f8\u934b"
+    },
+    {
+        "editor_id": "FoodChickenCooked",
+        "type": "ALCH FULL",
+        "original": "Grilled Chicken Breast",
+        "string": "\u78b3\u70e4\u96de\u80f8"
+    },
+    {
+        "editor_id": "MS14WineAltoA",
+        "type": "ALCH FULL",
+        "original": "Jessica's Wine",
+        "string": "\u5091\u897f\u5361\u7684\u8461\u8404\u9152"
+    },
+    {
+        "editor_id": "FoodChicken",
+        "type": "ALCH FULL",
+        "original": "Chicken Breast",
+        "string": "\u96de\u80f8\u8089"
+    },
+    {
+        "editor_id": "WellRested",
+        "type": "SPEL FULL",
+        "original": "Well Rested",
+        "string": "\u5145\u5206\u4f11\u606f"
+    },
+    {
+        "editor_id": "Rested",
+        "type": "SPEL FULL",
+        "original": "Rested",
+        "string": "\u5df2\u4f11\u606f"
+    },
+    {
+        "editor_id": "DA03FoodMammothMeat",
+        "type": "ALCH FULL",
+        "original": "Mammoth Snout",
+        "string": "\u9577\u6bdb\u8c61\u9577\u9f3b"
+    },
+    {
+        "editor_id": "FoodHoney",
+        "type": "ALCH FULL",
+        "original": "Honey",
+        "string": "\u8702\u871c"
+    },
+    {
+        "editor_id": "MQ101JuniperMead",
+        "type": "ALCH FULL",
+        "original": "Mead with Juniper Berry",
+        "string": "\u675c\u677e\u5b50\u871c\u9152"
+    },
+    {
+        "editor_id": "PerkDualFlurry30",
+        "type": "SPEL FULL",
+        "original": "Dual Flurry 30",
+        "string": "\u65cb\u98a8\u96d9\u6b66\u5668 30"
+    },
+    {
+        "editor_id": "PerkDualFlurry50",
+        "type": "SPEL FULL",
+        "original": "Dual Flurry 50",
+        "string": "\u65cb\u98a8\u96d9\u6b66\u5668 50"
+    },
+    {
+        "editor_id": "TrapDisDamageMagickaRegen",
+        "type": "MGEF FULL",
+        "original": "Reduced Magicka Regen",
+        "string": "\u964d\u4f4e\u6cd5\u529b\u6062\u5fa9"
+    },
+    {
+        "editor_id": "TrapDisDamagePickpocketLockpick",
+        "type": "MGEF FULL",
+        "original": "Reduced Lockpick & Pickpocket",
+        "string": "\u964d\u4f4e\u958b\u9396\u8207\u6252\u7aca"
+    },
+    {
+        "editor_id": "TrapDiseaseBoneBreakFever",
+        "type": "SPEL FULL",
+        "original": "Bone Break Fever",
+        "string": "\u9aa8\u75db\u71b1"
+    },
+    {
+        "editor_id": "TrapDiseaseRattles",
+        "type": "SPEL FULL",
+        "original": "Rattles",
+        "string": "\u97ff\u5c3e\u6bd2"
+    },
+    {
+        "editor_id": "TrapDisDamageMagicka",
+        "type": "MGEF FULL",
+        "original": "Reduced Magicka",
+        "string": "\u6e1b\u5c11\u6cd5\u529b"
+    },
+    {
+        "editor_id": "TrapDiseaseWitbane",
+        "type": "SPEL FULL",
+        "original": "Witbane",
+        "string": "\u9b54\u969c\u75c7"
+    },
+    {
+        "editor_id": "TrapDisDamageOnehandedTwohanded",
+        "type": "MGEF FULL",
+        "original": "Reduced Weapon skills",
+        "string": "\u964d\u4f4e\u6b66\u5668\u6280\u80fd"
+    },
+    {
+        "editor_id": "TrapDisDamageStamina",
+        "type": "MGEF FULL",
+        "original": "Reduced Stamina",
+        "string": "\u6e1b\u5c11\u7cbe\u529b"
+    },
+    {
+        "editor_id": "TrapDisDamageStaminaRegen",
+        "type": "MGEF FULL",
+        "original": "Reduced Stamina Regen",
+        "string": "\u964d\u4f4e\u7cbe\u529b\u6062\u5fa9"
+    },
+    {
+        "editor_id": "TrapDiseaseBrainRot",
+        "type": "SPEL FULL",
+        "original": "Brain Rot",
+        "string": "\u8166\u90e8\u8150\u58de"
+    },
+    {
+        "editor_id": "FoodGourd",
+        "type": "ALCH FULL",
+        "original": "Gourd",
+        "string": "\u846b\u8606"
+    },
+    {
+        "editor_id": "TrapDisDamageStaminaRegen",
+        "type": "MGEF DNAM",
+        "original": "Stamina recovers half as fast.",
+        "string": "\u7cbe\u529b\u6062\u5fa9\u901f\u5ea6\u6e1b\u534a\u3002"
+    },
+    {
+        "editor_id": "TrapDisDamageMagickaRegen",
+        "type": "MGEF DNAM",
+        "original": "Magicka recovers half as fast.",
+        "string": "\u6cd5\u529b\u6062\u5fa9\u901f\u5ea6\u6e1b\u534a\u3002"
+    },
+    {
+        "editor_id": "TrapDisDamageOnehandedTwohanded",
+        "type": "MGEF DNAM",
+        "original": "You are <mag>% less effective with melee weapons.",
+        "string": "\u8fd1\u6230\u6b66\u5668\u4f7f\u7528\u6548\u679c\u6e1b\u5f31<mag>%\u3002"
+    },
+    {
+        "editor_id": "DisDamageMagickaRegen",
+        "type": "MGEF DNAM",
+        "original": "Magicka recovers half as fast.",
+        "string": "\u6cd5\u529b\u6062\u5fa9\u901f\u5ea6\u6e1b\u534a\u3002"
+    },
+    {
+        "editor_id": "DisDamageStamina",
+        "type": "MGEF DNAM",
+        "original": "Drains <mag> points from stamina.",
+        "string": "\u964d\u4f4e<mag>\u9ede\u7cbe\u529b\u3002"
+    },
+    {
+        "editor_id": "DisDamageMagicka",
+        "type": "MGEF DNAM",
+        "original": "Drains <mag> points from magicka.",
+        "string": "\u964d\u4f4e<mag>\u9ede\u6cd5\u529b\u3002"
+    },
+    {
+        "editor_id": "TrapDisDamageStamina",
+        "type": "MGEF DNAM",
+        "original": "Drains <mag> points of Stamina.",
+        "string": "\u6d88\u8017<mag>\u9ede\u7cbe\u529b\u3002"
+    },
+    {
+        "editor_id": "TrapDisDamagePickpocketLockpick",
+        "type": "MGEF DNAM",
+        "original": "Picking locks and picking pockets is <mag>% harder.",
+        "string": "\u958b\u9396\u548c\u6252\u7aca\u7684\u96e3\u5ea6\u63d0\u9ad8<mag>%\u3002"
+    },
+    {
+        "editor_id": "TrapDisDamageMagicka",
+        "type": "MGEF DNAM",
+        "original": "Drains <mag> points of Magicka.",
+        "string": "\u6d88\u8017<mag>\u9ede\u6cd5\u529b\u3002"
+    },
+    {
+        "editor_id": "DisDamageStaminaRegen",
+        "type": "MGEF DNAM",
+        "original": "Stamina recovers half as fast.",
+        "string": "\u7cbe\u529b\u6062\u5fa9\u901f\u5ea6\u6e1b\u534a\u3002"
+    },
+    {
+        "editor_id": "PowerArgonianHistskin",
+        "type": "SPEL DESC",
+        "original": "Invoke the power of the Hist to recover health ten times faster for <60> seconds.",
+        "string": "\u7948\u6c42\u5e0c\u601d\u7279\u795e\u6a39\u7684\u529b\u91cf\u4f86\u63d0\u9ad8\u5341\u500d\u751f\u547d\u6062\u5fa9\u901f\u5ea6\uff0c\u6301\u7e8c<60>\u79d2\u3002"
+    }
+]

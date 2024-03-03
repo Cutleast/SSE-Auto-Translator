@@ -1,0 +1,236 @@
+[
+    {
+        "editor_id": "ccCBHSSE001_QAChest",
+        "type": "CONT FULL",
+        "original": "All Unarmed Weapons",
+        "string": "Alle unbewaffneten Angriffe"
+    },
+    {
+        "editor_id": "ccCBHSSE001_DwarvenGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Dwarven Gauntlets",
+        "string": "Dwemerpanzerhandschuhe des Schl\u00e4gers"
+    },
+    {
+        "editor_id": "ccCBHSSE001_StuddedGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Leather Bracers",
+        "string": "Lederarmschienen des Schl\u00e4gers"
+    },
+    {
+        "editor_id": "ccCBHSSE001_ElvenGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Elven Gauntlets",
+        "string": "Elfenpanzerhandschuhe des Schl\u00e4gers"
+    },
+    {
+        "editor_id": "ccCBHSSE001_GlassGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Glass Gauntlets",
+        "string": "Vulkanglaspanzerhandschuhe des Schl\u00e4gers"
+    },
+    {
+        "editor_id": "ccCBHSSE001_EbonyGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Ebony Gauntlets",
+        "string": "Ebenerzpanzerhandschuhe des Schl\u00e4gers"
+    },
+    {
+        "editor_id": "ccCBHSSE001_NordPlateGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Steel Plate Gauntlets",
+        "string": "Stahlplattenpanzerhandschuhe des Schl\u00e4gers"
+    },
+    {
+        "editor_id": "ccCBHSSE001_SteelGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Steel Gauntlets",
+        "string": "Stahlpanzerhandschuhe des Schl\u00e4gers"
+    },
+    {
+        "editor_id": "ccCBHSSE001_HideGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Hide Bracers",
+        "string": "Pelzarmschienen des Schl\u00e4gers"
+    },
+    {
+        "editor_id": "ccCBHSSE001_DragonscaleGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Dragonscale Gauntlets",
+        "string": "Drachenschuppenpanzerhandschuhe des Schl\u00e4gers"
+    },
+    {
+        "editor_id": "ccCBHSSE001_BanditGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Fur Bracers",
+        "string": "Fellarmschienen des Schl\u00e4gers"
+    },
+    {
+        "editor_id": "ccCBHSSE001_OrcishGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Orcish Gauntlets",
+        "string": "Orkische Panzerhandschuhe des Schl\u00e4gers"
+    },
+    {
+        "editor_id": "ccCBHSSE001_ScaledGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Scaled Bracers",
+        "string": "Schuppenarmschienen des Schl\u00e4gers"
+    },
+    {
+        "editor_id": "ccCBHSSE001_DaedricGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Daedric Gauntlets",
+        "string": "Daedrische Panzerhandschuhe des Schl\u00e4gers"
+    },
+    {
+        "editor_id": "ccCBHSSE001_DragonplateGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Dragonplate Gauntlets",
+        "string": "Drachenplattenpanzerhandschuhe des Schl\u00e4gers"
+    },
+    {
+        "editor_id": "ccCBHSSE001_IronGlovesArmor",
+        "type": "ARMO FULL",
+        "original": "Brawler's Iron Gauntlets",
+        "string": "Eisenpanzerhandschuhe des Schl\u00e4gers"
+    },
+    {
+        "editor_id": "ccCBHSSE001_EnchArmorFortifyUnarmed03",
+        "type": "ENCH FULL",
+        "original": "Fortify Unarmed",
+        "string": "Waffenlos verst\u00e4rken"
+    },
+    {
+        "editor_id": "ccCBHSSE001_EnchArmorFortifyUnarmed07",
+        "type": "ENCH FULL",
+        "original": "Fortify Unarmed",
+        "string": "Waffenlos verst\u00e4rken"
+    },
+    {
+        "editor_id": "ccCBHSSE001_EnchArmorFortifyUnarmed05",
+        "type": "ENCH FULL",
+        "original": "Fortify Unarmed",
+        "string": "Waffenlos verst\u00e4rken"
+    },
+    {
+        "editor_id": "ccCBHSSE001_EnchArmorFortifyUnarmed08",
+        "type": "ENCH FULL",
+        "original": "Fortify Unarmed",
+        "string": "Waffenlos verst\u00e4rken"
+    },
+    {
+        "editor_id": "ccCBHSSE001_EnchArmorFortifyUnarmed04",
+        "type": "ENCH FULL",
+        "original": "Fortify Unarmed",
+        "string": "Waffenlos verst\u00e4rken"
+    },
+    {
+        "editor_id": "ccCBHSSE001_EnchArmorFortifyUnarmed06",
+        "type": "ENCH FULL",
+        "original": "Fortify Unarmed",
+        "string": "Waffenlos verst\u00e4rken"
+    },
+    {
+        "editor_id": "ccCBHSSE001_EnchArmorFortifyUnarmed02",
+        "type": "ENCH FULL",
+        "original": "Fortify Unarmed",
+        "string": "Waffenlos verst\u00e4rken"
+    },
+    {
+        "editor_id": "ccCBHSSE001_StuddedGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Leather Bracers",
+        "string": "Lederarmschienen des Schl\u00e4gers"
+    },
+    {
+        "editor_id": "ccCBHSSE001_BanditGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Fur Bracers",
+        "string": "Fellarmschienen des Schl\u00e4gers"
+    },
+    {
+        "editor_id": "ccCBHSSE001_NordPlateGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Steel Plate Gauntlets",
+        "string": "Stahlplattenpanzerhandschuhe des Schl\u00e4gers"
+    },
+    {
+        "editor_id": "ccCBHSSE001_ElvenGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Elven Gauntlets",
+        "string": "Elfenpanzerhandschuhe des Schl\u00e4gers"
+    },
+    {
+        "editor_id": "ccCBHSSE001_IronGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Iron Gauntlets",
+        "string": "Eisenpanzerhandschuhe des Schl\u00e4gers"
+    },
+    {
+        "editor_id": "ccCBHSSE001_ScaledGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Scaled Bracers",
+        "string": "Schuppenarmschienen des Schl\u00e4gers"
+    },
+    {
+        "editor_id": "ccCBHSSE001_EbonyGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Ebony Gauntlets",
+        "string": "Ebenerzpanzerhandschuhe des Schl\u00e4gers"
+    },
+    {
+        "editor_id": "ccCBHSSE001_HideGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Hide Bracers",
+        "string": "Pelzarmschienen des Schl\u00e4gers"
+    },
+    {
+        "editor_id": "ccCBHSSE001_DwarvenGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Dwarven Gauntlets",
+        "string": "Dwemerpanzerhandschuhe des Schl\u00e4gers"
+    },
+    {
+        "editor_id": "ccCBHSSE001_OrcishGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Orcish Gauntlets",
+        "string": "Orkische Panzerhandschuhe des Schl\u00e4gers"
+    },
+    {
+        "editor_id": "ccCBHSSE001_DaedricGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Daedric Gauntlets",
+        "string": "Daedrische Panzerhandschuhe des Schl\u00e4gers"
+    },
+    {
+        "editor_id": "ccCBHSSE001_DragonscaleGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Dragonscale Gauntlets",
+        "string": "Drachenschuppenpanzerhandschuhe des Schl\u00e4gers"
+    },
+    {
+        "editor_id": "ccCBHSSE001_DragonplateGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Dragonplate Gauntlets",
+        "string": "Drachenplattenpanzerhandschuhe des Schl\u00e4gers"
+    },
+    {
+        "editor_id": "ccCBHSSE001_GlassGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Glass Gauntlets",
+        "string": "Vulkanglaspanzerhandschuhe des Schl\u00e4gers"
+    },
+    {
+        "editor_id": "ccCBHSSE001_SteelGlovesArmorUNENCHANTED",
+        "type": "ARMO FULL",
+        "original": "Brawler's Steel Gauntlets",
+        "string": "Stahlpanzerhandschuhe des Schl\u00e4gers"
+    },
+    {
+        "editor_id": "QASmoke",
+        "type": "CELL FULL",
+        "original": "Editor Smoke Test Cell",
+        "string": "Editor Smoke Test Cell"
+    }
+]

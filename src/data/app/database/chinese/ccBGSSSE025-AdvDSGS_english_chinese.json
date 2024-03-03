@@ -1,0 +1,218 @@
+[
+    {
+        "editor_id": "ccBGSSSE025_QAChest",
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "\u7bb1\u5b50"
+    },
+    {
+        "editor_id": "CrystaldriftCave01",
+        "type": "CELL FULL",
+        "original": "Crystaldrift Cave",
+        "string": "\u6c34\u6676\u98c4\u79fb\u6d1e\u7a74"
+    },
+    {
+        "editor_id": "ccBGSSSE025NerveshatterOfferActivatorRef",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u653e\u7f6e"
+    },
+    {
+        "editor_id": "ccBGSSSE025_MetalCageLongGate01Snow",
+        "type": "DOOR FULL",
+        "original": "Cage Gate",
+        "string": "\u7c60\u9580"
+    },
+    {
+        "editor_id": "ccBGSSSE025_MetalCageLongGate01",
+        "type": "DOOR FULL",
+        "original": "Cage Gate",
+        "string": "\u7c60\u9580"
+    },
+    {
+        "editor_id": "ccBGS_RootHollowedStump",
+        "type": "CONT FULL",
+        "original": "Hollowed Stump",
+        "string": "\u7a7a\u5fc3\u6a39\u6a01"
+    },
+    {
+        "editor_id": "ccBGSSSE025_CritterMothGreen",
+        "type": "ACTI RNAM",
+        "original": "Catch",
+        "string": "\u6355\u6349"
+    },
+    {
+        "editor_id": "ccBGSSSE025_CritterMothPurple",
+        "type": "ACTI RNAM",
+        "original": "Catch",
+        "string": "\u6355\u6349"
+    },
+    {
+        "editor_id": "ccBGSSSE025_CritterBlissBug",
+        "type": "ACTI RNAM",
+        "original": "Catch",
+        "string": "\u6355\u6349"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SwordOfJyggalagAct",
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "\u62ff\u53d6"
+    },
+    {
+        "editor_id": "ccBGS_RootThornHookActivator",
+        "type": "ACTI RNAM",
+        "original": "Harvest",
+        "string": "\u63a1\u96c6"
+    },
+    {
+        "editor_id": "ccBGS_RootScreamingMawActivator",
+        "type": "ACTI FULL",
+        "original": "Screaming Maw",
+        "string": "\u5c16\u53eb\u5634"
+    },
+    {
+        "editor_id": "ccBGS_FlameStalkActivator02",
+        "type": "ACTI FULL",
+        "original": "Flame Stalk",
+        "string": "\u706b\u7130\u8396"
+    },
+    {
+        "editor_id": "ccBGS_FlameStalkActivator01",
+        "type": "ACTI RNAM",
+        "original": "Harvest",
+        "string": "\u63a1\u96c6"
+    },
+    {
+        "editor_id": "ccBGS_RootRotScaleActivator",
+        "type": "ACTI RNAM",
+        "original": "Harvest",
+        "string": "\u63a1\u96c6"
+    },
+    {
+        "editor_id": "ccBGS_FlameStalkActivator01",
+        "type": "ACTI FULL",
+        "original": "Flame Stalk",
+        "string": "\u706b\u7130\u8396"
+    },
+    {
+        "editor_id": "ccBGS_FlameStalkActivator02",
+        "type": "ACTI RNAM",
+        "original": "Harvest",
+        "string": "\u63a1\u96c6"
+    },
+    {
+        "editor_id": "ccBGSSSE025_FlameStalk",
+        "type": "INGR FULL",
+        "original": "Flame Stalk",
+        "string": "\u706b\u7130\u8396"
+    },
+    {
+        "editor_id": "ccBGS_RootThornHookActivator",
+        "type": "ACTI FULL",
+        "original": "Thorn Hook",
+        "string": "\u523a\u9264"
+    },
+    {
+        "editor_id": "ccBGS_RootScreamingMawActivator",
+        "type": "ACTI RNAM",
+        "original": "Harvest",
+        "string": "\u63a1\u96c6"
+    },
+    {
+        "editor_id": "ccBGS_RootRotScaleActivator",
+        "type": "ACTI FULL",
+        "original": "Rot Scale",
+        "string": "\u8150\u721b\u7684\u9c57\u7247"
+    },
+    {
+        "editor_id": "SDoorManholeCoverInvisible",
+        "type": "DOOR FULL",
+        "original": "Entrance",
+        "string": "\u5165\u53e3"
+    },
+    {
+        "editor_id": "BluePalaceWing01",
+        "type": "CELL FULL",
+        "original": "Pelagius Wing",
+        "string": "\u4f69\u62c9\u5409\u5967\u65af\u5074\u5ef3"
+    },
+    {
+        "editor_id": "StonyCreekCave01",
+        "type": "CELL FULL",
+        "original": "Stony Creek Cave",
+        "string": "\u77f3\u982d\u6eaa\u8c37\u6d1e\u7a74"
+    },
+    {
+        "editor_id": "ccBGSSSE025ManholeTrigger",
+        "type": "ACTI RNAM",
+        "original": "Open",
+        "string": "\u958b\u555f"
+    },
+    {
+        "editor_id": "ccBGSSSE025_AbSprigganManiaSpell",
+        "type": "SPEL FULL",
+        "original": "Spriggan abilities",
+        "string": "\u6a39\u7cbe\u80fd\u529b"
+    },
+    {
+        "editor_id": "ccBGSSSE025_AbSprigganDementiaSpell",
+        "type": "SPEL FULL",
+        "original": "Spriggan abilities",
+        "string": "\u6a39\u7cbe\u80fd\u529b"
+    },
+    {
+        "editor_id": "ccBGSSSE025_BarrelTongs",
+        "type": "CONT FULL",
+        "original": "Barrel",
+        "string": "\u6728\u6876"
+    },
+    {
+        "editor_id": "ccBGSSSE025_Smithing",
+        "type": "PERK FULL",
+        "original": "Smithing",
+        "string": "\u9435\u5320"
+    },
+    {
+        "editor_id": "ccBGSSSE025_WIKillSaintLeader",
+        "type": "QUST FULL",
+        "original": "Revenge, Hired Thugs",
+        "string": "\u5fa9\u4ec7\uff0c\u96c7\u50ad\u6253\u624b"
+    },
+    {
+        "editor_id": "ccBGSSSE025_WIKillSeducerLeader",
+        "type": "QUST FULL",
+        "original": "Revenge, Hired Thugs",
+        "string": "\u5fa9\u4ec7\uff0c\u96c7\u50ad\u6253\u624b"
+    },
+    {
+        "editor_id": "DLC2SolstheimWorld",
+        "type": "WRLD FULL",
+        "original": "Solstheim",
+        "string": "\u7d22\u745f\u6d77\u59c6"
+    },
+    {
+        "editor_id": "Tamriel",
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "\u5929\u969b\u7701"
+    },
+    {
+        "editor_id": "SolitudeWorld",
+        "type": "WRLD FULL",
+        "original": "Solitude",
+        "string": "\u7368\u5b64\u57ce"
+    },
+    {
+        "editor_id": "ccBGSSSE025_MatchingSet",
+        "type": "PERK DESC",
+        "original": "Additional 25% Armor bonus if wearing a matched set of Light Armor.",
+        "string": "\u88dd\u5099\u6574\u5957\u76f8\u540c\u7684\u8f15\u7532\u5c07\u7372\u5f97\u984d\u591625%\u8b77\u7532\u503c\u3002"
+    },
+    {
+        "editor_id": "ccBGSSSE025_MatchingSetHeavy",
+        "type": "PERK DESC",
+        "original": "Additional 25% Armor bonus if wearing a matched set of Heavy Armor.",
+        "string": "\u88dd\u5099\u6574\u5957\u76f8\u540c\u7684\u91cd\u7532\u5c07\u7372\u5f97\u984d\u591625%\u8b77\u7532\u503c\u3002"
+    }
+]

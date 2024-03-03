@@ -1,0 +1,806 @@
+[
+    {
+        "editor_id": "ccBGSSSE014_FireSpellEffect",
+        "type": "MGEF DNAM",
+        "original": "Casts a stream of long-distance fireballs in an arc. Impact creates a wall of fire that does <50> points of fire damage per second.",
+        "string": "\u0421\u043e\u0437\u0434\u0430\u0435\u0442 \u043f\u043e\u0442\u043e\u043a \u0434\u0430\u043b\u044c\u043d\u043e\u0431\u043e\u0439\u043d\u044b\u0445 \u043e\u0433\u043d\u0435\u043d\u043d\u044b\u0445 \u0448\u0430\u0440\u043e\u0432, \u043b\u0435\u0442\u044f\u0449\u0438\u0445 \u043f\u043e \u0434\u0443\u0433\u0435. \u041f\u0440\u0438 \u043a\u043e\u043d\u0442\u0430\u043a\u0442\u0435 \u043f\u043e\u044f\u0432\u043b\u044f\u0435\u0442\u0441\u044f \u0441\u0442\u0435\u043d\u0430 \u043e\u0433\u043d\u044f, \u043a\u043e\u0442\u043e\u0440\u0430\u044f \u043d\u0430\u043d\u043e\u0441\u0438\u0442 <50> \u0435\u0434. \u0443\u0440\u043e\u043d\u0430 \u043e\u0433\u043d\u0435\u043c \u0432 \u0441\u0435\u043a\u0443\u043d\u0434\u0443."
+    },
+    {
+        "editor_id": "ccBGSSSE014_ShockEffectCloak",
+        "type": "MGEF FULL",
+        "original": "Unbounded Storms",
+        "string": "\u0411\u0435\u0437\u0443\u0434\u0435\u0440\u0436\u043d\u044b\u0439 \u0448\u0442\u043e\u0440\u043c"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ParalysisRune",
+        "type": "SPEL FULL",
+        "original": "Paralysis Rune",
+        "string": "\u0420\u0443\u043d\u0430 \u043f\u0430\u0440\u0430\u043b\u0438\u0447\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_UnboundedIce",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Unbounded Freezing",
+        "string": "\u041a\u043d\u0438\u0433\u0430 \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0439: \u0411\u0435\u0437\u0443\u0434\u0435\u0440\u0436\u043d\u044b\u0439 \u043c\u043e\u0440\u043e\u0437"
+    },
+    {
+        "editor_id": "ccBGSSSE014_UnboundedFlames",
+        "type": "SPEL FULL",
+        "original": "Unbounded Flames",
+        "string": "\u0411\u0435\u0437\u0443\u0434\u0435\u0440\u0436\u043d\u044b\u0439 \u043e\u0433\u043e\u043d\u044c"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ShockBoltStorm",
+        "type": "MGEF FULL",
+        "original": "Storm Lightning",
+        "string": "\u0413\u0440\u043e\u043c \u0438 \u043c\u043e\u043b\u043d\u0438\u0438"
+    },
+    {
+        "editor_id": "ccBGSSSE014SkyShockHazard",
+        "type": "HAZD FULL",
+        "original": "Shock",
+        "string": "\u0428\u043e\u043a"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ShockBoltSpell",
+        "type": "SPEL FULL",
+        "original": "Storm Call Lightning Bolt",
+        "string": "\u0413\u0440\u043e\u0437\u043e\u0432\u043e\u0439 \u0437\u043e\u0432: \u041c\u043e\u043b\u043d\u0438\u044f"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ShockBoltStormFX",
+        "type": "MGEF FULL",
+        "original": "Shock Bolt Storm",
+        "string": "\u0411\u0443\u0440\u044f \u0441 \u0433\u0440\u043e\u0437\u043e\u0439"
+    },
+    {
+        "editor_id": "ccBGSSSE014_IceSpellParalyzeEffect",
+        "type": "MGEF FULL",
+        "original": "Unbounded Freeze",
+        "string": "\u0411\u0435\u0437\u0443\u0434\u0435\u0440\u0436\u043d\u0430\u044f \u0437\u0430\u043c\u043e\u0440\u043e\u0437\u043a\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE014_RuneParalysisFFLocation",
+        "type": "MGEF FULL",
+        "original": "Paralysis Rune",
+        "string": "\u0420\u0443\u043d\u0430 \u043f\u0430\u0440\u0430\u043b\u0438\u0447\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_UnboundedLightning",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Unbounded Storms",
+        "string": "\u041a\u043d\u0438\u0433\u0430 \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0439: \u0411\u0435\u0437\u0443\u0434\u0435\u0440\u0436\u043d\u044b\u0439 \u0448\u0442\u043e\u0440\u043c"
+    },
+    {
+        "editor_id": "ccBGSSSE014_UnboundedStorms",
+        "type": "SPEL FULL",
+        "original": "Unbounded Storms",
+        "string": "\u0411\u0435\u0437\u0443\u0434\u0435\u0440\u0436\u043d\u044b\u0439 \u0448\u0442\u043e\u0440\u043c"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FireSpellEffect",
+        "type": "MGEF FULL",
+        "original": "Unbounded Flames",
+        "string": "\u0411\u0435\u0437\u0443\u0434\u0435\u0440\u0436\u043d\u044b\u0439 \u043e\u0433\u043e\u043d\u044c"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Alter_ParalysisRune",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Paralysis Rune",
+        "string": "\u041a\u043d\u0438\u0433\u0430 \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0439: \u0420\u0443\u043d\u0430 \u043f\u0430\u0440\u0430\u043b\u0438\u0447\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ShockEffectCloak",
+        "type": "MGEF DNAM",
+        "original": "Targets in melee range take <40> points of shock damage per second to Health, and half that to Magicka.  Random lightning strikes deal an additional <30> damage.",
+        "string": "\u041d\u0430 \u0440\u0430\u0441\u0441\u0442\u043e\u044f\u043d\u0438\u0438 \u0440\u0443\u043a\u043e\u043f\u0430\u0448\u043d\u043e\u0439 \u0430\u0442\u0430\u043a\u0438 \u043d\u0430\u043d\u043e\u0441\u0438\u0442 <40> \u0435\u0434. \u0443\u0440\u043e\u043d\u0430 \u044d\u043b\u0435\u043a\u0442\u0440\u0438\u0447\u0435\u0441\u0442\u0432\u043e\u043c \u0432 \u0441\u0435\u043a\u0443\u043d\u0434\u0443 \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044e \u0438 \u0432\u0434\u0432\u043e\u0435 \u043c\u0435\u043d\u044c\u0448\u0438\u0439 \u0443\u0440\u043e\u043d \u043c\u0430\u0433\u0438\u0438.  \u0421\u043b\u0443\u0447\u0430\u0439\u043d\u044b\u0435 \u0443\u0434\u0430\u0440\u044b \u043c\u043e\u043b\u043d\u0438\u0439 \u043d\u0430\u043d\u043e\u0441\u044f\u0442 \u0434\u043e\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0435 <30> \u0435\u0434. \u0443\u0440\u043e\u043d\u0430."
+    },
+    {
+        "editor_id": "ccBGSSSE014_UnboundedFreeze_IceSpellEffect",
+        "type": "MGEF FULL",
+        "original": "Unbounded Freeze",
+        "string": "\u0411\u0435\u0437\u0443\u0434\u0435\u0440\u0436\u043d\u0430\u044f \u0437\u0430\u043c\u043e\u0440\u043e\u0437\u043a\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE014_RuneParalysisFFLocation",
+        "type": "MGEF DNAM",
+        "original": "Cast on a nearby surface, it explodes when enemies are nearby, immobilizing them for <dur> seconds.",
+        "string": "\u0420\u0443\u043d\u0430 \u043d\u0430\u043a\u043b\u0430\u0434\u044b\u0432\u0430\u0435\u0442\u0441\u044f \u043d\u0430 \u0431\u043b\u0438\u0437\u043b\u0435\u0436\u0430\u0449\u0443\u044e \u043f\u043e\u0432\u0435\u0440\u0445\u043d\u043e\u0441\u0442\u044c \u0438 \u043f\u0440\u0438 \u043f\u0440\u0438\u0431\u043b\u0438\u0436\u0435\u043d\u0438\u0438 \u0432\u0440\u0430\u0433\u043e\u0432 \u0432\u0437\u0440\u044b\u0432\u0430\u0435\u0442\u0441\u044f, \u043e\u0431\u0435\u0437\u0434\u0432\u0438\u0436\u0438\u0432\u0430\u044f \u0438\u0445 \u043d\u0430 <dur> \u0441\u0435\u043a."
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_UnboundedFire",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Unbounded Flames",
+        "string": "\u041a\u043d\u0438\u0433\u0430 \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0439: \u0411\u0435\u0437\u0443\u0434\u0435\u0440\u0436\u043d\u044b\u0439 \u043e\u0433\u043e\u043d\u044c"
+    },
+    {
+        "editor_id": "ccBGSSSE014_UnboundedFreeze",
+        "type": "SPEL FULL",
+        "original": "Unbounded Freezing",
+        "string": "\u0411\u0435\u0437\u0443\u0434\u0435\u0440\u0436\u043d\u044b\u0439 \u043c\u043e\u0440\u043e\u0437"
+    },
+    {
+        "editor_id": "ccBGSSSE014_EnchRobesFortifyConjurationAndIllusion01",
+        "type": "ENCH FULL",
+        "original": "Fortify Conjuration & Illusion",
+        "string": "\u041f\u043e\u0432\u044b\u0448\u0435\u043d\u0438\u0435 \u043d\u0430\u0432\u044b\u043a\u0430: \u043a\u043e\u043b\u0434\u043e\u0432\u0441\u0442\u0432\u043e \u0438 \u0438\u043b\u043b\u044e\u0437\u0438\u044f"
+    },
+    {
+        "editor_id": "ccBGSSSE014_EnchRobesFortifyConjurationAndIllusion02",
+        "type": "ENCH FULL",
+        "original": "Fortify Conjuration & Illusion",
+        "string": "\u041f\u043e\u0432\u044b\u0448\u0435\u043d\u0438\u0435 \u043d\u0430\u0432\u044b\u043a\u0430: \u043a\u043e\u043b\u0434\u043e\u0432\u0441\u0442\u0432\u043e \u0438 \u0438\u043b\u043b\u044e\u0437\u0438\u044f"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange_Ench02",
+        "type": "ARMO FULL",
+        "original": "Apprentice Robes of Conjuration & Illusion",
+        "string": "\u041e\u0434\u0435\u044f\u043d\u0438\u0435 \u0443\u0447\u0435\u043d\u0438\u043a\u0430 \u0448\u043a\u043e\u043b\u044b \u043a\u043e\u043b\u0434\u043e\u0432\u0441\u0442\u0432\u0430 \u0438 \u0438\u043b\u043b\u044e\u0437\u0438\u0438"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackBlue_Ench01",
+        "type": "ARMO FULL",
+        "original": "Novice Robes of Destruction & Alteration",
+        "string": "\u041e\u0434\u0435\u044f\u043d\u0438\u0435 \u043d\u043e\u0432\u0438\u0447\u043a\u0430 \u0448\u043a\u043e\u043b\u044b \u0440\u0430\u0437\u0440\u0443\u0448\u0435\u043d\u0438\u044f \u0438 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f"
+    },
+    {
+        "editor_id": "ccBGSSSE014_LightningCloakDmg",
+        "type": "SPEL FULL",
+        "original": "Lightning Cloak Drain",
+        "string": "\u041f\u043e\u0433\u043b\u043e\u0449\u0435\u043d\u0438\u0435 \u043f\u043b\u0430\u0449\u0430 \u043c\u043e\u043b\u043d\u0438\u0439"
+    },
+    {
+        "editor_id": "ccBGSSSE014_EnchRobesFortifyDestructionAndAlteration01",
+        "type": "ENCH FULL",
+        "original": "Fortify Destruction and Alteration",
+        "string": "\u041f\u043e\u0432\u044b\u0448\u0435\u043d\u0438\u0435 \u043d\u0430\u0432\u044b\u043a\u0430: \u0440\u0430\u0437\u0440\u0443\u0448\u0435\u043d\u0438\u0435 \u0438 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0435"
+    },
+    {
+        "editor_id": "ccBGSSSE014_EnchRobesFortifyDestructionAndAlteration04",
+        "type": "ENCH FULL",
+        "original": "Fortify Destruction and Alteration",
+        "string": "\u041f\u043e\u0432\u044b\u0448\u0435\u043d\u0438\u0435 \u043d\u0430\u0432\u044b\u043a\u0430: \u0440\u0430\u0437\u0440\u0443\u0448\u0435\u043d\u0438\u0435 \u0438 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0435"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackBlue_Ench02",
+        "type": "ARMO FULL",
+        "original": "Apprentice Robes of Destruction & Alteration",
+        "string": "\u041e\u0434\u0435\u044f\u043d\u0438\u0435 \u0443\u0447\u0435\u043d\u0438\u043a\u0430 \u0448\u043a\u043e\u043b\u044b \u0440\u0430\u0437\u0440\u0443\u0448\u0435\u043d\u0438\u044f \u0438 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FrostDamageConcAimedCloak",
+        "type": "MGEF DNAM",
+        "original": "A blast of cold that does <mag> points of damage per second to Health and Stamina.",
+        "string": "\u0421\u0442\u0440\u0443\u044f \u0445\u043e\u043b\u043e\u0434\u0430, \u043d\u0430\u043d\u043e\u0441\u044f\u0449\u0430\u044f <mag> \u0435\u0434. \u0443\u0440\u043e\u043d\u0430 \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044e \u0438 \u0437\u0430\u043f\u0430\u0441\u0443 \u0441\u0438\u043b \u0432 \u0441\u0435\u043a\u0443\u043d\u0434\u0443."
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange_Ench05",
+        "type": "ARMO FULL",
+        "original": "Master Robes of Conjuration & Illusion",
+        "string": "\u041e\u0434\u0435\u044f\u043d\u0438\u0435 \u043c\u0430\u0441\u0442\u0435\u0440\u0430 \u0448\u043a\u043e\u043b\u044b \u043a\u043e\u043b\u0434\u043e\u0432\u0441\u0442\u0432\u0430 \u0438 \u0438\u043b\u043b\u044e\u0437\u0438\u0438"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackBlue_Ench03",
+        "type": "ARMO FULL",
+        "original": "Adept Robes of Destruction & Alteration",
+        "string": "\u041e\u0434\u0435\u044f\u043d\u0438\u0435 \u0430\u0434\u0435\u043f\u0442\u0430 \u0448\u043a\u043e\u043b\u044b \u0440\u0430\u0437\u0440\u0443\u0448\u0435\u043d\u0438\u044f \u0438 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackBlue_Ench04",
+        "type": "ARMO FULL",
+        "original": "Expert Robes of Destruction & Alteration",
+        "string": "\u041e\u0434\u0435\u044f\u043d\u0438\u0435 \u044d\u043a\u0441\u043f\u0435\u0440\u0442\u0430 \u0448\u043a\u043e\u043b\u044b \u0440\u0430\u0437\u0440\u0443\u0448\u0435\u043d\u0438\u044f \u0438 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FrostDamageConcAimedCloak",
+        "type": "MGEF FULL",
+        "original": "Unbounded Frostbite",
+        "string": "\u0411\u0435\u0437\u0443\u0434\u0435\u0440\u0436\u043d\u044b\u0439 \u043c\u043e\u0440\u043e\u0437"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange",
+        "type": "ARMO FULL",
+        "original": "Mage Robes",
+        "string": "\u041e\u0434\u0435\u044f\u043d\u0438\u0435 \u043c\u0430\u0433\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange_Ench01",
+        "type": "ARMO FULL",
+        "original": "Novice Robes of Conjuration & Illusion",
+        "string": "\u041e\u0434\u0435\u044f\u043d\u0438\u0435 \u043d\u043e\u0432\u0438\u0447\u043a\u0430 \u0448\u043a\u043e\u043b\u044b \u043a\u043e\u043b\u0434\u043e\u0432\u0441\u0442\u0432\u0430 \u0438 \u0438\u043b\u043b\u044e\u0437\u0438\u0438"
+    },
+    {
+        "editor_id": "ccBGSSSE014_EnchRobesFortifyDestructionAndAlteration03",
+        "type": "ENCH FULL",
+        "original": "Fortify Destruction and Alteration",
+        "string": "\u041f\u043e\u0432\u044b\u0448\u0435\u043d\u0438\u0435 \u043d\u0430\u0432\u044b\u043a\u0430: \u0440\u0430\u0437\u0440\u0443\u0448\u0435\u043d\u0438\u0435 \u0438 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0435"
+    },
+    {
+        "editor_id": "ccBGSSSE014_EnchRobesFortifyDestructionAndAlteration05",
+        "type": "ENCH FULL",
+        "original": "Fortify Destruction and Alteration",
+        "string": "\u041f\u043e\u0432\u044b\u0448\u0435\u043d\u0438\u0435 \u043d\u0430\u0432\u044b\u043a\u0430: \u0440\u0430\u0437\u0440\u0443\u0448\u0435\u043d\u0438\u0435 \u0438 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0435"
+    },
+    {
+        "editor_id": "ccBGSSSE014_EnchRobesFortifyConjurationAndIllusion05",
+        "type": "ENCH FULL",
+        "original": "Fortify Conjuration & Illusion",
+        "string": "\u041f\u043e\u0432\u044b\u0448\u0435\u043d\u0438\u0435 \u043d\u0430\u0432\u044b\u043a\u0430: \u043a\u043e\u043b\u0434\u043e\u0432\u0441\u0442\u0432\u043e \u0438 \u0438\u043b\u043b\u044e\u0437\u0438\u044f"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FrostCloakDmg",
+        "type": "SPEL FULL",
+        "original": "Frost Cloak Freeze",
+        "string": "\u0417\u0430\u043c\u043e\u0440\u0430\u0436\u0438\u0432\u0430\u043d\u0438\u0435 \u043c\u043e\u0440\u043e\u0437\u043d\u044b\u043c \u043f\u043b\u0430\u0449\u043e\u043c"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackBlue",
+        "type": "ARMO FULL",
+        "original": "Mage Robes",
+        "string": "\u041e\u0434\u0435\u044f\u043d\u0438\u0435 \u043c\u0430\u0433\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange_Ench04",
+        "type": "ARMO FULL",
+        "original": "Expert Robes of Conjuration & Illusion",
+        "string": "\u041e\u0434\u0435\u044f\u043d\u0438\u0435 \u044d\u043a\u0441\u043f\u0435\u0440\u0442\u0430 \u0448\u043a\u043e\u043b\u044b \u043a\u043e\u043b\u0434\u043e\u0432\u0441\u0442\u0432\u0430 \u0438 \u0438\u043b\u043b\u044e\u0437\u0438\u0438"
+    },
+    {
+        "editor_id": "ccBGSSSE014_UnboundedFreeze_IceSpellEffect",
+        "type": "MGEF DNAM",
+        "original": "A freezing wind envelops the caster, knocking down nearby enemies and freezing them for <50> points of damage per second to Health and Stamina.",
+        "string": "\u041b\u0435\u0434\u044f\u043d\u043e\u0439 \u0432\u0435\u0442\u0435\u0440 \u043a\u0440\u0443\u0436\u0438\u0442\u0441\u044f \u0432\u043e\u043a\u0440\u0443\u0433 \u043c\u0430\u0433\u0430, \u0441\u0431\u0438\u0432\u0430\u044f \u0441 \u043d\u043e\u0433 \u0431\u043b\u0438\u0436\u0430\u0439\u0448\u0438\u0445 \u0432\u0440\u0430\u0433\u043e\u0432 \u0438 \u0437\u0430\u043c\u043e\u0440\u0430\u0436\u0438\u0432\u0430\u044f \u0438\u0445, \u0438\u0437-\u0437\u0430 \u0447\u0435\u0433\u043e \u043e\u043d\u0438 \u043a\u0430\u0436\u0434\u0443\u044e \u0441\u0435\u043a\u0443\u043d\u0434\u0443 \u0442\u0435\u0440\u044f\u044e\u0442 \u043f\u043e <50> \u0435\u0434. \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044f \u0438 \u0437\u0430\u043f\u0430\u0441\u0430 \u0441\u0438\u043b."
+    },
+    {
+        "editor_id": "ccBGSSSE014_EnchRobesFortifyDestructionAndAlteration02",
+        "type": "ENCH FULL",
+        "original": "Fortify Destruction and Alteration",
+        "string": "\u041f\u043e\u0432\u044b\u0448\u0435\u043d\u0438\u0435 \u043d\u0430\u0432\u044b\u043a\u0430: \u0440\u0430\u0437\u0440\u0443\u0448\u0435\u043d\u0438\u0435 \u0438 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0435"
+    },
+    {
+        "editor_id": "ccBGSSSE014_EnchRobesFortifyConjurationAndIllusion03",
+        "type": "ENCH FULL",
+        "original": "Fortify Conjuration & Illusion",
+        "string": "\u041f\u043e\u0432\u044b\u0448\u0435\u043d\u0438\u0435 \u043d\u0430\u0432\u044b\u043a\u0430: \u043a\u043e\u043b\u0434\u043e\u0432\u0441\u0442\u0432\u043e \u0438 \u0438\u043b\u043b\u044e\u0437\u0438\u044f"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackBlue_Ench05",
+        "type": "ARMO FULL",
+        "original": "Master Robes of Destruction & Alteration",
+        "string": "\u041e\u0434\u0435\u044f\u043d\u0438\u0435 \u043c\u0430\u0441\u0442\u0435\u0440\u0430 \u0448\u043a\u043e\u043b\u044b \u0440\u0430\u0437\u0440\u0443\u0448\u0435\u043d\u0438\u044f \u0438 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange_Ench03",
+        "type": "ARMO FULL",
+        "original": "Adept Robes of Conjuration & Illusion",
+        "string": "\u041e\u0434\u0435\u044f\u043d\u0438\u0435 \u0430\u0434\u0435\u043f\u0442\u0430 \u0448\u043a\u043e\u043b\u044b \u043a\u043e\u043b\u0434\u043e\u0432\u0441\u0442\u0432\u0430 \u0438 \u0438\u043b\u043b\u044e\u0437\u0438\u0438"
+    },
+    {
+        "editor_id": "ccBGSSSE014_EnchRobesFortifyConjurationAndIllusion04",
+        "type": "ENCH FULL",
+        "original": "Fortify Conjuration & Illusion",
+        "string": "\u041f\u043e\u0432\u044b\u0448\u0435\u043d\u0438\u0435 \u043d\u0430\u0432\u044b\u043a\u0430: \u043a\u043e\u043b\u0434\u043e\u0432\u0441\u0442\u0432\u043e \u0438 \u0438\u043b\u043b\u044e\u0437\u0438\u044f"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ShockDamageConcAimed",
+        "type": "MGEF FULL",
+        "original": "Sparks",
+        "string": "\u0418\u0441\u043a\u0440\u044b"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ShockDamageConcAimed",
+        "type": "MGEF DNAM",
+        "original": "Lightning that does <mag> points of shock damage to Health and Magicka per second.",
+        "string": "\u042d\u043b\u0435\u043a\u0442\u0440\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0440\u0430\u0437\u0440\u044f\u0434, \u043d\u0430\u043d\u043e\u0441\u044f\u0449\u0438\u0439 <mag> \u0435\u0434. \u0443\u0440\u043e\u043d\u0430 \u0432 \u0441\u0435\u043a\u0443\u043d\u0434\u0443 \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044e \u0438 \u043c\u0430\u0433\u0438\u0438."
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental02Bolt",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Elemental Bolt",
+        "string": "\u0422\u043e\u043c \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0439: \u042d\u043b\u0435\u043c\u0435\u043d\u0442\u043d\u0430\u044f \u043c\u043e\u043b\u043d\u0438\u044f"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea04",
+        "type": "MGEF FULL",
+        "original": "Elemental Flare",
+        "string": "\u042d\u043b\u0435\u043c\u0435\u043d\u0442\u043d\u0430\u044f \u0432\u0441\u043f\u044b\u0448\u043a\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellPack_StartupQuest",
+        "type": "QUST FULL",
+        "original": "The Lost Library",
+        "string": "\u041f\u043e\u0442\u0435\u0440\u044f\u043d\u043d\u0430\u044f \u0431\u0438\u0431\u043b\u0438\u043e\u0442\u0435\u043a\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE014_PrideOfHirstaang_SummonBear_PlayerEffects",
+        "type": "MGEF FULL",
+        "original": "Pride of Hirstaang",
+        "string": "\u0413\u043e\u0440\u0434\u043e\u0441\u0442\u044c \u0425\u0438\u0440\u0441\u0442\u0430\u0430\u043d\u0433\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea03",
+        "type": "MGEF DNAM",
+        "original": "An elemental explosion for <mag> points of fire damage, <mag> points of shock damage, and half as much damage to stamina.",
+        "string": "\u042d\u043b\u0435\u043c\u0435\u043d\u0442\u043d\u044b\u0439 \u0432\u0437\u0440\u044b\u0432 \u043d\u0430\u043d\u043e\u0441\u0438\u0442 <mag> \u0435\u0434. \u0443\u0440\u043e\u043d\u0430 \u043e\u0442 \u043e\u0433\u043d\u044f, <mag> \u0435\u0434. \u0443\u0440\u043e\u043d\u0430 \u044d\u043b\u0435\u043a\u0442\u0440\u0438\u0447\u0435\u0441\u0442\u0432\u043e\u043c \u0438 \u0432\u0434\u0432\u043e\u0435 \u043c\u0435\u043d\u044c\u0448\u0438\u0439 \u0443\u0440\u043e\u043d \u0437\u0430\u043f\u0430\u0441\u0443 \u0441\u0438\u043b."
+    },
+    {
+        "editor_id": "ccBGSSSE014_Oblivion_Absorb01_ChokingGrasp",
+        "type": "SPEL FULL",
+        "original": "Choking Grasp",
+        "string": "\u0423\u0434\u0443\u0448\u0430\u044e\u0449\u0430\u044f \u0445\u0432\u0430\u0442\u043a\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FF_Self_FortifyHealRate_NoUI",
+        "type": "MGEF FULL",
+        "original": "Regenerate Health",
+        "string": "\u0420\u0435\u0433\u0435\u043d\u0435\u0440\u0430\u0446\u0438\u044f \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044f"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb01_ChokingGrasp",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Choking Grasp",
+        "string": "\u0422\u043e\u043c \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0439: \u0423\u0434\u0443\u0448\u0430\u044e\u0449\u0430\u044f \u0445\u0432\u0430\u0442\u043a\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Alter_FenriksWelcome",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Fenrik's Welcome",
+        "string": "\u0422\u043e\u043c \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0439: \u0420\u0430\u0434\u0443\u0448\u0438\u0435 \u0424\u0435\u043d\u0440\u0438\u043a\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE014_MarasWrath_FlameCloakDmg",
+        "type": "SPEL FULL",
+        "original": "Flames",
+        "string": "\u041f\u043b\u0430\u043c\u044f"
+    },
+    {
+        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_25",
+        "type": "MGEF DNAM",
+        "original": "Absorb <mag> points of health per second from target, for <dur> seconds.",
+        "string": "\u041f\u043e\u0433\u043b\u043e\u0449\u0430\u0435\u0442 <mag> \u0435\u0434. \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044f \u0432 \u0441\u0435\u043a\u0443\u043d\u0434\u0443 \u0443 \u0446\u0435\u043b\u0438 \u0432 \u0442\u0435\u0447\u0435\u043d\u0438\u0435 <dur> \u0441\u0435\u043a."
+    },
+    {
+        "editor_id": "ccBGSSSE014_OrumsAquaticEscape_InvisibillityFFSelf",
+        "type": "MGEF FULL",
+        "original": "Orum's Aquatic Escape",
+        "string": "\u041f\u043e\u0431\u0435\u0433 \u041e\u0440\u0443\u043c\u0430 \u043f\u043e \u0432\u043e\u0434\u0435"
+    },
+    {
+        "editor_id": "ccBGSSSE014_Oblivion_PrideOfHirstaang",
+        "type": "SPEL FULL",
+        "original": "Pride of Hirstaang",
+        "string": "\u0413\u043e\u0440\u0434\u043e\u0441\u0442\u044c \u0425\u0438\u0440\u0441\u0442\u0430\u0430\u043d\u0433\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE014_PrideOfHirstaang_SummonBear_PlayerEffects",
+        "type": "MGEF DNAM",
+        "original": "Summons a Bear for <dur> seconds wherever the caster is pointing. Resist <50>% of frost damage for <60> seconds. Health regenerates <50>% faster for <60> seconds.",
+        "string": "\u041f\u0440\u0438\u0437\u044b\u0432\u0430\u0435\u0442 \u043c\u0435\u0434\u0432\u0435\u0434\u044f \u043d\u0430 <dur> \u0441\u0435\u043a\u0443\u043d\u0434 \u0432 \u0442\u043e\u0447\u043a\u0443, \u0432 \u043a\u043e\u0442\u043e\u0440\u0443\u044e \u0443\u043a\u0430\u0437\u044b\u0432\u0430\u0435\u0442 \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u0442\u0435\u043b\u044c. \u0421\u043e\u043f\u0440\u043e\u0442\u0438\u0432\u043b\u0435\u043d\u0438\u0435 <50>% \u0443\u0440\u043e\u043d\u0430 \u0445\u043e\u043b\u043e\u0434\u043e\u043c \u043d\u0430 <60> \u0441\u0435\u043a\u0443\u043d\u0434. \u0417\u0434\u043e\u0440\u043e\u0432\u044c\u0435 \u0432\u043e\u0441\u0441\u0442\u0430\u043d\u0430\u0432\u043b\u0438\u0432\u0430\u0435\u0442\u0441\u044f \u0431\u044b\u0441\u0442\u0440\u0435\u0435 \u043d\u0430 <50>% \u0432 \u0442\u0435\u0447\u0435\u043d\u0438\u0435 <60> \u0441\u0435\u043a\u0443\u043d\u0434."
+    },
+    {
+        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_75",
+        "type": "MGEF FULL",
+        "original": "Absorb Health",
+        "string": "\u041f\u043e\u0433\u043b\u043e\u0449\u0435\u043d\u0438\u0435 \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044f"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Illus_Adept_OrumsAquaticEscape",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Orum's Aquatic Escape",
+        "string": "\u0422\u043e\u043c \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0439: \u041f\u043e\u0431\u0435\u0433 \u041e\u0440\u0443\u043c\u0430 \u043f\u043e \u0432\u043e\u0434\u0435"
+    },
+    {
+        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_50",
+        "type": "MGEF DNAM",
+        "original": "Absorb <mag> points of health per second from target, for <dur> seconds.",
+        "string": "\u041f\u043e\u0433\u043b\u043e\u0449\u0430\u0435\u0442 <mag> \u0435\u0434. \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044f \u0432 \u0441\u0435\u043a\u0443\u043d\u0434\u0443 \u0443 \u0446\u0435\u043b\u0438 \u0432 \u0442\u0435\u0447\u0435\u043d\u0438\u0435 <dur> \u0441\u0435\u043a."
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellPack_StartupQuest",
+        "type": "QUST NNAM",
+        "original": "Find the Lost Library of Spell Tomes",
+        "string": "\u041d\u0430\u0439\u0442\u0438 \u041f\u043e\u0442\u0435\u0440\u044f\u043d\u043d\u0443\u044e \u0431\u0438\u0431\u043b\u0438\u043e\u0442\u0435\u043a\u0443 \u0441 \u0442\u043e\u043c\u0430\u043c\u0438 \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0439"
+    },
+    {
+        "editor_id": "ccBGSSSE014_MarasWrath_ConfDownConcAimed",
+        "type": "MGEF FULL",
+        "original": "Turn Undead Fear",
+        "string": "\u0421\u0442\u0440\u0430\u0445 \u043e\u0442\u043f\u0443\u0433\u0438\u0432\u0430\u043d\u0438\u044f \u043d\u0435\u0436\u0438\u0442\u0438"
+    },
+    {
+        "editor_id": "ccBGSSSE014_HazardShockSpell01",
+        "type": "SPEL FULL",
+        "original": "Shock",
+        "string": "\u0428\u043e\u043a"
+    },
+    {
+        "editor_id": "ccBGSSSE014_Oblivion_Elemental03Burst",
+        "type": "SPEL FULL",
+        "original": "Elemental Burst",
+        "string": "\u042d\u043b\u0435\u043c\u0435\u043d\u0442\u043d\u044b\u0439 \u0442\u043e\u043b\u0447\u043e\u043a"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FenriksWelcome_UnlockDoorAdeptFFSelf",
+        "type": "MGEF DNAM",
+        "original": "Caster becomes invisible and can open locks with level Expert and below for <dur> seconds.  Activating an object or attacking will break the spell.",
+        "string": "\u0417\u0430\u043a\u043b\u0438\u043d\u0430\u0442\u0435\u043b\u044c \u043d\u0430 <dur> \u0441\u0435\u043a. \u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u0441\u044f \u043d\u0435\u0432\u0438\u0434\u0438\u043c\u044b\u043c \u0438 \u043c\u043e\u0436\u0435\u0442 \u0432\u0441\u043a\u0440\u044b\u0432\u0430\u0442\u044c \u0437\u0430\u043c\u043a\u0438 \u0441\u043b\u043e\u0436\u043d\u043e\u0433\u043e \u0443\u0440\u043e\u0432\u043d\u044f \u0438 \u043d\u0438\u0436\u0435. \u0414\u043b\u0438\u0442\u0441\u044f \u0434\u043e \u043f\u0435\u0440\u0432\u043e\u0433\u043e \u0432\u0437\u0430\u0438\u043c\u043e\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044f \u0441 \u043f\u0440\u0435\u0434\u043c\u0435\u0442\u0430\u043c\u0438 \u0438\u043b\u0438 \u0430\u0442\u0430\u043a\u0438."
+    },
+    {
+        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea04",
+        "type": "MGEF DNAM",
+        "original": "An elemental explosion for <mag> points of fire damage, <mag> points of shock damage, and half as much damage to stamina.",
+        "string": "\u042d\u043b\u0435\u043c\u0435\u043d\u0442\u043d\u044b\u0439 \u0432\u0437\u0440\u044b\u0432 \u043d\u0430\u043d\u043e\u0441\u0438\u0442 <mag> \u0435\u0434. \u0443\u0440\u043e\u043d\u0430 \u043e\u0442 \u043e\u0433\u043d\u044f, <mag> \u0435\u0434. \u0443\u0440\u043e\u043d\u0430 \u044d\u043b\u0435\u043a\u0442\u0440\u0438\u0447\u0435\u0441\u0442\u0432\u043e\u043c \u0438 \u0432\u0434\u0432\u043e\u0435 \u043c\u0435\u043d\u044c\u0448\u0438\u0439 \u0443\u0440\u043e\u043d \u0437\u0430\u043f\u0430\u0441\u0443 \u0441\u0438\u043b."
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_MarasWrath",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Mara's Wrath",
+        "string": "\u0422\u043e\u043c \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0439: \u0413\u043d\u0435\u0432 \u041c\u0430\u0440\u044b"
+    },
+    {
+        "editor_id": "ccBGSSSE014_Oblivion_Absorb04_TouchOfDeath",
+        "type": "SPEL FULL",
+        "original": "Touch of Death",
+        "string": "\u041f\u0440\u0438\u043a\u043e\u0441\u043d\u043e\u0432\u0435\u043d\u0438\u0435 \u0441\u043c\u0435\u0440\u0442\u0438"
+    },
+    {
+        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_00",
+        "type": "MGEF DNAM",
+        "original": "Absorb <mag> points of health per second from target, for <dur> seconds.",
+        "string": "\u041f\u043e\u0433\u043b\u043e\u0449\u0430\u0435\u0442 <mag> \u0435\u0434. \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044f \u0432 \u0441\u0435\u043a\u0443\u043d\u0434\u0443 \u0443 \u0446\u0435\u043b\u0438 \u0432 \u0442\u0435\u0447\u0435\u043d\u0438\u0435 <dur> \u0441\u0435\u043a."
+    },
+    {
+        "editor_id": "ccBGSSSE014_MarasWrath_FireCloakFFSelf",
+        "type": "MGEF FULL",
+        "original": "Mara's Wrath",
+        "string": "\u0413\u043d\u0435\u0432 \u041c\u0430\u0440\u044b"
+    },
+    {
+        "editor_id": "ccBGSSSE014_Oblivion_PrideOfHirstaang_SecondaryEffects",
+        "type": "SPEL FULL",
+        "original": "Pride of Hirstaang",
+        "string": "\u0413\u043e\u0440\u0434\u043e\u0441\u0442\u044c \u0425\u0438\u0440\u0441\u0442\u0430\u0430\u043d\u0433\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea01",
+        "type": "MGEF FULL",
+        "original": "Elemental Flare",
+        "string": "\u042d\u043b\u0435\u043c\u0435\u043d\u0442\u043d\u0430\u044f \u0432\u0441\u043f\u044b\u0448\u043a\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_ConjureExpert_PrideOfHirstaang",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Pride of Hirstaang",
+        "string": "\u0422\u043e\u043c \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0439: \u0413\u043e\u0440\u0434\u043e\u0441\u0442\u044c \u0425\u0438\u0440\u0441\u0442\u0430\u0430\u043d\u0433\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea03",
+        "type": "MGEF FULL",
+        "original": "Elemental Flare",
+        "string": "\u042d\u043b\u0435\u043c\u0435\u043d\u0442\u043d\u0430\u044f \u0432\u0441\u043f\u044b\u0448\u043a\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FenriksWelcome_UnlockDoorAdeptFFSelf",
+        "type": "MGEF FULL",
+        "original": "Fenrik's Welcome",
+        "string": "\u0420\u0430\u0434\u0443\u0448\u0438\u0435 \u0424\u0435\u043d\u0440\u0438\u043a\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FenriksWelcomePerk",
+        "type": "PERK EPF2",
+        "original": "Fenrik's Welcome: Unlock",
+        "string": "\u0420\u0430\u0434\u0443\u0448\u0438\u0435 \u0424\u0435\u043d\u0440\u0438\u043a\u0430: \u041e\u0442\u043a\u0440\u044b\u0442\u044c"
+    },
+    {
+        "editor_id": "ccBGSSSE014_Oblivion_Elemental01Flare",
+        "type": "SPEL FULL",
+        "original": "Elemental Flare",
+        "string": "\u042d\u043b\u0435\u043c\u0435\u043d\u0442\u043d\u0430\u044f \u0432\u0441\u043f\u044b\u0448\u043a\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FenriksWelcomePerk",
+        "type": "PERK FULL",
+        "original": "Fenrik's Welcome",
+        "string": "\u0420\u0430\u0434\u0443\u0448\u0438\u0435 \u0424\u0435\u043d\u0440\u0438\u043a\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental03Burst",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Elemental Burst",
+        "string": "\u0422\u043e\u043c \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0439: \u042d\u043b\u0435\u043c\u0435\u043d\u0442\u043d\u044b\u0439 \u0442\u043e\u043b\u0447\u043e\u043a"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental04Blast",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Elemental Blast",
+        "string": "\u0422\u043e\u043c \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0439: \u042d\u043b\u0435\u043c\u0435\u043d\u0442\u043d\u044b\u0439 \u0432\u0437\u0440\u044b\u0432"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb03_HangmansNoose",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Hangman's Noose",
+        "string": "\u0422\u043e\u043c \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0439: \u041f\u0435\u0442\u043b\u044f \u0432\u0438\u0441\u0435\u043b\u044c\u043d\u0438\u043a\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE014_Oblivion_OrumsAquaticEscape",
+        "type": "SPEL FULL",
+        "original": "Orum's Aquatic Escape",
+        "string": "\u041f\u043e\u0431\u0435\u0433 \u041e\u0440\u0443\u043c\u0430 \u043f\u043e \u0432\u043e\u0434\u0435"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea02",
+        "type": "MGEF DNAM",
+        "original": "An elemental explosion for <mag> points of fire damage, <mag> points of shock damage, and half as much damage to stamina.",
+        "string": "\u042d\u043b\u0435\u043c\u0435\u043d\u0442\u043d\u044b\u0439 \u0432\u0437\u0440\u044b\u0432 \u043d\u0430\u043d\u043e\u0441\u0438\u0442 <mag> \u0435\u0434. \u0443\u0440\u043e\u043d\u0430 \u043e\u0442 \u043e\u0433\u043d\u044f, <mag> \u0435\u0434. \u0443\u0440\u043e\u043d\u0430 \u044d\u043b\u0435\u043a\u0442\u0440\u0438\u0447\u0435\u0441\u0442\u0432\u043e\u043c \u0438 \u0432\u0434\u0432\u043e\u0435 \u043c\u0435\u043d\u044c\u0448\u0438\u0439 \u0443\u0440\u043e\u043d \u0437\u0430\u043f\u0430\u0441\u0443 \u0441\u0438\u043b."
+    },
+    {
+        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea01",
+        "type": "MGEF DNAM",
+        "original": "An elemental explosion for <mag> points of fire damage, <mag> points of shock damage, and half as much damage to stamina.",
+        "string": "\u042d\u043b\u0435\u043c\u0435\u043d\u0442\u043d\u044b\u0439 \u0432\u0437\u0440\u044b\u0432 \u043d\u0430\u043d\u043e\u0441\u0438\u0442 <mag> \u0435\u0434. \u0443\u0440\u043e\u043d\u0430 \u043e\u0442 \u043e\u0433\u043d\u044f, <mag> \u0435\u0434. \u0443\u0440\u043e\u043d\u0430 \u044d\u043b\u0435\u043a\u0442\u0440\u0438\u0447\u0435\u0441\u0442\u0432\u043e\u043c \u0438 \u0432\u0434\u0432\u043e\u0435 \u043c\u0435\u043d\u044c\u0448\u0438\u0439 \u0443\u0440\u043e\u043d \u0437\u0430\u043f\u0430\u0441\u0443 \u0441\u0438\u043b."
+    },
+    {
+        "editor_id": "ccBGSSSE014_Oblivion_MarasWrath",
+        "type": "SPEL FULL",
+        "original": "Mara's Wrath",
+        "string": "\u0413\u043d\u0435\u0432 \u041c\u0430\u0440\u044b"
+    },
+    {
+        "editor_id": "ccBGSSSE014_Oblivion_Absorb03_HangmansNoose",
+        "type": "SPEL FULL",
+        "original": "Hangman's Noose",
+        "string": "\u041f\u0435\u0442\u043b\u044f \u0432\u0438\u0441\u0435\u043b\u044c\u043d\u0438\u043a\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ShockBarrierHazard01",
+        "type": "HAZD FULL",
+        "original": "Shock",
+        "string": "\u0428\u043e\u043a"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FF_Self_FortifyHealRate_NoUI",
+        "type": "MGEF DNAM",
+        "original": "Health regenerates <mag>% faster for <dur> seconds.",
+        "string": "\u0417\u0434\u043e\u0440\u043e\u0432\u044c\u0435 \u0432\u043e\u0441\u0441\u0442\u0430\u043d\u0430\u0432\u043b\u0438\u0432\u0430\u0435\u0442\u0441\u044f \u0431\u044b\u0441\u0442\u0440\u0435\u0435 \u043d\u0430 <mag>% \u0432 \u0442\u0435\u0447\u0435\u043d\u0438\u0435 <dur> \u0441\u0435\u043a."
+    },
+    {
+        "editor_id": "ccBGSSSE014_Oblivion_Elemental04Blast",
+        "type": "SPEL FULL",
+        "original": "Elemental Blast",
+        "string": "\u042d\u043b\u0435\u043c\u0435\u043d\u0442\u043d\u044b\u0439 \u0432\u0437\u0440\u044b\u0432"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FF_Self_ResistFrost_NoUI",
+        "type": "MGEF DNAM",
+        "original": "Resist <mag>% of frost damage for <dur> seconds.",
+        "string": "\u0421\u043e\u043f\u0440\u043e\u0442\u0438\u0432\u043b\u0435\u043d\u0438\u0435 <mag>% \u0443\u0440\u043e\u043d\u0430 \u0445\u043e\u043b\u043e\u0434\u043e\u043c \u043d\u0430 <dur> \u0441\u0435\u043a\u0443\u043d\u0434."
+    },
+    {
+        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea02",
+        "type": "MGEF FULL",
+        "original": "Elemental Flare",
+        "string": "\u042d\u043b\u0435\u043c\u0435\u043d\u0442\u043d\u0430\u044f \u0432\u0441\u043f\u044b\u0448\u043a\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_25",
+        "type": "MGEF FULL",
+        "original": "Absorb Health",
+        "string": "\u041f\u043e\u0433\u043b\u043e\u0449\u0435\u043d\u0438\u0435 \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044f"
+    },
+    {
+        "editor_id": "ccBGSSSE014_BossChestSpellTomesAll",
+        "type": "CONT FULL",
+        "original": "Ancient Tome Chest",
+        "string": "\u0414\u0440\u0435\u0432\u043d\u0438\u0439 \u0441\u0443\u043d\u0434\u0443\u043a \u0441 \u0442\u043e\u043c\u0430\u043c\u0438"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental01Flare",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Elemental Flare",
+        "string": "\u0422\u043e\u043c \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0439: \u042d\u043b\u0435\u043c\u0435\u043d\u0442\u043d\u0430\u044f \u0432\u0441\u043f\u044b\u0448\u043a\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE014_Oblivion_Elemental02Bolt",
+        "type": "SPEL FULL",
+        "original": "Elemental Bolt",
+        "string": "\u042d\u043b\u0435\u043c\u0435\u043d\u0442\u043d\u0430\u044f \u043c\u043e\u043b\u043d\u0438\u044f"
+    },
+    {
+        "editor_id": "ccBGSSSE014_MarasWrath_FireCloakFFSelf",
+        "type": "MGEF DNAM",
+        "original": "For <dur> seconds, opponents in melee range take <16> points fire damage per second.  Undead up to level <26> flee for <dur> seconds.",
+        "string": "\u041f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0438 \u043d\u0430 \u0440\u0430\u0441\u0441\u0442\u043e\u044f\u043d\u0438\u0438 \u0440\u0443\u043a\u043e\u043f\u0430\u0448\u043d\u043e\u0439 \u0430\u0442\u0430\u043a\u0438 \u0432 \u0442\u0435\u0447\u0435\u043d\u0438\u0435 <dur> \u0441\u0435\u043a. \u043f\u043e\u043b\u0443\u0447\u0430\u044e\u0442 <16> \u0435\u0434. \u0443\u0440\u043e\u043d\u0430 \u043e\u0442 \u043e\u0433\u043d\u044f \u0432 \u0441\u0435\u043a\u0443\u043d\u0434\u0443. \u041d\u0435\u0436\u0438\u0442\u044c \u0434\u043e <26> \u0443\u0440\u043e\u0432\u043d\u044f \u0431\u0435\u0436\u0438\u0442 \u0432 \u0442\u0435\u0447\u0435\u043d\u0438\u0435 <dur> \u0441\u0435\u043a."
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb02_Strangulation",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Strangulation",
+        "string": "\u0422\u043e\u043c \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0439: \u0423\u0434\u0443\u0448\u0435\u043d\u0438\u0435"
+    },
+    {
+        "editor_id": "ccBGSSSE014_Oblivion_FenriksWelcome",
+        "type": "SPEL FULL",
+        "original": "Fenrik's Welcome",
+        "string": "\u0420\u0430\u0434\u0443\u0448\u0438\u0435 \u0424\u0435\u043d\u0440\u0438\u043a\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE014_OrumsAquaticEscape_InvisibillityFFSelf",
+        "type": "MGEF DNAM",
+        "original": "Caster is invisible for <dur> seconds. Activating an object or attacking will break the spell. Can breathe water for <dur> seconds. Improved night vision for <dur> seconds.",
+        "string": "\u0417\u0430\u043a\u043b\u0438\u043d\u0430\u0442\u0435\u043b\u044c \u043d\u0430 <dur> \u0441\u0435\u043a. \u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u0441\u044f \u043d\u0435\u0432\u0438\u0434\u0438\u043c\u044b\u043c. \u0414\u043b\u0438\u0442\u0441\u044f \u0434\u043e \u043f\u0435\u0440\u0432\u043e\u0433\u043e \u0432\u0437\u0430\u0438\u043c\u043e\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044f \u0441 \u043f\u0440\u0435\u0434\u043c\u0435\u0442\u0430\u043c\u0438 \u0438\u043b\u0438 \u0430\u0442\u0430\u043a\u0438. \u0414\u044b\u0445\u0430\u043d\u0438\u0435 \u043f\u043e\u0434 \u0432\u043e\u0434\u043e\u0439 \u043d\u0430 <dur> \u0441\u0435\u043a. \u0423\u043b\u0443\u0447\u0448\u0435\u043d\u043e \u0437\u0440\u0435\u043d\u0438\u0435 \u0432 \u0442\u0435\u043c\u043d\u043e\u0442\u0435 \u043d\u0430 <dur> \u0441\u0435\u043a."
+    },
+    {
+        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_75",
+        "type": "MGEF DNAM",
+        "original": "Absorb <mag> points of health per second from target, for <dur> seconds.",
+        "string": "\u041f\u043e\u0433\u043b\u043e\u0449\u0430\u0435\u0442 <mag> \u0435\u0434. \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044f \u0432 \u0441\u0435\u043a\u0443\u043d\u0434\u0443 \u0443 \u0446\u0435\u043b\u0438 \u0432 \u0442\u0435\u0447\u0435\u043d\u0438\u0435 <dur> \u0441\u0435\u043a."
+    },
+    {
+        "editor_id": "ccBGSSSE014_FF_Self_ResistFrost_NoUI",
+        "type": "MGEF FULL",
+        "original": "Resist Frost",
+        "string": "\u0421\u043e\u043f\u0440\u043e\u0442\u0438\u0432\u043b\u0435\u043d\u0438\u0435 \u0445\u043e\u043b\u043e\u0434\u0443"
+    },
+    {
+        "editor_id": "ccBGSSSE_TomesStrongBox_QA",
+        "type": "CONT FULL",
+        "original": "Strong Box BGSSSE014",
+        "string": "\u0421\u0435\u0439\u0444 BGSSSE014"
+    },
+    {
+        "editor_id": "ccBGSSSE014_Oblivion_Absorb02_Strangulation",
+        "type": "SPEL FULL",
+        "original": "Strangulation",
+        "string": "\u0423\u0434\u0443\u0448\u0435\u043d\u0438\u0435"
+    },
+    {
+        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_50",
+        "type": "MGEF FULL",
+        "original": "Absorb Health",
+        "string": "\u041f\u043e\u0433\u043b\u043e\u0449\u0435\u043d\u0438\u0435 \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044f"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SummonBear",
+        "type": "NPC_ FULL",
+        "original": "Bear",
+        "string": "\u041c\u0435\u0434\u0432\u0435\u0434\u044c"
+    },
+    {
+        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_00",
+        "type": "MGEF FULL",
+        "original": "Absorb Health",
+        "string": "\u041f\u043e\u0433\u043b\u043e\u0449\u0435\u043d\u0438\u0435 \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044f"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb04_TouchOfDeath",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Touch of Death",
+        "string": "\u0422\u043e\u043c \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0439: \u041f\u0440\u0438\u043a\u043e\u0441\u043d\u043e\u0432\u0435\u043d\u0438\u0435 \u0441\u043c\u0435\u0440\u0442\u0438"
+    },
+    {
+        "editor_id": "ccBGSSSE014_OrumsAquaticEscape_WaterbreathingFFSelf",
+        "type": "MGEF FULL",
+        "original": "Water Breathing",
+        "string": "\u0412\u043e\u0434\u043d\u043e\u0435 \u0434\u044b\u0445\u0430\u043d\u0438\u0435"
+    },
+    {
+        "editor_id": "ccBGSSSE014_OrumsAquaticEscape_NightEyeEffect",
+        "type": "MGEF FULL",
+        "original": "Night Eye",
+        "string": "\u041d\u043e\u0447\u043d\u043e\u0435 \u0437\u0440\u0435\u043d\u0438\u0435"
+    },
+    {
+        "editor_id": "HobsFallCave01",
+        "type": "CELL FULL",
+        "original": "Hob's Fall Cave",
+        "string": "\u041f\u0435\u0449\u0435\u0440\u0430 \u0425\u043e\u0431\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_UnboundedIce",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nUnbounded Freezing",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\n\u0411\u0435\u0437\u0443\u0434\u0435\u0440\u0436\u043d\u044b\u0439 \u043c\u043e\u0440\u043e\u0437"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Alter_ParalysisRune",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nParalysis Rune",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\n\u0420\u0443\u043d\u0430 \u043f\u0430\u0440\u0430\u043b\u0438\u0447\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_UnboundedLightning",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nUnbounded Storms",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\n\u0411\u0435\u0437\u0443\u0434\u0435\u0440\u0436\u043d\u044b\u0439 \u0448\u0442\u043e\u0440\u043c"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_UnboundedFire",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nUnbounded Flames",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\n\u0411\u0435\u0437\u0443\u0434\u0435\u0440\u0436\u043d\u044b\u0439 \u043e\u0433\u043e\u043d\u044c"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Illus_Adept_OrumsAquaticEscape",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nOrum's Aquatic Escape",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\n\u041f\u043e\u0431\u0435\u0433 \u041e\u0440\u0443\u043c\u0430 \u043f\u043e \u0432\u043e\u0434\u0435"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental03Burst",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nElemental Burst",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\n\u042d\u043b\u0435\u043c\u0435\u043d\u0442\u043d\u044b\u0439 \u0442\u043e\u043b\u0447\u043e\u043a"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb02_Strangulation",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nStrangulation",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\n\u0423\u0434\u0443\u0448\u0435\u043d\u0438\u0435"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_ConjureExpert_PrideOfHirstaang",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nPride of Hirstaang",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\n\u0413\u043e\u0440\u0434\u043e\u0441\u0442\u044c \u0425\u0438\u0440\u0441\u0442\u0430\u0430\u043d\u0433\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental01Flare",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nElemental Flare",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\n\u042d\u043b\u0435\u043c\u0435\u043d\u0442\u043d\u0430\u044f \u0432\u0441\u043f\u044b\u0448\u043a\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb04_TouchOfDeath",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nTouch of Death",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\n\u041f\u0440\u0438\u043a\u043e\u0441\u043d\u043e\u0432\u0435\u043d\u0438\u0435 \u0441\u043c\u0435\u0440\u0442\u0438"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellPack_StartupQuest",
+        "type": "QUST CNAM",
+        "original": "I've found the fabled chest filled with long-lost ancient spell tomes in Hob's Fall Cave.",
+        "string": "\u0412 \u041f\u0435\u0449\u0435\u0440\u0435 \u0425\u043e\u0431\u0430 \u044f \u043d\u0430\u0448\u0435\u043b \u043b\u0435\u0433\u0435\u043d\u0434\u0430\u0440\u043d\u044b\u0439 \u0441\u0443\u043d\u0434\u0443\u043a, \u0431\u0438\u0442\u043a\u043e\u043c \u043d\u0430\u0431\u0438\u0442\u044b\u0439 \u0434\u0430\u0432\u043d\u043e \u0443\u0442\u0435\u0440\u044f\u043d\u043d\u044b\u043c\u0438 \u0442\u043e\u043c\u0430\u043c\u0438 \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0439."
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellPack_StartupQuest",
+        "type": "QUST CNAM",
+        "original": "I've heard tales of a long-lost ancient library of spell tomes, rumored to be somewhere in the area of Winterhold.  I should explore the area and see what I can find.",
+        "string": "\u042f \u0441\u043b\u044b\u0448\u0430\u043b \u0440\u0430\u0441\u0441\u043a\u0430\u0437\u044b \u043e \u0434\u0430\u0432\u043d\u043e \u0437\u0430\u0442\u0435\u0440\u044f\u043d\u043d\u043e\u0439 \u0431\u0438\u0431\u043b\u0438\u043e\u0442\u0435\u043a\u0435, \u043f\u043e\u043b\u043d\u043e\u0439 \u0442\u043e\u043c\u043e\u0432 \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0439. \u0413\u043e\u0432\u043e\u0440\u044f\u0442, \u0447\u0442\u043e \u043e\u043d\u0430 \u043d\u0430\u0445\u043e\u0434\u0438\u0442\u0441\u044f \u0433\u0434\u0435-\u0442\u043e \u0432 \u0412\u0438\u043d\u0442\u0435\u0440\u0445\u043e\u043b\u0434\u0435. \u041d\u0430\u0434\u043e \u043e\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u044d\u0442\u0443 \u043e\u0431\u043b\u0430\u0441\u0442\u044c, \u043c\u043e\u0436\u0435\u0442 \u0431\u044b\u0442\u044c, \u044f \u0447\u0442\u043e-\u0442\u043e \u043d\u0430\u0439\u0434\u0443."
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Alter_FenriksWelcome",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nFenrik's Welcome",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\n\u0420\u0430\u0434\u0443\u0448\u0438\u0435 \u0424\u0435\u043d\u0440\u0438\u043a\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb01_ChokingGrasp",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nChoking Grasp",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\n\u0423\u0434\u0443\u0448\u0430\u044e\u0449\u0430\u044f \u0445\u0432\u0430\u0442\u043a\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb03_HangmansNoose",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nHangman's Noose",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\n\u041f\u0435\u0442\u043b\u044f \u0432\u0438\u0441\u0435\u043b\u044c\u043d\u0438\u043a\u0430"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_MarasWrath",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nMara's Wrath",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\n\u0413\u043d\u0435\u0432 \u041c\u0430\u0440\u044b"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental02Bolt",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nElemental Bolt",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\n\u042d\u043b\u0435\u043c\u0435\u043d\u0442\u043d\u0430\u044f \u043c\u043e\u043b\u043d\u0438\u044f"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental04Blast",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nElemental Blast",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\n\u042d\u043b\u0435\u043c\u0435\u043d\u0442\u043d\u044b\u0439 \u0432\u0437\u0440\u044b\u0432"
+    }
+]

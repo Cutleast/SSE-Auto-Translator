@@ -1,0 +1,104 @@
+[
+    {
+        "editor_id": "ccBGSSSE057_ArmorStalhrimHelmet",
+        "type": "ARMO FULL",
+        "original": "Stalhrim Fur Helmet",
+        "string": "Casque de stalhrim fourr\u00e9"
+    },
+    {
+        "editor_id": "ccBGSSSE057_ArmorStalhrimBoots",
+        "type": "ARMO FULL",
+        "original": "Stalhrim Fur Boots",
+        "string": "Bottes de stalhrim fourr\u00e9es"
+    },
+    {
+        "editor_id": "ccBGSSSE057_ArmorStalhrimCuirass",
+        "type": "ARMO FULL",
+        "original": "Stalhrim Fur Armor",
+        "string": "Armure de stalhrim fourr\u00e9e"
+    },
+    {
+        "editor_id": "ccBGSSSE057_ArmorStalhrimGauntlets",
+        "type": "ARMO FULL",
+        "original": "Stalhrim Fur Gauntlets",
+        "string": "Gantelets de stalhrim fourr\u00e9s"
+    },
+    {
+        "editor_id": "ccBGSSSE057_SkjolNote",
+        "type": "BOOK FULL",
+        "original": "Skjol's Journal",
+        "string": "Journal de Skjol"
+    },
+    {
+        "editor_id": "ccBGSSSE057_Quest",
+        "type": "QUST NNAM",
+        "original": "Retrieve the armor",
+        "string": "R\u00e9cup\u00e9rez l'armure."
+    },
+    {
+        "editor_id": "ccBGSSSE057_Quest",
+        "type": "QUST FULL",
+        "original": "Ancient Ice",
+        "string": "Givre antique"
+    },
+    {
+        "editor_id": "ccBGSSSE057_Quest",
+        "type": "QUST NNAM",
+        "original": "Kill Skjol",
+        "string": "Tuez Skjol."
+    },
+    {
+        "editor_id": "ccBGSSSE057_TreasCorpseBanditNordMale",
+        "type": "NPC_ FULL",
+        "original": "Skaal Villager",
+        "string": "Villageois de Skaal"
+    },
+    {
+        "editor_id": "ccBGSSSE057_Quest",
+        "type": "QUST NNAM",
+        "original": "Search the island for stalhrim",
+        "string": "Cherchez du stalhrim sur l'\u00eele."
+    },
+    {
+        "editor_id": "ccBGSSSE057_MiscQuest",
+        "type": "QUST NNAM",
+        "original": "Search the camp near Skaal Village",
+        "string": "Fouillez le camp pr\u00e8s du village de Skaal."
+    },
+    {
+        "editor_id": "ccBGSSSE057_Skjol",
+        "type": "NPC_ FULL",
+        "original": "Skjol the Tongueless",
+        "string": "Skjol le muet"
+    },
+    {
+        "editor_id": "ccBGSSSE057_SkjolNote",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"20\">\nTyra tell Skjol to wait, so he wait. But then he meet nice man from village, who show him magic ice. He call it stalhrim.\n\nSkjol like stalhrim. He like way it look. He like way it sound. H is silent, just like Skjol, because Skjol have no tongue. \n\nBut Skjol's axe is loud. It make good crunch noise in ice.\n\nBut stalhrim make different noise. Most ice go \"REEEEE!\" but magic ice go \"UNFH!\"\n\nSkjol should be bard. \n\nNice man say there island north of Cassookar...Cassookarst...he say there island all way north with much magic ice. The kind Skjol can wear.\n\nSkjol think man very nice, he sorry he have to crush him.</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"20\">\nTyra dit \u00e0 Skjol d'attendre, alors il attend. Et apr\u00e8s, il rencontre type sympa du village qui lui montre de la glace magique. Il dit que \u00e7a s'appelle stalhrim.\n\nSkjol aime bien stalhrim. C'est joli. \u00c7a fait un joli bruit. On entend pas le H, comme Skjol, parce que Skjol a pas de langue. \n\nMais la hache de Skjol parle pour lui. Elle fait un joli bruit contre la glace.\n\nMais stalhrim, \u00e7a fait un bruit diff\u00e9rent. D'habitude, la glace, \u00e7a fait \"CRIIII\u00a0!\", mais la glace magique fait plut\u00f4t \"UNFH\u00a0!\"\n\nSkjol devrait \u00eatre barde. \n\nLe type sympa parlait d'une \u00eele au nord de Cassookar... Cassookarst... il dit qu'il y a une \u00eele tout au nord remplie de glace magique. De la glace que Skjol pourrait porter.\n\nSkjol trouve le type tr\u00e8s gentil, dommage de devoir l'\u00e9craser.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE057_Quest",
+        "type": "QUST CNAM",
+        "original": "At a camp to the south of Skaal Village, I found a dead villager and a journal. The journal implies a warrior named Skjol killed the villager and went north in search of stalhrim. I should investigate the area and see what I can find.",
+        "string": "Dans un camp situ\u00e9 au sud du village de Skaal, j'ai trouv\u00e9 un cadavre de villageois et son journal. Il indique qu'un guerrier nomm\u00e9 Skjol l'aurait tu\u00e9 et aurait gagn\u00e9 le nord \u00e0 la recherche de stalhrim. Je vais explorer le coin pour en savoir plus."
+    },
+    {
+        "editor_id": "ccBGSSSE057_Quest",
+        "type": "QUST CNAM",
+        "original": "At a camp to the south of Skaal Village, I found a dead villager and a journal. The journal implies a warrior named Skjol killed the villager and went north in search of stalhrim. At the location I found a burial tomb and was attacked by a Nord. I defeated the Nord and claimed the armor he uncovered.",
+        "string": "Dans un camp situ\u00e9 au sud du village de Skaal, j'ai trouv\u00e9 un cadavre de villageois et son journal. Il indique qu'un guerrier nomm\u00e9 Skjol l'aurait tu\u00e9 et aurait gagn\u00e9 le nord \u00e0 la recherche de stalhrim. J'ai trouv\u00e9 sur place un tombeau et ai subi l'attaque d'un Nordique. Je l'ai vaincu et ai r\u00e9cup\u00e9r\u00e9 l'armure qu'il avait d\u00e9couverte."
+    },
+    {
+        "editor_id": "ccBGSSSE057_Quest",
+        "type": "QUST CNAM",
+        "original": "At a camp to the south of Skaal Village, I found a dead villager and a journal. The journal implies a warrior named Skjol killed the villager and went north in search of stalhrim. At the location I found a burial tomb and was attacked by a Nord. I defeated the Nord and can now claim the armor he uncovered.",
+        "string": "Dans un camp situ\u00e9 au sud du village de Skaal, j'ai trouv\u00e9 un cadavre de villageois et son journal. Il indique qu'un guerrier nomm\u00e9 Skjol l'aurait tu\u00e9 et aurait gagn\u00e9 le nord \u00e0 la recherche de stalhrim. J'ai trouv\u00e9 sur place un tombeau et ai subi l'attaque d'un Nordique. Je l'ai vaincu et peux d\u00e9sormais r\u00e9cup\u00e9rer l'armure qu'il avait d\u00e9couverte."
+    },
+    {
+        "editor_id": "ccBGSSSE057_Quest",
+        "type": "QUST CNAM",
+        "original": "At a camp to the south of Skaal Village, I found a dead villager and a journal. The journal implies a warrior named Skjol killed the villager and went north in search of stalhrim. At the location I found a burial tomb and was attacked by a Nord.",
+        "string": "Dans un camp situ\u00e9 au sud du village de Skaal, j'ai trouv\u00e9 un cadavre de villageois et son journal. Il indique qu'un guerrier nomm\u00e9 Skjol l'aurait tu\u00e9 et aurait gagn\u00e9 le nord \u00e0 la recherche de stalhrim. J'ai trouv\u00e9 sur place un tombeau et ai subi l'attaque d'un Nordique."
+    }
+]

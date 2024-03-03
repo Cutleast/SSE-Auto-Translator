@@ -1,0 +1,116 @@
+[
+    {
+        "editor_id": "ccBGSSSE007_Quest",
+        "type": "QUST NNAM",
+        "original": "Find the Lost Paladin",
+        "string": "Busca al palad\u00edn perdido."
+    },
+    {
+        "editor_id": "ccBGSSSE007_Chrysamere_abAbsorbMagicka",
+        "type": "SPEL FULL",
+        "original": "Chrysamere - Absorb Magicka",
+        "string": "Chrysamere: absorci\u00f3n de magia"
+    },
+    {
+        "editor_id": "ccBGSSSE007_FortifyHealRateCombat",
+        "type": "MGEF FULL",
+        "original": "Fortified Combat Healing",
+        "string": "Curaci\u00f3n reforzada en combate"
+    },
+    {
+        "editor_id": "ccBGSSSE007_EnchChrysamere",
+        "type": "ENCH FULL",
+        "original": "Chrysamere Enchantment",
+        "string": "Encantamiento de Chrysamere"
+    },
+    {
+        "editor_id": "ccBGSSSE007_Chrysamere_abRegenHealth",
+        "type": "SPEL FULL",
+        "original": "Chrysamere - regen health",
+        "string": "Chrysamere: regeneraci\u00f3n de salud"
+    },
+    {
+        "editor_id": "ccBGSSSE007_Chrysamere_AbsorbSpellChance",
+        "type": "MGEF DNAM",
+        "original": "When equipped grants <15>% resist fire, <10>% absorb magic, slow health regen during combat.",
+        "string": "Cuando est\u00e1 equipado concede <15>% de resistencia al fuego, <10>% de absorci\u00f3n de magia y regeneraci\u00f3n de salud lenta durante el combate."
+    },
+    {
+        "editor_id": "ccBGSSSE007_Chrysamere_Effect",
+        "type": "MGEF DNAM",
+        "original": "When equipped grants <15>% resist fire, <10>% absorb magic, slow health regen during combat.",
+        "string": "Cuando est\u00e1 equipado concede <15>% de resistencia al fuego, <10>% de absorci\u00f3n de magia y regeneraci\u00f3n de salud lenta durante el combate."
+    },
+    {
+        "editor_id": "ccBGSSSE007_LvlGhostPaladin",
+        "type": "NPC_ FULL",
+        "original": "Lost Paladin",
+        "string": "Palad\u00edn perdido"
+    },
+    {
+        "editor_id": "ccBGSSSE007_Chrysamere_abResistFire",
+        "type": "SPEL FULL",
+        "original": "Chrysamere - Resist Fire",
+        "string": "Chrysamere: resistencia al fuego"
+    },
+    {
+        "editor_id": "ccBGSSSE007_Quest",
+        "type": "QUST FULL",
+        "original": "The Lost Paladin",
+        "string": "El palad\u00edn perdido"
+    },
+    {
+        "editor_id": "ccBGSSSE007_Chrysamere_AbsorbSpellChance",
+        "type": "MGEF FULL",
+        "original": "Chrysamere",
+        "string": "Absorci\u00f3n de hechizos"
+    },
+    {
+        "editor_id": "ccBGSSSE007_AbResistFire",
+        "type": "MGEF FULL",
+        "original": "Resist Fire",
+        "string": "Resistencia al fuego"
+    },
+    {
+        "editor_id": "ccBGSSSE007_FortifyHealRateCombat",
+        "type": "MGEF DNAM",
+        "original": "Slow health regen during combat.",
+        "string": "Cuando est\u00e1 equipado concede <15>% de resistencia al fuego, <10>% de absorci\u00f3n de magia y regeneraci\u00f3n de salud lenta durante el combate."
+    },
+    {
+        "editor_id": "ccBGSSSE007_AbResistFire",
+        "type": "MGEF DNAM",
+        "original": "<15>% resist fire.",
+        "string": "Cuando est\u00e1 equipado concede <15>% de resistencia al fuego, <10>% de absorci\u00f3n de magia y regeneraci\u00f3n de salud lenta durante el combate."
+    },
+    {
+        "editor_id": "Forelhost01",
+        "type": "CELL FULL",
+        "original": "Forelhost Stronghold",
+        "string": "Fortaleza de Hueste de Forel"
+    },
+    {
+        "editor_id": "Forelhost03",
+        "type": "CELL FULL",
+        "original": "Forelhost Refectory",
+        "string": "Refectorio de Hueste de Forel"
+    },
+    {
+        "editor_id": "Forelhost02",
+        "type": "CELL FULL",
+        "original": "Forelhost Crypt",
+        "string": "Cripta de Hueste de Forel"
+    },
+    {
+        "editor_id": "ccBGSSSE007_Quest",
+        "type": "QUST CNAM",
+        "original": "I've heard a rumor about the location of the Lost Paladin, the last warrior to wield Chrysamere.",
+        "string": "He o\u00eddo un rumor sobre la ubicaci\u00f3n del palad\u00edn perdido, el \u00faltimo guerrero que blandi\u00f3 a Chrysamere."
+    },
+    {
+        "editor_id": "ccBGSSSE007_Quest",
+        "type": "QUST CNAM",
+        "original": "I fought the ghost of the Lost Paladin and claimed Chrysamere for myself.",
+        "string": "He peleado contra el fantasma del palad\u00edn perdido y he reclamado Chrysamere."
+    }
+]

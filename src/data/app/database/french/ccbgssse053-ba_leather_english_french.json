@@ -1,0 +1,200 @@
+[
+    {
+        "editor_id": "ccBGSSSE053_ArmorBladesBoots",
+        "type": "ARMO FULL",
+        "original": "Leather Scout Boots",
+        "string": "Bottes de cuir d'\u00e9claireur"
+    },
+    {
+        "editor_id": "ccBGSSSE053_ArmorBladesGauntlets",
+        "type": "ARMO FULL",
+        "original": "Leather Scout Gauntlets",
+        "string": "Gantelets de cuir d'\u00e9claireur"
+    },
+    {
+        "editor_id": "ccBGSSSE053_ArmorBladesHelmet",
+        "type": "ARMO FULL",
+        "original": "Leather Scout Helmet",
+        "string": "Casque de cuir d'\u00e9claireur"
+    },
+    {
+        "editor_id": "ccBGSSSE053_ArmorBladesCuirass",
+        "type": "ARMO FULL",
+        "original": "Leather Scout Armor",
+        "string": "Armure de cuir d'\u00e9claireur"
+    },
+    {
+        "editor_id": "ccBGSSSE053_EhlhielNote",
+        "type": "BOOK FULL",
+        "original": "Ehlhiel's Journal",
+        "string": "Journal d'Ehlhiel"
+    },
+    {
+        "editor_id": "ccBGSSSE053_ZahariaNote",
+        "type": "BOOK FULL",
+        "original": "Zaharia's Note",
+        "string": "Message de Zaharia"
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "type": "QUST NNAM",
+        "original": "Inspect the body",
+        "string": "Examinez le corps"
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "type": "QUST NNAM",
+        "original": "Defeat Zaharia",
+        "string": "Neutralisez Zaharia"
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "type": "QUST NNAM",
+        "original": "Defeat Ehlhiel",
+        "string": "Neutralisez Ehlhiel"
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "type": "QUST NNAM",
+        "original": "(Optional) Disrupt Zaharia's plan and remove the letter",
+        "string": "(Optionnel) Contrecarrez le plan de Zaharia et jetez la lettre"
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "type": "QUST NNAM",
+        "original": "Go to Lost Echo Cave",
+        "string": "Allez \u00e0 la grotte de l'\u00c9cho perdu"
+    },
+    {
+        "editor_id": "ccBGSSSE053_Dossier",
+        "type": "BOOK FULL",
+        "original": "Guard's Dossier: Ehlhiel",
+        "string": "Dossier de la garde\u00a0: Ehlhiel"
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "type": "QUST NNAM",
+        "original": "Look for a note at Cliffside Retreat",
+        "string": "Cherchez une note au Repaire de la falaise"
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "type": "QUST FULL",
+        "original": "Double-Edged",
+        "string": "\u00c0 double tranchant"
+    },
+    {
+        "editor_id": "ccBGSSSE053_MeetNote",
+        "type": "BOOK FULL",
+        "original": "Note to Ehlhiel",
+        "string": "Note \u00e0 l'attention d'Ehlhiel"
+    },
+    {
+        "editor_id": "ccBGSSSE053_MiscQuest",
+        "type": "QUST NNAM",
+        "original": "Look for a note at Cliffside Retreat",
+        "string": "Cherchez une note au Repaire de la falaise"
+    },
+    {
+        "editor_id": "ccBGSSSE053_ArmorBladesCuirassEnchanted",
+        "type": "ARMO FULL",
+        "original": "Leather Scout Armor",
+        "string": "Armure de cuir d'\u00e9claireur"
+    },
+    {
+        "editor_id": "ccBGSSSE053_ArmorBladesBootsEnchanted",
+        "type": "ARMO FULL",
+        "original": "Leather Scout Boots",
+        "string": "Bottes de cuir d'\u00e9claireur"
+    },
+    {
+        "editor_id": "ccBGSSSE053_ArmorBladesHelmetEnchanted",
+        "type": "ARMO FULL",
+        "original": "Leather Scout Helmet",
+        "string": "Casque de cuir d'\u00e9claireur"
+    },
+    {
+        "editor_id": "ccBGSSSE053_ArmorBladesGauntletsEnchanted",
+        "type": "ARMO FULL",
+        "original": "Leather Scout Gauntlets",
+        "string": "Gantelets de cuir d'\u00e9claireur"
+    },
+    {
+        "editor_id": "LostEchoCave01",
+        "type": "CELL FULL",
+        "original": "Lost Echo Cave",
+        "string": "Grotte de l'\u00c9cho perdu"
+    },
+    {
+        "editor_id": "Tamriel",
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Bordeciel"
+    },
+    {
+        "editor_id": "SolitudeTempleoftheDivines",
+        "type": "CELL FULL",
+        "original": "Temple of the Divines",
+        "string": "Temple des Divins"
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "type": "QUST CNAM",
+        "original": "At Cliffside Retreat, I found a dossier that implies a Blades agent has become an asset of the Thalmor. The accompanying note said that another agent, Zaharia, intended to enact revenge by arranging a meeting at Lost Echo Cave. I traveled to the cave and was attacked by a hostile agent, whom I defeated.",
+        "string": "Au Repaire de la falaise, j'ai trouv\u00e9 un dossier affirmant qu'un agent des Lames est devenu un agent du Thalmor. La note qui l'accompagnait disait qu'un autre agent, Zaharia, comptait se venger de lui en organisant une rencontre \u00e0 la grotte de l'\u00c9cho perdu. J'ai voyag\u00e9 jusqu'\u00e0 la grotte et un agent hostile s'en est pris \u00e0 moi. Je n'ai eu d'autre choix que de me d\u00e9fendre et de l'\u00e9liminer."
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "type": "QUST CNAM",
+        "original": "At Cliffside Retreat, I found a dossier that implies a Blades agent has become an asset of the Thalmor. The accompanying note said that another agent, Zaharia, intended to enact revenge by arranging a meeting at Lost Echo Cave. I traveled to the cave and was attacked by a hostile agent.",
+        "string": "Au Repaire de la falaise, j'ai trouv\u00e9 un dossier affirmant qu'un agent des Lames est devenu un agent du Thalmor. La note qui l'accompagnait disait qu'un autre agent, Zaharia, comptait se venger de lui en organisant une rencontre \u00e0 la grotte de l'\u00c9cho perdu. J'ai voyag\u00e9 jusqu'\u00e0 la grotte et un agent hostile s'en est pris \u00e0 moi."
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "type": "QUST CNAM",
+        "original": "At Cliffside Retreat, I found a dossier that implies a Blades agent has become an asset of the Thalmor. The accompanying note says that another agent, Zaharia, intends to enact revenge by arranging a meeting at Lost Echo Cave. I decided to save the Thalmor agent by intercepting the note at the Temple of Divines.",
+        "string": "Au Repaire de la falaise, j'ai trouv\u00e9 un dossier affirmant qu'un agent des Lames est devenu un agent du Thalmor. La note qui l'accompagnait dit qu'un autre agent, Zaharia, compte se venger de lui en organisant une rencontre \u00e0 la grotte de l'\u00c9cho perdu. J'ai d\u00e9cid\u00e9 de sauver l'agent du Thalmor en interceptant la note au Temple des Divins."
+    },
+    {
+        "editor_id": "ccBGSSSE053_MeetNote",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>\nSomething's come up. Meet me at Lost Echo Cave. \n\nCome alone.\n</font>\n\n",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\nIl se trame quelque chose. Retrouvez-moi \u00e0 la grotte de l'\u00c9cho perdu. \n\nVenez seul.\n</font>\n\n"
+    },
+    {
+        "editor_id": "ccBGSSSE053_Dossier",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\nStatus: Asset (cooperative), Active\n\nDescription: Male, Bosmer, late 30s\n\nBackground:\nEhlhiel was adopted by the Crimson Dirks at a young age and trained at their hideout in the Heartlands of Cyrodiil. Some intelligence suggests his parents may have been killed by the bandits, and the child taken in as hostage.\n\nOperational Notes:\nOriginally identified as a possible mole due to his background, Ehlhiel was fed the information regarding his parents and recruited as an asset. In the years following, he proved to be a valuable source of information in identifying bandit groups, as well as helping the Imperial City guard expunge the Crimson Dirks from Cyrodiil.\n\nCurrently, Ehlhiel continues to serve both the East Empire Company and the guard captains in Skyrim by providing information on fugitives that fled north after the purge. Meetings can be set up by placing a note behind the Shrine of Akatosh in Solitude. Any additional contact should be arranged through the appropriate channels.</font>",
+        "string": "<font face='$HandwrittenFont'>\n\u00c9tat actuel : agent actif (coop\u00e9ratif)\n\nDescription : homme, Bosmer, proche des 40 ans\n\nAnt\u00e9c\u00e9dents\u00a0:\nD\u00e8s son plus jeune \u00e2ge, Ehlhiel a \u00e9t\u00e9 adopt\u00e9 par les Dagues Empourpr\u00e9es et entra\u00een\u00e9 dans leur repaire au c\u0153ur de Cyrodiil. Nos renseignements sugg\u00e8rent que ses parents ont \u00e9t\u00e9 tu\u00e9s par les bandits, et l'enfant pris en otage.\n\nNotes op\u00e9rationnelles\u00a0:\nIdentifi\u00e9 \u00e0 l'origine comme taupe potentielle en raison de son parcours, Ehlhiel a \u00e9t\u00e9 mis au courant pour ses parents et recrut\u00e9 comme agent. Dans les ann\u00e9es qui ont suivi, il s'est r\u00e9v\u00e9l\u00e9 tr\u00e8s utile dans l'identification des groupes de bandits et a ainsi aid\u00e9 la garde de la Cit\u00e9 imp\u00e9riale \u00e0 ex\u00e9cuter les membres des Dagues Empourpr\u00e9es pr\u00e9sents \u00e0 Cyrodiil.\n\nActuellement, Ehlhiel continue de servir \u00e0 la fois la Compagnie de l'Empire oriental et les capitaines de la garde \u00e0 Bordeciel en leur offrant des informations sur des fugitifs ayant fui au nord avant la purge. Il est possible de le rencontrer en pla\u00e7ant une note derri\u00e8re l'autel d'Akatosh \u00e0 Solitude. Tout contact suppl\u00e9mentaire doit \u00eatre arrang\u00e9 en passant par les canaux appropri\u00e9s.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "type": "QUST CNAM",
+        "original": "At Cliffside Retreat, I found a dossier that implies a Blades agent has become an asset of the Thalmor. The accompanying note says that another agent, Zaharia, intends to enact revenge by arranging a meeting at Lost Echo Cave. I can save the Thalmor agent by intercepting her note, or try to help Zaharia by going to the cave.",
+        "string": "Au Repaire de la falaise, j'ai trouv\u00e9 un dossier affirmant qu'un agent des Lames est devenu un agent du Thalmor. La note qui l'accompagnait dit qu'un autre agent, Zaharia, compte se venger de lui en organisant une rencontre \u00e0 la grotte de l'\u00c9cho perdu. Je peux sauver l'agent du Thalmor en interceptant sa note, ou essayer d'aider Zaharia en me rendant \u00e0 la grotte."
+    },
+    {
+        "editor_id": "ccBGSSSE053_EhlhielNote",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>\nTyra was too stubborn to realize it. The Crimson Dirks were done. They knew our names and our faces. If the city guard didn't catch us, it'd be The East Empire Company, or any of the other guilds and Great Houses we pissed off along the way. The way I see it, I just gave them a head start.\n\nMy job was to set the hideout ablaze, and let the Legionnaires pick off the bandits while they burned. Just goes to show how cowardly the tin men in uniform really are. They were never one for a fair fight or a fair deal, but hey, neither was I.\n\nThe guard captain was too busy smelling his own wind to realize we were burning long dead corpses. The Crimson Dirks were already gone. \n\nIt was an even trade. A head start for a head start. So long as I kept my part of the bargain, they wouldn't find out about theirs. \n\nStill, it was only a matter of time before they caught on. And while they weren't aware of my part in the escape, now they want me to help with their capture. They've put everything I've told them into neat little dossiers, which they can pass around to the captains. I wonder if they even have one on me.\n\nI only told Pale-Eyes about the cost of our freedom. The rest of them wouldn't understand. They couldn't deal with the guilt. But I had to tell somebody, because as it turns out, neither could I.</font>",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\nTyra \u00e9tait trop born\u00e9e pour le r\u00e9aliser\u00a0: les Dagues Empourpr\u00e9es \u00e9taient condamn\u00e9es. Ils connaissaient nos noms et nos visages. Si ce n'\u00e9tait pas la garde qui nous avait mis le grappin dessus, \u00e7a aurait \u00e9t\u00e9 la Compagnie de l'Empire oriental, ou bien n'importe quelle guilde ou grande maison que nous avions agac\u00e9e. De mon point de vue, je n'ai fait que leur donner un petit coup de pouce.\n\nMon boulot \u00e9tait de br\u00fbler le repaire et de laisser les l\u00e9gionnaires s'occuper des fuyards qui n'avaient pas p\u00e9ri dans l'incendie. \u00c7a montre bien \u00e0 quel point les hommes en uniforme ne sont que des couards. Combattre \u00e0 la loyale n'a jamais \u00e9t\u00e9 leur fort, mais... j'avoue que \u00e7a n'a jamais \u00e9t\u00e9 le mien non plus.\n\nLe capitaine de la garde \u00e9tait trop occup\u00e9 \u00e0 contempler le repaire en flammes pour r\u00e9aliser que les corps qui br\u00fblaient \u00e9taient des cadavres putr\u00e9fi\u00e9s depuis longtemps. Les Dagues Empourpr\u00e9es avaient d\u00e9j\u00e0 disparu. \n\nC'\u00e9tait un march\u00e9 \u00e9quitable. Un coup de pouce pour un coup de pouce. Tant que je respectais ma part du march\u00e9, ils ne fouineraient pas trop. \n\nMais ce n'\u00e9tait qu'une question de temps avant qu'ils ne comprennent la supercherie. Et bien qu'ils n'\u00e9taient pas au courant de mon r\u00f4le dans la fuite de mes camarades, ils ont voulu que j'aide \u00e0 les traquer. Ils ont compil\u00e9 tout ce que je leur ai dit dans de jolis petits dossiers, qu'ils ont ensuite distribu\u00e9s \u00e0 leurs capitaines. Je me demande s'ils en ont un sur moi...\n\nJe n'ai os\u00e9 avouer le co\u00fbt de notre libert\u00e9 qu'\u00e0 Yeux-P\u00e2les. Les autres n'auraient pas compris. Ils n'auraient pas support\u00e9 la culpabilit\u00e9. Mais il fallait que je vide mon sac aupr\u00e8s de quelqu'un, car il s'est av\u00e9r\u00e9 que moi non plus, en fin de compte."
+    },
+    {
+        "editor_id": "ccBGSSSE053_ZahariaNote",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>\n\"Asset.\" \n\nThat's what the dossier called him. It took a while before I got past that word and found a way to stomach the rest of it. At the time, I was hurt. Now, I'm just mad.\n\nIt all started when I killed this officer on a lark. It probably wasn't the smartest thing. They're like cockroaches, you can't kill them all. But I'd be lying if I said it didn't feel good to try.\n\nSo it wasn't like I knew what he was up to when I confronted him. I didn't expect to find anything useful on his corpse either. But then I found the dossier, and now I know the truth. Ehlhiel betrayed us. \n\nFinding the traitorous bastard won't be easy, but I've got a plan. The dossier says they arrange meetings with him by placing a note at the Temple of the Divines, underneath a vase of tundra cotton. I'll place one there and have him meet me at Lost Echo Cave. Then I'll gut the lying little weasel and show him just how much of an asset he really is.</font>\n\n",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\n\"Agent\". \n\nC'est sous cet intitul\u00e9 qu'il \u00e9tait pr\u00e9sent\u00e9 dans le dossier. Il m'a fallu un moment pour le dig\u00e9rer et avoir le cran de lire la suite. \u00c7a m'a fait mal, quand je l'ai appris. Maintenant, \u00e7a me rend juste dingue.\n\nTout a commenc\u00e9 quand j'ai tu\u00e9 cet officier pour rigoler un peu. Pas le truc le plus malin \u00e0 faire, je le con\u00e7ois. Et puis c'est comme les cafards, on ne peut jamais tous les tuer. Mais je mentirais si je disais que \u00e7a n'a pas \u00e9t\u00e9 agr\u00e9able d'essayer.\n\nBref, je ne savais pas ce qu'il fabriquait quand je l'ai pris \u00e0 partie. Je ne m'attendais pas non plus \u00e0 trouver quelque chose d'utile sur son cadavre. Mais j'ai trouv\u00e9 ce dossier, et maintenant je connais la v\u00e9rit\u00e9. Ehlhiel nous a trahis. \n\nTrouver cette ordure ne sera pas facile, mais j'ai un plan. Le dossier affirme qu'ils organisent des rencontres avec lui en pla\u00e7ant une note au Temple des Divins, sous un vase rempli de coton sauvage. J'en placerai donc une pour qu'il me retrouve \u00e0 la grotte de l'\u00c9cho perdu. Ensuite, j'\u00e9gorgerai cette petite fouine et lui montrerai qu'il ne valait pas un clou comme agent.</font>\n\n"
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "type": "QUST CNAM",
+        "original": "At Cliffside Retreat, I found a dossier that implies a Blades agent has become an asset of the Thalmor. The accompanying note says that another agent, Zaharia, intends to enact revenge by arranging a meeting at Lost Echo Cave. I traveled to the cave and was attacked by a hostile agent.",
+        "string": "Au Repaire de la falaise, j'ai trouv\u00e9 un dossier affirmant qu'un agent des Lames est devenu un agent du Thalmor. La note qui l'accompagnait dit qu'un autre agent, Zaharia, compte se venger de lui en organisant une rencontre \u00e0 la grotte de l'\u00c9cho perdu. J'ai voyag\u00e9 jusqu'\u00e0 la grotte et un agent hostile s'en est pris \u00e0 moi."
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "type": "QUST CNAM",
+        "original": "Hunters in Skyrim are known to have retreats in the mountains with supplies and food. If I'm ever in the area near Solitude, I should stop by Cliffside Retreat.",
+        "string": "Les chasseurs de Bordeciel sont r\u00e9put\u00e9s pour avoir des repaires un peu partout dans les montagnes, avec de l'\u00e9quipement et des provisions. Si jamais je venais \u00e0 m'aventurer pr\u00e8s de Solitude, je ferais bien de m'arr\u00eater dans le Repaire de la falaise."
+    }
+]

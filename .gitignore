@@ -1,0 +1,13 @@
+tests
+StringMerger
+SSE-AT
+.vscode
+.venv
+**.old
+*.7z
+*.code-workspace
+__pycache__
+/src/data/app/config.json
+/src/data/app/user
+/src/data/translator
+/src/data/logs

@@ -1,0 +1,248 @@
+[
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "type": "QUST FULL",
+        "original": "Caught in a Web",
+        "string": "Atrapados en una telara\u00f1a"
+    },
+    {
+        "editor_id": "ccBGSSSE069_GrenwulfSpiderWeb",
+        "type": "CONT FULL",
+        "original": "Grenwulf the Brawler",
+        "string": "Grenwulf el Pendenciero"
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "type": "QUST NNAM",
+        "original": "Defeat the Web Mother",
+        "string": "Derrota a la Madre de las Telara\u00f1as."
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "type": "QUST NNAM",
+        "original": "Search Cronvangr Cave for the two heroes",
+        "string": "Busca a los dos h\u00e9roes en la cueva de Cronvangr."
+    },
+    {
+        "editor_id": "ccBGSSSE069_Grenwulf",
+        "type": "NPC_ FULL",
+        "original": "Grenwulf the Brawler",
+        "string": "Grenwulf el Pendenciero"
+    },
+    {
+        "editor_id": "ccBGSSSE069_HolrikNPC",
+        "type": "NPC_ FULL",
+        "original": "Holrik Frost-Sword",
+        "string": "Holrik Hojascarcha"
+    },
+    {
+        "editor_id": "ccBGSSSE069_ObserversJournal",
+        "type": "BOOK FULL",
+        "original": "Adonato Leotelli's Journal",
+        "string": "Diario de Adonato Leotelli"
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "type": "QUST NNAM",
+        "original": "Speak to the Heroes",
+        "string": "Habla con los h\u00e9roes."
+    },
+    {
+        "editor_id": "ccBGSSSE069_WebMother",
+        "type": "NPC_ FULL",
+        "original": "Web Mother",
+        "string": "Madre de las Telara\u00f1as"
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "type": "QUST NNAM",
+        "original": "Investigate Candlehearth Hall",
+        "string": "Investiga el sal\u00f3n El calor de la vela."
+    },
+    {
+        "editor_id": "ccBGSSSE069_IceBladeMonarch",
+        "type": "WEAP FULL",
+        "original": "Ice Blade of the Monarch",
+        "string": "Hoja de hielo del monarca"
+    },
+    {
+        "editor_id": "ccBGSSSE069_HolrikSpiderWeb",
+        "type": "CONT FULL",
+        "original": "Holrik Frost-Sword",
+        "string": "Holrik Hojascarcha"
+    },
+    {
+        "editor_id": "ccBGSSSE069_FistsofRandagulf",
+        "type": "ARMO FULL",
+        "original": "Fists of Randagulf",
+        "string": "Pu\u00f1os de Randagulf"
+    },
+    {
+        "editor_id": "ccBGSSSE069_GrenNote",
+        "type": "BOOK FULL",
+        "original": "Grenwulf's Note",
+        "string": "Nota de Grenwulf"
+    },
+    {
+        "editor_id": "ccBGSSSE069_HolrikNote",
+        "type": "BOOK FULL",
+        "original": "Holrik's Note",
+        "string": "Nota de Holrik"
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "type": "QUST NNAM",
+        "original": "Inspect Grenwulf's corpse",
+        "string": "Inspecciona el cad\u00e1ver de Grenwulf."
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "type": "QUST NNAM",
+        "original": "Inspect Holrik's corpse",
+        "string": "Inspecciona el cad\u00e1ver de Holrik."
+    },
+    {
+        "editor_id": "ccBGSSSE069_EnchFortifyOneHandedConstantSelf",
+        "type": "MGEF DNAM",
+        "original": "Melee and unarmed attacks do <mag>% more damage. Block <mag>% more damage with your shield.",
+        "string": "Los ataques cuerpo a cuerpo y sin armas causan un <mag>% m\u00e1s de da\u00f1o. Bloqueas un <mag>% m\u00e1s de da\u00f1o con el escudo."
+    },
+    {
+        "editor_id": "ccBGSSSE069_EnchFortifyOneHandedConstantSelf",
+        "type": "MGEF FULL",
+        "original": "Fists of Randagulf",
+        "string": "Pu\u00f1os de Randagulf"
+    },
+    {
+        "editor_id": "ccBGSSSE069_crSpiderSpitFFAimed",
+        "type": "MGEF DNAM",
+        "original": "A blood-freezing poison that does <mag> points of damage to Health and Stamina per second.",
+        "string": "Un veneno que congela la sangre e inflige <mag> puntos de da\u00f1o a la salud y al aguante por segundo."
+    },
+    {
+        "editor_id": "ccBGSSSE069_FrostbiteSpiderRaceGiant",
+        "type": "RACE FULL",
+        "original": "Web Mother",
+        "string": "Madre de las Telara\u00f1as"
+    },
+    {
+        "editor_id": "ccBGSSSE069_crSpiderSpitFFAimed",
+        "type": "MGEF FULL",
+        "original": "Spider Spit",
+        "string": "Saliva de ara\u00f1a"
+    },
+    {
+        "editor_id": "ccBGSSSE069_crSpiderBiteFFContact",
+        "type": "MGEF DNAM",
+        "original": "A blood-freezing poison that does <mag> points of damage to Health and Stamina per second.",
+        "string": "Un veneno que congela la sangre e inflige <mag> puntos de da\u00f1o a la salud y al aguante por segundo."
+    },
+    {
+        "editor_id": "ccBGSSSE069_crSpider03PoisonSpit",
+        "type": "SPEL FULL",
+        "original": "Frostbite Poison",
+        "string": "Veneno congelador"
+    },
+    {
+        "editor_id": "ccBGSSSE069_crSpiderBiteFFContact",
+        "type": "MGEF FULL",
+        "original": "Spider Bite",
+        "string": "Picadura de ara\u00f1a"
+    },
+    {
+        "editor_id": "ccBGSSSE069_EnchFortifyTwoHandedConstantSelf",
+        "type": "MGEF FULL",
+        "original": "Fortify Two-Handed",
+        "string": "Reforzar a dos manos"
+    },
+    {
+        "editor_id": "ccBGSSSE069_crSpider03PoisonBite",
+        "type": "SPEL FULL",
+        "original": "Web Mother Bite",
+        "string": "Picadura de la Madre de las Telara\u00f1as"
+    },
+    {
+        "editor_id": "ccBGSSSE069_EnchRandagulf",
+        "type": "ENCH FULL",
+        "original": "Fists of Randagulf",
+        "string": "Pu\u00f1os de Randagulf"
+    },
+    {
+        "editor_id": "ccBGSSSE069_AbFortifyUnarmedDamage",
+        "type": "MGEF FULL",
+        "original": "Fortify Unarmed Damage",
+        "string": "Reforzar da\u00f1o sin armas"
+    },
+    {
+        "editor_id": "ccBGSSSE069_EnchFortifyBlockConstantSelf",
+        "type": "MGEF FULL",
+        "original": "Fortify Blocking",
+        "string": "Reforzar bloqueo"
+    },
+    {
+        "editor_id": "CronvangrHall02",
+        "type": "CELL FULL",
+        "original": "Cronvangr Broodlair",
+        "string": "Guarida de la camada de Cronvangr"
+    },
+    {
+        "editor_id": "WindhelmCandlehearthHall",
+        "type": "CELL FULL",
+        "original": "Candlehearth Hall",
+        "string": "Sal\u00f3n El calor de la vela"
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "type": "QUST CNAM",
+        "original": "I've heard many great warriors have come through Skyrim over the years, and passed through Candlehearth Hall in Windhelm. If I travel there, I may hear some stories of what became of them.",
+        "string": "He o\u00eddo que, en los \u00faltimos a\u00f1os, muchos grandes guerreros que han cruzado Skyrim han pasado por el sal\u00f3n El calor de la vela, en Ventalia. Puede que, si viajo hasta all\u00ed, escuche historias sobre su suerte."
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "type": "QUST CNAM",
+        "original": "I traveled to Candlehearth Hall and read a journal about two warriors, who traveled to Cronvangr Cave to defeat a dangerous Web Mother. I traveled to Cronvangr Cave and found the spider's lair, defeating the Web Mother. I spoke to the heroes who bequeathed me their treasures before fading away.",
+        "string": "He viajado hasta el sal\u00f3n El calor de la vela, donde he le\u00eddo un diario sobre dos guerreros que fueron a la cueva de Cronvangr para enfrentarse a una mort\u00edfera Madre de las Telara\u00f1as. He ido a la cueva a buscar la madriguera de la ara\u00f1a y la he derrotado. Tras hablar con los h\u00e9roes, me han legado sus tesoros antes de desaparecer."
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "type": "QUST CNAM",
+        "original": "I traveled to Candlehearth Hall and read a journal about two warriors, who traveled to Cronvangr Cave to defeat a dangerous Web Mother. I traveled to Cronvangr Cave and found the spider's lair, defeating the Web Mother. After the battle, the heroes rewarded me with their treasures.",
+        "string": "He viajado hasta el sal\u00f3n El calor de la vela, donde he le\u00eddo un diario sobre dos guerreros que fueron a la cueva de Cronvangr para enfrentarse a una mort\u00edfera Madre de las Telara\u00f1as. He ido a la cueva a buscar la madriguera de la ara\u00f1a y la he derrotado. Despu\u00e9s de la batalla, los h\u00e9roes me han recompensado con sus tesoros."
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "type": "QUST CNAM",
+        "original": "I traveled to Candlehearth Hall and read a journal about two warriors, who traveled to Cronvangr Cave to defeat a dangerous spider. I traveled to Cronvangr Cave and found the spider's lair.",
+        "string": "He viajado hasta el sal\u00f3n El calor de la vela, donde he le\u00eddo un diario sobre dos guerreros que fueron a la cueva de Cronvangr para enfrentarse a una mort\u00edfera ara\u00f1a. He ido a la cueva y he encontrado su madriguera."
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "type": "QUST CNAM",
+        "original": "I traveled to Candlehearth Hall and read a journal about two warriors, who traveled to Cronvangr Cave to defeat a dangerous spider. I should travel to the cave and find out what became of them.",
+        "string": "He viajado hasta el sal\u00f3n El calor de la vela, donde he le\u00eddo un diario sobre dos guerreros que fueron a la cueva de Cronvangr para enfrentarse a una mort\u00edfera ara\u00f1a. Deber\u00eda ir a la cueva a ver qu\u00e9 ha sido de ellos."
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "type": "QUST CNAM",
+        "original": "I traveled to Candlehearth Hall and read a journal about two warriors, who traveled to Cronvangr Cave to defeat a dangerous Web Mother. I traveled to Cronvangr Cave and found the spider's lair, defeating the Web Mother.",
+        "string": "He viajado hasta el sal\u00f3n El calor de la vela, donde he le\u00eddo un diario sobre dos guerreros que fueron a la cueva de Cronvangr para enfrentarse a una mort\u00edfera Madre de las Telara\u00f1as. He ido a la cueva, he encontrado la madriguera de la ara\u00f1a y la he derrotado."
+    },
+    {
+        "editor_id": "ccBGSSSE069_ObserversJournal",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\nIt's not uncommon these days to see warriors of great renown pass through Candlehearth Hall, beckoned by the clarion call of war. Many of them seat themselves by the fire, order their spirit of choice, and regale the patrons with stories of their triumphs. \n\nIt is, however, a strange thing to watch such a tale write itself in front of you, but that is precisely what happened when two legendary warriors, Grenwulf the Brawler and Holrik Frost-Sword, sat down at the table beside me.\n\nPerhaps it was the mead that shortened their tempers, but it did not take long for a spirited argument to become heated. Grenwulf, a brawler famous for fighting with only his fists, had compared Holrik to a soldier who fires a trebuchet - a man who is only as dangerous as the tool he employs. \n\nHolrik, for his part, cut right through Grenwulf's claim. If the brawler relied only on his hands, then he should drink his mead from his palm, and slice his bread with his fingernails. \n\nNot to mention there are things in this world, Holrik said, that fists alone cannot kill, even if that fist belonged to Randagulf himself. Whereas his sword, the Ice Blade of the Monarch, was blessed by the strength of the frost itself, and could cut through the walls of ice that lined the edge of the world.\n\nGrenwulf scoffed at the notion, claiming that no man or beast had yet to survive a single punch. \n\nIt was then that the Divines, or perhaps darker minds, offered a resolution. A warrior came bursting through the doors, claiming a monstrous spider had taken root in the Cronvangr Cave, claiming three in his hunting party. His widened eyes and frowned lips, telltale signs of fear, spoke volumes to us all. It was a warning few would fail to heed, but our two heroes saw it as something else entirely - an opportunity to settle their dispute.\n\nAnd so the next morning, they departed for Cronvangr Cave. Three weeks have passed since.\n\nIn my life I have written tales of valor and tragedy, and those that are one and the same. And while the final chapter of Grenwulf and Holrik has yet to be written, I fear this may fall into the latter category, as neither has saw fit to return.</font>",
+        "string": "<font face=\"$HandwrittenFont\">\nEn estos tiempos no es infrecuente ver pasar por el sal\u00f3n El calor de la vela a guerreros de renombre, atra\u00eddos por las fanfarrias de la guerra. Muchos de ellos toman asiento junto al fuego, piden su licor favorito y regalan los o\u00eddos de los parroquianos con historias sobre sus haza\u00f1as.\n\nEn cambio, es m\u00e1s raro ver c\u00f3mo se escribe ante tus ojos uno de esos relatos, pero eso es precisamente lo que sucedi\u00f3 cuando se sentaron a la mesa de al lado dos guerreros legendarios, Grenwulf el Pendenciero y Holrik Hojascarcha.\n\nPuede que fuera cosa de la bebida, pero no tard\u00f3 mucho en estallar una acalorada discusi\u00f3n entre ellos. Grenwulf, un luchador que se ha hecho famoso por pelear solo con sus pu\u00f1os, hab\u00eda comparado a Holrik a un soldado que dispara un fund\u00edbulo, es decir, un hombre cuyo \u00fanico peligro es la herramienta que esgrime.\n\nHolrik replic\u00f3 al momento diciendo que, si el otro solo se fiaba de sus manos, quiz\u00e1 deber\u00eda beber con la palma de la mano y cortar el pan con las u\u00f1as.\n\nPor no hablar de que hay cosas en este mundo, a\u00f1adi\u00f3, que no se pueden matar solo con los pu\u00f1os, aunque estos sean los del mism\u00edsimo Randagulf. Mientras que su espada, la famosa Hoja de hielo del monarca, est\u00e1 bendecida con la fuerza de la escarcha misma y podr\u00eda atravesar la muralla de hielo que rodea el borde del mundo.\n\nGrenwulf se mofo de la idea y respondi\u00f3 que a\u00fan no hab\u00eda conocido hombre o bestia algunos que hubiera sobrevivido a uno de sus pu\u00f1etazos.\n\nEn ese momento intervinieron los Divinos (o qui\u00e9n sabe si alguna influencia m\u00e1s tenebrosa) para resolver al altercado. Un guerrero irrumpi\u00f3 desde el exterior asegurando que una ara\u00f1a monstruosa se hab\u00eda instalado en la cueva de Cronvangr y hab\u00eda acabado con tres de sus compa\u00f1eros de caza. Sus ojos abiertos de par en par y sus labios fruncidos, signos palpables del terror que sent\u00eda, nos dejaron helados hasta los huesos. Era una se\u00f1al que muy pocos se atrever\u00edan a deso\u00edr, pero nuestros dos h\u00e9roes la vieron de un modo totalmente distinto: como la oportunidad perfecta para zanjar su discusi\u00f3n.\n\nAs\u00ed que, a la ma\u00f1ana siguiente, partieron hacia la cueva de Cronvangr. Han pasado tres semanas desde entonces.\n\nA lo largo de mi vida he escrito relatos de valor y de tragedia, y tambi\u00e9n algunos de las dos cosas. Y, aunque el cap\u00edtulo final del de Grenwulf y Holrik a\u00fan est\u00e1 por escribirse, temo que entre en esta \u00faltima categor\u00eda, puesto que ninguno de los dos ha regresado.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE069_HolrikNote",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\nGrenwulf's always been beyond stubborn. On top of that, he lacks patience. When a man like him fails to open a jar, he smashes the glass rather than rely on a cloth for a better grip.\n\nIn Grenwulf's mind, using that cloth is a weakness. In my mind, it's far better not to have your food covered in broken glass.\n\nIt's a shame, because I think he has the talent to be a good swordsman. But his foolish pride won't allow him to admit it.</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\nGrenwulf siempre ha sido un tozudo impenitente. Y, adem\u00e1s, no tiene paciencia. Cuando un hombre como \u00e9l no consigue abrir un tarro, prefiere romper el cristal a usar un trapo para agarrar mejor la tapa.\n\nPara Grenwulf, usar ese trapo es una debilidad. Para m\u00ed, es mucho mejor no tener la comida llena de cristales.\n\nEs una pena, porque creo que tiene talento para la espada, pero su est\u00fapido orgullo no le dejar\u00e1 reconocerlo.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE069_GrenNote",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\nHolrik thinks there's things I can't punch through. But I've punched through walls, and I've punched through men.\n\nI don't care how thick your armor is, my knuckles are thicker. They're hard and calloused and ugly as a Dremora, but they get the job done, no matter what.\n\nI once met a warrior who claimed to have the most impenetrable armor ever known to man. But when we fought, I punched him so hard the shockwaves rearranged every bone in his body, to the point his toes were coming out of his ears.\n\nSo even if the armor doesn't give, the man inside is as soft as jelly. A spider ain't much different. It's got hard parts, and it's got soft parts. When I ball my fist and put all my weight on my back foot, there's nothing anyone can do.</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\nHolrik dice que hay cosas que no puedo atravesar a pu\u00f1etazos. Pero la verdad es que he atravesado muros y hombres.\n\nPor muy gruesa que sea una armadura, mis nudillos lo son m\u00e1s. Son duros, callosos y tan feos como un dremora, pero siempre hacen lo que tienen que hacer.\n\nUna vez conoc\u00ed a un guerrero que dec\u00eda tener la armadura m\u00e1s impenetrable que haya conocido el hombre. Pero, cuando luchamos, lo golpe\u00e9 con tal fuerza que la onda expansiva le removi\u00f3 todos los huesos del cuerpo hasta el punto de sacarle los dedos de los pies por las orejas.\n\nAs\u00ed que, incluso si la armadura no cede, el cuerpo que hay dentro es blando como la gelatina. Y con las ara\u00f1as pasa algo similar. Tienen partes duras y partes blandas. Cuando cierro el pu\u00f1o y apoyo todo el peso en el pie de atr\u00e1s, no hay nada que puedan hacer.</font>"
+    }
+]

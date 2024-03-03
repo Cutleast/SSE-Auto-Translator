@@ -1,0 +1,122 @@
+[
+    {
+        "editor_id": "BGSSSE018ShadowrendEnchAxe",
+        "type": "ENCH FULL",
+        "original": "Shadowrend FX Ench",
+        "string": "Efecto de Shadowrend encantada"
+    },
+    {
+        "editor_id": "BGSSSE018ShadowrendFXAxe",
+        "type": "MGEF FULL",
+        "original": "Shadowrend FX",
+        "string": "Efecto de Shadowrend"
+    },
+    {
+        "editor_id": "BGSSSE018ShadowrendEnchSword",
+        "type": "ENCH FULL",
+        "original": "Shadowrend FX Ench",
+        "string": "Efecto de Shadowrend encantada"
+    },
+    {
+        "editor_id": "BGSSSE018ShadowrendFXSword",
+        "type": "MGEF FULL",
+        "original": "Shadowrend FX",
+        "string": "Efecto de Shadowrend"
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendActivatorWeaponAxe",
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "Coger"
+    },
+    {
+        "editor_id": "BGSSSE018_AbGhostShadowrend",
+        "type": "MGEF FULL",
+        "original": "Shadowrend Ghost Visuals",
+        "string": "Efectos visuales de fantasma de Shadowrend"
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendQuest",
+        "type": "QUST FULL",
+        "original": "Through a Glass, Darkly",
+        "string": "Como en un espejo"
+    },
+    {
+        "editor_id": "BGSSSE018_AbscondSpellShadowrendMagicEffect",
+        "type": "MGEF FULL",
+        "original": "Abscond Spell Magic Effect",
+        "string": "Efecto m\u00e1gico de hechizo de huida"
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendActivatorWeapon",
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "Coger"
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendDoppelgangerName",
+        "type": "MESG FULL",
+        "original": "<Alias=Player>'s Shadow",
+        "string": "Sombra de <Alias=Player>"
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendQuest",
+        "type": "QUST NNAM",
+        "original": "Retrieve Shadowrend",
+        "string": "Recuperar Shadowrend"
+    },
+    {
+        "editor_id": "BGSSSE018_AbscondSpellShadowrend",
+        "type": "SPEL FULL",
+        "original": "Abscond Spell",
+        "string": "Hechizo de huida"
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendQuest",
+        "type": "QUST NNAM",
+        "original": "Go to Eastmarch Geysers",
+        "string": "Ir a los g\u00e9iseres de Marca Oriental"
+    },
+    {
+        "editor_id": "BGSSSE018_GhostAbilityShadowrend",
+        "type": "SPEL FULL",
+        "original": "Ghost Ability",
+        "string": "Aptitud de fantasma"
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendQuest",
+        "type": "QUST NNAM",
+        "original": "Return to Eastmarch Geysers",
+        "string": "Volver a los g\u00e9iseres de Marca Oriental"
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendQuest",
+        "type": "QUST NNAM",
+        "original": "Defeat your Shadow",
+        "string": "Derrotar a tu sombra"
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendDoppelgangerName",
+        "type": "MESG DESC",
+        "original": "Doppelganger",
+        "string": "Doppelg\u00e4nger"
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendQuest",
+        "type": "QUST CNAM",
+        "original": "I have defeated my shadow and feel at peace.  I should retrieve the weapon from its remains.",
+        "string": "Siento una paz interior. No obstante, mi sombra no ha desaparecido por completo. Su arma, ahora tan s\u00f3lida como todo lo que me rodea, descansa sobre sus restos."
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendQuest",
+        "type": "QUST CNAM",
+        "original": "An inner voice is telling me I must confront a darkness within myself. I am drawn toward a geyser pool in Eastmarch. Perhaps answers lie there.",
+        "string": "Una voz interior me dice que, adem\u00e1s de enfrentarme al mal que me rodea, tambi\u00e9n debo hacerlo en mi interior. Me indica que vaya a un estanque con g\u00e9iser en Marca Oriental. All\u00ed encontrar\u00e9 respuestas."
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendQuest",
+        "type": "QUST CNAM",
+        "original": "The weapon I attempted to take has pulled something from within me - a dark shadow of myself. I must defeat this doppelganger.",
+        "string": "El arma de la que quer\u00eda apoderarme me arrebat\u00f3 algo. Una sombra de mi interior que ya no necesita al resto de mi ser para existir; y en consecuencia, est\u00e1 dispuesta a acabar conmigo."
+    }
+]

@@ -1,0 +1,260 @@
+[
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "type": "QUST FULL",
+        "original": "Caught in a Web",
+        "string": "Gefangen im Netz"
+    },
+    {
+        "editor_id": "ccBGSSSE069_GrenwulfSpiderWeb",
+        "type": "CONT FULL",
+        "original": "Grenwulf the Brawler",
+        "string": "Grenwulf der Schl\u00e4ger"
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "type": "QUST NNAM",
+        "original": "Defeat the Web Mother",
+        "string": "Besiege die Brutmutter."
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "type": "QUST NNAM",
+        "original": "Search Cronvangr Cave for the two heroes",
+        "string": "Suche in der Cronvangrh\u00f6hle nach den beiden Helden."
+    },
+    {
+        "editor_id": "ccBGSSSE069_Grenwulf",
+        "type": "NPC_ FULL",
+        "original": "Grenwulf the Brawler",
+        "string": "Grenwulf der Schl\u00e4ger"
+    },
+    {
+        "editor_id": "ccBGSSSE069_HolrikNPC",
+        "type": "NPC_ FULL",
+        "original": "Holrik Frost-Sword",
+        "string": "Holrik Frost-Schwert"
+    },
+    {
+        "editor_id": "ccBGSSSE069_ObserversJournal",
+        "type": "BOOK FULL",
+        "original": "Adonato Leotelli's Journal",
+        "string": "Adonato Leotellis Tagebuch"
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "type": "QUST NNAM",
+        "original": "Speak to the Heroes",
+        "string": "Sprich mit den Helden."
+    },
+    {
+        "editor_id": "ccBGSSSE069_WebMother",
+        "type": "NPC_ FULL",
+        "original": "Web Mother",
+        "string": "Brutmutter"
+    },
+    {
+        "editor_id": "ccBGSSSE069_HolrikNPC",
+        "type": "NPC_ SHRT",
+        "original": "Holrik",
+        "string": "Holrik"
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "type": "QUST NNAM",
+        "original": "Investigate Candlehearth Hall",
+        "string": "Durchsuche Haus Kerzenschein."
+    },
+    {
+        "editor_id": "ccBGSSSE069_IceBladeMonarch",
+        "type": "WEAP FULL",
+        "original": "Ice Blade of the Monarch",
+        "string": "Eisklinge des Monarchen"
+    },
+    {
+        "editor_id": "ccBGSSSE069_HolrikSpiderWeb",
+        "type": "CONT FULL",
+        "original": "Holrik Frost-Sword",
+        "string": "Holrik Frost-Schwert"
+    },
+    {
+        "editor_id": "ccBGSSSE069_Grenwulf",
+        "type": "NPC_ SHRT",
+        "original": "Grenwulf",
+        "string": "Grenwulf"
+    },
+    {
+        "editor_id": "ccBGSSSE069_FistsofRandagulf",
+        "type": "ARMO FULL",
+        "original": "Fists of Randagulf",
+        "string": "F\u00e4uste von Randagulf"
+    },
+    {
+        "editor_id": "ccBGSSSE069_GrenNote",
+        "type": "BOOK FULL",
+        "original": "Grenwulf's Note",
+        "string": "Grenwulfs Notiz"
+    },
+    {
+        "editor_id": "ccBGSSSE069_HolrikNote",
+        "type": "BOOK FULL",
+        "original": "Holrik's Note",
+        "string": "Holriks Notiz"
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "type": "QUST NNAM",
+        "original": "Inspect Grenwulf's corpse",
+        "string": "Untersuche Grenwulfs Leichnam."
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "type": "QUST NNAM",
+        "original": "Inspect Holrik's corpse",
+        "string": "Untersuche Holriks Leichnam."
+    },
+    {
+        "editor_id": "ccBGSSSE069_EnchFortifyOneHandedConstantSelf",
+        "type": "MGEF DNAM",
+        "original": "Melee and unarmed attacks do <mag>% more damage. Block <mag>% more damage with your shield.",
+        "string": "Nahkampfangriffe und unbewaffnete Angriffe verursachen <mag> Prozent mehr Schaden. Du blockst <mag> Prozent mehr Schaden mit deinem Schild."
+    },
+    {
+        "editor_id": "ccBGSSSE069_EnchFortifyOneHandedConstantSelf",
+        "type": "MGEF FULL",
+        "original": "Fists of Randagulf",
+        "string": "F\u00e4uste von Randagulf"
+    },
+    {
+        "editor_id": "ccBGSSSE069_crSpiderSpitFFAimed",
+        "type": "MGEF DNAM",
+        "original": "A blood-freezing poison that does <mag> points of damage to Health and Stamina per second.",
+        "string": "Ein blutstockendes Gift, das Gesundheit und Ausdauer <mag> Schadenspunkte pro Sekunde zuf\u00fcgt."
+    },
+    {
+        "editor_id": "ccBGSSSE069_FrostbiteSpiderRaceGiant",
+        "type": "RACE FULL",
+        "original": "Web Mother",
+        "string": "Brutmutter"
+    },
+    {
+        "editor_id": "ccBGSSSE069_crSpiderSpitFFAimed",
+        "type": "MGEF FULL",
+        "original": "Spider Spit",
+        "string": "Spinnenspeichel"
+    },
+    {
+        "editor_id": "ccBGSSSE069_crSpiderBiteFFContact",
+        "type": "MGEF DNAM",
+        "original": "A blood-freezing poison that does <mag> points of damage to Health and Stamina per second.",
+        "string": "Ein blutstockendes Gift, das Gesundheit und Ausdauer <mag> Schadenspunkte pro Sekunde zuf\u00fcgt."
+    },
+    {
+        "editor_id": "ccBGSSSE069_crSpider03PoisonSpit",
+        "type": "SPEL FULL",
+        "original": "Frostbite Poison",
+        "string": "Frostbissgift"
+    },
+    {
+        "editor_id": "ccBGSSSE069_crSpiderBiteFFContact",
+        "type": "MGEF FULL",
+        "original": "Spider Bite",
+        "string": "Spinnenbiss"
+    },
+    {
+        "editor_id": "ccBGSSSE069_EnchFortifyTwoHandedConstantSelf",
+        "type": "MGEF FULL",
+        "original": "Fortify Two-Handed",
+        "string": "Zweih\u00e4ndig verst\u00e4rken"
+    },
+    {
+        "editor_id": "ccBGSSSE069_crSpider03PoisonBite",
+        "type": "SPEL FULL",
+        "original": "Web Mother Bite",
+        "string": "Brutmutterbiss"
+    },
+    {
+        "editor_id": "ccBGSSSE069_EnchRandagulf",
+        "type": "ENCH FULL",
+        "original": "Fists of Randagulf",
+        "string": "F\u00e4uste von Randagulf"
+    },
+    {
+        "editor_id": "ccBGSSSE069_AbFortifyUnarmedDamage",
+        "type": "MGEF FULL",
+        "original": "Fortify Unarmed Damage",
+        "string": "Waffenlosen Schaden erh\u00f6hen"
+    },
+    {
+        "editor_id": "ccBGSSSE069_EnchFortifyBlockConstantSelf",
+        "type": "MGEF FULL",
+        "original": "Fortify Blocking",
+        "string": "Blocken verst\u00e4rken"
+    },
+    {
+        "editor_id": "CronvangrHall02",
+        "type": "CELL FULL",
+        "original": "Cronvangr Broodlair",
+        "string": "Cronvangrvampirlager"
+    },
+    {
+        "editor_id": "WindhelmCandlehearthHall",
+        "type": "CELL FULL",
+        "original": "Candlehearth Hall",
+        "string": "Haus Kerzenschein"
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "type": "QUST CNAM",
+        "original": "I've heard many great warriors have come through Skyrim over the years, and passed through Candlehearth Hall in Windhelm. If I travel there, I may hear some stories of what became of them.",
+        "string": "Ich habe geh\u00f6rt, dass in den letzten Jahren viele gro\u00dfe Krieger, die nach Himmelsrand kamen, im Haus Kerzenschein in Windhelm eingekehrt sind. Wenn ich dorthin reise, kann ich vielleicht ein paar Geschichten aufschnappen, was aus ihnen geworden ist."
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "type": "QUST CNAM",
+        "original": "I traveled to Candlehearth Hall and read a journal about two warriors, who traveled to Cronvangr Cave to defeat a dangerous Web Mother. I traveled to Cronvangr Cave and found the spider's lair, defeating the Web Mother. I spoke to the heroes who bequeathed me their treasures before fading away.",
+        "string": "Ich bin zum Haus Kerzenschein gereist und habe ein Tagebuch \u00fcber zwei Krieger gelesen, die in die Cronvangrh\u00f6hle gezogen sind, um dort eine gef\u00e4hrliche Brutmutter zu besiegen. Daraufhin bin ich zur Cronvangrh\u00f6hle gereist, fand das Nest der Spinne und besiegte die Brutmutter. Ich sprach mit den Helden, die mir ihre Sch\u00e4tze vermachten, ehe sie das Zeitliche segneten."
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "type": "QUST CNAM",
+        "original": "I traveled to Candlehearth Hall and read a journal about two warriors, who traveled to Cronvangr Cave to defeat a dangerous Web Mother. I traveled to Cronvangr Cave and found the spider's lair, defeating the Web Mother. After the battle, the heroes rewarded me with their treasures.",
+        "string": "Ich bin zum Haus Kerzenschein gereist und habe ein Tagebuch \u00fcber zwei Krieger gelesen, die in die Cronvangrh\u00f6hle gezogen sind, um dort eine gef\u00e4hrliche Brutmutter zu besiegen. Daraufhin bin ich zur Cronvangrh\u00f6hle gereist, fand das Nest der Spinne und besiegte die Brutmutter. Nach dem Kampf vermachten die Helden mir ihre Sch\u00e4tze."
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "type": "QUST CNAM",
+        "original": "I traveled to Candlehearth Hall and read a journal about two warriors, who traveled to Cronvangr Cave to defeat a dangerous spider. I traveled to Cronvangr Cave and found the spider's lair.",
+        "string": "Ich bin zum Haus Kerzenschein gereist und habe ein Tagebuch \u00fcber zwei Krieger gelesen, die in die Cronvangrh\u00f6hle gezogen sind, um dort eine gef\u00e4hrliche Spinne zu besiegen. Daraufhin bin ich zur Cronvangrh\u00f6hle gereist und fand dort ihr Nest."
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "type": "QUST CNAM",
+        "original": "I traveled to Candlehearth Hall and read a journal about two warriors, who traveled to Cronvangr Cave to defeat a dangerous spider. I should travel to the cave and find out what became of them.",
+        "string": "Ich bin zum Haus Kerzenschein gereist und habe ein Tagebuch \u00fcber zwei Krieger gelesen, die in die Cronvangrh\u00f6hle gezogen sind, um dort eine gef\u00e4hrliche Spinne zu besiegen. Ich sollte zur H\u00f6hle reisen und in Erfahrung bringen, was aus ihnen geworden ist."
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "type": "QUST CNAM",
+        "original": "I traveled to Candlehearth Hall and read a journal about two warriors, who traveled to Cronvangr Cave to defeat a dangerous Web Mother. I traveled to Cronvangr Cave and found the spider's lair, defeating the Web Mother.",
+        "string": "Ich bin zum Haus Kerzenschein gereist und habe ein Tagebuch \u00fcber zwei Krieger gelesen, die in die Cronvangrh\u00f6hle gezogen sind, um dort eine gef\u00e4hrliche Brutmutter zu besiegen. Daraufhin bin ich zur Cronvangrh\u00f6hle gereist, fand dort ihr Nest und besiegte sie."
+    },
+    {
+        "editor_id": "ccBGSSSE069_ObserversJournal",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\nIt's not uncommon these days to see warriors of great renown pass through Candlehearth Hall, beckoned by the clarion call of war. Many of them seat themselves by the fire, order their spirit of choice, and regale the patrons with stories of their triumphs. \n\nIt is, however, a strange thing to watch such a tale write itself in front of you, but that is precisely what happened when two legendary warriors, Grenwulf the Brawler and Holrik Frost-Sword, sat down at the table beside me.\n\nPerhaps it was the mead that shortened their tempers, but it did not take long for a spirited argument to become heated. Grenwulf, a brawler famous for fighting with only his fists, had compared Holrik to a soldier who fires a trebuchet - a man who is only as dangerous as the tool he employs. \n\nHolrik, for his part, cut right through Grenwulf's claim. If the brawler relied only on his hands, then he should drink his mead from his palm, and slice his bread with his fingernails. \n\nNot to mention there are things in this world, Holrik said, that fists alone cannot kill, even if that fist belonged to Randagulf himself. Whereas his sword, the Ice Blade of the Monarch, was blessed by the strength of the frost itself, and could cut through the walls of ice that lined the edge of the world.\n\nGrenwulf scoffed at the notion, claiming that no man or beast had yet to survive a single punch. \n\nIt was then that the Divines, or perhaps darker minds, offered a resolution. A warrior came bursting through the doors, claiming a monstrous spider had taken root in the Cronvangr Cave, claiming three in his hunting party. His widened eyes and frowned lips, telltale signs of fear, spoke volumes to us all. It was a warning few would fail to heed, but our two heroes saw it as something else entirely - an opportunity to settle their dispute.\n\nAnd so the next morning, they departed for Cronvangr Cave. Three weeks have passed since.\n\nIn my life I have written tales of valor and tragedy, and those that are one and the same. And while the final chapter of Grenwulf and Holrik has yet to be written, I fear this may fall into the latter category, as neither has saw fit to return.</font>",
+        "string": "<font face=\"$HandwrittenFont\">\nEs ist in diesen Tagen nicht ungew\u00f6hnlich, dass wohlbekannte Krieger, von der Kriegsfanfare angelockt, im Haus Kerzenschein Station machen. Viele von ihnen setzen sich ans Feuer, lassen sich ihren Lieblingsschnaps bringen und unterhalten die G\u00e4ste mit Geschichten \u00fcber ihre gr\u00f6\u00dften Triumphe.\n\nEs ist jedoch seltsam, mitzuerleben, wie eine solche Geschichte vor deinen Augen geschrieben wird, denn genau das geschah, als zwei legend\u00e4re Krieger, Grenwulf der Schl\u00e4ger und Holrik Frost-Schwert es sich am Tisch neben mir gem\u00fctlich machten.\n\nVielleicht war es der Met, der ihr Gem\u00fct erhitzte, jedenfalls dauerte es nicht lang und ein heftiger Streit brach aus. Grenwulf, der f\u00fcr seine fliegenden F\u00e4uste bekannt war, hatte Holrik mit einem Soldaten verglichen, der einen Tribok bediente - jemand, der nur so gef\u00e4hrlich ist wie sein Werkzeug.\n\nHolrik jedoch erwiderte Grenwulfs Behauptung, indem er ihm vorschlug, dass, wenn er sich schon so auf seine H\u00e4nde verlasse, er doch auch seinen Met aus der Hand schl\u00fcrfen und sein Brot mit den Fingern\u00e4geln schneiden solle.\n\nGanz abgesehen davon, dass es Dinge auf dieser Welt g\u00e4be, so Holrik weiter, die F\u00e4uste allein nicht bezwingen k\u00f6nnten, selbst wenn sie von Randagulf pers\u00f6nlich geschwungen w\u00fcrden. Sein Schwert dagegen, die Eisklinge des Monarchen, sei mit der St\u00e4rke des Frosts gesegnet und k\u00f6nne die Mauern aus Eis durchdringen, die am Rand der Welt emporragten.\n\nGrenwulf spottete zur\u00fcck, dass weder Mensch noch Tier einen seiner Schl\u00e4ge je \u00fcberlebt h\u00e4tten.\n\nDa boten die G\u00f6ttlichen, oder vielleicht waren es auch dunklere Geister, eine L\u00f6sung an. Ein Krieger platzte auf einmal zur T\u00fcr herein und tat kund, dass sich eine monstr\u00f6se Spinne in der Cronvangrh\u00f6hle eingenistet und drei seiner Kumpanen in ihrer Gewalt h\u00e4tte. Seine geweiteten Augen und zusammengekniffenen Lippen zeugten von blanker Angst und sprachen B\u00e4nde. Es war eine Warnung, die nur wenige missachten w\u00fcrden, doch unsere beiden Helden sahen darin etwas ganz und gar anderes, n\u00e4mlich die Gelegenheit, ihren Streit ein f\u00fcr alle Mal beizulegen.\n\nUnd so machten sie sich am n\u00e4chsten Morgen auf den Weg zur Cronvangrh\u00f6hle. Drei Wochen ist das nun her.\n\nIn meinem Leben habe ich viele Geschichten \u00fcber Tapferkeit und Tragik verfasst, und solche, die beides in sich vereinen. Und obgleich das letzte Kapitel von Grenwulf und Holrik erst noch geschrieben werden muss, f\u00fcrchte ich, dass ihre Geschichte in die letzte Kategorie f\u00e4llt, da beide es nicht f\u00fcr n\u00f6tig erachtet haben, zur\u00fcckzukehren.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE069_HolrikNote",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\nGrenwulf's always been beyond stubborn. On top of that, he lacks patience. When a man like him fails to open a jar, he smashes the glass rather than rely on a cloth for a better grip.\n\nIn Grenwulf's mind, using that cloth is a weakness. In my mind, it's far better not to have your food covered in broken glass.\n\nIt's a shame, because I think he has the talent to be a good swordsman. But his foolish pride won't allow him to admit it.</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\nGrenwulf war immer schon mehr als nur stur. Und obendrein mangelt es ihm an Geduld. Wenn es jemandem wie ihm nicht gelingt, eine Flasche zu \u00f6ffnen, schmettert er sie lieber auf den Boden, statt einfach ein St\u00fcck Stoff zu nehmen, um nicht abzurutschen.\n\nAus Grenwulfs Sicht w\u00e4re dieses St\u00fcck Stoff eine Schw\u00e4che. Aus meiner Sicht ist es weitaus besser, etwas im Magen zu haben, statt vor einem Scherbenhaufen zu stehen.\n\nEs ist ein Jammer, denn ich glaube, er hat das Talent, ein wirklich guter Schwertk\u00e4mpfer zu sein. Doch sein falscher Stolz hindert ihn daran, sich das einzugestehen.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE069_GrenNote",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\nHolrik thinks there's things I can't punch through. But I've punched through walls, and I've punched through men.\n\nI don't care how thick your armor is, my knuckles are thicker. They're hard and calloused and ugly as a Dremora, but they get the job done, no matter what.\n\nI once met a warrior who claimed to have the most impenetrable armor ever known to man. But when we fought, I punched him so hard the shockwaves rearranged every bone in his body, to the point his toes were coming out of his ears.\n\nSo even if the armor doesn't give, the man inside is as soft as jelly. A spider ain't much different. It's got hard parts, and it's got soft parts. When I ball my fist and put all my weight on my back foot, there's nothing anyone can do.</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\nHolrik glaubt, dass es Hindernisse gibt, durch die ich nicht hindurchkomme. Aber ich habe sogar die dicksten W\u00e4nde durchdrungen und auch so manchen Gegner.\n\nMir ist es gleich, wie dick Eure R\u00fcstung ist, denn meine Kn\u00f6chel sind dicker. Sie sind hart und verhornt und h\u00e4sslich wie eine Dremora, aber sie kommen \u00fcberall durch, was auch immer es ist.\n\nIch habe einmal einen Krieger getroffen, der behauptete, die undurchdringlichste R\u00fcstung aller Zeiten zu tragen. Aber als wir miteinander k\u00e4mpften, traf ich ihn mit solcher H\u00e4rte, dass s\u00e4mtliche Knochen in seinem K\u00f6rper zerbarsten und ihm die Zehen zu den Ohren rauskamen.\n\nAuch wenn eine R\u00fcstung mal nicht nachgibt, ist der Mensch darin dennoch weich wie Pudding. Eine Spinne ist da kaum anders. Manches an ihr ist hart und manches weich. Wenn ich die Faust balle und mein gesamtes Gewicht in meinen Schlag lege, h\u00e4lt mir nichts und niemand stand.</font>"
+    }
+]

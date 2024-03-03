@@ -1,0 +1,470 @@
+[
+    {
+        "editor_id": "ccBGSSSE003EncZombie01BodyB",
+        "type": "NPC_ FULL",
+        "original": "Zombie",
+        "string": "Zombie"
+    },
+    {
+        "editor_id": "ccBGSSSE003EncZombie02BodyA",
+        "type": "NPC_ FULL",
+        "original": "Foul Zombie",
+        "string": "Verdorbener Zombie"
+    },
+    {
+        "editor_id": "ccBGSSSE003EncZombie05BodyC",
+        "type": "NPC_ FULL",
+        "original": "Relentless Zombie",
+        "string": "Gnadenloser Zombie"
+    },
+    {
+        "editor_id": "ccBGSSSE003_MortFlesh",
+        "type": "INGR FULL",
+        "original": "Mort Flesh",
+        "string": "Sterbliches Fleisch"
+    },
+    {
+        "editor_id": "ccBGSSSE003EncZombie06BodyB",
+        "type": "NPC_ FULL",
+        "original": "Dread Zombie",
+        "string": "Schreckenszombie"
+    },
+    {
+        "editor_id": "ccBGSSSE003SkinZombieMale01",
+        "type": "ARMO FULL",
+        "original": "Zombie Skin",
+        "string": "Zombiehaut"
+    },
+    {
+        "editor_id": "B003_WE_Quest",
+        "type": "QUST FULL",
+        "original": "Zombie Attack",
+        "string": "Zombieangriff"
+    },
+    {
+        "editor_id": "ccBGSSSE003SummonZombie2",
+        "type": "MGEF FULL",
+        "original": "Summon Foul Zombie",
+        "string": "Verdorbenen Zombie beschw\u00f6ren"
+    },
+    {
+        "editor_id": "ccBGSSSE003_ZombieRegen",
+        "type": "SPEL FULL",
+        "original": "Zombie Regen",
+        "string": "Zombie-Regeneration"
+    },
+    {
+        "editor_id": "ccBGSSSE003SummonZombie",
+        "type": "MGEF DNAM",
+        "original": "Summons a Zombie for <dur> seconds wherever the caster is pointing.",
+        "string": "Beschw\u00f6rt einen Zombie f\u00fcr <dur> Sekunden an der Stelle, auf die der Zaubernde zeigt."
+    },
+    {
+        "editor_id": "ccBGSSSE003EncZombie03BodyC",
+        "type": "NPC_ FULL",
+        "original": "Putrid Zombie",
+        "string": "Verwesender Zombie"
+    },
+    {
+        "editor_id": "ccBGSSSE003EncZombie02BodyC",
+        "type": "NPC_ FULL",
+        "original": "Foul Zombie",
+        "string": "Verdorbener Zombie"
+    },
+    {
+        "editor_id": "ccBGSSSE003EncZombie04BodyC",
+        "type": "NPC_ FULL",
+        "original": "Malignant Zombie",
+        "string": "B\u00f6sartiger Zombie"
+    },
+    {
+        "editor_id": "ccBGSSSE003SummonZombie3",
+        "type": "MGEF FULL",
+        "original": "Summon Putrid Zombie",
+        "string": "Verwesenden Zombie beschw\u00f6ren"
+    },
+    {
+        "editor_id": "B003_WE_Quest05",
+        "type": "QUST FULL",
+        "original": "Zombie Attack",
+        "string": "Zombieangriff"
+    },
+    {
+        "editor_id": "ccBGSSSE003SummonZombie3",
+        "type": "MGEF DNAM",
+        "original": "Summons a Putrid Zombie for <dur> seconds wherever the caster is pointing.",
+        "string": "Beschw\u00f6rt einen Verwesenden Zombie f\u00fcr <dur> Sekunden an der Stelle, auf die der Zaubernde zeigt."
+    },
+    {
+        "editor_id": "ccBGSSSE003ConjureZombie4",
+        "type": "SPEL FULL",
+        "original": "Conjure Malignant Zombie",
+        "string": "B\u00f6sartigen Zombie beschw\u00f6ren"
+    },
+    {
+        "editor_id": "ccBGSSSE003SkinZombieMale03",
+        "type": "ARMO FULL",
+        "original": "Zombie Skin",
+        "string": "Zombiehaut"
+    },
+    {
+        "editor_id": "ccBGSSSE003SummonZombie4",
+        "type": "MGEF FULL",
+        "original": "Summon Malignant Zombie",
+        "string": "B\u00f6sartigen Zombie beschw\u00f6ren"
+    },
+    {
+        "editor_id": "ccBGSSSE003EncZombie04BodyB",
+        "type": "NPC_ FULL",
+        "original": "Malignant Zombie",
+        "string": "B\u00f6sartiger Zombie"
+    },
+    {
+        "editor_id": "B003_WE_Quest02",
+        "type": "QUST FULL",
+        "original": "Zombie Attack",
+        "string": "Zombieangriff"
+    },
+    {
+        "editor_id": "ccBGSSSE003EncZombie06BodyC",
+        "type": "NPC_ FULL",
+        "original": "Dread Zombie",
+        "string": "Schreckenszombie"
+    },
+    {
+        "editor_id": "ccBGSSSE003ZombieRace",
+        "type": "RACE FULL",
+        "original": "Zombie",
+        "string": "Zombie"
+    },
+    {
+        "editor_id": "B003_WE_Quest03",
+        "type": "QUST FULL",
+        "original": "Zombie Attack",
+        "string": "Zombieangriff"
+    },
+    {
+        "editor_id": "ccBGSSSE003ConjureZombie3",
+        "type": "SPEL FULL",
+        "original": "Conjure Putrid Zombie",
+        "string": "Verwesenden Zombie beschw\u00f6ren"
+    },
+    {
+        "editor_id": "ccBGSSSE003EncZombie04BodyA",
+        "type": "NPC_ FULL",
+        "original": "Malignant Zombie",
+        "string": "B\u00f6sartiger Zombie"
+    },
+    {
+        "editor_id": "ccBGSSSE003EncZombie02BodyB",
+        "type": "NPC_ FULL",
+        "original": "Foul Zombie",
+        "string": "Verdorbener Zombie"
+    },
+    {
+        "editor_id": "ccBGSSSE003EncZombie03BodyA",
+        "type": "NPC_ FULL",
+        "original": "Putrid Zombie",
+        "string": "Verwesender Zombie"
+    },
+    {
+        "editor_id": "ccBGSSSE003EncZombie03BodyB",
+        "type": "NPC_ FULL",
+        "original": "Putrid Zombie",
+        "string": "Verwesender Zombie"
+    },
+    {
+        "editor_id": "ccBGSSSE003ConjureZombie",
+        "type": "SPEL FULL",
+        "original": "Conjure Zombie",
+        "string": "Zombie beschw\u00f6ren"
+    },
+    {
+        "editor_id": "ccBGSSSE003SummonZombie2",
+        "type": "MGEF DNAM",
+        "original": "Summons a Foul Zombie for <dur> seconds wherever the caster is pointing.",
+        "string": "Beschw\u00f6rt einen Verdorbenen Zombie f\u00fcr <dur> Sekunden an der Stelle, auf die der Zaubernde zeigt."
+    },
+    {
+        "editor_id": "ccBGSSSE003SummonZombie",
+        "type": "MGEF FULL",
+        "original": "Summon Zombie",
+        "string": "Zombie beschw\u00f6ren"
+    },
+    {
+        "editor_id": "ccBGSSSE003ConjureZombie2",
+        "type": "SPEL FULL",
+        "original": "Conjure Foul Zombie",
+        "string": "Verdorbenen Zombie beschw\u00f6ren"
+    },
+    {
+        "editor_id": "B003_WE_Quest04",
+        "type": "QUST FULL",
+        "original": "Zombie Attack",
+        "string": "Zombieangriff"
+    },
+    {
+        "editor_id": "ccBGSSSE003EncZombie06BodyA",
+        "type": "NPC_ FULL",
+        "original": "Dread Zombie",
+        "string": "Schreckenszombie"
+    },
+    {
+        "editor_id": "ccBGSSSE003SkinZombieMale02",
+        "type": "ARMO FULL",
+        "original": "Zombie Skin",
+        "string": "Zombiehaut"
+    },
+    {
+        "editor_id": "ccBGSSSE003EncZombie01BodyC",
+        "type": "NPC_ FULL",
+        "original": "Zombie",
+        "string": "Zombie"
+    },
+    {
+        "editor_id": "ccBGSSSE003EncZombie01BodyA",
+        "type": "NPC_ FULL",
+        "original": "Zombie",
+        "string": "Zombie"
+    },
+    {
+        "editor_id": "ccBGSSSE003SummonZombie4",
+        "type": "MGEF DNAM",
+        "original": "Summons a Malignant Zombie for <dur> seconds wherever the caster is pointing.",
+        "string": "Beschw\u00f6rt einen B\u00f6sartigen Zombie f\u00fcr <dur> Sekunden an der Stelle, auf die der Zaubernde zeigt."
+    },
+    {
+        "editor_id": "ccBGSSSE003EncZombie05BodyB",
+        "type": "NPC_ FULL",
+        "original": "Relentless Zombie",
+        "string": "Gnadenloser Zombie"
+    },
+    {
+        "editor_id": "ccBGSSSE003EncZombie05BodyA",
+        "type": "NPC_ FULL",
+        "original": "Relentless Zombie",
+        "string": "Gnadenloser Zombie"
+    },
+    {
+        "editor_id": "ccBGSSSE003_DisDamageMagicka",
+        "type": "MGEF FULL",
+        "original": "Damage Magicka",
+        "string": "Magicka senken"
+    },
+    {
+        "editor_id": "ccBGSSSE003_DiseaseBrainRot",
+        "type": "SPEL FULL",
+        "original": "Brain Rot",
+        "string": "Hirnf\u00e4ule"
+    },
+    {
+        "editor_id": "ccBGSSSE003_DisDamageMagicka",
+        "type": "MGEF DNAM",
+        "original": "Drains <mag> points from magicka.",
+        "string": "Entzieht <mag> Punkte Magicka."
+    },
+    {
+        "editor_id": "ccBGSSSE003_ConjureZombie03",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Conjure Putrid Zombie",
+        "string": "Zauberbuch: Verwesenden Zombie beschw\u00f6ren"
+    },
+    {
+        "editor_id": "ccBGSSSE003_ConjureZombie02",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Conjure Foul Zombie",
+        "string": "Zauberbuch: Verdorbenen Zombie beschw\u00f6ren"
+    },
+    {
+        "editor_id": "ccBGSSSE003_ConjureZombie04",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Conjure Malignant Zombie",
+        "string": "Zauberbuch: B\u00f6sartigen Zombie beschw\u00f6ren"
+    },
+    {
+        "editor_id": "ccBGSSSE003_ConjureZombie01",
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Conjure Zombie",
+        "string": "Zauberbuch: Zombie beschw\u00f6ren"
+    },
+    {
+        "editor_id": "ccBGSSSE003EncZombie04BodyA_Summon",
+        "type": "NPC_ FULL",
+        "original": "Malignant Zombie",
+        "string": "B\u00f6sartiger Zombie"
+    },
+    {
+        "editor_id": "ccBGSSSE003_DraugrBattleAxeHoned_NoDrop",
+        "type": "WEAP FULL",
+        "original": "Honed Ancient Nord Battle Axe",
+        "string": "Gewetzte Alte Nordstreitaxt"
+    },
+    {
+        "editor_id": "ccBGSSSE003_DraugrWarAxeHoned_NoDrop",
+        "type": "WEAP FULL",
+        "original": "Honed Draugr War Axe",
+        "string": "Gewetzte Draugrkriegsaxt"
+    },
+    {
+        "editor_id": "ccBGSSSE003EncZombie03BodyC_Summon",
+        "type": "NPC_ FULL",
+        "original": "Putrid Zombie",
+        "string": "Verwesender Zombie"
+    },
+    {
+        "editor_id": "ccBGSSSE003_DraugrGreatswordHoned_NoDrop",
+        "type": "WEAP FULL",
+        "original": "Honed Ancient Nord Greatsword",
+        "string": "Gewetzter Alter Nordzweih\u00e4nder"
+    },
+    {
+        "editor_id": "ccBGSSSE003_DraugrBattleAxe_NoDrop",
+        "type": "WEAP FULL",
+        "original": "Ancient Nord Battle Axe",
+        "string": "Alte Nordstreitaxt"
+    },
+    {
+        "editor_id": "ccBGSSSE003_DraugrWarAxe_NoDrop",
+        "type": "WEAP FULL",
+        "original": "Ancient Nord War Axe",
+        "string": "Alte Nordkriegsaxt"
+    },
+    {
+        "editor_id": "ccBGSSSE003_DraugrSword_NoDrop",
+        "type": "WEAP FULL",
+        "original": "Ancient Nord Sword",
+        "string": "Altes Nordschwert"
+    },
+    {
+        "editor_id": "ccBGSSSE003EncZombie02BodyB_Summon",
+        "type": "NPC_ FULL",
+        "original": "Foul Zombie",
+        "string": "Verdorbener Zombie"
+    },
+    {
+        "editor_id": "ccBGSSSE003EncZombie01BodyA_Summon",
+        "type": "NPC_ FULL",
+        "original": "Zombie",
+        "string": "Zombie"
+    },
+    {
+        "editor_id": "ccBGSSSE003_DraugrGreatsword_NoDrop",
+        "type": "WEAP FULL",
+        "original": "Ancient Nord Greatsword",
+        "string": "Alter Nordzweih\u00e4nder"
+    },
+    {
+        "editor_id": "ccBGSSSE003_DraugrSwordHoned_NoDrop",
+        "type": "WEAP FULL",
+        "original": "Honed Ancient Nord Sword",
+        "string": "Gewetztes Altes Nordschwert"
+    },
+    {
+        "editor_id": "ccBGSSSE003_ZombieQuestStartEncounter",
+        "type": "QUST NNAM",
+        "original": "Read the Anonymous Letter",
+        "string": "Lese den anonymen Brief."
+    },
+    {
+        "editor_id": "ccBGSSSE003_ZombieQuestStartEncounter",
+        "type": "QUST NNAM",
+        "original": "Read the Necromancer's Journal",
+        "string": "Lese das Tagebuch des Totenbeschw\u00f6rers."
+    },
+    {
+        "editor_id": "ccBGSSSE003_NecromancerJournal",
+        "type": "BOOK FULL",
+        "original": "Necromancer's Journal",
+        "string": "Tagebuch des Totenbeschw\u00f6rers"
+    },
+    {
+        "editor_id": "ccBGSSSE003_ZombieQuestStartEncounter",
+        "type": "QUST NNAM",
+        "original": "Investigate the Ritual Site",
+        "string": "Untersuch die Ritualst\u00e4tte."
+    },
+    {
+        "editor_id": "ccBGSSSE003_ZombieQuestStartEncounter",
+        "type": "QUST FULL",
+        "original": "The Rising Dead",
+        "string": "Die auferstandenen Toten"
+    },
+    {
+        "editor_id": "ccBGSSSE003_CourierLetterQuestStart",
+        "type": "BOOK FULL",
+        "original": "Anonymous Letter",
+        "string": "Anonymer Brief"
+    },
+    {
+        "editor_id": "Tamriel",
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Himmelsrand"
+    },
+    {
+        "editor_id": "ccBGSSSE003_PerkDarkSoulsZombieBonus",
+        "type": "SPEL FULL",
+        "original": "Dark Souls Health Bonus",
+        "string": "Gesundheitsbonus der Dunklen Seelen"
+    },
+    {
+        "editor_id": "ccBGSSSE003_ConjureZombie03",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nConjure Putrid Zombie",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nVerwesenden Zombie beschw\u00f6ren"
+    },
+    {
+        "editor_id": "ccBGSSSE003_ConjureZombie01",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nConjure Zombie",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nZombie beschw\u00f6ren"
+    },
+    {
+        "editor_id": "ccBGSSSE003_ConjureZombie04",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nConjure Malignant Zombie",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nB\u00f6sartigen Zombie beschw\u00f6ren"
+    },
+    {
+        "editor_id": "ccBGSSSE003_ConjureZombie02",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nConjure Foul Zombie",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\nVerdorbenen Zombie beschw\u00f6ren"
+    },
+    {
+        "editor_id": "ccBGSSSE003_NecromancerJournal",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" Size=\"17\">\n<b>3rd of Sun's Height, 4E 201</b>\nAn apprentice of mine recently discovered an ancient tome in a forgotten cavern during a gathering expedition.  This tome is like nothing I've seen in a very long time.  I believe it's a conjuration spell of some sort, but I can't be certain.\n\nI'll need to spend some time deciphering this.  It could be quite valuable to us.\n[pagebreak]\n\n<b>18th of Sun's Height, 4E 201</b>\nI've spent the last several weeks working tirelessly to decipher this ancient tome.  It's just as I suspected; It is indeed a conjuration spell.  However, the creature summoned is especially vicious.  An undead zombie of wonderfully putrid potency that appears to be much more active in the late night hours.\n\nI'm not stopping now.  I plan to create an even more powerful version of this spell.  As Molag Bal as my witness I shall have a zombie horde at my command before long.\n[pagebreak]\n\n<b>15th of Last Seed, 4E 201</b>\nNothing could have prepared me for the power I am about to wield.  The whole of my training has been for this moment.  Soon, my apprentices and I shall perform a ritual the likes of which has not been seen in centuries, and bring forth an undead army, powerful and willing to do my bidding.  Its power will radiate across Skyrim, bringing forth waves of undead from the darkness.\n\nThe time is at hand!\n</font>",
+        "string": "<font face=\"$HandwrittenFont\" Size=\"17\">\n<b>3. Sonnenh\u00f6he, 4\u00c4 201</b>\nEiner meiner Sch\u00fcler hat auf einer Forschungsreise vor Kurzem ein uraltes Zauberbuch in einer vergessenen H\u00f6hle gefunden. Dieses Buch ist wahrlich erstaunlich. Ich glaube, es handelt von einem Beschw\u00f6rungszauber, aber noch bin ich mir nicht sicher.\n\nIch werde einige Zeit brauchen, um das Buch zu entschl\u00fcsseln, aber der Zauber wird f\u00fcr uns von gro\u00dfem Wert sein.\n[pagebreak]\n\n<b>18. Sonnenh\u00f6he, 4\u00c4 201</b>\nIch habe die letzten Wochen ununterbrochen an der Entschl\u00fcsselung dieses Buchs gesessen. Wie ich erwartet hatte, handelt es sich hierbei um einen Beschw\u00f6rungszauber. Doch die beschworene Kreatur ist von \u00e4u\u00dferst boshafter Natur. Ein Zombie, der nicht zu viel und nicht zu wenig verwesen ist und zur sp\u00e4ten Stunde erwacht.\n\nIch werde an dieser Stelle jedoch nicht aufh\u00f6ren. Ich m\u00f6chte einen noch m\u00e4chtigeren Zauber dieser Art erschaffen. So Molag Bal mein Zeuge ist, werde ich alsbald eine Horde Zombies unter meinem Befehl haben.\n[pagebreak]\n\n<b>15. Letzte Saat 4\u00c4 201</b>\nNichts h\u00e4tte mich auf diese Macht vorbereiten k\u00f6nnen, die ich im Begriff bin, zu beherrschen. All meine Studien und Praktiken f\u00fchrten zu diesem Augenblick. Bald schon werden meine Sch\u00fcler und ich ein Ritual vollbringen, das man so seit Jahrhunderten nicht gesehen hat. Ein Ritual, das eine Armee der Untoten beschw\u00f6rt, die meines jeden Wortes Untertan sind. Meine Macht wird in jeder Ecke Himmelsrands widerhallen und eine Welle der Dunkelheit wird \u00fcber das Land fegen.\n\nDie Zeit ist gekommen!\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE003_CourierLetterQuestStart",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"17\">\n\nSomeone, please help!  A group of Necromancers are experimenting with conjuring Zombies using ancient, dangerous magic, which I fear will have unintended and irreversible consequences.  I was expelled from their studies as their ambitions grew into folly, against my warnings.\n\nThey're performing a ritual to summon a large group of these foul, uncontrollable creatures as we speak in the southern-most area of Skyrim, and must be stopped before it's too late!",
+        "string": "<font face=\"$HandwrittenFont\" size=\"17\">\n\nWer auch immer dieses Schreiben findet, ich bitte um Hilfe! Eine Gruppe Totenbeschw\u00f6rer experimentiert mit uralter, gef\u00e4hrlicher Magie, um Horden von Zombies auferstehen zu lassen. Ich f\u00fcrchte ungewollte und unwiderrufliche Konsequenzen. Ich wurde aus ihren Studien ausgeschlossen, als meine Warnungen ob ihrer Dummheit auf Intoleranz stie\u00df.\n\nDas Ritual zur Beschw\u00f6rung dieser gr\u00e4sslichen, nicht kontrollierbaren Kreaturen steht kurz bevor! In der s\u00fcdlichen Ecke Himmelsrands. Sie m\u00fcssen aufgehalten werden, bevor es zu sp\u00e4t ist."
+    },
+    {
+        "editor_id": "ccBGSSSE003_ZombieQuestStartEncounter",
+        "type": "QUST CNAM",
+        "original": "Read the Necromancer's Journal",
+        "string": "Lese das Tagebuch des Totenbeschw\u00f6rers."
+    },
+    {
+        "editor_id": "ccBGSSSE003_ZombieQuestStartEncounter",
+        "type": "QUST CNAM",
+        "original": "I found the Necromancer's ritual site, but it's too late.  I also found a journal detailing what transpired here.  They appear to have already conjured the risen dead, possibly across all of Skyrim.  I'll need to be vigilant, especially during the late night hours.",
+        "string": "Ich habe die Ritualst\u00e4tte der Totenbeschw\u00f6rer gefunden, aber ich kam zu sp\u00e4t. Ich habe jedoch ein Tagebuch gefunden, das beschreibt, was hier geschehen ist. Anscheinend haben sie in ganz Himmelsrand die Toten wieder auferstehen lassen. Ich muss wachsam sein, vor allem zu sp\u00e4ter Stunde."
+    },
+    {
+        "editor_id": "ccBGSSSE003_ZombieQuestStartEncounter",
+        "type": "QUST CNAM",
+        "original": "I've found an urgent anonymous letter.  I should read it and see what it's regarding.",
+        "string": "Ich habe den Brief eines unbekannten Verfassers gefunden. Ich sollte ihn lesen, um zu erfahren, worum es geht."
+    },
+    {
+        "editor_id": "ccBGSSSE003_ZombieQuestStartEncounter",
+        "type": "QUST CNAM",
+        "original": "I've received an anonymous letter asking me to help stop a group of Necromancers who are planning to raise an army of Zombies.  I should investigate the ritual site.",
+        "string": "Ich habe einen anonymen Brief erhalten, in dem ich gebeten wurde, eine Gruppe Totenbeschw\u00f6rer aufzuhalten, die eine Armee von Zombies beschw\u00f6ren will. Ich sollte mir die Ritualst\u00e4tte n\u00e4her ansehen."
+    }
+]

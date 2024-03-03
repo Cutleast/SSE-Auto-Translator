@@ -1,0 +1,260 @@
+[
+    {
+        "editor_id": "ccBGSSSE063_ArmorBladesShield",
+        "type": "ARMO FULL",
+        "original": "Blades Ebony Shield",
+        "string": "Escudo de \u00e9bano de los Cuchillas"
+    },
+    {
+        "editor_id": "ccBGSSSE063_ArmorBladesBoots",
+        "type": "ARMO FULL",
+        "original": "Ebony Plate Boots",
+        "string": "Botas de placas de \u00e9bano"
+    },
+    {
+        "editor_id": "ccBGSSSE063_ArmorBladesHelmet",
+        "type": "ARMO FULL",
+        "original": "Ebony Plate Helmet",
+        "string": "Yelmo de placas de \u00e9bano"
+    },
+    {
+        "editor_id": "ccBGSSSE063_ArmorBladesCuirass",
+        "type": "ARMO FULL",
+        "original": "Ebony Plate Armor",
+        "string": "Armadura de placas de \u00e9bano"
+    },
+    {
+        "editor_id": "ccBGSSSE063_ArmorBladesGauntlets",
+        "type": "ARMO FULL",
+        "original": "Ebony Plate Gauntlets",
+        "string": "Guanteletes de placas de \u00e9bano"
+    },
+    {
+        "editor_id": "ccBGSSSE063_Quest",
+        "type": "QUST FULL",
+        "original": "Heart of Crimson",
+        "string": "Coraz\u00f3n de carmes\u00ed"
+    },
+    {
+        "editor_id": "ccBGSSSE063_Quest",
+        "type": "QUST NNAM",
+        "original": "Await news from a courier",
+        "string": "Espera noticias de un mensajero."
+    },
+    {
+        "editor_id": "ccBGSSSE063_DratheaGold100",
+        "type": "BOOK FULL",
+        "original": "To <Alias=Player>",
+        "string": "Para <Alias=Player>"
+    },
+    {
+        "editor_id": "ccBGSSSE063_DratheaNote",
+        "type": "BOOK FULL",
+        "original": "Letter from Tyra Blood-Fire",
+        "string": "Carta de Tyra Sangre-Fuego"
+    },
+    {
+        "editor_id": "ccBGSSSE063_Drathea",
+        "type": "NPC_ FULL",
+        "original": "Tyra Blood-Fire",
+        "string": "Tyra Sangre-Fuego"
+    },
+    {
+        "editor_id": "ccBGSSSE063_Quest",
+        "type": "QUST NNAM",
+        "original": "Pray at the Temple of Talos",
+        "string": "Reza en el templo de Talos."
+    },
+    {
+        "editor_id": "ccBGSSSE063_DratheaWine",
+        "type": "BOOK FULL",
+        "original": "To <Alias=Player>",
+        "string": "Para <Alias=Player>"
+    },
+    {
+        "editor_id": "ccBGSSSE063_BladesFaction",
+        "type": "FACT FULL",
+        "original": "Blades",
+        "string": "Cuchillas"
+    },
+    {
+        "editor_id": "ccBGSSSE063_DratheaPrayer",
+        "type": "BOOK FULL",
+        "original": "To <Alias=Player>",
+        "string": "Para <Alias=Player>"
+    },
+    {
+        "editor_id": "ccBGSSSE063_Quest",
+        "type": "QUST NNAM",
+        "original": "Retrieve the armor",
+        "string": "Recupera la armadura."
+    },
+    {
+        "editor_id": "ccBGSSSE063_BeggarNordMaleOld",
+        "type": "NPC_ FULL",
+        "original": "Beggar",
+        "string": "Mendigo"
+    },
+    {
+        "editor_id": "ccBGSSSE063_Quest",
+        "type": "QUST NNAM",
+        "original": "Give alms to the beggar",
+        "string": "Da limosna al mendigo."
+    },
+    {
+        "editor_id": "ccBGSSSE063_DratheaBread",
+        "type": "BOOK FULL",
+        "original": "To <Alias=Player>",
+        "string": "Para <Alias=Player>"
+    },
+    {
+        "editor_id": "ccBGSSSE063_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the letter from Tyra Blood-Fire",
+        "string": "Lee la carta de Tyra Sangre-Fuego."
+    },
+    {
+        "editor_id": "ccBGSSSE063_Quest",
+        "type": "QUST NNAM",
+        "original": "Meet Tyra at the shrine west of Windhelm",
+        "string": "Re\u00fanete con Tyra en el santuario al oeste de Ventalia."
+    },
+    {
+        "editor_id": "ccBGSSSE063_DratheaGold001",
+        "type": "BOOK FULL",
+        "original": "To <Alias=Player>",
+        "string": "Para <Alias=Player>"
+    },
+    {
+        "editor_id": "ccBGSSSE063_Blindfold",
+        "type": "ARMO FULL",
+        "original": "Blindfold",
+        "string": "Venda para los ojos"
+    },
+    {
+        "editor_id": "ccBGSSSE063_MiscQuest",
+        "type": "QUST NNAM",
+        "original": "Await news from a courier",
+        "string": "Espera noticias de un mensajero."
+    },
+    {
+        "editor_id": "ccBGSSSE063_ShrineofTalos",
+        "type": "ACTI FULL",
+        "original": "Shrine of Talos",
+        "string": "Capilla de Talos"
+    },
+    {
+        "editor_id": "ccBGSSSE063_CrimsonDirksBook1",
+        "type": "BOOK FULL",
+        "original": "The Crimson Dirks, v1",
+        "string": "Las Dagas carmes\u00edes, v1"
+    },
+    {
+        "editor_id": "ccBGSSSE063_ArmorBladesCuirassEnchanted",
+        "type": "ARMO FULL",
+        "original": "Ebony Plate Armor",
+        "string": "Armadura de placas de \u00e9bano"
+    },
+    {
+        "editor_id": "ccBGSSSE063_ArmorBladesHelmetEnchanted",
+        "type": "ARMO FULL",
+        "original": "Ebony Plate Helmet",
+        "string": "Yelmo de placas de \u00e9bano"
+    },
+    {
+        "editor_id": "ccBGSSSE063_ArmorBladesGauntletsEnchanted",
+        "type": "ARMO FULL",
+        "original": "Ebony Plate Gauntlets",
+        "string": "Guanteletes de placas de \u00e9bano"
+    },
+    {
+        "editor_id": "ccBGSSSE063_ArmorBladesBootsEnchanted",
+        "type": "ARMO FULL",
+        "original": "Ebony Plate Boots",
+        "string": "Botas de placas de \u00e9bano"
+    },
+    {
+        "editor_id": "ccBGSSSE063_Quest",
+        "type": "QUST CNAM",
+        "original": "I've received a letter from a mysterious woman named Tyra Blood-Fire who claims to be from a bandit clan. She would like me to be her judge and executioner, but first I must prove myself. I must offer a beggar alms at the Windhelm Docks, choosing a gift of gold, bread, or wine.",
+        "string": "He recibido la carta de una mujer misteriosa llamada Tyra Sangre-Fuego, que dice formar parte de un clan de bandidos. Quiere que la juzgue y ejecute, pero primero debo demostrar mi val\u00eda. Debo dar limosna a un mendigo en el muelle de Ventalia, eligiendo entre oro, pan o vino."
+    },
+    {
+        "editor_id": "ccBGSSSE063_DratheaWine",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>\nFirst of all, I'm sorry about the tests. I wanted to see how you'd treat the beggar. My hope was that it'd give me a window into your mind, and bring comfort to mine. \n\nYou gave the beggar wine. It'll help him forget his troubles; give him a reprieve. But such gifts can quickly sour. Come morning, the beggar may regret your choice, or worse yet, he might repeat it. \n\nSo my advice to you is to view every action in its entirety. Only then can you make your choices with clear eyes.\n\nLastly, to the ones I knew in life, don't mourn my death. As one of you once told me, when all you do is look to the past, it's time to close the book on one's future. I do so on my own terms. Goodbye.</font>\n\n",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\nAntes de nada, siento lo de las pruebas. Quer\u00eda ver c\u00f3mo tratabas al mendigo. Esperaba poder conocer tu mente y calmar la m\u00eda. \n\nDecidiste darle vino. Eso le ayudar\u00e1 a olvidar sus problemas, le servir\u00e1 de alivio. Pero esta clase de regalos son un arma de doble filo. Por la ma\u00f1ana, puede que lamente lo que decidiste darle, o peor a\u00fan, que quiera repetir. \n\nPor eso, te aconsejo que consideres cada acci\u00f3n en todos sus aspectos. Solo entonces podr\u00e1s tomar decisiones con la mirada clara.\n\nFinalmente, a quienes conoc\u00ed en vida quiero deciros que no llor\u00e9is mi muerte. Como me dijo uno de vosotros una vez, si no haces m\u00e1s que mirar al pasado, es el momento de cerrar el libro del futuro. Yo lo hago por voluntad propia. Adi\u00f3s.</font>\n\n"
+    },
+    {
+        "editor_id": "ccBGSSSE063_Quest",
+        "type": "QUST CNAM",
+        "original": "I've received a letter from a mysterious woman named Drathea who claims to hail from an ancient order. On the verge of death, she promises to bequeath me her armor should I pass her trials. I must offer a beggar alms at the Windhelm Docks, choosing a gift of gold, bread, or wine. ",
+        "string": "He recibido la carta de una mujer misteriosa llamada Drathea, que dice formar parte de una antigua orden. Est\u00e1 al borde de la muerte y promete dejarme en herencia su armadura si paso sus pruebas. Debo dar limosna a un mendigo en el muelle de Ventalia, eligiendo entre oro, pan o vino. "
+    },
+    {
+        "editor_id": "ccBGSSSE063_Quest",
+        "type": "QUST CNAM",
+        "original": "I've received a letter from a mysterious woman named Tyra Blood-Fire who claims to be from a bandit clan. She would like me to be her judge and executioner, but first I must prove myself. After defeating her in single combat, I can now retrieve her armor.",
+        "string": "He recibido la carta de una mujer misteriosa llamada Tyra Sangre-Fuego, que dice formar parte de un clan de bandidos. Quiere que la juzgue y ejecute, pero primero debo demostrar mi val\u00eda. Despu\u00e9s de derrotarla en combate singular, ahora puedo quedarme con su armadura."
+    },
+    {
+        "editor_id": "ccBGSSSE063_DratheaPrayer",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>\nFirst off, I'm sorry about the tests. My hope was that it'd give me a window into your mind, and bring comfort to mine. \n\nYou chose to pray for the beggar, putting your faith in the Divines. After all, maybe it isn't food or water people need, but hope in something greater than themselves. But the world is not a place where hope alone will save you.\n\nMy advice to you is to seize your destiny. Don't wait for an idle god. Then you'll be a worthy judge and executioner for your enemies, just as you were for me.\n\nLastly, to the ones I knew in life, don't mourn my death. As one of you once told me, when all you do is look to the past, it's time to close the book on one's future. I do so on my own terms. Goodbye.</font>\n\n",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\nAntes de nada, siento lo de las pruebas. Esperaba poder conocer tu mente y calmar la m\u00eda. \n\nDecidiste rezar por el mendigo, y pusiste tu fe en los Divinos. Despu\u00e9s de todo, quiz\u00e1 lo que necesitemos no sea comida ni bebida, sino esperanza en algo mayor que nosotros mismos. Pero en este mundo, la fe no basta por si sola para salvarte.\n\nTe aconsejo que busques activamente tu destino. No esperes a que ning\u00fan dios se decida a actuar. Entonces tendr\u00e1s derecho a juzgar y ejecutar a tus enemigos, como has hecho conmigo.\n\nFinalmente, a quienes conoc\u00ed en vida quiero deciros que no llor\u00e9is mi muerte. Como me dijo uno de vosotros una vez, si no haces m\u00e1s que mirar al pasado, es el momento de cerrar el libro del futuro. Yo lo hago por voluntad propia. Adi\u00f3s.</font>\n\n"
+    },
+    {
+        "editor_id": "ccBGSSSE063_DratheaNote",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>\n<Alias=Player>,\nMy name is Tyra Blood-Fire. Like Sottilde the Wet Ear before me, I am an orphan child of Balmora. Many years ago, I took a band of misfits and rogues and turned them into the Crimson Dirks. In our heyday, they called us thieves, bandits, apostates and killers. And they were right. We were all of those things. \n\nBut so is the Jarl who taxes the poor to starvation, the soldiers who rape and pillage the towns, the Empire who would erase our gods, and the guardsman who would behead the innocent.\n\nI know your story. If there's going to be a judge for me, I don't want it to be them. Not the Empire, not the East Empire Company, and not the guards. Just you and the Divines.\n\nBut first I want you to prove you're a worthy judge.  \n\nGo to the docks in Windhelm. There, you'll meet a beggar in need of your aid. Some would offer him gold. Others, bread or wine. Offer him the alms you think will best serve him.\n\nOnce you have proved your measure and your mercy, you must then show your mettle. I will wait for you at the Talos shrine west of Windhelm. \n\nWhen at last we meet, I ask that you speak only with your blade. For while the tongue lies, the sword is true. \n\n-Tyra</font>",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\n<Alias=Player>:\nMe llamo Tyra Sangre-Fuego. Como mi predecesora, Sottilde la Oreja mojada, soy una hu\u00e9rfana de Balmora. Hace muchos a\u00f1os reun\u00ed una banda de criminales e inadaptados y los convert\u00ed en las Dagas carmes\u00edes. En su momento nos llamaron ladrones, bandidos, ap\u00f3statas y asesinos. Y con raz\u00f3n. \u00c9ramos todas esas cosas. \n\nPero tambi\u00e9n lo es el jarl que mata de hambre a los pobres con sus impuestos, los soldados que violan y saquean ciudades, el Imperio que pretende acabar con nuestros dioses y el guardia dispuesto a decapitar al inocente.\n\nConozco tu historia. Si alguien me tiene que juzgar, prefiero que no sean ellos. Ni el Imperio, ni la Compa\u00f1\u00eda del Imperio Oriental ni los guardias. Solo t\u00fa y los Divinos.\n\nPero antes de juzgarme quiero que demuestres tu val\u00eda. \n\nVe a los muelles de Ventalia. All\u00ed encontrar\u00e1s a un mendigo necesitado de ayuda. Algunos le ofrecer\u00edan oro. Otros pan o vino. Ofr\u00e9cele la limosna que creas que le resultar\u00e1 m\u00e1s \u00fatil.\n\nCuando hayas demostrado tu mesura y tu misericordia, deber\u00e1s demostrar tu valor. Te esperar\u00e9 en el santuario de Talos que queda al oeste de Ventalia. \n\nCuando por fin nos reunamos, te pido que dejes hablar a tu hoja. Porque cuando calla la lengua, la espada nunca falla. \n\n-Tyra</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE063_Quest",
+        "type": "QUST CNAM",
+        "original": "I received a letter from a mysterious woman named Tyra Blood-Fire who claimed to be from a bandit clan. She asked me to be her judge and executioner, but first I had to prove myself. After defeating her in single combat, I retrieved the armor from her body.",
+        "string": "He recibido la carta de una mujer misteriosa llamada Tyra Sangre-Fuego, que dice formar parte de un clan de bandidos. Quiere que la juzgue y ejecute, pero primero debo demostrar mi val\u00eda. Despu\u00e9s de derrotarla en combate singular, me he quedado con su armadura."
+    },
+    {
+        "editor_id": "ccBGSSSE063_DratheaGold001",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>\nFirst off, I'm sorry about the tests. My hope was that it'd give me a window into your mind, and bring comfort to mine.  \n\nYou gave the beggar a single septim. I like the amount. You did what you could without placing a burden on yourself. And yet, on its own a single piece does nothing for him. It's only when the entire town does their part, each one placing a septim, that the beggar has enough to eat. \n\nSo my advice to you is to remember the value of company. Whether you're a bandit or a hero, no one can do it alone. You have to work together, one gold piece at a time, to do what needs to be done. \n\nLastly, to the ones I knew in life, don't mourn my death. As one of you once told me, when all you do is look to the past, it's time to close the book on one's future. I do so on my own terms. Goodbye.</font>\n\n",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\nAntes de nada, siento lo de las pruebas. Esperaba poder conocer tu mente y calmar la m\u00eda. \n\nLe diste al mendigo un solo septim. Me parece bien esta cantidad. Hiciste lo que pudiste sin que te supusiera una carga. Y aun as\u00ed, una sola moneda no le sirve de nada. Hace falta que contribuya la ciudad entera, y que cada uno ponga un septim para que el mendigo pueda comer. \n\nPor eso te aconsejo que recuerdes el valor de la compa\u00f1\u00eda. Tanto si eres un bandido como si eres un h\u00e9roe, nadie puede salir adelante solo. Hay que colaborar, todos unidos, moneda a moneda, para poder hacer lo que haga falta.\n\nFinalmente, a quienes conoc\u00ed en vida quiero deciros que no llor\u00e9is mi muerte. Como me dijo uno de vosotros una vez, si no haces m\u00e1s que mirar al pasado, es el momento de cerrar el libro del futuro. Yo lo hago por voluntad propia. Adi\u00f3s.</font>\n\n"
+    },
+    {
+        "editor_id": "ccBGSSSE063_DratheaBread",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>\nFirst off, I'm sorry about the tests. My hope was that it'd give me a window into your mind, and bring comfort to mine. \n\nYou gave the beggar bread, a choice I agree with. Gold can be wasted. Wine can be a poison. But a meal can never be squandered. Perhaps if I had been given a similar gift, my life would have been different.\n\nAs such, I deem you a worthy judge. Hopefully you will be a swift executioner. Either way, I thank you.\n\nLastly, to the ones I knew in life, don't mourn my death. As one of you once told me, when all you do is look to the past, it's time to close the book on one's future. I do so on my own terms. Goodbye.</font>\n\n",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\nAntes de nada, siento lo de las pruebas. Esperaba poder conocer tu mente y calmar la m\u00eda. \n\nLe diste pan al mendigo, y tu decisi\u00f3n me parece bien. El oro se puede malgastar. El vino puede ser un veneno. Pero una comida nunca se derrocha. Quiz\u00e1 si a m\u00ed me hubieran dado algo parecido, mi vida habr\u00eda sido diferente.\n\nPor eso creo que has sabido juzgar bien. Espero que tambi\u00e9n sepas llevar a cabo una ejecuci\u00f3n con rapidez. En cualquier caso, te doy las gracias.\n\nFinalmente, a quienes conoc\u00ed en vida quiero deciros que no llor\u00e9is mi muerte. Como me dijo uno de vosotros una vez, si no haces m\u00e1s que mirar al pasado, es el momento de cerrar el libro del futuro. Yo lo hago por voluntad propia. Adi\u00f3s.</font>\n\n"
+    },
+    {
+        "editor_id": "ccBGSSSE063_DratheaGold100",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>\nFirst off, I'm sorry about the tests. My hope was that it'd give me a window into your mind, and bring comfort to mine. \n\nYou gave the beggar a full purse of gold. You're someone who goes above and beyond, putting the lives of others above your own. But not even a thousand septims can save the life of every man, woman, and child. \n\nSo my advice to you is to not fall victim to your kindness. There are people like me who will take advantage of it. And there are times when you'll have to make a hard decision for the greater gain. Save who you can, but do what you must.\n\nLastly, to the ones I knew in life, don't mourn my death. As one of you once told me, when all you do is look to the past, it's time to close the book on one's future. I do so on my own terms. Goodbye.</font>\n\n",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\nAntes de nada, siento lo de las pruebas. Esperaba poder conocer tu mente y calmar la m\u00eda. \n\nLe diste al mendigo toda una bolsa de oro. Eres capaz de tener gestos extraordinarios, y te preocupas m\u00e1s por la vida de los dem\u00e1s que por la tuya propia. Pero ni con mil septims puedes salvar la vida de cada hombre, mujer y ni\u00f1o. \n\nPor eso te aconsejo que no seas v\u00edctima de tu generosidad. Hay personas como yo, dispuestas a aprovecharse de ella. Y habr\u00e1 momentos en que debas tomar una decisi\u00f3n dif\u00edcil por el bien com\u00fan. Salva a quienes puedas, pero haz lo que tengas que hacer.\n\nFinalmente, a quienes conoc\u00ed en vida quiero deciros que no llor\u00e9is mi muerte. Como me dijo uno de vosotros una vez, si no haces m\u00e1s que mirar al pasado, es el momento de cerrar el libro del futuro. Yo lo hago por voluntad propia. Adi\u00f3s.</font>\n\n"
+    },
+    {
+        "editor_id": "ccBGSSSE063_Quest",
+        "type": "QUST CNAM",
+        "original": "I've received a letter from a mysterious woman named Tyra Blood-Fire who claims to be from a bandit clan. She would like me to be her judge and executioner, but first I must prove myself. Having finished her task, I must now meet Tyra at the shrine to the west.",
+        "string": "He recibido la carta de una mujer misteriosa llamada Tyra Sangre-Fuego, que dice formar parte de un clan de bandidos. Quiere que la juzgue y ejecute, pero primero debo demostrar mi val\u00eda. Despu\u00e9s de cumplir la tarea que me encomend\u00f3, ahora debo reunirme con ella en el santuario que queda al oeste."
+    },
+    {
+        "editor_id": "ccBGSSSE063_Quest",
+        "type": "QUST CNAM",
+        "original": "Bandits have long been a source of trouble for the people in Skyrim. Given how problematic they are, if I head to a major hold, perhaps a courier will have news for me.",
+        "string": "Los bandidos son un quebradero de cabeza para la gente de Skyrim desde hace mucho tiempo. Con lo problem\u00e1ticos que son, si me dirijo a una comarca importante, quiz\u00e1 haya un mensajero con noticias para m\u00ed."
+    },
+    {
+        "editor_id": "ccBGSSSE063_Quest",
+        "type": "QUST CNAM",
+        "original": "Bandits have long been a source of trouble for the people in Skyrim. In a related matter, I've received a letter from a courier that may provide me with some work.",
+        "string": "Los bandidos son un quebradero de cabeza para la gente de Skyrim desde hace mucho tiempo. He recibido una carta de un mensajero que quiz\u00e1 me suponga algo de trabajo."
+    },
+    {
+        "editor_id": "ccBGSSSE063_CrimsonDirksBook1",
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\n<p align=\"center\">\n\n\nThe Crimson Dirks\nBook One\n\n\nby \nGathers-the-Coin\n</p>\n\n\n\n[pagebreak]\n<p align=\"left\">\n<img src='img://Textures/Interface/Books/Illuminated_Letters/T_letter.png'>yra Blood-Fire didn't want just any crew.\n\nBandits never built Great Houses. They had no structure, organization, nor legacy. They had few tactics in the field and little design for the future. Worst of all they had no loyalty beyond filling their own pockets. A bandit clan was a pack of stray dogs fighting for scraps, willing to bite the hand if it dared to feed them.\n\nGrowing up in Balmora, Tyra knew that the Great Houses of Morrowind were built on blood. Yet as an orphan child and a Nord amongst Elves, her concept of family was one forged from experience. It wasn't the bandits and cutthroats, but the loners and outcasts she identified with most. So when she picked out the crew that would become the Crimson Dirks, she sought out the qualities that best defined herself. \n\nWhat she wanted were survivors.\n\nTo find them, she would first need connections. For this, she sought the help of a Dark Elf named Reaver. \n\nThe Dunmer had no real name to speak of. Some speculated he was once a noble, having abandoned his titles and claims for a new one. Others believed he was with the Morag Tong, assassins having little use for their birth name. Tyra, meanwhile, had first met the brigand as a child begging in the streets. The Dark Elf had fixed his blood red eyes upon this orphan girl, ashen and starved, and deigned to fill her alms bowl. \n\nWhen she looked down, she found neither food nor gold, but a knife.\n\n\"This isn't a gift, little netch,\" the Dunmer cautioned, throat scarred with ash, \"your first score belongs to me.\"\n\nThat night young Tyra would make good on that promise, delivering a single ruby into the ashlander's palm. It glowed crimson like fire and blood, and from that day she was known as Tyra Blood-Fire, earning her name just as Reaver did from his deeds. As the years passed, the Dunmer kept a close eye on the Nord, tracking her growth from a cutpurse to a bandit. And while she considered her debt to Reaver paid, whenever their paths crossed, he would continue to demand a cut.\n\nEight years later, and the two had gone their separate ways - not just in distance, but in spirit and mind. Tyra had matured into a tenacious warrior, her physique chiseled and rough, a body forged in a crucible of blood and ash. Reaver, on the other hand, had grown fat and lazy, content to skim off the labor of his subordinates while he spent his days in quiet repose.\n\nAs Tyra stood before him, he played with a ruby in his palm, occasionally using his forearm to wipe the saliva from his greasy lips. While Tyra recognized the gem almost immediately, the Dark Elf bared little resemblance to the vicious killer she once knew.\n \nPerhaps it was Cyrodiil that changed him. He had traded his netch leather for fine silks, his dagger for a silver spoon, and his ashland cave for a highborn residence in the heart of Skingrad. His scowl was not one of rage, but irritation, chiefly at his guest for tracking mud on his freshly waxed floors. Only the eyes, scarlet and piercing, betrayed his former identity.\n\n\"I'm new to Cyrodiil,\" she said, placing a bag of gold on the table as tithe, \"and I need a crew.\"\n\nThe Dunmer beckoned a servant to hand him the gold, as he could no longer be bothered to reach for it. He examined the bag briefly to judge its weight, before shooing the servant and the gold aside. Tyra wondered if she had been better served filling the bag with cakes.\n\n\"I will help you find these men,\" the Dunmer croaked, finger rapping the table, \"but remember, little netch, your first score belongs to me.\"\n\nOf men who fit her requirements, there were three. Aesrael, the High Elf hunter, had grown up in an orphanage. Peladius was a former guardsman, dismissed for beating a pickpocket to death. Antonius was a hedge mage who spent more time at the tavern than the guild. \n\nThere were still others she wanted before the crew could be whole. She wanted a blacksmith to forge arms, and muscle to wield it. She wanted a thief who could stalk their prey in the shadows, and assassins to slit their throats. She wanted scouts to glean information, and sharp minds to decipher their code. And she was willing to travel the breadth of Tamriel to find them.\n\nBut for this first job, three was more than enough. One was all she needed. After all, she had already cased the building, having been invited as a guest. She had seen the servant girl deposit the gold in the next room, and the piles of riches scattered throughout the house. And she had watched as their plump, horker of an owner, lost his edge and taste for the work. For it was the reaver and all his riches that they would come for first.\n\nA week later, the three sealed their pact in blood. Aesrael and Peladius, being trained warriors, made quick work of the guards. Antonius bespelled the servants with his magic, and together the crew filled the wagons with their spoils. \n\nBut before all that was done, Tyra first found the once fearsome reaver in his bed chambers, helpless to stop what his greed had ordained. \n\nIn the shadow of a lantern's light, the Nord approached him with arms extended. In one hand was the bag of gold she had given him the week prior. In the other was the knife he had placed in her alms bowl so many years ago. \n\n\"I want you to have this,\" Reaver said, placing the ruby on the nightstand beside him. Tyra, for her part, never said a word. \n\n\"I wasn't always a reaver,\" the Dark Elf continued, \"I used to have a proper name. Casival, they called me. Funny story, there's a Dunmer boy, peddling for alms outside the Two Sisters Lodge with the same name.\"\n\nUpon hearing his words, Tyra's eyes met Reaver's for the last time, standing over him as he once did her. Perhaps in that moment another deal was made, understood but left unspoken. \n\nSeconds later, she plunged the knife into his heart.\n\nWhen it was done, Tyra wiped the blood-stained dirk on the bedsheet and picked up the ruby from the nighstand. In the hours that passed the crew sacked the place clean, all save the bag of gold, which she left next to her former employer's corpse. \n\nThe first score, after all, belonged to him. The rest she took for herself.",
+        "string": "[pagebreak]\n<p align=\"center\">\n\n\nLas Dagas carmes\u00edes\nLibro uno\n\n\nde \nRecolector de Moneda\n</p>\n\n\n\n[pagebreak]\n<p align=\"left\">\n<img src='img://Textures/Interface/Books/Illuminated_Letters/T_letter.png'>yra Sangre-Fuego no se conformaba con una banda normal.\n\nLos bandidos nunca fundaban grandes casas. Carec\u00edan de estructura, organizaci\u00f3n y legado. Sus t\u00e1cticas sobre el terreno eran escasas, y no ten\u00edan muchos planes para el futuro. Lo peor de todo era que el \u00fanico compromiso que ten\u00edan era el de llenarse los bolsillos. Un clan de bandidos era una manada de perros callejeros que se peleaban por las sobras, dispuestos a morder la mano que se atreviese a darles de comer.\n\nTyra se hab\u00eda criado en Balmora, y sab\u00eda que las grandes casas de Morrowind se hab\u00edan construido con sangre. Pero era una hu\u00e9rfana n\u00f3rdica rodeada de elfos, y su concepto de familia se basaba en su experiencia. No se identificaba con los bandidos y asesinos, sino con los solitarios y los parias. Por eso, cuando escogi\u00f3 a los forajidos que se convertir\u00edan en las Dagas carmes\u00edes, lo hizo buscando a quienes tuvieran las cualidades que mejor la defin\u00edan a ella. \n\nLo que buscaba eran supervivientes.\n\nPara dar con ellos, primero necesitar\u00eda contactos. Con ese fin recurri\u00f3 a un elfo oscuro llamado Saqueador. \n\nLos dunmer no usaban nombres de verdad. Algunos afirmaban que anta\u00f1o hab\u00eda sido un noble que hab\u00eda abandonado sus t\u00edtulos y posesiones para cambiar de identidad. Otros cre\u00edan que formaba parte del Morag Tong, puesto que a los asesinos no les serv\u00edan de mucho sus nombres reales. Entretanto, Tyra hab\u00eda conocido al forajido cuando era ni\u00f1a y mendigaba en las calles. El elfo oscuro fij\u00f3 sus ojos de color rojo sangre en aquella hu\u00e9rfana demacrada y muerta de hambre, y se dign\u00f3 a poner algo en su cuenco de limosnas. \n\nCuando esta baj\u00f3 la mirada, no encontr\u00f3 comida ni oro, sino un pu\u00f1al.\n\n\"Esto no es un regalo, peque\u00f1a netch\", le advirti\u00f3 el dunmer con una voz rasposa que sonaba a cenizas. \"Tu primer bot\u00edn me pertenece\".\n\nAquella noche, la joven Tyra cumplir\u00eda su promesa depositando un rub\u00ed en la palma de la mano del cenicio. Ten\u00eda un brillo carmes\u00ed, como de fuego y sangre, y desde aquel d\u00eda se conoci\u00f3 a la muchacha como Tyra Sangre-Fuego, tras ganarse su nombre mediante sus actos, igual que Saqueador. Con el paso de los a\u00f1os, el dunmer sigui\u00f3 de cerca la evoluci\u00f3n de la n\u00f3rdica, que pas\u00f3 de ratera a bandida. Aunque consideraba saldada su deuda con Saqueador, siempre que se encontraban este segu\u00eda exigi\u00e9ndole parte de sus ganancias.\n\nAl cabo de ocho a\u00f1os, cada uno hab\u00eda seguido su camino, no solo en la distancia, sino tambi\u00e9n mental y espiritualmente. Tyra hab\u00eda madurado y se hab\u00eda convertido en una tenaz guerrera, con un f\u00edsico duro y curtido, un cuerpo forjado en un crisol de sangre y ceniza. Saqueador, por otra parte, se hab\u00eda vuelto perezoso y hab\u00eda engordado, y se conformaba con sacar tajada del trabajo de sus subordinados mientras pasaba sus d\u00edas reposando tranquilamente.\n\nAl plantarse Tyra frente a \u00e9l, este se encontraba jugando con un rub\u00ed en la palma de la mano, y ocasionalmente usaba el antebrazo para secarse la saliva de los labios grasientos. Aunque ella reconoci\u00f3 la gema al instante, el elfo oscuro apenas se parec\u00eda ya al asesino feroz que hab\u00eda conocido anta\u00f1o.\n \nQuiz\u00e1 la vida en Cyrodiil le hab\u00eda transformado. Hab\u00eda cambiado el cuero de netch por fina seda, la daga por un cuchar\u00f3n de plata y la cueva en Cenicia por una mansi\u00f3n aristocr\u00e1tica en el coraz\u00f3n de Skingrad. Ten\u00eda el ce\u00f1o fruncido, no de ira, sino porque su invitada estaba llenando de barro el suelo reci\u00e9n encerado. Solo resultaban reconocibles sus ojos, penetrantes y de color escarlata.\n\n\"Acabo de llegar a Cyrodiil\", le dijo ella colocando una bolsa de oro sobre la mesa como diezmo. \"Y necesito una banda\".\n\nEl dunmer hizo que un criado le acercase el oro, puesto que \u00e9l ya ni se molestaba en acercarse a recogerlo. Sopes\u00f3 brevemente la bolsa antes de apartar de s\u00ed tanto el oro como al criado. Tyra se pregunt\u00f3 si no hubiera sido mejor idea llenarla de pastelillos.\n\n\"Te ayudar\u00e9 a encontrar hombres\", grazn\u00f3 el elfo oscuro golpeteando con un dedo sobre la mesa. \"Pero recuerda, peque\u00f1a netch, que tu primer bot\u00edn me pertenece\".\n\nHab\u00eda tres hombres que cumpliesen sus requisitos. Aesrael, el cazador alto elfo, se hab\u00eda criado en un orfanato. Peladius hab\u00eda sido expulsado de la guardia por matar a golpes a un ratero. Antonius era un mago de poca monta que pasaba m\u00e1s tiempo en la taberna que en el gremio. \n\nA\u00fan le faltaban miembros para completar la banda. Quer\u00eda un herrero para que forjase armas, y hombres fuertes para blandirlas. Quer\u00eda un ladr\u00f3n capaz de acechar a su presa en la sombra, y asesinos para que le cortasen la garganta. Quer\u00eda exploradores que le trajesen informaci\u00f3n, y mentes despiertas que la descifrasen. Y para dar con ellos estaba dispuesta a recorrer todo Tamriel.\n\nSin embargo, para su primera tarea, aquellos tres eran m\u00e1s que suficiente. Solo necesitaba uno. Despu\u00e9s de todo, ya hab\u00eda estudiado el edificio tras haberlo visitado como invitada. Hab\u00eda visto a la criada depositar el oro en la sala de al lado, y los montones de riquezas que hab\u00eda repartidos por toda la casa. Tambi\u00e9n hab\u00eda visto a su due\u00f1o, gordo como un horker, echarse a perder, y desinteresarse por el trabajo.\n\nUna semana m\u00e1s tarde, los tres sellaron con sangre su pacto. Aesrael y Peladius, que se hab\u00edan entrenado como guerreros, se deshicieron de los guardias. Antonius hechiz\u00f3 a los criados con magia, y entre toda la banda llenaron los carros con el bot\u00edn. \n\nSin embargo, antes de que terminase todo, Tyra encontr\u00f3 en sus aposentos a quien anta\u00f1o fuera un saqueador temible, incapaz de poner fin a lo que comenz\u00f3 con su codicia. \n\nA la sombra de un farol, la n\u00f3rdica se acerc\u00f3 a \u00e9l con los brazos extendidos. En una mano llevaba la bolsa de oro que le hab\u00eda entregado hac\u00eda una semana. En la otra el pu\u00f1al que \u00e9l hab\u00eda dejado en su cuenco de limosnas hac\u00eda tantos a\u00f1os. \n\n\"Quiero que te lleves esto\", dijo Saqueador mientras colocaba el rub\u00ed en la mesilla de noche que ten\u00eda al lado. Tyra, por su parte, no dijo ni una palabra. \n\n\"No siempre fui saqueador\", sigui\u00f3 diciendo el elfo oscuro. \"Antes ten\u00eda un nombre de verdad. Me llamaban Casival. Tiene gracia, a la entrada de la Posada de las Dos Hermanas, hay un muchacho dunmer pidiendo limosna, y tambi\u00e9n se llama as\u00ed\".\n\nAl o\u00edr sus palabras, Tyra lo mir\u00f3 a los ojos por \u00faltima vez, inclinada sobre \u00e9l como \u00e9l se inclin\u00f3 sobre ella hace mucho tiempo. Quiz\u00e1 en aquel momento se sell\u00f3 otro pacto sin necesidad de palabras. \n\nAl cabo de unos segundos, le hundi\u00f3 el pu\u00f1al en el coraz\u00f3n.\n\nUna vez que hubo muerto, Tyra limpi\u00f3 la sangre de la hoja con la s\u00e1bana y recogi\u00f3 el rub\u00ed de la mesilla de noche. En las horas que siguieron, la banda saque\u00f3 totalmente el lugar. Se lo llevaron todo salvo la bolsa de oro, que Tyra dej\u00f3 junto al cad\u00e1ver de su antiguo jefe. \n\nDespu\u00e9s de todo, el primer bot\u00edn le pertenec\u00eda. El resto se lo qued\u00f3 para ella."
+    }
+]

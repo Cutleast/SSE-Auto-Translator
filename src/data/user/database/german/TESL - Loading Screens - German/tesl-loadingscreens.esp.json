@@ -1,0 +1,662 @@
+[
+    {
+        "editor_id": "TESL_LSCR_0",
+        "type": "LSCR DESC",
+        "original": "The name Alduin can be separated into \"Al Du In\", which means \"Destroyer Devour Master\" in the Dragon Language.",
+        "string": "Der Name Alduin kann in \"Al Du In\" zerlegt werden, was in der Drachensprache \"Zerst\u00f6rer-Verschlinger-Meister\" bedeutet."
+    },
+    {
+        "editor_id": "TESL_LSCR_1",
+        "type": "LSCR DESC",
+        "original": "\"And the Scrolls have foretold, of black wings in the cold, That when brothers wage war come unfurled! Alduin, Bane of Kings, ancient shadow unbound, With a hunger to swallow the world!\" -- Song of the Dragonborn.",
+        "string": "\"Und die Schriftrollen der Alten erz\u00e4hlten von dunklen Schwingen in der K\u00e4lte, die sich dann entfalten, wenn Bruderzwist zum Kriege f\u00fchrt! Alduin, K\u00f6nigsgei\u00dfel, wird befreit... Schatten der Vergangenheit... so hungrig, dass nach der ganzen Welt er giert!\" -- Lied des Drachenbluts."
+    },
+    {
+        "editor_id": "TESL_LSCR_2",
+        "type": "LSCR DESC",
+        "original": "Even though the dragon cult went extinct centuries ago, some cultists continue to roam crypts as ghosts.",
+        "string": "Obwohl der Drachenkult schon vor Jahrhunderten ausgel\u00f6scht wurde, streifen einige Kultisten weiterhin als Geister durch die Krypten."
+    },
+    {
+        "editor_id": "TESL_LSCR_3",
+        "type": "LSCR DESC",
+        "original": "The Sneak skill makes it more difficult to be detected, which in turn allows for deadly stealth attacks.",
+        "string": "Die Fertigkeit Schleichen erschwert es, entdeckt zu werden, was wiederum t\u00f6dliche Schleichangriffe erm\u00f6glicht."
+    },
+    {
+        "editor_id": "TESL_LSCR_4",
+        "type": "LSCR DESC",
+        "original": "Two-Handed weapons do more damage than one-handed weapons, but don't block as effectively.",
+        "string": "Zweih\u00e4ndige Waffen verursachen mehr Schaden als einh\u00e4ndige Waffen, blockieren aber nicht so effektiv."
+    },
+    {
+        "editor_id": "TESL_LSCR_5",
+        "type": "LSCR DESC",
+        "original": "Boethiah is the daedric prince of deceit, conspiracy, and secret plots of murder. Many dark elves consider him to be their god-ancestor.",
+        "string": "Boethiah ist der daedrische F\u00fcrst des Betrugs, der Verschw\u00f6rung und der geheimen Mordkomplotte. Viele Dunkelelfen halten ihn f\u00fcr ihren Gottvorsteher."
+    },
+    {
+        "editor_id": "TESL_LSCR_6",
+        "type": "LSCR DESC",
+        "original": "The sinister black doors ensure that only those who are worthy can enter the sanctuaries of the Dark Brotherhood.",
+        "string": "Die unheilvollen schwarzen T\u00fcren sorgen daf\u00fcr, dass nur diejenigen, die w\u00fcrdig sind, die Zuflucht der Dunklen Bruderschaft betreten k\u00f6nnen."
+    },
+    {
+        "editor_id": "TESL_LSCR_7",
+        "type": "LSCR DESC",
+        "original": "Protected by their scales, dragons can survive many attacks and take on entire armies.",
+        "string": "Gesch\u00fctzt durch ihre Schuppen k\u00f6nnen Drachen viele Angriffe \u00fcberleben und es mit ganzen Armeen aufnehmen."
+    },
+    {
+        "editor_id": "TESL_LSCR_8",
+        "type": "LSCR DESC",
+        "original": "Most dragons posess a natural resistance to the element of their breath.",
+        "string": "Die meisten Drachen verf\u00fcgen \u00fcber eine nat\u00fcrliche Resistenz gegen das Element ihres Atems."
+    },
+    {
+        "editor_id": "TESL_LSCR_9",
+        "type": "LSCR DESC",
+        "original": "Skyrim legend tells of a hero known as the Dragonborn, a warrior with the body of a mortal and soul of a dragon, whose destiny it is to destroy the evil dragon Alduin.",
+        "string": "Die Legende von Himmelsrand erz\u00e4hlt von einem Helden, der als Drachenblut bekannt ist, einem Krieger mit dem K\u00f6rper eines Sterblichen und der Seele eines Drachens, dessen Bestimmung es ist, den b\u00f6sen Drachen Alduin zu vernichten."
+    },
+    {
+        "editor_id": "TESL_LSCR_10",
+        "type": "LSCR DESC",
+        "original": "When a dragon uses a breath attack like fire or frost, it is speaking in an ancient and powerful language. A battle between two dragons is actually a deadly verbal debate.",
+        "string": "Wenn ein Drache einen Atemangriff wie Feuer oder Frost einsetzt, spricht er in einer uralten und m\u00e4chtigen Sprache. Ein Kampf zwischen zwei Drachen ist eigentlich eine t\u00f6dliche verbale Auseinandersetzung."
+    },
+    {
+        "editor_id": "TESL_LSCR_11",
+        "type": "LSCR DESC",
+        "original": "Ordinary armor offers no protection against the breath of a dragon.",
+        "string": "Eine gew\u00f6hnliche R\u00fcstung bietet keinen Schutz gegen den Atem eines Drachens."
+    },
+    {
+        "editor_id": "TESL_LSCR_12",
+        "type": "LSCR DESC",
+        "original": "After the Dragon War, dragon cultists have built dragon mounds for the remains of fallen dragons.",
+        "string": "Nach dem Drachenkrieg haben die Drachenkultisten Drachenh\u00fcgel f\u00fcr die \u00dcberreste der gefallenen Drachen errichtet."
+    },
+    {
+        "editor_id": "TESL_LSCR_13",
+        "type": "LSCR DESC",
+        "original": "Dremora are Daedra, who commonly serve Mehrunes Dagon. They can be found in the planes of Oblivion or as summons of powerful conjurers.",
+        "string": "Dremora sind Daedra, die im Allgemeinen Mehrunes Dagon dienen. Man findet sie in den Ebenen von Oblivion oder als Beschw\u00f6rungen von m\u00e4chtigen Beschw\u00f6rern."
+    },
+    {
+        "editor_id": "TESL_LSCR_14",
+        "type": "LSCR DESC",
+        "original": "Emperior Titus Mede II is disliked by many Nords for his signing of the White-Gold Concordat in order to end the Great War against the Thalmor.",
+        "string": "Kaiser Titus Mede II. wird von vielen  nicht gemocht, weil er das Wei\u00dfgold-Konkordat unterzeichnet hat, um den Gro\u00dfen Krieg gegen die Thalmor zu beenden."
+    },
+    {
+        "editor_id": "TESL_LSCR_15",
+        "type": "LSCR DESC",
+        "original": "Arcane Enchanters are worktables used by mages to enchant weapons and armor.",
+        "string": "Arkane Verzauberer sind Arbeitstische, die von Magiern zum Verzaubern von Waffen und R\u00fcstungen verwendet werden."
+    },
+    {
+        "editor_id": "TESL_LSCR_16",
+        "type": "LSCR DESC",
+        "original": "The Falmer are blind, corrupted descendants of the ancient Snow Elves that live deep beneath the surface of Skyrim.",
+        "string": "Die Falmer sind blinde, verdorbene Nachfahren der alten Schneeelfen, die tief unter der Oberfl\u00e4che von Himmelsrand leben."
+    },
+    {
+        "editor_id": "TESL_LSCR_17",
+        "type": "LSCR DESC",
+        "original": "Even though the Falmer have lost most of their former glory, they are still proficient mages and will use these powers against their foes.",
+        "string": "Obwohl die Falmer den gr\u00f6\u00dften Teil ihres fr\u00fcheren Ruhmes verloren haben, sind sie immer noch f\u00e4hige Magier und werden diese Kr\u00e4fte gegen ihre Feinde einsetzen."
+    },
+    {
+        "editor_id": "TESL_LSCR_18",
+        "type": "LSCR DESC",
+        "original": "Years of living underground have rendered the Falmer blind, but their other senses have become more acute as a result.",
+        "string": "Das jahrelange Leben unter der Erde hat die Falmer blind gemacht, aber ihre anderen Sinne haben sich dadurch gesch\u00e4rft."
+    },
+    {
+        "editor_id": "TESL_LSCR_19",
+        "type": "LSCR DESC",
+        "original": "The Falmer breed and raise Chaurus, in order to use their chitin for armor and weapons.",
+        "string": "Die Falmer z\u00fcchten und vermehren Chauren, um deren Chitin f\u00fcr R\u00fcstungen und Waffen zu verwenden."
+    },
+    {
+        "editor_id": "TESL_LSCR_20",
+        "type": "LSCR DESC",
+        "original": "Dual casting allows you to cast a much more powerful version of the spell.",
+        "string": "Beidh\u00e4ndig k\u00f6nnt ihr eine viel m\u00e4chtigere Version des Zaubers wirken."
+    },
+    {
+        "editor_id": "TESL_LSCR_21",
+        "type": "LSCR DESC",
+        "original": "Fire spells cast by proficient Destruction mages can cause their targets to stop fighting and flee from battle.",
+        "string": "Feuerzauber, die von ge\u00fcbten Zerst\u00f6rungsmagiern gewirkt werden, k\u00f6nnen bewirken, dass ihre Ziele aufh\u00f6ren zu k\u00e4mpfen und aus dem Kampf fliehen."
+    },
+    {
+        "editor_id": "TESL_LSCR_22",
+        "type": "LSCR DESC",
+        "original": "The highest mountain in all of Tamriel is Skyrim's Throat of the World. The reclusive Greybeards live near the top, in the ancient monastery of High Hrothgar.",
+        "string": "Der h\u00f6chste Berg in ganz Tamriel ist der Hals der Welt in Himmelsrand. Die zur\u00fcckgezogenen Graub\u00e4rte leben in der N\u00e4he des Gipfels, im alten Kloster von Hoch-Hrothgar."
+    },
+    {
+        "editor_id": "TESL_LSCR_23",
+        "type": "LSCR DESC",
+        "original": "No one is quite sure why the Draugr walk the halls of Skyrim's burial crypts, but some believe they once served the dragons ages ago... and have been cursed with undeath for their treachery.",
+        "string": "Niemand wei\u00df genau, warum die Draugr in den Grabkammern von Himmelsrand wandeln, aber einige glauben, dass sie vor langer Zeit den Drachen gedient haben... und f\u00fcr ihren Verrat mit dem Untod verflucht wurden."
+    },
+    {
+        "editor_id": "TESL_LSCR_24",
+        "type": "LSCR DESC",
+        "original": "Frost spells like Ice Spike drain stamina and slow down their targets, preventing them from running away.",
+        "string": "Frostzauber wie Eisstachel zehren an der Ausdauer und verlangsamen ihr Ziel, sodass es nicht weglaufen kann."
+    },
+    {
+        "editor_id": "TESL_LSCR_25",
+        "type": "LSCR DESC",
+        "original": "Due to the civil war, imperial camps are a common sight in Skyrim.",
+        "string": "Aufgrund des B\u00fcrgerkriegs sind kaiserliche Lager in Himmelsrand ein allt\u00e4glicher Anblick."
+    },
+    {
+        "editor_id": "TESL_LSCR_26",
+        "type": "LSCR DESC",
+        "original": "Khajiit are cat-like people who come from Elsweyr. Even though they are known for high intelligence and agility, they are also proud and fearsome warriors.",
+        "string": "Khajiit sind ein katzen\u00e4hnliches Volk, das aus Elsweyr stammt. Obwohl sie f\u00fcr ihre hohe Intelligenz und Beweglichkeit bekannt sind, sind sie auch stolze und furchterregende Krieger."
+    },
+    {
+        "editor_id": "TESL_LSCR_27",
+        "type": "LSCR DESC",
+        "original": "Alchemy labs can be used to combine ingredients into useful potions and deadly poisons.",
+        "string": "Alchemielabore werden dazu benutzt, Zutaten in n\u00fctzliche Tr\u00e4nke, oder in t\u00f6dliche Gifte zu verarbeiten."
+    },
+    {
+        "editor_id": "TESL_LSCR_28",
+        "type": "LSCR DESC",
+        "original": "The Amulet of Mara is worn as a symbol to show that one is looking for a spouse.",
+        "string": "Das Amulett von Mara wird als Symbol getragen, um zu zeigen, dass man auf der Suche nach einem Ehepartner ist."
+    },
+    {
+        "editor_id": "TESL_LSCR_29",
+        "type": "LSCR DESC",
+        "original": "Many mages have been corrupted by their lust for power.",
+        "string": "Viele Magier sind korrumpiert von ihrer Gier nach Macht."
+    },
+    {
+        "editor_id": "TESL_LSCR_30",
+        "type": "LSCR DESC",
+        "original": "Woe to the unwary explorer who delves deep into the burial crypts of the ancient Nords, and disturbs the Draugr that dwell within.",
+        "string": "Leid dem unvorsichtigen Entdecker, der tief in die Grabkammern der alten Nord eindringt und die dort wohnenden Draugr st\u00f6rt."
+    },
+    {
+        "editor_id": "TESL_LSCR_31",
+        "type": "LSCR DESC",
+        "original": "Astrid is the leader of the Dark Brotherhood Sanctuary, and her word is law.",
+        "string": "Astrid ist die Anf\u00fchrerin der Zuflucht der Dunklen Bruderschaft und ihr Wort ist Gesetz."
+    },
+    {
+        "editor_id": "TESL_LSCR_32",
+        "type": "LSCR DESC",
+        "original": "Skyrim is engaged in a bloody civil conflict between the rebel Stormcloaks and soldiers of the Imperial Legion.",
+        "string": "Himmelsrand liegt in einem blutigen B\u00fcrgerkrieg zwischen den rebellischen Sturmm\u00e4nteln und den Soldaten der kaiserlichen Legion."
+    },
+    {
+        "editor_id": "TESL_LSCR_33",
+        "type": "LSCR DESC",
+        "original": "Sanguine is the daedric prince of hedonism, debauchery and dark indulgences. He is more likely than most princes to take an interest in mortal affairs.",
+        "string": "Sanguine ist der daedrische F\u00fcrst des Genusses, der Verf\u00fchrung und der Ausschweifungen. Er ist mehr als jeder andere daedrische F\u00fcrst interessiert an sterblichen Angelegenheiten."
+    },
+    {
+        "editor_id": "TESL_LSCR_34",
+        "type": "LSCR DESC",
+        "original": "\"The true power of the ancient blood is found in the form of the Vampire Lord.\" - Lord Harkon",
+        "string": "\"Die wahre Macht des alten Blutes hat die Gestalt des Vampirlords.\" - Lord Harkon"
+    },
+    {
+        "editor_id": "TESL_LSCR_35",
+        "type": "LSCR DESC",
+        "original": "Wood Elves, also known as Bosmer, are natives of Valenwood. This jungle nation is home to giant, migratory trees that house their cities.",
+        "string": "Waldelfen, auch bekannt als Bosmer, haben ihren Ursprung in Valenwald. Diese Dschungelregion ist die Heimat von riesigen B\u00e4umen, die ihre St\u00e4dte beherbergen."
+    },
+    {
+        "editor_id": "TESL_LSCR_36",
+        "type": "LSCR DESC",
+        "original": "The Thieves Guild has a strong presence in the city of Riften, and has been known to recruit those gifted in the art of stealth.",
+        "string": "Die Diebesgilde hat eine starke Pr\u00e4senz in der Stadt Rifton und ist bekannt daf\u00fcr, diejenigen aufzunehmen, die mit der Gabe der Heimlichkeit gesegnet sind."
+    },
+    {
+        "editor_id": "TESL_LSCR_37",
+        "type": "LSCR DESC",
+        "original": "Those venturing in Skyrim's deepest underground reaches should be wary of the Chaurus, a giant insect that spits poison and bites with its razor-sharp mandibles.",
+        "string": "Jene, die sich in die tiefsten Untergr\u00fcnde Himmelsrands wagen, sollten sich vor den Chauren in Acht nehmen. Sie sind riesige Insekten, welche Gift spucken und mit ihren messerscharfen Mundwerkzeugen zubei\u00dfen."
+    },
+    {
+        "editor_id": "TESL_LSCR_38",
+        "type": "LSCR DESC",
+        "original": "The School of Conjuration is used to raise the dead, summon creatures from one of the planes of Oblivion, and soul trap opponents killed in combat.",
+        "string": "Die Schule der Beschw\u00f6rung wird genutzt, um die Toten zu erwecken, Kreaturen aus den Ebenen von Oblivion zu beschw\u00f6ren und die Seelen der Gegner im Kampf an Seelensteine zu binden."
+    },
+    {
+        "editor_id": "TESL_LSCR_39",
+        "type": "LSCR DESC",
+        "original": "Those interested in learning more about magic may consider joining the College of Winterhold.",
+        "string": "Jene, die sich f\u00fcr Magie interessieren, sollten in Betracht ziehen, der Akademie von Winterfeste beizutreten."
+    },
+    {
+        "editor_id": "TESL_LSCR_40",
+        "type": "LSCR DESC",
+        "original": "Many of Skyrim's most powerful artifacts are hidden in ancient ruins, guarded by terrible creatures.",
+        "string": "Viele der m\u00e4chtigsten Artefakte von Himmelsrand sind in alten Ruinen versteckt und werden von schrecklichen Kreaturen bewacht."
+    },
+    {
+        "editor_id": "TESL_LSCR_41",
+        "type": "LSCR DESC",
+        "original": "Fire burns for a while after the target is hit, dealing extra damage, and is useful against most types of opponents.",
+        "string": "Feuer brennt noch eine Weile, nachdem das Ziel getroffen wurde, und verursacht zus\u00e4tzlichen Schaden, was gegen die meisten Gegnertypen n\u00fctzlich ist."
+    },
+    {
+        "editor_id": "TESL_LSCR_42",
+        "type": "LSCR DESC",
+        "original": "A native uprising in Markarth was put down 20 years ago. The survivors are known as the Forsworn.",
+        "string": "Ein einheimischer Aufstand in Markarth wurde vor 20 Jahren gestoppt. Die \u00dcberlebenden sind bekannt als Abgeschworene."
+    },
+    {
+        "editor_id": "TESL_LSCR_43",
+        "type": "LSCR DESC",
+        "original": "The School of Destruction focuses on the mastery of fire, frost, and shock, and is used to cast spells like Fireball, Ice Spike, and Lightning Bolt.",
+        "string": "Die Schule der Zerst\u00f6rung konzentriert sich auf die Beherrschung von Feuer, Frost und Schock und wird verwendet, um Zauber wie Feuerball, Eisstachel und Blitz zu wirken."
+    },
+    {
+        "editor_id": "TESL_LSCR_44",
+        "type": "LSCR DESC",
+        "original": "Legend holds that the highest ranking Dragon Priests were granted magical masks - strange artifacts that defy the laws of time, and grant their wearers powerful enchantments.",
+        "string": "Legenden besagen, dass den h\u00f6chsten Drachenpriestern magische Masken gew\u00e4hrt wurden - au\u00dfergew\u00f6hnliche Artefakte welche den Gesetzen der Zeit trotzen und den Tr\u00e4gern m\u00e4chtige Verzauberungen gew\u00e4hren."
+    },
+    {
+        "editor_id": "TESL_LSCR_45",
+        "type": "LSCR DESC",
+        "original": "Potions can be used temporarily to augment other skills.",
+        "string": "Tr\u00e4nke k\u00f6nnen vor\u00fcbergehend verwendet werden, um andere F\u00e4higkeiten zu verst\u00e4rken."
+    },
+    {
+        "editor_id": "TESL_LSCR_46",
+        "type": "LSCR DESC",
+        "original": "Potions that restore Stamina or Magicka should be used during combat to increase the number of available spells and power attacks.",
+        "string": "Tr\u00e4nke, die Ausdauer oder Magicka wiederherstellen, sollten w\u00e4hrend des Kampfes verwendet werden, um die Anzahl der verf\u00fcgbaren Zauber und m\u00e4chtigen Angriffe zu erh\u00f6hen."
+    },
+    {
+        "editor_id": "TESL_LSCR_47",
+        "type": "LSCR DESC",
+        "original": "Skeevers are large, rat-like creatures that make their nests in caves, sewers, and underground warrens. While easy to kill, they can be a challenge in groups, and carry debilitating diseases.",
+        "string": "Skeever sind gro\u00dfe, ratten\u00e4hnliche Kreaturen, die ihre Nester in H\u00f6hlen und Kanalisationen bauen."
+    },
+    {
+        "editor_id": "TESL_LSCR_48",
+        "type": "LSCR DESC",
+        "original": "In addition to dealing regular damage, Shock spells also deplete the target's Magicka. They're particularly useful against wizards.",
+        "string": "Schockzauber verursachen nicht nur normalen Schaden, sondern verbrauchen auch die Magicka des Ziels. Sie sind besonders n\u00fctzlich gegen Magier."
+    },
+    {
+        "editor_id": "TESL_LSCR_49",
+        "type": "LSCR DESC",
+        "original": "High Elves are known for their affinity to magic.",
+        "string": "Hochelfen sind f\u00fcr ihre Affinit\u00e4t zur Magie bekannt."
+    },
+    {
+        "editor_id": "TESL_LSCR_50",
+        "type": "LSCR DESC",
+        "original": "\"Focusing solely on flame spells will make them more powerful, but you may find yourself at a disadvantage against foes immune to fire.\" - Faralda",
+        "string": "\"Fokussiert man sich nur auf Flammenzauber, werden diese st\u00e4rker, jedoch hat man einen Nachteil gegen Gegner, die immun gegen Feuer sind.\" - Faralda"
+    },
+    {
+        "editor_id": "TESL_LSCR_51",
+        "type": "LSCR DESC",
+        "original": "The wilderness of Skyrim is cold and unforgiving.",
+        "string": "Die Wildnis von Himmelsrand ist kalt und gnadenlos."
+    },
+    {
+        "editor_id": "TESL_LSCR_52",
+        "type": "LSCR DESC",
+        "original": "The frost troll is the most fearsome of its kind found in Skyrim, and is at home in the province's most frozen regions.",
+        "string": "Der Eistroll ist der furchterregendste seiner Art in Himmelsrand und ist in den eisigsten Regionen der Provinz zu Hause."
+    },
+    {
+        "editor_id": "TESL_LSCR_53",
+        "type": "LSCR DESC",
+        "original": "The One-Handed skill improves the use of weapons such as daggers, swords, maces, and war axes.",
+        "string": "Die Einhand-Fertigkeit verbessert den Gebrauch von Waffen wie Dolchen, Schwertern, Streitkolben und Kriegs\u00e4xten."
+    },
+    {
+        "editor_id": "TESL_LSCR_54",
+        "type": "LSCR DESC",
+        "original": "Those who want to master the Thu'um may seek to learn from the Greybeards.",
+        "string": "Diejenigen, die das Thu'um beherrschen wollen, k\u00f6nnen versuchen, von den Graub\u00e4rten zu lernen."
+    },
+    {
+        "editor_id": "TESL_LSCR_55",
+        "type": "LSCR DESC",
+        "original": "Skyrim is home to the Nords, a fierce, hardy people that value honor and prowess in battle.",
+        "string": "Himmelsrand ist die Heimat der Nord, ein unersch\u00fctterliches, robustes Volk, welches Ehre und Tapferkeit sch\u00e4tzt."
+    },
+    {
+        "editor_id": "TESL_LSCR_56",
+        "type": "LSCR DESC",
+        "original": "Dwarven ruins are dangerous to explore because of devious traps and hazardous machinery, to say nothing of the denizens that may dwell within...",
+        "string": "Die Erkundung von Dwemerruinen ist wegen der t\u00fcckischen Fallen und gef\u00e4hrlichen Maschinen gef\u00e4hrlich, ganz zu schweigen von den Bewohnern, die darin leben k\u00f6nnten..."
+    },
+    {
+        "editor_id": "TESL_LSCR_57",
+        "type": "LSCR DESC",
+        "original": "The Blades have long since disbanded, and the organization's few remaining members have gone into hiding.",
+        "string": "Die Klingen wurden l\u00e4ngst aufgel\u00f6st, und die wenigen verbliebenen Mitglieder der Organisation sind untergetaucht."
+    },
+    {
+        "editor_id": "TESL_LSCR_58",
+        "type": "LSCR DESC",
+        "original": "Nord belief holds that the honored dead live forever in Sovngarde.",
+        "string": "Der Glaube der Nord besagt, dass die geehrten Toten in Sovngarde ewig leben."
+    },
+    {
+        "editor_id": "TESL_LSCR_59",
+        "type": "LSCR DESC",
+        "original": "The Imperial Legion is trying to regain control over Skyrim.",
+        "string": "Die Kaiserliche Legion versucht, die Kontrolle \u00fcber Himmelsrand wiederzuerlangen."
+    },
+    {
+        "editor_id": "TESL_LSCR_60",
+        "type": "LSCR DESC",
+        "original": "Sheogorath is the daedric prince of madness. He is utterly unpredictable, and may hinder or help any mortal unlucky enough to cross his path.",
+        "string": "Sheogorath ist der daedrische F\u00fcrst des Wahnsinns. Er ist g\u00e4nzlich unberechenbar und behindert oder hilft jedem Sterblichen, der ungl\u00fccklich genug ist, seinen Weg zu kreuzen."
+    },
+    {
+        "editor_id": "TESL_LSCR_61",
+        "type": "LSCR DESC",
+        "original": "Many Steam Animunculi remain active, making the exploration of Dwarven ruins a dangerous prospect.",
+        "string": "Viele Animunculi sind nach wie vor aktiv und machen die Erkundung von Dwemerruinen zu einer gef\u00e4hrlichen Angelegenheit."
+    },
+    {
+        "editor_id": "TESL_LSCR_62",
+        "type": "LSCR DESC",
+        "original": "In days of old, when dragons ruled the earth, there lived mortal men who worshipped the beasts as gods. These Dragon Priests are long since dead... but something has awoken them from their ancient slumber.",
+        "string": "In alten Tagen, als Drachen die Welt beherrschten, lebten sterbliche Menschen, die die Bestien als G\u00f6tter verehrten. Diese Drachenpriester sind lang verstorben... doch etwas weckte sie aus ihrem uralten Schlaf."
+    },
+    {
+        "editor_id": "TESL_LSCR_63",
+        "type": "LSCR DESC",
+        "original": "Nords are naturally resistant to the cold, allowing them to survive the harsh climate of Skyrim.",
+        "string": "Nord sind von Natur aus k\u00e4lteresistent und k\u00f6nnen so im rauen Klima von Skyrim \u00fcberleben."
+    },
+    {
+        "editor_id": "TESL_LSCR_64",
+        "type": "LSCR DESC",
+        "original": "The Alchemy skill determines the creation and potency of potions and poisons.",
+        "string": "Die Alchemiefertigkeit beeinflusst die Herstellung und Wirksamkeit von Tr\u00e4nken und Giften."
+    },
+    {
+        "editor_id": "TESL_LSCR_65",
+        "type": "LSCR DESC",
+        "original": "Any poison applied to an equipped weapon will be used on the next hit.",
+        "string": "Jedes Gift, das auf eine Waffe angewandt wird, wird beim n\u00e4chsten Schlag verbraucht."
+    },
+    {
+        "editor_id": "TESL_LSCR_66",
+        "type": "LSCR DESC",
+        "original": "Mara is the goddess of love and compassion. She has a temple in Riften.",
+        "string": "Mara ist die G\u00f6ttin der Liebe und des Mitgef\u00fchls. Einer ihrer Tempel steht in Rifton."
+    },
+    {
+        "editor_id": "TESL_LSCR_67",
+        "type": "LSCR DESC",
+        "original": "Many Nords shun magic and instead trust their weapons and courage.",
+        "string": "Viele Nord meiden die Magie und vertrauen stattdessen auf ihre Waffen und ihren Mut."
+    },
+    {
+        "editor_id": "TESL_LSCR_68",
+        "type": "LSCR DESC",
+        "original": "Many Nordic ruins and forts are occupied by bandit clans.",
+        "string": "Viele nordische Ruinen und Festungen sind von Banditenclans besetzt."
+    },
+    {
+        "editor_id": "TESL_LSCR_69",
+        "type": "LSCR DESC",
+        "original": "Dark Elves are naturally resistant to fire and are talented in Destruction magic.",
+        "string": "Dunkelelfen sind von Natur aus resistent gegen Feuer und verf\u00fcgen \u00fcber ein gro\u00dfes Talent f\u00fcr Zerst\u00f6rungsmagie."
+    },
+    {
+        "editor_id": "TESL_LSCR_70",
+        "type": "LSCR DESC",
+        "original": "Skyrim holds many treasures that are waiting to be claimed by brave adventurers.",
+        "string": "Himmelsrand birgt viele Sch\u00e4tze, die darauf warten, von mutigen Abenteurern erobert zu werden."
+    },
+    {
+        "editor_id": "TESL_LSCR_71",
+        "type": "LSCR DESC",
+        "original": "Riften has earned quite a sinister reputation, mainly due to the Thieves Guild's presence in the sewers beneath the streets.",
+        "string": "Rifton hat sich einen schlechten Ruf zugelegt, haupts\u00e4chlich durch die Anwesenheit der Diebesgilde in den Kan\u00e4len unter den Stra\u00dfen der Stadt."
+    },
+    {
+        "editor_id": "TESL_LSCR_72",
+        "type": "LSCR DESC",
+        "original": "Mages are dangerous opponents for the unprepared explorer.",
+        "string": "Magier sind gef\u00e4hrliche Gegner f\u00fcr einen unvorbereiteten Abenteurer."
+    },
+    {
+        "editor_id": "TESL_LSCR_73",
+        "type": "LSCR DESC",
+        "original": "A Dark Brotherhood assassin practices the art of murder, and must be willing to pay for that crime... with gold, a jail sentence, or even more bloodshed.",
+        "string": "Ein Attent\u00e4ter der Dunklen Bruderschaft \u00fcbt sich in der Kunst des Mordens und muss bereit sein, f\u00fcr dieses Verbrechen zu bezahlen... mit Gold, einer Gef\u00e4ngnisstrafe oder noch mehr Blutvergie\u00dfen."
+    },
+    {
+        "editor_id": "TESL_LSCR_74",
+        "type": "LSCR DESC",
+        "original": "Giants are generally peaceful creatures, so long as potential threats keep their distance... and leave their mammoths unharmed.",
+        "string": "Riesen sind eher friedfertige Wesen, solange potenzielle Gefahren Abstand halten... und ihre Mammuts in Ruhe gelassen werden."
+    },
+    {
+        "editor_id": "TESL_LSCR_75",
+        "type": "LSCR DESC",
+        "original": "What the Dwarven Sphere lacks in strength it makes up for in speed and mobility, as it patrols the halls of the Dwemer ruins it still protects.",
+        "string": "Was der Dwemersph\u00e4re an St\u00e4rke fehlt, macht sie mit Geschwindigkeit und Mobilit\u00e4t wett, w\u00e4hrend sie in den Hallen der Dwemerruinen patroulliert und diese verteidigt."
+    },
+    {
+        "editor_id": "TESL_LSCR_76",
+        "type": "LSCR DESC",
+        "original": "The Greybeards of High Hrothgar follow the teachings of Jurgen Windcaller, who believed the power of the Voice was a means of attaining enlightenment.",
+        "string": "Die Graub\u00e4rte von Hoch-Hrothgar folgen den Lehren von Jurgen Windrufer, welcher glaubte, die Macht der Stimme sei eine M\u00f6glichkeit, Erleuchtung zu erlangen."
+    },
+    {
+        "editor_id": "TESL_LSCR_77",
+        "type": "LSCR DESC",
+        "original": "The Pickpocket skill is used to take things from an unsuspecting target's pockets... and not get caught in the process.",
+        "string": "Die Taschendiebstahlfertigkeit wird genutzt um Dinge aus den Taschen ahnungsloser Ziele zu entwenden... und dabei nicht erwischt zu werden."
+    },
+    {
+        "editor_id": "TESL_LSCR_78",
+        "type": "LSCR DESC",
+        "original": "Alchemists study mixing, boiling, and distilling various substances to obtain their properties and create potions and poisons.",
+        "string": "Alchemisten studieren das Mischen, Kochen und Destillieren verschiedener Substanzen, um deren Eigenschaften zu gewinnen und Tr\u00e4nke und Gifte herzustellen."
+    },
+    {
+        "editor_id": "TESL_LSCR_79",
+        "type": "LSCR DESC",
+        "original": "\"Upon my honor I do swear undying loyalty to the Emperor and unwavering obedience to the officers of his great Empire. May those above judge me, and those below take me, if I fail in my duty. Long live the Emperor! Long live the Empire!\" - Imperial Legion oath",
+        "string": "\"Ich schw\u00f6re dem Kaiser ewige Treue und den Offizieren seines gro\u00dfen Kaiserreiches unbedingten Gehorsam. M\u00f6gen die da oben mich richten und die da unten mich fassen, wenn ich in meiner Pflicht versage. Lang lebe der Kaiser! Lang lebe das Kaiserreich!\" - Kaiserlicher Legionseid"
+    },
+    {
+        "editor_id": "TESL_LSCR_80",
+        "type": "LSCR DESC",
+        "original": "Once provoked, giants are dangerous foes and have been the demise of many aspiring heroes.",
+        "string": "Einmal provoziert sind Riesen gef\u00e4hrliche Gegner. F\u00fcr viele ehrgeizige Helden waren sie der Untergang."
+    },
+    {
+        "editor_id": "TESL_LSCR_81",
+        "type": "LSCR DESC",
+        "original": "The Frostbite Spider is one of Skyrim's most fearsome and loathed native creatures. There is no escape once its prey is webbed.",
+        "string": "Die Frostbissspinne ist eine der furchterregendsten und meistgehassten einheimischen Kreaturen in Skyrim. Ist ihre Beute erst einmal eingesponnen, gibt es kein Entkommen mehr."
+    },
+    {
+        "editor_id": "TESL_LSCR_82",
+        "type": "LSCR DESC",
+        "original": "There is considerable mystery surrounding the ominous Word Walls dotted all across Skyrim. The ancient carvings etched into the stone are believed to be words in the Dragon Language, for the characters of that language very much resemble claw marks or scratches.",
+        "string": "Die umin\u00f6sen Wortmauern, die in ganz Himmelsrand verstreut sind, umgibt ein beachtliches Mysterium. Man glaubt, dass die uralten Gravuren, die in den Stein gemei\u00dfelt wurden, W\u00f6rter in der Drachensprache sind. Die Buchstaben der Sprache erinnern sehr stark an Klauenspuren oder Kratzer."
+    },
+    {
+        "editor_id": "TESL_LSCR_83",
+        "type": "LSCR DESC",
+        "original": "A magical Ward protects the caster from offensive spells, but takes a few seconds to charge up to full power.",
+        "string": "Ein magischer Schutzschild sch\u00fctzt den Zaubernden vor Offensivzaubern, aber es dauert einige Sekunden, bis er seine volle St\u00e4rke erreicht hat."
+    },
+    {
+        "editor_id": "TESL_LSCR_84",
+        "type": "LSCR DESC",
+        "original": "As his champion, Miraak learned the power to bend the will of dragons from Hermaeus Mora.",
+        "string": "Als sein Champion lernte Miraak von Hermaeus Mora die Macht, den Willen der Drachen zu beugen."
+    },
+    {
+        "editor_id": "TESL_LSCR_85",
+        "type": "LSCR DESC",
+        "original": "In days of old, when dragons ruled the earth, there lived mortal men who worshipped the beasts as gods. These Dragon Priests are long since dead... but something has awoken them from their ancient slumber.",
+        "string": "In alten Zeiten, als Drachen die Erde beherrschten, lebten sterbliche Menschen, die die Bestien wie G\u00f6tter verehrten. Diese Drachenpriester sind schon lange tot... aber etwas hat sie aus ihrem alten Schlaf geweckt."
+    },
+    {
+        "editor_id": "TESL_LSCR_86",
+        "type": "LSCR DESC",
+        "original": "So long as there is a Listener to hear the Night Mother's voice, the Dark Brotherhood will endure...",
+        "string": "Solange es einen Zuh\u00f6rer gibt, der die Stimme der Mutter der Nacht h\u00f6rt, wird die Dunkle Bruderschaft fortbestehen..."
+    },
+    {
+        "editor_id": "TESL_LSCR_87",
+        "type": "LSCR DESC",
+        "original": "The name Odahviing means \"Winged Snow Hunter\" in the Dragon Language.",
+        "string": "Der Name Odahviing bedeutet in der Drachensprache \"Gefl\u00fcgelter Schneej\u00e4ger\"."
+    },
+    {
+        "editor_id": "TESL_LSCR_88",
+        "type": "LSCR DESC",
+        "original": "The chieftain of an orc stronghold is the strongest male and the only one permitted to take wives or father children.",
+        "string": "Der H\u00e4uptling einer Orkfestung ist der st\u00e4rkste Mann und der einzige, der sich eine Frau nehmen oder Kinder zeugen darf."
+    },
+    {
+        "editor_id": "TESL_LSCR_89",
+        "type": "LSCR DESC",
+        "original": "Shamans are the spiritual leaders of orc strongholds and use their knowledge to cure ill members of the stronghold.",
+        "string": "Schamanen sind die geistigen F\u00fchrer von Orkfestungen und nutzen ihr Wissen, um kranke Mitglieder der Hochburg zu heilen."
+    },
+    {
+        "editor_id": "TESL_LSCR_90",
+        "type": "LSCR DESC",
+        "original": "Orcs are famed for their skill in smithing, particularly with the metal called Orichalcum, which they use to forge armor and weapons.",
+        "string": "Orks sind ber\u00fchmt f\u00fcr ihre Schmiedekunst, insbesondere im Umgang mit dem Metall Orichalcum, das sie zum Schmieden von R\u00fcstungen und Waffen verwenden."
+    },
+    {
+        "editor_id": "TESL_LSCR_91",
+        "type": "LSCR DESC",
+        "original": "Many Orcs seek to escape traditional life in the strongholds. Orc women may want to escape being \"just another wife\" to the chieftain. They leave to join the Imperial Legion, see the world or otherwise seek their fortune.",
+        "string": "Viele Orks wollen dem traditionellen Leben in den Orkfestungen entfliehen. Ork-Frauen wollen vielleicht nicht mehr \"nur eine weitere Ehefrau\" f\u00fcr den H\u00e4uptling sein. Sie gehen, um sich der Kaiserlichen Legion anzuschlie\u00dfen, die Welt zu sehen oder auf andere Weise ihr Gl\u00fcck zu suchen."
+    },
+    {
+        "editor_id": "TESL_LSCR_92",
+        "type": "LSCR DESC",
+        "original": "Orcs who do not live in strongholds are derisively called \"city Orcs\" by those that do, and are considered soft outsiders just like non-Orcs.",
+        "string": "Orks, die nicht in Orkfestungen leben, werden von denen, die dort leben, sp\u00f6ttisch \"Stadt-Orks\" genannt und gelten als weiche Au\u00dfenseiter, genau wie Nicht-Orks."
+    },
+    {
+        "editor_id": "TESL_LSCR_93",
+        "type": "LSCR DESC",
+        "original": "Saint Jiub was canonized for driving the cliff racers from the island of Vvardenfell in Morrowind. His soul became trapped in the Soul Cairn when he died.",
+        "string": "Der heilige Jiub wurde heiliggesprochen, weil er die Klippenl\u00e4ufer von der Insel Vvardenfell in Morrowind vertrieben hat. Als er starb, wurde seine Seele im Seelengrab gefangen."
+    },
+    {
+        "editor_id": "TESL_LSCR_94",
+        "type": "LSCR DESC",
+        "original": "Serpentine Dragons are found only on Solstheim and can breathe frost or fire. Their appearance is unique compared to other dragons, most notably their blue hue, lack of scutes, and oversized bottom jaws which give them a distinctive underbite.",
+        "string": "Schlangendrachen sind nur auf Solstheim zu finden und k\u00f6nnen Frost oder Feuer spucken. Ihr Aussehen ist im Vergleich zu anderen Drachen einzigartig, vor allem ihre blaue Farbe, das Fehlen von Schuppen und die \u00fcbergro\u00dfen Unterkiefer, die ihnen einen ausgepr\u00e4gten Unterbiss verleihen."
+    },
+    {
+        "editor_id": "TESL_LSCR_95",
+        "type": "LSCR DESC",
+        "original": "Skeletons can be found in many crypts and dungeons across Skyrim.",
+        "string": "Skelette sind in vielen Krypten und Verlie\u00dfen von Himmelsrand zu finden."
+    },
+    {
+        "editor_id": "TESL_LSCR_96",
+        "type": "LSCR DESC",
+        "original": "The Skull of Corruption is Vaermina's signature artifact. Legends say that the staff has a mind of its own, and can feed on the memories of those around it.",
+        "string": "Der Sch\u00e4del der Verderbnis ist Vaerminas charakteristisches Artefakt. Legenden besagen, dass der Stab einen eigenen Geist hat und sich von den Erinnerungen der Menschen in seiner Umgebung ern\u00e4hren kann."
+    },
+    {
+        "editor_id": "TESL_LSCR_97",
+        "type": "LSCR DESC",
+        "original": "Many of Skyrim's waterways are home to Slaughterfish, whose razor-sharp teeth have claimed the lives of many careless swimmers.",
+        "string": "In vielen Gew\u00e4ssern von Skyrim tummeln sich die Schlachterfische, deren messerscharfe Z\u00e4hne schon viele unvorsichtige Schwimmer das Leben gekostet haben."
+    },
+    {
+        "editor_id": "TESL_LSCR_98",
+        "type": "LSCR DESC",
+        "original": "Skyrim is in turmoil because the Stormcloaks believe their Nord way of life is at risk, while the Imperials believe Skyrim is a part of the Empire, and must follow its laws and customs.",
+        "string": "Himmelsrand ist in Aufruhr, weil die Sturmm\u00e4ntel ihre nordische Lebensweise in Gefahr sehen, w\u00e4hrend die Kaiserlichen glauben, dass Himmelsrand ein Teil des Kaiserreichs ist und dessen Gesetze und Regeln befolgen muss."
+    },
+    {
+        "editor_id": "TESL_LSCR_99",
+        "type": "LSCR DESC",
+        "original": "Elemental Daedra, commonly known as Atronachs, are highly intelligent daedra often summoned by conjurers.",
+        "string": "Elementardaedra, allgemein als Atronachen bekannt, sind hochintelligente Daedra, die oft von Beschw\u00f6rern beschworen werden."
+    },
+    {
+        "editor_id": "TESL_LSCR_100",
+        "type": "LSCR DESC",
+        "original": "Inns are a great place to pick up rumors. The innkeeper can usually point you to local quests.",
+        "string": "Gasth\u00e4user sind ein guter Ort, um Ger\u00fcchte aufzuschnappen. Der Gastwirt kann dir normalerweise Hinweise auf lokale Quests geben."
+    },
+    {
+        "editor_id": "TESL_LSCR_101",
+        "type": "LSCR DESC",
+        "original": "Powerful conjurers can control several summons at the same time.",
+        "string": "M\u00e4chtige Beschw\u00f6rer k\u00f6nnen mehrere Beschw\u00f6rungen gleichzeitig kontrollieren."
+    },
+    {
+        "editor_id": "TESL_LSCR_102",
+        "type": "LSCR DESC",
+        "original": "Using all three words of a shout together makes it much more powerful.",
+        "string": "Wenn man alle drei W\u00f6rter eines Schreis zusammen verwendet, ist er viel wirkungsvoller."
+    },
+    {
+        "editor_id": "TESL_LSCR_103",
+        "type": "LSCR DESC",
+        "original": "Vampire Lord perks are earned by killing enemies with the Drain Life spell, or with the bite attack in melee mode. Each perk takes more feedings to earn than the previous one.",
+        "string": "Vampirf\u00fcrst-Perks erh\u00e4lt man, indem man Feinde mit dem Zauber \"Leben entziehen\" oder mit dem Biss-Angriff im Nahkampf t\u00f6tet. F\u00fcr jeden Perk braucht man mehr Mahlzeiten als f\u00fcr den vorherigen."
+    },
+    {
+        "editor_id": "TESL_LSCR_104",
+        "type": "LSCR DESC",
+        "original": "Vampires can be encountered in many caves and crypts, as they live there to hide from the sunlight.",
+        "string": "Vampire sind in vielen H\u00f6hlen und Krypten anzutreffen, da sie dort leben, um sich vor dem Sonnenlicht zu verstecken."
+    },
+    {
+        "editor_id": "TESL_LSCR_105",
+        "type": "LSCR DESC",
+        "original": "Light armor grants more mobility and weighs less than heavy armor, but also offers less protection.",
+        "string": "Leichte R\u00fcstungen bieten mehr Mobilit\u00e4t und wiegen weniger als schwere R\u00fcstungen, bieten aber auch weniger Schutz."
+    },
+    {
+        "editor_id": "TESL_LSCR_106",
+        "type": "LSCR DESC",
+        "original": "The Drain Vitality shout drains stamina, magicka, and health from the target, severely weakening it.",
+        "string": "Der Schrei \"Lebenskraft entziehen\" entzieht dem Ziel Ausdauer, Magicka und Gesundheit, wodurch es stark geschw\u00e4cht wird."
+    },
+    {
+        "editor_id": "TESL_LSCR_107",
+        "type": "LSCR DESC",
+        "original": "There are those who believe that when night descends upon Skyrim, werewolves descend upon the unwary...",
+        "string": "Manche glauben, sobald die Nacht \u00fcber Himmelsrand hereinbricht, st\u00fcrzen sich Werw\u00f6lfe auf die Unvorsichtigen..."
+    },
+    {
+        "editor_id": "TESL_LSCR_108",
+        "type": "LSCR DESC",
+        "original": "Once, the dragons sought to eliminate or enslave all mortal races. If given the chance, they would surely do so again...",
+        "string": "Einst versuchten die Drachen, alle sterblichen Rassen zu vernichten oder zu versklaven. Wenn sie die Chance dazu h\u00e4tten, w\u00fcrden sie es sicher wieder tun..."
+    },
+    {
+        "editor_id": "TESL_LSCR_109",
+        "type": "LSCR DESC",
+        "original": "Wood Elves, also known as Bosmer, are natives of Valenwood. This jungle nation is home to giant, migratory trees that house their cities.",
+        "string": "Die Waldelfen, auch Bosmer genannt, sind Eingeborene von Valenwald. Diese Dschungelnation ist die Heimat riesiger, wandernder B\u00e4ume, in denen sich ihre St\u00e4de befinden."
+    }
+]

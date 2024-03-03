@@ -1,0 +1,488 @@
+[
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherCuirassBoiled",
+        "type": "ARMO FULL",
+        "original": "Boiled Netch Leather Armor",
+        "string": "Pancerz z wygotowanej sk\u00f3ry parzyd\u0142aka"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherShieldTower",
+        "type": "ARMO FULL",
+        "original": "Netch Leather Tower Shield",
+        "string": "Tarcza wie\u017cowa ze sk\u00f3ry parzyd\u0142aka"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherCuirass",
+        "type": "ARMO FULL",
+        "original": "Netch Leather Armor",
+        "string": "Pancerz ze sk\u00f3ry parzyd\u0142aka"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherHelmet",
+        "type": "ARMO FULL",
+        "original": "Netch Leather Helmet",
+        "string": "He\u0142m ze sk\u00f3ry parzyd\u0142aka"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherBoots",
+        "type": "ARMO FULL",
+        "original": "Netch Leather Boots",
+        "string": "Buty ze sk\u00f3ry parzyd\u0142aka"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherHelmetBoiled",
+        "type": "ARMO FULL",
+        "original": "Boiled Netch Leather Helmet",
+        "string": "He\u0142m z wygotowanej sk\u00f3ry parzyd\u0142aka"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST FULL",
+        "original": "More than you can Chew",
+        "string": "Wi\u0119cej ni\u017c zdo\u0142asz prze\u0142kn\u0105\u0107"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherShield",
+        "type": "ARMO FULL",
+        "original": "Netch Leather Shield",
+        "string": "Tarcza ze sk\u00f3ry parzyd\u0142aka"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherGauntlets",
+        "type": "ARMO FULL",
+        "original": "Netch Leather Bracers",
+        "string": "Karwasze ze sk\u00f3ry parzyd\u0142aka"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST NNAM",
+        "original": "Help the Riekling hunting party kill the Netch",
+        "string": "Pom\u00f3\u017c \u0142owcom riekling\u00f3w zabi\u0107 parzyd\u0142aka"
+    },
+    {
+        "editor_id": "ccBGSSSE041_DLC2LvlRieklingMeleeChiefDEAD",
+        "type": "NPC_ FULL",
+        "original": "Riekling Tribe Leader",
+        "string": "Przyw\u00f3dca plemienia riekling\u00f3w"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST NNAM",
+        "original": "Examine the tribe leader's corpse",
+        "string": "Zbadaj cia\u0142o przyw\u00f3dcy plemienia"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST NNAM",
+        "original": "Return to the tribe leader",
+        "string": "Wr\u00f3\u0107 do przyw\u00f3dcy plemienia"
+    },
+    {
+        "editor_id": "ccBGSSSE041_DLC2NetchLeather",
+        "type": "MISC FULL",
+        "original": "Giant Bull Netch Leather",
+        "string": "Sk\u00f3ra wielkiego doros\u0142ego parzyd\u0142aka"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST NNAM",
+        "original": "Obtain the crafting guide and painted netch armor",
+        "string": "Zdob\u0105d\u017a skrypt rzemie\u015blniczy i malowany pancerz ze sk\u00f3ry parzyd\u0142aka"
+    },
+    {
+        "editor_id": "ccBGSSSE041_RieklingKey",
+        "type": "KEYM FULL",
+        "original": "Key to Riekling Chest",
+        "string": "Klucz do riekli\u0144skiej skrzyni"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST NNAM",
+        "original": "Retrieve a piece of netch leather",
+        "string": "Zdob\u0105d\u017a fragment sk\u00f3ry parzyd\u0142aka"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST NNAM",
+        "original": "Meet with the Riekling tribe leader",
+        "string": "Spotkaj si\u0119 z przyw\u00f3dc\u0105 plemienia riekling\u00f3w"
+    },
+    {
+        "editor_id": "ccBGSSSE041_DLC2EncNetchBull",
+        "type": "NPC_ FULL",
+        "original": "Giant Bull Netch",
+        "string": "Wielki doros\u0142y parzyd\u0142ak"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST NNAM",
+        "original": "(Optional) Craft imitation netch leather at a tanning rack",
+        "string": "(Opcjonalne) Wytw\u00f3rz imitacj\u0119 sk\u00f3ry parzyd\u0142aka na stojaku do garbowania"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the peddler's journal",
+        "string": "Przeczytaj dziennik handlarza"
+    },
+    {
+        "editor_id": "ccBGSSSE041_RieklingChiefName",
+        "type": "MESG FULL",
+        "original": "Riekling Tribe Leader",
+        "string": "Przyw\u00f3dca plemienia riekling\u00f3w"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST NNAM",
+        "original": "Inspect the Riekling sketch",
+        "string": "Obejrzyj riekli\u0144ski szkic"
+    },
+    {
+        "editor_id": "ccBGSSSE041_DLC2NetchLeatherFake",
+        "type": "MISC FULL",
+        "original": "Imitation Netch Leather",
+        "string": "Imitacja sk\u00f3ry parzyd\u0142aka"
+    },
+    {
+        "editor_id": "ccBGSSSE041_DLC2NetchLeatherBetty",
+        "type": "MISC FULL",
+        "original": "Giant Betty Netch Leather",
+        "string": "Sk\u00f3ra wielkiej doros\u0142ej parzyd\u0142aczycy"
+    },
+    {
+        "editor_id": "ccBGSSSE041_NetchLeatherCraftGuide",
+        "type": "BOOK FULL",
+        "original": "Crafting with Netch Leather",
+        "string": "Wytwarzanie ze sk\u00f3ry parzyd\u0142aka"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST NNAM",
+        "original": "(Optional) Search Fort Hraggstad for the netch leather armor set",
+        "string": "(Opcjonalne) Przeszukaj Fort Hraggstad i spr\u00f3buj odnale\u017a\u0107 zestaw pancerza ze sk\u00f3ry parzyd\u0142aka"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST NNAM",
+        "original": "Tan a piece of netch leather at a tanning rack",
+        "string": "Ufarbuj fragment sk\u00f3ry parzyd\u0142aka na stojaku do garbowania"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the crafting guide",
+        "string": "Przeczytaj skrypt rzemie\u015blniczy"
+    },
+    {
+        "editor_id": "ccBGSSSE041_RieklingSketch",
+        "type": "BOOK FULL",
+        "original": "Riekling Hunting Party Sketch",
+        "string": "Szkic grupy \u0142owczych riekling\u00f3w"
+    },
+    {
+        "editor_id": "ccBGSSSE041_PurpleDye",
+        "type": "MISC FULL",
+        "original": "Purple Dye",
+        "string": "Fioletowy barwnik"
+    },
+    {
+        "editor_id": "ccBGSSSE041_DLC2EncNetchCalf",
+        "type": "NPC_ FULL",
+        "original": "Netch Calf",
+        "string": "M\u0142ody parzyd\u0142ak"
+    },
+    {
+        "editor_id": "ccBGSSSE041_TreasCorpseCommonerDarkElfM",
+        "type": "NPC_ FULL",
+        "original": "Dark Elf",
+        "string": "Mroczny elf"
+    },
+    {
+        "editor_id": "ccBGSSSE041_NetchJournal",
+        "type": "BOOK FULL",
+        "original": "Peddler's Journal",
+        "string": "Dziennik handlarza"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST NNAM",
+        "original": "Investigate the camp in Solstheim",
+        "string": "Przeszukaj obozowisko w Solstheim"
+    },
+    {
+        "editor_id": "ccBGSSSE041_RieklingBettyName",
+        "type": "MESG FULL",
+        "original": "Giant Betty Netch",
+        "string": "Wielka doros\u0142a parzyd\u0142aczyca"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST NNAM",
+        "original": "(Optional) Give the Riekling tribe leader the imitation leather",
+        "string": "(Opcjonalne) Daj przyw\u00f3dcy plemienia riekling\u00f3w imitacj\u0119 sk\u00f3ry"
+    },
+    {
+        "editor_id": "ccBGSSSE041_DLC2LvlMountedRieklingBoss",
+        "type": "NPC_ FULL",
+        "original": "Riekling Rider",
+        "string": "Riekling je\u017adziec"
+    },
+    {
+        "editor_id": "ccBGSSSE041_SpitPotClosed01",
+        "type": "CONT FULL",
+        "original": "Pot",
+        "string": "Garnek"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST NNAM",
+        "original": "Save the Netch from the Riekling hunting party",
+        "string": "Ocal parzyd\u0142aka od grupy \u0142owczych riekling\u00f3w"
+    },
+    {
+        "editor_id": "ccBGSSSE041_DLC2NetchLeatherCraft",
+        "type": "MISC FULL",
+        "original": "Tanned Netch Leather",
+        "string": "Ufarbowana sk\u00f3ra parzyd\u0142aka"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST NNAM",
+        "original": "Craft a set of netch leather armor",
+        "string": "Wytw\u00f3rz zestaw pancerza ze sk\u00f3ry parzyd\u0142aka"
+    },
+    {
+        "editor_id": "ccBGSSSE041_BlindingSpeedEnchantment",
+        "type": "ENCH FULL",
+        "original": "Blinding Speed",
+        "string": "O\u015blepiaj\u0105ca szybko\u015b\u0107"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherBootsBlindingSpeed",
+        "type": "ARMO FULL",
+        "original": "Boots of Blinding Speed",
+        "string": "Buty o\u015blepiaj\u0105cej szybko\u015bci"
+    },
+    {
+        "editor_id": "ccBGSSSE041_EnchBlankEffect",
+        "type": "MGEF FULL",
+        "original": "Blank Effect",
+        "string": "Bez efektu"
+    },
+    {
+        "editor_id": "ccBGSSSE041_FortifySpeedMultFFSelfArea",
+        "type": "MGEF DNAM",
+        "original": "Provides the wearer with blinding speed.",
+        "string": "Daje nosz\u0105cemu o\u015blepiaj\u0105c\u0105 szybko\u015b\u0107."
+    },
+    {
+        "editor_id": "ccBGSSSE041_FortifySpeedMultFFSelfArea",
+        "type": "MGEF FULL",
+        "original": "Fast",
+        "string": "Szybko"
+    },
+    {
+        "editor_id": "ccBGSSSE041_MiscQuest",
+        "type": "QUST NNAM",
+        "original": "Read the netch leather crafting guide",
+        "string": "Przeczytaj skrypt rzemie\u015blniczy, dotycz\u0105cy sk\u00f3ry parzyd\u0142aka"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherShield_Shadow",
+        "type": "ARMO FULL",
+        "original": "Shadowed Netch Leather Shield",
+        "string": "Tarcza z ciemnej sk\u00f3ry parzyd\u0142aka"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherBoots_Shadow",
+        "type": "ARMO FULL",
+        "original": "Shadowed Netch Leather Boots",
+        "string": "Buty z ciemnej sk\u00f3ry parzyd\u0142aka"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherCuirass_Shadow",
+        "type": "ARMO FULL",
+        "original": "Shadowed Netch Leather Armor",
+        "string": "Pancerz z ciemnej sk\u00f3ry parzyd\u0142aka"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherBoots_Painted",
+        "type": "ARMO FULL",
+        "original": "Painted Netch Leather Boots",
+        "string": "Malowane buty ze sk\u00f3ry parzyd\u0142aka"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherShieldTower_Shadow",
+        "type": "ARMO FULL",
+        "original": "Shadowed Netch Leather Tower Shield",
+        "string": "Tarcza wie\u017cowa z ciemnej sk\u00f3ry parzyd\u0142aka"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherGauntlets_Shadow",
+        "type": "ARMO FULL",
+        "original": "Shadowed Netch Leather Bracers",
+        "string": "Karwasze z ciemnej sk\u00f3ry parzyd\u0142aka"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherCuirassBoiled_Painted",
+        "type": "ARMO FULL",
+        "original": "Painted Netch Leather Armor",
+        "string": "Malowany pancerz ze sk\u00f3ry parzyd\u0142aka"
+    },
+    {
+        "editor_id": "ccBGSSSE041_MiscQuest",
+        "type": "QUST NNAM",
+        "original": "(Optional) Search Fort Hraggstad for the netch leather armor set",
+        "string": "(Opcjonalne) Przeszukaj Fort Hraggstad i spr\u00f3buj odnale\u017a\u0107 zestaw pancerza ze sk\u00f3ry parzyd\u0142aka"
+    },
+    {
+        "editor_id": "ccBGSSSE041_MiscQuest",
+        "type": "QUST NNAM",
+        "original": "Craft a set of netch leather armor",
+        "string": "Wytw\u00f3rz zestaw pancerza ze sk\u00f3ry parzyd\u0142aka"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherHelmet_Shadow",
+        "type": "ARMO FULL",
+        "original": "Shadowed Netch Leather Helmet",
+        "string": "He\u0142m z ciemnej sk\u00f3ry parzyd\u0142aka"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherHelmetBoiled_Painted",
+        "type": "ARMO FULL",
+        "original": "Painted Netch Leather Helmet",
+        "string": "Malowany he\u0142m ze sk\u00f3ry parzyd\u0142aka"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherGauntlets_Painted",
+        "type": "ARMO FULL",
+        "original": "Painted Netch Leather Bracers",
+        "string": "Malowane karwasze ze sk\u00f3ry parzyd\u0142aka"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherHelmetBoiled_Shadow",
+        "type": "ARMO FULL",
+        "original": "Shadowed Boiled Netch Leather Helmet",
+        "string": "He\u0142m z wygotowanej ciemnej sk\u00f3ry parzyd\u0142aka"
+    },
+    {
+        "editor_id": "ccBGSSSE041_ArmorNetchLeatherCuirassBoiled_Shadow",
+        "type": "ARMO FULL",
+        "original": "Shadowed Boiled Netch Leather Armor",
+        "string": "Pancerz z wygotowanej ciemnej sk\u00f3ry parzyd\u0142aka"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST CNAM",
+        "original": "On the northern coast of Solstheim, I found a camp belonging to a peddler. According to his journal, he was selling leather to a tribe of Rieklings on an island to the west. After interacting with the Rieklings I managed to obtain the crafting guide mentioned by the peddler. The guide has tips on how to craft the armor, as well as the location of a full set in Fort Hraggstad.",
+        "string": "Na p\u00f3\u0142nocnym wybrze\u017cu Solstheim uda\u0142o mi si\u0119 odnale\u017a\u0107 obozowisko handlarza. Zgodnie z jego zapiskami, sprzedawa\u0142 on sk\u00f3r\u0119 plemieniu riekling\u00f3w, mieszkaj\u0105cych na wyspie, na zachodzie. Po napotkaniu riekling\u00f3w, uda\u0142o mi si\u0119 zdoby\u0107 skrypt rzemie\u015blniczy, o kt\u00f3rym wspomina\u0142 handlarz. Skrypt zawiera wskaz\u00f3wki dotycz\u0105ce wytwarzania pancerzy, a tak\u017ce po\u0142o\u017cenie pe\u0142nego zestawu, w Forcie Hraggstad."
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST CNAM",
+        "original": "On the northern coast of Solstheim, I found a camp belonging to a peddler. According to his journal, he was selling leather to a tribe of Rieklings on an island to the west. After meeting with the tribe leader, I decided to craft some imitation netch leather. It may be enough to fool the Riekling tribe.",
+        "string": "Na p\u00f3\u0142nocnym wybrze\u017cu Solstheim uda\u0142o mi si\u0119 odnale\u017a\u0107 obozowisko handlarza. Zgodnie z jego zapiskami, sprzedawa\u0142 on sk\u00f3r\u0119 plemieniu riekling\u00f3w, mieszkaj\u0105cych na wyspie, na zachodzie. Po spotkaniu z przyw\u00f3dc\u0105 plemienia, przysz\u0142o mi do g\u0142owy, aby wytworzy\u0107 imitacj\u0119 sk\u00f3ry parzyd\u0142aka. Mo\u017ce uda mi si\u0119 oszuka\u0107 plemi\u0119 riekling\u00f3w."
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST CNAM",
+        "original": "On the northern coast of Solstheim, I found a camp belonging to a peddler. According to his journal, he was selling leather to a tribe of Rieklings on an island to the west. On the island I spoke to the tribe leader who handed me a map. The map led me south, where a hunting party has engaged a Giant Bull Netch.",
+        "string": "Na p\u00f3\u0142nocnym wybrze\u017cu Solstheim uda\u0142o mi si\u0119 odnale\u017a\u0107 obozowisko handlarza. Zgodnie z jego zapiskami, sprzedawa\u0142 on sk\u00f3r\u0119 plemieniu riekling\u00f3w, mieszkaj\u0105cych na wyspie, na zachodzie. Po spotkaniu z przyw\u00f3dc\u0105 plemienia, ten wr\u0119czy\u0142 mi map\u0119, kt\u00f3ra zawiod\u0142a mnie na po\u0142udnie. Tam grupa \u0142owczych walczy\u0142a z wielkim doros\u0142ym parzyd\u0142akiem."
+    },
+    {
+        "editor_id": "ccBGSSSE041_RieklingChiefName",
+        "type": "MESG DESC",
+        "original": "Riekling Chief",
+        "string": "W\u00f3dz riekling\u00f3w"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST CNAM",
+        "original": "On the northern coast of Solstheim, I found a camp belonging to a peddler. According to his journal, he was selling leather to a tribe of Rieklings on an island to the west. After interacting with the Rieklings I managed to convince the tribe leader to give me a key to a nearby chest. Inside should be the crafting guide mentioned by the peddler. ",
+        "string": "Na p\u00f3\u0142nocnym wybrze\u017cu Solstheim uda\u0142o mi si\u0119 odnale\u017a\u0107 obozowisko handlarza. Zgodnie z jego zapiskami, sprzedawa\u0142 on sk\u00f3r\u0119 plemieniu riekling\u00f3w, mieszkaj\u0105cych na wyspie, na zachodzie. Po napotkaniu riekling\u00f3w, uda\u0142o mi si\u0119 przekona\u0107 przyw\u00f3dc\u0119 plemienia, aby ten da\u0142 mi klucz do znajduj\u0105cej si\u0119 w pobli\u017cu skrzyni. Wewn\u0105trz ma znajdowa\u0107 si\u0119 skrypt rzemie\u015blniczy, o kt\u00f3rym wspomina\u0142 handlarz. "
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST CNAM",
+        "original": "On the northern coast of Solstheim, I found a camp belonging to a peddler. According to his journal, he was selling leather to a tribe of Rieklings on an island to the west. On the island I spoke to the tribe leader who handed me a map. Apparently there is a hunting party searching for a netch to the south.",
+        "string": "Na p\u00f3\u0142nocnym wybrze\u017cu Solstheim uda\u0142o mi si\u0119 odnale\u017a\u0107 obozowisko handlarza. Zgodnie z jego zapiskami, sprzedawa\u0142 on sk\u00f3r\u0119 plemieniu riekling\u00f3w, mieszkaj\u0105cych na wyspie, na zachodzie. Po spotkaniu z przyw\u00f3dc\u0105 plemienia, ten wr\u0119czy\u0142 mi map\u0119. Pono\u0107 na po\u0142udniu znajduje si\u0119 grupa \u0142owczych, szukaj\u0105ca parzyd\u0142aka."
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST CNAM",
+        "original": "On the northern coast of Solstheim, I found a camp belonging to a peddler. According to his journal, he was selling leather to a tribe of Rieklings on an island to the west. After interacting with the Rieklings I managed to obtain the crafting guide mentioned by the peddler. ",
+        "string": "Na p\u00f3\u0142nocnym wybrze\u017cu Solstheim uda\u0142o mi si\u0119 odnale\u017a\u0107 obozowisko handlarza. Zgodnie z jego zapiskami, sprzedawa\u0142 on sk\u00f3r\u0119 plemieniu riekling\u00f3w, mieszkaj\u0105cych na wyspie, na zachodzie. Po napotkaniu riekling\u00f3w, uda\u0142o mi si\u0119 zdoby\u0107 skrypt rzemie\u015blniczy, o kt\u00f3rym wspomina\u0142 handlarz. "
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST CNAM",
+        "original": "On the northern coast of Solstheim, I found a camp belonging to a peddler. I've picked up a journal off his corpse which may provide more information on what he was doing here.",
+        "string": "Na p\u00f3\u0142nocnym wybrze\u017cu Solstheim, uda\u0142o mi si\u0119 odnale\u017a\u0107 obozowisko handlarza. Przy jego ciele znajdowa\u0142 si\u0119 dziennik, z kt\u00f3rego by\u0107 mo\u017ce dowiem si\u0119, co tu robi\u0142."
+    },
+    {
+        "editor_id": "ccBGSSSE041_RieklingBettyName",
+        "type": "MESG DESC",
+        "original": "Giant Betty Netch",
+        "string": "Wielka doros\u0142a parzyd\u0142aczyca"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST CNAM",
+        "original": "On the northern coast of Solstheim, I found a camp belonging to a peddler. According to his journal, he was selling leather to a tribe of Rieklings on an island to the west. On the island I spoke to the tribe leader who handed me a map.",
+        "string": "Na p\u00f3\u0142nocnym wybrze\u017cu Solstheim uda\u0142o mi si\u0119 odnale\u017a\u0107 obozowisko handlarza. Zgodnie z jego zapiskami, sprzedawa\u0142 on sk\u00f3r\u0119 plemieniu riekling\u00f3w, mieszkaj\u0105cych na wyspie, na zachodzie. Po spotkaniu z przyw\u00f3dc\u0105 plemienia, ten wr\u0119czy\u0142 mi map\u0119."
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST CNAM",
+        "original": "On the northern coast of Solstheim, I found a camp belonging to a peddler. According to his journal, he was selling leather to a tribe of Rieklings on an island to the west. After interacting with the Rieklings I managed to obtain the crafting guide mentioned by the peddler. Using the guide, I was able to acquire a full set of netch leather armor.",
+        "string": "Na p\u00f3\u0142nocnym wybrze\u017cu Solstheim uda\u0142o mi si\u0119 odnale\u017a\u0107 obozowisko handlarza. Zgodnie z jego zapiskami, sprzedawa\u0142 on sk\u00f3r\u0119 plemieniu riekling\u00f3w, mieszkaj\u0105cych na wyspie, na zachodzie. Po napotkaniu riekling\u00f3w, uda\u0142o mi si\u0119 zdoby\u0107 skrypt rzemie\u015blniczy, o kt\u00f3rym wspomina\u0142 handlarz. Dzi\u0119ki skryptowi uda\u0142o mi si\u0119 zdoby\u0107 pe\u0142ny zestaw pancerza ze sk\u00f3ry parzyd\u0142aka."
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST CNAM",
+        "original": "On the northern coast of Solstheim, I found a camp belonging to a peddler. According to his journal, he was selling leather to a tribe of Rieklings on an island to the west. On the island I spoke to the tribe leader who handed me a map. The map led me south, where a hunting party was fighting a Giant Bull Netch. I managed to pick up a piece of leather from the corpse of one of the netches.",
+        "string": "Na p\u00f3\u0142nocnym wybrze\u017cu Solstheim uda\u0142o mi si\u0119 odnale\u017a\u0107 obozowisko handlarza. Zgodnie z jego zapiskami, sprzedawa\u0142 on sk\u00f3r\u0119 plemieniu riekling\u00f3w, mieszkaj\u0105cych na wyspie, na zachodzie. Po spotkaniu z przyw\u00f3dc\u0105 plemienia, ten wr\u0119czy\u0142 mi map\u0119, kt\u00f3ra zawiod\u0142a mnie na po\u0142udnie. Tam grupa \u0142owczych walczy\u0142a z wielkim doros\u0142ym parzyd\u0142akiem. Uda\u0142o mi si\u0119 zebra\u0107 fragment sk\u00f3ry z jednego z martwych parzyd\u0142ak\u00f3w."
+    },
+    {
+        "editor_id": "ccBGSSSE041_NetchJournal",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"20\">\nI first met them little blue fetchers about a year ago, on one of the islands to the north. I offered them a few things in trade, hoping it'd give them enough reason not to jab their spears through my skull.\n\nI showed them my best goods - a sapphire, a silver candlestick, and a rug made of fine tundra cotton, but they didn't want none of that. They were way more interested in my belt. So I gave it to their leader, praying it'd make him reconsider boiling me alive. But it turns out it wasn't me he was fixing to boil, but my belt.\n\nNow I've heard of soldiers on the brink of starvation eating leather strips to survive. So it ain't like you can't put a belt to the pot, should it come to that.\n\nBut them little scribs were chewing that stuff like it was cooked up by the Gourmet. In fact, their leader wanted me to throw my boots into the pot, seeing as they was leather too.\n\nI tried to tell the little monster that my whole armor was made of netch leather. Ain't the same as hide from some old Nord cow. Something got lost in translation though, because they thought it was some holy relic and started painting their little marks on it. \n\nAs they were taking the armor back to their huts, I tried to explain that it wasn't special, even showed him some sketches on netch leather crafting, but their leader thought it was a cookbook and took that too. On top of that, he wants me to sell him raw netch leather so the whole clan can bloody eat it.\n\nSo now to keep these stupid ash blighters from killing themselves, I'm bringing them leather from the mainland and dyeing it purple with a mountain flower and a bit of charcoal. Of course, I could just let them eat the stuff and leave them to the horkers, but some of the junk they got is valuable, and best of all, they don't know it. \n\nNow if I can just get the horkers on this island to shut up, I'd have a perfect little spot to set up my business.</font>\n",
+        "string": "<font face=\"$HandwrittenFont\" size=\"20\">\nPierwszy raz spotka\u0142em tych ma\u0142ych niebieskich zbieraczy jaki\u015b rok temu, na jednej z wysp na p\u00f3\u0142nocy. Zaoferowa\u0142em im kilka przedmiot\u00f3w na wymian\u0119, maj\u0105c nadziej\u0119, \u017ce dzi\u0119ki temu nie przebij\u0105 mi czerepu w\u0142\u00f3czni\u0105.\n\nPokaza\u0142em im swoje najlepsze towary - szafir, srebrny \u015bwiecznik i dywan utkany z przepi\u0119knej bawe\u0142ny z tundry, ale nie byli zainteresowani. Znacznie bardziej podoba\u0142 im si\u0119 m\u00f3j pas. Da\u0142em go wi\u0119c przyw\u00f3dcy, modl\u0105c si\u0119, \u017ceby jednak nie ugotowali mnie \u017cywcem. Okazuje si\u0119, \u017ce kocio\u0142 nie by\u0142 przygotowany dla mnie, ale dla mojego pasa.\n\nNigdy nie s\u0142ysza\u0142em, \u017ceby \u017co\u0142nierze na kraw\u0119dzi \u015bmierci g\u0142odowej jedli paski sk\u00f3ry, by prze\u017cy\u0107. Oczywi\u015bcie nie mia\u0142em nic przeciwko, \u017ceby ugotowali sobie m\u00f3j pas.\n\nTe ma\u0142e chytruski zacz\u0119\u0142y jednak \u017cu\u0107 pasek, jakby to by\u0142 prawdziwy przysmak. Prawd\u0119 m\u00f3wi\u0105c, przyw\u00f3dca chcia\u0142 jeszcze wrzuci\u0107 do gara moje buty, widz\u0105c, \u017ce te\u017c s\u0105 sk\u00f3rzane.\n\nPr\u00f3bowa\u0142em wyt\u0142umaczy\u0107 temu ma\u0142emu potworowi, \u017ce ca\u0142y m\u00f3j pancerz wykonany by\u0142 ze sk\u00f3ry parzyd\u0142aka, a nie z cho\u0107by nordzkiej krowy. T\u0142umacz chyba jednak si\u0119 troch\u0119 pomyli\u0142, bo uzna\u0142 go za jaki\u015b \u015bwi\u0119ty artefakt i zacz\u0105\u0142 na nim kre\u015bli\u0107 ma\u0142e znaczki. \n\nZacz\u0119li zabiera\u0107 cz\u0119\u015bci mojego pancerza do swoich chat. Pr\u00f3bowa\u0142em im wyja\u015bni\u0107, \u017ce to nic specjalnego, pokaza\u0142em im nawet kilka szkic\u00f3w na temat szycia ze sk\u00f3ry parzyd\u0142aka, ale przyw\u00f3dca uzna\u0142, \u017ce to ksi\u0105\u017cka kucharska i te\u017c mi je zabra\u0142. Co wi\u0119cej, chce, \u017cebym sprzeda\u0142 mu niegarbowan\u0105 sk\u00f3r\u0119 parzyd\u0142aka, \u017ceby ca\u0142y klan m\u00f3g\u0142 si\u0119 ni\u0105 po\u017cywi\u0107. Szale\u0144stwo!\n\n\u017beby ocali\u0107 tych wariat\u00f3w od pewnej \u015bmierci, przynios\u0119 im sk\u00f3r\u0119 z kontynentu i ufarbuj\u0119 j\u0105 na fioletowo g\u00f3rskim kwiatem oraz odrobin\u0105 w\u0119gla drzewnego. Oczywi\u015bcie m\u00f3g\u0142bym pozwoli\u0107 im zje\u015b\u0107 buty i zostawi\u0107 ich na pastw\u0119 horker\u00f3w, ale cz\u0119\u015b\u0107 z tych ich rupieci jest bardzo cenna, a co najwa\u017cniejsze - oni nawet o tym nie wiedz\u0105. \n\nGdybym tylko jeszcze zdo\u0142a\u0142 jako\u015b uciszy\u0107 horkery na tej wyspie, m\u00f3g\u0142bym tu za\u0142o\u017cy\u0107 ca\u0142kiem przyjemny interesik.</font>\n"
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST CNAM",
+        "original": "On the northern coast of Solstheim, I found a camp belonging to a peddler. According to his journal, he was selling leather to a tribe of Rieklings on an island to the west. After arriving on the island, I was able to obtain the key to a nearby chest. Inside should be the crafting guide mentioned by the peddler. ",
+        "string": "Na p\u00f3\u0142nocnym wybrze\u017cu Solstheim uda\u0142o mi si\u0119 odnale\u017a\u0107 obozowisko handlarza. Zgodnie z jego zapiskami, sprzedawa\u0142 on sk\u00f3r\u0119 plemieniu riekling\u00f3w, mieszkaj\u0105cych na wyspie, na zachodzie. Po przybyciu na wysp\u0119, uda\u0142o mi si\u0119 zdoby\u0107 klucz do znajduj\u0105cej si\u0119 w pobli\u017cu skrzyni. Wewn\u0105trz ma znajdowa\u0107 si\u0119 skrypt rzemie\u015blniczy, o kt\u00f3rym wspomina\u0142 handlarz. "
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST CNAM",
+        "original": "On the northern coast of Solstheim, I found a camp belonging to a peddler. According to his journal, he was selling leather to a tribe of Rieklings on an island to the west. I should visit the island and investigate.",
+        "string": "Na p\u00f3\u0142nocnym wybrze\u017cu Solstheim uda\u0142o mi si\u0119 odnale\u017a\u0107 obozowisko handlarza. Zgodnie z jego zapiskami, sprzedawa\u0142 on sk\u00f3r\u0119 plemieniu riekling\u00f3w, mieszkaj\u0105cych na wyspie, na zachodzie. Czas odwiedzi\u0107 t\u0119 wysp\u0119 i zbada\u0107 spraw\u0119."
+    },
+    {
+        "editor_id": "ccBGSSSE041_NetchLeatherCraftGuide",
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\n<p align=\"center\">\n\n\nCrafting with Netch Leather\n\n\n\nby\nAlma Merisan\n</p>\n\n\n[pagebreak]\n<p align=\"left\">\n<img src='img://Textures/Interface/Books/Illuminated_Letters/D_letter.png'>espite having a powdery, velvet texture, netch leather is actually somewhat venomous to the touch. When worn, one can still feel the tingling sensation from active nematocysts underneath the now dormant tentacle barbs. \n\nHowever, when crafted properly, the effect is somewhat pleasant. While some opt for a strict boil, curing the leather in a low temperature stove can harden it without overactivating the poison. In addition, tanning the leather at a rack can help maintain durability, as well as add color to your armor.\n\nOf course, if crafting netch leather armor proves too difficult, a trip to Solitude might help you find a set. Everyone who has read The Rear Guard knows of Cascabel Hall. Yet while the castle no longer stands, some say leftover crates of netch leather armor were sent over to Fort Hraggstad after the battle. You may even be able to take the armor apart and learn a thing or two about the process.",
+        "string": "[pagebreak]\n<p align=\"center\">\n\n\nGarbowanie sk\u00f3ry parzyd\u0142aka\n\n\n\nautorstwa\nAlmy Merisan\n</p>\n\n\n[pagebreak]\n<p align=\"left\">\n<img src='img://Textures/Interface/Books/Illuminated_Letters/C_letter.png'>ho\u0107 sk\u00f3ra parzyd\u0142aka jest mi\u0119kka i aksamitna w dotyku, jest r\u00f3wnie\u017c niezwykle truj\u0105ca. Nawet podczas noszenia jej na inny materia\u0142, wci\u0105\u017c czu\u0107 wra\u017cenie \u0142askotania od aktywnych nematocyst pod chwilowo u\u015bpionymi barbituranami macek. \n\nJe\u015bli jednak sk\u00f3r\u0119 parzyd\u0142aka odpowiednio si\u0119 przetworzy, uczucie to staje si\u0119 dosy\u0107 przyjemne. Cho\u0107 niekt\u00f3rzy stawiaj\u0105 na aktywne gotowanie we wrz\u0105cej wodzie, d\u0142ugotrwa\u0142e warzenie sk\u00f3ry w niskiej temperaturze potrafi j\u0105 utwardzi\u0107 bez nadmiernego aktywowania trucizny. Dodatkowo, ufarbowanie sk\u00f3ry na stojaku pozwala zachowa\u0107 jej wytrzyma\u0142o\u015b\u0107, jednocze\u015bnie dodaj\u0105c barw\u0119 do pancerza.\n\nOczywi\u015bcie, je\u015bli garbowanie sk\u00f3ry parzyd\u0142aka jest dla kogo\u015b zbyt trudne, mo\u017cna po prostu wyruszy\u0107 do Samotni i tam spr\u00f3bowa\u0107 zdoby\u0107 ca\u0142y zestaw pancerza. Ka\u017cdy, kto czyta\u0142 \u201eStra\u017c tyln\u0105\u201d wie, gdzie znajduje si\u0119 Zamek Cascabel. Cho\u0107 dzi\u015b nie pozosta\u0142 po nim kamie\u0144 na kamieniu, znajdowa\u0142y si\u0119 tam skrzynie z pancerzami ze sk\u00f3ry parzyd\u0142aka, kt\u00f3re zosta\u0142y przes\u0142ane do Fortu Hraggstad po bitwie. Pancerz taki mo\u017cna roz\u0142o\u017cy\u0107 na czynniki pierwsze i przy okazji dowiedzie\u0107 si\u0119 czego\u015b o procesie garbowania."
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST CNAM",
+        "original": "On the northern coast of Solstheim, I found a camp belonging to a peddler. According to his journal, he was selling leather to a tribe of Rieklings on an island to the west. After arriving on the island I fought the tribe of Rieklings and killed the tribe leader.",
+        "string": "Na p\u00f3\u0142nocnym wybrze\u017cu Solstheim uda\u0142o mi si\u0119 odnale\u017a\u0107 obozowisko handlarza. Zgodnie z jego zapiskami, sprzedawa\u0142 on sk\u00f3r\u0119 plemieniu riekling\u00f3w, mieszkaj\u0105cych na wyspie, na zachodzie. Po przybyciu na wysp\u0119 i walce z plemieniem riekling\u00f3w, uda\u0142o mi si\u0119 zabi\u0107 przyw\u00f3dc\u0119 ich plemienia."
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST CNAM",
+        "original": "I've heard the islands around Solstheim are worth exploring. If I head to the coastal areas, I might find something worth investigating.",
+        "string": "Pono\u0107 wyspy wok\u00f3\u0142 Solstheim warto odwiedzi\u0107. Je\u015bli rusz\u0119 na wybrze\u017ce, mo\u017ce znajd\u0119 co\u015b ciekawego."
+    },
+    {
+        "editor_id": "ccBGSSSE041_Quest",
+        "type": "QUST CNAM",
+        "original": "On the northern coast of Solstheim, I found a camp belonging to a peddler. According to his journal, he was selling leather to a tribe of Rieklings on an island to the west. After interacting with the Rieklings I managed to obtain the crafting guide mentioned by the peddler and a full set of netch leather armor.",
+        "string": "Na p\u00f3\u0142nocnym wybrze\u017cu Solstheim uda\u0142o mi si\u0119 odnale\u017a\u0107 obozowisko handlarza. Zgodnie z jego zapiskami, sprzedawa\u0142 on sk\u00f3r\u0119 plemieniu riekling\u00f3w, mieszkaj\u0105cych na wyspie, na zachodzie. Po napotkaniu riekling\u00f3w, uda\u0142o mi si\u0119 zdoby\u0107 skrypt rzemie\u015blniczy, o kt\u00f3rym wspomina\u0142 handlarz, oraz pe\u0142ny zestaw pancerza ze sk\u00f3ry parzyd\u0142aka."
+    }
+]

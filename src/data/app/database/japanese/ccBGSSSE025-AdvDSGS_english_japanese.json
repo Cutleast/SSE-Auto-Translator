@@ -1,0 +1,236 @@
+[
+    {
+        "editor_id": "ccBGSSSE025_QAChest",
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "\u5b9d\u7bb1"
+    },
+    {
+        "editor_id": "CrystaldriftCave01",
+        "type": "CELL FULL",
+        "original": "Crystaldrift Cave",
+        "string": "\u30af\u30ea\u30b9\u30bf\u30eb\u30c9\u30ea\u30d5\u30c8\u6d1e\u7a9f"
+    },
+    {
+        "editor_id": "ccBGSSSE025NerveshatterOfferActivatorRef",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u7f6e\u304f"
+    },
+    {
+        "editor_id": "ccBGSSSE025_MetalCageLongGate01Snow",
+        "type": "DOOR FULL",
+        "original": "Cage Gate",
+        "string": "\u6abb\u306e\u9580"
+    },
+    {
+        "editor_id": "ccBGSSSE025_MetalCageLongGate01",
+        "type": "DOOR FULL",
+        "original": "Cage Gate",
+        "string": "\u6abb\u306e\u9580"
+    },
+    {
+        "editor_id": "ccBGS_RootHollowedStump",
+        "type": "CONT FULL",
+        "original": "Hollowed Stump",
+        "string": "\u7a74\u306e\u3042\u3044\u305f\u5207\u308a\u682a"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SwordOfJyggalagAct",
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "\u53d6\u308b"
+    },
+    {
+        "editor_id": "ccBGS_RootThornHookActivator",
+        "type": "ACTI RNAM",
+        "original": "Harvest",
+        "string": "\u53d6\u308b"
+    },
+    {
+        "editor_id": "ccBGS_RootScreamingMawActivator",
+        "type": "ACTI FULL",
+        "original": "Screaming Maw",
+        "string": "\u53eb\u3076\u53e3"
+    },
+    {
+        "editor_id": "ccBGS_FlameStalkActivator02",
+        "type": "ACTI FULL",
+        "original": "Flame Stalk",
+        "string": "\u708e\u306e\u5869\u9271\u77f3"
+    },
+    {
+        "editor_id": "ccBGS_FlameStalkActivator01",
+        "type": "ACTI RNAM",
+        "original": "Harvest",
+        "string": "\u53d6\u308b"
+    },
+    {
+        "editor_id": "ccBGS_RootRotScaleActivator",
+        "type": "ACTI RNAM",
+        "original": "Harvest",
+        "string": "\u53d6\u308b"
+    },
+    {
+        "editor_id": "ccBGS_FlameStalkActivator01",
+        "type": "ACTI FULL",
+        "original": "Flame Stalk",
+        "string": "\u708e\u306e\u5869\u9271\u77f3"
+    },
+    {
+        "editor_id": "ccBGS_FlameStalkActivator02",
+        "type": "ACTI RNAM",
+        "original": "Harvest",
+        "string": "\u53d6\u308b"
+    },
+    {
+        "editor_id": "ccBGSSSE025_FlameStalk",
+        "type": "INGR FULL",
+        "original": "Flame Stalk",
+        "string": "\u708e\u306e\u5869\u9271\u77f3"
+    },
+    {
+        "editor_id": "ccBGS_RootThornHookActivator",
+        "type": "ACTI FULL",
+        "original": "Thorn Hook",
+        "string": "\u8328\u306e\u30d5\u30c3\u30af"
+    },
+    {
+        "editor_id": "ccBGS_RootScreamingMawActivator",
+        "type": "ACTI RNAM",
+        "original": "Harvest",
+        "string": "\u53d6\u308b"
+    },
+    {
+        "editor_id": "ccBGS_RootRotScaleActivator",
+        "type": "ACTI FULL",
+        "original": "Rot Scale",
+        "string": "\u8150\u6557\u306e\u9c57"
+    },
+    {
+        "editor_id": "SDoorManholeCoverInvisible",
+        "type": "DOOR FULL",
+        "original": "Entrance",
+        "string": "\u5165\u53e3"
+    },
+    {
+        "editor_id": "BluePalaceWing01",
+        "type": "CELL FULL",
+        "original": "Pelagius Wing",
+        "string": "\u30da\u30e9\u30ae\u30a6\u30b9\u306e\u7fbd"
+    },
+    {
+        "editor_id": "StonyCreekCave01",
+        "type": "CELL FULL",
+        "original": "Stony Creek Cave",
+        "string": "\u30b9\u30c8\u30fc\u30cb\u30fc\u30af\u30ea\u30fc\u30af\u6d1e\u7a9f"
+    },
+    {
+        "editor_id": "ccBGSSSE025ManholeTrigger",
+        "type": "ACTI RNAM",
+        "original": "Open",
+        "string": "\u958b\u3051\u308b"
+    },
+    {
+        "editor_id": "ccBGSSSE025_AbFXSprigganDementia",
+        "type": "MGEF FULL",
+        "original": "SprigganFX Ability",
+        "string": "\u30b9\u30d7\u30ea\u30ac\u30f3FX\u80fd\u529b"
+    },
+    {
+        "editor_id": "ccBGSSSE025_AbFXSprigganMania",
+        "type": "MGEF FULL",
+        "original": "SprigganFX Ability",
+        "string": "\u30b9\u30d7\u30ea\u30ac\u30f3FX\u80fd\u529b"
+    },
+    {
+        "editor_id": "ccBGSSSE025_AbSprigganManiaSpell",
+        "type": "SPEL FULL",
+        "original": "Spriggan abilities",
+        "string": "\u30b9\u30d7\u30ea\u30ac\u30f3\u306e\u80fd\u529b"
+    },
+    {
+        "editor_id": "ccBGSSSE025_AbSprigganDementiaSpell",
+        "type": "SPEL FULL",
+        "original": "Spriggan abilities",
+        "string": "\u30b9\u30d7\u30ea\u30ac\u30f3\u306e\u80fd\u529b"
+    },
+    {
+        "editor_id": "ccBGSSSE025_BarrelTongs",
+        "type": "CONT FULL",
+        "original": "Barrel",
+        "string": "\u6a3d"
+    },
+    {
+        "editor_id": "ccBGSSSE025_WEWIKillSeducersLeader",
+        "type": "QUST FULL",
+        "original": "WIKill06 Enable and Move Thugs",
+        "string": "WIKill06\u306f\u60aa\u6f22\u3092\u6709\u52b9\u306b\u3057\u79fb\u52d5\u3059\u308b"
+    },
+    {
+        "editor_id": "ccBGSSSE025_Smithing",
+        "type": "PERK FULL",
+        "original": "Smithing",
+        "string": "\u935b\u51b6"
+    },
+    {
+        "editor_id": "ccBGSSSE025_MatchingSet",
+        "type": "PERK FULL",
+        "original": "Matching Set",
+        "string": "\u30bb\u30c3\u30c8\u30dc\u30fc\u30ca\u30b9"
+    },
+    {
+        "editor_id": "ccBGSSSE025_MatchingSetHeavy",
+        "type": "PERK FULL",
+        "original": "Matching Set",
+        "string": "\u30bb\u30c3\u30c8\u30dc\u30fc\u30ca\u30b9"
+    },
+    {
+        "editor_id": "ccBGSSSE025_WEWIKillSaintsLeader",
+        "type": "QUST FULL",
+        "original": "WIKill06 Enable and Move Thugs",
+        "string": "WIKill06\u306f\u60aa\u6f22\u3092\u6709\u52b9\u306b\u3057\u79fb\u52d5\u3059\u308b"
+    },
+    {
+        "editor_id": "ccBGSSSE025_WIKillSaintLeader",
+        "type": "QUST FULL",
+        "original": "Revenge, Hired Thugs",
+        "string": "\u5fa9\u8b90\u3001\u96c7\u308f\u308c\u305f\u60aa\u6f22"
+    },
+    {
+        "editor_id": "ccBGSSSE025_WIKillSeducerLeader",
+        "type": "QUST FULL",
+        "original": "Revenge, Hired Thugs",
+        "string": "\u5fa9\u8b90\u3001\u96c7\u308f\u308c\u305f\u60aa\u6f22"
+    },
+    {
+        "editor_id": "DLC2SolstheimWorld",
+        "type": "WRLD FULL",
+        "original": "Solstheim",
+        "string": "\u30bd\u30eb\u30b9\u30bb\u30a4\u30e0"
+    },
+    {
+        "editor_id": "Tamriel",
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "\u30b9\u30ab\u30a4\u30ea\u30e0"
+    },
+    {
+        "editor_id": "CTest",
+        "type": "CELL FULL",
+        "original": "Quick Test Cell",
+        "string": "\u30af\u30a4\u30c3\u30af\u30c6\u30b9\u30c8\u7528\u533a\u753b"
+    },
+    {
+        "editor_id": "SolitudeWorld",
+        "type": "WRLD FULL",
+        "original": "Solitude",
+        "string": "\u30bd\u30ea\u30c1\u30e5\u30fc\u30c9"
+    },
+    {
+        "editor_id": "ccBGSSSE025_MatchingSetHeavy",
+        "type": "PERK DESC",
+        "original": "Additional 25% Armor bonus if wearing a matched set of Heavy Armor.",
+        "string": "\u5168\u8eab\u306b\u540c\u3058\u7a2e\u985e\u306e\u91cd\u88c5\u93a7\u3092\u7740\u3051\u3066\u3044\u308b\u3068\u3001\u9632\u5fa1\u5024\u306b25%\u306e\u30dc\u30fc\u30ca\u30b9\u304c\u3064\u304f\u3002"
+    }
+]

@@ -1,0 +1,518 @@
+[
+    {
+        "editor_id": "CCBGSSSE008Vault",
+        "type": "CELL FULL",
+        "original": "Sightless Vault",
+        "string": "Camera Cieca"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "type": "QUST NNAM",
+        "original": "Defeat the Messenger",
+        "string": "Sconfiggi il Messaggero"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "type": "QUST NNAM",
+        "original": "Find the detoured caravans",
+        "string": "Trova le carovane che hanno deviato"
+    },
+    {
+        "editor_id": "ccBGSSSE08_Note4",
+        "type": "BOOK FULL",
+        "original": "Caravan Captain's Note",
+        "string": "Nota del capitano della carovana"
+    },
+    {
+        "editor_id": "ccBGSSSE008_SundersSpell",
+        "type": "SPEL FULL",
+        "original": "Empowered Sunder",
+        "string": "Sunder potenziato"
+    },
+    {
+        "editor_id": "ccBGSSSE08_Note5",
+        "type": "BOOK FULL",
+        "original": "Velyne's Letter",
+        "string": "Lettera di Velyne"
+    },
+    {
+        "editor_id": "ccBGSSSE008_DamageReduced",
+        "type": "PERK FULL",
+        "original": "Reduced Damage",
+        "string": "Danno ridotto"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "type": "QUST FULL",
+        "original": "Legends Lost",
+        "string": "Leggende perdute"
+    },
+    {
+        "editor_id": "ccBGSSE008_VisualsStaff",
+        "type": "MGEF FULL",
+        "original": "Ghost Visuals Fire",
+        "string": "Fuoco della visione fantasma"
+    },
+    {
+        "editor_id": "ccBGSSE008_WraithguardChest2",
+        "type": "CONT FULL",
+        "original": "Old Caravan Chest",
+        "string": "Baule della vecchia carovana"
+    },
+    {
+        "editor_id": "ccBGSSE008_CenturionSpell",
+        "type": "SHOU FULL",
+        "original": "Lightning Breath",
+        "string": "Respiro elettrico"
+    },
+    {
+        "editor_id": "SightlessPit03",
+        "type": "CELL FULL",
+        "original": "Abandoned Cave",
+        "string": "Caverna abbandonata"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "type": "QUST NNAM",
+        "original": "Retrieve Sunder and Wraithguard",
+        "string": "Recupera Sunder e Wraithguard"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "type": "QUST NNAM",
+        "original": "Follow the caravan's trail",
+        "string": "Segui le tracce della carovana"
+    },
+    {
+        "editor_id": "ccBGSSE008_PerkShield",
+        "type": "MGEF FULL",
+        "original": "Add Perk",
+        "string": "Aggiungi bonus"
+    },
+    {
+        "editor_id": "ccBGSSSE008_SunderEnc",
+        "type": "ENCH FULL",
+        "original": "Sunder's Fury",
+        "string": "Furia di Sunder"
+    },
+    {
+        "editor_id": "ccBGSSSE008_DamageFortified",
+        "type": "PERK FULL",
+        "original": "Extra Damage 10",
+        "string": "Danno extra 10"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "type": "QUST NNAM",
+        "original": "Enter the vault in the Sightless Pit",
+        "string": "Entra nella camera della Fossa Cieca"
+    },
+    {
+        "editor_id": "SightlessPitLocation",
+        "type": "LCTN FULL",
+        "original": "Sightless Pit",
+        "string": "Fossa Cieca"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "type": "QUST NNAM",
+        "original": "Find evidence of the caravans in Whiterun",
+        "string": "Segui gli indizi delle carovane a Whiterun"
+    },
+    {
+        "editor_id": "ccBGSSSE008_CenturionBoss",
+        "type": "NPC_ FULL",
+        "original": "The Messenger",
+        "string": "Il Messaggero"
+    },
+    {
+        "editor_id": "ccBGSSSE008_AttunementCrystal",
+        "type": "MISC FULL",
+        "original": "Attunement Crystal",
+        "string": "Cristallo della sincronia"
+    },
+    {
+        "editor_id": "ccBGSSSE008_BossName1",
+        "type": "MESG FULL",
+        "original": "Messenger's Staff",
+        "string": "Bastone del Messaggero"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Boss",
+        "type": "NPC_ FULL",
+        "original": "The Messenger",
+        "string": "Il Messaggero"
+    },
+    {
+        "editor_id": "ccBGSSE008_VisualsShield",
+        "type": "MGEF FULL",
+        "original": "Ghost Visuals Fire",
+        "string": "Fuoco della visione fantasma"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "type": "QUST NNAM",
+        "original": "Find the caravan's letters in Windhelm",
+        "string": "Trova le lettere della carovana a Windhelm"
+    },
+    {
+        "editor_id": "Bthardamz03",
+        "type": "CELL FULL",
+        "original": "Bthardamz Arcanex",
+        "string": "Arcanex di Bthardamz"
+    },
+    {
+        "editor_id": "ccBGSSSE08_Note3",
+        "type": "BOOK FULL",
+        "original": "Seedy Guard's Note",
+        "string": "Nota della guardia trasandata"
+    },
+    {
+        "editor_id": "ccBGSSSE08_Note2",
+        "type": "BOOK FULL",
+        "original": "Carriage Driver's Note",
+        "string": "Nota del cocchiere"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "type": "QUST NNAM",
+        "original": "Find the second caravan",
+        "string": "Trova la seconda carovana"
+    },
+    {
+        "editor_id": "ccBGSSE008_PerkBlade",
+        "type": "MGEF FULL",
+        "original": "Add Perk",
+        "string": "Aggiungi bonus"
+    },
+    {
+        "editor_id": "ccBGSSSE008_WraithguardCrystal",
+        "type": "ACTI FULL",
+        "original": "Dwarven Pedestal",
+        "string": "Piedistallo nanico"
+    },
+    {
+        "editor_id": "ccBGSSSE008_KeeningsSpell",
+        "type": "SPEL FULL",
+        "original": "Empowered Keening",
+        "string": "Keening potenziato"
+    },
+    {
+        "editor_id": "ccBGSSE008_WraithguardChest1",
+        "type": "CONT FULL",
+        "original": "Old Caravan Chest",
+        "string": "Baule della vecchia carovana"
+    },
+    {
+        "editor_id": "ccBGSSSE008_BossName3",
+        "type": "MESG FULL",
+        "original": "Messenger's Sword",
+        "string": "Spada del Messaggero"
+    },
+    {
+        "editor_id": "ccBGSSE008_WraithguardChest3",
+        "type": "CONT FULL",
+        "original": "Old Caravan Chest",
+        "string": "Baule della vecchia carovana"
+    },
+    {
+        "editor_id": "ccBGSSSE008_NoSteamMessage",
+        "type": "MESG FULL",
+        "original": "There doesn't seem to be any steam flowing through these pipes.",
+        "string": "Sembra non passi vapore dalle tubature."
+    },
+    {
+        "editor_id": "ccBGSSSE08_Note1",
+        "type": "BOOK FULL",
+        "original": "Lost Caravan Guard's Note",
+        "string": "Nota della guardia della carovana perduta"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "type": "QUST NNAM",
+        "original": "Retrieve the Attunement Crystal",
+        "string": "Recupera il cristallo della sincronia"
+    },
+    {
+        "editor_id": "ccBGSSE008_VisualsSword",
+        "type": "MGEF FULL",
+        "original": "Ghost Visuals Fire",
+        "string": "Fuoco della visione fantasma"
+    },
+    {
+        "editor_id": "ccBGSSE_008_BossSpellShield",
+        "type": "SPEL FULL",
+        "original": "The Shield",
+        "string": "Lo scudo"
+    },
+    {
+        "editor_id": "WindhelmCalixtosHouseofCuriosities",
+        "type": "CELL FULL",
+        "original": "Calixto's House of Curiosities",
+        "string": "Casa delle Curiosit\u00e0 di Calixto"
+    },
+    {
+        "editor_id": "ccBGSSSE008_BossName2",
+        "type": "MESG FULL",
+        "original": "Messenger's Shield",
+        "string": "Scudo del Messaggero"
+    },
+    {
+        "editor_id": "ccBGSSE_008_BossSpellSword",
+        "type": "SPEL FULL",
+        "original": "The Blade",
+        "string": "La lama"
+    },
+    {
+        "editor_id": "ccBGSSSE008_ReleaseValve",
+        "type": "ACTI FULL",
+        "original": "Vault Release Valve",
+        "string": "Valvola di rilascio della camera"
+    },
+    {
+        "editor_id": "ccBGSSE_008_BossSpellStaff",
+        "type": "SPEL FULL",
+        "original": "The Staff",
+        "string": "Il bastone"
+    },
+    {
+        "editor_id": "ccBGSSE008_LightningSpell",
+        "type": "SPEL FULL",
+        "original": "Lightning Breath",
+        "string": "Respiro elettrico"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "type": "QUST NNAM",
+        "original": "Restore steam in the right valve system",
+        "string": "Fai passare il vapore nel sistema di valvole destro"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "type": "QUST NNAM",
+        "original": "Find a way to open the vault gates",
+        "string": "Trova un modo per aprire le porte della camera"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "type": "QUST NNAM",
+        "original": "Restore steam in the left valve system",
+        "string": "Fai passare il vapore nel sistema di valvole sinistro"
+    },
+    {
+        "editor_id": "SightlessPit01",
+        "type": "CELL FULL",
+        "original": "Sightless Pit",
+        "string": "Fossa Cieca"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "type": "QUST NNAM",
+        "original": "Read Velyne's Letter",
+        "string": "Leggi la lettera di Velyne"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the Carriage Driver's Note",
+        "string": "Leggi la nota del cocchiere"
+    },
+    {
+        "editor_id": "SightlessPit02",
+        "type": "CELL FULL",
+        "original": "Temple of Xrib",
+        "string": "Tempio di Xrib"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the Seedy Guard's Note",
+        "string": "Leggi la nota della guardia trasandata"
+    },
+    {
+        "editor_id": "ccBGSSSE008_NoResponseMessage",
+        "type": "MESG FULL",
+        "original": "Nothing seems to happen.",
+        "string": "Sembra non succeda nulla."
+    },
+    {
+        "editor_id": "ccBGSSE008_WraithguardEffect",
+        "type": "MGEF FULL",
+        "original": "Kagrenac's Knowledge",
+        "string": "Conoscenza di Kagrenac"
+    },
+    {
+        "editor_id": "ccBGSSE008_WraithguardEffect",
+        "type": "MGEF DNAM",
+        "original": "Empowers Kagrenac's Tools.",
+        "string": "Potenzia gli strumenti di Kagrenac."
+    },
+    {
+        "editor_id": "ccBGSSSE008_WraithguardSunder",
+        "type": "ACTI FULL",
+        "original": "Wraithguard and Sunder",
+        "string": "Wraithguard e Sunder"
+    },
+    {
+        "editor_id": "AbFortifyStamina_UI",
+        "type": "MGEF FULL",
+        "original": "Fortify Stamina",
+        "string": "Fortifica vigore"
+    },
+    {
+        "editor_id": "AbFortifyStaminaRate_UI",
+        "type": "MGEF FULL",
+        "original": "Regenerate Stamina",
+        "string": "Rigenera vigore"
+    },
+    {
+        "editor_id": "AbFortifyStaminaRate_UI",
+        "type": "MGEF DNAM",
+        "original": "Stamina regenerates <mag>% fastser.",
+        "string": "Il vigore si rigenera il <mag>% pi\u00f9 in fretta."
+    },
+    {
+        "editor_id": "AbFortifyHealth_UI",
+        "type": "MGEF FULL",
+        "original": "Fortify Health",
+        "string": "Fortifica salute"
+    },
+    {
+        "editor_id": "WhiterunHalloftheDeadCatacombs",
+        "type": "CELL FULL",
+        "original": "Whiterun Catacombs",
+        "string": "Catacombe di Whiterun"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "type": "QUST CNAM",
+        "original": "The first caravan was attacked by Dwarven creatures. They managed to escape but I found a copy of their logs, along with details of all the other caravans. The next carriage was headed towards Whiterun. I should see what I can find.",
+        "string": "La prima carovana \u00e8 stata attaccata da alcune creature naniche. Sono riusciti a scappare ma ho trovato una copia dei loro registri, insieme ai dettagli sulle altre carovane. Il prossimo carro era diretto a Whiterun. Dovrei vedere cosa riesco a trovare."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "type": "QUST CNAM",
+        "original": "Rumors say an old refugee trunk full of letters has been uncovered in Windhelm. I should see if I can find a copy of those letters and more information on the cargo they were carrying.",
+        "string": "Si dice che sia stato scoperto un vecchio baule dei rifugiati pieno di lettere a Windhelm. Dovrei andare a vedere se riesco a trovare una copia di quelle lettere e altre informazioni sul carico."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "type": "QUST CNAM",
+        "original": "In response to the attacks, the caravans took a detour towards Falkreath. I'll need to follow their trail to see if they left anything behind.",
+        "string": "A causa degli attacchi, le carovane hanno deviato verso Falkreath. Devo seguire le loro tracce e scoprire se si sono lasciati indietro qualcosa."
+    },
+    {
+        "editor_id": "ccBGSSSE08_Note4",
+        "type": "BOOK DESC",
+        "original": "<p align='left'><font face='$HandwrittenFont'><font size='18'>\nWe met with Sadras and picked up the cargo. At least their captain seemed in better spirits, but the others looked exhausted. To make matters worse, the air was flush with news about the caravans who didn't make it, sieged by Dwarven automatons on the road to Whiterun.\n\nMy worry is such fears will find their way into the minds of my men. Especially when the details of their stories seem to corroborate, it only serves to throw more kindling on the flame.\n\nHopefully the other captains have a plan. We've had a few deserters already, and we'll need every available body if these attacks continue. It'll be difficult to convince the men to leave the safety of the tavern for the terrors of the unknown.\n\nEven without this Dwarven nonsense, the road ahead will only get more perilous given the copious bandits, wolves, and other dangers on the road. Captain Inodes has asked us to take a detour with the Dres caravan to Falkreath. Staying off the main road might provide us some cover.</font></p>",
+        "string": "<p align='left'><font face='$HandwrittenFont'><font size='18'>\nAbbiamo incontrato Sadras e abbiamo prelevato il carico. Il capitano sembrava di buon umore, ma gli altri erano esausti. A peggiorare le cose \u00e8 arrivata la notizia che alcune carovane non ce l'hanno fatta, sono state assediate dalle macchine naniche sulla strada verso Whiterun.\n\nTemo che la paura possa farsi strada nella testa dei miei uomini. Soprattutto dopo aver sentito i dettagli delle loro storie, non faranno altro che peggiorare la situazione.\n\nSpero che gli altri capitani abbiano un piano. Abbiamo gi\u00e0 avuto dei disertori, ci servir\u00e0 tutto l'aiuto possibile se questi attacchi continueranno. Sar\u00e0 difficile convincere gli uomini a lasciare la sicurezza della taverna per affrontare i pericoli dell'ignoto.\n\nAnche senza queste assurdit\u00e0 naniche, la strada da qui in avanti sar\u00e0 sempre pi\u00f9 pericolosa tra i banditi, i lupi e le altre insidie della strada. Il capitano Inedos ci ha chiesto di fare una deviazione insieme alla carovana Dres fino a Falkreath. Forse stare lontani dalla strada principale ci far\u00e0 sentire pi\u00f9 tranquilli.</font></p>"
+    },
+    {
+        "editor_id": "ccBGSSSE08_Note5",
+        "type": "BOOK DESC",
+        "original": "<p align='left'><font face='$HandwrittenFont'><font size='18'>\nInedos, \n\nThe reports are right. Wraithguard and Sunder are singing, sending a signal out to anyone that might be listening. I don't know how, but I think I know why. The Tools were only meant to be used on Numidium, it makes sense that they would never be allowed to leave Morrowind. \n\nTo ensure this, Kagrenac must have put in a failsafe system. If the Tools were ever stolen, drones would be activated across Tamriel to recover them. The drones would then store the items in a vault until a Tonal Architect could fetch them. \n\nUnfortunately, as I suspected, that information was enough for some of the captains to betray us and change course. They no longer care about the artifacts or the job. They consider the cargo to be a death trap, and are taking measures to unload it.\n\nYour caravan might think they were carrying the Tools, but Sadras and Hlaalu swapped them before we ever got to Whiterun, and intentionally gave them up to the retrieval drones. Fortunately, I managed to track the drones back to a vault near Winterhold; what the locals call the Sightless Pit. I've also discovered the vault can be opened with an attunement crystal, which I've sent along with this letter. As I am no warrior, I dare not venture inside without you.\n\nHopefully this message reaches your party in time, for I know we are of like mind. As a scholar, I want to see the artifacts delivered to my master, and you have always been someone who does not shirk his duty. I have faith that you and your crew can return north and repair this mistake.\n\nVelyne</font></p>\n",
+        "string": "<p align='left'><font face='$HandwrittenFont'><font size='18'>\nInedos, \n\nLe segnalazioni sono vere. Wraithguard e Sunder stanno cantando, stanno mandando un segnale a chiunque riesca a sentirli. Non so come ma penso di sapere perch\u00e9. Gli strumenti vennero creati per essere usati solo sul Numidium, quindi non possono lasciare Morrowind. \n\nPer accertarsene, Kagrenac deve aver escogitato un sistema di sicurezza. Se gli strumenti fossero stati rubati, si sarebbero attivati dei droni in tutta Tamriel per recuperarli. I droni avrebbero poi conservato gli strumenti in una camera finch\u00e9 un architetto tonale non sarebbe andato a prenderli. \n\nSfortunatamente, come temevo, questa informazione ha convinto alcuni capitani a tradirci e a cambiare rotta. Non gli interessa pi\u00f9 degli artefatti o del lavoro. Pensano che il carico sia una trappola mortale e vogliono liberarsene.\n\nLa tua carovana pensa di avere gli strumenti, ma Sadras e Hlaalu se li sono scambiati prima di arrivare a Whiterun, e senza volerlo li hanno fatti prendere ai droni per il recupero. Per fortuna, sono riuscita a rintracciare i droni fino a una camera vicino Winterhold, gli abitanti la chiamano la Fossa Cieca. Ho anche scoperto che la camera pu\u00f2 essere aperta con un cristallo della sincronia, che ti mando insieme a questa lettera. Non sono una guerriera, quindi non mi azzardo a entrare senza di te.\n\nSpero che questo messaggio ti arrivi in tempo, so che la pensi come me. Da studiosa voglio che gli artefatti raggiungano il mio maestro e tu non ti sei mai sottratto ai tuoi doveri. Ho fiducia che tu e la tua squadra potrete tornare a nord e rimediare a quest'errore.\n\nVelyne</font></p>\n"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "type": "QUST CNAM",
+        "original": "As predicted, both Tools are guarded by a powerful Dwarven Centurion. I'll have to defeat it if I'm to claim them as my own.",
+        "string": "Come previsto, gli strumenti sono protetti da un potente centurione nanico. Dovr\u00f2 sconfiggerlo se voglio ottenerli."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "type": "QUST CNAM",
+        "original": "On the road to Whiterun I found the remnants of another sacked caravan. According to a note I found in the wreckage, the remaining caravans were set to regroup in Whiterun, and one of the guards visited the Halls of the Dead there.",
+        "string": "Sulla strada per Whiterun ho trovato i resti di un'altra carovana saccheggiata. Secondo una nota che ho trovato sul posto, le carovane rimaste dovevano incontrarsi a Whiterun, e una delle guardie ha visitato la Sala dei Morti."
+    },
+    {
+        "editor_id": "ccBGSSSE008_KeeningsSpell",
+        "type": "SPEL DESC",
+        "original": "Wraithguard empowers Keening, fortifying your magicka by <50> and your health and stamina by <20>.",
+        "string": "Wraithguard potenzia Keening, aumenta la tua magicka di <40> e la salute e il vigore di <20>."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "type": "QUST CNAM",
+        "original": "The cargo the caravans were delivering appears to hold the missing Tools of Kagremac: Sunder and Wraithguard. Apparently the items were surrendered to Dwemer drones and taken to a vault in the Sightless Pit. If I'm to open the door, I need to take this attunement crystal I found and use it to unlock the vault.",
+        "string": "Il carico delle carovane sembra contenere gli Strumenti di Kagremac perduti: Sunder e Wraithguard. A quanto pare gli oggetti sono stati consegnati ad alcuni droni nanici e portati in una camera nella Fossa Cieca. Se voglio aprire la porta dovr\u00f2 prendere questo cristallo della sincronia che ho trovato e usarlo per sbloccare la camera."
+    },
+    {
+        "editor_id": "ccBGSSSE008_SundersSpell",
+        "type": "SPEL DESC",
+        "original": "Wraithguard empowers Sunder. Your stamina regenerates <50%> faster and you do <15%> more melee damage.",
+        "string": "Wraithguard potenzia Sunder. Il vigore si rigenera il <50%> pi\u00f9 velocemente e infliggi il <15%> in pi\u00f9 di danni in mischia."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "type": "QUST CNAM",
+        "original": "I've defeated the Dwarven defenses and claimed both Sunder and Wraithguard for myself.",
+        "string": "Ho sconfitte le difese naniche e ho preso sia Sunder che Wraithguard."
+    },
+    {
+        "editor_id": "ccBGSSSE008WraithguardGauntlet",
+        "type": "ARMO DESC",
+        "original": "Resist shock, fire, frost, magic, disease, and poison by <10%>. Empowers Keening and Sunder when equipped.",
+        "string": "Resistenza all'elettricit\u00e0, fuoco, gelo, magicka, malattie e veleni aumentata del <10%>. Potenzia Keening e Sunder quando equipaggiato."
+    },
+    {
+        "editor_id": "ccBGSSSE08_Note1",
+        "type": "BOOK DESC",
+        "original": "<p align='left'><font face='$HandwrittenFont'><font size='18'>\nWe crossed into Skyrim under the cover of ashfall. As far as anyone knows, we're shipping refugees, just one in a long line of vagrant caravans escaping the wrath of the Red Mountain. Normally, a story like that would be enough to get us through, but not this time.\n\nNow I've been a caravan guard for some time, and I've seen some pretty extensive security measures. Locks, chains, the works. One client even had a conjurer summon a daedra to guard his wagon, but even compared to that this seems excessive. \n\nFor one, everything has a code name. The cargo, the guards, even the horse. As for the caravans, to keep it familiar we've each been given a name from one of the Great Houses. \n\nOf course, some of the guards didn't like that part. One of the new bloods said he'd rather bend the knee to a guar than wear the name of House Dres. But Captain Inedos brought him in line with the point of his blade, and the rest followed. You'd think the Red Year would unite us, but it seems like there's old scars that haven't healed and old scores that haven't been settled. But at the end of the day, none of that matters. The job's the job. Like the Captain said, at least they didn't name us after the boots.\nWe've also got several decoy caravans heading out through Skyrim, all the way to some undisclosed location in Hammerfell. But since that's not enough, each caravan will meet up at preset checkpoints and swap their items out. \n\nThat means different decoys traveling different paths every step of the way. With the refugee garb they say we should blend right in, and on the off chance we don't, we've got runners set to flee to the next village, hidden compartments, anything you can think of. \n\nStill, if you ask me, all of it sounds like a waste of time. I'm no scholar, but those two bits of cargo don't look like anything special, just a fancy way to bash some poor f'lah's skull in. \n\nWith all the chaos bleeding out of Vvardenfell, we've made it to Windhelm without so much as a papercut. Come morning we're heading out west along the river toward Nightgate Inn. If all goes well we'll reach the mountain pass by midday. Still, we'd get there sooner if not for all the stops.</font></p>",
+        "string": "<p align='left'><font face='$HandwrittenFont'><font size='18'>\nSiamo arrivati a Skyrim grazie alla caduta delle ceneri. Per quanto ne sanno gli altri, stiamo trasportando rifugiati, siamo una delle tante carovane in fuga dall'ira della Montagna Rossa. Di solito, una storia del genere sarebbe bastata a farci passare, ma non questa volta.\n\nOrmai sono a guardia delle carovane da un po' di tempo e ho visto misure di sicurezza di tutti i tipi. Lucchetti, catene, chi pi\u00f9 ne ha pi\u00f9 ne metta. Un cliente aveva addirittura evocato un daedra a guardia del suo carro, ma neanche questo regge il confronto. \n\nCome prima cosa, tutto ha un nome in codice. Il carico, le guardie, addirittura i cavalli. Alle carovane sono stati dati i nomi delle grandi casate. \n\nOvviamente ad alcune delle guardie questo non \u00e8 piaciuto. Uno dei nuovi ha detto che preferirebbe inginocchiarsi davanti a un guar pur di non portare il nome di Casata Dres. Il capitano Inedos l'ha subito rimesso in riga, minacciandolo con la spada, cos\u00ec anche gli altri hanno obbedito. L'Anno Rosso avrebbe dovuto unirci, invece sembra ci siano ancora ferite aperte e conti da sistemare. Ma alla fine, niente di tutto questo importa. Il lavoro \u00e8 lavoro. Come ha detto il capitano, almeno non ci hanno chiamato come degli stivali.\nAbbiamo anche delle carovane esca che attraverseranno Skyrim per arrivare a una destinazione segreta ad Hammerfell. Come se non fosse abbastanza, ogni carovana si incontrer\u00e0 con un'altra in un punto prestabilito e si scambieranno la merce. \n\nQuesto significa che ogni esca viagger\u00e0 su percorsi diversi in ogni momento. Con indosso gli abiti dei rifugiati dicono che ci mescoleremo tra la folla senza problema, ma se cos\u00ec non fosse, alcuni di noi sono pronti a scappare al villaggio pi\u00f9 vicino, ci sono scompartimenti segreti, di tutto e di pi\u00f9. \n\nMa, secondo me, \u00e8 tutta una perdita di tempo. Non sono un esperto, ma i due carichi non mi sembrano niente di speciale, solo un modo elegante per spaccare la testa a qualche povero straniero. \n\nCon la confusione che regna a Vvardenfell, siamo arrivati a Windhelm senza alcun problema. Non appena si far\u00e0 mattina ci dirigeremo a ovest lungo il fiume verso il Cancello Notturno. Se tutto va bene arriveremo al valico a mezzogiorno. Arriveremmo anche prima se non dovessimo fare tutte quelle fermate.</font></p>"
+    },
+    {
+        "editor_id": "ccBGSSSE008_NoSteamMessage",
+        "type": "MESG DESC",
+        "original": "There doesn't seem to be any steam flowing through these pipes.",
+        "string": "Sembra non passi vapore dalle tubature."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "type": "QUST CNAM",
+        "original": "I've found one of the letters, which details the routes of both the caravans as well as decoys designed to misdirect potential thieves. According to the letter, the first caravan was headed west toward Nightgate Inn. Perhaps following its trail will lead to another clue.",
+        "string": "Ho trovato una lettera che spiega il percorso di entrambe le carovane e delle esche pensate per sviare i ladri. Secondo la lettera, la prima carovana era diretta a ovest verso la Locanda del Cancello Notturno. Forse seguendo le sue tracce trover\u00f2 un altro indizio."
+    },
+    {
+        "editor_id": "ccBGSSSE08_Note3",
+        "type": "BOOK DESC",
+        "original": "<p align='left'><font face='$HandwrittenFont'><font size='18'>\nTelvanni handed the cargo off to us at the checkpoint. They seemed a bit on edge but they aren't sharing details exactly, just that they were attacked by Dwarven machines. Bunch of useless fetchers, all of them.\n\nWe also had a surprise visit from the Hlaalu caravan. The whole crew was an odd bunch. More scholars and farmers than warriors I'd say, but a few were just my type. I tried to chat it up with a fetching raven-haired girl, but she kept those sultry red eyes fixed on the cargo as it changed hands.\n\nIn any case, the main package is secured, but there's fear it was damaged during transport. Oddly the Hlaalu captain didn't seem too concerned about it. He and the boss talked for a bit by themselves. I tried my luck with the raven-haired tart once more, and she told me her name was Velyne. She asked whether Captain Inodes would be at the next checkpoint. I told her no, but the truth is I didn't even know. I don't know why she cared anyway, their cargo is a decoy.\n\nThe real package is going to Indoril at the next stop. Once that's delivered, I'm hearing we might stop for a day or two in Whiterun to get our bearings. The captain of the Indoril caravan is a Nord, and he mentioned heading over to the Hall of the Dead to pay his respects. That's fine, I'll be paying mine at the tavern. Hopefully I'll get a chance to buy sweet little Velyne a drink.</font></p>",
+        "string": "<p align='left'><font face='$HandwrittenFont'><font size='18'>\nTelvanni ci ha consegnato il carico al punto d'incontro. Sembravano un po' nervosi ma non ci hanno voluto raccontare i dettagli, solo che sono stati attaccati da dei macchinari nanici. Inutile branco di canaglie, tutti quanti.\n\nAbbiamo ricevuto anche una visita a sorpresa dalla carovana Hlaalu. Tutto l'equipaggio era strano. Pi\u00f9 studiosi e contadini che guerrieri, ma un paio erano il mio tipo. Ho provato a parlare un po' con una ragazza dai capelli corvini, ma non staccava quei seducenti occhi rossi dal carico mentre ce lo scambiavamo.\n\nComunque, il carico principale \u00e8 al sicuro, temiamo possa essere stato danneggiato durante il trasporto. Stranamente il capitano Hlaalu non sembrava preoccupato. Lui e il capo hanno parlato per un po' in disparte. Io ci ho provato di nuovo con la ragazza dai capelli corvini, e mi ha detto che si chiama Velyne. Mi ha chiesto se il capitano Inedos sar\u00e0 presente al prossimo punto di scambio. Le ho detto di no, ma in realt\u00e0 non lo so. Non capisco perch\u00e9 le interessa, in ogni caso, il loro carico \u00e8 solo un'esca.\n\nIl carico vero verr\u00e0 dato a Indoril alla prossima fermata. Una volta consegnato a quanto pare potremo fermarci per un giorno o due a Whiterun per riposarci. Il capitano della carovana Indoril \u00e8 un nord e ha detto di voler andare alla Sala dei Morti per portare i suoi omaggi. Va bene, io porter\u00f2 i miei alla taverna. Spero di riuscire a offrire qualcosa da bere alla dolce Velyne.</font></p>"
+    },
+    {
+        "editor_id": "ccBGSSSE08_Note2",
+        "type": "BOOK DESC",
+        "original": "<p align='left'><font face='$HandwrittenFont'><font size='18'>\nIt happened sometime after we crossed deeper into the mountains, but I swear I could hear singing. Tuneless, very quiet, but singing nonetheless. No one else believes me, but I'd bet my bottom drake that it had something to do with the Dwarven machines attacking us last night. I've never heard of these things leaving their ruins, let alone roaming the countryside going after travelers. It's almost as if they were drawn to the music.\n\nTonight we're handing the cargo off to the Sadras caravan, and I say good riddance. But the captain says we're going to eventually circle back to Whiterun, which means we could see the cargo again.\n\nIf that happens, I'm getting off this caravan. I don't care about the gold. I haven't slept for days and I feel like I'm losing my mind.\n\nEven now, I can hear that awful singing in my head. I just want it to stop.</font></p>",
+        "string": "<p align='left'><font face='$HandwrittenFont'><font size='18'>\n\u00c8 successo mentre ci addentravamo nella montagna, potrei giurare di aver sentito un canto. Senza musica, molto piano, ma senza dubbio un canto. Gli altri non mi credono, ma scommetterei fino all'ultimo centesimo che c'entrano qualcosa quei macchinari nanici che ci hanno attaccato ieri sera. Non ho mai sentito dire che quelle cose si allontanino dalle loro rovine, figuriamoci andarsene in giro per la campagna ad attaccare i viaggiatori. \u00c8 come se fossero stati attratti dalla musica.\n\nStanotte daremo il carico alla carovana Sadras, finalmente, dico io. Ma il capitano dice che dovremo tornare fino a Whiterun, quindi potremmo vederlo di nuovo.\n\nSe succede, giuro che me ne vado. Non mi importa dell'oro. Non ho dormito per giorni e mi sembra d'impazzire.\n\nAnche adesso, sento quel terribile canto nella testa. Voglio solo che smetta.</font></p>"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "type": "QUST CNAM",
+        "original": "I've unlocked the Sightless Vault. Within lies Sunder and Wraithguard.",
+        "string": "Ho aperto la Camera Cieca. Dentro si trovano Sunder e Wraithguard."
+    },
+    {
+        "editor_id": "BGSSSE008Sunder",
+        "type": "WEAP DESC",
+        "original": "Does <5> points of frost, fire, and shock damage each. Does <15> points of damage to stamina and magicka. ",
+        "string": "Infligge <5> danni da gelo, fuoco ed elettricit\u00e0. Infligge <15> danni a magicka e vigore. "
+    },
+    {
+        "editor_id": "ccBGSSSE008_DamageReduced",
+        "type": "PERK DESC",
+        "original": "Make actor immune to incoming damage to block skill uses being added",
+        "string": "Rende l'utilizzatore immune ai danni in arrivo quando viene usata l'abilita Parare."
+    },
+    {
+        "editor_id": "ccBGSSSE008_BarredDoorMessage",
+        "type": "MESG DESC",
+        "original": "Some other mechanism controls this door.",
+        "string": "Questa porta \u00e8 controllata da un altro meccanismo."
+    },
+    {
+        "editor_id": "ccBGSSSE008_NoResponseMessage",
+        "type": "MESG DESC",
+        "original": "Nothing seems to happen.",
+        "string": "Sembra non succeda nulla."
+    }
+]

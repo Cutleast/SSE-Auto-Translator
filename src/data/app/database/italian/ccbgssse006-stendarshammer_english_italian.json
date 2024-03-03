@@ -1,0 +1,74 @@
+[
+    {
+        "editor_id": "ccBGSSSE006_Quest",
+        "type": "QUST FULL",
+        "original": "If I had a Hammer",
+        "string": "Se solo avessi un martello"
+    },
+    {
+        "editor_id": "ccBGSSSE006StendarsHammer",
+        "type": "WEAP FULL",
+        "original": "Stendarr's Hammer",
+        "string": "Martello di Stendarr"
+    },
+    {
+        "editor_id": "ccBGSSSE006_Quest",
+        "type": "QUST NNAM",
+        "original": "Steal Stendarr's Hammer",
+        "string": "Ruba il Martello di Stendarr"
+    },
+    {
+        "editor_id": "ccBGSSSE006_DamageStamina",
+        "type": "MGEF DNAM",
+        "original": "Drains <mag> points from stamina.",
+        "string": "Prosciuga <mag> punti dal vigore."
+    },
+    {
+        "editor_id": "ccBGSSSE006_EnchDamageFFContact",
+        "type": "MGEF FULL",
+        "original": "Smite Damage",
+        "string": "Danni da percosse"
+    },
+    {
+        "editor_id": "ccBGSSSE006_EnchDrainHealth",
+        "type": "ENCH FULL",
+        "original": "Absorb Health",
+        "string": "Assorbi salute"
+    },
+    {
+        "editor_id": "ccBGSSSE006_DrainStamina",
+        "type": "SPEL FULL",
+        "original": "Smite",
+        "string": "Prosciuga vigore"
+    },
+    {
+        "editor_id": "ccBGSSSE006_DamageStamina",
+        "type": "MGEF FULL",
+        "original": "Reduced Stamina",
+        "string": "Vigore ridotto"
+    },
+    {
+        "editor_id": "ccBGSSSE006_EnchDamageFFContact",
+        "type": "MGEF DNAM",
+        "original": "Damages the target for <mag> points. Depletes <20> Stamina from wielder per hit.",
+        "string": "Danneggia il bersaglio di <mag> punti. Riduce il vigore dell'utilizzatore di <20> punti per colpo."
+    },
+    {
+        "editor_id": "MarkarthWizardsQuarters01",
+        "type": "CELL FULL",
+        "original": "Dwemer Museum",
+        "string": "Museo Dwemer"
+    },
+    {
+        "editor_id": "ccBGSSSE006_Quest",
+        "type": "QUST CNAM",
+        "original": "I have successfully stolen Stendarr's Hammer from the Dwarven Museum in Markarth.",
+        "string": "Ho rubato il Martello di Stendarr dal museo nanico di Markarth."
+    },
+    {
+        "editor_id": "ccBGSSSE006_Quest",
+        "type": "QUST CNAM",
+        "original": "Rumor has it that Stendarr's Hammer has been found deep under Markarth. They say it is in the Dwarven Museum there.",
+        "string": "Pare che il Martello di Stendarr sia stato trovato nel sottosuolo di Markarth. A quanto pare, l'hanno esposto nel museo nanico della citt\u00e0."
+    }
+]

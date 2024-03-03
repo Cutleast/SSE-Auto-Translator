@@ -1,0 +1,230 @@
+[
+    {
+        "editor_id": "ccBGSSSE036_EncBoneWolf",
+        "type": "NPC_ FULL",
+        "original": "Bone Wolf",
+        "string": "Loup osseux"
+    },
+    {
+        "editor_id": "ccBGSSSE036_AcquisitionNote",
+        "type": "BOOK FULL",
+        "original": "Letter from Bolgeir Bearclaw",
+        "string": "Lettre d'un admirateur inquiet"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST NNAM",
+        "original": "Find the necromancer and the strange creatures",
+        "string": "Trouvez le n\u00e9cromancien et les cr\u00e9atures \u00e9tranges."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST NNAM",
+        "original": "Take the totem to the caged wolf",
+        "string": "Apportez le totem jusqu'\u00e0 la cage du loup."
+    },
+    {
+        "editor_id": "ccBGSSSE036_NecroJornal",
+        "type": "BOOK FULL",
+        "original": "Necromancer's Journal",
+        "string": "Journal du n\u00e9cromancien"
+    },
+    {
+        "editor_id": "ccBGSSSE036_EncNecromancerThrall02",
+        "type": "NPC_ FULL",
+        "original": "Thrall Wolf",
+        "string": "Loup-golem"
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfFGivePerkAbility",
+        "type": "SPEL FULL",
+        "original": "Bone Wolf's Revenge",
+        "string": "Revanche du loup osseux"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST FULL",
+        "original": "Let Sleeping Wolves Lie",
+        "string": "Le sommeil des loups"
+    },
+    {
+        "editor_id": "ccBGSSSE036_CageKey",
+        "type": "KEYM FULL",
+        "original": "Key to Wolf Cage",
+        "string": "Cl\u00e9 de la cage du loup"
+    },
+    {
+        "editor_id": "ccBGSSSE036_Necromancer",
+        "type": "NPC_ FULL",
+        "original": "Necromancer",
+        "string": "N\u00e9cromancien"
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfGiveItemSpell",
+        "type": "SPEL FULL",
+        "original": "Bone Wolf's Gift",
+        "string": "Capacit\u00e9 du cadeau du loup osseux"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfPerkEffect",
+        "type": "MGEF DNAM",
+        "original": "Increases damage on the undead by 25% while Bone Wolf is in your company.",
+        "string": "Augmente les d\u00e9g\u00e2ts contre tous les morts-vivants de 25\u00a0% lorsque le loup osseux est \u00e0 vos c\u00f4t\u00e9s."
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfFollowPerk",
+        "type": "PERK FULL",
+        "original": "Bone Wolf's Revenge",
+        "string": "Revanche du loup osseux"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfSummonEffect",
+        "type": "MGEF DNAM",
+        "original": "Teleports Bone Wolf to your side.",
+        "string": "T\u00e9l\u00e9porte le loup osseux \u00e0 vos c\u00f4t\u00e9s"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST NNAM",
+        "original": "Defeat the necromancer",
+        "string": "\u00c9liminez le n\u00e9cromancien."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfPerkEffect",
+        "type": "MGEF FULL",
+        "original": "Bone Wolf's Revenge",
+        "string": "Revanche du loup osseux"
+    },
+    {
+        "editor_id": "ccBGSSE036_ConjureBoneWolfSpell",
+        "type": "SPEL FULL",
+        "original": "Teleport Pet: Bone Wolf",
+        "string": "T\u00e9l\u00e9portation du familier\u00a0: loup osseux"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfSummonEffect",
+        "type": "MGEF FULL",
+        "original": "Summon Bone Wolf",
+        "string": "Invoquer le loup osseux"
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfCompanionRace",
+        "type": "RACE FULL",
+        "original": "Dog",
+        "string": "Chien"
+    },
+    {
+        "editor_id": "ccBGSSSE036_TOTEM",
+        "type": "MISC FULL",
+        "original": "Totem Bone",
+        "string": "Os de totem"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfGiftEffect",
+        "type": "MGEF FULL",
+        "original": "Bone Wolf's Gift",
+        "string": "Effet du cadeau du loup osseux"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST NNAM",
+        "original": "Read the note from Bolgeir Bearclaw",
+        "string": "Lisez la note de l'admirateur inquiet."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST NNAM",
+        "original": "Search the necromancer",
+        "string": "Fouillez le n\u00e9cromancien."
+    },
+    {
+        "editor_id": "ccBGSSSE036_EncNecromancerThrall01",
+        "type": "NPC_ FULL",
+        "original": "Thrall Wolf",
+        "string": "Loup-golem"
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfBlessing",
+        "type": "SPEL FULL",
+        "original": "Bone Wolf's Reward",
+        "string": "R\u00e9compense pour le loup osseux"
+    },
+    {
+        "editor_id": "Tamriel",
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Bordeciel"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST CNAM",
+        "original": "Bone Wolf appears calm and content now that I've returned his totem. It appears he will follow me if I wish. Some may consider him strange to look upon, but there may be something deeper about him beyond his appearance.",
+        "string": "Le loup osseux semble calme et heureux maintenant que je lui ai rendu son totem. Je pense qu'il me suivra si jamais j'en ai envie. Certains pourraient penser qu'il est bizarre, mais quelque chose me dit qu'il y a autre chose chez lui que son apparence \u00e9trange."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST CNAM",
+        "original": "In a cage nearby, there is another of these strange creatures, who I suspect the totem belongs to. I should take it to him.",
+        "string": "Il semblerait que le n\u00e9cromancien tirait sa puissance de ces loups morts-vivants en consommant leurs totems. Je l'ai arr\u00eat\u00e9 avant qu'il ne puisse consommer la puissance d'un troisi\u00e8me. Dans une cage \u00e0 proximit\u00e9 se trouve une autre de ces cr\u00e9atures, que je suspecte \u00eatre le propri\u00e9taire du troisi\u00e8me totem. Je devrais lui rapporter."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST CNAM",
+        "original": "I have discovered the necromancer's location. The strange creatures mentioned in the note appear to be undead wolves, raised by the dark arts of the necromancer. Putting a stop to these experiments should prevent him from raising more.",
+        "string": "J'ai d\u00e9couvert l'endroit o\u00f9 se trouve le n\u00e9cromancien. Les cr\u00e9atures \u00e9tranges mentionn\u00e9es dans la note semblent \u00eatre des loups morts-vivants, r\u00e9anim\u00e9s par les arcanes sombres du n\u00e9cromancien. Mettre un terme \u00e0 ses exp\u00e9riences devrait l'emp\u00eacher d'en r\u00e9animer d'autres."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST CNAM",
+        "original": "The necromancer is dead. I should search his body for any clues.",
+        "string": "Le n\u00e9cromancien est mort. Je devrais fouiller son cadavre \u00e0 la recherche d'indices."
+    },
+    {
+        "editor_id": "ccBGSSSE036_AcquisitionNote",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\nFriend, we seek your aid. \n\nA dark necromancer has been attacking innocents along the northern coast,  accompanied by strange creatures who do his every bidding. I trust you can help us with this troublesome matter and investigate on our behalf.\n\nBolgeir Bearclaw\n</font>",
+        "string": "<font face=\"$HandwrittenFont\">\nCamarade, nous avons besoin de votre aide. \n\nUn n\u00e9cromancien mal\u00e9fique attaque des innocents le long de la c\u00f4te nord, accompagn\u00e9 par des cr\u00e9atures \u00e9tranges ob\u00e9issant \u00e0 ses ordres. J'esp\u00e8re que vous pourrez nous aider dans cette affaire et enqu\u00eater en notre nom.\n\nUn admirateur inquiet\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST CNAM",
+        "original": "Bolgeir Bearclaw has informed me that a dark necromancer has been attacking innocents somewhere along the northern coast. The note also tells of strange creatures that accompany him. I should search the coast and see if I can unravel this mystery.",
+        "string": "Un admirateur inquiet m'a inform\u00e9 qu'un n\u00e9cromancien mal\u00e9fique attaque des innocents quelque part le long de la c\u00f4te nord. La note signale \u00e9galement que des cr\u00e9atures \u00e9tranges l'accompagnent. Je devrais explorer la c\u00f4te et voir si je peux lever le voile sur ce myst\u00e8re."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST CNAM",
+        "original": "I have a note from Bolgeir Bearclaw. I should read it and find out if there's anything he needs assistance with.",
+        "string": "J'ai re\u00e7u une note de la part d'un admirateur inquiet. Je ferais bien de la lire."
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfGivePlayerItemMsg",
+        "type": "MESG DESC",
+        "original": "Bone Wolf has found you something.",
+        "string": "Le loup osseux vous a trouv\u00e9 quelque chose."
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfBlessing",
+        "type": "SPEL DESC",
+        "original": "Bone Wolf thanks you for the dragon bone",
+        "string": "Le loup osseux vous remercie pour l'os de dragon."
+    },
+    {
+        "editor_id": "ccBGSSSE036_NecroJornal",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\nThis is truly remarkable. Through my experiments with these undead wolves, I have discovered a method to increase my power. \n\nBy consuming their totems; objects that bind them between life and death itself, \nI can bind their spirits to my own life force.\n\nI have already consumed two totems and their hosts are now completely under my control. But this is not enough, I need a third totem to be sure.\n</font>",
+        "string": "<font face=\"$HandwrittenFont\">\nTout ceci est vraiment remarquable. Gr\u00e2ce \u00e0 mes exp\u00e9riences sur ces loups morts-vivants, j'ai d\u00e9couvert un moyen d'acc\u00e9der \u00e0 l'immortalit\u00e9. \n\nEn consommant leurs totems (des objets les liant entre la vie et la mort elles-m\u00eames), \nje peux lier leurs esprits \u00e0 ma propre force vitale.\n\nTant qu'ils vivent, rien ne peut me blesser. \n\nJ'ai d\u00e9j\u00e0 consomm\u00e9 deux totems et leurs h\u00f4tes sont d\u00e9sormais enti\u00e8rement sous mon contr\u00f4le. Mais ce n'est pas suffisant, j'ai besoin d'un troisi\u00e8me totem pour \u00eatre s\u00fbr.\n\nAvec autant de puissance, rien ne pourra m'arr\u00eater.\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfFollowPerk",
+        "type": "PERK DESC",
+        "original": "Spells and attacks are more effective against the undead and necromancers.",
+        "string": "Am\u00e9liore l'efficacit\u00e9 de tous les sorts et attaques contre les morts-vivants et n\u00e9cromanciens."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST CNAM",
+        "original": "I have encountered a dark necromancer and two undead wolves. These  creatures appear to be controlled by the necromancer. Putting a stop to these experiments should prevent him from raising more. ",
+        "string": "J'ai rencontr\u00e9 un n\u00e9cromancien mal\u00e9fique et deux loups morts-vivants. Ces cr\u00e9atures semblent \u00eatre sous le contr\u00f4le du n\u00e9cromancien. Mettre un terme \u00e0 ses exp\u00e9riences devrait l'emp\u00eacher d'en r\u00e9animer d'autres. "
+    }
+]

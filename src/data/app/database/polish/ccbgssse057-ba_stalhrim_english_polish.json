@@ -1,0 +1,104 @@
+[
+    {
+        "editor_id": "ccBGSSSE057_ArmorStalhrimHelmet",
+        "type": "ARMO FULL",
+        "original": "Stalhrim Fur Helmet",
+        "string": "Stalhrimowy futrzany he\u0142m"
+    },
+    {
+        "editor_id": "ccBGSSSE057_ArmorStalhrimBoots",
+        "type": "ARMO FULL",
+        "original": "Stalhrim Fur Boots",
+        "string": "Stalhrimowe futrzane buty"
+    },
+    {
+        "editor_id": "ccBGSSSE057_ArmorStalhrimCuirass",
+        "type": "ARMO FULL",
+        "original": "Stalhrim Fur Armor",
+        "string": "Stalhrimowy futrzany pancerz"
+    },
+    {
+        "editor_id": "ccBGSSSE057_ArmorStalhrimGauntlets",
+        "type": "ARMO FULL",
+        "original": "Stalhrim Fur Gauntlets",
+        "string": "Stalhrimowe futrzane r\u0119kawice"
+    },
+    {
+        "editor_id": "ccBGSSSE057_SkjolNote",
+        "type": "BOOK FULL",
+        "original": "Skjol's Journal",
+        "string": "Dziennik Skjola"
+    },
+    {
+        "editor_id": "ccBGSSSE057_Quest",
+        "type": "QUST NNAM",
+        "original": "Retrieve the armor",
+        "string": "Zabierz pancerz"
+    },
+    {
+        "editor_id": "ccBGSSSE057_Quest",
+        "type": "QUST FULL",
+        "original": "Ancient Ice",
+        "string": "Prastary l\u00f3d"
+    },
+    {
+        "editor_id": "ccBGSSSE057_Quest",
+        "type": "QUST NNAM",
+        "original": "Kill Skjol",
+        "string": "Zabij Skjola"
+    },
+    {
+        "editor_id": "ccBGSSSE057_TreasCorpseBanditNordMale",
+        "type": "NPC_ FULL",
+        "original": "Skaal Villager",
+        "string": "Skaal wie\u015bniak"
+    },
+    {
+        "editor_id": "ccBGSSSE057_Quest",
+        "type": "QUST NNAM",
+        "original": "Search the island for stalhrim",
+        "string": "Poszukaj stalhrimu na wyspie"
+    },
+    {
+        "editor_id": "ccBGSSSE057_MiscQuest",
+        "type": "QUST NNAM",
+        "original": "Search the camp near Skaal Village",
+        "string": "Przeszukaj obozowisko przy wiosce Skaal\u00f3w"
+    },
+    {
+        "editor_id": "ccBGSSSE057_Skjol",
+        "type": "NPC_ FULL",
+        "original": "Skjol the Tongueless",
+        "string": "Skjol Bez J\u0119zyka"
+    },
+    {
+        "editor_id": "ccBGSSSE057_SkjolNote",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"20\">\nTyra tell Skjol to wait, so he wait. But then he meet nice man from village, who show him magic ice. He call it stalhrim.\n\nSkjol like stalhrim. He like way it look. He like way it sound. H is silent, just like Skjol, because Skjol have no tongue. \n\nBut Skjol's axe is loud. It make good crunch noise in ice.\n\nBut stalhrim make different noise. Most ice go \"REEEEE!\" but magic ice go \"UNFH!\"\n\nSkjol should be bard. \n\nNice man say there island north of Cassookar...Cassookarst...he say there island all way north with much magic ice. The kind Skjol can wear.\n\nSkjol think man very nice, he sorry he have to crush him.</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"20\">\nTyra m\u00f3wi\u0107 Skjol, \u017ceby czeka\u0107, wi\u0119c on czeka\u0107. Ale p\u00f3\u017aniej on pozna\u0107 mi\u0142y cz\u0142owiek z wioski, kt\u00f3ry pokaza\u0107 mu lodowa magia. Nazywa\u0107 to stalhrim.\n\nSkjol lubi\u0107 stalhrim. Lubi\u0107 wygl\u0105d. Lubi\u0107 d\u017awi\u0119k. H jest nieme, jak Skjol, bo Skjol nie mie\u0107 j\u0119zyk. \n\nAle top\u00f3r Skjola g\u0142o\u015bny. Robi\u0107 mi\u0142y d\u017awi\u0119k chrupania na l\u00f3d.\n\nAle stalhrim robi\u0107 inny d\u017awi\u0119k. Wi\u0119kszo\u015b\u0107 lodu robi\u0107 \u201eREEEE!\u201d, ale magiczny l\u00f3d robi\u0107 \u201eUNFCH\u201d!\n\nSkjol powinien by\u0107 bard. \n\nMi\u0142y cz\u0142owiek m\u00f3wi\u0107, \u017ce wyspa na p\u00f3\u0142noc od Cassookar... Cassookarst... m\u00f3wi\u0107 \u017ce tam wyspa na p\u00f3\u0142noc z du\u017co du\u017co magiczny l\u00f3d. Taki, co Skjol mo\u017ce nosi\u0107.\n\nSkjol my\u015ble\u0107, \u017ce cz\u0142owiek bardzo mi\u0142y. Szkoda, \u017ce musie\u0107 go zmia\u017cd\u017cy\u0107.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE057_Quest",
+        "type": "QUST CNAM",
+        "original": "At a camp to the south of Skaal Village, I found a dead villager and a journal. The journal implies a warrior named Skjol killed the villager and went north in search of stalhrim. I should investigate the area and see what I can find.",
+        "string": "W obozowisku na po\u0142udniu od wioski Skaal\u00f3w, le\u017ca\u0142o cia\u0142o wie\u015bniaka, a przy nim dziennik. Dziennik wskazywa\u0142, \u017ce wojownik imieniem Skjol zabi\u0142 wie\u015bniaka i ruszy\u0142 na p\u00f3\u0142noc, w poszukiwaniu stalhrimu. Musz\u0119 zbada\u0107 okolic\u0119 i czego\u015b si\u0119 dowiedzie\u0107."
+    },
+    {
+        "editor_id": "ccBGSSSE057_Quest",
+        "type": "QUST CNAM",
+        "original": "At a camp to the south of Skaal Village, I found a dead villager and a journal. The journal implies a warrior named Skjol killed the villager and went north in search of stalhrim. At the location I found a burial tomb and was attacked by a Nord. I defeated the Nord and claimed the armor he uncovered.",
+        "string": "W obozowisku na po\u0142udniu od wioski Skaal\u00f3w, le\u017ca\u0142o cia\u0142o wie\u015bniaka, a przy nim dziennik. Dziennik wskazywa\u0142, \u017ce wojownik imieniem Skjol zabi\u0142 wie\u015bniaka i ruszy\u0142 na p\u00f3\u0142noc, w poszukiwaniu stalhrimu. Uda\u0142o mi si\u0119 odnale\u017a\u0107 grobowiec, przy kt\u00f3rym zaatakowa\u0142 mnie nord. Po pokonaniu norda uda\u0142o mi si\u0119 zdoby\u0107 odkryty przez niego pancerz."
+    },
+    {
+        "editor_id": "ccBGSSSE057_Quest",
+        "type": "QUST CNAM",
+        "original": "At a camp to the south of Skaal Village, I found a dead villager and a journal. The journal implies a warrior named Skjol killed the villager and went north in search of stalhrim. At the location I found a burial tomb and was attacked by a Nord. I defeated the Nord and can now claim the armor he uncovered.",
+        "string": "W obozowisku na po\u0142udniu od wioski Skaal\u00f3w, le\u017ca\u0142o cia\u0142o wie\u015bniaka, a przy nim dziennik. Dziennik wskazywa\u0142, \u017ce wojownik imieniem Skjol zabi\u0142 wie\u015bniaka i ruszy\u0142 na p\u00f3\u0142noc, w poszukiwaniu stalhrimu. Uda\u0142o mi si\u0119 odnale\u017a\u0107 grobowiec, przy kt\u00f3rym zaatakowa\u0142 mnie nord. Po pokonaniu norda mog\u0119 teraz przej\u0105\u0107 odkryty przez niego pancerz."
+    },
+    {
+        "editor_id": "ccBGSSSE057_Quest",
+        "type": "QUST CNAM",
+        "original": "At a camp to the south of Skaal Village, I found a dead villager and a journal. The journal implies a warrior named Skjol killed the villager and went north in search of stalhrim. At the location I found a burial tomb and was attacked by a Nord.",
+        "string": "W obozowisku na po\u0142udniu od wioski Skaal\u00f3w, le\u017ca\u0142o cia\u0142o wie\u015bniaka, a przy nim dziennik. Dziennik wskazywa\u0142, \u017ce wojownik imieniem Skjol zabi\u0142 wie\u015bniaka i ruszy\u0142 na p\u00f3\u0142noc, w poszukiwaniu stalhrimu. Uda\u0142o mi si\u0119 odnale\u017a\u0107 grobowiec, przy kt\u00f3rym zaatakowa\u0142 mnie nord."
+    }
+]

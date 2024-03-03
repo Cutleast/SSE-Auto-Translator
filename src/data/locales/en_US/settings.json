@@ -1,0 +1,22 @@
+{
+    "settings": "Settings",
+    "user_settings": "User Settings",
+    "app_settings": "Application Settings",
+    "game_lang": "Game Language",
+    "nm_api_key": "Nexus Mods API Key",
+    "start_api_setup": "Start API Setup",
+    "keep_logs_num": "Number of newest log files to keep",
+    "log_level": "Log Level",
+    "app_lang": "App Language",
+    "accent_color": "Accent Color",
+    "choose_color": "Choose Accent Color...",
+    "restart_hint": "A restart is required for the changes to take effect.",
+    "detector_confidence": "Language Detector Confidence",
+    "invalid_path": "Invalid Path",
+    "invalid_path_text": "Path to Portable MO2 Instance is invalid!",
+    "auto_bind_nxm": "Automatically bind to \"Mod Manager Download\" Buttons on Nexus Mods on Startup",
+    "translator_settings": "Translator API Settings",
+    "translator": "Translator API",
+    "no_config_required": "No configuration required for this Translator API.",
+    "translator_api_key": "Translator API Key"
+}

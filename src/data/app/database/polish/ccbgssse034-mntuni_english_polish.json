@@ -1,0 +1,410 @@
+[
+    {
+        "editor_id": "ccBGSSSE034_MountUnicorn",
+        "type": "NPC_ FULL",
+        "original": "Unicorn",
+        "string": "Jednoro\u017cec"
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorse07_BrownSpotted",
+        "type": "NPC_ FULL",
+        "original": "Wild Horse",
+        "string": "Dziki ko\u0144"
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorseMap",
+        "type": "MISC FULL",
+        "original": "Map of Wild Horses",
+        "string": "Mapa dzikich koni"
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse05_RedBrown",
+        "type": "QUST FULL",
+        "original": "Find Horse 01",
+        "string": "Znajd\u017a konia 01"
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorse05_RedBrown",
+        "type": "NPC_ FULL",
+        "original": "Wild Horse",
+        "string": "Dziki ko\u0144"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseLocationJournal",
+        "type": "BOOK FULL",
+        "original": "Wild Horse Notes",
+        "string": "Notatki o dzikich koniach"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName20",
+        "type": "MESG FULL",
+        "original": "Lightning",
+        "string": "B\u0142yskawica"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseTameDamageStamina",
+        "type": "MGEF FULL",
+        "original": "Damage Stamina",
+        "string": "Os\u0142abienie kondycji"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName24",
+        "type": "MESG FULL",
+        "original": "River",
+        "string": "Rzeka"
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse02_Black",
+        "type": "QUST FULL",
+        "original": "Find Horse 02",
+        "string": "Znajd\u017a konia 02."
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse05_RedBrown",
+        "type": "QUST NNAM",
+        "original": "Find and tame the Red Horse",
+        "string": "Znajd\u017a i uje\u017ad\u017a rudego konia."
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse02_Black",
+        "type": "QUST NNAM",
+        "original": "Find and tame the Black Horse",
+        "string": "Znajd\u017a i uje\u017ad\u017a karego konia."
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse01_Chestnut",
+        "type": "QUST FULL",
+        "original": "Find Horse 01",
+        "string": "Znajd\u017a konia 01"
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorse02_Black",
+        "type": "NPC_ FULL",
+        "original": "Wild Horse",
+        "string": "Dziki ko\u0144"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName21",
+        "type": "MESG FULL",
+        "original": "Dagger",
+        "string": "Sztylet"
+    },
+    {
+        "editor_id": "ccBGSSSE034_UnicornQuest",
+        "type": "QUST NNAM",
+        "original": "Find information about the Unicorn",
+        "string": "Zdob\u0105d\u017a informacje na temat jednoro\u017cca."
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName25",
+        "type": "MESG FULL",
+        "original": "Glade",
+        "string": "Polana"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName18",
+        "type": "MESG FULL",
+        "original": "Foresti",
+        "string": "Le\u015bniak"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseTameDamageStamina",
+        "type": "MGEF DNAM",
+        "original": "Drain the target's Stamina by <mag> points.",
+        "string": "Zmniejsza kondycj\u0119 celu o <mag> pkt."
+    },
+    {
+        "editor_id": "ccBGSSSE034_UnicornQuest",
+        "type": "QUST NNAM",
+        "original": "Find and tame the Unicorn",
+        "string": "Znajd\u017a i uje\u017ad\u017a jednoro\u017cca."
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse07_BrownSpotted",
+        "type": "QUST NNAM",
+        "original": "Find and tame the Dapple Brown Horse",
+        "string": "Znajd\u017a i uje\u017ad\u017a jab\u0142kowitego konia."
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorse03_GreyBlack",
+        "type": "NPC_ FULL",
+        "original": "Wild Horse",
+        "string": "Dziki ko\u0144"
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse06_WhiteSpotted",
+        "type": "QUST NNAM",
+        "original": "Find and tame the White Spotted Horse",
+        "string": "Znajd\u017a i uje\u017ad\u017a nakrapianego bia\u0142ego konia."
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorse06_WhiteSpotted",
+        "type": "NPC_ FULL",
+        "original": "Wild Horse",
+        "string": "Dziki ko\u0144"
+    },
+    {
+        "editor_id": "ccBGSSSE034_PlayersHorseName",
+        "type": "MESG FULL",
+        "original": "<Alias=Player>'s Tamed Horse",
+        "string": "Uje\u017cd\u017cony ko\u0144 gracza <Alias=Player>"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HelpWildHorseTutorial",
+        "type": "MESG FULL",
+        "original": "Wild Horse",
+        "string": "Dziki ko\u0144"
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse03_GreyBlack",
+        "type": "QUST FULL",
+        "original": "Find Horse 03",
+        "string": "Znajd\u017a konia 03."
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName19",
+        "type": "MESG FULL",
+        "original": "Thunder",
+        "string": "Piorun"
+    },
+    {
+        "editor_id": "ccBGSSSE034_UnicornSoransJournal",
+        "type": "BOOK FULL",
+        "original": "Soran's Journal",
+        "string": "Dziennik Sorana"
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorsesQuest",
+        "type": "QUST FULL",
+        "original": "Horse Whisperer",
+        "string": "Zaklinacz koni"
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse01_Chestnut",
+        "type": "QUST NNAM",
+        "original": "Find and tame the Chestnut Horse",
+        "string": "Znajd\u017a i uje\u017ad\u017a kasztanowatego konia."
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorse04_Pale",
+        "type": "NPC_ FULL",
+        "original": "Wild Horse",
+        "string": "Dziki ko\u0144"
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse04_Pale",
+        "type": "QUST FULL",
+        "original": "Find Horse 01",
+        "string": "Znajd\u017a konia 01"
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorsesQuest",
+        "type": "QUST NNAM",
+        "original": "Purchase a map of wild horse locations",
+        "string": "Kup map\u0119 pokazuj\u0105c\u0105, gdzie znajduj\u0105 si\u0119 dzikie konie."
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse06_WhiteSpotted",
+        "type": "QUST FULL",
+        "original": "Find Horse 01",
+        "string": "Znajd\u017a konia 01"
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse03_GreyBlack",
+        "type": "QUST NNAM",
+        "original": "Find and tame the Grey Spotted Horse",
+        "string": "Znajd\u017a i uje\u017ad\u017a konia siwego w hreczce."
+    },
+    {
+        "editor_id": "ccBGSSSE034_UnicornQuest",
+        "type": "QUST FULL",
+        "original": "Creature of Legend",
+        "string": "Istota z legend"
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse04_Pale",
+        "type": "QUST NNAM",
+        "original": "Find and tame the Pale Mare",
+        "string": "Znajd\u017a i uje\u017ad\u017a siw\u0105 klacz."
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorse01_Chestnut",
+        "type": "NPC_ FULL",
+        "original": "Wild Horse",
+        "string": "Dziki ko\u0144"
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse07_BrownSpotted",
+        "type": "QUST FULL",
+        "original": "Find Horse 01",
+        "string": "Znajd\u017a konia 01"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName23",
+        "type": "MESG FULL",
+        "original": "Whisper",
+        "string": "Szept"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseActivationPerk",
+        "type": "PERK EPF2",
+        "original": "Tame",
+        "string": "Uje\u017ad\u017a"
+    },
+    {
+        "editor_id": "WinterholdCollegeArcanaeum",
+        "type": "CELL FULL",
+        "original": "The Arcanaeum",
+        "string": "Arcanaeum"
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorsesQuest",
+        "type": "QUST CNAM",
+        "original": "I've acquired a map and a journal with locations of where wild horses have been known to roam. I should find and tame them. Afterward I can bring them to a stable to add a saddle or change their name.",
+        "string": "Mam map\u0119 i dziennik wskazuj\u0105ce, gdzie przebywaj\u0105 zazwyczaj dzikie konie. Musz\u0119 je znale\u017a\u0107 i uje\u017adzi\u0107. P\u00f3\u017aniej mog\u0119 doprowadzi\u0107 je do stajni, by za\u0142o\u017cy\u0107 im siod\u0142o lub zmieni\u0107 imi\u0119."
+    },
+    {
+        "editor_id": "ccBGSSSE034_UnicornQuest",
+        "type": "QUST CNAM",
+        "original": "A wildlife scholar is rumored to have tracked down a legendary Unicorn. The last of these creatures was supposed to have been slain long ago. I should investigate and see what I can find.",
+        "string": "Podobno pewien uczony specjalizuj\u0105cy si\u0119 w badaniach nad dzikimi zwierz\u0119tami wytropi\u0142 legendarnego jednoro\u017cca. Ostatnia z tych istot mia\u0142a zosta\u0107 zabita dawno, dawno temu. Warto by\u0142oby zbada\u0107 t\u0119 spraw\u0119 i czego\u015b si\u0119 dowiedzie\u0107."
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse06_WhiteSpotted",
+        "type": "QUST CNAM",
+        "original": "Find the horses.",
+        "string": "Znajd\u017a konie."
+    },
+    {
+        "editor_id": "ccBGSSSE034_UnicornSoransJournal",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\nJournal of Soran Hariksen, Wildlife Scholar\n\n<b>14th of Rain's Hand, 4E 201</b>\nIn my duty to document all living creatures in Skyrim, the long-lost Unicorn has never been far from my mind. It is said that long ago the very last of its kind was sacrificed to Hircine. However, rumors of sightings in Tamriel have surfaced in recent times.\n\nIndeed, while these claims echo mostly from taverns in the late hours, one can wonder at the validity of such claims.\n\nI've chronicled the habits of Mudcrabs and Rabbits long enough. This old man is quite ready for something a little more interesting.\n\n<b>3rd of Second Seed, 4E 201</b>\nI have spoken with several hunters who swear by the Divines that they have seen a Unicorn during their travels. All have tried to approach it for a closer look, or to take it as a prize, but it has evaded them all.\n\nI continue my research with skepticism. If this is indeed true, how could this be? Was the last unicorn not truly the last, or is some other force at work?\n\n<b>18th of Second Seed, 4E 201</b>\nWhile studying the mating habits of Salmon is certainly enlightening, I have become quite obsessed with my pursuit of the elusive Unicorn.\n\nI spoke with a hostler who said that during one of his horse taming expeditions he too saw something that closely resembled the fabled Unicorn, though he was unsure. He is a man is of great integrity, so I took his word in good faith.\n\nI decided then to speak with Tolfdir at the College of Winterhold. Being a wise man with deep knowledge of such things, I hoped he might have some insight. I was correct in my assumption.\n\nAccording to Tolfdir, the Psijic Order have appeared from time-to-time throughout history to assist with situations they believe are extremely important. While he cannot personally say for certain, he believes they may have intervened after the last Unicorn was sacrificed, transporting another through time in order to set right what they believed was a wrongdoing.\n\nI am more motivated than ever to see this creature with my own two eyes.\n\n<b>24th of Second Seed, 4E 201</b>\nThe last sighting of the Unicorn was rumored to be in a dense forest area near Riften. As old as I am, an energy filled my bones that I haven't felt since I was a young man.\n\nI hiked up the ridge of the mountains there, and set up a very small camp. I was cautious to not set any fires or make much noise, lest I scare it away.\n\nAfter waiting two nights, through this morning's early fog, I finally saw the majestic creature for the first time. I still cannot believe my own two eyes. It lingered long enough for me to see it clearly, its brilliant coat and distinct horn shimmering in the morning light.\n\nI watched its movements for nearly thirty minutes, enough time to draw a rough depiction for my library. This is absolutely the crowning achievement of my scholarly life.\n\nI've decided to turn this information over to the College of Winterhold rather than publish it to the general population. I would like to ensure this creature remain protected, and I believe they are the most capable of such a task.",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\nDziennik Sorana Hariksena, badacza dzikich zwierz\u0105t\n\n<b>14 Deszczowej D\u0142oni, 4E 201</b>\nPodczas mojej pracy nad opisywaniem wszystkich istot, kt\u00f3re \u017cyj\u0105 w Skyrim, stale przychodzi\u0142 mi na my\u015bl niewidywany od dawien dawna jednoro\u017cec. Powiadaj\u0105, \u017ce w zamierzch\u0142ej przesz\u0142o\u015bci ostatnie takie stworzenie z\u0142o\u017cono w ofierze Hircynowi. Od niedawna jednak kr\u0105\u017c\u0105 plotki, jakoby pewien jednoro\u017cec zacz\u0105\u0142 pojawia\u0107 si\u0119 w Tamriel.\n\nWi\u0119kszo\u015b\u0107 z tych pog\u0142osek dociera\u0142a do mnie p\u00f3\u017ano w nocy, z ust pijanych bywalc\u00f3w knajp. Trudno jednak nie zastanawia\u0107 si\u0119, czy nie tkwi w nich ziarno prawdy.\n\nDo\u015b\u0107 ju\u017c mam opisywania zwyczaj\u00f3w krab\u00f3w b\u0142otnych i kr\u00f3lik\u00f3w. Stary Soran jest got\u00f3w na co\u015b troch\u0119 ciekawszego.\n\n<b>3 Drugiego Siewu, 4E 201</b>\nRozmawia\u0142em z kilkoma my\u015bliwymi. Co do jednego przysi\u0119gaj\u0105 na bog\u00f3w, \u017ce widzieli podczas swoich wypraw jednoro\u017cca. Wszyscy pr\u00f3bowali podej\u015b\u0107 bli\u017cej, aby si\u0119 przyjrze\u0107 lub go ustrzeli\u0107, ale za ka\u017cdym razem umyka\u0142.\n\nKontynuuj\u0119 badania ze spor\u0105 doz\u0105 sceptycyzmu. Je\u015bli to, co m\u00f3wi\u0105, jest prawd\u0105, to jakim cudem? Czy ostatni z jednoro\u017cc\u00f3w nie by\u0142 naprawd\u0119 ostatni? A mo\u017ce dzia\u0142a tu jaka\u015b inna si\u0142a?\n\n<b>18 Drugiego Siewu, 4E 201</b>\nCho\u0107 badanie zwyczaj\u00f3w kopulacyjnych \u0142ososia jest bez w\u0105tpienia pouczaj\u0105ce, op\u0119ta\u0142a mnie prawdziwa obsesja na punkcie nieuchwytnego jednoro\u017cca.\n\nRozmawia\u0142em ze stajennym, kt\u00f3ry twierdzi\u0142, \u017ce i on podczas jednej ze swych ekspedycji w poszukiwaniu koni dostrzeg\u0142 co\u015b przypominaj\u0105cego s\u0142awnego jednoro\u017cca. Nie by\u0142 jednak pewien, czy mu si\u0119 nie przywidzia\u0142o. Jest wzorem uczciwo\u015bci, uwierzy\u0142em mu wi\u0119c na s\u0142owo.\n\nPostanowi\u0142em w\u00f3wczas porozmawia\u0107 z Tolfdirem z Akademii w Zimowej Twierdzy. To m\u0119drzec, kt\u00f3ry dobrze zna si\u0119 na takich sprawach, uzna\u0142em wi\u0119c, \u017ce mo\u017ce b\u0119dzie w stanie mi pom\u00f3c. I mia\u0142em racj\u0119.\n\nTolfdir twierdzi, \u017ce Zakon Psijic pojawia\u0142 si\u0119 w dziejach raz na jaki\u015b czas, by udziela\u0107 pomocy podczas wydarze\u0144, kt\u00f3re wed\u0142ug jego cz\u0142onk\u00f3w by\u0142y wyj\u0105tkowo donios\u0142e. Chocia\u017c m\u0119drzec nie mo\u017ce mie\u0107 pewno\u015bci, jego zdaniem zakon m\u00f3g\u0142 interweniowa\u0107 r\u00f3wnie\u017c po tym, jak ostatni z jednoro\u017cc\u00f3w zosta\u0142 z\u0142o\u017cony w ofierze. Mo\u017cliwe, \u017ce przeniesiono w czasie innego osobnika, aby naprawi\u0107 czyn, kt\u00f3ry uznano za pod\u0142y.\n\nJestem zmotywowany jeszcze bardziej ni\u017c kiedykolwiek, by ujrze\u0107 t\u0119 istot\u0119 na w\u0142asne oczy.\n\n<b>24 Drugiego Siewu, 4E 201</b>\nPono\u0107 ostatnio widziano jednoro\u017cca w g\u0119stym lesie nieopodal P\u0119kniny. Jestem ju\u017c stary, lecz ta wie\u015b\u0107 wype\u0142ni\u0142a me s\u0119dziwe ko\u015bci energi\u0105, jakiej nie czu\u0142em od lat m\u0142odo\u015bci.\n\nRuszy\u0142em grani\u0105 w g\u00f3r\u0119 i rozbi\u0142em niewielkie obozowisko. Pilnowa\u0142em si\u0119, by nie sp\u0142oszy\u0107 zwierz\u0119cia ogniem ani ha\u0142asem.\n\nPo dw\u00f3ch nocach oczekiwania, w\u015br\u00f3d porannej mg\u0142y, w ko\u0144cu ujrza\u0142em po raz pierwszy to majestatyczne stworzenie. Wci\u0105\u017c nie mog\u0119 uwierzy\u0107 w\u0142asnym oczom. Sta\u0142o w miejscu do\u015b\u0107 d\u0142ugo, bym m\u00f3g\u0142 je ujrze\u0107 w ca\u0142ej okaza\u0142o\u015bci, \u0142\u0105cznie ze wspania\u0142\u0105 sier\u015bci\u0105 i charakterystycznym, migocz\u0105cym w \u015bwietle poranka rogiem.\n\nPrzez niemal p\u00f3\u0142 godziny patrzy\u0142em, jak si\u0119 porusza. To wystarczy\u0142o, by stworzy\u0107 szkic na potrzeby mojej biblioteczki. By\u0142 to absolutnie najwznio\u015blejszy moment mojego naukowego \u017cycia.\n\nPostanowi\u0142em nie udost\u0119pnia\u0107 tych informacji publicznie, lecz przekaza\u0107 je Akademii w Zimowej Twierdzy. Chc\u0119 mie\u0107 pewno\u015b\u0107, \u017ce stworzenie to b\u0119dzie chronione, i wierz\u0119, \u017ce tamtejsi uczeni b\u0119d\u0105 zdolni zapewni\u0107 mu bezpiecze\u0144stwo."
+    },
+    {
+        "editor_id": "ccBGSSSE034_MessageSaddleChanged",
+        "type": "MESG DESC",
+        "original": "Horse's saddle has been changed.",
+        "string": "Siod\u0142o konia zosta\u0142o zmienione."
+    },
+    {
+        "editor_id": "ccBGSSSE034_MessageNotEnoughGold",
+        "type": "MESG DESC",
+        "original": "You do not have enough gold.",
+        "string": "Masz za ma\u0142o z\u0142ota."
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseLocationJournal",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\nSpotted Grey - Near Markarth, north of Salvius Farm.\n\nDapple Brown - Near Solitude, across the river from Katla's Farm, near a Dragon Mound.\n\nChestnut - East of Helgen, not far from the roadside.\n\nRed - West of Whiterun, in the open planes.\n\nSpotted White - Lower Eastmarch, in the cliffs north of Shore's Stone.\n\nPale Mare - East of Windhelm, north of Hollyfrost Farm, in the forest nearing the shoreline.\n\nBlack - West of Falkreath, past the nearby ruins.\n\nIf I had the coin, I'd hire a wizard to use Detect Life and help me find these horses.\n</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\nSiwy w hreczce - nieopodal Markartu, na p\u00f3\u0142noc od farmy Salviusa\n\nJab\u0142kowity - nieopodal Samotni, po drugiej stronie rzeki od gospodarstwa Katli, w pobli\u017cu smoczego kurhanu.\n\nKasztan - na wsch\u00f3d od Helgen, niedaleko drogi.\n\nRudy - na zach\u00f3d od Bia\u0142ej Grani, na otwartej r\u00f3wninie.\n\nNakrapiany bia\u0142y - dolna Wschodnia Marchia, przy klifach na p\u00f3\u0142noc od Kamienia Shore'a.\n\nSiwa klacz - na wsch\u00f3d od Wichrowego Tronu, na p\u00f3\u0142noc od farmy Mrozokrzew, w lesie nieopodal wybrze\u017ca.\n\nKary - na zach\u00f3d od Falkretu, nieopodal pobliskich ruin.\n\nOdrobina grosza pozwoli\u0142aby mi zatrudni\u0107 maga, \u017ceby u\u017cy\u0142 wykrywania \u017cycia i pom\u00f3g\u0142 mi znale\u017a\u0107 te konie.\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorsesQuest",
+        "type": "QUST CNAM",
+        "original": "Hostlers in Skyrim have begun taming wild horses in order to keep up with the demand. I should speak with a hostler and see if they can give me some information. Perhaps I could find and tame some of them myself.",
+        "string": "Stajenni w Skyrim zacz\u0119li uje\u017cd\u017ca\u0107 dzikie konie, by zaspokoi\u0107 stale rosn\u0105cy popyt na nie. Musz\u0119 porozmawia\u0107 z jednym ze stajennych, aby dowiedzie\u0107 si\u0119 wi\u0119cej na ten temat. Mo\u017ce zdo\u0142am samodzielnie znale\u017a\u0107 i uje\u017adzi\u0107 jakiego\u015b konia?"
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse04_Pale",
+        "type": "QUST CNAM",
+        "original": "Find the horses.",
+        "string": "Znajd\u017a konie."
+    },
+    {
+        "editor_id": "ccBGSSSE034_MessageNoHorsesOwned",
+        "type": "MESG DESC",
+        "original": "You do not currently own a horse.",
+        "string": "Nie posiadasz obecnie konia."
+    },
+    {
+        "editor_id": "ccBGSSSE034_MessageCantChangeSaddle",
+        "type": "MESG DESC",
+        "original": "Current horse cannot have its saddle changed.",
+        "string": "Nie mo\u017cesz zmieni\u0107 siod\u0142a obecnemu koniowi."
+    },
+    {
+        "editor_id": "ccBGSSSE034_UnicornQuest",
+        "type": "QUST CNAM",
+        "original": "I found the journal of wildlife scholar Soran Hariksen at the College of Winterhold, which contained details on the whereabouts of the Unicorn. I should locate it to see if I can tame it, and take care of it as my own.",
+        "string": "Podczas pobytu w Akademii w Zimowej Twierdzy wpad\u0142 mi w r\u0119ce dziennik Sorana Hariksena, uczonego badaj\u0105cego dzikie zwierz\u0119ta. Wskazuje on miejsce przebywania jednoro\u017cca. Musz\u0119 znale\u017a\u0107 zwierz\u0119 i spr\u00f3bowa\u0107 je uje\u017adzi\u0107, je\u015bli chc\u0119, aby by\u0142o moje."
+    },
+    {
+        "editor_id": "ccBGSSSE034_MessageNameChanged",
+        "type": "MESG DESC",
+        "original": "Horse has been renamed.",
+        "string": "Ko\u0144 ma nowe imi\u0119."
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse05_RedBrown",
+        "type": "QUST CNAM",
+        "original": "Find the horses.",
+        "string": "Znajd\u017a konie."
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse01_Chestnut",
+        "type": "QUST CNAM",
+        "original": "Find the horse.",
+        "string": "Znajd\u017a konia."
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse07_BrownSpotted",
+        "type": "QUST CNAM",
+        "original": "Find the horses.",
+        "string": "Znajd\u017a konie."
+    },
+    {
+        "editor_id": "ccBGSSSE034_HelpWildHorseTutorial",
+        "type": "MESG DESC",
+        "original": "Wild horses will buck until tamed. Stay mounted until they submit. If you are thrown, try again. Once tamed, you can add a saddle and rename them at any stable.\n\nWhen changing horses, tamed horses will return to the location where they were found.",
+        "string": "Dziki konie b\u0119d\u0105 wierzga\u0107, dop\u00f3ki nie zostan\u0105 uje\u017cd\u017cone. Utrzymuj si\u0119 na ich grzbietach, a\u017c si\u0119 uspokoj\u0105. Je\u015bli spadniesz, spr\u00f3buj ponownie. Gdy ko\u0144 zostanie uje\u017cd\u017cony, mo\u017cesz za\u0142o\u017cy\u0107 mu siod\u0142o i zmieni\u0107 imi\u0119 w dowolnej stajni.\n\nKiedy zmieniasz wierzchowca, oswojony ko\u0144 powraca w miejsce, w kt\u00f3rym zosta\u0142 znaleziony."
+    },
+    {
+        "editor_id": "ccBGSSSE034_MessageSaddleRemoved",
+        "type": "MESG DESC",
+        "original": "Horse's saddle has been removed.",
+        "string": "Siod\u0142o zosta\u0142o zdj\u0119te z konia."
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorseMessageTamed",
+        "type": "MESG DESC",
+        "original": "Horse has been successfully tamed.",
+        "string": "Uda\u0142o ci si\u0119 uje\u017adzi\u0107 konia."
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseTameSpellDrainStamina",
+        "type": "SPEL DESC",
+        "original": "Raises all dead around you to fight for you.",
+        "string": "O\u017cywia wszystkich otaczaj\u0105cych zabitych, aby dla ciebie walczyli."
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse03_GreyBlack",
+        "type": "QUST CNAM",
+        "original": "Find the horses.",
+        "string": "Znajd\u017a konie."
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse02_Black",
+        "type": "QUST CNAM",
+        "original": "Find the horses.",
+        "string": "Znajd\u017a konie."
+    },
+    {
+        "editor_id": "ccBGSSSE034_UnicornQuest",
+        "type": "QUST CNAM",
+        "original": "A wildlife scholar was able to track down and verify the existence of a Unicorn. Using information that I found in his journal, I located the Unicorn, tamed it, and claimed it as my own. If I need to find it again, it will be at the College of Winterhold courtyard.",
+        "string": "Badacz dzikich zwierz\u0105t zdo\u0142a\u0142 wytropi\u0107 jednoro\u017cca i potwierdzi\u0107 jego istnienie. Dzi\u0119ki znalezionym w jego dzienniku informacjom uda\u0142o mi si\u0119 znale\u017a\u0107 zwierz\u0119, uje\u017adzi\u0107 je i zatrzyma\u0107. Je\u015bli zajdzie potrzeba, by znale\u017a\u0107 je ponownie, b\u0119dzie czeka\u0142o na dziedzi\u0144cu Akademii w Zimowej Twierdzy."
+    },
+    {
+        "editor_id": "ccBGSSSE034_MessageMustBeTamedRename",
+        "type": "MESG DESC",
+        "original": "Horse must be tamed to change its name.",
+        "string": "Musisz uje\u017adzi\u0107 konia, by zmieni\u0107 mu imi\u0119."
+    },
+    {
+        "editor_id": "ccBGSSSE034_MessageMustBeTamedSaddle",
+        "type": "MESG DESC",
+        "original": "Horse must be tamed to change saddles.",
+        "string": "Musisz uje\u017adzi\u0107 konia, by zmieni\u0107 mu siod\u0142o."
+    }
+]

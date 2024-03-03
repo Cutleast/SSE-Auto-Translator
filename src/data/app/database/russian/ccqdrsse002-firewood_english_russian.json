@@ -1,0 +1,254 @@
+[
+    {
+        "editor_id": "ccQDRSSE002_ShelterAct",
+        "type": "ACTI RNAM",
+        "original": "Use",
+        "string": "\u0418\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u044c"
+    },
+    {
+        "editor_id": "ccQDRSSE002_ShelterAct",
+        "type": "ACTI FULL",
+        "original": "Shelter",
+        "string": "\u0423\u043a\u0440\u044b\u0442\u0438\u0435"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BuildCampEffect",
+        "type": "MGEF FULL",
+        "original": "Build Camp",
+        "string": "\u041e\u0431\u0443\u0441\u0442\u0440\u043e\u0438\u0442\u044c \u043b\u0430\u0433\u0435\u0440\u044c"
+    },
+    {
+        "editor_id": "ccQDRSSE002_ShelterOptionMsg",
+        "type": "MESG ITXT",
+        "original": "Cancel",
+        "string": "\u041e\u0442\u043c\u0435\u043d\u0430"
+    },
+    {
+        "editor_id": "ccQDRSSE002_ShelterOptionMsg",
+        "type": "MESG ITXT",
+        "original": "Sleep",
+        "string": "\u0421\u043f\u0430\u0442\u044c"
+    },
+    {
+        "editor_id": "ccQDRSSE002_ShelterOptionMsg",
+        "type": "MESG ITXT",
+        "original": "Break Camp",
+        "string": "\u0420\u0430\u0437\u0431\u0438\u0442\u044c \u043b\u0430\u0433\u0435\u0440\u044c"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampfireFurn",
+        "type": "FURN FULL",
+        "original": "Campfire",
+        "string": "\u041a\u043e\u0441\u0442\u0435\u0440"
+    },
+    {
+        "editor_id": "ccQDRSSE002_MainQuest",
+        "type": "QUST FULL",
+        "original": "Camping Quest",
+        "string": "\u0417\u0430\u0434\u0430\u043d\u0438\u0435: \u043b\u0430\u0433\u0435\u0440\u044c"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingSupplies",
+        "type": "ALCH FULL",
+        "original": "Camping Supplies",
+        "string": "\u041f\u0440\u0435\u0434\u043c\u0435\u0442\u044b \u0434\u043b\u044f \u043b\u0430\u0433\u0435\u0440\u044f"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BuildCampEffect",
+        "type": "MGEF DNAM",
+        "original": "Build a campsite when outdoors.",
+        "string": "\u0420\u0430\u0437\u0431\u0435\u0439\u0442\u0435 \u043b\u0430\u0433\u0435\u0440\u044c \u043f\u043e\u0434 \u043e\u0442\u043a\u0440\u044b\u0442\u044b\u043c \u043d\u0435\u0431\u043e\u043c."
+    },
+    {
+        "editor_id": "ccQDRSSE002_BedrollNoSandbox",
+        "type": "FURN FULL",
+        "original": "Bed Roll Ground",
+        "string": "\u041c\u0435\u0441\u0442\u043e \u0434\u043b\u044f \u0441\u043f\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u043c\u0435\u0448\u043a\u0430"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BuildCampPrompt",
+        "type": "MESG ITXT",
+        "original": "Cancel",
+        "string": "\u041e\u0442\u043c\u0435\u043d\u0430"
+    },
+    {
+        "editor_id": "ccQDRSSE002_LoadScreen2",
+        "type": "LSCR DESC",
+        "original": "You can cook some meals over the open flames of your campfire at campsites that you build.",
+        "string": "\u0412\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u0433\u043e\u0442\u043e\u0432\u0438\u0442\u044c \u0435\u0434\u0443 \u043d\u0430 \u043a\u043e\u0441\u0442\u0440\u0435 \u0432 \u0440\u0430\u0437\u0431\u0438\u0442\u043e\u043c \u0432\u0430\u043c\u0438 \u043b\u0430\u0433\u0435\u0440\u0435."
+    },
+    {
+        "editor_id": "ccQDRSSE002_InCityCheckSpell",
+        "type": "SPEL FULL",
+        "original": "In City Check Spell",
+        "string": "\u0417\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0435 \u043f\u0440\u043e\u0432\u0435\u0440\u043a\u0438 \u043d\u0430\u0445\u043e\u0436\u0434\u0435\u043d\u0438\u044f \u0432 \u0433\u043e\u0440\u043e\u0434\u0435"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BreakCampPrompt",
+        "type": "MESG ITXT",
+        "original": "Cancel",
+        "string": "\u041e\u0442\u043c\u0435\u043d\u0430"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingHelp",
+        "type": "MESG FULL",
+        "original": "Camping",
+        "string": "\u041b\u0430\u0433\u0435\u0440\u044c"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampMapMarkerRefSolstheim001",
+        "type": "REFR FULL",
+        "original": "Campsite",
+        "string": "\u041b\u0430\u0433\u0435\u0440\u044c"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampMapMarkerRefTamriel001",
+        "type": "REFR FULL",
+        "original": "Campsite",
+        "string": "\u041b\u0430\u0433\u0435\u0440\u044c"
+    },
+    {
+        "editor_id": "ccQDRSSE002_LoadScreen1",
+        "type": "LSCR DESC",
+        "original": "If you build a campsite, its location will be marked on your map, so you can fast travel to it later.",
+        "string": "\u0415\u0441\u043b\u0438 \u0432\u044b \u0440\u0430\u0437\u043e\u0431\u044c\u0435\u0442\u0435 \u043b\u0430\u0433\u0435\u0440\u044c, \u0435\u0433\u043e \u043c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0431\u0443\u0434\u0435\u0442 \u043e\u0442\u043c\u0435\u0447\u0435\u043d\u043e \u043d\u0430 \u0432\u0430\u0448\u0435\u0439 \u043a\u0430\u0440\u0442\u0435 \u0438 \u0432\u0430\u043c \u0431\u0443\u0434\u0435\u0442 \u0434\u043e\u0441\u0442\u0443\u043f\u043d\u043e \u0431\u044b\u0441\u0442\u0440\u043e\u0435 \u043f\u0435\u0440\u0435\u043c\u0435\u0449\u0435\u043d\u0438\u0435 \u0442\u0443\u0434\u0430."
+    },
+    {
+        "editor_id": "ccQDRSSE002_InCityCheckEffect",
+        "type": "MGEF FULL",
+        "original": "In City Check",
+        "string": "\u041f\u0440\u043e\u0432\u0435\u0440\u043a\u0430 \u043d\u0430\u0445\u043e\u0436\u0434\u0435\u043d\u0438\u044f \u0432 \u0433\u043e\u0440\u043e\u0434\u0435"
+    },
+    {
+        "editor_id": "ccQDRSSE002_SwimCheckEffect",
+        "type": "MGEF FULL",
+        "original": "Swimming Check",
+        "string": "\u041f\u0440\u043e\u0432\u0435\u0440\u043a\u0430 \u043f\u043b\u0430\u0432\u0430\u043d\u0438\u044f"
+    },
+    {
+        "editor_id": "ccQDRSSE002_IdleQuest",
+        "type": "QUST FULL",
+        "original": "Camping Idle Quest",
+        "string": "\u0417\u0430\u0434\u0430\u043d\u0438\u0435: \u043e\u0442\u0434\u044b\u0445 \u0432 \u043b\u0430\u0433\u0435\u0440\u0435"
+    },
+    {
+        "editor_id": "ccQDRSSE002_SwimCheckSpell",
+        "type": "SPEL FULL",
+        "original": "Swim Check Spell",
+        "string": "\u0417\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0435 \u043f\u0440\u043e\u0432\u0435\u0440\u043a\u0438 \u043f\u043b\u0430\u0432\u0430\u043d\u0438\u044f"
+    },
+    {
+        "editor_id": "ccQDRSSE002_Chair",
+        "type": "FURN FULL",
+        "original": "Crate",
+        "string": "\u042f\u0449\u0438\u043a"
+    },
+    {
+        "editor_id": "DLC2SolstheimWorld",
+        "type": "WRLD FULL",
+        "original": "Solstheim",
+        "string": "\u0421\u043e\u043b\u0441\u0442\u0435\u0439\u043c"
+    },
+    {
+        "editor_id": "Tamriel",
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "\u0421\u043a\u0430\u0439\u0440\u0438\u043c"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedHereMsg",
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite here.",
+        "string": "\u041d\u0435\u043b\u044c\u0437\u044f \u0440\u0430\u0437\u0431\u0438\u0442\u044c \u043b\u0430\u0433\u0435\u0440\u044c \u0437\u0434\u0435\u0441\u044c."
+    },
+    {
+        "editor_id": "ccQDRSSE002_ShelterOptionMsg",
+        "type": "MESG DESC",
+        "original": "What do you do?",
+        "string": "\u0427\u0435\u043c \u0442\u044b \u0437\u0430\u043d\u0438\u043c\u0430\u0435\u0448\u044c\u0441\u044f?"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BuildCampPrompt",
+        "type": "MESG DESC",
+        "original": "Build a campsite here?",
+        "string": "\u0420\u0430\u0437\u0431\u0438\u0442\u044c \u043b\u0430\u0433\u0435\u0440\u044c \u0437\u0434\u0435\u0441\u044c?"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedCombatMsg",
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite while in combat.",
+        "string": "\u041d\u0435\u043b\u044c\u0437\u044f \u0440\u0430\u0437\u0431\u0438\u0442\u044c \u043b\u0430\u0433\u0435\u0440\u044c \u0432 \u0431\u043e\u044e."
+    },
+    {
+        "editor_id": "ccQDRSSE002_BreakCampPrompt",
+        "type": "MESG DESC",
+        "original": "Are you sure you want to break camp?",
+        "string": "\u0412\u044b \u0443\u0432\u0435\u0440\u0435\u043d\u044b, \u0447\u0442\u043e \u0445\u043e\u0442\u0438\u0442\u0435 \u0440\u0430\u0437\u0431\u0438\u0442\u044c \u043b\u0430\u0433\u0435\u0440\u044c?"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedGenericMsg",
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite right now.",
+        "string": "\u041d\u0435\u043b\u044c\u0437\u044f \u0440\u0430\u0437\u0431\u0438\u0442\u044c \u043b\u0430\u0433\u0435\u0440\u044c \u0441\u0435\u0439\u0447\u0430\u0441."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedInteriorMsg",
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite while indoors.",
+        "string": "\u041d\u0435\u043b\u044c\u0437\u044f \u0440\u0430\u0437\u0431\u0438\u0442\u044c \u043b\u0430\u0433\u0435\u0440\u044c \u0432 \u043f\u043e\u043c\u0435\u0449\u0435\u043d\u0438\u0438."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedMountedMsg",
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite while mounted.",
+        "string": "\u041d\u0435\u043b\u044c\u0437\u044f \u0440\u0430\u0437\u0431\u0438\u0442\u044c \u043b\u0430\u0433\u0435\u0440\u044c \u0432\u0435\u0440\u0445\u043e\u043c."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedCityMsg",
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite in cities or towns.",
+        "string": "\u041d\u0435\u043b\u044c\u0437\u044f \u0440\u0430\u0437\u0431\u0438\u0442\u044c \u043b\u0430\u0433\u0435\u0440\u044c \u0432 \u0433\u043e\u0440\u043e\u0434\u0435."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedSwimmingMsg",
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite while swimming.",
+        "string": "\u041d\u0435\u043b\u044c\u0437\u044f \u0440\u0430\u0437\u0431\u0438\u0442\u044c \u043b\u0430\u0433\u0435\u0440\u044c \u0432\u043e \u0432\u0440\u0435\u043c\u044f \u043f\u043b\u0430\u0432\u0430\u043d\u0438\u044f."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedGroundMsg",
+        "type": "MESG DESC",
+        "original": "You don't have enough level terrain to camp here.",
+        "string": "\u0417\u0434\u0435\u0441\u044c \u043d\u0435\u0434\u043e\u0441\u0442\u0430\u0442\u043e\u0447\u043d\u043e \u0440\u043e\u0432\u043d\u0430\u044f \u0437\u0435\u043c\u043b\u044f, \u0447\u0442\u043e\u0431\u044b \u0440\u0430\u0437\u0431\u0438\u0442\u044c \u043b\u0430\u0433\u0435\u0440\u044c."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedSpaceMsg",
+        "type": "MESG DESC",
+        "original": "You don't have enough space to build a campsite here.",
+        "string": "\u0412\u0430\u043c \u043d\u0435 \u0445\u0432\u0430\u0442\u0430\u0435\u0442 \u043f\u0440\u043e\u0441\u0442\u0440\u0430\u043d\u0441\u0442\u0432\u0430, \u0447\u0442\u043e\u0431\u044b \u0440\u0430\u0437\u0431\u0438\u0442\u044c \u043b\u0430\u0433\u0435\u0440\u044c."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedJumpingMsg",
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite while in the air.",
+        "string": "\u041d\u0435\u043b\u044c\u0437\u044f \u0440\u0430\u0437\u0431\u0438\u0442\u044c \u043b\u0430\u0433\u0435\u0440\u044c \u0432 \u0432\u043e\u0437\u0434\u0443\u0445\u0435."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedSittingMsg",
+        "type": "MESG DESC",
+        "original": "You can't build a camp while using something else.",
+        "string": "\u041d\u0435\u043b\u044c\u0437\u044f \u0440\u0430\u0437\u0431\u0438\u0442\u044c \u043b\u0430\u0433\u0435\u0440\u044c, \u043f\u043e\u043a\u0430 \u0443 \u0432\u0430\u0441 \u0432 \u0440\u0443\u043a\u0430\u0445 \u0434\u0440\u0443\u0433\u0438\u0435 \u043f\u0440\u0435\u0434\u043c\u0435\u0442\u044b."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingHelp",
+        "type": "MESG DESC",
+        "original": "Campsites allow you to stay rested and warm while exploring the wilderness. Create Camping Supplies at a forge. You can use Camping Supplies to build a campsite while outdoors.\n\nWhile at your campsite, you can sleep in your makeshift shelter or cook a limited number of meals over the campfire.\n\nYour campsite's location is marked on your map, so you can find and fast travel to it later.\n\nOnly one campsite can be built at a time. Building a new campsite will remove the previous one, and your campsite's map marker will be updated to the new campsite.",
+        "string": "\u0412\u043e \u0432\u0440\u0435\u043c\u044f \u043f\u0443\u0442\u0435\u0448\u0435\u0441\u0442\u0432\u0438\u044f \u0432\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u043e\u0442\u0434\u043e\u0445\u043d\u0443\u0442\u044c \u0438 \u0441\u043e\u0433\u0440\u0435\u0442\u044c\u0441\u044f \u0432 \u043b\u0430\u0433\u0435\u0440\u0435. \u0421\u043e\u0437\u0434\u0430\u0439\u0442\u0435 \"\u041f\u0440\u0435\u0434\u043c\u0435\u0442\u044b \u0434\u043b\u044f \u043b\u0430\u0433\u0435\u0440\u044f\" \u0432 \u043a\u0443\u0437\u043d\u0438\u0446\u0435. \u0412\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u044c \u0438\u0445 \u0434\u043b\u044f \u0442\u043e\u0433\u043e, \u0447\u0442\u043e\u0431\u044b \u0440\u0430\u0437\u0431\u0438\u0442\u044c \u043b\u0430\u0433\u0435\u0440\u044c, \u043d\u0430\u0445\u043e\u0434\u044f\u0441\u044c \u0432\u043d\u0435 \u043f\u043e\u043c\u0435\u0449\u0435\u043d\u0438\u044f.\n\n\u0412 \u043b\u0430\u0433\u0435\u0440\u0435 \u0432\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u043f\u043e\u0441\u043f\u0430\u0442\u044c \u0432\u043e \u0432\u0440\u0435\u043c\u0435\u043d\u043d\u043e\u043c \u0443\u043a\u0440\u044b\u0442\u0438\u0438 \u0438\u043b\u0438 \u043f\u0440\u0438\u0433\u043e\u0442\u043e\u0432\u0438\u0442\u044c \u043e\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u043d\u044b\u0435 \u0432\u0438\u0434\u044b \u0435\u0434\u044b \u043d\u0430 \u043a\u043e\u0441\u0442\u0440\u0435.\n\n\u041c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0432\u0430\u0448\u0435\u0433\u043e \u043b\u0430\u0433\u0435\u0440\u044f \u043e\u0442\u043c\u0435\u0447\u0435\u043d\u043e \u043d\u0430 \u0432\u0430\u0448\u0435\u0439 \u043a\u0430\u0440\u0442\u0435, \u043f\u043e\u044d\u0442\u043e\u043c\u0443 \u0432\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u043b\u0435\u0433\u043a\u043e \u0435\u0433\u043e \u043d\u0430\u0439\u0442\u0438 \u0438 \u0434\u0430\u0436\u0435 \u0431\u044b\u0441\u0442\u0440\u043e \u043f\u0435\u0440\u0435\u043c\u0435\u0441\u0442\u0438\u0442\u044c\u0441\u044f \u0442\u0443\u0434\u0430.\n\n\u0415\u0434\u0438\u043d\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u043e \u043c\u043e\u0436\u0435\u0442 \u0431\u044b\u0442\u044c \u0440\u0430\u0437\u0431\u0438\u0442 \u0442\u043e\u043b\u044c\u043a\u043e \u043e\u0434\u0438\u043d \u043b\u0430\u0433\u0435\u0440\u044c. \u0415\u0441\u043b\u0438 \u0432\u044b \u0440\u0430\u0437\u043e\u0431\u044c\u0435\u0442\u0435 \u043d\u043e\u0432\u044b\u0439 \u043b\u0430\u0433\u0435\u0440\u044c, \u0441\u0442\u0430\u0440\u044b\u0439 \u0438\u0441\u0447\u0435\u0437\u043d\u0435\u0442, \u0438 \u043d\u0430 \u043a\u0430\u0440\u0442\u0435 \u0431\u0443\u0434\u0435\u0442 \u043e\u0442\u043c\u0435\u0447\u0435\u043d\u043e \u043c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u043d\u043e\u0432\u043e\u0433\u043e \u043b\u0430\u0433\u0435\u0440\u044f."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingTutorialMsg",
+        "type": "MESG DESC",
+        "original": "Campsites allow you to rest and stay warm while exploring the wilderness. You can cook a limited number of meals over the campfire. Your campsite is marked on your map so you can locate and fast travel to it later.",
+        "string": "\u0412\u043e \u0432\u0440\u0435\u043c\u044f \u043f\u0443\u0442\u0435\u0448\u0435\u0441\u0442\u0432\u0438\u044f \u0432\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u043e\u0442\u0434\u043e\u0445\u043d\u0443\u0442\u044c \u0438 \u0441\u043e\u0433\u0440\u0435\u0442\u044c\u0441\u044f \u0432 \u043b\u0430\u0433\u0435\u0440\u0435. \u0422\u0430\u043a\u0436\u0435 \u0432\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u043f\u0440\u0438\u0433\u043e\u0442\u043e\u0432\u0438\u0442\u044c \u043e\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u043d\u044b\u0435 \u0432\u0438\u0434\u044b \u0435\u0434\u044b \u043d\u0430 \u043a\u043e\u0441\u0442\u0440\u0435. \u0412\u0430\u0448 \u043b\u0430\u0433\u0435\u0440\u044c \u043e\u0442\u043c\u0435\u0447\u0435\u043d \u043d\u0430 \u043a\u0430\u0440\u0442\u0435, \u043f\u043e\u044d\u0442\u043e\u043c\u0443 \u0432\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u043b\u0435\u0433\u043a\u043e \u0435\u0433\u043e \u043d\u0430\u0439\u0442\u0438 \u0438 \u0434\u0430\u0436\u0435 \u0431\u044b\u0441\u0442\u0440\u043e \u043f\u0435\u0440\u0435\u043c\u0435\u0441\u0442\u0438\u0442\u044c\u0441\u044f \u0442\u0443\u0434\u0430."
+    }
+]

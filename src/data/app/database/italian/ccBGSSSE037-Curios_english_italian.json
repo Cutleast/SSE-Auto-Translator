@@ -1,0 +1,476 @@
+[
+    {
+        "editor_id": "ccBGSSSE037_CorkbulbRoot",
+        "type": "INGR FULL",
+        "original": "Corkbulb Root",
+        "string": "Radice di sugherato"
+    },
+    {
+        "editor_id": "ccBGSSSE037_HackleLoLeaf",
+        "type": "INGR FULL",
+        "original": "Hackle-Lo Leaf",
+        "string": "Foglia di Hackle-Lo"
+    },
+    {
+        "editor_id": "ccBGSSSE037_CongealedPutrescence",
+        "type": "INGR FULL",
+        "original": "Congealed Putrescence",
+        "string": "Marciume rappreso"
+    },
+    {
+        "editor_id": "ccBGSSSE037_KagoutiHide",
+        "type": "INGR FULL",
+        "original": "Kagouti Hide",
+        "string": "Pelle di kagouti"
+    },
+    {
+        "editor_id": "ccBGSSSE037_StoneflowerPetals",
+        "type": "INGR FULL",
+        "original": "Stoneflower Petals",
+        "string": "Petali di fiorpietra"
+    },
+    {
+        "editor_id": "ccBGSSSE037_WormsHeadCap",
+        "type": "INGR FULL",
+        "original": "Worm's Head Cap",
+        "string": "Cappelli di fungo verme"
+    },
+    {
+        "editor_id": "ccBGSSSE037_SloadSoap",
+        "type": "INGR FULL",
+        "original": "Sload Soap",
+        "string": "Sapone di Sload"
+    },
+    {
+        "editor_id": "ccBGSSSE037_VoidEssence",
+        "type": "INGR FULL",
+        "original": "Void Essence",
+        "string": "Essenza del vuoto"
+    },
+    {
+        "editor_id": "ccBGSSSE037_DaedraSilk",
+        "type": "INGR FULL",
+        "original": "Daedra Silk",
+        "string": "Seta di Daedra"
+    },
+    {
+        "editor_id": "ccBGSSSE037_LuminousRussula",
+        "type": "INGR FULL",
+        "original": "Luminous Russula",
+        "string": "Russula Luminosa"
+    },
+    {
+        "editor_id": "ccBGSSSE037_WatchersEyeBlind",
+        "type": "INGR FULL",
+        "original": "Blind Watcher's Eye",
+        "string": "Occhio della vedetta cieca"
+    },
+    {
+        "editor_id": "ccBGSSSE037_DreughWax",
+        "type": "INGR FULL",
+        "original": "Dreugh Wax",
+        "string": "Cera di Dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE037_KreshFiber",
+        "type": "INGR FULL",
+        "original": "Kresh Fiber",
+        "string": "Fibra di Kresh"
+    },
+    {
+        "editor_id": "ccBGSSSE037_CodaFlower",
+        "type": "INGR FULL",
+        "original": "Coda Flower",
+        "string": "Fiore di coda"
+    },
+    {
+        "editor_id": "ccBGSSSE037_WelkyndStone",
+        "type": "ALCH FULL",
+        "original": "Welkynd Stone",
+        "string": "Pietra di Welkynd"
+    },
+    {
+        "editor_id": "ccBGSSSE037_FungusStalk",
+        "type": "INGR FULL",
+        "original": "Fungus Stalk",
+        "string": "Fungo a stelo"
+    },
+    {
+        "editor_id": "ccBGSSSE037_FlameStalk",
+        "type": "INGR FULL",
+        "original": "Flame Stalk",
+        "string": "Bulbo di fiamma"
+    },
+    {
+        "editor_id": "ccBGSSSE037_MinotaurHorn",
+        "type": "INGR FULL",
+        "original": "Minotaur Horn",
+        "string": "Corno di minotauro"
+    },
+    {
+        "editor_id": "ccBGSSSE037_RedKelpGasBladder",
+        "type": "INGR FULL",
+        "original": "Red Kelp Gas Bladder",
+        "string": "Vescica dei gas di alga rossa"
+    },
+    {
+        "editor_id": "ccBGSSSE037_GnarlBark",
+        "type": "INGR FULL",
+        "original": "Gnarl Bark",
+        "string": "Corteccia di Gnarl"
+    },
+    {
+        "editor_id": "ccBGSSSE037_FirePetal",
+        "type": "INGR FULL",
+        "original": "Fire Petal",
+        "string": "Petalo del fuoco"
+    },
+    {
+        "editor_id": "ccBGSSSE037_ElytraIchor",
+        "type": "INGR FULL",
+        "original": "Elytra Ichor",
+        "string": "Icore di Elytra"
+    },
+    {
+        "editor_id": "ccBGSSSE037_OgresTeeth",
+        "type": "INGR FULL",
+        "original": "Ogre's Teeth",
+        "string": "Denti di ogre"
+    },
+    {
+        "editor_id": "ccBGSSSE037_DaedrothTeeth",
+        "type": "INGR FULL",
+        "original": "Daedroth Teeth",
+        "string": "Dente di Daedroth"
+    },
+    {
+        "editor_id": "ccBGSSSE037_Comberry",
+        "type": "INGR FULL",
+        "original": "Comberry",
+        "string": "Bacca amara"
+    },
+    {
+        "editor_id": "ccBGSSSE037_WitheringMoon",
+        "type": "INGR FULL",
+        "original": "Withering Moon",
+        "string": "Luna appassita"
+    },
+    {
+        "editor_id": "ccBGSSSE037_WispStalkCaps",
+        "type": "INGR FULL",
+        "original": "Wisp Stalk Caps",
+        "string": "Cappelli di stelo fatuo"
+    },
+    {
+        "editor_id": "ccBGSSSE037_Roobrush",
+        "type": "INGR FULL",
+        "original": "Roobrush",
+        "string": "Arbonace"
+    },
+    {
+        "editor_id": "ccBGSSSE037_ImpGall",
+        "type": "INGR FULL",
+        "original": "Imp Gall",
+        "string": "Fiele di Imp"
+    },
+    {
+        "editor_id": "ccBGSSSE037_BittergreenPetals",
+        "type": "INGR FULL",
+        "original": "Bittergreen Petals",
+        "string": "Petali di verdamaro"
+    },
+    {
+        "editor_id": "ccBGSSSE037_ScribJerky",
+        "type": "INGR FULL",
+        "original": "Scrib Jerky",
+        "string": "Carne essiccata di Scrib"
+    },
+    {
+        "editor_id": "ccBGSSSE037_Marshmerrow",
+        "type": "INGR FULL",
+        "original": "Marshmerrow",
+        "string": "Piantalude"
+    },
+    {
+        "editor_id": "ccBGSSSE037_Saltrice",
+        "type": "INGR FULL",
+        "original": "Saltrice",
+        "string": "Salriso"
+    },
+    {
+        "editor_id": "ccBGSSSE037_ScalonFin",
+        "type": "INGR FULL",
+        "original": "Scalon Fin",
+        "string": "Pinna di Scalon"
+    },
+    {
+        "editor_id": "ccBGSSSE037_BunglersBane",
+        "type": "INGR FULL",
+        "original": "Bungler's Bane",
+        "string": "Rovina del dilettante"
+    },
+    {
+        "editor_id": "ccBGSSSE037_DaedraVenin",
+        "type": "INGR FULL",
+        "original": "Daedra Venin",
+        "string": "Venin di Daedra"
+    },
+    {
+        "editor_id": "ccBGSSSE037_HydnumAzureGiantSpore",
+        "type": "INGR FULL",
+        "original": "Hydnum Azure Giant Spore",
+        "string": "Spora gigante di hydnum azzurro"
+    },
+    {
+        "editor_id": "ccBGSSSE037_Chokeweed",
+        "type": "INGR FULL",
+        "original": "Chokeweed",
+        "string": "Strozzerba"
+    },
+    {
+        "editor_id": "ccBGSSSE037_AsterBloomCore",
+        "type": "INGR FULL",
+        "original": "Aster Bloom Core",
+        "string": "Nucleo di fiore astro"
+    },
+    {
+        "editor_id": "ccBGSSSE037_BlisterPodCap",
+        "type": "INGR FULL",
+        "original": "Blister Pod Cap",
+        "string": "Cappelli di fungo vescica"
+    },
+    {
+        "editor_id": "ccBGSSSE037_AlocasiaFruit",
+        "type": "INGR FULL",
+        "original": "Alocasia Fruit",
+        "string": "Frutto di alocasia"
+    },
+    {
+        "editor_id": "ccBGSSSE037_HungerTongue",
+        "type": "INGR FULL",
+        "original": "Hunger Tongue",
+        "string": "Lingua di famelico"
+    },
+    {
+        "editor_id": "ccBGSSSE037_WatchersEye",
+        "type": "INGR FULL",
+        "original": "Watcher's Eye",
+        "string": "Occhio della vedetta"
+    },
+    {
+        "editor_id": "ccBGSSSE037_GoldKanet",
+        "type": "INGR FULL",
+        "original": "Gold Kanet",
+        "string": "Kanet d'oro"
+    },
+    {
+        "editor_id": "ccBGSSSE037_ScribJelly",
+        "type": "INGR FULL",
+        "original": "Scrib Jelly",
+        "string": "Gelatina di Scrib"
+    },
+    {
+        "editor_id": "ccBGSSSE037_BogBeacon",
+        "type": "INGR FULL",
+        "original": "Bog Beacon",
+        "string": "Mitrula paludosa"
+    },
+    {
+        "editor_id": "ccBGSSSE037_Redwort",
+        "type": "INGR FULL",
+        "original": "Redwort Flower",
+        "string": "Fiore di crisciola rossa"
+    },
+    {
+        "editor_id": "ccBGSSSE037_QA_CuriosChest",
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Baule"
+    },
+    {
+        "editor_id": "ccBGSSSE037_PoisonedFoodAppleRed",
+        "type": "ALCH FULL",
+        "original": "Poisoned Red Apple",
+        "string": "Mela rossa avvelenata"
+    },
+    {
+        "editor_id": "ccBGSSSE037_Chokeberry",
+        "type": "INGR FULL",
+        "original": "Chokeberry",
+        "string": "Soffobacca"
+    },
+    {
+        "editor_id": "ccBGSSSE037_CorkbulbBolt",
+        "type": "AMMO FULL",
+        "original": "Corkbulb Bolt",
+        "string": "Dardo di sugherato"
+    },
+    {
+        "editor_id": "ccBGSSSE037_Lichor",
+        "type": "INGR FULL",
+        "original": "Lichor",
+        "string": "Licore"
+    },
+    {
+        "editor_id": "ccBGSSSE037_BoltCorkbulbProjectile",
+        "type": "PROJ FULL",
+        "original": "Corkbulb Bolt",
+        "string": "Dardo di sugherato"
+    },
+    {
+        "editor_id": "ccBGSSSE037_ArrowCorkbulbProjectile",
+        "type": "PROJ FULL",
+        "original": "Corkbulb Arrow",
+        "string": "Freccia di sugherato"
+    },
+    {
+        "editor_id": "ccBGSSSE037_CorkbulbArrow",
+        "type": "AMMO FULL",
+        "original": "Corkbulb Arrow",
+        "string": "Freccia di sugherato"
+    },
+    {
+        "editor_id": "ccBGSSSE037_IronBolt",
+        "type": "AMMO FULL",
+        "original": "Iron Bolt",
+        "string": "Dardo di ferro"
+    },
+    {
+        "editor_id": "ccBGSSSE037_SilverBolt",
+        "type": "AMMO FULL",
+        "original": "Silver Bolt",
+        "string": "Dardo d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE037_BoltSilverProjectile",
+        "type": "PROJ FULL",
+        "original": "Silver Bolt",
+        "string": "Dardo d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE037_OrcishBolt",
+        "type": "AMMO FULL",
+        "original": "Orcish Bolt",
+        "string": "Dardo orchesco"
+    },
+    {
+        "editor_id": "ccBGSSSE037_BoltIronProjectile",
+        "type": "PROJ FULL",
+        "original": "Iron Bolt",
+        "string": "Dardo di ferro"
+    },
+    {
+        "editor_id": "ccBGSSSE037_BonemoldBolt",
+        "type": "AMMO FULL",
+        "original": "Bonemold Bolt",
+        "string": "Dardo d'ossa fuse"
+    },
+    {
+        "editor_id": "ccBGSSSE037_BoltBonemoldProjectile",
+        "type": "PROJ FULL",
+        "original": "Bonemold Bolt",
+        "string": "Dardo d'ossa fuse"
+    },
+    {
+        "editor_id": "ccBGSSSE037_BoltOrcishProjectile",
+        "type": "PROJ FULL",
+        "original": "Orcish Bolt",
+        "string": "Dardo orchesco"
+    },
+    {
+        "editor_id": "ccBGSSSE037_PoisonedPerk",
+        "type": "PERK FULL",
+        "original": "Poisoned",
+        "string": "Avvelenato"
+    },
+    {
+        "editor_id": "ccBGSSSE037_AlchDamageHealthDuration",
+        "type": "MGEF DNAM",
+        "original": "Causes <mag> points of poison damage for <dur> seconds.",
+        "string": "Causa <mag> punti di danno da veleno per <dur> secondi."
+    },
+    {
+        "editor_id": "ccBGSSSE037_HeartofOrderIngredient",
+        "type": "INGR FULL",
+        "original": "Heart of Order",
+        "string": "Cuore dell'Ordine"
+    },
+    {
+        "editor_id": "ccBGSSSE037_SilverboltPerk",
+        "type": "PERK FULL",
+        "original": "Silverbolt Perk",
+        "string": "Bonus lampo d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE037_RareCuriosQuest",
+        "type": "QUST FULL",
+        "original": "Rare Curios",
+        "string": "Rarit\u00e0 ricercate"
+    },
+    {
+        "editor_id": "ccBGSSSE037_LightFFSelf",
+        "type": "MGEF DNAM",
+        "original": "Emits a small light that lasts for <dur> seconds.",
+        "string": "Emette una flebile luce che dura per <dur> secondi."
+    },
+    {
+        "editor_id": "ccBGSSSE037_PoisonedFoodAppleGreen",
+        "type": "ALCH FULL",
+        "original": "Poisoned Green Apple",
+        "string": "Mela verde avvelenata"
+    },
+    {
+        "editor_id": "ccBGSSSE037_LightFFSelf",
+        "type": "MGEF FULL",
+        "original": "Light",
+        "string": "Luce"
+    },
+    {
+        "editor_id": "ccBGSSSE037_AlchDamageHealthDuration",
+        "type": "MGEF FULL",
+        "original": "Apple Poisoning",
+        "string": "Avvelenamento della mela"
+    },
+    {
+        "editor_id": "ccBGSSSE037_VarlaStone",
+        "type": "SLGM FULL",
+        "original": "Flawed Varla Stone",
+        "string": "Pietra Varla imperfetta"
+    },
+    {
+        "editor_id": "ccBGSSSE037_RaceBretonAbsorbSpellChance",
+        "type": "MGEF DNAM",
+        "original": "Absorb <mag>% of the magicka from hostile spells for <dur> seconds.",
+        "string": "Assorbi una quantit\u00e0 di magicka pari a: <mag>% dagli incantesimi nemici per <dur> secondi."
+    },
+    {
+        "editor_id": "ccBGSSSE037_NightEyeEffect",
+        "type": "MGEF FULL",
+        "original": "Night Eye",
+        "string": "Visione Notturna"
+    },
+    {
+        "editor_id": "ccBGSSSE037_RaceBretonAbsorbSpellChance",
+        "type": "MGEF FULL",
+        "original": "Spell Absorption",
+        "string": "Assorbimento magico"
+    },
+    {
+        "editor_id": "ccBGSSSE037_NightEyeEffect",
+        "type": "MGEF DNAM",
+        "original": "Improved night vision for <dur> seconds.",
+        "string": "La visione notturna \u00e8 migliorata per <dur> secondi."
+    },
+    {
+        "editor_id": "ccBGSSSE037_SilverboltPerk",
+        "type": "PERK DESC",
+        "original": "Silver damage against werewolves and the undead.",
+        "string": "L'argento danneggia i lupi mannari e i non-morti."
+    },
+    {
+        "editor_id": "ccBGSSSE037_PoisonedPerk",
+        "type": "PERK DESC",
+        "original": "Silently harm enemies by placing poisoned apples in their pockets.",
+        "string": "Le mele velenose piazzate nell'inventario del bersaglio lo feriscono silenziosamente."
+    }
+]

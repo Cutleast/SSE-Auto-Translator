@@ -1,0 +1,398 @@
+[
+    {
+        "editor_id": "ccBGSSSE005_ScholarJournal",
+        "type": "BOOK FULL",
+        "original": "Eranya's Journal",
+        "string": "Diario de Eranya"
+    },
+    {
+        "editor_id": "ccBGSSSE005_NemesisSkull",
+        "type": "MISC FULL",
+        "original": "Magrathi's Skull",
+        "string": "Cr\u00e1neo de Magrathi"
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST FULL",
+        "original": "A Matter of Pride",
+        "string": "Cuesti\u00f3n de orgullo"
+    },
+    {
+        "editor_id": "ccBGSSSE005_ScholarNotes01",
+        "type": "BOOK FULL",
+        "original": "Eranya's Notes on Sivdur's Tomb",
+        "string": "Notas de Eranya sobre la tumba de Sivdur"
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Locate the missing historian",
+        "string": "Encuentra a la historiadora desaparecida."
+    },
+    {
+        "editor_id": "ccBGSSSE005_DA02CultistM3",
+        "type": "NPC_ FULL",
+        "original": "Boethiah Cultist",
+        "string": "Sectario de Boethiah"
+    },
+    {
+        "editor_id": "ccBGSSSE005_DA02CultistM1",
+        "type": "NPC_ FULL",
+        "original": "Boethiah Cultist",
+        "string": "Sectario de Boethiah"
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Obtain Magrathi's skull",
+        "string": "Consigue el cr\u00e1neo de Magrathi."
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Retrieve Goldbrand",
+        "string": "Hazte con Marca de oro."
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Explore the tomb",
+        "string": "Explora la tumba."
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Find the location of Sivdur's amulet",
+        "string": "Encuentra la ubicaci\u00f3n del amuleto de Sivdur."
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Place Magrathi's skull on the pedestal near Sivdur's tomb",
+        "string": "Coloca el cr\u00e1neo de Magrathi en el pedestal junto a la tumba de Sivdur."
+    },
+    {
+        "editor_id": "ccBGSSSE005_SivdurTombLocation",
+        "type": "LCTN FULL",
+        "original": "Sivdur's Respite",
+        "string": "Reposo de Sivdur"
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Defeat Magrathi",
+        "string": "Derrota a Magrathi."
+    },
+    {
+        "editor_id": "ccBGSSSE005_DA02CultistM2_College",
+        "type": "NPC_ FULL",
+        "original": "Boethiah Cultist",
+        "string": "Sectario de Boethiah"
+    },
+    {
+        "editor_id": "ccBGSSSE005_DA02CultistF1_College",
+        "type": "NPC_ FULL",
+        "original": "Boethiah Cultist",
+        "string": "Sectario de Boethiah"
+    },
+    {
+        "editor_id": "ccBGSSSE005_Goldbrand",
+        "type": "WEAP FULL",
+        "original": "Goldbrand",
+        "string": "Marca de oro"
+    },
+    {
+        "editor_id": "ccBGSSSE005ActOfferingBowl1",
+        "type": "ACTI FULL",
+        "original": "Sivdur's Amulet",
+        "string": "Amuleto de Sivdur"
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Place the amulet on the pedestal near Sivdur's tomb",
+        "string": "Coloca el amuleto en el pedestal junto a la tumba de Sivdur."
+    },
+    {
+        "editor_id": "ccBGSSSE005_AncientNordAmulet",
+        "type": "ARMO FULL",
+        "original": "Sivdur's Amulet",
+        "string": "Amuleto de Sivdur"
+    },
+    {
+        "editor_id": "ccBGSSSE005ActOfferingBowl3",
+        "type": "ACTI FULL",
+        "original": "Magrathi's Skull",
+        "string": "Cr\u00e1neo de Magrathi"
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Obtain Sivdur's amulet from Lars Battle-Born",
+        "string": "Obt\u00e9n el amuleto de Sivdur de Lars Batallador."
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Read Eranya's research notes in the Collge of Winterhold Arcanaeum",
+        "string": "Lee las notas de la investigaci\u00f3n de Eranya en el arcaneum del Colegio de Hibernalia."
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Find Magrathi's resting place",
+        "string": "Encuentra el lugar de descanso de Magrathi."
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Locate the ancient warrior's tomb",
+        "string": "Encuentra la tumba del antiguo guerrero."
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Find Sivdur's betrayer in Shroud Hearth Barrow",
+        "string": "Encuentra al traidor de Sivdur en el t\u00famulo del Hogar Enlutado."
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Find a way to open the tomb",
+        "string": "Encuentra la forma de abrir la tumba."
+    },
+    {
+        "editor_id": "ccBGSSSE005ActOfferingBowl1",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Read Eranya's journal",
+        "string": "Lee el diario de Eranya."
+    },
+    {
+        "editor_id": "ccBGSSSE005ActOfferingBowl3",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccBGSSSE005_BoethiahCultistFaction",
+        "type": "FACT FULL",
+        "original": "Boethiah Cultist Faction",
+        "string": "Facci\u00f3n de los sectarios de Boethiah"
+    },
+    {
+        "editor_id": "ccBGSSSE005_ScholarNotes02",
+        "type": "BOOK FULL",
+        "original": "Eranya's Research Notes",
+        "string": "Notas de la investigaci\u00f3n de Eranya"
+    },
+    {
+        "editor_id": "ccBGSSSE005_DA02CultistF2",
+        "type": "NPC_ FULL",
+        "original": "Boethiah Cultist",
+        "string": "Sectario de Boethiah"
+    },
+    {
+        "editor_id": "ccBGSSSE005_LoadScreen01",
+        "type": "LSCR DESC",
+        "original": "\"Know that battle is a blessing. Know that death is an eventuality. Know that you are dust in the eyes of Boethiah.\" -- Boethiah's Glory",
+        "string": "\"Has de saber que el combate es una bendici\u00f3n. Has de saber que la muerte es una eventualidad. Has de saber que eres polvo a los ojos de Boethiah.\" -- Gloria de Boethiah"
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST NNAM",
+        "original": "Investigate the tomb entrance",
+        "string": "Investiga la entrada de la tumba."
+    },
+    {
+        "editor_id": "ccBGSSSE005_GuardName",
+        "type": "MESG FULL",
+        "original": "Sivdur's Honor Guard",
+        "string": "Guardia de honor de Sivdur"
+    },
+    {
+        "editor_id": "ccBGSSSE005_CultistNote",
+        "type": "BOOK FULL",
+        "original": "Cultist's Note",
+        "string": "Nota de una sectaria"
+    },
+    {
+        "editor_id": "ccBGSSSE005_SivdurRespiteMapMarker",
+        "type": "REFR FULL",
+        "original": "Sivdur's Respite",
+        "string": "Reposo de Sivdur"
+    },
+    {
+        "editor_id": "ccBGSSSE005_LoadScreen02",
+        "type": "LSCR DESC",
+        "original": "The artifact Goldbrand is a golden katana that holds the power of the daedric prince Boethiah. It is said to have been forged by ancient dragons of the North.",
+        "string": "La reliquia Marca de oro es una catana que encierra el poder del pr\u00edncipe da\u00e9drico Boethiah. Se dice que la forjaron los antiguos dragones del norte."
+    },
+    {
+        "editor_id": "ccBGSSSE005Dungeon01",
+        "type": "CELL FULL",
+        "original": "Sivdur's Respite",
+        "string": "Reposo de Sivdur"
+    },
+    {
+        "editor_id": "WinterholdCollegeArcanaeum",
+        "type": "CELL FULL",
+        "original": "The Arcanaeum",
+        "string": "El arcaneum"
+    },
+    {
+        "editor_id": "ShroudHearthBarrow01",
+        "type": "CELL FULL",
+        "original": "Shroud Hearth Barrow",
+        "string": "T\u00famulo del Hogar Enlutado"
+    },
+    {
+        "editor_id": "ccBGSSSE005_Inscription1",
+        "type": "MESG DESC",
+        "original": "I, Sivdur, warrior and defender of dragons, lie in rest here\n\nMy amulet, the symbol of my valor\n\nPlace it here so that I may have proof of my deeds in Sovngarde",
+        "string": "Yo, Sivdur, guerrero y defensor de los dragones, reposo en este lugar\n\nMi amuleto, el s\u00edmbolo de mi valor\n\nColocadlo aqu\u00ed para que pueda probar mis actos en Sovngarde"
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST CNAM",
+        "original": "I located Magrathi, a powerful dragon priest. I will need to defeat him if I am to claim his skull.",
+        "string": "He localizado a Magrathi, un poderoso sacerdote drag\u00f3n. Tendr\u00e9 que derrotarle si quiero llevarme su cr\u00e1neo."
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST CNAM",
+        "original": "I've placed both of the relics on the pedestals near the tomb in Sivdur's Respite. As I did so, the final door to the tomb seemed to open. I should see what awaits inside.",
+        "string": "He colocado ambas reliquias en los pedestales junto a la tumba de Reposo de Sivdur. Al hacerlo, parece que se ha abierto la \u00faltima puerta de acceso a la tumba. Deber\u00eda ver qu\u00e9 me aguarda en el interior."
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST CNAM",
+        "original": "I've heard a rumor that a historian researching the whereabouts of lost daedric artifacts has recently gone missing. She was last seen in the mountains east of Windhelm.",
+        "string": "He o\u00eddo un rumor sobre una historiadora que investigaba el paradero de unas reliquias da\u00e9dricas desaparecidas recientemente. La \u00faltima vez que se la vio fue en las monta\u00f1as al este de Ventalia."
+    },
+    {
+        "editor_id": "ccBGSSSE005_Inscription3",
+        "type": "MESG DESC",
+        "original": "Forever my nemesis, Magrathi, high priest and slayer of my brother\n\nHis skull, the symbol of his betrayal\n\nPlace it here, away from his kinsman, so that he may never find peace",
+        "string": "Mi eterna n\u00e9mesis, Magrathi, sumo sacerdote y asesino de mi hermano\n\nSu cr\u00e1neo, s\u00edmbolo de su traici\u00f3n\n\nColocadlo aqu\u00ed, lejos de los suyos, para que nunca encuentre la paz"
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST CNAM",
+        "original": "I've found the body of the historian rumored to be researching daedric artifacts at the Sacellum of Boethiah. She appears to have been killed at the hands of Boethiah cultists. I should read her journal to learn more.",
+        "string": "He encontrado el cuerpo de la historiadora de quien se rumoreaba que estaba investigando reliquias da\u00e9dricas en el pr\u00f3stilo de Boethiah. Parece que muri\u00f3 a manos de sectarios de Boethiah. Deber\u00eda leer su diario para averiguar m\u00e1s."
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST CNAM",
+        "original": "I've placed Magrathi's skull on the pedestal near his tomb. When I did so, one of the doors of the tomb seemed to open. I now need to place Sivdur's amulet on the other pedestal.",
+        "string": "He colocado el cr\u00e1neo de Magrathi en el pedestal junto a su tumba. Al hacerlo, parece que se ha abierto una de las puertas de la tumba. Ahora tengo que colocar el amuleto de Sivdur en el otro pedestal."
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST CNAM",
+        "original": "I have reclaimed Magrathi's skull. I should place it on the pedestal near the entrance of the tomb in Sivdur's Respite.",
+        "string": "Me he hecho con el cr\u00e1neo de Magrathi. Deber\u00eda colocarlo en el pedestal junto a la entrada de la tumba en Reposo de Sivdur."
+    },
+    {
+        "editor_id": "ccBGSSSE005_ScholarNotes02",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><div align=\"left\">\n10 Sun's Height\n\nI have arrived at the College of Winterhold, who have generously allowed a fellow academic to make use of their vast library. A good thing, as even in the short ride from Sivdur's Respite north of Windhelm, I feel chilled down to my very bones. I now search for the means to gain entrance to Sivdur's tomb using the faint inscriptions found near the entrance.\n\nMy objectives are to discover where Sivdur's amulet might be found, as well as the burial site of Sivdur's nemesis, Magrathi. I shall start with texts on ancient Nord heroes and work backwards from there.\n\n13 Sun's Height\n\nNo luck thus far. Discouraging, but I will not dispair. The answers lie in these walls somewhere.\n\n14 Sun's Height\n\nA breakthrough! It has been recorded that Sivdur's amulet has traditionally been passed down from father to son for generations. If my tracing of the lineages is correct, the current living desendants of Sivdur are the Battle-Borns, a clan that resides in the city of Whiterun. If this is true, then Sivdur's amulet is likely possessed by the youngest Battle-Born son, one Lars Battle-Born. I must inquire with them.\n\n19 Sun's Height\n\nDetails are sparse, but Magrathi appears to have once been an influential priest of the dragon cult. He seems to have slain Sivdur's brother over rightful ownership of a silver mine. He is said to have been laid to rest in Shroud Hearth Barrow near Ivarstead.\n\nI will now return to Sivdur's Respite, take some additional notes, and then travel east to Windhelm where a few good sellswords might be found that can help me with this treacherous undertaking.",
+        "string": "<font face='$HandwrittenFont'><div align=\"left\">\n10 de Culminaci\u00f3n solar\n\nHe llegado al Colegio de Hibernalia, que ha tenido la gran generosidad de permitirme, como acad\u00e9mica, usar su enorme biblioteca. Es una suerte, ya que incluso en el corto trayecto desde Reposo de Sivdur, al norte de Ventalia, he sentido un escalofr\u00edo que me llegaba hasta los huesos. Ahora estoy buscando el modo de acceder a la tumba de Sivdur usando las inscripciones desgastadas que encontr\u00e9 cerca de la entrada.\n\nMis objetivos son descubrir la ubicaci\u00f3n del amuleto de Sivdur y de la tumba de su n\u00e9mesis, Magrathi. Comenzar\u00e9 consultando textos sobre antiguos h\u00e9roes n\u00f3rdicos, e ir\u00e9 retrocediendo a partir de estos.\n\n13 de Culminaci\u00f3n solar\n\nHasta ahora no he tenido suerte. Es desalentador, pero no voy a darme por vencida. Las respuestas se encuentran en alguna parte entre estos muros.\n\n14 de Culminaci\u00f3n solar\n\n\u00a1He descubierto algo! Qued\u00f3 escrito que el amuleto de Sivdur ha pasado tradicionalmente de padres a hijos durante generaciones. Si he seguido el rastro de los linajes correctamente, los descendientes vivos actuales de Sivdur son los Batallador, un clan afincado en la ciudad de Carrera Blanca. Si esto es cierto, lo m\u00e1s probable es que el amuleto de Sivdur se encuentre en manos del hijo m\u00e1s joven, llamado Lars Batallador. Tengo que ir a hablar con ellos.\n\n19 de Culminaci\u00f3n solar\n\nHay pocos detalles, pero al parecer Magrathi fue un influyente sacerdote del Culto del Drag\u00f3n. Por lo visto asesin\u00f3 al hermano de Sivdur con quien se disputaba la propiedad de una mina de plata. Se dice que lo enterraron en el t\u00famulo del Hogar Enlutado, cerca de Paraje de Ivar.\n\nAhora voy a volver a Reposo de Sivdur, tomar\u00e9 unas cuantas notas m\u00e1s y me dirigir\u00e9 al este, a Ventalia, en busca de unos buenos mercenarios que me ayuden con esta empresa tan peligrosa."
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST CNAM",
+        "original": "Following in the Imperial historian Eranya's footsteps, I gained entrance to the tomb in Sivdur's Respite and retrieved the artifact Goldbrand.",
+        "string": "Siguiendo los pasos de Eranya, la historiadora imperial, he conseguido acceder a la tumba de Reposo de Sivdur y me he hecho con la reliquia conocida como Marca de oro."
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST CNAM",
+        "original": "I've obtained Sivdur's amulet from Lars Battle-Born. I should place it on the pedestal near the entrance of the tomb in Sivdur's Respite.",
+        "string": "He obtenido de Lars Batallador el amuleto de Sivdur. Deber\u00eda colocarlo en el pedestal junto a la entrada de la tumba en Reposo de Sivdur."
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST CNAM",
+        "original": "I have defeated Magrathi. I should reclaim his skull so that I can return it to Sivdur's Respite.",
+        "string": "He derrotado a Magrathi. Deber\u00eda llevarme su cr\u00e1neo para poder devolverlo a Reposo de Sivdur."
+    },
+    {
+        "editor_id": "ccBGSSSE005_ScholarNotes01",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><div align=\"left\">\n7 Sun's Height\n\nI have arrived. The entrance of Sivdur's tomb remains impressively intact. I hope that the interior remains equally well-preserved. That is, assuming Titus Mede II elected not to pillage the entire ruin over two decades ago when Goldbrand was allegedly returned to Sivdur's side. One can only hope he exercised restraint.\n\nIt appears that the burial chamber is locked using an ancient mechanical system, and only by placing the correct objects on the pedestals flanking the chamber's entrance will the path open. Fascinating!\n\nI must research where to find the relics required to open the chamber. I shall return when I have more answers.\n\n23 Sun's Height\n\nThe inscriptions relate to two ancient relics. The first is Sivdur's amulet, inscribed with the symbols of his rank and other honorifics. The second is the skull of Sivdur's betrayer and lifelong enemy, Magrathi. Sivdur, never having exacted revenge in his time, now calls out to us from the beyond to defile his enemy's resting place, and place the skull near his sacred burial chamber as a sort of trophy. Morbid, but not uncommon for the period.\n\nI now go out in search of the relics that will lead to the opening of the tomb. I have left my notes where I conducted my research, in the Arcanaeum in the College of Winterhold. If some ill fate were to befall me, perhaps another may continue the search.</div></font>",
+        "string": "<font face='$HandwrittenFont'><div align=\"left\">\n7 de Culminaci\u00f3n solar\n\nHe llegado. Es impresionante, la entrada a la tumba de Sivdur sigue intacta. Espero que el interior est\u00e9 igualmente bien conservado. Eso suponiendo que Tito Mede II no decidiera saquear todas las ruinas hace m\u00e1s de dos d\u00e9cadas cuando Marca de oro volvi\u00f3 supuestamente junto a Sivdur. Solo cabe esperar que supiera moderarse.\n\nAl parecer, la c\u00e1mara funeraria se sell\u00f3 usando un antiguo sistema mec\u00e1nico, y la entrada solo se abre colocando los objetos correctos sobre los pedestales que flanquean la entrada de la c\u00e1mara. \u00a1Fascinante!\n\nDebo investigar d\u00f3nde dar con las reliquias necesarias para abrir la c\u00e1mara. Volver\u00e9 cuando tenga m\u00e1s respuestas.\n\n23 de Culminaci\u00f3n solar\n\nLas inscripciones est\u00e1n relacionadas con dos antiguas reliquias. La primera es el amuleto de Sivdur, que lleva grabados los s\u00edmbolos de su rango y otros t\u00edtulos honor\u00edficos. La segunda es el cr\u00e1neo del traidor Magrathi, enemigo perpetuo de Sivdur. Puesto que el h\u00e9roe nunca se cobr\u00f3 venganza en su momento, ahora nos llama desde el m\u00e1s all\u00e1 a profanar el lugar de descanso de su enemigo y colocar su cr\u00e1neo junto a su c\u00e1mara mortuoria sagrada como una especie de trofeo. Es algo morboso, pero no es raro para su \u00e9poca.\n\nAhora parto en busca de las reliquias que me permitir\u00e1n abrir la tumba. He dejado mis notas donde llev\u00e9 a cabo mi investigaci\u00f3n, en el arcaneum del Colegio de Hibernalia. Si me ocurriese cualquier desgracia, quiz\u00e1 alguien m\u00e1s pueda continuar mi b\u00fasqueda.</div></font>"
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST CNAM",
+        "original": "I discovered another journal left behind by Eranya, the Imperial historian. In them, they detail that the key to opening the tomb lies in understanding the meaning of the two inscriptions in front of the tomb. Her research notes were left in the Arcanaeum in the College of Winterhold, which should have more details on how the tomb can be opened.",
+        "string": "He descubierto otro diario que dej\u00f3 Eranya, la historiadora imperial. En \u00e9l se menciona que la clave para abrir la tumba es comprender el significado de las dos inscripciones que hay frente a ella. En el arcaneum del Colegio de Hibernalia quedaron las notas de su investigaci\u00f3n, que deber\u00edan contener m\u00e1s detalles sobre c\u00f3mo abrir la tumba."
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST CNAM",
+        "original": "I've placed Sivdur's amulet on the pedestal near his tomb. When I did so, one of the doors of the tomb seemed to open. I now need to place Magrathi's skull on the other pedestal.",
+        "string": "He colocado el amuleto de Sivdur en el pedestal junto a su tumba. Al hacerlo, parece que se ha abierto una de las puertas de la tumba. Ahora tengo que colocar el cr\u00e1neo de Magrathi en el otro pedestal."
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST CNAM",
+        "original": "The historian Eranya was researching Goldbrand, a daedric artifact in the shape of a golden katana. Her notes indicate that she was on her way to discover the burial site of an ancient Nord warrior hidden in the mountains north of Windhelm. I should follow in her footsteps and investigate the burial site myself.",
+        "string": "La historiadora Eranya estaba investigando sobre Marca de oro, una reliquia da\u00e9drica con forma de catana dorada. Seg\u00fan sus notas, se dirig\u00eda a buscar la tumba de un antiguo guerrero n\u00f3rdico, oculta en las monta\u00f1as al norte de Ventalia. Deber\u00eda seguir sus pasos e investigar el lugar."
+    },
+    {
+        "editor_id": "ccBGSSSE005_ScholarJournal",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\n2 Sun's Height\n\nMy name is Eranya, Imperial historian. My research on ancient artifacts has led me across the sands of Elsweyr and the forests of Valenwood, and now, it has led me to the inhospitable north of Skyrim.\n\nMy quarry is that of Goldbrand, a golden katana said to have been forged by dragons and embodies the power of the Daedric Prince Boethiah. The blade has passed through many hands, most recently those of Emperor Titus Mede II. He was rumored to have possessed it during the Battle of the Red Ring.\n\nAfter the battle, Mede II (or one of his agents) had it returned to the tomb of the one said to have originally possessed the blade: Sivdur, an ancient Nord warrior who fought in defense of the dragons. And there, in Sivdur's Respite, is where Goldbrand is said to reside. Mede II was said to have felt that he lacked the right to claim the blade, and that it should return to the one who it was first entrusted.\n\nNo direct record of the location of Sivdur's Respite exists in the Imperial archives. However, I discovered a strange missive on a mission involving precious cargo, and along with it, a map. As it turns out, this was the only record of the mission to return Goldbrand to Skyrim, and the map led to Sivdur's Respite. It lies in a cave in the mountains just north of Windhelm!\n\nBased on my findings there, I have other business to attend to now. It would seem I have some traveling yet to do. I have documented my findings in a separate journal on the topic.\n\n15 Last Seed\n\nI am starting to believe I may have attracted unwanted attention. A group of dangerous cultists who worship the daedric prince Boethiah are said to gather near Windhelm, and Goldbrand's whereabouts would no doubt be of interest to them. Already I feel like I see the same faces as I pass strangers along the road.\n\nI should be careful.",
+        "string": "<font face='$HandwrittenFont'>\n2 de Culminaci\u00f3n solar\n\nMe llamo Eranya, y soy historiadora del Imperio. Mi investigaci\u00f3n sobre artefactos antiguos me ha hecho recorrer las arenas de Elsweyr y la frondosidad de Bosque Valen, y ahora me lleva hasta el inh\u00f3spito norte de Skyrim.\n\nEl objeto de mi b\u00fasqueda es Marca de oro, una catana dorada, supuestamente forjada por dragones, que encierra el poder del pr\u00edncipe da\u00e9drico Boethiah. Esta espada ha pasado por muchas manos; las \u00faltimas, las de del emperador Tito Mede II. Se rumorea que obraba en su poder durante la Batalla del Anillo Rojo.\n\nTras el combate, Mede II (o alguien a sus \u00f3rdenes) la devolvi\u00f3 a la tumba del propietario original del arma: Sivdur, un antiguo guerrero n\u00f3rdico que luch\u00f3 en defensa de los dragones. Seg\u00fan se cuenta, es all\u00ed, en Reposo de Sivdur donde reside Marca de oro. Dicen que Mede II sinti\u00f3 que no era el due\u00f1o leg\u00edtimo de la espada, y que deb\u00eda devolverla a aquel a quien se le confi\u00f3 originalmente.\n\nEn los archivos del Imperio no hay ning\u00fan registro que indique directamente la ubicaci\u00f3n de Reposo de Sivdur. Sin embargo, en una misi\u00f3n relacionada con un valioso cargamento descubr\u00ed una extra\u00f1a misiva acompa\u00f1ada de un mapa. Resulta que se trataba del \u00fanico documento existente donde queda constancia de la misi\u00f3n para llevar a Marca de oro de vuelta a Skyrim, y el mapa indicaba c\u00f3mo llegar hasta Reposo de Sivdur. \u00a1El lugar se encuentra en una cueva en las monta\u00f1as justo al norte de Ventalia!\n\nPor mis averiguaciones all\u00ed, ahora tengo que ocuparme de otros asuntos. Al parecer todav\u00eda tengo que viajar algo m\u00e1s. He documentado mis hallazgos en un diario aparte sobre el tema.\n\n15 de \u00daltima semilla\n\nEmpiezo a pensar que quiz\u00e1 haya atra\u00eddo cierta atenci\u00f3n indeseada. Se dice que hay un grupo de sectarios peligrosos, adoradores del pr\u00edncipe da\u00e9drico Boethiah, que se re\u00fanen cerca de Ventalia, y sin duda les interesar\u00eda conocer el paradero de Marca de oro. Ya empieza a parecerme que veo los mismos rostros cuando me cruzo con desconocidos en el camino.\n\nDeber\u00eda ir con cuidado."
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST CNAM",
+        "original": "I've discovered the tomb mentioned in Eranya's journal. I should find a way to gain entrance to the tomb.",
+        "string": "He descubierto la tumba que se menciona en el diario de Eranya. Deber\u00eda encontrar el modo de acceder al interior."
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST CNAM",
+        "original": "I've discovered the tomb mentioned in Eranya's journal. I now need to find the two artifacts mentioned in Eranya's research notes.",
+        "string": "He descubierto la tumba que se menciona en el diario de Eranya. Ahora tengo que encontrar los dos objetos de los que habla en sus notas."
+    },
+    {
+        "editor_id": "ccBGSSSE005_CultistNote",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>\nThese mouth-breathers don't stand a chance. Once I reclaim Goldbrand and slay them, along with our lord's champion, Boethiah will have no choice but to make me her new chosen one! I have seen it in my dreams, standing over the champion's lifeless body, clutching a gleaming golden katana turned red with the blood of my foes.\n\nWe must puzzle out that Imperial scholar's notes and breach the tomb. Then I will have my victory.\n</font>\n\n",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\nEstos idiotas no tienen nada que hacer. \u00a1Una vez que me haga con Marca de oro y los mate, a ellos y al campe\u00f3n de nuestro se\u00f1or, Boethiah no tendr\u00e1 m\u00e1s opci\u00f3n que convertirme en su nuevo elegido! En sue\u00f1os me he visto en pie sobre el cad\u00e1ver del campe\u00f3n sin vida, sosteniendo una catana de oro te\u00f1ida de rojo por la sangre de mis enemigos.\n\nTenemos que desentra\u00f1ar las notas de esa investigadora imperial y conseguir entrar en la tumba. Entonces la victoria ser\u00e1 m\u00eda.\n</font>\n\n"
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST CNAM",
+        "original": "I discovered another journal left behind by Eranya, the Imperial historian that was rumored to have gone missing. In them, they detail that the key to opening the tomb lies in understanding the meaning of the two inscriptions in front of the tomb. Her research notes were left in the Arcanaeum in the College of Winterhold, which should have more details on how the tomb can be opened.",
+        "string": "He descubierto otro diario que dej\u00f3 Eranya, la historiadora imperial de quien se rumoreaba que hab\u00eda desaparecido. En \u00e9l se menciona que la clave para abrir la tumba es comprender el significado de las dos inscripciones que hay frente a ella. En el arcaneum del Colegio de Hibernalia quedaron las notas de su investigaci\u00f3n, que deber\u00edan contener m\u00e1s detalles sobre c\u00f3mo abrir la tumba."
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST CNAM",
+        "original": "I've discovered the tomb mentioned in Eranya's research notes. I now need to find the two artifacts she detailed that will open the entrance of the tomb.",
+        "string": "He descubierto la tumba que se menciona en el diario de Eranya. Ahora tengo que encontrar los dos objetos con los que seg\u00fan ella se abre la entrada de la tumba."
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST CNAM",
+        "original": "I have discovered Eranya's research notes in the College of Winterhold Arcanaeum. In her notes, she detailed the means to open Sivdur's Respite, the tomb that the artifact Goldbrand is rumored to be within. I must obtain Sivdur's amulet and the skull of Sivdur's nemesis, Magrathi. The amulet has been passed down for generations in the Battle-Born family and is now possessed by Lars Battle-Born. Magrathi was entombed within Shroud Hearth Barrow, a Nordic ruin near Ivarstead. I will need both relics to gain entrance to the tomb.",
+        "string": "He descubierto las notas de la investigaci\u00f3n de Eranya en el arcaneum del Colegio de Hibernalia. En ellas describe c\u00f3mo acceder a Reposo de Sivdur, la tumba donde se rumorea que se encuentra la reliquia conocida como Marca de oro. Tengo que hacerme con el amuleto de Sivdur y el cr\u00e1neo de Magrathi, la n\u00e9mesis de Sivdur. El amuleto ha pasado de padres a hijos durante generaciones en la familia Batallador, y actualmente lo tiene Lars Batallador. A Magrathi lo enterraron en el t\u00famulo del Hogar Enlutado, una ruina n\u00f3rdica ubicada cerca de Paraje de Ivar."
+    },
+    {
+        "editor_id": "ccBGSSSE005_MainQuest",
+        "type": "QUST CNAM",
+        "original": "After exploring the tomb in Sivdur's Respite, I have discovered the burial chamber of Sivdur himself. Lying upon an altar is Goldbrand, the ancient golden katana that the historian Eranya was in search of.",
+        "string": "Tras explorar la tumba de Reposo de Sivdur, he descubierto la c\u00e1mara funeraria del propio Sivdur. Sobre el altar se encuentra Marca de oro, la antigua catana de oro que buscaba la historiadora Eranya."
+    }
+]

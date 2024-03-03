@@ -1,0 +1,134 @@
+[
+    {
+        "editor_id": "ccFSVSSE001_Backpack_Mage",
+        "type": "ARMO FULL",
+        "original": "Mage Backpack",
+        "string": "Sac \u00e0 dos de mage"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_HunterFullBedroll",
+        "type": "ARMO FULL",
+        "original": "Hunter Backpack with Bedroll",
+        "string": "Sac \u00e0 dos de chasseur avec couchette"
+    },
+    {
+        "editor_id": "ccFSVSSE001_EnchBackpackAdventurer",
+        "type": "ENCH FULL",
+        "original": "Adventurer Backpack",
+        "string": "Sac \u00e0 dos d'aventurier"
+    },
+    {
+        "editor_id": "ccFSVSSE001_EnchBackpackFortifyCarry",
+        "type": "ENCH FULL",
+        "original": "Fortify Carry Weight",
+        "string": "Renfort de portage"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_Fine",
+        "type": "ARMO FULL",
+        "original": "Fine Leather Backpack",
+        "string": "Sac \u00e0 dos en cuir de qualit\u00e9"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_BasicBedroll",
+        "type": "ARMO FULL",
+        "original": "Leather Backpack with Bedroll",
+        "string": "Sac \u00e0 dos en cuir avec couchette"
+    },
+    {
+        "editor_id": "ccFSVSSE001_EnchBackpackHunter",
+        "type": "ENCH FULL",
+        "original": "Hunter Backpack",
+        "string": "Sac \u00e0 dos de chasseur"
+    },
+    {
+        "editor_id": "ccFSVSSE001_EnchBackpackThief",
+        "type": "ENCH FULL",
+        "original": "Thief Backpack",
+        "string": "Sac \u00e0 dos de voleur"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_ThiefBedroll",
+        "type": "ARMO FULL",
+        "original": "Dark Leather Backpack with Bedroll",
+        "string": "Sac \u00e0 dos en cuir fonc\u00e9 avec couchette"
+    },
+    {
+        "editor_id": "ccFSVSSE001_QAChestBackpacks",
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Coffre"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_Thief",
+        "type": "ARMO FULL",
+        "original": "Dark Leather Backpack",
+        "string": "Sac \u00e0 dos en cuir fonc\u00e9"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_ThiefFull",
+        "type": "ARMO FULL",
+        "original": "Thief Backpack",
+        "string": "Sac \u00e0 dos de voleur"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_Basic",
+        "type": "ARMO FULL",
+        "original": "Leather Backpack",
+        "string": "Sac \u00e0 dos en cuir"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_ThiefFullBedroll",
+        "type": "ARMO FULL",
+        "original": "Thief Backpack with Bedroll",
+        "string": "Sac \u00e0 dos de voleur avec couchette"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_HunterBedroll",
+        "type": "ARMO FULL",
+        "original": "Fur Backpack with Bedroll",
+        "string": "Sac \u00e0 dos en fourrure avec couchette"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_Hunter",
+        "type": "ARMO FULL",
+        "original": "Fur Backpack",
+        "string": "Sac \u00e0 dos en fourrure"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_MageBedroll",
+        "type": "ARMO FULL",
+        "original": "Mage Backpack with Bedroll",
+        "string": "Sac \u00e0 dos de mage avec couchette"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_FineBedroll",
+        "type": "ARMO FULL",
+        "original": "Fine Leather Backpack with Bedroll",
+        "string": "Sac \u00e0 dos en cuir de qualit\u00e9 avec couchette"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_AdventurerBedroll",
+        "type": "ARMO FULL",
+        "original": "Adventurer Backpack with Bedroll",
+        "string": "Sac \u00e0 dos d'aventurier avec couchette"
+    },
+    {
+        "editor_id": "ccFSVSSE001_EnchBackpackMage",
+        "type": "ENCH FULL",
+        "original": "Mage Backpack",
+        "string": "Sac \u00e0 dos de mage"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_Adventurer",
+        "type": "ARMO FULL",
+        "original": "Adventurer Backpack",
+        "string": "Sac \u00e0 dos d'aventurier"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_HunterFull",
+        "type": "ARMO FULL",
+        "original": "Hunter Backpack",
+        "string": "Sac \u00e0 dos de chasseur"
+    }
+]

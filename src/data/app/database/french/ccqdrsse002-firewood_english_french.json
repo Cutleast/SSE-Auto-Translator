@@ -1,0 +1,260 @@
+[
+    {
+        "editor_id": "ccQDRSSE002_ShelterAct",
+        "type": "ACTI RNAM",
+        "original": "Use",
+        "string": "Utiliser"
+    },
+    {
+        "editor_id": "ccQDRSSE002_ShelterAct",
+        "type": "ACTI FULL",
+        "original": "Shelter",
+        "string": "Abri"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BuildCampEffect",
+        "type": "MGEF FULL",
+        "original": "Build Camp",
+        "string": "B\u00e2tir un camp"
+    },
+    {
+        "editor_id": "ccQDRSSE002_ShelterOptionMsg",
+        "type": "MESG ITXT",
+        "original": "Cancel",
+        "string": "Annuler"
+    },
+    {
+        "editor_id": "ccQDRSSE002_ShelterOptionMsg",
+        "type": "MESG ITXT",
+        "original": "Sleep",
+        "string": "Dormir"
+    },
+    {
+        "editor_id": "ccQDRSSE002_ShelterOptionMsg",
+        "type": "MESG ITXT",
+        "original": "Break Camp",
+        "string": "Lever le camp"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampfireFurn",
+        "type": "FURN FULL",
+        "original": "Campfire",
+        "string": "Feu de camp"
+    },
+    {
+        "editor_id": "ccQDRSSE002_MainQuest",
+        "type": "QUST FULL",
+        "original": "Camping Quest",
+        "string": "Qu\u00eate du camp"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingSupplies",
+        "type": "ALCH FULL",
+        "original": "Camping Supplies",
+        "string": "Mat\u00e9riel de campement"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BuildCampEffect",
+        "type": "MGEF DNAM",
+        "original": "Build a campsite when outdoors.",
+        "string": "Vous devez b\u00e2tir un camp en pleine nature."
+    },
+    {
+        "editor_id": "ccQDRSSE002_BedrollNoSandbox",
+        "type": "FURN FULL",
+        "original": "Bed Roll Ground",
+        "string": "Paillot"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BuildCampPrompt",
+        "type": "MESG ITXT",
+        "original": "Ok",
+        "string": "OK"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BuildCampPrompt",
+        "type": "MESG ITXT",
+        "original": "Cancel",
+        "string": "Annuler"
+    },
+    {
+        "editor_id": "ccQDRSSE002_LoadScreen2",
+        "type": "LSCR DESC",
+        "original": "You can cook some meals over the open flames of your campfire at campsites that you build.",
+        "string": "Vous pouvez cuisiner des repas au-dessus du feu dans le camp que vous avez b\u00e2ti."
+    },
+    {
+        "editor_id": "ccQDRSSE002_InCityCheckSpell",
+        "type": "SPEL FULL",
+        "original": "In City Check Spell",
+        "string": "Sort Test de ville"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BreakCampPrompt",
+        "type": "MESG ITXT",
+        "original": "Cancel",
+        "string": "Annuler"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingHelp",
+        "type": "MESG FULL",
+        "original": "Camping",
+        "string": "Campement"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampMapMarkerRefSolstheim001",
+        "type": "REFR FULL",
+        "original": "Campsite",
+        "string": "Camp"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampMapMarkerRefTamriel001",
+        "type": "REFR FULL",
+        "original": "Campsite",
+        "string": "Camp"
+    },
+    {
+        "editor_id": "ccQDRSSE002_LoadScreen1",
+        "type": "LSCR DESC",
+        "original": "If you build a campsite, its location will be marked on your map, so you can fast travel to it later.",
+        "string": "Si vous avez b\u00e2ti un camp, sa position sera indiqu\u00e9e sur votre carte pour vous permettre d'utiliser le voyage rapide."
+    },
+    {
+        "editor_id": "ccQDRSSE002_InCityCheckEffect",
+        "type": "MGEF FULL",
+        "original": "In City Check",
+        "string": "Test de ville"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BreakCampPrompt",
+        "type": "MESG ITXT",
+        "original": "Ok",
+        "string": "OK"
+    },
+    {
+        "editor_id": "ccQDRSSE002_SwimCheckEffect",
+        "type": "MGEF FULL",
+        "original": "Swimming Check",
+        "string": "Test de nage"
+    },
+    {
+        "editor_id": "ccQDRSSE002_IdleQuest",
+        "type": "QUST FULL",
+        "original": "Camping Idle Quest",
+        "string": "Qu\u00eate inactive de campement"
+    },
+    {
+        "editor_id": "ccQDRSSE002_SwimCheckSpell",
+        "type": "SPEL FULL",
+        "original": "Swim Check Spell",
+        "string": "Sort Test de nage"
+    },
+    {
+        "editor_id": "ccQDRSSE002_Chair",
+        "type": "FURN FULL",
+        "original": "Crate",
+        "string": "Caisse"
+    },
+    {
+        "editor_id": "Tamriel",
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Bordeciel"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedHereMsg",
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite here.",
+        "string": "Vous ne pouvez pas b\u00e2tir un camp ici."
+    },
+    {
+        "editor_id": "ccQDRSSE002_ShelterOptionMsg",
+        "type": "MESG DESC",
+        "original": "What do you do?",
+        "string": "Que faites-vous ?"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BuildCampPrompt",
+        "type": "MESG DESC",
+        "original": "Build a campsite here?",
+        "string": "B\u00e2tir un camp ici ?"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedCombatMsg",
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite while in combat.",
+        "string": "Vous ne pouvez pas b\u00e2tir un camp pendant un combat."
+    },
+    {
+        "editor_id": "ccQDRSSE002_BreakCampPrompt",
+        "type": "MESG DESC",
+        "original": "Are you sure you want to break camp?",
+        "string": "Voulez-vous vraiment lever le camp ?"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedGenericMsg",
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite right now.",
+        "string": "Vous ne pouvez pas b\u00e2tir un camp pour le moment."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedInteriorMsg",
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite while indoors.",
+        "string": "Vous ne pouvez pas b\u00e2tir un camp \u00e0 l'int\u00e9rieur d'un b\u00e2timent."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedMountedMsg",
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite while mounted.",
+        "string": "Vous ne pouvez pas b\u00e2tir un camp en chevauchant un animal."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedCityMsg",
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite in cities or towns.",
+        "string": "Vous ne pouvez pas b\u00e2tir un camp dans les villes."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedSwimmingMsg",
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite while swimming.",
+        "string": "Vous ne pouvez pas b\u00e2tir un camp en nageant."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedGroundMsg",
+        "type": "MESG DESC",
+        "original": "You don't have enough level terrain to camp here.",
+        "string": "Le terrain n'est pas assez plat pour camper ici."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedSpaceMsg",
+        "type": "MESG DESC",
+        "original": "You don't have enough space to build a campsite here.",
+        "string": "Il n'y a pas assez d'espace pour b\u00e2tir un camp ici."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedJumpingMsg",
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite while in the air.",
+        "string": "Vous ne pouvez pas b\u00e2tir un camp en \u00e9tant dans les airs."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedSittingMsg",
+        "type": "MESG DESC",
+        "original": "You can't build a camp while using something else.",
+        "string": "Vous ne pouvez pas b\u00e2tir un camp en utilisant autre chose."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingHelp",
+        "type": "MESG DESC",
+        "original": "Campsites allow you to stay rested and warm while exploring the wilderness. Create Camping Supplies at a forge. You can use Camping Supplies to build a campsite while outdoors.\n\nWhile at your campsite, you can sleep in your makeshift shelter or cook a limited number of meals over the campfire.\n\nYour campsite's location is marked on your map, so you can find and fast travel to it later.\n\nOnly one campsite can be built at a time. Building a new campsite will remove the previous one, and your campsite's map marker will be updated to the new campsite.",
+        "string": "Les campements vous permettent de vous reposer et de vous prot\u00e9ger du froid quand vous partez en exploration. Cr\u00e9ez du mat\u00e9riel de campement dans une forge. Vous pouvez utiliser le mat\u00e9riel de campement pour b\u00e2tir un camp en pleine nature.\n\nDans le campement, vous pourrez dormir dans votre abri de fortune ou cuisiner un nombre limit\u00e9 de repas au-dessus du feu de camp.\n\nVotre lieu de campement est indiqu\u00e9 sur votre carte pour le retrouver facilement et utiliser le voyage rapide.\n\nVous ne pouvez b\u00e2tir qu'un camp \u00e0 la fois. B\u00e2tir un nouveau camp supprimera le camp pr\u00e9c\u00e9dent et le marqueur de votre campement sera mis \u00e0 jour."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingTutorialMsg",
+        "type": "MESG DESC",
+        "original": "Campsites allow you to rest and stay warm while exploring the wilderness. You can cook a limited number of meals over the campfire. Your campsite is marked on your map so you can locate and fast travel to it later.",
+        "string": "Les campements vous permettent de vous reposer et de vous prot\u00e9ger du froid quand vous partez en exploration. Vous pouvez cuisiner un nombre limit\u00e9 de repas au-dessus du feu de camp. Votre campement est indiqu\u00e9 sur votre carte pour le retrouver facilement et utiliser le voyage rapide."
+    }
+]

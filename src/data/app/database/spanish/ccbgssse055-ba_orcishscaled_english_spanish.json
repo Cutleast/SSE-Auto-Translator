@@ -1,0 +1,212 @@
+[
+    {
+        "editor_id": "ccBGSSSE055_ArmorBladesBoots",
+        "type": "ARMO FULL",
+        "original": "Orcish Scaled Boots",
+        "string": "Botas de escamas orcas"
+    },
+    {
+        "editor_id": "ccBGSSSE055_ArmorBladesGauntlets",
+        "type": "ARMO FULL",
+        "original": "Orcish Scaled Gauntlets",
+        "string": "Guanteletes de escamas orcos"
+    },
+    {
+        "editor_id": "ccBGSSSE055_ArmorBladesHelmet",
+        "type": "ARMO FULL",
+        "original": "Orcish Scaled Helmet",
+        "string": "Yelmo de escamas orco"
+    },
+    {
+        "editor_id": "ccBGSSSE055_ArmorBladesCuirass",
+        "type": "ARMO FULL",
+        "original": "Orcish Scaled Armor",
+        "string": "Armadura de escamas orca"
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "type": "QUST NNAM",
+        "original": "Search for a dossier at the Mistveil Keep Barracks",
+        "string": "Busca un informe en los cuarteles del basti\u00f3n del Velo Brumoso."
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "type": "QUST NNAM",
+        "original": "Retrieve the armor",
+        "string": "Recupera la armadura."
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "type": "QUST NNAM",
+        "original": "Read Antonius' Note",
+        "string": "Lee la nota de Antonius."
+    },
+    {
+        "editor_id": "ccBGSSSE055_LvlThalmorSpy",
+        "type": "NPC_ FULL",
+        "original": "Armor Collector",
+        "string": "Coleccionista de armaduras"
+    },
+    {
+        "editor_id": "ccBGSSSE055_GamblerDossier",
+        "type": "BOOK FULL",
+        "original": "Guard's Dossier: Antonius",
+        "string": "Informe del guardia: Antonius"
+    },
+    {
+        "editor_id": "ccBGSSSE055_ThalmorNote",
+        "type": "BOOK FULL",
+        "original": "Orders",
+        "string": "\u00d3rdenes"
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "type": "QUST NNAM",
+        "original": "Kill the collector",
+        "string": "Mata a la coleccionista."
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "type": "QUST NNAM",
+        "original": "(Optional) Intimidate or persuade the collector into leaving the city's protection",
+        "string": "(Opcional) Intimida o convence a la coleccionista para que deje la protecci\u00f3n de la ciudad."
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "type": "QUST NNAM",
+        "original": "Find Antonius in Cragslane Cavern",
+        "string": "Busca a Antonius en la caverna de la Senda del Risco."
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "type": "QUST FULL",
+        "original": "Gambler's Edge",
+        "string": "Ventaja del jugador"
+    },
+    {
+        "editor_id": "ccBGSSSE055_AntoniusNote",
+        "type": "BOOK FULL",
+        "original": "Antonius' Note",
+        "string": "Nota de Antonius"
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "type": "QUST NNAM",
+        "original": "Buy the armor from collector at the Bee and Barb",
+        "string": "Compra la armadura a la coleccionista en La abeja y el dardo."
+    },
+    {
+        "editor_id": "ccBGSSSE055_MiscQuest",
+        "type": "QUST NNAM",
+        "original": "Search for a dossier at the Mistveil Keep Barracks",
+        "string": "Busca un informe en los cuarteles del basti\u00f3n del Velo Brumoso."
+    },
+    {
+        "editor_id": "ccBGSSSE055_Bookv6",
+        "type": "BOOK FULL",
+        "original": "The Crimson Dirks, v6",
+        "string": "Las Dagas carmes\u00edes, v6"
+    },
+    {
+        "editor_id": "ccBGSSSE055_MatchingSet",
+        "type": "PERK FULL",
+        "original": "Matching Set",
+        "string": "Conjunto"
+    },
+    {
+        "editor_id": "ccBGSSSE055_OrcishSmithing",
+        "type": "PERK FULL",
+        "original": "Orcish Smithing",
+        "string": "Herrer\u00eda orca"
+    },
+    {
+        "editor_id": "CragslaneCavern01",
+        "type": "CELL FULL",
+        "original": "Cragslane Cavern",
+        "string": "Caverna de la Senda del Risco"
+    },
+    {
+        "editor_id": "RiftenBeeandBarb",
+        "type": "CELL FULL",
+        "original": "The Bee and Barb",
+        "string": "La abeja y el dardo"
+    },
+    {
+        "editor_id": "RiftenMistveilBarracks",
+        "type": "CELL FULL",
+        "original": "Mistveil Keep Barracks",
+        "string": "Cuarteles del basti\u00f3n del Velo Brumoso"
+    },
+    {
+        "editor_id": "ccBGSSSE055_ThalmorNote",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>\nIf the armor is verified as authentic, dispose of it and the target as you see fit. The guard would imprison him, but Antonius will die for what he did to my dear Allenia.\n\n-- A\n</font>",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\nSi se verifica que la armadura es aut\u00e9ntica, disp\u00f3n de ella y del objetivo como juzgues adecuado. El guardia lo querr\u00e1 encerrar, pero Antonius morir\u00e1 por lo que le hizo a mi querida Allenia.\n\n-- A\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "type": "QUST CNAM",
+        "original": "I've heard stories of former bandits living as fugitives across Tamriel. At the barracks in Riften, I found information on an Imperial wagering on the pit fights at Cragslane Cavern. ",
+        "string": "He o\u00eddo hablar sobre antiguos bandidos que viven como fugitivos por todo Tamriel. En los cuarteles de Riften he encontrado informaci\u00f3n sobre un imperial que apostaba en los fosos de pelea de la caverna de la Senda del Risco. "
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "type": "QUST CNAM",
+        "original": "I've heard stories of former bandits living as fugitives across Tamriel. At the barracks in Riften, I found information on an Imperial wagering on the pit fights at Cragslane Cavern. Unfortunately, the gambler was already dead by the time I arrived. It seems he incurred some debts, and sold his armor to a collector in Riften. I killed the collector in order to take the armor from her.",
+        "string": "He o\u00eddo hablar sobre antiguos bandidos que viven como fugitivos por todo Tamriel. En los cuarteles de Riften he encontrado informaci\u00f3n sobre un imperial que apostaba en los fosos de pelea de la caverna de la Senda del Risco. Desgraciadamente, el jugador ya estaba muerto cuando he llegado. Parece ser que se endeud\u00f3 y vendi\u00f3 su armadura a una coleccionista de Riften. He matado a la coleccionista para quitarle la armadura."
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "type": "QUST CNAM",
+        "original": "I've heard stories of former bandits living as fugitives across Tamriel. At the barracks in Riften, I found information on an Imperial wagering on the pit fights at Cragslane Cavern. Unfortunately, the gambler was already dead by the time I arrived. It seems he incurred some debts, and sold his armor to a collector in Riften. After some effort, I managed to get the custom armor from the collector.",
+        "string": "He o\u00eddo hablar sobre antiguos bandidos que viven como fugitivos por todo Tamriel. En los cuarteles de Riften he encontrado informaci\u00f3n sobre un imperial que apostaba en los fosos de pelea de la caverna de la Senda del Risco. Desgraciadamente, el jugador ya estaba muerto cuando he llegado. Parece ser que se endeud\u00f3 y vendi\u00f3 su armadura a una coleccionista de Riften. Con cierto esfuerzo he logrado obtener la armadura de la coleccionista."
+    },
+    {
+        "editor_id": "ccBGSSSE055_GamblerDossier",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\nStatus: Active (Capture or Kill), High Priority\n\nDescription: Antonius, Male, mid 70s\n\nBackground:\nAntonius is a former battlemage said to possess a highly analytical mind that is matched only by his more prurient inclinations. He is sought after by aristocrats in Firsthold for allegedly poisoning a court wizard named Allenia with skooma, although it's unclear if he did so maliciously or simply introduced her to the substance. After fleeing to Cyrodiil he joined the Crimson Dirks and advised them on the acquisition and smuggling of magical artifacts. \n\nBottled spirits and old age have made him less urgent of a target, but all members of the bandit clan are still considered high priority and should be captured or eliminated.\n\nOperational Notes:\nAntonius is believed to have a number of vices, most notably an addiction to gambling. Rather than search for him, it would be best to have a guardsman stationed near the pits where like-minded degenerates tend to gather. Cragslane Cavern is said to be thriving with activity as of late, and may be worth a look.\n</font>",
+        "string": "<font face='$HandwrittenFont'>\nEstado: activo (capturar o matar), prioridad elevada\n\nDescripci\u00f3n: Antonius, var\u00f3n, de unos 75 a\u00f1os\n\nAntecedentes:\nAntonius es un exmago guerrero de quien se dice que posee una mente enormemente anal\u00edtica, comparable solo a sus inclinaciones m\u00e1s salaces. Lo buscan ciertos arist\u00f3cratas de Primada, supuestamente por envenenar con skooma a una hechicera de la corte, aunque no est\u00e1 claro si lo hizo con intenciones p\u00e9rfidas o si simplemente le dio a conocer la sustancia. Tras huir a Cyrodiil, se uni\u00f3 a las Dagas carmes\u00edes y les sirvi\u00f3 como consejero para la adquisici\u00f3n y el contrabando de artefactos m\u00e1gicos.\n\nLa edad y la afici\u00f3n a los licores embotellados han hecho de \u00e9l un objetivo menos urgente, pero todos los bandidos del clan se consideran de alta prioridad, y se les debe capturar o eliminar.\n\nNotas operativas:\nSe cree que Antonius tiene varios vicios, de entre los que destaca su adicci\u00f3n al juego. En lugar de ir en su busca, lo mejor ser\u00eda apostar un guardia cerca de los fosos donde suelen reunirse los degenerados de este tipo. Al parecer, en la caverna de la Senda del Risco hay mucha actividad \u00faltimamente, y podr\u00eda valer la pena echar un vistazo.\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "type": "QUST CNAM",
+        "original": "I've heard stories of former bandits living as fugitives across Tamriel. At the barracks in Riften, I found information on an Imperial wagering on the pit fights at Cragslane Cavern. Unfortunately, the gambler was already dead by the time I arrived. It seems he incurred some debts, and sold his armor to a collector in Riften.",
+        "string": "He o\u00eddo hablar sobre antiguos bandidos que viven como fugitivos por todo Tamriel. En los cuarteles de Riften he encontrado informaci\u00f3n sobre un imperial que apostaba en los fosos de pelea de la caverna de la Senda del Risco. Desgraciadamente, el jugador ya estaba muerto cuando he llegado. Parece ser que se endeud\u00f3 y vendi\u00f3 su armadura a una coleccionista de Riften."
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "type": "QUST CNAM",
+        "original": "I've heard stories of former bandits living as fugitives across Tamriel. At the barracks in Riften, I found information on an Imperial wagering on the pit fights at Cragslane Cavern. Unfortunately, the gambler was already dead by the time I arrived.",
+        "string": "He o\u00eddo hablar sobre antiguos bandidos que viven como fugitivos por todo Tamriel. En los cuarteles de Riften he encontrado informaci\u00f3n sobre un imperial que apostaba en los fosos de pelea de la caverna de la Senda del Risco. Desgraciadamente, el jugador ya estaba muerto cuando he llegado."
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "type": "QUST CNAM",
+        "original": "I've heard stories of former bandits living as fugitives across Tamriel. Perhaps if I visit the guard barracks in Riften I might find some information on their whereabouts.",
+        "string": "He o\u00eddo hablar sobre antiguos bandidos que viven como fugitivos por todo Tamriel. Si visito los cuarteles de la guardia de Riften quiz\u00e1 encuentre informaci\u00f3n sobre su paradero."
+    },
+    {
+        "editor_id": "ccBGSSSE055_AntoniusNote",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\nYakhtu once told me I'd wager off my own mother if the odds were right. So it's probably no surprise to her that I lost her armor on a bet. \n\nWhat I would explain to the blacksmith, after she was done yelling at me, was that my plan was foolproof. \n\nI had in my coin purse a total of three hundred and twenty septims. My strategy was to wager ten pieces at a time. If I lost, my next bet would be ten pieces, to cover the last wager. If I lost again, I would wager twenty, and once again attempt to break even. If I lost a fourth time, I would wager forty, and so on. \n\nSo unless I lost six straight times, I'd always break even in the end. Well, ten straight losses later, I not only have no gold, but no armor and bed to sleep on. I must have slept with Zenithar's mother or something, not sure why he hates me so.\n\nAnyways, I sold the armor to some High Elf collector at the Bee and Barb. I should probably just kill her. I would kill the bandits running the pits, but then where would I get my fix.</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\nYakhtu me dijo una vez que ser\u00eda capaz de apostar a mi propia madre si creyese que podr\u00eda ganar. Por eso, probablemente no le sorprenda que haya perdido su armadura en una apuesta.\n\nLo que le explicar\u00eda a esa herrera cuando terminase de gritarme ser\u00eda que mi plan era infalible.\n\nLlevaba en el monedero un total de trescientos veinte septims. Mi estrategia era apostar de diez en diez. Si perd\u00eda, apostaba diez piezas para cubrir la \u00faltima apuesta. Si volv\u00eda a perder, apostaba veinte y volv\u00eda a intentarlo para recuperar lo perdido. Si perd\u00eda por cuarta vez, apostaba cuarenta, y as\u00ed.\n\nDe este modo, salvo que perdiese seis veces seguidas, siempre terminar\u00eda recuperando el dinero. Bien, pues despu\u00e9s de perder diez veces seguidas, no solo me qued\u00e9 sin oro, tambi\u00e9n sin armadura y sin cama en la que dormir.\n\nDe todas formas, le vend\u00ed la armadura a una coleccionista alta elfa en La abeja y el dardo. Deber\u00eda matarla. Matar\u00eda a los bandidos que llevan los fosos de apuestas, pero entonces no tendr\u00eda donde quitarme las ganas de jugar.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE055_Bookv6",
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\n<p align=\"center\">\n\n\nThe Crimson Dirks\nBook Six\n\n\nby \nGathers-the-Coin\n</p>\n\n\n\n[pagebreak]\n<p align=\"left\">\n<img src='img://Textures/Interface/Books/Illuminated_Letters/E_letter.png'>dward taught Antonius the game he learned in Elsweyr, as Casival, Ehlhiel and Zaharia joined them at the table. A cloth, stained with every conceivable color of wine and spirit, was placed over the top of the wood, allowing the bones and tiles to slide across its otherwise splintered face. While some of the rules were lost in translation, Edward knew enough for the game to function. Moreover, if he were to bend said rules to his favor, his opponents would be none the wiser.\n\n\"There are two types of games,\" Edward explained, laying the tiles out on the surface, \"those with perfect information, and those that are imperfect. Chess, for example, is a game with perfect information. We know each other's pieces and their placement on the board. Card games, on the other hand, are of the imperfect variety. We are each dealt a hand with a set value, and must divine, through whatever means are available to us, who has the better of it.\"\n\n\"And which type do you prefer?\" asked Casival.\n\n\"I prefer to know who and what I'm dealing with,\" replied Edward, \"but at the same time, I know the more practical skill is to play games where the information is imperfect. After all, that is how the world around us is played.\"\n\n\"I wasn't aware life was a game,\" said Ehlhiel, \"because if so, I need to find a better way to cheat.\"\n\n\"Don't be so modest,\" replied Edward, raking in another pot, \"I think you're doing just fine. The same can't be said for our friend Antonius here.\"\n\n\"I only lost because you distracted me,\" barked Antonius, \"with that inhaling and exhaling thing you do with your nose.\"\n\n\"Do you mean breathing?\" asked Edward.\n\n\"Yes, that.\"\n\nAs a careful study of others, Casival understood the gist of Edward's speech. There were layers beyond what faces advertised. Edward, for instance, used his charm and intellect like a sword, his sly demeanor having a purpose that disarmed his opponents. Ehlhiel, on the other hand, wore his humor like armor, deflecting any inkling of emotion or motive. Zaharia, for all her straightforwardness, was also passionate and sincere, making her prone to falling victim to her temper. Even Antonius, for all his inebriation, was a skilled hedge mage, and one wondered at times if his drunkenness was merely a performance that allowed people to excuse his worst impulses. \n\nThe same rules applied to the crew as a whole. The less that was known about the bandits - the more imperfect the information - the better their chance of survival. Their enemies would always hold the better cards. The only way to win was to bluff.\n\nIt's for this reason Casival was uneasy about the last job. They had purchased a building near a warehouse, tunneling into it and stealing the goods. The plan was solid and the profit healthy, but it was the target that worried him still, even now after it was complete. After all, unlike some enterprises, the East Empire Company was a machine that counted every coin to its last, and weighed every commodity to the gram. Their employees were punctual, their accountants circumspect, and their ledgers pristine. They would identify precisely what goods were stolen, and investigate thoroughly the time and manner of the theft. \n\nThus it weighed heavy on his mind when the forger who purchased the building next to the warehouse had not responded to his last letter. Casival wrote the missive posing as a concerned relative, not wishing to betray any secrets lest the forger had been compromised. Another concern was news that the Company had enlisted the help of the local guard captains, in an effort to pool their information. With the added protection, caravans had been harder to sack. And with a more watchful eye on merchants, goods had been much harder to smuggle. As it turned out, it was possible to rob from the East Empire Company, but not without revealing some of their cards. \n\n\"Did you know that Pale-Eyes can sing?\" Ehlhiel said, much to everyone's surprise.\n\n\"Is that a joke?\" asked Zaharia, somewhat surprised.\n\n\"I'm being serious, he's actually better than most bards,\" Ehlhiel replied, for once completely sincere, \"Trust me, it shocked me more than anything. I wasn't even aware Argonians could even make that kind of noise, let alone do it on key.\"\n\nCasival laughed at the thought of the shy Argonian melodically strumming his lute. Even after he thought he'd learned everything there was to know about the others, they were always surprising him in strange and interesting ways. Perhaps the same could be said about their current predicament. So long as they were free, it meant whatever information their pursuers had was still imperfect. \n\nThe bandits had revealed much of their cards already, but hopefully, they had yet to give away their entire hand. ",
+        "string": "[pagebreak]\n<p align=\"center\">\n\n\nLas Dagas carmes\u00edes\nLibro seis\n\n\nde \nRecolector de Moneda\n</p>\n\n\n\n[pagebreak]\n<p align=\"left\">\n<img src='img://Textures/Interface/Books/Illuminated_Letters/E_letter.png'>dward ense\u00f1\u00f3 a Antonius el juego que hab\u00eda aprendido en Elsweyr mientras Casival, Ehlhiel y Zaharia se sentaban en la mesa con ellos. Sobre la madera astillada colocaron un tapete, cubierto de manchas de vino y licor de todos los colores, para poder deslizar los huesos y las fichas. Aunque al tratarse de otro idioma, algunas de las reglas no quedaban claras, Edward sab\u00eda lo suficiente como para poder jugar una partida. Adem\u00e1s, si cambiase las reglas a su favor, sus rivales no se iban a enterar.\n\n\"Hay dos tipos de juegos\", les explic\u00f3 Edward, disponiendo las fichas sobre la superficie. \"Juegos con informaci\u00f3n perfecta y juegos con informaci\u00f3n imperfecta. El ajedrez, por ejemplo, es un juego con informaci\u00f3n perfecta. Sabemos qu\u00e9 piezas tiene el otro, y d\u00f3nde se colocan en el tablero. Los juegos de cartas, por otro lado, son del tipo imperfecto. A todos se nos reparte una mano con un valor determinado y debemos dilucidar como podamos qui\u00e9n tiene la mejor\".\n\n\"\u00bfY qu\u00e9 tipo prefieres t\u00fa?\", pregunt\u00f3 Casival.\n\n\"Yo prefiero saber a qui\u00e9n y qu\u00e9 me enfrento\", contest\u00f3 Edward. \"Pero a la vez, s\u00e9 que lo m\u00e1s pr\u00e1ctico es saber jugar a juegos en los que la informaci\u00f3n es imperfecta. Despu\u00e9s de todo, as\u00ed es como funciona el mundo que nos rodea\".\n\n\"No sab\u00eda que la vida fuese un juego\", dijo Ehlhiel. \"Si es as\u00ed, tengo que encontrar una forma mejor de hacer trampas\".\n\n\"No seas tan modesto\", le contest\u00f3 Edward mientras volv\u00eda a recoger sus ganancias. \"Creo que lo haces estupendamente. No puedo decir lo mismo de nuestro amigo Antonius\".\n\n\"He perdido porque me has distra\u00eddo\", replic\u00f3 Antonius enfadado. \"Es eso que haces de inhalar y exhalar con la nariz\".\n\n\"\u00bfQuieres decir respirar?\", pregunt\u00f3 Edward.\n\n\"S\u00ed, eso\".\n\nTras examinar cuidadosamente a los dem\u00e1s, Casival comprendi\u00f3 lo que quer\u00eda decir Edward. Hab\u00eda m\u00e1s capas por debajo de lo que dejaban ver los rostros. Edward, por ejemplo, usaba su encanto y su inteligencia como una espada, y hac\u00eda gala de su astucia para desarmar a sus rivales. Ehlhiel, por otra parte, usaba el humor como armadura para protegerse de cualquier asomo de emoci\u00f3n o motivaci\u00f3n. Con toda su franqueza, Zaharia era apasionada y sincera, y era f\u00e1cil que se dejase traicionar por su mal car\u00e1cter. Incluso Antonius, por mucho que bebiese, era un h\u00e1bil mago, y a veces parec\u00eda que solo se hac\u00eda el borracho para que la gente disculpase sus peores instintos.\n\nLas mismas reglas eran aplicables a la banda en conjunto. Cuanto menos se supiese sobre los bandidos (cuanto m\u00e1s imperfecta fuese la informaci\u00f3n), m\u00e1s probabilidades tendr\u00edan de sobrevivir. Sus enemigos siempre tendr\u00edan cartas mejores. La \u00fanica forma de ganar era echando faroles.\n\nPor ese motivo, Casival no estaba tranquilo con su \u00faltimo trabajo. Hab\u00edan comprado un edificio cerca de un almac\u00e9n, hab\u00edan cavado un t\u00fanel y hab\u00edan robado la mercanc\u00eda. El plan no ten\u00eda fallos y las ganancias fueron abundantes, pero lo que segu\u00eda inquiet\u00e1ndole era su v\u00edctima, incluso despu\u00e9s de haber terminado la tarea. Despu\u00e9s de todo, a diferencia de otras empresas, la Compa\u00f1\u00eda del Imperio Oriental era una m\u00e1quina que contabilizaba hasta la \u00faltima moneda y pesaba todas sus mercanc\u00edas hasta el \u00faltimo gramo. Sus empleados eran puntuales, sus contables, discretos y sus libros de cuentas, impecables. Identificar\u00edan exactamente qu\u00e9 art\u00edculos se hab\u00edan robado e investigar\u00edan a fondo cu\u00e1ndo y c\u00f3mo se produjo el robo.\n\nPor eso le preocup\u00f3 profundamente que el falsificador que compr\u00f3 el edificio junto al almac\u00e9n no contestase a su \u00faltima carta. Casival la escribi\u00f3 haci\u00e9ndose pasar por un familiar preocupado, no queriendo revelar ning\u00fan secreto por si hubieran descubierto al falsificador. Tambi\u00e9n le preocupaba la noticia de que la Compa\u00f1\u00eda hab\u00eda pedido ayuda a los capitanes de la guardia de la ciudad para poner en com\u00fan la informaci\u00f3n de la que dispon\u00edan. Con esta protecci\u00f3n adicional, las caravanas resultaban m\u00e1s dif\u00edciles de saquear. Y al estar m\u00e1s vigilados los mercaderes, era mucho m\u00e1s dif\u00edcil mover la mercanc\u00eda. Result\u00f3 que se pod\u00eda robar a la Compa\u00f1\u00eda del Imperio Oriental, pero no sin ense\u00f1ar algunas de sus cartas.\n\n\"\u00bfSab\u00edais que Ojos P\u00e1lidos sabe cantar?\", dijo Ehlhiel para sorpresa de todo el mundo.\n\n\"\u00bfEst\u00e1s de broma?\", pregunt\u00f3 Zaharia, algo sorprendida.\n\n\"Lo digo en serio, la verdad es que lo hace mejor que muchos bardos\", contest\u00f3 Ehlhiel, siendo totalmente sincero por una vez. \"El primer sorprendido he sido yo. Ni siquiera sab\u00eda que los argonianos pudiesen hacer esa clase de ruido, y mucho menos hacerlo afinando\".\n\nCasival se rio al imaginar al t\u00edmido argoniano rasgueando mel\u00f3dicamente su la\u00fad. Cuando ya pensaba que sab\u00eda todo lo que hab\u00eda que saber sobre los dem\u00e1s, siempre le sorprend\u00edan con cosas extra\u00f1as e interesantes. Quiz\u00e1 pudiese decirse lo mismo sobre su situaci\u00f3n en aquel momento. Mientras fuesen libres, cualquier informaci\u00f3n de que dispusiesen sus perseguidores seria a\u00fan imperfecta.\n\nLos bandidos ya hab\u00edan dejado ver muchas de sus cartas, pero ten\u00eda la esperanza de que a\u00fan no hubieran mostrado toda la mano. "
+    },
+    {
+        "editor_id": "ccBGSSSE055_OrcishSmithing",
+        "type": "PERK DESC",
+        "original": "Can create Orcish armor and weapons at forges, and improve them twice as much.",
+        "string": "Permite crear armaduras y armas orcas en las forjas, y mejorarlas el doble."
+    },
+    {
+        "editor_id": "ccBGSSSE055_MatchingSet",
+        "type": "PERK DESC",
+        "original": "Additional 25% Armor bonus if wearing a matched set of Light Armor.",
+        "string": "25% de bonificaci\u00f3n adicional a la armadura si se lleva un conjunto completo de armadura ligera."
+    }
+]

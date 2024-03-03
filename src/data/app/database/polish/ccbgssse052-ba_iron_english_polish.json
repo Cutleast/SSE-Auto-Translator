@@ -1,0 +1,176 @@
+[
+    {
+        "editor_id": "ccBGSSSE052_ArmorBladesCuirass",
+        "type": "ARMO FULL",
+        "original": "Iron Plate Armor",
+        "string": "\u017belazna zbroja p\u0142ytowa"
+    },
+    {
+        "editor_id": "ccBGSSSE052_ArmorBladesBoots",
+        "type": "ARMO FULL",
+        "original": "Iron Plate Boots",
+        "string": "\u017belazne buty p\u0142ytowe"
+    },
+    {
+        "editor_id": "ccBGSSSE052_ArmorBladesHelmet",
+        "type": "ARMO FULL",
+        "original": "Iron Plate Helmet",
+        "string": "\u017belazny he\u0142m p\u0142ytowy"
+    },
+    {
+        "editor_id": "ccBGSSSE052_ArmorBladesGauntlets",
+        "type": "ARMO FULL",
+        "original": "Iron Plate Gauntlets",
+        "string": "\u017belazne r\u0119kawice p\u0142ytowe"
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the Undercover Guard's Journal",
+        "string": "Przeczytaj dziennik gwardzisty incognito."
+    },
+    {
+        "editor_id": "ccBGSSSE052_PaleEyes",
+        "type": "NPC_ FULL",
+        "original": "Pale-Eyes",
+        "string": "Blade Oko"
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST FULL",
+        "original": "Brothers in Irons",
+        "string": "\u017belazni bracia"
+    },
+    {
+        "editor_id": "ccBGSSSE052_Journal",
+        "type": "BOOK FULL",
+        "original": "Pale-Eyes' Journal",
+        "string": "Dziennik Bladego Oka"
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST NNAM",
+        "original": "Look for a note at the Nightgate Inn",
+        "string": "Poszukaj notatki w Gospodzie Przy Nocnej Bramie."
+    },
+    {
+        "editor_id": "ccBGSSSE052_Note",
+        "type": "BOOK FULL",
+        "original": "Nightgate Inn Patron's Note",
+        "string": "Notatka go\u015bcia Gospody Przy Nocnej Bramie"
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST NNAM",
+        "original": "Search the barrel behind Nightgate Inn",
+        "string": "Znajd\u017a beczu\u0142k\u0119 za Gospod\u0105 Przy Nocnej Bramie."
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST NNAM",
+        "original": "Inspect the body",
+        "string": "Zbadaj cia\u0142o."
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST NNAM",
+        "original": "Investigate the camp site near the northern coast",
+        "string": "Zbadaj obozowisko przy p\u00f3\u0142nocnym wybrze\u017cu."
+    },
+    {
+        "editor_id": "ccBGSSSE052_ThalmorJournal",
+        "type": "BOOK FULL",
+        "original": "Undercover Guard's Journal",
+        "string": "Dziennik gwardzisty incognito"
+    },
+    {
+        "editor_id": "ccBGSSSE052_MiscQuest",
+        "type": "QUST NNAM",
+        "original": "Look for a note at the Nightgate Inn",
+        "string": "Poszukaj notatki w Gospodzie Przy Nocnej Bramie."
+    },
+    {
+        "editor_id": "ccBGSSSE052_ArmorBladesBootsEnchanted",
+        "type": "ARMO FULL",
+        "original": "Iron Plate Boots",
+        "string": "\u017belazne buty p\u0142ytowe"
+    },
+    {
+        "editor_id": "ccBGSSSE052_ArmorBladesGauntletsEnchanted",
+        "type": "ARMO FULL",
+        "original": "Iron Plate Gauntlets",
+        "string": "\u017belazne r\u0119kawice p\u0142ytowe"
+    },
+    {
+        "editor_id": "ccBGSSSE052_ArmorBladesCuirassEnchanted",
+        "type": "ARMO FULL",
+        "original": "Iron Plate Armor",
+        "string": "\u017belazna zbroja p\u0142ytowa"
+    },
+    {
+        "editor_id": "ccBGSSSE052_ArmorBladesHelmetEnchanted",
+        "type": "ARMO FULL",
+        "original": "Iron Plate Helmet",
+        "string": "\u017belazny he\u0142m p\u0142ytowy"
+    },
+    {
+        "editor_id": "NightgateInn",
+        "type": "CELL FULL",
+        "original": "Nightgate Inn",
+        "string": "Gospoda Przy Nocnej Bramie"
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST CNAM",
+        "original": "At Nightgate Inn, I found a journal written by an undercover guard that indicated a wanted criminal was camping out west of Northwatch Keep. By the time I arrived, he had already been killed by the Thalmor agents. After dealing with the Thalmor, I retrieved the journal from his body.",
+        "string": "W Gospodzie Przy Nocnej Bramie znajdowa\u0142 si\u0119 dziennik napisany przez gwardzist\u0119 incognito. Pono\u0107 poszukiwany przest\u0119pca obozowa\u0142 na zach\u00f3d od Fortecy P\u00f3\u0142nocnej Stra\u017cnicy. Przed moim przybyciem zosta\u0142 ju\u017c zabity przez thalmorskich agent\u00f3w. Uda\u0142o mi si\u0119 rozprawi\u0107 z Thalmorczykami i pozyska\u0107 dziennik le\u017c\u0105cy przy ciele przest\u0119pcy."
+    },
+    {
+        "editor_id": "ccBGSSSE052_ThalmorJournal",
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\n<font face='$HandwrittenFont'>\n4E 201, 18 Sun's Height\nI've been asked to investigate rumors that one of the inns to the west is providing refuge for bandits. Several carriages traveling to Windhelm have gone missing as of late and the captain feels it may be related to the Crimson Dirks. I have some business to finish in Solitude but it shouldn't take longer than a week.\n\n4E 201, 25 Sun's Height\nWhile the patrons at Nightgate Inn were uncooperative and brusque, I don't believe any of them are bandits. I've asked our informant to travel to the inn to confirm, but in the meantime I will continue monitoring their behavior.\n[pagebreak]\n4E 201, 16 Last Seed\nThe Bosmer did not recognize the Nord, although I vacillate on whether I trust his opinion. I pointed out that it has been months since he has provided any actionable intelligence on his former cohorts. In response, he conveniently gave up the location of the Argonian bandit, Pale-Eyes, information I feel he has been holding on to for some time.\n\nFor now, the Bosmer remains an asset, but any information he provides should be vetted thoroughly. Supposedly, the Argonian is camped on the shoreline, west of Northwatch Keep. We can alert our Thalmor friends to take care of the matter. They won't like having a wanted criminal loitering so close to their stronghold.\n\nIn the meantime, I will leave my documentation here in the event further surveillance is needed on the inn patrons. </font>",
+        "string": "[pagebreak]\n<font face='$HandwrittenFont'>\n4E 201, 18 Pe\u0142ni S\u0142o\u0144ca\nPoproszono mnie o zbadanie pog\u0142osek, jakoby jedna z karczm na zachodzie by\u0142a schronieniem dla bandyt\u00f3w. Ostatnio zagin\u0119\u0142o kilka woz\u00f3w zmierzaj\u0105cych do Wichrowego Tronu, a kapitan uwa\u017ca, \u017ce mo\u017ce to mie\u0107 zwi\u0105zek ze Szkar\u0142atnymi Sztyletami. Mam jedn\u0105 spraw\u0119 do za\u0142atwienia w Samotni, ale nie powinno mi to zaj\u0105\u0107 wi\u0119cej ni\u017c tydzie\u0144.\n\n4E 201, 25 Pe\u0142ni S\u0142o\u0144ca\nCho\u0107 stali bywalcy Gospody Przy Nocnej Bramie nie chcieli wsp\u00f3\u0142pracowa\u0107 i byli dosy\u0107 opryskliwi, raczej \u017caden z nich nie jest bandyt\u0105. Jeden z naszych informator\u00f3w ma wyruszy\u0107 do gospody i jeszcze to potwierdzi\u0107, a ja tymczasem zamierzam bacznie obserwowa\u0107 ich zachowanie.\n[pagebreak]\n4E 201, 16 Ostatniego Siewu\nBosmer nie rozpozna\u0142 norda, cho\u0107 nie wiem, czy mog\u0119 wierzy\u0107 jego opinii. Pad\u0142a moja uwaga, \u017ce od wielu miesi\u0119cy nie dostarczy\u0142 \u017cadnych wa\u017cnych informacji na temat swoich by\u0142ych kamrat\u00f3w. Po takim postawieniu sprawy, szybko wyjawi\u0142 miejsce pobytu argo\u0144skiego bandyty, Bladego Oka. Wygl\u0105da na to, \u017ce czeka\u0142 z t\u0105 informacj\u0105 od d\u0142u\u017cszego czasu.\n\nP\u00f3ki co, Bosmer pozostaje dobrym \u017ar\u00f3d\u0142em informacji, ale warto je dok\u0142adnie sprawdza\u0107. Pono\u0107 Argonianin obozuje przy brzegu morza, na zach\u00f3d od Fortecy P\u00f3\u0142nocnej Stra\u017cnicy. Mo\u017cemy powiadomi\u0107 naszych thalmorskich przyjaci\u00f3\u0142, aby zaj\u0119li si\u0119 t\u0105 spraw\u0105. Nie spodoba im si\u0119, \u017ce poszukiwany przest\u0119pca hasa sobie w pobli\u017cu ich twierdzy.\n\nTymczasem zostawiam tutaj ca\u0142\u0105 dokumentacj\u0119, w razie gdyby potrzebna by\u0142a dalsza obserwacja bywalc\u00f3w gospody. </font>"
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST CNAM",
+        "original": "At Nightgate Inn, I found a journal written by an undercover guard that indicated a wanted criminal was camping out west of Northwatch Keep. I should head out there and see what I can find.",
+        "string": "W Gospodzie Przy Nocnej Bramie znajdowa\u0142 si\u0119 dziennik napisany przez gwardzist\u0119 incognito. Pono\u0107 poszukiwany przest\u0119pca obozowa\u0142 na zach\u00f3d od Fortecy P\u00f3\u0142nocnej Stra\u017cnicy. Musz\u0119 tam wyruszy\u0107 i zobaczy\u0107, co uda mi si\u0119 znale\u017a\u0107."
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST CNAM",
+        "original": "I've heard rumors about mysterious patrons passing through Nightgate Inn. I found a note written by someone who stayed at the lodge.",
+        "string": "Dosz\u0142y do mnie pog\u0142oski dotycz\u0105ce tajemniczych go\u015bci Gospody Przy Nocnej Bramie. Kto\u015b, kto tam nocowa\u0142, pozostawi\u0142 notatk\u0119."
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST CNAM",
+        "original": "I've heard rumors about mysterious patrons passing through Nightgate Inn. Perhaps I should pay the inn a visit and see what I can uncover.",
+        "string": "Dosz\u0142y do mnie pog\u0142oski dotycz\u0105ce tajemniczych go\u015bci Gospody Przy Nocnej Bramie. Mo\u017ce warto tam zajrze\u0107 i sprawdzi\u0107, co si\u0119 dzieje."
+    },
+    {
+        "editor_id": "ccBGSSSE052_Note",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='20'>\nI just want to talk about this amazing inn, and how great the service is. The innkeeper is a kind, helpful host, who is so effortless in his laziness that he didn't bother to read past this point.\n\nThat's right, this inn is the worst. The literal worst. Of course, even if you can get past the bad service, the garbage food, and the ghost living downstairs, they're also bloody traitors! \n\nNot only do they rent to filthy Elves, I spotted one of them hide something in a barrel out back. I'd grab it myself, but it's probably covered in some disgusting Elven disease that would take nine of the world's greatest alchemists and a human sacrifice to cure. \n\nIf I weren't a wanted man, I'd burn down the barrel along with this sorry excuse for an inn. For now, this letter will have to do.</font>",
+        "string": "<font face='$HandwrittenFont'><font size='20'>\nChc\u0119 jedynie wspomnie\u0107 o tej niesamowitej karczmie i jej wy\u015bmienitej obs\u0142udze. Karczmarz jest uprzejmym, pomocnym gospodarzem, a lenistwo przychodzi mu tak naturalnie, \u017ce na pewno nie zada\u0142 sobie trudu, aby doczyta\u0107 do tego miejsca.\n\nTak jest, ta karczma jest najgorsza. Dos\u0142ownie - najgorsza. A kiedy ju\u017c cz\u0142owiek prze\u017cyje fataln\u0105 obs\u0142ug\u0119, \u015bmieciow\u0105 straw\u0119 i ducha mieszkaj\u0105cego na dole, oka\u017ce si\u0119, \u017ce to parszywi zdrajcy! \n\nNie tylko wynajmuj\u0105 pokoje plugawym elfom, ale jeden z nich kryje co\u015b w beczu\u0142ce na ty\u0142ach gospody. Wol\u0119 nie sprawdza\u0107, pewnie jest zapaskudzona jak\u0105\u015b ohydn\u0105 elfi\u0105 chorob\u0105. \u017beby j\u0105 wyleczy\u0107, potrzebnych by\u0142oby dziewi\u0119ciu najwi\u0119kszych alchemik\u00f3w na \u015bwiecie i ofiara z cz\u0142owieka. \n\nGdyby nie to, \u017ce mnie \u015bcigaj\u0105, ta beczu\u0142ka i ca\u0142a \u017ca\u0142osna karczma ju\u017c dawno zosta\u0142yby przeze mnie spalone. Na razie musi wystarczy\u0107 ten list.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST CNAM",
+        "original": "At Nightgate Inn, I found a journal written by an undercover guard that indicated a wanted criminal was camping out west of Northwatch Keep. At the camp, I encountered three Justiciars.",
+        "string": "W Gospodzie Przy Nocnej Bramie znajdowa\u0142 si\u0119 dziennik napisany przez gwardzist\u0119 incognito. Pono\u0107 poszukiwany przest\u0119pca obozowa\u0142 na zach\u00f3d od Fortecy P\u00f3\u0142nocnej Stra\u017cnicy. W obozie znajdowa\u0142a si\u0119 tr\u00f3jka justycjariuszy."
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST CNAM",
+        "original": "I've heard rumors about mysterious patrons passing through Nightgate Inn. Once I arrived, I found a note on the counter that implied an Elf patron left something in a barrel behind the inn.",
+        "string": "Dosz\u0142y do mnie pog\u0142oski dotycz\u0105ce tajemniczych go\u015bci Gospody Przy Nocnej Bramie. Uda\u0142o mi si\u0119 tam dotrze\u0107 i odnale\u017a\u0107 na ladzie notatk\u0119 wskazuj\u0105c\u0105, \u017ce jeden z go\u015bci, elf, zostawi\u0142 co\u015b w beczu\u0142ce za gospod\u0105."
+    },
+    {
+        "editor_id": "ccBGSSSE052_Journal",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" Size=\"20\">\nThe water does not lie. Every morning I stare at my reflection, and feel myself returning to the Hist. \n\nWhen the smoke is thick, ours is to think back to the day I met Ehlhiel for the first time, when Peladius tried to make warriors of the new recruits.\n\nWith no coin for armor, I covered myself in pots and pans I found lying around the campfire, determined not to fall behind. But while the others laughed, the Bosmer thought me clever, and from that day on, the two of us were inseparable.\n\nYears later, on my hatch day, Ehlhiel gave me my first set of armor. He had the Orc forge one out of iron, in honor of the cast iron pot I wore on my head the first time we sparred. In return, I made the Bosmer an egg-brother, and vowed that I would protect him as if he were my own kin. \n\nThus when Ehlhiel confessed to what he had done, I did not tell a soul. I will protect my egg-brother until the end.",
+        "string": "<font face=\"$HandwrittenFont\" Size=\"20\">\nWoda nie k\u0142amie. Ka\u017cdego ranka patrz\u0119 w swoje odbicie i czuj\u0119, \u017ce chc\u0119 wr\u00f3ci\u0107 do Hist\u00f3w. \n\nKiedy dym jest g\u0119sty, my\u015bl\u0119 o dniu, w kt\u00f3rym po raz pierwszy by\u0142o mi dane spotka\u0107 Ehlhiela, gdy Peladius pr\u00f3bowa\u0142 zrobi\u0107 wojownik\u00f3w z nowych rekrut\u00f3w.\n\nBez pieni\u0119dzy czy pancerza przysz\u0142o mi si\u0119 zabezpieczy\u0107 garnkami i patelniami, le\u017c\u0105cymi wok\u00f3\u0142 ogniska. Nie by\u0142o mowy, \u017ceby pozosta\u0107 w tyle. Inni si\u0119 \u015bmiali, ale ten Bosmer uzna\u0142, \u017ce to ca\u0142kiem sprytne, i od tej chwili byli\u015bmy nieroz\u0142\u0105czni.\n\nWiele lat p\u00f3\u017aniej, w dniu wyklucia, Ehlhiel da\u0142 mi m\u00f3j pierwszy zestaw zbroi. Poprosi\u0142 orka o wykucie go z \u017celaza, aby przypomina\u0142 \u017celazny garnek, kt\u00f3ry znajdowa\u0142 si\u0119 na mojej g\u0142owie podczas naszej pierwszej walki \u0107wiczebnej. Bosmer sta\u0142 si\u0119 moim bratem z jaja - b\u0119d\u0119 go broni\u0107, jakby pochodzi\u0142 z mojego narodu. \n\nKiedy wi\u0119c Ehlhiel zwierzy\u0142 si\u0119 ze swych uczynk\u00f3w, moje usta pozosta\u0142y zamkni\u0119te. B\u0119d\u0119 broni\u0107 swego brata z jaja a\u017c do samego ko\u0144ca."
+    }
+]

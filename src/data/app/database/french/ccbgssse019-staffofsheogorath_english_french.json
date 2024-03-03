@@ -1,0 +1,212 @@
+[
+    {
+        "editor_id": "ccBGSSSE019_ForkofHorripilation",
+        "type": "WEAP FULL",
+        "original": "Fork of Horripilation",
+        "string": "Fourchette d'Horripilation"
+    },
+    {
+        "editor_id": "ccBGSSSE019_StaffOfSheogorath",
+        "type": "WEAP FULL",
+        "original": "Staff of Sheogorath",
+        "string": "B\u00e2ton de Sh\u00e9ogorath"
+    },
+    {
+        "editor_id": "ccBGSSSE019_ccStaffOfSheogorathEffectAimed",
+        "type": "MGEF FULL",
+        "original": "Paralyze",
+        "string": "Paralysie"
+    },
+    {
+        "editor_id": "ccBGSSSE019_ccStaffOfSheogorathEffectAimed",
+        "type": "MGEF DNAM",
+        "original": "Targets that fail to resist are paralyzed for <dur> seconds.",
+        "string": "Les cibles qui ne parviennent pas \u00e0 r\u00e9sister sont paralys\u00e9es pendant <dur> secondes."
+    },
+    {
+        "editor_id": "ccBGSSSE019_StafFParalyze_Ench",
+        "type": "ENCH FULL",
+        "original": "Staff of Sheogorath Paralysis",
+        "string": "B\u00e2ton de Sh\u00e9ogorath - Paralysie"
+    },
+    {
+        "editor_id": "ccBGSSSE019_DLC2EncNetchBull_Special",
+        "type": "NPC_ FULL",
+        "original": "Bull Netch",
+        "string": "Netch m\u00e2le"
+    },
+    {
+        "editor_id": "ccBGSSSE019_BullNetchReduceDamageOutput",
+        "type": "PERK FULL",
+        "original": "Reduce Damage",
+        "string": "R\u00e9duction de d\u00e9g\u00e2ts"
+    },
+    {
+        "editor_id": "ccBGSSSE019_BullNetchWeaknessToFork",
+        "type": "PERK FULL",
+        "original": "Weakness to Fork",
+        "string": "Faiblesse \u00e0 la Fourchette"
+    },
+    {
+        "editor_id": "ccBGSSSE019_StaffOfSheogorathQuest",
+        "type": "QUST NNAM",
+        "original": "Travel to Solstheim",
+        "string": "Allez \u00e0 Solstheim"
+    },
+    {
+        "editor_id": "ccBGSSSE019_StaffOfSheogorathQuest",
+        "type": "QUST NNAM",
+        "original": "Investigate the Retching Netch",
+        "string": "Enqu\u00eatez sur le Netch \u00e9m\u00e9ch\u00e9"
+    },
+    {
+        "editor_id": "ccBGSSSE019_StaffOfSheogorathQuest",
+        "type": "QUST NNAM",
+        "original": "Craft the Staff of Sheogorath",
+        "string": "Fabriquez le B\u00e2ton de Sh\u00e9ogorath"
+    },
+    {
+        "editor_id": "ccBGSSSE019_ForkApplyPerk",
+        "type": "MGEF FULL",
+        "original": "Fork of Horripilation",
+        "string": "Fourchette d'Horripilation"
+    },
+    {
+        "editor_id": "ccBGSSSE019_ForkOfHorripilationENCH",
+        "type": "ENCH FULL",
+        "original": "Fork of Horripilation",
+        "string": "Fourchette d'Horripilation"
+    },
+    {
+        "editor_id": "ccBGSSSE019_BranchOfTreeOfShades_NonPlayable",
+        "type": "MISC FULL",
+        "original": "Branch of the Tree of Shades",
+        "string": "Branche de l'Arbre des Ombres"
+    },
+    {
+        "editor_id": "ccBGSSSE019_StaffOfSheogorathQuest",
+        "type": "QUST NNAM",
+        "original": "Obtain the Eye of Ciirta",
+        "string": "Obtenez l'Oeil de Ciirta"
+    },
+    {
+        "editor_id": "ccBGSSSE019_CiirtasEye_NonPlayable",
+        "type": "MISC FULL",
+        "original": "Ciirta's Eye",
+        "string": "Oeil de Ciirta"
+    },
+    {
+        "editor_id": "ccBGSSSE019_ForkApplyPerkSpell",
+        "type": "SPEL FULL",
+        "original": "Fork of Horripilation Netch Damage",
+        "string": "Fourchette d'Horripilation - D\u00e9g\u00e2ts aux netchs"
+    },
+    {
+        "editor_id": "ccBGSSSE019_StaffOfSheogorathQuest",
+        "type": "QUST NNAM",
+        "original": "Obtain the Branch of the Tree of Shades",
+        "string": "Obtenez la branche de l'Arbre des Ombres"
+    },
+    {
+        "editor_id": "ccBGSSSE019_StaffOfSheogorathQuest",
+        "type": "QUST NNAM",
+        "original": "Take the Fork of Horripilation",
+        "string": "Prenez la Fourchette d'Horripilation."
+    },
+    {
+        "editor_id": "ccBGSSSE019_CiirtasEye",
+        "type": "MISC FULL",
+        "original": "Ciirta's Eye",
+        "string": "Oeil de Ciirta"
+    },
+    {
+        "editor_id": "ccBGSSSE019_SheogorathNote01",
+        "type": "BOOK FULL",
+        "original": "Mysterious Note",
+        "string": "Note myst\u00e9rieuse"
+    },
+    {
+        "editor_id": "ccBGSSSE019_BranchOfTreeOfShades",
+        "type": "MISC FULL",
+        "original": "Branch of the Tree of Shades",
+        "string": "Branche de l'Arbre des Ombres"
+    },
+    {
+        "editor_id": "ccBGSSSE019_ForkApplyAbility",
+        "type": "MGEF FULL",
+        "original": "Fork of Horripilation",
+        "string": "Fourchette d'Horripilation"
+    },
+    {
+        "editor_id": "ccBGSSSE019_StaffOfSheogorathQuest",
+        "type": "QUST FULL",
+        "original": "Put A Fork In It",
+        "string": "Un bon coup de fourchette"
+    },
+    {
+        "editor_id": "ccBGSSSE019_EnchSheoStaffExplosionSecondary",
+        "type": "ENCH FULL",
+        "original": "Staff of Sheogorath Paralysis",
+        "string": "Carapace de cendres"
+    },
+    {
+        "editor_id": "DLC2RRTheRetchingNetch",
+        "type": "CELL FULL",
+        "original": "The Retching Netch",
+        "string": "Le Netch \u00e9m\u00e9ch\u00e9"
+    },
+    {
+        "editor_id": "DawnstarWindpeakInn",
+        "type": "CELL FULL",
+        "original": "Windpeak Inn",
+        "string": "Auberge Montvent"
+    },
+    {
+        "editor_id": "ccBGSSSE019_StaffOfSheogorathQuest",
+        "type": "QUST CNAM",
+        "original": "There's something waiting for me in Raven Rock, I should see what it is.",
+        "string": "Quelque chose m\u2019attend \u00e0 Corberoc, je devrais aller voir ce que c\u2019est."
+    },
+    {
+        "editor_id": "ccBGSSSE019_BullNetchIgnoreIncomingDamagePerk",
+        "type": "PERK DESC",
+        "original": "Let's special bull netches ignore damage from anything but the Fork of Horripilation.",
+        "string": "Permet aux netchs m\u00e2les sp\u00e9ciaux d'ignorer tous les d\u00e9g\u00e2ts en dehors de ceux de la Fourchette d'Horripilation."
+    },
+    {
+        "editor_id": "ccBGSSSE019_StaffOfSheogorathQuest",
+        "type": "QUST CNAM",
+        "original": "There's something waiting for me on the island of Solstheim.  I should travel there and investigate.",
+        "string": "Quelque chose m\u2019attend \u00e0 Solstheim.  Je devrais m\u2019y rendre et enqu\u00eater."
+    },
+    {
+        "editor_id": "ccBGSSSE019_StaffOfSheogorathQuest",
+        "type": "QUST CNAM",
+        "original": "I have completed the trial, and crafted the Staff of Sheogorath.",
+        "string": "J'ai termin\u00e9 l'\u00e9preuve et fabriqu\u00e9 le B\u00e2ton de Sh\u00e9ogorath."
+    },
+    {
+        "editor_id": "ccBGSSSE019_ForkWeaponDamagePerk",
+        "type": "PERK DESC",
+        "original": "Adds a damage buff to the fork when fighting bull netches from the quest.",
+        "string": "Ajoute un bonus de d\u00e9g\u00e2ts \u00e0 la Fourchette lorsque vous affrontez les netchs m\u00e2les de la qu\u00eate."
+    },
+    {
+        "editor_id": "ccBGSSSE019_SheogorathNote01",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"19\">\nDear person who happened upon this letter, it is your lucky day!  Nearby you will find the Fork of Horripilation.  Oh, how I do love cutlery!  \"But what is it?\" you must be asking.  Well, horripilation is the standing of hairs on end due to cold, fear, or excitement -- and excitement is indeed upon us, my friend!\n\nTake this fork, and use it to kill two special Bull Netches in single combat.  Each will yield an artifact: The Eye of Ciirta, and the Branch of the Tree of Shades.  Warriors of another age might find these familiar.  Combine these together with some Heart Stones at a Staff Enchanter for a special surprise!\n\nIf you're successful, you'll be rewarded quite handsomely, with the Staff of Sheogorath (handsome, indeed!)  If not, well... I do love to watch a good fight!\n\nYours Truly,\nLord Sheogorath\n</font>",
+        "string": "<font face=\"$HandwrittenBold\" size=\"19\">\nCher \u00e9tranger tomb\u00e9 par hasard sur cette lettre, aujourd'hui, c'est ton jour de chance !  Tu trouveras \u00e0 proximit\u00e9 la Fourchette d'Horripilation.  Oh, j'adore les couverts !  \"Mais qu'est-ce que c'est ?\" vas-tu me demander.  Eh bien, l'horripilation est le redressement des poils d\u00fb au froid, \u00e0 la peur ou \u00e0 l'excitation, entre autres. Et comment ne pas \u00eatre excit\u00e9 par ce qui va suivre, mon ami ?\n\nPrends cette fourchette et utilise-la pour tuer deux netchs m\u00e2les sp\u00e9ciaux en combat singulier.  Chacun de ces netchs te procurera un artefact : L'Oeil de Ciirta et la branche de l'Arbre des Ombres.  Des guerriers d'un autre \u00e2ge trouveront peut-\u00eatre ces artefacts familiers.  Combine-les avec quelques coeurs de pierre \u00e0 un enchanteur de b\u00e2ton pour avoir une petite surprise !\n\nSi tu r\u00e9ussis cet exploit, tu obtiendras une r\u00e9compense \u00e0 la hauteur de la t\u00e2che : le B\u00e2ton de Sh\u00e9ogorath !  Dans le cas contraire... J'adore regarder un beau combat !\n\nBien \u00e0 toi,\nLe seigneur Sh\u00e9ogorath\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE019_StaffOfSheogorathQuest",
+        "type": "QUST CNAM",
+        "original": "I've accepted Sheogorath's combat trial. I'll need to find these special Bull Netches, kill them with the Fork of Horripilation, and obtain the artifacts.",
+        "string": "J'ai accept\u00e9 l'\u00e9preuve de combat de Sh\u00e9ogorath. Je dois trouver des netchs m\u00e2les sp\u00e9ciaux, les tuer avec la Fourchette d'Horripilation et obtenir des artefacts."
+    },
+    {
+        "editor_id": "ccBGSSSE019_StaffOfSheogorathQuest",
+        "type": "QUST CNAM",
+        "original": "I've killed the Bull Netches and obtained the artifacts. I need to gain access to a Staff Enchanter and combine them to create The Staff of Sheogorath.",
+        "string": "J'ai tu\u00e9 les netchs m\u00e2les et obtenu les artefacts. Je dois trouver un enchanteur de b\u00e2ton pour les combiner afin de cr\u00e9er le B\u00e2ton de Sh\u00e9ogorath."
+    }
+]

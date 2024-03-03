@@ -1,0 +1,1136 @@
+[
+    {
+        "editor_id": "ccEEJSSE001_BakingSurfaceTrigger",
+        "type": "ACTI RNAM",
+        "original": "Use",
+        "string": "\u0418\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE001_BakingSurfaceTrigger",
+        "type": "ACTI FULL",
+        "original": "Baking Surface",
+        "string": "\u041f\u043b\u0438\u0442\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE002_Basket2",
+        "type": "MISC FULL",
+        "original": "Basket",
+        "string": "\u041a\u043e\u0440\u0437\u0438\u043d\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE002_IngredientsCupboard",
+        "type": "CONT FULL",
+        "original": "Cupboard",
+        "string": "\u0411\u0443\u0444\u0435\u0442"
+    },
+    {
+        "editor_id": "ccEEJSSE002_Platter",
+        "type": "MISC FULL",
+        "original": "Platter",
+        "string": "\u0411\u043b\u044e\u0434\u043e"
+    },
+    {
+        "editor_id": "ccEEJSSE002_LargeSackNRS",
+        "type": "CONT FULL",
+        "original": "Sack",
+        "string": "\u041c\u0435\u0448\u043e\u043a"
+    },
+    {
+        "editor_id": "ccEEJSSE002_LargeJug",
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "\u041a\u0443\u0432\u0448\u0438\u043d"
+    },
+    {
+        "editor_id": "ccEEJSSE002_ChildBedR",
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "\u041a\u0440\u043e\u0432\u0430\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SilverJug",
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "\u041a\u0443\u0432\u0448\u0438\u043d"
+    },
+    {
+        "editor_id": "ccEEJSSE002_NarrowBench",
+        "type": "FURN FULL",
+        "original": "Bench",
+        "string": "\u0421\u043a\u0430\u043c\u044c\u044f"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SilverJugLg",
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "\u041a\u0443\u0432\u0448\u0438\u043d"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SilverCandleStick1Misc",
+        "type": "MISC FULL",
+        "original": "Candlestick",
+        "string": "\u041f\u043e\u0434\u0441\u0432\u0435\u0447\u043d\u0438\u043a"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SilverCup",
+        "type": "MISC FULL",
+        "original": "Cup",
+        "string": "\u0427\u0430\u0448\u043a\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE002_GobletSilver",
+        "type": "MISC FULL",
+        "original": "Goblet",
+        "string": "\u041a\u0443\u0431\u043e\u043a"
+    },
+    {
+        "editor_id": "ccEEJSSE002MageTowerMain",
+        "type": "CELL FULL",
+        "original": "Myrwatch",
+        "string": "\u041c\u0438\u0440\u0432\u043e\u0442\u0447"
+    },
+    {
+        "editor_id": "ccEEJSSE002_JugDwemer",
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "\u041a\u0443\u0432\u0448\u0438\u043d"
+    },
+    {
+        "editor_id": "ccEEJSSE002_NordJug",
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "\u041a\u0443\u0432\u0448\u0438\u043d"
+    },
+    {
+        "editor_id": "ccEEJSSE002_OvenMarker",
+        "type": "FURN FULL",
+        "original": "Baking Surface",
+        "string": "\u041f\u043b\u0438\u0442\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE002_AllForge",
+        "type": "FURN FULL",
+        "original": "All Forge",
+        "string": "\u0423\u043d\u0438\u0432\u0435\u0440\u0441\u0430\u043b\u044c\u043d\u0430\u044f \u043a\u0443\u0437\u043d\u0438\u0446\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE002_Basket1",
+        "type": "MISC FULL",
+        "original": "Basket",
+        "string": "\u041a\u043e\u0440\u0437\u0438\u043d\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE002_ArmChair",
+        "type": "FURN FULL",
+        "original": "Armchair",
+        "string": "\u041a\u0440\u0435\u0441\u043b\u043e"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SilverCandleStick3Misc",
+        "type": "MISC FULL",
+        "original": "Candlestick",
+        "string": "\u041f\u043e\u0434\u0441\u0432\u0435\u0447\u043d\u0438\u043a"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SilverCandleStick2Misc",
+        "type": "MISC FULL",
+        "original": "Candlestick",
+        "string": "\u041f\u043e\u0434\u0441\u0432\u0435\u0447\u043d\u0438\u043a"
+    },
+    {
+        "editor_id": "ccEEJSSE002_PortalDoor",
+        "type": "DOOR FULL",
+        "original": "Portal",
+        "string": "\u041f\u043e\u0440\u0442\u0430\u043b"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DoubleBed",
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "\u041a\u0440\u043e\u0432\u0430\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SilverUrn",
+        "type": "MISC FULL",
+        "original": "Urn",
+        "string": "\u0423\u0440\u043d\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE002MageTowerSecond",
+        "type": "CELL FULL",
+        "original": "Myrwatch Gallery",
+        "string": "\u0413\u0430\u043b\u0435\u0440\u0435\u044f \u041c\u0438\u0440\u0432\u043e\u0442\u0447\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE002_Pitcher",
+        "type": "MISC FULL",
+        "original": "Jeweled Pitcher",
+        "string": "\u0414\u0440\u0430\u0433\u043e\u0446\u0435\u043d\u043d\u044b\u0439 \u043a\u0443\u0432\u0448\u0438\u043d"
+    },
+    {
+        "editor_id": "ccEEJSSE002_ChildBedL",
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "\u041a\u0440\u043e\u0432\u0430\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_Bookcase",
+        "type": "CONT FULL",
+        "original": "Bookcase",
+        "string": "\u041a\u043d\u0438\u0436\u043d\u044b\u0439 \u0448\u043a\u0430\u0444"
+    },
+    {
+        "editor_id": "ccEEJSSE002_NobleCupboard",
+        "type": "CONT FULL",
+        "original": "Cupboard",
+        "string": "\u0411\u0443\u0444\u0435\u0442"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SilverBowl01",
+        "type": "MISC FULL",
+        "original": "Bowl",
+        "string": "\u041c\u0438\u0441\u043a\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SmeltingPot",
+        "type": "FURN FULL",
+        "original": "Smelting Pot",
+        "string": "\u041f\u043b\u0430\u0432\u0438\u043b\u044c\u043d\u044b\u0439 \u0442\u0438\u0433\u0435\u043b\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_PortalGemWhiteActivator",
+        "type": "ACTI FULL",
+        "original": "Diamond Paragon",
+        "string": "\u0411\u0440\u0438\u043b\u043b\u0438\u0430\u043d\u0442\u043e\u0432\u044b\u0439 \u043f\u0430\u0440\u0430\u0433\u043e\u043d"
+    },
+    {
+        "editor_id": "ccEEJSSE002_AurielsShieldActivator",
+        "type": "ACTI FULL",
+        "original": "Auriel's Shield",
+        "string": "\u0429\u0438\u0442 \u0410\u0443\u0440\u0438\u044d\u043b\u044f"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskShockActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskOtarActivator",
+        "type": "ACTI FULL",
+        "original": "Otar",
+        "string": "\u041e\u0442\u0430\u0440"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskFrostActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_Curio2",
+        "type": "CONT FULL",
+        "original": "Cabinet",
+        "string": "\u0428\u043a\u0430\u0444"
+    },
+    {
+        "editor_id": "ccEEJSSE002_GauldurStaffActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerINTLocation",
+        "type": "LCTN FULL",
+        "original": "Myrwatch",
+        "string": "\u041c\u0438\u0440\u0432\u043e\u0442\u0447"
+    },
+    {
+        "editor_id": "ccEEJSSE002_PortalGemPurpleActivator",
+        "type": "ACTI FULL",
+        "original": "Amethyst Paragon",
+        "string": "\u0410\u043c\u0435\u0442\u0438\u0441\u0442\u043e\u0432\u044b\u0439 \u043f\u0430\u0440\u0430\u0433\u043e\u043d"
+    },
+    {
+        "editor_id": "ccEEJSSE002_AurielsBowActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskVolsungActivator",
+        "type": "ACTI FULL",
+        "original": "Volsung",
+        "string": "\u0412\u043e\u043b\u044c\u0441\u0443\u043d\u0433"
+    },
+    {
+        "editor_id": "ccEEJSSE002_WuuthradActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_BladeofSacrificeActivator",
+        "type": "ACTI FULL",
+        "original": "Blade of Sacrifice",
+        "string": "\u0416\u0435\u0440\u0442\u0432\u0435\u043d\u043d\u044b\u0439 \u043a\u043b\u0438\u043d\u043e\u043a"
+    },
+    {
+        "editor_id": "ccEEJSSE002_StaffWorkbench",
+        "type": "FURN FULL",
+        "original": "Staff Enchanter",
+        "string": "\u0417\u0430\u0447\u0430\u0440\u043e\u0432\u0430\u0442\u0435\u043b\u044c \u043f\u043e\u0441\u043e\u0445\u043e\u0432"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DawnguardRuneHammerActivator",
+        "type": "ACTI FULL",
+        "original": "Dawnguard Rune Hammer",
+        "string": "\u0420\u0443\u043d\u043d\u044b\u0439 \u043c\u043e\u043b\u043e\u0442 \u0421\u0442\u0440\u0430\u0436\u0438 \u0420\u0430\u0441\u0441\u0432\u0435\u0442\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE002_Barrel",
+        "type": "CONT FULL",
+        "original": "Barrel",
+        "string": "\u0411\u043e\u0447\u043a\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE002_PortalGemGreenActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_KeeningActivator",
+        "type": "ACTI FULL",
+        "original": "Keening",
+        "string": "\u0420\u0430\u0437\u0440\u0443\u0431\u0430\u0442\u0435\u043b\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SackEmptyNRS",
+        "type": "CONT FULL",
+        "original": "Large Sack",
+        "string": "\u0411\u043e\u043b\u044c\u0448\u043e\u0439 \u043c\u0435\u0448\u043e\u043a"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MothJarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DawnguardShieldActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_HarkonSwordActivator",
+        "type": "ACTI FULL",
+        "original": "Harkon's Sword",
+        "string": "\u041c\u0435\u0447 \u0425\u0430\u0440\u043a\u043e\u043d\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE002_ButterflyJarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskFireActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SoulGemBarrel",
+        "type": "CONT FULL",
+        "original": "Barrel",
+        "string": "\u0411\u043e\u0447\u043a\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE002_UrnSilver",
+        "type": "CONT FULL",
+        "original": "Urn",
+        "string": "\u0423\u0440\u043d\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE002_TestStongBox",
+        "type": "CONT FULL",
+        "original": "Test Items",
+        "string": "\u0422\u0435\u0441\u0442\u043e\u0432\u044b\u0435 \u043f\u0440\u0435\u0434\u043c\u0435\u0442\u044b"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskKrosisActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_AetherialShieldActivator",
+        "type": "ACTI FULL",
+        "original": "Aetherial Shield",
+        "string": "\u042d\u0442\u0435\u0440\u0438\u0435\u0432\u044b\u0439 \u0449\u0438\u0442"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SpiderControlRodActivator",
+        "type": "ACTI FULL",
+        "original": "Spider Control Rod",
+        "string": "\u0416\u0435\u0437\u043b \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u044f \u043f\u0430\u0443\u043a\u0430\u043c\u0438"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskKonahrikActivator",
+        "type": "ACTI FULL",
+        "original": "Konahrik",
+        "string": "\u041a\u043e\u043d\u0430\u0440\u0438\u043a"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SanguineRoseActivator",
+        "type": "ACTI FULL",
+        "original": "Sanguine Rose",
+        "string": "\u0420\u043e\u0437\u0430 \u0421\u0430\u043d\u0433\u0432\u0438\u043d\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DawnguardRuneHammerActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SkullofCorruptionActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskHevnoraakActivator",
+        "type": "ACTI FULL",
+        "original": "Hevnoraak",
+        "string": "\u0425\u0435\u0432\u043d\u043e\u0440\u0430\u043a"
+    },
+    {
+        "editor_id": "ccEEJSSE002_AetherialShieldActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SpellbreakerActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_TorstenSkullActivator",
+        "type": "ACTI FULL",
+        "original": "Torsten's Skull Key",
+        "string": "\u041a\u043b\u044e\u0447-\u0447\u0435\u0440\u0435\u043f \u0422\u043e\u0440\u0441\u0442\u0435\u043d\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE002_StaffofMagnusActivator",
+        "type": "ACTI FULL",
+        "original": "Staff of Magnus",
+        "string": "\u041f\u043e\u0441\u043e\u0445 \u041c\u0430\u0433\u043d\u0443\u0441\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskShockActivator",
+        "type": "ACTI FULL",
+        "original": "Zahkriisos",
+        "string": "\u0417\u0430\u043a\u0440\u0438\u0441\u043e\u0448"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskKrosisActivator",
+        "type": "ACTI FULL",
+        "original": "Krosis",
+        "string": "\u041a\u0440\u043e\u0441\u0438\u0441"
+    },
+    {
+        "editor_id": "ccEEJSSE002_ChampionsCudgelActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SpellbreakerActivator",
+        "type": "ACTI FULL",
+        "original": "Spellbreaker",
+        "string": "\u0420\u0430\u0437\u0440\u0443\u0448\u0438\u0442\u0435\u043b\u044c \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0439"
+    },
+    {
+        "editor_id": "ccEEJSSE002_BloodskalBladeActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "[05000FA2]",
+        "type": "REFR FULL",
+        "original": "Myrwatch",
+        "string": "\u041c\u0438\u0440\u0432\u043e\u0442\u0447"
+    },
+    {
+        "editor_id": "ccEEJSSE002_WuuthradActivator",
+        "type": "ACTI FULL",
+        "original": "Wuuthrad",
+        "string": "\u0412\u0443\u0442\u0440\u0430\u0434"
+    },
+    {
+        "editor_id": "ccEEJSSE002_BladeofSacrificeActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_BloodskalBladeActivator",
+        "type": "ACTI FULL",
+        "original": "Bloodskal Blade",
+        "string": "\u041a\u043b\u0438\u043d\u043e\u043a \u0411\u043b\u0430\u0434\u0441\u043a\u0430\u043b"
+    },
+    {
+        "editor_id": "ccEEJSSE002_AurielsShieldActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DawnguardRuneAxeActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SoulrenderActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskVolsungActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_GauldurStaffActivator",
+        "type": "ACTI FULL",
+        "original": "Staff of Jyrik Gauldurson",
+        "string": "\u041f\u043e\u0441\u043e\u0445 \u0419\u0443\u0440\u0438\u043a\u0430 \u0413\u043e\u043b\u0434\u0443\u0440\u0441\u043e\u043d\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE002_GlassBowoftheStagPrinceActivator",
+        "type": "ACTI FULL",
+        "original": "Glass Bow of the Stag Prince",
+        "string": "\u0421\u0442\u0435\u043a\u043b\u044f\u043d\u043d\u044b\u0439 \u043b\u0443\u043a \u041a\u043e\u0440\u043e\u043b\u044f-\u041e\u043b\u0435\u043d\u044f"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MehrunesRazorActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_InitiatesEwerActivator",
+        "type": "ACTI FULL",
+        "original": "Initiate's Ewer",
+        "string": "\u041a\u0443\u0432\u0448\u0438\u043d \u043f\u043e\u0441\u0432\u044f\u0449\u0435\u043d\u043d\u043e\u0433\u043e"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskKonahrikActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_ShieldofYsgramorActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskVokunActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskOtarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_WabbajackActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DragonflyJarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DragonflyJarActivator",
+        "type": "ACTI FULL",
+        "original": "Dragonfly in a Jar",
+        "string": "\u0421\u0442\u0440\u0435\u043a\u043e\u0437\u0430 \u0432 \u0431\u0430\u043d\u043a\u0435"
+    },
+    {
+        "editor_id": "ccEEJSSE002_WabbajackActivator",
+        "type": "ACTI FULL",
+        "original": "Wabbajack",
+        "string": "\u0412\u0430\u0431\u0431\u0430\u0434\u0436\u0435\u043a"
+    },
+    {
+        "editor_id": "ccEEJSSE002_PortalGemBlueActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskMorokeiActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_BloodscytheActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SpiderControlRodActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MehrunesRazorActivator",
+        "type": "ACTI FULL",
+        "original": "Mehrunes' Razor",
+        "string": "\u0411\u0440\u0438\u0442\u0432\u0430 \u041c\u0435\u0440\u0443\u043d\u0435\u0441\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE002_KeeningActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_BladeofWoeActivator",
+        "type": "ACTI FULL",
+        "original": "Blade of Woe",
+        "string": "\u041a\u043b\u0438\u043d\u043e\u043a \u0413\u043e\u0440\u044f"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskVokunActivator",
+        "type": "ACTI FULL",
+        "original": "Vokun",
+        "string": "\u0412\u043e\u043a\u0443\u043d"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DawnguardShieldActivator",
+        "type": "ACTI FULL",
+        "original": "Dawnguard Rune Shield",
+        "string": "\u0420\u0443\u043d\u043d\u044b\u0439 \u0449\u0438\u0442 \u0421\u0442\u0440\u0430\u0436\u0438 \u0420\u0430\u0441\u0441\u0432\u0435\u0442\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE002_BeeJarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_NettlebaneActivator",
+        "type": "ACTI FULL",
+        "original": "Nettlebane",
+        "string": "\u041a\u0440\u0430\u043f\u0438\u0432\u043d\u0438\u043a"
+    },
+    {
+        "editor_id": "ccEEJSSE002_ShieldofYsgramorActivator",
+        "type": "ACTI FULL",
+        "original": "Shield of Ysgramor",
+        "string": "\u0429\u0438\u0442 \u0418\u0441\u0433\u0440\u0430\u043c\u043e\u0440\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskMorokeiActivator",
+        "type": "ACTI FULL",
+        "original": "Morokei",
+        "string": "\u041c\u043e\u0440\u043e\u043a\u0435\u0438"
+    },
+    {
+        "editor_id": "ccEEJSSE002_BeeJarActivator",
+        "type": "ACTI FULL",
+        "original": "Bee in a Jar",
+        "string": "\u041f\u0447\u0435\u043b\u0430 \u0432 \u0431\u0430\u043d\u043a\u0435"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskRahgotActivator",
+        "type": "ACTI FULL",
+        "original": "Rahgot",
+        "string": "\u0420\u0430\u0433\u043e\u0442"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskNahkriinActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_LargeFlat_NRS",
+        "type": "CONT FULL",
+        "original": "Sack",
+        "string": "\u041c\u0435\u0448\u043e\u043a"
+    },
+    {
+        "editor_id": "ccEEJSSE002_TargeoftheBloodedActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SkullofCorruptionActivator",
+        "type": "ACTI FULL",
+        "original": "Skull of Corruption",
+        "string": "\u0427\u0435\u0440\u0435\u043f \u041f\u043e\u0440\u0447\u0438"
+    },
+    {
+        "editor_id": "ccEEJSSE002_AurielsBowActivator",
+        "type": "ACTI FULL",
+        "original": "Auriel's Bow",
+        "string": "\u041b\u0443\u043a \u0410\u0443\u0440\u0438\u044d\u043b\u044f"
+    },
+    {
+        "editor_id": "ccEEJSSE002_StaffofMagnusActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_BladeofWoeActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SanguineRoseActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_KahvozeinsFangActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerEXTLocation",
+        "type": "LCTN FULL",
+        "original": "Myrwatch",
+        "string": "\u041c\u0438\u0440\u0432\u043e\u0442\u0447"
+    },
+    {
+        "editor_id": "ccEEJSSE002_TorstenSkullActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SearekSkullActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_GlassBowoftheStagPrinceActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_InitiatesEwerActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_PortalGemredActivator",
+        "type": "ACTI FULL",
+        "original": "Ruby Paragon",
+        "string": "\u0420\u0443\u0431\u0438\u043d\u043e\u0432\u044b\u0439 \u043f\u0430\u0440\u0430\u0433\u043e\u043d"
+    },
+    {
+        "editor_id": "ccEEJSSE002_FireflyJarActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_PortalGemBlueActivator",
+        "type": "ACTI FULL",
+        "original": "Sapphire Paragon",
+        "string": "\u0421\u0430\u043f\u0444\u0438\u0440\u043e\u0432\u044b\u0439 \u043f\u0430\u0440\u0430\u0433\u043e\u043d"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MothJarActivator",
+        "type": "ACTI FULL",
+        "original": "Moth in a Jar",
+        "string": "\u041c\u043e\u0442\u044b\u043b\u0435\u043a \u0432 \u0431\u0430\u043d\u043a\u0435"
+    },
+    {
+        "editor_id": "ccEEJSSE002_FireflyJarActivator",
+        "type": "ACTI FULL",
+        "original": "Firefly in a Jar",
+        "string": "\u0421\u0432\u0435\u0442\u043b\u044f\u0447\u043e\u043a \u0432 \u0431\u0430\u043d\u043a\u0435"
+    },
+    {
+        "editor_id": "ccEEJSSE002_ButterflyJarActivator",
+        "type": "ACTI FULL",
+        "original": "Butterfly in a Jar",
+        "string": "\u0411\u0430\u0431\u043e\u0447\u043a\u0430 \u0432 \u0431\u0430\u043d\u043a\u0435"
+    },
+    {
+        "editor_id": "ccEEJSSE002_ChampionsCudgelActivator",
+        "type": "ACTI FULL",
+        "original": "Champion's Cudgel",
+        "string": "\u0414\u0443\u0431\u0438\u043d\u043a\u0430 \u0417\u0430\u0449\u0438\u0442\u043d\u0438\u043a\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskHevnoraakActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskWoodenActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_BlackBowActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_PortalGemGreenActivator",
+        "type": "ACTI FULL",
+        "original": "Emerald Paragon",
+        "string": "\u0418\u0437\u0443\u043c\u0440\u0443\u0434\u043d\u044b\u0439 \u043f\u0430\u0440\u0430\u0433\u043e\u043d"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskFrostActivator",
+        "type": "ACTI FULL",
+        "original": "Dukaan",
+        "string": "\u0414\u0443\u043a\u0430\u043d"
+    },
+    {
+        "editor_id": "ccEEJSSE002_PortalGemPurpleActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DawnguardRuneAxeActivator",
+        "type": "ACTI FULL",
+        "original": "Dawnguard Rune Axe",
+        "string": "\u0420\u0443\u043d\u043d\u044b\u0439 \u0442\u043e\u043f\u043e\u0440 \u0421\u0442\u0440\u0430\u0436\u0438 \u0420\u0430\u0441\u0441\u0432\u0435\u0442\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskFireActivator",
+        "type": "ACTI FULL",
+        "original": "Ahzidal",
+        "string": "\u0410\u0437\u0438\u0434\u0430\u043b"
+    },
+    {
+        "editor_id": "ccEEJSSE002_PortalGemWhiteActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_Curio1",
+        "type": "CONT FULL",
+        "original": "Cabinet",
+        "string": "\u0428\u043a\u0430\u0444"
+    },
+    {
+        "editor_id": "ccEEJSSE002_TargeoftheBloodedActivator",
+        "type": "ACTI FULL",
+        "original": "Targe of the Blooded",
+        "string": "\u0422\u0430\u0440\u0447 \u043a\u0440\u043e\u0432\u043e\u0436\u0430\u0434\u043d\u043e\u0441\u0442\u0438"
+    },
+    {
+        "editor_id": "ccEEJSSE002_KahvozeinsFangActivator",
+        "type": "ACTI FULL",
+        "original": "Kahvozein's Fang",
+        "string": "\u041a\u043b\u044b\u043a \u041a\u0430\u0432\u043e\u0437\u0435\u0438\u043d\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskNahkriinActivator",
+        "type": "ACTI FULL",
+        "original": "Nahkriin",
+        "string": "\u041d\u0430\u043a\u0440\u0438\u043d"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SackSmallFlat_NRS",
+        "type": "CONT FULL",
+        "original": "Sack",
+        "string": "\u041c\u0435\u0448\u043e\u043a"
+    },
+    {
+        "editor_id": "ccEEJSSE002_BlackBowActivator",
+        "type": "ACTI FULL",
+        "original": "Dwarven Black Bow of Fate",
+        "string": "\u0414\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0438\u0439 \u0447\u0435\u0440\u043d\u044b\u0439 \u043b\u0443\u043a \u0441\u0443\u0434\u044c\u0431\u044b"
+    },
+    {
+        "editor_id": "ccEEJSSE002_Enchanter",
+        "type": "FURN FULL",
+        "original": "Arcane Enchanter",
+        "string": "\u041f\u0435\u043d\u0442\u0430\u0433\u0440\u0430\u043c\u043c\u0430 \u0434\u0443\u0448"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskWoodenActivator",
+        "type": "ACTI FULL",
+        "original": "Wooden Mask",
+        "string": "\u0414\u0435\u0440\u0435\u0432\u044f\u043d\u043d\u0430\u044f \u043c\u0430\u0441\u043a\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE002_HarkonSwordActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_PortalGemredActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskRahgotActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_BloodscytheActivator",
+        "type": "ACTI FULL",
+        "original": "Bloodscythe",
+        "string": "\u041a\u0440\u043e\u0432\u0430\u0432\u0430\u044f \u041a\u043e\u0441\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SearekSkullActivator",
+        "type": "ACTI FULL",
+        "original": "Saerek's Skull Key",
+        "string": "\u041a\u043b\u044e\u0447-\u0447\u0435\u0440\u0435\u043f \u0421\u0430\u0440\u0435\u043a\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SoulrenderActivator",
+        "type": "ACTI FULL",
+        "original": "Soulrender",
+        "string": "\u0414\u0443\u0448\u0438\u0442\u0435\u043b\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_NettlebaneActivator",
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "\u041f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerKey",
+        "type": "KEYM FULL",
+        "original": "Enchanted Tower Key",
+        "string": "\u041a\u043b\u044e\u0447 \u043e\u0442 \u0437\u0430\u0447\u0430\u0440\u043e\u0432\u0430\u043d\u043d\u043e\u0439 \u0431\u0430\u0448\u043d\u0438"
+    },
+    {
+        "editor_id": "ccEEJSSE002_LoreNotes",
+        "type": "BOOK FULL",
+        "original": "Sindnar's Tower Notes",
+        "string": "\u0417\u0430\u043f\u0438\u0441\u0438 \u0421\u0438\u043d\u0434\u043d\u0430\u0440\u0430 \u043e \u0431\u0430\u0448\u043d\u0435"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SummonGhost",
+        "type": "SPEL FULL",
+        "original": "Summon Tower Ghost",
+        "string": "\u0412\u044b\u0437\u043e\u0432 \u043f\u0440\u0438\u0437\u0440\u0430\u043a\u0430 \u0431\u0430\u0448\u043d\u0438"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DarkElfJournal",
+        "type": "BOOK FULL",
+        "original": "Hans's Journal",
+        "string": "\u0414\u043d\u0435\u0432\u043d\u0438\u043a \u0425\u0430\u043d\u0441\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "type": "QUST NNAM",
+        "original": "Enter Myrwatch",
+        "string": "\u0412\u043e\u0439\u0442\u0438 \u0432 \u041c\u0438\u0440\u0432\u043e\u0442\u0447"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "type": "QUST NNAM",
+        "original": "Investigate Myrwatch",
+        "string": "\u041e\u0431\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u0442\u044c \u041c\u0438\u0440\u0432\u043e\u0442\u0447"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SummonGhostEffect",
+        "type": "MGEF DNAM",
+        "original": "Summons the ghost of the Mage's Tower",
+        "string": "\u041f\u0440\u0438\u0437\u044b\u0432\u0430\u0435\u0442 \u043f\u0440\u0438\u0437\u0440\u0430\u043a\u0430 \u0431\u0430\u0448\u043d\u0438 \u043c\u0430\u0433\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "type": "QUST NNAM",
+        "original": "Activate the seal",
+        "string": "\u0410\u043a\u0442\u0438\u0432\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u043f\u0435\u0447\u0430\u0442\u044c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "type": "QUST NNAM",
+        "original": "Find a way inside the tower",
+        "string": "\u041d\u0430\u0439\u0442\u0438 \u0441\u043f\u043e\u0441\u043e\u0431 \u043f\u043e\u043f\u0430\u0441\u0442\u044c \u0432 \u0431\u0430\u0448\u043d\u044e"
+    },
+    {
+        "editor_id": "ccEEJSSE002_GhostMageNordF",
+        "type": "NPC_ FULL",
+        "original": "Elianora",
+        "string": "\u042d\u043b\u0438\u0430\u043d\u043e\u0440\u0430"
+    },
+    {
+        "editor_id": "ccEEJSSE002_EyeNote",
+        "type": "BOOK FULL",
+        "original": "The Eye",
+        "string": "\u041e\u043a\u043e"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "type": "QUST NNAM",
+        "original": "Follow the hare",
+        "string": "\u0418\u0434\u0442\u0438 \u0437\u0430 \u0437\u0430\u0439\u0446\u0435\u043c"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SummonGhostEffect",
+        "type": "MGEF FULL",
+        "original": "Tower Ghost",
+        "string": "\u041f\u0440\u0438\u0437\u0440\u0430\u043a \u0431\u0430\u0448\u043d\u0438"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "type": "QUST FULL",
+        "original": "Myrwatch",
+        "string": "\u041c\u0438\u0440\u0432\u043e\u0442\u0447"
+    },
+    {
+        "editor_id": "ccEEJSSE002_LoreJournal",
+        "type": "BOOK FULL",
+        "original": "Anora's Journal",
+        "string": "\u0414\u043d\u0435\u0432\u043d\u0438\u043a \u0410\u043d\u043e\u0440\u044b"
+    },
+    {
+        "editor_id": "ccEEJSSE002_CorpseBanditDarkElfMale",
+        "type": "NPC_ FULL",
+        "original": "Hans",
+        "string": "\u0425\u0430\u043d\u0441"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "type": "QUST NNAM",
+        "original": "Read Hans's journal",
+        "string": "\u041f\u0440\u043e\u0447\u0435\u0441\u0442\u044c \u0434\u043d\u0435\u0432\u043d\u0438\u043a \u0425\u0430\u043d\u0441\u0430"
+    },
+    {
+        "editor_id": "Tamriel",
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "\u0421\u043a\u0430\u0439\u0440\u0438\u043c"
+    },
+    {
+        "editor_id": "CTest",
+        "type": "CELL FULL",
+        "original": "Quick Test Cell",
+        "string": "\u0418\u0441\u043f\u044b\u0442\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0439 \u0441\u0442\u0435\u043d\u0434"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DisplayLackMsg",
+        "type": "MESG DESC",
+        "original": "You do not have the required item.",
+        "string": "\u0423 \u0432\u0430\u0441 \u043d\u0435\u0442 \u043d\u0443\u0436\u043d\u043e\u0433\u043e \u043f\u0440\u0435\u0434\u043c\u0435\u0442\u0430."
+    },
+    {
+        "editor_id": "ccEEJSSE002_DarkElfJournal",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\n\"When the eye is doused in flames, the hair will light the way.\"\n\nI've heard that fool Sindnar say it over and over, breath stinking of ale, as if it were a limerick. Given his dark hood you might think it was a dangerous spell. But so long as no one's hair caught on fire or found imps in their cupboards, the words were harmless. Just the mad ramblings of a drunk.\n\nOf the inn patrons, only I bothered to humor him. We bonded over a bottle of Honningbrew and the bucket with which we had history.\n\nSo when the Elf bit the dust, it was only natural he left his things to me. Among them were countless pieces of junk, including full ownership of the bucket, and a spell tome written in some long dead language. \n\nBut as soon as I started cursing the old fool for willing me his trash, out slipped two items of value, a map and notes to a tower deep in the swamps. It was only after reading it that I realized his drunken words weren't part of any limerick. They were instructions. A way in.\n\nNow that I'm here, things are getting even more clear. The hair part still doesn't make a lick of sense, but the eye is the stone seal, that much I'm sure. Yet nothing I do seems to work. I've doused it in the fire from my torch. I've chopped kindling for hours and built a bonfire high enough to scorch the bloody moon. Still, nothing.\n\nMaybe the seal can only be broken with magic. Well, if that drunken fool can learn to cast spells, so can I. I've got the bastard's tome, I just need to make sense of the words.\n\nBut I better be quick. The fire seems to be attracting all sorts of creatures from the belly of this unholy marsh. Hopefully I can manage to survive long enough to discover whatever treasure lies within.\n</font>",
+        "string": "<font face=\"$HandwrittenFont\">\n\"\u041a\u043e\u0433\u0434\u0430 \u043e\u043a\u043e \u0437\u0430\u0436\u0436\u0435\u0442\u0441\u044f \u043f\u043b\u0430\u043c\u0435\u043d\u0435\u043c, \u0437\u0430\u044f\u0446 \u0443\u043a\u0430\u0436\u0435\u0442 \u043f\u0443\u0442\u044c\".\n\n\u0421\u0438\u043d\u0434\u043d\u0430\u0440 \u043f\u043e\u0432\u0442\u043e\u0440\u044f\u043b \u044d\u0442\u0443 \u043f\u0440\u0438\u0441\u043a\u0430\u0437\u043a\u0443 \u0441\u043e\u0442\u043d\u0438 \u0440\u0430\u0437, \u0442\u043e\u0447\u043d\u043e \u0441\u0447\u0438\u0442\u0430\u043b\u043e\u0447\u043a\u0443, \u0434\u044b\u0448\u0430 \u043d\u0430 \u043c\u0435\u043d\u044f \u043f\u0435\u0440\u0435\u0433\u0430\u0440\u043e\u043c \u0438\u0437-\u043f\u043e\u0434 \u0442\u0435\u043c\u043d\u043e\u0433\u043e \u043a\u0430\u043f\u044e\u0448\u043e\u043d\u0430. \u041c\u043e\u0436\u043d\u043e \u0431\u044b\u043b\u043e \u0431\u044b \u043f\u043e\u0434\u0443\u043c\u0430\u0442\u044c, \u0447\u0442\u043e \u044d\u0442\u043e \u043e\u043f\u0430\u0441\u043d\u043e\u0435 \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0435, \u043d\u043e \u043d\u0438\u0447\u044c\u0438 \u0432\u043e\u043b\u043e\u0441\u044b \u043e\u0442 \u043d\u0435\u0433\u043e \u043d\u0435 \u0437\u0430\u0433\u043e\u0440\u0430\u043b\u0438\u0441\u044c, \u0430 \u0432 \u0431\u0443\u0444\u0435\u0442\u0430\u0445 \u043d\u0435 \u0437\u0430\u0432\u043e\u0434\u0438\u043b\u0438\u0441\u044c \u0431\u0435\u0441\u044b, \u0438 \u044f \u0441\u0447\u0438\u0442\u0430\u043b \u0441\u043b\u043e\u0432\u0430 \u044d\u0442\u043e\u0433\u043e \u0434\u0443\u0440\u043d\u044f \u043f\u0440\u043e\u0441\u0442\u043e \u043f\u044c\u044f\u043d\u044b\u043c\u0438 \u0431\u0440\u0435\u0434\u043d\u044f\u043c\u0438.\n\n\u0418\u0437 \u0432\u0441\u0435\u0445 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u0435\u0439 \u0442\u0430\u0432\u0435\u0440\u043d\u044b \u0442\u043e\u043b\u044c\u043a\u043e \u044f \u0432\u043e\u043e\u0431\u0449\u0435 \u0435\u0433\u043e \u0441\u043b\u0443\u0448\u0430\u043b. \u041d\u0430\u0448\u0430, \u043c\u043e\u0436\u043d\u043e \u0441\u043a\u0430\u0437\u0430\u0442\u044c, \u0434\u0440\u0443\u0436\u0431\u0430 \u043d\u0430\u0447\u0430\u043b\u0430\u0441\u044c \u0441 \u0431\u0443\u0442\u044b\u043b\u043a\u0438 \u043c\u0435\u0434\u0430 \u0425\u043e\u043d\u043d\u0438\u043d\u0433\u0430 \u0438 \u0431\u0430\u0434\u044c\u0438, \u043e \u043a\u043e\u0442\u043e\u0440\u043e\u0439 \u043c\u043d\u043e\u0433\u043e\u0435 \u043c\u043e\u0436\u043d\u043e \u043f\u0440\u0438\u043f\u043e\u043c\u043d\u0438\u0442\u044c.\n\n\u0422\u0430\u043a \u0447\u0442\u043e \u043d\u0435\u0443\u0434\u0438\u0432\u0438\u0442\u0435\u043b\u044c\u043d\u043e, \u0447\u0442\u043e \u043a\u043e\u0433\u0434\u0430 \u044d\u043b\u044c\u0444 \u043f\u043e\u043c\u0435\u0440, \u0442\u043e \u0438\u043c\u0435\u043d\u043d\u043e \u043c\u043d\u0435 \u043e\u043d \u0437\u0430\u0432\u0435\u0449\u0430\u043b \u0441\u0432\u043e\u0438 \u043f\u043e\u0436\u0438\u0442\u043a\u0438. \u0421\u0440\u0435\u0434\u0438 \u043d\u0438\u0445 \u0431\u044b\u043b\u043e \u043c\u043d\u043e\u0433\u043e \u0432\u0441\u044f\u043a\u043e\u0433\u043e \u043c\u0443\u0441\u043e\u0440\u0430 (\u0434\u0430, \u0431\u0430\u0434\u044c\u044f \u0442\u043e\u0436\u0435 \u043f\u0435\u0440\u0435\u0448\u043b\u0430 \u0432 \u043c\u043e\u0435 \u043f\u043e\u043b\u043d\u043e\u0435 \u0440\u0430\u0441\u043f\u043e\u0440\u044f\u0436\u0435\u043d\u0438\u0435) \u0438 \u043a\u043d\u0438\u0433\u0430 \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0439 \u043d\u0430 \u0434\u0430\u0432\u043d\u043e \u0437\u0430\u0431\u044b\u0442\u043e\u043c \u044f\u0437\u044b\u043a\u0435. \n\n\u042f \u043d\u0430\u0447\u0430\u043b \u043f\u0440\u043e\u043a\u043b\u0438\u043d\u0430\u0442\u044c \u0441\u0442\u0430\u0440\u043e\u0433\u043e \u0434\u0443\u0440\u043d\u044f \u0437\u0430 \u0442\u043e, \u0447\u0442\u043e \u043e\u043d \u043e\u0441\u0442\u0430\u0432\u0438\u043b \u043c\u043d\u0435 \u0442\u0430\u043a\u0443\u044e \u0434\u0440\u044f\u043d\u044c, \u043d\u043e \u0438\u0437 \u043a\u043d\u0438\u0433\u0438 \u0432\u0434\u0440\u0443\u0433 \u0432\u044b\u0441\u043a\u043e\u043b\u044c\u0437\u043d\u0443\u043b\u0430 \u043a\u0430\u0440\u0442\u0430, \u0430 \u0441 \u043d\u0435\u0439 - \u0437\u0430\u043c\u0435\u0442\u043a\u0438 \u043e \u0431\u0430\u0448\u043d\u0435, \u0440\u0430\u0441\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u043d\u043e\u0439 \u0433\u0434\u0435-\u0442\u043e \u043d\u0430 \u0431\u043e\u043b\u043e\u0442\u0430\u0445. \u0422\u043e\u043b\u044c\u043a\u043e \u043f\u0440\u043e\u0447\u0438\u0442\u0430\u0432 \u0438\u0445, \u044f \u043f\u043e\u043d\u044f\u043b, \u0447\u0442\u043e \u0435\u0433\u043e \u043f\u044c\u044f\u043d\u044b\u0435 \u0431\u0440\u0435\u0434\u043d\u0438 \u0432\u043e\u0432\u0441\u0435 \u043d\u0435 \u0431\u044b\u043b\u0438 \u0441\u0447\u0438\u0442\u0430\u043b\u043e\u0447\u043a\u043e\u0439. \u041e\u043d\u0438 \u0431\u044b\u043b\u0438 \u0443\u043a\u0430\u0437\u0430\u043d\u0438\u044f\u043c\u0438. \u041f\u043e\u0434\u0441\u043a\u0430\u0437\u043a\u043e\u0439, \u043a\u0430\u043a \u043f\u043e\u043f\u0430\u0441\u0442\u044c \u0432\u043d\u0443\u0442\u0440\u044c.\n\n\u0422\u0435\u043f\u0435\u0440\u044c \u044f \u0442\u0443\u0442, \u0438 \u0432\u0441\u0435 \u0434\u0435\u043b\u0430\u0435\u0442\u0441\u044f \u0435\u0449\u0435 \u043f\u043e\u043d\u044f\u0442\u043d\u0435\u0439. \u041d\u0438 \u043e\u0434\u043d\u043e\u0433\u043e \u0437\u0430\u0439\u0446\u0430, \u043f\u0440\u0430\u0432\u0434\u0430, \u044f \u0442\u0443\u0442 \u0434\u043e \u0441\u0438\u0445 \u043f\u043e\u0440 \u0442\u0430\u043a \u0438 \u043d\u0435 \u0432\u0438\u0434\u0435\u043b, \u043d\u043e \"\u043e\u043a\u043e\" - \u044d\u0442\u043e \u0442\u043e\u0447\u043d\u043e \u043a\u0430\u043c\u0435\u043d\u043d\u0430\u044f \u043f\u0435\u0447\u0430\u0442\u044c \u0443 \u0434\u0432\u0435\u0440\u0438. \u041f\u0440\u0430\u0432\u0434\u0430, \u0441\u0434\u0435\u043b\u0430\u0442\u044c \u0441 \u043d\u0435\u0439 \u043c\u043d\u0435 \u043d\u0438\u0447\u0435\u0433\u043e \u043d\u0435 \u0443\u0434\u0430\u0435\u0442\u0441\u044f. \u042f \u043e\u043f\u0430\u043b\u044f\u043b \u0435\u0435 \u043e\u0433\u043d\u0435\u043c \u0444\u0430\u043a\u0435\u043b\u0430. \u042f \u0447\u0430\u0441\u0430\u043c\u0438 \u0440\u0443\u0431\u0438\u043b \u0434\u0440\u043e\u0432\u0430 \u0438 \u0440\u0430\u0437\u0432\u0435\u043b \u0442\u0430\u043a\u043e\u0439 \u043a\u043e\u0441\u0442\u0435\u0440, \u0447\u0442\u043e \u043c\u043e\u0436\u043d\u043e \u0431\u044b\u043b\u043e \u0441\u0430\u043c\u0443 \u043b\u0443\u043d\u0443 \u043f\u043e\u0434\u0436\u0430\u0440\u0438\u0442\u044c. \u041d\u043e \u0432\u0441\u0435 \u0431\u0435\u0437 \u0442\u043e\u043b\u043a\u0443.\n\n\u041c\u043e\u0436\u0435\u0442 \u0431\u044b\u0442\u044c, \u043f\u0435\u0447\u0430\u0442\u044c \u043e\u0442\u043a\u0440\u044b\u0432\u0430\u0435\u0442\u0441\u044f \u0442\u043e\u043b\u044c\u043a\u043e \u043c\u0430\u0433\u0438\u0435\u0439. \u041d\u0443, \u0435\u0441\u043b\u0438 \u0443\u0436 \u0434\u0430\u0436\u0435 \u044d\u0442\u043e\u0442 \u0441\u0442\u0430\u0440\u044b\u0439 \u0434\u0443\u0440\u0435\u043d\u044c \u0443\u043c\u0435\u043b \u043f\u0440\u043e\u0438\u0437\u043d\u043e\u0441\u0438\u0442\u044c \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u044f, \u0442\u043e \u0438 \u044f \u0441\u043c\u043e\u0433\u0443. \u041a\u043d\u0438\u0433\u0430 \u044d\u0442\u043e\u0433\u043e \u043f\u0440\u0438\u0434\u0443\u0440\u043a\u0430 \u0443 \u043c\u0435\u043d\u044f, \u043d\u0430\u0434\u043e \u0442\u043e\u043b\u044c\u043a\u043e \u0440\u0430\u0437\u043e\u0431\u0440\u0430\u0442\u044c \u0441\u043b\u043e\u0432\u0430.\n\n\u041d\u043e \u043b\u0443\u0447\u0448\u0435 \u0431\u044b \u0441 \u044d\u0442\u0438\u043c \u043d\u0435 \u043c\u0435\u0434\u043b\u0438\u0442\u044c. \u041e\u0433\u043e\u043d\u044c \u043f\u0440\u0438\u0432\u043b\u0435\u043a\u0430\u0435\u0442 \u0441\u0430\u043c\u044b\u0445 \u0440\u0430\u0437\u043d\u044b\u0445 \u0441\u0443\u0449\u0435\u0441\u0442\u0432, \u0436\u0438\u0432\u0443\u0449\u0438\u0445 \u0432 \u044d\u0442\u043e\u043c \u043a\u043b\u044f\u0442\u043e\u043c \u0431\u043e\u043b\u043e\u0442\u0435. \u041d\u0430\u0434\u0435\u044e\u0441\u044c, \u044f \u0432\u044b\u044f\u0441\u043d\u044e, \u043a\u0430\u043a\u0438\u0435 \u0441\u043e\u043a\u0440\u043e\u0432\u0438\u0449\u0430 \u0445\u0440\u0430\u043d\u044f\u0442\u0441\u044f \u0432 \u044d\u0442\u043e\u0439 \u0431\u0430\u0448\u043d\u0435, \u043f\u0440\u0435\u0436\u0434\u0435 \u0447\u0435\u043c \u0432\u0441\u0442\u0440\u0435\u0447\u0443 \u0441\u0432\u043e\u044e \u0433\u0438\u0431\u0435\u043b\u044c.\n</font>"
+    },
+    {
+        "editor_id": "ccEEJSSE002_LoreNotes",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\nDeep in the swamps of Hjaalmarch, where the branches are gnarled and the mist is thick, lies a tower of unknown provenance.\n\nFew in the province dare speak the name Myrwatch, and those that do couch their words with apprehension and fear. Yet the mystery of the tower only piques my interest further, and so I have made it my life's work to discover its secrets.\n\nWhat I can deduce of its past comes from its present. From the cut of the stone to the wards that surround it, every piece is a clue, a signature that can be traced back to a pen and hand.\n\nThe stone seal that guards the entrance is none other than the Eye of Magnus, a symbol born from the legacy of Shalidor. Its burning gaze can be found not just in Myrwatch, but outside the College of Winterhold.\n\nCould it be the mages here were cast out from the college, and set out to carve their own path? This is but a theory, and yet, one I feel has merit.\n\nNevertheless, without access to the mind of its occupants, true insight will remain frustratingly out of grasp.\n</font>",
+        "string": "<font face=\"$HandwrittenFont\">\n\u0412 \u0441\u0435\u0440\u0434\u0446\u0435 \u0431\u043e\u043b\u043e\u0442 \u0425\u044c\u044f\u043b\u043c\u0430\u0440\u043a\u0430, \u0433\u0434\u0435 \u043a\u043b\u0443\u0431\u0438\u0442\u0441\u044f \u0433\u0443\u0441\u0442\u043e\u0439 \u0442\u0443\u043c\u0430\u043d, \u0430 \u0432\u0435\u0442\u0432\u0438 \u0434\u0435\u0440\u0435\u0432\u044c\u0435\u0432 \u043f\u043e\u0445\u043e\u0436\u0438 \u043d\u0430 \u0441\u043a\u0440\u044e\u0447\u0435\u043d\u043d\u044b\u0435 \u043f\u0430\u043b\u044c\u0446\u044b, \u0441\u0442\u043e\u0438\u0442 \u043d\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043d\u0430\u044f \u0431\u0430\u0448\u043d\u044f.\n\n\u041c\u0430\u043b\u043e \u043a\u0442\u043e \u0438\u0437 \u043c\u0435\u0441\u0442\u043d\u044b\u0445 \u0436\u0438\u0442\u0435\u043b\u0435\u0439 \u043e\u0442\u0432\u0430\u0436\u0438\u0432\u0430\u0435\u0442\u0441\u044f \u043f\u0440\u043e\u0438\u0437\u043d\u043e\u0441\u0438\u0442\u044c \u0435\u0435 \u043d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 - \"\u041c\u0438\u0440\u0432\u043e\u0442\u0447\", - \u0430 \u043d\u0435\u043c\u043d\u043e\u0433\u0438\u0435 \u0441\u043c\u0435\u043b\u044c\u0447\u0430\u043a\u0438 \u0433\u043e\u0432\u043e\u0440\u044f\u0442 \u044d\u0442\u043e \u0441\u043b\u043e\u0432\u043e \u0441 \u043e\u0433\u043b\u044f\u0434\u043a\u043e\u0439 \u0438 \u0441\u0442\u0440\u0430\u0445\u043e\u043c. \u0418 \u0432\u0441\u0435 \u0436\u0435 \u0442\u0430\u0439\u043d\u0430 \u044d\u0442\u043e\u0439 \u0431\u0430\u0448\u043d\u0438 \u0440\u0430\u0437\u043e\u0436\u0433\u043b\u0430 \u043c\u043e\u0439 \u0438\u043d\u0442\u0435\u0440\u0435\u0441, \u0438 \u044f \u0440\u0435\u0448\u0438\u043b \u043f\u043e\u0441\u0432\u044f\u0442\u0438\u0442\u044c \u0441\u0435\u0431\u044f \u0435\u0435 \u0440\u0430\u0437\u0433\u0430\u0434\u043a\u0435.\n\n\u0422\u043e, \u0447\u0442\u043e \u044f \u0437\u043d\u0430\u044e \u043e \u0435\u0435 \u043f\u0440\u043e\u0448\u043b\u043e\u043c, \u044f \u0432\u044b\u0432\u0435\u043b \u0438\u0437 \u0435\u0435 \u043d\u0430\u0441\u0442\u043e\u044f\u0449\u0435\u0433\u043e. \u041a\u0430\u0436\u0434\u0430\u044f \u043c\u0435\u043b\u043e\u0447\u044c, \u043e\u0442 \u0441\u043f\u043e\u0441\u043e\u0431\u0430 \u043e\u0431\u0442\u0435\u0441\u0430 \u043a\u0430\u043c\u043d\u0435\u0439 \u0434\u043e \u043e\u043a\u0440\u0443\u0436\u0438\u0432\u0448\u0438\u0445 \u0431\u0430\u0448\u043d\u044e \u043e\u0445\u0440\u0430\u043d\u043d\u044b\u0445 \u0447\u0430\u0440, \u0441\u0430\u043c\u0430 \u043f\u043e \u0441\u0435\u0431\u0435 \u043f\u043e\u0434\u0441\u043a\u0430\u0437\u043a\u0430. \u0422\u0430\u043a \u043f\u043e\u0447\u0435\u0440\u043a \u0432 \u043f\u0438\u0441\u044c\u043c\u0435 \u043c\u043e\u0436\u0435\u0442 \u043c\u043d\u043e\u0433\u043e\u0435 \u0440\u0430\u0441\u0441\u043a\u0430\u0437\u0430\u0442\u044c \u043e \u0442\u043e\u043c, \u043a\u0442\u043e \u0438 \u0447\u0435\u043c \u043d\u0430\u043f\u0438\u0441\u0430\u043b \u0435\u0433\u043e.\n\n\u041a\u0430\u043c\u0435\u043d\u043d\u0430\u044f \u043f\u0435\u0447\u0430\u0442\u044c \u0443 \u0432\u0445\u043e\u0434\u0430 - \u043d\u0438\u0447\u0442\u043e \u0438\u043d\u043e\u0435, \u043a\u0430\u043a \u041e\u043a\u043e \u041c\u0430\u0433\u043d\u0443\u0441\u0430, \u0441\u0438\u043c\u0432\u043e\u043b \u043d\u0430\u0441\u043b\u0435\u0434\u0438\u044f \u0428\u0430\u043b\u0438\u0434\u043e\u0440\u0430. \u0415\u0433\u043e \u0433\u043e\u0440\u044f\u0449\u0438\u0439 \u0432\u0437\u0433\u043b\u044f\u0434 \u0432\u0441\u0442\u0440\u0435\u0447\u0430\u0435\u0442 \u043f\u0443\u0442\u043d\u0438\u043a\u043e\u0432 \u043d\u0435 \u0442\u043e\u043b\u044c\u043a\u043e \u0432 \u041c\u0438\u0440\u0432\u043e\u0442\u0447\u0435, \u043d\u043e \u0438 \u043f\u0435\u0440\u0435\u0434 \u041a\u043e\u043b\u043b\u0435\u0433\u0438\u0435\u0439 \u0412\u0438\u043d\u0442\u0435\u0440\u0445\u043e\u043b\u0434\u0430.\n\n\u0412\u043e\u0437\u043c\u043e\u0436\u043d\u043e \u043b\u0438, \u0447\u0442\u043e \u043c\u0430\u0433\u0438, \u043f\u043e\u0441\u0442\u0440\u043e\u0438\u0432\u0448\u0438\u0435 \u044d\u0442\u0443 \u0431\u0430\u0448\u043d\u044e - \u0438\u0437\u0433\u043d\u0430\u043d\u043d\u0438\u043a\u0438 \u0438\u0437 \u041a\u043e\u043b\u043b\u0435\u0433\u0438\u0438, \u0438\u0437\u0431\u0440\u0430\u0432\u0448\u0438\u0435 \u0441\u043e\u0431\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0439 \u043f\u0443\u0442\u044c? \u042d\u0442\u043e \u043b\u0438\u0448\u044c \u0442\u0435\u043e\u0440\u0438\u044f, \u0438 \u0432\u0441\u0435 \u0436\u0435 \u043c\u043d\u0435 \u043a\u0430\u0436\u0435\u0442\u0441\u044f, \u0447\u0442\u043e \u043e\u043d\u0430 \u043d\u0435\u0434\u0430\u043b\u0435\u043a\u0430 \u043e\u0442 \u0438\u0441\u0442\u0438\u043d\u044b.\n\n\u041a \u043c\u043e\u0435\u043c\u0443 \u043e\u0433\u0440\u043e\u043c\u043d\u043e\u043c\u0443 \u0441\u043e\u0436\u0430\u043b\u0435\u043d\u0438\u044e, \u0431\u0435\u0437 \u0442\u043e\u0447\u043d\u043e\u0433\u043e \u0437\u043d\u0430\u043d\u0438\u044f \u0442\u043e\u0433\u043e, \u0447\u0435\u043c \u0436\u0438\u043b\u0438 \u0438 \u043a \u0447\u0435\u043c\u0443 \u0441\u0442\u0440\u0435\u043c\u0438\u043b\u0438\u0441\u044c \u044d\u0442\u0438 \u043c\u0430\u0433\u0438, \u043c\u043d\u0435 \u043e\u0441\u0442\u0430\u0435\u0442\u0441\u044f \u043b\u0438\u0448\u044c \u0433\u0430\u0434\u0430\u0442\u044c \u043e \u043f\u0440\u0430\u0432\u0434\u0435.\n</font>"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "type": "QUST CNAM",
+        "original": "I've found a mysterious tower in the swamps of Hjaalmarch. After finding my way inside, it appears to be an elaborate home built for a powerful mage. I may be able to make use of the lodgings in my travels through Skyrim. ",
+        "string": "\u041d\u0430 \u0431\u043e\u043b\u043e\u0442\u0430\u0445 \u0425\u044c\u044f\u043b\u043c\u0430\u0440\u043a\u0430 \u0441\u0442\u043e\u0438\u0442 \u0437\u0430\u0433\u0430\u0434\u043e\u0447\u043d\u0430\u044f \u0431\u0430\u0448\u043d\u044f. \u041c\u043d\u0435 \u0443\u0434\u0430\u043b\u043e\u0441\u044c \u043f\u043e\u043f\u0430\u0441\u0442\u044c \u0432\u043d\u0443\u0442\u0440\u044c. \u0414\u043e\u043b\u0436\u043d\u043e \u0431\u044b\u0442\u044c, \u044d\u0442\u043e\u0442 \u0441\u043e \u0432\u043a\u0443\u0441\u043e\u043c \u043e\u0431\u0443\u0441\u0442\u0440\u043e\u0435\u043d\u043d\u044b\u0439 \u0434\u043e\u043c \u0431\u044b\u043b \u043f\u0440\u0435\u0434\u043d\u0430\u0437\u043d\u0430\u0447\u0435\u043d \u0434\u043b\u044f \u043c\u043e\u0433\u0443\u0449\u0435\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0433\u043e \u043c\u0430\u0433\u0430. \u0412\u043e\u0437\u043c\u043e\u0436\u043d\u043e, \u0432 \u0441\u0442\u0440\u0430\u043d\u0441\u0442\u0432\u0438\u044f\u0445 \u043f\u043e \u0421\u043a\u0430\u0439\u0440\u0438\u043c\u0443 \u044d\u0442\u0430 \u0431\u0430\u0448\u043d\u044f \u043c\u043d\u0435 \u043f\u0440\u0438\u0433\u043e\u0434\u0438\u0442\u0441\u044f. "
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "type": "QUST CNAM",
+        "original": "I've found a mysterious tower in the swamps of Hjaalmarch. However, the door to tower is locked. A journal on a nearby body indicates I need to activate a stone seal to light the way.",
+        "string": "\u041d\u0430 \u0431\u043e\u043b\u043e\u0442\u0430\u0445 \u0425\u044c\u044f\u043b\u043c\u0430\u0440\u043a\u0430 \u0441\u0442\u043e\u0438\u0442 \u0437\u0430\u0433\u0430\u0434\u043e\u0447\u043d\u0430\u044f \u0431\u0430\u0448\u043d\u044f. \u041d\u043e \u0434\u0432\u0435\u0440\u044c \u0432 \u043d\u0435\u0435 \u0437\u0430\u043f\u0435\u0440\u0442\u0430. \u041d\u0430 \u043b\u0435\u0436\u0430\u0432\u0448\u0435\u043c \u043f\u043e\u0431\u043b\u0438\u0437\u043e\u0441\u0442\u0438 \u0442\u0440\u0443\u043f\u0435 \u043d\u0430\u0448\u0435\u043b\u0441\u044f \u0434\u043d\u0435\u0432\u043d\u0438\u043a, \u0433\u0434\u0435 \u043d\u0430\u043f\u0438\u0441\u0430\u043d\u043e, \u0447\u0442\u043e \u0434\u043b\u044f \u0432\u0445\u043e\u0434\u0430 \u0432\u043d\u0443\u0442\u0440\u044c \u043d\u0443\u0436\u043d\u043e \u0430\u043a\u0442\u0438\u0432\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u043a\u0430\u043c\u0435\u043d\u043d\u0443\u044e \u043f\u0435\u0447\u0430\u0442\u044c."
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "type": "QUST CNAM",
+        "original": "I've found a mysterious tower in the swamps of Hjaalmarch. Activating a seal by the front door summoned a ghostly apparition which unlocked the tower.",
+        "string": "\u041d\u0430 \u0431\u043e\u043b\u043e\u0442\u0430\u0445 \u0425\u044c\u044f\u043b\u043c\u0430\u0440\u043a\u0430 \u0441\u0442\u043e\u0438\u0442 \u0437\u0430\u0433\u0430\u0434\u043e\u0447\u043d\u0430\u044f \u0431\u0430\u0448\u043d\u044f. \u041f\u043e\u0441\u043b\u0435 \u0430\u043a\u0442\u0438\u0432\u0430\u0446\u0438\u0438 \u043f\u0435\u0447\u0430\u0442\u0438 \u0443 \u0434\u0432\u0435\u0440\u0438 \u043f\u043e\u044f\u0432\u0438\u043b\u0441\u044f \u043f\u0440\u0438\u0437\u0440\u0430\u043a, \u043a\u043e\u0442\u043e\u0440\u044b\u0439 \u043e\u0442\u043a\u0440\u044b\u043b \u0432\u0445\u043e\u0434 \u0432 \u0431\u0430\u0448\u043d\u044e."
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "type": "QUST CNAM",
+        "original": "I've found a mysterious tower in the swamps of Hjaalmarch. However, the door to tower is locked. A journal on a nearby body indicates I need to activate a stone seal. Activating it summoned a ghostly apparition which unlocked the tower.",
+        "string": "\u041d\u0430 \u0431\u043e\u043b\u043e\u0442\u0430\u0445 \u0425\u044c\u044f\u043b\u043c\u0430\u0440\u043a\u0430 \u0441\u0442\u043e\u0438\u0442 \u0437\u0430\u0433\u0430\u0434\u043e\u0447\u043d\u0430\u044f \u0431\u0430\u0448\u043d\u044f. \u041d\u043e \u0434\u0432\u0435\u0440\u044c \u0432 \u043d\u0435\u0435 \u0437\u0430\u043f\u0435\u0440\u0442\u0430. \u041d\u0430 \u043b\u0435\u0436\u0430\u0432\u0448\u0435\u043c \u043f\u043e\u0431\u043b\u0438\u0437\u043e\u0441\u0442\u0438 \u0442\u0440\u0443\u043f\u0435 \u043d\u0430\u0448\u0435\u043b\u0441\u044f \u0434\u043d\u0435\u0432\u043d\u0438\u043a, \u0433\u0434\u0435 \u043d\u0430\u043f\u0438\u0441\u0430\u043d\u043e, \u0447\u0442\u043e \u0434\u043b\u044f \u0432\u0445\u043e\u0434\u0430 \u0432\u043d\u0443\u0442\u0440\u044c \u043d\u0443\u0436\u043d\u043e \u0430\u043a\u0442\u0438\u0432\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u043a\u0430\u043c\u0435\u043d\u043d\u0443\u044e \u043f\u0435\u0447\u0430\u0442\u044c. \u041f\u043e\u0441\u043b\u0435 \u0430\u043a\u0442\u0438\u0432\u0430\u0446\u0438\u0438 \u043f\u0435\u0447\u0430\u0442\u0438 \u0443 \u0434\u0432\u0435\u0440\u0438 \u043f\u043e\u044f\u0432\u0438\u043b\u0441\u044f \u043f\u0440\u0438\u0437\u0440\u0430\u043a, \u043a\u043e\u0442\u043e\u0440\u044b\u0439 \u043e\u0442\u043a\u0440\u044b\u043b \u0432\u0445\u043e\u0434 \u0432 \u0431\u0430\u0448\u043d\u044e."
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "type": "QUST CNAM",
+        "original": "I've found a mysterious tower in the swamps of Hjaalmarch. However, the door to tower is locked. A journal on a nearby body indicates I need to activate a stone seal. Activating it summoned a ghostly apparition. I should follow it and see where it leads.",
+        "string": "\u041d\u0430 \u0431\u043e\u043b\u043e\u0442\u0430\u0445 \u0425\u044c\u044f\u043b\u043c\u0430\u0440\u043a\u0430 \u0441\u0442\u043e\u0438\u0442 \u0437\u0430\u0433\u0430\u0434\u043e\u0447\u043d\u0430\u044f \u0431\u0430\u0448\u043d\u044f. \u041d\u043e \u0434\u0432\u0435\u0440\u044c \u0432 \u043d\u0435\u0435 \u0437\u0430\u043f\u0435\u0440\u0442\u0430. \u041d\u0430 \u043b\u0435\u0436\u0430\u0432\u0448\u0435\u043c \u043f\u043e\u0431\u043b\u0438\u0437\u043e\u0441\u0442\u0438 \u0442\u0440\u0443\u043f\u0435 \u043d\u0430\u0448\u0435\u043b\u0441\u044f \u0434\u043d\u0435\u0432\u043d\u0438\u043a, \u0433\u0434\u0435 \u043d\u0430\u043f\u0438\u0441\u0430\u043d\u043e, \u0447\u0442\u043e \u0434\u043b\u044f \u0432\u0445\u043e\u0434\u0430 \u0432\u043d\u0443\u0442\u0440\u044c \u043d\u0443\u0436\u043d\u043e \u0430\u043a\u0442\u0438\u0432\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u043a\u0430\u043c\u0435\u043d\u043d\u0443\u044e \u043f\u0435\u0447\u0430\u0442\u044c. \u041f\u043e\u0441\u043b\u0435 \u0430\u043a\u0442\u0438\u0432\u0430\u0446\u0438\u0438 \u043f\u0435\u0447\u0430\u0442\u0438 \u0443 \u0434\u0432\u0435\u0440\u0438 \u043f\u043e\u044f\u0432\u0438\u043b\u0441\u044f \u043f\u0440\u0438\u0437\u0440\u0430\u043a. \u041d\u0430\u0434\u043e \u0443\u0437\u043d\u0430\u0442\u044c, \u043a\u0443\u0434\u0430 \u043e\u043d \u043c\u0435\u043d\u044f \u043f\u0440\u0438\u0432\u0435\u0434\u0435\u0442."
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "type": "QUST CNAM",
+        "original": "I've found a mysterious tower in the swamps of Hjaalmarch. However, the door to tower is locked. I should investigate the area to see if there's a way in.",
+        "string": "\u041d\u0430 \u0431\u043e\u043b\u043e\u0442\u0430\u0445 \u0425\u044c\u044f\u043b\u043c\u0430\u0440\u043a\u0430 \u0441\u0442\u043e\u0438\u0442 \u0437\u0430\u0433\u0430\u0434\u043e\u0447\u043d\u0430\u044f \u0431\u0430\u0448\u043d\u044f. \u041d\u043e \u0434\u0432\u0435\u0440\u044c \u0432 \u043d\u0435\u0435 \u0437\u0430\u043f\u0435\u0440\u0442\u0430. \u041d\u0430\u0434\u043e \u043e\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u043e\u043a\u0440\u0435\u0441\u0442\u043d\u043e\u0441\u0442\u0438: \u0432\u0434\u0440\u0443\u0433 \u043d\u0430\u0439\u0434\u0435\u0442\u0441\u044f \u0441\u043f\u043e\u0441\u043e\u0431 \u043f\u043e\u043f\u0430\u0441\u0442\u044c \u0432\u043d\u0443\u0442\u0440\u044c."
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "type": "QUST CNAM",
+        "original": "I've heard rumors of a mysterious tower somewhere east of Morthal. If it's abandoned, I may be able to make of use of it.",
+        "string": "\u041c\u043d\u0435 \u0440\u0430\u0441\u0441\u043a\u0430\u0437\u044b\u0432\u0430\u043b\u0438, \u0447\u0442\u043e \u0433\u0434\u0435-\u0442\u043e \u043a \u0432\u043e\u0441\u0442\u043e\u043a\u0443 \u043e\u0442 \u041c\u043e\u0440\u0444\u0430\u043b\u0430 \u0441\u0442\u043e\u0438\u0442 \u0437\u0430\u0433\u0430\u0434\u043e\u0447\u043d\u0430\u044f \u0431\u0430\u0448\u043d\u044f. \u0415\u0441\u043b\u0438 \u043e\u043d\u0430 \u0437\u0430\u0431\u0440\u043e\u0448\u0435\u043d\u0430, \u0442\u043e \u043e\u043d\u0430 \u043c\u043e\u0436\u0435\u0442 \u043c\u043d\u0435 \u043f\u0440\u0438\u0433\u043e\u0434\u0438\u0442\u044c\u0441\u044f."
+    },
+    {
+        "editor_id": "ccEEJSSE002_LoreJournal",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\n<b>1st of Morning Star, 3E 423</b>\nA wise mage once told me the power of a spell lies in one's conviction. \n\nIt's evident to me now that the college has lost all desire and purpose, and has become feckless under its current stewardship.\n\nThe Arch-Mage Shalidor believed the halls to be a proving ground where a mage could test the limits of their abilities. Now the college is a tomb of knowledge, where grand spells and lofty ideals are left to wither and rot. \n\nWe should not let the outside world dictate how we conduct ourselves. Placating their ignorance is not a virtue. The augurs speak of a great war on the horizon, and we should be doing everything in our power to prepare for it. \n\nThat is why Teel-Ja and I have chosen to leave. We know the road ahead will be hard, but one thing we do not lack is the conviction to see it through.\n[pagebreak]\n<b>23rd of Rain's Hand, 3E 428</b>\nConstruction of the tower is almost complete. Teel-Ja accused me of being impatient, a crime which I've been guilty of more often than not. Between us he has always been the tortoise, and I the hare. Still, our needs are pressing. The coming war will not wait for the mortar to dry.\n\nThe location has much to do with the delays, but that can't be helped. The Nords are distrustful of magic by nature, and some would frown upon our efforts. Others might take a more violent approach. For that reason, we've put a ward on the door that requires magic to dispel.\n\nWe've chosen to honor Shalidor in much of what we do, including the seal outside the door. Teel-Ja seemed pleased with the idea of setting it on fire, while others seemed uncomfortable with the idea. I warned them that pride is the enemy of progress. If we are to survive in the coming storm, we must not be bound by tradition. We must be willing to set it aflame.\n[pagebreak]\n<b>11th of First Seed, 3E 429</b>\nIt's been a year since construction has finished, yet there is still much that needs to be done. The tower is only the foundation for our defense. Our minds and our magic must serve as its ramparts, and for them to hold we must amplify our strength.\n\nAs such, I have sent scouts throughout Tamriel to find powerful artifacts that may help us in our efforts; artifacts the college wizards refused to obtain out of cowardice or comfort. Many of these relics played a role in preventing calamities of the past. Perhaps it is their destiny as much as ours to stand between the world and its ruin.\n\n[pagebreak]\n<b>17th of Frost Fall, 3E 429</b>\nWe've had little luck finding artifacts of note. Based on the information I've culled from the Arcanaeum records, I know there are several here in Skyrim, including the Staff of Gauldur. We must endeavor to find them all.\n\nMore concerning, however, is the disposition and morale of the mages. Even Teel-Ja seems to have fallen into the trappings of routine and idleness. It is hard to convince weary souls to explore yet another ruin when the task has been stripped of all urgency.\n[pagebreak]\n<b>29th of Sun's Height, 3E 433</b>\nIt's now halfway through the year 433, more than ten years since we left the college. Yet all remains blissfully calm. One of the new acolytes even suggested abandoning her training to become a cook, happily showing me her spell for preserving apple pies. I reminded her that she is here to study battle magic, not pastries. She will have more than enough time to indulge her sweet tooth when her youth is behind her.\n\nIt is why we've devoted half the library to the placement of powerful artifacts, to serve as a reminder of our pursuit. Yet seeing the racks as they are now, collecting only dust, makes me wonder if I've led us all astray. \n[pagebreak]\nAs leader of this guild, I have the training to fight and the knowledge of what's to come. What I don't have, sadly, is the conviction that it will.\n[pagebreak]\n<b>28th of Last Seed, 3E 433</b>\nA courier came by with news from Cyrodiil. Emperor Septim is dead. The Gates of Oblivion have opened. Divines help us all.\n</font>\n\n",
+        "string": "<font face=\"$HandwrittenFont\">\n<b>1-\u0435 \u0423\u0442\u0440\u0435\u043d\u043d\u0435\u0439 \u0437\u0432\u0435\u0437\u0434\u044b, 3\u042d 423</b>\n\u041c\u0443\u0434\u0440\u044b\u0439 \u043c\u0430\u0433 \u043e\u0434\u043d\u0430\u0436\u0434\u044b \u0441\u043a\u0430\u0437\u0430\u043b, \u0447\u0442\u043e \u0441\u0438\u043b\u0430 \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u044f \u043a\u0440\u043e\u0435\u0442\u0441\u044f \u0432 \u0443\u0432\u0435\u0440\u0435\u043d\u043d\u043e\u0441\u0442\u0438 \u0442\u043e\u0433\u043e, \u043a\u0442\u043e \u0435\u0433\u043e \u043f\u0440\u0438\u043c\u0435\u043d\u044f\u0435\u0442. \n\n\u0422\u0435\u043f\u0435\u0440\u044c \u044f \u0432\u0438\u0436\u0443, \u0447\u0442\u043e \u043f\u0440\u0438 \u043d\u044b\u043d\u0435\u0448\u043d\u0435\u043c \u0440\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u0435 \u041a\u043e\u043b\u043b\u0435\u0433\u0438\u044f \u043e\u0441\u043b\u0430\u0431\u0435\u043b\u0430, \u043b\u0438\u0448\u0438\u043b\u0430\u0441\u044c \u0446\u0435\u043b\u0438 \u0438 \u0436\u0435\u043b\u0430\u043d\u0438\u044f \u0434\u0432\u0438\u0433\u0430\u0442\u044c\u0441\u044f \u0432\u043f\u0435\u0440\u0435\u0434.\n\n\u0410\u0440\u0445\u0438\u043c\u0430\u0433 \u0428\u0430\u043b\u0438\u0434\u043e\u0440 \u0441\u0447\u0438\u0442\u0430\u043b, \u0447\u0442\u043e \u0437\u0430\u043b\u044b \u041a\u043e\u043b\u043b\u0435\u0433\u0438\u0438 - \u0442\u043e \u043c\u0435\u0441\u0442\u043e, \u0433\u0434\u0435 \u043c\u0430\u0433 \u043c\u043e\u0436\u0435\u0442 \u0438\u0441\u043f\u044b\u0442\u0430\u0442\u044c \u0441\u0435\u0431\u044f, \u0443\u0437\u043d\u0430\u0442\u044c, \u043d\u0430 \u0447\u0442\u043e \u043e\u043d \u0441\u043f\u043e\u0441\u043e\u0431\u0435\u043d. \u0422\u0435\u043f\u0435\u0440\u044c \u041a\u043e\u043b\u043b\u0435\u0433\u0438\u044f \u0441\u0442\u0430\u043b\u0430 \u0433\u0440\u043e\u0431\u043d\u0438\u0446\u0435\u0439 \u0434\u043b\u044f \u0437\u043d\u0430\u043d\u0438\u0439, \u0432 \u043a\u043e\u0442\u043e\u0440\u043e\u0439 \u043c\u043e\u0449\u043d\u044b\u0435 \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u044f \u0438 \u0433\u0435\u043d\u0438\u0430\u043b\u044c\u043d\u044b\u0435 \u0438\u0434\u0435\u0438 \u0443\u0441\u044b\u0445\u0430\u044e\u0442 \u0438 \u0433\u043d\u0438\u044e\u0442. \n\n\u041d\u0435\u043b\u044c\u0437\u044f \u0434\u043e\u043f\u0443\u0441\u043a\u0430\u0442\u044c, \u0447\u0442\u043e\u0431\u044b \u043e\u043a\u0440\u0443\u0436\u0430\u044e\u0449\u0438\u0439 \u043c\u0438\u0440 \u0434\u0438\u043a\u0442\u043e\u0432\u0430\u043b \u043d\u0430\u043c, \u043a\u0430\u043a \u0441\u0435\u0431\u044f \u0432\u0435\u0441\u0442\u0438. \u041e\u043d\u0438 \u043f\u043e\u0445\u0432\u0430\u043b\u044f\u044e\u0442\u0441\u044f \u0441\u0432\u043e\u0438\u043c \u043d\u0435\u0432\u0435\u0436\u0435\u0441\u0442\u0432\u043e\u043c, \u043d\u043e \u0432\u0435\u0441\u044c\u043c\u0430 \u0437\u0440\u044f. \u041f\u0440\u043e\u0440\u043e\u043a\u0438 \u043f\u0440\u0435\u0434\u0441\u043a\u0430\u0437\u044b\u0432\u0430\u044e\u0442 \u0432\u0435\u043b\u0438\u043a\u0443\u044e \u0432\u043e\u0439\u043d\u0443, \u0438 \u043c\u044b \u0434\u043e\u043b\u0436\u043d\u044b \u043f\u043e \u043c\u0435\u0440\u0435 \u0441\u0432\u043e\u0438\u0445 \u0441\u0438\u043b \u043a \u043d\u0435\u0439 \u0433\u043e\u0442\u043e\u0432\u0438\u0442\u044c\u0441\u044f. \n\n\u041f\u043e\u044d\u0442\u043e\u043c\u0443 \u043c\u044b \u0441 \u0422\u0438\u043b-\u0414\u0436\u0430 \u0440\u0435\u0448\u0438\u043b\u0438 \u043f\u043e\u043a\u0438\u043d\u0443\u0442\u044c \u041a\u043e\u043b\u043b\u0435\u0433\u0438\u044e. \u041c\u044b \u0437\u043d\u0430\u0435\u043c, \u0447\u0442\u043e \u0432\u043f\u0435\u0440\u0435\u0434\u0438 \u0443 \u043d\u0430\u0441 \u0442\u0440\u0443\u0434\u043d\u044b\u0439 \u043f\u0443\u0442\u044c, \u043d\u043e, \u0432 \u043e\u0442\u043b\u0438\u0447\u0438\u0435 \u043e\u0442 \u041a\u043e\u043b\u043b\u0435\u0433\u0438\u0438, \u043c\u044b \u043e\u0431\u043b\u0430\u0434\u0430\u0435\u043c \u0434\u043e\u0441\u0442\u0430\u0442\u043e\u0447\u043d\u043e\u0439 \u0443\u0432\u0435\u0440\u0435\u043d\u043d\u043e\u0441\u0442\u044c\u044e \u0432 \u0441\u0432\u043e\u0438\u0445 \u0441\u0438\u043b\u0430\u0445.\n[pagebreak]\n<b>23-\u0435 \u0420\u0443\u043a\u0438 \u0434\u043e\u0436\u0434\u044f, 3\u042d 428</b>\n\u041f\u043e\u0441\u0442\u0440\u043e\u0439\u043a\u0430 \u0431\u0430\u0448\u043d\u0438 \u043f\u043e\u0447\u0442\u0438 \u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043d\u0430. \u0422\u0438\u043b-\u0414\u0436\u0430 \u043e\u0431\u0432\u0438\u043d\u044f\u0435\u0442 \u043c\u0435\u043d\u044f \u0432 \u043d\u0435\u0442\u0435\u0440\u043f\u0435\u043b\u0438\u0432\u043e\u0441\u0442\u0438, \u0438 \u0437\u0434\u0435\u0441\u044c, \u043a\u0430\u044e\u0441\u044c, \u043e\u043d \u043f\u0440\u0430\u0432. \u0418\u0437 \u043d\u0430\u0441 \u0434\u0432\u043e\u0438\u0445 \u043e\u043d \u0432\u0441\u0435\u0433\u0434\u0430 \u0431\u044b\u043b \u0447\u0435\u0440\u0435\u043f\u0430\u0445\u043e\u0439, \u0430 \u044f - \u0437\u0430\u0439\u0446\u0435\u043c. \u041d\u043e \u0441\u0435\u0439\u0447\u0430\u0441 \u043c\u044b \u043d\u0435 \u043c\u043e\u0436\u0435\u043c \u043f\u043e\u0437\u0432\u043e\u043b\u0438\u0442\u044c \u0441\u0435\u0431\u0435 \u043f\u0440\u043e\u043c\u0435\u0434\u043b\u0435\u043d\u0438\u044f. \u0413\u0440\u044f\u0434\u0443\u0449\u0430\u044f \u0432\u043e\u0439\u043d\u0430 \u043d\u0435 \u0441\u0442\u0430\u043d\u0435\u0442 \u0436\u0434\u0430\u0442\u044c, \u043f\u043e\u043a\u0430 \u043c\u044b \u043a \u043d\u0435\u0439 \u043f\u0440\u0438\u0433\u043e\u0442\u043e\u0432\u0438\u043c\u0441\u044f.\n\n\u041c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0434\u043b\u044f \u0431\u0430\u0448\u043d\u0438 \u043f\u0440\u0438\u0448\u043b\u043e\u0441\u044c \u0432\u044b\u0431\u0438\u0440\u0430\u0442\u044c \u0432\u0442\u043e\u0440\u043e\u043f\u044f\u0445, \u043d\u043e \u0447\u0442\u043e \u043f\u043e\u0434\u0435\u043b\u0430\u0442\u044c. \u041d\u043e\u0440\u0434\u044b \u043f\u043e \u0441\u0432\u043e\u0435\u0439 \u043f\u0440\u0438\u0440\u043e\u0434\u0435 \u043d\u0435\u0434\u043e\u043b\u044e\u0431\u043b\u0438\u0432\u0430\u044e\u0442 \u043c\u0430\u0433\u0438\u044e, \u0438 \u043c\u043d\u043e\u0433\u0438\u0435 \u043d\u0435 \u043e\u0434\u043e\u0431\u0440\u044f\u043b\u0438 \u0442\u043e, \u0447\u0442\u043e \u043c\u044b \u0434\u0435\u043b\u0430\u0435\u043c. \u0410 \u043a\u0442\u043e-\u0442\u043e \u043c\u043e\u0436\u0435\u0442 \u043f\u0435\u0440\u0435\u0439\u0442\u0438 \u043e\u0442 \u043a\u043e\u0441\u044b\u0445 \u0432\u0437\u0433\u043b\u044f\u0434\u043e\u0432 \u043a \u0431\u043e\u043b\u0435\u0435 \u0440\u0435\u0448\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u043c \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044f\u043c. \u041f\u043e\u044d\u0442\u043e\u043c\u0443 \u043c\u044b \u0441\u0434\u0435\u043b\u0430\u043b\u0438 \u0442\u0430\u043a, \u0447\u0442\u043e \u0434\u0432\u0435\u0440\u044c \u0432 \u0431\u0430\u0448\u043d\u044e \u043c\u043e\u0436\u043d\u043e \u043e\u0442\u043a\u0440\u044b\u0442\u044c \u0442\u043e\u043b\u044c\u043a\u043e \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e \u043c\u0430\u0433\u0438\u0438.\n\n\u0412\u043e \u043c\u043d\u043e\u0433\u0438\u0445 \u0432\u0435\u0449\u0430\u0445 \u043c\u044b \u0441\u0442\u0430\u0440\u0430\u043b\u0438\u0441\u044c \u0432\u043e\u043f\u043b\u043e\u0442\u0438\u0442\u044c \u043f\u0430\u043c\u044f\u0442\u044c \u043e \u0428\u0430\u043b\u0438\u0434\u043e\u0440\u0435, \u0438 \u043f\u0435\u0447\u0430\u0442\u044c \u043d\u0430 \u0434\u0432\u0435\u0440\u0438 \u0431\u044b\u043b\u0430 \u0441\u0434\u0435\u043b\u0430\u043d\u0430 \u0442\u0430\u043a, \u0447\u0442\u043e\u0431\u044b \u043d\u0430\u043f\u043e\u043c\u0438\u043d\u0430\u0442\u044c \u043e \u043d\u0435\u043c. \u0422\u0438\u043b-\u0414\u0436\u0430 \u043f\u043e\u043d\u0440\u0430\u0432\u0438\u043b\u0430\u0441\u044c \u043c\u043e\u044f \u0438\u0434\u0435\u044f \u0441\u0434\u0435\u043b\u0430\u0442\u044c \u043f\u0435\u0447\u0430\u0442\u044c \u043f\u044b\u043b\u0430\u044e\u0449\u0435\u0439; \u0432\u043f\u0440\u043e\u0447\u0435\u043c, \u043e\u043d \u0431\u044b\u043b \u0435\u0434\u0438\u043d\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u043c, \u043a\u0442\u043e \u044d\u0442\u043e \u043e\u0446\u0435\u043d\u0438\u043b. \u042f \u043d\u0430\u043f\u043e\u043c\u043d\u0438\u043b \u043e\u0441\u0442\u0430\u043b\u044c\u043d\u044b\u043c \u043e \u0442\u043e\u043c, \u0447\u0442\u043e \u0433\u043e\u0440\u0434\u044b\u043d\u044f \u043f\u0440\u0435\u043f\u044f\u0442\u0441\u0442\u0432\u0443\u0435\u0442 \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044e. \u0415\u0441\u043b\u0438 \u043c\u044b \u0445\u043e\u0442\u0438\u043c \u043f\u0435\u0440\u0435\u0436\u0438\u0442\u044c \u043d\u0430\u0434\u0432\u0438\u0433\u0430\u044e\u0449\u0443\u044e\u0441\u044f \u0431\u0443\u0440\u044e, \u043d\u0435\u043b\u044c\u0437\u044f \u043e\u0433\u0440\u0430\u043d\u0438\u0447\u0438\u0432\u0430\u0442\u044c \u0441\u0435\u0431\u044f \u0440\u0430\u043c\u043a\u0430\u043c\u0438 \u0442\u0440\u0430\u0434\u0438\u0446\u0438\u044f\u043c\u0438. \u041b\u0443\u0447\u0448\u0435 \u0440\u0430\u0437\u0436\u0435\u0447\u044c \u0438\u0437 \u043d\u0438\u0445 \u043d\u043e\u0432\u043e\u0435 \u043f\u043b\u0430\u043c\u044f.\n[pagebreak]\n<b>11-\u0435 \u041f\u0435\u0440\u0432\u043e\u0433\u043e \u0437\u0435\u0440\u043d\u0430, 3\u042d 429</b>\n\u041f\u0440\u043e\u0448\u0435\u043b \u0433\u043e\u0434 \u0441 \u0442\u043e\u0433\u043e \u0432\u0440\u0435\u043c\u0435\u043d\u0438, \u043a\u0430\u043a \u0441\u0442\u0440\u043e\u0439\u043a\u0430 \u0437\u0430\u0432\u0435\u0440\u0448\u0438\u043b\u0430\u0441\u044c, \u043d\u043e \u0434\u0435\u043b \u043f\u043e-\u043f\u0440\u0435\u0436\u043d\u0435\u043c\u0443 \u043c\u043d\u043e\u0433\u043e. \u0411\u0430\u0448\u043d\u044f - \u043b\u0438\u0448\u044c \u043e\u0441\u043d\u043e\u0432\u0430 \u043d\u0430\u0448\u0435\u0439 \u0437\u0430\u0449\u0438\u0442\u044b. \u0423\u043a\u0440\u0435\u043f\u043b\u044f\u0442\u044c \u0435\u0435 \u043d\u0443\u0436\u043d\u043e \u0441\u0438\u043b\u043e\u0439 \u043d\u0430\u0448\u0435\u0433\u043e \u0440\u0430\u0437\u0443\u043c\u0430 \u0438 \u043d\u0430\u0448\u0435\u0439 \u043c\u0430\u0433\u0438\u0438, \u0430 \u0447\u0442\u043e\u0431\u044b \u044d\u0442\u0438 \u0443\u043a\u0440\u0435\u043f\u043b\u0435\u043d\u0438\u044f \u0431\u044b\u043b\u0438 \u043d\u0430\u0434\u0435\u0436\u043d\u044b\u043c\u0438, \u043c\u044b \u0434\u043e\u043b\u0436\u043d\u044b \u0441\u0442\u0430\u0442\u044c \u0441\u0438\u043b\u044c\u043d\u0435\u0435.\n\n\u041f\u043e\u044d\u0442\u043e\u043c\u0443 \u044f \u0440\u0430\u0437\u043e\u0441\u043b\u0430\u043b \u0440\u0430\u0437\u0432\u0435\u0434\u0447\u0438\u043a\u043e\u0432 \u043f\u043e \u0432\u0441\u0435\u043c\u0443 \u0422\u0430\u043c\u0440\u0438\u044d\u043b\u044e. \u041e\u043d\u0438 \u0434\u043e\u043b\u0436\u043d\u044b \u0438\u0441\u043a\u0430\u0442\u044c \u043c\u043e\u0449\u043d\u044b\u0435 \u0430\u0440\u0442\u0435\u0444\u0430\u043a\u0442\u044b, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u043f\u043e\u043c\u043e\u0433\u0443\u0442 \u043d\u0430\u043c; \u0430\u0440\u0442\u0435\u0444\u0430\u043a\u0442\u044b, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u043f\u043e\u0431\u043e\u044f\u043b\u0438\u0441\u044c \u0438\u043b\u0438 \u043f\u043e\u043b\u0435\u043d\u0438\u043b\u0438\u0441\u044c \u0440\u0430\u0437\u044b\u0441\u043a\u0438\u0432\u0430\u0442\u044c \u043c\u0430\u0433\u0438 \u041a\u043e\u043b\u043b\u0435\u0433\u0438\u0438. \u0412 \u041c\u043e\u0440\u0440\u043e\u0432\u0438\u043d\u0434\u0435 \u0446\u0435\u043d\u043e\u0439 \u043d\u0435\u043c\u0430\u043b\u044b\u0445 \u0443\u0441\u0438\u043b\u0438\u0439 \u043c\u044b \u0440\u0430\u0437\u0434\u043e\u0431\u044b\u043b\u0438 \u041a\u043e\u043b\u044c\u0446\u043e \u0447\u0430\u0440\u043e\u0434\u0435\u044f, \u043d\u0435\u043a\u043e\u0433\u0434\u0430 \u043f\u0440\u0438\u043d\u0430\u0434\u043b\u0435\u0436\u0430\u0432\u0448\u0435\u0435 \u043b\u0435\u0433\u0435\u043d\u0434\u0430\u0440\u043d\u043e\u043c\u0443 \u0430\u0440\u0445\u0438\u043c\u0430\u0433\u0443 \u0421\u0438\u0440\u0430\u0431\u0435\u0439\u043d\u0443. \n\n\u0421\u043e\u0433\u043b\u0430\u0441\u043d\u043e \u043b\u0435\u0433\u0435\u043d\u0434\u0435, \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e \u044d\u0442\u043e\u0433\u043e \u043a\u043e\u043b\u044c\u0446\u0430 \u0421\u0438\u0440\u0430\u0431\u0435\u0439\u043d \u043e\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u043b \u0422\u0440\u0430\u0441\u0441\u0438\u0430\u043d\u0441\u043a\u0443\u044e \u0447\u0443\u043c\u0443, \u0443\u0433\u0440\u043e\u0436\u0430\u0432\u0448\u0443\u044e \u0432\u0441\u0435\u043c\u0443 \u0422\u0430\u043c\u0440\u0438\u044d\u043b\u044e. \u0412\u043e\u0437\u043c\u043e\u0436\u043d\u043e, \u0441\u0443\u0434\u044c\u0431\u043e\u0439 \u043f\u0440\u0435\u0434\u043d\u0430\u0437\u043d\u0430\u0447\u0435\u043d\u043e, \u0447\u0442\u043e\u0431\u044b \u044d\u0442\u043e \u043a\u043e\u043b\u044c\u0446\u043e \u0441\u043d\u043e\u0432\u0430 \u0441\u043f\u0430\u0441\u043b\u043e \u043c\u0438\u0440 \u043e\u0442 \u0433\u0438\u0431\u0435\u043b\u0438.\n\n[pagebreak]\n<b>17-\u0435 \u041d\u0430\u0447\u0430\u043b\u0430 \u043c\u043e\u0440\u043e\u0437\u043e\u0432, 3\u042d 429</b>\n\u041f\u043e\u043a\u0430 \u043d\u0430\u043c \u0431\u043e\u043b\u044c\u0448\u0435 \u043d\u0435 \u043f\u043e\u0441\u0447\u0430\u0441\u0442\u043b\u0438\u0432\u0438\u043b\u043e\u0441\u044c \u043e\u0431\u043d\u0430\u0440\u0443\u0436\u0438\u0442\u044c \u0445\u043e\u0442\u044c \u0441\u043a\u043e\u043b\u044c\u043a\u043e-\u043d\u0438\u0431\u0443\u0434\u044c \u0437\u043d\u0430\u0447\u0438\u043c\u044b\u0435 \u0430\u0440\u0442\u0435\u0444\u0430\u043a\u0442\u044b. \u0421\u043e\u0433\u043b\u0430\u0441\u043d\u043e \u0442\u043e\u043c\u0443, \u0447\u0442\u043e \u0438\u0437\u043b\u043e\u0436\u0435\u043d\u043e \u0432 \u0430\u0440\u043a\u0430\u043d\u0435\u0443\u043c\u0441\u043a\u0438\u0445 \u043a\u043d\u0438\u0433\u0430\u0445, \u0433\u0434\u0435-\u0442\u043e \u0432 \u0421\u043a\u0430\u0439\u0440\u0438\u043c\u0435 \u0435\u0441\u0442\u044c \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u043e \u0430\u0440\u0442\u0435\u0444\u0430\u043a\u0442\u043e\u0432, \u0432 \u0442\u043e\u043c \u0447\u0438\u0441\u043b\u0435 \u041f\u043e\u0441\u043e\u0445 \u0413\u043e\u043b\u0434\u0443\u0440\u0430. \u041d\u0443\u0436\u043d\u043e \u043f\u043e\u0441\u0442\u0430\u0440\u0430\u0442\u044c\u0441\u044f \u0432\u0441\u0435 \u0438\u0445 \u0440\u0430\u0437\u044b\u0441\u043a\u0430\u0442\u044c.\n\n\u041d\u043e \u043a\u0443\u0434\u0430 \u0431\u043e\u043b\u044c\u0448\u0435 \u043c\u0435\u043d\u044f \u0442\u0440\u0435\u0432\u043e\u0436\u0438\u0442 \u0440\u0430\u0437\u0431\u0440\u043e\u0434 \u0438 \u0448\u0430\u0442\u0430\u043d\u0438\u044f \u0441\u0440\u0435\u0434\u0438 \u043c\u0430\u0433\u043e\u0432. \u0414\u0430\u0436\u0435 \u0422\u0438\u043b-\u0414\u0436\u0430, \u043f\u043e-\u0432\u0438\u0434\u0438\u043c\u043e\u043c\u0443, \u043f\u043e\u0434\u0434\u0430\u043b\u0441\u044f \u043e\u0431\u0449\u0435\u0439 \u0430\u0442\u043c\u043e\u0441\u0444\u0435\u0440\u0435 \u0431\u0435\u0437\u0434\u0435\u043b\u044c\u044f \u0438 \u0441\u043e\u043d\u043d\u043e\u0433\u043e \u0441\u043f\u043e\u043a\u043e\u0439\u0441\u0442\u0432\u0438\u044f. \u041e\u043d\u0438 \u0443\u0441\u0442\u0430\u043b\u0438, \u0438 \u0438\u0445 \u0441\u043b\u043e\u0436\u043d\u043e \u0443\u0431\u0435\u0434\u0438\u0442\u044c \u043e\u0431\u0448\u0430\u0440\u0438\u0442\u044c \u0435\u0449\u0435 \u043e\u0434\u043d\u0438 \u0440\u0430\u0437\u0432\u0430\u043b\u0438\u043d\u044b, \u0435\u0441\u043b\u0438 \u0441\u0438\u044f \u0437\u0430\u0434\u0430\u0447\u0430 \u043d\u0435 \u0442\u0440\u0435\u0431\u0443\u0435\u0442 \u0431\u0435\u0437\u043e\u0442\u043b\u0430\u0433\u0430\u0442\u0435\u043b\u044c\u043d\u043e\u0433\u043e \u0438\u0441\u043f\u043e\u043b\u043d\u0435\u043d\u0438\u044f.\n[pagebreak]\n<b>29-\u0435 \u0412\u044b\u0441\u043e\u043a\u043e\u0433\u043e \u0441\u043e\u043b\u043d\u0446\u0430, 3\u042d 433</b>\n\u0412\u043e\u0442 \u0438 \u043f\u0435\u0440\u0435\u0432\u0430\u043b\u0438\u043b \u0437\u0430 \u0441\u0435\u0440\u0435\u0434\u0438\u043d\u0443 \u0433\u043e\u0434 433 - \u043f\u0440\u043e\u0448\u043b\u043e \u0443\u0436\u0435 \u0431\u043e\u043b\u0435\u0435 \u0434\u0435\u0441\u044f\u0442\u0438 \u043b\u0435\u0442 \u0441 \u0442\u0435\u0445 \u043f\u043e\u0440, \u043a\u0430\u043a \u043c\u044b \u043f\u043e\u043a\u0438\u043d\u0443\u043b\u0438 \u041a\u043e\u043b\u043b\u0435\u0433\u0438\u044e. \u041d\u043e \u0432 \u043c\u0438\u0440\u0435 \u0432\u0441\u0435 \u0441\u043f\u043e\u043a\u043e\u0439\u043d\u043e. \u041e\u0434\u043d\u0430 \u0438\u0437 \u043d\u0430\u0448\u0438\u0445 \u043d\u043e\u0432\u044b\u0445 \u043f\u0440\u0438\u0441\u043b\u0443\u0436\u043d\u0438\u0446 \u0434\u0430\u0436\u0435 \u043e\u0431\u044a\u044f\u0432\u0438\u043b\u0430, \u0447\u0442\u043e \u0445\u043e\u0447\u0435\u0442 \u043e\u0441\u0442\u0430\u0432\u0438\u0442\u044c \u043e\u0431\u0443\u0447\u0435\u043d\u0438\u0435 \u0438 \u0441\u0434\u0435\u043b\u0430\u0442\u044c\u0441\u044f \u043f\u043e\u0432\u0430\u0440\u043e\u043c - \u0438 \u0441 \u0433\u043e\u0440\u0434\u043e\u0441\u0442\u044c\u044e \u043f\u0440\u043e\u0434\u0435\u043c\u043e\u043d\u0441\u0442\u0440\u0438\u0440\u043e\u0432\u0430\u043b\u0430 \u043c\u043d\u0435 \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u0445\u0440\u0430\u043d\u0435\u043d\u0438\u044f \u044f\u0431\u043b\u043e\u0447\u043d\u044b\u0445 \u043f\u0438\u0440\u043e\u0433\u043e\u0432. \u042f \u043d\u0430\u043f\u043e\u043c\u043d\u0438\u043b \u0435\u0439, \u0447\u0442\u043e \u043e\u043d\u0430 \u043f\u0440\u0438\u0448\u043b\u0430 \u043a \u043d\u0430\u043c, \u0447\u0442\u043e\u0431\u044b \u0438\u0437\u0443\u0447\u0430\u0442\u044c \u0431\u043e\u0435\u0432\u0443\u044e \u043c\u0430\u0433\u0438\u044e, \u0430 \u043d\u0435 \u0432\u044b\u043f\u0435\u0447\u043a\u0443. \u0412 \u0441\u0442\u0430\u0440\u043e\u0441\u0442\u0438 \u0443 \u043d\u0435\u0435 \u0431\u0443\u0434\u0435\u0442 \u0434\u043e\u0441\u0442\u0430\u0442\u043e\u0447\u043d\u043e \u0432\u0440\u0435\u043c\u0435\u043d\u0438, \u0447\u0442\u043e\u0431\u044b \u0443\u0431\u043b\u0430\u0436\u0430\u0442\u044c \u0441\u0432\u043e\u0439 \u0436\u0435\u043b\u0443\u0434\u043e\u043a.\n\n\u041f\u043e\u043b\u043e\u0432\u0438\u043d\u0443 \u043d\u0430\u0448\u0435\u0439 \u0431\u0438\u0431\u043b\u0438\u043e\u0442\u0435\u043a\u0438 \u043c\u044b \u043e\u0442\u0432\u0435\u043b\u0438 \u043f\u043e\u0434 \u0445\u0440\u0430\u043d\u0435\u043d\u0438\u0435 \u043c\u043e\u0449\u043d\u044b\u0445 \u0430\u0440\u0442\u0435\u0444\u0430\u043a\u0442\u043e\u0432 \u0438\u043c\u0435\u043d\u043d\u043e \u043f\u043e\u044d\u0442\u043e\u043c\u0443 - \u0447\u0442\u043e\u0431\u044b \u043e\u043d\u0438 \u043d\u0430\u043f\u043e\u043c\u0438\u043d\u0430\u043b\u0438 \u043d\u0430\u043c \u043e \u043d\u0430\u0448\u0435\u043c \u043f\u0440\u0435\u0434\u043d\u0430\u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0438. \u041e\u0434\u043d\u0430\u043a\u043e \u043d\u0430 \u043f\u043e\u043b\u043a\u0430\u0445 \u043a\u043e\u043f\u0438\u0442\u0441\u044f \u043f\u044b\u043b\u044c, \u0438 \u044f \u043d\u0435\u0432\u043e\u043b\u044c\u043d\u043e \u0437\u0430\u0434\u0430\u044e\u0441\u044c \u0432\u043e\u043f\u0440\u043e\u0441\u043e\u043c, \u043d\u0435 \u0441\u043e\u0432\u0435\u0440\u0448\u0438\u043b \u043b\u0438 \u044f \u043e\u0448\u0438\u0431\u043a\u0443, \u043d\u0435 \u0441\u0431\u0438\u043b \u043b\u0438 \u0432\u0441\u0435\u0445 \u0441 \u043f\u0443\u0442\u0438. \n[pagebreak]\n\u0411\u0443\u0434\u0443\u0447\u0438 \u043b\u0438\u0434\u0435\u0440\u043e\u043c \u044d\u0442\u043e\u0439 \u0433\u0438\u043b\u044c\u0434\u0438\u0438, \u044f \u043e\u0431\u043b\u0430\u0434\u0430\u044e \u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u044b\u043c\u0438 \u0431\u043e\u0435\u0432\u044b\u043c\u0438 \u0443\u043c\u0435\u043d\u0438\u044f\u043c\u0438 \u0438 \u0437\u043d\u0430\u043d\u0438\u0435\u043c \u043e \u0442\u043e\u043c, \u043a\u0430\u043a\u043e\u0435 \u0437\u043b\u043e \u043c\u043e\u0436\u0435\u0442 \u043d\u0430 \u043d\u0430\u0441 \u043e\u0431\u0440\u0443\u0448\u0438\u0442\u044c\u0441\u044f. \u0427\u0435\u043c \u044f, \u0443\u0432\u044b, \u0443\u0436\u0435 \u043d\u0435 \u043e\u0431\u043b\u0430\u0434\u0430\u044e - \u0442\u0430\u043a \u044d\u0442\u043e \u0443\u0432\u0435\u0440\u0435\u043d\u043d\u043e\u0441\u0442\u044c\u044e, \u0447\u0442\u043e \u043e\u043d\u043e \u0432\u0441\u0435 \u0436\u0435 \u043e\u0431\u0440\u0443\u0448\u0438\u0442\u0441\u044f.\n[pagebreak]\n<b>28-\u0435 \u041f\u043e\u0441\u043b\u0435\u0434\u043d\u0435\u0433\u043e \u0437\u0435\u0440\u043d\u0430, 3\u042d 433</b>\n\u0418\u0437 \u0421\u0438\u0440\u043e\u0434\u0438\u043b\u0430 \u043f\u0440\u0438\u0431\u044b\u043b \u0433\u043e\u043d\u0435\u0446 \u0441 \u043d\u043e\u0432\u043e\u0441\u0442\u044f\u043c\u0438. \u0418\u043c\u043f\u0435\u0440\u0430\u0442\u043e\u0440 \u0421\u0435\u043f\u0442\u0438\u043c \u0443\u043c\u0435\u0440. \u0412\u0440\u0430\u0442\u0430 \u041e\u0431\u043b\u0438\u0432\u0438\u043e\u043d\u0430 \u043e\u0442\u043a\u0440\u044b\u043b\u0438\u0441\u044c. \u0414\u0430 \u043f\u043e\u043c\u043e\u0433\u0443\u0442 \u043d\u0430\u043c \u0431\u043e\u0433\u0438...\n</font>\n\n"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "type": "QUST CNAM",
+        "original": "I've heard rumors of a mysterious tower somewhere east of Morthal. If it's abandoned, I may be able to make of use of it. When I reached the tower, I found a journal that may provide clues on how to enter it.",
+        "string": "\u041c\u043d\u0435 \u0440\u0430\u0441\u0441\u043a\u0430\u0437\u044b\u0432\u0430\u043b\u0438, \u0447\u0442\u043e \u0433\u0434\u0435-\u0442\u043e \u043a \u0432\u043e\u0441\u0442\u043e\u043a\u0443 \u043e\u0442 \u041c\u043e\u0440\u0444\u0430\u043b\u0430 \u0441\u0442\u043e\u0438\u0442 \u0437\u0430\u0433\u0430\u0434\u043e\u0447\u043d\u0430\u044f \u0431\u0430\u0448\u043d\u044f. \u0415\u0441\u043b\u0438 \u043e\u043d\u0430 \u0437\u0430\u0431\u0440\u043e\u0448\u0435\u043d\u0430, \u0442\u043e \u043e\u043d\u0430 \u043c\u043e\u0436\u0435\u0442 \u043c\u043d\u0435 \u043f\u0440\u0438\u0433\u043e\u0434\u0438\u0442\u044c\u0441\u044f. \u041c\u043d\u0435 \u0443\u0434\u0430\u043b\u043e\u0441\u044c \u043d\u0430\u0439\u0442\u0438 \u0431\u0430\u0448\u043d\u044e, \u0430 \u043f\u043e\u0431\u043b\u0438\u0437\u043e\u0441\u0442\u0438 \u043e\u0442 \u043d\u0435\u0435 - \u0434\u043d\u0435\u0432\u043d\u0438\u043a, \u0433\u0434\u0435 \u043c\u043e\u0433\u0443\u0442 \u0441\u043e\u0434\u0435\u0440\u0436\u0430\u0442\u044c\u0441\u044f \u043f\u043e\u043b\u0435\u0437\u043d\u044b\u0435 \u0441\u0432\u0435\u0434\u0435\u043d\u0438\u044f."
+    },
+    {
+        "editor_id": "ccEEJSSE002_DoorUnlockedMsg",
+        "type": "MESG DESC",
+        "original": "The tower door was unlocked by mysterious forces.",
+        "string": "\u0422\u0430\u0438\u043d\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0435 \u0441\u0438\u043b\u044b \u043e\u0442\u043f\u0435\u0440\u043b\u0438 \u0434\u0432\u0435\u0440\u044c \u0431\u0430\u0448\u043d\u0438."
+    }
+]

@@ -1,0 +1,182 @@
+[
+    {
+        "editor_id": "ccBGSSSE052_ArmorBladesCuirass",
+        "type": "ARMO FULL",
+        "original": "Iron Plate Armor",
+        "string": "Eisenplattenr\u00fcstung"
+    },
+    {
+        "editor_id": "ccBGSSSE052_ArmorBladesBoots",
+        "type": "ARMO FULL",
+        "original": "Iron Plate Boots",
+        "string": "Eisenplattenstiefel"
+    },
+    {
+        "editor_id": "ccBGSSSE052_ArmorBladesHelmet",
+        "type": "ARMO FULL",
+        "original": "Iron Plate Helmet",
+        "string": "Eisenplattenhelm"
+    },
+    {
+        "editor_id": "ccBGSSSE052_ArmorBladesGauntlets",
+        "type": "ARMO FULL",
+        "original": "Iron Plate Gauntlets",
+        "string": "Eisenplattenhandschuhe"
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the Undercover Guard's Journal",
+        "string": "Lies das Tagebuch der verdeckt ermittelnden Wache."
+    },
+    {
+        "editor_id": "ccBGSSSE052_PaleEyes",
+        "type": "NPC_ FULL",
+        "original": "Pale-Eyes",
+        "string": "Blass-Auge"
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST FULL",
+        "original": "Brothers in Irons",
+        "string": "Eisenbr\u00fcder"
+    },
+    {
+        "editor_id": "ccBGSSSE052_Journal",
+        "type": "BOOK FULL",
+        "original": "Pale-Eyes' Journal",
+        "string": "Blass-Auges Tagebuch"
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST NNAM",
+        "original": "Look for a note at the Nightgate Inn",
+        "string": "Suche im Nachttor nach einer Notiz."
+    },
+    {
+        "editor_id": "ccBGSSSE052_Note",
+        "type": "BOOK FULL",
+        "original": "Nightgate Inn Patron's Note",
+        "string": "Notiz des Nachttor-Gasts"
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST NNAM",
+        "original": "Search the barrel behind Nightgate Inn",
+        "string": "Durchsuche das Fass hinter dem Nachttor."
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST NNAM",
+        "original": "Inspect the body",
+        "string": "Untersuche die Leiche."
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST NNAM",
+        "original": "Investigate the camp site near the northern coast",
+        "string": "Untersuche das Lager in der N\u00e4he der n\u00f6rdlichen K\u00fcste."
+    },
+    {
+        "editor_id": "ccBGSSSE052_ThalmorJournal",
+        "type": "BOOK FULL",
+        "original": "Undercover Guard's Journal",
+        "string": "Tagebuch der verdeckt ermittelnden Wache"
+    },
+    {
+        "editor_id": "ccBGSSSE052_MiscQuest",
+        "type": "QUST NNAM",
+        "original": "Look for a note at the Nightgate Inn",
+        "string": "Suche im Nachttor nach einer Notiz."
+    },
+    {
+        "editor_id": "ccBGSSSE052_ArmorBladesBootsEnchanted",
+        "type": "ARMO FULL",
+        "original": "Iron Plate Boots",
+        "string": "Eisenplattenstiefel"
+    },
+    {
+        "editor_id": "ccBGSSSE052_ArmorBladesGauntletsEnchanted",
+        "type": "ARMO FULL",
+        "original": "Iron Plate Gauntlets",
+        "string": "Eisenplattenhandschuhe"
+    },
+    {
+        "editor_id": "ccBGSSSE052_ArmorBladesCuirassEnchanted",
+        "type": "ARMO FULL",
+        "original": "Iron Plate Armor",
+        "string": "Eisenplattenr\u00fcstung"
+    },
+    {
+        "editor_id": "ccBGSSSE052_ArmorBladesHelmetEnchanted",
+        "type": "ARMO FULL",
+        "original": "Iron Plate Helmet",
+        "string": "Eisenplattenhelm"
+    },
+    {
+        "editor_id": "Tamriel",
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Himmelsrand"
+    },
+    {
+        "editor_id": "NightgateInn",
+        "type": "CELL FULL",
+        "original": "Nightgate Inn",
+        "string": "Zum Nachttor"
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST CNAM",
+        "original": "At Nightgate Inn, I found a journal written by an undercover guard that indicated a wanted criminal was camping out west of Northwatch Keep. By the time I arrived, he had already been killed by the Thalmor agents. After dealing with the Thalmor, I retrieved the journal from his body.",
+        "string": "Im Nachttor habe ich das Tagebuch einer verdeckt ermittelnden Wache gefunden, das auf einen gesuchten Kriminellen hindeutet, der westlich der Festung Nordwacht sein Lager aufgeschlagen hat. Als ich eintraf, hatten Thalmor-Agenten ihn bereits get\u00f6tet. Nachdem ich mich um die Thalmor gek\u00fcmmert hatte, nahm ich das Tagebuch bei seiner Leiche an mich."
+    },
+    {
+        "editor_id": "ccBGSSSE052_ThalmorJournal",
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\n<font face='$HandwrittenFont'>\n4E 201, 18 Sun's Height\nI've been asked to investigate rumors that one of the inns to the west is providing refuge for bandits. Several carriages traveling to Windhelm have gone missing as of late and the captain feels it may be related to the Crimson Dirks. I have some business to finish in Solitude but it shouldn't take longer than a week.\n\n4E 201, 25 Sun's Height\nWhile the patrons at Nightgate Inn were uncooperative and brusque, I don't believe any of them are bandits. I've asked our informant to travel to the inn to confirm, but in the meantime I will continue monitoring their behavior.\n[pagebreak]\n4E 201, 16 Last Seed\nThe Bosmer did not recognize the Nord, although I vacillate on whether I trust his opinion. I pointed out that it has been months since he has provided any actionable intelligence on his former cohorts. In response, he conveniently gave up the location of the Argonian bandit, Pale-Eyes, information I feel he has been holding on to for some time.\n\nFor now, the Bosmer remains an asset, but any information he provides should be vetted thoroughly. Supposedly, the Argonian is camped on the shoreline, west of Northwatch Keep. We can alert our Thalmor friends to take care of the matter. They won't like having a wanted criminal loitering so close to their stronghold.\n\nIn the meantime, I will leave my documentation here in the event further surveillance is needed on the inn patrons. </font>",
+        "string": "[pagebreak]\n<font face='$HandwrittenFont'>\n4\u00c4 201, 18. Sonnenh\u00f6he\nIch wurde gebeten, Ger\u00fcchten nachzugehen, dass eines der Gasth\u00e4user im Westen Banditen Unterschlupf gew\u00e4hrt. Mehrere Kutschen, die nach Windhelm unterwegs waren, sind in letzter Zeit verschwunden, und der Hauptmann glaubt, dass dies mit den Blutroten Langdolchen zusammenh\u00e4ngen k\u00f6nnte. Ich habe noch Dinge in Einsamkeit zu erledigen, was aber nicht l\u00e4nger als eine Woche in Anspruch nehmen sollte.\n\n4\u00c4 201, 25. Sonnenh\u00f6he\nDie G\u00e4ste im Nachttor waren zwar unkooperativ und kurz angebunden, aber keine Banditen, wie ich glaube. Ich habe unseren Informanten gebeten, dies vor Ort zu best\u00e4tigen, werde in der Zwischenzeit aber weiterhin beobachten, wie sie sich verhalten.\n[pagebreak]\n4\u00c4 201, 16. Letzte Saat\nDer Bosmer erkannte den Nord nicht, allerdings schwanke ich noch, ob ich darauf vertrauen soll. Ich sagte ihm, dass er schon seit Monaten keine umsetzbaren Informationen \u00fcber seine ehemaligen Leute geliefert habe. Als Reaktion darauf teilte er mir den Aufenthaltsort des argonischen Banditen Blass-Auge mit, der ihm wahrscheinlich schon seit L\u00e4ngerem bekannt gewesen sein d\u00fcrfte.\n\nDer Bosmer bleibt vorerst unser Spion, seine Informationen sollten jedoch gr\u00fcndlich \u00fcberpr\u00fcft werden. Angeblich hat der Argonier sein Lager an der K\u00fcste westlich der Festung Nordwacht aufgeschlagen. Wir k\u00f6nnen unsere Thalmor-Freunde davon unterrichten, damit sie sich um die Angelegenheit k\u00fcmmern. Es wird ihnen bestimmt nicht gefallen, dass ein gesuchter Krimineller in direkter N\u00e4he ihrer Festung herumlungert.\n\nBis dahin lasse ich meine Dokumentation hier, falls eine weitere \u00dcberwachung der G\u00e4ste vonn\u00f6ten sein sollte.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST CNAM",
+        "original": "At Nightgate Inn, I found a journal written by an undercover guard that indicated a wanted criminal was camping out west of Northwatch Keep. I should head out there and see what I can find.",
+        "string": "Im Nachttor habe ich das Tagebuch einer verdeckt ermittelnden Wache gefunden, das auf einen gesuchten Kriminellen hindeutet, der westlich der Festung Nordwacht sein Lager aufgeschlagen hat. Ich sollte das Lager aufsuchen und schauen, was ich finde."
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST CNAM",
+        "original": "I've heard rumors about mysterious patrons passing through Nightgate Inn. I found a note written by someone who stayed at the lodge.",
+        "string": "Ich habe Ger\u00fcchte \u00fcber seltsame durchreisende G\u00e4ste im Nachttor geh\u00f6rt. Ich habe eine Notiz von jemandem gefunden, der in der H\u00fctte \u00fcbernachtet hatte."
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST CNAM",
+        "original": "I've heard rumors about mysterious patrons passing through Nightgate Inn. Perhaps I should pay the inn a visit and see what I can uncover.",
+        "string": "Ich habe Ger\u00fcchte \u00fcber seltsame durchreisende G\u00e4ste im Nachttor geh\u00f6rt. Vielleicht sollte ich dem Gasthaus einen Besuch abstatten und sehen, was ich herausfinden kann."
+    },
+    {
+        "editor_id": "ccBGSSSE052_Note",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='20'>\nI just want to talk about this amazing inn, and how great the service is. The innkeeper is a kind, helpful host, who is so effortless in his laziness that he didn't bother to read past this point.\n\nThat's right, this inn is the worst. The literal worst. Of course, even if you can get past the bad service, the garbage food, and the ghost living downstairs, they're also bloody traitors! \n\nNot only do they rent to filthy Elves, I spotted one of them hide something in a barrel out back. I'd grab it myself, but it's probably covered in some disgusting Elven disease that would take nine of the world's greatest alchemists and a human sacrifice to cure. \n\nIf I weren't a wanted man, I'd burn down the barrel along with this sorry excuse for an inn. For now, this letter will have to do.</font>",
+        "string": "<font face='$HandwrittenFont'><font size='20'>\nIch m\u00f6chte einfach nur \u00fcber dieses gro\u00dfartige Gasthaus und seine grandiosen Dienste berichten. Der Wirt ist ein freundlicher und hilfsbereiter Gastgeber, dessen unglaubliche Faulheit dazu f\u00fchrt, dass er ab hier nicht mehr weiterlesen wird.\n\nGanz genau, dieses Gasthaus ist das schlimmste - und zwar das allerschlimmste. Selbst wenn man \u00fcber die schlechte Bedienung, das schreckliche Essen und den im Keller lebenden Geist hinwegsehen kann, wird dieses Etablissement von verdammten Verr\u00e4tern betrieben!\n\nNicht nur bekommen schmutzige Elfen dort ein Zimmer, ich habe auch beobachtet, wie einer von ihnen etwas in einem Fass hinter dem Haus versteckt hat. Ich w\u00fcrde es mir ja selbst nehmen, aber wahrscheinlich ist alles voller abscheulicher Elfenkrankheiten, f\u00fcr die man neun der gr\u00f6\u00dften Alchemisten der Welt und ein Menschenopfer br\u00e4uchte, um sie zu heilen.\n\nW\u00e4re ich kein gesuchter Mann, w\u00fcrde ich das Fass zusammen mit diesem erb\u00e4rmlichen Gasthaus niederbrennen. Erst einmal werde ich aber mit diesem Brief vorliebnehmen m\u00fcssen.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST CNAM",
+        "original": "At Nightgate Inn, I found a journal written by an undercover guard that indicated a wanted criminal was camping out west of Northwatch Keep. At the camp, I encountered three Justiciars.",
+        "string": "Im Nachttor habe ich ein Tagebuch einer verdeckt ermittelnden Wache gefunden, das auf einen gesuchten Kriminellen hindeutet, der westlich der Festung Nordwacht sein Lager aufgeschlagen hat. Dort bin ich drei Justiziaren begegnet."
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST CNAM",
+        "original": "I've heard rumors about mysterious patrons passing through Nightgate Inn. Once I arrived, I found a note on the counter that implied an Elf patron left something in a barrel behind the inn.",
+        "string": "Ich habe Ger\u00fcchte \u00fcber seltsame durchreisende G\u00e4ste im Nachttor geh\u00f6rt. Als ich dort eingetroffen bin, habe ich eine Notiz auf der Theke gefunden, die darauf hindeutet, dass ein Elf etwas in einem Fass hinter dem Geb\u00e4ude zur\u00fcckgelassen hat."
+    },
+    {
+        "editor_id": "ccBGSSSE052_Journal",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" Size=\"20\">\nThe water does not lie. Every morning I stare at my reflection, and feel myself returning to the Hist. \n\nWhen the smoke is thick, ours is to think back to the day I met Ehlhiel for the first time, when Peladius tried to make warriors of the new recruits.\n\nWith no coin for armor, I covered myself in pots and pans I found lying around the campfire, determined not to fall behind. But while the others laughed, the Bosmer thought me clever, and from that day on, the two of us were inseparable.\n\nYears later, on my hatch day, Ehlhiel gave me my first set of armor. He had the Orc forge one out of iron, in honor of the cast iron pot I wore on my head the first time we sparred. In return, I made the Bosmer an egg-brother, and vowed that I would protect him as if he were my own kin. \n\nThus when Ehlhiel confessed to what he had done, I did not tell a soul. I will protect my egg-brother until the end.",
+        "string": "<font face=\"$HandwrittenFont\" Size=\"20\">\nDas Wasser l\u00fcgt nicht. Jeden Morgen starre ich auf meine Spiegelung und sp\u00fcre, wie ich zu den Hist zur\u00fcckkehre.\n\nWenn der Rauch dicht ist, denke ich an den Tag, an dem ich Ehlhiel zum ersten Mal traf, als Peladius versuchte, die neuen Rekruten zu Kriegern zu machen.\n\nDa ich kein Geld f\u00fcr eine R\u00fcstung hatte, hing ich mir T\u00f6pfe und Pfannen um, die am Lagerfeuer lagen, und war entschlossen, nicht zur\u00fcckzufallen. Doch obwohl die anderen lachten, fand mich der Bosmer gerissen und von diesem Tag an waren wir unzertrennlich.\n\nJahre sp\u00e4ter, an meinem Schl\u00fcpftag, schenkte mir Ehlhiel meine erste R\u00fcstung. Er hatte sie von der Orkfrau aus Eisen schmieden lassen, zu Ehren des gusseisernen Topfs, den ich auf dem Kopf getragen hatte, als wir das erste Mal in einem \u00dcbungskampf gegeneinander angetreten waren. Im Gegenzug machte ich den Bosmer zu einem Eibruder und gelobte, ihn zu besch\u00fctzen, als geh\u00f6rte er zu meiner eigenen Brut.\n\nAls Ehlhiel irgendwann beichtete, was er getan hatte, erz\u00e4hlte ich daher kein Sterbensw\u00f6rtchen davon. Ich werde meinen Eibruder bis zum Ende besch\u00fctzen."
+    }
+]

@@ -1,0 +1,413 @@
+"""
+This file is part of SEE Auto Translator
+and falls under the license
+Attribution-NonCommercial-NoDerivatives 4.0 International.
+"""
+
+from pathlib import Path
+from shutil import rmtree
+
+import jstyleson as json
+
+from plugin_parser import PluginParser
+from utilities import String, Mod
+
+from .translation import Translation
+
+
+class TranslationDatabase:
+    """
+    Class for translation database manager.
+    """
+
+    userdb_path: Path = None
+    appdb_path: Path = None
+
+    language: str = None
+
+    vanilla_translation: Translation = None
+    user_translations: list[Translation] = None
+
+    def __init__(
+        self,
+        userdb_path: Path,
+        appdb_path: Path,
+        language: str,
+    ):
+        self.userdb_path = userdb_path
+        self.appdb_path = appdb_path
+        self.language = language
+
+        self.load_database()
+
+    def load_vanilla_translation(self):
+        """
+        Loads vanilla translation.
+        """
+
+        translation_path = self.appdb_path / self.language.lower()
+
+        translation = Translation(
+            name="__vanilla__",
+            mod_id=0,
+            file_id=0,
+            version="",
+            original_mod_id=0,
+            original_file_id=0,
+            original_version="",
+            path=translation_path,
+        )
+        translation.load_translation()
+        self.vanilla_translation = translation
+
+    def load_user_database(self):
+        """
+        Loads user installed translation database.
+        """
+
+        index_path = self.userdb_path / self.language / "index.json"
+
+        with index_path.open(encoding="utf8") as index_file:
+            translation_list: list[dict] = json.load(index_file)
+
+        translations: list[Translation] = []
+
+        for translation_data in translation_list:
+            name: str = translation_data["name"]
+            mod_id: int = translation_data["mod_id"]
+            file_id: int = translation_data["file_id"]
+            version: str = translation_data["version"]
+            original_mod_id: int = translation_data["original_mod_id"]
+            original_file_id: int = translation_data["original_file_id"]
+            original_version: str = translation_data["original_version"]
+            translation_path: Path = self.userdb_path / self.language / name
+
+            translation = Translation(
+                name,
+                mod_id,
+                file_id,
+                version,
+                original_mod_id,
+                original_file_id,
+                original_version,
+                translation_path,
+            )
+            translation.load_translation()
+            translations.append(translation)
+
+        self.user_translations = translations
+
+    def load_database(self):
+        """
+        Loads translation database.
+        """
+
+        self.load_vanilla_translation()
+        self.load_user_database()
+
+    def save_database(self):
+        """
+        Saves translation database.
+        """
+
+        index_path = self.userdb_path / self.language / "index.json"
+        index_data = [
+            {
+                "name": translation.name,
+                "mod_id": translation.mod_id,
+                "file_id": translation.file_id,
+                "version": translation.version,
+                "original_mod_id": translation.original_mod_id,
+                "original_file_id": translation.original_file_id,
+                "original_version": translation.original_version,
+            }
+            for translation in self.user_translations
+        ]
+
+        with index_path.open("w", encoding="utf8") as index_file:
+            json.dump(index_data, index_file, indent=4, ensure_ascii=False)
+
+    def add_translation(self, translation: Translation):
+        """
+        Adds `translation` to database.
+        """
+
+        if translation not in self.user_translations:
+            self.user_translations.append(translation)
+
+    def delete_translation(self, translation: Translation):
+        """
+        Deletes `translation` from database.
+        """
+
+        if translation.path.is_dir():
+            rmtree(translation.path)
+        if translation in self.user_translations:
+            self.user_translations.remove(translation)
+
+    def get_translation_by_plugin_name(self, plugin_name: str) -> Translation | None:
+        """
+        Gets a translation that covers the `plugin_name`.
+
+        Returns None if there is no translation installed for that plugin.
+
+        This method is case-insensitive.
+        """
+
+        for translation in self.user_translations:
+            translation_plugins = [
+                _plugin_name.lower() for _plugin_name in translation.strings
+            ]
+            if plugin_name.lower() in translation_plugins:
+                return translation
+
+    def get_translation_by_mod(self, mod: Mod) -> Translation | None:
+        """
+        Gets a translation that covers the `mod`.
+
+        Returns None if there is no translation installed for that mod.
+        """
+
+        for translation in self.user_translations:
+            if (
+                translation.original_mod_id == mod.mod_id
+                and translation.original_file_id == mod.file_id
+            ):
+                return translation
+        else:
+            if mod.plugins:
+                return self.get_translation_by_plugin_name(mod.plugins[0].name)
+
+    def get_translation_by_id(self, mod_id: int, file_id: int = None):
+        """
+        Gets translation with `mod_id` and `file_id` if installed.
+        """
+
+        for translation in self.user_translations:
+            if translation.mod_id == mod_id and (
+                translation.file_id == file_id or file_id is None
+            ):
+                return translation
+
+    def apply_translation(self, translation: Translation, plugin_name: str = None):
+        """
+        Applies database to untranslated strings in `translation`.
+        """
+
+        database_strings = [
+            string
+            for plugin_strings in self.vanilla_translation.strings.values()
+            for string in plugin_strings
+        ]
+
+        database_strings += [
+            string
+            for database_translation in self.user_translations
+            if database_translation != translation
+            for plugin_strings in database_translation.strings.values()
+            for string in plugin_strings
+        ]
+
+        if plugin_name is not None:
+            strings = translation.strings[plugin_name]
+        else:
+            strings = [
+                string
+                for plugin_strings in translation.strings.values()
+                for string in plugin_strings
+            ]
+
+        for string in strings:
+            if string.status == string.Status.TranslationRequired:
+                full_matching = list(
+                    filter(
+                        lambda database_string: (
+                            string.editor_id == database_string.editor_id
+                            and string.type == database_string.type
+                            and string.original_string
+                            == database_string.original_string
+                            and database_string.status
+                            == String.Status.TranslationComplete
+                        ),
+                        database_strings,
+                    )
+                )
+                string_matching = list(
+                    filter(
+                        lambda database_string: string.original_string
+                        == database_string.original_string
+                        and database_string.status == String.Status.TranslationComplete,
+                        database_strings,
+                    )
+                )
+                edid_matching = list(
+                    filter(
+                        lambda database_string: (
+                            string.editor_id == database_string.editor_id
+                            and string.type == database_string.type
+                            and database_string.status
+                            == String.Status.TranslationComplete
+                        ),
+                        database_strings,
+                    )
+                )
+
+                if full_matching:
+                    matching_string = full_matching[0]
+                    string.translated_string = matching_string.translated_string
+                    string.status = String.Status.TranslationComplete
+
+                elif string_matching:
+                    matching_string = string_matching[0]
+                    string.translated_string = matching_string.translated_string
+                    string.status = String.Status.TranslationComplete
+
+                elif edid_matching:
+                    matching_string = edid_matching[0]
+                    string.translated_string = matching_string.translated_string
+                    string.status = String.Status.TranslationIncomplete
+
+    def create_translation(self, plugin_path: Path):
+        """
+        Creates translation for plugin at `plugin_path` by extracting its strings
+        and applying translations from database to them.
+        """
+
+        translation = self.get_translation_by_plugin_name(plugin_path.name)
+        if translation:
+            return translation
+
+        parser = PluginParser(plugin_path)
+        parser.parse_plugin()
+        plugin_groups = parser.extract_strings()
+
+        result: list[String] = []
+
+        database_strings = [
+            string
+            for plugin_strings in self.vanilla_translation.strings.values()
+            for string in plugin_strings
+        ]
+
+        database_strings += [
+            string
+            for translation in self.user_translations
+            for plugin_strings in translation.strings.values()
+            for string in plugin_strings
+        ]
+
+        for original_group in plugin_groups.values():
+            for original_string in original_group:
+                full_matching = list(
+                    filter(
+                        lambda database_string: (
+                            original_string.editor_id == database_string.editor_id
+                            and original_string.type == database_string.type
+                            and original_string.original_string
+                            == database_string.original_string
+                        ),
+                        database_strings,
+                    )
+                )
+                string_matching = list(
+                    filter(
+                        lambda database_string: original_string.original_string
+                        == database_string.original_string,
+                        database_strings,
+                    )
+                )
+                edid_matching = list(
+                    filter(
+                        lambda database_string: (
+                            original_string.editor_id == database_string.editor_id
+                            and original_string.type == database_string.type
+                        ),
+                        database_strings,
+                    )
+                )
+
+                if full_matching:
+                    matching_string = full_matching[0]
+                    original_string.translated_string = (
+                        matching_string.translated_string
+                    )
+                    original_string.status = String.Status.TranslationComplete
+                    result.append(original_string)
+
+                elif string_matching:
+                    matching_string = string_matching[0]
+                    original_string.translated_string = (
+                        matching_string.translated_string
+                    )
+                    original_string.status = String.Status.TranslationComplete
+                    result.append(original_string)
+
+                elif edid_matching:
+                    matching_string = edid_matching[0]
+                    original_string.translated_string = (
+                        matching_string.translated_string
+                    )
+                    original_string.status = String.Status.TranslationIncomplete
+                    result.append(original_string)
+
+                else:
+                    original_string.translated_string = original_string.original_string
+                    original_string.status = String.Status.TranslationRequired
+                    result.append(original_string)
+
+        translation_name = f"{plugin_path.name} - {self.language.capitalize()}"
+        translation = Translation(
+            name=translation_name,
+            mod_id=0,
+            file_id=0,
+            version="",
+            original_mod_id=0,
+            original_file_id=0,
+            original_version="",
+            path=self.userdb_path / self.language / translation_name,
+            strings={plugin_path.name.lower(): result},
+        )
+        return translation
+
+    def get_strings(self):
+        """
+        Returns list of all strings that are in the database.
+        """
+
+        result: list[String] = []
+
+        result += [
+            string
+            for plugin_strings in self.vanilla_translation.strings.values()
+            for string in plugin_strings
+        ]
+
+        result += [
+            string
+            for translation in self.user_translations
+            for plugin_strings in translation.strings.values()
+            for string in plugin_strings
+            if string.status == String.Status.TranslationComplete
+        ]
+
+        return result
+
+    def get_edids(self):
+        """
+        Returns list of all editor ids that are in the database.
+        """
+
+        result: list[str] = []
+
+        self.vanilla_translation.load_translation()
+        for strings in self.vanilla_translation.strings.values():
+            result += [string.editor_id for string in strings]
+
+        for translation in self.user_translations:
+            translation.load_translation()
+            for strings in translation.strings.values():
+                result += [string.editor_id for string in strings]
+
+        result = list(set(result))  # Remove duplicates
+
+        return result

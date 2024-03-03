@@ -1,0 +1,230 @@
+[
+    {
+        "editor_id": "ccBGSSSE058_ArmorBladesBoots",
+        "type": "ARMO FULL",
+        "original": "Steel Soldier Boots",
+        "string": "Stahlstiefel des Soldaten"
+    },
+    {
+        "editor_id": "ccBGSSSE058_ArmorBladesShield",
+        "type": "ARMO FULL",
+        "original": "Blades Steel Shield",
+        "string": "Klingen-Stahlschild"
+    },
+    {
+        "editor_id": "ccBGSSSE058_ArmorBladesGauntlets",
+        "type": "ARMO FULL",
+        "original": "Steel Soldier Gauntlets",
+        "string": "Stahlhandschuhe des Soldaten"
+    },
+    {
+        "editor_id": "ccBGSSSE058_ArmorBladesHelmet",
+        "type": "ARMO FULL",
+        "original": "Steel Soldier Helmet",
+        "string": "Stahlhelm des Soldaten"
+    },
+    {
+        "editor_id": "ccBGSSSE058_ArmorBladesCuirass",
+        "type": "ARMO FULL",
+        "original": "Steel Soldier Armor",
+        "string": "Stahlr\u00fcstung des Soldaten"
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "type": "QUST FULL",
+        "original": "Over the Edge",
+        "string": "\u00dcber den Rand"
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "type": "QUST NNAM",
+        "original": "Retrieve the armor",
+        "string": "Besorge die R\u00fcstung."
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "type": "QUST NNAM",
+        "original": "Defeat Peladius",
+        "string": "Besiege Peladius."
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "type": "QUST NNAM",
+        "original": "Go to Dragon Bridge",
+        "string": "Begib dich zur Br\u00fccke."
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "type": "QUST NNAM",
+        "original": "Confront Aldepius at the inn",
+        "string": "Stelle Aldepius im Gasthaus."
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "type": "QUST NNAM",
+        "original": "Search for the body down river",
+        "string": "Suche flussabw\u00e4rts nach der Leiche."
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the Guard's Note on Aldepius",
+        "string": "Lies die Notiz einer Wache \u00fcber Aldepius."
+    },
+    {
+        "editor_id": "ccBGSSSE058_Blade",
+        "type": "NPC_ FULL",
+        "original": "Peladius",
+        "string": "Peladius"
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "type": "QUST NNAM",
+        "original": "Look for a note at the Four Shields Tavern",
+        "string": "Suche in den Vier Schilden nach einer Notiz."
+    },
+    {
+        "editor_id": "ccBGSSSE058_PeladiusDossier",
+        "type": "BOOK FULL",
+        "original": "Guard's Note on Aldepius",
+        "string": "Notiz einer Wache \u00fcber Aldepius"
+    },
+    {
+        "editor_id": "ccBGSSSE058_Note01",
+        "type": "BOOK FULL",
+        "original": "Suicide at Dragon Bridge",
+        "string": "Selbstmord in Drachenbr\u00fcgge"
+    },
+    {
+        "editor_id": "ccBGSSSE058_Confession01",
+        "type": "BOOK FULL",
+        "original": "Aldepius' Confession",
+        "string": "Aldepius' Gest\u00e4ndnis"
+    },
+    {
+        "editor_id": "ccBGSSSE058_GuardDragonBridgeSons",
+        "type": "NPC_ FULL",
+        "original": "Guard",
+        "string": "Wache"
+    },
+    {
+        "editor_id": "ccBGSSSE058_AldepiusImperial",
+        "type": "NPC_ FULL",
+        "original": "Aldepius",
+        "string": "Aldepius"
+    },
+    {
+        "editor_id": "ccBGSSSE058_AldepiusSons",
+        "type": "NPC_ FULL",
+        "original": "Aldepius",
+        "string": "Aldepius"
+    },
+    {
+        "editor_id": "ccBGSSSE058_GuardDragonBridgeImperial",
+        "type": "NPC_ FULL",
+        "original": "Guard",
+        "string": "Wache"
+    },
+    {
+        "editor_id": "ccBGSSSE058_MiscQuest",
+        "type": "QUST NNAM",
+        "original": "Look for a note at the Four Shields Tavern",
+        "string": "Suche in den Vier Schilden nach einer Notiz."
+    },
+    {
+        "editor_id": "ccBGSSSE058_ArmorBladesBootsEnchanted",
+        "type": "ARMO FULL",
+        "original": "Steel Soldier Boots",
+        "string": "Stahlstiefel des Soldaten"
+    },
+    {
+        "editor_id": "ccBGSSSE058_ArmorBladesGauntletsEnchanted",
+        "type": "ARMO FULL",
+        "original": "Steel Soldier Gauntlets",
+        "string": "Stahlhandschuhe des Soldaten"
+    },
+    {
+        "editor_id": "ccBGSSSE058_ArmorBladesHelmetEnchanted",
+        "type": "ARMO FULL",
+        "original": "Steel Soldier Helmet",
+        "string": "Stahlhelm des Soldaten"
+    },
+    {
+        "editor_id": "ccBGSSSE058_ArmorBladesCuirassEnchanted",
+        "type": "ARMO FULL",
+        "original": "Steel Soldier Armor",
+        "string": "Stahlr\u00fcstung des Soldaten"
+    },
+    {
+        "editor_id": "Tamriel",
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Himmelsrand"
+    },
+    {
+        "editor_id": "DragonBridgeFourShieldsTavern",
+        "type": "CELL FULL",
+        "original": "Four Shields Tavern",
+        "string": "Vier Schilde"
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "type": "QUST CNAM",
+        "original": "I visited the Four Shields Tavern in Dragon Bridge, and found a note mentioning a recent suicide. I found a body under the bridge which implicated one of the guards as a double agent. At the inn, I found a confession from Peladius, who asked that I give him a warrior's death, to which I obliged.",
+        "string": "Ich habe die Vier Schilde in Drachenbr\u00fcgge aufgesucht und eine Notiz \u00fcber einen k\u00fcrzlich erfolgten Selbstmord gefunden. Eine Leiche unter der Br\u00fccke deutete darauf hin, dass einer der Wachen ein Doppelagent ist. Im Gasthaus habe ich ein Gest\u00e4ndnis von Peladius gefunden, der durch meine Hand wie ein Krieger sterben wollte. Diesen Wunsch habe ich ihm erf\u00fcllt."
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "type": "QUST CNAM",
+        "original": "I visited the Four Shields Tavern in Dragon Bridge, and found a note mentioning a recent suicide. I found a body under the bridge which implicated one of the guards as a double agent. I should head back to the inn and confront him.",
+        "string": "Ich habe die Vier Schilde in Drachenbr\u00fcgge aufgesucht und eine Notiz \u00fcber einen k\u00fcrzlich erfolgten Selbstmord gefunden. Eine Leiche unter der Br\u00fccke deutete darauf hin, dass einer der Wachen ein Doppelagent ist. Ich sollte zur\u00fcck zum Gasthaus gehen und ihn stellen."
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "type": "QUST CNAM",
+        "original": "I visited the Four Shields Tavern in Dragon Bridge, and found a note mentioning a recent suicide. I found a body under the bridge which implicated one of the guards as a double agent. At the inn, I found a confession from Peladius, who asked that I give him a warrior's death.",
+        "string": "Ich habe die Vier Schilde in Drachenbr\u00fcgge aufgesucht und eine Notiz \u00fcber einen k\u00fcrzlich erfolgten Selbstmord gefunden. Eine Leiche unter der Br\u00fccke deutete darauf hin, dass einer der Wachen ein Doppelagent ist. Im Gasthaus habe ich ein Gest\u00e4ndnis von Peladius gefunden, der durch meine Hand wie ein Krieger sterben wollte."
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "type": "QUST CNAM",
+        "original": "I visited the Four Shields Tavern in Dragon Bridge, and found a note mentioning a recent suicide. I found a body under the bridge which implicated one of the guards as a double agent. At the inn, I found a confession from Peladius, who asked that I give him a warrior's death. He will be waiting for me at Dragon Bridge.",
+        "string": "Ich habe die Vier Schilde in Drachenbr\u00fcgge aufgesucht und eine Notiz \u00fcber einen k\u00fcrzlich erfolgten Selbstmord gefunden. Eine Leiche unter der Br\u00fccke deutete darauf hin, dass einer der Wachen ein Doppelagent ist. Im Gasthaus habe ich ein Gest\u00e4ndnis von Peladius gefunden, der durch meine Hand wie ein Krieger sterben wollte. Er wartet in Drachenbr\u00fcgge auf mich."
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "type": "QUST CNAM",
+        "original": "I visited the Four Shields Tavern in Dragon Bridge, and found a note mentioning a recent suicide. I found a body under the bridge with a note that might provide some clues as to what happened.",
+        "string": "Ich habe die Vier Schilde in Drachenbr\u00fcgge aufgesucht und eine Notiz \u00fcber einen k\u00fcrzlich erfolgten Selbstmord gefunden. Eine Notiz bei einer Leiche unter der Br\u00fccke k\u00f6nnte mir einen Einblick in die Ereignisse verschaffen."
+    },
+    {
+        "editor_id": "ccBGSSSE058_PeladiusDossier",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\nI am beginning to suspect Aldepius is not who he claims to be.\n\nHe seemed rather old for a new recruit, but it wasn't until he started asking about our bandit informant that I began to suspect something was amiss. Still, I would've forgiven this as natural curiosity had he not asked to meet him.\n\nSo I checked with the list of the garrison, and no one by the name Aldepius is on it. I don't know who he is, but he's not a member of the guard. He's stationed at Dragon Bridge at the moment, when my shift is over I'm going to confront him about it.\n</font>",
+        "string": "<font face='$HandwrittenFont'>\nIch zweifle langsam daran, ob Aldepius der ist, der er vorgibt zu sein.\n\nF\u00fcr einen neuen Rekruten wirkte er recht alt. Doch als er begann, Fragen \u00fcber unseren Banditeninformanten zu stellen, vermutete ich, dass etwas nicht stimmte. Nichtsdestotrotz h\u00e4tte ich es als neugieriges Naturell abgetan, wenn er nicht darum gebeten h\u00e4tte, ihn zu treffen.\n\nAlso ging ich die Liste der Garnison durch und fand niemanden namens Aldepius. Ich wei\u00df nicht, wer er ist, ein Mitglied der Wache jedoch nicht. Derzeit ist er in Drachenbr\u00fcgge stationiert. Nach dem Ende meiner Schicht werde ich ihn zur Rede stellen.\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE058_Note01",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\n<font size='18'>One of the locals who frequents the inn has been reported missing. I was about to tell the innkeeper to report it to the guard, but Aldepius said he saw the person in question leap off Dragon Bridge. \n\nA sad state of affairs, but not our concern.\n</font>",
+        "string": "<font face='$HandwrittenFont'>\n<font size='18'>Einer der Einheimischen, der oft im Gasthaus einkehrt, ist verschwunden. Ich wollte dem Wirt gerade sagen, dass er dies der Wache melden solle, doch Aldepius wendete ein, er h\u00e4tte gesehen, wie die fragliche Person von der Br\u00fccke gesprungen war.\n\nEine traurige, aber nicht unsere Angelegenheit.\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "type": "QUST CNAM",
+        "original": "I've heard the Four Shields Tavern in Dragon Bridge is a good spot to relax and find work. I should investigate it and see if I can learn anything new.",
+        "string": "Wie ich h\u00f6rte, kann man sich in den Vier Schilden in Drachenbr\u00fcgge vortrefflich entspannen und dort auch Arbeit finden. Ich sollte mir die Taverne anschauen. Vielleicht kann ich dort etwas Neues erfahren."
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "type": "QUST CNAM",
+        "original": "I visited the Four Shields Tavern in Dragon Bridge, and found a note mentioning a recent suicide. I should investigate the area below the bridge to see what I can find out about the deceased.",
+        "string": "Ich habe die Vier Schilde in Drachenbr\u00fcgge aufgesucht und eine Notiz \u00fcber einen k\u00fcrzlich erfolgten Selbstmord gefunden. Ich sollte den Bereich unterhalb der Br\u00fccke untersuchen, um herauszufinden, was ich \u00fcber die verstorbene Person in Erfahrung bringen kann."
+    },
+    {
+        "editor_id": "ccBGSSSE058_Confession01",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\n<font size='18'>I should've made sure that body sunk to the bottom of the river, but in my old age I've gotten sloppy.\n\nI guess I should come clean. My real name is Peladius. I'm a bandit. At least, I used to be, until our group was betrayed by one of our own. I started this whole charade because I wanted to know who.\n\nBut to be honest, it doesn't matter anymore. There was never any honor among thieves. I lost what little claim I had to it, the day I joined Tyra's crew. \n\nThen again, maybe I can still have an honorable death.\n\nMeet me at Dragon Bridge. We can settle this there.\n</font>",
+        "string": "<font face='$HandwrittenFont'>\n<font size='18'>Ich h\u00e4tte darauf achten sollen, dass die Leiche auf den Boden des Flusses sinkt, bin in meinem hohen Alter jedoch etwas nachl\u00e4ssig geworden.\n\nIch sch\u00e4tze, ich sollte reinen Wein einschenken. Mein richtiger Name ist Peladius. Ich bin ein Bandit. Zumindest war ich das, bis unsere Gruppe von jemandem aus den eigenen Reihen verraten wurde. Ich habe diese ganze Scharade begonnen, weil ich wissen wollte, wer es war.\n\nAber um ehrlich zu sein, ist das jetzt nicht mehr von Bedeutung. Ehre unter Dieben hat es noch nie gegeben. An dem Tag, als ich mich Tyras Bande anschloss, verlor ich meinen allerletzten Anspruch darauf.\n\nAndererseits kann ich vielleicht noch einen ehrenhaften Tod finden.\n\nTrefft mich in Drachenbr\u00fcgge, dort k\u00f6nnen wir alles kl\u00e4ren.\n</font>"
+    }
+]

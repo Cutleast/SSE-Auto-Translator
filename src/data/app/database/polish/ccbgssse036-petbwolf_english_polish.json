@@ -1,0 +1,224 @@
+[
+    {
+        "editor_id": "ccBGSSSE036_EncBoneWolf",
+        "type": "NPC_ FULL",
+        "original": "Bone Wolf",
+        "string": "Ko\u015bciany wilk"
+    },
+    {
+        "editor_id": "ccBGSSSE036_AcquisitionNote",
+        "type": "BOOK FULL",
+        "original": "Letter from Bolgeir Bearclaw",
+        "string": "Notatka od zatroskanego wielbiciela"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST NNAM",
+        "original": "Find the necromancer and the strange creatures",
+        "string": "Znajd\u017a nekromant\u0119 i dziwne stworzenia"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST NNAM",
+        "original": "Take the totem to the caged wolf",
+        "string": "Zanie\u015b totem do uwi\u0119zionego wilka"
+    },
+    {
+        "editor_id": "ccBGSSSE036_NecroJornal",
+        "type": "BOOK FULL",
+        "original": "Necromancer's Journal",
+        "string": "Dziennik nekromanty"
+    },
+    {
+        "editor_id": "ccBGSSSE036_EncNecromancerThrall02",
+        "type": "NPC_ FULL",
+        "original": "Thrall Wolf",
+        "string": "S\u0142u\u017calczy wilk"
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfFGivePerkAbility",
+        "type": "SPEL FULL",
+        "original": "Bone Wolf's Revenge",
+        "string": "Zemsta ko\u015bcianego wilka"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST FULL",
+        "original": "Let Sleeping Wolves Lie",
+        "string": "Pozw\u00f3l wilkom spa\u0107"
+    },
+    {
+        "editor_id": "ccBGSSSE036_CageKey",
+        "type": "KEYM FULL",
+        "original": "Key to Wolf Cage",
+        "string": "Klucz do wilczej klatki"
+    },
+    {
+        "editor_id": "ccBGSSSE036_Necromancer",
+        "type": "NPC_ FULL",
+        "original": "Necromancer",
+        "string": "Nekromanta"
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfGiveItemSpell",
+        "type": "SPEL FULL",
+        "original": "Bone Wolf's Gift",
+        "string": "Zdolno\u015b\u0107 daru ko\u015bciany wilk"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfPerkEffect",
+        "type": "MGEF DNAM",
+        "original": "Increases damage on the undead by 25% while Bone Wolf is in your company.",
+        "string": "Zwi\u0119ksza obra\u017cenia nieumar\u0142ych o 25%, kiedy ko\u015bciany wilk znajduje si\u0119 u twojego boku."
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfFollowPerk",
+        "type": "PERK FULL",
+        "original": "Bone Wolf's Revenge",
+        "string": "Zemsta ko\u015bcianego wilka"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfSummonEffect",
+        "type": "MGEF DNAM",
+        "original": "Teleports Bone Wolf to your side.",
+        "string": "Teleportuje do ciebie ko\u015bcianego wilka"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST NNAM",
+        "original": "Defeat the necromancer",
+        "string": "Pokonaj nekromant\u0119"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfPerkEffect",
+        "type": "MGEF FULL",
+        "original": "Bone Wolf's Revenge",
+        "string": "Zemsta ko\u015bcianego wilka"
+    },
+    {
+        "editor_id": "ccBGSSE036_ConjureBoneWolfSpell",
+        "type": "SPEL FULL",
+        "original": "Teleport Pet: Bone Wolf",
+        "string": "Teleportowanie chowa\u0144ca: ko\u015bciany wilk"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfSummonEffect",
+        "type": "MGEF FULL",
+        "original": "Summon Bone Wolf",
+        "string": "Przywo\u0142aj ko\u015bcianego wilka"
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfCompanionRace",
+        "type": "RACE FULL",
+        "original": "Dog",
+        "string": "Pies"
+    },
+    {
+        "editor_id": "ccBGSSSE036_TOTEM",
+        "type": "MISC FULL",
+        "original": "Totem Bone",
+        "string": "Ko\u015b\u0107 z totemu"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfGiftEffect",
+        "type": "MGEF FULL",
+        "original": "Bone Wolf's Gift",
+        "string": "Efekt daru ko\u015bciany wilk"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST NNAM",
+        "original": "Read the note from Bolgeir Bearclaw",
+        "string": "Przeczytaj notatk\u0119 od zatroskanego wielbiciela"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST NNAM",
+        "original": "Search the necromancer",
+        "string": "Przeszukaj nekromant\u0119"
+    },
+    {
+        "editor_id": "ccBGSSSE036_EncNecromancerThrall01",
+        "type": "NPC_ FULL",
+        "original": "Thrall Wolf",
+        "string": "S\u0142u\u017calczy wilk"
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfBlessing",
+        "type": "SPEL FULL",
+        "original": "Bone Wolf's Reward",
+        "string": "Nagroda ko\u015bcianego wilka"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST CNAM",
+        "original": "Bone Wolf appears calm and content now that I've returned his totem. It appears he will follow me if I wish. Some may consider him strange to look upon, but there may be something deeper about him beyond his appearance.",
+        "string": "Po zwr\u00f3ceniu totemu, ko\u015bciany wilk wydaje si\u0119 by\u0107 spokojny i zadowolony. Najwyra\u017aniej, je\u015bli zechc\u0119, b\u0119dzie mi towarzyszy\u0142. Niekt\u00f3rzy mog\u0105 uzna\u0107 go za dziwnie wygl\u0105daj\u0105cego, ale je\u015bli odrzuci si\u0119 wygl\u0105d zewn\u0119trzny, mo\u017ce drzema\u0107 w nim jaka\u015b ukryta si\u0142a."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST CNAM",
+        "original": "In a cage nearby, there is another of these strange creatures, who I suspect the totem belongs to. I should take it to him.",
+        "string": "Najwyra\u017aniej nekromanta zyskiwa\u0142 moc z nieumar\u0142ych wilk\u00f3w poprzez poch\u0142anianie ich totem\u00f3w. Uda\u0142o mi si\u0119 go powstrzyma\u0107, zanim poch\u0142on\u0105\u0142 moc trzeciego. W pobliskiej klatce znajduje si\u0119 jedno z tych stworze\u0144 - podejrzewam, \u017ce to do niego nale\u017cy trzeci totem. Zanios\u0119 go tam."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST CNAM",
+        "original": "I have discovered the necromancer's location. The strange creatures mentioned in the note appear to be undead wolves, raised by the dark arts of the necromancer. Putting a stop to these experiments should prevent him from raising more.",
+        "string": "Uda\u0142o mi si\u0119 odkry\u0107 miejsce pobytu nekromanty. Dziwne stworzenia wspomniane w notatce okaza\u0142y si\u0119 by\u0107 nieumar\u0142ymi wilkami, chowanymi wedle mrocznej sztuki nekromanty. Powstrzymanie tych eksperyment\u00f3w powinno sprawi\u0107, \u017ce kolejne wilki nie b\u0119d\u0105 si\u0119 pojawia\u0107."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST CNAM",
+        "original": "The necromancer is dead. I should search his body for any clues.",
+        "string": "Nekromanta nie \u017cyje. Czas przeszuka\u0107 jego cia\u0142o na obecno\u015b\u0107 wskaz\u00f3wek."
+    },
+    {
+        "editor_id": "ccBGSSSE036_AcquisitionNote",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\nFriend, we seek your aid. \n\nA dark necromancer has been attacking innocents along the northern coast,  accompanied by strange creatures who do his every bidding. I trust you can help us with this troublesome matter and investigate on our behalf.\n\nBolgeir Bearclaw\n</font>",
+        "string": "<font face=\"$HandwrittenFont\">\nPotrzebujemy twej pomocy. \n\nMroczny nekromanta atakuje niewinnych wzd\u0142u\u017c p\u00f3\u0142nocnego wybrze\u017ca. Towarzysz\u0105 mu dziwne stworzenia spe\u0142niaj\u0105ce ka\u017cdy jego rozkaz. Wierz\u0119, \u017ce mo\u017cesz nam pom\u00f3c w tej trudnej sprawie i zbada\u0107 to w naszym imieniu.\n\nZatroskany wielbiciel\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST CNAM",
+        "original": "Bolgeir Bearclaw has informed me that a dark necromancer has been attacking innocents somewhere along the northern coast. The note also tells of strange creatures that accompany him. I should search the coast and see if I can unravel this mystery.",
+        "string": "Zatroskany wielbiciel poinformowa\u0142 mnie, \u017ce mroczny nekromanta atakuje niewinnych ludzi gdzie\u015b wzd\u0142u\u017c p\u00f3\u0142nocnego wybrze\u017ca. W notatce znajduje si\u0119 te\u017c informacja o dziwnych stworzeniach, kt\u00f3re mu towarzysz\u0105. Czas przeszuka\u0107 wybrze\u017ce i sprawdzi\u0107, czy uda mi si\u0119 rozwik\u0142a\u0107 t\u0119 zagadk\u0119."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST CNAM",
+        "original": "I have a note from Bolgeir Bearclaw. I should read it and find out if there's anything he needs assistance with.",
+        "string": "Mam notatk\u0119 od zatroskanego wielbiciela. Czas j\u0105 przeczyta\u0107."
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfGivePlayerItemMsg",
+        "type": "MESG DESC",
+        "original": "Bone Wolf has found you something.",
+        "string": "Ko\u015bciany wilk co\u015b znalaz\u0142."
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfBlessing",
+        "type": "SPEL DESC",
+        "original": "Bone Wolf thanks you for the dragon bone",
+        "string": "Ko\u015bciany wilk dzi\u0119kuje ci za smocz\u0105 ko\u015b\u0107"
+    },
+    {
+        "editor_id": "ccBGSSSE036_NecroJornal",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\nThis is truly remarkable. Through my experiments with these undead wolves, I have discovered a method to increase my power. \n\nBy consuming their totems; objects that bind them between life and death itself, \nI can bind their spirits to my own life force.\n\nI have already consumed two totems and their hosts are now completely under my control. But this is not enough, I need a third totem to be sure.\n</font>",
+        "string": "<font face=\"$HandwrittenFont\">\nTo niesamowite. Eksperymenty na nieumar\u0142ych wilkach doprowadzi\u0142y mnie do sekretu nie\u015bmiertelno\u015bci. \n\nPoch\u0142aniaj\u0105c ich totemy - obiekty \u0142\u0105cz\u0105ce je z \u017cyciem i \u015bmierci\u0105, \nmog\u0119 zwi\u0105za\u0107 ich dusze z moj\u0105 w\u0142asn\u0105 si\u0142\u0105 \u017cyciow\u0105.\n\nPodczas gdy one \u017cyj\u0105, mnie nie mo\u017ce sta\u0107 si\u0119 krzywda. \n\nUda\u0142o mi si\u0119 ju\u017c poch\u0142on\u0105\u0107 dwa totemy, a ich w\u0142a\u015bciciele s\u0105 teraz pod moj\u0105 ca\u0142kowit\u0105 kontrol\u0105. Ale to nie wystarczy, dla pewno\u015bci musz\u0119 zdoby\u0107 trzeci totem.\n\nZ tak\u0105 moc\u0105 b\u0119d\u0119 niepowstrzymany.\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfFollowPerk",
+        "type": "PERK DESC",
+        "original": "Spells and attacks are more effective against the undead and necromancers.",
+        "string": "Wszystkie czary i ataki s\u0105 skuteczniejsze przeciw nieumar\u0142ym i nekromantom."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "type": "QUST CNAM",
+        "original": "I have encountered a dark necromancer and two undead wolves. These  creatures appear to be controlled by the necromancer. Putting a stop to these experiments should prevent him from raising more. ",
+        "string": "Pojawi\u0142 si\u0119 mroczny nekromanta i dwa nieumar\u0142e wilki. Stworzenia te chyba s\u0105 kontrolowane przez nekromant\u0119. Powstrzymanie tych eksperyment\u00f3w powinno sprawi\u0107, \u017ce kolejne wilki nie b\u0119d\u0105 si\u0119 pojawia\u0107. "
+    }
+]

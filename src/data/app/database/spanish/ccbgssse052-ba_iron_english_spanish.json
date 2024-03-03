@@ -1,0 +1,176 @@
+[
+    {
+        "editor_id": "ccBGSSSE052_ArmorBladesCuirass",
+        "type": "ARMO FULL",
+        "original": "Iron Plate Armor",
+        "string": "Armadura de placas de hierro"
+    },
+    {
+        "editor_id": "ccBGSSSE052_ArmorBladesBoots",
+        "type": "ARMO FULL",
+        "original": "Iron Plate Boots",
+        "string": "Botas de placas de hierro"
+    },
+    {
+        "editor_id": "ccBGSSSE052_ArmorBladesHelmet",
+        "type": "ARMO FULL",
+        "original": "Iron Plate Helmet",
+        "string": "Yelmo de placas de hierro"
+    },
+    {
+        "editor_id": "ccBGSSSE052_ArmorBladesGauntlets",
+        "type": "ARMO FULL",
+        "original": "Iron Plate Gauntlets",
+        "string": "Guanteletes de placas de hierro"
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the Undercover Guard's Journal",
+        "string": "Lee el diario del guardia de inc\u00f3gnito."
+    },
+    {
+        "editor_id": "ccBGSSSE052_PaleEyes",
+        "type": "NPC_ FULL",
+        "original": "Pale-Eyes",
+        "string": "Ojos P\u00e1lidos"
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST FULL",
+        "original": "Brothers in Irons",
+        "string": "Hermanos de grilletes"
+    },
+    {
+        "editor_id": "ccBGSSSE052_Journal",
+        "type": "BOOK FULL",
+        "original": "Pale-Eyes' Journal",
+        "string": "Diario de Ojos P\u00e1lidos"
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST NNAM",
+        "original": "Look for a note at the Nightgate Inn",
+        "string": "Busca una nota en la posada El portal nocturno."
+    },
+    {
+        "editor_id": "ccBGSSSE052_Note",
+        "type": "BOOK FULL",
+        "original": "Nightgate Inn Patron's Note",
+        "string": "Nota del cliente de la posada El portal nocturno"
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST NNAM",
+        "original": "Search the barrel behind Nightgate Inn",
+        "string": "Examina el barril situado en la parte de atr\u00e1s de la posada El portal nocturno."
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST NNAM",
+        "original": "Inspect the body",
+        "string": "Inspecciona el cuerpo."
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST NNAM",
+        "original": "Investigate the camp site near the northern coast",
+        "string": "Investiga el campamento situado junto a la costa septentrional."
+    },
+    {
+        "editor_id": "ccBGSSSE052_ThalmorJournal",
+        "type": "BOOK FULL",
+        "original": "Undercover Guard's Journal",
+        "string": "Diario del guardia de inc\u00f3gnito"
+    },
+    {
+        "editor_id": "ccBGSSSE052_MiscQuest",
+        "type": "QUST NNAM",
+        "original": "Look for a note at the Nightgate Inn",
+        "string": "Busca una nota en la posada El portal nocturno."
+    },
+    {
+        "editor_id": "ccBGSSSE052_ArmorBladesBootsEnchanted",
+        "type": "ARMO FULL",
+        "original": "Iron Plate Boots",
+        "string": "Botas de placas de hierro"
+    },
+    {
+        "editor_id": "ccBGSSSE052_ArmorBladesGauntletsEnchanted",
+        "type": "ARMO FULL",
+        "original": "Iron Plate Gauntlets",
+        "string": "Guanteletes de placas de hierro"
+    },
+    {
+        "editor_id": "ccBGSSSE052_ArmorBladesCuirassEnchanted",
+        "type": "ARMO FULL",
+        "original": "Iron Plate Armor",
+        "string": "Armadura de placas de hierro"
+    },
+    {
+        "editor_id": "ccBGSSSE052_ArmorBladesHelmetEnchanted",
+        "type": "ARMO FULL",
+        "original": "Iron Plate Helmet",
+        "string": "Yelmo de placas de hierro"
+    },
+    {
+        "editor_id": "NightgateInn",
+        "type": "CELL FULL",
+        "original": "Nightgate Inn",
+        "string": "Posada El portal nocturno"
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST CNAM",
+        "original": "At Nightgate Inn, I found a journal written by an undercover guard that indicated a wanted criminal was camping out west of Northwatch Keep. By the time I arrived, he had already been killed by the Thalmor agents. After dealing with the Thalmor, I retrieved the journal from his body.",
+        "string": "En la posada El portal nocturno he encontrado un diario escrito por un guardia de inc\u00f3gnito en el que indicaba que hab\u00eda un criminal acampado al oeste del basti\u00f3n de la Guardia del Norte. Para cuando he llegado ya lo hab\u00edan matado unos agentes de los Thalmor. Despu\u00e9s de ocuparme de ellos, he obtenido el diario de su cad\u00e1ver."
+    },
+    {
+        "editor_id": "ccBGSSSE052_ThalmorJournal",
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\n<font face='$HandwrittenFont'>\n4E 201, 18 Sun's Height\nI've been asked to investigate rumors that one of the inns to the west is providing refuge for bandits. Several carriages traveling to Windhelm have gone missing as of late and the captain feels it may be related to the Crimson Dirks. I have some business to finish in Solitude but it shouldn't take longer than a week.\n\n4E 201, 25 Sun's Height\nWhile the patrons at Nightgate Inn were uncooperative and brusque, I don't believe any of them are bandits. I've asked our informant to travel to the inn to confirm, but in the meantime I will continue monitoring their behavior.\n[pagebreak]\n4E 201, 16 Last Seed\nThe Bosmer did not recognize the Nord, although I vacillate on whether I trust his opinion. I pointed out that it has been months since he has provided any actionable intelligence on his former cohorts. In response, he conveniently gave up the location of the Argonian bandit, Pale-Eyes, information I feel he has been holding on to for some time.\n\nFor now, the Bosmer remains an asset, but any information he provides should be vetted thoroughly. Supposedly, the Argonian is camped on the shoreline, west of Northwatch Keep. We can alert our Thalmor friends to take care of the matter. They won't like having a wanted criminal loitering so close to their stronghold.\n\nIn the meantime, I will leave my documentation here in the event further surveillance is needed on the inn patrons. </font>",
+        "string": "[pagebreak]\n<font face='$HandwrittenFont'>\n18 de Culminaci\u00f3n solar, 201 de la Cuarta Era.\nMe han pedido que investigue ciertos rumores de que en una de las posadas que quedan al oeste refugian a bandidos. \u00daltimamente han desaparecido varios carruajes que iban a Ventalia, y el capit\u00e1n cree que puede tener que ver con las Dagas carmes\u00edes. Antes tengo unas cosas que hacer en Soledad, pero no deber\u00edan llevarme m\u00e1s de una semana.\n\n25 de Culminaci\u00f3n solar, 201 de la Cuarta Era\nLos clientes de la posada El portal nocturno no quer\u00edan cooperar y eran muy maleducados, pero no creo que ninguno de ellos fuera un bandido. He pedido a nuestro informador que viaje a la posada para confirmarlo, pero mientras tanto seguir\u00e9 vigilando a ver c\u00f3mo se comportan.\n[pagebreak]\n16 de \u00daltima semilla, 201 de la Cuarta Era\nEl bosmer no reconoc\u00eda al n\u00f3rdico, aunque no tengo claro si me f\u00edo de su opini\u00f3n. Le record\u00e9 que lleva meses sin proporcionarnos ninguna informaci\u00f3n \u00fatil sobre sus antiguos compa\u00f1eros. Ante esto, me facilit\u00f3 una informaci\u00f3n muy pertinente sobre la ubicaci\u00f3n del bandido argoniano Ojos P\u00e1lidos, informaci\u00f3n que sospecho que lleva ocult\u00e1ndonos ya un tiempo.\n\nPor el momento, el bosmer nos viene bien, pero deber\u00edamos comprobar convenientemente cualquier informaci\u00f3n que nos proporcione. Se supone que el argoniano est\u00e1 acampado en la costa, al oeste del basti\u00f3n de la Guardia del Norte. Podemos avisar a nuestros amigos Thalmor para que se ocupen ellos. No les va a hacer gracia tener a un delincuente merodeando tan cerca de su fortaleza.\n\nMientras tanto, dejar\u00e9 aqu\u00ed mi documentaci\u00f3n por si hace falta seguir vigilando a los clientes de la posada.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST CNAM",
+        "original": "At Nightgate Inn, I found a journal written by an undercover guard that indicated a wanted criminal was camping out west of Northwatch Keep. I should head out there and see what I can find.",
+        "string": "En la posada El portal nocturno he encontrado un diario escrito por un guardia de inc\u00f3gnito en el que indicaba que hab\u00eda un criminal acampado al oeste del basti\u00f3n de la Guardia del Norte. Deber\u00eda dirigirme all\u00ed a ver qu\u00e9 encuentro."
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST CNAM",
+        "original": "I've heard rumors about mysterious patrons passing through Nightgate Inn. I found a note written by someone who stayed at the lodge.",
+        "string": "He o\u00eddo rumores de que en la posada El portal nocturno se aloja gente misteriosa. He encontrado una nota escrita por un cliente de la posada."
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST CNAM",
+        "original": "I've heard rumors about mysterious patrons passing through Nightgate Inn. Perhaps I should pay the inn a visit and see what I can uncover.",
+        "string": "He o\u00eddo rumores de que en la posada El portal nocturno se aloja gente misteriosa. Deber\u00eda hacer una visita a la posada, a ver qu\u00e9 averiguo."
+    },
+    {
+        "editor_id": "ccBGSSSE052_Note",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='20'>\nI just want to talk about this amazing inn, and how great the service is. The innkeeper is a kind, helpful host, who is so effortless in his laziness that he didn't bother to read past this point.\n\nThat's right, this inn is the worst. The literal worst. Of course, even if you can get past the bad service, the garbage food, and the ghost living downstairs, they're also bloody traitors! \n\nNot only do they rent to filthy Elves, I spotted one of them hide something in a barrel out back. I'd grab it myself, but it's probably covered in some disgusting Elven disease that would take nine of the world's greatest alchemists and a human sacrifice to cure. \n\nIf I weren't a wanted man, I'd burn down the barrel along with this sorry excuse for an inn. For now, this letter will have to do.</font>",
+        "string": "<font face='$HandwrittenFont'><font size='20'>\nSolo quiero hablar sobre esta posada fabulosa y lo bueno que es el servicio. El posadero es un anfitri\u00f3n amable y servicial, tan sumamente vago que no se ha molestado en leer m\u00e1s all\u00e1 de aqu\u00ed.\n\nEfectivamente, esta posada es lo peor. Literalmente. Por si no fuera suficiente con lo malo del servicio, la basura de comida que sirven y el fantasma que vive en el piso de arriba, encima son unos malditos traidores.\n\nNo les basta con aceptar a sucios elfos; encima he visto a uno de ellos esconder algo en un barril en la parte de atr\u00e1s. Ir\u00eda a cogerlo, pero seguramente est\u00e9 todo lleno de alguna enfermedad \u00e9lfica asquerosa y para curarla har\u00edan falta nueve de los mejores alquimistas del mundo y un sacrificio humano.\n\nSi no me estuvieran buscando, quemar\u00eda el barril y esta posada de mala muerte. De momento tendr\u00e9 que contentarme con esta carta.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST CNAM",
+        "original": "At Nightgate Inn, I found a journal written by an undercover guard that indicated a wanted criminal was camping out west of Northwatch Keep. At the camp, I encountered three Justiciars.",
+        "string": "En la posada El portal nocturno he encontrado un diario escrito por un guardia de inc\u00f3gnito en el que indicaba que hab\u00eda un criminal acampado al oeste del basti\u00f3n de la Guardia del Norte. En el campamento me he topado con tres justicias mayores."
+    },
+    {
+        "editor_id": "ccBGSSSE052_Quest",
+        "type": "QUST CNAM",
+        "original": "I've heard rumors about mysterious patrons passing through Nightgate Inn. Once I arrived, I found a note on the counter that implied an Elf patron left something in a barrel behind the inn.",
+        "string": "He o\u00eddo rumores de que en la posada El portal nocturno se aloja gente misteriosa. Una vez all\u00ed he encontrado sobre el mostrador una nota que indicaba que un cliente elfo hab\u00eda dejado algo en un barril situado en la parte de atr\u00e1s de la posada."
+    },
+    {
+        "editor_id": "ccBGSSSE052_Journal",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" Size=\"20\">\nThe water does not lie. Every morning I stare at my reflection, and feel myself returning to the Hist. \n\nWhen the smoke is thick, ours is to think back to the day I met Ehlhiel for the first time, when Peladius tried to make warriors of the new recruits.\n\nWith no coin for armor, I covered myself in pots and pans I found lying around the campfire, determined not to fall behind. But while the others laughed, the Bosmer thought me clever, and from that day on, the two of us were inseparable.\n\nYears later, on my hatch day, Ehlhiel gave me my first set of armor. He had the Orc forge one out of iron, in honor of the cast iron pot I wore on my head the first time we sparred. In return, I made the Bosmer an egg-brother, and vowed that I would protect him as if he were my own kin. \n\nThus when Ehlhiel confessed to what he had done, I did not tell a soul. I will protect my egg-brother until the end.",
+        "string": "<font face=\"$HandwrittenFont\" Size=\"20\">\nEl agua no miente. Todas las ma\u00f1anas contemplo mi reflejo y siento que vuelvo al hist.\n\nCuando el humo lo envuelve todo, recuerdo el d\u00eda en que conoc\u00ed a Ehlhiel, cuando Peladius intent\u00f3 hacer de los nuevos reclutas unos guerreros.\n\nNo ten\u00eda dinero para comprar una armadura, as\u00ed que me cubr\u00ed el cuerpo de cazuelas y sartenes que encontr\u00e9 por el campamento, decidido a no quedarme atr\u00e1s. Pero aunque los dem\u00e1s se re\u00edan, el bosmer pens\u00f3 que hab\u00eda sido astuto, y desde aquel momento fuimos inseparables.\n\nA\u00f1os despu\u00e9s, el d\u00eda de salida del huevo, Ehlhiel me regal\u00f3 mi primera armadura. Le pidi\u00f3 a la herrera que me forjase una de hierro, en honor a la cazuela que llevaba en la cabeza la primera vez que practicamos el combate. A cambio, el bosmer se convirti\u00f3 en mi hermano, y jur\u00e9 que lo proteger\u00eda como si fuese de mi sangre.\n\nPor eso, cuando Ehlhiel confes\u00f3 lo que hab\u00eda hecho, no se lo cont\u00e9 a nadie. Proteger\u00e9 a mi hermano hasta el final."
+    }
+]

@@ -1,0 +1,1856 @@
+[
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonLightningBolt",
+        "type": "SPEL FULL",
+        "original": "Storm Call Lightning Bolt",
+        "string": "\u0413\u0440\u043e\u0437\u043e\u0432\u043e\u0439 \u0437\u043e\u0432: \u041c\u043e\u043b\u043d\u0438\u044f"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_StaffLever01",
+        "type": "ACTI FULL",
+        "original": "Register of Spring",
+        "string": "\u041a\u043d\u0438\u0433\u0430 \u0432\u0435\u0441\u043d\u044b"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonConduitLever",
+        "type": "ACTI FULL",
+        "original": "Conduit Control Gem",
+        "string": "\u0423\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0449\u0438\u0439 \u043a\u0430\u043c\u0435\u043d\u044c \u043f\u0440\u043e\u0432\u043e\u0434\u043d\u0438\u043a\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_EnchStaff01",
+        "type": "ENCH FULL",
+        "original": "Summon Autumn",
+        "string": "\u0412\u044b\u0437\u043e\u0432 \u043e\u0441\u0435\u043d\u0438"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_EnchStaff03",
+        "type": "ENCH FULL",
+        "original": "Summon Summer",
+        "string": "\u0412\u044b\u0437\u043e\u0432 \u043b\u0435\u0442\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Staff03",
+        "type": "WEAP FULL",
+        "original": "Karstangz-Gravuun",
+        "string": "\u041a\u0430\u0440\u0441\u0442\u0430\u043d\u0433\u0437-\u0413\u0440\u0430\u0432\u0443\u0443\u043d"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_StaffLever04",
+        "type": "ACTI FULL",
+        "original": "Register of Winter",
+        "string": "\u041a\u043d\u0438\u0433\u0430 \u0437\u0438\u043c\u044b"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_EffectStaff02",
+        "type": "MGEF FULL",
+        "original": "Spring Staff",
+        "string": "\u041f\u043e\u0441\u043e\u0445 \u0432\u0435\u0441\u043d\u044b"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonPollenEnch",
+        "type": "ENCH FULL",
+        "original": "Toxic Pollen Damage",
+        "string": "\u0423\u0440\u043e\u043d \u043e\u0442 \u0442\u043e\u043a\u0441\u0438\u0447\u043d\u043e\u0439 \u043f\u044b\u043b\u044c\u0446\u044b"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonPoisonImodEffect",
+        "type": "MGEF FULL",
+        "original": "Toxic Runoff",
+        "string": "\u0422\u043e\u043a\u0441\u0438\u0447\u043d\u044b\u0439 \u0441\u043b\u0438\u0432"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonSummerSpell",
+        "type": "MGEF FULL",
+        "original": "Flame Cloak",
+        "string": "\u041e\u0433\u043d\u0435\u043d\u043d\u044b\u0439 \u043f\u043b\u0430\u0449"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonPlayerCornMessage3",
+        "type": "MESG FULL",
+        "original": "You place the wheat in the depository.",
+        "string": "\u0412\u044b \u043a\u043b\u0430\u0434\u0435\u0442\u0435 \u043f\u0448\u0435\u043d\u0438\u0446\u0443 \u0432 \u0445\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0435."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_SphereFrost",
+        "type": "NPC_ FULL",
+        "original": "Frosted Dwarven Sphere",
+        "string": "\u0417\u0430\u043c\u043e\u0440\u043e\u0436\u0435\u043d\u043d\u0430\u044f \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0430\u044f \u0441\u0444\u0435\u0440\u0430"
+    },
+    {
+        "editor_id": "MODSkykkilllerMagicEffectSummer",
+        "type": "MGEF FULL",
+        "original": "Clear Skies",
+        "string": "\u0427\u0438\u0441\u0442\u043e\u0435 \u043d\u0435\u0431\u043e"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST NNAM",
+        "original": "Disable the Conduit of Winter",
+        "string": "\u041e\u0442\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u043f\u0440\u043e\u0432\u043e\u0434\u043d\u0438\u043a \u0437\u0438\u043c\u044b"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_StaffLever03",
+        "type": "ACTI FULL",
+        "original": "Register of Autumn",
+        "string": "\u041a\u043d\u0438\u0433\u0430 \u043e\u0441\u0435\u043d\u0438"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonPlayerCornMessage1",
+        "type": "MESG FULL",
+        "original": "You pick up the wheat.",
+        "string": "\u0412\u044b \u0441\u043e\u0431\u0440\u0430\u043b\u0438 \u043f\u0448\u0435\u043d\u0438\u0446\u0443."
+    },
+    {
+        "editor_id": "MODSkykkilllerMagicEffectWinter",
+        "type": "MGEF FULL",
+        "original": "Clear Skies",
+        "string": "\u0427\u0438\u0441\u0442\u043e\u0435 \u043d\u0435\u0431\u043e"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonAutumnSpell",
+        "type": "MGEF DNAM",
+        "original": "For <dur> seconds nearby opponents take <8> points of shock damage and half magicka damage.",
+        "string": "\u0412 \u0442\u0435\u0447\u0435\u043d\u0438\u0435 <dur> \u0441\u0435\u043a. \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0438 \u043f\u043e\u0431\u043b\u0438\u0437\u043e\u0441\u0442\u0438 \u043f\u043e\u043b\u0443\u0447\u0430\u044e\u0442 <8> \u0435\u0434. \u0443\u0440\u043e\u043d\u0430 \u044d\u043b\u0435\u043a\u0442\u0440\u0438\u0447\u0435\u0441\u0442\u0432\u043e\u043c \u0432 \u0441\u0435\u043a\u0443\u043d\u0434\u0443 \u0438 \u0432\u0434\u0432\u043e\u0435 \u043c\u0435\u043d\u044c\u0448\u0438\u0439 \u0443\u0440\u043e\u043d \u043c\u0430\u0433\u0438\u0435\u0439."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST NNAM",
+        "original": "Shut down the Weather Witch",
+        "string": "\u041b\u0438\u043a\u0432\u0438\u0434\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0412\u0435\u0434\u044c\u043c\u0443 \u043f\u043e\u0433\u043e\u0434\u044b"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonWaterEnch",
+        "type": "ENCH FULL",
+        "original": "Toxic Runoff Damage",
+        "string": "\u0423\u0440\u043e\u043d \u043e\u0442 \u0442\u043e\u043a\u0441\u0438\u0447\u043d\u043e\u0433\u043e \u0441\u043b\u0438\u0432\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonElberrosBook",
+        "type": "BOOK FULL",
+        "original": "Forgotten Seasons, v1",
+        "string": "\u0417\u0430\u0431\u044b\u0442\u044b\u0435 \u0432\u0440\u0435\u043c\u0435\u043d\u0430 \u0433\u043e\u0434\u0430, \u0442. 1"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonSummerLocation",
+        "type": "LCTN FULL",
+        "original": "Summer",
+        "string": "\u041b\u0435\u0442\u043e"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBossSpell_Autumn",
+        "type": "SPEL FULL",
+        "original": "Autumn Spell",
+        "string": "\u041e\u0441\u0435\u043d\u043d\u0435\u0435 \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0435"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_EffectStaff04",
+        "type": "MGEF FULL",
+        "original": "Winter Staff",
+        "string": "\u041f\u043e\u0441\u043e\u0445 \u0437\u0438\u043c\u044b"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonSpiderControlExplosion",
+        "type": "EXPL FULL",
+        "original": "Dwarven Spider Mover Explosion",
+        "string": "\u0412\u0437\u0440\u044b\u0432 \u0436\u0435\u0437\u043b\u0430 \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u044f \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0438\u043c \u043f\u0430\u0443\u043a\u043e\u043c"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST NNAM",
+        "original": "Defeat the Sky Orchestrator",
+        "string": "\u041f\u043e\u0431\u0435\u0434\u0438\u0442\u044c \u041d\u0435\u0431\u0435\u0441\u043d\u043e\u0433\u043e \u0434\u0438\u0440\u0438\u0436\u0435\u0440\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST NNAM",
+        "original": "Gather the different types of wheat and place them in the depositories",
+        "string": "\u0421\u043e\u0431\u0440\u0430\u0442\u044c \u0440\u0430\u0437\u043d\u044b\u0435 \u0432\u0438\u0434\u044b \u043f\u0448\u0435\u043d\u0438\u0446\u044b \u0438 \u043f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c \u0438\u0445 \u0432 \u0445\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonSpell_Winter",
+        "type": "SPEL FULL",
+        "original": "Winter Spell",
+        "string": "\u0417\u0438\u043c\u043d\u0435\u0435 \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0435"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST NNAM",
+        "original": "Use the control rod to direct the spider to the service waypoints",
+        "string": "\u0421 \u043f\u043e\u043c\u043e\u0449\u044c\u044e \u0436\u0435\u0437\u043b\u0430 \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u044f \u043d\u0430\u043f\u0440\u0430\u0432\u0438\u0442\u044c \u043f\u0430\u0443\u043a\u0430 \u043a \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430\u043c"
+    },
+    {
+        "editor_id": "ccTWBSSE001DwarvenPuzzleDungeon01",
+        "type": "CELL FULL",
+        "original": "Runoff Caverns",
+        "string": "\u041f\u0435\u0449\u0435\u0440\u044b \u0441\u043b\u0438\u0432\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST NNAM",
+        "original": "Kill the spriggans that control the obstructing roots",
+        "string": "\u0423\u0431\u0438\u0442\u044c \u0441\u043f\u0440\u0438\u0433\u0433\u0430\u043d\u043e\u0432, \u043a\u043e\u043d\u0442\u0440\u043e\u043b\u0438\u0440\u0443\u044e\u0449\u0438\u0445 \u043a\u043e\u0440\u043d\u0438, \u043f\u0440\u0435\u0433\u0440\u0430\u0434\u0438\u0432\u0448\u0438\u0435 \u043f\u0443\u0442\u044c"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST NNAM",
+        "original": "Find and read the mage's notes on each facility",
+        "string": "\u041d\u0430\u0439\u0442\u0438 \u0438 \u043f\u0440\u043e\u0447\u0435\u0441\u0442\u044c \u0437\u0430\u043c\u0435\u0442\u043a\u0438 \u043c\u0430\u0433\u0430 \u043e \u043a\u0430\u0436\u0434\u043e\u043c \u0437\u0430\u043b\u0435"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonDepositWheat1C",
+        "type": "ACTI FULL",
+        "original": "Wheat Depository",
+        "string": "\u0425\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0435 \u043f\u0448\u0435\u043d\u0438\u0446\u044b"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST NNAM",
+        "original": "Disable the Conduit of Autumn",
+        "string": "\u041e\u0442\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u043f\u0440\u043e\u0432\u043e\u0434\u043d\u0438\u043a \u043e\u0441\u0435\u043d\u0438"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonControlRod",
+        "type": "WEAP FULL",
+        "original": "Spider Control Rod",
+        "string": "\u0416\u0435\u0437\u043b \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u044f \u043f\u0430\u0443\u043a\u0430\u043c\u0438"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonPlayerCornMessage2",
+        "type": "MESG FULL",
+        "original": "You're already carrying too much wheat.",
+        "string": "\u0412\u044b \u0443\u0436\u0435 \u0432\u0437\u044f\u043b\u0438 \u0441\u043b\u0438\u0448\u043a\u043e\u043c \u043c\u043d\u043e\u0433\u043e \u043f\u0448\u0435\u043d\u0438\u0446\u044b."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST NNAM",
+        "original": "Disable the Conduit of Summer",
+        "string": "\u041e\u0442\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u043f\u0440\u043e\u0432\u043e\u0434\u043d\u0438\u043a \u043b\u0435\u0442\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST NNAM",
+        "original": "Disable the Conduit of Spring",
+        "string": "\u041e\u0442\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u043f\u0440\u043e\u0432\u043e\u0434\u043d\u0438\u043a \u0432\u0435\u0441\u043d\u044b"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonSpiderControlEffect",
+        "type": "MGEF DNAM",
+        "original": "Directs the repair spider to the target.",
+        "string": "\u041d\u0430\u043f\u0440\u0430\u0432\u043b\u044f\u0435\u0442 \u043f\u0430\u0443\u043a\u0430-\u0440\u0435\u043c\u043e\u043d\u0442\u043d\u0438\u043a\u0430 \u043a \u0446\u0435\u043b\u0438."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheatItem1",
+        "type": "MISC FULL",
+        "original": "Glowing Red Wheat",
+        "string": "\u0421\u0438\u044f\u044e\u0449\u0430\u044f \u043a\u0440\u0430\u0441\u043d\u0430\u044f \u043f\u0448\u0435\u043d\u0438\u0446\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonSpiderControlEnch",
+        "type": "ENCH FULL",
+        "original": "Spider Control",
+        "string": "\u0423\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u043f\u0430\u0443\u043a\u0430\u043c\u0438"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST NNAM",
+        "original": "Investigate the mage's camp",
+        "string": "\u041e\u0431\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u0442\u044c \u043b\u0430\u0433\u0435\u0440\u044c \u043c\u0430\u0433\u0430"
+    },
+    {
+        "editor_id": "ccTWBSSE001DwarvenPuzzleDungeon03",
+        "type": "CELL FULL",
+        "original": "Vardnknd Skykiller Gallery",
+        "string": "\u0413\u0430\u043b\u0435\u0440\u0435\u044f \u043d\u0435\u0431\u0435\u0441\u043d\u043e\u0433\u043e \u0443\u0431\u0438\u0439\u0446\u044b \u0412\u0430\u0440\u0434\u043d\u043a\u043d\u0434\u0430"
+    },
+    {
+        "editor_id": "ccTWBSSE001DwarvenPuzzleDungeonSeason03",
+        "type": "CELL FULL",
+        "original": "Summer's Chords",
+        "string": "\u041f\u0435\u0441\u043d\u044f \u043b\u0435\u0442\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonDeadMercenary",
+        "type": "NPC_ FULL",
+        "original": "Mercenary",
+        "string": "\u041d\u0430\u0435\u043c\u043d\u0438\u043a"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST NNAM",
+        "original": "Investigate the ruin",
+        "string": "\u041e\u0431\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u0442\u044c \u0440\u0443\u0438\u043d\u044b"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_GreatWizard",
+        "type": "NPC_ FULL",
+        "original": "Elberon",
+        "string": "\u042d\u043b\u0431\u0435\u0440\u043e\u043d"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonAutumnSpell",
+        "type": "MGEF FULL",
+        "original": "Shock Cloak",
+        "string": "\u0428\u043e\u043a\u043e\u0432\u044b\u0439 \u043f\u043b\u0430\u0449"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonPlayerCornMessage4",
+        "type": "MESG FULL",
+        "original": "You don't have any wheat to deposit.",
+        "string": "\u0423 \u0432\u0430\u0441 \u043d\u0435\u0442 \u043f\u0448\u0435\u043d\u0438\u0446\u044b, \u043a\u043e\u0442\u043e\u0440\u0443\u044e \u043c\u043e\u0436\u043d\u043e \u043f\u043e\u043b\u043e\u0436\u0438\u0442\u044c \u0432 \u0445\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0435."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_EffectStaff01",
+        "type": "MGEF FULL",
+        "original": "Autumn Staff",
+        "string": "\u041f\u043e\u0441\u043e\u0445 \u043e\u0441\u0435\u043d\u0438"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_StaffLever02",
+        "type": "ACTI FULL",
+        "original": "Register of Summer",
+        "string": "\u041a\u043d\u0438\u0433\u0430 \u043b\u0435\u0442\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonElberrosBookSummer",
+        "type": "BOOK FULL",
+        "original": "Log of Elberon the Great, Vol 3",
+        "string": "\u0416\u0443\u0440\u043d\u0430\u043b \u042d\u043b\u0431\u0435\u0440\u043e\u043d\u0430 \u0412\u0435\u043b\u0438\u043a\u043e\u0433\u043e, \u0442. 3"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST FULL",
+        "original": "Forgotten Seasons",
+        "string": "\u0417\u0430\u0431\u044b\u0442\u044b\u0435 \u0432\u0440\u0435\u043c\u0435\u043d\u0430 \u0433\u043e\u0434\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheat1",
+        "type": "ACTI FULL",
+        "original": "Glowing Red Wheat",
+        "string": "\u0421\u0438\u044f\u044e\u0449\u0430\u044f \u043a\u0440\u0430\u0441\u043d\u0430\u044f \u043f\u0448\u0435\u043d\u0438\u0446\u0430"
+    },
+    {
+        "editor_id": "ccTWBSSE001DwarvenPuzzleDungeonSeason04",
+        "type": "CELL FULL",
+        "original": "Autumn's Bells",
+        "string": "\u041a\u043e\u043b\u043e\u043a\u043e\u043b\u0430 \u043e\u0441\u0435\u043d\u0438"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonSpell_Summer",
+        "type": "SPEL FULL",
+        "original": "Summer Spell",
+        "string": "\u041b\u0435\u0442\u043d\u0435\u0435 \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0435"
+    },
+    {
+        "editor_id": "MODSkykkilllerMagicEffectAutumn",
+        "type": "MGEF FULL",
+        "original": "Clear Skies",
+        "string": "\u0427\u0438\u0441\u0442\u043e\u0435 \u043d\u0435\u0431\u043e"
+    },
+    {
+        "editor_id": "ccTWBSSE001DwarvenPuzzleDungeonSeason02",
+        "type": "CELL FULL",
+        "original": "Spring's Symphony",
+        "string": "\u0421\u0438\u043c\u0444\u043e\u043d\u0438\u044f \u0432\u0435\u0441\u043d\u044b"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonPollenImodEffect",
+        "type": "MGEF FULL",
+        "original": "Choking Pollen",
+        "string": "\u0423\u0434\u0443\u0448\u0430\u044e\u0449\u0430\u044f \u043f\u044b\u043b\u044c\u0446\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonSummerRespawnLever",
+        "type": "ACTI FULL",
+        "original": "Repair Spider Release Lever",
+        "string": "\u041e\u0442\u043f\u0443\u0441\u0442\u0438\u0442\u044c \u0440\u044b\u0447\u0430\u0433 \u043f\u0430\u0443\u043a\u0430-\u0440\u0435\u043c\u043e\u043d\u0442\u043d\u0438\u043a\u0430"
+    },
+    {
+        "editor_id": "ccTWBSSE001DwarvenPuzzleDungeonSeason01",
+        "type": "CELL FULL",
+        "original": "Winter's Chimes",
+        "string": "\u041a\u043e\u043b\u043e\u043a\u043e\u043b\u0430 \u0437\u0438\u043c\u044b"
+    },
+    {
+        "editor_id": "ccTWBSSE001DwarvenPuzzleDungeon02",
+        "type": "CELL FULL",
+        "original": "Vardnknd Gallery",
+        "string": "\u0413\u0430\u043b\u0435\u0440\u0435\u044f \u0412\u0430\u0440\u0434\u043d\u043a\u043d\u0434\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_CenturionFrost",
+        "type": "NPC_ FULL",
+        "original": "Frosted Dwarven Centurion",
+        "string": "\u0417\u0430\u043c\u043e\u0440\u043e\u0436\u0435\u043d\u043d\u044b\u0439 \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0438\u0439 \u0446\u0435\u043d\u0442\u0443\u0440\u0438\u043e\u043d"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_SpiderSummer",
+        "type": "NPC_ FULL",
+        "original": "Repair Spider",
+        "string": "\u041f\u0430\u0443\u043a-\u0440\u0435\u043c\u043e\u043d\u0442\u043d\u0438\u043a"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_SprigganSpring",
+        "type": "NPC_ FULL",
+        "original": "Blooming Spriggan",
+        "string": "\u0426\u0432\u0435\u0442\u0443\u0449\u0438\u0439 \u0441\u043f\u0440\u0438\u0433\u0433\u0430\u043d"
+    },
+    {
+        "editor_id": "MODSkykkilllerMagicEffectSpring",
+        "type": "MGEF FULL",
+        "original": "Clear Skies",
+        "string": "\u0427\u0438\u0441\u0442\u043e\u0435 \u043d\u0435\u0431\u043e"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Staff02",
+        "type": "WEAP FULL",
+        "original": "Karstangz-Koor",
+        "string": "\u041a\u0430\u0440\u0441\u0442\u0430\u043d\u0433\u0437-\u041a\u043e\u043e\u0440"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonWinterSpell",
+        "type": "MGEF FULL",
+        "original": "Frost Cloak",
+        "string": "\u041c\u043e\u0440\u043e\u0437\u043d\u044b\u0439 \u043f\u043b\u0430\u0449"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Staff01",
+        "type": "WEAP FULL",
+        "original": "Karstangz-Vah",
+        "string": "\u041a\u0430\u0440\u0441\u0442\u0430\u043d\u0433\u0437-\u0412\u0430\u0445"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_SpiderBoss",
+        "type": "NPC_ FULL",
+        "original": "The Sky Orchestrator",
+        "string": "\u041d\u0435\u0431\u0435\u0441\u043d\u044b\u0439 \u0434\u0438\u0440\u0438\u0436\u0435\u0440"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_EffectStaff03",
+        "type": "MGEF FULL",
+        "original": "Summer Staff",
+        "string": "\u041f\u043e\u0441\u043e\u0445 \u043b\u0435\u0442\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_SprigganBoss",
+        "type": "NPC_ FULL",
+        "original": "Enraged Spriggan",
+        "string": "\u0420\u0430\u0437\u044a\u044f\u0440\u0435\u043d\u043d\u044b\u0439 \u0441\u043f\u0440\u0438\u0433\u0433\u0430\u043d"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_SpiderFrost",
+        "type": "NPC_ FULL",
+        "original": "Frosted Dwarven Spider",
+        "string": "\u0417\u0430\u043c\u043e\u0440\u043e\u0436\u0435\u043d\u043d\u044b\u0439 \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0438\u0439 \u043f\u0430\u0443\u043a"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonCoolingLever",
+        "type": "ACTI FULL",
+        "original": "Coolant Release Lever",
+        "string": "\u0420\u044b\u0447\u0430\u0433 \u0441\u0431\u0440\u043e\u0441\u0430 \u043e\u0445\u043b\u0430\u0434\u0438\u0442\u0435\u043b\u044f"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBossSpell_Spring",
+        "type": "SPEL FULL",
+        "original": "Spring Spell",
+        "string": "\u0412\u0435\u0441\u0435\u043d\u043d\u0435\u0435 \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0435"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_RepairSpider",
+        "type": "NPC_ FULL",
+        "original": "Repair Spider",
+        "string": "\u041f\u0430\u0443\u043a-\u0440\u0435\u043c\u043e\u043d\u0442\u043d\u0438\u043a"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonElberrosBookSpring",
+        "type": "BOOK FULL",
+        "original": "Log of Elberon the Great, Vol 2",
+        "string": "\u0416\u0443\u0440\u043d\u0430\u043b \u042d\u043b\u0431\u0435\u0440\u043e\u043d\u0430 \u0412\u0435\u043b\u0438\u043a\u043e\u0433\u043e, \u0442. 2"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonSpiderControlMover",
+        "type": "ACTI FULL",
+        "original": "Trap Linker",
+        "string": "\u041b\u043e\u0432\u0443\u0448\u043a\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Staff04",
+        "type": "WEAP FULL",
+        "original": "Karstangz-Odus",
+        "string": "\u041a\u0430\u0440\u0441\u0442\u0430\u043d\u0433\u0437-\u041e\u0434\u0443\u0441"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_StaffPedestal",
+        "type": "ACTI FULL",
+        "original": "Altar of the Seasons",
+        "string": "\u0410\u043b\u0442\u0430\u0440\u044c \u0432\u0440\u0435\u043c\u0435\u043d \u0433\u043e\u0434\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonSpiderControlEffect",
+        "type": "MGEF FULL",
+        "original": "Spider Control",
+        "string": "\u0423\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u043f\u0430\u0443\u043a\u0430\u043c\u0438"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_EnchStaff02",
+        "type": "ENCH FULL",
+        "original": "Summon Spring",
+        "string": "\u0412\u044b\u0437\u043e\u0432 \u0432\u0435\u0441\u043d\u044b"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_CenturionAutumn",
+        "type": "NPC_ FULL",
+        "original": "Harvest Dwarven Centurion",
+        "string": "\u0423\u0431\u043e\u0440\u043e\u0447\u043d\u044b\u0439 \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0438\u0439 \u0446\u0435\u043d\u0442\u0443\u0440\u0438\u043e\u043d"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_EnchStaff04",
+        "type": "ENCH FULL",
+        "original": "Summon Winter",
+        "string": "\u0412\u044b\u0437\u043e\u0432 \u0437\u0438\u043c\u044b"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonPoisonWater",
+        "type": "SPEL FULL",
+        "original": "Toxic Water Imagespace",
+        "string": "\u0422\u043e\u043a\u0441\u0438\u0447\u043d\u0430\u044f \u0432\u043e\u0434\u0430 - \u0438\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonElberrosBookWinter",
+        "type": "BOOK FULL",
+        "original": "Log of Elberon the Great, Vol 5",
+        "string": "\u0416\u0443\u0440\u043d\u0430\u043b \u042d\u043b\u0431\u0435\u0440\u043e\u043d\u0430 \u0412\u0435\u043b\u0438\u043a\u043e\u0433\u043e, \u0442. 5"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonToxicEffectLingering",
+        "type": "MGEF FULL",
+        "original": "Lingering Poison Damage",
+        "string": "\u0417\u0430\u0442\u044f\u0436\u043d\u043e\u0439 \u0443\u0440\u043e\u043d \u043e\u0442 \u044f\u0434\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonSummerSpell",
+        "type": "MGEF DNAM",
+        "original": "For <dur> seconds, opponents in melee range take <8> points fire damage per second. Targets on fire take extra damage.",
+        "string": "\u0412 \u0442\u0435\u0447\u0435\u043d\u0438\u0435 <dur> \u0441\u0435\u043a. \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0438 \u043d\u0430 \u0440\u0430\u0441\u0441\u0442\u043e\u044f\u043d\u0438\u0438 \u0440\u0443\u043a\u043e\u043f\u0430\u0448\u043d\u043e\u0439 \u0430\u0442\u0430\u043a\u0438 \u043f\u043e\u043b\u0443\u0447\u0430\u044e\u0442 <8> \u0435\u0434. \u0443\u0440\u043e\u043d\u0430 \u043e\u0433\u043d\u0435\u043c \u0432 \u0441\u0435\u043a\u0443\u043d\u0434\u0443. \u041f\u043e\u0434\u043e\u0436\u0436\u0435\u043d\u043d\u044b\u0435 \u043d\u0435\u0441\u0443\u0442 \u0434\u043e\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439 \u0443\u0440\u043e\u043d."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonWinterSpell",
+        "type": "MGEF DNAM",
+        "original": "For <dur> seconds, opponents in melee range take <8> points frost damage and Stamina damage per second.",
+        "string": "\u0412 \u0442\u0435\u0447\u0435\u043d\u0438\u0435 <dur> \u0441\u0435\u043a. \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0438 \u043d\u0430 \u0440\u0430\u0441\u0441\u0442\u043e\u044f\u043d\u0438\u0438 \u0440\u0443\u043a\u043e\u043f\u0430\u0448\u043d\u043e\u0439 \u0430\u0442\u0430\u043a\u0438 \u043f\u043e\u043b\u0443\u0447\u0430\u044e\u0442 <8> \u0435\u0434. \u0443\u0440\u043e\u043d\u0430 \u0445\u043e\u043b\u043e\u0434\u043e\u043c \u0432 \u0441\u0435\u043a\u0443\u043d\u0434\u0443 \u0438 \u0442\u0430\u043a\u043e\u0439 \u0436\u0435 \u0443\u0440\u043e\u043d \u0437\u0430\u043f\u0430\u0441\u0443 \u0441\u0438\u043b."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonElberrosBookFall",
+        "type": "BOOK FULL",
+        "original": "Log of Elberon the Great, Vol 4",
+        "string": "\u0416\u0443\u0440\u043d\u0430\u043b \u042d\u043b\u0431\u0435\u0440\u043e\u043d\u0430 \u0412\u0435\u043b\u0438\u043a\u043e\u0433\u043e, \u0442. 4"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonPoisonPollen",
+        "type": "SPEL FULL",
+        "original": "Toxic Pollen Imagespace",
+        "string": "\u0422\u043e\u043a\u0441\u0438\u0447\u043d\u0430\u044f \u043f\u044b\u043b\u044c\u0446\u0430 - \u0438\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheatItemSURV1",
+        "type": "MISC FULL",
+        "original": "Glowing Red Wheat",
+        "string": "\u0421\u0438\u044f\u044e\u0449\u0430\u044f \u043a\u0440\u0430\u0441\u043d\u0430\u044f \u043f\u0448\u0435\u043d\u0438\u0446\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_StaffEffectWinter",
+        "type": "MGEF FULL",
+        "original": "Winter Staff",
+        "string": "\u041f\u043e\u0441\u043e\u0445 \u0437\u0438\u043c\u044b"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_HorsePart_RightBackLeg",
+        "type": "MISC FULL",
+        "original": "Horse Right Back Leg",
+        "string": "\u041f\u0440\u0430\u0432\u0430\u044f \u0437\u0430\u0434\u043d\u044f\u044f \u043d\u043e\u0433\u0430 \u043b\u043e\u0448\u0430\u0434\u0438"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_HorsePart_LeftFrontLeg",
+        "type": "MISC FULL",
+        "original": "Horse Left Front Leg",
+        "string": "\u041b\u0435\u0432\u0430\u044f \u043f\u0435\u0440\u0435\u0434\u043d\u044f\u044f \u043d\u043e\u0433\u0430 \u043b\u043e\u0448\u0430\u0434\u0438"
+    },
+    {
+        "editor_id": "ccTWBSSE001_abDwarvenHorseFX",
+        "type": "SPEL FULL",
+        "original": "Dworse abilities",
+        "string": "\u0421\u043f\u043e\u0441\u043e\u0431\u043d\u043e\u0441\u0442\u0438 \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u043e\u0439 \u043b\u043e\u0448\u0430\u0434\u0438"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_AbWinter",
+        "type": "SPEL FULL",
+        "original": "Winter's Grip",
+        "string": "\u0425\u0432\u0430\u0442\u043a\u0430 \u0437\u0438\u043c\u044b"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_BugMGEF",
+        "type": "MGEF FULL",
+        "original": "Dwarven Drone Fly",
+        "string": "\u0414\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0430\u044f \u043c\u0443\u0445\u0430-\u0434\u0440\u043e\u043d"
+    },
+    {
+        "editor_id": "ccTBWSSE001_HorseFX",
+        "type": "MGEF FULL",
+        "original": "Dwarven Horse FX",
+        "string": "\u0414\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0430\u044f \u043b\u043e\u0448\u0430\u0434\u044c FX"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_FrostAtronach",
+        "type": "NPC_ FULL",
+        "original": "Frost Atronach",
+        "string": "\u041b\u0435\u0434\u044f\u043d\u043e\u0439 \u0430\u0442\u0440\u043e\u043d\u0430\u0445"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_HorsePart_Head",
+        "type": "MISC FULL",
+        "original": "Horse Head",
+        "string": "\u0413\u043e\u043b\u043e\u0432\u0430 \u043b\u043e\u0448\u0430\u0434\u0438"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_LvlMercMissile",
+        "type": "NPC_ FULL",
+        "original": "Mercenary Archer",
+        "string": "\u041d\u0430\u0435\u043c\u043d\u044b\u0439 \u043b\u0443\u0447\u043d\u0438\u043a"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_AbAutmn",
+        "type": "SPEL FULL",
+        "original": "Autumn's Cloak",
+        "string": "\u041f\u043b\u0430\u0449 \u043e\u0441\u0435\u043d\u0438"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_HorsePart_RightFrontLeg",
+        "type": "MISC FULL",
+        "original": "Horse Right Front Leg",
+        "string": "\u041f\u0440\u0430\u0432\u0430\u044f \u043f\u0435\u0440\u0435\u0434\u043d\u044f\u044f \u043d\u043e\u0433\u0430 \u043b\u043e\u0448\u0430\u0434\u0438"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_LvlMercWizard",
+        "type": "NPC_ FULL",
+        "original": "Mercenary Wizard",
+        "string": "\u041d\u0430\u0435\u043c\u043d\u044b\u0439 \u0432\u043e\u043b\u0448\u0435\u0431\u043d\u0438\u043a"
+    },
+    {
+        "editor_id": "AbFortifyRestoration",
+        "type": "MGEF FULL",
+        "original": "Fortify Restoration",
+        "string": "\u041f\u043e\u0432\u044b\u0448\u0435\u043d\u0438\u0435 \u043d\u0430\u0432\u044b\u043a\u0430: \u0432\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0435"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_IceWraith",
+        "type": "NPC_ FULL",
+        "original": "Ice Wraith",
+        "string": "\u041b\u0435\u0434\u044f\u043d\u043e\u0435 \u043f\u0440\u0438\u0432\u0438\u0434\u0435\u043d\u0438\u0435"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_StaffEffectAutumn",
+        "type": "MGEF FULL",
+        "original": "Autumn Staff",
+        "string": "\u041f\u043e\u0441\u043e\u0445 \u043e\u0441\u0435\u043d\u0438"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_StaffEffectSpring",
+        "type": "MGEF FULL",
+        "original": "Spring Staff",
+        "string": "\u041f\u043e\u0441\u043e\u0445 \u0432\u0435\u0441\u043d\u044b"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_LvlMercMisHoldPos",
+        "type": "NPC_ FULL",
+        "original": "Mercenary Archer",
+        "string": "\u041d\u0430\u0435\u043c\u043d\u044b\u0439 \u043b\u0443\u0447\u043d\u0438\u043a"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_LvlMercMelee",
+        "type": "NPC_ FULL",
+        "original": "Mercenary Warrior",
+        "string": "\u041d\u0430\u0435\u043c\u043d\u044b\u0439 \u0432\u043e\u0438\u043d"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_DwarvenHorse",
+        "type": "NPC_ FULL",
+        "original": "Dwarven Horse",
+        "string": "\u0414\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0430\u044f \u043b\u043e\u0448\u0430\u0434\u044c"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_LvlMercWizHoldPos",
+        "type": "NPC_ FULL",
+        "original": "Mercenary Wizard",
+        "string": "\u041d\u0430\u0435\u043c\u043d\u044b\u0439 \u0432\u043e\u043b\u0448\u0435\u0431\u043d\u0438\u043a"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_StaffEffectSummer",
+        "type": "MGEF FULL",
+        "original": "Summer Staff",
+        "string": "\u041f\u043e\u0441\u043e\u0445 \u043b\u0435\u0442\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_HorsePart_LeftBackLeg",
+        "type": "MISC FULL",
+        "original": "Horse Left Back Leg",
+        "string": "\u041b\u0435\u0432\u0430\u044f \u0437\u0430\u0434\u043d\u044f\u044f \u043d\u043e\u0433\u0430 \u043b\u043e\u0448\u0430\u0434\u0438"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_AbSpring",
+        "type": "SPEL FULL",
+        "original": "Spring's Step",
+        "string": "\u041f\u043e\u0441\u0442\u0443\u043f\u044c \u0432\u0435\u0441\u043d\u044b"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_AbSum",
+        "type": "SPEL FULL",
+        "original": "Summer's Embrace",
+        "string": "\u041e\u0431\u044a\u044f\u0442\u0438\u044f \u043b\u0435\u0442\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_FlameAtronach",
+        "type": "NPC_ FULL",
+        "original": "Flame Atronach",
+        "string": "\u041e\u0433\u043d\u0435\u043d\u043d\u044b\u0439 \u0430\u0442\u0440\u043e\u043d\u0430\u0445"
+    },
+    {
+        "editor_id": "ccTWBSSE001_DwarvenHorseTorsoActivator",
+        "type": "ACTI FULL",
+        "original": "Broken Dwarven Horse",
+        "string": "\u0421\u043b\u043e\u043c\u0430\u043d\u043d\u0430\u044f \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0430\u044f \u043b\u043e\u0448\u0430\u0434\u044c"
+    },
+    {
+        "editor_id": "ccTWBSSE001_EnchCrownSpring",
+        "type": "ENCH FULL",
+        "original": "Spring's Blessing",
+        "string": "\u0411\u043b\u0430\u0433\u043e\u0441\u043b\u043e\u0432\u0435\u043d\u0438\u0435 \u0432\u0435\u0441\u043d\u044b"
+    },
+    {
+        "editor_id": "ccTWBSSE001_EnchMaskAutumn",
+        "type": "ENCH FULL",
+        "original": "Autumn's Grace",
+        "string": "\u041c\u0438\u043b\u043e\u0441\u0442\u044c \u043e\u0441\u0435\u043d\u0438"
+    },
+    {
+        "editor_id": "ccTWBSSE001_EnchCrownAutumn",
+        "type": "ENCH FULL",
+        "original": "Autumn's Blessing",
+        "string": "\u0411\u043b\u0430\u0433\u043e\u0441\u043b\u043e\u0432\u0435\u043d\u0438\u0435 \u043e\u0441\u0435\u043d\u0438"
+    },
+    {
+        "editor_id": "ccTWBSSE001_ArmorCrownSpring",
+        "type": "ARMO FULL",
+        "original": "Dwarven Crown of Spring",
+        "string": "\u0414\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0430\u044f \u043a\u043e\u0440\u043e\u043d\u0430 \u0432\u0435\u0441\u043d\u044b"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonHorseQuest",
+        "type": "QUST FULL",
+        "original": "The Dwarven Horse",
+        "string": "\u0414\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0430\u044f \u043b\u043e\u0448\u0430\u0434\u044c"
+    },
+    {
+        "editor_id": "ccTWBSSE001_EnchCrownWinter",
+        "type": "ENCH FULL",
+        "original": "Winter's Blessing",
+        "string": "\u0411\u043b\u0430\u0433\u043e\u0441\u043b\u043e\u0432\u0435\u043d\u0438\u0435 \u0437\u0438\u043c\u044b"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonHorseMessageFail",
+        "type": "MESG FULL",
+        "original": "You haven't got all the pieces to rebuild the horse with.",
+        "string": "\u0423 \u0432\u0430\u0441 \u043d\u0435\u0434\u043e\u0441\u0442\u0430\u0442\u043e\u0447\u043d\u043e \u0447\u0430\u0441\u0442\u0435\u0439, \u0447\u0442\u043e\u0431\u044b \u0441\u043e\u0431\u0440\u0430\u0442\u044c \u043b\u043e\u0448\u0430\u0434\u044c."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonHorseQuest",
+        "type": "QUST NNAM",
+        "original": "Recover the head of the Dwarven Horse",
+        "string": "\u041d\u0430\u0439\u0442\u0438 \u0433\u043e\u043b\u043e\u0432\u0443 \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u043e\u0439 \u043b\u043e\u0448\u0430\u0434\u0438"
+    },
+    {
+        "editor_id": "ccTWBSSE001_DeconstructAutumn",
+        "type": "MISC FULL",
+        "original": "Remove Mask",
+        "string": "\u0423\u0431\u0440\u0430\u0442\u044c \u043c\u0430\u0441\u043a\u0443"
+    },
+    {
+        "editor_id": "ccTWBSSE001_DeconstructSpring",
+        "type": "MISC FULL",
+        "original": "Remove Mask",
+        "string": "\u0423\u0431\u0440\u0430\u0442\u044c \u043c\u0430\u0441\u043a\u0443"
+    },
+    {
+        "editor_id": "ccTWBSSE001_ArmorMaskWinter",
+        "type": "ARMO FULL",
+        "original": "Dwarven Winter Visage",
+        "string": "\u0414\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0430\u044f \u0437\u0438\u043c\u043d\u044f\u044f \u043c\u0430\u0441\u043a\u0430"
+    },
+    {
+        "editor_id": "ccTWBSSE001_ArmorCrownWinter",
+        "type": "ARMO FULL",
+        "original": "Dwarven Crown of Winter",
+        "string": "\u0414\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0430\u044f \u043a\u043e\u0440\u043e\u043d\u0430 \u0437\u0438\u043c\u044b"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_SpiderBossFAKE",
+        "type": "NPC_ FULL",
+        "original": "The Sky Orchestrator",
+        "string": "\u041d\u0435\u0431\u0435\u0441\u043d\u044b\u0439 \u0434\u0438\u0440\u0438\u0436\u0435\u0440"
+    },
+    {
+        "editor_id": "ccTWBSSE001_ArmorMaskAutumn",
+        "type": "ARMO FULL",
+        "original": "Dwarven Autumn Visage",
+        "string": "\u0414\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0430\u044f \u043e\u0441\u0435\u043d\u043d\u044f\u044f \u043c\u0430\u0441\u043a\u0430"
+    },
+    {
+        "editor_id": "ccTWBSSE001_ArmorMaskSpring",
+        "type": "ARMO FULL",
+        "original": "Dwarven Spring Visage",
+        "string": "\u0414\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0430\u044f \u0432\u0435\u0441\u0435\u043d\u043d\u044f\u044f \u043c\u0430\u0441\u043a\u0430"
+    },
+    {
+        "editor_id": "ccTWBSSE001_EnchMaskSpring",
+        "type": "ENCH FULL",
+        "original": "Spring's Grace",
+        "string": "\u041c\u0438\u043b\u043e\u0441\u0442\u044c \u0432\u0435\u0441\u043d\u044b"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST NNAM",
+        "original": "Find the entrance to the Dwarven ruin",
+        "string": "\u041d\u0430\u0439\u0442\u0438 \u0432\u0445\u043e\u0434 \u0432 \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0438\u0435 \u0440\u0443\u0438\u043d\u044b"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonMapMarker",
+        "type": "REFR FULL",
+        "original": "Runoff Caverns",
+        "string": "\u041f\u0435\u0449\u0435\u0440\u044b \u0441\u043b\u0438\u0432\u0430"
+    },
+    {
+        "editor_id": "ccTWBSSE001_ArmorCrownAutumn",
+        "type": "ARMO FULL",
+        "original": "Dwarven Crown of Autumn",
+        "string": "\u0414\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0430\u044f \u043a\u043e\u0440\u043e\u043d\u0430 \u043e\u0441\u0435\u043d\u0438"
+    },
+    {
+        "editor_id": "ccTWBSSE001_EnchMaskWinter",
+        "type": "ENCH FULL",
+        "original": "Winter's Grace",
+        "string": "\u041c\u0438\u043b\u043e\u0441\u0442\u044c \u0437\u0438\u043c\u044b"
+    },
+    {
+        "editor_id": "ccTWBSSE001_DeconstructWinter",
+        "type": "MISC FULL",
+        "original": "Remove Mask",
+        "string": "\u0423\u0431\u0440\u0430\u0442\u044c \u043c\u0430\u0441\u043a\u0443"
+    },
+    {
+        "editor_id": "ccTWBSSE001_ArmorCrownOpen",
+        "type": "ARMO FULL",
+        "original": "Dwarven Crown",
+        "string": "\u0414\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0430\u044f \u043a\u043e\u0440\u043e\u043d\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonControlRodReward",
+        "type": "WEAP FULL",
+        "original": "Spider Control Rod",
+        "string": "\u0416\u0435\u0437\u043b \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u044f \u043f\u0430\u0443\u043a\u0430\u043c\u0438"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonHorseQuest",
+        "type": "QUST NNAM",
+        "original": "Recover the right back leg of the Dwarven Horse",
+        "string": "\u041d\u0430\u0439\u0442\u0438 \u043f\u0440\u0430\u0432\u0443\u044e \u0437\u0430\u0434\u043d\u044e\u044e \u043d\u043e\u0433\u0443 \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u043e\u0439 \u043b\u043e\u0448\u0430\u0434\u0438"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonCalmStaff",
+        "type": "ENCH FULL",
+        "original": "Calm Spider",
+        "string": "\u0423\u0441\u043f\u043e\u043a\u043e\u0435\u043d\u0438\u0435 \u043f\u0430\u0443\u043a\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_SprigganNonHostile",
+        "type": "NPC_ FULL",
+        "original": "Spriggan",
+        "string": "\u0421\u043f\u0440\u0438\u0433\u0433\u0430\u043d"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonHorseQuest",
+        "type": "QUST NNAM",
+        "original": "Recover the left back leg of the Dwarven Horse",
+        "string": "\u041d\u0430\u0439\u0442\u0438 \u043b\u0435\u0432\u0443\u044e \u0437\u0430\u0434\u043d\u044e\u044e \u043d\u043e\u0433\u0443 \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u043e\u0439 \u043b\u043e\u0448\u0430\u0434\u0438"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonHorseQuest",
+        "type": "QUST NNAM",
+        "original": "Recover the right front leg of the Dwarven Horse",
+        "string": "\u041d\u0430\u0439\u0442\u0438 \u043f\u0440\u0430\u0432\u0443\u044e \u043f\u0435\u0440\u0435\u0434\u043d\u044e\u044e \u043d\u043e\u0433\u0443 \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u043e\u0439 \u043b\u043e\u0448\u0430\u0434\u0438"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonLocation",
+        "type": "LCTN FULL",
+        "original": "Vardnknd",
+        "string": "\u0412\u0430\u0440\u0434\u043d\u043a\u043d\u0434"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonHorseQuest",
+        "type": "QUST NNAM",
+        "original": "Return all the pieces to the Dwarven Horse's frame",
+        "string": "\u041f\u0440\u0438\u0441\u043e\u0435\u0434\u0438\u043d\u0438\u0442\u044c \u0432\u0441\u0435 \u0447\u0430\u0441\u0442\u0438 \u043a \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u043e\u0439 \u043b\u043e\u0448\u0430\u0434\u0438"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonHorseQuest",
+        "type": "QUST NNAM",
+        "original": "Recover the left front leg of the Dwarven Horse",
+        "string": "\u041d\u0430\u0439\u0442\u0438 \u043b\u0435\u0432\u0443\u044e \u043f\u0435\u0440\u0435\u0434\u043d\u044e\u044e \u043d\u043e\u0433\u0443 \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u043e\u0439 \u043b\u043e\u0448\u0430\u0434\u0438"
+    },
+    {
+        "editor_id": "dlcDwarvenPuzzleDungeon_Rabbit",
+        "type": "NPC_ FULL",
+        "original": "Rabbit",
+        "string": "\u041a\u0440\u043e\u043b\u0438\u043a"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_ArmorEnch",
+        "type": "ENCH FULL",
+        "original": "Season's Shield",
+        "string": "\u0429\u0438\u0442 \u0432\u0440\u0435\u043c\u0435\u043d\u0438 \u0433\u043e\u0434\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_BossArmor",
+        "type": "ARMO FULL",
+        "original": "Ward of the Seasons",
+        "string": "\u041e\u0431\u0435\u0440\u0435\u0433 \u0432\u0440\u0435\u043c\u0435\u043d \u0433\u043e\u0434\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_DeerSpring",
+        "type": "NPC_ FULL",
+        "original": "Deer",
+        "string": "\u041e\u043b\u0435\u043d\u044c"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_WeaknessShock",
+        "type": "MGEF FULL",
+        "original": "Conductive Helmet",
+        "string": "\u041f\u0440\u043e\u0432\u043e\u0434\u044f\u0449\u0438\u0439 \u0448\u043b\u0435\u043c"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Crownench",
+        "type": "ENCH FULL",
+        "original": "Dwarven Crown",
+        "string": "\u0414\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0430\u044f \u043a\u043e\u0440\u043e\u043d\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_BugDead",
+        "type": "MSTT FULL",
+        "original": "Deactivated Dwarven Insect",
+        "string": "\u0414\u0435\u0430\u043a\u0442\u0438\u0432\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u043e\u0435 \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u043e\u0435 \u043d\u0430\u0441\u0435\u043a\u043e\u043c\u043e\u0435"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_AutumnGoat",
+        "type": "NPC_ FULL",
+        "original": "Goat",
+        "string": "\u041a\u043e\u0437\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_AutumnCow",
+        "type": "NPC_ FULL",
+        "original": "Cow",
+        "string": "\u041a\u043e\u0440\u043e\u0432\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_AutumnHare2",
+        "type": "NPC_ FULL",
+        "original": "Rabbit",
+        "string": "\u041a\u0440\u043e\u043b\u0438\u043a"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_AutumnChicken",
+        "type": "NPC_ FULL",
+        "original": "Chicken",
+        "string": "\u041a\u0443\u0440\u0438\u0446\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST NNAM",
+        "original": "Find a way through the icy reservoirs to reach the Conduit of Winter",
+        "string": "\u041d\u0430\u0439\u0442\u0438 \u0441\u043f\u043e\u0441\u043e\u0431 \u043f\u0440\u043e\u0431\u0440\u0430\u0442\u044c\u0441\u044f \u043c\u0438\u043c\u043e \u043b\u0435\u0434\u044f\u043d\u044b\u0445 \u0440\u0435\u0437\u0435\u0440\u0432\u0443\u0430\u0440\u043e\u0432 \u043a \u043f\u0440\u043e\u0432\u043e\u0434\u043d\u0438\u043a\u0443 \u0437\u0438\u043c\u044b"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_SprigganSpringMatron",
+        "type": "NPC_ FULL",
+        "original": "Blooming Spriggan",
+        "string": "\u0426\u0432\u0435\u0442\u0443\u0449\u0438\u0439 \u0441\u043f\u0440\u0438\u0433\u0433\u0430\u043d"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_SprigganSpringMatronKey",
+        "type": "NPC_ FULL",
+        "original": "Blooming Spriggan Matron",
+        "string": "\u0426\u0432\u0435\u0442\u0443\u0449\u0438\u0439 \u0441\u043f\u0440\u0438\u0433\u0433\u0430\u043d-\u043c\u0430\u0442\u0440\u043e\u043d\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonWheatChest",
+        "type": "CONT FULL",
+        "original": "Equipment Storage Chest",
+        "string": "\u0425\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0435 \u044d\u043a\u0438\u043f\u0438\u0440\u043e\u0432\u043a\u0438"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_SpringMaskKey",
+        "type": "KEYM FULL",
+        "original": "Vardnknd Spring Key",
+        "string": "\u0412\u0435\u0441\u0435\u043d\u043d\u0438\u0439 \u043a\u043b\u044e\u0447 \u0412\u0430\u0440\u0434\u043d\u043a\u043d\u0434\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_CarrySpell",
+        "type": "MGEF FULL",
+        "original": "Weight",
+        "string": "\u0412\u0435\u0441"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonCrownQuest",
+        "type": "QUST FULL",
+        "original": "The Dwarven Crown",
+        "string": "\u0414\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0430\u044f \u043a\u043e\u0440\u043e\u043d\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonCrownQuest",
+        "type": "QUST NNAM",
+        "original": "Find the Mask of Spring",
+        "string": "\u041d\u0430\u0439\u0442\u0438 \u043c\u0430\u0441\u043a\u0443 \u0432\u0435\u0441\u043d\u044b"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonLightningBoltLow",
+        "type": "SPEL FULL",
+        "original": "Storm Call Lightning Bolt",
+        "string": "\u0413\u0440\u043e\u0437\u043e\u0432\u043e\u0439 \u0437\u043e\u0432: \u041c\u043e\u043b\u043d\u0438\u044f"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonCrownQuest",
+        "type": "QUST NNAM",
+        "original": "Find the Mask of Winter",
+        "string": "\u041d\u0430\u0439\u0442\u0438 \u043c\u0430\u0441\u043a\u0443 \u0437\u0438\u043c\u044b"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonCrownQuest",
+        "type": "QUST NNAM",
+        "original": "Find the Mask of Autumn",
+        "string": "\u041d\u0430\u0439\u0442\u0438 \u043c\u0430\u0441\u043a\u0443 \u043e\u0441\u0435\u043d\u0438"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheatItemSURV2",
+        "type": "MISC FULL",
+        "original": "White Molded Wheat",
+        "string": "\u041f\u0448\u0435\u043d\u0438\u0446\u0430 \u0432 \u0431\u0435\u043b\u043e\u0439 \u043f\u043b\u0435\u0441\u0435\u043d\u0438"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheat3",
+        "type": "ACTI FULL",
+        "original": "Blue Luminous Wheat",
+        "string": "\u0413\u043e\u043b\u0443\u0431\u0430\u044f \u0441\u0432\u0435\u0442\u044f\u0449\u0430\u044f\u0441\u044f \u043f\u0448\u0435\u043d\u0438\u0446\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheatItemSURV4",
+        "type": "MISC FULL",
+        "original": "Orange-encrusted Wheat",
+        "string": "\u041f\u0448\u0435\u043d\u0438\u0446\u0430 \u0432 \u0440\u044b\u0436\u0435\u0439 \u043a\u043e\u0440\u043a\u0435"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheatItemSURV6",
+        "type": "MISC FULL",
+        "original": "Sickly Green Wheat",
+        "string": "\u041d\u0435\u043d\u0430\u0442\u0443\u0440\u0430\u043b\u044c\u043d\u043e \u0437\u0435\u043b\u0435\u043d\u0430\u044f \u043f\u0448\u0435\u043d\u0438\u0446\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheatItem3",
+        "type": "MISC FULL",
+        "original": "Blue Luminous Wheat",
+        "string": "\u0413\u043e\u043b\u0443\u0431\u0430\u044f \u0441\u0432\u0435\u0442\u044f\u0449\u0430\u044f\u0441\u044f \u043f\u0448\u0435\u043d\u0438\u0446\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheatItem6",
+        "type": "MISC FULL",
+        "original": "Sickly Green Wheat",
+        "string": "\u041d\u0435\u043d\u0430\u0442\u0443\u0440\u0430\u043b\u044c\u043d\u043e \u0437\u0435\u043b\u0435\u043d\u0430\u044f \u043f\u0448\u0435\u043d\u0438\u0446\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonDepositWheat4D",
+        "type": "ACTI FULL",
+        "original": "Wheat Depository",
+        "string": "\u0425\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0435 \u043f\u0448\u0435\u043d\u0438\u0446\u044b"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheat2",
+        "type": "ACTI FULL",
+        "original": "White Molded Wheat",
+        "string": "\u041f\u0448\u0435\u043d\u0438\u0446\u0430 \u0432 \u0431\u0435\u043b\u043e\u0439 \u043f\u043b\u0435\u0441\u0435\u043d\u0438"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheat5",
+        "type": "ACTI FULL",
+        "original": "Off-Color Wheat",
+        "string": "\u0411\u0435\u0441\u0446\u0432\u0435\u0442\u043d\u0430\u044f \u043f\u0448\u0435\u043d\u0438\u0446\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheatItem2",
+        "type": "MISC FULL",
+        "original": "White Molded Wheat",
+        "string": "\u041f\u0448\u0435\u043d\u0438\u0446\u0430 \u0432 \u0431\u0435\u043b\u043e\u0439 \u043f\u043b\u0435\u0441\u0435\u043d\u0438"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonDepositWheat5E",
+        "type": "ACTI FULL",
+        "original": "Wheat Depository",
+        "string": "\u0425\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0435 \u043f\u0448\u0435\u043d\u0438\u0446\u044b"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheatItem5",
+        "type": "MISC FULL",
+        "original": "Off-Color Wheat",
+        "string": "\u0411\u0435\u0441\u0446\u0432\u0435\u0442\u043d\u0430\u044f \u043f\u0448\u0435\u043d\u0438\u0446\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonCrownQuest",
+        "type": "QUST NNAM",
+        "original": "Use a forge to slot a mask into the Dwarven Crown",
+        "string": "\u0412\u043e\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u044c\u0441\u044f \u043a\u0443\u0437\u043d\u0438\u0446\u0435\u0439, \u0447\u0442\u043e\u0431\u044b \u0437\u0430\u043a\u0440\u0435\u043f\u0438\u0442\u044c \u043c\u0430\u0441\u043a\u0443 \u0432 \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u043e\u0439 \u043a\u043e\u0440\u043e\u043d\u0435"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheatItemSURV3",
+        "type": "MISC FULL",
+        "original": "Blue Luminous Wheat",
+        "string": "\u0413\u043e\u043b\u0443\u0431\u0430\u044f \u0441\u0432\u0435\u0442\u044f\u0449\u0430\u044f\u0441\u044f \u043f\u0448\u0435\u043d\u0438\u0446\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheat6",
+        "type": "ACTI FULL",
+        "original": "Sickly Green Wheat",
+        "string": "\u041d\u0435\u043d\u0430\u0442\u0443\u0440\u0430\u043b\u044c\u043d\u043e \u0437\u0435\u043b\u0435\u043d\u0430\u044f \u043f\u0448\u0435\u043d\u0438\u0446\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonDepositWheat6F",
+        "type": "ACTI FULL",
+        "original": "Wheat Depository",
+        "string": "\u0425\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0435 \u043f\u0448\u0435\u043d\u0438\u0446\u044b"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheatItemSURV5",
+        "type": "MISC FULL",
+        "original": "Off-color Wheat",
+        "string": "\u0411\u0435\u0441\u0446\u0432\u0435\u0442\u043d\u0430\u044f \u043f\u0448\u0435\u043d\u0438\u0446\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonDepositWheat3A",
+        "type": "ACTI FULL",
+        "original": "Wheat Depository",
+        "string": "\u0425\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0435 \u043f\u0448\u0435\u043d\u0438\u0446\u044b"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheatItem4",
+        "type": "MISC FULL",
+        "original": "Orange-Encrusted Wheat",
+        "string": "\u041f\u0448\u0435\u043d\u0438\u0446\u0430 \u0432 \u0440\u044b\u0436\u0435\u0439 \u043a\u043e\u0440\u043a\u0435"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonBadWheat4",
+        "type": "ACTI FULL",
+        "original": "Orange-Encrusted Wheat",
+        "string": "\u041f\u0448\u0435\u043d\u0438\u0446\u0430 \u0432 \u0440\u044b\u0436\u0435\u0439 \u043a\u043e\u0440\u043a\u0435"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonDepositWheat2B",
+        "type": "ACTI FULL",
+        "original": "Wheat Depository",
+        "string": "\u0425\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0435 \u043f\u0448\u0435\u043d\u0438\u0446\u044b"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_ElberrosApprentice",
+        "type": "NPC_ FULL",
+        "original": "Elberon's Apprentice",
+        "string": "\u0423\u0447\u0435\u043d\u0438\u043a \u042d\u043b\u0431\u0435\u0440\u043e\u043d\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_ElberrosApprentice",
+        "type": "NPC_ SHRT",
+        "original": "Apprentice",
+        "string": "\u0423\u0447\u0435\u043d\u0438\u043a"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonLightningBoltNone",
+        "type": "SPEL FULL",
+        "original": "Storm Call Lightning Bolt",
+        "string": "\u0413\u0440\u043e\u0437\u043e\u0432\u043e\u0439 \u0437\u043e\u0432: \u041c\u043e\u043b\u043d\u0438\u044f"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_ShockWeakness",
+        "type": "MGEF FULL",
+        "original": "Weakness to Shock",
+        "string": "\u0423\u044f\u0437\u0432\u0438\u043c\u043e\u0441\u0442\u044c \u043a \u044d\u043b\u0435\u043a\u0442\u0440\u0438\u0447\u0435\u0441\u0442\u0432\u0443"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonCrownQuest",
+        "type": "QUST NNAM",
+        "original": "Retrieve the Dwarven Crown",
+        "string": "\u041f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0443\u044e \u043a\u043e\u0440\u043e\u043d\u0443"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_PoisonWeakness",
+        "type": "MGEF DNAM",
+        "original": "Target is <mag>% weaker to poison for <dur> seconds.",
+        "string": "\u0426\u0435\u043b\u044c \u043d\u0430 <mag>% \u0443\u044f\u0437\u0432\u0438\u043c\u0435\u0435 \u043a \u044f\u0434\u0430\u043c \u0432 \u0442\u0435\u0447\u0435\u043d\u0438\u0435 <dur> \u0441\u0435\u043a."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_FrostBreath",
+        "type": "SHOU FULL",
+        "original": "Frozen Steam Breath",
+        "string": "\u0414\u044b\u0445\u0430\u043d\u0438\u0435 \u043c\u043e\u0440\u043e\u0437\u043d\u043e\u0433\u043e \u043f\u0430\u0440\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_StaffPoisonEff",
+        "type": "MGEF FULL",
+        "original": "Poison Fire",
+        "string": "\u042f\u0434\u043e\u0432\u0438\u0442\u044b\u0439 \u043e\u0433\u043e\u043d\u044c"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Staffspell1",
+        "type": "SPEL FULL",
+        "original": "Summon Autumn",
+        "string": "\u0412\u044b\u0437\u043e\u0432 \u043e\u0441\u0435\u043d\u0438"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_FrostbreathEFF",
+        "type": "MGEF FULL",
+        "original": "Frozen Breath",
+        "string": "\u041c\u043e\u0440\u043e\u0437\u043d\u043e\u0435 \u0434\u044b\u0445\u0430\u043d\u0438\u0435"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_PoisonWeakness",
+        "type": "MGEF FULL",
+        "original": "Weakness to Poison",
+        "string": "\u0423\u044f\u0437\u0432\u0438\u043c\u043e\u0441\u0442\u044c \u043a \u044f\u0434\u0443"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_FrostWeakness",
+        "type": "MGEF DNAM",
+        "original": "Target is <mag>% weaker to frost damage for <dur> seconds.",
+        "string": "\u0426\u0435\u043b\u044c \u043d\u0430 <mag>% \u0443\u044f\u0437\u0432\u0438\u043c\u0435\u0435 \u043a \u0443\u0440\u043e\u043d\u0443 \u0445\u043e\u043b\u043e\u0434\u043e\u043c \u0432 \u0442\u0435\u0447\u0435\u043d\u0438\u0435 <dur> \u0441\u0435\u043a."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_FireWeakness",
+        "type": "MGEF FULL",
+        "original": "Weakness to Fire",
+        "string": "\u0423\u044f\u0437\u0432\u0438\u043c\u043e\u0441\u0442\u044c \u043a \u043e\u0433\u043d\u044e"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonCalmSpider",
+        "type": "MGEF DNAM",
+        "original": "Creatures and people up to level <mag> won't fight for <dur> seconds.",
+        "string": "\u0421\u0443\u0449\u0435\u0441\u0442\u0432\u0430 \u0438 \u043b\u044e\u0434\u0438 \u0443\u0440\u043e\u0432\u043d\u044f <mag> \u0438 \u043d\u0438\u0436\u0435 \u043d\u0435 \u0441\u0440\u0430\u0436\u0430\u044e\u0442\u0441\u044f \u0432 \u0442\u0435\u0447\u0435\u043d\u0438\u0435 <dur> \u0441\u0435\u043a."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_FireWeakness",
+        "type": "MGEF DNAM",
+        "original": "Target is <mag>% weaker to fire damage for <dur> seconds.",
+        "string": "\u0426\u0435\u043b\u044c \u043d\u0430 <mag>% \u0443\u044f\u0437\u0432\u0438\u043c\u0435\u0435 \u043a \u0443\u0440\u043e\u043d\u0443 \u043e\u0442 \u043e\u0433\u043d\u044f \u0432 \u0442\u0435\u0447\u0435\u043d\u0438\u0435 <dur> \u0441\u0435\u043a."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Staffspell4",
+        "type": "SPEL FULL",
+        "original": "Summon Winter",
+        "string": "\u0412\u044b\u0437\u043e\u0432 \u0437\u0438\u043c\u044b"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_FrostWeakness",
+        "type": "MGEF FULL",
+        "original": "Weakness to Frost",
+        "string": "\u0423\u044f\u0437\u0432\u0438\u043c\u043e\u0441\u0442\u044c \u043a \u0445\u043e\u043b\u043e\u0434\u0443"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_ShockWeakness",
+        "type": "MGEF DNAM",
+        "original": "Target is <mag>% weaker to shock damage for <dur> seconds.",
+        "string": "\u0426\u0435\u043b\u044c \u043d\u0430 <mag>% \u0443\u044f\u0437\u0432\u0438\u043c\u0435\u0435 \u043a \u044d\u043b\u0435\u043a\u0442\u0440\u0438\u0447\u0435\u0441\u0442\u0432\u0443 \u0432 \u0442\u0435\u0447\u0435\u043d\u0438\u0435 <dur> \u0441\u0435\u043a."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_FrostSpell",
+        "type": "SPEL FULL",
+        "original": "Frozen Steam Breath",
+        "string": "\u0414\u044b\u0445\u0430\u043d\u0438\u0435 \u043c\u043e\u0440\u043e\u0437\u043d\u043e\u0433\u043e \u043f\u0430\u0440\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonCalmSpider",
+        "type": "MGEF FULL",
+        "original": "Calm",
+        "string": "\u0423\u0441\u043f\u043e\u043a\u043e\u0435\u043d\u0438\u0435"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Staffspell3",
+        "type": "SPEL FULL",
+        "original": "Summon Summer",
+        "string": "\u0412\u044b\u0437\u043e\u0432 \u043b\u0435\u0442\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Staffspell2",
+        "type": "SPEL FULL",
+        "original": "Summon Spring",
+        "string": "\u0412\u044b\u0437\u043e\u0432 \u0432\u0435\u0441\u043d\u044b"
+    },
+    {
+        "editor_id": "DLCDwarven_SkinRabbit4",
+        "type": "ARMO FULL",
+        "original": "Rabbit",
+        "string": "\u041a\u0440\u043e\u043b\u0438\u043a"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_AutumnHare1",
+        "type": "NPC_ FULL",
+        "original": "Rabbit",
+        "string": "\u041a\u0440\u043e\u043b\u0438\u043a"
+    },
+    {
+        "editor_id": "DLCDwarven_SkinRabbit6",
+        "type": "ARMO FULL",
+        "original": "Rabbit",
+        "string": "\u041a\u0440\u043e\u043b\u0438\u043a"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_AutumnHare3",
+        "type": "NPC_ FULL",
+        "original": "Rabbit",
+        "string": "\u041a\u0440\u043e\u043b\u0438\u043a"
+    },
+    {
+        "editor_id": "DLCDwarven_SkinRabbit1",
+        "type": "ARMO FULL",
+        "original": "Rabbit",
+        "string": "\u041a\u0440\u043e\u043b\u0438\u043a"
+    },
+    {
+        "editor_id": "DLCDwarven_SkinRabbit2",
+        "type": "ARMO FULL",
+        "original": "Rabbit",
+        "string": "\u041a\u0440\u043e\u043b\u0438\u043a"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_AutumnHare4",
+        "type": "NPC_ FULL",
+        "original": "Rabbit",
+        "string": "\u041a\u0440\u043e\u043b\u0438\u043a"
+    },
+    {
+        "editor_id": "DLCDwarven_SkinRabbit3",
+        "type": "ARMO FULL",
+        "original": "Rabbit",
+        "string": "\u041a\u0440\u043e\u043b\u0438\u043a"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_AutumnHare6",
+        "type": "NPC_ FULL",
+        "original": "Rabbit",
+        "string": "\u041a\u0440\u043e\u043b\u0438\u043a"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_AutumnHare5",
+        "type": "NPC_ FULL",
+        "original": "Rabbit",
+        "string": "\u041a\u0440\u043e\u043b\u0438\u043a"
+    },
+    {
+        "editor_id": "DLCDwarven_SkinRabbit5",
+        "type": "ARMO FULL",
+        "original": "Rabbit",
+        "string": "\u041a\u0440\u043e\u043b\u0438\u043a"
+    },
+    {
+        "editor_id": "ccTWBSSE001_MercNote01_RunoffCaverns",
+        "type": "BOOK FULL",
+        "original": "Mercenary's Note",
+        "string": "\u0417\u0430\u043f\u0438\u0441\u043a\u0430 \u043d\u0430\u0435\u043c\u043d\u0438\u043a\u0430"
+    },
+    {
+        "editor_id": "ccTWBSSE001_RunoffCavernsTreasureRoomKey",
+        "type": "KEYM FULL",
+        "original": "Runoff Caverns Gate Key",
+        "string": "\u041a\u043b\u044e\u0447 \u043e\u0442 \u0432\u043e\u0440\u043e\u0442 \u0432 \u043f\u0435\u0449\u0435\u0440\u044b \u0441\u043b\u0438\u0432\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonMainAreaLocation",
+        "type": "LCTN FULL",
+        "original": "Vardnknd",
+        "string": "\u0412\u0430\u0440\u0434\u043d\u043a\u043d\u0434"
+    },
+    {
+        "editor_id": "ccTWBSSE001_MageNote02_DwarvenCrown",
+        "type": "BOOK FULL",
+        "original": "Dwarven Crown Journal",
+        "string": "\u0414\u043d\u0435\u0432\u043d\u0438\u043a \u043e \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0438\u0445 \u043a\u043e\u0440\u043e\u043d\u0430\u0445"
+    },
+    {
+        "editor_id": "ccTWBSSE001_MercNote04_Autumn",
+        "type": "BOOK FULL",
+        "original": "Note on Autumn",
+        "string": "\u0417\u0430\u043c\u0435\u0442\u043a\u0430 \u043e\u0431 \u043e\u0441\u0435\u043d\u0438"
+    },
+    {
+        "editor_id": "ccTWBSSE001_MercNote02_Spring",
+        "type": "BOOK FULL",
+        "original": "Note on Spring",
+        "string": "\u0417\u0430\u043c\u0435\u0442\u043a\u0430 \u043e \u0432\u0435\u0441\u043d\u0435"
+    },
+    {
+        "editor_id": "ccTWBSSE001_MercNote03_Summer",
+        "type": "BOOK FULL",
+        "original": "Note on Summer",
+        "string": "\u0417\u0430\u043c\u0435\u0442\u043a\u0430 \u043e \u043b\u0435\u0442\u0435"
+    },
+    {
+        "editor_id": "ccTWBSSE001_MercNote05_Winter",
+        "type": "BOOK FULL",
+        "original": "Note on Winter",
+        "string": "\u0417\u0430\u043c\u0435\u0442\u043a\u0430 \u043e \u0437\u0438\u043c\u0435"
+    },
+    {
+        "editor_id": "ccTWBSSE001_MageNote01_Seasons",
+        "type": "BOOK FULL",
+        "original": "Elberon's Journal",
+        "string": "\u0414\u043d\u0435\u0432\u043d\u0438\u043a \u042d\u043b\u0431\u0435\u0440\u043e\u043d\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonWinterLocation",
+        "type": "LCTN FULL",
+        "original": "Winter",
+        "string": "\u0417\u0438\u043c\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonAutumnGrass",
+        "type": "TREE FULL",
+        "original": "Spiky Grass",
+        "string": "\u041a\u043e\u043b\u044e\u0447\u0430\u044f \u0442\u0440\u0430\u0432\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonGourdCluster01",
+        "type": "TREE FULL",
+        "original": "Wild Gourds",
+        "string": "\u0414\u0438\u043a\u0438\u0435 \u0442\u044b\u043a\u0432\u044b"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonSpikyGrass01",
+        "type": "TREE FULL",
+        "original": "Wild Spiky Grass",
+        "string": "\u0414\u0438\u043a\u0430\u044f \u043a\u043e\u043b\u044e\u0447\u0430\u044f \u0442\u0440\u0430\u0432\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonSpikyGrassPod01",
+        "type": "INGR FULL",
+        "original": "Wild Grass Pod",
+        "string": "\u0421\u0442\u0440\u0443\u0447\u043e\u043a \u0434\u0438\u043a\u043e\u0439 \u0442\u0440\u0430\u0432\u044b"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonFoodGourd",
+        "type": "ALCH FULL",
+        "original": "Wild Gourd",
+        "string": "\u0414\u0438\u043a\u0430\u044f \u0442\u044b\u043a\u0432\u0430"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonDwarvenHorseDialog",
+        "type": "QUST FULL",
+        "original": "Dwarven Horse Dialog",
+        "string": "\u0414\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0430\u044f \u043b\u043e\u0448\u0430\u0434\u044c - \u0434\u0438\u0430\u043b\u043e\u0433"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonDwarvenDartwing",
+        "type": "ALCH FULL",
+        "original": "Dwarven Drone Fly",
+        "string": "\u0414\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0430\u044f \u043c\u0443\u0445\u0430-\u0434\u0440\u043e\u043d"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_BugMGEF",
+        "type": "MGEF DNAM",
+        "original": "Summons a Dwarven Drone Fly for <dur> seconds, then returns to your inventory.",
+        "string": "\u041f\u0440\u0438\u0437\u044b\u0432\u0430\u0435\u0442 \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0443\u044e \u043c\u0443\u0445\u0443-\u0434\u0440\u043e\u043d\u0430 \u043d\u0430 <dur> \u0441\u0435\u043a., \u0437\u0430\u0442\u0435\u043c \u0432\u043e\u0437\u0432\u0440\u0430\u0449\u0430\u0435\u0442 \u0435\u0435 \u0432 \u0432\u0430\u0448\u0435 \u0441\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST NNAM",
+        "original": "Read the mage's journal",
+        "string": "\u041f\u0440\u043e\u0447\u0435\u0441\u0442\u044c \u0434\u043d\u0435\u0432\u043d\u0438\u043a \u043c\u0430\u0433\u0430"
+    },
+    {
+        "editor_id": "ccTWBSSE001_MercNote06_DwarvenBugNote",
+        "type": "BOOK FULL",
+        "original": "Note on the Dwarven Drone Fly",
+        "string": "\u0417\u0430\u043f\u0438\u0441\u043a\u0430 \u043e \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u043e\u0439 \u043c\u0443\u0445\u0435-\u0434\u0440\u043e\u043d\u0435"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_SeasonsPerk",
+        "type": "MGEF DNAM",
+        "original": "Barter prices are <10>% better when raining. With a full set of Light Armor equipped, stamina regenerates <5>% faster in clear or clement weather. <10>% chance of a critical hit that does <10>% more critical damage with bows when overcast. With a full set of Heavy Armor equipped, armor rating increased by <10>% when snowing.",
+        "string": "\u0412 \u0434\u043e\u0436\u0434\u044c \u0446\u0435\u043d\u044b \u043d\u0430 \u043e\u0431\u043c\u0435\u043d \u043d\u0430 <10>% \u0432\u044b\u0433\u043e\u0434\u043d\u0435\u0435. \u0415\u0441\u043b\u0438 \u0432 \u0441\u043e\u043b\u043d\u0435\u0447\u043d\u0443\u044e \u043f\u043e\u0433\u043e\u0434\u0443 \u043d\u0430\u0434\u0435\u0442\u044c \u043f\u043e\u043b\u043d\u044b\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043b\u0435\u0433\u043a\u043e\u0439 \u0431\u0440\u043e\u043d\u0438, \u0437\u0430\u043f\u0430\u0441 \u0441\u0438\u043b \u0432\u043e\u0441\u0441\u0442\u0430\u043d\u0430\u0432\u043b\u0438\u0432\u0430\u0435\u0442\u0441\u044f \u043d\u0430 <5>% \u0431\u044b\u0441\u0442\u0440\u0435\u0435. \u0412 \u043f\u0430\u0441\u043c\u0443\u0440\u043d\u0443\u044e \u043f\u043e\u0433\u043e\u0434\u0443 \u043f\u0440\u0438 \u0441\u0442\u0440\u0435\u043b\u044c\u0431\u0435 \u0438\u0437 \u043b\u0443\u043a\u0430 \u0435\u0441\u0442\u044c <10>% \u0432\u0435\u0440\u043e\u044f\u0442\u043d\u043e\u0441\u0442\u044c \u043a\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043a\u043e\u0433\u043e \u043f\u043e\u043f\u0430\u0434\u0430\u043d\u0438\u044f, \u043a\u043e\u0442\u043e\u0440\u043e\u0435 \u043d\u0430\u043d\u0435\u0441\u0435\u0442 \u043d\u0430 <10>% \u0431\u043e\u043b\u044c\u0448\u0435 \u043a\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043a\u043e\u0433\u043e \u0443\u0440\u043e\u043d\u0430. \u0415\u0441\u043b\u0438 \u0432 \u0441\u043d\u0435\u0433\u043e\u043f\u0430\u0434 \u043d\u0430\u0434\u0435\u0442\u044c \u043f\u043e\u043b\u043d\u044b\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0442\u044f\u0436\u0435\u043b\u043e\u0439 \u0431\u0440\u043e\u043d\u0438, \u043a\u043b\u0430\u0441\u0441 \u0431\u0440\u043e\u043d\u0438 \u0443\u0432\u0435\u043b\u0438\u0447\u0438\u0432\u0430\u0435\u0442\u0441\u044f \u043d\u0430 <10>%."
+    },
+    {
+        "editor_id": "ccTWBSSE001_DweDoorLarge01LoadMinUse",
+        "type": "DOOR FULL",
+        "original": "Door",
+        "string": "\u0414\u0432\u0435\u0440\u044c"
+    },
+    {
+        "editor_id": "ccTWBSSE001_SeasonsPerkz",
+        "type": "PERK FULL",
+        "original": "Turn of the Seasons",
+        "string": "\u0421\u043c\u0435\u043d\u0430 \u0441\u0435\u0437\u043e\u043d\u043e\u0432"
+    },
+    {
+        "editor_id": "ccTWBSSE001_SummerAbilitySeasons",
+        "type": "SPEL FULL",
+        "original": "Turn of the Seasons",
+        "string": "\u0421\u043c\u0435\u043d\u0430 \u0441\u0435\u0437\u043e\u043d\u043e\u0432"
+    },
+    {
+        "editor_id": "ccTWBSSE001_SeasonsPerk",
+        "type": "BOOK FULL",
+        "original": "Turn of the Seasons",
+        "string": "\u0421\u043c\u0435\u043d\u0430 \u0441\u0435\u0437\u043e\u043d\u043e\u0432"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzle_SeasonsPerk",
+        "type": "MGEF FULL",
+        "original": "Turn of the Seasons",
+        "string": "\u0421\u043c\u0435\u043d\u0430 \u0441\u0435\u0437\u043e\u043d\u043e\u0432"
+    },
+    {
+        "editor_id": "ccTWBSSE001_DummySpellSeasons",
+        "type": "SPEL FULL",
+        "original": "Turn of the Seasons",
+        "string": "\u0421\u043c\u0435\u043d\u0430 \u0441\u0435\u0437\u043e\u043d\u043e\u0432"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest02",
+        "type": "QUST FULL",
+        "original": "Book Quest Item",
+        "string": "\u041f\u0440\u0435\u0434\u043c\u0435\u0442 \u0437\u0430\u0434\u0430\u043d\u0438\u044f - \u043a\u043d\u0438\u0433\u0430"
+    },
+    {
+        "editor_id": "ccTWBSSE001_ConduitGem",
+        "type": "MISC FULL",
+        "original": "Vardnknd Conduit Gem",
+        "string": "\u041a\u0430\u043c\u0435\u043d\u044c \u043f\u0440\u043e\u0432\u043e\u0434\u043d\u0438\u043a\u0430 \u0432 \u0412\u0430\u0440\u0434\u043d\u043a\u043d\u0434\u0435"
+    },
+    {
+        "editor_id": "Tamriel",
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "\u0421\u043a\u0430\u0439\u0440\u0438\u043c"
+    },
+    {
+        "editor_id": "CTest",
+        "type": "CELL FULL",
+        "original": "Quick Test Cell",
+        "string": "\u0418\u0441\u043f\u044b\u0442\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0439 \u0441\u0442\u0435\u043d\u0434"
+    },
+    {
+        "editor_id": "RiftenJail02",
+        "type": "CELL FULL",
+        "original": "Sewer",
+        "string": "\u041a\u043e\u043b\u043b\u0435\u043a\u0442\u043e\u0440"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonPlayerCornMessage2",
+        "type": "MESG DESC",
+        "original": "You're already carrying too much wheat.",
+        "string": "\u0412\u044b \u0443\u0436\u0435 \u0432\u0437\u044f\u043b\u0438 \u0441\u043b\u0438\u0448\u043a\u043e\u043c \u043c\u043d\u043e\u0433\u043e \u043f\u0448\u0435\u043d\u0438\u0446\u044b."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonElberrosBook",
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\n<p align=\"center\">\n\n\nForgotten Seasons\nMy Journey Through the Ancient World of The Dwarves Vol. 1\n\n\nby \nElberon Blackthorn</p>[pagebreak]\n<p align=\"left\"></p>[pagebreak]<p align=\"left\">\n<img src='img://Textures/Interface/Books/Illuminated_Letters/A_letter.png'>fter having saved the town of Tanglehaven with my patented snake oil serum, word of my deeds soon spread, and one of my helpful admirers pointed me in the direction of an old system of caverns. But lo, it was not a simple naturally formed cave, but Vardnknd, a long forgotten Dwarven ruin. \n\nA storm of great intensity had ravaged the region recently, and the locals all thought that some curse lay upon the caves, and they spewed out bad weather because of this. But Elberon Blackthorn is nothing if not well read, and I was well-versed with the legends surrounding those caves. You see, I had been looking for Vardnknd for a long time, because deep within it contained a Karstanghz-Beharn, better known as a Weather Witch. \n\nThese legendary devices were said to be able to control the weather, and Vardnknd's was the strongest of them all. But why did they make it? To terrorize innocents? To help in times of underground drought? Either way, a storm now raged across the region, and it was obvious who was at fault. To save the locals, and to claim the power of the weather for my own, me and my trusted band of mercenaries dove towards the problem with the same bravery and skill I approach everything in life with. \n\nInside, evidence of the storm's rampage could still be seen and felt. Pipes spewed a poisonous ooze into the streams, rubble lay about, and most tellingly, a massive indoor storm raged. The Weather Witch had gone mad! Alas, the door to the main gallery was sealed shut. But with my impressive knowledge of the Dwarves and their infernal sciences, I was able to quickly deduce the issue. \n\nYou see, dear readers, while the storm raged, it drew its power from magic derived from each of the four seasons. Yes, the Dwarves had in this very ruin undertaken a massive analysis of spring, summer, autumn, and winter, and tied to each of them a conduit that would focus their natural energies into the gallery, allowing the weather to be controlled! All one had to do was enter each part of the facility and disconnect those conduits. Only then could I enter the main gallery and shut down the Weather Witch!\n\nThis first volume details my intrepid adventure into each of these seasonal sub-facilities, as well as my harrowing escape. It also serves as a manual on how to shut down the conduits which I aim to document in my next volume. \n\nThus armed with this information and my benefactor's funding, my apprentice and I have once more endeavored into the heart of this ruin, this time with more men and hopefully, with more satisfactory results.</font>\n</p>\n[pagebreak]\n</p>\n\n<p align=\"center\"><img src='img://Textures/Interface/Books/Illuminated_Letters/A_letter.png'>utumn</p><p align=\"left\">\nAs I trundled into the halls of Autumn, a marvelous sight unfolded. Before me lay an enormous stretch of farmland, decrepit and overgrown, but a farm nevertheless. Strange fruits and grains grew in plots, while emaciated chickens ran about, all the while tended by enormous double-bladed centurions. Did the Dwemer find it amusing that the surface-people had a whole season dedicated just to harvest, or did they do this as a mockery to some forgotten god of the feast? Whatever the case, I aimed to examine a piece of this Dwarven wheat myself. \n\nThe harvest glowed with a foul light, the grains as stiff as a rock. Yet as dense as the wheat was, I observed the bladed centurions cutting through it with little effort and carrying them off to a set of depositories near the entrance. While no doubt the blades of these machines would make short work of flesh and armor, my men nevertheless valiantly served as a distraction as I made my escape. Perhaps if I had more time, or more men, I could carry the heavy wheat over to the depository, and sate whatever freakish endeavors the Dwarves had begun.\n[pagebreak]\n</p>\n<p align=\"center\"><img src='img://Textures/Interface/Books/Illuminated_Letters/S_letter.png'>pring</p><p align=\"left\">\nSpring greeted me with a splash of color as beautiful flowers were scattered across the halls of metal and stone. There were even animals sauntering about, feeding off the vegetation warmed by the artificial light. Unfortunately, our journey through this horrific sight of beauty was soon delayed by a most peculiar obstruction. \n\nThick, gnarled roots blocked the passageways, halting our progress. Perhaps the Dwemer had found nature to be cumbersome, and saw spring as nothing more than a season of suffering. While the mercenaries labored to cut through the bark, my strong perception allowed me to notice strange spriggans shambling through the artificial forests. As I brushed aside it, the roots quivered, as if their tendrils were an extension of the forest creature. Were these spriggans the tenders of the gardens, or just a consequence of its existence? Regardless, if we could somehow sever the connection between the spriggans and the roots, we might find a way deeper into the ruins.\n[pagebreak]\n</p>\n<p align=\"center\"><img src='img://Textures/Interface/Books/Illuminated_Letters/S_letter.png'>ummer</p><p align=\"left\">\nSummer was a maze of tunnels and pipes, and no doubt centuries of neglect had left the place in a state of pure chaos. Lava spewed from every stone orifice I could see, and unbearable heat made for a precarious journey, causing many of the lesser mercenaries to turn back to cooler times. But the Dwemer had predicted such superheat, for this unbearable weather was undoubtedly what summer meant to them. \n\nAs I pulled myself through the swelter, I noticed repair spiders darting to and fro, lowering bridges that granted access to side sections of the chamber. It seems that within each section is a service waypoint that releases some sort of magical coolant, reducing the heat from impossible to merely annoying. Perhaps if I could find a way to direct the spiders to the various waypoints in the area, I could drop the temperature to a more manageable level.\n[pagebreak]\n</p>\n<p align=\"center\"><img src='img://Textures/Interface/Books/Illuminated_Letters/W_letter.png'>inter</p><p align=\"left\">\nWinter was, not to my surprise, home to a great indoor blizzard and what the mercenaries thought of as artificial stone mountains. Yet they were not mountains, but great towering silos of frozen water. And the cold! Not even the highest mountains compared to such chills, and we were soon trading furs amongst ourselves to keep warm! \n\nIt became clear that to progress through this area, I would need to dive through the unfrozen waters that surrounded the towers, snaking up and around the structure like the ice wraiths that call this place home. As clever a solution as any solution thought up by me, but not one I could risk at the moment. Perhaps when we return to this ruin, I can find someone less important to brave it.</p>\n\n",
+        "string": "[pagebreak]\n<p align=\"center\">\n\n\n\u0417\u0430\u0431\u044b\u0442\u044b\u0435 \u0432\u0440\u0435\u043c\u0435\u043d\u0430 \u0433\u043e\u0434\u0430\n\u041c\u043e\u0435 \u043f\u0443\u0442\u0435\u0448\u0435\u0441\u0442\u0432\u0438\u0435 \u0432 \u0434\u0440\u0435\u0432\u043d\u0438\u0439 \u043c\u0438\u0440 \u0434\u0432\u0435\u043c\u0435\u0440\u043e\u0432, \u0442. 1\n\n\n\u0430\u0432\u0442\u043e\u0440 \n\u042d\u043b\u0431\u0435\u0440\u043e\u043d \u0427\u0435\u0440\u043d\u044b\u0439 \u0428\u0438\u043f</p>[pagebreak]\n<p align=\"left\"></p>[pagebreak]<p align=\"left\">\n\u041f\u043e\u0441\u043b\u0435 \u0442\u043e\u0433\u043e, \u043a\u0430\u043a \u044f \u0441\u043f\u0430\u0441 \u0433\u043e\u0440\u043e\u0434 \u0422\u0430\u043d\u0433\u043b\u0445\u0435\u0439\u0432\u0435\u043d \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e \u043f\u0430\u0442\u0435\u043d\u0442\u043e\u0432\u0430\u043d\u043d\u043e\u0439 \u0441\u044b\u0432\u043e\u0440\u043e\u0442\u043a\u0438, \u0441\u043b\u043e\u0432\u043e \u043e \u043c\u043e\u0438\u0445 \u043f\u043e\u0434\u0432\u0438\u0433\u0430\u0445 \u0440\u0430\u0437\u043d\u0435\u0441\u043b\u043e\u0441\u044c \u0431\u044b\u0441\u0442\u0440\u043e, \u0438 \u043e\u0434\u0438\u043d \u0438\u0437 \u043c\u043e\u0438\u0445 \u043f\u0440\u0435\u0434\u0430\u043d\u043d\u044b\u0445 \u043f\u043e\u043a\u043b\u043e\u043d\u043d\u0438\u043a\u043e\u0432 \u0440\u0430\u0441\u0441\u043a\u0430\u0437\u0430\u043b \u043c\u043d\u0435 \u043e \u0441\u0442\u0430\u0440\u043e\u0439 \u0441\u0438\u0441\u0442\u0435\u043c\u0435 \u043f\u0435\u0449\u0435\u0440. \u041e\u0434\u043d\u0430\u043a\u043e \u0436\u0435 \u044d\u0442\u043e \u043e\u043a\u0430\u0437\u0430\u043b\u0438\u0441\u044c \u043d\u0435 \u043f\u0440\u043e\u0441\u0442\u043e \u043f\u0440\u0438\u0440\u043e\u0434\u043d\u044b\u0435 \u043f\u0435\u0449\u0435\u0440\u044b, \u0430 \u0434\u0440\u0435\u0432\u043d\u0438\u0435 \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0438\u0435 \u0440\u0443\u0438\u043d\u044b - \u0412\u0430\u0440\u0434\u043d\u043a\u043d\u0434. \n\n\u041d\u0435\u0434\u0430\u0432\u043d\u043e \u0432 \u043e\u043a\u0440\u0435\u0441\u0442\u043d\u043e\u0441\u0442\u044f\u0445 \u0431\u0443\u0448\u0435\u0432\u0430\u043b\u0430 \u0443\u0436\u0430\u0441\u043d\u0430\u044f \u0431\u0443\u0440\u044f, \u0438 \u0432\u0441\u0435 \u043c\u0435\u0441\u0442\u043d\u044b\u0435 \u0441\u043e\u0447\u043b\u0438, \u0447\u0442\u043e \u043d\u0430 \u043f\u0435\u0449\u0435\u0440\u0430\u0445 \u043b\u0435\u0436\u0438\u0442 \u043a\u0430\u043a\u043e\u0435-\u043d\u0438\u0431\u0443\u0434\u044c \u0434\u0440\u0435\u0432\u043d\u0435\u0435 \u043f\u0440\u043e\u043a\u043b\u044f\u0442\u0438\u0435, \u043a\u043e\u0442\u043e\u0440\u043e\u0435 \u044d\u0442\u0443 \u043d\u0435\u043f\u043e\u0433\u043e\u0434\u0443 \u0438 \u0432\u044b\u0437\u0432\u0430\u043b\u043e. \u041d\u043e \u042d\u043b\u0431\u0435\u0440\u043e\u043d \u0427\u0435\u0440\u043d\u044b\u0439 \u0428\u0438\u043f \u0432\u0435\u0441\u044c\u043c\u0430 \u043d\u0430\u0447\u0438\u0442\u0430\u043d \u0438 \u043c\u043d\u043e\u0433\u043e\u0435 \u0437\u043d\u0430\u0435\u0442 \u043e \u043b\u0435\u0433\u0435\u043d\u0434\u0430\u0445, \u043e\u043a\u0440\u0443\u0436\u0430\u044e\u0449\u0438\u0445 \u044d\u0442\u0438 \u043f\u0435\u0449\u0435\u0440\u044b. \u0414\u0435\u043b\u043e \u0432 \u0442\u043e\u043c, \u0447\u0442\u043e \u044f \u0443\u0436\u0435 \u0434\u0430\u0432\u043d\u043e \u0438\u0441\u043a\u0430\u043b \u0412\u0430\u0440\u0434\u043d\u043a\u043d\u0434, \u043f\u043e\u0442\u043e\u043c\u0443 \u0447\u0442\u043e \u0432 \u0435\u0433\u043e \u043d\u0435\u0434\u0440\u0430\u0445 \u0441\u043a\u0440\u044b\u0442\u0430 \u041a\u0430\u0440\u0441\u0442\u0430\u043d\u0433\u0437-\u0411\u0435\u0445\u0430\u0440\u043d, \u0431\u043e\u043b\u0435\u0435 \u0438\u0437\u0432\u0435\u0441\u0442\u043d\u0430\u044f \u043a\u0430\u043a \u0412\u0435\u0434\u044c\u043c\u0430 \u043f\u043e\u0433\u043e\u0434\u044b. \n\n\u0421\u0447\u0438\u0442\u0430\u0435\u0442\u0441\u044f, \u0447\u0442\u043e \u044d\u0442\u0438 \u043b\u0435\u0433\u0435\u043d\u0434\u0430\u0440\u043d\u044b\u0435 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430 \u043c\u043e\u0433\u0443\u0442 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u0442\u044c \u043f\u043e\u0433\u043e\u0434\u043e\u0439, \u0430 \u0442\u0430, \u0447\u0442\u043e \u0445\u0440\u0430\u043d\u0438\u0442\u0441\u044f \u0432 \u0412\u0430\u0440\u0434\u043d\u043a\u043d\u0434\u0435, \u0431\u044b\u043b\u0430 \u043e\u0434\u043d\u043e\u0439 \u0438\u0437 \u043c\u043e\u0449\u043d\u0435\u0439\u0448\u0438\u0445. \u041d\u043e \u0437\u0430\u0447\u0435\u043c \u0435\u0435 \u0441\u043e\u0437\u0434\u0430\u043b\u0438? \u0427\u0442\u043e\u0431\u044b \u0443\u0441\u0442\u0440\u0430\u0448\u0430\u0442\u044c \u043d\u0435\u0432\u0438\u043d\u043d\u044b\u0445 \u043b\u044e\u0434\u0435\u0439? \u0427\u0442\u043e\u0431\u044b \u0441\u043f\u0440\u0430\u0432\u043b\u044f\u0442\u044c\u0441\u044f \u0441 \u043f\u043e\u0434\u0437\u0435\u043c\u043d\u043e\u0439 \u0437\u0430\u0441\u0443\u0445\u043e\u0439? \u0422\u0430\u043a \u0438\u043b\u0438 \u0438\u043d\u0430\u0447\u0435, \u043d\u043e \u0442\u0435\u043f\u0435\u0440\u044c \u0442\u0443\u0442 \u0431\u0443\u0448\u0443\u0435\u0442 \u0431\u0443\u0440\u044f, \u0438 \u0432\u0441\u0435\u043c \u043f\u043e\u043d\u044f\u0442\u043d\u043e, \u0447\u0442\u043e \u0441\u0442\u0430\u043b\u043e \u0435\u0435 \u043f\u0440\u0438\u0447\u0438\u043d\u043e\u0439. \u0427\u0442\u043e\u0431\u044b \u0441\u043f\u0430\u0441\u0442\u0438 \u043c\u0435\u0441\u0442\u043d\u044b\u0445 \u0436\u0438\u0442\u0435\u043b\u0435\u0439 \u0438 \u0437\u0430\u043f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0441\u0438\u043b\u0443 \u043f\u043e\u0433\u043e\u0434\u044b, \u044f \u0441 \u043e\u0442\u0440\u044f\u0434\u043e\u043c \u0432\u0435\u0440\u043d\u044b\u0445 \u043c\u043d\u0435 \u043d\u0430\u0435\u043c\u043d\u0438\u043a\u043e\u0432 \u043e\u0442\u043f\u0440\u0430\u0432\u0438\u043b\u0441\u044f \u0442\u0443\u0434\u0430, \u0432\u043e\u043e\u0440\u0443\u0436\u0438\u0432\u0448\u0438\u0441\u044c \u0445\u0440\u0430\u0431\u0440\u043e\u0441\u0442\u044c\u044e \u0438 \u0437\u0434\u0440\u0430\u0432\u043e\u043c\u044b\u0441\u043b\u0438\u0435\u043c, \u043a\u0430\u043a \u0438 \u0432\u0441\u0435\u0433\u0434\u0430. \n\n\u0412\u043d\u0443\u0442\u0440\u0438 \u043f\u043e\u0441\u043b\u0435\u0434\u0441\u0442\u0432\u0438\u044f \u0440\u0430\u0437\u0433\u0443\u043b\u0430 \u0441\u0442\u0438\u0445\u0438\u0438 \u0432\u0441\u0435 \u0435\u0449\u0435 \u0431\u044b\u043b\u0438 \u043d\u0430\u043b\u0438\u0446\u043e. \u0422\u0440\u0443\u0431\u044b \u0438\u0437\u043b\u0438\u0432\u0430\u043b\u0438 \u044f\u0434\u043e\u0432\u0438\u0442\u0443\u044e \u0436\u0438\u0436\u0443, \u043f\u043e\u0432\u0441\u044e\u0434\u0443 \u0432\u0430\u043b\u044f\u043b\u0438\u0441\u044c \u043e\u0431\u043b\u043e\u043c\u043a\u0438, \u043d\u043e \u0445\u0430\u0440\u0430\u043a\u0442\u0435\u0440\u043d\u0435\u0435 \u0432\u0441\u0435\u0433\u043e \u0431\u044b\u043b\u0430 \u0431\u0443\u0440\u044f, \u0431\u0443\u0448\u0435\u0432\u0430\u0432\u0448\u0430\u044f \u043f\u0440\u044f\u043c\u043e \u0432\u043d\u0443\u0442\u0440\u0438. \u0412\u0435\u0434\u044c\u043c\u0430 \u043f\u043e\u0433\u043e\u0434\u044b \u043f\u043e\u0448\u043b\u0430 \u0432\u0440\u0430\u0437\u043d\u043e\u0441! \u0423\u0432\u044b, \u0434\u0432\u0435\u0440\u044c \u0432 \u0433\u043b\u0430\u0432\u043d\u0443\u044e \u0433\u0430\u043b\u0435\u0440\u0435\u044e \u0431\u044b\u043b\u0430 \u0437\u0430\u043f\u0435\u0447\u0430\u0442\u0430\u043d\u0430. \u041d\u043e \u0431\u043b\u0430\u0433\u043e\u0434\u0430\u0440\u044f \u0441\u0432\u043e\u0438\u043c \u043e\u0431\u0448\u0438\u0440\u043d\u044b\u043c \u043f\u043e\u0437\u043d\u0430\u043d\u0438\u044f\u043c \u043e \u0434\u0432\u0435\u043c\u0435\u0440\u0430\u0445 \u0438 \u0438\u0445 \u043f\u0440\u043e\u043a\u043b\u044f\u0442\u043e\u0439 \u043d\u0430\u0443\u043a\u0435 \u044f \u0431\u0435\u0437 \u0442\u0440\u0443\u0434\u0430 \u0440\u0430\u0437\u0440\u0435\u0448\u0438\u043b \u044d\u0442\u0443 \u043f\u0440\u043e\u0431\u043b\u0435\u043c\u0443. \n\n\u0412\u0438\u0434\u0438\u0448\u044c \u043b\u0438, \u043b\u044e\u0431\u0435\u0437\u043d\u044b\u0439 \u0447\u0438\u0442\u0430\u0442\u0435\u043b\u044c, \u044d\u0442\u0430 \u0431\u0443\u0440\u044f \u0447\u0435\u0440\u043f\u0430\u043b\u0430 \u0441\u0432\u043e\u0438 \u0441\u0438\u043b\u044b \u0438\u0437 \u043c\u0430\u0433\u0438\u0438 \u0432\u0441\u0435\u0445 \u0447\u0435\u0442\u044b\u0440\u0435\u0445 \u0432\u0440\u0435\u043c\u0435\u043d \u0433\u043e\u0434\u0430. \u0414\u0430, \u0432 \u044d\u0442\u0438\u0445 \u0441\u0430\u043c\u044b\u0445 \u0440\u0430\u0437\u0432\u0430\u043b\u0438\u043d\u0430\u0445 \u0434\u0432\u0435\u043c\u0435\u0440\u044b \u0442\u0449\u0430\u0442\u0435\u043b\u044c\u043d\u043e \u0438\u0437\u0443\u0447\u0438\u043b\u0438 \u0432\u0435\u0441\u043d\u0443, \u043b\u0435\u0442\u043e, \u043e\u0441\u0435\u043d\u044c \u0438 \u0437\u0438\u043c\u0443 \u0438 \u0441\u043e\u0437\u0434\u0430\u043b\u0438 \u0434\u043b\u044f \u043a\u0430\u0436\u0434\u043e\u0433\u043e \u0432\u0440\u0435\u043c\u0435\u043d\u0438 \u0433\u043e\u0434\u0430 \u043f\u0440\u043e\u0432\u043e\u0434\u043d\u0438\u043a, \u0444\u043e\u043a\u0443\u0441\u0438\u0440\u043e\u0432\u0430\u0432\u0448\u0438\u0439 \u044d\u043d\u0435\u0440\u0433\u0438\u044e \u043f\u0440\u0438\u0440\u043e\u0434\u044b \u0432 \u044d\u0442\u043e\u0439 \u0433\u0430\u043b\u0435\u0440\u0435\u0435, \u0431\u043b\u0430\u0433\u043e\u0434\u0430\u0440\u044f \u0447\u0435\u043c\u0443 \u043f\u043e\u0433\u043e\u0434\u043e\u0439 \u043c\u043e\u0436\u043d\u043e \u0431\u044b\u043b\u043e \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u0442\u044c! \u0412\u0441\u0435, \u0447\u0442\u043e \u043d\u0443\u0436\u043d\u043e \u0431\u044b\u043b\u043e \u0441\u0434\u0435\u043b\u0430\u0442\u044c - \u044d\u0442\u043e \u043f\u0440\u043e\u043d\u0438\u043a\u043d\u0443\u0442\u044c \u0432\u043d\u0443\u0442\u0440\u044c \u0438 \u043e\u0442\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u044d\u0442\u0438 \u043f\u0440\u043e\u0432\u043e\u0434\u043d\u0438\u043a\u0438. \u0422\u043e\u0433\u0434\u0430 \u0443\u0434\u0430\u043b\u043e\u0441\u044c \u0431\u044b \u0432\u043e\u0439\u0442\u0438 \u0432 \u0433\u043b\u0430\u0432\u043d\u0443\u044e \u0433\u0430\u043b\u0435\u0440\u0435\u044e \u0438 \u043e\u0442\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u0412\u0435\u0434\u044c\u043c\u0443 \u043f\u043e\u0433\u043e\u0434\u044b!\n\n\u0412 \u043f\u0435\u0440\u0432\u043e\u043c \u0442\u043e\u043c\u0435 \u043e\u043f\u0438\u0441\u044b\u0432\u0430\u0435\u0442\u0441\u044f \u043c\u043e\u0439 \u043e\u0442\u0432\u0430\u0436\u043d\u044b\u0439 \u0432\u0445\u043e\u0434 \u0432 \u043a\u0430\u0436\u0434\u044b\u0439 \u0438\u0437 \u043e\u0442\u0434\u0435\u043b\u043e\u0432, \u0441\u043e\u043e\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u043e\u0432\u0430\u0432\u0448\u0438\u0445 \u0432\u0440\u0435\u043c\u0435\u043d\u0430\u043c \u0433\u043e\u0434\u0430, \u0430 \u0442\u0430\u043a\u0436\u0435 \u043f\u043e\u0441\u043f\u0435\u0448\u043d\u044b\u0439 \u0432\u044b\u0445\u043e\u0434 \u043e\u0442\u0442\u0443\u0434\u0430. \u042d\u0442\u0430 \u043a\u043d\u0438\u0433\u0430 \u043c\u043e\u0436\u0435\u0442 \u0441\u0442\u0430\u0442\u044c \u0440\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u043e\u043c \u0434\u043b\u044f \u0442\u0435\u0445, \u043a\u0442\u043e \u043f\u043e\u0436\u0435\u043b\u0430\u043b \u0431\u044b \u043e\u0442\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u043f\u0440\u043e\u0432\u043e\u0434\u043d\u0438\u043a\u0438 - \u043f\u0440\u043e\u0446\u0435\u0434\u0443\u0440\u0443 \u044f \u043e\u043f\u0438\u0448\u0443 \u0432 \u0441\u043b\u0435\u0434\u0443\u044e\u0449\u0435\u043c \u0442\u043e\u043c\u0435. \n\n\u0412\u043e\u043e\u0440\u0443\u0436\u0438\u0432\u0448\u0438\u0441\u044c \u044d\u0442\u043e\u0439 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u0435\u0439 \u0438 \u0437\u0430\u0440\u0443\u0447\u0438\u0432\u0448\u0438\u0441\u044c \u0434\u0435\u043d\u0435\u0436\u043d\u043e\u0439 \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u043e\u0439 \u043c\u043e\u0435\u0433\u043e \u0431\u043b\u0430\u0433\u043e\u0434\u0435\u0442\u0435\u043b\u044f, \u043c\u044b \u0441 \u043c\u043e\u0438\u043c \u0443\u0447\u0435\u043d\u0438\u043a\u043e\u043c \u0440\u0438\u0441\u043a\u043d\u0443\u043b\u0438 \u043f\u043e\u0432\u0442\u043e\u0440\u043d\u043e \u043f\u0440\u043e\u043d\u0438\u043a\u043d\u0443\u0442\u044c \u0432 \u0441\u0435\u0440\u0434\u0446\u0435 \u044d\u0442\u0438\u0445 \u0440\u0430\u0437\u0432\u0430\u043b\u0438\u043d. \u041d\u0430 \u044d\u0442\u043e\u0442 \u0440\u0430\u0437 \u0443 \u043d\u0430\u0441 \u0431\u044b\u043b\u043e \u0431\u043e\u043b\u044c\u0448\u0435 \u043b\u044e\u0434\u0435\u0439, \u0438 \u043c\u044b \u0441\u043c\u0435\u043b\u0438 \u043d\u0430\u0434\u0435\u044f\u0442\u044c\u0441\u044f \u043d\u0430 \u0443\u0441\u043f\u0435\u0445.</font>\n</p>\n[pagebreak]\n</p>\n\n\u041e\u0441\u0435\u043d\u044c\n\u0412\u043e\u0439\u0434\u044f \u0432 \u0437\u0430\u043b\u044b \u041e\u0441\u0435\u043d\u0438, \u044f \u0443\u0432\u0438\u0434\u0435\u043b \u0447\u0443\u0434\u0435\u0441\u043d\u043e\u0435 \u0437\u0440\u0435\u043b\u0438\u0449\u0435. \u041f\u0435\u0440\u0435\u0434\u043e \u043c\u043d\u043e\u0439 \u043b\u0435\u0436\u0430\u043b \u043e\u0433\u0440\u043e\u043c\u043d\u044b\u0439 \u043d\u0430\u0434\u0435\u043b \u0437\u0435\u043c\u043b\u0438, \u0437\u0430\u043f\u0443\u0449\u0435\u043d\u043d\u043e\u0439 \u0438 \u043d\u0435\u0443\u0445\u043e\u0436\u0435\u043d\u043d\u043e\u0439, \u043d\u043e \u0431\u0435\u0437 \u0441\u043e\u043c\u043d\u0435\u043d\u0438\u044f \u043f\u0440\u0438\u0433\u043e\u0434\u043d\u043e\u0439 \u0434\u043b\u044f \u0445\u043e\u0437\u044f\u0439\u0441\u0442\u0432\u0430. \u041d\u0430 \u043d\u0435\u0439 \u0440\u043e\u0441\u043b\u0438 \u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0435 \u0444\u0440\u0443\u043a\u0442\u044b \u0438 \u0437\u043b\u0430\u043a\u0438, \u0442\u043e\u0440\u043e\u043f\u0438\u043b\u0438\u0441\u044c \u043a\u0443\u0434\u0430-\u0442\u043e \u0447\u0430\u0445\u043b\u044b\u0435 \u043a\u0443\u0440\u0438\u0446\u044b, \u0438 \u0432\u0441\u0435\u043c \u044d\u0442\u0438\u043c \u0437\u0430\u043d\u0438\u043c\u0430\u043b\u0438\u0441\u044c \u043e\u0433\u0440\u043e\u043c\u043d\u044b\u0435 \u0446\u0435\u043d\u0442\u0443\u0440\u0438\u043e\u043d\u044b, \u0441\u043d\u0430\u0431\u0436\u0435\u043d\u043d\u044b\u0435 \u0434\u0432\u0443\u043c\u044f \u043a\u043b\u0438\u043d\u043a\u0430\u043c\u0438 \u043a\u0430\u0436\u0434\u044b\u0439. \u0412\u0435\u0440\u043e\u044f\u0442\u043d\u043e, \u0434\u0432\u0435\u043c\u0435\u0440\u0430\u043c \u043f\u043e\u043a\u0430\u0437\u0430\u043b\u043e\u0441\u044c \u0437\u0430\u0431\u0430\u0432\u043d\u044b\u043c, \u0447\u0442\u043e \u0443 \u0436\u0438\u0442\u0435\u043b\u0435\u0439 \u043f\u043e\u0432\u0435\u0440\u0445\u043d\u043e\u0441\u0442\u0438 \u0446\u0435\u043b\u044b\u0439 \u0441\u0435\u0437\u043e\u043d \u043e\u0442\u0432\u0435\u0434\u0435\u043d \u043f\u043e\u0434 \u0441\u0431\u043e\u0440 \u0443\u0440\u043e\u0436\u0430\u044f. \u0410 \u043c\u043e\u0436\u0435\u0442 \u0431\u044b\u0442\u044c, \u043e\u043d\u0438 \u043e\u0431\u0443\u0441\u0442\u0440\u043e\u0438\u043b\u0438 \u0432\u0441\u0435 \u044d\u0442\u043e \u0432 \u043d\u0430\u0441\u043c\u0435\u0448\u043a\u0443 \u043d\u0430\u0434 \u043a\u0430\u043a\u0438\u043c-\u043d\u0438\u0431\u0443\u0434\u044c \u0437\u0430\u0431\u044b\u0442\u044b\u043c \u0431\u043e\u0433\u043e\u043c \u0434\u043e\u0441\u0442\u0430\u0442\u043a\u0430. \u041a\u0430\u043a \u0431\u044b \u0442\u043e \u043d\u0438 \u0431\u044b\u043b\u043e, \u044f \u043f\u043e\u0436\u0435\u043b\u0430\u043b \u043b\u0438\u0447\u043d\u043e \u0438\u0437\u0443\u0447\u0438\u0442\u044c \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0443\u044e \u043f\u0448\u0435\u043d\u0438\u0446\u0443.  \n\n\u041a\u043e\u043b\u043e\u0441\u044c\u044f \u043d\u0435\u0434\u043e\u0431\u0440\u043e \u0441\u0432\u0435\u0442\u0438\u043b\u0438\u0441\u044c, \u0430 \u0437\u0435\u0440\u043d\u0430 \u0431\u044b\u043b\u0438 \u0442\u0432\u0435\u0440\u0436\u0435 \u043a\u0430\u043c\u043d\u044f. \u0422\u0435\u043c \u043d\u0435 \u043c\u0435\u043d\u0435\u0435, \u043a\u043b\u0438\u043d\u043a\u0438 \u0446\u0435\u043d\u0442\u0443\u0440\u0438\u043e\u043d\u043e\u0432 \u0431\u0435\u0437 \u0442\u0440\u0443\u0434\u0430 \u0441\u043a\u0430\u0448\u0438\u0432\u0430\u043b\u0438 \u0441\u0442\u0435\u0431\u043b\u0438, \u0438 \u043c\u0435\u0445\u0430\u043d\u0438\u0437\u043c\u044b \u043e\u0442\u043d\u043e\u0441\u0438\u043b\u0438 \u0443\u0440\u043e\u0436\u0430\u0439 \u0432 \u0445\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0430 \u0431\u043b\u0438\u0437 \u0432\u044b\u0445\u043e\u0434\u0430. \u0422\u0430\u043a\u0438\u0435 \u043a\u043b\u0438\u043d\u043a\u0438 \u043b\u0435\u0433\u043a\u043e \u043f\u0440\u043e\u0440\u0443\u0431\u0438\u043b\u0438 \u0431\u044b \u0438 \u0431\u0440\u043e\u043d\u044e, \u0438 \u043f\u043b\u043e\u0442\u044c, \u043d\u043e \u043c\u043e\u0438 \u043b\u044e\u0434\u0438 \u0432\u0441\u0435 \u0440\u0430\u0432\u043d\u043e \u0434\u043e\u0431\u043b\u0435\u0441\u0442\u043d\u043e \u043e\u0442\u0432\u043b\u0435\u043a\u0430\u043b\u0438 \u0446\u0435\u043d\u0442\u0443\u0440\u0438\u043e\u043d\u043e\u0432, \u043f\u043e\u043a\u0430 \u044f \u0431\u0435\u0436\u0430\u043b \u043a \u0432\u044b\u0445\u043e\u0434\u0443. \u0415\u0441\u043b\u0438 \u0431\u044b \u0443 \u043c\u0435\u043d\u044f \u0431\u044b\u043b\u043e \u0431\u043e\u043b\u044c\u0448\u0435 \u0432\u0440\u0435\u043c\u0435\u043d\u0438 (\u0438\u043b\u0438 \u0431\u043e\u043b\u044c\u0448\u0435 \u043b\u044e\u0434\u0435\u0439), \u044f \u0431\u044b \u0441\u043c\u043e\u0433 \u0434\u043e\u043d\u0435\u0441\u0442\u0438 \u0442\u044f\u0436\u0435\u043b\u0443\u044e \u043f\u0448\u0435\u043d\u0438\u0446\u0443 \u0434\u043e \u0445\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0430 \u0438 \u043e\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u044c \u0442\u043e\u0442 \u0436\u0443\u0442\u043a\u0438\u0439 \u043f\u0440\u043e\u0446\u0435\u0441\u0441, \u0447\u0442\u043e \u0437\u0430\u043f\u0443\u0441\u0442\u0438\u043b\u0438 \u0437\u0434\u0435\u0441\u044c \u0434\u0432\u0435\u043c\u0435\u0440\u044b.\n[pagebreak]\n</p>\n\u0412\u0435\u0441\u043d\u0430\n\u0412\u0435\u0441\u043d\u0430 \u043f\u0440\u0438\u0432\u0435\u0442\u0441\u0442\u0432\u043e\u0432\u0430\u043b\u0430 \u043c\u0435\u043d\u044f \u0431\u0443\u0439\u0441\u0442\u0432\u043e\u043c \u043a\u0440\u0430\u0441\u043e\u043a: \u043f\u043e\u0432\u0441\u044e\u0434\u0443 \u0432 \u0437\u0430\u043b\u0430\u0445 \u0438\u0437 \u043c\u0435\u0442\u0430\u043b\u043b\u0430 \u0438 \u043a\u0430\u043c\u043d\u044f \u0440\u043e\u0441\u043b\u0438 \u043f\u0440\u0435\u043a\u0440\u0430\u0441\u043d\u044b\u0435 \u0446\u0432\u0435\u0442\u044b. \u041a\u0430\u043a\u0438\u0435-\u0442\u043e \u0436\u0438\u0432\u043e\u0442\u043d\u044b\u0435 \u043f\u0430\u0441\u043b\u0438\u0441\u044c \u0441\u0440\u0435\u0434\u0438 \u0440\u0430\u0441\u0442\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u0438, \u0441\u043e\u0433\u0440\u0435\u0442\u043e\u0439 \u0438\u0441\u043a\u0443\u0441\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u043c \u0441\u0432\u0435\u0442\u043e\u043c. \u041a \u043d\u0435\u0441\u0447\u0430\u0441\u0442\u044c\u044e, \u043d\u0430\u0448 \u043f\u0443\u0442\u044c \u0447\u0435\u0440\u0435\u0437 \u044d\u0442\u0443 \u0436\u0443\u0442\u043a\u043e\u0432\u0430\u0442\u0443\u044e \u043a\u0440\u0430\u0441\u043e\u0442\u0443 \u0431\u044b\u043b \u043f\u0440\u0435\u0433\u0440\u0430\u0436\u0434\u0435\u043d \u043a\u0440\u0430\u0439\u043d\u0435 \u043d\u0435\u043e\u0431\u044b\u0447\u043d\u044b\u043c \u043f\u0440\u0435\u043f\u044f\u0442\u0441\u0442\u0432\u0438\u0435\u043c. \n\n\u0422\u043e\u043b\u0441\u0442\u044b\u0435 \u0443\u0437\u043b\u043e\u0432\u0430\u0442\u044b\u0435 \u043a\u043e\u0440\u043d\u0438 \u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u0430\u043b\u0438 \u0432\u0441\u0435 \u043f\u0440\u043e\u0445\u043e\u0434\u044b. \u0412\u043e\u0437\u043c\u043e\u0436\u043d\u043e, \u0434\u0432\u0435\u043c\u0435\u0440\u044b \u0441\u043e\u0447\u043b\u0438 \u043f\u0440\u0438\u0440\u043e\u0434\u0443 \u043d\u0430\u0441\u0442\u043e\u043b\u044c\u043a\u043e \u043d\u0435\u0441\u043a\u043b\u0430\u0434\u043d\u043e\u0439, \u0447\u0442\u043e \u0432\u043e\u0441\u043f\u0440\u0438\u043d\u044f\u043b\u0438 \u0432\u0435\u0441\u043d\u0443 \u043a\u0430\u043a \u0441\u0435\u0437\u043e\u043d \u043d\u0435\u0441\u043a\u043e\u043d\u0447\u0430\u0435\u043c\u044b\u0445 \u0441\u0442\u0440\u0430\u0434\u0430\u043d\u0438\u0439. \u041f\u043e\u043a\u0430 \u043d\u0430\u0435\u043c\u043d\u0438\u043a\u0438 \u043f\u044b\u0442\u0430\u043b\u0438\u0441\u044c \u043f\u0440\u043e\u0440\u0443\u0431\u0438\u0442\u044c \u0442\u043e\u043b\u0441\u0442\u0443\u044e \u043a\u043e\u0440\u0443, \u043c\u043e\u044f \u0432\u043d\u0438\u043c\u0430\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u044c \u043f\u043e\u043c\u043e\u0433\u043b\u0430 \u043c\u043d\u0435 \u0437\u0430\u043c\u0435\u0442\u0438\u0442\u044c \u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0445 \u0441\u043f\u0440\u0438\u0433\u0433\u0430\u043d\u043e\u0432, \u0448\u0430\u0440\u043a\u0430\u0432\u0448\u0438\u0445 \u043f\u043e \u0438\u0441\u043a\u0443\u0441\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u043c\u0443 \u043b\u0435\u0441\u0443. \u041a\u043e\u0433\u0434\u0430 \u044f \u043f\u043e\u0434\u043e\u0448\u0435\u043b \u0431\u043b\u0438\u0436\u0435 \u043a \u043e\u0434\u043d\u043e\u043c\u0443 \u0438\u0437 \u043d\u0438\u0445, \u043a\u043e\u0440\u043d\u0438 \u0434\u0440\u043e\u0433\u043d\u0443\u043b\u0438, \u0441\u043b\u043e\u0432\u043d\u043e \u0431\u044b\u043b\u0438 \u0449\u0443\u043f\u0430\u043b\u044c\u0446\u0430\u043c\u0438 \u044d\u0442\u043e\u0433\u043e \u043b\u0435\u0441\u043d\u043e\u0433\u043e \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0430. \u042f\u0432\u043b\u044f\u043b\u0438\u0441\u044c \u043b\u0438 \u0441\u043f\u0440\u0438\u0433\u0433\u0430\u043d\u044b \u0445\u0440\u0430\u043d\u0438\u0442\u0435\u043b\u044f\u043c\u0438 \u044d\u0442\u0438\u0445 \u043b\u0435\u0441\u043e\u0432 \u0438\u043b\u0438 \u0438\u0445 \u043f\u043e\u0440\u043e\u0436\u0434\u0435\u043d\u0438\u0435\u043c? \u041a\u0430\u043a \u0431\u044b \u0442\u043e \u043d\u0438 \u0431\u044b\u043b\u043e, \u0435\u0441\u043b\u0438 \u0431\u044b \u043c\u044b \u043d\u0430\u0448\u043b\u0438 \u0441\u043f\u043e\u0441\u043e\u0431 \u0440\u0430\u0437\u0434\u0435\u043b\u0438\u0442\u044c \u0441\u043f\u0440\u0438\u0433\u0433\u0430\u043d\u043e\u0432 \u0438 \u044d\u0442\u0438 \u043a\u043e\u0440\u043d\u0438, \u0442\u043e \u0441\u0443\u043c\u0435\u043b\u0438 \u0431\u044b \u043f\u0440\u043e\u0439\u0442\u0438 \u0432\u0433\u043b\u0443\u0431\u044c \u0440\u0430\u0437\u0432\u0430\u043b\u0438\u043d.\n[pagebreak]\n</p>\n\u041b\u0435\u0442\u043e\n\u041b\u0435\u0442\u043e \u043e\u043a\u0430\u0437\u0430\u043b\u043e\u0441\u044c \u043b\u0430\u0431\u0438\u0440\u0438\u043d\u0442\u043e\u043c \u0442\u0443\u043d\u043d\u0435\u043b\u0435\u0439 \u0438 \u0442\u0440\u0443\u0431, \u0430 \u0441\u0442\u043e\u043b\u0435\u0442\u0438\u044f \u0437\u0430\u043f\u0443\u0441\u0442\u0435\u043d\u0438\u044f \u043f\u0440\u0438\u0432\u0435\u043b\u0438 \u044d\u0442\u043e \u043c\u0435\u0441\u0442\u043e \u0432 \u043f\u043e\u043b\u043d\u044b\u0439 \u0445\u0430\u043e\u0441. \u0418\u0437 \u043a\u0430\u0436\u0434\u043e\u0433\u043e \u043e\u0442\u0432\u0435\u0440\u0441\u0442\u0438\u044f \u043b\u0438\u043b\u0430\u0441\u044c \u043b\u0430\u0432\u0430, \u0430 \u043d\u0435\u0432\u044b\u043d\u043e\u0441\u0438\u043c\u0430\u044f \u0436\u0430\u0440\u0430 \u0441\u0434\u0435\u043b\u0430\u043b\u0430 \u043f\u0443\u0442\u044c \u043a\u0440\u0430\u0439\u043d\u0435 \u0442\u0440\u0443\u0434\u043d\u044b\u043c, \u0438 \u043d\u0435 \u043e\u0434\u0438\u043d \u043d\u0430\u0435\u043c\u043d\u0438\u043a \u043c\u0430\u043b\u043e\u0434\u0443\u0448\u043d\u043e \u043f\u043e\u0432\u0435\u0440\u043d\u0443\u043b \u043e\u0431\u0440\u0430\u0442\u043d\u043e, \u0432 \u0431\u043e\u043b\u0435\u0435 \u043f\u0440\u043e\u0445\u043b\u0430\u0434\u043d\u044b\u0435 \u0437\u0430\u043b\u044b. \u041d\u043e \u0441\u0442\u043e\u043b\u044c \u043d\u0435\u0432\u044b\u043d\u043e\u0441\u0438\u043c\u0430\u044f \u043f\u043e\u0433\u043e\u0434\u0430 \u043d\u0430\u0432\u0435\u0440\u043d\u044f\u043a\u0430 \u0432\u043e\u0441\u043f\u0440\u0438\u043d\u0438\u043c\u0430\u043b\u0430\u0441\u044c \u0434\u0432\u0435\u043c\u0435\u0440\u0430\u043c\u0438 \u043a\u0430\u043a \u043e\u0431\u044b\u0447\u043d\u0430\u044f \u0434\u043b\u044f \u043b\u0435\u0442\u0430, \u0438 \u043e\u043d\u0438 \u043d\u0435 \u043c\u043e\u0433\u043b\u0438 \u043d\u0435 \u043f\u0440\u0435\u0434\u0432\u0438\u0434\u0435\u0442\u044c \u044d\u0442\u043e\u0442 \u0443\u0431\u0438\u0439\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0439 \u0437\u043d\u043e\u0439. \n\n\u041f\u0440\u043e\u0434\u0432\u0438\u0433\u0430\u044f\u0441\u044c \u043f\u043e \u0440\u0430\u0441\u043a\u0430\u043b\u0435\u043d\u043d\u043e\u043c\u0443 \u0437\u0430\u043b\u0443, \u044f \u0437\u0430\u043c\u0435\u0442\u0438\u043b \u043f\u0430\u0443\u043a\u043e\u0432-\u0440\u0435\u043c\u043e\u043d\u0442\u043d\u0438\u043a\u043e\u0432, \u0441\u043d\u043e\u0432\u0430\u0432\u0448\u0438\u0445 \u0442\u0443\u0434\u0430-\u0441\u044e\u0434\u0430. \u041e\u043d\u0438 \u043e\u043f\u0443\u0441\u043a\u0430\u043b\u0438 \u043c\u043e\u0441\u0442\u044b, \u043f\u043e\u0437\u0432\u043e\u043b\u044f\u0432\u0448\u0438\u0435 \u043f\u043e\u043f\u0430\u0441\u0442\u044c \u0432 \u0431\u043e\u043a\u043e\u0432\u044b\u0435 \u0441\u0435\u043a\u0446\u0438\u0438. \u041f\u043e\u0445\u043e\u0436\u0435, \u0432 \u043a\u0430\u0436\u0434\u043e\u0439 \u0438\u0437 \u043d\u0438\u0445 \u043d\u0430\u0445\u043e\u0434\u0438\u043b\u0441\u044f \u0430\u0433\u0440\u0435\u0433\u0430\u0442, \u0432\u044b\u043f\u0443\u0441\u043a\u0430\u044e\u0449\u0438\u0439 \u043c\u0430\u0433\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u043e\u0445\u043b\u0430\u0434\u0438\u0442\u0435\u043b\u044c, \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e \u043a\u043e\u0442\u043e\u0440\u043e\u0433\u043e \u043c\u043e\u0436\u043d\u043e \u043f\u0440\u0435\u0432\u0440\u0430\u0442\u0438\u0442\u044c \u043d\u0435\u0432\u044b\u043d\u043e\u0441\u0438\u043c\u0443\u044e \u0436\u0430\u0440\u0443 \u0432 \u043f\u0440\u043e\u0441\u0442\u043e \u0434\u043e\u0441\u0430\u0436\u0434\u0430\u044e\u0449\u0443\u044e. \u0412\u043e\u0437\u043c\u043e\u0436\u043d\u043e, \u0435\u0441\u043b\u0438 \u043d\u0430\u043f\u0440\u0430\u0432\u0438\u0442\u044c \u043f\u0430\u0443\u043a\u043e\u0432 \u043a \u044d\u0442\u0438\u043c \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430\u043c, \u0443\u0434\u0430\u0441\u0442\u0441\u044f \u0441\u043d\u0438\u0437\u0438\u0442\u044c \u0436\u0430\u0440\u0443 \u0434\u043e \u043f\u0440\u0438\u0435\u043c\u043b\u0435\u043c\u043e\u0433\u043e \u0443\u0440\u043e\u0432\u043d\u044f.\n[pagebreak]\n</p>\n\u0417\u0438\u043c\u0430\n\u0412 \u0437\u0430\u043b\u0435 \u0437\u0438\u043c\u044b \u043e\u0436\u0438\u0434\u0430\u0435\u043c\u043e \u0431\u0443\u0448\u0435\u0432\u0430\u043b\u0430 \u043c\u0435\u0442\u0435\u043b\u044c, \u0430 \u043d\u0430\u0435\u043c\u043d\u0438\u043a\u0438 \u0437\u0430\u043c\u0435\u0442\u0438\u043b\u0438 \u0437\u0430 \u043d\u0435\u0439 \u043d\u0435\u0447\u0442\u043e, \u043d\u0430\u043f\u043e\u043c\u0438\u043d\u0430\u0432\u0448\u0435\u0435 \u0438\u0441\u043a\u0443\u0441\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0435 \u0433\u043e\u0440\u044b. \u041d\u043e \u044d\u0442\u043e \u043e\u043a\u0430\u0437\u0430\u043b\u0438\u0441\u044c \u043d\u0435 \u0433\u043e\u0440\u044b, \u0430 \u043e\u0433\u0440\u043e\u043c\u043d\u044b\u0435 \u0431\u0430\u0448\u043d\u0438 \u0438\u0437 \u0437\u0430\u043c\u0435\u0440\u0437\u0448\u0435\u0439 \u0432\u043e\u0434\u044b. \u0410 \u0445\u043e\u043b\u043e\u0434! \u0414\u0430\u0436\u0435 \u0432 \u0441\u0430\u043c\u044b\u0445 \u0432\u044b\u0441\u043e\u043a\u0438\u0445 \u0433\u043e\u0440\u0430\u0445 \u043d\u0435 \u0431\u044b\u043b\u043e \u0442\u0430\u043a\u043e\u0439 \u0441\u0442\u0443\u0436\u0438, \u0438 \u0432\u0441\u043a\u043e\u0440\u0435 \u043c\u044b \u0443\u0436\u0435 \u0442\u043e\u0440\u0433\u043e\u0432\u0430\u043b\u0438\u0441\u044c \u0437\u0430 \u0438\u043c\u0435\u0432\u0448\u0443\u044e\u0441\u044f \u043c\u0435\u0445\u043e\u0432\u0443\u044e \u043e\u0434\u0435\u0436\u0434\u0443, \u0447\u0442\u043e\u0431\u044b \u0445\u043e\u0442\u044c \u043d\u0435\u043c\u043d\u043e\u0433\u043e \u0441\u043e\u0433\u0440\u0435\u0442\u044c\u0441\u044f! \n\n\u041c\u044b \u043f\u043e\u043d\u044f\u043b\u0438, \u0447\u0442\u043e \u0434\u043b\u044f \u0442\u043e\u0433\u043e, \u0447\u0442\u043e\u0431\u044b \u043f\u0440\u043e\u0434\u0432\u0438\u043d\u0443\u0442\u044c\u0441\u044f, \u043d\u0443\u0436\u043d\u043e \u043d\u044b\u0440\u043d\u0443\u0442\u044c \u0432 \u043d\u0435\u0437\u0430\u043c\u0435\u0440\u0437\u0430\u044e\u0449\u0438\u0435 \u0432\u043e\u0434\u044b \u0432\u043e\u043a\u0440\u0443\u0433 \u0431\u0430\u0448\u0435\u043d \u0438 \u043f\u0440\u043e\u0441\u043a\u043e\u043b\u044c\u0437\u043d\u0443\u0442\u044c \u043c\u0438\u043c\u043e \u043f\u0440\u0435\u043f\u044f\u0442\u0441\u0442\u0432\u0438\u044f, \u0441\u043e\u0432\u0441\u0435\u043c \u043a\u0430\u043a \u043e\u0431\u0438\u0442\u0430\u044e\u0449\u0438\u0435 \u0442\u0430\u043c \u043b\u0435\u0434\u044f\u043d\u044b\u0435 \u043f\u0440\u0438\u0437\u0440\u0430\u043a\u0438. \u041c\u043e\u0435 \u0440\u0435\u0448\u0435\u043d\u0438\u0435 \u043f\u0440\u043e\u0431\u043b\u0435\u043c\u044b, \u043a\u0430\u043a \u0438 \u0432\u0441\u0435\u0433\u0434\u0430, \u0431\u044b\u043b\u043e \u0432\u0435\u0441\u044c\u043c\u0430 \u0438\u0437\u044f\u0449\u043d\u044b\u043c, \u043d\u043e \u0441\u043e\u0431\u043e\u0439 \u044f \u0440\u0438\u0441\u043a\u043e\u0432\u0430\u0442\u044c \u043d\u0435 \u043c\u043e\u0433. \u0412\u043e\u0437\u043c\u043e\u0436\u043d\u043e, \u043a\u043e\u0433\u0434\u0430 \u043c\u044b \u0432\u0435\u0440\u043d\u0435\u043c\u0441\u044f \u0432 \u044d\u0442\u0438 \u0440\u0430\u0437\u0432\u0430\u043b\u0438\u043d\u044b, \u0441\u043e \u043c\u043d\u043e\u0439 \u0431\u0443\u0434\u0435\u0442 \u043a\u0442\u043e-\u043d\u0438\u0431\u0443\u0434\u044c, \u043f\u043e\u0434\u0445\u043e\u0434\u044f\u0449\u0438\u0439 \u0434\u043b\u044f \u044d\u0442\u043e\u0439 \u0437\u0430\u0434\u0430\u0447\u0438. \u041a\u0442\u043e-\u043d\u0438\u0431\u0443\u0434\u044c, \u043a\u043e\u0433\u043e \u043d\u0435 \u0436\u0430\u043b\u043a\u043e.\n\n"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST CNAM",
+        "original": "The path to the Conduit of Spring is blocked by thick roots. I'll need to find a way to move them aside.",
+        "string": "\u041f\u0443\u0442\u044c \u043a \u043f\u0440\u043e\u0432\u043e\u0434\u043d\u0438\u043a\u0443 \u0432\u0435\u0441\u043d\u044b \u0437\u0430\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u0430\u043d \u0442\u043e\u043b\u0441\u0442\u044b\u043c\u0438 \u043a\u043e\u0440\u043d\u044f\u043c\u0438. \u041c\u043d\u0435 \u043d\u0430\u0434\u043e \u043d\u0430\u0439\u0442\u0438 \u0441\u043f\u043e\u0441\u043e\u0431 \u0438\u0445 \u0443\u0431\u0440\u0430\u0442\u044c."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST CNAM",
+        "original": "The facility that studied winter has been ravaged by a permanent blizzard. I should be able to navigate through each icy water reservoir to reach the Conduit of Winter.",
+        "string": "\u0412 \u043f\u043e\u043c\u0435\u0449\u0435\u043d\u0438\u0438, \u0433\u0434\u0435 \u0438\u0437\u0443\u0447\u0430\u043b\u0438 \u0437\u0438\u043c\u0443, \u0446\u0430\u0440\u0438\u0442 \u0432\u0435\u0447\u043d\u0430\u044f \u0441\u0442\u0443\u0436\u0430. \u041d\u0430\u0434\u043e \u043c\u0438\u043d\u043e\u0432\u0430\u0442\u044c \u0432\u0441\u0435 \u0440\u0435\u0437\u0435\u0440\u0432\u0443\u0430\u0440\u044b \u0441 \u043b\u0435\u0434\u044f\u043d\u043e\u0439 \u0432\u043e\u0434\u043e\u0439, \u0447\u0442\u043e\u0431\u044b \u0434\u043e\u0431\u0440\u0430\u0442\u044c\u0441\u044f \u0434\u043e \u043f\u0440\u043e\u0432\u043e\u0434\u043d\u0438\u043a\u0430 \u0437\u0438\u043c\u044b."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonPlayerCornMessage3",
+        "type": "MESG DESC",
+        "original": "You place the wheat in the depository.",
+        "string": "\u0412\u044b \u043a\u043b\u0430\u0434\u0435\u0442\u0435 \u043f\u0448\u0435\u043d\u0438\u0446\u0443 \u0432 \u0445\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0435."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonPlayerCornMessage4",
+        "type": "MESG DESC",
+        "original": "You don't have any wheat to deposit.",
+        "string": "\u0423 \u0432\u0430\u0441 \u043d\u0435\u0442 \u043f\u0448\u0435\u043d\u0438\u0446\u044b, \u043a\u043e\u0442\u043e\u0440\u0443\u044e \u043c\u043e\u0436\u043d\u043e \u043f\u043e\u043b\u043e\u0436\u0438\u0442\u044c \u0432 \u0445\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0435."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST CNAM",
+        "original": "I defeated the Sky Orchestrator. The violent weather seems to have ceased as a result.",
+        "string": "\u041c\u043d\u0435 \u0443\u0434\u0430\u043b\u043e\u0441\u044c \u043f\u043e\u0431\u0435\u0434\u0438\u0442\u044c \u041d\u0435\u0431\u0435\u0441\u043d\u043e\u0433\u043e \u0434\u0438\u0440\u0438\u0436\u0435\u0440\u0430. \u0418 \u0431\u0443\u0439\u0441\u0442\u0432\u043e \u043d\u0435\u043f\u043e\u0433\u043e\u0434\u044b, \u043a\u0430\u0436\u0435\u0442\u0441\u044f, \u043f\u0440\u0435\u043a\u0440\u0430\u0442\u0438\u043b\u043e\u0441\u044c."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonPlayerCornMessage1",
+        "type": "MESG DESC",
+        "original": "You pick up the wheat.",
+        "string": "\u0412\u044b \u0441\u043e\u0431\u0440\u0430\u043b\u0438 \u043f\u0448\u0435\u043d\u0438\u0446\u0443."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonElberrosBookSummer",
+        "type": "BOOK DESC",
+        "original": "<p align=\"left\">\n<font face='$HandwrittenFont'>Summer was a maze of tunnels and pipes, and no doubt centuries of neglect had left the place in a state of pure haywire. Lava spewed from every stone orifice I could see, and unbearable heat made for a precarious journey, and many of the lesser mercenaries turned back to cooler times. But the dwemer had predicted such superheat, indeed no doubt this unbearable weather was what summer meant to them. Even as I pulled myself through the swelter, I noticed repair spiders darting to and fro, ignoring me and heading into side sections, which revealed great levers. Flipping them released some sort of magical coolant, reducing the heat from impossible to merely annoying. Perhaps if enough of these spiders were directed to overheated sections and enough coolant levers flipped, I thought, I could find out what secrets this section of summer beheld.\n\n",
+        "string": "<p align=\"left\">\n<font face='$HandwrittenFont'>\u041b\u0435\u0442\u043e \u043e\u043a\u0430\u0437\u0430\u043b\u043e\u0441\u044c \u043b\u0430\u0431\u0438\u0440\u0438\u043d\u0442\u043e\u043c \u0442\u0443\u043d\u043d\u0435\u043b\u0435\u0439 \u0438 \u0442\u0440\u0443\u0431, \u0430 \u0441\u0442\u043e\u043b\u0435\u0442\u0438\u044f \u0437\u0430\u043f\u0443\u0441\u0442\u0435\u043d\u0438\u044f \u043f\u0440\u0438\u0432\u0435\u043b\u0438 \u044d\u0442\u043e \u043c\u0435\u0441\u0442\u043e \u0432 \u043f\u043e\u043b\u043d\u044b\u0439 \u0445\u0430\u043e\u0441. \u0418\u0437 \u043a\u0430\u0436\u0434\u043e\u0433\u043e \u043e\u0442\u0432\u0435\u0440\u0441\u0442\u0438\u044f \u043b\u0438\u043b\u0430\u0441\u044c \u043b\u0430\u0432\u0430, \u0430 \u043d\u0435\u0432\u044b\u043d\u043e\u0441\u0438\u043c\u0430\u044f \u0436\u0430\u0440\u0430 \u0441\u0434\u0435\u043b\u0430\u043b\u0430 \u043f\u0443\u0442\u044c \u043a\u0440\u0430\u0439\u043d\u0435 \u0442\u0440\u0443\u0434\u043d\u044b\u043c, \u0438 \u043d\u0435 \u043e\u0434\u0438\u043d \u043d\u0430\u0435\u043c\u043d\u0438\u043a \u043c\u0430\u043b\u043e\u0434\u0443\u0448\u043d\u043e \u043f\u043e\u0432\u0435\u0440\u043d\u0443\u043b \u043e\u0431\u0440\u0430\u0442\u043d\u043e, \u0432 \u0431\u043e\u043b\u0435\u0435 \u043f\u0440\u043e\u0445\u043b\u0430\u0434\u043d\u044b\u0435 \u0437\u0430\u043b\u044b. \u041d\u043e \u0441\u0442\u043e\u043b\u044c \u043d\u0435\u0432\u044b\u043d\u043e\u0441\u0438\u043c\u0430\u044f \u043f\u043e\u0433\u043e\u0434\u0430 \u043d\u0430\u0432\u0435\u0440\u043d\u044f\u043a\u0430 \u0432\u043e\u0441\u043f\u0440\u0438\u043d\u0438\u043c\u0430\u043b\u0430\u0441\u044c \u0434\u0432\u0435\u043c\u0435\u0440\u0430\u043c\u0438 \u043a\u0430\u043a \u043e\u0431\u044b\u0447\u043d\u0430\u044f \u0434\u043b\u044f \u043b\u0435\u0442\u0430, \u0438 \u043e\u043d\u0438 \u043d\u0435 \u043c\u043e\u0433\u043b\u0438 \u043d\u0435 \u043f\u0440\u0435\u0434\u0432\u0438\u0434\u0435\u0442\u044c \u044d\u0442\u043e\u0442 \u0443\u0431\u0438\u0439\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0439 \u0437\u043d\u043e\u0439. \u041f\u0440\u043e\u0434\u0432\u0438\u0433\u0430\u044f\u0441\u044c \u043f\u043e \u0440\u0430\u0441\u043a\u0430\u043b\u0435\u043d\u043d\u043e\u043c\u0443 \u0437\u0430\u043b\u0443, \u044f \u0437\u0430\u043c\u0435\u0442\u0438\u043b \u043f\u0430\u0443\u043a\u043e\u0432-\u0440\u0435\u043c\u043e\u043d\u0442\u043d\u0438\u043a\u043e\u0432, \u0441\u043d\u043e\u0432\u0430\u0432\u0448\u0438\u0445 \u0442\u0443\u0434\u0430-\u0441\u044e\u0434\u0430. \u041d\u0435 \u043e\u0431\u0440\u0430\u0449\u0430\u044f \u043d\u0430 \u043c\u0435\u043d\u044f \u0432\u043d\u0438\u043c\u0430\u043d\u0438\u044f, \u043e\u043d\u0438 \u0441\u043f\u043e\u043b\u0437\u0430\u043b\u0438\u0441\u044c \u0432 \u0431\u043e\u043a\u043e\u0432\u044b\u0435 \u0441\u0435\u043a\u0446\u0438\u0438, \u0433\u0434\u0435 \u0440\u0430\u0437\u043c\u0435\u0449\u0430\u043b\u0438\u0441\u044c \u0431\u043e\u043b\u044c\u0448\u0438\u0435 \u0440\u044b\u0447\u0430\u0433\u0438. \u0421\u0434\u0432\u0438\u043d\u0443\u0432 \u0438\u0445, \u043e\u043d\u0438 , \u0432\u044b\u043f\u0443\u0441\u0442\u0438\u043b\u0438 \u043d\u0435\u043a\u0438\u0439 \u043c\u0430\u0433\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u043e\u0445\u043b\u0430\u0434\u0438\u0442\u0435\u043b\u044c, \u043a\u043e\u0442\u043e\u0440\u044b\u0439 \u043f\u0440\u0435\u0432\u0440\u0430\u0442\u0438\u043b \u043d\u0435\u0432\u044b\u043d\u043e\u0441\u0438\u043c\u0443\u044e \u0436\u0430\u0440\u0443 \u0432 \u043f\u0440\u043e\u0441\u0442\u043e \u0434\u043e\u0441\u0430\u0436\u0434\u0430\u044e\u0449\u0443\u044e. \u0412\u043e\u0437\u043c\u043e\u0436\u043d\u043e, \u043f\u043e\u0434\u0443\u043c\u0430\u043b \u044f, \u0435\u0441\u043b\u0438 \u043d\u0430\u043f\u0440\u0430\u0432\u0438\u0442\u044c \u043f\u0430\u0443\u043a\u043e\u0432 \u0432 \u0437\u0430\u0442\u043e\u043f\u043b\u0435\u043d\u043d\u044b\u0435 \u0436\u0430\u0440\u043e\u0439 \u0441\u0435\u043a\u0446\u0438\u0438 \u0438 \u0437\u0430\u0441\u0442\u0430\u0432\u0438\u0442\u044c \u0438\u0445 \u0432\u044b\u043f\u0443\u0441\u0442\u0438\u0442\u044c \u0434\u043e\u0441\u0442\u0430\u0442\u043e\u0447\u043d\u043e\u0435 \u043a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u043e\u0445\u043b\u0430\u0434\u0438\u0442\u0435\u043b\u044f, \u0442\u043e \u0443\u0434\u0430\u0441\u0442\u0441\u044f \u0443\u0437\u043d\u0430\u0442\u044c, \u043a\u0430\u043a\u0438\u0435 \u0441\u0435\u043a\u0440\u0435\u0442\u044b \u0442\u0430\u0438\u0442 \u0432 \u0441\u0435\u0431\u0435 \u0437\u0430\u043b \u043b\u0435\u0442\u0430.\n\n"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST CNAM",
+        "original": "To reach the Conduit of Autumn, I need to open a massive door. The door seems connected somehow to the pipes and depositories nearby.",
+        "string": "\u0427\u0442\u043e\u0431\u044b \u0434\u043e\u0431\u0440\u0430\u0442\u044c\u0441\u044f \u0434\u043e \u043f\u0440\u043e\u0432\u043e\u0434\u043d\u0438\u043a\u0430 \u043e\u0441\u0435\u043d\u0438, \u043c\u043d\u0435 \u043d\u0430\u0434\u043e \u043e\u0442\u043a\u0440\u044b\u0442\u044c \u0442\u044f\u0436\u0435\u043b\u0443\u044e \u0434\u0432\u0435\u0440\u044c. \u041e\u043d\u0430 \u043a\u0430\u043a-\u0442\u043e \u0441\u043e\u0435\u0434\u0438\u043d\u0435\u043d\u0430 \u0441 \u0440\u0430\u0441\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u043d\u044b\u043c\u0438 \u0440\u044f\u0434\u043e\u043c \u0442\u0440\u0443\u0431\u0430\u043c\u0438 \u0438 \u0445\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0430\u043c\u0438."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST CNAM",
+        "original": "With all the conduits deactivated, I should be able to proceed and shut down the source of this inclement weather.",
+        "string": "\u0414\u0435\u0430\u043a\u0442\u0438\u0432\u0438\u0440\u043e\u0432\u0430\u0432 \u0432\u0441\u0435 \u043f\u0440\u043e\u0432\u043e\u0434\u043d\u0438\u043a\u0438, \u044f \u0441\u043c\u043e\u0433\u0443 \u043f\u0440\u043e\u0439\u0442\u0438 \u0434\u0430\u043b\u044c\u0448\u0435 \u0438 \u043e\u0442\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u0438\u0441\u0442\u043e\u0447\u043d\u0438\u043a \u044d\u0442\u043e\u0439 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u0447\u0438\u0432\u043e\u0439 \u043f\u043e\u0433\u043e\u0434\u044b."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST CNAM",
+        "original": "It seems a mage had set up camp in the heart of the ruins. Unfortunately, he was struck by lightning before I could reach him. Maybe I can find out more about these ruins by inspecting his remains. ",
+        "string": "\u041f\u043e\u0445\u043e\u0436\u0435, \u043c\u0430\u0433 \u0440\u0430\u0437\u0431\u0438\u043b \u043b\u0430\u0433\u0435\u0440\u044c \u0432 \u0441\u0430\u043c\u043e\u043c \u0441\u0435\u0440\u0434\u0446\u0435 \u0440\u0443\u0438\u043d. \u041a \u043d\u0435\u0441\u0447\u0430\u0441\u0442\u044c\u044e, \u043f\u0440\u0435\u0436\u0434\u0435 \u0447\u0435\u043c \u043c\u043d\u0435 \u0443\u0434\u0430\u043b\u043e\u0441\u044c \u043f\u043e\u0433\u043e\u0432\u043e\u0440\u0438\u0442\u044c \u0441 \u043d\u0438\u043c, \u0435\u0433\u043e \u0443\u0431\u0438\u043b\u043e \u043c\u043e\u043b\u043d\u0438\u0435\u0439. \u041d\u0430\u0434\u043e \u043e\u0431\u044b\u0441\u043a\u0430\u0442\u044c \u0435\u0433\u043e \u0442\u0435\u043b\u043e, \u0447\u0442\u043e\u0431\u044b \u0443\u0437\u043d\u0430\u0442\u044c \u0431\u043e\u043b\u044c\u0448\u0435 \u043f\u0440\u043e \u044d\u0442\u0438 \u0440\u0430\u0437\u0432\u0430\u043b\u0438\u043d\u044b. "
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST CNAM",
+        "original": "According to the mage's journal, Vardnknd contains a device capable of controlling the weather. However, without a steward to manage it, the storm has increased in size and threatens to affect weather outside of the ruins. Left unchecked, it could spread to the rest of Skyrim. It seems the only way to shut down the system is to disable four separate conduits in sub-facilities throughout the ruins.",
+        "string": "\u0412 \u0434\u043d\u0435\u0432\u043d\u0438\u043a\u0435 \u043c\u0430\u0433\u0430 \u0433\u043e\u0432\u043e\u0440\u0438\u0442\u0441\u044f, \u0447\u0442\u043e \u0432 \u0412\u0430\u0440\u0434\u043d\u043a\u043d\u0434\u0435 \u043d\u0430\u0445\u043e\u0434\u0438\u0442\u0441\u044f \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u043e, \u0441\u043f\u043e\u0441\u043e\u0431\u043d\u043e\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u0442\u044c \u043f\u043e\u0433\u043e\u0434\u043e\u0439. \u041d\u043e \u0431\u0435\u0437 \u043a\u043e\u043d\u0442\u0440\u043e\u043b\u044f \u0441\u043e \u0441\u0442\u043e\u0440\u043e\u043d\u044b \u0431\u0443\u0440\u044f \u0440\u0430\u0437\u0440\u043e\u0441\u043b\u0430\u0441\u044c \u0438 \u0433\u0440\u043e\u0437\u0438\u0442 \u0432\u044b\u0439\u0442\u0438 \u0437\u0430 \u043f\u0440\u0435\u0434\u0435\u043b\u044b \u0440\u0430\u0437\u0432\u0430\u043b\u0438\u043d. \u0415\u0441\u043b\u0438 \u043d\u0438\u0447\u0435\u0433\u043e \u043d\u0435 \u0441\u0434\u0435\u043b\u0430\u0442\u044c, \u043e\u043d\u0430 \u043c\u043e\u0436\u0435\u0442 \u043d\u0430\u043a\u0440\u044b\u0442\u044c \u0432\u0435\u0441\u044c \u0421\u043a\u0430\u0439\u0440\u0438\u043c. \u041f\u043e\u0445\u043e\u0436\u0435, \u0435\u0434\u0438\u043d\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0439 \u0432\u044b\u0445\u043e\u0434 - \u0434\u0435\u0430\u043a\u0442\u0438\u0432\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0441\u0438\u0441\u0442\u0435\u043c\u0443, \u043e\u0442\u043a\u043b\u044e\u0447\u0438\u0432 \u0447\u0435\u0442\u044b\u0440\u0435 \u043f\u0440\u043e\u0432\u043e\u0434\u043d\u0438\u043a\u0430, \u0440\u0430\u0441\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u043d\u044b\u0445 \u0432 \u043e\u0442\u0434\u0435\u043b\u044c\u043d\u044b\u0445 \u0437\u0430\u043b\u0430\u0445 \u043f\u043e\u0434\u0437\u0435\u043c\u0435\u043b\u044c\u044f."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST CNAM",
+        "original": "I've discovered a strange Dwemer ruin, where a mercenary party has been attacked by hostile machines. I should investigate.",
+        "string": "\u0414\u043e\u0440\u043e\u0433\u0430 \u043f\u0440\u0438\u0432\u0435\u043b\u0430 \u043c\u0435\u043d\u044f \u043a \u0441\u0442\u0440\u0430\u043d\u043d\u044b\u043c \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0438\u043c \u0440\u0443\u0438\u043d\u0430\u043c, \u0433\u0434\u0435 \u043d\u0430 \u043e\u0442\u0440\u044f\u0434 \u043d\u0430\u0435\u043c\u043d\u0438\u043a\u043e\u0432 \u043d\u0430\u043f\u0430\u043b\u0438 \u0432\u0440\u0430\u0436\u0434\u0435\u0431\u043d\u044b\u0445 \u043c\u0435\u0445\u0430\u043d\u0438\u0437\u043c\u044b. \u041d\u0430\u0434\u043e \u043e\u0431\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u0442\u044c \u0440\u0443\u0438\u043d\u044b."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST CNAM",
+        "original": "The Conduit of Summer appears to be powered by heat. In order to disable it, I'll need to activate service waypoints that supply coolant to the facility. However, with the pathways blocked, I'll first need to use a control rod to direct a repair spider to the waypoints.",
+        "string": "\u041f\u0440\u043e\u0432\u043e\u0434\u043d\u0438\u043a \u043b\u0435\u0442\u0430 \u0440\u0430\u0431\u043e\u0442\u0430\u0435\u0442 \u0437\u0430 \u0441\u0447\u0435\u0442 \u0436\u0430\u0440\u044b. \u0427\u0442\u043e\u0431\u044b \u0435\u0433\u043e \u043e\u0442\u043a\u043b\u044e\u0447\u0438\u0442\u044c, \u043c\u043d\u0435 \u043d\u0430\u0434\u043e \u0430\u043a\u0442\u0438\u0432\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430, \u043f\u043e\u0434\u0430\u044e\u0449\u0438\u0435 \u043e\u0445\u043b\u0430\u0434\u0438\u0442\u0435\u043b\u044c. \u041d\u043e \u043f\u0440\u043e\u0445\u043e\u0434\u044b \u0437\u0430\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u0430\u043d\u044b, \u0438 \u0441\u043f\u0435\u0440\u0432\u0430 \u043d\u0430\u0434\u043e \u0432\u043e\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u044c\u0441\u044f \u0436\u0435\u0437\u043b\u043e\u043c \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u044f, \u0447\u0442\u043e\u0431\u044b \u043d\u0430\u043f\u0440\u0430\u0432\u0438\u0442\u044c \u0442\u0443\u0434\u0430 \u043f\u0430\u0443\u043a\u0430-\u0440\u0435\u043c\u043e\u043d\u0442\u043d\u0438\u043a\u0430."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonElberrosBookWinter",
+        "type": "BOOK DESC",
+        "original": "<p align=\"left\">\n<font face='$HandwrittenFont'>Winter was, not to my surprise, home to a great indoor blizzard and what the mercenaries thought of as artificial stone mountains. Yet they were not mountains, but great towering silos of frozen water. And the cold! Not even the high mountains compared to such chills, and we were soon trading furs amongst ourselves to keep warm! Yet just as soon as the wind had picked up, it died down, the temperature dropping and the icy waters unfreezing, yet still cold. It became clear that if I was to progress through these silos, I would have to take advantage of the variable chill, quickly crossing through paths formed by the ice floes as impromptu bridges. As clever a solution as any solution thought up by me. \n",
+        "string": "<p align=\"left\">\n\u0412 \u0437\u0430\u043b\u0435 \u0437\u0438\u043c\u044b \u043e\u0436\u0438\u0434\u0430\u0435\u043c\u043e \u0431\u0443\u0448\u0435\u0432\u0430\u043b\u0430 \u043c\u0435\u0442\u0435\u043b\u044c, \u0430 \u043d\u0430\u0435\u043c\u043d\u0438\u043a\u0438 \u0437\u0430\u043c\u0435\u0442\u0438\u043b\u0438 \u0437\u0430 \u043d\u0435\u0439 \u043d\u0435\u0447\u0442\u043e, \u043d\u0430\u043f\u043e\u043c\u0438\u043d\u0430\u0432\u0448\u0435\u0435 \u0438\u0441\u043a\u0443\u0441\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0435 \u0433\u043e\u0434\u044b. \u041d\u043e \u044d\u0442\u043e \u043e\u043a\u0430\u0437\u0430\u043b\u0438\u0441\u044c \u043d\u0435 \u0433\u043e\u0440\u044b, \u0430 \u043e\u0433\u0440\u043e\u043c\u043d\u044b\u0435 \u0431\u0430\u0448\u043d\u0438 \u0438\u0437 \u0437\u0430\u043c\u0435\u0440\u0437\u0448\u0435\u0439 \u0432\u043e\u0434\u044b. \u0410 \u0445\u043e\u043b\u043e\u0434! \u0414\u0430\u0436\u0435 \u0432 \u0441\u0430\u043c\u044b\u0445 \u0432\u044b\u0441\u043e\u043a\u0438\u0445 \u0433\u043e\u0440\u0430\u0445 \u043d\u0435 \u0431\u044b\u043b\u043e \u0442\u0430\u043a\u043e\u0439 \u0441\u0442\u0443\u0436\u0438, \u0438 \u0432\u0441\u043a\u043e\u0440\u0435 \u043c\u044b \u0443\u0436\u0435 \u0442\u043e\u0440\u0433\u043e\u0432\u0430\u043b\u0438\u0441\u044c \u0437\u0430 \u0438\u043c\u0435\u0432\u0448\u0443\u044e\u0441\u044f \u043c\u0435\u0445\u043e\u0432\u0443\u044e \u043e\u0434\u0435\u0436\u0434\u0443, \u0447\u0442\u043e\u0431\u044b \u0445\u043e\u0442\u044c \u043d\u0435\u043c\u043d\u043e\u0433\u043e \u0441\u043e\u0433\u0440\u0435\u0442\u044c\u0441\u044f! \u041d\u0430\u0431\u0440\u0430\u0432 \u0441\u0438\u043b\u0443, \u0432\u0435\u0442\u0435\u0440 \u043d\u0435\u043e\u0436\u0438\u0434\u0430\u043d\u043d\u043e \u043f\u0440\u0435\u043a\u0440\u0430\u0442\u0438\u043b\u0441\u044f, \u0442\u0435\u043c\u043f\u0435\u0440\u0430\u0442\u0443\u0440\u0430 \u0432\u043e\u0437\u0434\u0443\u0445\u0430 \u0443\u043f\u0430\u043b\u0430, \u0430 \u0447\u0430\u0441\u0442\u044c \u043b\u0435\u0434\u044f\u043d\u044b\u0445 \u0432\u043e\u0434 \u0440\u0430\u0437\u043c\u0435\u0440\u0437\u043b\u0430\u0441\u044c, \u043d\u043e \u043e\u0441\u0442\u0430\u043b\u0430\u0441\u044c \u043e\u0431\u0436\u0438\u0433\u0430\u044e\u0449\u0435 \u0445\u043e\u043b\u043e\u0434\u043d\u043e\u0439. \u0421\u0442\u0430\u043b\u043e \u044f\u0441\u043d\u043e, \u0447\u0442\u043e \u0434\u043b\u044f \u0442\u043e\u0433\u043e, \u0447\u0442\u043e\u0431\u044b \u043f\u0440\u043e\u0439\u0442\u0438 \u0434\u0430\u043b\u044c\u0448\u0435, \u043d\u0443\u0436\u043d\u043e \u0432\u043e\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u044c\u0441\u044f \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u0430\u043c\u0438 \u043f\u043e\u0433\u043e\u0434\u044b \u0438 \u0431\u044b\u0441\u0442\u0440\u043e \u043f\u0435\u0440\u0435\u0434\u0432\u0438\u0433\u0430\u0442\u044c\u0441\u044f \u043f\u043e \u043f\u043b\u0430\u0432\u0443\u0447\u0438\u043c \u043b\u044c\u0434\u0438\u043d\u0430\u043c, \u0432\u043f\u043e\u043b\u043d\u0435 \u0441\u043f\u043e\u0441\u043e\u0431\u043d\u044b\u043c \u0437\u0430\u043c\u0435\u043d\u0438\u0442\u044c \u0432\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u0435 \u043c\u043e\u0441\u0442\u044b. \u0411\u043b\u0435\u0441\u0442\u044f\u0449\u0430\u044f \u0438\u0434\u0435\u044f, \u043a\u0430\u043a \u0438 \u0432\u0441\u0435\u0433\u0434\u0430. \n"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonElberrosBookFall",
+        "type": "BOOK DESC",
+        "original": "<p align=\"left\">\n<font face='$HandwrittenFont'>As I trundled into the halls of Autumn, a marvelous sight unfolded. Before me lay an enormous stretch of farmland, decrepit and overgrown, but a farm nevertheless. Strange fruits and grains grew in plots, while emaciated chickens ran about all the while tended by massive double-bladed centurions. Did the dwemer find it amusing that the surface-peoples had a whole season dedicated just to harvest, or did they do this as a mockery to some forgotten god of the feast? Whatever the case, I aimed to sample a piece of dwarven produce myself. \nThough the fruit smelled delicious, it was as hard as a rock, and the insides glowed with a foul light. Yet as dense as the harvest was, I observed the bladed centurions cutting through it with little effort and carrying them off to a hopper at the far end of the fields. While no doubt the blades of these machines would make short work of flesh and armor, my men nevertheless valiantly served as a distraction as I carried the heavy wheat over to the depository, hoping that these offerings would satiate whatever freakish endeavors the dwarves had begun, and gain me access to the rest of the farms.",
+        "string": "<p align=\"left\">\n<font face='$HandwrittenFont'>\u0412\u043e\u0439\u0434\u044f \u0432 \u0437\u0430\u043b\u044b \u041e\u0441\u0435\u043d\u0438, \u044f \u0443\u0432\u0438\u0434\u0435\u043b \u0447\u0443\u0434\u0435\u0441\u043d\u043e\u0435 \u0437\u0440\u0435\u043b\u0438\u0449\u0435. \u041f\u0435\u0440\u0435\u0434\u043e \u043c\u043d\u043e\u0439 \u043b\u0435\u0436\u0430\u043b \u043e\u0433\u0440\u043e\u043c\u043d\u044b\u0439 \u043d\u0430\u0434\u0435\u043b \u0437\u0435\u043c\u043b\u0438, \u0437\u0430\u043f\u0443\u0449\u0435\u043d\u043d\u043e\u0439 \u0438 \u043d\u0435\u0443\u0445\u043e\u0436\u0435\u043d\u043d\u043e\u0439, \u043d\u043e \u0431\u0435\u0437 \u0441\u043e\u043c\u043d\u0435\u043d\u0438\u044f \u043f\u0440\u0438\u0433\u043e\u0434\u043d\u043e\u0439 \u0434\u043b\u044f \u0445\u043e\u0437\u044f\u0439\u0441\u0442\u0432\u0430. \u041d\u0430 \u043d\u0435\u0439 \u0440\u043e\u0441\u043b\u0438 \u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0435 \u0444\u0440\u0443\u043a\u0442\u044b \u0438 \u0437\u043b\u0430\u043a\u0438, \u0442\u043e\u0440\u043e\u043f\u0438\u043b\u0438\u0441\u044c \u043a\u0443\u0434\u0430-\u0442\u043e \u0447\u0430\u0445\u043b\u044b\u0435 \u043a\u0443\u0440\u0438\u0446\u044b, \u0438 \u0432\u0441\u0435\u043c \u044d\u0442\u0438\u043c \u0437\u0430\u043d\u0438\u043c\u0430\u043b\u0438\u0441\u044c \u043e\u0433\u0440\u043e\u043c\u043d\u044b\u0435 \u0446\u0435\u043d\u0442\u0443\u0440\u0438\u043e\u043d\u044b, \u0441\u043d\u0430\u0431\u0436\u0435\u043d\u043d\u044b\u0435 \u0434\u0432\u0443\u043c\u044f \u043a\u043b\u0438\u043d\u043a\u0430\u043c\u0438 \u043a\u0430\u0436\u0434\u044b\u0439. \u0412\u0435\u0440\u043e\u044f\u0442\u043d\u043e, \u0434\u0432\u0435\u043c\u0435\u0440\u0430\u043c \u043f\u043e\u043a\u0430\u0437\u0430\u043b\u043e\u0441\u044c \u0437\u0430\u0431\u0430\u0432\u043d\u044b\u043c, \u0447\u0442\u043e \u0443 \u0436\u0438\u0442\u0435\u043b\u0435\u0439 \u043f\u043e\u0432\u0435\u0440\u0445\u043d\u043e\u0441\u0442\u0438 \u0446\u0435\u043b\u044b\u0439 \u0441\u0435\u0437\u043e\u043d \u043e\u0442\u0432\u0435\u0434\u0435\u043d \u043f\u043e\u0434 \u0441\u0431\u043e\u0440 \u0443\u0440\u043e\u0436\u0430\u044f. \u0410 \u043c\u043e\u0436\u0435\u0442 \u0431\u044b\u0442\u044c, \u043e\u043d\u0438 \u043e\u0431\u0443\u0441\u0442\u0440\u043e\u0438\u043b\u0438 \u0432\u0441\u0435 \u044d\u0442\u043e \u0432 \u043d\u0430\u0441\u043c\u0435\u0448\u043a\u0443 \u043d\u0430\u0434 \u043a\u0430\u043a\u0438\u043c-\u043d\u0438\u0431\u0443\u0434\u044c \u0437\u0430\u0431\u044b\u0442\u044b\u043c \u0431\u043e\u0433\u043e\u043c \u0434\u043e\u0441\u0442\u0430\u0442\u043a\u0430. \u041a\u0430\u043a \u0431\u044b \u0442\u043e \u043d\u0438 \u0431\u044b\u043b\u043e, \u044f \u043f\u043e\u0436\u0435\u043b\u0430\u043b \u043b\u0438\u0447\u043d\u043e \u0438\u0437\u0443\u0447\u0438\u0442\u044c \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0438\u0435 \u043f\u043b\u043e\u0434\u044b.  \n\u0424\u0440\u0443\u043a\u0442\u044b \u0430\u043f\u043f\u0435\u0442\u0438\u0442\u043d\u043e \u043f\u0430\u0445\u043b\u0438, \u043d\u043e \u0431\u044b\u043b\u0438 \u0442\u0432\u0435\u0440\u0436\u0435 \u043a\u0430\u043c\u043d\u044f, \u0430 \u0438\u0445 \u0432\u043d\u0443\u0442\u0440\u0435\u043d\u043d\u043e\u0441\u0442\u044c \u043d\u0435\u0434\u043e\u0431\u0440\u043e \u0441\u0432\u0435\u0442\u0438\u043b\u0430\u0441\u044c. \u0422\u0435\u043c \u043d\u0435 \u043c\u0435\u043d\u0435\u0435, \u043a\u043b\u0438\u043d\u043a\u0438 \u0446\u0435\u043d\u0442\u0443\u0440\u0438\u043e\u043d\u043e\u0432 \u0431\u0435\u0437 \u0442\u0440\u0443\u0434\u0430 \u0441\u0440\u0435\u0437\u0430\u043b\u0438 \u0443\u0440\u043e\u0436\u0430\u0439, \u0438 \u043c\u0435\u0445\u0430\u043d\u0438\u0437\u043c\u044b \u043e\u0442\u043d\u043e\u0441\u0438\u043b\u0438 \u0435\u0433\u043e \u0432 \u044f\u0449\u0438\u043a\u0438 \u0431\u043b\u0438\u0437 \u0432\u044b\u0445\u043e\u0434\u0430. \u0422\u0430\u043a\u0438\u0435 \u043a\u043b\u0438\u043d\u043a\u0438 \u043b\u0435\u0433\u043a\u043e \u043f\u0440\u043e\u0440\u0443\u0431\u0438\u043b\u0438 \u0431\u044b \u0438 \u0431\u0440\u043e\u043d\u044e, \u0438 \u043f\u043b\u043e\u0442\u044c, \u043d\u043e \u043c\u043e\u0438 \u043b\u044e\u0434\u0438 \u0432\u0441\u0435 \u0440\u0430\u0432\u043d\u043e \u0434\u043e\u0431\u043b\u0435\u0441\u0442\u043d\u043e \u043e\u0442\u0432\u043b\u0435\u043a\u0430\u043b\u0438 \u0446\u0435\u043d\u0442\u0443\u0440\u0438\u043e\u043d\u043e\u0432, \u043f\u043e\u043a\u0430 \u044f \u0442\u0430\u0449\u0438\u043b \u043a \u0445\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0443 \u0442\u044f\u0436\u0435\u043b\u0443\u044e \u043f\u0448\u0435\u043d\u0438\u0446\u0443. \u042f \u043d\u0430\u0434\u0435\u044f\u043b\u0441\u044f, \u0447\u0442\u043e \u044d\u0442\u043e \u043e\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442 \u0442\u043e\u0442 \u0436\u0443\u0442\u043a\u0438\u0439 \u043f\u0440\u043e\u0446\u0435\u0441\u0441, \u0447\u0442\u043e \u0437\u0430\u043f\u0443\u0441\u0442\u0438\u043b\u0438 \u0437\u0434\u0435\u0441\u044c \u0434\u0432\u0435\u043c\u0435\u0440\u044b, \u0438 \u0434\u0430\u0441\u0442 \u043c\u043d\u0435 \u0434\u043e\u0441\u0442\u0443\u043f \u043a \u043e\u0441\u0442\u0430\u043b\u044c\u043d\u043e\u0439 \u0442\u0435\u0440\u0440\u0438\u0442\u043e\u0440\u0438\u0438 \u0444\u0435\u0440\u043c\u044b."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST CNAM",
+        "original": "At the center of the ruin I have encountered an enormous Dwarven machine. As the weather seems to obey it, perhaps destroying it will stop the storm.",
+        "string": "\u0412 \u0433\u043b\u0443\u0431\u0438\u043d\u0435 \u0440\u0443\u0438\u043d \u043c\u0435\u043d\u044f \u0436\u0434\u0430\u043b \u043e\u0433\u0440\u043e\u043c\u043d\u044b\u0439 \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0438\u0439 \u043c\u0435\u0445\u0430\u043d\u0438\u0437\u043c. \u041f\u043e\u0445\u043e\u0436\u0435, \u043e\u043d \u0432\u043b\u0438\u044f\u0435\u0442 \u043d\u0430 \u043f\u043e\u0433\u043e\u0434\u0443. \u0412\u043e\u0437\u043c\u043e\u0436\u043d\u043e, \u0443\u043d\u0438\u0447\u0442\u043e\u0436\u0438\u0432 \u0435\u0433\u043e, \u044f \u0441\u043c\u043e\u0433\u0443 \u043e\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u044c \u0431\u0443\u0440\u044e."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonElberrosBookSpring",
+        "type": "BOOK DESC",
+        "original": "<p align=\"left\">\n<font face='$HandwrittenFont'>Spring greeted me with a splash of color, as beautiful flowers grew everywhere. And I do mean everywhere dear reader, as they were wild and hostile, covering the floors and even a few unfortunate corpses. This horrific sight of beauty was soon ruined by the choking air. Thick, toxic pollen floated everywhere, spewed out by the various flowers. Perhaps the dwemer had allergies to surface flora, and saw Spring as nothing more than a season of suffering. While the mercenaries coughed and vomited from the effects, my strong constitution allowed me to notice strange spriggans shambling through the artificial forests. Where they passed, the buds receded, and the air was clean and breathable. Were these the tenders of the gardens, or just a consequence of its existence? Regardless, I endeavored to follow the path of the spriggans, leading me deeper into the ruins.\n",
+        "string": "<p align=\"left\">\n<font face='$HandwrittenFont'>\u0412\u0435\u0441\u043d\u0430 \u043f\u0440\u0438\u0432\u0435\u0442\u0441\u0442\u0432\u043e\u0432\u0430\u043b\u0430 \u043c\u0435\u043d\u044f \u0431\u0443\u0439\u0441\u0442\u0432\u043e\u043c \u043a\u0440\u0430\u0441\u043e\u043a \u2014 \u043f\u043e\u0432\u0441\u044e\u0434\u0443 \u0440\u043e\u0441\u043b\u0438 \u0446\u0432\u0435\u0442\u044b. \u0411\u0443\u043a\u0432\u0430\u043b\u044c\u043d\u043e \u043f\u043e\u0432\u0441\u044e\u0434\u0443, \u043b\u044e\u0431\u0435\u0437\u043d\u044b\u0439 \u0447\u0438\u0442\u0430\u0442\u0435\u043b\u044c, \u043f\u043e\u0441\u043a\u043e\u043b\u044c\u043a\u0443 \u044d\u0442\u0438 \u043a\u043e\u0432\u0430\u0440\u043d\u044b\u0435 \u0440\u0430\u0441\u0442\u0435\u043d\u0438\u044f \u043f\u043e\u043a\u0440\u044b\u0432\u0430\u043b\u0438 \u0432\u0435\u0441\u044c \u043f\u043e\u043b \u0438 \u0434\u0430\u0436\u0435 \u0442\u0435\u043b\u0430 \u043f\u0440\u0435\u0434\u044b\u0434\u0443\u0449\u0438\u0445, \u043c\u0435\u043d\u0435\u0435 \u0443\u0434\u0430\u0447\u043b\u0438\u0432\u044b\u0445 \u0438\u0441\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u0442\u0435\u043b\u0435\u0439. \u042d\u0442\u043e \u0443\u0436\u0430\u0441\u043d\u0430\u044f \u043a\u0440\u0430\u0441\u043e\u0442\u0430 \u0432\u0441\u043a\u043e\u0440\u0435 \u043f\u0435\u0440\u0435\u0441\u0442\u0430\u043b\u0430 \u0431\u044b\u0442\u044c \u0432\u0430\u0436\u043d\u043e\u0439, \u043f\u043e\u0441\u043a\u043e\u043b\u044c\u043a\u0443 \u043c\u044b \u043d\u0430\u0447\u0430\u043b\u0438 \u0437\u0430\u0434\u044b\u0445\u0430\u0442\u044c\u0441\u044f. \u041f\u043e\u0432\u0441\u044e\u0434\u0443 \u043f\u0430\u0440\u0438\u043b\u0430 \u0433\u0443\u0441\u0442\u0430\u044f \u044f\u0434\u043e\u0432\u0438\u0442\u0430\u044f \u043f\u044b\u043b\u044c\u0446\u0430, \u0438\u0441\u0442\u043e\u0447\u0430\u0435\u043c\u0430\u044f \u0440\u0430\u0441\u0442\u0435\u043d\u0438\u044f\u043c\u0438. \u0412\u043e\u0437\u043c\u043e\u0436\u043d\u043e, \u0443 \u0434\u0432\u0435\u043c\u0435\u0440\u043e\u0432 \u0431\u044b\u043b\u0430 \u0430\u043b\u043b\u0435\u0440\u0433\u0438\u044f \u043d\u0430 \u043d\u0430\u0437\u0435\u043c\u043d\u0443\u044e \u0444\u043b\u043e\u0440\u0443, \u0438 \u043e\u043d\u0438 \u0441\u0447\u0438\u0442\u0430\u043b\u0438 \u0432\u0435\u0441\u043d\u0443 \u0441\u0435\u0437\u043e\u043d\u043e\u043c \u043d\u0435\u0441\u043a\u043e\u043d\u0447\u0430\u0435\u043c\u044b\u0445 \u0441\u0442\u0440\u0430\u0434\u0430\u043d\u0438\u0439. \u041f\u043e\u043a\u0430 \u043d\u0430\u0435\u043c\u043d\u0438\u043a\u0438 \u043a\u0430\u0448\u043b\u044f\u043b\u0438 \u0438 \u0438\u0437\u0432\u0435\u0440\u0433\u0430\u043b\u0438 \u0440\u0432\u043e\u0442\u0443, \u043c\u043e\u0435 \u043a\u0440\u0435\u043f\u043a\u043e\u0435 \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u0435 \u043f\u043e\u0437\u0432\u043e\u043b\u0438\u043b\u043e \u043c\u043d\u0435 \u0437\u0430\u043c\u0435\u0442\u0438\u0442\u044c \u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0445 \u0441\u043f\u0440\u0438\u0433\u0433\u0430\u043d\u043e\u0432, \u0448\u0430\u0440\u043a\u0430\u0432\u0448\u0438\u0445 \u043f\u043e \u043b\u0435\u0441\u0443. \u0422\u0430\u043c, \u0433\u0434\u0435 \u043e\u043d\u0438 \u043f\u0440\u043e\u0445\u043e\u0434\u0438\u043b\u0438, \u043a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u0446\u0432\u0435\u0442\u043e\u0432 \u0443\u043c\u0435\u043d\u044c\u0448\u0430\u043b\u043e\u0441\u044c, \u0430 \u0432\u043e\u0437\u0434\u0443\u0445 \u0441\u0442\u0430\u043d\u043e\u0432\u0438\u043b\u0441\u044f \u0447\u0438\u0441\u0442\u044b\u043c \u0438 \u043f\u0440\u0438\u0433\u043e\u0434\u043d\u044b\u043c \u0434\u043b\u044f \u0434\u044b\u0445\u0430\u043d\u0438\u044f. \u042f\u0432\u043b\u044f\u043b\u0438\u0441\u044c \u043b\u0438 \u0441\u043f\u0440\u0438\u0433\u0433\u0430\u043d\u044b \u0445\u0440\u0430\u043d\u0438\u0442\u0435\u043b\u044f\u043c\u0438 \u044d\u0442\u0438\u0445 \u043b\u0435\u0441\u043e\u0432 \u0438\u043b\u0438 \u0438\u0445 \u043f\u043e\u0440\u043e\u0436\u0434\u0435\u043d\u0438\u0435\u043c? \u041a\u0430\u043a \u0431\u044b \u0442\u043e \u043d\u0438 \u0431\u044b\u043b\u043e, \u044f \u0440\u0438\u0441\u043a\u043d\u0443\u043b \u043f\u043e\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u0442\u044c \u0437\u0430 \u043d\u0438\u043c\u0438 \u0432\u0433\u043b\u0443\u0431\u044c \u0440\u0443\u0438\u043d.\n"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Staff02",
+        "type": "WEAP DESC",
+        "original": "Does <45> points of fire damage. Target is <50%> weaker to fire for <10> seconds.",
+        "string": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 <45> \u0435\u0434. \u0443\u0440\u043e\u043d\u0430 \u043e\u0433\u043d\u0435\u043c. \u0426\u0435\u043b\u044c \u043d\u0430 <50%> \u0443\u044f\u0437\u0432\u0438\u043c\u0435\u0435 \u043a \u0443\u0440\u043e\u043d\u0443 \u043e\u0442 \u043e\u0433\u043d\u044f \u0432 \u0442\u0435\u0447\u0435\u043d\u0438\u0435 <10> \u0441\u0435\u043a."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Staff04",
+        "type": "WEAP DESC",
+        "original": "Does <45> points of ice damage. Target is <50%> weaker to frost damage for <10> seconds.",
+        "string": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 <45> \u0435\u0434. \u043b\u0435\u0434\u044f\u043d\u043e\u0433\u043e \u0443\u0440\u043e\u043d\u0430. \u0426\u0435\u043b\u044c \u043d\u0430 <50%> \u0443\u044f\u0437\u0432\u0438\u043c\u0435\u0435 \u043a \u0443\u0440\u043e\u043d\u0443 \u0445\u043e\u043b\u043e\u0434\u043e\u043c \u0432 \u0442\u0435\u0447\u0435\u043d\u0438\u0435 <10> \u0441\u0435\u043a."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Staff03",
+        "type": "WEAP DESC",
+        "original": "Does <45> points of shock damage. Target is <50%> weaker to shock spells for the next <10> seconds.",
+        "string": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 <45> \u0435\u0434. \u0443\u0440\u043e\u043d\u0430 \u044d\u043b\u0435\u043a\u0442\u0440\u0438\u0447\u0435\u0441\u0442\u0432\u043e\u043c. \u0426\u0435\u043b\u044c \u043d\u0430 <50%> \u0443\u044f\u0437\u0432\u0438\u043c\u0435\u0435 \u043a \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u044f\u043c \u044d\u043b\u0435\u043a\u0442\u0440\u0438\u0447\u0435\u0441\u0442\u0432\u0430 \u0432 \u0442\u0435\u0447\u0435\u043d\u0438\u0435 <10> \u0441\u0435\u043a."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Staff01",
+        "type": "WEAP DESC",
+        "original": "Does <45> points of poison damage. Target is <50%> weaker to poison for the next <10> seconds.",
+        "string": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 <45> \u0435\u0434. \u0443\u0440\u043e\u043d\u0430 \u044f\u0434\u043e\u043c. \u0426\u0435\u043b\u044c \u043d\u0430 <50%> \u0443\u044f\u0437\u0432\u0438\u043c\u0435\u0435 \u043a \u044f\u0434\u0443 \u0432 \u0442\u0435\u0447\u0435\u043d\u0438\u0435 <10> \u0441\u0435\u043a."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonHorseMessageStart",
+        "type": "MESG DESC",
+        "original": "This looks like part of some sort of Dwarven Automaton Horse. It's missing all its legs and its head, but it seems like these were designed to easily fit together. Maybe there are other pieces out there.",
+        "string": "\u041f\u043e\u0445\u043e\u0436\u0435, \u044d\u0442\u043e \u0447\u0430\u0441\u0442\u044c \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u043e\u0439 \u043c\u0435\u0445\u0430\u043d\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u043b\u043e\u0448\u0430\u0434\u0438. \u0423 \u043d\u0435\u0435 \u043d\u0435\u0434\u043e\u0441\u0442\u0430\u0435\u0442 \u0432\u0441\u0435\u0445 \u043d\u043e\u0433 \u0438 \u0433\u043e\u043b\u043e\u0432\u044b, \u043d\u043e \u043f\u043e\u0445\u043e\u0436\u0435, \u0434\u0435\u0442\u0430\u043b\u0438 \u0434\u043e\u043b\u0436\u043d\u044b \u0437\u0430\u043a\u0440\u0435\u043f\u043b\u044f\u0442\u044c\u0441\u044f \u0431\u0435\u0437 \u0442\u0440\u0443\u0434\u0430. \u0412\u043e\u0437\u043c\u043e\u0436\u043d\u043e, \u043f\u043e\u0431\u043b\u0438\u0437\u043e\u0441\u0442\u0438 \u043d\u0430\u0439\u0434\u0443\u0442\u0441\u044f \u043e\u0441\u0442\u0430\u043b\u044c\u043d\u044b\u0435 \u0447\u0430\u0441\u0442\u0438."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonHorseMessageFail",
+        "type": "MESG DESC",
+        "original": "You haven't got all the pieces to rebuild the horse with.",
+        "string": "\u0423 \u0432\u0430\u0441 \u043d\u0435\u0434\u043e\u0441\u0442\u0430\u0442\u043e\u0447\u043d\u043e \u0447\u0430\u0441\u0442\u0435\u0439, \u0447\u0442\u043e\u0431\u044b \u0441\u043e\u0431\u0440\u0430\u0442\u044c \u043b\u043e\u0448\u0430\u0434\u044c."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonHorseQuest",
+        "type": "QUST CNAM",
+        "original": "I have found all the pieces of the Dwarven Horse and can now rebuild it.",
+        "string": "\u0423 \u043c\u0435\u043d\u044f \u0432\u0441\u0435 \u0447\u0430\u0441\u0442\u0438 \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u043e\u0439 \u043b\u043e\u0448\u0430\u0434\u0438. \u0422\u0435\u043f\u0435\u0440\u044c \u044f \u043c\u043e\u0433\u0443 \u0441\u043e\u0431\u0440\u0430\u0442\u044c \u0435\u0435."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonHorseQuest",
+        "type": "QUST CNAM",
+        "original": "I've found parts for what appears to be a Dwarven Horse. However, several pieces are missing from the set. Perhaps I can find the missing pieces somewhere nearby.",
+        "string": "\u041c\u043d\u0435 \u043f\u043e\u043f\u0430\u043b\u0438\u0441\u044c \u0447\u0430\u0441\u0442\u0438 \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u043e\u0439 \u043b\u043e\u0448\u0430\u0434\u0438. \u041d\u043e \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u0438\u0445 \u0447\u0430\u0441\u0442\u0435\u0439 \u043d\u0435 \u0445\u0432\u0430\u0442\u0430\u0435\u0442. \u041d\u0430\u0434\u043e \u043f\u043e\u0438\u0441\u043a\u0430\u0442\u044c \u0438\u0445 \u043f\u043e\u0431\u043b\u0438\u0437\u043e\u0441\u0442\u0438."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonHorseQuest",
+        "type": "QUST CNAM",
+        "original": "Dwarven horse startup stage.",
+        "string": "\u0414\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0430\u044f \u043b\u043e\u0448\u0430\u0434\u044c - \u043d\u0430\u0447\u0430\u043b\u044c\u043d\u044b\u0439 \u044d\u0442\u0430\u043f"
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonHorseMessageComplete",
+        "type": "MESG DESC",
+        "original": "You fit the pieces into the Dwarven Horse.",
+        "string": "\u0412\u044b \u0441\u043e\u0431\u0440\u0430\u043b\u0438 \u0438\u0437 \u0447\u0430\u0441\u0442\u0435\u0439 \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0443\u044e \u043b\u043e\u0448\u0430\u0434\u044c."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST CNAM",
+        "original": "I've heard tales of a lost Dwarven ruin southwest of Markarth. While such ruins are not uncommon in Skyrim, this one was rumored to let one control the sky itself. If my travels take me south of Rorikstead, I should keep an eye out for anything that might resemble an entrance.",
+        "string": "\u041c\u043d\u0435 \u0434\u043e\u0432\u043e\u0434\u0438\u043b\u043e\u0441\u044c \u0441\u043b\u044b\u0448\u0430\u0442\u044c \u0440\u0430\u0441\u0441\u043a\u0430\u0437\u044b \u043e \u0434\u0440\u0435\u0432\u043d\u0438\u0445 \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0438\u0445 \u0440\u0430\u0437\u0432\u0430\u043b\u0438\u043d\u0430\u0445 \u043a \u044e\u0433\u043e-\u0437\u0430\u043f\u0430\u0434\u0443 \u043e\u0442 \u041c\u0430\u0440\u043a\u0430\u0440\u0442\u0430. \u0422\u0430\u043a\u0438\u0445 \u0440\u0443\u0438\u043d \u0432 \u0421\u043a\u0430\u0439\u0440\u0438\u043c\u0435 \u043d\u0435\u043c\u0430\u043b\u043e, \u043d\u043e \u043b\u0435\u0433\u0435\u043d\u0434\u0430 \u0433\u043b\u0430\u0441\u0438\u0442, \u0447\u0442\u043e \u0432 \u044d\u0442\u0438\u0445 \u0440\u0430\u0437\u0432\u0430\u043b\u0438\u043d\u0430\u0445 \u043a\u0440\u043e\u0435\u0442\u0441\u044f \u0441\u043f\u043e\u0441\u043e\u0431 \u043f\u043e\u0432\u0435\u043b\u0435\u0432\u0430\u0442\u044c \u0441\u0430\u043c\u0438\u043c \u043d\u0435\u0431\u043e\u043c. \u0415\u0441\u043b\u0438 \u0434\u043e\u0440\u043e\u0433\u0430 \u043f\u043e\u0432\u0435\u0434\u0435\u0442 \u043c\u0435\u043d\u044f \u043a \u044e\u0433\u0443 \u043e\u0442 \u0420\u043e\u0440\u0438\u043a\u0441\u0442\u0435\u0434\u0430, \u043d\u0430\u0434\u043e \u0431\u0443\u0434\u0435\u0442 \u043f\u043e\u0438\u0441\u043a\u0430\u0442\u044c \u0432\u0445\u043e\u0434 \u0432 \u0440\u0443\u0438\u043d\u044b."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonControlRodReward",
+        "type": "WEAP DESC",
+        "original": "Calms dwarven spiders for <30> seconds.",
+        "string": "\u0423\u0441\u043f\u043e\u043a\u0430\u0438\u0432\u0430\u0435\u0442 \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0438\u0445 \u043f\u0430\u0443\u043a\u043e\u0432 \u043d\u0430 <30> \u0441\u0435\u043a."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonHorseQuest",
+        "type": "QUST CNAM",
+        "original": "I found the intact remains of a Dwarven Horse. However, several pieces were missing from the set. After investigating the ruins of Vardnknd, I was able to find the pieces and reassemble the horse.",
+        "string": "\u041c\u043d\u0435 \u043f\u043e\u043f\u0430\u043b\u0438\u0441\u044c \u0447\u0430\u0441\u0442\u0438 \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u043e\u0439 \u043b\u043e\u0448\u0430\u0434\u0438. \u041d\u043e \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u0438\u0445 \u0447\u0430\u0441\u0442\u0435\u0439 \u043d\u0435 \u0445\u0432\u0430\u0442\u0430\u043b\u043e. \u041c\u043d\u0435 \u0443\u0434\u0430\u043b\u043e\u0441\u044c \u043d\u0430\u0439\u0442\u0438 \u0438\u0445 \u0432 \u0440\u0443\u0438\u043d\u0430\u0445 \u0412\u0430\u0440\u0434\u043d\u043a\u043d\u0434\u0430 \u0438 \u0441\u043e\u0431\u0440\u0430\u0442\u044c \u043b\u043e\u0448\u0430\u0434\u044c."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonCrownQuest",
+        "type": "QUST CNAM",
+        "original": "I've found all three masks for the Dwarven Crown. If I go to a forge, I should be able to add and remove them as I see fit.",
+        "string": "\u041c\u043d\u0435 \u0443\u0434\u0430\u043b\u043e\u0441\u044c \u043d\u0430\u0439\u0442\u0438 \u0432\u0441\u0435 \u0442\u0440\u0438 \u043c\u0430\u0441\u043a\u0438 \u0434\u043b\u044f \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u043e\u0439 \u043a\u043e\u0440\u043e\u043d\u044b. \u0412 \u043a\u0443\u0437\u043d\u0438\u0446\u0435 \u044f \u0441\u043c\u043e\u0433\u0443 \u043f\u0440\u0438\u0441\u043e\u0435\u0434\u0438\u043d\u044f\u0442\u044c \u0438\u0445 \u043a \u043a\u043e\u0440\u043e\u043d\u0435 \u0438\u043b\u0438 \u0441\u043d\u0438\u043c\u0430\u0442\u044c \u0441 \u043d\u0435\u0435."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonCrownQuest",
+        "type": "QUST CNAM",
+        "original": "I've encountered a wizard wearing a strange looking Dwarven Crown. The slots in the facing suggest a separate piece can be attached.",
+        "string": "\u041c\u043d\u0435 \u043f\u043e\u0432\u0441\u0442\u0440\u0435\u0447\u0430\u043b\u0441\u044f \u0432\u043e\u043b\u0448\u0435\u0431\u043d\u0438\u043a \u0432 \u0441\u0442\u0440\u0430\u043d\u043d\u043e\u0439 \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u043e\u0439 \u043a\u043e\u0440\u043e\u043d\u0435. \u041a\u0440\u0435\u043f\u043b\u0435\u043d\u0438\u044f \u043d\u0430 \u0435\u0435 \u043f\u0435\u0440\u0435\u0434\u043d\u0435\u0439 \u0447\u0430\u0441\u0442\u0438 \u043f\u043e\u0437\u0432\u043e\u043b\u044f\u044e\u0442 \u043f\u0440\u0435\u0434\u043f\u043e\u043b\u043e\u0436\u0438\u0442\u044c, \u0447\u0442\u043e \u0442\u0443\u0434\u0430 \u0447\u0442\u043e-\u0442\u043e \u0432\u0441\u0442\u0430\u0432\u043b\u044f\u0435\u0442\u0441\u044f. "
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonCrownQuest",
+        "type": "QUST CNAM",
+        "original": "I affixed a mask to the crown. I should be able to change which mask is affixed at any forge.",
+        "string": "\u041c\u043d\u0435 \u0443\u0434\u0430\u043b\u043e\u0441\u044c \u043f\u0440\u0438\u043a\u0440\u0435\u043f\u0438\u0442\u044c \u043c\u0430\u0441\u043a\u0443 \u043a \u043a\u043e\u0440\u043e\u043d\u0435. \u042f \u0441\u043c\u043e\u0433\u0443 \u0437\u0430\u043c\u0435\u043d\u0438\u0442\u044c \u0435\u0435 \u043d\u0430 \u0434\u0440\u0443\u0433\u0443\u044e \u043c\u0430\u0441\u043a\u0443 \u0432 \u043b\u044e\u0431\u043e\u0439 \u043a\u0443\u0437\u043d\u0438\u0446\u0435."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Staffspell3",
+        "type": "SPEL DESC",
+        "original": "Brings forth a season of sun and warmth for <60> seconds.",
+        "string": "\u0412\u044b\u0437\u044b\u0432\u0430\u0435\u0442 \u0441\u0435\u0437\u043e\u043d \u0441\u043e\u043b\u043d\u0446\u0430 \u0438 \u0442\u0435\u043f\u043b\u0430 \u043d\u0430 <60> \u0441\u0435\u043a."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonControlFail",
+        "type": "MESG DESC",
+        "original": "The Control Rod only works in Vardnknd's Summer section.",
+        "string": "\u0416\u0435\u0437\u043b \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u044f \u0440\u0430\u0431\u043e\u0442\u0430\u0435\u0442 \u0442\u043e\u043b\u044c\u043a\u043e \u0432 \u043b\u0435\u0442\u043d\u0435\u0439 \u0441\u0435\u043a\u0446\u0438\u0438 \u0412\u0430\u0440\u0434\u043d\u043a\u043d\u0434\u0430."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Staffspell4",
+        "type": "SPEL DESC",
+        "original": "Brings forth a season of snow and ice for <60> seconds.",
+        "string": "\u0412\u044b\u0437\u044b\u0432\u0430\u0435\u0442 \u0441\u0435\u0437\u043e\u043d \u0441\u043d\u0435\u0433\u0430 \u0438 \u043b\u044c\u0434\u0430 \u043d\u0430 <60> \u0441\u0435\u043a."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Staffspell1",
+        "type": "SPEL DESC",
+        "original": "Brings forth a season of change and harvest for <60> seconds.",
+        "string": "\u0412\u044b\u0437\u044b\u0432\u0430\u0435\u0442 \u0441\u0435\u0437\u043e\u043d \u043f\u0435\u0440\u0435\u043c\u0435\u043d \u0438 \u0443\u0440\u043e\u0436\u0430\u044f \u043d\u0430 <60> \u0441\u0435\u043a."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeon_Staffspell2",
+        "type": "SPEL DESC",
+        "original": "Brings forth a season of growth and fertility for <60> seconds.",
+        "string": "\u0412\u044b\u0437\u044b\u0432\u0430\u0435\u0442 \u0441\u0435\u0437\u043e\u043d \u0440\u043e\u0441\u0442\u0430 \u0438 \u043f\u043b\u043e\u0434\u043e\u0440\u043e\u0434\u0438\u044f \u043d\u0430 <60> \u0441\u0435\u043a."
+    },
+    {
+        "editor_id": "ccTWBSSE001_MercNote01_RunoffCaverns",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>It's been two days since we've heard from the mage.\n\nHe told us to wait here at camp, but everyone's tired of stripping spiders for loot. The mage promised us fortune and glory, but if the fool got himself killed, none of us get paid. That's a problem.\n\nStill, I'm not sure we should leave just yet. Something about this place feels off.\nMaybe it's the air. One minute it's dry enough to crack your throat. Other times, it's wet enough to drown you. In most ruins, it's easy to lose track of time. But here, I feel like I'm losing my mind.\n\nLast night I decided to step outside and take a breath. Maybe just seeing the sun again would help me keep my wits. When I got back to camp, sweating from the heat, I told one of the other mercs she should do the same. She told me she already did, but it was too damn cold. I wasn't sure what she meant until I saw the snow on her boot.",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\u041e\u0442 \u043c\u0430\u0433\u0430 \u0443\u0436\u0435 \u0434\u0432\u0430 \u0434\u043d\u044f \u043d\u0435\u0442 \u043d\u0438\u043a\u0430\u043a\u0438\u0445 \u0432\u0435\u0441\u0442\u0435\u0439.\n\n\u041e\u043d \u0432\u0435\u043b\u0435\u043b \u043d\u0430\u043c \u0436\u0434\u0430\u0442\u044c \u0435\u0433\u043e \u0432 \u043b\u0430\u0433\u0435\u0440\u0435, \u043d\u043e \u0432\u0441\u0435\u043c \u0443\u0436\u0435 \u043d\u0430\u0434\u043e\u0435\u043b\u043e \u0440\u0435\u0437\u0430\u0442\u044c \u043f\u0430\u0443\u043a\u043e\u0432 \u0440\u0430\u0434\u0438 \u0434\u043e\u0431\u044b\u0447\u0438. \u041c\u0430\u0433 \u043e\u0431\u0435\u0449\u0430\u043b \u043d\u0430\u043c \u0441\u043b\u0430\u0432\u0443 \u0438 \u0431\u043e\u0433\u0430\u0442\u0441\u0442\u0432\u043e, \u043d\u043e \u0435\u0441\u043b\u0438 \u044d\u0442\u043e\u0442 \u043f\u0440\u0438\u0434\u0443\u0440\u043e\u043a \u0443\u043c\u0443\u0434\u0440\u0438\u043b\u0441\u044f \u043f\u043e\u0433\u0438\u0431\u043d\u0443\u0442\u044c, \u043d\u0435\u043a\u043e\u043c\u0443 \u0431\u0443\u0434\u0435\u0442 \u043d\u0430\u043c \u0437\u0430\u043f\u043b\u0430\u0442\u0438\u0442\u044c. \u0412 \u044d\u0442\u043e\u043c \u0438 \u0431\u0435\u0434\u0430.\n\n\u041d\u043e \u0432\u0441\u0435 \u0436\u0435 \u043c\u043d\u0435 \u043a\u0430\u0436\u0435\u0442\u0441\u044f, \u0447\u0442\u043e \u043d\u0435 \u0441\u0442\u043e\u0438\u0442 \u043d\u0430\u043c \u043e\u0442\u0441\u044e\u0434\u0430 \u0443\u0445\u043e\u0434\u0438\u0442\u044c. \u0427\u0442\u043e-\u0442\u043e \u0441 \u044d\u0442\u0438\u043c \u043c\u0435\u0441\u0442\u043e\u043c \u043d\u0435 \u0442\u0430\u043a.\n\u041c\u043e\u0436\u0435\u0442 \u0431\u044b\u0442\u044c, \u0432\u0441\u0435 \u0434\u0435\u043b\u043e \u0432 \u0432\u043e\u0437\u0434\u0443\u0445\u0435: \u0442\u043e \u043e\u043d \u043d\u0430\u0441\u0442\u043e\u043b\u044c\u043a\u043e \u0441\u0443\u0445\u043e\u0439, \u0447\u0442\u043e \u0433\u043b\u043e\u0442\u043a\u0430 \u043f\u0435\u0440\u0435\u0441\u044b\u0445\u0430\u0435\u0442 \u0438 \u0435\u0434\u0432\u0430 \u043d\u0435 \u0442\u0440\u0435\u0441\u043a\u0430\u0435\u0442\u0441\u044f, \u0430 \u0442\u043e \u0442\u0430\u043a\u043e\u0439 \u0432\u043b\u0430\u0436\u043d\u044b\u0439, \u0447\u0442\u043e \u043e\u0434\u0435\u0436\u0434\u0430 \u043e\u0442\u0441\u044b\u0440\u0435\u0432\u0430\u0435\u0442. \u0427\u0430\u0449\u0435 \u0432\u0441\u0435\u0433\u043e \u0432 \u0440\u0430\u0437\u0432\u0430\u043b\u0438\u043d\u0430\u0445 \u043e\u0447\u0435\u043d\u044c \u043b\u0435\u0433\u043a\u043e \u043f\u043e\u0442\u0435\u0440\u044f\u0442\u044c \u0441\u0447\u0435\u0442 \u0432\u0440\u0435\u043c\u0435\u043d\u0438. \u041d\u043e \u0437\u0434\u0435\u0441\u044c, \u043a\u0430\u043a \u043c\u043d\u0435 \u043a\u0430\u0436\u0435\u0442\u0441\u044f, \u043a\u0443\u0434\u0430 \u043f\u0440\u043e\u0449\u0435 \u043f\u043e\u0442\u0435\u0440\u044f\u0442\u044c \u0440\u0430\u0441\u0441\u0443\u0434\u043e\u043a.\n\n\u041f\u0440\u043e\u0448\u043b\u043e\u0439 \u043d\u043e\u0447\u044c\u044e \u044f \u0440\u0435\u0448\u0438\u043b \u0432\u044b\u0431\u0440\u0430\u0442\u044c\u0441\u044f \u043d\u0430\u0440\u0443\u0436\u0443 \u0438 \u043f\u0440\u043e\u0433\u0443\u043b\u044f\u0442\u044c\u0441\u044f. \u0414\u0443\u043c\u0430\u043b, \u0441\u043e\u043b\u043d\u0446\u0435 \u043f\u043e\u043c\u043e\u0436\u0435\u0442 \u043c\u043d\u0435 \u043e\u0441\u0442\u0430\u0442\u044c\u0441\u044f \u0432 \u0437\u0434\u0440\u0430\u0432\u043e\u043c \u0443\u043c\u0435. \u041a\u043e\u0433\u0434\u0430 \u044f \u0432\u0435\u0440\u043d\u0443\u043b\u0441\u044f \u0432 \u043b\u0430\u0433\u0435\u0440\u044c, \u0432\u0441\u043f\u043e\u0442\u0435\u0432 \u043e\u0442 \u0442\u0430\u043a\u043e\u0439 \u0436\u0430\u0440\u044b, \u0442\u043e \u0441\u043a\u0430\u0437\u0430\u043b \u043e\u0434\u043d\u043e\u0439 \u043d\u0430\u0435\u043c\u043d\u0438\u0446\u0435, \u0447\u0442\u043e \u0438 \u0435\u0439 \u0431\u044b \u043d\u0435 \u043f\u043e\u043c\u0435\u0448\u0430\u043b\u0430 \u043f\u0440\u043e\u0433\u0443\u043b\u043a\u0430. \u0410 \u043e\u043d\u0430 \u043e\u0442\u0432\u0435\u0442\u0438\u043b\u0430, \u0447\u0442\u043e \u0443\u0436\u0435 \u0432\u044b\u0445\u043e\u0434\u0438\u043b\u0430 \u043d\u0430\u0440\u0443\u0436\u0443, \u043d\u043e \u0442\u0430\u043c \u0446\u0430\u0440\u0438\u043b\u0430 \u043b\u044e\u0442\u0430\u044f \u0441\u0442\u0443\u0436\u0430. \u042f \u043d\u0435 \u043f\u043e\u043d\u044f\u043b, \u043e \u0447\u0435\u043c \u043e\u043d\u0430, \u043f\u043e\u043a\u0430 \u043d\u0435 \u0443\u0432\u0438\u0434\u0435\u043b \u0441\u043d\u0435\u0433 \u043d\u0430 \u0435\u0435 \u0441\u0430\u043f\u043e\u0433\u0435."
+    },
+    {
+        "editor_id": "ccTWBSSE001_MageNote02_DwarvenCrown",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>\nOne of the curiosities the mercs uncovered during their excavation was an ornate Dwarven headpiece, which I quickly deduced to be a crown.\n\nAs leader of this expedition, the responsibility of wearing said crown naturally fell to me. However, upon adorning it, I noticed the piece was incomplete. \n\nAccording to legend, the crown's boon was said to turn with the seasons, as if it were guided by the moon and stars. However, it seems the enchantments are actually tied not to the crown itself, but the masks that slot into its facing.\n \nIf memory serves me correctly, there are three masks in total. Spring, Autumn, and Winter. What became of the Summer mask, I do not know, but perhaps the Mid Year heat made it too unbearable to wear.\n",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\n\u041e\u0434\u043d\u043e\u0439 \u0438\u0437 \u0440\u0435\u0434\u043a\u043e\u0441\u0442\u0435\u0439, \u043d\u0430\u0439\u0434\u0435\u043d\u043d\u044b\u0445 \u043d\u0430\u0435\u043c\u043d\u0438\u043a\u0430\u043c\u0438 \u0432 \u0445\u043e\u0434\u0435 \u0440\u0430\u0441\u043a\u043e\u043f\u043e\u043a, \u0431\u044b\u043b\u043e \u0440\u0435\u0437\u043d\u043e\u0435 \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u043e\u0435 \u0443\u043a\u0440\u0430\u0448\u0435\u043d\u0438\u0435, \u0432 \u043a\u043e\u0442\u043e\u0440\u043e\u043c \u044f \u0441\u0440\u0430\u0437\u0443 \u0440\u0430\u0441\u043f\u043e\u0437\u043d\u0430\u043b \u043a\u043e\u0440\u043e\u043d\u0443.\n\n\u0415\u0441\u0442\u0435\u0441\u0442\u0432\u0435\u043d\u043d\u043e, \u043e\u0431\u044f\u0437\u0430\u043d\u043d\u043e\u0441\u0442\u044c \u043d\u043e\u0441\u0438\u0442\u044c \u0435\u0435 \u0434\u043e\u0441\u0442\u0430\u043b\u0430\u0441\u044c \u043c\u043d\u0435 \u043a\u0430\u043a \u043f\u0440\u0435\u0434\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044e \u044d\u043a\u0441\u043f\u0435\u0434\u0438\u0446\u0438\u0438. \u041d\u043e \u043d\u0430\u0434\u0435\u0432 \u0435\u0435, \u044f \u043f\u043e\u043d\u044f\u043b, \u0447\u0442\u043e \u043f\u0440\u0435\u0434\u043c\u0435\u0442\u0443 \u0447\u0435\u0433\u043e-\u0442\u043e \u043d\u0435\u0434\u043e\u0441\u0442\u0430\u0435\u0442. \n\n\u0421\u043e\u0433\u043b\u0430\u0441\u043d\u043e \u043b\u0435\u0433\u0435\u043d\u0434\u0435, \u043e\u0441\u043e\u0431\u0435\u043d\u043d\u044b\u0439 \u0434\u0430\u0440 \u044d\u0442\u043e\u0439 \u043a\u043e\u0440\u043e\u043d\u044b \u043c\u0435\u043d\u044f\u043b\u0441\u044f \u0432 \u0437\u0430\u0432\u0438\u0441\u0438\u043c\u043e\u0441\u0442\u0438 \u043e\u0442 \u0432\u0440\u0435\u043c\u0435\u043d\u0438 \u0433\u043e\u0434\u0430, \u0431\u0443\u0434\u0442\u043e \u0431\u044b \u043d\u0430 \u043d\u0435\u0435 \u0432\u043b\u0438\u044f\u043b\u043e \u0434\u0432\u0438\u0436\u0435\u043d\u0438\u0435 \u043b\u0443\u043d\u044b \u0438 \u0437\u0432\u0435\u0437\u0434. \u041e\u0434\u043d\u0430\u043a\u043e, \u043f\u043e\u0445\u043e\u0436\u0435, \u0437\u0430\u0447\u0430\u0440\u043e\u0432\u0430\u043d\u0438\u044f \u043d\u0430\u043b\u043e\u0436\u0435\u043d\u044b \u043d\u0435 \u043d\u0430 \u0441\u0430\u043c\u0443 \u043a\u043e\u0440\u043e\u043d\u0443, \u0430 \u043d\u0430 \u043c\u0430\u0441\u043a\u0443, \u043a\u043e\u0442\u043e\u0440\u0430\u044f \u043a\u0440\u0435\u043f\u0438\u0442\u0441\u044f \u043a \u0435\u0435 \u043e\u0431\u0440\u0443\u0447\u0443.\n\n\u0415\u0441\u043b\u0438 \u043f\u0430\u043c\u044f\u0442\u044c \u043c\u0435\u043d\u044f \u043d\u0435 \u043f\u043e\u0434\u0432\u043e\u0434\u0438\u0442, \u0432\u0441\u0435\u0433\u043e \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442 \u0442\u0440\u0438 \u043c\u0430\u0441\u043a\u0438: \u0412\u0435\u0441\u043d\u0430, \u041e\u0441\u0435\u043d\u044c \u0438 \u0417\u0438\u043c\u0430. \u041d\u0435 \u0437\u043d\u0430\u044e, \u043a\u0443\u0434\u0430 \u043f\u043e\u0434\u0435\u0432\u0430\u043b\u0430\u0441\u044c \u043c\u0430\u0441\u043a\u0430 \u041b\u0435\u0442\u0430 \u2014 \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e, \u0435\u0435 \u0431\u044b\u043b\u043e \u043d\u0435\u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e \u043d\u043e\u0441\u0438\u0442\u044c \u0432 \u0436\u0430\u0440\u0443 \u0421\u0435\u0440\u0435\u0434\u0438\u043d\u044b \u0433\u043e\u0434\u0430.\n"
+    },
+    {
+        "editor_id": "ccTWBSSE001_MercNote05_Winter",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>Two steps into winter and I can't feel my toes.\n\nNow the mage says we're gonna have to jump fifty feet into water so cold it'll crack your bones. This is all Bjorn's fault, I wanted to try the Summer room but I drew the sodding short straw.\n",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\u0412\u0441\u0435\u0433\u043e \u0434\u0432\u0430 \u0448\u0430\u0433\u0430 \u0432 \u0437\u0438\u043c\u0443, \u0438 \u0443 \u043c\u0435\u043d\u044f \u0443\u0436\u0435 \u043f\u0430\u043b\u044c\u0446\u044b \u043e\u043d\u0435\u043c\u0435\u043b\u0438 \u043e\u0442 \u0445\u043e\u043b\u043e\u0434\u0430.\n\n\u041c\u0430\u0433 \u0433\u043e\u0432\u043e\u0440\u0438\u0442, \u0447\u0442\u043e \u043d\u0430\u0434\u043e \u0441\u0438\u0433\u0430\u043d\u0443\u0442\u044c \u043d\u0430 \u043f\u044f\u0442\u044c\u0434\u0435\u0441\u044f\u0442 \u0444\u0443\u0442\u043e\u0432 \u0438 \u0432 \u0432\u043e\u0434\u0443, \u0430 \u043e\u043d\u0430 \u0442\u0430\u043a\u0430\u044f \u0445\u043e\u043b\u043e\u0434\u043d\u0430\u044f, \u0447\u0442\u043e \u0438 \u043f\u043e\u043c\u0435\u0440\u0435\u0442\u044c \u043d\u0435\u0434\u043e\u043b\u0433\u043e. \u042d\u0442\u043e \u0432\u0441\u0435 \u0438\u0437-\u0437\u0430 \u0411\u044c\u043e\u0440\u043d\u0430: \u044f \u0432\u043e\u043e\u0431\u0449\u0435 \u0445\u043e\u0442\u0435\u043b \u0438\u0434\u0442\u0438 \u0432 \u0437\u0430\u043b \u041b\u0435\u0442\u0430, \u043d\u043e \u0432\u044b\u0442\u044f\u043d\u0443\u043b \u043a\u043e\u0440\u043e\u0442\u043a\u0443\u044e \u0441\u043e\u043b\u043e\u043c\u0438\u043d\u043a\u0443, \u0431\u0443\u0434\u044c \u043e\u043d\u0430 \u043d\u0435\u043b\u0430\u0434\u043d\u0430.\n"
+    },
+    {
+        "editor_id": "ccTWBSSE001_MercNote04_Autumn",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>Mage says we have to harvest wheat and stuff it in the depositories. \n\nOnly I don't know which wheat goes in which container. Seems like the symbols on the signs and the depositories might be a clue, but they all look the same and it's making my head hurt.\n\nShor's Bones, this isn't what I signed up for. If I wanted to work on a farm I'd go back to Rorikstead. The treasure better be worth it.",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\u041c\u0430\u0433 \u0433\u043e\u0432\u043e\u0440\u0438\u0442, \u0447\u0442\u043e \u043d\u0430\u0434\u043e \u0441\u043e\u0431\u0440\u0430\u0442\u044c \u043f\u0448\u0435\u043d\u0438\u0446\u0443 \u0438 \u043f\u043e\u043c\u0435\u0441\u0442\u0438\u0442\u044c \u0435\u0435 \u0432 \u0445\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0430. \n\n\u0422\u043e\u043b\u044c\u043a\u043e \u044f \u043d\u0435 \u0437\u043d\u0430\u044e, \u043a\u0430\u043a\u0443\u044e \u043f\u0448\u0435\u043d\u0438\u0446\u0443 \u0441\u0441\u044b\u043f\u0430\u0442\u044c \u0432 \u043a\u0430\u043a\u043e\u0439 \u044f\u0449\u0438\u043a. \u041c\u043e\u0436\u0435\u0442, \u0441\u0438\u043c\u0432\u043e\u043b\u044b \u043d\u0430 \u0442\u0430\u0431\u043b\u0438\u0447\u043a\u0430\u0445 \u0438 \u043d\u0430 \u0445\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0430\u0445 \u0438 \u043f\u043e\u0434\u0441\u043a\u0430\u0437\u0430\u043b\u0438 \u0431\u044b, \u043d\u043e \u043e\u043d\u0438 \u0441\u043b\u0438\u0448\u043a\u043e\u043c \u043f\u043e\u0445\u043e\u0436\u0438, \u0438 \u0443 \u043c\u0435\u043d\u044f \u043e\u0442 \u044d\u0442\u043e\u0433\u043e \u0430\u0436 \u0433\u043e\u043b\u043e\u0432\u0430 \u0431\u043e\u043b\u0438\u0442.\n\n\u041a\u043b\u044f\u043d\u0443\u0441\u044c \u043a\u043e\u0441\u0442\u044f\u043c\u0438 \u0428\u043e\u0440\u0430, \u044f \u043d\u0430 \u0442\u0430\u043a\u043e\u0435 \u043d\u0435 \u043f\u043e\u0434\u043f\u0438\u0441\u044b\u0432\u0430\u043b\u0441\u044f. \u0415\u0441\u043b\u0438 \u0431\u044b \u044f \u0445\u043e\u0442\u0435\u043b \u043f\u0430\u0445\u0430\u0442\u044c \u043d\u0430 \u0444\u0435\u0440\u043c\u0435, \u0442\u043e \u0432\u0435\u0440\u043d\u0443\u043b\u0441\u044f \u0431\u044b \u0432 \u0420\u043e\u0440\u0438\u043a\u0441\u0442\u0435\u0434. \u041d\u0430\u0434\u0435\u044e\u0441\u044c, \u0441\u043e\u043a\u0440\u043e\u0432\u0438\u0449\u0435 \u0442\u043e\u0433\u043e \u0441\u0442\u043e\u0438\u0442."
+    },
+    {
+        "editor_id": "ccTWBSSE001_MercNote02_Spring",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>Trying to make it inside, but thick roots are barring the way.\n\nThe boss says the branches are connected to the spriggans, so stabbing one might make them flinch. But it's kind of hard to stab what you can't see.",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\u041f\u044b\u0442\u0430\u0435\u043c\u0441\u044f \u043f\u0440\u043e\u0431\u0440\u0430\u0442\u044c\u0441\u044f \u0432\u043d\u0443\u0442\u0440\u044c, \u043d\u043e \u043f\u0443\u0442\u044c \u043f\u0440\u0435\u0433\u0440\u0430\u0436\u0434\u0430\u044e\u0442 \u0442\u043e\u043b\u0441\u0442\u044b\u0435 \u043a\u043e\u0440\u043d\u0438.\n\n\u041d\u0430\u0447\u0430\u043b\u044c\u043d\u0438\u043a \u0433\u043e\u0432\u043e\u0440\u0438\u0442, \u0447\u0442\u043e \u044d\u0442\u0438 \u0432\u0435\u0442\u043a\u0438 \u2014 \u0447\u0430\u0441\u0442\u044c \u0441\u043f\u0440\u0438\u0433\u0433\u0430\u043d\u043e\u0432, \u0442\u0430\u043a \u0447\u0442\u043e \u0435\u0441\u043b\u0438 \u0442\u043a\u043d\u0443\u0442\u044c \u0432 \u0441\u043f\u0440\u0438\u0433\u0433\u0430\u043d\u0430, \u0442\u043e \u0432\u0435\u0442\u043a\u0438 \u0443\u0431\u0435\u0440\u0443\u0442\u0441\u044f \u0441 \u0434\u043e\u0440\u043e\u0433\u0438. \u041d\u043e \u0441\u043b\u043e\u0436\u043d\u043e\u0432\u0430\u0442\u043e \u0442\u043a\u043d\u0443\u0442\u044c \u0432 \u0442\u043e, \u0447\u0435\u0433\u043e \u043d\u0435 \u0432\u0438\u0434\u0438\u0448\u044c."
+    },
+    {
+        "editor_id": "ccTWBSSE001_MageNote01_Seasons",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='17'>\nI've split the mercs into groups and explained how to disable the conduits in each season, using simple words for their infinitesimally small minds. To their credit, some of them decided to take notes.\n\nIt would be easier if they simply read the account of my previous expedition. Of course, doing so would make them aware of the horrible fate that befell their predecessors.\n\nI've also told the men to be on the lookout for other curiosities, such as Dwarven insects, Dwarven mounts, and three Dwarven Crown masks we uncovered in our last foray.\n\nHowever, the main prize in this tomb of inclement weather is the Turn of the Seasons, a magical spell that legends say is cast not by the spellcaster, but by the the weather itself! \n\nOnce you read this tome and are imbued with its power, they say the rain will grant you a silver tongue, as charming as a spring romance. Summer's sweltering heat fills you with stamina when dressed in light armor, whereas winter's snow offers a boon to heavy armor wearers. Meanwhile, the clouds are a gift to hunters, their bows cutting through the autumn wind. \n\nSuch a prize must be deep within the ruins, perhaps in the chamber of the one who orchestrated this unholy sky.\n</font>",
+        "string": "<font face='$HandwrittenFont'><font size='17'>\n\u042f \u0440\u0430\u0437\u0434\u0435\u043b\u0438\u043b \u043d\u0430\u0435\u043c\u043d\u0438\u043a\u043e\u0432 \u043d\u0430 \u0433\u0440\u0443\u043f\u043f\u044b \u0438 \u043e\u0431\u044a\u044f\u0441\u043d\u0438\u043b \u0438\u043c, \u043a\u0430\u043a \u043e\u0442\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u043f\u0440\u043e\u0432\u043e\u0434\u043d\u0438\u043a\u0438 \u0434\u043b\u044f \u043a\u0430\u0436\u0434\u043e\u0433\u043e \u0432\u0440\u0435\u043c\u0435\u043d\u0438 \u0433\u043e\u0434\u0430. \u041f\u0440\u0438\u0448\u043b\u043e\u0441\u044c \u0432\u044b\u0431\u0438\u0440\u0430\u0442\u044c \u0441\u043b\u043e\u0432\u0430 \u043f\u043e\u043f\u0440\u043e\u0449\u0435, \u0447\u0442\u043e\u0431\u044b \u0438\u0445 \u043a\u0440\u043e\u0445\u043e\u0442\u043d\u044b\u0435 \u0443\u043c\u0438\u0448\u043a\u0438 \u0441\u043c\u043e\u0433\u043b\u0438 \u0445\u043e\u0442\u044c \u0447\u0442\u043e-\u0442\u043e \u043f\u043e\u043d\u044f\u0442\u044c. \u041a \u0438\u0445 \u0447\u0435\u0441\u0442\u0438, \u043a\u0442\u043e-\u0442\u043e \u0434\u0430\u0436\u0435 \u043f\u044b\u0442\u0430\u043b\u0441\u044f \u0437\u0430\u043f\u0438\u0441\u044b\u0432\u0430\u0442\u044c.\n\n\u0411\u044b\u043b\u043e \u0431\u044b \u043a\u0443\u0434\u0430 \u043f\u0440\u043e\u0449\u0435, \u0435\u0441\u043b\u0438 \u0431\u044b \u043e\u043d\u0438 \u043f\u0440\u043e\u0441\u0442\u043e \u043f\u0440\u043e\u0447\u043b\u0438 \u043e\u0442\u0447\u0435\u0442 \u043f\u0440\u0435\u0434\u044b\u0434\u0443\u0449\u0435\u0433\u043e \u043e\u0442\u0440\u044f\u0434\u0430. \u041d\u043e \u0442\u043e\u0433\u0434\u0430 \u043e\u043d\u0438 \u0443\u0437\u043d\u0430\u043b\u0438 \u0431\u044b \u043e\u0431 \u0443\u0436\u0430\u0441\u043d\u043e\u0439 \u0443\u0447\u0430\u0441\u0442\u0438, \u043a\u043e\u0442\u043e\u0440\u0430\u044f \u043f\u043e\u0441\u0442\u0438\u0433\u043b\u0430 \u0438\u0445 \u043f\u0440\u0435\u0434\u0448\u0435\u0441\u0442\u0432\u0435\u043d\u043d\u0438\u043a\u043e\u0432.\n\n\u0422\u0430\u043a\u0436\u0435 \u044f \u043f\u0440\u0438\u043a\u0430\u0437\u0430\u043b \u0438\u043c \u0433\u043b\u044f\u0434\u0435\u0442\u044c \u0432 \u043e\u0431\u0430, \u0447\u0442\u043e\u0431\u044b \u043d\u0435 \u043f\u0440\u043e\u0448\u043b\u044f\u043f\u0438\u0442\u044c \u0440\u0435\u0434\u043a\u043e\u0441\u0442\u0438, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u043c\u043e\u0433\u0443\u0442 \u043f\u043e\u043f\u0430\u0441\u0442\u044c\u0441\u044f \u043f\u043e \u043f\u0443\u0442\u0438: \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0438\u0445 \u043d\u0430\u0441\u0435\u043a\u043e\u043c\u044b\u0445, \u0435\u0437\u0434\u043e\u0432\u044b\u0445 \u0436\u0438\u0432\u043e\u0442\u043d\u044b\u0445 \u0438 \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0438\u0435 \u043c\u0430\u0441\u043a\u0438-\u043a\u043e\u0440\u043e\u043d\u044b, \u0442\u0440\u0438 \u0438\u0437 \u043a\u043e\u0442\u043e\u0440\u044b\u0445 \u043c\u044b \u043d\u0430\u0448\u043b\u0438 \u0432 \u043f\u0440\u043e\u0448\u043b\u044b\u0439 \u0440\u0430\u0437. \n\n\u041e\u0434\u043d\u0430\u043a\u043e \u0433\u043b\u0430\u0432\u043d\u043e\u0435 \u0432 \u044d\u0442\u043e\u0439 \u043d\u0435\u043d\u0430\u0441\u0442\u043d\u043e\u0439 \u0433\u0440\u043e\u0431\u043d\u0438\u0446\u0435 \u2014 \u0421\u043c\u0435\u043d\u0430 \u0441\u0435\u0437\u043e\u043d\u043e\u0432, \u043c\u0430\u0433\u0438\u0447\u0435\u0441\u043a\u043e\u0435 \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0435, \u043a\u043e\u0442\u043e\u0440\u043e\u0435, \u0441\u043e\u0433\u043b\u0430\u0441\u043d\u043e \u043b\u0435\u0433\u0435\u043d\u0434\u0430\u043c, \u043f\u0440\u0438\u043d\u0430\u0434\u043b\u0435\u0436\u0438\u0442 \u043d\u0435 \u0447\u0430\u0440\u043e\u0434\u0435\u044f\u043c, \u0430 \u0441\u0430\u043c\u043e\u0439 \u043f\u043e\u0433\u043e\u0434\u0435! \n\n\u0413\u043e\u0432\u043e\u0440\u044f\u0442, \u0447\u0442\u043e \u0435\u0441\u043b\u0438 \u043f\u0440\u043e\u0447\u0435\u0441\u0442\u044c \u044d\u0442\u0443 \u043a\u043d\u0438\u0433\u0443 \u0438 \u0432\u043f\u0438\u0442\u0430\u0442\u044c \u0435\u0435 \u043c\u043e\u0433\u0443\u0449\u0435\u0441\u0442\u0432\u043e, \u0434\u043e\u0436\u0434\u044c \u0434\u0430\u0440\u0443\u0435\u0442 \u0442\u0435\u0431\u0435 \u043b\u0435\u0433\u043a\u043e\u0441\u0442\u044c \u0440\u0435\u0447\u0438, \u043a\u043e\u0442\u043e\u0440\u043e\u0439 \u043c\u043e\u0436\u043d\u043e \u043e\u0447\u0430\u0440\u043e\u0432\u0430\u0442\u044c \u043a\u043e\u0433\u043e \u0443\u0433\u043e\u0434\u043d\u043e, \u043a\u0430\u043a \u0447\u0430\u0440\u0443\u0435\u0442 \u0432\u0435\u0441\u0435\u043d\u043d\u044f\u044f \u043f\u043e\u0433\u043e\u0434\u0430. \u041b\u0435\u0442\u043d\u044f\u044f \u0436\u0430\u0440\u0430 \u043f\u043e\u0434\u0430\u0440\u0438\u0442 \u0432\u044b\u043d\u043e\u0441\u043b\u0438\u0432\u043e\u0441\u0442\u044c \u0442\u043e\u043c\u0443, \u043a\u0442\u043e \u043d\u043e\u0441\u0438\u0442 \u043b\u0435\u0433\u043a\u0443\u044e \u0431\u0440\u043e\u043d\u044e, \u0430 \u0437\u0438\u043c\u043d\u0438\u0435 \u043c\u0435\u0442\u0435\u043b\u0438 \u043e\u0434\u0430\u0440\u044f\u0442 \u043c\u0438\u043b\u043e\u0441\u0442\u044c\u044e \u0432\u043e\u0438\u043d\u043e\u0432 \u0432 \u0442\u044f\u0436\u0435\u043b\u043e\u0439 \u0431\u0440\u043e\u043d\u0435. \u041e\u0445\u043e\u0442\u043d\u0438\u043a\u0438 \u0436\u0435 \u043f\u043e\u043b\u0443\u0447\u0430\u0442 \u0434\u0430\u0440 \u043e\u0442 \u043e\u0441\u0435\u043d\u043d\u0435\u0433\u043e \u0432\u0435\u0442\u0440\u0430, \u0438 \u0438\u0445 \u043b\u0443\u043a\u0438 \u0431\u0443\u0434\u0443\u0442 \u0431\u044b\u0441\u0442\u0440\u043e\u0441\u0442\u0440\u0435\u043b\u044c\u043d\u044b. \n\n\u0422\u0430\u043a\u043e\u0435 \u0441\u043e\u043a\u0440\u043e\u0432\u0438\u0449\u0435 \u043d\u0430\u0432\u0435\u0440\u043d\u044f\u043a\u0430 \u0445\u0440\u0430\u043d\u0438\u0442\u0441\u044f \u0432 \u0441\u0430\u043c\u043e\u043c \u0441\u0435\u0440\u0434\u0446\u0435 \u0440\u0443\u0438\u043d, \u0432\u0435\u0440\u043e\u044f\u0442\u043d\u043e, \u0432 \u043f\u043e\u043a\u043e\u044f\u0445 \u0442\u043e\u0433\u043e, \u043a\u0442\u043e \u043f\u0440\u0430\u0432\u0438\u043b \u043f\u043e\u0434 \u044d\u0442\u0438\u043c \u043d\u0435\u0447\u0435\u0441\u0442\u0438\u0432\u044b\u043c \u043d\u0435\u0431\u043e\u043c.\n</font>"
+    },
+    {
+        "editor_id": "ccTWBSSE001_MercNote03_Summer",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>The boss says we can use one of those control rods to make the metal crawlies open the way. \n\nSupposedly you just point the thing at one of those round waypoints and the spider does the rest, but I don't know how to fire the rod. I just hope I figure it out before I collapse from all this heat. I can almost smell my blood cooking.",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\u041d\u0430\u0447\u0430\u043b\u044c\u043d\u0438\u043a \u0441\u043a\u0430\u0437\u0430\u043b, \u0447\u0442\u043e \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e \u043e\u0434\u043d\u043e\u0433\u043e \u0438\u0437 \u0440\u044b\u0447\u0430\u0433\u043e\u0432 \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u044f \u043c\u043e\u0436\u043d\u043e \u0437\u0430\u0441\u0442\u0430\u0432\u0438\u0442\u044c \u043c\u0435\u0442\u0430\u043b\u043b\u0438\u0447\u0435\u0441\u043a\u0438\u0445 \u043f\u043e\u043b\u0437\u0443\u043d\u043e\u0432 \u0440\u0430\u0441\u0447\u0438\u0441\u0442\u0438\u0442\u044c \u043d\u0430\u043c \u043f\u0443\u0442\u044c. \n\n\u041f\u043e \u0438\u0434\u0435\u0435, \u0442\u044b \u043f\u0440\u043e\u0441\u0442\u043e \u043d\u0430\u0432\u043e\u0434\u0438\u0448\u044c \u044d\u0442\u0443 \u0448\u0442\u0443\u043a\u0443 \u043d\u0430 \u043e\u0434\u0438\u043d \u0438\u0437 \u043a\u0440\u0443\u0433\u043b\u044b\u0445 \u0430\u0433\u0440\u0435\u0433\u0430\u0442\u043e\u0432, \u0430 \u043f\u0430\u0443\u043a \u0434\u0435\u043b\u0430\u0435\u0442 \u0432\u0441\u0435 \u043e\u0441\u0442\u0430\u043b\u044c\u043d\u043e\u0435. \u041d\u043e \u044f \u043d\u0435 \u0437\u043d\u0430\u044e, \u043a\u0430\u043a \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u0442\u044c\u0441\u044f \u0441 \u044d\u0442\u0438\u043c \u0440\u044b\u0447\u0430\u0433\u043e\u043c. \u041d\u0430\u0434\u0435\u044e\u0441\u044c, \u0447\u0442\u043e \u0441\u0443\u043c\u0435\u044e \u0440\u0430\u0437\u043e\u0431\u0440\u0430\u0442\u044c\u0441\u044f \u0434\u043e \u0442\u043e\u0433\u043e, \u043a\u0430\u043a \u0441\u0432\u0430\u043b\u044e\u0441\u044c \u0431\u0435\u0437 \u0447\u0443\u0432\u0441\u0442\u0432 \u043e\u0442 \u0436\u0430\u0440\u044b, \u0430 \u0442\u043e \u0443 \u043c\u0435\u043d\u044f \u0443\u0436\u0435 \u043a\u0440\u043e\u0432\u044c \u0432 \u0432\u0435\u043d\u0430\u0445 \u0441\u043a\u043e\u0440\u043e \u0437\u0430\u043a\u0438\u043f\u0438\u0442."
+    },
+    {
+        "editor_id": "DLCDwarvenPuzzleDungeonQuest01",
+        "type": "QUST CNAM",
+        "original": "I discovered a journal on the mage's body. I should inspect it to learn more about what lies ahead in these strange ruins.",
+        "string": "\u041d\u0430 \u0442\u0435\u043b\u0435 \u043c\u0430\u0433\u0430 \u043d\u0430\u0448\u0435\u043b\u0441\u044f \u0434\u043d\u0435\u0432\u043d\u0438\u043a. \u041d\u0430\u0434\u043e \u043f\u0440\u043e\u0447\u0435\u0441\u0442\u044c \u0435\u0433\u043e, \u0447\u0442\u043e\u0431\u044b \u0443\u0437\u043d\u0430\u0442\u044c, \u0447\u0442\u043e \u0442\u0430\u0438\u0442\u0441\u044f \u0432 \u044d\u0442\u0438\u0445 \u0440\u0443\u0438\u043d\u0430\u0445."
+    },
+    {
+        "editor_id": "ccTWBSSE001_MercNote06_DwarvenBugNote",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>With spring comes pollen, mold, and the specter of disease. The Dwemer knew this as well, and took steps to counter it.\n\nIf you spot a Dwarven Drone Fly buzzing about, good! You're already leagues ahead of the average mercenary, being both literate and attentive. \n\nSimply toss one in the air and these miniature metal insects will aerate the space around you, granting you resistance to poison and improving your stamina. As an added bonus, they'll also alleviate you of any excuses should you feel the need to turn back.",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\u0412\u0435\u0441\u043d\u0430 \u043f\u0440\u0438\u043d\u043e\u0441\u0438\u0442 \u0441 \u0441\u043e\u0431\u043e\u0439 \u043f\u044b\u043b\u044c\u0446\u0443, \u0441\u044b\u0440\u043e\u0441\u0442\u044c \u0438 \u0432\u0441\u0435\u0432\u043e\u0437\u043c\u043e\u0436\u043d\u044b\u0435 \u0431\u043e\u043b\u0435\u0437\u043d\u0438. \u0414\u0432\u0435\u043c\u0435\u0440\u044b \u0442\u043e\u0436\u0435 \u044d\u0442\u043e \u0437\u043d\u0430\u043b\u0438 \u0438 \u043f\u043e\u0441\u0442\u0430\u0440\u0430\u043b\u0438\u0441\u044c \u044d\u0442\u043e \u043f\u0440\u0435\u0434\u043e\u0442\u0432\u0440\u0430\u0442\u0438\u0442\u044c.\n\n\u0415\u0441\u043b\u0438 \u0432\u044b \u0437\u0430\u043c\u0435\u0442\u0438\u0442\u0435 \u0436\u0443\u0436\u0436\u0430\u0449\u0443\u044e \u043f\u043e\u0431\u043b\u0438\u0437\u043e\u0441\u0442\u0438 \u0434\u0432\u0435\u043c\u0435\u0440\u0441\u043a\u0443\u044e \u043c\u0443\u0445\u0443-\u0434\u0440\u043e\u043d\u0430, \u043e\u0442\u043b\u0438\u0447\u043d\u043e! \u042d\u0442\u043e \u0437\u043d\u0430\u0447\u0438\u0442, \u0447\u0442\u043e \u0432\u044b \u043d\u0430 \u0433\u043e\u043b\u043e\u0432\u0443 \u0432\u044b\u0448\u0435 \u0441\u0440\u0435\u0434\u043d\u0435\u0433\u043e \u043d\u0430\u0435\u043c\u043d\u0438\u043a\u0430, \u043f\u043e\u0441\u043a\u043e\u043b\u044c\u043a\u0443 \u043d\u0435 \u0442\u043e\u043b\u044c\u043a\u043e \u0433\u0440\u0430\u043c\u043e\u0442\u043d\u044b, \u043d\u043e \u0438 \u0432\u043d\u0438\u043c\u0430\u0442\u0435\u043b\u044c\u043d\u044b. \n\n\u041f\u043e\u0434\u0431\u0440\u043e\u0441\u044c\u0442\u0435 \u0442\u0430\u043a\u0443\u044e \u0432 \u0432\u043e\u0437\u0434\u0443\u0445, \u0438 \u043a\u0440\u043e\u0445\u043e\u0442\u043d\u044b\u0435 \u043c\u0435\u0442\u0430\u043b\u043b\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u043d\u0430\u0441\u0435\u043a\u043e\u043c\u044b\u0435 \u043e\u0447\u0438\u0441\u0442\u044f\u0442 \u0432\u043e\u0437\u0434\u0443\u0445 \u0432\u043e\u043a\u0440\u0443\u0433 \u0432\u0430\u0441, \u043f\u043e\u0432\u044b\u0448\u0430\u044f \u0432\u0430\u0448\u0443 \u0441\u043e\u043f\u0440\u043e\u0442\u0438\u0432\u043b\u044f\u0435\u043c\u043e\u0441\u0442\u044c \u044f\u0434\u0430\u043c \u0438 \u0437\u0430\u043f\u0430\u0441 \u0441\u0438\u043b. \u041a\u0440\u043e\u043c\u0435 \u0442\u043e\u0433\u043e, \u043e\u043d\u0438 \u043d\u0435 \u0434\u0430\u0434\u0443\u0442 \u0432\u0430\u043c \u043f\u0440\u0435\u0434\u043b\u043e\u0433\u0430 \u0434\u043b\u044f \u0442\u043e\u0433\u043e, \u0447\u0442\u043e\u0431\u044b \u043f\u043e\u0432\u0435\u0440\u043d\u0443\u0442\u044c \u043e\u0431\u0440\u0430\u0442\u043d\u043e."
+    },
+    {
+        "editor_id": "ccTWBSSE001_SeasonsPerk",
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\n",
+        "string": "<font face='$HandwrittenFont'><font size='40'><p align='center'>\n"
+    }
+]

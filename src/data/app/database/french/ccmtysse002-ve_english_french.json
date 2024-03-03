@@ -1,0 +1,488 @@
+[
+    {
+        "editor_id": "ccMTYSSE002_ArmorVigilCorruptedBoots",
+        "type": "ARMO FULL",
+        "original": "Vigil Corrupted Boots",
+        "string": "Bottes corrompues de Vigile"
+    },
+    {
+        "editor_id": "ccMTYSSE002_ArmorVigilCorruptedFullHelmet",
+        "type": "ARMO FULL",
+        "original": "Vigil Corrupted Helmet",
+        "string": "Casque corrompu de Vigile"
+    },
+    {
+        "editor_id": "ccMTYSSE002_ArmorSilverHandHelmet",
+        "type": "ARMO FULL",
+        "original": "Vigil Silver Hand Helmet",
+        "string": "Casque de la Main d'argent de Vigile"
+    },
+    {
+        "editor_id": "ccMTYSSE002_ArmorSilverHandCuirass",
+        "type": "ARMO FULL",
+        "original": "Vigil Silver Hand Armor",
+        "string": "Armure de la Main d'argent de Vigile"
+    },
+    {
+        "editor_id": "ccMTYSSE002_ArmorVigilEnforcerGauntlets",
+        "type": "ARMO FULL",
+        "original": "Vigil Enforcer Gauntlets",
+        "string": "Gantelets de Vigile ex\u00e9cuteur"
+    },
+    {
+        "editor_id": "ccMTYSSE002_ArmorVigilEnforcerHelmet",
+        "type": "ARMO FULL",
+        "original": "Vigil Enforcer Helmet",
+        "string": "Casque de Vigile ex\u00e9cuteur"
+    },
+    {
+        "editor_id": "ccMTYSSE002_ArmorSilverHandGauntlets",
+        "type": "ARMO FULL",
+        "original": "Vigil Silver Hand Gauntlets",
+        "string": "Gantelets de la Main d'argent de Vigile"
+    },
+    {
+        "editor_id": "ccMTYSSE002_ArmorVigilVeteranBoots",
+        "type": "ARMO FULL",
+        "original": "Vigil Veteran Boots",
+        "string": "Bottes de Vigile v\u00e9t\u00e9ran"
+    },
+    {
+        "editor_id": "ccMTYSSE002_ArmorVigilVeteranFullHelmet",
+        "type": "ARMO FULL",
+        "original": "Vigil Veteran Helmet",
+        "string": "Casque de Vigile v\u00e9t\u00e9ran"
+    },
+    {
+        "editor_id": "ccMTYSSE002_ArmorVigilCorruptedCuirass",
+        "type": "ARMO FULL",
+        "original": "Vigil Corrupted Armor",
+        "string": "Armure corrompue de Vigile"
+    },
+    {
+        "editor_id": "ccMTYSSE002_ArmorVigilEnforcerBoots",
+        "type": "ARMO FULL",
+        "original": "Vigil Enforcer Boots",
+        "string": "Bottes de Vigile ex\u00e9cuteur"
+    },
+    {
+        "editor_id": "ccMTYSSE002_ArmorVigilCorruptedSashCuirass",
+        "type": "ARMO FULL",
+        "original": "Vigil Corrupted Sashed Armor",
+        "string": "Armure \u00e0 embl\u00e8me de Vigile corrompue"
+    },
+    {
+        "editor_id": "ccMTYSSE002_ArmorVigilCorruptedHelmet",
+        "type": "ARMO FULL",
+        "original": "Vigil Corrupted Open Helmet",
+        "string": "Casque ouvert corrompu de Vigile"
+    },
+    {
+        "editor_id": "ccMTYSSE002_Chest",
+        "type": "CONT FULL",
+        "original": "Vigil Enforcer Chest",
+        "string": "Coffre de Vigile ex\u00e9cuteur"
+    },
+    {
+        "editor_id": "ccMTYSSE002_ArmorVigilVeteranGauntlets",
+        "type": "ARMO FULL",
+        "original": "Vigil Veteran Gauntlets",
+        "string": "Gantelets de Vigile v\u00e9t\u00e9ran"
+    },
+    {
+        "editor_id": "ccMTYSSE002_ArmorVigilVeteranSashCuirass",
+        "type": "ARMO FULL",
+        "original": "Vigil Veteran Sashed Armor",
+        "string": "Armure \u00e0 embl\u00e8me de Vigile v\u00e9t\u00e9ran"
+    },
+    {
+        "editor_id": "ccMTYSSE002_ArmorVigilVeteranCuirass",
+        "type": "ARMO FULL",
+        "original": "Vigil Veteran Armor",
+        "string": "Armure de Vigile v\u00e9t\u00e9ran"
+    },
+    {
+        "editor_id": "ccMTYSSE002_ArmorVigilVeteranHelmet",
+        "type": "ARMO FULL",
+        "original": "Vigil Veteran Open Helmet",
+        "string": "Casque ouvert de Vigile v\u00e9t\u00e9ran"
+    },
+    {
+        "editor_id": "ccMTYSSE002_ArmorVigilEnforcerCuirass",
+        "type": "ARMO FULL",
+        "original": "Vigil Enforcer Armor",
+        "string": "Armure de Vigile ex\u00e9cuteur"
+    },
+    {
+        "editor_id": "ccMTYSSE002_ArmorSilverHandBoots",
+        "type": "ARMO FULL",
+        "original": "Vigil Silver Hand Boots",
+        "string": "Bottes de la Main d'argent de Vigile"
+    },
+    {
+        "editor_id": "ccMTYSSE002_ArmorVigilCorruptedGauntlets",
+        "type": "ARMO FULL",
+        "original": "Vigil Corrupted Gauntlets",
+        "string": "Gantelets corrompus de Vigile"
+    },
+    {
+        "editor_id": "ccMTYSSE002_BookGalurRithali",
+        "type": "BOOK FULL",
+        "original": "Galur Rithari's Papers",
+        "string": "Papiers de Galur Rithari"
+    },
+    {
+        "editor_id": "ccMTYSSE002_Quest",
+        "type": "QUST NNAM",
+        "original": "Read Azarain's Journal",
+        "string": "Lisez le journal d'Azarain"
+    },
+    {
+        "editor_id": "ccMTYSSE002_Quest",
+        "type": "QUST NNAM",
+        "original": "Search for the Vigilant at the Windpeak Inn",
+        "string": "Cherchez le Vigile \u00e0 l'auberge Montvent"
+    },
+    {
+        "editor_id": "ccMTYSSE002_Quest",
+        "type": "QUST NNAM",
+        "original": "Escape Irine's detection",
+        "string": "\u00c9chappez \u00e0 la d\u00e9tection d'Irine"
+    },
+    {
+        "editor_id": "ccMTYSSE002_Quest",
+        "type": "QUST NNAM",
+        "original": "Destroy the Daedric cult",
+        "string": "D\u00e9truisez le culte daedra"
+    },
+    {
+        "editor_id": "ccMTYSSE002_Quest",
+        "type": "QUST NNAM",
+        "original": "Investigate the Windward Ruins",
+        "string": "Inspectez les ruines de Folvent"
+    },
+    {
+        "editor_id": "ccMTYSSE002_DLC1RadiantDisguisedVampireBard",
+        "type": "NPC_ FULL",
+        "original": "Vampire Thrall",
+        "string": "Esclave vampirique"
+    },
+    {
+        "editor_id": "ccMTYSSE002_Quest",
+        "type": "QUST NNAM",
+        "original": "Investigate the Hall of the Vigilant",
+        "string": "Inspectez le Bastion des Vigiles"
+    },
+    {
+        "editor_id": "ccMTYSSE002_Quest",
+        "type": "QUST NNAM",
+        "original": "Find the cult of Daedra worshippers",
+        "string": "Trouvez le lieu de culte des adorateurs daedra"
+    },
+    {
+        "editor_id": "ccMTYSSE002_DLC1RadiantDisguisedVampireMerchant",
+        "type": "NPC_ FULL",
+        "original": "Vampire Thrall",
+        "string": "Esclave vampirique"
+    },
+    {
+        "editor_id": "ccMTYSSE002_Quest",
+        "type": "QUST FULL",
+        "original": "Unholy Vigil",
+        "string": "Vigile impie"
+    },
+    {
+        "editor_id": "ccMTYSSE002_Journal01",
+        "type": "BOOK FULL",
+        "original": "Azarain's Journal",
+        "string": "Journal d'Azarain"
+    },
+    {
+        "editor_id": "ccMTYSSE002_Journal02",
+        "type": "BOOK FULL",
+        "original": "Fenrik's Journal",
+        "string": "Journal de Fenrik"
+    },
+    {
+        "editor_id": "ccMTYSSE002_Quest",
+        "type": "QUST NNAM",
+        "original": "(Optional) Trail Harald at night",
+        "string": "(Optionnel) Suivez Harald de nuit"
+    },
+    {
+        "editor_id": "ccMTYSSE002_Quest",
+        "type": "QUST NNAM",
+        "original": "(Optional) Check the suspects' pockets for suspicious items",
+        "string": "(Optionnel) Fouillez les poches du suspect \u00e0 la recherche de l'arme du crime"
+    },
+    {
+        "editor_id": "ccMTYSSE002_Quest",
+        "type": "QUST NNAM",
+        "original": "Escape Vereth's detection",
+        "string": "\u00c9chappez \u00e0 la d\u00e9tection de Vereth"
+    },
+    {
+        "editor_id": "ccMTYSSE002_Quest",
+        "type": "QUST NNAM",
+        "original": "Escape Harald's detection",
+        "string": "\u00c9chappez \u00e0 la d\u00e9tection de Harald"
+    },
+    {
+        "editor_id": "ccMTYSSE002_Quest",
+        "type": "QUST NNAM",
+        "original": "Search Harald's body for clues",
+        "string": "Fouillez le corps de Harald pour trouver des indices"
+    },
+    {
+        "editor_id": "ccMTYSSE002_ElvenDagger",
+        "type": "MISC FULL",
+        "original": "Elven Dagger",
+        "string": "Dague elfique"
+    },
+    {
+        "editor_id": "ccMTYSSE002_Letter03",
+        "type": "BOOK FULL",
+        "original": "Miner's Note",
+        "string": "Note du mineur"
+    },
+    {
+        "editor_id": "ccMTYSSE002_Quest",
+        "type": "QUST NNAM",
+        "original": "(Optional) Trail Irine at night",
+        "string": "(Optionnel) Suivez Irine de nuit"
+    },
+    {
+        "editor_id": "ccMTYSSE002_Quest",
+        "type": "QUST NNAM",
+        "original": "Read the Miner's Note",
+        "string": "Lisez la note du mineur"
+    },
+    {
+        "editor_id": "ccMTYSSE002_Quest",
+        "type": "QUST NNAM",
+        "original": "(Optional) Trail Vereth at night",
+        "string": "(Optionnel) Suivez Vereth de nuit"
+    },
+    {
+        "editor_id": "ccMTYSSE002_Letter02",
+        "type": "BOOK FULL",
+        "original": "Mysterious Note",
+        "string": "Note myst\u00e9rieuse"
+    },
+    {
+        "editor_id": "ccMTYSSE002MoveSuspectTrigger",
+        "type": "ACTI FULL",
+        "original": "Move Suspect Trigger",
+        "string": "D\u00e9clencheur d\u00e9placement suspect"
+    },
+    {
+        "editor_id": "ccMTYSSE002_Enforcer",
+        "type": "NPC_ FULL",
+        "original": "Vigilant Enforcer",
+        "string": "Vigile ex\u00e9cuteur"
+    },
+    {
+        "editor_id": "ccMTYSSE002_Letter01",
+        "type": "BOOK FULL",
+        "original": "Letter to Keeper Carcette",
+        "string": "Lettre \u00e0 Carcette la gardienne"
+    },
+    {
+        "editor_id": "ccMTYSSE002_DLC1RadiantDisguisedVampirePilgrim",
+        "type": "NPC_ FULL",
+        "original": "Vampire Thrall",
+        "string": "Esclave vampirique"
+    },
+    {
+        "editor_id": "ccMTYSSE002_ElvenDaggerBloody",
+        "type": "WEAP FULL",
+        "original": "Elven Dagger",
+        "string": "Dague elfique"
+    },
+    {
+        "editor_id": "ccMTYSSE002_Letter04",
+        "type": "BOOK FULL",
+        "original": "Notes on Dissection",
+        "string": "Notes sur la dissection"
+    },
+    {
+        "editor_id": "Tamriel",
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Bordeciel"
+    },
+    {
+        "editor_id": "DawnstarQuicksilverMine",
+        "type": "CELL FULL",
+        "original": "Quicksilver Mine",
+        "string": "Mine Vif-argent"
+    },
+    {
+        "editor_id": "DawnstarMortarandPestle",
+        "type": "CELL FULL",
+        "original": "The Mortar and Pestle",
+        "string": "La Panac\u00e9e"
+    },
+    {
+        "editor_id": "HallOfTheVigilant01",
+        "type": "CELL FULL",
+        "original": "Hall of the Vigilant",
+        "string": "Bastion des Vigiles"
+    },
+    {
+        "editor_id": "DawnstarWindpeakInn",
+        "type": "CELL FULL",
+        "original": "Windpeak Inn",
+        "string": "Auberge Montvent"
+    },
+    {
+        "editor_id": "ccMTYSSE002_VE_Message03",
+        "type": "MESG DESC",
+        "original": "Vereth notices you following him.",
+        "string": "Vereth remarque que vous le suivez."
+    },
+    {
+        "editor_id": "ccMTYSSE002_VE_Message01",
+        "type": "MESG DESC",
+        "original": "Harald notices you following him.",
+        "string": "Harald remarque que vous le suivez."
+    },
+    {
+        "editor_id": "ccMTYSSE002_Quest",
+        "type": "QUST CNAM",
+        "original": "A Vigilant of Stendarr has been investigating the disappearance of his fellow members. During his investigation, he was given a note to meet at the Windward Ruins. Unfortunately, he was murdered at the site. His journal, however, may offer more clues on what happened to him.",
+        "string": "Un Vigile de Stendarr enqu\u00eatait sur la disparition de ses confr\u00e8res. Au cours de ses investigations, il re\u00e7ut un message lui demandant de se rendre aux ruines de Folvent pour y rencontrer quelqu'un. Malheureusement il s'est fait assassiner peu apr\u00e8s \u00eatre arriv\u00e9 sur place. Mais son journal permettra peut-\u00eatre de d\u00e9couvrir ce qui lui est arriv\u00e9."
+    },
+    {
+        "editor_id": "ccMTYSSE002_VE_Message05",
+        "type": "MESG DESC",
+        "original": "Irine lost sight of you.",
+        "string": "Irine vous a perdu de vue."
+    },
+    {
+        "editor_id": "ccMTYSSE002_VE_Message04",
+        "type": "MESG DESC",
+        "original": "Harald lost sight of you.",
+        "string": "Harald vous a perdu de vue."
+    },
+    {
+        "editor_id": "ccMTYSSE002_Quest",
+        "type": "QUST CNAM",
+        "original": "A Vigilant of Stendarr has been investigating the disappearance of his fellow members, and identified three potential suspects that may be involved. After some investigation, I found the location of their place of worship, behind a secret door in the Quicksilver Mine. ",
+        "string": "Un Vigile de Stendarr enqu\u00eatait sur la disparition de ses confr\u00e8res, et avait r\u00e9ussi \u00e0 identifier trois suspects potentiels qui pourraient \u00eatre impliqu\u00e9s dans cette affaire. \u00c0 l'issue d'une courte investigation, j'ai d\u00e9couvert l'emplacement de leur lieu de culte, derri\u00e8re une porte secr\u00e8te dans la mine Vif-argent. "
+    },
+    {
+        "editor_id": "ccMTYSSE002_Letter02",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>Meet me at the Windward Ruins tonight. I have information.\n\nCome alone.</font>",
+        "string": "<font face='$HandwrittenFont'>Retrouve-moi ce soir aux ruines de Folvent. J'ai des informations.\n\nViens seul.</font>"
+    },
+    {
+        "editor_id": "ccMTYSSE002_Journal02",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">Azarain once told me I was the strongest warrior in all of Tamriel. But that is a lie.\n\nA strong man would have ended his life long ago. He would have delivered Stendarr's justice upon his soul. I am weak man, and so, I live.\n\nThe Vigil teaches us that vampires are an abomination, to be destroyed without mercy. But in my cowardice I began to entertain the blasphemous, that vampirism had a cure. \n\nNever has the subject been broached by the Keepers. After all, the very idea that these creatures were capable of salvation would threaten the principles of the order. So to learn more, I sought the aid of the very monster I have sworn to oppose. \n\nMolag Bal's price was steep. I was to gather thralls and build an altar deep in the mines of Dawnstar, for purposes that would only become clearer as the nights went on. To that shrine I was to sacrifice the lives of nine of my brothers and sisters, one for each divine. \n\nAt times my resolve has wavered, but the Prince has offered proof in the form of Galur Rithari. His excerpts prove that a cure exists, through a dream of being \"sliced by thousands of tiny knives from my bowels inside out.\" As the town speaks of nightmares and the presence of Vaermina, I now see why Dawnstar was chosen for this unholy vigil.\n\nWith only three sacrifices left, the ritual is almost complete. No doubt Azarain will see this as treachery, which is why I cannot bring myself to sacrifice him. But with every Vigil that dies at our hand, it only calcifies my resolve. The weakness of my mind does not betray the strength of my will.\n\nFor all my cowardice, I am worth the souls of a dozen men. If I rejoin the Vigil, more lives will be saved in the end. \n\nPerhaps when the accounting is done, Stendarr will show me mercy. </font>",
+        "string": "<font face=\"$HandwrittenFont\">Azarain m'a dit un jour que j'\u00e9tais le guerrier le plus fort de tout Tamriel. Mais c'\u00e9tait un mensonge.\n\nUn homme fort aurait mis fin \u00e0 ses jours il y a bien longtemps. Il aurait rendu la justice de Stendarr sur son \u00e2me. Je suis faible, et c'est pourquoi je suis toujours en vie.\n\nLes Vigiles nous apprennent que les vampires sont des abominations qu'il faut \u00e9radiquer sans la moindre piti\u00e9. Mais dans ma l\u00e2chet\u00e9, j'ai commenc\u00e9 \u00e0 caresser l'id\u00e9e blasph\u00e9matoire selon laquelle il serait possible de soigner le vampirisme. \n\nJamais les gardiens n'ont \u00e9voqu\u00e9 ce sujet. Apr\u00e8s tout, la simple id\u00e9e que ces cr\u00e9atures pourraient \u00eatre sauv\u00e9es menace les fondations m\u00eames de notre ordre. C'est pourquoi, pour en apprendre plus, je me suis tourn\u00e9 vers les monstres que j'avais jur\u00e9 de d\u00e9truire. \n\nLe prix \u00e0 payer demand\u00e9 par Molag Bal \u00e9tait \u00e9lev\u00e9. Je devais rassembler des esclaves et construire un autel au plus profond des mines d'Aub\u00e9toile, dans un but qui allait devenir de plus en plus apparent au fur et \u00e0 mesure que les nuits passaient. Je devais sacrifier les vies de neuf de mes fr\u00e8res et soeurs sur cet autel, une pour chaque divinit\u00e9. \n\nLe courage de mener ma t\u00e2che \u00e0 bien faillit me manquer \u00e0 plusieurs reprises, mais le prince m'offrit la preuve de ses dires en la personne de Galur Rithari. Les extraits que j'en lus prouvent qu'il est possible d'en gu\u00e9rir, par l'interm\u00e9diaire d'un r\u00eave au cours duquel la personne croit \"que des milliers de minuscules poignards lui lac\u00e8rent la chair depuis l'int\u00e9rieur des entrailles et cherchent \u00e0 s'extraire de son corps.\" Alors que la ville ne parle que des cauchemars et de la pr\u00e9sence de Vaermina, je comprends d\u00e9sormais pourquoi Aub\u00e9toile fut choisie pour cette veille impie.\n\nLe rituel touche bient\u00f4t \u00e0 sa fin\u00a0; il ne me reste plus que trois sacrifices \u00e0 accomplir. Azarain me prendra s\u00fbrement pour un tra\u00eetre, et pour cette raison je ne peux me r\u00e9soudre \u00e0 le sacrifier. Mais chaque vigile qui meurt de ma main ne fait que renforcer ma conviction. La faiblesse de mon esprit ne trahit pas la force de ma volont\u00e9.\n\nEn d\u00e9pit de ma l\u00e2chet\u00e9, mon \u00e2me vaut celle d'une douzaine d'hommes. Si je rejoins les Vigiles, nous parviendrons \u00e0 sauver des milliers de vie. \n\nPeut-\u00eatre, quand viendra l'heure des comptes, Stendarr fera preuve de mis\u00e9ricorde envers moi. </font>"
+    },
+    {
+        "editor_id": "ccMTYSSE002_Quest",
+        "type": "QUST CNAM",
+        "original": "A Vigilant of Stendarr has been investigating the disappearance of his fellow members, and identified three potential suspects that may be involved. I tracked one down and killed him. While he can no longer lead me to their place of worship, his body may offer some clues as to where that might be.",
+        "string": "Un Vigile de Stendarr enqu\u00eatait sur la disparition de ses confr\u00e8res, et avait r\u00e9ussi \u00e0 identifier trois suspects potentiels qui pourraient \u00eatre impliqu\u00e9s dans cette affaire. J'ai remont\u00e9 la piste menant \u00e0 l'un d'entre eux et je l'ai tu\u00e9. Bien qu'il ne puisse plus me conduire jusqu'\u00e0 leur lieu de culte, son corps contient peut-\u00eatre des indices me permettant de d\u00e9couvrir son emplacement."
+    },
+    {
+        "editor_id": "ccMTYSSE002_Letter01",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\nCarcette,\n\nI've received your letter about the sudden disappearance of our patrols in the Pale. The news is troubling for sure. My old partner Fenrik was among them, and he was not only a Vigil Enforcer, but the finest warrior I knew. For him to be missing is no small thing, but perhaps fate has conspired for these events to happen, so that I may repay the life debt I owe him. \n\nI will leave for Dawnstar in the morning and take a room at the inn. If I learn anything, you will be the first to know.\n\nStendarr's mercy be with you,\nAzarain\n</font>",
+        "string": "<font face='$HandwrittenFont'>\nCarcette,\n\nJ'ai bien re\u00e7u ta lettre m'informant de la disparition soudaine de nos patrouilles dans le Clos. Ce sont en effet des nouvelles troublantes. Mon vieux camarade Fenrik se trouvait parmi eux, et non content d'\u00eatre un ex\u00e9cuteur, il \u00e9tait \u00e9galement le meilleur guerrier que j'ai jamais connu. Sa disparition n'a donc rien d'anodin, mais peut-\u00eatre s'agit-il d'un tour du destin pour me permettre de m'acquitter de la dette \u00e9ternelle que j'ai envers lui. \n\nJe compte partir demain matin pour Aub\u00e9toile et prendre une chambre \u00e0 l'auberge. Si j'apprends quoi que ce soit, tu seras la premi\u00e8re inform\u00e9e.\n\nQue la mis\u00e9ricorde de Stendarr soit avec toi,\nAzarain\n</font>"
+    },
+    {
+        "editor_id": "ccMTYSSE002_Quest",
+        "type": "QUST CNAM",
+        "original": "A Vigilant of Stendarr has been investigating the disappearance of his fellow members. During his investigation, he was given a note to meet at the Windward Ruins. Unfortunately, he was murdered at the site. His journal, however, provides clues on three potential suspects. Following them may lead me to the location of this cult.",
+        "string": "Un Vigile de Stendarr enqu\u00eatait sur la disparition de ses confr\u00e8res. Au cours de ses investigations, il re\u00e7ut un message lui demandant de se rendre aux ruines de Folvent pour y rencontrer quelqu'un. Malheureusement il s'est fait assassiner peu apr\u00e8s \u00eatre arriv\u00e9 sur place. Mais son journal contenait des indices me permettant d'identifier trois suspects potentiels. Si je les suis, ils me guideront peut-\u00eatre jusqu'\u00e0 l'emplacement de ce culte."
+    },
+    {
+        "editor_id": "ccMTYSSE002_Quest",
+        "type": "QUST CNAM",
+        "original": "A Vigilant of Stendarr has been investigating the disappearance of his fellow members, and identified three potential suspects that may be involved. I tracked one down and killed him. While he can no longer lead me to their place of worship, on his body was a note that may offer more information.",
+        "string": "Un Vigile de Stendarr enqu\u00eatait sur la disparition de ses confr\u00e8res, et avait r\u00e9ussi \u00e0 identifier trois suspects potentiels qui pourraient \u00eatre impliqu\u00e9s dans cette affaire. J'ai remont\u00e9 la piste menant \u00e0 l'un d'entre eux et je l'ai tu\u00e9. Bien qu'il ne puisse plus me conduire jusqu'\u00e0 leur lieu de culte, j'ai trouv\u00e9 un message en le fouillant qui contient peut-\u00eatre plus d'informations."
+    },
+    {
+        "editor_id": "ccMTYSSE002_VE_Message02",
+        "type": "MESG DESC",
+        "original": "Irine notices you following her.",
+        "string": "Irine remarque que vous la suivez."
+    },
+    {
+        "editor_id": "ccMTYSSE002_Quest",
+        "type": "QUST CNAM",
+        "original": "A Vigilant of Stendarr has been investigating the disappearance of his fellow members, and identified three potential suspects that may be involved. After some research, I found the location of their place of worship, behind a secret door in the Quicksilver Mine. I cleared the mine of all cult members, bringing an end to the investigation.",
+        "string": "Un Vigile de Stendarr enqu\u00eatait sur la disparition de ses confr\u00e8res, et avait r\u00e9ussi \u00e0 identifier trois suspects potentiels qui pourraient \u00eatre impliqu\u00e9s dans cette affaire. \u00c0 l'issue d'une courte investigation, j'ai d\u00e9couvert l'emplacement de leur lieu de culte, derri\u00e8re une porte secr\u00e8te dans la mine Vif-argent. J'ai \u00e9limin\u00e9 tous les membres du culte pr\u00e9sents dans la mine, mettant ainsi un terme \u00e0 l'enqu\u00eate."
+    },
+    {
+        "editor_id": "ccMTYSSE002_BookGalurRithali",
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\n<p align=\"center\">\n\n\nPrivate Papers of Galur Rithari, Buoyant Armiger\n\n\n</p>\n\n\n\n[pagebreak]\n<p align=\"left\">\n<img src='img://Textures/Interface/Books/Illuminated_Letters/O_letter.png'>utnumbered and isolated, I yielded to my foe. The creature dressed like a gentleman, and I hoped for honorable treatment. Instead, I found myself a feast for a blood-drinking monster.\n\nShamed by my corruption, and despairing of my own welfare, I passively acquiesced in my gradual integration into the affairs of Clan Aundae. I made no human my prey, only beasts, and kept myself apart from the other clankin; nonetheless, I abandoned hope and lived like a beast.\n\nDrawn by intimations of my former life, I visited my former post at Bal Ur, hoping perhaps to atone in some for my crimes by preying upon its monsters, or perishing under their attacks. It is there that, by chance, I made petition to the Lord of Troubles, Molag Bal, at an altar deep in the caverns beneath the pilgrim's shrine. I was surprised, and thrilled, and terrified, when Molag Bal, or some aspect or agent of that Daedra Lord, offered me a chance to cure myself of vampirism, in return for a favor. However, with no hope for my soul or spirit unless I might be cured, I undertook his quest.\n\n<font alpha='#25'>F r ma      ns I so ght</font><font alpha='#80'> t e r  ic, tr     ng de   i to the c   rns of Da   h Ur.</font> <font alpha='#4C'>   er m  y t  <font alpha='#26'> ls I fi  lly     ined i    d re</font>    ed to the  ae ric  rin e's sh     in Bal Ur.</font>\n\nI placed the gem within the basin before the altar, and instantly experienced a blinding of pain and terror that I cannot express in words, except that it seemed afterward that I had been asleep and dreaming that I was being sliced by thousands of tiny knives from my bowels inside out. I awoke before the altar, and gazed in the reflection of my own sword blade at my own face - no longer a blood-seeking beast of teeth and empty eyes.</p>",
+        "string": "[pagebreak]\n<p align=\"center\">\n\n\nDocuments personnels de Galur Rithari, aux armoiries resplendissantes\n\n\n</p>\n\n\n\n[pagebreak]\n<p align=\"left\">\n<img src='img://Textures/Interface/Books/Illuminated_Letters/S_letter.png'>ubmerg\u00e9 par la multitude de mes ennemis et abandonn\u00e9 de tous, je dus m'incliner devant mon ennemi. La cr\u00e9ature \u00e9tait v\u00eatue comme un gentilhomme et j'esp\u00e9rais de sa part un traitement honorable. En lieu et place de cela, je compris que je n'\u00e9tais que le plat de r\u00e9sistance du festin d'un monstre buveur de sang.\n\nRempli de honte \u00e0 la pens\u00e9e de ma propre corruption et me lamentant sur mon sort, j'acceptai passivement mon int\u00e9gration progressive au sein du clan Aundae. Jamais je ne me nourris d'autres humains et me contentai du sang des animaux, vivant \u00e0 l'\u00e9cart des autres membres du clan. Je finis n\u00e9anmoins par perdre espoir et ne valais gu\u00e8re mieux qu'une b\u00eate sauvage.\n\nRessentant l'appel de ma vie d'antan, je me rendis \u00e0 mon ancien campement \u00e0 Bal Ur, esp\u00e9rant peut-\u00eatre au fond de moi faire amende honorable de mes crimes en traquant les monstres de cet endroit ou en mourant sous leurs coups. C'est \u00e0 cet endroit que j'eus la chance de supplier le grand Conspirateur, Molag Bal, agenouill\u00e9 devant un autel enfoui au plus profond des grottes qui s'\u00e9tendent sous le sanctuaire des p\u00e8lerins. Je fus successivement frapp\u00e9 par la surprise, la joie puis la terreur lorsque Molag Bal ou quelque aspect ou serviteur du seigneur daedra m'offrit un espoir de gu\u00e9rison du vampirisme qui m'affligeait, en \u00e9change d'une simple faveur. Sans autre espoir de r\u00e9demption pour mon \u00e2me ou mon esprit \u00e0 d\u00e9faut de gu\u00e9rison, j'acceptai d'entreprendre sa qu\u00eate.\n\n<font alpha='#25'>Je che   ai de nomb        une </font><font alpha='#80'>la r  ique, m'   ntu  nt pr ond\u00e9m    d  s les ca  rnes de Da   h Ur.</font> <font alpha='#4C'>J  p rv  s \u00e0 l' bten  <font alpha='#26'> pr   d  no  reus    pr  ves et</font>    urnai au sanc       du pr  ce  ae ra \u00e0 Bal Ur.</font>\n\nJe d\u00e9posai la gemme au fond de la vasque devant l'autel, et ressentis aussit\u00f4t un \u00e9clair de douleur et de terreur telles qu'il m'est impossible de trouver les mots pour les d\u00e9crire, si ce n'est qu'il me sembla apr\u00e8s coup que je m'\u00e9tais endormi et r\u00eavai que des milliers de minuscules poignards me lac\u00e9raient la chair depuis l'int\u00e9rieur de mes entrailles et cherchaient \u00e0 s'extraire de mon corps. Je m'\u00e9veillai devant l'autel et regardant dans la lame de mon \u00e9p\u00e9e je pus admirer mon propre reflet, et non plus celui d'une cr\u00e9ature assoiff\u00e9e de sang aux dents ac\u00e9r\u00e9es et aux yeux insondables.</p>"
+    },
+    {
+        "editor_id": "ccMTYSSE002_Quest",
+        "type": "QUST CNAM",
+        "original": "A Vigilant of Stendarr has been investigating the disappearance of his fellow members, and identified three potential suspects that may be involved. After some investigation, I found the location of their place of worship, behind a secret door in the Quicksilver Mine.",
+        "string": "Un Vigile de Stendarr enqu\u00eatait sur la disparition de ses confr\u00e8res, et avait r\u00e9ussi \u00e0 identifier trois suspects potentiels qui pourraient \u00eatre impliqu\u00e9s dans cette affaire. \u00c0 l'issue d'une courte investigation, j'ai d\u00e9couvert l'emplacement de leur lieu de culte, derri\u00e8re une porte secr\u00e8te dans la mine Vif-argent."
+    },
+    {
+        "editor_id": "ccMTYSSE002_Quest",
+        "type": "QUST CNAM",
+        "original": "A Vigilant of Stendarr has been investigating the disappearance of his fellow members, and identified three potential suspects that may be involved. I tracked one down and killed him. While he can no longer lead me to their place of worship, on his body was a note that mentioned a secret door in the Quicksilver Mine.",
+        "string": "Un Vigile de Stendarr enqu\u00eatait sur la disparition de ses confr\u00e8res, et avait r\u00e9ussi \u00e0 identifier trois suspects potentiels qui pourraient \u00eatre impliqu\u00e9s dans cette affaire. J'ai remont\u00e9 la piste menant \u00e0 l'un d'entre eux et je l'ai tu\u00e9. Bien qu'il ne puisse plus me conduire jusqu'\u00e0 leur lieu de culte, j'ai trouv\u00e9 un message en le fouillant qui mentionne l'existence d'une porte secr\u00e8te dans la mine Vif-argent."
+    },
+    {
+        "editor_id": "ccMTYSSE002_Quest",
+        "type": "QUST CNAM",
+        "original": "A Vigilant of Stendarr has been investigating the disappearance of his fellow members, and identified three potential suspects that may be involved. After some investigation, I found the location of their place of worship, behind a secret door in the Quicksilver Mine. I should dispatch the cult members before they cause more trouble.",
+        "string": "Un Vigile de Stendarr enqu\u00eatait sur la disparition de ses confr\u00e8res, et avait r\u00e9ussi \u00e0 identifier trois suspects potentiels qui pourraient \u00eatre impliqu\u00e9s dans cette affaire. \u00c0 l'issue d'une courte investigation, j'ai d\u00e9couvert l'emplacement de leur lieu de culte, derri\u00e8re une porte secr\u00e8te dans la mine Vif-argent. Je devrais \u00e9liminer les membres du culte avant qu'ils ne causent de nouveaux d\u00e9sordres."
+    },
+    {
+        "editor_id": "ccMTYSSE002_Quest",
+        "type": "QUST CNAM",
+        "original": "A Vigilant of Stendarr has been investigating the disappearance of his fellow members. During his investigation, he was given a note to meet at the Windward Ruins. Further clues might be found there.",
+        "string": "Un Vigile de Stendarr enqu\u00eatait sur la disparition de ses confr\u00e8res. Au cours de ses investigations, il re\u00e7ut un message lui demandant de se rendre aux ruines de Folvent pour y rencontrer quelqu'un. Je trouverai peut-\u00eatre plus d'indices sur place."
+    },
+    {
+        "editor_id": "ccMTYSSE002_VE_Message06",
+        "type": "MESG DESC",
+        "original": "Vereth lost sight of you.",
+        "string": "Vereth vous a perdu de vue."
+    },
+    {
+        "editor_id": "ccMTYSSE002_Quest",
+        "type": "QUST CNAM",
+        "original": "The Vigil of Stendarr is an order founded after the Oblivion Crisis. Their main hall is situated in the Pale, south of Dawnstar. I should see if they have anything that needs investigating.",
+        "string": "Les Vigiles de Stendarr sont un ordre fond\u00e9 apr\u00e8s la crise d'Oblivion. Leur bastion principal se trouve dans le Clos, au sud d'Aub\u00e9toile. Je devrais m'y rendre afin de voir s'ils ont besoin d'aide au sujet d'une enqu\u00eate."
+    },
+    {
+        "editor_id": "ccMTYSSE002_Quest",
+        "type": "QUST CNAM",
+        "original": "At the Hall of the Vigilant I found a note regarding missing patrols near Dawnstar. I should head to the Windpeak Inn and see what else I can uncover.",
+        "string": "J'ai trouv\u00e9 un message au Bastion des Vigiles \u00e9voquant des patrouilles disparues pr\u00e8s d'Aub\u00e9toile. Je devrais me rendre \u00e0 l'auberge Montvent et voir ce que je peux d\u00e9couvrir."
+    },
+    {
+        "editor_id": "ccMTYSSE002_Letter03",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>The door to the temple is finished. Look for two rugs in a crate at the far end of the mine. Walk down the shaft to the dead end. On your right should be a button.\n\nPress it and the door will open.</font>",
+        "string": "<font face='$HandwrittenFont'>La porte du temple est achev\u00e9e. Cherche deux tapis dans une caisse au fond de la mine. Descends dans le puits jusqu'au cul-de-sac. Tu verras un bouton sur ta droite.\n\nAppuie dessus et la porte s'ouvrira.</font>"
+    },
+    {
+        "editor_id": "ccMTYSSE002_Journal01",
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">The investigation has moved slowly, but that was to be expected. The townsfolk have their own problems, and few pay any mind to the fate of Stendarr's chosen. I will write what I've pieced together so far, in hopes it provides some clarity.\n\nFrom what I've gathered, Fenrik came to Dawnstar to investigate rumors of Daedra worship. There was some thought that this cult was the source of the town's recurring nightmares, although it's unclear how much of that is true. Then one night, Fenrik disappeared, without a word to the innkeeper or anyone in town. It was then that other patrols started to go missing, also without a trace.\n\nOf leads I have one. The other day the innkeeper found something curious behind the inn, in the midst of emptying the trash. It was an Elven dagger, its blade warm with blood and upon further examination, tipped with poison.\n\nThe craft of the blade can mean many things. Perhaps this Daedric cult is Elven in origin. Moreover, Elven weapons are fashioned from Quicksilver, and there is a mine in close proximity. The poison too could have originated from a nearby source. It's also likely that our murderer moves at night, when the eyes of the town are blind to their heathen worship.\n\nAs such, I suspect three individuals as possible owners of the blade. Vereth the Elf, who complains of the cold and yet seems resolute in staying. Harald the miner, who works the ore from which the murder weapon was fashioned. Lastly, Irine the traveler, who seems to know more about alchemy than the proprietors of the Pestle.\n\nAll three seem to be active in the small hours, but I can only follow one at a time. Still, doing so will prove useful, as they will either lead me to their place of worship or eliminate themselves as suspects.\n\nBut first, I must meet the writer of this note. Perhaps they know more about the dagger, or have information that can narrow down my search.</font>",
+        "string": "<font face=\"$HandwrittenFont\">L'enqu\u00eate progresse difficilement, mais il fallait s'y attendre. Les habitants de cette ville ont leurs propres probl\u00e8mes et peu d'entre eux se soucient du sort des \u00e9lus de Stendarr. Je vais coucher par \u00e9crit toutes les informations que j'ai obtenues jusqu'\u00e0 maintenant, dans l'espoir que cela me permette d'y voir plus clair.\n\nDe ce que j'en ai compris, Fenrik s'est rendu \u00e0 Aub\u00e9toile pour enqu\u00eater sur des rumeurs concernant l'existence d'un culte daedra. Certains pensent que ce culte pourrait \u00eatre \u00e0 l'origine des cauchemars r\u00e9currents qui affectent la ville, bien que peu de choses viennent en v\u00e9rit\u00e9 \u00e9tayer s\u00e9rieusement cette th\u00e9orie. Puis une nuit Fenrik s'est volatilis\u00e9, sans dire un mot \u00e0 l'aubergiste ni \u00e0 qui que ce soit en ville. C'est \u00e0 peu pr\u00e8s \u00e0 ce moment que les autres patrouilles ont commenc\u00e9 \u00e0 dispara\u00eetre \u00e0 leur tour, ne laissant pas non plus la moindre trace derri\u00e8re elles.\n\nJe dispose n\u00e9anmoins d'une piste. L'autre jour, alors que l'aubergiste \u00e9tait en train d'\u00e9vacuer les d\u00e9chets, il a d\u00e9couvert quelque chose d'\u00e9trange derri\u00e8re la taverne\u00a0: une dague elfique, la lame couverte de sang encore chaud et dont la pointe se r\u00e9v\u00e9la apr\u00e8s examen impr\u00e9gn\u00e9e de poison.\n\nL'origine de cette arme peut signifier de nombreuses choses. Peut-\u00eatre que ce culte daedra est d'origine elfique. Il ne faut cependant pas oublier que les armes elfiques sont fa\u00e7onn\u00e9es \u00e0 partir de vif-argent, et qu'une mine de ce m\u00eame m\u00e9tal se trouve non loin d'ici. Le poison pourrait \u00e9galement avoir \u00e9t\u00e9 fabriqu\u00e9 dans les environs. Enfin, il est probable que les assassins se d\u00e9placent de nuit, lorsque la ville est endormie et ferme les yeux sur leur culte pa\u00efen.\n\nPour toutes ces raisons, je soup\u00e7onne que le propri\u00e9taire de la dague est l'un des trois individus suivants\u00a0: Vereth l'elfe, qui se plaint sans cesse du froid mais n'affiche aucune volont\u00e9 de quitter cet endroit\u00a0; Harald le mineur, qui travaille le minerai \u00e0 partir duquel l'arme du crime a \u00e9t\u00e9 fabriqu\u00e9e\u00a0; et enfin Irine la voyageuse, qui semble plus vers\u00e9e en alchimie encore que les propri\u00e9taires de La Panac\u00e9e.\n\nIls s'activent tous les trois la nuit, mais je ne peux en suivre qu'un \u00e0 la fois. Ce ne sera toutefois pas inutile\u00a0: soit ils me m\u00e8neront \u00e0 leur lieu de culte, soit je pourrai les rayer de la liste des suspects.\n\nMais avant cela, je dois rencontrer l'auteur de cette note. Peut-\u00eatre qu'il pourra m'en dire plus au sujet de la dague, ou qu'il aura des informations qui me permettront d'avancer dans mes recherches."
+    },
+    {
+        "editor_id": "ccMTYSSE002_Letter04",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>We were to leave the Vigilants for the ritual, but this one fought with the Silver Hand. It was not clear who his master was.\n\nAfter we fed, the master bade us to examine the body, to see what else we could learn of our condition.\n\nBone anatomy seems largely unchanged. Blood and organ samples have been taken to the alchemist.\n\nThe bite marks on the shoulder are curious. Need to rule out the possibility of werewolf contamination.</font>",
+        "string": "<font face='$HandwrittenFont'>Nous devions pr\u00e9server les Vigiles en vue du rituel, mais celui-ci combattait avec la Main d'argent. L'identit\u00e9 de son ma\u00eetre n'\u00e9tait pas claire.\n\nApr\u00e8s nous \u00eatre nourris, le ma\u00eetre nous ordonna d'examiner le corps pour voir ce que nous pouvions apprendre de notre condition.\n\nL'anatomie des os semble globalement identique. Nous avons apport\u00e9 des \u00e9chantillons de sang et d'organes \u00e0 l'alchimiste.\n\nLes traces de morsure sur l'\u00e9paule sont \u00e9tranges. Il faut s'assurer qu'il n'a pas contract\u00e9 la lycanthropie.</font>"
+    }
+]

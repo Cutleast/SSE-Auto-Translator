@@ -1,0 +1,134 @@
+[
+    {
+        "editor_id": "ccFSVSSE001_Backpack_Mage",
+        "type": "ARMO FULL",
+        "original": "Mage Backpack",
+        "string": "Magierrucksack"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_HunterFullBedroll",
+        "type": "ARMO FULL",
+        "original": "Hunter Backpack with Bedroll",
+        "string": "J\u00e4gerrucksack mit Schlafsack"
+    },
+    {
+        "editor_id": "ccFSVSSE001_EnchBackpackAdventurer",
+        "type": "ENCH FULL",
+        "original": "Adventurer Backpack",
+        "string": "Abenteurerrucksack"
+    },
+    {
+        "editor_id": "ccFSVSSE001_EnchBackpackFortifyCarry",
+        "type": "ENCH FULL",
+        "original": "Fortify Carry Weight",
+        "string": "Tragf\u00e4higkeit verst\u00e4rken"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_Fine",
+        "type": "ARMO FULL",
+        "original": "Fine Leather Backpack",
+        "string": "Hochwertiger Lederrucksack"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_BasicBedroll",
+        "type": "ARMO FULL",
+        "original": "Leather Backpack with Bedroll",
+        "string": "Lederrucksack mit Schlafsack"
+    },
+    {
+        "editor_id": "ccFSVSSE001_EnchBackpackHunter",
+        "type": "ENCH FULL",
+        "original": "Hunter Backpack",
+        "string": "J\u00e4gerrucksack"
+    },
+    {
+        "editor_id": "ccFSVSSE001_EnchBackpackThief",
+        "type": "ENCH FULL",
+        "original": "Thief Backpack",
+        "string": "Diebesrucksack"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_ThiefBedroll",
+        "type": "ARMO FULL",
+        "original": "Dark Leather Backpack with Bedroll",
+        "string": "Dunkler Lederrucksack mit Schlafsack"
+    },
+    {
+        "editor_id": "ccFSVSSE001_QAChestBackpacks",
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Truhe"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_Thief",
+        "type": "ARMO FULL",
+        "original": "Dark Leather Backpack",
+        "string": "Dunkler Lederrucksack"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_ThiefFull",
+        "type": "ARMO FULL",
+        "original": "Thief Backpack",
+        "string": "Diebesrucksack"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_Basic",
+        "type": "ARMO FULL",
+        "original": "Leather Backpack",
+        "string": "Lederrucksack"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_ThiefFullBedroll",
+        "type": "ARMO FULL",
+        "original": "Thief Backpack with Bedroll",
+        "string": "Diebesrucksack mit Schlafsack"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_HunterBedroll",
+        "type": "ARMO FULL",
+        "original": "Fur Backpack with Bedroll",
+        "string": "Pelzrucksack mit Schlafsack"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_Hunter",
+        "type": "ARMO FULL",
+        "original": "Fur Backpack",
+        "string": "Pelzrucksack"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_MageBedroll",
+        "type": "ARMO FULL",
+        "original": "Mage Backpack with Bedroll",
+        "string": "Magierrucksack mit Schlafsack"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_FineBedroll",
+        "type": "ARMO FULL",
+        "original": "Fine Leather Backpack with Bedroll",
+        "string": "Hochwertiger Lederrucksack mit Schlafsack"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_AdventurerBedroll",
+        "type": "ARMO FULL",
+        "original": "Adventurer Backpack with Bedroll",
+        "string": "Abenteurerrucksack mit Schlafsack"
+    },
+    {
+        "editor_id": "ccFSVSSE001_EnchBackpackMage",
+        "type": "ENCH FULL",
+        "original": "Mage Backpack",
+        "string": "Magierrucksack"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_Adventurer",
+        "type": "ARMO FULL",
+        "original": "Adventurer Backpack",
+        "string": "Abenteurerrucksack"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_HunterFull",
+        "type": "ARMO FULL",
+        "original": "Hunter Backpack",
+        "string": "J\u00e4gerrucksack"
+    }
+]

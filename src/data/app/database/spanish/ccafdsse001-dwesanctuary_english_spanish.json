@@ -1,0 +1,344 @@
+[
+    {
+        "editor_id": "ccAFDSSE001Interior03Manufactory",
+        "type": "CELL FULL",
+        "original": "Nchuanthumz Manufactory",
+        "string": "F\u00e1brica de Nchuanthumz"
+    },
+    {
+        "editor_id": "ccAARSSE001DwarvenActuator",
+        "type": "MISC FULL",
+        "original": "Dwemer Actuator",
+        "string": "Actuador dwemer"
+    },
+    {
+        "editor_id": "ccAARSSE001ManufactoryLocation",
+        "type": "LCTN FULL",
+        "original": "Nchuanthumz Manufactory",
+        "string": "F\u00e1brica de Nchuanthumz"
+    },
+    {
+        "editor_id": "ccAARSSE001SeeksAncientArtifactsCorpse",
+        "type": "NPC_ FULL",
+        "original": "Seeks-Ancient-Artifacts",
+        "string": "Busca Artefactos Antiguos"
+    },
+    {
+        "editor_id": "ccAARSSE001ManufactoryControlQuest",
+        "type": "QUST FULL",
+        "original": "The Sanctuary and the Manufactory",
+        "string": "El santuario y la f\u00e1brica"
+    },
+    {
+        "editor_id": "ccAARSSE001DwarvenSpiderManufactoryConstruct",
+        "type": "NPC_ FULL",
+        "original": "Dwarven Spider",
+        "string": "Ara\u00f1a enana"
+    },
+    {
+        "editor_id": "ccAARSSE001DwarvenSpiderPetRace",
+        "type": "RACE FULL",
+        "original": "Dwarven Spider",
+        "string": "Ara\u00f1a enana"
+    },
+    {
+        "editor_id": "ccAARSSE001DwarvenMaintenanceSentinel",
+        "type": "NPC_ FULL",
+        "original": "Dwarven Sphere Overseer",
+        "string": "Esfera enana supervisora"
+    },
+    {
+        "editor_id": "ccAARSSE001DwarvenSpherePetRace",
+        "type": "RACE FULL",
+        "original": "Dwarven Sphere",
+        "string": "Esfera enana"
+    },
+    {
+        "editor_id": "ccAARSSE001ManufactoryControlQuest",
+        "type": "QUST NNAM",
+        "original": "Access Nchuanthumz's Manufactory",
+        "string": "Accede a la f\u00e1brica de Nchuanthumz."
+    },
+    {
+        "editor_id": "ccAARSSE001SAAJournal01",
+        "type": "BOOK FULL",
+        "original": "Seeks-Ancient-Artifacts' Journal, v1",
+        "string": "Diario de Busca Artefactos Antiguos, v. 1"
+    },
+    {
+        "editor_id": "ccAARSSE001ManufactoryControlQuest",
+        "type": "QUST NNAM",
+        "original": "Discover Nchuanthumz",
+        "string": "Descubre Nchuanthumz."
+    },
+    {
+        "editor_id": "ccAARSSE001PartBinStatusNote",
+        "type": "BOOK FULL",
+        "original": "Manufactory Repair Parts",
+        "string": "Piezas para reparar la f\u00e1brica"
+    },
+    {
+        "editor_id": "ccAARSSE001ManufactoryControlQuest",
+        "type": "QUST NNAM",
+        "original": "Examine the corpse for clues",
+        "string": "Busca pistas en el cad\u00e1ver."
+    },
+    {
+        "editor_id": "ccAARSSE001ManufactoryControlQuest",
+        "type": "QUST NNAM",
+        "original": "Collect Dwemer Cogs for the Manufactory (<Global=ccAARSSECogCollectionCount>/<Global=ccAARSSECogCollectionTotal>)",
+        "string": "Recoge engranajes dwemer para la f\u00e1brica (<Global=ccAARSSECogCollectionCount>/<Global=ccAARSSECogCollectionTotal>)."
+    },
+    {
+        "editor_id": "ccAARSSE001ConstructPartsListNote",
+        "type": "BOOK FULL",
+        "original": "Assembly Line Constructs",
+        "string": "Artefactos de cadena de montaje"
+    },
+    {
+        "editor_id": "ccAARSSE001ManufactoryControlQuest",
+        "type": "QUST NNAM",
+        "original": "Collect Dwemer Oil for the Manufactory (<Global=ccAARSSEOilCollectionCount>/<Global=ccAARSSEOilCollectionTotal>)",
+        "string": "Recoge aceite dwemer para la f\u00e1brica (<Global=ccAARSSEOilCollectionCount>/<Global=ccAARSSEOilCollectionTotal>)."
+    },
+    {
+        "editor_id": "ccAARSSE001ManufactoryControlQuest",
+        "type": "QUST NNAM",
+        "original": "Return the collected parts to the Dwarven Sphere Overseer",
+        "string": "Lleva las piezas recogidas a la esfera enana supervisora."
+    },
+    {
+        "editor_id": "ccAARSSE001ManufactoryControlQuest",
+        "type": "QUST NNAM",
+        "original": "Collect Dwemer Actuators for the Manufactory (<Global=ccAARSSEActuatorCollectionCount>/<Global=ccAARSSEActuatorCollectionTotal>)",
+        "string": "Recoge actuadores dwemer para la f\u00e1brica (<Global=ccAARSSEActuatorCollectionCount>/<Global=ccAARSSEActuatorCollectionTotal>)."
+    },
+    {
+        "editor_id": "ccAARSSE001ManufactoryControlQuest",
+        "type": "QUST NNAM",
+        "original": "Read Seek-Ancient-Artifacts' journal",
+        "string": "Lee el diario de Busca Artefactos Antiguos."
+    },
+    {
+        "editor_id": "ccAARSSE001ManufactoryControlQuest",
+        "type": "QUST NNAM",
+        "original": "Explore the Manufactory",
+        "string": "Explora la f\u00e1brica."
+    },
+    {
+        "editor_id": "ccAARSSE001ManufactoryControlQuest",
+        "type": "QUST NNAM",
+        "original": "Search for information at The Frozen Hearth",
+        "string": "Busca informaci\u00f3n en El hogar helado"
+    },
+    {
+        "editor_id": "ccAARSSE001SAAJournal02",
+        "type": "BOOK FULL",
+        "original": "Seeks-Ancient-Artifacts' Journal, v2",
+        "string": "Diario de Busca Artefactos Antiguos, v. 2"
+    },
+    {
+        "editor_id": "ccAFDSSE001_MarkarthKeepThrone",
+        "type": "FURN FULL",
+        "original": "Throne",
+        "string": "Trono"
+    },
+    {
+        "editor_id": "ccAFDSSE001_PlanterNPC",
+        "type": "NPC_ FULL",
+        "original": "Planter",
+        "string": "Maceta"
+    },
+    {
+        "editor_id": "ccMDRSSE001DweSanctuaryKlogircCaveLocation",
+        "type": "LCTN FULL",
+        "original": "Frostroot Cave",
+        "string": "Cueva de la Ra\u00edz Escarchada"
+    },
+    {
+        "editor_id": "ccAFDSSE001Interior01Cave",
+        "type": "CELL FULL",
+        "original": "Frostroot Cave",
+        "string": "Cueva de la Ra\u00edz Escarchada"
+    },
+    {
+        "editor_id": "ccAARSSE001ManufactoryControlQuest",
+        "type": "QUST NNAM",
+        "original": "Turn on the Manufactory",
+        "string": "Activa la f\u00e1brica."
+    },
+    {
+        "editor_id": "ccAFDSSE001_MSName",
+        "type": "MESG FULL",
+        "original": "Dwarven Sphere Overseer",
+        "string": "Esfera enana supervisora"
+    },
+    {
+        "editor_id": "ccAFDSSE001_ManuName",
+        "type": "MESG FULL",
+        "original": "Manufactory",
+        "string": "F\u00e1brica"
+    },
+    {
+        "editor_id": "ccAARSSE001ManufactoryControlQuest",
+        "type": "QUST NNAM",
+        "original": "Summon the Dwarven Sphere Overseer",
+        "string": "Llama a la esfera enana supervisora."
+    },
+    {
+        "editor_id": "ccAFDSSE001_DweLever02",
+        "type": "ACTI FULL",
+        "original": "Dwarven Spider Renovator",
+        "string": "Ara\u00f1a enana reformadora"
+    },
+    {
+        "editor_id": "ccAFDSSE001_DweLever02",
+        "type": "ACTI RNAM",
+        "original": "Summon",
+        "string": "Llamar"
+    },
+    {
+        "editor_id": "ccAARSSE001ManufactoryControlQuest",
+        "type": "QUST NNAM",
+        "original": "Summon the Dwarven Spider Renovator to clean a section of the house",
+        "string": "Llama a la ara\u00f1a enana reformadora para que despeje una parte de la casa."
+    },
+    {
+        "editor_id": "ccAARSSE001ManufactoryControlQuest",
+        "type": "QUST NNAM",
+        "original": "Construct a Dwarven Spider Renovator",
+        "string": "Construye una ara\u00f1a enana reformadora."
+    },
+    {
+        "editor_id": "ccAARSSE001ManufactoryControlQuest",
+        "type": "QUST NNAM",
+        "original": "Read the assembly line status report",
+        "string": "Lee el informe sobre el estado de la cadena de montaje."
+    },
+    {
+        "editor_id": "ccAARSSE001ManufactoryControlQuest",
+        "type": "QUST NNAM",
+        "original": "Wait 24 hours for the renovations to finish",
+        "string": "Espera 24 horas a que terminen las reformas."
+    },
+    {
+        "editor_id": "[05070E0A]",
+        "type": "REFR FULL",
+        "original": "Frostroot Cave",
+        "string": "Cueva de la Ra\u00edz Escarchada"
+    },
+    {
+        "editor_id": "ccAFDSSE001_LvlDwarvenSphereAmbushOverseer",
+        "type": "NPC_ FULL",
+        "original": "Dwarven Sphere Overseer",
+        "string": "Esfera enana supervisora"
+    },
+    {
+        "editor_id": "ccAFDSSE001_EncDwarvenSpiderAmbush",
+        "type": "NPC_ FULL",
+        "original": "Dwarven Spider Renovator",
+        "string": "Ara\u00f1a enana reformadora"
+    },
+    {
+        "editor_id": "WinterholdTheFrozenHearth",
+        "type": "CELL FULL",
+        "original": "The Frozen Hearth",
+        "string": "El hogar helado"
+    },
+    {
+        "editor_id": "ccAARSSE001SAAJournal01",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\n<p align=\"center\">Skyrim Expedition - Day 1</p>\nI have arrived in Skyrim to solve a single mystery, to find the lost sanctuary of Nchuanthumz. According to legend, it was built by the famed Dwemer architects, Klorgic and Duramac, the latter of whom is said to be a distant relative of the great Dumac Dwarfking. \n\nWhile the two began as rivals, through mutual respect and admiration they eventually became friends, and over time, much more. \n\nWhereas Klorgic was an architect of great renown, his palatial estates suffered from  their excess - the size of his rooms matched only by their emptinesss. Duramac, on the other hand, was a genius engineer, but lacked the artistic vision to allow his inventions to reach their full potential.\n\nIt's only when they joined forces to create Nchuanthumz that they built something truly profound. If I am to find their creation, I must grasp history itself by the tail.\n\n<p align=\"center\">Skyrim Expedition - Day 17</p>\nOur travels have brought us to this bleak, underground tunnel, which the natives call Frostroot Cave. Its winding cords of ice and rock make it truly a miserable place. My scales feel chilly, but more so my nerves. \n\nLuckily we've hired a few soldiers of fortune into our employ. Some would call them bandits, but I like to refer to them as mercenaries at a discount! Hopefully I can convince them not to touch the artifacts and keep the scrap instead.</font>",
+        "string": "<font face='$HandwrittenFont'>\n<p align=\"center\">Expedici\u00f3n en Skyrim - D\u00eda 1</p>\nHe llegado a Skyrim con el objeto de resolver un misterio: debo averiguar el paradero del santuario perdido de Nchuanthumz. Seg\u00fan la leyenda, lo construyeron Klorgic y Duramac, los afamados arquitectos dwemer. Se dice que este \u00faltimo era pariente lejano del gran rey enano Dumac.\n\nAunque en un principio eran rivales, el respeto y la admiraci\u00f3n que se profesaban mutuamente terminaron por convertirlos en amigos, y con el tiempo llegaron a ser mucho m\u00e1s que eso.\n\nAunque Klorgic era un arquitecto de gran renombre, sus palaciegas construcciones eran un ejemplo de exceso: el tama\u00f1o de sus estancias solo era comparable al vac\u00edo que reinaba en ellas. Por su parte, Duramac era un ingeniero genial, pero carec\u00eda del talento art\u00edstico necesario para que sus obras alcanzasen todo su potencial.\n\nSolo llegaron a construir algo realmente trascendente cuando unieron fuerzas para crear Nchuanthumz. Si logro encontrar su obra, debo aferrar la mism\u00edsima historia por la cola.\n\n<p align=\"center\">Expedici\u00f3n en Skyrim - D\u00eda 17</p>\nNuestros viajes nos han conducido hasta este sombr\u00edo t\u00fanel subterr\u00e1neo que los lugare\u00f1os llaman Cueva de la Ra\u00edz Escarchada. Tengo las escamas heladas, pero los nervios a\u00fan m\u00e1s.\n\nAfortunadamente, he contratado los servicios de varios soldados de fortuna. \u00a1Hay quien los llamar\u00eda bandidos, pero yo prefiero referirme a ellos como mercenarios a precio rebajado! Espero poder convencerlos para que dejen intactos los artefactos y se queden con la chatarra.</font>"
+    },
+    {
+        "editor_id": "ccAARSSE001ManufactoryControlQuest",
+        "type": "QUST CNAM",
+        "original": "I've made my way into Nchuanthumz Manufactory and can now explore the area to see what secrets are inside.",
+        "string": "He logrado llegar hasta la f\u00e1brica de Nchuanthumz, y ahora puedo explorar la zona para ver qu\u00e9 secretos guarda."
+    },
+    {
+        "editor_id": "ccAARSSE001ManufactoryControlQuest",
+        "type": "QUST CNAM",
+        "original": "I have discovered the journal of an Argonian named Seeks-Ancient-Artifacts. It details an expedition to Skyrim to find a lost Dwemer sanctuary, Nchuanthumz. If I travel to Frostroot Cave, I might be able to pick up their trail.",
+        "string": "He descubierto el diario de un argoniano llamado Busca Artefactos Antiguos. En \u00e9l describe una expedici\u00f3n a Skyrim en busca de Nchuanthumz, un santuario dwemer perdido. Si viajo hasta la Cueva de la Ra\u00edz Escarchada, quiz\u00e1 pueda seguir su rastro."
+    },
+    {
+        "editor_id": "ccAARSSE001ManufactoryControlQuest",
+        "type": "QUST CNAM",
+        "original": "I've discovered Nchuanthumz but did not find the expedition team. Perhaps if I gain access to his partner's Manufactory, I can learn what happened to them.",
+        "string": "He descubierto Nchuanthumz, pero no he dado con los miembros de la expedici\u00f3n. Si logro acceder a la f\u00e1brica, quiz\u00e1 pueda averiguar qu\u00e9 les sucedi\u00f3."
+    },
+    {
+        "editor_id": "ccAARSSE001ManufactoryControlQuest",
+        "type": "QUST CNAM",
+        "original": "I've made my way into Nchuanthumz Manufactory and can now explore the area to see what secrets are inside. Near a control panel, I found an Argonian explorer with a journal on his body.",
+        "string": "He logrado llegar hasta la f\u00e1brica de Nchuanthumz, y ahora puedo explorar la zona para ver qu\u00e9 secretos guarda. Junto a un panel de control he encontrado a un explorador argoniano que llevaba encima un diario."
+    },
+    {
+        "editor_id": "ccAARSSE001PartBinStatusNote",
+        "type": "BOOK DESC",
+        "original": "The Manufactory assembly lines are out of order. It seems if I press one of the side buttons on the main console, I can summon a dwarven sphere overseer. I'll need to give it the following in order for it to be able to repair the system:\n\n3 large cogs\n3 actuators\n1 units of oil\n",
+        "string": "Las cadenas de montaje de la f\u00e1brica no funcionan. Al parecer puedo llamar a una esfera enana supervisora pulsando uno de los botones laterales de la consola principal. Para que pueda reparar el sistema, tendr\u00e9 que entregarle lo siguiente:\n\n3 engranajes grandes\n3 actuadores\n1 unidad de aceite\n"
+    },
+    {
+        "editor_id": "ccAARSSE001ConstructPartsListNote",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>According to my research, Duramac's constructs were meant to clean and organize the living space. Klorgic was creative but messy, his thoughts a scramble that only Duramac understood.\n\nWhile the centurion and sphere assembly lines are damaged beyond repair, the spider construct can thankfully do the same work, albeit at a bit slower pace. The assembly line can be powered by placing a dynamo in the actuator, which should provide the energy required to build the construct.\n\nOnce the construct is built, I'll need to activate the levers in the house to have it renovate various sections of the home. By my calculations, each section should take no longer than a day to finish.</font>\n",
+        "string": "<font face='$HandwrittenFont'>Mi investigaci\u00f3n indica que los artefactos de Duramac ten\u00edan la funci\u00f3n de limpiar y organizar la vivienda. Klorgic era creativo, pero poco dado a la limpieza, y sus pensamientos eran un galimat\u00edas que solo comprend\u00eda Duramac.\n\nLas cadenas de montaje de los centuriones y las esferas han sufrido da\u00f1os irreparables, pero, afortunadamente, el artefacto ara\u00f1a puede realizar el mismo trabajo, aunque a un ritmo m\u00e1s lento. La cadena de montaje se puede accionar colocando una dinamo en el actuador, que deber\u00eda proporcionar la energ\u00eda necesaria para construir el artefacto.\n\nUna vez hecho esto, tendr\u00e9 que activar las palancas de la casa para ponerlo a reformar varias partes de esta. Seg\u00fan mis c\u00e1lculos, no deber\u00eda tardar m\u00e1s de un d\u00eda en terminar cada una de ellas.</font>\n"
+    },
+    {
+        "editor_id": "ccAARSSE001ManufactoryControlQuest",
+        "type": "QUST CNAM",
+        "original": "I provided the dwarven sphere overseer with the requisite parts and can now bring the manufactory back online. I should be able to use the manufactory to restore the sanctuary using the constructs that can be built there.",
+        "string": "He entregado a la esfera enana supervisora las piezas necesarias, y ahora puedo volver a poner en funcionamiento la f\u00e1brica. Deber\u00eda poder usarla para reformar el santuario con los artefactos que se pueden construir aqu\u00ed."
+    },
+    {
+        "editor_id": "ccAARSSE001ManufactoryControlQuest",
+        "type": "QUST CNAM",
+        "original": "I've made my way into Nchuanthumz Manufactory and can now explore the area to see what secrets are inside. Near a control panel, I found a dead Argonian explorer. I should inspect his body for clues.",
+        "string": "He logrado llegar hasta la f\u00e1brica de Nchuanthumz, y ahora puedo explorar la zona para ver qu\u00e9 secretos guarda. Junto a un panel de control he encontrado a un explorador argoniano muerto. Deber\u00eda examinar su cad\u00e1ver en busca de pistas."
+    },
+    {
+        "editor_id": "ccAARSSE001ManufactoryControlQuest",
+        "type": "QUST CNAM",
+        "original": "Inside Nchuanthumz Manufactory, I found an Argonian explorer with a journal on his body. It detailed how I might be able to summon a dwarven sphere overseer and provide it with the parts needed to repair the assembly lines in the manufactory in order to bring it fully online.",
+        "string": "En el interior de la f\u00e1brica de Nchuanthumz he encontrado el cuerpo de un explorador argoniano que llevaba encima un diario. En este explicaba c\u00f3mo llamar a una esfera enana supervisora y entregarle las piezas necesarias para reparar las cadenas de montaje de la f\u00e1brica y as\u00ed reactivarla por completo."
+    },
+    {
+        "editor_id": "ccAARSSE001ManufactoryControlQuest",
+        "type": "QUST CNAM",
+        "original": "The Nchuanthumz Manufactory is now online. I can build a spider construct at the assembly line using a centurion dynamo core. With the spider construct, I can use it to further restore the sanctuary on the ground floor.",
+        "string": "La f\u00e1brica de Nchuanthumz ya funciona. Puedo construir un artefacto ara\u00f1a en la cadena de montaje usando un n\u00facleo de dinamo de centuri\u00f3n. Con este podr\u00e9 seguir reformando el santuario de la planta baja."
+    },
+    {
+        "editor_id": "ccAARSSE001SAAJournal02",
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\n<p align=\"center\">Skyrim Expedition - Day 19</p>\nWe have spent two whole days stumbling almost blindly in the dark, and then suddenly there it was! Nchuanthumz! It is here that Klorgic and Duramac built their home! It was once a grand palace, but time and negligence have humbled its mechanical splendor. Nevertheless, by making this discovery, we have etched our places in history.\n\n<p align=\"center\">Skyrim Expedition - Day 20</p>\nWhat a fool I am! To think I could control these mechanical puppets as Duramac did.  Based on my notes, it seems I must summon a dwarven sphere overseer and provide it with the following parts:\n\n3 large cogs\n3 actuators\n1 units of oil\n\nBut alas, I am a historian, and the language of machines is foreign to me. I've managed to figure out how to summon the overseer by pressing the side buttons on the panel, but I wouldn't know what an actuator was even if it smacked me in the face.\n\nFor now, I must rest and regain my strength. I am so tired...</font>",
+        "string": "<font face='$HandwrittenFont'>\n<p align=\"center\">Expedici\u00f3n en Skyrim - D\u00eda 19</p>\n\u00a1Cuando llev\u00e1bamos dos d\u00edas dando tumbos en la oscuridad, casi a ciegas, de repente nos topamos con Nchuanthumz! \u00a1Aqu\u00ed fue donde Klorgic y Duramac construyeron su hogar! En el pasado fue un gran palacio, pero el tiempo y el abandono han deslucido su esplendor mec\u00e1nico. Sin embargo, gracias a este descubrimiento pasaremos a la historia.\n\n<p align=\"center\">Expedici\u00f3n en Skyrim - D\u00eda 20</p>\n\u00a1Qu\u00e9 idiota he sido! Pensar que ser\u00eda capaz de controlar estas marionetas mec\u00e1nicas como hac\u00eda Duramac. Seg\u00fan mis notas, parece ser que debo llamar a una esfera enana supervisora y entregarle las siguientes piezas:\n\n3 engranajes grandes\n3 actuadores\n1 unidad de aceite\n\nSin embargo, no soy m\u00e1s que un historiador, y desconozco el lenguaje de las m\u00e1quinas. He averiguado c\u00f3mo llamar a la supervisora pulsando los botones laterales del panel, pero no ser\u00eda capaz de distinguir un actuador aunque me diese de bruces con uno.\n\nPor el momento necesito descansar y recobrar fuerzas. Estoy muy cansado...</font>"
+    },
+    {
+        "editor_id": "ccAARSSE001ManufactoryControlQuest",
+        "type": "QUST CNAM",
+        "original": "Travelers throughout Skyrim have discovered ancient Dwemer ruins full of perilous traps and buried treasure. I've heard rumors, however, of one such sanctuary being used as a home. I should check the surrounding inns for clues on its whereabouts.",
+        "string": "Por toda Skyrim, los viajeros han descubierto antiguas ruinas dwemer repletas de peligrosas trampas y tesoros enterrados. Sin embargo, he o\u00eddo hablar sobre uno de estos santuarios que se utiliz\u00f3 como residencia. Deber\u00eda visitar las tabernas de la zona para recabar pistas sobre su paradero."
+    },
+    {
+        "editor_id": "ccAARSSE001ManufactoryControlQuest",
+        "type": "QUST CNAM",
+        "original": "Using the Nchuanthumz Manufactory assembly line, I built a spider construct to help renovate the house. After summoning the construct on the main level of the ruin, I was able to fully restore the home.",
+        "string": "He usado la cadena de montaje que hay en la f\u00e1brica de Nchuanthumz para construir un artefacto ara\u00f1a que me ayude a reformar la casa. Tras llamar al artefacto en el piso principal de la construcci\u00f3n en ruinas, he podido restaurarla por completo."
+    },
+    {
+        "editor_id": "ccAARSSE001ManufactoryControlQuest",
+        "type": "QUST CNAM",
+        "original": "Using the Nchuanthumz Manufactory assembly line, I built a spider construct to help renovate the house. Once I summon it using the levers on the ground floor of the sanctuary, I must wait a full day for renovations to complete.",
+        "string": "He usado la cadena de montaje que hay en la f\u00e1brica de Nchuanthumz para construir un artefacto ara\u00f1a que me ayude a reformar la casa. Tras llamar al artefacto con las palancas de la planta baja del santuario, debo esperar un d\u00eda entero a que este termine las reformas."
+    },
+    {
+        "editor_id": "ccAFDSSE001_LeverMSG01",
+        "type": "MESG DESC",
+        "original": "This lever is currently inactive.",
+        "string": "Esta palanca no est\u00e1 activa ahora mismo."
+    }
+]
