@@ -33,7 +33,7 @@ class MainApp(qtw.QApplication):
     """
 
     name = "SSE Auto Translator"
-    version = "0.2.3"
+    version = "0.2.4"
 
     loc: "utils.Localisator" = None
     cur_path = Path(__file__).parent
@@ -637,9 +637,10 @@ class MainApp(qtw.QApplication):
             self.api_label.setStyleSheet(self.styleSheet())
 
         if hasattr(self, "mainpage_widget"):
-            self.mainpage_widget.database_widget.downloads_widget.nxmhandler_button.setChecked(
-                self.nxm_listener.is_bound()
-            )
+            if self.nxm_listener is not None:
+                self.mainpage_widget.database_widget.downloads_widget.nxmhandler_button.setChecked(
+                    self.nxm_listener.is_bound()
+                )
 
     def exit(self, event: qtg.QCloseEvent = None):
         confirmation = True

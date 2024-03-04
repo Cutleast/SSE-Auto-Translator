@@ -7,7 +7,6 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 import pyperclip as clipboard
 import qtawesome as qta
 import qtpy.QtCore as qtc
-import qtpy.QtGui as qtg
 import qtpy.QtWidgets as qtw
 
 import utilities as utils
@@ -86,8 +85,12 @@ class ErrorDialog(qtw.QMessageBox):
                 if not self._details:
                     self._details = True
                     self.details_button.setText(self.app.loc.main.hide_details)
-                    self.details_button.setIcon(qta.icon("fa5s.chevron-up", color="#ffffff"))
-                    self.setInformativeText(f"<font><p style='font-family: Consolas;font-size: 12px'>{details}</p>")
+                    self.details_button.setIcon(
+                        qta.icon("fa5s.chevron-up", color="#ffffff")
+                    )
+                    self.setInformativeText(
+                        f"<font><p style='font-family: Consolas;font-size: 12px'>{details}</p>"
+                    )
                     label.setTextInteractionFlags(
                         qtc.Qt.TextInteractionFlag.TextSelectableByMouse
                     )
@@ -95,7 +98,9 @@ class ErrorDialog(qtw.QMessageBox):
                 else:
                     self._details = False
                     self.details_button.setText(self.app.loc.main.show_details)
-                    self.details_button.setIcon(qta.icon("fa5s.chevron-down", color="#ffffff"))
+                    self.details_button.setIcon(
+                        qta.icon("fa5s.chevron-down", color="#ffffff")
+                    )
                     self.setInformativeText("")
                     label.setTextInteractionFlags(
                         qtc.Qt.TextInteractionFlag.NoTextInteraction
@@ -103,9 +108,7 @@ class ErrorDialog(qtw.QMessageBox):
                     label.setCursor(qtc.Qt.CursorShape.ArrowCursor)
 
                 # update messagebox size
-                # and move messagebox to center of screen
                 self.adjustSize()
-                utils.center(self)
 
             self.details_button.clicked.disconnect()
             self.details_button.clicked.connect(toggle_details)

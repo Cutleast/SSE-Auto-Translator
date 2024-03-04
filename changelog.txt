@@ -1,12 +1,15 @@
-# Alpha-Release v0.2.3
+# Alpha-Release v0.2.4
+
+Dieses Update enthält nur Polishing und kleinere Fixes.
 
 ## Changelog
-- PERK EPF2 behoben, wenn mehrere EPF2 Subrecords in einem Record auftreten (z.B. "Use Retort" in CACO)
-- kleinere Verbesserungen am UI
-  - z.B. kann man im "Translations" Tab jetzt sortieren
-- Übersetzungen mit der Database und "Apply Database" stark optimiert und verbessert
-- Bug behoben, der dafür sorgte, dass ein und dieselbe Übersetzung für jedes Plugin, das diese Übersetzung braucht, heruntergeladen wurde
-- mögliche Crash-Ursache im LoadingDialog beseitigt
-- Übersetzungen mit API (Google und DeepL) werden nun gecached, um doppelte Requests zu vermeiden
-- "Open on Nexus Mods" Buttons zum DownloadListDialog hinzugefügt
-- "Mods"-Zähler oben rechts durch "Plugins"-Zähler ersetzt
+- Plugin-Zähler oben rechts gefixt
+- Base Game und Creation Club Plugins werden nun standardmäßig ignoriert
+- kleinere Fehlerbehebungen bei der Statusanzeige der Plugins
+- möglichen AttributeError beim Start behoben
+- Deep Scan stark optimiert
+- Plugin Parser ignoriert nun Records mit den Flags "Ignored" oder "Deleted"
+- ungenutzten Code entfernt
+
+## Download
+https://drive.google.com/file/d/1R2KIUuRBxKUbAtcuvwbGUmMb9BY2JAzg/view?usp=sharing

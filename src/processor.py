@@ -45,7 +45,9 @@ class Processor:
 
         def process(ldialog: LoadingDialog):
             ldialog.updateProgress(text1=app.loc.main.loading_database)
-            database_strings = list(set([string.original_string for string in app.database.get_strings()]))
+            database_strings = list(
+                set([string.original_string for string in app.database.get_strings()])
+            )
 
             for m, mod in enumerate(modlist):
                 plugins = [
@@ -611,7 +613,10 @@ class Processor:
                     for string in group
                 ]
 
-                translation_strings = translation.strings[plugin.name.lower()]
+                translation_strings = {
+                    f"{string.editor_id}###{string.type}": string
+                    for string in translation.strings[plugin.name.lower()]
+                }
 
                 ldialog.updateProgress(
                     text2=f"{plugin.name}: {app.loc.main.scanning_strings}"
@@ -619,35 +624,28 @@ class Processor:
 
                 translation_complete = True
                 for plugin_string in plugin_strings:
-                    if any(
-                        translation_string.editor_id == plugin_string.editor_id
-                        and translation_string.type == plugin_string.type
-                        and translation_string.status
-                        in [
-                            utils.String.Status.TranslationComplete,
-                            utils.String.Status.NoTranslationRequired,
-                        ]
-                        for translation_string in translation_strings
-                    ):
-                        continue
-                    elif any(
-                        translation_string.editor_id == plugin_string.editor_id
-                        and translation_string.type == plugin_string.type
-                        and translation_string.status
-                        != translation_string.Status.TranslationComplete
-                        for translation_string in translation_strings
-                    ):
-                        translation_complete = False
-                    else:
+                    matching = translation_strings.get(
+                        f"{plugin_string.editor_id}###{plugin_string.type}"
+                    )
+
+                    if matching is None:
                         new_string = copy(plugin_string)
                         new_string.status = new_string.Status.TranslationRequired
                         new_string.translated_string = new_string.original_string
-                        translation_strings.append(new_string)
+                        translation_strings[
+                            f"{new_string.editor_id}###{new_string.type}"
+                        ] = new_string
+                        translation.strings[plugin.name.lower()].append(new_string)
+                        translation_complete = False
+
+                    elif (
+                        matching.status == utils.String.Status.TranslationIncomplete
+                        or matching.status == utils.String.Status.TranslationRequired
+                    ):
                         translation_complete = False
 
                 if not translation_complete:
                     plugin.status = plugin.Status.TranslationIncomplete
-                    # translation.save_translation()
                     app.log.info(f"Translation for {plugin.name!r} is incomplete.")
                 else:
                     app.log.info(f"Translation for {plugin.name!r} is complete.")
@@ -657,7 +655,6 @@ class Processor:
 
         app.log.info("Deep scan complete.")
 
-        # Processor.update_status_colors(modlist)
         app.mainpage_widget.update_modlist()
         Processor.show_result(modlist, app)
 

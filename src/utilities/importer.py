@@ -5,8 +5,6 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import os
-import subprocess
-from copy import copy
 from pathlib import Path
 
 import bs4
@@ -76,11 +74,9 @@ def import_from_archive(archive_path: Path, modlist: list[Mod], ldialog=None):
 
             archive.extract(plugin_file, archive_path.parent)
 
-            # print("Merging with original plugin...")
             plugin_strings = merge_plugin_strings(extracted_file, plugin.path)
             for string in plugin_strings:
                 string.status = String.Status.TranslationComplete
-            # print("Merging complete.")
 
             translation_strings[plugin.name.lower()] = plugin_strings
 
@@ -123,8 +119,6 @@ def import_from_archive(archive_path: Path, modlist: list[Mod], ldialog=None):
                 translation_strings[plugin_name.lower()] += strings
             else:
                 translation_strings[plugin_name.lower()] = strings
-
-    # print(f"Extracted strings for {len(translation_strings)} plugin(s).")
 
     return translation_strings
 

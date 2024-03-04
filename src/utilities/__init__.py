@@ -25,11 +25,9 @@ from .localisation import Localisator
 from .mod import Mod
 from .nxm_listener import NXMListener
 from .plugin import Plugin
-from .plugin_loader import PluginLoader
 from .stdout_pipe import StdoutPipe
 from .string import String
 from .thread import Thread
-from .types import ProgressUpdate
 
 
 LOG_LEVELS = {
@@ -104,18 +102,6 @@ def center(widget: qtw.QWidget, referent: qtw.QWidget = None) -> None:
     widget.move(x, y)
 
 
-def apply_shadow(widget: qtw.QWidget, color: str = "#181818") -> None:
-    """
-    Applies standardized shadow effect to <widget>.
-    """
-
-    shadoweffect = qtw.QGraphicsDropShadowEffect(widget)
-    shadoweffect.setBlurRadius(4)
-    shadoweffect.setOffset(4, 4)
-    shadoweffect.setColor(color)
-    widget.setGraphicsEffect(shadoweffect)
-
-
 def get_diff(start_time: str, end_time: str, str_format: str = "%H:%M:%S"):
     """
     Returns difference between <start_time> and <end_time> in <str_format>.
@@ -147,43 +133,6 @@ def apply_dark_title_bar(widget: qtw.QWidget):
     set_window_attribute(
         hwnd, rendering_policy, ctypes.byref(value), ctypes.sizeof(value)
     )
-
-
-def revert_dark_title_bar(widget: qtw.QWidget):
-    """
-    Reverts dark title bar of <widget>.
-
-
-    More information here:
-
-    https://docs.microsoft.com/en-us/windows/win32/api/dwmapi/ne-dwmapi-dwmwindowattribute
-    """
-
-    DWMWA_USE_IMMERSIVE_DARK_MODE = 20
-    set_window_attribute = ctypes.windll.dwmapi.DwmSetWindowAttribute
-    hwnd = widget.winId()
-    rendering_policy = DWMWA_USE_IMMERSIVE_DARK_MODE
-    value = 0  # off
-    value = ctypes.c_int(value)
-    set_window_attribute(
-        hwnd, rendering_policy, ctypes.byref(value), ctypes.sizeof(value)
-    )
-
-
-def fmt_time(timestamp: float | int, format: str = None) -> str:
-    """
-    Converts timestamp (seconds since epoch)
-    to a formatted string.
-
-    For example:
-        1684054736.043326 -> "14.05.2023 10:58:56"
-    """
-
-    timestamp = time.localtime(timestamp)
-    if format is None:
-        return time.strftime("%d.%m.%Y %H:%M:%S", timestamp)
-    else:
-        return time.strftime(format, timestamp)
 
 
 def is_valid_hex_color(color_code: str):
@@ -252,23 +201,6 @@ def create_nexus_mods_url(
     return url
 
 
-def get_file_list(folder: Path):
-    """
-    Creates a list with all files
-    with relative paths to <folder> and returns it.
-    """
-
-    files: list[Path] = []
-
-    for root, _, _files in os.walk(folder):
-        root = Path(root).relative_to(folder)
-        for f in _files:
-            path = root / f
-            files.append(path)
-
-    return files
-
-
 def extract_file_paths(data: dict):
     """
     Extracts file paths from Nexus Mods file contents preview data.
@@ -287,32 +219,6 @@ def extract_file_paths(data: dict):
             file_paths.extend(extract_file_paths(item))
 
     return file_paths
-
-
-def flatten_nested_dict(nested_dict: dict) -> dict[str, str]:
-    """
-    This function takes a nested dictionary
-    and converts it back to a flat dictionary in the format of
-    {'key1###subkey1###subsubkey1###subsubsubkey1': 'subsubsubvalue1'}.
-
-    Parameters:
-            nested_dict: dict (nested dictionary)
-    Returns:
-            dict (dictionary in the format above.)
-    """
-
-    flat_dict: dict[str, str] = {}
-
-    def flatten_dict_helper(dictionary, prefix=""):
-        for key, value in dictionary.items():
-            if isinstance(value, dict):
-                flatten_dict_helper(value, prefix + key + "###")
-            else:
-                flat_dict[prefix + key] = json.dumps(value, separators=(",", ":"))
-
-    flatten_dict_helper(nested_dict)
-
-    return flat_dict
 
 
 def parse_flat_dict(data: dict[str, str]):
@@ -348,19 +254,6 @@ def parse_flat_dict(data: dict[str, str]):
             continue
 
     return result
-
-
-def normalize_path(path: Path):
-    """
-    Workaround for long paths (> 255 chars). This adds `\\\\?\\` as prefix.
-    """
-
-    normalized = os.fspath(path.resolve())
-
-    if not normalized.startswith("\\\\?\\"):
-        normalized = "\\\\?\\" + normalized
-
-    return Path(normalized)
 
 
 def trim_string(text: str, max_length: int = 100):

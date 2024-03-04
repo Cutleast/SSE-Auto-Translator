@@ -28,7 +28,6 @@ class NXMListener(qtc.QObject):
     REG_PATH = "nxm\\shell\\open\\command"
 
     REG_VALUE = f'"{MainApp.executable}" --download "%1"'
-    # REG_VALUE = f'"{Path(".").resolve().parent / "app.dist" / "SSE-AT.exe"}" --download "%1"'
 
     prev_value: str = None
 
@@ -94,10 +93,8 @@ class NXMListener(qtc.QObject):
         try:
             with winreg.CreateKey(winreg.HKEY_CLASSES_ROOT, self.REG_PATH) as hkey:
                 winreg.SetValue(hkey, "", winreg.REG_SZ, self.REG_VALUE)
-        except PermissionError:
-            # executable = Path(".").resolve().parent / "app.dist" / "SSE-AT.exe"
-            # executable = Path(".").resolve() / "SSE-AT.exe"
 
+        except PermissionError:
             try:
                 pyuac.runAsAdmin([MainApp.executable, "--bind-nxm"])
             except pywintypes.error:

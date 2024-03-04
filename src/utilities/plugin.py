@@ -10,7 +10,6 @@ from pathlib import Path
 
 from qtpy.QtGui import QColor
 from qtpy.QtWidgets import QTreeWidgetItem
-from qtpy.QtCore import Qt
 
 
 @dataclass

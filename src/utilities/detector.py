@@ -6,8 +6,6 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 import logging
 
-import qtpy.QtCore as qtc
-
 print("Importing lingua...")
 from lingua import Language, LanguageDetector, LanguageDetectorBuilder
 
@@ -51,9 +49,7 @@ class LangDetector:
 
         return langs
 
-    def requires_translation(
-        self, strings: list[String], max_string_count: int = 20
-    ):
+    def requires_translation(self, strings: list[String], max_string_count: int = 20):
         """
         Checks if plugin file at `plugin_path` requires
         a translation by combining first five strings and
@@ -63,9 +59,9 @@ class LangDetector:
         if not len(strings):
             return None
 
-        treshold = (
-            max_string_count  # number of strings to combine for more precise detection
-        ) - 1
+        # Number of strings to combine for more precise detection
+        treshold = max_string_count - 1
+
         detection_string = ""
         c = 0
         for string_data in strings:
@@ -82,11 +78,6 @@ class LangDetector:
         detected_lang = self.detect_lang(detection_string)
         translation_required = detected_lang != self.desired_lang
         self.log.info(f"Translation required: {translation_required}")
-
-        # For Debugging only!!!
-        # if not translation_required:
-        #     self.log.debug(f"Sample: {detection_string!r}")
-        #     self.log.debug(f"Detected Language: {detected_lang}")
 
         return translation_required
 

@@ -25,6 +25,8 @@ class Record:
         0x00000080: "Localized",
         0x00001000: "Ignored",
         0x00040000: "Compressed",
+        0x00000800: "Initially Disabled",
+        0x00000020: "Deleted",
     }
     flags: dict[str, bool] = {}
 
@@ -49,6 +51,10 @@ class Record:
             self.data = zlib.decompress(self.stream.read(self.size - 4))
         else:
             self.data = self.stream.read(self.size)
+
+        # Skip parsing if "Ignored" or "Deleted" flag are set
+        if self.flags["Ignored"] or self.flags["Deleted"]:
+            return
 
         # Parse subrecords (also known as fields)
         subrecord_stream = BytesIO(self.data)
@@ -103,7 +109,9 @@ class Record:
                 case "CNAM":
                     subrecord = StringSubrecord(stream)
                     subrecord.parse(self.flags)
-                    subrecord.index = get_checksum(current_entry_index - current_stage_index)
+                    subrecord.index = get_checksum(
+                        current_entry_index - current_stage_index
+                    )
 
                 # Get quest objective index
                 case "QOBJ":

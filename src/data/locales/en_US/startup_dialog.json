@@ -4,7 +4,7 @@
     "setup_title": "Initial Setup",
     "setup_help": "On this page you setup basic settings.",
     "instance_title": "Modinstance Selection",
-    "instance_help": "On this page you select a Modinstance to load from a Mod Manager.",
+    "instance_help": "On this page you select a Modinstance to load from a Mod Manager.\nYou can always change the selected modinstance and mod manager under Settings > User Settings.",
     "choose_lang": "Choose Game Language:",
     "api_help": "In order to get translations from Nexus Mods this tool needs access to the Nexus Mods API. You can setup access by two methods: insert API key manually or via SSO (Single-Sign-On) (not available for pre-release version)"
 }

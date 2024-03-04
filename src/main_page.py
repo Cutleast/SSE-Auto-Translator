@@ -719,6 +719,8 @@ class MainPageWidget(qtw.QWidget):
 
         cur_search = self.search_box.text().lower()
 
+        ignore_list = self.ignore_list + utils.constants.BASE_GAME_PLUGINS + utils.constants.AE_CC_PLUGINS
+
         global none_status_plugins
         global no_strings_plugins
         global translation_installed_plugins
@@ -755,7 +757,7 @@ class MainPageWidget(qtw.QWidget):
             for plugin in mod.plugins:
                 plugin_visible = cur_search in plugin.name.lower()
 
-                if plugin.name.lower() in self.ignore_list:
+                if plugin.name.lower() in ignore_list:
                     plugin.status = plugin.Status.NoneStatus
                     plugin.tree_item.setCheckState(0, qtc.Qt.CheckState.Unchecked)
                     plugin.tree_item.setDisabled(True)
@@ -766,7 +768,10 @@ class MainPageWidget(qtw.QWidget):
                     if plugin.status != plugin.Status.TranslationIncomplete:
                         plugin.status = plugin.Status.TranslationInstalled
 
-                elif plugin.status == plugin.Status.TranslationInstalled:
+                elif (
+                    plugin.status == plugin.Status.TranslationInstalled
+                    or plugin.status == plugin.Status.TranslationIncomplete
+                ):
                     plugin.status = plugin.Status.RequiresTranslation
 
                 # Hide/Show plugin according to status filter
@@ -808,6 +813,8 @@ class MainPageWidget(qtw.QWidget):
                             no_strings_plugins += 1
                         case plugin.Status.TranslationInstalled:
                             translation_installed_plugins += 1
+                        case plugin.Status.TranslationIncomplete:
+                            translation_incomplete_plugins += 1
                         case plugin.Status.TranslationAvailableInDatabase:
                             translation_available_plugins += 1
                         case plugin.Status.TranslationAvailableAtNexusMods:
@@ -870,6 +877,7 @@ class MainPageWidget(qtw.QWidget):
             + translation_installed_plugins
             + translation_incomplete_plugins
             + translation_available_plugins
+            + requires_translation_plugins
             + no_translation_available_plugins
         )
 
@@ -953,6 +961,8 @@ class MainPageWidget(qtw.QWidget):
                 self.ignore_list: list[str] = json.load(ignore_list_file)
         else:
             self.ignore_list = []
+        
+        ignore_list = self.ignore_list + utils.constants.BASE_GAME_PLUGINS + utils.constants.AE_CC_PLUGINS
 
         self.mods_widget.clear()
         self.plugins_num_label.display(0)
@@ -1013,7 +1023,7 @@ class MainPageWidget(qtw.QWidget):
                         plugin.tree_item = plugin_item
                         if any(
                             entry_name.lower() == plugin.name.lower()
-                            for entry_name in self.ignore_list
+                            for entry_name in ignore_list
                         ):
                             plugin_item.setCheckState(0, qtc.Qt.CheckState.Unchecked)
                             plugin_item.setDisabled(True)
@@ -1031,7 +1041,6 @@ class MainPageWidget(qtw.QWidget):
 
         self.mods = modlist
 
-        # Processor.update_status_colors(self.mods)
         self.title_label.setText(user_modinstance)
         self.update_modlist()
 
