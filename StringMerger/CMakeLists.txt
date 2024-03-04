@@ -51,15 +51,14 @@ endif()
 
 
 # Find required packages (adjust as needed)
-find_package(spdlog CONFIG REQUIRED)
 find_package(nlohmann_json CONFIG REQUIRED)
 
 set(SRC "${CMAKE_SOURCE_DIR}/src")
-file(GLOB sources ${SRC}/*.cpp  ${CMAKE_CURRENT_BINARY_DIR}/version.rc)
+file(GLOB sources ${SRC}/*.cpp)
 add_executable(merger ${sources})
 
 # Link libraries
-target_link_libraries(merger PRIVATE nlohmann_json::nlohmann_json spdlog::spdlog)
+target_link_libraries(merger PRIVATE nlohmann_json::nlohmann_json)
 
 
 # Add generated files to the target
