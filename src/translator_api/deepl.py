@@ -18,6 +18,8 @@ class DeepLTranslator(Translator):
 
     name = "DeepL"
 
+    cache: dict[str, str] = {}
+
     def __init__(self, app: MainApp):
         super().__init__(app)
 
@@ -35,17 +37,20 @@ class DeepLTranslator(Translator):
             self.glossary = None
 
     def translate(self, text: str, src: str, dst: str) -> str:
-        src_code = googletrans.LANGCODES[src.lower()]
-        dst_code = googletrans.LANGCODES[dst.lower()]
+        if text not in self.cache:
+            src_code = googletrans.LANGCODES[src.lower()]
+            dst_code = googletrans.LANGCODES[dst.lower()]
 
-        if self.glossary is not None:
-            result: deepl.TextResult = self.translator.translate_text_with_glossary(
-                text, self.glossary, dst_code
-            )
+            if self.glossary is not None:
+                result: deepl.TextResult = self.translator.translate_text_with_glossary(
+                    text, self.glossary, dst_code
+                )
 
-        else:
-            result: deepl.TextResult = self.translator.translate_text(
-                text, source_lang=src_code, target_lang=dst_code
-            )
+            else:
+                result: deepl.TextResult = self.translator.translate_text(
+                    text, source_lang=src_code, target_lang=dst_code
+                )
+            
+            self.cache[text] = result.text
 
-        return result.text
+        return self.cache

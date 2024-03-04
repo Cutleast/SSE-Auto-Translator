@@ -10,7 +10,7 @@ from pathlib import Path
 
 DIST_FOLDER = Path("app.dist").resolve()
 APPNAME="SSE Auto Translator"
-VERSION="0.2.1"
+VERSION="0.2.3"
 AUTHOR="Cutleast"
 LICENSE="Attribution-NonCommercial-NoDerivatives 4.0 International"
 UNUSED_ITEMS: list[Path] = [
@@ -18,6 +18,7 @@ UNUSED_ITEMS: list[Path] = [
     DIST_FOLDER / "data" / "user",
     DIST_FOLDER / "data" / "user.old",
     DIST_FOLDER / "data" / "logs",
+    DIST_FOLDER / "data" / "translator",
     DIST_FOLDER / "data" / "icons" / "SSE-AT.svg.new",
     DIST_FOLDER / "data" / "icons" / "icon.png.new",
 ]
@@ -30,7 +31,7 @@ cmd = f'nuitka \
 --standalone \
 --include-data-dir="./7-zip=." \
 --include-data-dir="./src/data=./data" \
---include-data-dir="./src/doc=./doc" \
+--include-data-dir="./doc=./doc" \
 --include-data-files="./.venv/Lib/site-packages/cloudscraper/user_agent/browsers.json=cloudscraper/user_agent/" \
 --include-data-dir="./.venv/Lib/site-packages/qtawesome=./qtawesome" \
 --enable-plugin=pyside6 \

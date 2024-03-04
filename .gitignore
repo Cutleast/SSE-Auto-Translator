@@ -1,3 +1,7 @@
+src/data/app/config.json
+src/data/user
+src/data/translator
+src/data/logs
 tests
 SSE-AT
 .vscode
@@ -6,7 +10,3 @@ SSE-AT
 *.7z
 *.code-workspace
 __pycache__
-/src/data/app/config.json
-/src/data/app/user
-/src/data/translator
-/src/data/logs

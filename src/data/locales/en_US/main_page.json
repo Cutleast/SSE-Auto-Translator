@@ -1,9 +1,6 @@
 {
     "modlist": "Modlist",
-    "mods": "Mods",
-    "mod_included": "Include Mod",
-    "mod_name": "Mod Name",
-    "plugin_name": "Plugin Name",
+    "plugins": "Plugins",
     "priority": "Priority",
     "has_plugins": "Mod has Plugins",
     "show_only_with_plugins": "Show only Mods that have Plugins",

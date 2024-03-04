@@ -6,14 +6,15 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 import qtawesome as qta
 import qtpy.QtCore as qtc
+import qtpy.QtGui as qtg
 import qtpy.QtWidgets as qtw
 
-from utilities import String, apply_dark_title_bar
+import utilities as utils
 
-from main import MainApp
+from .editor_tab import EditorTab
 
 
-class TranslatorDialog(qtw.QDialog):
+class TranslatorDialog(qtw.QWidget):
     """
     Dialog for translating single strings.
     """
@@ -23,10 +24,10 @@ class TranslatorDialog(qtw.QDialog):
 
     def __init__(
         self,
-        app: MainApp,
-        string: String,
+        tab: EditorTab,
+        string: utils.String,
     ):
-        super().__init__(app.root)
+        super().__init__()
 
         def on_change():
             self.changes_pending = True
@@ -34,19 +35,27 @@ class TranslatorDialog(qtw.QDialog):
 
         self.changes_signal.connect(on_change)
 
-        self.app = app
-        self.loc = app.loc
-        self.mloc = app.loc.editor
+        self.tab = tab
+        self.app = tab.app
+        self.loc = tab.loc
+        self.mloc = tab.mloc
         self.string = string
 
-        self.resize(800, 500)
-        self.closeEvent = lambda _: self.cancel()
+        self.setWindowFlags(qtc.Qt.WindowType.Window)
+        self.resize(1000, 600)
+        self.closeEvent = self.cancel
         self.setWindowTitle(f"{string.editor_id} - {string.type}")
-        apply_dark_title_bar(self)
+        self.setObjectName("root")
+        utils.apply_dark_title_bar(self)
 
         vlayout = qtw.QVBoxLayout()
         self.setLayout(vlayout)
 
+        hlayout = qtw.QHBoxLayout()
+        vlayout.addLayout(hlayout)
+
+        label_vlayout = qtw.QVBoxLayout()
+        hlayout.addLayout(label_vlayout)
 
         edid_label = qtw.QLabel(f"{self.loc.main.editor_id}: {string.editor_id}")
         edid_label.setTextInteractionFlags(
@@ -54,7 +63,7 @@ class TranslatorDialog(qtw.QDialog):
         )
         edid_label.setCursor(qtc.Qt.CursorShape.IBeamCursor)
         edid_label.setAlignment(qtc.Qt.AlignmentFlag.AlignLeft)
-        vlayout.addWidget(edid_label)
+        label_vlayout.addWidget(edid_label)
 
         type_label = qtw.QLabel(f"{self.loc.main.type}: {string.type}")
         type_label.setTextInteractionFlags(
@@ -62,10 +71,16 @@ class TranslatorDialog(qtw.QDialog):
         )
         type_label.setCursor(qtc.Qt.CursorShape.IBeamCursor)
         type_label.setAlignment(qtc.Qt.AlignmentFlag.AlignLeft)
-        vlayout.addWidget(type_label)
+        label_vlayout.addWidget(type_label)
 
-        hlayout = qtw.QHBoxLayout()
-        vlayout.addLayout(hlayout)
+        index_label = qtw.QLabel(f"{self.loc.main.index}: {string.index}")
+        index_label.setTextInteractionFlags(
+            qtc.Qt.TextInteractionFlag.TextSelectableByMouse
+        )
+        index_label.setCursor(qtc.Qt.CursorShape.IBeamCursor)
+        index_label.setAlignment(qtc.Qt.AlignmentFlag.AlignLeft)
+        label_vlayout.addWidget(index_label)
+
         hlayout.addStretch()
 
         translate_button = qtw.QPushButton(self.mloc.translate_with_api)
@@ -90,7 +105,7 @@ class TranslatorDialog(qtw.QDialog):
         vlayout.addLayout(hlayout)
 
         cancel_button = qtw.QPushButton(self.loc.main.cancel)
-        cancel_button.clicked.connect(self.cancel)
+        cancel_button.clicked.connect(self.close)
         hlayout.addWidget(cancel_button)
 
         hlayout.addStretch()
@@ -110,14 +125,14 @@ class TranslatorDialog(qtw.QDialog):
 
         self.string_entry.setPlainText(translated)
 
-    def cancel(self):
+    def cancel(self, event: qtg.QCloseEvent):
         """
         Closes dialog without saving, asks for confirmation if changes are pending
         """
 
         if self.changes_pending:
             message_box = qtw.QMessageBox(self)
-            apply_dark_title_bar(message_box)
+            utils.apply_dark_title_bar(message_box)
             message_box.setWindowTitle(self.loc.main.cancel)
             message_box.setText(self.loc.main.cancel_text)
             message_box.setStandardButtons(
@@ -132,11 +147,11 @@ class TranslatorDialog(qtw.QDialog):
             )
             choice = message_box.exec()
 
-            if choice == qtw.QMessageBox.StandardButton.Yes:
-                super().reject()
+            if choice != qtw.QMessageBox.StandardButton.Yes:
+                event.ignore()
+                return
 
-        else:
-            self.reject()
+        event.accept()
 
     def finish(self):
         """
@@ -144,6 +159,10 @@ class TranslatorDialog(qtw.QDialog):
         """
 
         self.string.translated_string = self.string_entry.toPlainText()
-        self.string.status = String.Status.TranslationComplete
+        self.string.status = utils.String.Status.TranslationComplete
+        self.string.tree_item.setText(3, utils.trim_string(self.string.translated_string))
 
-        self.accept()
+        self.tab.update_string_list()
+        self.tab.changes_signal.emit()
+
+        self.close()

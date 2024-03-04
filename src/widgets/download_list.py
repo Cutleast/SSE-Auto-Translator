@@ -52,7 +52,9 @@ class DownloadListDialog(qtw.QWidget):
         hlayout.addWidget(help_label, stretch=1)
 
         self.download_all_button = qtw.QPushButton(self.mloc.download_all)
-        self.download_all_button.setIcon(qta.icon("mdi.download-multiple", color="#ffffff"))
+        self.download_all_button.setIcon(
+            qta.icon("mdi.download-multiple", color="#ffffff")
+        )
         self.download_all_button.setDisabled(not app.api.premium)
         self.download_all_button.clicked.connect(self.download_all)
         hlayout.addWidget(self.download_all_button)
@@ -65,16 +67,25 @@ class DownloadListDialog(qtw.QWidget):
 
         self.list_widget.setHeaderLabels(
             [
+                "",  # Modpage button for original mod
                 self.mloc.original,
                 self.mloc.choose_translation,
+                "",  # Modpage button for translation mod
                 self.mloc.choose_file,
                 self.mloc.download,
             ]
         )
+        self.list_widget.setIndentation(0)
         self.list_widget.header().setSectionResizeMode(
-            0, qtw.QHeaderView.ResizeMode.Stretch
+            0, qtw.QHeaderView.ResizeMode.ResizeToContents
         )
-        self.list_widget.header().resizeSection(1, 200)
+        self.list_widget.header().setSectionResizeMode(
+            1, qtw.QHeaderView.ResizeMode.Stretch
+        )
+        self.list_widget.header().setSectionResizeMode(
+            3, qtw.QHeaderView.ResizeMode.ResizeToContents
+        )
+        self.list_widget.header().resizeSection(5, 150)
         self.list_widget.header().setStretchLastSection(False)
 
         self.load_downloads()
@@ -89,13 +100,32 @@ class DownloadListDialog(qtw.QWidget):
         for download in self.downloads:
             item = qtw.QTreeWidgetItem(
                 [
+                    "",  # Modpage button for original mod
                     f"{download.original_mod_name} > {download.original_plugin_name}",
                     "",  # Translation Combobox
+                    "",  # Modpage button for translation
                     "",  # File Combobox
                     "",  # Download Button
                 ]
             )
             self.list_widget.addTopLevelItem(item)
+
+            modpage_button = qtw.QPushButton()
+            modpage_button.setIcon(
+                qtg.QIcon(str(self.app.data_path / "icons" / "nexus_mods.svg"))
+            )
+            modpage_button.setToolTip(self.loc.main.open_on_nexusmods)
+
+            def get_func(mod_id):
+                def open_modpage():
+                    url = utils.create_nexus_mods_url("skyrimspecialedition", mod_id)
+                    url += "?tab=files"
+                    os.startfile(url)
+
+                return open_modpage
+
+            modpage_button.clicked.connect(get_func(download.original_mod_id))
+            self.list_widget.setItemWidget(item, 0, modpage_button)
 
             translation_combobox = qtw.QComboBox()
             translation_combobox.setEditable(False)
@@ -105,7 +135,27 @@ class DownloadListDialog(qtw.QWidget):
             ]
             translation_combobox.addItems(translations)
             translation_combobox.setDisabled(len(translations) == 1)
-            self.list_widget.setItemWidget(item, 1, translation_combobox)
+            self.list_widget.setItemWidget(item, 2, translation_combobox)
+
+            modpage_button = qtw.QPushButton()
+            modpage_button.setIcon(
+                qtg.QIcon(str(self.app.data_path / "icons" / "nexus_mods.svg"))
+            )
+            modpage_button.setToolTip(self.loc.main.open_on_nexusmods)
+
+            def get_func(tcb):
+                translation_combobox = tcb
+                def open_modpage():
+                    translation_name = translation_combobox.currentText()
+                    translation_id = int(translation_name.rsplit("(", 1)[1][:-1])
+                    url = utils.create_nexus_mods_url("skyrimspecialedition", translation_id)
+                    url += "?tab=files"
+                    os.startfile(url)
+
+                return open_modpage
+
+            modpage_button.clicked.connect(get_func(translation_combobox))
+            self.list_widget.setItemWidget(item, 3, modpage_button)
 
             files_combobox = qtw.QComboBox()
             files_combobox.setEditable(False)
@@ -160,7 +210,7 @@ class DownloadListDialog(qtw.QWidget):
             )
             get_func(translation_combobox, files_combobox, download)()
 
-            self.list_widget.setItemWidget(item, 2, files_combobox)
+            self.list_widget.setItemWidget(item, 4, files_combobox)
 
             download_button = qtw.QPushButton(self.mloc.download + "  ")
             download_button.setObjectName("download_button")
@@ -198,14 +248,15 @@ class DownloadListDialog(qtw.QWidget):
                 )
             )
 
-            self.list_widget.setItemWidget(item, 3, download_button)
+            self.list_widget.setItemWidget(item, 5, download_button)
 
         self.list_widget.header().setStretchLastSection(False)
-        self.list_widget.header().setSectionResizeMode(0, qtw.QHeaderView.ResizeMode.Stretch)
-        self.list_widget.resizeColumnToContents(0)
+        self.list_widget.header().setSectionResizeMode(
+            1, qtw.QHeaderView.ResizeMode.Stretch
+        )
         self.list_widget.resizeColumnToContents(1)
         self.list_widget.resizeColumnToContents(2)
-        self.list_widget.resizeColumnToContents(3)
+        self.list_widget.resizeColumnToContents(4)
         # self.list_widget.header().setSectionResizeMode(4, qtw.QHeaderView.ResizeMode.Fixed)
         # self.list_widget.header().resizeSection(4, self.download_all_button.width())
 
@@ -216,45 +267,50 @@ class DownloadListDialog(qtw.QWidget):
 
         from database import Translation
 
+        download_files: list[tuple[int, int]] = []
+
         for rindex in range(self.list_widget.topLevelItemCount()):
             item = self.list_widget.itemFromIndex(
                 self.list_widget.model().index(rindex, 0)
             )
 
-            translation_combobox: qtw.QComboBox = self.list_widget.itemWidget(item, 1)
-            files_combobox: qtw.QComboBox = self.list_widget.itemWidget(item, 2)
+            translation_combobox: qtw.QComboBox = self.list_widget.itemWidget(item, 2)
+            files_combobox: qtw.QComboBox = self.list_widget.itemWidget(item, 4)
 
             mod_id = int(translation_combobox.currentText().rsplit("(", 1)[1][:-1])
             file_id = int(files_combobox.currentText().rsplit("(", 1)[1][:-1])
 
-            translation_name = files_combobox.currentText().rsplit("(", 1)[0].strip()
+            if (mod_id, file_id) not in download_files:
+                translation_name = files_combobox.currentText().rsplit("(", 1)[0].strip()
 
-            translation = Translation(
-                translation_name,
-                mod_id,
-                file_id,
-                self.app.api.get_mod_details("skyrimspecialedition", mod_id)["version"],
-                original_mod_id=0,
-                original_file_id=0,
-                original_version="0",
-                path=self.app.database.userdb_path
-                / self.app.database.language
-                / translation_name,
-            )
-
-            item = qtw.QTreeWidgetItem(
-                [
+                translation = Translation(
                     translation_name,
-                    self.app.loc.main.waiting_for_download,
-                ]
-            )
-            translation.tree_item = item
-            self.app.mainpage_widget.database_widget.downloads_widget.downloads_widget.addTopLevelItem(
-                item
-            )
-            self.app.mainpage_widget.database_widget.downloads_widget.queue.put(
-                translation
-            )
+                    mod_id,
+                    file_id,
+                    self.app.api.get_mod_details("skyrimspecialedition", mod_id)["version"],
+                    original_mod_id=0,
+                    original_file_id=0,
+                    original_version="0",
+                    path=self.app.database.userdb_path
+                    / self.app.database.language
+                    / translation_name,
+                )
+
+                item = qtw.QTreeWidgetItem(
+                    [
+                        translation_name,
+                        self.app.loc.main.waiting_for_download,
+                    ]
+                )
+                translation.tree_item = item
+                self.app.mainpage_widget.database_widget.downloads_widget.downloads_widget.addTopLevelItem(
+                    item
+                )
+                self.app.mainpage_widget.database_widget.downloads_widget.queue.put(
+                    translation
+                )
+
+                download_files.append((mod_id, file_id))
 
         if self.list_widget.topLevelItemCount():
             self.app.mainpage_widget.database_widget.downloads_widget.queue_finished.connect(

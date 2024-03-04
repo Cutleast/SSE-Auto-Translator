@@ -165,6 +165,7 @@ class Record:
         self.subrecords: list[Subrecord] = []
 
         perk_type = None
+        perk_index = 0
 
         while subrecord_type := String.string(stream, 4):
             stream.seek(-4, os.SEEK_CUR)
@@ -184,6 +185,9 @@ class Record:
                 perk_type == 7 and subrecord_type == "EPFD"
             ):
                 subrecord = StringSubrecord(stream)
+                subrecord.index = perk_index
+
+                perk_index += 1
 
             elif subrecord_type in SUBRECORD_MAPPING:
                 subrecord: Subrecord = SUBRECORD_MAPPING[subrecord_type]

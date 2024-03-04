@@ -99,13 +99,12 @@ class LoadingDialog(qtw.QDialog):
         # Connect signals
         self.start_signal.connect(self.on_start)
         self.stop_signal.connect(self.on_finish)
-        self.progress_signal.connect(self.setProgress)
+        self.progress_signal.connect(self.setProgress, type=qtc.Qt.ConnectionType.QueuedConnection)
 
         # Configure dialog
         self.setWindowTitle(self.app.name)
         self.setWindowIcon(parent.windowIcon())
         self.setStyleSheet(parent.styleSheet())
-        # self.setWindowFlag(qtc.Qt.WindowType.WindowCloseButtonHint, False)
 
     def __repr__(self):
         return "LoadingDialog"

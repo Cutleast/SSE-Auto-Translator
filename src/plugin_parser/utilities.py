@@ -44,29 +44,6 @@ def get_checksum(number: int):
     return sum(int(digit) for digit in str(number))
 
 
-def is_path_like(text: str):
-    """
-    Checks if `text` is a path.
-    """
-
-    text = text.strip()
-
-    if len(text) > 255:
-        return False
-
-    suffix = text.rsplit(".", 1)[-1]
-    if (
-        "." in text
-        and 4 > len(suffix) >= 2
-        and " " not in suffix
-        and not suffix.isnumeric()
-        and all(char.isprintable() for char in text)
-    ):
-        return True
-    else:
-        return False
-
-
 def is_camel_case(text: str):
     """
     Checks if `text` is camel case without spaces.
@@ -86,13 +63,10 @@ def is_valid_string(input_string: str):
     if not input_string.strip():
         return False
 
-    # if is_path_like(input_string):
-    #     return False
+    if is_camel_case(input_string):
+        return False
 
-    # if is_camel_case(input_string):
-    #     return False
-
-    # if "_" in input_string and " " not in input_string:
-    #     return False
+    if "_" in input_string and " " not in input_string:
+        return False
 
     return all((c.isprintable() or c in CHAR_WHITELIST) for c in input_string)

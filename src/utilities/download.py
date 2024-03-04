@@ -14,6 +14,7 @@ class Download:
     """
 
     original_mod_name: str
+    original_mod_id: int
     original_plugin_name: str
 
     available_translations: list[int]

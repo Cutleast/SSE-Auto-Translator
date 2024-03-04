@@ -1,24 +1,12 @@
-# Alpha-Release v0.2.0
+# Alpha-Release v0.2.3
 
 ## Changelog
-- Fehler beim Öffnen der Einstellungen behoben
-- Plugin Parser behoben
-  - Strings aus Sub-Cells, z.B. in Whiterun werden nun vollständig extrahiert
-  - PERK EPF2 und PERK EPFD zum Parser hinzugefügt (betrifft v.a. CACO)
-- mögliche Crash-Ursache beim Modlist-Scan behoben
-  - bitte rückmelden, ob Crashes ohne Fehler immer noch auftreten
-- DownloadListDialog hinzugefügt (s. Screenshot)
-  - neueste Übersetzung und neueste File werden vorausgewählt
-  - Übersetzung und Main File können frei gewählt werden, wenn mehrere verfügbar
-- Zusammenführen von Quest- und Dialog-Strings behoben (Danke an @skyhorizon_ !)
-- Importieren und Installieren von Übersetzungen drastisch optimiert (Danke an @skyhorizon_ !)
-- Neue *Suchen und Ersetzen* Funktion zum Editor hinzugefügt
-
-## Hinweise
-- **Aufgrund der Veränderungen am Parser, muss die gesamte Database per Strg+A > Rechtsklick > *Delete Selected* neu aufgesetzt werden!!**
-
-## Bekannte Probleme
-- Fehler beim Aufheben der NXM-Verknüpfung (MO2 muss nach Beenden des ATs evtl. neu verknüpft werden)
-
-## Download
-https://drive.google.com/file/d/1rJgFHeW6Y4TXvdPVaUq_hdo7V8w8mALQ/view?usp=sharing
+- PERK EPF2 behoben, wenn mehrere EPF2 Subrecords in einem Record auftreten (z.B. "Use Retort" in CACO)
+- kleinere Verbesserungen am UI
+  - z.B. kann man im "Translations" Tab jetzt sortieren
+- Übersetzungen mit der Database und "Apply Database" stark optimiert und verbessert
+- Bug behoben, der dafür sorgte, dass ein und dieselbe Übersetzung für jedes Plugin, das diese Übersetzung braucht, heruntergeladen wurde
+- mögliche Crash-Ursache im LoadingDialog beseitigt
+- Übersetzungen mit API (Google und DeepL) werden nun gecached, um doppelte Requests zu vermeiden
+- "Open on Nexus Mods" Buttons zum DownloadListDialog hinzugefügt
+- "Mods"-Zähler oben rechts durch "Plugins"-Zähler ersetzt

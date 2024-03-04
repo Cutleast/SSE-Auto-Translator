@@ -33,7 +33,7 @@ class MainApp(qtw.QApplication):
     """
 
     name = "SSE Auto Translator"
-    version = "0.2.1"
+    version = "0.2.3"
 
     loc: "utils.Localisator" = None
     cur_path = Path(__file__).parent
@@ -48,11 +48,6 @@ class MainApp(qtw.QApplication):
     """
     Stores command to execute this app (either path to SSE-AT.exe or `sys.executable` + `__file__`).
     """
-    # executable = (
-    #     f"{sys.executable} {Path(__file__).name}"
-    #     if not Path(executable).is_file()
-    #     else executable
-    # )
 
     default_app_config = {
         "keep_logs_num": 5,  # Only keep 5 newest log files and delete rest
@@ -226,7 +221,7 @@ class MainApp(qtw.QApplication):
         api_valid = self.api.check_api_key()
 
         if not api_valid:
-            raise utils.exceptions.ApiKeyInvalidError
+            raise utils.exceptions.ApiKeyInvalidError("Nexus Mods API Key invalid!")
 
         language = self.user_config["language"].lower()
         userdb_path: Path = self.data_path / "user" / "database" / language

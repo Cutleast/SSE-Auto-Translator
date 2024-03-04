@@ -6,6 +6,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 import os
 import re
+from copy import copy
 from pathlib import Path
 
 import pyperclip
@@ -18,8 +19,6 @@ import utilities as utils
 from database import Translation
 from main import MainApp
 from widgets import LoadingDialog
-
-from .translator_dialog import TranslatorDialog
 
 
 class EditorTab(qtw.QWidget):
@@ -221,7 +220,7 @@ class EditorTab(qtw.QWidget):
         )
 
         translation.load_translation()
-        self.strings = translation.strings[plugin_name]
+        self.strings = [copy(string) for string in translation.strings[plugin_name]]
         for string in self.strings:
             item = qtw.QTreeWidgetItem(
                 [
@@ -393,15 +392,12 @@ class EditorTab(qtw.QWidget):
         Opens double clicked string in popup.
         """
 
+        from .translator_dialog import TranslatorDialog
+
         string = [_string for _string in self.strings if _string.tree_item == item][0]
 
-        dialog = TranslatorDialog(self.app, string)
-
-        if dialog.exec():
-            string.tree_item.setText(3, utils.trim_string(string.translated_string))
-
-            self.update_string_list()
-            self.changes_signal.emit()
+        dialog = TranslatorDialog(self, string)
+        dialog.show()
 
     def update_string_list(self):
         """
@@ -467,6 +463,7 @@ class EditorTab(qtw.QWidget):
 
         self.app.log.info(f"Saving Translation {self.translation.name!r}...")
 
+        self.translation.strings[self.plugin_name] = self.strings
         self.translation.save_translation()
         self.changes_pending = False
 

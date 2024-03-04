@@ -42,22 +42,27 @@ class Plugin:
         Translation for Plugin is already installed in Database (green).
         """
 
-        TranslationAvailable = 2
+        TranslationAvailableInDatabase = 2
         """
-        Translation for Plugin is available at Nexus Mods or in Database (cyan).
+        Translation for Plugin is available in Database (cyan).
         """
 
-        TranslationIncomplete = 3
+        TranslationAvailableAtNexusMods = 3
+        """
+        Translation for Plugin is available at Nexus Mods (cyan).
+        """
+
+        TranslationIncomplete = 4
         """
         Translation for Plugin is installed but incomplete (magenta).
         """
 
-        RequiresTranslation = 4
+        RequiresTranslation = 5
         """
         Plugin has Strings and requires translation (yellow).
         """
 
-        NoTranslationAvailable = 5
+        NoTranslationAvailable = 6
         """
         No Translation for Plugin at Nexus Mods or in Database (red).
         """
@@ -70,7 +75,8 @@ class Plugin:
                 cls.TranslationInstalled: QColor.fromString("#8be248"),
                 cls.TranslationIncomplete: QColor.fromString("#c24cd4"),
                 cls.RequiresTranslation: QColor.fromString("#e9e042"),
-                cls.TranslationAvailable: QColor.fromString("#51c6d9"),
+                cls.TranslationAvailableInDatabase: QColor.fromString("#51c6d9"),
+                cls.TranslationAvailableAtNexusMods: QColor.fromString("#51c6d9"),
                 cls.NoTranslationAvailable: QColor.fromString("#d74343"),
             }
 

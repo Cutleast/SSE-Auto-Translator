@@ -79,6 +79,14 @@ class TranslationsWidget(qtw.QWidget):
 
         self.translations_widget = qtw.QTreeWidget()
         self.translations_widget.setAlternatingRowColors(True)
+        self.translations_widget.header().setSortIndicatorClearable(True)
+        self.translations_widget.setSortingEnabled(True)
+        self.translations_widget.sortByColumn(2, qtc.Qt.SortOrder.AscendingOrder)
+        def on_sort_change(section: int, order: qtc.Qt.SortOrder):
+            if section == -1:
+                # "Hack" to restore original order by repopulating
+                self.load_translations()
+        self.translations_widget.header().sortIndicatorChanged.connect(on_sort_change)
         vlayout.addWidget(self.translations_widget)
 
         self.translations_widget.setHeaderLabels(

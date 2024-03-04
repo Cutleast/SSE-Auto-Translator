@@ -161,6 +161,8 @@ class DownloadsWidget(qtw.QWidget):
                     )
                 case status:
                     self.current_translation.tree_item.setText(1, str(status))
+            
+        self.update()
 
     def download_thread(self):
         """

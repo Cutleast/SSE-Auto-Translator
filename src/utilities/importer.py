@@ -56,7 +56,12 @@ def import_from_archive(archive_path: Path, modlist: list[Mod], ldialog=None):
                 )
 
             # Find original plugin in modlist
-            installed_plugins = [plugin for mod in modlist for plugin in mod.plugins]
+            installed_plugins = [
+                plugin
+                for mod in modlist
+                for plugin in mod.plugins
+                if plugin.status != plugin.Status.TranslationInstalled
+            ]
             matching = list(
                 filter(
                     lambda plugin: plugin.name.lower() == plugin_name.lower(),
@@ -200,11 +205,14 @@ def merge_plugin_strings(
     with open("output.json", encoding="utf-8-sig") as output_file:
         output_data = json.load(output_file)
 
-    merged_strings = list(
-        set(  # Remove duplicates
-            String.from_string_data(string_data) for string_data in output_data
+    if output_data is not None:
+        merged_strings = list(
+            set(  # Remove duplicates
+                [String.from_string_data(string_data) for string_data in output_data]
+            )
         )
-    )
+    else:
+        merged_strings = []
 
     # Clean up
     os.remove("translation.json")

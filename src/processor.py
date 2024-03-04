@@ -45,7 +45,7 @@ class Processor:
 
         def process(ldialog: LoadingDialog):
             ldialog.updateProgress(text1=app.loc.main.loading_database)
-            database_edids = app.database.get_edids()
+            database_strings = list(set([string.original_string for string in app.database.get_strings()]))
 
             for m, mod in enumerate(modlist):
                 plugins = [
@@ -90,11 +90,11 @@ class Processor:
                         )
 
                         for string in strings:
-                            if string.editor_id not in database_edids:
+                            if string.original_string not in database_strings:
                                 plugin.status = plugin.Status.RequiresTranslation
                                 break
                         else:
-                            plugin.status = plugin.Status.TranslationAvailable
+                            plugin.status = plugin.Status.TranslationAvailableInDatabase
 
                     else:
                         plugin.status = plugin.Status.TranslationInstalled
@@ -290,7 +290,17 @@ class Processor:
         app.log.info("Scanning Nexus Mods for available translations...")
 
         def process(ldialog: LoadingDialog):
-            for m, mod in enumerate(modlist):
+            relevant_mods = [
+                mod
+                for mod in modlist
+                if any(
+                    plugin.status == utils.Plugin.Status.RequiresTranslation
+                    and plugin.tree_item.checkState(0) == qtc.Qt.CheckState.Checked
+                    for plugin in mod.plugins
+                )
+            ]
+
+            for m, mod in enumerate(relevant_mods):
                 plugins = [
                     plugin
                     for plugin in mod.plugins
@@ -302,9 +312,9 @@ class Processor:
                     continue
 
                 ldialog.updateProgress(
-                    text1=f"{app.loc.main.scanning_nm_translations} ({m}/{len(modlist)})",
+                    text1=f"{app.loc.main.scanning_nm_translations} ({m}/{len(relevant_mods)})",
                     value1=m,
-                    max1=len(modlist),
+                    max1=len(relevant_mods),
                 )
 
                 for p, plugin in enumerate(plugins):
@@ -330,7 +340,9 @@ class Processor:
                             if app.api.scan_mod_for_filename(
                                 "skyrimspecialedition", translation_mod_id, plugin.name
                             ):
-                                plugin.status = plugin.Status.TranslationAvailable
+                                plugin.status = (
+                                    plugin.Status.TranslationAvailableAtNexusMods
+                                )
                                 break
                         else:
                             plugin.status = plugin.Status.NoTranslationAvailable
@@ -354,14 +366,12 @@ class Processor:
 
         app.log.info("Processing database translations...")
 
-        desired_lang: str = app.user_config["language"]
-
         def process(ldialog: LoadingDialog):
             for m, mod in enumerate(modlist):
                 plugins = [
                     plugin
                     for plugin in mod.plugins
-                    if plugin.status == plugin.Status.TranslationAvailable
+                    if plugin.status == plugin.Status.TranslationAvailableInDatabase
                     and plugin.tree_item.checkState(0) == qtc.Qt.CheckState.Checked
                 ]
 
@@ -384,15 +394,10 @@ class Processor:
                         text3=plugin.name,
                     )
 
-                    available_translations = app.api.get_mod_translations(
-                        "skyrimspecialedition", mod.mod_id
-                    )
-
-                    if desired_lang not in available_translations:
-                        translation = app.database.create_translation(plugin.path)
-                        translation.save_translation()
-                        app.database.add_translation(translation)
-                        plugin.status = plugin.Status.TranslationInstalled
+                    translation = app.database.create_translation(plugin.path)
+                    translation.save_translation()
+                    app.database.add_translation(translation)
+                    plugin.status = plugin.Status.TranslationInstalled
 
         loadingdialog = LoadingDialog(app.root, app, process)
         loadingdialog.exec()
@@ -419,7 +424,7 @@ class Processor:
             for mod in modlist:
                 for plugin in mod.plugins:
                     if (
-                        plugin.status == plugin.Status.TranslationAvailable
+                        plugin.status == plugin.Status.TranslationAvailableAtNexusMods
                         and plugin.tree_item.checkState(0) == qtc.Qt.CheckState.Checked
                     ):
                         available_translations = [
@@ -449,6 +454,7 @@ class Processor:
                         if available_translations and available_translation_files:
                             download = utils.Download(
                                 mod.name,
+                                mod.mod_id,
                                 plugin.name,
                                 available_translations,
                                 available_translation_files,
@@ -490,8 +496,6 @@ class Processor:
                 app.log.info("Deleted already existing Output folder.")
 
             os.mkdir(output_folder)
-
-            # output_folder = output_folder / "skse" / "plugins" / "dsd"
 
             for t, translation in enumerate(app.database.user_translations):
                 app.log.info(f"Building Output for {translation.name!r}...")
@@ -769,11 +773,12 @@ class Processor:
                 plugin
                 for mod in modlist
                 for plugin in mod.plugins
-                if plugin.status == plugin.Status.TranslationAvailable
+                if plugin.status == plugin.Status.TranslationAvailableAtNexusMods
+                or plugin.status == plugin.Status.TranslationAvailableInDatabase
             ]
         )
         color = utils.Plugin.Status.get_color(
-            utils.Plugin.Status.TranslationAvailable
+            utils.Plugin.Status.TranslationAvailableAtNexusMods
         ).name()
         label = qtw.QLabel(
             f'<font color="{color}">{app.loc.main_page.translation_available}:</font>'

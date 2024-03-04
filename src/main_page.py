@@ -50,13 +50,13 @@ class MainPageWidget(qtw.QWidget):
 
         hlayout.addStretch()
 
-        num_label = qtw.QLabel(self.mloc.mods + ":")
+        num_label = qtw.QLabel(self.mloc.plugins + ":")
         num_label.setObjectName("relevant_label")
         hlayout.addWidget(num_label)
 
-        self.mods_num_label = qtw.QLCDNumber()
-        self.mods_num_label.setDigitCount(4)
-        hlayout.addWidget(self.mods_num_label)
+        self.plugins_num_label = qtw.QLCDNumber()
+        self.plugins_num_label.setDigitCount(4)
+        hlayout.addWidget(self.plugins_num_label)
 
         hlayout = qtw.QHBoxLayout()
         vlayout.addLayout(hlayout)
@@ -233,7 +233,7 @@ class MainPageWidget(qtw.QWidget):
 
         self.mods_widget.setHeaderLabels(
             [
-                self.mloc.mod_name,
+                self.loc.main.name,
                 self.loc.main.version,
                 self.mloc.has_plugins,
                 self.mloc.priority,
@@ -719,9 +719,31 @@ class MainPageWidget(qtw.QWidget):
 
         cur_search = self.search_box.text().lower()
 
-        visible_mods = 0
+        global none_status_plugins
+        global no_strings_plugins
+        global translation_installed_plugins
+        global translation_available_plugins
+        global translation_incomplete_plugins
+        global requires_translation_plugins
+        global no_translation_available_plugins
+
+        none_status_plugins = 0
+        no_strings_plugins = 0
+        translation_installed_plugins = 0
+        translation_available_plugins = 0
+        translation_incomplete_plugins = 0
+        requires_translation_plugins = 0
+        no_translation_available_plugins = 0
 
         def process_mod_item(mod_item: qtw.QTreeWidgetItem) -> bool:
+            global none_status_plugins
+            global no_strings_plugins
+            global translation_installed_plugins
+            global translation_available_plugins
+            global translation_incomplete_plugins
+            global requires_translation_plugins
+            global no_translation_available_plugins
+
             mod_visible = (
                 cur_search in mod_item.text(0).lower()
                 if cur_search
@@ -747,6 +769,7 @@ class MainPageWidget(qtw.QWidget):
                 elif plugin.status == plugin.Status.TranslationInstalled:
                     plugin.status = plugin.Status.RequiresTranslation
 
+                # Hide/Show plugin according to status filter
                 if plugin_visible:
                     match plugin.status:
                         case plugin.Status.NoneStatus:
@@ -757,7 +780,11 @@ class MainPageWidget(qtw.QWidget):
                             plugin_visible = (
                                 self.filter_translation_installed.isChecked()
                             )
-                        case plugin.Status.TranslationAvailable:
+                        case plugin.Status.TranslationAvailableInDatabase:
+                            plugin_visible = (
+                                self.filter_translation_available.isChecked()
+                            )
+                        case plugin.Status.TranslationAvailableAtNexusMods:
                             plugin_visible = (
                                 self.filter_translation_available.isChecked()
                             )
@@ -769,6 +796,26 @@ class MainPageWidget(qtw.QWidget):
                             plugin_visible = (
                                 self.filter_no_translation_available.isChecked()
                             )
+
+                ### Update counters
+                # This is separate from above because the counters should only
+                # be increased if the plugin is visible at all
+                if plugin_visible:
+                    match plugin.status:
+                        case plugin.Status.NoneStatus:
+                            none_status_plugins += 1
+                        case plugin.Status.NoStrings:
+                            no_strings_plugins += 1
+                        case plugin.Status.TranslationInstalled:
+                            translation_installed_plugins += 1
+                        case plugin.Status.TranslationAvailableInDatabase:
+                            translation_available_plugins += 1
+                        case plugin.Status.TranslationAvailableAtNexusMods:
+                            translation_available_plugins += 1
+                        case plugin.Status.RequiresTranslation:
+                            requires_translation_plugins += 1
+                        case plugin.Status.NoTranslationAvailable:
+                            no_translation_available_plugins += 1
 
                 plugin.tree_item.setHidden(not plugin_visible)
 
@@ -791,9 +838,7 @@ class MainPageWidget(qtw.QWidget):
 
             if is_mod:
                 mod_item = toplevel_item
-
-                if process_mod_item(mod_item):
-                    visible_mods += 1
+                process_mod_item(mod_item)
 
             else:
                 separator_item = toplevel_item
@@ -809,7 +854,6 @@ class MainPageWidget(qtw.QWidget):
                     mod_item = separator_item.child(mod_index)
 
                     if process_mod_item(mod_item):
-                        visible_mods += 1
                         separator_visible = True
 
                 separator_item.setHidden(not separator_visible)
@@ -820,63 +864,13 @@ class MainPageWidget(qtw.QWidget):
                 qtw.QTreeWidget.ScrollHint.PositionAtCenter,
             )
 
-        self.mods_num_label.display(visible_mods)
-
-        none_status_plugins = len(
-            [
-                plugin
-                for mod in modlist
-                for plugin in mod.plugins
-                if plugin.status == plugin.Status.NoneStatus
-            ]
-        )
-        no_strings_plugins = len(
-            [
-                plugin
-                for mod in modlist
-                for plugin in mod.plugins
-                if plugin.status == plugin.Status.NoStrings
-            ]
-        )
-        translation_installed_plugins = len(
-            [
-                plugin
-                for mod in modlist
-                for plugin in mod.plugins
-                if plugin.status == plugin.Status.TranslationInstalled
-            ]
-        )
-        translation_available_plugins = len(
-            [
-                plugin
-                for mod in modlist
-                for plugin in mod.plugins
-                if plugin.status == plugin.Status.TranslationAvailable
-            ]
-        )
-        translation_incomplete_plugins = len(
-            [
-                plugin
-                for mod in modlist
-                for plugin in mod.plugins
-                if plugin.status == plugin.Status.TranslationIncomplete
-            ]
-        )
-        requires_translation_plugins = len(
-            [
-                plugin
-                for mod in modlist
-                for plugin in mod.plugins
-                if plugin.status == plugin.Status.RequiresTranslation
-            ]
-        )
-        no_translation_available_plugins = len(
-            [
-                plugin
-                for mod in modlist
-                for plugin in mod.plugins
-                if plugin.status == plugin.Status.NoTranslationAvailable
-            ]
+        self.plugins_num_label.display(
+            none_status_plugins
+            + no_strings_plugins
+            + translation_installed_plugins
+            + translation_incomplete_plugins
+            + translation_available_plugins
+            + no_translation_available_plugins
         )
 
         num_tooltip = f"""
@@ -892,10 +886,10 @@ class MainPageWidget(qtw.QWidget):
     utils.Plugin.Status.TranslationInstalled
 ).name()}">{translation_installed_plugins}</font></td></tr>
 <tr><td><font color="{utils.Plugin.Status.get_color(
-    utils.Plugin.Status.TranslationAvailable
+    utils.Plugin.Status.TranslationAvailableAtNexusMods
 ).name()}">{self.mloc.translation_available}:\
 </font></td><td align=right><font color="{utils.Plugin.Status.get_color(
-    utils.Plugin.Status.TranslationAvailable
+    utils.Plugin.Status.TranslationAvailableAtNexusMods
 ).name()}">{translation_available_plugins}</font></td></tr>
 <tr><td><font color="{utils.Plugin.Status.get_color(
     utils.Plugin.Status.TranslationIncomplete
@@ -917,7 +911,7 @@ class MainPageWidget(qtw.QWidget):
 ).name()}">{no_translation_available_plugins}</font></td></tr>
 </table>
 """
-        self.mods_num_label.setToolTip(num_tooltip)
+        self.plugins_num_label.setToolTip(num_tooltip)
 
         Processor.update_status_colors(self.mods)
 
@@ -961,7 +955,7 @@ class MainPageWidget(qtw.QWidget):
             self.ignore_list = []
 
         self.mods_widget.clear()
-        self.mods_num_label.display(0)
+        self.plugins_num_label.display(0)
 
         cur_separator: qtw.QTreeWidgetItem = None
 
@@ -1038,14 +1032,10 @@ class MainPageWidget(qtw.QWidget):
         self.mods = modlist
 
         # Processor.update_status_colors(self.mods)
+        self.title_label.setText(user_modinstance)
         self.update_modlist()
 
-        self.title_label.setText(user_modinstance)
-        mod_count = len(modlist) - len(
-            [mod for mod in modlist if mod.name.endswith("_separator")]
-        )
-        self.mods_num_label.display(mod_count)
-        self.app.log.info(f"Loaded {mod_count} mod(s).")
+        self.app.log.info(f"Loaded {len(self.mods)} mod(s).")
 
     def open_ignore_list(self):
         """
@@ -1167,7 +1157,7 @@ class MainPageWidget(qtw.QWidget):
             qta.icon(
                 "mdi6.square-rounded",
                 color=utils.Plugin.Status.get_color(
-                    utils.Plugin.Status.TranslationAvailable
+                    utils.Plugin.Status.TranslationAvailableAtNexusMods
                 ),
             ).pixmap(32, 32)
         )

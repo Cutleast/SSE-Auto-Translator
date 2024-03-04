@@ -19,15 +19,20 @@ class GoogleTranslator(Translator):
 
     name = "Google Translator"
 
+    cache: dict[str, str] = {}
+
     def __init__(self, app: MainApp):
         super().__init__(app)
 
         self.translator = googletrans.Translator()
 
     def translate(self, text: str, src: str, dst: str) -> str:
-        return self.translator.translate(
+        if text not in self.cache:
+            self.cache[text] = self.translator.translate(
             text, googletrans.LANGCODES[dst.lower()], googletrans.LANGCODES[src.lower()]
         ).text
+
+        return self.cache[text]
 
     def get_settings_widget(self):
         return qtw.QLabel(self.app.loc.settings.no_config_required)

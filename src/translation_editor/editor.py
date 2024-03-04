@@ -39,10 +39,10 @@ class TranslationEditor(qtw.QSplitter):
         self.translations_list.header().setSectionResizeMode(
             0, qtw.QHeaderView.ResizeMode.Stretch
         )
+        # self.translations_list.header().resizeSection(1, 25)
         self.translations_list.header().setSectionResizeMode(
-            1, qtw.QHeaderView.ResizeMode.Fixed
+            1, qtw.QHeaderView.ResizeMode.ResizeToContents
         )
-        self.translations_list.header().resizeSection(1, 25)
         self.addWidget(self.translations_list)
 
         self.page_widget = qtw.QStackedWidget()
@@ -133,9 +133,11 @@ class TranslationEditor(qtw.QSplitter):
         if not any(tab.translation == translation for tab in self.tabs):
             translation_item = qtw.QTreeWidgetItem([translation.name, ""])
             close_button = qtw.QPushButton()
-            close_button.setObjectName("download_button")
-            close_button.setIcon(qta.icon("fa.close", color="#ffffff"))
-            close_button.setFixedSize(25, 25)
+            close_button.setObjectName("list_close_button")
+            close_button.setIcon(
+                qta.icon("fa.close", color="#ffffff", color_selected="#d12525")
+            )
+            close_button.setFixedSize(26, 26)
 
             for plugin_name in translation.strings:
                 plugin_item = qtw.QTreeWidgetItem([plugin_name, ""])
@@ -154,8 +156,10 @@ class TranslationEditor(qtw.QSplitter):
 
             close_button.clicked.connect(lambda: self.close_translation(translation))
 
+        self.translations_list.resizeColumnToContents(1)
+
         # Switch to Tab
         self.set_tab(self.tabs[-1])
 
         if set_width:
-            self.setSizes([.3*self.width(), .7*self.width()])
+            self.setSizes([0.3 * self.width(), 0.7 * self.width()])

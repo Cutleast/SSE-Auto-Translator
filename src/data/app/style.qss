@@ -162,6 +162,16 @@ QPushButton#download_button {
 QPushButton#download_button:hover {
     background: #1cffffff;
 }
+QPushButton#list_close_button {
+    padding: 0px;
+    spacing: 0px;
+    background: transparent;
+    border-color: transparent;
+}
+QPushButton#list_close_button:hover {
+    background: #1cffffff;
+    border-color: #1cffffff;
+}
 QToolButton {
     background: transparent;
     border-color: transparent;
