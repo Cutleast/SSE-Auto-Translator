@@ -2,7 +2,6 @@
     "modlist": "Modlist",
     "plugins": "Plugins",
     "priority": "Priority",
-    "has_plugins": "Mod has Plugins",
     "show_only_with_plugins": "Show only Mods that have Plugins",
     "open_ignore_list": "Open Ignore List",
     "ignore_list": "Ignore List",

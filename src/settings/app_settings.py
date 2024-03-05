@@ -4,14 +4,13 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-
 import qtawesome as qta
 import qtpy.QtCore as qtc
 import qtpy.QtGui as qtg
 import qtpy.QtWidgets as qtw
 
-from main import MainApp
 import utilities as utils
+from main import MainApp
 
 
 class AppSettings(qtw.QWidget):
@@ -101,7 +100,9 @@ class AppSettings(qtw.QWidget):
         self.confidence_box.valueChanged.connect(self.on_change)
         flayout.addRow(self.mloc.detector_confidence, self.confidence_box)
 
-        self.bind_nxm_checkbox = qtw.QCheckBox(self.mloc.auto_bind_nxm + " [EXPERIMENTAL]")
+        self.bind_nxm_checkbox = qtw.QCheckBox(
+            self.mloc.auto_bind_nxm + " [EXPERIMENTAL]"
+        )
         self.bind_nxm_checkbox.setChecked(self.app.app_config["auto_bind_nxm"])
         self.bind_nxm_checkbox.stateChanged.connect(self.on_change)
         flayout.addRow(self.bind_nxm_checkbox)

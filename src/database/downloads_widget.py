@@ -59,41 +59,6 @@ class DownloadsWidget(qtw.QWidget):
         vlayout = qtw.QVBoxLayout()
         self.setLayout(vlayout)
 
-        self.tool_bar = qtw.QToolBar()
-        vlayout.addWidget(self.tool_bar)
-
-        pause_downloads_button = self.tool_bar.addAction(
-            qta.icon("mdi6.pause", color="#ffffff"),
-            self.mloc.pause_downloads,
-        )
-        pause_downloads_button.setCheckable(True)
-        pause_downloads_button.setDisabled(True)
-        pause_downloads_button.setToolTip("WIP")
-
-        cancel_downloads_button = self.tool_bar.addAction(
-            qta.icon("mdi6.stop", color="#ffffff"),
-            self.mloc.stop_downloads,
-        )
-        cancel_downloads_button.setDisabled(True)
-        cancel_downloads_button.setToolTip("WIP")
-
-        self.tool_bar.addSeparator()
-
-        def toggle_nxm():
-            if self.nxmhandler_button.isChecked():
-                self.app.nxm_listener.bind()
-                self.app.log.info("Bound Nexus Mods Links.")
-            else:
-                self.app.nxm_listener.unbind()
-                self.app.log.info("Unbound Nexus Mods Links.")
-
-        self.nxmhandler_button = self.tool_bar.addAction(
-            qta.icon("fa.chain", color="#ffffff"),
-            self.mloc.handle_nxm + " [Experimental]",
-        )
-        self.nxmhandler_button.setCheckable(True)
-        self.nxmhandler_button.triggered.connect(toggle_nxm)
-
         self.downloads_widget = qtw.QTreeWidget()
         self.downloads_widget.setAlternatingRowColors(True)
         vlayout.addWidget(self.downloads_widget)
@@ -161,7 +126,7 @@ class DownloadsWidget(qtw.QWidget):
                     )
                 case status:
                     self.current_translation.tree_item.setText(1, str(status))
-            
+
         self.update()
 
     def download_thread(self):
@@ -197,13 +162,15 @@ class DownloadsWidget(qtw.QWidget):
                     downloaded_file, self.app.mainpage_widget.mods
                 )
 
-                if self.current_translation.mod_id == 0 or self.current_translation.file_id == 0:
+                if (
+                    self.current_translation.mod_id == 0
+                    or self.current_translation.file_id == 0
+                ):
                     plugin_name: str = strings.keys()[0].lower()
 
                     for mod in self.app.mainpage_widget.mods:
                         if any(
-                            plugin_name == plugin.name.lower()
-                            for plugin in mod.plugins
+                            plugin_name == plugin.name.lower() for plugin in mod.plugins
                         ):
                             self.current_translation.original_mod_id = mod.mod_id
                             self.current_translation.original_file_id = mod.file_id

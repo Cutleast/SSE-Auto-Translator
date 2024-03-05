@@ -11,7 +11,6 @@ from .download_list import DownloadListDialog
 from .error_dialog import ErrorDialog
 from .key_entry import KeyEntry
 from .loading_dialog import LoadingDialog
-from .menu import Menu
 from .paste_entry import PasteLineEdit
 from .stacked_widget import StackedWidget
 from .string_list_dialog import StringListDialog

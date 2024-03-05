@@ -4,9 +4,9 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-import jstyleson as json
 import logging
 
+import jstyleson as json
 import qtpy.QtCore as qtc
 import requests
 import semantic_version as semver

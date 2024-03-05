@@ -4,15 +4,12 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-import qtawesome as qta
 import qtpy.QtCore as qtc
 import qtpy.QtWidgets as qtw
 
-from translator_api import AVAILABLE_APIS
-
-from widgets import KeyEntry
-
 from main import MainApp
+from translator_api import AVAILABLE_APIS
+from widgets import KeyEntry
 
 
 class TranslatorSettings(qtw.QWidget):

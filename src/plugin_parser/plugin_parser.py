@@ -2,18 +2,15 @@
 Copyright (c) Cutleast
 """
 
-import sys
-
 from io import BufferedReader
 from pathlib import Path
 
-from .group import Group
+from utilities.string import String
 
+from .group import Group
 from .plugin import Plugin
 from .record import Record
 from .subrecord import EDID, StringSubrecord
-
-from utilities.string import String
 
 
 class PluginParser:
@@ -128,7 +125,7 @@ class PluginParser:
                     strings[group.label] += current_group
                 else:
                     strings[group.label] = current_group
-            
+
                 # Remove duplicates
                 strings[group.label] = list(set(strings[group.label]))
 

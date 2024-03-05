@@ -4,8 +4,8 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-
 import sys
+
 from main import MainApp
 
 
@@ -57,7 +57,9 @@ class StdoutPipe:
             self.stdout.write(string)
             if self.app.statusbar is not None and string.strip():
                 self.app.status_label.setText(
-                    trim_string(string.removeprefix("\n").removesuffix("\n"), max_length=200),
+                    trim_string(
+                        string.removeprefix("\n").removesuffix("\n"), max_length=200
+                    ),
                 )
         except AttributeError:
             pass

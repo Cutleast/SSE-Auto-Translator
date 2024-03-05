@@ -4,8 +4,8 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-from pathlib import Path
 import zipfile
+from pathlib import Path
 
 from .archive import Archive
 
@@ -24,6 +24,6 @@ class ZIPARchive(Archive):
 
     def extract_all(self, dest: Path):
         zipfile.ZipFile(self.path).extractall(dest)
-    
+
     def extract(self, filename: str, dest: Path):
         zipfile.ZipFile(self.path).extract(filename, dest)

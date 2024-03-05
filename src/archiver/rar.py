@@ -5,7 +5,6 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import os
-
 from pathlib import Path
 
 import rarfile
@@ -19,7 +18,6 @@ class RARArchive(Archive):
     """
 
     def get_files(self) -> list[str]:
-        # return rarfile.RarFile(self.path).namelist()
         return [
             file.filename
             for file in rarfile.RarFile(self.path).infolist()
@@ -27,14 +25,12 @@ class RARArchive(Archive):
         ]
 
     def extract_all(self, dest: Path):
-        # rarfile.RarFile(self.path).extractall(dest)
         retcode = os.system(f'7z.exe x "{self.path}" -o"{dest}" -aoa -y')
 
         if retcode:
             raise Exception("Unpacking command failed!")
 
     def extract(self, filename: str, dest: Path):
-        # rarfile.RarFile(self.path).extract(filename, dest)
         retcode = os.system(f'7z.exe x "{self.path}" "{filename}" -o"{dest}" -aoa -y')
 
         if retcode:

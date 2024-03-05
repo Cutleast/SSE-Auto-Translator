@@ -7,6 +7,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 import qtpy.QtWidgets as qtw
 
 from main import MainApp
+
 from .downloads_widget import DownloadsWidget
 from .translations_widget import TranslationsWidget
 
@@ -32,4 +33,6 @@ class DatabaseWidget(qtw.QTabWidget):
         self.downloads_widget = DownloadsWidget(app)
         self.addTab(self.downloads_widget, self.mloc.downloads)
 
-        self.downloads_widget.download_finished.connect(self.translations_widget.load_translations)
+        self.downloads_widget.download_finished.connect(
+            self.translations_widget.load_translations
+        )

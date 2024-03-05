@@ -6,12 +6,12 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 import qtawesome as qta
 import qtpy.QtCore as qtc
-import qtpy.QtGui as qtg
 import qtpy.QtWidgets as qtw
 
 from utilities import LangDetector, Language
-from .startup_dialog import StartupDialog
 from widgets import ApiSetup, CompletionBox
+
+from .startup_dialog import StartupDialog
 
 
 class SetupPage(qtw.QWidget):

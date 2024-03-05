@@ -21,6 +21,7 @@ if len(sys.argv) >= 2:
 elif len(sys.argv) >= 1:
     if sys.argv[0] == "--bind-nxm":
         import winreg
+
         from main import MainApp
 
         REG_PATH = "nxm\\shell\\open\\command"

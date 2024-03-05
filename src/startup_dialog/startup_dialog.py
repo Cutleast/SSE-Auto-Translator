@@ -24,9 +24,9 @@ class StartupDialog(qtw.QWidget):
     def __init__(self, app: MainApp, parent: qtw.QWidget = None):
         super().__init__(parent)
 
-        from .setup_page import SetupPage
         from .instance_page import InstancePage
         from .introduction import IntroductionPage
+        from .setup_page import SetupPage
 
         self.app = app
         self.loc = app.loc
@@ -36,7 +36,6 @@ class StartupDialog(qtw.QWidget):
         self.log = logging.getLogger("StartupDialog")
 
         # Configure window
-        # self.setModal(True)
         self.setWindowFlag(qtc.Qt.WindowType.Window, True)
         self.setObjectName("root")
         self.setWindowTitle(self.mloc.startup)
@@ -54,7 +53,7 @@ class StartupDialog(qtw.QWidget):
 
         self.introduction_page = IntroductionPage(self)
         self.page_widget.addWidget(self.introduction_page)
-        
+
         self.setup_page = SetupPage(self)
         self.page_widget.addWidget(self.setup_page)
 
@@ -63,7 +62,6 @@ class StartupDialog(qtw.QWidget):
 
         self.page_widget.setCurrentWidget(self.introduction_page)
         self.show()
-        # utils.center(self)
 
     def finish(self):
         language = self.setup_page.lang_box.currentText()

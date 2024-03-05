@@ -29,4 +29,3 @@ class ModManager:
         """
 
         raise NotImplementedError
-    

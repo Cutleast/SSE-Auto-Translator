@@ -7,9 +7,9 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 from dataclasses import dataclass
 from pathlib import Path
 
-from .plugin import Plugin
-
 from qtpy.QtWidgets import QTreeWidgetItem
+
+from .plugin import Plugin
 
 
 @dataclass

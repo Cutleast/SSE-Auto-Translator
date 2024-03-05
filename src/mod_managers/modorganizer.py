@@ -4,10 +4,11 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-import utilities as utils
 import os
-
 from pathlib import Path
+
+import utilities as utils
+
 from .mod_manager import ModManager
 
 
@@ -32,7 +33,10 @@ class ModOrganizer(ModManager):
                 parser = utils.IniParser(instance_ini)
                 instance_data = parser.load_file()
 
-                if instance_data["General"]["gameName"] in ["Skyrim Special Edition", "Skyrim VR"]:
+                if instance_data["General"]["gameName"] in [
+                    "Skyrim Special Edition",
+                    "Skyrim VR",
+                ]:
                     instances.append(instance_ini.parent.name)
 
         instances.append("Portable")

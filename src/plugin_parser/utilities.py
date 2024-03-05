@@ -2,9 +2,10 @@
 Copyright (c) Cutleast
 """
 
-import jstyleson as json
 from io import BufferedReader
 from pathlib import Path
+
+import jstyleson as json
 
 # Whitelist for record types that are known to work
 # And that contain strings that are visible in-game
@@ -40,7 +41,7 @@ def get_checksum(number: int):
     """
 
     number = abs(number)
-    
+
     return sum(int(digit) for digit in str(number))
 
 

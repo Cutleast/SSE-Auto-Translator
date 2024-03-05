@@ -4,9 +4,8 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-
-from pathlib import Path
 import os
+from pathlib import Path
 
 
 class IniParser:
@@ -35,7 +34,7 @@ class IniParser:
                 lines.append(f"{key}={value}\n")
 
         os.makedirs(self.filename.parent, exist_ok=True)
-        with open(self.filename, 'w', encoding='utf8') as file:
+        with open(self.filename, "w", encoding="utf8") as file:
             file.writelines(lines)
 
     def load_file(self):
@@ -43,7 +42,7 @@ class IniParser:
         Loads and parses data from file. Returns it as nested dict.
         """
 
-        with open(self.filename, 'r', encoding='utf8') as file:
+        with open(self.filename, "r", encoding="utf8") as file:
             lines = file.readlines()
 
         data = {}
@@ -57,7 +56,7 @@ class IniParser:
                 cur_section[line[:-1]] = None
             elif "=" in line:
                 key, value = line.split("=", 1)
-                cur_section[key] = value.strip('\n')
+                cur_section[key] = value.strip("\n")
 
         self.data = data
         return self.data

@@ -7,8 +7,9 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 import deepl
 import googletrans
 
-from .translator import Translator
 from main import MainApp
+
+from .translator import Translator
 
 
 class DeepLTranslator(Translator):
@@ -23,12 +24,11 @@ class DeepLTranslator(Translator):
     def __init__(self, app: MainApp):
         super().__init__(app)
 
-        # Todo: load config from app
         self.api_key = app.translator_config["api_key"]
 
         self.translator = deepl.Translator(self.api_key)
 
-        # Load glossary
+        # Todo: Load glossary from user config
         self.glossary_id: str = None
 
         if self.glossary_id is not None:
@@ -50,7 +50,7 @@ class DeepLTranslator(Translator):
                 result: deepl.TextResult = self.translator.translate_text(
                     text, source_lang=src_code, target_lang=dst_code
                 )
-            
+
             self.cache[text] = result.text
 
-        return self.cache
+        return self.cache[text]

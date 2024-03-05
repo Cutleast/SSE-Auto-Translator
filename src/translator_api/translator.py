@@ -25,7 +25,7 @@ class Translator:
         """
 
         raise NotImplementedError
-    
+
     def get_settings_widget(self) -> qtw.QWidget:
         """
         Returns settings widget for configuring translator API.

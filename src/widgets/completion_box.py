@@ -5,8 +5,8 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 from typing import Sequence
+
 import qtpy.QtCore as qtc
-import qtpy.QtGui as qtg
 import qtpy.QtWidgets as qtw
 
 
@@ -19,7 +19,7 @@ class CompletionBox(qtw.QComboBox):
         super().__init__()
 
         self.setEditable(True)
-    
+
     def addItems(self, texts: Sequence[str]) -> None:
         super().addItems(texts)
 

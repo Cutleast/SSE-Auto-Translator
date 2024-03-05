@@ -4,7 +4,6 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-
 import time
 from typing import Callable
 
@@ -99,7 +98,9 @@ class LoadingDialog(qtw.QDialog):
         # Connect signals
         self.start_signal.connect(self.on_start)
         self.stop_signal.connect(self.on_finish)
-        self.progress_signal.connect(self.setProgress, type=qtc.Qt.ConnectionType.QueuedConnection)
+        self.progress_signal.connect(
+            self.setProgress, type=qtc.Qt.ConnectionType.QueuedConnection
+        )
 
         # Configure dialog
         self.setWindowTitle(self.app.name)
@@ -230,7 +231,7 @@ class LoadingDialog(qtw.QDialog):
         # bigger than 100 pixels to avoid
         # flickering
         if widthhint < widthbefore:
-            if (widthbefore - widthhint) > 100:
+            if abs(widthbefore - widthhint) > 100:
                 self.setFixedWidth(widthhint)
         else:
             self.setFixedWidth(widthhint)
@@ -267,7 +268,9 @@ class LoadingDialog(qtw.QDialog):
 
         self.killTimer(self._timer)
 
-        self.app.log.debug(f"Time: {utils.get_diff(self.starttime, time.strftime('%H:%M:%S'))}")
+        self.app.log.debug(
+            f"Time: {utils.get_diff(self.starttime, time.strftime('%H:%M:%S'))}"
+        )
 
         if self.dialog_thread.exception is not None:
             raise self.dialog_thread.exception
@@ -322,8 +325,7 @@ class LoadingDialog(qtw.QDialog):
             message_box.setText(self.loc.main.cancel_text)
             utils.apply_dark_title_bar(message_box)
             message_box.setStandardButtons(
-                qtw.QMessageBox.StandardButton.No
-                | qtw.QMessageBox.StandardButton.Yes
+                qtw.QMessageBox.StandardButton.No | qtw.QMessageBox.StandardButton.Yes
             )
             message_box.setDefaultButton(qtw.QMessageBox.StandardButton.No)
             message_box.button(qtw.QMessageBox.StandardButton.No).setText(
@@ -332,7 +334,6 @@ class LoadingDialog(qtw.QDialog):
             message_box.button(qtw.QMessageBox.StandardButton.Yes).setText(
                 self.loc.main.yes
             )
-            # utils.apply_dark_title_bar(mb)
             confirmation = message_box.exec() == qtw.QMessageBox.StandardButton.Yes
 
         if confirmation:

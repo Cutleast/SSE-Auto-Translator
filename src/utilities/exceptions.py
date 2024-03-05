@@ -10,8 +10,8 @@ class GeneralException(Exception):
     General Exception class.
     """
 
-    text: str = None # Text for traceback
-    id: str = None # Localisation id
+    text: str = None  # Text for traceback
+    id: str = None  # Localisation id
 
     def __init__(self, *args: object):
         super().__init__(self.text, *args)

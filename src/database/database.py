@@ -10,7 +10,7 @@ from shutil import rmtree
 import jstyleson as json
 
 from plugin_parser import PluginParser
-from utilities import String, Mod
+from utilities import Mod, String
 
 from .translation import Translation
 
@@ -48,7 +48,7 @@ class TranslationDatabase:
         translation_path = self.appdb_path / self.language.lower()
 
         translation = Translation(
-            name="__vanilla__",
+            name="",
             mod_id=0,
             file_id=0,
             version="",
@@ -145,7 +145,7 @@ class TranslationDatabase:
         if translation in self.user_translations:
             self.user_translations.remove(translation)
 
-    def get_translation_by_plugin_name(self, plugin_name: str) -> Translation | None:
+    def get_translation_by_plugin_name(self, plugin_name: str):
         """
         Gets a translation that covers the `plugin_name`.
 
@@ -154,40 +154,56 @@ class TranslationDatabase:
         This method is case-insensitive.
         """
 
-        for translation in self.user_translations:
-            translation_plugins = [
-                _plugin_name.lower() for _plugin_name in translation.strings
-            ]
-            if plugin_name.lower() in translation_plugins:
-                return translation
+        translations = {
+            _plugin_name.lower(): translation
+            for translation in self.user_translations
+            for _plugin_name in translation.strings
+        }
 
-    def get_translation_by_mod(self, mod: Mod) -> Translation | None:
+        return translations.get(plugin_name.lower())
+
+    def get_translation_by_mod(self, mod: Mod):
         """
         Gets a translation that covers the `mod`.
 
         Returns None if there is no translation installed for that mod.
         """
 
-        for translation in self.user_translations:
-            if (
-                translation.original_mod_id == mod.mod_id
-                and translation.original_file_id == mod.file_id
-            ):
-                return translation
-        else:
-            if mod.plugins:
-                return self.get_translation_by_plugin_name(mod.plugins[0].name)
+        installed_translations = {
+            f"{translation.mod_id}###{translation.file_id}": translation
+            for translation in self.user_translations
+            if translation.mod_id and translation.file_id
+        }
+
+        if f"{mod.mod_id}###{mod.file_id}" in installed_translations:
+            return installed_translations[f"{mod.mod_id}###{mod.file_id}"]
+
+        elif mod.plugins:
+            return self.get_translation_by_plugin_name(mod.plugins[0].name)
 
     def get_translation_by_id(self, mod_id: int, file_id: int = None):
         """
         Gets translation with `mod_id` and `file_id` if installed.
         """
 
-        for translation in self.user_translations:
-            if translation.mod_id == mod_id and (
-                translation.file_id == file_id or file_id is None
-            ):
-                return translation
+        if mod_id == 0 or file_id == 0:
+            return
+
+        if file_id is not None:
+            installed_translations = {
+                f"{translation.mod_id}###{translation.file_id}": translation
+                for translation in self.user_translations
+            }
+
+            return installed_translations.get(f"{mod_id}###{file_id}")
+
+        else:
+            installed_translations = {
+                translation.mod_id: translation
+                for translation in self.user_translations
+            }
+
+            return installed_translations.get(mod_id)
 
     def apply_translation(self, translation: Translation, plugin_name: str = None):
         """
@@ -201,6 +217,13 @@ class TranslationDatabase:
             for _translation in installed_translations
             for _plugin_name, plugin_strings in _translation.strings.items()
             if _translation != translation or _plugin_name != plugin_name
+            for string in plugin_strings
+            if string.status != String.Status.TranslationRequired
+        }
+        database_ids = {
+            f"{string.editor_id}###{string.type}": string
+            for translation in installed_translations
+            for plugin_strings in translation.strings.values()
             for string in plugin_strings
             if string.status != String.Status.TranslationRequired
         }
@@ -219,11 +242,15 @@ class TranslationDatabase:
                 matching = database_strings.get(string.original_string)
 
                 if matching is None:
+                    matching = database_ids.get(f"{string.editor_id}###{string.type}")
+
+                if matching is None:
                     continue
 
                 full_matching = (
                     string.editor_id == matching.editor_id
                     and string.type == matching.type
+                    and string.original_string == matching.original_string
                 )
 
                 string.translated_string = matching.translated_string
@@ -258,10 +285,22 @@ class TranslationDatabase:
             for string in plugin_strings
             if string.status != String.Status.TranslationRequired
         }
+        database_ids = {
+            f"{string.editor_id}###{string.type}": string
+            for translation in installed_translations
+            for plugin_strings in translation.strings.values()
+            for string in plugin_strings
+            if string.status != String.Status.TranslationRequired
+        }
 
         for original_group in plugin_groups.values():
             for original_string in original_group:
                 matching = database_strings.get(original_string.original_string)
+
+                if matching is None:
+                    matching = database_ids.get(
+                        f"{original_string.editor_id}###{original_string.type}"
+                    )
 
                 if matching is None:
                     original_string.translated_string = original_string.original_string
@@ -272,6 +311,7 @@ class TranslationDatabase:
                 full_matching = (
                     original_string.editor_id == matching.editor_id
                     and original_string.type == matching.type
+                    and original_string.original_string == matching.original_string
                 )
 
                 original_string.translated_string = matching.translated_string
@@ -319,25 +359,5 @@ class TranslationDatabase:
             if string.status == String.Status.TranslationComplete
             or string.status == String.Status.TranslationIncomplete
         ]
-
-        return result
-
-    def get_edids(self):
-        """
-        Returns list of all editor ids that are in the database.
-        """
-
-        result: list[str] = []
-
-        self.vanilla_translation.load_translation()
-        for strings in self.vanilla_translation.strings.values():
-            result += [string.editor_id for string in strings]
-
-        for translation in self.user_translations:
-            translation.load_translation()
-            for strings in translation.strings.values():
-                result += [string.editor_id for string in strings]
-
-        result = list(set(result))  # Remove duplicates
 
         return result

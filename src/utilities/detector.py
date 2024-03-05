@@ -49,7 +49,7 @@ class LangDetector:
 
         return langs
 
-    def requires_translation(self, strings: list[String], max_string_count: int = 20):
+    def requires_translation(self, strings: list[String], max_string_count: int = 40):
         """
         Checks if plugin file at `plugin_path` requires
         a translation by combining first five strings and

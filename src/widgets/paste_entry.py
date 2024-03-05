@@ -5,8 +5,8 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import pyperclip
-import qtpy.QtWidgets as qtw
 import qtawesome as qta
+import qtpy.QtWidgets as qtw
 
 
 class PasteLineEdit(qtw.QLineEdit):
@@ -19,9 +19,8 @@ class PasteLineEdit(qtw.QLineEdit):
 
         self.paste_action = self.addAction(
             qta.icon("fa5s.paste", color="#ffffff"),
-            qtw.QLineEdit.ActionPosition.TrailingPosition
+            qtw.QLineEdit.ActionPosition.TrailingPosition,
         )
-        # self.paste_action.setIconVisibleInMenu(True)
         self.paste_action.triggered.connect(
             lambda: (
                 self.setText(pyperclip.paste()) if pyperclip.paste().strip() else None

@@ -5,7 +5,9 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 from pathlib import Path
+
 import py7zr
+
 from .archive import Archive
 
 

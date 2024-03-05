@@ -17,12 +17,12 @@
     "reset_translation_text": "Are you sure, you want to reset selected Strings to their Original? This cannot be undone!",
     "apply_database": "Apply Database to untranslated Strings",
     "applying_database": "Applying Database to untranslated Strings...",
-    "database_translation_complete": "Successfully translated [NUMBER] String(s) with database.",
+    "database_translation_complete": "Translated [NUMBER] String(s) with database.",
     "search_and_replace": "Search and Replace",
     "search": "Search",
     "replace": "Replace",
     "case_sensitivity": "Case Sensitivity",
     "translate_with_api": "Translate with API",
-    "api_translation_text": "Are you sure you want to translate [NUMBER] String(s) via Translator API?\nDepending on the Translator API this can raise unexpected costs.",
+    "api_translation_text": "Are you sure you want to translate [NUMBER] String(s) via Translator API?\nDepending on the Translator API this can raise unexpected costs.\nYou can always cancel by closing the Processing Window without losing progress.",
     "translating_with_api": "Translating with API..."
 }

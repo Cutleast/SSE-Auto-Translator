@@ -6,7 +6,6 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 import qtawesome as qta
 import qtpy.QtCore as qtc
-import qtpy.QtGui as qtg
 import qtpy.QtWidgets as qtw
 
 import utilities as utils
@@ -39,7 +38,6 @@ class TranslationEditor(qtw.QSplitter):
         self.translations_list.header().setSectionResizeMode(
             0, qtw.QHeaderView.ResizeMode.Stretch
         )
-        # self.translations_list.header().resizeSection(1, 25)
         self.translations_list.header().setSectionResizeMode(
             1, qtw.QHeaderView.ResizeMode.ResizeToContents
         )
@@ -67,6 +65,14 @@ class TranslationEditor(qtw.QSplitter):
         tab = [_tab for _tab in self.tabs if _tab.tree_item == item][0]
 
         self.page_widget.setCurrentWidget(tab)
+    
+    def get_current_tab(self) -> EditorTab | None:
+        """
+        Returns current `tab` that is open.
+        """
+
+        if self.tabs:
+            return self.page_widget.currentWidget()
 
     def set_tab(self, tab: EditorTab):
         """

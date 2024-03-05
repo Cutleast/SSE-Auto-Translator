@@ -4,8 +4,10 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-import zmq
 import sys
+
+import zmq
+
 
 def handle():
     context = zmq.Context()

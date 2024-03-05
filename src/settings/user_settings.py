@@ -104,7 +104,9 @@ class UserSettings(qtw.QWidget):
         self.modinstance_dropdown.currentTextChanged.connect(on_instance_select)
 
         instance_path_label = qtw.QLabel(self.loc.main.instance_path)
-        instance_path_label.setEnabled(self.app.user_config["modinstance"] == "Portable")
+        instance_path_label.setEnabled(
+            self.app.user_config["modinstance"] == "Portable"
+        )
         hlayout = qtw.QHBoxLayout()
         flayout.addRow(instance_path_label, hlayout)
 
@@ -112,13 +114,17 @@ class UserSettings(qtw.QWidget):
         path_file = self.app.data_path / "user" / "portable.txt"
         if path_file.is_file() and self.app.user_config["modinstance"] == "Portable":
             self.instance_path_entry.setText(path_file.read_text().strip())
-        self.instance_path_entry.setEnabled(self.app.user_config["modinstance"] == "Portable")
+        self.instance_path_entry.setEnabled(
+            self.app.user_config["modinstance"] == "Portable"
+        )
         hlayout.addWidget(self.instance_path_entry)
         browse_instance_path_button = qtw.QPushButton()
         browse_instance_path_button.setIcon(
             qta.icon("fa5s.folder-open", color="#ffffff")
         )
-        browse_instance_path_button.setEnabled(self.app.user_config["modinstance"] == "Portable")
+        browse_instance_path_button.setEnabled(
+            self.app.user_config["modinstance"] == "Portable"
+        )
 
         def browse():
             file_dialog = qtw.QFileDialog(self.app.activeModalWidget())

@@ -7,8 +7,8 @@ import zlib
 from io import BufferedReader, BytesIO
 
 from .datatypes import Flags, Hex, Integer, String
-from .subrecord import SUBRECORD_MAPPING, Subrecord, StringSubrecord
-from .utilities import PARSE_WHITELIST, peek, get_checksum
+from .subrecord import SUBRECORD_MAPPING, StringSubrecord, Subrecord
+from .utilities import PARSE_WHITELIST, get_checksum, peek
 
 
 class Record:

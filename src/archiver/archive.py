@@ -38,20 +38,18 @@ class Archive:
         """
 
         raise NotImplementedError
-    
+
     def find(self, pattern: str) -> list[str]:
         """
         Returns all files in archive that match `pattern` (wildcard).
         """
 
-        result = [
-            file
-            for file in self.get_files()
-            if fnmatch(file, pattern)
-        ]
+        result = [file for file in self.get_files() if fnmatch(file, pattern)]
 
         if not result:
-            raise FileNotFoundError(f"Found no file for pattern {pattern!r} in archive.")
+            raise FileNotFoundError(
+                f"Found no file for pattern {pattern!r} in archive."
+            )
 
         return result
 
@@ -75,4 +73,6 @@ class Archive:
             case ".zip":
                 return ZIPARchive(archive_path)
             case suffix:
-                raise NotImplementedError(f"Archive format {suffix!r} not yet supported!")
+                raise NotImplementedError(
+                    f"Archive format {suffix!r} not yet supported!"
+                )

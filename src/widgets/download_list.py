@@ -12,7 +12,6 @@ import qtpy.QtGui as qtg
 import qtpy.QtWidgets as qtw
 
 import utilities as utils
-
 from main import MainApp
 
 
@@ -72,7 +71,7 @@ class DownloadListDialog(qtw.QWidget):
                 self.mloc.choose_translation,
                 "",  # Modpage button for translation mod
                 self.mloc.choose_file,
-                self.mloc.download,
+                self.mloc.free_download,
             ]
         )
         self.list_widget.setIndentation(0)
@@ -145,10 +144,13 @@ class DownloadListDialog(qtw.QWidget):
 
             def get_func(tcb):
                 translation_combobox = tcb
+
                 def open_modpage():
                     translation_name = translation_combobox.currentText()
                     translation_id = int(translation_name.rsplit("(", 1)[1][:-1])
-                    url = utils.create_nexus_mods_url("skyrimspecialedition", translation_id)
+                    url = utils.create_nexus_mods_url(
+                        "skyrimspecialedition", translation_id
+                    )
                     url += "?tab=files"
                     os.startfile(url)
 
@@ -247,6 +249,7 @@ class DownloadListDialog(qtw.QWidget):
                     download_button,
                 )
             )
+            download_button.setDisabled(self.app.api.premium)
 
             self.list_widget.setItemWidget(item, 5, download_button)
 
@@ -257,8 +260,6 @@ class DownloadListDialog(qtw.QWidget):
         self.list_widget.resizeColumnToContents(1)
         self.list_widget.resizeColumnToContents(2)
         self.list_widget.resizeColumnToContents(4)
-        # self.list_widget.header().setSectionResizeMode(4, qtw.QHeaderView.ResizeMode.Fixed)
-        # self.list_widget.header().resizeSection(4, self.download_all_button.width())
 
     def download_all(self):
         """
@@ -281,13 +282,17 @@ class DownloadListDialog(qtw.QWidget):
             file_id = int(files_combobox.currentText().rsplit("(", 1)[1][:-1])
 
             if (mod_id, file_id) not in download_files:
-                translation_name = files_combobox.currentText().rsplit("(", 1)[0].strip()
+                translation_name = (
+                    files_combobox.currentText().rsplit("(", 1)[0].strip()
+                )
 
                 translation = Translation(
                     translation_name,
                     mod_id,
                     file_id,
-                    self.app.api.get_mod_details("skyrimspecialedition", mod_id)["version"],
+                    self.app.api.get_mod_details("skyrimspecialedition", mod_id)[
+                        "version"
+                    ],
                     original_mod_id=0,
                     original_file_id=0,
                     original_version="0",

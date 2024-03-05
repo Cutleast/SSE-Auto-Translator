@@ -50,6 +50,11 @@ class EditorTab(qtw.QWidget):
         save_shortcut = qtg.QShortcut(qtg.QKeySequence("Ctrl+S"), self)
         save_shortcut.activated.connect(self.save)
 
+        close_shortcut = qtg.QShortcut(qtg.QKeySequence("Ctrl+W"), self)
+        close_shortcut.activated.connect(
+            lambda: app.translation_editor.close_translation(translation)
+        )
+
         vlayout = qtw.QVBoxLayout()
         self.setLayout(vlayout)
 
@@ -406,13 +411,12 @@ class EditorTab(qtw.QWidget):
 
         cur_search = self.search_box.text().lower()
 
-        visible_strings = 0
+        no_translation_required_strings = 0
+        translation_complete_strings = 0
+        translation_incomplete_strings = 0
+        translation_required_strings = 0
 
         for string in self.strings:
-            # item_text = "".join([string.tree_item.text(c) for c in range(4)]).lower()
-
-            # string_visible = cur_search in item_text
-
             string_text = (
                 string.editor_id
                 + string.type
@@ -433,6 +437,16 @@ class EditorTab(qtw.QWidget):
                     case string.Status.TranslationRequired:
                         string_visible = self.filter_translation_required.isChecked()
 
+                match string.status:
+                    case string.Status.NoTranslationRequired:
+                        no_translation_required_strings += 1
+                    case string.Status.TranslationComplete:
+                        translation_complete_strings += 1
+                    case string.Status.TranslationIncomplete:
+                        translation_incomplete_strings += 1
+                    case string.Status.TranslationRequired:
+                        translation_required_strings += 1
+
             string.tree_item.setToolTip(0, string.editor_id)
             string.tree_item.setToolTip(1, string.type)
             string.tree_item.setToolTip(2, string.original_string)
@@ -443,12 +457,48 @@ class EditorTab(qtw.QWidget):
                     c, string.Status.get_color(string.status)
                 )
 
-            if string_visible:
-                visible_strings += 1
-
             string.tree_item.setHidden(not string_visible)
 
-        self.strings_num_label.display(visible_strings)
+        self.strings_num_label.display(
+            no_translation_required_strings
+            + translation_complete_strings
+            + translation_incomplete_strings
+            + translation_required_strings
+        )
+
+        num_tooltip = f"""
+<table cellspacing="5">
+<tr><td><font color="{utils.String.Status.get_color(
+    utils.String.Status.NoTranslationRequired
+).name()}">{self.mloc.no_translation_required_status}:\
+</font></td><td align=right><font color="{utils.String.Status.get_color(
+    utils.String.Status.NoTranslationRequired
+).name()}">{no_translation_required_strings}</font></td></tr>
+
+<tr><td><font color="{utils.String.Status.get_color(
+    utils.String.Status.TranslationComplete
+).name()}">{self.mloc.translation_complete_status}:\
+</font></td><td align=right><font color="{utils.String.Status.get_color(
+    utils.String.Status.TranslationComplete
+).name()}">{translation_complete_strings}</font></td></tr>
+
+<tr><td><font color="{utils.String.Status.get_color(
+    utils.String.Status.TranslationIncomplete
+).name()}">{self.mloc.translation_incomplete_status}:\
+</font></td><td align=right><font color="{utils.String.Status.get_color(
+    utils.String.Status.TranslationIncomplete
+).name()}">{translation_incomplete_strings}</font></td></tr>
+
+<tr><td><font color="{utils.String.Status.get_color(
+    utils.String.Status.TranslationRequired
+).name()}">{self.mloc.translation_required_status}:\
+</font></td><td align=right><font color="{utils.String.Status.get_color(
+    utils.String.Status.TranslationRequired
+).name()}">{translation_required_strings}</font></td></tr>
+
+</table>
+"""
+        self.strings_num_label.setToolTip(num_tooltip)
 
         if self.strings_widget.selectedItems():
             self.strings_widget.scrollToItem(
@@ -687,7 +737,6 @@ class EditorTab(qtw.QWidget):
         dialog = qtw.QDialog(self.app.root)
         dialog.setModal(True)
         dialog.setWindowTitle(self.loc.main.help)
-        # dialog.setFixedSize(400, 350)
         utils.apply_dark_title_bar(dialog)
 
         vlayout = qtw.QVBoxLayout()

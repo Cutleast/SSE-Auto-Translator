@@ -4,12 +4,12 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-import win32api
 import locale
 import logging
 from pathlib import Path
 
 import jstyleson as json
+import win32api
 
 
 class LocalisationSection:

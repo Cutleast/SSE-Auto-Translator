@@ -87,6 +87,7 @@ class Translation:
 
         for plugin_name, plugin_strings in self.strings.items():
             plugin_name = plugin_name.lower()
+            plugin_strings = list(set(plugin_strings))  # Remove duplicates
             string_data = [string.to_string_data() for string in plugin_strings]
             with open(
                 self.path / (plugin_name + ".json"), "w", encoding="utf8"

@@ -8,14 +8,18 @@ Placeholder for header image
 
 # Description
 
-This is a tool for translating whole modlists with relative ease. It automatically scans your modlist for required translations by using AI-based language detection.
-SSE-AT then scans the original mods on Nexus Mods for available translations and downloads them (automated downloads only for Nexus Mods Premium users).
-SSE-AT manages all installed translations in a combined database and makes use of the Dynamic String Distributor SKSE plugin to inject the translations
-into the game without modifications to any plugins or "downgrading" the original plugins in case of outdated translations.
-The tool also has an built-in editor for creating and editing translations yourself and supports Google Translator and DeepL APIs.
+This tool allows you to translate entire modlists with relatively little effort. It utilizes AI-based language detection to automatically identify necessary translations in your modlist.
+The tool then efficiently searches for available translations of the original mods on Nexus Mods and downloads them (automated downloads are exclusively available for Nexus Mods Premium users).
+SSE-AT manages all installed translations in a single database and injects them into the game using the Dynamic String Distributor SKSE plugin, without modifying any plugins or "downgrading" the original plugins in case of outdated translations.
+Additionally, the tool also features a built-in editor for creating and editing translations yourself and has support for Google Translator and DeepL API.
+
+# Usage
+See [Documentation](/doc/Instructions_en_US.md).
 
 # Features
-- Automated detection of required and already installed translations
+
+- Automated detection of required translations
+- Automated detection and import of already installed translations
 - Automated scan for required translations on Nexus Mods
 - Version-independent translations via SKSE
 - Combined Database to auto-translate plugins that only persist of Vanilla strings
@@ -23,12 +27,42 @@ The tool also has an built-in editor for creating and editing translations yours
   - Search and Replace Feature
   - Built-in support for Google Translator (free) and DeepL API (API Key required)
   - Export Feature to share own translations
-- Import Feature for manually installing translations and exported xTranslator translations (in XML format only)
+- Import Feature for manually installing translations and exported (XML format only) xTranslator translations
 - Ignore-List Feature to completely ignore plugins that are falsely marked as "Translation Required"
 - Built-in Documentation
 - Deep Scan Feature to find incomplete translations
 - Startup-Dialog for easy setup and introduction
 - Status colors to quickly give an overview of the translation state of your modlist
+- Bind to "Mod Manager Download" Buttons at Nexus Mods to conveniently download translations from Nexus Mods (especially for free users)
+  - this requires manual activation in the "Translations" tab
+  - "Auto-bind" is available in settings (experimental)
+    - with this enabled, SSE-AT gets auto-linked to Mod Manager Downloads on startup and unlinked when closed
+    - experimental, because a crash might prevent unlinking
+
+# Limitations
+
+- Only Plugin Files (.esp, .esm and .esl) are supported at the moment
+  - this means that there is no support for sound files, interface translations (data/interface/*.txt) or Papyrus scripts (.pex)
+- Translations that are not on a separate modpage and/or linked (under "Translations") on the original modpage cannot be found by SSE-AT
+  - for eg. the german translation for [Unofficial Skyrim Modder's Patch](https://www.nexusmods.com/skyrimspecialedition/mods/49616?tab=files)
+  - those have to be installed manually in SSE-AT by either downloading and importing them or by starting the download via SSE-AT itself (see [FAQ](#faq) below for more)
+
+# FAQ
+
+##### SSE-AT detected a plugin (or multiple) as *Translation Required* although it contains no visible strings. What can I do to prevent it from detecting it again?
+
+- You can add it to the ignore list like this: Right Click the plugin(s) > "Add to Ignore List"
+- This prevents SSE-AT from including it at all
+- You can view and remove plugins from the Ignore List via the "Ignore List" Button right next to the filter button at the top
+
+##### There are still untranslated strings in my game. I thought SSE-AT fixes this?
+
+- SSE-AT can only download translations available on Nexus Mods and auto-create translations for mods that are entirely covered by already installed translations (including vanilla strings).
+- Depending on your desired language, there are more or less available translations at Nexus Mods
+
+##### I found untranslated strings from a mod that has a translation installed.
+
+- Please ensure that the original translation works and that it's a problem with SSE-AT before opening a Bug report or Issue
 
 # Contributing
 

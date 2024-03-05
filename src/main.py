@@ -10,7 +10,6 @@ import logging
 import os
 import platform
 import shutil
-import subprocess
 import sys
 import tempfile
 import time
@@ -33,7 +32,7 @@ class MainApp(qtw.QApplication):
     """
 
     name = "SSE Auto Translator"
-    version = "0.2.4"
+    version = "0.2.5"
 
     loc: "utils.Localisator" = None
     cur_path = Path(__file__).parent
@@ -94,7 +93,6 @@ class MainApp(qtw.QApplication):
         self.setApplicationVersion(self.version)
 
         self.setWindowIcon(qtg.QIcon(str(self.data_path / "icons" / "icon.png")))
-        # self.setWindowIcon(qtg.QIcon(str(self.data_path / "icons" / "SSE-AT.svg")))
 
     def exec(self):
         self.init_logger()
@@ -121,7 +119,6 @@ class MainApp(qtw.QApplication):
             self.setup_complete = False
             startup_dialog = StartupDialog(app=self)
             startup_dialog.log.addHandler(self.log_handler)
-            # startup_dialog.exec()
 
         if self.setup_complete:
             self.start_main_app()
@@ -204,14 +201,16 @@ class MainApp(qtw.QApplication):
             os.makedirs(self.translator_conf_path.parent, exist_ok=True)
             with open(self.translator_conf_path, "w", encoding="utf8") as file:
                 json.dump(self.default_translator_config, file, indent=4)
-        
+
         for translator in translator_api.AVAILABLE_APIS:
             if translator.name == self.translator_config["translator"]:
                 self.translator = translator(self)
                 self.log.info(f"Loaded translator API {translator.name!r}.")
                 break
         else:
-            self.log.error(f"Invalid Translator {self.translator_config['translator']!r}!")
+            self.log.error(
+                f"Invalid Translator {self.translator_config['translator']!r}!"
+            )
             self.log.info("Falling back to Google Translator...")
             self.translator = translator_api.GoogleTranslator(self)
 
@@ -228,18 +227,11 @@ class MainApp(qtw.QApplication):
         appdb_path = self.data_path / "app" / "database"
 
         if not userdb_path.is_dir():
-            os.mkdir(userdb_path)
+            os.makedirs(userdb_path, exist_ok=True)
 
             index_path = userdb_path / "index.json"
-            index_data = {
-                "database": {
-                    "language": self.user_config["language"],
-                },
-                "translations": [],
-            }
-
             with open(index_path, "w", encoding="utf8") as index_file:
-                json.dump(index_data, index_file, indent=4)
+                json.dump([], index_file, indent=4)
 
         self.log.info("Loading translation database...")
 
@@ -265,15 +257,13 @@ class MainApp(qtw.QApplication):
         width = 100
         log_title = f" {self.name} ".center(width, "=")
         self.log.info(f"\n{'=' * width}\n{log_title}\n{'=' * width}")
-        self.log.info(f"{'Program version':22}: {self.version}")
-        # self.log.info(f"{'Executable name':22}: {sys.executable}")
-        # self.log.info(f"{'Executable path':22}: {self.cur_path}")
-        self.log.info(f"{'Executable':22}: {self.executable}")
-        self.log.info(f"{'Command line arguments':22}: {sys.argv}")
-        self.log.info(f"{'Data path':22}: {self.data_path}")
-        self.log.info(f"{'Config path':22}: {self.app_conf_path}")
-        self.log.info(f"{'Log path':22}: {self.log_path}")
-        self.log.info(f"{'Log level':22}: {utils.intlevel2strlevel(self.log_level)}")
+        self.log.info(f"Program Version: {self.version}")
+        self.log.info(f"Executable: {self.executable}")
+        self.log.info(f"Commandline Arguments: {sys.argv}")
+        self.log.info(f"Data Path: {self.data_path}")
+        self.log.info(f"Config Path: {self.app_conf_path}")
+        self.log.info(f"Log Path: {self.log_path}")
+        self.log.info(f"Log Level: {utils.intlevel2strlevel(self.log_level)}")
         self.log.debug(
             f"{'Detected platform':21}: \
 {platform.system()} \
@@ -404,6 +394,20 @@ class MainApp(qtw.QApplication):
         self.tab_widget.addTab(self.translation_editor, self.loc.editor.editor)
         self.tab_widget.setTabEnabled(1, False)
 
+        # Refresh Hotkey
+        refresh_shortcut = qtg.QShortcut(qtg.QKeySequence("F5"), self.root)
+
+        def refresh():
+            self.mainpage_widget.update_modlist()
+            self.mainpage_widget.database_widget.translations_widget.update_translations()
+
+            current_editor_tab = self.translation_editor.get_current_tab()
+
+            if current_editor_tab:
+                current_editor_tab.update_string_list()
+
+        refresh_shortcut.activated.connect(refresh)
+
     def show_documentation(self):
         """
         Displays Documentation Markdown in an own dialog.
@@ -429,7 +433,6 @@ class MainApp(qtw.QApplication):
 
         self.root = qtw.QMainWindow()
         self.root.setWindowTitle(self.loc.main.documentation)
-        # self.root.setObjectName("root")
         self.root.setMinimumSize(1000, 800)
         utils.apply_dark_title_bar(self.root)
 
@@ -446,7 +449,6 @@ class MainApp(qtw.QApplication):
         documentation_path = (
             Path(".").resolve() / "doc" / f"Instructions_{self.loc.language}.md"
         )
-        # document.setTextWidth(150)
         document.setUseDesignMetrics(True)
 
         # Modify document.loadResource to ensure that images are loaded
@@ -638,7 +640,7 @@ class MainApp(qtw.QApplication):
 
         if hasattr(self, "mainpage_widget"):
             if self.nxm_listener is not None:
-                self.mainpage_widget.database_widget.downloads_widget.nxmhandler_button.setChecked(
+                self.mainpage_widget.database_widget.translations_widget.nxmhandler_button.setChecked(
                     self.nxm_listener.is_bound()
                 )
 
@@ -667,12 +669,9 @@ class MainApp(qtw.QApplication):
 
                 if choice != qtw.QMessageBox.StandardButton.Yes:
                     confirmation = False
-        
+
         if hasattr(self, "translation_editor"):
-            if any(
-                tab.changes_pending
-                for tab in self.translation_editor.tabs
-            ):
+            if any(tab.changes_pending for tab in self.translation_editor.tabs):
                 message_box = qtw.QMessageBox(self.root)
                 message_box.setWindowTitle(self.loc.main.exit + "?")
                 message_box.setText(self.loc.main.unsaved_exit)

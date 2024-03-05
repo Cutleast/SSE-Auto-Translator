@@ -46,7 +46,22 @@ class Processor:
         def process(ldialog: LoadingDialog):
             ldialog.updateProgress(text1=app.loc.main.loading_database)
             database_strings = list(
-                set([string.original_string for string in app.database.get_strings()])
+                set(
+                    [
+                        string.original_string
+                        for string in app.database.get_strings()
+                        if string.status != string.Status.TranslationRequired
+                    ]
+                )
+            )
+            database_ids = list(
+                set(
+                    [
+                        f"{string.editor_id}###{string.type}"
+                        for string in app.database.get_strings()
+                        if string.status != string.Status.TranslationRequired
+                    ]
+                )
             )
 
             for m, mod in enumerate(modlist):
@@ -92,7 +107,11 @@ class Processor:
                         )
 
                         for string in strings:
-                            if string.original_string not in database_strings:
+                            if (
+                                string.original_string not in database_strings
+                                and f"{string.editor_id}###{string.type}"
+                                not in database_ids
+                            ):
                                 plugin.status = plugin.Status.RequiresTranslation
                                 break
                         else:
@@ -141,11 +160,11 @@ class Processor:
             dsd_files = [
                 file
                 for file in mod.path.glob(
-                    "*/SKSE/Plugins/DynamicStringDistributor/*/*.json"
+                    "**/SKSE/Plugins/DynamicStringDistributor/*/*.json"
                 )
                 if not fnmatch(
                     file.name, "*_SSEAT.json"
-                )  # Import DSD files in Output mod
+                )  # Do not import DSD files from generated Output mod
             ]
 
             if not len(dsd_files):
@@ -156,10 +175,16 @@ class Processor:
             for dsd_file in dsd_files:
                 plugin_name = dsd_file.parent.name.lower()
 
+                if app.database.get_translation_by_plugin_name(plugin_name):
+                    continue
+
                 strings[plugin_name] = [
                     utils.String.from_string_data(string_data)
                     for string_data in json.loads(dsd_file.read_text())
                 ]
+            
+            if not len(strings):
+                continue
 
             for plugin_strings in strings.values():
                 for string in plugin_strings:

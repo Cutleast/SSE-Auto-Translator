@@ -5,8 +5,8 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import pyperclip
-import qtpy.QtWidgets as qtw
 import qtawesome as qta
+import qtpy.QtWidgets as qtw
 
 
 class CopyLineEdit(qtw.QLineEdit):
@@ -19,13 +19,10 @@ class CopyLineEdit(qtw.QLineEdit):
 
         self.copy_action = self.addAction(
             qta.icon("fa5s.copy", color="#ffffff"),
-            qtw.QLineEdit.ActionPosition.TrailingPosition
+            qtw.QLineEdit.ActionPosition.TrailingPosition,
         )
-        # self.paste_action.setIconVisibleInMenu(True)
         self.copy_action.triggered.connect(
-            lambda: (
-                pyperclip.copy(self.text()) if self.text().strip() else None
-            )
+            lambda: (pyperclip.copy(self.text()) if self.text().strip() else None)
         )
 
 

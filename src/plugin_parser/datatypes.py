@@ -2,9 +2,9 @@
 Copyright (c) Cutleast
 """
 
-from io import BufferedReader
-import struct
 import os
+import struct
+from io import BufferedReader
 
 
 class Integer:
@@ -281,56 +281,4 @@ class Hex:
 
     @staticmethod
     def hex(stream: BufferedReader, size: int):
-        # return stream.read(size).hex().upper()
         return hex(Integer._int(stream, size)).removeprefix("0x").upper().zfill(8)
-
-
-class Hash:
-    """
-    Class for all types of hashes.
-    """
-
-    @staticmethod
-    def hash(stream: BufferedReader):
-        return Integer.uint64(stream)
-
-    @staticmethod
-    def calc_hash(filename: str):
-        """
-        Returns tes4's two hash values for filename.
-        Based on TimeSlips code with cleanup and pythonization.
-
-        This function's code is from here:
-        https://en.uesp.net/wiki/Oblivion_Mod:Hash_Calculation#Python
-        """
-
-        root, ext = os.path.splitext(
-            filename.lower()
-        )  # --"bob.dds" >> root = "bob", ext = ".dds"
-        # --Hash1
-        chars = map(ord, root)  # --'bob' >> chars = [98,111,98]
-        hash1 = (
-            chars[-1]
-            | (0, chars[-2])[len(chars) > 2] << 8
-            | len(chars) << 16
-            | chars[0] << 24
-        )
-        # --(a,b)[test] is similar to test?a:b in C. (Except that evaluation is not shortcut.)
-        if ext == ".kf":
-            hash1 |= 0x80
-        elif ext == ".nif":
-            hash1 |= 0x8000
-        elif ext == ".dds":
-            hash1 |= 0x8080
-        elif ext == ".wav":
-            hash1 |= 0x80000000
-        # --Hash2
-        # --Python integers have no upper limit. Use uintMask to restrict these to 32 bits.
-        uintMask, hash2, hash3 = 0xFFFFFFFF, 0, 0
-        for char in chars[1:-2]:  # --Slice of the chars array
-            hash2 = ((hash2 * 0x1003F) + char) & uintMask
-        for char in map(ord, ext):
-            hash3 = ((hash3 * 0x1003F) + char) & uintMask
-        hash2 = (hash2 + hash3) & uintMask
-        # --Done
-        return (hash2 << 32) + hash1  # --Return as uint64

@@ -4,11 +4,8 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-from pathlib import Path
-
 import qtawesome as qta
 import qtpy.QtCore as qtc
-import qtpy.QtGui as qtg
 import qtpy.QtWidgets as qtw
 
 from .startup_dialog import StartupDialog
@@ -59,10 +56,7 @@ class IntroductionPage(qtw.QWidget):
         self.exit_button.setIcon(qta.icon("fa.close", color="#ffffff"))
         self.exit_button.setText(self.loc.main.exit)
         self.exit_button.clicked.connect(
-            lambda: (
-                self.startup_dialog.close(),
-                self.startup_dialog.app.exit()
-            )
+            lambda: (self.startup_dialog.close(), self.startup_dialog.app.exit())
         )
         hlayout.addWidget(self.exit_button, 0, qtc.Qt.AlignmentFlag.AlignLeft)
 

@@ -8,9 +8,6 @@ import os
 from pathlib import Path
 
 import jstyleson as json
-import qtawesome as qta
-import qtpy.QtCore as qtc
-import qtpy.QtGui as qtg
 import qtpy.QtWidgets as qtw
 
 import utilities as utils
@@ -18,8 +15,8 @@ from main import MainApp
 from widgets import ErrorDialog
 
 from .app_settings import AppSettings
-from .user_settings import UserSettings
 from .translator_settings import TranslatorSettings
+from .user_settings import UserSettings
 
 
 class SettingsDialog(qtw.QDialog):
@@ -160,7 +157,7 @@ class SettingsDialog(qtw.QDialog):
 
         with open(self.app.user_conf_path, "w", encoding="utf8") as file:
             json.dump(user_settings, file, indent=4)
-        
+
         with open(self.app.translator_conf_path, "w", encoding="utf8") as file:
             json.dump(translator_settings, file, indent=4)
 

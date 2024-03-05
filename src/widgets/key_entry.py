@@ -4,8 +4,8 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-import qtpy.QtWidgets as qtw
 import qtawesome as qta
+import qtpy.QtWidgets as qtw
 
 
 class KeyEntry(qtw.QLineEdit):
@@ -22,10 +22,10 @@ class KeyEntry(qtw.QLineEdit):
 
         self.toggle_visibility_action = self.addAction(
             qta.icon("mdi6.eye", color="#ffffff"),
-            qtw.QLineEdit.ActionPosition.TrailingPosition
+            qtw.QLineEdit.ActionPosition.TrailingPosition,
         )
         self.toggle_visibility_action.triggered.connect(self.toggle_visibility)
-    
+
     def toggle_visibility(self):
         self.__is_visible = not self.__is_visible
 
@@ -36,9 +36,7 @@ class KeyEntry(qtw.QLineEdit):
             )
         else:
             self.setEchoMode(qtw.QLineEdit.EchoMode.Password)
-            self.toggle_visibility_action.setIcon(
-                qta.icon("mdi6.eye", color="#ffffff")
-            )
+            self.toggle_visibility_action.setIcon(qta.icon("mdi6.eye", color="#ffffff"))
 
 
 if __name__ == "__main__":

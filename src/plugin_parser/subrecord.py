@@ -3,8 +3,9 @@ Copyright (c) Cutleast
 """
 
 from io import BufferedReader, BytesIO
+
 from . import utilities as utils
-from .datatypes import Integer, String, Float
+from .datatypes import Float, Integer, String
 
 
 class Subrecord:
@@ -89,7 +90,9 @@ class StringSubrecord(Subrecord):
         self.data = utils.peek(self.data_stream, self.size)
 
         try:
-            string = String.string(self.data_stream, self.size).removesuffix("\x00").strip()
+            string = (
+                String.string(self.data_stream, self.size).removesuffix("\x00").strip()
+            )
             if utils.is_valid_string(string) or string.isnumeric():
                 self.string = string
             else:
@@ -143,8 +146,8 @@ SUBRECORD_MAPPING: dict[str, Subrecord] = {
     "SHRT": StringSubrecord,
     "DNAM": StringSubrecord,
     "ITXT": StringSubrecord,
-    # "EPF2": StringSubrecord,
-    # "EPFD": StringSubrecord,
+    "EPF2": StringSubrecord,
+    "EPFD": StringSubrecord,
     "MAST": MAST,
     "TIFC": TIFC,
 }

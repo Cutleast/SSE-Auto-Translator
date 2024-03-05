@@ -4,8 +4,8 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-import qtpy.QtWidgets as qtw
 import googletrans
+import qtpy.QtWidgets as qtw
 
 from main import MainApp
 
@@ -29,8 +29,10 @@ class GoogleTranslator(Translator):
     def translate(self, text: str, src: str, dst: str) -> str:
         if text not in self.cache:
             self.cache[text] = self.translator.translate(
-            text, googletrans.LANGCODES[dst.lower()], googletrans.LANGCODES[src.lower()]
-        ).text
+                text,
+                googletrans.LANGCODES[dst.lower()],
+                googletrans.LANGCODES[src.lower()],
+            ).text
 
         return self.cache[text]
 

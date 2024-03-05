@@ -4,11 +4,11 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+from dataclasses import dataclass
+from enum import Enum, auto
+
 from qtpy.QtGui import QColor
 from qtpy.QtWidgets import QTreeWidgetItem
-
-from enum import Enum, auto
-from dataclasses import dataclass
 
 
 @dataclass

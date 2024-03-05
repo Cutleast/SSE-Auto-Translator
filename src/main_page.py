@@ -172,23 +172,14 @@ class MainPageWidget(qtw.QWidget):
             self.loc.main.scan_modlist,
         )
         scan_modlist.triggered.connect(
-            lambda: (
-                Processor.scan_modlist(self.mods, self.app),
-                # scan_nm_action.setDisabled(False),
-                # deep_scan_action.setDisabled(False),
-            )
+            lambda: Processor.scan_modlist(self.mods, self.app)
         )
 
         scan_nm_action = self.tool_bar.addAction(
             qtg.QIcon(str(self.app.data_path / "icons" / "scan_nm.svg")),
             self.loc.main.scan_nm_translations,
         )
-        scan_nm_action.triggered.connect(
-            lambda: (
-                Processor.scan_nm(self.mods, self.app),
-                # download_translations_action.setDisabled(False),
-            )
-        )
+        scan_nm_action.triggered.connect(lambda: Processor.scan_nm(self.mods, self.app))
 
         download_translations_action = self.tool_bar.addAction(
             qta.icon("mdi6.download-multiple", color="#ffffff"),
@@ -235,7 +226,6 @@ class MainPageWidget(qtw.QWidget):
             [
                 self.loc.main.name,
                 self.loc.main.version,
-                self.mloc.has_plugins,
                 self.mloc.priority,
             ]
         )
@@ -622,8 +612,6 @@ class MainPageWidget(qtw.QWidget):
                     or selected_plugin.status
                     == utils.Plugin.Status.TranslationInstalled
                 )
-                # create_translation_action.setDisabled(True)
-                # create_translation_action.setToolTip("WIP")
 
                 plugin_count = len(
                     [
@@ -719,7 +707,11 @@ class MainPageWidget(qtw.QWidget):
 
         cur_search = self.search_box.text().lower()
 
-        ignore_list = self.ignore_list + utils.constants.BASE_GAME_PLUGINS + utils.constants.AE_CC_PLUGINS
+        ignore_list = (
+            self.ignore_list
+            + utils.constants.BASE_GAME_PLUGINS
+            + utils.constants.AE_CC_PLUGINS
+        )
 
         global none_status_plugins
         global no_strings_plugins
@@ -885,32 +877,38 @@ class MainPageWidget(qtw.QWidget):
 <table cellspacing="5">
 <tr><td>{self.mloc.none_status}:\
 </td><td align=right>{none_status_plugins}</td></tr>
+
 <tr><td>{self.mloc.no_strings}:\
 </td><td align=right>{no_strings_plugins}</td></tr>
+
 <tr><td><font color="{utils.Plugin.Status.get_color(
     utils.Plugin.Status.TranslationInstalled
 ).name()}">{self.mloc.translation_installed}:\
 </font></td><td align=right><font color="{utils.Plugin.Status.get_color(
     utils.Plugin.Status.TranslationInstalled
 ).name()}">{translation_installed_plugins}</font></td></tr>
+
 <tr><td><font color="{utils.Plugin.Status.get_color(
     utils.Plugin.Status.TranslationAvailableAtNexusMods
 ).name()}">{self.mloc.translation_available}:\
 </font></td><td align=right><font color="{utils.Plugin.Status.get_color(
     utils.Plugin.Status.TranslationAvailableAtNexusMods
 ).name()}">{translation_available_plugins}</font></td></tr>
+
 <tr><td><font color="{utils.Plugin.Status.get_color(
     utils.Plugin.Status.TranslationIncomplete
 ).name()}">{self.mloc.translation_incomplete}:\
 </font></td><td align=right><font color="{utils.Plugin.Status.get_color(
     utils.Plugin.Status.TranslationIncomplete
 ).name()}">{translation_incomplete_plugins}</font></td></tr>
+
 <tr><td><font color="{utils.Plugin.Status.get_color(
     utils.Plugin.Status.RequiresTranslation
 ).name()}">{self.mloc.requires_translation}:\
 </font></td><td align=right><font color="{utils.Plugin.Status.get_color(
     utils.Plugin.Status.RequiresTranslation
 ).name()}">{requires_translation_plugins}</font></td></tr>
+
 <tr><td><font color="{utils.Plugin.Status.get_color(
     utils.Plugin.Status.NoTranslationAvailable
 ).name()}">{self.mloc.no_translation_available}:\
@@ -961,8 +959,12 @@ class MainPageWidget(qtw.QWidget):
                 self.ignore_list: list[str] = json.load(ignore_list_file)
         else:
             self.ignore_list = []
-        
-        ignore_list = self.ignore_list + utils.constants.BASE_GAME_PLUGINS + utils.constants.AE_CC_PLUGINS
+
+        ignore_list = (
+            self.ignore_list
+            + utils.constants.BASE_GAME_PLUGINS
+            + utils.constants.AE_CC_PLUGINS
+        )
 
         self.mods_widget.clear()
         self.plugins_num_label.display(0)
@@ -975,7 +977,6 @@ class MainPageWidget(qtw.QWidget):
                     [
                         mod.name.removesuffix("_separator"),
                         "",
-                        "",  # Has Plugins
                         str(i + 1),  # Mod Priority
                     ]
                 )
@@ -995,7 +996,6 @@ class MainPageWidget(qtw.QWidget):
                     [
                         mod.name,
                         mod.version,
-                        (self.loc.main.yes if mod.plugins else self.loc.main.no),
                         str(i + 1),  # Mod Priority
                     ]
                 )
@@ -1011,7 +1011,6 @@ class MainPageWidget(qtw.QWidget):
                             [
                                 plugin.name,
                                 "",  # Version
-                                "",  # Has Plugins
                                 "",  # Priority
                             ]
                         )

@@ -14,7 +14,7 @@ import qtpy.QtWidgets as qtw
 
 import utilities as utils
 from main import MainApp
-from widgets import StringListDialog, LoadingDialog
+from widgets import LoadingDialog, StringListDialog
 
 from .translation import Translation
 
@@ -71,21 +71,32 @@ class TranslationsWidget(qtw.QWidget):
         )
         local_import_button.triggered.connect(self.import_local_translation)
 
-        check_updates_button = self.tool_bar.addAction(
-            qta.icon("mdi.cloud-refresh", color="#ffffff"),
-            self.loc.main.check_for_updates,
+        def toggle_nxm():
+            if self.nxmhandler_button.isChecked():
+                self.app.nxm_listener.bind()
+                self.app.log.info("Bound Nexus Mods Links.")
+            else:
+                self.app.nxm_listener.unbind()
+                self.app.log.info("Unbound Nexus Mods Links.")
+
+        self.nxmhandler_button = self.tool_bar.addAction(
+            qta.icon("fa.chain", color="#ffffff"),
+            self.mloc.handle_nxm + " [Experimental]",
         )
-        check_updates_button.setDisabled(True)
+        self.nxmhandler_button.setCheckable(True)
+        self.nxmhandler_button.triggered.connect(toggle_nxm)
 
         self.translations_widget = qtw.QTreeWidget()
         self.translations_widget.setAlternatingRowColors(True)
         self.translations_widget.header().setSortIndicatorClearable(True)
         self.translations_widget.setSortingEnabled(True)
         self.translations_widget.sortByColumn(2, qtc.Qt.SortOrder.AscendingOrder)
+
         def on_sort_change(section: int, order: qtc.Qt.SortOrder):
             if section == -1:
                 # "Hack" to restore original order by repopulating
                 self.load_translations()
+
         self.translations_widget.header().sortIndicatorChanged.connect(on_sort_change)
         vlayout.addWidget(self.translations_widget)
 
@@ -402,6 +413,14 @@ class TranslationsWidget(qtw.QWidget):
 
         modlist = self.app.mainpage_widget.mods
 
+        installed_mods = {
+            plugin.name.lower(): plugin
+            for mod in modlist
+            for plugin in mod.plugins
+            if plugin.status != plugin.Status.TranslationInstalled
+            and plugin.status != plugin.Status.TranslationIncomplete
+        }
+
         fdialog = qtw.QFileDialog()
         fdialog.setFileMode(fdialog.FileMode.ExistingFile)
         fdialog.setNameFilters(
@@ -438,16 +457,9 @@ class TranslationsWidget(qtw.QWidget):
             elif file.suffix.lower() in [".esp", ".esm", ".esl"]:
                 self.app.log.info(f"Importing translation from '{file}'...")
 
-                # Find original plugin in modlist
-                for mod in modlist:
-                    for plugin in mod.plugins:
-                        if plugin.name.lower() == file.name.lower():
-                            break
-                    else:
-                        continue
+                plugin = installed_mods.get(file.name.lower())
 
-                    break
-                else:
+                if plugin is None:
                     self.app.log.error(f"No original plugin for {file.name!r} found!")
                     return
 

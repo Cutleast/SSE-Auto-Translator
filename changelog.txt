@@ -1,15 +1,13 @@
-# Alpha-Release v0.2.4
+# Alpha-Release v0.2.5
 
 Dieses Update enthält nur Polishing und kleinere Fixes.
 
 ## Changelog
-- Plugin-Zähler oben rechts gefixt
-- Base Game und Creation Club Plugins werden nun standardmäßig ignoriert
-- kleinere Fehlerbehebungen bei der Statusanzeige der Plugins
-- möglichen AttributeError beim Start behoben
-- Deep Scan stark optimiert
-- Plugin Parser ignoriert nun Records mit den Flags "Ignored" oder "Deleted"
-- ungenutzten Code entfernt
+- Statistik-Tooltip zum String-Zähler im Editor hinzugefügt
+- Auto-Import von DSD-Übersetzungen behoben
+- kleinere Fixes und Verbesserungen am UI
+- weiteren ungenutzten Code entfernt
+- Database-Übersetzungen weiter optimiert und verfeinert
 
 ## Download
-https://drive.google.com/file/d/1R2KIUuRBxKUbAtcuvwbGUmMb9BY2JAzg/view?usp=sharing
+https://drive.google.com/file/d/1yBtEGhH_wzzm2Zk3V7VuI2EWIJ_8jMpB/view?usp=sharing

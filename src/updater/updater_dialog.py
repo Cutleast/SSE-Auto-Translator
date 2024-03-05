@@ -5,6 +5,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import os
+
 import qtpy.QtGui as qtg
 import qtpy.QtWidgets as qtw
 
@@ -69,12 +70,6 @@ class UpdaterDialog(qtw.QDialog):
         )
         hlayout.addWidget(download_button)
 
-        self.exec()
-
-    def exec(self):
         self.show()
         self.resize(700, 400)
-
-        utils.center(self)
-
-        super().exec()
+        self.exec()
