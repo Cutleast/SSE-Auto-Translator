@@ -49,18 +49,18 @@ See [Documentation](/doc/Instructions_en_US.md).
 
 # FAQ
 
-##### SSE-AT detected a plugin (or multiple) as *Translation Required* although it contains no visible strings. What can I do to prevent it from detecting it again?
+#### SSE-AT detected a plugin (or multiple) as *Translation Required* although it contains no visible strings. What can I do to prevent it from detecting it again?
 
 - You can add it to the ignore list like this: Right Click the plugin(s) > "Add to Ignore List"
 - This prevents SSE-AT from including it at all
 - You can view and remove plugins from the Ignore List via the "Ignore List" Button right next to the filter button at the top
 
-##### There are still untranslated strings in my game. I thought SSE-AT fixes this?
+#### There are still untranslated strings in my game. I thought SSE-AT fixes this?
 
 - SSE-AT can only download translations available on Nexus Mods and auto-create translations for mods that are entirely covered by already installed translations (including vanilla strings).
 - Depending on your desired language, there are more or less available translations at Nexus Mods
 
-##### I found untranslated strings from a mod that has a translation installed.
+#### I found untranslated strings from a mod that has a translation installed.
 
 - Please ensure that the original translation works and that it's a problem with SSE-AT before opening a Bug report or Issue
 
