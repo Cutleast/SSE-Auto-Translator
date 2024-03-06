@@ -1,6 +1,6 @@
 # Initial Setup
 
-If already done, skip to the next section *Basic Usage*.
+If already done, skip to the next section [Basic Usage](#basic-usage).
 
 1. Download and extract the latest SSE-AT Release to a folder like this: C:\Modding\Tools\SSE-AT\
    - (in case of an update, just overwrite the existing files there)
@@ -43,7 +43,7 @@ Click on *Done* and you're ready to go!
 To translate a modlist with all translations that are either Vanilla or available at Nexus Mods, follow the steps below.
 
 1. Start the SSE-AT.exe
-   - If this is the first start, see *Initial Setup* above
+   - If this is the first start, see [Initial Setup](#initial-setup) above
 2. Run the modlist scan (button 1, see below)
 3. Run the Nexus Mods scan (button 2, see below)
 4. Download and install available Translations (button 3, see below)
