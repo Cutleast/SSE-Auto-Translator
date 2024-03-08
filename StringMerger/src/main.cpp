@@ -1,19 +1,27 @@
 #include <iostream>
 #include <fstream>
-#include <string>
-#include <vector>
-#include <unordered_map>
+#include <ankerl/unordered_dense.h>
 #include <nlohmann/json.hpp>
 
 using json = nlohmann::json;
 
 struct StringEntry {
-	std::string editor_id;
-	std::string type;
-	std::string original;
-	std::string translated;
+	std::string_view editor_id;
+	std::string_view type;
+	std::string_view original;
+	std::string_view translated;
 	std::optional<int> index;
 };
+
+size_t hashStringEntry(const StringEntry& entry) {
+	size_t hashValue = 0;
+	hashValue ^= std::hash<std::string_view>{}(entry.editor_id);
+	hashValue ^= std::hash<std::string_view>{}(entry.type);
+	if (entry.index.has_value()) {
+		hashValue ^= std::hash<int>{}(*entry.index);
+	}
+	return hashValue;
+}
 
 int main(int argc, char* argv[]) {
 	if (argc != 3) {
@@ -36,8 +44,7 @@ int main(int argc, char* argv[]) {
 		originalFile >> originalJson;
 		translatedFile >> translatedJson;
 
-		std::unordered_map<std::string, StringEntry> entries;
-		entries.reserve(originalJson.size());
+		ankerl::unordered_dense::map<size_t, StringEntry> entries;
 
 		//Add the original data to the map and initialize the translation with the original value
 		for (const auto& entry : originalJson) {
@@ -49,33 +56,49 @@ int main(int argc, char* argv[]) {
 			if (!entry["index"].is_null()) {
 				stringEntry.index = entry["index"].get<int>(); //Store as integer
 			}
-			entries.emplace(stringEntry.editor_id + "_" + (stringEntry.index ? std::to_string(*stringEntry.index) : "null") + "_" + stringEntry.type, stringEntry); // Use editor_id, index, and type as key
+
+			size_t key = hashStringEntry(stringEntry); //Compute the hash value
+			entries.emplace(key, stringEntry); //Use the hash value as key
 		}
 
 		//Update translations in the map only if the editor_id, index, and type exist in both JSON files
 		for (const auto& entry : translatedJson) {
-			auto it = entries.find(entry["editor_id"].get<std::string>() + "_" + (entry["index"].is_null() ? "null" : std::to_string(entry["index"].get<int>())) + "_" + entry["type"].get<std::string>());
+			StringEntry stringEntry;
+			stringEntry.editor_id = entry["editor_id"];
+			stringEntry.type = entry["type"];
+			stringEntry.translated = entry["string"];
+			if (!entry["index"].is_null()) {
+				stringEntry.index = entry["index"].get<int>(); // Store as integer
+			}
+
+			size_t key = hashStringEntry(stringEntry);
+			auto it = entries.find(key);
 			if (it != entries.end()) {
-				it->second.translated = entry["string"];
+				it->second.translated = stringEntry.translated;
 			}
 		}
 
 		//Output merged data only if editor_id, index, and type exist in both original and translated JSON
 		json outputJson;
 		for (const auto& originalEntry : originalJson) {
-			const auto& editor_id = originalEntry["editor_id"].get<std::string>();
-			const auto& index = originalEntry["index"].is_null() ? std::optional<int>() : originalEntry["index"].get<int>();
-			const auto& type = originalEntry["type"].get<std::string>();
 
-			auto it = entries.find(editor_id + "_" + (index ? std::to_string(*index) : "null") + "_" + type);
+			StringEntry stringEntry;
+			stringEntry.editor_id = originalEntry["editor_id"];
+			stringEntry.type = originalEntry["type"];
+			if (!originalEntry["index"].is_null()) {
+				stringEntry.index = originalEntry["index"].get<int>(); //Store as integer
+			}
+
+			size_t key = hashStringEntry(stringEntry);
+			auto it = entries.find(key);
 			if (it != entries.end() && !it->second.translated.empty()) {
 				const StringEntry& mergedEntry = it->second;
 
 				json jsonEntry = {
-				{"editor_id", mergedEntry.editor_id},
-				{"type", mergedEntry.type},
-				{"original", mergedEntry.original},
-				{"string", mergedEntry.translated}
+					{"editor_id", mergedEntry.editor_id},
+					{"type", mergedEntry.type},
+					{"original", mergedEntry.original},
+					{"string", mergedEntry.translated}
 				};
 
 				if (mergedEntry.index.has_value()) {

@@ -52,13 +52,14 @@ endif()
 
 # Find required packages (adjust as needed)
 find_package(nlohmann_json CONFIG REQUIRED)
+find_package(unordered_dense CONFIG REQUIRED)
 
 set(SRC "${CMAKE_SOURCE_DIR}/src")
 file(GLOB sources ${SRC}/*.cpp)
 add_executable(merger ${sources})
 
 # Link libraries
-target_link_libraries(merger PRIVATE nlohmann_json::nlohmann_json)
+target_link_libraries(merger PRIVATE nlohmann_json::nlohmann_json unordered_dense::unordered_dense)
 
 
 # Add generated files to the target
