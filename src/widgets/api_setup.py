@@ -33,22 +33,22 @@ class ApiSetup(qtw.QWidget):
         vlayout.setAlignment(qtc.Qt.AlignmentFlag.AlignTop)
         self.setLayout(vlayout)
 
-        hlayout = qtw.QHBoxLayout()
-        vlayout.addLayout(hlayout)
+        vlayout.addSpacing(25)
 
-        self.sso_button = qtw.QPushButton(self.mloc.sso_setup)
-        self.sso_button.setCheckable(True)
+        api_help_label = qtw.QLabel(self.mloc.api_help)
+        api_help_label.setWordWrap(True)
+        vlayout.addWidget(api_help_label)
 
-        def goto_sso():
-            self.sso_button.setChecked(True)
-            self.manual_button.setChecked(False)
-            api_key_box.hide()
-            sso_box.show()
+        vlayout.addSpacing(25)
 
-        self.sso_button.clicked.connect(goto_sso)
-        hlayout.addWidget(self.sso_button)
+        tab_widget = qtw.QTabWidget()
+        # tab_widget.setDocumentMode(True)
+        tab_widget.tabBar().setExpanding(True)
+        tab_widget.setObjectName("centered_tab")
+        vlayout.addWidget(tab_widget)
 
         sso_box = qtw.QWidget()
+        sso_box.setObjectName("transparent")
         sso_vlayout = qtw.QVBoxLayout()
         sso_box.setLayout(sso_vlayout)
         sso_button = qtw.QPushButton(self.mloc.start_sso)
@@ -67,21 +67,10 @@ class ApiSetup(qtw.QWidget):
         sso_button.setDisabled(True)
         sso_button.setToolTip("WIP")
         sso_vlayout.addWidget(sso_button)
-        vlayout.addWidget(sso_box)
-
-        self.manual_button = qtw.QPushButton(self.mloc.manual_setup)
-        self.manual_button.setCheckable(True)
-
-        def goto_manual():
-            self.manual_button.setChecked(True)
-            self.sso_button.setChecked(False)
-            sso_box.hide()
-            api_key_box.show()
-
-        self.manual_button.clicked.connect(goto_manual)
-        hlayout.addWidget(self.manual_button)
+        tab_widget.addTab(sso_box, self.mloc.sso_setup)
 
         api_key_box = qtw.QWidget()
+        api_key_box.setObjectName("transparent")
         api_key_vlayout = qtw.QVBoxLayout()
         api_key_box.setLayout(api_key_vlayout)
         api_key_hlayout = qtw.QHBoxLayout()
@@ -112,6 +101,4 @@ class ApiSetup(qtw.QWidget):
 
         api_key_check_button.clicked.connect(check_api_key)
         api_key_vlayout.addWidget(api_key_check_button)
-        vlayout.addWidget(api_key_box)
-
-        self.sso_button.click()
+        tab_widget.addTab(api_key_box, self.mloc.manual_setup)

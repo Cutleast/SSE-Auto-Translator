@@ -4,5 +4,6 @@
     "insert_api_key": "Insert your API Key",
     "check_api_key": "Check API Key",
     "start_sso": "Click here to login to Nexus Mods via Browser",
-    "sso_successful": "Successfully logged into Nexus Mods"
+    "sso_successful": "Successfully logged into Nexus Mods",
+    "api_help": "In order to get translations from Nexus Mods this tool needs access to the Nexus Mods API. You can setup access by two methods: insert API key manually or via SSO (Single-Sign-On) (not available for pre-release version)"
 }

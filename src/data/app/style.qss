@@ -524,6 +524,13 @@ QTabBar::close-button {
 QTabBar::close-button:hover {
     background: #1cffffff;
 }
+QTabWidget::tab-bar#centered_tab {
+    alignment: center;
+}
+QTabWidget#centered_tab QTabBar::tab {
+    padding-left: 25px;
+    padding-right: 25px;
+}
 
 
 /* Splitter */
@@ -536,10 +543,6 @@ QSplitter::handle {
     width: 22px;
     height: 22px;
 }
-/* QSplitter::handle:horizontal {
-    width: 4px;
-    height: 10px;
-} */
 
 
 /* TextBrowser */

@@ -9,10 +9,10 @@ import os
 from pathlib import Path
 
 DIST_FOLDER = Path("app.dist").resolve()
-APPNAME="SSE Auto Translator"
-VERSION="0.2.5"
-AUTHOR="Cutleast"
-LICENSE="Attribution-NonCommercial-NoDerivatives 4.0 International"
+APPNAME = "SSE Auto Translator"
+VERSION = "0.2.6"
+AUTHOR = "Cutleast"
+LICENSE = "Attribution-NonCommercial-NoDerivatives 4.0 International"
 UNUSED_ITEMS: list[Path] = [
     DIST_FOLDER / "data" / "app" / "config.json",
     DIST_FOLDER / "data" / "user",
@@ -32,6 +32,7 @@ cmd = f'nuitka \
 --include-data-dir="./7-zip=." \
 --include-data-dir="./src/data=./data" \
 --include-data-dir="./doc=./doc" \
+--include-data-file="LICENSE=."
 --include-data-files="./.venv/Lib/site-packages/cloudscraper/user_agent/browsers.json=cloudscraper/user_agent/" \
 --include-data-dir="./.venv/Lib/site-packages/qtawesome=./qtawesome" \
 --enable-plugin=pyside6 \

@@ -499,6 +499,7 @@ class TranslationsWidget(qtw.QWidget):
 
                 self.app.database.add_translation(translation)
                 self.load_translations()
+                self.app.mainpage_widget.update_modlist()
 
                 messagebox = qtw.QMessageBox(self.app.root)
                 messagebox.setWindowTitle(self.loc.main.success)

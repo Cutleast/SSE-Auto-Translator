@@ -1126,7 +1126,6 @@ class MainPageWidget(qtw.QWidget):
         dialog = qtw.QDialog(self.app.root)
         dialog.setModal(True)
         dialog.setWindowTitle(self.loc.main.help)
-        dialog.setFixedSize(500, 400)
         utils.apply_dark_title_bar(dialog)
 
         vlayout = qtw.QVBoxLayout()

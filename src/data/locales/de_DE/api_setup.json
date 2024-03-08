@@ -1,0 +1,9 @@
+{
+    "sso_setup": "Single-Sign-On (Browser)",
+    "manual_setup": "Manuelle Einrichtung",
+    "insert_api_key": "API Key eingeben",
+    "check_api_key": "API Key überprüfen",
+    "start_sso": "Hier klicken, um sich über den Browser bei Nexus Mods anzumelden",
+    "sso_successful": "Erfolgreich bei Nexus Mods angemeldet",
+    "api_help": "Um Übersetzungen von Nexus Mods zu erhalten, benötigt dieses Tool Zugriff auf die Nexus Mods API. Sie können den Zugang über zwei Methoden einrichten: API-Key manuell eingeben oder über SSO (Single-Sign-On) (nicht verfügbar für Vorabversion)"
+}

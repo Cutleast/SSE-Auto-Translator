@@ -66,10 +66,14 @@ class Localisator:
                 system_language = locale.windows_locale[language_id]
                 self.log.debug(f"Detected system language: {system_language}")
                 self.language = system_language
-                self.lang_path = self.lang_path.parent / system_language
+                match = list(self.lang_path.parent.glob(f"{system_language[:2]}_??"))
+                if match:
+                    self.lang_path = match[0]
+                else:
+                    self.lang_path = self.lang_path.parent / system_language
             except Exception as ex:
                 self.log.error(f"Failed to get system language: {ex}")
-                self.language = "en _US"
+                self.language = "en_US"
                 self.lang_path = self.lang_path.parent / system_language
 
         # Fall back to english localisation
@@ -84,7 +88,7 @@ class Localisator:
         for lang_file in self.lang_path.glob("*.json"):
             with open(lang_file, mode="r", encoding="utf8") as file:
                 lang_data: dict[str, str] = json.load(file)
-
+            
             # Create root attribute
             setattr(self, lang_file.stem, LocalisationSection(self.log, lang_file.name))
             root_attr = getattr(self, lang_file.stem)
@@ -92,6 +96,8 @@ class Localisator:
 
             for key, value in lang_data.items():
                 setattr(root_attr, key, value)
+
+        self.log.info(f"Loaded localisation for {self.lang_path.name!r}.")
 
     def get_available_langs(self):
         return [lang.name for lang in self.lang_path.parent.glob("??_??")]

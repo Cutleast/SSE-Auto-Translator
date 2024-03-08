@@ -9,7 +9,7 @@ Placeholder for header image
 # Description
 
 This tool allows you to translate entire modlists with relatively little effort. It utilizes AI-based language detection to automatically identify necessary translations in your modlist.
-The tool then efficiently searches for available translations of the original mods on Nexus Mods and downloads them (automated downloads are exclusively available for Nexus Mods Premium users).
+The tool then searches for available translations of the original mods on Nexus Mods and downloads them (automated downloads are exclusively available for Nexus Mods Premium users).
 SSE-AT manages all installed translations in a single database and injects them into the game using the Dynamic String Distributor SKSE plugin, without modifying any plugins or "downgrading" the original plugins in case of outdated translations.
 Additionally, the tool also features a built-in editor for creating and editing translations yourself and has support for Google Translator and DeepL API.
 
@@ -42,12 +42,17 @@ See [Documentation](/doc/Instructions_en_US.md).
 # Limitations
 
 - Only Plugin Files (.esp, .esm and .esl) are supported at the moment
-  - this means that there is no support for sound files, interface translations (data/interface/*.txt) or Papyrus scripts (.pex)
+  - this means that there is no support for sound files, interface translations (data/interface/*.txt) or Papyrus scripts (.pex), etc.
 - Translations that are not on a separate modpage and/or linked (under "Translations") on the original modpage cannot be found by SSE-AT
   - for eg. the german translation for [Unofficial Skyrim Modder's Patch](https://www.nexusmods.com/skyrimspecialedition/mods/49616?tab=files)
   - those have to be installed manually in SSE-AT by either downloading and importing them or by starting the download via SSE-AT itself (see [FAQ](#faq) below for more)
 
 # FAQ
+
+#### Do I have to edit any ini files?
+
+- Make sure to set *[General]* > *sLanguage* in *Skyrim.ini* to your desired language (for eg. *GERMAN*)
+  - Since sound is not supported I also recommend setting the english voice files in the same ini file. Just go to *[Archive]* and under *sResourceArchiveList2 replace Voices_xx0.bsa* with *Voices_en0.bsa*
 
 #### SSE-AT detected a plugin (or multiple) as *Translation Required* although it contains no visible strings. What can I do to prevent it from detecting it again?
 
@@ -96,5 +101,5 @@ If you encountered an issue/error or you have a suggestion, create an issue unde
 
 - Qt by [The Qt Company Ltd](https://qt.io)
 - [lingua-py](https://github.com/pemistahl/lingua-py) by [Peter M. Stahl](https://github.com/pemistahl)
-- [DynamicStringDistributor](https://github.com/SkyHorizon3/DynamicStringDistributor) by [SkyHorizon](https://github.com/SkyHorizon3)
+- [DynamicStringDistributor](https://github.com/SkyHorizon3/SSE-Dynamic-String-Distributor) by [SkyHorizon](https://github.com/SkyHorizon3)
 - Icon by [Wuerfelhusten](https://nexusmods.com/users/122160268)

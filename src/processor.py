@@ -564,12 +564,13 @@ class Processor:
                         and string.translated_string
                     ]
 
-                    with translation_path.open(
-                        "w", encoding="utf8"
-                    ) as translation_file:
-                        json.dump(
-                            strings, translation_file, indent=4, ensure_ascii=False
-                        )
+                    if len(strings):
+                        with translation_path.open(
+                            "w", encoding="utf8"
+                        ) as translation_file:
+                            json.dump(
+                                strings, translation_file, indent=4, ensure_ascii=False
+                            )
 
         loadingdialog = LoadingDialog(app.root, app, process)
         loadingdialog.exec()

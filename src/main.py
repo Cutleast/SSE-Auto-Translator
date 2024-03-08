@@ -32,7 +32,7 @@ class MainApp(qtw.QApplication):
     """
 
     name = "SSE Auto Translator"
-    version = "0.2.5"
+    version = "0.2.6"
 
     loc: "utils.Localisator" = None
     cur_path = Path(__file__).parent
@@ -45,7 +45,7 @@ class MainApp(qtw.QApplication):
 
     executable = str(cur_path / "SSE-AT.exe")
     """
-    Stores command to execute this app (either path to SSE-AT.exe or `sys.executable` + `__file__`).
+    Stores command to execute this app.
     """
 
     default_app_config = {
@@ -113,7 +113,7 @@ class MainApp(qtw.QApplication):
         self.log.info("Application started.")
 
         # Check for updates
-        # updater.Updater(self).run()
+        updater.Updater(self).run()
 
         if self.first_start:
             self.setup_complete = False
@@ -265,12 +265,12 @@ class MainApp(qtw.QApplication):
         self.log.info(f"Log Path: {self.log_path}")
         self.log.info(f"Log Level: {utils.intlevel2strlevel(self.log_level)}")
         self.log.debug(
-            f"{'Detected platform':21}: \
+            f"Detected Platform: \
 {platform.system()} \
 {platform.version()} \
 {platform.architecture()[0]}"
         )
-        self.log.info(f"{'First start':22}: {self.first_start}")
+        self.log.info(f"First start: {self.first_start}")
 
     def load_locale(self):
         self.loc = utils.Localisator(self.app_config["language"], self.loc_path)
@@ -449,6 +449,11 @@ class MainApp(qtw.QApplication):
         documentation_path = (
             Path(".").resolve() / "doc" / f"Instructions_{self.loc.language}.md"
         )
+        if not documentation_path.is_file():
+            self.log.warning(f"No documentation available for {self.loc.language!r}. Falling back to 'en_US'...")
+            documentation_path = (
+                Path(".").resolve() / "doc" / f"Instructions_en_US.md"
+            )
         document.setUseDesignMetrics(True)
 
         # Modify document.loadResource to ensure that images are loaded

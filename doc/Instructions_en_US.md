@@ -48,6 +48,7 @@ To translate a modlist with all translations that are either Vanilla or availabl
 3. Run the Nexus Mods scan (button 2, see below)
 4. Download and install available Translations (button 3, see below)
 5. Build the Output for the Dynamic String Distributor SKSE Plugin (button 4, see below)
+    - **This must be done everytime after you edited, installed or deleted a translation**
 6. Install the Output folder as a mod (modlist position does not matter) so that the "SKSE" folder lands in the game's "Data" folder
 
 Now you're ready to play!

@@ -175,6 +175,8 @@ class Record:
         perk_type = None
         perk_index = 0
 
+        itxt_index = 0
+
         while subrecord_type := String.string(stream, 4):
             stream.seek(-4, os.SEEK_CUR)
 
@@ -205,6 +207,10 @@ class Record:
                 subrecord = Subrecord(stream, subrecord_type)
 
             subrecord.parse(self.flags)
+
+            if subrecord_type == "ITXT":
+                subrecord.index = itxt_index
+                itxt_index += 1
 
             if self.type == "PERK" and subrecord.type == "EPFT":
                 perk_type = Integer.uint8(BytesIO(subrecord.data))

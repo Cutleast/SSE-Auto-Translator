@@ -1,0 +1,22 @@
+{
+    "settings": "Einstellungen",
+    "user_settings": "Nutzereinstellungen",
+    "app_settings": "App-Einstellungen",
+    "game_lang": "Sprache des Spiels",
+    "nm_api_key": "Nexus Mods API Key",
+    "start_api_setup": "API-Einrichtung starten",
+    "keep_logs_num": "Anzahl der neuesten zu behaltenden Log-Dateien",
+    "log_level": "Logging-Level",
+    "app_lang": "Sprache der App",
+    "accent_color": "Akzentfarbe",
+    "choose_color": "Akzentfarbe auswählen...",
+    "restart_hint": "Damit die Änderungen wirksam werden, ist ein Neustart der App erforderlich.",
+    "detector_confidence": "Language Detector Confidence",
+    "invalid_path": "Ungültiger Pfad",
+    "invalid_path_text": "Der eingegebene Pfad zur portablen MO2 Instanz ist ungültig!",
+    "auto_bind_nxm": "Automatisch beim Start mit \"Mod Manager Download\" Buttons auf Nexus Mods verknüpfen",
+    "translator_settings": "Übersetzer-API Einstellungen",
+    "translator": "Übersetzer-API",
+    "no_config_required": "Für diese Übersetzer-API ist keine Konfiguration erforderlich.",
+    "translator_api_key": "Übersetzer-API Key"
+}

@@ -14,7 +14,7 @@ import qtpy.QtWidgets as qtw
 import mod_managers
 import utilities as utils
 from main import MainApp
-from widgets import KeyEntry
+from widgets import KeyEntry, ApiSetup
 
 
 class UserSettings(qtw.QWidget):
@@ -60,8 +60,9 @@ class UserSettings(qtw.QWidget):
         self.api_key_entry.setText(self.app.user_config["api_key"])
         api_key_hlayout.addWidget(self.api_key_entry)
         api_setup_button = qtw.QPushButton(self.mloc.start_api_setup)
-        api_setup_button.setDisabled(True)
-        api_setup_button.setToolTip("WIP")
+        # api_setup_button.setDisabled(True)
+        # api_setup_button.setToolTip("WIP")
+        api_setup_button.clicked.connect(self.start_api_setup)
         api_key_hlayout.addWidget(api_setup_button)
         flayout.addRow(self.mloc.nm_api_key, api_key_hlayout)
 
@@ -142,6 +143,42 @@ class UserSettings(qtw.QWidget):
 
         browse_instance_path_button.clicked.connect(browse)
         hlayout.addWidget(browse_instance_path_button)
+
+    def start_api_setup(self):
+        """
+        Opens API Setup in a separate dialog.
+        """
+
+        dialog = qtw.QDialog(self)
+        dialog.setWindowTitle(self.mloc.nm_api_key)
+        dialog.setMinimumSize(800, 400)
+        utils.apply_dark_title_bar(dialog)
+
+        vlayout = qtw.QVBoxLayout()
+        dialog.setLayout(vlayout)
+
+        api_setup = ApiSetup(self.app)
+        vlayout.addWidget(api_setup)
+
+        hlayout = qtw.QHBoxLayout()
+        vlayout.addLayout(hlayout)
+
+        hlayout.addStretch()
+
+        save_button = qtw.QPushButton(self.loc.main.save)
+        save_button.setDisabled(True)
+        api_setup.valid_signal.connect(lambda valid: save_button.setEnabled(valid))
+        def save():
+            self.api_key_entry.setText(api_setup.api_key)
+            dialog.accept()
+        save_button.clicked.connect(save)
+        hlayout.addWidget(save_button)
+
+        cancel_button = qtw.QPushButton(self.loc.main.cancel)
+        cancel_button.clicked.connect(dialog.reject)
+        hlayout.addWidget(cancel_button)
+
+        dialog.exec()
 
     def on_change(self, *args):
         """

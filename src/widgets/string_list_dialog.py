@@ -213,6 +213,13 @@ class StringListDialog(qtw.QWidget):
             self.strings_widget.addTopLevelItem(item)
 
         self.strings_widget.resizeColumnToContents(0)
+        self.strings_widget.header().resizeSection(1, 200)
+
+        if self.show_translation:
+            self.strings_widget.header().resizeSection(2, 300)
+            self.strings_widget.header().resizeSection(3, 300)
+        else:
+            self.strings_widget.header().resizeSection(2, 600)
 
     def update_string_list(self):
         cur_search = self.search_box.text().lower()

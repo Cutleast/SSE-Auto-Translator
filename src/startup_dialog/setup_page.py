@@ -64,10 +64,6 @@ class SetupPage(qtw.QWidget):
 
         vlayout.addSpacing(25)
 
-        api_help_label = qtw.QLabel(self.mloc.api_help)
-        api_help_label.setWordWrap(True)
-        vlayout.addWidget(api_help_label)
-
         # API Setup Widget
         self.api_setup = ApiSetup(self.startup_dialog.app)
         vlayout.addWidget(self.api_setup)

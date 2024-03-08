@@ -256,7 +256,7 @@ class TranslationDatabase:
                 string.translated_string = matching.translated_string
 
                 if full_matching:
-                    string.status = String.Status.TranslationComplete
+                    string.status = matching.status
                 else:
                     string.status = String.Status.TranslationIncomplete
 
@@ -317,7 +317,7 @@ class TranslationDatabase:
                 original_string.translated_string = matching.translated_string
 
                 if full_matching:
-                    original_string.status = String.Status.TranslationComplete
+                    original_string.status = matching.status
                 else:
                     original_string.status = String.Status.TranslationIncomplete
 

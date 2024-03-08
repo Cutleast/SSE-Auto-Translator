@@ -110,8 +110,9 @@ class TranslatorDialog(qtw.QWidget):
 
         hlayout.addStretch()
 
-        finish_button = qtw.QPushButton(self.loc.main.done)
+        finish_button = qtw.QPushButton(self.loc.main.done + " (Ctrl+Enter)")
         finish_button.clicked.connect(self.finish)
+        finish_button.setShortcut(qtg.QKeySequence("Ctrl+Return"))
         hlayout.addWidget(finish_button)
 
     def translate_with_api(self):
