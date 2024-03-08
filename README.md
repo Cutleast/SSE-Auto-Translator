@@ -52,7 +52,7 @@ See [Documentation](/doc/Instructions_en_US.md).
 #### Do I have to edit any ini files?
 
 - Make sure to set *[General]* > *sLanguage* in *Skyrim.ini* to your desired language (for eg. *GERMAN*)
-  - Since sound is not supported I also recommend setting the english voice files in the same ini file. Just go to *[Archive]* and under *sResourceArchiveList2 replace Voices_xx0.bsa* with *Voices_en0.bsa*
+- Since sound is not supported I also recommend setting the english voice files in the same ini file. Just go to *[Archive]* and under *sResourceArchiveList2 replace Voices_xx0.bsa* with *Voices_en0.bsa*
 
 #### SSE-AT detected a plugin (or multiple) as *Translation Required* although it contains no visible strings. What can I do to prevent it from detecting it again?
 
@@ -82,7 +82,9 @@ If you encountered an issue/error or you have a suggestion, create an issue unde
 1. Install Python 3.11 (Make sure that you add it to PATH!)
 2. Clone repository
 3. Open terminal in repository folder
-4. Type in following command to install all requirements (Using a virtual environment is strongly recommended!):
+4. Create a virtual environment and activate it by running following command:
+   `python -m venv .venv`
+5. Type in following command to install all requirements:
    `pip install -r requirements.txt`
 
 ### 2. Execute from source
@@ -92,10 +94,8 @@ If you encountered an issue/error or you have a suggestion, create an issue unde
    `python app.py`
 
 ### 3. Compile and build executable
-
-1. Follow the steps on this page [Nuitka.net](https://nuitka.net/doc/user-manual.html#usage) to install a C Compiler
-2. Run `build.bat` with activated virtual environment from the root folder of this repo.
-3. The executable and all dependencies are built in the main.dist-Folder.
+1. Run `build.bat` with activated virtual environment from the root folder of this repo.
+2. The executable and all dependencies are built in the main.dist-Folder.
 
 # Credits
 
