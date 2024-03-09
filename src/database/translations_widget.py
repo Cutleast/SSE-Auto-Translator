@@ -422,7 +422,7 @@ class TranslationsWidget(qtw.QWidget):
         }
 
         fdialog = qtw.QFileDialog()
-        fdialog.setFileMode(fdialog.FileMode.ExistingFile)
+        fdialog.setFileMode(fdialog.FileMode.ExistingFiles)
         fdialog.setNameFilters(
             [
                 "Mod Archive (*.7z *.rar *.zip)",
@@ -437,78 +437,81 @@ class TranslationsWidget(qtw.QWidget):
         selected_files = fdialog.selectedFiles()
 
         if selected_files:
-            file = Path(selected_files[0])
+            for file in selected_files:
+                file = Path(file)
 
-            strings: dict[str, list[utils.String]] = None
+                strings: dict[str, list[utils.String]] = {}
 
-            if file.suffix.lower() in [".7z", ".rar", ".zip"]:
-                self.app.log.info(f"Importing translation from archive '{file}'...")
+                if file.suffix.lower() in [".7z", ".rar", ".zip"]:
+                    self.app.log.info(f"Importing translation from archive '{file}'...")
 
-                __temp = []
+                    __temp = []
 
-                def process(ldialog: LoadingDialog):
-                    __temp.append(utils.import_from_archive(file, modlist, ldialog))
+                    def process(ldialog: LoadingDialog):
+                        __temp.append(utils.import_from_archive(file, modlist, ldialog))
 
-                loadingdialog = LoadingDialog(self.app.root, self.app, process)
-                loadingdialog.exec()
+                    loadingdialog = LoadingDialog(self.app.root, self.app, process)
+                    loadingdialog.exec()
 
-                strings = __temp[0]
+                    strings = __temp[0]
 
-            elif file.suffix.lower() in [".esp", ".esm", ".esl"]:
-                self.app.log.info(f"Importing translation from '{file}'...")
+                elif file.suffix.lower() in [".esp", ".esm", ".esl"]:
+                    self.app.log.info(f"Importing translation from '{file}'...")
 
-                plugin = installed_mods.get(file.name.lower())
+                    plugin = installed_mods.get(file.name.lower())
 
-                if plugin is None:
-                    self.app.log.error(f"No original plugin for {file.name!r} found!")
-                    return
+                    if plugin is None:
+                        self.app.log.error(
+                            f"No original plugin for {file.name!r} found!"
+                        )
+                        continue
 
-                plugin_strings = utils.merge_plugin_strings(file, plugin.path)
-                strings[file.name.lower()] = plugin_strings
+                    plugin_strings = utils.merge_plugin_strings(file, plugin.path)
+                    strings[file.name.lower()] = plugin_strings
 
-            elif file.suffix.lower() == ".xml":
-                self.app.log.info("Importing xTranslator Translation...")
-                strings = utils.import_xtranslator_translation(file)
-            else:
-                return
+                elif file.suffix.lower() == ".xml":
+                    self.app.log.info("Importing xTranslator Translation...")
+                    strings = utils.import_xtranslator_translation(file)
+                else:
+                    continue
 
-            if len(strings):
-                translation = Translation(
-                    name=file.stem,
-                    mod_id=0,
-                    file_id=0,
-                    version="0",
-                    original_mod_id=0,
-                    original_file_id=0,
-                    original_version="0",
-                    path=self.app.database.userdb_path
-                    / self.app.database.language
-                    / file.stem,
-                )
-                translation.strings = strings
-                translation.save_translation()
+                if len(strings):
+                    translation = Translation(
+                        name=file.stem,
+                        mod_id=0,
+                        file_id=0,
+                        version="0",
+                        original_mod_id=0,
+                        original_file_id=0,
+                        original_version="0",
+                        path=self.app.database.userdb_path
+                        / self.app.database.language
+                        / file.stem,
+                    )
+                    translation.strings = strings
+                    translation.save_translation()
 
-                for mod in self.app.mainpage_widget.mods:
-                    if any(
-                        list(strings.keys())[0].lower() == plugin.name.lower()
-                        for plugin in mod.plugins
-                    ):
-                        translation.original_mod_id = mod.mod_id
-                        translation.original_file_id = mod.file_id
-                        translation.original_version = mod.version
+                    for mod in self.app.mainpage_widget.mods:
+                        if any(
+                            list(strings.keys())[0].lower() == plugin.name.lower()
+                            for plugin in mod.plugins
+                        ):
+                            translation.original_mod_id = mod.mod_id
+                            translation.original_file_id = mod.file_id
+                            translation.original_version = mod.version
 
-                self.app.database.add_translation(translation)
-                self.load_translations()
-                self.app.mainpage_widget.update_modlist()
+                    self.app.log.info(f"Translation {translation.name!r} imported.")
+                else:
+                    self.app.log.info(
+                        "Translation not imported. Translation does not contain any strings!"
+                    )
 
-                messagebox = qtw.QMessageBox(self.app.root)
-                messagebox.setWindowTitle(self.loc.main.success)
-                messagebox.setText(self.mloc.translation_imported)
-                utils.apply_dark_title_bar(messagebox)
-                messagebox.exec()
+            self.app.database.add_translation(translation)
+            self.load_translations()
+            self.app.mainpage_widget.update_modlist()
 
-                self.app.log.info(f"Translation {translation.name!r} imported.")
-            else:
-                self.app.log.info(
-                    "Translation not imported. Translation does not contain any strings!"
-                )
+            messagebox = qtw.QMessageBox(self.app.root)
+            messagebox.setWindowTitle(self.loc.main.success)
+            messagebox.setText(self.mloc.translations_imported)
+            utils.apply_dark_title_bar(messagebox)
+            messagebox.exec()

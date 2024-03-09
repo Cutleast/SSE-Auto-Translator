@@ -1,15 +1,9 @@
-# Alpha-Release v0.2.6
+# Alpha-Release v0.2.7
 
 ## Changelog
-- MESG ITXT behoben, es sollte jetzt nicht mehr zu Mismatches (z.B. "Ja" für "No") kommen
-  - betroffene Übersetzungen müssen neu installiert werden
-- API Setup lässt sich nun über die Einstellungen neustarten
-- API Setup an Design des restlichen UIs angepasst
-- deutsche Übersetzung für UI hinzugefügt (Dokumentation noch immer ausschließlich auf Englisch)
-- es werden im Output nur noch JSON-Dateien erstellt, wenn es Strings gibt, die reinmüssen
-- nach dem Import einer lokalen Übersetzung wird nun die Modliste aktualisiert, um betroffene Plugins entsprechend grün zu färben
-- Strg+Enter Shortcut zum Translator Dialog hinzugefügt, um Strings schnell abzuspeichern
-- Hinweise in Dokumentation und zum Tooltip des "Build DSD Output" Buttons hinzugefügt, um deutlich zu machen, wann ein neuer Output notwendig ist
+- API Setup in Startup-Dialog behoben (ist nun nicht mehr gequetscht)
+- Import von Plugin-Übersetzungen behoben
+- Import-Funktion verbessert: es lassen sich nun mehrere Dateien auf einmal importieren
 
 ## Download
-https://drive.google.com/file/d/1DXr1h1KpH3XlH3U_CPaOudXSw8sTmtYP/view?usp=sharing
+https://drive.google.com/file/d/1n0iPyYGUy0oMat8rxfq9-sRhksbmAVEs/view?usp=sharing

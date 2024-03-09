@@ -24,5 +24,5 @@
     "choose_translation": "Übersetzung auswählen",
     "choose_file": "Datei der Übersetzung auswählen",
     "queue_finished": "Alle Downloads erfolgreich abgeschlossen.",
-    "translation_imported": "Übersetzung erfolgreich in die Datenbank importiert."
+    "translations_imported": "Übersetzungen erfolgreich in die Datenbank importiert."
 }

@@ -24,5 +24,5 @@
     "choose_translation": "Choose Translation",
     "choose_file": "Choose Translation File",
     "queue_finished": "All Downloads are complete.",
-    "translation_imported": "Translation successfully imported into Database."
+    "translations_imported": "Translations successfully imported into Database."
 }

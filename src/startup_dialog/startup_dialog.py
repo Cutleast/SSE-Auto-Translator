@@ -39,7 +39,7 @@ class StartupDialog(qtw.QWidget):
         self.setWindowFlag(qtc.Qt.WindowType.Window, True)
         self.setObjectName("root")
         self.setWindowTitle(self.mloc.startup)
-        self.setFixedSize(900, 500)
+        self.setFixedSize(900, 570)
         utils.apply_dark_title_bar(self)
 
         # Create layout
