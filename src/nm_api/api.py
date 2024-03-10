@@ -87,9 +87,9 @@ class NexusModsApi:
 
     def request(self, path: str, cache_result: bool = True):
         """
-        Sends request to `path` and returns response with `content_type`.
+        Sends request to `path` and returns response.
 
-        Caches result for later quick access if `cache_result` is `True`.
+        Caches result for avoiding redundant requests if `cache_result` is `True`.
         """
 
         url = "https://api.nexusmods.com/v1/" + path

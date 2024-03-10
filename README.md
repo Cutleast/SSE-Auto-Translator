@@ -69,6 +69,12 @@ See [Documentation](/doc/Instructions_en_US.md).
 
 - Please ensure that the original translation works and that it's a problem with SSE-AT before opening a Bug report or Issue
 
+#### What about SSE-LD? Will it be taken down or discontinued?
+
+- While SSE-AT is able to scan Plugin files (.esp, .esm, .esl) just like SSE-LD, it does not support Papyrus Scripts (.pex) or MCM translations (.txt) at the moment.
+- SSE-LD will remain online for the time being, but don't expect any major updates or changes other than some bug fixes.
+- As soon as SSE-AT supports extraction of non-plugin files from translations, SSE-LD will be completely discontinued and the GitHub repo will be archived (but stay public).
+
 # Contributing
 
 ## 1. Feedback (Suggestions/Issues)
@@ -94,8 +100,13 @@ If you encountered an issue/error or you have a suggestion, create an issue unde
    `python app.py`
 
 ### 3. Compile and build executable
+
 1. Run `build.bat` with activated virtual environment from the root folder of this repo.
 2. The executable and all dependencies are built in the main.dist-Folder.
+
+## 3. Beta-Testing
+
+If you are interested in testing pre-release versions of SSE-AT, join our Discord.
 
 # Credits
 
