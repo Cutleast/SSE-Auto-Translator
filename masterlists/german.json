@@ -1,14 +1,10 @@
 {
-    "usmp.esp": {
+    "unofficial skyrim modders patch.esp": {
         "type": "route",
         "targets": [
             {
                 "mod_id": 49616,
                 "file_id": 431379
-            },
-            {
-                "mod_id": 49616,
-                "file_id": 355054
             }
         ]
     },

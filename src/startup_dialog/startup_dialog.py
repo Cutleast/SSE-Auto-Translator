@@ -66,6 +66,7 @@ class StartupDialog(qtw.QWidget):
     def finish(self):
         language = self.setup_page.lang_box.currentText()
         api_key = self.setup_page.api_setup.api_key
+        use_masterlist = self.setup_page.masterlist_box.isChecked()
         mod_manager_name = self.instance_page.mod_manager.name
         instance_name = self.instance_page.modinstance_name
         instance_path = self.instance_page.instance_path_entry.text()
@@ -76,7 +77,7 @@ class StartupDialog(qtw.QWidget):
             "api_key": api_key,
             "mod_manager": mod_manager_name,
             "modinstance": instance_name,
-            "ignore_list": [],
+            "use_masterlist": use_masterlist,
         }
 
         if not user_path.is_dir():

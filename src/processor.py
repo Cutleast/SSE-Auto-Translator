@@ -360,8 +360,12 @@ class Processor:
 
                     if plugin.name.lower() in app.masterlist:
                         if app.masterlist[plugin.name.lower()]["type"] == "route":
-                            plugin.status = plugin.Status.TranslationAvailableAtNexusMods
-                            app.log.info(f"Found {plugin.name!r} in Masterlist of type 'route'. Skipping Nexus Mods Scan...")
+                            plugin.status = (
+                                plugin.Status.TranslationAvailableAtNexusMods
+                            )
+                            app.log.info(
+                                f"Found {plugin.name!r} in Masterlist of type 'route'. Skipping Nexus Mods Scan..."
+                            )
                             continue
 
                     if desired_lang in translations:
@@ -460,12 +464,16 @@ class Processor:
                         plugin.status == plugin.Status.TranslationAvailableAtNexusMods
                         and plugin.tree_item.checkState(0) == qtc.Qt.CheckState.Checked
                     ):
-                        available_translations = [
-                            int(url.rsplit("/", 1)[1].split("?")[0])
-                            for url in app.api.get_mod_translations(
-                                "skyrimspecialedition", mod.mod_id
-                            ).get(desired_lang)
-                        ]
+                        _translations = app.api.get_mod_translations(
+                            "skyrimspecialedition", mod.mod_id
+                        ).get(desired_lang)
+                        if _translations is not None:
+                            available_translations = [
+                                int(url.rsplit("/", 1)[1].split("?")[0])
+                                for url in _translations
+                            ]
+                        else:
+                            available_translations = []
 
                         available_translation_files: dict[int, list[int]] = {}
 
@@ -480,7 +488,7 @@ class Processor:
                                 )
                             else:
                                 available_translations.remove(translation_mod_id)
-                        
+
                         masterlist_entry = app.masterlist.get(plugin.name.lower())
                         if masterlist_entry is not None:
                             if masterlist_entry["type"] == "route":
@@ -489,13 +497,25 @@ class Processor:
                                     file_id: int = target["file_id"]
 
                                     if mod_id in available_translation_files:
-                                        available_translation_files[mod_id].append(file_id)
+                                        available_translation_files[mod_id].append(
+                                            file_id
+                                        )
                                     else:
                                         available_translation_files[mod_id] = [file_id]
-                                    
+
+                                    available_translation_files[mod_id] = list(
+                                        set(available_translation_files[mod_id])
+                                    )
+
                                     available_translations.append(mod_id)
-                                
-                                app.log.info(f"Found {plugin.name!r} in Masterlist of type 'route'. Added Targets to Downloads.")
+
+                                available_translations = list(
+                                    set(available_translations)
+                                )
+
+                                app.log.info(
+                                    f"Found {plugin.name!r} in Masterlist of type 'route'. Added Targets to Downloads."
+                                )
 
                         if available_translations and available_translation_files:
                             download = utils.Download(

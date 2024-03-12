@@ -60,8 +60,6 @@ class UserSettings(qtw.QWidget):
         self.api_key_entry.setText(self.app.user_config["api_key"])
         api_key_hlayout.addWidget(self.api_key_entry)
         api_setup_button = qtw.QPushButton(self.mloc.start_api_setup)
-        # api_setup_button.setDisabled(True)
-        # api_setup_button.setToolTip("WIP")
         api_setup_button.clicked.connect(self.start_api_setup)
         api_key_hlayout.addWidget(api_setup_button)
         flayout.addRow(self.mloc.nm_api_key, api_key_hlayout)
@@ -144,6 +142,12 @@ class UserSettings(qtw.QWidget):
         browse_instance_path_button.clicked.connect(browse)
         hlayout.addWidget(browse_instance_path_button)
 
+        # Masterlist
+        self.masterlist_box = qtw.QCheckBox(self.mloc.use_masterlist)
+        self.masterlist_box.setChecked(self.app.user_config.get("use_masterlist", True))
+        self.masterlist_box.stateChanged.connect(self.on_change)
+        flayout.addRow(self.masterlist_box)
+
     def start_api_setup(self):
         """
         Opens API Setup in a separate dialog.
@@ -194,4 +198,5 @@ class UserSettings(qtw.QWidget):
             "api_key": self.api_key_entry.text(),
             "mod_manager": self.mod_manager_dropdown.currentText(),
             "modinstance": self.modinstance_dropdown.currentText(),
+            "use_masterlist": self.masterlist_box.isChecked(),
         }

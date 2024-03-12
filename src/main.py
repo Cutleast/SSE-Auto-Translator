@@ -134,6 +134,7 @@ class MainApp(qtw.QApplication):
 
     def start_main_app(self):
         self.load_user_data()
+        self.load_masterlist()
         self.init_gui()
 
         self.startTimer(1000, qtc.Qt.TimerType.PreciseTimer)
@@ -148,13 +149,6 @@ class MainApp(qtw.QApplication):
         self.nxm_listener.download_signal.connect(
             lambda url: self.log.info(f"Handled NXM link: {url}")
         )
-
-        # Load masterlist
-        try:
-            self.masterlist = utils.get_masterlist(self.user_config["language"])
-        except Exception as ex:
-            self.log.error(f"Failed to get Masterlist from Repository: {ex}")
-            self.masterlist = []
 
         self.root.showMaximized()
 
@@ -193,6 +187,25 @@ class MainApp(qtw.QApplication):
         self.log_level = utils.strlevel2intlevel(self.app_config["log_level"])
         self.log_handler.setLevel(self.log_level)
 
+    def load_masterlist(self):
+        """
+        Loads masterlist from repository.
+        """
+
+        if not self.user_config["use_masterlist"]:
+            self.log.info("Masterlist disabled by user.")
+            self.masterlist = {}
+            return
+
+        self.log.info("Loading Masterlist from Repository...")
+
+        try:
+            self.masterlist = utils.get_masterlist(self.user_config["language"])
+            self.log.info("Masterlist loaded.")
+        except Exception as ex:
+            self.log.error(f"Failed to get Masterlist from Repository: {ex}", exc_info=ex)
+            self.masterlist = {}
+
     def load_user_data(self):
         """
         Loads user config and translation database.
@@ -202,6 +215,11 @@ class MainApp(qtw.QApplication):
 
         with open(self.user_conf_path, "r", encoding="utf8") as file:
             self.user_config: dict = json.load(file)
+        
+        if "use_masterlist" not in self.user_config:
+            self.user_config["use_masterlist"] = True
+            with self.user_conf_path.open("w", encoding="utf8") as file:
+                json.dump(self.user_config, file, indent=4)
 
         if self.translator_conf_path.is_file():
             with open(self.translator_conf_path, encoding="utf8") as file:

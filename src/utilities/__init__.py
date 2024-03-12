@@ -270,7 +270,7 @@ def trim_string(text: str, max_length: int = 100):
 masterlist: dict[str, dict] = None
 
 
-def get_masterlist(language: str, cache: bool = True):
+def get_masterlist(language: str, cache: bool = True) -> dict[str, dict]:
     """
     Gets Masterlist from GitHub Repository.
 
@@ -294,7 +294,7 @@ def get_masterlist(language: str, cache: bool = True):
             masterlist = json.loads(data)
 
         else:
-            raise exceptions.GeneralException(
+            raise Exception(
                 f"Request failed! Status Code: {res.status_code}"
             )
 
