@@ -388,7 +388,7 @@ class NexusModsApi:
         """
         Gets mod updates from `mod_id` at `game_id`.
 
-        Returns {old_mod_id: new_mod_id}.
+        Returns {old_file_id: new_file_id}.
         """
 
         self.log.info(f"Requesting mod updates for {mod_id!r}...")
