@@ -220,7 +220,45 @@ class MainApp(qtw.QApplication):
         api_valid = self.api.check_api_key()
 
         if not api_valid:
-            raise utils.exceptions.ApiKeyInvalidError("Nexus Mods API Key invalid!")
+            self.log.error("Nexus Mods API Key is invalid!")
+
+            dialog = qtw.QDialog(self.root)
+            dialog.setWindowTitle(self.loc.api_setup.api_key_invalid)
+            dialog.setMinimumSize(800, 400)
+            utils.apply_dark_title_bar(dialog)
+
+            vlayout = qtw.QVBoxLayout()
+            dialog.setLayout(vlayout)
+
+            api_setup = widgets.ApiSetup(self)
+            vlayout.addWidget(api_setup)
+
+            hlayout = qtw.QHBoxLayout()
+            vlayout.addLayout(hlayout)
+
+            hlayout.addStretch()
+
+            save_button = qtw.QPushButton(self.loc.main.save)
+            save_button.setObjectName("accent_button")
+            save_button.setDisabled(True)
+            api_setup.valid_signal.connect(lambda valid: save_button.setEnabled(valid))
+            def save():
+                self.user_config["api_key"] = api_setup.api_key
+
+                with self.user_conf_path.open("w", encoding="utf8") as file:
+                    json.dump(self.user_config, file, indent=4)
+
+                dialog.accept()
+            save_button.clicked.connect(save)
+            hlayout.addWidget(save_button)
+
+            exit_button = qtw.QPushButton(self.loc.main.cancel)
+            exit_button.clicked.connect(dialog.reject)
+            hlayout.addWidget(exit_button)
+
+            if dialog.exec() == dialog.DialogCode.Rejected:
+                self.clean_and_exit()
+                sys.exit()
 
         language = self.user_config["language"].lower()
         userdb_path: Path = self.data_path / "user" / "database" / language
@@ -284,13 +322,20 @@ class MainApp(qtw.QApplication):
         """
 
         stylesheet = self.style_path.read_text("utf8")
-        accent_color = self.app_config["accent_color"]
-        if utils.is_valid_hex_color(accent_color):
-            stylesheet = stylesheet.replace(
-                "<accent_color>", self.app_config["accent_color"]
-            )
+        if utils.is_valid_hex_color(self.app_config["accent_color"]):
+            accent_color = self.app_config["accent_color"]
         else:
             self.log.error(f"{accent_color!r} is not a valid hex color code!")
+            accent_color = self.default_app_config["accent_color"]
+        
+        highlighted_accent = qtg.QColor(accent_color).darker(120).name()
+
+        stylesheet = stylesheet.replace(
+            "<accent_color>", accent_color
+        )
+        stylesheet = stylesheet.replace(
+            "<highlighted_accent>", highlighted_accent
+        )
 
         self.setStyleSheet(stylesheet)
 
@@ -406,6 +451,9 @@ class MainApp(qtw.QApplication):
             if current_editor_tab:
                 current_editor_tab.update_string_list()
 
+            self.load_theme()
+            utils.apply_dark_title_bar(self.root)
+
         refresh_shortcut.activated.connect(refresh)
 
     def show_documentation(self):
@@ -450,10 +498,10 @@ class MainApp(qtw.QApplication):
             Path(".").resolve() / "doc" / f"Instructions_{self.loc.language}.md"
         )
         if not documentation_path.is_file():
-            self.log.warning(f"No documentation available for {self.loc.language!r}. Falling back to 'en_US'...")
-            documentation_path = (
-                Path(".").resolve() / "doc" / f"Instructions_en_US.md"
+            self.log.warning(
+                f"No documentation available for {self.loc.language!r}. Falling back to 'en_US'..."
             )
+            documentation_path = Path(".").resolve() / "doc" / f"Instructions_en_US.md"
         document.setUseDesignMetrics(True)
 
         # Modify document.loadResource to ensure that images are loaded
@@ -566,7 +614,9 @@ class MainApp(qtw.QApplication):
 
         licenses_tab.addItems(utils.LICENSES.keys())
 
-        licenses_tab.itemDoubleClicked.connect(lambda item: os.startfile(utils.LICENSES[item.text()]))
+        licenses_tab.itemDoubleClicked.connect(
+            lambda item: os.startfile(utils.LICENSES[item.text()])
+        )
 
         dialog.exec()
 

@@ -79,9 +79,12 @@ class SettingsDialog(qtw.QDialog):
 
         hlayout.addStretch()
 
-        save_button = qtw.QPushButton(self.loc.main.save)
-        save_button.clicked.connect(self.save)
-        hlayout.addWidget(save_button)
+        self.save_button = qtw.QPushButton(self.loc.main.save)
+        self.save_button.clicked.connect(self.save)
+        self.save_button.setObjectName("accent_button")
+        self.save_button.setDefault(True)
+        self.save_button.setDisabled(True)
+        hlayout.addWidget(self.save_button)
 
         cancel_button = qtw.QPushButton(self.loc.main.cancel)
         cancel_button.clicked.connect(self.close)
@@ -93,6 +96,7 @@ class SettingsDialog(qtw.QDialog):
         """
 
         self.changes_pending = True
+        self.save_button.setDisabled(False)
         self.setWindowTitle(self.mloc.settings + "*")
 
     def closeEvent(self, event):
@@ -113,6 +117,7 @@ class SettingsDialog(qtw.QDialog):
             message_box.button(qtw.QMessageBox.StandardButton.No).setText(
                 self.loc.main.no
             )
+            message_box.button(qtw.QMessageBox.StandardButton.No).setObjectName("accent_button")
             message_box.button(qtw.QMessageBox.StandardButton.Yes).setText(
                 self.loc.main.yes
             )
@@ -160,6 +165,10 @@ class SettingsDialog(qtw.QDialog):
 
         with open(self.app.translator_conf_path, "w", encoding="utf8") as file:
             json.dump(translator_settings, file, indent=4)
+
+        self.app.app_config = app_settings
+        self.app.user_config = user_settings
+        self.app.translator_config = translator_settings
 
         self.accept()
 

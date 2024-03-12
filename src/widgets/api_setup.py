@@ -89,12 +89,12 @@ class ApiSetup(qtw.QWidget):
                 self.api_key = key
                 self.is_valid = True
                 self.valid_signal.emit(True)
-                api_key_check_button.setText("API Key valid!")
+                api_key_check_button.setText(self.mloc.api_key_valid)
                 self.setDisabled(True)
             else:
                 self.is_valid = False
                 self.valid_signal.emit(False)
-                api_key_check_button.setText("API Key invalid! Please try again!")
+                api_key_check_button.setText(self.mloc.api_key_invalid)
 
         api_key_check_button.clicked.connect(check_api_key)
         api_key_vlayout.addWidget(api_key_check_button)

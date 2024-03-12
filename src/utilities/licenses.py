@@ -7,7 +7,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 LICENSES = {
     "7-zip": "https://www.7-zip.org/license.txt",
-    "Qt6": "https://doc.qt.io/qt-6/licenses-used-in-qt.html",
+    "Qt6": "https://doc.qt.io/qt-6/lgpl.html",
     "lingua-language-detector": "https://github.com/pemistahl/lingua-py/blob/main/LICENSE.txt",
     "qtpy": "https://github.com/spyder-ide/qtpy/blob/master/LICENSE.txt",
     "PySide6": "https://code.qt.io/cgit/pyside/pyside-setup.git/tree/LICENSES?h=6.6.1",

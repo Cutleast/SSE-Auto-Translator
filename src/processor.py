@@ -180,9 +180,9 @@ class Processor:
 
                 strings[plugin_name] = [
                     utils.String.from_string_data(string_data)
-                    for string_data in json.loads(dsd_file.read_text())
+                    for string_data in json.loads(dsd_file.read_text(encoding="utf8"))
                 ]
-            
+
             if not len(strings):
                 continue
 
