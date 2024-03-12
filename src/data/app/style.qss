@@ -532,7 +532,6 @@ QTabBar::tab {
     padding: 4px;
     spacing: 4px;
     margin: 4px;
-    /* margin-bottom: 0px; */
     border-radius: 4px;
 }
 QTabBar::tab:hover:!selected {

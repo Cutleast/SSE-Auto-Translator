@@ -71,6 +71,12 @@ class TranslationsWidget(qtw.QWidget):
         )
         local_import_button.triggered.connect(self.import_local_translation)
 
+        update_button = self.tool_bar.addAction(
+            qta.icon("mdi6.cloud-refresh", color="#ffffff"),
+            self.loc.main.check_for_updates,
+        )
+        update_button.triggered.connect(self.check_for_updates)
+
         def toggle_nxm():
             if self.nxmhandler_button.isChecked():
                 self.app.nxm_listener.bind()
@@ -345,35 +351,80 @@ class TranslationsWidget(qtw.QWidget):
         )
         self.translations_widget.customContextMenuRequested.connect(on_context_menu)
 
+    def check_for_updates(self):
+        """
+        Checks downloaded translations for updates.
+        """
+
+        self.app.log.info("Checking installed translations for updates...")
+
+        def process(ldialog: LoadingDialog):
+            translations = [
+                translation
+                for translation in self.app.database.user_translations
+                if translation.mod_id and translation.file_id
+            ]
+
+            for t, translation in enumerate(translations):
+                ldialog.updateProgress(
+                    text1=f"{self.mloc.checking_for_updates} ({t}/{len(translations)})",
+                    value1=t,
+                    max1=len(translations),
+                    show2=True,
+                    text2=translation.name,
+                )
+
+                updates = self.app.api.get_mod_updates(
+                    "skyrimspecialedition", translation.mod_id
+                )
+                if translation.file_id in updates.keys():
+                    translation.status = translation.Status.UpdateAvailable
+
+        loadingdialog = LoadingDialog(self.app.root, self.app, process)
+        loadingdialog.exec()
+
+        self.update_translations()
+
+        available_updates = len(
+            [
+                translation
+                for translation in self.app.database.user_translations
+                if translation.status == translation.Status.UpdateAvailable
+            ]
+        )
+        messagebox = qtw.QMessageBox(self.app.root)
+        messagebox.setWindowTitle(self.mloc.update_check_complete)
+        messagebox.setText(self.mloc.updates_available.replace("[NUMBER]", str(available_updates)))
+        utils.apply_dark_title_bar(messagebox)
+        messagebox.exec()
+
+        self.app.log.info("Update check complete.")
+
     def update_translations(self):
         """
         Updates translations in case of search or similar.
         """
 
-        cur_search = self.app.mainpage_widget.search_box.text()
+        cur_search = self.app.mainpage_widget.search_box.text().lower()
 
-        matching_items = self.translations_widget.findItems(
-            cur_search.lower(),
-            qtc.Qt.MatchFlag.MatchContains | qtc.Qt.MatchFlag.MatchRecursive,
-            column=0,
-        )
+        for translation in self.app.database.user_translations:
+            if not translation.tree_item:
+                continue
 
-        for rindex in range(self.translations_widget.topLevelItemCount()):
-            item = self.translations_widget.itemFromIndex(
-                self.translations_widget.model().index(rindex, 0)
-            )
+            translation_visible = cur_search in translation.name.lower()
 
-            translation_visible = item in matching_items
-
-            for cindex in range(item.childCount()):
-                child = item.child(cindex)
-                child_visible = child in matching_items
-                if child_visible:
+            for cindex in range(translation.tree_item.childCount()):
+                plugin_item = translation.tree_item.child(cindex)
+                plugin_visible = cur_search in plugin_item.text(0).lower()
+                if plugin_visible:
                     translation_visible = True
 
-                child.setHidden(not child_visible)
+                plugin_item.setHidden(not plugin_visible)
 
-            item.setHidden(not translation_visible)
+            if translation.status == translation.Status.UpdateAvailable:
+                translation.tree_item.setForeground(1, qtc.Qt.GlobalColor.yellow)
+
+            translation.tree_item.setHidden(not translation_visible)
 
         if self.translations_widget.selectedItems():
             self.translations_widget.scrollToItem(

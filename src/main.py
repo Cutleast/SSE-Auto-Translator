@@ -52,7 +52,7 @@ class MainApp(qtw.QApplication):
         "keep_logs_num": 5,  # Only keep 5 newest log files and delete rest
         "log_level": "debug",
         "language": "System",
-        "accent_color": "#7861aa",
+        "accent_color": "#a998d2",
         "detector_confidence": 0.8,
         "auto_bind_nxm": False,
     }

@@ -383,3 +383,21 @@ class NexusModsApi:
         self.log.info("SSO process successful.")
 
         return self.api_key
+
+    def get_mod_updates(self, game_id: str, mod_id: int) -> dict[int, int]:
+        """
+        Gets mod updates from `mod_id` at `game_id`.
+
+        Returns {old_mod_id: new_mod_id}.
+        """
+
+        self.log.info(f"Requesting mod updates for {mod_id!r}...")
+        res = self.request(f"games/{game_id}/mods/{mod_id}/files.json")
+        data: dict = json.loads(res.content.decode("utf8"))
+        updates: list[dict] = data["file_updates"]
+        self.log.info("Request successful.")
+
+        return {
+            update["old_file_id"]: update["new_file_id"]
+            for update in updates
+        }
