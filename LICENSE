@@ -2,9 +2,8 @@ Attribution-NonCommercial-NoDerivatives 4.0 International
 
 Copyright (c) 2024 Cutleast
 Almost all files in this folder are under the license described
-below. The only exceptions are 7zip files. These are licensed
-under 7-Zip Copyright (C) 1999-2023 Igor Pavlov and have their
-own respective license file in the folder 7-zip/
+below. The only exceptions are the folders ./7-zip/
+and ./StringMerger/. Those have their own respective license files.
 =======================================================================
 
 Creative Commons Attribution-NonCommercial-NoDerivatives 4.0
