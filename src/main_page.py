@@ -167,23 +167,43 @@ class MainPageWidget(qtw.QWidget):
 
         self.tool_bar.addSeparator()
 
-        scan_modlist = self.tool_bar.addAction(
+        scan_modlist_action = self.tool_bar.addAction(
             qtg.QIcon(str(self.app.data_path / "icons" / "detect_lang.svg")),
             self.loc.main.scan_modlist,
         )
-        scan_modlist.triggered.connect(
-            lambda: Processor.scan_modlist(self.mods, self.app)
+        self.tool_bar.widgetForAction(scan_modlist_action).setObjectName("accent_button")
+        scan_modlist_action.triggered.connect(
+            lambda: (
+                Processor.scan_modlist(self.mods, self.app),
+                self.tool_bar.widgetForAction(scan_nm_action).setObjectName("accent_button"),
+                self.tool_bar.widgetForAction(scan_modlist_action).setObjectName(""),
+                self.tool_bar.setStyleSheet(self.app.styleSheet())
+            )
         )
 
         scan_nm_action = self.tool_bar.addAction(
             qtg.QIcon(str(self.app.data_path / "icons" / "scan_nm.svg")),
             self.loc.main.scan_nm_translations,
         )
-        scan_nm_action.triggered.connect(lambda: Processor.scan_nm(self.mods, self.app))
+        scan_nm_action.triggered.connect(lambda: (
+                Processor.scan_nm(self.mods, self.app),
+                self.tool_bar.widgetForAction(download_translations_action).setObjectName("accent_button"),
+                self.tool_bar.widgetForAction(scan_nm_action).setObjectName(""),
+                self.tool_bar.setStyleSheet(self.app.styleSheet())
+            )
+        )
 
         download_translations_action = self.tool_bar.addAction(
             qta.icon("mdi6.download-multiple", color="#ffffff"),
             self.loc.main.download_translations,
+        )
+        download_translations_action.triggered.connect(
+            lambda: (
+                Processor.download_and_install_translations(self.mods, self.app),
+                self.tool_bar.widgetForAction(build_dict_action).setObjectName("accent_button"),
+                self.tool_bar.widgetForAction(download_translations_action).setObjectName(""),
+                self.tool_bar.setStyleSheet(self.app.styleSheet())
+            )
         )
 
         build_dict_action = self.tool_bar.addAction(
@@ -191,7 +211,11 @@ class MainPageWidget(qtw.QWidget):
             self.loc.main.build_dictionary,
         )
         build_dict_action.triggered.connect(
-            lambda: Processor.build_dsd_dictionary(self.app)
+            lambda: (
+                Processor.build_dsd_dictionary(self.app),
+                self.tool_bar.widgetForAction(build_dict_action).setObjectName(""),
+                self.tool_bar.setStyleSheet(self.app.styleSheet())
+            )
         )
 
         self.tool_bar.addSeparator()
@@ -683,10 +707,6 @@ class MainPageWidget(qtw.QWidget):
             self.update_modlist
         )
         splitter.addWidget(self.database_widget)
-
-        download_translations_action.triggered.connect(
-            lambda: Processor.download_and_install_translations(self.mods, self.app)
-        )
 
         self.search_box.textChanged.connect(
             lambda text: self.database_widget.translations_widget.update_translations()

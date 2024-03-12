@@ -166,6 +166,7 @@ class UserSettings(qtw.QWidget):
         hlayout.addStretch()
 
         save_button = qtw.QPushButton(self.loc.main.save)
+        save_button.setObjectName("accent_button")
         save_button.setDisabled(True)
         api_setup.valid_signal.connect(lambda valid: save_button.setEnabled(valid))
         def save():
