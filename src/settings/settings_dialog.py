@@ -169,6 +169,7 @@ class SettingsDialog(qtw.QDialog):
 
         if self.changes_pending:
             messagebox = qtw.QMessageBox()
+            utils.apply_dark_title_bar(messagebox)
             messagebox.setWindowTitle(self.mloc.restart_title)
             messagebox.setText(self.mloc.restart_text)
             messagebox.setStandardButtons(

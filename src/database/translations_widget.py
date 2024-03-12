@@ -217,9 +217,11 @@ class TranslationsWidget(qtw.QWidget):
 
                     selected_translation.export_translation(folder)
 
-                    qtw.QMessageBox.information(
-                        self.app.root, self.loc.main.success, self.mloc.export_complete
-                    )
+                    messagebox = qtw.QMessageBox(self.app.root)
+                    messagebox.setWindowTitle(self.loc.main.success)
+                    messagebox.setText(self.mloc.export_complete)
+                    utils.apply_dark_title_bar(messagebox)
+                    messagebox.exec()
 
             def open_modpage():
                 if selected_translation.mod_id:

@@ -560,17 +560,19 @@ class EditorTab(qtw.QWidget):
         if newly_translated_strings:
             self.changes_signal.emit()
 
-        qtw.QMessageBox.information(
-            self.app.root,
-            self.loc.main.success,
-            self.mloc.database_translation_complete.replace(
-                "[NUMBER]", str(newly_translated_strings)
-            ),
-        )
-
         self.app.log.info(
             f"Database successfully applied to {newly_translated_strings} string(s)."
         )
+
+        messagebox = qtw.QMessageBox(self.app.root)
+        messagebox.setWindowTitle(self.loc.main.success)
+        messagebox.setText(
+            self.mloc.database_translation_complete.replace(
+                "[NUMBER]", str(newly_translated_strings)
+            )
+        )
+        utils.apply_dark_title_bar(messagebox)
+        messagebox.exec()
 
     def search_and_replace(self):
         """
@@ -725,9 +727,11 @@ class EditorTab(qtw.QWidget):
 
             self.translation.export_translation(folder)
 
-            qtw.QMessageBox.information(
-                self.app.root, self.loc.main.success, self.loc.database.export_complete
-            )
+            messagebox = qtw.QMessageBox(self.app.root)
+            messagebox.setWindowTitle(self.loc.main.success)
+            messagebox.setText(self.loc.database.export_complete)
+            utils.apply_dark_title_bar(messagebox)
+            messagebox.exec()
 
     def show_help(self):
         """
