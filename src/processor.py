@@ -359,7 +359,6 @@ class Processor:
                     )
                     if desired_lang in translations:
                         translation_urls = translations[desired_lang]
-                        print(translation_urls)
                         for translation_url in translation_urls:
                             translation_mod_id = int(
                                 translation_url.split("/")[-1].split("?")[0]

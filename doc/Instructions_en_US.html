@@ -423,35 +423,41 @@ blockquote {
         <h1 id="initial-setup" tabindex="-1">Initial Setup</h1>
 <p>If already done, skip to the next section <a href="#basic-usage">Basic Usage</a>.</p>
 <ol>
-<li>Download and extract the latest SSE-AT Release to a folder like this: C:\Modding\Tools\SSE-AT\
+<li>
+<p>Download and extract the latest SSE-AT Release to a folder like this: C:\Modding\Tools\SSE-AT\</p>
 <ul>
-<li>(in case of an update, just overwrite the existing files there)</li>
+<li>in case of an update, just overwrite the existing files there</li>
 </ul>
 </li>
-<li>Add the SSE-AT.exe as Tool to Vortex or MO2</li>
-<li>Download and install the Dynamic String Distributor SKSE Plugin (Debug or Release Build, choice is yours) as a mod (position does not matter)</li>
-<li>Run the SSE-AT.exe</li>
-<li>Click on <em>Next</em>, choose the language you want to play with and enter your personal API Key</li>
+<li>
+<p>Optional: Add the SSE-AT.exe as Tool to Vortex or MO2</p>
+</li>
+<li>
+<p>Download and install the Dynamic String Distributor SKSE Plugin as a mod (position does not matter)</p>
+</li>
+<li>
+<p>Run the SSE-AT.exe</p>
+</li>
+<li>
+<p>Click on <em>Next</em>, choose the language you want to play with and login to Nexus Mods via Browser</p>
+</li>
+<li>
+<p>Click on <em>Next</em> when you're done</p>
+</li>
+<li>
+<p>Select your mod manager and the instance/profile you want to load. You can always change the loaded instance and mod manager under <em>Settings</em> &gt; <em>User Settings</em>.</p>
+</li>
 </ol>
 <br/>
-<img src="./imgs/initial_setup.png"/>
-<p>Go to <a href="https://next.nexusmods.com/settings/api-keys">Site Preferences at Nexus Mods</a> and scroll to the bottom until you see this:</p>
-<br/>
-<img src="./imgs/nm_personal_api_key.png"/>
-<p>Click on &quot;Generate&quot; if there is no API Key and copy it.</p>
-<p>Enter it in the API Key field and click on <em>Check API Key</em>.</p>
-<br/>
-<img src="./imgs/api_key_inserted.png"/>
-<p>If the key is valid (which it should be if you copied it correctly) you can click on <em>Next</em>.</p>
-<ol start="6">
-<li>Select your mod manager and the instance / profile you want to load.</li>
-</ol>
-<br/>
-<img src="./imgs/modinstance_selection.png"/>
+<img src="./imgs/modinstance_selection.png" width="800" />
 <p>If you want to load a portable MO2 instance you also have to insert the installation path of MO2 (the folder where ModOrganizer.exe is)</p>
 <br/>
-<img src="./imgs/portable_modinstance.png"/>
+<img src="./imgs/portable_modinstance.png" width="800" />
 <p>Click on <em>Done</em> and you're ready to go!</p>
+<h2 id="setting-up-translator-api" tabindex="-1">Setting up Translator API</h2>
+<p>If you have an DeepL API Key that you want to use, you can setup the DeepL API under <em>Settings</em> &gt; <em>Translator API Settings</em>.</p>
+<br/>
+<img src="./imgs/translator_settings.png" width="800" />
 <h1 id="basic-usage" tabindex="-1">Basic Usage</h1>
 <p>To translate a modlist with all translations that are either Vanilla or available at Nexus Mods, follow the steps below.</p>
 <ol>
@@ -462,12 +468,25 @@ blockquote {
 </li>
 <li>Run the modlist scan (button 1, see below)</li>
 <li>Run the Nexus Mods scan (button 2, see below)</li>
+</ol>
+<p>Scans are finished when this dialog pops up.</p>
+<br/>
+<img src="./imgs/scan_result.png" />
+<ol start="4">
 <li>Download and install available Translations (button 3, see below)</li>
+</ol>
+<br/>
+<img src="./imgs/download_list.png" width="800" />
+<ol start="5">
 <li>Build the Output for the Dynamic String Distributor SKSE Plugin (button 4, see below)
 <ul>
 <li><strong>This must be done everytime after you edited, installed or deleted a translation</strong></li>
 </ul>
 </li>
+</ol>
+</br>
+<img src="./imgs/dsd_output.png" />
+<ol start="6">
 <li>Install the Output folder as a mod (modlist position does not matter) so that the &quot;SKSE&quot; folder lands in the game's &quot;Data&quot; folder</li>
 </ol>
 <p>Now you're ready to play!</p>
@@ -475,16 +494,22 @@ blockquote {
 <h2 id="main-page" tabindex="-1">Main Page</h2>
 <br/>
 <img src="./imgs/main_page.png"  width="1000"/>
-<p><strong>A</strong>: Modlist panel, shows Mods and their Plugins with their respective Status.</p>
-<p><strong>B</strong>: Database panel, shows installed Translations and the Plugins they cover</p>
+<h3 id="a%3A-modlist-panel%2C-shows-mods-and-their-plugins-with-their-respective-status." tabindex="-1">A: Modlist panel, shows Mods and their Plugins with their respective Status.</h3>
 <p><strong>a</strong>: Filter button, to filter for a specific Status</p>
 <p><strong>b</strong>: Ignore List button, opens a dialog showing all Plugins that are in the Ignore List (see below for more information)</p>
 <p><strong>c</strong>: Help button, opens a dialog showing the different Status and their colors</p>
+<p>More features are available when right-clicking on one or more Plugins/Mods.</p>
+<h3 id="b%3A-database-panel%2C-shows-installed-translations-and-the-plugins-they-cover" tabindex="-1">B: Database panel, shows installed Translations and the Plugins they cover</h3>
+<p><strong>d</strong>: Displays base game strings in a String List dialog (see below). Those can then be taken as reference when creating new translations.</p>
+<p><strong>e</strong>: Import button, to import a translation from a local file (or multiple when selected). The import supports downloaded mods from Nexus Mods (.rar, .7z, .zip), Plugins (.esp, .esm, .esl), DSD Translations (.json) and exported xTranslator translations (.xml).</p>
+<p><strong>f</strong>: Link button, to link SSE-AT to Mod Manager Downloads on Nexus Mods, primarily used for non-Premium downloads. When exited regularly, SSE-AT unbinds itself and binds the app that was previously bound to Mod Manager Downloads. A crash might prevent this, so that SSE-AT stays bound. In this case you have to link your Mod Manager again.</p>
+<p>More features are available when right-clicking on one or more Plugins/Translations.</p>
 <h3 id="main-features" tabindex="-1">Main Features</h3>
 <p><strong>1</strong>: Scans Modlist for required and installed Translations</p>
 <p><strong>2</strong>: Scans Nexus Mods for available Translations</p>
 <p><strong>3</strong>: Downloads available Translations from Nexus Mods and creates Translations that are completely covered by the Database (already installed Translations)</p>
 <p><strong>4</strong>: Builds the Output folder for the SKSE Plugin (Dynamic String Distributor) that must be installed as mod in order to replace the strings ingame.</p>
+<p><strong>5</strong>: Scans database for incomplete translations. This scan take a while depending on the number of installed translations.</p>
 <h3 id="ignore-list" tabindex="-1">Ignore List</h3>
 <p>Plugins can be added to an Ignore List that completely excludes them from any functionality. They can be added by a right click on them in the Modlist panel (see above).</p>
 <br/>
@@ -493,11 +518,18 @@ blockquote {
 <p>The SSE-AT has an inbuilt Editor for creating new translations or editing already existing ones. Translations cannot be exported or applied to Plugin files (.esp, .esm, .esl) like with other Translators (for eg. xTranslator or ESP-ESM Translator) but only to the new DSD Format.</p>
 <br/>
 <img src="./imgs/editor.png" width="1000" />
-<p><strong>A</strong>: Side-Menu, shows open Translations and Plugins</p>
-<p><strong>B</strong>: Main Panel, shows Strings with their EditorID / FormID, Type (Record and Subrecord) and their Original String</p>
+<p><strong>A</strong>: Side-Menu, shows open Translations and Plugins. Here you can close translations that you are done working on.</p>
+<p><strong>B</strong>: Main Panel, shows Strings with their EditorID / FormID, Type (Record and Subrecord) and their Original String.</p>
 <p><strong>a</strong>: Filter button, to filter for a specific Status</p>
 <p><strong>b</strong>: Help button, opens a dialog showing the different Status and their colors</p>
+<p><strong>1</strong>: Attempts to translate untranslated string using Database of installed Translations</p>
+<p><strong>2</strong>: Opens a <em>Search and Replace</em> Dialog for selected strings</p>
+<br/>
+<img src="./imgs/search_and_replace.png" />
+<p><strong>3</strong>: Translates selected strings using selected Translator API (configurable in <em>Settings</em>)</p>
 <p><strong>c</strong>: Saves changed translation to database</p>
+<p><strong>d</strong>: Export button for exporting the translation to publish it.</p>
+<p>More features are available when right-clicking on one or more Strings.</p>
 <h3 id="editing-strings" tabindex="-1">Editing Strings</h3>
 <p>At time of writing, only editing of single strings is implemented and working.
 Batch editing (search and replace) and automated translation with Google Translator are planned to be implemented in the near future.</p>
@@ -506,7 +538,12 @@ Batch editing (search and replace) and automated translation with Google Transla
 <img src="./imgs/editor_dialog.png" />
 <p><strong>A</strong>: Text Box with Original String, readonly</p>
 <p><strong>B</strong>: Text Box with Translated String, here you edit the String</p>
-<p><strong>a</strong>: Information Label about String, displays EditorID (or FormID in case of Dialogues) and Type (Record and Subrecord)</p>
+<p><strong>a</strong>: Information Label about String, displays EditorID (or FormID in case of Dialogues), Type (Record and Subrecord) and Index (if existing, mostly for dialogues and quests)</p>
+<p><strong>1</strong>: Translates String with configured Translator API</p>
+<h1 id="string-list" tabindex="-1">String List</h1>
+<p>You can always display the strings of a Plugin or Translation by right-clicking in a separate dialog for either debugging or referencing for new/other Translations.</p>
+<br/>
+<img src="./imgs/string_list.png" />
 
     </div>
 </body>

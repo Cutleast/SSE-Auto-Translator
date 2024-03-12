@@ -32,7 +32,7 @@ class MainApp(qtw.QApplication):
     """
 
     name = "SSE Auto Translator"
-    version = "0.2.7"
+    version = "1.0.0"
 
     loc: "utils.Localisator" = None
     cur_path = Path(__file__).parent
@@ -52,9 +52,9 @@ class MainApp(qtw.QApplication):
         "keep_logs_num": 5,  # Only keep 5 newest log files and delete rest
         "log_level": "debug",
         "language": "System",
-        "accent_color": "#7d8dc6",
+        "accent_color": "#7861aa",
         "detector_confidence": 0.8,
-        "auto_bind_nxm": True,
+        "auto_bind_nxm": False,
     }
     app_config = default_app_config
     user_config: dict = None
@@ -510,8 +510,20 @@ class MainApp(qtw.QApplication):
         dialog.setWindowTitle(self.loc.main.about)
         utils.apply_dark_title_bar(dialog)
 
+        vlayout = qtw.QVBoxLayout()
+        dialog.setLayout(vlayout)
+
+        tab_widget = qtw.QTabWidget()
+        tab_widget.tabBar().setExpanding(True)
+        tab_widget.setObjectName("centered_tab")
+        vlayout.addWidget(tab_widget)
+
+        about_tab = qtw.QWidget()
+        about_tab.setObjectName("transparent")
+        tab_widget.addTab(about_tab, self.loc.main.about)
+
         hlayout = qtw.QHBoxLayout()
-        dialog.setLayout(hlayout)
+        about_tab.setLayout(hlayout)
 
         hlayout.addSpacing(25)
 
@@ -548,6 +560,13 @@ class MainApp(qtw.QApplication):
         vlayout.addWidget(credits_label)
 
         vlayout.addSpacing(25)
+
+        licenses_tab = qtw.QListWidget()
+        tab_widget.addTab(licenses_tab, self.loc.main.used_software)
+
+        licenses_tab.addItems(utils.LICENSES.keys())
+
+        licenses_tab.itemDoubleClicked.connect(lambda item: os.startfile(utils.LICENSES[item.text()]))
 
         dialog.exec()
 

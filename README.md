@@ -1,10 +1,12 @@
 <p align="center">
-<!-- <img src="https://i.imgur.com/9Z2Nnrf.png" width="500px" /> -->
-Placeholder for header image
+<img src="https://i.imgur.com/exiipaG.png" width="1000px" />
 <br>
+<a href="https://discord.gg/pqEHdWDf8z"><img src="https://i.imgur.com/j4C46mN.png" height="60px"/> </a>
 <a href="https://www.nexusmods.com/skyrimspecialedition/mods/111491"><img src="https://i.imgur.com/STsBXT6.png" height="60px"/> </a>
 <a href="https://ko-fi.com/cutleast"><img src="https://i.imgur.com/KcPrhK5.png" height="60px"/> </a>
+<a href="https://trello.com/b/AA2KwhH8/sse-auto-translator"><img src="https://i.imgur.com/sIjqMOg.png" height="60px"/> </a>
 <br>
+</p>
 
 # Description
 
@@ -14,6 +16,7 @@ SSE-AT manages all installed translations in a single database and injects them 
 Additionally, the tool also features a built-in editor for creating and editing translations yourself and has support for Google Translator and DeepL API.
 
 # Usage
+
 See [Documentation](/doc/Instructions_en_US.md).
 
 # Features
@@ -22,7 +25,7 @@ See [Documentation](/doc/Instructions_en_US.md).
 - Automated detection and import of already installed translations
 - Automated scan for required translations on Nexus Mods
 - Version-independent translations via SKSE
-- Combined Database to auto-translate plugins that only persist of Vanilla strings
+- Combined Database to auto-translate plugins that are completely covered by Vanilla strings or other installed translations
 - Built-in Editor for creating and editing translations
   - Search and Replace Feature
   - Built-in support for Google Translator (free) and DeepL API (API Key required)
@@ -33,6 +36,7 @@ See [Documentation](/doc/Instructions_en_US.md).
 - Deep Scan Feature to find incomplete translations
 - Startup-Dialog for easy setup and introduction
 - Status colors to quickly give an overview of the translation state of your modlist
+- Supports Mod Organizer 2 and Vortex
 - Bind to "Mod Manager Download" Buttons at Nexus Mods to conveniently download translations from Nexus Mods (especially for free users)
   - this requires manual activation in the "Translations" tab
   - "Auto-bind" is available in settings (experimental)
@@ -44,8 +48,8 @@ See [Documentation](/doc/Instructions_en_US.md).
 - Only Plugin Files (.esp, .esm and .esl) are supported at the moment
   - this means that there is no support for sound files, interface translations (data/interface/*.txt) or Papyrus scripts (.pex), etc.
 - Translations that are not on a separate modpage and/or linked (under "Translations") on the original modpage cannot be found by SSE-AT
-  - for eg. the german translation for [Unofficial Skyrim Modder's Patch](https://www.nexusmods.com/skyrimspecialedition/mods/49616?tab=files)
-  - those have to be installed manually in SSE-AT by either downloading and importing them or by starting the download via SSE-AT itself (see [FAQ](#faq) below for more)
+  - for eg. the german translation for [Unofficial Skyrim Modder&#39;s Patch](https://www.nexusmods.com/skyrimspecialedition/mods/49616?tab=files)
+  - those have to be installed manually in SSE-AT by either downloading and importing them or by starting the download via SSE-AT itself (see [Documentation](/doc/Instructions_en_US.md) for more)
 
 # FAQ
 
@@ -69,7 +73,7 @@ See [Documentation](/doc/Instructions_en_US.md).
 
 - Please ensure that the original translation works and that it's a problem with SSE-AT before opening a Bug report or Issue
 
-#### What about SSE-LD? Will it be taken down or discontinued?
+#### What about [SSE-LD](https://www.nexusmods.com/skyrimspecialedition/mods/106185)? Will it be taken down or discontinued?
 
 - While SSE-AT is able to scan Plugin files (.esp, .esm, .esl) just like SSE-LD, it does not support Papyrus Scripts (.pex) or MCM translations (.txt) at the moment.
 - SSE-LD will remain online for the time being, but don't expect any major updates or changes other than some bug fixes.
@@ -106,11 +110,12 @@ If you encountered an issue/error or you have a suggestion, create an issue unde
 
 ## 3. Beta-Testing
 
-If you are interested in testing pre-release versions of SSE-AT, join our Discord.
+If you are interested in testing pre-release versions of SSE-AT, join our Discord server above.
 
 # Credits
 
 - Qt by [The Qt Company Ltd](https://qt.io)
 - [lingua-py](https://github.com/pemistahl/lingua-py) by [Peter M. Stahl](https://github.com/pemistahl)
+- [Nuitka](https://github.com/Nuitka/Nuitka)
 - [DynamicStringDistributor](https://github.com/SkyHorizon3/SSE-Dynamic-String-Distributor) by [SkyHorizon](https://github.com/SkyHorizon3)
 - Icon by [Wuerfelhusten](https://nexusmods.com/users/122160268)

@@ -166,3 +166,22 @@ class SettingsDialog(qtw.QDialog):
         self.app.log.info(
             "New settings saved. Changes will take effect after a restart."
         )
+
+        if self.changes_pending:
+            messagebox = qtw.QMessageBox()
+            messagebox.setWindowTitle(self.mloc.restart_title)
+            messagebox.setText(self.mloc.restart_text)
+            messagebox.setStandardButtons(
+                qtw.QMessageBox.StandardButton.Yes | qtw.QMessageBox.StandardButton.No
+            )
+            messagebox.button(qtw.QMessageBox.StandardButton.No).setText(
+                self.loc.main.no
+            )
+            messagebox.button(qtw.QMessageBox.StandardButton.Yes).setText(
+                self.loc.main.yes
+            )
+            choice = messagebox.exec()
+
+            if choice == qtw.QMessageBox.StandardButton.Yes:
+                os.startfile(self.app.executable)
+                self.app.exit()

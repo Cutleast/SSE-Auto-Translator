@@ -101,5 +101,6 @@
     "unsaved_exit": "Are you sure you want to exit? There are still unsaved Translations open in Editor. All unsaved changes will be lost!",
     "processing_archive": "Processing Archive...",
     "processing_plugins": "Processing Plugins...",
-    "apply": "Apply"
+    "apply": "Apply",
+    "used_software": "Used Software"
 }

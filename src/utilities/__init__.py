@@ -6,10 +6,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 import ctypes
 import logging
-import os
-import time
 from datetime import datetime
-from pathlib import Path
 
 import jstyleson as json
 import qtpy.QtGui as qtg
@@ -21,6 +18,7 @@ from .download import Download
 from .exceptions import *
 from .importer import *
 from .ini_parser import IniParser
+from .licenses import LICENSES
 from .localisation import Localisator
 from .mod import Mod
 from .nxm_listener import NXMListener

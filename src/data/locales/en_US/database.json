@@ -13,7 +13,7 @@
     "already_installed": "Already installed",
     "already_installed_text": "Translation with same version is already installed.",
     "download_list_title": "Translation Downloads",
-    "download_list_text": "Below are the Translations that are required and available at Nexus Mods. Choose desired translations where appropiate and click on \"Download all\" if you have Premium or download them manually if you don't.",
+    "download_list_text": "Below are the Translations that are required and available at Nexus Mods. Choose desired translations where appropiate and click on \"Download all\" if you have Premium or download them manually if you don't.\nIf you don't have Premium, make sure that SSE-AT is linked to Mod Manager Downloads (link button is in Translations panel).",
     "download_all": "Download All",
     "download": "Download",
     "free_download": "Download (free users)",

@@ -183,7 +183,7 @@ class NexusModsApi:
             self.log.error(
                 f"Failed to get file contents! Status code: {res.status_code}"
             )
-            print(f"Request URL: {url}")
+            self.log.debug(f"Request URL: {url}")
             return
 
     def scan_mod_for_filename(
@@ -215,10 +215,7 @@ class NexusModsApi:
                     for file in files
                 ):
                     self.log.debug(f"Found {file_name!r} in file {mod_file_name!r}.")
-                    # return mod_file["file_id"]
                     matches.append(mod_file["file_id"])
-                # else:
-                #     print(f"{file_name!r} not in {files}")
 
                 mod_files.remove(mod_file)
 

@@ -99,5 +99,6 @@
     "unsaved_exit": "Sind Sie sicher, dass Sie beenden möchten? Es sind noch ungespeicherte Übersetzungen im Editor geöffnet. Alle ungespeicherten Änderungen gehen verloren!",
     "processing_archive": "Archiv wird verarbeitet...",
     "processing_plugins": "Plugins werden verarbeitet...",
-    "apply": "Übernehmen"
+    "apply": "Übernehmen",
+    "used_software": "Verwendete Software"
 }

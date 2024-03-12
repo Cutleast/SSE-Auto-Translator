@@ -3,24 +3,20 @@ This script builds the SSE-AT.exe and packs
 all its dependencies in one folder.
 """
 
-import py7zr
 import shutil
 import os
 from pathlib import Path
 
 DIST_FOLDER = Path("app.dist").resolve()
 APPNAME = "SSE Auto Translator"
-VERSION = "0.2.7"
+VERSION = "1.0.0"
 AUTHOR = "Cutleast"
 LICENSE = "Attribution-NonCommercial-NoDerivatives 4.0 International"
 UNUSED_ITEMS: list[Path] = [
     DIST_FOLDER / "data" / "app" / "config.json",
     DIST_FOLDER / "data" / "user",
-    DIST_FOLDER / "data" / "user.old",
     DIST_FOLDER / "data" / "logs",
     DIST_FOLDER / "data" / "translator",
-    DIST_FOLDER / "data" / "icons" / "SSE-AT.svg.new",
-    DIST_FOLDER / "data" / "icons" / "icon.png.new",
 ]
 OUTPUT_FOLDER = DIST_FOLDER.with_name("SSE-AT")
 OUTPUT_ARCHIVE = Path(f"SSE-AT v{VERSION}.7z").resolve()
@@ -67,15 +63,5 @@ if OUTPUT_FOLDER.is_dir():
     shutil.rmtree(OUTPUT_FOLDER)
     print(f"Deleted already existing {OUTPUT_FOLDER.name!r} folder.")
 os.rename(DIST_FOLDER, OUTPUT_FOLDER)
-
-# if OUTPUT_ARCHIVE.is_file():
-#     os.remove(OUTPUT_ARCHIVE)
-#     print("Deleted already existing Output archive.")
-
-# os.chdir(OUTPUT_FOLDER)
-# shutil.register_archive_format(".7z", py7zr.pack_7zarchive)
-
-# print("Packing into 7z-Archive...")
-# shutil.make_archive(OUTPUT_ARCHIVE.stem, OUTPUT_ARCHIVE.suffix)
 
 print("Done!")

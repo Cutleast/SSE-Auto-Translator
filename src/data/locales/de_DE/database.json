@@ -13,7 +13,7 @@
     "already_installed": "Bereits installiert",
     "already_installed_text": "Eine Übersetzung mit gleichem Namen ist bereits installiert.",
     "download_list_title": "Übersetzungen herunterladen",
-    "download_list_text": "Nachfolgend sind die Übersetzungen aufgeführt, die erforderlich und bei Nexus Mods verfügbar sind. Gewünschte Übersetzungen auswählen und auf \"Alle herunterladen\" klicken, wenn man einen Premium Account hat oder die Übersetzungen manuell herunterladen, wenn man keinen hat.",
+    "download_list_text": "Nachfolgend sind die Übersetzungen aufgeführt, die erforderlich und bei Nexus Mods verfügbar sind. Gewünschte Übersetzungen auswählen und auf \"Alle herunterladen\" klicken, wenn man einen Premium Account hat oder die Übersetzungen manuell herunterladen, wenn man keinen hat.\nFalls man kein Premium hat, sicherstellen, dass SSE-AT mit dem Mod Manager Downloads verlinkt ist (der Link-Button ist im Übersetzungs-Panel).",
     "download_all": "Alle herunterladen",
     "download": "Herunterladen",
     "free_download": "Herunterladen (nicht-Premium)",

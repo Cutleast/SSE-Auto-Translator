@@ -18,5 +18,7 @@
     "translator_settings": "Übersetzer-API Einstellungen",
     "translator": "Übersetzer-API",
     "no_config_required": "Für diese Übersetzer-API ist keine Konfiguration erforderlich.",
-    "translator_api_key": "Übersetzer-API Key"
+    "translator_api_key": "Übersetzer-API Key",
+    "restart_title": "Neustart erforderlich",
+    "restart_text": "SSE-AT muss neugestartet werden, damit die Änderungen wirksam werden. Jetzt neustarten?"
 }

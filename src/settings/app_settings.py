@@ -69,7 +69,9 @@ class AppSettings(qtw.QWidget):
             colordialog.setOption(
                 colordialog.ColorDialogOption.DontUseNativeDialog, on=True
             )
-            colordialog.setCustomColor(0, qtg.QColor("#8197ec"))
+            colordialog.setCustomColor(
+                0, qtg.QColor(self.app.default_app_config["accent_color"])
+            )
             color = self.accent_color_entry.text()
             if qtg.QColor.isValidColor(color):
                 colordialog.setCurrentColor(qtg.QColor(color))

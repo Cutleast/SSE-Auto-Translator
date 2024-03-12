@@ -18,5 +18,7 @@
     "translator_settings": "Translator API Settings",
     "translator": "Translator API",
     "no_config_required": "No configuration required for this Translator API.",
-    "translator_api_key": "Translator API Key"
+    "translator_api_key": "Translator API Key",
+    "restart_title": "Restart required",
+    "restart_text": "SSE-AT must be restarted for the changes to take effect! Restart now?"
 }

@@ -42,7 +42,6 @@ class ApiSetup(qtw.QWidget):
         vlayout.addSpacing(25)
 
         tab_widget = qtw.QTabWidget()
-        # tab_widget.setDocumentMode(True)
         tab_widget.tabBar().setExpanding(True)
         tab_widget.setObjectName("centered_tab")
         vlayout.addWidget(tab_widget)
@@ -64,8 +63,6 @@ class ApiSetup(qtw.QWidget):
             self.valid_signal.emit(True)
 
         sso_button.clicked.connect(start_sso)
-        sso_button.setDisabled(True)
-        sso_button.setToolTip("WIP")
         sso_vlayout.addWidget(sso_button)
         tab_widget.addTab(sso_box, self.mloc.sso_setup)
 
