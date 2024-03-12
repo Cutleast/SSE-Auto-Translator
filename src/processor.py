@@ -357,6 +357,13 @@ class Processor:
                     translations = app.api.get_mod_translations(
                         "skyrimspecialedition", mod.mod_id
                     )
+
+                    if plugin.name.lower() in app.masterlist:
+                        if app.masterlist[plugin.name.lower()]["type"] == "route":
+                            plugin.status = plugin.Status.TranslationAvailableAtNexusMods
+                            app.log.info(f"Found {plugin.name!r} in Masterlist of type 'route'. Skipping Nexus Mods Scan...")
+                            continue
+
                     if desired_lang in translations:
                         translation_urls = translations[desired_lang]
                         for translation_url in translation_urls:
@@ -460,9 +467,6 @@ class Processor:
                             ).get(desired_lang)
                         ]
 
-                        if available_translations is None:
-                            plugin.status = plugin.Status.NoTranslationAvailable
-
                         available_translation_files: dict[int, list[int]] = {}
 
                         for translation_mod_id in available_translations.copy():
@@ -476,6 +480,22 @@ class Processor:
                                 )
                             else:
                                 available_translations.remove(translation_mod_id)
+                        
+                        masterlist_entry = app.masterlist.get(plugin.name.lower())
+                        if masterlist_entry is not None:
+                            if masterlist_entry["type"] == "route":
+                                for target in masterlist_entry["targets"]:
+                                    mod_id: int = target["mod_id"]
+                                    file_id: int = target["file_id"]
+
+                                    if mod_id in available_translation_files:
+                                        available_translation_files[mod_id].append(file_id)
+                                    else:
+                                        available_translation_files[mod_id] = [file_id]
+                                    
+                                    available_translations.append(mod_id)
+                                
+                                app.log.info(f"Found {plugin.name!r} in Masterlist of type 'route'. Added Targets to Downloads.")
 
                         if available_translations and available_translation_files:
                             download = utils.Download(

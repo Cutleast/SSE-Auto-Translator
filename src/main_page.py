@@ -171,13 +171,17 @@ class MainPageWidget(qtw.QWidget):
             qtg.QIcon(str(self.app.data_path / "icons" / "detect_lang.svg")),
             self.loc.main.scan_modlist,
         )
-        self.tool_bar.widgetForAction(scan_modlist_action).setObjectName("accent_button")
+        self.tool_bar.widgetForAction(scan_modlist_action).setObjectName(
+            "accent_button"
+        )
         scan_modlist_action.triggered.connect(
             lambda: (
                 Processor.scan_modlist(self.mods, self.app),
-                self.tool_bar.widgetForAction(scan_nm_action).setObjectName("accent_button"),
+                self.tool_bar.widgetForAction(scan_nm_action).setObjectName(
+                    "accent_button"
+                ),
                 self.tool_bar.widgetForAction(scan_modlist_action).setObjectName(""),
-                self.tool_bar.setStyleSheet(self.app.styleSheet())
+                self.tool_bar.setStyleSheet(self.app.styleSheet()),
             )
         )
 
@@ -185,11 +189,14 @@ class MainPageWidget(qtw.QWidget):
             qtg.QIcon(str(self.app.data_path / "icons" / "scan_nm.svg")),
             self.loc.main.scan_nm_translations,
         )
-        scan_nm_action.triggered.connect(lambda: (
+        scan_nm_action.triggered.connect(
+            lambda: (
                 Processor.scan_nm(self.mods, self.app),
-                self.tool_bar.widgetForAction(download_translations_action).setObjectName("accent_button"),
+                self.tool_bar.widgetForAction(
+                    download_translations_action
+                ).setObjectName("accent_button"),
                 self.tool_bar.widgetForAction(scan_nm_action).setObjectName(""),
-                self.tool_bar.setStyleSheet(self.app.styleSheet())
+                self.tool_bar.setStyleSheet(self.app.styleSheet()),
             )
         )
 
@@ -200,9 +207,13 @@ class MainPageWidget(qtw.QWidget):
         download_translations_action.triggered.connect(
             lambda: (
                 Processor.download_and_install_translations(self.mods, self.app),
-                self.tool_bar.widgetForAction(build_dict_action).setObjectName("accent_button"),
-                self.tool_bar.widgetForAction(download_translations_action).setObjectName(""),
-                self.tool_bar.setStyleSheet(self.app.styleSheet())
+                self.tool_bar.widgetForAction(build_dict_action).setObjectName(
+                    "accent_button"
+                ),
+                self.tool_bar.widgetForAction(
+                    download_translations_action
+                ).setObjectName(""),
+                self.tool_bar.setStyleSheet(self.app.styleSheet()),
             )
         )
 
@@ -214,7 +225,7 @@ class MainPageWidget(qtw.QWidget):
             lambda: (
                 Processor.build_dsd_dictionary(self.app),
                 self.tool_bar.widgetForAction(build_dict_action).setObjectName(""),
-                self.tool_bar.setStyleSheet(self.app.styleSheet())
+                self.tool_bar.setStyleSheet(self.app.styleSheet()),
             )
         )
 
@@ -731,6 +742,11 @@ class MainPageWidget(qtw.QWidget):
             self.ignore_list
             + utils.constants.BASE_GAME_PLUGINS
             + utils.constants.AE_CC_PLUGINS
+            + [
+                plugin
+                for plugin, masterlist_entry in self.app.masterlist.items()
+                if masterlist_entry["type"] == "ignore"
+            ]
         )
 
         global none_status_plugins
@@ -984,6 +1000,11 @@ class MainPageWidget(qtw.QWidget):
             self.ignore_list
             + utils.constants.BASE_GAME_PLUGINS
             + utils.constants.AE_CC_PLUGINS
+            + [
+                plugin
+                for plugin, masterlist_entry in self.app.masterlist.items()
+                if masterlist_entry["type"] == "ignore"
+            ]
         )
 
         self.mods_widget.clear()

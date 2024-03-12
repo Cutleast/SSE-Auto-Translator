@@ -85,6 +85,8 @@ class MainApp(qtw.QApplication):
 
     tmp_dir: Path = None
 
+    masterlist: dict[str, dict] = None
+
     def __init__(self):
         super().__init__()
 
@@ -146,6 +148,13 @@ class MainApp(qtw.QApplication):
         self.nxm_listener.download_signal.connect(
             lambda url: self.log.info(f"Handled NXM link: {url}")
         )
+
+        # Load masterlist
+        try:
+            self.masterlist = utils.get_masterlist(self.user_config["language"])
+        except Exception as ex:
+            self.log.error(f"Failed to get Masterlist from Repository: {ex}")
+            self.masterlist = []
 
         self.root.showMaximized()
 
