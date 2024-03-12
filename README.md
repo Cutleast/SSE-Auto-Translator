@@ -1,7 +1,7 @@
 <p align="center">
 <img src="https://i.imgur.com/exiipaG.png" width="1000px" />
 <br>
-<a href="https://discord.gg/pqEHdWDf8z"><img src="https://i.imgur.com/WnwiiNQ.png" height="60px"/> </a>
+<a href="https://discord.gg/pqEHdWDf8z"><img src="https://i.imgur.com/VMdA0q7.png" height="60px"/> </a>
 <a href="https://www.nexusmods.com/skyrimspecialedition/mods/111491"><img src="https://i.imgur.com/STsBXT6.png" height="60px"/> </a>
 <a href="https://ko-fi.com/cutleast"><img src="https://i.imgur.com/KcPrhK5.png" height="60px"/> </a>
 <a href="https://trello.com/b/AA2KwhH8/sse-auto-translator"><img src="https://i.imgur.com/sIjqMOg.png" height="60px"/> </a>
