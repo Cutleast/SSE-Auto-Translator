@@ -87,7 +87,7 @@
     "documentation": "Dokumentation",
     "deep_scan": "Plugins mit installierten Übersetzungen nach unübersetzten Strings scannen\n(Dies kann je nach Anzahl der Plugins und installierten Übersetzungen eine Weile dauern)",
     "fix_path_limit": "Windows Path Limit beheben",
-    "scanning_for_dsd_translations": "Scanne nach installierte DSD Übersetzungen...",
+    "scanning_for_dsd_translations": "Scanne nach installierten DSD Übersetzungen...",
     "extracting_strings": "Strings werden aus Plugin extrahiert...",
     "detecting_language": "Sprache des Plugins wird erkannt...",
     "scanning_for_required_translations": "Scanne nach benötigten Übersetzungen...",
