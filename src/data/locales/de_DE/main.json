@@ -26,7 +26,7 @@
     "loading_mods": "Mods werden geladen...",
     "elapsed": "Zeit",
     "skip": "Überspringen",
-    "loading_database": "Übersetzungsdatenbank wird geladen...",
+    "loading_database": "Installierte Übersetzungen werden geladen...",
     "scan_modlist": "Modliste nach benötigten und installierten Übersetzungen scannen",
     "scanning_modlist": "Modliste wird nach benötigten und installierten Übersetzungen gescannt...",
     "scan_nm_translations": "Nexus Mods nach verfügbaren Übersetzungen scannen",
