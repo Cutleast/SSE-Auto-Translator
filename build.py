@@ -9,12 +9,13 @@ from pathlib import Path
 
 DIST_FOLDER = Path("app.dist").resolve()
 APPNAME = "SSE Auto Translator"
-VERSION = "1.0.1"
+VERSION = "1.0.2"
 AUTHOR = "Cutleast"
 LICENSE = "Attribution-NonCommercial-NoDerivatives 4.0 International"
 UNUSED_ITEMS: list[Path] = [
     DIST_FOLDER / "data" / "app" / "config.json",
     DIST_FOLDER / "data" / "user",
+    DIST_FOLDER / "data" / "user.old",
     DIST_FOLDER / "data" / "logs",
     DIST_FOLDER / "data" / "translator",
 ]
