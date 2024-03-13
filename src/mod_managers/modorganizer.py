@@ -33,7 +33,7 @@ class ModOrganizer(ModManager):
                 parser = utils.IniParser(instance_ini)
                 instance_data = parser.load_file()
 
-                if instance_data["General"]["gameName"] in [
+                if instance_data["General"].get("gameName") in [
                     "Skyrim Special Edition",
                     "Skyrim VR",
                 ]:
