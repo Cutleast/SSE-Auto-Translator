@@ -100,6 +100,8 @@ class TranslationsWidget(qtw.QWidget):
             self.mloc.handle_nxm + " [Experimental]",
         )
         self.nxmhandler_button.setCheckable(True)
+        if not self.app.api.premium:
+            self.tool_bar.widgetForAction(self.nxmhandler_button).setObjectName("accent_button")
         self.nxmhandler_button.triggered.connect(toggle_nxm)
 
         hlayout.addStretch()
