@@ -32,11 +32,14 @@ class Vortex(ModManager):
 
         if database_path.is_dir():
             flat_data: dict[str, str] = {}
-            with ldb.DB(str(database_path)) as database:
-                prefix = "persistent###profiles###"
-                for key, value in database.iterator(prefix=prefix.encode()):
-                    key, value = key.decode(), value.decode()
-                    flat_data[key] = value
+            try:
+                with ldb.DB(str(database_path)) as database:
+                    prefix = "persistent###profiles###"
+                    for key, value in database.iterator(prefix=prefix.encode()):
+                        key, value = key.decode(), value.decode()
+                        flat_data[key] = value
+            except ldb.IOError:
+                raise Exception("Close Vortex and try again!")
 
             json_data = utils.parse_flat_dict(flat_data)
 
