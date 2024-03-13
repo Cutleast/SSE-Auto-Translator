@@ -82,6 +82,7 @@ class Processor:
                         max2=len(plugins),
                         show3=True,
                     )
+                    app.log.debug(f"Checking {plugin.name!r}...")
 
                     if app.database.get_translation_by_plugin_name(plugin.name):
                         plugin.status = plugin.Status.TranslationInstalled
