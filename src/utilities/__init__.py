@@ -282,7 +282,7 @@ def get_masterlist(language: str, cache: bool = True) -> dict[str, dict]:
     REPO_NAME = "SSE-Auto-Translator"
     REPO_OWNER = "Cutleast"
     BRANCH = "v1.1.0"
-    MASTERLIST_PATH = f"masterlists/{language}.json"
+    MASTERLIST_PATH = f"masterlists/{language.lower()}.json"
 
     if masterlist is None or cache == False:
         url = f"https://raw.githubusercontent.com/{REPO_OWNER}/{REPO_NAME}/{BRANCH}/{MASTERLIST_PATH}"
