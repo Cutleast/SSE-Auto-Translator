@@ -104,8 +104,9 @@ class TranslatorDialog(qtw.QWidget):
         hlayout = qtw.QHBoxLayout()
         vlayout.addLayout(hlayout)
 
-        cancel_button = qtw.QPushButton(self.loc.main.cancel)
+        cancel_button = qtw.QPushButton(self.loc.main.cancel + " (Escape)")
         cancel_button.clicked.connect(self.close)
+        cancel_button.setShortcut(qtc.Qt.Key.Key_Escape)
         hlayout.addWidget(cancel_button)
 
         hlayout.addStretch()
