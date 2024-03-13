@@ -79,6 +79,11 @@ See [Documentation](/doc/Instructions_en_US.md).
 - SSE-LD will remain online for the time being, but don't expect any major updates or changes other than some bug fixes.
 - As soon as SSE-AT supports extraction of non-plugin files from translations, SSE-LD will be completely discontinued and the GitHub repo will be archived (but stay public).
 
+#### What languages are supported?
+
+- Every language that is supported by the game and Nexus Mods is supported by SSE-AT.
+- Other languages may work or may not. Support is not provided for those.
+
 # Contributing
 
 ## 1. Feedback (Suggestions/Issues)
