@@ -76,7 +76,7 @@ class Updater(qtc.QObject):
         from GitHub repository.
         """
 
-        url = f"https://raw.githubusercontent.com/{self.repo_owner}/{self.repo_name}/main/update.json"
+        url = f"https://raw.githubusercontent.com/{self.repo_owner}/{self.repo_name}/master/update.json"
 
         try:
             response = requests.get(url, timeout=3)
