@@ -50,6 +50,8 @@ See [Documentation](/doc/Instructions_en_US.md).
 - Translations that are not on a separate modpage and/or linked (under "Translations") on the original modpage cannot be found by SSE-AT
   - for eg. the german translation for [Unofficial Skyrim Modder&#39;s Patch](https://www.nexusmods.com/skyrimspecialedition/mods/49616?tab=files)
   - those have to be installed manually in SSE-AT by either downloading and importing them or by starting the download via SSE-AT itself (see [Documentation](/doc/Instructions_en_US.md) for more)
+- Vortex: SSE-AT and Vortex must not be run at the same time!
+  - This is a limitation of Vortex's database which only allows one app to access it at a time
 
 # FAQ
 

@@ -5,6 +5,7 @@ If already done, skip to the next section [Basic Usage](#basic-usage).
 1. Download and extract the latest SSE-AT Release to a folder like this: C:\Modding\Tools\SSE-AT\
    - in case of an update, just overwrite the existing files there
 2. Optional: Add the SSE-AT.exe as Tool to Vortex or MO2
+   - **in case of Vortex: SSE-AT and Vortex must not be run at the same time! Close Vortex before starting SSE-AT.**
 3. Download and install the Dynamic String Distributor SKSE Plugin as a mod (position does not matter)
 4. Run the SSE-AT.exe
 5. Click on *Next*, choose the language you want to play with and login to Nexus Mods via Browser
@@ -13,7 +14,6 @@ If already done, skip to the next section [Basic Usage](#basic-usage).
 <img src="./imgs/initial_setup.png" width="800" />
 
 6. Click on *Next* when you're done
-
 7. Select your mod manager and the instance/profile you want to load. You can always change the loaded instance and mod manager under *Settings* > *User Settings*.
 
 <br/>
