@@ -22,7 +22,7 @@ QWidget#transparent {
     background: transparent;
 }
 QWidget:disabled {
-    color:  #66ffffff;
+    color: #66ffffff;
 }
 QWidget#warn_banner {
     background: #a6ff3c00;
@@ -385,6 +385,13 @@ QListWidget::indicator:checked,
 QTableView::indicator:checked,
 QTreeView::indicator:checked {
     background: <accent_color>;
+}
+QRadioButton::indicator:hover:checked,
+QCheckBox::indicator:hover:checked,
+QListWidget::indicator:hover:checked,
+QTableView::indicator:hover:checked,
+QTreeView::indicator:hover:checked {
+    background: <highlighted_accent>;
 }
 QRadioButton::indicator:disabled:checked,
 QCheckBox::indicator:disabled:checked,

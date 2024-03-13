@@ -55,8 +55,9 @@ class DownloadListDialog(qtw.QWidget):
 
         self.download_all_button = qtw.QPushButton(self.mloc.download_all)
         self.download_all_button.setIcon(
-            qta.icon("mdi.download-multiple", color="#ffffff")
+            qta.icon("mdi.download-multiple", color="#000000")
         )
+        self.download_all_button.setObjectName("accent_button")
         self.download_all_button.setDisabled(not app.api.premium)
         self.download_all_button.clicked.connect(self.download_all)
         hlayout.addWidget(self.download_all_button)
