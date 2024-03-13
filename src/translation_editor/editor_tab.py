@@ -403,6 +403,7 @@ class EditorTab(qtw.QWidget):
 
         dialog = TranslatorDialog(self, string)
         dialog.show()
+        dialog.string_entry.setFocus()
 
     def update_string_list(self):
         """
