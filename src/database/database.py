@@ -67,6 +67,10 @@ class TranslationDatabase:
 
         index_path = self.userdb_path / self.language / "index.json"
 
+        if not index_path.is_file():
+            with index_path.open("w", encoding="utf8") as index_file:
+                json.dump([], index_file)
+
         with index_path.open(encoding="utf8") as index_file:
             translation_list: list[dict] = json.load(index_file)
 
