@@ -8,5 +8,6 @@ SSE-AT
 .venv
 **.old
 *.7z
+*.zip
 *.code-workspace
 __pycache__
