@@ -154,6 +154,9 @@ class TranslationsWidget(qtw.QWidget):
             mouse_pos.setY(mouse_pos.y() - self.translations_widget.header().height())
             current_item = self.translations_widget.itemAt(mouse_pos)
 
+            if current_item is None:
+                return
+
             if parent := current_item.parent():
                 matching = [
                     _translation

@@ -283,6 +283,10 @@ class MainPageWidget(qtw.QWidget):
             mouse_pos = self.mods_widget.mapFromGlobal(qtg.QCursor.pos())
             mouse_pos.setY(mouse_pos.y() - self.mods_widget.header().height())
             current_item = self.mods_widget.itemAt(mouse_pos)
+
+            if current_item is None:
+                return
+
             if current_item.isDisabled():
                 return
             if (
