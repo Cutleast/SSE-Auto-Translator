@@ -107,7 +107,7 @@ class Updater(qtc.QObject):
         Returns it as string with markdown.
         """
 
-        url = f"https://raw.githubusercontent.com/{self.repo_owner}/{self.repo_name}/main/Changelog.md"
+        url = f"https://raw.githubusercontent.com/{self.repo_owner}/{self.repo_name}/master/Changelog.md"
 
         try:
             response = requests.get(url, timeout=3)
