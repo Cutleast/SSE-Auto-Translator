@@ -99,7 +99,7 @@ More features are available when right-clicking on one or more Plugins/Translati
 
 **4**: Builds the Output folder for the SKSE Plugin (Dynamic String Distributor) that must be installed as mod in order to replace the strings ingame.
 
-**5**: Scans database for incomplete translations. This scan take a while depending on the number of installed translations.
+**5**: Scans database for incomplete translations. This scan take a while depending on the number of installed translations. (Experimental)
 
 ### Ignore List
 
