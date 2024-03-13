@@ -3,5 +3,6 @@
     "installed_version": "Installed Version",
     "latest_version": "Latest Version",
     "ignore_update": "Ignore Update",
-    "download_update": "Download Update"
+    "download_update": "Download Update",
+    "download_updates": "Download Updates"
 }

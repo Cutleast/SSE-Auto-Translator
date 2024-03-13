@@ -21,7 +21,9 @@ class DownloadListDialog(qtw.QWidget):
     don't have Nexus Mods Premium.
     """
 
-    def __init__(self, app: MainApp, downloads: list[utils.Download]):
+    def __init__(
+        self, app: MainApp, downloads: list[utils.Download], updates: bool = False
+    ):
         super().__init__()
 
         self.app = app
@@ -29,6 +31,7 @@ class DownloadListDialog(qtw.QWidget):
         self.mloc = app.loc.database
 
         self.downloads = downloads
+        self.updates = updates
 
         self.setObjectName("root")
         self.setWindowFlags(qtc.Qt.WindowType.Window)
@@ -97,10 +100,17 @@ class DownloadListDialog(qtw.QWidget):
         """
 
         for download in self.downloads:
+            if self.updates:
+                original_label = download.original_mod_name
+            else:
+                original_label = (
+                    f"{download.original_mod_name} > {download.original_plugin_name}"
+                )
+
             item = qtw.QTreeWidgetItem(
                 [
                     "",  # Modpage button for original mod
-                    f"{download.original_mod_name} > {download.original_plugin_name}",
+                    original_label,
                     "",  # Translation Combobox
                     "",  # Modpage button for translation
                     "",  # File Combobox
@@ -219,12 +229,27 @@ class DownloadListDialog(qtw.QWidget):
             download_button.setLayoutDirection(qtc.Qt.LayoutDirection.RightToLeft)
             download_button.setFixedWidth(150)
 
-            def get_func(tcb, fcb, btn):
+            def get_func(tcb, fcb, btn, dl):
                 translation_combobox = tcb
                 files_combobox = fcb
                 download_button = btn
+                download = dl
 
                 def start_download():
+                    if self.updates:
+                        old_translation = self.app.database.get_translation_by_id(
+                            mod_id, int(download.original_plugin_name)
+                        )
+                        if old_translation is not None:
+                            self.app.database.delete_translation(old_translation)
+                            self.app.log.info("Deleted old Translation from Database.")
+                        else:
+                            self.app.log.warning(
+                                "Old Translation could not be found in Database!"
+                            )
+
+                        self.app.mainpage_widget.update_modlist()
+
                     mod_id = int(
                         translation_combobox.currentText().rsplit("(", 1)[1][:-1]
                     )
@@ -247,6 +272,7 @@ class DownloadListDialog(qtw.QWidget):
                     translation_combobox,
                     files_combobox,
                     download_button,
+                    download,
                 )
             )
             download_button.setDisabled(self.app.api.premium)
@@ -270,6 +296,8 @@ class DownloadListDialog(qtw.QWidget):
 
         download_files: list[tuple[int, int]] = []
 
+        download_translations: list[Translation] = []
+
         for rindex in range(self.list_widget.topLevelItemCount()):
             item = self.list_widget.itemFromIndex(
                 self.list_widget.model().index(rindex, 0)
@@ -286,6 +314,18 @@ class DownloadListDialog(qtw.QWidget):
                     files_combobox.currentText().rsplit("(", 1)[0].strip()
                 )
 
+                if self.updates:
+                    old_translation = self.app.database.get_translation_by_id(
+                        mod_id, int(self.downloads[rindex].original_plugin_name)
+                    )
+                    if old_translation is not None:
+                        self.app.database.delete_translation(old_translation)
+                        self.app.log.info("Deleted old Translation from Database.")
+                    else:
+                        self.app.log.warning(
+                            "Old Translation could not be found in Database!"
+                        )
+
                 translation = Translation(
                     translation_name,
                     mod_id,
@@ -300,22 +340,26 @@ class DownloadListDialog(qtw.QWidget):
                     / self.app.database.language
                     / translation_name,
                 )
+                download_translations.append(translation)
 
-                item = qtw.QTreeWidgetItem(
-                    [
-                        translation_name,
-                        self.app.loc.main.waiting_for_download,
-                    ]
-                )
-                translation.tree_item = item
-                self.app.mainpage_widget.database_widget.downloads_widget.downloads_widget.addTopLevelItem(
-                    item
-                )
-                self.app.mainpage_widget.database_widget.downloads_widget.queue.put(
-                    translation
-                )
+        self.app.mainpage_widget.update_modlist()
 
-                download_files.append((mod_id, file_id))
+        for translation in download_translations:
+            item = qtw.QTreeWidgetItem(
+                [
+                    translation_name,
+                    self.app.loc.main.waiting_for_download,
+                ]
+            )
+            translation.tree_item = item
+            self.app.mainpage_widget.database_widget.downloads_widget.downloads_widget.addTopLevelItem(
+                item
+            )
+            self.app.mainpage_widget.database_widget.downloads_widget.queue.put(
+                translation
+            )
+
+            download_files.append((mod_id, file_id))
 
         if self.list_widget.topLevelItemCount():
             self.app.mainpage_widget.database_widget.downloads_widget.queue_finished.connect(

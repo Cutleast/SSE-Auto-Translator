@@ -59,6 +59,7 @@ def import_from_archive(archive_path: Path, modlist: list[Mod], ldialog=None):
                 for mod in modlist
                 for plugin in mod.plugins
                 if plugin.status != plugin.Status.TranslationInstalled
+                and plugin.status != plugin.Status.IsTranslated
             ]
             matching = list(
                 filter(

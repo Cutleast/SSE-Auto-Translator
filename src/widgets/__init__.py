@@ -9,6 +9,7 @@ from .completion_box import CompletionBox
 from .copy_entry import CopyLineEdit
 from .download_list import DownloadListDialog
 from .error_dialog import ErrorDialog
+from .ignore_list_dialog import IgnoreListDialog
 from .key_entry import KeyEntry
 from .loading_dialog import LoadingDialog
 from .paste_entry import PasteLineEdit

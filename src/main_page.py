@@ -18,7 +18,7 @@ from main import MainApp
 from mod_managers import SUPPORTED_MOD_MANAGERS
 from plugin_parser import PluginParser
 from processor import Processor
-from widgets import LoadingDialog, StringListDialog
+from widgets import LoadingDialog, StringListDialog, IgnoreListDialog
 
 
 class MainPageWidget(qtw.QWidget):
@@ -793,7 +793,10 @@ class MainPageWidget(qtw.QWidget):
                     plugin.tree_item.setDisabled(False)
 
                 if self.app.database.get_translation_by_plugin_name(plugin.name):
-                    if plugin.status != plugin.Status.TranslationIncomplete:
+                    if (
+                        plugin.status != plugin.Status.TranslationIncomplete
+                        and plugin.status != plugin.Status.IsTranslated
+                    ):
                         plugin.status = plugin.Status.TranslationInstalled
 
                 elif (
@@ -809,6 +812,10 @@ class MainPageWidget(qtw.QWidget):
                             plugin_visible = self.filter_none.isChecked()
                         case plugin.Status.NoStrings:
                             plugin_visible = self.filter_no_strings.isChecked()
+                        case plugin.Status.IsTranslated:
+                            plugin_visible = (
+                                self.filter_translation_installed.isChecked()
+                            )
                         case plugin.Status.TranslationInstalled:
                             plugin_visible = (
                                 self.filter_translation_installed.isChecked()
@@ -839,6 +846,8 @@ class MainPageWidget(qtw.QWidget):
                             none_status_plugins += 1
                         case plugin.Status.NoStrings:
                             no_strings_plugins += 1
+                        case plugin.Status.IsTranslated:
+                            translation_installed_plugins += 1
                         case plugin.Status.TranslationInstalled:
                             translation_installed_plugins += 1
                         case plugin.Status.TranslationIncomplete:
@@ -1091,60 +1100,7 @@ class MainPageWidget(qtw.QWidget):
         Opens Ignore List in a new Popup Dialog.
         """
 
-        dialog = qtw.QDialog(self.app.root)
-        dialog.setWindowTitle(self.mloc.ignore_list)
-        dialog.resize(500, 500)
-        utils.apply_dark_title_bar(dialog)
-
-        vlayout = qtw.QVBoxLayout()
-        dialog.setLayout(vlayout)
-
-        remove_button = qtw.QPushButton(self.loc.main.remove_selected)
-        remove_button.setDisabled(True)
-        vlayout.addWidget(remove_button)
-
-        list_widget = qtw.QListWidget()
-        list_widget.setAlternatingRowColors(True)
-        list_widget.setSelectionMode(list_widget.SelectionMode.ExtendedSelection)
-        vlayout.addWidget(list_widget)
-
-        def on_select():
-            items = list_widget.selectedItems()
-            remove_button.setEnabled(bool(items))
-
-        list_widget.itemSelectionChanged.connect(on_select)
-
-        def remove_selected():
-            items = list_widget.selectedItems()
-            entries = [item.text() for item in items]
-
-            for entry in entries:
-                self.ignore_list.remove(entry)
-
-            for item in items:
-                list_widget.takeItem(list_widget.indexFromItem(item).row())
-
-        remove_button.clicked.connect(remove_selected)
-
-        list_widget.addItems(self.ignore_list)
-
-        search_box = qtw.QLineEdit()
-        search_box.setClearButtonEnabled(True)
-        search_box.addAction(
-            qta.icon("fa.search", color="#ffffff"),
-            qtw.QLineEdit.ActionPosition.LeadingPosition,
-        )
-
-        def search(text: str):
-            for rindex in range(list_widget.count()):
-                list_widget.setRowHidden(
-                    rindex, text.lower() not in list_widget.item(rindex).text().lower()
-                )
-
-        search_box.textChanged.connect(search)
-        search_box.setPlaceholderText(self.loc.main.search)
-        vlayout.addWidget(search_box)
-
+        dialog = IgnoreListDialog(self.app.root, self.app)
         dialog.exec()
 
         self.save_ignore_list()

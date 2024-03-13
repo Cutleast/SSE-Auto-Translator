@@ -118,7 +118,7 @@ class Processor:
                             plugin.status = plugin.Status.TranslationAvailableInDatabase
 
                     else:
-                        plugin.status = plugin.Status.TranslationInstalled
+                        plugin.status = plugin.Status.IsTranslated
                         app.log.info(
                             f"Found already translated plugin in mod {mod.name!r}: {plugin.name!r}"
                         )
@@ -263,7 +263,7 @@ class Processor:
             for translated_plugin in translated_mod.plugins:
                 if (
                     translated_plugin.status
-                    == translated_plugin.Status.TranslationInstalled
+                    == translated_plugin.Status.IsTranslated
                     and not app.database.get_translation_by_plugin_name(
                         translated_plugin.name
                     )
