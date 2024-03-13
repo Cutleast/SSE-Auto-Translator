@@ -93,22 +93,27 @@ class ModOrganizer(ModManager):
                     parser = utils.IniParser(mod_meta_path)
                     mod_meta_data = parser.load_file()
 
-                    general = mod_meta_data["General"]
-                    mod_id = int(general.get("modid", "0"))
-                    version = general.get("version", None)
+                    general = mod_meta_data.get("General")
+                    if general is not None:
+                        mod_id = int(general.get("modid", "0"))
+                        version = general.get("version", None)
 
-                    if version is None:
-                        version = "0"
+                        if version is None:
+                            version = "0"
 
-                    while version.endswith(".0") and version.count(".") > 1:
-                        version = version.removesuffix(".0")
+                        while version.endswith(".0") and version.count(".") > 1:
+                            version = version.removesuffix(".0")
 
-                    if "installedFiles" in mod_meta_data:
-                        file_id = int(
-                            mod_meta_data["installedFiles"].get("1\\fileid", 0)
-                        )
+                        if "installedFiles" in mod_meta_data:
+                            file_id = int(
+                                mod_meta_data["installedFiles"].get("1\\fileid", 0)
+                            )
+                        else:
+                            file_id = 0
                     else:
+                        mod_id = 0
                         file_id = 0
+                        version = "0"
                 else:
                     mod_id = 0
                     file_id = 0
