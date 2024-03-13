@@ -726,8 +726,7 @@ class MainPageWidget(qtw.QWidget):
             self.database_widget.translations_widget.update_translations
         )
 
-        splitter.setStretchFactor(0, 2)
-        splitter.setStretchFactor(1, 1)
+        splitter.setSizes([0.8 * splitter.width(), 0.2 * splitter.width()])
 
         self.mods_widget.resizeColumnToContents(2)
 

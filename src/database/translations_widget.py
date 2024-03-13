@@ -34,8 +34,11 @@ class TranslationsWidget(qtw.QWidget):
         vlayout = qtw.QVBoxLayout()
         self.setLayout(vlayout)
 
+        hlayout = qtw.QHBoxLayout()
+        vlayout.addLayout(hlayout)
+
         self.tool_bar = qtw.QToolBar()
-        vlayout.addWidget(self.tool_bar)
+        hlayout.addWidget(self.tool_bar)
 
         show_vanilla_strings_action = self.tool_bar.addAction(
             qta.icon("msc.open-preview", color="#ffffff"),
@@ -98,6 +101,16 @@ class TranslationsWidget(qtw.QWidget):
         )
         self.nxmhandler_button.setCheckable(True)
         self.nxmhandler_button.triggered.connect(toggle_nxm)
+
+        hlayout.addStretch()
+
+        num_label = qtw.QLabel(self.mloc.translations + ":")
+        num_label.setObjectName("relevant_label")
+        hlayout.addWidget(num_label)
+
+        self.translations_num_label = qtw.QLCDNumber()
+        self.translations_num_label.setDigitCount(4)
+        hlayout.addWidget(self.translations_num_label)
 
         self.translations_widget = qtw.QTreeWidget()
         self.translations_widget.setAlternatingRowColors(True)
@@ -562,6 +575,8 @@ class TranslationsWidget(qtw.QWidget):
 
             translation.tree_item = translation_item
             self.translations_widget.addTopLevelItem(translation_item)
+
+        self.translations_num_label.display(len(self.app.database.user_translations))
 
     def import_local_translation(self):
         """
