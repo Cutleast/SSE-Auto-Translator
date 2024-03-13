@@ -203,7 +203,10 @@ class MainApp(qtw.QApplication):
             self.masterlist = utils.get_masterlist(self.user_config["language"])
             self.log.info("Masterlist loaded.")
         except Exception as ex:
-            self.log.error(f"Failed to get Masterlist from Repository: {ex}", exc_info=ex)
+            if str(ex).endswith("404"):
+                self.log.error(f"No Masterlist available for {self.user_config['language']!r}.")
+            else:
+                self.log.error(f"Failed to get Masterlist from Repository: {ex}")
             self.masterlist = {}
 
     def load_user_data(self):
