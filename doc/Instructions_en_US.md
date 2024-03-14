@@ -140,9 +140,6 @@ More features are available when right-clicking on one or more Strings.
 
 ### Editing Strings
 
-At time of writing, only editing of single strings is implemented and working.
-Batch editing (search and replace) and automated translation with Google Translator are planned to be implemented in the near future.
-
 A string can be edited by either double-clicking on it or right click > Edit String.
 
 <br/>
