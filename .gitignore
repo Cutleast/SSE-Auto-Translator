@@ -11,3 +11,4 @@ SSE-AT
 *.zip
 *.code-workspace
 __pycache__
+support
