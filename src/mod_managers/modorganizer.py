@@ -33,6 +33,9 @@ class ModOrganizer(ModManager):
                 parser = utils.IniParser(instance_ini)
                 instance_data = parser.load_file()
 
+                if not "General" in instance_data:
+                    continue
+
                 if instance_data["General"].get("gameName") in [
                     "Skyrim Special Edition",
                     "Skyrim VR",
@@ -79,8 +82,8 @@ class ModOrganizer(ModManager):
         if not prof_dir.is_dir():
             try:
                 prof_dir = prof_dir.parent / os.listdir(prof_dir.parent)[0]
-            except IndexError:
-                raise Exception("No MO2 Profile that can be loaded!")
+            except (IndexError, FileNotFoundError):
+                raise Exception(f"No MO2 Profile found in {str(prof_dir.parent)!r}!")
 
         modlist_path = prof_dir / "modlist.txt"
 
