@@ -1,3 +1,7 @@
+# v1.0.4 (Hotfix)
+
+- Fix missing Commandline Argument
+
 # v1.0.3
 
 - Add Commandline Arguments and "help" command
