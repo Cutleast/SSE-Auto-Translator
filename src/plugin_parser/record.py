@@ -35,6 +35,18 @@ class Record:
 
         self.parse()
 
+    def __repr__(self) -> str:
+        import pprint
+
+        __dict = self.__dict__.copy()
+        __dict.pop("data")
+        text = "\n" + pprint.pformat(__dict, indent=4, sort_dicts=False)
+        lines: list[str] = []
+        for line in text.splitlines():
+            line = " " * 4 + line
+            lines.append(line)
+        return "\n".join(lines)
+
     def parse(self):
         self.type = String.string(self.stream, 4)
         self.size = Integer.uint32(self.stream)
@@ -93,6 +105,18 @@ class Record:
             stream.seek(-4, os.SEEK_CUR)
 
             match subrecord_type:
+                # Handle special XXXX subrecords with raw data
+                case "XXXX":
+                    subrecord_type = String.string(stream, 4)
+                    xxxx_size = Integer.uint16(stream)
+                    field_size = Integer.uint(stream, xxxx_size)
+                    field_type = String.string(stream, 4)
+                    field_data = stream.read(field_size)
+                    _ = Integer.uint16(stream)
+                    subrecord = Subrecord(stream, field_type)
+                    subrecord.size = field_size
+                    subrecord.data = field_data
+
                 # Calculate stage "index" from INDX subrecord
                 case "INDX":
                     subrecord = Subrecord(stream)
@@ -132,7 +156,10 @@ class Record:
                     )(stream)
                     subrecord.parse(self.flags)
 
-            if subrecord_type in PARSE_WHITELIST[self.type] or subrecord_type == "EDID":
+            if (
+                subrecord_type in PARSE_WHITELIST[self.type]
+                or subrecord_type == "EDID"
+            ):
                 self.subrecords.append(subrecord)
 
     def parse_info_record(self, stream: BytesIO):
@@ -144,6 +171,18 @@ class Record:
             stream.seek(-4, os.SEEK_CUR)
 
             match subrecord_type:
+                # Handle special XXXX subrecords with raw data
+                case "XXXX":
+                    subrecord_type = String.string(stream, 4)
+                    xxxx_size = Integer.uint16(stream)
+                    field_size = Integer.uint(stream, xxxx_size)
+                    field_type = String.string(stream, 4)
+                    field_data = stream.read(field_size)
+                    _ = Integer.uint16(stream)
+                    subrecord = Subrecord(stream, field_type)
+                    subrecord.size = field_size
+                    subrecord.data = field_data
+
                 # Get response id
                 case "TRDT":
                     subrecord = Subrecord(stream)

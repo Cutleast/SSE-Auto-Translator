@@ -20,18 +20,15 @@ class Subrecord:
         self.type = type if type else self.type
         self.data_stream = data_stream
 
-    def __repr__(self):
-        string = "\n\t\t{"
+    def __repr__(self) -> str:
+        import pprint
 
-        for key, value in self.__dict__.items():
-            if key != "data_stream" and key != "data":
-                string += f"\n\t\t\t{key} = {value!r}"
-            elif key == "data":
-                string += f"\n\t\t\t{key} = {value[:64]!r}"
-
-        string += "\n\t\t}"
-
-        return string
+        text = "\n" + pprint.pformat(self.__dict__, indent=4, sort_dicts=False)
+        lines: list[str] = []
+        for line in text.splitlines():
+            line = " "*8 + line
+            lines.append(line)
+        return "\n".join(lines)
 
     def __str__(self):
         return str(self.__dict__)

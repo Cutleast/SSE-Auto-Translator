@@ -61,7 +61,11 @@ class PluginParser:
 
         self.open_stream()
 
+        print(f"Parsing {self.plugin_path.name!r}...")
+
         self.parsed_data = Plugin(self.plugin_stream).parse()
+
+        print("Parsing complete.")
 
         self.close_stream()
 
