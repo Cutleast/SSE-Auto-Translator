@@ -33,6 +33,9 @@ class NXMListener(qtc.QObject):
 
     PORT = 1248
 
+    context: zmq.Context | None = None
+    socket: zmq.Socket | None = None
+
     def __init__(self):
         super().__init__()
 
@@ -73,8 +76,13 @@ class NXMListener(qtc.QObject):
 
         self._thread.terminate()
 
-        self.socket.close()
-        self.context.destroy()
+        if self.socket is not None:
+            self.socket.close()
+            self.socket = None
+        
+        if self.context is not None:
+            self.context.destroy()
+            self.context = None
 
     def bind_reg(self):
         """
