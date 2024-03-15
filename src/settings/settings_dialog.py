@@ -36,8 +36,8 @@ class SettingsDialog(qtw.QDialog):
         self.setModal(True)
         self.setWindowTitle(self.mloc.settings)
         self.setObjectName("root")
-        self.setMinimumSize(1000, 550)
-        self.resize(1000, 550)
+        self.setMinimumSize(1000, 600)
+        self.resize(1000, 600)
 
         utils.apply_dark_title_bar(self)
 
