@@ -92,7 +92,7 @@ class PluginParser:
                 strings += self.extract_group_strings(record)
             else:
                 edid = self.get_record_edid(record)
-                if edid is None:
+                if edid is None or record.type in ["INFO", "DIAL"]:
                     edid = f"[{record.formid}]"
 
                 for subrecord in record.subrecords:
