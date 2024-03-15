@@ -13,7 +13,7 @@ sys.argv.pop(0)
 print(f"{sys.argv = }")
 
 if len(sys.argv):
-    match sys.argv[-1]:
+    match sys.argv[0]:
         case "--download":
             if sys.argv[-1].startswith("nxm://"):
                 from nxm_handler import handle
