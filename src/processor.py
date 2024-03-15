@@ -546,7 +546,7 @@ class Processor:
         Processor.get_downloads(modlist, app)
 
     @staticmethod
-    def build_dsd_dictionary(app: MainApp):
+    def build_dsd_dictionary(modlist: list[utils.Mod], app: MainApp):
         """
         Builds DSD Dictionary by putting the translations in an Output folder.
         """
@@ -554,6 +554,10 @@ class Processor:
         app.log.info("Building DSD Dictionary...")
 
         output_folder = Path(".") / "SSE-AT Output"
+
+        installed_plugins = list(
+            set(plugin.name.lower() for mod in modlist for plugin in mod.plugins)
+        )
 
         def process(ldialog: LoadingDialog):
             ldialog.updateProgress(text1=app.loc.main.building_dsd_dict)
@@ -582,6 +586,19 @@ class Processor:
                         text3=plugin_name,
                     )
 
+                    if plugin_name.lower() not in installed_plugins:
+                        continue
+
+                    strings = [
+                        string.to_string_data()
+                        for string in plugin_translation
+                        if string.original_string != string.translated_string
+                        and string.translated_string
+                    ]
+
+                    if not len(strings):
+                        continue
+
                     plugin_folder = (
                         output_folder
                         / "SKSE"
@@ -597,20 +614,12 @@ class Processor:
                         plugin_folder / f"{len(os.listdir(plugin_folder))}_SSEAT.json"
                     )
 
-                    strings = [
-                        string.to_string_data()
-                        for string in plugin_translation
-                        if string.original_string != string.translated_string
-                        and string.translated_string
-                    ]
-
-                    if len(strings):
-                        with translation_path.open(
-                            "w", encoding="utf8"
-                        ) as translation_file:
-                            json.dump(
-                                strings, translation_file, indent=4, ensure_ascii=False
-                            )
+                    with translation_path.open(
+                        "w", encoding="utf8"
+                    ) as translation_file:
+                        json.dump(
+                            strings, translation_file, indent=4, ensure_ascii=False
+                        )
 
         loadingdialog = LoadingDialog(app.root, app, process)
         loadingdialog.exec()

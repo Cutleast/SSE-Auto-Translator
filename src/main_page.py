@@ -223,7 +223,7 @@ class MainPageWidget(qtw.QWidget):
         )
         build_dict_action.triggered.connect(
             lambda: (
-                Processor.build_dsd_dictionary(self.app),
+                Processor.build_dsd_dictionary(self.mods, self.app),
                 self.tool_bar.widgetForAction(build_dict_action).setObjectName(""),
                 self.tool_bar.setStyleSheet(self.app.styleSheet()),
             )
