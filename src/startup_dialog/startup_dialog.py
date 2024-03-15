@@ -69,6 +69,7 @@ class StartupDialog(qtw.QWidget):
         mod_manager_name = self.instance_page.mod_manager.name
         instance_name = self.instance_page.modinstance_name
         instance_path = self.instance_page.instance_path_entry.text()
+        instance_profile = self.instance_page.profile_name
 
         user_path = self.app.data_path / "user"
         user_config = {
@@ -76,7 +77,7 @@ class StartupDialog(qtw.QWidget):
             "api_key": api_key,
             "mod_manager": mod_manager_name,
             "modinstance": instance_name,
-            "ignore_list": [],
+            "instance_profile": instance_profile,
         }
 
         if not user_path.is_dir():

@@ -101,9 +101,44 @@ class UserSettings(qtw.QWidget):
             self.instance_path_entry.clear()
             browse_instance_path_button.setEnabled(modinstance == "Portable")
 
+            mod_manager = mod_managers.SUPPORTED_MOD_MANAGERS[
+                self.mod_manager_dropdown.currentIndex()
+            ]()
+            self.instance_profile_dropdown.clear()
+            profiles = mod_manager.get_instance_profiles(modinstance)
+            self.instance_profile_dropdown.addItems(profiles)
+            if "Default" in profiles:
+                self.instance_profile_dropdown.setCurrentText("Default")
+            self.instance_profile_dropdown.setEnabled(len(profiles) > 1)
+            profile_label.setEnabled(len(profiles) > 1)
+
         self.modinstance_dropdown.currentTextChanged.connect(self.on_change)
         self.modinstance_dropdown.currentTextChanged.connect(on_instance_select)
 
+        # Profile Selection
+        profile_label = qtw.QLabel(self.loc.main.instance_profile)
+        self.instance_profile_dropdown = qtw.QComboBox()
+        self.instance_profile_dropdown.setDisabled(True)
+        self.instance_profile_dropdown.setEditable(False)
+        self.instance_profile_dropdown.currentTextChanged.connect(self.on_change)
+        mod_manager = mod_managers.SUPPORTED_MOD_MANAGERS[
+            self.mod_manager_dropdown.currentIndex()
+        ]()
+        modinstance = self.modinstance_dropdown.currentText()
+        profiles = mod_manager.get_instance_profiles(modinstance)
+        self.instance_profile_dropdown.addItems(profiles)
+        self.instance_profile_dropdown.setEnabled(len(profiles) > 1)
+        self.instance_profile_dropdown.view
+        profile_label.setEnabled(len(profiles) > 1)
+        if "Default" in profiles:
+            self.instance_profile_dropdown.setCurrentText("Default")
+        if self.app.user_config.get("instance_profile"):
+            self.instance_profile_dropdown.setCurrentText(
+                self.app.user_config["instance_profile"]
+            )
+        flayout.addRow(profile_label, self.instance_profile_dropdown)
+
+        # Path to portable modinstance
         instance_path_label = qtw.QLabel(self.loc.main.instance_path)
         instance_path_label.setEnabled(
             self.app.user_config["modinstance"] == "Portable"
@@ -168,9 +203,11 @@ class UserSettings(qtw.QWidget):
         save_button = qtw.QPushButton(self.loc.main.save)
         save_button.setDisabled(True)
         api_setup.valid_signal.connect(lambda valid: save_button.setEnabled(valid))
+
         def save():
             self.api_key_entry.setText(api_setup.api_key)
             dialog.accept()
+
         save_button.clicked.connect(save)
         hlayout.addWidget(save_button)
 
@@ -188,9 +225,16 @@ class UserSettings(qtw.QWidget):
         self.on_change_signal.emit()
 
     def get_settings(self):
+        profile = (
+            self.instance_profile_dropdown.currentText()
+            if self.instance_profile_dropdown.currentText()
+            else None
+        )
+
         return {
             "language": self.lang_box.currentText(),
             "api_key": self.api_key_entry.text(),
             "mod_manager": self.mod_manager_dropdown.currentText(),
             "modinstance": self.modinstance_dropdown.currentText(),
+            "instance_profile": profile,
         }

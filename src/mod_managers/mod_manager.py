@@ -22,10 +22,21 @@ class ModManager:
 
         raise NotImplementedError
 
-    def get_modlist(self, instance_name: str) -> list[Mod]:
+    def get_modlist(self, instance_name: str, instance_profile: str | None = None) -> list[Mod]:
         """
         Loads and returns a list of all enabled mods
         with paying attention for conflict rules (Vortex).
+
+        MO2: Loads `instance_profile` if given else "Default".
+        """
+
+        raise NotImplementedError
+    
+    def get_instance_profiles(self, instance_name: str) -> list[str]:
+        """
+        Gets a list of profiles in `instance_name`.
+
+        Mainly for ModOrganizer Instances.
         """
 
         raise NotImplementedError

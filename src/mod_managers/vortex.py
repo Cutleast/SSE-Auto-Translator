@@ -54,7 +54,12 @@ class Vortex(ModManager):
 
         return instances
 
-    def get_modlist(self, instance_name: str):
+    def get_instance_profiles(self, instance_name: str):
+        # Do not return anything because Vortex instances (profiles) don't
+        # have "subprofiles" like MO2 instances
+        return []
+
+    def get_modlist(self, instance_name: str, instance_profile: str | None = None):
         mods: list[utils.Mod] = []
 
         appdata_path = Path(os.getenv("APPDATA")) / "Vortex"

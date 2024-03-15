@@ -100,5 +100,6 @@
     "processing_archive": "Archiv wird verarbeitet...",
     "processing_plugins": "Plugins werden verarbeitet...",
     "apply": "Übernehmen",
-    "used_software": "Verwendete Software"
+    "used_software": "Verwendete Software",
+    "instance_profile": "Profil (MO2)"
 }
