@@ -46,8 +46,11 @@ class ModOrganizer(ModManager):
 
         return instances
 
-    def get_modlist(self, instance_name: str):
+    def get_modlist(self, instance_name: str, instance_profile: str | None = None):
         mods: list[utils.Mod] = []
+
+        if instance_profile is None:
+            instance_profile = "Default"
 
         if instance_name == "Portable":
             path_file = Path(".") / "data" / "user" / "portable.txt"
@@ -72,10 +75,10 @@ class ModOrganizer(ModManager):
         if "profiles_directory" in settings:
             prof_dir = (
                 Path(settings["profiles_directory"].replace("%BASE_DIR", str(base_dir)))
-                / "Default"
+                / instance_profile
             )
         else:
-            prof_dir = base_dir / "profiles" / "Default"
+            prof_dir = base_dir / "profiles" / instance_profile
 
         # Take first profile folder that is available
         # if there is no "Default" profile
@@ -144,6 +147,28 @@ class ModOrganizer(ModManager):
                 mods.append(mod)
 
         return mods
+
+    def get_instance_profiles(self, instance_name: str) -> list[str]:
+        if instance_name == "Portable":
+            path_file = Path(".") / "data" / "user" / "portable.txt"
+            instance_ini_path = Path(path_file.read_text().strip()) / "ModOrganizer.ini"
+        else:
+            appdata_path = Path(os.getenv("LOCALAPPDATA")) / "ModOrganizer"
+            instance_ini_path = appdata_path / instance_name / "ModOrganizer.ini"
+
+        parser = utils.IniParser(instance_ini_path)
+        instance_data = parser.load_file()
+
+        settings = instance_data["Settings"]
+        base_dir = Path(settings.get("base_directory", instance_ini_path.parent))
+        if "profiles_directory" in settings:
+            prof_dir = Path(
+                settings["profiles_directory"].replace("%BASE_DIR", str(base_dir))
+            )
+        else:
+            prof_dir = base_dir / "profiles"
+
+        return os.listdir(prof_dir)
 
     @staticmethod
     def process_modlist_txt(modlist_path: Path) -> list[str]:

@@ -24,6 +24,7 @@ class InstancePage(qtw.QWidget):
 
     mod_manager: mod_managers.ModManager = None
     modinstance_name: str = None
+    profile_name: str | None = None
 
     def __init__(self, startup_dialog: StartupDialog):
         super().__init__()
@@ -52,10 +53,10 @@ class InstancePage(qtw.QWidget):
 
         vlayout.addSpacing(25)
 
+        # Mod Manager selection
         hlayout = qtw.QHBoxLayout()
         vlayout.addLayout(hlayout)
 
-        # Mod Manager selection
         mod_manager_label = qtw.QLabel(self.loc.main.mod_manager)
         hlayout.addWidget(mod_manager_label)
 
@@ -86,6 +87,7 @@ class InstancePage(qtw.QWidget):
         mod_manager_dropdown.currentTextChanged.connect(on_mod_manager_select)
         hlayout.addWidget(mod_manager_dropdown)
 
+        # Modinstance Selection
         hlayout = qtw.QHBoxLayout()
         vlayout.addLayout(hlayout)
 
@@ -112,6 +114,19 @@ class InstancePage(qtw.QWidget):
                 browse_instance_path_button.setDisabled(True)
                 self.done_button.setDisabled(True)
 
+            instance_profile_dropdown.clear()
+            self.profile_name = None
+            if self.mod_manager is not None and self.modinstance_name:
+                profiles = self.mod_manager.get_instance_profiles(self.modinstance_name)
+                instance_profile_dropdown.addItems(profiles)
+                if "Default" in profiles:
+                    instance_profile_dropdown.setCurrentText("Default")
+                profile_label.setEnabled(len(profiles) > 1)
+                instance_profile_dropdown.setEnabled(len(profiles) > 1)
+            else:
+                profile_label.setDisabled(True)
+                instance_profile_dropdown.setDisabled(True)
+
             instance_path_label.setEnabled(modinstance == "Portable")
             self.instance_path_entry.setEnabled(modinstance == "Portable")
             browse_instance_path_button.setEnabled(modinstance == "Portable")
@@ -120,6 +135,24 @@ class InstancePage(qtw.QWidget):
         modinstance_dropdown.currentTextChanged.connect(on_modinstance_select)
         hlayout.addWidget(modinstance_dropdown)
 
+        # Profile Selection
+        hlayout = qtw.QHBoxLayout()
+        vlayout.addLayout(hlayout)
+
+        profile_label = qtw.QLabel(self.loc.main.instance_profile)
+        hlayout.addWidget(profile_label)
+
+        instance_profile_dropdown = qtw.QComboBox()
+        instance_profile_dropdown.setDisabled(True)
+        instance_profile_dropdown.setEditable(False)
+
+        def on_instance_profile_select(profile_name: str):
+            self.profile_name = profile_name
+
+        instance_profile_dropdown.currentTextChanged.connect(on_instance_profile_select)
+        hlayout.addWidget(instance_profile_dropdown)
+
+        # Path to portable MO2 instance
         hlayout = qtw.QHBoxLayout()
         vlayout.addLayout(hlayout)
 

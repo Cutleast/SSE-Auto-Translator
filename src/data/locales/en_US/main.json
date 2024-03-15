@@ -102,5 +102,6 @@
     "processing_archive": "Processing Archive...",
     "processing_plugins": "Processing Plugins...",
     "apply": "Apply",
-    "used_software": "Used Software"
+    "used_software": "Used Software",
+    "instance_profile": "Instance Profile (MO2)"
 }

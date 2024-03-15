@@ -983,6 +983,7 @@ class MainPageWidget(qtw.QWidget):
 
             user_mod_manager = self.app.user_config["mod_manager"]
             user_modinstance = self.app.user_config["modinstance"]
+            instance_profile = self.app.user_config.get("instance_profile")
 
             for mod_manager in SUPPORTED_MOD_MANAGERS:
                 if mod_manager.name.lower() == user_mod_manager.lower():
@@ -996,7 +997,7 @@ class MainPageWidget(qtw.QWidget):
             if user_modinstance not in mod_instances:
                 raise KeyError(f"No modinstance {user_modinstance!r} found!")
 
-            modlist = user_mod_manager.get_modlist(user_modinstance)
+            modlist = user_mod_manager.get_modlist(user_modinstance, instance_profile)
 
         loadingdialog = LoadingDialog(self.app.root, self.app, process)
         loadingdialog.exec()
@@ -1093,7 +1094,11 @@ class MainPageWidget(qtw.QWidget):
 
         self.mods = modlist
 
-        self.title_label.setText(user_modinstance)
+        instance_profile = self.app.user_config.get("instance_profile")
+        if instance_profile and instance_profile != "Default":
+            self.title_label.setText(f"{user_modinstance} > {instance_profile}")
+        else:
+            self.title_label.setText(user_modinstance)
         self.update_modlist()
 
         self.app.log.info(f"Loaded {len(self.mods)} mod(s).")
