@@ -191,7 +191,7 @@ class MainPageWidget(qtw.QWidget):
             self.loc.main.build_dictionary,
         )
         build_dict_action.triggered.connect(
-            lambda: Processor.build_dsd_dictionary(self.app)
+            lambda: Processor.build_dsd_dictionary(self.mods, self.app)
         )
 
         self.tool_bar.addSeparator()
