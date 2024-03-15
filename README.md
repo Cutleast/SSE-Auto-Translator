@@ -52,7 +52,7 @@ See [Documentation](/doc/Instructions_en_US.md).
   - those have to be installed manually in SSE-AT by either downloading and importing them or by starting the download via SSE-AT itself (see [Documentation](/doc/Instructions_en_US.md) for more)
 - Vortex: SSE-AT and Vortex must not be run at the same time!
   - This is a limitation of Vortex's database which only allows one app to access it at a time
-- MO2: Profile cannot be selected manually, the "Default" profile gets loaded if it exists, and the alphabetically first profile there is no "Default" profile
+- MO2: Profile cannot be selected manually, the "Default" profile gets loaded if it exists, and the alphabetically first profile if there is no "Default" profile
 
 # FAQ
 
