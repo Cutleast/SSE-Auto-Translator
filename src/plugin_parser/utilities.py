@@ -32,6 +32,7 @@ CHAR_WHITELIST = [
     "\t",
     "\u200B",
     "\xa0",
+    "\u3000",
 ]
 
 
@@ -50,24 +51,35 @@ def is_camel_case(text: str):
     Checks if `text` is camel case without spaces.
     """
 
-    if " " in text:
+    if " " in text or "-" in text or len(text) < 3:
         return False
 
-    return any(char.isupper() for char in text[1:]) and not text.isupper()
+    return (
+        any(char.isupper() and char.isalpha() for char in text[2:])
+        and not text.isupper()
+    )
 
 
-def is_valid_string(input_string: str):
+def is_snake_case(text: str):
     """
-    Checks if <input_string> is a valid string.
+    Checks if `text` is snake case without spaces.
     """
 
-    if not input_string.strip():
+    return " " not in text and "_" in text
+
+
+def is_valid_string(text: str):
+    """
+    Checks if <text> is a valid string.
+    """
+
+    if not text.strip():
         return False
 
-    if is_camel_case(input_string):
+    if "<Alias" in text:
+        return True
+
+    if is_camel_case(text) or is_snake_case(text):
         return False
 
-    if "_" in input_string and " " not in input_string:
-        return False
-
-    return all((c.isprintable() or c in CHAR_WHITELIST) for c in input_string)
+    return all(char.isprintable() or char in CHAR_WHITELIST for char in text)
