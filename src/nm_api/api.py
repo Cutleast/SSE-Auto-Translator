@@ -211,6 +211,8 @@ class NexusModsApi:
 
                 if any(
                     file.lower().strip().endswith(file_name.lower().strip())
+                    or f"skse/plugins/dynamicstringdistributor/{file_name.lower().strip()}"
+                    in file.lower()
                     for file in files
                 ):
                     self.log.debug(f"Found {file_name!r} in file {mod_file_name!r}.")
@@ -396,7 +398,4 @@ class NexusModsApi:
         updates: list[dict] = data["file_updates"]
         self.log.info("Request successful.")
 
-        return {
-            update["old_file_id"]: update["new_file_id"]
-            for update in updates
-        }
+        return {update["old_file_id"]: update["new_file_id"] for update in updates}
