@@ -60,8 +60,6 @@ class UserSettings(qtw.QWidget):
         self.api_key_entry.setText(self.app.user_config["api_key"])
         api_key_hlayout.addWidget(self.api_key_entry)
         api_setup_button = qtw.QPushButton(self.mloc.start_api_setup)
-        # api_setup_button.setDisabled(True)
-        # api_setup_button.setToolTip("WIP")
         api_setup_button.clicked.connect(self.start_api_setup)
         api_key_hlayout.addWidget(api_setup_button)
         flayout.addRow(self.mloc.nm_api_key, api_key_hlayout)
@@ -105,12 +103,16 @@ class UserSettings(qtw.QWidget):
                 self.mod_manager_dropdown.currentIndex()
             ]()
             self.instance_profile_dropdown.clear()
-            profiles = mod_manager.get_instance_profiles(modinstance)
-            self.instance_profile_dropdown.addItems(profiles)
-            if "Default" in profiles:
-                self.instance_profile_dropdown.setCurrentText("Default")
-            self.instance_profile_dropdown.setEnabled(len(profiles) > 1)
-            profile_label.setEnabled(len(profiles) > 1)
+            if modinstance != "Portable":
+                profiles = mod_manager.get_instance_profiles(modinstance)
+                self.instance_profile_dropdown.addItems(profiles)
+                if "Default" in profiles:
+                    self.instance_profile_dropdown.setCurrentText("Default")
+                self.instance_profile_dropdown.setEnabled(len(profiles) > 1)
+                profile_label.setEnabled(len(profiles) > 1)
+            else:
+                profile_label.setDisabled(True)
+                self.instance_profile_dropdown.setDisabled(True)
 
         self.modinstance_dropdown.currentTextChanged.connect(self.on_change)
         self.modinstance_dropdown.currentTextChanged.connect(on_instance_select)
@@ -153,6 +155,21 @@ class UserSettings(qtw.QWidget):
         self.instance_path_entry.setEnabled(
             self.app.user_config["modinstance"] == "Portable"
         )
+
+        def on_path_change(new_path: str):
+            ini_path = Path(new_path) / "ModOrganizer.ini"
+
+            if ini_path.is_file():
+                profiles = mod_managers.ModOrganizer.get_profiles_from_ini(ini_path)
+            else:
+                profiles = []
+
+            self.instance_profile_dropdown.clear()
+            self.instance_profile_dropdown.addItems(profiles)
+            self.instance_profile_dropdown.setEnabled(len(profiles) > 1)
+            profile_label.setEnabled(len(profiles) > 1)
+
+        self.instance_path_entry.textChanged.connect(on_path_change)
         hlayout.addWidget(self.instance_path_entry)
         browse_instance_path_button = qtw.QPushButton()
         browse_instance_path_button.setIcon(
