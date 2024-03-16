@@ -1,3 +1,11 @@
+# v1.0.5
+
+- Improve precision of PluginParser String filter
+- Build DSD Output only for installed Plugins instead of the whole Database
+- Use FormIDs for all DIAL and INFO Records
+- Add User Selection for MO2 Instance Profile to StartupDialog and User Settings
+- Fix Nexus Mods scan of DSD Translations
+
 # v1.0.4 (Hotfix)
 
 - Fix missing Commandline Argument
