@@ -156,11 +156,19 @@ class ModOrganizer(ModManager):
             appdata_path = Path(os.getenv("LOCALAPPDATA")) / "ModOrganizer"
             instance_ini_path = appdata_path / instance_name / "ModOrganizer.ini"
 
-        parser = utils.IniParser(instance_ini_path)
+        return ModOrganizer.get_profiles_from_ini(instance_ini_path)
+
+    @staticmethod
+    def get_profiles_from_ini(ini_path: Path) -> list[str]:
+        """
+        Parses ini file at `ini_path` and returns a list of available profiles.
+        """
+
+        parser = utils.IniParser(ini_path)
         instance_data = parser.load_file()
 
         settings = instance_data["Settings"]
-        base_dir = Path(settings.get("base_directory", instance_ini_path.parent))
+        base_dir = Path(settings.get("base_directory", ini_path.parent))
         if "profiles_directory" in settings:
             prof_dir = Path(
                 settings["profiles_directory"].replace("%BASE_DIR", str(base_dir))

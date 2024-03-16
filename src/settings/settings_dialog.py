@@ -138,8 +138,9 @@ class SettingsDialog(qtw.QDialog):
         path_file = self.app.data_path / "user" / "portable.txt"
         if self.user_settings.modinstance_dropdown.currentText() == "Portable":
             instance_path = self.user_settings.instance_path_entry.text().strip()
+            ini_path = Path(instance_path) / "ModOrganizer.ini"
 
-            if Path(instance_path).is_dir() and instance_path:
+            if ini_path.is_file() and instance_path:
                 path_file.write_text(instance_path)
             else:
                 ErrorDialog(

@@ -116,7 +116,11 @@ class InstancePage(qtw.QWidget):
 
             instance_profile_dropdown.clear()
             self.profile_name = None
-            if self.mod_manager is not None and self.modinstance_name:
+            if (
+                self.mod_manager is not None
+                and self.modinstance_name
+                and self.modinstance_name != "Portable"
+            ):
                 profiles = self.mod_manager.get_instance_profiles(self.modinstance_name)
                 instance_profile_dropdown.addItems(profiles)
                 if "Default" in profiles:
@@ -131,6 +135,7 @@ class InstancePage(qtw.QWidget):
             self.instance_path_entry.setEnabled(modinstance == "Portable")
             browse_instance_path_button.setEnabled(modinstance == "Portable")
             self.instance_path_entry.clear()
+            self.done_button.setDisabled(modinstance == "Portable")
 
         modinstance_dropdown.currentTextChanged.connect(on_modinstance_select)
         hlayout.addWidget(modinstance_dropdown)
@@ -161,11 +166,24 @@ class InstancePage(qtw.QWidget):
         hlayout.addWidget(instance_path_label, 9)
         self.instance_path_entry = qtw.QLineEdit()
         self.instance_path_entry.setDisabled(True)
-        self.instance_path_entry.textChanged.connect(
-            lambda _: self.done_button.setEnabled(
-                Path(self.instance_path_entry.text()).is_dir()
-            )
-        )
+
+        def on_path_change(new_path: str):
+            ini_path = Path(new_path) / "ModOrganizer.ini"
+
+            if ini_path.is_file():
+                profiles = mod_managers.ModOrganizer.get_profiles_from_ini(ini_path)
+
+            else:
+                profiles = []
+
+            instance_profile_dropdown.clear()
+            instance_profile_dropdown.addItems(profiles)
+            instance_profile_dropdown.setEnabled(len(profiles) > 1)
+            profile_label.setEnabled(len(profiles) > 1)
+
+            self.done_button.setEnabled(ini_path.is_file())
+
+        self.instance_path_entry.textChanged.connect(on_path_change)
         hlayout.addWidget(self.instance_path_entry, 8)
         browse_instance_path_button = qtw.QPushButton()
         browse_instance_path_button.setIcon(
