@@ -211,8 +211,10 @@ class NexusModsApi:
 
                 if any(
                     file.lower().strip().endswith(file_name.lower().strip())
-                    or f"skse/plugins/dynamicstringdistributor/{file_name.lower().strip()}"
-                    in file.lower()
+                    or (
+                        f"skse/plugins/dynamicstringdistributor/{file_name.lower().strip()}"
+                        in file.lower()
+                    )
                     for file in files
                 ):
                     self.log.debug(f"Found {file_name!r} in file {mod_file_name!r}.")
@@ -235,6 +237,10 @@ class NexusModsApi:
 
             if any(
                 file.lower().strip().endswith(file_name.lower().strip())
+                or (
+                    f"skse/plugins/dynamicstringdistributor/{file_name.lower().strip()}"
+                    in file.lower()
+                )
                 for file in files
             ):
                 self.log.debug(f"Found {file_name!r} in file {mod_file_name!r}.")
