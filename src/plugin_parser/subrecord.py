@@ -13,12 +13,14 @@ class Subrecord:
     Contains parsed subrecord data.
     """
 
-    data_stream: BufferedReader
+    data_stream: BufferedReader = None
+    header_flags: dict[str, bool] = None
     type: str = "Subrecord"
 
-    def __init__(self, data_stream: BufferedReader, type: str = None):
-        self.type = type if type else self.type
+    def __init__(self, data_stream: BufferedReader, header_flags: dict[str, bool], type: str = None):
         self.data_stream = data_stream
+        self.header_flags = header_flags
+        self.type = type if type else self.type
 
     def __repr__(self) -> str:
         import pprint
@@ -39,7 +41,7 @@ class Subrecord:
         except AttributeError:
             return 0
 
-    def parse(self, flags: dict[str, bool]):
+    def parse(self):
         self.type = String.string(self.data_stream, 4)
         self.size = Integer.uint16(self.data_stream)
         self.data = self.data_stream.read(self.size)
@@ -52,7 +54,7 @@ class HEDR(Subrecord):
 
     type = "HEDR"
 
-    def parse(self, flags: dict[str, bool]):
+    def parse(self):
         self.type = String.string(self.data_stream, 4)
         self.size = Integer.uint16(self.data_stream)
         self.version = round(Float.float32(self.data_stream), 2)
@@ -67,7 +69,7 @@ class EDID(Subrecord):
 
     type = "EDID"
 
-    def parse(self, flags: dict[str, bool]):
+    def parse(self):
         self.type = String.string(self.data_stream, 4)
         self.size = Integer.uint16(self.data_stream)
         self.editor_id = String.zstring(self.data_stream)
@@ -81,21 +83,25 @@ class StringSubrecord(Subrecord):
     type = None
     index: int | None = None
 
-    def parse(self, flags: dict[str, bool]):
+    def parse(self):
         self.type = String.string(self.data_stream, 4)
         self.size = Integer.uint16(self.data_stream)
         self.data = utils.peek(self.data_stream, self.size)
 
-        try:
-            string = (
-                String.string(self.data_stream, self.size).removesuffix("\x00").strip()
-            )
-            if utils.is_valid_string(string) or string.isnumeric():
-                self.string = string
-            else:
+        if self.header_flags["Localized"]:
+            self.string = Integer.ulong(self.data_stream)
+
+        else:
+            try:
+                string = (
+                    String.string(self.data_stream, self.size).removesuffix("\x00").strip()
+                )
+                if utils.is_valid_string(string) or string.isnumeric():
+                    self.string = string
+                else:
+                    self.string = None
+            except UnicodeDecodeError:
                 self.string = None
-        except UnicodeDecodeError:
-            self.string = None
 
 
 class MAST(Subrecord):
@@ -105,8 +111,8 @@ class MAST(Subrecord):
 
     type = "MAST"
 
-    def parse(self, flags: dict[str, bool]):
-        super().parse(flags)
+    def parse(self):
+        super().parse()
 
         stream = BytesIO(self.data)
         self.file = String.wzstring(stream)
@@ -121,8 +127,8 @@ class TIFC(Subrecord):
 
     type = "TIFC"
 
-    def parse(self, flags: dict[str, bool]):
-        super().parse(flags)
+    def parse(self):
+        super().parse()
 
         stream = BytesIO(self.data)
         self.count = Integer.uint32(stream)

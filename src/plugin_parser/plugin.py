@@ -23,9 +23,9 @@ class Plugin:
     def parse(self):
         self.groups = []
 
-        self.header = Record(self.data_stream)
+        self.header = Record(self.data_stream, header_flags={})
 
         while utils.peek(self.data_stream, 1):
-            self.groups.append(Group(self.data_stream))
+            self.groups.append(Group(self.data_stream, self.header.flags))
 
         return self

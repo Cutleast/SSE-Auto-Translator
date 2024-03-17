@@ -18,6 +18,7 @@ class Group:
 
     type = "GRUP"
     stream: BufferedReader = None
+    header_flags: dict[str, bool] = None
     records: list[Record] = None
 
     class GroupType(IntEnum):
@@ -36,8 +37,9 @@ class Group:
         CellPersistentChildren = 8  # Persistent Cell Record
         CellTemporaryChildren = 9  # Temporary Cell Record
 
-    def __init__(self, stream: BufferedReader):
+    def __init__(self, stream: BufferedReader, header_flags: dict[str, bool]):
         self.stream = stream
+        self.header_flags = header_flags
 
         self.parse()
     
@@ -147,9 +149,9 @@ class Group:
         while record_type := String.string(stream, 4):
             stream.seek(-4, os.SEEK_CUR)
             if record_type == "GRUP":
-                record = Group(stream)
+                record = Group(stream, self.header_flags)
             else:
-                record = Record(stream)
+                record = Record(stream, self.header_flags)
 
             self.records.append(record)
 
