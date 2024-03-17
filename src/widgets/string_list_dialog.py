@@ -157,6 +157,7 @@ class StringListDialog(qtw.QWidget):
             self.strings_widget.setHeaderLabels(
                 [
                     self.loc.main.type,
+                    self.loc.main.form_id,
                     self.loc.main.editor_id,
                     self.loc.main.original,
                     self.loc.main.string,
@@ -166,6 +167,7 @@ class StringListDialog(qtw.QWidget):
             self.strings_widget.setHeaderLabels(
                 [
                     self.loc.main.type,
+                    self.loc.main.form_id,
                     self.loc.main.editor_id,
                     self.loc.main.string,
                 ]
@@ -178,7 +180,8 @@ class StringListDialog(qtw.QWidget):
                 item = qtw.QTreeWidgetItem(
                     [
                         string.type,
-                        string.editor_id,
+                        string.form_id if string.form_id is not None else "",
+                        string.editor_id if string.editor_id is not None else "",
                         utils.trim_string(string.original_string),
                         utils.trim_string(string.translated_string),
                     ]
@@ -197,7 +200,8 @@ class StringListDialog(qtw.QWidget):
                 item = qtw.QTreeWidgetItem(
                     [
                         string.type,
-                        string.editor_id,
+                        string.form_id if string.form_id is not None else "",
+                        string.editor_id if string.editor_id is not None else "",
                         utils.trim_string(string.original_string),
                     ]
                 )
@@ -213,13 +217,14 @@ class StringListDialog(qtw.QWidget):
             self.strings_widget.addTopLevelItem(item)
 
         self.strings_widget.resizeColumnToContents(0)
-        self.strings_widget.header().resizeSection(1, 200)
+        self.strings_widget.resizeColumnToContents(1)
+        self.strings_widget.header().resizeSection(2, 200)
 
         if self.show_translation:
-            self.strings_widget.header().resizeSection(2, 300)
             self.strings_widget.header().resizeSection(3, 300)
+            self.strings_widget.header().resizeSection(4, 300)
         else:
-            self.strings_widget.header().resizeSection(2, 600)
+            self.strings_widget.header().resizeSection(3, 600)
 
     def update_string_list(self):
         cur_search = self.search_box.text().lower()
@@ -227,9 +232,15 @@ class StringListDialog(qtw.QWidget):
         for string, item in self.string_items.items():
             string_text = (
                 string.editor_id
-                + string.type
-                + string.original_string
-                + str(string.translated_string)
+                if string.editor_id is not None
+                else (
+                    "" + string.form_id
+                    if string.form_id is not None
+                    else ""
+                    + string.type
+                    + string.original_string
+                    + str(string.translated_string)
+                )
             )
 
             string_visible = cur_search in string_text.lower()
@@ -258,11 +269,17 @@ class StringListDialog(qtw.QWidget):
         Shows `string` in a separate text box window.
         """
 
-        if column < 2:
+        if column < 3:
             return
 
         dialog = qtw.QDialog(self)
-        dialog.setWindowTitle(f"{item.text(1)} ({item.text(0)})")
+        type = item.text(0)
+        form_id = item.text(1)
+        editor_id = item.text(2)
+        if editor_id:
+            dialog.setWindowTitle(f"{editor_id} ({type})")
+        else:
+            dialog.setWindowTitle(f"{form_id} ({type})")
         dialog.setMinimumSize(800, 500)
         utils.apply_dark_title_bar(dialog)
 

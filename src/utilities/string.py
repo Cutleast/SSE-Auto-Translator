@@ -17,9 +17,15 @@ class String:
     Class for translation strings.
     """
 
-    editor_id: str
+    editor_id: str | None
     """
-    Despite the name, this can be a FormID for Dialogues and Quests.
+    EditorIDs are the IDs that are visible in CK, xTranslator and xEdit
+    but not all strings do have one.
+    """
+
+    form_id: str | None
+    """
+    FormIDs are hexadecimal numbers that identify the record of the string.
     """
 
     index: int | None
@@ -103,8 +109,16 @@ class String:
                 string_data.get("status"), cls.Status.TranslationComplete
             )
 
+            editor_id = string_data["editor_id"]
+            form_id = string_data.get("form_id")
+            if editor_id and not form_id:
+                if editor_id.startswith("[") and editor_id.endswith("]"):
+                    form_id = editor_id
+                    editor_id = None
+
             return String(
-                editor_id=string_data["editor_id"],
+                editor_id=editor_id,
+                form_id=form_id,
                 index=string_data.get("index"),
                 type=string_data["type"],
                 original_string=string_data["original"],
@@ -117,8 +131,16 @@ class String:
                 string_data.get("status"), cls.Status.TranslationRequired
             )
 
+            editor_id = string_data["editor_id"]
+            form_id = string_data.get("form_id")
+            if editor_id and not form_id:
+                if editor_id.startswith("[") and editor_id.endswith("]"):
+                    form_id = editor_id
+                    editor_id = None
+
             return String(
-                editor_id=string_data["editor_id"],
+                editor_id=editor_id,
+                form_id=form_id,
                 index=string_data.get("index"),
                 type=string_data["type"],
                 original_string=string_data["string"],
@@ -129,6 +151,7 @@ class String:
         if self.translated_string is not None:
             return {
                 "editor_id": self.editor_id,
+                "form_id": self.form_id,
                 "index": self.index,
                 "type": self.type,
                 "original": self.original_string,
@@ -138,6 +161,7 @@ class String:
         else:
             return {
                 "editor_id": self.editor_id,
+                "form_id": self.form_id,
                 "index": self.index,
                 "type": self.type,
                 "string": self.original_string,

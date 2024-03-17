@@ -252,14 +252,21 @@ class TranslationDatabase:
                     continue
 
                 full_matching = (
-                    string.editor_id == matching.editor_id
+                    (
+                        string.editor_id == matching.editor_id
+                        or string.form_id == matching.form_id
+                    )
+                    and string.index == matching.index
                     and string.type == matching.type
                     and string.original_string == matching.original_string
                 )
 
                 string.translated_string = matching.translated_string
 
-                if full_matching:
+                if (
+                    full_matching
+                    or matching.status == String.Status.NoTranslationRequired
+                ):
                     string.status = matching.status
                 else:
                     string.status = String.Status.TranslationIncomplete
@@ -313,14 +320,21 @@ class TranslationDatabase:
                     continue
 
                 full_matching = (
-                    original_string.editor_id == matching.editor_id
+                    (
+                        original_string.editor_id == matching.editor_id
+                        or original_string.form_id == matching.form_id
+                    )
+                    and original_string.index == matching.index
                     and original_string.type == matching.type
                     and original_string.original_string == matching.original_string
                 )
 
                 original_string.translated_string = matching.translated_string
 
-                if full_matching:
+                if (
+                    full_matching
+                    or matching.status == String.Status.NoTranslationRequired
+                ):
                     original_string.status = matching.status
                 else:
                     original_string.status = String.Status.TranslationIncomplete

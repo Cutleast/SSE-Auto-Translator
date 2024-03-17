@@ -145,6 +145,36 @@ class String:
     """
 
     @staticmethod
+    def decode(data: bytes) -> str:
+        """
+        Attempts to decode `data` with encodings in the following order:
+
+        1. UTF-8
+        2. Windows-1250 (cp1250)
+        3. Windows-1252 (cp1252)
+        4. Windows-1251 (cp1251)
+        
+        Raises UnicodeDecodeError if none of the encodings worked.
+        """
+
+        try:
+            return data.decode("utf8")
+        except UnicodeDecodeError:
+            pass
+
+        try:
+            return data.decode("cp1250")
+        except UnicodeDecodeError:
+            pass
+        
+        try:
+            return data.decode("cp1252")
+        except UnicodeDecodeError:
+            pass
+
+        return data.decode("cp1251")
+
+    @staticmethod
     def chars(stream: BufferedReader, size: int) -> bytes:
         """
         Chars of length `size`.
@@ -174,7 +204,7 @@ class String:
         String of length `size`.
         """
 
-        return stream.read(size).decode()
+        return String.decode(stream.read(size))
 
     @staticmethod
     def wstring(stream: BufferedReader) -> str:
@@ -190,7 +220,7 @@ class String:
         Null-terminated string, precedented by length as uint16.
         """
 
-        return String.chars(stream, Integer.uint16(stream))[:-1].decode()
+        return String.decode(String.chars(stream, Integer.uint16(stream))[:-1])
 
     @staticmethod
     def bzstring(stream: BufferedReader):
@@ -198,7 +228,7 @@ class String:
         Null-terminated string, precedented by length as uint8.
         """
 
-        return String.chars(stream, Integer.uint8(stream))[:-1].decode()
+        return String.decode(String.chars(stream, Integer.uint8(stream))[:-1])
 
     @staticmethod
     def bstring(stream: BufferedReader):
@@ -219,7 +249,7 @@ class String:
         while (char := stream.read(1)) != b"\x00" and char:
             string += char
 
-        return string.removesuffix(b"\x00").decode()
+        return String.decode(string.removesuffix(b"\x00"))
 
     @staticmethod
     def lstring(stream: BufferedReader) -> str:
@@ -231,7 +261,7 @@ class String:
         string = String.chars(stream, length)
         string = string.removesuffix(b"\x00")
 
-        return string.decode()
+        return String.decode(string)
 
     @staticmethod
     def list(stream: BufferedReader, count: int, sep=b"\x00"):
@@ -247,12 +277,12 @@ class String:
             while (char := stream.read(1)) != sep:
                 string += char
 
-            strings.append(string.decode())
+            strings.append(String.decode(string))
 
         return strings
 
     @staticmethod
-    def stringId(stream: BufferedReader) -> str:
+    def stringId(stream: BufferedReader) -> int:
         return Integer.ulong(stream)
 
 

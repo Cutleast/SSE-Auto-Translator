@@ -217,6 +217,7 @@ class EditorTab(qtw.QWidget):
 
         self.strings_widget.setHeaderLabels(
             [
+                self.loc.main.form_id,
                 self.loc.main.editor_id,
                 self.loc.main.type,
                 self.loc.main.original,
@@ -229,7 +230,8 @@ class EditorTab(qtw.QWidget):
         for string in self.strings:
             item = qtw.QTreeWidgetItem(
                 [
-                    string.editor_id,
+                    string.form_id if string.form_id is not None else "",
+                    string.editor_id if string.editor_id is not None else "",
                     string.type,
                     utils.trim_string(string.original_string),
                     utils.trim_string(string.translated_string),
@@ -241,7 +243,7 @@ class EditorTab(qtw.QWidget):
 
         self.update_string_list()
 
-        for c in range(4):
+        for c in range(5):
             self.strings_widget.resizeColumnToContents(c)
 
         self.strings_widget.itemActivated.connect(self.open_translator_dialog)
@@ -419,7 +421,8 @@ class EditorTab(qtw.QWidget):
 
         for string in self.strings:
             string_text = (
-                string.editor_id
+                string.form_id if string.form_id is not None else ""
+                + string.editor_id if string.editor_id is not None else ""
                 + string.type
                 + string.original_string
                 + str(string.translated_string)
@@ -448,12 +451,13 @@ class EditorTab(qtw.QWidget):
                     case string.Status.TranslationRequired:
                         translation_required_strings += 1
 
-            string.tree_item.setToolTip(0, string.editor_id)
-            string.tree_item.setToolTip(1, string.type)
-            string.tree_item.setToolTip(2, string.original_string)
-            string.tree_item.setToolTip(3, string.translated_string)
+            string.tree_item.setToolTip(0, string.form_id if string.form_id is not None else "")
+            string.tree_item.setToolTip(1, string.editor_id if string.editor_id is not None else "")
+            string.tree_item.setToolTip(2, string.type)
+            string.tree_item.setToolTip(3, string.original_string)
+            string.tree_item.setToolTip(4, string.translated_string)
 
-            for c in range(4):
+            for c in range(5):
                 string.tree_item.setForeground(
                     c, string.Status.get_color(string.status)
                 )

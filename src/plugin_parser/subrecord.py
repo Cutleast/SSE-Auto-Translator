@@ -82,6 +82,7 @@ class StringSubrecord(Subrecord):
 
     type = None
     index: int | None = None
+    string: str | int = None
 
     def parse(self):
         self.type = String.string(self.data_stream, 4)
@@ -89,7 +90,7 @@ class StringSubrecord(Subrecord):
         self.data = utils.peek(self.data_stream, self.size)
 
         if self.header_flags["Localized"]:
-            self.string = Integer.ulong(self.data_stream)
+            self.string = String.stringId(self.data_stream)
 
         else:
             try:
@@ -101,7 +102,9 @@ class StringSubrecord(Subrecord):
                 else:
                     self.string = None
             except UnicodeDecodeError:
+                print(self.data)
                 self.string = None
+                raise
 
 
 class MAST(Subrecord):
