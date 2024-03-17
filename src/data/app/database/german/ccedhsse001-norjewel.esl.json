@@ -1,0 +1,394 @@
+[
+    {
+        "editor_id": "ccEDHSSE001_EnchNorAmuletHealth06",
+        "form_id": "[0500081A]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Nordic Amulet of Peerless Health",
+        "string": "Nord-Amulett der Einzigartigen Gesundheit"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorRingStamina06",
+        "form_id": "[05000817]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Nordic Ring of Peerless Stamina",
+        "string": "Nord-Ring der Einzigartigen Ausdauer"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorRingStamina03",
+        "form_id": "[05000814]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Nordic Ring of Major Stamina",
+        "string": "Nord-Ring der Großen Ausdauer"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorRingStamina04",
+        "form_id": "[05000815]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Nordic Ring of Eminent Stamina",
+        "string": "Nord-Ring der Überragenden Ausdauer"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorCircletMagicka01",
+        "form_id": "[05000812]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Nordic Circlet of Minor Magicka",
+        "string": "Nord-Diadem der Geringen Magicka"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorRingStamina01",
+        "form_id": "[0500081E]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Nordic Ring of Minor Stamina",
+        "string": "Nord-Ring der Geringen Ausdauer"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorCircletMagicka04",
+        "form_id": "[0500080F]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Nordic Circlet of Extreme Magicka",
+        "string": "Nord-Diadem der Höchsten Magicka"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorAmuletHealth02",
+        "form_id": "[05000819]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Nordic Amulet of Health",
+        "string": "Nord-Amulett der Gesundheit"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorCircletMagicka02",
+        "form_id": "[05000811]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Nordic Circlet of Magicka",
+        "string": "Nord-Diadem der Magicka"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorAmuletHealth01",
+        "form_id": "[05000818]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Nordic Amulet of Minor Health",
+        "string": "Nord-Amulett der Geringen Gesundheit"
+    },
+    {
+        "editor_id": "ccEDHSSE001_NorRing",
+        "form_id": "[05000800]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Nordic Ring",
+        "string": "Nord-Ring"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorCircletMagicka05",
+        "form_id": "[0500080E]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Nordic Circlet of Extreme Magicka",
+        "string": "Nord-Diadem der Höchsten Magicka"
+    },
+    {
+        "editor_id": "ccEDHSSE001_NorAmulet",
+        "form_id": "[05000801]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Nordic Amulet",
+        "string": "Nord-Amulett"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorAmuletHealth04",
+        "form_id": "[0500081C]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Nordic Amulet of Eminent Health",
+        "string": "Nord-Amulett der Überragenden Gesundheit"
+    },
+    {
+        "editor_id": "ccEDHSSE001_NorCirclet",
+        "form_id": "[05000D62]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Nordic Circlet",
+        "string": "Nord-Diadem"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorCircletMagicka06",
+        "form_id": "[0500080D]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Nordic Circlet of Peerless Magicka",
+        "string": "Nord-Diadem der Einzigartigen Magicka"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorRingStamina02",
+        "form_id": "[05000813]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Nordic Ring of Stamina",
+        "string": "Nord-Ring der Ausdauer"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorCircletMagicka03",
+        "form_id": "[05000810]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Nordic Circlet of Major Magicka",
+        "string": "Nord-Diadem der Großen Magicka"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorRingStamina05",
+        "form_id": "[05000816]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Nordic Ring of Extreme Stamina",
+        "string": "Nord-Ring der Höchsten Ausdauer"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorAmuletHealth03",
+        "form_id": "[0500081D]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Nordic Amulet of Major Health",
+        "string": "Nord-Amulett der Großen Gesundheit"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorAmuletHealth05",
+        "form_id": "[0500081B]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Nordic Amulet of Extreme Health",
+        "string": "Nord-Amulett der Höchsten Gesundheit"
+    },
+    {
+        "editor_id": "ccEDHSSE001_Certificate",
+        "form_id": "[05000820]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Certificate of Authenticity",
+        "string": "Echtheitszertifikat"
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmansJournal",
+        "form_id": "[0500081F]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Hugin Ice-Shaper's Notebook",
+        "string": "Hugin Eisformers Notizbuch"
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmansJournal",
+        "form_id": "[0500081F]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\n<font alpha='#4C'>Finding naturally occurring</font><font alpha='#80'> raw pieces</font> of a suitable size and <font alpha='#80'>shape is </font><font alpha='#4C'>unlikely</font><font alpha='#25'>         re                   eth      ha    ot     e     ed</font>\r\n\r\n<font alpha='#26'>perha   t  re are some alter   ive methods I hav  </font><font alpha='#25'>not yet expl    </font><font alpha='#4C'>I quickly</font><font alpha='#80'> discovered grinding with </font>traditional methods is nearly impossible, but this material fascinates me. I am<font alpha='#80'> determined to incorporate </font><font alpha='#4C'>it into my work</font><font alpha='#25'>      t    lects   f the su   ce w  h</font>\r\n\r\n<font alpha='#25'>     sha    are m    re  l    n s   e than     is       </font><font alpha='#4C'>Shattering large chunks with an </font><font alpha='#80'> application of violent force</font> after repeated bouts of extreme heating and cooling (note: magical methods are the most viable) yields far more material to select from.\r\n\r\nIn addition, the shards are more regular in shape than debris left by a pickaxe. The amount of waste is disappointing, but<font alpha='#80'> the cost may </font><font alpha='#4C'>be offset</font><font alpha='#25'>         sel   ed a collec   n   of p  ces for        f   e  r   c     </font>\r\n\r\n<font alpha='#4C'>Further shaping by using a </font><font alpha='#80'> second appropriately sized </font>piece of stalhrim yields particularly satisfactory results. The product is quite rough, but <font alpha='#80'>has sort of a </font><font alpha='#4C'>naturalistic appeal </font><font alpha='#25'>   a few des   s. Some   ng is s  ll m  s ng</font>\r\n\r\n<font alpha='#25'>      o   t       t   o     b     h s  s   of  at     st   a   </font><font alpha='#4C'> set in quicksilver with a </font><font alpha='#80'> traditional </font>Nordic motif. Perfection. With a bit of hired help, I have adequate materials to reproduce the design and distribute to the mainland. \r\n\r\nI <font alpha='#80'>will finally make</font><font alpha='#4C'> a name for myself!</font>",
+        "string": "<font face='$HandwrittenFont'>\r\n<font alpha='#4C'>Natürlich vorkommende </font><font alpha='#80'>Teile</font> von passender Größe und <font alpha='#80'>Form zu finden</font><font alpha='#4C'> ist unwahrscheinlich, da</font><font alpha='#25'>         re                   od      si    icht     e     nd</font>\r\n\r\n<font alpha='#26'>Viellei   gi   es noch ande   Methoden, die ich</font> <font alpha='#25'>noch nicht entdeck  habe    </font><font alpha='#4C'>Ich fand</font><font alpha='#80'> schnell heraus, dass das Schleifen mit</font> traditionellen Methoden nahezu unmöglich ist, aber dieses Material fasziniert mich. Ich bin <font alpha='#80'>entschlossen, damit </font><font alpha='#4C'>zu arbeiten</font><font alpha='#25'>      t    wahl   r die u   de w r</font>\r\n\r\n<font alpha='#25'>     sio    ind m    re  l    n s   e als     ist       </font><font alpha='#4C'>Große Stücke unter </font><font alpha='#80'>Anwendung brachialer Kraft</font> nach wiederholtem extremem Erhitzen und Abkühlen herauszubrechen (Hinweis: magische Methoden sind am wirksamsten) bringt wesentlich mehr Material zur Auswahl hervor.\r\n\r\nDarüber hinaus sind die Bruchstücke gleichmäßiger geformt als jene, die mit der Spitzhacke abgebaut werden. Die Menge an Verschnitt ist enttäuschend, die <font alpha='#80'>Kosten können jedoch unter Umständen </font><font alpha='#4C'>ausgeglichen werden durch</font><font alpha='#25'>         Aus  ahl  ner Rei e von T  len für f   o  m   k     </font>\r\n\r\n<font alpha='#4C'>Die weitere Formung durch Verwendung eines </font><font alpha='#80'> zweiten</font> Stücks Stalhrim von entsprechender Größe bringt besonders zufriedenstellende Ergebnisse hervor. Das Endprodukt ist ziemlich grob, <font alpha='#80'>besitzt jedoch eine Art von </font><font alpha='#4C'>natürlicher Anmutung,</font><font alpha='#25'>   einige     re Entw   e. Etwa  ande  s feh    ch</font>\r\n\r\n<font alpha='#25'>      o   t       t   o     n     s in  s   au  mi     ens  a   </font><font alpha='#4C'> in Quecksilber mit einem  </font><font alpha='#80'> traditionellen </font>Motiv der Nord. Perfekt. Mit ein wenig Hilfe von außen habe ich genügend Material, um die Gestaltung nachzubilden und einen Vertrieb auf das Festland zu ermöglichen. \r\n\r\n<font alpha='#80'>Endlich</font><font alpha='#4C'> werde ich mir einen Namen machen!</font>"
+    },
+    {
+        "editor_id": "ccEDHSSE001_Certificate",
+        "form_id": "[05000820]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "\r\n<p align='center'><img src='img://Textures/Interface/Books/Illuminated_Letters/C_letter.png'><font color='#910000'><font size='30'>ertificate of Authenticity</font></font>\r\n\r\nThis item is certified to be of the highest quality Nordic stahlrim, hand selected for its purity, color, and magical affinity. Guaranteed to retain its luster and resist weathering for years to come.\r\n\r\n<font face='$HandwrittenFont'>Crafted by Hugin Ice-Shaper of Raven Rock, Master Artisan</font></p>",
+        "string": "\r\n<p align='center'><img src='img://Textures/Interface/Books/Illuminated_Letters/E_letter.png'><font color='#910000'><font size='30'>chtheitszertifikat</font></font>\r\n\r\nHiermit wird bescheinigt, dass dieser Gegenstand aus hochwertigstem Stalhrim der Nord besteht, der nach Reinheit, Farbe und magischer Affinität sorgfältig verlesen wurde. Ich garantiere, dass er auf Jahre hinaus seinen Glanz behalten und Abnutzungen widerstehen wird.\r\n\r\n<font face='$HandwrittenFont'>Gefertigt von Hugin Eisformer aus Rabenfels, Handwerksmeister</font></p>"
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanSatchel",
+        "form_id": "[05000821]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Satchel",
+        "string": "Beutel"
+    },
+    {
+        "editor_id": "ccEDHSSE001_Craftsman",
+        "form_id": "[05000822]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Hugin Ice-Shaper",
+        "string": "Hugin Eisformer"
+    },
+    {
+        "editor_id": "ccEDHSSE001_LvlBanditMissile",
+        "form_id": "[05000824]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Reaver",
+        "string": "Plünderer"
+    },
+    {
+        "editor_id": "ccEDHSSE001_LvlBanditMelee1H",
+        "form_id": "[05000823]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Reaver",
+        "string": "Plünderer"
+    },
+    {
+        "editor_id": "SolitudeRadiantRaiment",
+        "form_id": "[00016A0F]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Radiant Raiment",
+        "string": "Glänzende Gewänder"
+    },
+    {
+        "editor_id": "DLC2RRAlorHouse",
+        "form_id": "[04017EBF]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Alor House",
+        "string": "Alors Haus"
+    },
+    {
+        "editor_id": "DLC2SolstheimWorld",
+        "form_id": "[04000800]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Solstheim",
+        "string": "Solstheim"
+    },
+    {
+        "editor_id": "RiftenWorld",
+        "form_id": "[00016BB4]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Riften",
+        "string": "Rifton"
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "form_id": "[0500082F]",
+        "index": 67,
+        "type": "QUST CNAM",
+        "original": "Using Hugin Ice-Shaper's notes, I learned to forge my own pieces of Nordic Jewelry.",
+        "string": "Mithilfe von Hugin Eisformers Notizen habe ich gelernt, meinen eigenen Nord-Schmuck herzustellen."
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "form_id": "[0500082F]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Read the Certificate of Authenticity",
+        "string": "Lies das Echtheitszertifikat."
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "form_id": "[0500082F]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Nordic Jewelry",
+        "string": "Nord-Schmuck"
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "form_id": "[0500082F]",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "I have located the craftsman, but a pair of bandits seem to have found him first. I should search the area before anything of value is lost.",
+        "string": "Ich habe den Handwerker gefunden, allerdings scheinen mir zwei Banditen zuvorgekommen zu sein. Ich sollte das Gebiet durchsuchen, bevor irgendetwas Wertvolles verlorengeht."
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "form_id": "[0500082F]",
+        "index": 85,
+        "type": "QUST CNAM",
+        "original": "Hugin Ice-Shaper met an untimely fate. I recovered his belongings before they could be looted by reavers. With what is left of his notes, perhaps I can continue his work.",
+        "string": "Hugin Eisformer wurde von einem frühzeitigen Tod ereilt. Ich habe seine Besitztümer geborgen, bevor Plünderer sie an sich nehmen konnten. Mit den Überbleibseln seiner Notizen kann ich vielleicht seine Arbeit fortführen."
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "form_id": "[0500082F]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Find the craftsman in Raven Rock",
+        "string": "Finde den Handwerker in Rabenfels."
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "form_id": "[0500082F]",
+        "index": 93,
+        "type": "QUST CNAM",
+        "original": "I stumbled on a bandit attack near Raven Rock. I should search the area before anything of value is lost.",
+        "string": "In der Nähe von Rabenfels bin ich in einen Banditenangriff geraten. Ich sollte das Gebiet durchsuchen, bevor irgendetwas Wertvolles verlorengeht."
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "form_id": "[0500082F]",
+        "index": 60,
+        "type": "QUST NNAM",
+        "original": "Craft a piece of Nordic Jewelry at a forge",
+        "string": "Stelle ein in einer Schmiede ein Nord-Schmuckstück her."
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "form_id": "[0500082F]",
+        "index": 83,
+        "type": "QUST CNAM",
+        "original": "I've heard traders are selling unique jewelry from Solstheim. I should see what they have to offer.",
+        "string": "Ich habe gehört, dass Händler einzigartigen Schmuck aus Solstheim verkaufen. Ich sollte mir anschauen, welche Stücke sie führen."
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "form_id": "[0500082F]",
+        "index": 0,
+        "type": "QUST NNAM",
+        "original": "Purchase a piece of Nordic Jewelry",
+        "string": "Kaufe ein Nord-Schmuckstück."
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "form_id": "[0500082F]",
+        "index": 15,
+        "type": "QUST NNAM",
+        "original": "Travel to Solstheim",
+        "string": "Reise nach Solstheim."
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "form_id": "[0500082F]",
+        "index": 50,
+        "type": "QUST NNAM",
+        "original": "Read Hugin Ice-Shaper's Notebook",
+        "string": "Lies Hugin Eisformers Notizbuch."
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "form_id": "[0500082F]",
+        "index": 84,
+        "type": "QUST CNAM",
+        "original": "This jewelry is made exclusively by a man named Hugin Ice-Shaper in Solstheim with rare stalhrim ore. Perhaps the craftsman has more items for sale. I should visit him in Raven Rock.",
+        "string": "Dieser Schmuck wird ausschließlich von einem Mann namens Hugin Eisformer in Solstheim aus seltenem Stalhrim-Erz gefertigt. Vielleicht verkauft der Handwerker noch weitere Stücke. Ich sollte ihm in Rabenfels einen Besuch abstatten."
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "form_id": "[0500082F]",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "Inspect the area",
+        "string": "Untersuche den Bereich."
+    },
+    {
+        "editor_id": "ccEDHSSE001_NorJewelryEnchanting",
+        "form_id": "[05000845]",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Nordic Jewelry Enchanting",
+        "string": "Nord-Schmuck-Verzauberung"
+    },
+    {
+        "editor_id": "ccEDHSSE001_NorJewelryEnchanting",
+        "form_id": "[05000845]",
+        "index": null,
+        "type": "PERK DESC",
+        "original": "Frost enchantments are 25% stronger.",
+        "string": "Frostverzauberungen sind 25 Prozent stärker."
+    }
+]

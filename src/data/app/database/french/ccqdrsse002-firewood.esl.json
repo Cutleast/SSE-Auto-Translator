@@ -1,0 +1,354 @@
+[
+    {
+        "editor_id": "ccQDRSSE002_BuildCampEffect",
+        "form_id": "[05000D63]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Build Camp",
+        "string": "Bâtir un camp"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BuildCampEffect",
+        "form_id": "[05000D63]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Build a campsite when outdoors.",
+        "string": "Vous devez bâtir un camp en pleine nature."
+    },
+    {
+        "editor_id": "ccQDRSSE002_InCityCheckEffect",
+        "form_id": "[05000826]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "In City Check",
+        "string": "Test de ville"
+    },
+    {
+        "editor_id": "ccQDRSSE002_SwimCheckEffect",
+        "form_id": "[05000824]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Swimming Check",
+        "string": "Test de nage"
+    },
+    {
+        "editor_id": "ccQDRSSE002_InCityCheckSpell",
+        "form_id": "[05000828]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "In City Check Spell",
+        "string": "Sort Test de ville"
+    },
+    {
+        "editor_id": "ccQDRSSE002_SwimCheckSpell",
+        "form_id": "[05000827]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Swim Check Spell",
+        "string": "Sort Test de nage"
+    },
+    {
+        "editor_id": "ccQDRSSE002_ShelterAct",
+        "form_id": "[05000803]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Use",
+        "string": "Utiliser"
+    },
+    {
+        "editor_id": "ccQDRSSE002_ShelterAct",
+        "form_id": "[05000803]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Shelter",
+        "string": "Abri"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampfireFurn",
+        "form_id": "[05000804]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Campfire",
+        "string": "Feu de camp"
+    },
+    {
+        "editor_id": "ccQDRSSE002_Chair",
+        "form_id": "[05000825]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Crate",
+        "string": "Caisse"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BedrollNoSandbox",
+        "form_id": "[05000819]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Bed Roll Ground",
+        "string": "Paillot"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingSupplies",
+        "form_id": "[05000801]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Camping Supplies",
+        "string": "Matériel de campement"
+    },
+    {
+        "editor_id": "Tamriel",
+        "form_id": "[0000003C]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Bordeciel"
+    },
+    {
+        "editor_id": "DLC2SolstheimWorld",
+        "form_id": "[04000800]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Solstheim",
+        "string": "Solstheim"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampMapMarkerRefTamriel001",
+        "form_id": "[05000831]",
+        "index": null,
+        "type": "REFR FULL",
+        "original": "Campsite",
+        "string": "Camp"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampMapMarkerRefSolstheim001",
+        "form_id": "[05000832]",
+        "index": null,
+        "type": "REFR FULL",
+        "original": "Campsite",
+        "string": "Camp"
+    },
+    {
+        "editor_id": "ccQDRSSE002_IdleQuest",
+        "form_id": "[05000D62]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Camping Idle Quest",
+        "string": "Quête inactive de campement"
+    },
+    {
+        "editor_id": "ccQDRSSE002_MainQuest",
+        "form_id": "[05000D61]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Camping Quest",
+        "string": "Quête du camp"
+    },
+    {
+        "editor_id": "ccQDRSSE002_LoadScreen1",
+        "form_id": "[0500082C]",
+        "index": null,
+        "type": "LSCR DESC",
+        "original": "If you build a campsite, its location will be marked on your map, so you can fast travel to it later.",
+        "string": "Si vous avez bâti un camp, sa position sera indiquée sur votre carte pour vous permettre d'utiliser le voyage rapide."
+    },
+    {
+        "editor_id": "ccQDRSSE002_LoadScreen2",
+        "form_id": "[0500082D]",
+        "index": null,
+        "type": "LSCR DESC",
+        "original": "You can cook some meals over the open flames of your campfire at campsites that you build.",
+        "string": "Vous pouvez cuisiner des repas au-dessus du feu dans le camp que vous avez bâti."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedInteriorMsg",
+        "form_id": "[0500081D]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite while indoors.",
+        "string": "Vous ne pouvez pas bâtir un camp à l'intérieur d'un bâtiment."
+    },
+    {
+        "editor_id": "ccQDRSSE002_BuildCampPrompt",
+        "form_id": "[05000818]",
+        "index": 0,
+        "type": "MESG ITXT",
+        "original": "Ok",
+        "string": "OK"
+    },
+    {
+        "editor_id": "ccQDRSSE002_ShelterOptionMsg",
+        "form_id": "[05000813]",
+        "index": 0,
+        "type": "MESG ITXT",
+        "original": "Sleep",
+        "string": "Dormir"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedHereMsg",
+        "form_id": "[05000812]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite here.",
+        "string": "Vous ne pouvez pas bâtir un camp ici."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedCombatMsg",
+        "form_id": "[0500081F]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite while in combat.",
+        "string": "Vous ne pouvez pas bâtir un camp pendant un combat."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedSpaceMsg",
+        "form_id": "[0500082F]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You don't have enough space to build a campsite here.",
+        "string": "Il n'y a pas assez d'espace pour bâtir un camp ici."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedCityMsg",
+        "form_id": "[0500081B]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite in cities or towns.",
+        "string": "Vous ne pouvez pas bâtir un camp dans les villes."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingTutorialMsg",
+        "form_id": "[0500081A]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Campsites allow you to rest and stay warm while exploring the wilderness. You can cook a limited number of meals over the campfire. Your campsite is marked on your map so you can locate and fast travel to it later.",
+        "string": "Les campements vous permettent de vous reposer et de vous protéger du froid quand vous partez en exploration. Vous pouvez cuisiner un nombre limité de repas au-dessus du feu de camp. Votre campement est indiqué sur votre carte pour le retrouver facilement et utiliser le voyage rapide."
+    },
+    {
+        "editor_id": "ccQDRSSE002_BreakCampPrompt",
+        "form_id": "[0500082B]",
+        "index": 1,
+        "type": "MESG ITXT",
+        "original": "Cancel",
+        "string": "Annuler"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BuildCampPrompt",
+        "form_id": "[05000818]",
+        "index": 1,
+        "type": "MESG ITXT",
+        "original": "Cancel",
+        "string": "Annuler"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingHelp",
+        "form_id": "[05000817]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Campsites allow you to stay rested and warm while exploring the wilderness. Create Camping Supplies at a forge. You can use Camping Supplies to build a campsite while outdoors.\r\n\r\nWhile at your campsite, you can sleep in your makeshift shelter or cook a limited number of meals over the campfire.\r\n\r\nYour campsite's location is marked on your map, so you can find and fast travel to it later.\r\n\r\nOnly one campsite can be built at a time. Building a new campsite will remove the previous one, and your campsite's map marker will be updated to the new campsite.",
+        "string": "Les campements vous permettent de vous reposer et de vous protéger du froid quand vous partez en exploration. Créez du matériel de campement dans une forge. Vous pouvez utiliser le matériel de campement pour bâtir un camp en pleine nature.\r\n\r\nDans le campement, vous pourrez dormir dans votre abri de fortune ou cuisiner un nombre limité de repas au-dessus du feu de camp.\r\n\r\nVotre lieu de campement est indiqué sur votre carte pour le retrouver facilement et utiliser le voyage rapide.\r\n\r\nVous ne pouvez bâtir qu'un camp à la fois. Bâtir un nouveau camp supprimera le camp précédent et le marqueur de votre campement sera mis à jour."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedMountedMsg",
+        "form_id": "[05000823]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite while mounted.",
+        "string": "Vous ne pouvez pas bâtir un camp en chevauchant un animal."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedGroundMsg",
+        "form_id": "[05000830]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You don't have enough level terrain to camp here.",
+        "string": "Le terrain n'est pas assez plat pour camper ici."
+    },
+    {
+        "editor_id": "ccQDRSSE002_BuildCampPrompt",
+        "form_id": "[05000818]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Build a campsite here?",
+        "string": "Bâtir un camp ici ?"
+    },
+    {
+        "editor_id": "ccQDRSSE002_ShelterOptionMsg",
+        "form_id": "[05000813]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "What do you do?",
+        "string": "Que faites-vous ?"
+    },
+    {
+        "editor_id": "ccQDRSSE002_ShelterOptionMsg",
+        "form_id": "[05000813]",
+        "index": 1,
+        "type": "MESG ITXT",
+        "original": "Break Camp",
+        "string": "Lever le camp"
+    },
+    {
+        "editor_id": "ccQDRSSE002_ShelterOptionMsg",
+        "form_id": "[05000813]",
+        "index": 2,
+        "type": "MESG ITXT",
+        "original": "Cancel",
+        "string": "Annuler"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedGenericMsg",
+        "form_id": "[0500082E]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite right now.",
+        "string": "Vous ne pouvez pas bâtir un camp pour le moment."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedSwimmingMsg",
+        "form_id": "[05000821]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite while swimming.",
+        "string": "Vous ne pouvez pas bâtir un camp en nageant."
+    },
+    {
+        "editor_id": "ccQDRSSE002_BreakCampPrompt",
+        "form_id": "[0500082B]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Are you sure you want to break camp?",
+        "string": "Voulez-vous vraiment lever le camp ?"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BreakCampPrompt",
+        "form_id": "[0500082B]",
+        "index": 0,
+        "type": "MESG ITXT",
+        "original": "Ok",
+        "string": "OK"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingHelp",
+        "form_id": "[05000817]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Camping",
+        "string": "Campement"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedSittingMsg",
+        "form_id": "[05000822]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You can't build a camp while using something else.",
+        "string": "Vous ne pouvez pas bâtir un camp en utilisant autre chose."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedJumpingMsg",
+        "form_id": "[05000820]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite while in the air.",
+        "string": "Vous ne pouvez pas bâtir un camp en étant dans les airs."
+    }
+]

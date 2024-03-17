@@ -1,0 +1,818 @@
+[
+    {
+        "editor_id": "ccBGSSSE008_EnchShockDamageFFContact",
+        "form_id": "[04000C1E]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Target takes <mag> points of shock damage, and half as much Magicka damage.",
+        "string": "Target takes <mag> points of shock damage, and half as much Magicka damage."
+    },
+    {
+        "editor_id": "AbFortifyStamina_UI",
+        "form_id": "[04000B7A]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fortify Stamina",
+        "string": "Повышение запаса сил"
+    },
+    {
+        "editor_id": "ccBGSSSE008_EnchShockDamageFFContact",
+        "form_id": "[04000C1E]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Shock Damage",
+        "string": "Shock Damage"
+    },
+    {
+        "editor_id": "ccBGSSE008_WraithguardEffect",
+        "form_id": "[04000B5E]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Kagrenac's Knowledge",
+        "string": "Знание Кагренака"
+    },
+    {
+        "editor_id": "ccBGSSSE008_EnchMagickaDamageFFContact",
+        "form_id": "[04000C1F]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Does <mag> points of Magicka damage.",
+        "string": "Does <mag> points of Magicka damage."
+    },
+    {
+        "editor_id": "ccBGSSSE008_EnchStaminaDamageFFContact",
+        "form_id": "[04000C32]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Stamina Damage",
+        "string": "Stamina Damage"
+    },
+    {
+        "editor_id": "ccBGSSSE008_EnchStaminaDamageFFContact",
+        "form_id": "[04000C32]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Does <mag> points of Stamina damage.",
+        "string": "Does <mag> points of Stamina damage."
+    },
+    {
+        "editor_id": "ccBGSSE008_VisualsSword",
+        "form_id": "[04000806]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Ghost Visuals Fire",
+        "string": "Ghost Visuals Fire"
+    },
+    {
+        "editor_id": "ccBGSSSE008_EnchFrostDamageFFContact",
+        "form_id": "[04000C1D]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Frost Damage",
+        "string": "Frost Damage"
+    },
+    {
+        "editor_id": "ccBGSSE008_VisualsStaff",
+        "form_id": "[04000805]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Ghost Visuals Fire",
+        "string": "Ghost Visuals Fire"
+    },
+    {
+        "editor_id": "ccBGSSE008_WraithguardEffect",
+        "form_id": "[04000B5E]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Empowers Kagrenac's Tools.",
+        "string": "Усиливает Инструменты Кагренака."
+    },
+    {
+        "editor_id": "AbFortifyStaminaRate_UI",
+        "form_id": "[04000B7C]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Regenerate Stamina",
+        "string": "Восстановление запаса сил"
+    },
+    {
+        "editor_id": "ccBGSSSE008_EnchFireDamageFFContact",
+        "form_id": "[04000C33]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fire Damage",
+        "string": "Fire Damage"
+    },
+    {
+        "editor_id": "AbFortifyHealth_UI",
+        "form_id": "[04000B7B]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fortify Health",
+        "string": "Повышение здоровья"
+    },
+    {
+        "editor_id": "ccBGSSSE008_EnchMagickaDamageFFContact",
+        "form_id": "[04000C1F]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Magicka Damage",
+        "string": "Magicka Damage"
+    },
+    {
+        "editor_id": "ccBGSSSE008_EnchFireDamageFFContact",
+        "form_id": "[04000C33]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Burns the target for <mag> points. Targets on fire take extra damage.",
+        "string": "Burns the target for <mag> points. Targets on fire take extra damage."
+    },
+    {
+        "editor_id": "ccBGSSSE008_EnchFrostDamageFFContact",
+        "form_id": "[04000C1D]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Target takes <mag> points of frost damage to Health and Stamina.",
+        "string": "Target takes <mag> points of frost damage to Health and Stamina."
+    },
+    {
+        "editor_id": "ccBGSSE008_PerkShield",
+        "form_id": "[04000809]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Add Perk",
+        "string": "Добавить способность"
+    },
+    {
+        "editor_id": "AbFortifyStaminaRate_UI",
+        "form_id": "[04000B7C]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Stamina regenerates <mag>% fastser.",
+        "string": "Запас сил восстанавливается на <mag>% быстрее."
+    },
+    {
+        "editor_id": "ccBGSSE008_PerkBlade",
+        "form_id": "[04000804]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Add Perk",
+        "string": "Добавить способность"
+    },
+    {
+        "editor_id": "ccBGSSE008_VisualsShield",
+        "form_id": "[04000807]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Ghost Visuals Fire",
+        "string": "Ghost Visuals Fire"
+    },
+    {
+        "editor_id": "ccBGSSSE008_WraithguardENC",
+        "form_id": "[0400080C]",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Wraithguard",
+        "string": "Призрачный Страж"
+    },
+    {
+        "editor_id": "ccBGSSSE008_SunderEnc",
+        "form_id": "[0400080B]",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Sunder's Fury",
+        "string": "Ярость Разделителя"
+    },
+    {
+        "editor_id": "ccBGSSSE008_KeeningsSpell",
+        "form_id": "[04000811]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Empowered Keening",
+        "string": "Усиленный Разрубатель"
+    },
+    {
+        "editor_id": "ccBGSSE_008_BossSpellSword",
+        "form_id": "[0400080F]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "The Blade",
+        "string": "Клинок"
+    },
+    {
+        "editor_id": "ccBGSSE_008_BossSpellStaff",
+        "form_id": "[0400080E]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "The Staff",
+        "string": "Посох"
+    },
+    {
+        "editor_id": "ccBGSSSE008_SundersSpell",
+        "form_id": "[04000812]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Wraithguard empowers Sunder. Your stamina regenerates <50%> faster and you do <15%> more melee damage.",
+        "string": "Призрачный Страж усиливает Разделитель. Ваш запас сил восстанавливается на <50%> быстрее, и вы наносите на <15%> больше урона в ближнем бою."
+    },
+    {
+        "editor_id": "ccBGSSE008_LightningSpell",
+        "form_id": "[0400080D]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Lightning Breath",
+        "string": "Дыхание молнии"
+    },
+    {
+        "editor_id": "ccBGSSSE008_KeeningsSpell",
+        "form_id": "[04000811]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Wraithguard empowers Keening, fortifying your magicka by <50> and your health and stamina by <20>.",
+        "string": "Призрачный Страж усиливает Разрубатель, увеличивая вашу магию на <40>, а ваше здоровье и запас сил на <20>."
+    },
+    {
+        "editor_id": "ccBGSSE_008_BossSpellShield",
+        "form_id": "[04000810]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "The Shield",
+        "string": "Щит"
+    },
+    {
+        "editor_id": "ccBGSSSE008_SundersSpell",
+        "form_id": "[04000812]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Empowered Sunder",
+        "string": "Усиленный Разделитель"
+    },
+    {
+        "editor_id": "ccBGSSSE008_WraithguardSunder",
+        "form_id": "[04000B61]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Wraithguard and Sunder",
+        "string": "Призрачный Страж и Разделитель"
+    },
+    {
+        "editor_id": "ccBGSSSE008_WraithguardCrystal",
+        "form_id": "[04000814]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Dwarven Pedestal",
+        "string": "Двемерская подставка"
+    },
+    {
+        "editor_id": "ccBGSSSE008_ReleaseValve",
+        "form_id": "[04000813]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Vault Release Valve",
+        "string": "Вентиль открытия хранилища"
+    },
+    {
+        "editor_id": "ccBGSSE008_SkinCenturionBoss",
+        "form_id": "[04000C35]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "CenturionBoss",
+        "string": "CenturionBoss"
+    },
+    {
+        "editor_id": "ccBGSSSE008WraithguardGauntlet",
+        "form_id": "[04000D63]",
+        "index": null,
+        "type": "ARMO DESC",
+        "original": "Resist shock, fire, frost, magic, disease, and poison by <10%>. Empowers Keening and Sunder when equipped.",
+        "string": "Дает <10%> сопротивления электричеству, огню, морозу, магии, болезни и яду. Усиливает Разрубатель и Разделитель."
+    },
+    {
+        "editor_id": "ccBGSSSE008WraithguardGauntlet",
+        "form_id": "[04000D63]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Wraithguard",
+        "string": "Призрачный Страж"
+    },
+    {
+        "editor_id": "ccBGSSSE08_Note1",
+        "form_id": "[04000819]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Lost Caravan Guard's Note",
+        "string": "Записка охранника пропавшего каравана"
+    },
+    {
+        "editor_id": "ccBGSSSE08_Note5",
+        "form_id": "[04000817]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<p align='left'><font face='$HandwrittenFont'><font size='18'>\r\nInedos, \r\n\r\nThe reports are right. Wraithguard and Sunder are singing, sending a signal out to anyone that might be listening. I don't know how, but I think I know why. The Tools were only meant to be used on Numidium, it makes sense that they would never be allowed to leave Morrowind. \r\n\r\nTo ensure this, Kagrenac must have put in a failsafe system. If the Tools were ever stolen, drones would be activated across Tamriel to recover them. The drones would then store the items in a vault until a Tonal Architect could fetch them. \r\n\r\nUnfortunately, as I suspected, that information was enough for some of the captains to betray us and change course. They no longer care about the artifacts or the job. They consider the cargo to be a death trap, and are taking measures to unload it.\r\n\r\nYour caravan might think they were carrying the Tools, but Sadras and Hlaalu swapped them before we ever got to Whiterun, and intentionally gave them up to the retrieval drones. Fortunately, I managed to track the drones back to a vault near Winterhold; what the locals call the Sightless Pit. I've also discovered the vault can be opened with an attunement crystal, which I've sent along with this letter. As I am no warrior, I dare not venture inside without you.\r\n\r\nHopefully this message reaches your party in time, for I know we are of like mind. As a scholar, I want to see the artifacts delivered to my master, and you have always been someone who does not shirk his duty. I have faith that you and your crew can return north and repair this mistake.\r\n\r\nVelyne</font></p>\r\n",
+        "string": "<p align='left'><font face='$HandwrittenFont'><font size='18'>\r\nИнодес, \r\n\r\nдоклады не соврали. Призрачный Страж и Разделитель начали петь, посылая сообщение тем, кто способен услышать. Не знаю, как это происходит, но, пожалуй, знаю, почему. Инструменты не должны были покидать Морровинд, ведь их сделали для работы с Нумидиумом. \r\n\r\nВидимо, в связи с этим Кагренак создал для них систему защиты. Если бы Инструменты кто-то украл, по всему Тамриэлю пробудились бы дроны, чтобы вернуть их в хранилище, где Инструменты и дожидались бы Тонального архитектора. \r\n\r\nК несчастью, как я и подозревала, этих сведений было достаточно для того, чтобы некоторые капитаны нас предали и сменили путь следования. Их не волнует выполнение работы или судьба артефактов: они решили, что груз — смертельная ловушка, и хотят от него избавиться.\r\n\r\nВ твоем караване думают, что Инструменты у них, но Садрас и Хлаалу обменялись грузом еще до того, как мы добрались в Вайтран, и намеренно отдали Инструменты дронам. К счастью, мне удалось проследить за дронами до самого хранилища близ Винтерхолда; это место называют Неприметным убежищем. Я узнала, что хранилище можно открыть с помощью настроечного кристалла, который и прилагаю к этому письму. Я не воин и потому не решусь отправиться туда без тебя.\r\n\r\nНадеюсь, это послание доберется до тебя в срок. Я знаю, что мы с тобой во многом схожи. Я — ученый, и я хочу, чтобы артефакты попали в руки моего хозяина, а ты никогда не пренебрегал своим долгом. Я верю, что ты и твои люди сможете вернуться на север и исправить то, что случилось.\r\n\r\nВелин</font></p>\r\n"
+    },
+    {
+        "editor_id": "ccBGSSSE08_Note3",
+        "form_id": "[0400081A]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Seedy Guard's Note",
+        "string": "Записка уставшего охранника"
+    },
+    {
+        "editor_id": "ccBGSSSE08_Note2",
+        "form_id": "[04000818]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Carriage Driver's Note",
+        "string": "Записка возчика"
+    },
+    {
+        "editor_id": "ccBGSSSE08_Note2",
+        "form_id": "[04000818]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<p align='left'><font face='$HandwrittenFont'><font size='18'>\r\nIt happened sometime after we crossed deeper into the mountains, but I swear I could hear singing. Tuneless, very quiet, but singing nonetheless. No one else believes me, but I'd bet my bottom drake that it had something to do with the Dwarven machines attacking us last night. I've never heard of these things leaving their ruins, let alone roaming the countryside going after travelers. It's almost as if they were drawn to the music.\r\n\r\nTonight we're handing the cargo off to the Sadras caravan, and I say good riddance. But the captain says we're going to eventually circle back to Whiterun, which means we could see the cargo again.\r\n\r\nIf that happens, I'm getting off this caravan. I don't care about the gold. I haven't slept for days and I feel like I'm losing my mind.\r\n\r\nEven now, I can hear that awful singing in my head. I just want it to stop.</font></p>",
+        "string": "<p align='left'><font face='$HandwrittenFont'><font size='18'>\r\nЭто началось, когда мы углубились в горы; клянусь, я слышал пение. Очень тихое, немузыкальное — но все же пение. Мне никто не верит, но я готов поставить последний дрейк на то, это оно как-то связано с двемерскими механизмами, которые напали на нас прошлой ночью. Никогда не слышал, чтобы эти штуки выбирались из своих руин, не говоря уж о том, чтобы гоняться за путниками. Такое ощущение, что это пение их приманило.\r\n\r\nСегодня мы передадим груз каравану Дома Садрас, да и слава богам. Но капитан говорит, что нам придется идти через Вайтран, а значит, мы можем снова получить груз в свои руки.\r\n\r\nИ если это случится, я откажусь от сопровождения. Плевать мне на золото. Я уже много дней не спал и чувствую себя так, будто схожу с ума.\r\n\r\nДаже сейчас в моей голове звучит это жуткое пение. Ничего так не хочу, как чтобы оно прекратилось.</font></p>"
+    },
+    {
+        "editor_id": "ccBGSSSE08_Note1",
+        "form_id": "[04000819]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<p align='left'><font face='$HandwrittenFont'><font size='18'>\r\nWe crossed into Skyrim under the cover of ashfall. As far as anyone knows, we're shipping refugees, just one in a long line of vagrant caravans escaping the wrath of the Red Mountain. Normally, a story like that would be enough to get us through, but not this time.\r\n\r\nNow I've been a caravan guard for some time, and I've seen some pretty extensive security measures. Locks, chains, the works. One client even had a conjurer summon a daedra to guard his wagon, but even compared to that this seems excessive. \r\n\r\nFor one, everything has a code name. The cargo, the guards, even the horse. As for the caravans, to keep it familiar we've each been given a name from one of the Great Houses. \r\n\r\nOf course, some of the guards didn't like that part. One of the new bloods said he'd rather bend the knee to a guar than wear the name of House Dres. But Captain Inedos brought him in line with the point of his blade, and the rest followed. You'd think the Red Year would unite us, but it seems like there's old scars that haven't healed and old scores that haven't been settled. But at the end of the day, none of that matters. The job's the job. Like the Captain said, at least they didn't name us after the boots.\r\nWe've also got several decoy caravans heading out through Skyrim, all the way to some undisclosed location in Hammerfell. But since that's not enough, each caravan will meet up at preset checkpoints and swap their items out. \r\n\r\nThat means different decoys traveling different paths every step of the way. With the refugee garb they say we should blend right in, and on the off chance we don't, we've got runners set to flee to the next village, hidden compartments, anything you can think of. \r\n\r\nStill, if you ask me, all of it sounds like a waste of time. I'm no scholar, but those two bits of cargo don't look like anything special, just a fancy way to bash some poor f'lah's skull in. \r\n\r\nWith all the chaos bleeding out of Vvardenfell, we've made it to Windhelm without so much as a papercut. Come morning we're heading out west along the river toward Nightgate Inn. If all goes well we'll reach the mountain pass by midday. Still, we'd get there sooner if not for all the stops.</font></p>",
+        "string": "<p align='left'><font face='$HandwrittenFont'><font size='18'>\r\nМы пересекли границу Скайрима под покровом пепельного дождя. Считается, что наш караван, один из многих, сопровождает беженцев, спасающихся от гнева Красной горы. Обычно такой истории хватило бы, чтобы ничего не опасаться в пути, но не сейчас.\r\n\r\nЯ охраняю караваны не первый день и видел самые разные меры безопасности, принятые в них. Замки, цепи, укрепления. Как-то заказчик даже заплатил колдуну, чтобы тот призвал даэдру для охраны его фургона. Но на этот раз, как по мне, они хватили через край. \r\n\r\nНапример, у всего есть кодовые названия. У груза, у охраны, даже у лошадей. А чтобы не путать караваны, каждый из них назвали именем одного из Великих домов. \r\n\r\nКонечно, не всем охранникам это понравилось. Один из новичков сказал, что он скорее присягнет гуару, чем будет работать под именем Дома Дрес. Но капитан Инодес поставил его на место с помощью меча, а остальные подчинились. Казалось бы, Красный год должен был объединить нас, но такое ощущение, что сейчас вскрываются все застарелые обиды и разгораются все старые распри. Правда, по большому счету все это неважно. Работа есть работа. Как сказал капитан — не сапогами назвали, и спасибо.\r\nПо Скайриму идет еще несколько наших караванов-обманок. Они должны добраться до одного местечка в Хаммерфелле, название которого держат в тайне. Но мало того, все караваны периодически встречаются в заранее условленных местах и обмениваются грузом. \r\n\r\nА это значит, что обманки каждый отрезок пути проходят с другим караваном. Считается, что с этой историей про беженцев нас никто не заподозрит, а на случай, если что-то все же пойдет не так, у нас есть гонцы, готовые бежать в ближайшую деревню в поисках защиты, тайники в фургонах и еще много чего. \r\n\r\nНо как по мне, все это пустая трата времени. Я, конечно, не ученый, но оба наших груза не представляют собой ничего особенного — так, пара штуковин, которыми проламывают черепа несчастным. \r\n\r\nИз-за того, какой хаос творится во Вварденфелле, мы добрались в Виндхельм без проблем. Завтра с утра выдвинемся вдоль реки на запад, к таверне \"Ночные ворота\". Если все будет в порядке, к полудню доберемся до перевала. Но если бы не все эти остановки, мы бы были там намного раньше.</font></p>"
+    },
+    {
+        "editor_id": "ccBGSSSE08_Note3",
+        "form_id": "[0400081A]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<p align='left'><font face='$HandwrittenFont'><font size='18'>\r\nTelvanni handed the cargo off to us at the checkpoint. They seemed a bit on edge but they aren't sharing details exactly, just that they were attacked by Dwarven machines. Bunch of useless fetchers, all of them.\r\n\r\nWe also had a surprise visit from the Hlaalu caravan. The whole crew was an odd bunch. More scholars and farmers than warriors I'd say, but a few were just my type. I tried to chat it up with a fetching raven-haired girl, but she kept those sultry red eyes fixed on the cargo as it changed hands.\r\n\r\nIn any case, the main package is secured, but there's fear it was damaged during transport. Oddly the Hlaalu captain didn't seem too concerned about it. He and the boss talked for a bit by themselves. I tried my luck with the raven-haired tart once more, and she told me her name was Velyne. She asked whether Captain Inodes would be at the next checkpoint. I told her no, but the truth is I didn't even know. I don't know why she cared anyway, their cargo is a decoy.\r\n\r\nThe real package is going to Indoril at the next stop. Once that's delivered, I'm hearing we might stop for a day or two in Whiterun to get our bearings. The captain of the Indoril caravan is a Nord, and he mentioned heading over to the Hall of the Dead to pay his respects. That's fine, I'll be paying mine at the tavern. Hopefully I'll get a chance to buy sweet little Velyne a drink.</font></p>",
+        "string": "<p align='left'><font face='$HandwrittenFont'><font size='18'>\r\nВ назначенном месте Телванни передали нам груз. Они были какие-то нервные, но в подробности не вдавались, только упомянули, что на них напали двемерские механизмы. Они все ни на что не годятся, как по мне.\r\n\r\nНеожиданно нам повстречался караван Хлаалу. Вот уж странная компания. Они там в основном из ученых и фермеров, а не из воинов, но некоторые из них пришлись мне по душе. Я пытался поболтать с симпатичной черноволосой девицей, но она уставилась своими красными глазами на передаваемый груз и не отвечала мне.\r\n\r\nТеперь груз в безопасности, но есть опасения, что в дороге его повредили. Как ни странно, капитан Хлаалу вовсе этим не озабочен. Он с боссом о чем-то долго разговаривали. Я еще раз попытал удачи с черноволосой красоткой, и она сказала, что ее зовут Велин. Она спросила, будет ли капитан Инодес на следующем месте встречи. Я сказал, что нет, но на деле я и сам не знал. Впрочем, не понимаю, зачем ей это: их груз все равно обманка.\r\n\r\nНастоящий груз на следующем месте встречи будет передан каравану Индорил. И после этого, говорят, мы на день-другой остановимся в Вайтране, чтобы отдохнуть. Капитан каравана Индорил — норд, и он говорил, что хочет отправиться в Зал Мертвых, чтобы отдать соответствующие почести. Его дело; я свои почести собираюсь отдавать в таверне. Может, даже смогу угостить милашку Велин выпивкой.</font></p>"
+    },
+    {
+        "editor_id": "ccBGSSSE08_Note4",
+        "form_id": "[04000816]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Caravan Captain's Note",
+        "string": "Записка капитана каравана"
+    },
+    {
+        "editor_id": "ccBGSSSE08_Note4",
+        "form_id": "[04000816]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<p align='left'><font face='$HandwrittenFont'><font size='18'>\r\nWe met with Sadras and picked up the cargo. At least their captain seemed in better spirits, but the others looked exhausted. To make matters worse, the air was flush with news about the caravans who didn't make it, sieged by Dwarven automatons on the road to Whiterun.\r\n\r\nMy worry is such fears will find their way into the minds of my men. Especially when the details of their stories seem to corroborate, it only serves to throw more kindling on the flame.\r\n\r\nHopefully the other captains have a plan. We've had a few deserters already, and we'll need every available body if these attacks continue. It'll be difficult to convince the men to leave the safety of the tavern for the terrors of the unknown.\r\n\r\nEven without this Dwarven nonsense, the road ahead will only get more perilous given the copious bandits, wolves, and other dangers on the road. Captain Inodes has asked us to take a detour with the Dres caravan to Falkreath. Staying off the main road might provide us some cover.</font></p>",
+        "string": "<p align='left'><font face='$HandwrittenFont'><font size='18'>\r\nМы встретились с Садрас и забрали груз. Их капитан держится молодцом, но остальные просто вымотаны. Хуже того, ходят слухи об уничтоженных караванах, на которые по пути в Вайтран напали двемерские автоматы.\r\n\r\nЯ боюсь, что все это повлияет на боевой дух моих людей. А когда пересказываемые слухи начинают совпадать и казаться достоверными, это еще больше подливает масла в огонь.\r\n\r\nНадеюсь, другие капитаны знают, что делать. Несколько наших уже дезертировало, а если нападения не прекратятся, каждый воин будет на счету. И будет трудно убедить людей покинуть безопасную таверну и отправиться навстречу неизвестности.\r\n\r\nНо даже без этой двемерской дряни дорога становится все опасней, ведь нельзя сбрасывать со счета бандитов и волков, например. Капитан Инодес отправил нас в обход к Фолкриту вместе с караваном Дрес. Возможно, двигаться не по главной дороге будет безопаснее.</font></p>"
+    },
+    {
+        "editor_id": "ccBGSSSE08_Note5",
+        "form_id": "[04000817]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Velyne's Letter",
+        "string": "Письмо Велин"
+    },
+    {
+        "editor_id": "ccBGSSE008_WraithguardChest1",
+        "form_id": "[0400081C]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Old Caravan Chest",
+        "string": "Старый сундук из каравана"
+    },
+    {
+        "editor_id": "ccBGSSE008_WraithguardChest3",
+        "form_id": "[0400081B]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Old Caravan Chest",
+        "string": "Старый сундук из каравана"
+    },
+    {
+        "editor_id": "ccBGSSE008_WraithguardChest2",
+        "form_id": "[0400081D]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Old Caravan Chest",
+        "string": "Старый сундук из каравана"
+    },
+    {
+        "editor_id": "ccBGSSSE008_AttunementCrystal",
+        "form_id": "[0400081E]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Attunement Crystal",
+        "string": "Настроечный кристалл"
+    },
+    {
+        "editor_id": "BGSSSE008Sunder",
+        "form_id": "[04000801]",
+        "index": null,
+        "type": "WEAP DESC",
+        "original": "Does <5> points of frost, fire, and shock damage each. Does <15> points of damage to stamina and magicka. ",
+        "string": "Наносит по <5> ед. урона морозом, огнем и электричеством. Наносит <15> ед. урона запасу сил и магии. "
+    },
+    {
+        "editor_id": "BGSSSE008Sunder",
+        "form_id": "[04000801]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Sunder",
+        "string": "Разделитель"
+    },
+    {
+        "editor_id": "ccBGSSSE008_CenturionBoss",
+        "form_id": "[04000822]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "The Messenger",
+        "string": "Посланник"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Boss",
+        "form_id": "[04000821]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "The Messenger",
+        "string": "Посланник"
+    },
+    {
+        "editor_id": "WindhelmCalixtosHouseofCuriosities",
+        "form_id": "[00016787]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Calixto's House of Curiosities",
+        "string": "Музей редкостей Каликсто"
+    },
+    {
+        "editor_id": "SightlessPit01",
+        "form_id": "[00035299]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Sightless Pit",
+        "string": "Неприметное убежище"
+    },
+    {
+        "editor_id": "CCBGSSSE008Vault",
+        "form_id": "[04000823]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Sightless Vault",
+        "string": "Неприметное хранилище"
+    },
+    {
+        "editor_id": "WhiterunHalloftheDeadCatacombs",
+        "form_id": "[00094BAB]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Whiterun Catacombs",
+        "string": "Вайтран - Катакомбы"
+    },
+    {
+        "editor_id": "Bthardamz03",
+        "form_id": "[00030442]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Bthardamz Arcanex",
+        "string": "Бтардамз - Арканекс"
+    },
+    {
+        "editor_id": "SightlessPit03",
+        "form_id": "[00025195]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Abandoned Cave",
+        "string": "Заброшенная пещера"
+    },
+    {
+        "editor_id": "SightlessPit02",
+        "form_id": "[00081972]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Temple of Xrib",
+        "string": "Храм Зриба"
+    },
+    {
+        "editor_id": "WindhelmNewGnisisCornerclub",
+        "form_id": "[0001677F]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "New Gnisis Cornerclub",
+        "string": "New Gnisis Cornerclub"
+    },
+    {
+        "editor_id": "Tamriel",
+        "form_id": "[0000003C]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Скайрим"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 80,
+        "type": "QUST CNAM",
+        "original": "I've defeated the Dwarven defenses and claimed both Sunder and Wraithguard for myself.",
+        "string": "Мне удалось победить двемерского охранника и забрать Разделитель и Призрачный Страж."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 110,
+        "type": "QUST CNAM",
+        "original": "Rumors say an old refugee trunk full of letters has been uncovered in Windhelm. I should see if I can find a copy of those letters and more information on the cargo they were carrying.",
+        "string": "Ходит слух, что в Виндхельме нашли сундук со старыми письмами из каравана беженцев. Нужно разыскать копию этих писем и узнать, что за груз перевозил караван."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 0,
+        "type": "QUST NNAM",
+        "original": "Find the caravan's letters in Windhelm",
+        "string": "Найти письма из каравана в Виндхельме"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 4,
+        "type": "QUST NNAM",
+        "original": "Find the detoured caravans",
+        "string": "Найти караваны, отправившиеся в обход"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 14,
+        "type": "QUST NNAM",
+        "original": "Read Velyne's Letter",
+        "string": "Прочесть письмо Велин"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 3,
+        "type": "QUST NNAM",
+        "original": "Find evidence of the caravans in Whiterun",
+        "string": "Найти следы пребывания каравана в Вайтране"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 2,
+        "type": "QUST NNAM",
+        "original": "Find the second caravan",
+        "string": "Найти второй караван"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 7,
+        "type": "QUST NNAM",
+        "original": "Defeat the Messenger",
+        "string": "Победить Посланника"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 12,
+        "type": "QUST NNAM",
+        "original": "Read the Carriage Driver's Note",
+        "string": "Прочесть записку возчика"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 6,
+        "type": "QUST NNAM",
+        "original": "Retrieve Sunder and Wraithguard",
+        "string": "Получить Разделитель и Призрачный Страж"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 9,
+        "type": "QUST NNAM",
+        "original": "Restore steam in the left valve system",
+        "string": "Восстановить подачу пара в левой вентильной системе"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 94,
+        "type": "QUST CNAM",
+        "original": "As predicted, both Tools are guarded by a powerful Dwarven Centurion. I'll have to defeat it if I'm to claim them as my own.",
+        "string": "Как и ожидалось, оба Инструмента охраняются мощным двемерским центурионом. Нужно победить его, чтобы забрать Инструменты."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 13,
+        "type": "QUST NNAM",
+        "original": "Read the Seedy Guard's Note",
+        "string": "Прочесть записку уставшего охранника"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 1,
+        "type": "QUST NNAM",
+        "original": "Follow the caravan's trail",
+        "string": "Отправиться вслед за караваном"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 5,
+        "type": "QUST NNAM",
+        "original": "Enter the vault in the Sightless Pit",
+        "string": "Попасть в хранилище в Неприметном убежище"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 60,
+        "type": "QUST CNAM",
+        "original": "I've unlocked the Sightless Vault. Within lies Sunder and Wraithguard.",
+        "string": "Мне удалось открыть Неприметное хранилище. В нем ждут меня Разделитель и Призрачный Страж."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 82,
+        "type": "QUST CNAM",
+        "original": "I've found one of the letters, which details the routes of both the caravans as well as decoys designed to misdirect potential thieves. According to the letter, the first caravan was headed west toward Nightgate Inn. Perhaps following its trail will lead to another clue.",
+        "string": "Мне попалось одно из писем, в котором подробно излагается маршрут обоих караванов, а также караванов-обманок, которые должны были отвлечь возможных грабителей. Согласно письму, первый караван направлялся на запад к таверне \"Ночные ворота\". Возможно, если пойти по его пути, то мне удастся узнать что-то еще."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Legends Lost",
+        "string": "Утерянные легенды"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Restore steam in the right valve system",
+        "string": "Восстановить подачу пара в правой вентильной системе"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 107,
+        "type": "QUST CNAM",
+        "original": "The first caravan was attacked by Dwarven creatures. They managed to escape but I found a copy of their logs, along with details of all the other caravans. The next carriage was headed towards Whiterun. I should see what I can find.",
+        "string": "На первый караван напали двемерские создания. Каравану удалось спастись, но мне попалась копия их журнала, а также сведения обо всех остальных караванах. Следующий караван шел к Вайтрану. Нужно разыскать его там."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 107,
+        "type": "QUST CNAM",
+        "original": "In response to the attacks, the caravans took a detour towards Falkreath. I'll need to follow their trail to see if they left anything behind.",
+        "string": "Из-за нападений караван отправился по обходной дороге к Фолкриту. Нужно отправиться по пути его следования и попробовать что-нибудь найти."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 11,
+        "type": "QUST NNAM",
+        "original": "Find a way to open the vault gates",
+        "string": "Найти способ открыть ворота хранилища"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 77,
+        "type": "QUST CNAM",
+        "original": "On the road to Whiterun I found the remnants of another sacked caravan. According to a note I found in the wreckage, the remaining caravans were set to regroup in Whiterun, and one of the guards visited the Halls of the Dead there.",
+        "string": "По дороге в Вайтран мне удалось обнаружить следы еще одного разграбленного каравана. В записке, которая нашлась среди обломков, говорится, что остальные караваны должны были останавливаться в Вайтране, а один из охранников посещал Залы Мертвых."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 89,
+        "type": "QUST CNAM",
+        "original": "The cargo the caravans were delivering appears to hold the missing Tools of Kagremac: Sunder and Wraithguard. Apparently the items were surrendered to Dwemer drones and taken to a vault in the Sightless Pit. If I'm to open the door, I need to take this attunement crystal I found and use it to unlock the vault.",
+        "string": "Похоже, грузом этих караванов были пропавшие Инструменты Кагренака, Разделитель и Призрачный Страж. Очевидно, их забрали двемерские дроны и унесли в хранилище в Неприметном убежище. Чтобы открыть дверь в хранилище, понадобится настроечный кристалл, который попал ко мне в руки."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 8,
+        "type": "QUST NNAM",
+        "original": "Retrieve the Attunement Crystal",
+        "string": "Получить настроечный кристалл"
+    },
+    {
+        "editor_id": "ccBGSSSE008_DamageReduced",
+        "form_id": "[04000AB1]",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Reduced Damage",
+        "string": "Сниженный урон"
+    },
+    {
+        "editor_id": "ccBGSSSE008_DamageReduced",
+        "form_id": "[04000AB1]",
+        "index": null,
+        "type": "PERK DESC",
+        "original": "Make actor immune to incoming damage to block skill uses being added",
+        "string": "Make actor immune to incoming damage to block skill uses being added"
+    },
+    {
+        "editor_id": "ccBGSSSE008_DamageFortified",
+        "form_id": "[04000AB2]",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Extra Damage 10",
+        "string": "Дополнительный урон 10"
+    },
+    {
+        "editor_id": "SightlessPitLocation",
+        "form_id": "[000192A8]",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "Sightless Pit",
+        "string": "Неприметное убежище"
+    },
+    {
+        "editor_id": "ccBGSSSE008_NoSteamMessage",
+        "form_id": "[04000AB4]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "There doesn't seem to be any steam flowing through these pipes.",
+        "string": "Похоже, пар не идет по этим трубам."
+    },
+    {
+        "editor_id": "ccBGSSSE008_NoResponseMessage",
+        "form_id": "[04000B22]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Nothing seems to happen.",
+        "string": "Ничего не происходит."
+    },
+    {
+        "editor_id": "ccBGSSSE008_BarredDoorMessage",
+        "form_id": "[04000B0F]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Some other mechanism controls this door.",
+        "string": "Эту дверь отпирает какой-то другой механизм."
+    },
+    {
+        "editor_id": "ccBGSSSE008_BossName3",
+        "form_id": "[04000AB6]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Messenger's Sword",
+        "string": "Клинок Посланника"
+    },
+    {
+        "editor_id": "ccBGSSSE008_NoSteamMessage",
+        "form_id": "[04000AB4]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "There doesn't seem to be any steam flowing through these pipes.",
+        "string": "Похоже, пар не идет по этим трубам."
+    },
+    {
+        "editor_id": "ccBGSSSE008_NoResponseMessage",
+        "form_id": "[04000B22]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Nothing seems to happen.",
+        "string": "Ничего не происходит."
+    },
+    {
+        "editor_id": "ccBGSSSE008_BossName1",
+        "form_id": "[04000AB5]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Messenger's Staff",
+        "string": "Посох Посланника"
+    },
+    {
+        "editor_id": "ccBGSSSE008_BossName2",
+        "form_id": "[04000AB3]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Messenger's Shield",
+        "string": "Щит Посланника"
+    },
+    {
+        "editor_id": "ccBGSSE008_CenturionSpell",
+        "form_id": "[04000AB7]",
+        "index": null,
+        "type": "SHOU FULL",
+        "original": "Lightning Breath",
+        "string": "Дыхание молнии"
+    }
+]

@@ -1,0 +1,1370 @@
+[
+    {
+        "editor_id": "ccVSVSSE002_SkeeverRace",
+        "form_id": "[05000810]",
+        "index": null,
+        "type": "RACE FULL",
+        "original": "Skeever",
+        "string": "Skeever"
+    },
+    {
+        "editor_id": "ccVSVSSE002_GoatRace",
+        "form_id": "[05000812]",
+        "index": null,
+        "type": "RACE FULL",
+        "original": "Goat",
+        "string": "Cabra"
+    },
+    {
+        "editor_id": "ccVSVSSE002_RabbitRace",
+        "form_id": "[0500080F]",
+        "index": null,
+        "type": "RACE FULL",
+        "original": "Rabbit",
+        "string": "Conejo"
+    },
+    {
+        "editor_id": "ccVSVSSE002_SpiderRace",
+        "form_id": "[05000811]",
+        "index": null,
+        "type": "RACE FULL",
+        "original": "Frostbite Spider",
+        "string": "Araña congeladora"
+    },
+    {
+        "editor_id": "ccVSVSSE002_FoxRace",
+        "form_id": "[0500080E]",
+        "index": null,
+        "type": "RACE FULL",
+        "original": "Fox",
+        "string": "Zorro"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MGEF_TeleportRabbit",
+        "form_id": "[0500091C]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Teleports Thistle the rabbit",
+        "string": "Teletransporta a Cardo el conejo"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MGEF_TeleportGoat",
+        "form_id": "[0500091A]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Teleport Hilda",
+        "string": "Teletransportar a Hilda"
+    },
+    {
+        "editor_id": "ccVSVSSE002_EnchFortifyCarryConstantSelf",
+        "form_id": "[0500093C]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fortify Carry Weight",
+        "string": "La capacidad de carga aumenta en <mag> puntos."
+    },
+    {
+        "editor_id": "ccVSVSSE002_MGEF_CommandSpider",
+        "form_id": "[05000817]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Command your pet spider to spin a web trap at the target location. Only <1> web trap can be active at a time.",
+        "string": "Ordena a tu araña que teja una trampa en la ubicación marcada. Solo puede activarse <1> trampa a la vez."
+    },
+    {
+        "editor_id": "ccVSVSSE002_MGEF_TeleportSpider",
+        "form_id": "[05000918]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Teleports Arachnia the spider",
+        "string": "Teletransporta a Arachnia la araña"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MGEF_TeleportFox",
+        "form_id": "[0500091B]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Teleports Sweet Roll the fox",
+        "string": "Teletransporta a Panecilla la zorrita"
+    },
+    {
+        "editor_id": "ccVSVSSE002_EnchFortifyCarryConstantSelf",
+        "form_id": "[0500093C]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Carrying capacity increased by <mag> points.",
+        "string": "Reforzar cargar peso"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MGEF_TeleportSkeever",
+        "form_id": "[05000919]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Teleports Skritch the skeever",
+        "string": "Teletransporta a Skritch el skeever"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MGEF_TeleportSpider",
+        "form_id": "[05000918]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Teleport Arachnia",
+        "string": "Teletransportar a Arachnia"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MGEF_TeleportSkeever",
+        "form_id": "[05000919]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Teleport Skritch",
+        "string": "Teletransportar a Skritch"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MGEF_TeleportRabbit",
+        "form_id": "[0500091C]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Teleport Thistle",
+        "string": "Teletransportar a Cardo"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MGEF_WebTrap",
+        "form_id": "[05000816]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Paralyze",
+        "string": "Paralizar"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MGEF_TeleportFox",
+        "form_id": "[0500091B]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Teleport Sweet Roll",
+        "string": "Teletransportar a Panecilla"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MGEF_TeleportGoat",
+        "form_id": "[0500091A]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Teleports Hilda the goat",
+        "string": "Teletransporta a Hilda la cabra"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MGEF_StaggerCont",
+        "form_id": "[05000818]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Stagger Push",
+        "string": "Empujón desequilibrante"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MGEF_CommandSpider",
+        "form_id": "[05000817]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Command Spider",
+        "string": "Órdenes a la araña"
+    },
+    {
+        "editor_id": "ccVSVSSE002_ENCH_FortifyCarry",
+        "form_id": "[0500093B]",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Fortify Carry Weight",
+        "string": "Mejora de capacidad de carga"
+    },
+    {
+        "editor_id": "ccVSVSSE002_SPELL_WebTrap",
+        "form_id": "[0500081A]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Web Trap",
+        "string": "Trampa"
+    },
+    {
+        "editor_id": "ccVSVSSE002_SPELL_TeleportFox",
+        "form_id": "[05000920]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Teleport Pet: Sweet Roll",
+        "string": "Teletransportar mascota: Panecilla"
+    },
+    {
+        "editor_id": "ccVSVSSE002_SPELL_TeleportGoat",
+        "form_id": "[0500091F]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Teleport Pet: Hilda",
+        "string": "Teletransportar mascota: Hilda"
+    },
+    {
+        "editor_id": "ccVSVSSE002_SPELL_CommandSpider",
+        "form_id": "[05000819]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Command Spider",
+        "string": "Órdenes a la araña"
+    },
+    {
+        "editor_id": "ccVSVSSE002_SPELL_TeleportRabbit",
+        "form_id": "[0500091E]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Teleport Pet: Thistle",
+        "string": "Teletransportar mascota: Cardo"
+    },
+    {
+        "editor_id": "ccVSVSSE002_SPELL_TeleportSkeever",
+        "form_id": "[0500091D]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Teleport Pet: Skritch",
+        "string": "Teletransportar mascota: Skritch"
+    },
+    {
+        "editor_id": "ccVSVSSE002_AB_CarryWeightBoost",
+        "form_id": "[0500093D]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Carry Weight Boost",
+        "string": "Carry Weight Boost"
+    },
+    {
+        "editor_id": "ccVSVSSE002_SPELL_TeleportSpider",
+        "form_id": "[05000921]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Teleport Pet: Arachnia",
+        "string": "Teletransportar mascota: Arachnia"
+    },
+    {
+        "editor_id": "ccVSVSSE002_SaddleBags",
+        "form_id": "[0500081C]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Animal Pack",
+        "string": "Alforja para animales"
+    },
+    {
+        "editor_id": "ccVSVSSE002_SkinGoat",
+        "form_id": "[05000822]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Goat",
+        "string": "Cabra"
+    },
+    {
+        "editor_id": "ccVSVSSE002_SkinRabbit",
+        "form_id": "[05000820]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Rabbit",
+        "string": "Conejo"
+    },
+    {
+        "editor_id": "ccVSVSSE002_Collar",
+        "form_id": "[05000821]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Animal Collar",
+        "string": "Collar para animales"
+    },
+    {
+        "editor_id": "ccVSVSSE002_SaddleBags",
+        "form_id": "[0500081C]",
+        "index": null,
+        "type": "ARMO DESC",
+        "original": "Equip on a pet goat or skeever to increase its carryweight by 40.",
+        "string": "Equípala en una cabra o skeever que tengas como mascota para aumentar su capacidad de carga en 40."
+    },
+    {
+        "editor_id": "ccVSVSSE002_Instructions_Goat",
+        "form_id": "[05000827]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Halvar's Journal",
+        "string": "Diario de Halvar"
+    },
+    {
+        "editor_id": "ccVSVSSE002_Instructions_Fox",
+        "form_id": "[05000828]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><div align=\"left\">\r\n<b>4th of First Seed</b>\r\nI guess being Bosmer really does give me a way with animals! This little fox wandered up to me today, bold as brass, and started begging for treats. I didn't have anything on me at the time but a sweet roll, but it seemed to like that well enough. I wonder if this gift with animals works on horses - it would make stealing them dead easy.\r\n\r\n<b>15th of First Seed</b>\r\nThe furry nuisance won't leave me alone! It's been following me everywhere, even down into the sewers. At least it's quiet enough that it won't alert the guards...\r\n\r\n<b>1st of Rain's Hand</b>\r\nThe fox has a real nose for sniffing out valuables. Just this morning she dug a silver locket out of the mud - I never would have seen it if she hadn't started pawing at the ground. She must be attracted to shiny things. Can't say I blame her, really.\r\n\r\n<b>9th of Rain's Hand</b>\r\nFinding Sweet Roll has turned out to be the best stroke of luck I've had in a while. She's got better eyes and instincts than any thief I've ever met, including Vex. I can't remember the last time my coin purse was this heavy - I'm starting to jingle like a battalion of Imperials when I walk.\r\n\r\n<b>25th of Rain's Hand</b>\r\nI think I'll try out this animal-taming thing on the wolves outside of town. Some of the other thieves have been eyeing me recently; they would think twice about jumping me if I had a wolf at my heels. ",
+        "string": "<font face='$HandwrittenFont'><div align=\"left\">\r\n<b>4 de Primera semilla</b>\r\nPues sí que se me dan bien los animales. ¡Será porque soy bosmer! Hoy se me ha acercado una zorrita y ha empezado a pedirme comida, ni corta ni perezosa. En ese momento no tenía nada, salvo un panecillo dulce, pero no le hizo ascos. Me pregunto si mi don con los animales funcionará con los caballos. Sería facilísimo robarlos.\r\n\r\n<b>15 de Primera semilla</b>\r\n¡Esa bola de pelo no me deja en paz! Me sigue a todas partes, incluso a las cloacas. Al menos es silenciosa y no alerta a los guardias...\r\n\r\n<b>1 de Mano de lluvia</b>\r\nLa zorrita tiene buen olfato para los objetos de valor. Esta mañana, sin ir más lejos, sacó un medallón de plata del barro. Si no hubiera empezado a hurgar el suelo en las patas, no lo habría visto jamás. Será que las cosas brillantes la atraen. La verdad es que no la culpo.\r\n\r\n<b>9 de Mano de lluvia</b>\r\nEncontrar a Panecilla es lo mejor que me ha pasado en mucho tiempo. La zorrita tiene una vista y un instinto más desarrollados que cualquier ladrón al que haya conocido, Vex incluida. Ni me acuerdo de la última vez que me pesaba tanto el monedero. Cada vez que camino, empiezo a tintinear como un batallón de imperiales.\r\n\r\n<b>25 de Mano de lluvia</b>\r\nCreo que intentaré domesticar alguno de los lobos que hay fuera de la ciudad. Hay otros ladrones que me han estado echando el ojo, pero se lo pensarían dos veces antes de asaltarme si tuviera un lobo detrás de mí. "
+    },
+    {
+        "editor_id": "ccVSVSSE002_Instructions_Skeever",
+        "form_id": "[05000825]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nI ain't been having no luck at lifting gold off them rich merchants in the market, and those thieves guild s'wits don't want me. Said I'm too clumsy. I'm running out of food and skooma, may need to start killing some of the skeevers down here for meat...\r\n\r\nOne of the skooma dealers at the docks told me he knew a guy from Morrowind who trained a nix hound to distract his marks - helped him steal a heaping pile of gold, he said. Don't know if I believe a word of it, but what else am I going to do? Might as well give it a try.\r\n\r\nToo bad there ain't any nix hounds around here. Plenty of skeevers, though...I'm gonna need to catch some anyway for food, might as well have a go at training one first.",
+        "string": "<font face='$HandwrittenFont'>\r\nNo he conseguido birlarle la cartera ni a uno de los ricos mercaderes en el mercado, y los del gremio de ladrones no me quieren porque dicen que soy demasiado torpe. Me estoy quedando sin comida y sin skooma. Voy a tener que matar a los skeevers de aquí abajo si quiero comer...\r\n\r\nUn vendedor de skooma del muelle me ha dicho que conocía a un tipo de Morrowind que había entrenado a un perro nix para distraer a sus víctimas. Le ayudaba a robar un montón de oro, o eso decía él. No sé si debería creérmelo, pero ¿qué otra cosa puedo hacer? Igual debería probar suerte yo también.\r\n\r\nQué pena que no haya perros nix por aquí. Eso sí, skeevers hay para regalar... A este paso, voy a tener que atrapar uno para comérmelo, aunque también podría intentar domesticarlo."
+    },
+    {
+        "editor_id": "ccVSVSSE002_Instructions_Spider",
+        "form_id": "[05000824]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><div align=\"left\">\r\nWhile my siblings may be obsessed with the taste that fear imbues in the blood of mortals, I find that pain lends a much more potent sweetness. And nothing is quite so capable of causing pain as the venom of a frostbite spider.\r\n\r\nBut alas, the usual method of harvesting frostbite venom involves killing the spider - a costly and dangerous venture. Far too little venom can be obtained through violent methods for the experiments I wish to conduct. \r\n\r\nTo that end, I have captured a frostbite spider from deeper in the cave so that I may regularly collect its venom, which seems to be unusually potent. I discovered that it appears to have some measure of intelligence, and I have been attempting to teach it to obey certain orders. Oh how delicious it would be to have a tamed spider entangle my prey on command!\r\n\r\nI think I will name it Arachnia. ",
+        "string": "<font face='$HandwrittenFont'><div align=\"left\">\r\nAunque mis hermanos se empeñan en asustar a los mortales para potenciar el sabor de su sangre, para mí, el dolor la endulza mucho más, y no hay nada que cause más dolor que el veneno de una araña congeladora.\r\n\r\nPor desgracia, el método tradicional para extraer el veneno de una araña congeladora consiste en matarla, una empresa tan ardua como peligrosa. El veneno obtenido por medios violentos se antoja insuficiente para los experimentos que pretendo llevar a cabo. \r\n\r\nAsí pues, he capturado una araña congeladora de las profundidades de la cueva para ir recolectando su veneno, que parece ser más potente de lo normal. He descubierto que posee atisbos de inteligencia y he intentado domesticarla para que obedezca ciertas órdenes. ¡Ah, qué deleite sería tener una araña que enredara a mi presa con solo pedírselo!\r\n\r\nCreo que la llamaré Arachnia. "
+    },
+    {
+        "editor_id": "ccVSVSSE002_Notice_Goat",
+        "form_id": "[0500080A]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\n<font size=\"40\">For Sale</font>\r\n\r\nOne tamed mountain goat. Able to carry a hefty amount of weight to the Throat of the World and back again. Gives good milk. \r\n\r\nIf interested in purchasing, see Halvar in Rorikstead. \r\n\r\n- Halvar",
+        "string": "<font face=\"$HandwrittenFont\">\r\n<font size=\"40\">Se vende</font>\r\n\r\nUna cabra domesticada. Es capaz ir a la Garganta del Mundo cargando con mucho peso y volver. También da buena leche. \r\n\r\nSi te interesa comprarla, pregunta a Halvar en Paraje de Rorik. \r\n\r\n- Halvar"
+    },
+    {
+        "editor_id": "ccVSVSSE002_Instructions_Fox",
+        "form_id": "[05000828]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Thief's Journal",
+        "string": "Diario del ladrón"
+    },
+    {
+        "editor_id": "ccVSVSSE002_Instructions_Rabbit",
+        "form_id": "[05000826]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\r\n<b>14th of Second Seed</b>\r\nThe rabbits here seem particularly adept at sniffing out potion ingredients. I recently found one nibbling on my thistle plants and managed to capture it. It is my hope that I will be able to train it to lead me to the most bountiful flora.\r\n\r\n<b>22nd of Second Seed</b>\r\nThe rabbit (which I have decided to name Thistle, in honor of the carefully cultivated plants it managed to destroy) is showing great promise. It has proven to be quite tame and even rather intelligent. Getting it to respond to commands, however, can be a bit of a trial. I've resorted to plying it with carrots. ",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\r\n<b>14 de Segunda semilla</b>\r\nLos conejos parecen tener un don para rastrear ingredientes de pociones. Hace poco vi uno mordisqueando mis cardos y logré capturarlo. Tengo la esperanza de poder entrenarlo para que me busque las plantas más generosas.\r\n\r\n<b>22 de Segunda semilla</b>\r\nEl conejo (al que he decidido llamar Cardo en honor a las plantas que cultivé cuidadosamente y que luego me destrozó) tiene mucho potencial. Ha demostrado ser bastante dócil e incluso inteligente. No obstante, conseguir que responda a mis órdenes puede suponer un desafío. He recurrido al estímulo con zanahorias. "
+    },
+    {
+        "editor_id": "ccVSVSSE002_Instructions_Skeever",
+        "form_id": "[05000825]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Pickpocket's Journal",
+        "string": "Diario del carterista"
+    },
+    {
+        "editor_id": "ccVSVSSE002_Notice_Goat",
+        "form_id": "[0500080A]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "For Sale",
+        "string": "Se vende"
+    },
+    {
+        "editor_id": "ccVSVSSE002_Instructions_Goat",
+        "form_id": "[05000827]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nCame into town a few days ago looking for work. The folks here are nice enough, and there's plenty of wheat and potatoes needing to be harvested, so I've got a steady supply of coin coming in. \r\n\r\nI don't think I'm going to need my old pack goat Hilda for much longer...all my bones are starting to creak, and my adventuring days are long over. Now I just need to find someone willing to take care of her. Maybe get a few coins for her too - there's strength in those old bones of hers yet.\r\n\r\nAh, how I'm going to miss wandering the wilds of Skyrim! I saw so many strange and wonderful things out there - pine trees as tall as mountains, old nord tombs, I once even stumbled across a wandering spirit made of pure ice!\r\n\r\nEven ran across a few folks trying their hand at taming different types of creatures. Don't know why they'd want anything but a loyal dog or trusty goat like my Hilda though - some of them beasts out in the wild just aren't meant to be tamed.\r\n\r\nRan across an alchemist with a pet rabbit, and almost got robbed by a thief with a tame fox, but I suppose a rabbit or a fox could be docile enough. But that pickpocket trying to train a skeever must have been as mad as old Sheo'. And I don't want to think too hard about the vampire that almost made a meal out of me...could have sworn it had a trained frostbite spider! Gives me the shivers just thinking about it.",
+        "string": "<font face='$HandwrittenFont'>\r\nHace unos días, llegué a la ciudad en busca de trabajo. Los lugareños son amables y tienen que cosechar una gran cantidad de trigo y patatas, por lo que tendré un sueldo estable. \r\n\r\nMe da que no voy a necesitar más a Hilda, mi vieja cabra de carga... Me empiezan a rechinar los huesos y mis días de aventura han quedado bastante atrás. Ahora necesito a alguien que esté dispuesto a cuidar de ella y de paso sacarme un dinerillo. Aunque sea vieja, todavía le queda cuerda para rato.\r\n\r\n¡Cómo voy a echar de menos eso de vagar por las tierras de Skyrim! He visto tantas rarezas y maravillas por ahí... Pinos tan altos como montañas, tumbas nórdicas ancestrales... ¡hasta me topé con un espíritu errante hecho de hielo puro!\r\n\r\nTambién me encontré con personas que intentaban domesticar criaturas de todo tipo, aunque no sé para qué las querrían, pudiendo tener un perro fiel o una cabra infalible como mi Hilda... Hay bestias en las tierras salvajes que no se pueden domar.\r\n\r\nHe visto a un alquimista con un conejo de mascota al que casi atraca un ladrón con un zorro domesticado. Supongo que un conejo o un zorro pueden llegar a ser dóciles, pero mira que intentar entrenar a un skeever, como hizo aquel carterista... Estaría tan chalado como el viejo Sheo. Y no quiero ni acordarme del vampiro que casi me zampa. ¡Juraría que tenía una araña congeladora como mascota! Solo de pensarlo se me ponen los pelos como escarpias."
+    },
+    {
+        "editor_id": "ccVSVSSE002_Instructions_Rabbit",
+        "form_id": "[05000826]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Notes on Tamed Rabbit",
+        "string": "Notas sobre el conejo domesticado"
+    },
+    {
+        "editor_id": "ccVSVSSE002_Instructions_Spider",
+        "form_id": "[05000824]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Vampire Naturalist's Journal",
+        "string": "Diario del vampiro investigador"
+    },
+    {
+        "editor_id": "ccVSVSSE002_Saddlebags_dummy",
+        "form_id": "[05000851]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Animal Pack",
+        "string": "Alforja para animales"
+    },
+    {
+        "editor_id": "ccVSVSSE002_Collar_dummy",
+        "form_id": "[05000871]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Animal Collar",
+        "string": "Collar para animales"
+    },
+    {
+        "editor_id": "ccVSVSSE002_Fox",
+        "form_id": "[05000831]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Sweet Roll",
+        "string": "Panecilla"
+    },
+    {
+        "editor_id": "ccVSVSSE002_Rabbit",
+        "form_id": "[0500082F]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Thistle",
+        "string": "Cardo"
+    },
+    {
+        "editor_id": "ccVSVSSE002_Vampire",
+        "form_id": "[0500082E]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Vampire Naturalist",
+        "string": "Vampiro investigador"
+    },
+    {
+        "editor_id": "ccVSVSSE002_Farmer",
+        "form_id": "[0500082C]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Halvar",
+        "string": "Halvar"
+    },
+    {
+        "editor_id": "ccVSVSSE002_Skeever",
+        "form_id": "[0500082D]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Skritch",
+        "string": "Skritch"
+    },
+    {
+        "editor_id": "ccVSVSSE002_DeadThief",
+        "form_id": "[0500082A]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Thief",
+        "string": "Ladrón"
+    },
+    {
+        "editor_id": "ccVSVSSE002_Spider",
+        "form_id": "[0500082B]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Arachnia",
+        "string": "Arachnia"
+    },
+    {
+        "editor_id": "ccVSVSSE002_Goat",
+        "form_id": "[05000830]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Hilda",
+        "string": "Hilda"
+    },
+    {
+        "editor_id": "ccVSVSSE002_CageKey_Skeever",
+        "form_id": "[05000833]",
+        "index": null,
+        "type": "KEYM FULL",
+        "original": "Skeever Cage Key",
+        "string": "Llave de la jaula del skeever"
+    },
+    {
+        "editor_id": "ccVSVSSE002_CageKey_Spider",
+        "form_id": "[05000832]",
+        "index": null,
+        "type": "KEYM FULL",
+        "original": "Spider Cage Key",
+        "string": "Llave de la jaula de la araña"
+    },
+    {
+        "editor_id": "ccVSVSSE002_PotentFrostbiteVenom",
+        "form_id": "[05000834]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Potent Frostbite Venom",
+        "string": "Veneno congelador potente"
+    },
+    {
+        "editor_id": "WhiterunBanneredMare",
+        "form_id": "[0001605E]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "The Bannered Mare",
+        "string": "La yegua abanderada"
+    },
+    {
+        "editor_id": "CronvangrHall01",
+        "form_id": "[000152A7]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Cronvangr Cave",
+        "string": "Cueva de Cronvangr"
+    },
+    {
+        "editor_id": "RiftenRatway01",
+        "form_id": "[0003B698]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "The Ratway",
+        "string": "La Ratonera"
+    },
+    {
+        "editor_id": "Tamriel",
+        "form_id": "[0000003C]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Skyrim"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050008DE]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(grunt)",
+        "string": "(Gruñe)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050008AF]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Hey buddy, are you hungry?",
+        "string": "Eh, amiguito, ¿tienes hambre?"
+    },
+    {
+        "editor_id": "ccVSVSSE002_PetControlQuest_Goat_BranchEquipTopic",
+        "form_id": "[05000930]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Equip collar",
+        "string": "Equipar collar"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000925]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Let's equip your collar.",
+        "string": "Vamos a ponerte el collar."
+    },
+    {
+        "editor_id": "ccVSVSSE002_PetControlQuest_Rabbit_BranchFetchTopic",
+        "form_id": "[050008A3]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Go find an ingredient!",
+        "string": "¡Búscame un ingrediente!"
+    },
+    {
+        "editor_id": "ccVSVSSE002_PetControlQuest_Spider_BranchCollectVenomTopic",
+        "form_id": "[050008AB]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Harvest venom",
+        "string": "Recoger veneno"
+    },
+    {
+        "editor_id": "ccVSVSSE002_PetControlQuest_Goat_BranchCollectMilkTopic",
+        "form_id": "[050008B4]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Collect milk",
+        "string": "Ordeñar leche"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[0500092A]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(grunt)",
+        "string": "(Gruñe)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050008BE]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(baa!)",
+        "string": "(¡Bee!)"
+    },
+    {
+        "editor_id": "ccVSVSSE002_PetControlQuest_Goat_BranchEquip2Topic",
+        "form_id": "[050008E2]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Equip Pack",
+        "string": "Equipar alforja"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050008AC]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Let's harvest some venom.",
+        "string": "Vamos a extraer algo de veneno."
+    },
+    {
+        "editor_id": "ccVSVSSE002_PetControlQuest_Skeever_BranchEquipTopic",
+        "form_id": "[05000924]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Equip item",
+        "string": "Equipar objeto"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000932]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Let's remove your collar.",
+        "string": "Vamos a quitarte el collar."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[0500092E]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(grunt)",
+        "string": "(Gruñe)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[0500092A]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Let's remove your collar.",
+        "string": "Vamos a quitarte el collar."
+    },
+    {
+        "editor_id": "ccVSVSSE002_PetControlQuest_Rabbit_BranchFoundItemTopic",
+        "form_id": "[050008A7]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "What's that you got there?",
+        "string": "¿Qué es eso que tienes ahí?"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000929]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(grunt)",
+        "string": "(Gruñe)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050008A2]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(squeal)",
+        "string": "(Chilla)"
+    },
+    {
+        "editor_id": "ccVSVSSE002_PetControlQuest_Fox_BranchFoundItemTopic",
+        "form_id": "[050008B0]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "What's that you got there?",
+        "string": "¿Qué es eso que tienes ahí?"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000913]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(grunt)",
+        "string": "(Gruñe)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000933]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Let's equip your pack.",
+        "string": "Vamos a ponerte la alforja."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050008A4]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(grunt)",
+        "string": "(Gruñe)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000931]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(baa!)",
+        "string": "(¡Bee!)"
+    },
+    {
+        "editor_id": "ccVSVSSE002_PetControlQuest_Skeever_BranchFindItemTopic",
+        "form_id": "[050008A9]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "What's that you got there?",
+        "string": "¿Qué es eso que tienes ahí?"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050008A2]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Hey buddy, are you hungry?",
+        "string": "Eh, amiguito, ¿tienes hambre?"
+    },
+    {
+        "editor_id": "ccVSVSSE002_FarmerDialogueQuest_BranchBuyGoatTopic",
+        "form_id": "[050008B6]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Can I buy your goat?",
+        "string": "¿Puedo comprarte la cabra?"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050008B3]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(grunt)",
+        "string": "(Gruñe)"
+    },
+    {
+        "editor_id": "ccVSVSSE002_FarmerDialogueQuest_RejectTopic",
+        "form_id": "[050008BB]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "On second thought, never mind.",
+        "string": "Pensándolo mejor, da igual."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000926]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Let's remove your collar.",
+        "string": "Vamos a quitarte el collar."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050008AC]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(grunt)",
+        "string": "(Gruñe)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000932]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(grunt)",
+        "string": "(Gruñe)"
+    },
+    {
+        "editor_id": "ccVSVSSE002_PetControlQuest_Skeever_BranchFetchTopic",
+        "form_id": "[050008A5]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Go find food!",
+        "string": "¡Búscame comida!"
+    },
+    {
+        "editor_id": "ccVSVSSE002_PetControlQuest_Rabbit_BranchRecruitTopic",
+        "form_id": "[050008A0]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Hey there, Thistle. Want a treat?",
+        "string": "Hola, Cardo. ¿Quieres un premio?"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050008A6]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(grunt)",
+        "string": "(Gruñe)"
+    },
+    {
+        "editor_id": "ccVSVSSE002_PetControlQuest_Fox_BranchRecruitTopic",
+        "form_id": "[050008AD]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Hey there, Sweet Roll. Want a treat?",
+        "string": "Hola, Panecilla. ¿Quieres un premio?"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050008B5]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Let's collect some milk.",
+        "string": "Vamos a por un poco de leche."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050008BA]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Actually, I don't have enough coin.",
+        "string": "Pues no tengo bastante dinero."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050008B1]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(squeal)",
+        "string": "(Chilla)"
+    },
+    {
+        "editor_id": "ccVSVSSE002_PetControlQuest_Goat_BranchRecruitTopic",
+        "form_id": "[050008BD]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Hey there, buddy. Want to come with me?",
+        "string": "Hola, chica. ¿Quieres venir conmigo?"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050008AF]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(squeal)",
+        "string": "(Chilla)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050008AA]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(squeal)",
+        "string": "(Chilla)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000913]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Let's remove your pack.",
+        "string": "Vamos a quitarte la alforja."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050008B5]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(grunt)",
+        "string": "(Gruñe)"
+    },
+    {
+        "editor_id": "ccVSVSSE002_PetControlQuest_Skeever_BranchEquip2Topic",
+        "form_id": "[05000917]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Equip Pack",
+        "string": "Equipar alforja"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000925]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(yip)",
+        "string": "(Ladra)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050008A8]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(squeal)",
+        "string": "(Chilla)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050008ED]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Let's equip your pack.",
+        "string": "Vamos a ponerte la alforja."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000926]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(grunt)",
+        "string": "(Gruñe)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050008AE]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(squeal)",
+        "string": "(Chilla)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000934]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(grunt)",
+        "string": "(Gruñe)"
+    },
+    {
+        "editor_id": "ccVSVSSE002_PetControlQuest_Rabbit_BranchEquipTopic",
+        "form_id": "[05000928]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Equip item",
+        "string": "Equipar objeto"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[0500092D]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Let's equip your collar.",
+        "string": "Vamos a ponerte el collar."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[0500092E]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Let's remove your collar.",
+        "string": "Vamos a quitarte el collar."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050008ED]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(baa!)",
+        "string": "(¡Bee!)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050008A1]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(squeal)",
+        "string": "(Chilla)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000933]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(yip!)",
+        "string": "(Ladra)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000931]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Let's equip your collar.",
+        "string": "Vamos a ponerte el collar."
+    },
+    {
+        "editor_id": "ccVSVSSE002_PetControlQuest_Spider_BranchWebTopic",
+        "form_id": "[05000823]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Spin a web trap!",
+        "string": "¡Teje una trampa!"
+    },
+    {
+        "editor_id": "ccVSVSSE002_FarmerDialogueQuest_AcceptTopic",
+        "form_id": "[050008B8]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Here's my offer...(<Global=ccVSVSSE002_GoatPrice> gold)",
+        "string": "Te ofrezco esto... (<Global=ccVSVSSE002_GoatPrice> de oro)"
+    },
+    {
+        "editor_id": "ccVSVSSE002_PetControlQuest_Fox_BranchFetchTopic",
+        "form_id": "[050008B2]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Go find something valuable!",
+        "string": "¡Búscame algo de valor!"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000934]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Let's remove your pack.",
+        "string": "Vamos a quitarte la alforja."
+    },
+    {
+        "editor_id": "ccVSVSSE002_PetControlQuest_Fox_BranchEquipTopic",
+        "form_id": "[0500092C]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Equip item",
+        "string": "Equipar objeto"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000929]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Let's equip your collar.",
+        "string": "Vamos a ponerte el collar."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[0500092D]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(yip!)",
+        "string": "(Ladra)"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "form_id": "[050008C8]",
+        "index": 310,
+        "type": "QUST NNAM",
+        "original": "Free <Alias=AliasSpider> from its cage",
+        "string": "Saca a <Alias=AliasSpider> de la jaula."
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "form_id": "[050008C8]",
+        "index": 1010,
+        "type": "QUST NNAM",
+        "original": "Purchase a tamed goat from <Alias=AliasFarmer>",
+        "string": "Cómprale una cabra domesticada a <Alias=AliasFarmer>."
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "form_id": "[050008C8]",
+        "index": 76,
+        "type": "QUST CNAM",
+        "original": "*Add log entry here*",
+        "string": "*Add log entry here*"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "form_id": "[050008C8]",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "Find the tamed fox",
+        "string": "Busca a la zorrita domesticada."
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "form_id": "[050008C8]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Find the tamed rabbit",
+        "string": "Busca al conejo domesticado."
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "form_id": "[050008C8]",
+        "index": 87,
+        "type": "QUST CNAM",
+        "original": "The journey through Skyrim can be hard and long, and I could use the companionship of a loyal animal. I should inquire in town to see if there are any tamed animals for sale.",
+        "string": "Mi viaje por Skyrim puede ser largo y duro. Me vendría bien la compañía de un animal fiel. Debería preguntar por la ciudad, a ver si hay algún animal domesticado a la venta."
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "form_id": "[050008C8]",
+        "index": 300,
+        "type": "QUST NNAM",
+        "original": "Find a key to the spider cage",
+        "string": "Encuentra la llave para la jaula de la araña."
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "form_id": "[050008C8]",
+        "index": 50,
+        "type": "QUST NNAM",
+        "original": "Find <Alias=AliasGoat> the goat",
+        "string": "Busca a <Alias=AliasGoat> la cabra."
+    },
+    {
+        "editor_id": "ccVSVSSE002_PetControlQuest_Skeever",
+        "form_id": "[050008C9]",
+        "index": 89,
+        "type": "QUST CNAM",
+        "original": "exit cage",
+        "string": "Reforzar cargar peso"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "form_id": "[050008C8]",
+        "index": 47,
+        "type": "QUST CNAM",
+        "original": "After reading Halvar's journal on his adventures throughout Skyrim, I've discovered that there are many other tame animal companions out there in the wild. I should set out to find them.",
+        "string": "Después de leer el diario de Halvar sobre sus aventuras en Skyrim, he descubierto que hay muchos animales salvajes que puedo domar y convertirlos en compañeros. Debería partir en su busca."
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "form_id": "[050008C8]",
+        "index": 510,
+        "type": "QUST NNAM",
+        "original": "Buy <Alias=AliasGoat> from <Alias=AliasFarmer>",
+        "string": "Cómprale <Alias=AliasGoat> a <Alias=AliasFarmer>."
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "form_id": "[050008C8]",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Find the tamed spider",
+        "string": "Busca a la araña domesticada."
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "form_id": "[050008C8]",
+        "index": 1030,
+        "type": "QUST NNAM",
+        "original": "Find out more about <Alias=AliasGoat>",
+        "string": "Averigua más sobre <Alias=AliasGoat>."
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "form_id": "[050008C8]",
+        "index": 400,
+        "type": "QUST NNAM",
+        "original": "Find out more about the fox",
+        "string": "Averigua más sobre la zorrita."
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "form_id": "[050008C8]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Pets of Skyrim",
+        "string": "Mascotas de Skyrim"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "form_id": "[050008C8]",
+        "index": 1000,
+        "type": "QUST NNAM",
+        "original": "Check the notices at the Bannered Mare",
+        "string": "Mira los avisos en La yegua abanderada."
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "form_id": "[050008C8]",
+        "index": 98,
+        "type": "QUST CNAM",
+        "original": "I found a notice in the Bannered Mare offering a tamed goat for sale. I need to talk to Halvar in Rorikstead to purchase it.",
+        "string": "He encontrado un anuncio en La yegua abanderada. Alguien vende una cabra. Debo ir a Paraje de Rorik y hablar con Halvar para comprársela."
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "form_id": "[050008C8]",
+        "index": 410,
+        "type": "QUST NNAM",
+        "original": "Feed <Alias=AliasFox> a sweet roll",
+        "string": "Dale un panecillo dulce a <Alias=AliasFox>."
+    },
+    {
+        "editor_id": "ccVSVSSE002_PetControlQuest_Skeever",
+        "form_id": "[050008C9]",
+        "index": 76,
+        "type": "QUST CNAM",
+        "original": "Recruit stage",
+        "string": "Fase de reclutamiento"
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "form_id": "[050008C8]",
+        "index": 110,
+        "type": "QUST NNAM",
+        "original": "Feed <Alias=AliasRabbit> a carrot",
+        "string": "Dale una zanahoria a <Alias=AliasRabbit>."
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "form_id": "[050008C8]",
+        "index": 1020,
+        "type": "QUST NNAM",
+        "original": "Greet <Alias=AliasGoat> the goat",
+        "string": "Saluda a <Alias=AliasGoat> la cabra."
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "form_id": "[050008C8]",
+        "index": 210,
+        "type": "QUST NNAM",
+        "original": "Free <Alias=AliasSkeever> from its cage",
+        "string": "Saca a <Alias=AliasSkeever> de la jaula."
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "form_id": "[050008C8]",
+        "index": 100,
+        "type": "QUST NNAM",
+        "original": "Find a treat for the rabbit",
+        "string": "Busca un premio para el conejo."
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "form_id": "[050008C8]",
+        "index": 200,
+        "type": "QUST NNAM",
+        "original": "Find a key to the skeever cage",
+        "string": "Encuentra la llave para la jaula del skeever."
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "form_id": "[050008C8]",
+        "index": 500,
+        "type": "QUST NNAM",
+        "original": "Find out more about the goat",
+        "string": "Averigua más sobre la cabra."
+    },
+    {
+        "editor_id": "ccVSVSSE002_MainQuest",
+        "form_id": "[050008C8]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Find the tamed skeever",
+        "string": "Busca al skeever domesticado."
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_FoundItem_rabbit",
+        "form_id": "[05000903]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "<Alias=PetRabbit> found something!",
+        "string": "¡<Alias=PetRabbit> ha encontrado algo!"
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_QuestDone_Skeever",
+        "form_id": "[050008FE]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "<Alias=AliasSkeever> the skeever is now available to be recruited as your pet!\r\n<Alias=AliasSkeever> can be commanded to lead you to nearby food items. <Alias=AliasSkeever> also has a chance to find food once per day.",
+        "string": "¡<Alias=AliasSkeever> el skeever ya está disponible para reclutarlo como mascota!\r\nPuedes ordenar a <Alias=AliasSkeever> que te guíe hacia alimentos cercanos. Además, puede encontrar un alimento cada día."
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_FoundItem_goat",
+        "form_id": "[050008F6]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "<Alias=PetGoat> has milk to collect!",
+        "string": "¡<Alias=PetGoat> tiene leche para ordeñar!"
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_FetchFailed_rabbit",
+        "form_id": "[050008F7]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "<Alias=PetRabbit> couldn't find anything...",
+        "string": "<Alias=PetRabbit> no ha encontrado nada..."
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_NoCombatUse",
+        "form_id": "[050008F8]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You can't use that in combat",
+        "string": "No puedes usar eso en combate."
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_FetchFailed_fox",
+        "form_id": "[050008F9]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "<Alias=PetFox> couldn't find anything...",
+        "string": "<Alias=PetFox> no ha encontrado nada..."
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_QuestDone_Spider",
+        "form_id": "[050008FD]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "<Alias=AliasSpider> the spider is now available to be recruited as your pet!\r\n<Alias=AliasSpider> can be commanded to spin a sticky web trap to slow down your enemies. Potent venom can also be collected from <Alias=AliasSpider> once per day.",
+        "string": "¡<Alias=AliasSpider> la araña ya está disponible para reclutarla como mascota!\r\nPuedes ordenar a <Alias=AliasSpider> que teja una trampa para ralentizar a los enemigos. Además, podrás extraerle un potente veneno cada día."
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_PickpocketName",
+        "form_id": "[05000814]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Pickpocket",
+        "string": "Robar"
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_FetchFailed_skeever",
+        "form_id": "[05000900]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "<Alias=PetSkeever> couldn't find anything...",
+        "string": "<Alias=PetSkeever> no ha encontrado nada..."
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_NotFollowing_Spider",
+        "form_id": "[050008FB]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "<Alias=PetSpider> must be your companion in order to give it commands",
+        "string": "<Alias=PetSpider> debe acompañarte para poder darle órdenes."
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_CommandFailed_Spider",
+        "form_id": "[050008FC]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "<Alias=PetSpider> couldn't spin a web trap there...",
+        "string": "<Alias=PetSpider> no ha podido tejer una trampa ahí..."
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_FoundItem_spider",
+        "form_id": "[05000904]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "<Alias=PetSpider> has venom to harvest!",
+        "string": "¡<Alias=PetSpider> tiene veneno para extraer!"
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_FoundItem_fox",
+        "form_id": "[05000902]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "<Alias=PetFox> found something!",
+        "string": "¡<Alias=PetFox> ha encontrado algo!"
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_QuestDone_Goat",
+        "form_id": "[050008FA]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "<Alias=AliasGoat> the goat is now available to be recruited as your pet!\r\n<Alias=AliasGoat> can carry lots of items, and can be equipped with a pack to carry even more. A jug of milk can also be collected from <Alias=AliasGoat> once per day.",
+        "string": "¡<Alias=AliasGoat> la cabra ya está disponible para reclutarla como mascota!\r\n<Alias=AliasGoat> puede transportar muchos objetos y puedes equiparle unas alforjas para que lleve más todavía. Además, puede darte una jarra de leche al día."
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_QuestDone_Rabbit",
+        "form_id": "[05000901]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "<Alias=AliasRabbit> the rabbit is now available to be recruited as your pet!\r\n<Alias=AliasRabbit> can be commanded to lead you to nearby ingredients. <Alias=AliasRabbit> also has a chance to find an ingredient once per day.",
+        "string": "¡<Alias=AliasRabbit> el conejo ya está disponible para reclutarlo como mascota!\r\nPuedes ordenar a <Alias=AliasRabbit> que te guíe hacia ingredientes cercanos. Además, puede encontrar un ingrediente cada día."
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_QuestDone_Fox",
+        "form_id": "[050008FF]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "<Alias=AliasFox> the fox is now available to be recruited as your pet!\r\n<Alias=AliasFox> can be commanded to lead you to nearby valuable items. <Alias=AliasFox> also has a chance to find a shiny item once per day.",
+        "string": "¡<Alias=AliasFox> el zorro ya está disponible para reclutarlo como mascota!\r\nPuedes ordenar a <Alias=AliasFox> que te lleve a los objetos de valor que haya cerca. Además, puede encontrar un objeto reluciente cada día."
+    },
+    {
+        "editor_id": "ccVSVSSE002_msg_FoundItem_skeever",
+        "form_id": "[05000905]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "<Alias=PetSkeever> found something!",
+        "string": "¡<Alias=PetSkeever> ha encontrado algo!"
+    }
+]

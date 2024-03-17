@@ -1,0 +1,802 @@
+[
+    {
+        "editor_id": "ccEDHSSE002_KnightArmorActivatorGauntlets",
+        "form_id": "[05000850]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "Взять:"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightArmorActivatorBoots",
+        "form_id": "[05000857]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "Взять:"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightTomb",
+        "form_id": "[05000885]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place Heart",
+        "string": "Положить сердце"
+    },
+    {
+        "editor_id": "ccEDHSSE002_defaultDisableSelfOnActivate",
+        "form_id": "[0500086E]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place Heart",
+        "string": "Положить сердце"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightArmorActivatorHelm",
+        "form_id": "[0500082D]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ebony Spell Knight Helmet",
+        "string": "Элитный шлем рыцаря-мага"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightArmorActivatorCuirass",
+        "form_id": "[0500085A]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ebony Spell Knight Cuirass",
+        "string": "Элитная кираса рыцаря-мага"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ShrineofMara",
+        "form_id": "[050008C0]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Shrine of Mara",
+        "string": "Shrine of Mara"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightArmorActivatorHelm",
+        "form_id": "[0500082D]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "Взять:"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightTomb",
+        "form_id": "[05000885]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Knight's Grave",
+        "string": "Могила рыцаря"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightArmorActivatorBoots",
+        "form_id": "[05000857]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ebony Spell Knight Boots",
+        "string": "Элитные сапоги рыцаря-мага"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightArmorActivatorGauntlets",
+        "form_id": "[05000850]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ebony Spell Knight Gauntlets",
+        "string": "Элитные перчатки рыцаря-мага"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightArmorActivatorCuirass",
+        "form_id": "[0500085A]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "Взять:"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteHelmetBLACK",
+        "form_id": "[050008A3]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Helmet",
+        "string": "Эбонитовый шлем рыцаря-мага"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntSteelCuirass",
+        "form_id": "[05000D74]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Steel Spell Knight Armor",
+        "string": "Стальная броня рыцаря-мага"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntSteelBoots",
+        "form_id": "[05000D73]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Steel Spell Knight Boots",
+        "string": "Стальные сапоги рыцаря-мага"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntIronBoots",
+        "form_id": "[05000D77]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Iron Spell Knight Boots",
+        "string": "Железные сапоги рыцаря-мага"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntIronHelmet",
+        "form_id": "[05000D7A]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Iron Spell Knight Helmet",
+        "string": "Железный шлем рыцаря-мага"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteBoots",
+        "form_id": "[05000D7B]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Boots",
+        "string": "Эбонитовые сапоги рыцаря-мага"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntSteelHelmet",
+        "form_id": "[05000D76]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Steel Spell Knight Helmet",
+        "string": "Стальной шлем рыцаря-мага"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteBootsBLACK",
+        "form_id": "[050008A0]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Boots",
+        "string": "Эбонитовые сапоги рыцаря-мага"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntSteelGauntlets",
+        "form_id": "[05000D75]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Steel Spell Knight Gauntlets",
+        "string": "Стальные перчатки рыцаря-мага"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteCuirass",
+        "form_id": "[05000D7C]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Armor",
+        "string": "Эбонитовая броня рыцаря-мага"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntIronCuirass",
+        "form_id": "[05000D78]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Iron Spell Knight Armor",
+        "string": "Железная броня рыцаря-мага"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteGauntlets",
+        "form_id": "[05000D7D]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Gauntlets",
+        "string": "Эбонитовые перчатки рыцаря-мага"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteBootsWHITE",
+        "form_id": "[0500089C]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Boots",
+        "string": "Эбонитовые сапоги рыцаря-мага"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteCuirassWHITE",
+        "form_id": "[0500089D]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Armor",
+        "string": "Эбонитовая броня рыцаря-мага"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntIronGauntlets",
+        "form_id": "[05000D79]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Iron Spell Knight Gauntlets",
+        "string": "Железные перчатки рыцаря-мага"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteGauntletsWHITE",
+        "form_id": "[0500089E]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Gauntlets",
+        "string": "Эбонитовые перчатки рыцаря-мага"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteGauntletsBLACK",
+        "form_id": "[050008A2]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Gauntlets",
+        "string": "Эбонитовые перчатки рыцаря-мага"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteCuirassBLACK",
+        "form_id": "[050008A1]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Armor",
+        "string": "Эбонитовая броня рыцаря-мага"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteHelmet",
+        "form_id": "[05000D7E]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Helmet",
+        "string": "Эбонитовый шлем рыцаря-мага"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteHelmetWHITE",
+        "form_id": "[0500089F]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Helmet",
+        "string": "Эбонитовый шлем рыцаря-мага"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightNote",
+        "form_id": "[0500089B]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nWe've received reports that the Beldama witches have resurfaced in the Reach.\r\n\r\nI'm calling upon all willing and able knights to cleanse the land of witches, hags, and Reachmen. Remember always the death of our sworn brother, Simon Rodayne, for the Order of the Crypt, and for all of Shornhelm.\r\n\r\n-- Knight Captain Rainore\r\n</font>",
+        "string": "<font face='$HandwrittenFont'>\r\nНам неоднократно сообщали о том, что в Пределе снова появились ведьмы Белдамы.\r\n\r\nЯ призываю всех желающих и способных рыцарей очистить нашу страну от ведьм, колдуний и предельцев. Помните о нашем побратиме, Саймоне Родейне, который погиб за орден Крипты и за весь Шорнхельм.\r\n\r\n-- Рыцарь-капитан Рейнор\r\n</font>"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightNote",
+        "form_id": "[0500089B]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Knight Captain's Orders",
+        "string": "Приказы рыцаря-капитана"
+    },
+    {
+        "editor_id": "ccEDHSSE002_HagNote",
+        "form_id": "[05000889]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Beldama Witch's Note",
+        "string": "Записка ведьмы Белдамы"
+    },
+    {
+        "editor_id": "ccEDHSSE002_HagNote",
+        "form_id": "[05000889]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nWe have stalked our sister Daenella for years, reading the feathers and bones, for not even a witch of Beldama can escape the eye of the coven. \r\n\r\nUsing the crow's sight, we found her upon an altar in the Reach. Time and age did little to fool us. She is the one who betrayed us to the knights. \r\n\r\nSuch an act deserves a cruel death, but simply killing the traitor will not be enough for the ward mother's vengeance. \r\n\r\nWe will corrupt her beloved's heart and return it tainted, damning his soul for eternity. She will know this as she dies upon the rock.\r\n</font>",
+        "string": "<font face='$HandwrittenFont'>\r\nМы много лет выслеживали нашу сестру Дэнеллу, гадая на перьях и костях, поскольку даже ведьма Белдамы не ускользнет от ковена. \r\n\r\nС помощью зрения ворона мы нашли ее у алтаря в Пределе. Время оставило на ее лице свой отпечаток, но это нас не обмануло. Именно она выдала нас рыцарям. \r\n\r\nТакой поступок карается жестокой смертью, но просто убить предательницу будет недостаточно, чтобы свершить месть матери. \r\n\r\nМы оскверним сердце ее возлюбленного и обречем его душу на вечное проклятие. Умирая на камне, она узнает об этом.\r\n</font>"
+    },
+    {
+        "editor_id": "ccEDHSSE002_QuestStartNote",
+        "form_id": "[05000838]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Ghost Sighting",
+        "string": "Появление призрака"
+    },
+    {
+        "editor_id": "ccEDHSSE002_WarMagesShornhelm",
+        "form_id": "[05000853]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Crypt of the Heart - Draft",
+        "string": "Крипта сердца - набросок"
+    },
+    {
+        "editor_id": "ccEDHSSE002_WarMagesShornhelm",
+        "form_id": "[05000853]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\r\n<p align=\"center\">\r\n<font face='$HandwrittenFont'>\r\n\r\nCrypt of the Heart\r\n\r\n\r\n\r\nby \r\nAriana Dumas\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<font face='$HandwrittenFont'>When it comes to tales of bravery and valor, few have a greater claim than the Knightly Orders of High Rock. Like the Knights of the Rose in Wayrest, many serve as royal guardians and protectors of the realm. It is through their defense of king and country that their fame resounds.\r\n\r\nYet others swear an oath of a different kind. Not bound by the walls of their kingdom, they scour the hills in search of Reachmen, witches, and Forsworn, pledging to deliver justice where savagery and chaos rule.\r\n\r\nOne such group refers to themselves as the Order of the Crypt. At first glance, the name might seem ironic, but the Crypt of Hearts they swore to protect went beyond the underground chamber in Shornhelm. The knights pledged to protect the hearts entombed in all of us, lest they be replaced with the briars of the unholy.\r\n\r\nYet despite the air of nobility they carried, in the Reach these knights were known by a different name; The War Mages of Shornhelm. For they gave no mercy to the wicked, and the land they tread was riven with scars made of fire and sword.\r\n\r\nWhy the knights chose to extend beyond the kingdom is a matter of debate. Much of it can be traced to a blood feud, and the death of a knight named Simon Rodayne. Tricked by the witch Daenalla, a Sister of the Beldama Coven, his heart was stolen and replaced with a briarheart. In retaliation, his acolytes drove the coven further and further east, killing any Reachmen who would dare give them quarter. \r\n\r\nYet in huts small and muddy with smoke, the oral histories tell a different story. They say Simon gave his heart willingly to the witch, and together they fled the wrath of both their clans, knowing they would receive neither understanding nor forgiveness.\r\n\r\nWhen Simon died, Daenalla returned his heart to him, and buried him at the altar where they wed. Such was the pain of her loss that she wept from the Morning to the Evening Star, until her tears flooded the canyon below and became one with the river Karth. \r\n\r\nTo this day, Simon's ghost is said to haunt the pass below his grave, watching over the river which bears his beloved's tears.\r\n\r\nWhether any of that is true or simply the embellishments of history, none can say with certainty. However, it is worth noting that the grave itself exists. Whether the heart inside belongs to Simon or another, is a question for its keeper.</p></font>",
+        "string": "[pagebreak]\r\n<p align=\"center\">\r\n<font face='$HandwrittenFont'>\r\n\r\nКрипта сердца\r\n\r\n\r\n\r\nавтор \r\nАриана Дюма\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<font face='$HandwrittenFont'>Когда речь заходит о примерах мужества и доблести, мало кто может сравниться с рыцарскими орденами Хай-рока. Многие из них служат королевской страже и защищают наши земли, как Рыцари Розы из Вэйреста. Именно служба королю и своей стране прославила их.\r\n\r\nНо некоторые приносят иные клятвы. Пренебрегая границами своего королевства, они рыщут в холмах в поисках предельцев, ведьм и Изгоев, ибо поклялись нести свет справедливости туда, где царят беззаконие и дикарские обычаи.\r\n\r\nОдна такая группа называет себя Орденом Крипты. На первый взгляд название кажется немного нелепым, но Крипта сердец, которую они поклялись защищать, не ограничивается подземельем в Шорнхельме. Эти рыцари дали клятву защищать сердца, сокрытые в каждом из нас - разумеется, кроме тех, которые были подменены нечистым вереском.\r\n\r\nОднако несмотря на возвышенный дух, в Пределе этих рыцарей знали под иным именем: Боевые маги Шорнхельма. Ибо они не щадили служителей зла, и там, где они побывали, земля несла следы их огня и мечей.\r\n\r\nДо сих пор неясно, почему эти рыцари не ограничивались пределами своего королевства. Основным мотивом могла стать кровавая распря, повлекшая за собой смерть рыцаря Саймона Родейна. Ведьма Дэнелла из ковена Белдамы обманом заменила его сердце на вересковое. В отместку его собратья гнали ковен все дальше и дальше на восток, убивая предельцев, рискнувших укрыть ведьм от преследования. \r\n\r\nОднако в чаду бедных хижин из уст в уста передают другую версию легенды. Говорят, что Саймон добровольно отдал ведьме свое сердце, и вместе они скрывались от ковена и ордена, зная, что не найдут ни понимания, ни прощения.\r\n\r\nКогда Саймон скончался, Дэнелла вернула ему его сердце и похоронила его у алтаря, где они венчались. Горе ее было столь велико, что она рыдала с Месяца Утренней Звезды до Месяца Вечерней Звезды, пока ее слезы не наполнили ущелье и не влились в реку Карт. \r\n\r\nГоворят, что и по сей день призрак Саймона бродит по перевалу близ своей могилы и глядит на реку, наполненную слезами его возлюбленной.\r\n\r\nПравда ли это или всего лишь приукрашение истории - никто не может утверждать. Однако стоит упомянуть, что такая могила на самом деле существует. Кому принадлежит похороненное в ней сердце - Саймону или кому-то другому, знает, вероятно, только сам ее обитатель.</p></font>"
+    },
+    {
+        "editor_id": "ccEDHSSE002_BriarHeartNote",
+        "form_id": "[05000855]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Forsworn Shaman's Note",
+        "string": "Записка Изгоя-шамана"
+    },
+    {
+        "editor_id": "ccEDHSSE002_QuestStartNote",
+        "form_id": "[05000838]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nI've heard a lot of strange tales in the Reach. Witches turning men into frogs, wolves the size of bears, things like that. There's even a story about an old knight's tomb, and a ghost haunting the Reach.\r\n\r\nNow, normally I brush off such talk. The emptier the bottle, the taller the tale. \r\n\r\nBut what I saw last night changed my mind. I was heading south toward Dushnikh Yal, to set up camp and mine the hills in the morning. I had just crossed the river, when I saw something come out of the fog. \r\n\r\nIt was just like in the stories. He looked like a man cast from the moonlight. I could see him, and at the same, I could see right through him. Not only that, he was dressed in some armor I've never seen, and bade me to follow him up the hillside. \r\n\r\nBut I did no such thing. Instead I dropped my knapsack, turned tail and ran. Call me a snowback, a milk-drinker, I don't care. No good can come from following the dead. There's is a place no man wants to visit.\r\n</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nПо Пределу гуляет множество странных слухов. Ведьмы, превращающие людей в лягушек, волки размером с медведей - все в таком духе. Существует даже история о древней рыцарской гробнице и о призраке, наводящем страх на Предел.\r\n\r\nОбычно я таким россказням не верю. Чем меньше в стакане, тем больше на языке, - так говорят. \r\n\r\nНо то, что я видел прошлой ночью, заставило меня усомниться. Я шел на юг в сторону Душник-Йала, чтобы разбить лагерь, а утром начать раскопку в горах. И только я перешел реку, как увидел нечто, выходящее из тумана. \r\n\r\nОно выглядело, словно человек, сотканный из лунного света - точно как в рассказах. Я видел его и в то же время мог смотреть сквозь него. Кроме того, на нем были доспехи, каких я никогда не видел. Он поманил меня за собой вверх по горному склону. \r\n\r\nНо я не пошел за ним. Я бросил свой наплечный мешок, развернулся и кинулся бежать. Зовите меня трусом, молокососом - мне все равно. Если идти за мертвецом, добром это не кончится. Есть места, в которые лучше просто не соваться.\r\n</font>"
+    },
+    {
+        "editor_id": "ccEDHSSE002_BriarHeartNote",
+        "form_id": "[05000855]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nWe've killed the traitor and given the knight's heart to the mother. She's gone back to Karthspire to perform the ritual.\r\n\r\nWe'll stand watch until she returns, and drain the blood of any knights who interfere.\r\n</font>",
+        "string": "<font face='$HandwrittenFont'>\r\nМы убили предательницу и принесли матери сердце рыцаря. Она вернулась в Картспайр, чтобы провести ритуал.\r\n\r\nДо ее возвращения мы не теряем бдительности и пустим кровь любому рыцарю, который решит к нам сунуться.\r\n</font>"
+    },
+    {
+        "editor_id": "ccEDHSSE002_QAChest",
+        "form_id": "[05000D7F]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Spell Knight Chest",
+        "string": "Сундук рыцаря-мага"
+    },
+    {
+        "editor_id": "ccEDHSSE002_MarkarthCoffin01container",
+        "form_id": "[05000811]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Grave",
+        "string": "Могила"
+    },
+    {
+        "editor_id": "ccEDHSSE002_HumanHeart",
+        "form_id": "[0500085D]",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Simon Rodayne's Heart",
+        "string": "Сердце Саймона Родейна"
+    },
+    {
+        "editor_id": "ccEDHSSE002_CorruptedHumanHeart",
+        "form_id": "[0500085B]",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Corrupted Human Heart",
+        "string": "Оскверненное человеческое сердце"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Daenella",
+        "form_id": "[05000877]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Daenella",
+        "string": "Дэнелла"
+    },
+    {
+        "editor_id": "ccEDHSSE002_LvlForswornShaman",
+        "form_id": "[05000845]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Forsworn Shaman",
+        "string": "Forsworn Shaman"
+    },
+    {
+        "editor_id": "ccEDHSSE002_SpellKnight03",
+        "form_id": "[0500087B]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Simon",
+        "string": "Саймон"
+    },
+    {
+        "editor_id": "ccEDHSSE002_SpellKnight03",
+        "form_id": "[0500087B]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Simon Rodayne",
+        "string": "Саймон Родейн"
+    },
+    {
+        "editor_id": "ccEDHSSE002_LvlForswornBoss",
+        "form_id": "[050008A4]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Forsworn Briarheart",
+        "string": "Forsworn Briarheart"
+    },
+    {
+        "editor_id": "ccEDHSSE002_SpellKnightSteel",
+        "form_id": "[05000898]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Knight of the Crypt",
+        "string": "Рыцарь Крипты"
+    },
+    {
+        "editor_id": "ccEDHSSE002_LvlForswornMeleeFemale",
+        "form_id": "[05000847]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Forsworn Ravager",
+        "string": "Forsworn Ravager"
+    },
+    {
+        "editor_id": "ccEDHSSE002_DaenellaCorpse",
+        "form_id": "[0500080E]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Daenella",
+        "string": "Дэнелла"
+    },
+    {
+        "editor_id": "ccEDHSSE002_SpellKnight02",
+        "form_id": "[05000867]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Simon Rodayne",
+        "string": "Саймон Родейн"
+    },
+    {
+        "editor_id": "ccEDHSSE002_SpellKnightIron",
+        "form_id": "[05000897]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Knight of the Crypt",
+        "string": "Рыцарь Крипты"
+    },
+    {
+        "editor_id": "ccEDHSSE002_SpellKnight",
+        "form_id": "[05000834]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Ghost Knight",
+        "string": "Призрачный рыцарь"
+    },
+    {
+        "editor_id": "ccEDHSSE002_SpellKnight02",
+        "form_id": "[05000867]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Simon",
+        "string": "Саймон"
+    },
+    {
+        "editor_id": "MarkarthSilverBloodInn",
+        "form_id": "[00016DFE]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Silver-Blood Inn",
+        "string": "Таверна \"Серебряная Кровь\""
+    },
+    {
+        "editor_id": "Tamriel",
+        "form_id": "[0000003C]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Скайрим"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "I found a book at the Silver-Blood Inn that mentions the ghost of a Breton knight named Simon Rodayne. According to the book, he haunts the river below his tomb, south of Markarth. I should investigate the area and see what I can find.",
+        "string": "В таверне \"Серебряная Кровь\" мне попалась книга о призраке бретонского рыцаря Саймона Родейна. Согласно ей он бродит у реки возле своей гробницы к югу от Маркарта. Надо изучить эту область."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 2000,
+        "type": "QUST NNAM",
+        "original": "Retrieve the knight's armor",
+        "string": "Получить броню рыцаря"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 77,
+        "type": "QUST CNAM",
+        "original": "I found a knight's tomb in Markarth surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire. At Karthspire, I found two hagravens conducting a ritual with the heart at its center. I retrieved the heart and returned it to the knight's tomb. ",
+        "string": "Мне удалось найти гробницу рыцаря в Маркарте. Ее охраняли трое Изгоев, которых мне пришлось победить. На теле шамана обнаружилась записка, в которой говорилось, что они осквернили гробницу и доставили сердце рыцаря в Картспайр. В Картспайре две ворожеи проводили над сердцем какой-то ритуал. Мне удалось забрать сердце и вернуть его в гробницу рыцаря. "
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 85,
+        "type": "QUST CNAM",
+        "original": "I investigated the area south of Markarth and was confronted by a ghost. After following the ghost and climbing up to the top of the mountain, I found a tomb surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire.",
+        "string": "Во время изучения южных окрестностей Маркарта мне повстречался призрак. Проследив за призраком и взобравшись на вершину горы, мне удалось найти гробницу. Ее охраняли трое Изгоев, которых мне пришлось победить. На теле шамана обнаружилась записка, в которой говорилось, что они осквернили гробницу и доставили сердце рыцаря в Картспайр."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 79,
+        "type": "QUST CNAM",
+        "original": "The inns of Skyrim are a good place to look for rumors. Being on the western border, Markarth is one of the busiest holds in Skyrim. I should head to the inn there and see what I can find.",
+        "string": "В тавернах Скайрима можно услышать самые разные слухи. Маркарт на западной границе - одна из самых людных крепостей Скайрима. Надо зайти там в таверну и посмотреть, что удастся выяснить."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 50,
+        "type": "QUST NNAM",
+        "original": "Search the Forsworn Shaman",
+        "string": "Обыскать Изгоя-шамана"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 86,
+        "type": "QUST CNAM",
+        "original": "I found a book at the Silver-Blood Inn that mentions the ghost of a Breton knight named Simon Rodayne. According to the book, he haunts the river below his tomb, south of Markarth. At the river, I found the presence of a ghost who wandered off further south. I followed the ghost up the hill when it vanished. The knight's tomb must be somewhere in the surrounding area.",
+        "string": "В таверне \"Серебряная Кровь\" мне попалась книга о призраке бретонского рыцаря Саймона Родейна. Согласно ей он бродит у реки возле своей гробницы к югу от Маркарта. У реки мне действительно повстречался призрак, который направлялся дальше на юг и исчез, когда мы дошли до вершины горы. Гробница рыцаря должна быть где-то неподалеку."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 104,
+        "type": "QUST CNAM",
+        "original": "I found a knight's tomb in Markarth surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire. At Karthspire, I found two hagravens conducting a ritual with the heart at its center. I retrieved the heart and returned it to the knight's tomb. The heart was still corrupted, however, and the knight's ghost turned hostile as a result. I defeated the knight and took his armor for myself.",
+        "string": "Мне удалось найти гробницу рыцаря в Маркарте. Ее охраняли трое Изгоев, которых мне пришлось победить. На теле шамана обнаружилась записка, в которой говорилось, что они осквернили гробницу и доставили сердце рыцаря в Картспайр. В Картспайре две ворожеи проводили над сердцем какой-то ритуал. Мне удалось забрать сердце и вернуть его в гробницу рыцаря. Однако сердце было оскверненным, и призрак рыцаря напал на меня. После победы над ним мне досталась его броня."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 82,
+        "type": "QUST CNAM",
+        "original": "I investigated the area south of Markarth and was confronted by a ghost. After following the ghost and climbing up to the top of the mountain, I found a tomb surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire. At Karthspire, I found two hagravens conducting a ritual with the heart at its center. I retrieved the heart and can now return it to the knight's tomb.",
+        "string": "Во время изучения южных окрестностей Маркарта мне повстречался призрак. Проследив за призраком и взобравшись на вершину горы, мне удалось найти гробницу. Ее охраняли трое Изгоев, которых мне пришлось победить. На теле шамана обнаружилась записка, в которой говорилось, что они осквернили гробницу и доставили сердце рыцаря в Картспайр. В Картспайре две ворожеи проводили над сердцем какой-то ритуал. Мне удалось забрать сердце, и теперь я могу вернуть его в гробницу рыцаря."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 80,
+        "type": "QUST NNAM",
+        "original": "(Optional) Purify the heart at the altar",
+        "string": "(Дополнительно) Очистить сердце на алтаре"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Investigate the Silver-Blood Inn",
+        "string": "Отправиться в таверну \"Серебряная Кровь\""
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 79,
+        "type": "QUST CNAM",
+        "original": "I found a book at the Silver-Blood Inn that mentions the ghost of a Breton knight named Simon Rodayne. According to the book, he haunts the river below his tomb, south of Markarth. After following the ghost and climbing up to the top of the mountain, I found a tomb surrounded by three Forsworn, and defeated them in battle.",
+        "string": "В таверне \"Серебряная Кровь\" мне попалась книга о призраке бретонского рыцаря Саймона Родейна. Согласно ей он бродит у реки возле своей гробницы к югу от Маркарта. Проследив за призраком и взобравшись на вершину горы, мне удалось найти гробницу. Ее охраняли трое Изгоев, которых мне пришлось победить."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 73,
+        "type": "QUST CNAM",
+        "original": "I investigated the area south of Markarth and was confronted by a ghost. After following the ghost and climbing up to the top of the mountain, I found a tomb surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire. At Karthspire, I found two hagravens conducting a ritual with the heart at its center. I retrieved the heart and returned it to the knight's tomb.",
+        "string": "Во время изучения южных окрестностей Маркарта мне повстречался призрак. Проследив за призраком и взобравшись на вершину горы, мне удалось найти гробницу. Ее охраняли трое Изгоев, которых мне пришлось победить. На теле шамана обнаружилась записка, в которой говорилось, что они осквернили гробницу и доставили сердце рыцаря в Картспайр. В Картспайре две ворожеи проводили над сердцем какой-то ритуал. Мне удалось забрать сердце и вернуть его в гробницу рыцаря."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 1000,
+        "type": "QUST NNAM",
+        "original": "Retrieve the knight's armor",
+        "string": "Получить броню рыцаря"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 105,
+        "type": "QUST CNAM",
+        "original": "I found a knight's tomb in Markarth surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire. At Karthspire, I found two hagravens conducting a ritual with the heart at its center. I retrieved the heart and returned it to the knight's tomb. The heart was still corrupted, however, and the knight's ghost turned hostile as a result.",
+        "string": "Мне удалось найти гробницу рыцаря в Маркарте. Ее охраняли трое Изгоев, которых мне пришлось победить. На теле шамана обнаружилась записка, в которой говорилось, что они осквернили гробницу и доставили сердце рыцаря в Картспайр. В Картспайре две ворожеи проводили над сердцем какой-то ритуал. Мне удалось забрать сердце и вернуть его в гробницу рыцаря. Однако сердце было оскверненным, и призрак рыцаря напал на меня."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 55,
+        "type": "QUST NNAM",
+        "original": "Read the Forsworn Shaman's note",
+        "string": "Прочесть записку Изгоя-шамана"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 90,
+        "type": "QUST NNAM",
+        "original": "Defeat the Corrupted Knight",
+        "string": "Победить рыцаря"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 76,
+        "type": "QUST CNAM",
+        "original": "I found a knight's tomb in Markarth surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire. At Karthspire, I found two hagravens conducting a ritual with the heart at its center. I retrieved the heart and returned it to the knight's tomb. After purifying the heart, I saw a visage of the knight and the witch reunited once more. ",
+        "string": "Мне удалось найти гробницу рыцаря в Маркарте. Ее охраняли трое Изгоев, которых мне пришлось победить. На теле шамана обнаружилась записка, в которой говорилось, что они осквернили гробницу и доставили сердце рыцаря в Картспайр. В Картспайре две ворожеи проводили над сердцем какой-то ритуал. Мне удалось забрать сердце и вернуть его в гробницу рыцаря. После очищения сердца призраки рыцаря и ведьмы смогли воссоединиться. "
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 89,
+        "type": "QUST CNAM",
+        "original": "I found a book at the Silver-Blood Inn that mentions the ghost of a Breton knight named Simon Rodayne. According to the book, he haunts the river below his tomb, south of Markarth. After following the ghost and climbing up to the top of the mountain, I found a tomb surrounded by three Forsworn.",
+        "string": "В таверне \"Серебряная Кровь\" мне попалась книга о призраке бретонского рыцаря Саймона Родейна. Согласно ей он бродит у реки возле своей гробницы к югу от Маркарта. Проследив за призраком и взобравшись на вершину горы, мне удалось найти гробницу, которую охраняли трое Изгоев."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 98,
+        "type": "QUST CNAM",
+        "original": "I found a knight's tomb in Markarth surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire. At Karthspire, I found two hagravens conducting a ritual with the heart at its center. I retrieved the heart and returned it to the knight's tomb. The heart was still corrupted, however, and the knight's ghost turned hostile as a result. I defeated the knight and can now retrieve his armor from the tomb.",
+        "string": "Мне удалось найти гробницу рыцаря в Маркарте. Ее охраняли трое Изгоев, которых мне пришлось победить. На теле шамана обнаружилась записка, в которой говорилось, что они осквернили гробницу и доставили сердце рыцаря в Картспайр. В Картспайре две ворожеи проводили над сердцем какой-то ритуал. Мне удалось забрать сердце и вернуть его в гробницу рыцаря. Однако сердце было оскверненным, и призрак рыцаря напал на меня. Победив его, я могу забрать его броню из гробницы."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "I found a knight's tomb in Markarth surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire. At Karthspire, I found two hagravens conducting a ritual with the heart at its center. I retrieved the heart and returned it to the knight's tomb. ",
+        "string": "Мне удалось найти гробницу рыцаря в Маркарте. Ее охраняли трое Изгоев, которых мне пришлось победить. На теле шамана обнаружилась записка, в которой говорилось, что они осквернили гробницу и доставили сердце рыцаря в Картспайр. В Картспайре две ворожеи проводили над сердцем какой-то ритуал. Мне удалось забрать сердце и вернуть его в гробницу рыцаря. "
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 25,
+        "type": "QUST NNAM",
+        "original": "Follow the ghost",
+        "string": "Проследовать за призраком"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Search the hills for the knight's tomb",
+        "string": "Отыскать в горах гробницу рыцаря"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 60,
+        "type": "QUST NNAM",
+        "original": "Search Karthspire for the stolen heart",
+        "string": "Отыскать в Картспайре украденное сердце"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "I investigated the area south of Markarth and was confronted by a ghost. After following the ghost and climbing up to the top of the mountain, I found a tomb surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that may provide additional clues.",
+        "string": "Во время изучения южных окрестностей Маркарта мне повстречался призрак. Проследив за призраком и взобравшись на вершину горы, мне удалось найти гробницу. Ее охраняли трое Изгоев, которых мне пришлось победить. На теле шамана обнаружилась записка, в которой могут быть еще какие-нибудь сведения."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Look for the knight's ghost in the area south of Markarth",
+        "string": "Поискать призрак рыцаря в южных окрестностях Маркарта"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 78,
+        "type": "QUST CNAM",
+        "original": "I found a book at the Silver-Blood Inn that mentions the ghost of a Breton knight named Simon Rodayne. According to the book, he haunts the river below his tomb, south of Markarth. At the river, I found the presence of a ghost who wandered off further south.",
+        "string": "В таверне \"Серебряная Кровь\" мне попалась книга о призраке бретонского рыцаря Саймона Родейна. Согласно ей он бродит у реки возле своей гробницы к югу от Маркарта. У реки мне действительно повстречался призрак, который направлялся дальше на юг."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "Defeat the Forsworn",
+        "string": "Победить Изгоев"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 70,
+        "type": "QUST NNAM",
+        "original": "Return the heart to the knight's tomb",
+        "string": "Вернуть сердце в гробницу рыцаря"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Crypt of the Heart",
+        "string": "Крипта сердца"
+    },
+    {
+        "editor_id": "ccEDHSSE002_BeldamaMessage",
+        "form_id": "[05000859]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Beldama Witch",
+        "string": "Ведьма Белдамы"
+    },
+    {
+        "editor_id": "ccEDHSSE002_DaenellaMessage",
+        "form_id": "[05000858]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Daenella",
+        "string": "Дэнелла"
+    },
+    {
+        "editor_id": "ccEDHSSE002_CoffinMessage",
+        "form_id": "[05000880]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Knight's Grave",
+        "string": "Могила рыцаря"
+    },
+    {
+        "editor_id": "ccEDHSSE002_DaenellaMessage",
+        "form_id": "[05000858]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Daenella",
+        "string": "Дэнелла"
+    },
+    {
+        "editor_id": "ccEDHSSE002_CoffinMessage",
+        "form_id": "[05000880]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Knight's Grave",
+        "string": "Могила рыцаря"
+    },
+    {
+        "editor_id": "ccEDHSSE002_BeldamaMessage",
+        "form_id": "[05000859]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Beldama Witch",
+        "string": "Ведьма Белдамы"
+    },
+    {
+        "editor_id": "ccEDHSSE002_BeldamaMessage02",
+        "form_id": "[05000831]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Beldama Ward Mother",
+        "string": "Мать ковена Белдамы"
+    },
+    {
+        "editor_id": "ccEDHSSE002_HeartMessage",
+        "form_id": "[05000864]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Simon Rodayne's Heart",
+        "string": "Сердце Саймона Родейна"
+    },
+    {
+        "editor_id": "ccEDHSSE002_BeldamaMessage02",
+        "form_id": "[05000831]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Beldama Ward Mother",
+        "string": "Мать ковена Белдамы"
+    },
+    {
+        "editor_id": "ccEDHSSE002_HeartMessage",
+        "form_id": "[05000864]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Simon Rodayne's Heart",
+        "string": "Сердце Саймона Родейна"
+    }
+]

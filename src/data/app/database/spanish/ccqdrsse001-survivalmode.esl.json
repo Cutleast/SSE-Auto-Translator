@@ -1,0 +1,4770 @@
+[
+    {
+        "editor_id": "Survival_ColdStage3ImodEffect",
+        "form_id": "[050008F6]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Cold Stage 3 Imod Applicator",
+        "string": "Aplicador imod de la fase 3 de frío"
+    },
+    {
+        "editor_id": "Survival_OblivionDisplayEffect",
+        "form_id": "[050008FF]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Transmundane",
+        "string": "Transmundano"
+    },
+    {
+        "editor_id": "Survival_DisDamageLightArmorHeavyArmor2",
+        "form_id": "[05000969]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Severe Brown Rot",
+        "string": "Putrefacción marrón grave"
+    },
+    {
+        "editor_id": "Survival_ResistColdTorchEffect",
+        "form_id": "[05000965]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fortify Warmth",
+        "string": "Reforzar calor"
+    },
+    {
+        "editor_id": "Survival_PenaltyStaminaEffect",
+        "form_id": "[05000A01]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Stamina",
+        "string": "Aguante reducido"
+    },
+    {
+        "editor_id": "Survival_TrapDisDamagePickpocketLockpick",
+        "form_id": "[0500097D]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Picking locks and picking pockets is <25>% harder. Progresses to Severe Ataxia.",
+        "string": "Abrir cerraduras y robar resulta un <25>% más difícil. Progresa a ataxia grave."
+    },
+    {
+        "editor_id": "TrapDisDamageStaminaRegen",
+        "form_id": "[0010A255]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Stamina recovers half as fast.",
+        "string": "El aguante se recupera la mitad de rápido."
+    },
+    {
+        "editor_id": "Survival_DamageDiseaseResist",
+        "form_id": "[0500082F]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Weakness to Disease",
+        "string": "Debilidad a la enfermedad"
+    },
+    {
+        "editor_id": "Survival_RegionEffectSouthForestMtnsFreezingArea",
+        "form_id": "[05000840]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Pine Forest Freezing Area",
+        "string": "Zona helada del Pinar"
+    },
+    {
+        "editor_id": "Survival_ColdStage4DisplayEffect",
+        "form_id": "[05000954]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": " Cold - Freezing",
+        "string": " Frío: helado"
+    },
+    {
+        "editor_id": "Survival_DLC2DisDamage1and2Handed3",
+        "form_id": "[0500097A]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Weapon Damage",
+        "string": "Daño de armas reducidas"
+    },
+    {
+        "editor_id": "Survival_DisDamageLightArmorHeavyArmor2",
+        "form_id": "[05000969]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Light and heavy armor prevents <50>% less damage. Sleeping is <50>% less restful. Progresses to Crippling Brown Rot.",
+        "string": "Las armaduras ligera y pesada previenen un <50>% menos de daño. Dormir repone un <50>% menos. Progresa a Putrefacción marrón incapacitante."
+    },
+    {
+        "editor_id": "Survival_HungerStage3DisplayEffect",
+        "form_id": "[0500095D]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": " Hunger - Hungry",
+        "string": " Hambre: hambriento"
+    },
+    {
+        "editor_id": "Survival_ColdStage2ImodEffect",
+        "form_id": "[050008F5]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Cold Stage 2 Imod Applicator",
+        "string": "Aplicador imod de la fase 2 de frío"
+    },
+    {
+        "editor_id": "Survival_HungerStage5ImodEffect",
+        "form_id": "[050008ED]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Hunger Stage 5 Imod Applicator",
+        "string": "Aplicador imod de la fase 5 de hambre"
+    },
+    {
+        "editor_id": "Survival_FoodRestoreHungerLargeVampire",
+        "form_id": "[05000831]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "[SURV=Vampires restore <380> points of Hunger.]",
+        "string": "[SURV=Los vampiros sacian <380> puntos de hambre.]"
+    },
+    {
+        "editor_id": "Survival_DisDamageSpeechcraft3",
+        "form_id": "[0500096D]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Speech",
+        "string": "Elocuencia reducida"
+    },
+    {
+        "editor_id": "DisDamageStamina",
+        "form_id": "[000B8776]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Stamina",
+        "string": "Aguante reducido"
+    },
+    {
+        "editor_id": "Survival_DamageArchery",
+        "form_id": "[05000837]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Bows do <mag>% less damage.",
+        "string": "Los arcos infligen un <mag>% menos de daño."
+    },
+    {
+        "editor_id": "TrapDisDamageMagicka",
+        "form_id": "[0010A251]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Drains <mag> points of Magicka.",
+        "string": "Consume <mag> puntos de magia."
+    },
+    {
+        "editor_id": "FoodRestoreHealthDuration",
+        "form_id": "[001058A2]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Restore Health",
+        "string": "Restablecer salud"
+    },
+    {
+        "editor_id": "Survival_RestedWellSkillEffect",
+        "form_id": "[05000858]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "All skills improve <10>% faster.",
+        "string": "Todas las habilidades mejoran un <10>% más rápido."
+    },
+    {
+        "editor_id": "Survival_DisFoodPoisoningStamina",
+        "form_id": "[050008FE]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Stamina regenerates <mag>% slower.",
+        "string": "El aguante se regenera un <mag>% más lento."
+    },
+    {
+        "editor_id": "Survival_FoodRestoreHungerLargeVampire",
+        "form_id": "[05000831]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Vampire Restore Hunger Large",
+        "string": "Saciar hambre de vampiro: grande"
+    },
+    {
+        "editor_id": "Survival_DamageHealRate",
+        "form_id": "[05000908]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Damage Health Regeneration",
+        "string": "Dañar la regeneración de la salud"
+    },
+    {
+        "editor_id": "Survival_DisDamageStamina",
+        "form_id": "[05000968]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Drains <25> points from stamina. Progresses to Severe Bone Break Fever.",
+        "string": "Consume <25> puntos de aguante. Progresa a fiebre quebrantahuesos grave."
+    },
+    {
+        "editor_id": "Survival_FoodRestoreHungerMedium",
+        "form_id": "[01002EE3]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Restore Hunger Medium",
+        "string": "Saciar hambre: mediana"
+    },
+    {
+        "editor_id": "Survival_AfflictionAddledDisplayEffect",
+        "form_id": "[050009D2]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Addled",
+        "string": "Confuso"
+    },
+    {
+        "editor_id": "Survival_DisDamageSpeechcraft2",
+        "form_id": "[0500097B]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Speech",
+        "string": "Elocuencia reducida"
+    },
+    {
+        "editor_id": "Survival_DamageSneak",
+        "form_id": "[05000849]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "You are <mag>% easier to detect.",
+        "string": "Eres un <mag>% más fácil de detectar."
+    },
+    {
+        "editor_id": "Survival_DisDamageStaminaRegen2",
+        "form_id": "[0500096F]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Stamina recovers <75>% slower. Progresses to Crippling Rattles.",
+        "string": "El aguante se recupera un <75>% más lento. Progresa a estertores incapacitantes."
+    },
+    {
+        "editor_id": "Survival_AfflictionWeakenedDisplayEffect",
+        "form_id": "[050009D4]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Weakened",
+        "string": "Exánime"
+    },
+    {
+        "editor_id": "Survival_TrapDisDamageMagicka",
+        "form_id": "[05000980]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Damage Magicka",
+        "string": "Dañar magia"
+    },
+    {
+        "editor_id": "Survival_DamageBlock",
+        "form_id": "[05000848]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Blocking absorbs <mag>% less damage.",
+        "string": "El bloqueo absorbe un <mag>% menos de daño."
+    },
+    {
+        "editor_id": "Survival_FoodRestoreCold",
+        "form_id": "[01002EE5]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Restore Cold",
+        "string": "Curar frío"
+    },
+    {
+        "editor_id": "Survival_FoodRestoreHungerVerySmall",
+        "form_id": "[01002EE1]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "[SURV=Restore <2> points of Hunger.]",
+        "string": "[SURV=Restore <2> points of Hunger.]"
+    },
+    {
+        "editor_id": "Survival_BoneBreakFeverApplicatorEffect",
+        "form_id": "[05000809]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Bone Break Fever Applicator",
+        "string": "Aplicador de fiebre quebrantahuesos"
+    },
+    {
+        "editor_id": "Survival_FreezingWaterCheckEffect",
+        "form_id": "[05000843]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Freezing Water Check",
+        "string": "Comprobación de agua helada"
+    },
+    {
+        "editor_id": "Survival_TrapDisDamagePickpocketLockpick",
+        "form_id": "[0500097D]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Lockpick & Pickpocket",
+        "string": "Abrir cerraduras y robo reducidos"
+    },
+    {
+        "editor_id": "DisDamagePickpocketLockpick",
+        "form_id": "[000B8775]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Lockpick & Pickpocket",
+        "string": "Abrir cerraduras y robo reducidos"
+    },
+    {
+        "editor_id": "Survival_ColdStage1DisplayEffect",
+        "form_id": "[05000834]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": " Cold - Comfortable",
+        "string": " Frío: cómodo"
+    },
+    {
+        "editor_id": "Survival_ColdStage5ImodEffect",
+        "form_id": "[050008F8]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Cold Stage 5 Imod Applicator",
+        "string": "Aplicador imod de la fase 5 de frío"
+    },
+    {
+        "editor_id": "Survival_DLC2DisDamage1and2Handed",
+        "form_id": "[05000909]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Weapon Damage",
+        "string": "Daño de armas reducidas"
+    },
+    {
+        "editor_id": "Survival_PenaltyStaminaEffect",
+        "form_id": "[05000A01]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Reduce stamina by <mag> points.",
+        "string": "Reduce el aguante en <mag> puntos."
+    },
+    {
+        "editor_id": "Survival_TrapBrainRotApplicatorEffect",
+        "form_id": "[0500080A]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Brain Rot Applicator",
+        "string": "Aplicador de pudrir cerebro"
+    },
+    {
+        "editor_id": "Survival_ExhaustionStage3ImodEffect",
+        "form_id": "[050008F0]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fatigue Stage 3 Imod Applicator",
+        "string": "Aplicador imod de la fase 3 de fatiga"
+    },
+    {
+        "editor_id": "FoodRestoreHealth",
+        "form_id": "[000F33CB]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Restore <mag> points of Health.",
+        "string": "Restaura <mag> puntos de salud."
+    },
+    {
+        "editor_id": "Survival_HungerStage1DisplayEffect",
+        "form_id": "[05000845]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": " Hunger - Satisfied",
+        "string": " Hambre: satisfecho"
+    },
+    {
+        "editor_id": "TrapDisDamageStamina",
+        "form_id": "[0010A254]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Stamina",
+        "string": "Aguante reducido"
+    },
+    {
+        "editor_id": "Survival_FortifyWarmthConstant",
+        "form_id": "[0500083B]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Warmth is increased by <mag> points.",
+        "string": "El calor aumenta en <mag> puntos."
+    },
+    {
+        "editor_id": "Survival_ColdStage0ImodEffect",
+        "form_id": "[050008F3]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Cold Stage 0 Imod Applicator",
+        "string": "Aplicador imod de la fase 0 de frío"
+    },
+    {
+        "editor_id": "Survival_DisDamageStamina3",
+        "form_id": "[05000967]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Stamina",
+        "string": "Aguante reducido"
+    },
+    {
+        "editor_id": "Survival_TrapDisDamageOnehandedTwohanded",
+        "form_id": "[0500097E]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Weapon skills",
+        "string": "Habilidades de armas reducidas"
+    },
+    {
+        "editor_id": "Survival_DamageStaminaRate",
+        "form_id": "[05000839]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Stamina regeneration is decreased by <mag>%.",
+        "string": "La regeneración de aguante disminuye un <mag>%."
+    },
+    {
+        "editor_id": "TrapDisDamageMagickaRegen",
+        "form_id": "[0010A252]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Magicka Regen",
+        "string": "Regeneración de magia reducida"
+    },
+    {
+        "editor_id": "Survival_DisDamageStaminaRate3",
+        "form_id": "[0500096A]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Stamina regeneration is decreased by <75>%. Food reduces <75>% less hunger.",
+        "string": "La regeneración de aguante disminuye un <75>%. La comida reduce un <75>% menos el hambre."
+    },
+    {
+        "editor_id": "Survival_ColdStage4ImodEffect",
+        "form_id": "[050008F7]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Cold Stage 4 Imod Applicator",
+        "string": "Aplicador imod de la fase 4 de frío"
+    },
+    {
+        "editor_id": "Survival_DisDamageMagicka2",
+        "form_id": "[05000974]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Damage Magicka",
+        "string": "Dañar magia"
+    },
+    {
+        "editor_id": "Survival_WeaknessColdDisplayEffect",
+        "form_id": "[0500085B]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Weakness to Cold",
+        "string": "Debilidad al frío"
+    },
+    {
+        "editor_id": "Survival_DisDamageStamina2",
+        "form_id": "[05000966]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Stamina",
+        "string": "Aguante reducido"
+    },
+    {
+        "editor_id": "Survival_ColdStage5FXShaderEffect",
+        "form_id": "[05000867]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Cold FX Shader",
+        "string": "Efecto sombreador de frío"
+    },
+    {
+        "editor_id": "Survival_DisDamageStaminaRate",
+        "form_id": "[05000904]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Gutworm",
+        "string": "Tenia"
+    },
+    {
+        "editor_id": "Survival_RegionEffectCoolArea",
+        "form_id": "[0500083D]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Cool Area",
+        "string": "Zona fresca"
+    },
+    {
+        "editor_id": "Survival_DisDamageStamina",
+        "form_id": "[05000968]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Stamina",
+        "string": "Aguante reducido"
+    },
+    {
+        "editor_id": "Survival_DamageWeaponSpeed",
+        "form_id": "[05000835]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Attack Speed",
+        "string": "Velocidad de ataque reducida"
+    },
+    {
+        "editor_id": "Survival_HungerStage4DisplayEffect",
+        "form_id": "[0500095C]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": " Hunger - Famished",
+        "string": " Hambre: famélico"
+    },
+    {
+        "editor_id": "Survival_ExhaustionStage5DisplayEffect",
+        "form_id": "[05000957]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": " Fatigue - Debilitated",
+        "string": " Fatiga: debilitado"
+    },
+    {
+        "editor_id": "TrapDisDamageMagicka",
+        "form_id": "[0010A251]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Magicka",
+        "string": "Magia reducida"
+    },
+    {
+        "editor_id": "Survival_RestedMarriageSkillEffect",
+        "form_id": "[0500084E]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "All skills improve <15>% faster.",
+        "string": "Todas las habilidades mejoran un <15>% más rápido."
+    },
+    {
+        "editor_id": "Survival_DisDamageOnehandedTwohanded3",
+        "form_id": "[05000972]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "You are <75>% less effective with melee weapons.",
+        "string": "Eres un <75>% menos eficaz con las armas cuerpo a cuerpo."
+    },
+    {
+        "editor_id": "Survival_TrapDisDamageStaminaRegen",
+        "form_id": "[05000981]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Stamina Regen",
+        "string": "Regeneración de aguante reducido"
+    },
+    {
+        "editor_id": "Survival_DamageArchery",
+        "form_id": "[05000837]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Archery",
+        "string": "Arquería reducida"
+    },
+    {
+        "editor_id": "Survival_HungerAfflictionEffect",
+        "form_id": "[05000903]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Weakened Effect Timer",
+        "string": "Contador de efecto Exánime"
+    },
+    {
+        "editor_id": "Survival_FortifyPickpocketLockpick",
+        "form_id": "[05000A02]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fortify Lockpick & Pickpocket",
+        "string": "Reforzar abrir cerraduras y robo"
+    },
+    {
+        "editor_id": "DisDamageMagickaRegen",
+        "form_id": "[000B877B]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Magicka Regen",
+        "string": "Regeneración de magia reducida"
+    },
+    {
+        "editor_id": "Survival_DisDamageMagickaRegen3",
+        "form_id": "[05000978]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Magicka no longer regenerates.",
+        "string": "La magia ya no se regenera."
+    },
+    {
+        "editor_id": "Survival_ExhaustionStage4ImodEffect",
+        "form_id": "[050008F1]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fatigue Stage 4 Imod Applicator",
+        "string": "Aplicador imod de la fase 4 de fatiga"
+    },
+    {
+        "editor_id": "Survival_DamageOnehandedTwohanded",
+        "form_id": "[05000847]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Weapon Skills",
+        "string": "Habilidades de armas reducidas"
+    },
+    {
+        "editor_id": "Survival_HungerStage2DisplayEffect",
+        "form_id": "[0500095E]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": " Hunger - Peckish",
+        "string": " Hambre: poca hambre"
+    },
+    {
+        "editor_id": "Survival_RestedSkillEffect",
+        "form_id": "[05000857]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": " Fatigue - Rested",
+        "string": " Fatiga: descansado"
+    },
+    {
+        "editor_id": "DisDamageOnehandedTwohanded",
+        "form_id": "[000B877A]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Weapon skills",
+        "string": "Habilidades de armas reducidas"
+    },
+    {
+        "editor_id": "Survival_TrapDisDamageOnehandedTwohanded",
+        "form_id": "[0500097E]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "You are <25>% less effective with melee weapons. Progresses to Severe Rockjoint.",
+        "string": "Eres un <25>% menos eficaz con las armas cuerpo a cuerpo. Progresa a anquilosamiento grave."
+    },
+    {
+        "editor_id": "Survival_DamageMagickaRate",
+        "form_id": "[05000833]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Magicka regeneration is decreased by <mag>%.",
+        "string": "La regeneración de la magia disminuye en un <mag>%."
+    },
+    {
+        "editor_id": "Survival_HungerStage0StaminaRegen",
+        "form_id": "[05000844]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": " Hunger - Well Fed",
+        "string": " Hambre: Bien alimentado"
+    },
+    {
+        "editor_id": "Survival_RestedMarriageSkillEffect",
+        "form_id": "[0500084E]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": " Fatigue - Lover's Comfort",
+        "string": " Fatiga: consuelo del amante"
+    },
+    {
+        "editor_id": "Survival_DLC2DisDamage1and2Handed3",
+        "form_id": "[0500097A]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "One-handed and two-handed weapon damage is <45>% lower.",
+        "string": "El daño con armas a una y dos manos se reduce en un <45>%."
+    },
+    {
+        "editor_id": "Survival_DisDamageSpeechcraft2",
+        "form_id": "[0500097B]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Prices are <50>% worse. Persuasion and intimidation is <50>% harder. Progresses to Crippling Greenspore.",
+        "string": "Los precios son un <50>% peores. Es un <50>% más difícil persuadir e intimidar. Progresa a espora verde incapacitante."
+    },
+    {
+        "editor_id": "Survival_DisDamageMagickaRegen2",
+        "form_id": "[05000977]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Magicka Regen",
+        "string": "Regeneración de magia reducida"
+    },
+    {
+        "editor_id": "Survival_FoodRestoreHungerSmall",
+        "form_id": "[01002EE2]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "[SURV=Restore <18> points of Hunger.]",
+        "string": "[SURV=Restore <18> points of Hunger.]"
+    },
+    {
+        "editor_id": "Survival_StandingMovingDetectorEffect",
+        "form_id": "[050009C6]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Standing Moving Detector Effect",
+        "string": "Efecto detector al estar de pie"
+    },
+    {
+        "editor_id": "DisDamageOnehandedTwohanded",
+        "form_id": "[000B877A]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "You are <mag>% less effective with melee weapons.",
+        "string": "Eres un <mag>% menos eficaz con las armas cuerpo a cuerpo."
+    },
+    {
+        "editor_id": "Survival_DisDamagePickpocketLockpick2",
+        "form_id": "[05000952]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Lockpick & Pickpocket",
+        "string": "Abrir cerraduras y robo reducidos"
+    },
+    {
+        "editor_id": "Survival_DisDamageStaminaRegen3",
+        "form_id": "[05000970]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Stamina Regen",
+        "string": "Regeneración de aguante reducido"
+    },
+    {
+        "editor_id": "Survival_DisDamageOnehandedTwohanded2",
+        "form_id": "[05000971]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "You are <50>% less effective with melee weapons. Progresses to Crippling Rockjoint.",
+        "string": "Eres un <50>% menos eficaz con las armas cuerpo a cuerpo. Progresa a anquilosamiento incapacitante."
+    },
+    {
+        "editor_id": "TrapDisDamageStamina",
+        "form_id": "[0010A254]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Drains <mag> points of Stamina.",
+        "string": "Consume <mag> puntos de aguante."
+    },
+    {
+        "editor_id": "Survival_HungerStage0ImodEffect",
+        "form_id": "[050008E9]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Hunger Stage 0 Imod Applicator",
+        "string": "Aplicador imod de la fase 0 de hambre"
+    },
+    {
+        "editor_id": "Survival_DisDamageLightArmorHeavyArmor3",
+        "form_id": "[0500096C]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Crippling Brown Rot",
+        "string": "Putrefacción marrón incapacitante"
+    },
+    {
+        "editor_id": "Survival_RestedWellSkillEffect",
+        "form_id": "[05000858]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": " Fatigue - Well Rested",
+        "string": " Fatiga: bien descansado"
+    },
+    {
+        "editor_id": "Survival_TrapDisDamageMagickaRegen",
+        "form_id": "[0500097F]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Magicka Regen",
+        "string": "Regeneración de magia reducida"
+    },
+    {
+        "editor_id": "Survival_DisDamageLightArmorHeavyArmor3",
+        "form_id": "[0500096C]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Light and heavy armor prevents <75>% less damage. Sleeping is <75>% less restful.",
+        "string": "Las armaduras ligera y pesada previenen un <75>% menos de daño. Dormir repone un <75>% menos."
+    },
+    {
+        "editor_id": "Survival_DisDamagePickpocketLockpick",
+        "form_id": "[05000907]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Lockpick & Pickpocket",
+        "string": "Abrir cerraduras y robo reducidos"
+    },
+    {
+        "editor_id": "Survival_PerkArgonianFortifyHealRateNonCombatMult",
+        "form_id": "[05000963]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Negate Survival Penalty",
+        "string": "Anular penalización de supervivencia"
+    },
+    {
+        "editor_id": "Survival_DamageLockpickPickpocket",
+        "form_id": "[05000836]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Lockpick & Pickpocket",
+        "string": "Abrir cerraduras y robo reducidos"
+    },
+    {
+        "editor_id": "Survival_AbResistFrost",
+        "form_id": "[05000A04]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Resist Frost",
+        "string": "Resistencia a la escarcha"
+    },
+    {
+        "editor_id": "Survival_DisDamageStaminaRegen",
+        "form_id": "[0500096E]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Stamina recovers half as fast. Progresses to Severe Rattles.",
+        "string": "El aguante se recupera la mitad de rápido. Progresa a estertores graves."
+    },
+    {
+        "editor_id": "Survival_DisDamageMagicka3",
+        "form_id": "[05000975]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Damage Magicka",
+        "string": "Dañar magia"
+    },
+    {
+        "editor_id": "Survival_DamageStaminaVisible",
+        "form_id": "[050008F9]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Damage Stamina",
+        "string": "Dañar aguante"
+    },
+    {
+        "editor_id": "Survival_DisDamageStamina2",
+        "form_id": "[05000966]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Drains <50> points from stamina. Progresses to Crippling Bone Break Fever.",
+        "string": "Consume <50> puntos de aguante. Progresa a fiebre quebrantahuesos incapacitante."
+    },
+    {
+        "editor_id": "Survival_DisDamagePickpocketLockpick3",
+        "form_id": "[05000953]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Lockpick & Pickpocket",
+        "string": "Abrir cerraduras y robo reducidos"
+    },
+    {
+        "editor_id": "Survival_DisDamageMagicka3",
+        "form_id": "[05000975]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Drains <75> points from magicka.",
+        "string": "Consume <75> puntos de magia."
+    },
+    {
+        "editor_id": "Survival_DisDamagePickpocketLockpick2",
+        "form_id": "[05000952]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Picking locks and picking pockets is <50>% harder. Progresses to Crippling Ataxia.",
+        "string": "Abrir cerraduras y robar resulta un <50>% más difícil. Progresa a ataxia incapacitante."
+    },
+    {
+        "editor_id": "Survival_ColdStage5DisplayEffect",
+        "form_id": "[0500095F]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": " Cold - Numb",
+        "string": " Frío: entumecido"
+    },
+    {
+        "editor_id": "Survival_DLC2DisDamage1and2Handed",
+        "form_id": "[05000909]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "One-handed and two-handed weapon damage is <15>% lower. Progresses to Severe Droops.",
+        "string": "El daño con armas a una y dos manos se reduce en un <15>%. Progresa a marchitamiento grave."
+    },
+    {
+        "editor_id": "Survival_RestedSkillEffect",
+        "form_id": "[05000857]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "All skills improve <5>% faster.",
+        "string": "Todas las habilidades mejoran un <5>% más rápido."
+    },
+    {
+        "editor_id": "Survival_ExhaustionStage3DisplayEffect",
+        "form_id": "[05000959]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": " Fatigue - Tired",
+        "string": " Fatiga: cansado"
+    },
+    {
+        "editor_id": "Survival_DisDamageStaminaRate2",
+        "form_id": "[0500096B]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Severe Gutworm",
+        "string": "Tenia grave"
+    },
+    {
+        "editor_id": "Survival_ColdStage1ImodEffect",
+        "form_id": "[050008F4]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Cold Stage 1 Imod Applicator",
+        "string": "Aplicador imod de la fase 1 de frío"
+    },
+    {
+        "editor_id": "DisDamageStamina",
+        "form_id": "[000B8776]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Drains <mag> points from stamina.",
+        "string": "Consume <mag> puntos de aguante."
+    },
+    {
+        "editor_id": "Survival_DisFoodPoisoningMagicka",
+        "form_id": "[050008FB]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Damage Magicka Regeneration",
+        "string": "Dañar la regeneración de la magia"
+    },
+    {
+        "editor_id": "Survival_FoodRestoreHungerVerySmall",
+        "form_id": "[01002EE1]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Restore Hunger Very Small",
+        "string": "Saciar hambre: muy pequeña"
+    },
+    {
+        "editor_id": "Survival_FoodRestoreHungerMedium",
+        "form_id": "[01002EE3]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "[SURV=Restore <220> points of Hunger.]",
+        "string": "[SURV=Restore <220> points of Hunger.]"
+    },
+    {
+        "editor_id": "TrapDisDamageStaminaRegen",
+        "form_id": "[0010A255]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Stamina Regen",
+        "string": "Regeneración de aguante reducido"
+    },
+    {
+        "editor_id": "FoodRestoreHealthDuration",
+        "form_id": "[001058A2]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Restore <mag> points of Health per second for <dur> seconds.",
+        "string": "Restaura <mag> puntos de salud por segundo durante <dur> segundos."
+    },
+    {
+        "editor_id": "Survival_FoodRestoreHungerLarge",
+        "form_id": "[01002EE4]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Restore Hunger Large",
+        "string": "Saciar hambre: grande"
+    },
+    {
+        "editor_id": "Survival_DamageOnehandedTwohanded",
+        "form_id": "[05000847]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "You are <mag>% less effective with melee weapons.",
+        "string": "Eres un <mag>% menos eficaz con las armas cuerpo a cuerpo."
+    },
+    {
+        "editor_id": "Survival_DisDamageStamina3",
+        "form_id": "[05000967]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Drains <75> points from stamina.",
+        "string": "Consume <75> puntos de aguante."
+    },
+    {
+        "editor_id": "Survival_PenaltyMagickaEffect",
+        "form_id": "[050009FF]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Reduce magicka by <mag> points.",
+        "string": "Reduce la magia en <mag> puntos."
+    },
+    {
+        "editor_id": "Survival_DisDamageMagicka",
+        "form_id": "[05000973]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Damage Magicka",
+        "string": "Dañar magia"
+    },
+    {
+        "editor_id": "Survival_ResistExhaustionDisplayEffect",
+        "form_id": "[0500085C]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Resist Fatigue",
+        "string": "Resistencia a la fatiga"
+    },
+    {
+        "editor_id": "Survival_DisDamageMagickaRegen",
+        "form_id": "[05000976]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Magicka Regen",
+        "string": "Regeneración de magia reducida"
+    },
+    {
+        "editor_id": "Survival_DisDamageSpeechcraft3",
+        "form_id": "[0500096D]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Prices are <75>% worse. Persuasion and intimidation is <75>% harder.",
+        "string": "Los precios son un <75>% peores. Es un <75>% más difícil persuadir e intimidar."
+    },
+    {
+        "editor_id": "Survival_DLC2DisDamage1and2Handed2",
+        "form_id": "[05000979]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Weapon Damage",
+        "string": "Daño de armas reducidas"
+    },
+    {
+        "editor_id": "Survival_DisDamagePickpocketLockpick3",
+        "form_id": "[05000953]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Picking locks and picking pockets is <75>% harder.",
+        "string": "Abrir cerraduras y robar resulta un <75>% más difícil."
+    },
+    {
+        "editor_id": "Survival_ResistHungerDisplayEffect",
+        "form_id": "[05000841]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Resist Hunger",
+        "string": "Resistencia al hambre"
+    },
+    {
+        "editor_id": "Survival_RegionEffectFallForestFreezingArea",
+        "form_id": "[0500086A]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fall Forest Freezing Area",
+        "string": "Zona helada del Bosque Otoñal"
+    },
+    {
+        "editor_id": "Survival_HungerStage3ImodEffect",
+        "form_id": "[050008EB]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Hunger Stage 3 Imod Applicator",
+        "string": "Aplicador imod de la fase 3 de hambre"
+    },
+    {
+        "editor_id": "Survival_FoodFortifyWarmth",
+        "form_id": "[01002EE6]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fortify Warmth",
+        "string": "Reforzar calor"
+    },
+    {
+        "editor_id": "Survival_DamageHealthVisible",
+        "form_id": "[0500084F]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Damage Health",
+        "string": "Dañar salud"
+    },
+    {
+        "editor_id": "Survival_DisDamageLightArmorHeavyArmor",
+        "form_id": "[05000905]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Brown Rot",
+        "string": "Putrefacción marrón"
+    },
+    {
+        "editor_id": "DisDamageMagickaRegen",
+        "form_id": "[000B877B]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Magicka recovers half as fast.",
+        "string": "La magia se recupera la mitad de rápido."
+    },
+    {
+        "editor_id": "Survival_DisDamageMagickaRegen2",
+        "form_id": "[05000977]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Magicka recovers <75>% slower. Progresses to Crippling Witbane.",
+        "string": "La magia se recupera un <75>% más lento. Progresa a atontamiento incapacitante."
+    },
+    {
+        "editor_id": "Survival_ExhaustionAfflictionEffect",
+        "form_id": "[05000901]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Addled Effect Timer",
+        "string": "Contador de efecto Confuso"
+    },
+    {
+        "editor_id": "Survival_RegionEffectFreezingArea",
+        "form_id": "[0500083E]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Freezing Area",
+        "string": "Zona helada"
+    },
+    {
+        "editor_id": "Survival_FoodRestoreCold",
+        "form_id": "[01002EE5]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "[SURV=Restore <mag> points of Cold.]",
+        "string": "[SURV=Restore <mag> points of Cold.]"
+    },
+    {
+        "editor_id": "Survival_DisDamageOnehandedTwohanded2",
+        "form_id": "[05000971]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Weapon skills",
+        "string": "Habilidades de armas reducidas"
+    },
+    {
+        "editor_id": "Survival_ExhaustionStage5ImodEffect",
+        "form_id": "[050008F2]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fatigue Stage 5 Imod Applicator",
+        "string": "Aplicador imod de la fase 5 de fatiga"
+    },
+    {
+        "editor_id": "Survival_DisFoodPoisoningStamina",
+        "form_id": "[050008FE]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Damage Stamina Regeneration",
+        "string": "Dañar la regeneración del aguante"
+    },
+    {
+        "editor_id": "Survival_FoodFortifyWarmth",
+        "form_id": "[01002EE6]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "[SURV=Warmth is increased by <mag> points for <dur> seconds.]",
+        "string": "[SURV=Warmth is increased by <mag> points for <dur> seconds.]"
+    },
+    {
+        "editor_id": "Survival_DisDamageStaminaRate2",
+        "form_id": "[0500096B]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Stamina regeneration is decreased by <50>%. Food reduces <50>% less hunger. Progresses to Crippling Gutworm.",
+        "string": "La regeneración de aguante disminuye un <50>%. La comida reduce un <50>% menos el hambre. Progresa a tenia incapacitante."
+    },
+    {
+        "editor_id": "Survival_ColdStage0DisplayEffect",
+        "form_id": "[05000A03]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": " Cold - Warm",
+        "string": "Frío: cálido"
+    },
+    {
+        "editor_id": "Survival_ColdAfflictionEffect",
+        "form_id": "[05000902]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Frostbitten Effect Timer",
+        "string": "Contador de efecto Congelado"
+    },
+    {
+        "editor_id": "Survival_DLC2DisDamage1and2Handed2",
+        "form_id": "[05000979]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "One-handed and two-handed weapon damage is <30>% lower. Progresses to Crippling Droops.",
+        "string": "El daño con armas a una y dos manos se reduce en un <30>%. Progresa a marchitamiento incapacitante."
+    },
+    {
+        "editor_id": "Survival_DamageSneak",
+        "form_id": "[05000849]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Sneak",
+        "string": "Discreción reducida"
+    },
+    {
+        "editor_id": "Survival_TrapDisDamageMagickaRegen",
+        "form_id": "[0500097F]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Magicka recovers half as fast. Progresses to Severe Witbane.",
+        "string": "La magia se recupera la mitad de rápido. Progresa a atontamiento grave."
+    },
+    {
+        "editor_id": "DisDamageStaminaRegen",
+        "form_id": "[000B8779]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Stamina recovers half as fast.",
+        "string": "El aguante se recupera la mitad de rápido."
+    },
+    {
+        "editor_id": "Survival_ExhaustionStage4DisplayEffect",
+        "form_id": "[05000958]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": " Fatigue - Weary",
+        "string": " Fatiga: exhausto"
+    },
+    {
+        "editor_id": "Survival_DamageSpeed",
+        "form_id": "[05000838]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Movement Speed",
+        "string": "Velocidad de movimiento reducida"
+    },
+    {
+        "editor_id": "Survival_ExhaustionStage2ImodEffect",
+        "form_id": "[050008EF]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fatigue Stage 2 Imod Applicator",
+        "string": "Aplicador imod de la fase 2 de fatiga"
+    },
+    {
+        "editor_id": "Survival_AbLowerCarryWeight",
+        "form_id": "[0500084C]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Lower Carry Weight",
+        "string": "Reducir capacidad de peso"
+    },
+    {
+        "editor_id": "Survival_ExhaustionStage1DisplayEffect",
+        "form_id": "[05000832]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": " Fatigue - Refreshed",
+        "string": " Fatiga: recuperado"
+    },
+    {
+        "editor_id": "Survival_DisDamageMagicka",
+        "form_id": "[05000973]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Drains <25> points from magicka. Progresses to Severe Brain Rot.",
+        "string": "Consume <25> puntos de magia. Progresa a pudrir cerebro grave."
+    },
+    {
+        "editor_id": "Survival_DamageBlock",
+        "form_id": "[05000848]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Block",
+        "string": "Bloqueo reducido"
+    },
+    {
+        "editor_id": "Survival_HungerStage4ImodEffect",
+        "form_id": "[050008EC]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Hunger Stage 4 Imod Applicator",
+        "string": "Aplicador imod de la fase 4 de hambre"
+    },
+    {
+        "editor_id": "Survival_TrapDisDamageStamina",
+        "form_id": "[0500097C]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Stamina",
+        "string": "Aguante reducido"
+    },
+    {
+        "editor_id": "DisDamageStaminaRegen",
+        "form_id": "[000B8779]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Stamina Regen",
+        "string": "Regeneración de aguante reducido"
+    },
+    {
+        "editor_id": "Survival_PenaltyMagickaEffect",
+        "form_id": "[050009FF]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Magicka",
+        "string": "Magia reducida"
+    },
+    {
+        "editor_id": "Survival_ResistColdTorchEffect",
+        "form_id": "[05000965]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Warmth is increased by <mag> points.",
+        "string": "El calor aumenta en <mag> puntos."
+    },
+    {
+        "editor_id": "DLC2DisDamage1and2Handed",
+        "form_id": "[040285C0]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Weapon Damage",
+        "string": "Daño de armas reducidas"
+    },
+    {
+        "editor_id": "Survival_FortifyWarmthConstant",
+        "form_id": "[0500083B]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fortify Warmth",
+        "string": "Reforzar calor"
+    },
+    {
+        "editor_id": "DisDamageMagicka",
+        "form_id": "[000B8777]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Damage Magicka",
+        "string": "Dañar magia"
+    },
+    {
+        "editor_id": "TrapDisDamagePickpocketLockpick",
+        "form_id": "[0010A24B]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Lockpick & Pickpocket",
+        "string": "Abrir cerraduras y robo reducidos"
+    },
+    {
+        "editor_id": "Survival_RidingDragonDetectorEffect",
+        "form_id": "[05000856]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Riding Dragon Detector Effect",
+        "string": "Efecto detector al montar en dragón"
+    },
+    {
+        "editor_id": "Survival_DisDamageStaminaRegen",
+        "form_id": "[0500096E]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Stamina Regen",
+        "string": "Regeneración de aguante reducido"
+    },
+    {
+        "editor_id": "Survival_DisDamagePickpocketLockpick",
+        "form_id": "[05000907]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Picking locks and picking pockets is <25>% harder. Progresses to Severe Ataxia.",
+        "string": "Abrir cerraduras y robar resulta un <25>% más difícil. Progresa a ataxia grave."
+    },
+    {
+        "editor_id": "Survival_ExhaustionStage1ImodEffect",
+        "form_id": "[050008EE]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fatigue Stage 1 Imod Applicator",
+        "string": "Aplicador imod de la fase 1 de fatiga"
+    },
+    {
+        "editor_id": "Survival_DisDamageMagicka2",
+        "form_id": "[05000974]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Drains <50> points from magicka. Progresses to Crippling Brain Rot.",
+        "string": "Consume <50> puntos de magia. Progresa a pudrir cerebro incapacitante."
+    },
+    {
+        "editor_id": "Survival_DisDamageOnehandedTwohanded",
+        "form_id": "[0500090A]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Weapon skills",
+        "string": "Habilidades de armas reducidas"
+    },
+    {
+        "editor_id": "Survival_FoodRestoreHungerLarge",
+        "form_id": "[01002EE4]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "[SURV=Restore <380> points of Hunger.]",
+        "string": "[SURV=Restore <380> points of Hunger.]"
+    },
+    {
+        "editor_id": "Survival_DisDamageStaminaRegen3",
+        "form_id": "[05000970]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Stamina no longer recovers.",
+        "string": "El aguante ya no se recupera."
+    },
+    {
+        "editor_id": "TrapDisDamageOnehandedTwohanded",
+        "form_id": "[0010A253]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Weapon skills",
+        "string": "Habilidades de armas reducidas"
+    },
+    {
+        "editor_id": "DLC2DisDamage1and2Handed",
+        "form_id": "[040285C0]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "One-handed and two-handed weapon damage is <mag>% lower.",
+        "string": "El daño con armas a una y dos manos se reduce en un <mag>%."
+    },
+    {
+        "editor_id": "DisDamageMagicka",
+        "form_id": "[000B8777]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Drains <mag> points from magicka.",
+        "string": "Consume <mag> puntos de magia."
+    },
+    {
+        "editor_id": "Survival_DamageStaminaRate",
+        "form_id": "[05000839]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Stamina Regeneration",
+        "string": "Regeneración de aguante reducida"
+    },
+    {
+        "editor_id": "Survival_TrapBoneBreakFeverApplicatorEffect",
+        "form_id": "[05000807]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Bone Break Fever Applicator",
+        "string": "Aplicador de fiebre quebrantahuesos"
+    },
+    {
+        "editor_id": "Survival_ColdStage2DisplayEffect",
+        "form_id": "[05000956]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": " Cold - Chilly",
+        "string": " Frío: frío"
+    },
+    {
+        "editor_id": "Survival_FoodPoisoningDisplayEffect",
+        "form_id": "[05000851]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Food Poisoning",
+        "string": "Intoxicación alimentaria"
+    },
+    {
+        "editor_id": "TrapDisDamageMagickaRegen",
+        "form_id": "[0010A252]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Magicka recovers half as fast.",
+        "string": "La magia se recupera la mitad de rápido."
+    },
+    {
+        "editor_id": "Survival_DisDamageOnehandedTwohanded3",
+        "form_id": "[05000972]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Weapon skills",
+        "string": "Habilidades de armas reducidas"
+    },
+    {
+        "editor_id": "Survival_RegionEffectWarmArea",
+        "form_id": "[0500083C]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Warm Area",
+        "string": "Zona cálida"
+    },
+    {
+        "editor_id": "Survival_DisDamageMagickaRegen3",
+        "form_id": "[05000978]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Magicka Regen",
+        "string": "Regeneración de magia reducida"
+    },
+    {
+        "editor_id": "TrapDisDamagePickpocketLockpick",
+        "form_id": "[0010A24B]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Picking locks and picking pockets is <mag>% harder.",
+        "string": "Abrir cerraduras y robar resulta un <mag>% más difícil."
+    },
+    {
+        "editor_id": "Survival_ColdStage3DisplayEffect",
+        "form_id": "[05000955]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": " Cold - Very Cold",
+        "string": " Frío: muy frío"
+    },
+    {
+        "editor_id": "Survival_DisDamageSpeechcraft",
+        "form_id": "[05000900]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Prices are <25>% worse. Persuasion and intimidation is <25>% harder. Progresses to Severe Greenspore.",
+        "string": "Los precios son un <25>% peores. Es un <25>% más difícil persuadir e intimidar. Progresa a espora verde grave."
+    },
+    {
+        "editor_id": "Survival_ArgonianRawMeatDisplayEffect",
+        "form_id": "[05000850]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Raw Diet",
+        "string": "Dieta cruda"
+    },
+    {
+        "editor_id": "Survival_PenaltyHealthEffect",
+        "form_id": "[05000A00]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Reduce health by <mag> points.",
+        "string": "Reduce la salud en <mag> puntos."
+    },
+    {
+        "editor_id": "Survival_HungerStage2ImodEffect",
+        "form_id": "[050008EA]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Hunger Stage 2 Imod Applicator",
+        "string": "Aplicador imod de la fase 2 de hambre"
+    },
+    {
+        "editor_id": "Survival_DisDamageMagickaRegen",
+        "form_id": "[05000976]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Magicka recovers half as fast. Progresses to Severe Witbane.",
+        "string": "La magia se recupera la mitad de rápido. Progresa a atontamiento grave."
+    },
+    {
+        "editor_id": "Survival_DisDamageStaminaRate",
+        "form_id": "[05000904]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Stamina regeneration is decreased by <25>%. Food reduces <25>% less hunger. Progresses to Severe Gutworm.",
+        "string": "La regeneración de aguante disminuye un <25>%. La comida reduce un <25>% menos el hambre. Progresa a tenia grave."
+    },
+    {
+        "editor_id": "Survival_BrainRotApplicatorEffect",
+        "form_id": "[05000808]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Brain Rot Applicator",
+        "string": "Aplicador de pudrir cerebro"
+    },
+    {
+        "editor_id": "Survival_DisDamageSpeechcraft",
+        "form_id": "[05000900]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Speech",
+        "string": "Elocuencia reducida"
+    },
+    {
+        "editor_id": "Survival_FoodRestoreHungerSmall",
+        "form_id": "[01002EE2]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Restore Hunger Small",
+        "string": "Saciar hambre: pequeña"
+    },
+    {
+        "editor_id": "Survival_PenaltyHealthEffect",
+        "form_id": "[05000A00]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Health",
+        "string": "Salud reducida"
+    },
+    {
+        "editor_id": "DisDamagePickpocketLockpick",
+        "form_id": "[000B8775]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Picking locks and picking pockets is <mag>% harder.",
+        "string": "Abrir cerraduras y robar resulta un <mag>% más difícil."
+    },
+    {
+        "editor_id": "Survival_TrapDisDamageStaminaRegen",
+        "form_id": "[05000981]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Stamina recovers half as fast. Progresses to Severe Rattles.",
+        "string": "El aguante se recupera la mitad de rápido. Progresa a estertores graves."
+    },
+    {
+        "editor_id": "Survival_WeaknessExhaustionDisplayEffect",
+        "form_id": "[0500083A]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Weakness to Fatigue",
+        "string": "Debilidad a la fatiga"
+    },
+    {
+        "editor_id": "Survival_AfflictionFrostbittenDisplayEffect",
+        "form_id": "[050009D3]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Frostbitten",
+        "string": "Congelado"
+    },
+    {
+        "editor_id": "Survival_DisDamageStaminaRate3",
+        "form_id": "[0500096A]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Crippling Gutworm",
+        "string": "Tenia incapacitante"
+    },
+    {
+        "editor_id": "Survival_ColdStage4FXShaderEffect",
+        "form_id": "[05000868]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Cold FX Shader",
+        "string": "Efecto sombreador de frío"
+    },
+    {
+        "editor_id": "Survival_DisDamageOnehandedTwohanded",
+        "form_id": "[0500090A]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "You are <25>% less effective with melee weapons. Progresses to Severe Rockjoint.",
+        "string": "Eres un <25>% menos eficaz con las armas cuerpo a cuerpo. Progresa a anquilosamiento grave."
+    },
+    {
+        "editor_id": "Survival_DisDamageStaminaRegen2",
+        "form_id": "[0500096F]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Stamina Regen",
+        "string": "Regeneración de aguante reducido"
+    },
+    {
+        "editor_id": "TrapDisDamageOnehandedTwohanded",
+        "form_id": "[0010A253]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "You are <mag>% less effective with melee weapons.",
+        "string": "Eres un <mag>% menos eficaz con las armas cuerpo a cuerpo."
+    },
+    {
+        "editor_id": "Survival_DisDamageLightArmorHeavyArmor",
+        "form_id": "[05000905]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Light and heavy armor prevents <25>% less damage. Sleeping is <25>% less restful. Progresses to Severe Brown Rot.",
+        "string": "Las armaduras ligera y pesada previenen un <25>% menos de daño. Dormir repone un <25>% menos. Progresa a putrefacción marrón grave."
+    },
+    {
+        "editor_id": "FoodRestoreHealth",
+        "form_id": "[000F33CB]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Restore Health",
+        "string": "Restablecer salud"
+    },
+    {
+        "editor_id": "Survival_HungerStage5DisplayEffect",
+        "form_id": "[0500095B]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": " Hunger - Starving",
+        "string": " Hambre: muerto de hambre"
+    },
+    {
+        "editor_id": "Survival_HungerStage1ImodEffect",
+        "form_id": "[050008FC]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Hunger Stage 1 Imod Applicator",
+        "string": "Aplicador imod de la fase 1 de hambre"
+    },
+    {
+        "editor_id": "Survival_DamageLockpickPickpocket",
+        "form_id": "[05000836]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Picking locks and picking pockets is <mag>% harder.",
+        "string": "Abrir cerraduras y robar resulta un <mag>% más difícil."
+    },
+    {
+        "editor_id": "Survival_TrapDisDamageMagicka",
+        "form_id": "[05000980]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Drains <25> points from magicka. Progresses to Severe Brain Rot.",
+        "string": "Consume <25> puntos de magia. Progresa a pudrir cerebro grave."
+    },
+    {
+        "editor_id": "Survival_ExhaustionStage2DisplayEffect",
+        "form_id": "[0500095A]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": " Fatigue - Drained",
+        "string": " Fatiga: agotado"
+    },
+    {
+        "editor_id": "Survival_TrapDisDamageStamina",
+        "form_id": "[0500097C]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Drains <25> points from stamina. Progresses to Severe Bone Break Fever.",
+        "string": "Consume <25> puntos de aguante. Progresa a fiebre quebrantahuesos grave."
+    },
+    {
+        "editor_id": "Survival_DamageMagickaRate",
+        "form_id": "[05000833]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Magicka Regeneration",
+        "string": "Regeneración de magia reducida"
+    },
+    {
+        "editor_id": "DiseaseRockjoint",
+        "form_id": "[000B8782]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Rockjoint",
+        "string": "Anquilosamiento"
+    },
+    {
+        "editor_id": "Survival_abRacialArgonianCold",
+        "form_id": "[05000875]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Argonians become colder <25%> faster in cold environments.",
+        "string": "Los argonianos se enfrían un <25%> más rápido en los entornos fríos."
+    },
+    {
+        "editor_id": "Survival_abRacialAltmer",
+        "form_id": "[05000874]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Resist Fatigue",
+        "string": "Resistencia a la fatiga"
+    },
+    {
+        "editor_id": "Survival_DiseaseGutworm",
+        "form_id": "[05000915]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Stamina regeneration is decreased by <25>%. Food restores <25>% less hunger.",
+        "string": "La regeneración de aguante disminuye un <25>%. La comida sacia un <25>% menos el hambre."
+    },
+    {
+        "editor_id": "Survival_ColdStage2",
+        "form_id": "[05000891]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Total health is reduced. You move <10>% slower. Lockpicking and pickpocketing are <30>% harder.",
+        "string": "Se reduce la salud total. Te mueves un <10>% más lento. Abrir cerraduras y robar resulta un <30>% más difícil."
+    },
+    {
+        "editor_id": "Survival_abWarmthTorch",
+        "form_id": "[05000983]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Torch",
+        "string": "Antorcha"
+    },
+    {
+        "editor_id": "Survival_DiseaseGutworm3",
+        "form_id": "[0500098A]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Crippling Gutworm",
+        "string": "Tenia incapacitante"
+    },
+    {
+        "editor_id": "Survival_DiseaseBrainRot3",
+        "form_id": "[05000991]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Crippling Brain Rot",
+        "string": "Pudrir cerebro incapacitante"
+    },
+    {
+        "editor_id": "Survival_AfflictionFrostbitten",
+        "form_id": "[05000913]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Frostbitten",
+        "string": "Congelado"
+    },
+    {
+        "editor_id": "PerkDualFlurry50",
+        "form_id": "[00108A40]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Dual Flurry 50",
+        "string": "Ráfaga doble 50"
+    },
+    {
+        "editor_id": "Survival_ColdStage1",
+        "form_id": "[0500086E]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "You are comfortably warm.",
+        "string": "Sientes una calidez agradable."
+    },
+    {
+        "editor_id": "PowerArgonianHistskin",
+        "form_id": "[000E40D5]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Histskin",
+        "string": "Piel de hist"
+    },
+    {
+        "editor_id": "Survival_DiseaseGreenspore3",
+        "form_id": "[05000988]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Crippling Greenspore",
+        "string": "Ataxia incapacitante"
+    },
+    {
+        "editor_id": "TrapDiseaseBrainRot",
+        "form_id": "[0010A24D]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Brain Rot",
+        "string": "Pudrir cerebro"
+    },
+    {
+        "editor_id": "Survival_abRacialNord",
+        "form_id": "[0500088B]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Fortify Warmth",
+        "string": "Reforzar calor"
+    },
+    {
+        "editor_id": "Survival_ExhaustionStage4",
+        "form_id": "[0500087B]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Total magicka is reduced. Magicka and stamina regenerate <75>% slower. Beneficial potions are <60>% less effective. You are <20>% less resistant to disease.",
+        "string": "Se reduce la magia total. La magia y el aguante se regeneran un <75> más lento. Las pociones beneficiosas son un <60>% menos eficaces. Tienes un <20>% menos de resistencia a las enfermedades."
+    },
+    {
+        "editor_id": "Survival_ColdStage0",
+        "form_id": "[05000890]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Warm",
+        "string": "Cálido"
+    },
+    {
+        "editor_id": "Survival_ColdStage5",
+        "form_id": "[05000871]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Numb",
+        "string": "Entumecido"
+    },
+    {
+        "editor_id": "Survival_OblivionDisplaySpell",
+        "form_id": "[0500090E]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "You do not need food, rest, or warmth while in this otherworldly area.",
+        "string": "No necesitas comida, descanso o calor mientras te encuentres en esta zona sobrenatural."
+    },
+    {
+        "editor_id": "Survival_ExhaustionStage3",
+        "form_id": "[0500087A]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Tired",
+        "string": "Cansancio"
+    },
+    {
+        "editor_id": "Survival_DiseaseBrainRot1",
+        "form_id": "[0500082E]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Brain Rot",
+        "string": "Pudrir cerebro"
+    },
+    {
+        "editor_id": "Survival_abRacialAltmer",
+        "form_id": "[05000874]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Your High Elf blood gives you <25%> resistance to fatigue.",
+        "string": "Tu sangre de alto elfo te otorga un <25>% de resistencia a la fatiga."
+    },
+    {
+        "editor_id": "Survival_ExhaustionStage2",
+        "form_id": "[05000879]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Total magicka is reduced. Magicka and stamina regenerate <25>% slower. Beneficial potions are <20>% less effective.",
+        "string": "Se reduce la magia total. La magia y el aguante se regeneran un <25>% más lento. Las pociones beneficiosas son un <20>% menos eficaces."
+    },
+    {
+        "editor_id": "Survival_ExhaustionStage3",
+        "form_id": "[0500087A]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Total magicka is reduced. Magicka and stamina regenerate <50>% slower. Beneficial potions are <40>% less effective. You are <10>% less resistant to disease.",
+        "string": "Se reduce la magia total. La magia y el aguante se regeneran un <50>% más lento. Las pociones beneficiosas son un <40>% menos eficaces. Tienes un <10>% menos de resistencia a las enfermedades."
+    },
+    {
+        "editor_id": "Survival_AttributePenaltyHealth",
+        "form_id": "[05000A07]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Attribute Penalty Health",
+        "string": "Penalización de atributo: salud"
+    },
+    {
+        "editor_id": "Survival_HungerStage4",
+        "form_id": "[05000886]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Famished",
+        "string": "Te mueres de hambre"
+    },
+    {
+        "editor_id": "Survival_OverencumberedSpell",
+        "form_id": "[05000917]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Overencumbered",
+        "string": "Sobrecargado"
+    },
+    {
+        "editor_id": "TrapDiseaseWitbane",
+        "form_id": "[0010A250]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Witbane",
+        "string": "Atontamiento"
+    },
+    {
+        "editor_id": "Survival_ExhaustionStage3NoDisease",
+        "form_id": "[0500090F]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Tired",
+        "string": "Cansancio"
+    },
+    {
+        "editor_id": "PerkExtraPockets",
+        "form_id": "[00096592]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Extra Pockets",
+        "string": "Bolsillos extra"
+    },
+    {
+        "editor_id": "MGRJzargoFlameCloak",
+        "form_id": "[00097EDF]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "J'zargo's Flame Cloak",
+        "string": "Manto de llamas de J'zargo"
+    },
+    {
+        "editor_id": "Survival_ColdStage1",
+        "form_id": "[0500086E]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Comfortable",
+        "string": "Cómodo"
+    },
+    {
+        "editor_id": "Survival_AfflictionWeakened",
+        "form_id": "[05000910]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Weakened",
+        "string": "Exánime"
+    },
+    {
+        "editor_id": "PowerArgonianHistskin",
+        "form_id": "[000E40D5]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Invoke the power of the Hist to recover health ten times faster for <60> seconds.",
+        "string": "Invoca el poder del hist para recuperar salud diez veces más rápido durante 60 segundos."
+    },
+    {
+        "editor_id": "Survival_DiseaseWitbane3",
+        "form_id": "[05000995]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Crippling Witbane",
+        "string": "Atontamiento incapacitante"
+    },
+    {
+        "editor_id": "Survival_ExhaustionStage3NoDisease",
+        "form_id": "[0500090F]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Total magicka is reduced. Magicka and stamina regenerate <50>% slower. Beneficial potions are <40>% less effective.",
+        "string": "Se reduce la magia total. La magia y el aguante se regeneran un <50>% más lento. Las pociones beneficiosas son un <40>% menos eficaces."
+    },
+    {
+        "editor_id": "Survival_HungerStage2",
+        "form_id": "[05000880]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Peckish",
+        "string": "Poca hambre"
+    },
+    {
+        "editor_id": "DiseaseWitbane",
+        "form_id": "[000B8783]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Witbane",
+        "string": "Atontamiento"
+    },
+    {
+        "editor_id": "Survival_DiseaseBoneBreakFever3",
+        "form_id": "[05000985]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Crippling Bone Break Fever",
+        "string": "Fiebre quebrantahuesos incapacitante"
+    },
+    {
+        "editor_id": "Survival_ExhaustionStage1",
+        "form_id": "[05000878]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "You feel refreshed.",
+        "string": "Te sientes recuperado."
+    },
+    {
+        "editor_id": "flameCloak",
+        "form_id": "[0003AE9F]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Flame Cloak",
+        "string": "Manto de llamas"
+    },
+    {
+        "editor_id": "Survival_ExhaustionStage5",
+        "form_id": "[0500087D]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Total magicka is reduced. Magicka and stamina no longer recover. Beneficial potions are <80>% less effective. You are <40>% less resistant to disease.",
+        "string": "Se reduce la magia total. La magia y el aguante ya no se regeneran. Las pociones beneficiosas son un <80>% menos eficaces. Tienes un <40>% menos de resistencia a las enfermedades."
+    },
+    {
+        "editor_id": "Survival_DiseaseRattles3",
+        "form_id": "[0500098D]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Crippling Rattles",
+        "string": "Estertores incapacitantes"
+    },
+    {
+        "editor_id": "Survival_AfflictionFrostbitten",
+        "form_id": "[05000913]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Lockpicking and pickpocketing is <30>% harder, and bows do <30>% less damage for <24> hours.",
+        "string": "Abrir cerraduras y Robar es un <30>% más difícil, y los arcos infligen un <30>% menos de daño durante <24> horas."
+    },
+    {
+        "editor_id": "Survival_abRacialNord",
+        "form_id": "[0500088B]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Your Nord blood improves your resistance to cold environments by <25> points.",
+        "string": "Tu sangre nórdica mejora en <25> puntos tu resistencia a los climas fríos."
+    },
+    {
+        "editor_id": "Survival_HungerStage0",
+        "form_id": "[05000876]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Well Fed",
+        "string": "Bien alimentado"
+    },
+    {
+        "editor_id": "Survival_ExhaustionStage1",
+        "form_id": "[05000878]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Refreshed",
+        "string": "Recuperado"
+    },
+    {
+        "editor_id": "Survival_abRacialDunmer",
+        "form_id": "[0500088E]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Your Dunmer blood gives you <25%> resistance to fatigue.",
+        "string": "Tu sangre dunmer te otorga un <25>% de resistencia a la fatiga."
+    },
+    {
+        "editor_id": "Survival_ExhaustionStage5NoDisease",
+        "form_id": "[0500090D]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Total magicka is reduced. Magicka and stamina no longer recover. Beneficial potions are <80>% less effective.",
+        "string": "Se reduce la magia total. La magia y el aguante ya no se regeneran. Las pociones beneficiosas son un <80>% menos eficaces."
+    },
+    {
+        "editor_id": "Survival_abRacialDunmer",
+        "form_id": "[0500088E]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Resist Fatigue",
+        "string": "Resistencia a la fatiga"
+    },
+    {
+        "editor_id": "Survival_ColdStage4",
+        "form_id": "[05000870]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Total health is reduced. You move <30>% slower. Lockpicking and pickpocketing are <70>% harder.",
+        "string": "Se reduce la salud total. Te mueves un <30>% más lento. Abrir cerraduras y robar resulta un <70>% más difícil."
+    },
+    {
+        "editor_id": "WellRested",
+        "form_id": "[000FB984]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Well Rested",
+        "string": "Bien descansado"
+    },
+    {
+        "editor_id": "Survival_AfflictionAddled",
+        "form_id": "[05000911]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Magicka and stamina regenerate <30>% slower for <24> hours.",
+        "string": "La magia y el aguante se regeneran un <30>% más despacio durante <24> horas."
+    },
+    {
+        "editor_id": "Survival_DiseaseRockjoint3",
+        "form_id": "[0500098F]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Crippling Rockjoint",
+        "string": "Anquilosamiento incapacitante"
+    },
+    {
+        "editor_id": "Survival_abLowerCarryWeightSpell",
+        "form_id": "[05000887]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Lower Carry Weight",
+        "string": "Reducir capacidad de peso"
+    },
+    {
+        "editor_id": "Survival_DiseaseGreenspore",
+        "form_id": "[05000912]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Greenspore",
+        "string": "Espora verde"
+    },
+    {
+        "editor_id": "Survival_DiseaseWitbane2",
+        "form_id": "[05000994]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Magicka recovers <25>% as fast.",
+        "string": "La magia se recupera un <25>% más rápido."
+    },
+    {
+        "editor_id": "TrapDiseaseRattles",
+        "form_id": "[0010A24E]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Rattles",
+        "string": "Estertores"
+    },
+    {
+        "editor_id": "TrapDiseaseAtaxia",
+        "form_id": "[0010A24A]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Ataxia",
+        "string": "Ataxia"
+    },
+    {
+        "editor_id": "Survival_DiseaseBoneBreakFever2",
+        "form_id": "[05000984]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Severe Bone Break Fever",
+        "string": "Fiebre quebrantahuesos grave"
+    },
+    {
+        "editor_id": "Survival_abRacialKhajiitRawMeat",
+        "form_id": "[05000877]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Raw Diet",
+        "string": "Dieta cruda"
+    },
+    {
+        "editor_id": "DLC2DiseaseDroops",
+        "form_id": "[040285C1]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Droops",
+        "string": "Marchitamiento"
+    },
+    {
+        "editor_id": "Survival_DiseaseWitbane3",
+        "form_id": "[05000995]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Magicka no longer recovers.",
+        "string": "La magia ya no se recupera."
+    },
+    {
+        "editor_id": "Survival_RegionInfoSpell",
+        "form_id": "[0500087F]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Region Info",
+        "string": "Información de la región"
+    },
+    {
+        "editor_id": "Survival_abLowerRegenSpell",
+        "form_id": "[05000982]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Lower Regeneration Rates",
+        "string": "Niveles de regeneración más bajos"
+    },
+    {
+        "editor_id": "doomSteedAbility",
+        "form_id": "[000E5F5E]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "The Steed Stone",
+        "string": "La piedra del Corcel"
+    },
+    {
+        "editor_id": "Survival_DLC2DiseaseDroops3",
+        "form_id": "[05000997]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Crippling Droops",
+        "string": "Atontamiento incapacitante"
+    },
+    {
+        "editor_id": "Survival_HungerStage5",
+        "form_id": "[05000885]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Total stamina is reduced. Attacks with weapons are <40>% slower. You are <90>% less effective with using shields and sneaking.",
+        "string": "Se reduce el aguante total. Los ataques con armas son un <40>% más lentos. Eres un <90>% menos eficaz al usar escudos y discreción."
+    },
+    {
+        "editor_id": "Survival_HungerStage2",
+        "form_id": "[05000880]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Total stamina is reduced. Attacks with weapons are <10>% slower. You are <30>% less effective with using shields and sneaking.",
+        "string": "Se reduce el aguante total. Los ataques con armas son un <10>% más lentos. Eres un <30>% menos eficaz al usar escudos y la discreción."
+    },
+    {
+        "editor_id": "Survival_DiseaseBoneBreakFever1",
+        "form_id": "[05000830]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Bone Break Fever",
+        "string": "Fiebre quebrantahuesos"
+    },
+    {
+        "editor_id": "DiseaseRattles",
+        "form_id": "[000B8781]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Rattles",
+        "string": "Estertores"
+    },
+    {
+        "editor_id": "Survival_abRacialArgonianCold",
+        "form_id": "[05000875]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Weakness to Cold",
+        "string": "Debilidad al frío"
+    },
+    {
+        "editor_id": "Survival_OblivionDisplaySpell",
+        "form_id": "[0500090E]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Transmundane",
+        "string": "Transmundano"
+    },
+    {
+        "editor_id": "Survival_DiseaseAtaxia3",
+        "form_id": "[05000993]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Crippling Ataxia",
+        "string": "Ataxia incapacitante"
+    },
+    {
+        "editor_id": "Survival_abRacialBosmer",
+        "form_id": "[0500088F]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Your Bosmer blood gives you <25%> resistance to fatigue.",
+        "string": "Tu sangre bosmer te otorga un <25>% de resistencia a la fatiga."
+    },
+    {
+        "editor_id": "DiseaseAtaxia",
+        "form_id": "[000B877C]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Ataxia",
+        "string": "Ataxia"
+    },
+    {
+        "editor_id": "Rested",
+        "form_id": "[000FB981]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Rested",
+        "string": "Descansado"
+    },
+    {
+        "editor_id": "MarriageRested",
+        "form_id": "[000CDA1D]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Lover's Comfort",
+        "string": "Consuelo del amante"
+    },
+    {
+        "editor_id": "Survival_ColdStage5",
+        "form_id": "[05000871]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Total health is reduced. You move <40>% slower. Lockpicking and pickpocketing are <90>% harder.",
+        "string": "Se reduce la salud total. Eres un <40>% más lento. Abrir cerraduras y robar resulta un <90>% más difícil."
+    },
+    {
+        "editor_id": "Survival_FreezingWaterCheckSpell",
+        "form_id": "[05000883]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Freezing Water Check",
+        "string": "Comprobación de agua helada"
+    },
+    {
+        "editor_id": "Survival_DiseaseAtaxia2",
+        "form_id": "[05000992]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Severe Ataxia",
+        "string": "Ataxia grave"
+    },
+    {
+        "editor_id": "Survival_abRacialArgonianRawMeat",
+        "form_id": "[0500088D]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Your Argonian blood allows you to eat raw meat without risk of disease.",
+        "string": "Tu sangre argoniana te permite comer carne cruda sin riesgo de contraer enfermedades."
+    },
+    {
+        "editor_id": "Survival_DiseaseRattles2",
+        "form_id": "[0500098C]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Severe Rattles",
+        "string": "Estertores graves"
+    },
+    {
+        "editor_id": "Survival_AttributePenaltyStamina",
+        "form_id": "[05000A05]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Attribute Penalty Stamina",
+        "string": "Penalización de atributo: aguante"
+    },
+    {
+        "editor_id": "Survival_abRacialBosmer",
+        "form_id": "[0500088F]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Resist Fatigue",
+        "string": "Resistencia a la fatiga"
+    },
+    {
+        "editor_id": "Survival_AfflictionWeakened",
+        "form_id": "[05000910]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "You are <30>% less effective with melee weapons and blocking damage with your shield for <24> hours.",
+        "string": "Durante <24> horas, eres un <30>% menos eficaz con las armas cuerpo a cuerpo y bloqueando el daño con tu escudo."
+    },
+    {
+        "editor_id": "Survival_DiseaseBrownRot3",
+        "form_id": "[05000986]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Crippling Brown Rot",
+        "string": "Putrefacción marrón incapacitante"
+    },
+    {
+        "editor_id": "Survival_HungerStage1",
+        "form_id": "[0500087E]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Satisfied",
+        "string": "Satisfecho"
+    },
+    {
+        "editor_id": "Survival_DiseaseGutworm3",
+        "form_id": "[0500098A]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Stamina regeneration is decreased by <75>%. Food restores <75>% less hunger.",
+        "string": "La regeneración de aguante disminuye un <75>%. La comida sacia un <75>% menos el hambre."
+    },
+    {
+        "editor_id": "PerkDualFlurry30",
+        "form_id": "[00108A3F]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Dual Flurry 30",
+        "string": "Ráfaga doble 30"
+    },
+    {
+        "editor_id": "Survival_ExhaustionStage4NoDisease",
+        "form_id": "[0500090C]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Total magicka is reduced. Magicka and stamina regenerate <75>% slower. Beneficial potions are <60>% less effective.",
+        "string": "Se reduce la magia total. La magia y el aguante se regeneran un <75>% más lento. Las pociones beneficiosas son un <60>% menos eficaces."
+    },
+    {
+        "editor_id": "Survival_ExhaustionStage4NoDisease",
+        "form_id": "[0500090C]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Weary",
+        "string": "Con fatiga"
+    },
+    {
+        "editor_id": "Survival_DiseaseGutworm2",
+        "form_id": "[05000989]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Stamina regeneration is decreased by <50>%. Food restores <50>% less hunger.",
+        "string": "La regeneración de aguante disminuye un <50>%. La comida sacia un <50>% menos el hambre."
+    },
+    {
+        "editor_id": "Survival_ExhaustionStage5NoDisease",
+        "form_id": "[0500090D]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Debilitated",
+        "string": "Debilitado"
+    },
+    {
+        "editor_id": "Survival_ColdStage0",
+        "form_id": "[05000890]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Picking locks and picking pockets is <10>% easier. You are <10>% more resistant to Frost.",
+        "string": "Abrir cerraduras y robar resulta un <10>% más fácil. Eres un <10>% más resistente a la escarcha."
+    },
+    {
+        "editor_id": "Survival_HungerStage3",
+        "form_id": "[05000881]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Total stamina is reduced. Attacks with weapons are <20>% slower. You are <50>% less effective with using shields and sneaking.",
+        "string": "Se reduce el aguante total. Los ataques con armas son un <20>% más lentos. Eres un <50>% menos eficaz al usar escudos y la discreción."
+    },
+    {
+        "editor_id": "Survival_AfflictionAddled",
+        "form_id": "[05000911]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Addled",
+        "string": "Confuso"
+    },
+    {
+        "editor_id": "Survival_DiseaseBrainRot2",
+        "form_id": "[05000990]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Severe Brain Rot",
+        "string": "Pudrir cerebro grave"
+    },
+    {
+        "editor_id": "Survival_abRacialKhajiit",
+        "form_id": "[05000872]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Fortify Warmth",
+        "string": "Reforzar calor"
+    },
+    {
+        "editor_id": "Survival_ExhaustionStage4",
+        "form_id": "[0500087B]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Weary",
+        "string": "Con fatiga"
+    },
+    {
+        "editor_id": "Survival_HungerStage4",
+        "form_id": "[05000886]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Total stamina is reduced. Attacks with weapons are <30>% slower. You are <70>% less effective with using shields and sneaking.",
+        "string": "Se reduce el aguante total. Los ataques con armas son un <30>% más lentos. Eres un <70>% menos eficaz al usar escudos y la discreción."
+    },
+    {
+        "editor_id": "Survival_DiseaseGreenspore2",
+        "form_id": "[05000987]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Severe Greenspore",
+        "string": "Espora verde grave"
+    },
+    {
+        "editor_id": "Survival_abRacialKhajiitRawMeat",
+        "form_id": "[05000877]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Your Khajiit blood allows you to eat raw meat without risk of disease.",
+        "string": "Tu sangre khajiita te permite comer carne cruda sin riesgo de contraer enfermedades."
+    },
+    {
+        "editor_id": "Survival_HungerStage1",
+        "form_id": "[0500087E]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "You are not hungry.",
+        "string": "No tienes hambre."
+    },
+    {
+        "editor_id": "PowerDarkElfFlameCloak",
+        "form_id": "[000E40D4]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Ancestor's Wrath",
+        "string": "Ira del antepasado"
+    },
+    {
+        "editor_id": "Survival_ColdStage2",
+        "form_id": "[05000891]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Chilly",
+        "string": "Frío"
+    },
+    {
+        "editor_id": "Survival_DiseaseRockjoint2",
+        "form_id": "[0500098E]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Severe Rockjoint",
+        "string": "Anquilosamiento grave"
+    },
+    {
+        "editor_id": "Survival_DiseaseFoodPoisoning",
+        "form_id": "[05000918]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Food Poisoning",
+        "string": "Intoxicación alimentaria"
+    },
+    {
+        "editor_id": "Survival_abRacialOrc",
+        "form_id": "[05000873]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Your Orc blood gives you <15%> resistance to hunger and fatigue, and increases your resistance to cold environments by <10> points.",
+        "string": "Tu sangre orca te otorga un <15%> de resistencia al hambre y a la fatiga, y mejora en <10> puntos tu resistencia a los climas fríos."
+    },
+    {
+        "editor_id": "Survival_HungerStage3",
+        "form_id": "[05000881]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Hungry",
+        "string": "Hambre"
+    },
+    {
+        "editor_id": "TrapDiseaseRockjoint",
+        "form_id": "[0010A24F]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Rockjoint",
+        "string": "Anquilosamiento"
+    },
+    {
+        "editor_id": "DiseaseBoneBreakFever",
+        "form_id": "[000B877E]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Bone Break Fever",
+        "string": "Fiebre quebrantahuesos"
+    },
+    {
+        "editor_id": "Survival_ColdStage3",
+        "form_id": "[0500086D]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Total health is reduced. You move <20>% slower. Lockpicking and pickpocketing are <50>% harder.",
+        "string": "Se reduce la salud total. Te mueves un <20>% más lento. Abrir cerraduras y robar resulta un <50>% más difícil."
+    },
+    {
+        "editor_id": "Survival_HungerStage5",
+        "form_id": "[05000885]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Starving",
+        "string": "Mucha hambre"
+    },
+    {
+        "editor_id": "Survival_DiseaseGutworm2",
+        "form_id": "[05000989]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Severe Gutworm",
+        "string": "Tenia grave"
+    },
+    {
+        "editor_id": "Survival_OverencumberedSpell",
+        "form_id": "[05000917]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Drains Stamina by <2> points per second. Fatigue increases <400>% faster.",
+        "string": "Consume <2> puntos de aguante por segundo. La fatiga aumenta un <400>% más rápido."
+    },
+    {
+        "editor_id": "Survival_DLC2DiseaseDroops2",
+        "form_id": "[05000996]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Severe Droops",
+        "string": "Marchitamiento grave"
+    },
+    {
+        "editor_id": "Survival_DiseaseGutworm",
+        "form_id": "[05000915]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Gutworm",
+        "string": "Tenia"
+    },
+    {
+        "editor_id": "Survival_abRacialOrc",
+        "form_id": "[05000873]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Stalwart",
+        "string": "Leal"
+    },
+    {
+        "editor_id": "Survival_FreezingWaterDamage",
+        "form_id": "[05000882]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Freezing Water",
+        "string": "Agua helada"
+    },
+    {
+        "editor_id": "Survival_ColdStage4",
+        "form_id": "[05000870]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Freezing",
+        "string": "congelante"
+    },
+    {
+        "editor_id": "Survival_AttributePenaltyMagicka",
+        "form_id": "[05000A06]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Attribute Penalty Magicka",
+        "string": "Penalización de atributo: magia"
+    },
+    {
+        "editor_id": "DiseaseBrainRot",
+        "form_id": "[000B877F]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Brain Rot",
+        "string": "Pudrir cerebro"
+    },
+    {
+        "editor_id": "TrapDiseaseBoneBreakFever",
+        "form_id": "[0010A24C]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Bone Break Fever",
+        "string": "Fiebre quebrantahuesos"
+    },
+    {
+        "editor_id": "Survival_ColdStage3",
+        "form_id": "[0500086D]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Very Cold",
+        "string": "Muy frío"
+    },
+    {
+        "editor_id": "Survival_ExhaustionStage5",
+        "form_id": "[0500087D]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Debilitated",
+        "string": "Debilitado"
+    },
+    {
+        "editor_id": "Survival_abRacialKhajiit",
+        "form_id": "[05000872]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Your Khajiit blood improves your resistance to cold environments by <15> points.",
+        "string": "Tu sangre khajiita mejora en <15> puntos tu resistencia a los climas fríos."
+    },
+    {
+        "editor_id": "Survival_DiseaseBrownRot2",
+        "form_id": "[0500098B]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Severe Brown Rot",
+        "string": "Putrefacción marrón grave"
+    },
+    {
+        "editor_id": "Survival_FreezingWaterDamage",
+        "form_id": "[05000882]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Freezing water is slowly damaging you.",
+        "string": "El agua helada te daña lentamente."
+    },
+    {
+        "editor_id": "Survival_DiseaseWitbane2",
+        "form_id": "[05000994]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Severe Witbane",
+        "string": "Atontamiento grave"
+    },
+    {
+        "editor_id": "Survival_ExhaustionStage2",
+        "form_id": "[05000879]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Drained",
+        "string": "Agotado"
+    },
+    {
+        "editor_id": "Survival_DiseaseBrownRot",
+        "form_id": "[05000914]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Brown Rot",
+        "string": "Putrefacción marrón"
+    },
+    {
+        "editor_id": "Survival_HungerStage0",
+        "form_id": "[05000876]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Stamina regenerates <10>% faster.",
+        "string": "El aguante se regenera un <10>% más rápido."
+    },
+    {
+        "editor_id": "Survival_DiseaseFoodPoisoning",
+        "form_id": "[05000918]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Magicka and Stamina recover <50>% slower, and food no longer restores Health for <3> days.",
+        "string": "La magia y el aguante se recuperan un <50>% más lento, y durante <3> días no se podrá restaurar la salud comiendo."
+    },
+    {
+        "editor_id": "Survival_abRacialArgonianRawMeat",
+        "form_id": "[0500088D]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Raw Diet",
+        "string": "Dieta cruda"
+    },
+    {
+        "editor_id": "FlameCloakScroll",
+        "form_id": "[000A44AB]",
+        "index": null,
+        "type": "SCRL FULL",
+        "original": "Scroll of Flame Cloak",
+        "string": "Pergamino: manto de llamas"
+    },
+    {
+        "editor_id": "MGRJzargo1Scroll",
+        "form_id": "[000967E3]",
+        "index": null,
+        "type": "SCRL FULL",
+        "original": "J'zargo's Flame Cloak Scroll",
+        "string": "Pergamino: manto de llamas de J'zargo"
+    },
+    {
+        "editor_id": "FavorSorexRum",
+        "form_id": "[000D055E]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Stros M'Kai Rum",
+        "string": "Stros M'Kai Rum"
+    },
+    {
+        "editor_id": "WEDL03CyrodilicBrandy",
+        "form_id": "[000B91D7]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Cyrodilic Brandy",
+        "string": "Brandy cirodílico"
+    },
+    {
+        "editor_id": "FoodPotato",
+        "form_id": "[00064B41]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Potato",
+        "string": "Patata"
+    },
+    {
+        "editor_id": "FoodLeeksGrilled",
+        "form_id": "[00064B3E]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Grilled Leeks",
+        "string": "Puerros a la parrilla"
+    },
+    {
+        "editor_id": "FoodCheeseWedge02",
+        "form_id": "[00064B32]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Eidar Cheese Wedge",
+        "string": "Cuña de queso eidar"
+    },
+    {
+        "editor_id": "FoodBoiledCremeTreat",
+        "form_id": "[00064B30]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Boiled Creme Treat",
+        "string": "Dulce de crema cocida"
+    },
+    {
+        "editor_id": "DLC2FoodAshYam",
+        "form_id": "[040206E7]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Ash Yam",
+        "string": "Boniato de ceniza"
+    },
+    {
+        "editor_id": "DLC2RRFavor01EmberbrandWine",
+        "form_id": "[040320DF]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Emberbrand Wine",
+        "string": "Vino de ascuas"
+    },
+    {
+        "editor_id": "BYOHFoodClamChowder",
+        "form_id": "[0300353E]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Clam Chowder",
+        "string": "Sopa de almejas"
+    },
+    {
+        "editor_id": "FoodHoneyNutTreat",
+        "form_id": "[00064B38]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Honey Nut Treat",
+        "string": "Caramelo de miel de nuez"
+    },
+    {
+        "editor_id": "DLC2FoodAshHopperLeg",
+        "form_id": "[0403D125]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Ash Hopper Leg",
+        "string": "Pata de saltador de cenizas"
+    },
+    {
+        "editor_id": "FoodPotatoesBaked",
+        "form_id": "[00064B3A]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Baked Potatoes",
+        "string": "Patatas asadas"
+    },
+    {
+        "editor_id": "FoodPheasant",
+        "form_id": "[00065C9D]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Pheasant Breast",
+        "string": "Pechuga de faisán"
+    },
+    {
+        "editor_id": "FoodCheeseWheel01A",
+        "form_id": "[00064B33]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Goat Cheese Wheel",
+        "string": "Queso de cabra entero"
+    },
+    {
+        "editor_id": "BYOHFoodSalmonCooked02",
+        "form_id": "[03003541]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Salmon Steak",
+        "string": "Filete de salmón"
+    },
+    {
+        "editor_id": "FoodMammothMeat",
+        "form_id": "[000669A4]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Mammoth Snout",
+        "string": "Trompa de mamut"
+    },
+    {
+        "editor_id": "FoodCharredSkeeverMeat",
+        "form_id": "[000E8448]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Charred Skeever Meat",
+        "string": "Carne del skeever chamuscado"
+    },
+    {
+        "editor_id": "DLC2Flin",
+        "form_id": "[040207E5]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Flin",
+        "string": "Flin"
+    },
+    {
+        "editor_id": "FoodWineBottle02",
+        "form_id": "[0003133C]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Wine",
+        "string": "Vino"
+    },
+    {
+        "editor_id": "MS14WineAltoA",
+        "form_id": "[000F257E]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Jessica's Wine",
+        "string": "Vino de Jessica"
+    },
+    {
+        "editor_id": "FoodApple",
+        "form_id": "[00064B2E]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Red Apple",
+        "string": "Manzana roja"
+    },
+    {
+        "editor_id": "FoodChickenCooked",
+        "form_id": "[000E8947]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Grilled Chicken Breast",
+        "string": "Pechuga de pollo a la parrilla"
+    },
+    {
+        "editor_id": "BYOHFoodChickenDumpling01",
+        "form_id": "[030117FF]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Chicken Dumpling",
+        "string": "Bollito de pollo"
+    },
+    {
+        "editor_id": "FoodSalmon",
+        "form_id": "[00065C9F]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Salmon Meat",
+        "string": "Carne de salmón"
+    },
+    {
+        "editor_id": "DLC1BloodPotion",
+        "form_id": "[02018EF3]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Potion of Blood",
+        "string": "Poción de sangre"
+    },
+    {
+        "editor_id": "FirebrandWine",
+        "form_id": "[0001895F]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Firebrand Wine",
+        "string": "Vino de fuego"
+    },
+    {
+        "editor_id": "FoodCheeseWedge01",
+        "form_id": "[00064B31]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Goat Cheese Wedge",
+        "string": "Cuña de queso de cabra"
+    },
+    {
+        "editor_id": "RiftenSpecial01",
+        "form_id": "[00065C37]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Velvet LeChance",
+        "string": "Velvet LeChance"
+    },
+    {
+        "editor_id": "FoodCabbagePotatoSoup",
+        "form_id": "[000F431B]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Cabbage Potato Soup",
+        "string": "Sopa de col y patatas"
+    },
+    {
+        "editor_id": "FoodLeek",
+        "form_id": "[000669A5]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Leek",
+        "string": "Puerro"
+    },
+    {
+        "editor_id": "DLC2FoodAshHopperMeat",
+        "form_id": "[0403BD15]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Ash Hopper Meat",
+        "string": "Carne de saltador de cenizas"
+    },
+    {
+        "editor_id": "FoodMammothMeatCooked",
+        "form_id": "[000722BB]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Mammoth Steak",
+        "string": "Filete de mamut"
+    },
+    {
+        "editor_id": "BYOHFoodJuniperBerryCrostata",
+        "form_id": "[03003539]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Juniper Berry Crostata",
+        "string": "Tarta de frutos de enebro"
+    },
+    {
+        "editor_id": "Survival_FoodHotHorkerStew",
+        "form_id": "[050009E8]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Hot Horker Stew",
+        "string": "Guiso de horker caliente"
+    },
+    {
+        "editor_id": "Survival_FoodHotCabbageSoup",
+        "form_id": "[050009E1]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Hot Cabbage Soup",
+        "string": "Sopa de col caliente"
+    },
+    {
+        "editor_id": "Survival_FoodHotBeefStew",
+        "form_id": "[050009E7]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Hot Beef Stew",
+        "string": "Guiso de ternera caliente"
+    },
+    {
+        "editor_id": "AleWhiterunQuest",
+        "form_id": "[0009380D]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Argonian Ale",
+        "string": "Cerveza argoniana"
+    },
+    {
+        "editor_id": "FoodBread01B",
+        "form_id": "[00065C98]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Bread",
+        "string": "Pan"
+    },
+    {
+        "editor_id": "FoodWineAlto",
+        "form_id": "[0003133B]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Alto Wine",
+        "string": "Vino de Alto"
+    },
+    {
+        "editor_id": "FoodCheeseWheel02B",
+        "form_id": "[00064B36]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Sliced Eidar Cheese",
+        "string": "Queso eidar empezado"
+    },
+    {
+        "editor_id": "FoodSalmonCooked01",
+        "form_id": "[00064B3B]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Salmon Steak",
+        "string": "Filete de salmón"
+    },
+    {
+        "editor_id": "FoodBlackBriarMead",
+        "form_id": "[0002C35A]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Black-Briar Mead",
+        "string": "Aguamiel de Espino Negro"
+    },
+    {
+        "editor_id": "RiftenSpecial03",
+        "form_id": "[00065C39]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Cliff Racer",
+        "string": "Asolador de acantilados"
+    },
+    {
+        "editor_id": "FoodVenisonStew",
+        "form_id": "[000F431D]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Venison Stew",
+        "string": "Guiso de venado"
+    },
+    {
+        "editor_id": "FoodCarrot",
+        "form_id": "[00064B40]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Carrot",
+        "string": "Zanahoria"
+    },
+    {
+        "editor_id": "FoodDogMeat",
+        "form_id": "[000EDB2E]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Dog Meat",
+        "string": "Carne de perro"
+    },
+    {
+        "editor_id": "BYOHFoodAppleDumpling01",
+        "form_id": "[03003533]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Apple Dumpling",
+        "string": "Bollito de manzana"
+    },
+    {
+        "editor_id": "FoodPotatoSoup",
+        "form_id": "[0300353D]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Potato Soup",
+        "string": "Sopa con patatas"
+    },
+    {
+        "editor_id": "FoodCabbage",
+        "form_id": "[00064B3F]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Cabbage",
+        "string": "Col"
+    },
+    {
+        "editor_id": "BYOHFoodButter",
+        "form_id": "[0300353C]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Butter",
+        "string": "Mantequilla"
+    },
+    {
+        "editor_id": "FoodChicken",
+        "form_id": "[000F2011]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Chicken Breast",
+        "string": "Pechuga de pollo"
+    },
+    {
+        "editor_id": "FoodMead",
+        "form_id": "[00034C5D]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Nord Mead",
+        "string": "Aguamiel nórdica"
+    },
+    {
+        "editor_id": "FoodSolitudeSpicedWine",
+        "form_id": "[00085368]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Spiced Wine",
+        "string": "Vino especiado"
+    },
+    {
+        "editor_id": "FoodHorkerMeatCooked",
+        "form_id": "[0007224E]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Horker Loaf",
+        "string": "Pan de horker"
+    },
+    {
+        "editor_id": "Survival_FoodHotElsweyrFondue",
+        "form_id": "[05000A08]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Hot Elsweyr Fondue",
+        "string": "Fondue de Elsweyr caliente"
+    },
+    {
+        "editor_id": "Ale",
+        "form_id": "[00034C5E]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Ale",
+        "string": "Cerveza"
+    },
+    {
+        "editor_id": "BYOHFoodWineBottle03",
+        "form_id": "[03003536]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Surilie Brothers Wine",
+        "string": "Vino de los hermanos Surilie"
+    },
+    {
+        "editor_id": "FoodRabbitCooked",
+        "form_id": "[000722C2]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Rabbit Haunch",
+        "string": "Anca de conejo"
+    },
+    {
+        "editor_id": "Survival_FoodHotPotatoSoup",
+        "form_id": "[050009E2]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Hot Potato Soup",
+        "string": "Sopa con patatas caliente"
+    },
+    {
+        "editor_id": "DLC2FoodHorkerAshYamStew",
+        "form_id": "[0403CD5B]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Horker and Ash Yam Stew",
+        "string": "Guiso de horker y boniatos de cenizas"
+    },
+    {
+        "editor_id": "BYOHFoodLavenderDumpling01",
+        "form_id": "[03011801]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Lavender Dumpling",
+        "string": "Bollito de espliego"
+    },
+    {
+        "editor_id": "DLC2Shein",
+        "form_id": "[040248CC]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Shein",
+        "string": "Shein"
+    },
+    {
+        "editor_id": "Survival_DLC2FoodHotHorkerAshYamStew",
+        "form_id": "[050009E5]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Hot Horker and Ash Yam Stew",
+        "string": "Guiso de horker y boniatos de cenizas caliente"
+    },
+    {
+        "editor_id": "FoodHorkerStew",
+        "form_id": "[000F4315]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Horker Stew",
+        "string": "Guiso de horker"
+    },
+    {
+        "editor_id": "BYOHFoodMilk",
+        "form_id": "[03003534]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Jug of Milk",
+        "string": "Jarra de leche"
+    },
+    {
+        "editor_id": "Survival_FoodHotAppleCabbageStew",
+        "form_id": "[050009E6]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Hot Apple Cabbage Stew",
+        "string": "Guiso de col y manzana caliente"
+    },
+    {
+        "editor_id": "RiftenSpecial02",
+        "form_id": "[00065C38]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "White-Gold Tower",
+        "string": "Torre Blanca y Dorada"
+    },
+    {
+        "editor_id": "FoodSlaughterfishCooked",
+        "form_id": "[00064B3C]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Seared Slaughterfish",
+        "string": "Pez asesino chamuscado"
+    },
+    {
+        "editor_id": "FoodPheasantCooked",
+        "form_id": "[000722C7]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Pheasant Roast",
+        "string": "Asado de faisán"
+    },
+    {
+        "editor_id": "FoodWineBottle02A",
+        "form_id": "[000C5348]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Wine",
+        "string": "Vino"
+    },
+    {
+        "editor_id": "FoodLongTaffyTreat",
+        "form_id": "[00064B39]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Long Taffy Treat",
+        "string": "Caramelo blando largo"
+    },
+    {
+        "editor_id": "FoodGourd",
+        "form_id": "[0010D666]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Gourd",
+        "string": "Calabaza"
+    },
+    {
+        "editor_id": "DA03FoodMammothMeat",
+        "form_id": "[0010211A]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Mammoth Snout",
+        "string": "Trompa de mamut"
+    },
+    {
+        "editor_id": "FoodHorseMeatCooked",
+        "form_id": "[000722B0]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Horse Haunch",
+        "string": "Grupa de caballo"
+    },
+    {
+        "editor_id": "BYOHFoodBraidedBread01",
+        "form_id": "[030009DB]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Braided Bread",
+        "string": "Pan trenzado"
+    },
+    {
+        "editor_id": "FoodCabbageSoup",
+        "form_id": "[000EBA02]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Cabbage Soup",
+        "string": "Sopa de col"
+    },
+    {
+        "editor_id": "FoodClamMeat",
+        "form_id": "[000EBA03]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Clam Meat",
+        "string": "Carne de almeja"
+    },
+    {
+        "editor_id": "Survival_FoodHotCabbagePotatoSoup",
+        "form_id": "[050009E0]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Hot Cabbage Potato Soup",
+        "string": "Sopa de col y patatas caliente"
+    },
+    {
+        "editor_id": "FoodBread01A",
+        "form_id": "[00065C97]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Bread",
+        "string": "Pan"
+    },
+    {
+        "editor_id": "DLC2FoodBoarMeatCooked",
+        "form_id": "[0403CF72]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Cooked Boar Meat",
+        "string": "Carne de jabalí asado"
+    },
+    {
+        "editor_id": "FoodRabbit",
+        "form_id": "[00065C9E]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Raw Rabbit Leg",
+        "string": "Pata de conejo cruda"
+    },
+    {
+        "editor_id": "FoodCheeseWheel02A",
+        "form_id": "[00064B34]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Eidar Cheese Wheel",
+        "string": "Queso eidar entero"
+    },
+    {
+        "editor_id": "FoodHorkerMeat",
+        "form_id": "[00065C9B]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Horker Meat",
+        "string": "Carne de horker"
+    },
+    {
+        "editor_id": "FreeformDragonBridgeMead",
+        "form_id": "[000555E8]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Dragon's Breath Mead",
+        "string": "Aguamiel Aliento de dragón"
+    },
+    {
+        "editor_id": "FoodElsweyrFondue",
+        "form_id": "[000F4320]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Elsweyr Fondue",
+        "string": "Fondue de Elsweyr"
+    },
+    {
+        "editor_id": "BYOHFoodGarlicBread01",
+        "form_id": "[030009DC]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Garlic Bread",
+        "string": "Pan de ajo"
+    },
+    {
+        "editor_id": "FoodHonningbrewMead",
+        "form_id": "[000508CA]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Honningbrew Mead",
+        "string": "Aguamiel de la destilería Amielada"
+    },
+    {
+        "editor_id": "DLC2RRF04Sujamma",
+        "form_id": "[04024E0B]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Sadri's Sujamma",
+        "string": "Sujamma de Sadri"
+    },
+    {
+        "editor_id": "Survival_FoodHotTomatoSoup",
+        "form_id": "[050009E3]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Hot Tomato Soup",
+        "string": "Sopa de tomate caliente"
+    },
+    {
+        "editor_id": "MQ201Drink",
+        "form_id": "[00036D53]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Colovian Brandy",
+        "string": "Brandy coloviano"
+    },
+    {
+        "editor_id": "DLC2Sujamma",
+        "form_id": "[040207E6]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Sujamma",
+        "string": "Sujamma"
+    },
+    {
+        "editor_id": "FoodBeefCooked",
+        "form_id": "[000721E8]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Cooked Beef",
+        "string": "Ternera cocinada"
+    },
+    {
+        "editor_id": "Survival_BYOHFoodHotClamChowder",
+        "form_id": "[050009EA]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Hot Clam Chowder",
+        "string": "Sopa de almejas caliente"
+    },
+    {
+        "editor_id": "Survival_FoodHotVegetableSoup",
+        "form_id": "[050009E4]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Hot Vegetable Soup",
+        "string": "Sopa de verduras caliente"
+    },
+    {
+        "editor_id": "FoodVenisonCooked",
+        "form_id": "[000722BD]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Venison Chop",
+        "string": "Chuleta de venado"
+    },
+    {
+        "editor_id": "FoodPie",
+        "form_id": "[00064B43]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Apple Pie",
+        "string": "Pastel de manzana"
+    },
+    {
+        "editor_id": "DLC2FoodBoarMeat",
+        "form_id": "[0403BD14]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Boar Meat",
+        "string": "Carne de jabalí"
+    },
+    {
+        "editor_id": "FoodTomato",
+        "form_id": "[00064B42]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Tomato",
+        "string": "Tomate"
+    },
+    {
+        "editor_id": "MQ101JuniperMead",
+        "form_id": "[00107A8A]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Mead with Juniper Berry",
+        "string": "Aguamiel con frutos de enebro"
+    },
+    {
+        "editor_id": "FavorFoodMarkarthSpicedBeef",
+        "form_id": "[000CADFB]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Spiced Beef",
+        "string": "Ternera aliñada"
+    },
+    {
+        "editor_id": "FoodVegetableSoup",
+        "form_id": "[000F431E]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Vegetable Soup",
+        "string": "Sopa de verduras"
+    },
+    {
+        "editor_id": "FoodTomatoSoup",
+        "form_id": "[000F431C]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Tomato Soup",
+        "string": "Sopa de tomate"
+    },
+    {
+        "editor_id": "FoodMarriageMeal",
+        "form_id": "[000CD614]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Homecooked Meal",
+        "string": "Comida casera"
+    },
+    {
+        "editor_id": "FoodBeef",
+        "form_id": "[00065C99]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Raw Beef",
+        "string": "Ternera cruda"
+    },
+    {
+        "editor_id": "FoodMammothCheeseBowl",
+        "form_id": "[000669A3]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Mammoth Cheese Bowl",
+        "string": "Cuenco de queso de mamut"
+    },
+    {
+        "editor_id": "FoodHoney",
+        "form_id": "[0010394D]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Honey",
+        "string": "Miel"
+    },
+    {
+        "editor_id": "BYOHFoodSnowberryCrostata",
+        "form_id": "[0300353B]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Snowberry Crostata",
+        "string": "Tarta de sinforicarpo"
+    },
+    {
+        "editor_id": "FoodHorseMeat",
+        "form_id": "[00065C9C]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Horse Meat",
+        "string": "Carne de caballo"
+    },
+    {
+        "editor_id": "FoodAppleCabbageStew",
+        "form_id": "[000EBA01]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Apple Cabbage Stew",
+        "string": "Guiso de col y manzana"
+    },
+    {
+        "editor_id": "DLC2Matze",
+        "form_id": "[040248CE]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Matze",
+        "string": "Matze"
+    },
+    {
+        "editor_id": "FoodVenison",
+        "form_id": "[000669A2]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Venison",
+        "string": "Venado"
+    },
+    {
+        "editor_id": "BYOHFoodWineBottle04",
+        "form_id": "[03003535]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Argonian Bloodwine",
+        "string": "Vino de sangre argoniano"
+    },
+    {
+        "editor_id": "FoodBeefStew",
+        "form_id": "[000F4314]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Beef Stew",
+        "string": "Guiso de ternera"
+    },
+    {
+        "editor_id": "DLC2FoodAshfireMead",
+        "form_id": "[0403572F]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Ashfire Mead",
+        "string": "Aguamiel de fuego de ceniza"
+    },
+    {
+        "editor_id": "BYOHFoodPotatoBread01A",
+        "form_id": "[03003537]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Potato Bread",
+        "string": "Pan de patata"
+    },
+    {
+        "editor_id": "FoodBlackBriarMeadPrivateReserve",
+        "form_id": "[000F693F]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Black-Briar Reserve",
+        "string": "Reserva de Espino Negro"
+    },
+    {
+        "editor_id": "BYOHFoodFlour",
+        "form_id": "[03003538]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Sack of Flour",
+        "string": "Saco de harina"
+    },
+    {
+        "editor_id": "FoodGoatMeat",
+        "form_id": "[00065C9A]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Leg of Goat",
+        "string": "Pata de cabra"
+    },
+    {
+        "editor_id": "FoodSweetroll",
+        "form_id": "[00064B3D]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Sweet Roll",
+        "string": "Panecillo dulce"
+    },
+    {
+        "editor_id": "FoodApple02",
+        "form_id": "[00064B2F]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Green Apple",
+        "string": "Manzana verde"
+    },
+    {
+        "editor_id": "FoodGoatMeatCooked",
+        "form_id": "[0007224C]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Leg of Goat Roast",
+        "string": "Asado de pata de cabra"
+    },
+    {
+        "editor_id": "FoodWineAltoA",
+        "form_id": "[000C5349]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Alto Wine",
+        "string": "Vino de Alto"
+    },
+    {
+        "editor_id": "Survival_FoodHotVenisonStew",
+        "form_id": "[050009E9]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Hot Venison Stew",
+        "string": "Guiso de venado caliente"
+    },
+    {
+        "editor_id": "FoodCheeseWheel01B",
+        "form_id": "[00064B35]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Sliced Goat Cheese",
+        "string": "Queso de cabra empezado"
+    },
+    {
+        "editor_id": "BYOHFoodJazbayCrostata",
+        "form_id": "[0300353A]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Jazbay Crostata",
+        "string": "Tarta de uvas jazbay"
+    },
+    {
+        "editor_id": "BYOHFoodMudcrabLegs",
+        "form_id": "[03003540]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Mudcrab Legs",
+        "string": "Patas de cangrejo del barro"
+    },
+    {
+        "editor_id": "BYOHFoodMudcrabLegsCooked",
+        "form_id": "[0300353F]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Steamed Mudcrab Legs",
+        "string": "Patas de cangrejo del barro al vapor"
+    },
+    {
+        "editor_id": "AAASurvivalMarkerCell",
+        "form_id": "[05000861]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "SurvivalMarkers",
+        "string": "Marcadores de supervivencia"
+    },
+    {
+        "editor_id": "Survival_NeedHungerQuest",
+        "form_id": "[05000894]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Hunger",
+        "string": "Hambre"
+    },
+    {
+        "editor_id": "Survival_UIMovementUpdateQuest",
+        "form_id": "[050008C5]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "UI Movement Update Quest",
+        "string": "Interfaz de la misión de actualización de movimiento"
+    },
+    {
+        "editor_id": "Survival_PlayerInfoQuest",
+        "form_id": "[05000897]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Player Info and General Gameplay Penalties",
+        "string": "Información del jugador y penalizaciones de juego generales"
+    },
+    {
+        "editor_id": "SurvivalModeMainQuest",
+        "form_id": "[05000898]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Survival Mode Main Quest",
+        "string": "Modo Supervivencia: misión principal"
+    },
+    {
+        "editor_id": "Survival_NeedColdQuest",
+        "form_id": "[05000896]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Cold",
+        "string": "Frío"
+    },
+    {
+        "editor_id": "Survival_HeatCheckQuest",
+        "form_id": "[05000895]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Heat Source Check",
+        "string": "Comprobación de fuente de calor"
+    },
+    {
+        "editor_id": "Survival_NeedExhaustionQuest",
+        "form_id": "[05000899]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Exhaustion",
+        "string": "Extenuación"
+    },
+    {
+        "editor_id": "Survival_HeatSourceLocatorQuest",
+        "form_id": "[05000855]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Heat Source Locator",
+        "string": "Localizador de fuente de calor"
+    },
+    {
+        "editor_id": "Survival_Hunger03",
+        "form_id": "[0500091B]",
+        "index": null,
+        "type": "LSCR DESC",
+        "original": "Argonians and Khajiit can eat raw meat and not contract food poisoning.",
+        "string": "Los argonianos y khajiitas pueden comer carne cruda sin intoxicarse."
+    },
+    {
+        "editor_id": "Survival_Cold01",
+        "form_id": "[0500091C]",
+        "index": null,
+        "type": "LSCR DESC",
+        "original": "Standing near a fire applies the Warm bonus.",
+        "string": "Al permanecer junto a un fuego se aplica la bonificación de calor."
+    },
+    {
+        "editor_id": "Survival_Hunger02",
+        "form_id": "[05000927]",
+        "index": null,
+        "type": "LSCR DESC",
+        "original": "In general, food that has been cooked restores much more hunger than uncooked food.",
+        "string": "En general, los alimentos cocinados sacian más el hambre que los crudos."
+    },
+    {
+        "editor_id": "Survival_Hunger01",
+        "form_id": "[05000926]",
+        "index": null,
+        "type": "LSCR DESC",
+        "original": "Eating enough will apply the Well Fed bonus.",
+        "string": "Si comes lo suficiente, se aplicará la bonificación Bien alimentado."
+    },
+    {
+        "editor_id": "Survival_Exhaustion03",
+        "form_id": "[05000924]",
+        "index": null,
+        "type": "LSCR DESC",
+        "original": "Try to rest before embarking on a long adventure. You never know when you'll have the chance to sleep again.",
+        "string": "Intenta descansar antes de embarcarte en una larga aventura. Nunca sabes cuándo volverás a tener la oportunidad de volver a dormir."
+    },
+    {
+        "editor_id": "Survival_Exhaustion02",
+        "form_id": "[05000920]",
+        "index": null,
+        "type": "LSCR DESC",
+        "original": "If you become tired, you won't be able to recover magicka or stamina as easily.",
+        "string": "Si te cansas, no podrás recuperar magia o aguante con tanta facilidad."
+    },
+    {
+        "editor_id": "Survival_Cold02",
+        "form_id": "[0500091D]",
+        "index": null,
+        "type": "LSCR DESC",
+        "original": "Certain armor, like fur and dragonscale, provide extra protection from cold environments.",
+        "string": "Ciertas armaduras, como la de piel y la de escamas de dragón, proporcionan protección adicional contra los climas fríos."
+    },
+    {
+        "editor_id": "Survival_Cold04",
+        "form_id": "[05000921]",
+        "index": null,
+        "type": "LSCR DESC",
+        "original": "Becoming cold makes it more difficult to move quickly, pick locks, and pick pockets.",
+        "string": "Tener frío hace que moverse rápidamente, abrir cerraduras y robar sea más difícil."
+    },
+    {
+        "editor_id": "Survival_Hunger04",
+        "form_id": "[05000923]",
+        "index": null,
+        "type": "LSCR DESC",
+        "original": "When hungry, you wield weapons more sluggishly, and block less damage with your shield.",
+        "string": "Cuando tengas hambre, blandirás las armas con menos fuerza y bloquearás menos daños con tu escudo."
+    },
+    {
+        "editor_id": "Survival_Exhaustion01",
+        "form_id": "[0500091F]",
+        "index": null,
+        "type": "LSCR DESC",
+        "original": "Sleeping outdoors isn't as restful as sleeping in a bed indoors.",
+        "string": "Al dormir al aire libre no descansas tanto como en una cama bajo techo."
+    },
+    {
+        "editor_id": "Survival_Cold06",
+        "form_id": "[05000925]",
+        "index": null,
+        "type": "LSCR DESC",
+        "original": "The weather is colder at night than it is during the day.",
+        "string": "El tiempo es más frío por la noche que durante el día."
+    },
+    {
+        "editor_id": "Survival_Cold03",
+        "form_id": "[0500091E]",
+        "index": null,
+        "type": "LSCR DESC",
+        "original": "Eating hot stew can immediately warm you up and improve your resistance to cold environments.",
+        "string": "Comerte un copioso guiso puede calentarte de inmediato y mejorar tu resistencia a los climas fríos."
+    },
+    {
+        "editor_id": "Survival_Cold05",
+        "form_id": "[05000922]",
+        "index": null,
+        "type": "LSCR DESC",
+        "original": "Of all the inhabitants of Skyrim, Nords are the most resistant to cold environments.",
+        "string": "De todos los habitantes de Skyrim, los nórdicos son los que mejor resisten los climas fríos."
+    },
+    {
+        "editor_id": "Survival_ExhuastionReduceConsumables",
+        "form_id": "[050009ED]",
+        "index": null,
+        "type": "PERK DESC",
+        "original": "Reduces the benefits from potions when exhausted.",
+        "string": "Reduce los beneficios de las pociones cuando se está extenuado."
+    },
+    {
+        "editor_id": "Survival_TempleBlessingCostPerk",
+        "form_id": "[050009EE]",
+        "index": null,
+        "type": "PERK DESC",
+        "original": "Require a gold offering at shrines in order to receive the blessing.",
+        "string": "Requiere una ofrenda de oro en los santuarios para recibir la bendición."
+    },
+    {
+        "editor_id": "Survival_NeedsDamageAttributes",
+        "form_id": "[050009EC]",
+        "index": null,
+        "type": "PERK DESC",
+        "original": "Reduce the player's total Health, Magicka, and Stamina proportionate to their needs.",
+        "string": "Reduce el total de salud, magia y aguante del jugador en proporción a sus necesidades."
+    },
+    {
+        "editor_id": "Survival_ExhuastionReduceConsumables",
+        "form_id": "[050009ED]",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Exhaustion Consumable Debuff",
+        "string": "Desventaja consumible de extenuación"
+    },
+    {
+        "editor_id": "Survival_TempleBlessingCostPerk",
+        "form_id": "[050009EE]",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Temple Blessing Cost Perk",
+        "string": "Mejora de coste de bendición de templo"
+    },
+    {
+        "editor_id": "ExtraPockets",
+        "form_id": "[00096590]",
+        "index": null,
+        "type": "PERK DESC",
+        "original": "Carrying capacity is increased by 100 (50 if Survival Mode is enabled).",
+        "string": "La capacidad de carga aumenta en 100 puntos (50 si está activado el modo Supervivencia)."
+    },
+    {
+        "editor_id": "ExtraPockets",
+        "form_id": "[00096590]",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Extra Pockets",
+        "string": "Bolsillos extra"
+    },
+    {
+        "editor_id": "Survival_NeedsDamageAttributes",
+        "form_id": "[050009EC]",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Needs Damage Attributes",
+        "string": "Atributos del daño a las necesidades"
+    },
+    {
+        "editor_id": "Survival_HelpExhaustionHigh",
+        "form_id": "[05000943]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "FATIGUE\r\n\r\nYou are tired, which reduces your total available magicka, represented by a dark region in the magicka bar. Fatigue also decreases how quickly you recover magicka and stamina, and the effectiveness of potions.\r\n\r\nSleep in a bed to reduce your fatigue. Sleeping indoors allows for more restful sleep than sleeping outdoors.",
+        "string": "FATIGA\r\n\r\nEstás cansado, lo que afecta a tu magia total. Puedes verlo en la barra de magia; hay una parte oscura. La fatiga también afecta a la rapidez con la que se recuperan tu magia y tu aguante, y a la eficacia de las pociones.\r\n\r\nDormir en una cama reduce la fatiga. Si duermes bajo techo, descansarás más que a la intemperie."
+    },
+    {
+        "editor_id": "Survival_Cold2Message",
+        "form_id": "[050008CC]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You are Chilly.",
+        "string": "Tienes frío."
+    },
+    {
+        "editor_id": "Survival_Hunger3Message",
+        "form_id": "[050008B8]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You are Hungry.",
+        "string": "Tienes hambre."
+    },
+    {
+        "editor_id": "Survival_DisRattles3Message",
+        "form_id": "[050009C0]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You have contracted Crippling Rattles.",
+        "string": "Has contraído unos estertores incapacitantes."
+    },
+    {
+        "editor_id": "Survival_DisBrownRot2",
+        "form_id": "[050009B3]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You have contracted Severe Brown Rot.",
+        "string": "Has contraído una putrefacción marrón grave."
+    },
+    {
+        "editor_id": "Survival_WaterFreezingMessage",
+        "form_id": "[050008D1]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "This water is freezing cold!",
+        "string": "¡Esta agua está helada!"
+    },
+    {
+        "editor_id": "Survival_DisAtaxia2Message",
+        "form_id": "[050009C2]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You have contracted Severe Ataxia.",
+        "string": "Has contraído una ataxia grave."
+    },
+    {
+        "editor_id": "Survival_HelpSurvivalModeLongXbox",
+        "form_id": "[050009EB]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Survival Mode",
+        "string": "Modo Supervivencia"
+    },
+    {
+        "editor_id": "Survival_Exhaustion1Message",
+        "form_id": "[050008CF]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You are Refreshed.",
+        "string": "Estás recuperado."
+    },
+    {
+        "editor_id": "Survival_AfflictionFrostbittenMsg",
+        "form_id": "[05000932]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You have become Frostbitten from cold.",
+        "string": "Estás congelado a causa del frío."
+    },
+    {
+        "editor_id": "Survival_HelpHungerHigh",
+        "form_id": "[05000945]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Hunger",
+        "string": "Hambre"
+    },
+    {
+        "editor_id": "Survival_Cold3Message",
+        "form_id": "[050008D7]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You are Very Cold.",
+        "string": "Tienes mucho frío."
+    },
+    {
+        "editor_id": "Survival_Exhaustion1MessageDecreasing",
+        "form_id": "[05000935]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You awaken feeling Refreshed.",
+        "string": "Te despiertas sintiéndote recuperado."
+    },
+    {
+        "editor_id": "Survival_Cold4Message",
+        "form_id": "[050008CB]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You are Freezing.",
+        "string": "Estás helado."
+    },
+    {
+        "editor_id": "Survival_HelpColdHigh",
+        "form_id": "[05000944]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Cold",
+        "string": "Frío"
+    },
+    {
+        "editor_id": "Survival_Exhaustion2MessageDecreasing",
+        "form_id": "[050008C8]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You awaken feeling better, but still Drained.",
+        "string": "Te despiertas sintiéndote mejor, pero aún agotado."
+    },
+    {
+        "editor_id": "Survival_Hunger2MessageDecreasing",
+        "form_id": "[050008BA]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You feel better, but still Peckish.",
+        "string": "Te sientes mejor, pero aún tienes un poco de hambre."
+    },
+    {
+        "editor_id": "Survival_Hunger1MessageDecreasing",
+        "form_id": "[05000941]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You feel better, and are now Satisfied.",
+        "string": "Te sientes mejor y ahora estás satisfecho."
+    },
+    {
+        "editor_id": "Survival_ColdWarmingUpMessage",
+        "form_id": "[050008D3]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You are warming up.",
+        "string": "Estás entrando en calor."
+    },
+    {
+        "editor_id": "Survival_Hunger0Message",
+        "form_id": "[050008C1]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You are Well Fed.",
+        "string": "Estás bien alimentado."
+    },
+    {
+        "editor_id": "Survival_DisBoneBreakFever3Message",
+        "form_id": "[050009C7]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You have contracted Crippling Bone Break Fever.",
+        "string": "Has contraído una fiebre quebrantahuesos incapacitante."
+    },
+    {
+        "editor_id": "Survival_DisBrainRot3Message",
+        "form_id": "[050009C4]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You have contracted Crippling Brain Rot.",
+        "string": "Has contraído un pudrir cerebro incapacitante."
+    },
+    {
+        "editor_id": "Survival_StartPrompt",
+        "form_id": "[05000946]",
+        "index": 1,
+        "type": "MESG ITXT",
+        "original": "No",
+        "string": "No"
+    },
+    {
+        "editor_id": "Survival_DisBrownRot",
+        "form_id": "[0500093A]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You have contracted Brown Rot.",
+        "string": "Has contraído una putrefacción marrón."
+    },
+    {
+        "editor_id": "Survival_DisBrainRot2Message",
+        "form_id": "[050009B0]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You have contracted Severe Brain Rot.",
+        "string": "Has contraído un pudrir cerebro grave."
+    },
+    {
+        "editor_id": "Survival_Hunger3MessageDecreasing",
+        "form_id": "[050008C2]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You feel better, but still Hungry.",
+        "string": "Te sientes mejor, pero aún tienes hambre."
+    },
+    {
+        "editor_id": "Survival_Exhaustion4MessageDecreasing",
+        "form_id": "[050008C9]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You awaken feeling better, but still Weary.",
+        "string": "Te despiertas sintiéndote mejor, pero aún exhausto."
+    },
+    {
+        "editor_id": "Survival_DisBrownRot3",
+        "form_id": "[050009B4]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You have contracted Crippling Brown Rot.",
+        "string": "Has contraído una putrefacción marrón incapacitante."
+    },
+    {
+        "editor_id": "Survival_Exhaustion3Message",
+        "form_id": "[050008CE]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You are Tired.",
+        "string": "Estás cansado."
+    },
+    {
+        "editor_id": "Survival_OblivionAreaMessage",
+        "form_id": "[05000937]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You do not feel hunger, exhaustion, or cold here.",
+        "string": "Aquí no sientes hambre, extenuación ni frío."
+    },
+    {
+        "editor_id": "Survival_ColdConditionStage5",
+        "form_id": "[050008DC]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "The air is treacherously cold.",
+        "string": "El aire es peligrosamente frío."
+    },
+    {
+        "editor_id": "Survival_DisGutworm",
+        "form_id": "[0500093C]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You have contracted Gutworm.",
+        "string": "Has contraído una tenia."
+    },
+    {
+        "editor_id": "Survival_DisAtaxia3Message",
+        "form_id": "[050009C3]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You have contracted Crippling Ataxia.",
+        "string": "Has contraído una ataxia incapacitante."
+    },
+    {
+        "editor_id": "Survival_DisGreenspore3",
+        "form_id": "[050009B6]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You have contracted Crippling Greenspore.",
+        "string": "Has contraído una espora verde incapacitante."
+    },
+    {
+        "editor_id": "Survival_DisWitbane2Message",
+        "form_id": "[050009BD]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You have contracted Severe Witbane.",
+        "string": "Has contraído un atontamiento grave."
+    },
+    {
+        "editor_id": "Survival_DisGutworm2",
+        "form_id": "[050009B7]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You have contracted Severe Gutworm.",
+        "string": "Has contraído una tenia grave."
+    },
+    {
+        "editor_id": "Survival_Cold1MessageDecreasing",
+        "form_id": "[05000942]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You feel warmer, and are now Comfortable.",
+        "string": "Sientes más calor y ahora estás cómodo."
+    },
+    {
+        "editor_id": "Survival_Cold5Message",
+        "form_id": "[050008D2]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You are Numb!",
+        "string": "¡Estás entumecido!"
+    },
+    {
+        "editor_id": "Survival_Hunger2Message",
+        "form_id": "[050008CD]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You are Peckish.",
+        "string": "Tienes poca hambre."
+    },
+    {
+        "editor_id": "Survival_Cold1Message",
+        "form_id": "[050008D9]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You are Comfortable.",
+        "string": "Estás cómodo."
+    },
+    {
+        "editor_id": "Survival_DisDroops3Message",
+        "form_id": "[050009B1]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You have contracted Crippling Droops.",
+        "string": "Has contraído un marchitamiento incapacitante."
+    },
+    {
+        "editor_id": "Survival_DisGreenspore",
+        "form_id": "[05000936]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You have contracted Greenspore.",
+        "string": "Has contraído una espora verde."
+    },
+    {
+        "editor_id": "Survival_ColdConditionStage3",
+        "form_id": "[05000938]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "The air is very cold here.",
+        "string": "Aquí el aire es muy frío"
+    },
+    {
+        "editor_id": "Survival_HelpExhaustionHigh",
+        "form_id": "[05000943]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Fatigue",
+        "string": "Fatiga"
+    },
+    {
+        "editor_id": "Survival_ShrineNotEnoughGoldMessage",
+        "form_id": "[050008B9]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You do not have enough gold for the offering.",
+        "string": "No tienes oro suficiente para realizar la ofrenda."
+    },
+    {
+        "editor_id": "Survival_DisBoneBreakFever2Message",
+        "form_id": "[050009C8]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You have contracted Severe Bone Break Fever.",
+        "string": "Has contraído una fiebre quebrantahuesos grave."
+    },
+    {
+        "editor_id": "Survival_Cold2MessageDecreasing",
+        "form_id": "[050008D4]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You feel warmer, but still Chilly.",
+        "string": "Sientes más calor, pero aún tienes frío."
+    },
+    {
+        "editor_id": "Survival_DisDroops2Message",
+        "form_id": "[050009B2]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You have contracted Severe Droops.",
+        "string": "Has contraído un marchitamiento grave."
+    },
+    {
+        "editor_id": "Survival_ColdConditionStage4",
+        "form_id": "[05000939]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "The air is frigid here.",
+        "string": "Aquí el aire es gélido."
+    },
+    {
+        "editor_id": "Survival_ColdConditionStage1",
+        "form_id": "[0500093D]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "The air is comfortable here.",
+        "string": "Aquí el aire es agradable."
+    },
+    {
+        "editor_id": "Survival_DisRattles2Message",
+        "form_id": "[050009BF]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You have contracted Severe Rattles.",
+        "string": "Has contraído unos estertores graves."
+    },
+    {
+        "editor_id": "Survival_HelpSurvivalModeLong",
+        "form_id": "[050009C1]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Survival Mode adds new gameplay features and challenges to transform Skyrim into a land of unrelenting cold and harsh wilderness.\r\n\r\nTo enable Survival, open the Pause Menu, select \"Settings\", \"Gameplay\", and check \"Survival Mode\". Survival can be enabled using any difficulty setting. For maximum challenge, use Survival with \"Master\" or \"Legendary\" difficulty.\r\n\r\nSurvival: Basics\r\n\r\nStaying Healthy\r\nYou'll need to pay attention to your overall wellness by staying properly fed, rested and warm. See \"Survival: Hunger, Food & Fatigue\" and \"Survival: Cold, Warmth & Freezing Water\" for more details.\r\n\r\nFast Travel\r\nFast Travel is disabled. If you wish to go somewhere, you must do so on foot. You can also take a carriage or boat to your destination, but note that you may arrive hungry, cold, and in need of rest after a long journey.\r\n\r\nHealth Regeneration\r\nYou no longer regenerate health. You must use restorative spells, food, and potions to replenish your health.\r\n\r\nLeveling Up\r\nTo level up, you must now sleep in a bed. You may still spend your perk points later once they have been granted after sleeping.\r\n\r\nInventory Management\r\nYou're able to carry far fewer items. See the \"Survival: Items\" entry for more details.\r\n\r\nSurvival: Hunger, Food & Fatigue\r\n\r\nHunger\r\nOver time, you will become hungry, which will impact your total stamina, as well as your ability to wield most weapons. As you become hungrier, your total available stamina will decrease, represented by a dark region inside the stamina bar. Eat food to restore your hunger. If you eat enough, you will receive the Well Fed bonus. In Survival, if you eat raw meat, you may contract Food Poisoning, which can prevent you from receiving health benefits from food until the effect wears off.\r\n\r\nFood\r\nIn general, cooked food restores far more hunger than uncooked food. Make sure to prepare a few meals before heading out on your next adventure. Hot soups can now be cooked by using fire salts, which restore your cold and also grant a bonus to your warmth rating.\r\n\r\nFatigue\r\nEven the most stalwart adventurers will need to rest from time to time. Fatigue decreases your total available magicka, represented by a dark region inside the magicka bar. As you become more fatigued, the effectiveness of potions will begin to decline, and your ability to recover magicka and stamina will begin to suffer. You will need to periodically sleep in a bed in order to restore your fatigue. In Survival, the Well Rested bonus is no longer granted automatically after sleeping. If you sleep outside, you will not be able to get a restful night's sleep, waking up Drained at best. If you sleep in a bed indoors, you will receive the Well Rested bonus.\r\n\r\nSurvival: Cold, Warmth & Freezing Water\r\n\r\nCold\r\nThe frigid chill of Skyrim is now a formidable foe unto itself. Traveling in snowy or rainy areas will increase your Cold. Cold decreases your total available health, represented as a dark region inside the health bar. As you become colder, your movement speed and ability to pick locks and pick pockets will begin to suffer. If you reach the highest level of Cold, your health will be reduced to 0 and you will die from exposure to the elements. You can warm up by standing near a fire, eating hot soup, or moving to a warmer location. A sun or snowflake icon will appear near the compass to note whether you are currently getting warmer or colder.\r\n\r\nWarmth\r\nThe higher your warmth rating, the more slowly you will feel the effects of cold environments. Most clothing and armor provide warmth, displayed on the item's description. Some armor is exceptionally warm, while others are ill-suited to protect their wearer from harsh climates. You can also temporarily increase your warmth rating by eating hot soup or holding a torch.\r\n\r\nFreezing Water\r\nTaking a swim in an ice cold river can make for a quick death. If you swim in a freezing area, you will immediately become colder and begin taking health damage. Exit the water as soon as possible in order to begin warming up and stop the loss of health. Using a Flame Cloak spell or the Dunmer Ancestor's Wrath ability can make you temporarily immune to the effects of freezing water.\r\n\r\nSurvival: Disease & Affliction\r\n\r\nDisease\r\nCreatures across the land now carry threatening new diseases, and previous diseases are now even more debilitating. Eating uncooked meat can now cause Food Poisoning. If you fail to cure a disease, it may progress into a more serious version over time.\r\n\r\nAffliction\r\nTime spent while unwell puts you at risk of contracting an affliction, which cause effects that can linger long after you have improved your condition. Afflictions cannot be cured directly, but will wear off over time.\r\n\r\nAfflictions\r\nWeakened: You are less effective at using melee weapons and blocking damage with your shield.\r\nAddled: Magicka and stamina regenerate more slowly.\r\nFrostbitten: You are less effective at picking locks, picking pockets, and doing damage with a bow.\r\n\r\nShrines\r\nShrines no longer cure diseases for free; you must now make a gold offering in order to receive the shrine's benefits. Shrines you craft in a house you have built can be used for free.\r\n\r\nSurvival: Items\r\n\r\nCarry Weight\r\nIn Survival, your carry weight has been significantly reduced. Becoming overencumbered also quickly drains your stamina and causes you to become fatigued much faster. Arrows and lockpicks now have weight.\r\n\r\nPerks & Standing Stones\r\nThe Extra Pockets perk and The Steed Stone now grant 50 extra carry weight, instead of 100.\r\n\r\nSurvival: Vampires & Werewolves\r\n\r\nBoth vampires and werewolves can restore their hunger by feeding on their victims. While transformed into a Werewolf or Vampire Lord, you are immune to reduced health from cold, and you will become colder much slower than normal.",
+        "string": "El modo Supervivencia añade nuevas funcionalidades de juego y desafíos para transformar Skyrim en una tierra de frío implacable y naturaleza despiadada.\r\n\r\nPara activar el modo Supervivencia, abre el menú de pausa, selecciona \"Configuración\", luego \"Jugabilidad\", y marca la opción \"Modo Supervivencia\". Se puede activar este modo con cualquier ajuste de dificultad. Para afrontar el mayor desafío, selecciona el modo Supervivencia con dificultad \"Muy difícil\" o \"Legendaria\".\r\n\r\nSupervivencia: aspectos básicos\r\n\r\nMantenerse sano\r\nTendrás que prestar atención a tu estado general manteniéndote bien alimentado, descansado y sin frío. Consulta \"Supervivencia: hambre, comida y fatiga\" y \"Supervivencia: frío, calor y agua helada\" para obtener más información.\r\n\r\nViaje rápido\r\nEl viaje rápido está desactivado. Si deseas ir a alguna parte, deberás hacerlo a pie. También puedes tomar un carruaje o un barco para llegar a tu destino, pero puede que llegues con hambre, con frío, o que necesites descansar después de un largo viaje.\r\n\r\nRegeneración de salud\r\nTu salud ya no se regenera. Debes usar hechizos curativos, comida y pociones para recuperar salud.\r\n\r\nSubir de nivel\r\nPara subir de nivel, debes dormir en una cama. Podrás gastar tus puntos de ventaja más tarde, cuando te los hayan otorgado después de dormir.\r\n\r\nGestión de inventario\r\nPuedes llevar muchos menos objetos. Consulta la entrada \"Supervivencia: objetos\" para obtener más información.\r\n\r\nSupervivencia: hambre, comida y fatiga\r\n\r\nHambre\r\nCon el tiempo, te entrará hambre, lo que tendrá un impacto en tu aguante total, así como en tu habilidad para empuñar la mayoría de las armas. A medida que tengas más hambre, tu aguante disponible disminuirá. Puedes verlo en la barra de aguante; hay una parte oscura. Tienes que comer para saciar el hambre. Si comes lo suficiente, recibirás la bonificación Bien alimentado. Si comes carne cruda en el modo Supervivencia, podrías sufrir una intoxicación alimentaria, que puede impedir que recibas los beneficios de salud o aguante de la comida hasta que se te pase el efecto.\r\n\r\nComida\r\nEn general, los alimentos cocinados sacian más el hambre que la comida sin cocinar. Asegúrate de preparar unas cuantas comidas antes de volver a salir de aventuras. Ahora puedes cocinar sopas calientes gracias a las sales de fuego, que reducen el frío y también le otorgan una bonificación a tu índice de calor.\r\n\r\nFatiga\r\nHasta los aventureros más fornidos necesitarán descansar de vez en cuando. La fatiga disminuye la cantidad de magia disponible. Puedes verlo en la barra de magia; hay una parte oscura. A medida que te fatigues, tu magia total disminuirá, y la eficacia de las pociones y tu habilidad para recuperar magia y aguante comenzarán a resentirse. Tendrás que dormir periódicamente en una cama para reponerte de la fatiga. En el modo Supervivencia, la bonificación Bien descansado ya no se otorgará automáticamente tras haber dormido. Si duermes al aire libre, no tendrás una buena noche de descanso y te despertarás agotado, en el mejor de los casos. Si duermes en una cama bajo techo, recibirás la bonificación Bien descansado.\r\n\r\nSupervivencia: frío, calor y agua helada\r\n\r\nFrío\r\nEl frío glacial de Skyrim es ahora un enemigo formidable por sí mismo. Viajar por zonas de nieve o lluvia aumentará tu frío, que afecta a tu salud total disponible. Puedes verlo en la barra de salud; hay una parte oscura. A medida que tengas más frío, tu velocidad de movimiento y tu capacidad para abrir cerraduras y robar se resentirán. Si alcanzas el nivel más alto de frío, tu salud se reducirá a 0 y morirás de exposición a los elementos. Puedes entrar en calor si permaneces junto a un fuego, tomas sopa caliente o te diriges a una ubicación más cálida. Aparecerán un sol o un copo de nieve cerca de la brújula para que sepas si vas teniendo más frío o más calor.\r\n\r\nCalor\r\nCuanto más elevado sea tu índice de calor, más lentamente sentirás los efectos de los climas fríos. La mayoría de las ropas y armaduras proporcionan calor, tal y como figura en la descripción del objeto. Algunas armaduras son excepcionalmente cálidas, mientras que otras son inadecuadas para protegerte de los climas más duros. También puedes aumentar temporalmente tu índice de calor si te tomas una sopa o portas una antorcha.\r\n\r\nAgua helada\r\nDarse un baño en un río de agua helada puede suponer una muerte rápida. Si nadas en una zona helada, tendrás frío de inmediato y tu salud comenzará a reducirse. Sal del agua lo antes posible para comenzar a entrar en calor y detener la pérdida de salud. Usando el hechizo Manto de llamas o la habilidad Ira del antepasado dunmer puedes hacerte temporalmente inmune a los efectos del agua helada.\r\n\r\nSupervivencia: enfermedades y dolencias\r\n\r\nEnfermedad\r\nAhora, las criaturas de todo el territorio portan nuevas y peligrosas enfermedades, y las anteriores debilitan aún más. Si comes carne sin cocinar, podrías sufrir una intoxicación alimentaria. Si no consigues curar una enfermedad, esta podría progresar hasta agravarse con el tiempo.\r\n\r\nDolencia\r\nEl tiempo que pasas indispuesto te pone en riesgo de contraer una dolencia, cuyos efectos podrían permanecer mucho después de que tu condición haya mejorado. Las dolencias no pueden curarse directamente, sino que desaparecerán con el paso del tiempo.\r\n\r\nDolencias\r\nExánime: eres menos eficaz a la hora de usar armas cuerpo a cuerpo y de bloquear el daño con tu escudo.\r\nConfuso: la magia y el aguante se regeneran más despacio.\r\nCongelado: eres menos eficaz a la hora de abrir cerraduras, robar e infligir daño con arco.\r\n\r\nCapillas\r\nLas capillas ya no curarán las enfermedades de forma gratuita; ahora deberás llevar una ofrenda de oro para recibir sus beneficios. Puedes usar gratis las capillas que fabriques en una casa que hayas construido.\r\n\r\nSupervivencia: objetos\r\n\r\nLlevar peso\r\nEn el modo Supervivencia, se ha reducido significativamente tu capacidad para llevar peso. Además, ir sobrecargado menguará rápidamente tu aguante y hará que te fatigues mucho más rápido. Ahora, las flechas y ganzúas pesan.\r\n\r\nVentajas y menhires\r\nAhora, la ventaja Bolsillos adicionales y la piedra del corcel te concederán 50 puntos adicionales de capacidad para llevar peso, en lugar de 100.\r\n\r\nSupervivencia: vampiros y hombres lobo\r\n\r\nTanto los vampiros como los hombres lobo pueden saciar su hambre alimentándose de sus víctimas. Mientras tengas forma de hombre lobo o de señor de los vampiros serás inmune a la reducción de salud por frío, y te enfriarás más despacio de lo normal."
+    },
+    {
+        "editor_id": "Survival_StartPrompt",
+        "form_id": "[05000946]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Survival Mode\r\n\r\nSurvival adds the need to eat, sleep, and stay warm. It also adds additional challenges, such as no fast travel, reduced carry weight, and leveling up only when you sleep. See the \"Survival Mode\" entry in Help for details.\r\n\r\nEnable Survival Mode?\r\n\r\n(You can enable or disable Survival Mode at any time from the Gameplay Settings menu.)",
+        "string": "Modo Supervivencia\r\n\r\nEl modo Supervivencia incorpora la necesidad de comer, dormir y de permanecer en calor. Además, añade desafíos adicionales como la ausencia de viaje rápido, una capacidad para llevar peso reducida y la posibilidad de subir de nivel solo si se duerme. Consulta la entrada “Supervivencia” en Ayuda para obtener más información.\r\n\r\n¿Activar el modo Supervivencia?\r\n\r\n(Puedes activar o desactivar el modo supervivencia cuando quieras en el menú Configuración de juego)."
+    },
+    {
+        "editor_id": "Survival_Exhaustion3MessageDecreasing",
+        "form_id": "[050008C6]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You awaken feeling better, but still Tired.",
+        "string": "Te despiertas sintiéndote mejor, pero aún cansado."
+    },
+    {
+        "editor_id": "Survival_HelpHungerHigh",
+        "form_id": "[05000945]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "HUNGER\r\n\r\nYou are hungry, which reduces your total available stamina, represented by a dark region in the stamina bar. Hunger also affects how quickly you can attack with weapons.\r\n\r\nEat food to reduce your hunger. Cooked meals are significantly better at restoring hunger than raw, uncooked food. Eating raw meat may lead to contracting food poisoning.",
+        "string": "HAMBRE\r\n\r\nTienes hambre, lo que afecta a tu aguante total. Puedes verlo en la barra de aguante; hay una parte oscura. El hambre también afecta a la rapidez con la que puedes atacar con armas cuerpo a cuerpo a cuerpo.\r\n\r\nComer reduce el hambre. Las comidas cocinadas son bastante mejores a la hora de reducir el hambre que los alimentos crudos, sin cocinar. Comer carne cruda podría producirte una intoxicación alimentaria."
+    },
+    {
+        "editor_id": "Survival_Exhaustion4Message",
+        "form_id": "[050008C7]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You are Weary.",
+        "string": "Estás exhausto."
+    },
+    {
+        "editor_id": "Survival_FoodPoisoningMsg",
+        "form_id": "[0500093F]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You have contracted Food Poisoning.",
+        "string": "Has contraído intoxicación alimentaria."
+    },
+    {
+        "editor_id": "Survival_ColdConditionStage2",
+        "form_id": "[05000940]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "The air is chilly here.",
+        "string": "Aquí el aire es frío."
+    },
+    {
+        "editor_id": "Survival_ShrineGoldOfferingMessage",
+        "form_id": "[050008BE]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "An offering of %.0f gold must be made in order to receive this shrine's blessing.\r\n\r\nMake an offering?",
+        "string": "Debes realizar una ofrenda de %.0f de oro para recibir la bendición de esta capilla.\r\n\r\n¿Quieres realizar una ofrenda?"
+    },
+    {
+        "editor_id": "Survival_Cold4MessageDecreasing",
+        "form_id": "[050008D6]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You feel warmer, but still Freezing.",
+        "string": "Sientes más calor, pero aún estás helado."
+    },
+    {
+        "editor_id": "Survival_DisRockjoint3Message",
+        "form_id": "[050009BC]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You have contracted Crippling Rockjoint.",
+        "string": "Has contraído un anquilosamiento incapacitante."
+    },
+    {
+        "editor_id": "Survival_DisGreenspore2",
+        "form_id": "[050009B5]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You have contracted Severe Greenspore.",
+        "string": "Has contraído una espora verde grave."
+    },
+    {
+        "editor_id": "Survival_DisWitbane3Message",
+        "form_id": "[050009BE]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You have contracted Crippling Witbane.",
+        "string": "Has contraído un atontamiento incapacitante."
+    },
+    {
+        "editor_id": "Survival_ShrineGoldOfferingMessage",
+        "form_id": "[050008BE]",
+        "index": 1,
+        "type": "MESG ITXT",
+        "original": "No",
+        "string": "No"
+    },
+    {
+        "editor_id": "Survival_DisRockjoint2Message",
+        "form_id": "[050009BB]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You have contracted Severe Rockjoint.",
+        "string": "Has contraído un anquilosamiento grave."
+    },
+    {
+        "editor_id": "Survival_ColdConditionStage0",
+        "form_id": "[0500093B]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "The air is warm here.",
+        "string": "Aquí el aire es cálido."
+    },
+    {
+        "editor_id": "Survival_Hunger4MessageDecreasing",
+        "form_id": "[050008BC]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You feel better, but still Famished.",
+        "string": "Te sientes mejor, pero sigues famélico."
+    },
+    {
+        "editor_id": "Survival_StartPrompt",
+        "form_id": "[05000946]",
+        "index": 0,
+        "type": "MESG ITXT",
+        "original": "Yes",
+        "string": "Sí"
+    },
+    {
+        "editor_id": "Survival_HelpSurvivalModeLongXbox",
+        "form_id": "[050009EB]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Survival Mode adds new gameplay features and challenges to transform Skyrim into a land of unrelenting cold and harsh wilderness.\r\n\r\nTo enable Survival, open the Pause Menu, select \"Settings\", \"Gameplay\", and check \"Survival Mode\". Survival can be enabled using any difficulty setting. For maximum challenge, use Survival with \"Master\" or \"Legendary\" difficulty.\r\n\r\nSurvival: Basics\r\n\r\nStaying Healthy\r\nYou'll need to pay attention to your overall wellness by staying properly fed, rested and warm. See \"Survival: Hunger, Food & Fatigue\" and \"Survival: Cold, Warmth & Freezing Water\" for more details.\r\n\r\nFast Travel\r\nFast Travel is disabled. If you wish to go somewhere, you must do so on foot. You can also take a carriage or boat to your destination, but note that you may arrive hungry, cold, and in need of rest after a long journey.\r\n\r\nHealth Regeneration\r\nYou no longer regenerate health. You must use restorative spells, food, and potions to replenish your health.\r\n\r\nLeveling Up\r\nTo level up, you must now sleep in a bed. You may still spend your perk points later once they have been granted after sleeping.\r\n\r\nInventory Management\r\nYou're able to carry far fewer items. See the \"Survival: Items\" entry for more details.\r\n\r\nSurvival: Hunger, Food & Fatigue\r\n\r\nHunger\r\nOver time, you will become hungry, which will impact your total stamina, as well as your ability to wield most weapons. As you become hungrier, your total available stamina will decrease, represented by a dark region inside the stamina bar. Eat food to restore your hunger. If you eat enough, you will receive the Well Fed bonus. In Survival, if you eat raw meat, you may contract Food Poisoning, which can prevent you from receiving health benefits from food until the effect wears off.\r\n\r\nFood\r\nIn general, cooked food restores far more hunger than uncooked food. Make sure to prepare a few meals before heading out on your next adventure. Hot soups can now be cooked by using fire salts, which restore your cold and also grant a bonus to your warmth rating.\r\n\r\nFatigue\r\nEven the most stalwart adventurers will need to rest from time to time. Fatigue decreases your total available magicka, represented by a dark region inside the magicka bar. As you become more fatigued, the effectiveness of potions will begin to decline, and your ability to recover magicka and stamina will begin to suffer. You will need to periodically sleep in a bed in order to restore your fatigue. In Survival, the Well Rested bonus is no longer granted automatically after sleeping. If you sleep outside, you will not be able to get a restful night's sleep, waking up Drained at best. If you sleep in a bed indoors, you will receive the Well Rested bonus.\r\n\r\nSurvival: Cold, Warmth & Freezing Water\r\n\r\nCold\r\nThe frigid chill of Skyrim is now a formidable foe unto itself. Traveling in snowy or rainy areas will increase your Cold. Cold decreases your total available health, represented as a dark region inside the health bar. As you become colder, your movement speed and ability to pick locks and pick pockets will begin to suffer. If you reach the highest level of Cold, your health will be reduced to 0 and you will die from exposure to the elements. You can warm up by standing near a fire, eating hot soup, or moving to a warmer location. A sun or snowflake icon will appear near the compass to note whether you are currently getting warmer or colder.\r\n\r\nWarmth\r\nThe higher your warmth rating, the more slowly you will feel the effects of cold environments. Most clothing and armor provide warmth, displayed on the item's description. Some armor is exceptionally warm, while others are ill-suited to protect their wearer from harsh climates. You can also temporarily increase your warmth rating by eating hot soup or holding a torch.\r\n\r\nFreezing Water\r\nTaking a swim in an ice cold river can make for a quick death. If you swim in a freezing area, you will immediately become colder and begin taking health damage. Exit the water as soon as possible in order to begin warming up and stop the loss of health. Using a Flame Cloak spell or the Dunmer Ancestor's Wrath ability can make you temporarily immune to the effects of freezing water.\r\n\r\nSurvival: Disease & Affliction\r\n\r\nDisease\r\nCreatures across the land now carry threatening new diseases, and previous diseases are now even more debilitating. Eating uncooked meat can now cause Food Poisoning. If you fail to cure a disease, it may progress into a more serious version over time.\r\n\r\nAffliction\r\nTime spent while unwell puts you at risk of contracting an affliction, which cause effects that can linger long after you have improved your condition. Afflictions cannot be cured directly, but will wear off over time.\r\n\r\nAfflictions\r\nWeakened: You are less effective at using melee weapons and blocking damage with your shield.\r\nAddled: Magicka and stamina regenerate more slowly.\r\nFrostbitten: You are less effective at picking locks, picking pockets, and doing damage with a bow.\r\n\r\nShrines\r\nShrines no longer cure diseases for free; you must now make a gold offering in order to receive the shrine's benefits. Shrines you craft in a house you have built can be used for free.\r\n\r\nSurvival: Items\r\n\r\nCarry Weight\r\nIn Survival, your carry weight has been significantly reduced. Becoming overencumbered also quickly drains your stamina and causes you to become fatigued much faster. Arrows and lockpicks now have weight.\r\n\r\nPerks & Standing Stones\r\nThe Extra Pockets perk and The Steed Stone now grant 50 extra carry weight, instead of 100.\r\n\r\nSurvival: Vampires & Werewolves\r\n\r\nBoth vampires and werewolves can restore their hunger by feeding on their victims. While transformed into a Werewolf or Vampire Lord, you are immune to reduced health from cold, and you will become colder much slower than normal.",
+        "string": "El modo Supervivencia añade nuevas funcionalidades de juego y desafíos para transformar Skyrim en una tierra de frío implacable y naturaleza despiadada.\r\n\r\nPara activar el modo Supervivencia, abre el menú de pausa, selecciona \"Configuración\", luego \"Jugabilidad\", y marca la opción \"Modo Supervivencia\". Se puede activar este modo con cualquier ajuste de dificultad. Para afrontar el mayor desafío, selecciona el modo Supervivencia con dificultad \"Muy difícil\" o \"Legendaria\".\r\n\r\nSupervivencia: aspectos básicos\r\n\r\nMantenerse sano\r\nTendrás que prestar atención a tu estado general manteniéndote bien alimentado, descansado y sin frío. Consulta \"Supervivencia: hambre, comida y fatiga\" y \"Supervivencia: frío, calor y agua helada\" para obtener más información.\r\n\r\nViaje rápido\r\nEl viaje rápido está desactivado. Si deseas ir a alguna parte, deberás hacerlo a pie. También puedes tomar un carruaje o un barco para llegar a tu destino, pero puede que llegues con hambre, con frío, o que necesites descansar después de un largo viaje.\r\n\r\nRegeneración de salud\r\nTu salud ya no se regenera. Debes usar hechizos curativos, comida y pociones para recuperar salud.\r\n\r\nSubir de nivel\r\nPara subir de nivel, debes dormir en una cama. Podrás gastar tus puntos de ventaja más tarde, cuando te los hayan otorgado después de dormir.\r\n\r\nGestión de inventario\r\nPuedes llevar muchos menos objetos. Consulta la entrada \"Supervivencia: objetos\" para obtener más información.\r\n\r\nSupervivencia: hambre, comida y fatiga\r\n\r\nHambre\r\nCon el tiempo, te entrará hambre, lo que tendrá un impacto en tu aguante total, así como en tu habilidad para empuñar la mayoría de las armas. A medida que tengas más hambre, tu aguante disponible disminuirá. Puedes verlo en la barra de aguante; hay una parte oscura. Tienes que comer para saciar el hambre. Si comes lo suficiente, recibirás la bonificación Bien alimentado. Si comes carne cruda en el modo Supervivencia, podrías sufrir una intoxicación alimentaria, que puede impedir que recibas los beneficios de salud o aguante de la comida hasta que se te pase el efecto.\r\n\r\nComida\r\nEn general, los alimentos cocinados sacian más el hambre que la comida sin cocinar. Asegúrate de preparar unas cuantas comidas antes de volver a salir de aventuras. Ahora puedes cocinar sopas calientes gracias a las sales de fuego, que reducen el frío y también le otorgan una bonificación a tu índice de calor.\r\n\r\nFatiga\r\nHasta los aventureros más fornidos necesitarán descansar de vez en cuando. La fatiga disminuye la cantidad de magia disponible. Puedes verlo en la barra de magia; hay una parte oscura. A medida que te fatigues, tu magia total disminuirá, y la eficacia de las pociones y tu habilidad para recuperar magia y aguante comenzarán a resentirse. Tendrás que dormir periódicamente en una cama para reponerte de la fatiga. En el modo Supervivencia, la bonificación Bien descansado ya no se otorgará automáticamente tras haber dormido. Si duermes al aire libre, no tendrás una buena noche de descanso y te despertarás agotado, en el mejor de los casos. Si duermes en una cama bajo techo, recibirás la bonificación Bien descansado.\r\n\r\nSupervivencia: frío, calor y agua helada\r\n\r\nFrío\r\nEl frío glacial de Skyrim es ahora un enemigo formidable por sí mismo. Viajar por zonas de nieve o lluvia aumentará tu frío, que afecta a tu salud total disponible. Puedes verlo en la barra de salud; hay una parte oscura. A medida que tengas más frío, tu velocidad de movimiento y tu capacidad para abrir cerraduras y robar se resentirán. Si alcanzas el nivel más alto de frío, tu salud se reducirá a 0 y morirás de exposición a los elementos. Puedes entrar en calor si permaneces junto a un fuego, tomas sopa caliente o te diriges a una ubicación más cálida. Aparecerán un sol o un copo de nieve cerca de la brújula para que sepas si vas teniendo más frío o más calor.\r\n\r\nCalor\r\nCuanto más elevado sea tu índice de calor, más lentamente sentirás los efectos de los climas fríos. La mayoría de las ropas y armaduras proporcionan calor, tal y como figura en la descripción del objeto. Algunas armaduras son excepcionalmente cálidas, mientras que otras son inadecuadas para protegerte de los climas más duros. También puedes aumentar temporalmente tu índice de calor si te tomas una sopa o portas una antorcha.\r\n\r\nAgua helada\r\nDarse un baño en un río de agua helada puede suponer una muerte rápida. Si nadas en una zona helada, tendrás frío de inmediato y tu salud comenzará a reducirse. Sal del agua lo antes posible para comenzar a entrar en calor y detener la pérdida de salud. Usando el hechizo Manto de llamas o la habilidad Ira del antepasado dunmer puedes hacerte temporalmente inmune a los efectos del agua helada.\r\n\r\nSupervivencia: enfermedades y dolencias\r\n\r\nEnfermedad\r\nAhora, las criaturas de todo el territorio portan nuevas y peligrosas enfermedades, y las anteriores debilitan aún más. Si comes carne sin cocinar, podrías sufrir una intoxicación alimentaria. Si no consigues curar una enfermedad, esta podría progresar hasta agravarse con el tiempo.\r\n\r\nDolencia\r\nEl tiempo que pasas indispuesto te pone en riesgo de contraer una dolencia, cuyos efectos podrían permanecer mucho después de que tu condición haya mejorado. Las dolencias no pueden curarse directamente, sino que desaparecerán con el paso del tiempo.\r\n\r\nDolencias\r\nExánime: eres menos eficaz a la hora de usar armas cuerpo a cuerpo y de bloquear el daño con tu escudo.\r\nConfuso: la magia y el aguante se regeneran más despacio.\r\nCongelado: eres menos eficaz a la hora de abrir cerraduras, robar e infligir daño con arco.\r\n\r\nCapillas\r\nLas capillas ya no curarán las enfermedades de forma gratuita; ahora deberás llevar una ofrenda de oro para recibir sus beneficios. Puedes usar gratis las capillas que fabriques en una casa que hayas construido.\r\n\r\nSupervivencia: objetos\r\n\r\nLlevar peso\r\nEn el modo Supervivencia, se ha reducido significativamente tu capacidad para llevar peso. Además, ir sobrecargado menguará rápidamente tu aguante y hará que te fatigues mucho más rápido. Ahora, las flechas y ganzúas pesan.\r\n\r\nVentajas y menhires\r\nAhora, la ventaja Bolsillos adicionales y la piedra del corcel te concederán 50 puntos adicionales de capacidad para llevar peso, en lugar de 100.\r\n\r\nSupervivencia: vampiros y hombres lobo\r\n\r\nTanto los vampiros como los hombres lobo pueden saciar su hambre alimentándose de sus víctimas. Mientras tengas forma de hombre lobo o de señor de los vampiros serás inmune a la reducción de salud por frío, y te enfriarás más despacio de lo normal."
+    },
+    {
+        "editor_id": "Survival_Hunger5Message",
+        "form_id": "[050008BB]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You are Starving!",
+        "string": "¡Te mueres de hambre!"
+    },
+    {
+        "editor_id": "Survival_DisGutworm3",
+        "form_id": "[050009B8]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You have contracted Crippling Gutworm.",
+        "string": "Has contraído una tenia incapacitante."
+    },
+    {
+        "editor_id": "Survival_Cold0Message",
+        "form_id": "[050008DA]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You are Warm.",
+        "string": "Has entrado en calor."
+    },
+    {
+        "editor_id": "Survival_Hunger1Message",
+        "form_id": "[050008D8]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You are Satisfied.",
+        "string": "Estás satisfecho."
+    },
+    {
+        "editor_id": "Survival_Exhaustion5Message",
+        "form_id": "[050008BD]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You are Debilitated!",
+        "string": "¡Estás debilitado!"
+    },
+    {
+        "editor_id": "Survival_HelpColdHigh",
+        "form_id": "[05000944]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "COLD\r\nYou are cold, which reduces your total health, represented by a dark region in the health bar. Cold can also cause you to move more slowly. Stand near a fire or move to a warmer area to warm up. A sun or snowflake icon near the compass indicates if you are getting warmer or colder.\r\n\r\nYou can slow down how quickly you become cold by wearing armor with high Warmth. Eating hot soup and holding a torch can also improve your Warmth Rating.",
+        "string": "FRÍO\r\nTienes frío, lo que afecta a tu salud total. Puedes verlo en la barra de salud; hay una parte oscura. El frío también afecta a la rapidez con la que puedes moverte. Permanece junto a un fuego, toma una sopa caliente o refúgiate en algún sitio para entrar en calor. Puedes comprobar si tienes más frío o más calor con el sol y el copo de nieve situados cerca de la brújula.\r\n\r\nPuedes ralentizar el proceso de enfriamiento si llevas una armadura con un nivel alto de calor. Tomar sopa caliente y portar una antorcha también mejoran tu índice de calor."
+    },
+    {
+        "editor_id": "Survival_AfflictionWeakenedMsg",
+        "form_id": "[05000933]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You have become Weakened from hunger.",
+        "string": "Estás exánime a causa del hambre."
+    },
+    {
+        "editor_id": "Survival_Cold3MessageDecreasing",
+        "form_id": "[050008CA]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You feel warmer, but still Very Cold.",
+        "string": "Sientes más calor, pero aún tienes mucho frío."
+    },
+    {
+        "editor_id": "Survival_Hunger4Message",
+        "form_id": "[050008B6]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You are Famished.",
+        "string": "Estás famélico."
+    },
+    {
+        "editor_id": "Survival_AfflictionAddledMsg",
+        "form_id": "[05000934]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You have become Addled from fatigue.",
+        "string": "Estás confuso a causa de la fatiga."
+    },
+    {
+        "editor_id": "Survival_Exhaustion2Message",
+        "form_id": "[050008D0]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You are Drained.",
+        "string": "Estás agotado."
+    },
+    {
+        "editor_id": "Survival_HelpSurvivalModeLong",
+        "form_id": "[050009C1]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Survival Mode",
+        "string": "Modo Supervivencia"
+    },
+    {
+        "editor_id": "Survival_ShrineGoldOfferingMessage",
+        "form_id": "[050008BE]",
+        "index": 0,
+        "type": "MESG ITXT",
+        "original": "Yes",
+        "string": "Sí"
+    }
+]

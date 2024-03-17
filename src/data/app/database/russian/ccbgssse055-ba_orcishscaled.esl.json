@@ -1,0 +1,354 @@
+[
+    {
+        "editor_id": "ccBGSSSE055_ArmorBladesGauntlets",
+        "form_id": "[05000802]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Orcish Scaled Gauntlets",
+        "string": "Орочьи ламеллярные перчатки"
+    },
+    {
+        "editor_id": "ccBGSSSE055_ArmorBladesHelmet",
+        "form_id": "[05000803]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Orcish Scaled Helmet",
+        "string": "Орочий ламеллярный шлем"
+    },
+    {
+        "editor_id": "ccBGSSSE055_ArmorBladesBoots",
+        "form_id": "[05000800]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Orcish Scaled Boots",
+        "string": "Орочьи ламеллярные сапоги"
+    },
+    {
+        "editor_id": "ccBGSSSE055_ArmorBladesCuirass",
+        "form_id": "[05000801]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Orcish Scaled Armor",
+        "string": "Орочья ламеллярная броня"
+    },
+    {
+        "editor_id": "ccBGSSSE055_GamblerDossier",
+        "form_id": "[0500081C]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Guard's Dossier: Antonius",
+        "string": "Досье стражи: Антоний"
+    },
+    {
+        "editor_id": "ccBGSSSE055_GamblerDossier",
+        "form_id": "[0500081C]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nStatus: Active (Capture or Kill), High Priority\r\n\r\nDescription: Antonius, Male, mid 70s\r\n\r\nBackground:\r\nAntonius is a former battlemage said to possess a highly analytical mind that is matched only by his more prurient inclinations. He is sought after by aristocrats in Firsthold for allegedly poisoning a court wizard named Allenia with skooma, although it's unclear if he did so maliciously or simply introduced her to the substance. After fleeing to Cyrodiil he joined the Crimson Dirks and advised them on the acquisition and smuggling of magical artifacts. \r\n\r\nBottled spirits and old age have made him less urgent of a target, but all members of the bandit clan are still considered high priority and should be captured or eliminated.\r\n\r\nOperational Notes:\r\nAntonius is believed to have a number of vices, most notably an addiction to gambling. Rather than search for him, it would be best to have a guardsman stationed near the pits where like-minded degenerates tend to gather. Cragslane Cavern is said to be thriving with activity as of late, and may be worth a look.\r\n</font>",
+        "string": "<font face='$HandwrittenFont'>\r\nСтатус: активное (захватить или убить), приоритет: высокий\r\n\r\nОписание: Антоний, мужчина, около 70 лет\r\n\r\nПроисхождение:\r\nАнтоний - бывший боевой маг с аналитическим умом и множеством нездоровых наклонностей. Его разыскивают аристократы Фестхолда за предположительное отравление скумой придворной волшебницы Аллении, хотя неясно, сделал он это со злым умыслом или просто познакомил ее с напитком. Сбежав из Сиродила, он примкнул к \"Кровавым кинжалам\" и стал их специалистом по краже и сбыту магических артефактов.\r\n\r\nВозраст и склонность к спиртному сделали его устранение не столь неотложным, но все члены банды по-прежнему имеют высокий приоритет и должны быть захвачены или убиты.\r\n\r\nОперативные данные:\r\nАнтоний подвержен многочисленным порокам, главным из которых является пристрастие к азартным играм. Вместо активных поисков проще поставить стражника близ ям, где обычно собираются компании игроков. В последнее время поступает много сведений об играх в пещере Крегслейн. Возможно, стоит проверить это место.\r\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE055_ThalmorNote",
+        "form_id": "[0500081B]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>\r\nIf the armor is verified as authentic, dispose of it and the target as you see fit. The guard would imprison him, but Antonius will die for what he did to my dear Allenia.\r\n\r\n-- A\r\n</font>",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\r\nЕсли броня окажется подлинной, избавься от нее и от цели так, как сочтешь нужным, потому что стража просто посадит Антония за решетку, а он должен умереть за то, что сделал с моей Алленией.\r\n\r\n-- А.\r\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE055_AntoniusNote",
+        "form_id": "[0500081A]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Antonius' Note",
+        "string": "Записка Антония"
+    },
+    {
+        "editor_id": "ccBGSSSE055_Bookv6",
+        "form_id": "[05000839]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "The Crimson Dirks, v6",
+        "string": "\"Кровавые кинжалы\", т. 6"
+    },
+    {
+        "editor_id": "ccBGSSSE055_AntoniusNote",
+        "form_id": "[0500081A]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nYakhtu once told me I'd wager off my own mother if the odds were right. So it's probably no surprise to her that I lost her armor on a bet. \r\n\r\nWhat I would explain to the blacksmith, after she was done yelling at me, was that my plan was foolproof. \r\n\r\nI had in my coin purse a total of three hundred and twenty septims. My strategy was to wager ten pieces at a time. If I lost, my next bet would be ten pieces, to cover the last wager. If I lost again, I would wager twenty, and once again attempt to break even. If I lost a fourth time, I would wager forty, and so on. \r\n\r\nSo unless I lost six straight times, I'd always break even in the end. Well, ten straight losses later, I not only have no gold, but no armor and bed to sleep on. I must have slept with Zenithar's mother or something, not sure why he hates me so.\r\n\r\nAnyways, I sold the armor to some High Elf collector at the Bee and Barb. I should probably just kill her. I would kill the bandits running the pits, but then where would I get my fix.</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nЯкхту как-то сказала, что я бы собственную мать продал, если бы почуял выгоду. Думаю, зная меня, она не удивится, что я проиграл ее броню.\r\n\r\nКогда она закончит на меня орать, я объясню ей, что мой план был надежнее ее доспехов.\r\n\r\nВ кошельке у меня было триста двадцать септимов. Я собирался ставить по десять септимов за раз. Если бы я проиграл, следующая ставка была бы в десять септимов, чтобы покрыть проигрыш. Если бы я проиграл снова, я бы поставил двадцать и снова постарался вернуть проигранное. Если бы я проиграл в четвертый раз, я бы поставил сорок, и так далее.\r\n\r\nВ общем, я бы в любом случае получил проигранное в конце, если бы только не проиграл шесть раз подряд. Ну, десять проигрышей спустя у меня не осталось ни денег, ни брони, ни крыши над головой. Наверно, я когда-то по незнанию совратил мать Зенитара, иначе непонятно, отчего он так меня ненавидит.\r\n\r\nБроню я продал какой-то эльфийке-сборщице в \"Пчеле и жале\". Мне кажется, надо ее просто убить. Я бы убил и бандитов, которые заправляют в ямах, но с кем же мне тогда играть?</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE055_Bookv6",
+        "form_id": "[05000839]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nThe Crimson Dirks\r\nBook Six\r\n\r\n\r\nby \r\nGathers-the-Coin\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/E_letter.png'>dward taught Antonius the game he learned in Elsweyr, as Casival, Ehlhiel and Zaharia joined them at the table. A cloth, stained with every conceivable color of wine and spirit, was placed over the top of the wood, allowing the bones and tiles to slide across its otherwise splintered face. While some of the rules were lost in translation, Edward knew enough for the game to function. Moreover, if he were to bend said rules to his favor, his opponents would be none the wiser.\r\n\r\n\"There are two types of games,\" Edward explained, laying the tiles out on the surface, \"those with perfect information, and those that are imperfect. Chess, for example, is a game with perfect information. We know each other's pieces and their placement on the board. Card games, on the other hand, are of the imperfect variety. We are each dealt a hand with a set value, and must divine, through whatever means are available to us, who has the better of it.\"\r\n\r\n\"And which type do you prefer?\" asked Casival.\r\n\r\n\"I prefer to know who and what I'm dealing with,\" replied Edward, \"but at the same time, I know the more practical skill is to play games where the information is imperfect. After all, that is how the world around us is played.\"\r\n\r\n\"I wasn't aware life was a game,\" said Ehlhiel, \"because if so, I need to find a better way to cheat.\"\r\n\r\n\"Don't be so modest,\" replied Edward, raking in another pot, \"I think you're doing just fine. The same can't be said for our friend Antonius here.\"\r\n\r\n\"I only lost because you distracted me,\" barked Antonius, \"with that inhaling and exhaling thing you do with your nose.\"\r\n\r\n\"Do you mean breathing?\" asked Edward.\r\n\r\n\"Yes, that.\"\r\n\r\nAs a careful study of others, Casival understood the gist of Edward's speech. There were layers beyond what faces advertised. Edward, for instance, used his charm and intellect like a sword, his sly demeanor having a purpose that disarmed his opponents. Ehlhiel, on the other hand, wore his humor like armor, deflecting any inkling of emotion or motive. Zaharia, for all her straightforwardness, was also passionate and sincere, making her prone to falling victim to her temper. Even Antonius, for all his inebriation, was a skilled hedge mage, and one wondered at times if his drunkenness was merely a performance that allowed people to excuse his worst impulses. \r\n\r\nThe same rules applied to the crew as a whole. The less that was known about the bandits - the more imperfect the information - the better their chance of survival. Their enemies would always hold the better cards. The only way to win was to bluff.\r\n\r\nIt's for this reason Casival was uneasy about the last job. They had purchased a building near a warehouse, tunneling into it and stealing the goods. The plan was solid and the profit healthy, but it was the target that worried him still, even now after it was complete. After all, unlike some enterprises, the East Empire Company was a machine that counted every coin to its last, and weighed every commodity to the gram. Their employees were punctual, their accountants circumspect, and their ledgers pristine. They would identify precisely what goods were stolen, and investigate thoroughly the time and manner of the theft. \r\n\r\nThus it weighed heavy on his mind when the forger who purchased the building next to the warehouse had not responded to his last letter. Casival wrote the missive posing as a concerned relative, not wishing to betray any secrets lest the forger had been compromised. Another concern was news that the Company had enlisted the help of the local guard captains, in an effort to pool their information. With the added protection, caravans had been harder to sack. And with a more watchful eye on merchants, goods had been much harder to smuggle. As it turned out, it was possible to rob from the East Empire Company, but not without revealing some of their cards. \r\n\r\n\"Did you know that Pale-Eyes can sing?\" Ehlhiel said, much to everyone's surprise.\r\n\r\n\"Is that a joke?\" asked Zaharia, somewhat surprised.\r\n\r\n\"I'm being serious, he's actually better than most bards,\" Ehlhiel replied, for once completely sincere, \"Trust me, it shocked me more than anything. I wasn't even aware Argonians could even make that kind of noise, let alone do it on key.\"\r\n\r\nCasival laughed at the thought of the shy Argonian melodically strumming his lute. Even after he thought he'd learned everything there was to know about the others, they were always surprising him in strange and interesting ways. Perhaps the same could be said about their current predicament. So long as they were free, it meant whatever information their pursuers had was still imperfect. \r\n\r\nThe bandits had revealed much of their cards already, but hopefully, they had yet to give away their entire hand. ",
+        "string": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\n\"Кровавые кинжалы\"\r\nТ. 6\r\n\r\n\r\nавтор\r\nСобирающий-Монеты\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\nЭдвард обучал Антония игре, которую узнал в Эльсвейре, когда к ним за стол подсели Касиваль, Эхлиэль и Захария. На столе была расстелена пестрая от винных пятен тряпка, чтобы кости и фишки не цеплялись за щепки, торчавшие из необработанной столешницы. Несмотря на то, что некоторые правила Эдвард в свое время так и не понял из-за трудностей перевода, он знал достаточно, чтобы можно было играть. К тому же, если бы он истолковал что-то из этих правил в свою пользу, его оппоненты были бы не в курсе.\r\n\r\n\"Существует две разновидности игр, - объяснял Эдвард, выкладывая фишки на стол, - предоставляющие полную информацию и предоставляющие неполную информацию. К примеру, шахматы предоставляют полную информацию. Мы знаем, какие фигурки есть у противника и где они стоят. А вот карточные игры дают неполную информацию. Каждому раздается набор карт с определенной стоимостью, и нам нужно любыми способами догадаться, у кого рука лучше\".\r\n\r\n\"А какую разновидность предпочитаешь ты?\" - спросил Касиваль.\r\n\r\n\"Я предпочитаю знать, с кем и чем имею дело, - ответил Эдвард, - но понимаю, что куда полезнее уметь играть в игры, которые дают неполную информацию. В конце концов, весь мир устроен по такому же принципу\".\r\n\r\n\"Не знал, что жизнь - это тоже игра, - сказал Эхлиэль. - Тогда мне надо научиться жульничать\".\r\n\r\n\"Не скромничай, - ответил Эдвард, загребая очередной выигрыш, - у тебя уже отлично получается. В отличие от нашего дражайшего Антония\".\r\n\r\n\"Я проиграл, потому что ты отвлекал меня, - рыкнул Антоний, - вот тем, что ты делаешь носом\".\r\n\r\n\"Ты имеешь в виду - дышу?\" - спросил Эдвард.\r\n\r\n\"Да-да, именно!\"\r\n\r\nКасиваль, хорошо разбиравшийся в людях, понимал, о чем говорит Эдвард. По внешности никогда нельзя было понять, что за человек перед тобой. Например, оружием Эдварда были обаяние и ум, а за личиной шельмы скрывалась стальная воля, обескураживавшая противников. Эхлиэль, в отличие от него, прикрывался иронией как щитом, пряча за ней свои истинные мотивы или любые проявления эмоций. Прямолинейная Захария была натурой страстной и искренней и зачастую становилась жертвой собственного темперамента. Даже Антоний, несмотря на вечное пьянство, был опытным магом, и порой можно было заподозрить, что его алкоголизм - всего лишь притворство, на которое окружающие охотно списывали даже самые дурные его поступки.\r\n\r\nТе же утверждения были применимы и ко всей их банде. Чем меньше было известно о бандитах - чем более неполной была эта информация, - тем выше были шансы на выживание. У врагов карты всегда были лучше. И обыграть их можно было только с помощью блефа.\r\n\r\nИменно поэтому Касиваля одолевали нехорошие мысли по поводу последней их работы. Они купили здание рядом со складом, прокопали тоннель и вынесли товары. План был надежным, а прибыль – большой, но даже после завершения работы его продолжало беспокоить, кого именно они обокрали. Все-таки, в отличие от других, Восточная имперская компания была отлаженным механизмом, который подсчитывал все деньги до последней монетки и взвешивал каждый товар до йоты. Их работники были пунктуальными, счетоводы – внимательными, а конторские книги – безупречными. Они наверняка установили, какие именно товары были украдены, и тщательно изучили время и способ кражи.\r\n\r\nЭта мысль не давала ему покоя с тех пор, как фальшивомонетчик, купивший здание рядом со складом, не ответил на последнее письмо. Касиваль, осторожничая, написал ему от лица обеспокоенного родственника - на случай, если фальшивомонетчика поймали. Кроме того, он слышал, что Компания заручилась поддержкой местных капитанов стражи, желая получить доступ к их информации. Караваны ходили с дополнительной охраной, их стало сложнее грабить. А при усиленном контроле за торговцами сделалось труднее сбывать краденое. Как выяснилось, обокрасть Восточную имперскую компанию можно, но утаить все свои карты при этом не удастся.\r\n\r\n\"А вы знали, что Бледные-Глаза умеет петь?\" - вдруг сказал Эхлиэль ко всеобщему удивлению.\r\n\r\n\"Шутишь?\" - изумленно спросила Захария.\r\n\r\n\"Нет, серьезно, он поет куда лучше многих бардов, - в кои-то веки искренне ответил Эхлиэль. – Поверь, я удивлен не меньше вас. Я даже не знал, что аргониане умеют издавать подобные звуки, не говоря уж о том, чтобы попадать в ноты\".\r\n\r\nПри мысли о том, как застенчивый аргонианин бренчит на лютне, Касиваль рассмеялся. Он-то думал, что знает все о своих товарищах, но они всегда умудрялись удивить его. Возможно, то же самое можно было сказать и о сложившейся ситуации. Пока они на свободе, любая информация, имевшаяся у их преследователей, будет неполной.\r\n\r\nБандиты раскрыли уже немало своих карт, но, пожалуй, раскрывать всю руку было еще рановато. "
+    },
+    {
+        "editor_id": "ccBGSSSE055_ThalmorNote",
+        "form_id": "[0500081B]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Orders",
+        "string": "Распоряжения"
+    },
+    {
+        "editor_id": "ccBGSSSE055_LvlThalmorSpy",
+        "form_id": "[0500081E]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Armor Collector",
+        "string": "Скупщица брони"
+    },
+    {
+        "editor_id": "ccBGSSSE055_Antonius",
+        "form_id": "[0500081D]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Antonius",
+        "string": "Антоний"
+    },
+    {
+        "editor_id": "CragslaneCavern01",
+        "form_id": "[000152A5]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Cragslane Cavern",
+        "string": "Пещера Крегслейн"
+    },
+    {
+        "editor_id": "RiftenBeeandBarb",
+        "form_id": "[00016BDF]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "The Bee and Barb",
+        "string": "Пчела и жало"
+    },
+    {
+        "editor_id": "RiftenMistveilBarracks",
+        "form_id": "[00045A1D]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Mistveil Keep Barracks",
+        "string": "Крепость Миствейл - Казармы"
+    },
+    {
+        "editor_id": "ccBGSSSE055_QuestTopic3TopicB",
+        "form_id": "[0500082C]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Riften is dangerous. You need to leave before something happens. (Persuade)",
+        "string": "В Рифтене опасно. Тебе лучше поскорее убраться отсюда. (Убеждение)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[0500083C]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "I have something else I want to say.",
+        "string": "Я хочу тебе еще кое-что сказать."
+    },
+    {
+        "editor_id": "ccBGSSSE055_QuestTopic3Topic",
+        "form_id": "[05000828]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "There's something we need to talk about.",
+        "string": "Нам нужно кое о чем поговорить."
+    },
+    {
+        "editor_id": "ccBGSSSE055_QuestTopic3TopicA",
+        "form_id": "[0500082A]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "You've got something I want. I'm going to kill you for it. (Intimidate)",
+        "string": "У тебя есть то, что мне нужно. И я могу убить тебя ради этого. (Запугивание)"
+    },
+    {
+        "editor_id": "ccBGSSSE055_QuestTopic1A",
+        "form_id": "[05000823]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I know you're an assassin.",
+        "string": "Я знаю, что ты убийца."
+    },
+    {
+        "editor_id": "ccBGSSSE055_QuestTopic2A",
+        "form_id": "[05000825]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I'd like to buy the armor you bought from Antonius. (1000 gold)",
+        "string": "Я хочу купить броню, которую тебе продал Антоний. (1000 золотых)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000827]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "I'd like to buy Antonius' armor, but I don't have a lot of gold. (1000 gold)",
+        "string": "Я хочу купить у тебя броню Антония, но у меня мало денег. (1000 золотых)"
+    },
+    {
+        "editor_id": "ccBGSSSE055_QuestTopic3TopicC",
+        "form_id": "[0500082E]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "You know what you did. I just want to hear you say it. (Persuade)",
+        "string": "Ты и так в курсе своего поступка. Я просто хочу услышать это от тебя. (Убеждение)"
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "form_id": "[05000830]",
+        "index": 96,
+        "type": "QUST CNAM",
+        "original": "I've heard stories of former bandits living as fugitives across Tamriel. At the barracks in Riften, I found information on an Imperial wagering on the pit fights at Cragslane Cavern. Unfortunately, the gambler was already dead by the time I arrived. It seems he incurred some debts, and sold his armor to a collector in Riften.",
+        "string": "До меня доходили слухи о том, что бывшие бандиты теперь скрываются по всему Тамриэлю. В казармах Рифтена мне удалось узнать об имперце, который делает ставки на бои в ямах в пещере Крегслейн. К сожалению, на момент моего прибытия этот человек был уже мертв. Похоже, он погряз в долгах и продал свою броню скупщице в Рифтене."
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "form_id": "[05000830]",
+        "index": 87,
+        "type": "QUST CNAM",
+        "original": "I've heard stories of former bandits living as fugitives across Tamriel. Perhaps if I visit the guard barracks in Riften I might find some information on their whereabouts.",
+        "string": "До меня доходили слухи о том, что бывшие бандиты теперь скрываются по всему Тамриэлю. Возможно, в казармах Рифтена мне удастся узнать побольше об их местонахождении."
+    },
+    {
+        "editor_id": "ccBGSSSE055_MiscQuest",
+        "form_id": "[05000833]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Search for a dossier at the Mistveil Keep Barracks",
+        "string": "Найти досье в казармах в крепости Миствейл"
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "form_id": "[05000830]",
+        "index": 115,
+        "type": "QUST CNAM",
+        "original": "I've heard stories of former bandits living as fugitives across Tamriel. At the barracks in Riften, I found information on an Imperial wagering on the pit fights at Cragslane Cavern. ",
+        "string": "До меня доходили слухи о том, что бывшие бандиты теперь скрываются по всему Тамриэлю. В казармах Рифтена мне удалось узнать об имперце, который делает ставки на бои в ямах в пещере Крегслейн. "
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "form_id": "[05000830]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Find Antonius in Cragslane Cavern",
+        "string": "Найти Антония в пещере Крегслейн"
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "form_id": "[05000830]",
+        "index": 35,
+        "type": "QUST NNAM",
+        "original": "(Optional) Intimidate or persuade the collector into leaving the city's protection",
+        "string": "(Дополнительно) Запугиванием или убеждением заставить сборщицу уйти из города"
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "form_id": "[05000830]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Search for a dossier at the Mistveil Keep Barracks",
+        "string": "Найти досье в казармах в крепости Миствейл"
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "form_id": "[05000830]",
+        "index": 60,
+        "type": "QUST NNAM",
+        "original": "Retrieve the armor",
+        "string": "Забрать броню"
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "form_id": "[05000830]",
+        "index": 84,
+        "type": "QUST CNAM",
+        "original": "I've heard stories of former bandits living as fugitives across Tamriel. At the barracks in Riften, I found information on an Imperial wagering on the pit fights at Cragslane Cavern. Unfortunately, the gambler was already dead by the time I arrived. It seems he incurred some debts, and sold his armor to a collector in Riften. I killed the collector in order to take the armor from her.",
+        "string": "До меня доходили слухи о том, что бывшие бандиты теперь скрываются по всему Тамриэлю. В казармах Рифтена мне удалось узнать об имперце, который делает ставки на бои в ямах в пещере Крегслейн. К сожалению, на момент моего прибытия этот человек был уже мертв. Похоже, он погряз в долгах и продал свою броню скупщице в Рифтене. Чтобы забрать эту броню, мне пришлось убить скупщицу."
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "form_id": "[05000830]",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Read Antonius' Note",
+        "string": "Прочесть записку Антония"
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "form_id": "[05000830]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Gambler's Edge",
+        "string": "Преимущество игрока"
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "form_id": "[05000830]",
+        "index": 50,
+        "type": "QUST NNAM",
+        "original": "Kill the collector",
+        "string": "Убить сборщицу"
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "form_id": "[05000830]",
+        "index": 73,
+        "type": "QUST CNAM",
+        "original": "I've heard stories of former bandits living as fugitives across Tamriel. At the barracks in Riften, I found information on an Imperial wagering on the pit fights at Cragslane Cavern. Unfortunately, the gambler was already dead by the time I arrived.",
+        "string": "До меня доходили слухи о том, что бывшие бандиты теперь скрываются по всему Тамриэлю. В казармах Рифтена мне удалось узнать об имперце, который делает ставки на бои в ямах в пещере Крегслейн. К сожалению, на момент моего прибытия этот человек был уже мертв."
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "form_id": "[05000830]",
+        "index": 76,
+        "type": "QUST CNAM",
+        "original": "I've heard stories of former bandits living as fugitives across Tamriel. At the barracks in Riften, I found information on an Imperial wagering on the pit fights at Cragslane Cavern. Unfortunately, the gambler was already dead by the time I arrived. It seems he incurred some debts, and sold his armor to a collector in Riften. After some effort, I managed to get the custom armor from the collector.",
+        "string": "До меня доходили слухи о том, что бывшие бандиты теперь скрываются по всему Тамриэлю. В казармах Рифтена мне удалось узнать об имперце, который делает ставки на бои в ямах в пещере Крегслейн. К сожалению, на момент моего прибытия этот человек был уже мертв. Похоже, он погряз в долгах и продал свою броню скупщице в Рифтене. С некоторым трудом, но мне все же удалось получить эту броню у скупщицы."
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "form_id": "[05000830]",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "Buy the armor from collector at the Bee and Barb",
+        "string": "Купить броню у сборщицы в \"Пчеле и жале\""
+    },
+    {
+        "editor_id": "ccBGSSSE055_MatchingSet",
+        "form_id": "[05000804]",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Matching Set",
+        "string": "Полный комплект"
+    },
+    {
+        "editor_id": "ccBGSSSE055_OrcishSmithing",
+        "form_id": "[05000812]",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Orcish Smithing",
+        "string": "Орочьи доспехи"
+    },
+    {
+        "editor_id": "ccBGSSSE055_MatchingSet",
+        "form_id": "[05000804]",
+        "index": null,
+        "type": "PERK DESC",
+        "original": "Additional 25% Armor bonus if wearing a matched set of Light Armor.",
+        "string": "Дополнительный бонус 25% к классу брони при ношении полного комплекта однотипной легкой брони."
+    },
+    {
+        "editor_id": "ccBGSSSE055_OrcishSmithing",
+        "form_id": "[05000812]",
+        "index": null,
+        "type": "PERK DESC",
+        "original": "Can create Orcish armor and weapons at forges, and improve them twice as much.",
+        "string": "Вы можете создавать орочьи доспехи и оружие во всех кузницах и улучшать их до вдвое более высокого уровня."
+    }
+]

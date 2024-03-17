@@ -1,0 +1,274 @@
+[
+    {
+        "editor_id": "ccBGSSSE054_ArmorBladesGauntlets",
+        "form_id": "[05000802]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Orcish Plate Gauntlets",
+        "string": "Guanteletes de placas orcos"
+    },
+    {
+        "editor_id": "ccBGSSSE054_ArmorBladesGauntletsE",
+        "form_id": "[0500083E]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Orcish Plate Gauntlets",
+        "string": "Guanteletes de placas orcos"
+    },
+    {
+        "editor_id": "ccBGSSSE054_ArmorBladesHelmet",
+        "form_id": "[05000803]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Orcish Plate Helmet",
+        "string": "Yelmo de placas orco"
+    },
+    {
+        "editor_id": "ccBGSSSE054_ArmorBladesBootsE",
+        "form_id": "[0500083C]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Orcish Plate Boots",
+        "string": "Botas de placas orcas"
+    },
+    {
+        "editor_id": "ccBGSSSE054_ArmorBladesBoots",
+        "form_id": "[05000800]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Orcish Plate Boots",
+        "string": "Botas de placas orcas"
+    },
+    {
+        "editor_id": "ccBGSSSE054_ArmorBladesCuirassE",
+        "form_id": "[0500083D]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Orcish Plate Armor",
+        "string": "Armadura de placas orca"
+    },
+    {
+        "editor_id": "ccBGSSSE054_ArmorBladesCuirass",
+        "form_id": "[05000801]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Orcish Plate Armor",
+        "string": "Armadura de placas orca"
+    },
+    {
+        "editor_id": "ccBGSSSE054_ArmorBladesHelmetE",
+        "form_id": "[0500083F]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Orcish Plate Helmet",
+        "string": "Yelmo de placas orco"
+    },
+    {
+        "editor_id": "ccBGSSSE054_YakhtuJournal",
+        "form_id": "[05000819]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nI nearly turned around and went back to Cyrodiil because Bjormund wouldn't shut up. From dawn to dusk it was Skyrim this and Skyrim that. We hadn't even crossed the mountains yet, and I felt like I'd spent an eternity in the place. But by Malacath, he kept going.\r\n\r\nHe went on about all the different legends and the hundreds of Ragnars involved in them. He talked for hours about his family, and for days about his mead. Sometimes he even sang about them. Silence was not an option. Perhaps if they put that on my bounty, I might have been okay with the rest of it. \r\n\r\nBut as a blacksmith, there was one story I didn't get tired of. The one about the Skyforge.\r\n\r\n\"It's an ancient relic, watched over by a great stone eagle,\" he said. \"Come spring, you will be forging weapons under its wings,\" he said.\r\n\r\nI ate it up, even though I knew it was a lie. The Skyforge was for legendary smiths, and I was a wanted criminal. Unless the guard decide to quit looking for us, I was going to spend the rest of my life crafting Orcish Plate for bandits, idiots who didn't deserve my work and lacked the brains to value it.\r\n\r\nMaybe that's what pissed me off the most about Bjormund's tales of hearth and home. We weren't going to be welcome in Skyrim, or anywhere for that matter. We were Crimson Dirks. We had a home, and now it was gone.</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\nCasi doy media vuelta y me vuelvo a Cyrodiil porque Bjormund no paraba de hablar. Todo el día, de la noche a la mañana que si Skyrim esto y Skyrim lo otro. Aún no habíamos cruzado las montañas y ya me parecía llevar una eternidad allí. Pero, por Malacath, él seguía erre que erre.\r\n\r\nNo paraba de hablar de todas las leyendas y de los cientos de hombres llamados Ragnar que aparecían en ellas. Se pasó horas hablando de su familia y días hablando de su aguamiel. A veces hasta cantaba canciones sobre ellos. Parecía que el silencio era algo imposible. Quizá si añadiesen eso a la recompensa por mi cabeza me habría parecido bien el resto.\r\n\r\nSin embargo, sobre herrería, había una historia que no me cansaba nunca de escuchar. La historia de la Forja del Cielo.\r\n\r\n\"Es una antigua reliquia, vigilada por una gran águila de piedra\", decía. \"Para la primavera estarás forjando armas bajo sus alas\", me prometió.\r\n\r\nYo me lo tragué, aunque sabía que era mentira. La Forja del Cielo era para herreros legendarios, y yo era una criminal perseguida. Salvo que la guardia decidiese dejar de buscarnos, me iba a pasar el resto de mis días fabricando placas orcas para bandidos, idiotas que no se merecían disfrutar de mi trabajo y no tenían el cerebro necesario como para valorarlo.\r\n\r\nQuizá eso era lo que me enfadaba más de las historias de Bjormund sobre su hogar. En Skyrim no íbamos a ser bienvenidos. En ninguna parte, en realidad. Éramos Dagas carmesíes. Teníamos un hogar, y nos lo habían quitado.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE054_DossierOrcish",
+        "form_id": "[0500081A]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Guard's Dossier: Yakhtu gra-Orkulg",
+        "string": "Informe del guardia: Yakhtu gra-Orkulg"
+    },
+    {
+        "editor_id": "ccBGSSSE054_DossierOrcish",
+        "form_id": "[0500081A]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nStatus: Active (Capture or Kill), High Priority\r\n\r\nDescription: Female, Orc, late 40s\r\n\r\nBackground:\r\nYakhtu gra-Orkulg was a former blacksmith at the Stash 'N Slash in the Imperial City, a shop she inherited from her father. She was contacted by the Crimson Dirks and recruited to forge arms for the bandits as well as launder sacked goods through her shop. When the Imperial City guard issued a warrant for her arrest, she fled the city with another member of the bandit gang.  \r\n\r\nOperational Notes:\r\nYakhtu was originally thought to have fled to High Rock and taken refuge in an Orc Stronghold. However, according to our informant, she actually traveled with another agent to Skyrim. Reports of unusually well made weapons and armor being peddled out of Embershard Mine may be related. This information should be forwarded to Commander Caius in Whiterun as the mine falls under his jurisdiction.</font>",
+        "string": "<font face='$HandwrittenFont'>\r\nEstado: activo (capturar o matar), prioridad elevada\r\n\r\nDescripción: hembra, orca, cerca de la cincuentena\r\n\r\nAntecedentes:\r\nYakhtu gra-Orkulg antes trabajaba en la herrería Golpe y porrazo de la Ciudad Imperial, negocio que heredó de su padre. Las Dagas carmesíes se pusieron en contacto con ella y la reclutaron para forjarles armas y vender artículos robados a través de su tienda. Cuando la Ciudad Imperial emitió una orden de detención contra ella, huyó junto a otro miembro de la banda.\r\n\r\nNotas operativas:\r\nEn principio se pensaba que Yakhtu había huido a Roca Alta para refugiarse en una fortaleza orca. Sin embargo, nuestro informador afirma que en realidad viajó hasta Skyrim junto a otro miembro. Esta información podría estar relacionada con ciertos informes sobre la venta de armas y armaduras de fabricación excepcional en la mina de Ascua. Hay que poner al tanto de ello al comandante Cayo, de Carrera Blanca, puesto que la mina está dentro de su jurisdicción.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE054_YakhtuJournal",
+        "form_id": "[05000819]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Yakhtu's Journal",
+        "string": "Diario de Yakhtu"
+    },
+    {
+        "editor_id": "ccBGSSSE054_YakhtuTreasBanditChest",
+        "form_id": "[0500081B]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Cofre"
+    },
+    {
+        "editor_id": "ccBGSSSE054_Yakhtu",
+        "form_id": "[0500081C]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Yakhtu",
+        "string": "Yakhtu"
+    },
+    {
+        "editor_id": "ccBGSSSE054_Yakhtu",
+        "form_id": "[0500081C]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Yakhtu gra-Orkulg",
+        "string": "Yakhtu gra-Orkulg"
+    },
+    {
+        "editor_id": "ccBGSSSE054_YakhtuKey",
+        "form_id": "[0500081D]",
+        "index": null,
+        "type": "KEYM FULL",
+        "original": "Yakhtu's Key",
+        "string": "Llave de Yakhtu"
+    },
+    {
+        "editor_id": "EmbershardMine01",
+        "form_id": "[000B6BE6]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Embershard Mine",
+        "string": "Mina de Ascua"
+    },
+    {
+        "editor_id": "WhiterunGuardHouse",
+        "form_id": "[00036ED6]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Guard Barracks",
+        "string": "Cuartel de la guardia"
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "form_id": "[05000822]",
+        "index": 60,
+        "type": "QUST NNAM",
+        "original": "Retrieve the Orcish Plate Armor",
+        "string": "Hazte con la armadura de placas orca."
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "form_id": "[05000822]",
+        "index": 87,
+        "type": "QUST CNAM",
+        "original": "At Embershard Mine, I found an Orc blacksmith forging weapons for bandits. I managed to eliminate her and read a journal on her body. It mentioned crafting valuable Orcish Plate armor for bandits. I defeated a bandit wearing the armor and claimed it for myself.",
+        "string": "En la mina de Ascua he encontrado a una herrera orca forjando armas para bandidos. He conseguido eliminarla y leer un diario que he encontrado en su cadáver. Hablaba sobre crear valiosas armaduras de placas orcas para bandidos. He derrotado a un bandido que llevaba la armadura y me la he quedado."
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "form_id": "[05000822]",
+        "index": 79,
+        "type": "QUST CNAM",
+        "original": "At Embershard Mine, I found an Orc blacksmith forging weapons for bandits. I managed to eliminate her and read a journal on her body. It mentioned crafting valuable Orcish Plate armor for bandits. I defeated a bandit wearing the armor and claimed it for myself.",
+        "string": "En la mina de Ascua he encontrado a una herrera orca forjando armas para bandidos. He conseguido eliminarla y leer un diario que he encontrado en su cadáver. Hablaba sobre crear valiosas armaduras de placas orcas para bandidos. He derrotado a un bandido que llevaba la armadura y me la he quedado."
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "form_id": "[05000822]",
+        "index": 84,
+        "type": "QUST CNAM",
+        "original": "Bandits have long been an issue for the people Skyrim. At the Guard House in Whiterun, I found a dossier that might have information on their whereabouts.",
+        "string": "Los bandidos llevan mucho tiempo dando problemas a la gente de Skyrim. En la casa de la guardia de Carrera Blanca he encontrado un informe que podría contener información sobre su paradero."
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "form_id": "[05000822]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Read the guard's dossier",
+        "string": "Lee el informe del guardia"
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "form_id": "[05000822]",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "Examine the body",
+        "string": "Examina el cuerpo."
+    },
+    {
+        "editor_id": "ccBGSSSE054_MiscQuest",
+        "form_id": "[05000823]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Search for a dossier at the Guard Barracks in Whiterun",
+        "string": "Busca un informe en el cuartel de la guardia en Carrera Blanca."
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "form_id": "[05000822]",
+        "index": 97,
+        "type": "QUST CNAM",
+        "original": "At Embershard Mine, I found an Orc blacksmith forging weapons for bandits. I managed to eliminate her and read a journal on her body. It mentioned crafting valuable Orcish Plate armor for bandits.",
+        "string": "En la mina de Ascua he encontrado a una herrera orca forjando armas para bandidos. He conseguido eliminarla y leer un diario que he encontrado en su cadáver. Hablaba sobre crear valiosas armaduras de placas orcas para bandidos."
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "form_id": "[05000822]",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Find the blacksmith in Embershard Mine",
+        "string": "Encuentra a la herrera en la mina de Ascua."
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "form_id": "[05000822]",
+        "index": 84,
+        "type": "QUST CNAM",
+        "original": "At Embershard Mine, I found an Orc blacksmith forging weapons for bandits. I managed to eliminate her. I should check her body to see what else I can uncover.",
+        "string": "En la mina de Ascua he encontrado a una herrera orca forjando armas para bandidos. He conseguido eliminarla. Debería examinar su cadáver a ver qué más descubro."
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "form_id": "[05000822]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Smith 'N Slash",
+        "string": "Golpe y porrazo"
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "form_id": "[05000822]",
+        "index": 76,
+        "type": "QUST CNAM",
+        "original": "Bandits have long been an issue for the people Skyrim. If I visit the Guard House in Whiterun, I might find some information on them.",
+        "string": "Los bandidos llevan mucho tiempo dando problemas a la gente de Skyrim. En la casa de la guardia de Carrera Blanca podría encontrar información sobre ellos."
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "form_id": "[05000822]",
+        "index": 50,
+        "type": "QUST NNAM",
+        "original": "Read the journal",
+        "string": "Lee el diario."
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "form_id": "[05000822]",
+        "index": 98,
+        "type": "QUST CNAM",
+        "original": "At Embershard Mine, I found an Orc blacksmith forging weapons for bandits. I managed to eliminate her and found a journal on her body.",
+        "string": "En la mina de Ascua he encontrado a una herrera orca forjando armas para bandidos. He conseguido eliminarla y he encontrado un diario en su cadáver."
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "form_id": "[05000822]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Search for a dossier at the Guard Barracks in Whiterun",
+        "string": "Busca un informe en el cuartel de la guardia en Carrera Blanca."
+    },
+    {
+        "editor_id": "ccBGSSSE054_Quest",
+        "form_id": "[05000822]",
+        "index": 72,
+        "type": "QUST CNAM",
+        "original": "Bandits have long been an issue for the people Skyrim. At the Guard House in Whiterun, I found a dossier that has information on an Orc blacksmith forging weapons for bandits at Embershard Mine.",
+        "string": "Los bandidos llevan mucho tiempo dando problemas a la gente de Skyrim. En la casa de la guardia de Carrera Blanca he encontrado un informe sobre una herrera orca que forja armas para bandidos en la mina de Ascua."
+    }
+]

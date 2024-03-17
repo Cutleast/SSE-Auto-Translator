@@ -1,0 +1,2322 @@
+[
+    {
+        "editor_id": "ccBGSSSE067_WightRace",
+        "form_id": "[051DB955]",
+        "index": null,
+        "type": "RACE FULL",
+        "original": "Wight",
+        "string": "Geist"
+    },
+    {
+        "editor_id": "ccBGSSSE067_EnchScourgeFireDamageFFContact",
+        "form_id": "[051614EE]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Burns the target for <mag> points. Targets on fire take extra damage. Summons a Dremora Lord once per combat encounter.",
+        "string": "Steckt das Ziel für <mag> Schadenspunkte in Brand. Brennende Ziele erleiden zusätzlichen Schaden. Beschwört einmal pro Kampfbegegnungen einen Dremora-Fürsten."
+    },
+    {
+        "editor_id": "ccBGSSSE067_AbInvisibillityEffect",
+        "form_id": "[051E0C24]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "InvisibilityNoTranslate",
+        "string": "InvisibilityNoTranslate"
+    },
+    {
+        "editor_id": "ccBGSSSE067_EnchScourgeFireDamageFFContact",
+        "form_id": "[051614EE]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fire Damage",
+        "string": "Feuerschaden"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AbFXDaedricHorseFX",
+        "form_id": "[05000B48]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Daedric Fire FX",
+        "string": "Daedric Fire FX"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ConjureAyleidLichEffect",
+        "form_id": "[05147D96]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Conjure Ayleid Lich",
+        "string": "Ayleïdenlich beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AbsorbStaminaConcAimed",
+        "form_id": "[05147D99]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Drain Stamina",
+        "string": "Ausdauer entziehen"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AbScourgeSummonDremoraEffect",
+        "form_id": "[0516665A]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Summon Dremora",
+        "string": "Dremora beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE067_GateBarrierScrollEffect",
+        "form_id": "[0508AAEE]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Scroll of Oblivion",
+        "string": "Schriftrolle des Reichs des Vergessens"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AbsorbStaminaConcAimed",
+        "form_id": "[05147D99]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Absorb <mag> points of stamina per second from the target.",
+        "string": "Absorbiert <mag> Punkte Ausdauer pro Sekunde vom Ziel."
+    },
+    {
+        "editor_id": "ccBGSSSE067_ScourgeSummonDremoraCooldownEffect",
+        "form_id": "[05170950]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Summon Dremora Cooldown (no translate)",
+        "string": "Summon Dremora Cooldown (no translate)"
+    },
+    {
+        "editor_id": "ccBGSSSE067_SummonHorseEffect",
+        "form_id": "[05000B63]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Summon Daedric Horse",
+        "string": "Daedrisches Pferd beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE067_EnchBanishFFContact",
+        "form_id": "[0517094E]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Banish",
+        "string": "Verbannen"
+    },
+    {
+        "editor_id": "ccBGSSSE067_SummonHorseEffect",
+        "form_id": "[05000B63]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Summons a Daedric Horse to act as your steed.",
+        "string": "Beschwört ein daedrisches Pferd, damit es dir als Ross dient."
+    },
+    {
+        "editor_id": "ccBGSSSE067_ConjureAyleidLichEffect",
+        "form_id": "[05147D96]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Summons an Ayleid Lich for <dur> seconds.",
+        "string": "Beschwört einen Ayleïdenlich für <dur> Sekunden."
+    },
+    {
+        "editor_id": "ccBGSSSE067_GateBarrierScrollEffect",
+        "form_id": "[0508AAEE]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Permits the caster pass through the Liminal Barrier.",
+        "string": "Erlaubt dem Zaubernden, die Schwellenbarriere zu durchqueren."
+    },
+    {
+        "editor_id": "ccBGSSSE067_EnchFireDamageFFContact_NoShader",
+        "form_id": "[05175AC0]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Burns the target for <mag> points. Targets on fire take extra damage.",
+        "string": "Steckt das Ziel für <mag> Schadenspunkte in Brand. Brennende Ziele erleiden zusätzlichen Schaden."
+    },
+    {
+        "editor_id": "ccBGSSSE067_EnchBanishFFContact",
+        "form_id": "[0517094E]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Summoned Daedra up to level <mag> are sent back to Oblivion.",
+        "string": "Beschworene Daedra bis zu Stufe <mag> werden zurück ins Reich des Vergessens verbannt."
+    },
+    {
+        "editor_id": "ccBGSSSE067_EnchFireDamageFFContact_NoShader",
+        "form_id": "[05175AC0]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fire Damage",
+        "string": "Feuerschaden"
+    },
+    {
+        "editor_id": "ccBGSSSE067_SummonDremoraLordScourge",
+        "form_id": "[0516B7C7]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Conjure Dremora Lord",
+        "string": "Dremora-Fürst beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AbLichHealthMonitorEffect",
+        "form_id": "[051C7370]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Blank",
+        "string": "Leer"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LichDeathEffect",
+        "form_id": "[05204518]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Lich Death Effect No Translate",
+        "string": "Lich Death Effect No Translate"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AbMythicDawnFactionSneak",
+        "form_id": "[05000B7B]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Mythic Dawn No Translate",
+        "string": "Mythic Dawn No Translate"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LichDeathEffect",
+        "form_id": "[05204518]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Lich Death Effect No Translate",
+        "string": "Lich Death Effect No Translate"
+    },
+    {
+        "editor_id": "ccBGSSSE067_SummonDremoraLordScourge",
+        "form_id": "[0516B7C7]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Summons a Dremora Lord for <dur> seconds.",
+        "string": "Beschwört für <dur> Sekunden einen Dremora-Fürsten."
+    },
+    {
+        "editor_id": "ccBGSSSE067_EnchLichStaff",
+        "form_id": "[05147D9A]",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Staff of Ehlno Ede",
+        "string": "Stab von Ehlno Ede"
+    },
+    {
+        "editor_id": "ccBGSSSE067_EnchWeaponFireDamage06_NoShader",
+        "form_id": "[05175ABE]",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Fire Damage",
+        "string": "Feuerschaden"
+    },
+    {
+        "editor_id": "ccBGSSSE067_EnchWeaponScourge",
+        "form_id": "[051614EC]",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Banish",
+        "string": "Verbannen"
+    },
+    {
+        "editor_id": "ccBGSSSE067_InvisibilityDremora",
+        "form_id": "[051E0C22]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Invisibility",
+        "string": "Invisibility"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ScourgeConjureDremoraCooldown",
+        "form_id": "[0517094F]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Scourge Cooldown",
+        "string": "Geißel-Abklingzeit"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AbWight",
+        "form_id": "[051DB953]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Wight Abilities No Translate",
+        "string": "Wight Abilities No Translate"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ConjureDremoraLordScourge",
+        "form_id": "[0516B7C8]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Conjure Dremora Lord",
+        "string": "Dremora-Fürst beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE067_SummonDaedricHorse",
+        "form_id": "[05000B62]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Summon Daedric Horse",
+        "string": "Daedrisches Pferd beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AbFactionMythicDawnSneak",
+        "form_id": "[05000E84]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Mythic Dawn Faction",
+        "string": "Fraktion der Mythischen Morgenröte"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AbScourgeSummonDremora",
+        "form_id": "[0516665B]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Scourge Abilities",
+        "string": "Geißel-Fähigkeiten"
+    },
+    {
+        "editor_id": "ccBGSSSE067_DaedricHorseFireFXSpell",
+        "form_id": "[05000B49]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Flame Atronach abilities",
+        "string": "Feuer-Atronach-Fähigkeiten"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LichDeathFX01",
+        "form_id": "[05204516]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Lich Death FX No Translate",
+        "string": "Lich Death FX No Translate"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ConjureAyleidLichSpell",
+        "form_id": "[05147D95]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Conjure Ayleid Lich",
+        "string": "Ayleïdenlich beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE067_GateBarrierScroll01",
+        "form_id": "[0508AAEC]",
+        "index": null,
+        "type": "SCRL FULL",
+        "original": "Scroll of Liminal Breach",
+        "string": "Schriftrolle des Schwellenbruchs"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AltarActivator",
+        "form_id": "[05000CB0]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Altar",
+        "string": "Altar"
+    },
+    {
+        "editor_id": "ccBGSSSE067_HarradaRootGround01",
+        "form_id": "[05033F2E]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Harvest",
+        "string": "Sammeln"
+    },
+    {
+        "editor_id": "ccBGSSSE067_HarradaRootStanding01",
+        "form_id": "[05033F31]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Harvest",
+        "string": "Sammeln"
+    },
+    {
+        "editor_id": "ccBGSSSE067_SigilStoneWeakActivator",
+        "form_id": "[050B37FF]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "Nehmen"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ARGreatWelkyndStoneACT01",
+        "form_id": "[050BDB3A]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Great Welkynd Stone",
+        "string": "Großer Welkynd-Stein"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ARGreatWelkyndStoneACT01",
+        "form_id": "[050BDB3A]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "Nehmen"
+    },
+    {
+        "editor_id": "ccBGSSSE067_HarradaRootStanding01",
+        "form_id": "[05033F31]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Harrada Root",
+        "string": "Harrada-Wurzel"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AltarActivator",
+        "form_id": "[05000CB0]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place Great Welkynd Stone",
+        "string": "Großen Welkynd-Stein platzieren"
+    },
+    {
+        "editor_id": "ccBGSSSE067_HarradaRootHanging02",
+        "form_id": "[05033F30]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Harvest",
+        "string": "Sammeln"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AyleidElementalShardHolder01",
+        "form_id": "[050762C6]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Elemental Shard Holder",
+        "string": "Elementarsplitter-Halterung"
+    },
+    {
+        "editor_id": "ccBGSSSE067_SigilOrWelkyndActivator",
+        "form_id": "[050FB457]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Sigil Stone Altar",
+        "string": "Siegelstein-Altar"
+    },
+    {
+        "editor_id": "ccBGSSSE067_HarradaRootHanging01",
+        "form_id": "[05033F2F]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Harvest",
+        "string": "Sammeln"
+    },
+    {
+        "editor_id": "ccBGSSSE067_SigilStoneWeakActivator",
+        "form_id": "[050B37FF]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Weakened Sigil Stone",
+        "string": "Geschwächter Siegelstein"
+    },
+    {
+        "editor_id": "ccBGS_ARGate01",
+        "form_id": "[01003157]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Gate",
+        "string": "Falscher Splitter"
+    },
+    {
+        "editor_id": "ccBGSSSE067_HarradaRootGround01",
+        "form_id": "[05033F2E]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Harrada Root",
+        "string": "Harrada-Wurzel"
+    },
+    {
+        "editor_id": "ccBGSSSE067_HarradaRootHanging01",
+        "form_id": "[05033F2F]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Harrada Root",
+        "string": "Harrada-Wurzel"
+    },
+    {
+        "editor_id": "ccBGSSSE067_HarradaRootHanging02",
+        "form_id": "[05033F30]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Harrada Root",
+        "string": "Harrada-Wurzel"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AyleidCrown",
+        "form_id": "[05000B71]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ayleid Crown of Rielle",
+        "string": "Ayleïdenkrone von Rielle"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note02_StrangersJournal",
+        "form_id": "[05000B6F]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"20\">\r\nIf you are reading this, it means they may have reached me first. The Mythic Dawn do not tolerate desertion. A fitting end for my transgressions, I suppose. \r\n\r\nIf you know of the Mythic Dawn, you may have heard that the cult was eradicated long ago, after the Oblivion Crisis of the 3rd era came to an end. This was true until perhaps one year past.\r\n\r\nAs discord began to sow in the lands of Skyrim, the whispers of Mehrunes Dagon made their way to the ears and mind of a fervent worshipper named Vonos. These whispers led him deep underground to an ancient Mythic Dawn temple, long since collapsed, where rumors spoke of an Oblivion Gate, lying in ruin for centuries.\r\n\r\nVonos soon made a pact with Mehrunes Dagon, and began to quietly reform the Mythic Dawn as its new leader. He began to cultivate more members to the cause, and I myself fell victim to the promise of such power.\r\n\r\nAfter the Oblivion Crisis, the gates throughout Skyrim were buried deep within the lands. However, with much effort, we retrieved many of these pieces, and successfully rebuilt an Oblivion Gate.\r\n\r\nVonos, a master of conjuration, has been working tirelessly to open the gate and give Mehrunes Dagon's troops a doorway into Tamriel.\r\n\r\nAs dictated by the pact, the cleansing of the Oblivion Gate required a personal blood sacrifice from each of us to prove our devotion. Blinded by ambition, I offered up my own brother, Sune. A simple farmer who could not harm a Dartwing.\r\n\r\nWatching the knife penetrate his body sent shock and horror through my entire being. The blood that spilled from his loins was that of my blood. In that moment I realized what I had done. It was not power that bewitched me, but deceit.\r\n\r\nAs an Acolyte I was not privy to much information, but I know that Vonos is searching for a powerful, ancient artifact that is necessary to open the gate. What that artifact might be, I do not know. I heard something about an excavation camp to the southwest of Ivarstead, near a mountain pass. Perhaps more information can be found there.\r\n\r\nLastly, in order to keep its location secret, all but the highest priests in the order are blindfolded when taken to and from the Oblivion Gate, so I have no further information to give as to its whereabouts. I only know it was a cave. I wish I could tell you more.\r\n\r\nI've been on the run day and night, and now the Vigil of Stendarr are also on my trail. I can only imagine what they might do to someone like me, so I come to you with my plea, someone who might better understand my plight.\r\n\r\nPlease stop the Mythic Dawn however you can. For myself, my forsaken brother, and the whole of Tamriel.\r\n\r\n-Skorvild\r\n</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"20\">\r\nWenn Ihr das hier lest, dann bedeutet das, dass sie mich wohl zuerst erreicht haben. Die Mythische Morgenröte toleriert keine Fahnenflucht. Ein passendes Ende für meine Verfehlungen, würde ich sagen.\r\n\r\nWenn Ihr von der Mythischen Morgenröte wisst, dann habt Ihr vielleicht gehört, dass der Kult vor langer Zeit verschwand, als die Oblivion-Krise der Dritten Ära ein Ende fand. Doch vor etwa einem Jahr änderte sich das.\r\n\r\nAls die Zwietracht in Himmelsrand aufkeimte, gelangte das Geflüster von Mehrunes Dagon an die Ohren und in den Geist eines glühenden Anhängers mit Namen Vonos. Es führte ihn tief in den Untergrund zu einem uralten Tempel der Mythischen Morgenröte, der lange schon verfallen war und Gerüchten zufolge jahrhundertelang die Überreste eines zerstörten Tors zum Reich des Vergessens in seinen Ruinen beherbergte.\r\n\r\nBald schon schmiedete Vonos einen Pakt mit Mehrunes Dagon und begann, die Mythische Morgenröte heimlich als ihr Anführer neu zu formieren. Er gewann weitere Mitglieder für die Sache und auch ich selbst fiel dem Versprechen solch großer Macht zum Opfer.\r\n\r\nNach der Oblivion-Krise wurden in ganz Himmelsrand die Tore tief in der Erde vergraben. Doch unter großen Mühen fanden wir viele Stücke der Tore und konnten eines neu aufbauen.\r\n\r\nVonos, ein Meister der Beschwörung, versuchte sich unermüdlich an der Öffnung des Tors, um den Truppen von Mehrunes Dagon einen Weg nach Tamriel zu verschaffen.\r\n\r\nWie vom Pakt gefordert, verlangte die Säuberung des Tors von jedem von uns ein persönliches Blutopfer, mit dem wir unsere Ergebenheit beweisen sollten. Blind vor Eifer entbot ich meinen eigenen Bruder Sune. Ein einfacher Bauer, der keiner Pfeilfeder etwas zuleide tun konnte.\r\n\r\nZu sehen, wie das Messer seinen Körper durchdrang, ließ mich vor Schreck erstarren. Das Blut, das aus seinen Lenden schoss, war von meinem Blut. In diesem Augenblick wurde ich dessen gewahr, was ich getan hatte. Nicht die Macht hatte mich verzaubert, ich war getäuscht worden.\r\n\r\nAls Akolyth wurde ich nicht in vieles eingeweiht, aber ich weiß, dass Vonos nach einem mächtigen, uralten Artefakt sucht, das nötig ist, um das Tor zu öffnen. Worum es sich dabei handeln könnte, weiß ich nicht. Ich habe etwas über ein Ausgrabungslager im Südwesten von Ivarstatt gehört, nahe einem Gebirgspass. Vielleicht sind dort mehr Hinweise zu finden.\r\n\r\nUm den Standort des Tors ins Reich des Vergessens geheim zu halten, werden bis auf den höchsten Priestern allen die Augen verbunden, wenn sie zu diesem Ort oder von ihm weggebracht werden. Wo sich das Tor also befindet, kann ich nicht sagen. Ich weiß nur, dass es in einer Höhle ist. Ich wünschte, ich könnte Euch mehr sagen.\r\n\r\nIch bin Tag und Nacht auf der Flucht, und nun sind auch die Wächter von Stendarr hinter mir her. Ich mag mir gar nicht vorstellen, was sie mit jemandem wie mir tun mögen, und deshalb wende ich mich mit meiner Bitte an Euch - an jemanden, der meine Misere vielleicht besser versteht.\r\n\r\nBitte haltet die Mythische Morgenröte auf. Für mich, meinen verlorenen Bruder und ganz Tamriel.\r\n\r\nSkorvild\r\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AtrFrgConjureLichRecipeNote",
+        "form_id": "[05147D94]",
+        "index": null,
+        "type": "BOOK CNAM",
+        "original": "Tome - Conjure Ayleid Lich",
+        "string": "Foliant zur Beschwörung eines Ayleïdenlichs."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note09_TornPage",
+        "form_id": "[0514CF0C]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Torn Note",
+        "string": "Zerrissene Notiz"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note09_TornPage",
+        "form_id": "[0514CF0C]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nIn the shade of Velothi, where rivers run black\r\nShor's Stone at our feet, Whiteshore at our back\r\n\r\nWindhelm on our shoulders, beyond the fair night\r\nBefore the dawn rises, red scars bleed the light.</font>\r\n",
+        "string": "<font face='$HandwrittenFont'>\r\nIm Schatten Velothis, wo Ströme schwarz sind wie Kohlen\r\nPale in unserem Rücken, Shors Stein zu den Sohlen\r\n\r\nWindhelm auf uns'ren Schultern, jenseits lauer Nacht\r\nVorm Dämmern blutet aus roten Narben die helle Pracht.</font>\r\n"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note07_MythicDawnJournalShardsJanus",
+        "form_id": "[050762B6]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Janus' Journal",
+        "string": "Janus' Tagebuch"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ConjureSummonDaedricHorse",
+        "form_id": "[05000B64]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nConjure Daedric Horse",
+        "string": "<font face='$HandwrittenFont'><font size='40'><p align='center'>\r\nDaedrisches Pferd beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note04_MythicDawnVonosJournal",
+        "form_id": "[05000B8D]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Vonos' Journal",
+        "string": "Vonos' Tagebuch"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ConjureAyleidLichTome",
+        "form_id": "[05147D93]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Conjure Ayleid Lich",
+        "string": "Zauberbuch: Ayleïdenlich beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note02_StrangersJournal",
+        "form_id": "[05000B6F]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Skorvild's Journal",
+        "string": "Skorvilds Tagebuch"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note05_VigilantMythicDawnLocation",
+        "form_id": "[0506BFC3]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Vigilant Enforcer's Journal",
+        "string": "Tagebuch des Wächter-Vollstreckers"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note08_VigilantSecuretheGate",
+        "form_id": "[0518F232]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nThe Vigil is the last line of defense between the light and darkness. If the defilers manage to open the gate, then we are bound by Stendarr to not let a single abomination pass through it.  \r\n\r\nFind the gate, and secure it. Whatever it takes, we must hold the line.</font>\r\n",
+        "string": "<font face='$HandwrittenFont'>\r\nDie Wächter sind die letzte Verteidigungslinie zwischen Licht und Dunkelheit. Wenn diese schändlichen Individuen es schaffen, das Tor zu öffnen, dann sind wir Stendarr verpflichtet, nicht eine einzige Abscheulichkeit hindurchkommen zu lassen.\r\n\r\nFindet das Tor und sichert es. Was auch immer dazu nötig ist, wir müssen die Linie halten.</font>\r\n"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note06_MythicDawnExpeditionJournal",
+        "form_id": "[05076275]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"20\">\r\n<b>2nd Sun's Height, 4E 201</b>\r\n\r\nThe dawn is breaking. Vonos has successfully pierced the veil of the liminal barrier.\r\n\r\nBut there is much work to be done. We have unearthed an anchor point, but must still reconstruct the gate itself. And even when it is complete, the veil of the liminal barrier remains. Vonos in his infinite wisdom continues to work day and night to find a way to break it.\r\n\r\nIt may be but a singular gateway, but Valkyn Gatanas and Methats await us on the other side, preparing to march for our Lord.\r\n\r\nI will keep the faith, for Lord Dagon.\r\n[pagebreak]\r\n\r\n<b>10th Sun's Height, 4E 201</b>\r\n\r\nVonos has been studying all known information about the Mysterium Xarxes, consulting with Dagon's Dremora, and experimenting tirelessly, but is still unable to open the gate.\r\n\r\nHowever, he believes that an object may exist which could be strong enough to hold the portal open. What kind of artifact could hold such power? Even a thousand Soul Gems would likely dissolve in the presence of a Sigil Stone.\r\n\r\nWe must redouble our efforts. I have sent additional scouts to Solstheim and Cyrodiil to learn anything they can.\r\n\r\n<b>20th Sun's Height, 4E 201</b>\r\n\r\nOne of my scouts has returned from Bruma with promising information. The ancient Ayleids are well known for their Welkynd Stones, rare aetherial fragments comprised of powerful meteoric glass. A Great Welkynd Stone, the most powerful of these stones, was typically held within the heart of each Ayleid city, but these stones have long since been plundered or lost to time.\r\n\r\nResearchers have speculated for centuries that more Great Welkynd Stones may exist, but none have ever been found. The last Great Welkynd Stone seen on record was in the Third Era; when it was snatched and used to bring the downfall of our Lord.\r\n\r\nThen, it was ultimately Mehrunes' undoing, but irony may be smiling upon us. Something of such power could be exactly what we need to bring the gate to full power.\r\n\r\nOne researcher has set their sights on the ancient Ayleid ruin of Rielle as such a place where a Great Welkynd Stone may exist. Many have explored its depths through the years, though none have ever found a trace of such a thing.\r\n\r\nCould a Great Welkynd Stone truly be hidden deep within Rielle? I've told my scouts to capture this researcher and bring him to me. We must learn all we can.\r\n\r\n<b>2nd Last Seed, 4E 201</b>\r\n\r\nMy scouts captured the Ayleid researcher from Bruma, but upon returning, the Vigil of Stendarr were seen guarding the Pale Pass. My scouts had to detour through the wilderness of the Jerall Mountains to avoid them. Could the Vigil be aware of our movements? Is there a traitor among us? We cannot risk any sort of confrontation with the Vigil until we have the full might of Dagon behind us. There is too much at stake.\r\n\r\nWhile interrogating the researcher I learned that Rielle is structurally weak, making entry difficult. With the Vigil blocking the Pale Pass, this greatly inhibits our expedition. He also spoke of other dangers, but I dare not repeat them, lest I give substance to his ravings.\r\n\r\nWe must find a way into Rielle. Vonos and I have agreed that we have no time to waste. I have selected only our most trusted disciples to set up a base camp in the mountains west of Ivarstead. We will operate under the darkness of night to excavate our own pathway through the Jerall Mountains and into Rielle. It will take time, but it is the only way.\r\n\r\n<b>14th Last Seed, 4E 201</b>\r\n\r\nAfter much blood and sweat, we finally breached Rielle through its northwest corner, but the challenges within have proven to be quite deadly. The only man who returned alive claimed he barely escaped the clutches of an undead monster.  Several have gone inside only to never return, and I am unsure how many more souls I can spare.\r\n\r\nAll this and yet no signs of a secret chamber or Welkynd Stone.\r\n\r\nThere are legible portions of untranslated words on the pages retrieved from the researcher in Bruma. I've summoned one of my best scholars, Janus, to assist me in my Ayleid studies. Perhaps there is something we are missing.\r\n[pagebreak]\r\n\r\n<b>15th Last Seed, 4E 201</b>\r\n\r\nAccording to the books Magic from the Sky, and Glories and Laments, the ancient Ayleids believed that Nirn was composed of four basic elements -- Earth, Water, Air, and Light. Janus and I feel this is extremely important, may be the key to obtaining the stone. The incomplete texts recovered from the researcher in Bruma make mention of previously unseen Elemental Shards. But what are they? Where are they? We will prepare another team to descend upon Rielle with this information.\r\n\r\nWe're running low on supplies and may need to delay the search if we lose any more men.\r\n[pagebreak]\r\n\r\n<b>17th Last Seed, 4E 201</b>\t\r\n\r\nVonos has sent an urgent communication. The Vigilants of Stendarr have increased their presence and have been seen questioning townsfolk. Acolyte Skorvild and Priestess Enakain have gone missing, their whereabouts unknown.\r\n\r\nIt is best for us to assume the Vigil knows of our plans. There is no time left to delay. Janus must join one last expedition team to locate the Great Welkynd Stone. I will send the last of my guards along with him as protection.\r\n\r\nThis is our last chance. Dagon, give us strength.\r\n</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"20\">\r\n<b>2. Sonnenhöhe, 4Ä 201</b>\r\n\r\nDie Dämmerung bricht an. Vonos hatte Erfolg beim Durchdringen des Schleiers der Schwellenbarriere.\r\n\r\nAber es liegt noch mehr Arbeit vor uns. Wir haben einen Ankerpunkt zutage gefördert, müssen aber noch das Tor selbst rekonstruieren. Doch selbst mit dem Tor bleibt der Schleier der Schwellenbarriere bestehen. In seiner unendlichen Weisheit arbeitet Vonos Tag und Nacht daran, einen Weg zu finden, den Schleier zu brechen.\r\n\r\nEs mag sich um einen einzelnen Durchgang handeln, aber Valkyn Gatanas und Methats warten auf der anderen Seite auf uns und bereiten sich darauf vor, für unseren Fürsten zu marschieren.\r\n\r\nIch werde den Glauben bewahren, für Fürst Dagon.\r\n[pagebreak]\r\n\r\n<b>10. Sonnenhöhe, 4Ä 201</b>\r\n\r\nVonos hat sämtliches verfügbares Wissen über das Mysterium Xarxes studiert, sich mit Dagons Dremora beraten und unermüdlich experimentiert, aber er kann das Tor immer noch nicht öffnen.\r\n\r\nEr glaubt jedoch, dass es ein Objekt gibt, das stark genug sein könnte, um das Tor offen zu halten. Welche Art von Artefakt könnte solche Macht besitzen? Selbst eintausend Seelensteine würden wohl in Anwesenheit eines Siegelsteins vergehen.\r\n\r\nWir müssen unsere Bemühungen verdoppeln. Ich habe zusätzliche Kundschafter nach Solstheim und Cyrodiil entsandt, damit sie dort so viel wie möglich in Erfahrung bringen.\r\n\r\n<b>20. Sonnenhöhe, 4Ä 201</b>\r\n\r\nEiner meiner Kundschafter ist mit vielversprechenden Hinweisen aus Bruma zurückgekehrt. Die alten Ayleïden sind wohlbekannt für ihre Welkynd-Steine, seltene ätherische Fragmente, die aus mächtigem Meteorglas bestehen. Ein großer Welkynd-Stein, der mächtigste dieser Steine, wurde für gewöhnlich im Herzen jeder Ayleïdenstadt aufbewahrt. Aber diese Steine sind schon lange geraubt worden oder gingen im Laufe der Zeit verloren.\r\n\r\nForscher spekulieren seit Jahrhunderten darüber, dass es mehrere große Welkynd-Steine geben könnte, aber man hat nie einen gefunden. Der letzte große Welkynd-Stein wurde laut Aufzeichnungen in der Dritten Ära gesichtet. Er wurde ergattert und verwendet, um unseren Fürsten zu stürzen.\r\n\r\nUnd so führte er letztendlich zum Verderben von Mehrune ... Aber vielleicht ist uns die Ironie ja wohlgesonnen. Etwas dieser Macht könnte genau das sein, was wir brauchen, um das Tor wieder mit all seiner Macht anzufüllen.\r\n\r\nEin Forscher hat die uralte Ayleïdenruine Rielle als einen solchen Ort ausgemacht, wo ein großer Welkynd-Stein existieren könnte. Über die Jahre hinweg haben viele ihre Tiefen erkundet, aber nie konnte jemand eine Spur eines derartigen Objekts finden.\r\n\r\nKönnte tief in Rielle verborgen wirklich ein großer Welkynd-Stein liegen? Ich wies meine Kundschafter an, diesen Forscher gefangen zu nehmen und ihn zu mir zu bringen. Wir müssen so viel wie möglich herausfinden.\r\n\r\n<b>2. Letzte Saat, 4Ä 201</b>\r\n\r\nMeine Kundschafter haben den Ayleïdenforscher aus Bruma gefangen genommen, aber bei ihrer Rückkehr beobachteten sie die Wächter von Stendarr bei der Überwachung des Fahlen Passes. Meine Kundschafter mussten einen Umweg durch die Wildnis der Jerallberge nehmen, um ihnen zu entgehen. Könnten sich die Wächter unserer Schritte bewusst sein? Gibt es einen Verräter unter uns? Wir können keine Konfrontation mit den Wächtern riskieren, bis wir nicht die gesamte Macht von Dagon hinter uns wissen. Zu viel steht auf dem Spiel.\r\n\r\nBeim Verhör des Forschers erfuhr ich, dass Rielle einsturzgefährdet ist, was ein Betreten schwierig macht. Durch dies und die Wächter, die den Fahlen Pass blockieren, wird unsere Expedition erheblich behindert. Er sprach auch von anderen Gefahren, doch werde ich sie hier nicht nennen, um seiner Faselei keinen Platz einzuräumen.\r\n\r\nWir müssen einen Weg nach Rielle hinein finden. Vonos und ich waren einer Meinung, dass keine Zeit zu verlieren ist. Ich habe unsere treuesten Jünger dafür ausgewählt, ein Basislager in den Bergen westlich von Ivarstatt zu errichten. Wir werden im Dunkel der Nacht operieren, um uns einen eigenen Weg durch die Jerallberge und ins Innere von Rielle zu graben. Es wird seine Zeit dauern, aber es gibt nur diesen einen Weg.\r\n\r\n<b>14. Letzte Saat, 4Ä 201</b>\r\n\r\nNach einer Menge Blut und Schweiß sind wir endlich über die nordwestliche Ecke in Rielle eingedrungen. Aber die Herausforderungen dort drinnen haben sich als äußerst tödlich erwiesen. Der Einzige, der lebend zurückkam, behauptete, er sei nur mit Mühe und Not den Fängen eines untoten Monsters entkommen. So viele, die hineingegangen sind, kamen nicht mehr zurück, und ich weiß nicht, wie viele Seelen ich noch entbehren kann.\r\n\r\nAll dies und immer noch kein Zeichen einer geheimen Kammer oder eines Welkynd-Steins.\r\n\r\nEs gibt leserliche Abschnitte mit nicht übersetzten Wörtern auf den Seiten, die von dem Forscher in Bruma aufgespürt worden waren. Ich habe Janus, einen meiner besten Gelehrten, herbeigerufen, damit er mich bei meinen Ayleïdenstudien unterstützt. Vielleicht gibt es etwas, das wir übersehen.\r\n[pagebreak]\r\n\r\n<b>15. Letzte Saat, 4Ä 201</b>\r\n\r\nLaut den Büchern \"Magie vom Himmel\" und \"Lobpreisungen und Wehklagen\" glaubten die alten Ayleïden, dass Nirn aus vier grundlegenden Elementen bestand - Erde, Wasser, Luft und Licht. Janus und ich denken, dass dies von extremer Wichtigkeit und vielleicht der Schlüssel zum Stein ist. In den unvollständigen Texten, die von dem Forscher in Bruma entdeckt wurden, ist von bislang unentdeckten Elementarsplittern die Rede. Doch worum handelt es sich dabei? Wo sind sie? Wir werden einen weiteren Trupp zusammenstellen und mit diesem Hinweis ausgestattet nach Rielle entsenden.\r\n\r\nWir haben nicht mehr viele Vorräte und müssen die Suche vielleicht aufschieben, wenn wir noch mehr Leute verlieren.\r\n[pagebreak]\r\n\r\n<b>17. Letzte Saat, 4Ä 201</b>\t\r\n\r\nVonos hat eine wichtige Nachricht geschickt. Die Wächter von Stendarr tauchen verstärkt auf und befragen die Stadtbewohner. Akolyth Skorvild und Priesterin Enakain sind verschwunden. Wohin? Das weiß niemand.\r\n\r\nWir sollten besser annehmen, dass die Wächter unsere Pläne kennen. Wir haben keine Zeit zu verlieren. Janus muss mit einem letzten Expeditionstrupp versuchen, den großen Welkynd-Stein zu finden. Ich werde ihm zum Schutz meine letzten verbliebenen Wachen mitschicken.\r\n\r\nDies ist unsere letzte Chance. Dagon, gib uns Kraft.\r\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note06_MythicDawnExpeditionJournal",
+        "form_id": "[05076275]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Excavation Leader's Journal",
+        "string": "Tagebuch des Ausgrabungsleiters"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ConjureAyleidLichTome",
+        "form_id": "[05147D93]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nConjure Ayleid Lich",
+        "string": "<font face='$HandwrittenFont'><font size='40'><p align='center'>\r\nAyleïdenlich beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AtrFrgConjureLichRecipeNote",
+        "form_id": "[05147D94]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Atronach Forge Recipe",
+        "string": "Rezept: Atronachen-Schmiede"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note03_MythicDawnOrders",
+        "form_id": "[05000B70]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Mythic Dawn Orders",
+        "string": "Befehle der Mythischen Morgenröte"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note03_MythicDawnOrders",
+        "form_id": "[05000B70]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nThere have been whispers of traitors among our ranks. Pathetic attempts to sabotage our mission. But nothing will stand in the way of Lord Dagon's Valkyn.\r\n\r\nYour duty is to seek out those who oppose us, and eradicate them.\r\n\r\nAcolyte Skorvild and Priestess Enakain have gone missing. Find them. If there is any scent of betrayal they must be swiftly destroyed.\r\n\r\nAfterward, travel to the excavation camp to await further instruction, but take the utmost precaution. The Vigil of Stendarr have increased their activity, and may be aware of our presence.\r\n\r\nThe dawn is breaking.\r\n\r\n-Vonos\r\n</font>\r\n",
+        "string": "<font face='$HandwrittenFont'>\r\nEs geht das Gerücht um, wir hätten einen Verräter in unseren Reihen. Jämmerliche Versuche, unsere Mission zu sabotieren. Aber nichts wird dem Valkyn von Fürst Dagon im Weg stehen.\r\n\r\nEs ist Eure Pflicht, die zu suchen, die gegen uns stehen, und sie auszulöschen.\r\n\r\nAkolyth Skorvild und Priesterin Enakain sind verschwunden. Findet sie. Sollte es auch nur die leiseste Andeutung von Verrat geben, so müssen die beiden unverzüglich ausgeschaltet werden.\r\n\r\nReist anschließend zum Ausgrabungslager und wartet dort auf weitere Anweisungen. Aber geht mit größter Vorsicht vor. Die Wächter von Stendarr haben ihre Aktivität erhöht und könnten sich Eurer Anwesenheit bewusst sein.\r\n\r\nDie Dämmerung bricht an.\r\n\r\nVonos\r\n</font>\r\n"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note01_StrangersPlea",
+        "form_id": "[05000B66]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Stranger's Plea",
+        "string": "Bitte eines Fremden"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note01_StrangersPlea",
+        "form_id": "[05000B66]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\n<Alias=Player>, \r\n\r\nI come to you with an urgent plea. I have done unspeakable things which I have come to regret, and the consequences are imminent. If you know of the Oblivion Crisis, then you know I make no jest when I say the fate of Tamriel is at stake.\r\n\r\nIt would be safer for us to speak further in person. Please meet me at the Shrine to Stendarr, located bewteen Fort Greymoor and Rorikstead. I will lay bare my sins in Stendarr's presence. Perhaps he will grant me forgiveness.\r\n\r\n-Skorvild</font>\r\n",
+        "string": "<font face='$HandwrittenFont'>\r\n<Alias=Player>,\r\n\r\nich habe eine dringende Bitte an Euch. Ich habe unaussprechliche Dinge getan, die ich heute bereue, und die Konsequenzen meiner Taten stehen unmittelbar bevor. Wenn Ihr mit der Oblivion-Krise vertraut seid, dann wisst Ihr sicher, dass ich nicht übertreibe, wenn ich sage, dass das Schicksal Tamriels auf dem Spiel steht.\r\n\r\nEs wäre sicherer für uns, von Angesicht zu Angesicht zu sprechen. Bitte trefft mich am Schrein von Stendarr, der sich zwischen der Festung Graumoor und Rorikstatt befindet. In Gegenwart Stendarrs will ich meine Sünden offenbaren. Vielleicht gewährt er mir ja Vergebung.\r\n\r\nSkorvild</font>\r\n"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ConjureSummonDaedricHorse",
+        "form_id": "[05000B64]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Conjure Daedric Horse",
+        "string": "Zauberbuch: Daedrisches Pferd beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note04_MythicDawnVonosJournal",
+        "form_id": "[05000B8D]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\r\n<b>3rd Mid Year, 4E 200</b>\r\n\r\nThe voice of Mehrunes Dagon permeates my dreams. At first it was a whisper, but has become a roar inside my skull. The seeds of strife and violence plague this land, the soil enriched by the blood of battle. \"Tamriel will soon be ripe again for the taking, for my vengeance is at hand\" the voice says to me.\r\n\r\nI must heed his voice. What must I do, my Lord?\r\n\r\n<b>12th Mid Year, 4E 200</b>\r\n\r\nI have spent countless hours, countless days in prayer to Dagon and have heard nothing. I finally took rest, and had another dream. Dreams of fire, of smoke. Heat upon heat. I was descending into a cavern, further and further down. The heat began to cook and blister my skin.\r\n\r\nBut I kept moving, ever downward. Fire and smoke, heat and rock. And then I saw it. The very mouth of Dagon. An Oblivion Gate.\r\n\r\nWith a blinding flash I then began to have visions of Akatosh, visions of Dragons. What could be the meaning of this?\r\n\r\nI awoke covered in sweat, and with a deep sense of purpose. I feel drawn eastward. I must heed the call.\r\n\r\n<b>15th Sun's Height, 4E 200</b>\r\n\r\nDagon's voice has lead me to a cavern, deep within the Velothi Mountains. His worshippers used to gather here. I feel their presence. I feel his power.\r\n\r\nAn Oblivion Gate is buried here. I can feel it. \r\n\r\nIt is my destiny to reach it. I will spend night and day with pickaxe in hand until it is freed from this prison of stone.\r\n[pagebreak]\r\n\r\n<b>6th Hearthfire 4E 200</b>\r\n\r\nFor nearly two months I have toiled, digging deeper and deeper, stopping only to rest. Stone by stone, inching ever closer to my destiny. Ever closer to the fires of Oblivion.\r\n\r\nOthers have begun to heed Dagon's call, and have found their way here, to me, to our Lord. We are the high priests of the new order, the chosen few who are attuned to his will.\r\n\r\nAs we traverse deeper, the remnants of an ancient Mythic Dawn temple are revealed like diamond from the rock.\r\n\r\nPriest Vitus was the first to discover the gate's stone. My ecstasy was short lived, however, when I found like every other gate, it had been destroyed. Still, I could feel its power like heat against my skin. Many other pieces like this are scattered throughout the lands of Skyrim. Buried deep. Lost to time. We shall find them. We shall open the jaws of Oblivion once again.\r\n[pagebreak]\r\n\r\n<b>4th Morning Star 4E 201</b>\r\n\r\nVisions of Dragons cloud my dreams once more. Images of Martin Septim and Akatosh that make my blood burn with anger and vengeance. Black wings unfurling against a red sky.\r\n\r\nI do not yet understand the meaning of these visions, but Dagon's hatred has become a burning coal in the pit of my stomach, driving me ever forward.\r\n[pagebreak]\r\n\r\n<b>21st Second Seed 4E 201</b>\r\n\r\nOver the last several months we have searched the deepest reaches of Skyrim, and have retrieved enough remnants of the various shattered Oblivion Gates to make one whole again. Its very presence inspires power, awe, and reverence.\r\n \r\nA pact must now be made. Dagon requires that each of us offer a personal sacrifice, a blood offering to prove our dedication. With each soul cast into the fires of Oblivion, his power grows.\r\n\r\nThe Liminal Barrier is weak here, and the turmoil and conflict boiling in the lands only weakens it further. I must now summon a Dremora Lord to acquire a Sigil Stone, and find a way to open the gate.\r\n\r\n<b>10th Sun's Height 4E 201</b>\r\n\r\nI have performed the rites as dictated in Liminal Bridges, and successfully penetrated the barrier into the realm of Oblivion, but my attempts to use the gate as a vessel of trans-liminal attunement have failed. The portal to Oblivion is thin and temporary, as one might expect. I have smelled the sweet sulfur of the Deadlands, but only for fleeting moments of time.\r\n\r\nI have studied all there is to know of the Mysterium Xarxes. I have been to Dawnstar on countless occasions to observe its last remaining page. Yet the necessary piece has remained a mystery.\r\n\r\nAs I pray to Dagon for guidance and confer with his Dremora, I understand now that a Sigil Stone is simply not powerful enough on its own. Something stronger may be required to open the gate. But what kind of artifact could hold such power?\r\n\r\nI have dispatched the most loyal of my disciples to all corners of Tamriel to search for any artifact or source of power worthy of becoming the key to Oblivion. I must remain patient and trust Dagon's will.\r\n[pagebreak]\r\n\r\n<b>20th Sun's Height, 4E 201</b>\r\n\r\nI have received word from my scouts that a Great Welkynd Stone may be hidden within Rielle, an ancient Ayleid ruin. Could this be the source of power needed to open the gate? It very well may be. How delicious the irony - an object once used against Dagon becoming the very thing that unleashes his power back into the mortal realm.\r\n\r\nMy scouts are working diligently to uncover any further information they can. And as I continue to pray to Dagon for guidance, his voice says to me \"Patience, all shall be revealed in time.\"\r\n\r\n<b>2nd Last Seed, 4E 201</b>\r\n\r\nCurse the Vigil of Stendarr. They have blocked the Pale Pass through the Jerall Mountains, making access to Rielle an impossibility. We cannot risk exposing our plans. We must find another way.\r\n\r\nIf we cannot make our way into Cyrodiil by road, we will do so by force directly through the mountains. We have done it once to get to this sacred place, and we shall do it again. I have dispatched a team to begin excavation immediately.\r\n\r\n<b>14th Last Seed, 4E 201</b>\r\n\r\nFevered visions haunt my dreams once more, and as the time draws near I now understand what must be done.\r\n\r\nThe Dragonborn Prophecy foretells a chosen one will come forth, their blood and soul blessed by Akatosh himself. The Dovahkiin.\r\n\r\nThe Time Wound will open, and Alduin the World Eater shall also return.\r\n\r\nThough both are fragments of Akatosh's soul, these two will wage war against one another. And as children of Akatosh they will reap the vengeance of Mehrunes Dagon.\r\n\r\nBut pain and suffering nor death will satisfy. Only the ultimate betrayal will suffice...\r\n\r\nTo open the Oblivion Gate, a ritual of the highest order must be carefully designed. An artifact of untold power must be corrupted, a great sacrifice made, and above all, the Dragonborn must become the unwitting instrument of Dagon's will.\r\n\r\nI will become the sacrifice, the final step. And as the Dovahkiin takes my life with blade in one hand and Great Welkynd Stone in the other, they will complete the ritual and become the very key to opening the gate. \r\n\r\nThis ultimate betrayal will shatter the Liminal Barrier, opening the Oblivion Gate and giving Dagon a foothold into the mortal realm while he rebuilds his armies.\r\n\r\nIt is a divine plan beyond anything I could have comprehended. The world will be bathed in the fires of Oblivion, and the blood of mortals will be on the hands of Akatosh.\r\n\r\nNone can be made aware of this plan. It is too fragile, too perfect.\r\n\r\n<b>17th Last Seed, 4E 201</b>\r\n\r\nIt has begun. Alduin has returned. \r\n\r\nSkorvild has been missing for several days. After witnessing his brother being sacrificed, his spirit broke and he deserted the order, just as I planned.\r\n\r\nHe will seek out the Dragonborn for help. And once his role has been fulfilled, he will be slaughtered.\r\n\r\nThe Dragonborn in their arrogance will continue to be the embodiment of ambition, much to Dagon's pleasure. They will no doubt seek to obtain the Great Welkynd Stone. They will then return to me. And when they do, the final act of the ritual will begin.\r\n\r\nPriestess Enakain has been taken captive by the Vigil of Stendarr, but she too serves a greater purpose. Her spirit will not break, but she will lead the Vigil where they need to be to aid the Dragonborn. Where they will utterly fail, the Dovahkiin will succeed.\r\n\r\nTheir success will be short lived. The Sigil Stone has been destroyed, ensuring the gate will remain open. Moreover, two of Dagon's Dremora Valkynaz, Gatanas and Methats, are waiting in the Deadlands to lead the assault. They are the heralds of the coming siege, and through their works we will unleash a scourge of torment upon our Lord's enemies.\r\n\r\nThe dawn is breaking.\r\n</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\r\n<b>3. Jahresmitte, 4Ä 200</b>\r\n\r\nDie Stimme von Mehrunes Dagon durchdringt meine Träume. Zunächst war es nur ein Flüstern. Nun aber ist es ein regelrechtes Grollen in meinem Schädel. Die Saat von Zwietracht und Gewalt plagt dieses Land und der Boden ist getränkt mit dem Blut der Schlachten. \"Bald ist Tamriel reif für die Ernte, denn meine Rache steht bevor\", sagt die Stimme zu mir.\r\n\r\nIch muss seiner Stimme folgen. Was muss ich tun, mein Fürst?\r\n\r\n<b>12. Jahresmitte, 4Ä 200</b>\r\n\r\nIch hatte unzählige Stunden, unzählige Tage im Gebet zu Dagon verbracht und nichts gehört. Schließlich ruhte ich und hatte einen weiteren Traum. Einen Traum von Feuer und Rauch. Hitze über Hitze. Ich stieg hinab in eine Höhle, immer tiefer und tiefer. In der Hitze begann meine Haut zu kochen und Blasen zu werfen.\r\n\r\nAber ich ging weiter, immer tiefer hinab. Feuer und Rauch, Hitze und Stein. Und dann sah ich ihn. Den Schlund des Dagon. Ein Tor ins Reich des Vergessens.\r\n\r\nMit blendendem Gleißen durchfuhren mich Visionen von Akatosh, Visionen von Drachen. Was hatte das alles zu bedeuten?\r\n\r\nIch erwachte schweißgebadet und mit dem tiefen Gefühl einer Bestimmung. Ich fühlte, wie mich etwas gen Osten zog. Ich muss dem Ruf folgen.\r\n\r\n<b>15. Sonnenhöhe, 4Ä 200</b>\r\n\r\nDagons Stimme führte mich zu einer Höhle, tief im Velothigebirge. Einst versammelten sich hier seine Jünger. Ich fühle ihre Anwesenheit. Ich fühle seine Macht.\r\n\r\nHier liegt ein Tor ins Reich des Vergessens begraben. Ich kann es fühlen.\r\n\r\nEs zu erreichen, ist mein Schicksal. Ich werde Tag und Nacht mit der Spitzhacke in der Hand verbringen, bis es aus seinem steinernen Gefängnis befreit ist.\r\n[pagebreak]\r\n\r\n<b>6. Herdfeuer, 4Ä 200</b>\r\n\r\nSeit beinahe zwei Monaten habe ich mich nun gequält, habe mich tiefer und tiefer gegraben und nur ab und an innegehalten, um mich kurz auszuruhen. Stein um Stein, Stück um Stück näherte ich mich meinem Schicksal. Näherte ich mich den Feuern von Oblivion.\r\n\r\nAndere haben ebenfalls den Ruf von Dagon vernommen und ihren Weg hierher gefunden, zu mir, zu unserem Fürsten. Wir sind die Hohepriester der neuen Ordnung, die Auserwählten, die im Einklang mit seinem Willen stehen.\r\n\r\nAls wir tiefer kamen, legten wir die Überreste eines alten Tempels der Mythischen Morgenröte frei wie Diamanten aus dem Fels.\r\n\r\nPriester Vitus fand als Erster etwas. Meine Freude hielt allerdings nicht lange an, als ich sah, dass es wie alle anderen Tore auch zerstört war. Dennoch konnte ich seine Macht auf meiner Haut brennen fühlen. Viele andere Stücke wie dieses liegen über ganz Himmelsrand verstreut. Tief vergraben. Verloren in der Zeit. Wir werden sie finden. Wir werden das Mauls des Reichs des Vergessens wieder öffnen.\r\n[pagebreak]\r\n\r\n<b>4. Morgenstern, 4Ä 201</b>\r\n\r\nErneut umwölken Visionen von Drachen meine Träume. Bilder von Martin Septim und Akatosh, die mein Blut vor Zorn und dem Durst nach Rache kochen lassen. Schwarze Flügel, die sich unter einem roten Himmel ausbreiten.\r\n\r\nNoch verstehe ich die Bedeutung dieser Visionen nicht, aber Dagons Hass ist wie ein glühendes Stück Kohle in meiner Magengrube, das mich stets vorantreibt.\r\n[pagebreak]\r\n\r\n<b>21. Zweite Saat, 4Ä 201</b>\r\n\r\nIn den vergangenen Monaten haben wir in den entlegensten Winkeln von Himmelsrand gesucht und genügend Überreste der verschiedenen zerstörten Tore aufgespürt, um eines wieder zu vervollständigen. Seine bloße Gegenwart weckt Macht, Ehrfurcht und Ergebenheit.\r\n\r\nEin Pakt muss nun geschmiedet werden. Dagon fordert, dass jeder von uns ein persönliches Opfer bringt, ein Blutopfer, um unsere Hingabe unter Beweis zu stellen. Mit jeder Seele, die in die Feuer von Oblivion geworfen wird, wächst seine Macht.\r\n\r\nDie Schwellenbarriere ist hier schwach, und Aufruhr und Zwietracht, die im Lande brodeln, schwächen sie nur noch mehr. Ich muss jetzt einen Dremora-Fürsten beschwören, um an einen Siegelstein zu gelangen, und einen Weg zur Öffnung des Tors finden.\r\n\r\n<b>10. Sonnenhöhe, 4Ä 201</b>\r\n\r\nIch habe die Rituale, wie sie in \"Dimensionsbrücken\" vorgeschrieben werden, durchgeführt und erfolgreich die Barriere zum Reich des Vergessens durchdrungen. Aber meine Versuche, das Tor als ein Vehikel für den schwellenübergreifenden Einklang zu nutzen, waren erfolglos. Wie zu erwarten ist das Tor ins Reich des Vergessens schwach und unstet. Ich schmeckte den süßen Schwefel der Totenländer, aber nur für einige flüchtige Momente.\r\n\r\nIch habe alles studiert, was man über das Mysterium Xarxes wissen muss. Ich war unzählige Male in Dämmerstern, um seine letzte existierende Seite zu betrachten. Und doch bleibt das notwendige Objekt ein Geheimnis.\r\n\r\nWährend ich um Dagons Führung bete und mich mit seinem Dremora beratschlage, gelange ich zu der Erkenntnis, dass ein Siegelstein für sich allein einfach nicht mächtig genug ist. Vielleicht braucht es etwas Stärkeres, um das Tor zu öffnen. Aber welche Art von Artefakt birgt eine solche Macht?\r\n\r\nIch habe meine treuesten Jünger in alle Ecken Tamriels entsandt, damit sie nach irgendeinem Artefakt oder einer Machtquelle suchen, die würdig ist, zum Schlüssel ins Reich des Vergessens zu werden. Ich muss geduldig bleiben und Dagons Willen vertrauen.\r\n[pagebreak]\r\n\r\n<b>20. Sonnenhöhe, 4Ä 201</b>\r\n\r\nIch habe von meinen Kundschaftern erfahren, dass ein großer Welkynd-Stein in Rielle verborgen sein könnte, einer uralten Ayleïdenruine. Könnte er die Quelle der Kraft sein, die ich brauche, um das Tor zu öffnen? Er könnte es wohl sein. Wie köstlich diese Ironie - ein Objekt, das gegen Dagon verwendet wurde, wird nun zu etwas, das seine Macht im Reich der Sterblichen wieder entfesselt.\r\n\r\nMeine Kundschafter arbeiten eifrig daran, so viel weitere Informationen wie möglich an den Tag zu bringen. Und während ich weiter um Dagons Führung bete, sagt seine Stimme zu mir: \"Hab Geduld, es wird alles zur rechten Zeit enthüllt werden.\"\r\n\r\n<b>2. Letzte Saat, 4Ä 201</b>\r\n\r\nVerdammt seien die Wächter von Stendarr. Sie haben den Fahlen Pass durch die Jerallberge blockiert und machen so den Zugang zu Rielle unmöglich. Wir können es nicht riskieren, unsere Pläne zu offenbaren. Wir müssen einen anderen Weg finden.\r\n\r\nWenn wir nicht über die Straßen nach Cyrodiil hineingelangen, dann werden wir direkt durch die Berge gehen. Wir haben das schon mal getan, um zu diesem heiligen Ort zu gelangen, und wir werden es wieder tun. Ich habe eine Truppe losgeschickt, die sofort mit dem Graben beginnen soll.\r\n\r\n<b>14. Letzte Saat, 4Ä 201</b>\r\n\r\nErneut suchen fiebrige Visionen meine Träume heim, und wo sich nun der Zeitpunkt nähert, verstehe ich, was getan werden muss.\r\n\r\nDie Drachenblut-Prophezeiung sagt, dass sich jemand Auserwähltes zeigen wird, dessen Blut und Seele von Akatosh selbst gesegnet ist. Der Dovahkiin.\r\n\r\nDie Zeitwunde wird sich öffnen, und auch Alduin der Weltenfresser wird zurückkehren.\r\n\r\nAuch wenn sie beide Fragmente von Akatoshs Seele sind, so werden sie gegeneinander Krieg führen. Und als Kinder von Akatosh werden sie die Rache von Mehrunes Dagon ernten.\r\n\r\nAber weder Schmerz und Leid noch Tod wird Befriedigung verschaffen. Nur der ultimative Verrat wird genügen ...\r\n\r\nUm das Tor ins Reich des Vergessens zu öffnen, ist ein Ritual höchster Ordnung vonnöten. Es muss ein Artefakt von unvorstellbarer Macht verdorben und ein gewaltiges Opfer geleistet werden, und über all dem muss sich das Drachenblut in ein ahnungsloses Werkzeug von Dagons Willen verwandeln.\r\n\r\nIch werde das Opfer sein, der letzte Schritt. Und während der Dovahkiin mein Leben nimmt, mit der Klinge in der einen und dem großen Welkynd-Stein in der anderen Hand, wird er das Ritual vollenden und zum Schlüssel zur Öffnung des Tors werden.\r\n\r\nDieser höchste Verrat wird die Schwellenbarriere zerstören, das Tor ins Reich des Vergessens öffnen und Dagon im Reich der Sterblichen Fuß fassen lassen, bis er seine Armeen wiederaufgebaut hat.\r\n\r\nDies ist ein göttlicher Plan jenseits von allem, was ich hätte ersinnen können. Die Welt wird von den Feuern des Vergessens überflutet werden, und das Blut der Sterblichen wird an den Händen von Akatosh kleben.\r\n\r\nNiemand darf je von diesem Plan erfahren. Er ist zu zerbrechlich, zu perfekt.\r\n\r\n<b>17. Letzte Saat, 4Ä 201</b>\r\n\r\nEs hat begonnen. Alduin ist zurückgekehrt.\r\n\r\nSkorvild wird seit einigen Tagen vermisst. Nachdem er mit ansehen musste, wie sein Bruder geopfert wurde, brach sein Geist und er kehrte dem Orden den Rücken - genau wie ich es geplant hatte.\r\n\r\nEr wird nach Hilfe suchen, und zwar beim Drachenblut. Und sobald er seine Rolle gespielt hat, wird er geschlachtet werden.\r\n\r\nDas Drachenblut wird mit all seiner Arroganz weiterhin den Ehrgeiz verkörpern, ganz zur Freude Dagons. Es wird ohne Zweifel versuchen, an den großen Welkynd-Stein zu gelangen. Es wird ihn mir zurückbringen. Und wenn es so weit ist, wird der letzte Akt des Rituals seinen Anfang nehmen.\r\n\r\nPriesterin Enakain wurde von den Wächtern von Stendarr gefangen genommen, aber sie dient einem höheren Ziel. Ihr Geist wird nicht brechen, sondern sie wird die Wächter dorthin führen, wo sie zur Unterstützung des Drachenbluts nötig sind. Wo sie vollkommen versagen, wird der Dovahkiin Erfolg haben.\r\n\r\nDoch dieser wird nur von kurzer Dauer sein. Der Siegelstein wurde zerstört, also wird das Tor offen bleiben. Zudem warten zwei von Dagons Dremora-Valkynaz - Gatanas und Methats - in den Totenländern, um den Angriff anzuführen. Sie sind die Verkünder der kommenden Belagerung, und durch ihr Werk wird eine Geißel der Qual gegen die Feinde unseres Fürsten entfesselt.\r\n\r\nDie Dämmerung bricht an.\r\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AtrFrgConjureLichRecipeNote",
+        "form_id": "[05147D94]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<p align='center'><font face='$HandwrittenFont'><font size='18'>\r\n\r\n\r\n\r\nGreat Welkynd Stone\r\n\r\nVoid Salts\r\n\r\nRuined Book\r\n\r\nBone Meal\r\n</font></p>\r\n",
+        "string": "<p align='center'><font face='$HandwrittenFont'><font size='18'>\r\n\r\n\r\n\r\nGroßer Welkynd-Stein\r\n\r\nSalze der Leere\r\n\r\nBeschädigtes Buch\r\n\r\nKnochenmehl\r\n</font></p>\r\n"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note05_VigilantMythicDawnLocation",
+        "form_id": "[0506BFC3]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\r\n<b>14th Sun's Height, 4E 201</b>\r\n\r\nOur spies in the cities have reported hearing whispers of the Mythic Dawn among the populace. Though the last of those abominations were slain hundreds of years ago, we must take all reports seriously, and stay alert.\r\n\r\n<b>25th Sun's Height, 4E 201</b>\r\n\r\nWord from our agents in Cyrodiil say that a band of mysterious travelers descended upon Bruma, where they asked a well-known researcher many questions about the Ayleids. The ruins of Rielle specifically. They also asked about Great Welkynd Stones, which haven't been seen for hundreds of years.\r\n\r\nI'm sending a few scouts to the Pale Pass to keep an eye on things. If there is darkness at play, the light of the Vigil will find it.\r\n\r\n<b>2nd Last Seed, 4E 201</b>\r\n\r\nThe same group of questionable travelers was seen traversing the Pale Pass into Bruma again. This time under the cover of night. They were followed but were lost in the shadow. Our agents set up a blockade to stop and question all who passed, but the group was not seen traveling through there again.\r\n\r\nIf they did return to Skyrim, they would have had to do so through the Jerall Mountains by moonlight. Stendarr have mercy upon anyone lost among those jagged slopes in the darkness.\r\n\r\n<b>3rd Last Seed, 4E 201</b>\r\n\r\nThe researcher in Bruma has gone missing, and I must assume it was at the hand of these mysterious travelers. If the rumors of the Mythic Dawn are true, Stendarr help us if they get their hands on a Great Welkynd Stone. What could they possibly need such a powerful artifact for?\r\n\r\nI have dispatched agents and spies to every corner of Skyrim to inquire among the townsfolk and track anyone who is remotely suspicious.\r\n\r\n<b>10th Last Seed, 4E 201</b>\r\n\r\nWe have begun following a man named Skorvild. We believe he may be a Daedra worshipper, and possibly a member of the Mythic Dawn. His brother was recently reported missing, along with numerous others in the same time frame.\r\n\r\nWe will follow his movements closely.\r\n\r\n<b>16th Last Seed, 4E 201</b>\r\n\r\nAfter several weeks of observing various suspects, we decided to capture an individual believed to be a high ranking member of the Mythic Dawn. She was clothed plainly, and kept the guise of a merchant by day.\r\n\r\nWe searched her quarters and found red robes bearing the sun symbol of Mehrunes Dagon. We also found a journal which claims than an Oblivion Gate has been reforged, and attempts to open it are underway.\r\n\r\nI have decided to call for reinforcements. If what I read is true, the Vigil of Stendarr alone may not be enough to stop what is unfolding.\r\n\r\nThis Mythic Dawn priest would not yield any information, and died during interrogation. It was a slow death, but the Vigil has no mercy for Daedra worshippers.\r\n\r\nCan the power of a Great Welkynd Stone be corrupted and used for their twisted purpose? This cannot happen. We must find this Oblivion Gate.\r\n\r\nWithin the journal was a torn page, containing the following:\r\n\r\n\"In the shade of Velothi, where rivers run black\r\nShor's Stone at our feet, Whiteshore at our back\r\n\r\nWindhelm on our shoulders, beyond the fair night\r\nBefore the dawn rises, red scars bleed the light\"\r\n\r\nThis could be a clue as to their location. I will send someone to investigate while I prepare a small regiment and determine our next move.\r\n\r\n<b>17th Last Seed, 4E 201</b>\r\n\r\nThree of my agents who were observing suspects went missing overnight. I believe they have been captured by the Mythic Dawn. Stendarr have mercy upon them. We should have been more careful when capturing one of their priests, but we needed to act quickly.\r\n\r\nI have assembled a group to descend upon Rielle. We must act now. We may be able to ambush the daedra worshipers.\r\n\r\nLastly, one of my scouts believes the riddle does indeed point to the location where the Mythic Dawn are hiding. We need to approach with caution, lest we be outnumbered.\r\n\r\nBlessings of Stendarr upon us.\r\n</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\r\n<b>14. Sonnenhöhe, 4Ä 201</b>\r\n\r\nUnsere Spione in der Stadt berichten von heimlichem Gerede der Leute über die Mythische Morgenröte. Auch wenn die letzten Exemplare dieser Abscheulichkeit vor Hunderten von Jahren vernichtet wurden, müssen wir diese Berichte doch ernst nehmen und wachsam bleiben.\r\n\r\n<b>25. Sonnenhöhe, 4Ä 201</b>\r\n\r\nUnsere Agenten in Cyrodiil berichten, dass eine Gruppe geheimnisvoller Reisender nach Bruma gekommen ist und dort einem wohlbekannten Forscher viele Fragen über die Ayleïden gestellt hat. Vor allem über die Ruinen von Rielle. Die Reisenden stellten auch Fragen zu großen Welkynd-Steinen, von denen man seit Jahrhunderten keinen mehr zu Gesicht bekommen hat.\r\n\r\nIch schicke ein paar Kundschafter zum Fahlen Pass, um die Sache im Auge zu behalten. Wenn hier die Dunkelheit im Spiel ist, wird das Licht der Wächter sie finden.\r\n\r\n<b>2. Letzte Saat, 4Ä 201</b>\r\n\r\nDieselbe Gruppe fragwürdiger Reisender hat erneut den Fahlen Pass Richtung Bruma passiert. Diesmal im Schutze der Nacht. Man verfolgte sie, aber die Spuren verloren sich im Schatten. Unsere Agenten errichteten eine Sperre, um jeden Vorbeikommenden anzuhalten und zu befragen. Aber die Gruppe wurde kein weiteres Mal dort gesichtet.\r\n\r\nWenn die Reisenden nach Himmelsrand zurückgekehrt sind, dann muss es bei Mondschein und durch die Jerallberge geschehen sein. Stendarr sei jedem gnädig, der sich des Nachts in den zerklüfteten Hängen verliert.\r\n\r\n<b>3. Letzte Saat, 4Ä 201</b>\r\n\r\nDer Forscher in Bruma ist verschwunden, und ich muss annehmen, dass diese geheimnisvollen Reisenden dafür verantwortlich sind. Wenn die Gerüchte über die Mythische Morgenröte stimmen, dann stehe uns Stendarr bei, falls sie einen großen Welkynd-Stein in ihre Hände bekommen. Wofür benötigen sie ein so mächtiges Artefakt nur?\r\n\r\nIch habe Spione und Agenten in jeden Winkel von Himmelsrand geschickt, damit sie unter den Leuten Erkundigungen einholen und jedem hinterherspüren, der auch nur annähernd verdächtig ist.\r\n\r\n<b>10. Letzte Saat, 4Ä 201</b>\r\n\r\nWir folgen nun einem Mann namens Skorvild. Wir glauben, er könnte ein Daedra-Jünger sein und womöglich ein Mitglied der Mythischen Morgenröte. Sein Bruder wird seit Kurzem vermisst, neben einigen anderen, die ungefähr zur selben Zeit verschwanden.\r\n\r\nWir werden ihm dicht auf den Fersen bleiben.\r\n\r\n<b>16. Letzte Saat, 4Ä 201</b>\r\n\r\nNach einigen Wochen der Beobachtung diverser Verdächtiger beschlossen wir, eine Person gefangen zu nehmen, von der wir glauben, dass sie ein hochrangiges Mitglied der Mythischen Morgenröte ist. Sie hatte sich unauffällig gekleidet und gab sich tagsüber als Händlerin aus.\r\n\r\nWir durchsuchten ihr Quartier und fanden eine rote Robe mit dem Sonnensymbol von Mehrunes Dagon. Zudem entdeckten wir ein Tagebuch, in dem davon die Rede ist, dass ein Tor ins Reich des Vergessens erneuert wurde und man den Versuch unternehme, es zu öffnen.\r\n\r\nIch habe beschlossen, um Verstärkung zu ersuchen. Wenn das Geschriebene wahr ist, dürften die Wächter von Stendarr allein nicht genügen, um aufzuhalten, was sich da zusammenbraut.\r\n\r\nDie Priesterin der Mythischen Morgenröte gab keinerlei Wissen preis und kam bei der Vernehmung zu Tode. Es war ein langsamer Tod, aber die Wächter kennen bei Jüngern der Daedra keine Gnade.\r\n\r\nKann die Macht eines großen Welkynd-Steins verdorben und ihn in unredlicher Absicht verwendet werden? Das darf nicht geschehen. Wir müssen dieses Tor ins Reich des Vergessens finden.\r\n\r\nIm Tagebuch befand sich eine zerrissene Seite mit folgenden Worten:\r\n\r\n\"Im Schatten Velothis, wo Ströme schwarz sind wie Kohlen\r\n\r\nPale in unserem Rücken, Shors Stein zu den Sohlen\r\n\r\nWindhelm auf uns'ren Schultern, jenseits lauer Nacht\r\n\r\nVorm Dämmern blutet aus roten Narben die helle Pracht\"\r\n\r\nDies könnte ein Hinweis auf ihren Standort sein. Ich entsende jemanden, um das zu untersuchen, während ich eine kleine Truppe versammle und über den nächsten Schritt entscheide.\r\n\r\n<b>17. Letzte Saat, 4Ä 201</b>\r\n\r\nDrei meiner Agenten, die Verdächtige observierten, werden seit letzter Nacht vermisst. Ich glaube, sie wurden von der Mythischen Morgenröte gefangen genommen. Stendarr sei ihnen gnädig. Wir hätten bei der Festnahme einer ihrer Priesterinnen vorsichtiger sein sollen, aber wir hatten schnell handeln müssen.\r\n\r\nIch habe eine Gruppe zusammengestellt, die sich nach Rielle aufmachen soll. Wir müssen jetzt zuschlagen. Vielleicht können wir den Daedraanhängern auflauern.\r\n\r\nEiner meiner Kundschafter glaubt, dass das Rätsel tatsächlich auf den Ort hinweist, wo sich die Mythische Morgenröte verbirgt. Wir müssen uns vorsichtig nähern, um nicht in Unterzahl zu geraten.\r\n\r\nStendarr segne uns.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note08_VigilantSecuretheGate",
+        "form_id": "[0518F232]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Vigil's Orders",
+        "string": "Befehle des Wächters"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Note07_MythicDawnJournalShardsJanus",
+        "form_id": "[050762B6]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\r\n<b>15th Last Seed, 4E 201</b>\r\n\r\nI was called upon to assist with the Rielle expedition, and have been studying urgently and without rest. I was entrusted with a page from an ancient Ayleid text, retrieved from a researcher in Bruma. \r\n\r\nMy Ayleidoon is not very good, but I was able to understand something about elemental shards, and \"sleeping guardians\" within the ruins. None of this would be a problem if Vonos had granted me more time, but he and our Lord are impatient. But I will make do. My research is what matters.\r\n\r\nThe Ayleids believed the four elements to be Air, Water, Earth, and Light. From what I understand, shards representing these four elements may serve as \"keys\" to certain hidden chambers. It is fascinating to ponder how many Great Welkynd Stones may be hidden among ruins thought to be barren.\r\n\r\nIf there is a hidden chamber within Rielle, this might be how they are opened. But how? Where? At the cost of their lives, many of our disciples have searched nearly every corner of the ruin, but have yet to discover anything. I will study the texts further.\r\n\t\r\n<b>17th Last Seed, 4E 201</b>\r\n\r\nVonos has issued urgent orders to descend upon Rielle with the last of our expedition team to try and find the Great Welkynd Stone. I am to go with them and lead the team. The Vigil of Stendarr are assumed to be on our trail so we must act quickly.\r\n\r\nI must not allow this latest wrinkle to deter my research. It is almost within my grasp.\r\n\r\n<b>17th Last Seed, 4E 201</b>\r\n\r\nWoe to those who entered before me and met their fate. I imagined not the horrors that awaited me. \r\n\r\nOur persistence in this expedition has awoken Ayleid Wights - guardians who have lied in wait for untold centuries, sealed in their sarcophagi, awakening to protect the ancient powers within.\r\n\r\nAnd yet, all is not lost. I found four Welkynd Stone holders in the Rielle Crypt, each colored gold and positioned to the north, south, east, and west. The directions correspond to each of the four elements.\r\n\r\nNorth, upward to the Air (Wel) in the sky.\r\n\r\nSouth, for the Earth (Sercen) under our feet.\r\n\r\nEast, for the Light (Alata) of the rising sun.\r\n\r\nWest, for when the Water (Nen) devours it.\r\n\r\nA diagram in the Ayleid text matches this pattern. If these shards are retrieved and placed in the correct holders, I believe the secret chamber containing the Great Welkynd Stone will make itself known.\r\n\r\nMy team has been slain, and I have been injured. A pity, as I have heard rumors of an area underneath the college where this stone could have been put to better use. I just need to hold out a little longer...</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\r\n<b>15. Letzte Saat, 4Ä 201</b>\r\n\r\nIch wurde gerufen, um bei der Rielle-Expedition zu helfen, und widmete mich ohne Pause dringlichen Studien. Mir wurde eine Seite mit einem alten ayleïdischen Text anvertraut, den man einem Forscher in Bruma abgenommen hatte.\r\n\r\nMeine Kenntnisse der ayleïdischen Sprache sind nicht sonderlich gut, aber ich konnte etwas über Elementarsplitter verstehen und über \"schlafende Wächter\" in den Ruinen. Was alles kein Problem wäre, wenn Vonos mir mehr Zeit gegeben hätte. Aber er und unser Fürst sind ungeduldig. Ich werde das schon irgendwie schaffen. Was zählt, ist meine Forschung.\r\n\r\nDie Ayleïden glauben, dass es sich bei den vier Elementen um Luft, Wasser, Erde und Licht handelt. Wie ich das verstehe, dienen die Splitter, die diese Elemente darstellen, als Schlüssel zu einer geheimen Kammer. Die Vorstellung ist faszinierend, wie viele große Welkynd-Steine in Ruinen verborgen sein könnten, die man eigentlich als unergiebig betrachtet hatte.\r\n\r\nWenn es in Rielle eine verborgene Kammer gibt, dann mag dies der Weg sein, sie zu öffnen. Aber wie? Und wo? Viele unserer Jünger haben die Suche in sämtlichen Winkeln der Ruine mit dem Leben bezahlt, doch entdeckt haben sie immer noch nichts. Ich werde weiter die Texte studieren.\r\n\t\r\n<b>17. Letzte Saat, 4Ä 201</b>\r\n\r\nVonos hat den dringenden Befehl gegeben, mit einem letzten Expeditionstrupp nach Rielle hinabzusteigen und zu versuchen, den großen Welkynd-Stein zu finden. Ich werde mit ihnen gehen und sie leiten. Die Wächter von Stendarr sind uns wohl auf der Spur, wir müssen also schnell handeln.\r\n\r\nDas darf meine Forschung nicht behindern. Ich bin so nah dran.\r\n\r\n<b>17. Letzte Saat, Ä4 201</b>\r\n\r\nGnade denen, die zuvor hierhergekommen sind und die ihr Schicksal ereilt hat. Ich hätte mir nicht ausmalen können, welche Schrecken mich hier erwarten.\r\n\r\nUnsere Beharrlichkeit auf dieser Expedition hat Ayleïdengeister geweckt - Wächter, die zahllose Jahrhunderte in Wartestellung verharrt hatten, versiegelt in ihren Sarkophagen, und nun erweckt, um die uralten Mächte hier zu beschützen.\r\n\r\nDoch noch ist nicht alles verloren. Ich habe in der Krypta von Rielle vier Halterungen für Welkynd-Steine gefunden. Sie sind allesamt golden und in Richtung Norden, Süden, Osten und Westen positioniert. Die Richtungen entsprechen den vier Elementen.\r\n\r\nNorden, hoch zur Luft (Wel) im Himmel.\r\n\r\nSüden, für die Erde (Sercen) unter unseren Füßen.\r\n\r\nOsten, für das Licht (Alata) der aufgehenden Sonne.\r\n\r\nWesten, wo das Wasser (Nen) sie wieder verschlingt.\r\n\r\nEine Skizze in dem Ayleïdentext passt zu diesem Muster. Wenn diese Splitter gefunden und in die korrekten Halterungen eingesetzt werden, dann wird sich sicherlich die geheime Kammer mit dem großen Welkynd-Stein bemerkbar machen.\r\n\r\nMeine Leute wurden getötet und ich bin verwundet. Gerüchten zufolge soll es unter der Akademie einen Ort geben, wo der Stein eine bessere Verwendung findet. Ich muss nur noch etwas länger aushalten, dann ...</font>"
+    },
+    {
+        "editor_id": "ccBGS_ARChest02LootSpecial",
+        "form_id": "[0100315C]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Ayleid Reliquary",
+        "string": "Ayleid Reliquary"
+    },
+    {
+        "editor_id": "ccBGS_ARChest02Loot",
+        "form_id": "[0100315B]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Ayleid Cask",
+        "string": "Schlüssel von Rielle"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ARUrn01Loot",
+        "form_id": "[05227FC0]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Ayleid Urn",
+        "string": "Ayleïdenurne"
+    },
+    {
+        "editor_id": "ccBGS_ARChest01Loot",
+        "form_id": "[01003159]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Ayleid Cask",
+        "string": "Geist"
+    },
+    {
+        "editor_id": "ccbgssse067_ContainerFleshyPod01",
+        "form_id": "[0504D783]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Fleshy Pod",
+        "string": "Fleischiger Behälter"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ContainerPunished01",
+        "form_id": "[0504D785]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "The Punished",
+        "string": "Die Bestraften"
+    },
+    {
+        "editor_id": "ccBGSSSE067_TreasAyleidUrn02",
+        "form_id": "[051CC50C]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Urn",
+        "string": "Urne"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ContainerPunished02",
+        "form_id": "[05071150]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "The Punished",
+        "string": "Die Bestraften"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ARUrn01LootSpecial",
+        "form_id": "[05227FBC]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Ayleid Urn",
+        "string": "Ayleïdenurne"
+    },
+    {
+        "editor_id": "ccBGSSSE067_TreasAyleidUrn01",
+        "form_id": "[051CC50B]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Urn",
+        "string": "Urne"
+    },
+    {
+        "editor_id": "ccbgssse067_ContainerFleshyPod02",
+        "form_id": "[0504D784]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Fleshy Pod",
+        "string": "Fleischiger Behälter"
+    },
+    {
+        "editor_id": "ccBGSSSE067_OblivionGateDoor",
+        "form_id": "[05000BAF]",
+        "index": null,
+        "type": "DOOR FULL",
+        "original": "Oblivion Gate",
+        "string": "Tor ins Reich des Vergessens"
+    },
+    {
+        "editor_id": "ccBGSSSE067_IngredientSpiddalStick",
+        "form_id": "[05024C15]",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Spiddal Stick",
+        "string": "Spiddal-Stock"
+    },
+    {
+        "editor_id": "ccBGSSSE067_IngredientBloodgrass",
+        "form_id": "[05024C13]",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Bloodgrass",
+        "string": "Blutgras"
+    },
+    {
+        "editor_id": "ccBGSSSE067_IngredientHarrada",
+        "form_id": "[05024C11]",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Harrada",
+        "string": "Harrada"
+    },
+    {
+        "editor_id": "ccBGSSSE067_RielleElementShard01Earth",
+        "form_id": "[050762B7]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Elemental Shard - Sercen",
+        "string": "Elementarsplitter - Sercen"
+    },
+    {
+        "editor_id": "ccBGSSSE067_RielleElementShard04Light",
+        "form_id": "[050762BA]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Elemental Shard - Alata",
+        "string": "Elementarsplitter - Alata"
+    },
+    {
+        "editor_id": "ccBGSSSE067_RielleElementShard03Air",
+        "form_id": "[050762B9]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Elemental Shard - Wel",
+        "string": "Elementarsplitter - Wel"
+    },
+    {
+        "editor_id": "ccBGSSSE067_RielleElementShard02Water",
+        "form_id": "[050762B8]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Elemental Shard - Nen",
+        "string": "Elementarsplitter - Nen"
+    },
+    {
+        "editor_id": "ccBGSSSE067_WelkyndStone",
+        "form_id": "[05000809]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Welkynd Stone",
+        "string": "Welkynd-Stein"
+    },
+    {
+        "editor_id": "ccBGSSSE067_SigilStoneWeak",
+        "form_id": "[0506C047]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Weakaned Sigil Stone",
+        "string": "Geschwächter Siegelstein"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ARGreatWelkyndStoneItem01",
+        "form_id": "[050BDB37]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Great Welkynd Stone",
+        "string": "Großer Welkynd-Stein"
+    },
+    {
+        "editor_id": "ccBGSSSE067_TreeSpiddalStick01",
+        "form_id": "[05033F34]",
+        "index": null,
+        "type": "TREE FULL",
+        "original": "Spiddal Stick",
+        "string": "Spiddal-Stock"
+    },
+    {
+        "editor_id": "ccBGSSSE067_FloraSpiddalStickDead01",
+        "form_id": "[05033F2D]",
+        "index": null,
+        "type": "FLOR RNAM",
+        "original": "Harvest",
+        "string": "Sammeln"
+    },
+    {
+        "editor_id": "ccBGSSSE067_FloraBloodGrass01",
+        "form_id": "[05033F2B]",
+        "index": null,
+        "type": "FLOR RNAM",
+        "original": "Harvest",
+        "string": "Sammeln"
+    },
+    {
+        "editor_id": "ccBGSSSE067_FloraBloodGrass02",
+        "form_id": "[05033F2C]",
+        "index": null,
+        "type": "FLOR RNAM",
+        "original": "Harvest",
+        "string": "Sammeln"
+    },
+    {
+        "editor_id": "ccBGSSSE067_FloraBloodGrass02",
+        "form_id": "[05033F2C]",
+        "index": null,
+        "type": "FLOR FULL",
+        "original": "Blood Grass",
+        "string": "Blutgras"
+    },
+    {
+        "editor_id": "ccBGSSSE067_FloraBloodGrass01",
+        "form_id": "[05033F2B]",
+        "index": null,
+        "type": "FLOR FULL",
+        "original": "Blood Grass",
+        "string": "Blutgras"
+    },
+    {
+        "editor_id": "ccBGSSSE067_FloraSpiddalStickDead01",
+        "form_id": "[05033F2D]",
+        "index": null,
+        "type": "FLOR FULL",
+        "original": "Spiddal Stick",
+        "string": "Spiddal-Stock"
+    },
+    {
+        "editor_id": "ccBGSSSE067_DaedricThrone01",
+        "form_id": "[050A94DD]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Daedric Throne",
+        "string": "Daedrischer Thron"
+    },
+    {
+        "editor_id": "ccBGSSSE067_InvisibleChairMarker",
+        "form_id": "[051EAF20]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Invisible Chair Marker NO TRANSLATE",
+        "string": "Invisible Chair Marker NO TRANSLATE"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AyleidBench01",
+        "form_id": "[05147D98]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Bench",
+        "string": "Bank"
+    },
+    {
+        "editor_id": "ccBGSSSE067_DaedricLongswordTorment",
+        "form_id": "[05000B5F]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Torment",
+        "string": "Qual"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AyleidLichStaff01",
+        "form_id": "[05147D9F]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Staff of Ehlno Ede",
+        "string": "Stab von Ehlno Ede"
+    },
+    {
+        "editor_id": "ccBGSSSE067_DaedricMaceScourge",
+        "form_id": "[05000B5E]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Scourge",
+        "string": "Geißel"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightAmbushMissile",
+        "form_id": "[05029D1E]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Wight",
+        "string": "Geist"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightMelee2H",
+        "form_id": "[05029D17]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Wight",
+        "string": "Geist"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightMissileHoldPosition256",
+        "form_id": "[05029D20]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Wight",
+        "string": "Geist"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlMythicDawnCultistExplorer",
+        "form_id": "[0506BFB8]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Mythic Dawn Explorer",
+        "string": "Erkunder der Mythischen Morgenröte"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightMelee2HLord",
+        "form_id": "[051B2CC8]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Wight Lord",
+        "string": "Geistgebieter"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightMissileHoldPosition256",
+        "form_id": "[05029D20]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Wight",
+        "string": "Geist"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlMythicDawnGuard",
+        "form_id": "[050856A4]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Mythic Dawn Guard",
+        "string": "Wache der Mythischen Morgenröte"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightAmbushMelee2HLord",
+        "form_id": "[051B2CC9]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Wight Lord",
+        "string": "Geistgebieter"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlMythicDawnPatrol",
+        "form_id": "[05000E57]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Guard",
+        "string": "Wache"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MythicDawnDeadArgonianM",
+        "form_id": "[050B8A18]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Mythic Dawn",
+        "string": "Mythische Morgenröte"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlDremoraBossAmbush01",
+        "form_id": "[050392F9]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Valkyn Gatanas",
+        "string": "Valkyn Gatanas"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlMythicDawnGuard",
+        "form_id": "[050856A4]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Mythic Dawn",
+        "string": "Mythische Morgenröte"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightAmbushMelee1H",
+        "form_id": "[05029D1D]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Wight",
+        "string": "Geist"
+    },
+    {
+        "editor_id": "ccBGSSSE067_DaedricHorseRunScene",
+        "form_id": "[05142C0F]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Daedric Horse",
+        "string": "Daedrisches Pferd"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightMelee1HLord",
+        "form_id": "[051B2CC6]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Wight Lord",
+        "string": "Geistgebieter"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlWightMeleeAllMale",
+        "form_id": "[050B8A16]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Wight",
+        "string": "Geist"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightAmbushMissileStay",
+        "form_id": "[051C215E]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Wight",
+        "string": "Geist"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AyleidLichBossAmbush",
+        "form_id": "[05000B73]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Norion",
+        "string": "Norion"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightAmbushMelee2H",
+        "form_id": "[05057A40]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Wight",
+        "string": "Geist"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlMythicDawnCultistMelee",
+        "form_id": "[05000DC3]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Cultist",
+        "string": "Kultist"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlDremoraBossAmbush01",
+        "form_id": "[050392F9]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Gatanas",
+        "string": "Gatanas"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightAmbushMelee2H",
+        "form_id": "[05057A40]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Wight",
+        "string": "Wight"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MythicDawnReformedSkorvild",
+        "form_id": "[05000B67]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Skorvild",
+        "string": "Skorvild"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlMythicDawnCultistMagic",
+        "form_id": "[05000B6A]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Cultist",
+        "string": "Kultist"
+    },
+    {
+        "editor_id": "ccBGSSSE067_SummonEncDremoraLordScourge",
+        "form_id": "[0516B7CA]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Dremora Lord",
+        "string": "Dremora-Fürst"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightMelee2HLord",
+        "form_id": "[051B2CC8]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Wight",
+        "string": "Geist"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightMelee2H",
+        "form_id": "[05029D17]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Wight",
+        "string": "Geist"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlDremoraBossAmbush02",
+        "form_id": "[050392FB]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Valkyn Methats",
+        "string": "Valkyn Methats"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlWightMissileAllMale",
+        "form_id": "[05175AD7]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Wight",
+        "string": "Geist"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightMelee1HLord",
+        "form_id": "[051B2CC6]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Wight",
+        "string": "Geist"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlMythicDawnCultistExplorer",
+        "form_id": "[0506BFB8]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Mythic Dawn",
+        "string": "Mythische Morgenröte"
+    },
+    {
+        "editor_id": "ccBGSSSE067_OrcAdventurer",
+        "form_id": "[05000826]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Orc Adventurer",
+        "string": "Orkabenteurer"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightMelee1H",
+        "form_id": "[05029D21]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Wight",
+        "string": "Geist"
+    },
+    {
+        "editor_id": "ccBGSSSE067_SacrifiedNPCDeadSune",
+        "form_id": "[0508AAE4]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Sune",
+        "string": "Sune"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightAmbushWarlock",
+        "form_id": "[05029D1C]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Wight",
+        "string": "Geist"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightAmbushMissile",
+        "form_id": "[05029D1E]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Wight",
+        "string": "Geist"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightMelee1H",
+        "form_id": "[05029D21]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Wight",
+        "string": "Geist"
+    },
+    {
+        "editor_id": "ccBGSSSE067_DaedricHorseMount",
+        "form_id": "[05000B4B]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Daedric Horse",
+        "string": "Daedrisches Pferd"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MythicDawnJanus",
+        "form_id": "[050B8A14]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Janus",
+        "string": "Janus"
+    },
+    {
+        "editor_id": "ccBGSSSE067_DaedricHorseEnemyAmbush",
+        "form_id": "[050FB4F8]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Daedric Horse",
+        "string": "Daedrisches Pferd"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlMythicDawnPatrol",
+        "form_id": "[05000E57]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Mythic Dawn Guard",
+        "string": "Wache der Mythischen Morgenröte"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlVigilantEnforcer",
+        "form_id": "[0506BFBF]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Vigil Enforcer",
+        "string": "Wächter-Vollstrecker"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlMythicDawnCultistMelee",
+        "form_id": "[05000DC3]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Mythic Dawn Cultist",
+        "string": "Kultist der Mythischen Morgenröte"
+    },
+    {
+        "editor_id": "ccBGSSSE067_AyleidLichBossAmbush",
+        "form_id": "[05000B73]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Norion the Undying",
+        "string": "Norion der Unsterbliche"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlWightMissileAllMale",
+        "form_id": "[05175AD7]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Wight",
+        "string": "Geist"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightAmbushWarlock",
+        "form_id": "[05029D1C]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Wight",
+        "string": "Geist"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MythicDawnDeadDarkElfM",
+        "form_id": "[050B8A19]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Mythic Dawn",
+        "string": "Mythische Morgenröte"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlMythicDawnCultistMagic",
+        "form_id": "[05000B6A]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Mythic Dawn Cultist",
+        "string": "Kultist der Mythischen Morgenröte"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlDremoraBossAmbush02",
+        "form_id": "[050392FB]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Methats",
+        "string": "Methats"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ConjureEncAyleidLich",
+        "form_id": "[05147D97]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Ayleid Lich",
+        "string": "Ayleïdenlich"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightAmbushWarlockLord",
+        "form_id": "[051B2CC7]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Wight",
+        "string": "Geist"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightAmbushMelee2HLord",
+        "form_id": "[051B2CC9]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Wight",
+        "string": "Geist"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlMythicDawnBossVonos",
+        "form_id": "[05039270]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Vonos",
+        "string": "Vonos"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightAmbushMissileStay",
+        "form_id": "[051C215E]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Wight",
+        "string": "Geist"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightAmbushWarlockLord",
+        "form_id": "[051B2CC7]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Wight Lord",
+        "string": "Geistgebieter"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlAyleidWightAmbushMelee1H",
+        "form_id": "[05029D1D]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Wight",
+        "string": "Geist"
+    },
+    {
+        "editor_id": "ccBGSSSE067_LvlWightMeleeAllMale",
+        "form_id": "[050B8A16]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Wight",
+        "string": "Geist"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MythicDawnChamberKey",
+        "form_id": "[050A4323]",
+        "index": null,
+        "type": "KEYM FULL",
+        "original": "Mythic Dawn Chamber Key",
+        "string": "Schlüssel zur Kammer der Mythischen Morgenröte"
+    },
+    {
+        "editor_id": "ccBGSSSE067_RielleKey",
+        "form_id": "[050A9430]",
+        "index": null,
+        "type": "KEYM FULL",
+        "original": "Rielle Key",
+        "string": "Rielle Key"
+    },
+    {
+        "editor_id": "ccBGSSSE067_WelkyndStoneIngestible",
+        "form_id": "[0520E802]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Welkynd Stone",
+        "string": "Welkynd-Stein"
+    },
+    {
+        "editor_id": "ccBGSSSE067Rielle02",
+        "form_id": "[010030E4]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Rielle Crypt",
+        "string": "Krypta von Rielle"
+    },
+    {
+        "editor_id": "ccBGSSSE067MythicDawnCave01",
+        "form_id": "[010030E2]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Red Scar Cavern",
+        "string": "Rotnarbenhöhle"
+    },
+    {
+        "editor_id": "ccBGSSSE067MythicDawnCave02",
+        "form_id": "[0508FBF7]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Mythic Dawn Temple",
+        "string": "Tempel der Mythischen Morgenröte"
+    },
+    {
+        "editor_id": "ccBGSSSE067Plants",
+        "form_id": "[0504D786]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "DaedricPlantTestCell",
+        "string": "DaedricPlantTestCell"
+    },
+    {
+        "editor_id": "ccBGSSSE067Rielle01",
+        "form_id": "[010030E5]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Rielle",
+        "string": "Rielle"
+    },
+    {
+        "editor_id": "ccBGSSSE067DeadlandsWorld",
+        "form_id": "[050E1592]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Deadlands",
+        "string": "Totenländer"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MapMarkerRedScarCavern",
+        "form_id": "[051D67E3]",
+        "index": null,
+        "type": "REFR FULL",
+        "original": "Red Scar Cavern",
+        "string": "Rotnarbenhöhle"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[051D67E7]",
+        "index": null,
+        "type": "REFR FULL",
+        "original": "Deadlands",
+        "string": "Totenländer"
+    },
+    {
+        "editor_id": "Tamriel",
+        "form_id": "[0000003C]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Himmelsrand"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MapMarkerVarlaisCavern",
+        "form_id": "[051D67E4]",
+        "index": null,
+        "type": "REFR FULL",
+        "original": "Varlais Cavern",
+        "string": "Varlaishöhle"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "form_id": "[0519952A]",
+        "index": 220,
+        "type": "QUST NNAM",
+        "original": "Read Vonos' Journal",
+        "string": "Lies Vonos' Tagebuch."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 82,
+        "type": "QUST CNAM",
+        "original": "I've found the repaired Oblivion Gate deep inside Red Scar Cavern, the Mythic Dawn hideout. The leader of the Mythic Dawn, Vonos, will stop at nothing to bring Mehrunes Dagon to power, and must be defeated.",
+        "string": "Ich habe tief in der Rotnarbenhöhle - dem Versteck der Mythische Morgenröte - das Tor ins Reich des Vergessens gefunden und es repariert. Vonos, der Anführer der Mythischen Morgenröte, wird sich durch nichts davon abhalten lassen, Mehrunes Dagon an die Macht zu bringen. Er muss besiegt werden."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "form_id": "[0519952A]",
+        "index": 300,
+        "type": "QUST NNAM",
+        "original": "Return to Tamriel",
+        "string": "Kehre nach Tamriel zurück."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Await news from a courier",
+        "string": "Warte auf Neuigkeiten von einem Kurier."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "I gained access to the secret chamber within Rielle and retrieved the Great Welkynd Stone, but was ambushed by an Ayleid Lich. I need to defeat him in order to escape.",
+        "string": "Ich habe Zugang zur geheimen Kammer in Rielle erlangt und konnte den großen Welkynd-Stein finden, aber ich wurde von einem Ayleïdenlich überfallen. Ich muss ihn besiegen, um zu entkommen."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 50,
+        "type": "QUST NNAM",
+        "original": "Search the bodies for information",
+        "string": "Durchsuche die Leichen nach Hinweisen."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 220,
+        "type": "QUST NNAM",
+        "original": "Read Vonos' Journal",
+        "string": "Lies Vonos' Tagebuch."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 200,
+        "type": "QUST NNAM",
+        "original": "(Optional) Wear a set of Mythic Dawn robes",
+        "string": "(Optional) Trage eine Robe der Mythischen Morgenröte."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "form_id": "[0519952A]",
+        "index": 83,
+        "type": "QUST CNAM",
+        "original": "I have become an unwitting instrument of Mehrunes Dagon, and my actions have opened the Oblivion Gate. After entering the gate, I vanquished two powerful Dremora, heralds of a coming siege, and retrieved their weapons. I must now try to escape the Deadlands and Red Scar Cavern.",
+        "string": "Man hat mich zu einem ahnungslosen Werkzeug von Mehrunes Dagon gemacht und meine Taten haben das Tor ins Reich des Vergessens geöffnet. Nach Betreten des Tors überwand ich zwei mächtige Dremora, Verkünder der kommenden Belagerung, und holte mir ihre Waffen. Ich muss nun versuchen, aus den Totenländern und der Rotnarbenhöhle zu entkommen."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 235,
+        "type": "QUST NNAM",
+        "original": "(Optional) Find the missing Vigilants (<Global=ccBGSSSE067_QuestVigilantRescueCounter>/3)",
+        "string": "(Optional) Finde die verschwundenen Wächter. (<Global=ccBGSSSE067_QuestVigilantRescueCounter>/3)"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 280,
+        "type": "QUST NNAM",
+        "original": "Retrieve Torment",
+        "string": "Bringe Qual in deinen Besitz."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "Defeat the Mythic Dawn Assassins",
+        "string": "Besiege die Assassinen der Mythischen Morgenröte."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 86,
+        "type": "QUST CNAM",
+        "original": "A stranger informed me that the Mythic Dawn reformed and unearthed an ancient Oblivion Gate. They were searching for a Great Welkynd Stone to charge the gate, which I found within Rielle before they could. I infiltrated the Mythic Dawn's hideout and went inside the Deadlands to find the Sigil Stone. I defeated two of Mehrunes Dagon's champions, and retrieved the Sigil Stone, thereby closing the portal and destroying the gate.",
+        "string": "Ein Fremder hat mich darüber informiert, dass sich die Mythische Morgenröte neu formiert und ein altes Tor ins Reich des Vergessens zutage gefördert hat. Sie waren auf der Suche nach einem großen Welkynd-Stein, um das Tor aufzuladen - ich konnte ihn in Rielle finden, bevor sie es taten. Ich drang in das Versteck der Mythischen Morgenröte ein und ging in die Totenländer, um den Siegelstein zu finden. Ich besiegte zwei Champions von Mehrunes Dagon und fand den Siegelstein, wodurch ich das Portal schließen und das Tor zerstören konnte."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 80,
+        "type": "QUST NNAM",
+        "original": "Search for clues in the Mythic Dawn camp",
+        "string": "Suche im Lager der Mythischen Morgenröte nach Hinweisen."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 85,
+        "type": "QUST CNAM",
+        "original": "Centuries have passed since the Oblivion Crisis, yet remnants of that era may still exist in Skyrim. I should pay attention to any news or rumors.",
+        "string": "Seit der Oblivion-Krise sind Jahrhunderte vergangen, doch Überreste dieser Zeit könnten noch immer in Himmelsrand existieren. Ich sollte auf Neuigkeiten und Gerüchte achten."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 190,
+        "type": "QUST NNAM",
+        "original": "Locate the Oblivion Gate",
+        "string": "Finde das Tor ins Reich des Vergessens."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "form_id": "[0519952A]",
+        "index": 210,
+        "type": "QUST NNAM",
+        "original": "Retrieve Vonos' Journal",
+        "string": "Finde Vonos' Tagebuch."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 83,
+        "type": "QUST CNAM",
+        "original": "I've found the weakened Sigil Stone within the Deadlands, and now must make a decision. If I take the Sigil Stone, the gate will close and the Mythic Dawn will be defeated. However, if I place the Great Welkynd stone on the altar, it will recharge the gate, and seal it open...",
+        "string": "Ich habe in den Totenländern den geschwächten Siegelstein gefunden, und nun muss ich eine Entscheidung treffen. Wenn ich den Siegelstein nehme, dann wird sich das Tor schließen und die Mythische Morgenröte wird besiegt sein. Wenn ich aber den großen Welkynd-Stein auf den Altar lege, dann wird er das Tor neu aufladen und öffnen."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 74,
+        "type": "QUST CNAM",
+        "original": "Gate Closed",
+        "string": "Das Tor ist geschlossen"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 60,
+        "type": "QUST NNAM",
+        "original": "Read Skorvild's Journal",
+        "string": "Lies Skorvilds Tagebuch."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 70,
+        "type": "QUST NNAM",
+        "original": "Read the Mythic Dawn Orders",
+        "string": "Lies die Befehle der Mythischen Morgenröte."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 270,
+        "type": "QUST NNAM",
+        "original": "Defeat Valkyn Skoria",
+        "string": "Besiege Valkyn Skoria."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 305,
+        "type": "QUST NNAM",
+        "original": "Escape the Deadlands",
+        "string": "Entkomme den Totenländern."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 94,
+        "type": "QUST CNAM",
+        "original": "The Mythic Dawn have been searching an Ayleid ruin where a Great Welkynd Stone is rumored to be hidden within a secret chamber. They have been unable to find this chamber, but one of the explorers discovered Ayleid Elemental Shards may be the keys to opening it. I should find the shards.",
+        "string": "Die Mythische Morgenröte war auf der Suche nach einer Ayleïdenruine, wo angeblich ein großer Welkynd-Stein in einer geheimen Kammer versteckt ist. Sie konnten die Kammer nicht finden, aber einer der Erkunder fand heraus, dass Ayleïden-Elementarsplitter die Schlüssel zu ihrer Öffnung sein könnten. Ich sollte diese Splitter finden."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "While searching for clues about the Mythic Dawn's whereabouts I found a journal on a dead Vigilant of Stendarr. They learned of the Mythic Dawn's plot by capturing and interrogating a priest, and were able to decipher the location of the Oblivion Gate. I should go there and see if I can get inside. Wearing a set of Mythic Dawn robes might make it easier, but I need to be careful.",
+        "string": "Als ich nach Hinweisen zum Verbleib der Mythischen Morgenröte suchte, fand ich bei einem toten Wächter von Stendarr ein Tagebuch. Sie hatten durch Gefangennahme und Verhör einer Priesterin von den Plänen der Mythischen Morgenröte erfahren und sie konnten den Standort des Tors ins Reich des Vergessens entschlüsseln. Ich sollte dorthin gehen und herausfinden, ob ich hineingelange. Das Tragen einer Robe der Mythischen Morgenröte wird die Sache einfacher machen, aber ich muss dennoch vorsichtig sein."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 230,
+        "type": "QUST NNAM",
+        "original": "Use the Scroll of Liminal Breach",
+        "string": "Benutze die Schriftrolle des Schwellenbruchs."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 114,
+        "type": "QUST CNAM",
+        "original": "The Mythic Dawn have been searching for a secret chamber within an Ayleid ruin that may contain a Great Welkynd Stone. I found four Ayleid Elemental Shards that may help me gain access to this chamber. I should return them to their holders.",
+        "string": "Die Mythische Morgenröte war in einer Ayleïdenruine auf der Suche nach einer geheimen Kammer, in der sich ein großer Welkynd-Stein befinden könnte. Ich habe vier Ayleïden-Elementarsplitter gefunden, die mir dabei helfen könnten, Zugang zur Kammer zu erhalten. Ich sollte sie wieder in ihre Halterungen einsetzen."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 90,
+        "type": "QUST NNAM",
+        "original": "Search Rielle for clues about the secret chamber",
+        "string": "Suche in Rielle nach Hinweisen auf die geheime Kammer."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 84,
+        "type": "QUST CNAM",
+        "original": "A courier has delivered a letter from a stranger. It looks like a plea for help. I should read it and see what it says.",
+        "string": "Ein Kurier hat mir den Brief eines Fremden gebracht. Es scheint sich um ein Hilfsgesuch zu handeln. Ich sollte den Brief lesen und herausfinden, was darinsteht."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "form_id": "[0519952A]",
+        "index": 80,
+        "type": "QUST CNAM",
+        "original": "I found the Oblivion Gate and defeated the leader of the Mythic Dawn, Vonos. However, it seems his death has triggered the opening of the gate. I should inspect his corpse and see if I can discover why.",
+        "string": "Ich habe das Tor ins Reich des Vergessens gefunden und Vonos, den Anführer der Mythischen Morgenröte, besiegt. Es scheint jedoch, dass sein Tod die Öffnung des Tors ausgelöst hat. Ich sollte seine Leiche untersuchen, vielleicht kann ich den Grund dafür herausfinden."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 210,
+        "type": "QUST NNAM",
+        "original": "Retrieve Vonos' Journal",
+        "string": "Finde Vonos' Tagebuch."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "form_id": "[0519952A]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "The Consequences",
+        "string": "Die Konsequenzen"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 72,
+        "type": "QUST CNAM",
+        "original": "The stranger who sent me the letter, Skorvild, was apparently murdered by two Mythic Dawn assassins before I could meet with him. They ambushed me when I arrived, but I defeated them. I should look around to find any additional information.",
+        "string": "Der Fremde, der mir den Brief geschickt hatte, Skorvild, wurde anscheinend von zwei Assassinen der Mythischen Morgenröte ermordet, bevor ich mich mit ihm treffen konnte. Sie überfielen mich bei meiner Ankunft, aber ich habe sie besiegt. Ich sollte in der Gegend nach weiteren Hinweisen suchen."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "form_id": "[0519952A]",
+        "index": 75,
+        "type": "QUST CNAM",
+        "original": "I found the Oblivion Gate and defeated the leader of the Mythic Dawn, Vonos. It appears this was an elaborate ritual designed to decieve me, and killing Vonos was the final step. I have become an unwitting instrument of Mehrunes Dagon, and my actions have opened the Oblivion Gate.",
+        "string": "Ich habe das Tor ins Reich des Vergessens gefunden und Vonos, den Anführer der Mythischen Morgenröte, besiegt. Es scheint sich um ein ausgefeiltes Ritual gehandelt zu haben, das dazu entworfen wurde, mich zu täuschen - und der Tod von Vonos war der letzte Schritt. Man hat mich zu einem ahnungslosen Werkzeug von Mehrunes Dagon gemacht und meine Taten haben das Tor ins Reich des Vergessens geöffnet."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "form_id": "[0519952A]",
+        "index": 230,
+        "type": "QUST NNAM",
+        "original": "Enter the Oblivion Gate",
+        "string": "Betritt das Tor ins Reich des Vergessens."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 92,
+        "type": "QUST CNAM",
+        "original": "The Mythic Dawn have repaired an Oblivion Gate, but need a Great Welkynd Stone to open it. To avoid the Vigilants of Stendarr they've excavated a back way into an ancient Ayleid ruin where such a stone is rumored to be hidden. A journal at their camp mentioned something about a secret chamber. I should investigate the ruin and see if I can find it before they do.",
+        "string": "Die Mythische Morgenröte hat ein Tor ins Reich des Vergessens wieder funktionsfähig gemacht, aber zur Öffnung wird ein großer Welkynd-Stein benötigt. Um den Wächtern von Stendarr aus dem Weg zu gehen, haben sie einen Hintereingang in eine Ayleïdenruine ausgehoben, wo sich ein solcher Stein befinden soll. In einem Tagebuch in ihrem Lager stand etwas von einer geheimen Kammer. Ich sollte die Ruine erkunden und versuchen, sie vor ihnen zu finden."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Read the Stranger's Plea",
+        "string": "Lies die Bitte des Fremden."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 120,
+        "type": "QUST NNAM",
+        "original": "Place the Ayleid Elemental Shards",
+        "string": "Platziere die Ayleïden-Elementarsplitter."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 150,
+        "type": "QUST NNAM",
+        "original": "Defeat Norion the Undying",
+        "string": "Besiege Norion den Unsterblichen."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "form_id": "[0519952A]",
+        "index": 73,
+        "type": "QUST CNAM",
+        "original": "I found the Oblivion Gate and defeated the leader of the Mythic Dawn, Vonos. It appears this was an elaborate ritual designed to decieve me, and killing Vonos was the final step. I have become an unwitting instrument of Mehrunes Dagon, and my actions have opened the Oblivion Gate. I entered the gate and defeated a Dremora Valkynaz wielding the weapon Scourge.",
+        "string": "Ich habe das Tor ins Reich des Vergessens gefunden und Vonos, den Anführer der Mythischen Morgenröte, besiegt. Es scheint sich um ein ausgefeiltes Ritual gehandelt zu haben, das dazu entworfen wurde, mich zu täuschen - und der Tod von Vonos war der letzte Schritt. Man hat mich zu einem ahnungslosen Werkzeug von Mehrunes Dagon gemacht und meine Taten haben das Tor ins Reich des Vergessens geöffnet. Ich betrat das Tor und besiegte einen Dremora-Valkynaz, der mit der Waffe namens Geißel kämpfte."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Meet Skorvild at the Shrine to Stendarr",
+        "string": "Triff Skorvild am Schrein von Stendarr."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 170,
+        "type": "QUST NNAM",
+        "original": "Find clues to the Oblivion Gate's location",
+        "string": "Finde Hinweise zum Standort des Tors ins Reich des Vergessens."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 130,
+        "type": "QUST NNAM",
+        "original": "Enter the secret chamber",
+        "string": "Betritt die geheime Kammer."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 290,
+        "type": "QUST NNAM",
+        "original": "Take the Sigil Stone",
+        "string": "Nimm den Siegelstein."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "The Cause",
+        "string": "Der Anlass"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "form_id": "[0519952A]",
+        "index": 85,
+        "type": "QUST CNAM",
+        "original": "While attempting to stop the Mythic Dawn I myself became an unwitting instrument of Mehrunes Dagon. Killing their leader opened an Oblivion Gate leading into the Deadlands. There I vanquished two powerful Dremora and retrieved their weapons, preventing a siege. I escaped the Deadlands, and the Vigil of Stendarr have secured Red Scar Cavern.",
+        "string": "Beim Versuch, die Mythische Morgenröte aufzuhalten, wurde ich selbst zu einem ahnungslosen Werkzeug von Mehrunes Dagon. Das Töten ihres Anführers öffnete ein Tor ins Reich des Vergessens, das in die Totenländer führte. Dort bezwang ich zwei mächtige Dremora, nahm ihre Waffen an mich und verhinderte so eine Belagerung. Ich entkam den Totenländern, während die Wächter von Stendarr die Rotnarbenhöhle sicherten."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 95,
+        "type": "QUST CNAM",
+        "original": "I found and retrieved the Great Welkynd Stone from within Rielle, and defeated the Ayleid Lich guardian, but the Mythic Dawn will stop at nothing to bring Mehrunes Dagon into power. I should search for any clues nearby that might lead me to the location of the Oblivion Gate.",
+        "string": "Ich habe in Rielle einen großen Welkynd-Stein gefunden und geborgen und den Ayleïdenlichwächter besiegt. Aber die Mythische Morgenröte wird niemals davon ablassen, Mehrunes Dagon zur Macht zu verhelfen. Ich sollte nach Hinweisen in der Nähe suchen, die mich zum Standort des Tors ins Reich des Vergessens führen könnten."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "form_id": "[0519952A]",
+        "index": 250,
+        "type": "QUST NNAM",
+        "original": "Defeat the Dremora Valkynaz",
+        "string": "Besiege den Dremora-Valkynaz."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 73,
+        "type": "QUST CNAM",
+        "original": "Gate Open",
+        "string": "Das Tor ist offen"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 300,
+        "type": "QUST NNAM",
+        "original": "Place the Great Welkynd Stone",
+        "string": "Platziere den großen Welkynd-Stein."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 115,
+        "type": "QUST NNAM",
+        "original": "Locate the Ayleid Elemental Shard Holders",
+        "string": "Finde die Halterungen der Ayleïden-Elementarsplitter."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 100,
+        "type": "QUST NNAM",
+        "original": "Read Janus' Journal",
+        "string": "Lies Janus' Tagebuch."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "form_id": "[0519952A]",
+        "index": 400,
+        "type": "QUST NNAM",
+        "original": "Escape Red Scar Cavern",
+        "string": "Entkomme der Rotnarbenhöhle."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 140,
+        "type": "QUST NNAM",
+        "original": "Take the Great Welkynd Stone",
+        "string": "Nimm den großen Welkynd-Stein."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 260,
+        "type": "QUST NNAM",
+        "original": "Retrieve Scourge",
+        "string": "Bringe Geißel in deinen Besitz."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 100,
+        "type": "QUST CNAM",
+        "original": "I placed the four Ayleid Elemental Shards in their holders, and a passage to a hidden chamber opened. I should investigate and see if I can locate the Great Welkynd Stone.",
+        "string": "Ich habe die vier Ayleïden-Elementarsplitter in ihren Halterungen platziert, woraufhin sich ein Durchgang zu einer versteckten Kammer geöffnet hat. Ich sollte mir das Ganze näher ansehen und herausfinden, ob ich den großen Welkynd-Stein finden kann."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "form_id": "[0519952A]",
+        "index": 280,
+        "type": "QUST NNAM",
+        "original": "Retrieve Torment",
+        "string": "Bringe Qual in deinen Besitz."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 205,
+        "type": "QUST NNAM",
+        "original": "Defeat Vonos",
+        "string": "Besiege Vonos."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "form_id": "[0519952A]",
+        "index": 88,
+        "type": "QUST CNAM",
+        "original": "I found the Oblivion Gate and defeated the leader of the Mythic Dawn, Vonos. It appears this was an elaborate ritual designed to decieve me, and killing Vonos was the final step. I have become an unwitting instrument of Mehrunes Dagon, and my actions have opened the Oblivion Gate. I entered the gate and defeated a Dremora Valkynaz wielding the weapon Torment.",
+        "string": "Ich habe das Tor ins Reich des Vergessens gefunden und Vonos, den Anführer der Mythischen Morgenröte, besiegt. Es scheint sich um ein ausgefeiltes Ritual gehandelt zu haben, das dazu entworfen wurde, mich zu täuschen - und der Tod von Vonos war der letzte Schritt. Man hat mich zu einem ahnungslosen Werkzeug von Mehrunes Dagon gemacht und meine Taten haben das Tor ins Reich des Vergessens geöffnet. Ich trat durch das Tor und besiegte einen Dremora-Valkynaz, der mit der Waffe namens Qual kämpfte."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 85,
+        "type": "QUST CNAM",
+        "original": "I received a letter from someone named Skorvild claiming to be a reformed member of the Mythic Dawn. He mentioned the Oblivion Crisis and asked me to meet him at the Shrine to Stendarr. I should go there and see what he has to say.",
+        "string": "Ich habe einen Brief von jemandem namens Skorvild erhalten, in dem dieser behauptete, ein geläutertes Mitglied der Mythischen Morgenröte zu sein. Er machte eine Bemerkung zur Oblivion-Krise und bat mich um ein Treffen am Schrein von Stendarr. Ich sollte dorthin gehen und herausfinden, was er zu sagen hat."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "form_id": "[0519952A]",
+        "index": 63,
+        "type": "QUST CNAM",
+        "original": "I found the Oblivion Gate and defeated the leader of the Mythic Dawn, Vonos. However, it seems his death has triggered the opening of the gate. I found a journal on his corpse that may explain why.",
+        "string": "Ich habe das Tor ins Reich des Vergessens gefunden und Vonos, den Anführer der Mythischen Morgenröte, besiegt. Es scheint jedoch, dass sein Tod die Öffnung des Tors ausgelöst hat. Ich habe bei seiner Leiche ein Tagebuch gefunden, das vielleicht den Grund dafür verrät."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 180,
+        "type": "QUST NNAM",
+        "original": "Read the Vigil Enforcer's Journal",
+        "string": "Lies das Tagebuch des Wächter-Vollstreckers."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "form_id": "[0519952A]",
+        "index": 260,
+        "type": "QUST NNAM",
+        "original": "Retrieve Scourge",
+        "string": "Bringe Geißel in deinen Besitz."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 160,
+        "type": "QUST NNAM",
+        "original": "Search Norion's remains",
+        "string": "Durchsuche Norions Überreste."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 110,
+        "type": "QUST NNAM",
+        "original": "Retrieve the Ayleid Elemental Shards (<Global=ccBGSSSE067_QuestShardCounter>/4)",
+        "string": "Beschaffe die Ayleïden-Elementarsplitter. (<Global=ccBGSSSE067_QuestShardCounter>/4)"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 240,
+        "type": "QUST NNAM",
+        "original": "Locate the Sigil Stone in the Deadlands",
+        "string": "Finde den Siegelstein in den Totenländern."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 69,
+        "type": "QUST CNAM",
+        "original": "A stranger informed me that the Mythic Dawn reformed and unearthed an ancient Oblivion Gate. They were searching for a Great Welkynd Stone to charge the gate, which I found within Rielle before they could. I infiltrated the Mythic Dawn's hideout and went inside the Deadlands to find the Sigil Stone. Rather than remove the stone and close the portal, I decided to follow the will of Mehrunes Dagon by using the Great Welkynd Stone to charge the gate and protect the Sigil Stone.",
+        "string": "Ein Fremder hat mich darüber unterrichtet, dass sich die Mythische Morgenröte neu formiert und ein altes Tor ins Reich des Vergessens zutage gefördert hat. Sie waren auf der Suche nach einem großen Welkynd-Stein, um das Tor aufzuladen - ich konnte ihn in Rielle finden, bevor sie es taten. Ich drang in das Versteck der Mythischen Morgenröte ein und ging in die Totenländer, um den Siegelstein zu finden. Statt den Stein zu entfernen und das Portal zu schließen, beschloss ich, dem Willen von Mehrunes Dagon zu folgen, indem ich den großen Welkynd-Stein verwendete, um das Tor wiederaufzuladen und den Siegelstein zu beschützen."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest2",
+        "form_id": "[0519952A]",
+        "index": 106,
+        "type": "QUST CNAM",
+        "original": "I found the Oblivion Gate and defeated the leader of the Mythic Dawn, Vonos. It appears this was an elaborate ritual designed to decieve me, and killing Vonos was the final step. I have become an unwitting instrument of Mehrunes Dagon, and my actions have opened the Oblivion Gate. I entered the gate and found myself in the Deadlands.",
+        "string": "Ich habe das Tor ins Reich des Vergessens gefunden und Vonos, den Anführer der Mythischen Morgenröte, besiegt. Es scheint sich um ein ausgefeiltes Ritual gehandelt zu haben, das dazu entworfen wurde, mich zu täuschen - und der Tod von Vonos war der letzte Schritt. Man hat mich zu einem ahnungslosen Werkzeug von Mehrunes Dagon gemacht und meine Taten haben das Tor ins Reich des Vergessens geöffnet. Ich trat durch das Tor und fand mich in den Totenländern wieder."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 250,
+        "type": "QUST NNAM",
+        "original": "Defeat the Dremora Valkynaz",
+        "string": "Besiege den Dremora-Valkynaz."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 79,
+        "type": "QUST CNAM",
+        "original": "I found the Oblivion Gate and defeated the leader of the Mythic Dawn, Vonos. It appears this was an elaborate ritual designed to decieve me, and killing Vonos was the final step. I have become an unwitting instrument of Mehrunes Dagon, and my actions have opened the Oblivion Gate.",
+        "string": "Ich habe das Tor ins Reich des Vergessens gefunden und Vonos, den Anführer der Mythischen Morgenröte, besiegt. Es scheint sich um ein ausgefeiltes Ritual gehandelt zu haben, das dazu entworfen wurde, mich zu täuschen - und der Tod von Vonos war der letzte Schritt. Man hat mich zu einem ahnungslosen Werkzeug von Mehrunes Dagon gemacht und meine Taten haben das Tor ins Reich des Vergessens geöffnet."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 94,
+        "type": "QUST CNAM",
+        "original": "A stranger asked for my help, but he was killed before I arrived. I was then ambushed by two assassins. I learned that the Mythic Dawn have reemerged, and that they've somehow reassembled an Oblivion gate, but need a powerful artifact to open it. A camp was mentioned in the notes I found. I should go there to see what I can find.",
+        "string": "Ein Fremder hatte mich um Hilfe gebeten, aber er wurde vor meiner Ankunft getötet. Zudem wurde ich von zwei Assassinen überfallen. Ich habe erfahren, dass die Mythische Morgenröte sich neu formiert und irgendwie ein Tor ins Reich des Vergessens wiedererrichtet hat. Allerdings benötigt sie ein mächtiges Artefakt, um es zu öffnen. In den von mir gefundenen Notizen war von einem Lager die Rede. Ich sollte dorthin gehen und sehen, was ich finden kann."
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest",
+        "form_id": "[0506BFC1]",
+        "index": 100,
+        "type": "QUST CNAM",
+        "original": "I found the Oblivion Gate and defeated the leader of the Mythic Dawn, Vonos. It appears this was an elaborate ritual designed to deceive me, and killing Vonos was the final step. I have become an unwitting instrument of Mehrunes Dagon, and my actions have opened the Oblivion Gate.",
+        "string": "Ich habe das Tor ins Reich des Vergessens gefunden und Vonos, den Anführer der Mythischen Morgenröte, besiegt. Es scheint sich um ein ausgefeiltes Ritual gehandelt zu haben, das dazu entworfen wurde, mich zu täuschen - und der Tod von Vonos war der letzte Schritt. Man hat mich zu einem ahnungslosen Werkzeug von Mehrunes Dagon gemacht und meine Taten haben das Tor ins Reich des Vergessens geöffnet."
+    },
+    {
+        "editor_id": "ccBGSSSE067_LS_OblivionGate",
+        "form_id": "[0506BFB4]",
+        "index": null,
+        "type": "LSCR DESC",
+        "original": "The Oblivion Crisis was a war with the Daedra at the end of the Third Era. Aided by the Mythic Dawn, the Daedric Prince Mehrunes Dagon opened many Oblivion Gates throughout Tamriel, and nearly caused its destruction. The war was ultimately won by Martin Septim and the Hero of Kvatch.",
+        "string": "Bei der Oblivion-Krise handelte es sich um einen Krieg mit den Daedra am Ende der Dritten Ära. Mit Unterstützung der Mythischen Morgenröte öffnete der Daedrafürst Mehrunes Dagon in ganz Tamriel zahlreiche Tore ins Reich des Vergessens und sorgte damit beinahe für die Zerstörung des Kontinents. Der Krieg wurde schließlich von Martin Septim und dem Helden von Kvatch gewonnen."
+    },
+    {
+        "editor_id": "ccBGSSSE067_LS_Ayleids",
+        "form_id": "[0506BFB3]",
+        "index": null,
+        "type": "LSCR DESC",
+        "original": "The Ayleids were a race of powerful Elves, whose culture was rich with magic and mystery. They were the first to establish an empire in Tamriel, but have not been seen since the First Era. Their ancient ruins dot the landscape of Cyrodiil.",
+        "string": "Die Ayleïden waren ein Volk mächtiger Elfen, mit einer an Magie und Mysterien reichen Kultur. Sie waren die Ersten, die ein Reich in Tamriel errichteten, doch seit der Ersten Ära ist es Vergangenheit. Ihre uralten Ruinen sprenkeln die Lande von Cyrodiil."
+    },
+    {
+        "editor_id": "ccBGSSSE067_RielleLocation",
+        "form_id": "[05015889]",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "Rielle",
+        "string": "Rielle"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MythicDawnRedScarCavernLocation",
+        "form_id": "[05033F35]",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "Red Scar Cavern",
+        "string": "Rotnarbenhöhle"
+    },
+    {
+        "editor_id": "ccBGSSSE067_DeadlandsLocation",
+        "form_id": "[05033F39]",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "Deadlands",
+        "string": "Totenländer"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MessageChooseStone",
+        "form_id": "[050FB45C]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Sigil Stone Altar",
+        "string": "Siegelstein-Altar"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MessageConfirmWelkyndStone",
+        "form_id": "[050AE67B]",
+        "index": 1,
+        "type": "MESG ITXT",
+        "original": "Do Nothing",
+        "string": "Nichts tun"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MessageConfirmSigilStone",
+        "form_id": "[050AE67C]",
+        "index": 0,
+        "type": "MESG ITXT",
+        "original": "Take Sigil Stone",
+        "string": "Siegelstein nehmen"
+    },
+    {
+        "editor_id": "ccBGSSSE067_OpenedElsewhereMessage",
+        "form_id": "[0522D1BF]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Gate Barred",
+        "string": "Tor verriegelt"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MessageChooseStone",
+        "form_id": "[050FB45C]",
+        "index": 2,
+        "type": "MESG ITXT",
+        "original": "Do Nothing",
+        "string": "Nichts tun"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MessageConfirmWelkyndStone",
+        "form_id": "[050AE67B]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Place the Great Welkynd Stone (recharge the Oblivion Gate?)",
+        "string": "Den großen Welkynd-Stein platzieren (das Tor ins Reich des Vergessens wieder aufladen?)"
+    },
+    {
+        "editor_id": "ccBGSSSE067_OpenedElsewhereMessage",
+        "form_id": "[0522D1BF]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "This gate is opened elsewhere.",
+        "string": "Dieses Tor wird von einem anderen Ort aus geöffnet."
+    },
+    {
+        "editor_id": "ccBGSSSE067_MessageChooseStone",
+        "form_id": "[050FB45C]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "What would you like to do?",
+        "string": "Was möchtest du tun?"
+    },
+    {
+        "editor_id": "ccBGSSSE067_IncorrectShardMessage",
+        "form_id": "[0507B3D5]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You don't have the correct shard for this holder.",
+        "string": "Du hast nicht den richtigen Splitter für diese Halterung."
+    },
+    {
+        "editor_id": "ccBGSSSE067_ShardMessageBox",
+        "form_id": "[0518F239]",
+        "index": 4,
+        "type": "MESG ITXT",
+        "original": "Do Nothing",
+        "string": "Nichts tun"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MessageConfirmWelkyndStone",
+        "form_id": "[050AE67B]",
+        "index": 0,
+        "type": "MESG ITXT",
+        "original": "Place Great Welkynd Stone",
+        "string": "Großen Welkynd-Stein platzieren"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MessageChooseStone",
+        "form_id": "[050FB45C]",
+        "index": 0,
+        "type": "MESG ITXT",
+        "original": "Take Sigil Stone (close gate)",
+        "string": "Siegelstein nehmen (Tor schließen)"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MessageConfirmWelkyndStone",
+        "form_id": "[050AE67B]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Place Great Welkynd Stone",
+        "string": "Großen Welkynd-Stein platzieren"
+    },
+    {
+        "editor_id": "ccBGSSSE067_IncorrectShardMessage",
+        "form_id": "[0507B3D5]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Wrong Shard",
+        "string": "Wrong Shard"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MessageChooseStone",
+        "form_id": "[050FB45C]",
+        "index": 1,
+        "type": "MESG ITXT",
+        "original": "Use Great Welkynd Stone (charge gate)",
+        "string": "Großen Welkynd-Stein verwenden (Tor aufladen)"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MessageHarvestFailed",
+        "form_id": "[05033F32]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "This has already been harvested.",
+        "string": "Dies wurde bereits gesammelt."
+    },
+    {
+        "editor_id": "ccBGSSSE067_ShardMessageBox",
+        "form_id": "[0518F239]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Elemental Shard Holder",
+        "string": "Elementarsplitter-Halterung"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MessageHarvestFailed",
+        "form_id": "[05033F32]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Harvest Failed",
+        "string": "Sammeln fehlgeschlagen"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ShardMessageBox",
+        "form_id": "[0518F239]",
+        "index": 1,
+        "type": "MESG ITXT",
+        "original": "Water (Nen)",
+        "string": "Wasser (Nen)"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ShardMessageBox",
+        "form_id": "[0518F239]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Place a shard in the holder?",
+        "string": "Einen Splitter in die Halterung einsetzen?"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ShardMessageBox",
+        "form_id": "[0518F239]",
+        "index": 3,
+        "type": "MESG ITXT",
+        "original": "Light (Alata)",
+        "string": "Licht (Alata)"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MessageConfirmSigilStone",
+        "form_id": "[050AE67C]",
+        "index": 1,
+        "type": "MESG ITXT",
+        "original": "Do Nothing",
+        "string": "Nichts tun"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MessageConfirmSigilStone",
+        "form_id": "[050AE67C]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Take the Sigil Stone (close the Oblivion Gate?)",
+        "string": "Siegelstein nehmen (das Tor ins Reich des Vergessens schließen?)"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ShardMessageBox",
+        "form_id": "[0518F239]",
+        "index": 2,
+        "type": "MESG ITXT",
+        "original": "Air (Wel)",
+        "string": "Luft (Wel)"
+    },
+    {
+        "editor_id": "ccBGSSSE067_ShardMessageBox",
+        "form_id": "[0518F239]",
+        "index": 0,
+        "type": "MESG ITXT",
+        "original": "Earth (Sercen)",
+        "string": "Erde (Sercen)"
+    },
+    {
+        "editor_id": "ccBGSSSE067_MessageConfirmSigilStone",
+        "form_id": "[050AE67C]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Take Sigil Stone",
+        "string": "Siegelstein nehmen"
+    }
+]

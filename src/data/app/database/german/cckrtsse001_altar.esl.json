@@ -1,0 +1,2338 @@
+[
+    {
+        "editor_id": "ccKRTSSE001_CourierEffect",
+        "form_id": "[05000A4E]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Courier Check",
+        "string": "Kurierprüfung"
+    },
+    {
+        "editor_id": "ccKRTSSE001_AlchDamageStaminaRate",
+        "form_id": "[05000F53]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Damage Stamina Regen",
+        "string": "Ausdauerregeneration senken"
+    },
+    {
+        "editor_id": "ccKRTSSE001_BittercupEffect",
+        "form_id": "[05000A50]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Bittercup Effect",
+        "string": "Bitterkelch-Effekt"
+    },
+    {
+        "editor_id": "ccKRTSSE001_TransmuteOreMineralEffect",
+        "form_id": "[05000CE0]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Master Transmute",
+        "string": "Meisterlich umwandeln"
+    },
+    {
+        "editor_id": "ccKRTSSE001_TransmuteOreMineralEffect",
+        "form_id": "[05000CE0]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Transmutes one piece of unrefined Iron or Silver ore to Gold if the caster is carrying any.",
+        "string": "Wandelt einen Klumpen rohes Eisen- oder Silbererz in Gold um, wenn der Zaubernde welches bei sich trägt."
+    },
+    {
+        "editor_id": "ccKRTSSE001_SujammaEffect",
+        "form_id": "[05000F8B]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Soup Check",
+        "string": "Suppenprüfung"
+    },
+    {
+        "editor_id": "ccKRTSSE001_BittercupEffect",
+        "form_id": "[05000A50]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Permanently increases the greater of health, magicka or stamina by <20> points and decreases the lesser by <20> points.",
+        "string": "Erhöht dauerhaft den höheren Gesundheits-, Magicka- oder Ausdauerwert um <20> Punkte und verringert den niedrigeren um <20> Punkte."
+    },
+    {
+        "editor_id": "ccKRTSSE001_SoupEffect",
+        "form_id": "[05000F92]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Soup Check",
+        "string": "Suppenprüfung"
+    },
+    {
+        "editor_id": "ccKRTSSE001_AlchDamageStaminaRate",
+        "form_id": "[05000F53]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Decrease the target's Stamina regeneration by <mag>% for <dur> hours.",
+        "string": "Senkt die Ausdauerregeneration des Ziels für <dur> Stunden um <mag> Prozent."
+    },
+    {
+        "editor_id": "ccKRTSSE001_EnchWeaponStaminaDamage06",
+        "form_id": "[05000834]",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Stamina Damage",
+        "string": "Ausdauerschaden"
+    },
+    {
+        "editor_id": "ccKRTSSE001_SoupCheck",
+        "form_id": "[05000F8F]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Courier Ability",
+        "string": "Kurier-Fähigkeit"
+    },
+    {
+        "editor_id": "ccKRTSSE001_TransmuteOreMineral",
+        "form_id": "[05000CDF]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Master Transmute",
+        "string": "Meisterlich umwandeln"
+    },
+    {
+        "editor_id": "ccKRTSSE001_CourierClothesCheck",
+        "form_id": "[05000A66]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Courier Ability",
+        "string": "Kurier-Fähigkeit"
+    },
+    {
+        "editor_id": "ccKRTSSE001_BowlActivatorNOTHING",
+        "form_id": "[05000801]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Altar of Nothing",
+        "string": "Altar des Nichts"
+    },
+    {
+        "editor_id": "ccKRTSSE001_BowlActivatorNOTHING2",
+        "form_id": "[05000A65]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Altar of Nothing",
+        "string": "Altar des Nichts"
+    },
+    {
+        "editor_id": "ccKRTSSE001_BoatDoorActivator",
+        "form_id": "[0500081D]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Travel to",
+        "string": "Reisen nach"
+    },
+    {
+        "editor_id": "ccKRTSSE001_HayActivator",
+        "form_id": "[05000F1D]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Haystack",
+        "string": "Heuhaufen"
+    },
+    {
+        "editor_id": "ccKRTSSE001_BowlActivatorPOWER",
+        "form_id": "[05000800]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Fill",
+        "string": "Füllen"
+    },
+    {
+        "editor_id": "ccKRTSSE001_BowlActivatorFORTUNE",
+        "form_id": "[05000802]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Fill",
+        "string": "Füllen"
+    },
+    {
+        "editor_id": "ccKRTSSE001_LetterActivator",
+        "form_id": "[05000ADF]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Fake Letter",
+        "string": "Gefälschter Brief"
+    },
+    {
+        "editor_id": "ccKRTSSE001_BowlActivatorPOWER",
+        "form_id": "[05000800]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Altar of Power",
+        "string": "Altar der Macht"
+    },
+    {
+        "editor_id": "ccKRTSSE001_BowlActivatorNOTHING",
+        "form_id": "[05000801]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Fill",
+        "string": "Füllen"
+    },
+    {
+        "editor_id": "ccKRTSSE001_HayActivator",
+        "form_id": "[05000F1D]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Search",
+        "string": "Durchsuchen"
+    },
+    {
+        "editor_id": "ccKRTSSE001_BowlActivatorNOTHING2",
+        "form_id": "[05000A65]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Examine",
+        "string": "Untersuchen"
+    },
+    {
+        "editor_id": "ccKRTSSE001_BowlActivatorFORTUNE",
+        "form_id": "[05000802]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Altar of Fortune",
+        "string": "Altar des Reichtums"
+    },
+    {
+        "editor_id": "ccKRTSSE001_LetterActivator",
+        "form_id": "[05000ADF]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Seal",
+        "string": "Versiegeln"
+    },
+    {
+        "editor_id": "ccKRTSSE001_BoatDoorActivator",
+        "form_id": "[0500081D]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Dawnstar Docks",
+        "string": "Dämmerstern: Hafen"
+    },
+    {
+        "editor_id": "ccKRTSSE001_DrumSource",
+        "form_id": "[05000898]",
+        "index": null,
+        "type": "TACT FULL",
+        "original": "Pit Bandit",
+        "string": "Grubenbandit"
+    },
+    {
+        "editor_id": "ccKRTSSE001_FerrymanRing",
+        "form_id": "[05000FD2]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ferryman's Ring",
+        "string": "Ring des Fährmanns"
+    },
+    {
+        "editor_id": "ccKRTSSE001_RingSeal",
+        "form_id": "[05000A67]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Cuinanthil's Family Seal",
+        "string": "Cuinanthils Familiensiegel"
+    },
+    {
+        "editor_id": "ccKRTSSE001_GrandChampionHelmet",
+        "form_id": "[05000CDC]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Grand Champion's Helm",
+        "string": "Großchampion-Helm"
+    },
+    {
+        "editor_id": "ccKRTSSE001_ClothesFarmBoots03",
+        "form_id": "[05000F26]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Courier's Boots",
+        "string": "Stiefel des Kuriers"
+    },
+    {
+        "editor_id": "ccKRTSSE001_DLC2ArmorNordicShield",
+        "form_id": "[05000899]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Skull-Sabre Shield",
+        "string": "Schädel-Säbel-Schild"
+    },
+    {
+        "editor_id": "ccKRTSSE001_ClothesFarmClothes03",
+        "form_id": "[05000F2C]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Courier's Clothes",
+        "string": "Kleidung des Kuriers"
+    },
+    {
+        "editor_id": "ccKRTSSE001_CourierOutfit",
+        "form_id": "[05000A68]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Clothes",
+        "string": "Kleidung"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestNote05",
+        "form_id": "[05000A69]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nDear master,\r\n\r\nI have a bit of unfortunate news. While searching for the whereabouts of your brother Ernanthil, I discovered that your bodyguard, Inimoro, has been stealing from your coffers. \r\n\r\nI know you trust him with your life, so it must wound you dearly to hear this news. Still, as heir to your father's business and fortune, you must learn that even the staunchest of allies can be bewitched by the allure of coin. \r\n\r\nThat unpleasant news aside, I hope you are well. Please remember to write your mother, she misses you dearly.\r\n\r\nYour faithful charge,\r\nAlrano</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\nSehr geehrter Herr,\r\n\r\nich habe leider unerfreuliche Neuigkeiten. Bei meiner Suche nach Eurem Bruder Ernanthil musste ich feststellen, dass Euch Euer Leibwächter Inimoro bestohlen hat.\r\n\r\nIch weiß, dass Ihr ihm Euer Leben anvertraut, die Nachricht dürfte Euch daher besonders schmerzhaft treffen. Als Erbe von Eures Vaters Geschäft und Vermögen müsst Ihr jedoch lernen, dass selbst die zuverlässigsten Verbündeten der Verlockung des Geldes erliegen können.\r\n\r\nVon diesen unschönen Nachrichten einmal abgesehen hoffe ich, dass es Euch gut geht. Bitte denkt daran, Eurer Mutter zu schreiben. Sie vermisst Euch schrecklich.\r\n\r\nEuer treuer Diener,\r\nAlrano</font>"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestNote09",
+        "form_id": "[05000EB1]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Fisherman's Note",
+        "string": "Notiz des Fischers"
+    },
+    {
+        "editor_id": "ccKRTSSE001_BittercupNote02",
+        "form_id": "[05000F02]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "On the Bittercup",
+        "string": "Der Bitterkelch"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestNote04fem",
+        "form_id": "[05000A6A]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nAll right, here's the plan. Take the letter and seal it with the ring. Then put on this courier's clothes and deliver it. I haven't seen too many female couriers around so it might be dicey, but it's all we got.\r\n\r\nStill, it should work so long as you talk like a bloody courier. I'm sure you've gotten enough letters to know how they speak. And if it don't work the first time, wait an hour, think about what you're gonna say, and try again. When it comes to poor folk, the Elf's got the memory of a goldfish.\r\n\r\nAnyways, once Cuinanthil reads the letter, he'll have his bodyguard arrested. He might even have him killed on the spot. Doesn't matter either way.\r\n\r\nKnowing him, the next thing he'll do is go straight for his treasure, to count every last coin and make sure it's all there. \r\n\r\nThen we just follow that snotty little spear polisher as he leads us straight to the gold.\r\n\r\n--E\r\n</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\nAlso, hier ist der Plan: Nehmt den Brief und versiegelt ihn mit dem Ring. Dann zieht die Kurierkleider an und stellt den Brief zu. Ich habe noch nicht viele weibliche Kuriere gesehen, könnte also heikel werden, aber wir haben keine andere Wahl.\r\n\r\nPasst auf, dass Ihr auch wie ein verdammter Kurier ausseht und sprecht. Ihr habt sicher schon genug Briefe gekriegt, um zu wissen, wie die reden. Und wenn es beim ersten Mal nicht klappt, dann wartet eine Stunde, überlegt Euch, was Ihr sagen wollt, und versucht es noch mal. Wenn es um die Unterschicht geht, hat der Elf ein Gedächtnis wie ein Goldfisch.\r\n\r\nSobald Cuinanthil den Brief liest, wird er jedenfalls seinen Leibwächter verhaften lassen. Vielleicht lässt er ihn sogar an Ort und Stelle umbringen. Spielt keine Rolle.\r\n\r\nSo wie ich ihn kenne, wird er als Nächstes schnurstracks zu seinem Schatz marschieren, um jede einzelne Münze zu zählen und sicherzugehen, dass alles da ist.\r\n\r\nWir müssen dem schnöseligen Speerpolierer also nur folgen, dann führt er uns direkt zum Gold.\r\n\r\nE.\r\n</font>"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestNote05",
+        "form_id": "[05000A69]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Letter from Cuinanthil's Steward",
+        "string": "Brief von Cuinanthils Verwalter"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestNote08b",
+        "form_id": "[05000F1E]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nTo all adventurers,\r\n\r\nI offer you Kynareth's favor, in exchange for your help. There is a gravely ill man in my care at the Temple of Kynareth. Storms of ataxia have weakened his bones, and I fear their heavy rains will wash his life away.\r\n\r\nHe requires a special soup made of the fruit of an Ironwood tree, charred skeever hide, and salt. \r\n\r\nUnfortunately, the Ironwood trees, once a staple of Skyrim's forests, are all but extinct. Moreover, importing the fruit from orchards to the south has been difficult due to bandit raids and embargos from the war. Our first attempt at securing the ingredient was lost. As the man's fever progresses, I fear a second request will come far too late. \r\n\r\nI've heard from the ferrymen, however, that an Ironwood grows on an island to the north called Giant's Tooth, but duty bounds me to the temple. But if by chance the winds of Kynareth see fit to bring one to your shop, please deliver it to Whiterun as soon as you can. A man's life hangs in the balance.\r\n\r\nAcolyte Aldren\r\n</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\nAn alle Abenteurer,\r\n\r\nich biete Euch Kynareths Gunst im Tausch gegen Eure Hilfe an. Im Tempel von Kynareth befindet sich ein schwer kranker Mann in meiner Obhut. Stürme der Ataxie haben seine Knochen geschwächt und ich fürchte, dass ihre starken Schauer auch sein Leben fortspülen werden.\r\n\r\nEr benötigt eine spezielle Suppe, zubereitet aus der Frucht des Eisenholzbaums, verkohltem Skeeverfell und Salz.\r\n\r\nLeider gibt es die einst überall in den Wäldern Himmelsrands wachsenden Eisenholzbäume mittlerweile nicht mehr. Außerdem hat sich der Import der Frucht aus den Obstgärten im Süden aufgrund von Banditenüberfällen und Embargos wegen des Krieges als schwierig erwiesen. Unser erster Versuch, die Zutat zu erhalten, schlug fehl. Da das Fieber des Mannes fortschreitet, fürchte ich, dass eine zweite angeforderte Lieferung viel zu spät eintreffen dürfte.\r\n\r\nVon den Fährmännern habe ich jedoch gehört, dass ein Eisenholzbaum auf einer Insel im Norden namens Riesenzahn wächst, allerdings kann ich aufgrund meiner Pflichten den Tempel nicht verlassen. Sollten jedoch die Winde Kynareths zufällig eine Frucht dieses Baums in Euren Laden wehen, bringt sie bitte sobald wie möglich nach Weißlauf. Das Leben eines Mannes hängt davon ab.\r\n\r\nAkolyth Aldren\r\n</font>"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestNote04fem",
+        "form_id": "[05000A6A]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Rogue's Instructions",
+        "string": "Anweisungen des Schurken"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestNote01",
+        "form_id": "[05000D62]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nI was two days into my journey from Markarth when the ataxia struck. I thought if I bit down on a piece of cloth it would distract me from the pain, but eventually my joints could bear the weight no longer. \r\n\r\nI stopped at the Roadside Ruins looking for a place to rest. It was there, in the briars of an autumn fog, that I came across a strange altar rooted in the ground. Beside it stood an old woman, who I took for its keeper. \r\n\r\nTaking note of my apprehension, the old woman beckoned me forward. Wordlessly she raised her hand, and directed it toward the altar. She was asking me to choose.\r\n\r\nIn my travels I have passed through hagraven camps and seen many a twisted thing, but none like this. Placed in its gnarled hands were three empty bowls, and a cup to fill them. \r\n\r\nAt last the old woman spoke, with an accent I couldn't place. The first bowl, she said, would grant you power. The second would bring you fortune. The third, however, would offer you nothing at all. \r\n\r\nLooking back now, I can't tell you if any of this was real, or some hallucination I dreamt up to cope with the fever. Or it could be the altar was no different than a standing stone, a tribute to a god long forgotten. Still, I felt compelled to ask the woman how and where I would find my boon. She said it would come to me. \r\n\r\nUnfortunately, the ataxia has cursed me with sleeplessness. Worse yet, the disease has progressed to a point that I fear I will not live to see the outcome of my choice. A shame, as I wonder even now if I have made the right one.\r\n\r\n--Rulnik Wind-Strider\r\n</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\nIch war vor zwei Tagen aus Markarth abgereist, als die Ataxie zuschlug. Ich dachte, ich könnte mich von den Schmerzen ablenken, indem ich auf ein Stück Stoff beiße, aber am Ende ertrugen meine Gelenke das Gewicht nicht mehr.\r\n\r\nIch hielt bei den Ruinen am Straßenrand an, um mich nach einem Rastplatz umzusehen. Dort, im Gestrüpp eines Herbstnebels, stieß ich auf einen seltsamen Altar, der fest im Boden verwurzelt war. Neben ihm stand eine alte Frau, die ich für seine Hüterin hielt.\r\n\r\nDie alte Frau bemerkte meine Unruhe und winkte mich zu sich heran. Wortlos hob sie eine Hand und wies direkt zum Altar. Sie bat mich, eine Wahl zu treffen.\r\n\r\nAuf meinen Reisen bin ich schon durch Lager der Hexenraben gekommen und habe so einige dubiose Dinge erlebt, aber noch nie so etwas. In knorrigen Händen standen drei leere Schalen und ein Becher, um sie zu befüllen.\r\n\r\nSchließlich sprach die alte Frau, und das mit einem Akzent, den ich nicht einordnen konnte: \"Die erste Schale\", sagte sie, \"wird Euch Macht verleihen. Die zweite wird Euch Reichtum bescheren. Die dritte jedoch, sie wird Euch gar nichts gewähren.\"\r\n\r\nRückblickend kann ich nicht sagen, ob nicht alles nur eine Halluzination war, die ich mir im Fieberwahn zusammengeträumt habe. Vielleicht war der Altar nur ein stehender Stein, ein Tribut für einen lang vergessenen Gott. Dennoch fühlte ich mich genötigt, die Frau zu fragen, wie und wo ich meinen Segen finden würde. Sie sagte, er würde zu mir kommen.\r\n\r\nLeider hat mich die Ataxie zur Schlaflosigkeit verdammt. Schlimmer noch, die Krankheit ist so weit fortgeschritten, dass ich fürchte, das Ergebnis meiner Wahl nicht mehr zu erleben. Eine Schande, da ich mich selbst jetzt noch frage, ob ich die richtige getroffen habe.\r\n\r\nRulnik Wind-Schreiter\r\n</font>"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestNote03",
+        "form_id": "[05000805]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nDon't be alarmed, but I've been following you. You might say I'm a fan of your work. But I also don't like doing business in person, so I slipped you this letter while you slept. Consider this job my apology for messing with your beauty rest.  \r\n\r\nDon't worry, this ain't some small time caper. There's enough clink in it to fill both our cups, if you're game.\r\n\r\nThe mark's a fat, milk-drinking noble who just arrived in Markarth. He's got one of those fancy High Elf names, Cuinanthil. Don't try to pronounce it, you'll just give yourself a headache. \r\n\r\nPoint is, he's so rich if you poke him he'll spit gems out his mouth. And I know for a fact he's stashed a large portion of his wealth in a vault somewhere in the Reach.\r\n\r\nProblem is, you can't get anywhere near him with his Dark Elf bodyguard by his side at all times. But the sellsword's got one weakness - sujamma from his homeland. So here's what I need you to do:\r\n\r\nFirst, take this vial and spike some sujamma at a cookpot, so the heat activates the poison. As for the sujamma itself, you can probably get a bottle on Solstheim, if none of the traders around here have it. A bit out of the way, but worth it. \r\n\r\nOnce the sujamma's spiked, convince the innkeeper at the Silver-Blood Inn to sell it. When the two stop by the inn, the drink will turn the Dunmer's insides out, and keep him at the bar for a good long while.\r\n\r\nOnce the bodyguard's out of the way, you'll be free to pick the other one's pockets. Take whatever you like, but what I need is his personal ring seal, the one he uses for letters.\r\n\r\nWhen you have the seal, go to the Warrens. I'll leave a note with further instructions outside the third door on your left.\r\n\r\n-- E</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\nErschreckt jetzt nicht, aber ich bin Euch gefolgt. Man könnte sagen, ich bin ein Bewunderer Eurer Arbeit. Aber ich betreibe meine Geschäfte ungern persönlich, daher habe ich Euch diesen Brief zugesteckt, als Ihr schlieft. Betrachtet diesen Auftrag als Entschuldigung dafür, dass ich Euren Schönheitsschlaf ausgenutzt habe.\r\n\r\nKeine Sorge, hier geht es nicht um irgendeine mickrige Gaunerei - wenn Ihr mit an Bord seid, sollte genug Kies herausspringen, um unser beider Taschen zu füllen.\r\n\r\nDas Ziel ist ein fetter, Milch trinkender Adeliger, der gerade in Markarth eingetroffen ist. Er hat einen dieser schicken Hochelfennamen: Cuinanthil. Versucht nicht, ihn auszusprechen, Ihr kriegt nur Kopfschmerzen.\r\n\r\nDie Sache ist, der ist so reich, dass ihm Edelsteine aus dem Mund quellen würden, wenn man ihn anstupste. Und ich weiß gesichert, dass er einen großen Teil seines Reichtums in einem Tresor irgendwo in Reach lagert.\r\n\r\nDas Problem ist, dass man nicht an ihn herankommt, solange ihm sein dunkelelfischer Leibwächter nicht von der Seite weicht. Der Söldner hat aber eine Schwachstelle: Sujamma aus seiner Heimat. Ich will daher Folgendes von Euch:\r\n\r\nNehmt diese Phiole und erhitzt etwas Sujamma in einem Kochtopf - das aktiviert das Gift. Was den Sujamma selbst angeht, bekommt Ihr sicher eine Flasche in Solstheim, wenn Ihr bei keinem der Händler hier fündig werden solltet. Ist ein Stück weiter weg, aber die Sache wert.\r\n\r\nSobald Ihr den Sujamma präpariert habt, müsst Ihr den Wirt im Gasthaus Silber-Blut überreden, das Zeug zu verkaufen. Wenn die zwei dort unterkommen, dreht der Fusel dem Dunmer den Magen um und hält ihn für eine gute Weile am Tresen.\r\n\r\nSobald der Leibwächter aus dem Weg ist, könnt Ihr dem anderen die Taschen ausräumen. Nehmt Euch, was Ihr wollt, aber ich brauche seinen persönlichen Siegelring, den er für seine Briefe verwendet.\r\n\r\nWenn Ihr das Siegel habt, dann geht in die Wohnkaserne. Ich werde Euch vor der dritten Tür links eine Nachricht mit weiteren Anweisungen hinterlassen.\r\n\r\nE.</font>"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestNote09",
+        "form_id": "[05000EB1]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nThe nights are long here. The frost nips at your scales. But I've always been stubborn. Thick-shelled, as they say. So I've stuck to it.\r\n\r\nThe first days were the hardest. I dared not try and fish, with the giants lurking. But hunger makes brave hatchlings of us all, so I dove in, and found the waters calm.\r\n\r\nAs for the actual job, it has proven a tough egg to crack.\r\n\r\nThe ferryman did not lie when he said ironwood bark was as tough as a mammoth tusk. Ours is to wait for the smaller fruit to harvest.</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\nDie Nächte sind lang hier. Der Frost zwickt einem in den Schuppen. Aber ich war schon immer hartnäckig - mit dicker Schale, wie man so schön sagt. Also habe ich durchgehalten.\r\n\r\nDie ersten Tage waren die schlimmsten. Bei all den lauernden Riesen wagte ich es nicht, zu angeln. Doch der Hunger lässt uns alle zu tapferen Schlüpflingen werden, also tauchte ich ein und das Wasser war ruhig.\r\n\r\nDer eigentliche Auftrag hat sich als ganz schön harte Nuss erwiesen.\r\n\r\nDer Fährmann hat nicht gelogen, als er sagte, Eisenholzrinde sei so hart wie ein Mammutstoßzahn. Wir müssen auf die Ernte der kleineren Früchte warten.</font>"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestNote08a",
+        "form_id": "[05000EB2]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Note from the Temple of Kynareth",
+        "string": "Notiz aus dem Tempel von Kynareth"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestNote07",
+        "form_id": "[05000ADC]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nMy brother's always been the greedy sort. Offer him a slice and he'll take the whole pie, and worse yet, he'll act like he's doing you a favor.\r\n\r\nBut I always figured father would see through his lies. Never thought I'd be cut out of the will like some half-blood Orc's son. \r\n\r\nBut it's all right. It's a bit poetic in a sense. Father's favorite book was about the beggar named Eslaf. His old man left him nothing too, except what he was willing to take. Me, I'm gonna take it all.</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\nMein Bruder war schon immer von der gierigen Sorte. Bietet ihm ein Stück an und er wird den ganzen Kuchen nehmen. Schlimmer noch, er wird so tun, als würde er Euch damit einen Gefallen erweisen.\r\n\r\nAber ich hatte immer angenommen, dass Vater seine Lügen durchschauen würde. Nie hätte ich gedacht, dass man mich wie den Bastard eines Orks aus dem Testament streicht.\r\n\r\nAber es ist schon in Ordnung. In gewissem Sinne sogar poetisch. Vaters Lieblingsbuch handelte von einem Bettler namens Eslaf. Dessen Vater hatte ihm nichts hinterlassen - außer dem, was er zu nehmen bereit war. Und ich werde mir alles nehmen.</font>"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestNote02",
+        "form_id": "[05000D64]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Prisoner's Note",
+        "string": "Notiz des Gefangenen"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestNote01",
+        "form_id": "[05000D62]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Mysterious Altar",
+        "string": "Geheimnisvoller Altar"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestNote06",
+        "form_id": "[05000AAB]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Cuinanthil's Journal",
+        "string": "Cuinanthils Tagebuch"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestNote08",
+        "form_id": "[05000E7D]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nTo all adventurers,\r\n\r\nI offer you Kynareth's favor, in exchange for your help. There is a gravely ill man in my care at the Temple of Kynareth. Storms of ataxia have weakened his bones, and I fear their heavy rains will wash his life away.\r\n\r\nHe requires a special soup made of the fruit of an Ironwood tree, charred skeever hide, and salt.\r\n\r\nUnfortunately, the Ironwood trees, once a staple of Skyrim's forests, are all but extinct. Moreover, importing the fruit from orchards to the south has been difficult due to bandit raids and embargos from the war. Our first attempt at securing the ingredient was lost. As the man's fever progresses, I fear a second request will come far too late. \r\n\r\nI've heard from the ferrymen, however, that an Ironwood grows on an island to the north called Giant's Tooth, but duty bounds me to the temple. But if by chance the winds of Kynareth see fit to bring one to your shop, please deliver it to Whiterun as soon as you can. A man's life hangs in the balance.\r\n\r\nDanica Pure-Spring\r\n</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\nAn alle Abenteurer,\r\n\r\nich biete Euch Kynareths Gunst im Tausch gegen Eure Hilfe an. Im Tempel von Kynareth befindet sich ein schwer kranker Mann in meiner Obhut. Stürme der Ataxie haben seine Knochen geschwächt und ich fürchte, dass ihre starken Schauer auch sein Leben fortspülen werden.\r\n\r\nEr benötigt eine spezielle Suppe, zubereitet aus der Frucht des Eisenholzbaums, verkohltem Skeeverfell und Salz.\r\n\r\nLeider gibt es die einst überall in den Wäldern Himmelsrands wachsenden Eisenholzbäume mittlerweile nicht mehr. Außerdem hat sich der Import der Frucht aus den Obstgärten im Süden aufgrund von Banditenüberfällen und Embargos wegen des Krieges als schwierig erwiesen. Unser erster Versuch, die Zutat zu erhalten, schlug fehl. Da das Fieber des Mannes fortschreitet, fürchte ich, dass eine zweite angeforderte Lieferung viel zu spät eintreffen dürfte.\r\n\r\nVon den Fährmännern habe ich jedoch gehört, dass ein Eisenholzbaum auf einer Insel im Norden namens Riesenzahn wächst, allerdings kann ich aufgrund meiner Pflichten den Tempel nicht verlassen. Sollten jedoch die Winde Kynareths zufällig eine Frucht dieses Baums in Euren Laden wehen, bringt sie bitte sobald wie möglich nach Weißlauf. Das Leben eines Mannes hängt davon ab.\r\n\r\nDanica Reine-Quelle\r\n</font>"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestNote04",
+        "form_id": "[05000804]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Rogue's Instructions",
+        "string": "Anweisungen des Schurken"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestNote06",
+        "form_id": "[05000AAB]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nThe deal with the Silver-Bloods has been fully consummated. The location of the vault is rather ingenious, hiding in plain sight amongst degenerates and thieves.\r\n\r\nIt tickles me to know they dream of wealth and fortune, never realizing only a single wall separates it from their soiled bedrolls. \r\n\r\nAs for security, there are two measures. The door is locked securely by key, but that would only embolden their curiosity. That is why as far as the locals know, it belongs to a beggar named Eslaf.\r\n\r\nNow if any of these gutter rats had even a modicum of intelligence, they would realize that Eslaf Erol is the name of a fictional prince who made his fortune from nothing.\r\n\r\nI too have worked from the ground up to achieve my current status. I have taken that which was to be divided, and multiplied it tenfold. \r\n\r\nAfter all, my brother Ernanthil is fortunate to have his life, he should not protest if I take everything else.</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\nDer Handel mit der Silber-Blut-Familie wurde vollständig abgewickelt. Die Position des Tresors ist recht genial, er ist versteckt unter Versagern und Dieben.\r\n\r\nMir gefällt die Vorstellung, dass sie von unermesslichem Reichtum träumen und nicht bemerken, dass nur eine einzige Wand diesen von ihren dreckigen Schlafstätten trennt.\r\n\r\nEs gibt zwei Sicherheitsmaßnahmen: Die Tür ist mit einem Schlüssel abgesperrt, aber das würde nur ihre Neugier anstacheln. Soweit die Leute dort Bescheid wissen, gehört der Raum deswegen einem Bettler namens Eslaf.\r\n\r\nWenn auch nur eine dieser Gossenratten einen Funken Grips besäße, wüsste sie, dass Eslaf Erol der Name eines sagenhaften Prinzen ist, der sich aus dem Nichts ein Vermögen aufgebaut hat.\r\n\r\nAuch ich habe mich von unten nach ganz oben zu meinem derzeitigen Stand hochgearbeitet. Ich habe genommen, was geteilt werden sollte, und es verzehnfacht.\r\n\r\nMein Bruder Ernanthil kann von Glück sprechen, dass er immerhin noch sein Leben hat, er sollte also nicht protestieren, wenn ich ihm den Rest abnehme.</font>"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestNote07",
+        "form_id": "[05000ADC]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Ernanthil's Journal",
+        "string": "Ernanthils Tagebuch"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestNote08",
+        "form_id": "[05000E7D]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Note from the Temple of Kynareth",
+        "string": "Notiz aus dem Tempel von Kynareth"
+    },
+    {
+        "editor_id": "ccKRTSSE001_SpellTomeTransmuteOreMineral",
+        "form_id": "[05000CE1]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Master Transmute",
+        "string": "Zauberbuch: Meisterlich umwandeln"
+    },
+    {
+        "editor_id": "ccKRTSSE001_SpellTomeTransmuteOreMineral",
+        "form_id": "[05000CE1]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nEquilibrium",
+        "string": "<font face='$HandwrittenFont'><font size='40'><p align='center'>\r\nGleichgewicht"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestNote08b",
+        "form_id": "[05000F1E]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Note from the Temple of Kynareth",
+        "string": "Notiz aus dem Tempel von Kynareth"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestNote08a",
+        "form_id": "[05000EB2]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\n<Alias=Player>,\r\n\r\nThe winds have turned again, and I am in need of your help once more. There is a gravely ill man in my care at the Temple of Kynareth. Storms of ataxia have weakened his bones, and I fear their heavy rains will wash his life away.\r\n\r\nHe requires a special soup made of the fruit of an Ironwood tree, charred skeever hide, and salt. \r\n\r\nUnfortunately, the Ironwood trees, once a staple of Skyrim's forests, are all but extinct. Moreover, importing the fruit from orchards to the south has been difficult due to bandit raids and embargos from the war. Our first attempt at securing the ingredient was lost. As the man's fever progresses, I fear a second request will come far too late. \r\n\r\nI've heard from the ferrymen, however, that an Ironwood grows on an island to the north called Giant's Tooth, but duty bounds me to the temple. But if by chance the winds of Kynareth see fit to bring one to your shop, please deliver it to Whiterun as soon as you can. A man's life hangs in the balance.\r\n\r\nDanica Pure-Spring</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\n<Alias=Player>,\r\n\r\ndie Winde haben sich wieder gedreht und ich benötige erneut Eure Hilfe. Im Tempel von Kynareth befindet sich ein schwer kranker Mann in meiner Obhut. Stürme der Ataxie haben seine Knochen geschwächt und ich fürchte, dass ihre starken Schauer auch sein Leben fortspülen werden.\r\n\r\nEr benötigt eine spezielle Suppe, zubereitet aus der Frucht des Eisenholzbaums, verkohltem Skeeverfell und Salz.\r\n\r\nLeider gibt es die einst überall in den Wäldern Himmelsrands wachsenden Eisenholzbäume mittlerweile nicht mehr. Außerdem hat sich der Import der Frucht aus den Obstgärten im Süden aufgrund von Banditenüberfällen und Embargos wegen des Krieges als schwierig erwiesen. Unser erster Versuch, die Zutat zu erhalten, schlug fehl. Da das Fieber des Mannes fortschreitet, fürchte ich, dass eine zweite angeforderte Lieferung viel zu spät eintreffen dürfte.\r\n\r\nVon den Fährmännern habe ich jedoch gehört, dass ein Eisenholzbaum auf einer Insel im Norden namens Riesenzahn wächst, allerdings kann ich aufgrund meiner Pflichten den Tempel nicht verlassen. Sollten jedoch die Winde Kynareths zufällig eine Frucht dieses Baums in Euren Laden wehen, bringt sie bitte sobald wie möglich nach Weißlauf. Das Leben eines Mannes hängt davon ab.\r\n\r\nDanica Reine-Quelle</font>"
+    },
+    {
+        "editor_id": "ccKRTSSE001_BittercupNote",
+        "form_id": "[05000A25]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Pit Fighter's Note",
+        "string": "Notiz des Grubenkämpfers"
+    },
+    {
+        "editor_id": "ccKRTSSE001_BittercupNote02",
+        "form_id": "[05000F02]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"20\">\r\nThis cup has passed through many hands, and has brought out the best and the worst in those who imbibe it. Drink its nectar and it will do the same to you.\r\n\r\n-- CV</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"20\">\r\nDieser Becher ist durch viele Hände gegangen und hat das Beste und das Schlimmste in jenen hervorgebracht, die daraus tranken. Trinkt seinen Nektar und Euch wird dasselbe zuteil.\r\n\r\nC.V.</font>"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestNote02",
+        "form_id": "[05000D64]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nI don't know how I became a prisoner here, but the bandits say I have one of two options. Fight for my freedom, or get sold to slavers.\r\n\r\nI'm not sure who or what it is I have to fight, but I doubt it's gonna be fair. The Pit Champion's got this big, powerful meat cutter on her back. Meanwhile they left me an iron sword so old it had mushrooms growing on it.\r\n\r\nMaybe one of the other poor sods who've fought before me has something that isn't completely useless. If these pit fighters killed a soldier or two, I'm guessing they didn't bother cleaning up the mess. \r\n\r\nBut seeing as this whole thing is rigged, I'm not sure winning will do me much good anyway.</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\nIch weiß nicht, wie ich hier in Gefangenschaft geraten bin, aber die Banditen sagen, ich habe zwei Möglichkeiten: Ich kann entweder für meine Freiheit kämpfen oder werde an Sklavenhändler verkauft.\r\n\r\nIch bin nicht sicher, gegen wen oder was ich antreten muss, aber ich bezweifle stark, dass es ein ehrlicher Kampf wird. Der Gruben-Champion hat dieses mächtiges Fleischermesser auf dem Rücken. Mir hingegen haben sie nur ein Eisenschwert gegeben, das so alt ist, dass darauf schon Pilze gewachsen sind.\r\n\r\nVielleicht hatte ja eins der armen Schweine vor mir irgendwas bei sich, das nicht völlig nutzlos ist. Die Grubenkämpfer haben sich garantiert nicht die Mühe gemacht, hinterher aufzuräumen, wenn sie ein, zwei Soldaten getötet haben.\r\n\r\nAber das ganze Ding ist sowieso krumm, also bin ich nicht sicher, ob mir ein Sieg überhaupt etwas bringen würde.</font>"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestNote04",
+        "form_id": "[05000804]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nAll right, here's the plan. Take the letter and seal it with the ring. Then put on this courier's clothes and deliver it.\r\n\r\nMake sure you look and talk like a bloody courier. I'm sure you've gotten enough letters to know how they speak. And if it don't work the first time, wait an hour, think about what you're gonna say, and try again. When it comes to poor folk, the Elf's got the memory of a goldfish.\r\n\r\nAnyways, the letter will say Inimoro's been stealing from his boss, and the seal will prove it's real. Once Cuinanthil reads the letter, he'll have the Dunmer arrested. He might even have him killed. Doesn't matter either way.\r\n\r\nKnowing him, the next thing he'll do is go straight for his treasure, to count every last coin and make sure it's all there. \r\n\r\nThen we just follow that snotty little spear polisher as he leads us straight to the gold.\r\n\r\n--E</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\nAlso, hier ist der Plan: Nehmt den Brief und versiegelt ihn mit dem Ring. Dann zieht die Kurierkleider an und stellt den Brief zu.\r\n\r\nPasst auf, dass Ihr auch wie ein verdammter Kurier ausseht und sprecht. Ihr habt sicher schon genug Briefe gekriegt, um zu wissen, wie die reden. Und wenn es beim ersten Mal nicht klappt, dann wartet eine Stunde, überlegt Euch, was Ihr sagen wollt, und versucht es noch mal. Wenn es um die Unterschicht geht, hat der Elf ein Gedächtnis wie ein Goldfisch.\r\n\r\nIm Brief steht jedenfalls, dass Inimoro seinen Herren beklaut, und das Siegel wird es bestätigen. Sobald Cuinanthil den Brief liest, lässt er den Dunmer verhaften. Vielleicht lässt er ihn sogar umbringen. Spielt keine Rolle.\r\n\r\nSo wie ich ihn kenne, wird er als Nächstes schnurstracks zu seinem Schatz marschieren, um jede einzelne Münze zu zählen und sicherzugehen, dass alles da ist. \r\n\r\nWir müssen dem schnöseligen Speerpolierer also nur folgen, dann führt er uns direkt zum Gold.\r\n\r\nE.</font>"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestNote03",
+        "form_id": "[05000805]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Rogue's Job Offer",
+        "string": "Angebot des Schurken"
+    },
+    {
+        "editor_id": "ccKRTSSE001_BittercupNote",
+        "form_id": "[05000A25]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"20\">\r\nA hag handed me this cup, saying it would bring out the best and the worst in me. I wasn't sure about that part, but I do like shiny clink, so I took it off her hands.\r\n\r\nBesides, I think this hag was half blind and fully empty in the head. This wasn't no cup. It looks more like a trophy to me.\r\n\r\nSo I got to thinking, being the idea guy that I am, if some pit dog goes through all the trouble of becoming champion, we should give them this cup, with a ceremony and a feast and such. Maybe even carve their name into it. Then I pitched my idea to the boss, thinking she'd love it. \r\n\r\nBut instead she got real mad, stomped on my bunions, and made me scrub the privy for even entertaining the idea before taking the cup for herself.\r\n\r\nNext thing I know, I'm down in the dungeon, washing a particularly foul smelling bucket, that it hits me again. In order to be the champion, you'd have to kill the boss first. It's no wonder she was so mad. \r\n\r\nI guess the old hag was right after all. Turned out it was the best and worst idea all at once.</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"20\">\r\nIch habe diesen Becher von einer Hexe erhalten, und sie hat behauptet, er würde das Beste und das Schlimmste in mir hervorbringen. Ich war zwar skeptisch, aber glänzender Klimperkram ist immer willkommen, also habe ich ihn natürlich angenommen.\r\n\r\nAußerdem glaube ich, dass die Hexe halbblind und völlig hohl im Kopf war. Das war kein Becher, sondern sah mir eher nach einem Pokal aus.\r\n\r\nAlso habe ich nachgedacht, wie ich halt so bin ... Wenn sich ein Grubenkämpfer bis zum Champion hocharbeitet, sollten wir ihm diesen Pokal geben, mit einer Zeremonie, einem Festmahl und allem Drum und Dran. Vielleicht auch seinen Namen einritzen. Habe meine Idee dann dem Boss weitererzählt, weil ich dachte, sie gefällt ihr.\r\n\r\nStattdessen wird die fuchsteufelswild, trampelt mir auf den Zehen herum und verdonnert mich zum Latrinendienst. Und den Becher hat sie sich auch noch gekrallt.\r\n\r\nBevor ich mich versehe, hocke ich im Kerker, wasche einen zum Himmel stinkenden Eimer aus und da wird mir plötzlich klar: Um Champion zu werden, muss man zuerst den Boss umlegen. Kein Wunder, dass sie so wütend war.\r\n\r\nDie alte Hexe hatte wohl doch recht. War wirklich meine beste und gleichzeitig auch meine schlechteste Idee.</font>"
+    },
+    {
+        "editor_id": "ccKRTSSE001_DweDoorSmall01",
+        "form_id": "[05000B1F]",
+        "index": null,
+        "type": "DOOR FULL",
+        "original": "Door to Eslaf's Room",
+        "string": "Tür zu Eslafs Zimmer"
+    },
+    {
+        "editor_id": "ccKRTSSE001_DweDoorSmall01Load",
+        "form_id": "[05000B1C]",
+        "index": null,
+        "type": "DOOR FULL",
+        "original": "Door",
+        "string": "Tür"
+    },
+    {
+        "editor_id": "ccKRTSSE001_ImpDoorExtHoleDoorLoad01",
+        "form_id": "[020153C1]",
+        "index": null,
+        "type": "DOOR FULL",
+        "original": "Wooden Door",
+        "string": "Holztür"
+    },
+    {
+        "editor_id": "ccKRTSSE001_SaltPile",
+        "form_id": "[05000F86]",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Healing Salts",
+        "string": "Heilsalze"
+    },
+    {
+        "editor_id": "ccKRTSSE001_IronwoodNut",
+        "form_id": "[05000F0F]",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Ironwood Fruit",
+        "string": "Eisenholzfrucht"
+    },
+    {
+        "editor_id": "ccKRTSSE001_emptyBittercup",
+        "form_id": "[05000A6B]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Empty Bittercup",
+        "string": "Leerer Bitterkelch"
+    },
+    {
+        "editor_id": "ccKRTSSE001_HiddenIronwoodNutSoup",
+        "form_id": "[05000F80]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Ironwood Soup Elixir",
+        "string": "Eisenholzsuppen-Elixier"
+    },
+    {
+        "editor_id": "ccKRTSSE001_SujammaPoisonHidden",
+        "form_id": "[05000F89]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Spiked Vial",
+        "string": "Versetzte Phiole"
+    },
+    {
+        "editor_id": "ccKRTSSE001_HiddenIronwoodSaltPile",
+        "form_id": "[05000F0C]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Charred Skeever Hide",
+        "string": "Verkohltes Skeeverfell"
+    },
+    {
+        "editor_id": "ccKRTSSE001_SujammaPoison",
+        "form_id": "[05000F04]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Spiked Vial",
+        "string": "Versetzte Phiole"
+    },
+    {
+        "editor_id": "ccKRTSSE001_MysteriousPotion",
+        "form_id": "[05000806]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Mysterious Potion",
+        "string": "Rätselhafter Trank"
+    },
+    {
+        "editor_id": "ccKRTSSE001_HiddenIronwoodNut",
+        "form_id": "[05000F7E]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Ironwood Fruit",
+        "string": "Eisenholzfrucht"
+    },
+    {
+        "editor_id": "ccKRTSSE001_FerryToken",
+        "form_id": "[0500081A]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Ferry Token",
+        "string": "Fährmarke"
+    },
+    {
+        "editor_id": "ccKRTSSE001_IronwoodNutFlora",
+        "form_id": "[05000F88]",
+        "index": null,
+        "type": "TREE FULL",
+        "original": "Ironwood Fruit",
+        "string": "Eisenholzfrucht"
+    },
+    {
+        "editor_id": "ccKRTSSE001_RedDiamondGladius",
+        "form_id": "[05000807]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Grand Champion's Sword",
+        "string": "Großchampion-Schwert"
+    },
+    {
+        "editor_id": "ccKRTSSE001_DLC2NordicDagger",
+        "form_id": "[05000ECE]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Rulnik's Dagger",
+        "string": "Rulniks Dolch"
+    },
+    {
+        "editor_id": "ccKRTSSE001_CourierNPC",
+        "form_id": "[05000A6C]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Courier",
+        "string": "Kurier"
+    },
+    {
+        "editor_id": "ccKRTSSE001_CourierFemale",
+        "form_id": "[05000ADE]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Courier",
+        "string": "Kurier"
+    },
+    {
+        "editor_id": "ccKRTSSE001_FerrymanDawnstar",
+        "form_id": "[05000B1E]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Harlaug",
+        "string": "Harlaug"
+    },
+    {
+        "editor_id": "ccKRTSSE001_Acolyte",
+        "form_id": "[0500081B]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Aldren",
+        "string": "Aldren"
+    },
+    {
+        "editor_id": "ccKRTSSE001_PitFighter",
+        "form_id": "[05000809]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Pit Fighter",
+        "string": "Grubenkämpfer"
+    },
+    {
+        "editor_id": "ccKRTSSE001_Cuinanthil",
+        "form_id": "[05000808]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Cuinanthil",
+        "string": "Cuinanthil"
+    },
+    {
+        "editor_id": "ccKRTSSE001_Inimoro",
+        "form_id": "[05000A94]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Inimoro",
+        "string": "Inimoro"
+    },
+    {
+        "editor_id": "ccKRTSSE001_WindhelmPitMelee",
+        "form_id": "[05000985]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Pit Bandit",
+        "string": "Grubenbandit"
+    },
+    {
+        "editor_id": "ccKRTSSE001_ArgonianAcolyte",
+        "form_id": "[05000EAA]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Fisherman",
+        "string": "Fischer"
+    },
+    {
+        "editor_id": "ccKRTSSE001_Rulnik",
+        "form_id": "[0500080A]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Rulnik Wind-Strider",
+        "string": "Rulnik Wind-Schreiter"
+    },
+    {
+        "editor_id": "ccKRTSSE001_Neski",
+        "form_id": "[05000817]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Neski",
+        "string": "Neski"
+    },
+    {
+        "editor_id": "ccKRTSSE001_CourierEmpty",
+        "form_id": "[05000ABF]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Courier",
+        "string": "Kurier"
+    },
+    {
+        "editor_id": "ccKRTSSE001_Rulnik",
+        "form_id": "[0500080A]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Rulnik",
+        "string": "Rulnik"
+    },
+    {
+        "editor_id": "ccKRTSSE001_Neski",
+        "form_id": "[05000817]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Neski Skull-Sabre",
+        "string": "Neski Schädel-Säbel"
+    },
+    {
+        "editor_id": "ccKRTSSE001_FerrymanDawnstarBACKUP",
+        "form_id": "[05000FD1]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Ysleif",
+        "string": "Ysleif"
+    },
+    {
+        "editor_id": "ccKRTSSE001_Ernanthil",
+        "form_id": "[05000AB9]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Ernanthil",
+        "string": "Ernanthil"
+    },
+    {
+        "editor_id": "ccKRTSSE001_WindhelmPitMissile",
+        "form_id": "[05000C2B]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Pit Bandit",
+        "string": "Grubenbandit"
+    },
+    {
+        "editor_id": "ccKRTSSE001_Acolyte",
+        "form_id": "[0500081B]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Acolyte Aldren",
+        "string": "Akolyth Aldren"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QP_Key",
+        "form_id": "[05000A89]",
+        "index": null,
+        "type": "KEYM FULL",
+        "original": "Pit Key",
+        "string": "Grubenschlüssel"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QF_Key",
+        "form_id": "[05000AE3]",
+        "index": null,
+        "type": "KEYM FULL",
+        "original": "Key to Eslaf's Room",
+        "string": "Schlüssel zu Eslafs Zimmer"
+    },
+    {
+        "editor_id": "ccKRTSSE001_DLC2Sujamma",
+        "form_id": "[05000A6D]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Spiked Sujamma",
+        "string": "Versetzter Sujamma"
+    },
+    {
+        "editor_id": "ccKRTSSE001_IronwoodNutSoupfakeHEAL",
+        "form_id": "[05000F93]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Ironwood Soup",
+        "string": "Eisenholzsuppe"
+    },
+    {
+        "editor_id": "ccKRTSSE001_IronwoodNutSoupHOT",
+        "form_id": "[05000CE5]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Hot Ironwood Soup",
+        "string": "Heiße Eisenholzsuppe"
+    },
+    {
+        "editor_id": "ccKRTSSE001_IronwoodNutSoupHEAL",
+        "form_id": "[05000F87]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Ironwood Soup",
+        "string": "Eisenholzsuppe"
+    },
+    {
+        "editor_id": "ccKRTSSE001_DLC1BloodPotion",
+        "form_id": "[05000811]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Potion of Blood",
+        "string": "Trank des Blutes"
+    },
+    {
+        "editor_id": "ccKRTSSE001_Bittercup",
+        "form_id": "[05000810]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Bittercup",
+        "string": "Bitterkelch"
+    },
+    {
+        "editor_id": "ccKRTSSE001QPInterior01",
+        "form_id": "[01002FD6]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "The Pit Dungeon",
+        "string": "Grubenverlies"
+    },
+    {
+        "editor_id": "ccKRTSSE001QFInterior01",
+        "form_id": "[01002FD7]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Eslaf's Room",
+        "string": "Eslafs Zimmer"
+    },
+    {
+        "editor_id": "MarkarthWarrens",
+        "form_id": "[00016D72]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "The Warrens",
+        "string": "Die Wohnkaserne"
+    },
+    {
+        "editor_id": "MarkarthSilverBloodInn",
+        "form_id": "[00016DFE]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Silver-Blood Inn",
+        "string": "Gasthaus Silber-Blut"
+    },
+    {
+        "editor_id": "ccKRTSSE001QPInterior03",
+        "form_id": "[01002FD4]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Watchtower Barracks",
+        "string": "Wachturmkaserne"
+    },
+    {
+        "editor_id": "FalkreathDeadMansDrink",
+        "form_id": "[0003A184]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Dead Man's Drink",
+        "string": "Totmannstrunk"
+    },
+    {
+        "editor_id": "ccKRTSSE001QNInterior01",
+        "form_id": "[01002FD8]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Iron Tusk Cave",
+        "string": "Eisenstoßzahn-Höhle"
+    },
+    {
+        "editor_id": "ccKRTSSE001QPInterior02",
+        "form_id": "[01002FD5]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "The Pit",
+        "string": "Grube"
+    },
+    {
+        "editor_id": "WhiterunTempleofKynareth",
+        "form_id": "[000165A7]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Temple of Kynareth",
+        "string": "Tempel von Kynareth"
+    },
+    {
+        "editor_id": "DawnstarMortarandPestle",
+        "form_id": "[00013A86]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "The Mortar and Pestle",
+        "string": "Mörser und Stößel"
+    },
+    {
+        "editor_id": "Tamriel",
+        "form_id": "[0000003C]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Himmelsrand"
+    },
+    {
+        "editor_id": "ccKRTSSE001QNWorld",
+        "form_id": "[05000A5F]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Giant's Tooth",
+        "string": "Riesenzahn"
+    },
+    {
+        "editor_id": "MarkarthWorld",
+        "form_id": "[00016D71]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Markarth",
+        "string": "Markarth"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000E7C]",
+        "index": null,
+        "type": "REFR FULL",
+        "original": "Giant's Tooth",
+        "string": "Riesenzahn"
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuestBranch1TopicB",
+        "form_id": "[05000F51]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I'll give it to you, but not for free.",
+        "string": "Ich gebe sie Euch, aber nicht kostenlos."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000AB6]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "This note mentions you by name. (Persuade)",
+        "string": "In dieser Notiz werdet Ihr namentlich erwähnt. (Überreden)"
+    },
+    {
+        "editor_id": "ccKRTSSE001_DialogueFollowerBranch01TopicD",
+        "form_id": "[05000EF3]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I'm curious what would've happened had I chose differently.",
+        "string": "Ich bin neugierig, was wohl passiert wäre, wenn ich mich anders entschieden hätte."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QF_QuestCompleteTopicA",
+        "form_id": "[05000ACA]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Don't mention it.",
+        "string": "Kein Problem."
+    },
+    {
+        "editor_id": "ccKRTSSE001_DialogueFollowerBranch01TopicE",
+        "form_id": "[05000EF4]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I don't have any thoughts either way. ",
+        "string": "Dazu habe ich keine Meinung. "
+    },
+    {
+        "editor_id": "ccKRTSSE001_DialogueFollowerBranch01TopicA",
+        "form_id": "[05000EED]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "ccKRTSSE001_DialogueFollowerBranch01TopicA",
+        "string": "ccKRTSSE001_DialogueFollowerBranch01TopicA"
+    },
+    {
+        "editor_id": "ccKRTSSE001_DialogueFollowerBranch01TopicB",
+        "form_id": "[05000EF1]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "The altar was a blessing. It helped me save you.",
+        "string": "Der Altar war ein Segen. Er hat mir geholfen, Euch zu retten."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000AB5]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Goodbye.",
+        "string": "Lebt wohl."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QF_Branch1TopicC",
+        "form_id": "[05000A84]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Um...I didn't work out that part of my lie yet.",
+        "string": "Ähm ... Den Teil meiner Lüge habe ich mir noch nicht ausgedacht."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000AD8]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "In this note the thief mentions you by name. (Persuade)",
+        "string": "In dieser Notiz erwähnt Euch der Dieb namentlich. (Überreden)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000FD9]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "I want to go back to Giant's Tooth. (<Global=DLC1FerryCostSmall> gold)",
+        "string": "Ich möchte nach Riesenzahn zurückkehren. (<Global=DLC1FerryCostSmall> Gold)"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QF_Courier01Topic",
+        "form_id": "[05000AE7]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Hello. I am a courier. I deliver letters. It is totally what I do.",
+        "string": "Hallo. Ich bin ein Kurier. Ich überbringe Briefe. Ganz genau. Das mache ich."
+    },
+    {
+        "editor_id": "ccKRTSSE001_DLC1Branch01Topic",
+        "form_id": "[05000A7D]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I need safe passage to Giant's Tooth. (<Global=DLC1FerryCostSmall> gold)",
+        "string": "Ich benötige eine sichere Überfahrt nach Riesenzahn. (<Global=DLC1FerryCostSmall> Gold)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000AE8]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Greetings, I'm with the courier service.",
+        "string": "Seid gegrüßt, ich bin vom Kurierdienst."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QF_Branch4Topic",
+        "form_id": "[05000AA1]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Someone is trying to rob you. I have proof.",
+        "string": "Jemand will Euch ausrauben. Ich habe Beweise."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QF_Courier02TopicC",
+        "form_id": "[05000AF6]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "This missive is for you.",
+        "string": "Dieses Schreiben ist für Euch."
+    },
+    {
+        "editor_id": "ccKRTSSE001_DialogueFollowerBranch01Topic",
+        "form_id": "[05000EEB]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I found this journal in Falkreath. Is it yours?",
+        "string": "Ich habe dieses Tagebuch in Falkenring gefunden. Gehört es Euch?"
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuestBTopicC",
+        "form_id": "[05000ED7]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "The healers at the temple deserve most of the credit.",
+        "string": "Die Heiler im Tempel verdienen die meiste Anerkennung."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuestBranch1TopicA",
+        "form_id": "[05000F4F]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Here you are.",
+        "string": "Hier, bitte."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QF_Courier03Topic",
+        "form_id": "[05000AEC]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I've been searching for something. You.",
+        "string": "Ich suche jemanden. Euch."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QF_Courier02TopicE",
+        "form_id": "[05000AF8]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I believe I'm supposed to hand you this letter.",
+        "string": "Ich glaube, ich soll Euch diesen Brief aushändigen."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuestBTopicB",
+        "form_id": "[05000ED3]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "It's all right. You've got the rest of your life to repay me.",
+        "string": "Ist schon in Ordnung. Ihr habt den Rest Eures Lebens, um mich dafür zu vergüten."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000AB7]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "On second thought, never mind.",
+        "string": "Wenn ich es mir recht überlege ... Vergesst es."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000AA6]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "This note mentions the Warrens. If we hurry, we might catch him. (Persuade)",
+        "string": "In dieser Notiz wird die Wohnkaserne erwähnt. Wenn wir uns beeilen, können wir ihn vielleicht noch fassen. (Überreden)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000AD9]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "This note mentions you by name. (Persuade)",
+        "string": "In dieser Notiz werdet Ihr namentlich erwähnt. (Überreden)"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QF_QuestCompleteTopicE",
+        "form_id": "[05000ACE]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Don't waste the life I've given you.",
+        "string": "Vergeudet das Leben nicht, das ich Euch geschenkt habe."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000B6A]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "I still have questions.",
+        "string": "Ich habe noch einige Fragen."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000B6C]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "I think I'll just kill you and take it all.",
+        "string": "Ich glaube, ich werde Euch einfach töten und mir alles nehmen."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QF_QuestCompleteTopicD",
+        "form_id": "[05000ACD]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I guess that means we're best friends now.",
+        "string": "Das heißt dann wohl, dass wir nun beste Freunde sind."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000C18]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "It was a pleasure working with you.",
+        "string": "Es war mir ein Vergnügen, mit Euch zu arbeiten."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuestBTopicA",
+        "form_id": "[05000ED1]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "It was nothing. I'm just glad you're okay.",
+        "string": "Nicht der Rede wert. Ich bin einfach nur froh, dass es Euch gut geht."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QF_Branch1Topic",
+        "form_id": "[05000A76]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Would you consider selling sujamma? I have a bottle your customers can sample.",
+        "string": "Würdet Ihr Sujamma verkaufen? Ich habe eine Flasche, die Eure Gäste probieren können."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuestBTopicD",
+        "form_id": "[05000EDA]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Ysmir's blessing is worthless to me, but okay.",
+        "string": "Ysmirs Segen ist nutzlos für mich, aber in Ordnung."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuestBranch1Topic",
+        "form_id": "[05000F34]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I have the Ironwood Soup you're looking for.",
+        "string": "Ich habe die Eisenholzsuppe, die Ihr braucht."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QF_Branch1TopicE",
+        "form_id": "[05000A88]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Fifty gold. This is rare sujamma imported from Morrowind. (Persuade)",
+        "string": "50 Gold. Das ist ein seltener, aus Morrowind importierter Sujamma. (Überreden)"
+    },
+    {
+        "editor_id": "ccKRTSSE001_DialogueFollowerBranch01TopicC",
+        "form_id": "[05000EF2]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "The altar's cursed. Hagraven magic can't be trusted.",
+        "string": "Der Altar ist verflucht. Hexenrabenmagie kann man nicht trauen."
+    },
+    {
+        "editor_id": "ccKRTSSE001_DialogueFollowerBranch01TopicF",
+        "form_id": "[05000EF6]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "What about you? Are you happy with the choice you made?",
+        "string": "Was ist mit Euch? Seid Ihr glücklich über die Wahl, die ich getroffen habe?"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QF_Courier04Topic",
+        "form_id": "[05000AEE]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Well met, friend! Do you wish to receive a letter from my sack?",
+        "string": "Seid gegrüßt, mein Freund! Möchtet Ihr einen Brief aus meinem Beutel erhalten?"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QF_Courier05Topic",
+        "form_id": "[05000AF0]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I'm a courier and I have an important message to deliver you.",
+        "string": "Ich bin ein Kurier und muss Euch eine wichtige Nachricht überbringen."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QF_Branch1TopicA",
+        "form_id": "[05000A78]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Free of charge. If your customers like it, then I'll sell you more.",
+        "string": "Kostenlos. Wenn er gut ankommt, verkaufe ich Euch mehr."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QF_QuestCompleteTopicC",
+        "form_id": "[05000ACC]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I saved your life. That ought to be worth something.",
+        "string": "Ich habe Euch das Leben gerettet. Das sollte etwas wert sein."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000B6B]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "This isn't enough. You barely did any work and just showed up at the end.",
+        "string": "Das reicht nicht. Ihr habt kaum etwas geleistet und seid erst ganz am Ende aufgetaucht."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuestBranch2Topic",
+        "form_id": "[05000EC6]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I found this Ironwood Fruit. Do you know if anyone has a use for it?",
+        "string": "Ich habe diese Eisenholzfrucht gefunden. Wisst Ihr, ob sie für jemanden von Nutzen ist?"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QF_QuestCompleteTopicB",
+        "form_id": "[05000ACB]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "It was the right thing to do.",
+        "string": "Ich habe nur das Richtige getan."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000B51]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "It was a pleasure working with you.",
+        "string": "Es war mir ein Vergnügen, mit Euch zu arbeiten."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QF_Branch1TopicD",
+        "form_id": "[05000A86]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Ten thousand gold and the deed to your children.",
+        "string": "10.000 Gold und das Anrecht auf Eure Kinder."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QF_Courier02Topic",
+        "form_id": "[05000AEA]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I've been looking for you.",
+        "string": "Ich habe Euch gesucht."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QF_Branch2Topic",
+        "form_id": "[05000A9A]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Are you new in town? I can help show you around.",
+        "string": "Seid Ihr neu in der Stadt? Ich kann Euch herumführen."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000B6D]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Well, enjoy your riches. Don't spend it all in one place.",
+        "string": "Tja, genießt Euren Reichtum - und gebt nicht gleich alles auf einmal aus."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000DFC]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "I want to go back to Giant's Tooth. (<Global=DLC1FerryCostSmall> gold)",
+        "string": "Ich möchte nach Riesenzahn zurückkehren. (<Global=DLC1FerryCostSmall> Gold)"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QF_Courier02TopicB",
+        "form_id": "[05000AF5]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I've got a letter with your name on it. Literally.",
+        "string": "Ich habe einen Brief, auf dem Euer Name steht. Im wahrsten Sinne des Wortes."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000A1A]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "I'm ready to go back to Dawnstar.",
+        "string": "Ich bin bereit, nach Dämmerstern zurückzukehren."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QF_Courier02TopicA",
+        "form_id": "[05000AF4]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I have a note I'm required to deliver, for your eyes only.",
+        "string": "Ich habe eine Nachricht zu überbringen, die nur für Eure Augen bestimmt ist."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QF_Branch3Topic",
+        "form_id": "[05000A9F]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Spare a coin for a beggar?",
+        "string": "Könnt Ihr eine Münze für einen Bettler entbehren?"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QF_Branch1TopicB",
+        "form_id": "[05000A80]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Five gold should be enough for the bottle. (Persuade)",
+        "string": "Fünf Gold sollten für die Flasche ausreichend sein. (Überreden)"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QF_Courier02TopicD",
+        "form_id": "[05000AF7]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Got something I'm supposed to deliver - your hands only.",
+        "string": "Ich soll Euch etwas überbringen - aber nur Euch persönlich."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000A9B]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Never mind, I mistook you for someone else.",
+        "string": "Vergesst es, ich habe Euch für jemand anderen gehalten."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestPower",
+        "form_id": "[05000A5E]",
+        "index": 85,
+        "type": "QUST CNAM",
+        "original": "I passed out after performing a ritual at a hagraven altar, only to wake up in a dungeon. A note seems to imply I'll need to fight my way out, using whatever weapons I can find.",
+        "string": "Nachdem ich ein Ritual an einem Hexenrabenaltar durchgeführt hatte, wurde ich bewusstlos und wachte in einem Verlies wieder auf. Eine Notiz deutet darauf hin, dass ich mir mit den Waffen, die ich finden kann, meinen Weg herauskämpfen muss."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestPower",
+        "form_id": "[05000A5E]",
+        "index": 94,
+        "type": "QUST CNAM",
+        "original": "I passed out after performing a ritual at a hagraven altar, only to wake up in a dungeon. Upon walking out of the prison area, I found myself in an arena fighting both man and beast. After finishing off the champion, I entered the barracks and retrieved my belongings.",
+        "string": "Nachdem ich ein Ritual an einem Hexenrabenaltar durchgeführt hatte, wurde ich bewusstlos und wachte in einem Verlies wieder auf. Als ich aus dem Zellenbereich trat, befand ich mich in einer Arena, in der ich gegen Mensch und Bestie kämpfte. Nachdem ich den Champion besiegt hatte, betrat ich die Kaserne und holte mir meine Besitztümer zurück."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 70,
+        "type": "QUST NNAM",
+        "original": "Investigate the cave",
+        "string": "Untersuche die Höhle."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 61,
+        "type": "QUST NNAM",
+        "original": "Board the ferryman's boat",
+        "string": "Gehe an Bord des Fährmannboots."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 200,
+        "type": "QUST NNAM",
+        "original": "Meet Cuinanthil in the Markarth Warrens",
+        "string": "Triff Cuinanthil in der Wohnkaserne in Markarth."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Fortunate Son",
+        "string": "Ein glücklicher Sohn"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 220,
+        "type": "QUST NNAM",
+        "original": "Kill Ernanthil at the Shrine of Stendarr",
+        "string": "Töte Ernanthil am Schrein von Stendarr."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 5,
+        "type": "QUST NNAM",
+        "original": "Choose a bowl at the altar",
+        "string": "Wähle eine Schale am Altar aus."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestPower",
+        "form_id": "[05000A5E]",
+        "index": 88,
+        "type": "QUST CNAM",
+        "original": "I passed out after performing a ritual at a hagraven altar, only to wake up in a dungeon. After walking out of the prison area, I found myself in an arena face to face with a pit fighter, and killed him. The fight was far from over, however, as two sabre cats were subsequently released from their cages.",
+        "string": "Nachdem ich ein Ritual an einem Hexenrabenaltar durchgeführt hatte, wurde ich bewusstlos und wachte in einem Verlies wieder auf. Als ich aus dem Zellenbereich trat, stand ich einem Grubenkämpfer gegenüber, den ich tötete. Der Kampf war aber noch lang nicht vorbei, da daraufhin zwei Säbelzahntiger aus ihren Käfigen gelassen wurden."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestPower",
+        "form_id": "[05000A5E]",
+        "index": 70,
+        "type": "QUST NNAM",
+        "original": "Escape the Pit",
+        "string": "Entkomme aus der Grube."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 570,
+        "type": "QUST NNAM",
+        "original": "Pick up the Key to Eslaf's Room",
+        "string": "Nimm den Schlüssel zu Eslafs Zimmer."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 71,
+        "type": "QUST NNAM",
+        "original": "Investigate the camp",
+        "string": "Untersuche das Lager."
+    },
+    {
+        "editor_id": "ccKRTSSE001_FerrySystem",
+        "form_id": "[05000A7B]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Ferry system dialogue",
+        "string": "Ferry system dialogue"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 80,
+        "type": "QUST NNAM",
+        "original": "Impersonate a courier and hand the letter to Cuinanthil",
+        "string": "Gib dich als Kurier aus und überbring den Brief an Cuinanthil."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 1,
+        "type": "QUST NNAM",
+        "original": "Find information at Dead Man's Drink",
+        "string": "Finde Informationen im Totmannstrunk."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 170,
+        "type": "QUST NNAM",
+        "original": "Check on Rulnik",
+        "string": "Sieh nach Rulnik."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 120,
+        "type": "QUST NNAM",
+        "original": "Follow Cuinanthil",
+        "string": "Folge Cuinanthil."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestPower",
+        "form_id": "[05000A5E]",
+        "index": 98,
+        "type": "QUST CNAM",
+        "original": "I passed out after performing a ritual at a hagraven altar, only to wake up in a dungeon. Upon walking out of the prison area, I found myself in an arena fighting both man and beast. After finishing off the champion, the other bandits reacted poorly. I escaped their arrows and entered the barracks. I should now look for my belongings.",
+        "string": "Nachdem ich ein Ritual an einem Hexenrabenaltar durchgeführt hatte, wurde ich bewusstlos und wachte in einem Verlies wieder auf. Als ich aus dem Zellenbereich trat, befand ich mich in einer Arena, in der ich gegen Mensch und Bestie kämpfte. Nachdem ich den Champion besiegt hatte, reagierten die anderen Banditen nicht gerade positiv darauf. Ich entkam ihren Pfeilen und betrat die Kaserne. Nun sollte ich nach meinen Besitztümern suchen."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Read the Rogue's Job Offer",
+        "string": "Lies das Angebot des Schurken."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 78,
+        "type": "QUST CNAM",
+        "original": "In my travels, I've heard strange tales about hagravens performing rituals near Falkreath. At the Roadside Ruins I found a mysterious altar, with a cup placed in front. I filled the bowl that promised me power, and my wish was granted when I awoke in a dungeon.",
+        "string": "Auf meinen Reisen habe ich eigenartige Geschichten über Hexenraben gehört, die in der Nähe von Falkenring Rituale durchführen. Bei der Ruine am Straßenrand habe ich einen geheimnisvollen Altar gefunden, vor dem ein Kelch stand. Ich habe die Schale gefüllt, die mir Macht versprach, und mein Wunsch wurde mir erfüllt, als ich in einem Verlies aufgewacht bin."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 50,
+        "type": "QUST NNAM",
+        "original": "Check the Markarth Warrens for further instructions",
+        "string": "Suche in der Wohnkaserne in Markarth nach weiteren Anweisungen."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestPower",
+        "form_id": "[05000A5E]",
+        "index": 99,
+        "type": "QUST CNAM",
+        "original": "I passed out after performing a ritual at a hagraven altar, only to wake up in a dungeon. With no context on where I am or how I got here, I'll need to figure out how to escape.",
+        "string": "Nachdem ich ein Ritual an einem Hexenrabenaltar durchgeführt hatte, wurde ich bewusstlos und wachte in einem Verlies wieder auf. Da ich keine Ahnung habe, wo ich mich befinde oder wie ich hierhergekommen bin, muss ich einen Weg finden, zu entkommen."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Wait for your wish to be granted",
+        "string": "Warte, bis dir dein Wunsch erfüllt wurde."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Steal the ring seal from Cuinanthil",
+        "string": "Stiehl den Siegelring von Cuinanthil."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 89,
+        "type": "QUST CNAM",
+        "original": "I received a letter from a rogue asking me to steal a ring seal from a High Elf in Markarth. Despite informing the High Elf of the rogue's intentions, I decided to kill him rather than ask for a reward.",
+        "string": "Ich habe einen Brief eines Schurken erhalten, der mich gebeten hat, einen Siegelring eines Hochelfen in Markarth zu stehlen. Obwohl ich den Hochelfen von den Absichten des Schurken unterrichtet habe, wollte ich ihn lieber töten, als ihn um eine Belohnung zu bitten."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 130,
+        "type": "QUST NNAM",
+        "original": "Confront Cuinanthil",
+        "string": "Stelle Cuinanthil zur Rede."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 60,
+        "type": "QUST NNAM",
+        "original": "Find a ferryman who will take you to Giant's Tooth",
+        "string": "Finde einen Fährmann, der dich nach Riesenzahn bringt."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 74,
+        "type": "QUST CNAM",
+        "original": "In my travels, I've heard strange tales about hagravens performing rituals near Falkreath. At the Roadside Ruins I found a mysterious altar, with a cup placed in front. I filled the bowl that promised me power, and must sleep for a single night to have my wish granted.",
+        "string": "Auf meinen Reisen habe ich eigenartige Geschichten über Hexenraben gehört, die in der Nähe von Falkenring Rituale durchführen. Bei der Ruine am Straßenrand habe ich einen geheimnisvollen Altar gefunden, vor dem ein Kelch stand. Ich habe die Schale gefüllt, die mir Macht versprach, und muss eine Nacht schlafen, damit mir mein Wunsch erfüllt wird."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 88,
+        "type": "QUST CNAM",
+        "original": "I received a letter from a rogue asking me to steal a ring seal from a High Elf in Markarth. I've stolen the item and found further instructions on the body of a courier in the Warrens. I've sealed the letter and can now return it to the High Elf while posing as a courier.",
+        "string": "Ich habe einen Brief eines Schurken erhalten, der mich gebeten hat, den Siegelring eines Hochelfen in Markarth zu stehlen. Ich habe den Gegenstand gestohlen und bei der Leiche eines Kuriers in der Wohnkaserne weitere Anweisungen gefunden. Ich habe den Brief versiegelt und kann ihn nun dem Hochelfen bringen, während ich mich als Kurier ausgebe."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 100,
+        "type": "QUST CNAM",
+        "original": "I received a letter from a rogue asking me to perform a job Markarth. Using a ring seal I stole from a High Elf, I forged a letter and then posed as a courier to frame his bodyguard. The High Elf then set the guard on his companion.",
+        "string": "Ich habe einen Brief von einem Schurken erhalten, der mich gebeten hat, einen Auftrag in Markarth auszuführen. Mit einem von einem Hochelfen gestohlenen Siegelring habe ich einen Brief gefälscht und mich als Kurier ausgegeben, um seine Leibwache zu täuschen. Danach hat der Hochelf die Wache auf seinen Begleiter angesetzt."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "(Optional) Inform Cuinanthil of the rogue's intentions",
+        "string": "(Optional) Berichte Cuinanthil von den Absichten des Schurken."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 105,
+        "type": "QUST NNAM",
+        "original": "Craft the Ironwood Soup at a cooking station",
+        "string": "Bereite die Eisenholzsuppe an einer Kochstation zu."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestPower",
+        "form_id": "[05000A5E]",
+        "index": 60,
+        "type": "QUST NNAM",
+        "original": "Defeat the champion",
+        "string": "Besiege den Champion."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 82,
+        "type": "QUST CNAM",
+        "original": "At the Roadside Ruins I found a mysterious altar, with a cup placed in front. I filled the bowl that promised me nothing, and received a note from the Temple of Kynareth. I used the information on the note to travel to an island full of mammoth bones, where I found a rare Ironwood Fruit inside a cave.",
+        "string": "Bei der Ruine am Straßenrand habe ich einen geheimnisvollen Altar gefunden, vor dem ein Kelch stand. Ich habe die Schale gefüllt, die mir nichts versprach, und daraufhin eine Notiz aus dem Tempel von Kynareth erhalten. Anhand der darin enthaltenen Informationen bin ich zu einer Insel voller Mammutstoßzähne gereist und habe dort in einer Höhle eine seltene Eisenholzfrucht gefunden."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 76,
+        "type": "QUST CNAM",
+        "original": "At the Roadside Ruins I found a mysterious altar, with a cup placed in front. I filled the bowl that promised me nothing, and received a note from the Temple of Kynareth. I used the information on the note to travel to an island full of mammoth bones, where I found a rare Ironwood Fruit inside a cave. I should craft the Ironwood soup and return to the Temple of Kynareth to save the sick man.",
+        "string": "Bei der Ruine am Straßenrand habe ich einen geheimnisvollen Altar gefunden, vor dem ein Kelch stand. Ich habe die Schale gefüllt, die mir nichts versprach, und daraufhin eine Notiz aus dem Tempel von Kynareth erhalten. Anhand der darin enthaltenen Informationen bin ich zu einer Insel voller Mammutstoßzähne gereist und habe dort in einer Höhle eine seltene Eisenholzfrucht gefunden. Ich sollte die Eisenholzsuppe zubereiten und zum Tempel von Kynareth zurückkehren, um den kranken Mann zu retten."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 94,
+        "type": "QUST CNAM",
+        "original": "At the Roadside Ruins I found a mysterious altar, with a cup placed in front. I filled the bowl that promised me nothing, and received a note from the Temple of Kynareth. I used the information on the note to travel to an island full of mammoth bones, where I found a rare Ironwood Fruit inside a cave. I used it to craft a bowl of Ironwood soup and can now deliver it to a temple priestess.",
+        "string": "Bei der Ruine am Straßenrand habe ich einen geheimnisvollen Altar gefunden, vor dem ein Kelch stand. Ich habe die Schale gefüllt, die mir nichts versprach, und daraufhin eine Notiz aus dem Tempel von Kynareth erhalten. Anhand der darin enthaltenen Informationen bin ich zu einer Insel voller Mammutstoßzähne gereist und habe dort in einer Höhle eine seltene Eisenholzfrucht gefunden. Mit ihr habe ich eine Schale Eisenholzsuppe zubereitet, die ich nun einer Tempelpriesterin bringen kann."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestPower",
+        "form_id": "[05000A5E]",
+        "index": 65,
+        "type": "QUST NNAM",
+        "original": "(Optional) Take the champion's treasures",
+        "string": "(Optional) Nimm den Schatz des Champions."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 300,
+        "type": "QUST NNAM",
+        "original": "Speak to Cuinanthil",
+        "string": "Sprich mit Cuinanthil."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 70,
+        "type": "QUST NNAM",
+        "original": "Seal the letter",
+        "string": "Versiegele den Brief."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 91,
+        "type": "QUST CNAM",
+        "original": "After performing a ritual at the Roadside Ruins, I've woken up to find a letter on my person. The letter was from a mysterious rogue, about a job in Markarth robbing a wealthy High Elf. To make the job simpler, I've crafted a bottle of spiked sujamma to give to the innkeeper.",
+        "string": "Nachdem ich ein Ritual bei der Ruine am Straßenrand durchgeführt habe, bin ich aufgewacht und habe einen Brief eines geheimnisvollen Schurken bei mir gefunden. Der Auftrag drehte sich darum, einen wohlhabenden Hochelfen in Markarth auszurauben. Um die Sache zu vereinfachen, habe ich für den Wirt eine Flasche versetzten Sujamma gebraut."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 560,
+        "type": "QUST NNAM",
+        "original": "Read Cuinanthil's Journal",
+        "string": "Lies Cuinanthils Tagebuch."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 140,
+        "type": "QUST NNAM",
+        "original": "Speak to the rogue",
+        "string": "Sprich mit dem Schurken."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 92,
+        "type": "QUST CNAM",
+        "original": "In my travels, I've heard strange tales about hagravens performing rituals near Falkreath. At the inn I found a journal that detailed the existence of a mysterious altar that grants one of three wishes.",
+        "string": "Auf meinen Reisen habe ich eigenartige Geschichten über Hexenraben gehört, die in der Nähe von Falkenring Rituale durchführen. Im Gasthaus habe ich ein Tagebuch gefunden, in dem etwas über einen geheimnisvollen Altar stand, der einen von drei Wünschen erfüllt."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 84,
+        "type": "QUST CNAM",
+        "original": "I received a letter from a rogue asking me to steal a ring seal from a High Elf in Markarth. I've stolen the item and found further instructions on the body of a courier in the Warrens.",
+        "string": "Ich habe einen Brief eines Schurken erhalten, der mich gebeten hat, den Siegelring eines Hochelfen in Markarth zu stehlen. Ich habe den Gegenstand gestohlen und bei der Leiche eines Kuriers in der Wohnkaserne weitere Anweisungen gefunden."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 85,
+        "type": "QUST CNAM",
+        "original": "In my travels, I've heard strange tales about hagravens performing rituals near Falkreath. I should head to the inn there and see what information I can turn up.",
+        "string": "Auf meinen Reisen habe ich eigenartige Geschichten über Hexenraben gehört, die in der Nähe von Falkenring Rituale durchführen. Ich sollte mich zum Gasthaus begeben und sehen, welche Informationen ich finden kann."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 60,
+        "type": "QUST NNAM",
+        "original": "Read the Rogue's Instructions",
+        "string": "Lies die Anweisungen des Schurken."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 70,
+        "type": "QUST CNAM",
+        "original": "I received a letter from a rogue asking me to perform a job Markarth. Using a ring seal I stole from a High Elf, I forged a letter and then posed as a courier to frame his bodyguard. After the death of his companion, the High Elf retreated to his vault to check on his fortune. I followed him inside and gained access to the vault, where I got involved in a fight with the Altmer. Now that he's dead, I should speak to the rogue.",
+        "string": "Ich habe einen Brief von einem Schurken erhalten, der mich gebeten hat, einen Auftrag in Markarth auszuführen. Mit einem von einem Hochelfen gestohlenen Siegelring habe ich einen Brief gefälscht und mich als Kurier ausgegeben, um seine Leibwache zu täuschen. Nach dem Tod seines Begleiters hat sich der Hochelf in seine Schatzkammer zurückgezogen, um nach seinem Vermögen zu sehen. Ich bin ihm gefolgt und habe Zugang zur Schatzkammer erhalten, wo ich in einen Kampf mit dem Altmer geraten bin. Nachdem dieser nun tot ist, sollte ich mit dem Schurken sprechen."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 69,
+        "type": "QUST CNAM",
+        "original": "After performing a ritual at the Roadside Ruins, I've woken up to find a letter on my person. The letter was from a mysterious rogue, about a job in Markarth robbing a wealthy High Elf.",
+        "string": "Nachdem ich ein Ritual bei der Ruine am Straßenrand durchgeführt habe, bin ich aufgewacht und habe einen Brief eines geheimnisvollen Schurken bei mir gefunden. Der Auftrag drehte sich darum, einen wohlhabenden Hochelfen in Markarth auszurauben."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 150,
+        "type": "QUST NNAM",
+        "original": "Wait an entire day for Rulnik to heal",
+        "string": "Warte einen ganzen Tag, bis Rulnik geheilt ist."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 600,
+        "type": "QUST NNAM",
+        "original": "Raid Cuinanthil's vault",
+        "string": "Plündere Eslafs Schatzkammer."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 1,
+        "type": "QUST NNAM",
+        "original": "(Optional) Mix a bottle of Spiked Sujamma at a cooking station",
+        "string": "(Optional) Mische eine Flasche versetzten Sujamma an einer Kochstation."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestPower",
+        "form_id": "[05000A5E]",
+        "index": 15,
+        "type": "QUST NNAM",
+        "original": "(Optional) Search the dungeon for more information",
+        "string": "(Optional) Suche im Verlies nach weiteren Informationen."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "I received a letter from a rogue asking me to steal a ring seal from a High Elf in Markarth. I've stolen the item and should now head to the Warrens for further instructions.",
+        "string": "Ich habe einen Brief eines Schurken erhalten, der mich gebeten hat, den Siegelring eines Hochelfen in Markarth zu stehlen. Ich habe den Gegenstand gestohlen und sollte mich nun zur Wohnkaserne begeben, um weitere Anweisungen zu bekommen."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestPower",
+        "form_id": "[05000A5E]",
+        "index": 92,
+        "type": "QUST CNAM",
+        "original": "I passed out after performing a ritual at a hagraven altar, only to wake up in a dungeon. Upon walking out of the prison area, I found myself in an arena fighting both man and beast. After finishing off the champion, the other bandits reacted poorly. I should find a way out of here using the champion's doorway.",
+        "string": "Nachdem ich ein Ritual an einem Hexenrabenaltar durchgeführt hatte, wurde ich bewusstlos und wachte in einem Verlies wieder auf. Als ich aus dem Zellenbereich trat, befand ich mich in einer Arena, in der ich gegen Mensch und Bestie kämpfte. Nachdem ich den Champion besiegt hatte, reagierten die anderen Banditen nicht gerade positiv darauf. Ich sollte einen Weg hinaus finden, indem ich den Durchgang des Champions benutze."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 90,
+        "type": "QUST NNAM",
+        "original": "Ask an alchemist about the Ironwood Fruit",
+        "string": "Frage einen Alchemisten nach der Eisenholzfrucht."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "A Dying Wish",
+        "string": "Ein letzter Wunsch"
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 80,
+        "type": "QUST CNAM",
+        "original": "At the Roadside Ruins I found a mysterious altar, with a cup placed in front. I filled the bowl that promised me nothing, and received a note from the Temple of Kynareth. I used the information on the note to travel to an island full of mammoth bones, where I found a rare Ironwood Fruit inside a cave. I should craft the Ironwood soup and return to the Temple of Kynareth to save the sick man.",
+        "string": "Bei der Ruine am Straßenrand habe ich einen geheimnisvollen Altar gefunden, vor dem ein Kelch stand. Ich habe die Schale gefüllt, die mir nichts versprach, und daraufhin eine Notiz aus dem Tempel von Kynareth erhalten. Anhand der darin enthaltenen Informationen bin ich zu einer Insel voller Mammutstoßzähne gereist und habe dort in einer Höhle eine seltene Eisenholzfrucht gefunden. Ich sollte die Eisenholzsuppe zubereiten und zum Tempel von Kynareth zurückkehren, um den kranken Mann zu retten."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 55,
+        "type": "QUST NNAM",
+        "original": "Read the Fisherman's Journal",
+        "string": "Lies das Tagebuch des Fischers."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestPower",
+        "form_id": "[05000A5E]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Defeat the Pit Fighter",
+        "string": "Besiege den Grubenkämpfer."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 110,
+        "type": "QUST NNAM",
+        "original": "(Optional) Assist the guard in killing Inimoro",
+        "string": "(Optional) Hilf der Wache, Inimoro zu töten."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 80,
+        "type": "QUST NNAM",
+        "original": "Return to the mainland with the ingredient",
+        "string": "Kehre mit der Zutat zum Festland zurück."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestPower",
+        "form_id": "[05000A5E]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "The Pit",
+        "string": "Grube"
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 79,
+        "type": "QUST NNAM",
+        "original": "Wait for Cuinanthil to forget you",
+        "string": "Warte, bis Cuinanthil dich vergessen hat."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 109,
+        "type": "QUST CNAM",
+        "original": "In my travels, I've heard strange tales about hagravens performing rituals near Falkreath. At the Roadside Ruins I found a mysterious altar, with a cup placed in front. I filled the bowl that promised me nothing, and now must wait for my boon.",
+        "string": "Auf meinen Reisen habe ich eigenartige Geschichten über Hexenraben gehört, die in der Nähe von Falkenring Rituale durchführen. Bei der Ruine am Straßenrand habe ich einen geheimnisvollen Altar gefunden, vor dem ein Kelch stand. Ich habe die Schale gefüllt, die mir nichts versprach, und muss nun eine Nacht auf meinen Segen warten."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 99,
+        "type": "QUST CNAM",
+        "original": "After performing a ritual at the Roadside Ruins, I've woken up to find a letter on my person. I should read the letter to see what it's about.",
+        "string": "Nachdem ich ein Ritual bei der Ruine am Straßenrand durchgeführt habe, bin ich aufgewacht und habe einen Brief eines geheimnisvollen Schurken bei mir gefunden. Ich sollte den Brief lesen, um herauszufinden, worum es geht."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 93,
+        "type": "QUST CNAM",
+        "original": "In my travels, I've heard strange tales about hagravens performing rituals near Falkreath. At the Roadside Ruins I found a mysterious altar, with a cup placed in front. I filled the bowl that promised me nothing, and left the ruins.  Later I received a letter from a courier, asking for help finding a rare ingredient. I should ask a ferryman if they know how to reach Giant's Tooth.",
+        "string": "Auf meinen Reisen habe ich eigenartige Geschichten über Hexenraben gehört, die in der Nähe von Falkenring Rituale durchführen. Bei der Ruine am Straßenrand habe ich einen geheimnisvollen Altar gefunden, vor dem ein Kelch stand. Ich habe die Schale gefüllt, die mir nichts versprach, und die Ruine verlassen. Später habe ich einen Brief von einem Kurier erhalten, in dem ich darum gebeten wurde, eine seltene Zutat zu finden. Ich sollte einen Fährmann fragen, ob er weiß, wie man nach Riesenzahn gelangt."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 75,
+        "type": "QUST NNAM",
+        "original": "Investigate the area around Giant's Tooth",
+        "string": "Untersuche das Gebiet auf Riesenzahn."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 76,
+        "type": "QUST CNAM",
+        "original": "I received a letter from a thief asking me to perform a job Markarth. However, I've decided to inform the target of the thief's intentions, which resulted in the latter's death. I spoke to the High Elf, who gave me a small reward.",
+        "string": "Ich habe einen Brief von einem Dieb erhalten, der mich gebeten hat, einen Auftrag in Markarth auszuführen. Ich habe jedoch beschlossen, die Zielperson von den Absichten des Diebes zu unterrichten, was zum Tod des Diebs geführt hat. Ich habe mit dem Hochelfen gesprochen und von ihm eine kleine Belohnung bekommen."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 2,
+        "type": "QUST NNAM",
+        "original": "Travel to the Roadside Ruins",
+        "string": "Reise zur Ruine am Straßenrand."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Return to town",
+        "string": "Kehre in die Stadt zurück."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "(Optional) Convince the inn's owners to sell your sujamma",
+        "string": "(Optional) Bring den Besitzer des Gasthauses dazu, deinen Sujamma zu verkaufen."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "I received a letter from a rogue asking me to perform a job Markarth. Using a ring seal I stole from a High Elf, I forged a letter and then posed as a courier to frame his bodyguard. After the death of his companion, the High Elf retreated to his vault to check on his fortune. I followed him inside and gained access to the vault.",
+        "string": "Ich habe einen Brief von einem Schurken erhalten, der mich gebeten hat, einen Auftrag in Markarth auszuführen. Mit einem von einem Hochelfen gestohlenen Siegelring habe ich einen Brief gefälscht und mich als Kurier ausgegeben, um seine Leibwache zu täuschen. Nach dem Tod seines Begleiters hat sich der Hochelf in seine Schatzkammer zurückgezogen, um nach seinem Vermögen zu sehen. Ich bin ihm gefolgt und habe Zugang zur Schatzkammer erhalten."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 550,
+        "type": "QUST NNAM",
+        "original": "Check Cuinanthil's body",
+        "string": "Durchsuche Cuinanthils Leiche."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 110,
+        "type": "QUST CNAM",
+        "original": "I received a letter from a rogue asking me to perform a job Markarth. However, I've decided to inform the target of the rogue's intentions. The target is now heading to the Warrens to confront the rogue.",
+        "string": "Ich habe einen Brief von einem Schurken erhalten, der mich gebeten hat, einen Auftrag in Markarth auszuführen. Ich habe jedoch beschlossen, die Zielperson von den Absichten des Schurken zu unterrichten. Die Person ist nun unterwegs zur Wohnkaserne, um den Schurken zur Rede zu stellen."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 66,
+        "type": "QUST CNAM",
+        "original": "In my travels, I've heard strange tales about hagravens performing rituals near Falkreath. At the Roadside Ruins I found a mysterious altar, with a cup placed in front. I filled the bowl that promised me fortune, and must sleep for a single night to have my wish granted.",
+        "string": "Auf meinen Reisen habe ich eigenartige Geschichten über Hexenraben gehört, die in der Nähe von Falkenring Rituale durchführen. Bei der Ruine am Straßenrand habe ich einen geheimnisvollen Altar gefunden, vor dem ein Kelch stand. Ich habe die Schale gefüllt, die mir Reichtum versprach, und muss eine Nacht schlafen, damit mir mein Wunsch erfüllt wird."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestPower",
+        "form_id": "[05000A5E]",
+        "index": 84,
+        "type": "QUST CNAM",
+        "original": "I passed out after performing a ritual at a hagraven altar, only to wake up in a dungeon. Upon walking out of the prison area, I found myself in an arena fighting both mortals and beasts. After finishing off the first two waves, I must now defeat the arena champion.",
+        "string": "Nachdem ich ein Ritual an einem Hexenrabenaltar durchgeführt hatte, wurde ich bewusstlos und wachte in einem Verlies wieder auf. Als ich aus dem Zellenbereich trat, befand ich mich in einer Arena, in der ich gegen Sterbliche und Bestien kämpfte. Nachdem ich die ersten beiden Wellen erledigt habe, muss ich nun den Arena-Champion besiegen."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 113,
+        "type": "QUST CNAM",
+        "original": "I received a letter from a rogue asking me to perform a job Markarth. Using a ring seal I stole from a High Elf, I forged a letter and then posed as a courier to frame his bodyguard.",
+        "string": "Ich habe einen Brief von einem Schurken erhalten, der mich gebeten hat, einen Auftrag in Markarth auszuführen. Mit einem von einem Hochelfen gestohlenen Siegelring habe ich einen Brief gefälscht und mich als Kurier ausgegeben, um seine Leibwache zu täuschen."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 113,
+        "type": "QUST CNAM",
+        "original": "I received a letter from a rogue asking me to perform a job Markarth. However, I've decided to inform the target of the rogue's intentions, which resulted in the latter's death. I should now speak to the High Elf.",
+        "string": "Ich habe einen Brief von einem Schurken erhalten, der mich gebeten hat, einen Auftrag in Markarth auszuführen. Ich habe jedoch beschlossen, die Zielperson von den Absichten des Schurken zu unterrichten, was zum Tod des Schurken geführt hat. Ich sollte nun mit dem Hochelfen sprechen."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 88,
+        "type": "QUST CNAM",
+        "original": "After performing a ritual at the Roadside Ruins, I've woken up to find a letter on my person. The letter was from a mysterious rogue, about a job in Markarth robbing a wealthy High Elf. To make the job simpler, I've sold a bottle of spiked sujamma to the proprietors of the Silver-Blood Inn which should distract the High Elf's bodyguard.",
+        "string": "Nachdem ich ein Ritual bei der Ruine am Straßenrand durchgeführt habe, bin ich aufgewacht und habe einen Brief eines geheimnisvollen Schurken bei mir gefunden. Der Auftrag drehte sich darum, einen wohlhabenden Hochelfen in Markarth auszurauben. Um die Sache zu vereinfachen, habe ich den Besitzern des Gasthauses Silber-Blut eine Flasche versetzten Sujamma verkauft, der die Leibwache des Hochelfen ablenken dürfte."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestPower",
+        "form_id": "[05000A5E]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Exit the dungeon",
+        "string": "Verlasse das Verlies."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "At the Roadside Ruins I found a mysterious altar, with a cup placed in front. I filled the bowl that promised me nothing, and received a note from the Temple of Kynareth. I used the information on the note to travel to an island full of mammoth bones, where I found a rare Ironwood Fruit inside a cave. I used it to craft a bowl of Ironwood soup and delivered it to a priestess. I should check on the man at the temple to see if it has taken effect.",
+        "string": "Bei der Ruine am Straßenrand habe ich einen geheimnisvollen Altar gefunden, vor dem ein Kelch stand. Ich habe die Schale gefüllt, die mir nichts versprach, und daraufhin eine Notiz aus dem Tempel von Kynareth erhalten. Anhand der darin enthaltenen Informationen bin ich zu einer Insel voller Mammutstoßzähne gereist und habe dort in einer Höhle eine seltene Eisenholzfrucht gefunden. Mit ihr habe ich eine Schale Eisenholzsuppe zubereitet und sie einer Priesterin gebracht. Ich sollte nach dem Mann im Tempel sehen, um herauszufinden, ob die Suppe Wirkung gezeigt hat."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 88,
+        "type": "QUST CNAM",
+        "original": "At the Roadside Ruins I found a mysterious altar, with a cup placed in front. I filled the bowl that promised me nothing, and received a note from the Temple of Kynareth. I used the information on the note to travel to an island full of mammoth bones, where I found a rare Ironwood Fruit inside a cave. I should craft the Ironwood soup and return to the Temple of Kynareth to save the sick man.",
+        "string": "Bei der Ruine am Straßenrand habe ich einen geheimnisvollen Altar gefunden, vor dem ein Kelch stand. Ich habe die Schale gefüllt, die mir nichts versprach, und daraufhin eine Notiz aus dem Tempel von Kynareth erhalten. Anhand der darin enthaltenen Informationen bin ich zu einer Insel voller Mammutstoßzähne gereist und habe dort in einer Höhle eine seltene Eisenholzfrucht gefunden. Ich sollte die Eisenholzsuppe zubereiten und zum Tempel von Kynareth zurückkehren, um den kranken Mann zu retten."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 87,
+        "type": "QUST CNAM",
+        "original": "I received a letter from a rogue asking me to perform a job Markarth, involving a High Elf and his hidden fortune. After settling the matter, I found myself wealthier, just as the altar promised.",
+        "string": "Ich habe einen Brief von einem Schurken erhalten, der mich gebeten hat, einen Auftrag in Markarth auszuführen. Es ging um einen Hochelfen und sein verstecktes Vermögen. Nachdem ich den Auftrag erledigt hatte, war ich wohlhabender, genau wie der Altar es versprochen hatte."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 100,
+        "type": "QUST NNAM",
+        "original": "Read the Note from the Temple of Kynareth",
+        "string": "Lies die Notiz aus dem Tempel von Kynareth."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 110,
+        "type": "QUST NNAM",
+        "original": "Give the Ironwood Soup to the temple priestess",
+        "string": "Gib der Tempelpriesterin die Eisenholzsuppe."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 91,
+        "type": "QUST CNAM",
+        "original": "I received a letter from a rogue asking me to steal a ring seal from a High Elf in Markarth. After assessing the situation, I eventually decided to kill the Elf.",
+        "string": "Ich habe einen Brief eines Schurken erhalten, der mich gebeten hat, den Siegelring eines Hochelfen in Markarth zu stehlen. Nachdem ich die Lage eingeschätzt hatte, beschloss ich, den Elfen zu töten."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 82,
+        "type": "QUST CNAM",
+        "original": "I received a letter from a rogue asking me to perform a job Markarth. Using a ring seal I stole from a High Elf, I forged a letter and then posed as a courier to frame his bodyguard. After the death of his companion, the High Elf retreated to his vault to check on his fortune. I followed him inside and gained access to the vault, where I got involved in a fight with the Altmer. Afterward I spoke to the rogue who handed me a reward.",
+        "string": "Ich habe einen Brief von einem Schurken erhalten, der mich gebeten hat, einen Auftrag in Markarth auszuführen. Mit einem von einem Hochelfen gestohlenen Siegelring habe ich einen Brief gefälscht und mich als Kurier ausgegeben, um seine Leibwache zu täuschen. Nach dem Tod seines Begleiters hat sich der Hochelf in seine Schatzkammer zurückgezogen, um nach seinem Vermögen zu sehen. Ich bin ihm gefolgt und habe Zugang zur Schatzkammer erhalten, wo ich in einen Kampf mit dem Altmer geraten bin. Danach habe ich mit dem Schurken gesprochen und von ihm meine Belohnung erhalten."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestPower",
+        "form_id": "[05000A5E]",
+        "index": 80,
+        "type": "QUST NNAM",
+        "original": "Retrieve your belongings",
+        "string": "Hole dir deine Besitztümer zurück."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 81,
+        "type": "QUST CNAM",
+        "original": "In my travels, I've heard strange tales about hagravens performing rituals near Falkreath. At the Roadside Ruins I found a mysterious altar, with a cup placed in front. I filled the bowl that promised me nothing, and some time later I received a letter from a courier.",
+        "string": "Auf meinen Reisen habe ich eigenartige Geschichten über Hexenraben gehört, die in der Nähe von Falkenring Rituale durchführen. Bei der Ruine am Straßenrand habe ich einen geheimnisvollen Altar gefunden, vor dem ein Kelch stand. Ich habe die Schale gefüllt, die mir nichts versprach, und etwas später einen Brief von einem Kurier erhalten."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 117,
+        "type": "QUST CNAM",
+        "original": "At the Roadside Ruins I found a mysterious altar, with a cup placed in front. I filled the bowl that promised me nothing, and received a note from the Temple of Kynareth. I used the information on the note to travel to an island full of mammoth bones, where I found a rare Ironwood Fruit inside a cave. I used it to craft a bowl of Ironwood soup and delivered it to a priestess, who used it to save the man in question.",
+        "string": "Bei der Ruine am Straßenrand habe ich einen geheimnisvollen Altar gefunden, vor dem ein Kelch stand. Ich habe die Schale gefüllt, die mir nichts versprach, und daraufhin eine Notiz aus dem Tempel von Kynareth erhalten. Anhand der darin enthaltenen Informationen bin ich zu einer Insel voller Mammutstoßzähne gereist und habe dort in einer Höhle eine seltene Eisenholzfrucht gefunden. Mit ihr habe ich eine Schale Eisenholzsuppe zubereitet und einer Priesterin gebracht, die den erwähnten Mann gerettet hat."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 83,
+        "type": "QUST CNAM",
+        "original": "In my travels, I've heard strange tales about hagravens performing rituals near Falkreath. At the Roadside Ruins I found a mysterious altar, with a cup placed in front. I filled the bowl that promised me nothing, and received a note from the Temple of Kynareth. I used the information on the note to travel to an island full of mammoth bones.",
+        "string": "Auf meinen Reisen habe ich eigenartige Geschichten über Hexenraben gehört, die in der Nähe von Falkenring Rituale durchführen. Bei der Ruine am Straßenrand habe ich einen geheimnisvollen Altar gefunden, vor dem ein Kelch stand. Ich habe die Schale gefüllt, die mir nichts versprach, und daraufhin eine Notiz aus dem Tempel von Kynareth erhalten. Anhand der darin enthaltenen Informationen bin ich zu einer Insel voller Mammutstoßzähne gereist."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestPower",
+        "form_id": "[05000A5E]",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Defeat the sabrecats",
+        "string": "Besiege die Säbelzahntiger."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 92,
+        "type": "QUST CNAM",
+        "original": "I received a letter from a rogue asking me to steal a ring seal from a High Elf in Markarth. I've stolen the item and found further instructions on the body of a courier in the Warrens. I'm to seal a letter and return it to the High Elf posing as a courier.",
+        "string": "Ich habe einen Brief eines Schurken erhalten, der mich gebeten hat, den Siegelring eines Hochelfen in Markarth zu stehlen. Ich habe den Gegenstand gestohlen und bei der Leiche eines Kuriers in der Wohnkaserne weitere Anweisungen gefunden. Ich soll den Brief versiegeln und ihn dem Hochelfen bringen, während ich mich als Kurier ausgebe."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 98,
+        "type": "QUST CNAM",
+        "original": "At the Roadside Ruins I found a mysterious altar, with a cup placed in front. I filled the bowl that promised me nothing, and received a note from the Temple of Kynareth. I used the information on the note to travel to an island full of mammoth bones, where I found a rare Ironwood Fruit inside a cave. I used it to craft a bowl of Ironwood soup and delivered it to a priestess. I must now wait an entire day for the cure to take effect.",
+        "string": "Bei der Ruine am Straßenrand habe ich einen geheimnisvollen Altar gefunden, vor dem ein Kelch stand. Ich habe die Schale gefüllt, die mir nichts versprach, und daraufhin eine Notiz aus dem Tempel von Kynareth erhalten. Anhand der darin enthaltenen Informationen bin ich zu einer Insel voller Mammutstoßzähne gereist und habe dort in einer Höhle eine seltene Eisenholzfrucht gefunden. Mit ihr habe ich eine Schale Eisenholzsuppe zubereitet und sie einer Priesterin gebracht. Nun muss ich einen ganzen Tag warten, bis das Heilmittel wirkt."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 96,
+        "type": "QUST CNAM",
+        "original": "In my travels, I've heard strange tales about hagravens performing rituals near Falkreath. At the Roadside Ruins I found a mysterious altar, with a cup placed in front. I filled the bowl that promised me fortune, and my wish was granted in the form of a job.",
+        "string": "Auf meinen Reisen habe ich eigenartige Geschichten über Hexenraben gehört, die in der Nähe von Falkenring Rituale durchführen. Bei der Ruine am Straßenrand habe ich einen geheimnisvollen Altar gefunden, vor dem ein Kelch stand. Ich habe die Schale gefüllt, die mir Reichtum versprach, und mein Wunsch wurde mir in Form eines Auftrags erfüllt."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 8,
+        "type": "QUST NNAM",
+        "original": "Read the Note from the Temple of Kynareth",
+        "string": "Lies die Notiz aus dem Tempel von Kynareth."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 73,
+        "type": "QUST CNAM",
+        "original": "I received a letter from a rogue asking me to perform a job Markarth. However, I've decided to inform the target of the rogue's intentions. I've followed him to the Warrens to see what happens.",
+        "string": "Ich habe einen Brief von einem Schurken erhalten, der mich gebeten hat, einen Auftrag in Markarth auszuführen. Ich habe jedoch beschlossen, die Zielperson von den Absichten des Schurken zu unterrichten. Ich bin ihm zur Wohnkaserne gefolgt, um herauszufinden, was als Nächstes geschieht."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 210,
+        "type": "QUST NNAM",
+        "original": "Read Cuinanthil's Instructions",
+        "string": "Lies Cuinanthils Anweisungen."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 90,
+        "type": "QUST NNAM",
+        "original": "(Optional) Dress in a courier's farm clothes",
+        "string": "(Optional) Verkleide dich als Kurier."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestPower",
+        "form_id": "[05000A5E]",
+        "index": 114,
+        "type": "QUST CNAM",
+        "original": "I passed out after performing a ritual at a hagraven altar, only to wake up in a dungeon. Upon walking out of the prison area, I found myself in an arena fighting both man and beast. After finishing off the champion, I entered the barracks, retrieved my belongings, and escaped the fortress.",
+        "string": "Nachdem ich ein Ritual an einem Hexenrabenaltar durchgeführt hatte, wurde ich bewusstlos und wachte in einem Verlies wieder auf. Als ich aus dem Zellenbereich trat, befand ich mich in einer Arena, in der ich gegen Mensch und Bestie kämpfte. Nachdem ich den Champion besiegt hatte, betrat ich die Kaserne, holte mir meine Besitztümer zurück und entkam aus der Festung."
+    },
+    {
+        "editor_id": "ccKRTSSE001_zQuest",
+        "form_id": "[05000D63]",
+        "index": 97,
+        "type": "QUST CNAM",
+        "original": "In my travels, I've heard strange tales about hagravens performing rituals near Falkreath. At the Roadside Ruins I found a mysterious altar, with a cup placed in front. It seems I can fill one of the altar bowls with the cup's contents to make my wish.",
+        "string": "Auf meinen Reisen habe ich eigenartige Geschichten über Hexenraben gehört, die in der Nähe von Falkenring Rituale durchführen. Bei der Ruine am Straßenrand habe ich einen geheimnisvollen Altar gefunden, vor dem ein Kelch stand. Offenbar kann ich eine der Schalen des Altars mit dem Inhalt des Kelchs füllen, um mir etwas zu wünschen."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestPower",
+        "form_id": "[05000A5E]",
+        "index": 72,
+        "type": "QUST CNAM",
+        "original": "I passed out after performing a ritual at a hagraven altar, only to wake up in a dungeon. After walking out of the prison area, I found myself in an arena face to face with a pit fighter.",
+        "string": "Nachdem ich ein Ritual an einem Hexenrabenaltar durchgeführt hatte, wurde ich bewusstlos und wachte in einem Verlies wieder auf. Als ich aus dem Zellenbereich trat, stand ich einem Grubenkämpfer gegenüber."
+    },
+    {
+        "editor_id": "ccKRTSSE001_QuestFortune",
+        "form_id": "[05000A90]",
+        "index": 73,
+        "type": "QUST CNAM",
+        "original": "I received a letter from a rogue asking me to perform a job Markarth. Using a ring seal I stole from a High Elf, I forged a letter and then posed as a courier to frame his bodyguard. After the death of his companion, the High Elf retreated to his vault to check on his fortune.",
+        "string": "Ich habe einen Brief von einem Schurken erhalten, der mich gebeten hat, einen Auftrag in Markarth auszuführen. Mit einem von einem Hochelfen gestohlenen Siegelring habe ich einen Brief gefälscht und mich als Kurier ausgegeben, um seine Leibwache zu täuschen. Nach dem Tod seines Begleiters hat sich der Hochelf in seine Schatzkammer zurückgezogen, um nach seinem Vermögen zu sehen."
+    },
+    {
+        "editor_id": "ccKRTSSE001_PickpocketBlockerPerk",
+        "form_id": "[05000A0E]",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "No Pickpocket Perk",
+        "string": "Kein Taschendiebstahlstalent"
+    },
+    {
+        "editor_id": "ccKRTSSE001_SoupPerk",
+        "form_id": "[0500080D]",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Soup Perk",
+        "string": "Suppentalent"
+    },
+    {
+        "editor_id": "ccKRTSSE001_CourierPerk",
+        "form_id": "[05000A92]",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Courier Perk",
+        "string": "Kuriertalent"
+    },
+    {
+        "editor_id": "ccKRTSSE001_PickpocketEnhancerPerk",
+        "form_id": "[05000CC2]",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Hidden Pickpocket Perk",
+        "string": "Verborgener-Taschendieb-Talent"
+    },
+    {
+        "editor_id": "ccKRTSSE001_FrozenTuskLocation",
+        "form_id": "[05000F8D]",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "Iron Tusk Cave Location",
+        "string": "Standort der Eisenstoßzahn-Höhle"
+    },
+    {
+        "editor_id": "ccKRTSSE001_PitLocation",
+        "form_id": "[05000F54]",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "The Pit",
+        "string": "Grube"
+    },
+    {
+        "editor_id": "MarkarthWarrensLocation",
+        "form_id": "[0001F30D]",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "The Warrens",
+        "string": "Die Wohnkaserne"
+    },
+    {
+        "editor_id": "ccKRTSSE001_PitBoss",
+        "form_id": "[05000826]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Pit Boss",
+        "string": "Grubenboss"
+    },
+    {
+        "editor_id": "ccKRTSSE001_SwordName",
+        "form_id": "[05000F4D]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Skull-Sabre Greatsword",
+        "string": "Schädel-Säbel-Zweihänder"
+    },
+    {
+        "editor_id": "ccKRTSSE001_SwordName",
+        "form_id": "[05000F4D]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Skull-Sabre Greatsword",
+        "string": "Schädel-Säbel-Zweihänder"
+    },
+    {
+        "editor_id": "ccKRTSSE001_PitBandit",
+        "form_id": "[05000A41]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Pit Bandit",
+        "string": "Grubenbandit"
+    }
+]

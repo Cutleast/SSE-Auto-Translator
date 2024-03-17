@@ -1,0 +1,1338 @@
+[
+    {
+        "editor_id": "ccRMSSSE001FortifyConjurationFFSelf",
+        "form_id": "[0500098A]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fortify Conjuration",
+        "string": "Renfort de conjuration"
+    },
+    {
+        "editor_id": "ccRMSSSE001_SpellAbilityEffect",
+        "form_id": "[05000CAD]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Dummy Fake Spell",
+        "string": "Sort factice"
+    },
+    {
+        "editor_id": "ccRMSSSE001_GhostEffect",
+        "form_id": "[05000CE2]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Summons the ghost of a powerful necromancer.",
+        "string": "Invoque le fantôme d'un puissant nécromancien."
+    },
+    {
+        "editor_id": "ccRMSSSE001_ReanimateSpell",
+        "form_id": "[05000CEA]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reanimate",
+        "string": "Ranimer"
+    },
+    {
+        "editor_id": "ccRMSSSE001FortifyIllusionFFSelf",
+        "form_id": "[05000931]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fortify Illusion",
+        "string": "Renfort d'illusion"
+    },
+    {
+        "editor_id": "ccRMSSSE001FortifyConjurationFFSelf",
+        "form_id": "[0500098A]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Conjuration spells cost <mag>% less to cast.",
+        "string": "Sorts de conjuration coûtent - <mag> %."
+    },
+    {
+        "editor_id": "ccRMSSSE001_ReanimateFFAimed75",
+        "form_id": "[05000D31]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Reanimate a dead body permanently to fight for you.",
+        "string": "Ranime un cadavre de façon permanente afin qu'il se batte à vos côtés."
+    },
+    {
+        "editor_id": "ccRMSSSE001FortifyIllusionFFSelf",
+        "form_id": "[05000931]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Illusion spells cost <mag>% less to cast.",
+        "string": "Sorts d'illusion coûtent - <mag> %."
+    },
+    {
+        "editor_id": "ccRMSSSE001_EnchFortifyConjurationConstantSelf",
+        "form_id": "[05000D5C]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Conjuration spells cost <mag>% less to cast. Damage against the undead increases by <25>%.",
+        "string": "Sorts de conjuration coûtent - <mag> %. Les dégâts contre les morts-vivants augmentent de <25> %."
+    },
+    {
+        "editor_id": "ccRMSSSE001_VaerminaPerkEffect",
+        "form_id": "[05000D07]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fake Effect",
+        "string": "Effet factice"
+    },
+    {
+        "editor_id": "ccRMSSSE001_EnchFortifyConjurationConstantSelf",
+        "form_id": "[05000D5C]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fortify Conjuration",
+        "string": "Renfort de conjuration"
+    },
+    {
+        "editor_id": "ccRMSSSE001_ReanimateFFAimed75",
+        "form_id": "[05000D31]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reanimate",
+        "string": "Ranimer"
+    },
+    {
+        "editor_id": "ccRMSSSE001_GhostEffect",
+        "form_id": "[05000CE2]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Ghost",
+        "string": "Fantôme"
+    },
+    {
+        "editor_id": "ccRMSSSE001_BloodwormHelmEnchantment",
+        "form_id": "[05000D5B]",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Bloodworm Helm Enchantment",
+        "string": "Enchantement du casque de ver de sang"
+    },
+    {
+        "editor_id": "ccRMSSSE001_StaffEnchWorms",
+        "form_id": "[05000D2C]",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Dead Thrall",
+        "string": "Golem zombie"
+    },
+    {
+        "editor_id": "ccRMSSSE001_BearclawEnchantment",
+        "form_id": "[05000D5D]",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Bearclaw Enchantment",
+        "string": "Enchantement de Griffedours"
+    },
+    {
+        "editor_id": "ccRMSSSE001_AltarVaerminaSpell",
+        "form_id": "[05000952]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Blessing of Vaermina",
+        "string": "Bénédiction de Vaermina"
+    },
+    {
+        "editor_id": "ccRMSSSE001_RaiseZombie",
+        "form_id": "[05000CEC]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Necromancer's Spell",
+        "string": "Sort du nécromancien"
+    },
+    {
+        "editor_id": "ccRMSSSE001_SpellAbility",
+        "form_id": "[05000CF6]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": ".",
+        "string": "."
+    },
+    {
+        "editor_id": "ccRMSSSE001AltarTrigger",
+        "form_id": "[05000CC5]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Examine",
+        "string": "Examiner"
+    },
+    {
+        "editor_id": "ccRMSSSE001ShrineOfVaermina",
+        "form_id": "[05000B76]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Shrine of Vaermina",
+        "string": "Autel de Vaermina"
+    },
+    {
+        "editor_id": "ccRMSSSE001_NecroSummonerTrigger",
+        "form_id": "[05000815]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Bone Forge",
+        "string": "Forge osseuse"
+    },
+    {
+        "editor_id": "ccRMSSSE001BFPlacementBoneMealAct",
+        "form_id": "[05000D75]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccRMSSSE001AltarTrigger",
+        "form_id": "[05000CC5]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Mysterious Altar",
+        "string": "Mystérieux autel"
+    },
+    {
+        "editor_id": "ccRMSSSE001BFPlacementSoulHuskAct",
+        "form_id": "[05000D74]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Soul Husk",
+        "string": "Vide d'âme"
+    },
+    {
+        "editor_id": "ccRMSSSE001BFTakeSoulHuskAct",
+        "form_id": "[05000D7F]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "Prendre"
+    },
+    {
+        "editor_id": "ccRMSSSE001BFPlacementFrostSaltsAct",
+        "form_id": "[05000D7D]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Frost Salts",
+        "string": "Sels de givre"
+    },
+    {
+        "editor_id": "ccRMSSSE001BFTakeFrostSaltsAct",
+        "form_id": "[05000D82]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Frost Salts",
+        "string": "Sels de givre"
+    },
+    {
+        "editor_id": "ccRMSSSE001BFTakeSoulGemAct",
+        "form_id": "[05000D81]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Greater Soul Gem",
+        "string": "Gemme spirituelle supérieure"
+    },
+    {
+        "editor_id": "ccRMSSSE001BFTakeHelmetAct",
+        "form_id": "[05000D83]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "Prendre"
+    },
+    {
+        "editor_id": "ccRMSSSE001BFPlacementHelmetAct",
+        "form_id": "[05000D7E]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccRMSSSE001_ConversionAltarTrigger",
+        "form_id": "[05000B71]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Altar of the Revenant",
+        "string": "Autel du Revenant"
+    },
+    {
+        "editor_id": "ccRMSSSE001BFPlacementFrostSaltsAct",
+        "form_id": "[05000D7D]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccRMSSSE001_FlagTrigger",
+        "form_id": "[05000D21]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Examine",
+        "string": "Examiner"
+    },
+    {
+        "editor_id": "ccRMSSSE001BFTakeHelmetAct",
+        "form_id": "[05000D83]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ancient Nord Helmet",
+        "string": "Casque nordique antique"
+    },
+    {
+        "editor_id": "ccRMSSSE001BFPlacementSoulHuskAct",
+        "form_id": "[05000D74]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccRMSSSE001_SoulGemTrig",
+        "form_id": "[05000841]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Use",
+        "string": "Utiliser"
+    },
+    {
+        "editor_id": "ccRMSSSE001BFPlacementSoulGemAct",
+        "form_id": "[05000D7B]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Greater Soul Gem",
+        "string": "Gemme spirituelle supérieure"
+    },
+    {
+        "editor_id": "ccRMSSSE001BFTakeBoneMealAct",
+        "form_id": "[05000D80]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "Prendre"
+    },
+    {
+        "editor_id": "ccRMSSSE001_FlagTrigger",
+        "form_id": "[05000D21]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Flag",
+        "string": "Drapeau"
+    },
+    {
+        "editor_id": "ccRMSSSE001BFPlacementBoneMealAct",
+        "form_id": "[05000D75]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Bone Meal",
+        "string": "Farine d'os"
+    },
+    {
+        "editor_id": "ccRMSSSE001BFPlacementHelmetAct",
+        "form_id": "[05000D7E]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ancient Nord Helmet",
+        "string": "Casque nordique antique"
+    },
+    {
+        "editor_id": "ccRMSSSE001BFPlacementSoulGemAct",
+        "form_id": "[05000D7B]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccRMSSSE001_SoulGemTrig",
+        "form_id": "[05000841]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Soul Gem Holder",
+        "string": "Socle à gemme spirituelle"
+    },
+    {
+        "editor_id": "ccRMSSSE001BFTakeFrostSaltsAct",
+        "form_id": "[05000D82]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "Prendre"
+    },
+    {
+        "editor_id": "ccRMSSSE001BFTakeBoneMealAct",
+        "form_id": "[05000D80]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Bone Meal",
+        "string": "Farine d'os"
+    },
+    {
+        "editor_id": "ccRMSSSE001BFTakeSoulHuskAct",
+        "form_id": "[05000D7F]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Soul Husk",
+        "string": "Vide d'âme"
+    },
+    {
+        "editor_id": "ccRMSSSE001BFTakeSoulGemAct",
+        "form_id": "[05000D81]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "Prendre"
+    },
+    {
+        "editor_id": "ccRMSSSE001_HelmOfOreynBearclaw",
+        "form_id": "[05000D3D]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Helm of Oreyn Bearclaw",
+        "string": "Casque d'Oreyn Griffedours"
+    },
+    {
+        "editor_id": "ccRMSSSE001_ClothesSkeletonHoodUnplayable",
+        "form_id": "[05000903]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Skeleton Hood No Translate",
+        "string": "Skeleton Hood No Translate"
+    },
+    {
+        "editor_id": "ccRMSSSE001_BloodwormHelm",
+        "form_id": "[05000CCF]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Bloodworm Helm",
+        "string": "Casque de ver de sang"
+    },
+    {
+        "editor_id": "ccRMSSSE001_EscapeNote04a",
+        "form_id": "[05000CF7]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Naara's Plea",
+        "string": "Supplique de Naara"
+    },
+    {
+        "editor_id": "ccRMSSSE001_EscapeNote02",
+        "form_id": "[05000CE8]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Hooded Skeleton",
+        "string": "Squelette à capuche"
+    },
+    {
+        "editor_id": "ccRMSSSE001_EscapeNote02",
+        "form_id": "[05000CE8]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nThere's something wedged inside the hooded skeleton, but for whatever reason, I can't seem to raise it. No spell seems to work. There must be a trick to it I can't figure out.\r\n\r\nThe master must have hidden something important inside, but whatever it is will require raising it first to loosen its bones.</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\nIl y a quelque chose d'enfoncé dans le squelette à capuche, mais pour une raison que j'ignore je n'arrive pas à le ranimer. Aucun sort ne semble fonctionner. Il doit sûrement y avoir une astuce que je ne comprends pas.\r\n\r\nLe maître a dû cacher quelque chose d'important à l'intérieur, mais pour le récupérer je dois commencer par le ranimer pour écarter ses os.</font>"
+    },
+    {
+        "editor_id": "ccRMSSSE001_PuzzleHintJournal",
+        "form_id": "[05000CC2]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">My old master was a collector of things. Skeletons, staves, and priceless artifacts. The most prized of which were the helm and staff of Mannimarco himself, the King of Worms.\r\n\r\nThe old master was also a collector of apprentices, which in our trade are even more dangerous than the artifacts. He was aware of my ambition, and where it would end. He knew I would steal his artifacts and kill anyone who stood in my way, himself included.  \r\n\r\nSo like any good necromancer would do, he made sure his trap would ensnare me even beyond the grave.\r\n\r\nThe doors are blocked by some kind of invisible ward, but there must be a way to remove it. The master was nothing if not circumspect, and he would've left himself an out were he to fall victim to his own trap.\r\n\r\nIn fact, I think he aimed to make a game of it. His final words to me were, \"start with the map.\"\r\n\r\nI've tried to make sense of the clue, and have made some progress. The flags seem to represent the torches. I just have to remove the right ones.</font>",
+        "string": "<font face=\"$HandwrittenFont\">Mon ancien maître était collectionneur. De squelettes, de bâtons et d'artefacts inestimables. Ses plus grandes fiertés étaient le heaume et le bâton de Mannimarco, le roi des vers.\r\n\r\nMon vieux maître collectionnait aussi les apprentis, qui s'avèrent encore plus dangereux que les artefacts. Il connaissait mon ambition et savait où elle me mènerait. Il savait que je volerais ses artefacts et tuerais quiconque se mettrait en travers de mon chemin, y compris lui.  \r\n\r\nEn bon nécromancien, il s'est assuré que son piège me lie même dans la tombe.\r\n\r\nLes portes sont bloquées par une sorte de champ invisible, mais il existe forcément un moyen de le désactiver. Le maître était très précautionneux et devait avoir prévu une échappatoire au cas où son propre piège se refermerait sur lui.\r\n\r\nJe pense même qu'il en a fait un jeu. Ses dernières paroles furent : \"commence par la carte\".\r\n\r\nJ'ai essayé d'exploiter l'indice et j'ai progressé. Les drapeaux représenteraient les torches. Je dois simplement retirer les bonnes.</font>"
+    },
+    {
+        "editor_id": "ccRMSSSE001_EscapeNote01",
+        "form_id": "[05000CDE]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Arch Necromancer's First Clue",
+        "string": "Premier indice de l'Archinécromancien"
+    },
+    {
+        "editor_id": "ccRMSSSE001_BoneforgeJournal",
+        "form_id": "[05000D48]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nWhile most necromancers, myself included, prefer to use whole corpses and skeletons, sometimes such supplies are not readily available. The Bone Forge offers an alternative - an altar upon which you may place raw supplies and forge them whole again.\r\n \r\nThe basic recipe to create a skeleton suitable for most menial tasks is as follows:\r\n\r\nOne bowl of bone meal\r\nOne greater soul gem, filled\r\n\r\nOnce you place the materials on the Bone Forge, simply lay your hands on it and your skeleton will appear before you. The Bone Forge can only sustain a single creation at a time, but it will remain with you until destroyed.\r\n\r\nI have found that adding frost salts will create a Boneman - a type of undead not normally found outside of the Soul Cairn. They are sturdier than the average skeleton and make for a good companion to assist in the gathering of, well, supplies.</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\n\r\nBien que la plupart des nécromanciens, moi-même inclus, préfèrent utiliser les cadavres entiers et les squelettes, il faut avouer que ces éléments viennent parfois à manquer. La Forge osseuse propose une alternative : un autel sur lequel on peut placer des matériaux bruts pour les reforger ensemble.\r\n \r\nLa recette de base pour créer un squelette pouvant convenir à toutes fins utiles est la suivante :\r\n\r\nUn bol de farine d'os\r\nUne gemme spirituelle supérieure, remplie\r\n\r\nUne fois ces matériaux placés sur la Forge osseuse, posez simplement vos mains dessus et votre squelette apparaîtra devant vous. La Forge osseuse ne peut maintenir qu'une seule création à la fois, mais elle restera active jusqu'à ce qu'elle soit détruite.\r\n\r\nJ'ai découvert qu'ajouter des sels de givre crée un osseux, un genre de mort-vivant qu'on ne trouve normalement pas à l'extérieur du Cairn de l'âme. Ils sont plus résistants que les squelettes classiques et font de bons compagnons pour assister dans la collecte de... eh bien, de matériaux.\r\n</font>"
+    },
+    {
+        "editor_id": "ccRMSSSE001_ArkayEnemy",
+        "form_id": "[05000CDF]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "King of Worms",
+        "string": "Roi des vers"
+    },
+    {
+        "editor_id": "ccRMSSSE001_EscapeNote04c",
+        "form_id": "[05000D1E]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"36\">\r\n<p align=\"center\">\r\n\r\nOPEN THE DOOR</p></font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"36\">\r\n<p align=\"center\">\r\n\r\nOUVREZ LA PORTE</p></font>"
+    },
+    {
+        "editor_id": "ccRMSSSE001_EscapeNote04a",
+        "form_id": "[05000CF7]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"36\">\r\n<p align=\"center\">\r\n\r\nLET ME OUT</p></font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"36\">\r\n<p align=\"center\">\r\n\r\nLAISSEZ-MOI SORTIR</p></font>"
+    },
+    {
+        "editor_id": "ccRMSSSE001_BoneforgeJournal",
+        "form_id": "[05000D48]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Notes on the Bone Forge",
+        "string": "Notes sur la Forge osseuse"
+    },
+    {
+        "editor_id": "ccRMSSSE001_EscapeNote06",
+        "form_id": "[05000D0C]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Letter to Naara",
+        "string": "Lettre à Naara"
+    },
+    {
+        "editor_id": "ccRMSSSE001_EscapeNote05",
+        "form_id": "[05000D0D]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nIn my dream, I am surrounded by my four apprentices, but they are no longer mortal, but spirits, their souls taking the form of greater gems.\r\n\r\nTo bring them to darkness, one must place them on the Altar of the Revenant, and turn greater to black. Only then will you be free.</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\nDans mon rêve, je suis entouré de mes quatre apprentis. Ce ne sont plus des mortels, mais des esprits, dont l'âme prend la forme de gemmes supérieures.\r\n\r\nPour les éteindre à jamais, il faut les placer sur l'autel du Revenant et leur faire perdre leur couleur. Ce n'est qu'alors que vous serez libre.</font>"
+    },
+    {
+        "editor_id": "ccRMSSSE001_EscapeNote05",
+        "form_id": "[05000D0D]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Arch Necromancer's Final Instructions",
+        "string": "Dernières instructions de l'Archinécromancien"
+    },
+    {
+        "editor_id": "ccRMSSSE001_EscapeNote03",
+        "form_id": "[05000CF8]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Arch Necromancer's Second Clue",
+        "string": "Second indice de l'Archinécromancien"
+    },
+    {
+        "editor_id": "ccRMSSSE001_EscapeNote04b",
+        "form_id": "[05000D1D]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"36\">\r\n<p align=\"center\">\r\n\r\nGET OUT OF MY HEAD</p></font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"36\">\r\n<p align=\"center\">\r\n\r\nSORTEZ DE MA TÊTE</p></font>"
+    },
+    {
+        "editor_id": "ccRMSSSE001_PuzzleHintJournal",
+        "form_id": "[05000CC2]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Naara's Journal",
+        "string": "Journal de Naara"
+    },
+    {
+        "editor_id": "ccRMSSSE001_EscapeNote04b",
+        "form_id": "[05000D1D]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Naara's Plea",
+        "string": "Supplique de Naara"
+    },
+    {
+        "editor_id": "ccRMSSSE001_BearclawJournal",
+        "form_id": "[05000D5F]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">I should have known better than to trust an apprentice to locate the Bloodworm Helm. I described its features, thinking that would be enough. A trollbone skull with an open maw. A necromancer's crown.\r\n\r\nThis skull clearly belongs to a bear. Never mind the enchantments placed upon it are for a warrior. Still, it seems my apprentices have stumbled upon a find nonetheless. The helm is that of Oreyn Bearclaw, the fabled warrior of the Wood Elves.\r\n\r\nPerhaps I will raise a Bosmer, give him the helm, and have him perform the slaying of the witch-serpent Glenhwyfaunva for my amusement.\r\n\r\nAs for the artifacts of Mannimarco, I will have to redouble my search efforts. Perhaps this new girl, Naara, will have better luck finding them. She is green, but ambitious.</font>",
+        "string": "<font face=\"$HandwrittenFont\">Je savais que je n'aurais pas dû faire confiance à un apprenti pour trouver le Casque de ver de sang. J'avais décrit ses caractéristiques, pensant que ce serait suffisant. Un crâne en os de troll avec la gueule ouverte. Une couronne de nécromancien.\r\n\r\nCe crâne appartient clairement à un ours. Sans parler du fait que les enchantements qu'il arbore sont taillés pour un guerrier. Mais bon, il semblerait que mon apprenti ait tout de même fait une belle trouvaille. Ce casque est celui d'Oreyn Griffedours, le légendaire guerrier bosmer.\r\n\r\nPeut-être élèverai-je un Bosmer, lui donnerai le casque et lui demanderai d'accomplir le meurtre de Glenhwyfaunva, la sorcière-serpent, pour m'amuser un peu.\r\n\r\nQuant aux artefacts de Mannimarco, je vais devoir redoubler d'efforts pour les trouver. Peut-être que cette nouvelle fille, Naara, aura plus de chance. Elle débute à peine, mais ne manque pas d'ambition.</font>"
+    },
+    {
+        "editor_id": "ccRMSSSE001_BearclawJournal",
+        "form_id": "[05000D5F]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Helm of Oreyn Bearclaw",
+        "string": "Casque d'Oreyn Griffedours"
+    },
+    {
+        "editor_id": "ccRMSSSE001_EscapeNote03",
+        "form_id": "[05000CF8]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nA man dreams his empty coffers are full of gems. \r\n\r\nA necromancer dreams a similar dream, but his coffers are a different kind, and hold different gems and treasures inside. \r\n\r\nBut to see this dream and retrieve these gems, you must first pray to a Prince for a door.</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\nLes hommes rêvent que leurs coffres vides sont remplis de pierres précieuses. \r\n\r\nLes nécromanciens ont un rêve similaire, mais leurs coffres sont d'un genre différent, et ils abritent d'autres pierres et trésors à l'intérieur. \r\n\r\nMais pour voir ce rêve et retrouver ces gemmes, il faut d'abord prier qu'un prince ouvre une porte.</font>"
+    },
+    {
+        "editor_id": "ccRMSSSE001_EscapeNote01",
+        "form_id": "[05000CDE]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nA mage travels Skyrim, snuffing out the souls of its people along the way. In each place they collect a torch, to represent the light of the dead.\r\n\r\nTheir journey starts by traveling west, to Morthal. From there, they cross the plains south, to Falkreath, and make use of the alchemist's table.\r\n\r\nNext they travel northeast, past the river, and stopped at the Nightgate Inn, where they cooked themselves a meal before snuffing the light there.\r\n\r\nFinally, they head north to Fort Dunstad, where their journey ends.\r\n\r\nOnly when they had gathered the light of four souls did they receive the blessing from the King of Worms. \r\n\r\nTrace their path and let the way forward fall.</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\nUn mage voyage dans Bordeciel, mettant fin aux jours des âmes qu'il croise sur son passage. Dans chaque lieu il collecte une torche, représentant la lumière des morts.\r\n\r\nSon voyage commence en se rendant vers l'ouest, à Morthal. De là, il traverse les plaines au sud jusqu'à Épervine, et se sert de la table de l'alchimiste.\r\n\r\nPuis il se rend au nord-est, franchit la rivière et s'arrête à l'Auberge de la Porte nocturne, où il se prépare un repas avant d'éteindre la lumière.\r\n\r\nEnfin, il se dirige au nord jusqu'à Fort Dunstad, où s'achève son périple.\r\n\r\nSeulement lorsqu'il aura rassemblé la lumière de quatre âmes recevra-t-il la bénédiction du roi des vers. \r\n\r\nSuivez le chemin, et que la voie s'accomplisse</font>"
+    },
+    {
+        "editor_id": "ccRMSSSE001_EscapeNote06",
+        "form_id": "[05000D0C]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nA letter can mean many things. If you think the ones you seek are on this page, you are wrong. \r\n\r\nYour heart is in the right place, but you chose the wrong kind of letter.</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\nUne lettre a de nombreuses significations. Si vous pensez que celles que vous cherchez sont sur cette page, vous vous trompez. \r\n\r\nVotre cœur a vu juste, mais vous avez choisi le mauvais type de lettre.</font>"
+    },
+    {
+        "editor_id": "ccRMSSSE001_EscapeNote04c",
+        "form_id": "[05000D1E]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Naara's Plea",
+        "string": "Supplique de Naara"
+    },
+    {
+        "editor_id": "ccRMSSSE001NecroSummonerContainer",
+        "form_id": "[05000A2B]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Altar Offerings",
+        "string": "Offrandes de l'autel"
+    },
+    {
+        "editor_id": "ccRMSSSE001_ImpDoorExtHoleDoorLoad01",
+        "form_id": "[010030DB]",
+        "index": null,
+        "type": "DOOR FULL",
+        "original": "Wooden Door",
+        "string": "Porte en bois"
+    },
+    {
+        "editor_id": "ccRMSSSE001_CivilWarMapFlag01",
+        "form_id": "[05000C60]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Flag",
+        "string": "Drapeau"
+    },
+    {
+        "editor_id": "ccRMSSSE001_CivilWarMapFlag02",
+        "form_id": "[05000C5E]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Flag",
+        "string": "Drapeau"
+    },
+    {
+        "editor_id": "ccRMSSSE001_StaffofWorms",
+        "form_id": "[05000CF2]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Staff of Worms",
+        "string": "Bâton des vers"
+    },
+    {
+        "editor_id": "ccRMSSSE001_WrathmanSummon",
+        "form_id": "[05000843]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Wrathman",
+        "string": "Coléreux"
+    },
+    {
+        "editor_id": "ccRMSSSE001_Necromancer",
+        "form_id": "[05000CCA]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Naara",
+        "string": "Naara"
+    },
+    {
+        "editor_id": "ccRMSSSE001_Ghost",
+        "form_id": "[05000CE3]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Necromancer",
+        "string": "Nécromancien"
+    },
+    {
+        "editor_id": "ccRMSSSE001_BonemanSummon",
+        "form_id": "[05000863]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Boneman",
+        "string": "Osseux"
+    },
+    {
+        "editor_id": "ccRMSSSE001_SkeletonMage",
+        "form_id": "[050008F3]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Skeleton",
+        "string": "Squelette"
+    },
+    {
+        "editor_id": "ccRMSSSE001_SkeletonWarrior1h2",
+        "form_id": "[05000890]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Skeleton",
+        "string": "Squelette"
+    },
+    {
+        "editor_id": "ccRMSSSE001_MistmanSummon",
+        "form_id": "[05000852]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Mistman",
+        "string": "Brumeux"
+    },
+    {
+        "editor_id": "ccRMSSSE001_Skeleton",
+        "form_id": "[05000CE5]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Skeleton Mage",
+        "string": "Squelette mage"
+    },
+    {
+        "editor_id": "ccRMSSSE001_SkeletonArcher",
+        "form_id": "[05000887]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Skeleton",
+        "string": "Squelette"
+    },
+    {
+        "editor_id": "ccRMSSSE001_Skeleton01Summon",
+        "form_id": "[05000873]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Skeleton",
+        "string": "Squelette"
+    },
+    {
+        "editor_id": "ccRMSSSE001_SkeletonWarrior1h1",
+        "form_id": "[050008D7]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Skeleton",
+        "string": "Squelette"
+    },
+    {
+        "editor_id": "ccRMSSSE001_StrongboxKey",
+        "form_id": "[05000CF9]",
+        "index": null,
+        "type": "KEYM FULL",
+        "original": "Arch Necromancer's Key",
+        "string": "Clé de l'Archinécromancien"
+    },
+    {
+        "editor_id": "ccRMSSSE001_SoulGemGreaterFilled",
+        "form_id": "[05000D09]",
+        "index": null,
+        "type": "SLGM FULL",
+        "original": "Dreamer's Greater Soul Gem",
+        "string": "Gemme spirituelle supérieure du rêveur"
+    },
+    {
+        "editor_id": "ccRMSSSE001_SoulGemGrandFilled",
+        "form_id": "[05000D0A]",
+        "index": null,
+        "type": "SLGM FULL",
+        "original": "Grand Soul Gem",
+        "string": "Gemme spirituelle magistrale"
+    },
+    {
+        "editor_id": "ccRMSSSE001Interior01",
+        "form_id": "[01002FD0]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Gallows Hall",
+        "string": "Salle du gibet"
+    },
+    {
+        "editor_id": "DLC01SoulCairn",
+        "form_id": "[02001408]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Soul Cairn",
+        "string": "Cairn de l'âme"
+    },
+    {
+        "editor_id": "Tamriel",
+        "form_id": "[0000003C]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Bordeciel"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000CFB]",
+        "index": null,
+        "type": "REFR FULL",
+        "original": "Gallows Hall",
+        "string": "Salle du gibet"
+    },
+    {
+        "editor_id": "ccRMSSSE001_Quest",
+        "form_id": "[05000CC4]",
+        "index": 113,
+        "type": "QUST CNAM",
+        "original": "I've heard rumors of necromancer activity in one of the old abandoned forts. I should investigate to see what I can find.",
+        "string": "J'ai entendu parler d'activités de nécromancie dans l'un des anciens forts abandonnés. Je devrais examiner les alentours pour voir ce que je peux trouver."
+    },
+    {
+        "editor_id": "ccRMSSSE001_Quest",
+        "form_id": "[05000CC4]",
+        "index": 45,
+        "type": "QUST NNAM",
+        "original": "Read the fallen spell tome",
+        "string": "Lisez le livre de sorts tombé"
+    },
+    {
+        "editor_id": "ccRMSSSE001_Quest",
+        "form_id": "[05000CC4]",
+        "index": 70,
+        "type": "QUST NNAM",
+        "original": "Search the necromancer's safe",
+        "string": "Fouillez le coffre du nécromancien"
+    },
+    {
+        "editor_id": "ccRMSSSE001_Quest",
+        "form_id": "[05000CC4]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Read Naara's Journal",
+        "string": "Lisez le journal de Naara"
+    },
+    {
+        "editor_id": "ccRMSSSE001_Quest",
+        "form_id": "[05000CC4]",
+        "index": 93,
+        "type": "QUST CNAM",
+        "original": "I've heard rumors of necromancer activity in one of the old abandoned forts. Shortly after entering, however, I was trapped inside. After reading a necromancer's journal, it appears I am trapped inside this room. I must solve a series of clues to escape.",
+        "string": "J'ai entendu parler d'activités de nécromancie dans l'un des anciens forts abandonnés. Juste après mon entrée, je me suis toutefois retrouvé enfermé. Après avoir lu le journal d'un nécromancien, j'ai compris que j'étais piégé dans cette pièce. Je dois résoudre une série d'énigmes pour m'échapper."
+    },
+    {
+        "editor_id": "ccRMSSSE001_Quest",
+        "form_id": "[05000CC4]",
+        "index": 60,
+        "type": "QUST NNAM",
+        "original": "Examine the raised skeleton",
+        "string": "Examinez le squelette ranimé"
+    },
+    {
+        "editor_id": "ccRMSSSE001_Quest",
+        "form_id": "[05000CC4]",
+        "index": 110,
+        "type": "QUST NNAM",
+        "original": "Read the Arch Necromancer's Final Instructions",
+        "string": "Lisez les dernières instructions de l'Archinécromancien"
+    },
+    {
+        "editor_id": "ccRMSSSE001_Quest",
+        "form_id": "[05000CC4]",
+        "index": 50,
+        "type": "QUST NNAM",
+        "original": "Find a use for the staff",
+        "string": "Trouvez comment utiliser le bâton"
+    },
+    {
+        "editor_id": "ccRMSSSE001_Quest",
+        "form_id": "[05000CC4]",
+        "index": 35,
+        "type": "QUST NNAM",
+        "original": "Pick up the torches that trace the mage's path",
+        "string": "Ramassez les torches formant le trajet du mage"
+    },
+    {
+        "editor_id": "ccRMSSSE001_Quest",
+        "form_id": "[05000CC4]",
+        "index": 84,
+        "type": "QUST CNAM",
+        "original": "I've found myself trapped in a necromancer's house, needing to solve a series of clues to escape. After solving a puzzle, I found a staff with a powerful spell which I used to raise a skeleton mage. On his body was a key.",
+        "string": "Je me suis retrouvé piégé dans la demeure d'un nécromancien, à devoir résoudre une série d'énigmes pour m'échapper. Après avoir résolu une énigme, j'ai trouvé un bâton et un puissant sort qui m'ont permis de ranimer le squelette d'un mage. Son corps portait une clé."
+    },
+    {
+        "editor_id": "ccRMSSSE001_Quest",
+        "form_id": "[05000CC4]",
+        "index": 113,
+        "type": "QUST CNAM",
+        "original": "I've found myself trapped in a necromancer's house, needing to solve a series of clues to escape. Needing to enter a dream state to proceed, I prayed to Vaermina and went to sleep. Following the clues, I explored this dream world and found special soul gems left in multiple coffins.",
+        "string": "Je me suis retrouvé piégé dans la demeure d'un nécromancien, à devoir résoudre une série d'énigmes pour m'échapper. Devant entrer dans un monde onirique pour poursuivre, j'ai prié Vaermina et me suis endormi. En suivant les indices, j'ai exploré ce monde onirique et ai trouvé des gemmes spirituelles spéciales déposées dans différents cercueils."
+    },
+    {
+        "editor_id": "ccRMSSSE001_Quest",
+        "form_id": "[05000CC4]",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "Pick up the fallen staff",
+        "string": "Ramassez le bâton"
+    },
+    {
+        "editor_id": "ccRMSSSE001_Quest",
+        "form_id": "[05000CC4]",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Read the Arch Necromancer's First Clue",
+        "string": "Lisez le premier indice de l'Archinécromancien"
+    },
+    {
+        "editor_id": "ccRMSSSE001_Quest",
+        "form_id": "[05000CC4]",
+        "index": 100,
+        "type": "QUST CNAM",
+        "original": "I've found myself trapped in a necromancer's house, needing to solve a series of clues to escape. Needing to enter a dream state to proceed, I prayed to Vaermina and went to sleep. Following the clues, I explored this dream world and found special soul gems left in multiple coffins. After returning to the waking world, I found a note sitting on the altar placed in the middle of the room.",
+        "string": "Je me suis retrouvé piégé dans la demeure d'un nécromancien, à devoir résoudre une série d'énigmes pour m'échapper. Devant entrer dans un monde onirique pour poursuivre, j'ai prié Vaermina et me suis endormi. En suivant les indices, j'ai exploré ce monde onirique et ai trouvé des gemmes spirituelles spéciales déposées dans différents cercueils. Après avoir regagné le monde réel, j'ai trouvé une note posée sur l'autel situé au centre de la pièce."
+    },
+    {
+        "editor_id": "ccRMSSSE001_Quest",
+        "form_id": "[05000CC4]",
+        "index": 90,
+        "type": "QUST NNAM",
+        "original": "Find the gems inside a necromancer's coffers (<Global=ccRMSSSE001_SoulGemGlobal>/3)",
+        "string": "Trouvez les gemmes dans les coffres du nécromancien (<Global=ccRMSSSE001_SoulGemGlobal>/3)"
+    },
+    {
+        "editor_id": "ccRMSSSE001_Quest",
+        "form_id": "[05000CC4]",
+        "index": 87,
+        "type": "QUST CNAM",
+        "original": "I've found myself trapped in a necromancer's house, needing to solve a series of clues to escape. Needing to enter a dream state to proceed, I prayed to Vaermina and went to sleep. According to the clues, I now need to explore this dream world and find special soul gems left in a necromancer's safe.",
+        "string": "Je me suis retrouvé piégé dans la demeure d'un nécromancien, à devoir résoudre une série d'énigmes pour m'échapper. Devant entrer dans un monde onirique pour poursuivre, j'ai prié Vaermina et me suis endormi. D'après les indices, je dois désormais explorer ce monde onirique et trouver les gemmes spirituelles spéciales laissées dans le coffre d'un nécromancien."
+    },
+    {
+        "editor_id": "ccRMSSSE001_Quest",
+        "form_id": "[05000CC4]",
+        "index": 75,
+        "type": "QUST NNAM",
+        "original": "Read the Arch Necromancer's Second Clue",
+        "string": "Lisez le second indice de l'Archinécromancien"
+    },
+    {
+        "editor_id": "ccRMSSSE001_Quest",
+        "form_id": "[05000CC4]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Dreams of the Dead",
+        "string": "Rêves funèbres"
+    },
+    {
+        "editor_id": "ccRMSSSE001_Quest",
+        "form_id": "[05000CC4]",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "I've found myself trapped in a necromancer's house, needing to solve a series of clues to escape. After solving a puzzle, I found a powerful staff which may help me progress further.",
+        "string": "Je me suis retrouvé piégé dans la demeure d'un nécromancien, à devoir résoudre une série d'énigmes pour m'échapper. Après avoir résolu une énigme, j'ai trouvé un puissant bâton qui pourrait m'aider à progresser."
+    },
+    {
+        "editor_id": "ccRMSSSE001_Quest",
+        "form_id": "[05000CC4]",
+        "index": 73,
+        "type": "QUST CNAM",
+        "original": "I've found myself trapped in a necromancer's house. After solving a series of puzzles, I picked up a note sitting on the altar placed in the middle of the room. According to the note, I need to activate the altar using the soul gems I've picked up to free myself from this trap.",
+        "string": "Je me suis retrouvé coincé dans la demeure d'un nécromancien. Après avoir résolu une série d'énigmes, j'ai saisi une note posée sur l'autel situé au centre de la pièce. Elle indiquait que je devais activer l'autel à l'aide des gemmes spirituelles trouvées pour me libérer de ce piège."
+    },
+    {
+        "editor_id": "ccRMSSSE001_Quest",
+        "form_id": "[05000CC4]",
+        "index": 76,
+        "type": "QUST CNAM",
+        "original": "While traveling Skyrim, I found myself trapped in a necromancer's house. After solving a series of puzzles, I found a note sitting on the altar placed in the middle of the room. I activated the altar and the door in front of me opened. I can now make use of the fort as a personal home.",
+        "string": "Lors de mes pérégrinations en Bordeciel, je me suis retrouvé piégé dans la demeure d'un nécromancien. Après avoir résolu une série d'énigmes, j'ai trouvé une note posée sur l'autel situé au centre de la pièce. J'ai activé l'autel et la porte devant moi s'est ouverte. Je peux désormais jouir du fort pour moi seul."
+    },
+    {
+        "editor_id": "ccRMSSSE001_Quest",
+        "form_id": "[05000CC4]",
+        "index": 120,
+        "type": "QUST NNAM",
+        "original": "Use the Dreamer's Greater Soul Gems on the altar",
+        "string": "Utilisez les gemmes spirituelles supérieures du rêveur sur l'autel"
+    },
+    {
+        "editor_id": "ccRMSSSE001_Quest",
+        "form_id": "[05000CC4]",
+        "index": 88,
+        "type": "QUST CNAM",
+        "original": "I've heard rumors of necromancer activity in one of the old abandoned forts. Shortly after entering, however, I was trapped inside. After reading a necromancer's journal, it appears I am trapped inside this room. I must solve a series of clues to escape.",
+        "string": "J'ai entendu parler d'activités de nécromancie dans l'un des anciens forts abandonnés. Juste après mon entrée, je me suis toutefois retrouvé enfermé. Après avoir lu le journal d'un nécromancien, j'ai compris que j'étais piégé dans cette pièce. Je dois résoudre une série d'énigmes pour m'échapper."
+    },
+    {
+        "editor_id": "ccRMSSSE001_TorchNames",
+        "form_id": "[05000D3B]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Torch Names",
+        "string": "Noms des torches"
+    },
+    {
+        "editor_id": "ccRMSSSE001_Quest",
+        "form_id": "[05000CC4]",
+        "index": 115,
+        "type": "QUST NNAM",
+        "original": "Find the last Dreamer's Soul Gem",
+        "string": "Trouvez la dernière gemme spirituelle du rêveur"
+    },
+    {
+        "editor_id": "ccRMSSSE001_Quest",
+        "form_id": "[05000CC4]",
+        "index": 107,
+        "type": "QUST CNAM",
+        "original": "I've found myself trapped in a necromancer's house, needing to solve a series of clues to escape. After solving a puzzle, I found a staff with a powerful spell which I used to raise a skeleton mage. On his body was a key to a nearby safe. Inside the safe was another clue.",
+        "string": "Je me suis retrouvé piégé dans la demeure d'un nécromancien, à devoir résoudre une série d'énigmes pour m'échapper. Après avoir résolu une énigme, j'ai trouvé un bâton et un puissant sort qui m'ont permis de ranimer le squelette d'un mage. Il portait sur lui la clé d'un coffre voisin. Le coffre contenait un nouvel indice."
+    },
+    {
+        "editor_id": "ccRMSSSE001_Quest",
+        "form_id": "[05000CC4]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Investigate the abandoned fort",
+        "string": "Examinez le fort abandonné"
+    },
+    {
+        "editor_id": "ccRMSSSE001_Quest",
+        "form_id": "[05000CC4]",
+        "index": 62,
+        "type": "QUST CNAM",
+        "original": "I've found myself trapped in a necromancer's house, needing to solve a series of clues to escape. After solving a puzzle, I found a staff with a powerful spell which I used to raise a skeleton mage. On his body was a key to a nearby safe.",
+        "string": "Je me suis retrouvé piégé dans la demeure d'un nécromancien, à devoir résoudre une série d'énigmes pour m'échapper. Après avoir résolu une énigme, j'ai trouvé un bâton et un puissant sort qui m'ont permis de ranimer le squelette d'un mage. Il portait sur lui la clé d'un coffre voisin."
+    },
+    {
+        "editor_id": "ccRMSSSE001_Quest",
+        "form_id": "[05000CC4]",
+        "index": 84,
+        "type": "QUST CNAM",
+        "original": "I've heard rumors of necromancer activity in one of the old abandoned forts. Shortly after entering, however, I was trapped inside. A nearby necromancer's journal might provide more clues.",
+        "string": "J'ai entendu parler d'activités de nécromancie dans l'un des anciens forts abandonnés. Juste après mon entrée, je me suis toutefois retrouvé enfermé. Le journal d'un nécromancien à proximité pourrait fournir plus d'indices."
+    },
+    {
+        "editor_id": "ccRMSSSE001_Quest",
+        "form_id": "[05000CC4]",
+        "index": 92,
+        "type": "QUST CNAM",
+        "original": "I've found myself trapped in a necromancer's house, needing to solve a series of clues to escape. After solving a puzzle, I found a staff with a powerful spell which I used to raise a skeleton mage. On his body was a key to a nearby safe.",
+        "string": "Je me suis retrouvé piégé dans la demeure d'un nécromancien, à devoir résoudre une série d'énigmes pour m'échapper. Après avoir résolu une énigme, j'ai trouvé un bâton et un puissant sort qui m'ont permis de ranimer le squelette d'un mage. Il portait sur lui la clé d'un coffre voisin."
+    },
+    {
+        "editor_id": "ccRMSSSE001_Quest",
+        "form_id": "[05000CC4]",
+        "index": 100,
+        "type": "QUST NNAM",
+        "original": "Exit the dream",
+        "string": "Quittez le rêve"
+    },
+    {
+        "editor_id": "ccRMSSSE001_Quest",
+        "form_id": "[05000CC4]",
+        "index": 80,
+        "type": "QUST NNAM",
+        "original": "Find a way to the dream world",
+        "string": "Trouvez un moyen d'accéder au monde onirique"
+    },
+    {
+        "editor_id": "ccRMSSSE001_SpellAbilityPerk",
+        "form_id": "[05000D02]",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Fake Ability",
+        "string": "Capacité factice"
+    },
+    {
+        "editor_id": "ccRMSSSE001_VaerminaSleepPerk",
+        "form_id": "[05000D08]",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Fake Perk",
+        "string": "Atout factice"
+    },
+    {
+        "editor_id": "ccRMSSSE001_HouseExtLocation",
+        "form_id": "[050009B2]",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "Gallows Hall",
+        "string": "Salle du gibet"
+    },
+    {
+        "editor_id": "ccRMSSSE001_HouseIntLocation",
+        "form_id": "[050009B1]",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "Gallows Hall",
+        "string": "Salle du gibet"
+    },
+    {
+        "editor_id": "ccRMSSSE001_BoneForgeNoItemBoneMeal",
+        "form_id": "[05000D77]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You don't have any bone meal.",
+        "string": "Vous n'avez pas de farine d'os."
+    },
+    {
+        "editor_id": "ccRMSSSE001_DisplayName01HELGENDUPLICATE001",
+        "form_id": "[05000D33]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Torch of Helgen",
+        "string": "Torche d'Helgen"
+    },
+    {
+        "editor_id": "ccRMSSSE001_DisplayName04FORTDUNSTADDUPLICATE001",
+        "form_id": "[05000D36]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Torch of Fort Dunstad",
+        "string": "Torche de Fort Dunstad"
+    },
+    {
+        "editor_id": "ccRMSSSE001_SoulGemConverterAltar",
+        "form_id": "[05000B72]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You must place a Greater or Grand Soul Gem in each holder before performing the ritual.",
+        "string": "Vous devez placer une gemme supérieure dans chaque socle avant d'effectuer le rituel."
+    },
+    {
+        "editor_id": "ccRMSSSE001_SoulGemConverterAltar",
+        "form_id": "[05000B72]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Altar of the Revenant Moon",
+        "string": "Autel de la lune du Revenant"
+    },
+    {
+        "editor_id": "ccRMSSSE001_DisplayName06RORIKSTEAD",
+        "form_id": "[05000D2A]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Rorikstead",
+        "string": "Rorikbourg"
+    },
+    {
+        "editor_id": "ccRMSSSE001_SoulGemPromptBoxQUEST",
+        "form_id": "[05000D11]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Soul Gem Holder",
+        "string": "Socle à gemme spirituelle"
+    },
+    {
+        "editor_id": "ccRMSSSE001_DisplayName08FALKREATH",
+        "form_id": "[05000D27]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Falkreath",
+        "string": "Épervine"
+    },
+    {
+        "editor_id": "ccRMSSSE001_SoulGemPromptBoxQUEST",
+        "form_id": "[05000D11]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Greater or Grand Soul Gems can be placed in the holder.",
+        "string": "Vous pouvez placer dans le socle les gemmes supérieures et magistrales."
+    },
+    {
+        "editor_id": "ccRMSSSE001_BoneForgeNoItemSoulHusk",
+        "form_id": "[05000D76]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You don't have any soul husks.",
+        "string": "Vous n'avez pas de vide d'âme."
+    },
+    {
+        "editor_id": "ccRMSSSE001_DisplayName03NIGHTGATEDUPLICATE001",
+        "form_id": "[05000D35]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Torch of the Nightgate Inn",
+        "string": "Torche de la Porte nocturne"
+    },
+    {
+        "editor_id": "ccRMSSSE001_DisplayName08FALKREATHDUPLICATE001",
+        "form_id": "[05000D3A]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Torch of Falkreath",
+        "string": "Torche d'Épervine"
+    },
+    {
+        "editor_id": "ccRMSSSE001_DisplayName05MORTHALDUPLICATE001",
+        "form_id": "[05000D37]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Torch of Morthal",
+        "string": "Torche de Morthal"
+    },
+    {
+        "editor_id": "ccRMSSSE001_SoulGemPromptBoxQUEST",
+        "form_id": "[05000D11]",
+        "index": 1,
+        "type": "MESG ITXT",
+        "original": "Do Nothing",
+        "string": "Ne rien faire"
+    },
+    {
+        "editor_id": "ccRMSSSE001_SoulGemPromptBox",
+        "form_id": "[05000A97]",
+        "index": 0,
+        "type": "MESG ITXT",
+        "original": "Place Soul Gem",
+        "string": "Placer la gemme spirituelle"
+    },
+    {
+        "editor_id": "ccRMSSSE001_BoneForgeNoItemFrostSalts",
+        "form_id": "[05000D79]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You don't have any frost salts.",
+        "string": "Vous n'avez pas de sels de givre."
+    },
+    {
+        "editor_id": "ccRMSSSE001_SoulGemPromptBox",
+        "form_id": "[05000A97]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Greater or Grand Soul Gems can be placed in the holder.",
+        "string": "Vous pouvez placer dans le socle les gemmes supérieures et magistrales."
+    },
+    {
+        "editor_id": "ccRMSSSE001_DisplayName05MORTHAL",
+        "form_id": "[05000D26]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Morthal",
+        "string": "Morthal"
+    },
+    {
+        "editor_id": "ccRMSSSE001_BoneForgeNoItemHelmet",
+        "form_id": "[05000D7A]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You don't have an ancient Nord helmet.",
+        "string": "Vous n'avez pas de casque nordique antique."
+    },
+    {
+        "editor_id": "ccRMSSSE001_BoneForgeNoItemSoulGem",
+        "form_id": "[05000D78]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You don't have any filled greater soul gems.",
+        "string": "Vous n'avez pas de gemmes supérieures pleines."
+    },
+    {
+        "editor_id": "ccRMSSSE001_DisplayName02VALTHEIM",
+        "form_id": "[05000D28]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Valtheim Towers",
+        "string": "Tours de Valtheim"
+    },
+    {
+        "editor_id": "ccRMSSSE001_DisplayName07FORTSUNGARDDUPLICATE001",
+        "form_id": "[05000D39]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Torch of Fort Sungard",
+        "string": "Torche de Fort Gardesol"
+    },
+    {
+        "editor_id": "ccRMSSSE001_SoulGemPromptBox",
+        "form_id": "[05000A97]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Soul Gem Holder",
+        "string": "Socle à gemme spirituelle"
+    },
+    {
+        "editor_id": "ccRMSSSE001_AltarVaerminaMsg",
+        "form_id": "[05000BD0]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Blessing of Vaermina added",
+        "string": "Bénédiction de Vaermina ajoutée"
+    },
+    {
+        "editor_id": "ccRMSSSE001_DisplayName04FORTDUNSTAD",
+        "form_id": "[05000D29]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Fort Dunstad",
+        "string": "Fort Dunstad"
+    },
+    {
+        "editor_id": "ccRMSSSE001_DisplayName03NIGHTGATE",
+        "form_id": "[05000D25]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Nightgate Inn",
+        "string": "Auberge de la Porte nocturne"
+    },
+    {
+        "editor_id": "ccRMSSSE001_DisplayName01HELGEN",
+        "form_id": "[05000D24]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Helgen",
+        "string": "Helgen"
+    },
+    {
+        "editor_id": "ccRMSSSE001_SoulGemPromptBox",
+        "form_id": "[05000A97]",
+        "index": 1,
+        "type": "MESG ITXT",
+        "original": "Do Nothing",
+        "string": "Ne rien faire"
+    },
+    {
+        "editor_id": "ccRMSSSE001_HolderFilled",
+        "form_id": "[05000A32]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "A Soul Gem has already been placed.",
+        "string": "Une gemme spirituelle a déjà été placée."
+    },
+    {
+        "editor_id": "ccRMSSSE001_DisplayName06RORIKSTEADDUPLICATE001",
+        "form_id": "[05000D38]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Torch of Rorikstead",
+        "string": "Torche de Rorikbourg"
+    },
+    {
+        "editor_id": "ccRMSSSE001_BoneForgeNoIngredients",
+        "form_id": "[05000D73]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "There is nothing placed on the Bone Forge.",
+        "string": "La Forge osseuse ne contient rien."
+    },
+    {
+        "editor_id": "ccRMSSSE001_DisplayName07FORTSUNGARD",
+        "form_id": "[05000D2B]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Fort Sungard",
+        "string": "Fort Gardesol"
+    },
+    {
+        "editor_id": "ccRMSSSE001_SoulGemPromptBoxQUEST",
+        "form_id": "[05000D11]",
+        "index": 0,
+        "type": "MESG ITXT",
+        "original": "Place Soul Gem",
+        "string": "Placer la gemme spirituelle"
+    },
+    {
+        "editor_id": "ccRMSSSE001_DisplayName02VALTHEIMDUPLICATE001",
+        "form_id": "[05000D34]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Torch of the Valtheim Towers",
+        "string": "Torche des Tours de Valtheim"
+    }
+]

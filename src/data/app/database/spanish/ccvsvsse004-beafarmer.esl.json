@@ -1,0 +1,1562 @@
+[
+    {
+        "editor_id": "ccVSVSSE004_MGEF_GhostDeath",
+        "form_id": "[05000811]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Ghost Death FX",
+        "string": "Efecto de muerte fantasma"
+    },
+    {
+        "editor_id": "ccVSVSSE004_AB_GhostDeathFX",
+        "form_id": "[05000812]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Ghost Death FX",
+        "string": "Efecto de muerte fantasma"
+    },
+    {
+        "editor_id": "ccVSVSSE004_ACT_ToySwordTrigger",
+        "form_id": "[05000813]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Rin's Sword",
+        "string": "Espada de Rin"
+    },
+    {
+        "editor_id": "ccVSVSSE004_ACT_ToySwordTrigger",
+        "form_id": "[05000813]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccVSVSSE004_ACT_ShrineChoose",
+        "form_id": "[0500086D]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Shrine",
+        "string": "Capilla"
+    },
+    {
+        "editor_id": "ccVSVSSE004_ACT_PlanterSoil",
+        "form_id": "[0500086E]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Fertile Soil",
+        "string": "Tierra fértil"
+    },
+    {
+        "editor_id": "ccVSVSSE004_ACT_ShrineChoose",
+        "form_id": "[0500086D]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Choose",
+        "string": "Elegir"
+    },
+    {
+        "editor_id": "ccVSVSSE004_ExtFeat_CraftingArea",
+        "form_id": "[05000872]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Blacksmithing Workshop",
+        "string": "Taller de herrería"
+    },
+    {
+        "editor_id": "ccVSVSSE004_ExtFeat_Windmill",
+        "form_id": "[05000875]",
+        "index": null,
+        "type": "ARMO DESC",
+        "original": "Upgrades the silo into a windmill and adds a grain mill for turning wheat into flour or straw.",
+        "string": "Mejora el silo a molino, y añade una molienda para convertir el trigo en harina o paja."
+    },
+    {
+        "editor_id": "ccVSVSSE004_ExtFeat_ExtDeco",
+        "form_id": "[05000873]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Exterior Decoration",
+        "string": "Decoración de exterior"
+    },
+    {
+        "editor_id": "ccVSVSSE004_ExtFeat_AnimalPen",
+        "form_id": "[0500086F]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Animal Pens",
+        "string": "Corrales para animales"
+    },
+    {
+        "editor_id": "ccVSVSSE004_ExtFeat_Bunkhouse",
+        "form_id": "[05000871]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Farmhand Bunkhouse",
+        "string": "Albergue para trabajadores"
+    },
+    {
+        "editor_id": "ccVSVSSE004_ExtFeat_Apiary",
+        "form_id": "[05000870]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Apiary",
+        "string": "Colmena"
+    },
+    {
+        "editor_id": "ccVSVSSE004_ExtFeat_CraftingArea",
+        "form_id": "[05000872]",
+        "index": null,
+        "type": "ARMO DESC",
+        "original": "Builds a blacksmithing workshop. Includes an anvil, grindstone, armor workbench, tanning rack, and smelter. ",
+        "string": "Construye un taller de herrería. Este incluye un yunque, una piedra de afilar, un banco de trabajo para armaduras, un soporte para curtir pieles y un horno de fundición. "
+    },
+    {
+        "editor_id": "ccVSVSSE004_ExtFeat_AnimalPen",
+        "form_id": "[0500086F]",
+        "index": null,
+        "type": "ARMO DESC",
+        "original": "Builds animal pens. Allows cows, goats, and chickens to be purchased for the farm. ",
+        "string": "Construye corrales para animales. Permite comprar vacas, cabras y pollos para la granja. "
+    },
+    {
+        "editor_id": "ccVSVSSE004_ExtFeat_Windmill",
+        "form_id": "[05000875]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Windmill",
+        "string": "Molino"
+    },
+    {
+        "editor_id": "ccVSVSSE004_ExtFeat_Apiary",
+        "form_id": "[05000870]",
+        "index": null,
+        "type": "ARMO DESC",
+        "original": "Builds 2 apiaries that produce bees, honeycomb, and honey. ",
+        "string": "Construye dos colmenas, que producen abejas, panales y miel. "
+    },
+    {
+        "editor_id": "ccVSVSSE004_ExtFeat_Stable",
+        "form_id": "[05000874]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Stable",
+        "string": "Establo"
+    },
+    {
+        "editor_id": "ccVSVSSE004_ExtFeat_ExtDeco",
+        "form_id": "[05000873]",
+        "index": null,
+        "type": "ARMO DESC",
+        "original": "Builds a well and planter boxes. Also adds exterior furniture and decorations to the farmhouse.",
+        "string": "Construye un pozo y maceteros. También añade muebles y decoraciones de exterior a la granja."
+    },
+    {
+        "editor_id": "ccVSVSSE004_ExtFeat_Stable",
+        "form_id": "[05000874]",
+        "index": null,
+        "type": "ARMO DESC",
+        "original": "Builds a stable. Allows a horse to be purchased for the farm. ",
+        "string": "Construye un establo. Permite comprar un caballo para la granja. "
+    },
+    {
+        "editor_id": "ccVSVSSE004_ExtFeat_Bunkhouse",
+        "form_id": "[05000871]",
+        "index": null,
+        "type": "ARMO DESC",
+        "original": "Builds a cottage for your hired help. Increases the productivity of the farm. ",
+        "string": "Construye una casa de campo para tu mano de obra. Aumenta la productividad de la granja. "
+    },
+    {
+        "editor_id": "ccVSVSSE004_BOOK_JournalHusband",
+        "form_id": "[05000817]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\"><b>14th of First Seed</b>\r\n\r\nToday's the first day of our new lives. I bought a sizable piece of land with a run-down farmhouse for dirt cheap just outside of Rorikstead. No one else wanted it, on account of how rocky it is. Too many boulders, the other men said. But <Alias=Wife> and I have strong backs and willing hearts; we'll get those boulders out, and turn this fertile land into a plantation they could only dream of. \r\n\r\nThis will be the perfect place to raise our little <Alias=GhostChild>.\r\n[pagebreak]\r\n<b>21st of Second Seed</b>\r\n\r\nLong day. Hand hurts almost too much to write. Farmhouse is repaired, and the first plants are in the ground. Feels good. We did it. <Alias=Wife> kissed me tonight like she did when we were first married. Her eyes are calling me. \r\n[pagebreak]\r\n<b>1st of Sun's Height</b>\r\n\r\nWe harvested our first crops today. It wasn't much, but it's a start. When I watched the sun's rays first break over the horizon on our fields today, I knew what to name this place - <Alias=FarmLocation>, after Akatosh's glorious light. Soon, it will be an inheritence worthy of our son. Just a bit longer, I know it.\r\n[pagebreak]\r\n<b>23rd of Frostfall</b>\r\n\r\nMy heart is troubled. <Alias=GhostChild> is fast growing into a strapping young boy, though he spends too much time playing with that wooden sword of his and dreaming of running off to join the Legion. \r\n\r\nBut my dear wife, <Alias=Wife>... her strangeness worries me. Sometimes she'll disappear for hours at a time, and then turn up in the house as though she'd been there all along. I often see her carrying a basket full of strange dark flowers, and she won't tell me what they are or where she got them. And last winter, when <Alias=GhostChild> fell ill with fever, <Alias=Wife> produced a small black bottle from who knows where and poured who knows what down his throat... only a few minutes later, the fever was gone. <Alias=Wife> refused to tell me what was in the bottle, or where she got it. I was so happy that she saved our little boy, of course, but...\r\n\r\nMara preserve me, but I'm afraid that my wife is a daedra worshipper, or a witch.\r\n[pagebreak]\r\n<b>16th of Mid Year</b>\r\n\r\n<Alias=GhostChild> has been missing for three days. My little boy.\r\n\r\nI've searched everywhere, but there's no trace of him. Even his favorite toy sword is missing. What if wolves got him? Or brigands snatched him away? \r\n\r\n<Alias=Wife> has been watching me. I don't like the look in her eyes. And she hasn't cried at all. What kind of mother doesn't cry when her child is missing? \r\n\r\nWhat if-\r\nI dare not even put the thought to paper. It's unthinkable. \r\n[pagebreak]\r\nI found it. I found <Alias=Wife>'s secret. This is the place she's been disappearing to. The potions, the plants, the books... such evil and unnatural things I found down there. Divines help me, my wife is a witch.\r\n\r\nI didn't want to open her foul books, but I had to know, I had to-\r\n\r\nDeadly Nightshade. That's what the plant is called, the one I saw her sneaking around with. She grows it everywhere in this hidden place.\r\n\r\nShe must have poisoned my son. I've seen the sneer on her face, the laughter in her eyes as she watched me tearing apart the farm looking for him. She was mocking me. \r\n\r\nI've never felt rage like this. I'm shaking with it, sweating with it. \r\nI know exactly what I've got to do. My son's spirit whispers to me, demanding vengeance. \r\n\r\nI keep an axe by the door for dealing with wild animals. It will do for dealing with a witch as well. \r\n</font>",
+        "string": "<font face=\"$HandwrittenFont\"><b>14 de Primera semilla</b>\r\n\r\nHoy es el primer día de nuestra nueva vida. He comprado un terreno de buen tamaño con una granja abandonada a un precio de risa, justo a las afueras de Paraje de Rorik. Nadie más lo quería porque el terreno es muy rocoso. \"Demasiados peñascos\", decían los demás. Pero <Alias=Wife> y yo tenemos la espalda fuerte y el corazón decidido. Retiraremos los peñascos y convertiremos esta tierra fértil en una plantación como ellos solo han podido soñar.\r\n\r\nSerá el lugar perfecto para criar al pequeño <Alias=GhostChild>.\r\n[pagebreak]\r\n<b>21 de Segunda semilla</b>\r\n\r\nUn día largo. Casi no puedo escribir con el dolor de cabeza. La granja está reparada, y ya hemos plantado las primeras plantas. Es una sensación muy agradable. Lo hemos conseguido. <Alias=Wife> me ha besado esta noche como cuando éramos recién casados. Sus ojos me llaman. \r\n[pagebreak]\r\n<b>1 de Culminación solar</b>\r\n\r\nHoy hemos recogido la primera cosecha. No era gran cosa, pero por algo se empieza. Al ver hoy los rayos de sol aparecer sobre el horizonte en nuestros campos, se me ocurrió el nombre para este lugar: <Alias=FarmLocation>, por la gloriosa luz de Akatosh. Pronto se convertirá en algo digno de que nuestro hijo lo herede. Ya falta poco, lo sé.\r\n[pagebreak]\r\n<b>23 de Helada</b>\r\n\r\nUn temor me atenaza el corazón. <Alias=GhostChild> se está convirtiendo rápidamente en un muchacho robusto, aunque pasa demasiado tiempo jugando con esa espada de madera que tiene y soñando con huir para alistarse a la Legión.\r\n\r\nPero mi amada esposa, <Alias=Wife>... Me preocupa lo rara que está. A veces desaparece durante horas, y luego aparece en casa como si no se hubiese movido de ella. Suelo verla llevar una cesta llena de unas flores oscuras muy extrañas, y no quiere decirme lo que son, ni de dónde las ha sacado. El invierno pasado, cuando a <Alias=GhostChild> le entró la fiebre, <Alias=Wife> sacó un botecito negro, a saber de dónde, y le hizo tragar unas gotas de algo... Y al cabo de unos minutos se le había pasado la fiebre. <Alias=Wife> se negó a decirme qué había en el bote, ni de dónde lo había sacado. Por supuesto, estaba muy contento de que hubiese salvado a nuestro hijo, pero...\r\n\r\nQue Mara se apiade de mí, me temo que mi mujer es adoradora de los daedra, o bruja.\r\n[pagebreak]\r\n<b>16 de Mitad de año</b>\r\n\r\n<Alias=GhostChild> lleva tres días desaparecido. Mi pequeño.\r\n\r\nHe buscado por todas partes, pero no hay ni rastro de él. No soy capaz de encontrar ni su espada favorita. ¿Y si lo han matado los lobos? ¿O se lo han llevado unos bandidos? \r\n\r\n<Alias=Wife> me ha estado contemplando. No me gusta esa mirada. Y no ha llorado nada. ¿Qué clase de madre no llora cuando desaparece su hijo?\r\n\r\n¿Y si...?\r\nNo me atrevo ni a ponerlo por escrito. Es algo impensable.\r\n[pagebreak]\r\nLo he encontrado. He dado con el secreto de <Alias=Wife>. Aquí es adonde iba cuando desaparecía. Las pociones, las plantas, los libros... He encontrado cosas malvadas y antinaturales ahí abajo. Que los Divinos tengan piedad de mí, mi mujer es una bruja.\r\n\r\nNo quería abrir sus libros inmundos, pero tenía que saberlo, tenía que...\r\n\r\nBelladama. Así es como se llama la planta, esa que llevaba siempre a escondidas. En este lugar oculto crece por todas partes.\r\n\r\nDebe de haber envenenado a mi hijo. He visto ese gesto burlón, la risa en sus ojos mientras me veía hacer pedazos la granja entera buscándolo. Se estaba burlando de mí.\r\n\r\nNunca he sentido tanta rabia. Me entran temblores, sudores. \r\nSé exactamente lo que tengo que hacer. El espíritu de mi hijo me habla en voz baja, y exige venganza.\r\n\r\nTengo un hacha junto a la puerta para ocuparme de los animales salvajes. También sirve para una bruja.\r\n</font>"
+    },
+    {
+        "editor_id": "ccVSVSSE004_BOOK_JournalChild",
+        "form_id": "[05000818]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Rin's Journal",
+        "string": "Diario de Rin"
+    },
+    {
+        "editor_id": "ccVSVSSE004_BOOK_JournalHusband",
+        "form_id": "[05000817]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "<Alias=Husband>'s Journal",
+        "string": "Diario de <Alias=Husband>"
+    },
+    {
+        "editor_id": "ccVSVSSE004_BOOK_JournalWife",
+        "form_id": "[05000816]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\"><b>23th of First Seed</b>\r\n\r\n<Alias=Husband> wanted so badly to make a go at being farmers, so here we are now with our own rocky plot of land and a ruined old farmhouse with a leaky roof. It's not what I dreamed of, but we'll make the best of it. \r\n\r\nAt least the soil's good, even if it's full of boulders. I'll be able to get a nice garden going, with all the ingredients I need for my potions. The income from that should get us through the first winter, if nothing else. \r\n[pagebreak]\r\n<b>10th of Second Seed</b>\r\n\r\nI found a secret room walled off in the basement. It will do nicely for my alchemy lab; I love my husband dearly, but he can be a pig-headed dolt when it comes to the gentle magics of the earth. If it weren't for my potions, little <Alias=GhostChild> would have perished last winter from a fever. \r\n[pagebreak]\r\n<b>1st of Frostfall</b>\r\n\r\nOur plantation is doing well enough, but <Alias=Husband>'s eyes are getting bigger than his purse. He was talking of purchasing a wagon recently, like we don't sometimes struggle to put food on the table. A wagon, honestly! \r\n\r\nI've seen the ugly looks he gives my potions and herbs, but where else are we going to get the money for all the things he buys? Next thing you know, he'll be trying to buy another farm!\r\n[pagebreak]\r\n<b>13th of Mid Year</b>\r\n\r\n<Alias=GhostChild>'s gone missing. We've looked everywhere, but we can't find find him. His little wooden sword is missing too - gods perserve me, I hope he hasn't run off! He doesn't realize how dangerous it is out there on the tundra. \r\n[pagebreak]\r\n<b>16th of Mid Year</b>\r\n\r\nIt's been three days now. My little boy is still gone. I don't like how <Alias=Husband> is looking at me - his eyes are too dark, too still, like a frozen lake. I think I even heard him mutter something about \"getting what I deserve.\" \r\n\r\nCould he have...? No, I dare not even put the thought to paper. \r\n[pagebreak]\r\nHe did it. He must have. That monster killed my son, and now he looks at me with those hate-filled eyes and a mocking smirk. He despises my alchemical arts so much that he took my son from me to punish me. \r\n\r\nI've never brewed poison before, but I know how it's done. I know how to bottle death. A few drops in his mead and my child will be avenged.\r\n[pagebreak]\r\nIt is done. The gods will damn me, but they will damn him more for the murder of a child. <Alias=GhostChild>, I'm so sorry. I wish I could have-\r\n\r\nWait, I hear someth\r\n</font>\r\n",
+        "string": "<font face=\"$HandwrittenFont\"><b>23 de Primera semilla</b>\r\n\r\n<Alias=Husband> tenía unas ganas tan locas de que fuéramos agricultores que aquí nos vemos, con una parcela de terreno lleno de rocas y una vieja granja hecha polvo, con goteras en el tejado. No es lo que había soñado, pero habrá que intentar sacarle partido.\r\n\r\nPor lo menos, la tierra es buena, aunque esté llena de peñascos. Podré plantar un buen jardín, con todos los ingredientes que necesito para mis pociones. Al menos con lo que gane vendiéndolas podremos pasar el primer invierno.\r\n[pagebreak]\r\n<b>10 de Segunda semilla</b>\r\n\r\nHe encontrado un cuarto secreto sellado en el sótano. Me vendrá bien para instalar mi laboratorio de alquimia. Quiero a mi marido con locura, pero a veces se pone hecho un cabestro al ver la tierna magia de la tierra. Si no fuera por mis pociones, el pequeño <Alias=GhostChild> habría muerto de fiebre el año pasado. \r\n[pagebreak]\r\n<b>1 de Helada</b>\r\n\r\nNos va bien con la plantación, pero <Alias=Husband> quiere gastar más de lo que se puede permitir. Hace poco hablaba de comprar una carreta, como si no tuviéramos problemas a veces para poner comida en la mesa. ¡De verdad, una carreta!\r\n\r\nYa he visto la mala cara que pone al ver mis pociones y mis hierbas, pero ¿de dónde si no vamos a sacar el dinero para tantas cosas como compra? ¡A este paso, pronto querrá comprar otra granja!\r\n[pagebreak]\r\n<b>13 de Mitad de año</b>\r\n\r\n<Alias=GhostChild> ha desaparecido. Hemos buscado por todas partes, pero no damos con él. También ha desaparecido su espadita de madera. Que los dioses tengan piedad de mí, ¡espero que no se haya fugado! No se da cuenta del peligro que hay ahí fuera, en la tundra.\r\n[pagebreak]\r\n<b>16 de Mitad de año</b>\r\n\r\nYa han pasado tres días. Mi niño sigue desaparecido. No me gusta cómo me mira <Alias=Husband>. Tiene la mirada demasiado oscura, demasiado en calma, como un lago helado. Creo que hasta le he oído murmurar algo sobre \"darme mi merecido\".\r\n\r\n¿Será capaz de...? No, no me atrevo ni a poner eso por escrito.\r\n[pagebreak]\r\nHa sido él. Seguro. Ese monstruo ha matado a mi hijo, y ahora me mira con esos ojos llenos de odio, y ese gesto de burla. Desprecia tanto mis artes alquímicas que me ha arrebatado a mi hijo para castigarme.\r\n\r\nNunca he preparado veneno, pero sé cómo se hace. Sé cómo embotellar la muerte. Solo tengo que ponerle unas gotas en el aguamiel para vengar a mi niño.\r\n[pagebreak]\r\nYa está. Los dioses me condenarán, pero más a él por asesinar a un niño. <Alias=GhostChild>, lo siento muchísimo. Ojalá pudiese haber...\r\n\r\nUn momento, oigo alg...\r\n</font>\r\n"
+    },
+    {
+        "editor_id": "ccVSVSSE004_BOOK_BountyHauntedFarm",
+        "form_id": "[05000815]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Bounty - Restless Spirits",
+        "string": "Encargo: almas en pena"
+    },
+    {
+        "editor_id": "ccVSVSSE004_BOOK_BountyHauntedFarm",
+        "form_id": "[05000815]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\n<font size=\"40\">Bounty</font>\r\n\r\nBy order of <Alias=Jarl>:\r\n\r\nTo all able bodied and fearless men and women of Whiterun Hold. Travelers on the road near <Alias=FarmLocation> are being terrorized by ghosts haunting the nearby farm. \r\n\r\nAnyone who is able to banish the ghosts permanently will be rewarded with the land rights to <Alias=FarmLocation>.\r\n\r\n--<Alias=Steward>",
+        "string": "<font face=\"$HandwrittenFont\">\r\n<font size=\"40\">Encargo</font>\r\n\r\nPor orden de <Alias=Jarl>:\r\n\r\nA todos los hombres y mujeres capaces y valerosos de la comarca de Carrera Blanca. Los viajeros que pasan cerca de <Alias=FarmLocation> están siendo aterrorizados por unos fantasmas de la granja que hay en las inmediaciones.\r\n\r\nQuien sea capaz de expulsar para siempre a estos fantasmas recibirá como recompensa la propiedad de <Alias=FarmLocation>.\r\n\r\n--<Alias=Steward>"
+    },
+    {
+        "editor_id": "ccVSVSSE004_BOOK_JournalHusband_note",
+        "form_id": "[05000F34]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Torn Page",
+        "string": "Página arrancada"
+    },
+    {
+        "editor_id": "ccVSVSSE004_BOOK_JournalHusband_note",
+        "form_id": "[05000F34]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\n<i>\r\nI feel...strange. Hot and cold all at once. My hand shakes. Hard to write. So dizzy...\r\nI think I've been poisoned...\r\n\r\nSeems she got the better of me after all...\r\n</i>\r\n</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\n<i>\r\nNoto algo... raro. Calor y frío a la vez. Me tiembla la mano. Me cuesta escribir. Me mareo...\r\nCreo que me ha envenenado...\r\n\r\nParece que al final ha podido conmigo...\r\n</i>\r\n</font>"
+    },
+    {
+        "editor_id": "ccVSVSSE004_BOOK_JournalWife",
+        "form_id": "[05000816]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "<Alias=Wife>'s Journal",
+        "string": "Diario de <Alias=Wife>"
+    },
+    {
+        "editor_id": "ccVSVSSE004_BOOK_JournalChild",
+        "form_id": "[05000818]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\n\r\nMa and Pa are fighting again. They're always fighting these days. Ma hates how obsessed Pa is with cows and the price of wheat, and all that boring stuff. Pa doesn't like Ma's flowers or her bottles of goopy stuff. I don't like the goopy stuff either, but it does make me feel better when I'm sick, so I guess it's okay. \r\n\r\nI can't wait till I'm old enough to join the Legion and get away from the farm. I've been practicing every day with my sword - I think I'm good enough to be a captain, or even a general! But Pa doesn't want me to join the Legion cause he says I have to take over the farm when I'm old enough. Ma doesn't want me to go cause it's dangerous. That's about the only thing they agree on.\r\n\r\nI bet if I defeated a bandit or killed a wolf or something that would show them! Then they would have to let me join up with the Legion. \r\n\r\nPa always tells me to stay away from the old well, the one toward the tall monument, out by the tree sitting on a rock. Wolves like to hunt out there, he says. So that's where I'll go. I'll kill a wolf and bring home its head, and that'll prove I'm a man and not a baby.\r\n\r\nI'm tired of listening to Ma and Pa yell at each other anyway.\r\n\r\n</font>\r\n",
+        "string": "<font face=\"$HandwrittenFont\">\r\n\r\nMamá y papá están discutiendo otra vez. Últimamente están siempre igual. A mamá le revienta lo obsesionado que está papá con las vacas y el precio del trigo, y todas esas cosas tan aburridas. A papá no le gustan las flores de mamá, ni sus botes de potingues pegajosos. A mí tampoco me gustan los potingues pegajosos, pero cuando estoy enfermo los tomo y me pongo mejor, así que supongo que están bien.\r\n\r\nEstoy deseando ser mayor para poder alistarme en la Legión e irme lejos de la granja. He estado practicando con la espada todos los días. ¡Creo que soy tan bueno que podría ser capitán, o hasta general! Pero papá no quiere que me aliste en la Legión, porque dice que tengo que ocuparme de la granja cuando sea mayor. Mamá no quiere que vaya porque es peligroso. Creo que es lo único en lo que están de acuerdo.\r\n\r\n¡Si derrotase a un bandido o matase un lobo, o algo, se iban a enterar! Entones tendrían que dejar que me aliste en la Legión.\r\n\r\nPapá siempre me dice que no me acerque al viejo pozo, el que está yendo al monumento alto, junto al árbol sentado sobre la roca. Dice que a los lobos les gusta cazar por allí. Así que ahí es donde voy a ir. Mataré un lobo y traeré a casa la cabeza, y así demostraré que soy un hombre, no un bebé.\r\n\r\nDe todas formas, estoy harto de oír a mamá y papá gritándose.\r\n\r\n</font>\r\n"
+    },
+    {
+        "editor_id": "ccVSVSSE004_CONT_FancyWardrobe",
+        "form_id": "[05000877]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Wardrobe",
+        "string": "Armario"
+    },
+    {
+        "editor_id": "ccVSVSSE004_CONT_ChestCommonEmpty_noRespawn",
+        "form_id": "[05000819]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Cofre"
+    },
+    {
+        "editor_id": "ccVSVSSE004_QAChest",
+        "form_id": "[0500081A]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Cofre"
+    },
+    {
+        "editor_id": "ccVSVSSE004_CONT_Apiary",
+        "form_id": "[05000879]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Apiary",
+        "string": "Colmena"
+    },
+    {
+        "editor_id": "ccVSVSSE004_CONT_CommonEndTableLong",
+        "form_id": "[05000878]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "End Table",
+        "string": "Mesa auxiliar"
+    },
+    {
+        "editor_id": "ccVSVSSE004_CONT_PantryCupboard",
+        "form_id": "[05000876]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Pantry Cupboard",
+        "string": "Armario de la despensa"
+    },
+    {
+        "editor_id": "ccVSVSSE004_CONT_FancyEndTable",
+        "form_id": "[0500081B]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "End Table",
+        "string": "Mesa auxiliar"
+    },
+    {
+        "editor_id": "ccVSVSSE004_BunkerFarmhouseLDoor01",
+        "form_id": "[02015484]",
+        "index": null,
+        "type": "DOOR FULL",
+        "original": "Wooden Door",
+        "string": "Puerta de madera"
+    },
+    {
+        "editor_id": "ccVSVSSE004_BalconyFarmhouseLDoor01",
+        "form_id": "[0201547B]",
+        "index": null,
+        "type": "DOOR FULL",
+        "original": "Wooden Door",
+        "string": "Puerta de madera"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MainFarmhouseLDoor01",
+        "form_id": "[02015479]",
+        "index": null,
+        "type": "DOOR FULL",
+        "original": "Wooden Door",
+        "string": "Puerta de madera"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MISC_Alembic",
+        "form_id": "[0500082A]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Alembic",
+        "string": "Alambique"
+    },
+    {
+        "editor_id": "ccVSVSSE004_FURN_GrainMill",
+        "form_id": "[05000851]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Grain Mill",
+        "string": "Molienda"
+    },
+    {
+        "editor_id": "ccVSVSSE004_FURN_FancyBedDouble",
+        "form_id": "[0500084C]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "Cama"
+    },
+    {
+        "editor_id": "ccVSVSSE004_FURN_FancyBedChild01L",
+        "form_id": "[0500084D]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "Cama"
+    },
+    {
+        "editor_id": "ccVSVSSE004_FURN_FancyBedChild01R",
+        "form_id": "[0500084E]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "Cama"
+    },
+    {
+        "editor_id": "ccVSVSSE004_FRUN_Workbench_ext",
+        "form_id": "[05000852]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Farmer's Workbench",
+        "string": "Banco de trabajo de granjero"
+    },
+    {
+        "editor_id": "ccVSVSSE004_FURN_ButterChurn",
+        "form_id": "[0500084F]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Butter Churn",
+        "string": "Mantequera"
+    },
+    {
+        "editor_id": "ccVSVSSE004_WPN_ToySword",
+        "form_id": "[05000854]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Wooden Sword",
+        "string": "Espada de madera"
+    },
+    {
+        "editor_id": "ccVSVSSE004_GhostHusband_peaceful",
+        "form_id": "[0500085B]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Ghost",
+        "string": "Fantasma"
+    },
+    {
+        "editor_id": "ccVSVSSE004_Husband",
+        "form_id": "[05000859]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Urval",
+        "string": "Urval"
+    },
+    {
+        "editor_id": "ccVSVSSE004_GhostWife_peaceful",
+        "form_id": "[0500085C]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Ghost",
+        "string": "Fantasma"
+    },
+    {
+        "editor_id": "ccVSVSSE004_Farmhand__Template",
+        "form_id": "[05000889]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Farmhand",
+        "string": "Mano de obra de la granja"
+    },
+    {
+        "editor_id": "ccVSVSSE004_GhostWife",
+        "form_id": "[05000856]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Ghost",
+        "string": "Fantasma"
+    },
+    {
+        "editor_id": "ccVSVSSE004_ChildSkeleton",
+        "form_id": "[05000858]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Child's Skeleton",
+        "string": "Esqueleto de niño"
+    },
+    {
+        "editor_id": "ccVSVSSE004_GhostChild",
+        "form_id": "[05000855]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Rin",
+        "string": "Rin"
+    },
+    {
+        "editor_id": "ccVSVSSE004_Wife",
+        "form_id": "[0500085A]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Jonquil",
+        "string": "Jonquil"
+    },
+    {
+        "editor_id": "ccVSVSSE004_GhostHusband",
+        "form_id": "[05000857]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Ghost",
+        "string": "Fantasma"
+    },
+    {
+        "editor_id": "ccVSVSSE004_FarmPlanterNPC",
+        "form_id": "[05000888]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Planter",
+        "string": "Maceta"
+    },
+    {
+        "editor_id": "ccVSVSSE004_KEY_Farmhouse",
+        "form_id": "[0500085D]",
+        "index": null,
+        "type": "KEYM FULL",
+        "original": "Key to Goldenhills Plantation",
+        "string": "Llave de la plantación de Colinas Doradas"
+    },
+    {
+        "editor_id": "ccVSVSSE004FarmhouseInterior",
+        "form_id": "[010030EC]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Goldenhills Plantation",
+        "string": "Plantación de Colinas Doradas"
+    },
+    {
+        "editor_id": "ccVSVSSE004RefCell",
+        "form_id": "[05000B20]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Marker Storage Unit",
+        "string": "Unidad de almacenaje de marcas"
+    },
+    {
+        "editor_id": "ccVSVSSE004BunkhouseInterior",
+        "form_id": "[010030EB]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Goldenhills Farm Bunkhouse",
+        "string": "Albergue de la granja de Colinas Doradas"
+    },
+    {
+        "editor_id": "MapMarkerFarm",
+        "form_id": "[05000B63]",
+        "index": null,
+        "type": "REFR FULL",
+        "original": "Goldenhills Plantation",
+        "string": "Plantación de Colinas Doradas"
+    },
+    {
+        "editor_id": "Tamriel",
+        "form_id": "[0000003C]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Skyrim"
+    },
+    {
+        "editor_id": "ccVSVSSE004SpawnFarmhandBranchTopic",
+        "form_id": "[05000EA6]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I need you to hire some farmhands to work the farm. (<Global=VSVGLO_FHS> gold)",
+        "string": "Necesito que contrates mano de obra para trabajar en la granja (<Global=VSVGLO_FHS> de oro)."
+    },
+    {
+        "editor_id": "ccVSVSSE004UpgradeLaboratory",
+        "form_id": "[05000D18]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Alchemy and enchanting lab. (<Global=VSVGLO_Lab> gold)",
+        "string": "Laboratorio de alquimia y encantamiento (<Global=VSVGLO_Lab> de oro)."
+    },
+    {
+        "editor_id": "ccVSVSSE004UpgradeBedroom",
+        "form_id": "[05000D1E]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Master bedroom. (<Global=VSVGLO_Bedroom> gold)",
+        "string": "Dormitorio principal (<Global=VSVGLO_Bedroom> de oro)."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000EA9]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "I need you to hire another farmhand. (<Global=VSVGLO_FH> gold)",
+        "string": "Necesito que contrates a alguien más para trabajar en la granja (<Global=VSVGLO_FH> de oro)."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000CB5]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Stop guarding the farm.",
+        "string": "Deja de proteger la granja."
+    },
+    {
+        "editor_id": "ccVSVSSE004UpgradeKidRoom",
+        "form_id": "[05000D21]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Child's bedroom. (<Global=VSVGLO_KidRoom> gold)",
+        "string": "Dormitorio para niños (<Global=VSVGLO_KidRoom> de oro)."
+    },
+    {
+        "editor_id": "ccVSVSSE004UpgradeAltKidRoom",
+        "form_id": "[05000D25]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Library and display room. (<Global=VSVGLO_KidRoomAlt> gold)",
+        "string": "Biblioteca y cuarto de exposición (<Global=VSVGLO_KidRoomAlt> de oro)."
+    },
+    {
+        "editor_id": "ccVSVSSE004PurchaseGoats",
+        "form_id": "[05000EA0]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "A few goats. (<Global=VSVGLO_AnimGoat> gold)",
+        "string": "Unas cabras (<Global=VSVGLO_AnimGoat> de oro)."
+    },
+    {
+        "editor_id": "ccVSVSSE004OfferMoney",
+        "form_id": "[05000EAD]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I can pay you <Global=VSVGLO_FH> gold.",
+        "string": "Puedo pagarte <Global=VSVGLO_FH> de oro."
+    },
+    {
+        "editor_id": "ccVSVSSE004Nevermind",
+        "form_id": "[05000D12]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Never mind.",
+        "string": "No importa."
+    },
+    {
+        "editor_id": "ccVSVSSE004UpgradeLoft",
+        "form_id": "[05000D1B]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Loft. (<Global=VSVGLO_Loft> gold)",
+        "string": "Desván (<Global=VSVGLO_Loft> de oro)."
+    },
+    {
+        "editor_id": "ccVSVSSE004PurchaseNevermindTopic",
+        "form_id": "[05000E98]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Never mind.",
+        "string": "No importa."
+    },
+    {
+        "editor_id": "ccVSVSSE004CollectProfitBranchTopic",
+        "form_id": "[05000EB0]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I'm here to collect the plantation's profits.",
+        "string": "Vengo a recoger todos los beneficios de la plantación."
+    },
+    {
+        "editor_id": "ccVSVSSE004UpgradeDining",
+        "form_id": "[05000D15]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Dining area. (<Global=VSVGLO_Dining> gold)",
+        "string": "Comedor (<Global=VSVGLO_Dining> de oro)."
+    },
+    {
+        "editor_id": "VSMainQuest_FoundYourSonTopic",
+        "form_id": "[05000D03]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Your family can rest in peace now.",
+        "string": "Tu familia ya puede descansar en paz."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000E91]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Would you be willing to act as steward for the plantation?",
+        "string": "¿Te gustaría ocuparte de la administración de la plantación?"
+    },
+    {
+        "editor_id": "ccVSVSSE004PurchaseChickens",
+        "form_id": "[05000EA3]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "A couple of chickens. (<Global=VSVGLO_AnimChick> gold)",
+        "string": "Un par de pollos (<Global=VSVGLO_AnimChick> de oro)."
+    },
+    {
+        "editor_id": "ccVSVSSE004PurchaseAnimalsTopic",
+        "form_id": "[05000E94]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I'd like you to purchase livestock for the plantation.",
+        "string": "Me gustaría que comprases ganado para la plantación."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000FD4]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Replace my library room with a child's bedroom. (<Global=VSVGLO_KidRoom> gold)",
+        "string": "Cambia mi biblioteca por un dormitorio para niños (<Global=VSVGLO_KidRoom> de oro)."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000FCE]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "I need you to hire another farmhand. (<Global=VSVGLO_FH> gold)",
+        "string": "Necesito que contrates a alguien más para trabajar en la granja (<Global=VSVGLO_FH> de oro)."
+    },
+    {
+        "editor_id": "ccVSVSSE004GuardDogDismissTopic",
+        "form_id": "[05000D01]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Stop guarding the farm.",
+        "string": "Deja de proteger la granja."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[020154A4]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Stay here and guard the farm!",
+        "string": "¡Quédate aquí y protege la granja!"
+    },
+    {
+        "editor_id": "ccVSVSSE004PurchaseCowTopic",
+        "form_id": "[05000E9B]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "A cow. (<Global=VSVGLO_AnimCow> gold)",
+        "string": "Una vaca (<Global=VSVGLO_AnimCow> de oro)."
+    },
+    {
+        "editor_id": "ccVSVSSE004FarmhandDismissBranchTopic",
+        "form_id": "[05000EB4]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Your services are no longer required.",
+        "string": "Ya no necesito tus servicios."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000FD8]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "On second thought, I don't think I have enough gold right now.",
+        "string": "Pensándolo bien, creo que ahora mismo no tengo suficiente dinero."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000D00]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(grunt)",
+        "string": "(gruñido)"
+    },
+    {
+        "editor_id": "ccVSVSSE004OverseerHireBranchTopic",
+        "form_id": "[05000D07]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I'm looking to hire a steward for my plantation. Interested?",
+        "string": "Estoy buscando a alguien para administrar mi plantación. ¿Te interesa?"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000E92]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "My love, I don't need you to work as steward any more.",
+        "string": "Amor mío, ya no hace falta que sigas administrando la granja."
+    },
+    {
+        "editor_id": "ccVSVSSE004UpgradeHouseBranchTopic",
+        "form_id": "[05000D0B]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I'd like you to buy new furnishings for the farmhouse.",
+        "string": "Me gustaría que comprases muebles nuevos para la granja."
+    },
+    {
+        "editor_id": "ccVSVSSE004OverseerDismissBranchTopic",
+        "form_id": "[05000D09]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Your services as steward are no longer required.",
+        "string": "Ya no necesito tus servicios en la granja."
+    },
+    {
+        "editor_id": "ccVSVSSE004PurchaseHorseBranchTopic",
+        "form_id": "[05000820]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I'd like you to purchase a horse for me. (<Global=VSVGLO_Horse> gold)",
+        "string": "Quisiera que me comprases un caballo (<Global=VSVGLO_Horse> de oro)."
+    },
+    {
+        "editor_id": "ccVSVSSE004GuardDogHireTopic",
+        "form_id": "[05000CFF]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Stay here and guard the farm!",
+        "string": "¡Quédate aquí y protege la granja!"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000D04]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Your family can rest in peace now.",
+        "string": "Tu familia ya puede descansar en paz."
+    },
+    {
+        "editor_id": "ccVSVSSE004FarmhandRecruitBranchTopic",
+        "form_id": "[05000EAB]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I'm looking to hire a farmhand for my plantation. Interested?",
+        "string": "Estoy buscando a alguien para trabajar en mi plantación. ¿Te interesa?"
+    },
+    {
+        "editor_id": "ccVSVSSE004UpgradeKitchen",
+        "form_id": "[05000D0D]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Kitchen. (<Global=VSVGLO_Kitchen> gold)",
+        "string": "Cocina (<Global=VSVGLO_Kitchen> de oro)."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000EAF]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "On second thought, I seem to be short on coin...",
+        "string": "Pensándolo bien, parece que me falta dinero..."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[0500087B]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(grunt)",
+        "string": "(gruñido)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000D23]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Replace my library room with a child's bedroom. (<Global=VSVGLO_KidRoom> gold)",
+        "string": "Cambia mi biblioteca por un dormitorio para niños (<Global=VSVGLO_KidRoom> de oro)."
+    },
+    {
+        "editor_id": "VSMainQuest_BountyNoteTopic",
+        "form_id": "[05000D05]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Are there any problems around town that need handling?",
+        "string": "¿Hace falta ocuparse de algún problema en la ciudad?"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000D02]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(whine)",
+        "string": "(gemido)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000EB3]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "You've done well running the plantation. Have we made any money?",
+        "string": "Has llevado la plantación muy bien. ¿Hemos ganado algún dinero?"
+    },
+    {
+        "editor_id": "ccVSVSSE004_RestoreFarmQuest",
+        "form_id": "[05000EB7]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Hire a steward for the plantation",
+        "string": "Contrata a alguien para administrar la plantación."
+    },
+    {
+        "editor_id": "ccVSVSSE004_RestoreFarmQuest",
+        "form_id": "[05000EB7]",
+        "index": 60,
+        "type": "QUST NNAM",
+        "original": "Talk to <Alias=Overseer> to collect the day's profit",
+        "string": "Habla con <Alias=Overseer> para recoger los beneficios del día."
+    },
+    {
+        "editor_id": "ccVSVSSE004_RestoreFarmQuest",
+        "form_id": "[05000EB7]",
+        "index": 85,
+        "type": "QUST CNAM",
+        "original": "With <Alias=FarmLocation> thriving again, the excess crops and animal goods will be harvested by my hired help for my personal use. I should check the pantry inside the farmhouse to see what has been collected. ",
+        "string": "Con <Alias=FarmLocation> de nuevo a pleno rendimiento, la mano de obra que he contratado se encargará de recoger los cultivos y productos animales extra para que pueda usarlos yo. Debería echar un vistazo a la despensa de la granja para ver qué han recogido. "
+    },
+    {
+        "editor_id": "ccVSVSSE004_RestoreFarmQuest",
+        "form_id": "[05000EB7]",
+        "index": 70,
+        "type": "QUST NNAM",
+        "original": "Collect the extra harvested produce from the pantry",
+        "string": "Recoge la fruta y las hortalizas extra de la despensa."
+    },
+    {
+        "editor_id": "ccVSVSSE004_MainQuest",
+        "form_id": "[05000D28]",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "<Alias=Wife> believed her angry, controlling husband had killed their son, <Alias=GhostChild>, so she poisoned him. Could <Alias=Husband> have murdered his own son? I should search the farm to find out more. ",
+        "string": "<Alias=Wife> pensaba que su marido malhumorado y controlador había matado a su hijo <Alias=GhostChild>, así que lo asesinó. ¿Es posible que <Alias=Husband> matase a su propio hijo? Debería examinar la granja para averiguar más. "
+    },
+    {
+        "editor_id": "ccVSVSSE004_MainQuest",
+        "form_id": "[05000D28]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "The Unquiet Dead",
+        "string": "Los muertos intranquilos"
+    },
+    {
+        "editor_id": "ccVSVSSE004_RestoreFarmQuest",
+        "form_id": "[05000EB7]",
+        "index": 83,
+        "type": "QUST CNAM",
+        "original": "Now that I've laid the ghosts haunting <Alias=FarmLocation> to rest and claimed it for my own, I should see about getting my new homestead restored to its former glory. First I should get some crops in the ground.",
+        "string": "Ahora que he dado paz a los fantasmas de <Alias=FarmLocation> y he recibido el lugar en propiedad, debería pensar en devolver su antigua gloria a mi nuevo hogar. Primero debería plantar unos cultivos."
+    },
+    {
+        "editor_id": "ccVSVSSE004_MainQuest",
+        "form_id": "[05000D28]",
+        "index": 86,
+        "type": "QUST CNAM",
+        "original": "Upon reaching <Alias=FarmLocation>, I discoverd that the rumors were true - this place is indeed haunted by the restless dead. What is driving the spirits of these simple farmers to such rage? And what sort of tragedy caused their untimely deaths? I should search the farm to find out more. ",
+        "string": "Al llegar a <Alias=FarmLocation>, he descubierto que los rumores eran ciertos: en este lugar hay almas en pena. ¿Qué hace enfurecer tanto a los espíritus de estos simples campesinos? ¿Y qué clase de tragedia segó sus vidas antes de tiempo? Debería examinar la granja para averiguar más. "
+    },
+    {
+        "editor_id": "ccVSVSSE004_MainQuest",
+        "form_id": "[05000D28]",
+        "index": 81,
+        "type": "QUST NNAM",
+        "original": "Find evidence of <Alias=Husband>'s guilt",
+        "string": "Encuentra pruebas de la culpabilidad de <Alias=Husband>."
+    },
+    {
+        "editor_id": "ccVSVSSE004_RestoreFarmQuest",
+        "form_id": "[05000EB7]",
+        "index": 100,
+        "type": "QUST CNAM",
+        "original": "I should find a steward to manage the day-to-day operations. Perhaps one of my allies would be willing to take on the job after I show them the place? Or if I were to get married, I could make this place our home and my spouse could run the farm.",
+        "string": "Debería buscar un administrador que se ocupe del día a día de la granja. Quizá alguno de mis aliados quiera hacerlo cuando les enseñe el lugar. Si me casase, podría hacer de la granja nuestro hogar, y mi pareja podría ocuparse de ella."
+    },
+    {
+        "editor_id": "ccVSVSSE004_MainQuest",
+        "form_id": "[05000D28]",
+        "index": 74,
+        "type": "QUST CNAM",
+        "original": "I have uncovered the horrible truth about what occured at Goldenhills plantation. After their son disappeared, <Alias=Husband> and <Alias=Wife> killed each other, and their son appears to have run away to escape his parents' bickering. The only way to finally bring peace to the spirits here is to find out what happened to <Alias=GhostChild>, and to do that I need to find the old well mentioned in his journal.",
+        "string": "He descubierto la horrible verdad sobre lo que pasó en la plantación de Colinas Doradas. Después de desaparecer su hijo, <Alias=Husband> y <Alias=Wife> se mataron entre sí. Al parecer, el hijo huyó para librarse de las constantes trifulcas entre sus padres. La única forma de dar paz por fin a sus espíritus es descubrir lo que le sucedió realmente a <Alias=GhostChild> y hacer lo que sea necesario para encontrar el viejo pozo que menciona en su diario."
+    },
+    {
+        "editor_id": "ccVSVSSE004_MainQuest",
+        "form_id": "[05000D28]",
+        "index": 88,
+        "type": "QUST CNAM",
+        "original": "<Alias=Husband> accused his wife of being a witch before attacking her, after which she appears to have poisoned him. Could <Alias=Wife> have murdered her own son? I should try to find her secret laboratory to uncover the truth. ",
+        "string": "<Alias=Husband> acusó a su mujer de ser una bruja antes de atacarla, tras lo cual, parece ser que esta lo envenenó. ¿Podría haber asesinado <Alias=Wife> a su único hijo? Debería intentar dar con su laboratorio secreto para descubrir la verdad. "
+    },
+    {
+        "editor_id": "ccVSVSSE004_MainQuest",
+        "form_id": "[05000D28]",
+        "index": 0,
+        "type": "QUST NNAM",
+        "original": "Ask an innkeeper for work",
+        "string": "Pide trabajo al posadero."
+    },
+    {
+        "editor_id": "ccVSVSSE004_MainQuest",
+        "form_id": "[05000D28]",
+        "index": 15,
+        "type": "QUST NNAM",
+        "original": "Travel to <Alias=FarmLocation>",
+        "string": "Viajar a <Alias=FarmLocation>"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MainQuest",
+        "form_id": "[05000D28]",
+        "index": 81,
+        "type": "QUST CNAM",
+        "original": "<Alias=FarmLocation> near Rorikstead is reportedly haunted by ghosts that harass travelers on the road. The Jarl of Whiterun Hold is offering the plantation itself as a reward for anyone who can lay the spirits to rest. I should head to <Alias=FarmLocation> to investigate. ",
+        "string": "Se dice que en <Alias=FarmLocation>, cerca de Paraje de Rorik, hay fantasmas que acosan a quienes pasan por la carretera. El jarl de Carrera Blanca ofrece la propia plantación como recompensa a quien sea capaz de dar paz a los espíritus. Debería dirigirme a <Alias=FarmLocation> para investigar. "
+    },
+    {
+        "editor_id": "ccVSVSSE004_MainQuest",
+        "form_id": "[05000D28]",
+        "index": 200,
+        "type": "QUST NNAM",
+        "original": "Return <Alias=GhostChild>'s toy sword to the farm",
+        "string": "Lleva la espada de juguete de <Alias=GhostChild> de vuelta a la granja."
+    },
+    {
+        "editor_id": "ccVSVSSE004_RestoreFarmQuest",
+        "form_id": "[05000EB7]",
+        "index": 84,
+        "type": "QUST CNAM",
+        "original": "I should find a steward to manage the day-to-day operations. Perhaps one of my allies would be willing to take on the job after I show them the place? Or I'm sure my spouse could run the farm, if I make this our home.",
+        "string": "Debería buscar un administrador que se ocupe del día a día de la granja. Quizá alguno de mis aliados quiera hacerlo cuando les enseñe el lugar. Si no, seguro que mi pareja querrá ocuparse de la granja cuando haga de ella nuestro hogar."
+    },
+    {
+        "editor_id": "ccVSVSSE004_MainQuest",
+        "form_id": "[05000D28]",
+        "index": 102,
+        "type": "QUST NNAM",
+        "original": "Find the old well",
+        "string": "Encuentra el viejo pozo."
+    },
+    {
+        "editor_id": "ccVSVSSE004_RestoreFarmQuest",
+        "form_id": "[05000EB7]",
+        "index": 86,
+        "type": "QUST CNAM",
+        "original": "The crops are growing and the livestock are thriving. Soon I'll be able to start collecting the profit from my plantation. I should come back in a few days and speak to <Alias=Overseer> to collect what money has been earned. ",
+        "string": "Los cultivos crecen y los animales se crían bien. Pronto podré empezar a recoger los beneficios de mi plantación. Debería volver al cabo de unos días y hablar con <Alias=Overseer> para que me dé el dinero que hayamos ganado. "
+    },
+    {
+        "editor_id": "ccVSVSSE004_MainQuest",
+        "form_id": "[05000D28]",
+        "index": 52,
+        "type": "QUST CNAM",
+        "original": "I have uncovered the truth about what occurred at <Alias=FarmLocation>. After their son disappeared, <Alias=Husband> and <Alias=Wife> killed each other - <Alias=Wife> with extract of Deadly Nightshade, <Alias=Husband> with an axe - each thinking that the other had murdered their son, <Alias=GhostChild>. The only way to finally bring peace to their spirits is to discover what really became of <Alias=GhostChild>.",
+        "string": "He descubierto la verdad sobre lo que pasó en <Alias=FarmLocation>. Después de desaparecer su hijo, <Alias=Husband> y <Alias=Wife> se mataron entre sí: <Alias=Wife> con extracto de belladama, <Alias=Husband> con un hacha. Ambos pensaron que el otro había matado a su hijo <Alias=GhostChild>. La única forma de dar paz por fin a sus espíritus es descubrir lo que le sucedió realmente a <Alias=GhostChild>."
+    },
+    {
+        "editor_id": "ccVSVSSE004_RestoreFarmQuest",
+        "form_id": "[05000EB7]",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Build an animal pen",
+        "string": "Construye un corral para animales."
+    },
+    {
+        "editor_id": "ccVSVSSE004_RestoreFarmQuest",
+        "form_id": "[05000EB7]",
+        "index": 92,
+        "type": "QUST CNAM",
+        "original": "Now that I have a steward to manage the farm while I'm away, I should see about hiring some farmhands to tend to the crops and animals. I could either ask around in town to see if anyone is looking for work, or I could get my new steward to handle it. ",
+        "string": "Ahora que tengo quien administre la granja cuando yo no esté, debería pensar en contratar mano de obra para que se ocupe de los cultivos y los animales. Podría preguntar por la ciudad a ver si alguien busca trabajo, o pedir a mi administrador que se ocupe. "
+    },
+    {
+        "editor_id": "ccVSVSSE004_MainQuest",
+        "form_id": "[05000D28]",
+        "index": 65,
+        "type": "QUST NNAM",
+        "original": "Search the laboratory for clues",
+        "string": "Registra el laboratorio para encontrar pistas."
+    },
+    {
+        "editor_id": "ccVSVSSE004_RestoreFarmQuest",
+        "form_id": "[05000EB7]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "A Farmer's Life For Me",
+        "string": "La vida en la granja es lo mío"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MainQuest",
+        "form_id": "[05000D28]",
+        "index": 84,
+        "type": "QUST CNAM",
+        "original": "In Skyrim, talking to an innkeeper can provide you with jobs, rumors, and other interesting leads. I should speak with one and find out if they have anything I can help with.",
+        "string": "En Skyrim puedes conseguir trabajos, rumores y demás información interesante charlando con posaderos. Debería hablar con alguno para ver si hay algo en lo que pueda ayudar."
+    },
+    {
+        "editor_id": "ccVSVSSE004_MainQuest",
+        "form_id": "[05000D28]",
+        "index": 96,
+        "type": "QUST CNAM",
+        "original": "The restless spirits at <Alias=FarmLocation> can finally rest in peace, reunited with the spirit of their son and knowing that neither of them murdered their only child. Now that <Alias=FarmLocation> is no longer haunted, I can claim it for my own.",
+        "string": "Las almas en pena de <Alias=FarmLocation> por fin pueden descansar en paz, reunidas con el espíritu de su único hijo y sabiendo que ninguno de los dos lo asesinó. Ahora que <Alias=FarmLocation> ya no es un lugar maldito, puedo quedármelo."
+    },
+    {
+        "editor_id": "ccVSVSSE004_RestoreFarmQuest",
+        "form_id": "[05000EB7]",
+        "index": 0,
+        "type": "QUST NNAM",
+        "original": "Plant crops (<Global=VSVGLO_CropsPlanted>/<Global=VSVGLO_CropsPlantedGoal>)",
+        "string": "Planta cultivos (<Global=VSVGLO_CropsPlanted>/<Global=VSVGLO_CropsPlantedGoal>)."
+    },
+    {
+        "editor_id": "ccVSVSSE004_MainQuest",
+        "form_id": "[05000D28]",
+        "index": 201,
+        "type": "QUST NNAM",
+        "original": "Speak to <Alias=GhostChild>",
+        "string": "Habla con <Alias=GhostChild>."
+    },
+    {
+        "editor_id": "ccVSVSSE004_RestoreFarmQuest",
+        "form_id": "[05000EB7]",
+        "index": 50,
+        "type": "QUST NNAM",
+        "original": "Wait a few days for <Alias=FarmLocation> to start making money",
+        "string": "Espera unos días a que <Alias=FarmLocation> empiece a producir dinero."
+    },
+    {
+        "editor_id": "ccVSVSSE004_MainQuest",
+        "form_id": "[05000D28]",
+        "index": 103,
+        "type": "QUST NNAM",
+        "original": "Take the toy sword",
+        "string": "Coge la espada de juguete."
+    },
+    {
+        "editor_id": "ccVSVSSE004_RestoreFarmQuest",
+        "form_id": "[05000EB7]",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "Talk to <Alias=Overseer> about purchasing livestock",
+        "string": "Habla con <Alias=Overseer> sobre comprar animales."
+    },
+    {
+        "editor_id": "ccVSVSSE004_MainQuest",
+        "form_id": "[05000D28]",
+        "index": 106,
+        "type": "QUST CNAM",
+        "original": "I have found <Alias=GhostChild>'s remains near the old well, along with his beloved toy sword. According to his journal, he ran away from home to escape his parents' constant fighting; apparently, it looks like the wolves got the better of him. I should return the toy sword to <Alias=FarmLocation>, so that the spirits of <Alias=Husband> and <Alias=Wife> can finally know the truth of what happened to their son. ",
+        "string": "He encontrado los restos de <Alias=GhostChild> junto al viejo pozo, al lado de su querida espada de juguete. Según su diario, se fugó de casa huyendo de las constantes peleas de sus padres. Al parecer, los lobos acabaron con él. Debería devolver la espada de juguete a <Alias=FarmLocation> para que los espíritus de <Alias=Husband> y <Alias=Wife> puedan conocer finalmente la verdad de lo que sucedió con su hijo. "
+    },
+    {
+        "editor_id": "ccVSVSSE004_IntroQuestMisc",
+        "form_id": "[05000850]",
+        "index": 0,
+        "type": "QUST NNAM",
+        "original": "Speak to the innkepper at <Alias=InnRorikstead> or <Alias=InnWhiterun>",
+        "string": "Habla con el posadero de <Alias=InnRorikstead> o la posadera de <Alias=InnWhiterun>."
+    },
+    {
+        "editor_id": "ccVSVSSE004_MainQuest",
+        "form_id": "[05000D28]",
+        "index": 50,
+        "type": "QUST NNAM",
+        "original": "Search the plantation for clues",
+        "string": "Registra la plantación para encontrar pistas."
+    },
+    {
+        "editor_id": "ccVSVSSE004_RestoreFarmQuest",
+        "form_id": "[05000EB7]",
+        "index": 101,
+        "type": "QUST CNAM",
+        "original": "<Alias=FarmLocation> is well on its way towards being a profitable farm again, now that I've planted crops and hired farmhands to tend to them. Next, I should see about acquiring some livestock. ",
+        "string": "<Alias=FarmLocation> va viento en popa para convertirse de nuevo en una granja rentable ahora que he plantado cultivos y contratado mano de obra para que los cuiden. Lo siguiente que debería hacer es ver si compro algo de ganado. "
+    },
+    {
+        "editor_id": "ccVSVSSE004_MainQuest",
+        "form_id": "[05000D28]",
+        "index": 61,
+        "type": "QUST NNAM",
+        "original": "Find the hidden laboratory",
+        "string": "Encuentra el laboratorio oculto."
+    },
+    {
+        "editor_id": "ccVSVSSE004_MainQuest",
+        "form_id": "[05000D28]",
+        "index": 100,
+        "type": "QUST NNAM",
+        "original": "Find out what happened to <Alias=GhostChild>",
+        "string": "Averigua qué le pasó a <Alias=GhostChild>."
+    },
+    {
+        "editor_id": "ccVSVSSE004_RestoreFarmQuest",
+        "form_id": "[05000EB7]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Recruit a farmhand to help with labor",
+        "string": "Contrata a alguien para ayudarte con el trabajo en la granja."
+    },
+    {
+        "editor_id": "ccVSVSSE004_RestoreFarmQuest",
+        "form_id": "[05000EB7]",
+        "index": 79,
+        "type": "QUST CNAM",
+        "original": "With <Alias=FarmLocation> thriving again, the excess crops and animal goods will be harvested by my hired help for my family's use. I should check the pantry inside the farmhouse to see what has been collected. ",
+        "string": "Con <Alias=FarmLocation> de nuevo a pleno rendimiento, la mano de obra que he contratado se encargará de recoger los cultivos y productos animales extra para que pueda usarlos mi familia. Debería echar un vistazo a la despensa de la granja para ver qué han recogido. "
+    },
+    {
+        "editor_id": "ccVSVSSE004_RestoreFarmQuest",
+        "form_id": "[05000EB7]",
+        "index": 73,
+        "type": "QUST CNAM",
+        "original": "I've returned <Alias=FarmLocation> to the thriving plantation it once was.",
+        "string": "He logrado que <Alias=FarmLocation> vuelva a ser la próspera plantación que era antes."
+    },
+    {
+        "editor_id": "ccVSVSSE004_PERK_Player",
+        "form_id": "[05000EB9]",
+        "index": 0,
+        "type": "PERK EPF2",
+        "original": "Collect Milk",
+        "string": "Ordeñar leche"
+    },
+    {
+        "editor_id": "ccVSVSSE004_PERK_Player",
+        "form_id": "[05000EB9]",
+        "index": 1,
+        "type": "PERK EPF2",
+        "original": "Remove Workbench",
+        "string": "Quitar banco de trabajo"
+    },
+    {
+        "editor_id": "ccVSVSSE004_FarmExteriorLocation",
+        "form_id": "[05000D36]",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "Goldenhills Plantation",
+        "string": "Plantación de Colinas Doradas"
+    },
+    {
+        "editor_id": "ccVSVSSE004_FarmInteriorLocation",
+        "form_id": "[05000D37]",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "Goldenhills Plantation",
+        "string": "Plantación de Colinas Doradas"
+    },
+    {
+        "editor_id": "ccVSVSSE004_BunkhouseInteriorLocation",
+        "form_id": "[05000D38]",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "Goldenhills Bunkhouse",
+        "string": "Albergue de Colinas Doradas"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_ChooseShrine1",
+        "form_id": "[05000EBA]",
+        "index": 1,
+        "type": "MESG ITXT",
+        "original": "Akatosh",
+        "string": "Akatosh"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_Farmhand1Hired",
+        "form_id": "[05000D41]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "<Alias=Farmhand1> is now working for you.",
+        "string": "<Alias=Farmhand1> ahora trabaja para ti."
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_PantryCupboard",
+        "form_id": "[05000EC1]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Crops, milk, and eggs produced by the farm will be automatically stored in this cupboard. ",
+        "string": "Los cultivos, la leche y los huevos producidos por la granja se guardarán automáticamente en este armario. "
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_WorkbenchRemoveConfirm",
+        "form_id": "[05000EC0]",
+        "index": 1,
+        "type": "MESG ITXT",
+        "original": "No",
+        "string": "No"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_ChooseShrine2",
+        "form_id": "[05000EBB]",
+        "index": 3,
+        "type": "MESG ITXT",
+        "original": "Mara",
+        "string": "Mara"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_WorkbenchRemoveConfirm",
+        "form_id": "[05000EC0]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Permanently remove workbench?",
+        "string": "¿Quitar banco de trabajo permanentemente?"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_ChooseShrine2",
+        "form_id": "[05000EBB]",
+        "index": 0,
+        "type": "MESG ITXT",
+        "original": "(Prev)",
+        "string": "(Anterior)"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_FarmhandName2",
+        "form_id": "[05000EC3]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Farmhand <Alias=Farmhand2>",
+        "string": "<Alias=Farmhand2>: mano de obra de la granja"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_SuppliesAddedSalt",
+        "form_id": "[05000FDB]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "%.0f Salt Pile added to farmhouse pantry",
+        "string": "%.0f montones de sal añadidos a la despensa de la granja"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_ChooseShrine4",
+        "form_id": "[05000EBE]",
+        "index": 3,
+        "type": "MESG ITXT",
+        "original": "Mephala",
+        "string": "Mephala"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_GuardDogAssigned",
+        "form_id": "[05000D40]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "<Alias=GuardDog> is now guarding the farm.",
+        "string": "<Alias=GuardDog> ahora protege la granja."
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_Farmhand2Hired",
+        "form_id": "[05000D42]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "<Alias=Farmhand2> is now working for you.",
+        "string": "<Alias=Farmhand2> ahora trabaja para ti."
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_WorkbenchRemoveConfirm",
+        "form_id": "[05000EC0]",
+        "index": 0,
+        "type": "MESG ITXT",
+        "original": "Yes",
+        "string": "Sí"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_ChooseShrine4",
+        "form_id": "[05000EBE]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Choose a shrine to place here:",
+        "string": "Escoge qué capilla ubicar aquí:"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_ChooseShrine1",
+        "form_id": "[05000EBA]",
+        "index": 3,
+        "type": "MESG ITXT",
+        "original": "Dibella",
+        "string": "Dibella"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_ChooseShrine4",
+        "form_id": "[05000EBE]",
+        "index": 0,
+        "type": "MESG ITXT",
+        "original": "(Prev)",
+        "string": "(Anterior)"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_ChooseShrine2",
+        "form_id": "[05000EBB]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Choose a shrine to place here:",
+        "string": "Escoge qué capilla ubicar aquí:"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_ChooseShrine4",
+        "form_id": "[05000EBE]",
+        "index": 1,
+        "type": "MESG ITXT",
+        "original": "Azura",
+        "string": "Azura"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_ChooseShrine2",
+        "form_id": "[05000EBB]",
+        "index": 4,
+        "type": "MESG ITXT",
+        "original": "(Next)",
+        "string": "(Siguiente)"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_ChooseShrine3",
+        "form_id": "[05000EBC]",
+        "index": 4,
+        "type": "MESG ITXT",
+        "original": "(Next)",
+        "string": "(Siguiente)"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_ChooseShrine2",
+        "form_id": "[05000EBB]",
+        "index": 2,
+        "type": "MESG ITXT",
+        "original": "Kynareth",
+        "string": "Kynareth"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_SuppliesAddedStone",
+        "form_id": "[05000FD9]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "%.0f Quarried Stone added to workbench chest",
+        "string": "%.0f de piedra excavada añadida al cofre del banco de trabajo"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_ChooseShrine1",
+        "form_id": "[05000EBA]",
+        "index": 0,
+        "type": "MESG ITXT",
+        "original": "(Exit)",
+        "string": "(Salir)"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_ChooseShrine1",
+        "form_id": "[05000EBA]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Choose a shrine to place here:",
+        "string": "Escoge qué capilla ubicar aquí:"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_ChooseShrine4",
+        "form_id": "[05000EBE]",
+        "index": 4,
+        "type": "MESG ITXT",
+        "original": "(Exit)",
+        "string": "(Salir)"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_ChooseShrine2",
+        "form_id": "[05000EBB]",
+        "index": 1,
+        "type": "MESG ITXT",
+        "original": "Julianos",
+        "string": "Julianos"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_ChooseShrine1",
+        "form_id": "[05000EBA]",
+        "index": 2,
+        "type": "MESG ITXT",
+        "original": "Arkay",
+        "string": "Arkay"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_ChooseShrine1",
+        "form_id": "[05000EBA]",
+        "index": 4,
+        "type": "MESG ITXT",
+        "original": "(Next)",
+        "string": "(Siguiente)"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_ChooseShrineConfirm",
+        "form_id": "[05000EBD]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Place the chosen shrine here? Once placed, the shrine cannot be changed. ",
+        "string": "¿Ubicar la capilla escogida aquí? Una vez ubicada, no se podrá cambiar. "
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_SuppliesAddedStraw",
+        "form_id": "[05000FDA]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "%.0f Straw added to workbench chest",
+        "string": "%.0f de paja añadida al cofre del banco de trabajo"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_FarmhandName1",
+        "form_id": "[05000EC2]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Farmhand <Alias=Farmhand1>",
+        "string": "<Alias=Farmhand1>: mano de obra de la granja"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_ChooseShrine4",
+        "form_id": "[05000EBE]",
+        "index": 2,
+        "type": "MESG ITXT",
+        "original": "Boethiah",
+        "string": "Boethiah"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_Farmhand2Dismiss",
+        "form_id": "[05000D44]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "<Alias=Farmhand2> has left your employ.",
+        "string": "<Alias=Farmhand2> ha dejado de trabajar para ti."
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_Farmhand1Dismiss",
+        "form_id": "[05000D43]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "<Alias=Farmhand1> has left your employ.",
+        "string": "<Alias=Farmhand1> ha dejado de trabajar para ti."
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_ChooseShrine3",
+        "form_id": "[05000EBC]",
+        "index": 2,
+        "type": "MESG ITXT",
+        "original": "Talos",
+        "string": "Talos"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_ChooseShrine3",
+        "form_id": "[05000EBC]",
+        "index": 0,
+        "type": "MESG ITXT",
+        "original": "(Prev)",
+        "string": "(Anterior)"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_ChooseShrineConfirm",
+        "form_id": "[05000EBD]",
+        "index": 1,
+        "type": "MESG ITXT",
+        "original": "No",
+        "string": "No"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_ChooseShrine3",
+        "form_id": "[05000EBC]",
+        "index": 1,
+        "type": "MESG ITXT",
+        "original": "Stendarr",
+        "string": "Stendarr"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_GuardDogDismiss",
+        "form_id": "[05000EBF]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "<Alias=GuardDog> is no longer guarding the farm.",
+        "string": "<Alias=GuardDog> ya no protege la granja."
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_ToySwordName",
+        "form_id": "[05000D3F]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "<Alias=GhostChild>'s Toy Sword",
+        "string": "Espada de juguete de <Alias=GhostChild>"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_ChooseShrineConfirm",
+        "form_id": "[05000EBD]",
+        "index": 0,
+        "type": "MESG ITXT",
+        "original": "Yes",
+        "string": "Sí"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_ChooseShrine3",
+        "form_id": "[05000EBC]",
+        "index": 3,
+        "type": "MESG ITXT",
+        "original": "Zenithar",
+        "string": "Zenithar"
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_OverseerDismiss",
+        "form_id": "[05000D45]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Your steward leaves your service.",
+        "string": "Tu administrador(a) deja de estar a tu servicio."
+    },
+    {
+        "editor_id": "ccVSVSSE004_MSG_ChooseShrine3",
+        "form_id": "[05000EBC]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Choose a shrine to place here:",
+        "string": "Escoge qué capilla ubicar aquí:"
+    }
+]

@@ -1,0 +1,330 @@
+[
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfCompanionRace",
+        "form_id": "[01002F93]",
+        "index": null,
+        "type": "RACE FULL",
+        "original": "Dog",
+        "string": "Hund"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfGiftEffect",
+        "form_id": "[05000800]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Bone Wolf's Gift",
+        "string": "Knochenwolf-Geschenkeffekt"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfSummonEffect",
+        "form_id": "[05000801]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Teleports Bone Wolf to your side.",
+        "string": "Teleportiert Knochenwolf an deine Seite."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfSummonEffect",
+        "form_id": "[05000801]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Summon Bone Wolf",
+        "string": "Knochenwolf herbeirufen"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfPerkEffect",
+        "form_id": "[05000802]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Bone Wolf's Revenge",
+        "string": "Knochenwolfs Rache"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfPerkEffect",
+        "form_id": "[05000802]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Increases damage on the undead by 25% while Bone Wolf is in your company.",
+        "string": "Erhöht den Schaden gegen alle Untoten um 25 %, wenn Knochenwolf dich begleitet."
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfBlessing",
+        "form_id": "[05000804]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Bone Wolf's Reward",
+        "string": "Knochenwolfs Belohnung"
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfGiveItemSpell",
+        "form_id": "[05000803]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Bone Wolf's Gift",
+        "string": "Knochenwolf-Geschenkfähigkeit"
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfFGivePerkAbility",
+        "form_id": "[05000805]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Bone Wolf's Revenge",
+        "string": "Knochenwolfs Rache"
+    },
+    {
+        "editor_id": "ccBGSSE036_ConjureBoneWolfSpell",
+        "form_id": "[05000806]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Teleport Pet: Bone Wolf",
+        "string": "Tier teleportieren: Knochenwolf"
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfBlessing",
+        "form_id": "[05000804]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Bone Wolf thanks you for the dragon bone",
+        "string": "Knochenwolf dankt dir für den Drachenknochen."
+    },
+    {
+        "editor_id": "ccBGSSSE036_AcquisitionNote",
+        "form_id": "[05000808]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nFriend, we seek your aid. \r\n\r\nA dark necromancer has been attacking innocents along the northern coast,  accompanied by strange creatures who do his every bidding. I trust you can help us with this troublesome matter and investigate on our behalf.\r\n\r\nBolgeir Bearclaw\r\n</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\nFreund, wir brauchen Eure Hilfe. \r\n\r\nEin finsterer Totenbeschwörer in Begleitung eigenartiger Kreaturen, die seinem Geheiß folgen, greift immer wieder Unschuldige entlang der nördlichen Küste an. Ich hoffe, Ihr könnt uns bei dieser ärgerlichen Angelegenheit helfen und die Vorfälle in unserem Auftrag untersuchen.\r\n\r\nEin besorgter Bewunderer\r\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE036_AcquisitionNote",
+        "form_id": "[05000808]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Letter from Bolgeir Bearclaw",
+        "string": "Brief eines besorgten Bewunderers"
+    },
+    {
+        "editor_id": "ccBGSSSE036_NecroJornal",
+        "form_id": "[05000809]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Necromancer's Journal",
+        "string": "Tagebuch des Totenbeschwörers"
+    },
+    {
+        "editor_id": "ccBGSSSE036_NecroJornal",
+        "form_id": "[05000809]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nThis is truly remarkable. Through my experiments with these undead wolves, I have discovered a method to increase my power. \r\n\r\nBy consuming their totems; objects that bind them between life and death itself, \r\nI can bind their spirits to my own life force.\r\n\r\nI have already consumed two totems and their hosts are now completely under my control. But this is not enough, I need a third totem to be sure.\r\n</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\nDas ist wahrhaft bemerkenswert. Durch meine Experimente mit diesen untoten Wölfen habe ich eine Methode entdeckt, Unsterblichkeit zu erlangen. \r\n\r\nIndem ich ihre Totems verzehre - Objekte, die sie zwischen Leben und Tod halten -, \r\nkann ich ihre Geister an meine eigene Lebenskraft binden.\r\n\r\nSolang sie leben, wird mir kein Leid zuteil. \r\n\r\nIch habe bereits zwei Totems verzehrt und ihre Wirte stehen nun vollständig unter meiner Kontrolle. Aber es reicht noch nicht - ich brauche ein drittes Totem, um sicher zu sein.\r\n\r\nMit derartig viel Macht werde ich unaufhaltsam sein.\r\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE036_TOTEM",
+        "form_id": "[0500080A]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Totem Bone",
+        "string": "Totem-Knochen"
+    },
+    {
+        "editor_id": "ccBGSSSE036_LvlBonewolf",
+        "form_id": "[05000865]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Bonewolf",
+        "string": "Bonewolf"
+    },
+    {
+        "editor_id": "ccBGSSSE036_EncNecromancerThrall02",
+        "form_id": "[0500080D]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Thrall Wolf",
+        "string": "Wolfsdiener"
+    },
+    {
+        "editor_id": "ccBGSSSE036_EncNecromancerThrall01",
+        "form_id": "[0500080C]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Thrall Wolf",
+        "string": "Wolfsdiener"
+    },
+    {
+        "editor_id": "ccBGSSSE036_EncBoneWolf",
+        "form_id": "[05000D63]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Bone Wolf",
+        "string": "Knochenwolf"
+    },
+    {
+        "editor_id": "ccBGSSSE036_Necromancer",
+        "form_id": "[0500080B]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Necromancer",
+        "string": "Totenbeschwörer"
+    },
+    {
+        "editor_id": "ccBGSSSE036_CageKey",
+        "form_id": "[0500080E]",
+        "index": null,
+        "type": "KEYM FULL",
+        "original": "Key to Wolf Cage",
+        "string": "Schlüssel zum Wolfskäfig"
+    },
+    {
+        "editor_id": "Tamriel",
+        "form_id": "[0000003C]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Himmelsrand"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "form_id": "[05000829]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Find the necromancer and the strange creatures",
+        "string": "Finde den Totenbeschwörer und die seltsamen Kreaturen."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "form_id": "[05000829]",
+        "index": 87,
+        "type": "QUST CNAM",
+        "original": "The necromancer is dead. I should search his body for any clues.",
+        "string": "Der Totenbeschwörer ist tot. Ich sollte seine Leiche nach Hinweisen durchsuchen."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "form_id": "[05000829]",
+        "index": 83,
+        "type": "QUST CNAM",
+        "original": "I have encountered a dark necromancer and two undead wolves. These  creatures appear to be controlled by the necromancer. Putting a stop to these experiments should prevent him from raising more. ",
+        "string": "Ich bin einem dunklen Totenbeschwörer und zwei untoten Wölfen begegnet, die offenbar von ihm kontrolliert werden. Wenn ich diesen Experimenten einen Riegel vorschiebe, sollte er keine weiteren mehr zurückholen können. "
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "form_id": "[05000829]",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "In a cage nearby, there is another of these strange creatures, who I suspect the totem belongs to. I should take it to him.",
+        "string": "Wie es scheint, hat der Totenbeschwörer seine Kraft von diesen untoten Wölfen durch Verzehren ihrer Totems erlangt. Ich habe ihn aufgehalten, bevor er die Kraft eines dritten Totems an sich nahm. In einem Käfig in der Nähe befindet sich eine weitere dieser Kreaturen, der meiner Vermutung nach das dritte Totem gehört. Ich sollte es dem Wolf bringen."
+    },
+    {
+        "editor_id": "ccBGSSSE036_CreatureDialogueBoneWolf",
+        "form_id": "[0500085E]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "ccBGSSSE036_CreatureDialogueBoneWolf",
+        "string": "ccBGSSSE036_CreatureDialogueBoneWolf"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "form_id": "[05000829]",
+        "index": 71,
+        "type": "QUST CNAM",
+        "original": "I have discovered the necromancer's location. The strange creatures mentioned in the note appear to be undead wolves, raised by the dark arts of the necromancer. Putting a stop to these experiments should prevent him from raising more.",
+        "string": "Ich habe den Aufenthaltsort des Totenbeschwörers entdeckt. Bei den in der Nachricht erwähnten seltsamen Kreaturen scheint es sich um untote Wölfe zu handeln, die der Totenbeschwörer mit seinen dunklen Künsten hat auferstehen lassen. Wenn ich diesen Experimenten einen Riegel vorschiebe, sollte er keine weiteren mehr zurückholen können."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "form_id": "[05000829]",
+        "index": 84,
+        "type": "QUST CNAM",
+        "original": "Bone Wolf appears calm and content now that I've returned his totem. It appears he will follow me if I wish. Some may consider him strange to look upon, but there may be something deeper about him beyond his appearance.",
+        "string": "Knochenwolf wirkt ruhig und zufrieden, nachdem ich sein Totem zurückgebracht habe. Ich denke, er wird mich begleiten, wenn ich es wünsche. Für manche mag er ein seltsamer Anblick sein, aber hinter seinem Erscheinungsbild könnte sich etwas Tieferes verbergen."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "form_id": "[05000829]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Defeat the necromancer",
+        "string": "Besiege den Totenbeschwörer."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "form_id": "[05000829]",
+        "index": 15,
+        "type": "QUST NNAM",
+        "original": "Defeat the necromancer",
+        "string": "Besiege den Totenbeschwörer."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "form_id": "[05000829]",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Search the necromancer",
+        "string": "Durchsuche den Totenbeschwörer."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "form_id": "[05000829]",
+        "index": 5,
+        "type": "QUST NNAM",
+        "original": "Read the note from Bolgeir Bearclaw",
+        "string": "Lies den Brief eines besorgten Bewunderers."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "form_id": "[05000829]",
+        "index": 81,
+        "type": "QUST CNAM",
+        "original": "Bolgeir Bearclaw has informed me that a dark necromancer has been attacking innocents somewhere along the northern coast. The note also tells of strange creatures that accompany him. I should search the coast and see if I can unravel this mystery.",
+        "string": "Ein besorgter Bewunderer hat mich davon in Kenntnis gesetzt, dass ein dunkler Totenbeschwörer irgendwo entlang der nördlichen Küste Unschuldige angreift. In der Nachricht werden außerdem seltsame Kreaturen erwähnt, die ihn begleiten. Ich sollte die Küste absuchen, um dieses Mysterium zu enträtseln."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "form_id": "[05000829]",
+        "index": 102,
+        "type": "QUST CNAM",
+        "original": "I have a note from Bolgeir Bearclaw. I should read it and find out if there's anything he needs assistance with.",
+        "string": "Ich habe eine Nachricht von einem besorgten Bewunderer erhalten. Ich sollte sie lesen."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "form_id": "[05000829]",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "Take the totem to the caged wolf",
+        "string": "Bringe dem Wolf das Totem."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "form_id": "[05000829]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Let Sleeping Wolves Lie",
+        "string": "Schlafende Wölfe soll man nicht wecken"
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfFollowPerk",
+        "form_id": "[0500082E]",
+        "index": null,
+        "type": "PERK DESC",
+        "original": "Spells and attacks are more effective against the undead and necromancers.",
+        "string": "Alle Zauber und Angriffe sind wirkungsvoller gegen Untote und Totenbeschwörer."
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfFollowPerk",
+        "form_id": "[0500082E]",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Bone Wolf's Revenge",
+        "string": "Knochenwolfs Rache"
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfGivePlayerItemMsg",
+        "form_id": "[0500085D]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Bone Wolf has found you something.",
+        "string": "Knochenwolf hat etwas für dich gefunden."
+    }
+]

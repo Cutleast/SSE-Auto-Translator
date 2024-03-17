@@ -1,0 +1,1002 @@
+[
+    {
+        "editor_id": "ccBGSSSE013_EnchAbsorbHealthFFContact",
+        "form_id": "[0500082D]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Dawnfang Absorb Health",
+        "string": "Клык Рассвета: поглощение здоровья"
+    },
+    {
+        "editor_id": "ccBGSSSE013_EnchBloodthirst",
+        "form_id": "[05000D18]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Bloodthirst Display Effect",
+        "string": "Bloodthirst Display Effect"
+    },
+    {
+        "editor_id": "ccBGSSSE013_EnchDawnfangDescriptionFX",
+        "form_id": "[05000803]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "In daytime, deals <7> points of fire damage. At night, deals <7> points of frost damage. After killing 12 creatures, absorbs <5> points of health or magicka. <Global=ccBGSSSE013_KillCountGlobal> creatures killed.",
+        "string": "Днем наносит <7> ед. урона огнем. Ночью наносит <7> ед. урона холодом. После убийства 12 существ поглощает <5> ед. здоровья или магии. Существ убито: <Global=ccBGSSSE013_KillCountGlobal>"
+    },
+    {
+        "editor_id": "ccBGSSSE013_SkeletonInvulnerable",
+        "form_id": "[05000D16]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Ghost",
+        "string": "Ghost"
+    },
+    {
+        "editor_id": "ccBGSSSE013_DawnfangMonitorMGEF",
+        "form_id": "[05000814]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Dawnfang Effect",
+        "string": "Клык Рассвета - эффект"
+    },
+    {
+        "editor_id": "ccBGSSSE013_EnchBloodthirst",
+        "form_id": "[05000D18]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Increases speed by <7%>. Targets take additional bleed damage.",
+        "string": "Увеличивает скорость на <7%>. Цели получают дополнительный урон от кровопотери."
+    },
+    {
+        "editor_id": "ccBGSSSE013_EnchFireDamageFFContact",
+        "form_id": "[05000819]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Dawnfang Fire Damage",
+        "string": "Клык Рассвета - урон огнем"
+    },
+    {
+        "editor_id": "ccBGSSSE013_EnchAbsorbMagickaFFContact",
+        "form_id": "[05000835]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Duskfang Magicka Drain",
+        "string": "Клык Заката: поглощение магии"
+    },
+    {
+        "editor_id": "ccBGSSSE013_DuskfangMonitorMGEF",
+        "form_id": "[05000815]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Duskfang Effect",
+        "string": "Клык Заката - эффект"
+    },
+    {
+        "editor_id": "ccBGSSSE013_EnchFrostDamageFFContact",
+        "form_id": "[0500081A]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Duskfang Frost Damage",
+        "string": "Клык Заката - урон холодом"
+    },
+    {
+        "editor_id": "ccBGSSSE013_WeaponSpeed",
+        "form_id": "[05000CE5]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Bloodthirst Speed",
+        "string": "Скорость Жажды крови"
+    },
+    {
+        "editor_id": "ccBGSSSE013_AbGhosttRED",
+        "form_id": "[05000811]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Ghost Visuals Red",
+        "string": "Ghost Visuals Red"
+    },
+    {
+        "editor_id": "ccBGSSSE013_AbGhosttGREEN",
+        "form_id": "[05000812]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Ghost Visuals",
+        "string": "Ghost Visuals"
+    },
+    {
+        "editor_id": "ccBGSSSE013_EnchDawnfangKillIncrementFX",
+        "form_id": "[05000804]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Dawnfang Kill Count Increment Effect",
+        "string": "Dawnfang Kill Count Increment Effect"
+    },
+    {
+        "editor_id": "ccBGSSSE013_EnchDawnfangDescriptionFX",
+        "form_id": "[05000803]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Dawnfang Description Effect",
+        "string": "Клык Рассвета - описание эффекта"
+    },
+    {
+        "editor_id": "ccBGSSSE013_DawnfangMonitorAliasMGEF",
+        "form_id": "[0500083B]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Dawnfang Effect",
+        "string": "Клык Рассвета - эффект"
+    },
+    {
+        "editor_id": "ccBGSSSE013_WeaponSpeed",
+        "form_id": "[05000CE5]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Increases attack speed by <7%>.",
+        "string": "Увеличивает скорость атаки на <7%>."
+    },
+    {
+        "editor_id": "ccBGSSSE013_BloodthirstBladeEnch",
+        "form_id": "[05000CE3]",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Bloodthirst",
+        "string": "Жажда крови"
+    },
+    {
+        "editor_id": "ccBGSSSE013_DawnfangBladeEnch",
+        "form_id": "[05000806]",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Dawnfang FX",
+        "string": "Клык Рассвета FX"
+    },
+    {
+        "editor_id": "ccBGSSSE013_BloodthirstAbility",
+        "form_id": "[05000CF3]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Bloodthirst Ability",
+        "string": "Способность Жажды крови"
+    },
+    {
+        "editor_id": "ccBGSSSE013_DawnfangDayNightSpell",
+        "form_id": "[05000871]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Dawnfang Day Night Effects",
+        "string": "Клык Рассвета - дневной и ночной эффекты"
+    },
+    {
+        "editor_id": "ccBGSSSE013_GhostAbilityGreen",
+        "form_id": "[05000817]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Green Ghost Ability",
+        "string": "Способности зеленого призрака"
+    },
+    {
+        "editor_id": "ccBGSSSE013_GhostAbilityRed",
+        "form_id": "[05000818]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Red Ghost Ability",
+        "string": "Способности красного призрака"
+    },
+    {
+        "editor_id": "ccBGSSSE013_DoorActivator1",
+        "form_id": "[05000910]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "The Guardian Vault",
+        "string": "Убежище Стража"
+    },
+    {
+        "editor_id": "ccBGSSSE013_DawnfangBarrier",
+        "form_id": "[05000802]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Barrier",
+        "string": "Меч"
+    },
+    {
+        "editor_id": "ccBGSSSE013_DoorActivator1",
+        "form_id": "[05000910]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Open",
+        "string": "Открыть"
+    },
+    {
+        "editor_id": "ccBGSSSE013_NoteActivator",
+        "form_id": "[0500082B]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Read",
+        "string": "Read"
+    },
+    {
+        "editor_id": "ccBGSSSE013_NoteActivator",
+        "form_id": "[0500082B]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Public Notice",
+        "string": "Официальное уведомление"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Tomb",
+        "form_id": "[0500081B]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Tomb of the Guardian's Wife",
+        "string": "Гробница жены Стража"
+    },
+    {
+        "editor_id": "ccBGSSSE013_DoorActivator2",
+        "form_id": "[050009D2]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Open",
+        "string": "Открыть"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Tomb",
+        "form_id": "[0500081B]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Touch",
+        "string": "Прикоснуться"
+    },
+    {
+        "editor_id": "ccBGSSSE013SwordPickUpActivator",
+        "form_id": "[05000829]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Dawnfang",
+        "string": "Dawnfang"
+    },
+    {
+        "editor_id": "ccBGSSSE013SwordPickUpActivator",
+        "form_id": "[05000829]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "Take"
+    },
+    {
+        "editor_id": "ccBGSSSE013_DoorActivator2",
+        "form_id": "[050009D2]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "The Ratway",
+        "string": "Крысиная нора"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Journal",
+        "form_id": "[050009A4]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Sellonus's Confession",
+        "string": "Признание Селлона"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Note5",
+        "form_id": "[05000B07]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Guild Mage's Scribble",
+        "string": "Записка мага Гильдии"
+    },
+    {
+        "editor_id": "ccBGSSSE013_JournalGuild03",
+        "form_id": "[050009ED]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Sellonus's Journal Vol. 3",
+        "string": "Дневник Селлона, т. 3"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Note3",
+        "form_id": "[0500081E]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nI warned them to be cautious. No matter how perfect the incantation, magic is the husband of chaos. We let our guard down, and this abomination is the result of our hubris.\r\n\r\nAnd to make matters worse, he has divided into three. Divines help us all. \r\n</font>",
+        "string": "<font face='$HandwrittenFont'>\r\nЯ предупреждал их об осторожности. Неважно, насколько идеально произнесено заклинание: магия - супруга хаоса. Мы ослабили бдительность, и результатом нашей ошибки стала эта мерзость.\r\n\r\nИ, что еще хуже, вместо одного их теперь три. Помогите нам боги. \r\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE013_JournalGuild03",
+        "form_id": "[050009ED]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'><b>22nd of Morning Star, 4E 131</b><font size='10'>\r\n\r\n<font size='18'>What was done cannot be undone! We did what we set out to do and our commission was fulfilled, but at such a horrid cost for all of us.<font size='10'>\r\n\r\n<font size='18'>Together we endeavored to lay a trap here, with the aid of the inhabitant smugglers, and ensnare him. Knowing something of his past, we brought with us the remains of his dear departed wife, hoping that this alone would lure him into our grasp. Our plan worked, but something went horribly wrong! \r\n[pagebreak]\r\nPerhaps it was a mishap of our magic or the deeper magic of the weapon he wielded, I know not which with any certainty. All I know is that for some reason, our enchantment caused his being to divide, and we suddenly found ourselves caught in a battle with three where there had once been one!<font size='10'>\r\n\r\n<font size='18'>But with great effort we managed to separate and contain these divisions within the chambers of this vault. But this was a small victory, if any at all, for I have yet to determine the true cost of it. \r\n[pagebreak]\r\nI know not how many of my guild survived the deed, for I cannot break the seals to these doors without undoing all that we have achieved. All I can do is await their return and pray.<font size='10'>\r\n\r\n<font size='18'>There is at least some comfort in knowing that our foe can no longer wield his blade, for he and the magical shield are one. He is bound to it. He is now both its prisoner and its guardian!\r\n[pagebreak]\r\n<b>23rd of Morning Star, 4E 131</b><font size='10'>\r\n\r\n<font size='18'>Alas, our casualties were too high. For although we have trapped him here in this vault, it is now clear to me that only I and one other may live to tell this tale. However, there is no time to grieve the loss of our guild, for we must seal this place shut and report to the council at once. They must be informed of what has happened here.<font size='10'>\r\n\r\n <font size='18'>My colleague is severely wounded, but hopefully he has strength yet to assist me, for we must not fail!</font>",
+        "string": "<font face='$HandwrittenFont'><font size='18'><b>22-е Утренней звезды, 4Э 131</b><font size='10'>\r\n\r\n<font size='18'>Содеянного не исправить! Мы сделали то, что должны были сделать, и наша миссия завершена, но какой же ужасной ценой!<font size='10'>\r\n\r\n<font size='18'>С помощью контрабандистов, обитавших в убежище, мы приготовили для него ловушку. Ознакомившись с его прошлым, мы привезли с собой останки его почившей жены, надеясь, что это его приманит. И план сработал, но затем все пошло прахом! \r\n[pagebreak]\r\nНе знаю точно, виновата ли в том наша магия или скрытая доселе магия его оружия. Но по какой-то причине наши чары разделили его сущность, и вдруг нам пришлось сражаться не с одним капитаном, а сразу с тремя!<font size='10'>\r\n\r\n<font size='18'>С огромным трудом мы смогли разделить эти три копии и запереть каждую из них в отдельной комнате убежища. Но это была горькая победа, поскольку слишком уж большую цену нам пришлось за нее заплатить. \r\n[pagebreak]\r\nЯ не знаю, сколько моих товарищей пережило это сражение, потому что не могу открыть запечатанные двери, не разрушив все, чего мы добились. Все, что я могу - ждать их возвращения и молиться.<font size='10'>\r\n\r\n<font size='18'>Утешает меня, по крайней мере, то знание, что наш противник больше не владеет своим клинком, ведь он и магический барьер - одно целое. Теперь он - и его пленник, и его страж!\r\n[pagebreak]\r\n<b>23-е Утренней звезды, 4Э 131</b><font size='10'>\r\n\r\n<font size='18'>Увы, потери были слишком велики. Хотя нам удалось запереть его в этом убежище, теперь я знаю, что, кроме меня, лишь один из нас сумел выжить. Однако горевать о гибели всей нашей гильдии времени нет: нужно запечатать убежище и немедленно сообщить об этом совету. Нужно рассказать им все, что произошло здесь.<font size='10'>\r\n\r\n <font size='18'>Мой товарищ тяжело ранен, но надеюсь, он сумеет мне помочь, потому что мы обязаны выполнить свою задачу!</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE013_INITIALNote",
+        "form_id": "[05000963]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\n<font size=\"25\">\r\nWARNING - STAY OUT OF THE RATWAY!</font>\r\n\r\nIt has come to our attention that some misguided citizens have been venturing into the Ratway late at night. To complicate matters, others have seen fit to spread rumors of their disappearance, stirring up talk of ghosts and phantoms haunting the sewers.\r\n\r\nWe would remind you that the Ratway is a not a safe place for commoners, and any talk of ghosts is nothing more than tavern gossip. We will investigate the matter shortly, but in the meantime, take heed and do not enter the Ratway!\r\n\r\n--The Riften Guard</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\n<font size=\"25\">\r\nВНИМАНИЕ - ИЗБЕГАЙТЕ КРЫСИНОЙ НОРЫ!\r\n\r\nМы обратили внимание на то, что некоторые горожане необдуманно посещают Крысиную нору в темное время суток. Более того, прошел слух о том, что там стали пропадать люди, повлекший за собой разговоры о призраках и фантомах в стоках.\r\n\r\nНапоминаем, что Крысиная нора - небезопасное место для обывателей, а любые разговоры о призраках - не более чем сплетни. Мы проведем тщательное расследование, но пока соблюдайте осторожность и не посещайте Крысиную нору!\r\n\r\n– Рифтенская стража</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Note1",
+        "form_id": "[0500081F]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Guild Mage's Last Words",
+        "string": "Последние слова мага Гильдии"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Note4",
+        "form_id": "[0500099D]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nWe have to try to contain him or die trying. \r\n\r\nShe is the key to everything, for her death defined him and drove him insane. Perhaps we can use her remains to summon her spirit and calm him.</font>",
+        "string": "<font face='$HandwrittenFont'>\r\nНужно попробовать сковать его, даже если при этом мы погибнем. \r\n\r\nОна - ключ ко всему, ведь именно ее смерть свела его с ума. Может быть, с помощью ее останков мы сумеем призвать ее дух и усмирить нашего недруга."
+    },
+    {
+        "editor_id": "ccBGSSSE013_JournalGuild02",
+        "form_id": "[05000A10]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Sellonus's Journal Vol. 2",
+        "string": "Дневник Селлона, т. 2"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Note6",
+        "form_id": "[05000CCD]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Cage Bandit's Note",
+        "string": "Записка бандита в клетке"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Note3",
+        "form_id": "[0500081E]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Guild Mage's Warning",
+        "string": "Предупреждение мага Гильдии"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Note5",
+        "form_id": "[05000B07]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\n\r\nWE ARE DOOMED\r\n\r\nTHERE IS NO HOPE</font>",
+        "string": "<font face='$HandwrittenFont'>\r\n\r\nМЫ ОБРЕЧЕНЫ\r\n\r\nНАДЕЖДЫ НЕТ</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Note6",
+        "form_id": "[05000CCD]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\n\r\nBoss found a buyer for that sword we looted going through the crates downstairs. Says we're to deliver it to Broken Fang Cave come morning. \r\n\r\nTruth is the thing creeps me out, I'm glad to be rid of it. \r\n</font>",
+        "string": "<font face='$HandwrittenFont'>\r\n\r\nБосс нашел покупателя для меча, который мы вытащили из одного из ящиков внизу. Говорит, что утром надо будет отнести его к пещере Сломанный Клык. \r\n\r\nПо правде сказать, эта штука нагоняет на меня такую жуть, что я с радостью поскорее от нее отделаюсь. \r\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Note4",
+        "form_id": "[0500099D]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Guild Mage's Missive",
+        "string": "Послание мага Гильдии"
+    },
+    {
+        "editor_id": "ccBGSSSE013_SmugNote",
+        "form_id": "[05000B95]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Torn Smuggler's Note",
+        "string": "Порванная записка контрабандиста"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Wifenote",
+        "form_id": "[050008AA]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Letter from Home",
+        "string": "Письмо из дома"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Journal",
+        "form_id": "[050009A4]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>\r\n<b>7th of Morning Star, 4E 171</b><font size='10'>\r\n\r\n<font size='18'>My son, I do not have long for this world, but before the winter night embraces me, I would confess a great regret that has burdened my heart for many years.<font size='10'>\r\n\r\n<font size='18'>Long ago, my brethren and I were commissioned to hunt down and ensnare a dark and powerful renegade captain. A man who, once a proud soldier, had become corrupted by a powerful artifact, and turned to great darkness of deed. We fulfilled our commission, but not without great cost, for I alone managed to survive the encounter.<font size='10'>\r\n\r\n<font size='18'>But, in the many years that have followed this venture, I have often wondered if our deed in ensnaring him was equally evil. For with our combined enchantments, we have bound him to an eternity of misery, for we bound him to the guardianship of the very thing that drove him insane, the artifact. A powerful weapon that now, despite his yearning for it, he cannot yield while he lives.<font size='10'>\r\n\r\n<font size='18'>It is a cruel fate for a once great man, for he was just that until grief and anger laid him bare to such utter corruption and malice. That story is a sad tale indeed.<font size='10'>\r\n\r\n<font size='18'>But now, these many years on, my heart sees the truth, and I would undo that which was done and free him from his misery. But alas, it is too late for me to take on such a quest. Therefore I pray that you, my son, will do this task in my stead.<font size='10'>\r\n[pagebreak]\r\n<font size='18'>I beg you as a father's last wish, seek him out and set him free.<font size='10'>\r\n\r\n<font size='18'>Your father,\r\n\r\nSellonus</font>",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\r\n<b>7-е Утренней звезды, 4Э 171</b><font size='10'>\r\n\r\n<font size='18'>Сынок, мне недолго осталось, но прежде чем вечная ночь примет меня в свои объятия, я хочу раскрыть тебе тайну, которая много лет тяготит мое сердце.<font size='10'>\r\n\r\n<font size='18'>Давным-давно мне и моим братьям поручили выследить и захватить могущественного капитана-отступника. Некогда этот человек был гордым воином, но затем попал под влияние мощного артефакта и обратился на сторону тьмы. Мы выполнили задание, но заплатили за это высокую цену: лишь я один остался в живых.<font size='10'>\r\n\r\n<font size='18'>Однако все прошедшие с тех пор годы я задавался вопросом, не сотворили ли мы злое деяние, сковав его. Ведь наши объединенные чары обрекли его на вечное мучение, приковав его к тому самому артефакту, что свел его с ума. И этим древним оружием ему не владеть, пока он жив, - как бы сильно он этого ни жаждал.<font size='10'>\r\n\r\n<font size='18'>Жестокая судьба для некогда великого человека - ведь именно великим можно было назвать его, пока гнев и горе не вынудили его поддаться скверне и злу. Воистину печальная история.<font size='10'>\r\n\r\n<font size='18'>Но теперь, много лет спустя, мое сердце познало истину, и я хотел бы исправить причиненное зло и освободить его от страданий. Увы, я уже не могу сделать этого, и потому прошу тебя, мой сын, выполнить это вместо меня.<font size='10'>\r\n[pagebreak]\r\n<font size='18'>Считай это последним желанием твоего отца: разыщи и освободи этого человека.<font size='10'>\r\n\r\n<font size='18'>Твой отец,\r\n\r\nСеллон</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE013_JournalGuild01",
+        "form_id": "[05000A3C]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Sellonus's Journal Vol. 1",
+        "string": "Дневник Селлона, т. 1"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Smugleader",
+        "form_id": "[05000B91]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Verrick's Note",
+        "string": "Записка Веррика"
+    },
+    {
+        "editor_id": "ccBGSSSE013_SmugNote1",
+        "form_id": "[05000996]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Old Smuggler's Note",
+        "string": "Старая записка контрабандиста"
+    },
+    {
+        "editor_id": "ccBGSSSE013_SmugNote",
+        "form_id": "[05000B95]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>\r\nI can't resist him...\r\n\r\nThose eyes...those terrible eyes!\r\n\r\nSo full of anger, fear and remorse...\r\n\r\nThe only escape is death.</font>",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\r\nЯ не могу ему противостоять...\r\n\r\nЭти глаза... эти ужасные глаза!\r\n\r\nВ них столько злобы, страха и вины...\r\n\r\nЕдинственный выход - смерть.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Smugleader",
+        "form_id": "[05000B91]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nI met Sychelle Gatharian on a Morndas, outside the docks in the rain. Should've taken it as a sign.\r\n\r\nWe'd done business before, she and I. Smuggling black soul gems, corpses, the kind of dark and dishonest things that would make grown men sleep in pairs. But this was different. This was big.\r\n\r\nThe sword she gave me was like nothing I'd ever seen. Teeth like a slaughterfish and a blood red gem in the center. I said it must've been one of a kind. That's when she smiled and told me there was another. \r\n\r\nMy job was to swap them.\r\n\r\nWe sealed the venture with a coin, of which more was promised later. The mage told me I'd be contacted in a week. A group of her associates would pay us to use the hideout to kill some captain, after which, I'd make the switch. \r\n\r\nShe told me to keep this a secret from the mages, which made me pause, but the details didn't matter much to me. All I wanted to know was the number on the ledger. It was enough.\r\n\r\nMonths later and the deal has turned rotten. The mages underestimated their own magic, and we our greed. Now we're all paying the price for our stupidity. \r\n\r\nSome tried to fight their way out, but the bastard won't die. I'm beginning to think he can't. On top of that, every man that he's felled has risen to fight beside him, making him that much harder to kill.\r\n\r\nI guess I have no one to blame but myself. I should've trusted my gut from the start. Mage jobs always have a bad stink on them, but this one smelled especially foul. But I wanted that gold so bad I convinced myself and the men it was moon sugar. \r\n\r\nThe funny thing is, I don't even have Bloodthirst anymore. I lost it at the pits at Faldar's Tooth, thinking I could just kill the mages and Gatharian once I got my hands on the other one. But when the spell went bad, the guild sealed the captain in these chambers, and us along with him.\r\n\r\nNow all I have left is a festering wound, an empty stomach, and the mage's coin to show for it.\r\n\r\nChances are, this coin is probably the only thing that will ever make it out of here. But oh, could it tell you a story. \r\n\r\nBecause this coin has bought a lot of lives.\r\n\r\nIt's sold a lot of dreams, and spilled a lot of blood.\r\n\r\nI know now the coin is cursed. Yet for some reason, I can't let it go.</font>",
+        "string": "<font face='$HandwrittenFont'>\r\nВ морндас я встретился с Сайшелл Гатариан за пределами доков. Лил дождь, и мне следовало бы воспринять это как предостережение.\r\n\r\nМы с ней уже вели кое-какие дела. Провоз черных камней душ, трупов - всякие такие делишки, от которых и взрослым мужчинам станет жутко спать в темноте. Но на этот раз было кое-что посерьезнее.\r\n\r\nЯ никогда не видел мечей, подобных тому, что она мне передала. Лезвие скалилось зубами, точно рыба-убийца, а в центре сиял кроваво-красный драгоценный камень. Я сказал, что другого такого, по-моему, на свете и нету. Она улыбнулась и ответила, что, вообще-то, есть. \r\n\r\nИ я должен был поменять их местами.\r\n\r\nМы скрепили сделку задатком - она дала мне монету, а остальные деньги обещала выплатить позже. Магичка сказала, что через неделю со мной свяжутся. Группа ее приятелей заплатила нам, чтобы заманить в наше убежище какого-то капитана и там прикончить, а уж после того я и должен был подменить меч. \r\n\r\nОна не велела болтать об этом при магах, и тут я заколебался, но решил не вникать в детали. Все, что мне было интересно - вес золота, которое мне полагается. И больше ничего.\r\n\r\nНесколько месяцев спустя выяснилось, что дельце-то было с душком. Эти маги переоценили свои силы, а мы - свою жадность. И теперь все мы платим за то, что оказались такими идиотами. \r\n\r\nКто-то пытался с боем прорваться отсюда, но этот ублюдок упорно не умирает. Начинаю подозревать, что он вообще этого не может. Ну и в довершение всего, каждый, кого он убил, восстал из мертвых и начал сражаться за него. Конечно, это не помогает его убить.\r\n\r\nПохоже, мне некого винить, кроме себя. Надо было верить своему чутью. Работа на магов всегда с подвохом, но эта была особенно сомнительной. Но я так хотел заработать, что убедил себя и своих людей, что проблем будет не больше, чем у каджита от лунного сахара. \r\n\r\nСамое смешное, что Жажда крови уже не у меня. Он остался где-то в недрах Зуба Фалдара, потому что я думал, что когда заполучу тот, другой меч, то мы просто перебьем всех магов, и Гатариан заодно прикончим. Но когда их заклинание не сработало, гильдия заперла капитана в этих комнатах - и нас вместе с ним.\r\n\r\nВсе, что у меня есть теперь - пустой живот, загноившаяся рана и монета от магички.\r\n\r\nПодозреваю, что снова увидеть дневной свет сможет только эта монета. Но если бы она умела, ей было бы что порассказать. \r\n\r\nПотому что ею оплачено множество жизней.\r\n\r\nИз-за нее разрушено немало мечтаний и пролито немало крови.\r\n\r\nТеперь-то я понимаю, что эта монета проклята. Но, как ни странно, не хочу с ней расставаться.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE013_SmugNote1",
+        "form_id": "[05000996]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nDamn these mages with their magic! Things were good here, life was sweet and profits were aplenty before the boss agreed to help these fools with their trap. This venture will cost us the shirts off our backs I'll wager.</font>",
+        "string": "<font face='$HandwrittenFont'>\r\nБудь прокляты эти маги и их проклятая магия! До того, как босс согласился помочь этим идиотам с этой идиотской ловушкой, жили мы - не тужили, и денежки у нас не переводились. А с этой затеей, чую, мы останемся без гроша!</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Note1",
+        "form_id": "[0500081F]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\n\r\nI am done. My wounds are too deep, and so I have chosen to remain and lock this area. All I can do is pray that Sellonus made it out and sealed this dreaded place shut forever. At least then my death will not be in vain.\r\n\r\n</font>",
+        "string": "<font face='$HandwrittenFont'>\r\n\r\nМое время истекает. Раны слишком глубоки, так что я принял решение остаться здесь и оградить это место. Все, что я могу теперь - это молиться о том, чтобы Селлон выбрался из этого проклятого убежища и запечатал его навеки. По крайней мере, тогда моя смерть не будет напрасной.\r\n\r\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE013_JournalGuild01",
+        "form_id": "[05000A3C]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'><b>\r\n14th of Last Seed, 4E 130</b><font size='10'>\r\n \r\n<font size='18'>Our guild has been commissioned to capture and restrain a renegade Blades captain. Many tall tales have been spoken of his cruelty and malice, some even claiming he is part serpent. In addition to bearing the arms of his former employers, it is said that he wields an Akaviri weapon of dark magic. The combination makes him quite formidable.<font size='10'>\r\n\r\n<font size='18'>Thankfully, the guild has great experience in dealing with such things and we will win the day!\r\n[pagebreak]\r\n<b>6th of Hearthfire, 4E 130</b><font size='10'>\r\n\r\n<font size='18'>We encountered our foe but all did not go as planned and he escaped us. He was more powerful than we had imagined and many lives were lost as a result of our misjudgment.<font size='10'>\r\n\r\n<font size='18'>However, I am now convinced that his dreaded blade is the source of his power, as I have witnessed first hand the dark magic it yields, for the blade drinks both lifeforce and mana from any that befall it.<font size='10'>\r\n\r\n<font size='18'>We must think of a way to separate our foe from the source of his power.\r\n[pagebreak]\r\n<b>2nd of Suns Dusk, 4E 130</b><font size='10'>\r\n\r\n<font size='18'>We have devised a means to separate our foe from his blade and we must now set a trap and lure him to us. I am certain that it will work, but to be sure I must think of an incentive to draw him to us.<font size='10'>\r\n\r\n<font size='18'>I think it would be prudent to research this former Captain in more depth.\r\n[pagebreak]\r\n<b>13th of Suns Dusk, 4E 130</b><font size='10'>\r\n\r\n<font size='18'>Upon reading what I have regarding our Captain, my heart almost feels pity for him. It would seem that his madness and malice stem from the loss of his wife. The records reveal that it was after this tragic event that the darkness of the soul overcame him.<font size='10'>\r\n\r\n<font size='18'>However, pity will not save lives. He must be stopped in all event! Therefore, I have decided to acquire the remains of his loved one, in the hope that this will draw him to us.</font>",
+        "string": "<font face='$HandwrittenFont'><font size='18'><b>\r\n14-е Последнего зерна, 4Э 130</b><font size='10'>\r\n\r\n<font size='18'>Нашей гильдии поручили найти и обезвредить отступника, бывшего капитана Клинков. О его жестокости ходят легенды, а некоторые даже утверждают, что в нем течет змеиная кровь. Он вооружен не только оружием своих бывших соратников, но и акавирским клинком, напитанным темной магией. И это делает его весьма опасным.<font size='10'>\r\n\r\n<font size='18'>По счастью, у нашей гильдии большой опыт в подобных делах, и мы одержим победу!\r\n[pagebreak]\r\n<b>6-е Огня очага, 4Э 130</b><font size='10'>\r\n\r\n<font size='18'>Мы отыскали нашего противника, но дальше все пошло не по плану, и он сбежал. Из-за того, что мы недооценили его силу, погибло много наших людей.<font size='10'>\r\n\r\n<font size='18'>Но теперь я убежден, что источник его силы - именно этот ужасный клинок. Я стал свидетелем питающей его темной магии: этот клинок черпает жизненную силу и магию из того, кто ему попадется.<font size='10'>\r\n\r\n<font size='18'>Надо придумать, как отделить нашего противника от этой жуткой силы.\r\n[pagebreak]\r\n<b>2-е Заката солнца, 4Э 130</b><font size='10'>\r\n\r\n<font size='18'>Мы придумали, как лишить нашего противника его клинка, и теперь осталось подготовить ловушку. Я уверен, что это сработает, но нужно придумать, чем бы заманить его туда.<font size='10'>\r\n\r\n<font size='18'>Пожалуй, стоит поподробнее разузнать о прошлом этого капитана.\r\n[pagebreak]\r\n<b>13-е Заката солнца, 4Э 130</b><font size='10'>\r\n\r\n<font size='18'>Узнав о прошлом этого капитана, я почти чувствую жалость к нему. Похоже, безумие и злоба обуяли его после смерти жены. В записях говорится, что именно после этого трагического события он поддался тьме.<font size='10'>\r\n\r\n<font size='18'>Но моя жалость не сможет спасти чужие жизни. Нужно его остановить любой ценой! И я решил, что останки той, кого он так любил, наверняка заставят его зайти в нашу ловушку.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE013_JournalGuild02",
+        "form_id": "[05000A10]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'><b>1st of Evenings Star, 4E 130</b><font size='10'>\r\n\r\n<font size='18'>We have secured a location that will serve us well; an old partially abandoned smugglers' hideout in Riften. One of the council members, Sychelle Gatharian, had done prior business with the inhabitants, and pointed us in their direction. \r\n\r\nIt was a prudent choice, as these small band of unsavory entrepreneurs seem more than happy to assist us with our venture, for they have a love of gold above all else. With this much aid, building our trap should be accomplished reasonably quickly. Once this is done we will bring her remains to us and draw our spider out!\r\n[pagebreak]\r\n<font size='18'><b>18th of Morning Star, 4E 131</b><font size='10'>\r\n\r\n<font size='18'>It is done. Now all we can do is wait.<font size='10'>\r\n\r\n<font size='18'>When he arrives we will incapacitate him with our magic and separate him from his blade. We will then channel his life force and mana into our constructed device, which will use his own energy to shield the weapon from him. In essence he will become bound to it, for whilst he lives, the shield will hold. \r\n[pagebreak]\r\nHopefully this plan will work and we can avoid bloodshed, for given what we now know of him, we do not wish his death.<font size='10'>\r\n\r\n<font size='18'>Perhaps, there is even hope that, without his blade, we can rehabilitate him, for despite his crimes, I do pity the poor soul.</font>",
+        "string": "<font face='$HandwrittenFont'><font size='18'><b>1-е Утренней звезды, 4Э 130</b><font size='10'>\r\n\r\n<font size='18'>Мы выбрали наиболее удобное для наших целей место: старое, почти заброшенное убежище контрабандистов в Рифтене. Одна из членов совета, Сайшел Гатариан, раньше вела дела с его обитателями, и теперь именно она помогла нам заручиться их поддержкой. \r\n\r\nЭто было весьма разумным шагом. Кучка безмозглых жуликов с радостью согласилась нам помочь: блеск золота сразу затмил им разум. С их помощью устроить ловушку будет нетрудно. Когда она будет готова, мы поместим туда останки той женщины и выманим мерзавца!\r\n[pagebreak]\r\n<font size='18'><b>18-е Утренней звезды, 4Э 131</b><font size='10'>\r\n\r\n<font size='18'>Все готово. Остается только ждать.<font size='10'>\r\n\r\n<font size='18'>Когда он появится, мы скуем его магией и отнимем у него меч. Затем мы направим его жизненную силу и магию в специально созданное устройство, которое, питаясь ими, отгородит его оружие от него самого. По сути, он окажется связанным с ним на всю жизнь, и пока он жив, эта защита будет существовать. \r\n[pagebreak]\r\nНадеюсь, этот план сработает, и нам удастся избежать кровопролития, поскольку теперь, столько узнав о нем, мы не желаем его смерти.<font size='10'>\r\n\r\n<font size='18'>Быть может, лишив его клинка, мы даже сможем вернуть его к нормальной жизни. Невзирая на все, что он натворил, мне искренне его жаль.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Note2",
+        "form_id": "[0500081D]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Guild Mage's Note",
+        "string": "Заметка мага Гильдии"
+    },
+    {
+        "editor_id": "ccBGSSSE013_INITIALNote",
+        "form_id": "[05000963]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Public Notice",
+        "string": "Официальное уведомление"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Wifenote",
+        "form_id": "[050008AA]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nMy dearest Lorant,\r\n\r\nI know that there is no power that will stop them from taking you away from me and into battle upon foreign fields, for I understand that this is your duty as a captain of the Blades. As your wife, I should respect such things. Nevertheless, the fear that you may never return troubles me. \r\n\r\nKnow that I think of you always. We are bound together, in this life and in the next.\r\n\r\nYour beloved,\r\n\r\nEmma</font>",
+        "string": "<font face='$HandwrittenFont'>\r\n\r\nМой драгоценный Эмиль, я знаю, что ничто не помешает им забрать тебя у меня и отправить тебя сражаться на чужих землях. Я понимаю, что это твой долг, и, будучи твоей женой, я уважаю это. Но страх, что ты можешь оттуда не вернуться, не оставляет меня. \r\n\r\nПоэтому прилагаю к этому письму семейное наследие - кулон, на который наложены защитные чары. Молю тебя, всегда носи его и помни обо мне. Я не стану мешать тому, чтобы ты исполнял свой долг, но по крайней мере я хочу, чтобы ты вернулся ко мне, и потому пекусь о твоей защите.\r\n\r\nВсегда твоя,\r\n\r\nЭмма</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Note2",
+        "form_id": "[0500081D]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nHow could this have happened? Our plan should have worked. But who could foresee that his weapon would interfere with our simple enchantments. And now we have become ensnared in our own trap.\r\n\r\nWhat is this weapon and what does it herald?\r\n</font>",
+        "string": "<font face='$HandwrittenFont'>\r\nКак это вообще случилось? Наш план должен был сработать. Но следовало предвидеть, что его оружие помешает нашим простым чарам. А теперь мы оказались заперты в собственной ловушке.\r\n\r\nЧто это за оружие и что оно знаменует?\r\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE013_ChamberDoor",
+        "form_id": "[05000BC7]",
+        "index": null,
+        "type": "DOOR FULL",
+        "original": "Door",
+        "string": "Дверь"
+    },
+    {
+        "editor_id": "ccBGSSSE013_JailDoor",
+        "form_id": "[05000B66]",
+        "index": null,
+        "type": "DOOR FULL",
+        "original": "Door",
+        "string": "Дверь"
+    },
+    {
+        "editor_id": "ccBGSSSE013_VaultEntrance001",
+        "form_id": "[05000B22]",
+        "index": null,
+        "type": "DOOR FULL",
+        "original": "Sewer Grid",
+        "string": "Канализационная решетка"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Dawnfang",
+        "form_id": "[05000D63]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Dawnfang",
+        "string": "Клык Рассвета"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Bloodthirst",
+        "form_id": "[05000C92]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Bloodthirst",
+        "string": "Жажда крови"
+    },
+    {
+        "editor_id": "ccBGSSSE013_WifeGhost",
+        "form_id": "[05000840]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Ghostly Apparition",
+        "string": "Призрачное видение"
+    },
+    {
+        "editor_id": "ccBGSSSE013_GreenLASTSTAND",
+        "form_id": "[0500083D]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "The Guardian",
+        "string": "Воплощение страха"
+    },
+    {
+        "editor_id": "ccBGSSSE013_TreasCorpseSmugglerRigid",
+        "form_id": "[05000848]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Smuggler",
+        "string": "Контрабандист"
+    },
+    {
+        "editor_id": "ccBGSSSE013_SmugglerLeader",
+        "form_id": "[05000C40]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Verrick Tilwald",
+        "string": "Веррик Тилвальд"
+    },
+    {
+        "editor_id": "ccBGSSSE013_GuildMemberCorpse",
+        "form_id": "[0500083F]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Skeleton",
+        "string": "Скелет"
+    },
+    {
+        "editor_id": "ccBGSSSE013_RedLASTSTAND",
+        "form_id": "[05000846]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "The Guardian",
+        "string": "Воплощение ярости"
+    },
+    {
+        "editor_id": "ccBGSSSE013_StoryGuildMemberCorpse",
+        "form_id": "[05000D13]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Guild Mage",
+        "string": "Маг Гильдии"
+    },
+    {
+        "editor_id": "ccBGSSSE013_BlueGuardian",
+        "form_id": "[05000843]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "The Guardian",
+        "string": "Страж"
+    },
+    {
+        "editor_id": "ccBGSSSE013_GreenGuardian",
+        "form_id": "[05000845]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "The Guardian",
+        "string": "Страж"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Skeleton01AmbushMelee2H",
+        "form_id": "[05000847]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Cursed Smuggler",
+        "string": "Проклятый контрабандист"
+    },
+    {
+        "editor_id": "ccBGSSSE013_SkeletonMeleeMissileDuplicate",
+        "form_id": "[05000CB9]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Cursed Smuggler",
+        "string": "Cursed Smuggler"
+    },
+    {
+        "editor_id": "ccBGSSSE013_StoryCorpseSmugglerRigid",
+        "form_id": "[05000D3C]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Smuggler",
+        "string": "Контрабандист"
+    },
+    {
+        "editor_id": "ccBGSSSE013_EncSkelMelee1H",
+        "form_id": "[05000841]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Cursed Smuggler",
+        "string": "Проклятый контрабандист"
+    },
+    {
+        "editor_id": "ccBGSSSE013_RedGuardian",
+        "form_id": "[05000842]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "The Guardian",
+        "string": "Страж"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Vellonus",
+        "form_id": "[05000D94]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Vellonus",
+        "string": "Селлон"
+    },
+    {
+        "editor_id": "ccBGSSSE013_BlueGuardianFinalWifeScene",
+        "form_id": "[0500083C]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "The Guardian",
+        "string": "Страж"
+    },
+    {
+        "editor_id": "ccBGSSSE013_SkeletonMeleeMissile",
+        "form_id": "[05000844]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Cursed Smuggler",
+        "string": "Проклятый контрабандист"
+    },
+    {
+        "editor_id": "ccBGSSSE013_Skeleton01AmbushMelee1HShield",
+        "form_id": "[0500083E]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Cursed Smuggler",
+        "string": "Проклятый контрабандист"
+    },
+    {
+        "editor_id": "BrokenFangCave01",
+        "form_id": "[000152B1]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Broken Fang Cave",
+        "string": "Пещера Сломанный Клык"
+    },
+    {
+        "editor_id": "ccBGSSSE013Lair",
+        "form_id": "[01002FCF]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "The Guardian Vault",
+        "string": "Убежище Стража"
+    },
+    {
+        "editor_id": "RiftenRatway01",
+        "form_id": "[0003B698]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "The Ratway",
+        "string": "Крысиная нора"
+    },
+    {
+        "editor_id": "FaldarsTooth01",
+        "form_id": "[00015286]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Faldar's Tooth",
+        "string": "Зуб Фалдара"
+    },
+    {
+        "editor_id": "RiftenWorld",
+        "form_id": "[00016BB4]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Riften",
+        "string": "Рифтен"
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "form_id": "[05000F18]",
+        "index": 97,
+        "type": "QUST CNAM",
+        "original": "I have vanquished the Guardian. I should return to the sword chamber to see if his defeat has affected the shield.",
+        "string": "Мне удалось уничтожить Стража. Надо вернуться в комнату с мечом и узнать, повлияло ли это на щит."
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "form_id": "[05000F18]",
+        "index": 72,
+        "type": "QUST CNAM",
+        "original": "Having followed the apparition, I have found myself inside an abandoned vault. A mysterious sword floats suspended in a magical field at the heart of the vault. Judging by the condition of this place, it looks as if it has lain undisturbed for a very long time. Perhaps if I proceed forward, I may find some answers and a way to unlock the sword.",
+        "string": "Having followed the apparition, I have found myself inside an abandoned vault. A mysterious sword floats suspended in a magical field at the heart of the vault. Judging by the condition of this place, it looks as if it has lain undisturbed for a very long time. Perhaps if I proceed forward, I may find some answers and a way to unlock the sword."
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "form_id": "[05000F18]",
+        "index": 70,
+        "type": "QUST NNAM",
+        "original": "Return to the sword chamber",
+        "string": "Вернуться в комнату с мечом"
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "form_id": "[05000F18]",
+        "index": 80,
+        "type": "QUST NNAM",
+        "original": "Retrieve the sword",
+        "string": "Забрать меч"
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "form_id": "[05000F18]",
+        "index": 17,
+        "type": "QUST NNAM",
+        "original": "Follow the ghost",
+        "string": "Проследовать за призраком"
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "form_id": "[05000F18]",
+        "index": 88,
+        "type": "QUST CNAM",
+        "original": "Upon returning to the sword chamber, I found the shield surrounding the sword had altered its magical appearance and its hold upon the blade. Could it be that the shield is influenced by defeating the Guardian? As another chamber door has opened, I should proceed into this new area and see if this theory holds any truth.",
+        "string": "Upon returning to the sword chamber, I found the shield surrounding the sword had altered its magical appearance and its hold upon the blade. Could it be that the shield is influenced by defeating the Guardian? As another chamber door has opened, I should proceed into this new area and see if this theory holds any truth."
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "form_id": "[05000F18]",
+        "index": 80,
+        "type": "QUST CNAM",
+        "original": "Once again, my encounter with the Guardian has affected the shield that surrounds the sword. I should search the newly opened area where I may encounter the Guardian once more.",
+        "string": "Once again, my encounter with the Guardian has affected the shield that surrounds the sword. I should search the newly opened area where I may encounter the Guardian once more."
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "form_id": "[05000F18]",
+        "index": 25,
+        "type": "QUST NNAM",
+        "original": "Defeat the Guardian",
+        "string": "Победить Стража"
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "form_id": "[05000F18]",
+        "index": 66,
+        "type": "QUST CNAM",
+        "original": "Upon returning to the sword chamber, I witnessed what appeared to be a reconciliation between the Guardian and the woman, for I saw their spirits embrace and fade away. Perhaps in defeating him, I have actually freed his spirit from his binds to the sword and this vault. Now he is free and so too is the sword. ",
+        "string": "По возвращении в комнату с мечом мне довелось стать свидетелем воссоединения Стража и той женщины. Их призраки обнялись и медленно истаяли. Вероятно, моя победа над ним освободила его дух от уз меча и этого убежища. Теперь он свободен, а до меча наконец можно добраться. "
+    },
+    {
+        "editor_id": "ccBGSSSE013_BloodthirstQuest",
+        "form_id": "[05000CA6]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Bloodthirst",
+        "string": "Жажда крови"
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "form_id": "[05000F18]",
+        "index": 80,
+        "type": "QUST CNAM",
+        "original": "I have encountered the Guardian once more, only this time he was empowered with dark magic. Once again, upon nearing defeat, he vanished and the vault reacted to this magic. I should return to the sword chamber to see if more of this vault has now become accessible.",
+        "string": "Мне пришлось еще раз сразиться со Стражем, но на этот раз ему помогала темная магия. И снова, когда моя победа уже была близка, он исчез, а убежище отреагировало на эту магию. Надо вернуться в комнату с мечом и узнать, можно ли теперь попасть в другие части убежища."
+    },
+    {
+        "editor_id": "ccBGSSSE013_DawnFangControl",
+        "form_id": "[05000F19]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Dawnfang Control Quest",
+        "string": "Задание: управление Клыком Рассвета"
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "form_id": "[05000F18]",
+        "index": 77,
+        "type": "QUST CNAM",
+        "original": "I found the ghostly woman, but as I drew near to her, she approached a nearby sewer entrance and vanished before my eyes. I should follow her and see where the sewer entrance leads.",
+        "string": "Мне встретился призрак женщины, но при попытке подойти к ней она приблизилась ко входу в стоки и исчезла. Надо последовать за ней и узнать, куда ведет вход в стоки."
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "form_id": "[05000F18]",
+        "index": 93,
+        "type": "QUST CNAM",
+        "original": "I have battled a strange warrior in the depths of this vault, but he vanished before I could strike my killing blow. However, when he vanished, there was a great burst of magic energy and the ground shook beneath me. I should head back to the sword chamber where perhaps I may encounter him again.",
+        "string": "В этом убежище мне пришлось сразиться со странным воином, но он исчез прежде, чем мне удалось нанести последний удар. Однако с его исчезновением произошла настолько мощная вспышка магической энергии, что земля задрожала у меня под ногами. Надо вернуться в комнату с мечом - вдруг там я снова смогу его найти."
+    },
+    {
+        "editor_id": "ccBGSSSE013_BloodthirstQuest",
+        "form_id": "[05000CA6]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Investigate Faldar's Tooth",
+        "string": "Обследовать Зуб Фалдара"
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "form_id": "[05000F18]",
+        "index": 5,
+        "type": "QUST NNAM",
+        "original": "Investigate rumors of ghosts in the Riften Ratway",
+        "string": "Проверить правдивость слухов о призраках в Крысиной норе Рифтена"
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "form_id": "[05000F18]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Find the ghost in the Ratway",
+        "string": "Найти призрака в Крысиной норе"
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "form_id": "[05000F18]",
+        "index": 60,
+        "type": "QUST NNAM",
+        "original": "Investigate the east chamber",
+        "string": "Обследовать восточную комнату"
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "form_id": "[05000F18]",
+        "index": 24,
+        "type": "QUST NNAM",
+        "original": "Investigate the north chamber",
+        "string": "Обследовать северную комнату"
+    },
+    {
+        "editor_id": "ccBGSSSE013_BloodthirstQuest",
+        "form_id": "[05000CA6]",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Retrieve Bloodthirst from Broken Fang Cave",
+        "string": "Забрать Жажду крови из пещеры Сломанный Клык"
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "form_id": "[05000F18]",
+        "index": 82,
+        "type": "QUST CNAM",
+        "original": "I've heard rumors about a ghostly apparition that has been haunting the Ratway in Riften. I should head there and see if I can learn more.",
+        "string": "До меня дошли слухи о призраке, который бродит по Крысиной норе в Рифтене. Надо отправиться туда и попробовать узнать больше."
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "form_id": "[05000F18]",
+        "index": 19,
+        "type": "QUST NNAM",
+        "original": "Find a way to free the sword",
+        "string": "Найти способ освободить меч"
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "form_id": "[05000F18]",
+        "index": 18,
+        "type": "QUST NNAM",
+        "original": "Investigate the vault",
+        "string": "Обследовать убежище"
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "form_id": "[05000F18]",
+        "index": 80,
+        "type": "QUST CNAM",
+        "original": "I've heard rumors about a ghostly apparition that has been haunting the Ratway in Riften. I should investigate the area and see if I can learn more.",
+        "string": "До меня дошли слухи о призраке, который бродит по Крысиной норе в Рифтене. Надо обследовать тот район и попробовать узнать больше."
+    },
+    {
+        "editor_id": "ccBGSSSE013_AquisitionQuest",
+        "form_id": "[05000F18]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "A Soul Divided",
+        "string": "Разделенная душа"
+    },
+    {
+        "editor_id": "ccBGSSSE013_LairLocation",
+        "form_id": "[05000816]",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "The Guardian Vault",
+        "string": "Убежище Стража"
+    },
+    {
+        "editor_id": "ccBGSSSE013_LockedDoorMagicMSG",
+        "form_id": "[05000F89]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "This door is controlled by magic.",
+        "string": "Эта дверь открывается с помощью магии."
+    },
+    {
+        "editor_id": "ccBGSSSE013_DuskfangName",
+        "form_id": "[05000F80]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Duskfang",
+        "string": "Клык Заката"
+    },
+    {
+        "editor_id": "ccBGSSSE013_LockedDoorMSG",
+        "form_id": "[05000BA9]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "This door is controlled elsewhere.",
+        "string": "Эта дверь открывается где-то еще."
+    },
+    {
+        "editor_id": "ccBGSSSE013_EndGame02MSG",
+        "form_id": "[05000CC0]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "The vault is sealed.",
+        "string": "Убежище заперто."
+    },
+    {
+        "editor_id": "ccBGSSSE013_ShieldActMSG",
+        "form_id": "[0500099B]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "A magical barrier blocks your way.",
+        "string": "Путь вам перегораживает магический барьер."
+    },
+    {
+        "editor_id": "ccBGSSSE013_GuardianRealName",
+        "form_id": "[05000827]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Lorant Bouchard",
+        "string": "Эмиль Бушар"
+    },
+    {
+        "editor_id": "ccBGSSSE013_GuardianHitMSG",
+        "form_id": "[05000D58]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Your attack has no effect.",
+        "string": "Ваша атака не оказывает никакого эффекта."
+    }
+]

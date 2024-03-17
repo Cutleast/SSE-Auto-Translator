@@ -1,0 +1,98 @@
+[
+    {
+        "editor_id": "ccBGSSSE006_EnchDamageFFContact",
+        "form_id": "[03000808]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Smite Damage",
+        "string": "Obrażenia tłuczone"
+    },
+    {
+        "editor_id": "ccBGSSSE006_EnchDamageFFContact",
+        "form_id": "[03000808]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Damages the target for <mag> points. Depletes <20> Stamina from wielder per hit.",
+        "string": "Zadaje celowi <mag> pkt. obrażeń. Zmniejsza kondycję właściciela o 20 pkt. po każdym trafieniu."
+    },
+    {
+        "editor_id": "ccBGSSSE006_DamageStamina",
+        "form_id": "[03000809]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Drains <mag> points from stamina.",
+        "string": "Zmniejsza kondycja o <mag> pkt."
+    },
+    {
+        "editor_id": "ccBGSSSE006_DamageStamina",
+        "form_id": "[03000809]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Stamina",
+        "string": "Zmniejszona kondycja"
+    },
+    {
+        "editor_id": "ccBGSSSE006_EnchDrainHealth",
+        "form_id": "[03000807]",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Absorb Health",
+        "string": "Absorpcja zdrowia"
+    },
+    {
+        "editor_id": "ccBGSSSE006_DrainStamina",
+        "form_id": "[0300080A]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Smite",
+        "string": "Wyssanie kondycji"
+    },
+    {
+        "editor_id": "ccBGSSSE006StendarsHammer",
+        "form_id": "[03000D62]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Stendarr's Hammer",
+        "string": "Młot Stendarra"
+    },
+    {
+        "editor_id": "MarkarthWizardsQuarters01",
+        "form_id": "[00030313]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Dwemer Museum",
+        "string": "Muzeum Dwemerów"
+    },
+    {
+        "editor_id": "ccBGSSSE006_Quest",
+        "form_id": "[03000805]",
+        "index": 80,
+        "type": "QUST CNAM",
+        "original": "Rumor has it that Stendarr's Hammer has been found deep under Markarth. They say it is in the Dwarven Museum there.",
+        "string": "Plotka głosi, że głęboko pod Markartem znaleziono młot Stendarra. Podobno znajduje się teraz w tamtejszym Muzeum Dwemerów."
+    },
+    {
+        "editor_id": "ccBGSSSE006_Quest",
+        "form_id": "[03000805]",
+        "index": 81,
+        "type": "QUST CNAM",
+        "original": "I have successfully stolen Stendarr's Hammer from the Dwarven Museum in Markarth.",
+        "string": "Udało mi się ukraść młot Stendarra z Muzeum Dwemerów w Markarcie."
+    },
+    {
+        "editor_id": "ccBGSSSE006_Quest",
+        "form_id": "[03000805]",
+        "index": 0,
+        "type": "QUST NNAM",
+        "original": "Steal Stendarr's Hammer",
+        "string": "Ukradnij młot Stendarra"
+    },
+    {
+        "editor_id": "ccBGSSSE006_Quest",
+        "form_id": "[03000805]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "If I had a Hammer",
+        "string": "Gdyby tak mieć młot"
+    }
+]

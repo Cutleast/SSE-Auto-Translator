@@ -1,0 +1,210 @@
+[
+    {
+        "editor_id": "ccBGSSSE010_PetDwarvenMudcrabRace",
+        "form_id": "[05000800]",
+        "index": null,
+        "type": "RACE FULL",
+        "original": "Dwarven Mudcrab Pet",
+        "string": "Cucciolo di granchio del fango nanico"
+    },
+    {
+        "editor_id": "ccBGSSSE010_SummonMudcrabEffect",
+        "form_id": "[0500080F]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Teleport Dwarven Mudcrab",
+        "string": "Teletrasporto granchio del fango nanico"
+    },
+    {
+        "editor_id": "ccBGSSSE010_PetGiveItemEffect",
+        "form_id": "[0500080A]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Scrounger Effect",
+        "string": "Effetto Scroccone"
+    },
+    {
+        "editor_id": "ccBGSSSE010_SummonMudcrabEffect",
+        "form_id": "[0500080F]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Teleports pet Dwarven Mudcrab.",
+        "string": "Teletrasporta il cucciolo di granchio del fango nanico."
+    },
+    {
+        "editor_id": "ccBGSSSE010_SummonMudcrabSpell",
+        "form_id": "[05000810]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Teleport Pet: Dwarven Mudcrab",
+        "string": "Teletrasporto cucciolo: Granchio del fango nanico"
+    },
+    {
+        "editor_id": "ccBGSSSE010_MagicResist100",
+        "form_id": "[05000812]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Pet Magic Resistance",
+        "string": "Resistenza magica cucciolo"
+    },
+    {
+        "editor_id": "ccBGSSSE010_PetGiveItemAbility",
+        "form_id": "[05000809]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Scrounger Ability",
+        "string": "Abilità Scroccone"
+    },
+    {
+        "editor_id": "ccBGSSSE010_SpellTomeSummonMudcrab",
+        "form_id": "[05000811]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nTeleport Pet: Dwarven Mudcrab",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nTeletrasporto cucciolo: Granchio del fango nanico"
+    },
+    {
+        "editor_id": "ccBGSSSE010_OwnershipDeedDwarvenPet",
+        "form_id": "[05000807]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>This deed signifies ownership of the Dwarven Mudcrab to the undersigned.  Ownership may only be transferred with an accompanying Bill of Sale.\r\n\r\nP.S. He will follow you anywhere you go, but he's cautious of aggressive strangers.  He's smart and fast, so you can dismiss him to stay at any of your owned homes, just inside a city, or right where he stands, if you think it makes him a good home.\r\n\r\nFrom time to time he may also dig up something useful or valuable!  Lastly, I've included a Spell Tome so you can summon him to your location at any time.\r\n\r\nI hope you enjoy him.  Back to work for me.\r\n\r\n-Calcelmo\r\n</font>",
+        "string": "<font face='$HandwrittenFont'>Questo contratto stabilisce che il granchio del fango nanico è di proprietà della persona che lo ha firmato. La proprietà può essere trasferita solo in presenza del contratto di vendita.\r\n\r\nP.S.: ti seguirà ovunque, ma è molto cauto nei confronti degli sconosciuti aggressivi. È sveglio e veloce, perciò puoi lasciarlo in una delle tue case, nelle città o in qualunque posto tu ritenga opportuno.\r\n\r\nA volte si mette a scavare e trova qualcosa di prezioso! Allego anche un tomo magico che ti permette di evocarlo nel punto in cui ti trovi.\r\n\r\nSpero sia un compagno fedele. Torno al lavoro.\r\n\r\n-Calcelmo\r\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE010_OwnershipDeedDwarvenPet",
+        "form_id": "[05000807]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Ownership Deed - Mudcrab",
+        "string": "Atto di proprietà - Granchio del fango"
+    },
+    {
+        "editor_id": "ccBGSSSE010_LetterFromCalcelmo",
+        "form_id": "[05000806]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"17\">\r\nDuring my excavations, I came across a quite peculiar little fellow - a Mudcrab, clad in plated Dwarven armor.  He's quite friendly, but with all of my studies I have no time to take care of such a thing.\r\n\r\nFrom what I have seen, you seem to be quite trustworthy.  Would you be interested in purchasing him?  If so, please meet with me in my laboratory in Understone Keep.\r\n\r\n-Calcelmo\r\n</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"17\">\r\nNel corso dei miei scavi mi sono imbattuto in un animale molto particolare: un granchio del fango dotato di armatura nanica. È un tipo amichevole, ma non ho il tempo di occuparmene.\r\n\r\nDicono che tu sia una persona affidabile. Ti interesserebbe acquistarlo? Se così fosse, vediamoci nel mio laboratorio alla Fortezza di Understone.\r\n\r\n-Calcelmo\r\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE010_SpellTomeSummonMudcrab",
+        "form_id": "[05000811]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Teleport Pet Mudcrab",
+        "string": "Tomo magico: Teletrasporto cucciolo di granchio del fango"
+    },
+    {
+        "editor_id": "ccBGSSSE010_LetterFromCalcelmo",
+        "form_id": "[05000806]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Notice of Sale - Dwarven Mudcrab",
+        "string": "Avviso di vendita - Granchio del fango nanico"
+    },
+    {
+        "editor_id": "ccBGSSSE010_PetDwarvenMudcrab",
+        "form_id": "[05000D62]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Dwarven Armored Mudcrab",
+        "string": "Granchio del fango nanico corazzato"
+    },
+    {
+        "editor_id": "ccBGSSSE010_PetDwarvenMudcrab",
+        "form_id": "[05000D62]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Mudcrab",
+        "string": "Granchio del fango"
+    },
+    {
+        "editor_id": "MarkarthUnderStoneKeep",
+        "form_id": "[00016DF2]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Understone Keep",
+        "string": "Fortezza di Understone"
+    },
+    {
+        "editor_id": "ccBGSSSE010_PetPurchaseQuest",
+        "form_id": "[05000808]",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "Calcelmo found a Dwarven Armored Mudcrab during his excavations, and offered to sell him to me.  I obliged, and now keep him as a pet, who I can bring with me, or send to any of my homes, or main cities.",
+        "string": "Calcelmo ha trovato un granchio del fango nanico corazzato durante i suoi scavi e si è offerto di vendermelo. Ho accettato e adesso mi fa compagnia. Posso portarlo con me o mandarlo nelle mie case o nelle città principali."
+    },
+    {
+        "editor_id": "ccBGSSSE010_PetPurchaseQuest",
+        "form_id": "[05000808]",
+        "index": 0,
+        "type": "QUST NNAM",
+        "original": "Read Notice of Sale",
+        "string": "Leggi l'avviso di vendita"
+    },
+    {
+        "editor_id": "ccBGSSSE010_PetPurchaseQuest",
+        "form_id": "[05000808]",
+        "index": 83,
+        "type": "QUST CNAM",
+        "original": "I've received a Notice of Sale from Calcelmo.  I should read it and see what it's about.",
+        "string": "Ho ricevuto un avviso di vendita da Calcelmo. Sarà meglio leggere di cosa si tratta."
+    },
+    {
+        "editor_id": "ccBGSSSE010_PetPurchaseQuest",
+        "form_id": "[05000808]",
+        "index": 101,
+        "type": "QUST CNAM",
+        "original": "I've purchased a Pet Dwarven Mudcrab from Calcelmo.  I should talk to him, and either send him to his new home, or bring him with me.",
+        "string": "Ho acquistato un cucciolo di granchio del fango nanico da Calcelmo. Dovrei parlare con lui. Potrei mandarlo nella sua nuova casa o portarlo con me."
+    },
+    {
+        "editor_id": "ccBGSSSE010_PetPurchaseQuest",
+        "form_id": "[05000808]",
+        "index": 76,
+        "type": "QUST CNAM",
+        "original": "Calcelmo has found a Dwarven Armored Mudcrab during his excavations, and has offered to sell him to me.  I should head to Understone Keep to speak with him, and purchase the Mudcrab.",
+        "string": "Calcelmo ha trovato un granchio del fango nanico corazzato durante i suoi scavi e si è offerto di vendermelo. Dovrei recarmi alla Fortezza di Understone per parlare con lui dell'acquisto."
+    },
+    {
+        "editor_id": "ccBGSSSE010_PetControlQuest",
+        "form_id": "[05000803]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Mudcrab Control Quest",
+        "string": "Missione di controllo granchio del fango"
+    },
+    {
+        "editor_id": "ccBGSSSE010_PetPurchaseQuest",
+        "form_id": "[05000808]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Meet your new pet",
+        "string": "Incontra il tuo nuovo cucciolo"
+    },
+    {
+        "editor_id": "ccBGSSSE010_PetPurchaseQuest",
+        "form_id": "[05000808]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Purchase the Mudcrab",
+        "string": "Acquista il granchio del fango"
+    },
+    {
+        "editor_id": "ccBGSSSE010_PetPurchaseQuest",
+        "form_id": "[05000808]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "My Pet Mudcrab",
+        "string": "Il mio piccolo granchio del fango"
+    },
+    {
+        "editor_id": "ccBGSSSE010_MudcrabGivePlayerItemMsg",
+        "form_id": "[0500080E]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Dwarven Mudcrab found something...",
+        "string": "Il granchio del fango nanico ha trovato qualcosa..."
+    }
+]

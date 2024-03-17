@@ -1,0 +1,818 @@
+[
+    {
+        "editor_id": "ccBGSSSE008_EnchShockDamageFFContact",
+        "form_id": "[04000C1E]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Target takes <mag> points of shock damage, and half as much Magicka damage.",
+        "string": "Target takes <mag> points of shock damage, and half as much Magicka damage."
+    },
+    {
+        "editor_id": "AbFortifyStamina_UI",
+        "form_id": "[04000B7A]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fortify Stamina",
+        "string": "Reforzar aguante"
+    },
+    {
+        "editor_id": "ccBGSSSE008_EnchShockDamageFFContact",
+        "form_id": "[04000C1E]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Shock Damage",
+        "string": "Shock Damage"
+    },
+    {
+        "editor_id": "ccBGSSE008_WraithguardEffect",
+        "form_id": "[04000B5E]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Kagrenac's Knowledge",
+        "string": "Conocimiento de Kagrenac"
+    },
+    {
+        "editor_id": "ccBGSSSE008_EnchMagickaDamageFFContact",
+        "form_id": "[04000C1F]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Does <mag> points of Magicka damage.",
+        "string": "Does <mag> points of Magicka damage."
+    },
+    {
+        "editor_id": "ccBGSSSE008_EnchStaminaDamageFFContact",
+        "form_id": "[04000C32]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Stamina Damage",
+        "string": "Stamina Damage"
+    },
+    {
+        "editor_id": "ccBGSSSE008_EnchStaminaDamageFFContact",
+        "form_id": "[04000C32]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Does <mag> points of Stamina damage.",
+        "string": "Does <mag> points of Stamina damage."
+    },
+    {
+        "editor_id": "ccBGSSE008_VisualsSword",
+        "form_id": "[04000806]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Ghost Visuals Fire",
+        "string": "Efectos visuales de fantasma: fuego"
+    },
+    {
+        "editor_id": "ccBGSSSE008_EnchFrostDamageFFContact",
+        "form_id": "[04000C1D]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Frost Damage",
+        "string": "Frost Damage"
+    },
+    {
+        "editor_id": "ccBGSSE008_VisualsStaff",
+        "form_id": "[04000805]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Ghost Visuals Fire",
+        "string": "Efectos visuales de fantasma: fuego"
+    },
+    {
+        "editor_id": "ccBGSSE008_WraithguardEffect",
+        "form_id": "[04000B5E]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Empowers Kagrenac's Tools.",
+        "string": "Carga las herramientas de Kagrenac."
+    },
+    {
+        "editor_id": "AbFortifyStaminaRate_UI",
+        "form_id": "[04000B7C]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Regenerate Stamina",
+        "string": "Regenerar aguante"
+    },
+    {
+        "editor_id": "ccBGSSSE008_EnchFireDamageFFContact",
+        "form_id": "[04000C33]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fire Damage",
+        "string": "Fire Damage"
+    },
+    {
+        "editor_id": "AbFortifyHealth_UI",
+        "form_id": "[04000B7B]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fortify Health",
+        "string": "Reforzar salud"
+    },
+    {
+        "editor_id": "ccBGSSSE008_EnchMagickaDamageFFContact",
+        "form_id": "[04000C1F]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Magicka Damage",
+        "string": "Magicka Damage"
+    },
+    {
+        "editor_id": "ccBGSSSE008_EnchFireDamageFFContact",
+        "form_id": "[04000C33]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Burns the target for <mag> points. Targets on fire take extra damage.",
+        "string": "Burns the target for <mag> points. Targets on fire take extra damage."
+    },
+    {
+        "editor_id": "ccBGSSSE008_EnchFrostDamageFFContact",
+        "form_id": "[04000C1D]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Target takes <mag> points of frost damage to Health and Stamina.",
+        "string": "Target takes <mag> points of frost damage to Health and Stamina."
+    },
+    {
+        "editor_id": "ccBGSSE008_PerkShield",
+        "form_id": "[04000809]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Add Perk",
+        "string": "Añadir ventaja"
+    },
+    {
+        "editor_id": "AbFortifyStaminaRate_UI",
+        "form_id": "[04000B7C]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Stamina regenerates <mag>% fastser.",
+        "string": "El aguante se regenera un <mag>% más rápido."
+    },
+    {
+        "editor_id": "ccBGSSE008_PerkBlade",
+        "form_id": "[04000804]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Add Perk",
+        "string": "Añadir ventaja"
+    },
+    {
+        "editor_id": "ccBGSSE008_VisualsShield",
+        "form_id": "[04000807]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Ghost Visuals Fire",
+        "string": "Efectos visuales de fantasma: fuego"
+    },
+    {
+        "editor_id": "ccBGSSSE008_WraithguardENC",
+        "form_id": "[0400080C]",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Wraithguard",
+        "string": "Guardamano espectral"
+    },
+    {
+        "editor_id": "ccBGSSSE008_SunderEnc",
+        "form_id": "[0400080B]",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Sunder's Fury",
+        "string": "Furia de División"
+    },
+    {
+        "editor_id": "ccBGSSSE008_KeeningsSpell",
+        "form_id": "[04000811]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Empowered Keening",
+        "string": "Afiladura cargada"
+    },
+    {
+        "editor_id": "ccBGSSE_008_BossSpellSword",
+        "form_id": "[0400080F]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "The Blade",
+        "string": "La hoja"
+    },
+    {
+        "editor_id": "ccBGSSE_008_BossSpellStaff",
+        "form_id": "[0400080E]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "The Staff",
+        "string": "El bastón"
+    },
+    {
+        "editor_id": "ccBGSSSE008_SundersSpell",
+        "form_id": "[04000812]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Wraithguard empowers Sunder. Your stamina regenerates <50%> faster and you do <15%> more melee damage.",
+        "string": "Guardamano espectral carga a División. Tu aguante se regenera un <50%> más rápido e infliges un <15%> más de daño cuerpo a cuerpo."
+    },
+    {
+        "editor_id": "ccBGSSE008_LightningSpell",
+        "form_id": "[0400080D]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Lightning Breath",
+        "string": "Aliento de relámpago"
+    },
+    {
+        "editor_id": "ccBGSSSE008_KeeningsSpell",
+        "form_id": "[04000811]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Wraithguard empowers Keening, fortifying your magicka by <50> and your health and stamina by <20>.",
+        "string": "Guardamano espectral carga a Afiladura, reforzando tu magia en <40> y tu salud y aguante en <20>."
+    },
+    {
+        "editor_id": "ccBGSSE_008_BossSpellShield",
+        "form_id": "[04000810]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "The Shield",
+        "string": "El escudo"
+    },
+    {
+        "editor_id": "ccBGSSSE008_SundersSpell",
+        "form_id": "[04000812]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Empowered Sunder",
+        "string": "División cargada"
+    },
+    {
+        "editor_id": "ccBGSSSE008_WraithguardSunder",
+        "form_id": "[04000B61]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Wraithguard and Sunder",
+        "string": "Guardamano espectral y División"
+    },
+    {
+        "editor_id": "ccBGSSSE008_WraithguardCrystal",
+        "form_id": "[04000814]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Dwarven Pedestal",
+        "string": "Pedestal enano"
+    },
+    {
+        "editor_id": "ccBGSSSE008_ReleaseValve",
+        "form_id": "[04000813]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Vault Release Valve",
+        "string": "Válvula de escape de la cripta"
+    },
+    {
+        "editor_id": "ccBGSSE008_SkinCenturionBoss",
+        "form_id": "[04000C35]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "CenturionBoss",
+        "string": "CenturionBoss"
+    },
+    {
+        "editor_id": "ccBGSSSE008WraithguardGauntlet",
+        "form_id": "[04000D63]",
+        "index": null,
+        "type": "ARMO DESC",
+        "original": "Resist shock, fire, frost, magic, disease, and poison by <10%>. Empowers Keening and Sunder when equipped.",
+        "string": "Resiste a la descarga, el fuego, la escarcha, la magia, la enfermedad y al veneno en un <10%>. Al equiparlo, carga Afiladura y División."
+    },
+    {
+        "editor_id": "ccBGSSSE008WraithguardGauntlet",
+        "form_id": "[04000D63]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Wraithguard",
+        "string": "Guardamano espectral"
+    },
+    {
+        "editor_id": "ccBGSSSE08_Note1",
+        "form_id": "[04000819]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Lost Caravan Guard's Note",
+        "string": "Nota del guardia de la caravana perdida"
+    },
+    {
+        "editor_id": "ccBGSSSE08_Note5",
+        "form_id": "[04000817]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<p align='left'><font face='$HandwrittenFont'><font size='18'>\r\nInedos, \r\n\r\nThe reports are right. Wraithguard and Sunder are singing, sending a signal out to anyone that might be listening. I don't know how, but I think I know why. The Tools were only meant to be used on Numidium, it makes sense that they would never be allowed to leave Morrowind. \r\n\r\nTo ensure this, Kagrenac must have put in a failsafe system. If the Tools were ever stolen, drones would be activated across Tamriel to recover them. The drones would then store the items in a vault until a Tonal Architect could fetch them. \r\n\r\nUnfortunately, as I suspected, that information was enough for some of the captains to betray us and change course. They no longer care about the artifacts or the job. They consider the cargo to be a death trap, and are taking measures to unload it.\r\n\r\nYour caravan might think they were carrying the Tools, but Sadras and Hlaalu swapped them before we ever got to Whiterun, and intentionally gave them up to the retrieval drones. Fortunately, I managed to track the drones back to a vault near Winterhold; what the locals call the Sightless Pit. I've also discovered the vault can be opened with an attunement crystal, which I've sent along with this letter. As I am no warrior, I dare not venture inside without you.\r\n\r\nHopefully this message reaches your party in time, for I know we are of like mind. As a scholar, I want to see the artifacts delivered to my master, and you have always been someone who does not shirk his duty. I have faith that you and your crew can return north and repair this mistake.\r\n\r\nVelyne</font></p>\r\n",
+        "string": "<p align='left'><font face='$HandwrittenFont'><font size='18'>\r\nInedos: \r\n\r\nLos informes son correctos. Guardamano espectral y División cantan y envían una señal a cualquiera que esté escuchando. No sé cómo, pero creo saber por qué. Se suponía que esas herramientas solo se podían usar en Numidium, así que tiene sentido que nunca se permitiera que abandonasen Morrowind. \r\n\r\nPara asegurarse de ello, Kagrenac debe de haber puesto en marcha un sistema de seguridad. Si alguna vez robaban las herramientas, se activarían drones por todo Tamriel para recuperarlas. Después las guardarían en una cámara hasta que un arquitecto tonal pudiera hacerse cargo de ellas. \r\n\r\nPor desgracia, tal y como sospechaba, esa información bastó para que algunos de los capitanes nos traicionaran y cambiaran de rumbo. Ya no les importaban los artefactos ni el trabajo. Consideran que el cargamento es una trampa mortal y están tomando medidas para descargarlo.\r\n\r\nPuede que tu caravana crea que transporta las herramientas, pero los Sadras y los Hlaalu las intercambiaron antes de que llegáramos a Carrera Blanca y por decisión propia las entregaron a los drones de recuperación. Afortunadamente, conseguí seguir la pista a los drones hasta una cámara cerca de Hibernalia, un lugar que los habitantes de la zona llaman Pozo inescrutable. También he descubierto que se puede abrir con un cristal de sintonización, que te envío junto a esta carta. Como no soy una guerrera, no me atrevo a aventurarme en su interior sin ti.\r\n\r\nEspero que este mensaje te llegue a tiempo, porque sé que estamos de acuerdo. Como estudiosa, quiero que se entreguen los artefactos a mi señor, y tú nunca has rehuido tus obligaciones. Tengo fe en que tu grupo y tú podáis regresar hacia el norte y subsanar este error.\r\n\r\nVelyne</font></p>\r\n"
+    },
+    {
+        "editor_id": "ccBGSSSE08_Note3",
+        "form_id": "[0400081A]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Seedy Guard's Note",
+        "string": "Nota del guardia andrajoso"
+    },
+    {
+        "editor_id": "ccBGSSSE08_Note2",
+        "form_id": "[04000818]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Carriage Driver's Note",
+        "string": "Nota del conductor del carruaje"
+    },
+    {
+        "editor_id": "ccBGSSSE08_Note2",
+        "form_id": "[04000818]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<p align='left'><font face='$HandwrittenFont'><font size='18'>\r\nIt happened sometime after we crossed deeper into the mountains, but I swear I could hear singing. Tuneless, very quiet, but singing nonetheless. No one else believes me, but I'd bet my bottom drake that it had something to do with the Dwarven machines attacking us last night. I've never heard of these things leaving their ruins, let alone roaming the countryside going after travelers. It's almost as if they were drawn to the music.\r\n\r\nTonight we're handing the cargo off to the Sadras caravan, and I say good riddance. But the captain says we're going to eventually circle back to Whiterun, which means we could see the cargo again.\r\n\r\nIf that happens, I'm getting off this caravan. I don't care about the gold. I haven't slept for days and I feel like I'm losing my mind.\r\n\r\nEven now, I can hear that awful singing in my head. I just want it to stop.</font></p>",
+        "string": "<p align='left'><font face='$HandwrittenFont'><font size='18'>\r\nSucedió en algún momento tras adentrarnos en las montañas, pero juro que oí un canto. Desentonado, muy suave, pero un canto al fin y al cabo. Nadie me cree, pero apostaría hasta el último draco a que tenía algo que ver con las máquinas de los enanos que nos atacaron anoche. Nunca había tenido noticias de que esos trastos abandonaran las ruinas, no digamos ya de que vagaran por el campo persiguiendo a viajeros. Parece casi como si se vieran atraídos por la música.\r\n\r\nEsta noche entregaremos el cargamento a la caravana de los Sadras y podré despedirme del problema. Pero el capitán dice que al final tendremos que regresar a Carrera Blanca, lo que significa que podríamos volver a ver la carga.\r\n\r\nSi eso sucede, dejaré la caravana. Me da igual el oro. Llevo días sin dormir y me parece que me estoy volviendo loco.\r\n\r\nIncluso ahora, oigo ese horrible canto en la cabeza. Solo quiero que pare.</font></p>"
+    },
+    {
+        "editor_id": "ccBGSSSE08_Note1",
+        "form_id": "[04000819]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<p align='left'><font face='$HandwrittenFont'><font size='18'>\r\nWe crossed into Skyrim under the cover of ashfall. As far as anyone knows, we're shipping refugees, just one in a long line of vagrant caravans escaping the wrath of the Red Mountain. Normally, a story like that would be enough to get us through, but not this time.\r\n\r\nNow I've been a caravan guard for some time, and I've seen some pretty extensive security measures. Locks, chains, the works. One client even had a conjurer summon a daedra to guard his wagon, but even compared to that this seems excessive. \r\n\r\nFor one, everything has a code name. The cargo, the guards, even the horse. As for the caravans, to keep it familiar we've each been given a name from one of the Great Houses. \r\n\r\nOf course, some of the guards didn't like that part. One of the new bloods said he'd rather bend the knee to a guar than wear the name of House Dres. But Captain Inedos brought him in line with the point of his blade, and the rest followed. You'd think the Red Year would unite us, but it seems like there's old scars that haven't healed and old scores that haven't been settled. But at the end of the day, none of that matters. The job's the job. Like the Captain said, at least they didn't name us after the boots.\r\nWe've also got several decoy caravans heading out through Skyrim, all the way to some undisclosed location in Hammerfell. But since that's not enough, each caravan will meet up at preset checkpoints and swap their items out. \r\n\r\nThat means different decoys traveling different paths every step of the way. With the refugee garb they say we should blend right in, and on the off chance we don't, we've got runners set to flee to the next village, hidden compartments, anything you can think of. \r\n\r\nStill, if you ask me, all of it sounds like a waste of time. I'm no scholar, but those two bits of cargo don't look like anything special, just a fancy way to bash some poor f'lah's skull in. \r\n\r\nWith all the chaos bleeding out of Vvardenfell, we've made it to Windhelm without so much as a papercut. Come morning we're heading out west along the river toward Nightgate Inn. If all goes well we'll reach the mountain pass by midday. Still, we'd get there sooner if not for all the stops.</font></p>",
+        "string": "<p align='left'><font face='$HandwrittenFont'><font size='18'>\r\nCruzamos hasta Skyrim cubiertos por la ceniza. La gente piensa que transportamos refugiados; una más en la larga línea de caravanas de vagabundos que escapan de la ira de la Montaña Roja. Normalmente, una historia como esa bastaría para permitirnos pasar, pero esta vez no.\r\n\r\nLlevo protegiendo caravanas durante algún tiempo ya y he visto medidas de seguridad bastante serias. Candados, cadenas, de todo. Un cliente incluso hizo que un conjurador invocara a un daedra para que cuidara de su carro, pero incluso comparado con eso, lo de ahora parece excesivo. \r\n\r\nPara empezar, todo tiene un nombre en código. El cargamento, los guardias... hasta el caballo. Respecto a las caravanas, para que nos resulten familiares, a cada una le han dado el nombre de una de las Grandes Casas. \r\n\r\nClaro que a algunos de los guardias no les gustó esa parte. Uno de los nuevos dijo que prefería arrodillarse ante un guar a llevar el nombre de la Casa Dres. Pero el capitán Inedos le puso en su sitio con la punta de la espada y nadie más rechistó. Lo normal sería que el Año Rojo nos uniera, pero parece que hay viejas heridas por curar y rencillas que resolver. Pero al final, nada de eso importa. El trabajo es como es. Como dijo el capitán, al menos no nos dieron los nombres de los campamentos militares.\r\nTambién tenemos varias caravanas que actúan de señuelos por todo Skyrim, hasta llegar a un lugar secreto en Páramo del Martillo. Pero como no basta con eso, todas las caravanas irán a puntos de control fijados de antemano, donde intercambiarán sus cargamentos. \r\n\r\nEso significa que hay diferentes señuelos que viajan por caminos distintos en cada etapa del camino. Dicen que con los atuendos de refugiados deberíamos pasar desapercibidos y, en el improbable caso de que no fuera así, tenemos mensajeros preparados para huir hasta la siguiente aldea, compartimentos ocultos, cualquier cosa que se le pueda ocurrir a uno. \r\n\r\nAun así, a mí me parece todo una pérdida de tiempo. No soy ningún experto, pero esos dos cargamentos no parecen ser nada especial, solo una forma muy elaborada de machacarle el cráneo a algún pobre hombre. \r\n\r\nCon todo el caos que surge de Vvardenfell, hemos llegado a Ventalia sin un solo rasguño. Mañana nos dirigiremos al oeste y seguiremos el río hacia la posada El portal nocturno. Si todo va bien, deberíamos alcanzar el paso de montaña a mediodía. Aun así, llegaríamos antes de no ser por todas esas paradas.</font></p>"
+    },
+    {
+        "editor_id": "ccBGSSSE08_Note3",
+        "form_id": "[0400081A]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<p align='left'><font face='$HandwrittenFont'><font size='18'>\r\nTelvanni handed the cargo off to us at the checkpoint. They seemed a bit on edge but they aren't sharing details exactly, just that they were attacked by Dwarven machines. Bunch of useless fetchers, all of them.\r\n\r\nWe also had a surprise visit from the Hlaalu caravan. The whole crew was an odd bunch. More scholars and farmers than warriors I'd say, but a few were just my type. I tried to chat it up with a fetching raven-haired girl, but she kept those sultry red eyes fixed on the cargo as it changed hands.\r\n\r\nIn any case, the main package is secured, but there's fear it was damaged during transport. Oddly the Hlaalu captain didn't seem too concerned about it. He and the boss talked for a bit by themselves. I tried my luck with the raven-haired tart once more, and she told me her name was Velyne. She asked whether Captain Inodes would be at the next checkpoint. I told her no, but the truth is I didn't even know. I don't know why she cared anyway, their cargo is a decoy.\r\n\r\nThe real package is going to Indoril at the next stop. Once that's delivered, I'm hearing we might stop for a day or two in Whiterun to get our bearings. The captain of the Indoril caravan is a Nord, and he mentioned heading over to the Hall of the Dead to pay his respects. That's fine, I'll be paying mine at the tavern. Hopefully I'll get a chance to buy sweet little Velyne a drink.</font></p>",
+        "string": "<p align='left'><font face='$HandwrittenFont'><font size='18'>\r\nLos Telvanni nos entregaron el cargamento en el punto de control. Parecían un poco nerviosos, pero no han entrado en detalles. Solo nos han dicho que sufrieron un ataque de las máquinas de los enanos. Vaya panda de recaderos inútiles, todos ellos.\r\n\r\nTambién hemos tenido una visita sorpresa de la caravana de los Hlaalu. Todos los de ese grupo son bastante raros. Diría que hay más eruditos y granjeros que guerreros, pero unos cuantos eran de los míos. Intenté entablar conversación con una atractiva chica de cabellera negra, pero mantuvo sus seductores ojos rojos clavados en la carga mientras cambiaba de manos.\r\n\r\nDe todas formas, el paquete principal está a salvo, aunque tememos que resultara dañado durante el transporte. Es extraño, pero el capitán de los Hlaalu no parecía preocupado al respecto. El jefe y él hablaron a solas un rato. Volví a probar suerte con la chica de pelo color cuervo y me dijo que se llamaba Velyne. Me preguntó si el capitán Inedos estaría en el próximo punto de control. Le respondí que no, pero lo cierto es que no lo sabía. No tengo ni idea de por qué le interesaba, ya que su carga es un señuelo.\r\n\r\nEl verdadero paquete irá a Indoril en la próxima parada. Cuando lo entreguemos, me dicen que podríamos detenernos durante un día o dos en Carrera Blanca, para orientarnos. El capitán de la caravana de los Indoril es nórdico y mencionó que iría al Salón de los Muertos a presentar sus respetos. Me parece bien, yo iré a presentar los míos a la taberna. Ojalá tenga la oportunidad de invitar a un trago a la dulce Velyne.</font></p>"
+    },
+    {
+        "editor_id": "ccBGSSSE08_Note4",
+        "form_id": "[04000816]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Caravan Captain's Note",
+        "string": "Nota del capitán de la caravana"
+    },
+    {
+        "editor_id": "ccBGSSSE08_Note4",
+        "form_id": "[04000816]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<p align='left'><font face='$HandwrittenFont'><font size='18'>\r\nWe met with Sadras and picked up the cargo. At least their captain seemed in better spirits, but the others looked exhausted. To make matters worse, the air was flush with news about the caravans who didn't make it, sieged by Dwarven automatons on the road to Whiterun.\r\n\r\nMy worry is such fears will find their way into the minds of my men. Especially when the details of their stories seem to corroborate, it only serves to throw more kindling on the flame.\r\n\r\nHopefully the other captains have a plan. We've had a few deserters already, and we'll need every available body if these attacks continue. It'll be difficult to convince the men to leave the safety of the tavern for the terrors of the unknown.\r\n\r\nEven without this Dwarven nonsense, the road ahead will only get more perilous given the copious bandits, wolves, and other dangers on the road. Captain Inodes has asked us to take a detour with the Dres caravan to Falkreath. Staying off the main road might provide us some cover.</font></p>",
+        "string": "<p align='left'><font face='$HandwrittenFont'><font size='18'>\r\nNos reunimos con los Sadras y recogimos el cargamento. Su capitán parecía estar de buen humor, pero los demás estaban agotados. Y encima, había un aire de nerviosismo debido a las noticias sobre las caravanas que no habían alcanzado su objetivo, acosadas por los autómatas de los enanos de camino a Carrera Blanca.\r\n\r\nTemo que tales miedos lleguen a apoderarse de mis hombres. Además, cuando los detalles de esas historias sirven de corroboración, no hacen sino arrojar más leña al fuego.\r\n\r\nEsperemos que los demás capitanes tengan un plan. Ya ha habido unas cuantas deserciones y, si continúan los ataques, necesitaremos a toda persona capaz. Será difícil convencer a los hombres para que abandonen la seguridad de la taberna y la cambien por los terrores de lo desconocido.\r\n\r\nIncluso sin estas tonterías sobre los enanos, el camino que tenemos por delante se volverá más peligroso, debido a la abundancia de bandidos, lobos y otros peligros que lo acechan. El capitán Inedos nos ha pedido que nos desviemos con la caravana de los Dres hasta Falkreath. Alejarnos del camino principal podría proporcionarnos cierta cobertura.</font></p>"
+    },
+    {
+        "editor_id": "ccBGSSSE08_Note5",
+        "form_id": "[04000817]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Velyne's Letter",
+        "string": "Carta de Velyne"
+    },
+    {
+        "editor_id": "ccBGSSE008_WraithguardChest1",
+        "form_id": "[0400081C]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Old Caravan Chest",
+        "string": "Cofre viejo de caravana"
+    },
+    {
+        "editor_id": "ccBGSSE008_WraithguardChest3",
+        "form_id": "[0400081B]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Old Caravan Chest",
+        "string": "Cofre viejo de caravana"
+    },
+    {
+        "editor_id": "ccBGSSE008_WraithguardChest2",
+        "form_id": "[0400081D]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Old Caravan Chest",
+        "string": "Cofre viejo de caravana"
+    },
+    {
+        "editor_id": "ccBGSSSE008_AttunementCrystal",
+        "form_id": "[0400081E]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Attunement Crystal",
+        "string": "Cristal de sintonización"
+    },
+    {
+        "editor_id": "BGSSSE008Sunder",
+        "form_id": "[04000801]",
+        "index": null,
+        "type": "WEAP DESC",
+        "original": "Does <5> points of frost, fire, and shock damage each. Does <15> points of damage to stamina and magicka. ",
+        "string": "Inflige <5> puntos de daño por escarcha, fuego y descarga. Inflige <15> puntos de daño al aguante y la magia. "
+    },
+    {
+        "editor_id": "BGSSSE008Sunder",
+        "form_id": "[04000801]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Sunder",
+        "string": "División"
+    },
+    {
+        "editor_id": "ccBGSSSE008_CenturionBoss",
+        "form_id": "[04000822]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "The Messenger",
+        "string": "El mensajero"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Boss",
+        "form_id": "[04000821]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "The Messenger",
+        "string": "El mensajero"
+    },
+    {
+        "editor_id": "WindhelmCalixtosHouseofCuriosities",
+        "form_id": "[00016787]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Calixto's House of Curiosities",
+        "string": "Casa de las curiosidades de Calixto"
+    },
+    {
+        "editor_id": "SightlessPit01",
+        "form_id": "[00035299]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Sightless Pit",
+        "string": "Pozo inescrutable"
+    },
+    {
+        "editor_id": "CCBGSSSE008Vault",
+        "form_id": "[04000823]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Sightless Vault",
+        "string": "Cripta inescrutable"
+    },
+    {
+        "editor_id": "WhiterunHalloftheDeadCatacombs",
+        "form_id": "[00094BAB]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Whiterun Catacombs",
+        "string": "Catacumbas de Carrera Blanca"
+    },
+    {
+        "editor_id": "Bthardamz03",
+        "form_id": "[00030442]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Bthardamz Arcanex",
+        "string": "Arcanexo de Bthardamz"
+    },
+    {
+        "editor_id": "SightlessPit03",
+        "form_id": "[00025195]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Abandoned Cave",
+        "string": "Cueva abandonada"
+    },
+    {
+        "editor_id": "SightlessPit02",
+        "form_id": "[00081972]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Temple of Xrib",
+        "string": "Templo de Xrib"
+    },
+    {
+        "editor_id": "WindhelmNewGnisisCornerclub",
+        "form_id": "[0001677F]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "New Gnisis Cornerclub",
+        "string": "New Gnisis Cornerclub"
+    },
+    {
+        "editor_id": "Tamriel",
+        "form_id": "[0000003C]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Skyrim"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 80,
+        "type": "QUST CNAM",
+        "original": "I've defeated the Dwarven defenses and claimed both Sunder and Wraithguard for myself.",
+        "string": "He derrotado a las defensas de los enanos y me he apoderado de División y Guardamano espectral."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 110,
+        "type": "QUST CNAM",
+        "original": "Rumors say an old refugee trunk full of letters has been uncovered in Windhelm. I should see if I can find a copy of those letters and more information on the cargo they were carrying.",
+        "string": "Se dice que en Ventalia han descubierto un viejo baúl perteneciente a refugiados, repleto de cartas. Veamos si puedo encontrar una copia de esas cartas y más información sobre la carga que transportaban."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 0,
+        "type": "QUST NNAM",
+        "original": "Find the caravan's letters in Windhelm",
+        "string": "Encuentra las cartas de la caravana en Ventalia."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 4,
+        "type": "QUST NNAM",
+        "original": "Find the detoured caravans",
+        "string": "Encuentra las caravanas desviadas."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 14,
+        "type": "QUST NNAM",
+        "original": "Read Velyne's Letter",
+        "string": "Lee la carta de Velyne."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 3,
+        "type": "QUST NNAM",
+        "original": "Find evidence of the caravans in Whiterun",
+        "string": "Encuentra indicios de las caravanas en Carrera Blanca."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 2,
+        "type": "QUST NNAM",
+        "original": "Find the second caravan",
+        "string": "Encuentra la segunda caravana."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 7,
+        "type": "QUST NNAM",
+        "original": "Defeat the Messenger",
+        "string": "Derrota al mensajero."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 12,
+        "type": "QUST NNAM",
+        "original": "Read the Carriage Driver's Note",
+        "string": "Lee la nota del conductor del carruaje."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 6,
+        "type": "QUST NNAM",
+        "original": "Retrieve Sunder and Wraithguard",
+        "string": "Recupera a División y a Guardamano espectral."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 9,
+        "type": "QUST NNAM",
+        "original": "Restore steam in the left valve system",
+        "string": "Restablece el vapor en el sistema de válvulas izquierdo."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 94,
+        "type": "QUST CNAM",
+        "original": "As predicted, both Tools are guarded by a powerful Dwarven Centurion. I'll have to defeat it if I'm to claim them as my own.",
+        "string": "Tal y como estaba previsto, ambas herramientas se encuentran vigiladas por un poderoso centurión enano. Tendré que derrotarlo si quiero apoderarme de ellas."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 13,
+        "type": "QUST NNAM",
+        "original": "Read the Seedy Guard's Note",
+        "string": "Lee la nota del guardia andrajoso."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 1,
+        "type": "QUST NNAM",
+        "original": "Follow the caravan's trail",
+        "string": "Sigue el rastro de la caravana"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 5,
+        "type": "QUST NNAM",
+        "original": "Enter the vault in the Sightless Pit",
+        "string": "Entra en la cámara del Pozo inescrutable."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 60,
+        "type": "QUST CNAM",
+        "original": "I've unlocked the Sightless Vault. Within lies Sunder and Wraithguard.",
+        "string": "He abierto la cripta inescrutable. En su interior se encuentran División y Guardamano espectral."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 82,
+        "type": "QUST CNAM",
+        "original": "I've found one of the letters, which details the routes of both the caravans as well as decoys designed to misdirect potential thieves. According to the letter, the first caravan was headed west toward Nightgate Inn. Perhaps following its trail will lead to another clue.",
+        "string": "He encontrado una de las cartas, en la que se detallan las rutas de las caravanas y de los señuelos diseñados para confundir a posibles ladrones. Según esta carta, la primera caravana se dirigía al oeste, hacia la posada El portal nocturno. Si sigo su rastro, quizás descubra otra pista."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Legends Lost",
+        "string": "Leyendas perdidas"
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Restore steam in the right valve system",
+        "string": "Restablece el vapor en el sistema de válvulas derecho."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 107,
+        "type": "QUST CNAM",
+        "original": "The first caravan was attacked by Dwarven creatures. They managed to escape but I found a copy of their logs, along with details of all the other caravans. The next carriage was headed towards Whiterun. I should see what I can find.",
+        "string": "La primera caravana fue atacada por criaturas de los enanos. Se las arreglaron para escapar, pero encontré una copia de sus registros, junto con información sobre las demás caravanas. El siguiente carruaje se dirigía a Carrera Blanca. Veremos qué puedo descubrir."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 107,
+        "type": "QUST CNAM",
+        "original": "In response to the attacks, the caravans took a detour towards Falkreath. I'll need to follow their trail to see if they left anything behind.",
+        "string": "En respuesta a los ataques, la caravana se desvió hacia Falkreath. Debo seguirles la pista y comprobar si han dejado algo tras de sí."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 11,
+        "type": "QUST NNAM",
+        "original": "Find a way to open the vault gates",
+        "string": "Encuentra la forma de abrir las puertas de la cámara."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 77,
+        "type": "QUST CNAM",
+        "original": "On the road to Whiterun I found the remnants of another sacked caravan. According to a note I found in the wreckage, the remaining caravans were set to regroup in Whiterun, and one of the guards visited the Halls of the Dead there.",
+        "string": "De camino a Carrera Blanca di con los restos de otra caravana saqueada. Según una nota que encontré entre el desastre, enviaron a las caravanas restantes a que se reagruparan en Carrera Blanca, y uno de los guardias visitó los Salones de los Muertos que hay allí."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 89,
+        "type": "QUST CNAM",
+        "original": "The cargo the caravans were delivering appears to hold the missing Tools of Kagremac: Sunder and Wraithguard. Apparently the items were surrendered to Dwemer drones and taken to a vault in the Sightless Pit. If I'm to open the door, I need to take this attunement crystal I found and use it to unlock the vault.",
+        "string": "El cargamento que transportaban las caravanas parece contener las herramientas perdidas de Kagremac: División y Guardamano espectral. Por lo visto, estos objetos fueron entregados a drones dwemer y llevados a una cámara del Pozo inescrutable. Necesitaré este cristal de sintonización para abrir la cerradura de la cámara."
+    },
+    {
+        "editor_id": "ccBGSSSE008_Quest",
+        "form_id": "[04000AB0]",
+        "index": 8,
+        "type": "QUST NNAM",
+        "original": "Retrieve the Attunement Crystal",
+        "string": "Recupera el cristal de sintonización."
+    },
+    {
+        "editor_id": "ccBGSSSE008_DamageReduced",
+        "form_id": "[04000AB1]",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Reduced Damage",
+        "string": "Daño reducido"
+    },
+    {
+        "editor_id": "ccBGSSSE008_DamageReduced",
+        "form_id": "[04000AB1]",
+        "index": null,
+        "type": "PERK DESC",
+        "original": "Make actor immune to incoming damage to block skill uses being added",
+        "string": "Inmuniza a quien lo usa contra el daño inminente para bloquear los usos de habilidad que se añadan."
+    },
+    {
+        "editor_id": "ccBGSSSE008_DamageFortified",
+        "form_id": "[04000AB2]",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Extra Damage 10",
+        "string": "Daño extra 10"
+    },
+    {
+        "editor_id": "SightlessPitLocation",
+        "form_id": "[000192A8]",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "Sightless Pit",
+        "string": "Pozo inescrutable"
+    },
+    {
+        "editor_id": "ccBGSSSE008_NoSteamMessage",
+        "form_id": "[04000AB4]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "There doesn't seem to be any steam flowing through these pipes.",
+        "string": "No parece que por estas tuberías fluya ningún vapor."
+    },
+    {
+        "editor_id": "ccBGSSSE008_NoResponseMessage",
+        "form_id": "[04000B22]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Nothing seems to happen.",
+        "string": "No parece que pase nada."
+    },
+    {
+        "editor_id": "ccBGSSSE008_BarredDoorMessage",
+        "form_id": "[04000B0F]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Some other mechanism controls this door.",
+        "string": "Algún otro mecanismo controla esta puerta."
+    },
+    {
+        "editor_id": "ccBGSSSE008_BossName3",
+        "form_id": "[04000AB6]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Messenger's Sword",
+        "string": "Espada del mensajero"
+    },
+    {
+        "editor_id": "ccBGSSSE008_NoSteamMessage",
+        "form_id": "[04000AB4]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "There doesn't seem to be any steam flowing through these pipes.",
+        "string": "No parece que por estas tuberías fluya ningún vapor."
+    },
+    {
+        "editor_id": "ccBGSSSE008_NoResponseMessage",
+        "form_id": "[04000B22]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Nothing seems to happen.",
+        "string": "No parece que pase nada."
+    },
+    {
+        "editor_id": "ccBGSSSE008_BossName1",
+        "form_id": "[04000AB5]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Messenger's Staff",
+        "string": "Bastón del mensajero"
+    },
+    {
+        "editor_id": "ccBGSSSE008_BossName2",
+        "form_id": "[04000AB3]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Messenger's Shield",
+        "string": "Escudo del mensajero"
+    },
+    {
+        "editor_id": "ccBGSSE008_CenturionSpell",
+        "form_id": "[04000AB7]",
+        "index": null,
+        "type": "SHOU FULL",
+        "original": "Lightning Breath",
+        "string": "Aliento de relámpago"
+    }
+]

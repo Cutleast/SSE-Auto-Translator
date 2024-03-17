@@ -1,0 +1,354 @@
+[
+    {
+        "editor_id": "ccQDRSSE002_BuildCampEffect",
+        "form_id": "[05000D63]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Build Camp",
+        "string": "Zbuduj obóz"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BuildCampEffect",
+        "form_id": "[05000D63]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Build a campsite when outdoors.",
+        "string": "Zbuduj na zewnątrz obóz."
+    },
+    {
+        "editor_id": "ccQDRSSE002_InCityCheckEffect",
+        "form_id": "[05000826]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "In City Check",
+        "string": "Sprawdzanie pobytu w mieście"
+    },
+    {
+        "editor_id": "ccQDRSSE002_SwimCheckEffect",
+        "form_id": "[05000824]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Swimming Check",
+        "string": "Sprawdzanie pływania"
+    },
+    {
+        "editor_id": "ccQDRSSE002_InCityCheckSpell",
+        "form_id": "[05000828]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "In City Check Spell",
+        "string": "Czar - sprawdzanie pobytu w mieście"
+    },
+    {
+        "editor_id": "ccQDRSSE002_SwimCheckSpell",
+        "form_id": "[05000827]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Swim Check Spell",
+        "string": "Czar - sprawdzanie pływania"
+    },
+    {
+        "editor_id": "ccQDRSSE002_ShelterAct",
+        "form_id": "[05000803]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Use",
+        "string": "Użyj"
+    },
+    {
+        "editor_id": "ccQDRSSE002_ShelterAct",
+        "form_id": "[05000803]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Shelter",
+        "string": "Schronienie"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampfireFurn",
+        "form_id": "[05000804]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Campfire",
+        "string": "Ognisko"
+    },
+    {
+        "editor_id": "ccQDRSSE002_Chair",
+        "form_id": "[05000825]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Crate",
+        "string": "Skrzynia"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BedrollNoSandbox",
+        "form_id": "[05000819]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Bed Roll Ground",
+        "string": "Posłanie na ziemi"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingSupplies",
+        "form_id": "[05000801]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Camping Supplies",
+        "string": "Materiały do budowania obozu"
+    },
+    {
+        "editor_id": "Tamriel",
+        "form_id": "[0000003C]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Skyrim"
+    },
+    {
+        "editor_id": "DLC2SolstheimWorld",
+        "form_id": "[04000800]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Solstheim",
+        "string": "Solstheim"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampMapMarkerRefTamriel001",
+        "form_id": "[05000831]",
+        "index": null,
+        "type": "REFR FULL",
+        "original": "Campsite",
+        "string": "Obóz"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampMapMarkerRefSolstheim001",
+        "form_id": "[05000832]",
+        "index": null,
+        "type": "REFR FULL",
+        "original": "Campsite",
+        "string": "Obóz"
+    },
+    {
+        "editor_id": "ccQDRSSE002_IdleQuest",
+        "form_id": "[05000D62]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Camping Idle Quest",
+        "string": "Zadanie obozowe - bezczynność"
+    },
+    {
+        "editor_id": "ccQDRSSE002_MainQuest",
+        "form_id": "[05000D61]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Camping Quest",
+        "string": "Zadanie obozowe"
+    },
+    {
+        "editor_id": "ccQDRSSE002_LoadScreen1",
+        "form_id": "[0500082C]",
+        "index": null,
+        "type": "LSCR DESC",
+        "original": "If you build a campsite, its location will be marked on your map, so you can fast travel to it later.",
+        "string": "Jeśli zbudujesz obóz, jego położenie zostanie oznaczone na mapie, tak żeby można było do niego dotrzeć za pomocą szybkiej podróży."
+    },
+    {
+        "editor_id": "ccQDRSSE002_LoadScreen2",
+        "form_id": "[0500082D]",
+        "index": null,
+        "type": "LSCR DESC",
+        "original": "You can cook some meals over the open flames of your campfire at campsites that you build.",
+        "string": "Możesz przygotowywać posiłki na otwartym ogniu w swoim obozie."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedInteriorMsg",
+        "form_id": "[0500081D]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite while indoors.",
+        "string": "Nie możesz zbudować obozu w pomieszczeniu."
+    },
+    {
+        "editor_id": "ccQDRSSE002_BuildCampPrompt",
+        "form_id": "[05000818]",
+        "index": 0,
+        "type": "MESG ITXT",
+        "original": "Ok",
+        "string": "OK"
+    },
+    {
+        "editor_id": "ccQDRSSE002_ShelterOptionMsg",
+        "form_id": "[05000813]",
+        "index": 0,
+        "type": "MESG ITXT",
+        "original": "Sleep",
+        "string": "Śpij"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedHereMsg",
+        "form_id": "[05000812]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite here.",
+        "string": "Nie możesz tu zbudować obozu."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedCombatMsg",
+        "form_id": "[0500081F]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite while in combat.",
+        "string": "Nie możesz zbudować obozu w czasie walki."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedSpaceMsg",
+        "form_id": "[0500082F]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You don't have enough space to build a campsite here.",
+        "string": "Masz za mało miejsca, aby zbudować obóz."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedCityMsg",
+        "form_id": "[0500081B]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite in cities or towns.",
+        "string": "Nie możesz zbudować obozu w miastach."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingTutorialMsg",
+        "form_id": "[0500081A]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Campsites allow you to rest and stay warm while exploring the wilderness. You can cook a limited number of meals over the campfire. Your campsite is marked on your map so you can locate and fast travel to it later.",
+        "string": "Dzięki obozowi możesz wypocząć i ogrzać się w czasie zwiedzania dzikich pustkowi. Możesz też przygotować ograniczoną liczbę posiłków nad ogniem. Twój obóz jest zaznaczony na mapie, tak żeby można było do niego dotrzeć za pomocą szybkiej podróży."
+    },
+    {
+        "editor_id": "ccQDRSSE002_BreakCampPrompt",
+        "form_id": "[0500082B]",
+        "index": 1,
+        "type": "MESG ITXT",
+        "original": "Cancel",
+        "string": "Anuluj"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BuildCampPrompt",
+        "form_id": "[05000818]",
+        "index": 1,
+        "type": "MESG ITXT",
+        "original": "Cancel",
+        "string": "Anuluj"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingHelp",
+        "form_id": "[05000817]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Campsites allow you to stay rested and warm while exploring the wilderness. Create Camping Supplies at a forge. You can use Camping Supplies to build a campsite while outdoors.\r\n\r\nWhile at your campsite, you can sleep in your makeshift shelter or cook a limited number of meals over the campfire.\r\n\r\nYour campsite's location is marked on your map, so you can find and fast travel to it later.\r\n\r\nOnly one campsite can be built at a time. Building a new campsite will remove the previous one, and your campsite's map marker will be updated to the new campsite.",
+        "string": "Dzięki obozowi możesz wypocząć i ogrzać się w czasie zwiedzania dzikich pustkowi. Stwórz materiały do zbudowania obozu w kuźni. Możesz z nich skorzystać, aby zbudować obóz, gdy jesteś na zewnątrz.\r\n\r\nGdy jesteś w obozie, możesz przespać się w swoim prowizorycznym schronieniu lub przygotować ograniczoną liczbę posiłków nad ogniem.\r\n\r\nPołożenie twojego obozu jest zaznaczone na mapie, tak żeby można było do niego dotrzeć za pomocą szybkiej podróży.\r\n\r\nMożna mieć tylko jeden obóz. Zbudowanie nowego obozu sprawi, że poprzedni zniknie, a znacznik na mapie zostanie zaktualizowany."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedMountedMsg",
+        "form_id": "[05000823]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite while mounted.",
+        "string": "Nie możesz zbudować obozu, dosiadając wierzchowca."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedGroundMsg",
+        "form_id": "[05000830]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You don't have enough level terrain to camp here.",
+        "string": "Nie ma tu wystarczająco dużo płaskiej powierzchni, żeby zbudować obóz."
+    },
+    {
+        "editor_id": "ccQDRSSE002_BuildCampPrompt",
+        "form_id": "[05000818]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Build a campsite here?",
+        "string": "Zbudować tu obóz?"
+    },
+    {
+        "editor_id": "ccQDRSSE002_ShelterOptionMsg",
+        "form_id": "[05000813]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "What do you do?",
+        "string": "Co robisz?"
+    },
+    {
+        "editor_id": "ccQDRSSE002_ShelterOptionMsg",
+        "form_id": "[05000813]",
+        "index": 1,
+        "type": "MESG ITXT",
+        "original": "Break Camp",
+        "string": "Złóż obóz"
+    },
+    {
+        "editor_id": "ccQDRSSE002_ShelterOptionMsg",
+        "form_id": "[05000813]",
+        "index": 2,
+        "type": "MESG ITXT",
+        "original": "Cancel",
+        "string": "Anuluj"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedGenericMsg",
+        "form_id": "[0500082E]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite right now.",
+        "string": "Nie możesz teraz zbudować obozu."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedSwimmingMsg",
+        "form_id": "[05000821]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite while swimming.",
+        "string": "Nie możesz zbudować obozu, pływając."
+    },
+    {
+        "editor_id": "ccQDRSSE002_BreakCampPrompt",
+        "form_id": "[0500082B]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Are you sure you want to break camp?",
+        "string": "Czy na pewno chcesz zlikwidować obóz?"
+    },
+    {
+        "editor_id": "ccQDRSSE002_BreakCampPrompt",
+        "form_id": "[0500082B]",
+        "index": 0,
+        "type": "MESG ITXT",
+        "original": "Ok",
+        "string": "OK"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingHelp",
+        "form_id": "[05000817]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Camping",
+        "string": "Obóz"
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedSittingMsg",
+        "form_id": "[05000822]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You can't build a camp while using something else.",
+        "string": "Nie możesz zbudować obozu, korzystając z czegoś innego."
+    },
+    {
+        "editor_id": "ccQDRSSE002_CampingNotAllowedJumpingMsg",
+        "form_id": "[05000820]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You cannot build a campsite while in the air.",
+        "string": "Nie możesz zbudować obozu w powietrzu."
+    }
+]

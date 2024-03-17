@@ -1,0 +1,3714 @@
+[
+    {
+        "editor_id": "ccBGSSSE025_CorruptedSprigganRaceMania",
+        "form_id": "[051B6918]",
+        "index": null,
+        "type": "RACE FULL",
+        "original": "Corrupted Spriggan",
+        "string": "Korrumpierter Zweigling"
+    },
+    {
+        "editor_id": "ccBGSSSE025_GoldenSaintRace",
+        "form_id": "[05000816]",
+        "index": null,
+        "type": "RACE FULL",
+        "original": "Golden Saint",
+        "string": "Goldene Heilige"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraRace",
+        "form_id": "[05000A76]",
+        "index": null,
+        "type": "RACE FULL",
+        "original": "Elytra Nymph",
+        "string": "Elytra-Nymphe"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraRace_PET",
+        "form_id": "[05000A52]",
+        "index": null,
+        "type": "RACE FULL",
+        "original": "Elytra Nymph",
+        "string": "Elytra-Nymphe"
+    },
+    {
+        "editor_id": "ccBGSSSE025_DarkSeducerRace",
+        "form_id": "[05000817]",
+        "index": null,
+        "type": "RACE FULL",
+        "original": "Dark Seducer",
+        "string": "Dunkler Verführer"
+    },
+    {
+        "editor_id": "ccBGSSSE025_CorruptedSprigganRaceDementia",
+        "form_id": "[051B691F]",
+        "index": null,
+        "type": "RACE FULL",
+        "original": "Corrupted Spriggan",
+        "string": "Korrumpierter Zweigling"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SummonDarkSeducerWarrior",
+        "form_id": "[05000A0A]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Conjure Dark Seducer Warrior",
+        "string": "Dunkle-Verführer-Krieger beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SummonGoldenSaintArcher",
+        "form_id": "[0500086E]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Summons a Golden Saint Archer for <dur> seconds wherever the caster is pointing.",
+        "string": "Beschwört einen Goldene-Heilige-Bogenschützen für <dur> Sekunden an der Stelle, auf die der Zaubernde zeigt."
+    },
+    {
+        "editor_id": "ccBGSSSE025_TeleportElytraManicEffect",
+        "form_id": "[0508BC1A]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Teleports Manic Elytra Nymph to your side.",
+        "string": "Teleportiert die Wahnsinnige Elytra-Nymphe an deine Seite."
+    },
+    {
+        "editor_id": "ccBGSSSE025_TeleportElytraDementedEffect",
+        "form_id": "[0508BC1B]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Teleports Demented Elytra Nymph to your side.",
+        "string": "Teleportiert die Schwermütige Elytra-Nymphe an deine Seite."
+    },
+    {
+        "editor_id": "ccBGSSSE025_crElytraBiteFFContact",
+        "form_id": "[050BE697]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "A poison that does <mag> points of damage to Health and Magicka per second.",
+        "string": "Ein Gift, das Gesundheit und Magicka <mag> Schadenspunkte pro Sekunde zufügt."
+    },
+    {
+        "editor_id": "ccBGSSSE025_SummonStaada",
+        "form_id": "[0519D3FC]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Conjure Staada",
+        "string": "Staada beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE025_TeleportElytraDementedEffect",
+        "form_id": "[0508BC1B]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Teleport Pet: Demented Elytra Nymph",
+        "string": "Haustier teleportieren: Schwermütige Elytra-Nymphe"
+    },
+    {
+        "editor_id": "ccBGSSSE025_crElytraBiteFFContact",
+        "form_id": "[050BE697]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Elytra Bite",
+        "string": "Elytra-Biss"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SummonGoldenSaintWarrior",
+        "form_id": "[0500087F]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Conjure Golden Saint Warrior",
+        "string": "Goldene-Heilige-Krieger beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SummonStaada",
+        "form_id": "[0519D3FC]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Summons Staada for <dur> seconds wherever the caster is pointing.",
+        "string": "Beschwört Staada für <dur> Sekunden an der Stelle, auf die der Zaubernde zeigt."
+    },
+    {
+        "editor_id": "ccBGSSSE025_DisrobingEffect",
+        "form_id": "[05198270]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Disrobing",
+        "string": "Ablegen"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SummonGoldenSaintWarriorBanditNonPlayable",
+        "form_id": "[05086B13]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Summons a Golden Saint Warrior for <dur> seconds wherever the caster is pointing.",
+        "string": "Beschwört einen Goldene-Heilige-Krieger für <dur> Sekunden an der Stelle, auf die der Zaubernde zeigt."
+    },
+    {
+        "editor_id": "ccBGSSSE025_AbFXSprigganMania",
+        "form_id": "[051B691C]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "SprigganFX Ability",
+        "string": "SprigganFX Ability"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SummonGoldenSaintWarrior",
+        "form_id": "[0500087F]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Summons a Golden Saint Warrior for <dur> seconds wherever the caster is pointing.",
+        "string": "Beschwört einen Goldene-Heilige-Krieger für <dur> Sekunden an der Stelle, auf die der Zaubernde zeigt."
+    },
+    {
+        "editor_id": "ccBGSSSE025_SummonDarkSeducerWarrior",
+        "form_id": "[05000A0A]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Summons a Dark Seducer Warrior for <dur> seconds wherever the caster is pointing.",
+        "string": "Beschwört einen Dunkle-Verführer-Krieger für <dur> Sekunden an der Stelle, auf die der Zaubernde zeigt."
+    },
+    {
+        "editor_id": "ccBGSSSE025_MysticVenomFFSelf",
+        "form_id": "[050B9589]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Mystic Venom",
+        "string": "Mystisches Gift"
+    },
+    {
+        "editor_id": "ccBGSSSE025_TeleportElytraManicEffect",
+        "form_id": "[0508BC1A]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Teleport Pet: Manic Elytra Nymph",
+        "string": "Haustier teleportieren: Wahnsinnige Elytra-Nymphe"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SummonDarkSeducerWarriorBanditNonPlayable",
+        "form_id": "[05086B12]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Summons a Dark Seducer Warrior for <dur> seconds wherever the caster is pointing.",
+        "string": "Beschwört einen Dunkle-Verführer-Krieger für <dur> Sekunden an der Stelle, auf die der Zaubernde zeigt."
+    },
+    {
+        "editor_id": "ccBGSSSE025_SummonDarkSeducerArcher",
+        "form_id": "[0500086D]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Conjure Dark Seducer Archer",
+        "string": "Dunkle-Verführer-Bogenschütze beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SummonDarkSeducerWarriorBanditNonPlayable",
+        "form_id": "[05086B12]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Conjure Dark Seducer Warrior",
+        "string": "Dunkle-Verführer-Krieger beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE025_MysticVenomFFSelf",
+        "form_id": "[050B9589]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "A poison that does <mag> points of damage to Health and Magicka for <dur> seconds.",
+        "string": "Ein Gift, das Gesundheit und Magicka <mag> Schadenspunkte für  <dur> Sekunden zufügt."
+    },
+    {
+        "editor_id": "ccBGSSSE025_SummonGoldenSaintArcher",
+        "form_id": "[0500086E]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Conjure Golden Saint Archer",
+        "string": "Goldene-Heilige-Bogenschütze beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE025_AbFXSaintsSeducers",
+        "form_id": "[05090D1C]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Saints Seducers FX",
+        "string": "Heiligen-/Verführer-Effekte"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SummonGoldenSaintWarriorBanditNonPlayable",
+        "form_id": "[05086B13]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Conjure Golden Saint Warrior",
+        "string": "Goldene-Heilige-Krieger beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE025_DisrobingEffect",
+        "form_id": "[05198270]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Modifies the wearer's worn equipment.",
+        "string": "Modifiziert die verwendete Ausrüstung des Trägers."
+    },
+    {
+        "editor_id": "ccBGSSSE025_BossChannelEffect",
+        "form_id": "[050C37C5]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Boss Channel Effect",
+        "string": "Boss Kanalisier-Effekt"
+    },
+    {
+        "editor_id": "ccBGSSSE025_AbFXSprigganDementia",
+        "form_id": "[051B691B]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "SprigganFX Ability",
+        "string": "SprigganFX Ability"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SummonDarkSeducerArcher",
+        "form_id": "[0500086D]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Summons a Dark Seducer Archer for <dur> seconds wherever the caster is pointing.",
+        "string": "Beschwört einen Dunkle-Verführer-Bogenschützen für <dur> Sekunden an der Stelle, auf die der Zaubernde zeigt."
+    },
+    {
+        "editor_id": "ccBGSSSE025_NoopEffect",
+        "form_id": "[051B6920]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Noop Effect",
+        "string": "Noop Effect"
+    },
+    {
+        "editor_id": "ccBGSSSE025_DisrobingEnch",
+        "form_id": "[05198272]",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Disrobing Enchantment",
+        "string": "Ablegen-Verzauberung"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ConjureStaada",
+        "form_id": "[0519D3FA]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Conjure Staada",
+        "string": "Staada beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE025_TeleportElytraSpellManic",
+        "form_id": "[0508BC16]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Teleport Pet: Manic Elytra Nymph",
+        "string": "Haustier teleportieren: Wahnsinnige Elytra-Nymphe"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ManicElytraSpecial",
+        "form_id": "[050B957A]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Targets won't flee for <5> minutes and get extra health and stamina.",
+        "string": "Ziele fliehen für <5> Minuten nicht und erhlten einen Bonus auf Gesundheit und Ausdauer."
+    },
+    {
+        "editor_id": "ccBGSSSE025_ConjureGoldenSaintWarrior",
+        "form_id": "[050008CB]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Conjure Golden Saint Warrior",
+        "string": "Goldene-Heilige-Krieger beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE025_AbSprigganManiaSpell",
+        "form_id": "[051B6919]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Spriggan abilities",
+        "string": "Spriggan-Fähigkeiten"
+    },
+    {
+        "editor_id": "ccBGSSSE025_AbSprigganDementiaSpell",
+        "form_id": "[051B691D]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Spriggan abilities",
+        "string": "Spriggan-Fähigkeiten"
+    },
+    {
+        "editor_id": "ccBGSSSE025_AbSaintsSeducersFXSpell",
+        "form_id": "[05090D1D]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Saints Seducers FX",
+        "string": "Heiligen-/Verführer-Effekte"
+    },
+    {
+        "editor_id": "ccBGSSSE025_DementedElytraSpecial",
+        "form_id": "[050B957C]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Elytra's Fierce Aura",
+        "string": "Elytras grimmige Aura"
+    },
+    {
+        "editor_id": "ccBGSSSE025_BossChannelSpell",
+        "form_id": "[050C37C4]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Boss Channelling Spell",
+        "string": "Boss Kanalisiert Zauber"
+    },
+    {
+        "editor_id": "ccBGSSSE025_TeleportElytraSpellDemented",
+        "form_id": "[0508BC17]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Teleport Pet: Demented Elytra Nymph",
+        "string": "Haustier teleportieren: Schwermütige Elytra-Nymphe"
+    },
+    {
+        "editor_id": "ccBGSSSE025_DementedElytraSpecial",
+        "form_id": "[050B957C]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Targets have improved combat skills for <5> minutes.",
+        "string": "Ziele verfügen <5> Minuten lang über gesteigerte Kampffertigkeiten."
+    },
+    {
+        "editor_id": "ccBGSSSE025_NoopSpell",
+        "form_id": "[051B6921]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Noop Spell",
+        "string": "Noop Spell"
+    },
+    {
+        "editor_id": "ccBGSSSE025_crElytraPoisonBite",
+        "form_id": "[050BE698]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Mystic Venom",
+        "string": "Mystisches Gift"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ConjureGoldenSaintArcher",
+        "form_id": "[0500086F]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Conjure Golden Saint Archer",
+        "string": "Goldene-Heilige-Bogenschütze beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ManicElytraSpecial",
+        "form_id": "[050B957A]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Elytra's Uplifting Aura",
+        "string": "Elytras erhebende Aura"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ConjureDarkSeducerWarrior",
+        "form_id": "[05000A0B]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Conjure Dark Seducer Warrior",
+        "string": "Dunkle-Verführer-Krieger beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ConjureDarkSeducerWarriorBanditNonPlayable",
+        "form_id": "[05086B0E]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Conjure Dark Seducer Warrior",
+        "string": "Dunkle-Verführer-Krieger beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ConjureGoldenSaintWarriorBanditNonPlayable",
+        "form_id": "[05086B10]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Conjure Golden Saint Warrior",
+        "string": "Goldene-Heilige-Krieger beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ConjureDarkSeducerArcher",
+        "form_id": "[05000870]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Conjure Dark Seducer Archer",
+        "string": "Dunkle-Verführer-Bogenschütze beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ConjureGoldenSaintWarriorScroll",
+        "form_id": "[050008DE]",
+        "index": null,
+        "type": "SCRL FULL",
+        "original": "Scroll of Conjure Golden Saint Warrior",
+        "string": "Rolle der Goldene-Heilige-Krieger-Beschwörung"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ConjureDarkSeducerWarriorScroll",
+        "form_id": "[05000A0F]",
+        "index": null,
+        "type": "SCRL FULL",
+        "original": "Scroll of Conjure Dark Seducer Warrior",
+        "string": "Rolle der Dunkle-Verführerer-Krieger-Beschwörung"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ConjureStaadaScroll",
+        "form_id": "[051B180E]",
+        "index": null,
+        "type": "SCRL FULL",
+        "original": "Scroll of Conjure Staada",
+        "string": "Rolle der Staada-Beschwörung"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ConjureGoldenSaintArcherScroll",
+        "form_id": "[050008CF]",
+        "index": null,
+        "type": "SCRL FULL",
+        "original": "Scroll of Conjure Golden Saint Archer",
+        "string": "Rolle der Goldene-Heilige-Bogenschützen-Beschwörung"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ConjureDarkSeducerArcherScroll",
+        "form_id": "[05000A0D]",
+        "index": null,
+        "type": "SCRL FULL",
+        "original": "Scroll of Conjure Dark Seducer Archer",
+        "string": "Rolle der Dunkle-Verführer-Bogenschütze-Beschwörung"
+    },
+    {
+        "editor_id": "ccBGSSSE025_CritterBlissBug",
+        "form_id": "[05054046]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Catch",
+        "string": "Fangen"
+    },
+    {
+        "editor_id": "ccBGS_RootRotScaleActivator",
+        "form_id": "[0100308C]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Harvest",
+        "string": "Sammeln"
+    },
+    {
+        "editor_id": "ccBGS_RootRotScaleActivator",
+        "form_id": "[0100308C]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Rot Scale",
+        "string": "Schuppenfäule"
+    },
+    {
+        "editor_id": "ccBGS_RootThornHookActivator",
+        "form_id": "[0100308F]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Harvest",
+        "string": "Sammeln"
+    },
+    {
+        "editor_id": "ccBGSSSE025ManholeTrigger",
+        "form_id": "[0515B65B]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Solitude Sewers",
+        "string": "Einsamkeit-Kanalisation"
+    },
+    {
+        "editor_id": "ccBGSSSE025ManholeTrigger",
+        "form_id": "[0515B65B]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Open",
+        "string": "Öffnen"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SwordOfJyggalagAct",
+        "form_id": "[0504EF43]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Sword of Jyggalag",
+        "string": "Schwert von Jyggalag"
+    },
+    {
+        "editor_id": "ccBGS_FlameStalkActivator01",
+        "form_id": "[0100308E]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Harvest",
+        "string": "Sammeln"
+    },
+    {
+        "editor_id": "ccBGS_RootThornHookActivator",
+        "form_id": "[0100308F]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Thorn Hook",
+        "string": "Dornenhaken"
+    },
+    {
+        "editor_id": "ccBGSSSE025_CritterMothPurple",
+        "form_id": "[05054044]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Catch",
+        "string": "Fangen"
+    },
+    {
+        "editor_id": "ccBGS_FlameStalkActivator02",
+        "form_id": "[0100308D]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Harvest",
+        "string": "Sammeln"
+    },
+    {
+        "editor_id": "ccBGSSSE025_CritterMothGreen",
+        "form_id": "[05054045]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Green Butterfly",
+        "string": "Grüner Schmetterling"
+    },
+    {
+        "editor_id": "ccBGSSSE025_CritterMothGreen",
+        "form_id": "[05054045]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Catch",
+        "string": "Fangen"
+    },
+    {
+        "editor_id": "ccBGS_RootScreamingMawActivator",
+        "form_id": "[01003090]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Harvest",
+        "string": "Sammeln"
+    },
+    {
+        "editor_id": "ccBGS_FlameStalkActivator02",
+        "form_id": "[0100308D]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Flame Stalk",
+        "string": "Flammenstängel"
+    },
+    {
+        "editor_id": "ccBGSSSE025NerveshatterOfferActivatorRef",
+        "form_id": "[05000A60]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Amber and Madness Ore",
+        "string": "Bernstein und Wahnsinnserz"
+    },
+    {
+        "editor_id": "ccBGS_RootScreamingMawActivator",
+        "form_id": "[01003090]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Screaming Maw",
+        "string": "Schreiender Schlund"
+    },
+    {
+        "editor_id": "ccBGS_FlameStalkActivator01",
+        "form_id": "[0100308E]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Flame Stalk",
+        "string": "Flammenstängel"
+    },
+    {
+        "editor_id": "ccBGSSSE025NerveshatterOfferActivatorRef",
+        "form_id": "[05000A60]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Platzieren"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SwordOfJyggalagAct",
+        "form_id": "[0504EF43]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "Nehmen"
+    },
+    {
+        "editor_id": "ccBGSSSE025_CritterMothPurple",
+        "form_id": "[05054044]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Purple Butterfly",
+        "string": "Lila Schmetterling"
+    },
+    {
+        "editor_id": "ccBGSSSE025_CritterBlissBug",
+        "form_id": "[05054046]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Bliss Bug",
+        "string": "Glückseligkeits-Käfer"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArmorGoldenSaintGauntletsUnplayable",
+        "form_id": "[05000989]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Golden Saint Gauntlets",
+        "string": "Handschuhe der Goldenen Heiligen"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArmorAmberShield",
+        "form_id": "[05000BC0]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Amber Shield",
+        "string": "Bernsteinschild"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArmorAmberHelmet",
+        "form_id": "[05000BC1]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Amber Helmet",
+        "string": "Bernsteinhelm"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArmorAmberCuirass",
+        "form_id": "[05000BC3]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Amber Armor",
+        "string": "Bernsteinrüstung"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArmorGoldenSaintGauntlets",
+        "form_id": "[05000876]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Golden Saint Gauntlets",
+        "string": "Handschuhe der Goldenen Heiligen"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArmorMadnessGauntlets",
+        "form_id": "[05000BBD]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Madness Gauntlets",
+        "string": "Wahnsinnserzhandschuhe"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArmorGoldenSaintHelmet",
+        "form_id": "[05000875]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Golden Saint Helmet",
+        "string": "Helm der Goldenen Heiligen"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArmorDarkSeducerHelmet",
+        "form_id": "[05000871]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Dark Seducer Helmet",
+        "string": "Helm der Dunklen Verführer"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArmorMadnessCuirass",
+        "form_id": "[05000BBE]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Madness Armor",
+        "string": "Wahnsinnserzrüstung"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArmorMadnessHelmetMagickaRate06",
+        "form_id": "[0516075E]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Madness Helmet of Recovery",
+        "string": "Wahnsinnserzhelm der Erholung"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArmorDarkSeducerGauntlets",
+        "form_id": "[05000872]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Dark Seducer Gauntlets",
+        "string": "Handschuhe der Dunklen Verführer"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArmorDarkSeducerCuirassUnplayable",
+        "form_id": "[050008E5]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Dark Seducer Armor",
+        "string": "Rüstung der Dunklen Verführer"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArmorGoldenSaintBootsUnplayable",
+        "form_id": "[05000987]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Golden Saint Boots",
+        "string": "Stiefel der Goldenen Heiligen"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArmorDarkSeducerHelmetUnplayable",
+        "form_id": "[05000985]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Dark Seducer Helmet",
+        "string": "Helm der Dunklen Verführer"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArmorDarkSeducerGauntletsUnplayable",
+        "form_id": "[05000960]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Dark Seducer Gauntlets",
+        "string": "Handschuhe der Dunklen Verführer"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArmorMadnessHelmet",
+        "form_id": "[05000BBC]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Madness Helmet",
+        "string": "Wahnsinnserzhelm"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArmorMadnessBoots",
+        "form_id": "[05000BBF]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Madness Boots",
+        "string": "Wahnsinnserzstiefel"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArmorGoldenSaintShield",
+        "form_id": "[05000800]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Golden Saint Shield",
+        "string": "Schild der Goldenen Heiligen"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArmorStaadaHelmet",
+        "form_id": "[0519D389]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Staada's Helmet",
+        "string": "Staadas Helm"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArmorDarkSeducerShieldUnplayable",
+        "form_id": "[05000986]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Dark Seducer Shield",
+        "string": "Schild der Dunklen Verführer"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArmorGoldenSaintCuirassUnplayable",
+        "form_id": "[05000988]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Golden Saint Armor",
+        "string": "Rüstung der Goldenen Heiligen"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArmorGoldenSaintHelmetUnplayable",
+        "form_id": "[0500098A]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Golden Saint Helmet",
+        "string": "Helm der Goldenen Heiligen"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArmorGoldenSaintCuirass",
+        "form_id": "[05000877]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Golden Saint Armor",
+        "string": "Rüstung der Goldenen Heiligen"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArmorAmberBoots",
+        "form_id": "[05000BC4]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Amber Boots",
+        "string": "Bernsteinstiefel"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArmorMadnessShield",
+        "form_id": "[05000BC5]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Madness Shield",
+        "string": "Wahnsinnserzschild"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArmorDarkSeducerCuirass",
+        "form_id": "[05000873]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Dark Seducer Armor",
+        "string": "Rüstung der Dunklen Verführer"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArmorGoldenSaintBoots",
+        "form_id": "[05000878]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Golden Saint Boots",
+        "string": "Stiefel der Goldenen Heiligen"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ClothesRingofDisrobing",
+        "form_id": "[05183E63]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ring of Disrobing",
+        "string": "Ring des Ablegens"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArmorDarkSeducerBootsUnplayable",
+        "form_id": "[0500098C]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Dark Seducer Boots",
+        "string": "Stiefel der Dunklen Verführer"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ClothesBlackSmith",
+        "form_id": "[05000AE4]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Arcane Blacksmith's Apron",
+        "string": "Arkane Schmiedeschürze"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArmorDarkSeducerShield",
+        "form_id": "[05000805]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Dark Seducer Shield",
+        "string": "Schild der Dunklen Verführer"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArmorAmberGauntlets",
+        "form_id": "[05000BC2]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Amber Gauntlets",
+        "string": "Bernsteinhandschuhe"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArmorDarkSeducerBoots",
+        "form_id": "[05000874]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Dark Seducer Boots",
+        "string": "Stiefel der Dunklen Verführer"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArmorGoldenSaintShieldUnplayable",
+        "form_id": "[0500098B]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Golden Saint Shield",
+        "string": "Schild der Goldenen Heiligen"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SeducersNote",
+        "form_id": "[0500087B]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='20'>\r\nDark work, this, but does it ever pay well. Once every few days, a merchant comes galloping through, defenseless as a babe. We Seducers always do our good deed, and lighten their load before we let them pass. It's the least we can do.\r\n\r\nMoving north was the best thing we ever did. Leave Ri'saad to the milk drinkers of Whiterun, or as they call themselves, the Saints. They're probably still hounding him on the road to Markarth.\r\n\r\nSvarig is behind on his visit. I wonder if his path from the west was more treacherous than usual. \r\n\r\nWe need a change in our fortunes. If we don't get paid soon, I fear the others might not stay much longer. Hopefully this new lead pans out.</font>",
+        "string": "<font face='$HandwrittenFont'><font size='20'>\r\nDüstere Arbeit, aber gut bezahlt. Alle paar Tage kommt ein völlig wehrloser Händler vorbeigaloppiert. Wir Verführer-Banditen sind immer für eine gute Tat zu haben und befreien sie etwas von ihrer Last, bevor wir sie weiterziehen lassen. Ist ja das Mindeste.\r\n\r\nNach Norden zu ziehen, war eine hervorragende Idee. Ri'saad haben wir den Milchsäufern von Weißlauf, den Heiligen, überlassen. Die machen ihm wohl immer noch das Leben auf der Straße nach Markarth schwer.\r\n\r\nSvarig hängt hinterher. Ich frage mich, ob seine Route aus dem Westen tückischer als sonst war.\r\n\r\nWir müssen unsere Geschicke aufbessern. Wenn wir nicht bald bezahlt werden, fürchte ich, dass die anderen nicht mehr länger bleiben. Die neue Fährte zahlt sich hoffentlich aus.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE025_HereticalThoughts_Book02",
+        "form_id": "[05000AEC]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Heretical Thoughts",
+        "string": "Ketzerische Gedanken"
+    },
+    {
+        "editor_id": "ccBGSSSE025_StaadaNote",
+        "form_id": "[0519316F]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>Thank you for your efforts to protect my realm.\r\n\r\nI believe you possess something that I am in search of, and I require it before I return home. It is the artifact from the Shivering Isles that served as the focus of Thoron's depraved rituals.\r\n\r\nMeet me beneath the arch of Solitude, upon the shore, so that we might make an exchange.\r\n\r\n-- S</font>",
+        "string": "<font face='$HandwrittenFont'>Ich danke Euch für Eure Anstrengungen zum Schutze meiner Welt.\r\n\r\nIch glaube, Ihr besitzt etwas, das ich suche und vor der Rückkehr nach Hause benötige. Es handelt sich um das Artefakt von den Schauderinseln, das im Zentrum von Thorons verderbten Ritualen stand.\r\n\r\nTrefft mich am Ufer unter dem Bogen von Einsamkeit, damit wir einen Austausch durchführen können.\r\n\r\nS.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ThoronJournal00",
+        "form_id": "[0503AB41]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Thoron's Journal - Volume 2",
+        "string": "Thorons Tagebuch, Band II"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraNoteGS",
+        "form_id": "[051CFE4A]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Note on Manic Elytra Nymph",
+        "string": "Notiz über Wahnsinnige Elytra-Nymphe"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ThoronJournal01",
+        "form_id": "[05000867]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\r\n<font face='$HandwrittenFont'><font size='20'>5th of Sun's Height, 4E 201\r\n\r\nThe sword's bloodlust can be used. Its desire to cleave, a bridge. Cut open the path. But never let the wound fester. A broken bone grows stronger when healed. \r\n[pagebreak]\r\n18th of Sun's Height, 4E 201\r\n\r\nAnother vision. A long march through the gray. Crackle of boots, pressed on misshapen throats. In the fog, a whistle, marking time.\r\n\r\nThe sword is planted in the earth. Chaos screams, bleeds. Through its heart, roots are nourished. From the wound, a tree blooms. A path opens.\r\n[pagebreak]\r\n1st of Last Seed, 4E 201\r\n\r\nScar tissue hardens, roots thicken. The wound bleeds, but the path is blocked. A fish swimming upstream. \r\n\r\nPerhaps the path is not for me. The path is for it. The river must flow from source to mouth, to fill the mind's cup. \r\n[pagebreak]\r\n16th of Last Seed, 4E 201\r\n\r\nTemporary hearing loss. Bread, baking in a hearth. We reach out and grasp the abyss, only to let go. Face first into the mud with gritted teeth. Light bending through a glass eye. How easily we are lost! Revelations soaring on red wings above the dark. Rain running down the side of every window pane.\r\n</font>\r\n[pagebreak]\r\n<font face='$HandwrittenFont'><font size='20'>\r\n\r\nI will not go manic.\r\n\r\n\r\n\r\nI will bring Mania to me.</font>",
+        "string": "[pagebreak]\r\n<font face='$HandwrittenFont'><font size='20'>5. Sonnenhöhe, 4Ä 201\r\n\r\nDer Blutdurst des Schwerts ist nützlich. Sein Verlangung zu spalten, eine Brücke. Schnitte ebnen den Pfad. Doch die Wunde darf niemals faulen. Ein gebrochener Knochen wird mit der Heilung stärker.\r\n[pagebreak]\r\n18. Sonnenhöhe, 4Ä 201\r\n\r\nNoch eine Vision. Eine lange Wanderung durch das Grau. Das Knacken von Stiefeln auf missgestalteten Kehlen. Im Nebel ein Pfeifen.\r\n\r\nDas Schwert steckt in der Erde. Schreiendes, blutendes Chaos. Von seinem Herzen nähren sich Wurzeln. Aus der Wunde sprießt ein Baum. Ein Pfad öffnet sich.\r\n[pagebreak]\r\n1. Letzte Saat, 4Ä 201\r\n\r\nNarbengewebe verhärtet sich, Wurzeln werden dicker. Die Wunde blutet, doch ist der Pfad versperrt. Ein Fisch gegen den Strom.\r\n\r\nVielleicht ist dieser Pfad nicht für mich, sondern für es. Der Fluss muss von der Quelle in den Mund fließen, um den Verstand zu nähren.\r\n[pagebreak]\r\n16. Letzte Saat, 4Ä 201\r\n\r\nVorübergehender Hörverlust. Brot backt in einem Herd. Wir greifen nach dem Abgrund, nur um wieder loszulassen. Mit zusammengebissenen Zähnen landen wir mit dem Gesicht im Schlamm. Licht bricht sich in einem Glasauge. Wie leicht wir abgleiten! Offenbarungen schweben auf roten Schwingen über dem Dunkel. Regen läuft an jeder Fensterscheibe hinab.\r\n</font>\r\n[pagebreak]\r\n<font face='$HandwrittenFont'><font size='20'>\r\n\r\nIch werde nicht wahnsinnig.\r\n\r\n\r\n\r\nIch werde Wahn zu mir holen.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE025_HereticalThoughts_Book02",
+        "form_id": "[05000AEC]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nHeretical Thoughts\r\n\r\n\r\n</p>\r\n[pagebreak]\r\n<p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/Z_letter.png'>ealotry is an abomination that must be wiped from the Shivering Isles. We cannot suffer their beliefs to spread to even one more soul. They name us Heretics for our lack of belief. We gladly accept the name, and will make a honorable one.\r\n\r\nIt is not heresy to speak truth. It is not heresy to speak out against an unjust lord. It is not heresy to take arms and action in defense of true belief. We are the so-called Heretics of the Shivering Isles, but we do not speak heresy. We speak the truth.\r\n\r\nOur Lord, Sheogorath, is but a man. He is only flesh and blood, not a god, and certainly not a Daedric Prince. There are no princes in the realms of the Daedra, only vile servitors such as the Hungers that we summon to do our bidding.\r\n\r\nSheogorath the False is a mad despot. Years of dabbling in foul magic and consorting with Daedra have driven him mad. He is not a fit ruler, let alone divine. He perverts the teachings of Arden-Sul, He Who Gave His Heart's Blood.\r\n\r\nWhen the truth of our cause is common knowledge among the people, we will drive him from New Sheoth and put that cesspool to the sword. His four limbs will be scattered to the four winds. His head will rest upon the Hill of Suicides and his heart shall be burnt in the flames of freedom. His entrails shall be fed to the dogs.\r\n\r\nWe will make all the people of the Shivering Isles wear the robes of the Heretics. By these robes we know each other to be true non-believers. The people shall return to the wilderness and live among the wild things, as we do. They will see the wisdom and purity of the life we lead and they will hail us as saviors.",
+        "string": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nKetzerische Gedanken\r\n\r\n\r\n</p>\r\n[pagebreak]\r\n<p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/Z_letter.png'>Glaubenseifer ist eine Abscheulichkeit, die vom Antlitz der Schauderinseln gefegt werden muss. Wir können nicht zulassen, dass ihr Glaube auch nur eine weitere Seele erreicht. Sie schimpfen uns Ketzer, und wir werden diesem Namen zur Ehre gereichen.\r\n\r\nEs ist keine Ketzerei, die Wahrheit zu sprechen. Es ist keine Ketzerei, gegen einen ungerechten Herren aufzubegehren. Es ist keine Ketzerei, für den wahren Glauben zu den Waffen zu greifen. Wir sind die sogenannten Ketzer der Schauderinseln, aber unsere Worte sind keine Blasphemie, sondern die Wahrheit.\r\n\r\nUnser Fürst Sheogorath ist nur ein Mensch aus Fleisch und Blut. Kein Gott, und ganz sicher kein daedrischer Prinz. Es gibt keine Prinzen im Reich der Daedra, sondern nur abscheuliche Hochstapler, die wir an ihrer Stelle einsetzen.\r\n\r\nSheogorath der Falsche ist ein wahnsinniger Tyrann. Jahre der dunklen Magie und Umgang mit den Daedra haben ihm den Verstand geraubt. Er ist kein angemessener Herrscher, und keineswegs göttlich. Er pervertiert die Lehren von Arden-Sul, Er, Der Sein Herzblut Gab.\r\n\r\nWenn die Menschen von unserer Wahrheit erfahren, werden wir ihn gemeinsam aus Neu-Sheoth vertreiben und diese Kloake ausheben. Seine Gliedmaßen verstreuen wir in alle vier Winde. Sein Kopf wird auf dem Hügel des Selbstmords thronen, und sein Herz in den Flammen der Freiheit zu Asche vergehen. Seine Eingeweide werden an die Hunde verfüttert.\r\n\r\nAlle Bewohner der Schauderinseln werden die Gewänder der Ketzer tragen. Daran erkennen wir einander als echte Ungläubige. Die Menschen sollen in die Wildnis zurückkehren und dort leben wie wir. Sie werden die Weisheit und die Reinheit unseres Lebens erkennen und uns als Erlösern huldigen."
+    },
+    {
+        "editor_id": "ccBGSSSE025_BlacksmithNote",
+        "form_id": "[05000CD4]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='20'>\r\nAn ancient battle site was discovered near Thoron's lair. On the ground, an assortment of weapons and armor of the Daedra known as Golden Saints and Dark Seducers laid strewn about.  It is from this site that we took up their arms, and joined together as bandit companies under their names. Since then, as the only blacksmith, I have taken it upon myself to study these otherworldly artifacts.\r\n\r\nAnd now, at last, my efforts to reproduce the exquisite craftsmanship of these great Daedra has finally born fruit.\r\n\r\nMy mind is not what it once was. If my memory fails me, at least these notes can help the others keep the craft alive.\r\n\r\nOne would be foolish to forge weapons from gold, as it is far too soft. And yet the golden blades of the Saints are nimble and harder than steel. How could this be? The trick appears to be three fold: First, the structure of the piece must be reinforced with refined moonstone. Second, the gold must be hammered into place while the gold is heated just below its melting point. Third, the introduction of the heart of a Daedra to the forge when heating the piece so it can be hammered into shape completely transforms the attributes of the metal, giving it its uncanny hardness.\r\n\r\nThe process for forging the dark armor of the Seducers is similar, but requires more finesse, as you must balance shaping the unyielding ebony with malleable quicksilver. The heat applied must be very precise or the shape and integrity of the equipment will be ruined. As before, introduce the Daedric heart to the forge as you heat the material.</font>",
+        "string": "<font face='$HandwrittenFont'><font size='20'>\r\nNahe Thorons Versteck entdeckten wir ein uraltes Schlachtfeld. Auf dem Boden lagen Waffen und Rüstungen der Goldenen Heiligen und der Dunklen Verführer verstreut. Dort nahmen wir ihre Waffen und schlossen uns als Banditen unter ihrem Banner zusammen. Seither studiere ich als einziger Schmied diese unwirklichen Artefakte.\r\n\r\nEndlich haben meine Anstrengungen Früchte getragen und ich konnte die exquisite Handwerkskunst der großen Daedra reproduzieren.\r\n\r\nMein Verstand ist nicht mehr das, was er einst war. Sollten meine Erinnerungen davongleiten, können diese Worte zumindest anderen helfen, diese Kunst am Leben zu erhalten.\r\n\r\nEin Narr, der Waffen aus Gold schmieden würde, denn es ist zu weich. Und doch sind die Goldklingen der Heiligen flink und härter als Stahl. Wie kann das sein? Drei Dinge müssen beachtet werden: Zuerst muss die Struktur des Objekts mit veredeltem Mondstein verstärkt werden. Dann muss das Gold eingehämmert werden, wenn es knapp unter seinem Schmelzpunkt erhitzt wurde. Und drittens verwandelt die Hinzunahme eines Daedra-Herzens während dem Erhitzen des Objekts, damit es in Form gehämmert werden kann, die Attribute des Metalls vollständig und verleiht ihm ungekannte Härte.\r\n\r\nDer Prozess des Schmiedens der dunklen Rüstung der Verführer ist ähnlich, benötigt aber mehr Fingerfertigkeit: Ihr müsst das Formen des unnachgiebigen Ebenerzes mit dem formbaren Quecksilber vereinen. Die Hitze muss genau stimmen, oder Form und Ganzheit der Ausrüstung gehen verloren. Wie zuvor müsst Ihr das daedrische Herz hinzufügen, während Ihr das Material erhitzt.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SaintsandSeducers_Book03",
+        "form_id": "[05000AEE]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nSaints and Seducers\r\n\r\n\r\nby \r\nAndoche Marie\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nAuthor's Note</p><p align=\"left\">\r\nThis volume attempts to catalogue and analyze known, suspected, and rumored facts about the two races that serve to maintain order within the Shivering Isles. It is by no means intended to serve as the authoritative work on the matter; rather, it is a personal effort on the part of the author to better understand these unique creatures.</p>\r\n[pagebreak]\r\n<p align=\"center\">\r\nIn the Service of the Lord</p><p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/I_letter.png'>t is beyond the scope of this work to determine the origins of the Golden Saints and Dark Seducers. They are Daedra, and as such their base existence is a mystery to those mortal-born. The commonly held belief that all Daedra are incapable of Creation suggests that even Lord Sheogorath himself is not responsible for the genesis of these races. Yet, it is worth noting that the Prince of Madness has motives and powers that none may guess; to attempt to do so would only confuse the subject further.\r\n\r\nIt is enough, then, to see that they exist and know that it is so. Beyond this knowledge, however, it is curious that the Saints and Seducers serve Lord Sheogorath unerringly. This allegiance is ultimate and eternal, from all indications, but its source is unknown. Could it be that they themselves were tricked into service by the Madgod? Or do they simply ally themselves with the greatest power in the realm? Previous literary works suggest that Daedra choose to serve their masters so they might find protection and safe harbor. Clearly the Saints and Seducers have this in the Shivering Isles; indeed, they have fortresses which few not of their race are allowed to enter. They have power in the realm, acting as guardians of those who serve Lord Sheogorath. Constantly they vie for the favor of Our Lord, fighting any who oppose him and, at times, even each other. It is reasonable to assume, then, that they have made a willing choice to take up their role in the Isles.\r\n</p>\r\n[pagebreak]\r\n<p align=\"center\">\r\nCharacter and Society</p><p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/T_letter.png'>he immediate image called to mind when hearing the name \"Golden Saint\" suggests an angelic figure, elegant and benevolent. It is ironic then, that while the Golden Saints embody this image in form, their behavior is in stark contrast to it. The Saints are a proud, arrogant race, quick to anger and cruel in their punishment. There is no question that they view all in the Isles as inferior, and make no effort to hide this in their interactions.\r\n\r\nDark Seducers also exhibit little beyond their appearance to match their names. While they too assert their superiority over all others in the realm, they appear to have a more patient, introspective nature about them. They often appear humble in their dealings with mortals, and are known to be patient with the \"lesser races.\"\r\n\r\nIn fact, the terms \"Golden Saint\" and \"Dark Seducer\" are external constructs. While the two groups recognize and respond to these names, they have their own names for their races: The Aureal and the Mazken, respectively. It is possible the Daedra simply have no concern for the names and titles given to them by lesser beings, or perhaps they find amusement in the names. Further research into this subject is necessary but daunting, as the Saints and Seducers do not freely offer personal information about themselves.\r\n\r\nOther information can be gathered from observation. It is easy to see that the two groups are strongly militaristic in their societal structure; one's strength and discipline determines one's place in society. Military commanders, for example, are revered by their subordinates. With further observation, a second distinction becomes apparent: both societies are Matriarchal in nature. Females lead the guards within New Sheoth, and have the highest positions of power. Males, while not openly denigrated, are clearly subservient to their female superiors. It is unclear where this practice began, but has been wholly integrated into the daily lives of both races.\r\n</p>\r\n[pagebreak]\r\n<p align=\"center\">\r\nConflict and Conquest</p><p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/A_letter.png'>ny resident of the Shivering Isles can confirm that it is unwise to provoke the Golden Saints and Dark Seducers. They thrive on conflict and warfare, and are quick to punish any and all who disobey. Acting in their capacity as guardians of the realm does not satisfy them, however, and so they often engage in combat with one another, despite being garrisoned in areas where they are unlikely to interact. It is possible that this is more than an outlet for aggressive behavior; repeated engagements between the two races may be an effort to gain favor with Lord Sheogorath. If one can triumph over the other, it would prove superiority and a right to gain sole control over the realm. The battle for Cylarne is of particular interest, as both sides have been locked in combat with no hope of resolution for time beyond memory. Does this combat serve to sharpen the skills of the two sides, or weaken them when they could be directed elsewhere? If the conflict cannot be resolved, why then does Lord Sheogorath not step in and settle it himself?\r\n</p>\r\n[pagebreak]\r\n<p align=\"center\">\r\nReligion and Ceremony</p><p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/L_letter.png'>ittle is known about the private customs of the Golden Saints and Dark Seducers. They are reclusive when it comes to matters specific to their race, particularly regarding the mysterious process by which they return to the realm in the unlikely event of their death.\r\n\r\nIt is common knowledge that Golden Saints and Dark Seducers, as Daedra, cannot be killed. The Animus of the Daedra is cast back into the darkness of Oblivion, and can return to the realm to take form once more. But reports of the time it takes for a Daedra to return to the realm from the Waters of Oblivion are anecdotal and inconclusive; the process by which this return occurs remains shrouded in mystery. Based on behavior patterns and strength of numbers, it can be deduced that the stronghold for each race plays some major part in this process. Common phrases in language (such as \"May the chimes call you home\") suggest that rather than merely a metaphor, sound may play some role in the sequence of events. It is believed that the chimes referenced by Saints and Seducers do indeed exist and are considered almost holy relics. Attempts to gain information about these chimes, or the process by which they are used, has been met with exceptional hostility and so have been abandoned.\r\n[pagebreak]\r\nAny and all information regarding the Golden Saints and Dark Seducers, particularly relating to private customs and origins, should be brought to the attention of the author immediately. The greater the scope of our knowledge, the better our ability to understand these compelling creatures.\r\n",
+        "string": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nHeilige und Verführer\r\n\r\n\r\nvon \r\nAndoche Marie\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nHinweis des Autors</p><p align=\"left\">\r\nDieser Band stellt den Versuch dar, die bekannten, vermuteten und gerüchteweise verbreiteten Fakten zu katalogisieren, die sich um die beiden Völker ranken, die die Ordnung auf den Schauderinseln aufrecht erhalten. Keineswegs sollte er als maßgebende Quelle dienen; vielmehr ist der Band eine Arbeit aus Leidenschaft, um diese einzigartigen Kreaturen besser verstehen zu lernen.\r\n[pagebreak]\r\n<p align=\"center\">\r\nIm Dienste des Herrn</p><p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/I_letter.png'>n keiner Weise soll dieses Werk die Ursprünge der Goldenen Heiligen oder der Dunklen Verführer ergründen. Es handelt sich bei diesen um Daedra, also ist ihre bloße Existenz ein Geheimnis für alle Sterblichen. Die allgemeine Annahme, Daedra sei jede Art von Schöpfung verwehrt, deutet an, dass selbst Fürst Sheogorath selbst nicht für die Entstehung dieser Völker verantwortlich sein kann. Es ist dennoch erwähnenswert, dass der Fürst des Wahnsinns Beweggründe und Kräfte besitzt, die niemand erraten kann; jeder Versuch würde nur unausweichlich zu Verwirrung führen.\r\n\r\nEs ist demnach ausreichend, um ihre Existenz zu wissen. Über dieses Wissen hinaus ist es dennoch eigentümlich, dass die Heiligen und die Verführer Fürst Sheogorath unverrückbar treu sind. Dieses Bündnis ist ebenso unzerbrechlich wie ewig, wenn man die Anzeichen richtig deutet, aber sein Ursprung ist unbekannt. Könnte es sein, dass sie von dem wahnsinnigen Gott überlistet und in seine Dienste gezwungen wurden? Bestehende literarische Werke deuten an, dass die Daedra sich für einen Meister entscheiden, auf dass dieser ihnen Schutz und Sicherheit gewährt. Die Heiligen und die Verführer haben dies auf den Schauderinseln unbestreitbar; tatsächlich haben sie sogar Festungen, die nur wenige je betreten haben, die nicht zu ihrem Volk gehören. Sie haben Macht im Reich und treten als Wächter all jener auf, die Fürst Sheogorath dienen. Ständig wetteifern sie um die Gunst unseres Fürsten, kämpfen gegen jene, die sich gegen ihn stellen, und manchmal auch gegeneinander. Es ist also nicht weit hergeholt, dass sie sich bewusst und willentlich für ihre Rolle auf den Inseln entschieden haben.\r\n</p>\r\n[pagebreak]\r\n<p align=\"center\">\r\nCharakter und Gesellschaft</p><p align=\"left\">\r\n<img src=‘img://Textures/Interface/Books/Illuminated_Letters/H_letter.png'>ört man den Namen „Goldene Heilige“, beschwört dies unweigerlich das Bild einer engelsgleichen Figur herauf, Inbegriff von Eleganz und Güte. Es ist aus diesem Grund also ironisch, dass die Goldenen Heiligen diesem Bild zwar in ihrer Form entsprechen, ihr Verhalten jedoch einen herben Kontrast dazu darstellt. Die Heiligen sind ein stolzes, hochmütiges Volk, das schnell zu reizen und grausam in seinen Strafen ist. Es ist unbestreitbar, dass sie alle anderen Bewohner als unterlegen ansehen, was sie in ihrem Umgang mit diesen keineswegs verhehlen.\r\n\r\nDie Dunklen Verführer zeigen wenige Qualitäten, mit denen sie sich ihren Namen verdienen würden, wenn man von ihrem Aussehen absieht. Auch diese Daedra sind von ihrer Überlegenheit gegenüber allen anderen Völkern des Reichs überzeugt, erscheinen aber geduldiger, ihr Geist mehr nach innen gerichtet. Geben sie sich mit Sterblichen ab, wirken sie oft bescheiden und haben Geduld mit den „geringeren Völkern“.\r\n\r\nTatsächlich sind die Namen „Goldene Heilige“ und „Dunkle Verführer“ nicht selbstgewählt. Auch wenn die beiden Gruppen diese anerkennen und auf diese reagieren, haben sie eigene Namen für ihr jeweiliges Volk: Aureal und Mazken. Es ist möglich, dass die Daedra schlicht keine Gedanken an Namen und Titel verschwenden, die ihnen von geringeren Wesen verliehen werden, oder aber diese bringen ihnen Heiterkeit. Weitere Forschungen zu diesem Thema sind ebenso nötig wie einschüchternd, da weder Heilige noch Verführer freigiebig mit Informationen über sich selbst sind.\r\n\r\nAnderes Wissen kann durch Beobachtung gesammelt werden. Es ist leicht zu erkennen, dass die beiden Gruppen eine kriegerische Gesellschaftsstruktur aufweisen; die Stärke und Disziplin des Einzelnen bestimmt dessen Stand. Militärische Befehlshaber beispielsweise werden von ihren Untergebenen verehrt. Weitere Forschung enthüllt einen weiteren Faktor: Beide Gesellschaften sind matriarchalisch. Frauen führen die Wachen in Neu-Sheoth an und bekleiden die mächtigsten Ämter. Männer werden nicht offen unterdrückt, sind aber offensichtlich den weiblichen Mitgliedern der Gesellschaft gegenüber unterwürfig. Es ist nicht bekannt, wo dieses Wertesystem seinen Anfang nahm, aber es wurde vollständig in das tägliche Leben beider Völker aufgenommen.\r\n</p>\r\n[pagebreak]\r\n<p align=\"center\">\r\nKonflikte und Eroberungen</p><p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/A_letter.png'>lle Bewohner der Schauderinseln können bestätigen, wie wenig weise es ist, die Goldenen Heiligen oder die Dunklen Verführer zu reizen. Beide blühen durch Konflikt und Kriegsführung geradezu auf, und bestrafen schnell alle, die nicht gehorchen. Aber ihre Rolle als Hüter des Reichs genügt ihnen nicht, weshalb sie oft gegeneinander kämpfen, obwohl ihre Garnisonen an Orten stehen, wo sie selten miteinander zu tun haben. Möglicherweise ist dies mehr als nur aggressives Verhalten um seiner selbst willen; häufige Kämpfe zwischen den beiden Völkern könnten ein Versuch sein, die Gunst Fürst Sheogoraths zu erlangen. Könnte eines über das andere triumphieren, würde dies seine Überlegenheit beweisen und damit dem entsprechenden Volk das Recht geben, allein über das Reich zu wachen. Die Schlacht um Cylarne ist dabei von besonderem Interesse, da beide Seiten hier seit undenkbaren Zeiten in einen Kampf verwickelt sind, der keine Hoffnung auf ein Ende hat. Schärft dieser Kampf die Fähigkeiten beider Seiten, oder schwächt er jedes Volk nur? Wenn der Konflikt nicht gelöst werden kann, warum schreitet Fürst Sheogorath nicht selbst schlichtend ein?\r\n</p>\r\n[pagebreak]\r\n<p align=\"center\">\r\nReligion und Zeremonien</p><p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/L_letter.png'>eider ist nur wenig zu den privaten Gebräuchen der Goldenen Heiligen und der Dunklen Verführer bekannt. Sie sind sehr geheimniskrämerisch, wenn es um die Belange ihrer Völker geht - besonders bei dem geheimnisvollen Vorgang, durch den sie im unwahrscheinlichen Fall ihres Todes zurück ins Reich gelangen.\r\n\r\nEs ist allseits bekannt, dass die Goldenen Heiligen ebenso wie die Dunklen Verführer als Daedra nicht getötet werden können. Der Animus eines Daedra wird in die Dunkelheit des Reichs des Vergessens geschleudert und können von dort ins Reich zurückkehren, indem sie wieder körperliche Form annehmen. Aber die Berichte zu der Zeit, die ein Daedra braucht, um die Wasser des Reichs des Vergessens zu verlassen und zurückzukehren, sind uneinheitlich und wenig schlüssig; der Vorgang, der dabei vonstatten geht gänzlich ein Geheimnis. Anhand des Verhaltens und der Mannstärke kann angenommen werden, dass die Festung jedes Volks eine wichtige Rolle dabei spielt. Verbreitete Sprichwörter in der jeweiligen Sprache (wie „Mögen die Windspiele dich nach Hause rufen“) deuten an, dass dies nicht schlichte Metaphern sind, sondern tatsächlich Klänge eine Rolle spielen könnten. Es ist meine Überzeugung, dass die Windspiele, von denen die Heiligen und die Verführer sprechen, tatsächlich existieren und als heilige Relikte erachtet werden. Versuche, mehr zu diesen Windspielen zu erfahren oder wie diese eingesetzt werden, wurden mit ausgesprochen heftiger Feindseligkeit beantwortet und aus diesem Grund aufgegeben.\r\n[pagebreak]\r\nSämtliche Informationen zu den Goldenen Heiligen und den Dunklen Verführern, insbesondere, wenn diese sich um ihre Herkunft oder ihre ureigenen Bräuche drehen, sollten umgehend dem Autor mitgeteilt werden. Je größer unser Wissen, desto besser vermögen wir diese faszinierenden Kreaturen zu verstehen.\r\n"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SpellTomeConjureGoldenSaintArcher",
+        "form_id": "[05000AF0]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nConjure Golden Saint Archer",
+        "string": "<font face='$HandwrittenFont'><font size='40'><p align='center'>\r\nGoldene-Heilige-Bogenschütze beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SpellTomeConjureGoldenSaintWarrior",
+        "form_id": "[05000AFD]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nConjure Golden Saint Warrior",
+        "string": "<font face='$HandwrittenFont'><font size='40'><p align='center'>\r\nGoldene-Heilige-Kriegere beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SeducersNote",
+        "form_id": "[0500087B]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Seducers Bandit Leader's Journal",
+        "string": "Tagebuch des Anführers der Verführer-Banditen"
+    },
+    {
+        "editor_id": "ccBGSSSE025_AtronachForgeRecipes",
+        "form_id": "[051B6935]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Report on Atronach Forge Experiments",
+        "string": "Bericht über Atronachen-Schmieden-Experimente"
+    },
+    {
+        "editor_id": "ccBGSSSE025_NerveshatterFriendJournal",
+        "form_id": "[05000C4C]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='20'>\r\nGadnor, my trusted friend and companion, has been laid to rest. I have built a shrine to watch over him and bring peace to weary travelers.\r\n\r\nOf the few riches Gadnor possessed in life, his most prized was a warhammer made of jagged crystal he famously won in a coin toss. After months of research, he came to believe this hammer was some sort of otherworldly treasure. Shortly before his passing, it was his wish that it be hidden away until \"one who has walked the Shivering Isles\" emerges to retrieve it. I have followed his instructions to the letter, and a powerful illusion spell now obscures it.\r\n\r\nTo break the spell, one must first acquire pieces of what supposedly make up the weapon itself, \"amber\" and \"madness ore.\" Such things, if they actually exist, would be great treasures in their own right. If the enchantment is correct, only by placing the ores into the embers near Gadnor's body will the spell be broken.\r\n\r\nIf Gadnor is not mad, perhaps one day this peerless weapon will find its way into worthy hands once again.</font>",
+        "string": "<font face='$HandwrittenFont'><font size='20'>\r\nGadnor, mein treuer Freund und Begleiter, wurde zur letzten Ruhe gebettet. Ich habe einen Schrein gebaut, der ihn bewachen und müden Reisenden Frieden spenden soll.\r\n\r\nGadnor besaß nicht viel, aber sein Augapfel war ein Kriegshammer aus gezacktem Kristall, den er beim Münzenwerfen gewonnen hatte. Er forschte einige Monate nach und glaubte dann, dass dieser Hammer nicht von unserer Welt stammte. Sein letzter Wunsch war, dass der Hammer versteckt werden sollte, bis \"Einer, der die Schauderinseln durchwanderte\" ihn holen käme. Ich habe seinen Anweisungen genau Folge geleistet, und ein mächtiger Illusionszauber verbirgt den Hammer jetzt.\r\n\r\nUm den Zauber zu brechen, müssen erst Stücke dessen gefunden werden, das die Waffe angeblich ausmacht: \"Bernstein\" und \"Wahnsinnserz\". Sollten diese Dinge wirklich existieren, wären sie selbst schon Schätze. Wenn der Zauber richtig funktioniert, wird er nur dadurch gebrochen, dass die Stücke in der Glut bei Gadnors Leiche platziert werden.\r\n\r\nFalls Gadnor nicht völlig verrückt war, findet diese einzigartige Waffe vielleicht eines Tages ihren Weg zu einem würdigen Besitzer.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE025_MadnessOreNote",
+        "form_id": "[05054047]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>This sample of madness ore was discovered deep in a Nordic ruin. It shouldn't have... no, COULD NOT have been there before!\r\n\r\nMy time spent with the sword has had an impact far greater than I ever could have ever imagined! My reach has grown far beyond these twisting tunnels. This is wonderful news! Perhaps even more such fragments have appeared in the unlikeliest of places.\r\n\r\nThat said, working this material into a usable form has proven... difficult. Raw amber equally so. This is a job better suited for a master blacksmith with deep knowledge of the arcane. Someone like Evethra.\r\n\r\nA peerless smithy and my confidant in learning the hidden sides of spellcraft, Evethra would no doubt be able to work out the secrets of amber and madness ore. If she hasn't gone completely mad by now, that is. I shall have the Seducers deliver her a sample of each. With any luck, she still hones her craft north of Mistwatch even after all these years.</font>",
+        "string": "<font face='$HandwrittenFont'><font size='18'>Dieses Stück Wahnsinnserz wurde tief versteckt in einer Nord-Ruine entdeckt. Es sollte nicht ... nein, es kann nicht zuvor dort gewesen sein!\r\n\r\nDie Zeit, die ich mit dem Schwert verbringe, hat größere Auswirkungen, als ich je angenommen hätte! Mein Einfluss erstreckt sich weit über diese verschlungenen Tunnel hinaus. Das sind wunderbare Neuigkeiten! Vielleicht sind noch mehr dieser Fragmente an den unwahrscheinlichsten Orten aufgetaucht.\r\n\r\nGleichwohl hat es sich als ... schwierig erwiesen, dieses Material in eine nutzbare Form zu bringen, genau wie bei unbearbeitetem Bernstein. Diese Aufgabe eignet sich eher für einen Meisterschmied mit profundem Wissen über das Arkane. Jemanden wie Evethra.\r\n\r\nAls unvergleichliche Schmiedin und Vertraute beim Erlernen der verborgenen Seiten der Zauberkunst wäre Evethra zweifelsohne imstande, hinter die Geheimnisse von Bernstein und Wahnsinnserz zu kommen - falls sie mittlerweile nicht völlig dem Wahnsinn anheimgefallen ist. Ich werde ihr jeweils eine Probe von den Verführern liefern lassen. Falls das Glück mir hold ist, geht sie ihrem Handwerk auch nach all den Jahren immer noch nördlich von Nebelwacht nach.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE025_NerveshatterBanditNote",
+        "form_id": "[05000C41]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Bandit's Note on Hidden Treasure",
+        "string": "Banditennotiz über verborgenem Schatz"
+    },
+    {
+        "editor_id": "ccBGSSSE025_BlacksmithNote",
+        "form_id": "[05000CD4]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Joften's Notes",
+        "string": "Joftens Notizen"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SaintsHuntPlayerNote",
+        "form_id": "[0520285C]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='20'>\r\n<Alias=Player>, the <Alias.Race=Player> wretch that slew Kinthal, will pay dearly for what <Alias.Pronoun=Player>'s done.  By my hand the scales will be balanced.  When I return victorious, there will be no doubt that I should lead the Saints from here on!  \r\n</font>",
+        "string": "<font face='$HandwrittenFont'><font size='20'>\r\n<Alias=Player>, diese <Alias.Race=Player>-Brut, die Kinthal getötet hat, wird für die Taten von <Alias.Pronoun=Player> teuer bezahlen. Durch meine Hand wird die Waage ins Gleichgewicht gebracht. Wenn ich siegreich heimkehre, wird kein Zweifel mehr daran bestehen, dass ich die Heiligen anführen sollte!\r\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SpellTomeConjureStaada",
+        "form_id": "[0519D3F9]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nConjure Staada",
+        "string": "<font face='$HandwrittenFont'><font size='40'><p align='center'>\r\nStaada beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SpellTomeConjureDarkSeducerArcher",
+        "form_id": "[05000B0C]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Conjure Dark Seducer Archer",
+        "string": "Zauberbuch: Dunkle-Verführer-Bogenschütze beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SpellTomeConjureGoldenSaintWarrior",
+        "form_id": "[05000AFD]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Conjure Golden Saint Warrior",
+        "string": "Zauberbuch: Goldene-Heilige-Krieger beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraNoteGS",
+        "form_id": "[051CFE4A]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nWe found a buyer for the strange creature we've hauled all the way from... well, best not to say. Not a day too soon, as its chittering keeps waking me up at all hours of the night. Just a few more days. If the coin is worth it, we'll have to go back for more of these things.</font>",
+        "string": "<font face='$HandwrittenFont'>\r\nWir haben einen Käufer für die seltsame Kreatur gefunden, die wir den ganzen Weg von einem Ort hierher transportiert haben, den ich lieber nicht nennen möchte. Es wurde aber auch Zeit, da mich ihre zwitschernden Geräusche in den Nächten keinen Schlaf finden lassen. Nur noch ein paar Tage. Sollte sich der Verkauf lohnen, müssen wir noch mehr von diesen Dingern besorgen.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE025_RisaadNoteAfterQuest",
+        "form_id": "[050819B4]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>Many thanks for dealing with the ruffians that have plagued humble merchants such as this one for some time. Coin flows well once again.\r\n\r\nRi'saad has new wares for sale that would interest one such as you. More of the arms and armor used by the Saints and Seducers have been found and can be yours, for a price. This one has also traded for strange new raw materials. Ri'saad knows not what they could be used for, but this one is sure you could find a way to put them to good use.\r\n\r\nMay your road lead you to warm sands.\r\n</font>",
+        "string": "<font face='$HandwrittenFont'><font size='18'>Vielen Dank, dass Ihr Euch um die Rohlinge gekümmert habt, die bescheidene Händler wie diesen so lange drangsaliert haben. Endlich fließt das Geld wieder.\r\n\r\nRi'saad hat neue Ware im Angebot, die einen wie Euch interessieren könnten. Weitere Waffen und Rüstung, wie sie die Heiligen und Verführer benutzen, wurden gefunden und könnten Euer sein. Dieser hat auch mysteriöse neue Rohmaterialien erhalten. Ri'saad weiß nicht, wofür sie gut sein könnten, ist sich aber sicher, dass Ihr einen Zweck dafür finden könntet.\r\n\r\nMöge Euer Weg Euch zu warmen Wüsten führen.\r\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArcaneSmithEnchanterJournal",
+        "form_id": "[05000B9B]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Evethra's Journal",
+        "string": "Evethras Tagebuch"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SaintsLeaderNote",
+        "form_id": "[050009DD]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='20'>\r\nEven though we no longer raid with the backstabbing Seducers, we still work for that wizard Thoron. He's been paying us handsomely to turn over Ri'saad's caravan, looking for any trinkets that seem strange.\r\n\r\nA week ago we found a sword unlike anything we've ever seen. Thoron's face lit up when he saw it. \"This could be it,\" he said. Something about a \"bridge.\" He's probably lost it. No sword is worth how much he paid us for it. Won't hear us complaining, though.\r\n\r\nWe see Thoron once a month so he can have a look at our spoils. Everything he doesn't want, we split and sell. Nice and clean. When we're done, he skulks off back to that lair of his in Solitude. What he does there is anyone's guess.\r\n</font>",
+        "string": "<font face='$HandwrittenFont'><font size='20'>\r\nObwohl wir nicht länger mit den hinterhältigen Verführer-Banditen zusammenarbeiten, arbeiten wir immer noch für diesen Zauberer, Thoron. Er hat uns gut dafür bezahlt, Ri'saads Karawane auf den Kopf zu stellen und nach seltsam wirkenden Schmuckstücken zu suchen.\r\n\r\nVor einer Woche haben wir ein außergewöhnliches Schwert gefunden. Thorons Gesicht strahlte, als er es sah. \"Das könnte es sein\", meinte er. Etwas mit einer \"Brücke\". Er ist vermutlich durchgedreht. Kein Schwert ist so viel wert, wie er uns bezahlt hat. Aber wir werden uns ganz sicher nicht beschweren.\r\n\r\nWir treffen Thoron einmal im Monat, damit er sich unsere Ausbeute ansehen kann. Was er nicht gebrauchen kann, teilen wir auf und verkaufen. Fair und einfach. Wenn wir fertig sind, schleicht er zurück in sein Versteck in Einsamkeit. Niemand weiß, was er dort anstellt.\r\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE025_NerveshatterBanditNote",
+        "form_id": "[05000C41]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='20'>\r\nAn exotic treasure is said to be hidden in Crystaldrift Cave. Heard it from a coinless trader trying to save his own skin. Going to send a few to see if his story checks out.\r\n\r\nIf the story is true, we need to be sure the Saints don't find it first. Our benefactor will be pleased.</font>",
+        "string": "<font face='$HandwrittenFont'><font size='20'>\r\nEin ungewöhnlicher Schatz soll in der Kristallstollenhöhle versteckt sein. Das habe ich von einem armen Händler gehört, der seine eigene Haut retten wollte. Ich werde ein paar Männer hineinschicken, um das zu überprüfen.\r\n\r\nSollte die Geschichte wahr sein, müssen wir sichergehen, dass die Heiligen den Schatz nicht zuerst finden. Unser Gönner wird zufrieden sein.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SaintsNoteOnBlacksmith",
+        "form_id": "[05000CD5]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='20'>\r\nOur blacksmith, Joften, has gone mad. Most of the time he spouts nonsense. This all started three days ago. Now he won't even pick up his hammer. We've tried to talk sense into the lout, but it's like he doesn't even see us. \r\n\r\nHe wrote down the means to forge our Golden arms and armor, and that of the Seducers, but he never told a soul where he left the blasted notes! If we weren't holding out hope that he might snap out of it, we would have already parted his head from the rest of him.\r\n\r\nLately he's been going on about \"playing under the bridge,\" like he were still a child. \"That's where I always hid my toys,\" he said. I know his kin used to live around Half Moon Mill. We should round up some folks to have a look.\r\n</font>",
+        "string": "<font face='$HandwrittenFont'><font size='20'>\r\nUnser Schmied Joften hat den Verstand verloren. Meistens redet er nur wirres Zeug. Es begann vor drei Tagen. Jetzt fasst er nicht mal mehr seinen Hammer an. Wir wollten ihm Vernunft einreden, aber er nimmt uns nicht mal mehr wahr.\r\n\r\nEr hat die Technik festgehalten, mit der man unsere goldenen Waffen und Rüstungen und die der Verführer schmiedet, aber er hat keiner Menschenseele verraten, wo er die elenden Notizen versteckt hat! Hätten wir nicht Hoffnung, dass er wieder zu sich kommt, hätten wir ihn schon einen Kopf kürzer gemacht.\r\n\r\nIn letzter Zeit brabbelte er wie ein Kind davon, \"unter der Brücke zu spielen\". \"Da habe ich immer mein Spielzeug versteckt\", meinte er. Ich weiß, dass seine Sippe in der Gegend um Halbmondmühle lebte. Vielleicht sollten sich das ein paar Leute mal ansehen.\r\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraNoteDS",
+        "form_id": "[051CFE4B]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Note on Demented Elytra Nymph",
+        "string": "Notiz über Schwermütige Elytra-Nymphe"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SpellTomeConjureGoldenSaintArcher",
+        "form_id": "[05000AF0]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Conjure Golden Saint Archer",
+        "string": "Zauberbuch: Goldene-Heilige-Bogenschütze beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SpellTomeConjureDarkSeducerArcher",
+        "form_id": "[05000B0C]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nConjure Dark Seducer Archer",
+        "string": "<font face='$HandwrittenFont'><font size='40'><p align='center'>\r\nDunkle-Verführer-Bogenschütze beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SpellTomeConjureDarkSeducerWarrior",
+        "form_id": "[05000B63]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Conjure Dark Seducer Warrior",
+        "string": "Zauberbuch: Dunkle-Verführer-Krieger beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE025_BanditBattlesiteNote",
+        "form_id": "[0503AB3A]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='20'>\r\nMy back is killing me carrying all this loot back to the camps. Thoron says the gear is better than anything a blacksmith could forge. \"Remnants of an ancient battle between the Golden Saints and Dark Seducers themselves,\" he tells us. Still, I have my doubts. What's a wizard know about stopping an Ebony arrow coming at your forehead with a poison tip and a full gust of wind?\r\n\r\nPlus it don't look right, and it don't feel right. Still, the boss swears by it, and if I call our great leader a liar, I'm a dead man come morning.\r\n\r\nStill, if he asks me to bring one of those creepy looking bugs back for him, that's where I draw the line.\r\n</font>",
+        "string": "<font face='$HandwrittenFont'><font size='20'>\r\nMein Rücken ächzt unter all der Beute, die ich in die Lager zurücktrage. Thoron sagt, dass die Ausrüstung besser als alles sei, was ein Schmied herstellen könnte. \"Überbleibsel einer uralten Schlacht zwischen den Goldenen Heiligen und den Dunklen Verführern\", erzählt er uns. Aber ich habe meine Zweifel. Was weiß ein Zauberer schon darüber, einen Ebenerzpfeil aufzuhalten, der mit giftgetränkter Spitze auf meinen Kopf zuschnellt?\r\n\r\nUnd es sieht nicht richtig aus und fühlt sich auch nicht richtig an. Aber der Boss schwört darauf, und wenn ich ihn einen Lügner schimpfe, werde ich den nächsten Morgen nicht erleben.\r\n\r\nAber trotzdem würde ich ihm keinen dieser schaurigen Käfer bringen, sollte er danach verlangen.\r\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SaintsNote",
+        "form_id": "[0500087A]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Saints Bandit Leader's Journal",
+        "string": "Tagebuch des Heiligen-Banditenanführers"
+    },
+    {
+        "editor_id": "ccBGSSSE025_NerveshatterFriendJournal",
+        "form_id": "[05000C4C]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Gadnor's Last Wishes",
+        "string": "Gadnors letzte Wünsche"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ThoronJournal01",
+        "form_id": "[05000867]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Thoron's Journal - Volume 3",
+        "string": "Thorons Tagebuch, Band III"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ThoronJournal00",
+        "form_id": "[0503AB41]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\r\n16th of Sun's Dusk, 4E 200\r\n\r\nI have taken up residence deep in the Solitude sewers, away from prying eyes. I am sure to be undisturbed here while I continue my work.\r\n\r\nIt pains me to work with these bandit imbeciles, with their heads made of cheese. Or was it brains made of yogurt? I suppose the distinction is irrelevant. They are clumps of aged dairy, left out in the sun. Each one far too stupid to know the worth of their plunder, and for that reason they themselves are given worth.\r\n\r\nMuch as our Lord would do, I have split them into two groups to cover the caravan trade routes therein. The armors I've collected from these tunnels will serve some use here. Perhaps I will make it a competition. The group that retrieves the most artifacts will be rewarded with a bar of soap.\r\n[pagebreak]\r\n28th of Rain's Hand, 4E 201\r\n\r\nThe more artifacts I gather, the more in tune with our Lord I become. I can feel his wisdom coursing through me, informing my every move. Yet there is something lacking, as nothing I have retrieved thus far has allowed me to return to my blessed Mania. I have even turned to using tokens from Dementia out of desperation.\r\n\r\nWith every failed attempt, my patience continues to thin. I may need to strangle a bandit or two or twenty to calm my frazzled nerves.\r\n[pagebreak]\r\n15th of Midyear, 4E 201\r\n\r\nOur Lord Sheogorath must be pleased. Very, very pleased. This new artifact is a truly remarkable find. Yes, truly, truly remarkable. To think that it was nearly dismissed as an ordinary claymore, when it was in fact the Sword of Jyggalag, the weapon wielded by the Prince of Order. \r\n\r\nIt's the craftsmanship that betrays its truth. Perfect symmetry on both sides, its angles matching ten numerals beyond the decimal. Perhaps twenty, or even forty numerals. I will make an effort to count them tonight.\r\n\r\nYet its true power is held in its enchantment. For when I look upon its crystal edge, I see more than my reflection. I begin to see time the way a cloud sees the river. It has a beginning and an end, but they exist in concert. The past, present, and future flow as one.\r\n\r\nI spoke to a cloud the next day, and it confirmed this to be true. Through the sword's visions, I know what is to come. The sewers beneath the city is where the path will open. The sword will serve as the bridge.\r\n[pagebreak]\r\n22nd of Midyear, 4E 201\r\n\r\nThe Sword of Jyggalag reveals much beyond my intent. It has a logic that seems familiar, but at the same time repels me. It desires Mania as I do, but its goal is that of destruction. \r\n\r\nWorse yet, our Lord's voice feels distant, muted even. I find my thoughts being short, and my words moreso. \r\n[pagebreak]\r\n30th of Midyear, 4E 201\r\n\r\nI need to keep my writings separated. I am beginning to suspect my journals are speaking to each other. No, not suspect. I have proof. \r\n\r\nBut I can't write it here, lest my future self speak more lies. Each thought, past and present, must remain pure.\r\n</font>",
+        "string": "[pagebreak]\r\n16. Sonnenuntergang, 4Ä 200\r\n\r\nIch habe mich tief in der Einsamkeit-Kanalisation niedergelassen, fern von neugierigen Blicken. Hier werde ich meine Arbeit sicherlich ungestört fortführen können.\r\n\r\nEs schmerzt mich, mit diesen niederen Banditen und ihrem Verstand wie löchrigem Käse zu arbeiten. Oder vielleicht eher Joghurt? Ein irrelevanter Unterschied. Wie verdorbene Milch in der Sonne. Sie sind zu dumm, um den Wert ihrer Beute zu erkennen und sie nur dadurch selbst von Wert sind.\r\n\r\nIch habe sie in zwei Gruppen aufgeteilt, um die Handelsroute der Karawane abzudecken. Die Rüstungen, die ich in diesen Tunneln eingesammelt habe, werden hierbei von Nutzen sein. Vielleicht mache ich einen Wettstreit daraus. Die Gruppe, die die meisten Artefakte holt, wird mit einem Stück Seife belohnt.\r\n[pagebreak]\r\n28. Regenhand, 4Ä 201\r\n\r\nJe mehr Artefakte ich sammle, desto mehr auf einer Ebene mit unserem Fürsten bin ich. Ich spüre, wie mich seine Weisheit durchströmt und meine Bewegungen lenkt. Und doch fehlt etwas, denn bislang konnte ich nicht in mein gesegnetes Wahn zurückkehren. Aus Verzweiflung habe ich gar Andenken aus Schwermut eingesetzt.\r\n\r\nMit jedem Fehlschlag schwindet meine Geduld. Ich muss wohl einen oder zwanzig schäbige Banditen erwürgen, um meine Nerven zu beruhigen.\r\n[pagebreak]\r\n15. Mittjahr, 4Ä 201\r\n\r\nUnser Fürst Sheogorath wird zufrieden sein. Sehr, sehr zufrieden. Dieses neue Artefakt ist ein bemerkenswerter Fund. Äußerst bemerkenswert. Fast wäre es für einen gewöhnlichen Zweihänder gehalten worden, aber es ist das Schwert von Jyggalag, die Waffe des Fürsten der Ordnung.\r\n\r\nDie Handwerkskunst verrät seine wahre Herkunft. Perfekte Symmetrie auf beiden Seiten und seine Kanten liegen zehn Ziffern über der Dezimalen. Vielleicht zwanzig oder vierzig Ziffern. Ich werde sie heute Nacht zählen.\r\n\r\nUnd doch liegt seine wahre Macht in der Verzauberung. Ich sehe mehr als meine Reflexion, wenn ich auf die kristalline Schneide blicke. Ich sehe die Zeit, wie eine Wolke einen Fluss sieht. Sie hat einen Anfang und ein Ende, die in Übereinstimmung koexistieren. Vergangenheit, Gegenwart und Zukunft sind eins.\r\n\r\nAm nächsten Tag sprach ich zu einer Wolke, die dies bestätigte. Durch die Visionen des Schwerts kenne ich die Zukunft. Der Pfad öffnet sich in der Kanalisation unter der Stadt. Das Schwert dient als Brücke.\r\n[pagebreak]\r\n22. Mittjahr, 4Ä 201\r\n\r\nDas Schwert von Jyggalag enthüllt noch viel mehr. Seine Logik erscheint einerseits vertraut und stößt mich doch ab. Es begehrt Wahn so sehr wie ich, doch hat es nur Zerstörung im Sinn.\r\n\r\nUnd schlimmer noch - die Stimme unseres Herrn ist kaum noch hörbar. Meine Gedanken und Worte werden immer knapper.\r\n[pagebreak]\r\n30. Mittjahr, 4Ä 201\r\n\r\nIch muss meine Schriften voneinander trennen. Ich befürchte, meine Tagebücher sprechen zueinander. Nein, keine Befürchtung. Ich habe Beweise.\r\n\r\nAber ich kann dies hier nicht niederschreiben, damit mein zukünftiges Selbst keine weiteren Lügen verbreitet. Jeder Gedanke - Vergangenheit und Gegenwart - muss rein bleiben.\r\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE025_RisaadNote",
+        "form_id": "[05000879]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>\r\nThe roads have been unkind to this one, plagued by outlaws along the route from Whiterun to Markarth. Guards travel with Ri'saad, yes, but they are ill-equipped to deal with ones such as this. They wield strange golden weapons and wear gleaming armor. Ri'saad has read of such things only in stories. Their encampment is found just west of North Brittleshin Pass.\r\n\r\nEach time they set upon us, they shout, \"The Saints would like to browse your wares today.\" The brutes steal mostly trinkets and oddities, no matter how cheap this one knows them to be. Then, they allow Ri'saad to go on his way. Ri'saad has not yet fought back. While it has harmed this one's coin purse, it is not worth a life.\r\n\r\nRi'saad has heard of another gang patrolling the roads further north, calling themselves the \"Seducers.\" They are known for their menacing, dark armor. Skyrim grows more perilous by the day. They are known to camp along the road west of Fort Kastav.\r\n\r\nThis one would pay handsomely to any who would help. Ri'saad fears for any who might come to harm at the hands of these worrisome pests.</font>",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\r\nDie Straßen waren harsch und gesäumt von Banditen von Weißlauf bis Markarth. Ja, Wachen reisen mit Ri'saad, aber sie sind hierfür nicht gewappnet. Der Feind trägt rätselhafte goldene Waffen und glänzende Rüstungen. Ri'saad kennt solche Dinge nur aus Erzählungen. Ihr Lager befindet sich direkt westlich des Nördlichen Bruchbeinpasses.\r\n\r\nJedes Mal, wenn sie uns auflauern, rufen sie \"Die Heiligen wollen gerne Eure Waren begutachten.\" Die Gesetzlosen stehlen hauptsächlich Schmuckstücke und Kuriositäten, egal, wie billig sie auch sein mögen. Dann erlauben sie Ri'saad, weiterzuziehen. Ri'saad hat sich noch nicht gewehrt. Das schmerzte bislang dessen Geldbörse, ist aber kein Leben wert.\r\n\r\nRi'saad hat von einer weiteren Bande gehört, die ihr Unwesen weiter nördlich treibt. Sie nennen sich die \"Verführer-Banditen\". Sie sind für ihre bedrohlichen, dunklen Rüstungen berüchtigt. Himmelsrand wird immer gefährlicher. Ihr Lager haben sie entlang der Straße westlich der Festung Kastav aufgeschlagen.\r\n\r\nDieser belohnt jeden reich, der helfen kann. Ri'saad fürchtet um jeden, der durch diese Landplage zu Schaden kommen könnte.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SeducersHuntPlayerNote",
+        "form_id": "[0520285D]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Note on Revenge for Svarig",
+        "string": "Notiz über Rache für Svarig"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SaintsandSeducers_Book03",
+        "form_id": "[05000AEE]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Saints and Seducers",
+        "string": "Heilige und Verführer"
+    },
+    {
+        "editor_id": "ccBGSSSE025_BlessingsofSheogorath_Book01",
+        "form_id": "[05000B97]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nThe Blessings of Sheogorath\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"center\">\r\nFor Our Lord Sheogorath, without Whom all Thought would be linear and all Feeling would be fleeting.\r\n\r\nBlessed are the Madmen, for they hold the keys to secret knowledge.\r\n\r\nBlessed are the Phobic, always wary of that which would do them harm.\r\n\r\nBlessed are the Obsessed, for their courses are clear.\r\n\r\nBlessed are the Addicts, may they quench the thirst that never ebbs.\r\n\r\nBlessed are the Murderous, for they have found beauty in the grotesque.\r\n\r\nBlessed are the Firelovers, for their hearts are always warm.\r\n\r\nBlessed are the Artists, for in their hands the impossible is made real.\r\n\r\nBlessed are the Musicians, for in their ears they hear the music of the soul.\r\n\r\nBlessed are the Sleepless, as they bask in wakeful dreaming.\r\n\r\nBlessed are the Paranoid, ever-watchful for our enemies.\r\n\r\nBlessed are the Visionaries, for their eyes see what might be.\r\n\r\nBlessed are the Painlovers, for in their suffering, we grow stronger.\r\n\r\nBlessed is the Madgod, who tricks us when we are foolish, punishes us when we are wrong, tortures us when we are unmindful, and loves us in our imperfection.\r\n</p>",
+        "string": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nSheogoraths Segen\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"center\">\r\nFür unseren Fürsten Sheogorath, ohne den alle Gedanken linear und alle Gefühle flüchtig wären.\r\n\r\nGesegnet seien die Verrückten, denn ihrer sind die Schlüssel zu geheimem Wissen.\r\n\r\nGesegnet seien die Phobiker, die stets wissen, was ihnen schaden könnte.\r\n\r\nGesegnet seien die Besessenen, denn ihr Kurs ist gesetzt.\r\n\r\nGesegnet seien die Süchtigen, und mögen sie ihren niemals endenden Durst stillen.\r\n\r\nGesegnet seien die Mordlüsternen, denn sie fanden Schönheit im Grotesken.\r\n\r\nGesegnet seien die Freunde des Feuers, denn ihre Herzen sind immer gewärmt.\r\n\r\nGesegnet seien die Künstler, denn in ihren Händen wird Vorstellung Realität.\r\n\r\nGesegnet seien die Musiker, denn sie hören die Musik der Seele.\r\n\r\nGesegnet seien die Schlaflosen, denn sie sonnen sich in Wachträumen.\r\n\r\nGesegnet seien die Paranoiden, die nach unserem Feind Ausschau halten.\r\n\r\nGesegnet seien die Visionäre, denn sie sehen, was noch kommen mag.\r\n\r\nGesegnet seien die Schmerzliebenden, denn durch ihr Leid werden wir stärker.\r\n\r\nGesegnet sei der Verrückte Gott, der uns Narren vorführt, uns bestraft, wenn wir falsch liegen, uns foltert, wenn wir gedankenlos sind und uns in unserer Unvollkommenheit liebt.\r\n</p>"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SaintsLeaderNote",
+        "form_id": "[050009DD]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Kinthal's Journal",
+        "string": "Kinthals Tagebuch"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ArcaneSmithEnchanterJournal",
+        "form_id": "[05000B9B]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>I know of you both, Amber and Madness. I am well acquainted with your secrets. \r\n\r\nAmber, the glowing works of an alien root, I find your resin pristine and holy. Light and powerful, you require a delicate hand, one that recognizes the fragile nature of beauty. \r\n\r\nMadness, I know you to be a flexible breed, one congealed from the tattered minds of dead heroes. Unlike Amber, I would bend and bow you like a sinew. I would beat and hammer you, stretch and fold you, knowing that each blow would callous your skin and sharpen your teeth.\r\n\r\nIt was dark armored men that brought me these treats, these puzzles to solve. \"Courtesy of Thoron,\" they said. Liars. There is no Thoron, not anymore. He is a memory of long past, and memories are as real as dreams and other fanciful thoughts. Still, I had to have them.\r\n\r\nAmber, so exquisite, so pretty, like drops of fallen star dew. From your honeyed globes I would craft myself an armor that trapped me inside your beauty and warmth. I would suffocate myself in your light, and in death live for eternity.\r\n\r\nBut madness, oh madness, you charm me with your edge. From you I would forge a knife to cut out Sheogorath's tongue, and use it to lick the dust off my anvil. Oh how happy that would make all three of us.\r\n\r\nIn my desperation I've turned to magic, to try and turn these earthly materials into your equals. I have forged armor and blade in hopes of finding a worthy pair. But they are failures. Not fit to be your shadows. \r\n\r\nSo instead, I will mine the forests and the dead. I will have caravans search the far corners of Tamriel. I will reach into the eye of Oblivion itself, until I find you both again.\r\n</font>",
+        "string": "<font face='$HandwrittenFont'><font size='18'>Ihr seid mir beide wohlbekannt, Bernstein und Wahnsinnserz. Ich kenne eure Geheimnisse.\r\n\r\nBernstein, du glühende Frucht einer fremden Wurzel, dein Harz ist rein und heilig. Leicht doch mächtig, benötigst du eine zarte Hand, die die zerbrechliche Natur der Schönheit kennt.\r\n\r\nWahnsinnserz, du bist von wankelmütigem Charakter, der zerrissenen Seelen toter Helden entstammt. Anders als Bernstein kann ich dich biegen wie eine Sehne. Ich bearbeite dich mit dem Hammer, dehne und falte dich und weiß, dass jeder Schlag deine Haut härtet und deine Zähne schärft.\r\n\r\nEs waren Männer in dunkler Rüstung, die mir diese Leckerbissen brachten, diese Rätsel, die es zu lösen galt. \"Mit Empfehlung von Thoron\", sagten sie. Lügner. Es gibt keinen Thoron, nicht mehr. Er ist eine längst vergangene Erinnerung, und Erinnerungen sind so real wie Träume und andere fantasievolle Gedanken. Trotzdem musste ich sie haben.\r\n\r\nBernstein - so exquisit und wunderschön, wie fallender Sternentau. Aus deinen honiggoldenen Rundungen würde ich mir eine Rüstung schmieden, die mich in deiner Schönheit und Wärme gefangen hält. Dein Licht nimmt mir den Atem.\r\n\r\nDoch Wahnsinnserz, oh Wahnsinnserz, deine Rauheit bezaubert mich. Aus dir wollte ich ein Messer machen, um Sheogoraths Zunge herauszuschneiden und damit den Staub von meinem Amboss zu fegen. Wie glücklich uns drei dies gemacht hätte.\r\n\r\nIn meiner Verzweiflung zog ich Magie heran, um diese irdischen Materialien in etwas euch Ebenbürtiges zu verwandeln. Ich schmiedete Rüstung und Klinge in der Hoffnung, ein würdiges Paar zu finden. Aber es nutzte nichts. Sie verblassten neben euch.\r\n\r\nUnd so werde ich die Wälder und die Toten berauben. Ich werde Karawanen anweisen, die entlegensten Winkel Tamriels abzusuchen. Ich werde ins Reich des Vergessens hinabsteigen, um euch wiederzufinden.\r\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SaintsNoteOnBlacksmith",
+        "form_id": "[05000CD5]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Notes on the Blacksmith",
+        "string": "Notizen zum Schmied"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SpellTomeConjureDarkSeducerWarrior",
+        "form_id": "[05000B63]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nConjure Dark Seducer Warrior",
+        "string": "<font face='$HandwrittenFont'><font size='40'><p align='center'>\r\nDunkle-Verführer-Krieger beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ThoronJournal02",
+        "form_id": "[0519D3C6]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Thoron's Journal - Volume 1",
+        "string": "Thorons Tagebuch, Band I"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraNoteDS",
+        "form_id": "[051CFE4B]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nCan't believe we carried this bug the whole way here, cage and all. Always afraid it's going to find a way through the bars and eat me in my sleep. </font>",
+        "string": "<font face='$HandwrittenFont'>\r\nIch kann es kaum glauben, dass wir dieses Insekt mit Käfig und allem Drum und Dran den ganzen Weg hierher getragen haben. Mich plagt die ständige Furcht, dass es einen Weg durch die Gitterstäbe finden und mich im Schlaf fressen könnte.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE025_RisaadNote",
+        "form_id": "[05000879]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Ri'saad's Note on Bandit Attacks",
+        "string": "Ri'saads Notiz zu Banditenangriffen"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SeducersLeaderNote",
+        "form_id": "[050009D8]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Svarig's Journal",
+        "string": "Svarigs Tagebuch"
+    },
+    {
+        "editor_id": "ccBGSSSE025_AtronachForgeRecipes",
+        "form_id": "[051B6935]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>Finally, the laggard has conducted the experiments I requested weeks ago. Thankfully, my investment has paid dividends.\r\n\r\nThe scrolls should prove useful to the Saints and Seducers, should they ever get in over their heads with the caravan guards.\r\n\r\nI begin to wonder what would happen if my prized Sheogorath-shaped amber were used in the place of... no, it's too risky.\r\n\r\n--Thoron</font></font>\r\n[pagebreak]\r\nThoron,\r\n\r\nUsing the \"amber\" and \"madness ore\" you provided in your last delivery, I have conducted the experiments you requested. I must say, the results were quite extraordinary. \r\n\r\nListed are the successful attempts using these materials with the Atronach Forge.\r\n\r\nLet us speak again soon. If you could provide more of these materials, I sense a handsomely profitable partnership in our future.\r\n\r\n-- Enthir\r\n\r\n[pagebreak]\r\n\r\n<p align='center'>Summoned Golden Saint</p>\r\nAmber + Emerald\r\n\r\n\r\n<p align='center'>Summoned Dark Seducer</p>\r\nMadness + Garnet\r\n\r\n\r\n(Warning: Very dangerous!)\r\n[pagebreak]\r\n\r\n<p align='center'>Scroll of Conjure Golden Saint</p>\r\n\r\nAmber\r\n\r\nRoll of Paper\r\n\r\nCharcoal\r\n\r\n[pagebreak]\r\n\r\n<p align='center'>Scroll of Conjure Dark Seducer</p>\r\n\r\nMadness\r\n\r\nRoll of Paper\r\n\r\nCharcoal\r\n\r\n[pagebreak]\r\n\r\n<p align='center'>Spell Tome: Conjure Golden Saint</p>\r\n\r\nAmber\r\n\r\nRuined Book\r\n\r\nBliss Bug Thorax\r\n\r\nSabre Cat Pelt\r\n\r\n[pagebreak]\r\n\r\n<p align='center'>Spell Tome: Conjure Dark Seducer</p>\r\n\r\nMadness\r\n\r\nRuined Book\r\n\r\nScreaming Maw\r\n\r\nWolf Pelt",
+        "string": "<font face='$HandwrittenFont'><font size='18'>Endlich hat der Faulpelz die Experimente durchgeführt, die ich vor Wochen angefragt habe. Glücklicherweise hat sich meine Investition bezahlt gemacht.\r\n\r\nDie Schriftrollen dürften sich für die Heiligen- und Verführer-Banditen als nützlich erweisen, falls sie sich irgendwann einmal mit den Karawanenwachen überwerfen.\r\n\r\nLangsam stellt sich mir die Frage, was geschehen würde, sollte mein wertvoller Sheogorath-förmiger Bernstein benutzt werden anstelle von ... Nein, das ist zu riskant.\r\n\r\nThoron</font></font>\r\n[pagebreak]\r\nThoron,\r\n\r\nmithilfe des \"Bernsteins\" und \"Wahnsinnserzes\" aus Eurer letzten Lieferung habe ich die von Euch angefragten Experimente durchgeführt. Ich muss sagen, dass die Ergebnisse äußerst ungewöhnlich waren.\r\n\r\nAufgeführt habe ich die erfolgreichen Versuche mit diesen Materialien in der Atronachen-Schmiede.\r\n\r\nWir sollten uns bald wieder unterhalten. Falls Ihr mehr von diesen Materialien liefern könntet, dürfte sich daraus eine überaus profitable Partnerschaft entwickeln.\r\n\r\nEnthir\r\n\r\n[pagebreak]\r\n\r\n<p align='center'>Goldene Heilige beschworen</p>\r\nBernstein und Smaragd\r\n\r\n\r\n<p align='center'>Dunkle Verführer beschworen</p>\r\nWahnsinnserz und Granat\r\n\r\n\r\n(Warnung: äußerst gefährlich!)\r\n[pagebreak]\r\n\r\n<p align='center'>Rolle der Goldene-Heilige-Beschwörung</p>\r\n\r\nBernstein\r\n\r\nPapierrolle\r\n\r\nHolzkohle\r\n\r\n[pagebreak]\r\n\r\n<p align='center'>Rolle der Dunkle-Verführer-Beschwörung</p>\r\n\r\nWahnsinnserz\r\n\r\nPapierrolle\r\n\r\nHolzkohle\r\n\r\n[pagebreak]\r\n\r\n<p align='center'>Zauberbuch: Goldene Heilige beschwören</p>\r\n\r\nBernstein\r\n\r\nRuiniertes Buch\r\n\r\nGlückseligkeits-Käferbrust\r\n\r\nSäbelzahntigerpelz\r\n\r\n[pagebreak]\r\n\r\n<p align='center'>Zauberbuch: Dunkle Verführer beschwören</p>\r\n\r\nWahnsinnserz\r\n\r\nRuiniertes Buch\r\n\r\nSchreiender Schlund\r\n\r\nWolfspelz"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SeducersHuntPlayerNote",
+        "form_id": "[0520285D]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='20'>\r\nMy companions and I have formed a pact to hunt down <Alias=Player>, the despicable <Alias.Race=Player> responsible for butchering Svarig.  This transgression cannot be overlooked.  Our honor as Seducers demands nothing less than <Alias=Player>'s head on a pike.</font>",
+        "string": "<font face='$HandwrittenFont'><font size='20'>\r\nMeine Begleiter und ich sind einen Pakt eingegangen, um <Alias=Player> aufzuspüren, den für Svarigs Niedermetzelung verantwortlichen <Alias.Race=Player>. Über diese Sünde kann nicht hinweggesehen werden. Unsere Ehre als Verführer-Banditen verlangt nichts Geringeres als den Kopf von <Alias=Player> auf einem Pfahl.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE025_MadnessOreNote",
+        "form_id": "[05054047]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Note on Amber and Madness Ore",
+        "string": "Notiz über Bernstein und Wahnsinnserz"
+    },
+    {
+        "editor_id": "ccBGSSSE025_StaadaNote",
+        "form_id": "[0519316F]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "A Request to Meet",
+        "string": "Eine Anfrage"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SpellTomeConjureStaada",
+        "form_id": "[0519D3F9]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Conjure Staada",
+        "string": "Zauberbuch: Staada beschwören"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ThoronJournal02",
+        "form_id": "[0519D3C6]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\r\n2nd of First Seed, 4E 200\r\n\r\nI have stumbled upon a dream. Not one conjured from sleep or stupor, but sight and sense. I now hold in my possession a lump of amber shaped like the Mad God himself. When I placed my hand upon it for the very first time, I stepped into the world of Mania. My mind was truly clear and my eyes forever open. \r\n\r\nBut as all dreams come to pass, so too did my time in Bliss. With a single step I found myself back in the wilderness, far away from my lovely Mania. Gone were the golden hills, luminous stalks and whimsical fragrances, and in its place the stink of flora and fools unbothered by the gloom.\r\n\r\nI have set about making a connection with the artifact once more, and to the wonderous land it has revealed to me.\r\n\r\n[pagebreak]\r\n4th of First Seed, 4E 200\r\n\r\nCurses!\r\n\r\nAfter two days of constant focus, I finally connected with Mania once more. Or, it may be more accurate to say that Mania connected with me, in this secluded camp near Solitude. A powerful daedra took shape before my eyes: a Golden Saint, with armor gleaming and eyes burning with surprise and fury. To my dismay, my ordinary methods of bending daedra to my will were of no use. As it began to raise its weapon against me, I fled.\r\n\r\nWhatever power was left in the amber, it lies dormant now. I must find other artifacts like it, and through their magic forge a connection to the world I lost.\r\n",
+        "string": "[pagebreak]\r\n2. Erste Saat, 4Ä 200\r\n\r\nEin Traum kam über mich. Nicht im Schlaf oder im Rausch, sondern sicht- und hörbar. Nun befindet sich ein Stück Bernstein in Form des Verrückten Gottes höchstpersönlich in meinem Besitz. Als ich ihn das erste Mal berührte, betrat ich die Welt von Wahn. Ich war bei klarem Verstand und meine Augen waren weit offen.\r\n\r\nAber alle Träume sind flüchtig und so auch meine Zeit in Glückseligkeit. Nur ein Schritt, und ich fand mich zurück in der Wildnis und weit weg von meinem geliebten Wahn. Fort waren die goldenen Hügel, leuchtenden Blüten und wunderlichen Düfte, und an ihre Stelle trat der Gestank der Flora und Narren, die der Trübsinn nicht zu tangieren schien.\r\n\r\nIch habe mich darangemacht, erneut eine Verbindung mit dem Artefakt einzugehen, um in das von ihm offenbarte wundersame Land zu reisen.\r\n\r\n[pagebreak]\r\n4. Erste Saat, 4Ä 200\r\n\r\nVerflucht!\r\n\r\nNach zwei Tagen der ständigen Konzentration habe ich mich endlich wieder mit Wahn verbunden. Präziser ausgedrückt hat sich jedoch Wahn in diesem abgeschiedenen Lager in der Nähe von Einsamkeit mit mir verbunden. Eine mächtige Daedra erschien vor meinen Augen: eine Goldene Heilige mit strahlender Rüstung und vor Erstaunen und Zorn brennenden Augen. Zu meiner Bestürzung zeigten meine üblichen Methoden, um Daedra meinem Willen zu unterwerfen, keine Wirkung. Als sie ihre Waffe gegen mich erhob, floh ich.\r\nWelche Kraft auch immer im Bernstein verblieb, schlummert nun. Ich muss ähnliche Artefakte finden und mittels ihrer Magie eine Verbindung zu der Welt herstellen, die ich verloren habe.\r\n"
+    },
+    {
+        "editor_id": "ccBGSSSE025_BanditBattlesiteNote",
+        "form_id": "[0503AB3A]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Note on Strange Arms and Armor",
+        "string": "Notiz zu rätselhaften Waffen und Rüstung"
+    },
+    {
+        "editor_id": "ccBGSSSE025_BlessingsofSheogorath_Book01",
+        "form_id": "[05000B97]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "The Blessings of Sheogorath",
+        "string": "Sheogoraths Segen"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SeducersLeaderNote",
+        "form_id": "[050009D8]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='20'>\r\nWe continue to do the bidding of Thoron, our wealthy benefactor. Though our relationship has taken a turn for the worse, he still pays exceedingly well and continues to ask us to pillage the trade caravans as they pass, searching for anything we can find that seems \"off\" or has even a hint of magic.\r\n\r\nThoron is a powerful conjurer, but also completely insane. He has become increasingly unhappy with our spoils as of late. I suspect that the vainglorious Saints have done something to gain his favor. We've all become fearful of what might happen if we meet him next month and he disapproves of our spoils. If you ask me, all that time he spends holed up in those sewers has finally turned his brains upside down.\r\n\r\nHe seemed to really like those tongs and rusty calipers we brought him a few months back. All we need is to find the right piece of junk that he thinks will help him \"bridge the gap\" he keeps going on about, and we'll have full coin purses once again.</font>",
+        "string": "<font face='$HandwrittenFont'><font size='20'>\r\nWir dienen weiter unserem gutsituierten Wohltäter Thoron. Obwohl sich unser Verhältnis verschlechtert hat, zahlt er immer noch außerordentlich gut und heißt uns an, die Handelskarawanen nach allem zu durchkämmen, das seltsam wirkt oder auch nur einen Hauch Magie besitzt.\r\n\r\nThoron ist ein mächtiger Beschwörer, aber auch komplett verrückt. In letzter Zeit war er mit unserer Ausbeute immer unzufriedener. Ich vermute, dass die prahlerischen Heiligen irgendwie seine Gunst gewonnen haben. Wir alle fürchten, was passieren könnte, wenn wir ihn nächsten Monat treffen und er mit unserer Ausbeute unzufrieden ist. Meiner Meinung nach hat die ganze Zeit da unten in der Kanalisation seinen Verstand vernebelt.\r\n\r\nEr mochte die Zangen und rostigen Zirkel, die wir ihm vor ein paar Monaten brachten. Jetzt müssen wir nur das richtige Stück Schrott finden, mit dem er \"die Kluft überbrücken\" kann, von der er immer faselt, und dann füllen sich unsere Geldbörsen wieder.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SaintsHuntPlayerNote",
+        "form_id": "[0520285C]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Note on Revenge for Kinthal",
+        "string": "Notiz über Rache für Kinthal"
+    },
+    {
+        "editor_id": "ccBGSSSE025_RisaadNoteAfterQuest",
+        "form_id": "[050819B4]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Note on New Wares",
+        "string": "Notiz zu neuen Waren"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SaintsNote",
+        "form_id": "[0500087A]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='20'>\r\nNow this is what I call easy coin! I'm proud to be one of the Saints. Every few days, Ri'saad comes down the road, and his wares are ours for the taking. We don't take everything, mind you. If he don't got nothing to sell, he can't stay in business, and then where would we be? We just skim a bit off the top each time.\r\n\r\nKinthal should be happy with our latest take. He'll be leaving his camp up near Karthwasten to pay us a visit soon.\r\n\r\nThose damn Seducers were eating into our profits, until we drove them off up north. Other merchants pass through those parts, so maybe they'll stay gone.</font>",
+        "string": "<font face='$HandwrittenFont'><font size='20'>\r\nLeichtverdientes Geld! Ich bin stolz darauf, ein Heiliger zu sein. Alle paar Tage kommt Ri'saad des Weges und wir bedienen uns an seinen Waren. Wir nehmen aber nicht alles. Wenn er nichts mehr zu verkaufen hat, muss er sein Geschäft aufgeben, und wo bleiben dann wir? Wir schöpfen jedes Mal nur ein bisschen ab.\r\n\r\nKinthal sollte mit unserer letzten Ausbeute zufrieden sein. Er bricht bald in seinem Lager bei  Karthwasten auf, um zu uns zu stoßen.\r\n\r\nDiese verdammten Verführer-Banditen haben unseren Profit geschmälert, bis wir sie Richtung Norden getrieben haben. Dort gibt es andere Händler, also bleiben sie dort hoffentlich.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE025_QAChest",
+        "form_id": "[0500087C]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Truhe"
+    },
+    {
+        "editor_id": "ccBGSSSE025_BarrelTongs",
+        "form_id": "[051B6934]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Barrel",
+        "string": "Fass"
+    },
+    {
+        "editor_id": "ccBGS_RootHollowedStump",
+        "form_id": "[01003079]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Hollowed Stump",
+        "string": "Ausgehöhlter Stumpf"
+    },
+    {
+        "editor_id": "ccBGSSSE025_MetalCageLongGate01",
+        "form_id": "[05000C72]",
+        "index": null,
+        "type": "DOOR FULL",
+        "original": "Cage Gate",
+        "string": "Käfigtür"
+    },
+    {
+        "editor_id": "SDoorManholeCoverInvisible",
+        "form_id": "[0100308B]",
+        "index": null,
+        "type": "DOOR FULL",
+        "original": "Entrance",
+        "string": "Eingang"
+    },
+    {
+        "editor_id": "ccBGSSSE025_MetalCageLongGate01Snow",
+        "form_id": "[05000C68]",
+        "index": null,
+        "type": "DOOR FULL",
+        "original": "Cage Gate",
+        "string": "Käfigtür"
+    },
+    {
+        "editor_id": "ccBGSSSE025_Blissbug",
+        "form_id": "[05059155]",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Bliss Bug Thorax",
+        "string": "Glückseligkeits-Käferbrust"
+    },
+    {
+        "editor_id": "ccBGSSSE025_GreenButterfly",
+        "form_id": "[05059151]",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Green Butterfly Wing",
+        "string": "Grüner Schmetterlingsflügel"
+    },
+    {
+        "editor_id": "ccBGSSSE025_FlameStalk",
+        "form_id": "[05095E23]",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Flame Stalk",
+        "string": "Flammenstängel"
+    },
+    {
+        "editor_id": "ccBGSSSE025_PurpleButterfly",
+        "form_id": "[05059153]",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Purple Butterfly Wing",
+        "string": "Lila Schmetterlingsflügel"
+    },
+    {
+        "editor_id": "ccBGSSSE025_OreAmber",
+        "form_id": "[05000BC6]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Amber",
+        "string": "Bernstein"
+    },
+    {
+        "editor_id": "ccBGSSSE025_IngotMadness",
+        "form_id": "[05000BC8]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Madness Ingot",
+        "string": "Wahnsinnserzbarren"
+    },
+    {
+        "editor_id": "ccBGSSSE025_OreMadness",
+        "form_id": "[05000BC9]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Madness Ore",
+        "string": "Wahnsinnserz"
+    },
+    {
+        "editor_id": "ccBGSSSE025_dunUniqueGreenButterflyInJar",
+        "form_id": "[0512DD3B]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Green Butterfly in a Jar",
+        "string": "Grüner Schmetterling im Glas"
+    },
+    {
+        "editor_id": "ccBGSSSE025_dunUniquePurpleButterflyInJar",
+        "form_id": "[0512DD3C]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Purple Butterfly in a Jar",
+        "string": "Lila Schmetterling im Glas"
+    },
+    {
+        "editor_id": "ccBGSSSE025_IngotAmber",
+        "form_id": "[05000BC7]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Refined Amber",
+        "string": "Veredelter Bernstein"
+    },
+    {
+        "editor_id": "ccBGSSSE025_AmberOddity",
+        "form_id": "[05183E61]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Sheogorath-Shaped Amber",
+        "string": "Sheogorath-förmiger Bernstein"
+    },
+    {
+        "editor_id": "ccBGSSSE025_dunUniqueBlissBugInJar",
+        "form_id": "[0512DD3A]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Bliss Bug in a Jar",
+        "string": "Glückseligkeits-Käfer im Glas"
+    },
+    {
+        "editor_id": "ccBGSSSE025_GoldenSaintMace",
+        "form_id": "[05000827]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Golden Mace",
+        "string": "Goldener Streitkolben"
+    },
+    {
+        "editor_id": "ccBGSSSE025_DarkSeducerWarAxeUnplayable",
+        "form_id": "[05000991]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Dark War Axe",
+        "string": "Dunkelkriegsaxt"
+    },
+    {
+        "editor_id": "ccBGSSSE025_GoldenSaintBow",
+        "form_id": "[0500080F]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Golden Bow",
+        "string": "Goldener Bogen"
+    },
+    {
+        "editor_id": "ccBGSSSE025_DarkSeducerDagger",
+        "form_id": "[05000821]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Dark Dagger",
+        "string": "Dunkeldolch"
+    },
+    {
+        "editor_id": "ccBGSSSE025_GoldenSaintGreatsword",
+        "form_id": "[05000826]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Golden Greatsword",
+        "string": "Goldener Zweihänder"
+    },
+    {
+        "editor_id": "ccBGSSSE025_MadnessBow",
+        "form_id": "[05000BE5]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Madness Bow",
+        "string": "Wahnsinnserzbogen"
+    },
+    {
+        "editor_id": "ccBGSSSE025_MadnessDagger",
+        "form_id": "[05000BE6]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Madness Dagger",
+        "string": "Wahnsinnserzdolch"
+    },
+    {
+        "editor_id": "ccBGSSSE025_DarkSeducerBattleaxe",
+        "form_id": "[05000839]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Dark Battleaxe",
+        "string": "Dunkelstreitaxt"
+    },
+    {
+        "editor_id": "ccBGSSSE025_GoldenSaintWarhammer",
+        "form_id": "[05000809]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Golden Warhammer",
+        "string": "Goldener Kriegshammer"
+    },
+    {
+        "editor_id": "ccBGSSSE025_GoldenSaintBowUnplayable",
+        "form_id": "[05000992]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Golden Bow",
+        "string": "Goldener Bogen"
+    },
+    {
+        "editor_id": "ccBGSSSE025_GoldenSaintWarAxeUnplayable",
+        "form_id": "[05000995]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Golden War Axe",
+        "string": "Goldene Kriegsaxt"
+    },
+    {
+        "editor_id": "ccBGSSSE025_MadnessWarAxe",
+        "form_id": "[05000BEA]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Madness War Axe",
+        "string": "Wahnsinnserzkriegaxt"
+    },
+    {
+        "editor_id": "ccBGSSSE025_GoldenSaintGreatswordUnplayable",
+        "form_id": "[051F355A]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Golden Greatsword",
+        "string": "Goldener Zweihänder"
+    },
+    {
+        "editor_id": "ccBGSSSE025_GoldenSaintDagger",
+        "form_id": "[0500080E]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Golden Dagger",
+        "string": "Goldener Dolch"
+    },
+    {
+        "editor_id": "ccBGSSSE025_GoldenSaintDaggerUnplayable",
+        "form_id": "[05000996]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Golden Dagger",
+        "string": "Goldener Dolch"
+    },
+    {
+        "editor_id": "ccBGSSSE025_GoldenSaintWarhammerUnplayable",
+        "form_id": "[051F3559]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Golden Warhammer",
+        "string": "Goldener Kriegshammer"
+    },
+    {
+        "editor_id": "ccBGSSSE025_GoldenSaintBattleaxeUnplayable",
+        "form_id": "[051F355B]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Golden Battleaxe",
+        "string": "Goldene Streitaxt"
+    },
+    {
+        "editor_id": "ccBGSSSE025_AmberSword",
+        "form_id": "[05000BE0]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Amber Sword",
+        "string": "Bernsteinschwert"
+    },
+    {
+        "editor_id": "ccBGSSSE025_Jyggalag",
+        "form_id": "[0500083B]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Sword of Jyggalag",
+        "string": "Schwert von Jyggalag"
+    },
+    {
+        "editor_id": "ccBGSSSE025_GoldenSaintBattleaxe",
+        "form_id": "[05000810]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Golden Battleaxe",
+        "string": "Goldene Streitaxt"
+    },
+    {
+        "editor_id": "ccBGSSSE025_AmberDagger",
+        "form_id": "[05000BDD]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Amber Dagger",
+        "string": "Bernsteindolch"
+    },
+    {
+        "editor_id": "ccBGSSSE025_DarkSeducerWarAxe",
+        "form_id": "[05000829]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Dark War Axe",
+        "string": "Dunkelkriegsaxt"
+    },
+    {
+        "editor_id": "ccBGSSSE025_DarkSeducerSwordUnplayable",
+        "form_id": "[05000990]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Dark Sword",
+        "string": "Dunkelschwert"
+    },
+    {
+        "editor_id": "ccBGSSSE025_DarkSeducerBow",
+        "form_id": "[05000802]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Dark Bow",
+        "string": "Dunkelbogen"
+    },
+    {
+        "editor_id": "ccBGSSSE025_GoldenSaintSwordUnplayable",
+        "form_id": "[05000994]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Golden Sword",
+        "string": "Goldenes Schwert"
+    },
+    {
+        "editor_id": "ccBGSSSE025_DarkSeducerGreatsword",
+        "form_id": "[05000825]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Dark Greatsword",
+        "string": "Dunkelzweihänder"
+    },
+    {
+        "editor_id": "ccBGSSSE025_AmberBow",
+        "form_id": "[05000BDC]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Amber Bow",
+        "string": "Bernsteinbogen"
+    },
+    {
+        "editor_id": "ccBGSSSE025_MadnessGreatsword",
+        "form_id": "[05000BE7]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Madness Greatsword",
+        "string": "Wahnsinnserzzweihänder"
+    },
+    {
+        "editor_id": "ccBGSSSE025_DarkSeducerMaceUnplayable",
+        "form_id": "[0500098F]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Dark Mace",
+        "string": "Dunkelstreitkolben"
+    },
+    {
+        "editor_id": "ccBGSSSE025_AmberMace",
+        "form_id": "[05000BDF]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Amber Mace",
+        "string": "Bernsteinkolben"
+    },
+    {
+        "editor_id": "ccBGSSSE025_AmberWarAxe",
+        "form_id": "[05000BE1]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Amber War Axe",
+        "string": "Bernsteinkriegsaxt"
+    },
+    {
+        "editor_id": "ccBGSSSE025_DarkSeducerWarhammer",
+        "form_id": "[05000828]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Dark Warhammer",
+        "string": "Dunkelkriegshammer"
+    },
+    {
+        "editor_id": "ccBGSSSE025_DarkSeducerDaggerUnplayable",
+        "form_id": "[05000A08]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Dark Dagger",
+        "string": "Dunkeldolch"
+    },
+    {
+        "editor_id": "ccBGSSSE025_GoldenSaintWarAxe",
+        "form_id": "[0500080A]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Golden War Axe",
+        "string": "Goldene Kriegsaxt"
+    },
+    {
+        "editor_id": "ccBGSSSE025_MadnessMace",
+        "form_id": "[05000BE8]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Madness Mace",
+        "string": "Wahnsinnserzstreitkolben"
+    },
+    {
+        "editor_id": "ccBGSSSE025_AmberWarhammer",
+        "form_id": "[05000BE2]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Amber Warhammer",
+        "string": "Bernsteinkriegshammer"
+    },
+    {
+        "editor_id": "ccBGSSSE025_DarkSeducerBowUnplayable",
+        "form_id": "[0500098E]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Dark Bow",
+        "string": "Dunkelbogen"
+    },
+    {
+        "editor_id": "ccBGSSSE025_AmberBattleaxe",
+        "form_id": "[05000BDB]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Amber Battleaxe",
+        "string": "Bernsteinstreitaxt"
+    },
+    {
+        "editor_id": "ccBGSSSE025_Nerveshatter",
+        "form_id": "[05000BE3]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Nerveshatter",
+        "string": "Nervtöter"
+    },
+    {
+        "editor_id": "ccBGSSSE025_MadnessSword",
+        "form_id": "[05000BE9]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Madness Sword",
+        "string": "Wahnsinnserzschwert"
+    },
+    {
+        "editor_id": "ccBGSSSE025_MadnessBattleaxe",
+        "form_id": "[05000BE4]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Madness Battleaxe",
+        "string": "Wahnsinnserzstreitaxt"
+    },
+    {
+        "editor_id": "ccBGSSSE025_MadnessWarhammer",
+        "form_id": "[05000BEB]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Madness Warhammer",
+        "string": "Wahnsinnserzkriegshammer"
+    },
+    {
+        "editor_id": "ccBGSSSE025_GoldenSaintSword",
+        "form_id": "[05000822]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Golden Sword",
+        "string": "Goldenes Schwert"
+    },
+    {
+        "editor_id": "ccBGSSSE025_AmberGreatsword",
+        "form_id": "[05000BDE]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Amber Greatsword",
+        "string": "Bernsteinzweihänder"
+    },
+    {
+        "editor_id": "ccBGSSSE025_DarkSeducerSword",
+        "form_id": "[05000823]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Dark Sword",
+        "string": "Dunkelschwert"
+    },
+    {
+        "editor_id": "ccBGSSSE025_DarkSeducerMace",
+        "form_id": "[05000824]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Dark Mace",
+        "string": "Dunkelstreitkolben"
+    },
+    {
+        "editor_id": "ccBGSSSE025_GoldenSaintMaceUnplayable",
+        "form_id": "[05000993]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Golden Mace",
+        "string": "Goldener Streitkolben"
+    },
+    {
+        "editor_id": "ccBGSSSE025_GoldenSaintArrow",
+        "form_id": "[0500082B]",
+        "index": null,
+        "type": "AMMO FULL",
+        "original": "Golden Arrow",
+        "string": "Goldener Pfeil"
+    },
+    {
+        "editor_id": "ccBGSSSE025_AmberArrow",
+        "form_id": "[05000BEC]",
+        "index": null,
+        "type": "AMMO FULL",
+        "original": "Amber Arrow",
+        "string": "Bernsteinpfeil"
+    },
+    {
+        "editor_id": "ccBGSSSE025_DarkSeducerArrow",
+        "form_id": "[0500082A]",
+        "index": null,
+        "type": "AMMO FULL",
+        "original": "Dark Arrow",
+        "string": "Dunkelpfeil"
+    },
+    {
+        "editor_id": "ccBGSSSE025_GoldenSaintArrowUnplayable",
+        "form_id": "[05000997]",
+        "index": null,
+        "type": "AMMO FULL",
+        "original": "Golden Arrow",
+        "string": "Goldener Pfeil"
+    },
+    {
+        "editor_id": "ccBGSSSE025_MadnessArrow",
+        "form_id": "[05000BED]",
+        "index": null,
+        "type": "AMMO FULL",
+        "original": "Madness Arrow",
+        "string": "Wahnsinnserzpfeil"
+    },
+    {
+        "editor_id": "ccBGSSSE025_DarkSeducerArrowUnplayable",
+        "form_id": "[05000998]",
+        "index": null,
+        "type": "AMMO FULL",
+        "original": "Dark Arrow",
+        "string": "Dunkelpfeil"
+    },
+    {
+        "editor_id": "ccBGSSSE025_EncBanditTemplateMissileSeducer",
+        "form_id": "[050009A7]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Seducers Bandit",
+        "string": "Verführer-Bandit"
+    },
+    {
+        "editor_id": "ccBGSSSE025_EncCorruptedSprigganMania",
+        "form_id": "[05000B77]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Corrupted Spriggan",
+        "string": "Korrumpierter Zweigling"
+    },
+    {
+        "editor_id": "ccBGSSSE025_EncSummonGoldenSaintWarriorBoss",
+        "form_id": "[050BE6B5]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Thoron's Golden Saint Warrior",
+        "string": "Thorons Goldene-Heilige-Krieger"
+    },
+    {
+        "editor_id": "ccBGSSSE025_EncSummonDarkSeducerWarrior",
+        "form_id": "[05095E22]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Dark Seducer Warrior",
+        "string": "Dunkle-Verführer-Krieger"
+    },
+    {
+        "editor_id": "ccBGSSSE025_Staada",
+        "form_id": "[05198273]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Staada",
+        "string": "Staada"
+    },
+    {
+        "editor_id": "ccBGSSSE025_EncGoldenSaintWarrior",
+        "form_id": "[050009C8]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Golden Saint Warrior",
+        "string": "Goldene-Heilige-Krieger"
+    },
+    {
+        "editor_id": "ccBGSSSE025_EncSummonDarkSeducerWarriorAtrForge",
+        "form_id": "[051CAD43]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Dark Seducer Warrior",
+        "string": "Dunkle-Verführer-Krieger"
+    },
+    {
+        "editor_id": "ccBGSSSE025_EncSummonGoldenSaintArcher",
+        "form_id": "[05095E1F]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Golden Saint Archer",
+        "string": "Goldene-Heilige-Bogenschütze"
+    },
+    {
+        "editor_id": "ccBGSSSE025_EncSummonDarkSeducerArcherAtrForge",
+        "form_id": "[051CAD42]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Dark Seducer Archer",
+        "string": "Dunkle-Verführer-Bogenschütze"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraNymphDementia_PET",
+        "form_id": "[05000CB2]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Demented Elytra Nymph",
+        "string": "Schwermütige Elytra-Nymphe"
+    },
+    {
+        "editor_id": "ccBGSSSE025_EncWarlockAtro06BossBretonM",
+        "form_id": "[05000A84]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Thoron",
+        "string": "Thoron"
+    },
+    {
+        "editor_id": "ccBGSSSE025_EncSummonGoldenSaintArcherBoss",
+        "form_id": "[050BE6B4]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Thoron's Golden Saint Archer",
+        "string": "Thorons Goldene-Heilige-Bogenschütze"
+    },
+    {
+        "editor_id": "ccBGSSSE025_EncBanditTemplateMissileGolden",
+        "form_id": "[050009A6]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Saints Bandit",
+        "string": "Heiligen-Bandit"
+    },
+    {
+        "editor_id": "ccBGSSSE025_EncDarkSeducerWarrior",
+        "form_id": "[05000A07]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Dark Seducer Warrior",
+        "string": "Dunkle-Verführer-Krieger"
+    },
+    {
+        "editor_id": "ccBGSSSE025_EncWarlockAtro06BossBretonM",
+        "form_id": "[05000A84]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Thoron",
+        "string": "Thoron"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SmithEnchanter",
+        "form_id": "[05000CBF]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Evethra",
+        "string": "Evethra"
+    },
+    {
+        "editor_id": "ccBGSSSE025_EncSummonGoldenSaintWarriorAtrForge",
+        "form_id": "[051CAD45]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Golden Saint Warrior",
+        "string": "Goldene-Heilige-Krieger"
+    },
+    {
+        "editor_id": "ccBGSSSE025_EncBanditTemplateMeleeSeducer",
+        "form_id": "[050009BF]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Seducers Bandit",
+        "string": "Verführer-Bandit"
+    },
+    {
+        "editor_id": "ccBGSSSE025_EncSummonDarkSeducerWarriorBoss",
+        "form_id": "[050BE6B3]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Thoron's Dark Seducer Warrior",
+        "string": "Thorons Dunkle-Verführer-Krieger"
+    },
+    {
+        "editor_id": "ccBGSSSE025_EncSummonDarkSeducerArcherBoss",
+        "form_id": "[050BE6B2]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Thoron's Dark Seducer Archer",
+        "string": "Thorons Dunkle-Verführer-Bogenschütze"
+    },
+    {
+        "editor_id": "ccBGSSSE025_EncSummonGoldenSaintWarrior",
+        "form_id": "[05095E20]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Golden Saint Warrior",
+        "string": "Goldene-Heilige-Krieger"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraNymphMania",
+        "form_id": "[05000CDC]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Elytra Nymph",
+        "string": "Elytra-Nymphe"
+    },
+    {
+        "editor_id": "ccBGSSSE025_EncSummonStaada",
+        "form_id": "[0519D3FD]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Staada",
+        "string": "Staada"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraNymphDementia",
+        "form_id": "[05000B4B]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Elytra Nymph",
+        "string": "Elytra-Nymphe"
+    },
+    {
+        "editor_id": "ccBGSSSE025_EncDarkSeducerArcher",
+        "form_id": "[05000A06]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Dark Seducer Archer",
+        "string": "Dunkle-Verführer-Bogenschütze"
+    },
+    {
+        "editor_id": "ccBGSSSE025_EncSummonStaadaHostile",
+        "form_id": "[051B1815]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Staada",
+        "string": "Staada"
+    },
+    {
+        "editor_id": "ccBGSSSE025_EncGoldenSaintArcher",
+        "form_id": "[05000880]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Golden Saint Archer",
+        "string": "Goldene-Heilige-Bogenschütze"
+    },
+    {
+        "editor_id": "ccBGSSSE025_EncSummonGoldenSaintArcherAtrForge",
+        "form_id": "[051CAD44]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Golden Saint Archer",
+        "string": "Goldene-Heilige-Bogenschütze"
+    },
+    {
+        "editor_id": "ccBGSSSE025_EncSummonDarkSeducerArcher",
+        "form_id": "[05095E21]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Dark Seducer Archer",
+        "string": "Dunkle-Verführer-Bogenschütze"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraNymphMania_PET",
+        "form_id": "[05000CBB]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Manic Elytra Nymph",
+        "string": "Wahnsinnige Elytra-Nymphe"
+    },
+    {
+        "editor_id": "ccBGSSSE025_EncBanditTemplateMeleeGolden",
+        "form_id": "[050009B7]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Saints Bandit",
+        "string": "Heiligen-Bandit"
+    },
+    {
+        "editor_id": "ccBGSSSE025_LvlSeducerBanditBossAggro768",
+        "form_id": "[050009B4]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Svarig",
+        "string": "Svarig"
+    },
+    {
+        "editor_id": "ccBGSSSE025_EncCorruptedSprigganDementia",
+        "form_id": "[05000CDB]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Corrupted Spriggan",
+        "string": "Korrumpierter Zweigling"
+    },
+    {
+        "editor_id": "ccBGSSSE025_LvlGoldenBanditBossAggro768",
+        "form_id": "[050009B3]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Kinthal",
+        "string": "Kinthal"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraManiaKey",
+        "form_id": "[05000CC9]",
+        "index": null,
+        "type": "KEYM FULL",
+        "original": "Saints Bandit's Cage Key",
+        "string": "Käfigschlüssel der Heiligen-Banditen"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraDementiaKey",
+        "form_id": "[05000D4E]",
+        "index": null,
+        "type": "KEYM FULL",
+        "original": "Seducers Bandit's Cage Key",
+        "string": "Käfigschlüssel der Verführer-Banditen"
+    },
+    {
+        "editor_id": "ccBGSSSE025_MysticVenom",
+        "form_id": "[050B9587]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Mystic Venom",
+        "string": "Mystisches Gift"
+    },
+    {
+        "editor_id": "ccBGSSSSE025_ArrowAmberProjectile",
+        "form_id": "[05000BEF]",
+        "index": null,
+        "type": "PROJ FULL",
+        "original": "Amber Arrow",
+        "string": "Bernsteinpfeil"
+    },
+    {
+        "editor_id": "ccBGSSSSE025_ArrowMadnessProjectile",
+        "form_id": "[05000BEE]",
+        "index": null,
+        "type": "PROJ FULL",
+        "original": "Madness Arrow",
+        "string": "Wahnsinnserzpfeil"
+    },
+    {
+        "editor_id": "ccBGSSSSE025_ArrowGoldenSaintProjectile",
+        "form_id": "[0500082D]",
+        "index": null,
+        "type": "PROJ FULL",
+        "original": "Golden Arrow",
+        "string": "Goldener Pfeil"
+    },
+    {
+        "editor_id": "ccBGSSSSE025_ArrowDarkSeducerProjectile",
+        "form_id": "[0500082C]",
+        "index": null,
+        "type": "PROJ FULL",
+        "original": "Dark Arrow",
+        "string": "Dunkelpfeil"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SoulTomatoFilled",
+        "form_id": "[05137F40]",
+        "index": null,
+        "type": "SLGM FULL",
+        "original": "Soul Tomato",
+        "string": "Seelentomate"
+    },
+    {
+        "editor_id": "ccBGSSSE025_SoulTomato",
+        "form_id": "[05000804]",
+        "index": null,
+        "type": "SLGM FULL",
+        "original": "Soul Tomato",
+        "string": "Seelentomate"
+    },
+    {
+        "editor_id": "CrystaldriftCave01",
+        "form_id": "[000152A0]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Crystaldrift Cave",
+        "string": "Kristallstollenhöhle"
+    },
+    {
+        "editor_id": "BluePalaceWing01",
+        "form_id": "[0009B238]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Pelagius Wing",
+        "string": "Pelagius-Flügel"
+    },
+    {
+        "editor_id": "StonyCreekCave01",
+        "form_id": "[0004B8FB]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Stony Creek Cave",
+        "string": "Steinbachhöhle"
+    },
+    {
+        "editor_id": "ccBGSSSE025RootDungeon",
+        "form_id": "[0500083C]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Solitude Sewers",
+        "string": "Einsamkeit-Kanalisation"
+    },
+    {
+        "editor_id": "CTest",
+        "form_id": "[000B1783]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Quick Test Cell",
+        "string": "Quick Test Cell"
+    },
+    {
+        "editor_id": "Tamriel",
+        "form_id": "[0000003C]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Himmelsrand"
+    },
+    {
+        "editor_id": "DLC2SolstheimWorld",
+        "form_id": "[04000800]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Solstheim",
+        "string": "Solstheim"
+    },
+    {
+        "editor_id": "SolitudeWorld",
+        "form_id": "[00037EDF]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Solitude",
+        "string": "Einsamkeit"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050B9584]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "I need some help in battle!",
+        "string": "Ich brauche Hilfe im Kampf!"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraManiaBranch01Topic",
+        "form_id": "[050010AC]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Do you want to come with me?",
+        "string": "Möchtest du mich begleiten?"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraTopicW",
+        "form_id": "[0500108D]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Hey there little guy, you aren't hurt, are you?",
+        "string": "Hallo, mein Kleiner, du bist hoffentlich nicht verletzt?"
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA_RisaadSuccessBranchTopic",
+        "form_id": "[05000983]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I've taken care of the Saints and Seducers.",
+        "string": "Ich habe mich um die Heiligen- und Verführer-Banditen gekümmert."
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraDBranch_CollectVenomTopic",
+        "form_id": "[050B958D]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Harvest venom",
+        "string": "Gift sammeln"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraTopicY",
+        "form_id": "[05001089]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "You look like another creature I found caged. It was equally repulsive.",
+        "string": "Du erinnerst mich an eine andere eingesperrte Kreatur. Die war genauso abstoßend."
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraTopicC",
+        "form_id": "[0500106F]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Aren't you an adorable little bug! I wonder why they kept you caged.",
+        "string": "Was für ein putziger kleiner Käfer! Warum sie dich wohl eingesperrt haben?"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraManiaBranch04Topic",
+        "form_id": "[050010B2]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I think you're kind of cute. Do you want to be my pet?",
+        "string": "Du bist irgendwie putzig. Möchtest du mein Haustier sein?"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraPetBranch5Topic",
+        "form_id": "[05001085]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Well, you're free. Good luck out there.",
+        "string": "Du bist frei. Viel Glück da draußen!"
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA_RisaadBranchTopic",
+        "form_id": "[05000980]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I've heard you've been running into trouble along the road.",
+        "string": "Ich habe gehört, dass ihr auf Reisen Ärger hattet."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050B9590]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Let's harvest some venom.",
+        "string": "Sammeln wir etwas Gift."
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraMTopicA",
+        "form_id": "[05001094]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "A bug? Did the bandits lock you up?",
+        "string": "Ein Käfer? Haben dich die Banditen eingesperrt?"
+    },
+    {
+        "editor_id": "ccBGSSSE025_StaadaQuest_KeepAmber",
+        "form_id": "[0519D383]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I have the artifact you seek, but I think I'll be keeping it. So long.",
+        "string": "Ich habe das Artefakt, das Ihr sucht, aber ich glaube, ich behalte es. Auf Wiedersehen."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050B9584]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(grunt)",
+        "string": "*Grunz*"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraTopicD",
+        "form_id": "[05001071]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "You're a weird one. But still only the third strangest thing I've met this week.",
+        "string": "Seltsames Ding. Aber nur das drittseltsamste Ding, das mir diese Woche begegnet ist."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050B9591]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "I need some help in battle!",
+        "string": "Ich brauche Hilfe im Kampf!"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[051E9358]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "I've dealt with the Saints and Seducers I heard you've been having trouble with.",
+        "string": "Ich habe mich um die Heiligen und Verführer gekümmert, mit denen Ihr Probleme hattet."
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraSharedwhine",
+        "form_id": "[0500107A]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(whine)",
+        "string": "*Winsel*"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraTopicE",
+        "form_id": "[05001073]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Another strange bug? If I wasn't having nightmares before I will now.",
+        "string": "Noch ein seltsamer Käfer? Das gibt garantiert Albträume."
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraManiaBranch03Topic",
+        "form_id": "[050010B0]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Still, I wouldn't mind keeping you as a pet. What do you say?",
+        "string": "Aber es wäre nett, dich als Haustier zu haben. Was meinst du?"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraPet_ManiazNO",
+        "form_id": "[050010B8]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "ccBGSSSE025_ElytraPet_ManiazNO",
+        "string": "ccBGSSSE025_ElytraHaustier_ManiazNO"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraPetBranch2Topic",
+        "form_id": "[0500107B]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "It'd be cruel to leave you here. Would you like to follow me?",
+        "string": "Es wäre grausam, dich hierzulassen. Möchtest du mitkommen?"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraTopicB",
+        "form_id": "[0500106D]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Are you okay? Did they hurt you?",
+        "string": "Geht es dir gut? Haben sie dir wehgetan?"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraSharedGrumble",
+        "form_id": "[05001079]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(grumble)",
+        "string": "*Grummel*"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraMTopicV",
+        "form_id": "[050010A6]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Another bug! The bandits must have caged you too.",
+        "string": "Noch ein Käfer! Diese Banditen haben dich wohl auch eingesperrt."
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraMTopicY",
+        "form_id": "[050010A0]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "You look like another creature I found caged. It was equally repulsive.",
+        "string": "Du erinnerst mich an eine andere eingesperrte Kreatur. Die war genauso abstoßend."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050B9581]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Let's harvest some venom.",
+        "string": "Sammeln wir etwas Gift."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050010B9]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "On second thought, never mind.",
+        "string": "Wenn ich es mir recht überlege ... vergiss es."
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraMTopicX",
+        "form_id": "[050010A2]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "You're the second bug of your kind I've come across recently.",
+        "string": "Ich habe neulich schon mal so einen Käfer wie dich getroffen."
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraTopicF",
+        "form_id": "[050010BA]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "A giant bug crab? I really need to stop drinking skooma.",
+        "string": "Eine riesige Käferkrabbe? Ich muss wirklich die Finger vom Skooma lassen."
+    },
+    {
+        "editor_id": "ccBGSSSE025_StaadaQuest_FINBranch",
+        "form_id": "[0519D387]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I suppose this is goodbye.",
+        "string": "Dann heißt es wohl Abschied nehmen."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050B9581]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(grunt)",
+        "string": "*Grunz*"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraMTopicC",
+        "form_id": "[05001098]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Aren't you an adorable little bug! I wonder why they kept you caged.",
+        "string": "Was für ein putziger kleiner Käfer! Warum sie dich wohl eingesperrt haben?"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraBranch4Topic",
+        "form_id": "[05001083]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I think you're kind of cute. Do you want to be my pet?",
+        "string": "Du bist irgendwie putzig. Möchtest du mein Haustier sein?"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraMBranch_SpecialTopic",
+        "form_id": "[050B9583]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Special ability",
+        "string": "Besondere Fähigkeit"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050B9590]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(grunt)",
+        "string": "*Grunz*"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraMTopicB",
+        "form_id": "[05001096]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Are you okay? Did they hurt you?",
+        "string": "Geht es dir gut? Haben sie dir wehgetan?"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050010B7]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "All right, let's go.",
+        "string": "In Ordnung, lass uns gehen."
+    },
+    {
+        "editor_id": "ccBGSSSE025_PetWhineMania03",
+        "form_id": "[050010AB]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(whine)",
+        "string": "*Winsel*"
+    },
+    {
+        "editor_id": "ccBGSSSE025_StaadaQuest_GiveAmberBranch2",
+        "form_id": "[0519D382]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I believe I have what you're looking for. (Give Sword of Jyggalag)",
+        "string": "Ich glaube, ich habe, wonach Ihr sucht. (Schwert von Jyggalag geben)"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraPetYES",
+        "form_id": "[0500107D]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "All right, let's go.",
+        "string": "In Ordnung, lass uns gehen."
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraMTopicG",
+        "form_id": "[050010BC]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "A giant bug crab? I really need to stop drinking skooma.",
+        "string": "Eine riesige Käferkrabbe? Ich muss wirklich die Finger vom Skooma lassen."
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraMTopicD",
+        "form_id": "[0500109A]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "You're a weird one. But still only the third strangest thing I've met this week.",
+        "string": "Seltsames Ding. Aber nur das drittseltsamste Ding, das mir diese Woche begegnet ist."
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraTopicA",
+        "form_id": "[0500106B]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "A bug? Did the bandits lock you up?",
+        "string": "Ein Käfer? Haben dich die Banditen eingesperrt?"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraTopicV",
+        "form_id": "[0500108F]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Are you okay? Those bandits must have caged you.",
+        "string": "Geht es dir gut? Diese Banditen haben dich wohl eingesperrt."
+    },
+    {
+        "editor_id": "ccBGSSSE025_StaadaQuest_GiveAmberBranch",
+        "form_id": "[0519D381]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I believe I have what you're looking for. (Give Sheogorath-Shaped Amber)",
+        "string": "Ich glaube, ich habe, wonach Ihr sucht. (Sheogorath-förmigen Bernstein geben)"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraPetNO",
+        "form_id": "[0500107F]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "On second thought, never mind.",
+        "string": "Wenn ich es mir recht überlege ... vergiss es."
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraSharedSqueal",
+        "form_id": "[05001078]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(squeal)",
+        "string": "*Fiep*"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraMTopicT",
+        "form_id": "[0500109C]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Another strange bug? If I wasn't having nightmares before I will now.",
+        "string": "Noch ein seltsamer Käfer? Das gibt garantiert Albträume."
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraMTopicZ",
+        "form_id": "[0500109E]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Easy now, bug. I've killed weirder things than you, so don't bite me.",
+        "string": "Ganz ruhig, Käfer. Nicht beißen. Ich habe schon ganz andere Kreaturen getötet."
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraMBranch_CollectVenomTopic",
+        "form_id": "[050B9580]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Harvest venom",
+        "string": "Gift sammeln"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraManiaBranch02Topic",
+        "form_id": "[050010AE]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I can't just leave you here. Maybe you could follow me?",
+        "string": "Ich kann dich nicht einfach hier zurücklassen. Du könntest mir folgen?"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraTopicX",
+        "form_id": "[0500108B]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "You're the second bug of your kind I've come across recently.",
+        "string": "Ich habe neulich schon mal so einen Käfer wie dich getroffen."
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraMTopicW",
+        "form_id": "[050010A4]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Hey there little guy, you aren't hurt, are you?",
+        "string": "Hallo, mein Kleiner, du bist hoffentlich nicht verletzt?"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[051A2502]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "You're clearly far from home. Are you looking for something?",
+        "string": "Ihr seid weit weg von zu Hause. Sucht Ihr etwas Bestimmtes?"
+    },
+    {
+        "editor_id": "ccBGSSSE025_StaadaQuest_AmberBranchTopic",
+        "form_id": "[0519D37F]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "You must be the one who sent that note.",
+        "string": "Ihr müsst diejenige sein, die diese Notiz geschickt hat."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050B9591]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(grunt)",
+        "string": "*Grunz*"
+    },
+    {
+        "editor_id": "ccBGSSSE025_PetGrumblelMania02",
+        "form_id": "[050010AA]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(grumble)",
+        "string": "*Grummel*"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraDBranch_SpecialTopic",
+        "form_id": "[050B958F]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Special ability",
+        "string": "Besondere Fähigkeit"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraManiaBranch05Topic",
+        "form_id": "[050010B4]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Well, you're free. Good luck out there.",
+        "string": "Du bist frei. Viel Glück da draußen!"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraTopicZ",
+        "form_id": "[05001087]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Easy now, bug. I've killed weirder things than you, so don't bite me.",
+        "string": "Ganz ruhig, Käfer. Nicht beißen. Ich habe schon ganz andere Kreaturen getötet."
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraBranch3Topic",
+        "form_id": "[05001081]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "This is probably a bad idea, but if you want, you can follow me.",
+        "string": "Das ist vermutlich keine gute Idee, aber du kannst mir folgen, wenn du willst."
+    },
+    {
+        "editor_id": "ccBGSSSE025_PetSquealMania01",
+        "form_id": "[050010A9]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(squeal)",
+        "string": "*Fiep*"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraPetBranch1Topic",
+        "form_id": "[05001075]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Do you want to come with me?",
+        "string": "Möchtest du mich begleiten?"
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Locate the Saints bandit camp",
+        "string": "Finde das Heiligen-Banditenlager."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 31,
+        "type": "QUST NNAM",
+        "original": "Defeat the Seducers bandit leader",
+        "string": "Besiege den Anführer der Verführer-Banditen."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Defeat the Saints bandit leader",
+        "string": "Besiege den Anführer der Heiligen-Banditen."
+    },
+    {
+        "editor_id": "ccBGSSSE025_MiscQuest_AmberMadnessGear",
+        "form_id": "[05000C4D]",
+        "index": 18,
+        "type": "QUST NNAM",
+        "original": "Look for Evethra's notes on crafting Amber and Madness equipment",
+        "string": "Suche nach Evethras Notizen über die Herstellung von Bernstein- und Wahnsinnserzausrüstung."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 93,
+        "type": "QUST CNAM",
+        "original": "I discovered a note that detailed how the Seducers bandits are being assisted by a conjurer who seeks strange artifacts. The note was vague about his whereabouts, only noting that he is somewhere in a sewer. I should now finish eliminating the Saints, the other bandit group causing trouble for Ri'saad's caravans. Perhaps I can learn more about this conjurer and where to find him.",
+        "string": "Laut einer Notiz hilft ein Beschwörer, der nach mysteriösen Artefakten sucht, den Verführer-Banditen. Er scheint sich in irgendeiner Kanalisation aufzuhalten. Ich sollte jetzt den Rest der Heiligen erledigen - die andere Gruppe, die Ri'saads Karawanen das Leben schwer macht. Vielleicht erfahre ich mehr über den Beschwörer und seinen Aufenthaltsort."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 77,
+        "type": "QUST CNAM",
+        "original": "I defeated the bandits. I should investigate the campsite.",
+        "string": "Ich habe die Banditen besiegt. Ich sollte ihr Lager untersuchen."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestB",
+        "form_id": "[05000913]",
+        "index": 50,
+        "type": "QUST NNAM",
+        "original": "Retrieve the Sword of Jyggalag",
+        "string": "Beschaffe das Schwert von Jyggalag."
+    },
+    {
+        "editor_id": "ccBGSSSE025_MiscQuest_GSDSGearBook",
+        "form_id": "[05000C4B]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Golden and Dark Smithing",
+        "string": "Goldene und dunkle Schmiedekunst"
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestB",
+        "form_id": "[05000913]",
+        "index": 94,
+        "type": "QUST CNAM",
+        "original": "I've discovered a network of root-like caves that appear to be spreading throughout the Solitude sewers. They may be connected to the experiments that the conjurer Thoron is supposedly conducting here. I should continue to explore the caves to locate Thoron and put a stop to the spread of these unnatural structures.",
+        "string": "Ich habe ein Netzwerk aus wurzelartigen Höhlen entdeckt, die sich offensichtlich in der Kanalisation von Einsamkeit ausgebreitet haben. Sie könnten mit den Experimenten des Beschwörers Thoron zusammenhängen, die er hier unten durchführen soll. Ich sollte die Höhlen weiter erforschen, um Thoron zu finden und die Ausbreitung dieser unnatürlichen Gebilde aufzuhalten."
+    },
+    {
+        "editor_id": "ccBGSSSE025_MiscQuest_AmberMadnessGear",
+        "form_id": "[05000C4D]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Investigate the area north of Mistwatch",
+        "string": "Untersuche das Gebiet nördlich der Nebelwacht."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestB",
+        "form_id": "[05000913]",
+        "index": 81,
+        "type": "QUST CNAM",
+        "original": "After studying the journals of the both the Saints and Seducers bandit leaders, I've learned that Thoron is conducting dangerous experiments in the Solitude sewers using a strange sword. I should locate Thoron's lair within the sewers and discover the nature of the conjurer's experiments.",
+        "string": "Nachdem ich die Tagebücher der Anführer der Heiligen- und der Verführer-Banditen gelesen habe, weiß ich, dass Thoron gefährliche Experimente mit einem ominösen Schwert in der Kanalisation von Einsamkeit durchführt. Ich sollte Thorons Versteck in der Kanalisation aufspüren und die Hintergründe seiner Experimente erforschen."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 84,
+        "type": "QUST CNAM",
+        "original": "I found a journal on the bandit leader. I should read it to learn more about who they are.",
+        "string": "Ich habe ein Tagebuch beim Banditenanführer gefunden. Ich sollte es lesen und mehr über die Banditen erfahren."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 89,
+        "type": "QUST CNAM",
+        "original": "I defeated the Saints bandits. I should investigate the campsite.",
+        "string": "Ich habe die Heiligen-Banditen besiegt. Ich sollte ihr Lager untersuchen."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 113,
+        "type": "QUST CNAM",
+        "original": "I've heard a rumor that a Khajiit caravan merchant has been running into trouble with bandits along the road, and is in need of assistance. I should speak to him if we ever cross paths.",
+        "string": "Angeblich hat ein Khakiit-Karawanen-Händler unterwegs Ärger mit Banditen und benötigt Hilfe. Wenn ich ihn treffe, sollte ich mit ihm reden."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 78,
+        "type": "QUST CNAM",
+        "original": "The bandits, who call themselves the Seducers, are using an artifact to summon Daedra into our realm through a ritual in order to obtain their equipment. The location of the ritual site was in a note I found at their camp. Another group of bandits, the Saints, are also causing trouble for travelers.",
+        "string": "Die Verführer-Banditen benutzen ein Artefakt, um Daedra mit einem Ritual zu beschwören und ihnen die Ausrüstung abzunehmen. Der Ritualort wurde in einer Notiz genannt, die ich in ihrem Lager gefunden habe. Eine andere Banditengruppe, die Heiligen, lauern ebenfalls Reisenden auf."
+    },
+    {
+        "editor_id": "ccBGSSSE025_MiscQuest_Nerveshatter",
+        "form_id": "[050010BF]",
+        "index": 5,
+        "type": "QUST NNAM",
+        "original": "Find more details on the bandits' new lead",
+        "string": "Finde mehr Einzelheiten zur neuen Fährte der Banditen."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestB",
+        "form_id": "[05000913]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Restoring Order",
+        "string": "Für Ordnung sorgen"
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 96,
+        "type": "QUST CNAM",
+        "original": "I discovered a journal on one of the bandits. I should read it to learn more about who they are.",
+        "string": "Ich habe ein Tagebuch bei einem der Banditen gefunden. Ich sollte es lesen und mehr über die Banditen erfahren."
+    },
+    {
+        "editor_id": "ccBGSSSE025_WIKillSeducerLeader",
+        "form_id": "[0521BD6D]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Revenge, Hired Thugs",
+        "string": "Revenge, Hired Thugs"
+    },
+    {
+        "editor_id": "ccBGSSSE025_MiscQuest_Nerveshatter",
+        "form_id": "[050010BF]",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "Retrieve Nerveshatter",
+        "string": "Beschaffe den Nervtöter."
+    },
+    {
+        "editor_id": "ccBGSSSE025_MiscQuest_AmberMadnessGear",
+        "form_id": "[05000C4D]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Amber and Madness Smithing",
+        "string": "Bernstein-und Wahnsinnserz-Schmiedekunst"
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestB",
+        "form_id": "[05000913]",
+        "index": 96,
+        "type": "QUST CNAM",
+        "original": "I've defeated Thoron, and halted the ritual.",
+        "string": "Ich habe Thoron besiegt und das Ritual gestoppt."
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraPetAcquisition_Mania",
+        "form_id": "[050010C3]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Free the Elytra Nymph",
+        "string": "Befreie die Elytra-Nymphe."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 81,
+        "type": "QUST CNAM",
+        "original": "I found a journal on the leader of the Saints bandits. I should read it to see if there is anything more to learn about these strange criminals.",
+        "string": "Ich habe ein Tagebuch beim Anführer der Heiligen-Banditen gefunden. Ich sollte es lesen und mehr über die mysteriösen Banditen erfahren."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 87,
+        "type": "QUST CNAM",
+        "original": "I found the journal of the leader of the Seducers bandits. I should read it to see if there is anything more to learn about these strange criminals.",
+        "string": "Ich habe ein Tagebuch beim Anführer der Verführer-Banditen gefunden. Ich sollte es lesen und mehr über die mysteriösen Banditen erfahren."
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraPetAcquisition_Dementia",
+        "form_id": "[050010C0]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "My Pet Elytra (Dementia)",
+        "string": "Mein Haustier Elytra (Schwermut)"
+    },
+    {
+        "editor_id": "ccBGSSSE025_MiscQuest_Nerveshatter",
+        "form_id": "[050010BF]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Investigate Crystaldrift Cave",
+        "string": "Untersuche die Kristallstollenhöhle."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestB",
+        "form_id": "[05000913]",
+        "index": 70,
+        "type": "QUST CNAM",
+        "original": "I have retrieved the Sword of Jyggalag and put an end to Thoron's ritual.",
+        "string": "Ich habe das Schwert von Jyggalag erhalten und Thorons Ritual gestoppt."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 68,
+        "type": "QUST CNAM",
+        "original": "I've located bandits wielding strange weapons and armor; these must be the bandits the Khajiit caravan merchant was rumored to be having trouble with. I should deal with them in order to learn more and make this trade route safer to travel.",
+        "string": "Ich bin auf Banditen mit rätselhaften Waffen und Rüstungen gestoßen. Das müssen die Banditen sein, mit denen der Khajiit-Karawanen-Händler Ärger hat. Ich sollte mich um sie kümmern, um mehr herauszufinden und die Straße sicherer zu machen."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 70,
+        "type": "QUST NNAM",
+        "original": "Search Kinthal's Saints bandit camp",
+        "string": "Durchsuche Kinthals Heiligen-Banditenlager."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 81,
+        "type": "QUST NNAM",
+        "original": "Speak to Ri'saad",
+        "string": "Sprich mit Ri'saad."
+    },
+    {
+        "editor_id": "ccBGSSSE025_MiscQuest_Nerveshatter",
+        "form_id": "[050010BF]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Obtain amber (<Global=ccBGSSSE025_AmberOreObtainedGlobal>/1)",
+        "string": "Erhalte Bernstein. (<Global=ccBGSSSE025_AmberOreObtainedGlobal>/1)"
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "Investigate the Saints bandit camp",
+        "string": "Untersuche das Heiligen-Banditenlager."
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraPetAcquisition_Dementia",
+        "form_id": "[050010C0]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Free the Elytra Nymph",
+        "string": "Befreie die Elytra-Nymphe."
+    },
+    {
+        "editor_id": "ccBGSSSE025_MiscQuest_Nerveshatter",
+        "form_id": "[050010BF]",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Place amber and madness ore near Gadnor's resting place",
+        "string": "Platziere Bernstein und Wahnsinnserz nahe Gadnors Ruhestätte."
+    },
+    {
+        "editor_id": "ccBGSSSE025_StaadaQuest",
+        "form_id": "[05198277]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Locate the author of the mysterious note",
+        "string": "Finde den Verfasser der rätselhaften Notiz."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 41,
+        "type": "QUST NNAM",
+        "original": "Investigate the Seducers bandit camp",
+        "string": "Untersuche das Verführer-Banditenlager."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Read Ri'saad's note",
+        "string": "Lies Ri'saads Notiz."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 81,
+        "type": "QUST CNAM",
+        "original": "I discovered a note that detailed how the Saints bandits are being assisted by a conjurer who seeks strange artifacts. The note was vague about his whereabouts, only noting that he is somewhere in Solitude. I should now finish eliminating the Seducers, the other bandit group causing trouble for Ri'saad's caravans. Perhaps I can learn more about this conjurer and where to find him.",
+        "string": "Laut einer Notiz hilft ein Beschwörer, der nach mysteriösen Artefakten sucht, den Heiligen-Banditen. Er soll sich irgendwo in Einsamkeit aufhalten. Ich sollte jetzt den Rest der Verführer-Banditen erledigen - die andere Gruppe, die Ri'saads Karawanen das Leben schwer macht. Vielleicht erfahre ich dann mehr über den Beschwörer und seinen Aufenthaltsort."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Balance of Power",
+        "string": "Machtverhältnis"
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestB",
+        "form_id": "[05000913]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Discover the location of the conjurer's lair",
+        "string": "Finde das Versteck des Beschwörers."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 85,
+        "type": "QUST CNAM",
+        "original": "I defeated the bandits. I should investigate the campsite.",
+        "string": "Ich habe die Banditen besiegt. Ich sollte ihr Lager untersuchen."
+    },
+    {
+        "editor_id": "ccBGSSSE025_MiscQuest_GSDSGearBook",
+        "form_id": "[05000C4B]",
+        "index": 0,
+        "type": "QUST NNAM",
+        "original": "Find Joften's notes on smithing Golden and Dark equipment",
+        "string": "Finde Joftens Notizen zum Schmieden von goldener und dunkler Ausrüstung."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 51,
+        "type": "QUST NNAM",
+        "original": "Locate Svarig's Seducers bandit camp",
+        "string": "Finde Svarigs Verführer-Banditenlager."
+    },
+    {
+        "editor_id": "ccBGSSSE025_WEWIKillSeducersLeader",
+        "form_id": "[0521BD6C]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "WIKill06 Enable and Move Thugs",
+        "string": "WIKill06 Enable and Move Thugs"
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 76,
+        "type": "QUST NNAM",
+        "original": "Read Svarig's journal",
+        "string": "Lies Svarigs Tagebuch."
+    },
+    {
+        "editor_id": "ccBGSSSE025_MiscQuest_AmberMadnessGear",
+        "form_id": "[05000C4D]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Read Evethra's journal",
+        "string": "Lies Evethras Tagebuch."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 75,
+        "type": "QUST NNAM",
+        "original": "Read Kinthal's journal",
+        "string": "Lies Kinthals Tagebuch."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 46,
+        "type": "QUST NNAM",
+        "original": "Read the Seducers bandit leader's journal",
+        "string": "Lies das Tagebuch des Anführers der Verführer-Banditen."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 63,
+        "type": "QUST CNAM",
+        "original": "In Ri'saad's note, he details that he has been attacked by bandit gangs calling themselves the \"Saints\" and \"Seducers\" wielding strange weapons and armor. He noted the location where they were each last seen along his route. Ri'saad is offering a reward for defeating these new bands of thugs.",
+        "string": "In Ri'saads Notiz beschreibt er, wie er von Banditen namens \"Heiligen\" und \"Verführer\" mit mysteriösen Waffen und Rüstung angegriffen wurde. Er hat den Ort vermerkt, wo sie zuletzt gesehen wurden. Wer diese neuen Banditengruppen unschädlich macht, dem winkt eine Belohnung."
+    },
+    {
+        "editor_id": "ccBGSSSE025_StaadaQuest",
+        "form_id": "[05198277]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Staada Quest",
+        "string": "Staada-Quest"
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 78,
+        "type": "QUST CNAM",
+        "original": "I spoke to Ri'saad, the traveling caravan merchant, about trouble along the road. He handed me a note that has more details.",
+        "string": "Ich habe mit Ri'saad, dem fahrenden Händler, über seine Probleme auf Reisen gesprochen. Er hat mir eine Notiz mit weiteren Einzelheiten gegeben."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 71,
+        "type": "QUST NNAM",
+        "original": "Search Svarig's Seducers bandit camp",
+        "string": "Durchsuche Svarigs Verführer-Banditenlager."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 50,
+        "type": "QUST NNAM",
+        "original": "Locate Kinthal's Saints bandit camp",
+        "string": "Finde Kinthals Heiligen-Banditenlager."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 60,
+        "type": "QUST NNAM",
+        "original": "Defeat Kinthal",
+        "string": "Besiege Kinthal."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 57,
+        "type": "QUST CNAM",
+        "original": "It seems like more of the Saints bandits have set up camp elsewhere, along with their leader. The location of their leader's camp was detailed in a journal I discovered.",
+        "string": "Es sieht so aus, als hätten mehr dieser Heiligen-Banditen woanders ihr Lager mit ihrem Anführer aufgeschlagen. Der Lagerort wurde in einem Tagebuch beschrieben, das ich gefunden habe."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 68,
+        "type": "QUST CNAM",
+        "original": "I have defeated the Saints and Seducers bandit leaders, and now the roads should be safer to travel. I should speak to Ri'saad to let him know.",
+        "string": "Ich habe die Anführer der Heiligen- und Verführer-Banditen erledigt und die Straßen sicherer gemacht. Ich sollte Ri'saad Bescheid geben."
+    },
+    {
+        "editor_id": "ccBGSSSE025_MiscQuest_GSDSGearBook",
+        "form_id": "[05000C4B]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Read Joften's notes",
+        "string": "Lies Joftens Notizen."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 61,
+        "type": "QUST NNAM",
+        "original": "Defeat Svarig",
+        "string": "Besiege Svarig."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 97,
+        "type": "QUST CNAM",
+        "original": "I have defeated the Seducers bandit leader. I should look around for more information.",
+        "string": "Ich habe den Anführer der Verführer-Banditen besiegt. Ich sollte nach weiteren Informationen suchen."
+    },
+    {
+        "editor_id": "ccBGSSSE025_MiscQuest_Nerveshatter",
+        "form_id": "[050010BF]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Nerveshatter",
+        "string": "Nervtöter"
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 81,
+        "type": "QUST CNAM",
+        "original": "I defeated the Seducers bandits. I should investigate the campsite.",
+        "string": "Ich habe die Verführer-Banditen besiegt. Ich sollte ihr Lager untersuchen."
+    },
+    {
+        "editor_id": "ccBGSSSE025_MiscQuest_AmberMadnessGear",
+        "form_id": "[05000C4D]",
+        "index": 15,
+        "type": "QUST NNAM",
+        "original": "Kill Evethra",
+        "string": "Töte Evethra."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 84,
+        "type": "QUST CNAM",
+        "original": "I've located more of the Saints bandits, along with their leader. I will need to defeat them.",
+        "string": "Ich habe mehr der Heiligen-Banditen und ihren Anführer gefunden. Ich muss sie erledigen."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 80,
+        "type": "QUST CNAM",
+        "original": "It seems like more of the roadside bandits, who call themselves the Saints, have set up camp elsewhere with their leader. The location of their leader's camp was in a note I discovered. Another group of bandits, the Seducers, are also causing trouble for travelers.",
+        "string": "Es sieht so aus, als hätten mehr dieser Wegelagerer, die sich die Heiligen nennen, woanders ihr Lager mit ihrem Anführer aufgeschlagen. Der Lagerort wurde in einer Notiz genannt, die ich gefunden habe. Eine andere Gruppe, die Verführer-Banditen, lauern ebenfalls Reisenden auf."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestB",
+        "form_id": "[05000913]",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Explore the root cave",
+        "string": "Erkunde die Wurzelhöhle."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestB",
+        "form_id": "[05000913]",
+        "index": 63,
+        "type": "QUST CNAM",
+        "original": "I've learned that a powerful conjurer, Thoron, has been funding the Saints and Seducers bandits while conducting dangerous experiments somewhere in Solitude. I should try to learn where Thoron might be found.",
+        "string": "Thoron, ein mächtiger Beschwörer, hat die Heiligen- und Verführer-Banditen unterstützt, während er gefährliche Experimente irgendwo in Einsamkeit durchführt. Ich sollte seinen Aufenthaltsort herausfinden."
+    },
+    {
+        "editor_id": "ccBGSSSE025_WIKillSaintLeader",
+        "form_id": "[0521BD5F]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Revenge, Hired Thugs",
+        "string": "Revenge, Hired Thugs"
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 82,
+        "type": "QUST CNAM",
+        "original": "I've located bandits wielding strange weapons and armor; these must be the bandits the Khajiit caravan merchant was rumored to be having trouble with. I should deal with them in order to learn more and make this trade route safer to travel.",
+        "string": "Ich bin auf Banditen mit rätselhaften Waffen und Rüstungen gestoßen. Das müssen die Banditen sein, mit denen der Khajiit-Karawanen-Händler Ärger hat. Ich sollte mich um sie kümmern, um mehr herauszufinden und die Straße sicherer zu machen."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestB",
+        "form_id": "[05000913]",
+        "index": 69,
+        "type": "QUST CNAM",
+        "original": "I've learned that a powerful conjurer, Thoron, has been funding the Saints and Seducers bandits while conducting dangerous experiments somewhere in a sewer. I should try to learn where Thoron might be found.",
+        "string": "Thoron, ein mächtiger Beschwörer, hat die Heiligen- und Verführer-Banditen unterstützt, während er gefährliche Experimente irgendwo in einer Kanalisation durchführt. Ich sollte seinen Aufenthaltsort herausfinden."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 0,
+        "type": "QUST NNAM",
+        "original": "Speak to Ri'saad about trouble along the road",
+        "string": "Rede mit Ri'saad über Probleme auf Reisen."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 104,
+        "type": "QUST CNAM",
+        "original": "I've located the bandits that call themselves the Seducers. To make the roads safer to travel, and learn more about the bandits, I will have to defeat them.",
+        "string": "Ich habe die Verführer-Banditen gefunden. Um die Straßen sicherer zu machen und mehr über die Banditen zu erfahren, muss ich sie erledigen."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 80,
+        "type": "QUST NNAM",
+        "original": "Return to Ri'saad",
+        "string": "Kehre zu Ri'saad zurück."
+    },
+    {
+        "editor_id": "ccBGSSSE025_StaadaQuest",
+        "form_id": "[05198277]",
+        "index": 0,
+        "type": "QUST NNAM",
+        "original": "Read the request to meet",
+        "string": "Lies die Anfrage."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 99,
+        "type": "QUST CNAM",
+        "original": "I've located the bandits that call themselves the Saints. I must deal with them in order to make this trade route safer to travel.",
+        "string": "Ich habe die Heiligen-Banditen gefunden. Um die Straßen sicherer zu machen, muss ich mich um sie kümmern."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 70,
+        "type": "QUST CNAM",
+        "original": "I have defeated the Saints bandit leader. I should look around for more information.",
+        "string": "Ich habe den Anführer der Heiligen-Banditen besiegt. Ich sollte nach weiteren Informationen suchen."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 62,
+        "type": "QUST CNAM",
+        "original": "I've located more of the Seducers bandits, along with their leader. I will need to defeat them.",
+        "string": "Ich habe mehr der Verführer-Banditen und ihren Anführer gefunden. Ich muss sie erledigen."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 87,
+        "type": "QUST CNAM",
+        "original": "I spoke to Ri'saad, who rewarded me for defeating the bandits and helping make the roads safe to travel.",
+        "string": "Ich habe mit Ri'saad gesprochen, der mich dafür belohnt hat, dass ich mich um die Banditen gekümmert und die Straßen sicher gemacht habe."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestB",
+        "form_id": "[05000913]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Investigate the Solitude sewers",
+        "string": "Untersuche die Einsamkeit-Kanalisation."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 45,
+        "type": "QUST NNAM",
+        "original": "Read the Saints bandit leader's journal",
+        "string": "Lies das Tagebuch des Heiligen-Banditenanführers."
+    },
+    {
+        "editor_id": "ccBGSSSE025_ElytraPetAcquisition_Mania",
+        "form_id": "[050010C3]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "My Pet Elytra (Mania)",
+        "string": "Mein Haustier Elytra (Wahn)"
+    },
+    {
+        "editor_id": "ccBGSSSE025_MiscQuest_Nerveshatter",
+        "form_id": "[050010BF]",
+        "index": 21,
+        "type": "QUST NNAM",
+        "original": "Obtain madness ore (<Global=ccBGSSSE025_MadnessOreObtainedGlobal>/1)",
+        "string": "Erhalte Wahnsinnserz. (<Global=ccBGSSSE025_MadnessOreObtainedGlobal>/1)"
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 21,
+        "type": "QUST NNAM",
+        "original": "Locate the Seducers bandit camp",
+        "string": "Finde das Verführer-Banditenlager."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestB",
+        "form_id": "[05000913]",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "Defeat Thoron",
+        "string": "Besiege Thoron."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestA",
+        "form_id": "[05000912]",
+        "index": 73,
+        "type": "QUST CNAM",
+        "original": "It seems like more of the Seducers bandits have set up camp elsewhere, along with their leader. The location of their leader's camp was detailed in a journal I discovered.",
+        "string": "Es sieht so aus, als hätten mehr dieser Verführer-Banditen woanders ihr Lager mit ihrem Anführer aufgeschlagen. Der Lagerort wurde in einem Tagebuch beschrieben, das ich gefunden habe."
+    },
+    {
+        "editor_id": "ccBGSSSE025_QuestB",
+        "form_id": "[05000913]",
+        "index": 64,
+        "type": "QUST CNAM",
+        "original": "I've found Thoron, who is conducting some kind of ritual using a strange sword. When I entered the chamber, he summoned Daedra and attacked. I will have to defeat Thoron to put an end to this.",
+        "string": "Ich habe Thoron gefunden, der gerade mitten in einem Ritual mit einem rätselhaften Schwert steckte. Als ich die Kammer betrat, beschwor er Daedra und griff an. Ich muss Thoron besiegen, um dies zu beenden."
+    },
+    {
+        "editor_id": "ccBGSSSE025_WEWIKillSaintsLeader",
+        "form_id": "[0521BD60]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "WIKill06 Enable and Move Thugs",
+        "string": "WIKill06 Enable and Move Thugs"
+    },
+    {
+        "editor_id": "ccBGSSSE025_GoldenSaintsLS",
+        "form_id": "[05000AC6]",
+        "index": null,
+        "type": "LSCR DESC",
+        "original": "Golden Saints are a proud race of Daedra from the Shivering Isles that serve the Daedric Prince Sheogorath. They occupy and defend Mania, the northern region of the Isles.",
+        "string": "Die Goldenen Heiligen sind ein stolzes Daedravolk von den Schauderinseln, die dem Daedrafürsten Sheogorath dienen. Sie besetzen und verteidigen Wahn, die nördlichen Gebiete der Inseln."
+    },
+    {
+        "editor_id": "ccBGSSSE025_DarkSeducersLS",
+        "form_id": "[05000AC7]",
+        "index": null,
+        "type": "LSCR DESC",
+        "original": "Dark Seducers are a Daedric race of warriors from the Dementia region of Sheogorath's realm, the Shivering Isles. They are rivals with the Golden Saints and compete for Sheogorath's favor.",
+        "string": "Die Dunklen Verführer sind ein kriegerisches Daedravolk aus der Schwermut-Region in Sheogoraths Reich, den Schauderinseln. Sie stehen mit den Goldenen Heiligen in Rivalität um Sheogoraths Gunst."
+    },
+    {
+        "editor_id": "ccBGSSSE025_MatchingSet",
+        "form_id": "[0521BD61]",
+        "index": null,
+        "type": "PERK DESC",
+        "original": "Additional 25% Armor bonus if wearing a matched set of Light Armor.",
+        "string": "Additional 25% Armor bonus if wearing a matched set of Light Armor."
+    },
+    {
+        "editor_id": "ccBGSSSE025_MatchingSetHeavy",
+        "form_id": "[0521BD62]",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Matching Set",
+        "string": "Matching Set"
+    },
+    {
+        "editor_id": "ccBGSSSE025_MatchingSetHeavy",
+        "form_id": "[0521BD62]",
+        "index": null,
+        "type": "PERK DESC",
+        "original": "Additional 25% Armor bonus if wearing a matched set of Heavy Armor.",
+        "string": "Additional 25% Armor bonus if wearing a matched set of Heavy Armor."
+    },
+    {
+        "editor_id": "ccBGSSSE025_MatchingSet",
+        "form_id": "[0521BD61]",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Matching Set",
+        "string": "Matching Set"
+    },
+    {
+        "editor_id": "ccBGSSSE025_Smithing",
+        "form_id": "[0521BD6B]",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Smithing",
+        "string": "Smithing"
+    },
+    {
+        "editor_id": "ccBGSSSE025_RootDungeonLocation",
+        "form_id": "[050010CF]",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "Solitude Sewers",
+        "string": "Einsamkeit-Kanalisation"
+    },
+    {
+        "editor_id": "ccBGSSSE025_CraftingUnlockedAmber",
+        "form_id": "[050A512F]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You can now create new equipment with Glass Smithing.",
+        "string": "Du kannst jetzt neue Ausrüstung mit Vulkanglasschmiedekunst herstellen."
+    },
+    {
+        "editor_id": "ccBGSSSE025_CraftingUnlockedGSDS",
+        "form_id": "[050009FB]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You can now create new equipment with Daedric Smithing.",
+        "string": "Du kannst jetzt neue Ausrüstung mit daedrischer Schmiedekunst herstellen."
+    },
+    {
+        "editor_id": "ccBGSSSE025_SaintsBanditLeaderName",
+        "form_id": "[050A512D]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Saints Bandit Leader",
+        "string": "Anführer der Heiligen-Banditen"
+    },
+    {
+        "editor_id": "ccBGSSSE025_CraftingUnlockedMadness",
+        "form_id": "[050A5130]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You can now create new equipment with Ebony Smithing.",
+        "string": "Du kannst jetzt neue Ausrüstung mit Ebenerzschmiedekunst herstellen."
+    },
+    {
+        "editor_id": "ccBGSSSE025_SeducersBanditLeaderName",
+        "form_id": "[050A512E]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Seducers Bandit Leader",
+        "string": "Anführer der Verführer-Banditen"
+    },
+    {
+        "editor_id": "ccBGSSSE025_ManiaVenomReadyMsg",
+        "form_id": "[050B958A]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "The Manic Elytra Nymph has venom to harvest!",
+        "string": "Die wahnsinnige Elytra-Nymphe hat Gift, das gewonnen werden kann!"
+    },
+    {
+        "editor_id": "ccBGSSSE025_DementiaVenomReadyMsg",
+        "form_id": "[050B958B]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "The Demented Elytra Nymph has venom to harvest!",
+        "string": "Die schwermütige Elytra-Nymphe hat Gift, das gewonnen werden kann!"
+    }
+]

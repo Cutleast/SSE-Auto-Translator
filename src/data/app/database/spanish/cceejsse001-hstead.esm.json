@@ -1,0 +1,954 @@
+[
+    {
+        "editor_id": "EEJSSE001_BeeJarActivator",
+        "form_id": "[050008A3]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "EEJSSE001_PortalGemredActivator",
+        "form_id": "[050008C4]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskVokunActivator",
+        "form_id": "[0500088B]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskFrostActivator",
+        "form_id": "[050008A8]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Dukaan",
+        "string": "Dukaan"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskNahkriinActivator",
+        "form_id": "[0500088C]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Nahkriin",
+        "string": "Nahkriin"
+    },
+    {
+        "editor_id": "EEJSSE001_EbonyClawActivator",
+        "form_id": "[050008AC]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskKrosisActivator",
+        "form_id": "[05000896]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Krosis",
+        "string": "Krosis"
+    },
+    {
+        "editor_id": "EEJSSE001_EmeraldClawActivator",
+        "form_id": "[050008AB]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "EEJSSE001_EbonyClawActivator",
+        "form_id": "[050008AC]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ebony Dragon Claw",
+        "string": "Garra de dragón de ébano"
+    },
+    {
+        "editor_id": "EEJSSE001_IronClawActivator",
+        "form_id": "[050008B8]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE001GrantNoteActivator",
+        "form_id": "[05093DDA]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Homestead For Sale",
+        "string": "Finca en venta"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskHevnoraakActivator",
+        "form_id": "[0500088E]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Hevnoraak",
+        "string": "Hevnoraak"
+    },
+    {
+        "editor_id": "EEJSSE001_CoralClawActivator",
+        "form_id": "[050008AE]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Coral Dragon Claw",
+        "string": "Garra de dragón de coral"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskHevnoraakActivator",
+        "form_id": "[0500088E]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "EEJSSE001_DragonflyJarActivator",
+        "form_id": "[050008A2]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Dragonfly in a Jar",
+        "string": "Libélula en un tarro"
+    },
+    {
+        "editor_id": "EEJSSE001_GoldenClawActivator",
+        "form_id": "[050008B9]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Golden Dragon Claw",
+        "string": "Garra de dragón de oro"
+    },
+    {
+        "editor_id": "EEJSSE001_InitiatesEwerActivator",
+        "form_id": "[050008A7]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskVolsungActivator",
+        "form_id": "[05000894]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskWoodenActivator",
+        "form_id": "[0500088F]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE001BakingSurfaceTrigger",
+        "form_id": "[05070673]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Use",
+        "string": "Usar"
+    },
+    {
+        "editor_id": "EEJSSE001_PortalGemGreenActivator",
+        "form_id": "[050008C0]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Emerald Paragon",
+        "string": "Modelo de perfección de esmeralda"
+    },
+    {
+        "editor_id": "EEJSSE001_GlassClawActivator",
+        "form_id": "[050008AA]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "EEJSSE001_PortalGemredActivator",
+        "form_id": "[050008C4]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ruby Paragon",
+        "string": "Modelo de perfección de rubí"
+    },
+    {
+        "editor_id": "EEJSSE001_DragonflyJarActivator",
+        "form_id": "[050008A2]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskKrosisActivator",
+        "form_id": "[05000896]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "EEJSSE001_TorstenSkullActivator",
+        "form_id": "[050008BC]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Torsten's Skull Key",
+        "string": "Llave maestra de Torsten"
+    },
+    {
+        "editor_id": "EEJSSE001_PortalGemBlueActivator",
+        "form_id": "[050008C2]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Sapphire Paragon",
+        "string": "Modelo de perfección de zafiro"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskOtarActivator",
+        "form_id": "[05000899]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "EEJSSE001_AurielsShieldActivator",
+        "form_id": "[050008D4]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Auriel's Shield",
+        "string": "Escudo de Auriel"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskShockActivator",
+        "form_id": "[05000881]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "EEJSSE001_SearekSkullActivator",
+        "form_id": "[050008BF]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Saerek's Skull Key",
+        "string": "Llave del cráneo de Saerek"
+    },
+    {
+        "editor_id": "EEJSSE001_IvoryClawActivator",
+        "form_id": "[050008B6]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ivory Dragon Claw",
+        "string": "Garra de dragón de marfil"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskMorokeiActivator",
+        "form_id": "[0500088D]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskFireActivator",
+        "form_id": "[05000889]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "EEJSSE001_MothJarActivator",
+        "form_id": "[050008A1]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "EEJSSE001_PortalGemWhiteActivator",
+        "form_id": "[050008C5]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskKonahrikActivator",
+        "form_id": "[05000892]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Konahrik",
+        "string": "Konahrik"
+    },
+    {
+        "editor_id": "EEJSSE001_ButterflyJarActivator",
+        "form_id": "[050008A0]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Butterfly in a Jar",
+        "string": "Mariposa en un tarro"
+    },
+    {
+        "editor_id": "EEJSSE001_BeeJarActivator",
+        "form_id": "[050008A3]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Bee in a Jar",
+        "string": "Abeja en un tarro"
+    },
+    {
+        "editor_id": "EEJSSE001_ButterflyJarActivator",
+        "form_id": "[050008A0]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "EEJSSE001_SapphireClawActivator",
+        "form_id": "[05000882]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Sapphire Dragon Claw",
+        "string": "Garra de dragón de zafiro"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskFrostActivator",
+        "form_id": "[050008A8]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "EEJSSE001_AurielsShieldActivator",
+        "form_id": "[050008D4]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "EEJSSE001_PortalGemPurpleActivator",
+        "form_id": "[050008C3]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "EEJSSE001_DiamondClawActivator",
+        "form_id": "[050008B1]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Diamond Dragon Claw",
+        "string": "Garra de dragón de diamante"
+    },
+    {
+        "editor_id": "EEJSSE001_CoralClawActivator",
+        "form_id": "[050008AE]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskMorokeiActivator",
+        "form_id": "[0500088D]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Morokei",
+        "string": "Morokei"
+    },
+    {
+        "editor_id": "EEJSSE001_PortalGemPurpleActivator",
+        "form_id": "[050008C3]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Amethyst Paragon",
+        "string": "Modelo de perfección de amatista"
+    },
+    {
+        "editor_id": "EEJSSE001_SearekSkullActivator",
+        "form_id": "[050008BF]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskWoodenActivator",
+        "form_id": "[0500088F]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Wooden Mask",
+        "string": "Máscara de madera"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskFireActivator",
+        "form_id": "[05000889]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ahzidal",
+        "string": "Ahzidal"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskRahgotActivator",
+        "form_id": "[0500089E]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "EEJSSE001_TorstenSkullActivator",
+        "form_id": "[050008BC]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE001GrantNoteActivator",
+        "form_id": "[05093DDA]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Read",
+        "string": "Leer"
+    },
+    {
+        "editor_id": "EEJSSE001_EmeraldClawActivator",
+        "form_id": "[050008AB]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Emerald Dragon Claw",
+        "string": "Garra de dragón de esmeralda"
+    },
+    {
+        "editor_id": "EEJSSE001_MothJarActivator",
+        "form_id": "[050008A1]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Moth in a Jar",
+        "string": "Polilla en un tarro"
+    },
+    {
+        "editor_id": "EEJSSE001_IvoryClawActivator",
+        "form_id": "[050008B6]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskRahgotActivator",
+        "form_id": "[0500089E]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Rahgot",
+        "string": "Rahgot"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskNahkriinActivator",
+        "form_id": "[0500088C]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "EEJSSE001_GlassClawActivator",
+        "form_id": "[050008AA]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Glass Dragon Claw",
+        "string": "Garra de dragón de cristal"
+    },
+    {
+        "editor_id": "EEJSSE001_RubyClawActivator",
+        "form_id": "[050008AD]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ruby Dragon Claw",
+        "string": "Garra de dragón de rubí"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskOtarActivator",
+        "form_id": "[05000899]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Otar",
+        "string": "Otar"
+    },
+    {
+        "editor_id": "EEJSSE001_PortalGemGreenActivator",
+        "form_id": "[050008C0]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskKonahrikActivator",
+        "form_id": "[05000892]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "EEJSSE001_IronClawActivator",
+        "form_id": "[050008B8]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Iron Dragon Claw",
+        "string": "Garra de dragón de hierro"
+    },
+    {
+        "editor_id": "EEJSSE001_GoldenClawActivator",
+        "form_id": "[050008B9]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE001BakingSurfaceTrigger",
+        "form_id": "[05070673]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Baking Surface",
+        "string": "Superficie para hornear"
+    },
+    {
+        "editor_id": "EEJSSE001_DiamondClawActivator",
+        "form_id": "[050008B1]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "EEJSSE001_SapphireClawActivator",
+        "form_id": "[05000882]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "EEJSSE001_PortalGemBlueActivator",
+        "form_id": "[050008C2]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskVokunActivator",
+        "form_id": "[0500088B]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Vokun",
+        "string": "Vokun"
+    },
+    {
+        "editor_id": "EEJSSE001_FireflyJarActivator",
+        "form_id": "[050008A6]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "EEJSSE001_RubyClawActivator",
+        "form_id": "[050008AD]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "EEJSSE001_InitiatesEwerActivator",
+        "form_id": "[050008A7]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Initiate's Ewer",
+        "string": "Vasija de iniciado"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskShockActivator",
+        "form_id": "[05000881]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Zahkriisos",
+        "string": "Zahkriisos"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskVolsungActivator",
+        "form_id": "[05000894]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Volsung",
+        "string": "Volsung"
+    },
+    {
+        "editor_id": "EEJSSE001_FireflyJarActivator",
+        "form_id": "[050008A6]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Firefly in a Jar",
+        "string": "Luciérnaga en una jarra"
+    },
+    {
+        "editor_id": "EEJSSE001_PortalGemWhiteActivator",
+        "form_id": "[050008C5]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Diamond Paragon",
+        "string": "Modelo de perfección de diamante"
+    },
+    {
+        "editor_id": "ccEEJSSE001_NoticeOfSale",
+        "form_id": "[05093DD3]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Homestead For Sale",
+        "string": "Finca en venta"
+    },
+    {
+        "editor_id": "ccEEJSSE001_NoticeOfSale",
+        "form_id": "[05093DD3]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\n<font size='24'><p align='center'>HOMESTEAD FOR SALE</p></font>\r\n<font size='18'><p>This home, and its surrounding environs, is available for purchase.\r\n\r\nI have had many cherished adventures in Skyrim, but now I am afraid I must leave it behind. The war has made life difficult on all of us, and I fear that the worst is yet to come.\r\n\r\nI have entrusted the steward in Dragonsreach with managing the sale of my homestead. If interested, please seek him out.</p></font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\n<font size='24'><p align='center'>FINCA EN VENTA</p></font>\r\n<font size='18'><p>Este hogar y sus inmediaciones están a la venta.\r\n\r\nHe vivido muchas y grandes aventuras en Skyrim, pero ha llegado la hora de dejarlo atrás. La guerra nos ha complicado la vida a todos, y temo que lo peor esté aún por llegar.\r\n\r\nLe he encomendado al administrador de Cuenca del Dragón que gestione la venta de mi finca. Si te interesa, habla con él.</p></font>"
+    },
+    {
+        "editor_id": "EEJSSE001_LargeSackNRS",
+        "form_id": "[0500080C]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Sack",
+        "string": "Saco"
+    },
+    {
+        "editor_id": "EEJSSE001_BookcaseLOW",
+        "form_id": "[05000807]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Cupboard",
+        "string": "Armario"
+    },
+    {
+        "editor_id": "EEJSSE001_SmallChest",
+        "form_id": "[05000918]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Small Chest",
+        "string": "Cofre pequeño"
+    },
+    {
+        "editor_id": "EEJSSE001_Safe",
+        "form_id": "[0500080F]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Safe",
+        "string": "Caja fuerte"
+    },
+    {
+        "editor_id": "ccEEJSSE001_WinterholdBookCase01LessBooks",
+        "form_id": "[05084A84]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Bookcase",
+        "string": "Librería"
+    },
+    {
+        "editor_id": "EEJSSE001_SmithingChestNRS",
+        "form_id": "[050008DC]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Cofre"
+    },
+    {
+        "editor_id": "EEJSSE001_IngredientsCupboard",
+        "form_id": "[050008DA]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Cupboard",
+        "string": "Armario"
+    },
+    {
+        "editor_id": "EEJSSE001_BYOHHouseNobleCupboard01",
+        "form_id": "[05000809]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Dresser",
+        "string": "Tocador"
+    },
+    {
+        "editor_id": "EEJSSE001_AlchemySatchel",
+        "form_id": "[05000804]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Apothecary's Satchel",
+        "string": "Bolsa de boticario"
+    },
+    {
+        "editor_id": "EEJSSE001_NobleCupboard",
+        "form_id": "[05000810]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Cupboard",
+        "string": "Armario"
+    },
+    {
+        "editor_id": "EEJSSE001_DisplayCaseLgAngledTabletop",
+        "form_id": "[05000811]",
+        "index": null,
+        "type": "DOOR FULL",
+        "original": "Display Case",
+        "string": "Vitrina"
+    },
+    {
+        "editor_id": "EEJSSE001_WRDoor02",
+        "form_id": "[0500080E]",
+        "index": null,
+        "type": "DOOR FULL",
+        "original": "Door",
+        "string": "Puerta"
+    },
+    {
+        "editor_id": "EEJSSE001_GlazedCup01Dwemer",
+        "form_id": "[050008ED]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Cup",
+        "string": "Taza"
+    },
+    {
+        "editor_id": "EEJSSE001_Goblet01Dwemer",
+        "form_id": "[050008E9]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Goblet",
+        "string": "Cáliz"
+    },
+    {
+        "editor_id": "EEJSSE001_Basket01",
+        "form_id": "[0500092F]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Basket",
+        "string": "Cesta"
+    },
+    {
+        "editor_id": "EEJSSE001_MiscJug",
+        "form_id": "[05000818]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "Jarra"
+    },
+    {
+        "editor_id": "EEJSSE001_PlatterNordic",
+        "form_id": "[0500091C]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Platter",
+        "string": "Fuente"
+    },
+    {
+        "editor_id": "EEJSSE001_Basket03",
+        "form_id": "[05000921]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Basket",
+        "string": "Cesta"
+    },
+    {
+        "editor_id": "EEJSSE001_MiscJugDwemer",
+        "form_id": "[050008EB]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "Jarra"
+    },
+    {
+        "editor_id": "EEJSSE001_HangingLavenderHarvestable",
+        "form_id": "[05000825]",
+        "index": null,
+        "type": "FLOR RNAM",
+        "original": "Harvest",
+        "string": "Cosechar"
+    },
+    {
+        "editor_id": "EEJSSE001_HangingLavenderHarvestable",
+        "form_id": "[05000825]",
+        "index": null,
+        "type": "FLOR FULL",
+        "original": "Dried Lavender",
+        "string": "Lavanda seca"
+    },
+    {
+        "editor_id": "EEJSSE001_HangingTundraCotton",
+        "form_id": "[0500081E]",
+        "index": null,
+        "type": "FLOR FULL",
+        "original": "Dried Tundra Cotton",
+        "string": "Algodón de tundra seco"
+    },
+    {
+        "editor_id": "EEJSSE001_HangingTundraCotton",
+        "form_id": "[0500081E]",
+        "index": null,
+        "type": "FLOR RNAM",
+        "original": "Harvest",
+        "string": "Cosechar"
+    },
+    {
+        "editor_id": "EEJSSE001_NobleBedChildL",
+        "form_id": "[0500094B]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "Cama"
+    },
+    {
+        "editor_id": "EEJSSE001_NobleBedChildR",
+        "form_id": "[0500090E]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "Cama"
+    },
+    {
+        "editor_id": "EEJSSE001_OvenMarker",
+        "form_id": "[0500087E]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Baking Surface",
+        "string": "Superficie para hornear"
+    },
+    {
+        "editor_id": "EEJSSE001_Armchair",
+        "form_id": "[0500087D]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Armchair",
+        "string": "Sillón"
+    },
+    {
+        "editor_id": "EEJSSE001_NobleBedDbl",
+        "form_id": "[0500087B]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "Cama"
+    },
+    {
+        "editor_id": "EEJSSE001_CraftingAlchemyWorkbenchTabletop",
+        "form_id": "[0500087C]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Alchemy Lab",
+        "string": "Laboratorio de alquimia"
+    },
+    {
+        "editor_id": "ccEEJSSE001_TundraHomesteadKey",
+        "form_id": "[05047E3B]",
+        "index": null,
+        "type": "KEYM FULL",
+        "original": "Key to Tundra Homestead",
+        "string": "Llave de la Hacienda de la tundra"
+    },
+    {
+        "editor_id": "0EEJSSE001House",
+        "form_id": "[0500087F]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Tundra Homestead",
+        "string": "Hacienda de la tundra"
+    },
+    {
+        "editor_id": "0EEJSSE001HouseBasement",
+        "form_id": "[05000B06]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Tundra Homestead, Cellar",
+        "string": "Finca de la tundra, bodega"
+    },
+    {
+        "editor_id": "Tamriel",
+        "form_id": "[0000003C]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Skyrim"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000B8A]",
+        "index": null,
+        "type": "REFR FULL",
+        "original": "Tundra Homestead",
+        "string": "Hacienda de la tundra"
+    },
+    {
+        "editor_id": "ccEEJSSE001_HousePurchaseBranchTopic",
+        "form_id": "[05047E37]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I'd like to purchase a homestead outside of the city. (<Global=ccEEJ001HP> gold)",
+        "string": "Me gustaría comprar una hacienda fuera de la ciudad. (<Global=ccEEJ001HP> de oro)"
+    },
+    {
+        "editor_id": "ccEEJSSE001_Quest",
+        "form_id": "[05042D35]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Visit Tundra Homestead, your new house",
+        "string": "Visita la Hacienda de la tundra, tu nueva casa"
+    },
+    {
+        "editor_id": "EEJSSE001_HouseIntLocation",
+        "form_id": "[05000F1E]",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "Tundra Homestead",
+        "string": "Hacienda de la tundra"
+    },
+    {
+        "editor_id": "EEJSSE001_HouseExtLocation",
+        "form_id": "[05001022]",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "Tundra Homestead",
+        "string": "Hacienda de la tundra"
+    },
+    {
+        "editor_id": "EEJSSE001_DisplayLackMsg",
+        "form_id": "[05000F1F]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You do not have the required item.",
+        "string": "No tienes el objeto requerido."
+    }
+]

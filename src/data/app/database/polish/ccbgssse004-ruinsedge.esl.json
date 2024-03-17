@@ -1,0 +1,210 @@
+[
+    {
+        "editor_id": "ccBGSSSE002_EnchInfluenceConfDownFFContactLow",
+        "form_id": "[05000811]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Creatures and people up to level <mag> flee from combat for <dur> seconds.",
+        "string": "Istoty i ludzie na maksymalnie <mag>. poziomie uciekają od walki przez <dur> s."
+    },
+    {
+        "editor_id": "ccBGSSSE004_InfluenceAggUpFFContact",
+        "form_id": "[05000801]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fury",
+        "string": "Furia"
+    },
+    {
+        "editor_id": "ccBGSSSE004_BowBaseEffect",
+        "form_id": "[05000802]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Bow Base Effect",
+        "string": "Podstawowy efekt łuku"
+    },
+    {
+        "editor_id": "ccBGSSSE002_EnchInfluenceConfDownFFContactLow",
+        "form_id": "[05000811]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fear",
+        "string": "Strach"
+    },
+    {
+        "editor_id": "ccBGSSSE004_ReduceCarryWeight",
+        "form_id": "[05000803]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduce Carry Weight",
+        "string": "Zmniejszony udźwig"
+    },
+    {
+        "editor_id": "ccBGSSSE004_InfluenceAggUpFFContact",
+        "form_id": "[05000801]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Creatures and people up to level <mag> will attack anything nearby for <dur> seconds.",
+        "string": "Istoty i ludzie na maksymalnie <mag>. poziomie będą atakować wszystko w pobliżu przez <dur> s."
+    },
+    {
+        "editor_id": "ccBGSSSE004_SlowFFContact",
+        "form_id": "[0500080E]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Slow",
+        "string": "Spowolnienie"
+    },
+    {
+        "editor_id": "ccBGSSSE004_BowBaseEffect",
+        "form_id": "[05000802]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Randomly applies one of these effects to the target: Frost, Demoralize, Frenzy, Drain Magicka, Paralyze.",
+        "string": "Losowo nakłada na cel jeden z następujących efektów: mróz, brzemię, zniechęcenie, szał, wyssanie magii, paraliż."
+    },
+    {
+        "editor_id": "ccBGSSSE004_EnchFrostDamageFFContact",
+        "form_id": "[0500080D]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Frost Damage",
+        "string": "Obrażenia od mrozu"
+    },
+    {
+        "editor_id": "ccBGSSSE004_ReduceCarryWeight",
+        "form_id": "[05000803]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Reduce carrying capacity increases by <mag> for <dur> seconds.",
+        "string": "Zmniejsza udźwig o <mag> pkt. przez <dur> s."
+    },
+    {
+        "editor_id": "ccBGSSSE004_DrainMagickaEffect",
+        "form_id": "[05000800]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Drain Magicka",
+        "string": "Wyssanie Magii"
+    },
+    {
+        "editor_id": "ccBGSSSE004_EnchFrostDamageFFContact",
+        "form_id": "[0500080D]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Target takes <mag> points of frost damage to Health and Stamina.",
+        "string": "Cel traci <mag> pkt. zdrowia i kondycji od obrażeń od mrozu."
+    },
+    {
+        "editor_id": "ccBGSSSE004_Paralyze1",
+        "form_id": "[05000807]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Paralyze",
+        "string": "Paraliż"
+    },
+    {
+        "editor_id": "ccBGSSSE004_DrainMagicka",
+        "form_id": "[05000809]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Frenzy",
+        "string": "Szał"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Frost",
+        "form_id": "[05000812]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Frost",
+        "string": "Mróz"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Frenzy",
+        "form_id": "[05000805]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Frenzy",
+        "string": "Szał"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Paralyze15",
+        "form_id": "[05000806]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Paralyze",
+        "string": "Paraliż"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Burden",
+        "form_id": "[0500080A]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Burden",
+        "string": "Brzemię"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Demoralize",
+        "form_id": "[05000808]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Demoralize",
+        "string": "Zniechęcenie"
+    },
+    {
+        "editor_id": "ccBGSSSE004_RuinsEdgeBow",
+        "form_id": "[05000D63]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Ruin's Edge",
+        "string": "Skraj Zniszczenia"
+    },
+    {
+        "editor_id": "ccBGSSSE004_LvlRuinsEdgeBoss",
+        "form_id": "[05000813]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Bandit Chief",
+        "string": "Herszt bandytów"
+    },
+    {
+        "editor_id": "StonyCreekCave01",
+        "form_id": "[0004B8FB]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Stony Creek Cave",
+        "string": "Jaskinia Kamiennego Potoku"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Quest",
+        "form_id": "[0500080C]",
+        "index": 81,
+        "type": "QUST CNAM",
+        "original": "I found a map to the location of the fabled bow, Ruin's Edge.",
+        "string": "Udało mi się odnaleźć mapę wskazującą miejsce ukrycia słynnego łuku o nazwie Skraj Zniszczenia."
+    },
+    {
+        "editor_id": "ccBGSSSE004_Quest",
+        "form_id": "[0500080C]",
+        "index": 0,
+        "type": "QUST NNAM",
+        "original": "Find Ruin's Edge",
+        "string": "Odszukaj Skraj Zniszczenia"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Quest",
+        "form_id": "[0500080C]",
+        "index": 81,
+        "type": "QUST CNAM",
+        "original": "I've found Ruin's Edge.",
+        "string": "Udało mi się odnaleźć Skraj Zniszczenia."
+    },
+    {
+        "editor_id": "ccBGSSSE004_Quest",
+        "form_id": "[0500080C]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "The Edge of Ruin",
+        "string": "Skraj Zniszczenia"
+    }
+]

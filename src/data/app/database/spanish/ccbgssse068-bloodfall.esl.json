@@ -1,0 +1,218 @@
+[
+    {
+        "editor_id": "ccBGSSSE068_EnchStaminaDamageFFContact",
+        "form_id": "[05000813]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Does <mag> points of Stamina damage. Targets bleed <2> points for 5 seconds.",
+        "string": "Causa <mag> puntos de daño al aguante. Los objetivos se desangran y pierden <2> puntos durante 5 segundos."
+    },
+    {
+        "editor_id": "ccBGSSSE068_EnchStaminaDamageFFContact",
+        "form_id": "[05000813]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Stamina Damage",
+        "string": "Daño al aguante"
+    },
+    {
+        "editor_id": "ccBGSSSE068_EnchWeaponBloodfallBlade",
+        "form_id": "[05000812]",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Stamina Damage",
+        "string": "Daño al aguante"
+    },
+    {
+        "editor_id": "ccBGSSSE068_Journal",
+        "form_id": "[05000800]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Shurgoz's Journal",
+        "string": "Diario de Shurgoz"
+    },
+    {
+        "editor_id": "ccBGSSSE068b_Journal",
+        "form_id": "[05000811]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Urzog's Journal",
+        "string": "Diario de Urzog"
+    },
+    {
+        "editor_id": "ccBGSSSE068_InnkeepLetter",
+        "form_id": "[05000801]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Letter from Shogarz gra-Batul",
+        "string": "Carta de Shogarz gra-Batul"
+    },
+    {
+        "editor_id": "ccBGSSSE068b_Journal",
+        "form_id": "[05000811]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenBold\">\r\nI've always beaten my little brother in everything. Cards, I had the better hands. Brawls, likewise. When we raced up the ramparts of the old castle, I would always be the first to reach the peak.\r\n\r\nMother said the difference between myself and my brother was that he was a perfectionist, and I was a conquerer. She said I wanted to beat him at everything, and it drove me to become a great warrior.\r\n\r\nBut my brother didn't care for competition. As a perfectionist, he simply wanted to sharpen his skills, and would work with others if he thought it would better himself.\r\n\r\nMother said that's why he would make the better ruler. My brother would forever try to improve our standing, whereas I was content being better than the next man.\r\n\r\nWell, little did she know the next man was him.\r\n\r\nI'm going to enjoy killing you little brother. Grandfather's venom may have failed to reach mother's veins, but it will still reach her heart.</font>",
+        "string": "<font face=\"$HandwrittenBold\">\r\nSiempre he ganado a mi hermano pequeño en todo. En las cartas me salían mejores manos. En las peleas, podía con él. Cuando subíamos por las murallas del viejo castillo, llegaba antes arriba.\r\n\r\nMadre decía que la diferencia entre mi hermano y yo es que él era un perfeccionista y yo, un conquistador. Decía que yo solo pensaba en ganarle en todo y que eso me llevó a ser un gran guerrero.\r\n\r\nPero a él no le importaba la competición. Como buen perfeccionista, solo quería perfeccionar sus habilidades y, si pensaba que podía mejorar colaborando con otros, lo hacía.\r\n\r\nSegún madre, por eso sería mejor gobernante. Mi hermano siempre intentaría mejorar nuestra posición, mientras que yo me contentaría con ser mejor que todos los que tuviera cerca.\r\n\r\nComo él mismo, por ejemplo.\r\n\r\nVoy a disfrutar matándote, hermanito. Puede que el veneno del abuelo no haya conseguido llegar a tus venas, madre, pero te llegará al corazón.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE068_Journal",
+        "form_id": "[05000800]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenBold\">\r\nI've long suspected the \"Darkwater Snake\" is my older brother, Urzog. The fact that he would take on that moniker made it all the more obvious. \r\n\r\nIt may be that same poison that ran in grandfather's blood is what made him betray us. Are we doomed to repeat the mistakes of our ancestors? Sometimes I wonder.\r\n</font>",
+        "string": "<font face=\"$HandwrittenBold\">\r\nVengo sospechando hace tiempo que la \"serpiente de Agua Oscura\" es mi hermano mayor, Urzog. El hecho de que haya escogido ese mote apunta a ello.\r\n\r\nPuede que el mismo veneno que corría por las venas de la abuela sea lo que lo ha llevado a traicionarnos. ¿Estamos condenados a repetir los errores de nuestros antecesores? A veces me lo pregunto.\r\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE068_InnkeepLetter",
+        "form_id": "[05000801]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">To all capable warriors,\r\n\r\nA group of bandits have stolen something of great value to my family's kingdom, the Headman's Cleaver, and fled to Skyrim like cowards. We believe they're remnant members of the Greencap Bandits, who have been a thorn in the Queen's side from the day she was born. \r\n\r\nOur sources tell us they're holed up in Lost Knife Hideout, and as the Queen's strongest knight, I have been tasked with retrieving it. However, if I don't survive, I ask that you eliminate these bandits in her name. The Queen will gladly bestow the cleaver to the one who vanquishes her oldest enemy.\r\n\r\nShogarz gra-Batul",
+        "string": "<font face=\"$HandwrittenFont\">A todos los guerreros diestros:\r\n\r\nUn grupo de bandidos han robado un objeto de gran valor para el reino de mi familia, el cuchillo de carnicero de decapitador, y han huido a Skyrim como cobardes. Creemos que son los miembros restantes de la banda de los Gorras Verdes, que llevan siendo un grano en las posaderas de la reina desde el día en que nació.\r\n\r\nSegún nuestras fuentes, están encerrados en el escondite de Cuchillo Perdido, y, como principal caballero de la reina que soy, se me ha encomendado la tarea de recuperar el objeto. Sin embargo, si no sobrevivo, os pido que acabéis con ellos en nombre de la reina. Estoy seguro de que su majestad entregará gustosamente el arma a quienquiera que acabe con sus más antiguos enemigos.\r\n\r\nShogarz gra-Batul"
+    },
+    {
+        "editor_id": "ccBGSSSE068_BloodfallBlade",
+        "form_id": "[05000803]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Headman's Cleaver",
+        "string": "Cuchillo de carnicero de decapitador"
+    },
+    {
+        "editor_id": "ccBGSSSE068_LvlBanditBossOrcM",
+        "form_id": "[05000805]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Bandit Chief",
+        "string": "Jefe bandido"
+    },
+    {
+        "editor_id": "ccBGSSSE068_DeadOrc",
+        "form_id": "[05000804]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Shogarz gra-Batul",
+        "string": "Shogarz gra-Batul"
+    },
+    {
+        "editor_id": "LostKnifeHideout02",
+        "form_id": "[0001A337]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Lost Knife Hideout",
+        "string": "Escondite de Cuchillo Perdido"
+    },
+    {
+        "editor_id": "LostKnifeHideout01",
+        "form_id": "[00015251]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Lost Knife Cave",
+        "string": "Cueva de Cuchillo Perdido"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest_InnkeepTopic",
+        "form_id": "[05000809]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Do you know where I can find some work?",
+        "string": "¿Sabes dónde puedo encontrar trabajo?"
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "form_id": "[0500080D]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Read the Letter from Shogarz gra-Batul",
+        "string": "Lee la carta de Shogarz gra-Batul."
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "form_id": "[0500080D]",
+        "index": 103,
+        "type": "QUST CNAM",
+        "original": "Talking to innkeepers has always been a good way to find work. I should head to the local inn and see if there's anything worthwhile.",
+        "string": "Una buena forma de encontrar trabajo siempre ha sido hablar con los posaderos. Iré a la posada de la zona a ver si hay algo interesante."
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "form_id": "[0500080D]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Ask an innkeeper for work",
+        "string": "Pide trabajo al posadero."
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "form_id": "[0500080D]",
+        "index": 83,
+        "type": "QUST CNAM",
+        "original": "I received a note from a vassal of the Bloodfall Queen stating a group of bandits have stolen her weapon. I made my way to Lost Knife Hideout and retrieved the Headman's Cleaver from the bandits.",
+        "string": "He recibido una nota de un vasallo de la Reina Sangrienta donde se dice que un grupo de bandidos le han robado el arma. He viajado hasta el escondite del Cuchillo Perdido y les he arrebatado a los bandidos la Hoja Sangrienta."
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "form_id": "[0500080D]",
+        "index": 103,
+        "type": "QUST CNAM",
+        "original": "I received a note from a vassal of the Bloodfall Queen stating a group of bandits have stolen her weapon. I should head to Lost Knife Hideout to see what's become of it.",
+        "string": "He recibido una nota de un vasallo de la Reina Sangrienta donde se dice que un grupo de bandidos le han robado el arma. Debería ir al escondite de Cuchillo Perdido a ver qué ha sucedido."
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "form_id": "[0500080D]",
+        "index": 72,
+        "type": "QUST CNAM",
+        "original": "I received a note from a vassal of the Bloodfall Queen stating a group of bandits have stolen her weapon. I made my way to Lost Knife Hideout and encountered their leader.",
+        "string": "He recibido una nota de un vasallo de la Reina Sangrienta donde se dice que un grupo de bandidos le han robado el arma. He viajado hasta el escondite de Cuchillo Perdido, donde me he encontrado con su líder."
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "form_id": "[0500080D]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Blood in the Water",
+        "string": "Sangre en el agua"
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "form_id": "[0500080D]",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Eliminate the bandits in Lost Knife Hideout",
+        "string": "Elimina a los bandidos del escondite de Cuchillo Perdido."
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "form_id": "[0500080D]",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "Retrieve the Headman's Cleaver",
+        "string": "Hazte con el cuchillo de carnicero de decapitador."
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "form_id": "[0500080D]",
+        "index": 81,
+        "type": "QUST CNAM",
+        "original": "Talking to innkeepers has always been a good way to find work. I received a note from one that may provide a lead.",
+        "string": "Una buena forma de encontrar trabajo siempre ha sido hablar con los posaderos. He recibido una nota de uno que puede ser interesante."
+    },
+    {
+        "editor_id": "ccBGSSSE068_GreencapBanditName",
+        "form_id": "[0500080F]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Greencap Bandit",
+        "string": "Bandido de los Gorras Verdes"
+    },
+    {
+        "editor_id": "ccBGSSSE068_GreencapBanditBoss",
+        "form_id": "[0500080E]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Darkwater Snake",
+        "string": "Serpiente de Agua Oscura"
+    }
+]

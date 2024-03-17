@@ -1,0 +1,330 @@
+[
+    {
+        "editor_id": "ccBGSSSE051_EnchArmorFortifyIllusion06",
+        "form_id": "[05000848]",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Fortify Illusion",
+        "string": "Fortifica Illusione"
+    },
+    {
+        "editor_id": "ccBGSSSE051_ArmorDaedricMailCuirass",
+        "form_id": "[05000801]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Daedric Mail",
+        "string": "Maglia daedrica"
+    },
+    {
+        "editor_id": "ccBGSSSE051_Ring",
+        "form_id": "[05000823]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ring of Masser",
+        "string": "Anello di Masser"
+    },
+    {
+        "editor_id": "ccBGSSSE051_ArmorDaedricMailBoots",
+        "form_id": "[05000800]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Daedric Mail Boots",
+        "string": "Stivali in maglia daedrici"
+    },
+    {
+        "editor_id": "ccBGSSSE051_ArmorDaedricMailGauntlets",
+        "form_id": "[05000802]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Daedric Mail Gauntlets",
+        "string": "Guanti in maglia daedrici"
+    },
+    {
+        "editor_id": "ccBGSSSE051_EdwardNote",
+        "form_id": "[0500081B]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"17\">\r\nMy dearest sister Erwan,\r\n\r\nI see your way with words remains as elegant as a falling boulder. I am indeed alive, and no, I haven't forgotten my promise to you, which I remind you again was never literal. \r\n\r\nYou see, when someone says, \"You'll be the death of me,\" it's not an invitation to murder. It's more of a loving expression of one's exasperation, but I know nuance has never been your strong suit.\r\n\r\nI must warn you, however, that correspondence like this endangers us both. So if you truly wish to keep this promise, it's best you don't respond. When the time is right, I will come to you.\r\n\r\nOh, and be kind to our merchant friend Gunther, will you? Consider him my gift to you, along with this book on our past life.\r\n\r\nI'm sure you know by now, but it seems one of us has taken to writing about our adventures. I assure you, it isn't me. But I'm glad his depiction of you is as honest as you are incorrigible.\r\n\r\n--Edward</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"17\">\r\nCarissima sorella Erwan,\r\n\r\nVedo che con le parole sei sempre elegante quanto un masso in caduta libera. Sono vivo e no, non ho dimenticato la promessa che ti ho fatto che, ti ripeto, non era da prendere alla lettera. \r\n\r\nQuando si dice: \"Mi farai morire\", non è un invito a commettere un omicidio. È più una frase amorevole per esprimere esasperazione, ma so che le sfumature della lingua non sono mai state il tuo forte.\r\n\r\nTi avverto, scambiarci questo tipo di lettere può essere molto pericoloso per entrambi. Quindi, se vuoi mantenere la promessa, ti prego di non rispondere. Al momento opportuno, verrò io da te.\r\n\r\nComportati bene con il nostro amico mercante, Gunther, va bene? Consideralo un mio regalo insieme al libro sulle nostre avventure passate.\r\n\r\nCome sono certo avrai notato, qualcuno di noi ha iniziato a scrivere le nostre storie. Ti assicuro che non sono stato io. Ma sono contento che ti abbiano rappresentato come una persona onesta e incorreggibile.\r\n\r\n--Edward</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE051_BountyLetter",
+        "form_id": "[05000820]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nBy order of <Alias=Jarl>:\r\n\r\nTo all able bodied men and women of Skyrim. A merchant by the name of Gunther Frost-Foot has gone missing. He was last seen in the area near Traitor's Post.\r\n\r\nAny assistance in this matter would be appreciated.\r\n\r\n--<Alias=Steward></font>\r\n",
+        "string": "<font face=\"$HandwrittenFont\">\r\nIn nome di <Alias=Jarl>:\r\n\r\nA tutti gli uomini e le donne in forze di Skyrim. Un mercante chiamato Gunther Piedefreddo è sparito. L'ultima volta è stato visto nei pressi di Avamposto del traditore.\r\n\r\nQualsiasi contributo al suo ritrovamento è ben accetto.\r\n\r\n--<Alias=Steward></font>\r\n"
+    },
+    {
+        "editor_id": "ccBGSSSE051_EdwardNote",
+        "form_id": "[0500081B]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Letter from Edward",
+        "string": "Lettera da Edward"
+    },
+    {
+        "editor_id": "ccBGSSSE051_Journal",
+        "form_id": "[0500081F]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>\r\nMy new friend Gunther and I are getting along quite well. The other bandits are already getting jealous. He really was a fine gift. I should thank my brother Edward before I slit his throat.\r\n\r\nThe thing I like best about my good friend Gunther? He can keep a secret. I tell him all sorts of juicy tidbits and he never says a thing. He reminds me of my old companion Skjol, and the time we nearly got murdered by a Daedric cult. There was a ton of good loot in that place. Haunted artifacts, blood sacrifices, things that make lesser men want to hug their priest. \r\n\r\nNothing that would frighten off Gunther though. He's quite stoic, sitting in his chair. On top of that, he gets along with everyone. It doesn't matter if they're short people, fat people, tall people, or cat people. That's the thing about my old friend Gunther, he doesn't judge.\r\n\r\nAnyways, when I got to Skyrim, I sold most of the loot we piled up over the years, seeing as wanted men have to travel light. The heaviest piece I sold was a set of Daedric mail, to a caravan Khajiit named Ma'dran. I liked that armor, but in the end I had no choice but to get rid of her. She knows what she did.\r\n\r\nBesides, if I wanted to get her back, I could always trade something of equal value, like the Ring of Masser I ripped off the merchant at the Crescent Moons Inn way back when. Me and the furballs, we have history.\r\n\r\nThe ring is worth at least two sets of armor, or twenty pairs of boots. It can fortify your illusion magic, just like the books say. The books get a lot right, even the parts about me, except I'm much prettier and taller in real life. \r\n\r\nEither way, I don't need to cast spells to run this new crew. So I'll let my best friend Gunther wear the ring. I think it looks really good on him.</font>",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\r\nIo e il mio nuovo amico Gunther ci troviamo molto bene insieme. Gli altri banditi sono gelosi. È stato davvero un bel regalo. Dovrei ringraziare mio fratello Edward prima di tagliargli la gola.\r\n\r\nLa cosa che mi piace di più del mio amico Gunther? Sa mantenere un segreto. Gli racconto un sacco di cose interessanti e non dice mai una parola. Mi ricorda il mio vecchio compagno Skjol e quella volta che siamo quasi stati uccisi da quel culto daedrico. C'era un sacco di bottino in quel posto. Manufatti maledetti, sacrifici di sangue, cose che farebbero rabbrividire anche i più coraggiosi. \r\n\r\nMa non Gunther. Lui è un vero stoico, sempre seduto su quella sedia. E poi, va d'accordo con tutti. Bassi, grassi, alti e gatti. È questa la cosa bella del mio vecchio amico Gunther, lui non giudica.\r\n\r\nComunque, appena arrivata a Skyrim, ho venduto quasi tutto il bottino accumulato negli anni: essendo ricercati è meglio viaggiare leggeri. Ho venduto il pezzo più pesante, un set in maglia daedrico, a una carovana khajiiti chiamata \"Ma'dran\". Mi piaceva quell'armatura, ma alla fine ho dovuto darla via. Lei sa perché.\r\n\r\nE poi, se volessi riprendermela potrei sempre barattarla per qualcosa di egual valore, come l'Anello di Masser che ho strappato a quel mercante al Mezzelune ai tempi. Io e le palle di pelo ci conosciamo da tempo.\r\n\r\nL'anello vale almeno due armature o venti paia di stivali. Potenzia la magia, proprio come dicono i libri. I libri ci prendono sempre, anche quando parlano di me, ma in realtà sono molto più bella e alta. \r\n\r\nIn ogni caso, non voglio essere seguita da un fantasma peloso per tutto il giorno. Farò portare l'anello al mio amico Gunther. Gli sta molto bene.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE051_Journal",
+        "form_id": "[0500081F]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Erwan's Journal",
+        "string": "Diario di Erwan"
+    },
+    {
+        "editor_id": "ccBGSSSE051_BountyLetter",
+        "form_id": "[05000820]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Missing Merchant",
+        "string": "Mercante scomparso"
+    },
+    {
+        "editor_id": "ccBGSSSE051_BookVol5",
+        "form_id": "[05000847]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nThe Crimson Dirks\r\nBook Five\r\n\r\n\r\nby \r\nGathers-the-Coin\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/E_letter.png'>rwan was convinced the ring was cursed. \r\n\r\nAt first, the proof came in small doses. There were bad streaks at the card table, sudden pain in her tooth, and stale bottles of mead. Soon, the proof took on a larger, more dangerous form. Her blade would miss its mark. Potions would cure too slowly. Or she'd step on a rune that her barbarian companion, Skjol, had no business skipping over. \r\n\r\nThen there was the greater proof, the instances that threatened their livelihood. There was the coin drying up, new guard patrols at the usual haunts, and word that the East Empire Company had taken notice of their works. All told it augured a slow, tumbling march toward the end of the Crimson Dirks.\r\n\r\nKnowing this, a smart person might've cast it out; tossed the foul ring into the heart of Illiac Bay and let the waves ferry it to forgotten shores. A wise person might've taken it a step further, destroying the artifact and its ill-fated magic, so that no person, past or present, would ever come to harm.\r\n\r\nErwan, of course, decided to wear it around her neck.\r\n\r\nWith regard to the ring's nature, she told only the barbarian. Her brother Edward would refuse to believe her. The others would demand she get rid of it, in whatever manner best fit their inclinations. Skjol, on the other hand, would neither object nor disapprove. \r\n\r\nWhenever she confided in him, Skjol would simply stare at her blankly and let out a guttural snort before chewing on the nearest piece of meat. Skjol, after all, was not just a barbarian, but one who wore that label like a badge, or an honor bestowed upon him by the High King. Of words he knew few, and when he wrote them down, rarely did he put them in the right order. The only thng that spared him from further ignominy was the fact he couldn't speak.\r\n\r\nAs the story goes, the leader of the Crimson Dirks, Tyra Blood-Fire, found him in a cage with his tongue removed, and upon freeing him gained his axe. To this day it was never clear if Skjol was loyal to her or the crew, or whether that distinction had any meaning to him. If Tyra asked him to back Erwan on a job, he would do so without question, and absorb whatever secrets, insults, and curses the Breton decided to fling in his general direction.\r\n\r\nThat theory would be tested the moment she stepped on that rune.\r\n\r\nEarlier that week, they had received a tip. A new crew had set up a smuggler's operation in one of the old ruins outside the capital. It was supposed to be a simple task. They were to meet with the clan leaders, flex their muscle, and come home with new members or a percentage of the take. It all would've gone according to script, Erwan thought, had the ring not been cursed.\r\n\r\n\"This is all your fault,\" she said to no one in particular, while glaring at her disobedient hands. Moments earlier, the Breton had awoken to the sound of chanting - a low and ominous moan floating through the chamber. The rune had blurred her sight, but it was the haunting refrain that seemed to dull her focus, unable to cast a spell. \r\n\r\nRegardless, it was clear their captors were more than smugglers. Erwan didn't need to see the source of the chanting to know it was bad business, no matter how long Skjol mindlessly pointed in that direction.\r\n\r\n\"Well, at least it isn't cannibals,\" Erwan sneered, \"although you being a choking hazard might've worked in our favor.\"\r\n\r\nSkjol wasn't the brightest Nord, but he knew when he was being insulted. In a past life, he would've simply crushed Erwan's skull and taken a nap. Moreover, cages were nothing new to him, and Erwan's noisy jests were to him, signs of panic. But he had sworn a vow to protect the charges of the one they called Blood-Fire, and so rather than kill the Breton for looking at him oddly, Skjol continued to point, much to Erwan's confusion. \r\n\r\nThe shrine behind her was Daedric in origin - large, twisted and barbed, its stems ugly and misshapen. Blood dripped from its ebony thorns, spilling past the cage and down the stone steps like shifting roots. At the base of the steps stood robed cultists, lost in their supplication, flanked by guards dressed in Daedric armor and mail. Despite an open roof, the air in the ruins was thick and noxious, and the shrine seemed to throb in the blood moon's light.\r\n \r\nAs the light shone on the altar, the cultist chants began to turn more vehement and forceful. The voices continued to rise, louder and louder, until one of the guards broke from his stance, climbing the steps toward the cage. Seeing this, Erwan bared her teeth and snarled at him like an animal, but he continued his approach undeterred. As the chants hit a crescendo, Erwan could no longer hear her own thoughts, seeing nothing save the cold, black gauntlet split through the bars and reach for her neck. \r\n\r\nWith a thrust the guard grabbed her by the head and slammed her into the bars, drawing his weapon with his other hand. With spit bubbling from her mouth and her body pressed against the iron, Erwan screamed at Skjol every manner of insult she could contrive. But the oaf continued to sit in place, his finger still extended, even as the cultists' chant drummed against their ears. Only now the finger was pointed to the ground, tracing a circle.\r\n\r\nErwan looked down and saw the ring, glowing hotly on her chest. \r\n\r\nSkjol didn't need to tell her what to do next. She wrung herself free of the guard's grasp, and not knowing what would happen, placed the ring on her finger.\r\n\r\nThe chanting stopped. And in its place, the shrill cry of weapons drawn from their scabbards. The Daedric warrior turned his attention to the cultists, but it was too late. Erwan's spell of hysteria had taken hold, her focus restored by the power of the ring. One by one the cultists turned on each other, their rage driven by hers. And when the clangs of metal faded and the screams turned to silence, Erwan collapsed, having exhausted all of herself and the ring.\r\n\r\nAs the hours passed into the day, Erwan lay there on the floor of her cage, letting the sun splash through the bars. Skjol snored softly in his corner, shifting on occasion to scratch himself. Outside, ravens picked at the flesh of the dead, sharpening their beaks on the bones and paying no mind to the living.  \r\n\r\nThe others would come looking for them eventually, and fetch M'Sharra to pick the lock. But for now Erwan was content as she was. She held the ring up against the sky, circling the area where the moon once stood. Perhaps she had made a mistake, and the ring wasn't cursed after all.\r\n\r\nBut Erwan still held out hope.</p>\r\n",
+        "string": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nI Dirk cremisi\r\nLibro cinque\r\n\r\n\r\ndi \r\nRaduna-monete\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/E_letter.png'>rwan era convinta che l'anello fosse maledetto. \r\n\r\nAll'inizio, i segnali erano più leggeri. Era sfortunata al tavolo da gioco, aveva dolore improvviso ai denti, bottiglie di idromele andate a male. Presto le cose si fecero più preoccupanti. Non riusciva a colpire il bersaglio con la spada. Le pozioni curavano più lentamente. O pestava una runa che il suo compagno barbaro, Skjol, non aveva interesse a saltare. \r\n\r\nPoi arrivarono i segnali peggiori, quelli che minacciavano i suoi mezzi di sostentamento. I soldi iniziavano a scarseggiare, nuove guardie in posti ormai familiari e la Compagnia dell'Impero Orientale era venuta a sapere del loro lavoro. Tutto sembrava puntare alla lenta e inevitabile fine dei Dirk cremisi.\r\n\r\nA questo punto, una persona intelligente se ne sarebbe sbarazzata. Avrebbe gettato l'anello nel cuore della baia lasciando che le onde lo trasportassero verso sponde dimenticate. Una persona saggia sarebbe anche potuta andare oltre, distruggendo il manufatto e la sua magia, in modo che non venisse più danneggiato nessuno, né ora né in futuro.\r\n\r\nErwan, ovviamente, decise di metterlo al collo.\r\n\r\nParlò della provenienza dell'anello solo con il barbaro. Suo fratello, Edward, si rifiutava di crederle. Gli altri le dicevano di liberarsene, in un modo o nell'altro. Skjol, invece, non aveva niente in contrario. \r\n\r\nQualsiasi cosa gli dicesse, Skjol si limitava a fissarla con sguardo assente e a emettere un suono gutturale prima di addentare il primo pezzo di carne che gli passava davanti. Skjol, dopotutto, non era semplicemente un barbaro, ma era uno di quelli che se ne vantava, come se fosse un onore concessogli dal Re dei Re. Conosceva poche parole e, quando provava a scriverle, raramente riusciva a metterle nell'ordine giusto. L'unica cosa che gli faceva conservare un po' di dignità era il fatto che non sapesse parlare.\r\n\r\nLa storia narra che la leader dei Dirk cremisi, Tyra Sangueardente, lo trovò in una gabbia senza lingua e che liberandolo ricevette la sua ascia. Ancora oggi non si capisce se Skjol fosse fedele a lei o alla banda, o addirittura se capisse una tale distinzione. Se Tyra gli chiedeva di aiutare Erwan, lui lo faceva senza fare domande e custodiva ogni segreto, insulto e maledizione che i bretoni gli rivolgevano.\r\n\r\nQuesta teoria venne confutata nel momento in cui pestò quella runa.\r\n\r\nA inizio settimana avevano ricevuto una soffiata. Una nuova banda di contrabbandieri aveva aperto bottega in alcune vecchie rovine all'esterno della capitale. Era un lavoretto semplice. Dovevano incontrare i capi della banda, fargli capire chi comandava, e tornare a casa con nuovi membri per la banda o una percentuale dei guadagni. Niente poteva andare storto, pensò Erwan, se solo l'anello non si fosse messo di mezzo.\r\n\r\nDava la colpa a tutti e a nessuno, mentre si guardava con aria torva le mani. Pochi secondi prima, la bretone si era svegliata con un canto, un lamento basso e minaccioso che risuonava in tutta la stanza. La runa le aveva annebbiato la vista, ma era quella melodia che non riusciva a farla concentrare e a farle lanciare incantesimi. \r\n\r\nA parte questo, era ormai ovvio che i rapitori erano più che semplici contrabbandieri. Erwan non aveva bisogno di vedere da dove arrivava il canto per capire che non prometteva niente di buono, a prescindere da quanto Skjol continuasse a indicare in quella direzione.\r\n\r\n\"Almeno non sono cannibali\", disse Erwan sogghignando, \"anche se tu saresti stato un boccone difficile da mandar giù.\"\r\n\r\nSkjol non era il più brillante dei nord, ma capiva quando veniva insultato. In passato si sarebbe limitato a fracassare il cranio di Erwan e andarsene a fare un sonnellino. Per di più, le gabbie non erano una novità per lui e i fastidiosi gesti di Erwan gli sembravano gesti di panico. Ma aveva giurato di proteggere quella che chiamavano \"Sangueardente\", così invece di uccidere la bretone Skjol continuò a indicare, confondendo sempre di più Erwan. \r\n\r\nL'altare dietro di lei era di origine daedrica: largo, intricato, tagliente con gambe tozze e deformi. Dalle spine color ebano gocciolava sangue, che continuava oltre la gabbia e scendeva sugli scalini, come tetre radici. Ai piedi di questi scalini c'erano cultisti incappucciati, persi nella loro supplica e circondati da guardie con indosso armature daedriche di maglia. Nonostante fossero all'aperto, l'aria all'interno delle rovine era pesante e irrespirabile, l'altare sembrava pulsare sotto la luce della luna.\r\n\r\nAppena la luce colpì l'altare, il canto dei cultisti divenne più veemente. Le voci continuavano ad alzarsi, sempre più forti, finché una delle guardie abbandonò la sua postazione e iniziò a salire i gradini dirigendosi verso la gabbia. Alla sua vista, Erwan scoprì i denti e iniziò a ringhiargli contro come un animale, ma lui continuava ad avvicinarsi imperterrito. Appena il canto arrivò al culmine, Erwan non riusciva a sentire neanche i suoi pensieri e a vedere il guanto nero e freddo che attraversò le sbarre le afferrò il collo. \r\n\r\nCon una spinta la guardia le prese la testa e la sbatté contro le sbarre mentre con l'altra mano estraeva l'arma. Con la bava alla bocca e il corpo premuto contro il ferro, Erwan gridò a Skjol tutti gli insulti che le passarono per la testa. Ma quel babbeo continuava a starsene seduto, con il dito puntato, immobile mentre la cantilena dei cultisti gli faceva scoppiare la testa. Solo che ora il dito era puntato verso il pavimento e stava tracciando un cerchio.\r\n\r\nErwan guardò verso il basso e vide l'anello che le brillava sul petto. \r\n\r\nSkjol non doveva neanche dirle cosa fare. Si liberò dalla presa della guardia e, senza essere sicura di ciò che sarebbe successo, si infilò l'anello.\r\n\r\nLa cantilena si fermò. Al suo posto, si udì un baccano di armi sfoderate. Il guerriero daedrico si voltò verso i cultisti, ma era troppo tardi. L'incantesimo di Erwan aveva già fatto effetto e lei era riuscita a concentrarsi grazie all'anello. Uno dopo l'altro i cultisti si attaccavano a vicenda e lei ne controllava la rabbia. Quando il clangore delle armi si affievolì e le urla si trasformarono in silenzio, Erwan svenne dopo aver esaurito le sue energie e quelle dell'anello.\r\n\r\nLe ore passavano ed Erwan rimaneva inerte sul pavimento della sua gabbia, con il sole che filtrava attraverso le sbarre. Skjol russava leggermente dal suo angolo, spostandosi solo per grattarsi. All'esterno i corvi banchettavano con la carne dei morti, si affilavano il becco sulle ossa e non prestavano attenzione ai vivi.  \r\n\r\nPrima o poi gli altri sarebbero andati a cercarli e avrebbero chiamato M'Sharra per aprire la serratura. Per il momento, Erwan era contenta così. Sollevò l'anello verso il cielo, racchiudendo la zona in cui prima si trovava la luna. Forse si era sbagliata, forse l'anello non era davvero maledetto.\r\n\r\nMa Erwan ci sperava ancora.</p>\r\n"
+    },
+    {
+        "editor_id": "ccBGSSSE051_BookVol5",
+        "form_id": "[05000847]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "The Crimson Dirks, v5",
+        "string": "I Dirk cremisi, Volume 5"
+    },
+    {
+        "editor_id": "ccBGSSSE051_Erwan",
+        "form_id": "[0500081C]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Erwan",
+        "string": "Erwan"
+    },
+    {
+        "editor_id": "ccBGSSSE051_Gunther",
+        "form_id": "[05000824]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Gunther",
+        "string": "Gunther"
+    },
+    {
+        "editor_id": "Tamriel",
+        "form_id": "[0000003C]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Skyrim"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000838]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "This ring is a Khajiit artifact. I think you should trade the armor for it.",
+        "string": "Questo anello è un manufatto khajiiti. Penso che dovresti accettarlo in cambio dell'armatura."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000835]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "I understand you were sold a set of Daedric armor.",
+        "string": "Ho saputo che hai acquistato un'armatura daedrica."
+    },
+    {
+        "editor_id": "ccBGSSSE051_QuestSubTopicD",
+        "form_id": "[05000840]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I'd like to buy it off you. (5000 gold)",
+        "string": "Vorrei acquistarla. (5.000 pezzi d'oro)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000839]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "That armor was stolen. Trade it for this ring before the guard notices.",
+        "string": "Quell'armatura è stata rubata. Dovresti darmela in cambio di quest'anello prima che le guardie se ne accorgano."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000842]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "I'd like to buy it off you, but I don't have the gold. (5000 gold)",
+        "string": "Vorrei acquistarla, ma non ho abbastanza oro. (5.000 pezzi d'oro)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000833]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "You should trade it for this ring. It's just as valuable and easier to carry. ",
+        "string": "Dovresti accettare quest'anello in cambio. Hanno lo stesso valore ed è più facile da trasportare. "
+    },
+    {
+        "editor_id": "ccBGSSSE051_MiscQuestInnkeeperTopic",
+        "form_id": "[0500083B]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I'm in need of some work. Do you have anything for me?",
+        "string": "Mi serve un lavoro. Hai qualcosa per me?"
+    },
+    {
+        "editor_id": "ccBGSSSE051_Quest",
+        "form_id": "[05000819]",
+        "index": 89,
+        "type": "QUST CNAM",
+        "original": "I received a notice from the Jarl's steward regarding a missing person. I should read it and see if I can be of help.",
+        "string": "Ho ricevuto una nota dal sovrintendente dello jarl riguardante una persona scomparsa. Devo leggerla e vedere se posso essere d'aiuto."
+    },
+    {
+        "editor_id": "ccBGSSSE051_Quest",
+        "form_id": "[05000819]",
+        "index": 87,
+        "type": "QUST CNAM",
+        "original": "I received a notice from the Jarl's steward regarding a missing person. At Traitor's Post I found the missing person was already killed by a bandit. On her body was a journal that implied she sold a set of Daedric armor to a Khajiit merchant. She mentioned that if she ever wanted it back, the merchant would trade it for a valuable Khajiit ring. Wanting to keep the ring, I purchased the set for gold instead.",
+        "string": "Ho ricevuto una nota dal sovrintendente dello jarl riguardante una persona scomparsa. Una volta arrivato ad Avamposto del traditore ho scoperto che la persona scomparsa era stata uccisa da un bandito. Sul suo cadavere ho trovato un diario in cui diceva che ha venduto un'armatura daedrica a un mercante khajiiti. Ha scritto che se avesse voluto recuperarla, il mercante sarebbe stato disposto a scambiarla con un prezioso anello khajiiti. Ho trovato l'anello ma l'ho tenuto per me e ho acquistato l'armatura pagandola in oro."
+    },
+    {
+        "editor_id": "ccBGSSSE051_Quest",
+        "form_id": "[05000819]",
+        "index": 50,
+        "type": "QUST NNAM",
+        "original": "(Optional) Purchase the armor set with gold",
+        "string": "(Opzionale) Acquista l'armatura pagandola in oro"
+    },
+    {
+        "editor_id": "ccBGSSSE051_MiscQuest",
+        "form_id": "[0500081A]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Ask an innkeeper for work",
+        "string": "Chiedi lavoro a una locandiera"
+    },
+    {
+        "editor_id": "ccBGSSSE051_Quest",
+        "form_id": "[05000819]",
+        "index": 88,
+        "type": "QUST CNAM",
+        "original": "I received a notice from the Jarl's steward regarding a missing person. At Traitor's Post I found the missing person was already killed by a bandit. On her body was a journal that implied she sold a set of Daedric armor to a Khajiit merchant. She mentioned that if she ever wanted it back, the merchant would trade it for a valuable Khajiit ring. I picked up the ring and traded it for the armor set.",
+        "string": "Ho ricevuto una nota dal sovrintendente dello jarl riguardante una persona scomparsa. Una volta arrivato ad Avamposto del traditore ho scoperto che la persona scomparsa era stata uccisa da un bandito. Sul suo cadavere ho trovato un diario in cui diceva che ha venduto un'armatura daedrica a un mercante khajiiti. Ha scritto che se avesse voluto recuperarla, il mercante sarebbe stato disposto a scambiarla con un prezioso anello khajiiti. Ho trovato l'anello e l'ho scambiato per l'armatura."
+    },
+    {
+        "editor_id": "ccBGSSSE051_Quest",
+        "form_id": "[05000819]",
+        "index": 25,
+        "type": "QUST NNAM",
+        "original": "Read Erwan's Journal",
+        "string": "Leggi il diario di Erwan"
+    },
+    {
+        "editor_id": "ccBGSSSE051_Quest",
+        "form_id": "[05000819]",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "Trade the ring for the Daedric armor set",
+        "string": "Scambia l'anello con l'armatura daedrica"
+    },
+    {
+        "editor_id": "ccBGSSSE051_Quest",
+        "form_id": "[05000819]",
+        "index": 84,
+        "type": "QUST CNAM",
+        "original": "I received a notice from the Jarl's steward regarding a missing person. I should head over to Traitor's Post and see what I can learn.",
+        "string": "Ho ricevuto una nota dal sovraintendente dello jarl riguardante una persona scomparsa. Devo andare a Avamposto del traditore per saperne di più."
+    },
+    {
+        "editor_id": "ccBGSSSE051_Quest",
+        "form_id": "[05000819]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Read the missing merchant note",
+        "string": "Leggi la nota del mercante scomparso"
+    },
+    {
+        "editor_id": "ccBGSSSE051_Quest",
+        "form_id": "[05000819]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Investigate Traitor's Post",
+        "string": "Esplora Avamposto del traditore"
+    },
+    {
+        "editor_id": "ccBGSSSE051_Quest",
+        "form_id": "[05000819]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Missing Merchant",
+        "string": "Mercante scomparso"
+    },
+    {
+        "editor_id": "ccBGSSSE051_Quest",
+        "form_id": "[05000819]",
+        "index": 24,
+        "type": "QUST NNAM",
+        "original": "Search the bandit corpse",
+        "string": "Perquisisci il cadavere della bandita"
+    },
+    {
+        "editor_id": "ccBGSSSE051_Quest",
+        "form_id": "[05000819]",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Retrieve the Ring of Masser",
+        "string": "Recupera l'Anello di Masser"
+    },
+    {
+        "editor_id": "ccBGSSSE051_Quest",
+        "form_id": "[05000819]",
+        "index": 93,
+        "type": "QUST CNAM",
+        "original": "I received a notice from the Jarl's steward regarding a missing person. At Traitor's Post I found the missing person was already killed by a bandit. On her body was a journal that implied she sold a set of Daedric armor to a Khajiit merchant. She mentioned that if she ever wanted it back, the merchant would trade it for a valuable Khajiit ring. I picked up the ring and can now trade it for the armor set.",
+        "string": "Ho ricevuto una nota dal sovrintendente dello jarl riguardante una persona scomparsa. Una volta arrivato ad Avamposto del traditore ho scoperto che la persona scomparsa era stata uccisa da un bandito. Sul suo cadavere ho trovato un diario in cui diceva che ha venduto un'armatura daedrica a un mercante khajiiti. Ha scritto che se avesse voluto recuperarla, il mercante sarebbe stato disposto a scambiarla con un prezioso anello khajiiti. Ho trovato l'anello e adesso posso scambiarlo per l'armatura."
+    },
+    {
+        "editor_id": "ccBGSSSE051_Quest",
+        "form_id": "[05000819]",
+        "index": 88,
+        "type": "QUST CNAM",
+        "original": "I received a notice from the Jarl's steward regarding a missing person. At Traitor's Post I found the missing person was already killed by a bandit. On her body was a journal that implied she sold a set of Daedric armor to a Khajiit merchant. She mentioned that if she ever wanted it back, the merchant would trade it for a valuable Khajiit ring.",
+        "string": "Ho ricevuto una nota dal sovrintendente dello jarl riguardante una persona scomparsa. Una volta arrivato ad Avamposto del traditore ho scoperto che la persona scomparsa era stata uccisa da un bandito. Sul suo cadavere ho trovato un diario in cui diceva che ha venduto un'armatura daedrica a un mercante khajiiti. Ha scritto che se avesse voluto recuperarla, il mercante sarebbe stato disposto a scambiarla con un prezioso anello khajiiti."
+    },
+    {
+        "editor_id": "ccBGSSSE051_Quest",
+        "form_id": "[05000819]",
+        "index": 69,
+        "type": "QUST CNAM",
+        "original": "I received a notice from the Jarl's steward regarding a missing person. At Traitor's Post I found the missing person was already killed by a bandit.",
+        "string": "Ho ricevuto una nota dal sovraintendente dello jarl riguardante una persona scomparsa. Una volta arrivato ad Avamposto del traditore ho scoperto che la persona scomparsa era stata uccisa da un bandito."
+    },
+    {
+        "editor_id": "ccBGSSSE051_MatchingSet",
+        "form_id": "[05000843]",
+        "index": null,
+        "type": "PERK DESC",
+        "original": "Additional 25% Armor bonus if wearing a matched set of Light Armor.",
+        "string": "Additional 25% Armor bonus if wearing a matched set of Light Armor."
+    },
+    {
+        "editor_id": "ccBGSSSE051_MatchingSet",
+        "form_id": "[05000843]",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Matching Set",
+        "string": "Matching Set"
+    }
+]

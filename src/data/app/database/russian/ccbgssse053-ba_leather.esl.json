@@ -1,0 +1,298 @@
+[
+    {
+        "editor_id": "ccBGSSSE053_ArmorBladesGauntlets",
+        "form_id": "[05000802]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Leather Scout Gauntlets",
+        "string": "Кожаные перчатки разведчика"
+    },
+    {
+        "editor_id": "ccBGSSSE053_ArmorBladesBootsEnchanted",
+        "form_id": "[0500082C]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Leather Scout Boots",
+        "string": "Кожаные сапоги разведчика"
+    },
+    {
+        "editor_id": "ccBGSSSE053_ArmorBladesHelmet",
+        "form_id": "[05000803]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Leather Scout Helmet",
+        "string": "Кожаный шлем разведчика"
+    },
+    {
+        "editor_id": "ccBGSSSE053_ArmorBladesCuirass",
+        "form_id": "[05000801]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Leather Scout Armor",
+        "string": "Кожаная броня разведчика"
+    },
+    {
+        "editor_id": "ccBGSSSE053_ArmorBladesCuirassEnchanted",
+        "form_id": "[05000829]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Leather Scout Armor",
+        "string": "Кожаная броня разведчика"
+    },
+    {
+        "editor_id": "ccBGSSSE053_ArmorBladesGauntletsEnchanted",
+        "form_id": "[0500082A]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Leather Scout Gauntlets",
+        "string": "Кожаные перчатки разведчика"
+    },
+    {
+        "editor_id": "ccBGSSSE053_ArmorBladesBoots",
+        "form_id": "[05000800]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Leather Scout Boots",
+        "string": "Кожаные сапоги разведчика"
+    },
+    {
+        "editor_id": "ccBGSSSE053_ArmorBladesHelmetEnchanted",
+        "form_id": "[0500082B]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Leather Scout Helmet",
+        "string": "Кожаный шлем разведчика"
+    },
+    {
+        "editor_id": "ccBGSSSE053_Dossier",
+        "form_id": "[0500081C]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Guard's Dossier: Ehlhiel",
+        "string": "Досье стражи: Эхлиэль"
+    },
+    {
+        "editor_id": "ccBGSSSE053_EhlhielNote",
+        "form_id": "[0500081B]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Ehlhiel's Journal",
+        "string": "Дневник Эхлиэля"
+    },
+    {
+        "editor_id": "ccBGSSSE053_Dossier",
+        "form_id": "[0500081C]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nStatus: Asset (cooperative), Active\r\n\r\nDescription: Male, Bosmer, late 30s\r\n\r\nBackground:\r\nEhlhiel was adopted by the Crimson Dirks at a young age and trained at their hideout in the Heartlands of Cyrodiil. Some intelligence suggests his parents may have been killed by the bandits, and the child taken in as hostage.\r\n\r\nOperational Notes:\r\nOriginally identified as a possible mole due to his background, Ehlhiel was fed the information regarding his parents and recruited as an asset. In the years following, he proved to be a valuable source of information in identifying bandit groups, as well as helping the Imperial City guard expunge the Crimson Dirks from Cyrodiil.\r\n\r\nCurrently, Ehlhiel continues to serve both the East Empire Company and the guard captains in Skyrim by providing information on fugitives that fled north after the purge. Meetings can be set up by placing a note behind the Shrine of Akatosh in Solitude. Any additional contact should be arranged through the appropriate channels.</font>",
+        "string": "<font face='$HandwrittenFont'>\r\nСтатус: активное, информатор (сотрудничает)\r\n\r\nОписание: мужчина, босмер, около 40 лет\r\n\r\nБиография:\r\nЭхлиэль в юном возрасте был принят в \"Кровавые кинжалы\". Его обучали в убежище в самом сердце Сиродила. Некоторые источники предполагают, что его родителей убили бандиты, а ребенка взяли в качестве пленника.\r\n\r\nОперативные данные:\r\nБыл выбран на роль \"крота\" из-за своего происхождения. Эхлиэлю рассказали о судьбе его родителей и завербовали в информаторы. В последующие годы он доказал свою полезность, помогая в опознании бандитских шаек, а также содействовал страже Имперского города в изгнании \"Кровавых кинжалов\" из Сиродила.\r\n\r\nНа данный момент Эхлиэль продолжает работать на Восточную имперскую компанию и на капитанов стражи Скайрима, поставляя им информацию о беженцах, отправившихся на север после зачистки. Встречи с ним назначаются в записках, которые кладутся за святилищем Акатоша в Солитьюде. Дополнительные контакты следует осуществлять только по соответствующим каналам.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE053_MeetNote",
+        "form_id": "[0500081A]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>\r\nSomething's come up. Meet me at Lost Echo Cave. \r\n\r\nCome alone.\r\n</font>\r\n\r\n",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\r\nЕсть одно дело. Встретимся в пещере Заблудшее Эхо.\r\n\r\nПриходи один.\r\n</font>\r\n\r\n"
+    },
+    {
+        "editor_id": "ccBGSSSE053_ZahariaNote",
+        "form_id": "[05000819]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Zaharia's Note",
+        "string": "Записка Захарии"
+    },
+    {
+        "editor_id": "ccBGSSSE053_ZahariaNote",
+        "form_id": "[05000819]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>\r\n\"Asset.\" \r\n\r\nThat's what the dossier called him. It took a while before I got past that word and found a way to stomach the rest of it. At the time, I was hurt. Now, I'm just mad.\r\n\r\nIt all started when I killed this officer on a lark. It probably wasn't the smartest thing. They're like cockroaches, you can't kill them all. But I'd be lying if I said it didn't feel good to try.\r\n\r\nSo it wasn't like I knew what he was up to when I confronted him. I didn't expect to find anything useful on his corpse either. But then I found the dossier, and now I know the truth. Ehlhiel betrayed us. \r\n\r\nFinding the traitorous bastard won't be easy, but I've got a plan. The dossier says they arrange meetings with him by placing a note at the Temple of the Divines, underneath a vase of tundra cotton. I'll place one there and have him meet me at Lost Echo Cave. Then I'll gut the lying little weasel and show him just how much of an asset he really is.</font>\r\n\r\n",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\r\n\"Информатор\".\r\n\r\nТак его обозначили в досье. Мне потребовалось время, чтобы переварить и это слово, и то, что из него вытекало. Тогда я чувствовала боль. А сейчас - только злость.\r\n\r\nВсе началось, когда я забавы ради убила того офицера. Вероятно, не стоило этого делать. Они же как тараканы - всех не перебьешь. Но я совру, если скажу, что это не было приятно.\r\n\r\nТак что, когда я напала на него, я не знала, кто он такой. И не ожидала найти в его карманах что-то полезное. Но потом нашла досье, в котором была правда. Эхлиэль нас предал.\r\n\r\nНайти этого ублюдка будет непросто, но у меня есть план. В досье сказано, что они назначали с ним встречи, положив записку под вазу с пушицей в Храме Богов. Положу ее туда, пусть приходит в пещеру Заблудшее Эхо. Там я выпотрошу этого лживого хорька и узнаю, сколько еще в нем полезной информации.</font>\r\n\r\n"
+    },
+    {
+        "editor_id": "ccBGSSSE053_MeetNote",
+        "form_id": "[0500081A]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Note to Ehlhiel",
+        "string": "Записка для Эхлиэля"
+    },
+    {
+        "editor_id": "ccBGSSSE053_EhlhielNote",
+        "form_id": "[0500081B]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>\r\nTyra was too stubborn to realize it. The Crimson Dirks were done. They knew our names and our faces. If the city guard didn't catch us, it'd be The East Empire Company, or any of the other guilds and Great Houses we pissed off along the way. The way I see it, I just gave them a head start.\r\n\r\nMy job was to set the hideout ablaze, and let the Legionnaires pick off the bandits while they burned. Just goes to show how cowardly the tin men in uniform really are. They were never one for a fair fight or a fair deal, but hey, neither was I.\r\n\r\nThe guard captain was too busy smelling his own wind to realize we were burning long dead corpses. The Crimson Dirks were already gone. \r\n\r\nIt was an even trade. A head start for a head start. So long as I kept my part of the bargain, they wouldn't find out about theirs. \r\n\r\nStill, it was only a matter of time before they caught on. And while they weren't aware of my part in the escape, now they want me to help with their capture. They've put everything I've told them into neat little dossiers, which they can pass around to the captains. I wonder if they even have one on me.\r\n\r\nI only told Pale-Eyes about the cost of our freedom. The rest of them wouldn't understand. They couldn't deal with the guilt. But I had to tell somebody, because as it turns out, neither could I.</font>",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\r\nТира была слишком упрямой, чтобы признать, что \"Кровавым кинжалам\" пришел конец. Они знали нас в лицо и по именам. Если бы нас не поймала городская стража, это сделала бы Восточная имперская компания или любая другая гильдия или Великий дом из тех, кого мы успели разозлить. На мой взгляд, я просто дал страже фору.\r\n\r\nМоей задачей было поджечь укрытие, чтобы легионеры перебили бандитов, пытающихся спастись. Сразу понятно, насколько трусливы служители порядка. Они ни за что не выйдут на честный бой или честную сделку. Впрочем, я такой же.\r\n\r\nКапитан стражи был так занят самолюбованием, что не заметил, что в укрытии горят давно несвежие покойники. \"Кровавые кинжалы\" уже оттуда ушли.\r\n\r\nЭто была честная сделка. Фора за фору. И пока я выполнял свою часть этой сделки, они не знали о своей части.\r\n\r\nНо рано или поздно стражники все равно бы их разыскали. И хотя они не подозревали о моей роли в этом побеге, теперь они хотят, чтобы я помог им поймать беглецов. Из того, что я им рассказал, они составили досье и раздали их капитанам. Интересно, есть ли у них досье на меня.\r\n\r\nЯ рассказал о цене нашей свободы только Бледные-Глаза. Остальные бы не поняли. Они не справились бы с чувством вины. Но мне было нужно рассказать хоть кому-то, потому что, как выяснилось, я с ним тоже не справляюсь.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE053_ZahariaALIVE",
+        "form_id": "[0500081E]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Zaharia",
+        "string": "Захария"
+    },
+    {
+        "editor_id": "ccBGSSSE053_Zaharia",
+        "form_id": "[0500081F]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Zaharia",
+        "string": "Захария"
+    },
+    {
+        "editor_id": "ccBGSSSE053_Ehlhiel",
+        "form_id": "[0500081D]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Ehlhiel",
+        "string": "Эхлиэль"
+    },
+    {
+        "editor_id": "LostEchoCave01",
+        "form_id": "[00015253]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Lost Echo Cave",
+        "string": "Пещера Заблудшее Эхо"
+    },
+    {
+        "editor_id": "SolitudeTempleoftheDivines",
+        "form_id": "[00016A02]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Temple of the Divines",
+        "string": "Храм Богов"
+    },
+    {
+        "editor_id": "Tamriel",
+        "form_id": "[0000003C]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Скайрим"
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "form_id": "[05000826]",
+        "index": 60,
+        "type": "QUST NNAM",
+        "original": "Defeat Zaharia",
+        "string": "Победить Захарию"
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "form_id": "[05000826]",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "At Cliffside Retreat, I found a dossier that implies a Blades agent has become an asset of the Thalmor. The accompanying note says that another agent, Zaharia, intends to enact revenge by arranging a meeting at Lost Echo Cave. I decided to save the Thalmor agent by intercepting the note at the Temple of Divines.",
+        "string": "В Горном приюте мне попалось досье агента Клинков, который стал работать на Талмор. В приложенной к досье записке говорится, что другой агент, Захария, собирается отомстить первому агенту за это, назначив встречу в пещере Заблудшее Эхо. Я хочу спасти талморского агента, а для этого надо перехватить записку в Храме Богов."
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "form_id": "[05000826]",
+        "index": 81,
+        "type": "QUST CNAM",
+        "original": "At Cliffside Retreat, I found a dossier that implies a Blades agent has become an asset of the Thalmor. The accompanying note said that another agent, Zaharia, intended to enact revenge by arranging a meeting at Lost Echo Cave. I traveled to the cave and was attacked by a hostile agent.",
+        "string": "В Горном приюте мне попалось досье агента Клинков, который стал работать на Талмор. В приложенной к досье записке говорилось, что другой агент, Захария, собирается отомстить первому агенту за это, назначив встречу в пещере Заблудшее Эхо. Сразу после моего прибытия в пещеру на меня напали."
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "form_id": "[05000826]",
+        "index": 70,
+        "type": "QUST NNAM",
+        "original": "Inspect the body",
+        "string": "Осмотреть тело"
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "form_id": "[05000826]",
+        "index": 81,
+        "type": "QUST CNAM",
+        "original": "At Cliffside Retreat, I found a dossier that implies a Blades agent has become an asset of the Thalmor. The accompanying note said that another agent, Zaharia, intended to enact revenge by arranging a meeting at Lost Echo Cave. I traveled to the cave and was attacked by a hostile agent.",
+        "string": "В Горном приюте мне попалось досье агента Клинков, который стал работать на Талмор. В приложенной к досье записке говорилось, что другой агент, Захария, собирается отомстить первому агенту за это, назначив встречу в пещере Заблудшее Эхо. Сразу после моего прибытия в пещеру на меня напали."
+    },
+    {
+        "editor_id": "ccBGSSSE053_MiscQuest",
+        "form_id": "[05000828]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Look for a note at Cliffside Retreat",
+        "string": "Найти записку в Горном приюте"
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "form_id": "[05000826]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Look for a note at Cliffside Retreat",
+        "string": "Найти записку в Горном приюте"
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "form_id": "[05000826]",
+        "index": 50,
+        "type": "QUST NNAM",
+        "original": "Defeat Ehlhiel",
+        "string": "Победить Эхлиэля"
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "form_id": "[05000826]",
+        "index": 116,
+        "type": "QUST CNAM",
+        "original": "At Cliffside Retreat, I found a dossier that implies a Blades agent has become an asset of the Thalmor. The accompanying note says that another agent, Zaharia, intends to enact revenge by arranging a meeting at Lost Echo Cave. I traveled to the cave and was attacked by a hostile agent.",
+        "string": "В Горном приюте мне попалось досье агента Клинков, который стал работать на Талмор. В приложенной к досье записке говорится, что другой агент, Захария, собирается отомстить первому агенту за это, назначив встречу в пещере Заблудшее Эхо. Сразу после моего прибытия в пещеру на меня напали."
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "form_id": "[05000826]",
+        "index": 70,
+        "type": "QUST CNAM",
+        "original": "Hunters in Skyrim are known to have retreats in the mountains with supplies and food. If I'm ever in the area near Solitude, I should stop by Cliffside Retreat.",
+        "string": "Охотники Скайрима часто устраивают в горах приюты, где можно найти еду и припасы. Если я окажусь неподалеку от Солитьюда, стоит заглянуть в Горный приют."
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "form_id": "[05000826]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Double-Edged",
+        "string": "Обоюдоострая игра"
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "form_id": "[05000826]",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "(Optional) Disrupt Zaharia's plan and remove the letter",
+        "string": "(Дополнительно) Сорвать план Захарии и забрать письмо"
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "form_id": "[05000826]",
+        "index": 89,
+        "type": "QUST CNAM",
+        "original": "At Cliffside Retreat, I found a dossier that implies a Blades agent has become an asset of the Thalmor. The accompanying note said that another agent, Zaharia, intended to enact revenge by arranging a meeting at Lost Echo Cave. I traveled to the cave and was attacked by a hostile agent, whom I defeated.",
+        "string": "В Горном приюте мне попалось досье агента Клинков, который стал работать на Талмор. В приложенной к досье записке говорилось, что другой агент, Захария, собирается отомстить первому агенту за это, назначив встречу в пещере Заблудшее Эхо. Сразу после моего прибытия в пещеру на меня напали, и в порядке самозащиты мне пришлось убить агента."
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "form_id": "[05000826]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Go to Lost Echo Cave",
+        "string": "Отправиться в пещеру Заблудшее Эхо"
+    },
+    {
+        "editor_id": "ccBGSSSE053_Quest",
+        "form_id": "[05000826]",
+        "index": 84,
+        "type": "QUST CNAM",
+        "original": "At Cliffside Retreat, I found a dossier that implies a Blades agent has become an asset of the Thalmor. The accompanying note says that another agent, Zaharia, intends to enact revenge by arranging a meeting at Lost Echo Cave. I can save the Thalmor agent by intercepting her note, or try to help Zaharia by going to the cave.",
+        "string": "В Горном приюте мне попалось досье агента Клинков, который стал работать на Талмор. В приложенной к досье записке говорится, что другой агент, Захария, собирается отомстить первому агенту за это, назначив встречу в пещере Заблудшее Эхо. Я могу спасти талморского агента, перехватив записку в Храме Богов, или помочь Захарии, отправившись в пещеру."
+    }
+]
