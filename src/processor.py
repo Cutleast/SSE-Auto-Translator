@@ -263,8 +263,7 @@ class Processor:
 
             for translated_plugin in translated_mod.plugins:
                 if (
-                    translated_plugin.status
-                    == translated_plugin.Status.IsTranslated
+                    translated_plugin.status == translated_plugin.Status.IsTranslated
                     and not app.database.get_translation_by_plugin_name(
                         translated_plugin.name
                     )
@@ -433,7 +432,11 @@ class Processor:
                     )
 
                     translation = app.database.create_translation(plugin.path)
-                    for string in [string for group in translation.strings.values() for string in group]:
+                    for string in [
+                        string
+                        for group in translation.strings.values()
+                        for string in group
+                    ]:
                         if string.status == string.Status.TranslationIncomplete:
                             string.status = string.Status.TranslationComplete
                     translation.save_translation()
@@ -657,17 +660,27 @@ class Processor:
         app.log.info("Running deep scan...")
 
         def process(ldialog: LoadingDialog):
-            plugins = [
-                plugin
+            plugins = {
+                plugin: mod
                 for mod in modlist
                 for plugin in mod.plugins
-                if plugin.status == plugin.Status.TranslationInstalled
+                if plugin.status
+                in [
+                    plugin.Status.TranslationInstalled,
+                    plugin.Status.TranslationIncomplete,
+                ]
                 and plugin.tree_item.checkState(0) == qtc.Qt.CheckState.Checked
-            ]
+            }
 
-            for p, plugin in enumerate(plugins):
+            for p, (plugin, mod) in enumerate(plugins.items()):
                 translation = app.database.get_translation_by_plugin_name(plugin.name)
                 if translation is None:
+                    continue
+
+                if (
+                    mod.mod_id == translation.mod_id
+                    and mod.file_id == translation.file_id
+                ):
                     continue
 
                 app.log.info(f"Scanning {plugin.name!r}...")
