@@ -36,6 +36,12 @@ CHAR_WHITELIST = [
 ]
 
 
+STRING_WHITELIST = [
+    "WoollyRhino",
+    "CuSith",
+]
+
+
 def get_checksum(number: int):
     """
     Returns horizontal checksum of `number` (sum of all digits).
@@ -57,7 +63,7 @@ def is_camel_case(text: str):
     return (
         any(char.isupper() and char.isalpha() for char in text[2:])
         and not text.isupper()
-        and text.isalpha()
+        and text.isalnum()
     )
 
 
@@ -76,6 +82,9 @@ def is_valid_string(text: str):
 
     if not text.strip():
         return False
+    
+    if text in STRING_WHITELIST:
+        return True
 
     if "<Alias" in text:
         return True
