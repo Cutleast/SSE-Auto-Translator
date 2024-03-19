@@ -698,6 +698,13 @@ class MainPageWidget(qtw.QWidget):
 
             menu.addSeparator()
 
+            if plugin_selected:
+                open_action = menu.addAction(self.loc.main.open)
+                open_action.setIcon(
+                    qta.icon("fa5s.external-link-alt", color="#ffffff")
+                )
+                open_action.triggered.connect(lambda: os.startfile(selected_plugin.path))
+
             if mod_selected:
                 open_modpage_action = menu.addAction(self.loc.main.open_on_nexusmods)
                 open_modpage_action.setIcon(

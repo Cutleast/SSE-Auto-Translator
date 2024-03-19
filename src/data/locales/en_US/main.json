@@ -104,5 +104,6 @@
     "apply": "Apply",
     "used_software": "Used Software",
     "instance_profile": "Instance Profile (MO2)",
-    "form_id": "FormID"
+    "form_id": "FormID",
+    "open": "Open"
 }
