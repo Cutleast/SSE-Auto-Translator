@@ -165,56 +165,41 @@ def merge_plugin_strings(
     translation_plugin: Path, original_plugin: Path
 ) -> list[String]:
     """
-    Extracts strings from translation and original plugin and merges
-    them using `./data/merger.exe`.
+    Extracts strings from translation and original plugin and merges.
     """
-
-    merger_path = Path(".") / "data" / "merger.exe"
 
     parser = PluginParser(translation_plugin)
     parser.parse_plugin()
     translation_strings = [
-        string.to_string_data()
-        for group in parser.extract_strings().values()
-        for string in group
+        string for group in parser.extract_strings().values() for string in group
     ]
 
     parser = PluginParser(original_plugin)
     parser.parse_plugin()
     original_strings = [
-        string.to_string_data()
-        for group in parser.extract_strings().values()
-        for string in group
+        string for group in parser.extract_strings().values() for string in group
     ]
 
-    with open("translation.json", "w", encoding="utf8") as translation_file:
-        json.dump(translation_strings, translation_file, indent=4, ensure_ascii=False)
+    log.debug(
+        f"Merging {len(original_strings)} original String(s) to {len(translation_strings)} translated String(s)..."
+    )
 
-    with open("original.json", "w", encoding="utf8") as original_file:
-        json.dump(original_strings, original_file, indent=4, ensure_ascii=False)
+    merged_strings: list[String] = []
 
-    cmd = f'{merger_path} "original.json" "translation.json"'
+    for translation_string in translation_strings:
+        try:
+            original_index = original_strings.index(translation_string)
 
-    retcode = os.system(cmd)
+        except ValueError:
+            log.debug("NOT FOUND IN ORIGINAL:", translation_string)
+            continue
 
-    if retcode:
-        raise Exception("Merge failed!")
+        original_string = original_strings.pop(original_index)
+        translation_string = copy(translation_string)
+        translation_string.translated_string = translation_string.original_string
+        translation_string.original_string = original_string.original_string
+        merged_strings.append(translation_string)
 
-    with open("output.json", encoding="utf-8-sig") as output_file:
-        output_data = json.load(output_file)
-
-    if output_data is not None:
-        merged_strings = list(
-            set(  # Remove duplicates
-                [String.from_string_data(string_data) for string_data in output_data]
-            )
-        )
-    else:
-        merged_strings = []
-
-    # Clean up
-    os.remove("translation.json")
-    os.remove("original.json")
-    os.remove("output.json")
+    log.debug(f"Merged {len(merged_strings)} String(s).")
 
     return merged_strings

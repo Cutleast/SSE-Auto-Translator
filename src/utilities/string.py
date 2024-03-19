@@ -169,4 +169,14 @@ class String:
             }
 
     def __hash__(self):
-        return hash((self.editor_id, self.index, self.type, self.original_string))
+        return hash(
+            (self.form_id, self.editor_id, self.index, self.type)
+        )
+    
+    def __eq__(self, __value: object) -> bool:
+        if isinstance(__value, String):
+            return hash(__value) == hash(self)
+
+        raise ValueError(
+            f"Comparison between String and object of type {type(__value)} not possible!"
+        )
