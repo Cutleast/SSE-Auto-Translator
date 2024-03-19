@@ -28,12 +28,12 @@ class Downloader:
 
     downloads: list["Download"] = None
 
+    log = logging.getLogger("Downloader")
+
     def __init__(self, api: NexusModsApi, game_id: str, server_id: str = "Nexus CDN"):
         self.api = api
         self.game_id = game_id
         self.server_id = server_id
-
-        self.log = logging.getLogger("Downloader")
 
     def __repr__(self):
         return "Downloader"

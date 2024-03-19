@@ -4,6 +4,7 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+import logging
 import time
 from typing import Callable
 
@@ -31,6 +32,8 @@ class LoadingDialog(qtw.QDialog):
     stop_signal = qtc.Signal()
     progress_signal = qtc.Signal(dict)
     _timer: int = None
+
+    log = logging.getLogger("LoadingDialog")
 
     def __init__(self, parent: qtw.QWidget, app: main.MainApp, func: Callable):
         super().__init__(parent)
@@ -101,14 +104,6 @@ class LoadingDialog(qtw.QDialog):
         self.progress_signal.connect(
             self.setProgress, type=qtc.Qt.ConnectionType.QueuedConnection
         )
-
-        # Configure dialog
-        self.setWindowTitle(self.app.name)
-        self.setWindowIcon(parent.windowIcon())
-        self.setStyleSheet(parent.styleSheet())
-
-    def __repr__(self):
-        return "LoadingDialog"
 
     def updateProgress(
         self,
@@ -222,7 +217,6 @@ class LoadingDialog(qtw.QDialog):
 
         # Resize dialog
         self.setFixedHeight(self.sizeHint().height())
-        # self.setFixedSize(self.sizeHint())
         widthbefore = self.width()
         widthhint = self.sizeHint().width()
 
@@ -268,7 +262,7 @@ class LoadingDialog(qtw.QDialog):
 
         self.killTimer(self._timer)
 
-        self.app.log.debug(
+        self.log.debug(
             f"Time: {utils.get_diff(self.starttime, time.strftime('%H:%M:%S'))}"
         )
 
@@ -338,7 +332,7 @@ class LoadingDialog(qtw.QDialog):
 
         if confirmation:
             if self.dialog_thread.isRunning():
-                self.app.log.critical("Terminating background thread...")
+                self.log.critical("Terminating background thread...")
                 self.dialog_thread.terminate()
             super().closeEvent(event)
         elif event:

@@ -2,6 +2,7 @@
 Copyright (c) Cutleast
 """
 
+import logging
 import os
 from enum import IntEnum
 from io import BufferedReader, BytesIO
@@ -9,6 +10,8 @@ from io import BufferedReader, BytesIO
 from .datatypes import Hex, Integer, String
 from .record import Record
 from .utilities import PARSE_WHITELIST
+
+log = logging.getLogger("PluginParser.Group")
 
 
 class Group:
@@ -42,7 +45,7 @@ class Group:
         self.header_flags = header_flags
 
         self.parse()
-    
+
     def __repr__(self) -> str:
         import pprint
 
@@ -139,7 +142,7 @@ class Group:
 
             # Unknown
             case _:
-                print("Unknown Group Type:", self.group_type)
+                log.warning("Unknown Group Type:", self.group_type)
 
         return self
 

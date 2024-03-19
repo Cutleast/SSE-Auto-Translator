@@ -4,6 +4,7 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+import logging
 import os
 from pathlib import Path
 
@@ -19,7 +20,11 @@ class ModOrganizer(ModManager):
 
     name = "Mod Organizer 2"
 
+    log = logging.getLogger("ModManager.ModOrganizer")
+
     def get_instances(self):
+        self.log.info("Getting instances...")
+
         instances: list[str] = []
 
         appdata_path = Path(os.getenv("LOCALAPPDATA")) / "ModOrganizer"
@@ -42,11 +47,17 @@ class ModOrganizer(ModManager):
                 ]:
                     instances.append(instance_ini.parent.name)
 
+        self.log.info(f"Got {len(instances)} instances.")
+
         instances.append("Portable")
 
         return instances
 
     def get_modlist(self, instance_name: str, instance_profile: str | None = None):
+        self.log.info(
+            f"Getting mods from {instance_name!r} (Profile: {instance_profile!r})..."
+        )
+
         mods: list[utils.Mod] = []
 
         if instance_profile is None:
@@ -86,6 +97,7 @@ class ModOrganizer(ModManager):
             try:
                 prof_dir = prof_dir.parent / os.listdir(prof_dir.parent)[0]
             except (IndexError, FileNotFoundError):
+                self.log.debug(f"{settings = }")
                 raise Exception(f"No MO2 Profile found in {str(prof_dir.parent)!r}!")
 
         modlist_path = prof_dir / "modlist.txt"
@@ -119,11 +131,17 @@ class ModOrganizer(ModManager):
                     else:
                         mod_id = 0
                         file_id = 0
-                        version = "0"
+                        version = ""
+
+                        self.log.warning(
+                            f"Incomplete meta.ini in {str(mod_meta_path.relative_to(modlist_path))!r}!"
+                        )
                 else:
                     mod_id = 0
                     file_id = 0
-                    version = "0"
+                    version = ""
+
+                    self.log.warning(f"No Metadata available for {active_mod!r}!")
 
                 plugin_files = [
                     file
@@ -146,9 +164,13 @@ class ModOrganizer(ModManager):
                 )
                 mods.append(mod)
 
+        self.log.info(f"Got {len(mods)} mod(s) from instance.")
+
         return mods
 
     def get_instance_profiles(self, instance_name: str) -> list[str]:
+        self.log.info(f"Getting profiles from instance {instance_name!r}...")
+
         if instance_name == "Portable":
             path_file = Path(".") / "data" / "user" / "portable.txt"
             instance_ini_path = Path(path_file.read_text().strip()) / "ModOrganizer.ini"
@@ -156,7 +178,11 @@ class ModOrganizer(ModManager):
             appdata_path = Path(os.getenv("LOCALAPPDATA")) / "ModOrganizer"
             instance_ini_path = appdata_path / instance_name / "ModOrganizer.ini"
 
-        return ModOrganizer.get_profiles_from_ini(instance_ini_path)
+        profiles = ModOrganizer.get_profiles_from_ini(instance_ini_path)
+
+        self.log.info(f"Got {len(profiles)} profile(s).")
+
+        return profiles
 
     @staticmethod
     def get_profiles_from_ini(ini_path: Path) -> list[str]:

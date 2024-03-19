@@ -53,12 +53,10 @@ class NexusModsApi:
 
     scraper: cs.CloudScraper = None
 
+    log = logging.getLogger("NexusModsAPI")
+
     def __init__(self, api_key: str):
         self.api_key = api_key
-        self.log = logging.getLogger("NexusModsApi")
-
-    def __repr__(self):
-        return "NexusModsApi"
 
     def check_api_key(self):
         """

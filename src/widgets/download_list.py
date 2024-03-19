@@ -4,6 +4,7 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+import logging
 import os
 
 import qtawesome as qta
@@ -20,6 +21,8 @@ class DownloadListDialog(qtw.QWidget):
     Dialog for download list for users that
     don't have Nexus Mods Premium.
     """
+
+    log = logging.getLogger("DownloadList")
 
     def __init__(
         self, app: MainApp, downloads: list[utils.Download], updates: bool = False
@@ -321,9 +324,9 @@ class DownloadListDialog(qtw.QWidget):
                     )
                     if old_translation is not None:
                         self.app.database.delete_translation(old_translation)
-                        self.app.log.info("Deleted old Translation from Database.")
+                        self.log.info("Deleted old Translation from Database.")
                     else:
-                        self.app.log.warning(
+                        self.log.warning(
                             "Old Translation could not be found in Database!"
                         )
 

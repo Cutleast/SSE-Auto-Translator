@@ -13,6 +13,11 @@ from .record import Record
 from .subrecord import EDID, StringSubrecord
 
 
+import logging
+
+log = logging.getLogger("PluginParser")
+
+
 class PluginParser:
     """
     Class for plugin parser.
@@ -61,11 +66,11 @@ class PluginParser:
 
         self.open_stream()
 
-        print(f"Parsing {self.plugin_path.name!r}...")
+        log.info(f"Parsing {self.plugin_path.name!r}...")
 
         self.parsed_data = Plugin(self.plugin_stream).parse()
 
-        print("Parsing complete.")
+        log.info("Parsing complete.")
 
         self.close_stream()
 

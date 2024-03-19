@@ -37,6 +37,9 @@ LOG_LEVELS = {
 }
 
 
+logging.getLogger("Utilities")
+
+
 def strlevel2intlevel(level: str) -> int:
     """
     Converts logging level from string to integer.
@@ -294,9 +297,8 @@ def get_masterlist(language: str, cache: bool = True) -> dict[str, dict]:
             masterlist = json.loads(data)
 
         else:
-            raise Exception(
-                f"Request failed! Status Code: {res.status_code}"
-            )
+            log.debug(f"Request URL: {url!r}")
+            raise Exception(f"Request failed! Status Code: {res.status_code}")
 
     return masterlist
 

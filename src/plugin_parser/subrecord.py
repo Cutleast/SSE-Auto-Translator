@@ -2,6 +2,7 @@
 Copyright (c) Cutleast
 """
 
+import logging
 from io import BufferedReader, BytesIO
 
 from . import utilities as utils
@@ -17,7 +18,14 @@ class Subrecord:
     header_flags: dict[str, bool] = None
     type: str = "Subrecord"
 
-    def __init__(self, data_stream: BufferedReader, header_flags: dict[str, bool], type: str = None):
+    log = logging.getLogger("PluginParser.Subrecord")
+
+    def __init__(
+        self,
+        data_stream: BufferedReader,
+        header_flags: dict[str, bool],
+        type: str = None,
+    ):
         self.data_stream = data_stream
         self.header_flags = header_flags
         self.type = type if type else self.type
@@ -28,7 +36,7 @@ class Subrecord:
         text = "\n" + pprint.pformat(self.__dict__, indent=4, sort_dicts=False)
         lines: list[str] = []
         for line in text.splitlines():
-            line = " "*8 + line
+            line = " " * 8 + line
             lines.append(line)
         return "\n".join(lines)
 
@@ -84,6 +92,8 @@ class StringSubrecord(Subrecord):
     index: int | None = None
     string: str | int = None
 
+    log = logging.getLogger("PluginParser.StringSubrecord")
+
     def parse(self):
         self.type = String.string(self.data_stream, 4)
         self.size = Integer.uint16(self.data_stream)
@@ -95,14 +105,16 @@ class StringSubrecord(Subrecord):
         else:
             try:
                 string = (
-                    String.string(self.data_stream, self.size).removesuffix("\x00").strip()
+                    String.string(self.data_stream, self.size)
+                    .removesuffix("\x00")
+                    .strip()
                 )
-                if utils.is_valid_string(string) or string.isnumeric():
+                if utils.is_valid_string(string):
                     self.string = string
                 else:
                     self.string = None
             except UnicodeDecodeError:
-                print(self.data)
+                self.log.warning(f"Failed to decode String data: {self.data!r}")
                 self.string = None
                 raise
 

@@ -4,6 +4,8 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+import logging
+
 import pyperclip
 import qtawesome as qta
 import qtpy.QtCore as qtc
@@ -17,6 +19,8 @@ class StringListDialog(qtw.QWidget):
     """
     Dialog window for string preview.
     """
+
+    log = logging.getLogger("StringListDialog")
 
     def __init__(
         self,
@@ -220,7 +224,7 @@ class StringListDialog(qtw.QWidget):
             item.setFont(1, qtg.QFont("Consolas"))
             item.setFont(2, qtg.QFont("Consolas"))
             if string in self.string_items:
-                print(f"String {string} already has an item!")
+                self.log.warning(f"String {string} already has an item!")
             self.string_items[string] = item
 
             self.strings_widget.addTopLevelItem(item)

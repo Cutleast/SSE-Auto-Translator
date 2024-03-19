@@ -4,6 +4,7 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+import logging
 import os
 from pathlib import Path
 
@@ -24,7 +25,11 @@ class Vortex(ModManager):
     rules: dict[str, list[dict]] = None
     mods: dict[str, utils.Mod] = None
 
+    log = logging.getLogger("ModManager.Vortex")
+
     def get_instances(self):
+        self.log.info("Getting profiles...")
+
         instances: list[str] = []
 
         appdata_path = Path(os.getenv("APPDATA")) / "Vortex"
@@ -32,14 +37,20 @@ class Vortex(ModManager):
 
         if database_path.is_dir():
             flat_data: dict[str, str] = {}
+
+            self.log.debug("Loading database...")
+
             try:
                 with ldb.DB(str(database_path)) as database:
                     prefix = "persistent###profiles###"
                     for key, value in database.iterator(prefix=prefix.encode()):
                         key, value = key.decode(), value.decode()
                         flat_data[key] = value
-            except ldb.IOError:
+            except ldb.IOError as ex:
+                self.log.debug(ex, exc_info=ex)
                 raise Exception("Close Vortex and try again!")
+
+            self.log.debug("Database loaded.")
 
             json_data = utils.parse_flat_dict(flat_data)
 
@@ -52,6 +63,13 @@ class Vortex(ModManager):
                     instance_name = f"{profile_name} ({profile_id})"
                     instances.append(instance_name)
 
+            self.log.info(f"Got {len(instances)} profile(s).")
+
+        else:
+            self.log.warning(
+                "Failed to load instances from database: Found no database!"
+            )
+
         return instances
 
     def get_instance_profiles(self, instance_name: str):
@@ -60,6 +78,8 @@ class Vortex(ModManager):
         return []
 
     def get_modlist(self, instance_name: str, instance_profile: str | None = None):
+        self.log.info(f"Getting mods from {instance_name!r}...")
+
         mods: list[utils.Mod] = []
 
         appdata_path = Path(os.getenv("APPDATA")) / "Vortex"
@@ -124,7 +144,7 @@ class Vortex(ModManager):
                     )
                     mod_id: int = mod_meta_data.get("modId", 0)
                     file_id: int = mod_meta_data.get("fileId", 0)
-                    version: str = mod_meta_data.get("version", "0")
+                    version: str = mod_meta_data.get("version", "")
 
                     plugin_files = [
                         file
@@ -151,7 +171,11 @@ class Vortex(ModManager):
                     self.rules[mod.name] = rules
                     self.mods[modname] = mod
 
+        self.log.debug("Sorting modlist according to conflict rules...")
+
         sorted_list = self.sort_modlist(mods)
+
+        self.log.info(f"Got {len(sorted_list)} mod(s) from profile.")
 
         return sorted_list
 

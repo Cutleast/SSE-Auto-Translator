@@ -4,6 +4,7 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+import logging
 import os
 import re
 from copy import copy
@@ -32,6 +33,8 @@ class EditorTab(qtw.QWidget):
     tree_item: qtw.QTreeWidgetItem = None
 
     strings: list[utils.String] = None
+
+    log = logging.getLogger("TranslationEditor")
 
     def __init__(self, app: MainApp, translation: Translation, plugin_name: str):
         super().__init__()
@@ -516,7 +519,7 @@ class EditorTab(qtw.QWidget):
         Saves translation.
         """
 
-        self.app.log.info(f"Saving Translation {self.translation.name!r}...")
+        self.log.info(f"Saving Translation {self.translation.name!r}...")
 
         self.translation.strings[self.plugin_name] = self.strings
         self.translation.save_translation()
@@ -525,14 +528,14 @@ class EditorTab(qtw.QWidget):
         self.title_label.setText(f"{self.translation.name} > {self.plugin_name}")
         self.tree_item.setText(0, self.plugin_name)
 
-        self.app.log.info("Translation saved.")
+        self.log.info("Translation saved.")
 
     def apply_database(self):
         """
         Applies database to untranslated strings.
         """
 
-        self.app.log.info(f"Applying database to {len(self.strings)} string(s)...")
+        self.log.info(f"Applying database to {len(self.strings)} string(s)...")
 
         pre_translated_strings = len(
             [
@@ -565,7 +568,7 @@ class EditorTab(qtw.QWidget):
         if newly_translated_strings:
             self.changes_signal.emit()
 
-        self.app.log.info(
+        self.log.info(
             f"Database successfully applied to {newly_translated_strings} string(s)."
         )
 

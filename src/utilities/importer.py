@@ -4,7 +4,8 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-import os
+import logging
+from copy import copy
 from pathlib import Path
 
 import bs4
@@ -15,6 +16,8 @@ from plugin_parser import PluginParser
 
 from .mod import Mod
 from .string import String
+
+log = logging.getLogger("Utilities.Importer")
 
 
 def import_from_archive(archive_path: Path, modlist: list[Mod], ldialog=None):

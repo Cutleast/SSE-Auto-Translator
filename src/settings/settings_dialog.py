@@ -4,6 +4,7 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+import logging
 import os
 from pathlib import Path
 
@@ -25,6 +26,8 @@ class SettingsDialog(qtw.QDialog):
     """
 
     changes_pending: bool = False
+
+    log = logging.getLogger("Settings")
 
     def __init__(self, app: MainApp):
         super().__init__(app.root)
@@ -173,7 +176,7 @@ class SettingsDialog(qtw.QDialog):
 
         self.accept()
 
-        self.app.log.info(
+        self.log.info(
             "New settings saved. Changes will take effect after a restart."
         )
 

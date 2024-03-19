@@ -26,14 +26,13 @@ class Updater(qtc.QObject):
     latest_version: semver.Version = None
     download_url: str = None
 
+    log = logging.getLogger("Updater")
+
     def __init__(self, app: MainApp):
         super().__init__()
 
         self.app = app
         self.installed_version = semver.Version(self.app.version)
-        self.log = logging.getLogger(self.__repr__())
-        self.log.addHandler(app.log_handler)
-        self.log.setLevel(app.log.level)
 
     def run(self):
         """
@@ -52,9 +51,6 @@ class Updater(qtc.QObject):
             UpdaterDialog(self.app, self)
         else:
             self.log.info("No update available.")
-
-    def __repr__(self):
-        return "Updater"
 
     def update_available(self) -> bool:
         """
