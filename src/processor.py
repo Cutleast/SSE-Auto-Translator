@@ -433,6 +433,9 @@ class Processor:
                     )
 
                     translation = app.database.create_translation(plugin.path)
+                    for string in [string for group in translation.strings.values() for string in group]:
+                        if string.status == string.Status.TranslationIncomplete:
+                            string.status = string.Status.TranslationComplete
                     translation.save_translation()
                     app.database.add_translation(translation)
                     plugin.status = plugin.Status.TranslationInstalled
