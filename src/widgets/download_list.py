@@ -348,7 +348,7 @@ class DownloadListDialog(qtw.QWidget):
         for translation in download_translations:
             item = qtw.QTreeWidgetItem(
                 [
-                    translation_name,
+                    translation.name,
                     self.app.loc.main.waiting_for_download,
                 ]
             )
