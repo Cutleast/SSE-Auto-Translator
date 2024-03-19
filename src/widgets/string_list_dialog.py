@@ -34,7 +34,7 @@ class StringListDialog(qtw.QWidget):
         self.setWindowTitle(f"{name} - {len(strings)} String(s)")
         self.setWindowFlag(qtc.Qt.WindowType.Window, True)
         self.setObjectName("root")
-        self.setMinimumSize(1000, 700)
+        self.setMinimumSize(1200, 700)
         utils.apply_dark_title_bar(self)
 
         vlayout = qtw.QVBoxLayout()
@@ -188,9 +188,12 @@ class StringListDialog(qtw.QWidget):
                 )
 
                 item.setToolTip(0, string.type)
-                item.setToolTip(1, string.editor_id)
-                item.setToolTip(2, string.original_string)
-                item.setToolTip(3, string.translated_string)
+                if string.form_id is not None:
+                    item.setToolTip(1, string.form_id)
+                if string.editor_id is not None:
+                    item.setToolTip(2, string.editor_id)
+                item.setToolTip(3, string.original_string)
+                item.setToolTip(4, string.translated_string)
 
                 color = string.Status.get_color(string.status)
                 if color:
@@ -207,9 +210,15 @@ class StringListDialog(qtw.QWidget):
                 )
 
                 item.setToolTip(0, string.type)
-                item.setToolTip(1, string.editor_id)
-                item.setToolTip(2, string.original_string)
+                if string.form_id is not None:
+                    item.setToolTip(1, string.form_id)
+                if string.editor_id is not None:
+                    item.setToolTip(2, string.editor_id)
+                item.setToolTip(3, string.original_string)
 
+            item.setFont(0, qtg.QFont("Consolas"))
+            item.setFont(1, qtg.QFont("Consolas"))
+            item.setFont(2, qtg.QFont("Consolas"))
             if string in self.string_items:
                 print(f"String {string} already has an item!")
             self.string_items[string] = item
@@ -230,18 +239,13 @@ class StringListDialog(qtw.QWidget):
         cur_search = self.search_box.text().lower()
 
         for string, item in self.string_items.items():
-            string_text = (
-                string.editor_id
-                if string.editor_id is not None
-                else (
-                    "" + string.form_id
-                    if string.form_id is not None
-                    else ""
-                    + string.type
-                    + string.original_string
-                    + str(string.translated_string)
-                )
-            )
+            string_text = string.type + string.original_string
+            if string.form_id is not None:
+                string_text += string.form_id
+            if string.editor_id is not None:
+                string_text += string.editor_id
+            if string.translated_string is not None:
+                string_text += string.translated_string
 
             string_visible = cur_search in string_text.lower()
 
@@ -286,9 +290,9 @@ class StringListDialog(qtw.QWidget):
         vlayout = qtw.QVBoxLayout()
         dialog.setLayout(vlayout)
 
-        textbox = qtw.QTextEdit()
+        textbox = qtw.QPlainTextEdit()
         textbox.setReadOnly(True)
-        textbox.setText(item.toolTip(column))
+        textbox.setPlainText(item.toolTip(column))
         textbox.setTextInteractionFlags(
             qtc.Qt.TextInteractionFlag.TextSelectableByMouse
         )
