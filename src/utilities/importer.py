@@ -191,7 +191,7 @@ def merge_plugin_strings(
             original_index = original_strings.index(translation_string)
 
         except ValueError:
-            log.debug("NOT FOUND IN ORIGINAL:", translation_string)
+            log.warning(f"Not found in Original: {translation_string}")
             continue
 
         original_string = original_strings.pop(original_index)
