@@ -2,7 +2,6 @@
 Copyright (c) Cutleast
 """
 
-import os
 import struct
 from io import BufferedReader
 
