@@ -71,11 +71,7 @@ class MainApp(qtw.QApplication):
     log_name = f"{time.strftime('%d.%m.%Y')}-{time.strftime('%H.%M.%S')}.log"
     log_path = data_path / "logs"
     log_level = 10  # Debug level as default
-    log_fmt = "\
-[%(asctime)s.%(msecs)03d]\
-[%(levelname)s]\
-[%(threadName)s.%(name)s.%(funcName)s]: \
-%(message)s"
+    log_fmt = "[%(asctime)s.%(msecs)03d][%(levelname)s][%(name)s.%(funcName)s]: %(message)s"
     log = logging.getLogger("MainApp")
 
     first_start = not user_conf_path.is_file()
