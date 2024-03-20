@@ -45,7 +45,7 @@ class Processor:
 
         def process(ldialog: LoadingDialog):
             ldialog.updateProgress(text1=app.loc.main.loading_database)
-            database_strings = list(
+            database_originals = list(
                 set(
                     [
                         string.original_string
@@ -54,10 +54,10 @@ class Processor:
                     ]
                 )
             )
-            database_ids = list(
+            database_strings = list(
                 set(
                     [
-                        f"{string.editor_id}###{string.type}"
+                        string
                         for string in app.database.get_strings()
                         if string.status != string.Status.TranslationRequired
                     ]
@@ -109,9 +109,8 @@ class Processor:
 
                         for string in strings:
                             if (
-                                string.original_string not in database_strings
-                                and f"{string.editor_id}###{string.type}"
-                                not in database_ids
+                                string.original_string not in database_originals
+                                and string not in database_strings
                             ):
                                 plugin.status = plugin.Status.RequiresTranslation
                                 break

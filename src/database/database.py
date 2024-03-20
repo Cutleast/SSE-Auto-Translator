@@ -209,14 +209,14 @@ class TranslationDatabase:
 
             return installed_translations.get(mod_id)
 
-    def apply_translation(self, translation: Translation, plugin_name: str = None):
+    def apply_db_to_translation(self, translation: Translation, plugin_name: str = None):
         """
         Applies database to untranslated strings in `translation`.
         """
 
         installed_translations = [self.vanilla_translation] + self.user_translations
 
-        database_strings = {
+        database_originals = {
             string.original_string: string
             for _translation in installed_translations
             for _plugin_name, plugin_strings in _translation.strings.items()
@@ -224,13 +224,13 @@ class TranslationDatabase:
             for string in plugin_strings
             if string.status != String.Status.TranslationRequired
         }
-        database_ids = {
-            f"{string.editor_id}###{string.type}": string
+        database_strings = [
+            string
             for translation in installed_translations
             for plugin_strings in translation.strings.values()
             for string in plugin_strings
             if string.status != String.Status.TranslationRequired
-        }
+        ]
 
         if plugin_name is not None:
             strings = translation.strings[plugin_name]
@@ -243,24 +243,15 @@ class TranslationDatabase:
 
         for string in strings:
             if string.status == string.Status.TranslationRequired:
-                matching = database_strings.get(string.original_string)
-
-                if matching is None:
-                    matching = database_ids.get(f"{string.editor_id}###{string.type}")
+                if string in database_strings:
+                    matching = database_strings[database_strings.index(string)]
+                else:
+                    matching = database_originals.get(string.original_string)
 
                 if matching is None:
                     continue
 
-                full_matching = (
-                    (
-                        string.editor_id == matching.editor_id
-                        or string.form_id == matching.form_id
-                    )
-                    and string.index == matching.index
-                    and string.type == matching.type
-                    and string.original_string == matching.original_string
-                )
-
+                full_matching = string == matching
                 string.translated_string = matching.translated_string
 
                 if (
@@ -284,62 +275,13 @@ class TranslationDatabase:
         parser = PluginParser(plugin_path)
         parser.parse_plugin()
         plugin_groups = parser.extract_strings()
+        plugin_strings = [
+            string for group in plugin_groups.values() for string in group
+        ]
 
-        result: list[String] = []
-
-        installed_translations = [self.vanilla_translation] + self.user_translations
-
-        database_strings = {
-            string.original_string: string
-            for translation in installed_translations
-            for plugin_strings in translation.strings.values()
-            for string in plugin_strings
-            if string.status != String.Status.TranslationRequired
-        }
-        database_ids = {
-            f"{string.editor_id}###{string.type}": string
-            for translation in installed_translations
-            for plugin_strings in translation.strings.values()
-            for string in plugin_strings
-            if string.status != String.Status.TranslationRequired
-        }
-
-        for original_group in plugin_groups.values():
-            for original_string in original_group:
-                matching = database_strings.get(original_string.original_string)
-
-                if matching is None:
-                    matching = database_ids.get(
-                        f"{original_string.editor_id}###{original_string.type}"
-                    )
-
-                if matching is None:
-                    original_string.translated_string = original_string.original_string
-                    original_string.status = String.Status.TranslationRequired
-                    result.append(original_string)
-                    continue
-
-                full_matching = (
-                    (
-                        original_string.editor_id == matching.editor_id
-                        or original_string.form_id == matching.form_id
-                    )
-                    and original_string.index == matching.index
-                    and original_string.type == matching.type
-                    and original_string.original_string == matching.original_string
-                )
-
-                original_string.translated_string = matching.translated_string
-
-                if (
-                    full_matching
-                    or matching.status == String.Status.NoTranslationRequired
-                ):
-                    original_string.status = matching.status
-                else:
-                    original_string.status = String.Status.TranslationIncomplete
-
-                result.append(original_string)
+        for string in plugin_strings:
+            string.translated_string = string.original_string
+            string.status = string.Status.TranslationRequired
 
         translation_name = f"{plugin_path.name} - {self.language.capitalize()}"
         translation = Translation(
@@ -351,8 +293,9 @@ class TranslationDatabase:
             original_file_id=0,
             original_version="",
             path=self.userdb_path / self.language / translation_name,
-            strings={plugin_path.name.lower(): result},
+            strings={plugin_path.name.lower(): plugin_strings},
         )
+        self.apply_db_to_translation(translation, plugin_path.name.lower())
 
         return translation
 
@@ -374,8 +317,7 @@ class TranslationDatabase:
             for translation in self.user_translations
             for plugin_strings in translation.strings.values()
             for string in plugin_strings
-            if string.status == String.Status.TranslationComplete
-            or string.status == String.Status.TranslationIncomplete
+            if string.status != String.Status.TranslationRequired
         ]
 
         return result

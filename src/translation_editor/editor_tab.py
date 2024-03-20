@@ -558,7 +558,7 @@ class EditorTab(qtw.QWidget):
         def process(ldialog: LoadingDialog):
             ldialog.updateProgress(text1=self.mloc.applying_database)
 
-            self.app.database.apply_translation(self.translation, self.plugin_name)
+            self.app.database.apply_db_to_translation(self.translation, self.plugin_name)
 
         loadingdialog = LoadingDialog(self.app.root, self.app, process)
         loadingdialog.exec()
