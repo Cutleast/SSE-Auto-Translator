@@ -395,10 +395,11 @@ class MainPageWidget(qtw.QWidget):
                     translation = self.app.database.get_translation_by_mod(selected_mod)
 
                 if translation:
-                    url = utils.create_nexus_mods_url(
-                        "skyrimspecialedition", translation.mod_id
-                    )
-                    os.startfile(url)
+                    if translation.mod_id and translation.file_id:
+                        url = utils.create_nexus_mods_url(
+                            "skyrimspecialedition", translation.mod_id
+                        )
+                        os.startfile(url)
                 else:
                     if plugin_selected:
                         mod = [
