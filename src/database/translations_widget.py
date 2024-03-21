@@ -657,10 +657,10 @@ class TranslationsWidget(qtw.QWidget):
                         name=file.stem,
                         mod_id=0,
                         file_id=0,
-                        version="0",
+                        version="",
                         original_mod_id=0,
                         original_file_id=0,
-                        original_version="0",
+                        original_version="",
                         path=self.app.database.userdb_path
                         / self.app.database.language
                         / file.stem,
