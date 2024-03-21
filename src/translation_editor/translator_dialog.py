@@ -164,7 +164,7 @@ class TranslatorDialog(qtw.QWidget):
         self.string.translated_string = self.string_entry.toPlainText()
         self.string.status = utils.String.Status.TranslationComplete
         self.string.tree_item.setText(
-            3, utils.trim_string(self.string.translated_string)
+            4, utils.trim_string(self.string.translated_string)
         )
         self.changes_pending = False
 
