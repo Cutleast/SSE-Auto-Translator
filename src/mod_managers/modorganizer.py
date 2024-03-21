@@ -117,7 +117,7 @@ class ModOrganizer(ModManager):
                         version = general.get("version", None)
 
                         if version is None:
-                            version = "0"
+                            version = ""
 
                         while version.endswith(".0") and version.count(".") > 1:
                             version = version.removesuffix(".0")
