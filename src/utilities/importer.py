@@ -176,9 +176,11 @@ def merge_plugin_strings(
 
     parser = PluginParser(original_plugin)
     parser.parse_plugin()
-    original_strings = [
-        string for group in parser.extract_strings().values() for string in group
-    ]
+    original_strings = {
+        f"{string.form_id}###{string.editor_id}###{string.type}###{string.index}": string
+        for group in parser.extract_strings().values()
+        for string in group
+    }
 
     log.debug(
         f"Merging {len(original_strings)} original String(s) to {len(translation_strings)} translated String(s)..."
@@ -187,14 +189,14 @@ def merge_plugin_strings(
     merged_strings: list[String] = []
 
     for translation_string in translation_strings:
-        try:
-            original_index = original_strings.index(translation_string)
+        original_string = original_strings.get(
+            f"{translation_string.form_id}###{translation_string.editor_id}###{translation_string.type}###{translation_string.index}"
+        )
 
-        except ValueError:
+        if original_string is None:
             log.warning(f"Not found in Original: {translation_string}")
             continue
 
-        original_string = original_strings.pop(original_index)
         translation_string = copy(translation_string)
         translation_string.translated_string = translation_string.original_string
         translation_string.original_string = original_string.original_string
