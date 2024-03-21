@@ -4,6 +4,7 @@ and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+import logging
 from pathlib import Path
 from shutil import rmtree
 
@@ -28,6 +29,8 @@ class TranslationDatabase:
     vanilla_translation: Translation = None
     user_translations: list[Translation] = None
 
+    log = logging.getLogger("TranslationDatabase")
+
     def __init__(
         self,
         userdb_path: Path,
@@ -45,6 +48,8 @@ class TranslationDatabase:
         Loads vanilla translation.
         """
 
+        self.log.info("Loading vanilla database...")
+
         translation_path = self.appdb_path / self.language.lower()
 
         translation = Translation(
@@ -60,10 +65,16 @@ class TranslationDatabase:
         translation.load_translation()
         self.vanilla_translation = translation
 
+        self.log.info(
+            f"Loaded vanilla database for {len(translation.strings)} base game plugin(s)."
+        )
+
     def load_user_database(self):
         """
         Loads user installed translation database.
         """
+
+        self.log.info("Loading user database...")
 
         index_path = self.userdb_path / self.language / "index.json"
 
@@ -101,6 +112,8 @@ class TranslationDatabase:
 
         self.user_translations = translations
 
+        self.log.info(f"Loaded {len(self.user_translations)} user translation(s).")
+
     def load_database(self):
         """
         Loads translation database.
@@ -113,6 +126,8 @@ class TranslationDatabase:
         """
         Saves translation database.
         """
+
+        self.log.info("Saving database...")
 
         index_path = self.userdb_path / self.language / "index.json"
         index_data = [
@@ -130,6 +145,8 @@ class TranslationDatabase:
 
         with index_path.open("w", encoding="utf8") as index_file:
             json.dump(index_data, index_file, indent=4, ensure_ascii=False)
+
+        self.log.info("Database saved.")
 
     def add_translation(self, translation: Translation):
         """
@@ -209,7 +226,9 @@ class TranslationDatabase:
 
             return installed_translations.get(mod_id)
 
-    def apply_db_to_translation(self, translation: Translation, plugin_name: str = None):
+    def apply_db_to_translation(
+        self, translation: Translation, plugin_name: str = None
+    ):
         """
         Applies database to untranslated strings in `translation`.
         """
@@ -224,43 +243,59 @@ class TranslationDatabase:
             for string in plugin_strings
             if string.status != String.Status.TranslationRequired
         }
-        database_strings = [
-            string
+        database_strings = {
+            f"{string.form_id}###{string.editor_id}###{string.type}###{string.index}": string
             for translation in installed_translations
             for plugin_strings in translation.strings.values()
             for string in plugin_strings
             if string.status != String.Status.TranslationRequired
-        ]
+        }
 
         if plugin_name is not None:
-            strings = translation.strings[plugin_name]
+            strings = [
+                string
+                for string in translation.strings[plugin_name]
+                if string.status == string.Status.TranslationRequired
+            ]
         else:
             strings = [
                 string
                 for plugin_strings in translation.strings.values()
                 for string in plugin_strings
+                if string.status == string.Status.TranslationRequired
             ]
 
+        if not len(strings):
+            return
+
+        self.log.info(f"Translating {len(strings)} string(s) from database...")
+        self.log.debug(
+            f"Database size: {len(database_strings)} string(s) ({len(database_originals)} original(s))"
+        )
+
+        translated = 0
         for string in strings:
-            if string.status == string.Status.TranslationRequired:
-                if string in database_strings:
-                    matching = database_strings[database_strings.index(string)]
-                else:
-                    matching = database_originals.get(string.original_string)
+            matching = database_strings.get(
+                f"{string.form_id}###{string.editor_id}###{string.type}###{string.index}"
+            )
 
-                if matching is None:
-                    continue
+            if matching is None:
+                matching = database_originals.get(string.original_string)
 
-                full_matching = string == matching
-                string.translated_string = matching.translated_string
+            if matching is None:
+                continue
 
-                if (
-                    full_matching
-                    or matching.status == String.Status.NoTranslationRequired
-                ):
-                    string.status = matching.status
-                else:
-                    string.status = String.Status.TranslationIncomplete
+            full_matching = string == matching
+            string.translated_string = matching.translated_string
+
+            if full_matching or matching.status == String.Status.NoTranslationRequired:
+                string.status = matching.status
+            else:
+                string.status = String.Status.TranslationIncomplete
+
+            translated += 1
+
+        self.log.info(f"Translated {translated} string(s) from database.")
 
     def create_translation(self, plugin_path: Path):
         """
