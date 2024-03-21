@@ -492,6 +492,7 @@ class TranslationsWidget(qtw.QWidget):
                     )
                     translation.strings = strings
                     translation.save_translation()
+                    self.app.database.add_translation(translation)
 
                     for mod in self.app.mainpage_widget.mods:
                         if any(
@@ -508,7 +509,6 @@ class TranslationsWidget(qtw.QWidget):
                         "Translation not imported. Translation does not contain any strings!"
                     )
 
-            self.app.database.add_translation(translation)
             self.load_translations()
             self.app.mainpage_widget.update_modlist()
 
