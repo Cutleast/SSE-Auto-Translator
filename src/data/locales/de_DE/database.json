@@ -25,6 +25,7 @@
     "choose_file": "Datei der Übersetzung auswählen",
     "queue_finished": "Alle Downloads erfolgreich abgeschlossen.",
     "translation_imported": "Übersetzung erfolgreich in die Datenbank importiert.",
+    "translations_imported": "Übersetzungen erfolgreich in die Datenbank importiert.",
     "checking_for_updates": "Suche nach verfügbaren Updates...",
     "update_check_complete": "Update-Suche abgeschlossen",
     "updates_available": "Updates für [NUMBER] Übersetzung(en) gefunden."
