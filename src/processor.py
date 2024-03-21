@@ -531,7 +531,8 @@ class Processor:
                                 available_translations,
                                 available_translation_files,
                             )
-                            downloads.append(download)
+                            if download not in downloads:
+                                downloads.append(download)
 
         loadingdialog = LoadingDialog(app.root, app, process)
         loadingdialog.exec()
