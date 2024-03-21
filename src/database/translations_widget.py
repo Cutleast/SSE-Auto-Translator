@@ -434,7 +434,8 @@ class TranslationsWidget(qtw.QWidget):
         )
         fdialog.setWindowTitle(self.mloc.import_local)
 
-        fdialog.exec()
+        if fdialog.exec() == fdialog.DialogCode.Rejected:
+            return
 
         selected_files = fdialog.selectedFiles()
 
