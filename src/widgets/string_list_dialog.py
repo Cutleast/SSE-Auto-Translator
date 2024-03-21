@@ -4,6 +4,8 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+import logging
+
 import pyperclip
 import qtawesome as qta
 import qtpy.QtCore as qtc
@@ -17,6 +19,8 @@ class StringListDialog(qtw.QWidget):
     """
     Dialog window for string preview.
     """
+
+    log = logging.getLogger("StringListDialog")
 
     def __init__(
         self,
@@ -34,7 +38,7 @@ class StringListDialog(qtw.QWidget):
         self.setWindowTitle(f"{name} - {len(strings)} String(s)")
         self.setWindowFlag(qtc.Qt.WindowType.Window, True)
         self.setObjectName("root")
-        self.setMinimumSize(1000, 700)
+        self.setMinimumSize(1200, 700)
         utils.apply_dark_title_bar(self)
 
         vlayout = qtw.QVBoxLayout()
@@ -157,6 +161,7 @@ class StringListDialog(qtw.QWidget):
             self.strings_widget.setHeaderLabels(
                 [
                     self.loc.main.type,
+                    self.loc.main.form_id,
                     self.loc.main.editor_id,
                     self.loc.main.original,
                     self.loc.main.string,
@@ -166,6 +171,7 @@ class StringListDialog(qtw.QWidget):
             self.strings_widget.setHeaderLabels(
                 [
                     self.loc.main.type,
+                    self.loc.main.form_id,
                     self.loc.main.editor_id,
                     self.loc.main.string,
                 ]
@@ -178,16 +184,20 @@ class StringListDialog(qtw.QWidget):
                 item = qtw.QTreeWidgetItem(
                     [
                         string.type,
-                        string.editor_id,
+                        string.form_id if string.form_id is not None else "",
+                        string.editor_id if string.editor_id is not None else "",
                         utils.trim_string(string.original_string),
                         utils.trim_string(string.translated_string),
                     ]
                 )
 
                 item.setToolTip(0, string.type)
-                item.setToolTip(1, string.editor_id)
-                item.setToolTip(2, string.original_string)
-                item.setToolTip(3, string.translated_string)
+                if string.form_id is not None:
+                    item.setToolTip(1, string.form_id)
+                if string.editor_id is not None:
+                    item.setToolTip(2, string.editor_id)
+                item.setToolTip(3, string.original_string)
+                item.setToolTip(4, string.translated_string)
 
                 color = string.Status.get_color(string.status)
                 if color:
@@ -197,40 +207,49 @@ class StringListDialog(qtw.QWidget):
                 item = qtw.QTreeWidgetItem(
                     [
                         string.type,
-                        string.editor_id,
+                        string.form_id if string.form_id is not None else "",
+                        string.editor_id if string.editor_id is not None else "",
                         utils.trim_string(string.original_string),
                     ]
                 )
 
                 item.setToolTip(0, string.type)
-                item.setToolTip(1, string.editor_id)
-                item.setToolTip(2, string.original_string)
+                if string.form_id is not None:
+                    item.setToolTip(1, string.form_id)
+                if string.editor_id is not None:
+                    item.setToolTip(2, string.editor_id)
+                item.setToolTip(3, string.original_string)
 
+            item.setFont(0, qtg.QFont("Consolas"))
+            item.setFont(1, qtg.QFont("Consolas"))
+            item.setFont(2, qtg.QFont("Consolas"))
             if string in self.string_items:
-                print(f"String {string} already has an item!")
+                self.log.warning(f"String {string} already has an item!")
             self.string_items[string] = item
 
             self.strings_widget.addTopLevelItem(item)
 
         self.strings_widget.resizeColumnToContents(0)
-        self.strings_widget.header().resizeSection(1, 200)
+        self.strings_widget.resizeColumnToContents(1)
+        self.strings_widget.header().resizeSection(2, 200)
 
         if self.show_translation:
-            self.strings_widget.header().resizeSection(2, 300)
             self.strings_widget.header().resizeSection(3, 300)
+            self.strings_widget.header().resizeSection(4, 300)
         else:
-            self.strings_widget.header().resizeSection(2, 600)
+            self.strings_widget.header().resizeSection(3, 600)
 
     def update_string_list(self):
         cur_search = self.search_box.text().lower()
 
         for string, item in self.string_items.items():
-            string_text = (
-                string.editor_id
-                + string.type
-                + string.original_string
-                + str(string.translated_string)
-            )
+            string_text = string.type + string.original_string
+            if string.form_id is not None:
+                string_text += string.form_id
+            if string.editor_id is not None:
+                string_text += string.editor_id
+            if string.translated_string is not None:
+                string_text += string.translated_string
 
             string_visible = cur_search in string_text.lower()
 
@@ -258,20 +277,26 @@ class StringListDialog(qtw.QWidget):
         Shows `string` in a separate text box window.
         """
 
-        if column < 2:
+        if column < 3:
             return
 
         dialog = qtw.QDialog(self)
-        dialog.setWindowTitle(f"{item.text(1)} ({item.text(0)})")
+        type = item.text(0)
+        form_id = item.text(1)
+        editor_id = item.text(2)
+        if editor_id:
+            dialog.setWindowTitle(f"{editor_id} ({type})")
+        else:
+            dialog.setWindowTitle(f"{form_id} ({type})")
         dialog.setMinimumSize(800, 500)
         utils.apply_dark_title_bar(dialog)
 
         vlayout = qtw.QVBoxLayout()
         dialog.setLayout(vlayout)
 
-        textbox = qtw.QTextEdit()
+        textbox = qtw.QPlainTextEdit()
         textbox.setReadOnly(True)
-        textbox.setText(item.toolTip(column))
+        textbox.setPlainText(item.toolTip(column))
         textbox.setTextInteractionFlags(
             qtc.Qt.TextInteractionFlag.TextSelectableByMouse
         )

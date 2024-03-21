@@ -18,7 +18,7 @@ from main import MainApp
 from mod_managers import SUPPORTED_MOD_MANAGERS
 from plugin_parser import PluginParser
 from processor import Processor
-from widgets import LoadingDialog, StringListDialog
+from widgets import LoadingDialog, StringListDialog, IgnoreListDialog
 
 
 class MainPageWidget(qtw.QWidget):
@@ -167,23 +167,54 @@ class MainPageWidget(qtw.QWidget):
 
         self.tool_bar.addSeparator()
 
-        scan_modlist = self.tool_bar.addAction(
+        scan_modlist_action = self.tool_bar.addAction(
             qtg.QIcon(str(self.app.data_path / "icons" / "detect_lang.svg")),
             self.loc.main.scan_modlist,
         )
-        scan_modlist.triggered.connect(
-            lambda: Processor.scan_modlist(self.mods, self.app)
+        self.tool_bar.widgetForAction(scan_modlist_action).setObjectName(
+            "accent_button"
+        )
+        scan_modlist_action.triggered.connect(
+            lambda: (
+                Processor.scan_modlist(self.mods, self.app),
+                self.tool_bar.widgetForAction(scan_nm_action).setObjectName(
+                    "accent_button"
+                ),
+                self.tool_bar.widgetForAction(scan_modlist_action).setObjectName(""),
+                self.tool_bar.setStyleSheet(self.app.styleSheet()),
+            )
         )
 
         scan_nm_action = self.tool_bar.addAction(
             qtg.QIcon(str(self.app.data_path / "icons" / "scan_nm.svg")),
             self.loc.main.scan_nm_translations,
         )
-        scan_nm_action.triggered.connect(lambda: Processor.scan_nm(self.mods, self.app))
+        scan_nm_action.triggered.connect(
+            lambda: (
+                Processor.scan_nm(self.mods, self.app),
+                self.tool_bar.widgetForAction(
+                    download_translations_action
+                ).setObjectName("accent_button"),
+                self.tool_bar.widgetForAction(scan_nm_action).setObjectName(""),
+                self.tool_bar.setStyleSheet(self.app.styleSheet()),
+            )
+        )
 
         download_translations_action = self.tool_bar.addAction(
             qta.icon("mdi6.download-multiple", color="#ffffff"),
             self.loc.main.download_translations,
+        )
+        download_translations_action.triggered.connect(
+            lambda: (
+                Processor.download_and_install_translations(self.mods, self.app),
+                self.tool_bar.widgetForAction(build_dict_action).setObjectName(
+                    "accent_button"
+                ),
+                self.tool_bar.widgetForAction(
+                    download_translations_action
+                ).setObjectName(""),
+                self.tool_bar.setStyleSheet(self.app.styleSheet()),
+            )
         )
 
         build_dict_action = self.tool_bar.addAction(
@@ -191,7 +222,11 @@ class MainPageWidget(qtw.QWidget):
             self.loc.main.build_dictionary,
         )
         build_dict_action.triggered.connect(
-            lambda: Processor.build_dsd_dictionary(self.mods, self.app)
+            lambda: (
+                Processor.build_dsd_dictionary(self.mods, self.app),
+                self.tool_bar.widgetForAction(build_dict_action).setObjectName(""),
+                self.tool_bar.setStyleSheet(self.app.styleSheet()),
+            )
         )
 
         self.tool_bar.addSeparator()
@@ -248,6 +283,10 @@ class MainPageWidget(qtw.QWidget):
             mouse_pos = self.mods_widget.mapFromGlobal(qtg.QCursor.pos())
             mouse_pos.setY(mouse_pos.y() - self.mods_widget.header().height())
             current_item = self.mods_widget.itemAt(mouse_pos)
+
+            if current_item is None:
+                return
+
             if current_item.isDisabled():
                 return
             if (
@@ -356,10 +395,11 @@ class MainPageWidget(qtw.QWidget):
                     translation = self.app.database.get_translation_by_mod(selected_mod)
 
                 if translation:
-                    url = utils.create_nexus_mods_url(
-                        "skyrimspecialedition", translation.mod_id
-                    )
-                    os.startfile(url)
+                    if translation.mod_id and translation.file_id:
+                        url = utils.create_nexus_mods_url(
+                            "skyrimspecialedition", translation.mod_id
+                        )
+                        os.startfile(url)
                 else:
                     if plugin_selected:
                         mod = [
@@ -659,6 +699,13 @@ class MainPageWidget(qtw.QWidget):
 
             menu.addSeparator()
 
+            if plugin_selected:
+                open_action = menu.addAction(self.loc.main.open)
+                open_action.setIcon(
+                    qta.icon("fa5s.external-link-alt", color="#ffffff")
+                )
+                open_action.triggered.connect(lambda: os.startfile(selected_plugin.path))
+
             if mod_selected:
                 open_modpage_action = menu.addAction(self.loc.main.open_on_nexusmods)
                 open_modpage_action.setIcon(
@@ -684,10 +731,6 @@ class MainPageWidget(qtw.QWidget):
         )
         splitter.addWidget(self.database_widget)
 
-        download_translations_action.triggered.connect(
-            lambda: Processor.download_and_install_translations(self.mods, self.app)
-        )
-
         self.search_box.textChanged.connect(
             lambda text: self.database_widget.translations_widget.update_translations()
         )
@@ -695,8 +738,7 @@ class MainPageWidget(qtw.QWidget):
             self.database_widget.translations_widget.update_translations
         )
 
-        splitter.setStretchFactor(0, 2)
-        splitter.setStretchFactor(1, 1)
+        splitter.setSizes([0.8 * splitter.width(), 0.2 * splitter.width()])
 
         self.mods_widget.resizeColumnToContents(2)
 
@@ -711,6 +753,11 @@ class MainPageWidget(qtw.QWidget):
             self.ignore_list
             + utils.constants.BASE_GAME_PLUGINS
             + utils.constants.AE_CC_PLUGINS
+            + [
+                plugin
+                for plugin, masterlist_entry in self.app.masterlist.items()
+                if masterlist_entry["type"] == "ignore"
+            ]
         )
 
         global none_status_plugins
@@ -757,7 +804,10 @@ class MainPageWidget(qtw.QWidget):
                     plugin.tree_item.setDisabled(False)
 
                 if self.app.database.get_translation_by_plugin_name(plugin.name):
-                    if plugin.status != plugin.Status.TranslationIncomplete:
+                    if (
+                        plugin.status != plugin.Status.TranslationIncomplete
+                        and plugin.status != plugin.Status.IsTranslated
+                    ):
                         plugin.status = plugin.Status.TranslationInstalled
 
                 elif (
@@ -773,6 +823,10 @@ class MainPageWidget(qtw.QWidget):
                             plugin_visible = self.filter_none.isChecked()
                         case plugin.Status.NoStrings:
                             plugin_visible = self.filter_no_strings.isChecked()
+                        case plugin.Status.IsTranslated:
+                            plugin_visible = (
+                                self.filter_translation_installed.isChecked()
+                            )
                         case plugin.Status.TranslationInstalled:
                             plugin_visible = (
                                 self.filter_translation_installed.isChecked()
@@ -803,6 +857,8 @@ class MainPageWidget(qtw.QWidget):
                             none_status_plugins += 1
                         case plugin.Status.NoStrings:
                             no_strings_plugins += 1
+                        case plugin.Status.IsTranslated:
+                            translation_installed_plugins += 1
                         case plugin.Status.TranslationInstalled:
                             translation_installed_plugins += 1
                         case plugin.Status.TranslationIncomplete:
@@ -965,6 +1021,11 @@ class MainPageWidget(qtw.QWidget):
             self.ignore_list
             + utils.constants.BASE_GAME_PLUGINS
             + utils.constants.AE_CC_PLUGINS
+            + [
+                plugin
+                for plugin, masterlist_entry in self.app.masterlist.items()
+                if masterlist_entry["type"] == "ignore"
+            ]
         )
 
         self.mods_widget.clear()
@@ -1055,60 +1116,7 @@ class MainPageWidget(qtw.QWidget):
         Opens Ignore List in a new Popup Dialog.
         """
 
-        dialog = qtw.QDialog(self.app.root)
-        dialog.setWindowTitle(self.mloc.ignore_list)
-        dialog.resize(500, 500)
-        utils.apply_dark_title_bar(dialog)
-
-        vlayout = qtw.QVBoxLayout()
-        dialog.setLayout(vlayout)
-
-        remove_button = qtw.QPushButton(self.loc.main.remove_selected)
-        remove_button.setDisabled(True)
-        vlayout.addWidget(remove_button)
-
-        list_widget = qtw.QListWidget()
-        list_widget.setAlternatingRowColors(True)
-        list_widget.setSelectionMode(list_widget.SelectionMode.ExtendedSelection)
-        vlayout.addWidget(list_widget)
-
-        def on_select():
-            items = list_widget.selectedItems()
-            remove_button.setEnabled(bool(items))
-
-        list_widget.itemSelectionChanged.connect(on_select)
-
-        def remove_selected():
-            items = list_widget.selectedItems()
-            entries = [item.text() for item in items]
-
-            for entry in entries:
-                self.ignore_list.remove(entry)
-
-            for item in items:
-                list_widget.takeItem(list_widget.indexFromItem(item).row())
-
-        remove_button.clicked.connect(remove_selected)
-
-        list_widget.addItems(self.ignore_list)
-
-        search_box = qtw.QLineEdit()
-        search_box.setClearButtonEnabled(True)
-        search_box.addAction(
-            qta.icon("fa.search", color="#ffffff"),
-            qtw.QLineEdit.ActionPosition.LeadingPosition,
-        )
-
-        def search(text: str):
-            for rindex in range(list_widget.count()):
-                list_widget.setRowHidden(
-                    rindex, text.lower() not in list_widget.item(rindex).text().lower()
-                )
-
-        search_box.textChanged.connect(search)
-        search_box.setPlaceholderText(self.loc.main.search)
-        vlayout.addWidget(search_box)
-
+        dialog = IgnoreListDialog(self.app.root, self.app)
         dialog.exec()
 
         self.save_ignore_list()

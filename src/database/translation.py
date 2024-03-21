@@ -53,6 +53,7 @@ class Translation:
         DownloadSuccess = "Download successful"
         DownloadFailed = "Download failed"
         UpdateAvailable = "Update available"
+        UpdateIgnored = "Update ignored"
         Processing = "Processing"
 
     status: Status = None

@@ -1,0 +1,1226 @@
+[
+    {
+        "editor_id": "ccEEJSSE003_FireflyJarActivator",
+        "form_id": "[05000844]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Torchbug in a Jar",
+        "string": "Светлячок в банке"
+    },
+    {
+        "editor_id": "ccEEJSSE003_HonningbrewDecanterActivator",
+        "form_id": "[050009D0]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Honningbrew Decanter",
+        "string": "Графин с медом Хоннинга"
+    },
+    {
+        "editor_id": "ccEEJSSE003_NightingaleBowActivator",
+        "form_id": "[0500086E]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Nightingale Bow",
+        "string": "Соловьиный лук"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskFrostActivator",
+        "form_id": "[05000832]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Dukaan",
+        "string": "Дукан"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemWhiteActivator",
+        "form_id": "[05000849]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Diamond Paragon",
+        "string": "Бриллиантовый парагон"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskFireActivator",
+        "form_id": "[05000833]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ahzidal",
+        "string": "Азидал"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskVokunActivator",
+        "form_id": "[05000848]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Vokun",
+        "string": "Вокун"
+    },
+    {
+        "editor_id": "ccEEJSSE003_LeftEyeoftheFalmerActivator",
+        "form_id": "[05000936]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Left Eye of the Falmer",
+        "string": "Левый Глаз фалмера"
+    },
+    {
+        "editor_id": "ccEEJSSE003_EESMapActivator",
+        "form_id": "[05000D7F]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE003_EmeraldClawActivator",
+        "form_id": "[05000843]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Emerald Dragon Claw",
+        "string": "Изумрудный драконий коготь"
+    },
+    {
+        "editor_id": "EEJSSE003_GlassClawActivator",
+        "form_id": "[0500083A]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskMorokeiActivator",
+        "form_id": "[05000850]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE003_EbonyClawActivator",
+        "form_id": "[0500083B]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ebony Dragon Claw",
+        "string": "Эбонитовый драконий коготь"
+    },
+    {
+        "editor_id": "ccEEJSSE003_GreyFoxBustActivator",
+        "form_id": "[05000A55]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE003_HonningbrewDecanterActivator",
+        "form_id": "[050009D0]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE003_DiamondClawActivator",
+        "form_id": "[0500083F]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE003_ButterflyJarActivator",
+        "form_id": "[05000847]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE003_FireflyJarActivator",
+        "form_id": "[05000844]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskRahgotActivator",
+        "form_id": "[05000838]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Rahgot",
+        "string": "Рагот"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemBlueActivator",
+        "form_id": "[0500084B]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Sapphire Paragon",
+        "string": "Сапфировый парагон"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskVokunActivator",
+        "form_id": "[05000848]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE003_RubyClawActivator",
+        "form_id": "[0500083D]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ruby Dragon Claw",
+        "string": "Рубиновый драконий коготь"
+    },
+    {
+        "editor_id": "ccEEJSSE003_SpiderControlRodActivator",
+        "form_id": "[05000F7C]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Spider Control Rod",
+        "string": "Жезл управления пауками"
+    },
+    {
+        "editor_id": "ccEEJSSE003_SpiderControlRodActivator",
+        "form_id": "[05000F7C]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE003_ChillrendActivator",
+        "form_id": "[0500086A]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskNahkriinActivator",
+        "form_id": "[05000839]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Nahkriin",
+        "string": "Накрин"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskHevnoraakActivator",
+        "form_id": "[05000830]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Hevnoraak",
+        "string": "Хевнорак"
+    },
+    {
+        "editor_id": "EEJSSE003_IvoryClawActivator",
+        "form_id": "[05000841]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ivory Dragon Claw",
+        "string": "Костяной драконий коготь"
+    },
+    {
+        "editor_id": "ccEEJSSE003_QueenBeeStatueActivator",
+        "form_id": "[05000D0B]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE003_CoralClawActivator",
+        "form_id": "[0500083E]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Coral Dragon Claw",
+        "string": "Коралловый драконий коготь"
+    },
+    {
+        "editor_id": "EEJSSE003_GoldenClawActivator",
+        "form_id": "[05000842]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DragonflyJarActivator",
+        "form_id": "[05000845]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE003_CoralClawActivator",
+        "form_id": "[0500083E]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskVolsungActivator",
+        "form_id": "[05000835]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE003_IronClawActivator",
+        "form_id": "[05000840]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Iron Dragon Claw",
+        "string": "Железный драконий коготь"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BeeJarActivator",
+        "form_id": "[0500084E]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE003_NightingaleBladeActivator",
+        "form_id": "[05000877]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Nightingale Blade",
+        "string": "Соловьиный клинок"
+    },
+    {
+        "editor_id": "ccEEJSSE003_EESMapActivator",
+        "form_id": "[05000D7F]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "East Empire Shipping Map",
+        "string": "Морская карта Восточной имперской компании"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemPurpleActivator",
+        "form_id": "[0500084D]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Amethyst Paragon",
+        "string": "Аметистовый парагон"
+    },
+    {
+        "editor_id": "ccEEJSSE003_RightEyeoftheFalmerActivator",
+        "form_id": "[05000C52]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE003_LeftEyeoftheFalmerActivator",
+        "form_id": "[05000936]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemredActivator",
+        "form_id": "[0500084A]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE003_SapphireClawActivator",
+        "form_id": "[0500083C]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Sapphire Dragon Claw",
+        "string": "Сапфировый драконий коготь"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskHevnoraakActivator",
+        "form_id": "[05000830]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskMorokeiActivator",
+        "form_id": "[05000850]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Morokei",
+        "string": "Морокеи"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskKrosisActivator",
+        "form_id": "[05000836]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE003_GrimseverActivator",
+        "form_id": "[0500086D]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE003_GlassClawActivator",
+        "form_id": "[0500083A]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Glass Dragon Claw",
+        "string": "Стеклянный драконий коготь"
+    },
+    {
+        "editor_id": "ccEEJSSE003_ModelShipActivator",
+        "form_id": "[05000D47]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskRahgotActivator",
+        "form_id": "[05000838]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskShockActivator",
+        "form_id": "[0500084F]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskWoodenActivator",
+        "form_id": "[05000834]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE003_GoldenClawActivator",
+        "form_id": "[05000842]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Golden Dragon Claw",
+        "string": "Золотой драконий коготь"
+    },
+    {
+        "editor_id": "ccEEJSSE003_GrimseverActivator",
+        "form_id": "[0500086D]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Grimsever",
+        "string": "Лютый"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskShockActivator",
+        "form_id": "[0500084F]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Zahkriisos",
+        "string": "Закрисош"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskFrostActivator",
+        "form_id": "[05000832]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemGreenActivator",
+        "form_id": "[0500084C]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskNahkriinActivator",
+        "form_id": "[05000839]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE003_IvoryClawActivator",
+        "form_id": "[05000841]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE003_RightEyeoftheFalmerActivator",
+        "form_id": "[05000C52]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Right Eye of the Falmer",
+        "string": "Правый Глаз фалмера"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskVolsungActivator",
+        "form_id": "[05000835]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Volsung",
+        "string": "Вольсунг"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskFireActivator",
+        "form_id": "[05000833]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE003_DiamondClawActivator",
+        "form_id": "[0500083F]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Diamond Dragon Claw",
+        "string": "Алмазный драконий коготь"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemredActivator",
+        "form_id": "[0500084A]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ruby Paragon",
+        "string": "Рубиновый парагон"
+    },
+    {
+        "editor_id": "EEJSSE003_IronClawActivator",
+        "form_id": "[05000840]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE003_RubyClawActivator",
+        "form_id": "[0500083D]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE003_ModelShipActivator",
+        "form_id": "[05000D47]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Model Ship",
+        "string": "Модель корабля"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PuzzleCubeActivator",
+        "form_id": "[05000BC1]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE003_NightingaleBowActivator",
+        "form_id": "[0500086E]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskWoodenActivator",
+        "form_id": "[05000834]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Wooden Mask",
+        "string": "Деревянная маска"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskOtarActivator",
+        "form_id": "[05000837]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE003_NightingaleBladeActivator",
+        "form_id": "[05000877]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemPurpleActivator",
+        "form_id": "[0500084D]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE003_SapphireClawActivator",
+        "form_id": "[0500083C]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE003_ChillrendActivator",
+        "form_id": "[0500086A]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Chillrend",
+        "string": "Охладитель"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DragonflyJarActivator",
+        "form_id": "[05000845]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Dragonfly in a Jar",
+        "string": "Стрекоза в банке"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskKonahrikActivator",
+        "form_id": "[05000831]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BeeJarActivator",
+        "form_id": "[0500084E]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Bee in a Jar",
+        "string": "Пчела в банке"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemGreenActivator",
+        "form_id": "[0500084C]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Emerald Paragon",
+        "string": "Изумрудный парагон"
+    },
+    {
+        "editor_id": "EEJSSE003_EbonyClawActivator",
+        "form_id": "[0500083B]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE003_ButterflyJarActivator",
+        "form_id": "[05000847]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Butterfly in a Jar",
+        "string": "Бабочка в банке"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemBlueActivator",
+        "form_id": "[0500084B]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskOtarActivator",
+        "form_id": "[05000837]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Otar",
+        "string": "Отар"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PuzzleCubeActivator",
+        "form_id": "[05000BC1]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Dwemer Puzzle Cube",
+        "string": "Двемерский куб-головоломка"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskKrosisActivator",
+        "form_id": "[05000836]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Krosis",
+        "string": "Кросис"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemWhiteActivator",
+        "form_id": "[05000849]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE003_GreyFoxBustActivator",
+        "form_id": "[05000A55]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Bust of the Gray Fox",
+        "string": "Бюст Серого Лиса"
+    },
+    {
+        "editor_id": "EEJSSE003_EmeraldClawActivator",
+        "form_id": "[05000843]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE003_QueenBeeStatueActivator",
+        "form_id": "[05000D0B]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Queen Bee Statue",
+        "string": "Статуэтка пчелы"
+    },
+    {
+        "editor_id": "ccEEJSSE003_MothJarActivator",
+        "form_id": "[05000846]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskKonahrikActivator",
+        "form_id": "[05000831]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Konahrik",
+        "string": "Конарик"
+    },
+    {
+        "editor_id": "ccEEJSSE003_MothJarActivator",
+        "form_id": "[05000846]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Moth in a Jar",
+        "string": "Мотылек в банке"
+    },
+    {
+        "editor_id": "ccEEJSSE003_Note",
+        "form_id": "[05000A22]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\r\n\r\nVekel,\r\n\r\nThere's gotta be someone in the guild we can sell the Ratway home to, so I cleared out that manhole exit in the crafting room. It can be used to quickly access the dockside, possibly to evade.. unwanted guests.\r\n\r\nBjorn\r\n\r\n",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\r\n\r\nВекел.\r\n\r\nВ гильдии наверняка найдется кто-нибудь, кому мы можем продать дом в Крысиной норе, так что я расчистил подход к круглому лазу в мастерской. По нему можно быстро попасть в доки, если понадобится избежать... незваных гостей.\r\n\r\nБьорн\r\n\r\n"
+    },
+    {
+        "editor_id": "ccEEJSSE003_Note",
+        "form_id": "[05000A22]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Note to Vekel",
+        "string": "Записка для Векела"
+    },
+    {
+        "editor_id": "ccEEJSSE003_Barrel",
+        "form_id": "[05000803]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Barrel",
+        "string": "Бочка"
+    },
+    {
+        "editor_id": "ccEEJSSE003_Bookcase",
+        "form_id": "[050008EC]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Bookcase",
+        "string": "Книжный шкаф"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SmithingChest",
+        "form_id": "[05000804]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Сундук"
+    },
+    {
+        "editor_id": "ccEEJSSE003_MiscSackLargeFlat03",
+        "form_id": "[05000802]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Large Sack",
+        "string": "Большой мешок"
+    },
+    {
+        "editor_id": "ccEEJSSE003_SmallUrn2",
+        "form_id": "[050008F5]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Small Urn",
+        "string": "Маленькая урна"
+    },
+    {
+        "editor_id": "ccEEJSSE003_TestItems",
+        "form_id": "[05000851]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Test Items",
+        "string": "Тестовые предметы"
+    },
+    {
+        "editor_id": "ccEEJSSE003_LargeChest",
+        "form_id": "[05000EB8]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Сундук"
+    },
+    {
+        "editor_id": "ccEEJSSE003_NobleCupboard",
+        "form_id": "[05000806]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Cupboard",
+        "string": "Буфет"
+    },
+    {
+        "editor_id": "ccEEJSSE003_SmallUrn",
+        "form_id": "[0500089E]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Small Urn",
+        "string": "Маленькая урна"
+    },
+    {
+        "editor_id": "ccEEJSSE003_MiscSackLargeNRS",
+        "form_id": "[05000805]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Large Sack",
+        "string": "Большой мешок"
+    },
+    {
+        "editor_id": "ccEEJSSE003_RiftenRWDoorLoad01",
+        "form_id": "[01002FCA]",
+        "index": null,
+        "type": "DOOR FULL",
+        "original": "Door",
+        "string": "Дверь"
+    },
+    {
+        "editor_id": "ccEEJSSE003_Cabinet",
+        "form_id": "[05000807]",
+        "index": null,
+        "type": "DOOR FULL",
+        "original": "Cabinet",
+        "string": "Шкаф"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BronzeCup",
+        "form_id": "[05000813]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Cup",
+        "string": "Чашка"
+    },
+    {
+        "editor_id": "ccEEJSSE003_Basket03",
+        "form_id": "[05000B08]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Basket",
+        "string": "Корзина"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BronzeUrn",
+        "form_id": "[05000811]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Urn",
+        "string": "Урна"
+    },
+    {
+        "editor_id": "ccEEJSSE003_JeweledShip",
+        "form_id": "[05000853]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Jeweled Ship Model",
+        "string": "Драгоценная модель корабля"
+    },
+    {
+        "editor_id": "ccEEJSSE003_GobletBronze",
+        "form_id": "[05000812]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Goblet",
+        "string": "Кубок"
+    },
+    {
+        "editor_id": "ccEEJSSE004_BronzeBowl",
+        "form_id": "[0500080C]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Bowl",
+        "string": "Миска"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BronzeCandleStick3Misc",
+        "form_id": "[05000809]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Candlestick",
+        "string": "Подсвечник"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BronzeJug",
+        "form_id": "[05000810]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "Кувшин"
+    },
+    {
+        "editor_id": "ccEEJSSE003_Pitcher",
+        "form_id": "[0500080D]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Jeweled Pitcher",
+        "string": "Драгоценный кувшин"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BronzeCandleStick2Misc",
+        "form_id": "[0500080B]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Candlestick",
+        "string": "Подсвечник"
+    },
+    {
+        "editor_id": "ccEEJSSE003_Platter",
+        "form_id": "[05000ABD]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Platter",
+        "string": "Блюдо"
+    },
+    {
+        "editor_id": "ccEEJSSE003_JeweledGoblet",
+        "form_id": "[05000A7F]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Jeweled Goblet",
+        "string": "Драгоценный кубок"
+    },
+    {
+        "editor_id": "ccEEJSSE003_Basket05",
+        "form_id": "[05000B43]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Basket",
+        "string": "Корзина"
+    },
+    {
+        "editor_id": "ccEEJSSE003_LargeJug",
+        "form_id": "[0500080F]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "Кувшин"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BronzeBowl2",
+        "form_id": "[05000B71]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Bowl",
+        "string": "Миска"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BronzeCandleStick1Misc",
+        "form_id": "[0500080A]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Candlestick",
+        "string": "Подсвечник"
+    },
+    {
+        "editor_id": "ccEEJSSE002_PitcherDUPLICATE001",
+        "form_id": "[05000861]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Jeweled Pitcher",
+        "string": "Драгоценный кувшин"
+    },
+    {
+        "editor_id": "ccEEJSSE003_EmptyJar",
+        "form_id": "[05000B70]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Glass Jar",
+        "string": "Стеклянная банка"
+    },
+    {
+        "editor_id": "ccEEJSSE003_Basket01",
+        "form_id": "[050009DF]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Basket",
+        "string": "Корзина"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BronzePlate",
+        "form_id": "[05000B6F]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Plate",
+        "string": "Тарелка"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BronzeJugLg",
+        "form_id": "[0500080E]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "Кувшин"
+    },
+    {
+        "editor_id": "ccEEJSSE003_ArmChair",
+        "form_id": "[05000B78]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Armchair",
+        "string": "Кресло"
+    },
+    {
+        "editor_id": "ccEEJSSE003_Smelter",
+        "form_id": "[05000825]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Smelter",
+        "string": "Плавильня"
+    },
+    {
+        "editor_id": "ccEEJSSE003_ChildBedR",
+        "form_id": "[05000B77]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "Кровать"
+    },
+    {
+        "editor_id": "ccEEJSSE003_AllForge",
+        "form_id": "[05000826]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Anvil",
+        "string": "Наковальня"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DoubleBed",
+        "form_id": "[05000828]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "Кровать"
+    },
+    {
+        "editor_id": "ccEEJSSE003_ThiefHouseKey",
+        "form_id": "[05000829]",
+        "index": null,
+        "type": "KEYM FULL",
+        "original": "Key to Shadowfoot Sanctum",
+        "string": "Ключ от святилища Теневика"
+    },
+    {
+        "editor_id": "RiftenRatway01",
+        "form_id": "[0003B698]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "The Ratway",
+        "string": "Крысиная нора"
+    },
+    {
+        "editor_id": "ccEEJSSE003Interior01",
+        "form_id": "[01002F98]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Shadowfoot Sanctum",
+        "string": "Святилище Теневика"
+    },
+    {
+        "editor_id": "Tamriel",
+        "form_id": "[0000003C]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Скайрим"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000F72]",
+        "index": null,
+        "type": "REFR FULL",
+        "original": "Riften Docks",
+        "string": "Рифтен - доки"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000FD9]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "I'll take it. (7500 gold)",
+        "string": "Покупаю. (7500 зол.)"
+    },
+    {
+        "editor_id": "ccEEJSSE003_HouseQuestBranchTopic",
+        "form_id": "[05000FD4]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I'm looking to make a home here in the Ratways.",
+        "string": "Я хочу купить дом в Крысиной норе."
+    },
+    {
+        "editor_id": "ccEEJSSE003_HouseQuestTopicYES",
+        "form_id": "[05000FD7]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I'm a bit short of money right now. (7500 gold)",
+        "string": "У меня сейчас туговато с деньгами. (7500 зол.)"
+    },
+    {
+        "editor_id": "ccEEJSSE003_HouseQuestTopicNO",
+        "form_id": "[05000FD6]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I'll have to think about it.",
+        "string": "Мне нужно подумать об этом."
+    },
+    {
+        "editor_id": "ccEEJSSE003_HouseQuest",
+        "form_id": "[0500082A]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Enter Shadowfoot Sanctum",
+        "string": "Войти в святилище Теневика"
+    },
+    {
+        "editor_id": "ccEEJSSE003_HouseInitQuest",
+        "form_id": "[05000FDC]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "House Enable Quest",
+        "string": "Задание - покупка дома"
+    },
+    {
+        "editor_id": "ccEEJSSE003_HouseQuest",
+        "form_id": "[0500082A]",
+        "index": 78,
+        "type": "QUST CNAM",
+        "original": "After meeting with the Thieves Guild in the Ragged Flagon, I purchased a home in the Ratways from Vekel. I should find the location and make myself at home.",
+        "string": "После встречи с Гильдией воров в Буйной фляге Векел продал мне дом в Крысиной норе. Надо найти это место и обустроиться там."
+    },
+    {
+        "editor_id": "ccEEJSSE003_HouseQuest",
+        "form_id": "[0500082A]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Purchase a home in the Riften Ratways",
+        "string": "Купить дом в Рифтене в Крысиной норе"
+    },
+    {
+        "editor_id": "ccEEJSSE003_HouseQuest",
+        "form_id": "[0500082A]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Shadowfoot Sanctum",
+        "string": "Святилище Теневика"
+    },
+    {
+        "editor_id": "ccEEJSSE003_HouseQuest",
+        "form_id": "[0500082A]",
+        "index": 73,
+        "type": "QUST CNAM",
+        "original": "Not every home in Skyrim is built above ground. If I'm ever in the need of a more discreet hideout, I should head over to Riften and talk to those in the know.",
+        "string": "Не все дома в Скайриме построены на земле. Если мне понадобится тайное убежище, мне следует отправиться в Рифтен и поговорить со знающими людьми."
+    },
+    {
+        "editor_id": "ccEEJSSE003_HouseQuest",
+        "form_id": "[0500082A]",
+        "index": 84,
+        "type": "QUST CNAM",
+        "original": "After meeting with the Thieves Guild in the Ragged Flagon, I purchased a home in the Ratways from Vekel. I found the entrance to Shadowfoot Sanctum and can now settle in.",
+        "string": "После встречи с Гильдией воров в Буйной фляге Векел продал мне дом в Крысиной норе. Найдя вход в святилище Теневика, я могу обустраиваться на новом месте."
+    },
+    {
+        "editor_id": "ccEEJSSE003_ThiefHouseINTLocation",
+        "form_id": "[05000D41]",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "Shadowfoot Sanctum",
+        "string": "Святилище Теневика"
+    },
+    {
+        "editor_id": "RiftenRatwayLocation",
+        "form_id": "[0003B871]",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "Riften Ratway",
+        "string": "Рифтен - Крысиная нора"
+    },
+    {
+        "editor_id": "ccEEJSSE003_TeleportHollowMessage",
+        "form_id": "[05000B6E]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Sewer Entrance to Shadowfoot Sanctum",
+        "string": "Вход в святилище Теневика через коллектор"
+    },
+    {
+        "editor_id": "ccEEJSSE003_TeleportRiftenMessage",
+        "form_id": "[05000B6D]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Sewer Exit to Riften",
+        "string": "Выход в Рифтен через коллектор"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DisplayLackMsg",
+        "form_id": "[05000E3D]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You do not have the required item.",
+        "string": "У вас нет нужного предмета."
+    }
+]

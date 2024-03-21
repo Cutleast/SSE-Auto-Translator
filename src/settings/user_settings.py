@@ -196,6 +196,12 @@ class UserSettings(qtw.QWidget):
         browse_instance_path_button.clicked.connect(browse)
         hlayout.addWidget(browse_instance_path_button)
 
+        # Masterlist
+        self.masterlist_box = qtw.QCheckBox(self.mloc.use_masterlist)
+        self.masterlist_box.setChecked(self.app.user_config.get("use_masterlist", True))
+        self.masterlist_box.stateChanged.connect(self.on_change)
+        flayout.addRow(self.masterlist_box)
+
     def start_api_setup(self):
         """
         Opens API Setup in a separate dialog.
@@ -218,6 +224,7 @@ class UserSettings(qtw.QWidget):
         hlayout.addStretch()
 
         save_button = qtw.QPushButton(self.loc.main.save)
+        save_button.setObjectName("accent_button")
         save_button.setDisabled(True)
         api_setup.valid_signal.connect(lambda valid: save_button.setEnabled(valid))
 
@@ -253,5 +260,6 @@ class UserSettings(qtw.QWidget):
             "api_key": self.api_key_entry.text(),
             "mod_manager": self.mod_manager_dropdown.currentText(),
             "modinstance": self.modinstance_dropdown.currentText(),
+            "use_masterlist": self.masterlist_box.isChecked(),
             "instance_profile": profile,
         }

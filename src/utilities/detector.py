@@ -20,6 +20,8 @@ class LangDetector:
     detector: LanguageDetector = None
     confidence: int = None
 
+    log = logging.getLogger("Utilities.LangDetector")
+
     def __init__(self, app, confidence: int, desired_lang: Language):
         self.app = app
         self.confidence = confidence
@@ -30,13 +32,6 @@ class LangDetector:
             .with_minimum_relative_distance(self.confidence)
             .build()
         )
-
-        self.log = logging.getLogger(self.__repr__())
-        self.log.addHandler(self.app.log_handler)
-        self.log.setLevel(self.app.log.level)
-
-    def __repr__(self):
-        return "LangDetector"
 
     @staticmethod
     def get_available_langs():

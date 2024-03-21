@@ -13,6 +13,11 @@ from .record import Record
 from .subrecord import EDID, StringSubrecord
 
 
+import logging
+
+log = logging.getLogger("PluginParser")
+
+
 class PluginParser:
     """
     Class for plugin parser.
@@ -61,11 +66,11 @@ class PluginParser:
 
         self.open_stream()
 
-        print(f"Parsing {self.plugin_path.name!r}...")
+        log.info(f"Parsing {self.plugin_path.name!r}...")
 
         self.parsed_data = Plugin(self.plugin_stream).parse()
 
-        print("Parsing complete.")
+        log.info("Parsing complete.")
 
         self.close_stream()
 
@@ -80,7 +85,7 @@ class PluginParser:
         except AttributeError:
             return None
 
-    def extract_group_strings(self, group: Group):
+    def extract_group_strings(self, group: Group, extract_localized: bool = False):
         """
         Extracts strings from parsed <group>.
         """
@@ -92,16 +97,16 @@ class PluginParser:
                 strings += self.extract_group_strings(record)
             else:
                 edid = self.get_record_edid(record)
-                if edid is None or record.type in ["INFO", "DIAL"]:
-                    edid = f"[{record.formid}]"
+                formid = f"[{record.formid}]"
 
                 for subrecord in record.subrecords:
                     if isinstance(subrecord, StringSubrecord):
-                        string: str = subrecord.string
+                        string: str | int = subrecord.string
 
-                        if string:
+                        if string and (isinstance(string, str) or extract_localized):
                             string_data = String(
                                 edid,
+                                formid,
                                 subrecord.index,
                                 f"{record.type} {subrecord.type}",
                                 original_string=string,
@@ -111,7 +116,7 @@ class PluginParser:
 
         return strings
 
-    def extract_strings(self):
+    def extract_strings(self, extract_localized: bool = False):
         """
         Extracts strings from parsed plugin.
         """
@@ -122,7 +127,9 @@ class PluginParser:
         strings: dict[str, list[String]] = {}
 
         for group in self.parsed_data.groups:
-            current_group: list[String] = self.extract_group_strings(group)
+            current_group: list[String] = self.extract_group_strings(
+                group, extract_localized
+            )
 
             if current_group:
                 if group.label in strings:

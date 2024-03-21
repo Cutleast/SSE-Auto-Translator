@@ -1,0 +1,314 @@
+[
+    {
+        "editor_id": "ccBGSSSE058_ArmorBladesGauntlets",
+        "form_id": "[05000802]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Steel Soldier Gauntlets",
+        "string": "Стальные перчатки солдата"
+    },
+    {
+        "editor_id": "ccBGSSSE058_ArmorBladesCuirassEnchanted",
+        "form_id": "[0500083B]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Steel Soldier Armor",
+        "string": "Стальная броня солдата"
+    },
+    {
+        "editor_id": "ccBGSSSE058_ArmorBladesBootsEnchanted",
+        "form_id": "[0500083E]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Steel Soldier Boots",
+        "string": "Стальные сапоги солдата"
+    },
+    {
+        "editor_id": "ccBGSSSE058_ArmorBladesCuirass",
+        "form_id": "[05000801]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Steel Soldier Armor",
+        "string": "Стальная броня солдата"
+    },
+    {
+        "editor_id": "ccBGSSSE058_ArmorBladesShield",
+        "form_id": "[05000804]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Blades Steel Shield",
+        "string": "Стальной щит солдата"
+    },
+    {
+        "editor_id": "ccBGSSSE058_ArmorBladesBoots",
+        "form_id": "[05000800]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Steel Soldier Boots",
+        "string": "Стальные сапоги солдата"
+    },
+    {
+        "editor_id": "ccBGSSSE058_ArmorBladesHelmetEnchanted",
+        "form_id": "[0500083D]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Steel Soldier Helmet",
+        "string": "Стальной шлем солдата"
+    },
+    {
+        "editor_id": "ccBGSSSE058_ArmorBladesHelmet",
+        "form_id": "[05000803]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Steel Soldier Helmet",
+        "string": "Стальной шлем солдата"
+    },
+    {
+        "editor_id": "ccBGSSSE058_ArmorBladesGauntletsEnchanted",
+        "form_id": "[0500083C]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Steel Soldier Gauntlets",
+        "string": "Стальные перчатки солдата"
+    },
+    {
+        "editor_id": "ccBGSSSE058_Confession01",
+        "form_id": "[05000825]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\n<font size='18'>I should've made sure that body sunk to the bottom of the river, but in my old age I've gotten sloppy.\r\n\r\nI guess I should come clean. My real name is Peladius. I'm a bandit. At least, I used to be, until our group was betrayed by one of our own. I started this whole charade because I wanted to know who.\r\n\r\nBut to be honest, it doesn't matter anymore. There was never any honor among thieves. I lost what little claim I had to it, the day I joined Tyra's crew. \r\n\r\nThen again, maybe I can still have an honorable death.\r\n\r\nMeet me at Dragon Bridge. We can settle this there.\r\n</font>",
+        "string": "<font face='$HandwrittenFont'>\r\n<font size='18'>Надо было убедиться, что тело опустилось на дно реки, да я годами я стал совсем рассеянным.\r\n\r\nНаверное, мне надо снять камень с души. На самом деле меня зовут Пеладий. Я – бандит. Ну, был, во всяком случае, пока один из нас не оказался предателем. Я затеял всю эту суету чтобы узнать, кто это был.\r\n\r\nНо если честно, это больше неважно. Среди воров чести не сыскать. А я и бросил это дело, как только вступил в команду Тиры. \r\n\r\nНо может, я все же заслужил достойной смерти.\r\n\r\nВстретимся на Драконьем Мосту. И все уладим.\r\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE058_Confession01",
+        "form_id": "[05000825]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Aldepius' Confession",
+        "string": "Признание Алпедия"
+    },
+    {
+        "editor_id": "ccBGSSSE058_Note01",
+        "form_id": "[0500081B]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\n<font size='18'>One of the locals who frequents the inn has been reported missing. I was about to tell the innkeeper to report it to the guard, but Aldepius said he saw the person in question leap off Dragon Bridge. \r\n\r\nA sad state of affairs, but not our concern.\r\n</font>",
+        "string": "<font face='$HandwrittenFont'>\r\n<font size='18'>Один из местных, завсегдатай таверны, пропал. Я собирался сказать хозяину таверны, чтобы тот доложил страже, но Альдепий сообщил, что видел, как похожий человек бросился с Драконьего моста. \r\n\r\nЖаль, конечно, но это не наше дело.\r\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE058_PeladiusDossier",
+        "form_id": "[0500081A]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Guard's Note on Aldepius",
+        "string": "Записка стражника об Алпедии"
+    },
+    {
+        "editor_id": "ccBGSSSE058_Note01",
+        "form_id": "[0500081B]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Suicide at Dragon Bridge",
+        "string": "Самоубийство на Драконьем Мосту"
+    },
+    {
+        "editor_id": "ccBGSSSE058_PeladiusDossier",
+        "form_id": "[0500081A]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nI am beginning to suspect Aldepius is not who he claims to be.\r\n\r\nHe seemed rather old for a new recruit, but it wasn't until he started asking about our bandit informant that I began to suspect something was amiss. Still, I would've forgiven this as natural curiosity had he not asked to meet him.\r\n\r\nSo I checked with the list of the garrison, and no one by the name Aldepius is on it. I don't know who he is, but he's not a member of the guard. He's stationed at Dragon Bridge at the moment, when my shift is over I'm going to confront him about it.\r\n</font>",
+        "string": "<font face='$HandwrittenFont'>\r\nМне кажется, что Алдепий не тот, за кого себя выдает.\r\n\r\nОн слишком стар для новобранца, ну это ладно. Вот когда он начал выспрашивать о нашем информаторе среди бандитов, я почуял, что что-то не так. Тем не менее, я бы счел это обычным любопытством, да вот он попросил о встрече.\r\n\r\nЯ проверил список гарнизона, но имени \"Алдепий\" нигде нет. Я не знаю, кто он, но точно не из охраны. Он ждет меня на Драконьем мосту. Когда моя смена кончится, я пойду и предьявлю ему все свои подозрения.\r\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE058_AldepiusSons",
+        "form_id": "[05000824]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Aldepius",
+        "string": "Алпедий"
+    },
+    {
+        "editor_id": "ccBGSSSE058_AldepiusImperial",
+        "form_id": "[0500081E]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Aldepius",
+        "string": "Алпедий"
+    },
+    {
+        "editor_id": "ccBGSSSE058_GuardDragonBridgeImperial",
+        "form_id": "[0500081F]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Guard",
+        "string": "Стражник"
+    },
+    {
+        "editor_id": "ccBGSSSE058_Blade",
+        "form_id": "[0500081D]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Peladius",
+        "string": "Пеладий"
+    },
+    {
+        "editor_id": "ccBGSSSE058_GuardDragonBridgeSons",
+        "form_id": "[05000820]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Guard",
+        "string": "Стражник"
+    },
+    {
+        "editor_id": "DragonBridgeFourShieldsTavern",
+        "form_id": "[00013A7C]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Four Shields Tavern",
+        "string": "Таверна \"Четыре щита\""
+    },
+    {
+        "editor_id": "Tamriel",
+        "form_id": "[0000003C]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Скайрим"
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "form_id": "[05000823]",
+        "index": 50,
+        "type": "QUST NNAM",
+        "original": "Go to Dragon Bridge",
+        "string": "Добраться до Драконьего моста"
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "form_id": "[05000823]",
+        "index": 101,
+        "type": "QUST CNAM",
+        "original": "I visited the Four Shields Tavern in Dragon Bridge, and found a note mentioning a recent suicide. I found a body under the bridge with a note that might provide some clues as to what happened.",
+        "string": "В таверне \"Четыре щита\" мне удалось найти записку, в которой говорилось о самоубийстве. Под мостом было тело мужчины. При нем была записка, которая может пролить свет на это происшествие."
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "form_id": "[05000823]",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Read the Guard's Note on Aldepius",
+        "string": "Прочесть записку стражника об Алпедии"
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "form_id": "[05000823]",
+        "index": 60,
+        "type": "QUST NNAM",
+        "original": "Defeat Peladius",
+        "string": "Победить Пеладия"
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "form_id": "[05000823]",
+        "index": 93,
+        "type": "QUST CNAM",
+        "original": "I visited the Four Shields Tavern in Dragon Bridge, and found a note mentioning a recent suicide. I found a body under the bridge which implicated one of the guards as a double agent. I should head back to the inn and confront him.",
+        "string": "В таверне \"Четыре щита\" мне удалось найти записку, в которой говорилось о самоубийстве. Под мостом было тело стражника, который заподозрил, что его сослуживец - двойной агент. Нужно отправиться в таверну и заставить его объясниться."
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "form_id": "[05000823]",
+        "index": 92,
+        "type": "QUST CNAM",
+        "original": "I visited the Four Shields Tavern in Dragon Bridge, and found a note mentioning a recent suicide. I found a body under the bridge which implicated one of the guards as a double agent. At the inn, I found a confession from Peladius, who asked that I give him a warrior's death, to which I obliged.",
+        "string": "В таверне \"Четыре щита\" мне удалось найти записку, в которой говорилось о самоубийстве. Под мостом было тело стражника, который заподозрил, что его сослуживец - двойной агент. В таверне Пеладий во всем сознался и попросил дать ему погибнуть смертью воина. Я не возражаю."
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "form_id": "[05000823]",
+        "index": 87,
+        "type": "QUST CNAM",
+        "original": "I visited the Four Shields Tavern in Dragon Bridge, and found a note mentioning a recent suicide. I found a body under the bridge which implicated one of the guards as a double agent. At the inn, I found a confession from Peladius, who asked that I give him a warrior's death, to which I obliged.",
+        "string": "В таверне \"Четыре щита\" мне удалось найти записку, в которой говорилось о самоубийстве. Под мостом было тело стражника, который заподозрил, что его сослуживец - двойной агент. В таверне Пеладий во всем сознался и попросил дать ему погибнуть смертью воина. Я не возражаю."
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "form_id": "[05000823]",
+        "index": 76,
+        "type": "QUST CNAM",
+        "original": "I've heard the Four Shields Tavern in Dragon Bridge is a good spot to relax and find work. I should investigate it and see if I can learn anything new.",
+        "string": "Говорят, в таверне \"Четыре щита\" можно отдохнуть и поискать работу. Надо там осмотреться и узнать какие-нибудь новости."
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "form_id": "[05000823]",
+        "index": 87,
+        "type": "QUST CNAM",
+        "original": "I visited the Four Shields Tavern in Dragon Bridge, and found a note mentioning a recent suicide. I should investigate the area below the bridge to see what I can find out about the deceased.",
+        "string": "В таверне \"Четыре щита\" мне удалось найти записку, в которой говорилось о самоубийстве. Надо осмотреть реку под мостом и разузнать что-нибудь о погибшем."
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "form_id": "[05000823]",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "I visited the Four Shields Tavern in Dragon Bridge, and found a note mentioning a recent suicide. I found a body under the bridge which implicated one of the guards as a double agent. At the inn, I found a confession from Peladius, who asked that I give him a warrior's death. He will be waiting for me at Dragon Bridge.",
+        "string": "В таверне \"Четыре щита\" мне удалось найти записку, в которой говорилось о самоубийстве. Под мостом было тело стражника, который заподозрил, что его сослуживец - двойной агент. В таверне Пеладий во всем сознался и попросил дать ему погибнуть смертью воина. Он будет ждать меня на Драконьем мосту."
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "form_id": "[05000823]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Look for a note at the Four Shields Tavern",
+        "string": "Найти записку в таверне \"Четыре щита\""
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "form_id": "[05000823]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Over the Edge",
+        "string": "За гранью"
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "form_id": "[05000823]",
+        "index": 84,
+        "type": "QUST CNAM",
+        "original": "I visited the Four Shields Tavern in Dragon Bridge, and found a note mentioning a recent suicide. I found a body under the bridge which implicated one of the guards as a double agent. At the inn, I found a confession from Peladius, who asked that I give him a warrior's death.",
+        "string": "В таверне \"Четыре щита\" мне удалось найти записку, в которой говорилось о самоубийстве. Под мостом было тело стражника, который заподозрил, что его сослуживец - двойной агент. В таверне Пеладий во всем сознался и попросил дать ему погибнуть смертью воина."
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "form_id": "[05000823]",
+        "index": 70,
+        "type": "QUST NNAM",
+        "original": "Retrieve the armor",
+        "string": "Забрать броню"
+    },
+    {
+        "editor_id": "ccBGSSSE058_MiscQuest",
+        "form_id": "[05000819]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Look for a note at the Four Shields Tavern",
+        "string": "Найти записку в таверне \"Четыре щита\""
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "form_id": "[05000823]",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "Confront Aldepius at the inn",
+        "string": "Разобраться с Алпедием в таверне"
+    },
+    {
+        "editor_id": "ccBGSSSE058_Quest",
+        "form_id": "[05000823]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Search for the body down river",
+        "string": "Найти тело в реке под мостом"
+    }
+]

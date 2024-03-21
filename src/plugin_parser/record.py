@@ -16,7 +16,8 @@ class Record:
     Contains parsed record data.
     """
 
-    stream: BufferedReader
+    stream: BufferedReader = None
+    header_flags: dict[str, bool] = None
     type: str = "Record"
 
     subrecords: list[Subrecord] = []
@@ -30,8 +31,9 @@ class Record:
     }
     flags: dict[str, bool] = {}
 
-    def __init__(self, stream: BufferedReader):
+    def __init__(self, stream: BufferedReader, header_flags: dict[str, bool]):
         self.stream = stream
+        self.header_flags = header_flags
 
         self.parse()
 
@@ -88,8 +90,8 @@ class Record:
             hashes: list[int] = []
 
             while peek(stream, 4) == b"CTDA":
-                subrecord = Subrecord(stream)
-                subrecord.parse(self.flags)
+                subrecord = Subrecord(stream, self.header_flags)
+                subrecord.parse()
 
                 value = abs(hash(subrecord.data))
 
@@ -113,14 +115,14 @@ class Record:
                     field_type = String.string(stream, 4)
                     field_data = stream.read(field_size)
                     _ = Integer.uint16(stream)
-                    subrecord = Subrecord(stream, field_type)
+                    subrecord = Subrecord(stream, self.header_flags, field_type)
                     subrecord.size = field_size
                     subrecord.data = field_data
 
                 # Calculate stage "index" from INDX subrecord
                 case "INDX":
-                    subrecord = Subrecord(stream)
-                    subrecord.parse(self.flags)
+                    subrecord = Subrecord(stream, self.header_flags)
+                    subrecord.parse()
 
                     current_stage_index = abs(hash(subrecord.data))
 
@@ -131,30 +133,36 @@ class Record:
 
                 # Get log entry string with current log entry index
                 case "CNAM":
-                    subrecord = StringSubrecord(stream)
-                    subrecord.parse(self.flags)
+                    subrecord = StringSubrecord(stream, self.header_flags)
+                    subrecord.parse()
                     subrecord.index = get_checksum(
                         current_entry_index - current_stage_index
                     )
 
                 # Get quest objective index
                 case "QOBJ":
-                    subrecord = Subrecord(stream)
-                    subrecord.parse(self.flags)
+                    subrecord = Subrecord(stream, self.header_flags)
+                    subrecord.parse()
 
                     current_objective_index = Integer.int16(BytesIO(subrecord.data))
 
                 # Get quest objective string with current objective index
                 case "NNAM":
-                    subrecord = StringSubrecord(stream)
-                    subrecord.parse(self.flags)
+                    subrecord = StringSubrecord(stream, self.header_flags)
+                    subrecord.parse()
                     subrecord.index = current_objective_index
 
                 case _:
-                    subrecord: Subrecord = SUBRECORD_MAPPING.get(
-                        subrecord_type, Subrecord
-                    )(stream)
-                    subrecord.parse(self.flags)
+                    if (
+                        subrecord_type in PARSE_WHITELIST[self.type]
+                        or subrecord_type == "EDID"
+                    ):
+                        subrecord: Subrecord = SUBRECORD_MAPPING.get(
+                            subrecord_type, Subrecord
+                        )(stream, self.header_flags)
+                    else:
+                        subrecord = Subrecord(stream, self.header_flags)
+                    subrecord.parse()
 
             if (
                 subrecord_type in PARSE_WHITELIST[self.type]
@@ -179,14 +187,14 @@ class Record:
                     field_type = String.string(stream, 4)
                     field_data = stream.read(field_size)
                     _ = Integer.uint16(stream)
-                    subrecord = Subrecord(stream, field_type)
+                    subrecord = Subrecord(stream, self.header_flags, field_type)
                     subrecord.size = field_size
                     subrecord.data = field_data
 
                 # Get response id
                 case "TRDT":
-                    subrecord = Subrecord(stream)
-                    subrecord.parse(self.flags)
+                    subrecord = Subrecord(stream, self.header_flags)
+                    subrecord.parse()
 
                     subrecord_stream = BytesIO(subrecord.data)
                     subrecord_stream.seek(12)  # Skip emotion type and value
@@ -195,15 +203,21 @@ class Record:
 
                 # Get response string with current reponse id
                 case "NAM1":
-                    subrecord = StringSubrecord(stream)
-                    subrecord.parse(self.flags)
+                    subrecord = StringSubrecord(stream, self.header_flags)
+                    subrecord.parse()
                     subrecord.index = current_index
 
                 case _:
-                    subrecord: Subrecord = SUBRECORD_MAPPING.get(
-                        subrecord_type, Subrecord
-                    )(stream)
-                    subrecord.parse(self.flags)
+                    if (
+                        subrecord_type in PARSE_WHITELIST[self.type]
+                        or subrecord_type == "EDID"
+                    ):
+                        subrecord: Subrecord = SUBRECORD_MAPPING.get(
+                            subrecord_type, Subrecord
+                        )(stream, self.header_flags)
+                    else:
+                        subrecord = Subrecord(stream, self.header_flags)
+                    subrecord.parse()
 
             if subrecord_type in PARSE_WHITELIST[self.type] or subrecord_type == "EDID":
                 self.subrecords.append(subrecord)
@@ -226,26 +240,33 @@ class Record:
                 field_type = String.string(stream, 4)
                 field_data = stream.read(field_size)
                 _ = Integer.uint16(stream)
-                subrecord = Subrecord(stream, field_type)
+                subrecord = Subrecord(stream, self.header_flags, field_type)
                 subrecord.size = field_size
                 subrecord.data = field_data
 
             elif (perk_type == 4 and subrecord_type == "EPF2") or (
                 perk_type == 7 and subrecord_type == "EPFD"
             ):
-                subrecord = StringSubrecord(stream)
+                subrecord = StringSubrecord(stream, self.header_flags)
                 subrecord.index = perk_index
 
                 perk_index += 1
 
-            elif subrecord_type in SUBRECORD_MAPPING:
+            elif (
+                subrecord_type in SUBRECORD_MAPPING
+                and (
+                    subrecord_type in PARSE_WHITELIST[self.type]
+                    or subrecord_type == "EDID"
+                )
+                and subrecord_type not in ["EPF2", "EPFD"]
+            ):
                 subrecord: Subrecord = SUBRECORD_MAPPING[subrecord_type]
-                subrecord = subrecord(stream)
+                subrecord = subrecord(stream, self.header_flags)
 
             else:
-                subrecord = Subrecord(stream, subrecord_type)
+                subrecord = Subrecord(stream, self.header_flags, subrecord_type)
 
-            subrecord.parse(self.flags)
+            subrecord.parse()
 
             if subrecord_type == "ITXT":
                 subrecord.index = itxt_index

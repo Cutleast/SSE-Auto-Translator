@@ -4,7 +4,6 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-
 LICENSES = {
     "7-zip": "https://www.7-zip.org/license.txt",
     "Qt6": "https://doc.qt.io/qt-6/lgpl.html",
@@ -29,6 +28,4 @@ LICENSES = {
     "unrar": "https://github.com/matiasb/python-unrar/blob/master/LICENSE.txt",
     "googletrans": "https://github.com/ssut/py-googletrans/blob/master/LICENSE",
     "deepl": "https://github.com/DeepLcom/deepl-python/blob/main/LICENSE",
-    "StringMerger": "https://github.com/Cutleast/SSE-Auto-Translator/blob/master/StringMerger/LICENSE",
 }
-

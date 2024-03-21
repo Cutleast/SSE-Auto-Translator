@@ -1,0 +1,802 @@
+[
+    {
+        "editor_id": "ccEDHSSE002_KnightArmorActivatorGauntlets",
+        "form_id": "[05000850]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "Coger"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightArmorActivatorBoots",
+        "form_id": "[05000857]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "Coger"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightTomb",
+        "form_id": "[05000885]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place Heart",
+        "string": "Colocar corazón"
+    },
+    {
+        "editor_id": "ccEDHSSE002_defaultDisableSelfOnActivate",
+        "form_id": "[0500086E]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place Heart",
+        "string": "Colocar corazón"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightArmorActivatorHelm",
+        "form_id": "[0500082D]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ebony Spell Knight Helmet",
+        "string": "Yelmo de caballero mago de élite"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightArmorActivatorCuirass",
+        "form_id": "[0500085A]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ebony Spell Knight Cuirass",
+        "string": "Coraza de caballero mago de élite"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ShrineofMara",
+        "form_id": "[050008C0]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Shrine of Mara",
+        "string": "Shrine of Mara"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightArmorActivatorHelm",
+        "form_id": "[0500082D]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "Coger"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightTomb",
+        "form_id": "[05000885]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Knight's Grave",
+        "string": "Tumba del caballero"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightArmorActivatorBoots",
+        "form_id": "[05000857]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ebony Spell Knight Boots",
+        "string": "Botas de caballero mago de élite"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightArmorActivatorGauntlets",
+        "form_id": "[05000850]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ebony Spell Knight Gauntlets",
+        "string": "Guanteletes de caballero mago de élite"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightArmorActivatorCuirass",
+        "form_id": "[0500085A]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "Coger"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteHelmetBLACK",
+        "form_id": "[050008A3]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Helmet",
+        "string": "Yelmo de caballero mago de ébano"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntSteelCuirass",
+        "form_id": "[05000D74]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Steel Spell Knight Armor",
+        "string": "Armadura de caballero mago de acero"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntSteelBoots",
+        "form_id": "[05000D73]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Steel Spell Knight Boots",
+        "string": "Botas de caballero mago de acero"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntIronBoots",
+        "form_id": "[05000D77]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Iron Spell Knight Boots",
+        "string": "Botas de caballero mago de hierro"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntIronHelmet",
+        "form_id": "[05000D7A]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Iron Spell Knight Helmet",
+        "string": "Yelmo de caballero mago de hierro"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteBoots",
+        "form_id": "[05000D7B]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Boots",
+        "string": "Botas de caballero mago de ébano"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntSteelHelmet",
+        "form_id": "[05000D76]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Steel Spell Knight Helmet",
+        "string": "Yelmo de caballero mago de acero"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteBootsBLACK",
+        "form_id": "[050008A0]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Boots",
+        "string": "Botas de caballero mago de ébano"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntSteelGauntlets",
+        "form_id": "[05000D75]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Steel Spell Knight Gauntlets",
+        "string": "Guanteletes de caballero mago de acero"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteCuirass",
+        "form_id": "[05000D7C]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Armor",
+        "string": "Armadura de caballero mago de ébano"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntIronCuirass",
+        "form_id": "[05000D78]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Iron Spell Knight Armor",
+        "string": "Armadura de caballero mago de hierro"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteGauntlets",
+        "form_id": "[05000D7D]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Gauntlets",
+        "string": "Guanteletes de caballero mago de ébano"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteBootsWHITE",
+        "form_id": "[0500089C]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Boots",
+        "string": "Botas de caballero mago de ébano"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteCuirassWHITE",
+        "form_id": "[0500089D]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Armor",
+        "string": "Armadura de caballero mago de ébano"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntIronGauntlets",
+        "form_id": "[05000D79]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Iron Spell Knight Gauntlets",
+        "string": "Guanteletes de caballero mago de hierro"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteGauntletsWHITE",
+        "form_id": "[0500089E]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Gauntlets",
+        "string": "Guanteletes de caballero mago de ébano"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteGauntletsBLACK",
+        "form_id": "[050008A2]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Gauntlets",
+        "string": "Guanteletes de caballero mago de ébano"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteCuirassBLACK",
+        "form_id": "[050008A1]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Armor",
+        "string": "Armadura de caballero mago de ébano"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteHelmet",
+        "form_id": "[05000D7E]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Helmet",
+        "string": "Yelmo de caballero mago de ébano"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteHelmetWHITE",
+        "form_id": "[0500089F]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Helmet",
+        "string": "Yelmo de caballero mago de ébano"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightNote",
+        "form_id": "[0500089B]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nWe've received reports that the Beldama witches have resurfaced in the Reach.\r\n\r\nI'm calling upon all willing and able knights to cleanse the land of witches, hags, and Reachmen. Remember always the death of our sworn brother, Simon Rodayne, for the Order of the Crypt, and for all of Shornhelm.\r\n\r\n-- Knight Captain Rainore\r\n</font>",
+        "string": "<font face='$HandwrittenFont'>\r\nSe nos ha informado de que las brujas de Beldama han reaparecido en la Cuenca.\r\n\r\nConvoco a todos los caballeros que están dispuestos y capacitados para limpiar esta tierra de brujas, arpías y gentes de la Cuenca. No olvidéis nunca la muerte de nuestro hermano Simon Rodayne, por la Orden de la cripta y por todo Shornhelm.\r\n\r\n-- Capitán caballero Rainore\r\n</font>"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightNote",
+        "form_id": "[0500089B]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Knight Captain's Orders",
+        "string": "Órdenes del caballero de la cripta"
+    },
+    {
+        "editor_id": "ccEDHSSE002_HagNote",
+        "form_id": "[05000889]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Beldama Witch's Note",
+        "string": "Nota de la bruja de Beldama"
+    },
+    {
+        "editor_id": "ccEDHSSE002_HagNote",
+        "form_id": "[05000889]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nWe have stalked our sister Daenella for years, reading the feathers and bones, for not even a witch of Beldama can escape the eye of the coven. \r\n\r\nUsing the crow's sight, we found her upon an altar in the Reach. Time and age did little to fool us. She is the one who betrayed us to the knights. \r\n\r\nSuch an act deserves a cruel death, but simply killing the traitor will not be enough for the ward mother's vengeance. \r\n\r\nWe will corrupt her beloved's heart and return it tainted, damning his soul for eternity. She will know this as she dies upon the rock.\r\n</font>",
+        "string": "<font face='$HandwrittenFont'>\r\nLlevamos años siguiendo el rastro de nuestra hermana Daenella, examinando plumas y huesos. Ni siquiera una bruja de Beldama puede esconderse de nosotros. \r\n\r\nGracias a la vista de cuervo, la encontramos en un altar en la Cuenca. Pese al paso del tiempo y a la edad, la reconocimos. Fue ella quien nos vendió a los caballeros. \r\n\r\nSemejante acción merece una muerte cruel, pero a la madre protectora no le basta con matar a la traidora. \r\n\r\nCorromperemos el corazón de su amado y lo devolveremos contaminado para condenar su alma por toda la eternidad. Se lo haremos saber mientras muere sobre la roca.\r\n</font>"
+    },
+    {
+        "editor_id": "ccEDHSSE002_QuestStartNote",
+        "form_id": "[05000838]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Ghost Sighting",
+        "string": "Aparición fantasmal"
+    },
+    {
+        "editor_id": "ccEDHSSE002_WarMagesShornhelm",
+        "form_id": "[05000853]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Crypt of the Heart - Draft",
+        "string": "Cripta del corazón - Borrador"
+    },
+    {
+        "editor_id": "ccEDHSSE002_WarMagesShornhelm",
+        "form_id": "[05000853]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\r\n<p align=\"center\">\r\n<font face='$HandwrittenFont'>\r\n\r\nCrypt of the Heart\r\n\r\n\r\n\r\nby \r\nAriana Dumas\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<font face='$HandwrittenFont'>When it comes to tales of bravery and valor, few have a greater claim than the Knightly Orders of High Rock. Like the Knights of the Rose in Wayrest, many serve as royal guardians and protectors of the realm. It is through their defense of king and country that their fame resounds.\r\n\r\nYet others swear an oath of a different kind. Not bound by the walls of their kingdom, they scour the hills in search of Reachmen, witches, and Forsworn, pledging to deliver justice where savagery and chaos rule.\r\n\r\nOne such group refers to themselves as the Order of the Crypt. At first glance, the name might seem ironic, but the Crypt of Hearts they swore to protect went beyond the underground chamber in Shornhelm. The knights pledged to protect the hearts entombed in all of us, lest they be replaced with the briars of the unholy.\r\n\r\nYet despite the air of nobility they carried, in the Reach these knights were known by a different name; The War Mages of Shornhelm. For they gave no mercy to the wicked, and the land they tread was riven with scars made of fire and sword.\r\n\r\nWhy the knights chose to extend beyond the kingdom is a matter of debate. Much of it can be traced to a blood feud, and the death of a knight named Simon Rodayne. Tricked by the witch Daenalla, a Sister of the Beldama Coven, his heart was stolen and replaced with a briarheart. In retaliation, his acolytes drove the coven further and further east, killing any Reachmen who would dare give them quarter. \r\n\r\nYet in huts small and muddy with smoke, the oral histories tell a different story. They say Simon gave his heart willingly to the witch, and together they fled the wrath of both their clans, knowing they would receive neither understanding nor forgiveness.\r\n\r\nWhen Simon died, Daenalla returned his heart to him, and buried him at the altar where they wed. Such was the pain of her loss that she wept from the Morning to the Evening Star, until her tears flooded the canyon below and became one with the river Karth. \r\n\r\nTo this day, Simon's ghost is said to haunt the pass below his grave, watching over the river which bears his beloved's tears.\r\n\r\nWhether any of that is true or simply the embellishments of history, none can say with certainty. However, it is worth noting that the grave itself exists. Whether the heart inside belongs to Simon or another, is a question for its keeper.</p></font>",
+        "string": "[pagebreak]\r\n<p align=\"center\">\r\n<font face='$HandwrittenFont'>\r\n\r\nLa cripta del corazón\r\n\r\n\r\n\r\nde \r\nAriana Dumas\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<font face='$HandwrittenFont'>Entre los protagonistas de historias de gallardía y valor, pocos superan a las órdenes de caballería de Roca Alta. Como los Caballeros de la Rosa de Quietud, muchos sirven como guardianes reales y protectores del reino. Sus actos en defensa del rey y del país resuenan con fama universal.\r\n\r\nSin embargo, hay quienes realizan juramentos de otro tipo. Cruzan las fronteras de su reino para recorrer las colinas en busca de gentes de la Cuenca, brujas y Renegados, bajo la promesa de hacer justicia allá donde reinen la barbarie y el caos.\r\n\r\nUno de estos grupos se hace llamar la Orden de la Cripta. De entrada, el nombre puede parecer irónico, pero la Cripta de los corazones que juraron defender va más allá de la cámara subterránea de Shornhelm. Los caballeros juraron proteger los corazones sepultados en el interior de todos nosotros, e impedir que se convirtieran en el espino de la perversidad.\r\n\r\nSin embargo, a pesar de su aire de nobleza, en la Cuenca se conocía a estos caballeros por otro nombre: los Magos guerreros de Shornhelm. No tenían compasión con los malvados, y la tierra por la que pasaban quedaba marcada a fuego y espada.\r\n\r\nNo está del todo claro por qué decidieron salir de los confines del reino estos caballeros. En parte se puede atribuir a una enemistad mortal y a la muerte de un caballero llamado Simon Rodayne. Tras caer en el engaño de la bruja Daenella, una hermana del Aquelarre de Beldama, le robaron el corazón y lo sustituyeron por uno de espino. Como represalia, sus acólitos hostigaron al aquelarre y lo empujaron cada vez más hacia el este, y aniquilaron a cualquier habitante de la Cuenca que osara darles cuartel. \r\n\r\nSin embargo, en chozas diminutas llenas de barro y humo se cuenta de viva voz una historia muy diferente. Dicen que Simon entregó su corazón voluntariamente a la bruja, y que huyeron juntos para evitar la ira de sus dos clanes, sabiendo que no habría compasión ni perdón para ellos.\r\n\r\nCuando Simon murió, Daenella le devolvió el corazón y lo enterró en el altar donde celebraron su boda. Tan grande era el dolor por la pérdida de su amado, que estuvo llorando desde la Estrella del alba hasta la Estrella vespertina, hasta que sus lágrimas inundaron el acantilado que se abría a sus pies y terminaron por sumarse a las aguas del río Karth. \r\n\r\nSe dice que hasta día de hoy, el fantasma de Simon se aparece en el paso que existe bajo su tumba, contemplando el río por el que corren las lágrimas de su amada.\r\n\r\nEs imposible saber con certeza si hay algo de verdad en todo esto, o si se trata simplemente de una historia adornada de romanticismo. Sin embargo, cabe señalar que la tumba existe de verdad. Su guardián es el único que sabe si el corazón que contiene es de Simon o de otro.</p></font>"
+    },
+    {
+        "editor_id": "ccEDHSSE002_BriarHeartNote",
+        "form_id": "[05000855]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Forsworn Shaman's Note",
+        "string": "Nota del chamán Renegado"
+    },
+    {
+        "editor_id": "ccEDHSSE002_QuestStartNote",
+        "form_id": "[05000838]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nI've heard a lot of strange tales in the Reach. Witches turning men into frogs, wolves the size of bears, things like that. There's even a story about an old knight's tomb, and a ghost haunting the Reach.\r\n\r\nNow, normally I brush off such talk. The emptier the bottle, the taller the tale. \r\n\r\nBut what I saw last night changed my mind. I was heading south toward Dushnikh Yal, to set up camp and mine the hills in the morning. I had just crossed the river, when I saw something come out of the fog. \r\n\r\nIt was just like in the stories. He looked like a man cast from the moonlight. I could see him, and at the same, I could see right through him. Not only that, he was dressed in some armor I've never seen, and bade me to follow him up the hillside. \r\n\r\nBut I did no such thing. Instead I dropped my knapsack, turned tail and ran. Call me a snowback, a milk-drinker, I don't care. No good can come from following the dead. There's is a place no man wants to visit.\r\n</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nHe oído muchas historias extrañas sobre la Cuenca. Brujas que convierten a los hombres en ranas, lobos del tamaño de un oso y cosas así. Incluso se cuenta una historia sobre una antigua tumba ocupada por un caballero, y un fantasma que merodea por la Cuenca.\r\n\r\nNormalmente no hago caso de habladurías así. Cuando más vacía está la botella, más descabellada suele ser la historia. \r\n\r\nPero anoche vi algo que me hizo cambiar de idea. Me dirigía al sur hacia Dushnikh Yal para acampar y extraer minerales de las colinas por la mañana. En cuanto crucé el río, vi algo saliendo de la niebla. \r\n\r\nEra como en los cuentos. Parecía un hombre hecho de luz de luna. Lo veía, y a la vez veía a través de él. Y no solo eso, además llevaba una armadura que no había visto nunca, y me rogó que le siguiera por la ladera de la colina. \r\n\r\nPero ni se me ocurrió hacerle caso. Lo que hice fue soltar la mochila, dar media vuelta y correr. Podéis llamarme gallina, bebeleche o lo que queráis, me da igual. Seguir a los muertos no puede traer nada bueno. Vienen de un sitio que nadie quiere visitar.\r\n</font>"
+    },
+    {
+        "editor_id": "ccEDHSSE002_BriarHeartNote",
+        "form_id": "[05000855]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nWe've killed the traitor and given the knight's heart to the mother. She's gone back to Karthspire to perform the ritual.\r\n\r\nWe'll stand watch until she returns, and drain the blood of any knights who interfere.\r\n</font>",
+        "string": "<font face='$HandwrittenFont'>\r\nHemos matado a la traidora y le hemos dado el corazón del caballero a la madre. Ha vuelto a la Aguja de Karth para celebrar el ritual.\r\n\r\nEstaremos en guardia hasta que regrese, y derramaremos la sangre de cualquier caballero que ose interferir.\r\n</font>"
+    },
+    {
+        "editor_id": "ccEDHSSE002_QAChest",
+        "form_id": "[05000D7F]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Spell Knight Chest",
+        "string": "Cofre de caballero mago"
+    },
+    {
+        "editor_id": "ccEDHSSE002_MarkarthCoffin01container",
+        "form_id": "[05000811]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Grave",
+        "string": "Tumba"
+    },
+    {
+        "editor_id": "ccEDHSSE002_HumanHeart",
+        "form_id": "[0500085D]",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Simon Rodayne's Heart",
+        "string": "Corazón de Simon Rodayne"
+    },
+    {
+        "editor_id": "ccEDHSSE002_CorruptedHumanHeart",
+        "form_id": "[0500085B]",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Corrupted Human Heart",
+        "string": "Corazón humano corrupto"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Daenella",
+        "form_id": "[05000877]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Daenella",
+        "string": "Daenella"
+    },
+    {
+        "editor_id": "ccEDHSSE002_LvlForswornShaman",
+        "form_id": "[05000845]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Forsworn Shaman",
+        "string": "Forsworn Shaman"
+    },
+    {
+        "editor_id": "ccEDHSSE002_SpellKnight03",
+        "form_id": "[0500087B]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Simon",
+        "string": "Simon"
+    },
+    {
+        "editor_id": "ccEDHSSE002_SpellKnight03",
+        "form_id": "[0500087B]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Simon Rodayne",
+        "string": "Simon Rodayne"
+    },
+    {
+        "editor_id": "ccEDHSSE002_LvlForswornBoss",
+        "form_id": "[050008A4]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Forsworn Briarheart",
+        "string": "Forsworn Briarheart"
+    },
+    {
+        "editor_id": "ccEDHSSE002_SpellKnightSteel",
+        "form_id": "[05000898]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Knight of the Crypt",
+        "string": "Caballero de la cripta"
+    },
+    {
+        "editor_id": "ccEDHSSE002_LvlForswornMeleeFemale",
+        "form_id": "[05000847]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Forsworn Ravager",
+        "string": "Forsworn Ravager"
+    },
+    {
+        "editor_id": "ccEDHSSE002_DaenellaCorpse",
+        "form_id": "[0500080E]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Daenella",
+        "string": "Daenella"
+    },
+    {
+        "editor_id": "ccEDHSSE002_SpellKnight02",
+        "form_id": "[05000867]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Simon Rodayne",
+        "string": "Simon Rodayne"
+    },
+    {
+        "editor_id": "ccEDHSSE002_SpellKnightIron",
+        "form_id": "[05000897]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Knight of the Crypt",
+        "string": "Caballero de la cripta"
+    },
+    {
+        "editor_id": "ccEDHSSE002_SpellKnight",
+        "form_id": "[05000834]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Ghost Knight",
+        "string": "Caballero fantasma"
+    },
+    {
+        "editor_id": "ccEDHSSE002_SpellKnight02",
+        "form_id": "[05000867]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Simon",
+        "string": "Simon"
+    },
+    {
+        "editor_id": "MarkarthSilverBloodInn",
+        "form_id": "[00016DFE]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Silver-Blood Inn",
+        "string": "Posada Sangre Argéntea"
+    },
+    {
+        "editor_id": "Tamriel",
+        "form_id": "[0000003C]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Skyrim"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "I found a book at the Silver-Blood Inn that mentions the ghost of a Breton knight named Simon Rodayne. According to the book, he haunts the river below his tomb, south of Markarth. I should investigate the area and see what I can find.",
+        "string": "En la posada Sangre Argéntea he encontrado un libro que habla sobre el fantasma de un caballero bretón llamado Simon Rodayne. En él se dice que merodea por el río que pasa cerca de su tumba, al sur de Markarth. Debería investigar la zona y ver qué encuentro."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 2000,
+        "type": "QUST NNAM",
+        "original": "Retrieve the knight's armor",
+        "string": "Hazte con la armadura del caballero."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 77,
+        "type": "QUST CNAM",
+        "original": "I found a knight's tomb in Markarth surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire. At Karthspire, I found two hagravens conducting a ritual with the heart at its center. I retrieved the heart and returned it to the knight's tomb. ",
+        "string": "He encontrado a tres Renegados junto a la tumba de un caballero en Markarth, y los he derrotado en combate. El chamán llevaba una nota que sugería que la habían profanado y se habían llevado el corazón del caballero a la Aguja de Karth. Allí he encontrado a dos brujas cuervo celebrando un ritual en torno al corazón. Me he hecho con él y lo he devuelto a la tumba del caballero. "
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 85,
+        "type": "QUST CNAM",
+        "original": "I investigated the area south of Markarth and was confronted by a ghost. After following the ghost and climbing up to the top of the mountain, I found a tomb surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire.",
+        "string": "Mientras investigaba la zona al sur de Markarth, me he topado con un fantasma. Después de seguirle y subir hasta la cima de la montaña, he encontrado a tres Renegados junto a la tumba de un caballero, y los he derrotado en combate. El chamán llevaba una nota que sugería que la habían profanado y se habían llevado el corazón del caballero a la Aguja de Karth."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 79,
+        "type": "QUST CNAM",
+        "original": "The inns of Skyrim are a good place to look for rumors. Being on the western border, Markarth is one of the busiest holds in Skyrim. I should head to the inn there and see what I can find.",
+        "string": "Las posadas de Skyrim son buenos lugares para oír rumores. Markarth está situada en la frontera occidental, por lo que es una de las ciudades con más movimiento de Skyrim. Debería dirigirme a la posada, a ver qué encuentro."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 50,
+        "type": "QUST NNAM",
+        "original": "Search the Forsworn Shaman",
+        "string": "Examina al chamán Renegado."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 86,
+        "type": "QUST CNAM",
+        "original": "I found a book at the Silver-Blood Inn that mentions the ghost of a Breton knight named Simon Rodayne. According to the book, he haunts the river below his tomb, south of Markarth. At the river, I found the presence of a ghost who wandered off further south. I followed the ghost up the hill when it vanished. The knight's tomb must be somewhere in the surrounding area.",
+        "string": "En la posada Sangre Argéntea he encontrado un libro que habla sobre el fantasma de un caballero bretón llamado Simon Rodayne. En él se dice que merodea por el río que pasa cerca de su tumba, al sur de Markarth. En el río he descubierto la presencia de un fantasma que vagaba en dirección al sur. He subido la colina siguiendo sus pasos, y al llegar arriba se ha desvanecido. La tumba del caballero debe de estar en los alrededores."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 104,
+        "type": "QUST CNAM",
+        "original": "I found a knight's tomb in Markarth surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire. At Karthspire, I found two hagravens conducting a ritual with the heart at its center. I retrieved the heart and returned it to the knight's tomb. The heart was still corrupted, however, and the knight's ghost turned hostile as a result. I defeated the knight and took his armor for myself.",
+        "string": "He encontrado a tres Renegados junto a la tumba de un caballero en Markarth, y los he derrotado en combate. El chamán llevaba una nota que sugería que la habían profanado y se habían llevado el corazón del caballero a la Aguja de Karth. Allí he encontrado a dos brujas cuervo celebrando un ritual en torno al corazón. Me he hecho con él y lo he devuelto a la tumba del caballero. Sin embargo, este se ha vuelto hostil porque el corazón seguía estando corrupto. He derrotado al caballero y me he quedado con su armadura."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 82,
+        "type": "QUST CNAM",
+        "original": "I investigated the area south of Markarth and was confronted by a ghost. After following the ghost and climbing up to the top of the mountain, I found a tomb surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire. At Karthspire, I found two hagravens conducting a ritual with the heart at its center. I retrieved the heart and can now return it to the knight's tomb.",
+        "string": "Mientras investigaba la zona al sur de Markarth, me he topado con un fantasma. Después de seguirle y subir hasta la cima de la montaña, he encontrado a tres Renegados junto a la tumba de un caballero, y los he derrotado en combate. El chamán llevaba una nota que sugería que la habían profanado y se habían llevado el corazón del caballero a la Aguja de Karth. Allí he encontrado a dos brujas cuervo celebrando un ritual en torno al corazón. Me he hecho con él y ya puedo devolverlo a la tumba del caballero."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 80,
+        "type": "QUST NNAM",
+        "original": "(Optional) Purify the heart at the altar",
+        "string": "(Opcional) Purifica el corazón en el altar."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Investigate the Silver-Blood Inn",
+        "string": "Investiga la posada Sangre Argéntea."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 79,
+        "type": "QUST CNAM",
+        "original": "I found a book at the Silver-Blood Inn that mentions the ghost of a Breton knight named Simon Rodayne. According to the book, he haunts the river below his tomb, south of Markarth. After following the ghost and climbing up to the top of the mountain, I found a tomb surrounded by three Forsworn, and defeated them in battle.",
+        "string": "En la posada Sangre Argéntea he encontrado un libro que habla sobre el fantasma de un caballero bretón llamado Simon Rodayne. En él se dice que merodea por el río que pasa cerca de su tumba, al sur de Markarth. Tras seguir al fantasma y subir hasta la cima de la montaña, he descubierto una tumba rodeada por tres Renegados, y los he derrotado en combate."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 73,
+        "type": "QUST CNAM",
+        "original": "I investigated the area south of Markarth and was confronted by a ghost. After following the ghost and climbing up to the top of the mountain, I found a tomb surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire. At Karthspire, I found two hagravens conducting a ritual with the heart at its center. I retrieved the heart and returned it to the knight's tomb.",
+        "string": "Mientras investigaba la zona al sur de Markarth, me he topado con un fantasma. Después de seguirle y subir hasta la cima de la montaña, he encontrado a tres Renegados junto a la tumba de un caballero, y los he derrotado en combate. El chamán llevaba una nota que sugería que la habían profanado y se habían llevado el corazón del caballero a la Aguja de Karth. Allí he encontrado a dos brujas cuervo celebrando un ritual en torno al corazón. Me he hecho con él y lo he devuelto a la tumba del caballero."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 1000,
+        "type": "QUST NNAM",
+        "original": "Retrieve the knight's armor",
+        "string": "Hazte con la armadura del caballero."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 105,
+        "type": "QUST CNAM",
+        "original": "I found a knight's tomb in Markarth surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire. At Karthspire, I found two hagravens conducting a ritual with the heart at its center. I retrieved the heart and returned it to the knight's tomb. The heart was still corrupted, however, and the knight's ghost turned hostile as a result.",
+        "string": "He encontrado a tres Renegados reunidos junto a la tumba de un caballero en Markarth, y los he derrotado en combate. El chamán llevaba una nota que sugería que la habían profanado y se habían llevado el corazón del caballero a la Aguja de Karth. Allí he encontrado a dos brujas cuervo celebrando un ritual en torno al corazón. Me he hecho con él y lo he devuelto a la tumba del caballero. Sin embargo, este se ha vuelto hostil porque el corazón seguía estando corrupto."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 55,
+        "type": "QUST NNAM",
+        "original": "Read the Forsworn Shaman's note",
+        "string": "Lee la nota del chamán Renegado."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 90,
+        "type": "QUST NNAM",
+        "original": "Defeat the Corrupted Knight",
+        "string": "Derrota al caballero corrupto."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 76,
+        "type": "QUST CNAM",
+        "original": "I found a knight's tomb in Markarth surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire. At Karthspire, I found two hagravens conducting a ritual with the heart at its center. I retrieved the heart and returned it to the knight's tomb. After purifying the heart, I saw a visage of the knight and the witch reunited once more. ",
+        "string": "He encontrado a tres Renegados junto a la tumba de un caballero en Markarth, y los he derrotado en combate. El chamán llevaba una nota que sugería que la habían profanado y se habían llevado el corazón del caballero a la Aguja de Karth. Allí he encontrado a dos brujas cuervo celebrando un ritual en torno al corazón. Me he hecho con él y lo he devuelto a la tumba. Después de purificarlo, he tenido una visión del caballero y la bruja reunidos una vez más. "
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 89,
+        "type": "QUST CNAM",
+        "original": "I found a book at the Silver-Blood Inn that mentions the ghost of a Breton knight named Simon Rodayne. According to the book, he haunts the river below his tomb, south of Markarth. After following the ghost and climbing up to the top of the mountain, I found a tomb surrounded by three Forsworn.",
+        "string": "En la posada Sangre Argéntea he encontrado un libro que habla sobre el fantasma de un caballero bretón llamado Simon Rodayne. En él se dice que merodea por el río que pasa cerca de su tumba, al sur de Markarth. Tras seguir al fantasma y subir hasta la cima de la montaña, he descubierto una tumba rodeada por tres Renegados."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 98,
+        "type": "QUST CNAM",
+        "original": "I found a knight's tomb in Markarth surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire. At Karthspire, I found two hagravens conducting a ritual with the heart at its center. I retrieved the heart and returned it to the knight's tomb. The heart was still corrupted, however, and the knight's ghost turned hostile as a result. I defeated the knight and can now retrieve his armor from the tomb.",
+        "string": "He encontrado a tres Renegados junto a la tumba de un caballero en Markarth, y los he derrotado en combate. El chamán llevaba una nota que sugería que la habían profanado y se habían llevado el corazón del caballero a la Aguja de Karth. Allí he encontrado a dos brujas cuervo celebrando un ritual en torno al corazón. Me he hecho con él y lo he devuelto a la tumba del caballero. Sin embargo, este se ha vuelto hostil porque el corazón seguía estando corrupto. He derrotado al caballero y ya puedo coger su armadura de la tumba."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "I found a knight's tomb in Markarth surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire. At Karthspire, I found two hagravens conducting a ritual with the heart at its center. I retrieved the heart and returned it to the knight's tomb. ",
+        "string": "He encontrado a tres Renegados junto a la tumba de un caballero en Markarth, y los he derrotado en combate. El chamán llevaba una nota que sugería que la habían profanado y se habían llevado el corazón del caballero a la Aguja de Karth. Allí he encontrado a dos brujas cuervo celebrando un ritual en torno al corazón. Me he hecho con él y lo he devuelto a la tumba del caballero. "
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 25,
+        "type": "QUST NNAM",
+        "original": "Follow the ghost",
+        "string": "Sigue al fantasma."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Search the hills for the knight's tomb",
+        "string": "Busca la tumba del caballero en las colinas."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 60,
+        "type": "QUST NNAM",
+        "original": "Search Karthspire for the stolen heart",
+        "string": "Busca el corazón robado en la Aguja de Karth."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "I investigated the area south of Markarth and was confronted by a ghost. After following the ghost and climbing up to the top of the mountain, I found a tomb surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that may provide additional clues.",
+        "string": "Mientras investigaba la zona al sur de Markarth, me he topado con un fantasma. Después de seguirle y subir hasta la cima de la montaña, he encontrado a tres Renegados junto a la tumba de un caballero, y los he derrotado en combate. El chamán llevaba una nota que podría contener más pistas."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Look for the knight's ghost in the area south of Markarth",
+        "string": "Busca al fantasma del caballero en la zona al sur de Markarth."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 78,
+        "type": "QUST CNAM",
+        "original": "I found a book at the Silver-Blood Inn that mentions the ghost of a Breton knight named Simon Rodayne. According to the book, he haunts the river below his tomb, south of Markarth. At the river, I found the presence of a ghost who wandered off further south.",
+        "string": "En la posada Sangre Argéntea he encontrado un libro que habla sobre el fantasma de un caballero bretón llamado Simon Rodayne. En él se dice que merodea por el río que pasa cerca de su tumba, al sur de Markarth. En el río he descubierto la presencia de un fantasma que vagaba en dirección al sur."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "Defeat the Forsworn",
+        "string": "Derrota a los Renegados."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 70,
+        "type": "QUST NNAM",
+        "original": "Return the heart to the knight's tomb",
+        "string": "Devuelve el corazón a la tumba del caballero."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Crypt of the Heart",
+        "string": "La cripta del corazón"
+    },
+    {
+        "editor_id": "ccEDHSSE002_BeldamaMessage",
+        "form_id": "[05000859]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Beldama Witch",
+        "string": "Bruja de Beldama"
+    },
+    {
+        "editor_id": "ccEDHSSE002_DaenellaMessage",
+        "form_id": "[05000858]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Daenella",
+        "string": "Daenella"
+    },
+    {
+        "editor_id": "ccEDHSSE002_CoffinMessage",
+        "form_id": "[05000880]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Knight's Grave",
+        "string": "Tumba del caballero"
+    },
+    {
+        "editor_id": "ccEDHSSE002_DaenellaMessage",
+        "form_id": "[05000858]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Daenella",
+        "string": "Daenella"
+    },
+    {
+        "editor_id": "ccEDHSSE002_CoffinMessage",
+        "form_id": "[05000880]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Knight's Grave",
+        "string": "Tumba del caballero"
+    },
+    {
+        "editor_id": "ccEDHSSE002_BeldamaMessage",
+        "form_id": "[05000859]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Beldama Witch",
+        "string": "Bruja de Beldama"
+    },
+    {
+        "editor_id": "ccEDHSSE002_BeldamaMessage02",
+        "form_id": "[05000831]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Beldama Ward Mother",
+        "string": "Madre protectora de Beldama"
+    },
+    {
+        "editor_id": "ccEDHSSE002_HeartMessage",
+        "form_id": "[05000864]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Simon Rodayne's Heart",
+        "string": "Corazón de Simon Rodayne"
+    },
+    {
+        "editor_id": "ccEDHSSE002_BeldamaMessage02",
+        "form_id": "[05000831]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Beldama Ward Mother",
+        "string": "Madre protectora de Beldama"
+    },
+    {
+        "editor_id": "ccEDHSSE002_HeartMessage",
+        "form_id": "[05000864]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Simon Rodayne's Heart",
+        "string": "Corazón de Simon Rodayne"
+    }
+]

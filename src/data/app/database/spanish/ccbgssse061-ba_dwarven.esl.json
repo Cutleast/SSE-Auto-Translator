@@ -1,0 +1,194 @@
+[
+    {
+        "editor_id": "ccBGSSSE061_ArmorBladesCuirass",
+        "form_id": "[05000801]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Dwarven Plate Armor",
+        "string": "Armadura de placas enana"
+    },
+    {
+        "editor_id": "ccBGSSSE061_ArmorBladesBoots",
+        "form_id": "[05000800]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Dwarven Plate Boots",
+        "string": "Botas de placas enanas"
+    },
+    {
+        "editor_id": "ccBGSSSE061_Book9",
+        "form_id": "[0500081A]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nThe Crimson Dirks\r\nBook Nine\r\n\r\n\r\nby \r\nGathers-the-Coin\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/T_letter.png'>yra had forgotten which heist was her favorite. Perhaps it was the time they stole a wagon's worth of silks from the desert palaces of Dune. Maybe it was when they burrowed a tunnel into the warehouse of the East Empire Company, siphoning crate after crate while the wardens stood mindlessly at the door. Or it could be she preferred the more violent raids, like the sacking of the Argonian supply caravans, or the attacks on cargo ships leaving the Imperial City waterfront. \r\n\r\nOr perhaps if she looked back far enough, her fondest memories would find her in the streets of Balmora, robbing travelers at knifepoint. For some reason it was this version of her, this long forgotten stranger, that seemed the most vivid now. Gone was the refined, thoughtful countenance of a leader, and in its place a hungry, ash-hewn child who had far more courage than sense. And if she closed her eyes, she could still feel the smooth, polished surface of the ruby the noble dropped in her palm, and how it felt like nothing of this world.\r\n\r\nYet it was not the price or the feel, but the color of the ruby that she remembered most; the blades of crimson burned into the glass, like the fire of the Red Mountain. \r\n\r\n\"Why do you think it is,\" she asked Aesrael, \"that our thoughts turn to the past when are lives are so close to death?\"\r\n\r\n\"I suppose because it's pointless for a dead man to look forward,\" replied the bandit, his Altmer frame filling the breadth of her doorway, \"but I take it you didn't summon me to talk about old times.\"\r\n\r\n\"Ehlhiel says the city guard knows about the hideout. They plan to raid the place in three days.\"\r\n\r\n\"So they will,\" Aesrael replied, his face unflinching, \"What of the spoils?\"\r\n\r\n\"We can't take it with us,\" Tyra lamented, \"but I'll be damned if I let them have it.  We give what we can to the beggars, and toss the rest into the bay before we leave.\" \r\n\r\n\"As you wish,\" said the High Elf, \"and where will you go?\"\r\n\r\n\"Our best chance is north,\" Tyra said, tracing her dagger up the map, \"The Jarls are fractured. It's only a matter of time before the whole province is at war. But we'll have to move in small groups, and find our own way once we cross the border. No contact.\"\r\n\r\nTyra knew Aesrael would take to the news better than the rest. While Bjormund, Skjol, and Peladius were the muscle, they always made an effort to bond with the group. The High Elf, on the other hand, never felt at ease with the other bandits. If this were any other business, perhaps she would've tried to reach him, but tenderness was not a virtue for killers and thieves.\r\n\r\nAesrael nodded and took his leave, leaving Tyra alone in the quiet. If this exchange taught her anything, she still needed a moment before telling the others. She had always been an expert at masking her emotions, but the sadness wore plainly on her face. Perhaps this situation called for that girl from Balmora, and not the weary woman who sat in her stead.\r\n\r\nSteeling herself, Tyra placed the dirk and the ruby in her pouch and stepped away from the map. They would head for the border tomorrow, leaving behind much of their past, but the future still unwritten.",
+        "string": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nLas Dagas carmesíes\r\nLibro nueve\r\n\r\n\r\npor \r\nRecolector de Moneda\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/T_letter.png'>yra había olvidado cuál era su atraco favorito. Tal vez aquella vez que robaron un carromato de seda de los palacios desiertos de Dune. O cuando excavaron un túnel hasta el almacén de la Compañía del Imperio Oriental y sacaron cajas y cajas mientras los guardias permanecían en la puerta sin enterarse de nada. O quizá prefiriese los trabajos más violentos, como los saqueos de las caravanas de suministro argonianas o los ataques contra las naves de carga que partían de los muelles de la Ciudad Imperial.\r\n\r\nIncluso es posible que, si se remontaba lo suficiente en el tiempo, sus recuerdos más hermosos fueran los de cuando estaba en las calles de Balmora, robando a los viajeros a punta de cuchillo. Por alguna razón, era esta visión de ella misma, caída tanto tiempo en el olvido, la que le parecía más vívida ahora. Se había perdido el refinado y reflexivo semblante de la líder, reemplazado por una niña hambrienta y recubierta de ceniza que tenía mucho más valor que sentido común. Y, si cerraba los ojos, podía sentir la suave y pulida superficie del rubí que había depositado el noble en la palma de su mano, una sensación sin comparación alguna en este mundo.\r\n\r\nPero no era el valor ni el tacto lo que más recordaba, sino el color de la piedra; las cuchillas de color carmesí grabadas a fuego en el cristal, como las llamas de la Montaña Roja. \r\n\r\n-¿Tú por qué crees -preguntó a Aesrael- que recordamos el pasado cuando estamos cerca de la muerte?\r\n\r\n-Supongo que para un hombre que se enfrenta a la muerte no tiene sentido mirar hacia delante -respondió el bandido altmer, enmarcado por la puerta-, pero imagino que no me has llamado para eso.\r\n\r\n-Ehlhiel dice que la guardia de la ciudad sabe dónde está el escondrijo. Van a asaltarlo dentro de tres días.\r\n\r\n-Así es -respondió Aesrael, impasible-. ¿Y el botín?\r\n\r\n-No podemos llevárnoslo -se lamentó Tyra-, pero que me aspen si se lo dejo a ellos. Repartiremos lo que podamos entre los mendigos y arrojaremos el resto a la bahía.\r\n\r\n-Como quieras -dijo el alto elfo-. ¿Y adónde vas a ir?\r\n\r\n-Creo que la mejor opción es que vayamos al norte -respondió Tyra mientras trazaba una ruta por el mapa con la daga-. Los jarls están divididos. Solo es cuestión de tiempo que la provincia esté en guerra. Pero tendremos que movernos en pequeños grupos y buscarnos la vida por separado una vez cruzada la frontera. Sin contacto.\r\n\r\nTyra sabía que Aesrael se tomaría la noticia mejor que los demás. Aunque Bjormund, Skjol y Peladius aportaban la fuerza bruta al grupo, siempre se esforzaban por crear lazos con los demás. El alto elfo, en cambio, nunca parecía cómodo con el resto de los bandidos. Si su oficio hubiera sido otro, tal vez hubiera tratado de hablar con él, pero la sensibilidad no era una virtud entre asesinos y ladrones.\r\n\r\nAesrael asintió y la dejó sola en el silencio. Si algo había aprendido de aquella conversación, es que necesitaba un momento antes de hablar con los demás. Siempre se le había dado muy bien disimular sus emociones, pero la tristeza era patente en su rostro. Puede que una situación como aquella requiriese de la chica de Balmor y no de la mujer cansada que la había sustituido.\r\n\r\nHizo acopio de fuerzas, metió la daga y el rubí en su bolsa y se apartó del mapa. Partirían hacia la frontera al día siguiente, dejando atrás gran parte de su pasado, pero con el futuro todavía por escribir."
+    },
+    {
+        "editor_id": "ccBGSSSE061_Note02",
+        "form_id": "[05000819]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Casival's Note",
+        "string": "Nota de Casival"
+    },
+    {
+        "editor_id": "ccBGSSSE061_Book9",
+        "form_id": "[0500081A]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "The Crimson Dirks, v9",
+        "string": "Las Dagas carmesíes, v9"
+    },
+    {
+        "editor_id": "ccBGSSSE061_Note02",
+        "form_id": "[05000819]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='20'>\r\nOver the course of his life, a man wears many faces, and goes by many names. Son, father, fugitive, bandit. I never thought I would include \"Argonian writer\" among those titles, but so it goes. \r\n\r\nWhen Peladius taught me how to write, I didn't think I'd take to it the way I have. Maybe if the gods had given me a pen instead of a sword, I would've spent my life writing books instead of sacking caravans. Well, too late to whine about it now. \r\n\r\nAs for the name, it came from a conversation I had with Pale-Eyes one night at The Grey Mare in Chorrol. I asked him why Argonian names were so literal, and his reply was, \"Why aren't yours?\" \r\n\r\nI laughed, realizing I was bested. So I asked him to give me an Argonian name, one that suited someone of my ilk. \r\n\r\nAnd so from then on, I was Gathers-the-Coin.\r\n\r\nThe funny thing about an Argonian name is, I wasn't sure if it was meant to define the person I was or the one I aspired to be. I suppose the point is moot now. I'll probably die in this tower without a septim to my name. But at least if I keep writing, people will know our story, and know that we once lived.\r\n",
+        "string": "<font face='$HandwrittenFont'><font size='20'>\r\nA lo largo de su vida, un hombre luce muchas caras y responde a muchos nombres diferentes. Hijo, padre, fugitivo, bandido... Nunca creí que incluiría el título de \"escritor argoniano\" en la lista, pero es lo que ha pasado.\r\n\r\nCuando Peladius me enseñó a escribir, no pensé que me absorbería tanto. Puede que, si los dioses me hubieran dado una pluma en lugar de una espada, me hubiera pasado la vida escribiendo libros y no asaltando caravanas. Pero bueno, ya es demasiado tarde para lamentarse.\r\n\r\nEn cuanto al nombre, se me ocurrió una noche durante una conversación que mantuve con Ojos Pálidos en La yegua gris de Chorrol. Le pregunté por qué siempre son tan literales los nombres argonianos y su respuesta fue: \"¿Y por qué no lo son los vuestros?\".\r\n\r\nMe eché a reír al comprender que tenía razón. Así que le pedí que me pusiera un nombre argoniano apropiado para alguien como yo.\r\n\r\nY así nació Recolector de Moneda.\r\n\r\nLo más gracioso de mi nombre argoniano es que no sé si pretendía definir a la persona que era o a la que aspiraba a ser. Supongo que ya no importa. Lo más probable es que muera en esta torre sin un septim en el bolsillo. Pero, al menos, si sigo escribiendo, la gente conocerá nuestra historia y sabrá que un día vivimos.\r\n"
+    },
+    {
+        "editor_id": "ccBGSSSE061_Note01",
+        "form_id": "[0500081B]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nThere's no good work in the Reach. The mines pay dung for wages and the farms even less than that. I thought I scored it big when I got a job working for this blind noble, but he fired me on account of me being a gloomy sort. He said he couldn't hear my smile. I don't even know what that means, my ears don't have teeth.\r\n\r\nAnyways, the short of it is, I'm tired of this life. I want some easy gold. There's an old tower south of here called Reachwind Eyrie that looks like it's full of loot. Me and a couple others are thinking about raiding the place and nabbing everything that isn't bolted down. \r\n\r\nIt's gonna be first come, first serve. But if any of you other worthless drunks want to lend a hand, we could always use more.</font>",
+        "string": "<font face='$HandwrittenFont'>\r\nEn la Cuenca no hay trabajo bueno. Las minas pagan salarios de estiércol, y las granjas, peores aún. Pensé que me había sonreído la fortuna al entrar al servicio de un noble ciego, pero me despidió por ser una persona triste. Decía que no me oía sonreír. No sé ni lo que puede significar eso. No tengo dientes en las orejas.\r\n\r\nEl caso es que me he hartado de esta vida y quiero ganar algo de oro fácil. Hay una antigua torre al sur de aquí llamada Nido del Límite del Viento que parece llena de botín. Yo y otros dos estamos pensando en asaltarla y llevarnos todo lo que no esté clavado al suelo. \r\n\r\nNos vamos a servir por orden de llegada. Pero si tú o el resto de esos borrachos inútiles queréis echar una mano, tampoco nos vendría mal.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE061_Note01",
+        "form_id": "[0500081B]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Looter's Note",
+        "string": "Nota del saqueador"
+    },
+    {
+        "editor_id": "ccBGSSSE061_Casival",
+        "form_id": "[0500081C]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Casival",
+        "string": "Casival"
+    },
+    {
+        "editor_id": "ccBGSSSE061_LvlBanditBossOrcM",
+        "form_id": "[05000803]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Bandit Chief",
+        "string": "Jefe bandido"
+    },
+    {
+        "editor_id": "MarkarthSilverBloodInn",
+        "form_id": "[00016DFE]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Silver-Blood Inn",
+        "string": "Posada Sangre Argéntea"
+    },
+    {
+        "editor_id": "ReachwindEyrie01",
+        "form_id": "[000399D1]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Reachwind Eyrie",
+        "string": "Nido del Límite del Viento"
+    },
+    {
+        "editor_id": "Tamriel",
+        "form_id": "[0000003C]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Skyrim"
+    },
+    {
+        "editor_id": "ccBGSSSE061_Quest",
+        "form_id": "[05000829]",
+        "index": 88,
+        "type": "QUST CNAM",
+        "original": "Inns across Skyrim are typically a good place to find work. I found a note left by a patron at the Silver-Blood Inn that mentioned some decent loot might be found at Reachwind Eyrie to the south. When I arrived, I was attacked by three looters. At the top of the tower, I found the body of a bandit.",
+        "string": "Por todo Skyrim, las posadas suelen ser un buen sitio para buscar trabajo. En la posada Sangre Argéntea he encontrado una nota dejada por un cliente donde dice que se puede encontrar un buen botín en el Nido del Límite del Viento, al sur. Al llegar, me han atacado tres saqueadores. En lo alto de la torre he encontrado el cuerpo de un bandido."
+    },
+    {
+        "editor_id": "ccBGSSSE061_Quest",
+        "form_id": "[05000829]",
+        "index": 87,
+        "type": "QUST CNAM",
+        "original": "Inns across Skyrim are typically a good place to find work. I found a note left by a patron at the Silver-Blood Inn that mentioned some decent loot might be found at Reachwind Eyrie to the south. When I arrived, I was attacked by three looters. At the top of the tower, I found the body of a bandit and pieces of Dwarven Plate armor.",
+        "string": "Por todo Skyrim, las posadas suelen ser un buen sitio para buscar trabajo. En la posada Sangre Argéntea he encontrado una nota dejada por un cliente donde dice que se puede encontrar un buen botín en el Nido del Límite del Viento, al sur. Al llegar, me han atacado tres saqueadores. En lo alto de la torre he encontrado el cuerpo de un bandido y varias piezas de una armadura de placas enana."
+    },
+    {
+        "editor_id": "ccBGSSSE061_Quest",
+        "form_id": "[05000829]",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Pick up the leftover loot",
+        "string": "Recoge el botín restante."
+    },
+    {
+        "editor_id": "ccBGSSSE061_Quest",
+        "form_id": "[05000829]",
+        "index": 95,
+        "type": "QUST CNAM",
+        "original": "Inns across Skyrim are typically a good place to find work. I found a note left by a patron at the Silver-Blood Inn that mentions some decent loot might be found at Reachwind Eyrie to the south.",
+        "string": "Por todo Skyrim, las posadas suelen ser un buen sitio para buscar trabajo. En la posada Sangre Argéntea he encontrado una nota dejada por un cliente donde dice que se puede encontrar un buen botín en el Nido del Límite del Viento, al sur."
+    },
+    {
+        "editor_id": "ccBGSSSE061_MiscQuest",
+        "form_id": "[0500082B]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Investigate the Silver-Blood Inn for rumors",
+        "string": "Investiga la posada Sangre Argéntea en busca de rumores."
+    },
+    {
+        "editor_id": "ccBGSSSE061_Quest",
+        "form_id": "[05000829]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Mightier than the Sword",
+        "string": "Más poderosa que la espada"
+    },
+    {
+        "editor_id": "ccBGSSSE061_Quest",
+        "form_id": "[05000829]",
+        "index": 76,
+        "type": "QUST CNAM",
+        "original": "Inns across Skyrim are typically a good place to find work. Should I find myself in Markarth, I should stop by the Silver-Blood Inn and see if I can't come across any news or rumors.",
+        "string": "Por todo Skyrim, las posadas suelen ser un buen sitio para buscar trabajo. Cuando pase por Markarth, me dejaré caer por la posada Sangre Argéntea para ver si me encuentro con alguna noticia o rumor."
+    },
+    {
+        "editor_id": "ccBGSSSE061_Quest",
+        "form_id": "[05000829]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Search the tower at Reachwind Eyrie",
+        "string": "Registra la torre del Nido del Límite del Viento."
+    },
+    {
+        "editor_id": "ccBGSSSE061_Quest",
+        "form_id": "[05000829]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Investigate the Silver-Blood Inn for rumors",
+        "string": "Investiga la posada Sangre Argéntea en busca de rumores."
+    },
+    {
+        "editor_id": "ccBGSSSE061_DisplayName",
+        "form_id": "[0500082A]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Looter",
+        "string": "Saqueador"
+    },
+    {
+        "editor_id": "ccBGSSSE061_DisplayName",
+        "form_id": "[0500082A]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Looter",
+        "string": "Saqueador"
+    }
+]

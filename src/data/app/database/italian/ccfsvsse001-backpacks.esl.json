@@ -1,0 +1,178 @@
+[
+    {
+        "editor_id": "ccFSVSSE001_EnchBackpackFortifyCarry",
+        "form_id": "[02000824]",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Fortify Carry Weight",
+        "string": "Fortifica Peso trasportabile"
+    },
+    {
+        "editor_id": "ccFSVSSE001_EnchBackpackMage",
+        "form_id": "[02000827]",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Mage Backpack",
+        "string": "Zaino da mago"
+    },
+    {
+        "editor_id": "ccFSVSSE001_EnchBackpackThief",
+        "form_id": "[02000828]",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Thief Backpack",
+        "string": "Zaino da ladro"
+    },
+    {
+        "editor_id": "ccFSVSSE001_EnchBackpackAdventurer",
+        "form_id": "[02000826]",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Adventurer Backpack",
+        "string": "Zaino da avventuriero"
+    },
+    {
+        "editor_id": "ccFSVSSE001_EnchBackpackHunter",
+        "form_id": "[02000829]",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Hunter Backpack",
+        "string": "Zaino da cacciatore"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_Hunter",
+        "form_id": "[02000807]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Fur Backpack",
+        "string": "Zaino di pelliccia"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_ThiefFull",
+        "form_id": "[0200080F]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Thief Backpack",
+        "string": "Zaino da ladro"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_MageBedroll",
+        "form_id": "[0200080C]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Mage Backpack with Bedroll",
+        "string": "Zaino da mago con stuoia"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_HunterFull",
+        "form_id": "[0200080D]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Hunter Backpack",
+        "string": "Zaino da cacciatore"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_Thief",
+        "form_id": "[02000805]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Dark Leather Backpack",
+        "string": "Zaino di cuoio scuro"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_BasicBedroll",
+        "form_id": "[02000802]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Leather Backpack with Bedroll",
+        "string": "Zaino di cuoio con stuoia"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_Fine",
+        "form_id": "[02000803]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Fine Leather Backpack",
+        "string": "Zaino di cuoio rifinito"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_FineBedroll",
+        "form_id": "[02000804]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Fine Leather Backpack with Bedroll",
+        "string": "Zaino di cuoio rifinito con stuoia"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_ThiefBedroll",
+        "form_id": "[02000806]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Dark Leather Backpack with Bedroll",
+        "string": "Zaino di cuoio scuro con stuoia"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_HunterBedroll",
+        "form_id": "[02000808]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Fur Backpack with Bedroll",
+        "string": "Zaino di pelliccia con stuoia"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_HunterFullBedroll",
+        "form_id": "[0200080E]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Hunter Backpack with Bedroll",
+        "string": "Zaino da cacciatore con stuoia"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_ThiefFullBedroll",
+        "form_id": "[02000810]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Thief Backpack with Bedroll",
+        "string": "Zaino da ladro con stuoia"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_Basic",
+        "form_id": "[02000801]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Leather Backpack",
+        "string": "Zaino di cuoio"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_Adventurer",
+        "form_id": "[02000809]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Adventurer Backpack",
+        "string": "Zaino da avventuriero"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_Mage",
+        "form_id": "[0200080B]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Mage Backpack",
+        "string": "Zaino da mago"
+    },
+    {
+        "editor_id": "ccFSVSSE001_Backpack_AdventurerBedroll",
+        "form_id": "[0200080A]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Adventurer Backpack with Bedroll",
+        "string": "Zaino da avventuriero con stuoia"
+    },
+    {
+        "editor_id": "ccFSVSSE001_QAChestBackpacks",
+        "form_id": "[02000811]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Baule"
+    }
+]

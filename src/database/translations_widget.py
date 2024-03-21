@@ -14,7 +14,7 @@ import qtpy.QtWidgets as qtw
 
 import utilities as utils
 from main import MainApp
-from widgets import LoadingDialog, StringListDialog
+from widgets import LoadingDialog, StringListDialog, DownloadListDialog
 
 from .translation import Translation
 
@@ -34,8 +34,11 @@ class TranslationsWidget(qtw.QWidget):
         vlayout = qtw.QVBoxLayout()
         self.setLayout(vlayout)
 
+        hlayout = qtw.QHBoxLayout()
+        vlayout.addLayout(hlayout)
+
         self.tool_bar = qtw.QToolBar()
-        vlayout.addWidget(self.tool_bar)
+        hlayout.addWidget(self.tool_bar)
 
         show_vanilla_strings_action = self.tool_bar.addAction(
             qta.icon("msc.open-preview", color="#ffffff"),
@@ -71,6 +74,19 @@ class TranslationsWidget(qtw.QWidget):
         )
         local_import_button.triggered.connect(self.import_local_translation)
 
+        update_button = self.tool_bar.addAction(
+            qta.icon("mdi6.cloud-refresh", color="#ffffff"),
+            self.loc.main.check_for_updates,
+        )
+        update_button.triggered.connect(self.check_for_updates)
+
+        self.download_updates_button = self.tool_bar.addAction(
+            qta.icon("mdi6.cloud-download", color="#ffffff"),
+            self.loc.updater.download_update,
+        )
+        self.download_updates_button.setDisabled(True)
+        self.download_updates_button.triggered.connect(self.download_updates)
+
         def toggle_nxm():
             if self.nxmhandler_button.isChecked():
                 self.app.nxm_listener.bind()
@@ -84,7 +100,19 @@ class TranslationsWidget(qtw.QWidget):
             self.mloc.handle_nxm + " [Experimental]",
         )
         self.nxmhandler_button.setCheckable(True)
+        if not self.app.api.premium:
+            self.tool_bar.widgetForAction(self.nxmhandler_button).setObjectName("accent_button")
         self.nxmhandler_button.triggered.connect(toggle_nxm)
+
+        hlayout.addStretch()
+
+        num_label = qtw.QLabel(self.mloc.translations + ":")
+        num_label.setObjectName("relevant_label")
+        hlayout.addWidget(num_label)
+
+        self.translations_num_label = qtw.QLCDNumber()
+        self.translations_num_label.setDigitCount(4)
+        hlayout.addWidget(self.translations_num_label)
 
         self.translations_widget = qtw.QTreeWidget()
         self.translations_widget.setAlternatingRowColors(True)
@@ -125,6 +153,9 @@ class TranslationsWidget(qtw.QWidget):
             mouse_pos = self.translations_widget.mapFromGlobal(qtg.QCursor.pos())
             mouse_pos.setY(mouse_pos.y() - self.translations_widget.header().height())
             current_item = self.translations_widget.itemAt(mouse_pos)
+
+            if current_item is None:
+                return
 
             if parent := current_item.parent():
                 matching = [
@@ -280,6 +311,10 @@ class TranslationsWidget(qtw.QWidget):
 
                     self.app.log.info("Database updated.")
 
+            def ignore_update():
+                selected_translation.status = Translation.Status.UpdateIgnored
+                self.update_translations()
+
             menu = qtw.QMenu()
 
             expand_all_action = menu.addAction(self.loc.main.expand_all)
@@ -293,6 +328,20 @@ class TranslationsWidget(qtw.QWidget):
                 qta.icon("mdi6.arrow-collapse-vertical", color="#ffffff")
             )
             collapse_all_action.triggered.connect(self.translations_widget.collapseAll)
+
+            if selected_translation.status == Translation.Status.UpdateAvailable:
+                menu.addSeparator()
+
+                download_update_action = menu.addAction(
+                    qta.icon("mdi6.cloud-download", color="#ffffff"),
+                    self.loc.updater.download_update,
+                )
+
+                ignore_update_action = menu.addAction(
+                    qta.icon("mdi6.cloud-alert", color="#ffffff"),
+                    self.loc.updater.ignore_update,
+                )
+                ignore_update_action.triggered.connect(ignore_update)
 
             menu.addSeparator()
 
@@ -345,35 +394,159 @@ class TranslationsWidget(qtw.QWidget):
         )
         self.translations_widget.customContextMenuRequested.connect(on_context_menu)
 
+    def check_for_updates(self):
+        """
+        Checks downloaded translations for updates.
+        """
+
+        self.app.log.info("Checking installed translations for updates...")
+
+        def process(ldialog: LoadingDialog):
+            translations = [
+                translation
+                for translation in self.app.database.user_translations
+                if translation.mod_id
+                and translation.file_id
+                and translation.status != translation.Status.UpdateIgnored
+                and translation.status != translation.Status.UpdateAvailable
+            ]
+
+            for t, translation in enumerate(translations):
+                ldialog.updateProgress(
+                    text1=f"{self.mloc.checking_for_updates} ({t}/{len(translations)})",
+                    value1=t,
+                    max1=len(translations),
+                    show2=True,
+                    text2=translation.name,
+                )
+
+                updates = self.app.api.get_mod_updates(
+                    "skyrimspecialedition", translation.mod_id
+                )
+                if translation.file_id in updates.keys():
+                    translation.status = translation.Status.UpdateAvailable
+
+        loadingdialog = LoadingDialog(self.app.root, self.app, process)
+        loadingdialog.exec()
+
+        self.update_translations()
+
+        self.app.log.info("Update check complete.")
+
+        available_updates = len(
+            [
+                translation
+                for translation in self.app.database.user_translations
+                if translation.status == translation.Status.UpdateAvailable
+            ]
+        )
+
+        messagebox = qtw.QMessageBox(self.app.root)
+        messagebox.setWindowTitle(self.mloc.update_check_complete)
+        messagebox.setText(
+            self.mloc.updates_available.replace("[NUMBER]", str(available_updates))
+        )
+        utils.apply_dark_title_bar(messagebox)
+        messagebox.exec()
+
+    def download_updates(self):
+        """
+        Creates download list for available translation updates.
+        """
+
+        self.app.log.info("Getting downloads for translation updates...")
+
+        downloads: list[utils.Download] = []
+
+        def process(ldialog: LoadingDialog):
+            ldialog.updateProgress(text1=self.loc.main.getting_downloads)
+
+            translations = [
+                translation
+                for translation in self.app.database.user_translations
+                if translation.status == translation.Status.UpdateAvailable
+            ]
+
+            for translation in translations:
+                updates = self.app.api.get_mod_updates(
+                    "skyrimspecialedition", translation.mod_id
+                )
+
+                old_file_id = translation.file_id
+                new_file_id = None
+
+                while old_file_id := updates.get(old_file_id):
+                    new_file_id = old_file_id
+
+                if new_file_id is None:
+                    translation.status = translation.Status.Ok
+                    continue
+
+                self.app.log.debug(
+                    f"Available update for {translation.name!r}: {new_file_id}"
+                )
+
+                download = utils.Download(
+                    translation.name,
+                    translation.mod_id,
+                    str(translation.file_id),
+                    available_translations=[translation.mod_id],
+                    available_translation_files={translation.mod_id: [new_file_id]},
+                )
+                downloads.append(download)
+
+        loadingdialog = LoadingDialog(self.app.root, self.app, process)
+        loadingdialog.exec()
+
+        self.tool_bar.widgetForAction(self.download_updates_button).setObjectName("")
+        self.tool_bar.setStyleSheet(self.app.styleSheet())
+
+        if len(downloads):
+            DownloadListDialog(self.app, downloads, updates=True)
+
     def update_translations(self):
         """
         Updates translations in case of search or similar.
         """
 
-        cur_search = self.app.mainpage_widget.search_box.text()
+        cur_search = self.app.mainpage_widget.search_box.text().lower()
 
-        matching_items = self.translations_widget.findItems(
-            cur_search.lower(),
-            qtc.Qt.MatchFlag.MatchContains | qtc.Qt.MatchFlag.MatchRecursive,
-            column=0,
-        )
+        for translation in self.app.database.user_translations:
+            if not translation.tree_item:
+                continue
 
-        for rindex in range(self.translations_widget.topLevelItemCount()):
-            item = self.translations_widget.itemFromIndex(
-                self.translations_widget.model().index(rindex, 0)
-            )
+            translation_visible = cur_search in translation.name.lower()
 
-            translation_visible = item in matching_items
-
-            for cindex in range(item.childCount()):
-                child = item.child(cindex)
-                child_visible = child in matching_items
-                if child_visible:
+            for cindex in range(translation.tree_item.childCount()):
+                plugin_item = translation.tree_item.child(cindex)
+                plugin_visible = cur_search in plugin_item.text(0).lower()
+                if plugin_visible:
                     translation_visible = True
 
-                child.setHidden(not child_visible)
+                plugin_item.setHidden(not plugin_visible)
 
-            item.setHidden(not translation_visible)
+            if translation.status == translation.Status.UpdateAvailable:
+                translation.tree_item.setForeground(1, qtc.Qt.GlobalColor.yellow)
+            else:
+                translation.tree_item.setForeground(1, qtc.Qt.GlobalColor.white)
+
+            translation.tree_item.setHidden(not translation_visible)
+
+        if any(
+            translation.status == translation.Status.UpdateAvailable
+            for translation in self.app.database.user_translations
+        ):
+            self.download_updates_button.setDisabled(False)
+            self.tool_bar.widgetForAction(self.download_updates_button).setObjectName(
+                "accent_button"
+            )
+            self.tool_bar.setStyleSheet(self.app.styleSheet())
+        else:
+            self.download_updates_button.setDisabled(True)
+            self.tool_bar.widgetForAction(self.download_updates_button).setObjectName(
+                ""
+            )
+            self.tool_bar.setStyleSheet(self.app.styleSheet())
 
         if self.translations_widget.selectedItems():
             self.translations_widget.scrollToItem(
@@ -407,6 +580,8 @@ class TranslationsWidget(qtw.QWidget):
 
             translation.tree_item = translation_item
             self.translations_widget.addTopLevelItem(translation_item)
+
+        self.translations_num_label.display(len(self.app.database.user_translations))
 
     def import_local_translation(self):
         """
@@ -483,10 +658,10 @@ class TranslationsWidget(qtw.QWidget):
                         name=file.stem,
                         mod_id=0,
                         file_id=0,
-                        version="0",
+                        version="",
                         original_mod_id=0,
                         original_file_id=0,
-                        original_version="0",
+                        original_version="",
                         path=self.app.database.userdb_path
                         / self.app.database.language
                         / file.stem,

@@ -4,7 +4,8 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-import os
+import logging
+from copy import copy
 from pathlib import Path
 
 import bs4
@@ -15,6 +16,8 @@ from plugin_parser import PluginParser
 
 from .mod import Mod
 from .string import String
+
+log = logging.getLogger("Utilities.Importer")
 
 
 def import_from_archive(archive_path: Path, modlist: list[Mod], ldialog=None):
@@ -59,6 +62,7 @@ def import_from_archive(archive_path: Path, modlist: list[Mod], ldialog=None):
                 for mod in modlist
                 for plugin in mod.plugins
                 if plugin.status != plugin.Status.TranslationInstalled
+                and plugin.status != plugin.Status.IsTranslated
             ]
             matching = list(
                 filter(
@@ -161,56 +165,43 @@ def merge_plugin_strings(
     translation_plugin: Path, original_plugin: Path
 ) -> list[String]:
     """
-    Extracts strings from translation and original plugin and merges
-    them using `./data/merger.exe`.
+    Extracts strings from translation and original plugin and merges.
     """
-
-    merger_path = Path(".") / "data" / "merger.exe"
 
     parser = PluginParser(translation_plugin)
     parser.parse_plugin()
     translation_strings = [
-        string.to_string_data()
-        for group in parser.extract_strings().values()
-        for string in group
+        string for group in parser.extract_strings().values() for string in group
     ]
 
     parser = PluginParser(original_plugin)
     parser.parse_plugin()
-    original_strings = [
-        string.to_string_data()
+    original_strings = {
+        f"{string.form_id}###{string.editor_id}###{string.type}###{string.index}": string
         for group in parser.extract_strings().values()
         for string in group
-    ]
+    }
 
-    with open("translation.json", "w", encoding="utf8") as translation_file:
-        json.dump(translation_strings, translation_file, indent=4, ensure_ascii=False)
+    log.debug(
+        f"Merging {len(original_strings)} original String(s) to {len(translation_strings)} translated String(s)..."
+    )
 
-    with open("original.json", "w", encoding="utf8") as original_file:
-        json.dump(original_strings, original_file, indent=4, ensure_ascii=False)
+    merged_strings: list[String] = []
 
-    cmd = f'{merger_path} "original.json" "translation.json"'
-
-    retcode = os.system(cmd)
-
-    if retcode:
-        raise Exception("Merge failed!")
-
-    with open("output.json", encoding="utf-8-sig") as output_file:
-        output_data = json.load(output_file)
-
-    if output_data is not None:
-        merged_strings = list(
-            set(  # Remove duplicates
-                [String.from_string_data(string_data) for string_data in output_data]
-            )
+    for translation_string in translation_strings:
+        original_string = original_strings.get(
+            f"{translation_string.form_id}###{translation_string.editor_id}###{translation_string.type}###{translation_string.index}"
         )
-    else:
-        merged_strings = []
 
-    # Clean up
-    os.remove("translation.json")
-    os.remove("original.json")
-    os.remove("output.json")
+        if original_string is None:
+            log.warning(f"Not found in Original: {translation_string}")
+            continue
+
+        translation_string = copy(translation_string)
+        translation_string.translated_string = translation_string.original_string
+        translation_string.original_string = original_string.original_string
+        merged_strings.append(translation_string)
+
+    log.debug(f"Merged {len(merged_strings)} String(s).")
 
     return merged_strings

@@ -1,0 +1,954 @@
+[
+    {
+        "editor_id": "ccBGSSSE031_VCBoatDoorActivator3",
+        "form_id": "[05000804]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Blackbone Isle",
+        "string": "Schwarzknocheninsel"
+    },
+    {
+        "editor_id": "ccBGSSSE031_FastTravel01",
+        "form_id": "[050341CA]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Travel to",
+        "string": "Travel to"
+    },
+    {
+        "editor_id": "ccBGSSSE031_FastTravel04",
+        "form_id": "[050392E0]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Travel to",
+        "string": "Travel to"
+    },
+    {
+        "editor_id": "ccBGSSSE031_VCBoatDoorActivator5",
+        "form_id": "[05000806]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Loose Brick",
+        "string": "Loser Ziegel"
+    },
+    {
+        "editor_id": "ccBGSSSE031_FastTravel04",
+        "form_id": "[050392E0]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Castle Volkihar",
+        "string": "Castle Volkihar"
+    },
+    {
+        "editor_id": "ccBGSSSE031_FastTravel03",
+        "form_id": "[050341D4]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Travel to",
+        "string": "Travel to"
+    },
+    {
+        "editor_id": "ccBGSSSE031_VCBoatDoorActivator4",
+        "form_id": "[05000803]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Travel to",
+        "string": "Reisen nach"
+    },
+    {
+        "editor_id": "ccBGSSSE031_VCBoatDoorActivator3",
+        "form_id": "[05000804]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Travel to",
+        "string": "Reisen nach"
+    },
+    {
+        "editor_id": "ccBGSSSE031_FastTravel01",
+        "form_id": "[050341CA]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Solitude",
+        "string": "Solitude"
+    },
+    {
+        "editor_id": "ccBGSSSE031_FastTravel05",
+        "form_id": "[050392E1]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Raven Rock",
+        "string": "Raven Rock"
+    },
+    {
+        "editor_id": "ccBGSSSE031_VCBoatDoorActivator5",
+        "form_id": "[05000806]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Examine",
+        "string": "Untersuchen"
+    },
+    {
+        "editor_id": "ccBGSSSE031_FastTravel03",
+        "form_id": "[050341D4]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Dawnstar",
+        "string": "Dawnstar"
+    },
+    {
+        "editor_id": "ccBGSSSE031_FastTravel05",
+        "form_id": "[050392E1]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Travel to",
+        "string": "Travel to"
+    },
+    {
+        "editor_id": "ccBGSSSE031_VCBoatDoorActivator4",
+        "form_id": "[05000803]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Orphan's Tear",
+        "string": "Waisenträne"
+    },
+    {
+        "editor_id": "ccBGSSSE031_FastTravel02",
+        "form_id": "[050341CB]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Travel to",
+        "string": "Travel to"
+    },
+    {
+        "editor_id": "ccBGSSSE031_FastTravel02",
+        "form_id": "[050341CB]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Windhelm",
+        "string": "Windhelm"
+    },
+    {
+        "editor_id": "ccBGSSSE031_ClothesPirateBoatswainClothesShoesVariant01",
+        "form_id": "[0500087B]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Boatswain Shoes",
+        "string": "Bootsmannschuhe"
+    },
+    {
+        "editor_id": "ccBGSSSE031_ClothesRedguardClothes",
+        "form_id": "[05000807]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Cyrus' Outfit",
+        "string": "Cyrus' Kleidung"
+    },
+    {
+        "editor_id": "ccBGSSSE031_ClothesPirateCaptainClothesVariant01",
+        "form_id": "[050008A8]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Captain Clothes",
+        "string": "Kapitänskleidung"
+    },
+    {
+        "editor_id": "ccBGSSSE031_ClothesCyrusClothes",
+        "form_id": "[0500089E]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Cyrus' Clothes",
+        "string": "Cyrus' Kleidung"
+    },
+    {
+        "editor_id": "ccBGSSSE031_ClothesPirateScrubClothesVariant02",
+        "form_id": "[05000875]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Scrub Clothes",
+        "string": "Matrosenkleidung"
+    },
+    {
+        "editor_id": "ccBGSSSE031_ClothesPirateCaptainClothesBootsVariant02",
+        "form_id": "[050008E2]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Captain Boots",
+        "string": "Kapitänsstiefel"
+    },
+    {
+        "editor_id": "ccBGSSSE031_ClothesPirateBoatswainClothesShoesVariant02",
+        "form_id": "[0500089F]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Boatswain Shoes",
+        "string": "Bootsmannschuhe"
+    },
+    {
+        "editor_id": "ccBGSSSE031_ClothesPirateCaptainClothesVariant02",
+        "form_id": "[050008AF]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Captain Clothes",
+        "string": "Kapitänskleidung"
+    },
+    {
+        "editor_id": "ccBGSSSE031_ClothesPirateBoatswainClothesVariant01",
+        "form_id": "[05000896]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Boatswain Clothes",
+        "string": "Bootsmannkleidung"
+    },
+    {
+        "editor_id": "ccBGSSSE031_ClothesCyrusClothesBoots",
+        "form_id": "[0500089B]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Cyrus' Boots",
+        "string": "Cyrus' Stiefel"
+    },
+    {
+        "editor_id": "ccBGSSSE031_ClothesPirateScrubClothesVariant01",
+        "form_id": "[050008E7]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Scrub Clothes",
+        "string": "Matrosenkleidung"
+    },
+    {
+        "editor_id": "ccBGSSSE031_ClothesPirateBoatswainClothesVariant03",
+        "form_id": "[0500087F]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Boatswain Clothes",
+        "string": "Bootsmannkleidung"
+    },
+    {
+        "editor_id": "ccBGSSSE031_ClothesPirateBoatswainClothesVariant02",
+        "form_id": "[0500088B]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Boatswain Clothes",
+        "string": "Bootsmannkleidung"
+    },
+    {
+        "editor_id": "ccBGSSSE031_ClothesPirateCaptainClothesBootsVariant01",
+        "form_id": "[050008C5]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Captain Boots",
+        "string": "Kapitänsstiefel"
+    },
+    {
+        "editor_id": "ccBGSSSE031_ClothesPirateBoatswainClothesShoesVariant03",
+        "form_id": "[050008A1]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Boatswain Shoes",
+        "string": "Bootsmannschuhe"
+    },
+    {
+        "editor_id": "ccBGSSSE031_Note02",
+        "form_id": "[050008F8]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Pirate's Note",
+        "string": "Notiz des Piraten"
+    },
+    {
+        "editor_id": "ccBGSSSE031_FirstOfficerNote",
+        "form_id": "[05000808]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Captain's Journal",
+        "string": "Tagebuch des Kapitäns"
+    },
+    {
+        "editor_id": "ccBGSSSE031_OriginBook",
+        "form_id": "[05000809]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "The Restless",
+        "string": "Die Ruhelosen"
+    },
+    {
+        "editor_id": "ccBGSSSE031_Note02",
+        "form_id": "[050008F8]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nThey say a pirate's home is the sea, but the bottom of the ocean is no place to breathe, let alone live. \r\n\r\nBut word is you found a right ol' ship on an isle far off the coast. If you can't sail it out to open waters, it may make a good home. \r\n\r\nJust a little advice from a restless soul.</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\nEs heißt, ein Pirat sei auf dem Meer zu Hause, doch auf dem Grunde des Ozeans kann man nicht atmen, geschweige denn Leben.\r\n\r\nAber angeblich habt Ihr ein schönes Schiff auf einer Insel weit vor der Küste gefunden. Wenn Ihr damit nicht aufs offene Meer fahren könnt, gibt es vielleicht ein gutes Zuhause ab.\r\n\r\nNur ein kleiner Ratschlag einer ruhelosen Seele.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE031_FirstOfficerNote",
+        "form_id": "[05000808]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>  \r\n<b>28th of Last Seed, 3E 39</b>\r\nWe set sail on Dead Man's Dread in the summer, to take advantage of the calmer winds. Yet Kynareth saw fit to throw us off course, and now we find ourselves stranded in a fog, with no sun or stars to guide us. The crew is blaming the young navigator, K'avir, for steering us into it. In truth, I only brought him on board because the old Captain took ill, and we were desperately short on men. \r\n\r\n<b>4th of Hearthfire, 3E 39</b>\r\nOne of the crew, Asif, says he was once a Priest of Arkay, and used to perform the rites. He believes the former Captain was murdered. I'll keep this between him and I until I know more.\r\n\r\n<b>22nd of Hearthfire, 3E 39</b>\r\nI've kept the date by marking the back of this journal. But there are times I forget, and in truth I don't know whether it's the 22nd of Hearthfire or the 1st of the New Year. \r\n\r\nBut the cold is enough to tell us that winter is on its way. We'll need to find land soon, as the men are getting nervous. There's been three fights over rations in the past week. Worse yet, I'm starting to lose my head. There are times I look west and see the golden sands of Stros M'Kai on the curve of the horizon. I have to force myself to look away, knowing there's nothing there.\r\n\r\n<b>2nd of Frostfall, 3E 39</b>\r\nWe finally managed to find land in this barren frost. The men are joyous. Based on the markings inside the grotto, it looks like we've reached Blackbone Isle, an old pirate den of all things. Many of us were corsairs before we pledged ourselves to the Crown, so perhaps coming here was more than luck. Either way, we can't be far from the mainland now. We'll head south for Skyrim in the morning.\r\n\r\n<b>3rd of Frostfall, 3E 39</b>\r\nWe are a crew of dead men, and this ship is our tomb.\r\n\r\nThe entrance collapsed in the middle of the night, sealing us inside. Still, we might've found a way back to shore, had the Forebear among us, K'avir, not sabotaged the skiffs. It's my crime as much as his, for I'm the one who brought him aboard. \r\n\r\nFor his part, the Forebear made no attempt to resist or escape. In fact, he readily admitted to the deed, as well of the death of our former Captain. He wanted us to know exactly who it was that he served, so that every Crown would know that nowhere in Tamriel was safe.\r\n\r\nWe put him in the brig and left him to rot. Some of the men wanted a more creative punishment, but the reality is there's no worse fate than the one he doomed us to.\r\n\r\n<b>5th of Frostfall, 3E 39</b>\r\nThe situation is dire. The food stocks are depleted, and half the men are crippled with fever. The crew have no delusions about what comes next. But we can still die with purpose.\r\n\r\nBefore the old Captain died, he told me that the sabre on his wall belonged to Cyrus himself, and that it was worth more than a thousand ships full of plunder.\r\n\r\nI never asked how he knew Cyrus, or how he came upon his sword. But I know protecting the hero's legacy was important to him, and now that honor falls to us.\r\n\r\nI gave each man a choice. Some opted for the drink, others chose a more dramatic exit. As we depart, we will pray to Arkay to bind our souls to the ship, just as Prince A'Tor was bound to a gem so many years ago.\r\n\r\nWe will protect the relics of Cyrus, and honor the Crown. We will do in death what we could not do in life.</font>",
+        "string": "<font face='$HandwrittenFont'>\r\n<b>28. Letzte Saat, 3Ä 39</b>\r\nWir sind auf der Totenschreck im Sommer in See gestochen, um uns die ruhigeren Winde zunutze zu machen. Da es Kynareth trotz allem für nötig befunden hat, uns vom Kurs abzubringen, stecken wir nun in einem Nebel fest, ohne Sonne und Sterne, die uns leiten könnten. Die Mannschaft gibt dem jungen Steuermann K'avir die Schuld daran, uns hineingefahren zu haben. In Wahrheit habe ich ihn nur an Bord geholt, weil der alte Kapitän krank geworden war und wir händeringend neue Männer gesucht hatten.\r\n\r\n<b>4. Herdfeuer, 3Ä 39</b>\r\nDas Mannschaftsmitglied Asif behauptet, einst Priester von Arkay gewesen zu sein und die Riten durchgeführt zu haben. Er glaubt, dass der frühere Kapitän ermordet wurde. Das bleibt vorerst unter uns, bis ich mehr darüber weiß.\r\n\r\n<b>22. Herdfeuer, 3Ä 39</b>\r\nDurch Markierungen auf der Rückseite dieses Tagebuchs halte ich mich über das aktuelle Datum auf dem Laufenden. Manchmal vergesse ich es jedoch und weiß mittlerweile nicht mehr, ob wir den 22. Herdfeuer oder den 1. Neujahr haben.\r\n<b>Die Kälte reicht jedoch aus, um uns wissen zu lassen, dass der Winter sich nähert. Wir müssen bald Land finden, da die Männer langsam nervös werden. In der letzten Woche ist es dreimal zu Streit wegen der Rationen gekommen. Noch schlimmer wiegt jedoch die Tatsache, dass ich langsam meinen Verstand verliere. Manchmal blicke ich nach Westen und sehe die goldenen Sande von Stros M'Kai am Horizont. Ich muss mich zum Wegschauen zwingen, da ich weiß, dass dort nichts ist.\r\n\r\n<b>2. Eisherbst, 3Ä 39</b>\r\nEndlich konnten wir Land in dieser kargen Kälte finden. Die Männer waren überglücklich. Den Markierungen in der Grotte zufolge sieht es aus, als hätten wir ausgerechnet die Schwarzknocheninsel erreicht, einen alten Piratenunterschlupf. Viele von uns waren selbst Korsaren gewesen, bevor wir uns für die Krone verpflichteten, also ist es vielleicht mehr als nur Glück, hier zu sein. So oder so sind wir auf keinen Fall mehr weit vom Festland entfernt. Am Morgen werden wir in Richtung Süden nach Himmelsrand aufbrechen.\r\n\r\n<b>3. Eisherbst, 3Ä 39</b>\r\nWir sind eine Mannschaft aus toten Männern und dieses Schiff ist unser Grab.\r\n\r\nDer Eingang stürzte mitten in der Nacht ein und versperrte den Weg nach draußen. Nichtsdestotrotz wären wir vielleicht zurück ans Ufer gekommen, hätte K'avir, der Altvordere unter uns, die Boote nicht sabotiert - ein Verbrechen, das ihm und mir gleichermaßen anzulasten ist, da ich ihn an Bord geholt habe.\r\n\r\nWas ihn betrifft, hat der Altvordere keine Anstalten gemacht, sich zu widersetzen oder zu fliehen. Er gab die Tat und den Mord an unserem Kapitän sogar bereitwillig zu. Er wollte absolut klarmachen, wem er diente, um jeden Königstreuen wissen zu lassen, dass es nirgendwo in Tamriel sicher wäre.\r\n\r\nWir steckten ihn in die Brigg, auf dass er dort verrecken möge. Einige der Männer waren auf eine kreativere Bestrafung aus, aber in Wirklichkeit gibt es kein schlimmeres Schicksal als das, zu dem er uns verurteilt hat.\r\n\r\n<b>5. Eisherbst, 3Ä 39</b>\r\nDie Lage ist düster. Unsere Nahrungsvorräte sind aufgebraucht und die Hälfte der Männer wurde von Fieber außer Gefecht gesetzt. Die Mannschaft weiß genau, was sie als Nächstes erwartet. Aber wir können unserem Tod noch einen Zweck geben.\r\n\r\nBevor der alte Kapitän starb, hatte er mir gesagt, dass der Säbel an seiner Wand Cyrus höchstpersönlich gehört hatte und mehr wert wäre als Tausend Schiffe voller Beute.\r\n\r\nIch fragte ihn nicht, woher er Cyrus kannte oder wie er an sein Schwert gekommen war, wusste allerdings, dass es ihm viel bedeutete, das Vermächtnis des Helden zu beschützen. Diese Aufgabe fällt nun uns zu.\r\n\r\nIch ließ jedem einzelnen Mann die Wahl. Einige entschieden sich für den Trunk, andere für einen dramatischeren Abgang. Wenn wir dahinscheiden, beten wir zu Arkay, dass er unsere Seelen an das Schiff bindet, genau wie Fürst A'Tor vor so vielen Jahren an einen Edelstein gebunden wurde.\r\n\r\nWir werden Cyrus' Relikte beschützen und die Krone ehren. Wir werden im Tode das leisten, was wir im Leben nicht geschafft haben.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE031_MurdererNote",
+        "form_id": "[0500080B]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>  \r\nNaha 'Mei Dogo Ra Gada Lonhe Trai.\r\n\r\nThe Crowns are fond of this saying. \"The Forebears should know their place.\" They look upon us like commoners,  the chaff from which the wheat is pruned.\r\n\r\nI would remind you, Na-Totambu, that our place is not for you to decide. For we are the Warrior Wave of Ra Gada, the first men. It is our sweat that salts the earth. It is our tears from which the rain falls. It is our blood that beats in the heart of Hammerfell. \r\n\r\nThe throne of kings is one built upon our shoulders. It is by our grace, and our mercy, that the Crowns are allowed to sit. We know our place. Do not forget yours.\r\n",
+        "string": "<font face='$HandwrittenFont'>\r\nNaha 'Mei Dogo Ra Gada Lonhe Trai.\r\n\r\nDie Anhänger der Krone mögen dieses Sprichwort. \"Die Altvorderen sollten wissen, wo ihr Platz ist\". Für sie sind wir einfache Leute, die Spreu, von der der Weizen getrennt wird.\r\n\r\nIch möchte Euch daran erinnern, Na-Totambu, dass nicht Ihr entscheidet, wo unser Platz ist. Wir sind die Kriegerwelle von Ro'Wada, die ersten Männer. Unser Schweiß ist das Salz der Erde. Unsere Tränen sind der fallende Regen. Unser Blut strömt durch Hammerfalls schlagendes Herz.\r\n\r\nDer Thron der Könige wurde auf unseren Schultern errichtet. Die Königstreuen bestehen von unserer Gnade. Wir wissen, wo unser Platz ist. Vergesst nicht, wo Eurer ist.\r\n"
+    },
+    {
+        "editor_id": "ccBGSSSE031_Note",
+        "form_id": "[0500080A]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Kevon's Note",
+        "string": "Kevons Notiz"
+    },
+    {
+        "editor_id": "ccBGSSSE031_OriginBook",
+        "form_id": "[05000809]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nThe Restless\r\n\r\n\r\n\r\nby \r\nUnknown\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/H_letter.png'>ave you heard the tale about the pirates who challenged an Empire? \r\n\r\nI'm sure you have. For neither gallows' rope nor history's pen can erase the Restless League. So long as crews hoist sail and fare the seas they'll sing shanties of ol' Cyrus, hero of Stros M'Kai.\r\n\r\nBut what became of him when the fighting was done? If it were only a tale, the book would close, but life has a habit of adding pages where they shouldn't be.\r\n\r\nSome say he sailed west, to lands uncharted. But others contend he took command of the legendary ship, Dead Man's Dread, and sailed north, drawn by the stories of Tobias. There he hunted for treasures new and old, all across the Sea of Ghosts. Over time he amassed a great fortune, and lived out the rest of his days on calm waters.\r\n\r\nWhere this fortune is now, is a mystery long forgotten. You'll hear talk of a Blackbone Isle, but you won't find it on any map. The last man who claimed to know its location was a pirate by the name of Kevon. Yet as a wanted man of little clout, he died in Castle Dour Dungeon, taking the fate of the treasure with him. \r\n\r\nA strange end to a great tale, but who knows if the writing's done. For a man's hunt for gold is as restless as his desire to be free.\r\n</p>",
+        "string": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nDie Ruhelosen\r\n\r\n\r\n\r\n\r\nAutor unbekannt\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/H_letter.png'>abt Ihr von der Geschichte über die Piraten gehört, die ein ganzes Reich herausforderten?\r\n\r\nBestimmt habt Ihr das. Denn weder das Seil des Galgens noch der Stift des Geschichtsschreibers kann die Renegaten auslöschen. Solang Mannschaften Segel hissen und das Meer befahren, werden sie Lieder über den alten Cyrus singen, den Helden von Stros M'Kai.\r\n\r\nAber was wurde nach dem Ende der Kämpfe aus ihm? Wäre es nur eine Geschichte, würde das Buch nun geschlossen, doch das Leben fügt oftmals Seiten genau dort hinzu, wo keine sein sollten.\r\n\r\nManche sagen, er fuhr nach Westen, in unentdeckte Länder. Andere behaupten jedoch, er hätte das Kommando des legendären Schiffs Totenschreck übernommen und wäre von Tobias' Geschichten angelockt nach Norden gesegelt. Dort begab er sich im Meer der Geister auf die Suche nach neuen und alten Schätzen. Im Laufe der Zeit häufte er große Reichtümer an und lebte den Rest seiner Tage in ruhigen Gewässern.\r\n\r\nWo sich dieses Vermögen jetzt befindet, ist ein längst in Vergessenheit geratenes Mysterium. Man hört immer wieder von der Schwarzknocheninsel, die jedoch auf keiner Karte zu finden ist. Der Letzte, der behauptete, den Ort zu kennen, war ein Pirat namens Kevon, der jedoch als Gesuchter mit nur wenig Einfluss im Kerker von Schloss Elend starb und das Wissen über den Schatz mit ins Grab nahm.\r\n\r\nEin eigenartiges Ende einer großen Geschichte, doch wer weiß, ob sie überhaupt schon zu Ende geschrieben ist. Denn die Ruhelosigkeit eines Mannes auf der Suche nach Gold ist nicht weniger gering als sein Wunsch nach Freiheit.\r\n</p>"
+    },
+    {
+        "editor_id": "ccBGSSSE031_Note",
+        "form_id": "[0500080A]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nFifteen men, a sunken treasure, and a lost ship. That's what I left behind.\r\n\r\nIt took less than a day to sail to Blackbone Isle. Captain said we needn't worry about the cold, so we left the furs and packed the steel.\r\n\r\nSeemed like an odd thing. No one but us knew about this place. Still, didn't matter much as we were making good time. I reckon we were about a league away from the cave when all of a sudden, the wind died.\r\n\r\nThey came up behind us, sabres rattling like ice wraiths. Next thing I hear is the screams. \r\n\r\nI jumped onto the skiff, cut the bastard loose and started to paddle. Didn't have time to look back. \r\n\r\nNow, time's all I got. Maybe if we had more men, or a sodding priest, we could've made it. \r\n\r\nI've got the map at least. Hid it under a loose brick behind the bench. I just need to get out of this dungeon before the sickness takes me.\r\n</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\n15 Männer, einen versunkenen Schatz und ein verlorenes Schiff. Das habe ich zurückgelassen.\r\n\r\nDie Fahrt zur Schwarzknocheninsel dauerte weniger als einen Tag. Der Kapitän sagte, wir müssten uns um die Kälte keine Sorgen machen, also ließen wir die Felle zurück und nahmen den Stahl mit.\r\n\r\nEs schien seltsam. Niemand außer uns wusste von diesem Ort, was trotzdem egal war, da wir gut vorankamen. Ich schätze, wir waren ungefähr eine Meile von der Höhle entfernt, als der Wind abflaute.\r\n\r\nSie kamen von hinten, mit Säbeln, deren Rasseln an Eisgeister erinnerte. Dann hörte ich die Schreie.\r\n\r\nIch sprang auf das Beiboot, machte es los und begann, zu rudern. Ich hatte keine Zeit, mich noch einmal umzudrehen.\r\n\r\nJetzt ist Zeit alles, was ich noch habe. Mit mehr Männern oder einem verdammten Priester hätten wir es vielleicht schaffen können.\r\n\r\nWenigstens habe ich die Karte. Ich habe sie unter einem losen Ziegel hinter der Bank versteckt. Ich muss nur aus diesem Kerker entkommen, bevor mich die Krankheit dahinrafft.\r\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE031_BlackwaterNote",
+        "form_id": "[050008E8]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Celeste's Note",
+        "string": "Celestes Notiz"
+    },
+    {
+        "editor_id": "ccBGSSSE031_BlackwaterNote",
+        "form_id": "[050008E8]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nThe crew always asks me, how can we be pirates if we ain't got no ship?\r\n\r\nAnd I tell them, we're Blackwater Brigands, we don't need no stinking ship. We can rob folks on land.\r\n\r\nAnd they ask me, but don't that make us bandits?\r\n\r\nAnd I tell them, good point. Maybe we should find us a ship.\r\n\r\nI heard there's a grand old sea cow over at Blackbone Isle. Might even have more loot than the Golden Galleon, the one the old Imperial used to tell stories about when I first joined up.\r\n\r\nFrom what I hear, the isle ain't too far from here. We could probably steal a boat from the wrecks up north. The problem is, no one's been to the isle in ages, and we ain't got a map.\r\n\r\nSo the crew asks me, how we gonna find Blackbone Isle if we don't know where it is?\r\n\r\nAnd I tell them, shut up, I'm working on it.\r\n</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\nDie Mannschaft fragt mich immer, wie wir Piraten sein können, wenn wir kein Schiff haben.\r\n\r\nIch sage ihnen, dass wir Schwarzlaufbriganten sind und kein verdammtes Schiff brauchen. Wir können Leute an Land ausrauben.\r\n\r\nDann fragen sie mich, ob uns das nicht zu Banditen macht.\r\n\r\nUnd ich sage ihnen, das da was dran ist. Vielleicht sollten wir uns ein Schiff besorgen.\r\n\r\nWie ich hörte, gibt es auf der Schwarzknocheninsel einen großen alten Kahn, auf dem sogar mehr Beute zu finden sein könnte als auf der Goldenen Galione, von der der alte Kaiserliche immer erzählt hat, als ich damals dazustieß.\r\n\r\nAngeblich ist die Insel nicht allzu weit entfernt. Wir könnten wahrscheinlich ein Boot aus den Wracks im Norden stehlen. Das Problem ist nur, dass seit Ewigkeiten niemand mehr auf dieser Insel war und wir keine Karte haben.\r\n\r\nAlso fragt mich die Mannschaft, wie wir die Schwarzknocheninsel finden sollen, wenn wir nicht wissen, wo sie ist.\r\n\r\nUnd ich sage ihnen, dass sie ihren Mund halten sollen. Ich arbeite daran.\r\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE031_MurdererNote",
+        "form_id": "[0500080B]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Forebear's Note",
+        "string": "Notiz des Altvorderen"
+    },
+    {
+        "editor_id": "ccBGSSSE031_MiscSackSmall",
+        "form_id": "[0500095B]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Small Sack",
+        "string": "Kleiner Sack"
+    },
+    {
+        "editor_id": "ccBGSSSE031_UpperWardrobeScrub",
+        "form_id": "[05000904]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Wardrobe",
+        "string": "Kleiderschrank"
+    },
+    {
+        "editor_id": "ccBGSSSE031_BarrelEmpty01",
+        "form_id": "[050009C5]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Barrel",
+        "string": "Fass"
+    },
+    {
+        "editor_id": "ccBGSSSE031_TreasExplorerLootChest",
+        "form_id": "[05000A06]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Truhe"
+    },
+    {
+        "editor_id": "ccBGSSSE031_UpperWardrobeBoatswain",
+        "form_id": "[05000907]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Wardrobe",
+        "string": "Kleiderschrank"
+    },
+    {
+        "editor_id": "ccBGSSSE031_MiscSackSmallNRS",
+        "form_id": "[05000A01]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Small Sack",
+        "string": "Kleiner Sack"
+    },
+    {
+        "editor_id": "ccBGSSSE031_UpperWardrobeCaptain",
+        "form_id": "[05000901]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Wardrobe",
+        "string": "Kleiderschrank"
+    },
+    {
+        "editor_id": "ccBGSSSE031_TreasSatchel",
+        "form_id": "[050009E8]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Satchel",
+        "string": "Beutel"
+    },
+    {
+        "editor_id": "ccBGSSSE031_ShipDoorLoad",
+        "form_id": "[05000A1D]",
+        "index": null,
+        "type": "DOOR FULL",
+        "original": "Door",
+        "string": "Tür"
+    },
+    {
+        "editor_id": "ccBGSSSE031_CyrusDoor",
+        "form_id": "[05000A29]",
+        "index": null,
+        "type": "DOOR FULL",
+        "original": "Door",
+        "string": "Tür"
+    },
+    {
+        "editor_id": "ccBGSSSE031_RowboatDoor",
+        "form_id": "[0500080C]",
+        "index": null,
+        "type": "DOOR FULL",
+        "original": "Rowboat",
+        "string": "Ruderboot"
+    },
+    {
+        "editor_id": "ccBGSSSE031_Map",
+        "form_id": "[0500080D]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Map to Blackbone Isle",
+        "string": "Karte der Schwarzknocheninsel"
+    },
+    {
+        "editor_id": "ccBGSSSE031_UpperBedDouble01",
+        "form_id": "[05000954]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "Bett"
+    },
+    {
+        "editor_id": "ccBGSSSE031_UpperBedSingle01L",
+        "form_id": "[05000963]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "Bett"
+    },
+    {
+        "editor_id": "ccBGSSSE031_CyrusSabre",
+        "form_id": "[05000D63]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Cyrus' Sabre",
+        "string": "Cyrus' Säbel"
+    },
+    {
+        "editor_id": "ccBGSSSE031_BlackwaterBlade",
+        "form_id": "[05000A4B]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Blackwater Blade",
+        "string": "Schwarzlaufklinge"
+    },
+    {
+        "editor_id": "ccBGSSSE031_LvlAlikrMissileF",
+        "form_id": "[05000814]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Ghost Sailor",
+        "string": "Geisterseemann"
+    },
+    {
+        "editor_id": "ccBGSSSE031_LvlAlikrMagic",
+        "form_id": "[05000812]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Ghost Sailor",
+        "string": "Geisterseemann"
+    },
+    {
+        "editor_id": "ccBGSSSE031_LvlAlikrMelee1H_Female",
+        "form_id": "[0500080F]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Ghost Sailor",
+        "string": "Geisterseemann"
+    },
+    {
+        "editor_id": "ccBGSSSE031_LvlAlikrMelee2H",
+        "form_id": "[05000AA4]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Ghost Captain",
+        "string": "Geisterkapitän"
+    },
+    {
+        "editor_id": "ccBGSSSE031_Corpse",
+        "form_id": "[05000810]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Kevon",
+        "string": "Kevon"
+    },
+    {
+        "editor_id": "ccBGSSSE031_Celeste",
+        "form_id": "[05000A55]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Celeste",
+        "string": "Celeste"
+    },
+    {
+        "editor_id": "ccBGSSSE031_RedguardCaptain_TreasCorpseSkeleton",
+        "form_id": "[05000815]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Captain",
+        "string": "Captain"
+    },
+    {
+        "editor_id": "ccBGSSSE031_DefaultPoison",
+        "form_id": "[0500098A]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Poison",
+        "string": "Gift"
+    },
+    {
+        "editor_id": "ccBGSSSE031Interior02",
+        "form_id": "[050009D5]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Dead Man's Dread",
+        "string": "Totenschreck"
+    },
+    {
+        "editor_id": "ccBGSSSE031Interior01",
+        "form_id": "[05000818]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Blackbone Isle Grotto",
+        "string": "Grotte auf der Schwarzknocheninsel"
+    },
+    {
+        "editor_id": "SolitudeWinkingSkeever",
+        "form_id": "[00016A0E]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "The Winking Skeever",
+        "string": "Zwinkernder Skeever"
+    },
+    {
+        "editor_id": "SolitudeJail01",
+        "form_id": "[00056E88]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Castle Dour Dungeon",
+        "string": "Kerker von Schloss Elend"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000F74]",
+        "index": null,
+        "type": "REFR FULL",
+        "original": "Blackbone Isle",
+        "string": "Schwarzknocheninsel"
+    },
+    {
+        "editor_id": "ccBGSSSE031BlackboneIsle",
+        "form_id": "[05000F6C]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Blackbone Isle",
+        "string": "Schwarzknocheninsel"
+    },
+    {
+        "editor_id": "WindhelmWorld",
+        "form_id": "[0001691D]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Windhelm",
+        "string": "Windhelm"
+    },
+    {
+        "editor_id": "Tamriel",
+        "form_id": "[0000003C]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Himmelsrand"
+    },
+    {
+        "editor_id": "DLC2SolstheimWorld",
+        "form_id": "[04000800]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Solstheim",
+        "string": "Solstheim"
+    },
+    {
+        "editor_id": "ccBGSSSE031_MapMarkerREF",
+        "form_id": "[05000F6B]",
+        "index": null,
+        "type": "REFR FULL",
+        "original": "Blackbone Isle",
+        "string": "Schwarzknocheninsel"
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST_IntimidateTopic",
+        "form_id": "[05000FD0]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I want something in this cell. Open it, or I cut you open. (Intimidate)",
+        "string": "Ich benötige etwas aus dieser Zelle. Öffnet sie, sonst schneide ich Euch auf. (Einschüchtern)"
+    },
+    {
+        "editor_id": "ccBGS_QUESTBribeTopic",
+        "form_id": "[05000FDA]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I want to poke around this cell. Is this enough to open it? (100 gold)",
+        "string": "Ich will mich in dieser Zelle umsehen. Reicht das, um sie zu öffnen? (100 Gold)"
+    },
+    {
+        "editor_id": "ccBGS_QUESTIntimidateTopic",
+        "form_id": "[05000FD7]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I want something in this cell. Open it, or I cut you open. (Intimidate)",
+        "string": "Ich benötige etwas aus dieser Zelle. Öffnet sie, sonst schneide ich Euch auf. (Einschüchtern)"
+    },
+    {
+        "editor_id": "ccBGS_QUESTPersuade01Topic",
+        "form_id": "[05000FD3]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I need to inspect this cell. Can you open it for me? (Persuade)",
+        "string": "Ich muss diese Zelle untersuchen. Könnt Ihr sie für mich öffnen? (Überreden)"
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST_BribeTopic",
+        "form_id": "[05000FCA]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I want to poke around this cell. Is this enough to open it? (<BribeCost> gold)",
+        "string": "Ich will mich in dieser Zelle umsehen. Reicht das, um sie zu öffnen? (<BribeCost> Gold)"
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST_PersuadeTopic",
+        "form_id": "[05000FCC]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I need to inspect this cell. Can you open it for me? (Persuade)",
+        "string": "Ich muss diese Zelle untersuchen. Könnt Ihr sie für mich öffnen? (Überreden)"
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "[05000FDC]",
+        "index": 87,
+        "type": "QUST CNAM",
+        "original": "After finding the map to Blackbone Isle, I traveled to the remote location using a boat at Orphan's Tear. After entering a cave, I found Dead Man's Dread docked inside the grotto.",
+        "string": "Nachdem ich die Karte der Schwarzknocheninsel gefunden habe, bin ich mit einem Boot von der Waisenträne an den entlegenen Ort gefahren. Beim Betreten der Höhle habe ich die in der Grotte angelegte Totenschreck gefunden."
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "[05000FDC]",
+        "index": 77,
+        "type": "QUST CNAM",
+        "original": "I've heard stories of lost shipwrecks strewn across the Sea of Ghosts. At the Winking Skeever in Solitude, I found a lead on a ship said to have traveled to Blackbone Isle. Apparently, the last person to visit the island died in Castle Dour Dungeon.",
+        "string": "Ich habe Geschichten über Wracks im Meer der Geister gehört. Im Zwinkernden Skeever in Einsamkeit habe ich eine Spur zu einem Schiff gefunden, das angeblich zur Schwarzknocheninsel unterwegs war. Der Letzte, der einen Fuß auf die Insel gesetzt hatte, starb offenbar im Kerker von Schloss Elend."
+    },
+    {
+        "editor_id": "ccBGSSSE031_HomeQuest",
+        "form_id": "[05001624]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Claim Dead Man's Dread",
+        "string": "Beanspruche die Totenschreck."
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "[05000FDC]",
+        "index": 5,
+        "type": "QUST NNAM",
+        "original": "(Optional) Convince the guard to give you access to the jail cell",
+        "string": "(Optional) Bring die Wache dazu, dir Zugang zur Kerkerzelle zu verschaffen."
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "[05000FDC]",
+        "index": 60,
+        "type": "QUST CNAM",
+        "original": "After finding the map to Blackbone Isle, I traveled to the remote location using a boat at Orphan's Tear.",
+        "string": "Nachdem ich die Karte der Schwarzknocheninsel gefunden habe, bin ich mit einem Boot von der Waisenträne an den entlegenen Ort gefahren."
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "[05000FDC]",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "At the Winking Skeever in Solitude, I found a lead on a ship said to have traveled to Blackbone Isle. Apparently, the last person to visit the island died in Castle Dour Dungeon. I found his corpse which hinted at the location of a hidden map.",
+        "string": "Im Zwinkernden Skeever in Einsamkeit habe ich eine Spur zu einem Schiff gefunden, das angeblich zur Schwarzknocheninsel unterwegs war. Der Letzte, der einen Fuß auf die Insel gesetzt hatte, starb offenbar im Kerker von Schloss Elend. Ich habe seine Leiche gefunden, die den Weg zu einer versteckten Karte wies."
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "[05000FDC]",
+        "index": 97,
+        "type": "QUST CNAM",
+        "original": "After finding the map to Blackbone Isle, I traveled to the remote location using a boat at Orphan's Tear. After entering a cave, I found Dead Man's Dread docked inside the grotto. Inside the ship were two items of note, Cyrus' Sabre and outfit.",
+        "string": "Nachdem ich die Karte der Schwarzknocheninsel gefunden habe, bin ich mit einem Boot von der Waisenträne an den entlegenen Ort gefahren. Beim Betreten der Höhle habe ich die in der Grotte angelegte Totenschreck gefunden. Auf dem Schiff befanden sich zwei beachtenswerte Gegenstände: Cyrus' Säbel und seine Kleidung."
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "[05000FDC]",
+        "index": 50,
+        "type": "QUST NNAM",
+        "original": "Escape the grotto",
+        "string": "Entkomme aus der Grotte."
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "[05000FDC]",
+        "index": 89,
+        "type": "QUST CNAM",
+        "original": "After finding the map to Blackbone Isle, I traveled to the remote location using a boat at Orphan's Tear. After entering a cave, I found Dead Man's Dread docked inside the grotto.",
+        "string": "Nachdem ich die Karte der Schwarzknocheninsel gefunden habe, bin ich mit einem Boot von der Waisenträne an den entlegenen Ort gefahren. Beim Betreten der Höhle habe ich die in der Grotte angelegte Totenschreck gefunden."
+    },
+    {
+        "editor_id": "ccBGSSSE031_Blackwater",
+        "form_id": "[05001465]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Kill the Blackwater Brigand Boss",
+        "string": "Töte den Anführer der Schwarzlaufbriganten."
+    },
+    {
+        "editor_id": "ccBGSSSE031_HomeQuest",
+        "form_id": "[05001624]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Read the pirate's note",
+        "string": "Lies die Notiz des Piraten."
+    },
+    {
+        "editor_id": "ccBGSSSE031_Blackwater",
+        "form_id": "[05001465]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Retrieve the Blackwater Blade",
+        "string": "Beschaffe die Schwarzlaufklinge."
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "[05000FDC]",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "Investigate Blackbone Isle",
+        "string": "Untersuche die Schwarzknocheninsel."
+    },
+    {
+        "editor_id": "ccBGSSSE031_HomeQuest",
+        "form_id": "[05001624]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Restless Home Quest",
+        "string": "Ruhelosen-Quest"
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "[05000FDC]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "The Restless",
+        "string": "Die Ruhelosen"
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "[05000FDC]",
+        "index": 15,
+        "type": "QUST NNAM",
+        "original": "(Optional) Get arrested and go to jail in Solitude",
+        "string": "(Optional) Lass dich verhaften und in den Kerker in Einsamkeit stecken."
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "[05000FDC]",
+        "index": 81,
+        "type": "QUST CNAM",
+        "original": "After finding the map to Blackbone Isle, I traveled to the remote location using a boat at Orphan's Tear. After entering a cave, I found Dead Man's Dread docked inside the grotto. Inside the ship were two items of note, Cyrus' Sabre and outfit, which were protected by guardians of the ship. I managed to escape the grotto with both items.",
+        "string": "Nachdem ich die Karte der Schwarzknocheninsel gefunden habe, bin ich mit einem Boot von der Waisenträne an den entlegenen Ort gefahren. Beim Betreten der Höhle habe ich die in der Grotte angelegte Totenschreck gefunden. Auf dem Schiff befanden sich zwei beachtenswerte Gegenstände: Cyrus' Säbel und seine Kleidung, beschützt von Wächtern des Schiffs. Mit beidem konnte ich aus der Grotte entkommen."
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "[05000FDC]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Browse books at the Winking Skeever",
+        "string": "Durchstöbere die Bücher im Zwinkernden Skeever."
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "[05000FDC]",
+        "index": 80,
+        "type": "QUST CNAM",
+        "original": "After finding the map to Blackbone Isle, I traveled to the remote location using a boat at Orphan's Tear. After entering a cave, I found Dead Man's Dread docked inside the grotto.",
+        "string": "Nachdem ich die Karte der Schwarzknocheninsel gefunden habe, bin ich mit einem Boot von der Waisenträne an den entlegenen Ort gefahren. Beim Betreten der Höhle habe ich die in der Grotte angelegte Totenschreck gefunden."
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "[05000FDC]",
+        "index": 80,
+        "type": "QUST CNAM",
+        "original": "I've heard stories of lost shipwrecks strewn across the Sea of Ghosts. If I head to the Winking Skeever in Solitude, I may be able to find more information on there whereabouts.",
+        "string": "Ich habe Geschichten über Wracks im Meer der Geister gehört. Im Zwinkernden Skeever in Einsamkeit finde ich vielleicht weitere Informationen über die entsprechenden Orte."
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "[05000FDC]",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Find a spare boat and travel to Blackbone Isle",
+        "string": "Finde ein Boot und fahre zur Schwarzknocheninsel."
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "[05000FDC]",
+        "index": 101,
+        "type": "QUST CNAM",
+        "original": "At the Winking Skeever in Solitude, I found a lead on a ship said to have traveled to Blackbone Isle. Apparently, the last person to visit the island died in Castle Dour Dungeon. I found his corpse and the map he hid under a loose brick. I'll need a boat to travel to the location, perhaps I can find a spare at the wreck near Orphan's Tear.",
+        "string": "Im Zwinkernden Skeever in Einsamkeit habe ich eine Spur zu einem Schiff gefunden, das angeblich zur Schwarzknocheninsel unterwegs war. Der Letzte, der einen Fuß auf die Insel gesetzt hatte, starb offenbar im Kerker von Schloss Elend. Ich habe seine Leiche und die unter einem losen Ziegel versteckte Karte gefunden. Ich brauche ein Boot, um dorthin zu reisen. Vielleicht finde ich eines beim Wrack in der Nähe der Waisenträne."
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "[05000FDC]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Find the pirate's corpse in Castle Dour Dungeon",
+        "string": "Finde die Leiche des Piraten im Kerker von Schloss Elend."
+    },
+    {
+        "editor_id": "ccBGSSSE031_HouseInitQuest",
+        "form_id": "[05001622]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "House Init",
+        "string": "House Init"
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "[05000FDC]",
+        "index": 25,
+        "type": "QUST NNAM",
+        "original": "Examine the loose brick",
+        "string": "Untersuche den losen Ziegel."
+    },
+    {
+        "editor_id": "ccBGSSSE031_WorldLocation",
+        "form_id": "[05001757]",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "Blackbone Isle",
+        "string": "Schwarzknocheninsel"
+    },
+    {
+        "editor_id": "ccBGSSSE031_ExtLocation",
+        "form_id": "[05001621]",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "Blackbone Isle",
+        "string": "Schwarzknocheninsel"
+    },
+    {
+        "editor_id": "ccBGSSSE031_Location",
+        "form_id": "[05000FE1]",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "Dead Man's Dread",
+        "string": "Totenschreck"
+    },
+    {
+        "editor_id": "ccBGSSSE031_BlackwaterBrigandChief",
+        "form_id": "[05001467]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Celeste",
+        "string": "Celeste"
+    },
+    {
+        "editor_id": "ccBGSSSE031_BlackwaterBrigandChief",
+        "form_id": "[05001467]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Celeste",
+        "string": "Celeste"
+    },
+    {
+        "editor_id": "ccBGSSSE031_BlackwaterBrigand",
+        "form_id": "[05001464]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Blackwater Brigand",
+        "string": "Schwarzlaufbrigant"
+    },
+    {
+        "editor_id": "ccBGSSSE031_BoatName01",
+        "form_id": "[050013CB]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Blackbone Isle",
+        "string": "Schwarzknocheninsel"
+    },
+    {
+        "editor_id": "ccBGSSSE031_BoatName01",
+        "form_id": "[050013CB]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Blackbone Isle",
+        "string": "Schwarzknocheninsel"
+    },
+    {
+        "editor_id": "ccBGSSSE031_BlackwaterBrigand",
+        "form_id": "[05001464]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Blackwater Brigand",
+        "string": "Schwarzlaufbrigant"
+    },
+    {
+        "editor_id": "ccBGSSSE031_BoatName02",
+        "form_id": "[05001421]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Orphan's Tear",
+        "string": "Waisenträne"
+    },
+    {
+        "editor_id": "ccBGSSSE031_BoatName02",
+        "form_id": "[05001421]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Orphan's Tear",
+        "string": "Waisenträne"
+    }
+]

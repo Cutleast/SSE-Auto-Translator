@@ -45,7 +45,7 @@ class Processor:
 
         def process(ldialog: LoadingDialog):
             ldialog.updateProgress(text1=app.loc.main.loading_database)
-            database_strings = list(
+            database_originals = list(
                 set(
                     [
                         string.original_string
@@ -54,10 +54,10 @@ class Processor:
                     ]
                 )
             )
-            database_ids = list(
+            database_strings = list(
                 set(
                     [
-                        f"{string.editor_id}###{string.type}"
+                        string
                         for string in app.database.get_strings()
                         if string.status != string.Status.TranslationRequired
                     ]
@@ -109,9 +109,8 @@ class Processor:
 
                         for string in strings:
                             if (
-                                string.original_string not in database_strings
-                                and f"{string.editor_id}###{string.type}"
-                                not in database_ids
+                                string.original_string not in database_originals
+                                and string not in database_strings
                             ):
                                 plugin.status = plugin.Status.RequiresTranslation
                                 break
@@ -119,7 +118,7 @@ class Processor:
                             plugin.status = plugin.Status.TranslationAvailableInDatabase
 
                     else:
-                        plugin.status = plugin.Status.TranslationInstalled
+                        plugin.status = plugin.Status.IsTranslated
                         app.log.info(
                             f"Found already translated plugin in mod {mod.name!r}: {plugin.name!r}"
                         )
@@ -263,8 +262,7 @@ class Processor:
 
             for translated_plugin in translated_mod.plugins:
                 if (
-                    translated_plugin.status
-                    == translated_plugin.Status.TranslationInstalled
+                    translated_plugin.status == translated_plugin.Status.IsTranslated
                     and not app.database.get_translation_by_plugin_name(
                         translated_plugin.name
                     )
@@ -358,6 +356,17 @@ class Processor:
                     translations = app.api.get_mod_translations(
                         "skyrimspecialedition", mod.mod_id
                     )
+
+                    if plugin.name.lower() in app.masterlist:
+                        if app.masterlist[plugin.name.lower()]["type"] == "route":
+                            plugin.status = (
+                                plugin.Status.TranslationAvailableAtNexusMods
+                            )
+                            app.log.info(
+                                f"Found {plugin.name!r} in Masterlist of type 'route'. Skipping Nexus Mods Scan..."
+                            )
+                            continue
+
                     if desired_lang in translations:
                         translation_urls = translations[desired_lang]
                         for translation_url in translation_urls:
@@ -422,6 +431,13 @@ class Processor:
                     )
 
                     translation = app.database.create_translation(plugin.path)
+                    for string in [
+                        string
+                        for group in translation.strings.values()
+                        for string in group
+                    ]:
+                        if string.status == string.Status.TranslationIncomplete:
+                            string.status = string.Status.TranslationComplete
                     translation.save_translation()
                     app.database.add_translation(translation)
                     plugin.status = plugin.Status.TranslationInstalled
@@ -454,15 +470,16 @@ class Processor:
                         plugin.status == plugin.Status.TranslationAvailableAtNexusMods
                         and plugin.tree_item.checkState(0) == qtc.Qt.CheckState.Checked
                     ):
-                        available_translations = [
-                            int(url.rsplit("/", 1)[1].split("?")[0])
-                            for url in app.api.get_mod_translations(
-                                "skyrimspecialedition", mod.mod_id
-                            ).get(desired_lang)
-                        ]
-
-                        if available_translations is None:
-                            plugin.status = plugin.Status.NoTranslationAvailable
+                        _translations = app.api.get_mod_translations(
+                            "skyrimspecialedition", mod.mod_id
+                        ).get(desired_lang)
+                        if _translations is not None:
+                            available_translations = [
+                                int(url.rsplit("/", 1)[1].split("?")[0])
+                                for url in _translations
+                            ]
+                        else:
+                            available_translations = []
 
                         available_translation_files: dict[int, list[int]] = {}
 
@@ -478,6 +495,34 @@ class Processor:
                             else:
                                 available_translations.remove(translation_mod_id)
 
+                        masterlist_entry = app.masterlist.get(plugin.name.lower())
+                        if masterlist_entry is not None:
+                            if masterlist_entry["type"] == "route":
+                                for target in masterlist_entry["targets"]:
+                                    mod_id: int = target["mod_id"]
+                                    file_id: int = target["file_id"]
+
+                                    if mod_id in available_translation_files:
+                                        available_translation_files[mod_id].append(
+                                            file_id
+                                        )
+                                    else:
+                                        available_translation_files[mod_id] = [file_id]
+
+                                    available_translation_files[mod_id] = list(
+                                        set(available_translation_files[mod_id])
+                                    )
+
+                                    available_translations.append(mod_id)
+
+                                available_translations = list(
+                                    set(available_translations)
+                                )
+
+                                app.log.info(
+                                    f"Found {plugin.name!r} in Masterlist of type 'route'. Added Targets to Downloads."
+                                )
+
                         if available_translations and available_translation_files:
                             download = utils.Download(
                                 mod.name,
@@ -486,7 +531,8 @@ class Processor:
                                 available_translations,
                                 available_translation_files,
                             )
-                            downloads.append(download)
+                            if download not in downloads:
+                                downloads.append(download)
 
         loadingdialog = LoadingDialog(app.root, app, process)
         loadingdialog.exec()
@@ -614,17 +660,27 @@ class Processor:
         app.log.info("Running deep scan...")
 
         def process(ldialog: LoadingDialog):
-            plugins = [
-                plugin
+            plugins = {
+                plugin: mod
                 for mod in modlist
                 for plugin in mod.plugins
-                if plugin.status == plugin.Status.TranslationInstalled
+                if plugin.status
+                in [
+                    plugin.Status.TranslationInstalled,
+                    plugin.Status.TranslationIncomplete,
+                ]
                 and plugin.tree_item.checkState(0) == qtc.Qt.CheckState.Checked
-            ]
+            }
 
-            for p, plugin in enumerate(plugins):
+            for p, (plugin, mod) in enumerate(plugins.items()):
                 translation = app.database.get_translation_by_plugin_name(plugin.name)
                 if translation is None:
+                    continue
+
+                if (
+                    mod.mod_id == translation.mod_id
+                    and mod.file_id == translation.file_id
+                ):
                     continue
 
                 app.log.info(f"Scanning {plugin.name!r}...")

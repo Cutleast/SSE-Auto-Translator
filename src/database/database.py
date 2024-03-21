@@ -4,6 +4,7 @@ and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+import logging
 from pathlib import Path
 from shutil import rmtree
 
@@ -28,6 +29,8 @@ class TranslationDatabase:
     vanilla_translation: Translation = None
     user_translations: list[Translation] = None
 
+    log = logging.getLogger("TranslationDatabase")
+
     def __init__(
         self,
         userdb_path: Path,
@@ -45,6 +48,8 @@ class TranslationDatabase:
         Loads vanilla translation.
         """
 
+        self.log.info("Loading vanilla database...")
+
         translation_path = self.appdb_path / self.language.lower()
 
         translation = Translation(
@@ -60,10 +65,16 @@ class TranslationDatabase:
         translation.load_translation()
         self.vanilla_translation = translation
 
+        self.log.info(
+            f"Loaded vanilla database for {len(translation.strings)} base game plugin(s)."
+        )
+
     def load_user_database(self):
         """
         Loads user installed translation database.
         """
+
+        self.log.info("Loading user database...")
 
         index_path = self.userdb_path / self.language / "index.json"
 
@@ -101,6 +112,8 @@ class TranslationDatabase:
 
         self.user_translations = translations
 
+        self.log.info(f"Loaded {len(self.user_translations)} user translation(s).")
+
     def load_database(self):
         """
         Loads translation database.
@@ -113,6 +126,8 @@ class TranslationDatabase:
         """
         Saves translation database.
         """
+
+        self.log.info("Saving database...")
 
         index_path = self.userdb_path / self.language / "index.json"
         index_data = [
@@ -130,6 +145,8 @@ class TranslationDatabase:
 
         with index_path.open("w", encoding="utf8") as index_file:
             json.dump(index_data, index_file, indent=4, ensure_ascii=False)
+
+        self.log.info("Database saved.")
 
     def add_translation(self, translation: Translation):
         """
@@ -209,14 +226,16 @@ class TranslationDatabase:
 
             return installed_translations.get(mod_id)
 
-    def apply_translation(self, translation: Translation, plugin_name: str = None):
+    def apply_db_to_translation(
+        self, translation: Translation, plugin_name: str = None
+    ):
         """
         Applies database to untranslated strings in `translation`.
         """
 
         installed_translations = [self.vanilla_translation] + self.user_translations
 
-        database_strings = {
+        database_originals = {
             string.original_string: string
             for _translation in installed_translations
             for _plugin_name, plugin_strings in _translation.strings.items()
@@ -224,8 +243,8 @@ class TranslationDatabase:
             for string in plugin_strings
             if string.status != String.Status.TranslationRequired
         }
-        database_ids = {
-            f"{string.editor_id}###{string.type}": string
+        database_strings = {
+            f"{string.form_id}###{string.editor_id}###{string.type}###{string.index}": string
             for translation in installed_translations
             for plugin_strings in translation.strings.values()
             for string in plugin_strings
@@ -233,36 +252,50 @@ class TranslationDatabase:
         }
 
         if plugin_name is not None:
-            strings = translation.strings[plugin_name]
+            strings = [
+                string
+                for string in translation.strings[plugin_name]
+                if string.status == string.Status.TranslationRequired
+            ]
         else:
             strings = [
                 string
                 for plugin_strings in translation.strings.values()
                 for string in plugin_strings
+                if string.status == string.Status.TranslationRequired
             ]
 
+        if not len(strings):
+            return
+
+        self.log.info(f"Translating {len(strings)} string(s) from database...")
+        self.log.debug(
+            f"Database size: {len(database_strings)} string(s) ({len(database_originals)} original(s))"
+        )
+
+        translated = 0
         for string in strings:
-            if string.status == string.Status.TranslationRequired:
-                matching = database_strings.get(string.original_string)
+            matching = database_strings.get(
+                f"{string.form_id}###{string.editor_id}###{string.type}###{string.index}"
+            )
 
-                if matching is None:
-                    matching = database_ids.get(f"{string.editor_id}###{string.type}")
+            if matching is None:
+                matching = database_originals.get(string.original_string)
 
-                if matching is None:
-                    continue
+            if matching is None:
+                continue
 
-                full_matching = (
-                    string.editor_id == matching.editor_id
-                    and string.type == matching.type
-                    and string.original_string == matching.original_string
-                )
+            full_matching = string == matching
+            string.translated_string = matching.translated_string
 
-                string.translated_string = matching.translated_string
+            if full_matching or matching.status == String.Status.NoTranslationRequired:
+                string.status = matching.status
+            else:
+                string.status = String.Status.TranslationIncomplete
 
-                if full_matching:
-                    string.status = matching.status
-                else:
-                    string.status = String.Status.TranslationIncomplete
+            translated += 1
+
+        self.log.info(f"Translated {translated} string(s) from database.")
 
     def create_translation(self, plugin_path: Path):
         """
@@ -277,55 +310,13 @@ class TranslationDatabase:
         parser = PluginParser(plugin_path)
         parser.parse_plugin()
         plugin_groups = parser.extract_strings()
+        plugin_strings = [
+            string for group in plugin_groups.values() for string in group
+        ]
 
-        result: list[String] = []
-
-        installed_translations = [self.vanilla_translation] + self.user_translations
-
-        database_strings = {
-            string.original_string: string
-            for translation in installed_translations
-            for plugin_strings in translation.strings.values()
-            for string in plugin_strings
-            if string.status != String.Status.TranslationRequired
-        }
-        database_ids = {
-            f"{string.editor_id}###{string.type}": string
-            for translation in installed_translations
-            for plugin_strings in translation.strings.values()
-            for string in plugin_strings
-            if string.status != String.Status.TranslationRequired
-        }
-
-        for original_group in plugin_groups.values():
-            for original_string in original_group:
-                matching = database_strings.get(original_string.original_string)
-
-                if matching is None:
-                    matching = database_ids.get(
-                        f"{original_string.editor_id}###{original_string.type}"
-                    )
-
-                if matching is None:
-                    original_string.translated_string = original_string.original_string
-                    original_string.status = String.Status.TranslationRequired
-                    result.append(original_string)
-                    continue
-
-                full_matching = (
-                    original_string.editor_id == matching.editor_id
-                    and original_string.type == matching.type
-                    and original_string.original_string == matching.original_string
-                )
-
-                original_string.translated_string = matching.translated_string
-
-                if full_matching:
-                    original_string.status = matching.status
-                else:
-                    original_string.status = String.Status.TranslationIncomplete
-
-                result.append(original_string)
+        for string in plugin_strings:
+            string.translated_string = string.original_string
+            string.status = string.Status.TranslationRequired
 
         translation_name = f"{plugin_path.name} - {self.language.capitalize()}"
         translation = Translation(
@@ -337,8 +328,9 @@ class TranslationDatabase:
             original_file_id=0,
             original_version="",
             path=self.userdb_path / self.language / translation_name,
-            strings={plugin_path.name.lower(): result},
+            strings={plugin_path.name.lower(): plugin_strings},
         )
+        self.apply_db_to_translation(translation, plugin_path.name.lower())
 
         return translation
 
@@ -360,8 +352,7 @@ class TranslationDatabase:
             for translation in self.user_translations
             for plugin_strings in translation.strings.values()
             for string in plugin_strings
-            if string.status == String.Status.TranslationComplete
-            or string.status == String.Status.TranslationIncomplete
+            if string.status != String.Status.TranslationRequired
         ]
 
         return result

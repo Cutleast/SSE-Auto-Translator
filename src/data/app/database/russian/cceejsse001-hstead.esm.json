@@ -1,0 +1,954 @@
+[
+    {
+        "editor_id": "EEJSSE001_BeeJarActivator",
+        "form_id": "[050008A3]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE001_PortalGemredActivator",
+        "form_id": "[050008C4]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskVokunActivator",
+        "form_id": "[0500088B]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskFrostActivator",
+        "form_id": "[050008A8]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Dukaan",
+        "string": "Дукан"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskNahkriinActivator",
+        "form_id": "[0500088C]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Nahkriin",
+        "string": "Накрин"
+    },
+    {
+        "editor_id": "EEJSSE001_EbonyClawActivator",
+        "form_id": "[050008AC]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskKrosisActivator",
+        "form_id": "[05000896]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Krosis",
+        "string": "Кросис"
+    },
+    {
+        "editor_id": "EEJSSE001_EmeraldClawActivator",
+        "form_id": "[050008AB]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE001_EbonyClawActivator",
+        "form_id": "[050008AC]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ebony Dragon Claw",
+        "string": "Эбонитовый драконий коготь"
+    },
+    {
+        "editor_id": "EEJSSE001_IronClawActivator",
+        "form_id": "[050008B8]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE001GrantNoteActivator",
+        "form_id": "[05093DDA]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Homestead For Sale",
+        "string": "Продается жилище"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskHevnoraakActivator",
+        "form_id": "[0500088E]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Hevnoraak",
+        "string": "Хевнорак"
+    },
+    {
+        "editor_id": "EEJSSE001_CoralClawActivator",
+        "form_id": "[050008AE]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Coral Dragon Claw",
+        "string": "Коралловый драконий коготь"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskHevnoraakActivator",
+        "form_id": "[0500088E]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE001_DragonflyJarActivator",
+        "form_id": "[050008A2]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Dragonfly in a Jar",
+        "string": "Стрекоза в банке"
+    },
+    {
+        "editor_id": "EEJSSE001_GoldenClawActivator",
+        "form_id": "[050008B9]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Golden Dragon Claw",
+        "string": "Золотой драконий коготь"
+    },
+    {
+        "editor_id": "EEJSSE001_InitiatesEwerActivator",
+        "form_id": "[050008A7]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskVolsungActivator",
+        "form_id": "[05000894]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskWoodenActivator",
+        "form_id": "[0500088F]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE001BakingSurfaceTrigger",
+        "form_id": "[05070673]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Use",
+        "string": "Использовать"
+    },
+    {
+        "editor_id": "EEJSSE001_PortalGemGreenActivator",
+        "form_id": "[050008C0]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Emerald Paragon",
+        "string": "Изумрудный парагон"
+    },
+    {
+        "editor_id": "EEJSSE001_GlassClawActivator",
+        "form_id": "[050008AA]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE001_PortalGemredActivator",
+        "form_id": "[050008C4]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ruby Paragon",
+        "string": "Рубиновый парагон"
+    },
+    {
+        "editor_id": "EEJSSE001_DragonflyJarActivator",
+        "form_id": "[050008A2]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskKrosisActivator",
+        "form_id": "[05000896]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE001_TorstenSkullActivator",
+        "form_id": "[050008BC]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Torsten's Skull Key",
+        "string": "Ключ-череп Торстена"
+    },
+    {
+        "editor_id": "EEJSSE001_PortalGemBlueActivator",
+        "form_id": "[050008C2]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Sapphire Paragon",
+        "string": "Сапфировый парагон"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskOtarActivator",
+        "form_id": "[05000899]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE001_AurielsShieldActivator",
+        "form_id": "[050008D4]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Auriel's Shield",
+        "string": "Щит Ауриэля"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskShockActivator",
+        "form_id": "[05000881]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE001_SearekSkullActivator",
+        "form_id": "[050008BF]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Saerek's Skull Key",
+        "string": "Ключ-череп Сарека"
+    },
+    {
+        "editor_id": "EEJSSE001_IvoryClawActivator",
+        "form_id": "[050008B6]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ivory Dragon Claw",
+        "string": "Костяной драконий коготь"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskMorokeiActivator",
+        "form_id": "[0500088D]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskFireActivator",
+        "form_id": "[05000889]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE001_MothJarActivator",
+        "form_id": "[050008A1]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE001_PortalGemWhiteActivator",
+        "form_id": "[050008C5]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskKonahrikActivator",
+        "form_id": "[05000892]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Konahrik",
+        "string": "Конарик"
+    },
+    {
+        "editor_id": "EEJSSE001_ButterflyJarActivator",
+        "form_id": "[050008A0]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Butterfly in a Jar",
+        "string": "Бабочка в банке"
+    },
+    {
+        "editor_id": "EEJSSE001_BeeJarActivator",
+        "form_id": "[050008A3]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Bee in a Jar",
+        "string": "Пчела в банке"
+    },
+    {
+        "editor_id": "EEJSSE001_ButterflyJarActivator",
+        "form_id": "[050008A0]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE001_SapphireClawActivator",
+        "form_id": "[05000882]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Sapphire Dragon Claw",
+        "string": "Сапфировый драконий коготь"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskFrostActivator",
+        "form_id": "[050008A8]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE001_AurielsShieldActivator",
+        "form_id": "[050008D4]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE001_PortalGemPurpleActivator",
+        "form_id": "[050008C3]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE001_DiamondClawActivator",
+        "form_id": "[050008B1]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Diamond Dragon Claw",
+        "string": "Алмазный драконий коготь"
+    },
+    {
+        "editor_id": "EEJSSE001_CoralClawActivator",
+        "form_id": "[050008AE]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskMorokeiActivator",
+        "form_id": "[0500088D]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Morokei",
+        "string": "Морокеи"
+    },
+    {
+        "editor_id": "EEJSSE001_PortalGemPurpleActivator",
+        "form_id": "[050008C3]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Amethyst Paragon",
+        "string": "Аметистовый парагон"
+    },
+    {
+        "editor_id": "EEJSSE001_SearekSkullActivator",
+        "form_id": "[050008BF]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskWoodenActivator",
+        "form_id": "[0500088F]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Wooden Mask",
+        "string": "Деревянная маска"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskFireActivator",
+        "form_id": "[05000889]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ahzidal",
+        "string": "Азидал"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskRahgotActivator",
+        "form_id": "[0500089E]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE001_TorstenSkullActivator",
+        "form_id": "[050008BC]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE001GrantNoteActivator",
+        "form_id": "[05093DDA]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Read",
+        "string": "Прочесть"
+    },
+    {
+        "editor_id": "EEJSSE001_EmeraldClawActivator",
+        "form_id": "[050008AB]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Emerald Dragon Claw",
+        "string": "Изумрудный драконий коготь"
+    },
+    {
+        "editor_id": "EEJSSE001_MothJarActivator",
+        "form_id": "[050008A1]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Moth in a Jar",
+        "string": "Мотылек в банке"
+    },
+    {
+        "editor_id": "EEJSSE001_IvoryClawActivator",
+        "form_id": "[050008B6]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskRahgotActivator",
+        "form_id": "[0500089E]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Rahgot",
+        "string": "Рагот"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskNahkriinActivator",
+        "form_id": "[0500088C]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE001_GlassClawActivator",
+        "form_id": "[050008AA]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Glass Dragon Claw",
+        "string": "Стеклянный драконий коготь"
+    },
+    {
+        "editor_id": "EEJSSE001_RubyClawActivator",
+        "form_id": "[050008AD]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ruby Dragon Claw",
+        "string": "Рубиновый драконий коготь"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskOtarActivator",
+        "form_id": "[05000899]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Otar",
+        "string": "Отар"
+    },
+    {
+        "editor_id": "EEJSSE001_PortalGemGreenActivator",
+        "form_id": "[050008C0]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskKonahrikActivator",
+        "form_id": "[05000892]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE001_IronClawActivator",
+        "form_id": "[050008B8]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Iron Dragon Claw",
+        "string": "Железный драконий коготь"
+    },
+    {
+        "editor_id": "EEJSSE001_GoldenClawActivator",
+        "form_id": "[050008B9]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "ccEEJSSE001BakingSurfaceTrigger",
+        "form_id": "[05070673]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Baking Surface",
+        "string": "Плита"
+    },
+    {
+        "editor_id": "EEJSSE001_DiamondClawActivator",
+        "form_id": "[050008B1]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE001_SapphireClawActivator",
+        "form_id": "[05000882]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE001_PortalGemBlueActivator",
+        "form_id": "[050008C2]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskVokunActivator",
+        "form_id": "[0500088B]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Vokun",
+        "string": "Вокун"
+    },
+    {
+        "editor_id": "EEJSSE001_FireflyJarActivator",
+        "form_id": "[050008A6]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE001_RubyClawActivator",
+        "form_id": "[050008AD]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Поместить"
+    },
+    {
+        "editor_id": "EEJSSE001_InitiatesEwerActivator",
+        "form_id": "[050008A7]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Initiate's Ewer",
+        "string": "Кувшин посвященного"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskShockActivator",
+        "form_id": "[05000881]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Zahkriisos",
+        "string": "Закрисош"
+    },
+    {
+        "editor_id": "EEJSSE001_DPMaskVolsungActivator",
+        "form_id": "[05000894]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Volsung",
+        "string": "Вольсунг"
+    },
+    {
+        "editor_id": "EEJSSE001_FireflyJarActivator",
+        "form_id": "[050008A6]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Firefly in a Jar",
+        "string": "Светлячок в банке"
+    },
+    {
+        "editor_id": "EEJSSE001_PortalGemWhiteActivator",
+        "form_id": "[050008C5]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Diamond Paragon",
+        "string": "Бриллиантовый парагон"
+    },
+    {
+        "editor_id": "ccEEJSSE001_NoticeOfSale",
+        "form_id": "[05093DD3]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Homestead For Sale",
+        "string": "Продается жилище"
+    },
+    {
+        "editor_id": "ccEEJSSE001_NoticeOfSale",
+        "form_id": "[05093DD3]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\n<font size='24'><p align='center'>HOMESTEAD FOR SALE</p></font>\r\n<font size='18'><p>This home, and its surrounding environs, is available for purchase.\r\n\r\nI have had many cherished adventures in Skyrim, but now I am afraid I must leave it behind. The war has made life difficult on all of us, and I fear that the worst is yet to come.\r\n\r\nI have entrusted the steward in Dragonsreach with managing the sale of my homestead. If interested, please seek him out.</p></font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\n<font size='24'><p align='center'>ПРОДАЕТСЯ ЖИЛИЩЕ</p></font>\r\n<font size='18'><p>Продается дом с прилегающей территорией.\r\n\r\nМного приключений пережил я в Скайриме, но теперь, увы, все это в прошлом. Война сделала жизнь сложной для всех нас, и, боюсь, худшее еще впереди.\r\n\r\nЯ поручил продажу своего дома управителю Драконьего Предела. Если вас это заинтересовало, разыщите его.</p></font>"
+    },
+    {
+        "editor_id": "EEJSSE001_LargeSackNRS",
+        "form_id": "[0500080C]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Sack",
+        "string": "Мешок"
+    },
+    {
+        "editor_id": "EEJSSE001_BookcaseLOW",
+        "form_id": "[05000807]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Cupboard",
+        "string": "Буфет"
+    },
+    {
+        "editor_id": "EEJSSE001_SmallChest",
+        "form_id": "[05000918]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Small Chest",
+        "string": "Малый сундук"
+    },
+    {
+        "editor_id": "EEJSSE001_Safe",
+        "form_id": "[0500080F]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Safe",
+        "string": "Сейф"
+    },
+    {
+        "editor_id": "ccEEJSSE001_WinterholdBookCase01LessBooks",
+        "form_id": "[05084A84]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Bookcase",
+        "string": "Книжный шкаф"
+    },
+    {
+        "editor_id": "EEJSSE001_SmithingChestNRS",
+        "form_id": "[050008DC]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Сундук"
+    },
+    {
+        "editor_id": "EEJSSE001_IngredientsCupboard",
+        "form_id": "[050008DA]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Cupboard",
+        "string": "Буфет"
+    },
+    {
+        "editor_id": "EEJSSE001_BYOHHouseNobleCupboard01",
+        "form_id": "[05000809]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Dresser",
+        "string": "Комод"
+    },
+    {
+        "editor_id": "EEJSSE001_AlchemySatchel",
+        "form_id": "[05000804]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Apothecary's Satchel",
+        "string": "Сумка аптекаря"
+    },
+    {
+        "editor_id": "EEJSSE001_NobleCupboard",
+        "form_id": "[05000810]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Cupboard",
+        "string": "Буфет"
+    },
+    {
+        "editor_id": "EEJSSE001_DisplayCaseLgAngledTabletop",
+        "form_id": "[05000811]",
+        "index": null,
+        "type": "DOOR FULL",
+        "original": "Display Case",
+        "string": "Витрина"
+    },
+    {
+        "editor_id": "EEJSSE001_WRDoor02",
+        "form_id": "[0500080E]",
+        "index": null,
+        "type": "DOOR FULL",
+        "original": "Door",
+        "string": "Дверь"
+    },
+    {
+        "editor_id": "EEJSSE001_GlazedCup01Dwemer",
+        "form_id": "[050008ED]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Cup",
+        "string": "Чашка"
+    },
+    {
+        "editor_id": "EEJSSE001_Goblet01Dwemer",
+        "form_id": "[050008E9]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Goblet",
+        "string": "Кубок"
+    },
+    {
+        "editor_id": "EEJSSE001_Basket01",
+        "form_id": "[0500092F]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Basket",
+        "string": "Корзина"
+    },
+    {
+        "editor_id": "EEJSSE001_MiscJug",
+        "form_id": "[05000818]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "Кувшинчик"
+    },
+    {
+        "editor_id": "EEJSSE001_PlatterNordic",
+        "form_id": "[0500091C]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Platter",
+        "string": "Блюдо"
+    },
+    {
+        "editor_id": "EEJSSE001_Basket03",
+        "form_id": "[05000921]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Basket",
+        "string": "Корзина"
+    },
+    {
+        "editor_id": "EEJSSE001_MiscJugDwemer",
+        "form_id": "[050008EB]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "Кувшинчик"
+    },
+    {
+        "editor_id": "EEJSSE001_HangingLavenderHarvestable",
+        "form_id": "[05000825]",
+        "index": null,
+        "type": "FLOR RNAM",
+        "original": "Harvest",
+        "string": "Взять"
+    },
+    {
+        "editor_id": "EEJSSE001_HangingLavenderHarvestable",
+        "form_id": "[05000825]",
+        "index": null,
+        "type": "FLOR FULL",
+        "original": "Dried Lavender",
+        "string": "Сушеная лаванда"
+    },
+    {
+        "editor_id": "EEJSSE001_HangingTundraCotton",
+        "form_id": "[0500081E]",
+        "index": null,
+        "type": "FLOR FULL",
+        "original": "Dried Tundra Cotton",
+        "string": "Сушеная пушица"
+    },
+    {
+        "editor_id": "EEJSSE001_HangingTundraCotton",
+        "form_id": "[0500081E]",
+        "index": null,
+        "type": "FLOR RNAM",
+        "original": "Harvest",
+        "string": "Взять"
+    },
+    {
+        "editor_id": "EEJSSE001_NobleBedChildL",
+        "form_id": "[0500094B]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "Кровать"
+    },
+    {
+        "editor_id": "EEJSSE001_NobleBedChildR",
+        "form_id": "[0500090E]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "Кровать"
+    },
+    {
+        "editor_id": "EEJSSE001_OvenMarker",
+        "form_id": "[0500087E]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Baking Surface",
+        "string": "Плита"
+    },
+    {
+        "editor_id": "EEJSSE001_Armchair",
+        "form_id": "[0500087D]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Armchair",
+        "string": "Кресло"
+    },
+    {
+        "editor_id": "EEJSSE001_NobleBedDbl",
+        "form_id": "[0500087B]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "Кровать"
+    },
+    {
+        "editor_id": "EEJSSE001_CraftingAlchemyWorkbenchTabletop",
+        "form_id": "[0500087C]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Alchemy Lab",
+        "string": "Алхимическая лаборатория"
+    },
+    {
+        "editor_id": "ccEEJSSE001_TundraHomesteadKey",
+        "form_id": "[05047E3B]",
+        "index": null,
+        "type": "KEYM FULL",
+        "original": "Key to Tundra Homestead",
+        "string": "Ключ от Жилища в тундре"
+    },
+    {
+        "editor_id": "0EEJSSE001House",
+        "form_id": "[0500087F]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Tundra Homestead",
+        "string": "Жилище в тундре"
+    },
+    {
+        "editor_id": "0EEJSSE001HouseBasement",
+        "form_id": "[05000B06]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Tundra Homestead, Cellar",
+        "string": "Жилище в тундре, подвал"
+    },
+    {
+        "editor_id": "Tamriel",
+        "form_id": "[0000003C]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Скайрим"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000B8A]",
+        "index": null,
+        "type": "REFR FULL",
+        "original": "Tundra Homestead",
+        "string": "Жилище в тундре"
+    },
+    {
+        "editor_id": "ccEEJSSE001_HousePurchaseBranchTopic",
+        "form_id": "[05047E37]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I'd like to purchase a homestead outside of the city. (<Global=ccEEJ001HP> gold)",
+        "string": "Я хочу купить дом вне города. (<Global=ccEEJ001HP> зол.)"
+    },
+    {
+        "editor_id": "ccEEJSSE001_Quest",
+        "form_id": "[05042D35]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Visit Tundra Homestead, your new house",
+        "string": "Посетите свое новое Жилище в тундре"
+    },
+    {
+        "editor_id": "EEJSSE001_HouseIntLocation",
+        "form_id": "[05000F1E]",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "Tundra Homestead",
+        "string": "Жилище в тундре"
+    },
+    {
+        "editor_id": "EEJSSE001_HouseExtLocation",
+        "form_id": "[05001022]",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "Tundra Homestead",
+        "string": "Жилище в тундре"
+    },
+    {
+        "editor_id": "EEJSSE001_DisplayLackMsg",
+        "form_id": "[05000F1F]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You do not have the required item.",
+        "string": "У вас нет нужного предмета."
+    }
+]

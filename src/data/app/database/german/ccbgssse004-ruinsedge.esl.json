@@ -1,0 +1,210 @@
+[
+    {
+        "editor_id": "ccBGSSSE002_EnchInfluenceConfDownFFContactLow",
+        "form_id": "[05000811]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Creatures and people up to level <mag> flee from combat for <dur> seconds.",
+        "string": "Kreaturen und Personen bis zu Stufe <mag> fliehen für <dur> Sekunden aus dem Kampf."
+    },
+    {
+        "editor_id": "ccBGSSSE004_InfluenceAggUpFFContact",
+        "form_id": "[05000801]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fury",
+        "string": "Raserei"
+    },
+    {
+        "editor_id": "ccBGSSSE004_BowBaseEffect",
+        "form_id": "[05000802]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Bow Base Effect",
+        "string": "Bogen-Grundeffekt"
+    },
+    {
+        "editor_id": "ccBGSSSE002_EnchInfluenceConfDownFFContactLow",
+        "form_id": "[05000811]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fear",
+        "string": "Furcht"
+    },
+    {
+        "editor_id": "ccBGSSSE004_ReduceCarryWeight",
+        "form_id": "[05000803]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduce Carry Weight",
+        "string": "Tragekapazität reduzieren"
+    },
+    {
+        "editor_id": "ccBGSSSE004_InfluenceAggUpFFContact",
+        "form_id": "[05000801]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Creatures and people up to level <mag> will attack anything nearby for <dur> seconds.",
+        "string": "Kreaturen und Personen bis zu Stufe <mag> greifen <dur> Sekunden lang jeden in ihrer Nähe an."
+    },
+    {
+        "editor_id": "ccBGSSSE004_SlowFFContact",
+        "form_id": "[0500080E]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Slow",
+        "string": "Verlangsamen"
+    },
+    {
+        "editor_id": "ccBGSSSE004_BowBaseEffect",
+        "form_id": "[05000802]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Randomly applies one of these effects to the target: Frost, Demoralize, Frenzy, Drain Magicka, Paralyze.",
+        "string": "Wendet zufällig einen der folgenden Effekte auf das Ziel an: Frost, Entmutigen, Erzürnen, Magicka entziehen, Lähmen"
+    },
+    {
+        "editor_id": "ccBGSSSE004_EnchFrostDamageFFContact",
+        "form_id": "[0500080D]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Frost Damage",
+        "string": "Frostschaden"
+    },
+    {
+        "editor_id": "ccBGSSSE004_ReduceCarryWeight",
+        "form_id": "[05000803]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Reduce carrying capacity increases by <mag> for <dur> seconds.",
+        "string": "Die Reduzierung der Tragfähigkeit wird <dur> Sekunden lang um <mag> Punkte erhöht."
+    },
+    {
+        "editor_id": "ccBGSSSE004_DrainMagickaEffect",
+        "form_id": "[05000800]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Drain Magicka",
+        "string": "Magicka entziehen"
+    },
+    {
+        "editor_id": "ccBGSSSE004_EnchFrostDamageFFContact",
+        "form_id": "[0500080D]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Target takes <mag> points of frost damage to Health and Stamina.",
+        "string": "Das Ziel erleidet <mag> Punkte Frostschaden auf Gesundheit und Ausdauer."
+    },
+    {
+        "editor_id": "ccBGSSSE004_Paralyze1",
+        "form_id": "[05000807]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Paralyze",
+        "string": "Lähmen"
+    },
+    {
+        "editor_id": "ccBGSSSE004_DrainMagicka",
+        "form_id": "[05000809]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Frenzy",
+        "string": "Erzürnen"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Frost",
+        "form_id": "[05000812]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Frost",
+        "string": "Frost"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Frenzy",
+        "form_id": "[05000805]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Frenzy",
+        "string": "Erzürnen"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Paralyze15",
+        "form_id": "[05000806]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Paralyze",
+        "string": "Lähmen"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Burden",
+        "form_id": "[0500080A]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Burden",
+        "string": "Belasten"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Demoralize",
+        "form_id": "[05000808]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Demoralize",
+        "string": "Entmutigen"
+    },
+    {
+        "editor_id": "ccBGSSSE004_RuinsEdgeBow",
+        "form_id": "[05000D63]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Ruin's Edge",
+        "string": "Schwelle des Ruins"
+    },
+    {
+        "editor_id": "ccBGSSSE004_LvlRuinsEdgeBoss",
+        "form_id": "[05000813]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Bandit Chief",
+        "string": "Banditenanführer"
+    },
+    {
+        "editor_id": "StonyCreekCave01",
+        "form_id": "[0004B8FB]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Stony Creek Cave",
+        "string": "Steinbachhöhle"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Quest",
+        "form_id": "[0500080C]",
+        "index": 81,
+        "type": "QUST CNAM",
+        "original": "I found a map to the location of the fabled bow, Ruin's Edge.",
+        "string": "Ich habe eine Karte gefunden, die mich zu dem berühmten Bogen \"Schwelle des Ruins\" führt."
+    },
+    {
+        "editor_id": "ccBGSSSE004_Quest",
+        "form_id": "[0500080C]",
+        "index": 0,
+        "type": "QUST NNAM",
+        "original": "Find Ruin's Edge",
+        "string": "Finde \"Schwelle des Ruins\"."
+    },
+    {
+        "editor_id": "ccBGSSSE004_Quest",
+        "form_id": "[0500080C]",
+        "index": 81,
+        "type": "QUST CNAM",
+        "original": "I've found Ruin's Edge.",
+        "string": "Ich habe \"Schwelle des Ruins\" gefunden."
+    },
+    {
+        "editor_id": "ccBGSSSE004_Quest",
+        "form_id": "[0500080C]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "The Edge of Ruin",
+        "string": "Die Schwelle des Ruins"
+    }
+]

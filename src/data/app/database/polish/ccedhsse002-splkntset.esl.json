@@ -1,0 +1,802 @@
+[
+    {
+        "editor_id": "ccEDHSSE002_KnightArmorActivatorGauntlets",
+        "form_id": "[05000850]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "Weź"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightArmorActivatorBoots",
+        "form_id": "[05000857]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "Weź"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightTomb",
+        "form_id": "[05000885]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place Heart",
+        "string": "Umieść serce"
+    },
+    {
+        "editor_id": "ccEDHSSE002_defaultDisableSelfOnActivate",
+        "form_id": "[0500086E]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place Heart",
+        "string": "Umieść serce"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightArmorActivatorHelm",
+        "form_id": "[0500082D]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ebony Spell Knight Helmet",
+        "string": "Elitarny hełm zaklętego rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightArmorActivatorCuirass",
+        "form_id": "[0500085A]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ebony Spell Knight Cuirass",
+        "string": "Elitarny kirys zaklętego rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ShrineofMara",
+        "form_id": "[050008C0]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Shrine of Mara",
+        "string": "Shrine of Mara"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightArmorActivatorHelm",
+        "form_id": "[0500082D]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "Weź"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightTomb",
+        "form_id": "[05000885]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Knight's Grave",
+        "string": "Grób rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightArmorActivatorBoots",
+        "form_id": "[05000857]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ebony Spell Knight Boots",
+        "string": "Elitarne buty zaklętego rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightArmorActivatorGauntlets",
+        "form_id": "[05000850]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ebony Spell Knight Gauntlets",
+        "string": "Elitarne rękawice zaklętego rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightArmorActivatorCuirass",
+        "form_id": "[0500085A]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Take",
+        "string": "Weź"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteHelmetBLACK",
+        "form_id": "[050008A3]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Helmet",
+        "string": "Ebonowy hełm zaklętego rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntSteelCuirass",
+        "form_id": "[05000D74]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Steel Spell Knight Armor",
+        "string": "Stalowy pancerz zaklętego rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntSteelBoots",
+        "form_id": "[05000D73]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Steel Spell Knight Boots",
+        "string": "Stalowe buty zaklętego rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntIronBoots",
+        "form_id": "[05000D77]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Iron Spell Knight Boots",
+        "string": "Żelazne buty zaklętego rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntIronHelmet",
+        "form_id": "[05000D7A]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Iron Spell Knight Helmet",
+        "string": "Żelazny hełm zaklętego rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteBoots",
+        "form_id": "[05000D7B]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Boots",
+        "string": "Ebonowe buty zaklętego rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntSteelHelmet",
+        "form_id": "[05000D76]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Steel Spell Knight Helmet",
+        "string": "Stalowy hełm zaklętego rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteBootsBLACK",
+        "form_id": "[050008A0]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Boots",
+        "string": "Ebonowe buty zaklętego rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntSteelGauntlets",
+        "form_id": "[05000D75]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Steel Spell Knight Gauntlets",
+        "string": "Stalowe rękawice zaklętego rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteCuirass",
+        "form_id": "[05000D7C]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Armor",
+        "string": "Ebonowy pancerz zaklętego rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntIronCuirass",
+        "form_id": "[05000D78]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Iron Spell Knight Armor",
+        "string": "Żelazny pancerz zaklętego rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteGauntlets",
+        "form_id": "[05000D7D]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Gauntlets",
+        "string": "Ebonowe rękawice zaklętego rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteBootsWHITE",
+        "form_id": "[0500089C]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Boots",
+        "string": "Ebonowe buty zaklętego rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteCuirassWHITE",
+        "form_id": "[0500089D]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Armor",
+        "string": "Ebonowy pancerz zaklętego rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntIronGauntlets",
+        "form_id": "[05000D79]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Iron Spell Knight Gauntlets",
+        "string": "Żelazne rękawice zaklętego rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteGauntletsWHITE",
+        "form_id": "[0500089E]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Gauntlets",
+        "string": "Ebonowe rękawice zaklętego rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteGauntletsBLACK",
+        "form_id": "[050008A2]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Gauntlets",
+        "string": "Ebonowe rękawice zaklętego rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteCuirassBLACK",
+        "form_id": "[050008A1]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Armor",
+        "string": "Ebonowy pancerz zaklętego rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteHelmet",
+        "form_id": "[05000D7E]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Helmet",
+        "string": "Ebonowy hełm zaklętego rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_ArmorSplKntEliteHelmetWHITE",
+        "form_id": "[0500089F]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ebony Spell Knight Helmet",
+        "string": "Ebonowy hełm zaklętego rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightNote",
+        "form_id": "[0500089B]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nWe've received reports that the Beldama witches have resurfaced in the Reach.\r\n\r\nI'm calling upon all willing and able knights to cleanse the land of witches, hags, and Reachmen. Remember always the death of our sworn brother, Simon Rodayne, for the Order of the Crypt, and for all of Shornhelm.\r\n\r\n-- Knight Captain Rainore\r\n</font>",
+        "string": "<font face='$HandwrittenFont'>\r\nOtrzymaliśmy doniesienia, że wiedźmy Beldamy pojawiły się na Pograniczu.\r\n\r\nWzywam wszystkich chętnych i sprawnych rycerzy, aby oczyścili krainę z wiedźm, czarownic i ludzi Pogranicza.  Pamiętajcie o śmierci naszego brata, Simona Rodayne, dla Zakonu Krypty i dla całego Shornhelm.\r\n\r\n- Kapitan rycerzy Rainore\r\n</font>"
+    },
+    {
+        "editor_id": "ccEDHSSE002_KnightNote",
+        "form_id": "[0500089B]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Knight Captain's Orders",
+        "string": "Rozkazy kapitana rycerzy"
+    },
+    {
+        "editor_id": "ccEDHSSE002_HagNote",
+        "form_id": "[05000889]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Beldama Witch's Note",
+        "string": "Zapiski wiedźmy Beldamy"
+    },
+    {
+        "editor_id": "ccEDHSSE002_HagNote",
+        "form_id": "[05000889]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nWe have stalked our sister Daenella for years, reading the feathers and bones, for not even a witch of Beldama can escape the eye of the coven. \r\n\r\nUsing the crow's sight, we found her upon an altar in the Reach. Time and age did little to fool us. She is the one who betrayed us to the knights. \r\n\r\nSuch an act deserves a cruel death, but simply killing the traitor will not be enough for the ward mother's vengeance. \r\n\r\nWe will corrupt her beloved's heart and return it tainted, damning his soul for eternity. She will know this as she dies upon the rock.\r\n</font>",
+        "string": "<font face='$HandwrittenFont'>\r\nŚcigałyśmy naszą siostrę, Daenellę, od wielu lat. Czytałyśmy z piór i kości. Nawet wiedźma Beldamy nie zdoła uciec przed okiem sabatu. \r\n\r\nUżywając wzroku kruka, namierzyłyśmy ją przy ołtarzu na Pograniczu. Czas i wiek nie zdołały nas oszukać. To ona zdradziła nas dla rycerzy. \r\n\r\nTaki akt zasługuje na okrutną śmierć, a zabicie zdrajczyni nie wystarczy, aby nasycić zemstę matki oddziałowej. \r\n\r\nSplugawimy serce jej ukochanego i zwrócimy je splamione, przeklinając jego duszę na wieczność. Będzie o tym wiedziała, gdy umrze na skale.\r\n</font>"
+    },
+    {
+        "editor_id": "ccEDHSSE002_QuestStartNote",
+        "form_id": "[05000838]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Ghost Sighting",
+        "string": "Widzenie ducha"
+    },
+    {
+        "editor_id": "ccEDHSSE002_WarMagesShornhelm",
+        "form_id": "[05000853]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Crypt of the Heart - Draft",
+        "string": "Krypta Serca - szkic"
+    },
+    {
+        "editor_id": "ccEDHSSE002_WarMagesShornhelm",
+        "form_id": "[05000853]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\r\n<p align=\"center\">\r\n<font face='$HandwrittenFont'>\r\n\r\nCrypt of the Heart\r\n\r\n\r\n\r\nby \r\nAriana Dumas\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<font face='$HandwrittenFont'>When it comes to tales of bravery and valor, few have a greater claim than the Knightly Orders of High Rock. Like the Knights of the Rose in Wayrest, many serve as royal guardians and protectors of the realm. It is through their defense of king and country that their fame resounds.\r\n\r\nYet others swear an oath of a different kind. Not bound by the walls of their kingdom, they scour the hills in search of Reachmen, witches, and Forsworn, pledging to deliver justice where savagery and chaos rule.\r\n\r\nOne such group refers to themselves as the Order of the Crypt. At first glance, the name might seem ironic, but the Crypt of Hearts they swore to protect went beyond the underground chamber in Shornhelm. The knights pledged to protect the hearts entombed in all of us, lest they be replaced with the briars of the unholy.\r\n\r\nYet despite the air of nobility they carried, in the Reach these knights were known by a different name; The War Mages of Shornhelm. For they gave no mercy to the wicked, and the land they tread was riven with scars made of fire and sword.\r\n\r\nWhy the knights chose to extend beyond the kingdom is a matter of debate. Much of it can be traced to a blood feud, and the death of a knight named Simon Rodayne. Tricked by the witch Daenalla, a Sister of the Beldama Coven, his heart was stolen and replaced with a briarheart. In retaliation, his acolytes drove the coven further and further east, killing any Reachmen who would dare give them quarter. \r\n\r\nYet in huts small and muddy with smoke, the oral histories tell a different story. They say Simon gave his heart willingly to the witch, and together they fled the wrath of both their clans, knowing they would receive neither understanding nor forgiveness.\r\n\r\nWhen Simon died, Daenalla returned his heart to him, and buried him at the altar where they wed. Such was the pain of her loss that she wept from the Morning to the Evening Star, until her tears flooded the canyon below and became one with the river Karth. \r\n\r\nTo this day, Simon's ghost is said to haunt the pass below his grave, watching over the river which bears his beloved's tears.\r\n\r\nWhether any of that is true or simply the embellishments of history, none can say with certainty. However, it is worth noting that the grave itself exists. Whether the heart inside belongs to Simon or another, is a question for its keeper.</p></font>",
+        "string": "[pagebreak]\r\n<p align=\"center\">\r\n<font face='$HandwrittenFont'>\r\n\r\nKrypta Serca\r\n\r\n\r\n\r\nautorstwa \r\nAriany Dumas\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<font face='$HandwrittenFont'>Jeśli chodzi o opowieści o odwadze i honorze, trudno o wspanialsze dokonania niż te Zakonu Rycerskiego Wysokiej Skały. Niczym Rycerze Róży w Wayrest, wielu z nich służy jako królewscy gwardziści i obrońcy królestwa. Rycerze Wysokiej Skały zyskali sławę właśnie dzięki wiernej służbie królowi.\r\n\r\nNiektórzy z nich składają jednak śluby innego rodzaju. Nie ograniczają ich mury własnego królestwa - przeszukują wzgórza poszukując ludzi Pogranicza, wiedźm i renegatów. Przysięgają zaprowadzać sprawiedliwość tam, gdzie włada dzicz i chaos.\r\n\r\nJeden z odłamów Rycerzy Wysokiej Skały zwie się Zakonem Krypty. Na pierwszy rzut oka nazwa wydaje się być ironiczna, ale nie chodzi tylko o pilnowanie Krypty Serc, znajdującej się głęboko w podziemnej komnacie w Shornhelm. Rycerze poprzysięgli bronić serc uwięzionych w każdym z nas, aby nie zostały zastąpione przez nieświęty głóg.\r\n\r\nA jednak mimo roztaczanej wokół aury szlachetności, na Pograniczu rycerze ci znani są pod inną nazwą - Magów bojowych z Shornhelm. Nie okazują oni żadnej litości niegodziwcom, a miejsca, przez które przechodzą, zawsze naznaczone są bliznami ognia i miecza.\r\n\r\nDlaczego rycerze postanowili działać także poza granicami królestwa? Istnieje wiele teorii. Może chodzić o krwawy zatarg i śmierć rycerza imieniem Simon Rodayne. Oszukany przez wiedźmę Daenallę, siostrę z sabatu Beldamy, dał sobie wykraść serce, które zastąpione zostało głogowym. Z zemsty, jego towarzysze wyparli sabat daleko na wschód, zabijając wszystkich ludzi Pogranicza, którzy odważyli się udzielić schronienia wiedźmom. \r\n\r\nA jednak w małych osmalonych lepiankach krąży inna historia. Ponoć Simon dobrowolnie oddał serce wiedźmie i wspólnie uciekli oni przed gniewem swoich klanów, wiedząc, że nie mogą liczyć ani na zrozumienie, ani na łaskę.\r\n\r\nPo śmierci Simona, Daenalla oddała mu serce i pogrzebała go przy ołtarzu, przy którym wzięli ślub. Jej rozpacz była tak wielka, że płakała od zarannej po wieczorną gwiazdę, aż łzy wyżłobiły wąwóz i zlały się w jedno z rzeką Karth. \r\n\r\nPo dziś dzień, duch Simona nawiedza ponoć przełęcz pod swym grobem i pilnuje rzeki, w której płyną łzy jego ukochanej.\r\n\r\nCzy to prawda, czy po prostu ubarwiona historia, nikt nie jest pewien. Warto jednak zaznaczyć, że sam grób istnieje. Czy znajdujące się w nim serce należy do Simona czy kogoś innego? To już pytanie do jego strażnika.</p></font>"
+    },
+    {
+        "editor_id": "ccEDHSSE002_BriarHeartNote",
+        "form_id": "[05000855]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Forsworn Shaman's Note",
+        "string": "Zapiski szamana renegatów"
+    },
+    {
+        "editor_id": "ccEDHSSE002_QuestStartNote",
+        "form_id": "[05000838]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nI've heard a lot of strange tales in the Reach. Witches turning men into frogs, wolves the size of bears, things like that. There's even a story about an old knight's tomb, and a ghost haunting the Reach.\r\n\r\nNow, normally I brush off such talk. The emptier the bottle, the taller the tale. \r\n\r\nBut what I saw last night changed my mind. I was heading south toward Dushnikh Yal, to set up camp and mine the hills in the morning. I had just crossed the river, when I saw something come out of the fog. \r\n\r\nIt was just like in the stories. He looked like a man cast from the moonlight. I could see him, and at the same, I could see right through him. Not only that, he was dressed in some armor I've never seen, and bade me to follow him up the hillside. \r\n\r\nBut I did no such thing. Instead I dropped my knapsack, turned tail and ran. Call me a snowback, a milk-drinker, I don't care. No good can come from following the dead. There's is a place no man wants to visit.\r\n</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nZnam wiele dziwnych opowieści o Pograniczu. Wiedźmy zmieniające ludzi w żaby, wilki wielkie jak niedźwiedzie, tego typu sprawy. Krąży nawet opowieść o grobowcu rycerza i duchu nawiedzającym Pogranicze.\r\n\r\nZwykle nie wierzę w takie rzeczy. Im mniej w butelce, tym więcej na języku. \r\n\r\nAle to, co zobaczyłem zeszłej nocy, zmieniło moje zdanie. Podążałem na południe, ku Dushnikh Yal, aby rozbić obóz i rano rozpocząć odwierty na wzgórzach. Dopiero co przekroczyłem rzekę, kiedy zobaczyłem, jak coś wynurza się z mgły. \r\n\r\nBył dokładnie taki, jak w opowieściach. Jak człek zrodzony z księżycowego światła. Widziałem go, a jednocześnie widziałem przez niego. Co więcej, był zakuty w pancerz, nigdy nie widziałem podobnego. Wskazał, abym podążał za nim w górę wzgórza. \r\n\r\nAle nie uczyniłem tego. Rzuciłem plecak, odwróciłem się na pięcie i wziąłem nogi za pas. Możecie mnie nazywać mięczakiem, strachajłą, nie obchodzi mnie to. Nic dobrego nie przyjdzie z podążania za umarłym. Takich miejsc nikt nie chce odwiedzać.\r\n</font>"
+    },
+    {
+        "editor_id": "ccEDHSSE002_BriarHeartNote",
+        "form_id": "[05000855]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nWe've killed the traitor and given the knight's heart to the mother. She's gone back to Karthspire to perform the ritual.\r\n\r\nWe'll stand watch until she returns, and drain the blood of any knights who interfere.\r\n</font>",
+        "string": "<font face='$HandwrittenFont'>\r\nZabiliśmy zdrajcę i oddaliśmy serce rycerza matce. Wróciła do Iglicy Karth, aby przeprowadzić rytuał.\r\n\r\nBędziemy czekać na jej powrót i puścimy krew każdemu rycerzowi, który odważy się wejść nam w paradę.\r\n</font>"
+    },
+    {
+        "editor_id": "ccEDHSSE002_QAChest",
+        "form_id": "[05000D7F]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Spell Knight Chest",
+        "string": "Skrzynia zaklętego rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_MarkarthCoffin01container",
+        "form_id": "[05000811]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Grave",
+        "string": "Grób"
+    },
+    {
+        "editor_id": "ccEDHSSE002_HumanHeart",
+        "form_id": "[0500085D]",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Simon Rodayne's Heart",
+        "string": "Serce Simona Rodayne"
+    },
+    {
+        "editor_id": "ccEDHSSE002_CorruptedHumanHeart",
+        "form_id": "[0500085B]",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Corrupted Human Heart",
+        "string": "Splugawione ludzkie serce"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Daenella",
+        "form_id": "[05000877]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Daenella",
+        "string": "Daenella"
+    },
+    {
+        "editor_id": "ccEDHSSE002_LvlForswornShaman",
+        "form_id": "[05000845]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Forsworn Shaman",
+        "string": "Forsworn Shaman"
+    },
+    {
+        "editor_id": "ccEDHSSE002_SpellKnight03",
+        "form_id": "[0500087B]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Simon",
+        "string": "Simon"
+    },
+    {
+        "editor_id": "ccEDHSSE002_SpellKnight03",
+        "form_id": "[0500087B]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Simon Rodayne",
+        "string": "Simon Rodayne"
+    },
+    {
+        "editor_id": "ccEDHSSE002_LvlForswornBoss",
+        "form_id": "[050008A4]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Forsworn Briarheart",
+        "string": "Forsworn Briarheart"
+    },
+    {
+        "editor_id": "ccEDHSSE002_SpellKnightSteel",
+        "form_id": "[05000898]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Knight of the Crypt",
+        "string": "Rycerz z krypty"
+    },
+    {
+        "editor_id": "ccEDHSSE002_LvlForswornMeleeFemale",
+        "form_id": "[05000847]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Forsworn Ravager",
+        "string": "Forsworn Ravager"
+    },
+    {
+        "editor_id": "ccEDHSSE002_DaenellaCorpse",
+        "form_id": "[0500080E]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Daenella",
+        "string": "Daenella"
+    },
+    {
+        "editor_id": "ccEDHSSE002_SpellKnight02",
+        "form_id": "[05000867]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Simon Rodayne",
+        "string": "Simon Rodayne"
+    },
+    {
+        "editor_id": "ccEDHSSE002_SpellKnightIron",
+        "form_id": "[05000897]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Knight of the Crypt",
+        "string": "Rycerz z krypty"
+    },
+    {
+        "editor_id": "ccEDHSSE002_SpellKnight",
+        "form_id": "[05000834]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Ghost Knight",
+        "string": "Duch rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_SpellKnight02",
+        "form_id": "[05000867]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Simon",
+        "string": "Simon"
+    },
+    {
+        "editor_id": "MarkarthSilverBloodInn",
+        "form_id": "[00016DFE]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Silver-Blood Inn",
+        "string": "Gospoda Srebrno-Krwista"
+    },
+    {
+        "editor_id": "Tamriel",
+        "form_id": "[0000003C]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Skyrim"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "I found a book at the Silver-Blood Inn that mentions the ghost of a Breton knight named Simon Rodayne. According to the book, he haunts the river below his tomb, south of Markarth. I should investigate the area and see what I can find.",
+        "string": "W Gospodzie Srebrno-Krwistej znajdowała się księga wspominająca o duchu bretońskiego rycerza imieniem Simon Rodayne. Wedle księgi, nawiedza on rzekę pod swoją kryptą, na południe od Markartu. Czas zbadać okolicę i sprawdzić, co uda mi się odkryć."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 2000,
+        "type": "QUST NNAM",
+        "original": "Retrieve the knight's armor",
+        "string": "Zdobądź pancerz rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 77,
+        "type": "QUST CNAM",
+        "original": "I found a knight's tomb in Markarth surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire. At Karthspire, I found two hagravens conducting a ritual with the heart at its center. I retrieved the heart and returned it to the knight's tomb. ",
+        "string": "W Markarcie udało mi się odnaleźć kryptę rycerza, strzeżoną przez trzech renegatów. Udało mi się ich pokonać, a przy szamanie znajdowały się zapiski, z których wynikało, że splugawili oni kryptę i zabrali serce rycerza do Iglicy Karth. W Iglicy dwa Wiedźmokruki odprawiały rytuał z użyciem serca. Udało mi się odzyskać serce i zwrócić je do krypty rycerza. "
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 85,
+        "type": "QUST CNAM",
+        "original": "I investigated the area south of Markarth and was confronted by a ghost. After following the ghost and climbing up to the top of the mountain, I found a tomb surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire.",
+        "string": "W trakcie przeszukiwania obszaru na południe od Markartu, nagle przede mną pojawił się duch. Po podążaniu za duchem i wspięciu się na szczyt góry, moim oczom ukazała się krypta rycerza, strzeżona przez trzech renegatów. Udało mi się ich pokonać, a przy szamanie znajdowały się zapiski, z których wynikało, że splugawili oni kryptę i zabrali serce rycerza do Iglicy Karth."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 79,
+        "type": "QUST CNAM",
+        "original": "The inns of Skyrim are a good place to look for rumors. Being on the western border, Markarth is one of the busiest holds in Skyrim. I should head to the inn there and see what I can find.",
+        "string": "W gospodach Skyrimu często można usłyszeć ciekawe plotki. Leżący na południowej granicy Markart jest jednym z najchętniej odwiedzanych miejsc w Skyrimie. Czas ruszać do gospody i czegoś się dowiedzieć."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 50,
+        "type": "QUST NNAM",
+        "original": "Search the Forsworn Shaman",
+        "string": "Poszukaj szamana renegatów"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 86,
+        "type": "QUST CNAM",
+        "original": "I found a book at the Silver-Blood Inn that mentions the ghost of a Breton knight named Simon Rodayne. According to the book, he haunts the river below his tomb, south of Markarth. At the river, I found the presence of a ghost who wandered off further south. I followed the ghost up the hill when it vanished. The knight's tomb must be somewhere in the surrounding area.",
+        "string": "W Gospodzie Srebrno-Krwistej znajdowała się księga wspominająca o duchu bretońskiego rycerza imieniem Simon Rodayne. Wedle księgi, nawiedza on rzekę pod swoją kryptą, na południe od Markartu. Przy rzece rzeczywiście pojawił się duch, który jednak oddalił się dalej na południe. Podążając za nim, dotarliśmy do wzgórza, gdzie duch zniknął. Krypta rycerza musi znajdować się gdzieś w pobliżu."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 104,
+        "type": "QUST CNAM",
+        "original": "I found a knight's tomb in Markarth surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire. At Karthspire, I found two hagravens conducting a ritual with the heart at its center. I retrieved the heart and returned it to the knight's tomb. The heart was still corrupted, however, and the knight's ghost turned hostile as a result. I defeated the knight and took his armor for myself.",
+        "string": "W Markarcie udało mi się odnaleźć kryptę rycerza, strzeżoną przez trzech renegatów. Udało mi się ich pokonać, a przy szamanie znajdowały się zapiski, z których wynikało, że splugawili oni kryptę i zabrali serce rycerza do Iglicy Karth. W Iglicy dwa Wiedźmokruki odprawiały rytuał z użyciem serca. Udało mi się odzyskać serce i zwrócić je do krypty rycerza. Niestety, serce zostało splugawione, w związku z czym duch rycerza zwrócił się przeciw mnie. W krypcie pokonanego rycerza znajdował się jego pancerz, który teraz należy do mnie."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 82,
+        "type": "QUST CNAM",
+        "original": "I investigated the area south of Markarth and was confronted by a ghost. After following the ghost and climbing up to the top of the mountain, I found a tomb surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire. At Karthspire, I found two hagravens conducting a ritual with the heart at its center. I retrieved the heart and can now return it to the knight's tomb.",
+        "string": "W trakcie przeszukiwania obszaru na południe od Markartu, nagle przede mną pojawił się duch. Po podążaniu za duchem i wspięciu się na szczyt góry, moim oczom ukazała się krypta rycerza, strzeżona przez trzech renegatów. Udało mi się ich pokonać, a przy szamanie znajdowały się zapiski, z których wynikało, że splugawili oni kryptę i zabrali serce rycerza do Iglicy Karth. W Iglicy dwa Wiedźmokruki odprawiały rytuał z użyciem serca. Udało mi się odzyskać serce i mogę teraz zwrócić je do krypty rycerza."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 80,
+        "type": "QUST NNAM",
+        "original": "(Optional) Purify the heart at the altar",
+        "string": "(Opcjonalne) Oczyść serce na ołtarzu"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Investigate the Silver-Blood Inn",
+        "string": "Odwiedź Gospodę Srebrno-Krwistą"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 79,
+        "type": "QUST CNAM",
+        "original": "I found a book at the Silver-Blood Inn that mentions the ghost of a Breton knight named Simon Rodayne. According to the book, he haunts the river below his tomb, south of Markarth. After following the ghost and climbing up to the top of the mountain, I found a tomb surrounded by three Forsworn, and defeated them in battle.",
+        "string": "W Gospodzie Srebrno-Krwistej znajdowała się księga wspominająca o duchu bretońskiego rycerza imieniem Simon Rodayne. Wedle księgi, nawiedza on rzekę pod swoją kryptą, na południe od Markartu. Po podążaniu za duchem i wspięciu się na szczyt góry, moim oczom ukazała się krypta, strzeżona przez trzech renegatów. Rozprawa z nimi nie trwała długo."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 73,
+        "type": "QUST CNAM",
+        "original": "I investigated the area south of Markarth and was confronted by a ghost. After following the ghost and climbing up to the top of the mountain, I found a tomb surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire. At Karthspire, I found two hagravens conducting a ritual with the heart at its center. I retrieved the heart and returned it to the knight's tomb.",
+        "string": "W trakcie przeszukiwania obszaru na południe od Markartu, nagle przede mną pojawił się duch. Po podążaniu za duchem i wspięciu się na szczyt góry, moim oczom ukazała się krypta rycerza, strzeżona przez trzech renegatów. Udało mi się ich pokonać, a przy szamanie znajdowały się zapiski, z których wynikało, że splugawili oni kryptę i zabrali serce rycerza do Iglicy Karth. W Iglicy dwa Wiedźmokruki odprawiały rytuał z użyciem serca. Udało mi się odzyskać serce i zwrócić je do krypty rycerza."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 1000,
+        "type": "QUST NNAM",
+        "original": "Retrieve the knight's armor",
+        "string": "Zdobądź pancerz rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 105,
+        "type": "QUST CNAM",
+        "original": "I found a knight's tomb in Markarth surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire. At Karthspire, I found two hagravens conducting a ritual with the heart at its center. I retrieved the heart and returned it to the knight's tomb. The heart was still corrupted, however, and the knight's ghost turned hostile as a result.",
+        "string": "W Markarcie udało mi się odnaleźć kryptę rycerza, strzeżoną przez trzech renegatów. Udało mi się ich pokonać, a przy szamanie znajdowały się zapiski, z których wynikało, że splugawili oni kryptę i zabrali serce rycerza do Iglicy Karth. W Iglicy dwa Wiedźmokruki odprawiały rytuał z użyciem serca. Udało mi się odzyskać serce i zwrócić je do krypty rycerza. Niestety, serce zostało splugawione, w związku z czym duch rycerza zwrócił się przeciw mnie."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 55,
+        "type": "QUST NNAM",
+        "original": "Read the Forsworn Shaman's note",
+        "string": "Przeczytaj zapiski szamana renegatów"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 90,
+        "type": "QUST NNAM",
+        "original": "Defeat the Corrupted Knight",
+        "string": "Pokonaj splugawionego rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 76,
+        "type": "QUST CNAM",
+        "original": "I found a knight's tomb in Markarth surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire. At Karthspire, I found two hagravens conducting a ritual with the heart at its center. I retrieved the heart and returned it to the knight's tomb. After purifying the heart, I saw a visage of the knight and the witch reunited once more. ",
+        "string": "W Markarcie udało mi się odnaleźć kryptę rycerza, strzeżoną przez trzech renegatów. Udało mi się ich pokonać, a przy szamanie znajdowały się zapiski, z których wynikało, że splugawili oni kryptę i zabrali serce rycerza do Iglicy Karth. W Iglicy dwa Wiedźmokruki odprawiały rytuał z użyciem serca. Udało mi się odzyskać serce i zwrócić je do krypty rycerza. Po oczyszczeniu serca, moim oczom ukazał się rycerz, który nareszcie mógł dołączyć do wiedźmy. "
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 89,
+        "type": "QUST CNAM",
+        "original": "I found a book at the Silver-Blood Inn that mentions the ghost of a Breton knight named Simon Rodayne. According to the book, he haunts the river below his tomb, south of Markarth. After following the ghost and climbing up to the top of the mountain, I found a tomb surrounded by three Forsworn.",
+        "string": "W Gospodzie Srebrno-Krwistej znajdowała się księga wspominająca o duchu bretońskiego rycerza imieniem Simon Rodayne. Wedle księgi, nawiedza on rzekę pod swoją kryptą, na południe od Markartu. Po podążaniu za duchem i wspięciu się na szczyt góry, moim oczom ukazała się krypta, strzeżona przez trzech renegatów."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 98,
+        "type": "QUST CNAM",
+        "original": "I found a knight's tomb in Markarth surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire. At Karthspire, I found two hagravens conducting a ritual with the heart at its center. I retrieved the heart and returned it to the knight's tomb. The heart was still corrupted, however, and the knight's ghost turned hostile as a result. I defeated the knight and can now retrieve his armor from the tomb.",
+        "string": "W Markarcie udało mi się odnaleźć kryptę rycerza, strzeżoną przez trzech renegatów. Udało mi się ich pokonać, a przy szamanie znajdowały się zapiski, z których wynikało, że splugawili oni kryptę i zabrali serce rycerza do Iglicy Karth. W Iglicy dwa Wiedźmokruki odprawiały rytuał z użyciem serca. Udało mi się odzyskać serce i zwrócić je do krypty rycerza. Niestety, serce zostało splugawione, w związku z czym duch rycerza zwrócił się przeciw mnie. W krypcie pokonanego rycerza znajduje się jego pancerz, który mogę sobie wziąć."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "I found a knight's tomb in Markarth surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that implied they defiled the tomb and took the knight's heart to Karthspire. At Karthspire, I found two hagravens conducting a ritual with the heart at its center. I retrieved the heart and returned it to the knight's tomb. ",
+        "string": "W Markarcie udało mi się odnaleźć kryptę rycerza, strzeżoną przez trzech renegatów. Udało mi się ich pokonać, a przy szamanie znajdowały się zapiski, z których wynikało, że splugawili oni kryptę i zabrali serce rycerza do Iglicy Karth. W Iglicy dwa Wiedźmokruki odprawiały rytuał z użyciem serca. Udało mi się odzyskać serce i zwrócić je do krypty rycerza. "
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 25,
+        "type": "QUST NNAM",
+        "original": "Follow the ghost",
+        "string": "Podążaj za duchem"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Search the hills for the knight's tomb",
+        "string": "Przeszukaj wzgórza i spróbuj odnaleźć kryptę rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 60,
+        "type": "QUST NNAM",
+        "original": "Search Karthspire for the stolen heart",
+        "string": "Przeszukaj Iglicę Karth i spróbuj odnaleźć skradzione serce"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "I investigated the area south of Markarth and was confronted by a ghost. After following the ghost and climbing up to the top of the mountain, I found a tomb surrounded by three Forsworn, and defeated them in battle. On the shaman I found a note that may provide additional clues.",
+        "string": "W trakcie przeszukiwania obszaru na południe od Markartu, nagle przede mną pojawił się duch. Po podążaniu za duchem i wspięciu się na szczyt góry, moim oczom ukazała się krypta rycerza, strzeżona przez trzech renegatów. Udało mi się ich pokonać, a przy szamanie znajdowały się zapiski, w których mogę znaleźć dodatkowe wskazówki."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Look for the knight's ghost in the area south of Markarth",
+        "string": "Poszukaj ducha rycerza na południe od Markartu"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 78,
+        "type": "QUST CNAM",
+        "original": "I found a book at the Silver-Blood Inn that mentions the ghost of a Breton knight named Simon Rodayne. According to the book, he haunts the river below his tomb, south of Markarth. At the river, I found the presence of a ghost who wandered off further south.",
+        "string": "W Gospodzie Srebrno-Krwistej znajdowała się księga wspominająca o duchu bretońskiego rycerza imieniem Simon Rodayne. Wedle księgi, nawiedza on rzekę pod swoją kryptą, na południe od Markartu. Przy rzece rzeczywiście pojawił się duch, który jednak oddalił się dalej na południe."
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "Defeat the Forsworn",
+        "string": "Pokonaj renegatów"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": 70,
+        "type": "QUST NNAM",
+        "original": "Return the heart to the knight's tomb",
+        "string": "Zwróć serce do krypty rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_Quest",
+        "form_id": "[05000800]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Crypt of the Heart",
+        "string": "Krypta Serca"
+    },
+    {
+        "editor_id": "ccEDHSSE002_BeldamaMessage",
+        "form_id": "[05000859]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Beldama Witch",
+        "string": "Wiedźma Beldama"
+    },
+    {
+        "editor_id": "ccEDHSSE002_DaenellaMessage",
+        "form_id": "[05000858]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Daenella",
+        "string": "Daenella"
+    },
+    {
+        "editor_id": "ccEDHSSE002_CoffinMessage",
+        "form_id": "[05000880]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Knight's Grave",
+        "string": "Grób rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_DaenellaMessage",
+        "form_id": "[05000858]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Daenella",
+        "string": "Daenella"
+    },
+    {
+        "editor_id": "ccEDHSSE002_CoffinMessage",
+        "form_id": "[05000880]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Knight's Grave",
+        "string": "Grób rycerza"
+    },
+    {
+        "editor_id": "ccEDHSSE002_BeldamaMessage",
+        "form_id": "[05000859]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Beldama Witch",
+        "string": "Wiedźma Beldama"
+    },
+    {
+        "editor_id": "ccEDHSSE002_BeldamaMessage02",
+        "form_id": "[05000831]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Beldama Ward Mother",
+        "string": "Matka oddziałowa Beldama"
+    },
+    {
+        "editor_id": "ccEDHSSE002_HeartMessage",
+        "form_id": "[05000864]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Simon Rodayne's Heart",
+        "string": "Serce Simona Rodayne"
+    },
+    {
+        "editor_id": "ccEDHSSE002_BeldamaMessage02",
+        "form_id": "[05000831]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Beldama Ward Mother",
+        "string": "Matka oddziałowa Beldama"
+    },
+    {
+        "editor_id": "ccEDHSSE002_HeartMessage",
+        "form_id": "[05000864]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Simon Rodayne's Heart",
+        "string": "Serce Simona Rodayne"
+    }
+]

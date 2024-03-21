@@ -9,7 +9,6 @@ from enum import Enum, auto
 from pathlib import Path
 from queue import Queue
 
-import qtawesome as qta
 import qtpy.QtCore as qtc
 import qtpy.QtWidgets as qtw
 
@@ -54,7 +53,7 @@ class DownloadsWidget(qtw.QWidget):
         self.thread = utils.Thread(self.download_thread)
         self.thread.start()
 
-        self.startTimer(1000, qtc.Qt.TimerType.PreciseTimer)
+        self.startTimer(100, qtc.Qt.TimerType.PreciseTimer)
 
         vlayout = qtw.QVBoxLayout()
         self.setLayout(vlayout)
@@ -100,7 +99,7 @@ class DownloadsWidget(qtw.QWidget):
                         spd = (
                             self.current_download.current_size
                             - self.current_download.previous_size
-                        )
+                        ) * 10
                         cur_speed = utils.scale_value(spd) + "/s"
                         percentage = f"{(self.current_download.current_size / self.current_download.file_size * 100):.2f} %"
                         status = f"{self.loc.main.downloading} ({cur_size}/{tot_size} - {percentage} - {cur_speed})"
@@ -179,9 +178,9 @@ class DownloadsWidget(qtw.QWidget):
                 if strings:
                     self.current_translation.strings = strings
                     self.current_translation.save_translation()
-                    self.app.database.add_translation(self.current_translation)
                     self.current_translation.status = Translation.Status.Ok
                     self.current_translation.tree_item.setHidden(True)
+                    self.app.database.add_translation(self.current_translation)
                     self.app.log.info("Processing complete.")
                 else:
                     self.app.log.warning("Translation does not contain any strings!")

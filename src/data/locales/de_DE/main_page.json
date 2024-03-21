@@ -28,5 +28,8 @@
     "create_translation": "Neue Übersetzung erstellen",
     "edit_translation": "Übersetzung bearbeiten",
     "show_untranslated_strings": "Unübersetzte Strings anzeigen",
-    "import_as_translation": "Als Übersetzung in Datenbank importieren"
+    "import_as_translation": "Als Übersetzung in Datenbank importieren",
+    "user_ignore_list": "Nutzer-Ignorierliste",
+    "vanilla_plugins": "Grundspiel + CC Plugins",
+    "masterlist": "Globale Masterlist"
 }

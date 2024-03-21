@@ -1,0 +1,84 @@
+{
+    "unofficial skyrim modders patch.esp": {
+        "type": "route",
+        "targets": [
+            {
+                "mod_id": 49616,
+                "file_id": 431379
+            }
+        ]
+    },
+
+    "skyui.esp": {
+        "type": "ignore"
+    },
+    "enchantmentartextender.esl": {
+        "type": "ignore"
+    },
+    "seeking out sneaks.esp": {
+        "type": "ignore"
+    },
+    "amatteroftime.esp": {
+        "type": "ignore"
+    },
+    "dd - enhanced blood main.esp": {
+        "type": "ignore"
+    },
+    "footprints.esp": {
+        "type": "ignore"
+    },
+    "vibrant weapons eae.esp": {
+        "type": "ignore"
+    },
+    "dynamicarmormenu.esp": {
+        "type": "ignore"
+    },
+    "thenewgentleman.esp": {
+        "type": "ignore"
+    },
+    "3bbb.esp": {
+        "type": "ignore"
+    },
+    "vwa_vanillawarpaintsabsolution.esp": {
+        "type": "ignore"
+    },
+    "dragonsfalldown.esp": {
+        "type": "ignore"
+    },
+    "adamantsmithing.esp": {
+        "type": "ignore"
+    },
+    "simonrimattackspeedfix.esp": {
+        "type": "ignore"
+    },
+    "readtheroom.esp": {
+        "type": "ignore"
+    },
+    "immersive equipping animations.esp": {
+        "type": "ignore"
+    },
+    "dual block.esp": {
+        "type": "ignore"
+    },
+    "staggeronhit.esl": {
+        "type": "ignore"
+    },
+    "elden power attack.esp": {
+        "type": "ignore"
+    },
+    "movementmco.esp": {
+        "type": "ignore"
+    },
+    "xpmse.esp": {
+        "type": "ignore"
+    },
+    "smart_npc_potions.esp": {
+        "type": "ignore"
+    },
+    "animals swim.esp": {
+        "type": "ignore"
+    },
+    "dva - dynamic vampire appearance.esp": {
+        "type": "ignore"
+    }
+}

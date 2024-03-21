@@ -1,0 +1,170 @@
+[
+    {
+        "editor_id": "ccBGSSSE062_ArmorDwarvenMailHelmet",
+        "form_id": "[05000803]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Dwarven Mail Helmet",
+        "string": "Dwemerkettenhelm"
+    },
+    {
+        "editor_id": "ccBGSSSE062_ArmorDwarvenMailGauntlets",
+        "form_id": "[05000802]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Dwarven Mail Gauntlets",
+        "string": "Dwemerkettenhandschuhe"
+    },
+    {
+        "editor_id": "ccBGSSSE062_ArmorDwarvenMailCuirass",
+        "form_id": "[05000801]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Dwarven Mail",
+        "string": "Dwemerkettenrüstung"
+    },
+    {
+        "editor_id": "ccBGSSSE062_ArmorDwarvenMailBoots",
+        "form_id": "[05000800]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Dwarven Mail Boots",
+        "string": "Dwemerkettenstiefel"
+    },
+    {
+        "editor_id": "ccBGSSSE062_AdoringFanNote",
+        "form_id": "[0500081B]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Arena Fan's Note",
+        "string": "Notiz des Arenabesuchers"
+    },
+    {
+        "editor_id": "ccBGSSSE062_Bookv8",
+        "form_id": "[05000821]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "The Crimson Dirks, v8",
+        "string": "Die Blutroten Langdolche, Buch 8"
+    },
+    {
+        "editor_id": "ccBGSSSE062_AdoringFanNote",
+        "form_id": "[0500081B]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='20'>\r\nAs a fan of the Imperial Arena and student of history, I was very intrigued when I discovered volume eight of the short story collection, The Crimson Dirks, at a local library in Cheydinhal. While the librarian considered it a work of fiction, I've combed over the information in the story and much to my delight, found much of it may be true!\r\n\r\nFor instance, there was indeed an Orc who fought in Dwarven mail after the Great War, who rose to the rank of Bloodletter before mysteriously disappearing! The same is true for the blacksmith, who abandoned her shop in Cyrodiil under equally unknown circumstances! \r\n\r\nWhile I have nothing on the Redguard, the name itself may be an alias. But the last sentence is most intriguing, as it implies our Orc Bloodletter went north to Skyrim, and began fighting in the underground pits! In fact, I've heard there's an Orc living in the Bthalft Ruins who matches that description right now!\r\n\r\nI've requested the Orc meet with me in private, so I can ask him if he is indeed the one in the story. I am so excited! I know the book paints him as a bit unruly toward fans, but authors tend to exaggerate certain features. Besides, even if it were true, I'd be willing to bet time has softened his stance. He'll be more than pleased to meet a true fan of the Arena! I can't wait!</font>",
+        "string": "<font face='$HandwrittenFont'><font size='20'>\r\nAls Bewunderer der Kaiserlichen Arena und jemand, der sich für Geschichte interessiert, war ich fasziniert, als ich das achte Buch der Kurzgeschichtensammlung \"Die Blutroten Langdolche\" in einer hiesigen Bücherei in Cheydinhal entdeckte. Der Bibliothekar hielt sie zwar für Fiktion, doch als ich die Informationen im Text überprüfte, hat sich zu meiner Freude herausgestellt, dass ein Großteil davon der Wahrheit entspricht!\r\n\r\nBeispielsweise gab es tatsächlich einen Ork, der im Großen Krieg in Dwemerkettenrüstung kämpfte und zum Blutsauger aufstieg, bevor er unter mysteriösen Umständen verschwand! Das Gleiche gilt für die Schmiedin, die ihre Werkstatt in Cyrodiil unter genauso mysteriösen Umständen verließ! \r\n\r\nÜber die Rothwardonin weiß ich zwar nichts, aber der Name könnte ein Deckname sein. Aber der letzte Satz ist am faszinierendsten, da er suggeriert, dass unser Ork-Blutsauger gen Norden nach Himmelsrand ging und in den unterirdischen Gruben kämpfte! Ich habe sogar gehört, dass in den Ruinen von Bthalft gerade ein Ork lebt, auf den diese Beschreibung passt!\r\n\r\nIch habe den Ork um ein privates Treffen gebeten, damit ich ihn fragen kann, ob die Geschichte wirklich von ihm handelt. Ich bin so aufgeregt! Ich weiß, dass er im Buch als widerspenstig gegenüber Bewunderern dargestellt wird, aber Autoren übertreiben gern gewisse Dinge. Und selbst wenn es stimmt, wette ich, dass er mit der Zeit sanfter geworden ist. Es wird ihn freuen, einen echten Bewunderer der Arena kennenzulernen! Ich kann es kaum erwarten!</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE062_Bookv8",
+        "form_id": "[05000821]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nThe Crimson Dirks\r\nBook Eight\r\n\r\n\r\nby \r\nGathers-the-Coin\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/I_letter.png'>n his time with the Crimson Dirks, Urgnok had killed countless men, and heard all manner of reaction to their deaths. He'd heard women gasp, men cry, and children scream. Yet never in his life had he heard the noise that cascaded from the archways, when he plunged his sword into the belly of his assailant.\r\n\r\nApplause.\r\n\r\nWhen the crew disbanded, many of the Dirks were forced into the shadows, yet Urgnok's path took a different route. He met with a face butcher, adopted an alias, and joined the arena. And for the most part, the tactic seemed to work. These days, the only pursuers the Orc feared were the adoring fans that followed him in the street. \r\n\r\n\"I suggest you turn around now,\" Urgnok grumbled, seeing a shadow cut through the door, \"the last fan who annoyed me was this baker. He offered me a pastry, and I smashed his face in. Now he eats his sweet rolls through a straw.\"\r\n\r\n\"Funny,\" the shadow replied, \"I seem to recall a sparring session years ago that ended with you crying back to Tyra like a newborn babe.\"\r\n\r\n\"Zaharia. What are you doing here?\"\r\n\r\n\"I came to see our mutual Orc friend,\" the Redguard said, examining a nearby weapon,\" I see you've already paid her a visit, judging by that armor. Dwarven, right? Although not exactly what I pictured.\"\r\n\r\nUrgnok spit at the ground, acknowledging what she left unspoken. The blacksmith was a magician with a hammer and anvil, working with all types of metal. Perhaps that was how the Redguard puzzled out his identity, yet it was unlikely a Blood-Kin would betray his confidence.\r\n\r\n\"You know, the funny thing about fighting styles,\" Zaharia said, swinging the practice blade, \"is that they're almost like fingerprints. You may have changed your armor, your name, and even your face, but I recognized that clumsy top foot of yours almost immediately.\"\r\n\r\n\"Doesn't matter,\" Urgnok sneered, \"The guard haven't sniffed me out yet, and they won't ever. I've been able to hide in plain sight, while everyone else is dying in the shadows.\"\r\n\r\n\"Hiding in plain sight may work in the short term,\" Zaharia said, sliding the weapon back onto the rack, \"But over time, you know what happens to things in plain sight? They get seen.\"\r\n\r\n\"Cut the crap, Zaharia,\" the Orc groused, \"we both know I don't care what you think.\"\r\n\r\n\"True,\" the Redguard replied, handing him a letter, \"but you'll care about this.\"\r\n\r\nUrgnok wasn't sure how he was discovered, or who wrote the letter to the guard. Had Zaharia not killed its bearer, he would already be in chains. He stopped short of accusing Zaharia of forging the note, however. She was crafty, but not a liar.\r\n\r\n\"Where.\" \r\n\r\n\"North,\" said the Redguard, \"Get into one of the Strongholds, or take a job fighting in the pits. Either way, you can't stay here.\"</p>",
+        "string": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nDie Blutroten Langdolche\r\nBuch VIII\r\n\r\n\r\nvon \r\nSammelt-Münzen\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/W_letter.png'>ährend seiner Zeit bei den Blutroten Langdolchen hatte Urgnok zahlreiche Männer getötet und die verschiedensten Reaktionen auf deren Tod erlebt. Er hatte Frauen keuchen, Männer weinen und Kinder schreien gehört. Doch noch nie zuvor hatte er das Geräusch gehört, das von den Torbögen ertönte, als er sein Schwert in den Bauch seines Angreifers rammte.\r\n\r\nApplaus.\r\n\r\nAls die Bande sich auflöste, mussten viele der Mitglieder in den Untergrund gehen, aber Urgnok schlug einen anderen Weg ein. Er ließ sein Gesicht verstümmeln, nahm einen Decknamen an und ging in die Arena. Und im Großen und Ganzen ging die Taktik auf. Mittlerweile fürchtete der Ork nur noch die Bewunderer, die ihm auf der Straße hinterherliefen. \r\n\r\nIch rate Euch, sofort kehrtzumachen, brummte Urgnok, als er sah, wie ein Schatten im Türrahmen erschien. \"Der letzte Bewunderer, der mich erzürnt hat, war ein Bäcker. Er wollte mir ein Gebäck geben und ich habe ihm die Fresse poliert. Jetzt braucht er einen Strohhalm, um seine Süßkuchen zu essen.\"\r\n\r\nKomisch, antwortete der Schatten, \"ich erinnere mich an einen Übungskampf vor einigen Jahren, der damit endete, dass Ihr heulend wie ein Neugeborenes zu Tyra zurückgelaufen seid.\"\r\n\r\nZaharia. Was macht Ihr hier?\r\n\r\nIch wollte unserer gemeinsamen Orkfreundin einen Besuch abstatten, antwortete die Rothwardonin, während sie eine Waffe in ihrer Nähe untersuchte. \"Wie ich an Eurer Rüstung erkenne, seid Ihr mir schon zuvorgekommen. Dwemer, nicht wahr? Nicht wirklich so, wie ich sie mir vorgestellt hatte.\"\r\n\r\nUrgnok spuckte auf den Boden, als Bestätigung dessen, was sie ungesagt ließ. Die Schmiedin war eine wahre Könnerin mit Hammer und Amboss und verarbeitete Metalle aller Art. Vielleicht hatte die Rothwardonin so seine Identität entlarvt, doch es war unwahrscheinlich, dass eine Blutsverwandte ihn verraten hätte.\r\n\r\nKampfstile sind schon lustig, sagte Zaharia und schwang die Übungsklinge. \"Sie sind fast wie Fingerabdrücke. Ihr mögt Eure Rüstung, Euren Namen und sogar Euer Gesicht verändert haben, aber Euren unbeholfenen Fuß habe ich sofort wieder erkannt.\"\r\n\r\nSpielt keine Rolle, erwiderte Urgnok. \"Die Wachen haben mich noch nicht erkannt und werden es auch nie tun. Ich habe es geschafft, mich direkt vor ihrer Nase zu verstecken, während alle anderen im Untergrund sterben.\"\r\n\r\nKurzfristig mag es funktionieren, sich direkt vor ihrer Nase zu verstecken, sagte Zaharia und schob die Waffe zurück auf den Ständer. \"Aber wisst Ihr, was mit der Zeit passiert, wenn man direkt vor ihrer Nase herumtanzt? Man wird gesehen.\"\r\n\r\nHört auf mit dem Mist, Zaharia, maulte der Ork. \"Wir wissen doch beide, dass es mir völlig egal ist, was Ihr denkt.\"\r\n\r\nStimmt, antwortete die Rothwardonin und überreichte ihm einen Brief. \"Aber der wird Euch nicht egal sein.\"\r\n\r\nUrgnok war sich nicht sicher, wie er entlarvt worden war oder wer der Wache den Brief geschrieben hatte. Hätte Zaharia den Boten nicht getötet, wäre er bereits in Ketten. Dennoch beschuldigte er Zaharia nicht, die Notiz gefälscht zu haben. Sie war listig, aber keine Lügnerin.\r\n\r\nWohin. \r\n\r\nNach Norden, sagte die Rothwardonin. \"Geht zu einer der Festungen oder arbeitet in den Gruben. Hier könnt Ihr jedenfalls nicht bleiben.\"</p>"
+    },
+    {
+        "editor_id": "ccBGSSSE062_TreasCorpseCommonerWoodElfMale",
+        "form_id": "[0500081C]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Arena Fan",
+        "string": "Arenabesucher"
+    },
+    {
+        "editor_id": "ccBGSSSE062_OrcM",
+        "form_id": "[0500081F]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Urgnok",
+        "string": "Urgnok"
+    },
+    {
+        "editor_id": "Tamriel",
+        "form_id": "[0000003C]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Himmelsrand"
+    },
+    {
+        "editor_id": "ccBGSSSE062_MiscQuest",
+        "form_id": "[05000819]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Read the Arena Fan's Note",
+        "string": "Lies die Notiz des Arenabesuchers."
+    },
+    {
+        "editor_id": "ccBGSSSE062_Quest",
+        "form_id": "[0500081A]",
+        "index": 114,
+        "type": "QUST CNAM",
+        "original": "At a camp to the south of Ivarstead, I found the body of an Arena fan. According to the note on his body, he was attempting to meet with an Orc he believed was a former combatant. I defeated the Orc at the Ruins of Bthalft and claimed his armor.",
+        "string": "In einem Lager südlich von Ivarstatt fand ich die Leiche eines Arenabesuchers. Laut der Notiz, die ich bei ihm fand, wollte er sich mit einem Ork treffen, den er für einen ehemaligen Kämpfer gehalten hatte. Ich habe den Ork in den Ruinen von Bthalft besiegt und seine Rüstung an mich genommen."
+    },
+    {
+        "editor_id": "ccBGSSSE062_MiscQuest",
+        "form_id": "[05000819]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Investigate the camp south of Ivarstead",
+        "string": "Untersuche das Lager südlich von Ivarstatt."
+    },
+    {
+        "editor_id": "ccBGSSSE062_Quest",
+        "form_id": "[0500081A]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Fan Favorite",
+        "string": "Liebling der Massen"
+    },
+    {
+        "editor_id": "ccBGSSSE062_Quest",
+        "form_id": "[0500081A]",
+        "index": 73,
+        "type": "QUST CNAM",
+        "original": "At a camp to the south of Ivarstead, I found the body of an Arena fan. According to the note on his body, he was attempting to meet with an Orc he believed was a former combatant. I should head to the Ruins of Bthalft and see if I can find this Orc.",
+        "string": "In einem Lager südlich von Ivarstatt fand ich die Leiche eines Arenabesuchers. Laut der Notiz, die ich bei ihm fand, wollte er sich mit einem Ork treffen, den er für einen ehemaligen Kämpfer gehalten hatte. Ich sollte zu den Ruinen von Bthalft gehen und dort nach diesem Ork suchen."
+    },
+    {
+        "editor_id": "ccBGSSSE062_Quest",
+        "form_id": "[0500081A]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Retrieve the armor",
+        "string": "Besorge die Rüstung."
+    },
+    {
+        "editor_id": "ccBGSSSE062_Quest",
+        "form_id": "[0500081A]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Find the Orc at the Ruins of Bthalft",
+        "string": "Finde den Ork in den Ruinen von Bthalft."
+    },
+    {
+        "editor_id": "ccBGSSSE062_Quest",
+        "form_id": "[0500081A]",
+        "index": 101,
+        "type": "QUST CNAM",
+        "original": "At a camp to the south of Ivarstead, I found the body of an Arena fan. According to the note on his body, he was attempting to meet with an Orc he believed was a former combatant. I encountered the Orc at the Ruins of Bthalft and defeated him. ",
+        "string": "In einem Lager südlich von Ivarstatt fand ich die Leiche eines Arenabesuchers. Laut der Notiz, die ich bei ihm fand, wollte er sich mit einem Ork treffen, den er für einen ehemaligen Kämpfer gehalten hatte. Ich bin dem Ork in den Ruinen von Bthalft begegnet und habe ihn besiegt. "
+    },
+    {
+        "editor_id": "ccBGSSSE062_MatchingSet",
+        "form_id": "[05000822]",
+        "index": null,
+        "type": "PERK DESC",
+        "original": "Additional 25% Armor bonus if wearing a matched set of Light Armor.",
+        "string": "Additional 25% Armor bonus if wearing a matched set of Light Armor."
+    },
+    {
+        "editor_id": "ccBGSSSE062_MatchingSet",
+        "form_id": "[05000822]",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Matching Set",
+        "string": "Matching Set"
+    }
+]

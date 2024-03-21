@@ -32,5 +32,8 @@
     "create_translation": "Create new Translation",
     "edit_translation": "Edit Translation",
     "show_untranslated_strings": "Show untranslated Strings",
-    "import_as_translation": "Import as Translation into Database"
+    "import_as_translation": "Import as Translation into Database",
+    "user_ignore_list": "User Ignore List",
+    "vanilla_plugins": "Base Game + CC Plugins",
+    "masterlist": "Masterlist"
 }

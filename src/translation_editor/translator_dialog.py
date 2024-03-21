@@ -104,8 +104,9 @@ class TranslatorDialog(qtw.QWidget):
         hlayout = qtw.QHBoxLayout()
         vlayout.addLayout(hlayout)
 
-        cancel_button = qtw.QPushButton(self.loc.main.cancel)
+        cancel_button = qtw.QPushButton(self.loc.main.cancel + " (Escape)")
         cancel_button.clicked.connect(self.close)
+        cancel_button.setShortcut(qtc.Qt.Key.Key_Escape)
         hlayout.addWidget(cancel_button)
 
         hlayout.addStretch()
@@ -113,6 +114,7 @@ class TranslatorDialog(qtw.QWidget):
         finish_button = qtw.QPushButton(self.loc.main.done + " (Ctrl+Enter)")
         finish_button.clicked.connect(self.finish)
         finish_button.setShortcut(qtg.QKeySequence("Ctrl+Return"))
+        finish_button.setObjectName("accent_button")
         hlayout.addWidget(finish_button)
 
     def translate_with_api(self):
@@ -162,7 +164,7 @@ class TranslatorDialog(qtw.QWidget):
         self.string.translated_string = self.string_entry.toPlainText()
         self.string.status = utils.String.Status.TranslationComplete
         self.string.tree_item.setText(
-            3, utils.trim_string(self.string.translated_string)
+            4, utils.trim_string(self.string.translated_string)
         )
         self.changes_pending = False
 

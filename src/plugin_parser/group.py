@@ -2,6 +2,7 @@
 Copyright (c) Cutleast
 """
 
+import logging
 import os
 from enum import IntEnum
 from io import BufferedReader, BytesIO
@@ -9,6 +10,8 @@ from io import BufferedReader, BytesIO
 from .datatypes import Hex, Integer, String
 from .record import Record
 from .utilities import PARSE_WHITELIST
+
+log = logging.getLogger("PluginParser.Group")
 
 
 class Group:
@@ -18,6 +21,7 @@ class Group:
 
     type = "GRUP"
     stream: BufferedReader = None
+    header_flags: dict[str, bool] = None
     records: list[Record] = None
 
     class GroupType(IntEnum):
@@ -36,11 +40,21 @@ class Group:
         CellPersistentChildren = 8  # Persistent Cell Record
         CellTemporaryChildren = 9  # Temporary Cell Record
 
-    def __init__(self, stream: BufferedReader):
+    def __init__(self, stream: BufferedReader, header_flags: dict[str, bool]):
         self.stream = stream
+        self.header_flags = header_flags
 
         self.parse()
     
+    def __repr__(self) -> str:
+        import pprint
+
+        _dict = self.__dict__.copy()
+        _dict.pop("parent")
+        _dict.pop("data")
+
+        return "\n" + pprint.pformat(_dict, indent=4, sort_dicts=False)
+
     def __repr__(self) -> str:
         import pprint
 
@@ -137,7 +151,7 @@ class Group:
 
             # Unknown
             case _:
-                print("Unknown Group Type:", self.group_type)
+                log.warning("Unknown Group Type:", self.group_type)
 
         return self
 
@@ -147,9 +161,9 @@ class Group:
         while record_type := String.string(stream, 4):
             stream.seek(-4, os.SEEK_CUR)
             if record_type == "GRUP":
-                record = Group(stream)
+                record = Group(stream, self.header_flags)
             else:
-                record = Record(stream)
+                record = Record(stream, self.header_flags)
 
             self.records.append(record)
 

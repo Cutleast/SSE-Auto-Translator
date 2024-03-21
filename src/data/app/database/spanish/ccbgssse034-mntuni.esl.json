@@ -1,0 +1,810 @@
+[
+    {
+        "editor_id": "ccBGSSSE034_HorseTameDamageStamina",
+        "form_id": "[05000D62]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Damage Stamina",
+        "string": "Dañar aguante"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseTameDamageStamina",
+        "form_id": "[05000D62]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Drain the target's Stamina by <mag> points.",
+        "string": "Consume <mag> puntos de aguante del objetivo."
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseTameSpellDrainStamina",
+        "form_id": "[05000D63]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Raises all dead around you to fight for you.",
+        "string": "Reanima a los muertos que tengas cerca para que luchen por ti."
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseLocationJournal",
+        "form_id": "[0500086C]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nSpotted Grey - Near Markarth, north of Salvius Farm.\r\n\r\nDapple Brown - Near Solitude, across the river from Katla's Farm, near a Dragon Mound.\r\n\r\nChestnut - East of Helgen, not far from the roadside.\r\n\r\nRed - West of Whiterun, in the open planes.\r\n\r\nSpotted White - Lower Eastmarch, in the cliffs north of Shore's Stone.\r\n\r\nPale Mare - East of Windhelm, north of Hollyfrost Farm, in the forest nearing the shoreline.\r\n\r\nBlack - West of Falkreath, past the nearby ruins.\r\n\r\nIf I had the coin, I'd hire a wizard to use Detect Life and help me find these horses.\r\n</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nGris con manchas: cerca de Markarth, al norte de la granja de Salvio.\r\n\r\nMarrón con motas: cerca de Soledad, cruzando el río desde la granja de Katla, junto a un túmulo de dragón.\r\n\r\nCastaño: al este de Helgen, no muy lejos de la carretera.\r\n\r\nRojo: al oeste de Carrera Blanca, en campo abierto.\r\n\r\nBlanco con manchas: al sur de la Marca Oriental, en las colinas que hay al norte del Peñón de Shor.\r\n\r\nYegua pálida: al este de Ventalia y al norte de la granja de Acebo Helado, en el bosque que hay junto a la costa.\r\n\r\nNegro: al oeste de Falkreath, pasadas las ruinas cercanas.\r\n\r\nSi tuviera dinero, contrataría a un hechicero para que usara Detectar vida y me ayudara a buscar estos caballos.\r\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseLocationJournal",
+        "form_id": "[0500086C]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Wild Horse Notes",
+        "string": "Notas sobre caballos salvajes"
+    },
+    {
+        "editor_id": "ccBGSSSE034_UnicornSoransJournal",
+        "form_id": "[05000DEB]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nJournal of Soran Hariksen, Wildlife Scholar\r\n\r\n<b>14th of Rain's Hand, 4E 201</b>\r\nIn my duty to document all living creatures in Skyrim, the long-lost Unicorn has never been far from my mind. It is said that long ago the very last of its kind was sacrificed to Hircine. However, rumors of sightings in Tamriel have surfaced in recent times.\r\n\r\nIndeed, while these claims echo mostly from taverns in the late hours, one can wonder at the validity of such claims.\r\n\r\nI've chronicled the habits of Mudcrabs and Rabbits long enough. This old man is quite ready for something a little more interesting.\r\n\r\n<b>3rd of Second Seed, 4E 201</b>\r\nI have spoken with several hunters who swear by the Divines that they have seen a Unicorn during their travels. All have tried to approach it for a closer look, or to take it as a prize, but it has evaded them all.\r\n\r\nI continue my research with skepticism. If this is indeed true, how could this be? Was the last unicorn not truly the last, or is some other force at work?\r\n\r\n<b>18th of Second Seed, 4E 201</b>\r\nWhile studying the mating habits of Salmon is certainly enlightening, I have become quite obsessed with my pursuit of the elusive Unicorn.\r\n\r\nI spoke with a hostler who said that during one of his horse taming expeditions he too saw something that closely resembled the fabled Unicorn, though he was unsure. He is a man is of great integrity, so I took his word in good faith.\r\n\r\nI decided then to speak with Tolfdir at the College of Winterhold. Being a wise man with deep knowledge of such things, I hoped he might have some insight. I was correct in my assumption.\r\n\r\nAccording to Tolfdir, the Psijic Order have appeared from time-to-time throughout history to assist with situations they believe are extremely important. While he cannot personally say for certain, he believes they may have intervened after the last Unicorn was sacrificed, transporting another through time in order to set right what they believed was a wrongdoing.\r\n\r\nI am more motivated than ever to see this creature with my own two eyes.\r\n\r\n<b>24th of Second Seed, 4E 201</b>\r\nThe last sighting of the Unicorn was rumored to be in a dense forest area near Riften. As old as I am, an energy filled my bones that I haven't felt since I was a young man.\r\n\r\nI hiked up the ridge of the mountains there, and set up a very small camp. I was cautious to not set any fires or make much noise, lest I scare it away.\r\n\r\nAfter waiting two nights, through this morning's early fog, I finally saw the majestic creature for the first time. I still cannot believe my own two eyes. It lingered long enough for me to see it clearly, its brilliant coat and distinct horn shimmering in the morning light.\r\n\r\nI watched its movements for nearly thirty minutes, enough time to draw a rough depiction for my library. This is absolutely the crowning achievement of my scholarly life.\r\n\r\nI've decided to turn this information over to the College of Winterhold rather than publish it to the general population. I would like to ensure this creature remain protected, and I believe they are the most capable of such a task.",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nDiario de Soran Hariksen, investigador de criaturas\r\n\r\n<b>14 de Mano de lluvia, 201 de la Cuarta Era</b>\r\nEn mi labor de documentar todas las criaturas vivientes de Skyrim, el extinto unicornio siempre ha estado en mis pensamientos. Cuentan que el último ejemplar fue sacrificado en honor a Hircine hace tiempo. Sin embargo, últimamente han surgido rumores de avistamientos en Tamriel.\r\n\r\nAunque estos testimonios suelen dejarse oír en las tabernas bien avanzada la noche, no puedo dejar de preguntarme por la veracidad de esos rumores.\r\n\r\nYa llevo mucho tiempo registrando los hábitos de los cangrejos del barro y los conejos. Este anciano está preparado para estudiar algo más interesante.\r\n\r\n<b>3 de Segunda semilla, 201 de la Cuarta Era</b>\r\nHe hablado con varios cazadores que juran por los Divinos haber visto un unicornio en sus expediciones. Todos intentaron acercarse para verlo más de cerca o para cobrarse la pieza y a todos les dio esquinazo.\r\n\r\nProsigo mi investigación con escepticismo. Si los rumores son ciertos, ¿qué explicación tienen? ¿El último unicornio no era realmente el último? ¿Lo atribuimos a una fuerza desconocida?\r\n\r\n<b>18 de Segunda semilla, 201 de la Cuarta Era</b>\r\nAunque estudiar los hábitos de apareamiento de los salmones resulta enriquecedor, la búsqueda del esquivo unicornio sigue robándome el sueño.\r\n\r\nHe hablado con un mozo de cuadra que creía haber visto algo mientras domaba caballos. Decía que lo que vio encajaba con la descripción del legendario unicornio, aunque no parecía muy convencido. Se trata de un hombre de mucha integridad, así que me fío de su palabra.\r\n\r\nDespués decidí ir al Colegio de Hibernalia para hablar con Tolfdir. Confiaba en que su vasta sabiduría en estas cosas arrojara algo de luz y no me equivoqué.\r\n\r\nSegún Tolfdir, la Orden Psijic ha aparecido en episodios concretos de la historia para ayudar en situaciones que consideraban de vital trascendencia. Aunque no puede afirmarlo a ciencia cierta, opina que es posible que intervinieran cuando el último unicornio fue sacrificado y que trajeran otro por el espacio-tiempo para enmendar lo que para ellos era un crimen.\r\n\r\nEstoy más ansioso que nunca por ver a esta criatura con mis propios ojos.\r\n\r\n<b>24 de Segunda semilla, 201 de la Cuarta Era</b>\r\nSe rumorea que vieron al unicornio por última vez en una densa zona boscosa que hay cerca de Riften. Puede que sea un anciano, pero mis huesos rebosan de una energía que no sentía desde mis años mozos.\r\n\r\nHe subido la cresta de las montañas y he montado un pequeño campamento. He procurado no encender ninguna hoguera ni hacer ruido por temor a ahuyentarlo.\r\n\r\nPor fin. Después de esperar dos noches, esta mañana he vislumbrado a la majestuosa criatura entre la niebla por primera vez. Mis ojos todavía no dan crédito. Estuvo quieto el tiempo suficiente para que yo pudiera ver con claridad su brillante pelaje y su característico cuerno titilando con la luz matinal.\r\n\r\nEstuve observando sus movimientos durante casi media hora, suficiente para dibujar un boceto que puedo guardar para la posteridad. No cabe duda: este es el logro más importante de mi carrera como erudito.\r\n\r\nEn vez de divulgarlo por todo el mundo, he decidido transmitir este descubrimiento al Colegio de Hibernalia. Es mi deseo que esta criatura permanezca a salvo y creo que ellos son los más indicados para esa tarea."
+    },
+    {
+        "editor_id": "ccBGSSSE034_UnicornSoransJournal",
+        "form_id": "[05000DEB]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Soran's Journal",
+        "string": "Diario de Soran"
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorseMap",
+        "form_id": "[05000D67]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Map of Wild Horses",
+        "string": "Mapa de los caballos salvajes"
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorse04_Pale",
+        "form_id": "[0500080F]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Wild Horse",
+        "string": "Caballo salvaje"
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorse07_BrownSpotted",
+        "form_id": "[05000821]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Wild Horse",
+        "string": "Caballo salvaje"
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorse05_RedBrown",
+        "form_id": "[05000810]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Wild Horse",
+        "string": "Caballo salvaje"
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorse06_WhiteSpotted",
+        "form_id": "[05000811]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Wild Horse",
+        "string": "Caballo salvaje"
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorse01_Chestnut",
+        "form_id": "[05000D61]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Wild Horse",
+        "string": "Caballo salvaje"
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorse03_GreyBlack",
+        "form_id": "[0500080E]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Wild Horse",
+        "string": "Caballo salvaje"
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorse02_Black",
+        "form_id": "[0500080D]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Wild Horse",
+        "string": "Caballo salvaje"
+    },
+    {
+        "editor_id": "ccBGSSSE034_MountUnicorn",
+        "form_id": "[05000804]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Unicorn",
+        "string": "Unicornio"
+    },
+    {
+        "editor_id": "WinterholdCollegeArcanaeum",
+        "form_id": "[00013810]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "The Arcanaeum",
+        "string": "El arcaneum"
+    },
+    {
+        "editor_id": "Tamriel",
+        "form_id": "[0000003C]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Skyrim"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[0500083C]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Remove the saddle.",
+        "string": "Quitar la silla de montar."
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorsesQuestBranch01Topic",
+        "form_id": "[05000D6B]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I'd like to buy a wild horse map (250 gold)",
+        "string": "Me gustaría comprar el mapa de los caballos salvajes (250 de oro)"
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorsesQuestRenameBranchTopic",
+        "form_id": "[05000DED]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I'd like to register and rename my horse.",
+        "string": "Me gustaría registrar el caballo y cambiarle el nombre."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000839]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Imperial saddle (100 gold)",
+        "string": "Silla de montar imperial (100 de oro)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000837]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "White saddle (100 gold)",
+        "string": "Silla de montar blanca (100 de oro)"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseSaddleQuestSaddleBranchTopic",
+        "form_id": "[05000831]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I'd like to change my horse's saddle.",
+        "string": "Me gustaría cambiar la silla de montar."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[0500083A]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Dark Brotherhood saddle (100 gold)",
+        "string": "Silla de montar de la Hermandad Oscura (100 de oro)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000838]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Standard saddle (100 gold)",
+        "string": "Silla de montar estándar (100 de oro)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[0500084A]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Stormcloak saddle (100 gold)",
+        "string": "Silla de montar de Capa de la Tormenta (100 de oro)"
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse05_RedBrown",
+        "form_id": "[05000873]",
+        "index": 83,
+        "type": "QUST CNAM",
+        "original": "Find the horses.",
+        "string": "Encuentra a los caballos."
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse04_Pale",
+        "form_id": "[05000872]",
+        "index": 83,
+        "type": "QUST CNAM",
+        "original": "Find the horses.",
+        "string": "Encuentra a los caballos."
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse04_Pale",
+        "form_id": "[05000872]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Find Horse 01",
+        "string": "Encontrar al caballo 01"
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse03_GreyBlack",
+        "form_id": "[05000871]",
+        "index": 0,
+        "type": "QUST NNAM",
+        "original": "Find and tame the Grey Spotted Horse",
+        "string": "Encuentra al caballo gris con manchas y dómalo."
+    },
+    {
+        "editor_id": "ccBGSSSE034_UnicornQuest",
+        "form_id": "[05000DE8]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Find and tame the Unicorn",
+        "string": "Encuentra al unicornio y dómalo."
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse07_BrownSpotted",
+        "form_id": "[05000875]",
+        "index": 0,
+        "type": "QUST NNAM",
+        "original": "Find and tame the Dapple Brown Horse",
+        "string": "Encuentra al caballo marrón con motas y dómalo."
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse05_RedBrown",
+        "form_id": "[05000873]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Find Horse 01",
+        "string": "Encontrar al caballo 01"
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorsesQuest",
+        "form_id": "[05000D65]",
+        "index": 58,
+        "type": "QUST CNAM",
+        "original": "Hostlers in Skyrim have begun taming wild horses in order to keep up with the demand. I should speak with a hostler and see if they can give me some information. Perhaps I could find and tame some of them myself.",
+        "string": "Los mozos de cuadra de Skyrim han empezado a domar caballos salvajes para satisfacer la demanda. Debería hablar con alguno para ver si puede darme información. Tal vez pueda encontrar yo algunos y domarlos."
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorsesQuest",
+        "form_id": "[05000D65]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Horse Whisperer",
+        "string": "Encantador de caballos"
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse03_GreyBlack",
+        "form_id": "[05000871]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Find Horse 03",
+        "string": "Encontrar al caballo 03"
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorsesQuest",
+        "form_id": "[05000D65]",
+        "index": 0,
+        "type": "QUST NNAM",
+        "original": "Purchase a map of wild horse locations",
+        "string": "Compra un mapa con las ubicaciones de los caballos salvajes."
+    },
+    {
+        "editor_id": "ccBGSSSE034_UnicornQuest",
+        "form_id": "[05000DE8]",
+        "index": 0,
+        "type": "QUST NNAM",
+        "original": "Find information about the Unicorn",
+        "string": "Busca información sobre el unicornio."
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse02_Black",
+        "form_id": "[05000870]",
+        "index": 0,
+        "type": "QUST NNAM",
+        "original": "Find and tame the Black Horse",
+        "string": "Encuentra al caballo negro y dómalo."
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse05_RedBrown",
+        "form_id": "[05000873]",
+        "index": 0,
+        "type": "QUST NNAM",
+        "original": "Find and tame the Red Horse",
+        "string": "Encuentra al caballo rojo y dómalo."
+    },
+    {
+        "editor_id": "ccBGSSSE034_UnicornQuest",
+        "form_id": "[05000DE8]",
+        "index": 85,
+        "type": "QUST CNAM",
+        "original": "A wildlife scholar is rumored to have tracked down a legendary Unicorn. The last of these creatures was supposed to have been slain long ago. I should investigate and see what I can find.",
+        "string": "Corre el rumor de que un investigador de criaturas ha localizado un unicornio legendario. Se supone que mataron al último ejemplar hace tiempo. Debería investigarlo, a ver qué encuentro."
+    },
+    {
+        "editor_id": "ccBGSSSE034_UnicornQuest",
+        "form_id": "[05000DE8]",
+        "index": 74,
+        "type": "QUST CNAM",
+        "original": "I found the journal of wildlife scholar Soran Hariksen at the College of Winterhold, which contained details on the whereabouts of the Unicorn. I should locate it to see if I can tame it, and take care of it as my own.",
+        "string": "He encontrado el diario del erudito Soran Hariksen en el Colegio de Hibernalia. Contenía información sobre el paradero del unicornio. Debería buscarlo para ver si puedo domarlo y cuidarlo como si fuera mío."
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse01_Chestnut",
+        "form_id": "[0500086D]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Find Horse 01",
+        "string": "Encontrar al caballo 01"
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse04_Pale",
+        "form_id": "[05000872]",
+        "index": 0,
+        "type": "QUST NNAM",
+        "original": "Find and tame the Pale Mare",
+        "string": "Encuentra a la yegua pálida y dómala."
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse07_BrownSpotted",
+        "form_id": "[05000875]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Find Horse 01",
+        "string": "Encontrar al caballo 01"
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse06_WhiteSpotted",
+        "form_id": "[05000874]",
+        "index": 83,
+        "type": "QUST CNAM",
+        "original": "Find the horses.",
+        "string": "Encuentra a los caballos."
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse02_Black",
+        "form_id": "[05000870]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Find Horse 02",
+        "string": "Encontrar al caballo 02"
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse03_GreyBlack",
+        "form_id": "[05000871]",
+        "index": 83,
+        "type": "QUST CNAM",
+        "original": "Find the horses.",
+        "string": "Encuentra a los caballos."
+    },
+    {
+        "editor_id": "ccBGSSSE034_UnicornQuest",
+        "form_id": "[05000DE8]",
+        "index": 66,
+        "type": "QUST CNAM",
+        "original": "A wildlife scholar was able to track down and verify the existence of a Unicorn. Using information that I found in his journal, I located the Unicorn, tamed it, and claimed it as my own. If I need to find it again, it will be at the College of Winterhold courtyard.",
+        "string": "Un investigador de criaturas ha logrado rastrear y confirmar la existencia de un unicornio. Gracias a la información de su diario, localicé al unicornio, lo domé y lo hice mío. Si quiero volver a verlo, lo encontraré en el patio del Colegio de Hibernalia."
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorsesQuest",
+        "form_id": "[05000D65]",
+        "index": 69,
+        "type": "QUST CNAM",
+        "original": "I've acquired a map and a journal with locations of where wild horses have been known to roam. I should find and tame them. Afterward I can bring them to a stable to add a saddle or change their name.",
+        "string": "He conseguido un mapa y un diario con las ubicaciones conocidas de los caballos salvajes. Debería buscarlos y domarlos. Después podré llevarlos al establo para ponerles una silla de montar o cambiarles el nombre."
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse06_WhiteSpotted",
+        "form_id": "[05000874]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Find Horse 01",
+        "string": "Encontrar al caballo 01"
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse02_Black",
+        "form_id": "[05000870]",
+        "index": 83,
+        "type": "QUST CNAM",
+        "original": "Find the horses.",
+        "string": "Encuentra a los caballos."
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse01_Chestnut",
+        "form_id": "[0500086D]",
+        "index": 0,
+        "type": "QUST NNAM",
+        "original": "Find and tame the Chestnut Horse",
+        "string": "Encuentra al caballo castaño y dómalo."
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse01_Chestnut",
+        "form_id": "[0500086D]",
+        "index": 83,
+        "type": "QUST CNAM",
+        "original": "Find the horse.",
+        "string": "Encuentra al caballo."
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse06_WhiteSpotted",
+        "form_id": "[05000874]",
+        "index": 0,
+        "type": "QUST NNAM",
+        "original": "Find and tame the White Spotted Horse",
+        "string": "Encuentra al caballo blanco con manchas y dómalo."
+    },
+    {
+        "editor_id": "ccBGSSSE034_UnicornQuest",
+        "form_id": "[05000DE8]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Creature of Legend",
+        "string": "Criatura de leyenda"
+    },
+    {
+        "editor_id": "ccBGSSSE034_Misc_Horse07_BrownSpotted",
+        "form_id": "[05000875]",
+        "index": 83,
+        "type": "QUST CNAM",
+        "original": "Find the horses.",
+        "string": "Encuentra a los caballos."
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseActivationPerk",
+        "form_id": "[0500087A]",
+        "index": 0,
+        "type": "PERK EPF2",
+        "original": "Tame",
+        "string": "Domar"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName01",
+        "form_id": "[0500084F]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Alvis",
+        "string": "Alvis"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HelpWildHorseTutorial",
+        "form_id": "[05000807]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Wild horses will buck until tamed. Stay mounted until they submit. If you are thrown, try again. Once tamed, you can add a saddle and rename them at any stable.\r\n\r\nWhen changing horses, tamed horses will return to the location where they were found.",
+        "string": "Los caballos salvajes se encabritarán hasta que los domes. Quédate encima de ellos hasta que se rindan. Si te tiran, vuelve a intentarlo. Cuando los domes, podrás ponerles una silla de montar y cambiarles el nombre en cualquier establo.\r\n\r\nSi cambias de caballo, los que estén domados volverán al lugar donde los encontraste."
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName14",
+        "form_id": "[0500085C]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Balder",
+        "string": "Balder"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName15",
+        "form_id": "[0500085D]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Loki",
+        "string": "Loki"
+    },
+    {
+        "editor_id": "ccBGSSSE034_PlayersHorseName",
+        "form_id": "[05000848]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "<Alias=Player>'s Tamed Horse",
+        "string": "Caballo domado de <Alias=Player>"
+    },
+    {
+        "editor_id": "ccBGSSSE034_MessageMustBeTamedSaddle",
+        "form_id": "[0500087C]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Horse must be tamed to change saddles.",
+        "string": "Debes domar al caballo para cambiar la silla de montar."
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName27",
+        "form_id": "[05000868]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Kara",
+        "string": "Kara"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName06",
+        "form_id": "[05000854]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Hildr",
+        "string": "Hildr"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName19",
+        "form_id": "[05000861]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Thunder",
+        "string": "Trueno"
+    },
+    {
+        "editor_id": "ccBGSSSE034_MessageSaddleRemoved",
+        "form_id": "[0500083F]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Horse's saddle has been removed.",
+        "string": "Le has quitado la silla de montar al caballo."
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName18",
+        "form_id": "[05000860]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Foresti",
+        "string": "Foresti"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName29",
+        "form_id": "[0500086A]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Rigmor",
+        "string": "Rigmor"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName12",
+        "form_id": "[0500085A]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Heimdall",
+        "string": "Heimdall"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName25",
+        "form_id": "[05000866]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Glade",
+        "string": "Claro"
+    },
+    {
+        "editor_id": "ccBGSSSE034_MessageMustBeTamedRename",
+        "form_id": "[0500087B]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Horse must be tamed to change its name.",
+        "string": "Debes domar al caballo para cambiarle el nombre."
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName13",
+        "form_id": "[0500085B]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Gunnar",
+        "string": "Gunnar"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName22",
+        "form_id": "[05000864]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Magni",
+        "string": "Magni"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName23",
+        "form_id": "[0500086F]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Whisper",
+        "string": "Susurro"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName21",
+        "form_id": "[05000863]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Dagger",
+        "string": "Daga"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName02",
+        "form_id": "[05000850]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Freki",
+        "string": "Freki"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName10",
+        "form_id": "[05000858]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Vor",
+        "string": "Vor"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName03",
+        "form_id": "[05000851]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Heidrun",
+        "string": "Heidrun"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName11",
+        "form_id": "[05000859]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Ran",
+        "string": "Ran"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName16",
+        "form_id": "[0500085E]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Tyr",
+        "string": "Tyr"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HelpWildHorseTutorial",
+        "form_id": "[05000807]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Wild Horse",
+        "string": "Caballo salvaje"
+    },
+    {
+        "editor_id": "ccBGSSSE034_MessageNotEnoughGold",
+        "form_id": "[05000D6E]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You do not have enough gold.",
+        "string": "No tienes oro suficiente."
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName17",
+        "form_id": "[0500085F]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Yngvi",
+        "string": "Yngvi"
+    },
+    {
+        "editor_id": "ccBGSSSE034_MessageNameChanged",
+        "form_id": "[0500086E]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Horse has been renamed.",
+        "string": "Has rebautizado al caballo."
+    },
+    {
+        "editor_id": "ccBGSSSE034_MessageCantChangeSaddle",
+        "form_id": "[05000877]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Current horse cannot have its saddle changed.",
+        "string": "No le puedes cambiar la silla de montar al caballo actual."
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName07",
+        "form_id": "[05000855]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Skadi",
+        "string": "Skadi"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName08",
+        "form_id": "[05000856]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Sol",
+        "string": "Sol"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName28",
+        "form_id": "[05000869]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Hjalte",
+        "string": "Hjalte"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName30",
+        "form_id": "[0500086B]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Tormod",
+        "string": "Tormod"
+    },
+    {
+        "editor_id": "ccBGSSSE034_MessageSaddleChanged",
+        "form_id": "[0500083E]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Horse's saddle has been changed.",
+        "string": "Le has cambiado la silla de montar al caballo."
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName05",
+        "form_id": "[05000853]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Aura",
+        "string": "Aura"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName26",
+        "form_id": "[05000867]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Hildr",
+        "string": "Hildr"
+    },
+    {
+        "editor_id": "ccBGSSSE034_MessageNoHorsesOwned",
+        "form_id": "[0500083D]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You do not currently own a horse.",
+        "string": "En este momento no tienes ningún caballo."
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName20",
+        "form_id": "[05000862]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Lightning",
+        "string": "Rayo"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName09",
+        "form_id": "[05000857]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Vernandi",
+        "string": "Vernandi"
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName24",
+        "form_id": "[05000865]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "River",
+        "string": "Río"
+    },
+    {
+        "editor_id": "ccBGSSSE034_WildHorseMessageTamed",
+        "form_id": "[05000808]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Horse has been successfully tamed.",
+        "string": "Has domado al caballo."
+    },
+    {
+        "editor_id": "ccBGSSSE034_HorseName04",
+        "form_id": "[05000852]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Aesir",
+        "string": "Aesir"
+    }
+]

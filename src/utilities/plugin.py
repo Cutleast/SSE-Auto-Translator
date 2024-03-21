@@ -36,32 +36,37 @@ class Plugin:
         Plugin has no Strings (no color).
         """
 
-        TranslationInstalled = 1
+        IsTranslated = 1
+        """
+        Plugin is already in target language (green).
+        """
+
+        TranslationInstalled = 2
         """
         Translation for Plugin is already installed in Database (green).
         """
 
-        TranslationAvailableInDatabase = 2
+        TranslationAvailableInDatabase = 3
         """
         Translation for Plugin is available in Database (cyan).
         """
 
-        TranslationAvailableAtNexusMods = 3
+        TranslationAvailableAtNexusMods = 4
         """
         Translation for Plugin is available at Nexus Mods (cyan).
         """
 
-        TranslationIncomplete = 4
+        TranslationIncomplete = 5
         """
         Translation for Plugin is installed but incomplete (magenta).
         """
 
-        RequiresTranslation = 5
+        RequiresTranslation = 6
         """
         Plugin has Strings and requires translation (yellow).
         """
 
-        NoTranslationAvailable = 6
+        NoTranslationAvailable = 7
         """
         No Translation for Plugin at Nexus Mods or in Database (red).
         """
@@ -71,6 +76,7 @@ class Plugin:
             COLORS = {
                 cls.NoneStatus: None,
                 cls.NoStrings: None,
+                cls.IsTranslated: QColor.fromString("#8be248"),
                 cls.TranslationInstalled: QColor.fromString("#8be248"),
                 cls.TranslationIncomplete: QColor.fromString("#c24cd4"),
                 cls.RequiresTranslation: QColor.fromString("#e9e042"),
@@ -84,3 +90,6 @@ class Plugin:
     status: Status = Status.NoneStatus
 
     tree_item: QTreeWidgetItem = None
+
+    def __hash__(self) -> int:
+        return hash((self.name, self.path, self.status.name))

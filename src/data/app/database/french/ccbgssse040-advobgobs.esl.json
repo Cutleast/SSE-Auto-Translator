@@ -1,0 +1,930 @@
+[
+    {
+        "editor_id": "ccBGSSSE040_GoblinBitterMercy",
+        "form_id": "[0500082F]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Spear Summon",
+        "string": "Invocation de lance"
+    },
+    {
+        "editor_id": "ccBGSSSE040_GoblinSpeed",
+        "form_id": "[05000812]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Slow",
+        "string": "Lenteur"
+    },
+    {
+        "editor_id": "ccBGSSSE040_WeaponSpeed",
+        "form_id": "[05000811]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Slow Weapon",
+        "string": "Arme lente"
+    },
+    {
+        "editor_id": "ccBGSSSE040_EnchSpear",
+        "form_id": "[05000BD1]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Dummy Spear Effect",
+        "string": "Effet de la lance factice"
+    },
+    {
+        "editor_id": "ccBGSSSE040_AbGoblin",
+        "form_id": "[05000813]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Goblin Abilities",
+        "string": "Capacités de gobelin"
+    },
+    {
+        "editor_id": "ccBGSSSE040_AbBitterMercy",
+        "form_id": "[05000830]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Goblin Abilities",
+        "string": "Capacités de gobelin"
+    },
+    {
+        "editor_id": "ccBGSSSE040_ConjureStormAtronach",
+        "form_id": "[05000831]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Conjure Storm Atronach",
+        "string": "Conjuration d'Atronach de foudre"
+    },
+    {
+        "editor_id": "ccBGSSSE040_GoblinArmorIronCuirass",
+        "form_id": "[05000BDB]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Gogh's Iron Armor",
+        "string": "Armure de fer de Gogh"
+    },
+    {
+        "editor_id": "ccBGSSSE040_GoblinLeatherHelmet",
+        "form_id": "[05000BCC]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Gogh's Leather Helmet",
+        "string": "Casque de cuir de Gogh"
+    },
+    {
+        "editor_id": "ccBGSSSE040_GoblinSkullHelmet",
+        "form_id": "[05000BCE]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Gogh's Skull Mask",
+        "string": "Casque crâne de Gogh"
+    },
+    {
+        "editor_id": "ccBGSSSE040_GoblinIronHelmet",
+        "form_id": "[05000BCA]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Gogh's Iron Helmet",
+        "string": "Casque de fer de Gogh"
+    },
+    {
+        "editor_id": "ccBGSSSE040_GoblinArmorLoinCloth",
+        "form_id": "[05000C60]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Gogh's Loin Cloth",
+        "string": "Pagne de Gogh"
+    },
+    {
+        "editor_id": "ccBGSSSE040_GoblinArmorLeatherCuirass",
+        "form_id": "[05000BD8]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Gogh's Leather Armor",
+        "string": "Armure de cuir de Gogh"
+    },
+    {
+        "editor_id": "ccBGSSSE040_BlorcJournal",
+        "form_id": "[05000887]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\n<u>Day 1</u>\r\nThe tribe demanded I prove myself as a hunter. They want me to trap some game and return to the Stronghold, probably for a celebratory feast. It shouldn't be too hard. I already set up a snare by the water. Now I can just sit back and let the food come to me.\r\n\r\n<u>Day 2</u>\r\nMy snare trap doesn't seem to be working. I tied it to a stick just like they said. Clearly Lob gave me a flimsy rope. Either that or the sticks out here are no good. I don't know how they expect me to hunt with such broken tools.\r\n[pagebreak]\r\n<u>Day 3</u>\r\nIt's only been a few days, but I already feel like giving up. I'm hungry and I've gone through all the bread Atub gave me. By Malacath, they really expect me to die out here. \r\n\r\n<u>Day 5</u>\r\nThe rabbits here are too nimble to chase down. I thought I could just grab one if I put some bait in my pockets, but problem is, I don't have any bait. I shouldn't have eaten all the carrots in my sack but I was starving.\r\n\r\n<u>Day 6</u>\r\nMalacath's blessings, I'm alive! I found a cave south of my camp full of strange blue mushrooms, which I immediately ate. I remember Atub saying something about some mushrooms being poisonous, but I didn't get sick so what does she know. Anyways, I ended up filling my sack with them. If I come back with a full stomach maybe I can convince the others we don't need to hunt.\r\n\r\n<u>Day 7</u>\r\nI came back to Largashbur with my sack full of mushrooms and one by one they spit them out and mocked my hunting skills.\r\n\r\nIf that wasn't humiliating enough, Chief Yamarz took a hammer and crushed the sack, then dumped the contents on my head. None of my tribe mates bothered to defend me, they just stood there and laughed. \r\n\r\nNow Yamarz says I have to go back out there and catch something with some legs. It's not fair. When's the last time he caught anything?\r\n\r\n<u>Day 8</u>\r\nI'm so hungry. Hunting is impossible. Maybe I'll just die. That'll teach them to leave me out here alone.\r\n[pagebreak]\r\n<u>Day 9</u>\r\nBy Malacath, what just happened? I went back to the cave to pick some more mushrooms, when something must've tripped me because I fell into a pit.\r\n\r\nI yelled out for help, but instead of getting rescued, I was quickly surrounded by a horde of green monsters, hissing and gnashing their teeth. I figured that was it. They were going to eat me. \r\n\r\nBut before I could scream, one of them dropped to his knees and started bowing! The others followed.\r\n\r\nCould they be goblins? You never see them this far north. In any case, they seem to be treating me like an honored guest. \r\n\r\n<u>Day 11</u>\r\nBlessings of Malacath, it turns out they think I'm a god! They don't seem to treat other Orcs the same, so it must be the blue stains on my face. I need to thank Yamarz for dumping that sack on my head. I think I'll do that, right before I have my goblins claw open his face.\r\n\r\n<u>Day 15</u>\r\nMy army grows by the day. Soon we'll have enough numbers to overrun the Stronghold. For now I have them collecting blue mushrooms from Cyrodiil so I can maintain the ruse, although some of them might be starting to suspect.\r\n\r\nThe other day I think one of them saw me use a stick to spread blue paint on my back. I'll need to keep a close eye on him.\r\n\r\n<u>Day 18</u>\r\nI figured out who it was that saw me, it's that nasty little runt with the funny-looking spear. It seems he's the hunter of the group. He reminds me of every Orc back at Largashbur who laughed in my face.\r\n\r\nI tried to grab the spear from him but he must've done something to it because it was too heavy to lift. I don't know if it's Hircine or Malacath that's protecting him, but he needs to learn that goblins only have one god. The Blue God. Me. \r\n[pagebreak]\r\n<u>Day 21</u>\r\nThe tunnel the goblins were using to come here from Cyrodiil's collapsed. No matter. My army is nearly big enough to take the Stronghold, and once that's done I can sell Yamarz's things for a whole wagon full of paint. Before I do that though, I need to make an example of the non-believer. \r\n\r\nOnce he's dealt with, it'll show all the other goblins what happens when you question your god.",
+        "string": "<font face='$HandwrittenFont'>\r\n<u>Jour 1</u>\r\nLa tribu m'a demandé de prouver ma valeur en tant que chasseur. Ils veulent que j'attrape du gibier, et que je revienne à la Forteresse, probablement pour y organiser une fête à mon retour. Ça ne devrait pas être trop compliqué. J'ai déjà installé un collet près de l'eau. Je n'ai plus qu'à attendre, et laisser la nourriture venir jusqu'à moi.\r\n\r\n<u>Jour 2</u>\r\n Mon piège n'a pas l'air de marcher. Je l'ai attaché à un bâton, comme ils me l'ont suggéré. Lob m'a sans aucun doute fourni une piètre corde. Ou bien les bâtons ne sont pas de bonne qualité ici. Je ne sais pas comment ils pensent que je vais pouvoir chasser avec des outils aussi minables.\r\n[pagebreak]\r\n<u>Jour 3</u>\r\nCela ne fait que quelques jours, mais j'ai déjà envie d'abandonner. J'ai faim, et j'ai déjà mangé tout le pain qu'Atub m'a donné. Par Malacath, ils veulent vraiment me voir mourir ici.\r\n\r\n<u>Jour 5</u>\r\nLes lapins des environs sont bien trop vifs pour être chassés. Je pensais pouvoir en attraper un en mettant quelques appâts dans mes poches, mais j'avais oublié un détail : je n'en ai pas. Je n'aurais pas dû manger toutes les carottes que j'avais, mais j'étais affamé.\r\n\r\n<u>Jour 6</u>\r\nMalacath soit loué, je suis en vie ! J'ai trouvé une grotte au sud de mon campement. Elle est remplie d'étranges champignons bleus que je me suis empressé d'engloutir. Si je me souviens bien, Atub m'avait parlé de champignons a priori vénéneux, mais je ne suis pas tombé malade, alors qu'est-ce qu'elle en sait ? Bref, je m'en suis rempli la panse. Peut-être qu'en revenant repu, je pourrais convaincre les autres qu'il n'est plus nécessaire de chasser.\r\n\r\n<u>Jour 7</u>\r\nJe suis rentré à Largashbur avec un sac rempli de champignons. Les uns après les autres ont pris la parole, et se sont moqués de mes talents de chasseur.\r\n\r\nComme si ce n'était pas assez humiliant, le chef Yamarz a pris un marteau, et l'a abattu sur le sac, puis en a renversé le contenu sur ma tête. Aucun de mes camarades n'a daigné me défendre. Ils se sont contentés d'observer, et de rire. \r\n\r\nYamarz m'a dit de retourner d'où je viens, et d'attraper quelque chose en utilisant ma force. Ce n'est pas juste. Quand est-ce qu'il a lui-même chassé quelque chose ?\r\n\r\n<u>Jour 8</u>\r\nJ'ai si faim. Je n'arrive pas à chasser. Je vais peut-être juste mourir. Ça leur apprendra à m'abandonner ici, tout seul.\r\n[pagebreak]\r\n<u>Jour 9</u>\r\nPar Malacath, que vient-il de m'arriver ? Je suis retourné dans la grotte pour récolter d'autres champignons, et je crois avoir trébuché sur quelque chose avant de tomber dans une fosse.\r\n\r\nJ'ai appelé à l'aide, mais au lieu de voir apparaître des secours, je me suis retrouvé encerclé par une horde de monstres verts, sifflant et montrant leurs crocs. J'ai pensé que mon heure était arrivée, qu'ils allaient me dévorer. \r\n\r\nMais avant de pouvoir crier, l'un d'entre eux s'agenouilla en signe de révérence face à moi ! Les autres le suivirent.\r\n\r\nPourrait-il s'agir de gobelins ? On ne les voit que rarement aussi loin au nord. Quoi qu'il en soit, ils semblent me traiter comme un invité d'honneur. \r\n\r\n<u>Jour 11</u>\r\nLoué soit Malacath, ils me prennent pour un dieu ! A priori, ils ne traitent pas les autres Orques de la même manière. Ce doit être à cause des taches bleues sur mon visage. Je devrais remercier Yamarz d'avoir vidé ce sac sur ma tête. J'y penserai, juste avant que les griffes des gobelins ne lui lacèrent le visage.\r\n\r\n<u>Jour 15</u>\r\nMon armée grossit de jour en jour. Nous serons bientôt assez nombreux pour envahir la Forteresse. Pour l'instant, je continue à leur ordonner de récolter des champignons bleus de Cyrodiil pour poursuivre ma combine, bien que certains d'entre eux commencent à se méfier.\r\n\r\nL'autre jour, je crois que l'un d'entre eux m'a vu utiliser un bâton pour étaler le pigment bleu sur mon dos. Il faut que je le garde à l'oeil.\r\n\r\n<u>Jour 18</u>\r\nJ'ai découvert qui m'a vu. C'est ce sale petit avorton avec une drôle de lance. Il semble être le chasseur du groupe. Il me rappelle les Orques qui se riaient de moi à Largashbur.\r\n\r\nJ'ai essayé de lui subtiliser la lance, mais il doit y avoir fait quelque chose, car elle était bien trop lourde pour être portée. Je ne sais pas si Hircine ou Malacath le protègent, mais il doit apprendre que les gobelins n'ont qu'un dieu : le dieu bleu. Moi. \r\n[pagebreak]\r\n<u>Jour 21</u>\r\nLe tunnel qu'utilisaient les gobelins pour venir de Cyrodiil s'est écroulé. Peu importe. Mon armée est presque assez grande pour assiéger la Forteresse. Quand ce sera fait, je vendrai les affaires de Yamarz pour m'acheter un chariot rempli de peinture. Toutefois, avant cela, je dois utiliser l'infidèle comme exemple. \r\n\r\nQuand je me serai occupé de son cas, les autres gobelins comprendront ce qu'il en coûte de remettre en question leur dieu."
+    },
+    {
+        "editor_id": "ccBGSSSE040_BlorcJournal",
+        "form_id": "[05000887]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Blue God's Journal",
+        "string": "Journal du dieu bleu"
+    },
+    {
+        "editor_id": "ccBGSSSE040_QuestStartNote",
+        "form_id": "[05000A4B]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Letter to Clexius",
+        "string": "Lettre à Clexius"
+    },
+    {
+        "editor_id": "ccBGSSSE040_QuestStartNote",
+        "form_id": "[05000A4B]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<div align=\"left\"><font face='$HandwrittenFont'>\r\nDear Clexius,\r\n\r\nIt's as you feared. The news here in Riften is troubling on many levels. \r\n\r\nNow, I've studied goblins all my life, and while customs differ from tribe to tribe, one thing has always held true. They are beholden to their shamans, and removing them will turn the entire tribe docile.\r\n\r\nMoreover, we have seen this method work in practice, most famously with the Three Feather tribe near Bruma. Yet still the rumors persist of goblin activity near the border.\r\n\r\nMost disturbing is the news that the \"Blue God\" himself is leading them. Could it be Malacath himself in some form?\r\n\r\nRegardless, if some Daedric being has found its way to this realm, this is a cause for concern. I'll be heading to Gromm's Pass in the morning to investigate.\r\n\r\nFaithfully yours, \r\nAvanessa Calladius\r\n",
+        "string": "<div align=\"left\"><font face='$HandwrittenFont'>\r\nCher Clexius,\r\n\r\nTout se passe comme vous le craigniez. Les nouvelles d'ici, à Faillaise, sont pour le moins troublantes à plusieurs égards. \r\n\r\nJ'ai étudié les gobelins toute ma vie. Bien que leurs traditions diffèrent en fonction des tribus, ces dernières ont toujours eu un point commun : elles sont sous la tutelle de leurs chamans, et s'en débarrasser les pacifierait.\r\n\r\nNous avons, par ailleurs, déjà vu cette méthode à l'oeuvre, notamment auprès de la tribu des Trois plumes, près de Bruma. Pour autant, les rumeurs évoquant une activité gobeline persistent à la frontière.\r\n\r\nQuelque chose m'inquiète davantage : on raconte que le \"dieu bleu\" lui-même les dirige. Serait-ce Malacath qui se serait incarné sous une quelconque forme ?\r\n\r\nDans tous les cas, si un être daedra s'était infiltré dans le royaume, il y aurait matière à s'inquiéter. Je me rendrai au Col de Gromm dans la matinée pour enquêter.\r\n\r\nBien cordialement, \r\nAvanessa Calladius\r\n"
+    },
+    {
+        "editor_id": "ccBGSSSE040_Mushroom01",
+        "form_id": "[05000832]",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Steel-Blue Entoloma",
+        "string": "Entolome bleu acier"
+    },
+    {
+        "editor_id": "ccBGSSSE040_BYOHHouseIngredientMushroom01",
+        "form_id": "[05000833]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Steel-Blue Entoloma (3)",
+        "string": "Entolome bleu acier (3)"
+    },
+    {
+        "editor_id": "ccBGSSSE040_BYOHHouseIngrdMushroom",
+        "form_id": "[05000835]",
+        "index": null,
+        "type": "TREE FULL",
+        "original": "Steel-Blue Entoloma",
+        "string": "Entolome bleu acier"
+    },
+    {
+        "editor_id": "ccBGSSSE040_FloraMushroom02",
+        "form_id": "[05000C5F]",
+        "index": null,
+        "type": "FLOR FULL",
+        "original": "Steel-Blue Entoloma",
+        "string": "Entolome bleu acier"
+    },
+    {
+        "editor_id": "ccBGSSSE040_FloraMushroom01",
+        "form_id": "[05000836]",
+        "index": null,
+        "type": "FLOR FULL",
+        "original": "Steel-Blue Entoloma",
+        "string": "Entolome bleu acier"
+    },
+    {
+        "editor_id": "ccBGSSSE040_FloraMushroom02",
+        "form_id": "[05000C5F]",
+        "index": null,
+        "type": "FLOR RNAM",
+        "original": "Harvest",
+        "string": "Cueillir"
+    },
+    {
+        "editor_id": "ccBGSSSE040_FloraMushroom01",
+        "form_id": "[05000836]",
+        "index": null,
+        "type": "FLOR RNAM",
+        "original": "Harvest",
+        "string": "Cueillir"
+    },
+    {
+        "editor_id": "ccBGSSSE040_NorThroneShadow",
+        "form_id": "[050009F3]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Throne",
+        "string": "Trône"
+    },
+    {
+        "editor_id": "ccBGSSSE040_SpearOfBitterMercy",
+        "form_id": "[05000810]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Spear of Bitter Mercy",
+        "string": "Lance de Cruelle Miséricorde"
+    },
+    {
+        "editor_id": "ccBGSSSE040_StaffGoblinTotem",
+        "form_id": "[05000805]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Goblin Totem Staff",
+        "string": "Bâton de totem gobelin"
+    },
+    {
+        "editor_id": "ccBGSSSE040_EncGoblin04Hammer",
+        "form_id": "[05000B2D]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Goblin",
+        "string": "Gobelin"
+    },
+    {
+        "editor_id": "ccBGSSE040_TestRiekling",
+        "form_id": "[05000B33]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Riekling Warrior",
+        "string": "Guerrier riekelin"
+    },
+    {
+        "editor_id": "ccBGSSSE040_EncGoblin02MeleeArena",
+        "form_id": "[05000AD6]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Goblin",
+        "string": "Gobelin"
+    },
+    {
+        "editor_id": "ccBGSSSE040_Avenassa",
+        "form_id": "[05000A53]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Avanessa",
+        "string": "Avanessa"
+    },
+    {
+        "editor_id": "ccBGSSSE040_Avenassa",
+        "form_id": "[05000A53]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Avanessa Calladius",
+        "string": "Avanessa Calladius"
+    },
+    {
+        "editor_id": "ccBGSSSE040_EncGoblinFollower",
+        "form_id": "[05000815]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Gogh",
+        "string": "Gogh"
+    },
+    {
+        "editor_id": "ccBGSSSE040_EncGoblin01Melee",
+        "form_id": "[05000806]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Goblin",
+        "string": "Gobelin"
+    },
+    {
+        "editor_id": "ccBGSSSE040_EncGoblin02Melee",
+        "form_id": "[05000809]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Goblin",
+        "string": "Gobelin"
+    },
+    {
+        "editor_id": "ccBGSSSE040_Blorc",
+        "form_id": "[050009A0]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Blue God",
+        "string": "Dieu bleu"
+    },
+    {
+        "editor_id": "ccBGSSSE040_EncGoblin03Melee",
+        "form_id": "[05000808]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Goblin",
+        "string": "Gobelin"
+    },
+    {
+        "editor_id": "ccBGSSSE040_EncGoblin01MeleeArena",
+        "form_id": "[05000AD4]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Goblin",
+        "string": "Gobelin"
+    },
+    {
+        "editor_id": "ccBGSSSE040Interior01",
+        "form_id": "[01002FD2]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Gromm's Pass",
+        "string": "Col de Gromm"
+    },
+    {
+        "editor_id": "RiftenBeeandBarb",
+        "form_id": "[00016BDF]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "The Bee and Barb",
+        "string": "Le Dard de l'abeille"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000BDF]",
+        "index": null,
+        "type": "REFR FULL",
+        "original": "Gromm's Pass",
+        "string": "Col de Gromm"
+    },
+    {
+        "editor_id": "Tamriel",
+        "form_id": "[0000003C]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Bordeciel"
+    },
+    {
+        "editor_id": "ccBGSSSE040_TradeTopicY",
+        "form_id": "[05000B16]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "That's interesting. Well, good talk.",
+        "string": "Voilà qui est intéressant. Bon, assez parlé."
+    },
+    {
+        "editor_id": "ccBGSSSE040_GoblinShared03",
+        "form_id": "[05000B65]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(grunt)",
+        "string": "(grognement)"
+    },
+    {
+        "editor_id": "ccBGSSSE040_TradeTopicV",
+        "form_id": "[05000B13]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I don't understand.",
+        "string": "Je ne comprends pas."
+    },
+    {
+        "editor_id": "ccBGSSSE040_SpearTopicA",
+        "form_id": "[05000BA9]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "That isn't what I meant by trading.",
+        "string": "Ce n'est pas ce que j'entendais par \"faire affaire\"."
+    },
+    {
+        "editor_id": "ccBGSSSE040_SpearTopicD",
+        "form_id": "[05000BAC]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I get it. Your things are your own.",
+        "string": "Je comprends. Vos objets vous appartiennent."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000B0C]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "You gave me a skull.",
+        "string": "Vous m'avez donné un crâne."
+    },
+    {
+        "editor_id": "ccBGSSSE040_DismissTopic",
+        "form_id": "[05000B56]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "It's time for us to part ways.",
+        "string": "Il est temps de nous séparer."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Branch02TopicC",
+        "form_id": "[05000AFA]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "You seem friendly, but so does a bear until it's chewing your face off.",
+        "string": "Vous avez l'air amical. Les ours aussi, jusqu'à ce qu'ils vous dévorent le visage."
+    },
+    {
+        "editor_id": "ccBGSSSE040_TradeTopicX",
+        "form_id": "[05000B15]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I'm not sure why I expected an actual answer.",
+        "string": "Je ne sais pas pourquoi je m'attendais à une réponse."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Branch01TopicC",
+        "form_id": "[05000AF3]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I take it you realized that Orc wasn't a god.",
+        "string": "J'imagine que vous avez compris que l'Orque n'était pas un dieu."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Branch02TopicD",
+        "form_id": "[05000AFB]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I've always wanted a goblin for a friend. What do you say?",
+        "string": "J'ai toujours voulu avoir un ami gobelin. Qu'en dites-vous ?"
+    },
+    {
+        "editor_id": "ccBGSSSE040_ArmorTopicB",
+        "form_id": "[05000BB7]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Let's change your armor.",
+        "string": "Changeons votre armure."
+    },
+    {
+        "editor_id": "ccBGSSSE040_GoblinShared02",
+        "form_id": "[05000B64]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(grumble)",
+        "string": "(grommellement)"
+    },
+    {
+        "editor_id": "ccBGSSSE040_Branch02TopicG",
+        "form_id": "[05000AFC]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Why do I get the feeling you're going to follow me out of here.",
+        "string": "Pourquoi ai-je la sensation que vous allez me suivre pour sortir d'ici ?"
+    },
+    {
+        "editor_id": "ccBGSSSE040_SpearTopic",
+        "form_id": "[05000B0A]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I need to trade some things with you.",
+        "string": "Il faut que j'échange certaines choses avec vous."
+    },
+    {
+        "editor_id": "ccBGSSSE040_ArmorTopicC",
+        "form_id": "[05000BB9]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Never mind.",
+        "string": "Oubliez ça."
+    },
+    {
+        "editor_id": "ccBGSSSE040_TradeTopicB",
+        "form_id": "[05000B0F]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Can I try it out?",
+        "string": "Je peux l'essayer ?"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000B5E]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Follow me.",
+        "string": "Suivez-moi."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Branch01TopicD",
+        "form_id": "[05000AF4]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Wait, why am I talking to a goblin?",
+        "string": "Une minute... pourquoi est-ce que je parle à un gobelin ?"
+    },
+    {
+        "editor_id": "ccBGSSSE040_TradeTopicZ",
+        "form_id": "[05000B17]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I wonder if they teach goblin at the Bard's College.",
+        "string": "Je me demande s'ils acceptent les gobelins à l'Académie des bardes."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Branch01TopicB",
+        "form_id": "[05000AF2]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Did you kill all these goblins?",
+        "string": "Avez-vous tué tous ces gobelins ?"
+    },
+    {
+        "editor_id": "ccBGSSSE040_Branch02TopicA",
+        "form_id": "[05000AF8]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Do you think you'd want to follow me?",
+        "string": "Vous voudriez me suivre ?"
+    },
+    {
+        "editor_id": "ccBGSSSE040_TradeTopicU",
+        "form_id": "[05000B1A]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I'm guessing that's a \"No.\"",
+        "string": "J'imagine que ça veut dire \"non\"."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Branch02Topic",
+        "form_id": "[05000AEC]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "All right then, let's go.",
+        "string": "Très bien, allons-y."
+    },
+    {
+        "editor_id": "ccBGSSSE040_ArmorTopicA2",
+        "form_id": "[05000BBC]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Leather helmet.",
+        "string": "Casque de cuir."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Branch03Topic",
+        "form_id": "[05000AF0]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Goodbye.",
+        "string": "Au revoir."
+    },
+    {
+        "editor_id": "ccBGSSSE040_ArmorTopicB2",
+        "form_id": "[05000BC3]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Leather armor.",
+        "string": "Armure de cuir."
+    },
+    {
+        "editor_id": "ccBGSSSE040_FollowTopic",
+        "form_id": "[05000B5C]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Follow me. I need your help.",
+        "string": "Suivez-moi, j'ai besoin de votre aide."
+    },
+    {
+        "editor_id": "ccBGSSSE040_ArmorTopicD",
+        "form_id": "[05000BBE]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "That's all.",
+        "string": "C'est tout."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Branch02TopicF",
+        "form_id": "[05000BD3]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Having you as a companion would be a bad idea.",
+        "string": "Vous avoir comme compagnon serait une mauvaise idée."
+    },
+    {
+        "editor_id": "ccBGSSSE040_FavorStateTopic",
+        "form_id": "[05000B5A]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I need you to do something.",
+        "string": "Il faudrait que vous fassiez quelque chose pour moi."
+    },
+    {
+        "editor_id": "ccBGSSSE040_TradeTopic",
+        "form_id": "[05000B08]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I want to talk about your spear.",
+        "string": "J'aimerais parler de votre lance."
+    },
+    {
+        "editor_id": "ccBGSSSE040_SpearTopicE",
+        "form_id": "[05000BB1]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "No, really. Give me your stuff.",
+        "string": "Non, vraiment. Donnez-moi vos affaires."
+    },
+    {
+        "editor_id": "ccBGSSSE040_WaitTopic",
+        "form_id": "[05000B60]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Wait here.",
+        "string": "Attendez ici."
+    },
+    {
+        "editor_id": "ccBGSSSE040_ArmorTopicB3",
+        "form_id": "[05000BC4]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "No armor.",
+        "string": "Aucune armure."
+    },
+    {
+        "editor_id": "ccBGSSSE040_ArmorTopicB1",
+        "form_id": "[05000BC2]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Iron armor.",
+        "string": "Armure de fer."
+    },
+    {
+        "editor_id": "ccBGSSSE040_SpearTopicC",
+        "form_id": "[05000BAB]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Thank you. I appreciate the gesture.",
+        "string": "Je vous remercie. Sincèrement."
+    },
+    {
+        "editor_id": "ccBGSSSE040_GoblinShared04",
+        "form_id": "[05000BA1]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(grunt)",
+        "string": "(grognement)"
+    },
+    {
+        "editor_id": "ccBGSSSE040_ArmorTopicA",
+        "form_id": "[05000BB6]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Let's change your helmet.",
+        "string": "Changeons votre casque."
+    },
+    {
+        "editor_id": "ccBGSSSE040_ArmorTopic",
+        "form_id": "[05000BB5]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I need you to change your equipment.",
+        "string": "J'aimerais que vous changiez votre équipement."
+    },
+    {
+        "editor_id": "ccBGSSSE040_TradeTopicD",
+        "form_id": "[05000B11]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Does your spear have a name?",
+        "string": "Votre lance a-t-elle un nom ?"
+    },
+    {
+        "editor_id": "ccBGSSSE040_ArmorTopicA3",
+        "form_id": "[05000BBD]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Skull mask.",
+        "string": "Casque crâne."
+    },
+    {
+        "editor_id": "ccBGSSSE040_TradeTopicC",
+        "form_id": "[05000B10]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Does it have any special abilities?",
+        "string": "Est-ce qu'elle possède des aptitudes spéciales ?"
+    },
+    {
+        "editor_id": "ccBGSSSE040_ArmorTopicA1",
+        "form_id": "[05000BBB]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Iron helmet.",
+        "string": "Casque de fer."
+    },
+    {
+        "editor_id": "ccBGSSSE040_ContinueFavorState",
+        "form_id": "[05000B66]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Yes. Let me show you.",
+        "string": "Oui. Je vais vous montrer."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Branch01TopicA",
+        "form_id": "[05000AF1]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Are you all right?",
+        "string": "Tout va bien ?"
+    },
+    {
+        "editor_id": "ccBGSSSE040_TradeTopicE",
+        "form_id": "[05000B12]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Never mind.",
+        "string": "Oubliez ça."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000AFE]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Follow me. I could use your help.",
+        "string": "Excusez-moi. J'ai besoin de votre aide."
+    },
+    {
+        "editor_id": "ccBGSSSE040_EndFavorState",
+        "form_id": "[05000B68]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "No. Never mind.",
+        "string": "Non, laissez tomber."
+    },
+    {
+        "editor_id": "ccBGSSSE040_GoblinShared05",
+        "form_id": "[05000BA2]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(snort)",
+        "string": "(reniflement)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000C6B]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "No helmet.",
+        "string": "Aucun casque."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Branch02TopicB",
+        "form_id": "[05000AF9]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "You can handle yourself in a fight. I could use someone like you.",
+        "string": "Vous savez vous battre. Je pourrais avoir besoin de quelqu'un comme vous."
+    },
+    {
+        "editor_id": "ccBGSSSE040_SpearTopicB",
+        "form_id": "[05000BAA]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Does that mean you don't want to trade?",
+        "string": "Est-ce que ça signifie que vous ne voulez pas faire affaire ?"
+    },
+    {
+        "editor_id": "ccBGSSSE040_TradeTopicA",
+        "form_id": "[05000B0E]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Where did you find it?",
+        "string": "Où avez-vous trouvé ça ?"
+    },
+    {
+        "editor_id": "ccBGSSSE040_GoblinShared01",
+        "form_id": "[05000B63]",
+        "index": 1,
+        "type": "INFO NAM1",
+        "original": "(squeal)",
+        "string": "(couinement)"
+    },
+    {
+        "editor_id": "ccBGSSSE040_Branch01TopicE",
+        "form_id": "[05000AF5]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "It's pretty clear you're the only sane person here.",
+        "string": "Il semble évident que vous êtes la seule personne saine d'esprit par ici."
+    },
+    {
+        "editor_id": "ccBGSSSE040_TradeTopicW",
+        "form_id": "[05000B14]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "This is a waste of time.",
+        "string": "C'est une perte de temps."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Quest",
+        "form_id": "[050009B6]",
+        "index": 77,
+        "type": "QUST CNAM",
+        "original": "I traveled to Gromm's Pass and proceeded to investigate the cave's interior.",
+        "string": "J'ai voyagé jusqu'au Col de Gromm et ai commencé à fouiller l'intérieur de la grotte."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Quest",
+        "form_id": "[050009B6]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Blue in the Face",
+        "string": "Colère bleue"
+    },
+    {
+        "editor_id": "ccBGSSSE040_Quest",
+        "form_id": "[050009B6]",
+        "index": 80,
+        "type": "QUST NNAM",
+        "original": "Kill the Blue God",
+        "string": "Tuez le dieu bleu."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Quest",
+        "form_id": "[050009B6]",
+        "index": 88,
+        "type": "QUST CNAM",
+        "original": "I traveled to Gromm's Pass and proceeded to investigate the cave's interior. Inside I found an arena pit and several goblins, as well as an Orc who served as their shaman.",
+        "string": "J'ai voyagé jusqu'au Col de Gromm et ai commencé à fouiller l'intérieur de la grotte. J'y ai trouvé une fosse servant d'arène, et plusieurs gobelins, ainsi qu'un Orque faisant office de chaman."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Quest",
+        "form_id": "[050009B6]",
+        "index": 81,
+        "type": "QUST CNAM",
+        "original": "I traveled to Gromm's Pass and proceeded to investigate the cave's interior. Inside I found an arena pit and several goblins, as well as an Orc who served as their shaman. I killed the Orc and read the journal on his person, then recruited the goblin in the pit.",
+        "string": "J'ai voyagé jusqu'au Col de Gromm et ai commencé à fouiller l'intérieur de la grotte. J'y ai trouvé une fosse servant d'arène, et plusieurs gobelins, ainsi qu'un Orque faisant office de chaman. J'ai tué ce dernier, et ai lu le journal qu'il avait écrit. J'ai ensuite recruté le gobelin dans la fosse."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Quest",
+        "form_id": "[050009B6]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Look for information at the Bee and Barb",
+        "string": "Cherchez des informations au Dard de l'abeille."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Quest",
+        "form_id": "[050009B6]",
+        "index": 100,
+        "type": "QUST NNAM",
+        "original": "Read the Blue God's journal",
+        "string": "Lisez le journal du dieu bleu."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Quest",
+        "form_id": "[050009B6]",
+        "index": 87,
+        "type": "QUST CNAM",
+        "original": "I traveled to Gromm's Pass and proceeded to investigate the cave's interior. Inside I found an arena pit and several goblins, as well as an Orc who served as their shaman. I killed the Orc and read the journal on his person.",
+        "string": "J'ai voyagé jusqu'au Col de Gromm et ai commencé à fouiller l'intérieur de la grotte. J'y ai trouvé une fosse servant d'arène, et plusieurs gobelins, ainsi qu'un Orque faisant office de chaman. J'ai tué ce dernier, et ai lu le journal qu'il avait écrit."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Quest",
+        "form_id": "[050009B6]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Head to Gromm's Pass",
+        "string": "Rendez-vous au Col de Gromm."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Quest",
+        "form_id": "[050009B6]",
+        "index": 200,
+        "type": "QUST NNAM",
+        "original": "Speak to the Goblin",
+        "string": "Parlez au Gobelin."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Quest",
+        "form_id": "[050009B6]",
+        "index": 114,
+        "type": "QUST CNAM",
+        "original": "I traveled to Gromm's Pass and proceeded to investigate the cave's interior. Inside I found an arena pit and several goblins, as well as an Orc who served as their shaman. I killed the Orc while a lone goblin fought for his life in the pit.",
+        "string": "J'ai voyagé jusqu'au Col de Gromm et ai commencé à fouiller l'intérieur de la grotte. J'y ai trouvé une fosse servant d'arène, et plusieurs gobelins, ainsi qu'un Orque faisant office de chaman. J'ai tué ce dernier tandis qu'un gobelin solitaire combattait pour sa vie dans la fosse."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Quest",
+        "form_id": "[050009B6]",
+        "index": 84,
+        "type": "QUST CNAM",
+        "original": "I found a note at the Bee and Barb that implied goblins were spotted in Skyrim near the border to Cyrodiil. The writer of the note claimed she was on her way to Gromm's Pass to investigate.",
+        "string": "J'ai trouvé une note au Dard de l'abeille qui indiquait que des gobelins avaient été aperçus en Bordeciel, près de la frontière de Cyrodiil. Son auteur semblait dire qu'elle comptait se rendre au Col de Gromm pour y enquêter."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Quest",
+        "form_id": "[050009B6]",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Investigate the cave",
+        "string": "Fouillez la grotte."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Quest",
+        "form_id": "[050009B6]",
+        "index": 90,
+        "type": "QUST NNAM",
+        "original": "Free the Goblin from the pit",
+        "string": "Libérez le gobelin de la fosse."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Quest",
+        "form_id": "[050009B6]",
+        "index": 86,
+        "type": "QUST CNAM",
+        "original": "I traveled to Gromm's Pass and proceeded to investigate the cave's interior.",
+        "string": "J'ai voyagé jusqu'au Col de Gromm et ai commencé à fouiller l'intérieur de la grotte."
+    },
+    {
+        "editor_id": "ccBGSSSE040_Quest",
+        "form_id": "[050009B6]",
+        "index": 79,
+        "type": "QUST CNAM",
+        "original": "There are often rumors in Riften of strange creatures coming across the border from Cyrodiil. I should head to the inn and see what information I can find.",
+        "string": "De nombreuses rumeurs circulent à Faillaise concernant d'étranges créatures provenant des frontières de Cyrodiil. Je devrais me rendre à l'auberge, et voir quelles informations je peux y glaner."
+    },
+    {
+        "editor_id": "ccBGSSSE040_GrommsPassLocation",
+        "form_id": "[05000D13]",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "Gromm's Pass",
+        "string": "Gromm's Pass"
+    }
+]

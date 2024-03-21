@@ -1,0 +1,330 @@
+[
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfCompanionRace",
+        "form_id": "[01002F93]",
+        "index": null,
+        "type": "RACE FULL",
+        "original": "Dog",
+        "string": "Собака"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfGiftEffect",
+        "form_id": "[05000800]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Bone Wolf's Gift",
+        "string": "Подарок костяного волка - эффект"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfSummonEffect",
+        "form_id": "[05000801]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Teleports Bone Wolf to your side.",
+        "string": "Телепортирует к вам костяного волка"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfSummonEffect",
+        "form_id": "[05000801]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Summon Bone Wolf",
+        "string": "Призвать костяного волка"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfPerkEffect",
+        "form_id": "[05000802]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Bone Wolf's Revenge",
+        "string": "Месть костяного волка"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfPerkEffect",
+        "form_id": "[05000802]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Increases damage on the undead by 25% while Bone Wolf is in your company.",
+        "string": "Пока вас сопровождает костяной волк, урон, наносимый всей нежити, увеличивается на 25%."
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfBlessing",
+        "form_id": "[05000804]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Bone Wolf's Reward",
+        "string": "Награда костяного волка"
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfGiveItemSpell",
+        "form_id": "[05000803]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Bone Wolf's Gift",
+        "string": "Подарок костяного волка - способность"
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfFGivePerkAbility",
+        "form_id": "[05000805]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Bone Wolf's Revenge",
+        "string": "Месть костяного волка"
+    },
+    {
+        "editor_id": "ccBGSSE036_ConjureBoneWolfSpell",
+        "form_id": "[05000806]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Teleport Pet: Bone Wolf",
+        "string": "Телепортировать питомца: костяной волк"
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfBlessing",
+        "form_id": "[05000804]",
+        "index": null,
+        "type": "SPEL DESC",
+        "original": "Bone Wolf thanks you for the dragon bone",
+        "string": "Костяной волк благодарит вас за кость дракона"
+    },
+    {
+        "editor_id": "ccBGSSSE036_AcquisitionNote",
+        "form_id": "[05000808]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nFriend, we seek your aid. \r\n\r\nA dark necromancer has been attacking innocents along the northern coast,  accompanied by strange creatures who do his every bidding. I trust you can help us with this troublesome matter and investigate on our behalf.\r\n\r\nBolgeir Bearclaw\r\n</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\nДруг, нам нужна твоя помощь. \r\n\r\nКакой-то некромант нападает на невинных жителей на северном побережье. Его сопровождают странные существа, которыми он повелевает. Я надеюсь, что ты поможешь нам и разберешься с этим делом.\r\n\r\nОбеспокоенный поклонник\r\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE036_AcquisitionNote",
+        "form_id": "[05000808]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Letter from Bolgeir Bearclaw",
+        "string": "Записка от обеспокоенного поклонника"
+    },
+    {
+        "editor_id": "ccBGSSSE036_NecroJornal",
+        "form_id": "[05000809]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Necromancer's Journal",
+        "string": "Дневник некроманта"
+    },
+    {
+        "editor_id": "ccBGSSSE036_NecroJornal",
+        "form_id": "[05000809]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nThis is truly remarkable. Through my experiments with these undead wolves, I have discovered a method to increase my power. \r\n\r\nBy consuming their totems; objects that bind them between life and death itself, \r\nI can bind their spirits to my own life force.\r\n\r\nI have already consumed two totems and their hosts are now completely under my control. But this is not enough, I need a third totem to be sure.\r\n</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\nЭто просто удивительно. В ходе экспериментов с воскрешенными волками я нашел способ обрести бессмертие. \r\n\r\nПоглощая их тотемы - предметы, заставляющие их находиться между жизнью и смертью, \r\nя увеличиваю свою жизненную силу с помощью их душ.\r\n\r\nПока они живы, ничто не причинит мне вреда. \r\n\r\nЯ уже поглотил два тотема, и их хозяева теперь полностью в моей власти. Но этого мало. Для надежности мне нужен третий тотем.\r\n\r\nТакая сила сделает меня непобедимым.\r\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE036_TOTEM",
+        "form_id": "[0500080A]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Totem Bone",
+        "string": "Тотемная кость"
+    },
+    {
+        "editor_id": "ccBGSSSE036_LvlBonewolf",
+        "form_id": "[05000865]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Bonewolf",
+        "string": "Bonewolf"
+    },
+    {
+        "editor_id": "ccBGSSSE036_EncNecromancerThrall02",
+        "form_id": "[0500080D]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Thrall Wolf",
+        "string": "Волк-раб"
+    },
+    {
+        "editor_id": "ccBGSSSE036_EncNecromancerThrall01",
+        "form_id": "[0500080C]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Thrall Wolf",
+        "string": "Волк-раб"
+    },
+    {
+        "editor_id": "ccBGSSSE036_EncBoneWolf",
+        "form_id": "[05000D63]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Bone Wolf",
+        "string": "Костяной волк"
+    },
+    {
+        "editor_id": "ccBGSSSE036_Necromancer",
+        "form_id": "[0500080B]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Necromancer",
+        "string": "Некромант"
+    },
+    {
+        "editor_id": "ccBGSSSE036_CageKey",
+        "form_id": "[0500080E]",
+        "index": null,
+        "type": "KEYM FULL",
+        "original": "Key to Wolf Cage",
+        "string": "Ключ от клетки с волком"
+    },
+    {
+        "editor_id": "Tamriel",
+        "form_id": "[0000003C]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Скайрим"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "form_id": "[05000829]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Find the necromancer and the strange creatures",
+        "string": "Найти некроманта и странных существ"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "form_id": "[05000829]",
+        "index": 87,
+        "type": "QUST CNAM",
+        "original": "The necromancer is dead. I should search his body for any clues.",
+        "string": "Некромант мертв. Надо обыскать тело; возможно, это поможет мне что-нибудь узнать."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "form_id": "[05000829]",
+        "index": 83,
+        "type": "QUST CNAM",
+        "original": "I have encountered a dark necromancer and two undead wolves. These  creatures appear to be controlled by the necromancer. Putting a stop to these experiments should prevent him from raising more. ",
+        "string": "Мне встретился некромант с двумя воскрешенными волками. Похоже, он управляет ими с помощью магии. Если я положу конец его экспериментам, он не сможет воскрешать волков и дальше. "
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "form_id": "[05000829]",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "In a cage nearby, there is another of these strange creatures, who I suspect the totem belongs to. I should take it to him.",
+        "string": "Похоже, некромант набирал силу, поглощая тотемы костяных волков. Мне удалось остановить его до того, как он поглотил третий тотем. Неподалеку в клетке сидит еще одно такое существо. Полагаю, что третий тотем принадлежит ему. Надо вернуть тотем волку."
+    },
+    {
+        "editor_id": "ccBGSSSE036_CreatureDialogueBoneWolf",
+        "form_id": "[0500085E]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "ccBGSSSE036_CreatureDialogueBoneWolf",
+        "string": "ccBGSSSE036_CreatureDialogueBoneWolf"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "form_id": "[05000829]",
+        "index": 71,
+        "type": "QUST CNAM",
+        "original": "I have discovered the necromancer's location. The strange creatures mentioned in the note appear to be undead wolves, raised by the dark arts of the necromancer. Putting a stop to these experiments should prevent him from raising more.",
+        "string": "Мне удалось выяснить, где находится некромант. Похоже, что странные существа, упомянутые в записке - это волки-нежить, воскрешенные с помощью темной магии. Если я положу конец его экспериментам, он не сможет воскрешать волков и дальше."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "form_id": "[05000829]",
+        "index": 84,
+        "type": "QUST CNAM",
+        "original": "Bone Wolf appears calm and content now that I've returned his totem. It appears he will follow me if I wish. Some may consider him strange to look upon, but there may be something deeper about him beyond his appearance.",
+        "string": "Теперь, когда тотем возвращен, костяной волк выглядит спокойным и довольным. Кажется, он пойдет за мной, если я этого захочу. Кто-то может счесть его вид странным, но, возможно, внешность обманчива."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "form_id": "[05000829]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Defeat the necromancer",
+        "string": "Победить некроманта"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "form_id": "[05000829]",
+        "index": 15,
+        "type": "QUST NNAM",
+        "original": "Defeat the necromancer",
+        "string": "Победить некроманта"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "form_id": "[05000829]",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Search the necromancer",
+        "string": "Осмотреть некроманта"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "form_id": "[05000829]",
+        "index": 5,
+        "type": "QUST NNAM",
+        "original": "Read the note from Bolgeir Bearclaw",
+        "string": "Прочесть записку от обеспокоенного поклонника"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "form_id": "[05000829]",
+        "index": 81,
+        "type": "QUST CNAM",
+        "original": "Bolgeir Bearclaw has informed me that a dark necromancer has been attacking innocents somewhere along the northern coast. The note also tells of strange creatures that accompany him. I should search the coast and see if I can unravel this mystery.",
+        "string": "Обеспокоенный поклонник сообщил мне, что какой-то некромант нападает на невинных жителей на северном побережье. В записке упоминалось о том, что его сопровождают странные существа. Надо обыскать побережье и попытаться раскрыть эту тайну."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "form_id": "[05000829]",
+        "index": 102,
+        "type": "QUST CNAM",
+        "original": "I have a note from Bolgeir Bearclaw. I should read it and find out if there's anything he needs assistance with.",
+        "string": "Какой-то обеспокоенный поклонник прислал мне записку. Надо прочитать ее."
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "form_id": "[05000829]",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "Take the totem to the caged wolf",
+        "string": "Отнести тотем волку, сидящему в клетке"
+    },
+    {
+        "editor_id": "ccBGSSSE036_PetBWolfAcquisitionQuest",
+        "form_id": "[05000829]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Let Sleeping Wolves Lie",
+        "string": "Не буди спящих волков"
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfFollowPerk",
+        "form_id": "[0500082E]",
+        "index": null,
+        "type": "PERK DESC",
+        "original": "Spells and attacks are more effective against the undead and necromancers.",
+        "string": "Все заклинания и атаки более эффективны против нежити и некромантов."
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfFollowPerk",
+        "form_id": "[0500082E]",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Bone Wolf's Revenge",
+        "string": "Месть костяного волка"
+    },
+    {
+        "editor_id": "ccBGSSSE036_BoneWolfGivePlayerItemMsg",
+        "form_id": "[0500085D]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Bone Wolf has found you something.",
+        "string": "Костяной волк что-то нашел для вас."
+    }
+]

@@ -20,5 +20,6 @@
     "no_config_required": "No configuration required for this Translator API.",
     "translator_api_key": "Translator API Key",
     "restart_title": "Restart required",
-    "restart_text": "SSE-AT must be restarted for the changes to take effect! Restart now?"
+    "restart_text": "SSE-AT must be restarted for the changes to take effect! Restart now?",
+    "use_masterlist": "Use global Masterlist from GitHub Repository (recommended)"
 }

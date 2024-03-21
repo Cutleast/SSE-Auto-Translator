@@ -11,6 +11,7 @@ from datetime import datetime
 import jstyleson as json
 import qtpy.QtGui as qtg
 import qtpy.QtWidgets as qtw
+import requests as req
 
 from .constants import *
 from .detector import LangDetector, Language
@@ -27,7 +28,6 @@ from .stdout_pipe import StdoutPipe
 from .string import String
 from .thread import Thread
 
-
 LOG_LEVELS = {
     10: "debug",  # DEBUG
     20: "info",  # INFO
@@ -35,6 +35,9 @@ LOG_LEVELS = {
     40: "error",  # ERROR
     50: "critical",  # CRITICAL
 }
+
+
+logging.getLogger("Utilities")
 
 
 def strlevel2intlevel(level: str) -> int:
@@ -261,10 +264,43 @@ def trim_string(text: str, max_length: int = 100):
     """
 
     if len(text) > max_length:
-        trimmed_text = text[:max_length-3] + "..."
+        trimmed_text = text[: max_length - 3] + "..."
         return f"{trimmed_text!r}"[1:-1]
 
     return f"{text!r}"[1:-1]
+
+
+masterlist: dict[str, dict] = None
+
+
+def get_masterlist(language: str, cache: bool = True) -> dict[str, dict]:
+    """
+    Gets Masterlist from GitHub Repository.
+
+    Caches response if `cache` is True.
+    """
+
+    global masterlist
+
+    REPO_NAME = "SSE-Auto-Translator"
+    REPO_OWNER = "Cutleast"
+    BRANCH = "v1.1.0"
+    MASTERLIST_PATH = f"masterlists/{language.lower()}.json"
+
+    if masterlist is None or cache == False:
+        url = f"https://raw.githubusercontent.com/{REPO_OWNER}/{REPO_NAME}/{BRANCH}/{MASTERLIST_PATH}"
+
+        res = req.get(url, timeout=3)
+
+        if res.status_code == 200:
+            data = res.content.decode()
+            masterlist = json.loads(data)
+
+        else:
+            log.debug(f"Request URL: {url!r}")
+            raise Exception(f"Request failed! Status Code: {res.status_code}")
+
+    return masterlist
 
 
 class ProxyStyle(qtw.QProxyStyle):

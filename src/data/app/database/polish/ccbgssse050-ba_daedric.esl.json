@@ -1,0 +1,258 @@
+[
+    {
+        "editor_id": "ccBGSSSE050_ArmorBladesCuirass",
+        "form_id": "[05000801]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Daedric Plate Armor",
+        "string": "Daedryczna zbroja płytowa"
+    },
+    {
+        "editor_id": "ccBGSSSE050_ArmorBladesCuirassEnchanted",
+        "form_id": "[0500083C]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Daedric Plate Armor of Eminent Illusion",
+        "string": "Daedryczna płytowa zbroja wybitnej iluzji"
+    },
+    {
+        "editor_id": "ccBGSSSE050_ArmorBladesHelmet",
+        "form_id": "[05000803]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Daedric Plate Helmet",
+        "string": "Daedryczny hełm płytowy"
+    },
+    {
+        "editor_id": "ccBGSSSE050_ArmorBladesHelmetEnchanted",
+        "form_id": "[0500083E]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Daedric Plate Helmet of Eminent Health",
+        "string": "Daedryczny płytowy hełm wybitnego zdrowia"
+    },
+    {
+        "editor_id": "ccBGSSSE050_BountyNote",
+        "form_id": "[05000826]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nI first met the Breton at Dead Man's Drink. Said it was poetic, given what was inside his bottle of wine.\r\n\r\nI ain't much for poetry myself. I wanted to know what it paid. And pay it did. I would've been okay with just gold. But he insisted I take his armor too.\r\n\r\nNot sure why he'd want to give up something so valuable, but he said it would help sell the story. A dead man has no need for protection. I could've reminded him that he wasn't really dying, but you know what they say about a fool and his gold. So we shook hands and he downed the drink. \r\n\r\nThe next morning, I rode into town with him as my bounty. And sure enough, they buried him in the cemetery, just like he said they would. \r\n\r\nBack at the inn, I asked him if he needed me to dig him up. He said I didn't have to. Someone else would.\r\n\r\n",
+        "string": "<font face=\"$HandwrittenFont\">\r\nMoje pierwsze spotkanie z tym Bretonem było w Trunku Truposza. Stwierdził, że to niemal poetyckie, biorąc pod uwagę, co znajdowało się w jego butelce z winem.\r\n\r\nJa tam nie przepadam za poezją. Chodziło mi o zapłatę, a ta była sowita. Wystarczyłoby mi tylko złoto, ale nalegał, więc wziąłem także jego pancerz.\r\n\r\nNie miałem pojęcia, dlaczego chciał się pozbyć czegoś tak cennego, ale stwierdził, że to pomoże nam sprzedać tę bajeczkę. Dodał, że martwy nie potrzebuje ochrony. W sumie przecież wcale nie umierał, ale wiecie, co mówią o złocie głupców. Dobiliśmy więc targu, a on wypił zawartość kielicha. \r\n\r\nNastępnego dnia wjechaliśmy do miasteczka, z nim jako moją zdobyczą. Rzeczywiście, pochowali go na miejscowym cmentarzu, zgodnie z planem. \r\n\r\nJeszcze w gospodzie, na moje pytanie, czy mam pomóc mu się odkopać, odpowiedział, że nie trzeba. Ktoś inny mu pomoże.\r\n\r\n"
+    },
+    {
+        "editor_id": "ccBGSSSE050_Book01",
+        "form_id": "[0500081A]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "The Crimson Dirks, v3",
+        "string": "Szkarłatne Sztylety, tom 3"
+    },
+    {
+        "editor_id": "ccBGSSSE050_Book01",
+        "form_id": "[0500081A]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nThe Crimson Dirks\r\nBook Three\r\n\r\nby\r\nGathers-the-Coin\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/P_letter.png'>eladius looked outside the window of the Crescent Moons Inn, watching the patrons below shuffle through the market sands. A Nord butcher, catching his glance, waved hello to the Imperial, before returning to his trade.\r\n\r\nAt the table behind him, Erwan and Edward were with the buyer, playing an old Khajiit game of tiles and bones; a fool's wager given they barely understood the rules. \r\n\r\nAs the septims slowly poured over to the Khajiit's end of the table, Peladius' thoughts turned to his friends back in Cyrodiil, and prayed to Zenithar that luck had found them in their part of the world. \r\n\r\n\"If Khajiit may ask,\" he said, adding an ante, \"this merchandise you wish to move, is it by chance connected to the recent theft in the palace?\"\r\n\r\n\"Khajiit may not ask,\" snapped Erwan, \"or Erwan will remove his tongue.\"\r\n\r\n\"Pardon his rudeness,\" the cat demurred, \"but the sands are full of talk regarding the heist of the Clan Mother's treasury.\"\r\n\r\n\"Oh, give him a break,\" teased Edward, \"if you wanted to hide your identity, you probably should've chosen a disguise that didn't include the Clan Mother's personal wardrobe.\"\r\n\r\nErwan scowled at her brother, angry at herself for not having a proper comeback. The Khajiit, meanwhile, glanced at his tiles and fiddled with his ring, an action that did not go unnoticed.\r\n\r\n\"Yes, although it was not the silk, but the sword that gave her away,\" the Khajiit said, revealing another winning hand, \"a common blade would not have such an elegant scabbard.\"\r\n\r\n\"We should drop the weapons and just grow our nails out,\" Edward sighed, as the cat's claws raked in another pot, \"maybe then we'd have better luck.\"\r\n\r\n\"If you want to take that risk, be my guest,\" Peladius chimed in, \"but if we get into a fight, I'd feel better if my hands were clutching Imperial steel.\"\r\n\r\n\"You'd feel better, sure!\" Edward countered, \"But how do I know I wasn't destined to be a mage?\"\r\n\r\nThere was a time when Peladius wondered the same about Edward. At first glance he was more dashing noble than thief, but behind the smile and charm was a cunning and calculating wit. Some might argue that Edward was better suited for the job than Peladius could ever be. For the best rogues cut their enemies not with the edge of their dagger, but the sharpness of their mind. \r\n\r\n\"Either way, Khajiit is excited to meet such daring thieves. How many outsiders would even try such a thing, given the consequences?\"\r\n\r\n\"What do you mean by that?\" Edward replied, examining his tiles.\r\n\r\n\"Well, the Clan Mothers are allies of the Dominion. Their eyes are all-seeing, and their punishments are known to all who hear the screams.\"\r\n\r\n\"And what do you think about that, furball?\" Erwan interrupted, eyes focused on the Khajiit, \"are you a fan of the Dominion? Do you have paintings at home of Lady Arannelya in fancy lace?\"\r\n\r\n\"Khajiit does not care for politics,\" he said, raising the pot, \"He is sorry to have brought it up.\"\r\n\r\n\"Oh, don't mind my sister, she's just touched by Sheogorath,\" replied Edward, calling the bet, \"I, for one, love a good political discussion. It allows us to find a common ground. After all, why do you think people get into conflicts in the first place?\"\r\n\r\n\"Khajiit would assume it is because two sides cannot reconcile their differences.\"\r\n\r\n\"You'd think that. One person calls Talos a man, and the other a god, and the next thing you know, they're at each other's throats. But I've seen blood feuds started over the love of a woman, and wars fought over inches on a map.\r\n\r\nThe truth is, people don't fight because they're different. They fight because their motivations are one and the same. That's true whether you're the Empire and the Thalmor, or a Clan Mother and a thief.\"\r\n\r\n\"And what, by the moons, unites you and the Clan Mother? What is this motivation you both share?\"\r\n\r\n\"The same thing that drives you,\" Edward smiled, laying out his tiles on the table.\r\n\r\n\"Greed.\"\r\n\r\nThe hand was indeed a winner, but of greater concern to the Khajiit was the note Edward placed beside it. The merchant recognized it immediately. He had penned the letter that morning, with the intent to betray them to the Clan Mother in exchange for a hefty sum of sugar and gold.\r\n\r\nStartled, he reached for his weapon, but it was too late. Erwan had already drawn hers.\r\n\r\n\"It doesn't matter,\" the Khajiit merchant said, \"this letter was for the Clan Mother. But the one to the guard is already-\"\r\n\r\nBefore Edward could interject, Erwan slit the Khajiit's throat. \r\n\r\nAs the blood splattered all over her silk garment, a scream could be heard from the market. A Thalmor Justiciar, flanked by two guards, had dragged the Nord butcher from his stall, accusing him Talos worship. \r\n\r\nThe Justiciar tore open the butcher's tunic, but found only an Amulet of Mara. The butcher replied with a toothy grin, asking the Thalmor if she was spoken for. The Justiciar, digusted, tossed the butcher into his stall before returning to her patrol.\r\n\r\nPeladius shut the window. They may have won the day, but the war was another story. For now, they had a long journey ahead of them, and a body to dispose.",
+        "string": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nSzkarłatne Sztylety\r\nKsięga Trzecia\r\n\r\nHistoria autorstwa\r\nGathersa-Monety\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/P_letter.png'>eladius zerknął za okno Gospody Półksiężyców i zaczął obserwować klientów oraz sprzedawców przemierzających piaszczyste uliczki rynku. Nordzki rzeźnik uchwycił jego spojrzenie i pomachał na powitanie do Cesarskiego, a następnie wrócił do swoich spraw.\r\n\r\nPrzy stole tuż za nim Erwana i Edward grali z klientem w starą khajiicką grę w kafle i kości. Nie mieli żadnych szans, szczególnie że praktycznie nie znali zasad. \r\n\r\nKolejne septimy powoli podążały na tę stronę stołu, przy której siedział Khajiit, a myśli Peladiusa zwróciły się ku jego przyjaciołom w Cyrodiil. Zmówił też krótką modlitwę do Zenithara, aby odnaleźli szczęście w swojej części świata. \r\n\r\n- Jeśli Khajiit może zapytać - powiedział gracz, dodając do puli - towar, który chcecie przesłać, jest być może związany z niedawną kradzieżą w pałacu?\r\n\r\n- Khajiit nie może zapytać - warknęła Erwana - albo Erwana odetnie mu język.\r\n\r\n- Wybaczy jego brak manier - wycofał się kot - ale piaski są pełne plotek na temat napadu na skarbiec Matki Klanu.\r\n\r\n- Odpuść mu - zaczął droczyć się Edward. - Gdybyś chciała ukryć swoją tożsamość, powinnaś wybrać przebranie, które nie zawiera elementów osobistej garderoby Matki Klanu.\r\n\r\nErwana rzuciła gniewne spojrzenie bratu, zła na siebie, że nie potrafiła mu błyskotliwie odpowiedzieć. Tymczasem Khajiit zerknął na swoje kafle i niezauważenie przekręcił pierścień na palcu.\r\n\r\n- W rzeczy samej, choć to nie jedwab, ale miecz ją zdradził - powiedział, odsłaniając zwycięski układ. - Tak elegancka pochwa nie pasuje do pospolitego żelaza.\r\n\r\n- Powinniśmy zostawić broń i na powrót wyhodować pazury - westchnął Edward, podczas gdy kocie szpony zgarnęły kolejną pulę. - Może wtedy by nam się poszczęściło.\r\n\r\n- Jeśli chcesz ryzykować, przyjacielu, proszę bardzo - wtrącił się Peladius. - Ale jeśli przyjdzie nam walczyć, wolę trzymać w ręce cesarską stal.\r\n\r\n- Dobra broń nigdy nie zawadza - odpowiedział Edward - ale skąd mam wiedzieć, że mym przeznaczeniem nie jest magia?\r\n\r\nBył czas, gdy Peladius zadawał sobie to samo pytanie odnośnie mężczyzny. Na pierwszy rzut oka był on bardziej szykownym szlachcicem niż złodziejem, ale za czarującym uśmiechem krył się spryt i chłodna kalkulacja. Niektórzy mogliby powiedzieć, że Edward lepiej nadawał się do tej pracy niż Peladius, bo najlepsi w zawodzie nie tną wrogów ostrzem swego sztyletu - tylko umysłu. \r\n\r\n- Tak czy inaczej, Khajiit jest podekscytowany, mogąc spotkać tak mężnych złodziei. Ilu obcych odważyłoby się porwać na coś takiego, biorąc pod uwagę konsekwencje?\r\n\r\n- Co dokładnie masz na myśli? - zapytał Edward, bacznie oglądając jego kafle.\r\n\r\n- Cóż, Matki Klanu są sojuszniczkami Dominium. Ich oczy widzą wszystko, a kary są dobrze znane wszystkim, którzy słyszeli krzyki schwytanych.\r\n\r\n- A ty? Co o tym wszystkim myślisz, futrzaku? - przerwała mu Erwana i wbiła oczy w Khajiita. - Jesteś miłośnikiem Dominium? Masz w domu obrazy lady Arannelyi w wyrafinowanych koronkach?\r\n\r\n- Khajiita nie obchodzi polityka - odparł, wznosząc kielich - Przeprasza, że podniósł ten temat.\r\n\r\n- Och, nie zwracaj uwagi na moją siostrę, została dotknięta przez Sheogoratha - powiedział Edward i wyrównał stawkę. - Ja na przykład uwielbiam dobre dyskusje polityczne. Pozwalają one dojść do porozumienia. W końcu, dlaczego ludzie w ogóle angażują się w konflikty?\r\n\r\n- Khajiit zakłada, że to z powodu braku możliwości pogodzenia różnic w poglądach dwóch stron sporu.\r\n\r\n- Tak mogłoby się wydawać. Jeden uważa Talosa za człowieka, inny za boga, i zanim się spostrzeżemy, rzucają się sobie do gardeł. Ale ja widziałem krwawe zatargi o miłość kobiety i całe wojny o kilka cali terenu na mapie.\r\n\r\nPrawda jest taka, że ludzie nie walczą, bo się różnią. Walczą, bo ich motywacje są dokładnie takie same. Niezależnie od tego, czy jesteś Cesarskim czy Thalmorczykiem, Matką Klanu czy złodziejem.\r\n\r\n- Na księżyce, a cóż to jest takiego, co łączy ciebie z Matką Klanu? Jakąż to macie wspólną motywację?\r\n\r\n- Taką samą, jak twoja. - Edward uśmiechnął się, wykładając kafle na stół.\r\n\r\n- Chciwość.\r\n\r\nUkład był w rzeczy samej zwycięski, ale większe zmartwienie u Khajiita spowodowała notatka, którą Edward wyłożył przy okazji. Kupiec natychmiast ją rozpoznał. Sam napisał ten list dzisiejszego ranka, chcąc wydać złodziei Matce Klanu w zamian za sporą sumkę w cukrze i złocie.\r\n\r\nZaskoczony sięgnął po broń, ale było już za późno. Erwana dawno dobyła swojej.\r\n\r\n- To już nieważne - stwierdził khajiicki kupiec - ten list był adresowany do Matki Klanu, ale drugi, do gwardii, jest już…\r\n\r\nZanim Edward zdołał się wtrącić, Erwana poderżnęła Khajiitowi gardło. \r\n\r\nGdy krew trysnęła na jej jedwabną szatę, z targu dobiegł wszystkich krzyk. Thalmorska justycjariuszka, w asyście dwóch gwardzistów, wywlekała właśnie nordskiego rzeźnika z jego straganu i oskarżała o czczenie Talosa. \r\n\r\nJustycjariuszka rozdarła tunikę rzeźnika, ale znalazła jedynie Amulet Mary. Mężczyzna odpowiedział szerokim uśmiechem i zapytał Thalmorkę, czy coś jej się nie pomyliło. Ta, zdegustowała, pchnęła go na stragan i wróciła do patrolowania uliczek.\r\n\r\nPeladius zamknął okno. Z tej bitwy wyszli zwycięsko, ale czy zdołają wygrać wojnę? Wciąż czekała ich długa droga. Musieli też pozbyć się ciała."
+    },
+    {
+        "editor_id": "ccBGSSSE050_DaedricLetter",
+        "form_id": "[05000825]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Letter from Erwan",
+        "string": "List od Erwany"
+    },
+    {
+        "editor_id": "ccBGSSSE050_ThalmorNote",
+        "form_id": "[0500081B]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Khajiit's Note",
+        "string": "Notatka Khajiita"
+    },
+    {
+        "editor_id": "ccBGSSSE050_DaedricDossier",
+        "form_id": "[05000819]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nThe bounty for Edward, one of the Crimson Dirks, had been up for about a year. Pretty much every Jarl had a price on his head, but only one of them had to pay it.\r\n\r\nIt was a big deal at the time, but to be honest I'd forgotten all about it. But then last Sundas this Khajiit starts barking at the gate about wanting to speak to the captain. He says he's been after Edward since the Moons themselves were suckling babes. \r\n\r\nI told him to head over to the cemetery in Falkreath, he'll find the bastard dead in the ground where the worms feed.\r\n\r\nI wasn't sure if it was disbelief or disappointment on his face when I broke the news. I wonder if it has to do with the story in the book. If so, I can't imagine how far he's traveled to get here, but ever since I lost my small fingers I haven't been one to count.",
+        "string": "<font face=\"$HandwrittenFont\">\r\nNagroda za Edwarda, członka Szkarłatnych Sztyletów, wisiała nad nim gdzieś od roku. Praktycznie każdy Jarl miał wyznaczoną nagrodę za swoją głowę, ale tylko jeden z nich musiał ją zapłacić.\r\n\r\nW tamtym czasie było o tym bardzo głośno, ale, szczerze mówiąc, mnie całkiem wyleciało to z głowy. I nagle, w ostatnią sundas, jakiś Khajiit zaczyna nawoływać u bramy, że chce rozmawiać z kapitanem. Twierdzi, że ściga Edwarda od czasu, gdy księżyce były jeno w powijakach. \r\n\r\nMówię mu, żeby ruszał na cmentarz w Falkrecie - znajdzie tam drania w ziemi, pewnie już gryzą go robaki.\r\n\r\nKiedy usłyszał te wieści, nie potrafiłem stwierdzić, czy na jego twarzy pojawiło się niedowierzanie czy rozczarowanie. Ciekawe, czy ma to jakiś związek z tą historią z książki. Jeśli tak, nie wyobrażam sobie, ile dni musiał podróżować, by tu przybyć. Zresztą, odkąd straciłem małe palce, trudno jest mi cokolwiek zliczyć."
+    },
+    {
+        "editor_id": "ccBGSSSE050_ThalmorNote",
+        "form_id": "[0500081B]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nKhajiit finally got a lead on Edward. It seems he and his bandit friends fled north to Skyrim.\r\n\r\nBut when he spoke to the guard captain, he tells Khajiit the bounty on Edward has already been claimed. A ripe old adventurer showed up to the barracks on a horse, dragging the Breton's corpse up behind him.\r\n\r\nThey tell Khajiit the body is buried at the far end of the cemetery in Falkreath. Khajiit will take a shovel and dig him up. \r\n\r\nAfter all, there are ways to die and not be dead. Khajiit has heard of potions that mimic death, slowing the heart to barely beat. If so, then Edward might still be out there.\r\n\r\nTo that end, this one has heard rumors of a bandit wearing Daedric Plate, plying his blood trade at Knifepoint Ridge. Originally Khajiit did not think Edward the type to live in an abandoned mine. But now he is not so sure.\r\n\r\nEdward may have fooled the guard, but Khajiit won't believe he is truly dead until he sees it with his own eyes.\r\n",
+        "string": "<font face=\"$HandwrittenFont\">\r\nKhajiit wreszcie wpadł na trop Edwarda. Najwyraźniej wraz ze swoimi bandyckimi towarzyszami uciekł na północ, do Skyrim.\r\n\r\nAle kapitan gwardii powiedział Khajiitowi, że nagroda za głowę Edwarda została już odebrana. W koszarach pojawił się jakiś stary łowca przygód z ciałem Bretona wleczonym za koniem.\r\n\r\nGwardzista stwierdził również, że zwłoki są pogrzebane na krańcu cmentarza w Falkrecie. Khajiit weźmie łopatę i go wykopie. \r\n\r\nW końcu są sposoby na to, żeby umrzeć, ale pozostać przy życiu. Khajiit słyszał o eliksirach pozwalających ukartować śmierć i spowolnić bicie serca niemal zupełnie. Gdyby tak było, Edward wciąż mógł żyć.\r\n\r\nW końcu Khajiit słyszał plotki o bandycie w daedrycznej zbroi płytowej, zajmującym się swym krwawym fachem na Grani Sztychu. Początkowo Khajiit uważał, że Edward nie mógłby zamieszkać w opuszczonej kopalni. Ale teraz nie jest już tego taki pewien.\r\n\r\nMoże i Edward oszukał gwardię, ale Khajiit nie uwierzy w jego śmierć, dopóki nie zobaczy ciała na własne oczy.\r\n"
+    },
+    {
+        "editor_id": "ccBGSSSE050_BountyNote",
+        "form_id": "[05000826]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Bounty Hunter's Note",
+        "string": "Notatka łowcy nagród"
+    },
+    {
+        "editor_id": "ccBGSSSE050_DaedricLetter",
+        "form_id": "[05000825]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>\r\nDear brother, are you well? I heard this terrible rumor that you died. You always said I'd be the one to kill you.\r\n\r\nThat wasn't very nice of you, to break a promise to your only sister. Unless there's another sister you didn't tell me about? So now you're not only dead, but you're a liar too. Tsk, tsk.\r\n\r\nAnyways, I know you love to read so I'll keep this short. Let me know if you're not dead so I can come over and hug you with my knife.\r\n\r\nErwan</font>\r\n",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\r\nDrogi bracie, czy dobrze się miewasz? Słyszałam te straszliwe plotki o twojej śmierci. Zawsze mówiłeś, że to ja Cię ukatrupię.\r\n\r\nTo bardzo nieładnie, złamać obietnicę daną jedynej siostrze. Chyba że masz jeszcze jakąś inną, o której mi nie powiedziałeś? A więc jesteś nie tyko trupem, ale także kłamcą. Bardzo nieładnie.\r\n\r\nTak czy inaczej, wiem, jak uwielbiasz czytać, więc będę się streszczała. W razie gdybyś jednak żył, daj mi znać, żebym mogła Cię odnaleźć i poczęstować ostrzem noża.\r\nErwana</font>\r\n"
+    },
+    {
+        "editor_id": "ccBGSSSE050_DaedricDossier",
+        "form_id": "[05000819]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Death of a Crimson Dirk",
+        "string": "Śmierć Szkarłatnego Sztyletu"
+    },
+    {
+        "editor_id": "ccBGSSSE050_BountyHunter",
+        "form_id": "[05000823]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Bounty Hunter",
+        "string": "Łowca nagród"
+    },
+    {
+        "editor_id": "ccBGSSSE050_AssassinKhajiitF",
+        "form_id": "[0500082C]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Khajiit",
+        "string": "Khajiit"
+    },
+    {
+        "editor_id": "WhiterunDragonsreachBasement",
+        "form_id": "[0004A376]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Dragonsreach Dungeon",
+        "string": "Lochy Smoczej Przystani"
+    },
+    {
+        "editor_id": "Tamriel",
+        "form_id": "[0000003C]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Skyrim"
+    },
+    {
+        "editor_id": "ccBGSSSE050_Quest",
+        "form_id": "[05000822]",
+        "index": 87,
+        "type": "QUST CNAM",
+        "original": "I've heard stories of bandits being an issue throughout Skyrim. At the dungeon in Whiterun, I read about one such bandit who died in Falkreath. However, upon arriving at the grave site, I found the body of a dead Khajiit. The Khajiit was previously investigating a lead that points to Knifepoint Ridge. After traveling to the bandit camp, I was attacked by a warrior in Daedric Plate armor. I defeated the warrior and retrieved his armor.",
+        "string": "Dotarły do mnie pogłoski o problemach z bandytami w całym Skyrim. W lochu na Białej Grani zdarzyło mi się przeczytać o jednym z rozbójników, który zmarł w Falkrecie. Jednak na miejscu jego spoczynku znajdowało się jedynie ciało martwego Khajiita. Mężczyzna badał sprawę prowadzącą do Grani Sztychu. Po przybyciu do obozowiska bandytów zostałem zaatakowany przez wojownika w daedrycznej zbroi płytowej. Udało mi się go pokonać i przejąć jego pancerz."
+    },
+    {
+        "editor_id": "ccBGSSSE050_Quest",
+        "form_id": "[05000822]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Visit Edward's grave in Falkreath",
+        "string": "Odwiedź grób Edwarda w Falkrecie"
+    },
+    {
+        "editor_id": "ccBGSSSE050_MiscQuest",
+        "form_id": "[0500081D]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Look for a note in Dragonsreach Dungeon",
+        "string": "Znajdź notatkę w lochach Smoczej Przystani"
+    },
+    {
+        "editor_id": "ccBGSSSE050_Quest",
+        "form_id": "[05000822]",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "Investigate Knifepoint Ridge",
+        "string": "Zbadaj Grań Sztychu"
+    },
+    {
+        "editor_id": "ccBGSSSE050_Quest",
+        "form_id": "[05000822]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Beyond the Grave",
+        "string": "Zza grobu"
+    },
+    {
+        "editor_id": "ccBGSSSE050_Quest",
+        "form_id": "[05000822]",
+        "index": 95,
+        "type": "QUST CNAM",
+        "original": "I've heard stories of bandits being an issue throughout Skyrim. At the dungeon in Whiterun, I read about one such bandit who died in Falkreath. I should visit the cemetery to confirm he's dead.",
+        "string": "Dotarły do mnie pogłoski o problemach z bandytami w całym Skyrim. W lochu na Białej Grani zdarzyło mi się przeczytać o jednym z rozbójników, który zmarł w Falkrecie. Czas odwiedzić cmentarz i potwierdzić, czy faktycznie nie żyje."
+    },
+    {
+        "editor_id": "ccBGSSSE050_Quest",
+        "form_id": "[05000822]",
+        "index": 93,
+        "type": "QUST CNAM",
+        "original": "I've heard stories of bandits being an issue throughout Skyrim. At the dungeon in Whiterun, I read about one such bandit who died in Falkreath. However, upon arriving at the grave site, I found the body of a dead Khajiit. The Khajiit was previously investigating a lead that points to Knifepoint Ridge.",
+        "string": "Dotarły do mnie pogłoski o problemach z bandytami w całym Skyrim. W lochu na Białej Grani zdarzyło mi się przeczytać o jednym z rozbójników, który zmarł w Falkrecie. Jednak na miejscu jego spoczynku znajdowało się jedynie ciało martwego Khajiita. Mężczyzna badał poprzednio sprawę prowadzącą do Grani Sztychu."
+    },
+    {
+        "editor_id": "ccBGSSSE050_Quest",
+        "form_id": "[05000822]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Look for a note in Dragonsreach Dungeon",
+        "string": "Znajdź notatkę w lochach Smoczej Przystani"
+    },
+    {
+        "editor_id": "ccBGSSSE050_Quest",
+        "form_id": "[05000822]",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Read the Khajiit's Note",
+        "string": "Przeczytaj notatkę Khajiita"
+    },
+    {
+        "editor_id": "ccBGSSSE050_Quest",
+        "form_id": "[05000822]",
+        "index": 50,
+        "type": "QUST NNAM",
+        "original": "Retrieve the armor",
+        "string": "Zabierz pancerz"
+    },
+    {
+        "editor_id": "ccBGSSSE050_Quest",
+        "form_id": "[05000822]",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "I've heard stories of bandits being an issue throughout Skyrim. At the dungeon in Whiterun, I read about one such bandit who died in Falkreath. However, upon arriving at the grave site, I found the body of a dead Khajiit. The Khajiit was previously investigating a lead that points to Knifepoint Ridge. After traveling to the bandit camp, I was attacked by a warrior in Daedric Plate armor.",
+        "string": "Dotarły do mnie pogłoski o problemach z bandytami w całym Skyrim. W lochu na Białej Grani zdarzyło mi się przeczytać o jednym z rozbójników, który zmarł w Falkrecie. Jednak na miejscu jego spoczynku znajdowało się jedynie ciało martwego Khajiita. Mężczyzna badał poprzednio sprawę prowadzącą do Grani Sztychu. Po przybyciu do obozowiska bandytów zostałem zaatakowany przez wojownika w daedrycznej zbroi płytowej."
+    },
+    {
+        "editor_id": "ccBGSSSE050_Quest",
+        "form_id": "[05000822]",
+        "index": 88,
+        "type": "QUST CNAM",
+        "original": "I've heard stories of bandits being an issue throughout Skyrim. At the dungeon in Whiterun, I read about one such bandit who died in Falkreath. However, upon arriving at the grave site, I found the body of a dead Khajiit.",
+        "string": "Dotarły do mnie pogłoski o problemach z bandytami w całym Skyrim. W lochu na Białej Grani zdarzyło mi się przeczytać o jednym z rozbójników, który zmarł w Falkrecie. Jednak na miejscu jego spoczynku znajdowało się jedynie ciało martwego Khajiita."
+    },
+    {
+        "editor_id": "ccBGSSSE050_Quest",
+        "form_id": "[05000822]",
+        "index": 76,
+        "type": "QUST CNAM",
+        "original": "I've heard stories of bandits being an issue throughout Skyrim. Perhaps if I visit the Dragonsreach Dungeon in Whiterun, I might find some information on their whereabouts.",
+        "string": "Dotarły do mnie pogłoski o problemach z bandytami w całym Skyrim. Może warto odwiedzić Lochy Smoczej Przystani na Białej Grani i zdobyć o nich jakieś informacje."
+    },
+    {
+        "editor_id": "FalkreathLocation",
+        "form_id": "[00018A49]",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "Falkreath",
+        "string": "Falkret"
+    }
+]

@@ -1,0 +1,3010 @@
+[
+    {
+        "editor_id": "ccASVSSE001_AbVampireDamageHealth",
+        "form_id": "[05131022]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Damage Health",
+        "string": "Урон здоровью"
+    },
+    {
+        "editor_id": "ccASVSSE001_AlchDamageSpeed",
+        "form_id": "[0514F63A]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "A highly flammable substance used for enchanting weapons.",
+        "string": "Легковоспламеняющаяся субстанция, применяемая для зачарования оружия."
+    },
+    {
+        "editor_id": "ccASVSSE001_TrueflameSELF",
+        "form_id": "[050FE5D4]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Trueflame SELF",
+        "string": "Trueflame SELF"
+    },
+    {
+        "editor_id": "ccASVSSE001_PuzzleEffect",
+        "form_id": "[05000CA4]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Puzzle Effect",
+        "string": "Эффект головоломки"
+    },
+    {
+        "editor_id": "ccASVSSE001_FortifyHeavyArmorBlessingCustom",
+        "form_id": "[05205B52]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fortify Heavy Armor",
+        "string": "Повышение навыка: тяжелая броня"
+    },
+    {
+        "editor_id": "ccASVSSE001_FactonEffect",
+        "form_id": "[05000824]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Faction Effect",
+        "string": "Faction Effect"
+    },
+    {
+        "editor_id": "ccASVSSE001_EnchTrueflameMGEFX",
+        "form_id": "[050F94CF]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Burns the target for <mag> points. Targets on fire take extra damage.",
+        "string": "Наносит цели <mag> ед. урона огнем. Подожженные цели получают дополнительный урон."
+    },
+    {
+        "editor_id": "ccASVSSE001_AlchDamageSpeed",
+        "form_id": "[0514F63A]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Slow",
+        "string": "Замедление"
+    },
+    {
+        "editor_id": "ccASVSSE001_EnchTrueflameMGEFX",
+        "form_id": "[050F94CF]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fire Damage",
+        "string": "Урон огнем"
+    },
+    {
+        "editor_id": "ccASVSSE001_HopesfireShockDamageMGEF",
+        "form_id": "[051036D7]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Shock Damage",
+        "string": "Урон электричеством"
+    },
+    {
+        "editor_id": "ccASVSSE001_HopesfireShockDamageMGEF",
+        "form_id": "[051036D7]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Target takes <mag> points of shock damage, and half as much Magicka damage.",
+        "string": "Наносит цели <mag> ед. урона электричеством и вдвое меньший урон магии."
+    },
+    {
+        "editor_id": "ccASVSSE001_VampireAbDamageHealRate",
+        "form_id": "[0517CF77]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Damage Health Regeneration",
+        "string": "Урон восстановлению здоровья"
+    },
+    {
+        "editor_id": "ccASVSSE001_FortifyHeavyArmorBlessingCustom",
+        "form_id": "[05205B52]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Increases Heavy Armor skill by <mag> points.",
+        "string": "Навык ношения тяжелой брони увеличивается на <mag> ед."
+    },
+    {
+        "editor_id": "ccASVSSE001_HopesfireSELF",
+        "form_id": "[051036DB]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Hopesfire SELF",
+        "string": "Hopesfire SELF"
+    },
+    {
+        "editor_id": "ccASVSSE001_SunDamage",
+        "form_id": "[0513101F]",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Sun Damage",
+        "string": "Солнечный удар"
+    },
+    {
+        "editor_id": "ccASVSSE001_HopesfireEnchantment",
+        "form_id": "[051036D5]",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Shock Damage",
+        "string": "Урон электричеством"
+    },
+    {
+        "editor_id": "ccASVSSE001_CleaverStFelmsEnch",
+        "form_id": "[05057388]",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Not User Facing",
+        "string": "Not User Facing"
+    },
+    {
+        "editor_id": "ccASVSSE001_TrueflameEnchantment",
+        "form_id": "[050F94CD]",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "TrueflameFX",
+        "string": "TrueflameFX"
+    },
+    {
+        "editor_id": "ccASVSSE001_AbPuzzleSolve",
+        "form_id": "[05000CA2]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Faction Ability",
+        "string": "Faction Ability"
+    },
+    {
+        "editor_id": "ccASVSSE001_AbCultFaction",
+        "form_id": "[05000825]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Faction Ability",
+        "string": "Faction Ability"
+    },
+    {
+        "editor_id": "ccASVSSE001_SothaSpell",
+        "form_id": "[051D81E4]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Blessing of Sotha Sil",
+        "string": "Благословение Сота Сила"
+    },
+    {
+        "editor_id": "ccASVSSE001_AlmalexiaSpell",
+        "form_id": "[05000826]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Blessing of Almalexia",
+        "string": "Благословение Алмалексии"
+    },
+    {
+        "editor_id": "ccASVSSE001_HopesfireAbility",
+        "form_id": "[051036D9]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Hopesfire Ability",
+        "string": "Способность Огня Надежды"
+    },
+    {
+        "editor_id": "ccASVSSE001_VivecSpell",
+        "form_id": "[051D81E6]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Blessing of Vivec",
+        "string": "Благословение Вивека"
+    },
+    {
+        "editor_id": "ccASVSSE001_TrueflameAbility",
+        "form_id": "[050FE5D2]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Trueflame Ability",
+        "string": "Способность Истинного Пламени"
+    },
+    {
+        "editor_id": "ccASVSSE001_LightofDayVampireWound",
+        "form_id": "[05131023]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Weakness to Light of Day",
+        "string": "Уязвимость к дневному свету"
+    },
+    {
+        "editor_id": "ccASVSSE001_SmelterActivator",
+        "form_id": "[05000827]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Add Pyroil Tar",
+        "string": "Добавить огненную смолу"
+    },
+    {
+        "editor_id": "ccASVSSE001_TrueflameRETRIEVE",
+        "form_id": "[05099103]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Pick Up",
+        "string": "Подобрать:"
+    },
+    {
+        "editor_id": "ccASVSSE001_InvisibleActivator",
+        "form_id": "[05084CE4]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Sword Slot",
+        "string": "Ячейка меча"
+    },
+    {
+        "editor_id": "ccASVSSE001_VivecShrinePillar",
+        "form_id": "[050EF278]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Shrine of Vivec",
+        "string": "Святилище Вивека"
+    },
+    {
+        "editor_id": "ccASVSSE001_ForgeGemActivator",
+        "form_id": "[050990FB]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place Gem",
+        "string": "Поместить кристалл"
+    },
+    {
+        "editor_id": "ccASVSSE001_RuinsPuzzlePillar01",
+        "form_id": "[05000828]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Pillar",
+        "string": "Колонна"
+    },
+    {
+        "editor_id": "ccASVSSE001_AlmalexiaShrine",
+        "form_id": "[05000829]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Shrine of Almalexia",
+        "string": "Святилище Алмалексии"
+    },
+    {
+        "editor_id": "ccASVSSE001_TrueflameRETRIEVE",
+        "form_id": "[05099103]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Trueflame",
+        "string": "Истинное Пламя"
+    },
+    {
+        "editor_id": "ccASVSSE001_SothaShrinePillar",
+        "form_id": "[050EF279]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Shrine of Sotha Sil",
+        "string": "Святилище Сота Сила"
+    },
+    {
+        "editor_id": "ccASVSSE001_GenPullChain01",
+        "form_id": "[0500082A]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Pull Chain",
+        "string": "Потянуть за цепь"
+    },
+    {
+        "editor_id": "ccASVSSE001_ForgeGemActivator",
+        "form_id": "[050990FB]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Forge Conduit",
+        "string": "Проводник кузницы"
+    },
+    {
+        "editor_id": "ccASVSSE001_SmelterActivator",
+        "form_id": "[05000827]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Dwarven Forge",
+        "string": "Двемерская кузница"
+    },
+    {
+        "editor_id": "ccASVSSE001_AlmalexiaShrinePillar",
+        "form_id": "[050EF275]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Shrine of Almalexia",
+        "string": "Святилище Алмалексии"
+    },
+    {
+        "editor_id": "ccASVSSE001_ArmorDagothUrMask",
+        "form_id": "[05000821]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Mask of Dagoth Ur",
+        "string": "Маска Дагота Ура"
+    },
+    {
+        "editor_id": "ccASVSSE001_ArmorHighOrdinatorHelmetENCHANTED",
+        "form_id": "[05000E6E]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Her Hand Helmet",
+        "string": "Шлем Ее Руки"
+    },
+    {
+        "editor_id": "ccASVSSE001_ClothesCommonRobes04_Kenro",
+        "form_id": "[0515E948]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Kenro's Robes",
+        "string": "Одежда Кенро"
+    },
+    {
+        "editor_id": "ccASVSSE001_ClothesExtravagantRobes01r",
+        "form_id": "[05145436]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Extravagant Robes",
+        "string": "Экстравагантная одежда"
+    },
+    {
+        "editor_id": "ccASVSSE001_ClothesCommonRobes03",
+        "form_id": "[0505C48B]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Common Robes",
+        "string": "Обычная одежда"
+    },
+    {
+        "editor_id": "ccASVSSE001_OrdinatorShield",
+        "form_id": "[0506668E]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ordinator Shield",
+        "string": "Щит ординатора"
+    },
+    {
+        "editor_id": "ccASVSSE001_ArmorOrdinatorBoots",
+        "form_id": "[05000817]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Indoril Boots",
+        "string": "Индорильские сапоги"
+    },
+    {
+        "editor_id": "ccASVSSE001_ArmorSothaSilMask",
+        "form_id": "[05000820]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Mask of Sotha Sil",
+        "string": "Маска Сота Сила"
+    },
+    {
+        "editor_id": "ccASVSSE001_ArmorHighOrdinatorBootsENCHANTED",
+        "form_id": "[05000CE4]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Her Hand Boots",
+        "string": "Сапоги Ее Руки"
+    },
+    {
+        "editor_id": "ccASVSSE001_ArmorVivecMask",
+        "form_id": "[05000822]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Mask of Vivec",
+        "string": "Маска Вивека"
+    },
+    {
+        "editor_id": "ccASVSSE001_DLC2TemplePriestRobes",
+        "form_id": "[0500082B]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Tribunal Priest Robes",
+        "string": "Одеяние жрицы Трибунала"
+    },
+    {
+        "editor_id": "ccASVSSE001_ArmorAlmalexiaMask",
+        "form_id": "[0500081F]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Mask of Almalexia",
+        "string": "Маска Алмалексии"
+    },
+    {
+        "editor_id": "ccASVSSE001_ArmorRedoranWatcherHelmet",
+        "form_id": "[0504D170]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Redoran Watchman's Helmet",
+        "string": "Шлем редоранского стражника"
+    },
+    {
+        "editor_id": "ccASVSSE001_ArmorOrdinatorHelmet",
+        "form_id": "[0500081A]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Indoril Helmet",
+        "string": "Индорильский шлем"
+    },
+    {
+        "editor_id": "ccASVSSE001_ArmorOrdinatorCuirass",
+        "form_id": "[05000818]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Indoril Armor",
+        "string": "Индорильская броня"
+    },
+    {
+        "editor_id": "ccASVSSE001_ArmorOrdinatorHelmetKenro",
+        "form_id": "[0515E949]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Kenro's Helmet",
+        "string": "Шлем Кенро"
+    },
+    {
+        "editor_id": "ccASVSSE001_RobeofLICH",
+        "form_id": "[050C1929]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Robe of the Lich",
+        "string": "Мантия лича"
+    },
+    {
+        "editor_id": "ccASVSSE001_ArmorHighOrdinatorCuirassENCHANTED",
+        "form_id": "[05000B80]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Her Hand Armor",
+        "string": "Броня Ее Руки"
+    },
+    {
+        "editor_id": "ccASVSSE001_ClothesCommonRobes02",
+        "form_id": "[05145430]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Common Robes",
+        "string": "Обычная одежда"
+    },
+    {
+        "editor_id": "ccASVSSE001_ArmorHighOrdinatorCuirass",
+        "form_id": "[0500081C]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Her Hand Armor",
+        "string": "Броня Ее Руки"
+    },
+    {
+        "editor_id": "ccASVSSE001_ClothesExtravagantRobes01b",
+        "form_id": "[05145435]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Extravagant Robes",
+        "string": "Экстравагантная одежда"
+    },
+    {
+        "editor_id": "ccASVSSE001_ClothesCommonRobes05",
+        "form_id": "[050DAE36]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Common Robes",
+        "string": "Обычная одежда"
+    },
+    {
+        "editor_id": "ccASVSSE001_ArmorOrdinatorGloves",
+        "form_id": "[05000819]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Indoril Gauntlets",
+        "string": "Индорильские перчатки"
+    },
+    {
+        "editor_id": "ccASVSSE001_ArmorHighOrdinatorBoots",
+        "form_id": "[0500081B]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Her Hand Boots",
+        "string": "Сапоги Ее Руки"
+    },
+    {
+        "editor_id": "ccASVSSE001_ArmorHighOrdinatorHelmet",
+        "form_id": "[0500081E]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Her Hand Helmet",
+        "string": "Шлем Ее Руки"
+    },
+    {
+        "editor_id": "ccASVSSE001_ClothesExtravagantRobes02",
+        "form_id": "[05145437]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Extravagant Robes",
+        "string": "Экстравагантная одежда"
+    },
+    {
+        "editor_id": "ccASVSSE001_ArmorHighOrdinatorGloves",
+        "form_id": "[0500081D]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Her Hand Gauntlets",
+        "string": "Перчатки Ее Руки"
+    },
+    {
+        "editor_id": "ccASVSSE001_ArmorHighOrdinatorGlovesENCHANTED",
+        "form_id": "[05000A4B]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Her Hand Gauntlets",
+        "string": "Перчатки Ее Руки"
+    },
+    {
+        "editor_id": "ccASVSSE001_NoteMaskDagothUr02",
+        "form_id": "[050BC825]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nI was told that without the masks, the gate would not open, but the priests underestimate my master's will.\r\n\r\nIt was Dagoth Ur who opened the gate, and beckoned me forward. And when I wear his face, I speak his truth, and from his words I spawn the cure that will spread across the world.\r\n\r\nMy temple brother, Arthamis, was the first to receive its blessing. His once melancholy face has been carved into the most delightful shape, and his mouth stitched into a comely smile. He must be quite pleased with the changes, as I have heard no complaints. I feel now that he is truly happy. \r\n\r\nYou may have already met him - slain him with Her Hand. Perhaps you have met all my master's little pets as they descended on Her temple. I knew this would happen. For there must come a time when the Tribunal's champion will challenge my master, as the Nerevarine once did.\r\n\r\nThe Tribunal has three heads, and you wear them all. And so, by opening the way, you are worthy of dying by my master's hand.\r\n\r\nCome to the graveyard by Tel Mithryn. My master's creatures will dine on you there.</font>",
+        "string": "<font face='$HandwrittenFont'>\r\nМне говорили, что без масок ворота не откроются, но жрецы недооценивают волю моего хозяина.\r\n\r\nДагот Ур открыл ворота и позвал меня к себе. И когда я надеваю его лицо, то изрекаю его истину. Из его слов я извлекаю лекарство, которое разойдется по всему миру.\r\n\r\nМой брат по храму Артемис получил его благословение первым. Его некогда унылое лицо приобрело замечательную форму, а рот навеки изогнулся в приятной улыбке. Думаю, он доволен этими переменами – я не слышал от него ни единой жалобы. Я чувствую, что теперь он по-настоящему счастлив. \r\n\r\nВозможно, вам уже довелось встретиться; возможно, он уже пал от Ее Руки. Возможно, питомцы моего хозяина, заполонившие Ее храм, тоже встречались тебе. Я знал, что это произойдет. Ведь должно настать время, когда герой Трибунала бросит моему хозяину вызов, как сделал когда-то Нереварин.\r\n\r\nУ Трибунала три головы, и все они будут на твоих плечах. Открыв этот путь, ты заслуживаешь смерти от руки моего хозяина.\r\n\r\nПриходи на кладбище у Тель-Митрина. Там создания моего хозяина отведают твоей плоти.</font>"
+    },
+    {
+        "editor_id": "ccASVSSE001_HereticB",
+        "form_id": "[0500082E]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Heretic Dossier: Blacksmith's Confessional",
+        "string": "Досье еретика: исповедь кузнеца"
+    },
+    {
+        "editor_id": "ccASVSSE001_Note02ElderA",
+        "form_id": "[05000FEE]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Letter from Matriarch Drevlan",
+        "string": "Письмо Матриарха Древлен"
+    },
+    {
+        "editor_id": "ccASVSSE001_NoteMaskDagothUr02",
+        "form_id": "[050BC825]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Erden Relvel's Note",
+        "string": "Записка Эрдена Релвела"
+    },
+    {
+        "editor_id": "ccASVSSE001_IndobarJournal",
+        "form_id": "[05052271]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Hand Indobar's Journal",
+        "string": "Дневник Руки Индобара"
+    },
+    {
+        "editor_id": "ccASVSSE001_Note02ElderB",
+        "form_id": "[05000E6F]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Letter from Matriarch Drevlan",
+        "string": "Письмо Матриарха Древлен"
+    },
+    {
+        "editor_id": "ccASVSSE001_GuardNote",
+        "form_id": "[05000F37]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Redoran Guard's Note",
+        "string": "Записка редоранского стражника"
+    },
+    {
+        "editor_id": "ccASVSSE001_RRPriestJournal",
+        "form_id": "[051EC611]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nThe audacity of these Tribunal heretics knows no limit. The downright temerity of their priests, to think they can spread their heresy in plain view of the Reclamation, is an affront to the senses.\r\n\r\nYet this arrogance shall be their downfall. I will gather the guard and cleanse this temple in the name of the true gods.\r\n</font>",
+        "string": "<font face='$HandwrittenFont'>\r\nНаглость еретиков, поклоняющихся Трибуналу, не знает пределов! Их жрецы самонадеянно считают, что могут распространять ересь под носом у Истребований! Это откровенное оскорбление!\r\n\r\nНо самонадеянность и станет причиной их падения. Я соберу стражу и во имя истинных богов очищу этот храм.\r\n</font>"
+    },
+    {
+        "editor_id": "ccASVSSE001_TernNote",
+        "form_id": "[05000F1E]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Note on the Target",
+        "string": "Записка о цели"
+    },
+    {
+        "editor_id": "ccASVSSE001_NoteMaskDagothUr01",
+        "form_id": "[05000E32]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Priest Arthamis' Note",
+        "string": "Записка жреца Артемиса"
+    },
+    {
+        "editor_id": "ccASVSSE001_SculptorJournal",
+        "form_id": "[050EF29B]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Sculptor Visthar's Journal",
+        "string": "Дневник скульптора Вистара"
+    },
+    {
+        "editor_id": "ccASVSSE001_NoteDAGOTHQUEST",
+        "form_id": "[050BC823]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nRumors have long stalked the temple halls of the return of The Sharmat, spreader of Corpus, the corrupter of hearts, the architect of the Akulakhan. I speak, of course, of the blighted one, Dagoth Ur.\r\n\r\nWe now know this word has been spread by a traitorous priest who once served Her faithfully. The Diviner, necromancer, and my former friend, Erden Relvel. \r\n\r\nIt is his creations that accosts Her temple, but I know not the source of his power. My fear is the truth may be found in the armory. \r\n\r\nBefore we began building this temple, my predecessor gave me a gift. Or rather, a responsibility. A box. \r\n\r\nThe box was to be placed in the armory, but never opened. In fact, his voice stumbled at the mere mention of it, and his hands gripped the edges as if to drop it would shatter the world. As such, I heeded his warning when he begged me never to look inside. To this day, I do not know how to open the rear gate.\r\n\r\nYet the restoration of this temple has required many hands, and not all of them Hers. It's possible someone has found a way inside. \r\n\r\nTake the armory key I have given you and investigate the area. Only with the full power of the Tribunal, and our Goddess' will, can evil be vanquished. </font>\r\n\r\n<p align='center'><font face='$DaedricFont' size=\"64\">ASV</font></p>\r\n",
+        "string": "<font face='$HandwrittenFont'>\r\nПо храму давно уже разносятся слухи о возвращении Шармата, распространителя корпруса, осквернителя душ, создателя Акулахана. Я, конечно, имею в виду пагубного Дагота Ура.\r\n\r\nТеперь мы знаем, что слухи о нем распускал жрец-предатель, некогда верно служивший Ей. Прорицатель, некромант и мой бывший друг Эрден Релвел. \r\n\r\nЭто его выкормыши осаждают Ее храм, но откуда у него такая сила – я не знаю. Боюсь, что ответ спрятан в оружейной. \r\n\r\nДо того, как мы начали строить этот храм, мой предшественник одарил меня подарком. Хотя вернее будет сказать – ответственностью. Это была коробка. \r\n\r\nЕе надлежало поставить в оружейной и никогда не открывать. Вообще-то от одного упоминания о ней его голос дрожал, а пальцы стискивали коробку так, словно урони он ее – и мир тоже рухнет. И потому я прислушался к его словам и никогда не заглядывал внутрь. Я до сего дня не знаю, как открываются задние ворота.\r\n\r\nНо для постройки храма понадобилось много рук, и не только Ее Рук. Может, кто-то и сумел пробраться внутрь. \r\n\r\nВозьми ключ от оружейной и обследуй ее. Зло удастся уничтожить лишь всеми силами Трибунала и волей нашей Богини.\r\n\r\n<p align='center'><font face='$DaedricFont' size=\"64\">АСВ</font></p>\r\n"
+    },
+    {
+        "editor_id": "ccASVSSE001_Note02ElderB",
+        "form_id": "[05000E6F]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nWord of the Goddess' return has spread throughout Tamriel. It was wise of you to enlist the help of the shopkeepers, who deal with many patrons in need of spiritual guidance. As a result of these efforts, new soldiers and priests have pledged their lives in service. Take this gold as reward for your efforts.</font>\r\n\r\n<p align='center'><font face='$DaedricFont' size=\"64\">ASV</font></p>",
+        "string": "<font face='$HandwrittenFont'>\r\nПо Тамриэлю разлетелась весть о возвращении Богини. С твоей стороны было разумно заручиться поддержкой торговцев, чьи посетители явно нуждались в духовном наставничестве. Благодаря этому Богине присягнуло много новых солдат и жрецов. Это золото – твоя награда за труды.</font>\r\n\r\n<p align='center'><font face='$DaedricFont' size=\"64\">АСВ</font></p>"
+    },
+    {
+        "editor_id": "ccASVSSE001_DrurethJournal",
+        "form_id": "[051D81F6]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Priest Drureth's Journal",
+        "string": "Дневник жреца Друрета"
+    },
+    {
+        "editor_id": "ccASVSSE001_Note01ElderB",
+        "form_id": "[05000FEF]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Masks of the Tribunal",
+        "string": "Маски Трибунала"
+    },
+    {
+        "editor_id": "ccASVSSE001_CurateNote",
+        "form_id": "[05000EE5]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Curate Melita's Plea",
+        "string": "Мольба викария Мелиты"
+    },
+    {
+        "editor_id": "ccASVSSE001_SculptorJournal",
+        "form_id": "[050EF29B]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nThe statue was my masterpiece, my one true love. Some say she is too large, too grand, but I would have made Her a thousand feet tall if I could. For my love is a titan, and we are but useless worms, groveling at Her feet. \r\n\r\nHowever, to sculpt a goddess came with no shortage of anxiety. The pressure I felt to chisel every line, hone every curve, and do so with exacting precision was almost too much to bear. But the end result was one I take immense pride in.\r\n\r\nThese days, the anxious voices in my head are no more. Instead, they speak in a patois of ease and routine. I've fallen into a simple routine, making shrines with basic carvings in tribute to the three.\r\n\r\n</font><font face='$DaedricFont' size=\"64\">A</font></p>, for Almalexia.\r\n\r\n</font><font face='$DaedricFont' size=\"64\">S</font></p>, for Sotha Sil.\r\n\r\n</font><font face='$DaedricFont' size=\"64\">V</font></p>, for Vivec.\r\n[pagebreak]\r\n<font face='$HandwrittenFont'>Yet it is risk that makes a sculptor an artist. It is daring that turns the ordinary into the sublime.\r\n\r\nI dared to sculpt a Goddess once. As I chisel away at these blocks of stone, doing the same tired work, I wonder, is it too late to be that bold again?</font>",
+        "string": "<font face='$HandwrittenFont'>\r\nЭта статуя была вершиной моего творения, моей истинной любовью. Кто-то считает, что она слишком велика и слишком роскошна, но если бы я мог, я бы сделал Ее высотой в тысячу футов. Моя любовь – гигант, а мы все – лишь бесполезные черви под Ее ногами.\r\n\r\nНо изваять богиню – задача, посильная не каждому. Выточить каждую линию, сгладить каждый изгиб и соблюсти точность пропорций до мельчайшей детали было так трудно, что я постоянно чувствовал страх. Но результат наполнил мое сердце непередаваемой гордостью.\r\n\r\nТеперь голоса в моей голове больше не звенят беспокойством. Теперь они говорят на языке стабильности и легкости бытия. Я занимаюсь простым делом – украшаю храмы простой резьбой во славу Троих.\r\n\r\n</font><font face='$DaedricFont' size=\"64\">\"А\"</font></p> обозначает Алмалексию.\r\n\r\n</font><font face='$DaedricFont' size=\"64\">\"С\"</font></p> – Сота Сила.\r\n\r\n</font><font face='$DaedricFont' size=\"64\">\"В\"</font></p> – Вивека.\r\n[pagebreak]\r\n<font face='$HandwrittenFont'>Но лишь риск делает скульптора творцом. Лишь решительность превращает посредственное в экстраординарное.\r\n\r\nКогда-то я решился изваять Богиню. Теперь, вонзая долото в камень, делая рутинную работу день за днем, я начинаю задаваться вопросом: неужели я уже не могу быть таким отчаянным?</font>"
+    },
+    {
+        "editor_id": "ccASVSSE001_NoteDAGOTHQUEST",
+        "form_id": "[050BC823]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Matriarch Drevlan's Note",
+        "string": "Записка Матриарха Древлен"
+    },
+    {
+        "editor_id": "ccASVSSE001_PropagandaLetterA",
+        "form_id": "[05000C2C]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nYou have lost the temple, but you are not lost. The right place exists in the wrong time. \r\n\r\nKnow that when the great egg Baar Dau cracked open, from its rotten yolk spilled the Dissident Priests and heretics, full of lies and falsehoods that give shape to Othreloth and his Reclamation. But in reality the bile spewed by the Lie Rock cannot fool a Minister of Truth for long.\r\n\r\nThe Tribunal will rise once more, and the Grand Inquisitors will judge all from the beginning. For entry to our temple is the ending of words, ALMSIVI.</font>",
+        "string": "<font face='$HandwrittenFont'>\r\nДаже лишившись храма, ты не лишаешься пути. Нужное место существует не в нужном времени. \r\n\r\nУзнай же: когда великое яйцо Баар-Дау треснуло, из его гнилого желтка появились жрецы-отступники и еретики, полные лжи и обмана. Это они создали Отрелота и его Истребования. Но желчь, исторгнутая Лежачим Камнем, не может долго обманывать Министра Правды.\r\n\r\nТрибунал вновь обретет силу, и Великие Инквизиторы вынесут приговор каждому, с самого начала. Вход в наш храм есть АЛМСИВИ — конец этих слов.</font>"
+    },
+    {
+        "editor_id": "ccASVSSE001_Note01ElderA",
+        "form_id": "[0500082D]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nThe Goddess commands you to recover the artifacts of her fellow God-Kings. We have received word that the Mask of Vivec is being transported from Raven Rock to an unknown ship at the dock. We don't know the destination, only that to ensure secrecy, multiple couriers are being used to hide the identity of the mask bearer.\r\n\r\nHowever, our contact at the docks says the courier is a member of the guard who patrols the Bulwark, and he has plans of his own for the mask. He's arranged a meeting with a buyer after midnight, at an unknown location. \r\n\r\nHis greed angers the Goddess. Dispose of them both and return the artifact to her rightful hands.\r\n\r\nIn addition, the Goddess' temple is in need of new servants, both to restore this temple and to provide valuable services. Speak to Priest Drureth. He will hand you a letter to be delivered to the banished priestess, Aphia Velothi in Raven Rock. She is a friend to the Tribunal, and will translate it so that it can be passed to the common folk.\r\n\r\nWhen you meet her, be sure to also inquire about the whereabouts of our apothecary, Curate Melita. She had been in search of the Mask of Sotha Sil.\r\n\r\nSucceed and you will gain access to the Goddess' armory. Fail and you will incur her wrath. The law is as the Goddess commands.</font>\r\n\r\n<p align='center'><font face='$DaedricFont' size=\"64\">ASV</font></p>\r\n",
+        "string": "<font face='$HandwrittenFont'>\r\nБогиня повелевает тебе добыть артефакты других богов-королей. Мы узнали, что маску Вивека отправили из Вороньей Скалы на неизвестный нам корабль в порту. Куда он поплывет, мы не знаем, но чтобы обеспечить тайну перевозки, отправитель разослал несколько курьеров. У которого из них маска – неизвестно.\r\n\r\nОднако наш осведомитель в порту сообщил, что гонец – это стражник, патрулирующий бастион, и у него на маску свои планы. Он назначил встречу с покупателем после полуночи в неизвестном нам месте. \r\n\r\nЕго жадность разгневала Богиню. Избавься от обоих и верни артефакт Ей.\r\n\r\nКроме того, в храме Богини нужны новые слуги, как для работы над восстановлением, так и для оказания ценных услуг. Поговори со жрецом Друретом. Он даст тебе письмо, которое нужно будет доставить бывшей жрице Афии Велоти в Вороньей Скале. Она верна Трибуналу и сумеет перевести письмо на язык, понятный простым людям.\r\n\r\nВстретившись с ней, узнай также о местонахождении нашего аптекаря, викария Мелиты. Она отправлялась на поиски маски Сота Сила.\r\n\r\nПреуспев в своем задании, ты получишь возможность войти в оружейную Богини. Потерпев неудачу, ты навлечешь на себя Ее гнев. Повеление Богини – закон.</font>\r\n\r\n<p align='center'><font face='$DaedricFont' size=\"64\">АСВ</font></p>\r\n"
+    },
+    {
+        "editor_id": "ccASVSSE001_ElderJournal",
+        "form_id": "[05000832]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>When I first entered the great chamber, I was there again, in the High Chapel, nestled in her glow. \r\n\r\nGreat pillars surrounded the stone where the Goddess Almalexia once stood. As if it were washed in the fire, Mournhold had shed its skin to reveal a temple of rock and bone.\r\n\r\nI knew then that this stone was the heart of our Goddess. And through faith, love, and sweat, we have slowly restored Her flesh. \r\n\r\nNow that she is almost complete, my thoughts turn to my old friend, Erden Relvel. He was the Diviner whose scrying brought us to this holy place. Without him, none of this would be possible. Yet time and toil changed him, to the point I questioned his devotion. Wherever he is, I hope he has regained his love for Her.\r\n\r\nRegardless, our work does not end there. With Her Hands to guide me, we will rid this world of her dissidents. We will reunite the fires of hope and truth under Her banner and theirs, and let the light of ALMSIVI shine on servants and apostates alike.</font>",
+        "string": "<font face='$HandwrittenFont'>Впервые войдя в главный зал, я будто снова очутилась в Высокой часовне и окунулась в благодать. \r\n\r\nОгромные колонны поддерживали камень, на котором когда-то стояла Богиня Алмалексия. Морнхолд, точно омывшись в пламени, скинул кожу, обнажив храм из кости и камня.\r\n\r\nИ тогда я поняла, что этот камень – сердце нашей Богини. Вложив старание, веру и любовь в свое дело, мы постепенно сумели восстановить Ее плоть. \r\n\r\nТеперь храм почти завершен. И мои мысли все чаще обращаются к моему старому другу Эрдену Релвелу. Именно его пророчество привело нас в это святое место. Без него ничего этого не было бы. Но время и невзгоды изменили его – настолько, что я усомнилась в его преданности. Где бы он сейчас ни был, надеюсь, он вернулся к вере в Нее.\r\n\r\nНо наша работа на этом не заканчивается. Ее Руки помогут мне избавить мир от ее врагов. Под их знаменами, как и под Ее знаменем, мы снова разожжем пламя веры и истины, и свет АЛМСИВИ будет сиять как для Ее слуг, так и для отступников от Нее.</font>"
+    },
+    {
+        "editor_id": "ccASVSSE001_TernNote",
+        "form_id": "[05000F1E]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nMy sources tell me the courier in charge of carrying the mask is a Redoran Guard. \r\n\r\nIt seems, however, our guard has plans of his own for the mask. He's arranged a meeting with a buyer after midnight, in the cellar of the Old Attius Farm.\r\n\r\nHis greed angers the Goddess. Dispose of them both and return the artifact to her rightful hands.</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nИнформаторы сообщили мне, что переносить маску будет редоранский стражник. \r\n\r\nОднако, похоже, у него на эту маску свои планы. Он назначил встречу с покупателем после полуночи в подвале старой фермы Аттия.\r\n\r\nЕго жадность разгневала Богиню. Избавься от обоих и верни артефакт Ей.</font>"
+    },
+    {
+        "editor_id": "ccASVSSE001_PropagandaLetterB",
+        "form_id": "[05000E05]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nPriestess Velothi,\r\n\r\nHere is the transcript of the letter we found in the archives. Your expertise in this matter is required, as is your discretion. </font>\r\n\r\n<font face='$DaedricFont'>\r\nYou have lost the temple<font face='$HandwrittenFont'>, </font> but you are not lost</font><font face='$HandwrittenFont'>. </font><font face='$DaedricFont'>The right place exists in the wrong time</font><font face='$HandwrittenFont'>. </font><font face='$DaedricFont'>\r\n\r\nKnow that when the great egg Baar Dau cracked open</font><font face='$HandwrittenFont'>, </font><font face='$DaedricFont'>from its rotten yolk spilled the Dissident Priests and heretics</font>, </font><font face='$DaedricFont'>full of lies and falsehoods that give shape to Othreloth and his Reclamation</font><font face='$HandwrittenFont'>. </font><font face='$DaedricFont'>But in reality the bile spewed by the Lie Rock cannot fool a Minister of Truth for long</font><font face='$HandwrittenFont'>.</font>\r\n\r\n<font face='$DaedricFont'>The Tribunal will rise once more<font face='$HandwrittenFont'>, </font><font face='$DaedricFont'>and the Grand Inquisitors will judge all from the beginning<font face='$HandwrittenFont'>.</font><font face='$DaedricFont'> For entry to our temple is the ending of words<font face='$HandwrittenFont'>, </font>ALMSIVI</font><font face='$HandwrittenFont'>.</font>",
+        "string": "<font face='$HandwrittenFont'>\r\nЖрица Велоти,\r\n\r\nВот расшифровка письма, которое мы нашли в архивах. Требуются ваши познания в этой области, но сохраняйте дело в тайне.</font>\r\n\r\n<font face='$DaedricFont'>\r\nДаже лишившись храма<font face='$HandwrittenFont'>, </font>ты не лишаешься пути</font><font face='$HandwrittenFont'>. </font><font face='$DaedricFont'>Нужное место существует не в нужном времени</font><font face='$HandwrittenFont'>.</font><font face='$DaedricFont'>\r\n\r\nУзнай же: когда великое яйцо Баар-Дау треснуло</font><font face='$HandwrittenFont'>, </font><font face='$DaedricFont'>из его гнилого желтка появились жрецы-отступники и еретики</font>, </font><font face='$DaedricFont'>полные лжи и обмана. Это они создали Отрелота и его Истребования</font><font face='$HandwrittenFont'>. </font><font face='$DaedricFont'>Но желчь, исторгнутая Лежачим Камнем, не может долго обманывать Министра Правды</font><font face='$HandwrittenFont'>.</font>\r\n\r\n<font face='$DaedricFont'>Трибунал вновь обретет силу<font face='$HandwrittenFont'>, </font><font face='$DaedricFont'>и Великие Инквизиторы вынесут приговор каждому, с самого начала<font face='$HandwrittenFont'>.</font><font face='$DaedricFont'> Вход в наш храм есть АЛМСИВИ<font face='$HandwrittenFont'> — </font>конец этих слов</font><font face='$HandwrittenFont'>.</font>"
+    },
+    {
+        "editor_id": "ccASVSSE001_HereticA",
+        "form_id": "[0500082C]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Hand Kenro's Note",
+        "string": "Записка Руки Кенро"
+    },
+    {
+        "editor_id": "ccASVSSE001_VesparthJournal",
+        "form_id": "[05052282]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Vesparth's Journal",
+        "string": "Дневник Веспарта"
+    },
+    {
+        "editor_id": "ccASVSSE001_Note02ElderC",
+        "form_id": "[05000EA2]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Letter from Matriarch Drevlan",
+        "string": "Письмо Матриарха Древлен"
+    },
+    {
+        "editor_id": "ccASVSSE001_DrurethJournal",
+        "form_id": "[051D81F6]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nThe temple is almost complete, but there is work to be done. So much work, and not enough hands. \r\n\r\nWhere once stood an army, now only a dozen of us remain.\r\n\r\nThis would not be the case if the Matriarch had delivered justice to the Diviner, Erden Relvel, for his blasphemous comments about the Corpus. \r\n\r\nInstead she offered him exile, which to me was more reward than punishment. Worse yet, he was allowed to sway Arthamis and a few others to join him.\r\n\r\nWe cannot afford to let sentimentality affect our decisions. I need to remind her, we are at war, and every Dunmer lost is a soldier for the enemy.</font>",
+        "string": "<font face='$HandwrittenFont'>\r\nХрам почти достроен, но впереди еще много работы. Много работы и слишком мало рабочих. \r\n\r\nОт некогда грозной армии осталась лишь жалкая кучка.\r\n\r\nТакого бы не случилось, если бы Матриарх по заслугам наказала прорицателя, Эрдена Релвела, за его богохульственные высказывания по поводу корпруса. \r\n\r\nНо она приговорила его к изгнанию. На мой взгляд, это, скорее, поощрение, нежели наказание. Что еще хуже, ему позволили уговорить Артемиса и еще нескольких пойти с ним.\r\n\r\nНо нельзя же позволять сентиментальности влиять на наши решения. Нужно напомнить ей, что война еще не окончилась, и каждый данмер, который нас покидает – это лишний солдат на стороне врага.</font>"
+    },
+    {
+        "editor_id": "ccASVSSE001_VesparthJournal",
+        "form_id": "[05052282]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>Indobar's a riot. Every day he reminds us how we're not worthy to wear his precious Ordinator armor, even though I'm pretty sure if push came to shove, I could take him.\r\n\r\nBut since I'm not good enough to be Her Hand, just for fun I started calling myself Almalexia's Toe. Dirty little toe at that, with a lot of ash under the nail.\r\n\r\nAnyways, I tossed the idea to Indobar, and knocked back another pint as the veins on his forehead started popping. I also offered to anoint Sindras as Almalexia's navel, because why not? There's enough body parts on her ladyship for all of us. \r\n\r\nIndobar didn't think it was very funny. Must be in the blood. Same goes for me, after all. My ancestors were Armigers. Loyal to Vivec, and more importantly, knew how to take a joke.\r\n\r\nCan't tell whose side Sindras is on, but you can't really get a read on what the mage thinks, given he's got a mushroom on his head.</font>",
+        "string": "<font face='$HandwrittenFont'>Индобар совсем взбеленился. Каждый день он талдычил нам, что мы недостойны доспехов ординаторов, хотя, если бы дело до того дошло, против меня он бы не выстоял.\r\n\r\nНу и раз я недостоин быть Ее Рукой, шутки ради я начал называть себя Ногой Алмалексии. Причем босой ногой, перемазанной пеплом.\r\n\r\nВ общем, я изложил это Индобару и, пока он наливался кровью, опрокинул еще пинту. А Синдраса я предложил окрестить Пупком Алмалексии. Почему бы и нет? У ее светлости достаточно частей тела, чтобы всех нас назвать. \r\n\r\nИндобар шутку не оценил. Некому было передать ему чувство юмора по наследству. В отличие от меня. Мои предки были из Вечных стражей. Они преданно служили Вивеку и умели как пошутить, так и посмеяться.\r\n\r\nА вот на чьей стороне Синдрас, трудно сказать: как понять, что у мага в голове, особенно если на этой самой голове он носит гриб?"
+    },
+    {
+        "editor_id": "ccASVSSE001_Note02ElderA",
+        "form_id": "[05000FEE]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nWord of the Goddess' return has spread throughout Tamriel. It was wise of you to enlist the help of the innkeeper, who deals with many patrons in need of spiritual guidance. As a result of these efforts, new soldiers and priests have pledged their lives in service. Take this gold as reward for your efforts.</font>\r\n\r\n<p align='center'><font face='$DaedricFont' size=\"64\">ASV</font></p>",
+        "string": "<font face='$HandwrittenFont'>\r\nПо Тамриэлю разлетелась весть о возвращении Богини. С твоей стороны было разумно заручиться поддержкой трактирщика, чьи посетители явно нуждались в духовном наставничестве. Благодаря этому Богине присягнуло много новых солдат и жрецов. Это золото – твоя награда за труды.</font>\r\n\r\n<p align='center'><font face='$DaedricFont' size=\"64\">АСВ</font></p>"
+    },
+    {
+        "editor_id": "ccASVSSE001_HereticA",
+        "form_id": "[0500082C]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nI live to serve only Her. Always Her.\r\n\r\nI have found the forge, and when its spark is lit, her fire will burn. The Spectre once worked the gears of this swollen machine, but I no longer require his service. The mechanism is simple. With this vial of Pyroil Tar, I have all that is required to ignite it.\r\n\r\nTar lit the flame once before, and tar will do so again. And when I return triumphant, fire in hand, she will embrace me once more.\r\n\r\nBut I have a problem. The machine requires four gems to power it, and I have procured only one. The others, it seems, are still out there. Yet I have no doubt that as Her chosen, she will guide me to them.\r\n\r\nFor now, I will return to the temple. The entrance sits above the mine in Raven Rock, perched atop cliffs of basalt. But even if one finds the cave, only the devout know the way inside the temple. I spin the words and the way opens. \r\n\r\n<p align='center'></font><font face='$DaedricFont' size=\"64\">ASV</font></p>",
+        "string": "<font face='$HandwrittenFont'>\r\nЯ живу, чтобы служить Ей. Только Ей.\r\n\r\nЯ нашел кузницу. Когда вспыхнет искра, из нее разгорится Ее пламя. Призрак когда-то управлял работой этой огромной махины, но мне его помощь больше не нужна. Механизм устроен просто. Все, что мне нужно, чтобы разжечь горн – этот флакон огненной смолы.\r\n\r\nСмола уже однажды зажгла здесь огонь, и теперь сделает это снова. И когда я с триумфом вернусь, неся огонь в руке, Она снова примет меня в свои объятия.\r\n\r\nНо есть проблема. Чтобы запустить механизм, нужно четыре кристалла, а у меня только один. Похоже, остальные хранятся где-то еще. Но я уверен, что Она избрала меня и потому направит меня к ним.\r\n\r\nА пока что я вернусь в храм. Вход в него расположен над шахтой в Вороньей Скале, на вершине базальтовых скал. Но даже если кто-то и сумеет найти пещеру, пройти в храм может лишь преданный Ее слуга. Я свиваю слова, и открывается путь. \r\n\r\n<p align='center'></font><font face='$DaedricFont' size=\"64\">АСВ</font></p>"
+    },
+    {
+        "editor_id": "ccASVSSE001_HereticB",
+        "form_id": "[0500082E]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nKenro was a strange one. Always skulking about, perusing my wares, but never buying. \r\n\r\nI'd ask him if he wanted a sword, and he'd say, \"Not today.\" \r\n\r\nSo I'd ask him if he'd fancy a set of armor. And again he says, \"Not today.\"\r\n\r\nEvery day for a month, the same song and dance. Not today, not tomorrow, not ever. Or so I thought.\r\n\r\nOne day I open the shop, check my wares, and find a mistake in the shipment. Inside the crate is an odd blue gem, lumped in with the usual iron and steel. Figuring it for a mistake, I was about to send it back, when Kenro walks in the store.\r\n\r\nI give him the usual greeting, and ask him if he wants to buy some wares, fully expecting him to say the words, \"Not today.\" \r\n\r\nBut to my surprise, he doesn't. Today, he wants to buy. \r\n\r\nHe doesn't want a sword or a shield. He wants the gem. As he hands me the coin, I get a strange feeling in the pit of my stomach, like this is the last time I'll see him. So I ask him where he's headed. He tells me he's going to see a blacksmith. I'm not sure if that's a joke, seeing as I run the forge. \r\n\r\nWhen I ask him which smith, he tells me, a Dwarven one. In Fahlbtharz.\r\n\r\nMy face goes white. Kenro says, \"You look like you've seen a ghost.\" \r\n\r\nI say to him, \"No, have you?\" And he just smiles.</font>",
+        "string": "<font face='$HandwrittenFont'>\r\nКенро всегда был странным. Вечно шнырял тут, ворошил мои товары, но ничего не покупал. \r\n\r\nЯ его спрашиваю, не хочет ли он купить меч, а он мне: \"Не сегодня\". \r\n\r\nЯ ему предлагаю броню. А он опять: \"Не сегодня\".\r\n\r\nИ каждый день одно и то же. \"Не сегодня\". Ни сегодня, ни завтра, ни когда-либо еще он покупать ничего не станет. Вот как я думал.\r\n\r\nНо как-то раз открываю я магазин, проверяю товары и вижу ошибку в поставке. В одном из ящиков, среди обычного железа и стали лежит странный голубой кристалл. Я решил – ну ошибся кто-то, нужно будет отослать кристалл обратно. Но тут заходит Кенро.\r\n\r\nЯ его, как обычно, приветствую, спрашиваю, не хочет ли он что-то купить, и жду в ответ обычное \"Не сегодня\". \r\n\r\nНо, к моему удивлению, он говорит совсем другое. Он говорит, что хочет сделать покупку. \r\n\r\nНо ему нужен не меч и не щит. Ему нужен этот кристалл. И когда он передал мне монеты, у меня возникло странное чувство – точно засосало под ложечкой: я вдруг понял, что больше мы не увидимся. Я спросил, куда он собирается. А он ответил, что ему нужно навестить кузнеца. Уж не знаю, пошутил он, что ли – я-то сам владею кузней. \r\n\r\nИ когда я спросил его, какого кузнеца, он ответил – двемерского. В Фалбтарзе.\r\n\r\nЯ аж побелел. Кенро сказал: \"Ты точно призрака увидал\". \r\n\r\nЯ ответил: \"Я – нет, а ты?\" А он только улыбнулся.</font>"
+    },
+    {
+        "editor_id": "ccASVSSE001_Note01ElderA",
+        "form_id": "[0500082D]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Masks of the Tribunal",
+        "string": "Маски Трибунала"
+    },
+    {
+        "editor_id": "ccASVSSE001_Note02ElderC",
+        "form_id": "[05000EA2]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nRumors of the Goddess' return have spread. While the people you chose had little reach or desire to share her word, your work was not completely in vain. As a result, a few soldiers and priests have pledged their lives in service. Take this gold as reward for your efforts.</font>\r\n\r\n<p align='center'><font face='$DaedricFont' size=\"64\">ASV</font></p>",
+        "string": "<font face='$HandwrittenFont'>\r\nПо Тамриэлю разлетелись слухи о возвращении Богини. Несмотря на то, что выбранные тобой люди не стремились нести в мир Ее слово, твоя работа не прошла впустую. Благодаря этому Богине присягнуло несколько новых солдат и жрецов. Это золото – твоя награда за труды.</font>\r\n\r\n<p align='center'><font face='$DaedricFont' size=\"64\">АСВ</font></p>"
+    },
+    {
+        "editor_id": "ccASVSSE001_Note01ElderB",
+        "form_id": "[05000FEF]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nThe Goddess commands you to recover the artifacts of her fellow God-Kings. We have received word that the Mask of Vivec is being transported from Raven Rock to an unknown ship at the dock. We don't know the destination, only that to ensure secrecy, multiple couriers are being used to hide the identity of the mask bearer.\r\n\r\nHowever, our contact at the docks says the courier is a member of the guard who patrols the Bulwark, and he has plans of his own for the mask. He's arranged a meeting with a buyer after midnight, at an unknown location. \r\n\r\nHis greed angers the Goddess. Track the guard's movements, dispose of them both and return the artifact to her rightful hands.\r\n\r\nIn addition, the Goddess' temple is in need of new servants, both to restore this temple and to provide valuable services. Speak to Priest Drureth. He will hand you a letter to be delivered to the banished priestess, Aphia Velothi in Raven Rock. She is a friend to the Tribunal, and will translate it so that it can be passed to the common folk.\r\n\r\nWhen you meet her, be sure to also inquire about the whereabouts of our apothecary, Curate Melita. She had been in search of the Mask of Sotha Sil.\r\n\r\nSucceed and you will gain access to the Goddess' armory. Fail and you will incur her wrath. The law is as the Goddess commands.</font>\r\n\r\n<p align='center'><font face='$DaedricFont' size=\"64\">ASV</font></p>",
+        "string": "<font face='$HandwrittenFont'>\r\nБогиня повелевает тебе добыть артефакты других богов-королей. Мы узнали, что маску Вивека отправили из Вороньей Скалы на неизвестный нам корабль в порту. Куда он поплывет, мы не знаем, но чтобы обеспечить тайну перевозки, отправитель разослал несколько курьеров. У которого из них маска – неизвестно.\r\n\r\nОднако наш осведомитель в порту сообщил, что гонец – это стражник, патрулирующий бастион, и у него на маску свои планы. Он назначил встречу с покупателем после полуночи в неизвестном нам месте. \r\n\r\nЕго жадность разгневала Богиню. Выследи стражника, избавься от обоих и верни артефакт Ей.\r\n\r\nКроме того, в храме Богини нужны новые слуги, как для работы над восстановлением, так и для оказания ценных услуг. Поговори со жрецом Друретом. Он даст тебе письмо, которое нужно будет доставить бывшей жрице Афии Велоти в Вороньей Скале. Она верна Трибуналу и сумеет перевести письмо на язык, понятный простым людям.\r\n\r\nВстретившись с ней, узнай также о местонахождении нашего аптекаря, викария Мелиты. Она отправлялась на поиски маски Сота Сила.\r\n\r\nПреуспев в своем задании, ты получишь возможность войти в оружейную Богини. Потерпев неудачу, ты навлечешь на себя Ее гнев. Повеление Богини – закон.</font>\r\n\r\n<p align='center'><font face='$DaedricFont' size=\"64\">АСВ</font></p>"
+    },
+    {
+        "editor_id": "ccASVSSE001_NoteMaskDagothUr01",
+        "form_id": "[05000E32]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nThe Matriarch does not speak of what remains locked behind the gate. She says our way is to serve the Goddess and the Tribunal. \r\n\r\nBut Erden was right. The artifact speaks to us. I feel its heartbeat rattling in my head like a loose rock. Rattle, rattle, rattle. A curious song. Not a heart of blood, but stone.  \r\n\r\nYet the gate remains for all intents and purposes, impenetrable. I see no levers or chains. No secret buttons under the display cases. \r\n\r\nThere is nothing here save a few broken pillars and the mannequins. In fact, I grew so weary of their stares I covered their faces with masks. It was not until that moment that the solution came to me.\r\n\r\nWhat if the mannequins themselves are the key? Three faces, and three masks. A Tribunal. But which mask goes on which face?\r\n\r\nWhen memory fails, I go to the sculptor's room, and pray at the shrines so that I can match blessing to symbol. I feel now I can solve the puzzle, but without the masks, it is useless.\r\n\r\nErden hates it when I worry. He tells me to be patient, that masks or not, our master will show us the way. I have no choice but to believe.</font>",
+        "string": "<font face='$HandwrittenFont'>\r\nМатриарх не говорит о том, что именно заперто за этими воротами. Она говорит, что это часть нашего служения Богине и Трибуналу. \r\n\r\nНо Эрден был прав. Артефакт говорит с нами. Я слышу биение его сердца в своей голове, точно цокот катящегося камня. Тук, тук, тук. Занятная песенка. Биение каменного сердца.   \r\n\r\nНо ворота, тем не менее, стоят тут непреодолимой преградой. Я не вижу ни рычагов, ни цепей. Не нахожу тайных кнопок, спрятанных под шкафами. \r\n\r\nТут нет ничего, кроме нескольких сломанных колонн и манекенов. А от их безразличных взглядов я устал настолько, что нацепил на них маски. И именно тогда меня озарило.\r\n\r\nА что если манекены – и есть ключ? Три лица, три маски. Трибунал. Но какую маску надевать на каждого из них?\r\n\r\nКогда память подводит меня, я иду в мастерскую скульптора и молюсь у святилищ, чтобы сопоставить благословение с символом. Теперь, кажется, я могу решить эту головоломку, но без масок проку с этого нет.\r\n\r\nЭрден не любит, когда я начинаю тревожиться. Он убеждает меня быть терпеливым, говорит, что наш хозяин укажет нам путь, невзирая ни на какие маски. Мне остается лишь верить ему.</font>"
+    },
+    {
+        "editor_id": "ccASVSSE001_ElderJournal",
+        "form_id": "[05000832]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Matriarch Drevlan's Journal",
+        "string": "Дневник Матриарха Древлен"
+    },
+    {
+        "editor_id": "ccASVSSE001_RRPriestJournal",
+        "form_id": "[051EC611]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Reclamation Priest's Journal",
+        "string": "Дневник жреца Истребования"
+    },
+    {
+        "editor_id": "ccASVSSE001_IndobarJournal",
+        "form_id": "[05052271]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>Five Hands served Her once. Yet those numbers have dwindled, and as I deign to stand here alongside hedge wizards, sellswords, and other vermin on two legs, I cannot help but weep for the Lady and her station.\r\n\r\nStill, I will not allow them access to the armory. They do not deserve the honor of wearing the sacred garb. To do so means you are an extension of the Goddess. Our bodies and soul belong to Her, and are fortified by her divine magic. So it was for my ancestors, and so it is for me. \r\n\r\nAs such, I will not see my Lady's hands covered in filth. The Matriarch may have granted them a place on the dais, but while they stand eye to eye, they are still beneath us. And so, they are beneath Her.\r\n\r\nI would slay every last one of them, but I stay my hand for Her sake. As long as they are loyal and do the Lady's bidding, I will allow their hearts to remain beating against their soiled flesh.</font>",
+        "string": "<font face='$HandwrittenFont'>Когда-то Ей служили пять Рук. Но теперь их стало меньше, и сейчас, стоя рядом с шарлатанами, наемниками и прочей пакостью, я не могу не грустить о Леди и состоянии Ее культа.\r\n\r\nНо я все равно не пропущу их в оружейную. Они не заслуживают чести носить священные одежды. Надев их, ты становишься сосудом Богини. Наши тела и души принадлежат Ей, Она укрепляет их своей божественной магией. Так было во времена наших предков, и так есть сейчас. \r\n\r\nИ потому я не хочу, чтобы руки моей Леди были запачканы. Может, Матриарх и приблизила этих мерзавцев к себе, но даже если они будут стоять наравне с ней, они все равно ниже нас. А значит, ниже Нее.\r\n\r\nЯ бы убил каждого из них, но ради Нее я держу себя в руках. Так и быть, пусть их сердца продолжают биться под грешной плотью, пока они верно служат моей Леди."
+    },
+    {
+        "editor_id": "ccASVSSE001_CurateNote",
+        "form_id": "[05000EE5]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='20'>\r\nPriestess Velothi,\r\n\r\nYou or whoever's reading this, I need your help. Well, that's a stupid thing to write, of course you're reading this, you wouldn't be staring at a piece of paper and not read it, would you?\r\n\r\nNot unless you're illiterate or mad. Not \"angry\" mad but \"I clip my toenails with a fork\" mad. You get what I mean.\r\n\r\nPoint is, I think I've found it. The Mask of Sotha Sil, in Kagrenzel, a Dwarven labyrinth with a surprsingly high vowel count. It's high up on the Velothi Mountains, and you're a Velothi too! Funny how that works out. \r\n\r\nThere's just one problem. I caught myself in some contraption, and now I'm not sure where I am. We've decided to make camp here, and have one of the mercs I hired find help. He can't write or read or put together a coherent thought, but that's why I'm giving him this letter. \r\n\r\nReally, I should have just taken the mask and left the orb. You'd think I'd know better than to fall for a trap that obvious. But the orb was glowing and cute and looked kind of lonely. \r\n\r\nSide note, if you come rescue me, DO NOT touch the orb.</font>\r\n\r\n",
+        "string": "<font face='$HandwrittenFont'><font size='20'>\r\nЖрица Велоти,\r\n\r\nмне нужна твоя помощь – ну или помощь того, кто это читает. Ладно, это я зря написала: конечно, кто бы ты ни был, ты это читаешь. Вряд ли ты будешь просто пялиться на бумагу и не читать написанное.\r\n\r\nРазве что ты сумасшедший или неграмотный. Даже не знаю, что из этого хуже. В общем, ты понимаешь, о чем я.\r\n\r\nЛадно, к делу: кажется, я ее нашла. Маска Сота Сила спрятана в Кагрензеле – двемерском лабиринте с на удивление произносимым названием. Оно расположено в Велотийских горах – и ты тоже Велоти! Какое совпадение! \r\n\r\nНо есть проблема. Я попала в какую-то ловушку и теперь не знаю, где нахожусь. Мы решили разбить тут лагерь и послать одного из наемников за помощью. Он не умеет ни читать, ни писать, ни связно мыслить, и поэтому я и дала ему это письмо. \r\n\r\nНадо было просто забрать маску и не трогать ту сферу. Как я могла попасться в настолько очевидную ловушку? Но эта сфера была такая сияющая, такая славная, такая одинокая… \r\n\r\nК слову, если пойдешь меня спасать – НЕ ТРОГАЙ сферу.\r\n\r\n"
+    },
+    {
+        "editor_id": "ccASVSSE001_PropagandaLetterA",
+        "form_id": "[05000C2C]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Propaganda Letter",
+        "string": "Пропагандистское письмо"
+    },
+    {
+        "editor_id": "ccASVSSE001_GuardNote",
+        "form_id": "[05000F37]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nFor twenty years all I've been is a loyal guard. I do what I'm supposed to, pay my taxes, and pray to the Gods. But they return me no favors.\r\n\r\nI pray for riches, and I get guard duty. I pray for a good woman, and I get more guard duty.\r\n\r\nNow I'm supposed to deliver this expensive-looking mask to the Temple. Well, it's time I made my own luck. I'm selling the thing to this Imperial I met at the Netch.\r\n\r\nI'll just tell the priests the bloody mask got swallowed by a guar, so good luck finding it now. \r\n\r\nTwenty years and I've never spoken a lie. They'll have no choice but to believe me.\r\n</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nВот уже двадцать лет я прилежно исполняю обязанности стражника. Я делаю то, что от меня требуется, плачу налоги и молюсь богам. Но они не слышат моих молитв.\r\n\r\nЯ прошу у них богатства, а получаю новое дежурство. Я прошу у них добрую жену, а получаю еще больше дежурств.\r\n\r\nА теперь вот нужно отнести эту дорогую маску в Храм. По-моему, пришло время взять судьбу в свои руки. Продам эту штуку имперцу, с которым мы разговорились в \"Пьяном нетче\".\r\n\r\nА жрецам скажу, что ее сожрал гуар – пусть сами ищут. \r\n\r\nЗа двадцать лет я ни разу не солгал. Им даже в голову не придет мне не поверить.\r\n</font>"
+    },
+    {
+        "editor_id": "ccASVSSE001_PropagandaLetterB",
+        "form_id": "[05000E05]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Propaganda Letter",
+        "string": "Пропагандистское письмо"
+    },
+    {
+        "editor_id": "ccASVSSE001_TreasBanditChestBossNoRespawn",
+        "form_id": "[05182095]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Сундук"
+    },
+    {
+        "editor_id": "ccASVSSE001_CaretakerChest",
+        "form_id": "[05001016]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Сундук"
+    },
+    {
+        "editor_id": "ccASVSSE001_BlacksmithChest",
+        "form_id": "[05001172]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Сундук"
+    },
+    {
+        "editor_id": "ccASVSSE001_DLC2fcTernGO",
+        "form_id": "[05000F1D]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Felsaad Tern",
+        "string": "Фельсадская крачка"
+    },
+    {
+        "editor_id": "ccASVSSE001_TreasDwarvenChestSmallEMPTY",
+        "form_id": "[051964A0]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Сундук"
+    },
+    {
+        "editor_id": "ccASVSSE001_AlchemistChest",
+        "form_id": "[05000EBF]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Сундук"
+    },
+    {
+        "editor_id": "ccASVSSE001_ForgeGem03",
+        "form_id": "[050990F1]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Dwarven Forge Gem",
+        "string": "Кристалл из двемерской кузницы"
+    },
+    {
+        "editor_id": "ccASVSSE001_ForgeGem02",
+        "form_id": "[050990F0]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Dwarven Forge Gem",
+        "string": "Кристалл из двемерской кузницы"
+    },
+    {
+        "editor_id": "ccASVSSE001_ForgeGem04",
+        "form_id": "[050990F2]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Dwarven Forge Gem",
+        "string": "Кристалл из двемерской кузницы"
+    },
+    {
+        "editor_id": "ccASVSSE001_PyroilTar",
+        "form_id": "[0500082F]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Pyroil Tar",
+        "string": "Огненная смола"
+    },
+    {
+        "editor_id": "ccASVSSE001_ForgeGem01",
+        "form_id": "[050990ED]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Fahlbtharz Forge Gem",
+        "string": "Кристалл для кузницы Фалбтарза"
+    },
+    {
+        "editor_id": "ccASVSSE001_BedLR",
+        "form_id": "[05187198]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "Кровать"
+    },
+    {
+        "editor_id": "ccASVSSE001_CommonBed01L",
+        "form_id": "[05187199]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "Кровать"
+    },
+    {
+        "editor_id": "ccASVSSE001_Chair01",
+        "form_id": "[05000808]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Chair",
+        "string": "Стул"
+    },
+    {
+        "editor_id": "ccASVSSE001_CommonBed01R",
+        "form_id": "[0518719A]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "Кровать"
+    },
+    {
+        "editor_id": "ccASVSSE001_EbonyScimitar",
+        "form_id": "[05000E38]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Ebony Scimitar",
+        "string": "Эбонитовый скимитар"
+    },
+    {
+        "editor_id": "ccASVSSE001_Hopesfire",
+        "form_id": "[05000C28]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Hopesfire",
+        "string": "Огонь Надежды"
+    },
+    {
+        "editor_id": "ccASVSSE001_LightOfDay",
+        "form_id": "[0513101E]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Light of Day",
+        "string": "Дневной свет"
+    },
+    {
+        "editor_id": "ccASVSSE001_Skullcrusher",
+        "form_id": "[0511CBF0]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Skull Crusher",
+        "string": "Крушитель Черепов"
+    },
+    {
+        "editor_id": "ccASVSSE001_CleaverStFelms",
+        "form_id": "[05057384]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Cleaver of St. Felms",
+        "string": "Топорик святого Фелмса"
+    },
+    {
+        "editor_id": "ccASVSSE001_TrueflameUnenchanted",
+        "form_id": "[0500083B]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Unenchanted Weapon",
+        "string": "Незачарованное оружие"
+    },
+    {
+        "editor_id": "ccASVSSE001_Trueflame",
+        "form_id": "[0500083A]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Trueflame",
+        "string": "Истинное Пламя"
+    },
+    {
+        "editor_id": "ccASVSSE001_EbonyMace",
+        "form_id": "[05000E37]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Ebony Mace",
+        "string": "Эбонитовая булава"
+    },
+    {
+        "editor_id": "ccASVSSE001_Magebane",
+        "form_id": "[0513101B]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Magebane",
+        "string": "Гибель магов"
+    },
+    {
+        "editor_id": "ccASVSSE001_CaretakerIneril",
+        "form_id": "[05001017]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Caretaker Ineril",
+        "string": "Смотрительница Инерил"
+    },
+    {
+        "editor_id": "ccASVSSE001_OrdinatorGuardBarracks",
+        "form_id": "[050008F3]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Ordinator",
+        "string": "Ординатор"
+    },
+    {
+        "editor_id": "ccASVSSE001_Priest01",
+        "form_id": "[05000E72]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Temple Priest",
+        "string": "Храмовый жрец"
+    },
+    {
+        "editor_id": "ccASVSSE001_CaretakerIneril",
+        "form_id": "[05001017]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Ineril",
+        "string": "Инерил"
+    },
+    {
+        "editor_id": "ccASVSSE001_OrdinatorGuard",
+        "form_id": "[05000843]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Ordinator",
+        "string": "Ординатор"
+    },
+    {
+        "editor_id": "ccASVSSE001_VelothiBackup",
+        "form_id": "[05000FF0]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Inorva",
+        "string": "Инорва"
+    },
+    {
+        "editor_id": "ccASVSSE001_OrdinatorGuardMale",
+        "form_id": "[05001024]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Ordinator",
+        "string": "Ординатор"
+    },
+    {
+        "editor_id": "ccASVSSE001_Blacksmith",
+        "form_id": "[05001175]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Blacksmith",
+        "string": "Кузнец"
+    },
+    {
+        "editor_id": "ccASVSSE001_HandIndobar",
+        "form_id": "[0500083E]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Hand Kydren Indobar",
+        "string": "Рука Кидрен Индобар"
+    },
+    {
+        "editor_id": "ccASVSSE001_ElderDrevlan",
+        "form_id": "[05000840]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Matriarch Drevlan",
+        "string": "Матриарх Древлен"
+    },
+    {
+        "editor_id": "ccASVSSE001_DLC2RRPriest",
+        "form_id": "[051D81DF]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Reclamation Priest",
+        "string": "Жрец Истребования"
+    },
+    {
+        "editor_id": "ccASVSSE001_HandTherethi",
+        "form_id": "[0500083D]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Watchman Sindras",
+        "string": "Дозорный Синдрас"
+    },
+    {
+        "editor_id": "ccASVSSE001_OrdinatorGuardPatrolFemale",
+        "form_id": "[05001018]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Ordinator",
+        "string": "Ординатор"
+    },
+    {
+        "editor_id": "ccASVSSE001_Priest03",
+        "form_id": "[05001025]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Temple Priest",
+        "string": "Храмовый жрец"
+    },
+    {
+        "editor_id": "ccASVSSE001_DagothPriest",
+        "form_id": "[050C1928]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Erden",
+        "string": "Эрден"
+    },
+    {
+        "editor_id": "ccASVSSE001_HandVesparth",
+        "form_id": "[05000841]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Vesparth",
+        "string": "Веспарт"
+    },
+    {
+        "editor_id": "ccASVSSE001_Sculptor",
+        "form_id": "[050EF2B4]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Visthar",
+        "string": "Вистар"
+    },
+    {
+        "editor_id": "ccASVSSE001_HandVesparth",
+        "form_id": "[05000841]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Vesparth the Toe",
+        "string": "Веспарт Большой Палец"
+    },
+    {
+        "editor_id": "ccASVSSE001_HandTherethi",
+        "form_id": "[0500083D]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Sindras",
+        "string": "Синдрас"
+    },
+    {
+        "editor_id": "ccASVSSE001_HandIndobar",
+        "form_id": "[0500083E]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Kydren",
+        "string": "Кидрен"
+    },
+    {
+        "editor_id": "ccASVSSE001_DagothPriest",
+        "form_id": "[050C1928]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Erden Relvel",
+        "string": "Эрден Релвел"
+    },
+    {
+        "editor_id": "ccASVSSE001_VelothiBackup",
+        "form_id": "[05000FF0]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Inorva Velothi",
+        "string": "Инорва Велоти"
+    },
+    {
+        "editor_id": "ccASVSSE001_Priest02",
+        "form_id": "[05000E77]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Temple Priestess",
+        "string": "Храмовая жрица"
+    },
+    {
+        "editor_id": "ccASVSSE001_Priestess",
+        "form_id": "[05000E73]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Temple Priestess",
+        "string": "Храмовая жрица"
+    },
+    {
+        "editor_id": "ccASVSSE001_RedoranGuard",
+        "form_id": "[05000F22]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Redoran Guard",
+        "string": "Редоранский стражник"
+    },
+    {
+        "editor_id": "ccASVSSE001_RedoranGuardREPLACER",
+        "form_id": "[0504805E]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Redoran Guard",
+        "string": "Редоранский стражник"
+    },
+    {
+        "editor_id": "ccASVSSE001_HandHlan",
+        "form_id": "[05000842]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Hand Kenro Hlan",
+        "string": "Рука Кенро Хлан"
+    },
+    {
+        "editor_id": "ccASVSSE001_DwarvenSpectre",
+        "form_id": "[0500083C]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Ghost",
+        "string": "Призрак"
+    },
+    {
+        "editor_id": "ccASVSSE001_CurateMelita",
+        "form_id": "[05001153]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Melita",
+        "string": "Мелита"
+    },
+    {
+        "editor_id": "ccASVSSE001_EncAshZombie",
+        "form_id": "[050A840A]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Ash Zombie",
+        "string": "Пепельный зомби"
+    },
+    {
+        "editor_id": "ccASVSSE001_HandMavandes",
+        "form_id": "[0500083F]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Hand Ethra Mavandas",
+        "string": "Рука Этра Мавандас"
+    },
+    {
+        "editor_id": "ccASVSSE001_DLC2RRPriestAttack",
+        "form_id": "[051EC608]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Reclamation Priest",
+        "string": "Жрец Истребования"
+    },
+    {
+        "editor_id": "ccASVSSE001_Sculptor",
+        "form_id": "[050EF2B4]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Sculptor Visthar",
+        "string": "Скульптор Вистар"
+    },
+    {
+        "editor_id": "ccASVSSE001_HandHlan",
+        "form_id": "[05000842]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Kenro",
+        "string": "Кенро"
+    },
+    {
+        "editor_id": "ccASVSSE001_OrdinatorGuardFemale",
+        "form_id": "[05000833]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Ordinator",
+        "string": "Ординатор"
+    },
+    {
+        "editor_id": "ccASVSSE001_MaskBuyer",
+        "form_id": "[05000F2E]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Buyer",
+        "string": "Покупатель"
+    },
+    {
+        "editor_id": "ccASVSSE001_RedoranGuardPriestFaction",
+        "form_id": "[051EC607]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Redoran Guard",
+        "string": "Редоранский стражник"
+    },
+    {
+        "editor_id": "ccASVSSE001_HandMavandes",
+        "form_id": "[0500083F]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Ethra",
+        "string": "Этра"
+    },
+    {
+        "editor_id": "ccASVSSE001_CurateMelita",
+        "form_id": "[05001153]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Curate Melita",
+        "string": "Викарий Мелита"
+    },
+    {
+        "editor_id": "ccASVSSE001_PriestDrureth",
+        "form_id": "[05000F12]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Priest Drureth",
+        "string": "Жрец Друрет"
+    },
+    {
+        "editor_id": "ccASVSSE001_TrapDoorKey",
+        "form_id": "[05000F29]",
+        "index": null,
+        "type": "KEYM FULL",
+        "original": "Attius Farm Cellar Key",
+        "string": "Ключ от старой фермы Аттия"
+    },
+    {
+        "editor_id": "ccASVSSE001_AlmalexiaKey",
+        "form_id": "[05000C2A]",
+        "index": null,
+        "type": "KEYM FULL",
+        "original": "Tribunal Armory Key",
+        "string": "Ключ от оружейной Трибунала"
+    },
+    {
+        "editor_id": "ccASVSSE001_PyroilTarBottle",
+        "form_id": "[0514F638]",
+        "index": null,
+        "type": "ALCH FULL",
+        "original": "Pyroil Tar",
+        "string": "Огненная смола"
+    },
+    {
+        "editor_id": "DLC2Fahlbtharz01",
+        "form_id": "[040142FA]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Fahlbtharz",
+        "string": "Фалбтарз"
+    },
+    {
+        "editor_id": "DLC2RRTheRetchingNetch",
+        "form_id": "[04017EC0]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "The Retching Netch",
+        "string": "Пьяный нетч"
+    },
+    {
+        "editor_id": "DLC2RRTemple",
+        "form_id": "[04017EC3]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Temple",
+        "string": "Храм"
+    },
+    {
+        "editor_id": "ccASVSSE001Interior03",
+        "form_id": "[010030E7]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Old Attius Farm Cellar",
+        "string": "Старая ферма Аттия – Подвал"
+    },
+    {
+        "editor_id": "ccASVSSE001Interior02",
+        "form_id": "[010030E8]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Ashfall's Tear",
+        "string": "Разрыв пеплопада"
+    },
+    {
+        "editor_id": "StonyCreekCave01",
+        "form_id": "[0004B8FB]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Stony Creek Cave",
+        "string": "Пещера Каменный Ручей"
+    },
+    {
+        "editor_id": "ccASVSSE001Interior01",
+        "form_id": "[010030E9]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Fahlbtharz Forge",
+        "string": "Кузница Фалбтарза"
+    },
+    {
+        "editor_id": "DLC2RRCresciusHouse",
+        "form_id": "[04017EC2]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Caerellius House",
+        "string": "Дом Кареллия"
+    },
+    {
+        "editor_id": "DLC2SolstheimWorld",
+        "form_id": "[04000800]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Solstheim",
+        "string": "Солстейм"
+    },
+    {
+        "editor_id": "ccASVSSE001_MMarker",
+        "form_id": "[050BC826]",
+        "index": null,
+        "type": "REFR FULL",
+        "original": "Ashfall's Tear",
+        "string": "Разрыв пеплопада"
+    },
+    {
+        "editor_id": "ccASVSSE001_BR01Topic",
+        "form_id": "[05000DF9]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I await the Goddess' command. Her word is our law.",
+        "string": "Я ожидаю поручений Богини. Ее слово – закон."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000E0A]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "I will prove my loyalty by praying to the Goddess.",
+        "string": "Я докажу тебе свою преданность, помолившись Богине."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestENDTopic",
+        "form_id": "[05001169]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I've completed the Goddess' tasks and took care of those things outside.",
+        "string": "Мне удалось выполнить поручения Богини и разобраться с теми тварями."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestKillTopic",
+        "form_id": "[0500115B]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Actually, I'm going to kill you and take the mask.",
+        "string": "Вообще, думаю, я просто убью тебя и заберу маску."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05001008]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Can you show this letter to your customers? (Persuade)",
+        "string": "Можешь показывать это письмо своим покупателям? (Убеждение)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000EB5]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Can we just find a way to get along regardless?",
+        "string": "А может, мы сумеем договориться?"
+    },
+    {
+        "editor_id": "ccASVSSE001_VelothiQSBranchTopic",
+        "form_id": "[0500114A]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I understand a temple Curate has gone missing.",
+        "string": "Мне стало известно, что храмовый викарий пропала."
+    },
+    {
+        "editor_id": "ccASVSSE001_DrurethBranch01Topic",
+        "form_id": "[05000F17]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I understand you have some letters for Priestess Velothi to translate.",
+        "string": "Я так понимаю, что у тебя есть письма для жрицы Велоти на перевод."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestMaskQueryTopic",
+        "form_id": "[0500115D]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Do you have the mask?",
+        "string": "Маска у тебя?"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05001003]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Can you show this letter to your customers? (Persuade)",
+        "string": "Можешь показывать это письмо своим покупателям? (Убеждение)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05048065]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "I could prove my loyalty by praying to the Goddess. (Persuade)",
+        "string": "Я могу доказать тебе свою преданность, помолившись Богине. (Убеждение)"
+    },
+    {
+        "editor_id": "ccASVSSE001_BR01TopicA",
+        "form_id": "[05000DFF]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Does the Goddess have a task for me?",
+        "string": "У Богини есть для меня поручение?"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[0504806E]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "I could prove my loyalty by praying to the Goddess. (Persuade)",
+        "string": "Я могу доказать тебе свою преданность, помолившись Богине. (Убеждение)"
+    },
+    {
+        "editor_id": "ccASVSSE001_BR04TopicZ1",
+        "form_id": "[05048063]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "If I bested your warriors in combat, it would show the Goddess favors me.",
+        "string": "Если я одолею твоих воинов в бою, это будет означать, что Богиня ко мне благосклонна."
+    },
+    {
+        "editor_id": "ccASVSSE001_RRPriestsTopic",
+        "form_id": "[05001014]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Heretics have been passing around these letters.",
+        "string": "Эти письма раздают еретики."
+    },
+    {
+        "editor_id": "ccASVSSE001_BR04Topic",
+        "form_id": "[05000E08]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I'm actually not one of your followers. But I'd still like to join your ranks.",
+        "string": "На самом деле я не из твоих последователей. Но я все же хочу к вам присоединиться."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05001004]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Can you show this letter to your customers? (Persuade)",
+        "string": "Можешь показывать это письмо своим покупателям? (Убеждение)"
+    },
+    {
+        "editor_id": "ccASVSSE001_BR04TopicB",
+        "form_id": "[05000EAA]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Fine. Then you leave me no choice.",
+        "string": "Ладно. Ты не оставляешь мне выбора."
+    },
+    {
+        "editor_id": "ccASVSSE001_BR05Topic",
+        "form_id": "[050BC820]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Is there anything I can do to stop these attacks?",
+        "string": "Я могу что-нибудь сделать, чтобы атаки прекратились?"
+    },
+    {
+        "editor_id": "ccASVSSE001_BR06Topic",
+        "form_id": "[05219F5A]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I've passed out the letters spreading Her word.",
+        "string": "Письма с Ее словом были мною розданы."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[0500101A]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Can you show this letter to your customers? (Persuade)",
+        "string": "Можешь показывать это письмо своим покупателям? (Убеждение)"
+    },
+    {
+        "editor_id": "ccASVSSE001_BR02Topic",
+        "form_id": "[05000DFB]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "The Reclamation has come for you, heretics.",
+        "string": "Истребование пришло по ваши души, еретики."
+    },
+    {
+        "editor_id": "ccASVSSE001_BR01TopicC",
+        "form_id": "[05000E03]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "The Goddess commands me to kill you all.",
+        "string": "Богиня приказала мне убить вас всех."
+    },
+    {
+        "editor_id": "ccASVSSE001_LBribeTopic",
+        "form_id": "[0500100A]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I'll pay you to show your patrons this letter. (<BribeCost> gold)",
+        "string": "Я заплачу тебе, а ты будешь показывать это письмо своим посетителям. (<BribeCost> зол.) "
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestFreeTopic",
+        "form_id": "[05001162]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Let me untie your bonds.",
+        "string": "Давай я тебя развяжу."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05001005]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Can you show this letter to your customers? (Persuade)",
+        "string": "Можешь показывать это письмо своим покупателям? (Убеждение)"
+    },
+    {
+        "editor_id": "ccASVSSE001_VelothiBranchTopic",
+        "form_id": "[05000FF2]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I was told you can translate these letters.",
+        "string": "Мне сказали, ты можешь перевести эти письма."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05000FF4]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "I can pass out the letters if you've finished translating them.",
+        "string": "Если ты закончила перевод, я могу раздать эти письма."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05048066]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "I've won the combat trial. I trust this means I have her favor?",
+        "string": "Победа за мной. Думаю, это значит, что Богиня ко мне благосклонна?"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05048062]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "I've proved my devotion to our Goddess by receiving her blessing. (Persuade)",
+        "string": "Богиня благословила меня; думаю, это доказывает мою преданность ей. (Убеждение)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05001019]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Can you show this letter to your customers? (Persuade)",
+        "string": "Можешь показывать это письмо своим покупателям? (Убеждение)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05001007]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Can you show this letter to your customers? (Persuade)",
+        "string": "Можешь показывать это письмо своим покупателям? (Убеждение)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[05001006]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Can you show this letter to your customers? (Persuade)",
+        "string": "Можешь показывать это письмо своим покупателям? (Убеждение)"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestRescueTopic",
+        "form_id": "[05001159]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I'm here to rescue you on behalf of the Goddess.",
+        "string": "Я здесь, чтобы спасти тебя по велению Богини."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[0504806D]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "I've proved my devotion to our Goddess by receiving her blessing. (Persuade)",
+        "string": "Богиня благословила меня; думаю, это доказывает мою преданность ей. (Убеждение)"
+    },
+    {
+        "editor_id": "ccASVSSE001_CiviliansTopic",
+        "form_id": "[05000FF8]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "You should read this letter. (Persuade)",
+        "string": "Советую тебе прочитать это письмо. (Убеждение)"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[0500101B]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Can you show this letter to your customers? (Persuade)",
+        "string": "Можешь показывать это письмо своим покупателям? (Убеждение)"
+    },
+    {
+        "editor_id": "ccASVSSE001_BR03Topic",
+        "form_id": "[05000DFD]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I'm not who you think I am. My name is <Alias=Player>. Prepare to die.",
+        "string": "Думаешь, знаешь, кто я? Ты ошибаешься. Меня зовут <Alias=Player>. Готовься к смерти."
+    },
+    {
+        "editor_id": "ccASVSSE001_LIntimidateTopic",
+        "form_id": "[0500100C]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "You're going to show this letter to your patrons. (Intimidate)",
+        "string": "Показывай это письмо своим посетителям, ясно? (Запугивание)"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestB",
+        "form_id": "[05000F19]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Pick up the letter from Priest Drureth",
+        "string": "Забрать письмо у жреца Друрета"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestE",
+        "form_id": "[050990EF]",
+        "index": 104,
+        "type": "QUST CNAM",
+        "original": "I've picked up an Unenchanted Weapon that looks like it's tied to the Dwarven Forge in Fahlbtharz. ",
+        "string": "Мне удалось найти незачарованное оружие. Оно наверняка из двемерской кузницы в Фалбтарзе. "
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 88,
+        "type": "QUST CNAM",
+        "original": "After finding information on a group of Tribunal heretics, I followed the trail to a hidden temple full of worshipers. I revealed my identity to the Matriarch and was able to prove my loyalty by praying at the shrine.",
+        "string": "Выяснив подробности о группе еретиков, поклоняющихся Трибуналу, мне удалось найти скрытый храм, полный отступников. Открывшись Матриарху, мне удалось доказать ей свою преданность, помолившись у святилища."
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 120,
+        "type": "QUST NNAM",
+        "original": "(Optional) Kill the cultists",
+        "string": "(Дополнительно) Убить культистов"
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 87,
+        "type": "QUST CNAM",
+        "original": "At the Temple in Raven Rock I learned of a heretic attempting to use a forge in Fahlbtharz to enchant a Dwemer weapon. I traveled to the forge and was attacked by a potential heretic. I should investigate further to find out more about this clandestine group.",
+        "string": "В храме Вороньей Скалы нашлась информация о попытке еретика зачаровать двемерское оружие с помощью кузницы в Фалбтарзе. Стоило мне попасть к кузнице, как на меня напал, вероятно, один из еретиков. Нужно разузнать подробнее об этом скрытном культе."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestD",
+        "form_id": "[0500117A]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Examine the chest",
+        "string": "Осмотреть сундук"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestB",
+        "form_id": "[05000F19]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Her Word Against Theirs",
+        "string": "Ее слово против Их слов"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestA",
+        "form_id": "[05000CA0]",
+        "index": 91,
+        "type": "QUST CNAM",
+        "original": "I've discovered a temple near Raven Rock where worshipers of Almalexia gather. It seems the temple Matriarch is searching for the lost Masks of Vivec and Sotha Sil. Rumor has it that the Mask of Vivec is being transported back to Morrowind, but an enterprising guard is looking to sell to another buyer. I followed a guard to a secret cellar where he intends to make the sale.",
+        "string": "Возле Вороньей Скалы мне удалось найти храм, где собираются последователи Алмалексии. Матриарх храма ищет утерянные маски Вивека и Сота Сила. Говорят, маску Вивека хотят отправить обратно в Морровинд, но стражник, которому ее доверили, нашел для нее другого покупателя. Мне удалось проследить за стражником до тайного подвала, где должна состояться сделка."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestE",
+        "form_id": "[050990EF]",
+        "index": 90,
+        "type": "QUST NNAM",
+        "original": "Activate the forge",
+        "string": "Активировать кузницу"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestE",
+        "form_id": "[050990EF]",
+        "index": 71,
+        "type": "QUST CNAM",
+        "original": "I found an unenchanted weapon and placed it into a special slot in the Dwarven Forge. With the forge fully operational, the weapon's enchantment has been restored and I can now remove it.",
+        "string": "Найденное мной незачарованное оружие помещено в специальную ячейку в двемерской кузнице. Теперь кузница работает как положено, и зачарование оружия восстановлено. Я могу его забрать."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestB",
+        "form_id": "[05000F19]",
+        "index": 99,
+        "type": "QUST CNAM",
+        "original": "I delivered a propaganda letter to a contact in Raven Rock in hopes of getting it translated. Having waited a few hours, I need to pick up the translated letters.",
+        "string": "Порученное мне пропагандистское письмо было доставлено доверенному лицу в Вороньей Скале. Эта женщина должна его перевести. Прошла пара часов. Надо забрать переведенные письма."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestA",
+        "form_id": "[05000CA0]",
+        "index": 69,
+        "type": "QUST CNAM",
+        "original": "I've discovered a temple near Raven Rock where worshipers of Almalexia gather. It seems the temple Matriarch is searching for the lost Masks of Vivec and Sotha Sil. Rumor has it that the Mask of Vivec is being transported back to Morrowind, but an enterprising guard is looking to sell to another buyer. I followed the guard to a secret cellar where he planned to make the sale, killed the buyer, and picked up the Mask of Vivec.",
+        "string": "Возле Вороньей Скалы мне удалось найти храм, где собираются последователи Алмалексии. Матриарх храма ищет утерянные маски Вивека и Сота Сила. Говорят, маску Вивека хотят отправить обратно в Морровинд, но стражник, которому ее доверили, нашел для нее другого покупателя. Мне удалось проследить за стражником до тайного подвала, где должна была состояться сделка, убить покупателя и забрать маску Вивека."
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 70,
+        "type": "QUST NNAM",
+        "original": "Activate the forge",
+        "string": "Активировать кузницу"
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 92,
+        "type": "QUST CNAM",
+        "original": "At the Temple in Raven Rock I learned of a heretic attempting to use a forge in Fahlbtharz to enchant a Dwemer weapon. I traveled to the ruin and picked up the weapon and the tar required to enchant it. I placed the materials in the forge and can now activate it.",
+        "string": "В храме Вороньей Скалы нашлась информация о попытке еретика зачаровать двемерское оружие с помощью кузницы в Фалбтарзе. Мне удалось раздобыть в руинах оружие и огненную смолу для его зачарования. Материалы уже в кузнице. Пора ее активировать."
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Travel to the forge in Fahlbtharz",
+        "string": "Отправиться в кузницу Фалбтарза"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestB",
+        "form_id": "[05000F19]",
+        "index": 109,
+        "type": "QUST CNAM",
+        "original": "I delivered propaganda letters to a contact in the city and waited a few hours for her to translate them. After retrieving the letters, I can now disseminate them to the general public, or give them to a Reclamation Priest.",
+        "string": "Порученные мне пропагандистские письма были доставлены доверенному лицу в городе. Пришлось подождать пару часов, пока она их переводила. Полученные письма можно раздать народу или отнести их жрецу Истребования."
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 80,
+        "type": "QUST NNAM",
+        "original": "Retrieve Trueflame",
+        "string": "Добыть Истинное Пламя"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestD",
+        "form_id": "[0500117A]",
+        "index": 84,
+        "type": "QUST CNAM",
+        "original": "After solving the armory puzzle, I now have access to the treasure behind the portcullis. I should open it and see what I can learn.",
+        "string": "Решив головоломку в оружейной, мне удалось получить доступ к сокровищу за опускной решеткой. Надо открыть ее и посмотреть, что там."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestE",
+        "form_id": "[050990EF]",
+        "index": 1,
+        "type": "QUST NNAM",
+        "original": "Use the forge to enchant and restore Trueflame",
+        "string": "Зачаровать и восстановить Истинное Пламя в кузнице"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestE",
+        "form_id": "[050990EF]",
+        "index": 85,
+        "type": "QUST CNAM",
+        "original": "I've picked up a Dwarven gem that looks like it's tied to the Dwarven Forge in Fahlbtharz. With enough gems, I may be able to restore power to the forge.",
+        "string": "Мне удалось найти двемерский кристалл. Он наверняка из двемерской кузницы в Фалбтарзе. Если у меня будет нужное количество кристаллов, я смогу запустить кузницу."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestC",
+        "form_id": "[05000F1A]",
+        "index": 93,
+        "type": "QUST CNAM",
+        "original": "I've discovered a temple near Raven Rock where worshipers of Almalexia gather. It seems the temple Matriarch is searching for the lost Masks of Vivec and Sothal Sil. Evidently, one of the temple's Curates had been following up on a lead near Kagrenzel. I found the Curate and retrieved the mask from her.",
+        "string": "Возле Вороньей Скалы мне удалось найти храм, где собираются последователи Алмалексии. Матриарх храма ищет утерянные маски Вивека и Сота Сила. Видимо, один из викариев храма шел по следу маски близ Кагрензела. Мне удалось найти викария и забрать у нее маску."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestA",
+        "form_id": "[05000CA0]",
+        "index": 84,
+        "type": "QUST CNAM",
+        "original": "I've discovered a temple near Raven Rock where worshipers of Almalexia gather. It seems the temple Matriarch is searching for the lost Masks of Vivec and Sotha Sil. Rumor has it that the Mask of Vivec is being transported back to Morrowind, but an enterprising guard is looking to sell to another buyer. I followed the guard to a secret cellar where he intends to make the sale.",
+        "string": "Возле Вороньей Скалы мне удалось найти храм, где собираются последователи Алмалексии. Матриарх храма ищет утерянные маски Вивека и Сота Сила. Говорят, маску Вивека хотят отправить обратно в Морровинд, но стражник, которому ее доверили, нашел для нее другого покупателя. Мне удалось проследить за стражником до тайного подвала, где должна состояться сделка."
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 100,
+        "type": "QUST NNAM",
+        "original": "Travel to the hidden temple mentioned in the notes",
+        "string": "Отправиться к скрытому храму, упомянутому в заметках"
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 250,
+        "type": "QUST NNAM",
+        "original": "Clear the temple of Ash Zombies",
+        "string": "Очистить храм от пепельных зомби"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestA",
+        "form_id": "[05000CA0]",
+        "index": 85,
+        "type": "QUST CNAM",
+        "original": "I've discovered a temple near Raven Rock where worshipers of Almalexia gather. It seems the temple Matriarch is searching for the lost Masks of Vivec and Sotha Sil. Rumor has it that the Mask of Vivec is being transported back to Morrowind, but an enterprising guard is looking to sell to another buyer. I followed the guard to a secret cellar where he planned to make the sale, and killed the buyer.",
+        "string": "Возле Вороньей Скалы мне удалось найти храм, где собираются последователи Алмалексии. Матриарх храма ищет утерянные маски Вивека и Сота Сила. Говорят, маску Вивека хотят отправить обратно в Морровинд, но стражник, которому ее доверили, нашел для нее другого покупателя. Мне удалось проследить за стражником до тайного подвала, где должна была состояться сделка, и убить покупателя."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestD",
+        "form_id": "[0500117A]",
+        "index": 89,
+        "type": "QUST CNAM",
+        "original": "After solving the armory puzzle, I now have access to the treasure behind the portcullis. Inside I found a note from a renegade priest. I located and defeated the priest and took the Mask of Dagoth Ur off his corpse.",
+        "string": "Решив головоломку в оружейной, мне удалось получить доступ к сокровищу за опускной решеткой. Внутри оказалась записка от жреца-отступника. Мне удалось найти и одолеть жреца и забрать с его тела маску Дагота Ура."
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 35,
+        "type": "QUST NNAM",
+        "original": "Examine Kenro's corpse for further clues",
+        "string": "Осмотреть тело Кенро на предмет зацепок"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestA",
+        "form_id": "[05000CA0]",
+        "index": 11,
+        "type": "QUST NNAM",
+        "original": "Read Masks of the Tribunal",
+        "string": "Прочесть Маски Трибунала"
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 82,
+        "type": "QUST CNAM",
+        "original": "After finding information on a group of Tribunal heretics, I followed the trail to a hidden temple full of worshipers. I attacked the Matriarch and her guard, clearing the temple of the heretics.",
+        "string": "Выяснив подробности о группе еретиков, поклоняющихся Трибуналу, мне удалось найти скрытый храм, полный отступников. Напав на Матриарха и ее стражу, мне удалось очистить храм от еретиков."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestE",
+        "form_id": "[050990EF]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Place the gems in the forge (<Global=ccASVSSE001_GemsGlobalSLOTTED>/4)",
+        "string": "Поместить кристаллы в кузницу (<Global=ccASVSSE001_GemsGlobalSLOTTED>/4)"
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 99,
+        "type": "QUST CNAM",
+        "original": "After finding information on a group of Tribunal heretics, I followed the trail to a hidden temple full of worshipers. Posing as one of Her Hands, I was able to speak to the Matriarch and receive the Goddess' commands. Having completed her tasks, I was given a key to the armory.",
+        "string": "Выяснив подробности о группе еретиков, поклоняющихся Трибуналу, мне удалось найти скрытый храм, полный отступников. Выдав себя за Ее Руку, мне удалось поговорить с Матриархом и получить поручения Богини. После выполнения Ее поручений мне дали ключ от оружейной."
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 260,
+        "type": "QUST NNAM",
+        "original": "Speak to the Matriarch",
+        "string": "Поговорить с Матриархом"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestB",
+        "form_id": "[05000F19]",
+        "index": 86,
+        "type": "QUST CNAM",
+        "original": "I delivered propaganda letters to a contact in the city and waited a few hours for her to translate them. After retrieving the letters, I can now disseminate them to the general public, or give them to a Reclamation Priest.",
+        "string": "Порученные мне пропагандистские письма были доставлены доверенному лицу в городе. Пришлось подождать пару часов, пока она их переводила. Полученные письма можно раздать народу или отнести их жрецу Истребования."
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 110,
+        "type": "QUST NNAM",
+        "original": "Ask the Matriarch for a command from the Goddess",
+        "string": "Спросить у Матриарха, что повелевает Богиня"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestE",
+        "form_id": "[050990EF]",
+        "index": 2,
+        "type": "QUST NNAM",
+        "original": "Retrieve the Pyroil Tar",
+        "string": "Добыть огненную смолу"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestB",
+        "form_id": "[05000F19]",
+        "index": 95,
+        "type": "QUST CNAM",
+        "original": "I delivered propaganda letters to a contact in the city and waited a few hours for her to translate them. After retrieving the letters, I can now disseminate them to the general public, or give them to a Reclamation Priest.",
+        "string": "Порученные мне пропагандистские письма были доставлены доверенному лицу в городе. Пришлось подождать пару часов, пока она их переводила. Полученные письма можно раздать народу или отнести их жрецу Истребования."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestB",
+        "form_id": "[05000F19]",
+        "index": 50,
+        "type": "QUST NNAM",
+        "original": "Distribute the letters (<Global=ccASVSSE001_LetterGlobal>/4)",
+        "string": "Раздать письма (<Global=ccASVSSE001_LetterGlobal>/4)"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestE",
+        "form_id": "[050990EF]",
+        "index": 100,
+        "type": "QUST NNAM",
+        "original": "Pick up Trueflame",
+        "string": "Забрать Истинное Пламя"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestD",
+        "form_id": "[0500117A]",
+        "index": 76,
+        "type": "QUST CNAM",
+        "original": "I should investigate the temple armory and look for clues as well as pick up any valuable weapons or armor that may suit my needs.",
+        "string": "Надо обследовать храмовую оружейную и поискать улики, а также взять какое-нибудь оружие или доспехи, которые мне пригодятся."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestD",
+        "form_id": "[0500117A]",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Read Erden Relvel's Note",
+        "string": "Прочесть записку Эрдена Релвела"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestA",
+        "form_id": "[05000CA0]",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Retrieve the note",
+        "string": "Забрать записку"
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Look for clues at the Temple in Raven Rock",
+        "string": "Поискать зацепки в храме Вороньей Скалы"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestB",
+        "form_id": "[05000F19]",
+        "index": 102,
+        "type": "QUST CNAM",
+        "original": "I have a propaganda letter from Priest Drureth that requires a translation. I should speak to his contact in Raven Rock to have the translation done.",
+        "string": "Жрец Друрет передал мне пропагандистское письмо, которое нужно перевести. Мне следует поговорить с его доверенным лицом в Вороньей Скале. Эта женщина может сделать перевод."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestB",
+        "form_id": "[05000F19]",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "I delivered propaganda letters to a contact in the city and waited a few hours for her to translate them. After retrieving the letters, I finished the task as I saw fit.",
+        "string": "Порученные мне пропагандистские письма были доставлены доверенному лицу в городе. Пришлось подождать пару часов, пока она их переводила. Полученные переводы были розданы так, как я считаю правильным."
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 89,
+        "type": "QUST CNAM",
+        "original": "There's been plenty of upheaval in Solstheim since the eruption of the Red Mountain, both politically and religiously. I should investigate the Temple in Raven Rock and see if I can learn more.",
+        "string": "С тех пор, как произошло извержение Красной горы, в Солстейме неспокойная политическая и религиозная обстановка. Нужно отправиться в храм Вороньей Скалы и узнать какие-нибудь новости."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestB",
+        "form_id": "[05000F19]",
+        "index": 60,
+        "type": "QUST NNAM",
+        "original": "Give the letters to the Reclamation Priest",
+        "string": "Отдать письма жрецу Истребования"
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 60,
+        "type": "QUST NNAM",
+        "original": "Add the materials to the forge",
+        "string": "Поместить материалы в кузницу"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestE",
+        "form_id": "[050990EF]",
+        "index": 73,
+        "type": "QUST CNAM",
+        "original": "I've picked up a Dwarven gem that looks like it's tied to the Dwarven Forge in Fahlbtharz. With enough gems, I may be able to restore power to the forge.",
+        "string": "Мне удалось найти двемерский кристалл. Он наверняка из двемерской кузницы в Фалбтарзе. Если у меня будет нужное количество кристаллов, я смогу запустить кузницу."
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 130,
+        "type": "QUST NNAM",
+        "original": "Examine the priest's body",
+        "string": "Осмотреть тело жреца"
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "Retrieve the unenchanted weapon",
+        "string": "Добыть незачарованное оружие"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestA",
+        "form_id": "[05000CA0]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Buyer Beware",
+        "string": "Доверяй, но проверяй"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestE",
+        "form_id": "[050990EF]",
+        "index": 87,
+        "type": "QUST CNAM",
+        "original": "In order to help restore Trueflame's enchantment, I covered the Unenchanted Weapon in Pyroil Tar, a special ingredient used in Dwarven smithing.",
+        "string": "Чтобы восстановить зачарование Истинного Пламени, мне пришлось покрыть незачарованное оружие огненной смолой - особым ингредиентом, который применялся двемерскими кузнецами."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestC",
+        "form_id": "[05000F1A]",
+        "index": 72,
+        "type": "QUST CNAM",
+        "original": "I've discovered a temple near Raven Rock where worshipers of Almalexia gather. It seems the temple Matriarch is searching for the lost Masks of Vivec and Sothal Sil. Evidently, one of the temple's Curates had been following up on a lead for the masks when she went missing.",
+        "string": "Возле Вороньей Скалы мне удалось найти храм, где собираются последователи Алмалексии. Матриарх храма ищет утерянные маски Вивека и Сота Сила. Видимо, один из викариев храма шел по следу маски близ Кагрензела, однако потом викарий пропала."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestE",
+        "form_id": "[050990EF]",
+        "index": 85,
+        "type": "QUST CNAM",
+        "original": "I've picked up a Dwarven gem that looks like it's tied to the Dwarven Forge in Fahlbtharz. With enough gems, I may be able to restore power to the forge.",
+        "string": "Мне удалось найти двемерский кристалл. Он наверняка из двемерской кузницы в Фалбтарзе. Если у меня будет нужное количество кристаллов, я смогу запустить кузницу."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestD",
+        "form_id": "[0500117A]",
+        "index": 5,
+        "type": "QUST NNAM",
+        "original": "Read the Matriarch's note",
+        "string": "Прочесть записку Матриарха"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestD",
+        "form_id": "[0500117A]",
+        "index": 50,
+        "type": "QUST NNAM",
+        "original": "Retrieve the Mask of Dagoth Ur",
+        "string": "Забрать маску Дагота Ура"
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 67,
+        "type": "QUST CNAM",
+        "original": "After finding information on a group of Tribunal heretics, I followed the trail to a hidden temple full of worshipers. Posing as one of Her Hands, I was able to speak to the Matriarch and receive the Goddess' commands. Having completed her tasks, I was given a key to the armory.",
+        "string": "Выяснив подробности о группе еретиков, поклоняющихся Трибуналу, мне удалось найти скрытый храм, полный отступников. Выдав себя за Ее Руку, мне удалось поговорить с Матриархом и получить поручения Богини. После выполнения Ее поручений мне дали ключ от оружейной."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestA",
+        "form_id": "[05000CA0]",
+        "index": 2000,
+        "type": "QUST NNAM",
+        "original": "Return to the temple",
+        "string": "Вернуться в храм"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestA",
+        "form_id": "[05000CA0]",
+        "index": 21,
+        "type": "QUST NNAM",
+        "original": "Shoot down the bird outside the Bulwark's south gate",
+        "string": "Подстрелить птицу за южными воротами бастиона"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestE",
+        "form_id": "[050990EF]",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "I've picked up a Dwarven gem that looks like it's tied to the Dwarven Forge in Fahlbtharz. With enough gems, I may be able to restore power to the forge.",
+        "string": "Мне удалось найти двемерский кристалл. Он наверняка из двемерской кузницы в Фалбтарзе. Если у меня будет нужное количество кристаллов, я смогу запустить кузницу."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestE",
+        "form_id": "[050990EF]",
+        "index": 79,
+        "type": "QUST CNAM",
+        "original": "I've picked up a Dwarven gem that looks like it's tied to the Dwarven Forge in Fahlbtharz. I placed the gem into the forge's main panel, which has four slots in total.",
+        "string": "Мне удалось найти двемерский кристалл. Он наверняка из двемерской кузницы в Фалбтарзе. Кристалл помещен в одну из четырех ячеек на главной панели кузницы."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestE",
+        "form_id": "[050990EF]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Collect the Dwarven Forge Gems throughout Solstheim (<Global=ccASVSSE001_GemsGlobal>/4)",
+        "string": "Собрать двемерские кристаллы для кузницы в Солстейме (<Global=ccASVSSE001_GemsGlobal>/4)"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestD",
+        "form_id": "[0500117A]",
+        "index": 95,
+        "type": "QUST CNAM",
+        "original": "The temple was attacked by Ash Zombies, and the Matriarch has handed me a note that may provide more clues on who is responsible for the attack.",
+        "string": "На храм напали пепельные зомби, и Матриарх передала мне записку, содержание которой может поведать мне, кто стоит за этой атакой."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestA",
+        "form_id": "[05000CA0]",
+        "index": 69,
+        "type": "QUST CNAM",
+        "original": "I've discovered a temple near Raven Rock where worshipers of Almalexia gather. It seems the temple Matriarch is searching for the lost Masks of Vivec and Sotha Sil.",
+        "string": "Возле Вороньей Скалы мне удалось найти храм, где собираются последователи Алмалексии. Матриарх храма ищет утерянные маски Вивека и Сота Сила."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestE",
+        "form_id": "[050990EF]",
+        "index": 78,
+        "type": "QUST CNAM",
+        "original": "I've picked up a Dwarven gem that looks like it's tied to the Dwarven Forge in Fahlbtharz. I placed the gem and three others into the forge's main panel and restored power to the machine.",
+        "string": "Мне удалось найти двемерский кристалл. Он наверняка из двемерской кузницы в Фалбтарзе. Кристалл вместе с тремя остальными помещен на главную панель кузницы. Это позволило запустить механизм."
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Retrieve the Pyroil Tar",
+        "string": "Добыть огненную смолу"
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 160,
+        "type": "QUST NNAM",
+        "original": "Complete the tasks of the Goddess (<Global=ccASVSSE001_TaskGlobal>/3)",
+        "string": "Выполнить повеления Богини (<Global=ccASVSSE001_TaskGlobal>/3)"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestE",
+        "form_id": "[050990EF]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Trueflame",
+        "string": "Истинное Пламя"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestA",
+        "form_id": "[05000CA0]",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "Read the Note on the Target",
+        "string": "Прочесть записку о цели"
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 75,
+        "type": "QUST CNAM",
+        "original": "At the Temple in Raven Rock I learned of a heretic attempting to use a forge in Fahlbtharz to enchant a Dwemer weapon. I traveled to the forge and was attacked by a potential heretic. I should investigate further to find out more about this clandestine group.",
+        "string": "В храме Вороньей Скалы нашлась информация о попытке еретика зачаровать двемерское оружие с помощью кузницы в Фалбтарзе. Стоило мне попасть к кузнице, как на меня напал, вероятно, один из еретиков. Нужно разузнать подробнее об этом скрытном культе."
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 15,
+        "type": "QUST NNAM",
+        "original": "Read Hand Kenro's Note",
+        "string": "Прочесть записку Руки Кенро"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestB",
+        "form_id": "[05000F19]",
+        "index": 81,
+        "type": "QUST CNAM",
+        "original": "I delivered propaganda letters to a contact in the city and waited a few hours for her to translate them. After retrieving the letters, I can now disseminate them to the general public, or give them to a Reclamation Priest.",
+        "string": "Порученные мне пропагандистские письма были доставлены доверенному лицу в городе. Пришлось подождать пару часов, пока она их переводила. Полученные письма можно раздать народу или отнести их жрецу Истребования."
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 69,
+        "type": "QUST CNAM",
+        "original": "In the wake of the Red Mountain's eruption, worship of the old Tribunal waned, and in its place there came a Reclamation of the original Dunmer gods. However, it's possible some still cling to the old ways. At the Temple in Raven Rock I learned of a heretic attempting to use a forge in Fahlbtharz to enchant a Dwemer weapon. Upon entering the forge area, the heretic attacked.",
+        "string": "После извержения Красной горы поклоняться старому Трибуналу стали намного меньше. Его место заняло Истребование древних данмерских богов. Но некоторые все еще не расстались со старыми привычками. В храме Вороньей Скалы нашлась информация о попытке еретика зачаровать двемерское оружие с помощью кузницы в Фалбтарзе. Стоило мне войти в кузницу, как на меня напал еретик."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestE",
+        "form_id": "[050990EF]",
+        "index": 85,
+        "type": "QUST CNAM",
+        "original": "I've picked up four Dwarven gems that appear to be tied to the Dwarven Forge in Fahlbtharz. I should place them in the main panel to restore power to the forge.",
+        "string": "Мне удалось найти все четыре двемерских кристалла из двемерской кузницы в Фалбтарзе. Нужно поместить их на главную панель, чтобы запустить кузницу."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestB",
+        "form_id": "[05000F19]",
+        "index": 96,
+        "type": "QUST CNAM",
+        "original": "I delivered propaganda letters to a contact in the city and waited a few hours for her to translate them. After retrieving the letters, I can now disseminate them to the general public, or give them to a Reclamation Priest.",
+        "string": "Порученные мне пропагандистские письма были доставлены доверенному лицу в городе. Пришлось подождать пару часов, пока она их переводила. Полученные письма можно раздать народу или отнести их жрецу Истребования."
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 89,
+        "type": "QUST CNAM",
+        "original": "After finding information on a group of Tribunal heretics, I followed the trail to a hidden temple full of worshipers.",
+        "string": "Выяснив подробности о группе еретиков, поклоняющихся Трибуналу, мне удалось найти скрытый храм, полный отступников."
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 76,
+        "type": "QUST CNAM",
+        "original": "After finding information on a group of Tribunal heretics, I followed the trail to a hidden temple full of worshipers. Posing as one of Her Hands, I was able to speak to the Matriarch and receive the Goddess' commands.",
+        "string": "Выяснив подробности о группе еретиков, поклоняющихся Трибуналу, мне удалось найти скрытый храм, полный отступников. Выдав себя за Ее Руку, мне удалось поговорить с Матриархом и получить поручения Богини."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestD",
+        "form_id": "[0500117A]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Ashen Heart",
+        "string": "Пепельное сердце"
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 88,
+        "type": "QUST CNAM",
+        "original": "In the wake of the Red Mountain's eruption, worship of the old Tribunal waned, and in its place there came a Reclamation of the original Dunmer gods. However, it's possible some still cling to the old ways. At the Temple in Raven Rock I learned of a heretic attempting to use a forge in Fahlbtharz to enchant a Dwemer weapon. Upon entering the forge area, the heretic attacked, and I managed to kill him.",
+        "string": "После извержения Красной горы поклоняться старому Трибуналу стали намного меньше. Его место заняло Истребование древних данмерских богов. Но некоторые все еще не расстались со старыми привычками. В храме Вороньей Скалы нашлась информация о попытке еретика зачаровать двемерское оружие с помощью кузницы в Фалбтарзе. Стоило мне войти в кузницу, как на меня напал еретик. Мне удалось его убить."
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 93,
+        "type": "QUST CNAM",
+        "original": "After finding information on a group of Tribunal heretics, I followed the trail to a hidden temple full of worshipers. After reading a note written by the Matriarch, I learned of several activities outside temple I can investigate.",
+        "string": "Выяснив подробности о группе еретиков, поклоняющихся Трибуналу, мне удалось найти скрытый храм, полный отступников. Из записки, написанной Матриархом, мне удалось узнать о подозрительной деятельности вокруг храма. Нужно выяснить подробности."
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 84,
+        "type": "QUST CNAM",
+        "original": "There's been plenty of upheaval in Solstheim since the eruption of the Red Mountain, both politically and religiously. At the Temple in Raven Rock I learned of a heretic attempting to use a forge in Fahlbtharz to enchant a Dwemer weapon.",
+        "string": "С тех пор, как произошло извержение Красной горы, в Солстейме неспокойная политическая и религиозная обстановка. В храме Вороньей Скалы нашлась информация о попытке еретика зачаровать двемерское оружие с помощью кузницы в Фалбтарзе."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestB",
+        "form_id": "[05000F19]",
+        "index": 104,
+        "type": "QUST CNAM",
+        "original": "I delivered a propaganda letter to a contact in Raven Rock in hopes of getting it translated. I need to wait a few hours for her to finish the work.",
+        "string": "Порученное мне пропагандистское письмо было доставлено доверенному лицу в Вороньей Скале. Эта женщина должна его перевести. Нужно подождать пару часов, пока она не закончит."
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 96,
+        "type": "QUST CNAM",
+        "original": "After finding information on a group of Tribunal heretics, I followed the trail to a hidden temple full of worshipers. I revealed my identity to the Matriarch and must now prove my loyalty by praying at the shrine.",
+        "string": "Выяснив подробности о группе еретиков, поклоняющихся Трибуналу, мне удалось найти скрытый храм, полный отступников. Открывшись Матриарху, мне теперь нужно доказать ей свою преданность, помолившись у святилища."
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 148,
+        "type": "QUST NNAM",
+        "original": "Pray at the shrine",
+        "string": "Помолиться у святилища"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestE",
+        "form_id": "[050990EF]",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "I found an unenchanted weapon and placed it into a special slot in the Dwarven Forge. With the forge fully operational, the weapon's enchantment has been restored and I can now remove it.",
+        "string": "Найденное мной незачарованное оружие помещено в специальную ячейку в двемерской кузнице. Теперь кузница работает как положено, и зачарование оружия восстановлено. Я могу его забрать."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestA",
+        "form_id": "[05000CA0]",
+        "index": 50,
+        "type": "QUST NNAM",
+        "original": "Track the Redoran Guard's movements after midnight",
+        "string": "Проследить за редоранским стражником после полуночи"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestE",
+        "form_id": "[050990EF]",
+        "index": 70,
+        "type": "QUST NNAM",
+        "original": "Apply the Pyroil Tar to the Unenchanted Weapon",
+        "string": "Применить огненную смолу к незачарованному оружию."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestC",
+        "form_id": "[05000F1A]",
+        "index": 88,
+        "type": "QUST CNAM",
+        "original": "I've discovered a temple near Raven Rock where worshipers of Almalexia gather. It seems the temple Matriarch is searching for the lost Masks of Vivec and Sothal Sil. Evidently, one of the temple's Curates had been following up on a lead near Kagrenzel. I should head to the area and see what I can find.",
+        "string": "Возле Вороньей Скалы мне удалось найти храм, где собираются последователи Алмалексии. Матриарх храма ищет утерянные маски Вивека и Сота Сила. Видимо, один из викариев храма шел по следу маски близ Кагрензела. Надо отправиться туда и поискать ее."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestB",
+        "form_id": "[05000F19]",
+        "index": 87,
+        "type": "QUST CNAM",
+        "original": "At a hidden temple in Raven Rock, I gained possession of a propaganda letter that required a translation. I delivered the letters to a contact in the city and waited a few hours for her to translate them. I then retrieved the letters and finished the task as I saw fit.",
+        "string": "В скрытом храме Вороньей Скалы мне выдали пропагандистское письмо, которое нужно перевести. Порученные мне письма были доставлены доверенному лицу в городе. Пришлось подождать пару часов, пока она их переводила. Эти переводы были розданы так, как я считаю правильным."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestA",
+        "form_id": "[05000CA0]",
+        "index": 95,
+        "type": "QUST CNAM",
+        "original": "I've discovered a temple near Raven Rock where worshipers of Almalexia gather. It seems the temple Matriarch is searching for the lost Masks of Vivec and Sotha Sil. Rumor has it that the Mask of Vivec is being transported back to Morrowind, but an enterprising guard is looking to sell to another buyer. I should watch the Bulwark for any guards leaving their post near midnight.",
+        "string": "Возле Вороньей Скалы мне удалось найти храм, где собираются последователи Алмалексии. Матриарх храма ищет утерянные маски Вивека и Сота Сила. Говорят, маску Вивека хотят отправить обратно в Морровинд, но стражник, которому ее доверили, нашел для нее другого покупателя. Нужно отправиться на Бастион и проследить за тем стражником, который покинет свой пост около полуночи."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestB",
+        "form_id": "[05000F19]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Deliver the propaganda letter to the translator",
+        "string": "Доставить пропагандистское письмо переводчице"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestE",
+        "form_id": "[050990EF]",
+        "index": 66,
+        "type": "QUST CNAM",
+        "original": "I found an Unenchanted Weapon and placed it into a special slot in the Dwarven Forge. Once the forge has its power restored, it should enchant the weapon.",
+        "string": "Найденное мной незачарованное оружие помещено в специальную ячейку в двемерской кузнице. Теперь кузница работает, и можно зачаровать в ней оружие."
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 125,
+        "type": "QUST NNAM",
+        "original": "(Optional) Earn the Matriarch's trust and join the temple heretics",
+        "string": "(Дополнительно) Заслужить доверие Матриарха и присоединиться к еретикам храма"
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 155,
+        "type": "QUST NNAM",
+        "original": "Read Masks of the Tribunal",
+        "string": "Прочесть Маски Трибунала"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestE",
+        "form_id": "[050990EF]",
+        "index": 89,
+        "type": "QUST CNAM",
+        "original": "I've picked up a Dwarven gem that looks like it's tied to the Dwarven Forge in Fahlbtharz. I placed the gem into the forge's main panel, which has four slots in total.",
+        "string": "Мне удалось найти двемерский кристалл. Он наверняка из двемерской кузницы в Фалбтарзе. Кристалл помещен в одну из четырех ячеек на главной панели кузницы."
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 111,
+        "type": "QUST CNAM",
+        "original": "After finding information on a group of Tribunal heretics, I followed the trail to a hidden temple full of worshipers. Posing as one of Her Hands, I was able to speak to the Matriarch and receive the Goddess' commands. Having completed her tasks, I returned to the temple to find it being attacked by Ash Zombies. I defeated the zombies and should speak with the Matriarch.",
+        "string": "Выяснив подробности о группе еретиков, поклоняющихся Трибуналу, мне удалось найти скрытый храм, полный отступников. Выдав себя за Ее Руку, мне удалось поговорить с Матриархом и получить поручения Богини. После выполнения ее поручений мне пришлось вернуться в храм. Оказалось, что на него напали пепельные зомби. Мне удалось расправиться с зомби. Теперь нужно поговорить с Матриархом."
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 149,
+        "type": "QUST NNAM",
+        "original": "Defeat Almalexia's Hands in single combat (<Global=ccASVSSE001_FightGlobal>/4)",
+        "string": "Победить Руки Алмалексии в поединке (<Global=ccASVSSE001_FightGlobal>/4)"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestD",
+        "form_id": "[0500117A]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Look for clues in the armory",
+        "string": "Поискать улики в оружейной"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestA",
+        "form_id": "[05000CA0]",
+        "index": 60,
+        "type": "QUST NNAM",
+        "original": "Look for clues in the cellar",
+        "string": "Поискать улики в подвале"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestC",
+        "form_id": "[05000F1A]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Careless Curation",
+        "string": "Беспечность наказуема"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestC",
+        "form_id": "[05000F1A]",
+        "index": 25,
+        "type": "QUST NNAM",
+        "original": "Find the missing Curate in Kagrenzel",
+        "string": "Найти пропавшего викария в Кагрензеле"
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Ghosts of the Tribunal",
+        "string": "Призраки Трибунала"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestB",
+        "form_id": "[05000F19]",
+        "index": 81,
+        "type": "QUST CNAM",
+        "original": "I delivered propaganda letters to a contact in the city and waited a few hours for her to translate them. After retrieving the letters, I finished the task as I saw fit.",
+        "string": "Порученные мне пропагандистские письма были доставлены доверенному лицу в городе. Пришлось подождать пару часов, пока она их переводила. Полученные переводы были розданы так, как я считаю правильным."
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 84,
+        "type": "QUST CNAM",
+        "original": "At the Temple in Raven Rock I learned of a heretic attempting to use a forge in Fahlbtharz to enchant a Dwemer weapon. I traveled to the ruin and picked up the Pyroil Tar required to enchant it.",
+        "string": "В храме Вороньей Скалы нашлась информация о попытке еретика зачаровать двемерское оружие с помощью кузницы в Фалбтарзе. Мне удалось раздобыть в руинах огненную смолу для зачарования."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestE",
+        "form_id": "[050990EF]",
+        "index": 79,
+        "type": "QUST CNAM",
+        "original": "I've picked up a Dwarven gem that looks like it's tied to the Dwarven Forge in Fahlbtharz. I placed the gem into the forge's main panel, which has four slots in total.",
+        "string": "Мне удалось найти двемерский кристалл. Он наверняка из двемерской кузницы в Фалбтарзе. Кристалл помещен в одну из четырех ячеек на главной панели кузницы."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestD",
+        "form_id": "[0500117A]",
+        "index": 68,
+        "type": "QUST CNAM",
+        "original": "After solving the armory puzzle, I now have access to the treasure behind the portcullis. Inside I found a note whose contents may provide further information.",
+        "string": "Решив головоломку в оружейной, мне удалось получить доступ к сокровищу за опускной решеткой. Внутри оказалась записка, содержание которой может мне помочь."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestC",
+        "form_id": "[05000F1A]",
+        "index": 99,
+        "type": "QUST CNAM",
+        "original": "I've discovered a temple near Raven Rock where worshipers of Almalexia gather. It seems the temple Matriarch is searching for the lost Masks of Vivec and Sotha Sil.",
+        "string": "Возле Вороньей Скалы мне удалось найти храм, где собираются последователи Алмалексии. Матриарх храма ищет утерянные маски Вивека и Сота Сила."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestD",
+        "form_id": "[0500117A]",
+        "index": 15,
+        "type": "QUST NNAM",
+        "original": "Use the mannequins to solve the armory room puzzle",
+        "string": "Решить головоломку в оружейной с помощью манекенов"
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 106,
+        "type": "QUST CNAM",
+        "original": "At the Temple in Raven Rock I learned of a heretic attempting to use a forge in Fahlbtharz to enchant a Dwemer weapon. I traveled to the ruin and picked up the weapon and the tar required to enchant it. I can now place the materials in the forge.",
+        "string": "В храме Вороньей Скалы нашлась информация о попытке еретика зачаровать двемерское оружие с помощью кузницы в Фалбтарзе. Мне удалось раздобыть в руинах оружие и огненную смолу для его зачарования. Теперь можно поместить материалы в кузницу."
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 300,
+        "type": "QUST NNAM",
+        "original": "Enter the armory",
+        "string": "Войти в оружейную"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestE",
+        "form_id": "[050990EF]",
+        "index": 113,
+        "type": "QUST CNAM",
+        "original": "I've picked up a Dwarven gem that looks like it's tied to the Dwarven Forge in Fahlbtharz. I placed the gem into the forge's main panel, which has four slots in total.",
+        "string": "Мне удалось найти двемерский кристалл. Он наверняка из двемерской кузницы в Фалбтарзе. Кристалл помещен в одну из четырех ячеек на главной панели кузницы."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestE",
+        "form_id": "[050990EF]",
+        "index": 91,
+        "type": "QUST CNAM",
+        "original": "I found an unenchanted weapon and placed it into a special slot in the Dwarven Forge. Once the forge has its power restored, it should enchant the weapon.",
+        "string": "Найденное мной незачарованное оружие помещено в специальную ячейку в двемерской кузнице. Теперь кузница работает, и можно зачаровать в ней оружие."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestD",
+        "form_id": "[0500117A]",
+        "index": 99,
+        "type": "QUST CNAM",
+        "original": "After solving the armory puzzle, I now have access to the treasure behind the portcullis. Inside I found a note from a renegade priest. I located and defeated the priest and can now take the Mask of Dagoth Ur from his corpse.",
+        "string": "Решив головоломку в оружейной, мне удалось получить доступ к сокровищу за опускной решеткой. Внутри оказалась записка от жреца-отступника. Мне удалось найти и одолеть жреца. Теперь я могу забрать с его тела маску Дагота Ура."
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 72,
+        "type": "QUST CNAM",
+        "original": "In the wake of the Red Mountain's eruption, worship of the old Tribunal waned, and in its place there came a Reclamation of the original Dunmer gods. However, it's possible some still cling to the old ways. At the Temple in Raven Rock I learned of a heretic attempting to use a forge in Fahlbtharz to enchant a Dwemer weapon. Upon entering the forge area, the heretic attacked, and I managed to kill him and found the weapon on his body.",
+        "string": "После извержения Красной горы поклоняться старому Трибуналу стали намного меньше. Его место заняло Истребование древних данмерских богов. Но некоторые все еще не расстались со старыми привычками. В храме Вороньей Скалы нашлась информация о попытке еретика зачаровать двемерское оружие с помощью кузницы в Фалбтарзе. Стоило мне войти в кузницу, как на меня напал еретик. Мне удалось его убить и найти оружие на его теле."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestB",
+        "form_id": "[05000F19]",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "Retrieve the translated letters",
+        "string": "Забрать переведенные письма"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestD",
+        "form_id": "[0500117A]",
+        "index": 93,
+        "type": "QUST CNAM",
+        "original": "After solving the armory puzzle, I now have access to the treasure behind the portcullis. Inside I found a note from a priest of Dagoth Ur.",
+        "string": "Решив головоломку в оружейной, мне удалось получить доступ к сокровищу за опускной решеткой. Внутри оказалась записка от жреца Дагота Ура."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestE",
+        "form_id": "[050990EF]",
+        "index": 80,
+        "type": "QUST CNAM",
+        "original": "I found a journal on the body of a heretic that implies he was attempting to make use of a Dwarven forge. I should investigate the area and see what else I can find.",
+        "string": "На теле еретика обнаружился дневник, в котором говорится, что еретик пытался воспользоваться двемерской кузницей. Нужно осмотреть это место - вдруг удастся узнать что-нибудь еще."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestE",
+        "form_id": "[050990EF]",
+        "index": 3,
+        "type": "QUST NNAM",
+        "original": "Retrieve the Unenchanted Weapon",
+        "string": "Добыть незачарованное оружие"
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 105,
+        "type": "QUST NNAM",
+        "original": "(Optional) Wear Kenro's helmet and robes and infiltrate the temple ranks",
+        "string": "(Дополнительно) Надеть шлем и одежду Кенро и проникнуть в храм"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestA",
+        "form_id": "[05000CA0]",
+        "index": 70,
+        "type": "QUST NNAM",
+        "original": "Kill the Buyer",
+        "string": "Убить покупателя"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestB",
+        "form_id": "[05000F19]",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Wait for 2 hours for the letter to be translated",
+        "string": "Подождать 2 часа, пока письмо переведут"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestD",
+        "form_id": "[0500117A]",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "Kill the Priest of Dagoth Ur",
+        "string": "Убить жреца Дагота Ура"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestC",
+        "form_id": "[05000F1A]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Ask about the missing Curate",
+        "string": "Узнать больше о пропавшем викарии"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestC",
+        "form_id": "[05000F1A]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Read Curate Melita's Plea",
+        "string": "Прочесть мольбу викария Мелиты"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestB",
+        "form_id": "[05000F19]",
+        "index": 120,
+        "type": "QUST CNAM",
+        "original": "I've discovered a temple near Raven Rock where worshipers of Almalexia gather. The Matriarch wishes to spread the word of the Tribunal using propaganda. It seems Drureth, a temple priest, has the letter in question.",
+        "string": "Возле Вороньей Скалы мне удалось найти храм, где собираются последователи Алмалексии. Матриарх хочет распространить учение Трибунала через пропагандистские письма. Такое письмо есть у храмового жреца Друрета."
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 94,
+        "type": "QUST CNAM",
+        "original": "After finding information on a group of Tribunal heretics, I followed the trail to a hidden temple full of worshipers. Posing as one of Her Hands, I was able to speak to the Matriarch and receive the Goddess' commands. Having completed her tasks, I returned to the temple to find it being attacked by Ash Zombies.",
+        "string": "Выяснив подробности о группе еретиков, поклоняющихся Трибуналу, мне удалось найти скрытый храм, полный отступников. Выдав себя за Ее Руку, мне удалось поговорить с Матриархом и получить поручения Богини. После выполнения ее поручений мне пришлось вернуться в храм. Оказалось, что на него напали пепельные зомби."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestC",
+        "form_id": "[05000F1A]",
+        "index": 81,
+        "type": "QUST CNAM",
+        "original": "I've discovered a temple near Raven Rock where worshipers of Almalexia gather. It seems the temple Matriarch is searching for the lost Masks of Vivec and Sothal Sil. Evidently, one of the temple's Curates had been following up on a lead near Kagrenzel. I should head to the area and see what I can find.",
+        "string": "Возле Вороньей Скалы мне удалось найти храм, где собираются последователи Алмалексии. Матриарх храма ищет утерянные маски Вивека и Сота Сила. Видимо, один из викариев храма шел по следу маски близ Кагрензела. Надо отправиться туда и поискать ее."
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 200,
+        "type": "QUST NNAM",
+        "original": "Return to the temple",
+        "string": "Вернуться в храм"
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 79,
+        "type": "QUST CNAM",
+        "original": "After finding information on a group of Tribunal heretics, I followed the trail to a hidden temple full of worshipers. Posing as one of Her Hands, I was able to speak to the Matriarch and receive the Goddess' commands. Having completed her tasks, I should now return to the temple.",
+        "string": "Выяснив подробности о группе еретиков, поклоняющихся Трибуналу, мне удалось найти скрытый храм, полный отступников. Выдав себя за Ее Руку, мне удалось поговорить с Матриархом и получить поручения Богини. После выполнения Ее поручений мне нужно вернуться в храм."
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 25,
+        "type": "QUST NNAM",
+        "original": "Kill the heretic",
+        "string": "Убить еретика"
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 140,
+        "type": "QUST NNAM",
+        "original": "Read the note on the missing Curate",
+        "string": "Прочесть записку пропавшего викария"
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestA",
+        "form_id": "[05000CA0]",
+        "index": 80,
+        "type": "QUST NNAM",
+        "original": "Retrieve the Mask of Vivec",
+        "string": "Забрать маску Вивека"
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 91,
+        "type": "QUST CNAM",
+        "original": "At the Temple in Raven Rock I learned of a heretic attempting to use a forge in Fahlbtharz to enchant a Dwemer weapon. I traveled to the forge, placed the crafting materials inside and activated it. I should now be able to pick up the enchanted Trueflame.",
+        "string": "В храме Вороньей Скалы нашлась информация о попытке еретика зачаровать двемерское оружие с помощью кузницы в Фалбтарзе. Мне удалось добраться до кузницы, поместить в нее материалы и активировать ее. Теперь я могу забрать зачарованное Истинное Пламя."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestD",
+        "form_id": "[0500117A]",
+        "index": 83,
+        "type": "QUST CNAM",
+        "original": "Inside the temple armory, I found a note that implies something important is hidden in the chest on the rear wall. The note implies that to open it, I need to place masks on the appropriate mannequins.",
+        "string": "В храмовой оружейной нашлась записка, из которой следует, что в сундуке на задней стене спрятано что-то ценное. Также в записке говорится, что для того, чтобы открыть сундук, нужно надеть маски на соответствующие манекены."
+    },
+    {
+        "editor_id": "ccASVSSE001_QuestE",
+        "form_id": "[050990EF]",
+        "index": 80,
+        "type": "QUST NNAM",
+        "original": "Place the Unenchanted Weapon in the forge",
+        "string": "Поместить незачарованное оружие в кузницу"
+    },
+    {
+        "editor_id": "ccASVSSE001_Quest",
+        "form_id": "[05000CC3]",
+        "index": 150,
+        "type": "QUST NNAM",
+        "original": "Speak to the Matriarch",
+        "string": "Поговорить с Матриархом"
+    },
+    {
+        "editor_id": "ccASVSSE001_MatchingSet",
+        "form_id": "[05000CC4]",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Matching Set",
+        "string": "Полный комплект"
+    },
+    {
+        "editor_id": "ccASVSSE001_VampireLightofDayPerk",
+        "form_id": "[05131020]",
+        "index": null,
+        "type": "PERK DESC",
+        "original": "Vampire damage from holding Light of Day",
+        "string": "Урон вампирам от дневного света"
+    },
+    {
+        "editor_id": "ccASVSSE001_PuzzlePerk",
+        "form_id": "[05000CA5]",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Matching Set",
+        "string": "Полный комплект"
+    },
+    {
+        "editor_id": "ccASVSSE001_VampireLightofDayPerk",
+        "form_id": "[05131020]",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Turn",
+        "string": "Превращение"
+    },
+    {
+        "editor_id": "ccASVSSE001_MatchingSetREAL",
+        "form_id": "[05024944]",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Matching Set",
+        "string": "Полный комплект"
+    },
+    {
+        "editor_id": "DLC2RR01AttiusFarmLocation",
+        "form_id": "[0401BFE4]",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "Attius Farm Location",
+        "string": "Ферма Аттия"
+    },
+    {
+        "editor_id": "ccASVSSE001_TempleLocation",
+        "form_id": "[05000C82]",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "Yngol Barrow",
+        "string": "Курган Ингола"
+    },
+    {
+        "editor_id": "DLC2FahlbtharzLocation",
+        "form_id": "[040142A0]",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "Fahlbtharz",
+        "string": "Фалбтарз"
+    },
+    {
+        "editor_id": "ccASVSSE001_AlmalexiaMessage",
+        "form_id": "[05000CC6]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Blessing of Almalexia added",
+        "string": "Добавлено благословение Алмалексии"
+    },
+    {
+        "editor_id": "ccASVSSE001_PyroilTarred",
+        "form_id": "[05154746]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You applied the Pyroil Tar to the Unenchanted Weapon.",
+        "string": "Вы применили огненную смолу к незачарованному оружию."
+    },
+    {
+        "editor_id": "ccASVSSE001_PyroilTarred2",
+        "form_id": "[0515E947]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You do not possess the required weapon.",
+        "string": "У вас нет нужного оружия."
+    },
+    {
+        "editor_id": "ccASVSSE001_SothaSilMessage",
+        "form_id": "[051D81E2]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Blessing of Sotha Sil added",
+        "string": "Добавлено благословение Сота Сила"
+    },
+    {
+        "editor_id": "ccASVSSE001_VivecMessage",
+        "form_id": "[051D81E3]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Blessing of Vivec added",
+        "string": "Добавлено благословение Вивека"
+    },
+    {
+        "editor_id": "ccASVSSE001_GemPlaced",
+        "form_id": "[050990FC]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "A gem has already been placed.",
+        "string": "Кристалл уже размещен."
+    },
+    {
+        "editor_id": "ccASVSSE001_ForgeNoPower",
+        "form_id": "[050990FD]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "The forge requires gems to power it.",
+        "string": "Для активации кузницы нужны кристаллы."
+    }
+]

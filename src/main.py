@@ -32,7 +32,7 @@ class MainApp(qtw.QApplication):
     """
 
     name = "SSE Auto Translator"
-    version = "1.0.5"
+    version = "1.1.0-alpha"
 
     loc: "utils.Localisator" = None
     cur_path = Path(__file__).parent
@@ -52,7 +52,7 @@ class MainApp(qtw.QApplication):
         "keep_logs_num": 5,  # Only keep 5 newest log files and delete rest
         "log_level": "debug",
         "language": "System",
-        "accent_color": "#7861aa",
+        "accent_color": "#a998d2",
         "detector_confidence": 0.8,
         "auto_bind_nxm": False,
     }
@@ -71,11 +71,8 @@ class MainApp(qtw.QApplication):
     log_name = f"{time.strftime('%d.%m.%Y')}-{time.strftime('%H.%M.%S')}.log"
     log_path = data_path / "logs"
     log_level = 10  # Debug level as default
-    log_fmt = "\
-[%(asctime)s.%(msecs)03d]\
-[%(levelname)s]\
-[%(threadName)s.%(name)s.%(funcName)s]: \
-%(message)s"
+    log_fmt = "[%(asctime)s.%(msecs)03d][%(levelname)s][%(name)s.%(funcName)s]: %(message)s"
+    log = logging.getLogger("MainApp")
 
     first_start = not user_conf_path.is_file()
     setup_complete = True
@@ -84,6 +81,8 @@ class MainApp(qtw.QApplication):
     nxm_listener: "utils.NXMListener" = None
 
     tmp_dir: Path = None
+
+    masterlist: dict[str, dict] = None
 
     def __init__(self):
         super().__init__()
@@ -132,6 +131,7 @@ class MainApp(qtw.QApplication):
 
     def start_main_app(self):
         self.load_user_data()
+        self.load_masterlist()
         self.init_gui()
 
         self.startTimer(1000, qtc.Qt.TimerType.PreciseTimer)
@@ -158,13 +158,13 @@ class MainApp(qtw.QApplication):
             os.makedirs(self.log_path, exist_ok=True)
 
         self.statusbar = None
-        self.log = logging.getLogger("MainApp")
+        log = logging.getLogger()
         self.stdout = utils.StdoutPipe(self)
         formatter = logging.Formatter(self.log_fmt, datefmt="%d.%m.%Y %H:%M:%S")
         self.log_handler = logging.StreamHandler(self.stdout)
         self.log_handler.setFormatter(formatter)
-        self.log.addHandler(self.log_handler)
-        self.log.setLevel(self.log_level)
+        log.addHandler(self.log_handler)
+        log.setLevel(self.log_level)
         sys.excepthook = self.handle_exception
 
         self.log.info("Starting program...")
@@ -184,6 +184,30 @@ class MainApp(qtw.QApplication):
         self.log_level = utils.strlevel2intlevel(self.app_config["log_level"])
         self.log_handler.setLevel(self.log_level)
 
+    def load_masterlist(self):
+        """
+        Loads masterlist from repository.
+        """
+
+        if not self.user_config["use_masterlist"]:
+            self.log.info("Masterlist disabled by user.")
+            self.masterlist = {}
+            return
+
+        self.log.info("Loading Masterlist from Repository...")
+
+        try:
+            self.masterlist = utils.get_masterlist(self.user_config["language"])
+            self.log.info("Masterlist loaded.")
+        except Exception as ex:
+            if str(ex).endswith("404"):
+                self.log.error(
+                    f"No Masterlist available for {self.user_config['language']!r}."
+                )
+            else:
+                self.log.error(f"Failed to get Masterlist from Repository: {ex}")
+            self.masterlist = {}
+
     def load_user_data(self):
         """
         Loads user config and translation database.
@@ -193,6 +217,11 @@ class MainApp(qtw.QApplication):
 
         with open(self.user_conf_path, "r", encoding="utf8") as file:
             self.user_config: dict = json.load(file)
+
+        if "use_masterlist" not in self.user_config:
+            self.user_config["use_masterlist"] = True
+            with self.user_conf_path.open("w", encoding="utf8") as file:
+                json.dump(self.user_config, file, indent=4)
 
         if self.translator_conf_path.is_file():
             with open(self.translator_conf_path, encoding="utf8") as file:
@@ -215,8 +244,6 @@ class MainApp(qtw.QApplication):
             self.translator = translator_api.GoogleTranslator(self)
 
         self.api = NexusModsApi(self.user_config["api_key"])
-        self.api.log.addHandler(self.log_handler)
-        self.api.log.setLevel(self.log_level)
         api_valid = self.api.check_api_key()
 
         if not api_valid:
@@ -242,6 +269,7 @@ class MainApp(qtw.QApplication):
             save_button.setObjectName("accent_button")
             save_button.setDisabled(True)
             api_setup.valid_signal.connect(lambda valid: save_button.setEnabled(valid))
+
             def save():
                 self.user_config["api_key"] = api_setup.api_key
 
@@ -249,6 +277,7 @@ class MainApp(qtw.QApplication):
                     json.dump(self.user_config, file, indent=4)
 
                 dialog.accept()
+
             save_button.clicked.connect(save)
             hlayout.addWidget(save_button)
 
@@ -312,8 +341,6 @@ class MainApp(qtw.QApplication):
 
     def load_locale(self):
         self.loc = utils.Localisator(self.app_config["language"], self.loc_path)
-        self.loc.log.addHandler(self.log_handler)
-        self.loc.log.setLevel(self.log_handler.level)
         self.loc.load_lang()
 
     def load_theme(self):
@@ -327,15 +354,11 @@ class MainApp(qtw.QApplication):
         else:
             self.log.error(f"{accent_color!r} is not a valid hex color code!")
             accent_color = self.default_app_config["accent_color"]
-        
+
         highlighted_accent = qtg.QColor(accent_color).darker(120).name()
 
-        stylesheet = stylesheet.replace(
-            "<accent_color>", accent_color
-        )
-        stylesheet = stylesheet.replace(
-            "<highlighted_accent>", highlighted_accent
-        )
+        stylesheet = stylesheet.replace("<accent_color>", accent_color)
+        stylesheet = stylesheet.replace("<highlighted_accent>", highlighted_accent)
 
         self.setStyleSheet(stylesheet)
 

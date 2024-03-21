@@ -4,6 +4,7 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+import logging
 import os
 import re
 from copy import copy
@@ -32,6 +33,8 @@ class EditorTab(qtw.QWidget):
     tree_item: qtw.QTreeWidgetItem = None
 
     strings: list[utils.String] = None
+
+    log = logging.getLogger("TranslationEditor")
 
     def __init__(self, app: MainApp, translation: Translation, plugin_name: str):
         super().__init__()
@@ -217,8 +220,9 @@ class EditorTab(qtw.QWidget):
 
         self.strings_widget.setHeaderLabels(
             [
-                self.loc.main.editor_id,
                 self.loc.main.type,
+                self.loc.main.form_id,
+                self.loc.main.editor_id,
                 self.loc.main.original,
                 self.loc.main.string,
             ]
@@ -229,20 +233,28 @@ class EditorTab(qtw.QWidget):
         for string in self.strings:
             item = qtw.QTreeWidgetItem(
                 [
-                    string.editor_id,
                     string.type,
+                    string.form_id if string.form_id is not None else "",
+                    string.editor_id if string.editor_id is not None else "",
                     utils.trim_string(string.original_string),
                     utils.trim_string(string.translated_string),
                 ]
             )
+
+            item.setFont(0, qtg.QFont("Consolas"))
+            item.setFont(1, qtg.QFont("Consolas"))
+            item.setFont(2, qtg.QFont("Consolas"))
+
             string.tree_item = item
 
             self.strings_widget.addTopLevelItem(item)
 
         self.update_string_list()
 
-        for c in range(4):
-            self.strings_widget.resizeColumnToContents(c)
+        self.strings_widget.header().setDefaultSectionSize(200)
+        self.strings_widget.resizeColumnToContents(0)
+        self.strings_widget.resizeColumnToContents(1)
+        self.strings_widget.header().resizeSection(3, 400)
 
         self.strings_widget.itemActivated.connect(self.open_translator_dialog)
 
@@ -403,6 +415,7 @@ class EditorTab(qtw.QWidget):
 
         dialog = TranslatorDialog(self, string)
         dialog.show()
+        dialog.string_entry.setFocus()
 
     def update_string_list(self):
         """
@@ -417,12 +430,13 @@ class EditorTab(qtw.QWidget):
         translation_required_strings = 0
 
         for string in self.strings:
-            string_text = (
-                string.editor_id
-                + string.type
-                + string.original_string
-                + str(string.translated_string)
-            )
+            string_text = string.type + string.original_string
+            if string.form_id is not None:
+                string_text += string.form_id
+            if string.editor_id is not None:
+                string_text += string.editor_id
+            if string.translated_string is not None:
+                string_text += string.translated_string
 
             string_visible = cur_search in string_text.lower()
 
@@ -447,12 +461,15 @@ class EditorTab(qtw.QWidget):
                     case string.Status.TranslationRequired:
                         translation_required_strings += 1
 
-            string.tree_item.setToolTip(0, string.editor_id)
-            string.tree_item.setToolTip(1, string.type)
-            string.tree_item.setToolTip(2, string.original_string)
-            string.tree_item.setToolTip(3, string.translated_string)
+            string.tree_item.setToolTip(0, string.type)
+            if string.form_id is not None:
+                string.tree_item.setToolTip(1, string.form_id)
+            if string.editor_id is not None:
+                string.tree_item.setToolTip(2, string.editor_id)
+            string.tree_item.setToolTip(3, string.original_string)
+            string.tree_item.setToolTip(4, string.translated_string)
 
-            for c in range(4):
+            for c in range(5):
                 string.tree_item.setForeground(
                     c, string.Status.get_color(string.status)
                 )
@@ -511,7 +528,7 @@ class EditorTab(qtw.QWidget):
         Saves translation.
         """
 
-        self.app.log.info(f"Saving Translation {self.translation.name!r}...")
+        self.log.info(f"Saving Translation {self.translation.name!r}...")
 
         self.translation.strings[self.plugin_name] = self.strings
         self.translation.save_translation()
@@ -520,14 +537,14 @@ class EditorTab(qtw.QWidget):
         self.title_label.setText(f"{self.translation.name} > {self.plugin_name}")
         self.tree_item.setText(0, self.plugin_name)
 
-        self.app.log.info("Translation saved.")
+        self.log.info("Translation saved.")
 
     def apply_database(self):
         """
         Applies database to untranslated strings.
         """
 
-        self.app.log.info(f"Applying database to {len(self.strings)} string(s)...")
+        self.log.info(f"Applying database to {len(self.strings)} string(s)...")
 
         pre_translated_strings = len(
             [
@@ -541,7 +558,7 @@ class EditorTab(qtw.QWidget):
         def process(ldialog: LoadingDialog):
             ldialog.updateProgress(text1=self.mloc.applying_database)
 
-            self.app.database.apply_translation(self.translation, self.plugin_name)
+            self.app.database.apply_db_to_translation(self.translation, self.plugin_name)
 
         loadingdialog = LoadingDialog(self.app.root, self.app, process)
         loadingdialog.exec()
@@ -560,7 +577,7 @@ class EditorTab(qtw.QWidget):
         if newly_translated_strings:
             self.changes_signal.emit()
 
-        self.app.log.info(
+        self.log.info(
             f"Database successfully applied to {newly_translated_strings} string(s)."
         )
 

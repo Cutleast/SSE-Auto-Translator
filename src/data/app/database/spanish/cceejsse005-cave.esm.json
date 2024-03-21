@@ -1,0 +1,1770 @@
+[
+    {
+        "editor_id": "ccEEJSSE005_VampireCharm",
+        "form_id": "[050EA5D4]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Vampire's Seduction",
+        "string": "Seducción de vampiro"
+    },
+    {
+        "editor_id": "ccEEJSSE005_AmethystTrigger",
+        "form_id": "[0509E571]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_HalfClawRightClawTrigger",
+        "form_id": "[0509E58B]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_WoodenMaskTrigger",
+        "form_id": "[050942D0]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_DawnguardRuneShield",
+        "form_id": "[050A87D6]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Dawnguard Rune Shield",
+        "string": "Escudo rúnico de la Guardia del Alba"
+    },
+    {
+        "editor_id": "ccEEJSSE005_DukaanTrigger",
+        "form_id": "[0508F0D8]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_InitiatesEwerTrigger",
+        "form_id": "[050A87DD]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Initiate's Ewer",
+        "string": "Vasija de iniciado"
+    },
+    {
+        "editor_id": "ccEEJSSE005_VolsungTrigger",
+        "form_id": "[0508F0A9]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_SapphireClawTrigger",
+        "form_id": "[0509E57C]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_IronClawTrigger",
+        "form_id": "[0509E576]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Iron Claw",
+        "string": "Garra de hierro"
+    },
+    {
+        "editor_id": "ccEEJSSE005_DawnguardRuneAxeTrigger",
+        "form_id": "[050A87E7]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_AurielsBowTrigger",
+        "form_id": "[050A87E1]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_RubyTrigger",
+        "form_id": "[0509E570]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ruby Paragon",
+        "string": "Modelo de perfección de rubí"
+    },
+    {
+        "editor_id": "ccEEJSSE005_EmeraldTrigger",
+        "form_id": "[0509E56A]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Emerald Paragon",
+        "string": "Modelo de perfección de esmeralda"
+    },
+    {
+        "editor_id": "ccEEJSSE005_MorokeiTrigger",
+        "form_id": "[0508F0AC]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Morokei",
+        "string": "Morokei"
+    },
+    {
+        "editor_id": "ccEEJSSE005_VampireThrallFeed01",
+        "form_id": "[05075922]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Vampire Cattle",
+        "string": "Ganado para vampiros"
+    },
+    {
+        "editor_id": "ccEEJSSE005_KrosisTrigger",
+        "form_id": "[0508F0B1]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_DeerHideTrigger",
+        "form_id": "[050A87DF]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_HevnoraakTrigger",
+        "form_id": "[0508F0B0]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Hevnoraak",
+        "string": "Hevnoraak"
+    },
+    {
+        "editor_id": "ccEEJSSE005_HarkonsSwordTrigger",
+        "form_id": "[050A87E9]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Harkon's Sword",
+        "string": "Espada de Harkon"
+    },
+    {
+        "editor_id": "ccEEJSSE005_MiraakTrigger",
+        "form_id": "[0508F0D3]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Miraak",
+        "string": "Miraak"
+    },
+    {
+        "editor_id": "ccEEJSSE005_HalfClawRightClawTrigger",
+        "form_id": "[0509E58B]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Amethyst Claw, Right Half",
+        "string": "Garra de amatista, mitad derecha"
+    },
+    {
+        "editor_id": "ccEEJSSE005_KonahrikTrigger",
+        "form_id": "[0508F0AD]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_DeerHideTrigger",
+        "form_id": "[050A87DF]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Vale Deer Hide",
+        "string": "Piel de ciervo del valle"
+    },
+    {
+        "editor_id": "ccEEJSSE005_InitiatesEwerTrigger",
+        "form_id": "[050A87DD]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_DragonflyJarTrigger",
+        "form_id": "[0509E560]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Dragonfly in a Jar",
+        "string": "Libélula en un tarro"
+    },
+    {
+        "editor_id": "ccEEJSSE005_DiamondClawTrigger",
+        "form_id": "[0509E580]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Diamond Claw",
+        "string": "Garra de diamante"
+    },
+    {
+        "editor_id": "ccEEJSSE005_EmeraldTrigger",
+        "form_id": "[0509E56A]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_DawnguardRuneHammerTrigger",
+        "form_id": "[050A87E6]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_KonahrikTrigger",
+        "form_id": "[0508F0AD]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Konahrik",
+        "string": "Konahrik"
+    },
+    {
+        "editor_id": "ccEEJSSE005_AmethystTrigger",
+        "form_id": "[0509E571]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Amethyst Paragon",
+        "string": "Modelo de perfección de amatista"
+    },
+    {
+        "editor_id": "ccEEJSSE005_AurielsShieldTrigger",
+        "form_id": "[050A87D7]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_DragonflyJarTrigger",
+        "form_id": "[0509E560]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_VokunTrigger",
+        "form_id": "[0508F0AA]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_AurielsShieldTrigger",
+        "form_id": "[050A87D7]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Auriel's Shield",
+        "string": "Escudo de Auriel"
+    },
+    {
+        "editor_id": "ccEEJSSE005_TorchbugJarTrigger",
+        "form_id": "[0509945B]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_SapphireClawTrigger",
+        "form_id": "[0509E57C]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Sapphire Dragon Claw",
+        "string": "Garra de dragón de zafiro"
+    },
+    {
+        "editor_id": "ccEEJSSE005_DawnguardRuneShield",
+        "form_id": "[050A87D6]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_EbonyClawTrigger",
+        "form_id": "[0509E584]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ebony Claw",
+        "string": "Garra de ébano"
+    },
+    {
+        "editor_id": "ccEEJSSE005_GlassClawTrigger",
+        "form_id": "[0509E587]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Glass Claw",
+        "string": "Garra de cristal"
+    },
+    {
+        "editor_id": "ccEEJSSE005_VolsungTrigger",
+        "form_id": "[0508F0A9]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Volsung",
+        "string": "Volsung"
+    },
+    {
+        "editor_id": "ccEEJSSE005_BeeJarTrigger",
+        "form_id": "[0509E564]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_HevnoraakTrigger",
+        "form_id": "[0508F0B0]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_NahkriinTrigger",
+        "form_id": "[0508F0AF]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Nahkriin",
+        "string": "Nahkriin"
+    },
+    {
+        "editor_id": "ccEEJSSE005_RubyClawTrigger",
+        "form_id": "[0509E574]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_IronClawTrigger",
+        "form_id": "[0509E576]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_AhzidalTrigger",
+        "form_id": "[0508F0D5]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ahzidal",
+        "string": "Ahzidal"
+    },
+    {
+        "editor_id": "ccEEJSSE005_IvoryClawTrigger",
+        "form_id": "[0509E578]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_GoldenClawTrigger",
+        "form_id": "[0509E57E]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_BeeJarTrigger",
+        "form_id": "[0509E564]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Bee in a Jar",
+        "string": "Abeja en un tarro"
+    },
+    {
+        "editor_id": "ccEEJSSE005_SapphireTrigger",
+        "form_id": "[0509E572]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_DawnguardRuneHammerTrigger",
+        "form_id": "[050A87E6]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Dawnguard Rune Hammer",
+        "string": "Martillo rúnico de la Guardia del Alba"
+    },
+    {
+        "editor_id": "ccEEJSSE005_HarkonsSwordTrigger",
+        "form_id": "[050A87E9]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_AhzidalTrigger",
+        "form_id": "[0508F0D5]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_DiamondClawTrigger",
+        "form_id": "[0509E580]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_TorchbugJarTrigger",
+        "form_id": "[0509945B]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Torchbug in a Jar",
+        "string": "Luciérnaga en un tarro"
+    },
+    {
+        "editor_id": "ccEEJSSE005_CoralClawTrigger",
+        "form_id": "[0509E57A]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_IvoryClawTrigger",
+        "form_id": "[0509E578]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ivory Dragon Claw",
+        "string": "Garra de dragón de marfil"
+    },
+    {
+        "editor_id": "ccEEJSSE005_EmeraldClawTrigger",
+        "form_id": "[0509E582]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_ZephyrTrigger",
+        "form_id": "[050A87E3]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_HalfClawLeftClawTrigger",
+        "form_id": "[0509E589]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_AurielsBowTrigger",
+        "form_id": "[050A87E1]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Auriel's Bow",
+        "string": "Arco de Auriel"
+    },
+    {
+        "editor_id": "ccEEJSSE005_DiamondTrigger",
+        "form_id": "[0509E56F]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_OtarTrigger",
+        "form_id": "[0508F0AB]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_ButterflyJarTrigger",
+        "form_id": "[0509E562]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Butterfly in a Jar",
+        "string": "Mariposa en un tarro"
+    },
+    {
+        "editor_id": "ccEEJSSE005_EmeraldClawTrigger",
+        "form_id": "[0509E582]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Emerald Dragon Claw",
+        "string": "Garra de dragón de esmeralda"
+    },
+    {
+        "editor_id": "ccEEJSSE005_MorokeiTrigger",
+        "form_id": "[0508F0AC]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_MiraakTrigger",
+        "form_id": "[0508F0D3]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_GlassClawTrigger",
+        "form_id": "[0509E587]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_CoralClawTrigger",
+        "form_id": "[0509E57A]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Coral Dragon Claw",
+        "string": "Garra de dragón de coral"
+    },
+    {
+        "editor_id": "ccEEJSSE005_ZahkriisosTrigger",
+        "form_id": "[0508F0D4]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_ButterflyJarTrigger",
+        "form_id": "[0509E562]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_ZephyrTrigger",
+        "form_id": "[050A87E3]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Zephyr",
+        "string": "Céfiro"
+    },
+    {
+        "editor_id": "ccEEJSSE005_VokunTrigger",
+        "form_id": "[0508F0AA]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Vokun",
+        "string": "Vokun"
+    },
+    {
+        "editor_id": "ccEEJSSE005_WoodenMaskTrigger",
+        "form_id": "[050942D0]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Wooden Mask",
+        "string": "Máscara de madera"
+    },
+    {
+        "editor_id": "ccEEJSSE005_DawnguardRuneAxeTrigger",
+        "form_id": "[050A87E7]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Dawnguard Rune Axe",
+        "string": "Hacha rúnica de la Guardia del Alba"
+    },
+    {
+        "editor_id": "ccEEJSSE005_MothJarTrigger",
+        "form_id": "[0509E566]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_ZahkriisosTrigger",
+        "form_id": "[0508F0D4]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Zahkriisos",
+        "string": "Zahkriisos"
+    },
+    {
+        "editor_id": "ccEEJSSE005_MothJarTrigger",
+        "form_id": "[0509E566]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Moth in a Jar",
+        "string": "Polilla en un tarro"
+    },
+    {
+        "editor_id": "ccEEJSSE005_DukaanTrigger",
+        "form_id": "[0508F0D8]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Dukaan",
+        "string": "Dukaan"
+    },
+    {
+        "editor_id": "ccEEJSSE005_DrawKnifeTrigger",
+        "form_id": "[050A87DC]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Draw Knife",
+        "string": "Cuchillo de extracción"
+    },
+    {
+        "editor_id": "ccEEJSSE005_OtarTrigger",
+        "form_id": "[0508F0AB]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Otar",
+        "string": "Otar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_SapphireTrigger",
+        "form_id": "[0509E572]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Sapphire Paragon",
+        "string": "Modelo de perfección de zafiro"
+    },
+    {
+        "editor_id": "ccEEJSSE005_DrawKnifeTrigger",
+        "form_id": "[050A87DC]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_GoldenClawTrigger",
+        "form_id": "[0509E57E]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Golden Claw",
+        "string": "Garra dorada"
+    },
+    {
+        "editor_id": "ccEEJSSE005_DiamondTrigger",
+        "form_id": "[0509E56F]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Diamond Paragon",
+        "string": "Modelo de perfección de diamante"
+    },
+    {
+        "editor_id": "ccEEJSSE005_KrosisTrigger",
+        "form_id": "[0508F0B1]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Krosis",
+        "string": "Krosis"
+    },
+    {
+        "editor_id": "ccEEJSSE005_RahgotTrigger",
+        "form_id": "[0508F0AE]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Rahgot",
+        "string": "Rahgot"
+    },
+    {
+        "editor_id": "ccEEJSSE005_RahgotTrigger",
+        "form_id": "[0508F0AE]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_NahkriinTrigger",
+        "form_id": "[0508F0AF]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_RubyTrigger",
+        "form_id": "[0509E570]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_HalfClawLeftClawTrigger",
+        "form_id": "[0509E589]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Amethyst Claw, Left Half",
+        "string": "Garra de amatista, mitad izquierda"
+    },
+    {
+        "editor_id": "ccEEJSSE005_RubyClawTrigger",
+        "form_id": "[0509E574]",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ruby Dragon Claw",
+        "string": "Garra de dragón de rubí"
+    },
+    {
+        "editor_id": "ccEEJSSE005_VampireThrallFeed01",
+        "form_id": "[05075922]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Talk",
+        "string": "Hablar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_EbonyClawTrigger",
+        "form_id": "[0509E584]",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Colocar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_DLC1SeranaHood",
+        "form_id": "[05089EEF]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Vampire Leather Hood",
+        "string": "Capucha de cuero de vampiro"
+    },
+    {
+        "editor_id": "ccEEJSSE005_Note03B",
+        "form_id": "[050EF6E3]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont' size='20'>\r\nIf you are reading this, I am dead, and so, you will have to hear my toast in spirit. \r\n\r\nOf course, a little business first. As I have no living heirs, I have decided the manor will be bequeathed to you. Provided, you finish this last meal.\r\n\r\nAs you know, I have always loved dinner parties. And so, for my final dinner, I've decided to have a few friends over. \r\n\r\nVerin, you and I shared a long and fruitful business partnership, but you altered the books to give yourself a larger cut. Don't think I didn't notice.\r\n\r\nMarina, you were my first love, but also, my first mistake. For your love was not mine alone, and for that, I never forgot.\r\n\r\nIgrit, you were my ward, and in some ways, I considered you a daughter. But a daughter does not plot to steal an inheritance. So I will teach you this lesson as a father would.\r\n\r\nLeyathil, we fought in the war together, and our bond is in many ways sacred. Yet I know the horrors you committed to survive, and while I dismissed it then, I cannot now.\r\n\r\nGaltius, my old Imperial friend, who used to drink wine with me at the Surilie Brothers vineyard in Skingrad. One night, you drank too much, and saw fit to insult my family. I told you I forgave you, as you were drunk. I did not. \r\n\r\nAnd Parven, my dear brother. You bullied me from the day I was born. You always assumed blood would tie us together, and it will, but not in the way you think.\r\n\r\nLastly, <Alias=Player>. We have never met. I've brought you here on a whim. You are here as a wild card. A chance to change the fates of my friends. Or, to revel in it. Much like my fate in the next world, it's far more exciting, you see, if the future is unknown.\r\n\r\nAnd with that said, drinks are served.</font>",
+        "string": "<font face='$HandwrittenFont' size='20'>\r\nSi estás leyendo esto, significa que he muerto, así que oirás brindar a mi espíritu.\r\n\r\nPero antes, como es natural, quiero tratar un asunto contigo. Como no tengo herederos vivos, he decidido legarte mi mansión. Claro, solo si te terminas toda la comida.\r\n\r\nComo sabrás, siempre me han encantado los banquetes, así que he decidido invitar a unos cuantos amigos a mi última cena.\r\n\r\nVerin, tú y yo compartimos una larga y fructífera alianza empresarial, pero alteraste las cuentas para sacar más tajada. No creas que no me percaté.\r\n\r\nMarina, tú fuiste mi primer amor, pero también mi primer error. Tu amor no fue solo mío, y eso nunca lo olvidaré.\r\n\r\nIgrit, tú eras mi pupila y, en cierto modo, te consideraba una hija. Pero una hija no conspira para robar su herencia, así que te daré una lección, tal y como haría un padre.\r\n\r\nLeyathil, luchamos juntos en la guerra y nuestro vínculo es sagrado en muchos aspectos. Sin embargo, sé los horrores que cometiste para sobrevivir y, aunque entonces hice caso omiso de ellos, ahora no puedo.\r\n\r\nGaltius, mi viejo amigo imperial con el que bebía en el viñedo de los hermanos Surilie, en Skingrad. Una noche bebiste más de la cuenta y tuviste a bien insultar a mi familia. Te dije que te perdonaba, pues estabas borracho, mas nunca lo hice.\r\n\r\nY Parven, mi querido hermano. Me acosaste desde el día que nací. Siempre asumiste que la sangre nos uniría, y lo hará, pero no de la forma que crees.\r\n\r\nPor último, <Alias=Player>. No nos conocemos. Te he traído aquí por capricho. Eres mi oportunidad para cambiar el destino de mis amigos. O para deleitarte con él. Al igual que mi suerte en el más allá, todo es mucho más emocionante si el destino es incierto.\r\n\r\nDicho esto, la bebida ya está servida.</font>"
+    },
+    {
+        "editor_id": "ccEEJSSE005_DinnerMenu02B",
+        "form_id": "[050B7B52]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont' size='22'>\r\n<p align='center'><b><u>DINNER MENU</u></b></p></font>\r\nDRINKS\r\n<font face='$HandwrittenFont' size='16'>\r\nBlood and Wine</font>\r\n\r\nENTRÉE\r\n<font face='$HandwrittenFont' size='16'>\r\nNord Male\r\nBreton Male\r\nDark Elf Male\r\nHigh Elf Female\r\nImperial Male\r\nImperial Female</font>\r\n[pagebreak]\r\n\r\nDESSERT\r\n<font face='$HandwrittenFont' size='16'>\r\nHouse Special - Thralls\r\n</font>",
+        "string": "<font face='$HandwrittenFont' size='22'>\r\n<p align='center'><b><u>MENÚ DE LA CENA</u></b></p></font>\r\nBEBIDA\r\n<font face='$HandwrittenFont' size='16'>\r\nSangre y vino</font>\r\n\r\nPLATO PRINCIPAL\r\n<font face='$HandwrittenFont' size='16'>\r\nHombre nórdico\r\nHombre bretón\r\nElfo oscuro\r\nAlta elfa\r\nHombre imperial\r\nMujer imperial</font>\r\n[pagebreak]\r\n\r\nPOSTRE\r\n<font face='$HandwrittenFont' size='16'>\r\nEspecial de la casa - Esclavos\r\n</font>"
+    },
+    {
+        "editor_id": "ccEEJSSE005_Note04",
+        "form_id": "[050E03CE]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Possible Vampire Cave",
+        "string": "Posible cueva de vampiros"
+    },
+    {
+        "editor_id": "ccEEJSSE005_Note01A",
+        "form_id": "[050B7AEC]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont' size='20'>\r\n<Alias=Player>,\r\n\r\nYou have been cordially invited to dinner and drinks at Bloodchill Manor. As an honored guest, you are encouraged to come early and mingle with the other attendees. When you are ready to feast, ask the house waiter for a menu and he will let you into the banquet hall.\r\n\r\nThe finest and most delectable dishes will be on display. There will be no need for appetizers. Once everyone is ready and seated, a full course awaits.\r\n\r\nCome for the dinner, stay for the drinks.\r\n</font>",
+        "string": "<font face='$HandwrittenFont' size='20'>\r\n<Alias=Player>:\r\n\r\nTe invitamos a cenar y beber con nosotros en la mansión de Hielasangre. Como estás entre los invitados de honor, sería recomendable que llegaras pronto para mezclarte con el resto de asistentes. Cuando te apetezca pasar al banquete, pídele un menú al camarero y te conducirá al salón.\r\n\r\nPodrás disfrutar de los platos más exquisitos. No habrá necesidad de aperitivos. Cuando todos hayáis tomado asiento, os espera un menú completo.\r\n\r\nAcude a la cena y quédate a tomar algo.\r\n</font>"
+    },
+    {
+        "editor_id": "ccEEJSSE005_Note03A",
+        "form_id": "[050DB2A4]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont' size='20'>\r\nIf you are reading this, I am dead, and so, you will have to hear my toast in spirit. \r\n\r\nOf course, a little business first. As I have no living heirs, I have decided the manor will be bequeathed to you. Provided, you finish this last meal.\r\n\r\nAs you know, I have always loved dinner parties. And so, for my final dinner, I've decided to have a few friends over. \r\n\r\nVerin, you and I shared a long and fruitful business partnership, but you altered the books to give yourself a larger cut. Don't think I didn't notice.\r\n\r\nMarina, you were my first love, but also, my first mistake. For your love was not mine alone, and for that, I never forgot.\r\n\r\nIgrit, you were my ward, and in some ways, I considered you a daughter. But a daughter does not plot to steal an inheritance. So I will teach you this lesson as a father would.\r\n\r\nLeyathil, we fought in the war together, and our bond is in many ways sacred. Yet I know the horrors you committed to survive, and while I dismissed it then, I cannot now.\r\n\r\nGaltius, my old Imperial friend, who used to drink wine with me at the Surilie Brothers vineyard in Skingrad. One night, you drank too much, and saw fit to insult my family. I told you I forgave you, as you were drunk. I did not. \r\n\r\nLastly, <Alias=Player>. We have never met. I've brought you here on a whim. You are here as a wild card. A chance to change the fates of my friends. Or, to revel in it. Much like my fate in the next world, it's far more exciting, you see, if the future is unknown.\r\n\r\nAnd with that said, drinks are served.</font>",
+        "string": "<font face='$HandwrittenFont' size='20'>\r\nSi estás leyendo esto, significa que he muerto, así que oirás brindar a mi espíritu.\r\n\r\nPero antes, como es natural, quiero tratar un asunto contigo. Como no tengo herederos vivos, he decidido legarte mi mansión. Claro, solo si te terminas toda la comida.\r\n\r\nComo sabrás, siempre me han encantado los banquetes, así que he decidido invitar a unos cuantos amigos a mi última cena.\r\n\r\nVerin, tú y yo compartimos una larga y fructífera alianza empresarial, pero alteraste las cuentas para sacar más tajada. No creas que no me percaté.\r\n\r\nMarina, tú fuiste mi primer amor, pero también mi primer error. Tu amor no fue solo mío, y eso nunca lo olvidaré.\r\n\r\nIgrit, tú eras mi pupila y, en cierto modo, te consideraba una hija. Pero una hija no conspira para robar su herencia, así que te daré una lección, tal y como haría un padre.\r\n\r\nLeyathil, luchamos juntos en la guerra y nuestro vínculo es sagrado en muchos aspectos. Sin embargo, sé los horrores que cometiste para sobrevivir y, aunque entonces hice caso omiso de ellos, ahora no puedo.\r\n\r\nGaltius, mi viejo amigo imperial con el que bebía en el viñedo de los hermanos Surilie, en Skingrad. Una noche bebiste más de la cuenta y tuviste a bien insultar a mi familia. Te dije que te perdonaba, pues estabas borracho, mas nunca lo hice.\r\n\r\nPor último, <Alias=Player>. No nos conocemos. Te he traído aquí por capricho. Eres mi oportunidad para cambiar el destino de mis amigos. O para deleitarte con él. Al igual que mi suerte en el más allá, todo es mucho más emocionante si el destino es incierto.\r\n\r\nDicho esto, la bebida ya está servida.</font>"
+    },
+    {
+        "editor_id": "ccEEJSSE005_DinnerMenu02A",
+        "form_id": "[050B7B4C]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont' size='22'>\r\n<p align='center'><b><u>DINNER MENU</u></b></p></font>\r\nDRINKS\r\n<font face='$HandwrittenFont' size='16'>\r\nFirebrand Wine \r\nAlto Wine</font>\r\n\r\nENTRÉE\r\n<font face='$HandwrittenFont' size='16'>\r\nDarklight Souffle' - A twist on the Gourmet's famous recipe\r\nBlood Red Venison with Tomato Sauce\r\nGrilled Goat Leg with Marrow Broth</font>\r\n[pagebreak]\r\n\r\nDESSERT\r\n<font face='$HandwrittenFont' size='16'>\r\nApple Pie\r\nSweet Rolls\r\nSnowberry Crostata\r\nBoiled Creme Treats\r\n</font>",
+        "string": "<font face='$HandwrittenFont' size='22'>\r\n<p align='center'><b><u>MENÚ DE LA CENA</u></b></p></font>\r\nBEBIDA\r\n<font face='$HandwrittenFont' size='16'>\r\nVino de fuego\r\nVino de Alto</font>\r\n\r\nPLATO PRINCIPAL\r\n<font face='$HandwrittenFont' size='16'>\r\nSuflé de Luz Oscura - Una variación de la famosa receta del Gastrónomo\r\nVenado sangriento con salsa de tomate\r\nPaletilla de cabra a la parrilla con caldo de tuétano</font>\r\n[pagebreak]\r\n\r\nPOSTRE\r\n<font face='$HandwrittenFont' size='16'>\r\nTarta de manzana\r\nBollos de canela\r\nTarta de sinforicarpo\r\nDulces de crema cocida\r\n</font>"
+    },
+    {
+        "editor_id": "ccEEJSSE005_Note04",
+        "form_id": "[050E03CE]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont' size='22'>\r\nThe information we got from the mole was spot on. At first glance, it looked like any ordinary cave. \r\n\r\nI was ready to turn around and give up for the night, when up walk these nobles with furs fine enough to sleep on. I watched them enter the cave one by one, until there was one guy left. Then I tapped him on the shoulder, and rammed my fist so hard into his forehead that I heard his skull crunch.\r\n\r\nHe'll be all right though. But he's gonna need a new tunic, I heard a thread rip.</font>",
+        "string": "<font face='$HandwrittenFont' size='22'>\r\nLa información del espía dio en el clavo. A primera vista, parecía una cueva cualquiera.\r\n\r\nEstaba a punto de volverme y dar por concluida la noche cuando vi a esos nobles con unas pieles en las que podrían dormir. Observé cómo entraban en la cueva uno a uno, hasta que solo quedó el último. Le di un golpecito en el hombro y le estampé el puño en la frente con tanta fuerza que el cráneo sonó al partirse.\r\n\r\nSe pondrá bien, pero va a necesitar una nueva túnica, porque oí cómo se rasgaba.</font>"
+    },
+    {
+        "editor_id": "ccEEJSSE005_Note01A",
+        "form_id": "[050B7AEC]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Dinner Invitation",
+        "string": "Invitación para cenar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_Note01B",
+        "form_id": "[050B7AEE]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Dinner Invitation",
+        "string": "Invitación para cenar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_DinnerMenu02B",
+        "form_id": "[050B7B52]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Dinner Menu",
+        "string": "Menú de la cena"
+    },
+    {
+        "editor_id": "ccEEJSSE005_Note03A",
+        "form_id": "[050DB2A4]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Please Read Aloud",
+        "string": "Leer en voz alta"
+    },
+    {
+        "editor_id": "ccEEJSSE005_Note01B",
+        "form_id": "[050B7AEE]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont' size='20'>\r\n<Alias=Player>,\r\n\r\nYou have been cordially invited to dinner and drinks at Bloodchill Manor. As a child of the night, you are encouraged to mingle with the dishes as they laugh and drink their bellies full. When you are ready to feast, ask the house waiter for a menu and he will let our esteemed guests into the banquet hall.\r\n\r\nOnce the dinner is ready and seated, that will be the signal to begin the feed.\r\n\r\nCome for the dinner, stay for the drinks.</font>",
+        "string": "<font face='$HandwrittenFont' size='20'>\r\n<Alias=Player>:\r\n\r\nTe invitamos a cenar y beber con nosotros en la mansión de Hielasangre. Como criatura de la noche, sería recomendable que te mezclaras con la comida mientras ríen y beben hasta hartarse. Cuando te apetezca pasar al banquete, pídele un menú al camarero y conducirá a nuestros queridos invitados al salón.\r\n\r\nCuando la comida haya tomado asiento, será la señal para empezar a cenar.\r\n\r\nAcude a la cena y quédate a tomar algo.</font>"
+    },
+    {
+        "editor_id": "ccEEJSSE005_DinnerMenu02A",
+        "form_id": "[050B7B4C]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Dinner Menu",
+        "string": "Menú de la cena"
+    },
+    {
+        "editor_id": "ccEEJSSE005_Note03B",
+        "form_id": "[050EF6E3]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Please Read Aloud",
+        "string": "Leer en voz alta"
+    },
+    {
+        "editor_id": "ccEEJSSE005_OreBarrel",
+        "form_id": "[05075889]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Barrel",
+        "string": "Barril"
+    },
+    {
+        "editor_id": "ccEEJSSE005_BookCase01",
+        "form_id": "[050612ED]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Bookcase",
+        "string": "Librería"
+    },
+    {
+        "editor_id": "ccEEJSSE005_MiscSackLargeFlat02NRS",
+        "form_id": "[050758BF]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Large Sack",
+        "string": "Saco grande"
+    },
+    {
+        "editor_id": "ccEEJSSE005_Chest",
+        "form_id": "[05089EDD]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Cofre"
+    },
+    {
+        "editor_id": "ccEEJSSE005_UrnLg",
+        "form_id": "[05084D58]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Urn",
+        "string": "Urna"
+    },
+    {
+        "editor_id": "ccEEJSSE005_Barrel",
+        "form_id": "[05089EFF]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Barrel",
+        "string": "Barril"
+    },
+    {
+        "editor_id": "ccEEJSSE005_TestItems",
+        "form_id": "[050A36A8]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Display Test Items",
+        "string": "Mostrar objetos de prueba"
+    },
+    {
+        "editor_id": "ccEEJSSE005_IngotChest",
+        "form_id": "[0507588A]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Cofre"
+    },
+    {
+        "editor_id": "ccEEJSSE005_MiscSackLargeNRS",
+        "form_id": "[050758BE]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Large Sack",
+        "string": "Saco grande"
+    },
+    {
+        "editor_id": "ccEEJSSE005_Urn",
+        "form_id": "[0506B652]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Urn",
+        "string": "Urna"
+    },
+    {
+        "editor_id": "ccEEJSSE005_Nightshade",
+        "form_id": "[05042A61]",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Nightshade",
+        "string": "Belladama"
+    },
+    {
+        "editor_id": "ccEEJSSE005_GlazedJugSmall01",
+        "form_id": "[05051E24]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "Jarra"
+    },
+    {
+        "editor_id": "ccEEJSSE005_SilverJug01",
+        "form_id": "[05057039]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "Jarra"
+    },
+    {
+        "editor_id": "ccEEJSSE005_SilverPlatter01",
+        "form_id": "[05057084]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Platter",
+        "string": "Fuente"
+    },
+    {
+        "editor_id": "ccEEJSSE005_VampireDoll",
+        "form_id": "[05033717]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Vampire Doll",
+        "string": "Muñeco vampiro"
+    },
+    {
+        "editor_id": "ccEEJSSE005_Basket06",
+        "form_id": "[05057092]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Basket",
+        "string": "Cesta"
+    },
+    {
+        "editor_id": "ccEEJSSE005_SilverGoblet02",
+        "form_id": "[05051E1B]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Goblet",
+        "string": "Cáliz"
+    },
+    {
+        "editor_id": "ccEEJSSE005_GlazedPlate01",
+        "form_id": "[05057034]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Plate",
+        "string": "Bandeja"
+    },
+    {
+        "editor_id": "ccEEJSSE005_SilverGoblet01",
+        "form_id": "[05057027]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Goblet",
+        "string": "Cáliz"
+    },
+    {
+        "editor_id": "ccEEJSSE005_GlazedJugLarge02",
+        "form_id": "[0506B651]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "Jarra"
+    },
+    {
+        "editor_id": "ccEEJSSE005_Basket01",
+        "form_id": "[05066465]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Basket",
+        "string": "Cesta"
+    },
+    {
+        "editor_id": "ccEEJSSE005_SilverCandleStick02Off",
+        "form_id": "[05089E7A]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Candlestick",
+        "string": "Candelero"
+    },
+    {
+        "editor_id": "ccEEJSSE005_GlazedJugLarge01",
+        "form_id": "[05042A67]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "Jarra"
+    },
+    {
+        "editor_id": "ccEEJSSE005_SilverCandleStick01Off",
+        "form_id": "[0507AA56]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Candlestick",
+        "string": "Candelero"
+    },
+    {
+        "editor_id": "ccEEJSSE005_DLC1SilverJugBlood01",
+        "form_id": "[05051E26]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Silver Jug",
+        "string": "Jarra de plata"
+    },
+    {
+        "editor_id": "ccEEJSSE005_Basket05",
+        "form_id": "[05057090]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Basket",
+        "string": "Cesta"
+    },
+    {
+        "editor_id": "ccEEJSSE005_GlazedBowl02",
+        "form_id": "[0505701F]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Bowl",
+        "string": "Cuenco"
+    },
+    {
+        "editor_id": "ccEEJSSE005_Basket03",
+        "form_id": "[05057091]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Basket",
+        "string": "Cesta"
+    },
+    {
+        "editor_id": "ccEEJSSE005_GlazedPot01",
+        "form_id": "[0507AA58]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Pot",
+        "string": "Olla"
+    },
+    {
+        "editor_id": "ccEEJSSE005_GlazedCup01",
+        "form_id": "[0506B65F]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Cup",
+        "string": "Taza"
+    },
+    {
+        "editor_id": "ccEEJSSE005_EmptyJar",
+        "form_id": "[0508F03F]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Empty  Jar",
+        "string": "Tarro vacío"
+    },
+    {
+        "editor_id": "ccEEJSSE005_DLC1SilverGobletBlood01",
+        "form_id": "[05051E2D]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Silver Goblet",
+        "string": "Cáliz de plata"
+    },
+    {
+        "editor_id": "ccEEJSSE005_GlazedBowl01",
+        "form_id": "[05057020]",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Bowl",
+        "string": "Cuenco"
+    },
+    {
+        "editor_id": "ccEEJSSE001_NobleChair01",
+        "form_id": "[050C1D85]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Chair",
+        "string": "Silla"
+    },
+    {
+        "editor_id": "ccEEJSSE005_Smelter",
+        "form_id": "[0503D947]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Smelting Pot",
+        "string": "Olla de fundición"
+    },
+    {
+        "editor_id": "ccEEJSSE005_BedrollHay01L",
+        "form_id": "[050758D1]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Hay Pile",
+        "string": "Pila de heno"
+    },
+    {
+        "editor_id": "ccEEJSSE005_ChildBedL",
+        "form_id": "[050294EC]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "Cama"
+    },
+    {
+        "editor_id": "ccEEJSSE005_ChildBedR",
+        "form_id": "[050294EB]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "Cama"
+    },
+    {
+        "editor_id": "ccEEJSSE005_NobelDblBed",
+        "form_id": "[0502E5ED]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "Cama"
+    },
+    {
+        "editor_id": "ccEEJSSE005_Anvil",
+        "form_id": "[0503D945]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Anvil",
+        "string": "Yunque"
+    },
+    {
+        "editor_id": "ccEEJSSE005_Armchair",
+        "form_id": "[050664E6]",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Armchair",
+        "string": "Sillón"
+    },
+    {
+        "editor_id": "ccEEJSSE001_DLC1EncVampireBard2",
+        "form_id": "[050D1095]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Bard",
+        "string": "Bardo"
+    },
+    {
+        "editor_id": "ccEEJSSE001_DLC1EncVampire00NordF",
+        "form_id": "[050B7B36]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Bard",
+        "string": "Barda"
+    },
+    {
+        "editor_id": "ccEEJSSE005_NobleF01",
+        "form_id": "[050B7B10]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Marina",
+        "string": "Marina"
+    },
+    {
+        "editor_id": "ccEEJSSE005_NobleF03",
+        "form_id": "[050B7B14]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Igrit",
+        "string": "Igrit"
+    },
+    {
+        "editor_id": "ccEEJSSE005_DLC1LvlCastleThrall",
+        "form_id": "[050EA5DB]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Parven",
+        "string": "Parven"
+    },
+    {
+        "editor_id": "ccEEJSSE005_NobleM03",
+        "form_id": "[050B7B1A]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Durian",
+        "string": "Durian"
+    },
+    {
+        "editor_id": "ccEEJSSE005_NobleM01",
+        "form_id": "[050B7B0F]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Galtius",
+        "string": "Galtius"
+    },
+    {
+        "editor_id": "ccEEJSSE005_DLC1LvlVampire_Ambush",
+        "form_id": "[050D1093]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Porter",
+        "string": "Lavaplatos"
+    },
+    {
+        "editor_id": "ccEEJSSE005_NobleF02",
+        "form_id": "[050B7B19]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Leyathil",
+        "string": "Leyathil"
+    },
+    {
+        "editor_id": "ccEEJSSE005_NobleM02",
+        "form_id": "[050B7B18]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Verin",
+        "string": "Verin"
+    },
+    {
+        "editor_id": "ccEEJSSE005_StewardVampire",
+        "form_id": "[050B7B27]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Waiter",
+        "string": "Camarero"
+    },
+    {
+        "editor_id": "ccEEJSSE005_HouseKey",
+        "form_id": "[050DB2C6]",
+        "index": null,
+        "type": "KEYM FULL",
+        "original": "Bloodchill Manor Key",
+        "string": "Llave de la mansión de Hielasangre"
+    },
+    {
+        "editor_id": "ccEEJSSE005Interior01",
+        "form_id": "[01002FD1]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Bloodchill Cavern",
+        "string": "Caverna de Hielasangre"
+    },
+    {
+        "editor_id": "ccEEJSSE005_BloodChillMapMarkerREF",
+        "form_id": "[05127259]",
+        "index": null,
+        "type": "REFR FULL",
+        "original": "Bloodchill Cavern",
+        "string": "Caverna de Hielasangre"
+    },
+    {
+        "editor_id": "Tamriel",
+        "form_id": "[0000003C]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Skyrim"
+    },
+    {
+        "editor_id": "ccEEJSSE005_StewardBranch01Topic",
+        "form_id": "[050BCC63]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Can you show me to my table?",
+        "string": "¿Te importaría indicarme cuál es mi asiento?"
+    },
+    {
+        "editor_id": "ccEEJSSE005_Branch03Topic",
+        "form_id": "[050BCC67]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I'd like to see the menu, please.",
+        "string": "Me gustaría ver el menú, por favor."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050DB2C9]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Will your people be staying on?",
+        "string": "¿Tenéis pensado quedaros?"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050DB2C5]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "The note seemed to imply the last survivor would get the house.",
+        "string": "La nota daba a entender que el último superviviente se quedaría con la casa."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050B7B4B]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Any thoughts?",
+        "string": "¿Alguna idea?"
+    },
+    {
+        "editor_id": "ccEEJSSE005_StewardBranch02Topic",
+        "form_id": "[050BCC65]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I'm starving, let's eat already.",
+        "string": "Me muero de hambre, vamos a comer ya."
+    },
+    {
+        "editor_id": "ccEEJSSE005_QuestBranchTopic",
+        "form_id": "[050B7B30]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Are you here for the dinner party?",
+        "string": "¿Vienes a la cena?"
+    },
+    {
+        "editor_id": "ccEEJSSE005_Branch04Topic",
+        "form_id": "[050BCC69]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I'd like to be seated. Now.",
+        "string": "Quiero ir a mi asiento. Ya."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050B7B5A]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Do you think the food will be any good?",
+        "string": "¿Crees que la comida estará buena?"
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050B7B59]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "Are all the guests present?",
+        "string": "¿Han llegado todos los invitados?"
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest100talkTopic",
+        "form_id": "[050DB2AF]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "The vampires are all dead. And the will says the house belongs to me.",
+        "string": "Todos los vampiros están muertos, y el testamento dice que la casa me pertenece."
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest100talkTopic0",
+        "form_id": "[050DB2CB]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I appreciate it.",
+        "string": "Te lo agradezco."
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest100talkTopicC",
+        "form_id": "[050DB2CA]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Well, don't let the door hit you on the way out.",
+        "string": "Pues ya sabes dónde está la puerta."
+    },
+    {
+        "editor_id": null,
+        "form_id": "[050DB2C3]",
+        "index": null,
+        "type": "INFO RNAM",
+        "original": "The Dawnguard and the nobles are dead.",
+        "string": "Los miembros de la Guardia del Alba y los nobles están muertos."
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest",
+        "form_id": "[050B7AED]",
+        "index": 80,
+        "type": "QUST CNAM",
+        "original": "I received a letter from a courier mentioning a banquest feast is happening at a large manor south of Frostflow Lighthouse. I arrived at the home and spoke to the waiter, who gave me a menu.",
+        "string": "He recibido una carta que habla sobre un banquete que se va a celebrar en una gran mansión al sur del faro de Flujo Helado. He llegado a la casa y he hablado con el camarero, que me ha entregado un menú."
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest",
+        "form_id": "[050B7AED]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Read the Dinner Invitation",
+        "string": "Lee la invitación para cenar."
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest",
+        "form_id": "[050B7AED]",
+        "index": 89,
+        "type": "QUST CNAM",
+        "original": "In Skyrim, personal news and letters are often delivered by courier. If I head to a major hold, I might find something addressed to me.",
+        "string": "En Skyrim, es muy habitual entregar cartas y noticias personales por mensajero. Si me dirijo a una comarca importante, puede que encuentre alguna carta dirigida a mí."
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest",
+        "form_id": "[050B7AED]",
+        "index": 47,
+        "type": "QUST NNAM",
+        "original": "Begin the feast",
+        "string": "Inicia el banquete."
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest",
+        "form_id": "[050B7AED]",
+        "index": 80,
+        "type": "QUST NNAM",
+        "original": "Finish the feast",
+        "string": "Termina el banquete."
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest",
+        "form_id": "[050B7AED]",
+        "index": 73,
+        "type": "QUST CNAM",
+        "original": "I received a letter from a courier mentioning a banquest feast is happening at a large manor south of Frostflow Lighthouse. I should visit the hall and attend the festivities.",
+        "string": "He recibido una carta que habla sobre un banquete que se va a celebrar en una gran mansión al sur del faro de Flujo Helado. Debería visitar el lugar y asistir a la fiesta."
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest",
+        "form_id": "[050B7AED]",
+        "index": 100,
+        "type": "QUST NNAM",
+        "original": "Speak to the survivor",
+        "string": "Habla con el superviviente."
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest",
+        "form_id": "[050B7AED]",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "Travel to the banquet table",
+        "string": "Viaja a la mesa del banquete."
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest",
+        "form_id": "[050B7AED]",
+        "index": 69,
+        "type": "QUST CNAM",
+        "original": "I received a letter from a courier mentioning a banquest feast is happening at a large manor south of Frostflow Lighthouse. I arrived at the home and spoke to the waiter, who gave me a menu. The feast appears to be an elaborate trap to feed on a handful of noble guests.",
+        "string": "He recibido una carta que habla sobre un banquete que se va a celebrar en una gran mansión al sur del faro de Flujo Helado. He llegado a la casa y he hablado con el camarero, que me ha entregado un menú. Al parecer, el banquete es una elaborada trampa para alimentarse de un puñado de invitados nobles."
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest",
+        "form_id": "[050B7AED]",
+        "index": 35,
+        "type": "QUST NNAM",
+        "original": "Speak to the Waiter",
+        "string": "Habla con el camarero."
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest",
+        "form_id": "[050B7AED]",
+        "index": 98,
+        "type": "QUST CNAM",
+        "original": "I received a letter from a courier mentioning a banquest feast is happening at a large manor south of Frostflow Lighthouse. I arrived at the home and spoke to the waiter, who gave me a menu. The feast appears to be an elaborate trap to feed on a handful of noble guests. After fighting off the vampires, I should speak to any survivors. ",
+        "string": "He recibido una carta que habla sobre un banquete que se va a celebrar en una gran mansión al sur del faro de Flujo Helado. He llegado a la casa y he hablado con el camarero, que me ha entregado un menú. Al parecer, el banquete era una elaborada trampa para alimentarse de un puñado de invitados nobles. Ahora que he derrotado a los vampiros, debería hablar con los supervivientes. "
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest",
+        "form_id": "[050B7AED]",
+        "index": 85,
+        "type": "QUST CNAM",
+        "original": "I received a letter from a courier mentioning a banquest feast is happening at a large manor south of Frostflow Lighthouse. I arrived at the home and spoke to the waiter, who gave me a menu. At the banquet table, I read a note that implied this feast was not what it seemed.",
+        "string": "He recibido una carta que habla sobre un banquete que se va a celebrar en una gran mansión al sur del faro de Flujo Helado. He llegado a la casa y he hablado con el camarero, que me ha entregado un menú. Una vez en la mesa, he leído una nota que da a entender que el festín no era lo que parece."
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest",
+        "form_id": "[050B7AED]",
+        "index": 89,
+        "type": "QUST CNAM",
+        "original": "I received a letter from a courier mentioning a banquest feast is happening at a large manor south of Frostflow Lighthouse. I arrived at the home and spoke to the waiter, who gave me a menu. The feast appears to be an elaborate trap to feed on a handful of noble guests. After fighting off the vampires, I spoke to a Dawnguard member who inflitrated the party and he thanked me for the help.",
+        "string": "He recibido una carta que habla sobre un banquete que se va a celebrar en una gran mansión al sur del faro de Flujo Helado. He llegado a la casa y he hablado con el camarero, que me ha entregado un menú. Al parecer, el banquete era una elaborada trampa para alimentarse de un puñado de invitados nobles. Después de derrotar a los vampiros, he hablado con un miembro de la Guardia del Alba que se había infiltrado en el banquete y me ha dado las gracias por la ayuda."
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest",
+        "form_id": "[050B7AED]",
+        "index": 70,
+        "type": "QUST NNAM",
+        "original": "Defend against the vampire attack",
+        "string": "Defiéndete del ataque de los vampiros."
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest",
+        "form_id": "[050B7AED]",
+        "index": 90,
+        "type": "QUST NNAM",
+        "original": "Speak to the Waiter",
+        "string": "Habla con el camarero."
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest",
+        "form_id": "[050B7AED]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Await news from a courier",
+        "string": "Espera noticias de un mensajero."
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest",
+        "form_id": "[050B7AED]",
+        "index": 60,
+        "type": "QUST NNAM",
+        "original": "Join the feast",
+        "string": "Únete al banquete."
+    },
+    {
+        "editor_id": "ccEEJSSE005_HouseInit",
+        "form_id": "[050DB2C7]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "HouseInit",
+        "string": "HouseInit"
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest",
+        "form_id": "[050B7AED]",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Attend the banquest feast",
+        "string": "Asiste al banquete."
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest",
+        "form_id": "[050B7AED]",
+        "index": 91,
+        "type": "QUST CNAM",
+        "original": "I received a letter from a courier mentioning a banquest feast is happening at a large manor south of Frostflow Lighthouse. I arrived at the home and spoke to the waiter, who gave me a menu. The feast appears to be an elaborate trap to feed on a handful of noble guests. As a vampire, I've been allowed to partake in the meal.",
+        "string": "He recibido una carta que habla sobre un banquete que se va a celebrar en una gran mansión al sur del faro de Flujo Helado. He llegado a la casa y he hablado con el camarero, que me ha entregado un menú. Al parecer, el banquete es una elaborada trampa para alimentarse de un puñado de invitados nobles. Como vampiro que soy, se me ha permitido participar en el festín."
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest",
+        "form_id": "[050B7AED]",
+        "index": 55,
+        "type": "QUST NNAM",
+        "original": "Read the feast note",
+        "string": "Lee la nota del banquete."
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest",
+        "form_id": "[050B7AED]",
+        "index": 80,
+        "type": "QUST CNAM",
+        "original": "I received a letter from a courier mentioning a banquest feast is happening at a large manor south of Frostflow Lighthouse. I arrived at the home and spoke to the waiter, who gave me a menu. At the banquet table, I found one of many meals to feed on.",
+        "string": "He recibido una carta que habla sobre un banquete que se va a celebrar en una gran mansión al sur del faro de Flujo Helado. He llegado a la casa y he hablado con el camarero, que me ha entregado un menú. Una vez en la mesa, he visto que había gran cantidad de comida."
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest",
+        "form_id": "[050B7AED]",
+        "index": 84,
+        "type": "QUST CNAM",
+        "original": "I received a letter from a courier mentioning a banquest feast is happening at a large manor south of Frostflow Lighthouse. I arrived at the home and spoke to the waiter, who gave me a menu. The feast appears to be an elaborate trap to feed on a handful of noble guests.",
+        "string": "He recibido una carta que habla sobre un banquete que se va a celebrar en una gran mansión al sur del faro de Flujo Helado. He llegado a la casa y he hablado con el camarero, que me ha entregado un menú. Al parecer, el banquete es una elaborada trampa para alimentarse de un puñado de invitados nobles."
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest",
+        "form_id": "[050B7AED]",
+        "index": 84,
+        "type": "QUST CNAM",
+        "original": "I received a letter from a courier mentioning a banquest feast is happening at a large manor south of Frostflow Lighthouse. I arrived at the home and spoke to the waiter, who gave me a menu. The feast appears to be an elaborate trap to feed on a handful of noble guests. After finishing the guests and a surprise group of Dawnguard members, I should now speak to the waiter.",
+        "string": "He recibido una carta que habla sobre un banquete que se va a celebrar en una gran mansión al sur del faro de Flujo Helado. He llegado a la casa y he hablado con el camarero, que me ha entregado un menú. Al parecer, el banquete es una elaborada trampa para alimentarse de un puñado de invitados nobles. Después de terminar con los invitados y un grupo sorpresa de miembros de la Guardia del Alba, ahora debería hablar con el camarero."
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest",
+        "form_id": "[050B7AED]",
+        "index": 86,
+        "type": "QUST CNAM",
+        "original": "During my travels through Skyrim, I ran into a courier who had a letter addressed to me. I should read it to find out who sent it and why.",
+        "string": "Durante mis viajes por Skyrim, me he encontrado con un mensajero que tenía una carta dirigida a mí. Debería leerla para averiguar quién me la envía y por qué."
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest",
+        "form_id": "[050B7AED]",
+        "index": 94,
+        "type": "QUST CNAM",
+        "original": "I received a letter from a courier mentioning a banquest feast is happening at a large manor south of Frostflow Lighthouse. I arrived at the home and found an array of guests at the door.",
+        "string": "He recibido una carta que habla sobre un banquete que se va a celebrar en una gran mansión al sur del faro de Flujo Helado. Al llegar a la casa, me he encontrado con gran cantidad de invitados en la puerta."
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest",
+        "form_id": "[050B7AED]",
+        "index": 97,
+        "type": "QUST CNAM",
+        "original": "I received a letter from a courier mentioning a banquest feast is happening at a large manor south of Frostflow Lighthouse. I arrived at the home and spoke to the waiter, who gave me a menu. The feast appears to be an elaborate trap to feed on a handful of noble guests. After finishing the guests and a surprise group of Dawnguard members, I should now speak to the waiter.",
+        "string": "He recibido una carta que habla sobre un banquete que se va a celebrar en una gran mansión al sur del faro de Flujo Helado. He llegado a la casa y he hablado con el camarero, que me ha entregado un menú. Al parecer, el banquete es una elaborada trampa para alimentarse de un puñado de invitados nobles. Después de terminar con los invitados y un grupo sorpresa de miembros de la Guardia del Alba, ahora debería hablar con el camarero."
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest",
+        "form_id": "[050B7AED]",
+        "index": 92,
+        "type": "QUST CNAM",
+        "original": "I received a letter from a courier mentioning a banquest feast is happening at a large manor south of Frostflow Lighthouse. I arrived at the home and spoke to the waiter, who gave me a menu. The feast appears to be an elaborate trap to feed on a handful of noble guests. After finishing the guests and a surprise group of Dawnguard members, I should now speak to the waiter.",
+        "string": "He recibido una carta que habla sobre un banquete que se va a celebrar en una gran mansión al sur del faro de Flujo Helado. He llegado a la casa y he hablado con el camarero, que me ha entregado un menú. Al parecer, el banquete es una elaborada trampa para alimentarse de un puñado de invitados nobles. Después de terminar con los invitados y un grupo sorpresa de miembros de la Guardia del Alba, ahora debería hablar con el camarero."
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest",
+        "form_id": "[050B7AED]",
+        "index": 102,
+        "type": "QUST CNAM",
+        "original": "I received a letter from a courier mentioning a banquest feast is happening at a large manor south of Frostflow Lighthouse. I arrived at the home and spoke to the waiter, who gave me a menu. The feast appears to be an elaborate trap to feed on a handful of noble guests. After fighting off the vampires, I spoke to a Dawnguard member who inflitrated the party and he thanked me for the help.",
+        "string": "He recibido una carta que habla sobre un banquete que se va a celebrar en una gran mansión al sur del faro de Flujo Helado. He llegado a la casa y he hablado con el camarero, que me ha entregado un menú. Al parecer, el banquete era una elaborada trampa para alimentarse de un puñado de invitados nobles. Después de derrotar a los vampiros, he hablado con un miembro de la Guardia del Alba que se había infiltrado en el banquete y me ha dado las gracias por la ayuda."
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest",
+        "form_id": "[050B7AED]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Guests for Dinner",
+        "string": "Invitados a cenar"
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest",
+        "form_id": "[050B7AED]",
+        "index": 81,
+        "type": "QUST CNAM",
+        "original": "During my travels through Skyrim, I ran into a courier who had a letter addressed to me. I should read it to find out who sent it and why.",
+        "string": "Durante mis viajes por Skyrim, me he encontrado con un mensajero que tenía una carta dirigida a mí. Debería leerla para averiguar quién me la envía y por qué."
+    },
+    {
+        "editor_id": "ccEEJSSE005_Quest",
+        "form_id": "[050B7AED]",
+        "index": 50,
+        "type": "QUST NNAM",
+        "original": "Take a seat at the feast table",
+        "string": "Toma asiento en la mesa del banquete."
+    },
+    {
+        "editor_id": "ccEEJSSE005_ExteriorLocation",
+        "form_id": "[050F47E7]",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "Bloodchill Cavern Location",
+        "string": "Ubicación de la caverna de Hielasangre"
+    },
+    {
+        "editor_id": "SilentMoonsCampLocation",
+        "form_id": "[000192A9]",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "Silent Moons Camp",
+        "string": "Campamento de las Lunas Silenciosas"
+    },
+    {
+        "editor_id": "ccEEJSSE005_InteriorLocation",
+        "form_id": "[050F47E6]",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "Bloodchill Cavern Location",
+        "string": "Ubicación de la caverna de Hielasangre"
+    },
+    {
+        "editor_id": "ccEEJSSE005_DawnguardName",
+        "form_id": "[050B7B2C]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Dawnguard",
+        "string": "Guardia del Alba"
+    },
+    {
+        "editor_id": "ccEEJSSE005_VampireFeedMessage",
+        "form_id": "[050EA5DC]",
+        "index": 1,
+        "type": "MESG ITXT",
+        "original": "Do nothing",
+        "string": "No hacer nada"
+    },
+    {
+        "editor_id": "ccEEJSSE005_VampireFeedMessage",
+        "form_id": "[050EA5DC]",
+        "index": 0,
+        "type": "MESG ITXT",
+        "original": "Feed",
+        "string": "Alimentarse"
+    },
+    {
+        "editor_id": "ccEEJSSE005_DawnguardName",
+        "form_id": "[050B7B2C]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Dawnguard",
+        "string": "Guardia del Alba"
+    },
+    {
+        "editor_id": "ccEEJSSE005_LackItemMSG",
+        "form_id": "[0509E567]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "You lack the required item",
+        "string": "Te falta el objeto necesario."
+    },
+    {
+        "editor_id": "ccEEJSSE005_VampireFeedMessage",
+        "form_id": "[050EA5DC]",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "What would you like to do?",
+        "string": "¿Qué te gustaría hacer?"
+    }
+]

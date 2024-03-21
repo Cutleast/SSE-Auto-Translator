@@ -1,0 +1,434 @@
+[
+    {
+        "editor_id": "ccBGSSSE045_WardConcSelf50",
+        "form_id": "[05000863]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "While not attacking, creates a ward that protects against spells for up to <mag> points.",
+        "string": "Mentre non stai attaccando, crea un incantesimo di protezione che ti ripara dagli incantesimi fino a <mag> punti."
+    },
+    {
+        "editor_id": "ccBGSSSE045_WardConcSelf50",
+        "form_id": "[05000863]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Ward of Hasedoki",
+        "string": "Incantesimo di difesa di Hasedoki"
+    },
+    {
+        "editor_id": "ccBGSSSE045_DummyStaffEffect",
+        "form_id": "[05000825]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "While not attacking, creates a ward that protects against spells for up to <mag> points.",
+        "string": "Mentre non stai attaccando, crea un incantesimo di protezione che ti ripara dagli incantesimi fino a <mag> punti."
+    },
+    {
+        "editor_id": "ccBGSSSE045_EnchSoulTrapFFAimedArea",
+        "form_id": "[05000862]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Soul Trap",
+        "string": "Trappola dell'Anima"
+    },
+    {
+        "editor_id": "ccBGSSSE045_HasedokiKnockback",
+        "form_id": "[05000865]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Knocks back the target on impact.",
+        "string": "Respinge i nemici sul tragitto del bersaglio."
+    },
+    {
+        "editor_id": "ccBGSSSE045_EnchSoulTrapFFAimedArea",
+        "form_id": "[05000862]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "If target dies within <dur> seconds, fills a soul gem.",
+        "string": "Se il bersaglio muore entro <dur> secondi, riempie una gemma dell'anima."
+    },
+    {
+        "editor_id": "ccBGSSSE045_HasedokiKnockback",
+        "form_id": "[05000865]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Knockback",
+        "string": "Respinta"
+    },
+    {
+        "editor_id": "ccBGSSSE045_DummyStaffEffect",
+        "form_id": "[05000825]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Ward of Hasedoki",
+        "string": "Incantesimo di difesa di Hasedoki"
+    },
+    {
+        "editor_id": "ccBGSSSE045_StaffEnchHasedoki",
+        "form_id": "[05000800]",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Soul Sacrifice",
+        "string": "Sacrificio dell'anima"
+    },
+    {
+        "editor_id": "ccBGSSSE045_WardHasedoki",
+        "form_id": "[05000866]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Ward of Hasedoki",
+        "string": "Incantesimo di difesa di Hasedoki"
+    },
+    {
+        "editor_id": "ccBGSSSE045_SmugglerLedger",
+        "form_id": "[05000803]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Smuggler's Ledger",
+        "string": "Libro mastro del contrabbandiere"
+    },
+    {
+        "editor_id": "ccBGSSSE045_BookArkaytheEnemy",
+        "form_id": "[05000805]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Arkay the Enemy",
+        "string": "Arkay, il nemico"
+    },
+    {
+        "editor_id": "ccBGSSSE045_BookTheLightandtheDark",
+        "form_id": "[05000804]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nThe Light and the Dark\r\n\r\n\r\nby\r\nIrek Unterge\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n\"Yes, children, it is no accident that this land of Tamriel has been called 'The Arena'.\" The old man altered his position on the large rock that bore his weight, and straightened his long gray robe. Rheumy eyes lost their focus as they gazed out over the sun-warmed valley in the mountains of High Rock. For a moment he saw a vision of ancient horrors instead of the fresh greenery of spring. A chill washed over his aged bones.\r\n\r\n\"Is this a suitable topic for the young and innocent?\" he asked himself. The young must be taught, but must they learn of such things now, when they should be playing in the sunlight? This is a tale for the dreary winter, with the wind howling outside a walled town and the doors and windows closed and bolted against the blast and cold and -- other things.\r\n\r\nHe glanced with affection at his two grandchildren: the little towheaded boy with a hint of mischief dancing in his eyes even on those rare occasions when sitting quietly, and his older sister. A serene lass, the old man thought. Her hair like a dark flame and her slightly pointed ears were the only obvious signs of elven blood. So like her grandmother, the old man thought. The past is past, and I'shira had brought him so much peace and happiness after a lifetime of battle. He forced his thoughts back to the present.\r\n\r\n\"Sorry, children. I was remembering things. Old people do that, you know.\"\r\n\r\n\"Are you going to tell us the story of Jagar Tharn and the Emperor and the Eternal Champion?\" His grandson asked. \"That's my favorite!\"\r\n\r\n\"Not exactly, son. They were a part of it, in a way. As are I'ric and Moraelyn and Edward and Reymon and many others. Even the gods play a part. This is a far older story, and even the priests won't tell it my way. They have their own interpretations, and their fears as well. I'm too old and have seen too much to have any fear left, except that our people will forget. And forgetting is dangerous. So I, and a few others, carry this tale and try to spread it among the younger generations. You aren't really old enough to understand it all, but I can feel that my end is not far off. I must ask you to remember anyway. In a few years, perhaps, if I still live, we can discuss it again. If not, well, you must seek out others who know, and compare notes.\"\r\n\r\n\"You talk as if you are going to die, Granther,\" his granddaughter spoke up. \"That can't happen. You will live forever!\"\r\n\r\nChuckling, \"I'm afraid not, dear. But I have a little while left, enough for the story\".\r\n\r\nThe children settled back against the bole of a large oak, knowing that the old man could not be hurried. Leaning forward, he began:\r\n\r\n\"Long, long ago, before there were any people at all; even before the gods, Tamriel was chosen as a battleground by two -- things. It is difficult to find words that fit them well. I call them the Light and the Dark. Others use different names. Good and Evil, Bird and Serpent, Order and Chaos. None of these names really apply. It suffices that they are opposites, and totally antithetical. Neither is really good or evil, as we know the words. They are immortal since they do not really live, but they do exist. Even the gods and their daedric enemies are pale reflections of the eternal conflict between them. It's as though their struggle creates energies that distort their surroundings, and those energies are so powerful that life can appear, like an eddy in a stream.\"\r\n\r\n\"Do demons and trolls come from the Dark, Grandpa?\"\r\n\r\n\"Not exactly, son. The undead evils we know, and the demons that live on Oblivion tend to align with the Dark. Their natures are more akin to it. Humans and the other peoples of Tamriel, even the misunderstood Dark Elves, are more aligned with the Light. Our evils are not always of the Dark, but some are, and these are the truly dangerous ones. Jagar Tharn was almost wholly aligned with the Dark, and that is really why he was so monstrous. It was not because he was a black mage, as some would have it.\"\r\n\r\n\"Did his magic come from the Dark, Granther?\" The girl's interest was piqued by mention of magic. Her heritage is beginning to show itself, thought the old man.\r\n\r\n\"No, magic power comes directly from the energies swirling about both entities. These energies are impersonal and all mixed up. Black magic is more a matter of intent than effect. The Mages' Guild holds that a fireball, say, directed against a creature intent on causing harm, is not black magic; but the same spell directed at one seeking peace is. In this, they are right. Destruction of a fire daedra strengthens the Light and weakens the Dark just a little. In the same manner, destruction of a unicorn strengthens the Dark.\"\r\n\r\n\"What about the gods? Do they come from the Light?\" The boy's eyes were animated, but tinged with apprehension. He adored stories of the gods and goddesses of Tamriel's pantheon, and the heroes who served them.\r\n\r\nThe old man chuckled. \"The gods have an unusual origin, if some of the oldest tales are true. The oldest inhabitants of this world -- no one seems to be sure what race they were -- had a system of myths that they believed in for a thousand years. The people of et'Ada believed for so long and so well, that their beliefs may, just may, have drawn upon the energies surrounding Tamriel to bring the gods themselves into being. If that is so, the conflict between the Light and the Dark provided the energy, and the et'Adans the structure, that created the gods of Tamriel. No one really knows since it was so long ago and so little survives from that time. It no longer matters; the gods have their own existence now, and mostly align with the Light, except for a few who are, shall we say, a little ambiguous.\"\r\n\r\n\"Why do we have to remember, Granther? What is the danger you spoke of? If the Light and Dark are so big and powerful, can we influence them? Should we try? What should we fight for?\"\r\n\r\n\"I see that your critical faculties are developing, Solara. That is good. The answer is simple, but quite large enough for mere mortals like us. The Light and Dark are evenly matched, and perhaps will never resolve their conflict. Mortals and the beings of the Aetherius sometimes can perceive traces of them. Therein lies the danger; to most of us the Light is more congenial, even inspiring, and moves us to behavior that we would call good. To creatures like us, the Dark is -- horrible. Those who have visions of it are often driven mad, and the ones who are not would be better dead. The Dark is to us a monstrous emptiness, an emptiness that sucks the soul toward it -- to be twisted, maimed, and ultimately destroyed. What we can see of it seems utterly evil. Perhaps somewhere else this would not be so, but in our world, it is.\"\r\n\r\nThe old man paused to gather his thoughts, gazing once more at the fresh new life of spring. \"What we must do is never to forget that the Dark is always there, beckoning to the weak-souled among us. Should it gain ascendancy over Tamriel, through agents perverted by its awful attraction, terrible things could happen. All that we hold beautiful or desirable, even love itself, would be swept away. Peace and hope would be no more. For Tamriel, that would be the worst possible disaster. What I saw during Jagar's reign nearly killed me, almost destroyed my mind. When he was destroyed, I thought the worst was over, but it was not. The forces of the Dark are on the march again, and new heroes must rise to join the Eternal Champion in the fight against them.\"\r\n\r\nThe old man and the two children sat in silence for several minutes. Finally, the children assisted their grandfather to his feet, and they walked slowly away. Toward home, and hearth, and lunch.\r\n",
+        "string": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nLuce e Oscurità\r\n\r\n\r\ndi\r\nIrek Unterge\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\nEsatto, bambini, non è un caso che questa parte di Tamriel venga chiamata \"L'Arena\". Il vecchio cambiò posizione sulla grande roccia che lo sosteneva, e si sistemò la lunga tunica grigia. Gli occhi umidi persero la concentrazione mentre posavano lo sguardo sulla valle riscaldata dal sole sulle montagne di High Rock. Per un attimo ebbe una visione di antichi orrori al posto della natura rigogliosa della primavera. Un brivido attraversò le sue vecchie ossa.\r\n\r\nÈ un argomento adatto ai più giovani e innocenti? Si chiese. I giovani vanno educati, ma dovrebbero imparare certe cose quando ancora dovrebbero passare le loro giornate a giocare all'aperto? È una storia più adatta al malinconico inverno, quando il vento ulula alle mura della città e le porte e le finestre sono sbarrate per impedire l'ingresso del gelo e... di altre cose.\r\n\r\nGuardò con affetto i suoi due nipoti: il ragazzo, biondino e gli occhi vivaci, e sua sorella maggiore. Una ragazza tranquilla, pensava il vecchio. I suoi capelli come fiamme nere e le sue orecchie appena appuntite erano gli unici segni delle sue origini elfiche. Proprio come sua nonna, pensava il vecchio. Il passato è il passato, e I'shira gli aveva portato pace e felicità dopo una vita vissuta in battaglia. Si costrinse a tornare al presente.\r\n\r\nScusate, bambini. Mi ero perso nei ricordi. Agli anziani succede a volte.\r\n\r\nCi racconterai la storia di Jagar Tharn e dell'Imperatore e del Campione Eterno? Chiese suo nipote. \"È la mia preferita!\"\r\n\r\nNon proprio, figliolo. In un certo senso ne fanno parte. Così come I'ric e Moraelyn ed Edward e Reymon e tanti altri. Ne fanno parte addirittura gli dei. Questa è una storia molto più vecchia, e neanche i sacerdoti la raccontano come me. Loro hanno le loro interpretazioni, e le loro paure. Io ormai sono troppo vecchio e ho visto troppe cose per avere paura, temo solo che la nostra gente dimentichi. E dimenticare è pericoloso. Così io e qualche altro, portiamo avanti questa storia e proviamo a farla conoscere ai più giovani. Non siete ancora abbastanza grandi da capirla a pieno, ma sento che la mia fine è vicina. Comunque, devo chiedervi di ricordare. Se tra qualche anno, magari, sarò ancora in vita, ne parleremo ancora. Se non sarà così, beh, dovrete cercare altri che conoscono la storia e scambiarci due chiacchiere.\r\n\r\nParli come se stessi per morire, nonnino, disse sua nipote. \"Non è possibile. Tu vivrai per sempre!\"\r\n\r\nRidendo disse, \"Temo che non sia così, mia cara. Ma mi rimane ancora un po' di tempo, abbastanza per raccontarvi la storia\".\r\n\r\nI bambini si sistemarono contro il tronco di una grossa quercia, sapevano di non poter mettere fretta al nonno. Sporgendosi in avanti, iniziò:\r\n\r\nTanto, tanto tempo fa, prima che esistessero le persone; addirittura prima degli dei, Tamriel venne scelta come campo di battaglia da due... cose. È difficile trovare le parole per descriverli. Io li chiamo Luce e Oscurità. Altri usano nomi differenti. Bene e Male, l'Uccello e il Serpente, Ordine e Caos. Ma nessuno di questi nomi è appropriato. Vi basti sapere che erano uno l'opposto dell'altro, diametralmente opposti. Nessuno dei due è assolutamente buono o cattivo, da quello che sappiamo. Sono immortali perché non vivono davvero, ma senza dubbio esistono. Gli dei e i loro nemici daedrici sono solo pallidi riflessi del loro eterno conflitto. Il loro scontro è così violento da distorcere le cose nelle vicinanze, e la loro energia è così potente che la vita può sembrare, come un mulinello in un ruscello.\r\n\r\nI demoni e i troll vengono dall'Oscurità, nonno?\r\n\r\nNon proprio, figliolo. Le forze non morte che conosciamo e i demoni che abitano nell'Oblivion, tendono a schierarsi dalla parte dell'Oscurità. Le sono più affini per natura. Gli umani e gli altri popoli di Tamriel, anche gli incompresi elfi scuri, si schierano dalla parte della Luce. Non tutti i malvagi appartengono all'Oscurità, ma alcuni sì, e sono loro quelli davvero pericolosi. Jagar Tharn faceva quasi del tutto parte dell'Oscurità, per questo era così mostruoso. Non perché era una mago oscuro, come credono alcuni.\r\n\r\nLa sua magia veniva dall'Oscurità, nonnino? L'interessa della ragazza venne risvegliato quando venne menzionata la magia. Il suo retaggio iniziava a farsi vedere, pensò il vecchio.\r\n\r\nNo, la magia arriva direttamente dall'energia scatenata dalle due entità. Quest'energia non appartiene a nessuno dei due. La magia oscura è più una questione di intenti che di effetti. La Gilda dei Maghi sostiene che, ad esempio, una palla di fuoco diretta contro una creatura intenta a fare del male, non è magia oscura; ma lo stesso incantesimo diretto a qualcuno in cerca della pace, lo è. E in questo hanno ragione. La distruzione di un daedra del fuoco rinforza la Luce e indebolisce l'Oscurità solo per un attimo. Allo stesso modo, la distruzione di un unicorno rinforza l'Oscurità.\r\n\r\nE allora gli dei? Loro vengono dalla Luce? Gli occhi del ragazzo erano vispi, ma pieni di apprensione. Adorava le storie sulle divinità del pantheon di Tamriel e sugli eroi che li servono.\r\n\r\nIl vecchio rise. \"Gli dei hanno un'origine insolita, se le storie antiche hanno ragione. I più vecchi abitanti di questo mondo, nessuno sa a quale razza appartenessero, avevano un sistema di miti in cui credettero per migliaia di anni. La gente di et'Ada credette così a lungo a così intensamente, che le loro credenze potrebbero, dico potrebbero, aver attinto dall'energia che circonda Tamriel e aver creato gli dei stessi. Se così fosse, il conflitto tra Luce o Oscurità ha fornito l'energia, e il popolo di et'Ada la struttura, che diede origine agli dei di Tamriel. Nessuno lo sa con certezza perché è successo moltissimo tempo fa, e a noi sono arrivate solo poche testimonianze di quei tempi. Ma ormai non importa; gli dei esistono, e la maggior parte di loro si schiera con la Luce, fatta eccezione per un paio, che rimangono, diciamo, ambigui.\"\r\n\r\nPerché dobbiamo ricordare, nonnino? Qual è il pericolo di cui parlavi? Se la Luce e l'Oscurità sono così potenti, come possiamo interferire con loro? Dovremmo provarci? Per cosa dovremmo lottare?\r\n\r\nVedo che stai sviluppando un pensiero critico, Solara. Bene. La risposta è semplice, ma troppo grande per noi semplici mortali. La Luce e l'Oscurità sono perfettamente bilanciate, e forse non risolveranno mai il loro conflitto. I mortali e gli esseri di Aetherius a volte possono percepirne le tracce. Ed è lì che sta il pericolo. Per la maggior parte di noi la Luce è più congeniale, perfino d'ispirazione, e ci spinge a un comportamento che reputiamo buono. Per le creature come noi, l'Oscurità è...orribile. Quelli che la scorgono nelle visioni spesso impazziscono, e chi non lo fa preferirebbe morire. L'Oscurità è per noi un vuoto mostruoso, un vuoto che ci risucchia l'anima, per straziarla, mutilarla e infine distruggerla. Quello che riusciamo a vedere dell'Oscurità è estremamente malvagio. Forse da altre parti non sarebbe così, ma nel nostro mondo lo è.\r\n\r\nIl vecchio si fermò per raccogliere i pensieri, soffermandosi ancora una volta sulla freschezza dalla primavera. \"Quello che dobbiamo fare è non dimenticare mai che l'Oscurità è sempre lì, pronta ad attirare a sé i deboli. Se dovesse riuscire ad avere la meglio su Tamriel, per mezzo delle persone attirate dalla sua terribile potenza, accadrebbero cose orribili. Tutto ciò che conosciamo di bello, anche l'amore stesso, verrebbe spazzato via. La pace e la speranza non esiterebbero più. Per Tamriel sarebbe il disastro più grande. Quello che ho visto durante il regno di Jagar mi ha quasi ucciso, mi ha quasi distrutto la mente. Quando venne sconfitto, pensavo che il peggio fosse passato, ma non era così. Le forze dell'Oscurità sono di nuovo in marcia, e nuovi eroi dovranno ergersi e combatterle insieme al Campione Eterno.\"\r\n\r\nIl vecchio e i due bambini rimasero seduti e in silenzio per parecchi minuti. Infine, i bambini aiutarono il nonno ad alzarsi, e si incamminarono lentamente. Verso casa, verso il focolare, verso il pranzo.\r\n"
+    },
+    {
+        "editor_id": "ccBGSSSE045_BookArkaytheEnemy",
+        "form_id": "[05000805]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nArkay the Enemy\r\n\r\n\r\nby\r\nKW\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/H_letter.png'>ear me, children. Once I was a lowly man such as yourselves. By my will I entered the ranks of the gods. By your unquestioning devotion, you can share my glory.\r\n\r\nMost Necromancers are fools and weaklings. Fodder for the witchhunters. But you, my servants, you are among the chosen. In the days to come, few will dare to stand against your might. But one obstacle remains. His name is Arkay.\r\n\r\nHe was also a man who entered the ranks of the gods. The similarities between his mortal life and my own astonish even me. It is only proper that we should be enemies.\r\n\r\nArkay's Blessing prevents the souls of men, beastmen, and elves from being used without consent. Arkay's Law prevents those buried with the proper rituals from being raised to serve my children's will. As you know, my children, Arkay's Blessing is flexible to those with daring, but Arkay's Law is unwavering.\r\n\r\nTo the Scholars: Humiliate the priests of Arkay. Reveal the primitive burial customs to be mere superstition. Befriend kings with honeyed words and bind them to your will. Look to my children in Cyrodiil for guidance.\r\n\r\nTo the Priests: Use your servants sparingly, let none be seen by the living. Let the memories of the undead waste away from the people. Send missionaries to the unbound dead, to the Vampires and the Liches. Let all the nations of dead carry my banner and my banner alone.\r\n\r\nTo the Hidden: Wait, as always, in the darkness.\r\n\r\nFor soon we shall strike. The Temples of Arkay will be torn stone from stone. The blood of his priests will sate our thirst; their bones will rise as our servants. The name Arkay will be struck from the records. Only I shall hold sway over life and death. Only one name shall be whispered in fear. The name of your lord and master.\r\n\r\nKW\r\n",
+        "string": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nArkay, il nemico\r\n\r\n\r\ndi\r\nKW\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/A_letter.png'>scoltatemi, figli miei. Una volta ero un mero uomo, proprio come voi. Per mio volere sono entrato a far parte degli dei. Grazie alla vostra devozione incondizionata, potrete condividere la mia gloria.\r\n\r\nMolti dei negromanti sono stupidi e smidollati. Carne da macello per i cacciatori di streghe. Ma voi, miei servitori, voi siete i prescelti. Nei prossimi giorni, in pochi oseranno intralciarvi. Ma rimane ancora un ostacolo. Il suo nome è Arkay.\r\n\r\nAnche lui era un uomo che è entrato a far parte degli dei. Le similitudini tra la sua vita mortale e la mia sono stupefacenti. Mi sembra naturale essere nemici.\r\n\r\nLa Benedizione di Arkay impedisce che le anime degli uomini, delle bestie e degli elfi vengano utilizzate senza il loro consenso. La Legge di Arkay impedisce che, chi viene seppellito seguendo i giusti rituali, possa venir resuscitato per servire il volere dei miei figli. Come sapete, figli miei, la Benedizione di Arkay può essere aggirata se si è abbastanza temerari, ma la Legge di Arkay è irremovibile.\r\n\r\nAgli studiosi: umiliate i sacerdoti di Arkay. Mostrate loro che le usanze per le loro sepolture sono solo mera superstizione. Diventate amici dei sovrani con parole melliflue e piegateli al vostro volere. Rivolgetevi ai mei figli a Cyrodiil per avere una guida.\r\n\r\nPer i sacerdoti: utilizzate i vostri servitori con parsimonia, non lasciate che i vivi li vedano. Fate in modo che la memoria dei non morti si disperda. Mandate i missionari a risvegliare i morti non protetti, dai vampiri e dai lich. Fate che i morti di tutte le razze portino la mia bandiera e la mia soltanto.\r\n\r\nAl Nascosto: aspetta, come sempre, nell'ombra.\r\n\r\nPresto colpiremo. Il tempio di Arkay crollerà pietra dopo pietra. Il sangue dei suoi sacerdoti placherà la nostra sete, le loro ossa resusciteranno come nostri servitori. Il nome di Arkay verrà eliminato [sic] dai libri. Solo io potrò oscillare tra la vita e la morte. Solo un nome verrà bisbigliato con timore. Il nome del vostro maestro e padrone.\r\n\r\nKW\r\n"
+    },
+    {
+        "editor_id": "ccBGSSSE045_IvaraNote",
+        "form_id": "[05000801]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Ivara's Notes",
+        "string": "Note di Ivara"
+    },
+    {
+        "editor_id": "ccBGSSSE045_IvaraNote",
+        "form_id": "[05000801]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>\r\nThe journey from Olenveld was long but worth the trip. We'll have a far easier time finding what we need to open the portal to the Soul Cairn.\r\n\r\nThe pass is remote and yet there are no shortage of travelers looking for a shortcut across the mountains. As such, we'll have plenty of blood and bonemeal at our disposal, but we'll need void salts and soul gem fragments to complete the ritual.\r\n\r\nLushak suggested we contact the local smugglers for help with the latter. She'd been in contact with one about the Staff of Hasedoki. If the wizard truly bonded his soul to the stave as the legends suggest, releasing him might provide a worthy offering to the Ideal Masters.\r\n\r\nIn any case, adding the ingredients to the list should be an easy task.\r\n</font>\r\n\r\n",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\r\nIl viaggio da Olenveld è stato lungo ma ne è valsa la pena. Troveremo molto più facilmente quello che ci serve per aprire il portale del Tumulo dell'Anima.\r\n\r\nIl passo è lontano ma non mancano i viaggiatori alla ricerca di una scorciatoia per attraversare le montagne. Quindi, avremo abbastanza sangue e ossa a disposizione, ma per completare il rituale avremo bisogno dei Sali del Vuoto e dei frammenti di gemma dell'anima.\r\n\r\nLushak ha suggerito di contattare dei contrabbandieri del posto per trovare la gemma. Ne ha contattato uno per il bastone di Hasedoki. Se il mago ha davvero legato la sua anima al bastone come dicono le leggende, liberarlo potrebbe essere un'offerta degna dei Maestri Ideali.\r\n\r\nAd ogni modo, aggiungere gli ingredienti alla lista dovrebbe essere facile.\r\n</font>\r\n\r\n"
+    },
+    {
+        "editor_id": "ccBGSSSE045_BookToRaisetheLiving",
+        "form_id": "[05000839]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "To Raise the Living",
+        "string": "Risvegliare i vivi"
+    },
+    {
+        "editor_id": "ccBGSSSE045_BookToRaisetheLiving",
+        "form_id": "[05000839]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nTo Raise the Living\r\n\r\n\r\nby\r\nShagrub Gilgar\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n\"Why live in a tomb?\"\r\n\r\nThe child latched onto the Orc's cloak with a gentle tug, doing all he could to charm a response. \r\n\r\n\"Just as the Emperor has the Blades at his side, so must we have the dead.\"\r\n\r\n\"And the staff? What is that for? Is it powerful?\"\r\n\r\n\"It's powerful,\" the Orc replied, \"In fact, it once belonged to the wizard Hasedoki, a great mage who is said to have no equal.\"\r\n\r\n\"If he had no equal, then what killed him?\"\r\n\r\nThe Orc glanced briefly at the staff's head, as if waiting for Hasedoki himself to speak. Yet its countenance remained stuck in that playful stare, halfway between laughter and mockery. She would have to respond in his place.\r\n\r\nUfkul Gilgar had spent the last ten years contemplating the same question before settling on her answer. Throughout much of that time, her life had mirrored Hasedoki's, traveling the world in search of one who could challenge her. It was custom that bequeathed her the staff, and destiny that made her wield it. But even with fate beside her, the staff provided little comfort, knowing the ending it designed.\r\n\r\n\"There's only one thing that could kill a wizard as powerful as Hasedoki,\" she replied.\r\n\r\n\"Is it a cliff racer? A magic sword? The undead?\" \r\n\r\n\"Time.\"\r\n\r\nShe spoke from experience. Time grew the day with emptiness and yet made all things seem fleeting. So long as it passed, contentment would morph into boredom, and love would fade into loneliness. \r\n\r\nAs a necromancer, she had the tools to defy death. She had no similar solution for life. \r\n\r\nPerhaps the mortals had already divined an answer. For them it was not magic, but children who allowed them to delay time's inexorable march. Now that she was a mother, the loneliness no longer consumed her, even though that too was  temporary. And just as the staff was passed on to her by her father, when the time came, she would do the same for her son. It may have been why Hasedoki bound his soul to the staff, so that his spirit would be one with whoever wielded it.\r\n\r\nUkful placed the staff in the child's hands and watched as he scuttled through the tomb, swinging it around like a blunt instrument. It's possible the boy would be free of the same curse, the boredom that plagued his ancestors and Hasedoki before them. Morrowind was home to a great many wizards. Somewhere in that group was a worthy challenger.\r\n\r\nAnd if not, there would still be time for the next child.",
+        "string": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nRisvegliare i vivi\r\n\r\n\r\ndi\r\nShagrub Gilgar\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\nPerché vivere in una tomba?\r\n\r\nIl ragazzo si attaccò al mantello dell'orco con un leggero strattone, facendo tutto il possibile per elaborare una risposta. \r\n\r\nCosì come l'Imperatore ha le Blade al suo fianco, noi avremo i morti.\r\n\r\nE il bastone? A che serve? È potente?\r\n\r\nÈ potente sì, rispose l'orco, \"Infatti, una volta apparteneva allo stregone Hasedoki, un grande mago senza eguali.\"\r\n\r\nSe non aveva eguali, cosa l'ha ucciso?\r\n\r\nL'orco guardò brevemente la sommità del bastone, come ad aspettare che rispondesse Hasedoki in persona. Rimase con un'espressione a metà tra la risata e lo scherno. Avrebbe dovuto rispondere lei al suo posto.\r\n\r\nUfkul Gilgar aveva passato gli ultimi dieci anni a riflettere su quella stessa domanda, prima di trovare una risposta. Durante quel periodo la sua vita aveva ripercorso quella di Hasedoki, girovagando per il mondo alla ricerca di qualcuno che potesse sfidarla. Il bastone le venne lasciato in eredità, e così il destino che accompagnava chi lo brandiva. Ma anche con il fato dalla sua parte, il bastone le aveva portato poco conforto, vista la fine a cui era destinata.\r\n\r\nSolo una cosa può uccidere un mago potente come Hasedoki, rispose.\r\n\r\nLa caduta da una scogliera? Una spada magica? I non morti? \r\n\r\nIl tempo.\r\n\r\nParlava per esperienza. Il tempo rendeva le giornate vuote e tutto diventava effimero. Con il passare del tempo, l'appagamento diventava noia, e l'amore si trasformava in solitudine. \r\n\r\nCon i poteri da negromante, poteva sconfiggere la morte. Ma non poteva fare lo stesso per la vita. \r\n\r\nForse i mortali avevano già trovato la risposta. Non era la magia, ma i figli che riuscivano a rallentare l'inesorabile marcia del tempo. Ora che anche lei era madre, la solitudine non la consumava più, anche se sapeva che era una soluzione temporanea. Proprio come il bastone passò a lei da suo padre, quando sarebbe arrivato il momento, lei avrebbe dovuto passarlo a suo figlio. Forse per questo Hasedoki legò la sua anima al bastone, per poter diventare un tutt'uno con chiunque lo brandisse.\r\n\r\nUfkul mise il bastone nelle mani del bambino e lo guardò andare in giro per la tomba e agitarlo come se fosse un oggetto contundente. Forse il bambino non sarebbe andato incontro alla sua stessa maledizione, la noia che colpì i suoi antenati e Hasedoki prima di loro. A Morrowind abitavano molti maghi in gamba. Forse ne avrebbe incontrato qualcuno degno di sfidarlo.\r\n\r\nSe non a lui, forse sarebbe successo al prossimo figlio."
+    },
+    {
+        "editor_id": "ccBGSSSE045_SmugglerNote",
+        "form_id": "[05000802]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Smuggler's Trade Notes",
+        "string": "Documenti di scambio del contrabbandiere"
+    },
+    {
+        "editor_id": "ccBGSSSE045_SmugglerNote",
+        "form_id": "[05000802]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nThe new source has been a real boon. Skooma, poisons, black soul gems, you name it. We've got a line to a wide range of goods, and an even wider range of clients. Which reminds me, someone needs to tell Ahkari where she can stick her bottles of sugared cat piss. We're done.\r\n\r\nMeanwhile we're filling up our coffers faster than we can empty them. We're drinking day and night and still haven't gone through half the gold from that Morrowind job for the corpse fondlers. With Argonian patrols up and down the border, we can charge an arm, leg, and a tail for every crate that comes in. As for the zombie petters, they were pretty pleased the staff wasn't damaged. Creepy looking thing too, was glad to be rid of it. \r\n\r\nIt's a shame we couldn't hold out a couple more days though. This morning another buyer came by the camp, an Orc with a face so lumpy he must've jumped head first off the top of Dragonsreach.\r\n\r\nTurns out he was looking for the same staff, offering to pay double. I told him we could have something better for him on the next boat from Solstheim, but he was pretty sodding clear there was only one staff he wanted to buy. Makes sense. The only thing uglier than this Orc was that staff. Maybe he wants to hold it up when he shaves so he doesn't feel so bad for being born.\r\n\r\nAnyways, I sold him the information on the buyers, and sent him on his way. Couldn't get him to trade any of the valuables on his carriage, but it's all right. There's more than one way to part a fool and his things.\r\n\r\nI told the boys to cut him off on the road west of Whiterun, at the burnt down house between the watchtower and Fort Greymoor. Given how obsessed he was about that staff, it'll be easy to catch him off guard.\r\n\r\n</font>\r\n",
+        "string": "<font face='$HandwrittenFont'>\r\nLa nuova fonte è una vera manna dal cielo. Skooma, veleno, gemme dell'anima nere, chi più ne ha più ne metta. Abbiamo accesso a un'ampia varietà di merci e una ancora più ampia di clienti. Qualcuno deve dire ad Ahkari che può tenersi quelle bottiglie di piscio di gatto zuccherate. Abbiamo chiuso.\r\n\r\nNel frattempo stiamo riempiendo i forzieri più in fretta di quanto riusciamo a svuotarli. Beviamo notte e giorno e ancora non abbiamo speso neanche la metà dell'oro che abbiamo ricevuto per quel lavoro a Morrowind da quegli amanti dei cadaveri. Con le guardie argoniane che controllano il confine, possiamo farci pagare un occhio della testa per ogni cassa che facciamo passare. Le patite degli zombi erano contente che il bastone non fosse danneggiato. Quella cosa era abbastanza strana, sono contento che ce ne siamo liberati. \r\n\r\nPeccato però che non l'abbiamo tenuto per un paio di giorni. Questa mattina si è presentato all'accampamento un altro compratore, un orco con una faccia così malconcia che sembrava si fosse buttato di testa dalla cima di Dragonsreach.\r\n\r\nStava cercando lo stesso bastone, e pagava il doppio. Gli ho detto che potevamo procurargli qualcosa di meglio con la prossima nave proveniente da Solstheim, ma era chiaro che non gli interessava altro. Ha senso. L'unica cosa più brutta di quell'orco era quel bastone. Forse ci si voleva specchiare quando si faceva la barba per sentirsi meno in colpa per essere nato.\r\n\r\nComunque, gli ho venduto la posizione dei compratori, e l'ho mandato via. Non sono riuscito a farmi dare niente di valore tra le cose che aveva sul carro, ma non c'è problema. Esiste più di un modo per prendere le cose a un idiota.\r\n\r\nHo detto ai ragazzi di tagliargli la strada a ovest di Whiterun, alla casa bruciata tra la torre d'osservazione e Forte Greymoor. Era così ossessionato dal bastone che sicuramente lo beccheranno impreparato.\r\n\r\n</font>\r\n"
+    },
+    {
+        "editor_id": "ccBGSSSE045_BookTheLightandtheDark",
+        "form_id": "[05000804]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "The Light and the Dark",
+        "string": "Luce e Oscurità"
+    },
+    {
+        "editor_id": "ccBGSSSE045_SmugglerLedger",
+        "form_id": "[05000803]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'> \r\n\r\nItems:\r\nDozen bottles of skooma\r\n\r\nDelivered to: \r\nDelvin Mallory, Riften\r\n\r\nSmuggler's Fee: \r\nFifty septims and a favor. Knowing Delvin, the discount is worth it, at least this time around.\r\n\r\n[pagebreak]\r\n\r\nItems: \r\nStaff of Hasedoki, void salts, soul gems, bonemeal\r\n\r\nDelivered to: \r\nIvara of Olenveld and Lushak gra-Ragdam, Brittleshin Pass\r\n\r\nSmuggler's Fee:\r\nJust gold and gems for now. It was tough sneaking in some of the items on the list, but the zombie lovers were happy with the haul. They say they're trying to open a portal to something called the Soul Cairn. If there's loot to be had inside, it might be a good idea to line up some buyers.\r\n\r\n[pagebreak]\r\n\r\nItems:\r\nCane, book\r\n\r\nDelivered to: \r\nBandits, White River Watch\r\n\r\nSmuggler's Fee:\r\nHajvarr paid with a dagger and some farmer clothes with the blood still on it. The cane was a foot short, but it serves the bastard right for not paying in gold. I told him if he wants better service, he's going to have to learn how to fight with his eyes open.</font>\r\n",
+        "string": "<font face='$HandwrittenFont'> \r\n\r\nOggetti:\r\nDodici bottiglie di skooma\r\n\r\nConsegnate a: \r\nDelvin Mallory, Riften\r\n\r\nTariffa del contrabbandiere: \r\nCinquanta septim e un favore. Conoscendo Delvin, è stato conveniente fargli uno sconto, almeno questa volta.\r\n\r\n[pagebreak]\r\n\r\nOggetti: \r\nBastone di Hasedoki, Sali del Vuoto, gemme dell'anima, ossa\r\n\r\nConsegnati a: \r\nIvara di Olenveld e Lushak gra-Ragdam, Passo Periglioso\r\n\r\nTariffa del contrabbandiere:\r\nPer adesso solo oro e gemme. Trovare alcuni oggetti della lista non è stato facile, ma le amanti degli zombi erano soddisfatte. Hanno detto che ne avevano bisogno per aprire un portale per un posto chiamato Tumulo dell'Anima. Se ci dovesse essere del bottino, forse posso radunare dei compratori.\r\n\r\n[pagebreak]\r\n\r\nOggetti:\r\nBastone, libro\r\n\r\nConsegnati a: \r\nBanditi, Osservatorio del Fiume Bianco\r\n\r\nTariffa del contrabbandiere:\r\nHajvarr ha pagato con un pugnale e dei vestiti da contadino con del sangue ancora sopra. Il bastone era più corto, gli sta bene per non aver pagato in oro. Gli ho detto che se voleva un servizio migliore, avrebbe dovuto imparare a combattere con gli occhi aperti.</font>\r\n"
+    },
+    {
+        "editor_id": "ccBGSSSE045_ModigAlchemySatchel",
+        "form_id": "[05000828]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Modig's Satchel",
+        "string": "Borsa di Modig"
+    },
+    {
+        "editor_id": "ccBGSSSE045_StaffofHasedoki",
+        "form_id": "[05000806]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Staff of Hasedoki",
+        "string": "Bastone di Hasedoki"
+    },
+    {
+        "editor_id": "ccBGSSSE045_IvaraofOlenveld",
+        "form_id": "[05000832]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Ivara",
+        "string": "Ivara"
+    },
+    {
+        "editor_id": "ccBGSSSE045_IvaraofOlenveld",
+        "form_id": "[05000832]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Ivara of Olenveld",
+        "string": "Ivara di Olenveld"
+    },
+    {
+        "editor_id": "ccBGSSSE045_LushakgraRagdam",
+        "form_id": "[05000835]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Lushak gra-Ragdam",
+        "string": "Lushak gra-Ragdam"
+    },
+    {
+        "editor_id": "ccBGSSSE045_ModigGilgar",
+        "form_id": "[0500082D]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Modig Gilgar",
+        "string": "Modig Gilgar"
+    },
+    {
+        "editor_id": "ccBGSSSE045_LushakgraRagdam",
+        "form_id": "[05000835]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Lushak",
+        "string": "Lushak"
+    },
+    {
+        "editor_id": "ccBGSSSE045_ModigGilgar",
+        "form_id": "[0500082D]",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Modig",
+        "string": "Modig"
+    },
+    {
+        "editor_id": "BrittleShinPass01",
+        "form_id": "[00081DEC]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Brittleshin Pass",
+        "string": "Passo Periglioso"
+    },
+    {
+        "editor_id": "Tamriel",
+        "form_id": "[0000003C]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Skyrim"
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "form_id": "[05000823]",
+        "index": 71,
+        "type": "QUST CNAM",
+        "original": "On the road west of Whiterun I've encountered a hostile Orc besieged by bandits. It appears conversation is not an option.",
+        "string": "Sulla strada a ovest di Whiterun ho incontrato un orco assediato dai banditi. Sembra che la diplomazia non sia un'opzione."
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "form_id": "[05000823]",
+        "index": 68,
+        "type": "QUST CNAM",
+        "original": "I've killed the necromancer Lushak gra-Ragdam.",
+        "string": "Ho ucciso la negromante Lushak gra-Ragdam."
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "form_id": "[05000823]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Investigate the Smuggler's Den",
+        "string": "Indaga nel covo del contrabbandiere"
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "form_id": "[05000823]",
+        "index": 90,
+        "type": "QUST NNAM",
+        "original": "Retrieve the necromancer's staff",
+        "string": "Trova il bastone della negromante"
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "form_id": "[05000823]",
+        "index": 84,
+        "type": "QUST CNAM",
+        "original": "On the road west of Whiterun I encountered and killed an Orc besieged by bandits. I should check his body for clues on where he was headed.",
+        "string": "Sulla strada a ovest di Whiterun ho incontrato e ucciso un orco che era stato assediato dai banditi. Dovrei controllare il cadavere per scoprire dove era diretto."
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "form_id": "[05000823]",
+        "index": 105,
+        "type": "QUST CNAM",
+        "original": "I've found a smuggler's note which detailed the sale of a powerful staff to a necromancer somewhere west of Whiterun. While the location was not written in the note, it was apparently sold to an Orc who was interested in obtaining the staff. As the smuggler's planned to ambush and rob the Orc, I should go to the location and find out what happened.",
+        "string": "Ho trovato la nota di un contrabbandiere che riporta la vendita di un potente bastone a una negromante da qualche parte a ovest di Whiterun. Sebbene non ci fosse scritta la posizione, a quanto pare questa informazione è stata venduta a un orco interessato al bastone. Il contrabbandiere ha pianificato un'imboscata per derubare l'orco, dovrei andare a scoprire cos'è successo."
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "form_id": "[05000823]",
+        "index": 60,
+        "type": "QUST NNAM",
+        "original": "Find the necromancers in Brittleshin Pass",
+        "string": "Trova le negromanti a Passo Periglioso"
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "form_id": "[05000823]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "The Staff of Hasedoki",
+        "string": "Il bastone di Hasedoki"
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "form_id": "[05000823]",
+        "index": 84,
+        "type": "QUST CNAM",
+        "original": "I've found a smuggler's note which may provide further information on their transactions.",
+        "string": "Ho trovato la nota di un contrabbandiere che potrebbe dirmi di più sui suoi affari."
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "form_id": "[05000823]",
+        "index": 86,
+        "type": "QUST CNAM",
+        "original": "On the road west of Whiterun I encountered and killed a hostile Orc besieged by bandits. On his body was a ledger that offered additional clues. According to the ledger, the current owners of the staff are two necromancers holed up in Brittleshin Pass. ",
+        "string": "Sulla strada a ovest di Whiterun ho incontrato e ucciso un orco che era stato assediato dai banditi. Sul suo cadavere ho trovato un libro mastro che mi ha dato nuovi indizi. Secondo il libro, le proprietarie del bastone sono due negromanti rintanate a Passo Periglioso."
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "form_id": "[05000823]",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Go to the site of the ambush",
+        "string": "Vai sul posto dell'imboscata"
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "form_id": "[05000823]",
+        "index": 50,
+        "type": "QUST NNAM",
+        "original": "Check the Orc's body for clues",
+        "string": "Controlla il cadavere dell'orco per trovare indizi"
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "form_id": "[05000823]",
+        "index": 55,
+        "type": "QUST NNAM",
+        "original": "Read the smuggler's ledger",
+        "string": "Leggi il libro mastro del contrabbandiere"
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "form_id": "[05000823]",
+        "index": 93,
+        "type": "QUST CNAM",
+        "original": "I've heard rumors of smugglers near Whiterun trading black market items. I should investigate the area to see what I can uncover.",
+        "string": "Ho sentito dire che dei contrabbandieri scambiano oggetti al mercato nero vicino Whiterun. Dovrei indagare in zona e vedere cosa riesco a scoprire."
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "form_id": "[05000823]",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "Inside Brittleshin Pass I was attacked by two necromancers, Ivara of Olenveld and Lushak gra-Ragdam. In their possession was the artifact they purchased from the smugglers, the Staff of Hasedoki. After defeating them both, I retrieved the staff from the body of Ivara.",
+        "string": "A Passo Periglioso mi hanno attaccato due negromanti, Ivara di Olenveld e Lushak gra-Ragdam. Erano in possesso dell'artefatto che avevano acquistato dai contrabbandieri, il bastone di Hasedoki. Dopo averle sconfitte, ho trovato il bastone sul corpo di Ivara."
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "form_id": "[05000823]",
+        "index": 81,
+        "type": "QUST CNAM",
+        "original": "I've killed the necromancer Ivara of Olenveld.",
+        "string": "Ho ucciso la negromante Ivara di Olenveld."
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "form_id": "[05000823]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Read the smuggler's trade notes",
+        "string": "Leggi i documenti di scambio del contrabbandiere"
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "form_id": "[05000823]",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "Kill or pickpocket the Orc",
+        "string": "Uccidi l'orco mago guerriero"
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "form_id": "[05000823]",
+        "index": 80,
+        "type": "QUST CNAM",
+        "original": "Inside Brittleshin Pass I was attacked by two necromancers, Ivara of Olenveld and Lushak gra-Ragdam. In their possession was the artifact they purchased from the smugglers, the Staff of Hasedoki. ",
+        "string": "A Passo Periglioso mi hanno attaccato due negromanti, Ivara di Olenveld e Lushak gra-Ragdam. Erano in possesso dell'artefatto che avevano acquistato dai contrabbandieri, il bastone di Hasedoki. "
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "form_id": "[05000823]",
+        "index": 86,
+        "type": "QUST CNAM",
+        "original": "On the road west of Whiterun I encountered an Orc besieged by bandits. I've found a smuggler's ledger on his person that may tell me where he was headed.",
+        "string": "Sulla strada a ovest di Whiterun ho incontrato un orco assediato dai banditi. Su di lui ho trovato il libro mastro di un contrabbandiere che potrebbe rivelarmi dov'era diretto."
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "form_id": "[05000823]",
+        "index": 66,
+        "type": "QUST CNAM",
+        "original": "Inside Brittleshin Pass I was attacked by two necromancers, Ivara of Olenveld and Lushak gra-Ragdam. In their possession was the artifact they purchased from the smugglers, the Staff of Hasedoki. ",
+        "string": "A Passo Periglioso mi hanno attaccato due negromanti, Ivara di Olenveld e Lushak gra-Ragdam. Erano in possesso dell'artefatto che avevano acquistato dai contrabbandieri, il bastone di Hasedoki. "
+    },
+    {
+        "editor_id": "ccBGSSSE045_Quest",
+        "form_id": "[05000823]",
+        "index": 93,
+        "type": "QUST CNAM",
+        "original": "On the road west of Whiterun I encountered and killed a hostile Orc besieged by bandits. On his body was a ledger that offered additional clues. According to the ledger, the current owners of the staff are two necromancers holed up in Brittleshin Pass. ",
+        "string": "Sulla strada a ovest di Whiterun ho incontrato e ucciso un orco che era stato assediato dai banditi. Sul suo cadavere ho trovato un libro mastro che mi ha dato nuovi indizi. Secondo il libro, le proprietarie del bastone sono due negromanti rintanate a Passo Periglioso."
+    }
+]

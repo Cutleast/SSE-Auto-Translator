@@ -1,0 +1,218 @@
+[
+    {
+        "editor_id": "ccBGSSSE068_EnchStaminaDamageFFContact",
+        "form_id": "[05000813]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Does <mag> points of Stamina damage. Targets bleed <2> points for 5 seconds.",
+        "string": "Отнимает <mag> ед. запаса сил. Цели истекают кровью на <2> ед. в течение 5 сек."
+    },
+    {
+        "editor_id": "ccBGSSSE068_EnchStaminaDamageFFContact",
+        "form_id": "[05000813]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Stamina Damage",
+        "string": "Урон запасу сил"
+    },
+    {
+        "editor_id": "ccBGSSSE068_EnchWeaponBloodfallBlade",
+        "form_id": "[05000812]",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Stamina Damage",
+        "string": "Урон запасу сил"
+    },
+    {
+        "editor_id": "ccBGSSSE068_Journal",
+        "form_id": "[05000800]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Shurgoz's Journal",
+        "string": "Дневник Шургоза"
+    },
+    {
+        "editor_id": "ccBGSSSE068b_Journal",
+        "form_id": "[05000811]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Urzog's Journal",
+        "string": "Дневник Урзога"
+    },
+    {
+        "editor_id": "ccBGSSSE068_InnkeepLetter",
+        "form_id": "[05000801]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Letter from Shogarz gra-Batul",
+        "string": "Письмо от Шогарз гра-Батул"
+    },
+    {
+        "editor_id": "ccBGSSSE068b_Journal",
+        "form_id": "[05000811]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenBold\">\r\nI've always beaten my little brother in everything. Cards, I had the better hands. Brawls, likewise. When we raced up the ramparts of the old castle, I would always be the first to reach the peak.\r\n\r\nMother said the difference between myself and my brother was that he was a perfectionist, and I was a conquerer. She said I wanted to beat him at everything, and it drove me to become a great warrior.\r\n\r\nBut my brother didn't care for competition. As a perfectionist, he simply wanted to sharpen his skills, and would work with others if he thought it would better himself.\r\n\r\nMother said that's why he would make the better ruler. My brother would forever try to improve our standing, whereas I was content being better than the next man.\r\n\r\nWell, little did she know the next man was him.\r\n\r\nI'm going to enjoy killing you little brother. Grandfather's venom may have failed to reach mother's veins, but it will still reach her heart.</font>",
+        "string": "<font face=\"$HandwrittenBold\">\r\nВ любом занятии я всегда укладывал своего младшего брата на обе лопатки. Особенно в драках. И в картах. Когда мы наперегонки взбегали на стены старого замка, именно я первым добирался до верха.\r\n\r\nМать говорила, что разница между нами двумя в том, что брат мой - педант, а я - завоеватель. Она говорила, что я хотел во всем быть лучше него и потому со временем стал великим воином.\r\n\r\nА брату было плевать на состязания. Он просто хотел оттачивать свои навыки и без проблем сходился с другими, если считал, что сможет у них чему-то научиться.\r\n\r\nМать говорила, что именно поэтому из него выйдет правитель лучше, чем из меня. Мой брат вечно стремился бы упрочить наше положение, а мне было бы достаточно быть лучше первого встречного.\r\n\r\nВот только она не знала, что первым встречным был брат.\r\n\r\nЯ с огромным удовольствием прикончу тебя, братец. Яд, бежавший в венах деда, не достался матери по наследству. Но до ее сердца он все равно доберется.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE068_Journal",
+        "form_id": "[05000800]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenBold\">\r\nI've long suspected the \"Darkwater Snake\" is my older brother, Urzog. The fact that he would take on that moniker made it all the more obvious. \r\n\r\nIt may be that same poison that ran in grandfather's blood is what made him betray us. Are we doomed to repeat the mistakes of our ancestors? Sometimes I wonder.\r\n</font>",
+        "string": "<font face=\"$HandwrittenBold\">\r\nЯ давно подозреваю, что \"Змея Черного Брода\" - мой старший братец Урзог. Само это прозвище заставляет в это поверить. \r\n\r\nВозможно, тот самый яд, что тек в венах у нашего деда, теперь заставил брата предать нас. Неужели мы обречены повторять ошибки наших предков? Иногда я всерьез задумываюсь об этом.\r\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE068_InnkeepLetter",
+        "form_id": "[05000801]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">To all capable warriors,\r\n\r\nA group of bandits have stolen something of great value to my family's kingdom, the Headman's Cleaver, and fled to Skyrim like cowards. We believe they're remnant members of the Greencap Bandits, who have been a thorn in the Queen's side from the day she was born. \r\n\r\nOur sources tell us they're holed up in Lost Knife Hideout, and as the Queen's strongest knight, I have been tasked with retrieving it. However, if I don't survive, I ask that you eliminate these bandits in her name. The Queen will gladly bestow the cleaver to the one who vanquishes her oldest enemy.\r\n\r\nShogarz gra-Batul",
+        "string": "<font face=\"$HandwrittenFont\">Всем воинам, способным держать оружие.\r\n\r\nШайка бандитов украла у моего рода очень ценную вещь, Топор главаря, и трусливо сбежала с ним в Скайрим. Скорее всего, раньше они были членами \"Зеленых Колпаков\", которые постоянно доставляли Королеве проблемы. \r\n\r\nНаши информаторы сообщают, что бандиты спрятались в убежище Потерянный Нож, и мне как сильнейшему из рыцарей Королевы поручили вернуть украденное. Но если я там погибну, то прошу вас избавиться от этих бандитов во имя Королевы. Она с радостью подарит топор тому, кто расправится с ее заклятыми врагами.\r\n\r\nШогарз гра-Батул"
+    },
+    {
+        "editor_id": "ccBGSSSE068_BloodfallBlade",
+        "form_id": "[05000803]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Headman's Cleaver",
+        "string": "Топор главаря"
+    },
+    {
+        "editor_id": "ccBGSSSE068_LvlBanditBossOrcM",
+        "form_id": "[05000805]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Bandit Chief",
+        "string": "Главарь бандитов"
+    },
+    {
+        "editor_id": "ccBGSSSE068_DeadOrc",
+        "form_id": "[05000804]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Shogarz gra-Batul",
+        "string": "Шогарз гра-Батул"
+    },
+    {
+        "editor_id": "LostKnifeHideout02",
+        "form_id": "[0001A337]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Lost Knife Hideout",
+        "string": "Убежище Потерянный Нож"
+    },
+    {
+        "editor_id": "LostKnifeHideout01",
+        "form_id": "[00015251]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Lost Knife Cave",
+        "string": "Пещера Потерянный Нож"
+    },
+    {
+        "editor_id": "ccBGSSSE067_Quest_InnkeepTopic",
+        "form_id": "[05000809]",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Do you know where I can find some work?",
+        "string": "Ты не знаешь, где можно найти работу?"
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "form_id": "[0500080D]",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Read the Letter from Shogarz gra-Batul",
+        "string": "Прочесть письмо от Шогарз гра-Батул"
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "form_id": "[0500080D]",
+        "index": 103,
+        "type": "QUST CNAM",
+        "original": "Talking to innkeepers has always been a good way to find work. I should head to the local inn and see if there's anything worthwhile.",
+        "string": "Когда нужна работа, стоит поговорить с трактирщиками. Нужно отправиться в местную таверну и узнать, нет ли у них чего-то стоящего."
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "form_id": "[0500080D]",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Ask an innkeeper for work",
+        "string": "Спросить хозяина таверны насчет работы"
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "form_id": "[0500080D]",
+        "index": 83,
+        "type": "QUST CNAM",
+        "original": "I received a note from a vassal of the Bloodfall Queen stating a group of bandits have stolen her weapon. I made my way to Lost Knife Hideout and retrieved the Headman's Cleaver from the bandits.",
+        "string": "Мне передали записку от подданной Кровавой Королевы, где говорилось о группе бандитов, укравших ее оружие. Мне пришлось отправиться в убежище Потерянный Нож и отнять Кровавый Клинок у бандитов."
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "form_id": "[0500080D]",
+        "index": 103,
+        "type": "QUST CNAM",
+        "original": "I received a note from a vassal of the Bloodfall Queen stating a group of bandits have stolen her weapon. I should head to Lost Knife Hideout to see what's become of it.",
+        "string": "Мне передали записку от подданной Кровавой Королевы, где говорилось о группе бандитов, укравших ее оружие. Надо отправиться в убежище Потерянный Нож и узнать, что к чему."
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "form_id": "[0500080D]",
+        "index": 72,
+        "type": "QUST CNAM",
+        "original": "I received a note from a vassal of the Bloodfall Queen stating a group of bandits have stolen her weapon. I made my way to Lost Knife Hideout and encountered their leader.",
+        "string": "Мне передали записку от подданной Кровавой Королевы, где говорилось о группе бандитов, укравших ее оружие. Мне пришлось отправиться в убежище Потерянный Нож и сразиться с предводителем бандитов."
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "form_id": "[0500080D]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Blood in the Water",
+        "string": "Кровь в воде"
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "form_id": "[0500080D]",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Eliminate the bandits in Lost Knife Hideout",
+        "string": "Убить бандитов в убежище Потерянный Нож"
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "form_id": "[0500080D]",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "Retrieve the Headman's Cleaver",
+        "string": "Добыть Топор главаря"
+    },
+    {
+        "editor_id": "ccBGSSSE068_Quest",
+        "form_id": "[0500080D]",
+        "index": 81,
+        "type": "QUST CNAM",
+        "original": "Talking to innkeepers has always been a good way to find work. I received a note from one that may provide a lead.",
+        "string": "Когда нужна работа, стоит поговорить с трактирщиками. Один из них передал мне записку, в которой может содержаться полезная информация."
+    },
+    {
+        "editor_id": "ccBGSSSE068_GreencapBanditName",
+        "form_id": "[0500080F]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Greencap Bandit",
+        "string": "Зеленый Колпак"
+    },
+    {
+        "editor_id": "ccBGSSSE068_GreencapBanditBoss",
+        "form_id": "[0500080E]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Darkwater Snake",
+        "string": "Змея Черного Брода"
+    }
+]

@@ -1,0 +1,138 @@
+[
+    {
+        "editor_id": "ccVSVSSE001_ReindeerRace",
+        "form_id": "[02000D61]",
+        "index": null,
+        "type": "RACE FULL",
+        "original": "Horse",
+        "string": "Koń"
+    },
+    {
+        "editor_id": "ccVSVSSE001_hat",
+        "form_id": "[02000806]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Saturalia Hat",
+        "string": "Nakrycie głowy Saturaliów"
+    },
+    {
+        "editor_id": "ccVSVSSE001_gloves",
+        "form_id": "[02000805]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Saturalia Gloves",
+        "string": "Rękawice Saturaliów"
+    },
+    {
+        "editor_id": "ccVSVSSE001_coat",
+        "form_id": "[02000807]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Saturalia Clothes",
+        "string": "Szaty Saturaliów"
+    },
+    {
+        "editor_id": "ccVSVSSE001_boots",
+        "form_id": "[02000803]",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Saturalia Boots",
+        "string": "Buty Saturaliów"
+    },
+    {
+        "editor_id": "ccVSVSSE001_ReindeerDeed",
+        "form_id": "[02000808]",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">This deed signifies ownership of a trained reindeer. Ownership may only be transferred with an accompanying Bill of Sale.\r\n\r\n",
+        "string": "<font face=\"$HandwrittenFont\">Niniejszy akt przypisuje własność szkolonego renifera niżej podpisanej osobie. Własność może być przekazana jedynie wraz z odpowiednią umową sprzedaży.\r\n\r\n"
+    },
+    {
+        "editor_id": "ccVSVSSE001_ReindeerDeed",
+        "form_id": "[02000808]",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Reindeer Bill of Sale",
+        "string": "Akt sprzedaży renifera"
+    },
+    {
+        "editor_id": "ccVSVSSE001_MerchantChest",
+        "form_id": "[0200080A]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Skrzynia"
+    },
+    {
+        "editor_id": "ccVSVSSE001_MerchantPack",
+        "form_id": "[02000809]",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Knapsack",
+        "string": "Plecak"
+    },
+    {
+        "editor_id": "ccVSVSSE001_Reindeer",
+        "form_id": "[02000D65]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Reindeer",
+        "string": "Renifer"
+    },
+    {
+        "editor_id": "ccVSVSSE001_Merchant",
+        "form_id": "[0200080B]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Agrane Peryval",
+        "string": "Agrane Peryval"
+    },
+    {
+        "editor_id": "Tamriel",
+        "form_id": "[0000003C]",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Skyrim",
+        "string": "Skyrim"
+    },
+    {
+        "editor_id": "ccVSVSSE001_MainQuest",
+        "form_id": "[0200082B]",
+        "index": 80,
+        "type": "QUST CNAM",
+        "original": "Saturalia is coming soon, and there are rumors of a new merchant up near Dawnstar who sells very rare and unique wares just for the holiday. I should go look for him.",
+        "string": "Wkrótce zbliżają się Saturalia. Krążą pogłoski o kupcu w okolicach Gwiazdy Zarannej, który sprzedaje bardzo rzadkie i nietypowe towary, wyłącznie w czasie świąt. Muszę go poszukać."
+    },
+    {
+        "editor_id": "ccVSVSSE001_MainQuest",
+        "form_id": "[0200082B]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Saturalia Preparation",
+        "string": "Przygotowania do Saturaliów"
+    },
+    {
+        "editor_id": "ccVSVSSE001_MainQuest",
+        "form_id": "[0200082B]",
+        "index": 99,
+        "type": "QUST CNAM",
+        "original": "startup",
+        "string": "rozpoczęcie"
+    },
+    {
+        "editor_id": "ccVSVSSE001_MainQuest",
+        "form_id": "[0200082B]",
+        "index": 0,
+        "type": "QUST NNAM",
+        "original": "Find the Saturalia merchant",
+        "string": "Znajdź kupca handlującego w Saturalia"
+    },
+    {
+        "editor_id": "ccVSVSSE001_msg_PlayersReindeer",
+        "form_id": "[02000837]",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "<Alias=Player>'s Reindeer",
+        "string": "Renifer, właściciel: <Alias=Player>"
+    }
+]

@@ -62,7 +62,14 @@ class SetupPage(qtw.QWidget):
         self.lang_box.addItems(lang_items)
         hlayout.addWidget(self.lang_box)
 
-        vlayout.addSpacing(25)
+        vlayout.addSpacing(10)
+
+        # Masterlist
+        self.masterlist_box = qtw.QCheckBox(self.loc.settings.use_masterlist)
+        self.masterlist_box.setChecked(True)
+        vlayout.addWidget(self.masterlist_box)
+
+        vlayout.addSpacing(10)
 
         # API Setup Widget
         self.api_setup = ApiSetup(self.startup_dialog.app)

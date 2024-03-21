@@ -1,0 +1,210 @@
+[
+    {
+        "editor_id": "ccBGSSSE002_EnchInfluenceConfDownFFContactLow",
+        "form_id": "[05000811]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Creatures and people up to level <mag> flee from combat for <dur> seconds.",
+        "string": "Las criaturas y las personas de hasta nivel <mag> huirán del combate durante <dur> segundos."
+    },
+    {
+        "editor_id": "ccBGSSSE004_InfluenceAggUpFFContact",
+        "form_id": "[05000801]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fury",
+        "string": "Furia"
+    },
+    {
+        "editor_id": "ccBGSSSE004_BowBaseEffect",
+        "form_id": "[05000802]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Bow Base Effect",
+        "string": "Efecto de base del arco"
+    },
+    {
+        "editor_id": "ccBGSSSE002_EnchInfluenceConfDownFFContactLow",
+        "form_id": "[05000811]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fear",
+        "string": "Miedo"
+    },
+    {
+        "editor_id": "ccBGSSSE004_ReduceCarryWeight",
+        "form_id": "[05000803]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduce Carry Weight",
+        "string": "Reducir capacidad de peso"
+    },
+    {
+        "editor_id": "ccBGSSSE004_InfluenceAggUpFFContact",
+        "form_id": "[05000801]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Creatures and people up to level <mag> will attack anything nearby for <dur> seconds.",
+        "string": "Las criaturas y las personas de hasta nivel <mag> atacarán a cualquier cosa que esté cerca durante <dur> segundos."
+    },
+    {
+        "editor_id": "ccBGSSSE004_SlowFFContact",
+        "form_id": "[0500080E]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Slow",
+        "string": "Ralentizar"
+    },
+    {
+        "editor_id": "ccBGSSSE004_BowBaseEffect",
+        "form_id": "[05000802]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Randomly applies one of these effects to the target: Frost, Demoralize, Frenzy, Drain Magicka, Paralyze.",
+        "string": "Aplica al azar uno de estos efectos al objetivo: Escarcha, Desmoralizar, Frenesí, Absorción de magia, Paralizar."
+    },
+    {
+        "editor_id": "ccBGSSSE004_EnchFrostDamageFFContact",
+        "form_id": "[0500080D]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Frost Damage",
+        "string": "Daño por escarcha"
+    },
+    {
+        "editor_id": "ccBGSSSE004_ReduceCarryWeight",
+        "form_id": "[05000803]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Reduce carrying capacity increases by <mag> for <dur> seconds.",
+        "string": "Reducir la capacidad de carga aumenta en <mag> durante <dur> segundos."
+    },
+    {
+        "editor_id": "ccBGSSSE004_DrainMagickaEffect",
+        "form_id": "[05000800]",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Drain Magicka",
+        "string": "Absorción de magia"
+    },
+    {
+        "editor_id": "ccBGSSSE004_EnchFrostDamageFFContact",
+        "form_id": "[0500080D]",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Target takes <mag> points of frost damage to Health and Stamina.",
+        "string": "El objetivo recibe <mag> de puntos de daño por escarcha a la salud y al aguante."
+    },
+    {
+        "editor_id": "ccBGSSSE004_Paralyze1",
+        "form_id": "[05000807]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Paralyze",
+        "string": "Paralizar"
+    },
+    {
+        "editor_id": "ccBGSSSE004_DrainMagicka",
+        "form_id": "[05000809]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Frenzy",
+        "string": "Frenesí"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Frost",
+        "form_id": "[05000812]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Frost",
+        "string": "Escarcha"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Frenzy",
+        "form_id": "[05000805]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Frenzy",
+        "string": "Frenesí"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Paralyze15",
+        "form_id": "[05000806]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Paralyze",
+        "string": "Paralizar"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Burden",
+        "form_id": "[0500080A]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Burden",
+        "string": "Carga"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Demoralize",
+        "form_id": "[05000808]",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Demoralize",
+        "string": "Desmoralizar"
+    },
+    {
+        "editor_id": "ccBGSSSE004_RuinsEdgeBow",
+        "form_id": "[05000D63]",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Ruin's Edge",
+        "string": "Abismo de la ruina"
+    },
+    {
+        "editor_id": "ccBGSSSE004_LvlRuinsEdgeBoss",
+        "form_id": "[05000813]",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Bandit Chief",
+        "string": "Jefe bandido"
+    },
+    {
+        "editor_id": "StonyCreekCave01",
+        "form_id": "[0004B8FB]",
+        "index": null,
+        "type": "CELL FULL",
+        "original": "Stony Creek Cave",
+        "string": "Cueva del Arroyo de Piedra"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Quest",
+        "form_id": "[0500080C]",
+        "index": 81,
+        "type": "QUST CNAM",
+        "original": "I found a map to the location of the fabled bow, Ruin's Edge.",
+        "string": "He encontrado el mapa de la ubicación del arco legendario, el abismo de la ruina."
+    },
+    {
+        "editor_id": "ccBGSSSE004_Quest",
+        "form_id": "[0500080C]",
+        "index": 0,
+        "type": "QUST NNAM",
+        "original": "Find Ruin's Edge",
+        "string": "Encuentra el abismo de la ruina."
+    },
+    {
+        "editor_id": "ccBGSSSE004_Quest",
+        "form_id": "[0500080C]",
+        "index": 81,
+        "type": "QUST CNAM",
+        "original": "I've found Ruin's Edge.",
+        "string": "He encontrado el abismo de la ruina."
+    },
+    {
+        "editor_id": "ccBGSSSE004_Quest",
+        "form_id": "[0500080C]",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "The Edge of Ruin",
+        "string": "El abismo de la ruina"
+    }
+]

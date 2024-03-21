@@ -26,3 +26,6 @@ class Download:
     """
     List of fitting file ids for each available translation mod id.
     """
+
+    def __hash__(self) -> int:
+        return hash((self.available_translations, self.available_translation_files))
