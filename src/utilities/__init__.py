@@ -284,7 +284,7 @@ def get_masterlist(language: str, cache: bool = True) -> dict[str, dict]:
 
     REPO_NAME = "SSE-Auto-Translator"
     REPO_OWNER = "Cutleast"
-    BRANCH = "v1.1.0"
+    BRANCH = "master"
     MASTERLIST_PATH = f"masterlists/{language.lower()}.json"
 
     if masterlist is None or cache == False:
