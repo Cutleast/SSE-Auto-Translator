@@ -41,7 +41,7 @@ class TranslationsWidget(qtw.QWidget):
         hlayout.addWidget(self.tool_bar)
 
         show_vanilla_strings_action = self.tool_bar.addAction(
-            qta.icon("msc.open-preview", color="#ffffff"),
+            qta.icon("mdi6.book-open-outline", color="#ffffff"),
             self.mloc.show_vanilla_strings,
         )
 
@@ -341,7 +341,7 @@ class TranslationsWidget(qtw.QWidget):
             menu.addSeparator()
 
             show_strings_action = menu.addAction(self.loc.main.show_strings)
-            show_strings_action.setIcon(qta.icon("msc.open-preview", color="#ffffff"))
+            show_strings_action.setIcon(qta.icon("mdi6.book-open-outline", color="#ffffff"))
             show_strings_action.triggered.connect(show_strings)
 
             if not selected_plugin_name:

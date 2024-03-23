@@ -618,7 +618,7 @@ class MainPageWidget(qtw.QWidget):
                     self.loc.main.show_translation_strings
                 )
                 show_translation_strings_action.setIcon(
-                    qta.icon("msc.open-preview", color="#ffffff")
+                    qta.icon("mdi6.book-open-outline", color="#ffffff")
                 )
                 show_translation_strings_action.triggered.connect(
                     show_translation_strings
@@ -677,7 +677,7 @@ class MainPageWidget(qtw.QWidget):
 
                 show_strings_action = menu.addAction(self.loc.main.show_strings)
                 show_strings_action.setIcon(
-                    qta.icon("msc.open-preview", color="#ffffff")
+                    qta.icon("mdi6.book-open-outline", color="#ffffff")
                 )
                 show_strings_action.triggered.connect(show_strings)
 
