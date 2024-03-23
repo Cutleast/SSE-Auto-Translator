@@ -21,5 +21,7 @@
     "translator_api_key": "Translator API Key",
     "restart_title": "Restart required",
     "restart_text": "SSE-AT must be restarted for the changes to take effect! Restart now?",
-    "use_masterlist": "Use global Masterlist from GitHub Repository (recommended)"
+    "use_masterlist": "Use global Masterlist from GitHub Repository (recommended)",
+    "empty_translator_api_key": "Translator API Key is empty",
+    "empty_translator_api_key_text": "The selected Translator API requires an API key! Please enter one and try again."
 }

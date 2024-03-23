@@ -138,8 +138,21 @@ class SettingsDialog(qtw.QDialog):
         Saves settings and closes dialog.
         """
 
+        app_settings = self.app_settings.get_settings()
+        user_settings = self.user_settings.get_settings()
+        translator_settings = self.translator_settings.get_settings()
+
+        if translator_settings["translator"] == "DeepL" and not translator_settings["api_key"]:
+            ErrorDialog(
+                self,
+                self.app,
+                self.mloc.empty_translator_api_key,
+                self.mloc.empty_translator_api_key_text,
+            ).exec()
+            return
+
         path_file = self.app.data_path / "user" / "portable.txt"
-        if self.user_settings.modinstance_dropdown.currentText() == "Portable":
+        if user_settings["modinstance"] == "Portable":
             instance_path = self.user_settings.instance_path_entry.text().strip()
             ini_path = Path(instance_path) / "ModOrganizer.ini"
 
@@ -156,10 +169,6 @@ class SettingsDialog(qtw.QDialog):
                 return
         elif path_file.is_file():
             os.remove(path_file)
-
-        app_settings = self.app_settings.get_settings()
-        user_settings = self.user_settings.get_settings()
-        translator_settings = self.translator_settings.get_settings()
 
         with open(self.app.app_conf_path, "w", encoding="utf8") as file:
             json.dump(app_settings, file, indent=4)
