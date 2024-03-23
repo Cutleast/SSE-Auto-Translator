@@ -169,10 +169,8 @@ class String:
             }
 
     def __hash__(self):
-        return hash(
-            (self.form_id, self.editor_id, self.index, self.type)
-        )
-    
+        return hash((self.form_id.lower(), self.editor_id, self.index, self.type))
+
     def __eq__(self, __value: object) -> bool:
         if isinstance(__value, String):
             return hash(__value) == hash(self)

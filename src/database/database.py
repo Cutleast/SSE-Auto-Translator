@@ -244,7 +244,7 @@ class TranslationDatabase:
             if string.status != String.Status.TranslationRequired
         }
         database_strings = {
-            f"{string.form_id}###{string.editor_id}###{string.type}###{string.index}": string
+            f"{string.form_id.lower()}###{string.editor_id}###{string.type}###{string.index}": string
             for translation in installed_translations
             for plugin_strings in translation.strings.values()
             for string in plugin_strings
@@ -276,7 +276,7 @@ class TranslationDatabase:
         translated = 0
         for string in strings:
             matching = database_strings.get(
-                f"{string.form_id}###{string.editor_id}###{string.type}###{string.index}"
+                f"{string.form_id.lower()}###{string.editor_id}###{string.type}###{string.index}"
             )
 
             if matching is None:

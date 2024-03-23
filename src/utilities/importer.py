@@ -177,7 +177,7 @@ def merge_plugin_strings(
     parser = PluginParser(original_plugin)
     parser.parse_plugin()
     original_strings = {
-        f"{string.form_id}###{string.editor_id}###{string.type}###{string.index}": string
+        f"{string.form_id.lower()}###{string.editor_id}###{string.type}###{string.index}": string
         for group in parser.extract_strings().values()
         for string in group
     }
@@ -190,7 +190,7 @@ def merge_plugin_strings(
 
     for translation_string in translation_strings:
         original_string = original_strings.get(
-            f"{translation_string.form_id}###{translation_string.editor_id}###{translation_string.type}###{translation_string.index}"
+            f"{translation_string.form_id.lower()}###{translation_string.editor_id}###{translation_string.type}###{translation_string.index}"
         )
 
         if original_string is None:
