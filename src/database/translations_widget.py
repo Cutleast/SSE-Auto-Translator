@@ -332,11 +332,6 @@ class TranslationsWidget(qtw.QWidget):
             if selected_translation.status == Translation.Status.UpdateAvailable:
                 menu.addSeparator()
 
-                download_update_action = menu.addAction(
-                    qta.icon("mdi6.cloud-download", color="#ffffff"),
-                    self.loc.updater.download_update,
-                )
-
                 ignore_update_action = menu.addAction(
                     qta.icon("mdi6.cloud-alert", color="#ffffff"),
                     self.loc.updater.ignore_update,
