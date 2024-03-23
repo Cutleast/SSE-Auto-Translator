@@ -1,15 +1,7 @@
 [
     {
         "editor_id": "ccBGSSSE006_EnchDamageFFContact",
-        "form_id": "[03000808]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Smite Damage",
-        "string": "Dégâts de châtiment"
-    },
-    {
-        "editor_id": "ccBGSSSE006_EnchDamageFFContact",
-        "form_id": "[03000808]",
+        "form_id": "03000808|ccbgssse006-stendarshammer.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "Damages the target for <mag> points. Depletes <20> Stamina from wielder per hit.",
@@ -17,23 +9,31 @@
     },
     {
         "editor_id": "ccBGSSSE006_DamageStamina",
-        "form_id": "[03000809]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Drains <mag> points from stamina.",
-        "string": "Ponctionne <mag> points de vigueur."
-    },
-    {
-        "editor_id": "ccBGSSSE006_DamageStamina",
-        "form_id": "[03000809]",
+        "form_id": "03000809|ccbgssse006-stendarshammer.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Reduced Stamina",
         "string": "Vigueur dégradée"
     },
     {
+        "editor_id": "ccBGSSSE006_EnchDamageFFContact",
+        "form_id": "03000808|ccbgssse006-stendarshammer.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Smite Damage",
+        "string": "Dégâts de châtiment"
+    },
+    {
+        "editor_id": "ccBGSSSE006_DamageStamina",
+        "form_id": "03000809|ccbgssse006-stendarshammer.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Drains <mag> points from stamina.",
+        "string": "Ponctionne <mag> points de vigueur."
+    },
+    {
         "editor_id": "ccBGSSSE006_EnchDrainHealth",
-        "form_id": "[03000807]",
+        "form_id": "03000807|ccbgssse006-stendarshammer.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Absorb Health",
@@ -41,7 +41,7 @@
     },
     {
         "editor_id": "ccBGSSSE006_DrainStamina",
-        "form_id": "[0300080A]",
+        "form_id": "0300080A|ccbgssse006-stendarshammer.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Smite",
@@ -49,39 +49,23 @@
     },
     {
         "editor_id": "ccBGSSSE006StendarsHammer",
-        "form_id": "[03000D62]",
+        "form_id": "03000D62|ccbgssse006-stendarshammer.esl",
         "index": null,
         "type": "WEAP FULL",
         "original": "Stendarr's Hammer",
         "string": "Marteau de Stendarr"
     },
     {
-        "editor_id": "MarkarthWizardsQuarters01",
-        "form_id": "[00030313]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Dwemer Museum",
-        "string": "Musée des Dwemers"
-    },
-    {
         "editor_id": "ccBGSSSE006_Quest",
-        "form_id": "[03000805]",
-        "index": 80,
-        "type": "QUST CNAM",
-        "original": "Rumor has it that Stendarr's Hammer has been found deep under Markarth. They say it is in the Dwarven Museum there.",
-        "string": "La rumeur indique que le Marteau de Stendarr a été trouvé dans les profondeurs du sol qui se trouve sous Markath. Il paraît qu'il est exposé au musée des Nains de la ville."
-    },
-    {
-        "editor_id": "ccBGSSSE006_Quest",
-        "form_id": "[03000805]",
-        "index": 81,
+        "form_id": "03000805|ccbgssse006-stendarshammer.esl",
+        "index": 79,
         "type": "QUST CNAM",
         "original": "I have successfully stolen Stendarr's Hammer from the Dwarven Museum in Markarth.",
         "string": "J'ai réussi à dérober le Marteau de Stendarr au musée des Nains de Markath."
     },
     {
         "editor_id": "ccBGSSSE006_Quest",
-        "form_id": "[03000805]",
+        "form_id": "03000805|ccbgssse006-stendarshammer.esl",
         "index": 0,
         "type": "QUST NNAM",
         "original": "Steal Stendarr's Hammer",
@@ -89,7 +73,15 @@
     },
     {
         "editor_id": "ccBGSSSE006_Quest",
-        "form_id": "[03000805]",
+        "form_id": "03000805|ccbgssse006-stendarshammer.esl",
+        "index": 75,
+        "type": "QUST CNAM",
+        "original": "Rumor has it that Stendarr's Hammer has been found deep under Markarth. They say it is in the Dwarven Museum there.",
+        "string": "La rumeur indique que le Marteau de Stendarr a été trouvé dans les profondeurs du sol qui se trouve sous Markath. Il paraît qu'il est exposé au musée des Nains de la ville."
+    },
+    {
+        "editor_id": "ccBGSSSE006_Quest",
+        "form_id": "03000805|ccbgssse006-stendarshammer.esl",
         "index": null,
         "type": "QUST FULL",
         "original": "If I had a Hammer",

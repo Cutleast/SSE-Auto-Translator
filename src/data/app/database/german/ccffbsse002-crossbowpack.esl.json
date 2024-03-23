@@ -1,159 +1,95 @@
 [
     {
-        "editor_id": "ccFFBSSE002_SilverCrossbowEnhanced",
-        "form_id": "[0500081A]",
-        "index": null,
-        "type": "WEAP FULL",
-        "original": "Enhanced Silver Crossbow",
-        "string": "Enhanced Silver Crossbow"
-    },
-    {
-        "editor_id": "ccFFBSSE002_DaedricCrossbowEnhanced",
-        "form_id": "[05000814]",
-        "index": null,
-        "type": "WEAP FULL",
-        "original": "Enhanced Daedric Crossbow",
-        "string": "Enhanced Daedric Crossbow"
-    },
-    {
-        "editor_id": "ccFFBSSE002_DragonboneCrossbowEnhanced",
-        "form_id": "[05000815]",
-        "index": null,
-        "type": "WEAP DESC",
-        "original": "Attacks with this crossbow ignore 50% of armor.",
-        "string": "Attacks with this crossbow ignore 50% of armor."
-    },
-    {
-        "editor_id": "ccFFBSSE002_SilverCrossbow",
-        "form_id": "[0500080E]",
-        "index": null,
-        "type": "WEAP FULL",
-        "original": "Silver Crossbow",
-        "string": "Silver Crossbow"
-    },
-    {
-        "editor_id": "ccFFBSSE002_SilverCrossbowEnhanced",
-        "form_id": "[0500081A]",
-        "index": null,
-        "type": "WEAP DESC",
-        "original": "Attacks with this crossbow ignore 50% of armor.",
-        "string": "Attacks with this crossbow ignore 50% of armor."
-    },
-    {
-        "editor_id": "ccFFBSSE002_StalhrimCrossbowEnhanced",
-        "form_id": "[0500081B]",
-        "index": null,
-        "type": "WEAP DESC",
-        "original": "Attacks with this crossbow ignore 50% of armor.",
-        "string": "Attacks with this crossbow ignore 50% of armor."
-    },
-    {
-        "editor_id": "ccFFBSSE002_DaedricCrossbow",
-        "form_id": "[05000808]",
-        "index": null,
-        "type": "WEAP FULL",
-        "original": "Daedric Crossbow",
-        "string": "Daedric Crossbow"
-    },
-    {
-        "editor_id": "ccFFBSSE002_NordicCrossbowEnhanced",
-        "form_id": "[05000818]",
-        "index": null,
-        "type": "WEAP DESC",
-        "original": "Attacks with this crossbow ignore 50% of armor.",
-        "string": "Attacks with this crossbow ignore 50% of armor."
-    },
-    {
-        "editor_id": "ccFFBSSE002_DaedricCrossbowEnhanced",
-        "form_id": "[05000814]",
-        "index": null,
-        "type": "WEAP DESC",
-        "original": "Attacks with this crossbow ignore 50% of armor.",
-        "string": "Attacks with this crossbow ignore 50% of armor."
-    },
-    {
         "editor_id": "ccFFBSSE002_GlassCrossbowEnhanced",
-        "form_id": "[05000816]",
+        "form_id": "05000816|ccffbsse002-crossbowpack.esl",
         "index": null,
-        "type": "WEAP FULL",
-        "original": "Enhanced Glass Crossbow",
-        "string": "Enhanced Glass Crossbow"
+        "type": "WEAP DESC",
+        "original": "Attacks with this crossbow ignore 50% of armor.",
+        "string": "Attacks with this crossbow ignore 50% of armor."
+    },
+    {
+        "editor_id": "ccFFBSSE002_ImperialCrossbowEnhanced",
+        "form_id": "05000817|ccffbsse002-crossbowpack.esl",
+        "index": null,
+        "type": "WEAP DESC",
+        "original": "Attacks with this crossbow ignore 50% of armor.",
+        "string": "Attacks with this crossbow ignore 50% of armor."
     },
     {
         "editor_id": "ccFFBSSE002_DragonboneCrossbowEnhanced",
-        "form_id": "[05000815]",
+        "form_id": "05000815|ccffbsse002-crossbowpack.esl",
         "index": null,
         "type": "WEAP FULL",
         "original": "Enhanced Dragonbone Crossbow",
         "string": "Enhanced Dragonbone Crossbow"
     },
     {
-        "editor_id": "ccFFBSSE002_ImperialCrossbowEnhanced",
-        "form_id": "[05000817]",
+        "editor_id": "ccFFBSSE002_SilverCrossbow",
+        "form_id": "0500080E|ccffbsse002-crossbowpack.esl",
         "index": null,
         "type": "WEAP FULL",
-        "original": "Enhanced Imperial Crossbow",
-        "string": "Enhanced Imperial Crossbow"
-    },
-    {
-        "editor_id": "ccFFBSSE002_NordicCrossbowEnhanced",
-        "form_id": "[05000818]",
-        "index": null,
-        "type": "WEAP FULL",
-        "original": "Enhanced Nordic Crossbow",
-        "string": "Enhanced Nordic Crossbow"
-    },
-    {
-        "editor_id": "ccFFBSSE002_StalhrimCrossbowEnhanced",
-        "form_id": "[0500081B]",
-        "index": null,
-        "type": "WEAP FULL",
-        "original": "Enhanced Stalhrim Crossbow",
-        "string": "Enhanced Stalhrim Crossbow"
-    },
-    {
-        "editor_id": "ccFFBSSE002_OrcishCrossbow",
-        "form_id": "[0500080D]",
-        "index": null,
-        "type": "WEAP FULL",
-        "original": "Orcish Crossbow",
-        "string": "Orcish Crossbow"
-    },
-    {
-        "editor_id": "ccFFBSSE002_StalhrimCrossbow",
-        "form_id": "[0500080F]",
-        "index": null,
-        "type": "WEAP FULL",
-        "original": "Stalhrim Crossbow",
-        "string": "Stalhrim Crossbow"
-    },
-    {
-        "editor_id": "ccFFBSSE002_OrcishCrossbowEnhanced",
-        "form_id": "[05000819]",
-        "index": null,
-        "type": "WEAP FULL",
-        "original": "Enhanced Orcish Crossbow",
-        "string": "Enhanced Orcish Crossbow"
+        "original": "Silver Crossbow",
+        "string": "Silver Crossbow"
     },
     {
         "editor_id": "ccFFBSSE002_NordicCrossbow",
-        "form_id": "[0500080C]",
+        "form_id": "0500080C|ccffbsse002-crossbowpack.esl",
         "index": null,
         "type": "WEAP FULL",
         "original": "Nordic Crossbow",
         "string": "Nordic Crossbow"
     },
     {
-        "editor_id": "ccFFBSSE002_ImperialCrossbowEnhanced",
-        "form_id": "[05000817]",
+        "editor_id": "ccFFBSSE002_OrcishCrossbowEnhanced",
+        "form_id": "05000819|ccffbsse002-crossbowpack.esl",
         "index": null,
-        "type": "WEAP DESC",
-        "original": "Attacks with this crossbow ignore 50% of armor.",
-        "string": "Attacks with this crossbow ignore 50% of armor."
+        "type": "WEAP FULL",
+        "original": "Enhanced Orcish Crossbow",
+        "string": "Enhanced Orcish Crossbow"
     },
     {
-        "editor_id": "ccFFBSSE002_GlassCrossbowEnhanced",
-        "form_id": "[05000816]",
+        "editor_id": "ccFFBSSE002_OrcishCrossbow",
+        "form_id": "0500080D|ccffbsse002-crossbowpack.esl",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Orcish Crossbow",
+        "string": "Orcish Crossbow"
+    },
+    {
+        "editor_id": "ccFFBSSE002_NordicCrossbowEnhanced",
+        "form_id": "05000818|ccffbsse002-crossbowpack.esl",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Enhanced Nordic Crossbow",
+        "string": "Enhanced Nordic Crossbow"
+    },
+    {
+        "editor_id": "ccFFBSSE002_DaedricCrossbowEnhanced",
+        "form_id": "05000814|ccffbsse002-crossbowpack.esl",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Enhanced Daedric Crossbow",
+        "string": "Enhanced Daedric Crossbow"
+    },
+    {
+        "editor_id": "ccFFBSSE002_SilverCrossbowEnhanced",
+        "form_id": "0500081A|ccffbsse002-crossbowpack.esl",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Enhanced Silver Crossbow",
+        "string": "Enhanced Silver Crossbow"
+    },
+    {
+        "editor_id": "ccFFBSSE002_StalhrimCrossbowEnhanced",
+        "form_id": "0500081B|ccffbsse002-crossbowpack.esl",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Enhanced Stalhrim Crossbow",
+        "string": "Enhanced Stalhrim Crossbow"
+    },
+    {
+        "editor_id": "ccFFBSSE002_DragonboneCrossbowEnhanced",
+        "form_id": "05000815|ccffbsse002-crossbowpack.esl",
         "index": null,
         "type": "WEAP DESC",
         "original": "Attacks with this crossbow ignore 50% of armor.",
@@ -161,47 +97,103 @@
     },
     {
         "editor_id": "ccFFBSSE002_GlassCrossbow",
-        "form_id": "[0500080A]",
+        "form_id": "0500080A|ccffbsse002-crossbowpack.esl",
         "index": null,
         "type": "WEAP FULL",
         "original": "Glass Crossbow",
         "string": "Glass Crossbow"
     },
     {
+        "editor_id": "ccFFBSSE002_GlassCrossbowEnhanced",
+        "form_id": "05000816|ccffbsse002-crossbowpack.esl",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Enhanced Glass Crossbow",
+        "string": "Enhanced Glass Crossbow"
+    },
+    {
         "editor_id": "ccFFBSSE002_OrcishCrossbowEnhanced",
-        "form_id": "[05000819]",
+        "form_id": "05000819|ccffbsse002-crossbowpack.esl",
         "index": null,
         "type": "WEAP DESC",
         "original": "Attacks with this crossbow ignore 50% of armor.",
         "string": "Attacks with this crossbow ignore 50% of armor."
     },
     {
+        "editor_id": "ccFFBSSE002_ImperialCrossbowEnhanced",
+        "form_id": "05000817|ccffbsse002-crossbowpack.esl",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Enhanced Imperial Crossbow",
+        "string": "Enhanced Imperial Crossbow"
+    },
+    {
+        "editor_id": "ccFFBSSE002_NordicCrossbowEnhanced",
+        "form_id": "05000818|ccffbsse002-crossbowpack.esl",
+        "index": null,
+        "type": "WEAP DESC",
+        "original": "Attacks with this crossbow ignore 50% of armor.",
+        "string": "Attacks with this crossbow ignore 50% of armor."
+    },
+    {
+        "editor_id": "ccFFBSSE002_DaedricCrossbowEnhanced",
+        "form_id": "05000814|ccffbsse002-crossbowpack.esl",
+        "index": null,
+        "type": "WEAP DESC",
+        "original": "Attacks with this crossbow ignore 50% of armor.",
+        "string": "Attacks with this crossbow ignore 50% of armor."
+    },
+    {
+        "editor_id": "ccFFBSSE002_StalhrimCrossbow",
+        "form_id": "0500080F|ccffbsse002-crossbowpack.esl",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Stalhrim Crossbow",
+        "string": "Stalhrim Crossbow"
+    },
+    {
         "editor_id": "ccFFBSSE002_ImperialCrossbow",
-        "form_id": "[0500080B]",
+        "form_id": "0500080B|ccffbsse002-crossbowpack.esl",
         "index": null,
         "type": "WEAP FULL",
         "original": "Imperial Crossbow",
         "string": "Imperial Crossbow"
     },
     {
+        "editor_id": "ccFFBSSE002_SilverCrossbowEnhanced",
+        "form_id": "0500081A|ccffbsse002-crossbowpack.esl",
+        "index": null,
+        "type": "WEAP DESC",
+        "original": "Attacks with this crossbow ignore 50% of armor.",
+        "string": "Attacks with this crossbow ignore 50% of armor."
+    },
+    {
+        "editor_id": "ccFFBSSE002_StalhrimCrossbowEnhanced",
+        "form_id": "0500081B|ccffbsse002-crossbowpack.esl",
+        "index": null,
+        "type": "WEAP DESC",
+        "original": "Attacks with this crossbow ignore 50% of armor.",
+        "string": "Attacks with this crossbow ignore 50% of armor."
+    },
+    {
         "editor_id": "ccFFBSSE002_DragonboneCrossbow",
-        "form_id": "[05000809]",
+        "form_id": "05000809|ccffbsse002-crossbowpack.esl",
         "index": null,
         "type": "WEAP FULL",
         "original": "Dragonbone Crossbow",
         "string": "Dragonbone Crossbow"
     },
     {
-        "editor_id": "SolitudeFletcher",
-        "form_id": "[000169FE]",
+        "editor_id": "ccFFBSSE002_DaedricCrossbow",
+        "form_id": "05000808|ccffbsse002-crossbowpack.esl",
         "index": null,
-        "type": "CELL FULL",
-        "original": "Fletcher",
-        "string": "Fletcher"
+        "type": "WEAP FULL",
+        "original": "Daedric Crossbow",
+        "string": "Daedric Crossbow"
     },
     {
         "editor_id": "ccFFBSSE002_Quest",
-        "form_id": "[0500083E]",
+        "form_id": "0500083E|ccffbsse002-crossbowpack.esl",
         "index": null,
         "type": "QUST FULL",
         "original": "Seeding Quest",

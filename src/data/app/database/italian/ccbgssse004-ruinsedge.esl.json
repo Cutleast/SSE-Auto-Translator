@@ -1,31 +1,23 @@
 [
     {
-        "editor_id": "ccBGSSSE002_EnchInfluenceConfDownFFContactLow",
-        "form_id": "[05000811]",
+        "editor_id": "ccBGSSSE004_BowBaseEffect",
+        "form_id": "05000802|ccbgssse004-ruinsedge.esl",
         "index": null,
         "type": "MGEF DNAM",
-        "original": "Creatures and people up to level <mag> flee from combat for <dur> seconds.",
-        "string": "Creature e persone di livello <mag> o inferiore abbandonano il combattimento per <dur> secondi."
+        "original": "Randomly applies one of these effects to the target: Frost, Demoralize, Frenzy, Drain Magicka, Paralyze.",
+        "string": "Applica casualmente uno dei seguenti effetti sul bersaglio: Gelo, Demoralizza, Frenesia, Prosciuga magicka, Paralisi."
     },
     {
-        "editor_id": "ccBGSSSE004_InfluenceAggUpFFContact",
-        "form_id": "[05000801]",
+        "editor_id": "ccBGSSSE004_SlowFFContact",
+        "form_id": "0500080E|ccbgssse004-ruinsedge.esl",
         "index": null,
         "type": "MGEF FULL",
-        "original": "Fury",
-        "string": "Furia"
-    },
-    {
-        "editor_id": "ccBGSSSE004_BowBaseEffect",
-        "form_id": "[05000802]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Bow Base Effect",
-        "string": "Effetto base dell'arco"
+        "original": "Slow",
+        "string": "Lentezza"
     },
     {
         "editor_id": "ccBGSSSE002_EnchInfluenceConfDownFFContactLow",
-        "form_id": "[05000811]",
+        "form_id": "05000811|ccbgssse004-ruinsedge.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Fear",
@@ -33,55 +25,15 @@
     },
     {
         "editor_id": "ccBGSSSE004_ReduceCarryWeight",
-        "form_id": "[05000803]",
+        "form_id": "05000803|ccbgssse004-ruinsedge.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Reduce Carry Weight",
         "string": "Riduce carico massimo"
     },
     {
-        "editor_id": "ccBGSSSE004_InfluenceAggUpFFContact",
-        "form_id": "[05000801]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Creatures and people up to level <mag> will attack anything nearby for <dur> seconds.",
-        "string": "Creature e persone di livello <mag> o inferiore attaccheranno chiunque nelle vicinanze per <dur> secondi."
-    },
-    {
-        "editor_id": "ccBGSSSE004_SlowFFContact",
-        "form_id": "[0500080E]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Slow",
-        "string": "Lentezza"
-    },
-    {
-        "editor_id": "ccBGSSSE004_BowBaseEffect",
-        "form_id": "[05000802]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Randomly applies one of these effects to the target: Frost, Demoralize, Frenzy, Drain Magicka, Paralyze.",
-        "string": "Applica casualmente uno dei seguenti effetti sul bersaglio: Gelo, Demoralizza, Frenesia, Prosciuga magicka, Paralisi."
-    },
-    {
-        "editor_id": "ccBGSSSE004_EnchFrostDamageFFContact",
-        "form_id": "[0500080D]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Frost Damage",
-        "string": "Danno da gelo"
-    },
-    {
-        "editor_id": "ccBGSSSE004_ReduceCarryWeight",
-        "form_id": "[05000803]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Reduce carrying capacity increases by <mag> for <dur> seconds.",
-        "string": "Il peso trasportabile si riduce di <mag> punti per <dur> secondi."
-    },
-    {
         "editor_id": "ccBGSSSE004_DrainMagickaEffect",
-        "form_id": "[05000800]",
+        "form_id": "05000800|ccbgssse004-ruinsedge.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Drain Magicka",
@@ -89,47 +41,95 @@
     },
     {
         "editor_id": "ccBGSSSE004_EnchFrostDamageFFContact",
-        "form_id": "[0500080D]",
+        "form_id": "0500080D|ccbgssse004-ruinsedge.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Frost Damage",
+        "string": "Danno da gelo"
+    },
+    {
+        "editor_id": "ccBGSSSE004_InfluenceAggUpFFContact",
+        "form_id": "05000801|ccbgssse004-ruinsedge.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Creatures and people up to level <mag> will attack anything nearby for <dur> seconds.",
+        "string": "Creature e persone di livello <mag> o inferiore attaccheranno chiunque nelle vicinanze per <dur> secondi."
+    },
+    {
+        "editor_id": "ccBGSSSE004_BowBaseEffect",
+        "form_id": "05000802|ccbgssse004-ruinsedge.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Bow Base Effect",
+        "string": "Effetto base dell'arco"
+    },
+    {
+        "editor_id": "ccBGSSSE002_EnchInfluenceConfDownFFContactLow",
+        "form_id": "05000811|ccbgssse004-ruinsedge.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Creatures and people up to level <mag> flee from combat for <dur> seconds.",
+        "string": "Creature e persone di livello <mag> o inferiore abbandonano il combattimento per <dur> secondi."
+    },
+    {
+        "editor_id": "ccBGSSSE004_InfluenceAggUpFFContact",
+        "form_id": "05000801|ccbgssse004-ruinsedge.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fury",
+        "string": "Furia"
+    },
+    {
+        "editor_id": "ccBGSSSE004_EnchFrostDamageFFContact",
+        "form_id": "0500080D|ccbgssse004-ruinsedge.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "Target takes <mag> points of frost damage to Health and Stamina.",
         "string": "Il bersaglio subisce <mag> punti di danno da gelo a salute e vigore."
     },
     {
-        "editor_id": "ccBGSSSE004_Paralyze1",
-        "form_id": "[05000807]",
+        "editor_id": "ccBGSSSE004_ReduceCarryWeight",
+        "form_id": "05000803|ccbgssse004-ruinsedge.esl",
         "index": null,
-        "type": "SPEL FULL",
-        "original": "Paralyze",
-        "string": "Paralisi"
-    },
-    {
-        "editor_id": "ccBGSSSE004_DrainMagicka",
-        "form_id": "[05000809]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Frenzy",
-        "string": "Frenesia"
+        "type": "MGEF DNAM",
+        "original": "Reduce carrying capacity increases by <mag> for <dur> seconds.",
+        "string": "Il peso trasportabile si riduce di <mag> punti per <dur> secondi."
     },
     {
         "editor_id": "ccBGSSSE004_Frost",
-        "form_id": "[05000812]",
+        "form_id": "05000812|ccbgssse004-ruinsedge.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Frost",
         "string": "Gelo"
     },
     {
+        "editor_id": "ccBGSSSE004_Paralyze15",
+        "form_id": "05000806|ccbgssse004-ruinsedge.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Paralyze",
+        "string": "Paralisi"
+    },
+    {
+        "editor_id": "ccBGSSSE004_Demoralize",
+        "form_id": "05000808|ccbgssse004-ruinsedge.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Demoralize",
+        "string": "Demoralizza"
+    },
+    {
         "editor_id": "ccBGSSSE004_Frenzy",
-        "form_id": "[05000805]",
+        "form_id": "05000805|ccbgssse004-ruinsedge.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Frenzy",
         "string": "Frenesia"
     },
     {
-        "editor_id": "ccBGSSSE004_Paralyze15",
-        "form_id": "[05000806]",
+        "editor_id": "ccBGSSSE004_Paralyze1",
+        "form_id": "05000807|ccbgssse004-ruinsedge.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Paralyze",
@@ -137,23 +137,23 @@
     },
     {
         "editor_id": "ccBGSSSE004_Burden",
-        "form_id": "[0500080A]",
+        "form_id": "0500080A|ccbgssse004-ruinsedge.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Burden",
         "string": "Fardello"
     },
     {
-        "editor_id": "ccBGSSSE004_Demoralize",
-        "form_id": "[05000808]",
+        "editor_id": "ccBGSSSE004_DrainMagicka",
+        "form_id": "05000809|ccbgssse004-ruinsedge.esl",
         "index": null,
         "type": "SPEL FULL",
-        "original": "Demoralize",
-        "string": "Demoralizza"
+        "original": "Frenzy",
+        "string": "Frenesia"
     },
     {
         "editor_id": "ccBGSSSE004_RuinsEdgeBow",
-        "form_id": "[05000D63]",
+        "form_id": "05000D63|ccbgssse004-ruinsedge.esl",
         "index": null,
         "type": "WEAP FULL",
         "original": "Ruin's Edge",
@@ -161,50 +161,42 @@
     },
     {
         "editor_id": "ccBGSSSE004_LvlRuinsEdgeBoss",
-        "form_id": "[05000813]",
+        "form_id": "05000813|ccbgssse004-ruinsedge.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Bandit Chief",
         "string": "Capo dei banditi"
     },
     {
-        "editor_id": "StonyCreekCave01",
-        "form_id": "[0004B8FB]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Stony Creek Cave",
-        "string": "Caverna del Ruscello Pietroso"
-    },
-    {
         "editor_id": "ccBGSSSE004_Quest",
-        "form_id": "[0500080C]",
-        "index": 81,
+        "form_id": "0500080C|ccbgssse004-ruinsedge.esl",
+        "index": 88,
         "type": "QUST CNAM",
         "original": "I found a map to the location of the fabled bow, Ruin's Edge.",
         "string": "Ho trovato una mappa con l'ubicazione del leggendario arco Margine della Rovina."
     },
     {
         "editor_id": "ccBGSSSE004_Quest",
-        "form_id": "[0500080C]",
-        "index": 0,
-        "type": "QUST NNAM",
-        "original": "Find Ruin's Edge",
-        "string": "Trova il Margine della Rovina"
+        "form_id": "0500080C|ccbgssse004-ruinsedge.esl",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "The Edge of Ruin",
+        "string": "Il margine della rovina"
     },
     {
         "editor_id": "ccBGSSSE004_Quest",
-        "form_id": "[0500080C]",
-        "index": 81,
+        "form_id": "0500080C|ccbgssse004-ruinsedge.esl",
+        "index": 84,
         "type": "QUST CNAM",
         "original": "I've found Ruin's Edge.",
         "string": "Ho trovato il Margine della Rovina."
     },
     {
         "editor_id": "ccBGSSSE004_Quest",
-        "form_id": "[0500080C]",
-        "index": null,
-        "type": "QUST FULL",
-        "original": "The Edge of Ruin",
-        "string": "Il margine della rovina"
+        "form_id": "0500080C|ccbgssse004-ruinsedge.esl",
+        "index": 0,
+        "type": "QUST NNAM",
+        "original": "Find Ruin's Edge",
+        "string": "Trova il Margine della Rovina"
     }
 ]

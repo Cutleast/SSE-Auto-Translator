@@ -1,7 +1,7 @@
 [
     {
         "editor_id": "CCHorseArmorMiscArmorSteel",
-        "form_id": "[010030C9]",
+        "form_id": "010030C9|Update.esm",
         "index": null,
         "type": "MISC FULL",
         "original": "Steel Horse Armor",

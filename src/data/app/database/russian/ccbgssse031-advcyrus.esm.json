@@ -1,199 +1,143 @@
 [
     {
-        "editor_id": "ccBGSSSE031_VCBoatDoorActivator3",
-        "form_id": "[05000804]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Blackbone Isle",
-        "string": "Остров Черной кости"
-    },
-    {
-        "editor_id": "ccBGSSSE031_FastTravel01",
-        "form_id": "[050341CA]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Travel to",
-        "string": "Travel to"
-    },
-    {
-        "editor_id": "ccBGSSSE031_FastTravel04",
-        "form_id": "[050392E0]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Travel to",
-        "string": "Travel to"
-    },
-    {
-        "editor_id": "ccBGSSSE031_VCBoatDoorActivator5",
-        "form_id": "[05000806]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Loose Brick",
-        "string": "Шатающийся кирпич"
-    },
-    {
-        "editor_id": "ccBGSSSE031_FastTravel04",
-        "form_id": "[050392E0]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Castle Volkihar",
-        "string": "Castle Volkihar"
-    },
-    {
-        "editor_id": "ccBGSSSE031_FastTravel03",
-        "form_id": "[050341D4]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Travel to",
-        "string": "Travel to"
-    },
-    {
         "editor_id": "ccBGSSSE031_VCBoatDoorActivator4",
-        "form_id": "[05000803]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Travel to",
-        "string": "Переместиться -->"
-    },
-    {
-        "editor_id": "ccBGSSSE031_VCBoatDoorActivator3",
-        "form_id": "[05000804]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Travel to",
-        "string": "Переместиться -->"
-    },
-    {
-        "editor_id": "ccBGSSSE031_FastTravel01",
-        "form_id": "[050341CA]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Solitude",
-        "string": "Solitude"
-    },
-    {
-        "editor_id": "ccBGSSSE031_FastTravel05",
-        "form_id": "[050392E1]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Raven Rock",
-        "string": "Raven Rock"
-    },
-    {
-        "editor_id": "ccBGSSSE031_VCBoatDoorActivator5",
-        "form_id": "[05000806]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Examine",
-        "string": "Осмотреть"
-    },
-    {
-        "editor_id": "ccBGSSSE031_FastTravel03",
-        "form_id": "[050341D4]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Dawnstar",
-        "string": "Dawnstar"
-    },
-    {
-        "editor_id": "ccBGSSSE031_FastTravel05",
-        "form_id": "[050392E1]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Travel to",
-        "string": "Travel to"
-    },
-    {
-        "editor_id": "ccBGSSSE031_VCBoatDoorActivator4",
-        "form_id": "[05000803]",
+        "form_id": "05000803|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "ACTI FULL",
         "original": "Orphan's Tear",
         "string": "Слеза Сироты"
     },
     {
-        "editor_id": "ccBGSSSE031_FastTravel02",
-        "form_id": "[050341CB]",
+        "editor_id": "ccBGSSSE031_FastTravel03",
+        "form_id": "050341D4|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Travel to",
         "string": "Travel to"
     },
     {
+        "editor_id": "ccBGSSSE031_FastTravel01",
+        "form_id": "050341CA|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Travel to",
+        "string": "Travel to"
+    },
+    {
+        "editor_id": "ccBGSSSE031_VCBoatDoorActivator5",
+        "form_id": "05000806|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Examine",
+        "string": "Осмотреть"
+    },
+    {
+        "editor_id": "ccBGSSSE031_FastTravel04",
+        "form_id": "050392E0|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Castle Volkihar",
+        "string": "Castle Volkihar"
+    },
+    {
+        "editor_id": "ccBGSSSE031_VCBoatDoorActivator3",
+        "form_id": "05000804|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Blackbone Isle",
+        "string": "Остров Черной кости"
+    },
+    {
         "editor_id": "ccBGSSSE031_FastTravel02",
-        "form_id": "[050341CB]",
+        "form_id": "050341CB|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "ACTI FULL",
         "original": "Windhelm",
         "string": "Windhelm"
     },
     {
-        "editor_id": "ccBGSSSE031_ClothesPirateBoatswainClothesShoesVariant01",
-        "form_id": "[0500087B]",
+        "editor_id": "ccBGSSSE031_VCBoatDoorActivator4",
+        "form_id": "05000803|ccbgssse031-advcyrus.esm",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Boatswain Shoes",
-        "string": "Ботинки боцмана"
+        "type": "ACTI RNAM",
+        "original": "Travel to",
+        "string": "Переместиться -->"
     },
     {
-        "editor_id": "ccBGSSSE031_ClothesRedguardClothes",
-        "form_id": "[05000807]",
+        "editor_id": "ccBGSSSE031_FastTravel01",
+        "form_id": "050341CA|ccbgssse031-advcyrus.esm",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Cyrus' Outfit",
-        "string": "Наряд Сайруса"
+        "type": "ACTI FULL",
+        "original": "Solitude",
+        "string": "Solitude"
     },
     {
-        "editor_id": "ccBGSSSE031_ClothesPirateCaptainClothesVariant01",
-        "form_id": "[050008A8]",
+        "editor_id": "ccBGSSSE031_VCBoatDoorActivator5",
+        "form_id": "05000806|ccbgssse031-advcyrus.esm",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Captain Clothes",
-        "string": "Одежда капитана"
+        "type": "ACTI FULL",
+        "original": "Loose Brick",
+        "string": "Шатающийся кирпич"
     },
     {
-        "editor_id": "ccBGSSSE031_ClothesCyrusClothes",
-        "form_id": "[0500089E]",
+        "editor_id": "ccBGSSSE031_FastTravel05",
+        "form_id": "050392E1|ccbgssse031-advcyrus.esm",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Cyrus' Clothes",
-        "string": "Одежда Сайруса"
+        "type": "ACTI FULL",
+        "original": "Raven Rock",
+        "string": "Raven Rock"
     },
     {
-        "editor_id": "ccBGSSSE031_ClothesPirateScrubClothesVariant02",
-        "form_id": "[05000875]",
+        "editor_id": "ccBGSSSE031_FastTravel04",
+        "form_id": "050392E0|ccbgssse031-advcyrus.esm",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Scrub Clothes",
-        "string": "Ветхая одежда"
+        "type": "ACTI RNAM",
+        "original": "Travel to",
+        "string": "Travel to"
     },
     {
-        "editor_id": "ccBGSSSE031_ClothesPirateCaptainClothesBootsVariant02",
-        "form_id": "[050008E2]",
+        "editor_id": "ccBGSSSE031_FastTravel03",
+        "form_id": "050341D4|ccbgssse031-advcyrus.esm",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Captain Boots",
-        "string": "Сапоги капитана"
+        "type": "ACTI FULL",
+        "original": "Dawnstar",
+        "string": "Dawnstar"
     },
     {
-        "editor_id": "ccBGSSSE031_ClothesPirateBoatswainClothesShoesVariant02",
-        "form_id": "[0500089F]",
+        "editor_id": "ccBGSSSE031_VCBoatDoorActivator3",
+        "form_id": "05000804|ccbgssse031-advcyrus.esm",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Boatswain Shoes",
-        "string": "Ботинки боцмана"
+        "type": "ACTI RNAM",
+        "original": "Travel to",
+        "string": "Переместиться -->"
+    },
+    {
+        "editor_id": "ccBGSSSE031_FastTravel02",
+        "form_id": "050341CB|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Travel to",
+        "string": "Travel to"
+    },
+    {
+        "editor_id": "ccBGSSSE031_FastTravel05",
+        "form_id": "050392E1|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Travel to",
+        "string": "Travel to"
     },
     {
         "editor_id": "ccBGSSSE031_ClothesPirateCaptainClothesVariant02",
-        "form_id": "[050008AF]",
+        "form_id": "050008AF|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "ARMO FULL",
         "original": "Captain Clothes",
         "string": "Одежда капитана"
     },
     {
-        "editor_id": "ccBGSSSE031_ClothesPirateBoatswainClothesVariant01",
-        "form_id": "[05000896]",
+        "editor_id": "ccBGSSSE031_ClothesPirateBoatswainClothesVariant02",
+        "form_id": "0500088B|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "ARMO FULL",
         "original": "Boatswain Clothes",
@@ -201,15 +145,39 @@
     },
     {
         "editor_id": "ccBGSSSE031_ClothesCyrusClothesBoots",
-        "form_id": "[0500089B]",
+        "form_id": "0500089B|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "ARMO FULL",
         "original": "Cyrus' Boots",
         "string": "Сапоги Сайруса"
     },
     {
+        "editor_id": "ccBGSSSE031_ClothesRedguardClothes",
+        "form_id": "05000807|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Cyrus' Outfit",
+        "string": "Наряд Сайруса"
+    },
+    {
+        "editor_id": "ccBGSSSE031_ClothesPirateCaptainClothesBootsVariant01",
+        "form_id": "050008C5|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Captain Boots",
+        "string": "Сапоги капитана"
+    },
+    {
         "editor_id": "ccBGSSSE031_ClothesPirateScrubClothesVariant01",
-        "form_id": "[050008E7]",
+        "form_id": "050008E7|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Scrub Clothes",
+        "string": "Ветхая одежда"
+    },
+    {
+        "editor_id": "ccBGSSSE031_ClothesPirateScrubClothesVariant02",
+        "form_id": "05000875|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "ARMO FULL",
         "original": "Scrub Clothes",
@@ -217,23 +185,55 @@
     },
     {
         "editor_id": "ccBGSSSE031_ClothesPirateBoatswainClothesVariant03",
-        "form_id": "[0500087F]",
+        "form_id": "0500087F|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "ARMO FULL",
         "original": "Boatswain Clothes",
         "string": "Одежда боцмана"
     },
     {
-        "editor_id": "ccBGSSSE031_ClothesPirateBoatswainClothesVariant02",
-        "form_id": "[0500088B]",
+        "editor_id": "ccBGSSSE031_ClothesCyrusClothes",
+        "form_id": "0500089E|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Cyrus' Clothes",
+        "string": "Одежда Сайруса"
+    },
+    {
+        "editor_id": "ccBGSSSE031_ClothesPirateCaptainClothesVariant01",
+        "form_id": "050008A8|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Captain Clothes",
+        "string": "Одежда капитана"
+    },
+    {
+        "editor_id": "ccBGSSSE031_ClothesPirateBoatswainClothesVariant01",
+        "form_id": "05000896|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "ARMO FULL",
         "original": "Boatswain Clothes",
         "string": "Одежда боцмана"
     },
     {
-        "editor_id": "ccBGSSSE031_ClothesPirateCaptainClothesBootsVariant01",
-        "form_id": "[050008C5]",
+        "editor_id": "ccBGSSSE031_ClothesPirateBoatswainClothesShoesVariant01",
+        "form_id": "0500087B|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Boatswain Shoes",
+        "string": "Ботинки боцмана"
+    },
+    {
+        "editor_id": "ccBGSSSE031_ClothesPirateBoatswainClothesShoesVariant02",
+        "form_id": "0500089F|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Boatswain Shoes",
+        "string": "Ботинки боцмана"
+    },
+    {
+        "editor_id": "ccBGSSSE031_ClothesPirateCaptainClothesBootsVariant02",
+        "form_id": "050008E2|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "ARMO FULL",
         "original": "Captain Boots",
@@ -241,63 +241,31 @@
     },
     {
         "editor_id": "ccBGSSSE031_ClothesPirateBoatswainClothesShoesVariant03",
-        "form_id": "[050008A1]",
+        "form_id": "050008A1|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "ARMO FULL",
         "original": "Boatswain Shoes",
         "string": "Ботинки боцмана"
     },
     {
-        "editor_id": "ccBGSSSE031_Note02",
-        "form_id": "[050008F8]",
+        "editor_id": "ccBGSSSE031_BlackwaterNote",
+        "form_id": "050008E8|ccbgssse031-advcyrus.esm",
         "index": null,
-        "type": "BOOK FULL",
-        "original": "Pirate's Note",
-        "string": "Записка пирата"
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nThe crew always asks me, how can we be pirates if we ain't got no ship?\r\n\r\nAnd I tell them, we're Blackwater Brigands, we don't need no stinking ship. We can rob folks on land.\r\n\r\nAnd they ask me, but don't that make us bandits?\r\n\r\nAnd I tell them, good point. Maybe we should find us a ship.\r\n\r\nI heard there's a grand old sea cow over at Blackbone Isle. Might even have more loot than the Golden Galleon, the one the old Imperial used to tell stories about when I first joined up.\r\n\r\nFrom what I hear, the isle ain't too far from here. We could probably steal a boat from the wrecks up north. The problem is, no one's been to the isle in ages, and we ain't got a map.\r\n\r\nSo the crew asks me, how we gonna find Blackbone Isle if we don't know where it is?\r\n\r\nAnd I tell them, shut up, I'm working on it.\r\n</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\nКоманда все спрашивает, как мы можем быть пиратами, раз у нас нет корабля?\r\n\r\nА я отвечаю, что мы - разбойники Черной воды, и никакой вонючий корабль нам не нужен. Мы и на земле можем грабить.\r\n\r\nА они спрашивают, так чем же мы отличаемся от простых бандитов?\r\n\r\nА я им говорю - хороший вопрос. Может, нам и стоит найти себе корабль.\r\n\r\nГоворят, у острова Черной кости стоит огромная старая посудина. Может, там барахла больше, чем на \"Золотом Галеоне\". Сколько слухов тогда ходило о том старом имперском корабле. \r\n\r\nВроде как этот остров совсем недалеко отсюда. Может, у нас получится украсть лодку с тех обломков на севере. Беда в том, что на том острове никто не бывал, и карты у нас нет.\r\n\r\nИ вот команда меня спрашивает, как мы найдем Остров Черной Кости, коли не знаем, где он?\r\n\r\nИ я им говорю - захлопнитесь, я думаю.\r\n</font>"
     },
     {
         "editor_id": "ccBGSSSE031_FirstOfficerNote",
-        "form_id": "[05000808]",
+        "form_id": "05000808|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "BOOK FULL",
         "original": "Captain's Journal",
         "string": "Журнал капитана"
     },
     {
-        "editor_id": "ccBGSSSE031_OriginBook",
-        "form_id": "[05000809]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "The Restless",
-        "string": "Неупокоенные"
-    },
-    {
-        "editor_id": "ccBGSSSE031_Note02",
-        "form_id": "[050008F8]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face=\"$HandwrittenFont\">\r\nThey say a pirate's home is the sea, but the bottom of the ocean is no place to breathe, let alone live. \r\n\r\nBut word is you found a right ol' ship on an isle far off the coast. If you can't sail it out to open waters, it may make a good home. \r\n\r\nJust a little advice from a restless soul.</font>",
-        "string": "<font face=\"$HandwrittenFont\">\r\nГоворят, дом пирата - в море, но на дне океана нечем дышать, не за чем жить. \r\n\r\nНо ходят слухи, тебе удалось найти старый корабль на том далеком острове. Если не выходит вывести его в открытые воды, просто живи на нем. \r\n\r\nМаленький совет от беспокойной души.</font>"
-    },
-    {
-        "editor_id": "ccBGSSSE031_FirstOfficerNote",
-        "form_id": "[05000808]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face='$HandwrittenFont'>  \r\n<b>28th of Last Seed, 3E 39</b>\r\nWe set sail on Dead Man's Dread in the summer, to take advantage of the calmer winds. Yet Kynareth saw fit to throw us off course, and now we find ourselves stranded in a fog, with no sun or stars to guide us. The crew is blaming the young navigator, K'avir, for steering us into it. In truth, I only brought him on board because the old Captain took ill, and we were desperately short on men. \r\n\r\n<b>4th of Hearthfire, 3E 39</b>\r\nOne of the crew, Asif, says he was once a Priest of Arkay, and used to perform the rites. He believes the former Captain was murdered. I'll keep this between him and I until I know more.\r\n\r\n<b>22nd of Hearthfire, 3E 39</b>\r\nI've kept the date by marking the back of this journal. But there are times I forget, and in truth I don't know whether it's the 22nd of Hearthfire or the 1st of the New Year. \r\n\r\nBut the cold is enough to tell us that winter is on its way. We'll need to find land soon, as the men are getting nervous. There's been three fights over rations in the past week. Worse yet, I'm starting to lose my head. There are times I look west and see the golden sands of Stros M'Kai on the curve of the horizon. I have to force myself to look away, knowing there's nothing there.\r\n\r\n<b>2nd of Frostfall, 3E 39</b>\r\nWe finally managed to find land in this barren frost. The men are joyous. Based on the markings inside the grotto, it looks like we've reached Blackbone Isle, an old pirate den of all things. Many of us were corsairs before we pledged ourselves to the Crown, so perhaps coming here was more than luck. Either way, we can't be far from the mainland now. We'll head south for Skyrim in the morning.\r\n\r\n<b>3rd of Frostfall, 3E 39</b>\r\nWe are a crew of dead men, and this ship is our tomb.\r\n\r\nThe entrance collapsed in the middle of the night, sealing us inside. Still, we might've found a way back to shore, had the Forebear among us, K'avir, not sabotaged the skiffs. It's my crime as much as his, for I'm the one who brought him aboard. \r\n\r\nFor his part, the Forebear made no attempt to resist or escape. In fact, he readily admitted to the deed, as well of the death of our former Captain. He wanted us to know exactly who it was that he served, so that every Crown would know that nowhere in Tamriel was safe.\r\n\r\nWe put him in the brig and left him to rot. Some of the men wanted a more creative punishment, but the reality is there's no worse fate than the one he doomed us to.\r\n\r\n<b>5th of Frostfall, 3E 39</b>\r\nThe situation is dire. The food stocks are depleted, and half the men are crippled with fever. The crew have no delusions about what comes next. But we can still die with purpose.\r\n\r\nBefore the old Captain died, he told me that the sabre on his wall belonged to Cyrus himself, and that it was worth more than a thousand ships full of plunder.\r\n\r\nI never asked how he knew Cyrus, or how he came upon his sword. But I know protecting the hero's legacy was important to him, and now that honor falls to us.\r\n\r\nI gave each man a choice. Some opted for the drink, others chose a more dramatic exit. As we depart, we will pray to Arkay to bind our souls to the ship, just as Prince A'Tor was bound to a gem so many years ago.\r\n\r\nWe will protect the relics of Cyrus, and honor the Crown. We will do in death what we could not do in life.</font>",
-        "string": "<font face='$HandwrittenFont'>  \r\n<b>28-е Последнего зерна, 3Э 39</b>\r\nЛетом мы отплыли к \"Ужасу Мертвеца\", пока ветра были тихие. Однако Кинарет посчитала нужным сбить нас с курса, и теперь мы оказались в тумане, без солнца и звезд, что указали бы нам путь. Команда винит во всем юного штурмана, К'авира, что завел нас сюда. По правде сказать, я взял его на борт лишь от того, что старик-капитан заболел, а людей у нас отчаянно не хватало. \r\n\r\n<b>4-е Огня очага, 3Э 39</b>\r\nПарень из команды, Асиф, говорит, что был когда-то жрецом Аркея и проводил ему обряды. Он говорит, что старого капитана убили. Я велел ему никому про это не говорить, пока не узнаю побольше.\r\n\r\n<b>22-е Огня очага, 3Э 39</b>\r\nЯ отмечаю дни на обороте журнала. А по правде сказать, пару раз забыл. Знать не знаю, 22-е сегодня Огня очага или 1-е от Нового года. \r\n\r\nНо судя по морозу, зима уже наступает. Нам надо скорее причалить. Люди начинают переживать. За прошлую неделю три раза подрались за провизию. А что хуже, так я начинаю сходить с ума. Порой я гляжу на запад и вижу, как золотые пески Строс М'Кай маячат на горизонте. Я силюсь отвернуться, ведь знаю - там ничего нет.\r\n\r\n<b>2-е Начала морозов, 3Э 39</b>\r\nМы наконец-то нашли берег в этой морозной пустоши. Люди в восторге. Судя по надписям в гроте, мы добрались до острова Черной Кости, старой пиратской берлоги. Многие из нас до того, как вручить себя в руки короны, были корсарами, так что судьба не случайно нас сюда завела. Так или иначе, скоро мы доберемся до большой земли. Утром мы отправляемся на юг, к Скайриму.\r\n\r\n<b>3-е Начала морозов, 3Э 39</b>\r\nМы - мертвецы, а корабль этот - наша могила.\r\n\r\nПосреди ночи вход обрушился и отрезал нам путь наружу. Но все же мы могли бы найти путь к берегу, если бы К'авир, Предшественник, не испортил лодки. И моя вина в этом не меньше его, ведь это я пустил его на борт. \r\n\r\nВ свою очередь, Предшественник не пытался сбежать или сопротивляться. Он сразу же признался в содеянном, как и в убийстве нашего старого капитана. Он хотел, чтобы мы знали, кому он служит, чтобы каждая корона понимала, что нигде в Тамриэле ей не скрыться.\r\n\r\nМы бросили его гнить в карцере. Люди требовали более изощренного наказания, однако нельзя придумать участь хуже той, на которую он нас обрек.\r\n\r\n<b>5-е Начала морозов, 3Э 39</b>\r\nНаши дела совсем плохи. Запасы продовольствия иссякли, а половину команды свалила лихорадка. Люди уверены в неотвратимости смерти. Однако мы еще можем отдать свои жизни ради благой цели.\r\n\r\nПеред смертью старый капитан сказал мне, что сабля на стене принадлежала самому Сайрусу, и стоит больше сотни кораблей, груженых разными товарами.\r\n\r\nЯ не спрашивал его, откуда он знал Сайруса, и как он заполучил его меч. Но я знаю, как важно для него было защитить наследие героя. Отныне эта честь выпала нам.\r\n\r\nКаждому члену команды я дал выбор. Кто-то предпочел напиток, кто-то - более драматичный исход. Мы взмолимся Аркею о том, чтобы он связал наши души с этим кораблем так же, как принц А'Тор был привязан к драгоценному камню.\r\n\r\nМы защитим наследие Сайруса и честь короны. В смерти мы сделаем то, чего не смогли в жизни.</font>"
-    },
-    {
-        "editor_id": "ccBGSSSE031_MurdererNote",
-        "form_id": "[0500080B]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face='$HandwrittenFont'>  \r\nNaha 'Mei Dogo Ra Gada Lonhe Trai.\r\n\r\nThe Crowns are fond of this saying. \"The Forebears should know their place.\" They look upon us like commoners,  the chaff from which the wheat is pruned.\r\n\r\nI would remind you, Na-Totambu, that our place is not for you to decide. For we are the Warrior Wave of Ra Gada, the first men. It is our sweat that salts the earth. It is our tears from which the rain falls. It is our blood that beats in the heart of Hammerfell. \r\n\r\nThe throne of kings is one built upon our shoulders. It is by our grace, and our mercy, that the Crowns are allowed to sit. We know our place. Do not forget yours.\r\n",
-        "string": "<font face='$HandwrittenFont'>  \r\nНаха Мей Дого Ра Гада Лонне Трай.\r\n\r\nКороны обожают эту поговорку. \"Предшественники должны знать свое место\". Он смотрят на нас, как на простолюдин, как на мякину, оставшуюся после жатвы.\r\n\r\nХочу напомнить тебе, На-Тотамбу, что не тебе решать, где наше место. Ибо мы – Воина Ра Гада, первые люди. Это наш пот просолил землю. Это наши слезы проливаются дождями. Это наша кровь течет в сердце Хаммерфелла. \r\n\r\nЦарский трон стоит на наших плечах. Это по нашей милости, по нашей воле короны на нем сидят. Мы знаем свое место. Не забывайте свое.\r\n"
-    },
-    {
         "editor_id": "ccBGSSSE031_Note",
-        "form_id": "[0500080A]",
+        "form_id": "0500080A|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "BOOK FULL",
         "original": "Kevon's Note",
@@ -305,87 +273,95 @@
     },
     {
         "editor_id": "ccBGSSSE031_OriginBook",
-        "form_id": "[05000809]",
+        "form_id": "05000809|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "BOOK DESC",
         "original": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nThe Restless\r\n\r\n\r\n\r\nby \r\nUnknown\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/H_letter.png'>ave you heard the tale about the pirates who challenged an Empire? \r\n\r\nI'm sure you have. For neither gallows' rope nor history's pen can erase the Restless League. So long as crews hoist sail and fare the seas they'll sing shanties of ol' Cyrus, hero of Stros M'Kai.\r\n\r\nBut what became of him when the fighting was done? If it were only a tale, the book would close, but life has a habit of adding pages where they shouldn't be.\r\n\r\nSome say he sailed west, to lands uncharted. But others contend he took command of the legendary ship, Dead Man's Dread, and sailed north, drawn by the stories of Tobias. There he hunted for treasures new and old, all across the Sea of Ghosts. Over time he amassed a great fortune, and lived out the rest of his days on calm waters.\r\n\r\nWhere this fortune is now, is a mystery long forgotten. You'll hear talk of a Blackbone Isle, but you won't find it on any map. The last man who claimed to know its location was a pirate by the name of Kevon. Yet as a wanted man of little clout, he died in Castle Dour Dungeon, taking the fate of the treasure with him. \r\n\r\nA strange end to a great tale, but who knows if the writing's done. For a man's hunt for gold is as restless as his desire to be free.\r\n</p>",
         "string": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nНеупокоенные\r\n\r\n\r\n\r\nавтор: \r\nНеизвестно\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\nДоводилось ли вам слышать сказ о пиратах, что бросили вызов Империи? \r\n\r\nНу конечно, да. Ибо ни виселица, ни перо истории не могут уничтожить Лигу Неупокоенных. И пока ветер раздувает паруса, а корабли бороздят моря, люди будут петь песни о старине Сайрусе, герое Строс М'Кай.\r\n\r\nНо что стало с ним, когда битва была окончена? Будь это книга, она бы подошла к концу, но жизнь любит добавлять страницы там, где их не должно быть.\r\n\r\nКто-то говорит, он отправился на запад, в неизученные земли. А кто-то утверждает, будто он стал командиром легендарного \"Ужаса Мертвеца\", и отплыл на север, вслед за сказаниями о Тобиасе. Там он исплавал все море Призраков в погоне за сокровищами. Сколотив состояние, он провел остаток своих дней в спокойных водах.\r\n\r\nИ где это состояние сейчас? Тайна покрыта мраком. Люди все болтают об острове Черной Кости, да вот только карты к нему не сыскать. Последним человеком, утверждавшим, будто знает, где он, был пират по имени Кевон. Мелкий разбойник, хоть и был в бегах, скончался в подземелье Мрачного замка, унеся тайну этих сокровищ с собой в могилу. \r\n\r\nСтранный конец для великого сказания, но кто знает, конец ли это? Ведь жажда наживы так же живуча, как жажда свободы.\r\n</p>"
     },
     {
+        "editor_id": "ccBGSSSE031_FirstOfficerNote",
+        "form_id": "05000808|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>  \r\n<b>28th of Last Seed, 3E 39</b>\r\nWe set sail on Dead Man's Dread in the summer, to take advantage of the calmer winds. Yet Kynareth saw fit to throw us off course, and now we find ourselves stranded in a fog, with no sun or stars to guide us. The crew is blaming the young navigator, K'avir, for steering us into it. In truth, I only brought him on board because the old Captain took ill, and we were desperately short on men. \r\n\r\n<b>4th of Hearthfire, 3E 39</b>\r\nOne of the crew, Asif, says he was once a Priest of Arkay, and used to perform the rites. He believes the former Captain was murdered. I'll keep this between him and I until I know more.\r\n\r\n<b>22nd of Hearthfire, 3E 39</b>\r\nI've kept the date by marking the back of this journal. But there are times I forget, and in truth I don't know whether it's the 22nd of Hearthfire or the 1st of the New Year. \r\n\r\nBut the cold is enough to tell us that winter is on its way. We'll need to find land soon, as the men are getting nervous. There's been three fights over rations in the past week. Worse yet, I'm starting to lose my head. There are times I look west and see the golden sands of Stros M'Kai on the curve of the horizon. I have to force myself to look away, knowing there's nothing there.\r\n\r\n<b>2nd of Frostfall, 3E 39</b>\r\nWe finally managed to find land in this barren frost. The men are joyous. Based on the markings inside the grotto, it looks like we've reached Blackbone Isle, an old pirate den of all things. Many of us were corsairs before we pledged ourselves to the Crown, so perhaps coming here was more than luck. Either way, we can't be far from the mainland now. We'll head south for Skyrim in the morning.\r\n\r\n<b>3rd of Frostfall, 3E 39</b>\r\nWe are a crew of dead men, and this ship is our tomb.\r\n\r\nThe entrance collapsed in the middle of the night, sealing us inside. Still, we might've found a way back to shore, had the Forebear among us, K'avir, not sabotaged the skiffs. It's my crime as much as his, for I'm the one who brought him aboard. \r\n\r\nFor his part, the Forebear made no attempt to resist or escape. In fact, he readily admitted to the deed, as well of the death of our former Captain. He wanted us to know exactly who it was that he served, so that every Crown would know that nowhere in Tamriel was safe.\r\n\r\nWe put him in the brig and left him to rot. Some of the men wanted a more creative punishment, but the reality is there's no worse fate than the one he doomed us to.\r\n\r\n<b>5th of Frostfall, 3E 39</b>\r\nThe situation is dire. The food stocks are depleted, and half the men are crippled with fever. The crew have no delusions about what comes next. But we can still die with purpose.\r\n\r\nBefore the old Captain died, he told me that the sabre on his wall belonged to Cyrus himself, and that it was worth more than a thousand ships full of plunder.\r\n\r\nI never asked how he knew Cyrus, or how he came upon his sword. But I know protecting the hero's legacy was important to him, and now that honor falls to us.\r\n\r\nI gave each man a choice. Some opted for the drink, others chose a more dramatic exit. As we depart, we will pray to Arkay to bind our souls to the ship, just as Prince A'Tor was bound to a gem so many years ago.\r\n\r\nWe will protect the relics of Cyrus, and honor the Crown. We will do in death what we could not do in life.</font>",
+        "string": "<font face='$HandwrittenFont'>  \r\n<b>28-е Последнего зерна, 3Э 39</b>\r\nЛетом мы отплыли к \"Ужасу Мертвеца\", пока ветра были тихие. Однако Кинарет посчитала нужным сбить нас с курса, и теперь мы оказались в тумане, без солнца и звезд, что указали бы нам путь. Команда винит во всем юного штурмана, К'авира, что завел нас сюда. По правде сказать, я взял его на борт лишь от того, что старик-капитан заболел, а людей у нас отчаянно не хватало. \r\n\r\n<b>4-е Огня очага, 3Э 39</b>\r\nПарень из команды, Асиф, говорит, что был когда-то жрецом Аркея и проводил ему обряды. Он говорит, что старого капитана убили. Я велел ему никому про это не говорить, пока не узнаю побольше.\r\n\r\n<b>22-е Огня очага, 3Э 39</b>\r\nЯ отмечаю дни на обороте журнала. А по правде сказать, пару раз забыл. Знать не знаю, 22-е сегодня Огня очага или 1-е от Нового года. \r\n\r\nНо судя по морозу, зима уже наступает. Нам надо скорее причалить. Люди начинают переживать. За прошлую неделю три раза подрались за провизию. А что хуже, так я начинаю сходить с ума. Порой я гляжу на запад и вижу, как золотые пески Строс М'Кай маячат на горизонте. Я силюсь отвернуться, ведь знаю - там ничего нет.\r\n\r\n<b>2-е Начала морозов, 3Э 39</b>\r\nМы наконец-то нашли берег в этой морозной пустоши. Люди в восторге. Судя по надписям в гроте, мы добрались до острова Черной Кости, старой пиратской берлоги. Многие из нас до того, как вручить себя в руки короны, были корсарами, так что судьба не случайно нас сюда завела. Так или иначе, скоро мы доберемся до большой земли. Утром мы отправляемся на юг, к Скайриму.\r\n\r\n<b>3-е Начала морозов, 3Э 39</b>\r\nМы - мертвецы, а корабль этот - наша могила.\r\n\r\nПосреди ночи вход обрушился и отрезал нам путь наружу. Но все же мы могли бы найти путь к берегу, если бы К'авир, Предшественник, не испортил лодки. И моя вина в этом не меньше его, ведь это я пустил его на борт. \r\n\r\nВ свою очередь, Предшественник не пытался сбежать или сопротивляться. Он сразу же признался в содеянном, как и в убийстве нашего старого капитана. Он хотел, чтобы мы знали, кому он служит, чтобы каждая корона понимала, что нигде в Тамриэле ей не скрыться.\r\n\r\nМы бросили его гнить в карцере. Люди требовали более изощренного наказания, однако нельзя придумать участь хуже той, на которую он нас обрек.\r\n\r\n<b>5-е Начала морозов, 3Э 39</b>\r\nНаши дела совсем плохи. Запасы продовольствия иссякли, а половину команды свалила лихорадка. Люди уверены в неотвратимости смерти. Однако мы еще можем отдать свои жизни ради благой цели.\r\n\r\nПеред смертью старый капитан сказал мне, что сабля на стене принадлежала самому Сайрусу, и стоит больше сотни кораблей, груженых разными товарами.\r\n\r\nЯ не спрашивал его, откуда он знал Сайруса, и как он заполучил его меч. Но я знаю, как важно для него было защитить наследие героя. Отныне эта честь выпала нам.\r\n\r\nКаждому члену команды я дал выбор. Кто-то предпочел напиток, кто-то - более драматичный исход. Мы взмолимся Аркею о том, чтобы он связал наши души с этим кораблем так же, как принц А'Тор был привязан к драгоценному камню.\r\n\r\nМы защитим наследие Сайруса и честь короны. В смерти мы сделаем то, чего не смогли в жизни.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE031_Note02",
+        "form_id": "050008F8|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Pirate's Note",
+        "string": "Записка пирата"
+    },
+    {
         "editor_id": "ccBGSSSE031_Note",
-        "form_id": "[0500080A]",
+        "form_id": "0500080A|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "BOOK DESC",
         "original": "<font face=\"$HandwrittenFont\">\r\nFifteen men, a sunken treasure, and a lost ship. That's what I left behind.\r\n\r\nIt took less than a day to sail to Blackbone Isle. Captain said we needn't worry about the cold, so we left the furs and packed the steel.\r\n\r\nSeemed like an odd thing. No one but us knew about this place. Still, didn't matter much as we were making good time. I reckon we were about a league away from the cave when all of a sudden, the wind died.\r\n\r\nThey came up behind us, sabres rattling like ice wraiths. Next thing I hear is the screams. \r\n\r\nI jumped onto the skiff, cut the bastard loose and started to paddle. Didn't have time to look back. \r\n\r\nNow, time's all I got. Maybe if we had more men, or a sodding priest, we could've made it. \r\n\r\nI've got the map at least. Hid it under a loose brick behind the bench. I just need to get out of this dungeon before the sickness takes me.\r\n</font>",
         "string": "<font face=\"$HandwrittenFont\">\r\nПятнадцать человек, утонувшее сокровище, затерянный корабль. Вот что я оставил за собой.\r\n\r\nМеньше дня занял путь до острова Черной Кости. Капитан сказал, холод нам не грозит, так что мы оставили меха и взяли оружие.\r\n\r\nСтранно, как по мне. Никто кроме нас не знал об этом месте. Но это все не имело значения. Мы хорошо проводили время. Кажется, мы отплыли от пещеры где-то на лигу, когда внезапно ветер прекратился.\r\n\r\nОни подкрались сзади, гремя саблями, как ледяные духи. И дальше я услышал вопли. \r\n\r\nЯ рванул в лодку, отвязал ее и начал грести. Тогда у меня не было времени оглянуться. \r\n\r\nА вот сейчас его полно. Может, будь у нас больше людей, или чертов священник, мы бы справились. \r\n\r\nНу у меня хотя бы есть карта. Я спрятал ее под кирпичом за лавкой. Надо выбраться из этого подземелья, пока хворь меня не одолела.\r\n</font>"
     },
     {
-        "editor_id": "ccBGSSSE031_BlackwaterNote",
-        "form_id": "[050008E8]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Celeste's Note",
-        "string": "Записка Селесты"
-    },
-    {
-        "editor_id": "ccBGSSSE031_BlackwaterNote",
-        "form_id": "[050008E8]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face=\"$HandwrittenFont\">\r\nThe crew always asks me, how can we be pirates if we ain't got no ship?\r\n\r\nAnd I tell them, we're Blackwater Brigands, we don't need no stinking ship. We can rob folks on land.\r\n\r\nAnd they ask me, but don't that make us bandits?\r\n\r\nAnd I tell them, good point. Maybe we should find us a ship.\r\n\r\nI heard there's a grand old sea cow over at Blackbone Isle. Might even have more loot than the Golden Galleon, the one the old Imperial used to tell stories about when I first joined up.\r\n\r\nFrom what I hear, the isle ain't too far from here. We could probably steal a boat from the wrecks up north. The problem is, no one's been to the isle in ages, and we ain't got a map.\r\n\r\nSo the crew asks me, how we gonna find Blackbone Isle if we don't know where it is?\r\n\r\nAnd I tell them, shut up, I'm working on it.\r\n</font>",
-        "string": "<font face=\"$HandwrittenFont\">\r\nКоманда все спрашивает, как мы можем быть пиратами, раз у нас нет корабля?\r\n\r\nА я отвечаю, что мы - разбойники Черной воды, и никакой вонючий корабль нам не нужен. Мы и на земле можем грабить.\r\n\r\nА они спрашивают, так чем же мы отличаемся от простых бандитов?\r\n\r\nА я им говорю - хороший вопрос. Может, нам и стоит найти себе корабль.\r\n\r\nГоворят, у острова Черной кости стоит огромная старая посудина. Может, там барахла больше, чем на \"Золотом Галеоне\". Сколько слухов тогда ходило о том старом имперском корабле. \r\n\r\nВроде как этот остров совсем недалеко отсюда. Может, у нас получится украсть лодку с тех обломков на севере. Беда в том, что на том острове никто не бывал, и карты у нас нет.\r\n\r\nИ вот команда меня спрашивает, как мы найдем Остров Черной Кости, коли не знаем, где он?\r\n\r\nИ я им говорю - захлопнитесь, я думаю.\r\n</font>"
-    },
-    {
         "editor_id": "ccBGSSSE031_MurdererNote",
-        "form_id": "[0500080B]",
+        "form_id": "0500080B|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "BOOK FULL",
         "original": "Forebear's Note",
         "string": "Записка Предшественника"
     },
     {
-        "editor_id": "ccBGSSSE031_MiscSackSmall",
-        "form_id": "[0500095B]",
+        "editor_id": "ccBGSSSE031_Note02",
+        "form_id": "050008F8|ccbgssse031-advcyrus.esm",
         "index": null,
-        "type": "CONT FULL",
-        "original": "Small Sack",
-        "string": "Мешочек"
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nThey say a pirate's home is the sea, but the bottom of the ocean is no place to breathe, let alone live. \r\n\r\nBut word is you found a right ol' ship on an isle far off the coast. If you can't sail it out to open waters, it may make a good home. \r\n\r\nJust a little advice from a restless soul.</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\nГоворят, дом пирата - в море, но на дне океана нечем дышать, не за чем жить. \r\n\r\nНо ходят слухи, тебе удалось найти старый корабль на том далеком острове. Если не выходит вывести его в открытые воды, просто живи на нем. \r\n\r\nМаленький совет от беспокойной души.</font>"
     },
     {
-        "editor_id": "ccBGSSSE031_UpperWardrobeScrub",
-        "form_id": "[05000904]",
+        "editor_id": "ccBGSSSE031_MurdererNote",
+        "form_id": "0500080B|ccbgssse031-advcyrus.esm",
         "index": null,
-        "type": "CONT FULL",
-        "original": "Wardrobe",
-        "string": "Шкаф"
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>  \r\nNaha 'Mei Dogo Ra Gada Lonhe Trai.\r\n\r\nThe Crowns are fond of this saying. \"The Forebears should know their place.\" They look upon us like commoners,  the chaff from which the wheat is pruned.\r\n\r\nI would remind you, Na-Totambu, that our place is not for you to decide. For we are the Warrior Wave of Ra Gada, the first men. It is our sweat that salts the earth. It is our tears from which the rain falls. It is our blood that beats in the heart of Hammerfell. \r\n\r\nThe throne of kings is one built upon our shoulders. It is by our grace, and our mercy, that the Crowns are allowed to sit. We know our place. Do not forget yours.\r\n",
+        "string": "<font face='$HandwrittenFont'>  \r\nНаха Мей Дого Ра Гада Лонне Трай.\r\n\r\nКороны обожают эту поговорку. \"Предшественники должны знать свое место\". Он смотрят на нас, как на простолюдин, как на мякину, оставшуюся после жатвы.\r\n\r\nХочу напомнить тебе, На-Тотамбу, что не тебе решать, где наше место. Ибо мы – Воина Ра Гада, первые люди. Это наш пот просолил землю. Это наши слезы проливаются дождями. Это наша кровь течет в сердце Хаммерфелла. \r\n\r\nЦарский трон стоит на наших плечах. Это по нашей милости, по нашей воле короны на нем сидят. Мы знаем свое место. Не забывайте свое.\r\n"
+    },
+    {
+        "editor_id": "ccBGSSSE031_BlackwaterNote",
+        "form_id": "050008E8|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Celeste's Note",
+        "string": "Записка Селесты"
+    },
+    {
+        "editor_id": "ccBGSSSE031_OriginBook",
+        "form_id": "05000809|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "The Restless",
+        "string": "Неупокоенные"
     },
     {
         "editor_id": "ccBGSSSE031_BarrelEmpty01",
-        "form_id": "[050009C5]",
+        "form_id": "050009C5|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "CONT FULL",
         "original": "Barrel",
         "string": "Бочка"
     },
     {
-        "editor_id": "ccBGSSSE031_TreasExplorerLootChest",
-        "form_id": "[05000A06]",
-        "index": null,
-        "type": "CONT FULL",
-        "original": "Chest",
-        "string": "Сундук"
-    },
-    {
-        "editor_id": "ccBGSSSE031_UpperWardrobeBoatswain",
-        "form_id": "[05000907]",
+        "editor_id": "ccBGSSSE031_UpperWardrobeScrub",
+        "form_id": "05000904|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "CONT FULL",
         "original": "Wardrobe",
         "string": "Шкаф"
     },
     {
-        "editor_id": "ccBGSSSE031_MiscSackSmallNRS",
-        "form_id": "[05000A01]",
+        "editor_id": "ccBGSSSE031_MiscSackSmall",
+        "form_id": "0500095B|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "CONT FULL",
         "original": "Small Sack",
@@ -393,31 +369,47 @@
     },
     {
         "editor_id": "ccBGSSSE031_UpperWardrobeCaptain",
-        "form_id": "[05000901]",
+        "form_id": "05000901|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "CONT FULL",
         "original": "Wardrobe",
         "string": "Шкаф"
     },
     {
+        "editor_id": "ccBGSSSE031_MiscSackSmallNRS",
+        "form_id": "05000A01|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Small Sack",
+        "string": "Мешочек"
+    },
+    {
+        "editor_id": "ccBGSSSE031_TreasExplorerLootChest",
+        "form_id": "05000A06|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Сундук"
+    },
+    {
         "editor_id": "ccBGSSSE031_TreasSatchel",
-        "form_id": "[050009E8]",
+        "form_id": "050009E8|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "CONT FULL",
         "original": "Satchel",
         "string": "Кошель"
     },
     {
-        "editor_id": "ccBGSSSE031_ShipDoorLoad",
-        "form_id": "[05000A1D]",
+        "editor_id": "ccBGSSSE031_UpperWardrobeBoatswain",
+        "form_id": "05000907|ccbgssse031-advcyrus.esm",
         "index": null,
-        "type": "DOOR FULL",
-        "original": "Door",
-        "string": "Дверь"
+        "type": "CONT FULL",
+        "original": "Wardrobe",
+        "string": "Шкаф"
     },
     {
         "editor_id": "ccBGSSSE031_CyrusDoor",
-        "form_id": "[05000A29]",
+        "form_id": "05000A29|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "DOOR FULL",
         "original": "Door",
@@ -425,31 +417,39 @@
     },
     {
         "editor_id": "ccBGSSSE031_RowboatDoor",
-        "form_id": "[0500080C]",
+        "form_id": "0500080C|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "DOOR FULL",
         "original": "Rowboat",
         "string": "Гребная лодка"
     },
     {
+        "editor_id": "ccBGSSSE031_ShipDoorLoad",
+        "form_id": "05000A1D|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "DOOR FULL",
+        "original": "Door",
+        "string": "Дверь"
+    },
+    {
         "editor_id": "ccBGSSSE031_Map",
-        "form_id": "[0500080D]",
+        "form_id": "0500080D|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "MISC FULL",
         "original": "Map to Blackbone Isle",
         "string": "Карта к острову Черной кости"
     },
     {
-        "editor_id": "ccBGSSSE031_UpperBedDouble01",
-        "form_id": "[05000954]",
+        "editor_id": "ccBGSSSE031_UpperBedSingle01L",
+        "form_id": "05000963|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "FURN FULL",
         "original": "Bed",
         "string": "Кровать"
     },
     {
-        "editor_id": "ccBGSSSE031_UpperBedSingle01L",
-        "form_id": "[05000963]",
+        "editor_id": "ccBGSSSE031_UpperBedDouble01",
+        "form_id": "05000954|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "FURN FULL",
         "original": "Bed",
@@ -457,7 +457,7 @@
     },
     {
         "editor_id": "ccBGSSSE031_CyrusSabre",
-        "form_id": "[05000D63]",
+        "form_id": "05000D63|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "WEAP FULL",
         "original": "Cyrus' Sabre",
@@ -465,31 +465,23 @@
     },
     {
         "editor_id": "ccBGSSSE031_BlackwaterBlade",
-        "form_id": "[05000A4B]",
+        "form_id": "05000A4B|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "WEAP FULL",
         "original": "Blackwater Blade",
         "string": "Клинок Черной Воды"
     },
     {
-        "editor_id": "ccBGSSSE031_LvlAlikrMissileF",
-        "form_id": "[05000814]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Ghost Sailor",
-        "string": "Призрачный моряк"
-    },
-    {
         "editor_id": "ccBGSSSE031_LvlAlikrMagic",
-        "form_id": "[05000812]",
+        "form_id": "05000812|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Ghost Sailor",
         "string": "Призрачный моряк"
     },
     {
-        "editor_id": "ccBGSSSE031_LvlAlikrMelee1H_Female",
-        "form_id": "[0500080F]",
+        "editor_id": "ccBGSSSE031_LvlAlikrMissileF",
+        "form_id": "05000814|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Ghost Sailor",
@@ -497,23 +489,23 @@
     },
     {
         "editor_id": "ccBGSSSE031_LvlAlikrMelee2H",
-        "form_id": "[05000AA4]",
+        "form_id": "05000AA4|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Ghost Captain",
         "string": "Капитан-призрак"
     },
     {
-        "editor_id": "ccBGSSSE031_Corpse",
-        "form_id": "[05000810]",
+        "editor_id": "ccBGSSSE031_LvlAlikrMelee1H_Female",
+        "form_id": "0500080F|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "NPC_ FULL",
-        "original": "Kevon",
-        "string": "Кевон"
+        "original": "Ghost Sailor",
+        "string": "Призрачный моряк"
     },
     {
         "editor_id": "ccBGSSSE031_Celeste",
-        "form_id": "[05000A55]",
+        "form_id": "05000A55|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Celeste",
@@ -521,79 +513,47 @@
     },
     {
         "editor_id": "ccBGSSSE031_RedguardCaptain_TreasCorpseSkeleton",
-        "form_id": "[05000815]",
+        "form_id": "05000815|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Captain",
         "string": "Капитан"
     },
     {
+        "editor_id": "ccBGSSSE031_Corpse",
+        "form_id": "05000810|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Kevon",
+        "string": "Кевон"
+    },
+    {
         "editor_id": "ccBGSSSE031_DefaultPoison",
-        "form_id": "[0500098A]",
+        "form_id": "0500098A|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "ALCH FULL",
         "original": "Poison",
         "string": "Яд"
     },
     {
-        "editor_id": "ccBGSSSE031Interior02",
-        "form_id": "[050009D5]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Dead Man's Dread",
-        "string": "Ужас Мертвеца"
-    },
-    {
-        "editor_id": "ccBGSSSE031Interior01",
-        "form_id": "[05000818]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Blackbone Isle Grotto",
-        "string": "Остров Черной кости - Грот"
-    },
-    {
-        "editor_id": "SolitudeWinkingSkeever",
-        "form_id": "[00016A0E]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "The Winking Skeever",
-        "string": "Смеющаяся крыса"
-    },
-    {
-        "editor_id": "SolitudeJail01",
-        "form_id": "[00056E88]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Castle Dour Dungeon",
-        "string": "Мрачный замок - Подземелье"
-    },
-    {
-        "editor_id": null,
-        "form_id": "[05000F74]",
-        "index": null,
-        "type": "REFR FULL",
-        "original": "Blackbone Isle",
-        "string": "Остров Черной кости"
-    },
-    {
-        "editor_id": "ccBGSSSE031BlackboneIsle",
-        "form_id": "[05000F6C]",
-        "index": null,
-        "type": "WRLD FULL",
-        "original": "Blackbone Isle",
-        "string": "Остров Черной кости"
-    },
-    {
         "editor_id": "WindhelmWorld",
-        "form_id": "[0001691D]",
+        "form_id": "0001691D|Skyrim.esm",
         "index": null,
         "type": "WRLD FULL",
         "original": "Windhelm",
         "string": "Windhelm"
     },
     {
+        "editor_id": "ccBGSSSE031BlackboneIsle",
+        "form_id": "05000F6C|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Blackbone Isle",
+        "string": "Остров Черной кости"
+    },
+    {
         "editor_id": "Tamriel",
-        "form_id": "[0000003C]",
+        "form_id": "0000003C|Skyrim.esm",
         "index": null,
         "type": "WRLD FULL",
         "original": "Skyrim",
@@ -601,23 +561,31 @@
     },
     {
         "editor_id": "DLC2SolstheimWorld",
-        "form_id": "[04000800]",
+        "form_id": "04000800|Dragonborn.esm",
         "index": null,
         "type": "WRLD FULL",
         "original": "Solstheim",
         "string": "Solstheim"
     },
     {
-        "editor_id": "ccBGSSSE031_MapMarkerREF",
-        "form_id": "[05000F6B]",
+        "editor_id": "ccBGSSSE031_QUEST_PersuadeTopic",
+        "form_id": "05000FCC|ccbgssse031-advcyrus.esm",
         "index": null,
-        "type": "REFR FULL",
-        "original": "Blackbone Isle",
-        "string": "Остров Черной кости"
+        "type": "DIAL FULL",
+        "original": "I need to inspect this cell. Can you open it for me? (Persuade)",
+        "string": "Мне нужно осмотреть эту клетку. Можете ее открыть? (Убеждение)"
+    },
+    {
+        "editor_id": "ccBGS_QUESTIntimidateTopic",
+        "form_id": "05000FD7|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I want something in this cell. Open it, or I cut you open. (Intimidate)",
+        "string": "Мне надо кое-что забрать из этой клетки. Открой ее, или вспорю тебе живот. (Запугивание)"
     },
     {
         "editor_id": "ccBGSSSE031_QUEST_IntimidateTopic",
-        "form_id": "[05000FD0]",
+        "form_id": "05000FD0|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "DIAL FULL",
         "original": "I want something in this cell. Open it, or I cut you open. (Intimidate)",
@@ -625,23 +593,15 @@
     },
     {
         "editor_id": "ccBGS_QUESTBribeTopic",
-        "form_id": "[05000FDA]",
+        "form_id": "05000FDA|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "DIAL FULL",
         "original": "I want to poke around this cell. Is this enough to open it? (100 gold)",
         "string": "Я хочу осмотреть эту клетку. Этого достаточно, чтобы вы ее открыли? (100 золотых)"
     },
     {
-        "editor_id": "ccBGS_QUESTIntimidateTopic",
-        "form_id": "[05000FD7]",
-        "index": null,
-        "type": "DIAL FULL",
-        "original": "I want something in this cell. Open it, or I cut you open. (Intimidate)",
-        "string": "Мне надо кое-что забрать из этой клетки. Открой ее, или вспорю тебе живот. (Запугивание)"
-    },
-    {
         "editor_id": "ccBGS_QUESTPersuade01Topic",
-        "form_id": "[05000FD3]",
+        "form_id": "05000FD3|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "DIAL FULL",
         "original": "I need to inspect this cell. Can you open it for me? (Persuade)",
@@ -649,135 +609,15 @@
     },
     {
         "editor_id": "ccBGSSSE031_QUEST_BribeTopic",
-        "form_id": "[05000FCA]",
+        "form_id": "05000FCA|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "DIAL FULL",
         "original": "I want to poke around this cell. Is this enough to open it? (<BribeCost> gold)",
         "string": "Я хочу осмотреть эту клетку. Этого достаточно? (<BribeCost> золотых)"
     },
     {
-        "editor_id": "ccBGSSSE031_QUEST_PersuadeTopic",
-        "form_id": "[05000FCC]",
-        "index": null,
-        "type": "DIAL FULL",
-        "original": "I need to inspect this cell. Can you open it for me? (Persuade)",
-        "string": "Мне нужно осмотреть эту клетку. Можете ее открыть? (Убеждение)"
-    },
-    {
         "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 87,
-        "type": "QUST CNAM",
-        "original": "After finding the map to Blackbone Isle, I traveled to the remote location using a boat at Orphan's Tear. After entering a cave, I found Dead Man's Dread docked inside the grotto.",
-        "string": "Мне удалось найти карту к острову Черной кости, что позволило мне отплыть к нему на лодке от \"Слезы Сироты\". В пещере мне попался \"Ужас Мертвеца\". Он стоял в гроте."
-    },
-    {
-        "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 77,
-        "type": "QUST CNAM",
-        "original": "I've heard stories of lost shipwrecks strewn across the Sea of Ghosts. At the Winking Skeever in Solitude, I found a lead on a ship said to have traveled to Blackbone Isle. Apparently, the last person to visit the island died in Castle Dour Dungeon.",
-        "string": "Мне доводилось слышать россказни о затонувших кораблях в море Призраков. В \"Смеющейся крысе\", в Солитьюде, мне удалось узнать о судне, которое якобы бывало на острове Черной кости. Увы, последний человек, который посещал этот остров, скончался в подземельях Мрачного замка."
-    },
-    {
-        "editor_id": "ccBGSSSE031_HomeQuest",
-        "form_id": "[05001624]",
-        "index": 20,
-        "type": "QUST NNAM",
-        "original": "Claim Dead Man's Dread",
-        "string": "Получить \"Ужас Мертвеца\""
-    },
-    {
-        "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 5,
-        "type": "QUST NNAM",
-        "original": "(Optional) Convince the guard to give you access to the jail cell",
-        "string": "(Дополнительно) Убедить стражника пустить вас в тюремную камеру"
-    },
-    {
-        "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 60,
-        "type": "QUST CNAM",
-        "original": "After finding the map to Blackbone Isle, I traveled to the remote location using a boat at Orphan's Tear.",
-        "string": "Мне удалось найти карту к острову Черной кости, что позволило мне отплыть к нему на лодке от \"Слезы Сироты\"."
-    },
-    {
-        "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 90,
-        "type": "QUST CNAM",
-        "original": "At the Winking Skeever in Solitude, I found a lead on a ship said to have traveled to Blackbone Isle. Apparently, the last person to visit the island died in Castle Dour Dungeon. I found his corpse which hinted at the location of a hidden map.",
-        "string": "В \"Смеющейся крысе\", в Солитьюде, мне удалось узнать о судне, которое якобы бывало на острове Черной кости. Увы, последний человек, который посещал этот остров, скончался в подземельях Мрачного замка. У его трупа нашелся намек, как добраться до карты."
-    },
-    {
-        "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 97,
-        "type": "QUST CNAM",
-        "original": "After finding the map to Blackbone Isle, I traveled to the remote location using a boat at Orphan's Tear. After entering a cave, I found Dead Man's Dread docked inside the grotto. Inside the ship were two items of note, Cyrus' Sabre and outfit.",
-        "string": "Мне удалось найти карту к острову Черной кости, что позволило мне отплыть к нему на лодке от \"Слезы Сироты\". В пещере мне попался \"Ужас Мертвеца\". Он стоял в гроте. На корабле обнаружились два предмета - сабля Сайруса и его наряд."
-    },
-    {
-        "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 50,
-        "type": "QUST NNAM",
-        "original": "Escape the grotto",
-        "string": "Выбраться из грота"
-    },
-    {
-        "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 89,
-        "type": "QUST CNAM",
-        "original": "After finding the map to Blackbone Isle, I traveled to the remote location using a boat at Orphan's Tear. After entering a cave, I found Dead Man's Dread docked inside the grotto.",
-        "string": "Мне удалось найти карту к острову Черной кости, что позволило мне отплыть к нему на лодке от \"Слезы Сироты\". В пещере мне попался \"Ужас Мертвеца\". Он стоял в гроте."
-    },
-    {
-        "editor_id": "ccBGSSSE031_Blackwater",
-        "form_id": "[05001465]",
-        "index": 10,
-        "type": "QUST NNAM",
-        "original": "Kill the Blackwater Brigand Boss",
-        "string": "Убить главаря разбойников Черной воды"
-    },
-    {
-        "editor_id": "ccBGSSSE031_HomeQuest",
-        "form_id": "[05001624]",
-        "index": 10,
-        "type": "QUST NNAM",
-        "original": "Read the pirate's note",
-        "string": "Прочесть записку пирата"
-    },
-    {
-        "editor_id": "ccBGSSSE031_Blackwater",
-        "form_id": "[05001465]",
-        "index": 20,
-        "type": "QUST NNAM",
-        "original": "Retrieve the Blackwater Blade",
-        "string": "Найти клинок Черной воды"
-    },
-    {
-        "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 40,
-        "type": "QUST NNAM",
-        "original": "Investigate Blackbone Isle",
-        "string": "Осмотреть остров Черной кости"
-    },
-    {
-        "editor_id": "ccBGSSSE031_HomeQuest",
-        "form_id": "[05001624]",
-        "index": null,
-        "type": "QUST FULL",
-        "original": "Restless Home Quest",
-        "string": "Задание \"Дом Неупокоенных\""
-    },
-    {
-        "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
+        "form_id": "05000FDC|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "QUST FULL",
         "original": "The Restless",
@@ -785,71 +625,71 @@
     },
     {
         "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 15,
+        "form_id": "05000FDC|ccbgssse031-advcyrus.esm",
+        "index": 25,
         "type": "QUST NNAM",
-        "original": "(Optional) Get arrested and go to jail in Solitude",
-        "string": "(Дополнительно) Попасть в руки к властям и угодить в тюрьму Солитьюда"
+        "original": "Examine the loose brick",
+        "string": "Осмотреть шатающийся кирпич"
     },
     {
         "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 81,
-        "type": "QUST CNAM",
-        "original": "After finding the map to Blackbone Isle, I traveled to the remote location using a boat at Orphan's Tear. After entering a cave, I found Dead Man's Dread docked inside the grotto. Inside the ship were two items of note, Cyrus' Sabre and outfit, which were protected by guardians of the ship. I managed to escape the grotto with both items.",
-        "string": "Мне удалось найти карту к острову Черной кости, что позволило мне отплыть к нему на лодке от \"Слезы Сироты\". В пещере мне попался \"Ужас Мертвеца\". Он стоял в гроте. На корабле обнаружились два предмета - сабля Сайруса и его наряд. Их защищали стражи корабля. У меня получилось удрать из грота вместе с этими вещами."
-    },
-    {
-        "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 10,
+        "form_id": "05000FDC|ccbgssse031-advcyrus.esm",
+        "index": 5,
         "type": "QUST NNAM",
-        "original": "Browse books at the Winking Skeever",
-        "string": "Просмотреть книги в \"Смеющейся крысе\""
+        "original": "(Optional) Convince the guard to give you access to the jail cell",
+        "string": "(Дополнительно) Убедить стражника пустить вас в тюремную камеру"
     },
     {
         "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 80,
+        "form_id": "05000FDC|ccbgssse031-advcyrus.esm",
+        "index": 77,
         "type": "QUST CNAM",
         "original": "After finding the map to Blackbone Isle, I traveled to the remote location using a boat at Orphan's Tear. After entering a cave, I found Dead Man's Dread docked inside the grotto.",
         "string": "Мне удалось найти карту к острову Черной кости, что позволило мне отплыть к нему на лодке от \"Слезы Сироты\". В пещере мне попался \"Ужас Мертвеца\". Он стоял в гроте."
     },
     {
         "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 80,
+        "form_id": "05000FDC|ccbgssse031-advcyrus.esm",
+        "index": 81,
         "type": "QUST CNAM",
-        "original": "I've heard stories of lost shipwrecks strewn across the Sea of Ghosts. If I head to the Winking Skeever in Solitude, I may be able to find more information on there whereabouts.",
-        "string": "Мне доводилось слышать россказни о затонувших кораблях в море Призраков. Возможно, в \"Смеющейся крысе\" в Солитьюде я смогу раздобыть более конкретные сведения."
+        "original": "After finding the map to Blackbone Isle, I traveled to the remote location using a boat at Orphan's Tear. After entering a cave, I found Dead Man's Dread docked inside the grotto. Inside the ship were two items of note, Cyrus' Sabre and outfit, which were protected by guardians of the ship. I managed to escape the grotto with both items.",
+        "string": "Мне удалось найти карту к острову Черной кости, что позволило мне отплыть к нему на лодке от \"Слезы Сироты\". В пещере мне попался \"Ужас Мертвеца\". Он стоял в гроте. На корабле обнаружились два предмета - сабля Сайруса и его наряд. Их защищали стражи корабля. У меня получилось удрать из грота вместе с этими вещами."
     },
     {
-        "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 30,
+        "editor_id": "ccBGSSSE031_Blackwater",
+        "form_id": "05001465|ccbgssse031-advcyrus.esm",
+        "index": 20,
         "type": "QUST NNAM",
-        "original": "Find a spare boat and travel to Blackbone Isle",
-        "string": "Найти лодку и добраться до острова Черной кости"
+        "original": "Retrieve the Blackwater Blade",
+        "string": "Найти клинок Черной воды"
     },
     {
         "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 101,
-        "type": "QUST CNAM",
-        "original": "At the Winking Skeever in Solitude, I found a lead on a ship said to have traveled to Blackbone Isle. Apparently, the last person to visit the island died in Castle Dour Dungeon. I found his corpse and the map he hid under a loose brick. I'll need a boat to travel to the location, perhaps I can find a spare at the wreck near Orphan's Tear.",
-        "string": "В \"Смеющейся крысе\", в Солитьюде, мне удалось узнать о судне, которое якобы бывало на острове Черной кости. Увы, последний человек, который посещал этот остров, скончался в подземельях Мрачного замка. Мне удалось найти его тело и карту, которую он спрятал за кирпичом. Теперь мне понадобится лодка. Возможно, у \"Слезы Сироты\" я смогу найти свободную."
+        "form_id": "05000FDC|ccbgssse031-advcyrus.esm",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "Investigate Blackbone Isle",
+        "string": "Осмотреть остров Черной кости"
     },
     {
         "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
+        "form_id": "05000FDC|ccbgssse031-advcyrus.esm",
         "index": 20,
         "type": "QUST NNAM",
         "original": "Find the pirate's corpse in Castle Dour Dungeon",
         "string": "Найти тело пирата в подземелье Мрачного замка"
     },
     {
+        "editor_id": "ccBGSSSE031_HomeQuest",
+        "form_id": "05001624|ccbgssse031-advcyrus.esm",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Read the pirate's note",
+        "string": "Прочесть записку пирата"
+    },
+    {
         "editor_id": "ccBGSSSE031_HouseInitQuest",
-        "form_id": "[05001622]",
+        "form_id": "05001622|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "QUST FULL",
         "original": "House Init",
@@ -857,23 +697,103 @@
     },
     {
         "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 25,
+        "form_id": "05000FDC|ccbgssse031-advcyrus.esm",
+        "index": 50,
         "type": "QUST NNAM",
-        "original": "Examine the loose brick",
-        "string": "Осмотреть шатающийся кирпич"
+        "original": "Escape the grotto",
+        "string": "Выбраться из грота"
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "05000FDC|ccbgssse031-advcyrus.esm",
+        "index": 15,
+        "type": "QUST NNAM",
+        "original": "(Optional) Get arrested and go to jail in Solitude",
+        "string": "(Дополнительно) Попасть в руки к властям и угодить в тюрьму Солитьюда"
+    },
+    {
+        "editor_id": "ccBGSSSE031_HomeQuest",
+        "form_id": "05001624|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Restless Home Quest",
+        "string": "Задание \"Дом Неупокоенных\""
+    },
+    {
+        "editor_id": "ccBGSSSE031_HomeQuest",
+        "form_id": "05001624|ccbgssse031-advcyrus.esm",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Claim Dead Man's Dread",
+        "string": "Получить \"Ужас Мертвеца\""
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "05000FDC|ccbgssse031-advcyrus.esm",
+        "index": 89,
+        "type": "QUST CNAM",
+        "original": "At the Winking Skeever in Solitude, I found a lead on a ship said to have traveled to Blackbone Isle. Apparently, the last person to visit the island died in Castle Dour Dungeon. I found his corpse which hinted at the location of a hidden map.",
+        "string": "В \"Смеющейся крысе\", в Солитьюде, мне удалось узнать о судне, которое якобы бывало на острове Черной кости. Увы, последний человек, который посещал этот остров, скончался в подземельях Мрачного замка. У его трупа нашелся намек, как добраться до карты."
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "05000FDC|ccbgssse031-advcyrus.esm",
+        "index": 80,
+        "type": "QUST CNAM",
+        "original": "I've heard stories of lost shipwrecks strewn across the Sea of Ghosts. At the Winking Skeever in Solitude, I found a lead on a ship said to have traveled to Blackbone Isle. Apparently, the last person to visit the island died in Castle Dour Dungeon.",
+        "string": "Мне доводилось слышать россказни о затонувших кораблях в море Призраков. В \"Смеющейся крысе\", в Солитьюде, мне удалось узнать о судне, которое якобы бывало на острове Черной кости. Увы, последний человек, который посещал этот остров, скончался в подземельях Мрачного замка."
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "05000FDC|ccbgssse031-advcyrus.esm",
+        "index": 102,
+        "type": "QUST CNAM",
+        "original": "After finding the map to Blackbone Isle, I traveled to the remote location using a boat at Orphan's Tear. After entering a cave, I found Dead Man's Dread docked inside the grotto.",
+        "string": "Мне удалось найти карту к острову Черной кости, что позволило мне отплыть к нему на лодке от \"Слезы Сироты\". В пещере мне попался \"Ужас Мертвеца\". Он стоял в гроте."
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "05000FDC|ccbgssse031-advcyrus.esm",
+        "index": 60,
+        "type": "QUST CNAM",
+        "original": "I've heard stories of lost shipwrecks strewn across the Sea of Ghosts. If I head to the Winking Skeever in Solitude, I may be able to find more information on there whereabouts.",
+        "string": "Мне доводилось слышать россказни о затонувших кораблях в море Призраков. Возможно, в \"Смеющейся крысе\" в Солитьюде я смогу раздобыть более конкретные сведения."
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "05000FDC|ccbgssse031-advcyrus.esm",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Find a spare boat and travel to Blackbone Isle",
+        "string": "Найти лодку и добраться до острова Черной кости"
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "05000FDC|ccbgssse031-advcyrus.esm",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Browse books at the Winking Skeever",
+        "string": "Просмотреть книги в \"Смеющейся крысе\""
+    },
+    {
+        "editor_id": "ccBGSSSE031_Blackwater",
+        "form_id": "05001465|ccbgssse031-advcyrus.esm",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Kill the Blackwater Brigand Boss",
+        "string": "Убить главаря разбойников Черной воды"
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "05000FDC|ccbgssse031-advcyrus.esm",
+        "index": 88,
+        "type": "QUST CNAM",
+        "original": "At the Winking Skeever in Solitude, I found a lead on a ship said to have traveled to Blackbone Isle. Apparently, the last person to visit the island died in Castle Dour Dungeon. I found his corpse and the map he hid under a loose brick. I'll need a boat to travel to the location, perhaps I can find a spare at the wreck near Orphan's Tear.",
+        "string": "В \"Смеющейся крысе\", в Солитьюде, мне удалось узнать о судне, которое якобы бывало на острове Черной кости. Увы, последний человек, который посещал этот остров, скончался в подземельях Мрачного замка. Мне удалось найти его тело и карту, которую он спрятал за кирпичом. Теперь мне понадобится лодка. Возможно, у \"Слезы Сироты\" я смогу найти свободную."
     },
     {
         "editor_id": "ccBGSSSE031_WorldLocation",
-        "form_id": "[05001757]",
-        "index": null,
-        "type": "LCTN FULL",
-        "original": "Blackbone Isle",
-        "string": "Остров Черной кости"
-    },
-    {
-        "editor_id": "ccBGSSSE031_ExtLocation",
-        "form_id": "[05001621]",
+        "form_id": "05001757|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "LCTN FULL",
         "original": "Blackbone Isle",
@@ -881,23 +801,39 @@
     },
     {
         "editor_id": "ccBGSSSE031_Location",
-        "form_id": "[05000FE1]",
+        "form_id": "05000FE1|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "LCTN FULL",
         "original": "Dead Man's Dread",
         "string": "Ужас Мертвеца"
     },
     {
-        "editor_id": "ccBGSSSE031_BlackwaterBrigandChief",
-        "form_id": "[05001467]",
+        "editor_id": "ccBGSSSE031_ExtLocation",
+        "form_id": "05001621|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "Blackbone Isle",
+        "string": "Остров Черной кости"
+    },
+    {
+        "editor_id": "ccBGSSSE031_BoatName02",
+        "form_id": "05001421|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "MESG DESC",
-        "original": "Celeste",
-        "string": "Селеста"
+        "original": "Orphan's Tear",
+        "string": "Слеза Сироты"
+    },
+    {
+        "editor_id": "ccBGSSSE031_BoatName02",
+        "form_id": "05001421|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Orphan's Tear",
+        "string": "Слеза Сироты"
     },
     {
         "editor_id": "ccBGSSSE031_BlackwaterBrigandChief",
-        "form_id": "[05001467]",
+        "form_id": "05001467|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "MESG FULL",
         "original": "Celeste",
@@ -905,50 +841,42 @@
     },
     {
         "editor_id": "ccBGSSSE031_BlackwaterBrigand",
-        "form_id": "[05001464]",
-        "index": null,
-        "type": "MESG FULL",
-        "original": "Blackwater Brigand",
-        "string": "Разбойник Черной Воды"
-    },
-    {
-        "editor_id": "ccBGSSSE031_BoatName01",
-        "form_id": "[050013CB]",
-        "index": null,
-        "type": "MESG FULL",
-        "original": "Blackbone Isle",
-        "string": "Остров Черной кости"
-    },
-    {
-        "editor_id": "ccBGSSSE031_BoatName01",
-        "form_id": "[050013CB]",
+        "form_id": "05001464|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "MESG DESC",
-        "original": "Blackbone Isle",
-        "string": "Остров Черной кости"
+        "original": "Blackwater Brigand",
+        "string": "Разбойник Черной Воды"
     },
     {
         "editor_id": "ccBGSSSE031_BlackwaterBrigand",
-        "form_id": "[05001464]",
+        "form_id": "05001464|ccbgssse031-advcyrus.esm",
         "index": null,
-        "type": "MESG DESC",
+        "type": "MESG FULL",
         "original": "Blackwater Brigand",
         "string": "Разбойник Черной Воды"
     },
     {
-        "editor_id": "ccBGSSSE031_BoatName02",
-        "form_id": "[05001421]",
-        "index": null,
-        "type": "MESG FULL",
-        "original": "Orphan's Tear",
-        "string": "Слеза Сироты"
-    },
-    {
-        "editor_id": "ccBGSSSE031_BoatName02",
-        "form_id": "[05001421]",
+        "editor_id": "ccBGSSSE031_BoatName01",
+        "form_id": "050013CB|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "MESG DESC",
-        "original": "Orphan's Tear",
-        "string": "Слеза Сироты"
+        "original": "Blackbone Isle",
+        "string": "Остров Черной кости"
+    },
+    {
+        "editor_id": "ccBGSSSE031_BoatName01",
+        "form_id": "050013CB|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Blackbone Isle",
+        "string": "Остров Черной кости"
+    },
+    {
+        "editor_id": "ccBGSSSE031_BlackwaterBrigandChief",
+        "form_id": "05001467|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Celeste",
+        "string": "Селеста"
     }
 ]

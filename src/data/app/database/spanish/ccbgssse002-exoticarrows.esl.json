@@ -1,23 +1,47 @@
 [
     {
+        "editor_id": "ccBGSSSE002_EffectTelekinesisArrowLaunchFF",
+        "form_id": "0500082A|ccbgssse002-exoticarrows.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Releases suspended Telekinesis Arrows.",
+        "string": "Lanza las flechas telequinéticas suspendidas."
+    },
+    {
         "editor_id": "ccBGSSSE002_BoundQuiverFFSelf",
-        "form_id": "[0500080B]",
+        "form_id": "0500080B|ccbgssse002-exoticarrows.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Bound Quiver",
         "string": "Carcaj vinculado"
     },
     {
+        "editor_id": "ccBGSSSE002_ArrowSoulstealerMagicEffect",
+        "form_id": "05000D63|ccbgssse002-exoticarrows.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Soulsteal",
+        "string": "Robo de alma"
+    },
+    {
         "editor_id": "ccBGSSSE002_BoundQuiverFFSelf",
-        "form_id": "[0500080B]",
+        "form_id": "0500080B|ccbgssse002-exoticarrows.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "Creates a magic quiver for <dur> seconds.",
         "string": "Crea un carcaj mágico durante <dur> segundos."
     },
     {
+        "editor_id": "ccBGSSSE002_EffectTelekinesisArrowLaunchFF",
+        "form_id": "0500082A|ccbgssse002-exoticarrows.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Telekinesis Arrows",
+        "string": "Flechas telequinéticas"
+    },
+    {
         "editor_id": "ccBGSSSE002_BoundQuiverMysticFFSelf",
-        "form_id": "[0500080E]",
+        "form_id": "0500080E|ccbgssse002-exoticarrows.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Mystic Quiver",
@@ -25,47 +49,31 @@
     },
     {
         "editor_id": "ccBGSSSE002_ArrowTelekinesisAggroMagicEffect",
-        "form_id": "[0500083E]",
+        "form_id": "0500083E|ccbgssse002-exoticarrows.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Telekinesis Aggro",
         "string": "Agresión telequinética"
     },
     {
-        "editor_id": "ccBGSSSE002_ArrowSoulstealerMagicEffect",
-        "form_id": "[05000D63]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Soulsteal",
-        "string": "Robo de alma"
-    },
-    {
-        "editor_id": "ccBGSSSE002_EffectTelekinesisArrowLaunchFF",
-        "form_id": "[0500082A]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Releases suspended Telekinesis Arrows.",
-        "string": "Lanza las flechas telequinéticas suspendidas."
-    },
-    {
-        "editor_id": "ccBGSSSE002_EffectTelekinesisArrowLaunchFF",
-        "form_id": "[0500082A]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Telekinesis Arrows",
-        "string": "Flechas telequinéticas"
-    },
-    {
         "editor_id": "ccBGSSSE002_ArrowSoulstealerEnchantment",
-        "form_id": "[0500080A]",
+        "form_id": "0500080A|ccbgssse002-exoticarrows.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Soulsteal",
         "string": "Robo de alma"
     },
     {
+        "editor_id": "ccBGSSSE002_BoundQuiver",
+        "form_id": "0500080C|ccbgssse002-exoticarrows.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Bound Quiver",
+        "string": "Carcaj vinculado"
+    },
+    {
         "editor_id": "ccBGSSSE002_LesserPower_TelekinesisArrowLaunch",
-        "form_id": "[05000829]",
+        "form_id": "05000829|ccbgssse002-exoticarrows.esl",
         "index": null,
         "type": "SPEL DESC",
         "original": "Releases suspended Telekinesis Arrows.",
@@ -73,79 +81,31 @@
     },
     {
         "editor_id": "ccBGSSSE002_LesserPower_TelekinesisArrowLaunch",
-        "form_id": "[05000829]",
+        "form_id": "05000829|ccbgssse002-exoticarrows.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Telekinesis Arrows",
         "string": "Flechas telequinéticas"
     },
     {
-        "editor_id": "ccBGSSSE002_BoundQuiver",
-        "form_id": "[0500080C]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Bound Quiver",
-        "string": "Carcaj vinculado"
-    },
-    {
-        "editor_id": "ccBGSSSE002_SpellTomeTelekinesisArrows",
-        "form_id": "[0500082B]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nTelekinesis Arrows",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nFlechas telequinéticas"
-    },
-    {
         "editor_id": "ccBGSSSE002_NoteFromCalcelmo",
-        "form_id": "[0500081F]",
+        "form_id": "0500081F|ccbgssse002-exoticarrows.esl",
         "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face=\"$HandwrittenFont\">\r\nDuring my studies I found a diagram that I believe could be quite useful to you.  It's of an ancient Dwemer artifact: a special arrow crafted from a Soul Gem.\r\n\r\nI've attached the diagram and a map of where it was last found.  Obtain them to understand how they were made, and craft them for yourself.\r\n\r\n-Calcelmo\r\n</font>",
-        "string": "<font face=\"$HandwrittenFont\">\r\nDurante mis estudios encontré un diagrama que creo que puede serte de mucha utilidad. Es de un antiguo artefacto dwemer, una flecha especial fabricada con una gema de alma.\r\n\r\nTe envío el diagrama junto a un mapa que indica su última ubicación. Consíguelos para entender cómo se fabricaron y poder hacerlo tú mismo.\r\n\r\n- Calcelmo\r\n</font>"
-    },
-    {
-        "editor_id": "ccBGSSSE002_SpellTomeBoundQuiver",
-        "form_id": "[05000816]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nBound Quiver",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nCarcaj vinculado"
+        "type": "BOOK FULL",
+        "original": "Letter from Calcelmo",
+        "string": "Carta de Calcemo"
     },
     {
         "editor_id": "ccBGSSSE002_TelekinesisArrowInstructions",
-        "form_id": "[05000837]",
+        "form_id": "05000837|ccbgssse002-exoticarrows.esl",
         "index": null,
         "type": "BOOK DESC",
         "original": "<font face=\"$HandwrittenFont\">\r\nThis Spell Tome will teach its reader the unique art of the Telekinesis Arrow, giving both a Lesser Power, and the knowledge to craft these special arrows.\r\n\r\nUpon firing the arrow, one will find it to be suspended - frozen in the air until the Telekinesis Arrow Lesser Power is cast, upon which the volley will be released.  \r\n\r\nIt appears that only a certain number of arrows can be suspended in the air at a time.  Attempting to fire any more than ten, they are simply returned to the archer's quiver.  While suspended, one can pluck them from the air, however.\r\n\r\nUpon making contact, these arrows lose their magical power, and cannot be retrieved.  As they contain magical properties of their own, they appear to me impervious to enchantments from the bow they are fired from.\r\n</font>",
         "string": "<font face=\"$HandwrittenFont\">\r\nEste grimorio enseñará a quien lo lea el arte excepcional de las flechas telequinéticas, otorgándole un poder inferior y el conocimiento necesario para fabricar estas flechas especiales.\r\n\r\nAl disparar la flecha, se descubrirá que queda suspendida o congelada en el aire hasta que se lance el poder inferior de la flecha telequinética, después de lo cual continuará la descarga.  \r\n\r\nParece que en un momento determinado solo puede quedar suspendido en el aire cierto número de flechas. Si se intenta disparar más de diez, simplemente regresarán al carcaj. No obstante, mientras se encuentren suspendidas en el aire, pueden recuperarse.\r\n\r\nAl impactar, estas flechas perderán su poder mágico, que no se podrá recuperar. Como contienen propiedades mágicas propias, parecen inmunes a los encantamientos del arco que las dispara.\r\n</font>"
     },
     {
-        "editor_id": "ccBGSSSE002_TelekinesisArrowInstructions",
-        "form_id": "[05000837]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Telekinesis Arrows Research Notes",
-        "string": "Notas de investigación de las flechas telequinéticas"
-    },
-    {
-        "editor_id": "ccBGSSSE002_SpellTomeTelekinesisArrows",
-        "form_id": "[0500082B]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Spell Tome: Telekinesis Arrows",
-        "string": "Grimorio: flechas telequinéticas"
-    },
-    {
-        "editor_id": "ccBGSSSE002_SoulStealerArrowNote",
-        "form_id": "[0500081D]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<p>  </p>",
-        "string": "<p>  </p>"
-    },
-    {
         "editor_id": "ccBGSSSE002_SpellTomeBoundQuiver",
-        "form_id": "[05000816]",
+        "form_id": "05000816|ccbgssse002-exoticarrows.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "Spell Tome: Bound Quiver",
@@ -153,87 +113,127 @@
     },
     {
         "editor_id": "ccBGSSSE002_NoteFromCalcelmo",
-        "form_id": "[0500081F]",
+        "form_id": "0500081F|ccbgssse002-exoticarrows.esl",
         "index": null,
-        "type": "BOOK FULL",
-        "original": "Letter from Calcelmo",
-        "string": "Carta de Calcemo"
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nDuring my studies I found a diagram that I believe could be quite useful to you.  It's of an ancient Dwemer artifact: a special arrow crafted from a Soul Gem.\r\n\r\nI've attached the diagram and a map of where it was last found.  Obtain them to understand how they were made, and craft them for yourself.\r\n\r\n-Calcelmo\r\n</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\nDurante mis estudios encontré un diagrama que creo que puede serte de mucha utilidad. Es de un antiguo artefacto dwemer, una flecha especial fabricada con una gema de alma.\r\n\r\nTe envío el diagrama junto a un mapa que indica su última ubicación. Consíguelos para entender cómo se fabricaron y poder hacerlo tú mismo.\r\n\r\n- Calcelmo\r\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE002_SpellTomeBoundQuiver",
+        "form_id": "05000816|ccbgssse002-exoticarrows.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nBound Quiver",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nCarcaj vinculado"
     },
     {
         "editor_id": "ccBGSSSE002_SoulStealerArrowNote",
-        "form_id": "[0500081D]",
+        "form_id": "0500081D|ccbgssse002-exoticarrows.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "Dwemer Arrow Diagram",
         "string": "Diagrama de flecha dwemer"
     },
     {
-        "editor_id": "ccBGSSSE002_MagicArrow_Telekinesis_FloatingMarker",
-        "form_id": "[05000827]",
+        "editor_id": "ccBGSSSE002_SpellTomeTelekinesisArrows",
+        "form_id": "0500082B|ccbgssse002-exoticarrows.esl",
         "index": null,
-        "type": "MISC FULL",
-        "original": "Telekinesis Arrow",
-        "string": "Flecha telequinética"
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Telekinesis Arrows",
+        "string": "Grimorio: flechas telequinéticas"
+    },
+    {
+        "editor_id": "ccBGSSSE002_TelekinesisArrowInstructions",
+        "form_id": "05000837|ccbgssse002-exoticarrows.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Telekinesis Arrows Research Notes",
+        "string": "Notas de investigación de las flechas telequinéticas"
+    },
+    {
+        "editor_id": "ccBGSSSE002_SpellTomeTelekinesisArrows",
+        "form_id": "0500082B|ccbgssse002-exoticarrows.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nTelekinesis Arrows",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nFlechas telequinéticas"
+    },
+    {
+        "editor_id": "ccBGSSSE002_SoulStealerArrowNote",
+        "form_id": "0500081D|ccbgssse002-exoticarrows.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<p>  </p>",
+        "string": "<p>  </p>"
     },
     {
         "editor_id": "ccBGSSSE002_SoulGemArrowHead01",
-        "form_id": "[05000D62]",
+        "form_id": "05000D62|ccbgssse002-exoticarrows.esl",
         "index": null,
         "type": "MISC FULL",
         "original": "Soul Gem Arrowhead",
         "string": "Punta de flecha de gema de alma"
     },
     {
-        "editor_id": "ccBGSSSE002_MagicTelekinesisArrow_LaunchInventory",
-        "form_id": "[05000800]",
+        "editor_id": "ccBGSSSE002_MagicArrow_Telekinesis_FloatingMarker",
+        "form_id": "05000827|ccbgssse002-exoticarrows.esl",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Telekinesis Arrow",
+        "string": "Flecha telequinética"
+    },
+    {
+        "editor_id": "ccBGSSSE002_MagicTelekinesisArrow_Real",
+        "form_id": "05000824|ccbgssse002-exoticarrows.esl",
         "index": null,
         "type": "AMMO FULL",
         "original": "Telekinesis Arrow",
         "string": "Flecha telequinética"
     },
     {
-        "editor_id": "ccBGSSSE002_MagicLightningArrow",
-        "form_id": "[05000804]",
-        "index": null,
-        "type": "AMMO FULL",
-        "original": "Lightning Arrow",
-        "string": "Flecha de rayo"
-    },
-    {
-        "editor_id": "ccBGSSSE002_MagicTelekinesisArrow_LaunchInventory",
-        "form_id": "[05000800]",
-        "index": null,
-        "type": "AMMO DESC",
-        "original": "Remains suspended in the air until released using the Lesser Power \"Telekinesis Arrows\".",
-        "string": "Permanece suspendida en el aire hasta que se lanza usando el Poder inferior \"Flechas telequinéticas\"."
-    },
-    {
-        "editor_id": "ccBGSSSE002_boundArrowMystic",
-        "form_id": "[0500080D]",
-        "index": null,
-        "type": "AMMO FULL",
-        "original": "Bound Arrow",
-        "string": "Flecha vinculada"
-    },
-    {
         "editor_id": "ccBGSSSE002_MagicFireArrow",
-        "form_id": "[05000802]",
+        "form_id": "05000802|ccbgssse002-exoticarrows.esl",
         "index": null,
         "type": "AMMO FULL",
         "original": "Fire Arrow",
         "string": "Flecha de fuego"
     },
     {
+        "editor_id": "ccBGSSSE002_MagicLightningArrow",
+        "form_id": "05000804|ccbgssse002-exoticarrows.esl",
+        "index": null,
+        "type": "AMMO FULL",
+        "original": "Lightning Arrow",
+        "string": "Flecha de rayo"
+    },
+    {
+        "editor_id": "ccBGSSSE002_BoneArrow",
+        "form_id": "05000822|ccbgssse002-exoticarrows.esl",
+        "index": null,
+        "type": "AMMO FULL",
+        "original": "Bone Arrow",
+        "string": "Flecha de hueso"
+    },
+    {
+        "editor_id": "ccBGSSSE002_MagicTelekinesisArrow_LaunchInventory",
+        "form_id": "05000800|ccbgssse002-exoticarrows.esl",
+        "index": null,
+        "type": "AMMO DESC",
+        "original": "Remains suspended in the air until released using the Lesser Power \"Telekinesis Arrows\".",
+        "string": "Permanece suspendida en el aire hasta que se lanza usando el Poder inferior \"Flechas telequinéticas\"."
+    },
+    {
         "editor_id": "ccBGSSSE002_SoulStealerArrow",
-        "form_id": "[05000801]",
+        "form_id": "05000801|ccbgssse002-exoticarrows.esl",
         "index": null,
         "type": "AMMO DESC",
         "original": "On a lethal blow, manifests itself into a soul gem filled with the soul of the target.",
         "string": "En un golpe letal, se manifiesta como una gema de alma llena con el alma del objetivo."
     },
     {
-        "editor_id": "ccBGSSSE002_MagicTelekinesisArrow_Real",
-        "form_id": "[05000824]",
+        "editor_id": "ccBGSSSE002_MagicTelekinesisArrow_LaunchInventory",
+        "form_id": "05000800|ccbgssse002-exoticarrows.esl",
         "index": null,
         "type": "AMMO FULL",
         "original": "Telekinesis Arrow",
@@ -241,7 +241,7 @@
     },
     {
         "editor_id": "ccBGSSSE002_SoulStealerArrow",
-        "form_id": "[05000801]",
+        "form_id": "05000801|ccbgssse002-exoticarrows.esl",
         "index": null,
         "type": "AMMO FULL",
         "original": "Soul Stealer Arrow",
@@ -249,63 +249,31 @@
     },
     {
         "editor_id": "ccBGSSSE002_MagicIceArrow",
-        "form_id": "[05000803]",
+        "form_id": "05000803|ccbgssse002-exoticarrows.esl",
         "index": null,
         "type": "AMMO FULL",
         "original": "Ice Arrow",
         "string": "Flecha de hielo"
     },
     {
-        "editor_id": "ccBGSSSE002_BoneArrow",
-        "form_id": "[05000822]",
+        "editor_id": "ccBGSSSE002_boundArrowMystic",
+        "form_id": "0500080D|ccbgssse002-exoticarrows.esl",
         "index": null,
         "type": "AMMO FULL",
-        "original": "Bone Arrow",
-        "string": "Flecha de hueso"
-    },
-    {
-        "editor_id": "ccBGSSSE002_ArrowIceProjectile",
-        "form_id": "[05000D69]",
-        "index": null,
-        "type": "PROJ FULL",
-        "original": "Ice Arrow",
-        "string": "Flecha de hielo"
-    },
-    {
-        "editor_id": "ccBGSSSE002_ArrowLightningProjectile",
-        "form_id": "[05000D6A]",
-        "index": null,
-        "type": "PROJ FULL",
-        "original": "Lightning Arrow",
-        "string": "Flecha de rayo"
-    },
-    {
-        "editor_id": "ccBGSSSE002_ArrowFireProjectile",
-        "form_id": "[05000D68]",
-        "index": null,
-        "type": "PROJ FULL",
-        "original": "Fire Arrow",
-        "string": "Flecha de fuego"
+        "original": "Bound Arrow",
+        "string": "Flecha vinculada"
     },
     {
         "editor_id": "ccBGSSSE002_ArrowBoneProjectile",
-        "form_id": "[05000D67]",
+        "form_id": "05000D67|ccbgssse002-exoticarrows.esl",
         "index": null,
         "type": "PROJ FULL",
         "original": "Bone Arrow",
         "string": "Flecha de hueso"
     },
     {
-        "editor_id": "ccBGSSSE002_ArrowTelekinesisProj01_TriggerExp",
-        "form_id": "[05000823]",
-        "index": null,
-        "type": "PROJ FULL",
-        "original": "Telekinesis Arrow",
-        "string": "Flecha telequinética"
-    },
-    {
         "editor_id": "ccBGSSSE002_ArrowSoulstealerProjectile",
-        "form_id": "[05000D64]",
+        "form_id": "05000D64|ccbgssse002-exoticarrows.esl",
         "index": null,
         "type": "PROJ FULL",
         "original": "Soul Stealer Arrow",
@@ -313,31 +281,47 @@
     },
     {
         "editor_id": "ccBGSSSE002_ArrowTelekinesisProj02_Real",
-        "form_id": "[05000825]",
+        "form_id": "05000825|ccbgssse002-exoticarrows.esl",
         "index": null,
         "type": "PROJ FULL",
         "original": "Telekinesis Arrow",
         "string": "Flecha telequinética"
     },
     {
-        "editor_id": "WinterholdCollegeArcanaeum",
-        "form_id": "[00013810]",
+        "editor_id": "ccBGSSSE002_ArrowTelekinesisProj01_TriggerExp",
+        "form_id": "05000823|ccbgssse002-exoticarrows.esl",
         "index": null,
-        "type": "CELL FULL",
-        "original": "The Arcanaeum",
-        "string": "El arcaneum"
+        "type": "PROJ FULL",
+        "original": "Telekinesis Arrow",
+        "string": "Flecha telequinética"
     },
     {
-        "editor_id": "DLC2Kagrumez01",
-        "form_id": "[040142F9]",
+        "editor_id": "ccBGSSSE002_ArrowLightningProjectile",
+        "form_id": "05000D6A|ccbgssse002-exoticarrows.esl",
         "index": null,
-        "type": "CELL FULL",
-        "original": "Kagrumez",
-        "string": "Kagrumez"
+        "type": "PROJ FULL",
+        "original": "Lightning Arrow",
+        "string": "Flecha de rayo"
+    },
+    {
+        "editor_id": "ccBGSSSE002_ArrowFireProjectile",
+        "form_id": "05000D68|ccbgssse002-exoticarrows.esl",
+        "index": null,
+        "type": "PROJ FULL",
+        "original": "Fire Arrow",
+        "string": "Flecha de fuego"
+    },
+    {
+        "editor_id": "ccBGSSSE002_ArrowIceProjectile",
+        "form_id": "05000D69|ccbgssse002-exoticarrows.esl",
+        "index": null,
+        "type": "PROJ FULL",
+        "original": "Ice Arrow",
+        "string": "Flecha de hielo"
     },
     {
         "editor_id": "DLC2SolstheimWorld",
-        "form_id": "[04000800]",
+        "form_id": "04000800|Dragonborn.esm",
         "index": null,
         "type": "WRLD FULL",
         "original": "Solstheim",
@@ -345,63 +329,23 @@
     },
     {
         "editor_id": "ccBGSSSE002_SoulStealerQuest",
-        "form_id": "[0500081E]",
-        "index": 76,
+        "form_id": "0500081E|ccbgssse002-exoticarrows.esl",
+        "index": 108,
         "type": "QUST CNAM",
         "original": "I've received a letter and a diagram of an ancient Dwemer artifact, an arrow that appears to be crafted from Soul Gems.  I should retrieve this artifact and learn how to create them.",
         "string": "He recibido una carta y un diagrama de un antiguo artefacto dwemer, una flecha que parece estar fabricada con una gema de alma. Debería recuperar el artefacto para aprender a fabricarlas."
     },
     {
         "editor_id": "ccBGSSSE002_SoulStealerQuest",
-        "form_id": "[0500081E]",
-        "index": 5,
+        "form_id": "0500081E|ccbgssse002-exoticarrows.esl",
+        "index": 20,
         "type": "QUST NNAM",
-        "original": "Read the Letter from Calcelmo",
-        "string": "Lee la carta de Calcemo."
+        "original": "Find the Soul Stealer Arrows",
+        "string": "Encuentra las flechas de robo de almas."
     },
     {
         "editor_id": "ccBGSSSE002_SoulStealerQuest",
-        "form_id": "[0500081E]",
-        "index": 92,
-        "type": "QUST CNAM",
-        "original": "I've found the ancient Dwemer Soul Stealer arrows in Kagrumez, and am now able to craft them.",
-        "string": "He encontrado las antiguas flechas de robo de almas dwemer en Kagrumez y ahora puedo fabricarlas."
-    },
-    {
-        "editor_id": "ccBGSSSE002_SoulStealerQuest",
-        "form_id": "[0500081E]",
-        "index": 91,
-        "type": "QUST CNAM",
-        "original": "I've received a letter from Calcelmo in Markarth.  I should read it and see what it's about.",
-        "string": "He recibido una carta de Calcemo en Markarth. Debería leerla para saber de qué se trata."
-    },
-    {
-        "editor_id": "ccBGSSSE002_SoulStealerQuest",
-        "form_id": "[0500081E]",
-        "index": 79,
-        "type": "QUST CNAM",
-        "original": "I've received a letter and a diagram of an ancient Dwemer artifact, an arrow that appears to be crafted from Soul Gems.  I should retrieve this artifact and learn how to create them.",
-        "string": "He recibido una carta y un diagrama de un antiguo artefacto dwemer, una flecha que parece estar fabricada con una gema de alma. Debería recuperar el artefacto para aprender a fabricarlas."
-    },
-    {
-        "editor_id": "ccBGSSSE002_TelekinesisArrowQuest",
-        "form_id": "[05000835]",
-        "index": null,
-        "type": "QUST FULL",
-        "original": "Swift as an Arrow",
-        "string": "Rápido como una flecha"
-    },
-    {
-        "editor_id": "ccBGSSSE002_TelekinesisArrowQuest",
-        "form_id": "[05000835]",
-        "index": 93,
-        "type": "QUST CNAM",
-        "original": "I've found the Telekinesis Arrows tome, and have learned how to craft and use them from the research notes.",
-        "string": "He encontrado el grimorio sobre las flechas telequinéticas, y en las notas de investigación he aprendido a fabricarlas y usarlas."
-    },
-    {
-        "editor_id": "ccBGSSSE002_SoulStealerQuest",
-        "form_id": "[0500081E]",
+        "form_id": "0500081E|ccbgssse002-exoticarrows.esl",
         "index": 10,
         "type": "QUST NNAM",
         "original": "Travel to Solstheim",
@@ -409,39 +353,15 @@
     },
     {
         "editor_id": "ccBGSSSE002_SoulStealerQuest",
-        "form_id": "[0500081E]",
-        "index": 20,
+        "form_id": "0500081E|ccbgssse002-exoticarrows.esl",
+        "index": 5,
         "type": "QUST NNAM",
-        "original": "Find the Soul Stealer Arrows",
-        "string": "Encuentra las flechas de robo de almas."
-    },
-    {
-        "editor_id": "ccBGSSSE002_TelekinesisArrowQuest",
-        "form_id": "[05000835]",
-        "index": 0,
-        "type": "QUST NNAM",
-        "original": "Find the Telekinesis Arrow Tome",
-        "string": "Encuentra el grimorio sobre las flechas telequinéticas"
-    },
-    {
-        "editor_id": "ccBGSSSE002_TelekinesisArrowQuest",
-        "form_id": "[05000835]",
-        "index": 10,
-        "type": "QUST NNAM",
-        "original": "Read the Research Note",
-        "string": "Leer la nota de investigación"
-    },
-    {
-        "editor_id": "ccBGSSSE002_TelekinesisArrowQuest",
-        "form_id": "[05000835]",
-        "index": 100,
-        "type": "QUST CNAM",
-        "original": "I've been told a lost Spell Tome has been found, which allows one to craft special arrows that can be controlled with a Lesser Telekinesis Power.  I should head to the College of Winterhold to learn more.",
-        "string": "He oído que se ha recuperado un grimorio que permite la fabricación de flechas especiales que pueden controlarse con un poder de telequinesis inferior. Debería ir al Colegio de Hibernalia para averiguar más cosas."
+        "original": "Read the Letter from Calcelmo",
+        "string": "Lee la carta de Calcemo."
     },
     {
         "editor_id": "ccBGSSSE002_SoulStealerQuest",
-        "form_id": "[0500081E]",
+        "form_id": "0500081E|ccbgssse002-exoticarrows.esl",
         "index": null,
         "type": "QUST FULL",
         "original": "Stealer of Souls",
@@ -449,26 +369,90 @@
     },
     {
         "editor_id": "ccBGSSSE002_TelekinesisArrowQuest",
-        "form_id": "[05000835]",
-        "index": 91,
+        "form_id": "05000835|ccbgssse002-exoticarrows.esl",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Read the Research Note",
+        "string": "Leer la nota de investigación"
+    },
+    {
+        "editor_id": "ccBGSSSE002_SoulStealerQuest",
+        "form_id": "0500081E|ccbgssse002-exoticarrows.esl",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "I've found the ancient Dwemer Soul Stealer arrows in Kagrumez, and am now able to craft them.",
+        "string": "He encontrado las antiguas flechas de robo de almas dwemer en Kagrumez y ahora puedo fabricarlas."
+    },
+    {
+        "editor_id": "ccBGSSSE002_TelekinesisArrowQuest",
+        "form_id": "05000835|ccbgssse002-exoticarrows.esl",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Swift as an Arrow",
+        "string": "Rápido como una flecha"
+    },
+    {
+        "editor_id": "ccBGSSSE002_TelekinesisArrowQuest",
+        "form_id": "05000835|ccbgssse002-exoticarrows.esl",
+        "index": 0,
+        "type": "QUST NNAM",
+        "original": "Find the Telekinesis Arrow Tome",
+        "string": "Encuentra el grimorio sobre las flechas telequinéticas"
+    },
+    {
+        "editor_id": "ccBGSSSE002_SoulStealerQuest",
+        "form_id": "0500081E|ccbgssse002-exoticarrows.esl",
+        "index": 109,
+        "type": "QUST CNAM",
+        "original": "I've received a letter from Calcelmo in Markarth.  I should read it and see what it's about.",
+        "string": "He recibido una carta de Calcemo en Markarth. Debería leerla para saber de qué se trata."
+    },
+    {
+        "editor_id": "ccBGSSSE002_TelekinesisArrowQuest",
+        "form_id": "05000835|ccbgssse002-exoticarrows.esl",
+        "index": 80,
+        "type": "QUST CNAM",
+        "original": "I've been told a lost Spell Tome has been found, which allows one to craft special arrows that can be controlled with a Lesser Telekinesis Power.  I should head to the College of Winterhold to learn more.",
+        "string": "He oído que se ha recuperado un grimorio que permite la fabricación de flechas especiales que pueden controlarse con un poder de telequinesis inferior. Debería ir al Colegio de Hibernalia para averiguar más cosas."
+    },
+    {
+        "editor_id": "ccBGSSSE002_TelekinesisArrowQuest",
+        "form_id": "05000835|ccbgssse002-exoticarrows.esl",
+        "index": 102,
+        "type": "QUST CNAM",
+        "original": "I've found the Telekinesis Arrows tome, and have learned how to craft and use them from the research notes.",
+        "string": "He encontrado el grimorio sobre las flechas telequinéticas, y en las notas de investigación he aprendido a fabricarlas y usarlas."
+    },
+    {
+        "editor_id": "ccBGSSSE002_TelekinesisArrowQuest",
+        "form_id": "05000835|ccbgssse002-exoticarrows.esl",
+        "index": 82,
         "type": "QUST CNAM",
         "original": "I've found the Tome, and learned the Lesser Telekinesis Power, but I need to read the research notes to understand how to craft and use the arrows.",
         "string": "He encontrado el grimorio sobre el poder de telequinesis inferior, pero tengo que leer las notas de investigación para comprender cómo fabricar y usar las flechas."
     },
     {
-        "editor_id": "ccBGSSSE002_ArrowBoundExplosionDummy",
-        "form_id": "[0500083F]",
-        "index": null,
-        "type": "EXPL FULL",
-        "original": "Bound Arrow Explosion",
-        "string": "Bound Arrow Explosion"
+        "editor_id": "ccBGSSSE002_SoulStealerQuest",
+        "form_id": "0500081E|ccbgssse002-exoticarrows.esl",
+        "index": 79,
+        "type": "QUST CNAM",
+        "original": "I've received a letter and a diagram of an ancient Dwemer artifact, an arrow that appears to be crafted from Soul Gems.  I should retrieve this artifact and learn how to create them.",
+        "string": "He recibido una carta y un diagrama de un antiguo artefacto dwemer, una flecha que parece estar fabricada con una gema de alma. Debería recuperar el artefacto para aprender a fabricarlas."
     },
     {
         "editor_id": "ccBGSSSE002_ArrowSoulstealExplosion",
-        "form_id": "[05000D71]",
+        "form_id": "05000D71|ccbgssse002-exoticarrows.esl",
         "index": null,
         "type": "EXPL FULL",
         "original": "Soulstealer Explosion",
         "string": "Explosión de robo de almas"
+    },
+    {
+        "editor_id": "ccBGSSSE002_ArrowBoundExplosionDummy",
+        "form_id": "0500083F|ccbgssse002-exoticarrows.esl",
+        "index": null,
+        "type": "EXPL FULL",
+        "original": "Bound Arrow Explosion",
+        "string": "Bound Arrow Explosion"
     }
 ]

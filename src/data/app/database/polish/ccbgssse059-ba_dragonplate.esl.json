@@ -1,7 +1,7 @@
 [
     {
         "editor_id": "ccBGSSSE059_EnchArmorResistFire06",
-        "form_id": "[05000866]",
+        "form_id": "05000866|ccbgssse059-ba_dragonplate.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Resist Fire",
@@ -9,55 +9,15 @@
     },
     {
         "editor_id": "ccBGSSSE059_FortifyConjAlteration",
-        "form_id": "[05000865]",
+        "form_id": "05000865|ccbgssse059-ba_dragonplate.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Fortify Conjuration",
         "string": "Premia do przywołania"
     },
     {
-        "editor_id": "ccBGSSSE059_ArmorBladesGauntlets",
-        "form_id": "[05000802]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Dragonplate Insulated Gauntlets",
-        "string": "Ocieplane smocze rękawice płytowe"
-    },
-    {
-        "editor_id": "ccBGSSSE059_ArmorBladesCuirassEnchanted",
-        "form_id": "[0500083B]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Dragonbone Mail",
-        "string": "Kolczuga z kości smoka"
-    },
-    {
-        "editor_id": "ccBGSSSE059_ArmorBladesBootsEnchanted",
-        "form_id": "[0500083C]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Dragonplate Insulated Boots",
-        "string": "Ocieplane smocze buty płytowe"
-    },
-    {
         "editor_id": "ccBGSSSE059_ArmorBladesHelmetEnchanted",
-        "form_id": "[05000839]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Dragonplate Insulated Helmet",
-        "string": "Ocieplany smoczy hełm płytowy"
-    },
-    {
-        "editor_id": "ccBGSSSE059_ArmorBladesGauntletsEnchanted",
-        "form_id": "[0500083A]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Dragonplate Insulated Gauntlets",
-        "string": "Ocieplane smocze rękawice płytowe"
-    },
-    {
-        "editor_id": "ccBGSSSE059_ArmorBladesHelmet",
-        "form_id": "[05000803]",
+        "form_id": "05000839|ccbgssse059-ba_dragonplate.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Dragonplate Insulated Helmet",
@@ -65,55 +25,71 @@
     },
     {
         "editor_id": "ccBGSSSE059_ArmorFAlmerHelmet",
-        "form_id": "[05000867]",
+        "form_id": "05000867|ccbgssse059-ba_dragonplate.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Dismal Visage",
         "string": "Okrutne oblicze"
     },
     {
-        "editor_id": "ccBGSSSE059_ArmorBladesCuirass",
-        "form_id": "[05000801]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Dragonplate Insulated Cuirass",
-        "string": "Ocieplany smoczy kirys płytowy"
-    },
-    {
-        "editor_id": "ccBGSSSE059_ArmorBladesBoots",
-        "form_id": "[05000800]",
+        "editor_id": "ccBGSSSE059_ArmorBladesBootsEnchanted",
+        "form_id": "0500083C|ccbgssse059-ba_dragonplate.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Dragonplate Insulated Boots",
         "string": "Ocieplane smocze buty płytowe"
     },
     {
-        "editor_id": "ccBGSSSE059_BjormundDossier",
-        "form_id": "[05000819]",
+        "editor_id": "ccBGSSSE059_ArmorBladesBoots",
+        "form_id": "05000800|ccbgssse059-ba_dragonplate.esl",
         "index": null,
-        "type": "BOOK FULL",
-        "original": "Guard's Dossier: Bjormund Wind-Strider",
-        "string": "Dossier gwardii: Bjormund Kroczący z Wiatrem"
+        "type": "ARMO FULL",
+        "original": "Dragonplate Insulated Boots",
+        "string": "Ocieplane smocze buty płytowe"
     },
     {
-        "editor_id": "ccBGSSSE059_BountyNoteHemming",
-        "form_id": "[05000868]",
+        "editor_id": "ccBGSSSE059_ArmorBladesHelmet",
+        "form_id": "05000803|ccbgssse059-ba_dragonplate.esl",
         "index": null,
-        "type": "BOOK FULL",
-        "original": "Bounty for Crowstooth",
-        "string": "Nagroda za Kruczy Ząb"
+        "type": "ARMO FULL",
+        "original": "Dragonplate Insulated Helmet",
+        "string": "Ocieplany smoczy hełm płytowy"
     },
     {
-        "editor_id": "ccBGSSSE059_BountyNote",
-        "form_id": "[0500081A]",
+        "editor_id": "ccBGSSSE059_ArmorBladesCuirassEnchanted",
+        "form_id": "0500083B|ccbgssse059-ba_dragonplate.esl",
         "index": null,
-        "type": "BOOK FULL",
-        "original": "Bounty for Crowstooth",
-        "string": "Nagroda za Kruczy Ząb"
+        "type": "ARMO FULL",
+        "original": "Dragonbone Mail",
+        "string": "Kolczuga z kości smoka"
+    },
+    {
+        "editor_id": "ccBGSSSE059_ArmorBladesCuirass",
+        "form_id": "05000801|ccbgssse059-ba_dragonplate.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Dragonplate Insulated Cuirass",
+        "string": "Ocieplany smoczy kirys płytowy"
+    },
+    {
+        "editor_id": "ccBGSSSE059_ArmorBladesGauntletsEnchanted",
+        "form_id": "0500083A|ccbgssse059-ba_dragonplate.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Dragonplate Insulated Gauntlets",
+        "string": "Ocieplane smocze rękawice płytowe"
+    },
+    {
+        "editor_id": "ccBGSSSE059_ArmorBladesGauntlets",
+        "form_id": "05000802|ccbgssse059-ba_dragonplate.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Dragonplate Insulated Gauntlets",
+        "string": "Ocieplane smocze rękawice płytowe"
     },
     {
         "editor_id": "ccBGSSSE059_LinelleJournal",
-        "form_id": "[05000864]",
+        "form_id": "05000864|ccbgssse059-ba_dragonplate.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "Linelle's Note",
@@ -121,39 +97,23 @@
     },
     {
         "editor_id": "ccBGSSSE059_BountyNoteHemming",
-        "form_id": "[05000868]",
+        "form_id": "05000868|ccbgssse059-ba_dragonplate.esl",
         "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face=\"$HandwrittenFont\">\r\n<font size=\"40\">Bounty</font>\r\n\r\nRumor has it that Forsworn raiding parties have been pushing further and further east, along the Jerall Mountains. The arrival of Legate Fasendil has prevented further incursions, but they failed to apprehend their leader, Crowstooth.\r\n\r\nWhile Crowstooth has been separated from her forces, she is believed to have fled with considerable spoils. In an effort to put an end to this threat, anyone killing Crowstooth may claim her stolen loot.\r\n\r\nMercenaries, like infamous sell-sword Bjormund Wind-Strider, have been seen heading into the mountains beyond Darklight Tower. While they could be after the treasure, it is feared Crowstooth is gathering these forces for a renewed assault. We ask any capable warriors for their aid in dealing with this potential threat.\r\n\r\nHemming Black-Briar",
-        "string": "<font face=\"$HandwrittenFont\">\r\n<font size=\"40\">Nagroda</font>\r\n\r\nWieść niesie, że grupy renegatów zapuszczają się coraz bardziej na wschód, wzdłuż gór Jerall. Przybycie legata Fasendila nieco je powstrzymało, ale ich przywódczyni, Kruczy Ząb, wciąż wymyka się obławom.\r\n\r\nChoć Kruczy Ząb została oddzielona od swoich wojsk, mówi się, że uciekła ze sporymi łupami. Aby skończyć z zagrożeniem ze strony renegatów, ogłoszono, że każdy, kto zabije Kruczy Ząb, może zatrzymać skradzione przez nią łupy.\r\n\r\nW góry za Wieżą Mrocznego Światła natychmiast wyruszyli najemnicy, a wśród nich niesławny Bjormund Kroczący z Wiatrem. Choć może kusić ich skarb, pojawiają się obawy, że Kruczy Ząb zbiera najemnicze wojska i będzie próbowała z ich pomocą kontratakować. Prosimy wszystkich dzielnych wojowników o pomoc w rozprawieniu się z tym potencjalnym zagrożeniem.\r\n\r\nHemming Czarna-Róża"
+        "type": "BOOK FULL",
+        "original": "Bounty for Crowstooth",
+        "string": "Nagroda za Kruczy Ząb"
     },
     {
         "editor_id": "ccBGSSSE059_BountyNote",
-        "form_id": "[0500081A]",
+        "form_id": "0500081A|ccbgssse059-ba_dragonplate.esl",
         "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face=\"$HandwrittenFont\">\r\n<font size=\"40\">Bounty</font>\r\n\r\nRumor has it that Forsworn raiding parties have been pushing further and further east, along the Jerall Mountains. The arrival of Legate Fasendil has prevented further incursions, but they failed to apprehend their leader, Crowstooth.\r\n\r\nWhile Crowstooth has been separated from her forces, she is believed to have fled with considerable spoils. In an effort to put an end to this threat, anyone killing Crowstooth may claim her stolen loot.\r\n\r\nMercenaries, like infamous sell-sword Bjormund Wind-Strider, have been seen heading into the mountains beyond Darklight Tower. While they could be after the treasure, it is feared Crowstooth is gathering these forces for a renewed assault. We ask any capable warriors for their aid in dealing with this potential threat.\r\n\r\nAnuriel",
-        "string": "<font face=\"$HandwrittenFont\">\r\n<font size=\"40\">Nagroda</font>\r\n\r\nWieść niesie, że grupy renegatów zapuszczają się coraz bardziej na wschód, wzdłuż gór Jerall. Przybycie legata Fasendila nieco je powstrzymało, ale ich przywódczyni, Kruczy Ząb, wciąż wymyka się obławom.\r\n\r\nChoć Kruczy Ząb została oddzielona od swoich wojsk, mówi się, że uciekła ze sporymi łupami. Aby skończyć z zagrożeniem ze strony renegatów, ogłoszono, że każdy, kto zabije Kruczy Ząb, może zatrzymać skradzione przez nią łupy.\r\n\r\nW góry za Wieżą Mrocznego Światła natychmiast wyruszyli najemnicy, a wśród nich niesławny Bjormund Kroczący z Wiatrem. Choć może kusić ich skarb, pojawiają się obawy, że Kruczy Ząb zbiera najemnicze wojska i będzie próbowała z ich pomocą kontratakować. Prosimy wszystkich dzielnych wojowników o pomoc w rozprawieniu się z tym potencjalnym zagrożeniem.\r\n\r\nAnuriel"
-    },
-    {
-        "editor_id": "ccBGSSSE059_BjormundDossier",
-        "form_id": "[05000819]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face='$HandwrittenFont'>\r\nStatus: Active (Capture or Kill), High Priority\r\n\r\nDescription: Male, Nord, late 50s\r\n\r\nBackground:\r\nReferred to by locals as the \"Dragon of Dawnstar,\" Bjormund is the son of a former pirate who frequented the northern port. After being taken in by various bandit clans, he eventually migrated south to Cyrodiil where he joined up with the Crimson Dirks. The nickname is derived from a legend that Bjormund once slew a dragon and fashioned its bones into armor, but it seems the story is apocryphal as it predates the return of the dragons. \r\n\r\nOperational Notes:\r\nBjormund is believed to have taken up mercenary work in order to stay on the move. Not much is known of his whereabouts beyond this.</font>",
-        "string": "<font face='$HandwrittenFont'>\r\nStatus: zlecenie aktywne (pojmać lub zabić), wysoki priorytet\r\n\r\nOpis: mężczyzna, Nord, ponad 50 lat\r\n\r\nHistoria:\r\nNazywany przez miejscowych „Smokiem Gwiazdy Zarannej”, Bjormund jest synem byłego pirata, który działał w okolicach północnego portu. Po służbie w kilku klanach bandytów, ostatecznie wyemigrował na południe, do Cyrodiil, gdzie dołączył do Szkarłatnych Sztyletów. Jego przezwisko pochodzi od legendy głoszącej, że Bjormund zgładził kiedyś smoka i wykuł z jego kości pancerz. Historia ta wydaje się być jednak wątpliwa, gdyż pochodzi sprzed czasu powrotu smoków. \r\n\r\nUwagi:\r\nPonoć Bjormund podjął się pracy najemnika, aby móc często zmieniać miejsce pobytu. Oprócz tego niewiele wiadomo o tym, gdzie może się znajdować.</font>"
+        "type": "BOOK FULL",
+        "original": "Bounty for Crowstooth",
+        "string": "Nagroda za Kruczy Ząb"
     },
     {
         "editor_id": "ccBGSSSE059_BjormundNote",
-        "form_id": "[0500081B]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face=\"$HandwrittenFont\">\r\nI remember the first time M'Sharra showed me the tunnel, the one we had been burrowing for months. At first, I didn't understand it. We were already making good coin sacking the carriages. What was the point of digging holes underground like vermin? It didn't help that the tunnel smelled like a troll's armpit.\r\n\r\nWe reached the warehouse, and walked by crates stacked upon crates like mountains of wood. M'Sharra led me to the back, where a dozen Legionnaires were unloading cargo too big for any box. And Shor's Breath, I couldn't believe my eyes when I saw it! It was a skull the size of a carriage, with fangs that touched the floor! \r\n\r\nFor someone who winces at the sight of cliff racers, the idea of this monstrosity soaring through the sky made my heart tremble. And yet, for the first time, I felt alive.\r\n\r\nFor what better way to live than to fight a dragon! What better way to die! Now that would be a story even Tsun would lend an ear to!\r\n\r\n\"You think the bones are special, you should see what this one found yesterday,\" M'Sharra said to me. Her grin was as wide as the Halls of Jorrvaskr as she beckoned me further into the warehouse. Inside a crate, set apart from the others, was a cuirass of Dragonbone Mail! M'Sharra bade me to put it on, and I couldn't help but notice it was a perfect fit.\r\n\r\nIn that moment, I thought of my Da. People called him a pirate, a murderer and a thief. But he told me the Wind-Striders descended from the Dragonguard, ancient warriors who fashioned armor from the bones of the dragons they slew. \r\n\r\nStill, my pride as a Nord wouldn't allow it. How could I face Tsun wearing the armor of another's triumph? I could have the Orc forge gauntlets and boots from the skull, but the cuirass - that which held one's heart, must be earned in battle. \r\n\r\nMy mind drifted then to stories I heard as a youngling, of my great ancestor who strode through fire like it was the wind, wearing an ancient cuirass made of dragonbone. It was then that I knew my destiny. In his honor I would claim it, and fight until the day I reached Sovngarde. \r\n\r\nIt's that same spirit that resides in me now. The others may be fine living in hiding, but a Nord is at war so long as he holds breath.",
-        "string": "<font face=\"$HandwrittenFont\">\r\nPamiętam, kiedy M'Sharra po raz pierwszy zabrała mnie do tunelu, który ryliśmy od miesięcy. Na początku tego nie rozumiałem. Przecież dobrze zarabialiśmy na atakach na wozy. Po co nam ryć dziury w ziemi, jak robaki? Co gorsza, tunel śmierdział jak pacha trolla.\r\n\r\nDotarliśmy do magazynu i szliśmy wzdłuż kolejnych stosów skrzynek, wyglądających jak góry drewna. M'Sharra zaprowadziła mnie na tyły, gdzie tuzin legionistów rozładowywał towary… na pewno nie zmieściłyby się do żadnej skrzynki! I na oddech Shora, nie mogłem uwierzyć własnym oczom, gdy to zobaczyłem! Czaszka wielkości wozu, z kłami aż do ziemi! \r\n\r\nDla kogoś, kto wzdryga się na widok skrzekaczy, wyobrażenie sobie takiej potworności przecinającej nieboskłon, powoduje drżenie serca. A jednak po raz pierwszy poczułem wtedy, że żyję.\r\n\r\nCzy jest bowiem lepszy cel życia niż walka ze smokiem?! I lepsza śmierć?! Takiej historii chętnie wysłuchałby nawet Tsun!\r\n\r\n- Jeśli myślisz, że te kości są wyjątkowe, powinieneś zobaczyć te, które ja znaleźć wczoraj - powiedziała do mnie M'Sharra. Jej uśmiech był tak szeroki jak korytarze Jorrvaskr. Zaprosiła mnie dalej, w głąb magazynu. W jednej ze skrzyń, stojącej osobno, znajdowała się kolczuga z kości smoka! M'Sharra zachęciła mnie, bym ją założył, a ja od razu zauważyłem, że pasuje idealnie.\r\n\r\nW takich chwilach myślę o swoim da. Ludzie nazywali go piratem, mordercą i złodziejem. Ale on mówił mi, że Kroczący z Wiatrem są potomkami Smoczej Straży, starożytnych wojowników, którzy wykuwali pancerze z kości zgładzonych smoków. \r\n\r\nA jednak powstrzymała mnie duma Norda. Jak mógłbym stanąć przed Tsunem w pancerzu, który jest symbolem triumfu kogoś innego? Mógłbym założyć rękawice i buty z czaszki wykute przez orków… ale cała zbroja? To, co osłania czyjeś serce, musi być zdobyte w boju. \r\n\r\nMój umysł poszybował ku historiom, które słyszałem jako dziecko. O moim wspaniałym przodku, który przecinał ogień, jakby to był wiatr… i czynił to w starożytnym kirysie ze smoczych kości. W tym momencie zrozumiałem, jakie jest moje przeznaczenie. Mogę je przejąć, aby uhonorować swojego przodka. I walczyć tak długo, aż pewnego dnia dotrę do Sovngardu. \r\n\r\nTen duch pozostał we mnie aż do teraz. Inni mogą spokojnie żyć w ukryciu, ale Nord tak długo walczy, jak długo w piersi wystarcza mu tchu."
-    },
-    {
-        "editor_id": "ccBGSSSE059_BjormundNote",
-        "form_id": "[0500081B]",
+        "form_id": "0500081B|ccbgssse059-ba_dragonplate.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "Bjormund's Diary",
@@ -161,31 +121,71 @@
     },
     {
         "editor_id": "ccBGSSSE059_LinelleJournal",
-        "form_id": "[05000864]",
+        "form_id": "05000864|ccbgssse059-ba_dragonplate.esl",
         "index": null,
         "type": "BOOK DESC",
         "original": "<font face=\"$HandwrittenFont\">\r\nAt Arcwind Point, the bones of the dead rattle in their stone cages. But the old magic is strong in those mountains, and with the help of the cat who is a rat - a priest of Namira no less - the crow will set them free.\r\n\r\nWith his help, an army of bones will dance to her caw, be they warriors, shadows, or beasts. Yet the cauldron shows the bones of two others - dragons in mortal flesh, who seek to challenge her inside towers of frost and stone. \r\n\r\nIt will be up to the crow to pick both their bones clean.</font>",
         "string": "<font face=\"$HandwrittenFont\">\r\nPrzy Punkcie Zawietrznym w kamiennych klatkach grzechoczą kości zmarłych. Ale w tych górach stara magia wciąż jest silna, a z pomocą kota, który jest szczurem, samego kapłana Namiry, kruk ich uwolni.\r\n\r\nZ jego pomocą, armia kości zatańczy do jej krakania - czy to wojowników, cieni czy bestii. A jednak kocioł wskazuje jeszcze kości dwóch istot - smoków ze śmiertelnego ciała, które chcą rzucić jej wyzwanie w wieżach mrozu i kamienia. \r\n\r\nKruk będzie musiała oczyścić ich kości do czysta.</font>"
     },
     {
-        "editor_id": "ccBGSSSE059_FalmerWarAxe",
-        "form_id": "[0500086B]",
+        "editor_id": "ccBGSSSE059_BountyNote",
+        "form_id": "0500081A|ccbgssse059-ba_dragonplate.esl",
         "index": null,
-        "type": "WEAP FULL",
-        "original": "Namira's Itch",
-        "string": "Świerzbiak Namiry"
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\n<font size=\"40\">Bounty</font>\r\n\r\nRumor has it that Forsworn raiding parties have been pushing further and further east, along the Jerall Mountains. The arrival of Legate Fasendil has prevented further incursions, but they failed to apprehend their leader, Crowstooth.\r\n\r\nWhile Crowstooth has been separated from her forces, she is believed to have fled with considerable spoils. In an effort to put an end to this threat, anyone killing Crowstooth may claim her stolen loot.\r\n\r\nMercenaries, like infamous sell-sword Bjormund Wind-Strider, have been seen heading into the mountains beyond Darklight Tower. While they could be after the treasure, it is feared Crowstooth is gathering these forces for a renewed assault. We ask any capable warriors for their aid in dealing with this potential threat.\r\n\r\nAnuriel",
+        "string": "<font face=\"$HandwrittenFont\">\r\n<font size=\"40\">Nagroda</font>\r\n\r\nWieść niesie, że grupy renegatów zapuszczają się coraz bardziej na wschód, wzdłuż gór Jerall. Przybycie legata Fasendila nieco je powstrzymało, ale ich przywódczyni, Kruczy Ząb, wciąż wymyka się obławom.\r\n\r\nChoć Kruczy Ząb została oddzielona od swoich wojsk, mówi się, że uciekła ze sporymi łupami. Aby skończyć z zagrożeniem ze strony renegatów, ogłoszono, że każdy, kto zabije Kruczy Ząb, może zatrzymać skradzione przez nią łupy.\r\n\r\nW góry za Wieżą Mrocznego Światła natychmiast wyruszyli najemnicy, a wśród nich niesławny Bjormund Kroczący z Wiatrem. Choć może kusić ich skarb, pojawiają się obawy, że Kruczy Ząb zbiera najemnicze wojska i będzie próbowała z ich pomocą kontratakować. Prosimy wszystkich dzielnych wojowników o pomoc w rozprawieniu się z tym potencjalnym zagrożeniem.\r\n\r\nAnuriel"
+    },
+    {
+        "editor_id": "ccBGSSSE059_BjormundNote",
+        "form_id": "0500081B|ccbgssse059-ba_dragonplate.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nI remember the first time M'Sharra showed me the tunnel, the one we had been burrowing for months. At first, I didn't understand it. We were already making good coin sacking the carriages. What was the point of digging holes underground like vermin? It didn't help that the tunnel smelled like a troll's armpit.\r\n\r\nWe reached the warehouse, and walked by crates stacked upon crates like mountains of wood. M'Sharra led me to the back, where a dozen Legionnaires were unloading cargo too big for any box. And Shor's Breath, I couldn't believe my eyes when I saw it! It was a skull the size of a carriage, with fangs that touched the floor! \r\n\r\nFor someone who winces at the sight of cliff racers, the idea of this monstrosity soaring through the sky made my heart tremble. And yet, for the first time, I felt alive.\r\n\r\nFor what better way to live than to fight a dragon! What better way to die! Now that would be a story even Tsun would lend an ear to!\r\n\r\n\"You think the bones are special, you should see what this one found yesterday,\" M'Sharra said to me. Her grin was as wide as the Halls of Jorrvaskr as she beckoned me further into the warehouse. Inside a crate, set apart from the others, was a cuirass of Dragonbone Mail! M'Sharra bade me to put it on, and I couldn't help but notice it was a perfect fit.\r\n\r\nIn that moment, I thought of my Da. People called him a pirate, a murderer and a thief. But he told me the Wind-Striders descended from the Dragonguard, ancient warriors who fashioned armor from the bones of the dragons they slew. \r\n\r\nStill, my pride as a Nord wouldn't allow it. How could I face Tsun wearing the armor of another's triumph? I could have the Orc forge gauntlets and boots from the skull, but the cuirass - that which held one's heart, must be earned in battle. \r\n\r\nMy mind drifted then to stories I heard as a youngling, of my great ancestor who strode through fire like it was the wind, wearing an ancient cuirass made of dragonbone. It was then that I knew my destiny. In his honor I would claim it, and fight until the day I reached Sovngarde. \r\n\r\nIt's that same spirit that resides in me now. The others may be fine living in hiding, but a Nord is at war so long as he holds breath.",
+        "string": "<font face=\"$HandwrittenFont\">\r\nPamiętam, kiedy M'Sharra po raz pierwszy zabrała mnie do tunelu, który ryliśmy od miesięcy. Na początku tego nie rozumiałem. Przecież dobrze zarabialiśmy na atakach na wozy. Po co nam ryć dziury w ziemi, jak robaki? Co gorsza, tunel śmierdział jak pacha trolla.\r\n\r\nDotarliśmy do magazynu i szliśmy wzdłuż kolejnych stosów skrzynek, wyglądających jak góry drewna. M'Sharra zaprowadziła mnie na tyły, gdzie tuzin legionistów rozładowywał towary… na pewno nie zmieściłyby się do żadnej skrzynki! I na oddech Shora, nie mogłem uwierzyć własnym oczom, gdy to zobaczyłem! Czaszka wielkości wozu, z kłami aż do ziemi! \r\n\r\nDla kogoś, kto wzdryga się na widok skrzekaczy, wyobrażenie sobie takiej potworności przecinającej nieboskłon, powoduje drżenie serca. A jednak po raz pierwszy poczułem wtedy, że żyję.\r\n\r\nCzy jest bowiem lepszy cel życia niż walka ze smokiem?! I lepsza śmierć?! Takiej historii chętnie wysłuchałby nawet Tsun!\r\n\r\n- Jeśli myślisz, że te kości są wyjątkowe, powinieneś zobaczyć te, które ja znaleźć wczoraj - powiedziała do mnie M'Sharra. Jej uśmiech był tak szeroki jak korytarze Jorrvaskr. Zaprosiła mnie dalej, w głąb magazynu. W jednej ze skrzyń, stojącej osobno, znajdowała się kolczuga z kości smoka! M'Sharra zachęciła mnie, bym ją założył, a ja od razu zauważyłem, że pasuje idealnie.\r\n\r\nW takich chwilach myślę o swoim da. Ludzie nazywali go piratem, mordercą i złodziejem. Ale on mówił mi, że Kroczący z Wiatrem są potomkami Smoczej Straży, starożytnych wojowników, którzy wykuwali pancerze z kości zgładzonych smoków. \r\n\r\nA jednak powstrzymała mnie duma Norda. Jak mógłbym stanąć przed Tsunem w pancerzu, który jest symbolem triumfu kogoś innego? Mógłbym założyć rękawice i buty z czaszki wykute przez orków… ale cała zbroja? To, co osłania czyjeś serce, musi być zdobyte w boju. \r\n\r\nMój umysł poszybował ku historiom, które słyszałem jako dziecko. O moim wspaniałym przodku, który przecinał ogień, jakby to był wiatr… i czynił to w starożytnym kirysie ze smoczych kości. W tym momencie zrozumiałem, jakie jest moje przeznaczenie. Mogę je przejąć, aby uhonorować swojego przodka. I walczyć tak długo, aż pewnego dnia dotrę do Sovngardu. \r\n\r\nTen duch pozostał we mnie aż do teraz. Inni mogą spokojnie żyć w ukryciu, ale Nord tak długo walczy, jak długo w piersi wystarcza mu tchu."
+    },
+    {
+        "editor_id": "ccBGSSSE059_BjormundDossier",
+        "form_id": "05000819|ccbgssse059-ba_dragonplate.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Guard's Dossier: Bjormund Wind-Strider",
+        "string": "Dossier gwardii: Bjormund Kroczący z Wiatrem"
+    },
+    {
+        "editor_id": "ccBGSSSE059_BountyNoteHemming",
+        "form_id": "05000868|ccbgssse059-ba_dragonplate.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\n<font size=\"40\">Bounty</font>\r\n\r\nRumor has it that Forsworn raiding parties have been pushing further and further east, along the Jerall Mountains. The arrival of Legate Fasendil has prevented further incursions, but they failed to apprehend their leader, Crowstooth.\r\n\r\nWhile Crowstooth has been separated from her forces, she is believed to have fled with considerable spoils. In an effort to put an end to this threat, anyone killing Crowstooth may claim her stolen loot.\r\n\r\nMercenaries, like infamous sell-sword Bjormund Wind-Strider, have been seen heading into the mountains beyond Darklight Tower. While they could be after the treasure, it is feared Crowstooth is gathering these forces for a renewed assault. We ask any capable warriors for their aid in dealing with this potential threat.\r\n\r\nHemming Black-Briar",
+        "string": "<font face=\"$HandwrittenFont\">\r\n<font size=\"40\">Nagroda</font>\r\n\r\nWieść niesie, że grupy renegatów zapuszczają się coraz bardziej na wschód, wzdłuż gór Jerall. Przybycie legata Fasendila nieco je powstrzymało, ale ich przywódczyni, Kruczy Ząb, wciąż wymyka się obławom.\r\n\r\nChoć Kruczy Ząb została oddzielona od swoich wojsk, mówi się, że uciekła ze sporymi łupami. Aby skończyć z zagrożeniem ze strony renegatów, ogłoszono, że każdy, kto zabije Kruczy Ząb, może zatrzymać skradzione przez nią łupy.\r\n\r\nW góry za Wieżą Mrocznego Światła natychmiast wyruszyli najemnicy, a wśród nich niesławny Bjormund Kroczący z Wiatrem. Choć może kusić ich skarb, pojawiają się obawy, że Kruczy Ząb zbiera najemnicze wojska i będzie próbowała z ich pomocą kontratakować. Prosimy wszystkich dzielnych wojowników o pomoc w rozprawieniu się z tym potencjalnym zagrożeniem.\r\n\r\nHemming Czarna-Róża"
+    },
+    {
+        "editor_id": "ccBGSSSE059_BjormundDossier",
+        "form_id": "05000819|ccbgssse059-ba_dragonplate.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nStatus: Active (Capture or Kill), High Priority\r\n\r\nDescription: Male, Nord, late 50s\r\n\r\nBackground:\r\nReferred to by locals as the \"Dragon of Dawnstar,\" Bjormund is the son of a former pirate who frequented the northern port. After being taken in by various bandit clans, he eventually migrated south to Cyrodiil where he joined up with the Crimson Dirks. The nickname is derived from a legend that Bjormund once slew a dragon and fashioned its bones into armor, but it seems the story is apocryphal as it predates the return of the dragons. \r\n\r\nOperational Notes:\r\nBjormund is believed to have taken up mercenary work in order to stay on the move. Not much is known of his whereabouts beyond this.</font>",
+        "string": "<font face='$HandwrittenFont'>\r\nStatus: zlecenie aktywne (pojmać lub zabić), wysoki priorytet\r\n\r\nOpis: mężczyzna, Nord, ponad 50 lat\r\n\r\nHistoria:\r\nNazywany przez miejscowych „Smokiem Gwiazdy Zarannej”, Bjormund jest synem byłego pirata, który działał w okolicach północnego portu. Po służbie w kilku klanach bandytów, ostatecznie wyemigrował na południe, do Cyrodiil, gdzie dołączył do Szkarłatnych Sztyletów. Jego przezwisko pochodzi od legendy głoszącej, że Bjormund zgładził kiedyś smoka i wykuł z jego kości pancerz. Historia ta wydaje się być jednak wątpliwa, gdyż pochodzi sprzed czasu powrotu smoków. \r\n\r\nUwagi:\r\nPonoć Bjormund podjął się pracy najemnika, aby móc często zmieniać miejsce pobytu. Oprócz tego niewiele wiadomo o tym, gdzie może się znajdować.</font>"
     },
     {
         "editor_id": "ccBGSSSE059_TyrantsBaneAxe",
-        "form_id": "[05000869]",
+        "form_id": "05000869|ccbgssse059-ba_dragonplate.esl",
         "index": null,
         "type": "WEAP FULL",
         "original": "Tyrant's Bane",
         "string": "Zguba tyrana"
     },
     {
+        "editor_id": "ccBGSSSE059_FalmerWarAxe",
+        "form_id": "0500086B|ccbgssse059-ba_dragonplate.esl",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Namira's Itch",
+        "string": "Świerzbiak Namiry"
+    },
+    {
         "editor_id": "ccBGSSSE059_CrowsToothWeapon",
-        "form_id": "[0500086A]",
+        "form_id": "0500086A|ccbgssse059-ba_dragonplate.esl",
         "index": null,
         "type": "WEAP FULL",
         "original": "Forsworn Sword",
@@ -193,15 +193,7 @@
     },
     {
         "editor_id": "ccBGSSSE059_Alvasorr",
-        "form_id": "[0500086C]",
-        "index": null,
-        "type": "NPC_ SHRT",
-        "original": "Alvasorr",
-        "string": "Alvasorr"
-    },
-    {
-        "editor_id": "ccBGSSSE059_Alvasorr",
-        "form_id": "[0500086C]",
+        "form_id": "0500086C|ccbgssse059-ba_dragonplate.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Alvasorr the Rat",
@@ -209,15 +201,7 @@
     },
     {
         "editor_id": "ccBGSSSE059_Bjormund",
-        "form_id": "[0500081C]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Bjormund Wind-Strider",
-        "string": "Bjormund Kroczący z Wiatrem"
-    },
-    {
-        "editor_id": "ccBGSSSE059_Bjormund",
-        "form_id": "[0500081C]",
+        "form_id": "0500081C|ccbgssse059-ba_dragonplate.esl",
         "index": null,
         "type": "NPC_ SHRT",
         "original": "Bjormund",
@@ -225,103 +209,47 @@
     },
     {
         "editor_id": "ccBGSSSE059_Crowstooth",
-        "form_id": "[0500086D]",
+        "form_id": "0500086D|ccbgssse059-ba_dragonplate.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Crowstooth",
         "string": "Kruczy Ząb"
     },
     {
-        "editor_id": "SolitudeCastleDour",
-        "form_id": "[000213A0]",
+        "editor_id": "ccBGSSSE059_Bjormund",
+        "form_id": "0500081C|ccbgssse059-ba_dragonplate.esl",
         "index": null,
-        "type": "CELL FULL",
-        "original": "Castle Dour",
-        "string": "Zamek Dour"
+        "type": "NPC_ FULL",
+        "original": "Bjormund Wind-Strider",
+        "string": "Bjormund Kroczący z Wiatrem"
+    },
+    {
+        "editor_id": "ccBGSSSE059_Alvasorr",
+        "form_id": "0500086C|ccbgssse059-ba_dragonplate.esl",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Alvasorr",
+        "string": "Alvasorr"
     },
     {
         "editor_id": "Tamriel",
-        "form_id": "[0000003C]",
+        "form_id": "0000003C|Skyrim.esm",
         "index": null,
         "type": "WRLD FULL",
         "original": "Skyrim",
         "string": "Skyrim"
     },
     {
-        "editor_id": "ccBGSSSE059_MapREF",
-        "form_id": "[0500085C]",
-        "index": null,
-        "type": "REFR FULL",
-        "original": "Crowstooth's Camp",
-        "string": "Obozowisko Kruczego Zęba"
-    },
-    {
-        "editor_id": null,
-        "form_id": "[05000821]",
-        "index": null,
-        "type": "INFO RNAM",
-        "original": "Any bounty work I can help with?",
-        "string": "Macie jakieś zlecenie dla łowcy nagród, przy którym mogę pomóc?"
-    },
-    {
         "editor_id": "ccBGSSSE059_QuestBranchTopicB",
-        "form_id": "[05000822]",
+        "form_id": "05000822|ccbgssse059-ba_dragonplate.esl",
         "index": null,
         "type": "DIAL FULL",
         "original": "ccBGSSSE059_QuestBranchTopicB",
         "string": "ccBGSSSE059_QuestBranchTopicB"
     },
     {
-        "editor_id": "ccBGSSSE059_MiscQuest",
-        "form_id": "[0500082B]",
-        "index": 10,
-        "type": "QUST NNAM",
-        "original": "Ask an innkeeper for bounty work",
-        "string": "Zapytaj karczmarza o pracę dla łowcy nagród."
-    },
-    {
         "editor_id": "ccBGSSSE059_Quest",
-        "form_id": "[05000824]",
-        "index": 70,
-        "type": "QUST CNAM",
-        "original": "According to the bounty I received, Forsworn have been pushing their presence further and further east, and formed a camp near Darklight Tower. I traveled to the area and located the camp, but their leader, Crowstooth, had already fled to Arcwind Point. I journeyed to the mountains in the west and found her holed up in a tower overlooking the ruins.",
-        "string": "Wedle otrzymanego przeze mnie zlecenia, renegaci posuwają się coraz bardziej na wschód i rozstawili obóz w okolicy Wieży Mrocznego Światła. Udało mi się zlokalizować obóz, ale ich przywódczyni, Kruczy Ząb, zdołała w międzyczasie zbiec do Punktu Zawietrznego. Moja droga wiodła przez góry na zachodzie, aż do wieży nad ruinami, w której Kruczy Ząb się zaszyła."
-    },
-    {
-        "editor_id": "ccBGSSSE059_Quest",
-        "form_id": "[05000824]",
-        "index": 100,
-        "type": "QUST CNAM",
-        "original": "According to the bounty I received, Forsworn have been pushing their presence further and further east, and formed a camp near Darklight Tower. I traveled to the area and located the camp, but their leader, Crowstooth, had already fled to Arcwind Point. I journeyed to the mountains in the west and found her holed up in a tower overlooking the ruins.",
-        "string": "Wedle otrzymanego przeze mnie zlecenia, renegaci posuwają się coraz bardziej na wschód i rozstawili obóz w okolicy Wieży Mrocznego Światła. Udało mi się zlokalizować obóz, ale ich przywódczyni, Kruczy Ząb, zdołała w międzyczasie zbiec do Punktu Zawietrznego. Moja droga wiodła przez góry na zachodzie, aż do wieży nad ruinami, w której Kruczy Ząb się zaszyła."
-    },
-    {
-        "editor_id": "ccBGSSSE059_Quest",
-        "form_id": "[05000824]",
-        "index": 30,
-        "type": "QUST NNAM",
-        "original": "Find Crowstooth's Camp",
-        "string": "Znajdź obozowisko Kruczego Zęba."
-    },
-    {
-        "editor_id": "ccBGSSSE059_Quest",
-        "form_id": "[05000824]",
-        "index": 20,
-        "type": "QUST NNAM",
-        "original": "Read the Bounty for Crowstooth",
-        "string": "Przeczytaj informację o nagrodzie za Kruczy Ząb."
-    },
-    {
-        "editor_id": "ccBGSSSE059_Quest",
-        "form_id": "[05000824]",
-        "index": 60,
-        "type": "QUST NNAM",
-        "original": "Kill Crowstooth",
-        "string": "Zabij Kruczy Ząb."
-    },
-    {
-        "editor_id": "ccBGSSSE059_Quest",
-        "form_id": "[05000824]",
+        "form_id": "05000824|ccbgssse059-ba_dragonplate.esl",
         "index": 50,
         "type": "QUST NNAM",
         "original": "Travel to Arcwind Point",
@@ -329,71 +257,7 @@
     },
     {
         "editor_id": "ccBGSSSE059_Quest",
-        "form_id": "[05000824]",
-        "index": 90,
-        "type": "QUST CNAM",
-        "original": "According to the bounty I received, Forsworn have been pushing their presence further and further east, and formed a camp near Darklight Tower. I traveled to the area and located the camp, but their leader, Crowstooth, was nowhere to be found. I discovered a note on a hagraven that indicated she might be at Arcwind Point.",
-        "string": "Wedle otrzymanego przeze mnie zlecenia, renegaci posuwają się coraz bardziej na wschód i rozstawili obóz w okolicy Wieży Mrocznego Światła. Udało mi się zlokalizować obóz, ale ich przywódczyni, Kruczy Ząb, przepadła. Przy wiedźmokruku znajdowała się notatka, z której wynikało, że Kruczy Ząb może być w Punkcie Zawietrznym."
-    },
-    {
-        "editor_id": "ccBGSSSE059_Quest",
-        "form_id": "[05000824]",
-        "index": 87,
-        "type": "QUST CNAM",
-        "original": "According to the bounty I received, Forsworn have been pushing their presence further and further east, and formed a camp near Darklight Tower. I traveled to the area and located the camp, but their leader, Crowstooth, had already fled to Arcwind Point. I journeyed to the mountains in the west and found her holed up in a tower overlooking the ruins. After defeating her, I claimed her armor for myself.",
-        "string": "Wedle otrzymanego przeze mnie zlecenia, renegaci posuwają się coraz bardziej na wschód i rozstawili obóz w okolicy Wieży Mrocznego Światła. Udało mi się zlokalizować obóz, ale ich przywódczyni, Kruczy Ząb, zdołała w międzyczasie zbiec do Punktu Zawietrznego. Moja droga wiodła przez góry na zachodzie, aż do wieży nad ruinami, w której Kruczy Ząb się zaszyła. Teraz przywódczyni renegatów nie żyje, a jej pancerz należy do mnie."
-    },
-    {
-        "editor_id": "ccBGSSSE059_Quest",
-        "form_id": "[05000824]",
-        "index": 70,
-        "type": "QUST NNAM",
-        "original": "Search the tower",
-        "string": "Przeszukaj wieżę."
-    },
-    {
-        "editor_id": "ccBGSSSE059_Quest",
-        "form_id": "[05000824]",
-        "index": 10,
-        "type": "QUST NNAM",
-        "original": "Ask an innkeeper for bounty work",
-        "string": "Zapytaj karczmarza o pracę dla łowcy nagród."
-    },
-    {
-        "editor_id": "ccBGSSSE059_Quest",
-        "form_id": "[05000824]",
-        "index": 84,
-        "type": "QUST CNAM",
-        "original": "According to the bounty I received, Forsworn have been pushing their presence further and further east, and formed a camp near Darklight Tower. I traveled to the area and located the camp, but their leader, Crowstooth, had already fled to Arcwind Point. I journeyed to the mountains in the west and found her holed up in a tower overlooking the ruins. After defeating her, I can now retrieve the armor she wears.",
-        "string": "Wedle otrzymanego przeze mnie zlecenia, renegaci posuwają się coraz bardziej na wschód i rozstawili obóz w okolicy Wieży Mrocznego Światła. Udało mi się zlokalizować obóz, ale ich przywódczyni, Kruczy Ząb, zdołała w międzyczasie zbiec do Punktu Zawietrznego. Moja droga wiodła przez góry na zachodzie, aż do wieży nad ruinami, w której Kruczy Ząb się zaszyła. Teraz przywódczyni renegatów nie żyje, a ja mogę przejąć jej pancerz."
-    },
-    {
-        "editor_id": "ccBGSSSE059_Quest",
-        "form_id": "[05000824]",
-        "index": null,
-        "type": "QUST FULL",
-        "original": "Bones for a Crow",
-        "string": "Kości dla kruka"
-    },
-    {
-        "editor_id": "ccBGSSSE059_Quest",
-        "form_id": "[05000824]",
-        "index": 86,
-        "type": "QUST CNAM",
-        "original": "Bandits have long been a source of angst for the people of Skyrim. I should talk to the innkeepers and find out if there are any bounties for them.",
-        "string": "Bandyci od dawna byli zmorą mieszkańców Skyrim. Muszę porozmawiać z karczmarzami i dowiedzieć się, czy nie ma jakichś zleceń na ich głowy."
-    },
-    {
-        "editor_id": "ccBGSSSE059_Quest",
-        "form_id": "[05000824]",
-        "index": 88,
-        "type": "QUST CNAM",
-        "original": "According to the bounty I received, Forsworn have been pushing their presence further and further east, and have formed a camp near Darklight Tower.",
-        "string": "Wedle otrzymanego przeze mnie zlecenia, renegaci posuwają się coraz bardziej na wschód i rozstawili obóz w okolicy Wieży Mrocznego Światła."
-    },
-    {
-        "editor_id": "ccBGSSSE059_Quest",
-        "form_id": "[05000824]",
+        "form_id": "05000824|ccbgssse059-ba_dragonplate.esl",
         "index": 40,
         "type": "QUST NNAM",
         "original": "Read Linelle's Note",
@@ -401,31 +265,151 @@
     },
     {
         "editor_id": "ccBGSSSE059_Quest",
-        "form_id": "[05000824]",
-        "index": 95,
+        "form_id": "05000824|ccbgssse059-ba_dragonplate.esl",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Find Crowstooth's Camp",
+        "string": "Znajdź obozowisko Kruczego Zęba."
+    },
+    {
+        "editor_id": "ccBGSSSE059_Quest",
+        "form_id": "05000824|ccbgssse059-ba_dragonplate.esl",
+        "index": 60,
+        "type": "QUST NNAM",
+        "original": "Kill Crowstooth",
+        "string": "Zabij Kruczy Ząb."
+    },
+    {
+        "editor_id": "ccBGSSSE059_MiscQuest",
+        "form_id": "0500082B|ccbgssse059-ba_dragonplate.esl",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Ask an innkeeper for bounty work",
+        "string": "Zapytaj karczmarza o pracę dla łowcy nagród."
+    },
+    {
+        "editor_id": "ccBGSSSE059_Quest",
+        "form_id": "05000824|ccbgssse059-ba_dragonplate.esl",
+        "index": 65,
+        "type": "QUST CNAM",
+        "original": "According to the bounty I received, Forsworn have been pushing their presence further and further east, and have formed a camp near Darklight Tower.",
+        "string": "Wedle otrzymanego przeze mnie zlecenia, renegaci posuwają się coraz bardziej na wschód i rozstawili obóz w okolicy Wieży Mrocznego Światła."
+    },
+    {
+        "editor_id": "ccBGSSSE059_Quest",
+        "form_id": "05000824|ccbgssse059-ba_dragonplate.esl",
+        "index": 82,
+        "type": "QUST CNAM",
+        "original": "According to the bounty I received, Forsworn have been pushing their presence further and further east, and formed a camp near Darklight Tower. I traveled to the area and located the camp, but their leader, Crowstooth, had already fled to Arcwind Point. I journeyed to the mountains in the west and found her holed up in a tower overlooking the ruins. After defeating her, I can now retrieve the armor she wears.",
+        "string": "Wedle otrzymanego przeze mnie zlecenia, renegaci posuwają się coraz bardziej na wschód i rozstawili obóz w okolicy Wieży Mrocznego Światła. Udało mi się zlokalizować obóz, ale ich przywódczyni, Kruczy Ząb, zdołała w międzyczasie zbiec do Punktu Zawietrznego. Moja droga wiodła przez góry na zachodzie, aż do wieży nad ruinami, w której Kruczy Ząb się zaszyła. Teraz przywódczyni renegatów nie żyje, a ja mogę przejąć jej pancerz."
+    },
+    {
+        "editor_id": "ccBGSSSE059_Quest",
+        "form_id": "05000824|ccbgssse059-ba_dragonplate.esl",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Bones for a Crow",
+        "string": "Kości dla kruka"
+    },
+    {
+        "editor_id": "ccBGSSSE059_Quest",
+        "form_id": "05000824|ccbgssse059-ba_dragonplate.esl",
+        "index": 99,
+        "type": "QUST CNAM",
+        "original": "Bandits have long been a source of angst for the people of Skyrim. I should talk to the innkeepers and find out if there are any bounties for them.",
+        "string": "Bandyci od dawna byli zmorą mieszkańców Skyrim. Muszę porozmawiać z karczmarzami i dowiedzieć się, czy nie ma jakichś zleceń na ich głowy."
+    },
+    {
+        "editor_id": "ccBGSSSE059_Quest",
+        "form_id": "05000824|ccbgssse059-ba_dragonplate.esl",
+        "index": 83,
         "type": "QUST CNAM",
         "original": "Bandits have long been a source of angst for the people of Skyrim. I spoke with an innkeeper and received a bounty letter that may provide more information.",
         "string": "Bandyci od dawna byli zmorą mieszkańców Skyrim. Karczmarz po rozmowie ze mną wręczył mi list ze zleceniem, z którego mogę dowiedzieć się więcej."
     },
     {
         "editor_id": "ccBGSSSE059_Quest",
-        "form_id": "[05000824]",
-        "index": 93,
+        "form_id": "05000824|ccbgssse059-ba_dragonplate.esl",
+        "index": 61,
+        "type": "QUST CNAM",
+        "original": "According to the bounty I received, Forsworn have been pushing their presence further and further east, and formed a camp near Darklight Tower. I traveled to the area and located the camp, but their leader, Crowstooth, had already fled to Arcwind Point. I journeyed to the mountains in the west and found her holed up in a tower overlooking the ruins.",
+        "string": "Wedle otrzymanego przeze mnie zlecenia, renegaci posuwają się coraz bardziej na wschód i rozstawili obóz w okolicy Wieży Mrocznego Światła. Udało mi się zlokalizować obóz, ale ich przywódczyni, Kruczy Ząb, zdołała w międzyczasie zbiec do Punktu Zawietrznego. Moja droga wiodła przez góry na zachodzie, aż do wieży nad ruinami, w której Kruczy Ząb się zaszyła."
+    },
+    {
+        "editor_id": "ccBGSSSE059_Quest",
+        "form_id": "05000824|ccbgssse059-ba_dragonplate.esl",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Ask an innkeeper for bounty work",
+        "string": "Zapytaj karczmarza o pracę dla łowcy nagród."
+    },
+    {
+        "editor_id": "ccBGSSSE059_Quest",
+        "form_id": "05000824|ccbgssse059-ba_dragonplate.esl",
+        "index": 95,
+        "type": "QUST CNAM",
+        "original": "According to the bounty I received, Forsworn have been pushing their presence further and further east, and formed a camp near Darklight Tower. I traveled to the area and located the camp, but their leader, Crowstooth, was nowhere to be found. I discovered a note on a hagraven that indicated she might be at Arcwind Point.",
+        "string": "Wedle otrzymanego przeze mnie zlecenia, renegaci posuwają się coraz bardziej na wschód i rozstawili obóz w okolicy Wieży Mrocznego Światła. Udało mi się zlokalizować obóz, ale ich przywódczyni, Kruczy Ząb, przepadła. Przy wiedźmokruku znajdowała się notatka, z której wynikało, że Kruczy Ząb może być w Punkcie Zawietrznym."
+    },
+    {
+        "editor_id": "ccBGSSSE059_Quest",
+        "form_id": "05000824|ccbgssse059-ba_dragonplate.esl",
+        "index": 85,
+        "type": "QUST CNAM",
+        "original": "According to the bounty I received, Forsworn have been pushing their presence further and further east, and formed a camp near Darklight Tower. I traveled to the area and located the camp, but their leader, Crowstooth, had already fled to Arcwind Point. I journeyed to the mountains in the west and found her holed up in a tower overlooking the ruins. After defeating her, I claimed her armor for myself.",
+        "string": "Wedle otrzymanego przeze mnie zlecenia, renegaci posuwają się coraz bardziej na wschód i rozstawili obóz w okolicy Wieży Mrocznego Światła. Udało mi się zlokalizować obóz, ale ich przywódczyni, Kruczy Ząb, zdołała w międzyczasie zbiec do Punktu Zawietrznego. Moja droga wiodła przez góry na zachodzie, aż do wieży nad ruinami, w której Kruczy Ząb się zaszyła. Teraz przywódczyni renegatów nie żyje, a jej pancerz należy do mnie."
+    },
+    {
+        "editor_id": "ccBGSSSE059_Quest",
+        "form_id": "05000824|ccbgssse059-ba_dragonplate.esl",
+        "index": 81,
+        "type": "QUST CNAM",
+        "original": "According to the bounty I received, Forsworn have been pushing their presence further and further east, and formed a camp near Darklight Tower. I traveled to the area and located the camp, but their leader, Crowstooth, had already fled to Arcwind Point. I journeyed to the mountains in the west and found her holed up in a tower overlooking the ruins.",
+        "string": "Wedle otrzymanego przeze mnie zlecenia, renegaci posuwają się coraz bardziej na wschód i rozstawili obóz w okolicy Wieży Mrocznego Światła. Udało mi się zlokalizować obóz, ale ich przywódczyni, Kruczy Ząb, zdołała w międzyczasie zbiec do Punktu Zawietrznego. Moja droga wiodła przez góry na zachodzie, aż do wieży nad ruinami, w której Kruczy Ząb się zaszyła."
+    },
+    {
+        "editor_id": "ccBGSSSE059_Quest",
+        "form_id": "05000824|ccbgssse059-ba_dragonplate.esl",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Read the Bounty for Crowstooth",
+        "string": "Przeczytaj informację o nagrodzie za Kruczy Ząb."
+    },
+    {
+        "editor_id": "ccBGSSSE059_Quest",
+        "form_id": "05000824|ccbgssse059-ba_dragonplate.esl",
+        "index": 70,
+        "type": "QUST NNAM",
+        "original": "Search the tower",
+        "string": "Przeszukaj wieżę."
+    },
+    {
+        "editor_id": "ccBGSSSE059_Quest",
+        "form_id": "05000824|ccbgssse059-ba_dragonplate.esl",
+        "index": 105,
         "type": "QUST CNAM",
         "original": "According to the bounty I received, Forsworn have been pushing their presence further and further east, and formed a camp near Darklight Tower. I traveled to the area and located the camp, but their leader, Crowstooth, was nowhere to be found. I discovered a note on a hagraven that might tell me where she fled to.",
         "string": "Wedle otrzymanego przeze mnie zlecenia, renegaci posuwają się coraz bardziej na wschód i rozstawili obóz w okolicy Wieży Mrocznego Światła. Udało mi się zlokalizować obóz, ale ich przywódczyni, Kruczy Ząb, przepadła. Przy wiedźmokruku znajdowała się notatka, z której mogę się dowiedzieć, dokąd uciekła Kruczy Ząb."
     },
     {
         "editor_id": "ccBGSSSE059_BH_DisplayMessage",
-        "form_id": "[05000827]",
+        "form_id": "05000827|ccbgssse059-ba_dragonplate.esl",
         "index": null,
         "type": "MESG DESC",
         "original": "Bounty Hunter",
         "string": "Łowca nagród"
     },
     {
+        "editor_id": "ccBGSSSE059_HagravenLinelle",
+        "form_id": "05000862|ccbgssse059-ba_dragonplate.esl",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Linelle",
+        "string": "Linelle"
+    },
+    {
         "editor_id": "ccBGSSSE059_BH_DisplayMessage",
-        "form_id": "[05000827]",
+        "form_id": "05000827|ccbgssse059-ba_dragonplate.esl",
         "index": null,
         "type": "MESG FULL",
         "original": "Bounty Hunter",
@@ -433,15 +417,7 @@
     },
     {
         "editor_id": "ccBGSSSE059_HagravenLinelle",
-        "form_id": "[05000862]",
-        "index": null,
-        "type": "MESG FULL",
-        "original": "Linelle",
-        "string": "Linelle"
-    },
-    {
-        "editor_id": "ccBGSSSE059_HagravenLinelle",
-        "form_id": "[05000862]",
+        "form_id": "05000862|ccbgssse059-ba_dragonplate.esl",
         "index": null,
         "type": "MESG DESC",
         "original": "Linelle",

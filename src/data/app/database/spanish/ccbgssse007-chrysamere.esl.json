@@ -1,31 +1,39 @@
 [
     {
-        "editor_id": "ccBGSSSE007_FortifyHealRateCombat",
-        "form_id": "[05000802]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Fortified Combat Healing",
-        "string": "Curación reforzada en combate"
-    },
-    {
-        "editor_id": "ccBGSSSE007_Chrysamere_Effect",
-        "form_id": "[05000801]",
+        "editor_id": "ccBGSSSE007_Chrysamere_AbsorbSpellChance",
+        "form_id": "05000800|ccbgssse007-chrysamere.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "When equipped grants <15>% resist fire, <10>% absorb magic, slow health regen during combat.",
         "string": "Cuando está equipado concede <15>% de resistencia al fuego, <10>% de absorción de magia y regeneración de salud lenta durante el combate."
     },
     {
+        "editor_id": "ccBGSSSE007_AbResistFire",
+        "form_id": "0500080B|ccbgssse007-chrysamere.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Resist Fire",
+        "string": "Resistencia al fuego"
+    },
+    {
         "editor_id": "ccBGSSSE007_Chrysamere_Effect",
-        "form_id": "[05000801]",
+        "form_id": "05000801|ccbgssse007-chrysamere.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Chrysamere",
         "string": "Chrysamere"
     },
     {
+        "editor_id": "ccBGSSSE007_FortifyHealRateCombat",
+        "form_id": "05000802|ccbgssse007-chrysamere.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fortified Combat Healing",
+        "string": "Curación reforzada en combate"
+    },
+    {
         "editor_id": "ccBGSSSE007_AbResistFire",
-        "form_id": "[0500080B]",
+        "form_id": "0500080B|ccbgssse007-chrysamere.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "<15>% resist fire.",
@@ -33,23 +41,15 @@
     },
     {
         "editor_id": "ccBGSSSE007_Chrysamere_AbsorbSpellChance",
-        "form_id": "[05000800]",
+        "form_id": "05000800|ccbgssse007-chrysamere.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Chrysamere",
         "string": "Absorción de hechizos"
     },
     {
-        "editor_id": "ccBGSSSE007_AbResistFire",
-        "form_id": "[0500080B]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Resist Fire",
-        "string": "Resistencia al fuego"
-    },
-    {
-        "editor_id": "ccBGSSSE007_Chrysamere_AbsorbSpellChance",
-        "form_id": "[05000800]",
+        "editor_id": "ccBGSSSE007_Chrysamere_Effect",
+        "form_id": "05000801|ccbgssse007-chrysamere.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "When equipped grants <15>% resist fire, <10>% absorb magic, slow health regen during combat.",
@@ -57,7 +57,7 @@
     },
     {
         "editor_id": "ccBGSSSE007_FortifyHealRateCombat",
-        "form_id": "[05000802]",
+        "form_id": "05000802|ccbgssse007-chrysamere.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "Slow health regen during combat.",
@@ -65,47 +65,47 @@
     },
     {
         "editor_id": "ccBGSSSE007_EnchChrysamere",
-        "form_id": "[05000803]",
+        "form_id": "05000803|ccbgssse007-chrysamere.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Chrysamere Enchantment",
         "string": "Encantamiento de Chrysamere"
     },
     {
-        "editor_id": "ccBGSSSE007_Chrysamere_ChrysamerePlayerEffects",
-        "form_id": "[0500080F]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Chrysamere",
-        "string": "Chrysamere"
-    },
-    {
-        "editor_id": "ccBGSSSE007_Chrysamere_abResistFire",
-        "form_id": "[05000805]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Chrysamere - Resist Fire",
-        "string": "Chrysamere: resistencia al fuego"
-    },
-    {
         "editor_id": "ccBGSSSE007_Chrysamere_abAbsorbMagicka",
-        "form_id": "[05000806]",
+        "form_id": "05000806|ccbgssse007-chrysamere.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Chrysamere - Absorb Magicka",
         "string": "Chrysamere: absorción de magia"
     },
     {
+        "editor_id": "ccBGSSSE007_Chrysamere_abResistFire",
+        "form_id": "05000805|ccbgssse007-chrysamere.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Chrysamere - Resist Fire",
+        "string": "Chrysamere: resistencia al fuego"
+    },
+    {
         "editor_id": "ccBGSSSE007_Chrysamere_abRegenHealth",
-        "form_id": "[05000804]",
+        "form_id": "05000804|ccbgssse007-chrysamere.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Chrysamere - regen health",
         "string": "Chrysamere: regeneración de salud"
     },
     {
+        "editor_id": "ccBGSSSE007_Chrysamere_ChrysamerePlayerEffects",
+        "form_id": "0500080F|ccbgssse007-chrysamere.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Chrysamere",
+        "string": "Chrysamere"
+    },
+    {
         "editor_id": "ccBGSSSE007Chrysamere",
-        "form_id": "[05000D63]",
+        "form_id": "05000D63|ccbgssse007-chrysamere.esl",
         "index": null,
         "type": "WEAP FULL",
         "original": "Chrysamere",
@@ -113,39 +113,15 @@
     },
     {
         "editor_id": "ccBGSSSE007_LvlGhostPaladin",
-        "form_id": "[05000807]",
+        "form_id": "05000807|ccbgssse007-chrysamere.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Lost Paladin",
         "string": "Paladín perdido"
     },
     {
-        "editor_id": "Forelhost01",
-        "form_id": "[0001527F]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Forelhost Stronghold",
-        "string": "Fortaleza de Hueste de Forel"
-    },
-    {
-        "editor_id": "Forelhost02",
-        "form_id": "[00022F53]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Forelhost Crypt",
-        "string": "Cripta de Hueste de Forel"
-    },
-    {
-        "editor_id": "Forelhost03",
-        "form_id": "[00022F52]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Forelhost Refectory",
-        "string": "Refectorio de Hueste de Forel"
-    },
-    {
         "editor_id": "Tamriel",
-        "form_id": "[0000003C]",
+        "form_id": "0000003C|Skyrim.esm",
         "index": null,
         "type": "WRLD FULL",
         "original": "Skyrim",
@@ -153,31 +129,31 @@
     },
     {
         "editor_id": "ccBGSSSE007_Quest",
-        "form_id": "[05000809]",
-        "index": 0,
+        "form_id": "05000809|ccbgssse007-chrysamere.esl",
+        "index": 4,
         "type": "QUST NNAM",
         "original": "Find the Lost Paladin",
         "string": "Busca al paladín perdido."
     },
     {
         "editor_id": "ccBGSSSE007_Quest",
-        "form_id": "[05000809]",
-        "index": 2,
-        "type": "QUST NNAM",
-        "original": "Find the Lost Paladin",
-        "string": "Busca al paladín perdido."
+        "form_id": "05000809|ccbgssse007-chrysamere.esl",
+        "index": 66,
+        "type": "QUST CNAM",
+        "original": "I've heard a rumor about the location of the Lost Paladin, the last warrior to wield Chrysamere.",
+        "string": "He oído un rumor sobre la ubicación del paladín perdido, el último guerrero que blandió a Chrysamere."
     },
     {
         "editor_id": "ccBGSSSE007_Quest",
-        "form_id": "[05000809]",
-        "index": 1,
-        "type": "QUST NNAM",
-        "original": "Find the Lost Paladin",
-        "string": "Busca al paladín perdido."
+        "form_id": "05000809|ccbgssse007-chrysamere.esl",
+        "index": 78,
+        "type": "QUST CNAM",
+        "original": "I fought the ghost of the Lost Paladin and claimed Chrysamere for myself.",
+        "string": "He peleado contra el fantasma del paladín perdido y he reclamado Chrysamere."
     },
     {
         "editor_id": "ccBGSSSE007_Quest",
-        "form_id": "[05000809]",
+        "form_id": "05000809|ccbgssse007-chrysamere.esl",
         "index": null,
         "type": "QUST FULL",
         "original": "The Lost Paladin",
@@ -185,32 +161,32 @@
     },
     {
         "editor_id": "ccBGSSSE007_Quest",
-        "form_id": "[05000809]",
-        "index": 113,
-        "type": "QUST CNAM",
-        "original": "I've heard a rumor about the location of the Lost Paladin, the last warrior to wield Chrysamere.",
-        "string": "He oído un rumor sobre la ubicación del paladín perdido, el último guerrero que blandió a Chrysamere."
-    },
-    {
-        "editor_id": "ccBGSSSE007_Quest",
-        "form_id": "[05000809]",
-        "index": 86,
-        "type": "QUST CNAM",
-        "original": "I fought the ghost of the Lost Paladin and claimed Chrysamere for myself.",
-        "string": "He peleado contra el fantasma del paladín perdido y he reclamado Chrysamere."
-    },
-    {
-        "editor_id": "ccBGSSSE007_Quest",
-        "form_id": "[05000809]",
-        "index": 3,
+        "form_id": "05000809|ccbgssse007-chrysamere.esl",
+        "index": 2,
         "type": "QUST NNAM",
         "original": "Find the Lost Paladin",
         "string": "Busca al paladín perdido."
     },
     {
         "editor_id": "ccBGSSSE007_Quest",
-        "form_id": "[05000809]",
-        "index": 4,
+        "form_id": "05000809|ccbgssse007-chrysamere.esl",
+        "index": 0,
+        "type": "QUST NNAM",
+        "original": "Find the Lost Paladin",
+        "string": "Busca al paladín perdido."
+    },
+    {
+        "editor_id": "ccBGSSSE007_Quest",
+        "form_id": "05000809|ccbgssse007-chrysamere.esl",
+        "index": 1,
+        "type": "QUST NNAM",
+        "original": "Find the Lost Paladin",
+        "string": "Busca al paladín perdido."
+    },
+    {
+        "editor_id": "ccBGSSSE007_Quest",
+        "form_id": "05000809|ccbgssse007-chrysamere.esl",
+        "index": 3,
         "type": "QUST NNAM",
         "original": "Find the Lost Paladin",
         "string": "Busca al paladín perdido."

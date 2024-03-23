@@ -130,7 +130,7 @@ class MAST(Subrecord):
         super().parse()
 
         stream = BytesIO(self.data)
-        self.file = String.wzstring(stream)
+        self.file = String.zstring(stream)
 
         return self
 

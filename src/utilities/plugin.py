@@ -92,4 +92,4 @@ class Plugin:
     tree_item: QTreeWidgetItem = None
 
     def __hash__(self) -> int:
-        return hash((self.name, self.path, self.status.name))
+        return hash((self.name.lower(), str(self.path).lower()))

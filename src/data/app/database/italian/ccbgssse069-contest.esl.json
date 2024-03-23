@@ -1,55 +1,31 @@
 [
     {
         "editor_id": "ccBGSSSE069_FrostbiteSpiderRaceGiant",
-        "form_id": "[05000829]",
+        "form_id": "05000829|ccbgssse069-contest.esl",
         "index": null,
         "type": "RACE FULL",
         "original": "Web Mother",
         "string": "Madre della tela"
     },
     {
-        "editor_id": "ccBGSSSE069_crSpiderBiteFFContact",
-        "form_id": "[05000827]",
+        "editor_id": "ccBGSSSE069_EnchFortifyOneHandedConstantSelf",
+        "form_id": "05000824|ccbgssse069-contest.esl",
         "index": null,
-        "type": "MGEF DNAM",
-        "original": "A blood-freezing poison that does <mag> points of damage to Health and Stamina per second.",
-        "string": "Un veleno che gela il sangue e che infligge <mag> punti di danno al secondo a salute e vigore."
+        "type": "MGEF FULL",
+        "original": "Fists of Randagulf",
+        "string": "Pugni di Randagulf"
     },
     {
         "editor_id": "ccBGSSSE069_crSpiderBiteFFContact",
-        "form_id": "[05000827]",
+        "form_id": "05000827|ccbgssse069-contest.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Spider Bite",
         "string": "Morso del ragno"
     },
     {
-        "editor_id": "ccBGSSSE069_EnchFortifyBlockConstantSelf",
-        "form_id": "[0500082D]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Fortify Blocking",
-        "string": "Fortifica Parare"
-    },
-    {
-        "editor_id": "ccBGSSSE069_crSpiderSpitFFAimed",
-        "form_id": "[05000828]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "A blood-freezing poison that does <mag> points of damage to Health and Stamina per second.",
-        "string": "Un veleno che gela il sangue e che infligge <mag> punti di danno al secondo a salute e vigore."
-    },
-    {
-        "editor_id": "ccBGSSSE069_AbFortifyUnarmedDamage",
-        "form_id": "[0500082C]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Fortify Unarmed Damage",
-        "string": "Fortifica Danni a mani nude"
-    },
-    {
         "editor_id": "ccBGSSSE069_EnchFortifyTwoHandedConstantSelf",
-        "form_id": "[05000823]",
+        "form_id": "05000823|ccbgssse069-contest.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Fortify Two-Handed",
@@ -57,23 +33,47 @@
     },
     {
         "editor_id": "ccBGSSSE069_EnchFortifyOneHandedConstantSelf",
-        "form_id": "[05000824]",
+        "form_id": "05000824|ccbgssse069-contest.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "Melee and unarmed attacks do <mag>% more damage. Block <mag>% more damage with your shield.",
         "string": "Gli attacchi in mischia e a mani nude infliggono +<mag>% danni. Blocchi +<mag>% danni con lo scudo."
     },
     {
-        "editor_id": "ccBGSSSE069_EnchFortifyOneHandedConstantSelf",
-        "form_id": "[05000824]",
+        "editor_id": "ccBGSSSE069_crSpiderSpitFFAimed",
+        "form_id": "05000828|ccbgssse069-contest.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "A blood-freezing poison that does <mag> points of damage to Health and Stamina per second.",
+        "string": "Un veleno che gela il sangue e che infligge <mag> punti di danno al secondo a salute e vigore."
+    },
+    {
+        "editor_id": "ccBGSSSE069_EnchFortifyBlockConstantSelf",
+        "form_id": "0500082D|ccbgssse069-contest.esl",
         "index": null,
         "type": "MGEF FULL",
-        "original": "Fists of Randagulf",
-        "string": "Pugni di Randagulf"
+        "original": "Fortify Blocking",
+        "string": "Fortifica Parare"
+    },
+    {
+        "editor_id": "ccBGSSSE069_AbFortifyUnarmedDamage",
+        "form_id": "0500082C|ccbgssse069-contest.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fortify Unarmed Damage",
+        "string": "Fortifica Danni a mani nude"
+    },
+    {
+        "editor_id": "ccBGSSSE069_crSpiderBiteFFContact",
+        "form_id": "05000827|ccbgssse069-contest.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "A blood-freezing poison that does <mag> points of damage to Health and Stamina per second.",
+        "string": "Un veleno che gela il sangue e che infligge <mag> punti di danno al secondo a salute e vigore."
     },
     {
         "editor_id": "ccBGSSSE069_crSpiderSpitFFAimed",
-        "form_id": "[05000828]",
+        "form_id": "05000828|ccbgssse069-contest.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Spider Spit",
@@ -81,63 +81,47 @@
     },
     {
         "editor_id": "ccBGSSSE069_EnchRandagulf",
-        "form_id": "[05000822]",
+        "form_id": "05000822|ccbgssse069-contest.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Fists of Randagulf",
         "string": "Pugni di Randagulf"
     },
     {
-        "editor_id": "ccBGSSSE069_crSpider03PoisonBite",
-        "form_id": "[05000826]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Web Mother Bite",
-        "string": "Morso della Madre della tela"
-    },
-    {
         "editor_id": "ccBGSSSE069_crSpider03PoisonSpit",
-        "form_id": "[05000825]",
+        "form_id": "05000825|ccbgssse069-contest.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Frostbite Poison",
         "string": "Veleno congelante"
     },
     {
+        "editor_id": "ccBGSSSE069_crSpider03PoisonBite",
+        "form_id": "05000826|ccbgssse069-contest.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Web Mother Bite",
+        "string": "Morso della Madre della tela"
+    },
+    {
         "editor_id": "ccBGSSSE069_FistsofRandagulf",
-        "form_id": "[05000813]",
+        "form_id": "05000813|ccbgssse069-contest.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Fists of Randagulf",
         "string": "Pugni di Randagulf"
     },
     {
-        "editor_id": "ccBGSSSE069_ObserversJournal",
-        "form_id": "[05000803]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face=\"$HandwrittenFont\">\r\nIt's not uncommon these days to see warriors of great renown pass through Candlehearth Hall, beckoned by the clarion call of war. Many of them seat themselves by the fire, order their spirit of choice, and regale the patrons with stories of their triumphs. \r\n\r\nIt is, however, a strange thing to watch such a tale write itself in front of you, but that is precisely what happened when two legendary warriors, Grenwulf the Brawler and Holrik Frost-Sword, sat down at the table beside me.\r\n\r\nPerhaps it was the mead that shortened their tempers, but it did not take long for a spirited argument to become heated. Grenwulf, a brawler famous for fighting with only his fists, had compared Holrik to a soldier who fires a trebuchet - a man who is only as dangerous as the tool he employs. \r\n\r\nHolrik, for his part, cut right through Grenwulf's claim. If the brawler relied only on his hands, then he should drink his mead from his palm, and slice his bread with his fingernails. \r\n\r\nNot to mention there are things in this world, Holrik said, that fists alone cannot kill, even if that fist belonged to Randagulf himself. Whereas his sword, the Ice Blade of the Monarch, was blessed by the strength of the frost itself, and could cut through the walls of ice that lined the edge of the world.\r\n\r\nGrenwulf scoffed at the notion, claiming that no man or beast had yet to survive a single punch. \r\n\r\nIt was then that the Divines, or perhaps darker minds, offered a resolution. A warrior came bursting through the doors, claiming a monstrous spider had taken root in the Cronvangr Cave, claiming three in his hunting party. His widened eyes and frowned lips, telltale signs of fear, spoke volumes to us all. It was a warning few would fail to heed, but our two heroes saw it as something else entirely - an opportunity to settle their dispute.\r\n\r\nAnd so the next morning, they departed for Cronvangr Cave. Three weeks have passed since.\r\n\r\nIn my life I have written tales of valor and tragedy, and those that are one and the same. And while the final chapter of Grenwulf and Holrik has yet to be written, I fear this may fall into the latter category, as neither has saw fit to return.</font>",
-        "string": "<font face=\"$HandwrittenFont\">\r\nDi questi tempi non è raro vedere noti guerrieri dalle parti della locanda del Focolare Accogliente, seguiti da uno squillante richiamo di guerra. A molti di loro piace sedersi vicino al fuoco, ordinare qualcosa da bere e raccontare ai clienti le storie dei loro trionfi. \r\n\r\nFa comunque uno strano effetto vedere una leggenda che ti si scrive davanti agli occhi ed è quello che mi è successo quando due mitici guerrieri come Grenwulf il Picchiatore e Holrik Spadagelida si sono seduti al tavolo accanto al mio.\r\n\r\nForse è stato l'idromele a dargli alla testa, ma non c'è voluto molto prima che il loro diverbio si trasformasse in qualcosa di più. Grenwulf, un lottatore famoso per combattere usando solo i pugni aveva paragonato Holrik a un soldato che spara con il trabucco, un uomo pericoloso quanto l'arma che utilizza. \r\n\r\nHolrik ha risposto subito per le rime a Grenwulf. Se il lottatore poteva contare solo sulle sue mani, allora avrebbe dovuto bere l'idromele con i palmi e tagliare il pane con le unghie. \r\n\r\nPer non parlare poi, disse Holrik, di alcune cose che i pugni non possono uccidere, neanche se sferrati da Randagulf in persona. Mentre la sua spada, la Lama di ghiaccio del monarca, era benedetta con la forza del gelo e poteva tagliare le mura di ghiaccio che circondavano il mondo.\r\n\r\nGrenwulf derise questa affermazione, dicendo che nessun uomo o bestia poteva sopravvivere a un suo pugno. \r\n\r\nÈ stato allora che i Divini, o forse qualcuno di più oscuro, proposero una soluzione. Un guerriero entrò trafelato dalle porte, affermando che nella caverna di Cronvangr si trovava un ragno mostruoso che aveva già ucciso tre uomini del suo gruppo. Dagli occhi spalancati e le labbra arricciate si capiva che quell'uomo era troppo spaventato per mentire. Un avvertimento a cui tutti avrebbero dato ascolto, ma i nostri due eroi videro l'occasione per risolvere la loro disputa.\r\n\r\nE così, la mattina dopo partirono per la caverna di Cronvangr. Da allora sono passate tre settimane.\r\n\r\nNelle mie storie ho raccontato coraggio e tragedia, spesso intrecciati. E anche se l'ultimo capitolo di Grenwulf e Holrik dev'essere ancora scritto, temo che siamo davanti alla seconda categoria dato che nessuno dei due ha ancora fatto ritorno.</font>"
-    },
-    {
         "editor_id": "ccBGSSSE069_GrenNote",
-        "form_id": "[05000821]",
+        "form_id": "05000821|ccbgssse069-contest.esl",
         "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nHolrik thinks there's things I can't punch through. But I've punched through walls, and I've punched through men.\r\n\r\nI don't care how thick your armor is, my knuckles are thicker. They're hard and calloused and ugly as a Dremora, but they get the job done, no matter what.\r\n\r\nI once met a warrior who claimed to have the most impenetrable armor ever known to man. But when we fought, I punched him so hard the shockwaves rearranged every bone in his body, to the point his toes were coming out of his ears.\r\n\r\nSo even if the armor doesn't give, the man inside is as soft as jelly. A spider ain't much different. It's got hard parts, and it's got soft parts. When I ball my fist and put all my weight on my back foot, there's nothing anyone can do.</font>",
-        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nHolrik dice che ci sono cose che non posso spaccare a pugni. Ma con i pugni ho spaccato muri e ho spaccato anche uomini.\r\n\r\nNon mi importa quanto è dura un'armatura, le mie nocche sono più dure. Sono dure, callose e brutte come un dremora, ma fanno sempre il loro lavoro.\r\n\r\nUna volta ho incontrato un guerriero che a detta sua aveva l'armatura più impenetrabile del mondo. Ma quando abbiamo combattuto gli ho dato un pugno così forte che le onde d'urto gli hanno scombinato tutte le ossa. Alla fine le dita dei piedi gli uscivano dalle orecchie.\r\n\r\nAnche se l'armatura non cede, l'uomo che c'è dentro si riduce in poltiglia. Con i ragni non è diverso. Hanno parti dure e parti morbide. Quando stringo il pugno e metto tutto il peso sul piede posteriore, non c'è scampo per nessuno.</font>"
+        "type": "BOOK FULL",
+        "original": "Grenwulf's Note",
+        "string": "Nota di Grenwulf"
     },
     {
         "editor_id": "ccBGSSSE069_HolrikNote",
-        "form_id": "[05000820]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nGrenwulf's always been beyond stubborn. On top of that, he lacks patience. When a man like him fails to open a jar, he smashes the glass rather than rely on a cloth for a better grip.\r\n\r\nIn Grenwulf's mind, using that cloth is a weakness. In my mind, it's far better not to have your food covered in broken glass.\r\n\r\nIt's a shame, because I think he has the talent to be a good swordsman. But his foolish pride won't allow him to admit it.</font>",
-        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nGrenwulf è sempre stato testardo. E come se non bastasse, è anche impaziente. Quando uno come lui non riesce ad aprire un barattolo lo spacca, invece di prendere un panno per avere una presa migliore.\r\n\r\nPer come pensa Grenwulf, usare quel panno è un segno di debolezza. Per come la penso io, è molto meglio non avere schegge di vetro nel cibo.\r\n\r\nÈ un peccato perché penso che potrebbe essere un ottimo spadaccino. Ma il suo stupido orgoglio non glie lo permette.</font>"
-    },
-    {
-        "editor_id": "ccBGSSSE069_HolrikNote",
-        "form_id": "[05000820]",
+        "form_id": "05000820|ccbgssse069-contest.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "Holrik's Note",
@@ -145,71 +129,63 @@
     },
     {
         "editor_id": "ccBGSSSE069_GrenNote",
-        "form_id": "[05000821]",
+        "form_id": "05000821|ccbgssse069-contest.esl",
         "index": null,
-        "type": "BOOK FULL",
-        "original": "Grenwulf's Note",
-        "string": "Nota di Grenwulf"
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nHolrik thinks there's things I can't punch through. But I've punched through walls, and I've punched through men.\r\n\r\nI don't care how thick your armor is, my knuckles are thicker. They're hard and calloused and ugly as a Dremora, but they get the job done, no matter what.\r\n\r\nI once met a warrior who claimed to have the most impenetrable armor ever known to man. But when we fought, I punched him so hard the shockwaves rearranged every bone in his body, to the point his toes were coming out of his ears.\r\n\r\nSo even if the armor doesn't give, the man inside is as soft as jelly. A spider ain't much different. It's got hard parts, and it's got soft parts. When I ball my fist and put all my weight on my back foot, there's nothing anyone can do.</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nHolrik dice che ci sono cose che non posso spaccare a pugni. Ma con i pugni ho spaccato muri e ho spaccato anche uomini.\r\n\r\nNon mi importa quanto è dura un'armatura, le mie nocche sono più dure. Sono dure, callose e brutte come un dremora, ma fanno sempre il loro lavoro.\r\n\r\nUna volta ho incontrato un guerriero che a detta sua aveva l'armatura più impenetrabile del mondo. Ma quando abbiamo combattuto gli ho dato un pugno così forte che le onde d'urto gli hanno scombinato tutte le ossa. Alla fine le dita dei piedi gli uscivano dalle orecchie.\r\n\r\nAnche se l'armatura non cede, l'uomo che c'è dentro si riduce in poltiglia. Con i ragni non è diverso. Hanno parti dure e parti morbide. Quando stringo il pugno e metto tutto il peso sul piede posteriore, non c'è scampo per nessuno.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE069_HolrikNote",
+        "form_id": "05000820|ccbgssse069-contest.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nGrenwulf's always been beyond stubborn. On top of that, he lacks patience. When a man like him fails to open a jar, he smashes the glass rather than rely on a cloth for a better grip.\r\n\r\nIn Grenwulf's mind, using that cloth is a weakness. In my mind, it's far better not to have your food covered in broken glass.\r\n\r\nIt's a shame, because I think he has the talent to be a good swordsman. But his foolish pride won't allow him to admit it.</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nGrenwulf è sempre stato testardo. E come se non bastasse, è anche impaziente. Quando uno come lui non riesce ad aprire un barattolo lo spacca, invece di prendere un panno per avere una presa migliore.\r\n\r\nPer come pensa Grenwulf, usare quel panno è un segno di debolezza. Per come la penso io, è molto meglio non avere schegge di vetro nel cibo.\r\n\r\nÈ un peccato perché penso che potrebbe essere un ottimo spadaccino. Ma il suo stupido orgoglio non glie lo permette.</font>"
     },
     {
         "editor_id": "ccBGSSSE069_ObserversJournal",
-        "form_id": "[05000803]",
+        "form_id": "05000803|ccbgssse069-contest.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "Adonato Leotelli's Journal",
         "string": "Diario di Adonato Leotelli"
     },
     {
-        "editor_id": "ccBGSSSE069_GrenwulfSpiderWeb",
-        "form_id": "[0500080A]",
+        "editor_id": "ccBGSSSE069_ObserversJournal",
+        "form_id": "05000803|ccbgssse069-contest.esl",
         "index": null,
-        "type": "CONT FULL",
-        "original": "Grenwulf the Brawler",
-        "string": "Grenwulf il Picchiatore"
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nIt's not uncommon these days to see warriors of great renown pass through Candlehearth Hall, beckoned by the clarion call of war. Many of them seat themselves by the fire, order their spirit of choice, and regale the patrons with stories of their triumphs. \r\n\r\nIt is, however, a strange thing to watch such a tale write itself in front of you, but that is precisely what happened when two legendary warriors, Grenwulf the Brawler and Holrik Frost-Sword, sat down at the table beside me.\r\n\r\nPerhaps it was the mead that shortened their tempers, but it did not take long for a spirited argument to become heated. Grenwulf, a brawler famous for fighting with only his fists, had compared Holrik to a soldier who fires a trebuchet - a man who is only as dangerous as the tool he employs. \r\n\r\nHolrik, for his part, cut right through Grenwulf's claim. If the brawler relied only on his hands, then he should drink his mead from his palm, and slice his bread with his fingernails. \r\n\r\nNot to mention there are things in this world, Holrik said, that fists alone cannot kill, even if that fist belonged to Randagulf himself. Whereas his sword, the Ice Blade of the Monarch, was blessed by the strength of the frost itself, and could cut through the walls of ice that lined the edge of the world.\r\n\r\nGrenwulf scoffed at the notion, claiming that no man or beast had yet to survive a single punch. \r\n\r\nIt was then that the Divines, or perhaps darker minds, offered a resolution. A warrior came bursting through the doors, claiming a monstrous spider had taken root in the Cronvangr Cave, claiming three in his hunting party. His widened eyes and frowned lips, telltale signs of fear, spoke volumes to us all. It was a warning few would fail to heed, but our two heroes saw it as something else entirely - an opportunity to settle their dispute.\r\n\r\nAnd so the next morning, they departed for Cronvangr Cave. Three weeks have passed since.\r\n\r\nIn my life I have written tales of valor and tragedy, and those that are one and the same. And while the final chapter of Grenwulf and Holrik has yet to be written, I fear this may fall into the latter category, as neither has saw fit to return.</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\nDi questi tempi non è raro vedere noti guerrieri dalle parti della locanda del Focolare Accogliente, seguiti da uno squillante richiamo di guerra. A molti di loro piace sedersi vicino al fuoco, ordinare qualcosa da bere e raccontare ai clienti le storie dei loro trionfi. \r\n\r\nFa comunque uno strano effetto vedere una leggenda che ti si scrive davanti agli occhi ed è quello che mi è successo quando due mitici guerrieri come Grenwulf il Picchiatore e Holrik Spadagelida si sono seduti al tavolo accanto al mio.\r\n\r\nForse è stato l'idromele a dargli alla testa, ma non c'è voluto molto prima che il loro diverbio si trasformasse in qualcosa di più. Grenwulf, un lottatore famoso per combattere usando solo i pugni aveva paragonato Holrik a un soldato che spara con il trabucco, un uomo pericoloso quanto l'arma che utilizza. \r\n\r\nHolrik ha risposto subito per le rime a Grenwulf. Se il lottatore poteva contare solo sulle sue mani, allora avrebbe dovuto bere l'idromele con i palmi e tagliare il pane con le unghie. \r\n\r\nPer non parlare poi, disse Holrik, di alcune cose che i pugni non possono uccidere, neanche se sferrati da Randagulf in persona. Mentre la sua spada, la Lama di ghiaccio del monarca, era benedetta con la forza del gelo e poteva tagliare le mura di ghiaccio che circondavano il mondo.\r\n\r\nGrenwulf derise questa affermazione, dicendo che nessun uomo o bestia poteva sopravvivere a un suo pugno. \r\n\r\nÈ stato allora che i Divini, o forse qualcuno di più oscuro, proposero una soluzione. Un guerriero entrò trafelato dalle porte, affermando che nella caverna di Cronvangr si trovava un ragno mostruoso che aveva già ucciso tre uomini del suo gruppo. Dagli occhi spalancati e le labbra arricciate si capiva che quell'uomo era troppo spaventato per mentire. Un avvertimento a cui tutti avrebbero dato ascolto, ma i nostri due eroi videro l'occasione per risolvere la loro disputa.\r\n\r\nE così, la mattina dopo partirono per la caverna di Cronvangr. Da allora sono passate tre settimane.\r\n\r\nNelle mie storie ho raccontato coraggio e tragedia, spesso intrecciati. E anche se l'ultimo capitolo di Grenwulf e Holrik dev'essere ancora scritto, temo che siamo davanti alla seconda categoria dato che nessuno dei due ha ancora fatto ritorno.</font>"
     },
     {
         "editor_id": "ccBGSSSE069_HolrikSpiderWeb",
-        "form_id": "[05000809]",
+        "form_id": "05000809|ccbgssse069-contest.esl",
         "index": null,
         "type": "CONT FULL",
         "original": "Holrik Frost-Sword",
         "string": "Holrik Spadagelida"
     },
     {
+        "editor_id": "ccBGSSSE069_GrenwulfSpiderWeb",
+        "form_id": "0500080A|ccbgssse069-contest.esl",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Grenwulf the Brawler",
+        "string": "Grenwulf il Picchiatore"
+    },
+    {
         "editor_id": "ccBGSSSE069_IceBladeMonarch",
-        "form_id": "[05000815]",
+        "form_id": "05000815|ccbgssse069-contest.esl",
         "index": null,
         "type": "WEAP FULL",
         "original": "Ice Blade of the Monarch",
         "string": "Lama di ghiaccio del monarca"
     },
     {
-        "editor_id": "ccBGSSSE069_Grenwulf",
-        "form_id": "[0500080E]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Grenwulf the Brawler",
-        "string": "Grenwulf il Picchiatore"
-    },
-    {
-        "editor_id": "ccBGSSSE069_WebMother",
-        "form_id": "[05000802]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Web Mother",
-        "string": "Madre della tela"
-    },
-    {
         "editor_id": "ccBGSSSE069_HolrikNPC",
-        "form_id": "[0500080D]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Holrik Frost-Sword",
-        "string": "Holrik Spadagelida"
-    },
-    {
-        "editor_id": "ccBGSSSE069_HolrikNPC",
-        "form_id": "[0500080D]",
+        "form_id": "0500080D|ccbgssse069-contest.esl",
         "index": null,
         "type": "NPC_ SHRT",
         "original": "Holrik",
@@ -217,31 +193,39 @@
     },
     {
         "editor_id": "ccBGSSSE069_Grenwulf",
-        "form_id": "[0500080E]",
+        "form_id": "0500080E|ccbgssse069-contest.esl",
         "index": null,
         "type": "NPC_ SHRT",
         "original": "Grenwulf",
         "string": "Grenwulf"
     },
     {
-        "editor_id": "CronvangrHall02",
-        "form_id": "[0002D5D1]",
+        "editor_id": "ccBGSSSE069_WebMother",
+        "form_id": "05000802|ccbgssse069-contest.esl",
         "index": null,
-        "type": "CELL FULL",
-        "original": "Cronvangr Broodlair",
-        "string": "Tana di Cronvangr"
+        "type": "NPC_ FULL",
+        "original": "Web Mother",
+        "string": "Madre della tela"
     },
     {
-        "editor_id": "WindhelmCandlehearthHall",
-        "form_id": "[00016789]",
+        "editor_id": "ccBGSSSE069_HolrikNPC",
+        "form_id": "0500080D|ccbgssse069-contest.esl",
         "index": null,
-        "type": "CELL FULL",
-        "original": "Candlehearth Hall",
-        "string": "Locanda del Focolare Accogliente"
+        "type": "NPC_ FULL",
+        "original": "Holrik Frost-Sword",
+        "string": "Holrik Spadagelida"
+    },
+    {
+        "editor_id": "ccBGSSSE069_Grenwulf",
+        "form_id": "0500080E|ccbgssse069-contest.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Grenwulf the Brawler",
+        "string": "Grenwulf il Picchiatore"
     },
     {
         "editor_id": "ccBGSSSE069_Quest",
-        "form_id": "[05000805]",
+        "form_id": "05000805|ccbgssse069-contest.esl",
         "index": 10,
         "type": "QUST NNAM",
         "original": "Investigate Candlehearth Hall",
@@ -249,63 +233,7 @@
     },
     {
         "editor_id": "ccBGSSSE069_Quest",
-        "form_id": "[05000805]",
-        "index": 20,
-        "type": "QUST NNAM",
-        "original": "Search Cronvangr Cave for the two heroes",
-        "string": "Esplora la caverna di Cronvangr alla ricerca dei due eroi"
-    },
-    {
-        "editor_id": "ccBGSSSE069_Quest",
-        "form_id": "[05000805]",
-        "index": 86,
-        "type": "QUST CNAM",
-        "original": "I traveled to Candlehearth Hall and read a journal about two warriors, who traveled to Cronvangr Cave to defeat a dangerous spider. I traveled to Cronvangr Cave and found the spider's lair.",
-        "string": "Ho raggiunto la locanda del Focolare Accogliente e ho letto un diario che parlava di due guerrieri che si erano avventurati nella caverna di Cronvangr per sconfiggere un pericoloso ragno. Ho raggiunto la caverna di Cronvangr e ho trovato la tana del ragno."
-    },
-    {
-        "editor_id": "ccBGSSSE069_Quest",
-        "form_id": "[05000805]",
-        "index": 72,
-        "type": "QUST CNAM",
-        "original": "I traveled to Candlehearth Hall and read a journal about two warriors, who traveled to Cronvangr Cave to defeat a dangerous spider. I should travel to the cave and find out what became of them.",
-        "string": "Ho raggiunto la locanda del Focolare Accogliente e ho letto un diario che parlava di due guerrieri che si erano avventurati nella caverna di Cronvangr per sconfiggere un pericoloso ragno. Devo raggiungere la caverna per scoprire cosa gli è successo."
-    },
-    {
-        "editor_id": "ccBGSSSE069_Quest",
-        "form_id": "[05000805]",
-        "index": 75,
-        "type": "QUST CNAM",
-        "original": "I traveled to Candlehearth Hall and read a journal about two warriors, who traveled to Cronvangr Cave to defeat a dangerous Web Mother. I traveled to Cronvangr Cave and found the spider's lair, defeating the Web Mother. After the battle, the heroes rewarded me with their treasures.",
-        "string": "Ho raggiunto la locanda del Focolare Accogliente e ho letto un diario che parlava di due guerrieri che si erano avventurati nella caverna di Cronvangr per sconfiggere la pericolosa Madre della tela. Ho raggiunto la caverna di Cronvangr, ho trovato la tana del ragno e ho sconfitto la Madre della tela. Dopo la battaglia, gli eroi mi hanno ricompensato con i loro tesori."
-    },
-    {
-        "editor_id": "ccBGSSSE069_Quest",
-        "form_id": "[05000805]",
-        "index": 40,
-        "type": "QUST NNAM",
-        "original": "Speak to the Heroes",
-        "string": "Parla con gli eroi"
-    },
-    {
-        "editor_id": "ccBGSSSE069_Quest",
-        "form_id": "[05000805]",
-        "index": 92,
-        "type": "QUST CNAM",
-        "original": "I've heard many great warriors have come through Skyrim over the years, and passed through Candlehearth Hall in Windhelm. If I travel there, I may hear some stories of what became of them.",
-        "string": "Ho sentito che molti grandi eroi hanno attraversato Skyrim durante gli anni, soprattutto dal Locanda del Focolare Accogliente a Windhelm. Forse lì potrei ascoltare delle storie interessanti."
-    },
-    {
-        "editor_id": "ccBGSSSE069_Quest",
-        "form_id": "[05000805]",
-        "index": 104,
-        "type": "QUST CNAM",
-        "original": "I traveled to Candlehearth Hall and read a journal about two warriors, who traveled to Cronvangr Cave to defeat a dangerous Web Mother. I traveled to Cronvangr Cave and found the spider's lair, defeating the Web Mother.",
-        "string": "Ho raggiunto la locanda del Focolare Accogliente e ho letto un diario che parlava di due guerrieri che si erano avventurati nella caverna di Cronvangr per sconfiggere la pericolosa Madre della tela. Ho raggiunto la caverna di Cronvangr, ho trovato la tana del ragno e ho sconfitto la Madre della tela."
-    },
-    {
-        "editor_id": "ccBGSSSE069_Quest",
-        "form_id": "[05000805]",
+        "form_id": "05000805|ccbgssse069-contest.esl",
         "index": null,
         "type": "QUST FULL",
         "original": "Caught in a Web",
@@ -313,31 +241,7 @@
     },
     {
         "editor_id": "ccBGSSSE069_Quest",
-        "form_id": "[05000805]",
-        "index": 87,
-        "type": "QUST CNAM",
-        "original": "I traveled to Candlehearth Hall and read a journal about two warriors, who traveled to Cronvangr Cave to defeat a dangerous Web Mother. I traveled to Cronvangr Cave and found the spider's lair, defeating the Web Mother. I spoke to the heroes who bequeathed me their treasures before fading away.",
-        "string": "Ho raggiunto la locanda del Focolare Accogliente e ho letto un diario che parlava di due guerrieri che si erano avventurati nella caverna di Cronvangr per sconfiggere la pericolosa Madre della tela. Ho raggiunto la caverna di Cronvangr, ho trovato la tana del ragno e ho sconfitto la Madre della tela. Ho parlato con gli eroi che mi hanno affidato i loro tesori prima di sparire."
-    },
-    {
-        "editor_id": "ccBGSSSE069_Quest",
-        "form_id": "[05000805]",
-        "index": 30,
-        "type": "QUST NNAM",
-        "original": "Defeat the Web Mother",
-        "string": "Sconfiggi la Madre della tela"
-    },
-    {
-        "editor_id": "ccBGSSSE069_Quest",
-        "form_id": "[05000805]",
-        "index": 106,
-        "type": "QUST CNAM",
-        "original": "I traveled to Candlehearth Hall and read a journal about two warriors, who traveled to Cronvangr Cave to defeat a dangerous Web Mother. I traveled to Cronvangr Cave and found the spider's lair, defeating the Web Mother. I spoke to the heroes who bequeathed me their treasures before fading away.",
-        "string": "Ho raggiunto la locanda del Focolare Accogliente e ho letto un diario che parlava di due guerrieri che si erano avventurati nella caverna di Cronvangr per sconfiggere la pericolosa Madre della tela. Ho raggiunto la caverna di Cronvangr, ho trovato la tana del ragno e ho sconfitto la Madre della tela. Ho parlato con gli eroi che mi hanno affidato i loro tesori prima di sparire."
-    },
-    {
-        "editor_id": "ccBGSSSE069_Quest",
-        "form_id": "[05000805]",
+        "form_id": "05000805|ccbgssse069-contest.esl",
         "index": 60,
         "type": "QUST NNAM",
         "original": "Inspect Holrik's corpse",
@@ -345,10 +249,82 @@
     },
     {
         "editor_id": "ccBGSSSE069_Quest",
-        "form_id": "[05000805]",
+        "form_id": "05000805|ccbgssse069-contest.esl",
         "index": 50,
         "type": "QUST NNAM",
         "original": "Inspect Grenwulf's corpse",
         "string": "Esamina il cadavere di Grenwulf"
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "form_id": "05000805|ccbgssse069-contest.esl",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Defeat the Web Mother",
+        "string": "Sconfiggi la Madre della tela"
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "form_id": "05000805|ccbgssse069-contest.esl",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "Speak to the Heroes",
+        "string": "Parla con gli eroi"
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "form_id": "05000805|ccbgssse069-contest.esl",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Search Cronvangr Cave for the two heroes",
+        "string": "Esplora la caverna di Cronvangr alla ricerca dei due eroi"
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "form_id": "05000805|ccbgssse069-contest.esl",
+        "index": 80,
+        "type": "QUST CNAM",
+        "original": "I traveled to Candlehearth Hall and read a journal about two warriors, who traveled to Cronvangr Cave to defeat a dangerous spider. I traveled to Cronvangr Cave and found the spider's lair.",
+        "string": "Ho raggiunto la locanda del Focolare Accogliente e ho letto un diario che parlava di due guerrieri che si erano avventurati nella caverna di Cronvangr per sconfiggere un pericoloso ragno. Ho raggiunto la caverna di Cronvangr e ho trovato la tana del ragno."
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "form_id": "05000805|ccbgssse069-contest.esl",
+        "index": 92,
+        "type": "QUST CNAM",
+        "original": "I traveled to Candlehearth Hall and read a journal about two warriors, who traveled to Cronvangr Cave to defeat a dangerous Web Mother. I traveled to Cronvangr Cave and found the spider's lair, defeating the Web Mother.",
+        "string": "Ho raggiunto la locanda del Focolare Accogliente e ho letto un diario che parlava di due guerrieri che si erano avventurati nella caverna di Cronvangr per sconfiggere la pericolosa Madre della tela. Ho raggiunto la caverna di Cronvangr, ho trovato la tana del ragno e ho sconfitto la Madre della tela."
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "form_id": "05000805|ccbgssse069-contest.esl",
+        "index": 104,
+        "type": "QUST CNAM",
+        "original": "I traveled to Candlehearth Hall and read a journal about two warriors, who traveled to Cronvangr Cave to defeat a dangerous Web Mother. I traveled to Cronvangr Cave and found the spider's lair, defeating the Web Mother. I spoke to the heroes who bequeathed me their treasures before fading away.",
+        "string": "Ho raggiunto la locanda del Focolare Accogliente e ho letto un diario che parlava di due guerrieri che si erano avventurati nella caverna di Cronvangr per sconfiggere la pericolosa Madre della tela. Ho raggiunto la caverna di Cronvangr, ho trovato la tana del ragno e ho sconfitto la Madre della tela. Ho parlato con gli eroi che mi hanno affidato i loro tesori prima di sparire."
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "form_id": "05000805|ccbgssse069-contest.esl",
+        "index": 78,
+        "type": "QUST CNAM",
+        "original": "I've heard many great warriors have come through Skyrim over the years, and passed through Candlehearth Hall in Windhelm. If I travel there, I may hear some stories of what became of them.",
+        "string": "Ho sentito che molti grandi eroi hanno attraversato Skyrim durante gli anni, soprattutto dal Locanda del Focolare Accogliente a Windhelm. Forse lì potrei ascoltare delle storie interessanti."
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "form_id": "05000805|ccbgssse069-contest.esl",
+        "index": 89,
+        "type": "QUST CNAM",
+        "original": "I traveled to Candlehearth Hall and read a journal about two warriors, who traveled to Cronvangr Cave to defeat a dangerous Web Mother. I traveled to Cronvangr Cave and found the spider's lair, defeating the Web Mother. I spoke to the heroes who bequeathed me their treasures before fading away.",
+        "string": "Ho raggiunto la locanda del Focolare Accogliente e ho letto un diario che parlava di due guerrieri che si erano avventurati nella caverna di Cronvangr per sconfiggere la pericolosa Madre della tela. Ho raggiunto la caverna di Cronvangr, ho trovato la tana del ragno e ho sconfitto la Madre della tela. Ho parlato con gli eroi che mi hanno affidato i loro tesori prima di sparire."
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "form_id": "05000805|ccbgssse069-contest.esl",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "I traveled to Candlehearth Hall and read a journal about two warriors, who traveled to Cronvangr Cave to defeat a dangerous spider. I should travel to the cave and find out what became of them.",
+        "string": "Ho raggiunto la locanda del Focolare Accogliente e ho letto un diario che parlava di due guerrieri che si erano avventurati nella caverna di Cronvangr per sconfiggere un pericoloso ragno. Devo raggiungere la caverna per scoprire cosa gli è successo."
     }
 ]

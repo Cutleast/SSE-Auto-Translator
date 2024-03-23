@@ -1,31 +1,23 @@
 [
     {
-        "editor_id": "ccBGSSSE061_ArmorBladesCuirass",
-        "form_id": "[05000801]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Dwarven Plate Armor",
-        "string": "Armure de plates dwemer"
-    },
-    {
         "editor_id": "ccBGSSSE061_ArmorBladesBoots",
-        "form_id": "[05000800]",
+        "form_id": "05000800|ccbgssse061-ba_dwarven.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Dwarven Plate Boots",
         "string": "Bottes de plates dwemers"
     },
     {
-        "editor_id": "ccBGSSSE061_Book9",
-        "form_id": "[0500081A]",
+        "editor_id": "ccBGSSSE061_ArmorBladesCuirass",
+        "form_id": "05000801|ccbgssse061-ba_dwarven.esl",
         "index": null,
-        "type": "BOOK DESC",
-        "original": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nThe Crimson Dirks\r\nBook Nine\r\n\r\n\r\nby \r\nGathers-the-Coin\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/T_letter.png'>yra had forgotten which heist was her favorite. Perhaps it was the time they stole a wagon's worth of silks from the desert palaces of Dune. Maybe it was when they burrowed a tunnel into the warehouse of the East Empire Company, siphoning crate after crate while the wardens stood mindlessly at the door. Or it could be she preferred the more violent raids, like the sacking of the Argonian supply caravans, or the attacks on cargo ships leaving the Imperial City waterfront. \r\n\r\nOr perhaps if she looked back far enough, her fondest memories would find her in the streets of Balmora, robbing travelers at knifepoint. For some reason it was this version of her, this long forgotten stranger, that seemed the most vivid now. Gone was the refined, thoughtful countenance of a leader, and in its place a hungry, ash-hewn child who had far more courage than sense. And if she closed her eyes, she could still feel the smooth, polished surface of the ruby the noble dropped in her palm, and how it felt like nothing of this world.\r\n\r\nYet it was not the price or the feel, but the color of the ruby that she remembered most; the blades of crimson burned into the glass, like the fire of the Red Mountain. \r\n\r\n\"Why do you think it is,\" she asked Aesrael, \"that our thoughts turn to the past when are lives are so close to death?\"\r\n\r\n\"I suppose because it's pointless for a dead man to look forward,\" replied the bandit, his Altmer frame filling the breadth of her doorway, \"but I take it you didn't summon me to talk about old times.\"\r\n\r\n\"Ehlhiel says the city guard knows about the hideout. They plan to raid the place in three days.\"\r\n\r\n\"So they will,\" Aesrael replied, his face unflinching, \"What of the spoils?\"\r\n\r\n\"We can't take it with us,\" Tyra lamented, \"but I'll be damned if I let them have it.  We give what we can to the beggars, and toss the rest into the bay before we leave.\" \r\n\r\n\"As you wish,\" said the High Elf, \"and where will you go?\"\r\n\r\n\"Our best chance is north,\" Tyra said, tracing her dagger up the map, \"The Jarls are fractured. It's only a matter of time before the whole province is at war. But we'll have to move in small groups, and find our own way once we cross the border. No contact.\"\r\n\r\nTyra knew Aesrael would take to the news better than the rest. While Bjormund, Skjol, and Peladius were the muscle, they always made an effort to bond with the group. The High Elf, on the other hand, never felt at ease with the other bandits. If this were any other business, perhaps she would've tried to reach him, but tenderness was not a virtue for killers and thieves.\r\n\r\nAesrael nodded and took his leave, leaving Tyra alone in the quiet. If this exchange taught her anything, she still needed a moment before telling the others. She had always been an expert at masking her emotions, but the sadness wore plainly on her face. Perhaps this situation called for that girl from Balmora, and not the weary woman who sat in her stead.\r\n\r\nSteeling herself, Tyra placed the dirk and the ruby in her pouch and stepped away from the map. They would head for the border tomorrow, leaving behind much of their past, but the future still unwritten.",
-        "string": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nLes Dagues Empourprées\r\nVolume IX\r\n\r\n\r\npar\r\nRamasse-pièces\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/T_letter.png'>yra avait oublié quel était son casse favori. Peut-être était-ce le jour où ils avaient dérobé un convoi entier de soie en provenance des palais du désert de Dune ? Ou était-ce lorsqu'ils avaient creusé un tunnel dans l'entrepôt de la Compagnie de l'Empire oriental, subtilisant caisse après caisse tandis que les gardes se tenaient, ignorants, devant la porte ? Ou bien préférait-elle les pillages plus violents, comme celui contre les caravanes d'approvisionnement argoniennes, ou les assauts contre les navires de marchandise quittant les quais de la cité impériale ?\r\n\r\nOu peut-être qu'en se plongeant plus profondément dans ses souvenirs les plus lointains, elle se souviendrait des rues de Balmora, lorsqu'elle extorquait les voyageurs en les menaçant avec un couteau. Étonnamment, c'était cette version d'elle-même, l'étrangère longtemps oubliée, qui semblait la plus vivace à présent. Elle avait remplacé la contenance raffinée et réfléchie d'un chef par l'attitude d'une enfant affamée au visage recouvert de poussière, qui faisait preuve de plus de courage que de bon sens. Et lorsqu'elle fermait les yeux, elle pouvait encore sentir la surface polie et lisse du rubis que le noble avait placé dans sa main, et le sentiment incomparable que cela lui avait procuré.\r\n\r\nPourtant, ce n'était pas sa valeur ou cette sensation qui la hantait le plus, mais plutôt sa couleur, ce pourpre profond scellé dans le verre, telles les flammes du Mont Écarlate.\r\n\r\n\"À ton avis,\" demanda-t-elle à Aesrael, \"pourquoi nos pensées se tournent vers le passé lorsque nous sommes si proches de la fin ?\"\r\n\r\n\"Je suppose que c'est parce qu'il est inutile pour un mort de se projeter vers l'avenir,\" répondit le bandit, sa stature d'Altmer emplissant toute la largeur de la porte, \"mais je suppose que tu ne m'as pas convoqué pour parler du passé.\"\r\n\r\n\"Ehlhiel raconte que la garde de la ville connaît notre planque. Ils prévoient de nous attaquer dans trois jours.\"\r\n\r\n\"Qu'il en soit ainsi,\" répliqua Aesrael, stoïque. \"Qu'en est-il du butin ?\"\r\n\r\n\"Nous ne pouvons l'emporter,\" ajouta Tyra, pleine de regrets, \"mais plutôt mourir que de leur laisser. Donnons tout ce qu'on peut aux mendiants et jetons le reste dans la baie avant de partir.\"\r\n\r\n\"Comme tu voudras,\" dit le Haut-Elfe. \"Et où iras-tu ?\"\r\n\r\n\"Notre meilleure chance de survie, c'est d'aller au nord,\" reprit Tyra, faisant glisser la pointe de sa dague vers le haut de la carte. \"Les jarls ne s'entendent pas. Ce n'est qu'une question de temps avant que la province tout entière n'entre en guerre. Mais il nous faudra voyager en petits groupes et vivre nos vies chacun de notre côté une fois que nous aurons traversé la frontière. Aucun contact.\"\r\n\r\nTyra savait qu'Aesrael accueillerait la nouvelle mieux que les autres. Bien que Bjormund, Skjol et Peladius étaient les bras du groupe, ils s’efforçaient toujours de nouer des liens avec chacun. Le Haut-Elfe, en revanche, ne s’était jamais senti à son aise avec les autres bandits. Si les choses n’étaient pas telles qu’elles sont, peut-être aurait-elle essayé de le contacter, mais l’affection n’est pas la vertu des tueurs et des voleurs. \r\n\r\nAesrael acquiesça, puis prit congé, laissant Tyra seule dans ce silence. Si cet échange lui avait bien appris une chose, c’est qu’elle avait encore besoin de temps avant d’annoncer la nouvelle aux autres. Elle avait toujours été très habile pour dissimuler ses émotions, mais sa tristesse se lisait dans son regard. Cette situation nécessitait peut-être de faire appel à la fillette de Balmora plutôt qu’à la femme lasse qu’elle était devenue. \r\n\r\nSe ressaisissant, Tyra plaça la dague et le rubis dans sa sacoche et s’éloigna de la carte. Ils se rendraient à la frontière le lendemain, tournant la page de leur passé, prêts à écrire un nouveau chapitre."
+        "type": "ARMO FULL",
+        "original": "Dwarven Plate Armor",
+        "string": "Armure de plates dwemer"
     },
     {
         "editor_id": "ccBGSSSE061_Note02",
-        "form_id": "[05000819]",
+        "form_id": "05000819|ccbgssse061-ba_dwarven.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "Casival's Note",
@@ -33,71 +25,63 @@
     },
     {
         "editor_id": "ccBGSSSE061_Book9",
-        "form_id": "[0500081A]",
+        "form_id": "0500081A|ccbgssse061-ba_dwarven.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "The Crimson Dirks, v9",
         "string": "Les Dagues Empourprées, vol. 9"
     },
     {
-        "editor_id": "ccBGSSSE061_Note02",
-        "form_id": "[05000819]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face='$HandwrittenFont'><font size='20'>\r\nOver the course of his life, a man wears many faces, and goes by many names. Son, father, fugitive, bandit. I never thought I would include \"Argonian writer\" among those titles, but so it goes. \r\n\r\nWhen Peladius taught me how to write, I didn't think I'd take to it the way I have. Maybe if the gods had given me a pen instead of a sword, I would've spent my life writing books instead of sacking caravans. Well, too late to whine about it now. \r\n\r\nAs for the name, it came from a conversation I had with Pale-Eyes one night at The Grey Mare in Chorrol. I asked him why Argonian names were so literal, and his reply was, \"Why aren't yours?\" \r\n\r\nI laughed, realizing I was bested. So I asked him to give me an Argonian name, one that suited someone of my ilk. \r\n\r\nAnd so from then on, I was Gathers-the-Coin.\r\n\r\nThe funny thing about an Argonian name is, I wasn't sure if it was meant to define the person I was or the one I aspired to be. I suppose the point is moot now. I'll probably die in this tower without a septim to my name. But at least if I keep writing, people will know our story, and know that we once lived.\r\n",
-        "string": "<font face='$HandwrittenFont'><font size='20'>\r\nAu cours de sa vie, un homme arbore plusieurs visages et de nombreux noms. Fils, père, fugitif, bandit. Je n'aurais jamais pensé inclure \"écrivain argonien\" parmi ces titres, mais qu'il en soit ainsi.\r\n\r\nLorsque Péladius m'a appris à écrire, je ne pensais pas que j'atteindrais ce niveau d'expertise. Peut-être que si les dieux m'avaient fourni une plume plutôt qu'une épée, j'aurais passé ma vie entière à écrire des livres plutôt que de piller des caravanes. Quoi qu'il en soit, l'heure n'est plus aux regrets.\r\n\r\nPour ce qui est de mon nom, il m'a été donné à la suite d'un entretien nocturne avec Yeux-Pâles, à La Jument grise à Chorrol. Je lui ai demandé pourquoi les noms des Argoniens étaient aussi littéraux. Il m'a répondu \"Et pourquoi les vôtres ne le sont pas ?\"\r\n\r\nJ'ai ri, avant de réaliser qu'il m'avait bien eu. Je lui ai donc demandé de m'attribuer un nom argonien qui pourrait correspondre à quelqu'un de mon acabit.\r\n\r\nDepuis ce jour, je suis devenu Ramasse-pièces.\r\n\r\nCe qui est drôle avec les noms argoniens, c'est qu'on ne sait jamais s'ils sont censés définir qui vous êtes ou qui vous aspirez à devenir. Je suppose que la question est réglée, à présent. Je vais probablement mourir dans cette tour, sans le sou, mais au moins, si je continue d'écrire, les gens connaîtront notre histoire et sauront que nous avons un jour existé.\r\n"
-    },
-    {
         "editor_id": "ccBGSSSE061_Note01",
-        "form_id": "[0500081B]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face='$HandwrittenFont'>\r\nThere's no good work in the Reach. The mines pay dung for wages and the farms even less than that. I thought I scored it big when I got a job working for this blind noble, but he fired me on account of me being a gloomy sort. He said he couldn't hear my smile. I don't even know what that means, my ears don't have teeth.\r\n\r\nAnyways, the short of it is, I'm tired of this life. I want some easy gold. There's an old tower south of here called Reachwind Eyrie that looks like it's full of loot. Me and a couple others are thinking about raiding the place and nabbing everything that isn't bolted down. \r\n\r\nIt's gonna be first come, first serve. But if any of you other worthless drunks want to lend a hand, we could always use more.</font>",
-        "string": "<font face='$HandwrittenFont'>\r\nIl n'y a pas de travail dans la Crevasse. Les mines proposent un cachet de misère et ne parlons même pas des fermes. Je pensais que j'allais m'enrichir lorsque j'ai décroché ce travail pour un noble aveugle, mais il s'est débarrassé de moi, m'accusant d'être trop mélancolique. Il prétendait ne pas pouvoir m'entendre sourire. Je ne sais même pas ce que cela veut dire, mais oreilles n'ont pas de dents.\r\n\r\nQuoi qu'il en soit, pour faire bref, j'en ai assez de cette vie. Je veux de l'argent facile. Il existe une ancienne tour au sud d'ici qu'on appelle l'Aire d'Âprevent. Elle semble regorger de butin. Un groupe de camarades et moi songeons à piller cet endroit et à nous emparer de tout ce qui tient encore debout.\r\n\r\nCe sera premier arrivé, premier servi. Toutefois, si d'autres bons à rien d'ivrognes souhaitaient nous prêter main-forte, ils seraient les bienvenus.</font>"
-    },
-    {
-        "editor_id": "ccBGSSSE061_Note01",
-        "form_id": "[0500081B]",
+        "form_id": "0500081B|ccbgssse061-ba_dwarven.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "Looter's Note",
         "string": "Note du pillard"
     },
     {
-        "editor_id": "ccBGSSSE061_Casival",
-        "form_id": "[0500081C]",
+        "editor_id": "ccBGSSSE061_Note01",
+        "form_id": "0500081B|ccbgssse061-ba_dwarven.esl",
         "index": null,
-        "type": "NPC_ FULL",
-        "original": "Casival",
-        "string": "Casival"
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nThere's no good work in the Reach. The mines pay dung for wages and the farms even less than that. I thought I scored it big when I got a job working for this blind noble, but he fired me on account of me being a gloomy sort. He said he couldn't hear my smile. I don't even know what that means, my ears don't have teeth.\r\n\r\nAnyways, the short of it is, I'm tired of this life. I want some easy gold. There's an old tower south of here called Reachwind Eyrie that looks like it's full of loot. Me and a couple others are thinking about raiding the place and nabbing everything that isn't bolted down. \r\n\r\nIt's gonna be first come, first serve. But if any of you other worthless drunks want to lend a hand, we could always use more.</font>",
+        "string": "<font face='$HandwrittenFont'>\r\nIl n'y a pas de travail dans la Crevasse. Les mines proposent un cachet de misère et ne parlons même pas des fermes. Je pensais que j'allais m'enrichir lorsque j'ai décroché ce travail pour un noble aveugle, mais il s'est débarrassé de moi, m'accusant d'être trop mélancolique. Il prétendait ne pas pouvoir m'entendre sourire. Je ne sais même pas ce que cela veut dire, mais oreilles n'ont pas de dents.\r\n\r\nQuoi qu'il en soit, pour faire bref, j'en ai assez de cette vie. Je veux de l'argent facile. Il existe une ancienne tour au sud d'ici qu'on appelle l'Aire d'Âprevent. Elle semble regorger de butin. Un groupe de camarades et moi songeons à piller cet endroit et à nous emparer de tout ce qui tient encore debout.\r\n\r\nCe sera premier arrivé, premier servi. Toutefois, si d'autres bons à rien d'ivrognes souhaitaient nous prêter main-forte, ils seraient les bienvenus.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE061_Note02",
+        "form_id": "05000819|ccbgssse061-ba_dwarven.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='20'>\r\nOver the course of his life, a man wears many faces, and goes by many names. Son, father, fugitive, bandit. I never thought I would include \"Argonian writer\" among those titles, but so it goes. \r\n\r\nWhen Peladius taught me how to write, I didn't think I'd take to it the way I have. Maybe if the gods had given me a pen instead of a sword, I would've spent my life writing books instead of sacking caravans. Well, too late to whine about it now. \r\n\r\nAs for the name, it came from a conversation I had with Pale-Eyes one night at The Grey Mare in Chorrol. I asked him why Argonian names were so literal, and his reply was, \"Why aren't yours?\" \r\n\r\nI laughed, realizing I was bested. So I asked him to give me an Argonian name, one that suited someone of my ilk. \r\n\r\nAnd so from then on, I was Gathers-the-Coin.\r\n\r\nThe funny thing about an Argonian name is, I wasn't sure if it was meant to define the person I was or the one I aspired to be. I suppose the point is moot now. I'll probably die in this tower without a septim to my name. But at least if I keep writing, people will know our story, and know that we once lived.\r\n",
+        "string": "<font face='$HandwrittenFont'><font size='20'>\r\nAu cours de sa vie, un homme arbore plusieurs visages et de nombreux noms. Fils, père, fugitif, bandit. Je n'aurais jamais pensé inclure \"écrivain argonien\" parmi ces titres, mais qu'il en soit ainsi.\r\n\r\nLorsque Péladius m'a appris à écrire, je ne pensais pas que j'atteindrais ce niveau d'expertise. Peut-être que si les dieux m'avaient fourni une plume plutôt qu'une épée, j'aurais passé ma vie entière à écrire des livres plutôt que de piller des caravanes. Quoi qu'il en soit, l'heure n'est plus aux regrets.\r\n\r\nPour ce qui est de mon nom, il m'a été donné à la suite d'un entretien nocturne avec Yeux-Pâles, à La Jument grise à Chorrol. Je lui ai demandé pourquoi les noms des Argoniens étaient aussi littéraux. Il m'a répondu \"Et pourquoi les vôtres ne le sont pas ?\"\r\n\r\nJ'ai ri, avant de réaliser qu'il m'avait bien eu. Je lui ai donc demandé de m'attribuer un nom argonien qui pourrait correspondre à quelqu'un de mon acabit.\r\n\r\nDepuis ce jour, je suis devenu Ramasse-pièces.\r\n\r\nCe qui est drôle avec les noms argoniens, c'est qu'on ne sait jamais s'ils sont censés définir qui vous êtes ou qui vous aspirez à devenir. Je suppose que la question est réglée, à présent. Je vais probablement mourir dans cette tour, sans le sou, mais au moins, si je continue d'écrire, les gens connaîtront notre histoire et sauront que nous avons un jour existé.\r\n"
+    },
+    {
+        "editor_id": "ccBGSSSE061_Book9",
+        "form_id": "0500081A|ccbgssse061-ba_dwarven.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nThe Crimson Dirks\r\nBook Nine\r\n\r\n\r\nby \r\nGathers-the-Coin\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/T_letter.png'>yra had forgotten which heist was her favorite. Perhaps it was the time they stole a wagon's worth of silks from the desert palaces of Dune. Maybe it was when they burrowed a tunnel into the warehouse of the East Empire Company, siphoning crate after crate while the wardens stood mindlessly at the door. Or it could be she preferred the more violent raids, like the sacking of the Argonian supply caravans, or the attacks on cargo ships leaving the Imperial City waterfront. \r\n\r\nOr perhaps if she looked back far enough, her fondest memories would find her in the streets of Balmora, robbing travelers at knifepoint. For some reason it was this version of her, this long forgotten stranger, that seemed the most vivid now. Gone was the refined, thoughtful countenance of a leader, and in its place a hungry, ash-hewn child who had far more courage than sense. And if she closed her eyes, she could still feel the smooth, polished surface of the ruby the noble dropped in her palm, and how it felt like nothing of this world.\r\n\r\nYet it was not the price or the feel, but the color of the ruby that she remembered most; the blades of crimson burned into the glass, like the fire of the Red Mountain. \r\n\r\n\"Why do you think it is,\" she asked Aesrael, \"that our thoughts turn to the past when are lives are so close to death?\"\r\n\r\n\"I suppose because it's pointless for a dead man to look forward,\" replied the bandit, his Altmer frame filling the breadth of her doorway, \"but I take it you didn't summon me to talk about old times.\"\r\n\r\n\"Ehlhiel says the city guard knows about the hideout. They plan to raid the place in three days.\"\r\n\r\n\"So they will,\" Aesrael replied, his face unflinching, \"What of the spoils?\"\r\n\r\n\"We can't take it with us,\" Tyra lamented, \"but I'll be damned if I let them have it.  We give what we can to the beggars, and toss the rest into the bay before we leave.\" \r\n\r\n\"As you wish,\" said the High Elf, \"and where will you go?\"\r\n\r\n\"Our best chance is north,\" Tyra said, tracing her dagger up the map, \"The Jarls are fractured. It's only a matter of time before the whole province is at war. But we'll have to move in small groups, and find our own way once we cross the border. No contact.\"\r\n\r\nTyra knew Aesrael would take to the news better than the rest. While Bjormund, Skjol, and Peladius were the muscle, they always made an effort to bond with the group. The High Elf, on the other hand, never felt at ease with the other bandits. If this were any other business, perhaps she would've tried to reach him, but tenderness was not a virtue for killers and thieves.\r\n\r\nAesrael nodded and took his leave, leaving Tyra alone in the quiet. If this exchange taught her anything, she still needed a moment before telling the others. She had always been an expert at masking her emotions, but the sadness wore plainly on her face. Perhaps this situation called for that girl from Balmora, and not the weary woman who sat in her stead.\r\n\r\nSteeling herself, Tyra placed the dirk and the ruby in her pouch and stepped away from the map. They would head for the border tomorrow, leaving behind much of their past, but the future still unwritten.",
+        "string": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nLes Dagues Empourprées\r\nVolume IX\r\n\r\n\r\npar\r\nRamasse-pièces\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/T_letter.png'>yra avait oublié quel était son casse favori. Peut-être était-ce le jour où ils avaient dérobé un convoi entier de soie en provenance des palais du désert de Dune ? Ou était-ce lorsqu'ils avaient creusé un tunnel dans l'entrepôt de la Compagnie de l'Empire oriental, subtilisant caisse après caisse tandis que les gardes se tenaient, ignorants, devant la porte ? Ou bien préférait-elle les pillages plus violents, comme celui contre les caravanes d'approvisionnement argoniennes, ou les assauts contre les navires de marchandise quittant les quais de la cité impériale ?\r\n\r\nOu peut-être qu'en se plongeant plus profondément dans ses souvenirs les plus lointains, elle se souviendrait des rues de Balmora, lorsqu'elle extorquait les voyageurs en les menaçant avec un couteau. Étonnamment, c'était cette version d'elle-même, l'étrangère longtemps oubliée, qui semblait la plus vivace à présent. Elle avait remplacé la contenance raffinée et réfléchie d'un chef par l'attitude d'une enfant affamée au visage recouvert de poussière, qui faisait preuve de plus de courage que de bon sens. Et lorsqu'elle fermait les yeux, elle pouvait encore sentir la surface polie et lisse du rubis que le noble avait placé dans sa main, et le sentiment incomparable que cela lui avait procuré.\r\n\r\nPourtant, ce n'était pas sa valeur ou cette sensation qui la hantait le plus, mais plutôt sa couleur, ce pourpre profond scellé dans le verre, telles les flammes du Mont Écarlate.\r\n\r\n\"À ton avis,\" demanda-t-elle à Aesrael, \"pourquoi nos pensées se tournent vers le passé lorsque nous sommes si proches de la fin ?\"\r\n\r\n\"Je suppose que c'est parce qu'il est inutile pour un mort de se projeter vers l'avenir,\" répondit le bandit, sa stature d'Altmer emplissant toute la largeur de la porte, \"mais je suppose que tu ne m'as pas convoqué pour parler du passé.\"\r\n\r\n\"Ehlhiel raconte que la garde de la ville connaît notre planque. Ils prévoient de nous attaquer dans trois jours.\"\r\n\r\n\"Qu'il en soit ainsi,\" répliqua Aesrael, stoïque. \"Qu'en est-il du butin ?\"\r\n\r\n\"Nous ne pouvons l'emporter,\" ajouta Tyra, pleine de regrets, \"mais plutôt mourir que de leur laisser. Donnons tout ce qu'on peut aux mendiants et jetons le reste dans la baie avant de partir.\"\r\n\r\n\"Comme tu voudras,\" dit le Haut-Elfe. \"Et où iras-tu ?\"\r\n\r\n\"Notre meilleure chance de survie, c'est d'aller au nord,\" reprit Tyra, faisant glisser la pointe de sa dague vers le haut de la carte. \"Les jarls ne s'entendent pas. Ce n'est qu'une question de temps avant que la province tout entière n'entre en guerre. Mais il nous faudra voyager en petits groupes et vivre nos vies chacun de notre côté une fois que nous aurons traversé la frontière. Aucun contact.\"\r\n\r\nTyra savait qu'Aesrael accueillerait la nouvelle mieux que les autres. Bien que Bjormund, Skjol et Peladius étaient les bras du groupe, ils s’efforçaient toujours de nouer des liens avec chacun. Le Haut-Elfe, en revanche, ne s’était jamais senti à son aise avec les autres bandits. Si les choses n’étaient pas telles qu’elles sont, peut-être aurait-elle essayé de le contacter, mais l’affection n’est pas la vertu des tueurs et des voleurs. \r\n\r\nAesrael acquiesça, puis prit congé, laissant Tyra seule dans ce silence. Si cet échange lui avait bien appris une chose, c’est qu’elle avait encore besoin de temps avant d’annoncer la nouvelle aux autres. Elle avait toujours été très habile pour dissimuler ses émotions, mais sa tristesse se lisait dans son regard. Cette situation nécessitait peut-être de faire appel à la fillette de Balmora plutôt qu’à la femme lasse qu’elle était devenue. \r\n\r\nSe ressaisissant, Tyra plaça la dague et le rubis dans sa sacoche et s’éloigna de la carte. Ils se rendraient à la frontière le lendemain, tournant la page de leur passé, prêts à écrire un nouveau chapitre."
     },
     {
         "editor_id": "ccBGSSSE061_LvlBanditBossOrcM",
-        "form_id": "[05000803]",
+        "form_id": "05000803|ccbgssse061-ba_dwarven.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Bandit Chief",
         "string": "Chef des bandits"
     },
     {
-        "editor_id": "MarkarthSilverBloodInn",
-        "form_id": "[00016DFE]",
+        "editor_id": "ccBGSSSE061_Casival",
+        "form_id": "0500081C|ccbgssse061-ba_dwarven.esl",
         "index": null,
-        "type": "CELL FULL",
-        "original": "Silver-Blood Inn",
-        "string": "Auberge du Sang-d'Argent"
-    },
-    {
-        "editor_id": "ReachwindEyrie01",
-        "form_id": "[000399D1]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Reachwind Eyrie",
-        "string": "Aire d'Âprevent"
+        "type": "NPC_ FULL",
+        "original": "Casival",
+        "string": "Casival"
     },
     {
         "editor_id": "Tamriel",
-        "form_id": "[0000003C]",
+        "form_id": "0000003C|Skyrim.esm",
         "index": null,
         "type": "WRLD FULL",
         "original": "Skyrim",
@@ -105,23 +89,23 @@
     },
     {
         "editor_id": "ccBGSSSE061_Quest",
-        "form_id": "[05000829]",
-        "index": 88,
+        "form_id": "05000829|ccbgssse061-ba_dwarven.esl",
+        "index": 83,
         "type": "QUST CNAM",
-        "original": "Inns across Skyrim are typically a good place to find work. I found a note left by a patron at the Silver-Blood Inn that mentioned some decent loot might be found at Reachwind Eyrie to the south. When I arrived, I was attacked by three looters. At the top of the tower, I found the body of a bandit.",
-        "string": "Les auberges de Bordeciel sont, en général, de bons endroits où trouver du travail. J'ai découvert une note laissée par un client à l'auberge du Sang-d'Argent qui indiquait qu'il restait du butin de valeur enfoui au sud, vers l'Aire d'Âprevent. Une fois sur place, trois pillards s'en sont pris à moi. Au sommet de la tour, j'ai trouvé la dépouille d'un bandit."
+        "original": "Inns across Skyrim are typically a good place to find work. I found a note left by a patron at the Silver-Blood Inn that mentions some decent loot might be found at Reachwind Eyrie to the south.",
+        "string": "Les auberges de Bordeciel sont, en général, de bons endroits où trouver du travail. J'ai découvert une note laissée par un client à l'auberge du Sang-d'Argent qui indique qu'il reste du butin de valeur enfoui au sud, vers l'Aire d'Âprevent."
     },
     {
         "editor_id": "ccBGSSSE061_Quest",
-        "form_id": "[05000829]",
-        "index": 87,
+        "form_id": "05000829|ccbgssse061-ba_dwarven.esl",
+        "index": 79,
         "type": "QUST CNAM",
-        "original": "Inns across Skyrim are typically a good place to find work. I found a note left by a patron at the Silver-Blood Inn that mentioned some decent loot might be found at Reachwind Eyrie to the south. When I arrived, I was attacked by three looters. At the top of the tower, I found the body of a bandit and pieces of Dwarven Plate armor.",
-        "string": "Les auberges de Bordeciel sont, en général, de bons endroits où trouver du travail. J'ai découvert une note laissée par un client à l'auberge du Sang-d'Argent qui indiquait qu'il restait du butin de valeur enfoui au sud, vers l'Aire d'Âprevent. Une fois sur place, trois pillards s'en sont pris à moi. Au sommet de la tour, j'ai trouvé la dépouille d'un bandit et des morceaux d'armure de plates dwemer."
+        "original": "Inns across Skyrim are typically a good place to find work. Should I find myself in Markarth, I should stop by the Silver-Blood Inn and see if I can't come across any news or rumors.",
+        "string": "Les auberges de Bordeciel sont, en général, de bons endroits où trouver du travail. Si je devais me trouver à Markarth, je ferais bien de faire une halte à l'auberge du Sang-d'Argent pour y apprendre les dernières nouvelles ou rumeurs."
     },
     {
         "editor_id": "ccBGSSSE061_Quest",
-        "form_id": "[05000829]",
+        "form_id": "05000829|ccbgssse061-ba_dwarven.esl",
         "index": 30,
         "type": "QUST NNAM",
         "original": "Pick up the leftover loot",
@@ -129,15 +113,23 @@
     },
     {
         "editor_id": "ccBGSSSE061_Quest",
-        "form_id": "[05000829]",
-        "index": 95,
+        "form_id": "05000829|ccbgssse061-ba_dwarven.esl",
+        "index": 65,
         "type": "QUST CNAM",
-        "original": "Inns across Skyrim are typically a good place to find work. I found a note left by a patron at the Silver-Blood Inn that mentions some decent loot might be found at Reachwind Eyrie to the south.",
-        "string": "Les auberges de Bordeciel sont, en général, de bons endroits où trouver du travail. J'ai découvert une note laissée par un client à l'auberge du Sang-d'Argent qui indique qu'il reste du butin de valeur enfoui au sud, vers l'Aire d'Âprevent."
+        "original": "Inns across Skyrim are typically a good place to find work. I found a note left by a patron at the Silver-Blood Inn that mentioned some decent loot might be found at Reachwind Eyrie to the south. When I arrived, I was attacked by three looters. At the top of the tower, I found the body of a bandit.",
+        "string": "Les auberges de Bordeciel sont, en général, de bons endroits où trouver du travail. J'ai découvert une note laissée par un client à l'auberge du Sang-d'Argent qui indiquait qu'il restait du butin de valeur enfoui au sud, vers l'Aire d'Âprevent. Une fois sur place, trois pillards s'en sont pris à moi. Au sommet de la tour, j'ai trouvé la dépouille d'un bandit."
+    },
+    {
+        "editor_id": "ccBGSSSE061_Quest",
+        "form_id": "05000829|ccbgssse061-ba_dwarven.esl",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Mightier than the Sword",
+        "string": "Plus puissante que l'épée"
     },
     {
         "editor_id": "ccBGSSSE061_MiscQuest",
-        "form_id": "[0500082B]",
+        "form_id": "0500082B|ccbgssse061-ba_dwarven.esl",
         "index": 10,
         "type": "QUST NNAM",
         "original": "Investigate the Silver-Blood Inn for rumors",
@@ -145,23 +137,7 @@
     },
     {
         "editor_id": "ccBGSSSE061_Quest",
-        "form_id": "[05000829]",
-        "index": null,
-        "type": "QUST FULL",
-        "original": "Mightier than the Sword",
-        "string": "Plus puissante que l'épée"
-    },
-    {
-        "editor_id": "ccBGSSSE061_Quest",
-        "form_id": "[05000829]",
-        "index": 76,
-        "type": "QUST CNAM",
-        "original": "Inns across Skyrim are typically a good place to find work. Should I find myself in Markarth, I should stop by the Silver-Blood Inn and see if I can't come across any news or rumors.",
-        "string": "Les auberges de Bordeciel sont, en général, de bons endroits où trouver du travail. Si je devais me trouver à Markarth, je ferais bien de faire une halte à l'auberge du Sang-d'Argent pour y apprendre les dernières nouvelles ou rumeurs."
-    },
-    {
-        "editor_id": "ccBGSSSE061_Quest",
-        "form_id": "[05000829]",
+        "form_id": "05000829|ccbgssse061-ba_dwarven.esl",
         "index": 20,
         "type": "QUST NNAM",
         "original": "Search the tower at Reachwind Eyrie",
@@ -169,7 +145,7 @@
     },
     {
         "editor_id": "ccBGSSSE061_Quest",
-        "form_id": "[05000829]",
+        "form_id": "05000829|ccbgssse061-ba_dwarven.esl",
         "index": 10,
         "type": "QUST NNAM",
         "original": "Investigate the Silver-Blood Inn for rumors",
@@ -177,17 +153,17 @@
     },
     {
         "editor_id": "ccBGSSSE061_DisplayName",
-        "form_id": "[0500082A]",
+        "form_id": "0500082A|ccbgssse061-ba_dwarven.esl",
         "index": null,
-        "type": "MESG FULL",
+        "type": "MESG DESC",
         "original": "Looter",
         "string": "Pillard"
     },
     {
         "editor_id": "ccBGSSSE061_DisplayName",
-        "form_id": "[0500082A]",
+        "form_id": "0500082A|ccbgssse061-ba_dwarven.esl",
         "index": null,
-        "type": "MESG DESC",
+        "type": "MESG FULL",
         "original": "Looter",
         "string": "Pillard"
     }

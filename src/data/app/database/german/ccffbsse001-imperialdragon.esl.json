@@ -1,15 +1,7 @@
 [
     {
-        "editor_id": "ccFFBSSE001_FortifyHealth",
-        "form_id": "[05000839]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Adds <mag> points to health and armor.",
-        "string": "Fügt Gesundheit und Rüstung <mag> Punkte hinzu."
-    },
-    {
         "editor_id": "ccFFBSSE001_StormBearSwordEffect",
-        "form_id": "[05000833]",
+        "form_id": "05000833|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "Target takes <mag> points of frost damage to health and stamina. Has a chance to shatter enemies below <20%> health.",
@@ -17,375 +9,31 @@
     },
     {
         "editor_id": "ccFFBSSE001EnchAkatoshTalonFFC",
-        "form_id": "[05000805]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Fire Damage",
-        "string": "Feuerschaden"
-    },
-    {
-        "editor_id": "ccFFBSSE001_FortifyStaminaRegen",
-        "form_id": "[05000836]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Stamina regeneration increased by <mag>%.",
-        "string": "Erhöht Ausdauerregeneration um <mag> Prozent."
-    },
-    {
-        "editor_id": "ccFFBSSE001_FortifyShoutCooldown",
-        "form_id": "[05000837]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Inner Spirit: Hawk",
-        "string": "Innerer Geist: Falke"
-    },
-    {
-        "editor_id": "ccFFBSSE001_StormBearAxeEffect",
-        "form_id": "[05000831]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Target takes <mag> points of frost damage to health and stamina.",
-        "string": "Das Ziel erleidet <mag> Punkte Frostschaden auf Gesundheit und Ausdauer."
-    },
-    {
-        "editor_id": "ccFFBSSE001AkatoshAspectEffect",
-        "form_id": "[0500080F]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "You become invulnerable for <dur> seconds.",
-        "string": "Du wirst <dur> Sekunden lang unverwundbar."
-    },
-    {
-        "editor_id": "ccFFBSSE001EnchIDCuirassConstantSelf",
-        "form_id": "[0500080C]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Elemental Adaptation",
-        "string": "Elementare Adaption"
-    },
-    {
-        "editor_id": "ccFFBSSE001EnchIDHelmetConstantSelf",
-        "form_id": "[05000807]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "When low on health, has a chance to give the wearer <Ebonyflesh>, increasing defense.",
-        "string": "Bei niedriger Gesundheit besteht die Chance, dem Träger <Ebenerzhaut> zu verleihen und die Verteidigung zu erhöhen."
-    },
-    {
-        "editor_id": "ccFFBSSE001StopTimeSelfConstant",
-        "form_id": "[05000806]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Stop Time",
-        "string": "Zeit anhalten"
-    },
-    {
-        "editor_id": "ccFFBSSE001_FreezeBashEffect",
-        "form_id": "[05000835]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Freeze Bash",
-        "string": "Frostschlag"
-    },
-    {
-        "editor_id": "ccFFBSSE001AkatoshTalonAbEffect",
-        "form_id": "[05000809]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Akatosh's Talon",
-        "string": "Akatoshs Kralle"
-    },
-    {
-        "editor_id": "ccFFBSSE001_StormBearGauntletsEffect",
-        "form_id": "[05000813]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Power attack stamina cost is reduced by <20>%.",
-        "string": "Die Ausdauerkosten mächtiger Angriffe werden um <20> Prozent verringert."
-    },
-    {
-        "editor_id": "ccFFBSSE001EnchIDShieldConstantSelf",
-        "form_id": "[05000804]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Bashing stops time for a brief moment. Increases magic resistance by <mag>%.",
-        "string": "Gegenangriffe halten die Zeit einen kurzen Augenblick lang an. Erhöht die Magieresistenz um <mag> Prozent."
-    },
-    {
-        "editor_id": "ccFFBSSE001EnchAkatoshTalonFFC",
-        "form_id": "[05000805]",
+        "form_id": "05000805|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "Burns the target for <mag> damage. Targets on fire take extra damage.",
         "string": "Steckt das Ziel für <mag> Schaden in Brand. Brennende Ziele erleiden zusätzlichen Schaden."
     },
     {
-        "editor_id": "ccFFBSSE001_ArmorFFSelf75",
-        "form_id": "[05000965]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Improves the caster's armor rating by <mag> points for <dur> seconds.",
-        "string": "Steigert den Rüstungswert des Zaubernden <dur> Sekunden lang um <mag> Punkte."
-    },
-    {
-        "editor_id": "ccFFBSSE001_FortifyStaminaRegenHidden",
-        "form_id": "[05000815]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Inner Spirit: Wolf",
-        "string": "Innerer Geist: Wolf"
-    },
-    {
-        "editor_id": "ccFFBSSE001_SummonWolfTrigger",
-        "form_id": "[05000812]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Summon Wolf Spirit",
-        "string": "Wolfsgeist herbeirufen"
-    },
-    {
         "editor_id": "ccFFBSSE001_ShatterFFContact",
-        "form_id": "[05000832]",
+        "form_id": "05000832|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Shatter",
         "string": "Zerschmettern"
     },
     {
-        "editor_id": "ccFFBSSE001_FortifyShoutCooldownHidden",
-        "form_id": "[0500080B]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Inner Spirit: Hawk",
-        "string": "Innerer Geist: Falke"
-    },
-    {
-        "editor_id": "ccFFBSSE001_FortifyHealthHidden",
-        "form_id": "[05000838]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Inner Spirit: Bear",
-        "string": "Innerer Geist: Bär"
-    },
-    {
         "editor_id": "ccFFBSSE001EnchIDShieldConstantSelf",
-        "form_id": "[05000804]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Imperial Dragon Shield",
-        "string": "Kaiserlicher Drachenschild"
-    },
-    {
-        "editor_id": "ccFFBSSE001DragonsOathDamage",
-        "form_id": "[05000810]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Fire Damage",
-        "string": "Feuerschaden"
-    },
-    {
-        "editor_id": "ccFFBSSE001EnchResistShocktCSHidden",
-        "form_id": "[05000803]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Resist Shock",
-        "string": "Blitzresistenz"
-    },
-    {
-        "editor_id": "ccFFBSSE001_FortifyHealth",
-        "form_id": "[05000839]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Inner Spirit: Bear",
-        "string": "Innerer Geist: Bär"
-    },
-    {
-        "editor_id": "ccFFBSSE001AkatoshAspectEffect",
-        "form_id": "[0500080F]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Akatosh's Aspect",
-        "string": "Akatoshs Form"
-    },
-    {
-        "editor_id": "ccFFBSSE001_ArmorFFSelf75",
-        "form_id": "[05000965]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Armor - Ebony",
-        "string": "Rüstung - Ebenerz"
-    },
-    {
-        "editor_id": "ccFFBSSE001EnchIDBootConstantSelf",
-        "form_id": "[05000808]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Elemental Resistance",
-        "string": "Elementarresistenz"
-    },
-    {
-        "editor_id": "ccFFBSSE001_FortifyStaminaRegen",
-        "form_id": "[05000836]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Inner Spirit: Wolf",
-        "string": "Innerer Geist: Wolf"
-    },
-    {
-        "editor_id": "ccFFBSSE001_FortifyArmorRating",
-        "form_id": "[0500083A]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Fortify Armor Rating",
-        "string": "Rüstung verstärken"
-    },
-    {
-        "editor_id": "ccFFBSSE001EnchIDCuirassConstantSelf",
-        "form_id": "[0500080C]",
+        "form_id": "05000804|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "MGEF DNAM",
-        "original": "After being hit by an element of magic it becomes imbued with it. <50>% Resistance to the imbued element.",
-        "string": "Nach einem Treffer durch ein magisches Element wird es davon durchdrungen. Widerstand von <50> Prozent gegen das durchdrungene Element."
-    },
-    {
-        "editor_id": "ccFFBSSE001_SummonWolfSpirit",
-        "form_id": "[0500080E]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Wolf Spirit",
-        "string": "Wolfsgeist"
-    },
-    {
-        "editor_id": "ccFFBSSE001_StormBearHelmetEffect",
-        "form_id": "[05000814]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Fortify Armor",
-        "string": "Rüstung verstärken"
-    },
-    {
-        "editor_id": "ccFFBSSE001EnchIDHelmetConstantSelf",
-        "form_id": "[05000807]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Akatosh's Aspect",
-        "string": "Akatoshs Form"
-    },
-    {
-        "editor_id": "ccFFBSSE001EnchIDGauntletsConstantSelf",
-        "form_id": "[0500080D]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Increases melee damage by <10>%.",
-        "string": "Erhöht den Nahkampfschaden um <10> Prozent."
-    },
-    {
-        "editor_id": "ccFFBSSE001_StormBearCuirassEffect",
-        "form_id": "[0500082B]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Inner Spirit",
-        "string": "Innerer Geist"
-    },
-    {
-        "editor_id": "ccFFBSSE001_SummonBearSpirit",
-        "form_id": "[05000834]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Bear Spirit",
-        "string": "Bärengeist"
-    },
-    {
-        "editor_id": "ccFFBSSE001EnchDragonsOathFFC",
-        "form_id": "[05000802]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Dragon's Oath",
-        "string": "Dracheneid"
-    },
-    {
-        "editor_id": "ccFFBSSE001_StormBearAxeEffect",
-        "form_id": "[05000831]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Berserk Frost",
-        "string": "Kampfrausch-Frost"
-    },
-    {
-        "editor_id": "ccFFBSSE001_StormBearShieldEffect",
-        "form_id": "[0500082E]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Storm Bash",
-        "string": "Sturmgegenangriff"
-    },
-    {
-        "editor_id": "ccFFBSSE001EnchResistFrostCSHidden",
-        "form_id": "[05000830]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Resist Frost",
-        "string": "Frostresistenz"
-    },
-    {
-        "editor_id": "ccFFBSSE001EnchResistFireCSHidden",
-        "form_id": "[0500080A]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Resist Fire",
-        "string": "Feuerresistenz"
-    },
-    {
-        "editor_id": "ccFFBSSE001_BerserkChargeControl",
-        "form_id": "[0500083B]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Berserk",
-        "string": "Kampfrausch"
-    },
-    {
-        "editor_id": "ccFFBSSE001_StormBearHelmetEffect",
-        "form_id": "[05000814]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "When wearing the <Storm-Bear Armor>, grants increases to armor rating.",
-        "string": "Das Tragen der <Sturmbärenrüstung> verleiht eine Erhöhung des Rüstungswerts."
-    },
-    {
-        "editor_id": "ccFFBSSE001EnchDragonsOathFFC",
-        "form_id": "[05000802]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Deals <10> fire damage, increasing damage with each successive hit to the same target.",
-        "string": "Verursacht <10> Feuerschaden und erhöht den Schaden bei jedem aufeinanderfolgenden Treffer desselben Ziels."
-    },
-    {
-        "editor_id": "ccFFBSSE001DragonsOathDamage",
-        "form_id": "[05000810]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Burns the target for <mag> damage. Targets on fire take extra damage.",
-        "string": "Steckt das Ziel für <mag> Schaden in Brand. Brennende Ziele erleiden zusätzlichen Schaden."
-    },
-    {
-        "editor_id": "ccFFBSSE001EnchIDBootConstantSelf",
-        "form_id": "[05000808]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Adds <mag>% to the elemental resistance of the <Imperial Dragon Armor>.",
-        "string": "Fügt der Elementarresistenz der <Kaiserlichen Drachenrüstung> <mag> Prozent hinzu."
-    },
-    {
-        "editor_id": "ccFFBSSE001_StormBearBootsEffect",
-        "form_id": "[0500082F]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Inner Spirit Boost",
-        "string": "Innerer-Geist-Verstärkung"
+        "original": "Bashing stops time for a brief moment. Increases magic resistance by <mag>%.",
+        "string": "Gegenangriffe halten die Zeit einen kurzen Augenblick lang an. Erhöht die Magieresistenz um <mag> Prozent."
     },
     {
         "editor_id": "ccFFBSSE001_StormBearGauntletsEffect",
-        "form_id": "[05000813]",
+        "form_id": "05000813|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Fortify Power Attacks",
@@ -393,23 +41,135 @@
     },
     {
         "editor_id": "ccFFBSSE001_StormBearSwordEffect",
-        "form_id": "[05000833]",
+        "form_id": "05000833|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Shattering Frost",
         "string": "Zerschmetternder Frost"
     },
     {
-        "editor_id": "ccFFBSSE001_StormBearShieldEffect",
-        "form_id": "[0500082E]",
+        "editor_id": "ccFFBSSE001EnchAkatoshTalonFFC",
+        "form_id": "05000805|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fire Damage",
+        "string": "Feuerschaden"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearHelmetEffect",
+        "form_id": "05000814|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "MGEF DNAM",
-        "original": "Doubles damage from bashing.",
-        "string": "Verdoppelt den Schaden durch Gegenangriffe."
+        "original": "When wearing the <Storm-Bear Armor>, grants increases to armor rating.",
+        "string": "Das Tragen der <Sturmbärenrüstung> verleiht eine Erhöhung des Rüstungswerts."
+    },
+    {
+        "editor_id": "ccFFBSSE001EnchResistFrostCSHidden",
+        "form_id": "05000830|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Resist Frost",
+        "string": "Frostresistenz"
+    },
+    {
+        "editor_id": "ccFFBSSE001_FortifyStaminaRegenHidden",
+        "form_id": "05000815|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Inner Spirit: Wolf",
+        "string": "Innerer Geist: Wolf"
+    },
+    {
+        "editor_id": "ccFFBSSE001EnchIDShieldConstantSelf",
+        "form_id": "05000804|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Imperial Dragon Shield",
+        "string": "Kaiserlicher Drachenschild"
+    },
+    {
+        "editor_id": "ccFFBSSE001_FortifyStaminaRegen",
+        "form_id": "05000836|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Stamina regeneration increased by <mag>%.",
+        "string": "Erhöht Ausdauerregeneration um <mag> Prozent."
+    },
+    {
+        "editor_id": "ccFFBSSE001EnchDragonsOathFFC",
+        "form_id": "05000802|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Deals <10> fire damage, increasing damage with each successive hit to the same target.",
+        "string": "Verursacht <10> Feuerschaden und erhöht den Schaden bei jedem aufeinanderfolgenden Treffer desselben Ziels."
+    },
+    {
+        "editor_id": "ccFFBSSE001StopTimeSelfConstant",
+        "form_id": "05000806|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Stop Time",
+        "string": "Zeit anhalten"
+    },
+    {
+        "editor_id": "ccFFBSSE001DragonsOathDamage",
+        "form_id": "05000810|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Burns the target for <mag> damage. Targets on fire take extra damage.",
+        "string": "Steckt das Ziel für <mag> Schaden in Brand. Brennende Ziele erleiden zusätzlichen Schaden."
+    },
+    {
+        "editor_id": "ccFFBSSE001EnchIDGauntletsConstantSelf",
+        "form_id": "0500080D|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Increases melee damage by <10>%.",
+        "string": "Erhöht den Nahkampfschaden um <10> Prozent."
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearHelmetEffect",
+        "form_id": "05000814|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fortify Armor",
+        "string": "Rüstung verstärken"
+    },
+    {
+        "editor_id": "ccFFBSSE001_SummonWolfTrigger",
+        "form_id": "05000812|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Summon Wolf Spirit",
+        "string": "Wolfsgeist herbeirufen"
+    },
+    {
+        "editor_id": "ccFFBSSE001_FortifyStaminaRegen",
+        "form_id": "05000836|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Inner Spirit: Wolf",
+        "string": "Innerer Geist: Wolf"
+    },
+    {
+        "editor_id": "ccFFBSSE001EnchDragonsOathFFC",
+        "form_id": "05000802|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Dragon's Oath",
+        "string": "Dracheneid"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearCuirassEffect",
+        "form_id": "0500082B|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Inner Spirit",
+        "string": "Innerer Geist"
     },
     {
         "editor_id": "ccFFBSSE001_FortifyShoutCooldown",
-        "form_id": "[05000837]",
+        "form_id": "05000837|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "Shout cooldown reduced by <25>%.",
@@ -417,503 +177,751 @@
     },
     {
         "editor_id": "ccFFBSSE001EnchIDGauntletsConstantSelf",
-        "form_id": "[0500080D]",
+        "form_id": "0500080D|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Fortify Melee Damage",
         "string": "Nahkampfschaden erhöhen"
     },
     {
+        "editor_id": "ccFFBSSE001_FreezeBashEffect",
+        "form_id": "05000835|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Freeze Bash",
+        "string": "Frostschlag"
+    },
+    {
+        "editor_id": "ccFFBSSE001DragonsOathDamage",
+        "form_id": "05000810|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fire Damage",
+        "string": "Feuerschaden"
+    },
+    {
         "editor_id": "ccFFBSSE001_StormBearBootsEffect",
-        "form_id": "[0500082F]",
+        "form_id": "0500082F|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "<Storm-Bear Armor> bonuses increased by <50>%. Increases Frost Resistance by <25>%.",
         "string": "<Sturmbärenrüstungs>-Boni werden um <50> Prozent erhöht. Die Frostresistenz wird um <25> Prozent erhöht."
     },
     {
+        "editor_id": "ccFFBSSE001_FortifyShoutCooldown",
+        "form_id": "05000837|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Inner Spirit: Hawk",
+        "string": "Innerer Geist: Falke"
+    },
+    {
+        "editor_id": "ccFFBSSE001EnchIDCuirassConstantSelf",
+        "form_id": "0500080C|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "After being hit by an element of magic it becomes imbued with it. <50>% Resistance to the imbued element.",
+        "string": "Nach einem Treffer durch ein magisches Element wird es davon durchdrungen. Widerstand von <50> Prozent gegen das durchdrungene Element."
+    },
+    {
+        "editor_id": "ccFFBSSE001_FortifyHealth",
+        "form_id": "05000839|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Adds <mag> points to health and armor.",
+        "string": "Fügt Gesundheit und Rüstung <mag> Punkte hinzu."
+    },
+    {
+        "editor_id": "ccFFBSSE001_SummonWolfSpirit",
+        "form_id": "0500080E|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Wolf Spirit",
+        "string": "Wolfsgeist"
+    },
+    {
+        "editor_id": "ccFFBSSE001EnchResistFireCSHidden",
+        "form_id": "0500080A|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Resist Fire",
+        "string": "Feuerresistenz"
+    },
+    {
+        "editor_id": "ccFFBSSE001_FortifyHealthHidden",
+        "form_id": "05000838|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Inner Spirit: Bear",
+        "string": "Innerer Geist: Bär"
+    },
+    {
+        "editor_id": "ccFFBSSE001_ArmorFFSelf75",
+        "form_id": "05000965|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Improves the caster's armor rating by <mag> points for <dur> seconds.",
+        "string": "Steigert den Rüstungswert des Zaubernden <dur> Sekunden lang um <mag> Punkte."
+    },
+    {
+        "editor_id": "ccFFBSSE001_FortifyShoutCooldownHidden",
+        "form_id": "0500080B|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Inner Spirit: Hawk",
+        "string": "Innerer Geist: Falke"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearBootsEffect",
+        "form_id": "0500082F|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Inner Spirit Boost",
+        "string": "Innerer-Geist-Verstärkung"
+    },
+    {
+        "editor_id": "ccFFBSSE001_FortifyHealth",
+        "form_id": "05000839|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Inner Spirit: Bear",
+        "string": "Innerer Geist: Bär"
+    },
+    {
+        "editor_id": "ccFFBSSE001_BerserkChargeControl",
+        "form_id": "0500083B|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Berserk",
+        "string": "Kampfrausch"
+    },
+    {
+        "editor_id": "ccFFBSSE001EnchIDCuirassConstantSelf",
+        "form_id": "0500080C|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Elemental Adaptation",
+        "string": "Elementare Adaption"
+    },
+    {
+        "editor_id": "ccFFBSSE001_ArmorFFSelf75",
+        "form_id": "05000965|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Armor - Ebony",
+        "string": "Rüstung - Ebenerz"
+    },
+    {
+        "editor_id": "ccFFBSSE001EnchIDBootConstantSelf",
+        "form_id": "05000808|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Adds <mag>% to the elemental resistance of the <Imperial Dragon Armor>.",
+        "string": "Fügt der Elementarresistenz der <Kaiserlichen Drachenrüstung> <mag> Prozent hinzu."
+    },
+    {
+        "editor_id": "ccFFBSSE001_FortifyArmorRating",
+        "form_id": "0500083A|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fortify Armor Rating",
+        "string": "Rüstung verstärken"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearAxeEffect",
+        "form_id": "05000831|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Target takes <mag> points of frost damage to health and stamina.",
+        "string": "Das Ziel erleidet <mag> Punkte Frostschaden auf Gesundheit und Ausdauer."
+    },
+    {
+        "editor_id": "ccFFBSSE001AkatoshTalonAbEffect",
+        "form_id": "05000809|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Akatosh's Talon",
+        "string": "Akatoshs Kralle"
+    },
+    {
         "editor_id": "ccFFBSSE001_SummonBearTrigger",
-        "form_id": "[05000811]",
+        "form_id": "05000811|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Summon Bear Spirit",
         "string": "Bärengeist herbeirufen"
     },
     {
+        "editor_id": "ccFFBSSE001_StormBearAxeEffect",
+        "form_id": "05000831|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Berserk Frost",
+        "string": "Kampfrausch-Frost"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearShieldEffect",
+        "form_id": "0500082E|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Doubles damage from bashing.",
+        "string": "Verdoppelt den Schaden durch Gegenangriffe."
+    },
+    {
+        "editor_id": "ccFFBSSE001EnchIDBootConstantSelf",
+        "form_id": "05000808|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Elemental Resistance",
+        "string": "Elementarresistenz"
+    },
+    {
+        "editor_id": "ccFFBSSE001_SummonBearSpirit",
+        "form_id": "05000834|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Bear Spirit",
+        "string": "Bärengeist"
+    },
+    {
+        "editor_id": "ccFFBSSE001EnchIDHelmetConstantSelf",
+        "form_id": "05000807|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "When low on health, has a chance to give the wearer <Ebonyflesh>, increasing defense.",
+        "string": "Bei niedriger Gesundheit besteht die Chance, dem Träger <Ebenerzhaut> zu verleihen und die Verteidigung zu erhöhen."
+    },
+    {
+        "editor_id": "ccFFBSSE001AkatoshAspectEffect",
+        "form_id": "0500080F|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "You become invulnerable for <dur> seconds.",
+        "string": "Du wirst <dur> Sekunden lang unverwundbar."
+    },
+    {
         "editor_id": "ccFFBSSE001_EnchFortifyHeavyArmorConstantSelfNoDescript",
-        "form_id": "[05000962]",
+        "form_id": "05000962|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Fortify Heavy Armor",
         "string": "Schwere Rüstung verstärken"
     },
     {
-        "editor_id": "ccFFBSSE001ImperialDragonHelmetEnch",
-        "form_id": "[0500083F]",
+        "editor_id": "ccFFBSSE001_StormBearShieldEffect",
+        "form_id": "0500082E|ccffbsse001-imperialdragon.esl",
         "index": null,
-        "type": "ENCH FULL",
-        "original": "Imperial Dragon Helmet",
-        "string": "Kaiserlicher Drachenhelm"
+        "type": "MGEF FULL",
+        "original": "Storm Bash",
+        "string": "Sturmgegenangriff"
     },
     {
-        "editor_id": "ccFFBSSE001ImperialDragonShieldEnch",
-        "form_id": "[05000840]",
+        "editor_id": "ccFFBSSE001EnchIDHelmetConstantSelf",
+        "form_id": "05000807|ccffbsse001-imperialdragon.esl",
         "index": null,
-        "type": "ENCH FULL",
-        "original": "Imperial Dragon Shield",
-        "string": "Kaiserlicher Drachenschild"
+        "type": "MGEF FULL",
+        "original": "Akatosh's Aspect",
+        "string": "Akatoshs Form"
     },
     {
-        "editor_id": "ccFFBSSE001_StormBearCuirassEnch",
-        "form_id": "[0500081D]",
+        "editor_id": "ccFFBSSE001_StormBearGauntletsEffect",
+        "form_id": "05000813|ccffbsse001-imperialdragon.esl",
         "index": null,
-        "type": "ENCH FULL",
-        "original": "Storm-Bear Cuirass",
-        "string": "Sturmbärenbrustpanzer"
+        "type": "MGEF DNAM",
+        "original": "Power attack stamina cost is reduced by <20>%.",
+        "string": "Die Ausdauerkosten mächtiger Angriffe werden um <20> Prozent verringert."
     },
     {
-        "editor_id": "ccFFBSSE001_StormBearBootsEnch",
-        "form_id": "[0500081B]",
+        "editor_id": "ccFFBSSE001AkatoshAspectEffect",
+        "form_id": "0500080F|ccffbsse001-imperialdragon.esl",
         "index": null,
-        "type": "ENCH FULL",
-        "original": "Storm-Bear Boots",
-        "string": "Sturmbärenstiefel"
+        "type": "MGEF FULL",
+        "original": "Akatosh's Aspect",
+        "string": "Akatoshs Form"
     },
     {
-        "editor_id": "ccFFBSSE001_StormBearShieldEnch",
-        "form_id": "[0500081C]",
+        "editor_id": "ccFFBSSE001EnchResistShocktCSHidden",
+        "form_id": "05000803|ccffbsse001-imperialdragon.esl",
         "index": null,
-        "type": "ENCH FULL",
-        "original": "Storm-Bear Shield",
-        "string": "Sturmbärenschild"
-    },
-    {
-        "editor_id": "ccFFBSSE001_StormBearAxeEnch",
-        "form_id": "[0500081A]",
-        "index": null,
-        "type": "ENCH FULL",
-        "original": "Frost Damage",
-        "string": "Kampfrausch-Frost"
-    },
-    {
-        "editor_id": "ccFFBSSE001_StormBearGauntletsEnch",
-        "form_id": "[0500081E]",
-        "index": null,
-        "type": "ENCH FULL",
-        "original": "Storm-Bear Gauntlets",
-        "string": "Sturmbärenhandschuhe"
-    },
-    {
-        "editor_id": "ccFFBSSE001ImperialDragonBootsEnch",
-        "form_id": "[0500083C]",
-        "index": null,
-        "type": "ENCH FULL",
-        "original": "Imperial Dragon Boots",
-        "string": "Kaiserliche Drachenstiefel"
-    },
-    {
-        "editor_id": "ccFFBSSE001AkatoshTalonEnch",
-        "form_id": "[05000817]",
-        "index": null,
-        "type": "ENCH FULL",
-        "original": "Akatosh's Talon",
-        "string": "Akatoshs Kralle"
-    },
-    {
-        "editor_id": "ccFFBSSE001ImperialDragonCuirassEnch",
-        "form_id": "[0500083D]",
-        "index": null,
-        "type": "ENCH FULL",
-        "original": "Imperial Dragon Cuirass",
-        "string": "Kaiserlicher Drachenbrustpanzer"
-    },
-    {
-        "editor_id": "ccFFBSSE001ImperialDragonGauntletsEnch",
-        "form_id": "[0500083E]",
-        "index": null,
-        "type": "ENCH FULL",
-        "original": "Imperial Dragon Gauntlets",
-        "string": "Kaiserliche Drachenhandschuhe"
+        "type": "MGEF FULL",
+        "original": "Resist Shock",
+        "string": "Blitzresistenz"
     },
     {
         "editor_id": "ccFFBSSE001DragonsOathEnch",
-        "form_id": "[05000841]",
+        "form_id": "05000841|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Dragon's Oath",
         "string": "Dracheneid"
     },
     {
-        "editor_id": "ccFFBSSE001_StormBearHelmetEnch",
-        "form_id": "[05000816]",
+        "editor_id": "ccFFBSSE001ImperialDragonGauntletsEnch",
+        "form_id": "0500083E|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "ENCH FULL",
-        "original": "Storm-Bear Helmet",
-        "string": "Sturmbärenhelm"
+        "original": "Imperial Dragon Gauntlets",
+        "string": "Kaiserliche Drachenhandschuhe"
+    },
+    {
+        "editor_id": "ccFFBSSE001ImperialDragonShieldEnch",
+        "form_id": "05000840|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Imperial Dragon Shield",
+        "string": "Kaiserlicher Drachenschild"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearShieldEnch",
+        "form_id": "0500081C|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Storm-Bear Shield",
+        "string": "Sturmbärenschild"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearGauntletsEnch",
+        "form_id": "0500081E|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Storm-Bear Gauntlets",
+        "string": "Sturmbärenhandschuhe"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearAxeEnch",
+        "form_id": "0500081A|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Frost Damage",
+        "string": "Kampfrausch-Frost"
+    },
+    {
+        "editor_id": "ccFFBSSE001AkatoshTalonEnch",
+        "form_id": "05000817|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Akatosh's Talon",
+        "string": "Akatoshs Kralle"
     },
     {
         "editor_id": "ccFFBSSE001_StormbearSwordEnch",
-        "form_id": "[05000819]",
+        "form_id": "05000819|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Frost Damage",
         "string": "Zerschmetternder Frost"
     },
     {
-        "editor_id": "ccFFBSSE001_FreezeBash",
-        "form_id": "[05000821]",
+        "editor_id": "ccFFBSSE001ImperialDragonBootsEnch",
+        "form_id": "0500083C|ccffbsse001-imperialdragon.esl",
         "index": null,
-        "type": "SPEL FULL",
-        "original": "Freeze Bash",
-        "string": "Frostschlag"
+        "type": "ENCH FULL",
+        "original": "Imperial Dragon Boots",
+        "string": "Kaiserliche Drachenstiefel"
     },
     {
-        "editor_id": "ccFFBSSE001AkatoshTalonAb",
-        "form_id": "[05000843]",
+        "editor_id": "ccFFBSSE001ImperialDragonCuirassEnch",
+        "form_id": "0500083D|ccffbsse001-imperialdragon.esl",
         "index": null,
-        "type": "SPEL FULL",
-        "original": "Akatosh's Talon",
-        "string": "Akatoshs Kralle"
+        "type": "ENCH FULL",
+        "original": "Imperial Dragon Cuirass",
+        "string": "Kaiserlicher Drachenbrustpanzer"
     },
     {
-        "editor_id": "ccFFBSSE001_BerserkChargeControlAb",
-        "form_id": "[0500081F]",
+        "editor_id": "ccFFBSSE001_StormBearBootsEnch",
+        "form_id": "0500081B|ccffbsse001-imperialdragon.esl",
         "index": null,
-        "type": "SPEL FULL",
-        "original": "Berserk",
-        "string": "Kampfrausch"
+        "type": "ENCH FULL",
+        "original": "Storm-Bear Boots",
+        "string": "Sturmbärenstiefel"
     },
     {
-        "editor_id": "ccFFBSSE001_SummonBearSpiritSpell",
-        "form_id": "[05000822]",
+        "editor_id": "ccFFBSSE001ImperialDragonHelmetEnch",
+        "form_id": "0500083F|ccffbsse001-imperialdragon.esl",
         "index": null,
-        "type": "SPEL FULL",
-        "original": "Bear Spirit",
-        "string": "Bärengeist"
+        "type": "ENCH FULL",
+        "original": "Imperial Dragon Helmet",
+        "string": "Kaiserlicher Drachenhelm"
     },
     {
-        "editor_id": "ccFFBSSE001CloakVisualFrost",
-        "form_id": "[05000846]",
+        "editor_id": "ccFFBSSE001_StormBearCuirassEnch",
+        "form_id": "0500081D|ccffbsse001-imperialdragon.esl",
         "index": null,
-        "type": "SPEL FULL",
-        "original": "Frost Cloak",
-        "string": "Frostmantel"
+        "type": "ENCH FULL",
+        "original": "Storm-Bear Cuirass",
+        "string": "Sturmbärenbrustpanzer"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearHelmetEnch",
+        "form_id": "05000816|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Storm-Bear Helmet",
+        "string": "Sturmbärenhelm"
     },
     {
         "editor_id": "ccFFBSSE001CloakVisualFlame",
-        "form_id": "[05000818]",
+        "form_id": "05000818|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Flame Cloak",
         "string": "Flammenmantel"
     },
     {
-        "editor_id": "ccFFBSSE001CloakVisualLightning",
-        "form_id": "[05000845]",
+        "editor_id": "ccFFBSSE001_FreezeBash",
+        "form_id": "05000821|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "SPEL FULL",
-        "original": "Lightning Cloak",
-        "string": "Blitzmantel"
+        "original": "Freeze Bash",
+        "string": "Frostschlag"
     },
     {
         "editor_id": "ccFFBSSE001AkatoshAspectSpell",
-        "form_id": "[05000844]",
+        "form_id": "05000844|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Akatosh's Aspect",
         "string": "Akatoshs Form"
     },
     {
-        "editor_id": "ccFFBSSE001StopTimeAb",
-        "form_id": "[05000847]",
+        "editor_id": "ccFFBSSE001CloakVisualFrost",
+        "form_id": "05000846|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "SPEL FULL",
-        "original": "Stop Time",
-        "string": "Zeit anhalten"
-    },
-    {
-        "editor_id": "ccFFBSSE001_Ebonyflesh",
-        "form_id": "[05000964]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Ebonyflesh",
-        "string": "Ebenerzhaut"
+        "original": "Frost Cloak",
+        "string": "Frostmantel"
     },
     {
         "editor_id": "ccFFBSSE001_SummonWolfSpiritSpell",
-        "form_id": "[05000820]",
+        "form_id": "05000820|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Wolf Spirit",
         "string": "Wolfsgeist"
     },
     {
+        "editor_id": "ccFFBSSE001StopTimeAb",
+        "form_id": "05000847|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Stop Time",
+        "string": "Zeit anhalten"
+    },
+    {
+        "editor_id": "ccFFBSSE001CloakVisualLightning",
+        "form_id": "05000845|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Lightning Cloak",
+        "string": "Blitzmantel"
+    },
+    {
         "editor_id": "ccFFBSSE001AkatoshTalonSpell",
-        "form_id": "[05000842]",
+        "form_id": "05000842|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Fire Storm",
         "string": "Feuersturm"
     },
     {
-        "editor_id": "ccFFBSSE001ImperialDragonGauntlets",
-        "form_id": "[0500084D]",
+        "editor_id": "ccFFBSSE001_BerserkChargeControlAb",
+        "form_id": "0500081F|ccffbsse001-imperialdragon.esl",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Imperial Dragon Gauntlets",
-        "string": "Kaiserliche Drachenhandschuhe"
+        "type": "SPEL FULL",
+        "original": "Berserk",
+        "string": "Kampfrausch"
+    },
+    {
+        "editor_id": "ccFFBSSE001AkatoshTalonAb",
+        "form_id": "05000843|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Akatosh's Talon",
+        "string": "Akatoshs Kralle"
+    },
+    {
+        "editor_id": "ccFFBSSE001_SummonBearSpiritSpell",
+        "form_id": "05000822|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Bear Spirit",
+        "string": "Bärengeist"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Ebonyflesh",
+        "form_id": "05000964|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Ebonyflesh",
+        "string": "Ebenerzhaut"
     },
     {
         "editor_id": "ccFFBSSE001_StormBearBoots",
-        "form_id": "[05000849]",
+        "form_id": "05000849|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Storm-Bear Boots",
         "string": "Sturmbärenstiefel"
     },
     {
-        "editor_id": "ccFFBSSE001ImperialDragonBoots",
-        "form_id": "[05000D68]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Imperial Dragon Boots",
-        "string": "Kaiserliche Drachenstiefel"
-    },
-    {
-        "editor_id": "ccFFBSSE001_StormBearHelmet",
-        "form_id": "[05000D6B]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Storm-Bear Helmet",
-        "string": "Sturmbärenhelm"
-    },
-    {
-        "editor_id": "ccFFBSSE001_StormBearCloak",
-        "form_id": "[05000825]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Storm-Bear Cloak",
-        "string": "Sturmbärenmantel"
-    },
-    {
-        "editor_id": "ccFFBSSE001_StormBearShield",
-        "form_id": "[05000D6C]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Storm-Bear Shield",
-        "string": "Sturmbärenschild"
-    },
-    {
-        "editor_id": "ccFFBSSE001ImperialDragonHelmet",
-        "form_id": "[05000848]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Imperial Dragon Helmet",
-        "string": "Kaiserlicher Drachenhelm"
-    },
-    {
         "editor_id": "ccFFBSSE001_StormBearGauntlets",
-        "form_id": "[05000D6A]",
+        "form_id": "05000D6A|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Storm-Bear Gauntlets",
         "string": "Sturmbärenhandschuhe"
     },
     {
-        "editor_id": "ccFFBSSE001ImperialDragonShield",
-        "form_id": "[0500084A]",
+        "editor_id": "ccFFBSSE001ImperialDragonBoots",
+        "form_id": "05000D68|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "ARMO FULL",
-        "original": "Imperial Dragon Shield",
-        "string": "Kaiserlicher Drachenschild"
+        "original": "Imperial Dragon Boots",
+        "string": "Kaiserliche Drachenstiefel"
     },
     {
-        "editor_id": "ccFFBSSE001ImperialDragonCloak",
-        "form_id": "[0500084B]",
+        "editor_id": "ccFFBSSE001_StormBearShield",
+        "form_id": "05000D6C|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "ARMO FULL",
-        "original": "Imperial Dragon Cloak",
-        "string": "Kaiserlicher Drachenmantel"
-    },
-    {
-        "editor_id": "ccFFBSSE001_StormBearCuirass",
-        "form_id": "[0500084C]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Storm-Bear Armor",
-        "string": "Sturmbärenrüstung"
+        "original": "Storm-Bear Shield",
+        "string": "Sturmbärenschild"
     },
     {
         "editor_id": "ccFFBSSE001ImperialDragonCuirass",
-        "form_id": "[05000D69]",
+        "form_id": "05000D69|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Imperial Dragon Armor",
         "string": "Kaiserliche Drachenrüstung"
     },
     {
-        "editor_id": "ccFFBSSE001_Letter02",
-        "form_id": "[0500085F]",
+        "editor_id": "ccFFBSSE001ImperialDragonShield",
+        "form_id": "0500084A|ccffbsse001-imperialdragon.esl",
         "index": null,
-        "type": "BOOK FULL",
-        "original": "Letter from the Empire",
-        "string": "Brief aus dem Kaiserreich"
+        "type": "ARMO FULL",
+        "original": "Imperial Dragon Shield",
+        "string": "Kaiserlicher Drachenschild"
     },
     {
-        "editor_id": "ccFFBSSE001_Letter05",
-        "form_id": "[0500085E]",
+        "editor_id": "ccFFBSSE001ImperialDragonGauntlets",
+        "form_id": "0500084D|ccffbsse001-imperialdragon.esl",
         "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face=\"$HandwrittenFont\">\r\nWe have challenged the Imperial dogs to a duel of champions. Of course, their champion will be in name only. Anyone who licks the boots of the Empire can hardly lay claim to such a title.\r\n\r\nThat is why we must find someone worthy of putting these fools in their place. I have made it known that anyone who wishes to be our champion must prove their worth by bringing me five snow bear pelts. \r\n\r\nIf they can kill five of those monsters, five Imperials will be like putting a knife through warm butter.",
-        "string": "<font face=\"$HandwrittenFont\">\r\nWir haben diese Hunde der Kaiserlichen zu einem Duell der Champions herausgefordert. Natürlich wird ihr Kämpfer nur dem Namen nach ein Champion sein. Wer dem Kaiserreich die Stiefel leckt, kann wohl kaum einen solchen Titel für sich in Anspruch nehmen.\r\n\r\nDeswegen müssen wir jemanden finden, der würdig ist, diesen Dummköpfen zu zeigen, wo sie stehen. Ich habe bekanntgegeben, dass jeder, der unser Champion sein möchte, sein Können unter Beweis stellen muss, indem er mir fünf Schneebärenpelze bringt. \r\n\r\nWer fünf dieser Monster töten kann, für den werden fünf Kaiserliche ein wahres Kinderspiel sein."
+        "type": "ARMO FULL",
+        "original": "Imperial Dragon Gauntlets",
+        "string": "Kaiserliche Drachenhandschuhe"
     },
     {
-        "editor_id": "ccFFBSSE001_Letter06",
-        "form_id": "[05000863]",
+        "editor_id": "ccFFBSSE001_StormBearCloak",
+        "form_id": "05000825|ccffbsse001-imperialdragon.esl",
         "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face=\"$HandwrittenFont\">We've received word of your victory over the rebels, and so has most of Skyrim. We expect recruitment to increase tenfold as a result. No one wants to side with a losing cause.\r\n\r\nAs a reward, you're welcome to keep the champion's armor and weapons. Judging by what you did to those turncloaks, I know you'll make good use of it.\r\n\r\n- Legate Adventus Caesennius\r\n",
-        "string": "<font face=\"$HandwrittenFont\">Wir haben von Eurem Sieg über die Rebellen erfahren und auch ein Großteil von Himmelsrand weiß davon. Wir erwarten, dass aufgrund dessen die Rekrutierungszahlen um ein Zehnfaches in die Höhe schießen werden. Niemand will sich für eine aussichtslose Sache einsetzen.\r\n\r\nAls Belohnung dürfte Ihr gern die Rüstung und die Waffen des Champions behalten. Wenn ich mir anschaue, was Ihr mit diesen Wendehälsen gemacht habt, weiß ich, dass Ihr eine gute Verwendung dafür haben werdet.\r\n\r\nLegat Adventus Caesennius\r\n"
+        "type": "ARMO FULL",
+        "original": "Storm-Bear Cloak",
+        "string": "Sturmbärenmantel"
     },
     {
-        "editor_id": "ccFFBSSE001_Letter01",
-        "form_id": "[05000862]",
+        "editor_id": "ccFFBSSE001ImperialDragonCloak",
+        "form_id": "0500084B|ccffbsse001-imperialdragon.esl",
         "index": null,
-        "type": "BOOK FULL",
-        "original": "Letter from the Stormcloaks",
-        "string": "Brief der Sturmmäntel"
+        "type": "ARMO FULL",
+        "original": "Imperial Dragon Cloak",
+        "string": "Kaiserlicher Drachenmantel"
     },
     {
-        "editor_id": "ccFFBSSE001_Letter02",
-        "form_id": "[0500085F]",
+        "editor_id": "ccFFBSSE001_StormBearHelmet",
+        "form_id": "05000D6B|ccffbsse001-imperialdragon.esl",
         "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face=\"$HandwrittenFont\">\r\n<Alias=Player>,\r\n\r\nA troop of Stormcloak rebels have challenged us to a battle on the fields of Whiterun. They want us to send a garrision of our greatest champions to fight theirs. I've talked to General Tullius and we can't rule out the possibility this is some kind of trap. \r\n\r\nAfter all, the traitors have shown they have little concern for loyalty, it's doubtful they would give honor the same courtesy.\r\n\r\nAs one of our staunchest warriors, we'd like you to handle this mission. Our smiths have forged you a custom armor set that should offer some protection. We'll also send a garrison to support you, but we can't spare more than a half dozen men. Should things come to blows, you'll need to take the lead.  \r\n\r\n- Legate Adventus Caesennius\r\n",
-        "string": "<font face=\"$HandwrittenFont\">\r\n<Alias=Player>,\r\n\r\neine Truppe Sturmmantel-Rebellen hat uns zu einem Kampf auf den Feldern von Weißlauf herausgefordert. Sie wollen, dass wir eine Garnison unserer besten Champions schicken, die gegen ihre antreten soll. Ich habe mit General Tullius gesprochen und wir können nicht ausschließen, dass es sich hierbei um eine Falle handelt. \r\n\r\nDa diese Verräter immerhin schon unter Beweis gestellt haben, dass Loyalität ihnen wenig bedeutet, ist es zweifelhaft, ob es hinsichtlich der Ehre anders aussehen würde.\r\n\r\nDa Ihr einer unserer standhaftesten Krieger seid, möchten wir Euch diese Mission anvertrauen. Unsere Schmiede haben für Euch eine spezielle Rüstung gefertigt, die einiges an Schutz bieten dürfte. Außerdem werden wir Euch mit einer Garnison unterstützen, können jedoch nicht mehr als ein halbes Dutzend Männer aufbringen. Sollte es zu einer Auseinandersetzung kommen, müsst Ihr die Führung übernehmen.  \r\n\r\nLegat Adventus Caesennius\r\n"
+        "type": "ARMO FULL",
+        "original": "Storm-Bear Helmet",
+        "string": "Sturmbärenhelm"
     },
     {
-        "editor_id": "ccFFBSSE001_Letter07",
-        "form_id": "[05000864]",
+        "editor_id": "ccFFBSSE001ImperialDragonHelmet",
+        "form_id": "05000848|ccffbsse001-imperialdragon.esl",
         "index": null,
-        "type": "BOOK FULL",
-        "original": "Letter of Commendation",
-        "string": "Empfehlungsschreiben"
+        "type": "ARMO FULL",
+        "original": "Imperial Dragon Helmet",
+        "string": "Kaiserlicher Drachenhelm"
     },
     {
-        "editor_id": "ccFFBSSE001_Letter06A",
-        "form_id": "[05000954]",
+        "editor_id": "ccFFBSSE001_StormBearCuirass",
+        "form_id": "0500084C|ccffbsse001-imperialdragon.esl",
         "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face=\"$HandwrittenFont\">We've received word of your victory over the rebels, and so has most of Skyrim. We expect recruitment to increase tenfold as a result. No one wants to side with a losing cause.\r\n\r\nAs a reward, here are the champion's armor and weapons. Judging by what you did to those turncloaks, I know you'll make good use of it.\r\n\r\n- Legate Adventus Caesennius\r\n",
-        "string": "<font face=\"$HandwrittenFont\">Wir haben von Eurem Sieg über die Rebellen erfahren und auch ein Großteil von Himmelsrand weiß davon. Wir erwarten, dass aufgrund dessen die Rekrutierungszahlen um ein Zehnfaches in die Höhe schießen werden. Niemand will sich für eine aussichtslose Sache einsetzen.\r\n\r\nAls Belohnung erhaltet Ihr die Rüstung und die Waffen des Champions. Wenn ich mir anschaue, was Ihr mit diesen Wendehälsen gemacht habt, weiß ich, dass Ihr eine gute Verwendung dafür haben werdet.\r\n\r\nLegat Adventus Caesennius\r\n"
-    },
-    {
-        "editor_id": "ccFFBSSE001_Letter06",
-        "form_id": "[05000863]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Letter of Commendation",
-        "string": "Empfehlungsschreiben"
-    },
-    {
-        "editor_id": "ccFFBSSE001_Letter05",
-        "form_id": "[0500085E]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Yrsarald Thrice-Pierced's Note",
-        "string": "Notiz von Yrsarald Dreifach-Durchstochen"
+        "type": "ARMO FULL",
+        "original": "Storm-Bear Armor",
+        "string": "Sturmbärenrüstung"
     },
     {
         "editor_id": "ccFFBSSE001_Letter07A",
-        "form_id": "[05000955]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Letter of Commendation",
-        "string": "Empfehlungsschreiben"
-    },
-    {
-        "editor_id": "ccFFBSSE001_Letter04",
-        "form_id": "[05000861]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Legate Adventus Caesennius's Note",
-        "string": "Notiz von Legat Adventus Caesennius"
-    },
-    {
-        "editor_id": "ccFFBSSE001_Letter07",
-        "form_id": "[05000864]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face=\"$HandwrittenFont\">\r\nWord of your battle with the Imperials is traveling across Eastmarch. I wish I could've been there to see their pathetic excuse for a champion beg for his life. You have more than earned the right to wear the armor of the Stormbear, so it is yours to keep. \r\n\r\nFight well and may Talos guide you.\r\n\r\n- Yrsarald Thrice-Pierced\r\n",
-        "string": "<font face=\"$HandwrittenFont\">\r\nBerichte über Euren Kampf gegen die Kaiserlichen verbreiten sich in ganz Ostmarsch. Ich wäre so gern dabei gewesen, um zu sehen, wie ihr jämmerlicher Abklatsch eines Champions um sein Leben gebettelt hat. Ihr habt Euch das Recht, die Rüstung des Sturmbären zu tragen, redlich verdient, also gehört sie Euch. \r\n\r\nKämpft wacker und möge Talos Euch leiten.\r\n\r\nYrsarald Dreifach-Durchstochen\r\n"
-    },
-    {
-        "editor_id": "ccFFBSSE001_Letter04",
-        "form_id": "[05000861]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face=\"$HandwrittenFont\">\r\nA troop of Stormcloak rebels have challenged us to a battle on the fields of Whiterun. They want us to send a garrision of our greatest champions to fight theirs. I've talked to General Tullius and we can't rule out the possibility this is some kind of trap. \r\n\r\nAfter all, the traitors have shown they have little concern for loyalty, it's doubtful they would give honor the same courtesy.\r\n\r\nStill, winning this would dispel a lot of the mystique around their warriors. If we win, it's a huge blow to their morale. If we lose, we'll let it be known that our champion was just another soldier. \r\n\r\nRegardless, it's best we find someone who's willing to give their life for the cause. If they somehow survive, they'll have earned the armor we forged them.\r\n",
-        "string": "<font face=\"$HandwrittenFont\">\r\nEine Truppe Sturmmantel-Rebellen hat uns zu einem Kampf auf den Feldern von Weißlauf herausgefordert. Sie wollen, dass wir eine Garnison unserer besten Champions schicken, die gegen ihre antreten soll. Ich habe mit General Tullius gesprochen und wir können nicht ausschließen, dass es sich hierbei um eine Falle handelt. \r\n\r\nDa diese Verräter immerhin schon unter Beweis gestellt haben, dass Loyalität ihnen wenig bedeutet, ist es zweifelhaft, ob es hinsichtlich der Ehre anders aussehen würde.\r\n\r\nNichtsdestotrotz würde ein Sieg dafür sorgen, ihren Kriegern den Nimbus des Geheimnisvollen zu nehmen. Wenn wir gewinnen, wird das ihrer Moral einen schweren Schlag zufügen. Wenn wir verlieren, lassen wir jeden wissen, dass unser Champion ein gewöhnlicher Soldat war. \r\n\r\nWie dem auch sei, es wäre am besten, jemanden zu finden, der bereit ist, sein Leben für die Sache aufs Spiel zu setzen. Falls es diese Person irgendwie schafft, das zu überstehen, hat sie sich die für sie geschmiedete Rüstung redlich verdient.\r\n"
-    },
-    {
-        "editor_id": "ccFFBSSE001_Letter03",
-        "form_id": "[05000860]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face=\"$HandwrittenFont\">\r\nThere is talk in the taverns about a battle in Whiterun between two champions, one Stormcloak, one Imperial. Yet while the stage has been set, the actors have not.\r\n\r\nYrsarald Thrice-Pierced has made it clear that the Stormcloak champion must prove their mettle by bringing him the pelts of five snow bears. While the task seems daunting, rumor has it that a warrior named Klija Wolf-Claw of Bruma has already slain the beasts, and has made her way to Kynesgrove.\r\n\r\nFor their side, Legate Adventus Caesennius has made no mention of any ritual in selecting their champion. It makes you wonder if any willing soldier would do.\r\n",
-        "string": "<font face=\"$HandwrittenFont\">\r\nIn den Tavernen erzählt man sich von einem Kampf zwischen zwei Champions in Weißlauf, einer von ihnen ein Sturmmantel, der andere ein Kaiserlicher. Doch obwohl die Bühne bereit ist, sind es die Schauspieler noch nicht.\r\n\r\nYrsarald Dreifach-Durchstochen hat erklärt, dass der Sturmmantel-Champion sich beweisen muss, indem er ihm die Pelze von fünf Schneebären bringt. Obwohl es sich um eine ehrfurchtgebietende Aufgabe handelt, geht das Gerücht um, dass eine Kriegerin namens Klija Wolfs-Klaue aus Bruma die Bestien bereits erlegt hat und nach Kyneshain unterwegs ist.\r\n\r\nLegat Adventus Caesennius hat für seine Seite kein Ritual bei der Auswahl des Champions festgelegt. Da fragt man sich, ob jeder Soldat, der willens ist, ausreichen würde.\r\n"
-    },
-    {
-        "editor_id": "ccFFBSSE001_Letter03",
-        "form_id": "[05000860]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Battle of Champions",
-        "string": "Kampf der Champions"
-    },
-    {
-        "editor_id": "ccFFBSSE001_Letter06A",
-        "form_id": "[05000954]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Letter of Commendation",
-        "string": "Empfehlungsschreiben"
-    },
-    {
-        "editor_id": "ccFFBSSE001_Letter01",
-        "form_id": "[05000862]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face=\"$HandwrittenFont\">\r\n<Alias=Player>,\r\n\r\nWe have challenged the Imperial dogs to a duel of champions. They are said to be led by a great warrior, but anyone who licks the boots of the Empire can hardly lay claim to such a title.\r\n\r\nThat is why we ask you to put these fools in their place. Find me in the Palace of the Kings, and I will provide you with the armor of a true champion. Once equipped, you will meet with a garrison of our finest soldiers and put an end to this milk-drinker and his band of imposters.\r\n\r\nWhen the time comes, do not waste your breath with words. Let the fields of Whiterun drink down their blood. \r\n\r\n- Yrsarald Thrice-Pierced\r\n",
-        "string": "<font face=\"$HandwrittenFont\">\r\n<Alias=Player>,\r\n\r\nwir haben diese Hunde der Kaiserlichen zu einem Duell der Champions herausgefordert. Angeblich führt ein großer Krieger sie an, aber wer dem Kaiserreich die Stiefel leckt, kann wohl kaum einen solchen Titel für sich in Anspruch nehmen.\r\n\r\nDeswegen möchten wir Euch bitten, diese Dummköpfe auf ihre Plätze zu verweisen. Sucht mich im Palast der Könige auf, dann werde ich Euch die Rüstung eines wahren Champions zukommen lassen. Danach trefft Ihr Euch mit einer Garnison unserer besten Soldaten und bereitet diesem Milchtrinker und seiner Hochstaplerbande ein Ende.\r\n\r\nWenn die Zeit kommt, verschwendet Euren Atem nicht für Worte. Tränkt die Felder von Weißlauf mit ihrem Blut. \r\n\r\nYrsarald Dreifach-Durchstochen\r\n"
-    },
-    {
-        "editor_id": "ccFFBSSE001_Letter07A",
-        "form_id": "[05000955]",
+        "form_id": "05000955|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "BOOK DESC",
         "original": "<font face=\"$HandwrittenFont\">\r\nWord of your battle with the Imperials is traveling across Eastmarch. I wish I could've been there to see their pathetic excuse for a champion beg for his life. You have more than earned the right to wear the armor of the Stormbear, which I give to you now. \r\n\r\nFight well and may Talos guide you.\r\n\r\n- Yrsarald Thrice-Pierced\r\n",
         "string": "<font face=\"$HandwrittenFont\">\r\nBerichte über Euren Kampf gegen die Kaiserlichen verbreiten sich in ganz Ostmarsch. Ich wäre so gern dabei gewesen, um zu sehen, wie ihr jämmerlicher Abklatsch eines Champions um sein Leben gebettelt hat. Ihr habt Euch das Recht, die Rüstung des Sturmbären zu tragen, die ich Euch hiermit zukommen lasse, redlich verdient. \r\n\r\nKämpft wacker und möge Talos Euch leiten.\r\n\r\nYrsarald Dreifach-Durchstochen\r\n"
     },
     {
-        "editor_id": "ccFFBSSE001_ChestImperial",
-        "form_id": "[05000866]",
+        "editor_id": "ccFFBSSE001_Letter06",
+        "form_id": "05000863|ccffbsse001-imperialdragon.esl",
         "index": null,
-        "type": "CONT FULL",
-        "original": "Chest",
-        "string": "Truhe"
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">We've received word of your victory over the rebels, and so has most of Skyrim. We expect recruitment to increase tenfold as a result. No one wants to side with a losing cause.\r\n\r\nAs a reward, you're welcome to keep the champion's armor and weapons. Judging by what you did to those turncloaks, I know you'll make good use of it.\r\n\r\n- Legate Adventus Caesennius\r\n",
+        "string": "<font face=\"$HandwrittenFont\">Wir haben von Eurem Sieg über die Rebellen erfahren und auch ein Großteil von Himmelsrand weiß davon. Wir erwarten, dass aufgrund dessen die Rekrutierungszahlen um ein Zehnfaches in die Höhe schießen werden. Niemand will sich für eine aussichtslose Sache einsetzen.\r\n\r\nAls Belohnung dürfte Ihr gern die Rüstung und die Waffen des Champions behalten. Wenn ich mir anschaue, was Ihr mit diesen Wendehälsen gemacht habt, weiß ich, dass Ihr eine gute Verwendung dafür haben werdet.\r\n\r\nLegat Adventus Caesennius\r\n"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter07",
+        "form_id": "05000864|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Letter of Commendation",
+        "string": "Empfehlungsschreiben"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter05",
+        "form_id": "0500085E|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Yrsarald Thrice-Pierced's Note",
+        "string": "Notiz von Yrsarald Dreifach-Durchstochen"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter07",
+        "form_id": "05000864|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nWord of your battle with the Imperials is traveling across Eastmarch. I wish I could've been there to see their pathetic excuse for a champion beg for his life. You have more than earned the right to wear the armor of the Stormbear, so it is yours to keep. \r\n\r\nFight well and may Talos guide you.\r\n\r\n- Yrsarald Thrice-Pierced\r\n",
+        "string": "<font face=\"$HandwrittenFont\">\r\nBerichte über Euren Kampf gegen die Kaiserlichen verbreiten sich in ganz Ostmarsch. Ich wäre so gern dabei gewesen, um zu sehen, wie ihr jämmerlicher Abklatsch eines Champions um sein Leben gebettelt hat. Ihr habt Euch das Recht, die Rüstung des Sturmbären zu tragen, redlich verdient, also gehört sie Euch. \r\n\r\nKämpft wacker und möge Talos Euch leiten.\r\n\r\nYrsarald Dreifach-Durchstochen\r\n"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter06A",
+        "form_id": "05000954|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Letter of Commendation",
+        "string": "Empfehlungsschreiben"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter03",
+        "form_id": "05000860|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Battle of Champions",
+        "string": "Kampf der Champions"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter04",
+        "form_id": "05000861|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Legate Adventus Caesennius's Note",
+        "string": "Notiz von Legat Adventus Caesennius"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter02",
+        "form_id": "0500085F|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Letter from the Empire",
+        "string": "Brief aus dem Kaiserreich"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter01",
+        "form_id": "05000862|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Letter from the Stormcloaks",
+        "string": "Brief der Sturmmäntel"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter05",
+        "form_id": "0500085E|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nWe have challenged the Imperial dogs to a duel of champions. Of course, their champion will be in name only. Anyone who licks the boots of the Empire can hardly lay claim to such a title.\r\n\r\nThat is why we must find someone worthy of putting these fools in their place. I have made it known that anyone who wishes to be our champion must prove their worth by bringing me five snow bear pelts. \r\n\r\nIf they can kill five of those monsters, five Imperials will be like putting a knife through warm butter.",
+        "string": "<font face=\"$HandwrittenFont\">\r\nWir haben diese Hunde der Kaiserlichen zu einem Duell der Champions herausgefordert. Natürlich wird ihr Kämpfer nur dem Namen nach ein Champion sein. Wer dem Kaiserreich die Stiefel leckt, kann wohl kaum einen solchen Titel für sich in Anspruch nehmen.\r\n\r\nDeswegen müssen wir jemanden finden, der würdig ist, diesen Dummköpfen zu zeigen, wo sie stehen. Ich habe bekanntgegeben, dass jeder, der unser Champion sein möchte, sein Können unter Beweis stellen muss, indem er mir fünf Schneebärenpelze bringt. \r\n\r\nWer fünf dieser Monster töten kann, für den werden fünf Kaiserliche ein wahres Kinderspiel sein."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter06A",
+        "form_id": "05000954|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">We've received word of your victory over the rebels, and so has most of Skyrim. We expect recruitment to increase tenfold as a result. No one wants to side with a losing cause.\r\n\r\nAs a reward, here are the champion's armor and weapons. Judging by what you did to those turncloaks, I know you'll make good use of it.\r\n\r\n- Legate Adventus Caesennius\r\n",
+        "string": "<font face=\"$HandwrittenFont\">Wir haben von Eurem Sieg über die Rebellen erfahren und auch ein Großteil von Himmelsrand weiß davon. Wir erwarten, dass aufgrund dessen die Rekrutierungszahlen um ein Zehnfaches in die Höhe schießen werden. Niemand will sich für eine aussichtslose Sache einsetzen.\r\n\r\nAls Belohnung erhaltet Ihr die Rüstung und die Waffen des Champions. Wenn ich mir anschaue, was Ihr mit diesen Wendehälsen gemacht habt, weiß ich, dass Ihr eine gute Verwendung dafür haben werdet.\r\n\r\nLegat Adventus Caesennius\r\n"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter03",
+        "form_id": "05000860|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nThere is talk in the taverns about a battle in Whiterun between two champions, one Stormcloak, one Imperial. Yet while the stage has been set, the actors have not.\r\n\r\nYrsarald Thrice-Pierced has made it clear that the Stormcloak champion must prove their mettle by bringing him the pelts of five snow bears. While the task seems daunting, rumor has it that a warrior named Klija Wolf-Claw of Bruma has already slain the beasts, and has made her way to Kynesgrove.\r\n\r\nFor their side, Legate Adventus Caesennius has made no mention of any ritual in selecting their champion. It makes you wonder if any willing soldier would do.\r\n",
+        "string": "<font face=\"$HandwrittenFont\">\r\nIn den Tavernen erzählt man sich von einem Kampf zwischen zwei Champions in Weißlauf, einer von ihnen ein Sturmmantel, der andere ein Kaiserlicher. Doch obwohl die Bühne bereit ist, sind es die Schauspieler noch nicht.\r\n\r\nYrsarald Dreifach-Durchstochen hat erklärt, dass der Sturmmantel-Champion sich beweisen muss, indem er ihm die Pelze von fünf Schneebären bringt. Obwohl es sich um eine ehrfurchtgebietende Aufgabe handelt, geht das Gerücht um, dass eine Kriegerin namens Klija Wolfs-Klaue aus Bruma die Bestien bereits erlegt hat und nach Kyneshain unterwegs ist.\r\n\r\nLegat Adventus Caesennius hat für seine Seite kein Ritual bei der Auswahl des Champions festgelegt. Da fragt man sich, ob jeder Soldat, der willens ist, ausreichen würde.\r\n"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter04",
+        "form_id": "05000861|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nA troop of Stormcloak rebels have challenged us to a battle on the fields of Whiterun. They want us to send a garrision of our greatest champions to fight theirs. I've talked to General Tullius and we can't rule out the possibility this is some kind of trap. \r\n\r\nAfter all, the traitors have shown they have little concern for loyalty, it's doubtful they would give honor the same courtesy.\r\n\r\nStill, winning this would dispel a lot of the mystique around their warriors. If we win, it's a huge blow to their morale. If we lose, we'll let it be known that our champion was just another soldier. \r\n\r\nRegardless, it's best we find someone who's willing to give their life for the cause. If they somehow survive, they'll have earned the armor we forged them.\r\n",
+        "string": "<font face=\"$HandwrittenFont\">\r\nEine Truppe Sturmmantel-Rebellen hat uns zu einem Kampf auf den Feldern von Weißlauf herausgefordert. Sie wollen, dass wir eine Garnison unserer besten Champions schicken, die gegen ihre antreten soll. Ich habe mit General Tullius gesprochen und wir können nicht ausschließen, dass es sich hierbei um eine Falle handelt. \r\n\r\nDa diese Verräter immerhin schon unter Beweis gestellt haben, dass Loyalität ihnen wenig bedeutet, ist es zweifelhaft, ob es hinsichtlich der Ehre anders aussehen würde.\r\n\r\nNichtsdestotrotz würde ein Sieg dafür sorgen, ihren Kriegern den Nimbus des Geheimnisvollen zu nehmen. Wenn wir gewinnen, wird das ihrer Moral einen schweren Schlag zufügen. Wenn wir verlieren, lassen wir jeden wissen, dass unser Champion ein gewöhnlicher Soldat war. \r\n\r\nWie dem auch sei, es wäre am besten, jemanden zu finden, der bereit ist, sein Leben für die Sache aufs Spiel zu setzen. Falls es diese Person irgendwie schafft, das zu überstehen, hat sie sich die für sie geschmiedete Rüstung redlich verdient.\r\n"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter07A",
+        "form_id": "05000955|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Letter of Commendation",
+        "string": "Empfehlungsschreiben"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter02",
+        "form_id": "0500085F|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\n<Alias=Player>,\r\n\r\nA troop of Stormcloak rebels have challenged us to a battle on the fields of Whiterun. They want us to send a garrision of our greatest champions to fight theirs. I've talked to General Tullius and we can't rule out the possibility this is some kind of trap. \r\n\r\nAfter all, the traitors have shown they have little concern for loyalty, it's doubtful they would give honor the same courtesy.\r\n\r\nAs one of our staunchest warriors, we'd like you to handle this mission. Our smiths have forged you a custom armor set that should offer some protection. We'll also send a garrison to support you, but we can't spare more than a half dozen men. Should things come to blows, you'll need to take the lead.  \r\n\r\n- Legate Adventus Caesennius\r\n",
+        "string": "<font face=\"$HandwrittenFont\">\r\n<Alias=Player>,\r\n\r\neine Truppe Sturmmantel-Rebellen hat uns zu einem Kampf auf den Feldern von Weißlauf herausgefordert. Sie wollen, dass wir eine Garnison unserer besten Champions schicken, die gegen ihre antreten soll. Ich habe mit General Tullius gesprochen und wir können nicht ausschließen, dass es sich hierbei um eine Falle handelt. \r\n\r\nDa diese Verräter immerhin schon unter Beweis gestellt haben, dass Loyalität ihnen wenig bedeutet, ist es zweifelhaft, ob es hinsichtlich der Ehre anders aussehen würde.\r\n\r\nDa Ihr einer unserer standhaftesten Krieger seid, möchten wir Euch diese Mission anvertrauen. Unsere Schmiede haben für Euch eine spezielle Rüstung gefertigt, die einiges an Schutz bieten dürfte. Außerdem werden wir Euch mit einer Garnison unterstützen, können jedoch nicht mehr als ein halbes Dutzend Männer aufbringen. Sollte es zu einer Auseinandersetzung kommen, müsst Ihr die Führung übernehmen.  \r\n\r\nLegat Adventus Caesennius\r\n"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter01",
+        "form_id": "05000862|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\n<Alias=Player>,\r\n\r\nWe have challenged the Imperial dogs to a duel of champions. They are said to be led by a great warrior, but anyone who licks the boots of the Empire can hardly lay claim to such a title.\r\n\r\nThat is why we ask you to put these fools in their place. Find me in the Palace of the Kings, and I will provide you with the armor of a true champion. Once equipped, you will meet with a garrison of our finest soldiers and put an end to this milk-drinker and his band of imposters.\r\n\r\nWhen the time comes, do not waste your breath with words. Let the fields of Whiterun drink down their blood. \r\n\r\n- Yrsarald Thrice-Pierced\r\n",
+        "string": "<font face=\"$HandwrittenFont\">\r\n<Alias=Player>,\r\n\r\nwir haben diese Hunde der Kaiserlichen zu einem Duell der Champions herausgefordert. Angeblich führt ein großer Krieger sie an, aber wer dem Kaiserreich die Stiefel leckt, kann wohl kaum einen solchen Titel für sich in Anspruch nehmen.\r\n\r\nDeswegen möchten wir Euch bitten, diese Dummköpfe auf ihre Plätze zu verweisen. Sucht mich im Palast der Könige auf, dann werde ich Euch die Rüstung eines wahren Champions zukommen lassen. Danach trefft Ihr Euch mit einer Garnison unserer besten Soldaten und bereitet diesem Milchtrinker und seiner Hochstaplerbande ein Ende.\r\n\r\nWenn die Zeit kommt, verschwendet Euren Atem nicht für Worte. Tränkt die Felder von Weißlauf mit ihrem Blut. \r\n\r\nYrsarald Dreifach-Durchstochen\r\n"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Letter06",
+        "form_id": "05000863|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Letter of Commendation",
+        "string": "Empfehlungsschreiben"
     },
     {
         "editor_id": "ccFFBSSE001_ChestStormcloak",
-        "form_id": "[05000865]",
+        "form_id": "05000865|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "CONT FULL",
         "original": "Chest",
         "string": "Truhe"
     },
     {
+        "editor_id": "ccFFBSSE001_ChestImperial",
+        "form_id": "05000866|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Truhe"
+    },
+    {
+        "editor_id": "ccFFBSSE001_CivilWarMapMarker",
+        "form_id": "05000867|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Map of Battle Location",
+        "string": "Karte des Austragungsortes"
+    },
+    {
         "editor_id": "ccFFBSSE001_KlijaBearSnowPelts",
-        "form_id": "[05000868]",
+        "form_id": "05000868|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "MISC FULL",
         "original": "Klija's Snow Bear Pelts",
@@ -921,63 +929,47 @@
     },
     {
         "editor_id": "ccFFBSSE001FireDamageToken",
-        "form_id": "[05000823]",
+        "form_id": "05000823|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "MISC FULL",
         "original": "Token",
         "string": "Kleinod"
     },
     {
-        "editor_id": "ccFFBSSE001_CivilWarMapMarker",
-        "form_id": "[05000867]",
-        "index": null,
-        "type": "MISC FULL",
-        "original": "Map of Battle Location",
-        "string": "Karte des Austragungsortes"
-    },
-    {
         "editor_id": "ccFFBSSE001AkatoshTalon",
-        "form_id": "[05000D62]",
+        "form_id": "05000D62|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "WEAP FULL",
         "original": "Akatosh's Talon",
         "string": "Akatoshs Kralle"
     },
     {
-        "editor_id": "ccFFBSSE001_StormBearAxe",
-        "form_id": "[05000850]",
-        "index": null,
-        "type": "WEAP FULL",
-        "original": "Tsun's Judgement",
-        "string": "Tsuns Urteil"
-    },
-    {
-        "editor_id": "ccFFBSSE001_StormBearSword",
-        "form_id": "[05000D61]",
-        "index": null,
-        "type": "WEAP FULL",
-        "original": "Storm-Bear Sword",
-        "string": "Sturmbärenschwert"
-    },
-    {
         "editor_id": "ccFFBSSE001DragonsOath",
-        "form_id": "[0500084F]",
+        "form_id": "0500084F|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "WEAP FULL",
         "original": "Dragon's Oath",
         "string": "Dracheneid"
     },
     {
-        "editor_id": "ccFFBSSE001_KlijaBaseBountyFix",
-        "form_id": "[0500095C]",
+        "editor_id": "ccFFBSSE001_StormBearSword",
+        "form_id": "05000D61|ccffbsse001-imperialdragon.esl",
         "index": null,
-        "type": "NPC_ FULL",
-        "original": "Klija Wolf-Claw",
-        "string": "Klija Wolfs-Klaue"
+        "type": "WEAP FULL",
+        "original": "Storm-Bear Sword",
+        "string": "Sturmbärenschwert"
+    },
+    {
+        "editor_id": "ccFFBSSE001_StormBearAxe",
+        "form_id": "05000850|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Tsun's Judgement",
+        "string": "Tsuns Urteil"
     },
     {
         "editor_id": "ccFFBSSE001_NPC_ImperialChampionBackup",
-        "form_id": "[05000956]",
+        "form_id": "05000956|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Imperial Champion",
@@ -985,63 +977,71 @@
     },
     {
         "editor_id": "ccFFBSSE001_WolfSpirit",
-        "form_id": "[05000829]",
+        "form_id": "05000829|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Wolf Spirit",
         "string": "Wolfsgeist"
     },
     {
-        "editor_id": "ccFFBSSE001_NPC_ImperialChampion",
-        "form_id": "[0500086A]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Imperial Champion",
-        "string": "Kaiserlicher Champion"
-    },
-    {
-        "editor_id": "ccFFBSSE001_NPC_StormcloakChampion",
-        "form_id": "[0500086C]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Stormcloak Champion",
-        "string": "Sturmmantel-Champion"
-    },
-    {
-        "editor_id": "ccFFBSSE001_KlijaBaseBountyFixChampion",
-        "form_id": "[0500095D]",
-        "index": null,
-        "type": "NPC_ SHRT",
-        "original": "Klija",
-        "string": "Klija"
-    },
-    {
-        "editor_id": "ccFFBSSE001_NPC_StormcloakChampionBackup",
-        "form_id": "[05000957]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Stormcloak Champion",
-        "string": "Sturmmantel-Champion"
-    },
-    {
-        "editor_id": "ccFFBSSE001_KlijaBaseBountyFixChampion",
-        "form_id": "[0500095D]",
+        "editor_id": "ccFFBSSE001_KlijaBaseBountyFix",
+        "form_id": "0500095C|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Klija Wolf-Claw",
         "string": "Klija Wolfs-Klaue"
     },
     {
+        "editor_id": "ccFFBSSE001_KlijaBaseBountyFixChampion",
+        "form_id": "0500095D|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Klija Wolf-Claw",
+        "string": "Klija Wolfs-Klaue"
+    },
+    {
+        "editor_id": "ccFFBSSE001_NPC_StormcloakChampionBackup",
+        "form_id": "05000957|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Stormcloak Champion",
+        "string": "Sturmmantel-Champion"
+    },
+    {
+        "editor_id": "ccFFBSSE001_NPC_StormcloakChampion",
+        "form_id": "0500086C|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Stormcloak Champion",
+        "string": "Sturmmantel-Champion"
+    },
+    {
+        "editor_id": "ccFFBSSE001_KlijaBaseBountyFix",
+        "form_id": "0500095C|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Klija",
+        "string": "Klija"
+    },
+    {
         "editor_id": "ccFFBSSE001_BearSpirit",
-        "form_id": "[05000828]",
+        "form_id": "05000828|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Bear Spirit",
         "string": "Bärengeist"
     },
     {
-        "editor_id": "ccFFBSSE001_KlijaBaseBountyFix",
-        "form_id": "[0500095C]",
+        "editor_id": "ccFFBSSE001_NPC_ImperialChampion",
+        "form_id": "0500086A|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Imperial Champion",
+        "string": "Kaiserlicher Champion"
+    },
+    {
+        "editor_id": "ccFFBSSE001_KlijaBaseBountyFixChampion",
+        "form_id": "0500095D|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "NPC_ SHRT",
         "original": "Klija",
@@ -1049,7 +1049,7 @@
     },
     {
         "editor_id": "ccFFBSSE001_KeyImperial",
-        "form_id": "[05000876]",
+        "form_id": "05000876|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "KEYM FULL",
         "original": "Imperial Armory Key",
@@ -1057,39 +1057,15 @@
     },
     {
         "editor_id": "ccFFBSSE001_KeyStormcloak",
-        "form_id": "[05000875]",
+        "form_id": "05000875|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "KEYM FULL",
         "original": "Storm-Bear Chest Key",
         "string": "Schlüssel zur Sturmbärentruhe"
     },
     {
-        "editor_id": "SolitudeCastleDour",
-        "form_id": "[000213A0]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Castle Dour",
-        "string": "Schloss Elend"
-    },
-    {
-        "editor_id": "WindhelmPalaceoftheKings",
-        "form_id": "[0001677C]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Palace of the Kings",
-        "string": "Palast der Könige"
-    },
-    {
-        "editor_id": "WhiterunDrunkenHuntsman",
-        "form_id": "[000165B7]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "The Drunken Huntsman",
-        "string": "Trunkener Jägersmann"
-    },
-    {
         "editor_id": "Tamriel",
-        "form_id": "[0000003C]",
+        "form_id": "0000003C|Skyrim.esm",
         "index": null,
         "type": "WRLD FULL",
         "original": "Skyrim",
@@ -1097,15 +1073,47 @@
     },
     {
         "editor_id": "ccFFBSSE001_QuestBranch02Topic",
-        "form_id": "[05000893]",
+        "form_id": "05000893|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "DIAL FULL",
         "original": "I'm here about those Imperial dogs.",
         "string": "Ich bin wegen dieser Hunde der Kaiserlichen hier."
     },
     {
+        "editor_id": "ccFFBSSE001_QuestBranch01TopicB",
+        "form_id": "0500089C|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "They're as good as dead.",
+        "string": "Sie sind so gut wie tot."
+    },
+    {
+        "editor_id": "ccFFBSSE001_QuestBranch01TopicC",
+        "form_id": "0500089F|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I'll do my best.",
+        "string": "Ich werde mein Bestes tun."
+    },
+    {
+        "editor_id": "ccFFBSSE001_QuestBranch01Topic",
+        "form_id": "0500088E|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I got your message about needing a champion.",
+        "string": "Ich habe Eure Nachricht erhalten, dass Ihr einen Champion sucht."
+    },
+    {
+        "editor_id": "ccFFBSSE001_QuestBranch04TopicA",
+        "form_id": "050008AE|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "What's the mission?",
+        "string": "Wie lautet die Mission?"
+    },
+    {
         "editor_id": "ccFFBSSE001_QuestBranch05TopicA",
-        "form_id": "[050008CF]",
+        "form_id": "050008CF|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "DIAL FULL",
         "original": "Then let's start.",
@@ -1113,759 +1121,87 @@
     },
     {
         "editor_id": "ccFFBSSE001_QuestBranch05TopicC",
-        "form_id": "[050008D6]",
+        "form_id": "050008D6|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "DIAL FULL",
         "original": "Then we should give them a war to remember.",
         "string": "Dann sollten wir ihnen einen denkwürdigen Krieg bieten."
     },
     {
-        "editor_id": null,
-        "form_id": "[050008A3]",
-        "index": null,
-        "type": "INFO RNAM",
-        "original": "Must we fight? Will Skyrim ever see peace?",
-        "string": "Müssen wir kämpfen? Wird es in Himmelsrand jemals Frieden geben?"
-    },
-    {
-        "editor_id": null,
-        "form_id": "[050008D8]",
-        "index": null,
-        "type": "INFO RNAM",
-        "original": "Let's make this a battle the bards remember.",
-        "string": "Über diesen Kampf werden die Barden noch singen."
-    },
-    {
-        "editor_id": "ccFFBSSE001_QuestBranch01Topic",
-        "form_id": "[0500088E]",
-        "index": null,
-        "type": "DIAL FULL",
-        "original": "I got your message about needing a champion.",
-        "string": "Ich habe Eure Nachricht erhalten, dass Ihr einen Champion sucht."
-    },
-    {
-        "editor_id": null,
-        "form_id": "[050008DC]",
-        "index": null,
-        "type": "INFO RNAM",
-        "original": "Time to die, rebel dog.",
-        "string": "Zeit zu sterben, Rebellenhund!"
-    },
-    {
-        "editor_id": "ccFFBSSE001_QuestBranch01TopicC",
-        "form_id": "[0500089F]",
-        "index": null,
-        "type": "DIAL FULL",
-        "original": "I'll do my best.",
-        "string": "Ich werde mein Bestes tun."
-    },
-    {
-        "editor_id": null,
-        "form_id": "[050008B9]",
-        "index": null,
-        "type": "INFO RNAM",
-        "original": "Not Used",
-        "string": "Nicht verwendet"
-    },
-    {
-        "editor_id": null,
-        "form_id": "[05000966]",
-        "index": null,
-        "type": "INFO RNAM",
-        "original": "I heard you're in need of a champion.",
-        "string": "Ich habe gehört, dass Ihr eines Champions bedürft."
-    },
-    {
-        "editor_id": "ccFFBSSE001_QuestBranch04Topic",
-        "form_id": "[050008A8]",
-        "index": null,
-        "type": "DIAL FULL",
-        "original": "I want to fight as your champion. Here's what you asked for.",
-        "string": "Ich will als Euer Champion kämpfen. Hier ist das, was Ihr haben wolltet."
-    },
-    {
-        "editor_id": null,
-        "form_id": "[050008AA]",
-        "index": null,
-        "type": "INFO RNAM",
-        "original": "I hear you're looking for a champion. I'm loyal to the Empire. (Persuade)",
-        "string": "Wie ich hörte, sucht Ihr nach einem Champion. Ich bin dem Kaiserreich treu. (Überreden)"
-    },
-    {
-        "editor_id": null,
-        "form_id": "[050008AB]",
-        "index": null,
-        "type": "INFO RNAM",
-        "original": "I hear you're looking for a champion. I'm loyal to the Empire. (Persuade)",
-        "string": "Wie ich hörte, sucht Ihr nach einem Champion. Ich bin dem Kaiserreich treu. (Überreden)"
-    },
-    {
         "editor_id": "ccFFBSSE001_QuestBranch01TopicA",
-        "form_id": "[05000899]",
+        "form_id": "05000899|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "DIAL FULL",
         "original": "I have the grit, and then some.",
         "string": "Ich habe den Mumm und auch noch ein bisschen mehr."
     },
     {
-        "editor_id": null,
-        "form_id": "[0500089D]",
-        "index": null,
-        "type": "INFO RNAM",
-        "original": "Those Stormcloak rebels are as good as dead.",
-        "string": "Diese Sturmmantel-Rebellen sind so gut wie tot."
-    },
-    {
-        "editor_id": "ccFFBSSE001_QuestBranch05TopicD",
-        "form_id": "[050008DA]",
-        "index": null,
-        "type": "DIAL FULL",
-        "original": "And now you die, Imperial swine.",
-        "string": "Und jetzt werdet Ihr sterben, Kaiserliches Schwein."
-    },
-    {
-        "editor_id": null,
-        "form_id": "[050008A9]",
-        "index": null,
-        "type": "INFO RNAM",
-        "original": "I heard you're looking for a soldier to fight a Stormcloak champion.",
-        "string": "Wie ich hörte, sucht Ihr nach einem Soldaten, der gegen einen Sturmmantel-Champion kämpft."
-    },
-    {
-        "editor_id": "ccFFBSSE001_QuestBranch01TopicE",
-        "form_id": "[050008A5]",
-        "index": null,
-        "type": "DIAL FULL",
-        "original": "I'm a bit busy at the moment.",
-        "string": "Ich bin gerade etwas beschäftigt."
-    },
-    {
-        "editor_id": "ccFFBSSE001_QuestBranch01TopicB",
-        "form_id": "[0500089C]",
-        "index": null,
-        "type": "DIAL FULL",
-        "original": "They're as good as dead.",
-        "string": "Sie sind so gut wie tot."
-    },
-    {
-        "editor_id": "ccFFBSSE001_QuestBranch04TopicA",
-        "form_id": "[050008AE]",
-        "index": null,
-        "type": "DIAL FULL",
-        "original": "What's the mission?",
-        "string": "Wie lautet die Mission?"
-    },
-    {
-        "editor_id": null,
-        "form_id": "[05000895]",
-        "index": null,
-        "type": "INFO RNAM",
-        "original": "I'm here about those Stormcloak rebels.",
-        "string": "Ich bin wegen dieser Sturmmantel-Rebellen hier."
-    },
-    {
-        "editor_id": null,
-        "form_id": "[0500088F]",
-        "index": null,
-        "type": "INFO RNAM",
-        "original": "I'm ready to battle the Imperial champion.",
-        "string": "Ich bin bereit, gegen den Champion der Kaiserlichen zu kämpfen."
-    },
-    {
-        "editor_id": null,
-        "form_id": "[05000890]",
-        "index": null,
-        "type": "INFO RNAM",
-        "original": "I'm ready to battle the Stormcloak champion.",
-        "string": "Ich bin bereit, gegen den Sturmmantel-Champion zu kämpfen."
-    },
-    {
-        "editor_id": "ccFFBSSE001_QuestBranch03Topic",
-        "form_id": "[05000896]",
-        "index": null,
-        "type": "DIAL FULL",
-        "original": "I heard you had work for me.",
-        "string": "Wie ich hörte, habt Ihr Arbeit für mich."
-    },
-    {
-        "editor_id": null,
-        "form_id": "[0500089B]",
-        "index": null,
-        "type": "INFO RNAM",
-        "original": "I can handle it, and then some.",
-        "string": "Das schaffe ich spielend."
-    },
-    {
-        "editor_id": null,
-        "form_id": "[05000967]",
-        "index": null,
-        "type": "INFO RNAM",
-        "original": "I heard you're in need of a champion.",
-        "string": "Ich habe gehört, dass Ihr eines Champions bedürft."
-    },
-    {
-        "editor_id": "ccFFBSSE001_QuestBranch05TopicB",
-        "form_id": "[050008D2]",
-        "index": null,
-        "type": "DIAL FULL",
-        "original": "Let's just get on with it.",
-        "string": "Fangen wir einfach an."
-    },
-    {
         "editor_id": "ccFFBSSE001_QuestBranch01TopicD",
-        "form_id": "[050008A2]",
+        "form_id": "050008A2|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "DIAL FULL",
         "original": "The Nine will guide us to victory.",
         "string": "Die Neun werden uns zum Sieg führen."
     },
     {
-        "editor_id": null,
-        "form_id": "[05000870]",
-        "index": null,
-        "type": "INFO RNAM",
-        "original": "I heard you're looking for a soldier to fight a Stormcloak champion.",
-        "string": "Wie ich hörte, sucht Ihr nach einem Soldaten, der gegen einen Sturmmantel-Champion kämpft."
-    },
-    {
-        "editor_id": null,
-        "form_id": "[050008D4]",
-        "index": null,
-        "type": "INFO RNAM",
-        "original": "Agreed. Let's get on with it.",
-        "string": "Einverstanden. Fangen wir an."
-    },
-    {
-        "editor_id": "ccFFBSSE001_QuestBranch04TopicB",
-        "form_id": "[050008B0]",
+        "editor_id": "ccFFBSSE001_QuestBranch01TopicE",
+        "form_id": "050008A5|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "DIAL FULL",
-        "original": "I think we can help each other.",
-        "string": "Ich glaube, wir können uns gegenseitig behilflich sein."
+        "original": "I'm a bit busy at the moment.",
+        "string": "Ich bin gerade etwas beschäftigt."
     },
     {
         "editor_id": "ccFFBSSE001_QuestBranch01TopicY",
-        "form_id": "[050008B5]",
+        "form_id": "050008B5|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "DIAL FULL",
         "original": "ccFFBSSE001_QuestBranch01TopicY",
         "string": "ccFFBSSE001_QuestBranch01TopicY"
     },
     {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 85,
-        "type": "QUST CNAM",
-        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I've arrived at the site of the battle. After confronting the opposing champion, it's time to fight.",
-        "string": "Ich wurde ausgewählt, im Kampf der Champions anzutreten. Unter Zuhilfenahme einer Karte, die ich von meinem befehlshabenden Offizier erhalten habe, bin ich am Austragungsort des Kampfes eingetroffen. Nachdem ich dem gegnerischen Champion gegenübergetreten bin, wird es jetzt Zeit für den Kampf."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 93,
-        "type": "QUST CNAM",
-        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I've arrived at the site of the battle. After confronting the opposing champion, it's time to fight.",
-        "string": "Ich wurde ausgewählt, im Kampf der Champions anzutreten. Unter Zuhilfenahme einer Karte, die ich von meinem befehlshabenden Offizier erhalten habe, bin ich am Austragungsort des Kampfes eingetroffen. Nachdem ich dem gegnerischen Champion gegenübergetreten bin, wird es jetzt Zeit für den Kampf."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 2,
-        "type": "QUST NNAM",
-        "original": "Read the letter",
-        "string": "Lies den Brief."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 84,
-        "type": "QUST CNAM",
-        "original": "A civil war rages on between the Stormcloaks and Imperials, with Whiterun at the center. I should investigate the taverns there and see what I can learn about the current state of the war.",
-        "string": "Zwischen den Sturmmänteln und Kaiserlichen tobt ein Bürgerkrieg, in dessen Zentrum Weißlauf steht. Ich sollte in den dortigen Tavernen nachhorchen und versuchen, etwas über den aktuellen Stand des Konflikts zu erfahren."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 20,
-        "type": "QUST NNAM",
-        "original": "Pose as an Imperial soldier and speak to the Legate",
-        "string": "Gib dich als Kaiserlicher Soldat aus und spricht mit dem Legat."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 88,
-        "type": "QUST CNAM",
-        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I've arrived at the site of the battle. After confronting the opposing champion, it's time to fight.",
-        "string": "Ich wurde ausgewählt, im Kampf der Champions anzutreten. Unter Zuhilfenahme einer Karte, die ich von meinem befehlshabenden Offizier erhalten habe, bin ich am Austragungsort des Kampfes eingetroffen. Nachdem ich dem gegnerischen Champion gegenübergetreten bin, wird es jetzt Zeit für den Kampf."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 90,
-        "type": "QUST CNAM",
-        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I arrived at the site of the battle and defeated the opposing champion. As a reward, I received a set of Storm-Bear armor from Legate Adventus Caesennius.",
-        "string": "Ich wurde ausgewählt, im Kampf der Champions anzutreten. Unter Zuhilfenahme einer Karte, die ich von meinem befehlshabenden Offizier erhalten habe, bin ich am Austragungsort des Kampfes eingetroffen und habe den gegnerischen Champion besiegt. Als Belohnung habe ich von Legat Adventus Caesennius die Sturmbärenrüstung erhalten."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 244,
-        "type": "QUST NNAM",
-        "original": "Speak with the Stormcloak Champion",
-        "string": "Sprich mit dem Sturmmantel-Champion."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 10,
-        "type": "QUST NNAM",
-        "original": "Investigate the Drunken Huntsman for information",
-        "string": "Untersuche den Trunkenen Jägersmann, um Informationen zu erhalten."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 93,
-        "type": "QUST CNAM",
-        "original": "The Stormcloaks have chosen me to fight in a battle of champions. Using a key I received from Yrsarald Thrice-Pierced, I opened a chest that holds the champion's armor and a map of the battle location.",
-        "string": "Die Sturmmäntel haben mich ausgewählt, in einem Kampf der Champions anzutreten. Mithilfe eines Schlüssels, den ich von Yrsarald Dreifach-Durchstochen erhalten habe, konnte ich eine Truhe öffnen, in der sich die Rüstung des Champions und eine Karte des Austragungsortes des Kampfes befinden."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 140,
-        "type": "QUST NNAM",
-        "original": "Join the Stormcloak garrison at the battle site",
-        "string": "Schließe dich am Austragungsort des Kampfes der Sturmmantel-Garnison an."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 78,
-        "type": "QUST CNAM",
-        "original": "The Imperials have chosen me to fight in a battle of champions. As such, I've received a key from Legate Adventus Caesennius in Solitude. It will open a chest in Castle Dour that holds the champion's armor and a map of the batlle location.",
-        "string": "Die Kaiserlichen haben mich ausgewählt, in einem Kampf der Champions anzutreten, und ich habe in Einsamkeit einen Schlüssel von Legat Adventus Caesennius erhalten. Damit kann ich eine Truhe öffnen, in der sich die Rüstung des Champions und eine Karte des Austragungsortes des Kampfes befinden."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 160,
-        "type": "QUST NNAM",
-        "original": "Defeat the Imperial soldiers",
-        "string": "Besiege die Kaiserlichen Soldaten."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 73,
-        "type": "QUST CNAM",
-        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I've arrived at the site of the battle. After confronting the opposing champion, it's time to fight.",
-        "string": "Ich wurde ausgewählt, im Kampf der Champions anzutreten. Unter Zuhilfenahme einer Karte, die ich von meinem befehlshabenden Offizier erhalten habe, bin ich am Austragungsort des Kampfes eingetroffen. Nachdem ich dem gegnerischen Champion gegenübergetreten bin, wird es jetzt Zeit für den Kampf."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 81,
-        "type": "QUST CNAM",
-        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I've arrived at the site of the battle. After confronting the opposing champion, it's time to fight.",
-        "string": "Ich wurde ausgewählt, im Kampf der Champions anzutreten. Unter Zuhilfenahme einer Karte, die ich von meinem befehlshabenden Offizier erhalten habe, bin ich am Austragungsort des Kampfes eingetroffen. Nachdem ich dem gegnerischen Champion gegenübergetreten bin, wird es jetzt Zeit für den Kampf."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 66,
-        "type": "QUST CNAM",
-        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I've arrived at the site of the battle. After confronting the opposing champion, it's time to fight.",
-        "string": "Ich wurde ausgewählt, im Kampf der Champions anzutreten. Unter Zuhilfenahme einer Karte, die ich von meinem befehlshabenden Offizier erhalten habe, bin ich am Austragungsort des Kampfes eingetroffen. Nachdem ich dem gegnerischen Champion gegenübergetreten bin, wird es jetzt Zeit für den Kampf."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 106,
-        "type": "QUST CNAM",
-        "original": "The Imperials have chosen me to fight in a battle of champions. As such, I've received a key from Legate Adventus Caesennius in Solitude. It will open a chest in Castle Dour that holds the champion's armor and a map of the batlle location.",
-        "string": "Die Kaiserlichen haben mich ausgewählt, in einem Kampf der Champions anzutreten, und ich habe in Einsamkeit einen Schlüssel von Legat Adventus Caesennius erhalten. Damit kann ich eine Truhe öffnen, in der sich die Rüstung des Champions und eine Karte des Austragungsortes des Kampfes befinden."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
+        "editor_id": "ccFFBSSE001_QuestBranch05TopicB",
+        "form_id": "050008D2|ccffbsse001-imperialdragon.esl",
         "index": null,
-        "type": "QUST FULL",
-        "original": "Battle of the Champions",
-        "string": "Kampf der Champions"
+        "type": "DIAL FULL",
+        "original": "Let's just get on with it.",
+        "string": "Fangen wir einfach an."
     },
     {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 88,
-        "type": "QUST CNAM",
-        "original": "A civil war rages on between the Stormcloaks and Imperials, with Whiterun at the center. Knowing I have sided with the Stormcloaks, Yrsarald Thrice-Pierced has sent me a letter. He may be in need of my services.",
-        "string": "Zwischen den Sturmmänteln und Kaiserlichen tobt ein Bürgerkrieg, in dessen Zentrum Weißlauf steht. Da Yrsarald Dreifach-Durchstochen weiß, dass ich mich auf die Seite der Sturmmäntel geschlagen habe, hat er mir einen Brief geschickt. Vielleicht benötigt er meine Dienste."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 240,
-        "type": "QUST NNAM",
-        "original": "Join the Imperial garrison at the battle site",
-        "string": "Schließe dich am Austragungsort des Kampfes der Kaiserlichen Garnison an."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 89,
-        "type": "QUST CNAM",
-        "original": "A civil war rages on between the Stormcloaks and Imperials, with Whiterun at the center. Having joined with the Imperials, I should head to a major hold in case a courier has news for me.",
-        "string": "Zwischen den Sturmmänteln und Kaiserlichen tobt ein Bürgerkrieg, in dessen Zentrum Weißlauf steht. Nachdem ich mich auf die Seite der Kaiserlichen geschlagen habe, sollte ich zu einer großen Feste gehen, falls ein Kurier Nachrichten für mich hat."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 130,
-        "type": "QUST NNAM",
-        "original": "Retrieve the Storm-Bear Armor and map",
-        "string": "Nimm die Sturmbärenrüstung und die Karte an dich."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 75,
-        "type": "QUST CNAM",
-        "original": "I've received a letter from Legate Adventus Caesennius. He asks that I serve as a champion in a duel against a Stormcloak garrison, and has promised me an armor to wear in the battle.",
-        "string": "Ich habe einen Brief von Legat Adventus Caesennius erhalten. Er bittet mich, als Champion im Duell gegen eine Garnison der Sturmmäntel anzutreten, und hat mir eine Rüstung für den Kampf versprochen."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 30,
-        "type": "QUST NNAM",
-        "original": "Deliver five snow bear pelts to Yrsarald in Windhelm",
-        "string": "Bring Yrsarald in Windhelm fünf Schneebärenpelze."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 78,
-        "type": "QUST CNAM",
-        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I've arrived at the site of the battle. After confronting the opposing champion, it's time to fight.",
-        "string": "Ich wurde ausgewählt, im Kampf der Champions anzutreten. Unter Zuhilfenahme einer Karte, die ich von meinem befehlshabenden Offizier erhalten habe, bin ich am Austragungsort des Kampfes eingetroffen. Nachdem ich dem gegnerischen Champion gegenübergetreten bin, wird es jetzt Zeit für den Kampf."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 98,
-        "type": "QUST CNAM",
-        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I've arrived at the site of the battle. After confronting the opposing champion, it's time to fight.",
-        "string": "Ich wurde ausgewählt, im Kampf der Champions anzutreten. Unter Zuhilfenahme einer Karte, die ich von meinem befehlshabenden Offizier erhalten habe, bin ich am Austragungsort des Kampfes eingetroffen. Nachdem ich dem gegnerischen Champion gegenübergetreten bin, wird es jetzt Zeit für den Kampf."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 120,
-        "type": "QUST NNAM",
-        "original": "Meet with your commanding officer",
-        "string": "Triff dich mit deinem befehlshabenden Offizier."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 40,
-        "type": "QUST NNAM",
-        "original": "(Optional) Steal the snow bear pelts from Klija in Kynesgrove",
-        "string": "(Optional) Stiehl die Schneebärenpelze von Klija in Kyneshain."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 98,
-        "type": "QUST CNAM",
-        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I've arrived at the site of the battle. After confronting the opposing champion, it's time to fight.",
-        "string": "Ich wurde ausgewählt, im Kampf der Champions anzutreten. Unter Zuhilfenahme einer Karte, die ich von meinem befehlshabenden Offizier erhalten habe, bin ich am Austragungsort des Kampfes eingetroffen. Nachdem ich dem gegnerischen Champion gegenübergetreten bin, wird es jetzt Zeit für den Kampf."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 220,
-        "type": "QUST NNAM",
-        "original": "Meet with your commanding officer",
-        "string": "Triff dich mit deinem befehlshabenden Offizier."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 78,
-        "type": "QUST CNAM",
-        "original": "The Imperials have chosen me to fight in a battle of champions. Using a key I received from Legate Adventus Caesennius, I opened a chest that holds the champion's armor and a map of the battle location.",
-        "string": "Die Kaiserlichen haben mich ausgewählt, in einem Kampf der Champions anzutreten. Mithilfe eines Schlüssels, den ich von Legat Adventus Caesennius erhalten habe, konnte ich eine Truhe öffnen, in der sich die Rüstung des Champions und eine Karte des Austragungsortes des Kampfes befinden."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 101,
-        "type": "QUST CNAM",
-        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I've arrived at the site of the battle. After confronting the opposing champion, it's time to fight.",
-        "string": "Ich wurde ausgewählt, im Kampf der Champions anzutreten. Unter Zuhilfenahme einer Karte, die ich von meinem befehlshabenden Offizier erhalten habe, bin ich am Austragungsort des Kampfes eingetroffen. Nachdem ich dem gegnerischen Champion gegenübergetreten bin, wird es jetzt Zeit für den Kampf."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 60,
-        "type": "QUST CNAM",
-        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I've arrived at the site of the battle. After confronting the opposing champion, it's time to fight.",
-        "string": "Ich wurde ausgewählt, im Kampf der Champions anzutreten. Unter Zuhilfenahme einer Karte, die ich von meinem befehlshabenden Offizier erhalten habe, bin ich am Austragungsort des Kampfes eingetroffen. Nachdem ich dem gegnerischen Champion gegenübergetreten bin, wird es jetzt Zeit für den Kampf."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 88,
-        "type": "QUST CNAM",
-        "original": "A civil war rages on between the Stormcloaks and Imperials, with Whiterun at the center. Knowing I have sided with the Imperials, Legate Adventus Caesennius has sent me a letter. He may be in need of my services.",
-        "string": "Zwischen den Sturmmänteln und Kaiserlichen tobt ein Bürgerkrieg, in dessen Zentrum Weißlauf steht. Da Legat Adventus Caesennius weiß, dass ich mich auf die Seite der Kaiserlichen geschlagen habe, hat er mir einen Brief geschickt. Vielleicht benötigt er meine Dienste."
-    },
-    {
-        "editor_id": "ccFFBSSE001_CorpseCheck",
-        "form_id": "[0500086B]",
-        "index": 76,
-        "type": "QUST CNAM",
-        "original": "Stormbear",
-        "string": "Sturmbär"
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 81,
-        "type": "QUST CNAM",
-        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I arrived at the site of the battle and defeated the opposing champion.",
-        "string": "Ich wurde ausgewählt, im Kampf der Champions anzutreten. Unter Zuhilfenahme einer Karte, die ich von meinem befehlshabenden Offizier erhalten habe, bin ich am Austragungsort des Kampfes eingetroffen und habe den gegnerischen Champion besiegt."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 93,
-        "type": "QUST CNAM",
-        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I've arrived at the site of the battle. ",
-        "string": "Ich wurde ausgewählt, im Kampf der Champions anzutreten. Unter Zuhilfenahme einer Karte, die ich von meinem befehlshabenden Offizier erhalten habe, bin ich am Austragungsort des Kampfes eingetroffen. "
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 230,
-        "type": "QUST NNAM",
-        "original": "Retrieve the Imperial Dragon Armor and map",
-        "string": "Nimm die Kaiserliche Drachenrüstung und die Karte an dich."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 144,
-        "type": "QUST NNAM",
-        "original": "Speak with the Imperial Champion",
-        "string": "Sprich mit dem Kaiserlichen Champion."
-    },
-    {
-        "editor_id": "ccFFBSSE001_CorpseCheck",
-        "form_id": "[0500086B]",
-        "index": 66,
-        "type": "QUST CNAM",
-        "original": "Stormbear",
-        "string": "Sturmbär"
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 86,
-        "type": "QUST CNAM",
-        "original": "According to a letter I found in Whiterun, the Stormcloaks and Imperials are engaging in a battle of champions. Rumor has it that Yrsarald Thrice-Pierced has asked any potential champion to prove their worth by slaying five snow bears and handing him their pelts. Alternatively, I could try posing as a soldier and speaking to Legate Adventus Caesennius in Solitude.",
-        "string": "Laut einem Brief, den ich in Weißlauf gefunden habe, treten die Sturmmäntel und die Kaiserlichen in einem Kampf der Champions gegeneinander an. Gerüchten zufolge hat Yrsarald Dreifach-Durchstochen potenzielle Champions aufgefordert, ihr Können unter Beweis zu stellen, indem sie fünf Schneebären erlegen und ihm ihre Pelze bringen. Als Alternative bestünde auch die Möglichkeit, mich als Soldat auszugeben und mit Legat Adventus Caesennius in Einsamkeit zu sprechen."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 97,
-        "type": "QUST CNAM",
-        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I arrived at the site of the battle and defeated the opposing champion.",
-        "string": "Ich wurde ausgewählt, im Kampf der Champions anzutreten. Unter Zuhilfenahme einer Karte, die ich von meinem befehlshabenden Offizier erhalten habe, bin ich am Austragungsort des Kampfes eingetroffen und habe den gegnerischen Champion besiegt."
-    },
-    {
-        "editor_id": "ccFFBSSE001_CorpseCheck",
-        "form_id": "[0500086B]",
-        "index": 99,
-        "type": "QUST CNAM",
-        "original": "Stormbear",
-        "string": "Sturmbär"
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 260,
-        "type": "QUST NNAM",
-        "original": "Defeat the Stormcloak soldiers",
-        "string": "Besiege die Sturmmantel-Soldaten."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 85,
-        "type": "QUST CNAM",
-        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I've arrived at the site of the battle. After confronting the opposing champion, it's time to fight.",
-        "string": "Ich wurde ausgewählt, im Kampf der Champions anzutreten. Unter Zuhilfenahme einer Karte, die ich von meinem befehlshabenden Offizier erhalten habe, bin ich am Austragungsort des Kampfes eingetroffen. Nachdem ich dem gegnerischen Champion gegenübergetreten bin, wird es jetzt Zeit für den Kampf."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 84,
-        "type": "QUST CNAM",
-        "original": "According to a letter I found in Whiterun, the Stormcloaks and Imperials are engaging in a battle of champions. Rumor has it that Yrsarald Thrice-Pierced has asked any potential champion to prove their worth by slaying five snow bears and handing him their pelts. I've taken the pelts I need from a warrior named Klija Wolf-Claw in Kynesgrove.",
-        "string": "Laut einem Brief, den ich in Weißlauf gefunden habe, treten die Sturmmäntel und die Kaiserlichen in einem Kampf der Champions gegeneinander an. Gerüchten zufolge hat Yrsarald Dreifach-Durchstochen potenzielle Champions aufgefordert, ihr Können unter Beweis zu stellen, indem sie fünf Schneebären erlegen und ihm ihre Pelze bringen. Ich habe die benötigten Pelze einer Kriegerin namens Klija Wolfs-Klaue im Kyneshain abgenommen."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 63,
-        "type": "QUST CNAM",
-        "original": "According to a letter I found in Whiterun, the Stormcloaks and Imperials are engaging in a battle of champions. Rumor has it that Yrsarald Thrice-Pierced has asked any potential champion to prove their worth by slaying five snow bears and handing him their pelts. Alternatively, I could try posing as a soldier and speaking to Legate Adventus Caesennius in Solitude.",
-        "string": "Laut einem Brief, den ich in Weißlauf gefunden habe, treten die Sturmmäntel und die Kaiserlichen in einem Kampf der Champions gegeneinander an. Gerüchten zufolge hat Yrsarald Dreifach-Durchstochen potenzielle Champions aufgefordert, ihr Können unter Beweis zu stellen, indem sie fünf Schneebären erlegen und ihm ihre Pelze bringen. Als Alternative bestünde auch die Möglichkeit, mich als Soldat auszugeben und mit Legat Adventus Caesennius in Einsamkeit zu sprechen."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 77,
-        "type": "QUST CNAM",
-        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I've arrived at the site of the battle. After confronting the opposing champion, it's time to fight.",
-        "string": "Ich wurde ausgewählt, im Kampf der Champions anzutreten. Unter Zuhilfenahme einer Karte, die ich von meinem befehlshabenden Offizier erhalten habe, bin ich am Austragungsort des Kampfes eingetroffen. Nachdem ich dem gegnerischen Champion gegenübergetreten bin, wird es jetzt Zeit für den Kampf."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 80,
-        "type": "QUST CNAM",
-        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I've arrived at the site of the battle. After confronting the opposing champion, it's time to fight.",
-        "string": "Ich wurde ausgewählt, im Kampf der Champions anzutreten. Unter Zuhilfenahme einer Karte, die ich von meinem befehlshabenden Offizier erhalten habe, bin ich am Austragungsort des Kampfes eingetroffen. Nachdem ich dem gegnerischen Champion gegenübergetreten bin, wird es jetzt Zeit für den Kampf."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 96,
-        "type": "QUST CNAM",
-        "original": "I've received a letter from Yrsarald Thrice-Pierced. He asks that I serve as a champion in a duel against an Imperial garrison, and has given me a key to a chest with a powerful armor set. I should retrieve the armor and map with the location of the battle.",
-        "string": "Ich habe einen Brief von Yrsarald Dreifach-Durchstochen erhalten. Er bittet mich, als Champion im Duell gegen eine Garnison der Kaiserlichen anzutreten, und hat mir den Schlüssel zu einer Truhe mit einer mächtigen Rüstung gegeben. Ich sollte die Rüstung und die Karte des Austragungsortes an mich nehmen."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 97,
-        "type": "QUST CNAM",
-        "original": "I've received a letter from Yrsarald Thrice-Pierced. He asks that I serve as a champion in a duel against an Imperial garrison, and has promised me an armor to wear in the battle. ",
-        "string": "Ich habe einen Brief von Yrsarald Dreifach-Durchstochen erhalten. Er bittet mich, als Champion im Duell gegen eine Garnison der Kaiserlichen anzutreten, und hat mir eine Rüstung für den Kampf versprochen. "
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 98,
-        "type": "QUST CNAM",
-        "original": "I was chosen to fight in a battle of champions. Using a map I received from my commanding officer, I arrived at the site of the battle and defeated the opposing champion.",
-        "string": "Ich wurde ausgewählt, im Kampf der Champions anzutreten. Unter Zuhilfenahme einer Karte, die ich von meinem befehlshabenden Offizier erhalten habe, bin ich am Austragungsort des Kampfes eingetroffen und habe den gegnerischen Champion besiegt."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 77,
-        "type": "QUST CNAM",
-        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I've arrived at the site of the battle. After confronting the opposing champion, it's time to fight.",
-        "string": "Ich wurde ausgewählt, im Kampf der Champions anzutreten. Unter Zuhilfenahme einer Karte, die ich von meinem befehlshabenden Offizier erhalten habe, bin ich am Austragungsort des Kampfes eingetroffen. Nachdem ich dem gegnerischen Champion gegenübergetreten bin, wird es jetzt Zeit für den Kampf."
-    },
-    {
-        "editor_id": "ccFFBSSE001_CorpseCheck",
-        "form_id": "[0500086B]",
-        "index": 87,
-        "type": "QUST CNAM",
-        "original": "Stormbear",
-        "string": "Sturmbär"
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 94,
-        "type": "QUST CNAM",
-        "original": "A civil war rages on between the Stormcloaks and Imperials, with Whiterun at the center. Having taken a side, I should speak with my commanding officer to see if I can fight as a champion.",
-        "string": "Zwischen den Sturmmänteln und Kaiserlichen tobt ein Bürgerkrieg, in dessen Zentrum Weißlauf steht. Nachdem ich mich auf eine Seite geschlagen habe, sollte ich mit meinem befehlshabenden Offizier reden, ob ich als Champion für sie kämpfen kann."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 81,
-        "type": "QUST CNAM",
-        "original": "A civil war rages on between the Stormcloaks and Imperials, with Whiterun at the center. Having joined with the Stormcloaks, I should head to a major hold in case a courier has news for me.",
-        "string": "Zwischen den Sturmmänteln und Kaiserlichen tobt ein Bürgerkrieg, in dessen Zentrum Weißlauf steht. Nachdem ich mich auf die Seite der Sturmmäntel geschlagen habe, sollte ich zu einer großen Feste gehen, falls ein Kurier Nachrichten für mich hat."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 1,
-        "type": "QUST NNAM",
-        "original": "Head to a major hold and await news from a courier",
-        "string": "Begib dich zu einer großen Feste und warte auf Neuigkeiten von einem Kurier."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 1120,
-        "type": "QUST NNAM",
-        "original": "Meet with your commanding officer",
-        "string": "Triff dich mit deinem befehlshabenden Offizier."
-    },
-    {
-        "editor_id": "ccFFBSSE001_CorpseCheck",
-        "form_id": "[0500086B]",
-        "index": 84,
-        "type": "QUST CNAM",
-        "original": "Stormbear",
-        "string": "Sturmbär"
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 75,
-        "type": "QUST CNAM",
-        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I arrived at the site of the battle and defeated the opposing champion. As a reward, I received a set of Imperial Dragon Armor from the Legate.",
-        "string": "Ich wurde ausgewählt, im Kampf der Champions anzutreten. Unter Zuhilfenahme einer Karte, die ich von meinem befehlshabenden Offizier erhalten habe, bin ich am Austragungsort des Kampfes eingetroffen und habe den gegnerischen Champion besiegt. Als Belohnung habe ich vom Legat die Kaiserliche Drachenrüstung erhalten."
-    },
-    {
-        "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 50,
-        "type": "QUST NNAM",
-        "original": "(Optional) Persuade the Legate to make you his champion",
-        "string": "(Optional) Überrede den Legat, dich zu seinem Champion zu machen."
-    },
-    {
-        "editor_id": "ccFFBSSE001_CorpseCheck",
-        "form_id": "[0500086B]",
-        "index": 76,
-        "type": "QUST CNAM",
-        "original": "Stormbear",
-        "string": "Sturmbär"
-    },
-    {
-        "editor_id": "ccFFBSSE001_CorpseCheck",
-        "form_id": "[0500086B]",
-        "index": 89,
-        "type": "QUST CNAM",
-        "original": "Stormbear",
-        "string": "Sturmbär"
-    },
-    {
-        "editor_id": "ccFFBSSE001_CorpseCheck",
-        "form_id": "[0500086B]",
+        "editor_id": "ccFFBSSE001_QuestBranch04Topic",
+        "form_id": "050008A8|ccffbsse001-imperialdragon.esl",
         "index": null,
-        "type": "QUST FULL",
-        "original": "Corpse Check",
-        "string": "Leichenprüfung"
+        "type": "DIAL FULL",
+        "original": "I want to fight as your champion. Here's what you asked for.",
+        "string": "Ich will als Euer Champion kämpfen. Hier ist das, was Ihr haben wolltet."
+    },
+    {
+        "editor_id": "ccFFBSSE001_QuestBranch05TopicD",
+        "form_id": "050008DA|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "And now you die, Imperial swine.",
+        "string": "Und jetzt werdet Ihr sterben, Kaiserliches Schwein."
+    },
+    {
+        "editor_id": "ccFFBSSE001_QuestBranch04TopicB",
+        "form_id": "050008B0|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I think we can help each other.",
+        "string": "Ich glaube, wir können uns gegenseitig behilflich sein."
+    },
+    {
+        "editor_id": "ccFFBSSE001_QuestBranch03Topic",
+        "form_id": "05000896|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I heard you had work for me.",
+        "string": "Wie ich hörte, habt Ihr Arbeit für mich."
     },
     {
         "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
         "index": 70,
         "type": "QUST CNAM",
         "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I've arrived at the site of the battle. After confronting the opposing champion, it's time to fight.",
@@ -1873,15 +1209,423 @@
     },
     {
         "editor_id": "ccFFBSSE001_Quest",
-        "form_id": "[05000927]",
-        "index": 73,
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 114,
+        "type": "QUST CNAM",
+        "original": "I've received a letter from Yrsarald Thrice-Pierced. He asks that I serve as a champion in a duel against an Imperial garrison, and has promised me an armor to wear in the battle. ",
+        "string": "Ich habe einen Brief von Yrsarald Dreifach-Durchstochen erhalten. Er bittet mich, als Champion im Duell gegen eine Garnison der Kaiserlichen anzutreten, und hat mir eine Rüstung für den Kampf versprochen. "
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 81,
+        "type": "QUST CNAM",
+        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I arrived at the site of the battle and defeated the opposing champion. As a reward, I received a set of Storm-Bear armor from Legate Adventus Caesennius.",
+        "string": "Ich wurde ausgewählt, im Kampf der Champions anzutreten. Unter Zuhilfenahme einer Karte, die ich von meinem befehlshabenden Offizier erhalten habe, bin ich am Austragungsort des Kampfes eingetroffen und habe den gegnerischen Champion besiegt. Als Belohnung habe ich von Legat Adventus Caesennius die Sturmbärenrüstung erhalten."
+    },
+    {
+        "editor_id": "ccFFBSSE001_CorpseCheck",
+        "form_id": "0500086B|ccffbsse001-imperialdragon.esl",
+        "index": 96,
+        "type": "QUST CNAM",
+        "original": "Stormbear",
+        "string": "Sturmbär"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 83,
         "type": "QUST CNAM",
         "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I've arrived at the site of the battle. After confronting the opposing champion, it's time to fight.",
         "string": "Ich wurde ausgewählt, im Kampf der Champions anzutreten. Unter Zuhilfenahme einer Karte, die ich von meinem befehlshabenden Offizier erhalten habe, bin ich am Austragungsort des Kampfes eingetroffen. Nachdem ich dem gegnerischen Champion gegenübergetreten bin, wird es jetzt Zeit für den Kampf."
     },
     {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 94,
+        "type": "QUST CNAM",
+        "original": "A civil war rages on between the Stormcloaks and Imperials, with Whiterun at the center. Knowing I have sided with the Imperials, Legate Adventus Caesennius has sent me a letter. He may be in need of my services.",
+        "string": "Zwischen den Sturmmänteln und Kaiserlichen tobt ein Bürgerkrieg, in dessen Zentrum Weißlauf steht. Da Legat Adventus Caesennius weiß, dass ich mich auf die Seite der Kaiserlichen geschlagen habe, hat er mir einen Brief geschickt. Vielleicht benötigt er meine Dienste."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "(Optional) Steal the snow bear pelts from Klija in Kynesgrove",
+        "string": "(Optional) Stiehl die Schneebärenpelze von Klija in Kyneshain."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 87,
+        "type": "QUST CNAM",
+        "original": "I've received a letter from Legate Adventus Caesennius. He asks that I serve as a champion in a duel against a Stormcloak garrison, and has promised me an armor to wear in the battle.",
+        "string": "Ich habe einen Brief von Legat Adventus Caesennius erhalten. Er bittet mich, als Champion im Duell gegen eine Garnison der Sturmmäntel anzutreten, und hat mir eine Rüstung für den Kampf versprochen."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Pose as an Imperial soldier and speak to the Legate",
+        "string": "Gib dich als Kaiserlicher Soldat aus und spricht mit dem Legat."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 96,
+        "type": "QUST CNAM",
+        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I arrived at the site of the battle and defeated the opposing champion. As a reward, I received a set of Imperial Dragon Armor from the Legate.",
+        "string": "Ich wurde ausgewählt, im Kampf der Champions anzutreten. Unter Zuhilfenahme einer Karte, die ich von meinem befehlshabenden Offizier erhalten habe, bin ich am Austragungsort des Kampfes eingetroffen und habe den gegnerischen Champion besiegt. Als Belohnung habe ich vom Legat die Kaiserliche Drachenrüstung erhalten."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 130,
+        "type": "QUST NNAM",
+        "original": "Retrieve the Storm-Bear Armor and map",
+        "string": "Nimm die Sturmbärenrüstung und die Karte an dich."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 240,
+        "type": "QUST NNAM",
+        "original": "Join the Imperial garrison at the battle site",
+        "string": "Schließe dich am Austragungsort des Kampfes der Kaiserlichen Garnison an."
+    },
+    {
+        "editor_id": "ccFFBSSE001_CorpseCheck",
+        "form_id": "0500086B|ccffbsse001-imperialdragon.esl",
+        "index": 85,
+        "type": "QUST CNAM",
+        "original": "Stormbear",
+        "string": "Sturmbär"
+    },
+    {
+        "editor_id": "ccFFBSSE001_CorpseCheck",
+        "form_id": "0500086B|ccffbsse001-imperialdragon.esl",
+        "index": 87,
+        "type": "QUST CNAM",
+        "original": "Stormbear",
+        "string": "Sturmbär"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 107,
+        "type": "QUST CNAM",
+        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I've arrived at the site of the battle. ",
+        "string": "Ich wurde ausgewählt, im Kampf der Champions anzutreten. Unter Zuhilfenahme einer Karte, die ich von meinem befehlshabenden Offizier erhalten habe, bin ich am Austragungsort des Kampfes eingetroffen. "
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 76,
+        "type": "QUST CNAM",
+        "original": "According to a letter I found in Whiterun, the Stormcloaks and Imperials are engaging in a battle of champions. Rumor has it that Yrsarald Thrice-Pierced has asked any potential champion to prove their worth by slaying five snow bears and handing him their pelts. Alternatively, I could try posing as a soldier and speaking to Legate Adventus Caesennius in Solitude.",
+        "string": "Laut einem Brief, den ich in Weißlauf gefunden habe, treten die Sturmmäntel und die Kaiserlichen in einem Kampf der Champions gegeneinander an. Gerüchten zufolge hat Yrsarald Dreifach-Durchstochen potenzielle Champions aufgefordert, ihr Können unter Beweis zu stellen, indem sie fünf Schneebären erlegen und ihm ihre Pelze bringen. Als Alternative bestünde auch die Möglichkeit, mich als Soldat auszugeben und mit Legat Adventus Caesennius in Einsamkeit zu sprechen."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 98,
+        "type": "QUST CNAM",
+        "original": "According to a letter I found in Whiterun, the Stormcloaks and Imperials are engaging in a battle of champions. Rumor has it that Yrsarald Thrice-Pierced has asked any potential champion to prove their worth by slaying five snow bears and handing him their pelts. I've taken the pelts I need from a warrior named Klija Wolf-Claw in Kynesgrove.",
+        "string": "Laut einem Brief, den ich in Weißlauf gefunden habe, treten die Sturmmäntel und die Kaiserlichen in einem Kampf der Champions gegeneinander an. Gerüchten zufolge hat Yrsarald Dreifach-Durchstochen potenzielle Champions aufgefordert, ihr Können unter Beweis zu stellen, indem sie fünf Schneebären erlegen und ihm ihre Pelze bringen. Ich habe die benötigten Pelze einer Kriegerin namens Klija Wolfs-Klaue im Kyneshain abgenommen."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 109,
+        "type": "QUST CNAM",
+        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I've arrived at the site of the battle. After confronting the opposing champion, it's time to fight.",
+        "string": "Ich wurde ausgewählt, im Kampf der Champions anzutreten. Unter Zuhilfenahme einer Karte, die ich von meinem befehlshabenden Offizier erhalten habe, bin ich am Austragungsort des Kampfes eingetroffen. Nachdem ich dem gegnerischen Champion gegenübergetreten bin, wird es jetzt Zeit für den Kampf."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 89,
+        "type": "QUST CNAM",
+        "original": "A civil war rages on between the Stormcloaks and Imperials, with Whiterun at the center. I should investigate the taverns there and see what I can learn about the current state of the war.",
+        "string": "Zwischen den Sturmmänteln und Kaiserlichen tobt ein Bürgerkrieg, in dessen Zentrum Weißlauf steht. Ich sollte in den dortigen Tavernen nachhorchen und versuchen, etwas über den aktuellen Stand des Konflikts zu erfahren."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 220,
+        "type": "QUST NNAM",
+        "original": "Meet with your commanding officer",
+        "string": "Triff dich mit deinem befehlshabenden Offizier."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 1120,
+        "type": "QUST NNAM",
+        "original": "Meet with your commanding officer",
+        "string": "Triff dich mit deinem befehlshabenden Offizier."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 2,
+        "type": "QUST NNAM",
+        "original": "Read the letter",
+        "string": "Lies den Brief."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 244,
+        "type": "QUST NNAM",
+        "original": "Speak with the Stormcloak Champion",
+        "string": "Sprich mit dem Sturmmantel-Champion."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 50,
+        "type": "QUST NNAM",
+        "original": "(Optional) Persuade the Legate to make you his champion",
+        "string": "(Optional) Überrede den Legat, dich zu seinem Champion zu machen."
+    },
+    {
+        "editor_id": "ccFFBSSE001_CorpseCheck",
+        "form_id": "0500086B|ccffbsse001-imperialdragon.esl",
+        "index": 80,
+        "type": "QUST CNAM",
+        "original": "Stormbear",
+        "string": "Sturmbär"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 160,
+        "type": "QUST NNAM",
+        "original": "Defeat the Imperial soldiers",
+        "string": "Besiege die Kaiserlichen Soldaten."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Deliver five snow bear pelts to Yrsarald in Windhelm",
+        "string": "Bring Yrsarald in Windhelm fünf Schneebärenpelze."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 78,
+        "type": "QUST CNAM",
+        "original": "A civil war rages on between the Stormcloaks and Imperials, with Whiterun at the center. Having joined with the Stormcloaks, I should head to a major hold in case a courier has news for me.",
+        "string": "Zwischen den Sturmmänteln und Kaiserlichen tobt ein Bürgerkrieg, in dessen Zentrum Weißlauf steht. Nachdem ich mich auf die Seite der Sturmmäntel geschlagen habe, sollte ich zu einer großen Feste gehen, falls ein Kurier Nachrichten für mich hat."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 80,
+        "type": "QUST CNAM",
+        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I've arrived at the site of the battle. After confronting the opposing champion, it's time to fight.",
+        "string": "Ich wurde ausgewählt, im Kampf der Champions anzutreten. Unter Zuhilfenahme einer Karte, die ich von meinem befehlshabenden Offizier erhalten habe, bin ich am Austragungsort des Kampfes eingetroffen. Nachdem ich dem gegnerischen Champion gegenübergetreten bin, wird es jetzt Zeit für den Kampf."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 91,
+        "type": "QUST CNAM",
+        "original": "The Imperials have chosen me to fight in a battle of champions. As such, I've received a key from Legate Adventus Caesennius in Solitude. It will open a chest in Castle Dour that holds the champion's armor and a map of the batlle location.",
+        "string": "Die Kaiserlichen haben mich ausgewählt, in einem Kampf der Champions anzutreten, und ich habe in Einsamkeit einen Schlüssel von Legat Adventus Caesennius erhalten. Damit kann ich eine Truhe öffnen, in der sich die Rüstung des Champions und eine Karte des Austragungsortes des Kampfes befinden."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 60,
+        "type": "QUST CNAM",
+        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I've arrived at the site of the battle. After confronting the opposing champion, it's time to fight.",
+        "string": "Ich wurde ausgewählt, im Kampf der Champions anzutreten. Unter Zuhilfenahme einer Karte, die ich von meinem befehlshabenden Offizier erhalten habe, bin ich am Austragungsort des Kampfes eingetroffen. Nachdem ich dem gegnerischen Champion gegenübergetreten bin, wird es jetzt Zeit für den Kampf."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 82,
+        "type": "QUST CNAM",
+        "original": "A civil war rages on between the Stormcloaks and Imperials, with Whiterun at the center. Having taken a side, I should speak with my commanding officer to see if I can fight as a champion.",
+        "string": "Zwischen den Sturmmänteln und Kaiserlichen tobt ein Bürgerkrieg, in dessen Zentrum Weißlauf steht. Nachdem ich mich auf eine Seite geschlagen habe, sollte ich mit meinem befehlshabenden Offizier reden, ob ich als Champion für sie kämpfen kann."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 93,
+        "type": "QUST CNAM",
+        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I've arrived at the site of the battle. After confronting the opposing champion, it's time to fight.",
+        "string": "Ich wurde ausgewählt, im Kampf der Champions anzutreten. Unter Zuhilfenahme einer Karte, die ich von meinem befehlshabenden Offizier erhalten habe, bin ich am Austragungsort des Kampfes eingetroffen. Nachdem ich dem gegnerischen Champion gegenübergetreten bin, wird es jetzt Zeit für den Kampf."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 108,
+        "type": "QUST CNAM",
+        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I arrived at the site of the battle and defeated the opposing champion.",
+        "string": "Ich wurde ausgewählt, im Kampf der Champions anzutreten. Unter Zuhilfenahme einer Karte, die ich von meinem befehlshabenden Offizier erhalten habe, bin ich am Austragungsort des Kampfes eingetroffen und habe den gegnerischen Champion besiegt."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 62,
+        "type": "QUST CNAM",
+        "original": "The Imperials have chosen me to fight in a battle of champions. As such, I've received a key from Legate Adventus Caesennius in Solitude. It will open a chest in Castle Dour that holds the champion's armor and a map of the batlle location.",
+        "string": "Die Kaiserlichen haben mich ausgewählt, in einem Kampf der Champions anzutreten, und ich habe in Einsamkeit einen Schlüssel von Legat Adventus Caesennius erhalten. Damit kann ich eine Truhe öffnen, in der sich die Rüstung des Champions und eine Karte des Austragungsortes des Kampfes befinden."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 84,
+        "type": "QUST CNAM",
+        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I've arrived at the site of the battle. After confronting the opposing champion, it's time to fight.",
+        "string": "Ich wurde ausgewählt, im Kampf der Champions anzutreten. Unter Zuhilfenahme einer Karte, die ich von meinem befehlshabenden Offizier erhalten habe, bin ich am Austragungsort des Kampfes eingetroffen. Nachdem ich dem gegnerischen Champion gegenübergetreten bin, wird es jetzt Zeit für den Kampf."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 140,
+        "type": "QUST NNAM",
+        "original": "Join the Stormcloak garrison at the battle site",
+        "string": "Schließe dich am Austragungsort des Kampfes der Sturmmantel-Garnison an."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Investigate the Drunken Huntsman for information",
+        "string": "Untersuche den Trunkenen Jägersmann, um Informationen zu erhalten."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 75,
+        "type": "QUST CNAM",
+        "original": "A civil war rages on between the Stormcloaks and Imperials, with Whiterun at the center. Having joined with the Imperials, I should head to a major hold in case a courier has news for me.",
+        "string": "Zwischen den Sturmmänteln und Kaiserlichen tobt ein Bürgerkrieg, in dessen Zentrum Weißlauf steht. Nachdem ich mich auf die Seite der Kaiserlichen geschlagen habe, sollte ich zu einer großen Feste gehen, falls ein Kurier Nachrichten für mich hat."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 120,
+        "type": "QUST NNAM",
+        "original": "Meet with your commanding officer",
+        "string": "Triff dich mit deinem befehlshabenden Offizier."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 1,
+        "type": "QUST NNAM",
+        "original": "Head to a major hold and await news from a courier",
+        "string": "Begib dich zu einer großen Feste und warte auf Neuigkeiten von einem Kurier."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 230,
+        "type": "QUST NNAM",
+        "original": "Retrieve the Imperial Dragon Armor and map",
+        "string": "Nimm die Kaiserliche Drachenrüstung und die Karte an dich."
+    },
+    {
+        "editor_id": "ccFFBSSE001_CorpseCheck",
+        "form_id": "0500086B|ccffbsse001-imperialdragon.esl",
+        "index": 97,
+        "type": "QUST CNAM",
+        "original": "Stormbear",
+        "string": "Sturmbär"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 86,
+        "type": "QUST CNAM",
+        "original": "I've received a letter from Yrsarald Thrice-Pierced. He asks that I serve as a champion in a duel against an Imperial garrison, and has given me a key to a chest with a powerful armor set. I should retrieve the armor and map with the location of the battle.",
+        "string": "Ich habe einen Brief von Yrsarald Dreifach-Durchstochen erhalten. Er bittet mich, als Champion im Duell gegen eine Garnison der Kaiserlichen anzutreten, und hat mir den Schlüssel zu einer Truhe mit einer mächtigen Rüstung gegeben. Ich sollte die Rüstung und die Karte des Austragungsortes an mich nehmen."
+    },
+    {
+        "editor_id": "ccFFBSSE001_CorpseCheck",
+        "form_id": "0500086B|ccffbsse001-imperialdragon.esl",
+        "index": 79,
+        "type": "QUST CNAM",
+        "original": "Stormbear",
+        "string": "Sturmbär"
+    },
+    {
+        "editor_id": "ccFFBSSE001_CorpseCheck",
+        "form_id": "0500086B|ccffbsse001-imperialdragon.esl",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "Stormbear",
+        "string": "Sturmbär"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 88,
+        "type": "QUST CNAM",
+        "original": "A civil war rages on between the Stormcloaks and Imperials, with Whiterun at the center. Knowing I have sided with the Stormcloaks, Yrsarald Thrice-Pierced has sent me a letter. He may be in need of my services.",
+        "string": "Zwischen den Sturmmänteln und Kaiserlichen tobt ein Bürgerkrieg, in dessen Zentrum Weißlauf steht. Da Yrsarald Dreifach-Durchstochen weiß, dass ich mich auf die Seite der Sturmmäntel geschlagen habe, hat er mir einen Brief geschickt. Vielleicht benötigt er meine Dienste."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 77,
+        "type": "QUST CNAM",
+        "original": "I have been chosen to fight in a battle of champions. Using a map I received from my commanding officer, I've arrived at the site of the battle. After confronting the opposing champion, it's time to fight.",
+        "string": "Ich wurde ausgewählt, im Kampf der Champions anzutreten. Unter Zuhilfenahme einer Karte, die ich von meinem befehlshabenden Offizier erhalten habe, bin ich am Austragungsort des Kampfes eingetroffen. Nachdem ich dem gegnerischen Champion gegenübergetreten bin, wird es jetzt Zeit für den Kampf."
+    },
+    {
+        "editor_id": "ccFFBSSE001_CorpseCheck",
+        "form_id": "0500086B|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Corpse Check",
+        "string": "Leichenprüfung"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 144,
+        "type": "QUST NNAM",
+        "original": "Speak with the Imperial Champion",
+        "string": "Sprich mit dem Kaiserlichen Champion."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 101,
+        "type": "QUST CNAM",
+        "original": "The Imperials have chosen me to fight in a battle of champions. Using a key I received from Legate Adventus Caesennius, I opened a chest that holds the champion's armor and a map of the battle location.",
+        "string": "Die Kaiserlichen haben mich ausgewählt, in einem Kampf der Champions anzutreten. Mithilfe eines Schlüssels, den ich von Legat Adventus Caesennius erhalten habe, konnte ich eine Truhe öffnen, in der sich die Rüstung des Champions und eine Karte des Austragungsortes des Kampfes befinden."
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Battle of the Champions",
+        "string": "Kampf der Champions"
+    },
+    {
+        "editor_id": "ccFFBSSE001_Quest",
+        "form_id": "05000927|ccffbsse001-imperialdragon.esl",
+        "index": 260,
+        "type": "QUST NNAM",
+        "original": "Defeat the Stormcloak soldiers",
+        "string": "Besiege die Sturmmantel-Soldaten."
+    },
+    {
         "editor_id": "ccFFBSSE001ElementalChannelingPerk",
-        "form_id": "[05000853]",
+        "form_id": "05000853|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "PERK FULL",
         "original": "Elemental Channeling",
@@ -1889,7 +1633,7 @@
     },
     {
         "editor_id": "ccFFBSSE001_HeavyArmorPerk",
-        "form_id": "[05000963]",
+        "form_id": "05000963|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "PERK FULL",
         "original": "Stormbear Helmet Perk",
@@ -1897,26 +1641,26 @@
     },
     {
         "editor_id": "MatchingSetHeavy",
-        "form_id": "[00107832]",
+        "form_id": "00107832|Skyrim.esm",
         "index": null,
         "type": "PERK FULL",
         "original": "Matching Set",
         "string": "Passende Garnitur"
     },
     {
-        "editor_id": "MatchingSetHeavy",
-        "form_id": "[00107832]",
-        "index": null,
-        "type": "PERK DESC",
-        "original": "Additional 25% Armor bonus if wearing a matched set of Heavy Armor.",
-        "string": "Zusätzlicher Rüstungsbonus von 25 Prozent, wenn ein passendes schweres Rüstungsset getragen wird."
-    },
-    {
         "editor_id": "ccFFBSSE001_HeavyArmorPerk",
-        "form_id": "[05000963]",
+        "form_id": "05000963|ccffbsse001-imperialdragon.esl",
         "index": null,
         "type": "PERK DESC",
         "original": "Increases armor rating for Heavy Armor by 20%.",
         "string": "Steigert den Rüstungswert schwerer Rüstung um 20 Prozent."
+    },
+    {
+        "editor_id": "MatchingSetHeavy",
+        "form_id": "00107832|Skyrim.esm",
+        "index": null,
+        "type": "PERK DESC",
+        "original": "Additional 25% Armor bonus if wearing a matched set of Heavy Armor.",
+        "string": "Zusätzlicher Rüstungsbonus von 25 Prozent, wenn ein passendes schweres Rüstungsset getragen wird."
     }
 ]

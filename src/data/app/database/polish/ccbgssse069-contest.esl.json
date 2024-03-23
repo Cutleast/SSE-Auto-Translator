@@ -1,55 +1,31 @@
 [
     {
         "editor_id": "ccBGSSSE069_FrostbiteSpiderRaceGiant",
-        "form_id": "[05000829]",
+        "form_id": "05000829|ccbgssse069-contest.esl",
         "index": null,
         "type": "RACE FULL",
         "original": "Web Mother",
         "string": "Pajęcza matka"
     },
     {
-        "editor_id": "ccBGSSSE069_crSpiderBiteFFContact",
-        "form_id": "[05000827]",
+        "editor_id": "ccBGSSSE069_EnchFortifyOneHandedConstantSelf",
+        "form_id": "05000824|ccbgssse069-contest.esl",
         "index": null,
-        "type": "MGEF DNAM",
-        "original": "A blood-freezing poison that does <mag> points of damage to Health and Stamina per second.",
-        "string": "Mrożąca krew w żyłach trucizna zadaje <mag> pkt. obrażeń do zdrowia i kondycji na sekundę."
+        "type": "MGEF FULL",
+        "original": "Fists of Randagulf",
+        "string": "Pięści Randagulfa"
     },
     {
         "editor_id": "ccBGSSSE069_crSpiderBiteFFContact",
-        "form_id": "[05000827]",
+        "form_id": "05000827|ccbgssse069-contest.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Spider Bite",
         "string": "Ukąszenie pająka"
     },
     {
-        "editor_id": "ccBGSSSE069_EnchFortifyBlockConstantSelf",
-        "form_id": "[0500082D]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Fortify Blocking",
-        "string": "Premia do blokowania"
-    },
-    {
-        "editor_id": "ccBGSSSE069_crSpiderSpitFFAimed",
-        "form_id": "[05000828]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "A blood-freezing poison that does <mag> points of damage to Health and Stamina per second.",
-        "string": "Mrożąca krew w żyłach trucizna zadaje <mag> pkt. obrażeń do zdrowia i kondycji na sekundę."
-    },
-    {
-        "editor_id": "ccBGSSSE069_AbFortifyUnarmedDamage",
-        "form_id": "[0500082C]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Fortify Unarmed Damage",
-        "string": "Zwiększenie obrażeń wręcz"
-    },
-    {
         "editor_id": "ccBGSSSE069_EnchFortifyTwoHandedConstantSelf",
-        "form_id": "[05000823]",
+        "form_id": "05000823|ccbgssse069-contest.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Fortify Two-Handed",
@@ -57,23 +33,47 @@
     },
     {
         "editor_id": "ccBGSSSE069_EnchFortifyOneHandedConstantSelf",
-        "form_id": "[05000824]",
+        "form_id": "05000824|ccbgssse069-contest.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "Melee and unarmed attacks do <mag>% more damage. Block <mag>% more damage with your shield.",
         "string": "Ataki wręcz i bez broni zadają o <mag>% obrażeń więcej. Tarcza blokuje o <mag>% obrażeń więcej."
     },
     {
-        "editor_id": "ccBGSSSE069_EnchFortifyOneHandedConstantSelf",
-        "form_id": "[05000824]",
+        "editor_id": "ccBGSSSE069_crSpiderSpitFFAimed",
+        "form_id": "05000828|ccbgssse069-contest.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "A blood-freezing poison that does <mag> points of damage to Health and Stamina per second.",
+        "string": "Mrożąca krew w żyłach trucizna zadaje <mag> pkt. obrażeń do zdrowia i kondycji na sekundę."
+    },
+    {
+        "editor_id": "ccBGSSSE069_EnchFortifyBlockConstantSelf",
+        "form_id": "0500082D|ccbgssse069-contest.esl",
         "index": null,
         "type": "MGEF FULL",
-        "original": "Fists of Randagulf",
-        "string": "Pięści Randagulfa"
+        "original": "Fortify Blocking",
+        "string": "Premia do blokowania"
+    },
+    {
+        "editor_id": "ccBGSSSE069_AbFortifyUnarmedDamage",
+        "form_id": "0500082C|ccbgssse069-contest.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fortify Unarmed Damage",
+        "string": "Zwiększenie obrażeń wręcz"
+    },
+    {
+        "editor_id": "ccBGSSSE069_crSpiderBiteFFContact",
+        "form_id": "05000827|ccbgssse069-contest.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "A blood-freezing poison that does <mag> points of damage to Health and Stamina per second.",
+        "string": "Mrożąca krew w żyłach trucizna zadaje <mag> pkt. obrażeń do zdrowia i kondycji na sekundę."
     },
     {
         "editor_id": "ccBGSSSE069_crSpiderSpitFFAimed",
-        "form_id": "[05000828]",
+        "form_id": "05000828|ccbgssse069-contest.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Spider Spit",
@@ -81,63 +81,47 @@
     },
     {
         "editor_id": "ccBGSSSE069_EnchRandagulf",
-        "form_id": "[05000822]",
+        "form_id": "05000822|ccbgssse069-contest.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Fists of Randagulf",
         "string": "Pięści Randagulfa"
     },
     {
-        "editor_id": "ccBGSSSE069_crSpider03PoisonBite",
-        "form_id": "[05000826]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Web Mother Bite",
-        "string": "Ukąszenie pajęczej matki"
-    },
-    {
         "editor_id": "ccBGSSSE069_crSpider03PoisonSpit",
-        "form_id": "[05000825]",
+        "form_id": "05000825|ccbgssse069-contest.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Frostbite Poison",
         "string": "Śnieżna trucizna"
     },
     {
+        "editor_id": "ccBGSSSE069_crSpider03PoisonBite",
+        "form_id": "05000826|ccbgssse069-contest.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Web Mother Bite",
+        "string": "Ukąszenie pajęczej matki"
+    },
+    {
         "editor_id": "ccBGSSSE069_FistsofRandagulf",
-        "form_id": "[05000813]",
+        "form_id": "05000813|ccbgssse069-contest.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Fists of Randagulf",
         "string": "Pięści Randagulfa"
     },
     {
-        "editor_id": "ccBGSSSE069_ObserversJournal",
-        "form_id": "[05000803]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face=\"$HandwrittenFont\">\r\nIt's not uncommon these days to see warriors of great renown pass through Candlehearth Hall, beckoned by the clarion call of war. Many of them seat themselves by the fire, order their spirit of choice, and regale the patrons with stories of their triumphs. \r\n\r\nIt is, however, a strange thing to watch such a tale write itself in front of you, but that is precisely what happened when two legendary warriors, Grenwulf the Brawler and Holrik Frost-Sword, sat down at the table beside me.\r\n\r\nPerhaps it was the mead that shortened their tempers, but it did not take long for a spirited argument to become heated. Grenwulf, a brawler famous for fighting with only his fists, had compared Holrik to a soldier who fires a trebuchet - a man who is only as dangerous as the tool he employs. \r\n\r\nHolrik, for his part, cut right through Grenwulf's claim. If the brawler relied only on his hands, then he should drink his mead from his palm, and slice his bread with his fingernails. \r\n\r\nNot to mention there are things in this world, Holrik said, that fists alone cannot kill, even if that fist belonged to Randagulf himself. Whereas his sword, the Ice Blade of the Monarch, was blessed by the strength of the frost itself, and could cut through the walls of ice that lined the edge of the world.\r\n\r\nGrenwulf scoffed at the notion, claiming that no man or beast had yet to survive a single punch. \r\n\r\nIt was then that the Divines, or perhaps darker minds, offered a resolution. A warrior came bursting through the doors, claiming a monstrous spider had taken root in the Cronvangr Cave, claiming three in his hunting party. His widened eyes and frowned lips, telltale signs of fear, spoke volumes to us all. It was a warning few would fail to heed, but our two heroes saw it as something else entirely - an opportunity to settle their dispute.\r\n\r\nAnd so the next morning, they departed for Cronvangr Cave. Three weeks have passed since.\r\n\r\nIn my life I have written tales of valor and tragedy, and those that are one and the same. And while the final chapter of Grenwulf and Holrik has yet to be written, I fear this may fall into the latter category, as neither has saw fit to return.</font>",
-        "string": "<font face=\"$HandwrittenFont\">\r\nW dzisiejszych czasach często spotyka się znamienitych wojowników, zaglądających do Gospody pod Knotem, którzy podejmują wezwanie do wojny. Wielu z nich siedzi przy ogniu, zamawia swój ulubiony napitek i opowiada stałym bywalcom historie o swoich triumfach. \r\n\r\nTo jednak dziwne uczucie, gdy taka opowieść pisze się na naszych oczach. Dokładnie tak było, kiedy dwóch legendarnych wojowników, Grenwulf Pięściarz i Holrik Mroźny Miecz, zasiedli ze mną przy stole.\r\n\r\nMożliwe, że to miód zaognił ich mowę, ale już po chwili wybuchła potężna awantura. Grenwulf, znany z walki wyłącznie pięściami, porównał Holrika do żołnierza, który strzela z katapulty. Powiedział, że jest jedynie tak niebezpieczny jak narzędzie, którego używa. \r\n\r\nZ kolei Holrik natychmiast wypalił, że jeśli pięściarz chce polegać jedynie na swoich dłoniach, powinien pić miód z ręki i krajać chleb paznokciami. \r\n\r\n- Nie mówiąc już o tym - stwierdził Holrik - że są na tym świecie rzeczy, których nie można zabić pięściami, nawet gdyby należały one do samego Randagulfa. - Tymczasem mój miecz, Lodowe Ostrze Monarchy, został pobłogosławiony siłą samego mrozu i przeciąłby nawet ściany lodu otaczające krawędzie świata.\r\n\r\nGrenwulf tylko prychnął i stwierdził, że żaden człowiek ani bestia nie przeżyły dotąd jego pojedynczego ciosu. \r\n\r\nI wtedy bogowie, a może jakieś ciemne siły, zaoferowały rozstrzygnięcie sporu. Przez drzwi wpadł wojownik twierdzący, że w jaskini Cronvangr panoszy się potworny pająk, który zabił już trzech ludzi z grupy łowców. Wszyscy w gospodzie byli pod wrażeniem jego rozszerzonych oczu, trzęsących się ust i oczywistych oznak strachu. Wielu przestraszyłoby się tego wyzwania, ale dwóch naszych bohaterów uznała to za okazję, by rozstrzygnąć dysputę.\r\n\r\nI tak następnego ranka wyruszyli do jaskini Cronvangr. Od tego czasu minęły trzy tygodnie.\r\n\r\nW swoim życiu przyszło mi już pisać o odwadze i tragedii, a także o obu jednocześnie. I choć ostatni rozdział historii Grenwulfa i Holrika dopiero ma zostać napisany, obawiam się, że tym razem jednak dojdzie do tragedii. Jak dotąd żaden z nich nie powrócił.</font>"
-    },
-    {
         "editor_id": "ccBGSSSE069_GrenNote",
-        "form_id": "[05000821]",
+        "form_id": "05000821|ccbgssse069-contest.esl",
         "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nHolrik thinks there's things I can't punch through. But I've punched through walls, and I've punched through men.\r\n\r\nI don't care how thick your armor is, my knuckles are thicker. They're hard and calloused and ugly as a Dremora, but they get the job done, no matter what.\r\n\r\nI once met a warrior who claimed to have the most impenetrable armor ever known to man. But when we fought, I punched him so hard the shockwaves rearranged every bone in his body, to the point his toes were coming out of his ears.\r\n\r\nSo even if the armor doesn't give, the man inside is as soft as jelly. A spider ain't much different. It's got hard parts, and it's got soft parts. When I ball my fist and put all my weight on my back foot, there's nothing anyone can do.</font>",
-        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nHolrik uważa, że są rzeczy, których nie zdołam przebić pięścią. Ale ja przebijałem już ściany i przebijałem ludzi.\r\n\r\nNie obchodzi mnie to, jak gruba jest twoja zbroja, moje knykcie są grubsze. Są twarde, zrogowaciałe i paskudne jak dremory, ale zawsze załatwią sprawę.\r\n\r\nKiedyś spotkałem wojownika, który twierdził, że ma najbardziej nieprzebijalną zbroję, jaką widział świat. Ale kiedy walczyliśmy, walnąłem go tak mocno, że fale uderzeniowe pozamieniały miejscami wszystkie kości w jego ciele - paliczki u stóp wyszły mu uszami.\r\n\r\nA więc nawet jeśli pancerz się nie ugnie, człowiek w jego wnętrzu pozostaje miękki jak galareta. Z pająkami jest podobnie – mają części twarde i miękkie. A kiedy zacisnę pięść i przeniosę ciężar ciała na tylną nogę, nikt mi nie podskoczy.</font>"
+        "type": "BOOK FULL",
+        "original": "Grenwulf's Note",
+        "string": "Notatka Grenwulfa"
     },
     {
         "editor_id": "ccBGSSSE069_HolrikNote",
-        "form_id": "[05000820]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nGrenwulf's always been beyond stubborn. On top of that, he lacks patience. When a man like him fails to open a jar, he smashes the glass rather than rely on a cloth for a better grip.\r\n\r\nIn Grenwulf's mind, using that cloth is a weakness. In my mind, it's far better not to have your food covered in broken glass.\r\n\r\nIt's a shame, because I think he has the talent to be a good swordsman. But his foolish pride won't allow him to admit it.</font>",
-        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nGrenwulf zawsze był uparty jak osioł, a do tego niecierpliwy. Kiedy ktoś taki nie zdoła odkręcić pokrywki od słoika, rozbija szkło zamiast użyć ściereczki i zyskać lepszy chwyt.\r\n\r\nWedług Grenwulfa użycie ściereczki to oznaka słabości. Według mnie to znacznie lepsze, niż wyciąganie kawałków rozbitego szkła z jedzenia.\r\n\r\nA szkoda, bo wydaje mi się, że chłopak ma talent, by być dobrym szermierzem. Jednak jego duma nie pozwoli mu tego przyznać.</font>"
-    },
-    {
-        "editor_id": "ccBGSSSE069_HolrikNote",
-        "form_id": "[05000820]",
+        "form_id": "05000820|ccbgssse069-contest.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "Holrik's Note",
@@ -145,71 +129,63 @@
     },
     {
         "editor_id": "ccBGSSSE069_GrenNote",
-        "form_id": "[05000821]",
+        "form_id": "05000821|ccbgssse069-contest.esl",
         "index": null,
-        "type": "BOOK FULL",
-        "original": "Grenwulf's Note",
-        "string": "Notatka Grenwulfa"
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nHolrik thinks there's things I can't punch through. But I've punched through walls, and I've punched through men.\r\n\r\nI don't care how thick your armor is, my knuckles are thicker. They're hard and calloused and ugly as a Dremora, but they get the job done, no matter what.\r\n\r\nI once met a warrior who claimed to have the most impenetrable armor ever known to man. But when we fought, I punched him so hard the shockwaves rearranged every bone in his body, to the point his toes were coming out of his ears.\r\n\r\nSo even if the armor doesn't give, the man inside is as soft as jelly. A spider ain't much different. It's got hard parts, and it's got soft parts. When I ball my fist and put all my weight on my back foot, there's nothing anyone can do.</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nHolrik uważa, że są rzeczy, których nie zdołam przebić pięścią. Ale ja przebijałem już ściany i przebijałem ludzi.\r\n\r\nNie obchodzi mnie to, jak gruba jest twoja zbroja, moje knykcie są grubsze. Są twarde, zrogowaciałe i paskudne jak dremory, ale zawsze załatwią sprawę.\r\n\r\nKiedyś spotkałem wojownika, który twierdził, że ma najbardziej nieprzebijalną zbroję, jaką widział świat. Ale kiedy walczyliśmy, walnąłem go tak mocno, że fale uderzeniowe pozamieniały miejscami wszystkie kości w jego ciele - paliczki u stóp wyszły mu uszami.\r\n\r\nA więc nawet jeśli pancerz się nie ugnie, człowiek w jego wnętrzu pozostaje miękki jak galareta. Z pająkami jest podobnie – mają części twarde i miękkie. A kiedy zacisnę pięść i przeniosę ciężar ciała na tylną nogę, nikt mi nie podskoczy.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE069_HolrikNote",
+        "form_id": "05000820|ccbgssse069-contest.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nGrenwulf's always been beyond stubborn. On top of that, he lacks patience. When a man like him fails to open a jar, he smashes the glass rather than rely on a cloth for a better grip.\r\n\r\nIn Grenwulf's mind, using that cloth is a weakness. In my mind, it's far better not to have your food covered in broken glass.\r\n\r\nIt's a shame, because I think he has the talent to be a good swordsman. But his foolish pride won't allow him to admit it.</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nGrenwulf zawsze był uparty jak osioł, a do tego niecierpliwy. Kiedy ktoś taki nie zdoła odkręcić pokrywki od słoika, rozbija szkło zamiast użyć ściereczki i zyskać lepszy chwyt.\r\n\r\nWedług Grenwulfa użycie ściereczki to oznaka słabości. Według mnie to znacznie lepsze, niż wyciąganie kawałków rozbitego szkła z jedzenia.\r\n\r\nA szkoda, bo wydaje mi się, że chłopak ma talent, by być dobrym szermierzem. Jednak jego duma nie pozwoli mu tego przyznać.</font>"
     },
     {
         "editor_id": "ccBGSSSE069_ObserversJournal",
-        "form_id": "[05000803]",
+        "form_id": "05000803|ccbgssse069-contest.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "Adonato Leotelli's Journal",
         "string": "Dziennik Adonata Leotellego"
     },
     {
-        "editor_id": "ccBGSSSE069_GrenwulfSpiderWeb",
-        "form_id": "[0500080A]",
+        "editor_id": "ccBGSSSE069_ObserversJournal",
+        "form_id": "05000803|ccbgssse069-contest.esl",
         "index": null,
-        "type": "CONT FULL",
-        "original": "Grenwulf the Brawler",
-        "string": "Grenwulf Pięściarz"
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nIt's not uncommon these days to see warriors of great renown pass through Candlehearth Hall, beckoned by the clarion call of war. Many of them seat themselves by the fire, order their spirit of choice, and regale the patrons with stories of their triumphs. \r\n\r\nIt is, however, a strange thing to watch such a tale write itself in front of you, but that is precisely what happened when two legendary warriors, Grenwulf the Brawler and Holrik Frost-Sword, sat down at the table beside me.\r\n\r\nPerhaps it was the mead that shortened their tempers, but it did not take long for a spirited argument to become heated. Grenwulf, a brawler famous for fighting with only his fists, had compared Holrik to a soldier who fires a trebuchet - a man who is only as dangerous as the tool he employs. \r\n\r\nHolrik, for his part, cut right through Grenwulf's claim. If the brawler relied only on his hands, then he should drink his mead from his palm, and slice his bread with his fingernails. \r\n\r\nNot to mention there are things in this world, Holrik said, that fists alone cannot kill, even if that fist belonged to Randagulf himself. Whereas his sword, the Ice Blade of the Monarch, was blessed by the strength of the frost itself, and could cut through the walls of ice that lined the edge of the world.\r\n\r\nGrenwulf scoffed at the notion, claiming that no man or beast had yet to survive a single punch. \r\n\r\nIt was then that the Divines, or perhaps darker minds, offered a resolution. A warrior came bursting through the doors, claiming a monstrous spider had taken root in the Cronvangr Cave, claiming three in his hunting party. His widened eyes and frowned lips, telltale signs of fear, spoke volumes to us all. It was a warning few would fail to heed, but our two heroes saw it as something else entirely - an opportunity to settle their dispute.\r\n\r\nAnd so the next morning, they departed for Cronvangr Cave. Three weeks have passed since.\r\n\r\nIn my life I have written tales of valor and tragedy, and those that are one and the same. And while the final chapter of Grenwulf and Holrik has yet to be written, I fear this may fall into the latter category, as neither has saw fit to return.</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\nW dzisiejszych czasach często spotyka się znamienitych wojowników, zaglądających do Gospody pod Knotem, którzy podejmują wezwanie do wojny. Wielu z nich siedzi przy ogniu, zamawia swój ulubiony napitek i opowiada stałym bywalcom historie o swoich triumfach. \r\n\r\nTo jednak dziwne uczucie, gdy taka opowieść pisze się na naszych oczach. Dokładnie tak było, kiedy dwóch legendarnych wojowników, Grenwulf Pięściarz i Holrik Mroźny Miecz, zasiedli ze mną przy stole.\r\n\r\nMożliwe, że to miód zaognił ich mowę, ale już po chwili wybuchła potężna awantura. Grenwulf, znany z walki wyłącznie pięściami, porównał Holrika do żołnierza, który strzela z katapulty. Powiedział, że jest jedynie tak niebezpieczny jak narzędzie, którego używa. \r\n\r\nZ kolei Holrik natychmiast wypalił, że jeśli pięściarz chce polegać jedynie na swoich dłoniach, powinien pić miód z ręki i krajać chleb paznokciami. \r\n\r\n- Nie mówiąc już o tym - stwierdził Holrik - że są na tym świecie rzeczy, których nie można zabić pięściami, nawet gdyby należały one do samego Randagulfa. - Tymczasem mój miecz, Lodowe Ostrze Monarchy, został pobłogosławiony siłą samego mrozu i przeciąłby nawet ściany lodu otaczające krawędzie świata.\r\n\r\nGrenwulf tylko prychnął i stwierdził, że żaden człowiek ani bestia nie przeżyły dotąd jego pojedynczego ciosu. \r\n\r\nI wtedy bogowie, a może jakieś ciemne siły, zaoferowały rozstrzygnięcie sporu. Przez drzwi wpadł wojownik twierdzący, że w jaskini Cronvangr panoszy się potworny pająk, który zabił już trzech ludzi z grupy łowców. Wszyscy w gospodzie byli pod wrażeniem jego rozszerzonych oczu, trzęsących się ust i oczywistych oznak strachu. Wielu przestraszyłoby się tego wyzwania, ale dwóch naszych bohaterów uznała to za okazję, by rozstrzygnąć dysputę.\r\n\r\nI tak następnego ranka wyruszyli do jaskini Cronvangr. Od tego czasu minęły trzy tygodnie.\r\n\r\nW swoim życiu przyszło mi już pisać o odwadze i tragedii, a także o obu jednocześnie. I choć ostatni rozdział historii Grenwulfa i Holrika dopiero ma zostać napisany, obawiam się, że tym razem jednak dojdzie do tragedii. Jak dotąd żaden z nich nie powrócił.</font>"
     },
     {
         "editor_id": "ccBGSSSE069_HolrikSpiderWeb",
-        "form_id": "[05000809]",
+        "form_id": "05000809|ccbgssse069-contest.esl",
         "index": null,
         "type": "CONT FULL",
         "original": "Holrik Frost-Sword",
         "string": "Holrik Mroźny Miecz"
     },
     {
+        "editor_id": "ccBGSSSE069_GrenwulfSpiderWeb",
+        "form_id": "0500080A|ccbgssse069-contest.esl",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Grenwulf the Brawler",
+        "string": "Grenwulf Pięściarz"
+    },
+    {
         "editor_id": "ccBGSSSE069_IceBladeMonarch",
-        "form_id": "[05000815]",
+        "form_id": "05000815|ccbgssse069-contest.esl",
         "index": null,
         "type": "WEAP FULL",
         "original": "Ice Blade of the Monarch",
         "string": "Lodowe Ostrze Monarchy"
     },
     {
-        "editor_id": "ccBGSSSE069_Grenwulf",
-        "form_id": "[0500080E]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Grenwulf the Brawler",
-        "string": "Grenwulf Pięściarz"
-    },
-    {
-        "editor_id": "ccBGSSSE069_WebMother",
-        "form_id": "[05000802]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Web Mother",
-        "string": "Pajęcza matka"
-    },
-    {
         "editor_id": "ccBGSSSE069_HolrikNPC",
-        "form_id": "[0500080D]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Holrik Frost-Sword",
-        "string": "Holrik Mroźny Miecz"
-    },
-    {
-        "editor_id": "ccBGSSSE069_HolrikNPC",
-        "form_id": "[0500080D]",
+        "form_id": "0500080D|ccbgssse069-contest.esl",
         "index": null,
         "type": "NPC_ SHRT",
         "original": "Holrik",
@@ -217,31 +193,39 @@
     },
     {
         "editor_id": "ccBGSSSE069_Grenwulf",
-        "form_id": "[0500080E]",
+        "form_id": "0500080E|ccbgssse069-contest.esl",
         "index": null,
         "type": "NPC_ SHRT",
         "original": "Grenwulf",
         "string": "Grenwulf"
     },
     {
-        "editor_id": "CronvangrHall02",
-        "form_id": "[0002D5D1]",
+        "editor_id": "ccBGSSSE069_WebMother",
+        "form_id": "05000802|ccbgssse069-contest.esl",
         "index": null,
-        "type": "CELL FULL",
-        "original": "Cronvangr Broodlair",
-        "string": "Lochy Cronvangr"
+        "type": "NPC_ FULL",
+        "original": "Web Mother",
+        "string": "Pajęcza matka"
     },
     {
-        "editor_id": "WindhelmCandlehearthHall",
-        "form_id": "[00016789]",
+        "editor_id": "ccBGSSSE069_HolrikNPC",
+        "form_id": "0500080D|ccbgssse069-contest.esl",
         "index": null,
-        "type": "CELL FULL",
-        "original": "Candlehearth Hall",
-        "string": "Gospoda pod Knotem"
+        "type": "NPC_ FULL",
+        "original": "Holrik Frost-Sword",
+        "string": "Holrik Mroźny Miecz"
+    },
+    {
+        "editor_id": "ccBGSSSE069_Grenwulf",
+        "form_id": "0500080E|ccbgssse069-contest.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Grenwulf the Brawler",
+        "string": "Grenwulf Pięściarz"
     },
     {
         "editor_id": "ccBGSSSE069_Quest",
-        "form_id": "[05000805]",
+        "form_id": "05000805|ccbgssse069-contest.esl",
         "index": 10,
         "type": "QUST NNAM",
         "original": "Investigate Candlehearth Hall",
@@ -249,63 +233,7 @@
     },
     {
         "editor_id": "ccBGSSSE069_Quest",
-        "form_id": "[05000805]",
-        "index": 20,
-        "type": "QUST NNAM",
-        "original": "Search Cronvangr Cave for the two heroes",
-        "string": "Przeszukaj jaskinię Cronvangr na obecność dwójki bohaterów."
-    },
-    {
-        "editor_id": "ccBGSSSE069_Quest",
-        "form_id": "[05000805]",
-        "index": 86,
-        "type": "QUST CNAM",
-        "original": "I traveled to Candlehearth Hall and read a journal about two warriors, who traveled to Cronvangr Cave to defeat a dangerous spider. I traveled to Cronvangr Cave and found the spider's lair.",
-        "string": "Udało mi się dotrzeć do Gospody pod Knotem i przeczytać opowieść o dwóch wojownikach, którzy wyruszyli do jaskini Cronvangr, aby pokonać niebezpiecznego pająka. Udało mi się odnaleźć jego leże we wspomnianej jaskini."
-    },
-    {
-        "editor_id": "ccBGSSSE069_Quest",
-        "form_id": "[05000805]",
-        "index": 72,
-        "type": "QUST CNAM",
-        "original": "I traveled to Candlehearth Hall and read a journal about two warriors, who traveled to Cronvangr Cave to defeat a dangerous spider. I should travel to the cave and find out what became of them.",
-        "string": "Udało mi się dotrzeć do Gospody pod Knotem i przeczytać opowieść o dwóch wojownikach, którzy wyruszyli do jaskini Cronvangr, aby pokonać niebezpiecznego pająka. Muszę wyruszyć do jaskini i dowiedzieć się, co się z nimi stało."
-    },
-    {
-        "editor_id": "ccBGSSSE069_Quest",
-        "form_id": "[05000805]",
-        "index": 75,
-        "type": "QUST CNAM",
-        "original": "I traveled to Candlehearth Hall and read a journal about two warriors, who traveled to Cronvangr Cave to defeat a dangerous Web Mother. I traveled to Cronvangr Cave and found the spider's lair, defeating the Web Mother. After the battle, the heroes rewarded me with their treasures.",
-        "string": "Udało mi się dotrzeć do Gospody pod Knotem i przeczytać opowieść o dwóch wojownikach, którzy wyruszyli do jaskini Cronvangr, aby pokonać niebezpieczną pajęczą matkę, a następnie odnaleźć wspomniane leże pająka i z nim zwyciężyć. Po walce bohaterowie przekazali mi swoje skarby."
-    },
-    {
-        "editor_id": "ccBGSSSE069_Quest",
-        "form_id": "[05000805]",
-        "index": 40,
-        "type": "QUST NNAM",
-        "original": "Speak to the Heroes",
-        "string": "Porozmawiaj z bohaterami."
-    },
-    {
-        "editor_id": "ccBGSSSE069_Quest",
-        "form_id": "[05000805]",
-        "index": 92,
-        "type": "QUST CNAM",
-        "original": "I've heard many great warriors have come through Skyrim over the years, and passed through Candlehearth Hall in Windhelm. If I travel there, I may hear some stories of what became of them.",
-        "string": "Ponoć wielu wielkich wojowników przez lata przemierzało Skyrim i odwiedzało Gospodę pod Knotem w Wichrowym Tronie. Jeśli tam wyruszę, może usłyszę jakieś historie o nich."
-    },
-    {
-        "editor_id": "ccBGSSSE069_Quest",
-        "form_id": "[05000805]",
-        "index": 104,
-        "type": "QUST CNAM",
-        "original": "I traveled to Candlehearth Hall and read a journal about two warriors, who traveled to Cronvangr Cave to defeat a dangerous Web Mother. I traveled to Cronvangr Cave and found the spider's lair, defeating the Web Mother.",
-        "string": "Udało mi się dotrzeć do Gospody pod Knotem i przeczytać opowieść o dwóch wojownikach, którzy wyruszyli do jaskini Cronvangr, aby pokonać niebezpieczną pajęczą matkę, a następnie odnaleźć wspomniane leże pająka i z nim zwyciężyć."
-    },
-    {
-        "editor_id": "ccBGSSSE069_Quest",
-        "form_id": "[05000805]",
+        "form_id": "05000805|ccbgssse069-contest.esl",
         "index": null,
         "type": "QUST FULL",
         "original": "Caught in a Web",
@@ -313,31 +241,7 @@
     },
     {
         "editor_id": "ccBGSSSE069_Quest",
-        "form_id": "[05000805]",
-        "index": 87,
-        "type": "QUST CNAM",
-        "original": "I traveled to Candlehearth Hall and read a journal about two warriors, who traveled to Cronvangr Cave to defeat a dangerous Web Mother. I traveled to Cronvangr Cave and found the spider's lair, defeating the Web Mother. I spoke to the heroes who bequeathed me their treasures before fading away.",
-        "string": "Udało mi się dotrzeć do Gospody pod Knotem i przeczytać opowieść o dwóch wojownikach, którzy wyruszyli do jaskini Cronvangr, aby pokonać niebezpieczną pajęczą matkę, a następnie odnaleźć wspomniane leże pająka i z nim zwyciężyć. Bohaterowie przekazali mi swoje skarby i zniknęli."
-    },
-    {
-        "editor_id": "ccBGSSSE069_Quest",
-        "form_id": "[05000805]",
-        "index": 30,
-        "type": "QUST NNAM",
-        "original": "Defeat the Web Mother",
-        "string": "Pokonaj pajęczą matkę."
-    },
-    {
-        "editor_id": "ccBGSSSE069_Quest",
-        "form_id": "[05000805]",
-        "index": 106,
-        "type": "QUST CNAM",
-        "original": "I traveled to Candlehearth Hall and read a journal about two warriors, who traveled to Cronvangr Cave to defeat a dangerous Web Mother. I traveled to Cronvangr Cave and found the spider's lair, defeating the Web Mother. I spoke to the heroes who bequeathed me their treasures before fading away.",
-        "string": "Udało mi się dotrzeć do Gospody pod Knotem i przeczytać opowieść o dwóch wojownikach, którzy wyruszyli do jaskini Cronvangr, aby pokonać niebezpieczną pajęczą matkę, a następnie odnaleźć wspomniane leże pająka i z nim zwyciężyć. Bohaterowie przekazali mi swoje skarby i zniknęli."
-    },
-    {
-        "editor_id": "ccBGSSSE069_Quest",
-        "form_id": "[05000805]",
+        "form_id": "05000805|ccbgssse069-contest.esl",
         "index": 60,
         "type": "QUST NNAM",
         "original": "Inspect Holrik's corpse",
@@ -345,10 +249,82 @@
     },
     {
         "editor_id": "ccBGSSSE069_Quest",
-        "form_id": "[05000805]",
+        "form_id": "05000805|ccbgssse069-contest.esl",
         "index": 50,
         "type": "QUST NNAM",
         "original": "Inspect Grenwulf's corpse",
         "string": "Zbadaj zwłoki Grenwulfa."
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "form_id": "05000805|ccbgssse069-contest.esl",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Defeat the Web Mother",
+        "string": "Pokonaj pajęczą matkę."
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "form_id": "05000805|ccbgssse069-contest.esl",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "Speak to the Heroes",
+        "string": "Porozmawiaj z bohaterami."
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "form_id": "05000805|ccbgssse069-contest.esl",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Search Cronvangr Cave for the two heroes",
+        "string": "Przeszukaj jaskinię Cronvangr na obecność dwójki bohaterów."
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "form_id": "05000805|ccbgssse069-contest.esl",
+        "index": 80,
+        "type": "QUST CNAM",
+        "original": "I traveled to Candlehearth Hall and read a journal about two warriors, who traveled to Cronvangr Cave to defeat a dangerous spider. I traveled to Cronvangr Cave and found the spider's lair.",
+        "string": "Udało mi się dotrzeć do Gospody pod Knotem i przeczytać opowieść o dwóch wojownikach, którzy wyruszyli do jaskini Cronvangr, aby pokonać niebezpiecznego pająka. Udało mi się odnaleźć jego leże we wspomnianej jaskini."
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "form_id": "05000805|ccbgssse069-contest.esl",
+        "index": 92,
+        "type": "QUST CNAM",
+        "original": "I traveled to Candlehearth Hall and read a journal about two warriors, who traveled to Cronvangr Cave to defeat a dangerous Web Mother. I traveled to Cronvangr Cave and found the spider's lair, defeating the Web Mother.",
+        "string": "Udało mi się dotrzeć do Gospody pod Knotem i przeczytać opowieść o dwóch wojownikach, którzy wyruszyli do jaskini Cronvangr, aby pokonać niebezpieczną pajęczą matkę, a następnie odnaleźć wspomniane leże pająka i z nim zwyciężyć."
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "form_id": "05000805|ccbgssse069-contest.esl",
+        "index": 104,
+        "type": "QUST CNAM",
+        "original": "I traveled to Candlehearth Hall and read a journal about two warriors, who traveled to Cronvangr Cave to defeat a dangerous Web Mother. I traveled to Cronvangr Cave and found the spider's lair, defeating the Web Mother. I spoke to the heroes who bequeathed me their treasures before fading away.",
+        "string": "Udało mi się dotrzeć do Gospody pod Knotem i przeczytać opowieść o dwóch wojownikach, którzy wyruszyli do jaskini Cronvangr, aby pokonać niebezpieczną pajęczą matkę, a następnie odnaleźć wspomniane leże pająka i z nim zwyciężyć. Bohaterowie przekazali mi swoje skarby i zniknęli."
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "form_id": "05000805|ccbgssse069-contest.esl",
+        "index": 78,
+        "type": "QUST CNAM",
+        "original": "I've heard many great warriors have come through Skyrim over the years, and passed through Candlehearth Hall in Windhelm. If I travel there, I may hear some stories of what became of them.",
+        "string": "Ponoć wielu wielkich wojowników przez lata przemierzało Skyrim i odwiedzało Gospodę pod Knotem w Wichrowym Tronie. Jeśli tam wyruszę, może usłyszę jakieś historie o nich."
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "form_id": "05000805|ccbgssse069-contest.esl",
+        "index": 89,
+        "type": "QUST CNAM",
+        "original": "I traveled to Candlehearth Hall and read a journal about two warriors, who traveled to Cronvangr Cave to defeat a dangerous Web Mother. I traveled to Cronvangr Cave and found the spider's lair, defeating the Web Mother. I spoke to the heroes who bequeathed me their treasures before fading away.",
+        "string": "Udało mi się dotrzeć do Gospody pod Knotem i przeczytać opowieść o dwóch wojownikach, którzy wyruszyli do jaskini Cronvangr, aby pokonać niebezpieczną pajęczą matkę, a następnie odnaleźć wspomniane leże pająka i z nim zwyciężyć. Bohaterowie przekazali mi swoje skarby i zniknęli."
+    },
+    {
+        "editor_id": "ccBGSSSE069_Quest",
+        "form_id": "05000805|ccbgssse069-contest.esl",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "I traveled to Candlehearth Hall and read a journal about two warriors, who traveled to Cronvangr Cave to defeat a dangerous spider. I should travel to the cave and find out what became of them.",
+        "string": "Udało mi się dotrzeć do Gospody pod Knotem i przeczytać opowieść o dwóch wojownikach, którzy wyruszyli do jaskini Cronvangr, aby pokonać niebezpiecznego pająka. Muszę wyruszyć do jaskini i dowiedzieć się, co się z nimi stało."
     }
 ]

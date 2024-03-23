@@ -1,199 +1,143 @@
 [
     {
-        "editor_id": "ccBGSSSE031_VCBoatDoorActivator3",
-        "form_id": "[05000804]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Blackbone Isle",
-        "string": "Isla de Hueso Negro"
-    },
-    {
-        "editor_id": "ccBGSSSE031_FastTravel01",
-        "form_id": "[050341CA]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Travel to",
-        "string": "Travel to"
-    },
-    {
-        "editor_id": "ccBGSSSE031_FastTravel04",
-        "form_id": "[050392E0]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Travel to",
-        "string": "Travel to"
-    },
-    {
-        "editor_id": "ccBGSSSE031_VCBoatDoorActivator5",
-        "form_id": "[05000806]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Loose Brick",
-        "string": "Ladrillo suelto"
-    },
-    {
-        "editor_id": "ccBGSSSE031_FastTravel04",
-        "form_id": "[050392E0]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Castle Volkihar",
-        "string": "Castle Volkihar"
-    },
-    {
-        "editor_id": "ccBGSSSE031_FastTravel03",
-        "form_id": "[050341D4]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Travel to",
-        "string": "Travel to"
-    },
-    {
         "editor_id": "ccBGSSSE031_VCBoatDoorActivator4",
-        "form_id": "[05000803]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Travel to",
-        "string": "Viajar a"
-    },
-    {
-        "editor_id": "ccBGSSSE031_VCBoatDoorActivator3",
-        "form_id": "[05000804]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Travel to",
-        "string": "Viajar a"
-    },
-    {
-        "editor_id": "ccBGSSSE031_FastTravel01",
-        "form_id": "[050341CA]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Solitude",
-        "string": "Solitude"
-    },
-    {
-        "editor_id": "ccBGSSSE031_FastTravel05",
-        "form_id": "[050392E1]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Raven Rock",
-        "string": "Raven Rock"
-    },
-    {
-        "editor_id": "ccBGSSSE031_VCBoatDoorActivator5",
-        "form_id": "[05000806]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Examine",
-        "string": "Examinar"
-    },
-    {
-        "editor_id": "ccBGSSSE031_FastTravel03",
-        "form_id": "[050341D4]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Dawnstar",
-        "string": "Dawnstar"
-    },
-    {
-        "editor_id": "ccBGSSSE031_FastTravel05",
-        "form_id": "[050392E1]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Travel to",
-        "string": "Travel to"
-    },
-    {
-        "editor_id": "ccBGSSSE031_VCBoatDoorActivator4",
-        "form_id": "[05000803]",
+        "form_id": "05000803|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "ACTI FULL",
         "original": "Orphan's Tear",
         "string": "Lágrima del Huérfano"
     },
     {
-        "editor_id": "ccBGSSSE031_FastTravel02",
-        "form_id": "[050341CB]",
+        "editor_id": "ccBGSSSE031_FastTravel03",
+        "form_id": "050341D4|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Travel to",
         "string": "Travel to"
     },
     {
+        "editor_id": "ccBGSSSE031_FastTravel01",
+        "form_id": "050341CA|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Travel to",
+        "string": "Travel to"
+    },
+    {
+        "editor_id": "ccBGSSSE031_VCBoatDoorActivator5",
+        "form_id": "05000806|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Examine",
+        "string": "Examinar"
+    },
+    {
+        "editor_id": "ccBGSSSE031_FastTravel04",
+        "form_id": "050392E0|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Castle Volkihar",
+        "string": "Castle Volkihar"
+    },
+    {
+        "editor_id": "ccBGSSSE031_VCBoatDoorActivator3",
+        "form_id": "05000804|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Blackbone Isle",
+        "string": "Isla de Hueso Negro"
+    },
+    {
         "editor_id": "ccBGSSSE031_FastTravel02",
-        "form_id": "[050341CB]",
+        "form_id": "050341CB|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "ACTI FULL",
         "original": "Windhelm",
         "string": "Windhelm"
     },
     {
-        "editor_id": "ccBGSSSE031_ClothesPirateBoatswainClothesShoesVariant01",
-        "form_id": "[0500087B]",
+        "editor_id": "ccBGSSSE031_VCBoatDoorActivator4",
+        "form_id": "05000803|ccbgssse031-advcyrus.esm",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Boatswain Shoes",
-        "string": "Zapatos de contramaestre"
+        "type": "ACTI RNAM",
+        "original": "Travel to",
+        "string": "Viajar a"
     },
     {
-        "editor_id": "ccBGSSSE031_ClothesRedguardClothes",
-        "form_id": "[05000807]",
+        "editor_id": "ccBGSSSE031_FastTravel01",
+        "form_id": "050341CA|ccbgssse031-advcyrus.esm",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Cyrus' Outfit",
-        "string": "Atuendo de Cyrus"
+        "type": "ACTI FULL",
+        "original": "Solitude",
+        "string": "Solitude"
     },
     {
-        "editor_id": "ccBGSSSE031_ClothesPirateCaptainClothesVariant01",
-        "form_id": "[050008A8]",
+        "editor_id": "ccBGSSSE031_VCBoatDoorActivator5",
+        "form_id": "05000806|ccbgssse031-advcyrus.esm",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Captain Clothes",
-        "string": "Ropa de capitán"
+        "type": "ACTI FULL",
+        "original": "Loose Brick",
+        "string": "Ladrillo suelto"
     },
     {
-        "editor_id": "ccBGSSSE031_ClothesCyrusClothes",
-        "form_id": "[0500089E]",
+        "editor_id": "ccBGSSSE031_FastTravel05",
+        "form_id": "050392E1|ccbgssse031-advcyrus.esm",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Cyrus' Clothes",
-        "string": "Ropa de Cyrus"
+        "type": "ACTI FULL",
+        "original": "Raven Rock",
+        "string": "Raven Rock"
     },
     {
-        "editor_id": "ccBGSSSE031_ClothesPirateScrubClothesVariant02",
-        "form_id": "[05000875]",
+        "editor_id": "ccBGSSSE031_FastTravel04",
+        "form_id": "050392E0|ccbgssse031-advcyrus.esm",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Scrub Clothes",
-        "string": "Ropa de faena"
+        "type": "ACTI RNAM",
+        "original": "Travel to",
+        "string": "Travel to"
     },
     {
-        "editor_id": "ccBGSSSE031_ClothesPirateCaptainClothesBootsVariant02",
-        "form_id": "[050008E2]",
+        "editor_id": "ccBGSSSE031_FastTravel03",
+        "form_id": "050341D4|ccbgssse031-advcyrus.esm",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Captain Boots",
-        "string": "Botas de capitán"
+        "type": "ACTI FULL",
+        "original": "Dawnstar",
+        "string": "Dawnstar"
     },
     {
-        "editor_id": "ccBGSSSE031_ClothesPirateBoatswainClothesShoesVariant02",
-        "form_id": "[0500089F]",
+        "editor_id": "ccBGSSSE031_VCBoatDoorActivator3",
+        "form_id": "05000804|ccbgssse031-advcyrus.esm",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Boatswain Shoes",
-        "string": "Zapatos de contramaestre"
+        "type": "ACTI RNAM",
+        "original": "Travel to",
+        "string": "Viajar a"
+    },
+    {
+        "editor_id": "ccBGSSSE031_FastTravel02",
+        "form_id": "050341CB|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Travel to",
+        "string": "Travel to"
+    },
+    {
+        "editor_id": "ccBGSSSE031_FastTravel05",
+        "form_id": "050392E1|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Travel to",
+        "string": "Travel to"
     },
     {
         "editor_id": "ccBGSSSE031_ClothesPirateCaptainClothesVariant02",
-        "form_id": "[050008AF]",
+        "form_id": "050008AF|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "ARMO FULL",
         "original": "Captain Clothes",
         "string": "Ropa de capitán"
     },
     {
-        "editor_id": "ccBGSSSE031_ClothesPirateBoatswainClothesVariant01",
-        "form_id": "[05000896]",
+        "editor_id": "ccBGSSSE031_ClothesPirateBoatswainClothesVariant02",
+        "form_id": "0500088B|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "ARMO FULL",
         "original": "Boatswain Clothes",
@@ -201,15 +145,39 @@
     },
     {
         "editor_id": "ccBGSSSE031_ClothesCyrusClothesBoots",
-        "form_id": "[0500089B]",
+        "form_id": "0500089B|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "ARMO FULL",
         "original": "Cyrus' Boots",
         "string": "Botas de Cyrus"
     },
     {
+        "editor_id": "ccBGSSSE031_ClothesRedguardClothes",
+        "form_id": "05000807|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Cyrus' Outfit",
+        "string": "Atuendo de Cyrus"
+    },
+    {
+        "editor_id": "ccBGSSSE031_ClothesPirateCaptainClothesBootsVariant01",
+        "form_id": "050008C5|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Captain Boots",
+        "string": "Botas de capitán"
+    },
+    {
         "editor_id": "ccBGSSSE031_ClothesPirateScrubClothesVariant01",
-        "form_id": "[050008E7]",
+        "form_id": "050008E7|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Scrub Clothes",
+        "string": "Ropa de faena"
+    },
+    {
+        "editor_id": "ccBGSSSE031_ClothesPirateScrubClothesVariant02",
+        "form_id": "05000875|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "ARMO FULL",
         "original": "Scrub Clothes",
@@ -217,23 +185,55 @@
     },
     {
         "editor_id": "ccBGSSSE031_ClothesPirateBoatswainClothesVariant03",
-        "form_id": "[0500087F]",
+        "form_id": "0500087F|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "ARMO FULL",
         "original": "Boatswain Clothes",
         "string": "Ropa de contramaestre"
     },
     {
-        "editor_id": "ccBGSSSE031_ClothesPirateBoatswainClothesVariant02",
-        "form_id": "[0500088B]",
+        "editor_id": "ccBGSSSE031_ClothesCyrusClothes",
+        "form_id": "0500089E|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Cyrus' Clothes",
+        "string": "Ropa de Cyrus"
+    },
+    {
+        "editor_id": "ccBGSSSE031_ClothesPirateCaptainClothesVariant01",
+        "form_id": "050008A8|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Captain Clothes",
+        "string": "Ropa de capitán"
+    },
+    {
+        "editor_id": "ccBGSSSE031_ClothesPirateBoatswainClothesVariant01",
+        "form_id": "05000896|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "ARMO FULL",
         "original": "Boatswain Clothes",
         "string": "Ropa de contramaestre"
     },
     {
-        "editor_id": "ccBGSSSE031_ClothesPirateCaptainClothesBootsVariant01",
-        "form_id": "[050008C5]",
+        "editor_id": "ccBGSSSE031_ClothesPirateBoatswainClothesShoesVariant01",
+        "form_id": "0500087B|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Boatswain Shoes",
+        "string": "Zapatos de contramaestre"
+    },
+    {
+        "editor_id": "ccBGSSSE031_ClothesPirateBoatswainClothesShoesVariant02",
+        "form_id": "0500089F|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Boatswain Shoes",
+        "string": "Zapatos de contramaestre"
+    },
+    {
+        "editor_id": "ccBGSSSE031_ClothesPirateCaptainClothesBootsVariant02",
+        "form_id": "050008E2|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "ARMO FULL",
         "original": "Captain Boots",
@@ -241,63 +241,31 @@
     },
     {
         "editor_id": "ccBGSSSE031_ClothesPirateBoatswainClothesShoesVariant03",
-        "form_id": "[050008A1]",
+        "form_id": "050008A1|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "ARMO FULL",
         "original": "Boatswain Shoes",
         "string": "Zapatos de contramaestre"
     },
     {
-        "editor_id": "ccBGSSSE031_Note02",
-        "form_id": "[050008F8]",
+        "editor_id": "ccBGSSSE031_BlackwaterNote",
+        "form_id": "050008E8|ccbgssse031-advcyrus.esm",
         "index": null,
-        "type": "BOOK FULL",
-        "original": "Pirate's Note",
-        "string": "Nota del pirata"
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nThe crew always asks me, how can we be pirates if we ain't got no ship?\r\n\r\nAnd I tell them, we're Blackwater Brigands, we don't need no stinking ship. We can rob folks on land.\r\n\r\nAnd they ask me, but don't that make us bandits?\r\n\r\nAnd I tell them, good point. Maybe we should find us a ship.\r\n\r\nI heard there's a grand old sea cow over at Blackbone Isle. Might even have more loot than the Golden Galleon, the one the old Imperial used to tell stories about when I first joined up.\r\n\r\nFrom what I hear, the isle ain't too far from here. We could probably steal a boat from the wrecks up north. The problem is, no one's been to the isle in ages, and we ain't got a map.\r\n\r\nSo the crew asks me, how we gonna find Blackbone Isle if we don't know where it is?\r\n\r\nAnd I tell them, shut up, I'm working on it.\r\n</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\nLa tripulación siempre me pregunta cómo podemos ser piratas si no tenemos barco.\r\n\r\nYo les digo que somos los Forajidos de Aguas Negras, y que eso del barco son zarandajas. Que podemos robar a la gente en tierra firme.\r\n\r\nY ellos me preguntan que si eso no nos convierte en bandidos.\r\n\r\nY yo les digo que bien pensado. Que a lo mejor deberíamos hacernos con un barco.\r\n\r\nMe he enterado de que hay uno enorme en la isla de Hueso Negro. Puede que incluso lleve más botín que el Galeón Dorado, del que me hablaba el viejo imperial cuando me enrolé.\r\n\r\nPor lo que tengo entendido, la isla no está muy lejos de aquí. Probablemente podríamos robar un bote de los restos de naufragios que hay al norte. El problema es que hace mucho tiempo que no va nadie a la isla y no tenemos mapa.\r\n\r\nEntonces la tripulación me pregunta cómo vamos a encontrar la isla de Hueso Negro si no sabemos dónde está.\r\n\r\nY yo les digo que se callen, que estoy en ello.\r\n</font>"
     },
     {
         "editor_id": "ccBGSSSE031_FirstOfficerNote",
-        "form_id": "[05000808]",
+        "form_id": "05000808|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "BOOK FULL",
         "original": "Captain's Journal",
         "string": "Diario del capitán"
     },
     {
-        "editor_id": "ccBGSSSE031_OriginBook",
-        "form_id": "[05000809]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "The Restless",
-        "string": "Los imparables"
-    },
-    {
-        "editor_id": "ccBGSSSE031_Note02",
-        "form_id": "[050008F8]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face=\"$HandwrittenFont\">\r\nThey say a pirate's home is the sea, but the bottom of the ocean is no place to breathe, let alone live. \r\n\r\nBut word is you found a right ol' ship on an isle far off the coast. If you can't sail it out to open waters, it may make a good home. \r\n\r\nJust a little advice from a restless soul.</font>",
-        "string": "<font face=\"$HandwrittenFont\">\r\nDicen que el hogar de un pirata es la mar, pero en el fondo del océano no se puede respirar, y mucho menos vivir. \r\n\r\nSin embargo, dicen que has encontrado un viejo barco en una isla alejada de la costa. Si no puedes llegar hasta mar abierto con él, podría ser un buen hogar. \r\n\r\nUn consejito de un alma en pena.</font>"
-    },
-    {
-        "editor_id": "ccBGSSSE031_FirstOfficerNote",
-        "form_id": "[05000808]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face='$HandwrittenFont'>  \r\n<b>28th of Last Seed, 3E 39</b>\r\nWe set sail on Dead Man's Dread in the summer, to take advantage of the calmer winds. Yet Kynareth saw fit to throw us off course, and now we find ourselves stranded in a fog, with no sun or stars to guide us. The crew is blaming the young navigator, K'avir, for steering us into it. In truth, I only brought him on board because the old Captain took ill, and we were desperately short on men. \r\n\r\n<b>4th of Hearthfire, 3E 39</b>\r\nOne of the crew, Asif, says he was once a Priest of Arkay, and used to perform the rites. He believes the former Captain was murdered. I'll keep this between him and I until I know more.\r\n\r\n<b>22nd of Hearthfire, 3E 39</b>\r\nI've kept the date by marking the back of this journal. But there are times I forget, and in truth I don't know whether it's the 22nd of Hearthfire or the 1st of the New Year. \r\n\r\nBut the cold is enough to tell us that winter is on its way. We'll need to find land soon, as the men are getting nervous. There's been three fights over rations in the past week. Worse yet, I'm starting to lose my head. There are times I look west and see the golden sands of Stros M'Kai on the curve of the horizon. I have to force myself to look away, knowing there's nothing there.\r\n\r\n<b>2nd of Frostfall, 3E 39</b>\r\nWe finally managed to find land in this barren frost. The men are joyous. Based on the markings inside the grotto, it looks like we've reached Blackbone Isle, an old pirate den of all things. Many of us were corsairs before we pledged ourselves to the Crown, so perhaps coming here was more than luck. Either way, we can't be far from the mainland now. We'll head south for Skyrim in the morning.\r\n\r\n<b>3rd of Frostfall, 3E 39</b>\r\nWe are a crew of dead men, and this ship is our tomb.\r\n\r\nThe entrance collapsed in the middle of the night, sealing us inside. Still, we might've found a way back to shore, had the Forebear among us, K'avir, not sabotaged the skiffs. It's my crime as much as his, for I'm the one who brought him aboard. \r\n\r\nFor his part, the Forebear made no attempt to resist or escape. In fact, he readily admitted to the deed, as well of the death of our former Captain. He wanted us to know exactly who it was that he served, so that every Crown would know that nowhere in Tamriel was safe.\r\n\r\nWe put him in the brig and left him to rot. Some of the men wanted a more creative punishment, but the reality is there's no worse fate than the one he doomed us to.\r\n\r\n<b>5th of Frostfall, 3E 39</b>\r\nThe situation is dire. The food stocks are depleted, and half the men are crippled with fever. The crew have no delusions about what comes next. But we can still die with purpose.\r\n\r\nBefore the old Captain died, he told me that the sabre on his wall belonged to Cyrus himself, and that it was worth more than a thousand ships full of plunder.\r\n\r\nI never asked how he knew Cyrus, or how he came upon his sword. But I know protecting the hero's legacy was important to him, and now that honor falls to us.\r\n\r\nI gave each man a choice. Some opted for the drink, others chose a more dramatic exit. As we depart, we will pray to Arkay to bind our souls to the ship, just as Prince A'Tor was bound to a gem so many years ago.\r\n\r\nWe will protect the relics of Cyrus, and honor the Crown. We will do in death what we could not do in life.</font>",
-        "string": "<font face='$HandwrittenFont'>  \r\n<b>28 de Última semilla, 39 de la Tercera Era</b>\r\nZarpamos a bordo del Horror del Muerto en verano para aprovechar los vientos suaves. Pero Kynareth tuvo a bien desviarnos de nuestro rumbo, y ahora nos encontramos inmovilizados en medio de una niebla, sin poder guiarnos por el sol ni las estrellas. La tripulación culpa al joven navegante K'avir por meternos aquí. En realidad únicamente lo traje con nosotros porque el viejo capitán enfermó e íbamos desesperadamente cortos de hombres.\r\n\r\n<b>4 de Fuego hogar, 39 de la Tercera Era</b>\r\nUn miembro de la tripulación llamado Asif dice que fue sacerdote de Arkay, y que solía celebrar los ritos. Cree que al capitán anterior lo asesinaron. Hasta que averigüe más, esto quedará entre nosotros.\r\n\r\n<b>22 de Fuego hogar, 39 de la Tercera Era</b>\r\nHe seguido la fecha marcando el reverso de este diario. Pero a veces se me olvida, y en realidad no sé si es el 22 de Fuego hogar, o el 1 del año nuevo. \r\n\r\nSin embargo, por el frío que hace sabemos que llega el invierno. Pronto necesitaremos dar con tierra, los hombres se están poniendo nerviosos. La semana pasada hubo peleas por las provisiones. Lo peor es que estoy empezando a perder la cabeza. A veces miro al oeste y me parece ver las arenas doradas de Stros M'Kai sobre la curva del horizonte. Tengo que obligarme a apartar la vista, porque sé que por ahí no hay nada.\r\n\r\n<b>2 de Helada, 39 de la Tercera Era</b>\r\nPor fin hemos logrado dar con tierra en medio de este desierto de escarcha. Los hombres están felices. Por las marcas que hay en la gruta, parece que hemos llegado a la isla de Hueso Negro, un antiguo escondite de piratas. Muchos éramos corsarios antes de jurar lealtad a la Corona, así que esto podría ser algo más que un simple golpe de suerte. Sea como fuere, el continente ya no puede estar lejos. Por la mañana partiremos hacia el sur, en dirección a Skyrim.\r\n\r\n<b>3 de Helada, 39 de la Tercera Era</b>\r\nSomos una tripulación de muertos, y este barco es nuestra tumba.\r\n\r\nEn mitad de la noche se derrumbó la entrada y nos quedamos atrapados dentro. Sin embargo, podríamos haber dado con un modo de volver a la costa si no fuera porque K'avir, el Antepasado infiltrado entre nosotros, había saboteado los esquifes. Es culpa mía tanto como suya, puesto que fui yo quien lo trajo con nosotros. \r\n\r\nPor su parte, el Antepasado no ha opuesto resistencia ni ha intentado huir. De hecho, ha admitido de buena gana que fue él quien lo hizo, y que también asesinó a nuestro antiguo capitán. Quería que supiéramos exactamente a quien servía para hacer saber a todos los Coronas que no están a salvo en ninguna parte de Tamriel.\r\n\r\nLo encerramos en el calabozo y lo dejamos para que se pudriera. Algunos de los hombres querían darle un castigo más creativo, pero lo cierto es que no hay peor destino que aquel al que nos ha condenado.\r\n\r\n<b>5 de Helada, 39 de la Tercera Era</b>\r\nLa situación es desesperada. Se nos han agotado las reservas de comida, y la mitad de los hombres están aquejados de fiebres. La tripulación no se hace ilusiones sobre lo que pasará en los próximos días. Pero nuestra muerte aún podría ser útil.\r\n\r\nAntes de morir, el viejo capitán me dijo que el sable que tenía en la pared perteneció al mismísimo Cyrus, y que valía más que mil barcos llenos de botín.\r\n\r\nNunca le pregunté cómo llegó a conocer a Cyrus ni cómo se hizo con su arma. Pero sé que para él era importante proteger el legado del héroe, y ahora ese honor recae sobre nosotros.\r\n\r\nHe dicho a todos los hombres que elijan. Algunos optaron por la bebida, y otros eligieron un final más dramático. Al partir rezaremos a Arkay para que confine nuestras almas a este barco, igual que el príncipe A'Tor quedó confinado a una gema hace muchos años.\r\n\r\nProtegeremos las reliquias de Cyrus y honraremos la Corona. Haremos en la muerte lo que no pudimos en vida.</font>"
-    },
-    {
-        "editor_id": "ccBGSSSE031_MurdererNote",
-        "form_id": "[0500080B]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face='$HandwrittenFont'>  \r\nNaha 'Mei Dogo Ra Gada Lonhe Trai.\r\n\r\nThe Crowns are fond of this saying. \"The Forebears should know their place.\" They look upon us like commoners,  the chaff from which the wheat is pruned.\r\n\r\nI would remind you, Na-Totambu, that our place is not for you to decide. For we are the Warrior Wave of Ra Gada, the first men. It is our sweat that salts the earth. It is our tears from which the rain falls. It is our blood that beats in the heart of Hammerfell. \r\n\r\nThe throne of kings is one built upon our shoulders. It is by our grace, and our mercy, that the Crowns are allowed to sit. We know our place. Do not forget yours.\r\n",
-        "string": "<font face='$HandwrittenFont'>  \r\nNaha 'Mei Dogo Ra Gada Lonhe Trai.\r\n\r\nA los Coronas les gusta mucho este dicho. \"Los Antepasados deberían recordar su condición\". Nos ven como a plebeyos, la paja de la que se separa el grano.\r\n\r\nQuisiera recordarte, Na-Totambu, que tú no decides qué condición nos corresponde. Puesto que somos la Oleada Guerrera de Ra Gada, los primeros hombres. Nuestro sudor es la sal de la tierra. La lluvia son nuestras lágrimas. La sangre que late en el corazón de Páramo del Martillo es la nuestra. \r\n\r\nEl trono de los reyes se construyó sobre nuestros hombros. Si los Coronas lo ocupan, es por nuestra gracia y nuestra misericordia. Nosotros sabemos cuál es nuestra condición. No olvides tú la tuya.\r\n"
-    },
-    {
         "editor_id": "ccBGSSSE031_Note",
-        "form_id": "[0500080A]",
+        "form_id": "0500080A|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "BOOK FULL",
         "original": "Kevon's Note",
@@ -305,87 +273,95 @@
     },
     {
         "editor_id": "ccBGSSSE031_OriginBook",
-        "form_id": "[05000809]",
+        "form_id": "05000809|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "BOOK DESC",
         "original": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nThe Restless\r\n\r\n\r\n\r\nby \r\nUnknown\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/H_letter.png'>ave you heard the tale about the pirates who challenged an Empire? \r\n\r\nI'm sure you have. For neither gallows' rope nor history's pen can erase the Restless League. So long as crews hoist sail and fare the seas they'll sing shanties of ol' Cyrus, hero of Stros M'Kai.\r\n\r\nBut what became of him when the fighting was done? If it were only a tale, the book would close, but life has a habit of adding pages where they shouldn't be.\r\n\r\nSome say he sailed west, to lands uncharted. But others contend he took command of the legendary ship, Dead Man's Dread, and sailed north, drawn by the stories of Tobias. There he hunted for treasures new and old, all across the Sea of Ghosts. Over time he amassed a great fortune, and lived out the rest of his days on calm waters.\r\n\r\nWhere this fortune is now, is a mystery long forgotten. You'll hear talk of a Blackbone Isle, but you won't find it on any map. The last man who claimed to know its location was a pirate by the name of Kevon. Yet as a wanted man of little clout, he died in Castle Dour Dungeon, taking the fate of the treasure with him. \r\n\r\nA strange end to a great tale, but who knows if the writing's done. For a man's hunt for gold is as restless as his desire to be free.\r\n</p>",
         "string": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nLos imparables\r\n\r\n\r\n\r\n\r\nAnónimo\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/H_letter.png'>abrás oído hablar sobre aquellos piratas que pusieron en jaque a un imperio. \r\n\r\nSeguro que sí. Ni la cuerda de la horca ni la pluma de la historia han podido borrar el recuerdo de la Liga Imparable. Mientras las tripulaciones sigan izando las velas y recorriendo los mares, seguirán cantando salomas sobre el viejo Cyrus, el héroe de Stros M'Kai.\r\n\r\nPero ¿qué pasó con él cuando acabó la lucha? Si fuese una simple leyenda, se cerraría el libro, pero la historia suele añadir páginas que no deberían existir.\r\n\r\nHay quien dice que zarpó rumbo al oeste, a tierras inexploradas. Pero otros afirman que tomó el mando del Horror del Muerto, un barco legendario con el que navegó hacia el norte, atraído por las historias de Tobias. Allí fue a la caza de tesoros viejos y nuevos, y recorrió todo el mar de los Fantasmas. Con el tiempo amasó una enorme fortuna y pasó el resto de sus días en aguas tranquilas.\r\n\r\nEl paradero de su tesoro es un misterio que se olvidó hace mucho tiempo. Oirás hablar sobre la isla de Hueso Negro, pero no la encontrarás en ningún mapa. El último que afirmaba conocer su paradero era un pirata conocido como Kevon. Sin embargo, no era más que un fugitivo de poca monta que murió en la mazmorra del Castillo Severo. El rastro del tesoro se perdió con él. \r\n\r\nEs un extraño final para una gran historia, pero quién sabe si esta no se seguirá escribiendo. La sed de oro es capaz de azuzar tanto a un hombre como su deseo de ser libre.\r\n</p>"
     },
     {
+        "editor_id": "ccBGSSSE031_FirstOfficerNote",
+        "form_id": "05000808|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>  \r\n<b>28th of Last Seed, 3E 39</b>\r\nWe set sail on Dead Man's Dread in the summer, to take advantage of the calmer winds. Yet Kynareth saw fit to throw us off course, and now we find ourselves stranded in a fog, with no sun or stars to guide us. The crew is blaming the young navigator, K'avir, for steering us into it. In truth, I only brought him on board because the old Captain took ill, and we were desperately short on men. \r\n\r\n<b>4th of Hearthfire, 3E 39</b>\r\nOne of the crew, Asif, says he was once a Priest of Arkay, and used to perform the rites. He believes the former Captain was murdered. I'll keep this between him and I until I know more.\r\n\r\n<b>22nd of Hearthfire, 3E 39</b>\r\nI've kept the date by marking the back of this journal. But there are times I forget, and in truth I don't know whether it's the 22nd of Hearthfire or the 1st of the New Year. \r\n\r\nBut the cold is enough to tell us that winter is on its way. We'll need to find land soon, as the men are getting nervous. There's been three fights over rations in the past week. Worse yet, I'm starting to lose my head. There are times I look west and see the golden sands of Stros M'Kai on the curve of the horizon. I have to force myself to look away, knowing there's nothing there.\r\n\r\n<b>2nd of Frostfall, 3E 39</b>\r\nWe finally managed to find land in this barren frost. The men are joyous. Based on the markings inside the grotto, it looks like we've reached Blackbone Isle, an old pirate den of all things. Many of us were corsairs before we pledged ourselves to the Crown, so perhaps coming here was more than luck. Either way, we can't be far from the mainland now. We'll head south for Skyrim in the morning.\r\n\r\n<b>3rd of Frostfall, 3E 39</b>\r\nWe are a crew of dead men, and this ship is our tomb.\r\n\r\nThe entrance collapsed in the middle of the night, sealing us inside. Still, we might've found a way back to shore, had the Forebear among us, K'avir, not sabotaged the skiffs. It's my crime as much as his, for I'm the one who brought him aboard. \r\n\r\nFor his part, the Forebear made no attempt to resist or escape. In fact, he readily admitted to the deed, as well of the death of our former Captain. He wanted us to know exactly who it was that he served, so that every Crown would know that nowhere in Tamriel was safe.\r\n\r\nWe put him in the brig and left him to rot. Some of the men wanted a more creative punishment, but the reality is there's no worse fate than the one he doomed us to.\r\n\r\n<b>5th of Frostfall, 3E 39</b>\r\nThe situation is dire. The food stocks are depleted, and half the men are crippled with fever. The crew have no delusions about what comes next. But we can still die with purpose.\r\n\r\nBefore the old Captain died, he told me that the sabre on his wall belonged to Cyrus himself, and that it was worth more than a thousand ships full of plunder.\r\n\r\nI never asked how he knew Cyrus, or how he came upon his sword. But I know protecting the hero's legacy was important to him, and now that honor falls to us.\r\n\r\nI gave each man a choice. Some opted for the drink, others chose a more dramatic exit. As we depart, we will pray to Arkay to bind our souls to the ship, just as Prince A'Tor was bound to a gem so many years ago.\r\n\r\nWe will protect the relics of Cyrus, and honor the Crown. We will do in death what we could not do in life.</font>",
+        "string": "<font face='$HandwrittenFont'>  \r\n<b>28 de Última semilla, 39 de la Tercera Era</b>\r\nZarpamos a bordo del Horror del Muerto en verano para aprovechar los vientos suaves. Pero Kynareth tuvo a bien desviarnos de nuestro rumbo, y ahora nos encontramos inmovilizados en medio de una niebla, sin poder guiarnos por el sol ni las estrellas. La tripulación culpa al joven navegante K'avir por meternos aquí. En realidad únicamente lo traje con nosotros porque el viejo capitán enfermó e íbamos desesperadamente cortos de hombres.\r\n\r\n<b>4 de Fuego hogar, 39 de la Tercera Era</b>\r\nUn miembro de la tripulación llamado Asif dice que fue sacerdote de Arkay, y que solía celebrar los ritos. Cree que al capitán anterior lo asesinaron. Hasta que averigüe más, esto quedará entre nosotros.\r\n\r\n<b>22 de Fuego hogar, 39 de la Tercera Era</b>\r\nHe seguido la fecha marcando el reverso de este diario. Pero a veces se me olvida, y en realidad no sé si es el 22 de Fuego hogar, o el 1 del año nuevo. \r\n\r\nSin embargo, por el frío que hace sabemos que llega el invierno. Pronto necesitaremos dar con tierra, los hombres se están poniendo nerviosos. La semana pasada hubo peleas por las provisiones. Lo peor es que estoy empezando a perder la cabeza. A veces miro al oeste y me parece ver las arenas doradas de Stros M'Kai sobre la curva del horizonte. Tengo que obligarme a apartar la vista, porque sé que por ahí no hay nada.\r\n\r\n<b>2 de Helada, 39 de la Tercera Era</b>\r\nPor fin hemos logrado dar con tierra en medio de este desierto de escarcha. Los hombres están felices. Por las marcas que hay en la gruta, parece que hemos llegado a la isla de Hueso Negro, un antiguo escondite de piratas. Muchos éramos corsarios antes de jurar lealtad a la Corona, así que esto podría ser algo más que un simple golpe de suerte. Sea como fuere, el continente ya no puede estar lejos. Por la mañana partiremos hacia el sur, en dirección a Skyrim.\r\n\r\n<b>3 de Helada, 39 de la Tercera Era</b>\r\nSomos una tripulación de muertos, y este barco es nuestra tumba.\r\n\r\nEn mitad de la noche se derrumbó la entrada y nos quedamos atrapados dentro. Sin embargo, podríamos haber dado con un modo de volver a la costa si no fuera porque K'avir, el Antepasado infiltrado entre nosotros, había saboteado los esquifes. Es culpa mía tanto como suya, puesto que fui yo quien lo trajo con nosotros. \r\n\r\nPor su parte, el Antepasado no ha opuesto resistencia ni ha intentado huir. De hecho, ha admitido de buena gana que fue él quien lo hizo, y que también asesinó a nuestro antiguo capitán. Quería que supiéramos exactamente a quien servía para hacer saber a todos los Coronas que no están a salvo en ninguna parte de Tamriel.\r\n\r\nLo encerramos en el calabozo y lo dejamos para que se pudriera. Algunos de los hombres querían darle un castigo más creativo, pero lo cierto es que no hay peor destino que aquel al que nos ha condenado.\r\n\r\n<b>5 de Helada, 39 de la Tercera Era</b>\r\nLa situación es desesperada. Se nos han agotado las reservas de comida, y la mitad de los hombres están aquejados de fiebres. La tripulación no se hace ilusiones sobre lo que pasará en los próximos días. Pero nuestra muerte aún podría ser útil.\r\n\r\nAntes de morir, el viejo capitán me dijo que el sable que tenía en la pared perteneció al mismísimo Cyrus, y que valía más que mil barcos llenos de botín.\r\n\r\nNunca le pregunté cómo llegó a conocer a Cyrus ni cómo se hizo con su arma. Pero sé que para él era importante proteger el legado del héroe, y ahora ese honor recae sobre nosotros.\r\n\r\nHe dicho a todos los hombres que elijan. Algunos optaron por la bebida, y otros eligieron un final más dramático. Al partir rezaremos a Arkay para que confine nuestras almas a este barco, igual que el príncipe A'Tor quedó confinado a una gema hace muchos años.\r\n\r\nProtegeremos las reliquias de Cyrus y honraremos la Corona. Haremos en la muerte lo que no pudimos en vida.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE031_Note02",
+        "form_id": "050008F8|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Pirate's Note",
+        "string": "Nota del pirata"
+    },
+    {
         "editor_id": "ccBGSSSE031_Note",
-        "form_id": "[0500080A]",
+        "form_id": "0500080A|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "BOOK DESC",
         "original": "<font face=\"$HandwrittenFont\">\r\nFifteen men, a sunken treasure, and a lost ship. That's what I left behind.\r\n\r\nIt took less than a day to sail to Blackbone Isle. Captain said we needn't worry about the cold, so we left the furs and packed the steel.\r\n\r\nSeemed like an odd thing. No one but us knew about this place. Still, didn't matter much as we were making good time. I reckon we were about a league away from the cave when all of a sudden, the wind died.\r\n\r\nThey came up behind us, sabres rattling like ice wraiths. Next thing I hear is the screams. \r\n\r\nI jumped onto the skiff, cut the bastard loose and started to paddle. Didn't have time to look back. \r\n\r\nNow, time's all I got. Maybe if we had more men, or a sodding priest, we could've made it. \r\n\r\nI've got the map at least. Hid it under a loose brick behind the bench. I just need to get out of this dungeon before the sickness takes me.\r\n</font>",
         "string": "<font face=\"$HandwrittenFont\">\r\nQuince hombres, un tesoro hundido y un barco perdido. Eso fue lo que dejé atrás.\r\n\r\nTardamos menos de un día en zarpar para la isla de Hueso Negro. El capitán decía que no hacía falta preocuparnos por el frío, así que dejamos las pieles y cargamos el acero.\r\n\r\nParecía algo raro. Nadie más que nosotros sabía de aquel lugar. Pero no importaba demasiado, íbamos a buen ritmo. Calculo que estaríamos a una legua de la cueva cuando de repente el viento se paró.\r\n\r\nLlegaron por detrás de nosotros, con los sables traqueteando, como espectros del hielo. Lo siguiente que oí fueron los gritos. \r\n\r\nMe lancé al esquife, corté la condenada cuerda y comencé a remar. No tuve tiempo de mirar atrás. \r\n\r\nAhora lo único que tengo es tiempo. A lo mejor lo habríamos logrado si hubiéramos tenido más hombres, o un puñetero sacerdote. \r\n\r\nPor lo menos tengo el mapa. Lo he escondido debajo de un ladrillo suelto, detrás del banco. Solo tengo que salir de esta mazmorra antes de que la enfermedad acabe conmigo.\r\n</font>"
     },
     {
-        "editor_id": "ccBGSSSE031_BlackwaterNote",
-        "form_id": "[050008E8]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Celeste's Note",
-        "string": "Nota de Celeste"
-    },
-    {
-        "editor_id": "ccBGSSSE031_BlackwaterNote",
-        "form_id": "[050008E8]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face=\"$HandwrittenFont\">\r\nThe crew always asks me, how can we be pirates if we ain't got no ship?\r\n\r\nAnd I tell them, we're Blackwater Brigands, we don't need no stinking ship. We can rob folks on land.\r\n\r\nAnd they ask me, but don't that make us bandits?\r\n\r\nAnd I tell them, good point. Maybe we should find us a ship.\r\n\r\nI heard there's a grand old sea cow over at Blackbone Isle. Might even have more loot than the Golden Galleon, the one the old Imperial used to tell stories about when I first joined up.\r\n\r\nFrom what I hear, the isle ain't too far from here. We could probably steal a boat from the wrecks up north. The problem is, no one's been to the isle in ages, and we ain't got a map.\r\n\r\nSo the crew asks me, how we gonna find Blackbone Isle if we don't know where it is?\r\n\r\nAnd I tell them, shut up, I'm working on it.\r\n</font>",
-        "string": "<font face=\"$HandwrittenFont\">\r\nLa tripulación siempre me pregunta cómo podemos ser piratas si no tenemos barco.\r\n\r\nYo les digo que somos los Forajidos de Aguas Negras, y que eso del barco son zarandajas. Que podemos robar a la gente en tierra firme.\r\n\r\nY ellos me preguntan que si eso no nos convierte en bandidos.\r\n\r\nY yo les digo que bien pensado. Que a lo mejor deberíamos hacernos con un barco.\r\n\r\nMe he enterado de que hay uno enorme en la isla de Hueso Negro. Puede que incluso lleve más botín que el Galeón Dorado, del que me hablaba el viejo imperial cuando me enrolé.\r\n\r\nPor lo que tengo entendido, la isla no está muy lejos de aquí. Probablemente podríamos robar un bote de los restos de naufragios que hay al norte. El problema es que hace mucho tiempo que no va nadie a la isla y no tenemos mapa.\r\n\r\nEntonces la tripulación me pregunta cómo vamos a encontrar la isla de Hueso Negro si no sabemos dónde está.\r\n\r\nY yo les digo que se callen, que estoy en ello.\r\n</font>"
-    },
-    {
         "editor_id": "ccBGSSSE031_MurdererNote",
-        "form_id": "[0500080B]",
+        "form_id": "0500080B|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "BOOK FULL",
         "original": "Forebear's Note",
         "string": "Nota del antepasado"
     },
     {
-        "editor_id": "ccBGSSSE031_MiscSackSmall",
-        "form_id": "[0500095B]",
+        "editor_id": "ccBGSSSE031_Note02",
+        "form_id": "050008F8|ccbgssse031-advcyrus.esm",
         "index": null,
-        "type": "CONT FULL",
-        "original": "Small Sack",
-        "string": "Saco pequeño"
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nThey say a pirate's home is the sea, but the bottom of the ocean is no place to breathe, let alone live. \r\n\r\nBut word is you found a right ol' ship on an isle far off the coast. If you can't sail it out to open waters, it may make a good home. \r\n\r\nJust a little advice from a restless soul.</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\nDicen que el hogar de un pirata es la mar, pero en el fondo del océano no se puede respirar, y mucho menos vivir. \r\n\r\nSin embargo, dicen que has encontrado un viejo barco en una isla alejada de la costa. Si no puedes llegar hasta mar abierto con él, podría ser un buen hogar. \r\n\r\nUn consejito de un alma en pena.</font>"
     },
     {
-        "editor_id": "ccBGSSSE031_UpperWardrobeScrub",
-        "form_id": "[05000904]",
+        "editor_id": "ccBGSSSE031_MurdererNote",
+        "form_id": "0500080B|ccbgssse031-advcyrus.esm",
         "index": null,
-        "type": "CONT FULL",
-        "original": "Wardrobe",
-        "string": "Armario"
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>  \r\nNaha 'Mei Dogo Ra Gada Lonhe Trai.\r\n\r\nThe Crowns are fond of this saying. \"The Forebears should know their place.\" They look upon us like commoners,  the chaff from which the wheat is pruned.\r\n\r\nI would remind you, Na-Totambu, that our place is not for you to decide. For we are the Warrior Wave of Ra Gada, the first men. It is our sweat that salts the earth. It is our tears from which the rain falls. It is our blood that beats in the heart of Hammerfell. \r\n\r\nThe throne of kings is one built upon our shoulders. It is by our grace, and our mercy, that the Crowns are allowed to sit. We know our place. Do not forget yours.\r\n",
+        "string": "<font face='$HandwrittenFont'>  \r\nNaha 'Mei Dogo Ra Gada Lonhe Trai.\r\n\r\nA los Coronas les gusta mucho este dicho. \"Los Antepasados deberían recordar su condición\". Nos ven como a plebeyos, la paja de la que se separa el grano.\r\n\r\nQuisiera recordarte, Na-Totambu, que tú no decides qué condición nos corresponde. Puesto que somos la Oleada Guerrera de Ra Gada, los primeros hombres. Nuestro sudor es la sal de la tierra. La lluvia son nuestras lágrimas. La sangre que late en el corazón de Páramo del Martillo es la nuestra. \r\n\r\nEl trono de los reyes se construyó sobre nuestros hombros. Si los Coronas lo ocupan, es por nuestra gracia y nuestra misericordia. Nosotros sabemos cuál es nuestra condición. No olvides tú la tuya.\r\n"
+    },
+    {
+        "editor_id": "ccBGSSSE031_BlackwaterNote",
+        "form_id": "050008E8|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Celeste's Note",
+        "string": "Nota de Celeste"
+    },
+    {
+        "editor_id": "ccBGSSSE031_OriginBook",
+        "form_id": "05000809|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "The Restless",
+        "string": "Los imparables"
     },
     {
         "editor_id": "ccBGSSSE031_BarrelEmpty01",
-        "form_id": "[050009C5]",
+        "form_id": "050009C5|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "CONT FULL",
         "original": "Barrel",
         "string": "Barril"
     },
     {
-        "editor_id": "ccBGSSSE031_TreasExplorerLootChest",
-        "form_id": "[05000A06]",
-        "index": null,
-        "type": "CONT FULL",
-        "original": "Chest",
-        "string": "Cofre"
-    },
-    {
-        "editor_id": "ccBGSSSE031_UpperWardrobeBoatswain",
-        "form_id": "[05000907]",
+        "editor_id": "ccBGSSSE031_UpperWardrobeScrub",
+        "form_id": "05000904|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "CONT FULL",
         "original": "Wardrobe",
         "string": "Armario"
     },
     {
-        "editor_id": "ccBGSSSE031_MiscSackSmallNRS",
-        "form_id": "[05000A01]",
+        "editor_id": "ccBGSSSE031_MiscSackSmall",
+        "form_id": "0500095B|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "CONT FULL",
         "original": "Small Sack",
@@ -393,31 +369,47 @@
     },
     {
         "editor_id": "ccBGSSSE031_UpperWardrobeCaptain",
-        "form_id": "[05000901]",
+        "form_id": "05000901|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "CONT FULL",
         "original": "Wardrobe",
         "string": "Armario"
     },
     {
+        "editor_id": "ccBGSSSE031_MiscSackSmallNRS",
+        "form_id": "05000A01|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Small Sack",
+        "string": "Saco pequeño"
+    },
+    {
+        "editor_id": "ccBGSSSE031_TreasExplorerLootChest",
+        "form_id": "05000A06|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Cofre"
+    },
+    {
         "editor_id": "ccBGSSSE031_TreasSatchel",
-        "form_id": "[050009E8]",
+        "form_id": "050009E8|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "CONT FULL",
         "original": "Satchel",
         "string": "Bolsa"
     },
     {
-        "editor_id": "ccBGSSSE031_ShipDoorLoad",
-        "form_id": "[05000A1D]",
+        "editor_id": "ccBGSSSE031_UpperWardrobeBoatswain",
+        "form_id": "05000907|ccbgssse031-advcyrus.esm",
         "index": null,
-        "type": "DOOR FULL",
-        "original": "Door",
-        "string": "Puerta"
+        "type": "CONT FULL",
+        "original": "Wardrobe",
+        "string": "Armario"
     },
     {
         "editor_id": "ccBGSSSE031_CyrusDoor",
-        "form_id": "[05000A29]",
+        "form_id": "05000A29|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "DOOR FULL",
         "original": "Door",
@@ -425,31 +417,39 @@
     },
     {
         "editor_id": "ccBGSSSE031_RowboatDoor",
-        "form_id": "[0500080C]",
+        "form_id": "0500080C|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "DOOR FULL",
         "original": "Rowboat",
         "string": "Bote de remos"
     },
     {
+        "editor_id": "ccBGSSSE031_ShipDoorLoad",
+        "form_id": "05000A1D|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "DOOR FULL",
+        "original": "Door",
+        "string": "Puerta"
+    },
+    {
         "editor_id": "ccBGSSSE031_Map",
-        "form_id": "[0500080D]",
+        "form_id": "0500080D|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "MISC FULL",
         "original": "Map to Blackbone Isle",
         "string": "Mapa de la isla de Hueso Negro"
     },
     {
-        "editor_id": "ccBGSSSE031_UpperBedDouble01",
-        "form_id": "[05000954]",
+        "editor_id": "ccBGSSSE031_UpperBedSingle01L",
+        "form_id": "05000963|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "FURN FULL",
         "original": "Bed",
         "string": "Cama"
     },
     {
-        "editor_id": "ccBGSSSE031_UpperBedSingle01L",
-        "form_id": "[05000963]",
+        "editor_id": "ccBGSSSE031_UpperBedDouble01",
+        "form_id": "05000954|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "FURN FULL",
         "original": "Bed",
@@ -457,7 +457,7 @@
     },
     {
         "editor_id": "ccBGSSSE031_CyrusSabre",
-        "form_id": "[05000D63]",
+        "form_id": "05000D63|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "WEAP FULL",
         "original": "Cyrus' Sabre",
@@ -465,31 +465,23 @@
     },
     {
         "editor_id": "ccBGSSSE031_BlackwaterBlade",
-        "form_id": "[05000A4B]",
+        "form_id": "05000A4B|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "WEAP FULL",
         "original": "Blackwater Blade",
         "string": "Espada de Aguas Negras"
     },
     {
-        "editor_id": "ccBGSSSE031_LvlAlikrMissileF",
-        "form_id": "[05000814]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Ghost Sailor",
-        "string": "Marinero fantasma"
-    },
-    {
         "editor_id": "ccBGSSSE031_LvlAlikrMagic",
-        "form_id": "[05000812]",
+        "form_id": "05000812|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Ghost Sailor",
         "string": "Marinero fantasma"
     },
     {
-        "editor_id": "ccBGSSSE031_LvlAlikrMelee1H_Female",
-        "form_id": "[0500080F]",
+        "editor_id": "ccBGSSSE031_LvlAlikrMissileF",
+        "form_id": "05000814|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Ghost Sailor",
@@ -497,23 +489,23 @@
     },
     {
         "editor_id": "ccBGSSSE031_LvlAlikrMelee2H",
-        "form_id": "[05000AA4]",
+        "form_id": "05000AA4|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Ghost Captain",
         "string": "Capitán fantasma"
     },
     {
-        "editor_id": "ccBGSSSE031_Corpse",
-        "form_id": "[05000810]",
+        "editor_id": "ccBGSSSE031_LvlAlikrMelee1H_Female",
+        "form_id": "0500080F|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "NPC_ FULL",
-        "original": "Kevon",
-        "string": "Kevon"
+        "original": "Ghost Sailor",
+        "string": "Marinero fantasma"
     },
     {
         "editor_id": "ccBGSSSE031_Celeste",
-        "form_id": "[05000A55]",
+        "form_id": "05000A55|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Celeste",
@@ -521,79 +513,47 @@
     },
     {
         "editor_id": "ccBGSSSE031_RedguardCaptain_TreasCorpseSkeleton",
-        "form_id": "[05000815]",
+        "form_id": "05000815|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Captain",
         "string": "Capitán"
     },
     {
+        "editor_id": "ccBGSSSE031_Corpse",
+        "form_id": "05000810|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Kevon",
+        "string": "Kevon"
+    },
+    {
         "editor_id": "ccBGSSSE031_DefaultPoison",
-        "form_id": "[0500098A]",
+        "form_id": "0500098A|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "ALCH FULL",
         "original": "Poison",
         "string": "Veneno"
     },
     {
-        "editor_id": "ccBGSSSE031Interior02",
-        "form_id": "[050009D5]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Dead Man's Dread",
-        "string": "El Horror del Muerto"
-    },
-    {
-        "editor_id": "ccBGSSSE031Interior01",
-        "form_id": "[05000818]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Blackbone Isle Grotto",
-        "string": "Gruta de la isla de Hueso Negro"
-    },
-    {
-        "editor_id": "SolitudeWinkingSkeever",
-        "form_id": "[00016A0E]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "The Winking Skeever",
-        "string": "El skeever travieso"
-    },
-    {
-        "editor_id": "SolitudeJail01",
-        "form_id": "[00056E88]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Castle Dour Dungeon",
-        "string": "Mazmorra del Castillo Severo"
-    },
-    {
-        "editor_id": null,
-        "form_id": "[05000F74]",
-        "index": null,
-        "type": "REFR FULL",
-        "original": "Blackbone Isle",
-        "string": "Isla de Hueso Negro"
-    },
-    {
-        "editor_id": "ccBGSSSE031BlackboneIsle",
-        "form_id": "[05000F6C]",
-        "index": null,
-        "type": "WRLD FULL",
-        "original": "Blackbone Isle",
-        "string": "Isla de Hueso Negro"
-    },
-    {
         "editor_id": "WindhelmWorld",
-        "form_id": "[0001691D]",
+        "form_id": "0001691D|Skyrim.esm",
         "index": null,
         "type": "WRLD FULL",
         "original": "Windhelm",
         "string": "Windhelm"
     },
     {
+        "editor_id": "ccBGSSSE031BlackboneIsle",
+        "form_id": "05000F6C|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Blackbone Isle",
+        "string": "Isla de Hueso Negro"
+    },
+    {
         "editor_id": "Tamriel",
-        "form_id": "[0000003C]",
+        "form_id": "0000003C|Skyrim.esm",
         "index": null,
         "type": "WRLD FULL",
         "original": "Skyrim",
@@ -601,23 +561,31 @@
     },
     {
         "editor_id": "DLC2SolstheimWorld",
-        "form_id": "[04000800]",
+        "form_id": "04000800|Dragonborn.esm",
         "index": null,
         "type": "WRLD FULL",
         "original": "Solstheim",
         "string": "Solstheim"
     },
     {
-        "editor_id": "ccBGSSSE031_MapMarkerREF",
-        "form_id": "[05000F6B]",
+        "editor_id": "ccBGSSSE031_QUEST_PersuadeTopic",
+        "form_id": "05000FCC|ccbgssse031-advcyrus.esm",
         "index": null,
-        "type": "REFR FULL",
-        "original": "Blackbone Isle",
-        "string": "Isla de Hueso Negro"
+        "type": "DIAL FULL",
+        "original": "I need to inspect this cell. Can you open it for me? (Persuade)",
+        "string": "Tengo que examinar esta celda. ¿Me la puedes abrir? (Persuadir)"
+    },
+    {
+        "editor_id": "ccBGS_QUESTIntimidateTopic",
+        "form_id": "05000FD7|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I want something in this cell. Open it, or I cut you open. (Intimidate)",
+        "string": "Quiero algo que hay en esta celda. O la abres, o te rajo. (Intimidar)"
     },
     {
         "editor_id": "ccBGSSSE031_QUEST_IntimidateTopic",
-        "form_id": "[05000FD0]",
+        "form_id": "05000FD0|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "DIAL FULL",
         "original": "I want something in this cell. Open it, or I cut you open. (Intimidate)",
@@ -625,23 +593,15 @@
     },
     {
         "editor_id": "ccBGS_QUESTBribeTopic",
-        "form_id": "[05000FDA]",
+        "form_id": "05000FDA|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "DIAL FULL",
         "original": "I want to poke around this cell. Is this enough to open it? (100 gold)",
         "string": "Quiero echar un vistazo por esta celda. ¿Basta con esto para abrirla? (100 de oro)"
     },
     {
-        "editor_id": "ccBGS_QUESTIntimidateTopic",
-        "form_id": "[05000FD7]",
-        "index": null,
-        "type": "DIAL FULL",
-        "original": "I want something in this cell. Open it, or I cut you open. (Intimidate)",
-        "string": "Quiero algo que hay en esta celda. O la abres, o te rajo. (Intimidar)"
-    },
-    {
         "editor_id": "ccBGS_QUESTPersuade01Topic",
-        "form_id": "[05000FD3]",
+        "form_id": "05000FD3|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "DIAL FULL",
         "original": "I need to inspect this cell. Can you open it for me? (Persuade)",
@@ -649,135 +609,15 @@
     },
     {
         "editor_id": "ccBGSSSE031_QUEST_BribeTopic",
-        "form_id": "[05000FCA]",
+        "form_id": "05000FCA|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "DIAL FULL",
         "original": "I want to poke around this cell. Is this enough to open it? (<BribeCost> gold)",
         "string": "Quiero echar un vistazo por esta celda. ¿Basta con esto para abrirla? (<BribeCost> de oro)"
     },
     {
-        "editor_id": "ccBGSSSE031_QUEST_PersuadeTopic",
-        "form_id": "[05000FCC]",
-        "index": null,
-        "type": "DIAL FULL",
-        "original": "I need to inspect this cell. Can you open it for me? (Persuade)",
-        "string": "Tengo que examinar esta celda. ¿Me la puedes abrir? (Persuadir)"
-    },
-    {
         "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 87,
-        "type": "QUST CNAM",
-        "original": "After finding the map to Blackbone Isle, I traveled to the remote location using a boat at Orphan's Tear. After entering a cave, I found Dead Man's Dread docked inside the grotto.",
-        "string": "Tras encontrar el mapa de la isla de Hueso Negro, he viajado a este lugar apartado en un bote que encontré en Lágrima del Huérfano. Después de entrar en una cueva, encontré el Terror del Muerto atracado en la gruta."
-    },
-    {
-        "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 77,
-        "type": "QUST CNAM",
-        "original": "I've heard stories of lost shipwrecks strewn across the Sea of Ghosts. At the Winking Skeever in Solitude, I found a lead on a ship said to have traveled to Blackbone Isle. Apparently, the last person to visit the island died in Castle Dour Dungeon.",
-        "string": "He oído que hay restos de naufragios esparcidos por todo el mar de los Fantasmas. En El skeever travieso, en Soledad, encontré una pista sobre un barco que supuestamente había viajado hasta la isla de Hueso Negro. Al parecer, el último que visitó la isla murió después en la mazmorra del Castillo Severo."
-    },
-    {
-        "editor_id": "ccBGSSSE031_HomeQuest",
-        "form_id": "[05001624]",
-        "index": 20,
-        "type": "QUST NNAM",
-        "original": "Claim Dead Man's Dread",
-        "string": "Hazte con El Horror del Muerto."
-    },
-    {
-        "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 5,
-        "type": "QUST NNAM",
-        "original": "(Optional) Convince the guard to give you access to the jail cell",
-        "string": "(Opcional) Convence al guardia de que te deje pasar a la celda."
-    },
-    {
-        "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 60,
-        "type": "QUST CNAM",
-        "original": "After finding the map to Blackbone Isle, I traveled to the remote location using a boat at Orphan's Tear.",
-        "string": "Tras encontrar el mapa de la isla de Hueso Negro, he viajado a este lugar apartado en un bote que encontré en Lágrima del Huérfano."
-    },
-    {
-        "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 90,
-        "type": "QUST CNAM",
-        "original": "At the Winking Skeever in Solitude, I found a lead on a ship said to have traveled to Blackbone Isle. Apparently, the last person to visit the island died in Castle Dour Dungeon. I found his corpse which hinted at the location of a hidden map.",
-        "string": "En El skeever travieso, en Soledad, encontré una pista sobre un barco que supuestamente había viajado hasta la isla de Hueso Negro. Al parecer, el último que visitó la isla murió después en la mazmorra del Castillo Severo. Encontré su cadáver, lo que me permitió dar con un mapa escondido."
-    },
-    {
-        "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 97,
-        "type": "QUST CNAM",
-        "original": "After finding the map to Blackbone Isle, I traveled to the remote location using a boat at Orphan's Tear. After entering a cave, I found Dead Man's Dread docked inside the grotto. Inside the ship were two items of note, Cyrus' Sabre and outfit.",
-        "string": "Tras encontrar el mapa de la isla de Hueso Negro, he viajado a este lugar apartado en un bote que encontré en Lágrima del Huérfano. Después de entrar en una cueva, encontré el Terror del Muerto atracado en la gruta. Dentro del navío había dos objetos interesantes, el sable y el atuendo de Cyrus."
-    },
-    {
-        "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 50,
-        "type": "QUST NNAM",
-        "original": "Escape the grotto",
-        "string": "Escapa de la gruta."
-    },
-    {
-        "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 89,
-        "type": "QUST CNAM",
-        "original": "After finding the map to Blackbone Isle, I traveled to the remote location using a boat at Orphan's Tear. After entering a cave, I found Dead Man's Dread docked inside the grotto.",
-        "string": "Tras encontrar el mapa de la isla de Hueso Negro, he viajado a este lugar apartado en un bote que encontré en Lágrima del Huérfano. Después de entrar en una cueva, encontré el Terror del Muerto atracado en la gruta."
-    },
-    {
-        "editor_id": "ccBGSSSE031_Blackwater",
-        "form_id": "[05001465]",
-        "index": 10,
-        "type": "QUST NNAM",
-        "original": "Kill the Blackwater Brigand Boss",
-        "string": "Mata al jefe de los Forajidos de Aguas Negras."
-    },
-    {
-        "editor_id": "ccBGSSSE031_HomeQuest",
-        "form_id": "[05001624]",
-        "index": 10,
-        "type": "QUST NNAM",
-        "original": "Read the pirate's note",
-        "string": "Lee la nota del pirata."
-    },
-    {
-        "editor_id": "ccBGSSSE031_Blackwater",
-        "form_id": "[05001465]",
-        "index": 20,
-        "type": "QUST NNAM",
-        "original": "Retrieve the Blackwater Blade",
-        "string": "Hazte con la Espada de Aguas Negras."
-    },
-    {
-        "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 40,
-        "type": "QUST NNAM",
-        "original": "Investigate Blackbone Isle",
-        "string": "Investiga la isla de Hueso Negro."
-    },
-    {
-        "editor_id": "ccBGSSSE031_HomeQuest",
-        "form_id": "[05001624]",
-        "index": null,
-        "type": "QUST FULL",
-        "original": "Restless Home Quest",
-        "string": "Restless Home Quest"
-    },
-    {
-        "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
+        "form_id": "05000FDC|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "QUST FULL",
         "original": "The Restless",
@@ -785,71 +625,71 @@
     },
     {
         "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 15,
+        "form_id": "05000FDC|ccbgssse031-advcyrus.esm",
+        "index": 25,
         "type": "QUST NNAM",
-        "original": "(Optional) Get arrested and go to jail in Solitude",
-        "string": "(Opcional) Haz que te detengan y te lleven a la cárcel en Soledad."
+        "original": "Examine the loose brick",
+        "string": "Examina el ladrillo suelto."
     },
     {
         "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 81,
-        "type": "QUST CNAM",
-        "original": "After finding the map to Blackbone Isle, I traveled to the remote location using a boat at Orphan's Tear. After entering a cave, I found Dead Man's Dread docked inside the grotto. Inside the ship were two items of note, Cyrus' Sabre and outfit, which were protected by guardians of the ship. I managed to escape the grotto with both items.",
-        "string": "Tras encontrar el mapa de la isla de Hueso Negro, he viajado a este lugar apartado en un bote que encontré en Lágrima del Huérfano. Después de entrar en una cueva, encontré el Terror del Muerto atracado en la gruta. Dentro del navío había dos objetos interesantes, el sable y el atuendo de Cyrus, protegidos por los guardianes del barco. Conseguí huir de la gruta con ambos."
-    },
-    {
-        "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 10,
+        "form_id": "05000FDC|ccbgssse031-advcyrus.esm",
+        "index": 5,
         "type": "QUST NNAM",
-        "original": "Browse books at the Winking Skeever",
-        "string": "Mira libros en El skeever travieso."
+        "original": "(Optional) Convince the guard to give you access to the jail cell",
+        "string": "(Opcional) Convence al guardia de que te deje pasar a la celda."
     },
     {
         "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 80,
+        "form_id": "05000FDC|ccbgssse031-advcyrus.esm",
+        "index": 77,
         "type": "QUST CNAM",
         "original": "After finding the map to Blackbone Isle, I traveled to the remote location using a boat at Orphan's Tear. After entering a cave, I found Dead Man's Dread docked inside the grotto.",
         "string": "Tras encontrar el mapa de la isla de Hueso Negro, he viajado a este lugar apartado en un bote que encontré en Lágrima del Huérfano. Después de entrar en una cueva, encontré el Terror del Muerto atracado en la gruta."
     },
     {
         "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 80,
+        "form_id": "05000FDC|ccbgssse031-advcyrus.esm",
+        "index": 81,
         "type": "QUST CNAM",
-        "original": "I've heard stories of lost shipwrecks strewn across the Sea of Ghosts. If I head to the Winking Skeever in Solitude, I may be able to find more information on there whereabouts.",
-        "string": "He oído que hay restos de naufragios esparcidos por todo el mar de los Fantasmas. En El skeever travieso, en Soledad, quizá pueda encontrar más información sobre su paradero."
+        "original": "After finding the map to Blackbone Isle, I traveled to the remote location using a boat at Orphan's Tear. After entering a cave, I found Dead Man's Dread docked inside the grotto. Inside the ship were two items of note, Cyrus' Sabre and outfit, which were protected by guardians of the ship. I managed to escape the grotto with both items.",
+        "string": "Tras encontrar el mapa de la isla de Hueso Negro, he viajado a este lugar apartado en un bote que encontré en Lágrima del Huérfano. Después de entrar en una cueva, encontré el Terror del Muerto atracado en la gruta. Dentro del navío había dos objetos interesantes, el sable y el atuendo de Cyrus, protegidos por los guardianes del barco. Conseguí huir de la gruta con ambos."
     },
     {
-        "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 30,
+        "editor_id": "ccBGSSSE031_Blackwater",
+        "form_id": "05001465|ccbgssse031-advcyrus.esm",
+        "index": 20,
         "type": "QUST NNAM",
-        "original": "Find a spare boat and travel to Blackbone Isle",
-        "string": "Encuentra un bote libre y viaja a la isla de Hueso Negro."
+        "original": "Retrieve the Blackwater Blade",
+        "string": "Hazte con la Espada de Aguas Negras."
     },
     {
         "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 101,
-        "type": "QUST CNAM",
-        "original": "At the Winking Skeever in Solitude, I found a lead on a ship said to have traveled to Blackbone Isle. Apparently, the last person to visit the island died in Castle Dour Dungeon. I found his corpse and the map he hid under a loose brick. I'll need a boat to travel to the location, perhaps I can find a spare at the wreck near Orphan's Tear.",
-        "string": "He oído que hay restos de naufragios esparcidos por todo el mar de los Fantasmas. En El skeever travieso, en Soledad, encontré una pista sobre un barco que supuestamente había viajado hasta la isla de Hueso Negro. Al parecer, el último que visitó la isla murió después en la mazmorra del Castillo Severo. Encontré su cadáver y el mapa que escondió bajo un ladrillo suelto. Necesitaré un bote para ir hasta allí. Quizá encuentre uno libre entre los restos que hay junto a Lágrima del Huérfano."
+        "form_id": "05000FDC|ccbgssse031-advcyrus.esm",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "Investigate Blackbone Isle",
+        "string": "Investiga la isla de Hueso Negro."
     },
     {
         "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
+        "form_id": "05000FDC|ccbgssse031-advcyrus.esm",
         "index": 20,
         "type": "QUST NNAM",
         "original": "Find the pirate's corpse in Castle Dour Dungeon",
         "string": "Encuentra el cadáver del pirata en la mazmorra del Castillo Severo."
     },
     {
+        "editor_id": "ccBGSSSE031_HomeQuest",
+        "form_id": "05001624|ccbgssse031-advcyrus.esm",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Read the pirate's note",
+        "string": "Lee la nota del pirata."
+    },
+    {
         "editor_id": "ccBGSSSE031_HouseInitQuest",
-        "form_id": "[05001622]",
+        "form_id": "05001622|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "QUST FULL",
         "original": "House Init",
@@ -857,23 +697,103 @@
     },
     {
         "editor_id": "ccBGSSSE031_QUEST",
-        "form_id": "[05000FDC]",
-        "index": 25,
+        "form_id": "05000FDC|ccbgssse031-advcyrus.esm",
+        "index": 50,
         "type": "QUST NNAM",
-        "original": "Examine the loose brick",
-        "string": "Examina el ladrillo suelto."
+        "original": "Escape the grotto",
+        "string": "Escapa de la gruta."
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "05000FDC|ccbgssse031-advcyrus.esm",
+        "index": 15,
+        "type": "QUST NNAM",
+        "original": "(Optional) Get arrested and go to jail in Solitude",
+        "string": "(Opcional) Haz que te detengan y te lleven a la cárcel en Soledad."
+    },
+    {
+        "editor_id": "ccBGSSSE031_HomeQuest",
+        "form_id": "05001624|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Restless Home Quest",
+        "string": "Restless Home Quest"
+    },
+    {
+        "editor_id": "ccBGSSSE031_HomeQuest",
+        "form_id": "05001624|ccbgssse031-advcyrus.esm",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Claim Dead Man's Dread",
+        "string": "Hazte con El Horror del Muerto."
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "05000FDC|ccbgssse031-advcyrus.esm",
+        "index": 89,
+        "type": "QUST CNAM",
+        "original": "At the Winking Skeever in Solitude, I found a lead on a ship said to have traveled to Blackbone Isle. Apparently, the last person to visit the island died in Castle Dour Dungeon. I found his corpse which hinted at the location of a hidden map.",
+        "string": "En El skeever travieso, en Soledad, encontré una pista sobre un barco que supuestamente había viajado hasta la isla de Hueso Negro. Al parecer, el último que visitó la isla murió después en la mazmorra del Castillo Severo. Encontré su cadáver, lo que me permitió dar con un mapa escondido."
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "05000FDC|ccbgssse031-advcyrus.esm",
+        "index": 80,
+        "type": "QUST CNAM",
+        "original": "I've heard stories of lost shipwrecks strewn across the Sea of Ghosts. At the Winking Skeever in Solitude, I found a lead on a ship said to have traveled to Blackbone Isle. Apparently, the last person to visit the island died in Castle Dour Dungeon.",
+        "string": "He oído que hay restos de naufragios esparcidos por todo el mar de los Fantasmas. En El skeever travieso, en Soledad, encontré una pista sobre un barco que supuestamente había viajado hasta la isla de Hueso Negro. Al parecer, el último que visitó la isla murió después en la mazmorra del Castillo Severo."
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "05000FDC|ccbgssse031-advcyrus.esm",
+        "index": 102,
+        "type": "QUST CNAM",
+        "original": "After finding the map to Blackbone Isle, I traveled to the remote location using a boat at Orphan's Tear. After entering a cave, I found Dead Man's Dread docked inside the grotto.",
+        "string": "Tras encontrar el mapa de la isla de Hueso Negro, he viajado a este lugar apartado en un bote que encontré en Lágrima del Huérfano. Después de entrar en una cueva, encontré el Terror del Muerto atracado en la gruta."
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "05000FDC|ccbgssse031-advcyrus.esm",
+        "index": 60,
+        "type": "QUST CNAM",
+        "original": "I've heard stories of lost shipwrecks strewn across the Sea of Ghosts. If I head to the Winking Skeever in Solitude, I may be able to find more information on there whereabouts.",
+        "string": "He oído que hay restos de naufragios esparcidos por todo el mar de los Fantasmas. En El skeever travieso, en Soledad, quizá pueda encontrar más información sobre su paradero."
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "05000FDC|ccbgssse031-advcyrus.esm",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Find a spare boat and travel to Blackbone Isle",
+        "string": "Encuentra un bote libre y viaja a la isla de Hueso Negro."
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "05000FDC|ccbgssse031-advcyrus.esm",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Browse books at the Winking Skeever",
+        "string": "Mira libros en El skeever travieso."
+    },
+    {
+        "editor_id": "ccBGSSSE031_Blackwater",
+        "form_id": "05001465|ccbgssse031-advcyrus.esm",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Kill the Blackwater Brigand Boss",
+        "string": "Mata al jefe de los Forajidos de Aguas Negras."
+    },
+    {
+        "editor_id": "ccBGSSSE031_QUEST",
+        "form_id": "05000FDC|ccbgssse031-advcyrus.esm",
+        "index": 88,
+        "type": "QUST CNAM",
+        "original": "At the Winking Skeever in Solitude, I found a lead on a ship said to have traveled to Blackbone Isle. Apparently, the last person to visit the island died in Castle Dour Dungeon. I found his corpse and the map he hid under a loose brick. I'll need a boat to travel to the location, perhaps I can find a spare at the wreck near Orphan's Tear.",
+        "string": "He oído que hay restos de naufragios esparcidos por todo el mar de los Fantasmas. En El skeever travieso, en Soledad, encontré una pista sobre un barco que supuestamente había viajado hasta la isla de Hueso Negro. Al parecer, el último que visitó la isla murió después en la mazmorra del Castillo Severo. Encontré su cadáver y el mapa que escondió bajo un ladrillo suelto. Necesitaré un bote para ir hasta allí. Quizá encuentre uno libre entre los restos que hay junto a Lágrima del Huérfano."
     },
     {
         "editor_id": "ccBGSSSE031_WorldLocation",
-        "form_id": "[05001757]",
-        "index": null,
-        "type": "LCTN FULL",
-        "original": "Blackbone Isle",
-        "string": "Isla de Hueso Negro"
-    },
-    {
-        "editor_id": "ccBGSSSE031_ExtLocation",
-        "form_id": "[05001621]",
+        "form_id": "05001757|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "LCTN FULL",
         "original": "Blackbone Isle",
@@ -881,23 +801,39 @@
     },
     {
         "editor_id": "ccBGSSSE031_Location",
-        "form_id": "[05000FE1]",
+        "form_id": "05000FE1|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "LCTN FULL",
         "original": "Dead Man's Dread",
         "string": "El Horror del Muerto"
     },
     {
-        "editor_id": "ccBGSSSE031_BlackwaterBrigandChief",
-        "form_id": "[05001467]",
+        "editor_id": "ccBGSSSE031_ExtLocation",
+        "form_id": "05001621|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "LCTN FULL",
+        "original": "Blackbone Isle",
+        "string": "Isla de Hueso Negro"
+    },
+    {
+        "editor_id": "ccBGSSSE031_BoatName02",
+        "form_id": "05001421|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "MESG DESC",
-        "original": "Celeste",
-        "string": "Celeste"
+        "original": "Orphan's Tear",
+        "string": "Lágrima del Huérfano"
+    },
+    {
+        "editor_id": "ccBGSSSE031_BoatName02",
+        "form_id": "05001421|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Orphan's Tear",
+        "string": "Lágrima del Huérfano"
     },
     {
         "editor_id": "ccBGSSSE031_BlackwaterBrigandChief",
-        "form_id": "[05001467]",
+        "form_id": "05001467|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "MESG FULL",
         "original": "Celeste",
@@ -905,50 +841,42 @@
     },
     {
         "editor_id": "ccBGSSSE031_BlackwaterBrigand",
-        "form_id": "[05001464]",
-        "index": null,
-        "type": "MESG FULL",
-        "original": "Blackwater Brigand",
-        "string": "Forajido de Aguas Negras"
-    },
-    {
-        "editor_id": "ccBGSSSE031_BoatName01",
-        "form_id": "[050013CB]",
-        "index": null,
-        "type": "MESG FULL",
-        "original": "Blackbone Isle",
-        "string": "Isla de Hueso Negro"
-    },
-    {
-        "editor_id": "ccBGSSSE031_BoatName01",
-        "form_id": "[050013CB]",
+        "form_id": "05001464|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "MESG DESC",
-        "original": "Blackbone Isle",
-        "string": "Isla de Hueso Negro"
+        "original": "Blackwater Brigand",
+        "string": "Forajido de Aguas Negras"
     },
     {
         "editor_id": "ccBGSSSE031_BlackwaterBrigand",
-        "form_id": "[05001464]",
+        "form_id": "05001464|ccbgssse031-advcyrus.esm",
         "index": null,
-        "type": "MESG DESC",
+        "type": "MESG FULL",
         "original": "Blackwater Brigand",
         "string": "Forajido de Aguas Negras"
     },
     {
-        "editor_id": "ccBGSSSE031_BoatName02",
-        "form_id": "[05001421]",
-        "index": null,
-        "type": "MESG FULL",
-        "original": "Orphan's Tear",
-        "string": "Lágrima del Huérfano"
-    },
-    {
-        "editor_id": "ccBGSSSE031_BoatName02",
-        "form_id": "[05001421]",
+        "editor_id": "ccBGSSSE031_BoatName01",
+        "form_id": "050013CB|ccbgssse031-advcyrus.esm",
         "index": null,
         "type": "MESG DESC",
-        "original": "Orphan's Tear",
-        "string": "Lágrima del Huérfano"
+        "original": "Blackbone Isle",
+        "string": "Isla de Hueso Negro"
+    },
+    {
+        "editor_id": "ccBGSSSE031_BoatName01",
+        "form_id": "050013CB|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Blackbone Isle",
+        "string": "Isla de Hueso Negro"
+    },
+    {
+        "editor_id": "ccBGSSSE031_BlackwaterBrigandChief",
+        "form_id": "05001467|ccbgssse031-advcyrus.esm",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Celeste",
+        "string": "Celeste"
     }
 ]

@@ -1,7 +1,7 @@
 [
     {
         "editor_id": "ccVSVSSE001_ReindeerRace",
-        "form_id": "[02000D61]",
+        "form_id": "02000D61|ccvsvsse001-winter.esl",
         "index": null,
         "type": "RACE FULL",
         "original": "Horse",
@@ -9,23 +9,15 @@
     },
     {
         "editor_id": "ccVSVSSE001_hat",
-        "form_id": "[02000806]",
+        "form_id": "02000806|ccvsvsse001-winter.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Saturalia Hat",
         "string": "Chapeau de Saturalia"
     },
     {
-        "editor_id": "ccVSVSSE001_gloves",
-        "form_id": "[02000805]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Saturalia Gloves",
-        "string": "Gants de Saturalia"
-    },
-    {
         "editor_id": "ccVSVSSE001_coat",
-        "form_id": "[02000807]",
+        "form_id": "02000807|ccvsvsse001-winter.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Saturalia Clothes",
@@ -33,15 +25,23 @@
     },
     {
         "editor_id": "ccVSVSSE001_boots",
-        "form_id": "[02000803]",
+        "form_id": "02000803|ccvsvsse001-winter.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Saturalia Boots",
         "string": "Bottes de Saturalia"
     },
     {
+        "editor_id": "ccVSVSSE001_gloves",
+        "form_id": "02000805|ccvsvsse001-winter.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Saturalia Gloves",
+        "string": "Gants de Saturalia"
+    },
+    {
         "editor_id": "ccVSVSSE001_ReindeerDeed",
-        "form_id": "[02000808]",
+        "form_id": "02000808|ccvsvsse001-winter.esl",
         "index": null,
         "type": "BOOK DESC",
         "original": "<font face=\"$HandwrittenFont\">This deed signifies ownership of a trained reindeer. Ownership may only be transferred with an accompanying Bill of Sale.\r\n\r\n",
@@ -49,47 +49,47 @@
     },
     {
         "editor_id": "ccVSVSSE001_ReindeerDeed",
-        "form_id": "[02000808]",
+        "form_id": "02000808|ccvsvsse001-winter.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "Reindeer Bill of Sale",
         "string": "Acte de vente de renne"
     },
     {
-        "editor_id": "ccVSVSSE001_MerchantChest",
-        "form_id": "[0200080A]",
-        "index": null,
-        "type": "CONT FULL",
-        "original": "Chest",
-        "string": "Coffre"
-    },
-    {
         "editor_id": "ccVSVSSE001_MerchantPack",
-        "form_id": "[02000809]",
+        "form_id": "02000809|ccvsvsse001-winter.esl",
         "index": null,
         "type": "CONT FULL",
         "original": "Knapsack",
         "string": "Havresac"
     },
     {
-        "editor_id": "ccVSVSSE001_Reindeer",
-        "form_id": "[02000D65]",
+        "editor_id": "ccVSVSSE001_MerchantChest",
+        "form_id": "0200080A|ccvsvsse001-winter.esl",
         "index": null,
-        "type": "NPC_ FULL",
-        "original": "Reindeer",
-        "string": "Renne"
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Coffre"
     },
     {
         "editor_id": "ccVSVSSE001_Merchant",
-        "form_id": "[0200080B]",
+        "form_id": "0200080B|ccvsvsse001-winter.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Agrane Peryval",
         "string": "Agrane Peryval"
     },
     {
+        "editor_id": "ccVSVSSE001_Reindeer",
+        "form_id": "02000D65|ccvsvsse001-winter.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Reindeer",
+        "string": "Renne"
+    },
+    {
         "editor_id": "Tamriel",
-        "form_id": "[0000003C]",
+        "form_id": "0000003C|Skyrim.esm",
         "index": null,
         "type": "WRLD FULL",
         "original": "Skyrim",
@@ -97,39 +97,39 @@
     },
     {
         "editor_id": "ccVSVSSE001_MainQuest",
-        "form_id": "[0200082B]",
-        "index": 80,
-        "type": "QUST CNAM",
-        "original": "Saturalia is coming soon, and there are rumors of a new merchant up near Dawnstar who sells very rare and unique wares just for the holiday. I should go look for him.",
-        "string": "Saturalia arrive bientôt, et la rumeur veut qu'un nouveau marchant près d'Aubétoile vende des objets rares et uniques spécialement pour cette fête. Je devrais aller le chercher."
-    },
-    {
-        "editor_id": "ccVSVSSE001_MainQuest",
-        "form_id": "[0200082B]",
-        "index": null,
-        "type": "QUST FULL",
-        "original": "Saturalia Preparation",
-        "string": "Préparation de Saturalia"
-    },
-    {
-        "editor_id": "ccVSVSSE001_MainQuest",
-        "form_id": "[0200082B]",
-        "index": 99,
-        "type": "QUST CNAM",
-        "original": "startup",
-        "string": "démarrage"
-    },
-    {
-        "editor_id": "ccVSVSSE001_MainQuest",
-        "form_id": "[0200082B]",
+        "form_id": "0200082B|ccvsvsse001-winter.esl",
         "index": 0,
         "type": "QUST NNAM",
         "original": "Find the Saturalia merchant",
         "string": "Trouvez le marchant de Saturalia"
     },
     {
+        "editor_id": "ccVSVSSE001_MainQuest",
+        "form_id": "0200082B|ccvsvsse001-winter.esl",
+        "index": 80,
+        "type": "QUST CNAM",
+        "original": "startup",
+        "string": "démarrage"
+    },
+    {
+        "editor_id": "ccVSVSSE001_MainQuest",
+        "form_id": "0200082B|ccvsvsse001-winter.esl",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "Saturalia is coming soon, and there are rumors of a new merchant up near Dawnstar who sells very rare and unique wares just for the holiday. I should go look for him.",
+        "string": "Saturalia arrive bientôt, et la rumeur veut qu'un nouveau marchant près d'Aubétoile vende des objets rares et uniques spécialement pour cette fête. Je devrais aller le chercher."
+    },
+    {
+        "editor_id": "ccVSVSSE001_MainQuest",
+        "form_id": "0200082B|ccvsvsse001-winter.esl",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Saturalia Preparation",
+        "string": "Préparation de Saturalia"
+    },
+    {
         "editor_id": "ccVSVSSE001_msg_PlayersReindeer",
-        "form_id": "[02000837]",
+        "form_id": "02000837|ccvsvsse001-winter.esl",
         "index": null,
         "type": "MESG FULL",
         "original": "<Alias=Player>'s Reindeer",

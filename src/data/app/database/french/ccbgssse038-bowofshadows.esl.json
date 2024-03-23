@@ -1,31 +1,7 @@
 [
     {
-        "editor_id": "ccBGSSSE038_FortifySpeed",
-        "form_id": "[05000801]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Fast",
-        "string": "Rapide"
-    },
-    {
-        "editor_id": "ccBGSSSE038_FortifySpeed",
-        "form_id": "[05000801]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Speed increased by <20>%. Casts invisibility while weapon is drawn. Activating an object or attacking will break the spell.",
-        "string": "Votre vitesse a augmenté de <20> %. Active un sort d'invisibilité lorsque l'arme est dégainée. Si vous activez un objet ou si vous attaquez, vous réapparaissez."
-    },
-    {
-        "editor_id": "ccBGSSSE038_InvisibillityFFSelf",
-        "form_id": "[0500080C]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Invisibility",
-        "string": "Invisibilité"
-    },
-    {
         "editor_id": "ccBGSSSE038_MagicEffectInvis",
-        "form_id": "[05000800]",
+        "form_id": "05000800|ccbgssse038-bowofshadows.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Bow of Shadows Magic Effect",
@@ -33,7 +9,31 @@
     },
     {
         "editor_id": "ccBGSSSE038_InvisibilityPermanent",
-        "form_id": "[05000802]",
+        "form_id": "05000802|ccbgssse038-bowofshadows.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Invisibility",
+        "string": "Invisibilité"
+    },
+    {
+        "editor_id": "ccBGSSSE038_FortifySpeed",
+        "form_id": "05000801|ccbgssse038-bowofshadows.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Speed increased by <20>%. Casts invisibility while weapon is drawn. Activating an object or attacking will break the spell.",
+        "string": "Votre vitesse a augmenté de <20> %. Active un sort d'invisibilité lorsque l'arme est dégainée. Si vous activez un objet ou si vous attaquez, vous réapparaissez."
+    },
+    {
+        "editor_id": "ccBGSSSE038_FortifySpeed",
+        "form_id": "05000801|ccbgssse038-bowofshadows.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fast",
+        "string": "Rapide"
+    },
+    {
+        "editor_id": "ccBGSSSE038_InvisibillityFFSelf",
+        "form_id": "0500080C|ccbgssse038-bowofshadows.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Invisibility",
@@ -41,23 +41,23 @@
     },
     {
         "editor_id": "ccBGSSSE038_EnchWeaponBowOfShadows",
-        "form_id": "[05000803]",
+        "form_id": "05000803|ccbgssse038-bowofshadows.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Bow of Shadows",
         "string": "Arc des ombres"
     },
     {
-        "editor_id": "ccBGSSSE038_PerkAbQuickShot",
-        "form_id": "[0500080D]",
+        "editor_id": "ccBGSSSE038_InvisibilitySPELL",
+        "form_id": "05000805|ccbgssse038-bowofshadows.esl",
         "index": null,
         "type": "SPEL FULL",
-        "original": "QuickShot",
-        "string": "Archer mobile"
+        "original": "Invisibility",
+        "string": "Invisibilité"
     },
     {
         "editor_id": "ccBGSSSE038_abInvis",
-        "form_id": "[0500080B]",
+        "form_id": "0500080B|ccbgssse038-bowofshadows.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Bow of Shadows Invisibility",
@@ -65,47 +65,103 @@
     },
     {
         "editor_id": "ccBGSSSE038_InvisibilityNPC",
-        "form_id": "[05000804]",
+        "form_id": "05000804|ccbgssse038-bowofshadows.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Bow of Shadows Invisibility",
         "string": "Invisibilité de l'arc des ombres"
     },
     {
-        "editor_id": "ccBGSSSE038_InvisibilitySPELL",
-        "form_id": "[05000805]",
+        "editor_id": "ccBGSSSE038_PerkAbQuickShot",
+        "form_id": "0500080D|ccbgssse038-bowofshadows.esl",
         "index": null,
         "type": "SPEL FULL",
-        "original": "Invisibility",
-        "string": "Invisibilité"
+        "original": "QuickShot",
+        "string": "Archer mobile"
     },
     {
         "editor_id": "ccBGSSSE038_BusinessLedger",
-        "form_id": "[05000815]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Business Ledger Copy",
-        "string": "Copie du livre de comptes"
-    },
-    {
-        "editor_id": "ccBGSSSE038_BusinessLedger",
-        "form_id": "[05000815]",
+        "form_id": "05000815|ccbgssse038-bowofshadows.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Take",
         "string": "Prendre"
     },
     {
-        "editor_id": "ccBGSSSE038_LedgerBook",
-        "form_id": "[05000817]",
+        "editor_id": "ccBGSSSE038_BusinessLedger",
+        "form_id": "05000815|ccbgssse038-bowofshadows.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Business Ledger Copy",
+        "string": "Copie du livre de comptes"
+    },
+    {
+        "editor_id": "ccBGSSSE038_SkeeverNote",
+        "form_id": "0500081D|ccbgssse038-bowofshadows.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Skeever Trouble",
+        "string": "Un problème de ragnards"
+    },
+    {
+        "editor_id": "ccBGSSSE038_StableBoyNote",
+        "form_id": "05000824|ccbgssse038-bowofshadows.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Stable Hand's Note",
+        "string": "Note du garçon d'écurie"
+    },
+    {
+        "editor_id": "ccBGSSSE038_StewardNote",
+        "form_id": "05000814|ccbgssse038-bowofshadows.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Steward's Note",
+        "string": "Note de l'intendant"
+    },
+    {
+        "editor_id": "ccBGSSSE038_SkeeverNote",
+        "form_id": "0500081D|ccbgssse038-bowofshadows.esl",
         "index": null,
         "type": "BOOK DESC",
-        "original": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nWeekly Business Ledger\r\n\r\n\r\nfor \r\nArcadia's Cauldron\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]<p align=\"left\">\r\n\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/S_letter.png'>undas\r\n\r\nCommander Caius\r\nStamina Potion\r\n61 gold\r\n\r\nLydia\r\nPotion of Strength\r\n137 gold\r\n\r\nAela the Huntress\r\nPotion of True Shot\r\n96 gold\r\n[pagebreak]\r\n\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/M_letter.png'>orndas\r\n\r\nDanica Pure-Spring\r\nPotion of Extreme Healing\r\n123 gold\r\n\r\nNord Warrior\r\nPotion of Cure Disease\r\n240 gold\r\n\r\nImperial Mage\r\nPotion of Magicka\r\n292 gold\r\n[pagebreak]\r\n\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/T_letter.png'>irdas\r\n\r\nHrongar\r\nPotion of Enhanced Stamina\r\n341 gold\r\n\r\nPriest of Arkay\r\nVirulent Poison\r\n174 gold\r\n[pagebreak]\r\n\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/M_letter.png'>iddas\r\n\r\nWarmaiden's\r\nBlacksmith's Potion\r\n204 gold\r\n\r\nBreton Ranger\r\nPotion of Resist Cold\r\n292 gold\r\n\r\nFarengar\r\nEnchanter's Potion\r\n164 gold\r\n[pagebreak]\r\n\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/T_letter.png'>urdas\r\n\r\nBelethor's General Goods\r\nPotion of Haggling\r\n140 gold\r\n\r\nNord Warrior\r\nPotion of Healing\r\n109 gold\r\n[pagebreak]\r\n\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/F_letter.png'>redas\r\n\r\nNord Stable Boy\r\nMalign Lingering Poison\r\n55 gold\r\n[pagebreak]\r\n\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/L_letter.png'>oredas\r\n\r\nUthgerd the Unbroken\r\nPotion of Minor Stamina\r\n61 gold\r\n\r\nAvulstein Gray-Mane\r\nPotion of the Knight\r\n123 gold</p>",
-        "string": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nLivre de comptes hebdomadaire\r\n\r\n\r\npour \r\nLe Chaudron d'Arcadia\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]<p align=\"left\">\r\n\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/S_letter.png'>undas\r\n\r\nCommandant Caius\r\nPotion de vigueur\r\n61 pièces d'or\r\n\r\nLydia\r\nPotion de force\r\n137 pièces d'or\r\n\r\nAela la Chasseuse\r\nPotion de visée\r\n96 pièces d'or\r\n[pagebreak]\r\n\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/M_letter.png'>orndas\r\n\r\nDanica Pure-Source\r\nPotion de soin intense\r\n123 pièces d'or\r\n\r\nGuerrier nordique\r\nPotion médicinale\r\n240 pièces d'or\r\n\r\nMarchand impérial\r\nPotion de vol à la tire\r\n292 pièces d'or\r\n[pagebreak]\r\n\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/T_letter.png'>irdas\r\n\r\nHrongar\r\nPotion de vigueur améliorée\r\n341 pièces d'or\r\n\r\nPrêtre d'Arkay\r\nPoison virulent\r\n174 pièces d'or\r\n[pagebreak]\r\n\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/M_letter.png'>iddas\r\n\r\nLa Guerrière\r\nPotion du forgeron\r\n204 pièces d'or\r\n\r\nRôdeur bréton\r\nPotion de résistance à la glace\r\n292 pièces d'or\r\n\r\nFarengar\r\nPotion de l'enchanteur\r\n164 pièces d'or\r\n[pagebreak]\r\n\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/T_letter.png'>urdas\r\n\r\nÉpicerie Belethor\r\nPotion de négociation\r\n140 pièces d'or\r\n\r\nGuerrier nordique\r\nPotion de soin\r\n109 pièces d'or\r\n[pagebreak]\r\n\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/F_letter.png'>redas\r\n\r\nGarçon d'écurie nordique\r\nTerrible poison persistant\r\n55 pièces d'or\r\n[pagebreak]\r\n\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/L_letter.png'>oredas\r\n\r\nUthgerd l'Inflexible\r\nPotion de vigueur légère\r\n61 pièces d'or\r\n\r\nAvulstein Grisetoison\r\nPotion du chevalier\r\n123 pièces d'or</p>"
+        "original": "<font face='$HandwrittenFont'>  \r\nSince no one else seems to be doing anything about it, I've taken steps to rid ourselves of this skeever problem. Please do not eat this cheese as it is laced with a dangerous poison. \r\n\r\nI repeat, this cheese is for skeevers only. If you feel the need to take a bite, I implore you to look in the mirror first and confirm that you are a skeever. If so, then you may eat to your heart's content. \r\n\r\nIf you are not a skeever, then you can better serve Arkay by staying alive.",
+        "string": "<font face='$HandwrittenFont'>  \r\nPuisque personne d'autre ne semble vouloir agir, j'ai décidé de prendre en main notre problème de ragnards. Merci de ne pas manger ce fromage car il est recouvert d'un dangereux poison. \r\n\r\nJe répète, ce fromage est réservé aux ragnards. Si vous ressentez le besoin d'en grignoter un morceau, je vous implore de vous regarder d'abord dans un miroir pour vous assurer que vous êtes bien un ragnard. Si c'est le cas, je vous en prie, mangez ce fromage comme bon vous semble. \r\n\r\nSi vous n'êtes pas un ragnard, alors vous ferez un meilleur travail au service d'Arkay en restant en vie."
+    },
+    {
+        "editor_id": "ccBGSSSE038_StableBoyNote",
+        "form_id": "05000824|ccbgssse038-bowofshadows.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"17\">\r\nThe Dark Elf was smart to choose me. Scars aside, I can pass as a stable boy easily enough. I'll tell the shopkeep I got bucked by a wild one and landed face first into the briars. I'm smart like that.\r\n\r\nThe other bandits always poke fun at my face, saying I look like a newborn babe, but it comes in handy for jobs like this. After seeing how well the Dark Elf pays, the entire gang will be looking for a razor pretty soon.\r\n\r\nSpeaking of which, I'm supposed to meet my mysterious benefactor back at the stables, and not at the Silent Moons Camp. Not sure why, but he says if I'm followed, it's best I stay in character until I'm well clear of the city gates.\r\n\r\nWell, I hope he doesn't sneak up on me while I wait. I nearly soiled myself the last time. But smart guy that I am, I bought this tome to help me find him. Thing is, I opened it up and can't for the life of me figure out how it works. Only a matter of time though for a guy like me.</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"17\">\r\nC'était malin de la part de l'Elfe noir de me choisir. À part les cicatrices, je peux facilement passer pour un garçon d'écurie. Je dirai au marchand qu'un étalon fougueux m'a envoyé valdinguer dans un buisson de ronces. Ouais, je suis futé.\r\n\r\nLes autres bandits se sont toujours moqués de mon visage, affirmant que j'avais la tronche d'un nouveau-né, mais c'est bien utile pour des boulots comme celui-ci. Et quand ils sauront combien l'Elfe noir m'a payé, ils se précipiteront tous sur le premier rasoir venu.\r\n\r\nEn parlant de ça, je suis censé rencontrer mon mystérieux bienfaiteur derrière les écuries, et non pas au camp de la Lune silencieuse. Je ne sais pas trop pourquoi, mais il affirme que si on me suit, il vaut mieux que je reste dans mon personnage jusqu'à ce que je sois loin des portes de la ville.\r\n\r\nEn tout cas, j'espère qu'il n'arrivera pas trop discrètement cette fois-ci. J'ai failli me pisser dessus la dernière fois. Mais vu que je suis malin, j'ai apporté ce grimoire pour m'aider à le trouver. Le truc, c'est que je l'ai ouvert mais pas moyen de comprendre comment ça fonctionne. Bah, je suis pas bête. C'est qu'une question de temps avant que je trouve comme faire.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE038_StewardNote",
+        "form_id": "05000814|ccbgssse038-bowofshadows.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\r\n\r\n<Alias=Player>, \r\n\r\nI apologize for the secrecy, but I'd rather not speak about this in front of the Jarl, in the event the information I received isn't credible. He has enough on his plate as it is.\r\n\r\nYou see, earlier last week I received a tip from an unnamed source, regarding a potential assassination plot on the Jarl. \r\n\r\nNow, while we take all threats seriously, it's difficult to know just how credible this source is. And with everything that's happened as of late, I don't have time to investigate this myself. \r\n\r\nThat's why I'd like you to head to Arcadia's Cauldron and check their ledger for any suspicious purchases - in particular, poisons. I've asked Arcadia to leave you a copy on her counter. Look it over, find out who purchased bottles over the last few days, and confirm their reasons are legitimate. In the meantime I'll have our cooks check every piece of food, bottle of mead, and leftover bread crumb just to be sure nothing is tainted. \r\n\r\nIf your investigation turns up nothing, then I'll know the information I received is false, and the Jarl is safe for the time being. If not, I hope someone of your reputation can take care of the situation swiftly.",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\r\n\r\n<Alias=Player>, \r\n\r\nJe m'excuse pour ces précautions, mais je préfère ne pas parler de tout ceci devant le Jarl, au cas où les informations en ma possession seraient fausses. Il a déjà suffisamment de problèmes comme ça.\r\n\r\nVoyez-vous, la semaine dernière j'ai reçu un tuyau de la part d'une source anonyme concernant une potentielle tentative d'assassinat du Jarl. \r\n\r\nMême si nous prenons toutes les menaces au sérieux, il est parfois difficile de vérifier la crédibilité d'une source. Et avec tout ce qui arrive ces derniers temps, je n'ai pas le temps d'enquêter moi-même. \r\n\r\nC'est pourquoi je voudrais que vous vous rendiez au Chaudron d'Arcadia et vérifiiez si leur livre de comptes fait mention d'achats suspects, en particulier des poisons. J'ai demandé à Arcadia de vous laisser une copie sur son comptoir. Jetez-y un oeil, trouvez les personnes ayant acheté des bouteilles de poison ces derniers jours et confirmez que leurs raisons sont légitimes. Pendant ce temps, je vais demander à nos cuisiniers de vérifier tous nos aliments et bouteilles d'hydromel, jusqu'à la moindre miette de pain, afin de s'assurer que rien n'a été empoisonné. \r\n\r\nSi votre enquête ne donne rien, alors je saurai que mes informations étaient fausses et que le Jarl ne craint rien pour l'instant. Dans le cas contraire, j'espère qu'une personne de votre réputation pourra se charger rapidement de la situation."
     },
     {
         "editor_id": "ccBGSSSE038_AssassinJournal",
-        "form_id": "[05000825]",
+        "form_id": "05000825|ccbgssse038-bowofshadows.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Assassin's Journal",
+        "string": "Journal de l'assassin"
+    },
+    {
+        "editor_id": "ccBGSSSE038_LedgerBook",
+        "form_id": "05000817|ccbgssse038-bowofshadows.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Business Ledger Copy",
+        "string": "Copie du livre de comptes"
+    },
+    {
+        "editor_id": "ccBGSSSE038_AssassinJournal",
+        "form_id": "05000825|ccbgssse038-bowofshadows.esl",
         "index": null,
         "type": "BOOK DESC",
         "original": "<font face='$HandwrittenFont'>\r\nThe bow has long been a player in the game. It's toppled many a piece, from Jarls to kings. It does so without sight or sound, save for a rattling crown on a blood-stained floor. \r\n\r\nAnd yet, it's been far too long since it's had a chance to tilt the board. Raerlas Ghile failed to topple a piece. Dram took the flesh, but not the soul, and the game went on without incident. \r\n\r\nNow the pieces sit idly by, refusing to move in their comfort. Even now, as I take aim at this target, I hear their indolent yawns through the draw of my bowstring.\r\n\r\nYet the board cannot remain level forever. With the bow in my hand, it will tilt once more.\r\n\r\nHowever, the timing must be right. The toppling of a piece rings hollow in a thunderstorm.\r\n\r\nI must wait for a quiet moment, one that's intimate, when the Jarl is not engaged in talks of war and dragons. If the battle for Skyrim comes to Whiterun, I will be forced to redraw. \r\n\r\nBut there will come a time when he sits idly by in his grand hall, unbothered by the world. \r\n\r\nIn that moment, when the Jarl has a chance to finally breathe, I will sneak my way to the upper floors and make sure that breath is his last. And when I take my leave cloaked in her shadow, all anyone will hear is a rattle.</font>",
@@ -113,87 +169,31 @@
     },
     {
         "editor_id": "ccBGSSSE038_LedgerBook",
-        "form_id": "[05000817]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Business Ledger Copy",
-        "string": "Copie du livre de comptes"
-    },
-    {
-        "editor_id": "ccBGSSSE038_SkeeverNote",
-        "form_id": "[0500081D]",
+        "form_id": "05000817|ccbgssse038-bowofshadows.esl",
         "index": null,
         "type": "BOOK DESC",
-        "original": "<font face='$HandwrittenFont'>  \r\nSince no one else seems to be doing anything about it, I've taken steps to rid ourselves of this skeever problem. Please do not eat this cheese as it is laced with a dangerous poison. \r\n\r\nI repeat, this cheese is for skeevers only. If you feel the need to take a bite, I implore you to look in the mirror first and confirm that you are a skeever. If so, then you may eat to your heart's content. \r\n\r\nIf you are not a skeever, then you can better serve Arkay by staying alive.",
-        "string": "<font face='$HandwrittenFont'>  \r\nPuisque personne d'autre ne semble vouloir agir, j'ai décidé de prendre en main notre problème de ragnards. Merci de ne pas manger ce fromage car il est recouvert d'un dangereux poison. \r\n\r\nJe répète, ce fromage est réservé aux ragnards. Si vous ressentez le besoin d'en grignoter un morceau, je vous implore de vous regarder d'abord dans un miroir pour vous assurer que vous êtes bien un ragnard. Si c'est le cas, je vous en prie, mangez ce fromage comme bon vous semble. \r\n\r\nSi vous n'êtes pas un ragnard, alors vous ferez un meilleur travail au service d'Arkay en restant en vie."
-    },
-    {
-        "editor_id": "ccBGSSSE038_AssassinJournal",
-        "form_id": "[05000825]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Assassin's Journal",
-        "string": "Journal de l'assassin"
-    },
-    {
-        "editor_id": "ccBGSSSE038_StableBoyNote",
-        "form_id": "[05000824]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Stable Hand's Note",
-        "string": "Note du garçon d'écurie"
-    },
-    {
-        "editor_id": "ccBGSSSE038_SkeeverNote",
-        "form_id": "[0500081D]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Skeever Trouble",
-        "string": "Un problème de ragnards"
-    },
-    {
-        "editor_id": "ccBGSSSE038_StewardNote",
-        "form_id": "[05000814]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Steward's Note",
-        "string": "Note de l'intendant"
-    },
-    {
-        "editor_id": "ccBGSSSE038_StewardNote",
-        "form_id": "[05000814]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\r\n\r\n<Alias=Player>, \r\n\r\nI apologize for the secrecy, but I'd rather not speak about this in front of the Jarl, in the event the information I received isn't credible. He has enough on his plate as it is.\r\n\r\nYou see, earlier last week I received a tip from an unnamed source, regarding a potential assassination plot on the Jarl. \r\n\r\nNow, while we take all threats seriously, it's difficult to know just how credible this source is. And with everything that's happened as of late, I don't have time to investigate this myself. \r\n\r\nThat's why I'd like you to head to Arcadia's Cauldron and check their ledger for any suspicious purchases - in particular, poisons. I've asked Arcadia to leave you a copy on her counter. Look it over, find out who purchased bottles over the last few days, and confirm their reasons are legitimate. In the meantime I'll have our cooks check every piece of food, bottle of mead, and leftover bread crumb just to be sure nothing is tainted. \r\n\r\nIf your investigation turns up nothing, then I'll know the information I received is false, and the Jarl is safe for the time being. If not, I hope someone of your reputation can take care of the situation swiftly.",
-        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\r\n\r\n<Alias=Player>, \r\n\r\nJe m'excuse pour ces précautions, mais je préfère ne pas parler de tout ceci devant le Jarl, au cas où les informations en ma possession seraient fausses. Il a déjà suffisamment de problèmes comme ça.\r\n\r\nVoyez-vous, la semaine dernière j'ai reçu un tuyau de la part d'une source anonyme concernant une potentielle tentative d'assassinat du Jarl. \r\n\r\nMême si nous prenons toutes les menaces au sérieux, il est parfois difficile de vérifier la crédibilité d'une source. Et avec tout ce qui arrive ces derniers temps, je n'ai pas le temps d'enquêter moi-même. \r\n\r\nC'est pourquoi je voudrais que vous vous rendiez au Chaudron d'Arcadia et vérifiiez si leur livre de comptes fait mention d'achats suspects, en particulier des poisons. J'ai demandé à Arcadia de vous laisser une copie sur son comptoir. Jetez-y un oeil, trouvez les personnes ayant acheté des bouteilles de poison ces derniers jours et confirmez que leurs raisons sont légitimes. Pendant ce temps, je vais demander à nos cuisiniers de vérifier tous nos aliments et bouteilles d'hydromel, jusqu'à la moindre miette de pain, afin de s'assurer que rien n'a été empoisonné. \r\n\r\nSi votre enquête ne donne rien, alors je saurai que mes informations étaient fausses et que le Jarl ne craint rien pour l'instant. Dans le cas contraire, j'espère qu'une personne de votre réputation pourra se charger rapidement de la situation."
-    },
-    {
-        "editor_id": "ccBGSSSE038_StableBoyNote",
-        "form_id": "[05000824]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face=\"$HandwrittenFont\" size=\"17\">\r\nThe Dark Elf was smart to choose me. Scars aside, I can pass as a stable boy easily enough. I'll tell the shopkeep I got bucked by a wild one and landed face first into the briars. I'm smart like that.\r\n\r\nThe other bandits always poke fun at my face, saying I look like a newborn babe, but it comes in handy for jobs like this. After seeing how well the Dark Elf pays, the entire gang will be looking for a razor pretty soon.\r\n\r\nSpeaking of which, I'm supposed to meet my mysterious benefactor back at the stables, and not at the Silent Moons Camp. Not sure why, but he says if I'm followed, it's best I stay in character until I'm well clear of the city gates.\r\n\r\nWell, I hope he doesn't sneak up on me while I wait. I nearly soiled myself the last time. But smart guy that I am, I bought this tome to help me find him. Thing is, I opened it up and can't for the life of me figure out how it works. Only a matter of time though for a guy like me.</font>",
-        "string": "<font face=\"$HandwrittenFont\" size=\"17\">\r\nC'était malin de la part de l'Elfe noir de me choisir. À part les cicatrices, je peux facilement passer pour un garçon d'écurie. Je dirai au marchand qu'un étalon fougueux m'a envoyé valdinguer dans un buisson de ronces. Ouais, je suis futé.\r\n\r\nLes autres bandits se sont toujours moqués de mon visage, affirmant que j'avais la tronche d'un nouveau-né, mais c'est bien utile pour des boulots comme celui-ci. Et quand ils sauront combien l'Elfe noir m'a payé, ils se précipiteront tous sur le premier rasoir venu.\r\n\r\nEn parlant de ça, je suis censé rencontrer mon mystérieux bienfaiteur derrière les écuries, et non pas au camp de la Lune silencieuse. Je ne sais pas trop pourquoi, mais il affirme que si on me suit, il vaut mieux que je reste dans mon personnage jusqu'à ce que je sois loin des portes de la ville.\r\n\r\nEn tout cas, j'espère qu'il n'arrivera pas trop discrètement cette fois-ci. J'ai failli me pisser dessus la dernière fois. Mais vu que je suis malin, j'ai apporté ce grimoire pour m'aider à le trouver. Le truc, c'est que je l'ai ouvert mais pas moyen de comprendre comment ça fonctionne. Bah, je suis pas bête. C'est qu'une question de temps avant que je trouve comme faire.</font>"
+        "original": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nWeekly Business Ledger\r\n\r\n\r\nfor \r\nArcadia's Cauldron\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]<p align=\"left\">\r\n\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/S_letter.png'>undas\r\n\r\nCommander Caius\r\nStamina Potion\r\n61 gold\r\n\r\nLydia\r\nPotion of Strength\r\n137 gold\r\n\r\nAela the Huntress\r\nPotion of True Shot\r\n96 gold\r\n[pagebreak]\r\n\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/M_letter.png'>orndas\r\n\r\nDanica Pure-Spring\r\nPotion of Extreme Healing\r\n123 gold\r\n\r\nNord Warrior\r\nPotion of Cure Disease\r\n240 gold\r\n\r\nImperial Mage\r\nPotion of Magicka\r\n292 gold\r\n[pagebreak]\r\n\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/T_letter.png'>irdas\r\n\r\nHrongar\r\nPotion of Enhanced Stamina\r\n341 gold\r\n\r\nPriest of Arkay\r\nVirulent Poison\r\n174 gold\r\n[pagebreak]\r\n\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/M_letter.png'>iddas\r\n\r\nWarmaiden's\r\nBlacksmith's Potion\r\n204 gold\r\n\r\nBreton Ranger\r\nPotion of Resist Cold\r\n292 gold\r\n\r\nFarengar\r\nEnchanter's Potion\r\n164 gold\r\n[pagebreak]\r\n\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/T_letter.png'>urdas\r\n\r\nBelethor's General Goods\r\nPotion of Haggling\r\n140 gold\r\n\r\nNord Warrior\r\nPotion of Healing\r\n109 gold\r\n[pagebreak]\r\n\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/F_letter.png'>redas\r\n\r\nNord Stable Boy\r\nMalign Lingering Poison\r\n55 gold\r\n[pagebreak]\r\n\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/L_letter.png'>oredas\r\n\r\nUthgerd the Unbroken\r\nPotion of Minor Stamina\r\n61 gold\r\n\r\nAvulstein Gray-Mane\r\nPotion of the Knight\r\n123 gold</p>",
+        "string": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nLivre de comptes hebdomadaire\r\n\r\n\r\npour \r\nLe Chaudron d'Arcadia\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]<p align=\"left\">\r\n\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/S_letter.png'>undas\r\n\r\nCommandant Caius\r\nPotion de vigueur\r\n61 pièces d'or\r\n\r\nLydia\r\nPotion de force\r\n137 pièces d'or\r\n\r\nAela la Chasseuse\r\nPotion de visée\r\n96 pièces d'or\r\n[pagebreak]\r\n\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/M_letter.png'>orndas\r\n\r\nDanica Pure-Source\r\nPotion de soin intense\r\n123 pièces d'or\r\n\r\nGuerrier nordique\r\nPotion médicinale\r\n240 pièces d'or\r\n\r\nMarchand impérial\r\nPotion de vol à la tire\r\n292 pièces d'or\r\n[pagebreak]\r\n\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/T_letter.png'>irdas\r\n\r\nHrongar\r\nPotion de vigueur améliorée\r\n341 pièces d'or\r\n\r\nPrêtre d'Arkay\r\nPoison virulent\r\n174 pièces d'or\r\n[pagebreak]\r\n\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/M_letter.png'>iddas\r\n\r\nLa Guerrière\r\nPotion du forgeron\r\n204 pièces d'or\r\n\r\nRôdeur bréton\r\nPotion de résistance à la glace\r\n292 pièces d'or\r\n\r\nFarengar\r\nPotion de l'enchanteur\r\n164 pièces d'or\r\n[pagebreak]\r\n\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/T_letter.png'>urdas\r\n\r\nÉpicerie Belethor\r\nPotion de négociation\r\n140 pièces d'or\r\n\r\nGuerrier nordique\r\nPotion de soin\r\n109 pièces d'or\r\n[pagebreak]\r\n\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/F_letter.png'>redas\r\n\r\nGarçon d'écurie nordique\r\nTerrible poison persistant\r\n55 pièces d'or\r\n[pagebreak]\r\n\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/L_letter.png'>oredas\r\n\r\nUthgerd l'Inflexible\r\nPotion de vigueur légère\r\n61 pièces d'or\r\n\r\nAvulstein Grisetoison\r\nPotion du chevalier\r\n123 pièces d'or</p>"
     },
     {
         "editor_id": "ccBGSSSE038_BowOfShadows",
-        "form_id": "[05000807]",
-        "index": null,
-        "type": "WEAP FULL",
-        "original": "Bow of Shadows",
-        "string": "Arc des ombres"
-    },
-    {
-        "editor_id": "ccBGSSSE038_BowOfShadows",
-        "form_id": "[05000807]",
+        "form_id": "05000807|ccbgssse038-bowofshadows.esl",
         "index": null,
         "type": "WEAP DESC",
         "original": "Weapon draw is <20>% faster and casts invisibility for <30> seconds.",
         "string": "Dégainer l'arme est <20> % plus rapide et active un sort d'invisibilité pendant <30> secondes."
     },
     {
+        "editor_id": "ccBGSSSE038_BowOfShadows",
+        "form_id": "05000807|ccbgssse038-bowofshadows.esl",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Bow of Shadows",
+        "string": "Arc des ombres"
+    },
+    {
         "editor_id": "ccBGSSSE038_NordDeadGuy",
-        "form_id": "[05000822]",
+        "form_id": "05000822|ccbgssse038-bowofshadows.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Nord",
@@ -201,55 +201,23 @@
     },
     {
         "editor_id": "ccBGSSSE038_CheeseWheel",
-        "form_id": "[05000819]",
+        "form_id": "05000819|ccbgssse038-bowofshadows.esl",
         "index": null,
         "type": "ALCH FULL",
         "original": "Poisoned Sliced Goat Cheese",
         "string": "Tranches de fromage de chèvre empoisonnées"
     },
     {
-        "editor_id": "WhiterunDragonsreach",
-        "form_id": "[000165A3]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Dragonsreach",
-        "string": "Fort-Dragon"
-    },
-    {
-        "editor_id": "WhiterunArcadiasCauldron",
-        "form_id": "[000165B6]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Arcadia's Cauldron",
-        "string": "Le Chaudron d'Arcadia"
-    },
-    {
-        "editor_id": "WhiterunHalloftheDeadCatacombs",
-        "form_id": "[00094BAB]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Whiterun Catacombs",
-        "string": "Catacombes de Blancherive"
-    },
-    {
         "editor_id": "Tamriel",
-        "form_id": "[0000003C]",
+        "form_id": "0000003C|Skyrim.esm",
         "index": null,
         "type": "WRLD FULL",
         "original": "Skyrim",
         "string": "Bordeciel"
     },
     {
-        "editor_id": null,
-        "form_id": "[0500082D]",
-        "index": null,
-        "type": "INFO RNAM",
-        "original": "I found the assassin and took care of him.",
-        "string": "J'ai trouvé l'assassin et lui ai réglé son compte."
-    },
-    {
         "editor_id": "ccBGSSSE038_QuestBranch01Topic",
-        "form_id": "[05000810]",
+        "form_id": "05000810|ccbgssse038-bowofshadows.esl",
         "index": null,
         "type": "DIAL FULL",
         "original": "Is there anything you need from me?",
@@ -257,111 +225,23 @@
     },
     {
         "editor_id": "ccBGSSSE038_Quest",
-        "form_id": "[0500080E]",
-        "index": 81,
+        "form_id": "0500080E|ccbgssse038-bowofshadows.esl",
+        "index": 75,
         "type": "QUST CNAM",
-        "original": "At the Silent Moons Camp, I discovered a journal from an assassin who intends on killing the Jarl of Whiterun. After following his trail, I found him in Dragonsreach and eliminated him, taking the Bow of Shadows for myself.",
-        "string": "Au camp de la Lune silencieuse, j'ai découvert le journal d'un assassin qui compte assassiner le Jarl de Blancherive. Après avoir suivi sa piste, je l'ai trouvé à Fort-Dragon et l'ai éliminé. J'en ai profité pour récupérer l'arc des ombres."
+        "original": "At the Silent Moons Camp, I discovered a journal from an assassin who intends on killing the Jarl of Whiterun. After following his trail, I found him in Dragonsreach and eliminated him, taking the Bow of Shadows for myself. I then returned to the steward and received my reward.",
+        "string": "Au camp de la Lune silencieuse, j'ai découvert le journal d'un assassin qui compte assassiner le Jarl de Blancherive. Après avoir suivi sa piste, je l'ai trouvé à Fort-Dragon et l'ai éliminé. J'en ai profité pour récupérer l'arc des ombres. J'ai ensuite rendu visite à l'intendant, qui m'a donné ma récompense."
     },
     {
         "editor_id": "ccBGSSSE038_Quest",
-        "form_id": "[0500080E]",
-        "index": 80,
-        "type": "QUST NNAM",
-        "original": "Find the Assassin on the upper floor of Dragonsreach when the Jarl is unoccupied",
-        "string": "Trouvez l'assassin à l'étage de Fort-Dragon lorsque le Jarl est inoccupé"
-    },
-    {
-        "editor_id": "ccBGSSSE038_Quest",
-        "form_id": "[0500080E]",
-        "index": 70,
-        "type": "QUST NNAM",
-        "original": "Investigate the Silent Moons Camp",
-        "string": "Inspectez le camp de la Lune silencieuse"
-    },
-    {
-        "editor_id": "ccBGSSSE038_Quest",
-        "form_id": "[0500080E]",
-        "index": 50,
-        "type": "QUST NNAM",
-        "original": "Investigate the Hall of the Dead",
-        "string": "Inspectez la Nécropole"
-    },
-    {
-        "editor_id": "ccBGSSSE038_Quest",
-        "form_id": "[0500080E]",
-        "index": 109,
-        "type": "QUST CNAM",
-        "original": "It seems there may be a potential assassination plot against the Jarl. At the steward's direction, I visited a local alchemist and took a copy of her ledger. I should read it to see if anyone has recently purchased any poisons.",
-        "string": "Il semblerait que l'on complote pour assassiner le Jarl. À la demande de l'intendant, j'ai rendu visite à l'alchimiste locale et pris une copie de son livre de comptes. Je devrais le lire pour voir si quelqu'un a acheté du poison récemment."
-    },
-    {
-        "editor_id": "ccBGSSSE038_Quest",
-        "form_id": "[0500080E]",
-        "index": 90,
-        "type": "QUST NNAM",
-        "original": "Retrieve the Bow of Shadows",
-        "string": "Récupérez l'arc des ombres"
-    },
-    {
-        "editor_id": "ccBGSSSE038_Quest",
-        "form_id": "[0500080E]",
-        "index": 93,
-        "type": "QUST CNAM",
-        "original": "At the Silent Moons Camp, I discovered a journal from an assassin who intends on killing the Jarl of Whiterun. He intends to take the shot from somewhere unoccupied, using the Bow of Shadows to conceal himself. It's likely he will only appear when the Jarl is not tending to any other business. I should find him and take him out before he can carry through with the plot.",
-        "string": "Au camp de la Lune silencieuse, j'ai découvert le journal d'un assassin qui compte assassiner le Jarl de Blancherive. Il compte abattre sa cible depuis un endroit inoccupé, en utilisant l'arc des ombres pour se dissimuler. Il est probable qu'il n'apparaisse que lorsque le Jarl ne sera pas occupé. Je ferais bien de le retrouver et de l'éliminer avant qu'il ne puisse mener son assassinat à bien."
-    },
-    {
-        "editor_id": "ccBGSSSE038_Quest",
-        "form_id": "[0500080E]",
-        "index": 20,
-        "type": "QUST NNAM",
-        "original": "Read the Steward's Note",
-        "string": "Lisez la note de l'intendant"
-    },
-    {
-        "editor_id": "ccBGSSSE038_Quest",
-        "form_id": "[0500080E]",
-        "index": 66,
+        "form_id": "0500080E|ccbgssse038-bowofshadows.esl",
+        "index": 108,
         "type": "QUST CNAM",
         "original": "In Whiterun, I spoke to the Jarl's steward and asked him if he had any work. He handed me a note with details on a job. Reading the note, it seems there may be a potential assassination plot against the Jarl. The steward wants me to visit the local alchemist and check if anyone has purchased any poisons.",
         "string": "À Blancherive, j'ai parlé à l'intendant du Jarl et lui ai demandé s'il avait du travail. Il m'a donné une note avec des informations concernant une mission. D'après la note, il semblerait que l'on complote pour assassiner le Jarl. L'intendant souhaite que je me rende chez l'alchimiste locale pour vérifier si quelqu'un a acheté des poisons récemment."
     },
     {
-        "editor_id": "ccBGSSSE038_Quest",
-        "form_id": "[0500080E]",
-        "index": 30,
-        "type": "QUST NNAM",
-        "original": "Take the ledger copy at Arcadia's Cauldron",
-        "string": "Prenez la copie du livre de comptes au Chaudron d'Arcadia"
-    },
-    {
-        "editor_id": "ccBGSSSE038_Quest",
-        "form_id": "[0500080E]",
-        "index": 100,
-        "type": "QUST NNAM",
-        "original": "Speak to the Jarl's Steward",
-        "string": "Parlez à l'intendant du Jarl"
-    },
-    {
-        "editor_id": "ccBGSSSE038_Quest",
-        "form_id": "[0500080E]",
-        "index": 10,
-        "type": "QUST NNAM",
-        "original": "Speak to the Jarl's Steward",
-        "string": "Parlez à l'intendant du Jarl"
-    },
-    {
-        "editor_id": "ccBGSSSE038_Quest",
-        "form_id": "[0500080E]",
-        "index": 109,
-        "type": "QUST CNAM",
-        "original": "At the Silent Moons Camp, I discovered a journal from an assassin who intends on killing the Jarl of Whiterun. After following his trail, I found him in Dragonsreach and eliminated him.",
-        "string": "Au camp de la Lune silencieuse, j'ai découvert le journal d'un assassin qui compte assassiner le Jarl de Blancherive. Après avoir suivi sa piste, je l'ai trouvé à Fort-Dragon et l'ai éliminé."
-    },
-    {
         "editor_id": "ccBGSSSE038_QuestNote",
-        "form_id": "[05000840]",
+        "form_id": "05000840|ccbgssse038-bowofshadows.esl",
         "index": null,
         "type": "QUST FULL",
         "original": "Note Alias Holder",
@@ -369,47 +249,15 @@
     },
     {
         "editor_id": "ccBGSSSE038_Quest",
-        "form_id": "[0500080E]",
-        "index": 40,
+        "form_id": "0500080E|ccbgssse038-bowofshadows.esl",
+        "index": 80,
         "type": "QUST NNAM",
-        "original": "Read the Business Ledger Copy",
-        "string": "Consultez la copie du livre de comptes"
+        "original": "Find the Assassin on the upper floor of Dragonsreach when the Jarl is unoccupied",
+        "string": "Trouvez l'assassin à l'étage de Fort-Dragon lorsque le Jarl est inoccupé"
     },
     {
         "editor_id": "ccBGSSSE038_Quest",
-        "form_id": "[0500080E]",
-        "index": 74,
-        "type": "QUST CNAM",
-        "original": "In Whiterun, I spoke to the Jarl's steward and asked him if he had any work. He handed me a note with details on a job.",
-        "string": "À Blancherive, j'ai parlé à l'intendant du Jarl et lui ai demandé s'il avait du travail. Il m'a donné une note avec des informations concernant une mission."
-    },
-    {
-        "editor_id": "ccBGSSSE038_Quest",
-        "form_id": "[0500080E]",
-        "index": 96,
-        "type": "QUST CNAM",
-        "original": "It seems there may be a potential assassination plot against the Jarl. At the steward's direction, I visited a local alchemist and took a copy of her ledger. I read it and found two people had purchased poisons. A priest at the Hall of the Dead, and a stable boy. At the Whiterun Stables I found a dead body and clues that point to the Silent Moons Camp. I should investigate the area and see what I can find.",
-        "string": "Il semblerait que l'on complote pour assassiner le Jarl. À la demande de l'intendant, j'ai rendu visite à l'alchimiste locale et pris une copie de son livre de comptes. Je l'ai lu et découvert que deux personnes avaient acheté du poison récemment : un prêtre de la Nécropole et un garçon d'écurie. Aux écuries de Blancherive, j'ai découvert un cadavre et des indices menant au camp de la Lune silencieuse. Je devrais inspecter la zone pour voir ce que je peux trouver."
-    },
-    {
-        "editor_id": "ccBGSSSE038_Quest",
-        "form_id": "[0500080E]",
-        "index": 85,
-        "type": "QUST CNAM",
-        "original": "With the death of King Torygg, it seems not even the Jarls are safe in Skyrim, and security comes at a premium. Given the need for capable warriors, I should speak with the steward and see if he has any work for me.",
-        "string": "Avec la mort du roi Torygg, il semblerait que même les Jarls ne sont plus à l'abri en Bordeciel, et la sécurité a un prix. Étant donné les besoins en guerriers efficaces, je devrais parler à l'intendant pour voir s'il a du travail à me confier."
-    },
-    {
-        "editor_id": "ccBGSSSE038_Quest",
-        "form_id": "[0500080E]",
-        "index": 78,
-        "type": "QUST CNAM",
-        "original": "It seems there may be a potential assassination plot against the Jarl. At the steward's direction, I visited a local alchemist and took a copy of her ledger. I read it and found two people had purchased poisons. A priest at the Hall of the Dead, and a stable boy.",
-        "string": "Il semblerait que l'on complote pour assassiner le Jarl. À la demande de l'intendant, j'ai rendu visite à l'alchimiste locale et pris une copie de son livre de comptes. Je l'ai lu et découvert que deux personnes avaient acheté du poison récemment : un prêtre de la Nécropole et un garçon d'écurie."
-    },
-    {
-        "editor_id": "ccBGSSSE038_Quest",
-        "form_id": "[0500080E]",
+        "form_id": "0500080E|ccbgssse038-bowofshadows.esl",
         "index": null,
         "type": "QUST FULL",
         "original": "In the Shadows",
@@ -417,23 +265,135 @@
     },
     {
         "editor_id": "ccBGSSSE038_Quest",
-        "form_id": "[0500080E]",
-        "index": 80,
-        "type": "QUST CNAM",
-        "original": "At the Silent Moons Camp, I discovered a journal from an assassin who intends on killing the Jarl of Whiterun. After following his trail, I found him in Dragonsreach and eliminated him, taking the Bow of Shadows for myself. I then returned to the steward and received my reward.",
-        "string": "Au camp de la Lune silencieuse, j'ai découvert le journal d'un assassin qui compte assassiner le Jarl de Blancherive. Après avoir suivi sa piste, je l'ai trouvé à Fort-Dragon et l'ai éliminé. J'en ai profité pour récupérer l'arc des ombres. J'ai ensuite rendu visite à l'intendant, qui m'a donné ma récompense."
-    },
-    {
-        "editor_id": "ccBGSSSE038_Quest",
-        "form_id": "[0500080E]",
+        "form_id": "0500080E|ccbgssse038-bowofshadows.esl",
         "index": 60,
         "type": "QUST NNAM",
         "original": "Check the stables",
         "string": "Allez voir les écuries"
     },
     {
+        "editor_id": "ccBGSSSE038_Quest",
+        "form_id": "0500080E|ccbgssse038-bowofshadows.esl",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "It seems there may be a potential assassination plot against the Jarl. At the steward's direction, I visited a local alchemist and took a copy of her ledger. I read it and found two people had purchased poisons. A priest at the Hall of the Dead, and a stable boy.",
+        "string": "Il semblerait que l'on complote pour assassiner le Jarl. À la demande de l'intendant, j'ai rendu visite à l'alchimiste locale et pris une copie de son livre de comptes. Je l'ai lu et découvert que deux personnes avaient acheté du poison récemment : un prêtre de la Nécropole et un garçon d'écurie."
+    },
+    {
+        "editor_id": "ccBGSSSE038_Quest",
+        "form_id": "0500080E|ccbgssse038-bowofshadows.esl",
+        "index": 81,
+        "type": "QUST CNAM",
+        "original": "At the Silent Moons Camp, I discovered a journal from an assassin who intends on killing the Jarl of Whiterun. After following his trail, I found him in Dragonsreach and eliminated him, taking the Bow of Shadows for myself.",
+        "string": "Au camp de la Lune silencieuse, j'ai découvert le journal d'un assassin qui compte assassiner le Jarl de Blancherive. Après avoir suivi sa piste, je l'ai trouvé à Fort-Dragon et l'ai éliminé. J'en ai profité pour récupérer l'arc des ombres."
+    },
+    {
+        "editor_id": "ccBGSSSE038_Quest",
+        "form_id": "0500080E|ccbgssse038-bowofshadows.esl",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "Read the Business Ledger Copy",
+        "string": "Consultez la copie du livre de comptes"
+    },
+    {
+        "editor_id": "ccBGSSSE038_Quest",
+        "form_id": "0500080E|ccbgssse038-bowofshadows.esl",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Read the Steward's Note",
+        "string": "Lisez la note de l'intendant"
+    },
+    {
+        "editor_id": "ccBGSSSE038_Quest",
+        "form_id": "0500080E|ccbgssse038-bowofshadows.esl",
+        "index": 85,
+        "type": "QUST CNAM",
+        "original": "It seems there may be a potential assassination plot against the Jarl. At the steward's direction, I visited a local alchemist and took a copy of her ledger. I should read it to see if anyone has recently purchased any poisons.",
+        "string": "Il semblerait que l'on complote pour assassiner le Jarl. À la demande de l'intendant, j'ai rendu visite à l'alchimiste locale et pris une copie de son livre de comptes. Je devrais le lire pour voir si quelqu'un a acheté du poison récemment."
+    },
+    {
+        "editor_id": "ccBGSSSE038_Quest",
+        "form_id": "0500080E|ccbgssse038-bowofshadows.esl",
+        "index": 76,
+        "type": "QUST CNAM",
+        "original": "At the Silent Moons Camp, I discovered a journal from an assassin who intends on killing the Jarl of Whiterun. After following his trail, I found him in Dragonsreach and eliminated him.",
+        "string": "Au camp de la Lune silencieuse, j'ai découvert le journal d'un assassin qui compte assassiner le Jarl de Blancherive. Après avoir suivi sa piste, je l'ai trouvé à Fort-Dragon et l'ai éliminé."
+    },
+    {
+        "editor_id": "ccBGSSSE038_Quest",
+        "form_id": "0500080E|ccbgssse038-bowofshadows.esl",
+        "index": 98,
+        "type": "QUST CNAM",
+        "original": "It seems there may be a potential assassination plot against the Jarl. At the steward's direction, I visited a local alchemist and took a copy of her ledger. I read it and found two people had purchased poisons. A priest at the Hall of the Dead, and a stable boy. At the Whiterun Stables I found a dead body and clues that point to the Silent Moons Camp. I should investigate the area and see what I can find.",
+        "string": "Il semblerait que l'on complote pour assassiner le Jarl. À la demande de l'intendant, j'ai rendu visite à l'alchimiste locale et pris une copie de son livre de comptes. Je l'ai lu et découvert que deux personnes avaient acheté du poison récemment : un prêtre de la Nécropole et un garçon d'écurie. Aux écuries de Blancherive, j'ai découvert un cadavre et des indices menant au camp de la Lune silencieuse. Je devrais inspecter la zone pour voir ce que je peux trouver."
+    },
+    {
+        "editor_id": "ccBGSSSE038_Quest",
+        "form_id": "0500080E|ccbgssse038-bowofshadows.esl",
+        "index": 90,
+        "type": "QUST NNAM",
+        "original": "Retrieve the Bow of Shadows",
+        "string": "Récupérez l'arc des ombres"
+    },
+    {
+        "editor_id": "ccBGSSSE038_Quest",
+        "form_id": "0500080E|ccbgssse038-bowofshadows.esl",
+        "index": 70,
+        "type": "QUST NNAM",
+        "original": "Investigate the Silent Moons Camp",
+        "string": "Inspectez le camp de la Lune silencieuse"
+    },
+    {
+        "editor_id": "ccBGSSSE038_Quest",
+        "form_id": "0500080E|ccbgssse038-bowofshadows.esl",
+        "index": 50,
+        "type": "QUST NNAM",
+        "original": "Investigate the Hall of the Dead",
+        "string": "Inspectez la Nécropole"
+    },
+    {
+        "editor_id": "ccBGSSSE038_Quest",
+        "form_id": "0500080E|ccbgssse038-bowofshadows.esl",
+        "index": 56,
+        "type": "QUST CNAM",
+        "original": "With the death of King Torygg, it seems not even the Jarls are safe in Skyrim, and security comes at a premium. Given the need for capable warriors, I should speak with the steward and see if he has any work for me.",
+        "string": "Avec la mort du roi Torygg, il semblerait que même les Jarls ne sont plus à l'abri en Bordeciel, et la sécurité a un prix. Étant donné les besoins en guerriers efficaces, je devrais parler à l'intendant pour voir s'il a du travail à me confier."
+    },
+    {
+        "editor_id": "ccBGSSSE038_Quest",
+        "form_id": "0500080E|ccbgssse038-bowofshadows.esl",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Take the ledger copy at Arcadia's Cauldron",
+        "string": "Prenez la copie du livre de comptes au Chaudron d'Arcadia"
+    },
+    {
+        "editor_id": "ccBGSSSE038_Quest",
+        "form_id": "0500080E|ccbgssse038-bowofshadows.esl",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Speak to the Jarl's Steward",
+        "string": "Parlez à l'intendant du Jarl"
+    },
+    {
+        "editor_id": "ccBGSSSE038_Quest",
+        "form_id": "0500080E|ccbgssse038-bowofshadows.esl",
+        "index": 100,
+        "type": "QUST NNAM",
+        "original": "Speak to the Jarl's Steward",
+        "string": "Parlez à l'intendant du Jarl"
+    },
+    {
+        "editor_id": "ccBGSSSE038_Quest",
+        "form_id": "0500080E|ccbgssse038-bowofshadows.esl",
+        "index": 73,
+        "type": "QUST CNAM",
+        "original": "In Whiterun, I spoke to the Jarl's steward and asked him if he had any work. He handed me a note with details on a job.",
+        "string": "À Blancherive, j'ai parlé à l'intendant du Jarl et lui ai demandé s'il avait du travail. Il m'a donné une note avec des informations concernant une mission."
+    },
+    {
         "editor_id": "ccBGSSSE038_BowOfShadowsPerkPlayer",
-        "form_id": "[0500080A]",
+        "form_id": "0500080A|ccbgssse038-bowofshadows.esl",
         "index": null,
         "type": "PERK FULL",
         "original": "Invisibility",
@@ -441,7 +401,7 @@
     },
     {
         "editor_id": "ccBGSSSE038_BowOfShadowsPerk",
-        "form_id": "[05000809]",
+        "form_id": "05000809|ccbgssse038-bowofshadows.esl",
         "index": null,
         "type": "PERK FULL",
         "original": "Homecooked Meal",

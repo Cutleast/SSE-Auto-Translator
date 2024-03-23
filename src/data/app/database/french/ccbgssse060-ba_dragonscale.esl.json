@@ -1,55 +1,47 @@
 [
     {
-        "editor_id": "ccBGSSSE060_ArmorDragonscaleCuirass",
-        "form_id": "[05000801]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Studded Dragonscale Armor",
-        "string": "Armure draconique cloutée"
-    },
-    {
-        "editor_id": "ccBGSSSE060_ArmorDragonscaleBoots",
-        "form_id": "[05000800]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Studded Dragonscale Boots",
-        "string": "Bottes draconiques cloutées"
-    },
-    {
         "editor_id": "ccBGSSSE060_ArmorDragonscaleGauntlets",
-        "form_id": "[05000802]",
+        "form_id": "05000802|ccbgssse060-ba_dragonscale.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Studded Dragonscale Gauntlets",
         "string": "Gantelets draconiques cloutés"
     },
     {
+        "editor_id": "ccBGSSSE060_ArmorDragonscaleCuirass",
+        "form_id": "05000801|ccbgssse060-ba_dragonscale.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Studded Dragonscale Armor",
+        "string": "Armure draconique cloutée"
+    },
+    {
         "editor_id": "ccBGSSSE060_ArmorDragonscaleHelmet",
-        "form_id": "[05000803]",
+        "form_id": "05000803|ccbgssse060-ba_dragonscale.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Studded Dragonscale Helmet",
         "string": "Casque draconique clouté"
     },
     {
-        "editor_id": "ccBGSSSE060_LovePoemforZaharia",
-        "form_id": "[05000827]",
+        "editor_id": "ccBGSSSE060_ArmorDragonscaleBoots",
+        "form_id": "05000800|ccbgssse060-ba_dragonscale.esl",
         "index": null,
-        "type": "BOOK FULL",
-        "original": "Poem for Zaharia",
-        "string": "Poème de Zaharia"
+        "type": "ARMO FULL",
+        "original": "Studded Dragonscale Boots",
+        "string": "Bottes draconiques cloutées"
     },
     {
         "editor_id": "ccBGSSSE060_Bookv4",
-        "form_id": "[05000819]",
+        "form_id": "05000819|ccbgssse060-ba_dragonscale.esl",
         "index": null,
-        "type": "BOOK DESC",
-        "original": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nThe Crimson Dirks\r\nBook Four\r\n\r\n\r\nby \r\nGathers-the-Coin\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/T_letter.png'>he tavern fell into silence. Casival squinted at the young Bosmer, trying to get a read on his mood. Just hours earlier the lad had embarked on the biggest quest of his life, the kind of endeavor that turns squires into warriors, boys into men.\r\n\r\n\"Well, what did she say?\" he asked the young bandit.\r\n\r\n\"She said she would only wed me,\" Fathrys said, \"if I brought her the scale of a dragon.\"\r\n\r\nThe tavern burst into laughter, patrons smacking their tankards against the wood.\r\n\r\n\"What?\" Fathrys replied, clearly confused, \"What's so funny?\"\r\n\r\n\"I'm sorry lad,\" said Casival, \"but I think that's her way of saying 'No.'\"\r\n\r\nFathrys was crestfallen. It had taken nearly all of his courage to confess his love to Zaharia. What meager defenses remained in his youthful frame, Casival could not guess, but they stood little chance against this latest assault. In fact, with each passing second Fathrys' shoulders slumped further and further into his chest, until he was more Guar than man. Taking pity, Casival decided to massage the boy's ego with a tale of his first rejection, when a familiar voice croaked at the pair from across the room.\r\n\r\n\"A dragon scale, you say?\" \r\n\r\nNot a soul had realized Antonius was in the tavern, mostly because the bandit mage was a permanent fixture. From dusk to dawn he teetered upon his wobbly chair, drinking all manner of spirits by his lonesome. Over time he began to blend into the scenery, like an odor that only strangers could smell.\r\n\r\n\"By the Nine, do you know where I can find one?\" Fathrys beamed with shoulders out, his once gloomy face resurrected with life.\r\n\r\n\"I'm a wizard, am I not?\" Antonius said, before letting out a dignified belch.\r\n\r\n\"A bandit wizard,\" Casival interjected, \"and with all due respect to you and your profession, I don't think you're helping.\"\r\n\r\n\"Nonsense, Casival,\" scolded the mage, nearly tripping over his own feet as he sat at the table, \"The boy needs a dragon scale, and I aim to help him find one.\"\r\n\r\n\"But the dragons have been extinct for centuries upon centuries,\" Casival said.\r\n\r\n\"You really are a bad student,\" scoffed Antonius, jabbing his finger into the Dunmer's forehead, \"this is why Tyra favors Edward over you. At least he pays attention.\"\r\n\r\n\"Forgive me, mage.\"\r\n\r\n\"Only the Divines can forgive you, my son. Drink this bottle, and it'll take you to them.\"\r\n\r\n\"What about the dragon scale?\" Fathrys whined, growing impatient.\r\n\r\n\"Oh right, that. Well, it just so happens, there's an old Nord legend about a warrior named Ulfnir Bone-Skin,\" Antonius explained, flecks of spit flying out of his mouth, \"who slew the serpent wyrm Vithrelnaak and fashioned a powerful armor from his scales. When he died, instead of giving his armor away to his ungrateful pupils, he did what any self-respecting warrior would do, and buried himself with it.\"\r\n\r\n\"Well, that's too bad,\" said Casival, hoping to derail this runaway carriage, \"surely it would've been emptied out by grave robbers by now.\"\r\n\r\n\"You would think,\" Antonius screamed, raising his voice for no reason, \"but they say Ulfnir's corpse haunts the barrow near Yorgrim's Overlook, and kills anyone who dares try and take his armor.\"\r\n\r\n\"I see! So it's a challenge!\" Fathrys exclaimed, \"In order to wear Ulfnir's armor, one must first best him as a warrior!\"\r\n\r\n\"Either that, or he just doesn't want some random stranger wearing his clothes. How would you feel if I showed up to your home wearing your undergarments? But yes, you kill Ulfnir, you get your dragon scale. You get your dragon scale, and you get your wench.\"\r\n\r\n\"She's not a wench. She's the most amazing woman in all of Mundus, and I'm going to marry her!\"\r\n\r\n\"Sure, whatever.\"\r\n\r\nCasival breathed a deep sigh as Fathrys' heart grew ill with hope. The only saving grace was that Windhelm was thousands of leagues away, and Fathrys was still a pup. Perhaps when he was ready for the work, a word or two with Tyra could send him further away still. Yet whatever remedy he devised would be temporary. He had seen that look too many times to deny what would come next.\r\n\r\nA fortnight later, Casival returned to the tavern. It was the same as it ever was, for the most part. The wenches tended to the patrons, and the patrons to their stress. The bards sang tales old and new, and the drunkards, not knowing the lyrics, still saw fit to join them. Antonius was perched in the corner as always, a bottle in each hand and several more on the ground. \r\n\r\nIt was like any other Fredas, save for the empty seat beside him. \r\n\r\nHe would break the news to Tyra in the morning. The Bosmer would not return.</p>\r\n",
-        "string": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nLes Dagues Empourprées\r\nLivre Quatrième\r\n\r\n\r\npar \r\nTire-sou\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/T_letter.png'>rès vite, la taverne se tut. Casival jeta un regard oblique au jeune Bosmer, essayant de jauger son humeur. C'était à peine quelques heures plus tôt que le jeune homme avait entrepris la plus grande quête de sa vie, le genre d'aventure qui transforme un écuyer en guerrier, un garçon en homme.\r\n\r\nEh bien, qu'est-ce qu'elle a dit ? demanda-t-il au jeune bandit.\r\n\r\nElle dit qu'elle ne m'épouserait, répondit Fathrys, que si \"je rapportais une écaille de dragon\".\r\n\r\nLa taverne tout entière éclata de rire, les clients faisant résonner leurs chopes contre le bois.\r\n\r\nEt quoi ? répondit Fathrys, clairement étonné. \"Qu'y a-t-il de si drôle ?\"\r\n\r\nDésolé, petit, dit Casival, \"mais je crois que c'était sa manière de t'éconduire.\"\r\n\r\nFathrys était effondré. Il avait dû rassembler tout son courage pour avouer ses sentiments à Zaharia. Casival ne savait pas si le jeune homme pourrait encaisser d'autres coups durs, mais son jeune corps semblait avoir perdu toutes ses défenses. En réalité, plus le temps passait, plus les épaules de Fathrys se recroquevillaient sur son buste, jusqu'à ce qu'il tienne moins de l'homme que du Guar. Pris de pitié, Casival décida de réconforter l'ego du garçon en lui racontant la première fois qu'il s'était fait éconduire, lorsqu'une voix familière interpella les deux compères depuis le côté opposé de la pièce.\r\n\r\nUne écaille de dragon ? \r\n\r\nPersonne n'avait réalisé la présence d'Antonius dans la taverne, surtout parce que le mage bandit faisait comme partie des meubles. Du soir au matin, il dodelinait sur sa chaise branlante, buvant toutes sortes de spiritueux avec pour seule compagnie sa chope. Avec le temps, il se fondit dans le décor, un peu comme une odeur que seuls les étrangers pouvaient remarquer.\r\n\r\nPar les Neuf, savez-vous où je peux m'en procurer une ? Fathrys bondit de sa chaise, la morosité de son visage chassée par un nouveau souffle de vie.\r\n\r\nJe suis un mage, non ? répondit Antonius, avant d'éructer joyeusement.\r\n\r\nUn mage bandit, précisa Casival, \"et avec tout le respect que j'ai pour vous et votre profession, je ne pense pas que vous ne nous soyez d'une grande aide.\"\r\n\r\nBalivernes, Casival, grogna le mage en passant à deux doigts de s'emmêler les pieds en s'asseyant à table. \"Le garçon a besoin d'une écaille de dragon, alors je l'aiderai à en trouver une.\"\r\n\r\nMais les dragons ont disparu depuis des siècles et des siècles, fit remarquer Casival.\r\n\r\nAh, tu es vraiment un piètre disciple, ricana Antonius, tapotant le front du Dunmer du doigt. \"C'est pour cela que Tyra t'a préféré Edward. Au moins, lui, il est attentif.\"\r\n\r\nPardonnez-moi, mage.\r\n\r\nSeuls les Divins peuvent te pardonner, mon garçon. Bois le contenu de cette bouteille, et je te mènerai à eux.\r\n\r\nEt l'écaille de dragon ? gémit Fathrys, de plus en plus impatient.\r\n\r\nOh, oui, l'écaille. Eh bien, il se trouve qu'il existe une vieille légende nordique à propos d'un guerrier nommé Ulfnir Peau-d'os, expliqua Antonius, postillonnant allègrement. \"Elle raconte qu'il vint à bout de Vithrelnaak la vouivre de glace, et se fit une puissante armure de ses écailles. À sa mort, au lieu de confier son armure à des disciples peu reconnaissants, il fit ce que tout bon guerrier aurait fait à sa place, et se fit enterrer avec.\"\r\n\r\nEh bien, quel dommage, dit Casival en espérant détourner cette conversation qui partait à vau-l'eau. \"Des pilleurs de tombes auront sûrement vidé sa sépulture.\"\r\n\r\nC'est ce qu'on pourrait penser, s'exclama Antonius, élevant la voix sans raison, \"mais on dit que le cadavre d'Ulfnir hante le tertre près du Cap de Yorgrim, et exécute quiconque tente de s'emparer de son armure.\"\r\n\r\nJe vois ! C'est donc un défi ! s'écria Fathrys. \"Pour porter l'armure d'Ulfnir, on doit d'abord le surpasser au combat !\"\r\n\r\nÇa, ou peut-être n'a-t-il simplement pas envie qu'un étranger venu d'on ne sait où porte ses affaires. Quel effet ça te ferait si je te renvoyais chez toi, avec tes culottes pour seul vêtement ? Mais oui, tue Ulfnir, et tu obtiendras son armure d'écailles, ton écaille de dragon, et ta ribaude.\r\n\r\nCe n'est pas une ribaude ! C'est la plus belle femme de tout Mundus, et je vais l'épouser !\r\n\r\nMais oui, bien sûr.\r\n\r\nTandis que le coeur de Fathrys se remplissait d'un espoir mal placé, Casival soupira profondément. Son seul réconfort, c'était que Vendeaume était à des milliers de lieues d'ici, et que Fathrys avait encore du lait derrière les oreilles. Peut-être que quand il serait prêt à se mettre au travail, un mot ou deux avec Tyra l'enverraient paître encore plus misérablement. Et tout remède qu'il trouvera à son mal ne serait que temporaire. Il connaissait trop bien ce regard pour ignorer ce que l'avenir lui réserverait.\r\n\r\nDeux semaines plus tard, Casival refit son apparition dans la taverne. Elle n'avait, pour la plupart, pas changé d'un pouce. Les ribaudes s'occupaient des clients, et les clients de leurs soucis. Les bardes chantaient, vieilles odes comme nouvelles, et les ivrognes, ignorant les paroles, ne voyaient aucun problème à tout de même entonner les refrains. Comme d'habitude, Antonius occupait son recoin, une bouteille dans chaque main, et plusieurs autres par terre. \r\n\r\nUn fredas comme les autres, si ce n'avait été pour la chaise vide à côté de lui. \r\n\r\nIl annoncerait la nouvelle à Tyra le lendemain matin. On ne revit jamais le Bosmer.</p>\r\n"
+        "type": "BOOK FULL",
+        "original": "The Crimson Dirks, v4",
+        "string": "Les Dagues Empourprées, vol. 4"
     },
     {
         "editor_id": "ccBGSSSE060_LovePoemforZaharia",
-        "form_id": "[05000827]",
+        "form_id": "05000827|ccbgssse060-ba_dragonscale.esl",
         "index": null,
         "type": "BOOK DESC",
         "original": "<font face=\"$HandwrittenFont\" size=\"17\">\r\nZaharia, my desert flower\r\nYou are the seed from which love sprouts\r\nI would break the Green Pact itself\r\nto pluck you from the ground\r\n\r\nOh Zaharia, your very name is a spell\r\nthat burns hotter than dragon fire\r\nThus I bring you this armor of scales\r\nso that I may stand inside your flame\r\n</font>",
@@ -57,23 +49,23 @@
     },
     {
         "editor_id": "ccBGSSSE060_Bookv4",
-        "form_id": "[05000819]",
+        "form_id": "05000819|ccbgssse060-ba_dragonscale.esl",
         "index": null,
-        "type": "BOOK FULL",
-        "original": "The Crimson Dirks, v4",
-        "string": "Les Dagues Empourprées, vol. 4"
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nThe Crimson Dirks\r\nBook Four\r\n\r\n\r\nby \r\nGathers-the-Coin\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/T_letter.png'>he tavern fell into silence. Casival squinted at the young Bosmer, trying to get a read on his mood. Just hours earlier the lad had embarked on the biggest quest of his life, the kind of endeavor that turns squires into warriors, boys into men.\r\n\r\n\"Well, what did she say?\" he asked the young bandit.\r\n\r\n\"She said she would only wed me,\" Fathrys said, \"if I brought her the scale of a dragon.\"\r\n\r\nThe tavern burst into laughter, patrons smacking their tankards against the wood.\r\n\r\n\"What?\" Fathrys replied, clearly confused, \"What's so funny?\"\r\n\r\n\"I'm sorry lad,\" said Casival, \"but I think that's her way of saying 'No.'\"\r\n\r\nFathrys was crestfallen. It had taken nearly all of his courage to confess his love to Zaharia. What meager defenses remained in his youthful frame, Casival could not guess, but they stood little chance against this latest assault. In fact, with each passing second Fathrys' shoulders slumped further and further into his chest, until he was more Guar than man. Taking pity, Casival decided to massage the boy's ego with a tale of his first rejection, when a familiar voice croaked at the pair from across the room.\r\n\r\n\"A dragon scale, you say?\" \r\n\r\nNot a soul had realized Antonius was in the tavern, mostly because the bandit mage was a permanent fixture. From dusk to dawn he teetered upon his wobbly chair, drinking all manner of spirits by his lonesome. Over time he began to blend into the scenery, like an odor that only strangers could smell.\r\n\r\n\"By the Nine, do you know where I can find one?\" Fathrys beamed with shoulders out, his once gloomy face resurrected with life.\r\n\r\n\"I'm a wizard, am I not?\" Antonius said, before letting out a dignified belch.\r\n\r\n\"A bandit wizard,\" Casival interjected, \"and with all due respect to you and your profession, I don't think you're helping.\"\r\n\r\n\"Nonsense, Casival,\" scolded the mage, nearly tripping over his own feet as he sat at the table, \"The boy needs a dragon scale, and I aim to help him find one.\"\r\n\r\n\"But the dragons have been extinct for centuries upon centuries,\" Casival said.\r\n\r\n\"You really are a bad student,\" scoffed Antonius, jabbing his finger into the Dunmer's forehead, \"this is why Tyra favors Edward over you. At least he pays attention.\"\r\n\r\n\"Forgive me, mage.\"\r\n\r\n\"Only the Divines can forgive you, my son. Drink this bottle, and it'll take you to them.\"\r\n\r\n\"What about the dragon scale?\" Fathrys whined, growing impatient.\r\n\r\n\"Oh right, that. Well, it just so happens, there's an old Nord legend about a warrior named Ulfnir Bone-Skin,\" Antonius explained, flecks of spit flying out of his mouth, \"who slew the serpent wyrm Vithrelnaak and fashioned a powerful armor from his scales. When he died, instead of giving his armor away to his ungrateful pupils, he did what any self-respecting warrior would do, and buried himself with it.\"\r\n\r\n\"Well, that's too bad,\" said Casival, hoping to derail this runaway carriage, \"surely it would've been emptied out by grave robbers by now.\"\r\n\r\n\"You would think,\" Antonius screamed, raising his voice for no reason, \"but they say Ulfnir's corpse haunts the barrow near Yorgrim's Overlook, and kills anyone who dares try and take his armor.\"\r\n\r\n\"I see! So it's a challenge!\" Fathrys exclaimed, \"In order to wear Ulfnir's armor, one must first best him as a warrior!\"\r\n\r\n\"Either that, or he just doesn't want some random stranger wearing his clothes. How would you feel if I showed up to your home wearing your undergarments? But yes, you kill Ulfnir, you get your dragon scale. You get your dragon scale, and you get your wench.\"\r\n\r\n\"She's not a wench. She's the most amazing woman in all of Mundus, and I'm going to marry her!\"\r\n\r\n\"Sure, whatever.\"\r\n\r\nCasival breathed a deep sigh as Fathrys' heart grew ill with hope. The only saving grace was that Windhelm was thousands of leagues away, and Fathrys was still a pup. Perhaps when he was ready for the work, a word or two with Tyra could send him further away still. Yet whatever remedy he devised would be temporary. He had seen that look too many times to deny what would come next.\r\n\r\nA fortnight later, Casival returned to the tavern. It was the same as it ever was, for the most part. The wenches tended to the patrons, and the patrons to their stress. The bards sang tales old and new, and the drunkards, not knowing the lyrics, still saw fit to join them. Antonius was perched in the corner as always, a bottle in each hand and several more on the ground. \r\n\r\nIt was like any other Fredas, save for the empty seat beside him. \r\n\r\nHe would break the news to Tyra in the morning. The Bosmer would not return.</p>\r\n",
+        "string": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nLes Dagues Empourprées\r\nLivre Quatrième\r\n\r\n\r\npar \r\nTire-sou\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/T_letter.png'>rès vite, la taverne se tut. Casival jeta un regard oblique au jeune Bosmer, essayant de jauger son humeur. C'était à peine quelques heures plus tôt que le jeune homme avait entrepris la plus grande quête de sa vie, le genre d'aventure qui transforme un écuyer en guerrier, un garçon en homme.\r\n\r\nEh bien, qu'est-ce qu'elle a dit ? demanda-t-il au jeune bandit.\r\n\r\nElle dit qu'elle ne m'épouserait, répondit Fathrys, que si \"je rapportais une écaille de dragon\".\r\n\r\nLa taverne tout entière éclata de rire, les clients faisant résonner leurs chopes contre le bois.\r\n\r\nEt quoi ? répondit Fathrys, clairement étonné. \"Qu'y a-t-il de si drôle ?\"\r\n\r\nDésolé, petit, dit Casival, \"mais je crois que c'était sa manière de t'éconduire.\"\r\n\r\nFathrys était effondré. Il avait dû rassembler tout son courage pour avouer ses sentiments à Zaharia. Casival ne savait pas si le jeune homme pourrait encaisser d'autres coups durs, mais son jeune corps semblait avoir perdu toutes ses défenses. En réalité, plus le temps passait, plus les épaules de Fathrys se recroquevillaient sur son buste, jusqu'à ce qu'il tienne moins de l'homme que du Guar. Pris de pitié, Casival décida de réconforter l'ego du garçon en lui racontant la première fois qu'il s'était fait éconduire, lorsqu'une voix familière interpella les deux compères depuis le côté opposé de la pièce.\r\n\r\nUne écaille de dragon ? \r\n\r\nPersonne n'avait réalisé la présence d'Antonius dans la taverne, surtout parce que le mage bandit faisait comme partie des meubles. Du soir au matin, il dodelinait sur sa chaise branlante, buvant toutes sortes de spiritueux avec pour seule compagnie sa chope. Avec le temps, il se fondit dans le décor, un peu comme une odeur que seuls les étrangers pouvaient remarquer.\r\n\r\nPar les Neuf, savez-vous où je peux m'en procurer une ? Fathrys bondit de sa chaise, la morosité de son visage chassée par un nouveau souffle de vie.\r\n\r\nJe suis un mage, non ? répondit Antonius, avant d'éructer joyeusement.\r\n\r\nUn mage bandit, précisa Casival, \"et avec tout le respect que j'ai pour vous et votre profession, je ne pense pas que vous ne nous soyez d'une grande aide.\"\r\n\r\nBalivernes, Casival, grogna le mage en passant à deux doigts de s'emmêler les pieds en s'asseyant à table. \"Le garçon a besoin d'une écaille de dragon, alors je l'aiderai à en trouver une.\"\r\n\r\nMais les dragons ont disparu depuis des siècles et des siècles, fit remarquer Casival.\r\n\r\nAh, tu es vraiment un piètre disciple, ricana Antonius, tapotant le front du Dunmer du doigt. \"C'est pour cela que Tyra t'a préféré Edward. Au moins, lui, il est attentif.\"\r\n\r\nPardonnez-moi, mage.\r\n\r\nSeuls les Divins peuvent te pardonner, mon garçon. Bois le contenu de cette bouteille, et je te mènerai à eux.\r\n\r\nEt l'écaille de dragon ? gémit Fathrys, de plus en plus impatient.\r\n\r\nOh, oui, l'écaille. Eh bien, il se trouve qu'il existe une vieille légende nordique à propos d'un guerrier nommé Ulfnir Peau-d'os, expliqua Antonius, postillonnant allègrement. \"Elle raconte qu'il vint à bout de Vithrelnaak la vouivre de glace, et se fit une puissante armure de ses écailles. À sa mort, au lieu de confier son armure à des disciples peu reconnaissants, il fit ce que tout bon guerrier aurait fait à sa place, et se fit enterrer avec.\"\r\n\r\nEh bien, quel dommage, dit Casival en espérant détourner cette conversation qui partait à vau-l'eau. \"Des pilleurs de tombes auront sûrement vidé sa sépulture.\"\r\n\r\nC'est ce qu'on pourrait penser, s'exclama Antonius, élevant la voix sans raison, \"mais on dit que le cadavre d'Ulfnir hante le tertre près du Cap de Yorgrim, et exécute quiconque tente de s'emparer de son armure.\"\r\n\r\nJe vois ! C'est donc un défi ! s'écria Fathrys. \"Pour porter l'armure d'Ulfnir, on doit d'abord le surpasser au combat !\"\r\n\r\nÇa, ou peut-être n'a-t-il simplement pas envie qu'un étranger venu d'on ne sait où porte ses affaires. Quel effet ça te ferait si je te renvoyais chez toi, avec tes culottes pour seul vêtement ? Mais oui, tue Ulfnir, et tu obtiendras son armure d'écailles, ton écaille de dragon, et ta ribaude.\r\n\r\nCe n'est pas une ribaude ! C'est la plus belle femme de tout Mundus, et je vais l'épouser !\r\n\r\nMais oui, bien sûr.\r\n\r\nTandis que le coeur de Fathrys se remplissait d'un espoir mal placé, Casival soupira profondément. Son seul réconfort, c'était que Vendeaume était à des milliers de lieues d'ici, et que Fathrys avait encore du lait derrière les oreilles. Peut-être que quand il serait prêt à se mettre au travail, un mot ou deux avec Tyra l'enverraient paître encore plus misérablement. Et tout remède qu'il trouvera à son mal ne serait que temporaire. Il connaissait trop bien ce regard pour ignorer ce que l'avenir lui réserverait.\r\n\r\nDeux semaines plus tard, Casival refit son apparition dans la taverne. Elle n'avait, pour la plupart, pas changé d'un pouce. Les ribaudes s'occupaient des clients, et les clients de leurs soucis. Les bardes chantaient, vieilles odes comme nouvelles, et les ivrognes, ignorant les paroles, ne voyaient aucun problème à tout de même entonner les refrains. Comme d'habitude, Antonius occupait son recoin, une bouteille dans chaque main, et plusieurs autres par terre. \r\n\r\nUn fredas comme les autres, si ce n'avait été pour la chaise vide à côté de lui. \r\n\r\nIl annoncerait la nouvelle à Tyra le lendemain matin. On ne revit jamais le Bosmer.</p>\r\n"
     },
     {
-        "editor_id": "ccBGSSSE060_Fathrys",
-        "form_id": "[05000820]",
+        "editor_id": "ccBGSSSE060_LovePoemforZaharia",
+        "form_id": "05000827|ccbgssse060-ba_dragonscale.esl",
         "index": null,
-        "type": "NPC_ FULL",
-        "original": "Fathrys",
-        "string": "Fathrys"
+        "type": "BOOK FULL",
+        "original": "Poem for Zaharia",
+        "string": "Poème de Zaharia"
     },
     {
         "editor_id": "ccBGSSSE060_Ulfnir",
-        "form_id": "[0500081E]",
+        "form_id": "0500081E|ccbgssse060-ba_dragonscale.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Ulfnir Bone-Skin",
@@ -81,31 +73,31 @@
     },
     {
         "editor_id": "ccBGSSSE060_Ulfnir",
-        "form_id": "[0500081E]",
+        "form_id": "0500081E|ccbgssse060-ba_dragonscale.esl",
         "index": null,
         "type": "NPC_ SHRT",
         "original": "Ulfnir",
         "string": "Ulfnir"
     },
     {
+        "editor_id": "ccBGSSSE060_Fathrys",
+        "form_id": "05000820|ccbgssse060-ba_dragonscale.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Fathrys",
+        "string": "Fathrys"
+    },
+    {
         "editor_id": "ccBGSSSE060_Key",
-        "form_id": "[0500081D]",
+        "form_id": "0500081D|ccbgssse060-ba_dragonscale.esl",
         "index": null,
         "type": "KEYM FULL",
         "original": "Overlook Key",
         "string": "Clé du cap"
     },
     {
-        "editor_id": "WindhelmCandlehearthHall",
-        "form_id": "[00016789]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Candlehearth Hall",
-        "string": "Auberge du Candelâtre"
-    },
-    {
         "editor_id": "Tamriel",
-        "form_id": "[0000003C]",
+        "form_id": "0000003C|Skyrim.esm",
         "index": null,
         "type": "WRLD FULL",
         "original": "Skyrim",
@@ -113,23 +105,15 @@
     },
     {
         "editor_id": "ccBGSSSE060_Quest",
-        "form_id": "[0500081B]",
-        "index": 113,
+        "form_id": "0500081B|ccbgssse060-ba_dragonscale.esl",
+        "index": 88,
         "type": "QUST CNAM",
-        "original": "At Candlehearth Hall in Windhelm, I found a book that mentioned a set of valuable armor may have been stashed away at Yorgrim's Overlook. Upon reaching the overlook I was attacked by an armed skeleton. I defeated the undead creature and retrieved his armor from a nearby chest.",
-        "string": "À l'Auberge du Candelâtre de Vendeaume, j'ai trouvé un livre mentionnant une précieuse armure probablement cachée au Cap de Yorgrim. En gagnant les lieux, j'ai subi l'attaque d'un squelette armé. J'ai vaincu la créature et ai pu mettre la main sur son armure, rangée dans un coffre."
+        "original": "At Candlehearth Hall in Windhelm, I found a book that mentioned a set of valuable armor may have been stashed away at Yorgrim's Overlook. Upon reaching the overlook I was attacked by an armed skeleton.",
+        "string": "À l'Auberge du Candelâtre de Vendeaume, j'ai trouvé un livre mentionnant une précieuse armure probablement cachée au Cap de Yorgrim. En gagnant les lieux, j'ai subi l'attaque d'un squelette armé."
     },
     {
         "editor_id": "ccBGSSSE060_Quest",
-        "form_id": "[0500081B]",
-        "index": 10,
-        "type": "QUST NNAM",
-        "original": "Investigate Yorgrim's Overlook",
-        "string": "Explorez le Cap de Yorgrim."
-    },
-    {
-        "editor_id": "ccBGSSSE060_Quest",
-        "form_id": "[0500081B]",
+        "form_id": "0500081B|ccbgssse060-ba_dragonscale.esl",
         "index": 40,
         "type": "QUST NNAM",
         "original": "Retrieve the armor",
@@ -137,15 +121,15 @@
     },
     {
         "editor_id": "ccBGSSSE060_Quest",
-        "form_id": "[0500081B]",
-        "index": 87,
-        "type": "QUST CNAM",
-        "original": "At Candlehearth Hall in Windhelm, I found a book that mentioned a set of valuable armor may have been stashed away at Yorgrim's Overlook. I should head to the barrow and see what I can uncover.",
-        "string": "À l'Auberge du Candelâtre de Vendeaume, j'ai trouvé un livre mentionnant une précieuse armure probablement cachée au Cap de Yorgrim. Je ferais bien de me rendre au tertre pour en savoir plus."
+        "form_id": "0500081B|ccbgssse060-ba_dragonscale.esl",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Tilted Scales",
+        "string": "Balance penchée"
     },
     {
         "editor_id": "ccBGSSSE060_Quest",
-        "form_id": "[0500081B]",
+        "form_id": "0500081B|ccbgssse060-ba_dragonscale.esl",
         "index": 30,
         "type": "QUST NNAM",
         "original": "Pick up the Overlook Key",
@@ -153,31 +137,7 @@
     },
     {
         "editor_id": "ccBGSSSE060_Quest",
-        "form_id": "[0500081B]",
-        "index": 90,
-        "type": "QUST CNAM",
-        "original": "At Candlehearth Hall in Windhelm, I found a book that mentioned a set of valuable armor may have been stashed away at Yorgrim's Overlook. Upon reaching the overlook I was attacked by an armed skeleton. I defeated the undead creature and can now investigate the area for the armor.",
-        "string": "À l'Auberge du Candelâtre de Vendeaume, j'ai trouvé un livre mentionnant une précieuse armure probablement cachée au Cap de Yorgrim. En gagnant les lieux, j'ai subi l'attaque d'un squelette armé. J'ai vaincu la créature et peux désormais fouiller les lieux pour y trouver l'armure."
-    },
-    {
-        "editor_id": "ccBGSSSE060_MiscQuest",
-        "form_id": "[0500081A]",
-        "index": 10,
-        "type": "QUST NNAM",
-        "original": "Read the book at Candlehearth Hall",
-        "string": "Lisez le livre à l'Auberge du Candelâtre."
-    },
-    {
-        "editor_id": "ccBGSSSE060_Quest",
-        "form_id": "[0500081B]",
-        "index": 105,
-        "type": "QUST CNAM",
-        "original": "At Candlehearth Hall in Windhelm, I found a book that mentioned a set of valuable armor may have been stashed away at Yorgrim's Overlook. Upon reaching the overlook I was attacked by an armed skeleton.",
-        "string": "À l'Auberge du Candelâtre de Vendeaume, j'ai trouvé un livre mentionnant une précieuse armure probablement cachée au Cap de Yorgrim. En gagnant les lieux, j'ai subi l'attaque d'un squelette armé."
-    },
-    {
-        "editor_id": "ccBGSSSE060_Quest",
-        "form_id": "[0500081B]",
+        "form_id": "0500081B|ccbgssse060-ba_dragonscale.esl",
         "index": 20,
         "type": "QUST NNAM",
         "original": "Defeat the skeleton warrior",
@@ -185,18 +145,50 @@
     },
     {
         "editor_id": "ccBGSSSE060_Quest",
-        "form_id": "[0500081B]",
-        "index": 84,
+        "form_id": "0500081B|ccbgssse060-ba_dragonscale.esl",
+        "index": 87,
         "type": "QUST CNAM",
         "original": "At Candlehearth Hall in Windhelm, I found a book that mentioned a set of valuable armor may have been stashed away at Yorgrim's Overlook. Upon reaching the overlook I was attacked by an armed skeleton. I defeated the undead creature and found a key on his body.",
         "string": "À l'Auberge du Candelâtre de Vendeaume, j'ai trouvé un livre mentionnant une précieuse armure probablement cachée au Cap de Yorgrim. En gagnant les lieux, j'ai subi l'attaque d'un squelette armé. J'ai vaincu la créature, qui tenait sur elle une clé."
     },
     {
         "editor_id": "ccBGSSSE060_Quest",
-        "form_id": "[0500081B]",
-        "index": null,
-        "type": "QUST FULL",
-        "original": "Tilted Scales",
-        "string": "Balance penchée"
+        "form_id": "0500081B|ccbgssse060-ba_dragonscale.esl",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Investigate Yorgrim's Overlook",
+        "string": "Explorez le Cap de Yorgrim."
+    },
+    {
+        "editor_id": "ccBGSSSE060_Quest",
+        "form_id": "0500081B|ccbgssse060-ba_dragonscale.esl",
+        "index": 66,
+        "type": "QUST CNAM",
+        "original": "At Candlehearth Hall in Windhelm, I found a book that mentioned a set of valuable armor may have been stashed away at Yorgrim's Overlook. Upon reaching the overlook I was attacked by an armed skeleton. I defeated the undead creature and retrieved his armor from a nearby chest.",
+        "string": "À l'Auberge du Candelâtre de Vendeaume, j'ai trouvé un livre mentionnant une précieuse armure probablement cachée au Cap de Yorgrim. En gagnant les lieux, j'ai subi l'attaque d'un squelette armé. J'ai vaincu la créature et ai pu mettre la main sur son armure, rangée dans un coffre."
+    },
+    {
+        "editor_id": "ccBGSSSE060_MiscQuest",
+        "form_id": "0500081A|ccbgssse060-ba_dragonscale.esl",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Read the book at Candlehearth Hall",
+        "string": "Lisez le livre à l'Auberge du Candelâtre."
+    },
+    {
+        "editor_id": "ccBGSSSE060_Quest",
+        "form_id": "0500081B|ccbgssse060-ba_dragonscale.esl",
+        "index": 97,
+        "type": "QUST CNAM",
+        "original": "At Candlehearth Hall in Windhelm, I found a book that mentioned a set of valuable armor may have been stashed away at Yorgrim's Overlook. I should head to the barrow and see what I can uncover.",
+        "string": "À l'Auberge du Candelâtre de Vendeaume, j'ai trouvé un livre mentionnant une précieuse armure probablement cachée au Cap de Yorgrim. Je ferais bien de me rendre au tertre pour en savoir plus."
+    },
+    {
+        "editor_id": "ccBGSSSE060_Quest",
+        "form_id": "0500081B|ccbgssse060-ba_dragonscale.esl",
+        "index": 93,
+        "type": "QUST CNAM",
+        "original": "At Candlehearth Hall in Windhelm, I found a book that mentioned a set of valuable armor may have been stashed away at Yorgrim's Overlook. Upon reaching the overlook I was attacked by an armed skeleton. I defeated the undead creature and can now investigate the area for the armor.",
+        "string": "À l'Auberge du Candelâtre de Vendeaume, j'ai trouvé un livre mentionnant une précieuse armure probablement cachée au Cap de Yorgrim. En gagnant les lieux, j'ai subi l'attaque d'un squelette armé. J'ai vaincu la créature et peux désormais fouiller les lieux pour y trouver l'armure."
     }
 ]

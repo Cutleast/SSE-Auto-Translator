@@ -1,31 +1,215 @@
 [
     {
-        "editor_id": "ccBGSSSE014_IceSpellParalyzeEffect",
-        "form_id": "[02000813]",
+        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_50",
+        "form_id": "0200084C|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Absorb <mag> points of health per second from target, for <dur> seconds.",
+        "string": "Поглощает <mag> ед. здоровья в секунду у цели в течение <dur> сек."
+    },
+    {
+        "editor_id": "ccBGSSSE014_FrostDamageConcAimedCloak",
+        "form_id": "0200081E|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "A blast of cold that does <mag> points of damage per second to Health and Stamina.",
+        "string": "Струя холода, наносящая <mag> ед. урона здоровью и запасу сил в секунду."
+    },
+    {
+        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_00",
+        "form_id": "0200084A|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Absorb Health",
+        "string": "Поглощение здоровья"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FF_Self_ResistFrost_NoUI",
+        "form_id": "02000841|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Resist Frost",
+        "string": "Сопротивление холоду"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ShockEffectCloak",
+        "form_id": "02000807|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Unbounded Storms",
+        "string": "Безудержный шторм"
+    },
+    {
+        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_75",
+        "form_id": "0200084D|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Absorb <mag> points of health per second from target, for <dur> seconds.",
+        "string": "Поглощает <mag> ед. здоровья в секунду у цели в течение <dur> сек."
+    },
+    {
+        "editor_id": "ccBGSSSE014_UnboundedFreeze_IceSpellEffect",
+        "form_id": "02000809|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Unbounded Freeze",
         "string": "Безудержная заморозка"
     },
     {
-        "editor_id": "ccBGSSSE014_RuneParalysisFFLocation",
-        "form_id": "[02000D62]",
+        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_50",
+        "form_id": "0200084C|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "MGEF FULL",
-        "original": "Paralysis Rune",
-        "string": "Руна паралича"
+        "original": "Absorb Health",
+        "string": "Поглощение здоровья"
     },
     {
-        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea01",
-        "form_id": "[02000840]",
+        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea03",
+        "form_id": "02000845|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "An elemental explosion for <mag> points of fire damage, <mag> points of shock damage, and half as much damage to stamina.",
         "string": "Элементный взрыв наносит <mag> ед. урона от огня, <mag> ед. урона электричеством и вдвое меньший урон запасу сил."
     },
     {
+        "editor_id": "ccBGSSSE014_FrostDamageConcAimedCloak",
+        "form_id": "0200081E|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Unbounded Frostbite",
+        "string": "Безудержный мороз"
+    },
+    {
+        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_25",
+        "form_id": "0200084E|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Absorb <mag> points of health per second from target, for <dur> seconds.",
+        "string": "Поглощает <mag> ед. здоровья в секунду у цели в течение <dur> сек."
+    },
+    {
+        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_75",
+        "form_id": "0200084D|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Absorb Health",
+        "string": "Поглощение здоровья"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea04",
+        "form_id": "02000844|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "An elemental explosion for <mag> points of fire damage, <mag> points of shock damage, and half as much damage to stamina.",
+        "string": "Элементный взрыв наносит <mag> ед. урона от огня, <mag> ед. урона электричеством и вдвое меньший урон запасу сил."
+    },
+    {
+        "editor_id": "ccBGSSSE014_FireSpellEffect",
+        "form_id": "0200080C|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Casts a stream of long-distance fireballs in an arc. Impact creates a wall of fire that does <50> points of fire damage per second.",
+        "string": "Создает поток дальнобойных огненных шаров, летящих по дуге. При контакте появляется стена огня, которая наносит <50> ед. урона огнем в секунду."
+    },
+    {
+        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea03",
+        "form_id": "02000845|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Elemental Flare",
+        "string": "Элементная вспышка"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea02",
+        "form_id": "02000846|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "An elemental explosion for <mag> points of fire damage, <mag> points of shock damage, and half as much damage to stamina.",
+        "string": "Элементный взрыв наносит <mag> ед. урона от огня, <mag> ед. урона электричеством и вдвое меньший урон запасу сил."
+    },
+    {
+        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_25",
+        "form_id": "0200084E|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Absorb Health",
+        "string": "Поглощение здоровья"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea04",
+        "form_id": "02000844|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Elemental Flare",
+        "string": "Элементная вспышка"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FireSpellEffect",
+        "form_id": "0200080C|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Unbounded Flames",
+        "string": "Безудержный огонь"
+    },
+    {
         "editor_id": "ccBGSSSE014_OrumsAquaticEscape_InvisibillityFFSelf",
-        "form_id": "[02000848]",
+        "form_id": "02000848|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Caster is invisible for <dur> seconds. Activating an object or attacking will break the spell. Can breathe water for <dur> seconds. Improved night vision for <dur> seconds.",
+        "string": "Заклинатель на <dur> сек. становится невидимым. Длится до первого взаимодействия с предметами или атаки. Дыхание под водой на <dur> сек. Улучшено зрение в темноте на <dur> сек."
+    },
+    {
+        "editor_id": "ccBGSSSE014_MarasWrath_FireCloakFFSelf",
+        "form_id": "02000849|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "For <dur> seconds, opponents in melee range take <16> points fire damage per second.  Undead up to level <26> flee for <dur> seconds.",
+        "string": "Противники на расстоянии рукопашной атаки в течение <dur> сек. получают <16> ед. урона от огня в секунду. Нежить до <26> уровня бежит в течение <dur> сек."
+    },
+    {
+        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea02",
+        "form_id": "02000846|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Elemental Flare",
+        "string": "Элементная вспышка"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ShockBoltStorm",
+        "form_id": "02000806|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Storm Lightning",
+        "string": "Гром и молнии"
+    },
+    {
+        "editor_id": "ccBGSSSE014_OrumsAquaticEscape_NightEyeEffect",
+        "form_id": "02000DEB|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Night Eye",
+        "string": "Ночное зрение"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ShockBoltStormFX",
+        "form_id": "02000805|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Shock Bolt Storm",
+        "string": "Буря с грозой"
+    },
+    {
+        "editor_id": "ccBGSSSE014_IceSpellParalyzeEffect",
+        "form_id": "02000813|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Unbounded Freeze",
+        "string": "Безудержная заморозка"
+    },
+    {
+        "editor_id": "ccBGSSSE014_OrumsAquaticEscape_InvisibillityFFSelf",
+        "form_id": "02000848|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Orum's Aquatic Escape",
@@ -33,375 +217,199 @@
     },
     {
         "editor_id": "ccBGSSSE014_ShockDamageConcAimed",
-        "form_id": "[0200083E]",
+        "form_id": "0200083E|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "Lightning that does <mag> points of shock damage to Health and Magicka per second.",
         "string": "Электрический разряд, наносящий <mag> ед. урона в секунду здоровью и магии."
     },
     {
-        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea01",
-        "form_id": "[02000840]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Elemental Flare",
-        "string": "Элементная вспышка"
-    },
-    {
-        "editor_id": "ccBGSSSE014_UnboundedFreeze_IceSpellEffect",
-        "form_id": "[02000809]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "A freezing wind envelops the caster, knocking down nearby enemies and freezing them for <50> points of damage per second to Health and Stamina.",
-        "string": "Ледяной ветер кружится вокруг мага, сбивая с ног ближайших врагов и замораживая их, из-за чего они каждую секунду теряют по <50> ед. здоровья и запаса сил."
-    },
-    {
-        "editor_id": "ccBGSSSE014_PrideOfHirstaang_SummonBear_PlayerEffects",
-        "form_id": "[02000843]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Summons a Bear for <dur> seconds wherever the caster is pointing. Resist <50>% of frost damage for <60> seconds. Health regenerates <50>% faster for <60> seconds.",
-        "string": "Призывает медведя на <dur> секунд в точку, в которую указывает заклинатель. Сопротивление <50>% урона холодом на <60> секунд. Здоровье восстанавливается быстрее на <50>% в течение <60> секунд."
-    },
-    {
-        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_00",
-        "form_id": "[0200084A]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Absorb Health",
-        "string": "Поглощение здоровья"
-    },
-    {
-        "editor_id": "ccBGSSSE014_FF_Self_FortifyHealRate_NoUI",
-        "form_id": "[02000842]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Health regenerates <mag>% faster for <dur> seconds.",
-        "string": "Здоровье восстанавливается быстрее на <mag>% в течение <dur> сек."
-    },
-    {
-        "editor_id": "ccBGSSSE014_FF_Self_FortifyHealRate_NoUI",
-        "form_id": "[02000842]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Regenerate Health",
-        "string": "Регенерация здоровья"
-    },
-    {
         "editor_id": "ccBGSSSE014_MarasWrath_FireCloakFFSelf",
-        "form_id": "[02000849]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "For <dur> seconds, opponents in melee range take <16> points fire damage per second.  Undead up to level <26> flee for <dur> seconds.",
-        "string": "Противники на расстоянии рукопашной атаки в течение <dur> сек. получают <16> ед. урона от огня в секунду. Нежить до <26> уровня бежит в течение <dur> сек."
-    },
-    {
-        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea04",
-        "form_id": "[02000844]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Elemental Flare",
-        "string": "Элементная вспышка"
-    },
-    {
-        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea04",
-        "form_id": "[02000844]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "An elemental explosion for <mag> points of fire damage, <mag> points of shock damage, and half as much damage to stamina.",
-        "string": "Элементный взрыв наносит <mag> ед. урона от огня, <mag> ед. урона электричеством и вдвое меньший урон запасу сил."
-    },
-    {
-        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_25",
-        "form_id": "[0200084E]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Absorb <mag> points of health per second from target, for <dur> seconds.",
-        "string": "Поглощает <mag> ед. здоровья в секунду у цели в течение <dur> сек."
-    },
-    {
-        "editor_id": "ccBGSSSE014_ShockDamageConcAimed",
-        "form_id": "[0200083E]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Sparks",
-        "string": "Искры"
-    },
-    {
-        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_50",
-        "form_id": "[0200084C]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Absorb <mag> points of health per second from target, for <dur> seconds.",
-        "string": "Поглощает <mag> ед. здоровья в секунду у цели в течение <dur> сек."
-    },
-    {
-        "editor_id": "ccBGSSSE014_FrostDamageConcAimedCloak",
-        "form_id": "[0200081E]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "A blast of cold that does <mag> points of damage per second to Health and Stamina.",
-        "string": "Струя холода, наносящая <mag> ед. урона здоровью и запасу сил в секунду."
-    },
-    {
-        "editor_id": "ccBGSSSE014_FF_Self_ResistFrost_NoUI",
-        "form_id": "[02000841]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Resist Frost",
-        "string": "Сопротивление холоду"
-    },
-    {
-        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_75",
-        "form_id": "[0200084D]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Absorb <mag> points of health per second from target, for <dur> seconds.",
-        "string": "Поглощает <mag> ед. здоровья в секунду у цели в течение <dur> сек."
-    },
-    {
-        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea03",
-        "form_id": "[02000845]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "An elemental explosion for <mag> points of fire damage, <mag> points of shock damage, and half as much damage to stamina.",
-        "string": "Элементный взрыв наносит <mag> ед. урона от огня, <mag> ед. урона электричеством и вдвое меньший урон запасу сил."
-    },
-    {
-        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea02",
-        "form_id": "[02000846]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Elemental Flare",
-        "string": "Элементная вспышка"
-    },
-    {
-        "editor_id": "ccBGSSSE014_FenriksWelcome_UnlockDoorAdeptFFSelf",
-        "form_id": "[02000847]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Caster becomes invisible and can open locks with level Expert and below for <dur> seconds.  Activating an object or attacking will break the spell.",
-        "string": "Заклинатель на <dur> сек. становится невидимым и может вскрывать замки сложного уровня и ниже. Длится до первого взаимодействия с предметами или атаки."
-    },
-    {
-        "editor_id": "ccBGSSSE014_FireSpellEffect",
-        "form_id": "[0200080C]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Casts a stream of long-distance fireballs in an arc. Impact creates a wall of fire that does <50> points of fire damage per second.",
-        "string": "Создает поток дальнобойных огненных шаров, летящих по дуге. При контакте появляется стена огня, которая наносит <50> ед. урона огнем в секунду."
-    },
-    {
-        "editor_id": "ccBGSSSE014_ShockEffectCloak",
-        "form_id": "[02000807]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Targets in melee range take <40> points of shock damage per second to Health, and half that to Magicka.  Random lightning strikes deal an additional <30> damage.",
-        "string": "На расстоянии рукопашной атаки наносит <40> ед. урона электричеством в секунду здоровью и вдвое меньший урон магии.  Случайные удары молний наносят дополнительные <30> ед. урона."
-    },
-    {
-        "editor_id": "ccBGSSSE014_ShockBoltStorm",
-        "form_id": "[02000806]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Storm Lightning",
-        "string": "Гром и молнии"
-    },
-    {
-        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea02",
-        "form_id": "[02000846]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "An elemental explosion for <mag> points of fire damage, <mag> points of shock damage, and half as much damage to stamina.",
-        "string": "Элементный взрыв наносит <mag> ед. урона от огня, <mag> ед. урона электричеством и вдвое меньший урон запасу сил."
-    },
-    {
-        "editor_id": "ccBGSSSE014_FrostDamageConcAimedCloak",
-        "form_id": "[0200081E]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Unbounded Frostbite",
-        "string": "Безудержный мороз"
-    },
-    {
-        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_50",
-        "form_id": "[0200084C]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Absorb Health",
-        "string": "Поглощение здоровья"
-    },
-    {
-        "editor_id": "ccBGSSSE014_PrideOfHirstaang_SummonBear_PlayerEffects",
-        "form_id": "[02000843]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Pride of Hirstaang",
-        "string": "Гордость Хирстаанга"
-    },
-    {
-        "editor_id": "ccBGSSSE014_MarasWrath_ConfDownConcAimed",
-        "form_id": "[0200084B]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Turn Undead Fear",
-        "string": "Страх отпугивания нежити"
-    },
-    {
-        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_75",
-        "form_id": "[0200084D]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Absorb Health",
-        "string": "Поглощение здоровья"
-    },
-    {
-        "editor_id": "ccBGSSSE014_OrumsAquaticEscape_NightEyeEffect",
-        "form_id": "[02000DEB]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Night Eye",
-        "string": "Ночное зрение"
-    },
-    {
-        "editor_id": "ccBGSSSE014_ShockEffectCloak",
-        "form_id": "[02000807]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Unbounded Storms",
-        "string": "Безудержный шторм"
-    },
-    {
-        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_00",
-        "form_id": "[0200084A]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Absorb <mag> points of health per second from target, for <dur> seconds.",
-        "string": "Поглощает <mag> ед. здоровья в секунду у цели в течение <dur> сек."
-    },
-    {
-        "editor_id": "ccBGSSSE014_FF_Self_ResistFrost_NoUI",
-        "form_id": "[02000841]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Resist <mag>% of frost damage for <dur> seconds.",
-        "string": "Сопротивление <mag>% урона холодом на <dur> секунд."
-    },
-    {
-        "editor_id": "ccBGSSSE014_OrumsAquaticEscape_WaterbreathingFFSelf",
-        "form_id": "[02000DEA]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Water Breathing",
-        "string": "Водное дыхание"
-    },
-    {
-        "editor_id": "ccBGSSSE014_RuneParalysisFFLocation",
-        "form_id": "[02000D62]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Cast on a nearby surface, it explodes when enemies are nearby, immobilizing them for <dur> seconds.",
-        "string": "Руна накладывается на близлежащую поверхность и при приближении врагов взрывается, обездвиживая их на <dur> сек."
-    },
-    {
-        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea03",
-        "form_id": "[02000845]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Elemental Flare",
-        "string": "Элементная вспышка"
-    },
-    {
-        "editor_id": "ccBGSSSE014_MarasWrath_FireCloakFFSelf",
-        "form_id": "[02000849]",
+        "form_id": "02000849|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Mara's Wrath",
         "string": "Гнев Мары"
     },
     {
-        "editor_id": "ccBGSSSE014_ShockBoltStormFX",
-        "form_id": "[02000805]",
+        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea01",
+        "form_id": "02000840|ccbgssse014-spellpack01.esl",
         "index": null,
-        "type": "MGEF FULL",
-        "original": "Shock Bolt Storm",
-        "string": "Буря с грозой"
+        "type": "MGEF DNAM",
+        "original": "An elemental explosion for <mag> points of fire damage, <mag> points of shock damage, and half as much damage to stamina.",
+        "string": "Элементный взрыв наносит <mag> ед. урона от огня, <mag> ед. урона электричеством и вдвое меньший урон запасу сил."
     },
     {
-        "editor_id": "ccBGSSSE014_FireSpellEffect",
-        "form_id": "[0200080C]",
+        "editor_id": "ccBGSSSE014_OrumsAquaticEscape_WaterbreathingFFSelf",
+        "form_id": "02000DEA|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "MGEF FULL",
-        "original": "Unbounded Flames",
-        "string": "Безудержный огонь"
+        "original": "Water Breathing",
+        "string": "Водное дыхание"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ShockDamageConcAimed",
+        "form_id": "0200083E|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Sparks",
+        "string": "Искры"
+    },
+    {
+        "editor_id": "ccBGSSSE014_PrideOfHirstaang_SummonBear_PlayerEffects",
+        "form_id": "02000843|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Summons a Bear for <dur> seconds wherever the caster is pointing. Resist <50>% of frost damage for <60> seconds. Health regenerates <50>% faster for <60> seconds.",
+        "string": "Призывает медведя на <dur> секунд в точку, в которую указывает заклинатель. Сопротивление <50>% урона холодом на <60> секунд. Здоровье восстанавливается быстрее на <50>% в течение <60> секунд."
+    },
+    {
+        "editor_id": "ccBGSSSE014_FF_Self_FortifyHealRate_NoUI",
+        "form_id": "02000842|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Health regenerates <mag>% faster for <dur> seconds.",
+        "string": "Здоровье восстанавливается быстрее на <mag>% в течение <dur> сек."
+    },
+    {
+        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea01",
+        "form_id": "02000840|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Elemental Flare",
+        "string": "Элементная вспышка"
     },
     {
         "editor_id": "ccBGSSSE014_FenriksWelcome_UnlockDoorAdeptFFSelf",
-        "form_id": "[02000847]",
+        "form_id": "02000847|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Caster becomes invisible and can open locks with level Expert and below for <dur> seconds.  Activating an object or attacking will break the spell.",
+        "string": "Заклинатель на <dur> сек. становится невидимым и может вскрывать замки сложного уровня и ниже. Длится до первого взаимодействия с предметами или атаки."
+    },
+    {
+        "editor_id": "ccBGSSSE014_RuneParalysisFFLocation",
+        "form_id": "02000D62|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Cast on a nearby surface, it explodes when enemies are nearby, immobilizing them for <dur> seconds.",
+        "string": "Руна накладывается на близлежащую поверхность и при приближении врагов взрывается, обездвиживая их на <dur> сек."
+    },
+    {
+        "editor_id": "ccBGSSSE014_MarasWrath_ConfDownConcAimed",
+        "form_id": "0200084B|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Turn Undead Fear",
+        "string": "Страх отпугивания нежити"
+    },
+    {
+        "editor_id": "ccBGSSSE014_PrideOfHirstaang_SummonBear_PlayerEffects",
+        "form_id": "02000843|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Pride of Hirstaang",
+        "string": "Гордость Хирстаанга"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FF_Self_FortifyHealRate_NoUI",
+        "form_id": "02000842|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Regenerate Health",
+        "string": "Регенерация здоровья"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FenriksWelcome_UnlockDoorAdeptFFSelf",
+        "form_id": "02000847|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Fenrik's Welcome",
         "string": "Радушие Фенрика"
     },
     {
-        "editor_id": "ccBGSSSE014_OrumsAquaticEscape_InvisibillityFFSelf",
-        "form_id": "[02000848]",
+        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_00",
+        "form_id": "0200084A|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "MGEF DNAM",
-        "original": "Caster is invisible for <dur> seconds. Activating an object or attacking will break the spell. Can breathe water for <dur> seconds. Improved night vision for <dur> seconds.",
-        "string": "Заклинатель на <dur> сек. становится невидимым. Длится до первого взаимодействия с предметами или атаки. Дыхание под водой на <dur> сек. Улучшено зрение в темноте на <dur> сек."
+        "original": "Absorb <mag> points of health per second from target, for <dur> seconds.",
+        "string": "Поглощает <mag> ед. здоровья в секунду у цели в течение <dur> сек."
+    },
+    {
+        "editor_id": "ccBGSSSE014_RuneParalysisFFLocation",
+        "form_id": "02000D62|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Paralysis Rune",
+        "string": "Руна паралича"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FF_Self_ResistFrost_NoUI",
+        "form_id": "02000841|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Resist <mag>% of frost damage for <dur> seconds.",
+        "string": "Сопротивление <mag>% урона холодом на <dur> секунд."
+    },
+    {
+        "editor_id": "ccBGSSSE014_ShockEffectCloak",
+        "form_id": "02000807|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Targets in melee range take <40> points of shock damage per second to Health, and half that to Magicka.  Random lightning strikes deal an additional <30> damage.",
+        "string": "На расстоянии рукопашной атаки наносит <40> ед. урона электричеством в секунду здоровью и вдвое меньший урон магии.  Случайные удары молний наносят дополнительные <30> ед. урона."
     },
     {
         "editor_id": "ccBGSSSE014_UnboundedFreeze_IceSpellEffect",
-        "form_id": "[02000809]",
+        "form_id": "02000809|ccbgssse014-spellpack01.esl",
         "index": null,
-        "type": "MGEF FULL",
-        "original": "Unbounded Freeze",
-        "string": "Безудержная заморозка"
+        "type": "MGEF DNAM",
+        "original": "A freezing wind envelops the caster, knocking down nearby enemies and freezing them for <50> points of damage per second to Health and Stamina.",
+        "string": "Ледяной ветер кружится вокруг мага, сбивая с ног ближайших врагов и замораживая их, из-за чего они каждую секунду теряют по <50> ед. здоровья и запаса сил."
     },
     {
-        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_25",
-        "form_id": "[0200084E]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Absorb Health",
-        "string": "Поглощение здоровья"
-    },
-    {
-        "editor_id": "ccBGSSSE014_EnchRobesFortifyDestructionAndAlteration02",
-        "form_id": "[0200081F]",
+        "editor_id": "ccBGSSSE014_EnchRobesFortifyConjurationAndIllusion03",
+        "form_id": "02000832|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "ENCH FULL",
-        "original": "Fortify Destruction and Alteration",
-        "string": "Повышение навыка: разрушение и изменение"
+        "original": "Fortify Conjuration & Illusion",
+        "string": "Повышение навыка: колдовство и иллюзия"
     },
     {
         "editor_id": "ccBGSSSE014_EnchRobesFortifyConjurationAndIllusion05",
-        "form_id": "[02000834]",
+        "form_id": "02000834|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Fortify Conjuration & Illusion",
         "string": "Повышение навыка: колдовство и иллюзия"
     },
     {
-        "editor_id": "ccBGSSSE014_EnchRobesFortifyDestructionAndAlteration01",
-        "form_id": "[02000823]",
+        "editor_id": "ccBGSSSE014_EnchRobesFortifyDestructionAndAlteration03",
+        "form_id": "02000820|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Fortify Destruction and Alteration",
         "string": "Повышение навыка: разрушение и изменение"
     },
     {
-        "editor_id": "ccBGSSSE014_EnchRobesFortifyConjurationAndIllusion04",
-        "form_id": "[02000833]",
+        "editor_id": "ccBGSSSE014_EnchRobesFortifyDestructionAndAlteration05",
+        "form_id": "02000822|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "ENCH FULL",
-        "original": "Fortify Conjuration & Illusion",
-        "string": "Повышение навыка: колдовство и иллюзия"
+        "original": "Fortify Destruction and Alteration",
+        "string": "Повышение навыка: разрушение и изменение"
+    },
+    {
+        "editor_id": "ccBGSSSE014_EnchRobesFortifyDestructionAndAlteration02",
+        "form_id": "0200081F|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Fortify Destruction and Alteration",
+        "string": "Повышение навыка: разрушение и изменение"
     },
     {
         "editor_id": "ccBGSSSE014_EnchRobesFortifyDestructionAndAlteration04",
-        "form_id": "[02000821]",
+        "form_id": "02000821|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Fortify Destruction and Alteration",
@@ -409,15 +417,23 @@
     },
     {
         "editor_id": "ccBGSSSE014_EnchRobesFortifyConjurationAndIllusion01",
-        "form_id": "[02000830]",
+        "form_id": "02000830|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Fortify Conjuration & Illusion",
         "string": "Повышение навыка: колдовство и иллюзия"
     },
     {
-        "editor_id": "ccBGSSSE014_EnchRobesFortifyConjurationAndIllusion03",
-        "form_id": "[02000832]",
+        "editor_id": "ccBGSSSE014_EnchRobesFortifyDestructionAndAlteration01",
+        "form_id": "02000823|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Fortify Destruction and Alteration",
+        "string": "Повышение навыка: разрушение и изменение"
+    },
+    {
+        "editor_id": "ccBGSSSE014_EnchRobesFortifyConjurationAndIllusion04",
+        "form_id": "02000833|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Fortify Conjuration & Illusion",
@@ -425,135 +441,111 @@
     },
     {
         "editor_id": "ccBGSSSE014_EnchRobesFortifyConjurationAndIllusion02",
-        "form_id": "[02000831]",
+        "form_id": "02000831|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Fortify Conjuration & Illusion",
         "string": "Повышение навыка: колдовство и иллюзия"
     },
     {
-        "editor_id": "ccBGSSSE014_EnchRobesFortifyDestructionAndAlteration05",
-        "form_id": "[02000822]",
-        "index": null,
-        "type": "ENCH FULL",
-        "original": "Fortify Destruction and Alteration",
-        "string": "Повышение навыка: разрушение и изменение"
-    },
-    {
-        "editor_id": "ccBGSSSE014_EnchRobesFortifyDestructionAndAlteration03",
-        "form_id": "[02000820]",
-        "index": null,
-        "type": "ENCH FULL",
-        "original": "Fortify Destruction and Alteration",
-        "string": "Повышение навыка: разрушение и изменение"
-    },
-    {
         "editor_id": "ccBGSSSE014_Oblivion_MarasWrath",
-        "form_id": "[02000855]",
+        "form_id": "02000855|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Mara's Wrath",
         "string": "Гнев Мары"
     },
     {
-        "editor_id": "ccBGSSSE014_LightningCloakDmg",
-        "form_id": "[02000824]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Lightning Cloak Drain",
-        "string": "Поглощение плаща молний"
-    },
-    {
-        "editor_id": "ccBGSSSE014_Oblivion_Absorb01_ChokingGrasp",
-        "form_id": "[0200085A]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Choking Grasp",
-        "string": "Удушающая хватка"
-    },
-    {
-        "editor_id": "ccBGSSSE014_UnboundedFlames",
-        "form_id": "[0200080E]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Unbounded Flames",
-        "string": "Безудержный огонь"
-    },
-    {
-        "editor_id": "ccBGSSSE014_Oblivion_Absorb04_TouchOfDeath",
-        "form_id": "[02000857]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Touch of Death",
-        "string": "Прикосновение смерти"
-    },
-    {
-        "editor_id": "ccBGSSSE014_HazardShockSpell01",
-        "form_id": "[02000860]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Shock",
-        "string": "Шок"
-    },
-    {
-        "editor_id": "ccBGSSSE014_Oblivion_Absorb02_Strangulation",
-        "form_id": "[02000859]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Strangulation",
-        "string": "Удушение"
-    },
-    {
         "editor_id": "ccBGSSSE014_Oblivion_Elemental01Flare",
-        "form_id": "[02000850]",
+        "form_id": "02000850|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Elemental Flare",
         "string": "Элементная вспышка"
     },
     {
-        "editor_id": "ccBGSSSE014_Oblivion_FenriksWelcome",
-        "form_id": "[0200084F]",
+        "editor_id": "ccBGSSSE014_UnboundedFlames",
+        "form_id": "0200080E|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "SPEL FULL",
-        "original": "Fenrik's Welcome",
-        "string": "Радушие Фенрика"
+        "original": "Unbounded Flames",
+        "string": "Безудержный огонь"
     },
     {
-        "editor_id": "ccBGSSSE014_FrostCloakDmg",
-        "form_id": "[02000825]",
+        "editor_id": "ccBGSSSE014_Oblivion_Elemental03Burst",
+        "form_id": "0200085B|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "SPEL FULL",
-        "original": "Frost Cloak Freeze",
-        "string": "Замораживание морозным плащом"
+        "original": "Elemental Burst",
+        "string": "Элементный толчок"
     },
     {
         "editor_id": "ccBGSSSE014_Oblivion_Absorb03_HangmansNoose",
-        "form_id": "[02000858]",
+        "form_id": "02000858|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Hangman's Noose",
         "string": "Петля висельника"
     },
     {
+        "editor_id": "ccBGSSSE014_LightningCloakDmg",
+        "form_id": "02000824|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Lightning Cloak Drain",
+        "string": "Поглощение плаща молний"
+    },
+    {
         "editor_id": "ccBGSSSE014_Oblivion_Elemental04Blast",
-        "form_id": "[02000856]",
+        "form_id": "02000856|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Elemental Blast",
         "string": "Элементный взрыв"
     },
     {
-        "editor_id": "ccBGSSSE014_ParalysisRune",
-        "form_id": "[02000D64]",
+        "editor_id": "ccBGSSSE014_UnboundedStorms",
+        "form_id": "02000808|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "SPEL FULL",
-        "original": "Paralysis Rune",
-        "string": "Руна паралича"
+        "original": "Unbounded Storms",
+        "string": "Безудержный шторм"
     },
     {
-        "editor_id": "ccBGSSSE014_Oblivion_PrideOfHirstaang_SecondaryEffects",
-        "form_id": "[02000852]",
+        "editor_id": "ccBGSSSE014_Oblivion_OrumsAquaticEscape",
+        "form_id": "02000851|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Orum's Aquatic Escape",
+        "string": "Побег Орума по воде"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FrostCloakDmg",
+        "form_id": "02000825|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Frost Cloak Freeze",
+        "string": "Замораживание морозным плащом"
+    },
+    {
+        "editor_id": "ccBGSSSE014_Oblivion_FenriksWelcome",
+        "form_id": "0200084F|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Fenrik's Welcome",
+        "string": "Радушие Фенрика"
+    },
+    {
+        "editor_id": "ccBGSSSE014_UnboundedFreeze",
+        "form_id": "0200080D|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Unbounded Freezing",
+        "string": "Безудержный мороз"
+    },
+    {
+        "editor_id": "ccBGSSSE014_Oblivion_PrideOfHirstaang",
+        "form_id": "02000853|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Pride of Hirstaang",
@@ -561,151 +553,87 @@
     },
     {
         "editor_id": "ccBGSSSE014_Oblivion_Elemental02Bolt",
-        "form_id": "[0200085F]",
+        "form_id": "0200085F|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Elemental Bolt",
         "string": "Элементная молния"
     },
     {
-        "editor_id": "ccBGSSSE014_UnboundedFreeze",
-        "form_id": "[0200080D]",
+        "editor_id": "ccBGSSSE014_Oblivion_Absorb04_TouchOfDeath",
+        "form_id": "02000857|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "SPEL FULL",
-        "original": "Unbounded Freezing",
-        "string": "Безудержный мороз"
+        "original": "Touch of Death",
+        "string": "Прикосновение смерти"
     },
     {
-        "editor_id": "ccBGSSSE014_Oblivion_Elemental03Burst",
-        "form_id": "[0200085B]",
+        "editor_id": "ccBGSSSE014_HazardShockSpell01",
+        "form_id": "02000860|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "SPEL FULL",
-        "original": "Elemental Burst",
-        "string": "Элементный толчок"
+        "original": "Shock",
+        "string": "Шок"
     },
     {
-        "editor_id": "ccBGSSSE014_Oblivion_OrumsAquaticEscape",
-        "form_id": "[02000851]",
+        "editor_id": "ccBGSSSE014_ParalysisRune",
+        "form_id": "02000D64|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "SPEL FULL",
-        "original": "Orum's Aquatic Escape",
-        "string": "Побег Орума по воде"
-    },
-    {
-        "editor_id": "ccBGSSSE014_ShockBoltSpell",
-        "form_id": "[0200080A]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Storm Call Lightning Bolt",
-        "string": "Грозовой зов: Молния"
-    },
-    {
-        "editor_id": "ccBGSSSE014_UnboundedStorms",
-        "form_id": "[02000808]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Unbounded Storms",
-        "string": "Безудержный шторм"
-    },
-    {
-        "editor_id": "ccBGSSSE014_Oblivion_PrideOfHirstaang",
-        "form_id": "[02000853]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Pride of Hirstaang",
-        "string": "Гордость Хирстаанга"
+        "original": "Paralysis Rune",
+        "string": "Руна паралича"
     },
     {
         "editor_id": "ccBGSSSE014_MarasWrath_FlameCloakDmg",
-        "form_id": "[02000854]",
+        "form_id": "02000854|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Flames",
         "string": "Пламя"
     },
     {
-        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange",
-        "form_id": "[02000826]",
+        "editor_id": "ccBGSSSE014_Oblivion_PrideOfHirstaang_SecondaryEffects",
+        "form_id": "02000852|ccbgssse014-spellpack01.esl",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Mage Robes",
-        "string": "Одеяние мага"
+        "type": "SPEL FULL",
+        "original": "Pride of Hirstaang",
+        "string": "Гордость Хирстаанга"
     },
     {
-        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackBlue_Ench04",
-        "form_id": "[0200082B]",
+        "editor_id": "ccBGSSSE014_Oblivion_Absorb01_ChokingGrasp",
+        "form_id": "0200085A|ccbgssse014-spellpack01.esl",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Expert Robes of Destruction & Alteration",
-        "string": "Одеяние эксперта школы разрушения и изменения"
+        "type": "SPEL FULL",
+        "original": "Choking Grasp",
+        "string": "Удушающая хватка"
     },
     {
-        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange_Ench04",
-        "form_id": "[02000838]",
+        "editor_id": "ccBGSSSE014_Oblivion_Absorb02_Strangulation",
+        "form_id": "02000859|ccbgssse014-spellpack01.esl",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Expert Robes of Conjuration & Illusion",
-        "string": "Одеяние эксперта школы колдовства и иллюзии"
+        "type": "SPEL FULL",
+        "original": "Strangulation",
+        "string": "Удушение"
     },
     {
-        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange_Ench05",
-        "form_id": "[02000839]",
+        "editor_id": "ccBGSSSE014_ShockBoltSpell",
+        "form_id": "0200080A|ccbgssse014-spellpack01.esl",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Master Robes of Conjuration & Illusion",
-        "string": "Одеяние мастера школы колдовства и иллюзии"
-    },
-    {
-        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackBlue_Ench03",
-        "form_id": "[0200082A]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Adept Robes of Destruction & Alteration",
-        "string": "Одеяние адепта школы разрушения и изменения"
+        "type": "SPEL FULL",
+        "original": "Storm Call Lightning Bolt",
+        "string": "Грозовой зов: Молния"
     },
     {
         "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackBlue",
-        "form_id": "[0200082D]",
+        "form_id": "0200082D|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Mage Robes",
         "string": "Одеяние мага"
     },
     {
-        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange_Ench01",
-        "form_id": "[02000835]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Novice Robes of Conjuration & Illusion",
-        "string": "Одеяние новичка школы колдовства и иллюзии"
-    },
-    {
-        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackBlue_Ench05",
-        "form_id": "[0200082C]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Master Robes of Destruction & Alteration",
-        "string": "Одеяние мастера школы разрушения и изменения"
-    },
-    {
-        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange_Ench02",
-        "form_id": "[02000836]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Apprentice Robes of Conjuration & Illusion",
-        "string": "Одеяние ученика школы колдовства и иллюзии"
-    },
-    {
-        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackBlue_Ench02",
-        "form_id": "[02000829]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Apprentice Robes of Destruction & Alteration",
-        "string": "Одеяние ученика школы разрушения и изменения"
-    },
-    {
         "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackBlue_Ench01",
-        "form_id": "[02000827]",
+        "form_id": "02000827|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Novice Robes of Destruction & Alteration",
@@ -713,87 +641,295 @@
     },
     {
         "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange_Ench03",
-        "form_id": "[02000837]",
+        "form_id": "02000837|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Adept Robes of Conjuration & Illusion",
         "string": "Одеяние адепта школы колдовства и иллюзии"
     },
     {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental02Bolt",
-        "form_id": "[02000863]",
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackBlue_Ench03",
+        "form_id": "0200082A|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Adept Robes of Destruction & Alteration",
+        "string": "Одеяние адепта школы разрушения и изменения"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange_Ench02",
+        "form_id": "02000836|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Apprentice Robes of Conjuration & Illusion",
+        "string": "Одеяние ученика школы колдовства и иллюзии"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange_Ench01",
+        "form_id": "02000835|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Novice Robes of Conjuration & Illusion",
+        "string": "Одеяние новичка школы колдовства и иллюзии"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange_Ench05",
+        "form_id": "02000839|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Master Robes of Conjuration & Illusion",
+        "string": "Одеяние мастера школы колдовства и иллюзии"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackBlue_Ench02",
+        "form_id": "02000829|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Apprentice Robes of Destruction & Alteration",
+        "string": "Одеяние ученика школы разрушения и изменения"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackBlue_Ench05",
+        "form_id": "0200082C|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Master Robes of Destruction & Alteration",
+        "string": "Одеяние мастера школы разрушения и изменения"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange_Ench04",
+        "form_id": "02000838|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Expert Robes of Conjuration & Illusion",
+        "string": "Одеяние эксперта школы колдовства и иллюзии"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange",
+        "form_id": "02000826|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Mage Robes",
+        "string": "Одеяние мага"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackBlue_Ench04",
+        "form_id": "0200082B|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Expert Robes of Destruction & Alteration",
+        "string": "Одеяние эксперта школы разрушения и изменения"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_UnboundedLightning",
+        "form_id": "02000817|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nUnbounded Storms",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nБезудержный шторм"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Alter_FenriksWelcome",
+        "form_id": "02000867|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nFenrik's Welcome",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nРадушие Фенрика"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental03Burst",
+        "form_id": "02000864|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "BOOK FULL",
-        "original": "Spell Tome: Elemental Bolt",
-        "string": "Том заклинаний: Элементная молния"
+        "original": "Spell Tome: Elemental Burst",
+        "string": "Том заклинаний: Элементный толчок"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental01Flare",
+        "form_id": "02000862|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Elemental Flare",
+        "string": "Том заклинаний: Элементная вспышка"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_UnboundedFire",
+        "form_id": "02000815|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Unbounded Flames",
+        "string": "Книга заклинаний: Безудержный огонь"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_ConjureExpert_PrideOfHirstaang",
+        "form_id": "02000861|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nPride of Hirstaang",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nГордость Хирстаанга"
     },
     {
         "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental04Blast",
-        "form_id": "[02000865]",
+        "form_id": "02000865|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "BOOK DESC",
         "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nElemental Blast",
         "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nЭлементный взрыв"
     },
     {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb04_TouchOfDeath",
-        "form_id": "[0200086C]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nTouch of Death",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nПрикосновение смерти"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental02Bolt",
-        "form_id": "[02000863]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nElemental Bolt",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nЭлементная молния"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_UnboundedIce",
-        "form_id": "[02000816]",
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_UnboundedLightning",
+        "form_id": "02000817|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "BOOK FULL",
-        "original": "Spell Tome: Unbounded Freezing",
-        "string": "Книга заклинаний: Безудержный мороз"
+        "original": "Spell Tome: Unbounded Storms",
+        "string": "Книга заклинаний: Безудержный шторм"
     },
     {
-        "editor_id": "ccBGSSSE014_SpellTome_Illus_Adept_OrumsAquaticEscape",
-        "form_id": "[02000866]",
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_MarasWrath",
+        "form_id": "02000868|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nOrum's Aquatic Escape",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nПобег Орума по воде"
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nMara's Wrath",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nГнев Мары"
     },
     {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb01_ChokingGrasp",
-        "form_id": "[02000869]",
+        "editor_id": "ccBGSSSE014_SpellTome_Alter_ParalysisRune",
+        "form_id": "02000818|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nParalysis Rune",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nРуна паралича"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Alter_FenriksWelcome",
+        "form_id": "02000867|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "BOOK FULL",
-        "original": "Spell Tome: Choking Grasp",
-        "string": "Том заклинаний: Удушающая хватка"
+        "original": "Spell Tome: Fenrik's Welcome",
+        "string": "Том заклинаний: Радушие Фенрика"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_ConjureExpert_PrideOfHirstaang",
+        "form_id": "02000861|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Pride of Hirstaang",
+        "string": "Том заклинаний: Гордость Хирстаанга"
     },
     {
         "editor_id": "ccBGSSSE014_SpellTome_Dest_UnboundedFire",
-        "form_id": "[02000815]",
+        "form_id": "02000815|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "BOOK DESC",
         "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nUnbounded Flames",
         "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nБезудержный огонь"
     },
     {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb02_Strangulation",
-        "form_id": "[0200086A]",
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental04Blast",
+        "form_id": "02000865|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "BOOK FULL",
-        "original": "Spell Tome: Strangulation",
-        "string": "Том заклинаний: Удушение"
+        "original": "Spell Tome: Elemental Blast",
+        "string": "Том заклинаний: Элементный взрыв"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_MarasWrath",
+        "form_id": "02000868|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Mara's Wrath",
+        "string": "Том заклинаний: Гнев Мары"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Alter_ParalysisRune",
+        "form_id": "02000818|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Paralysis Rune",
+        "string": "Книга заклинаний: Руна паралича"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb01_ChokingGrasp",
+        "form_id": "02000869|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nChoking Grasp",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nУдушающая хватка"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Illus_Adept_OrumsAquaticEscape",
+        "form_id": "02000866|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nOrum's Aquatic Escape",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nПобег Орума по воде"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental02Bolt",
+        "form_id": "02000863|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nElemental Bolt",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nЭлементная молния"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb01_ChokingGrasp",
+        "form_id": "02000869|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Choking Grasp",
+        "string": "Том заклинаний: Удушающая хватка"
     },
     {
         "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb03_HangmansNoose",
-        "form_id": "[0200086B]",
+        "form_id": "0200086B|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nHangman's Noose",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nПетля висельника"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_UnboundedIce",
+        "form_id": "02000816|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nUnbounded Freezing",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nБезудержный мороз"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Illus_Adept_OrumsAquaticEscape",
+        "form_id": "02000866|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Orum's Aquatic Escape",
+        "string": "Том заклинаний: Побег Орума по воде"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb04_TouchOfDeath",
+        "form_id": "0200086C|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nTouch of Death",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nПрикосновение смерти"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb02_Strangulation",
+        "form_id": "0200086A|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nStrangulation",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nУдушение"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental02Bolt",
+        "form_id": "02000863|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Elemental Bolt",
+        "string": "Том заклинаний: Элементная молния"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb03_HangmansNoose",
+        "form_id": "0200086B|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "Spell Tome: Hangman's Noose",
@@ -801,103 +937,23 @@
     },
     {
         "editor_id": "ccBGSSSE014_SpellTome_Dest_UnboundedIce",
-        "form_id": "[02000816]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nUnbounded Freezing",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nБезудержный мороз"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_ConjureExpert_PrideOfHirstaang",
-        "form_id": "[02000861]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nPride of Hirstaang",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nГордость Хирстаанга"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb03_HangmansNoose",
-        "form_id": "[0200086B]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nHangman's Noose",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nПетля висельника"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Alter_FenriksWelcome",
-        "form_id": "[02000867]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nFenrik's Welcome",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nРадушие Фенрика"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb02_Strangulation",
-        "form_id": "[0200086A]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nStrangulation",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nУдушение"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_UnboundedLightning",
-        "form_id": "[02000817]",
+        "form_id": "02000816|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "BOOK FULL",
-        "original": "Spell Tome: Unbounded Storms",
-        "string": "Книга заклинаний: Безудержный шторм"
+        "original": "Spell Tome: Unbounded Freezing",
+        "string": "Книга заклинаний: Безудержный мороз"
     },
     {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_UnboundedFire",
-        "form_id": "[02000815]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Spell Tome: Unbounded Flames",
-        "string": "Книга заклинаний: Безудержный огонь"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental01Flare",
-        "form_id": "[02000862]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Spell Tome: Elemental Flare",
-        "string": "Том заклинаний: Элементная вспышка"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_MarasWrath",
-        "form_id": "[02000868]",
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental03Burst",
+        "form_id": "02000864|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nMara's Wrath",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nГнев Мары"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Illus_Adept_OrumsAquaticEscape",
-        "form_id": "[02000866]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Spell Tome: Orum's Aquatic Escape",
-        "string": "Том заклинаний: Побег Орума по воде"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Alter_ParalysisRune",
-        "form_id": "[02000818]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Spell Tome: Paralysis Rune",
-        "string": "Книга заклинаний: Руна паралича"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_UnboundedLightning",
-        "form_id": "[02000817]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nUnbounded Storms",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nБезудержный шторм"
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nElemental Burst",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nЭлементный толчок"
     },
     {
         "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb04_TouchOfDeath",
-        "form_id": "[0200086C]",
+        "form_id": "0200086C|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "Spell Tome: Touch of Death",
@@ -905,79 +961,23 @@
     },
     {
         "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental01Flare",
-        "form_id": "[02000862]",
+        "form_id": "02000862|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "BOOK DESC",
         "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nElemental Flare",
         "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nЭлементная вспышка"
     },
     {
-        "editor_id": "ccBGSSSE014_SpellTome_Alter_ParalysisRune",
-        "form_id": "[02000818]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nParalysis Rune",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nРуна паралича"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_MarasWrath",
-        "form_id": "[02000868]",
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb02_Strangulation",
+        "form_id": "0200086A|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "BOOK FULL",
-        "original": "Spell Tome: Mara's Wrath",
-        "string": "Том заклинаний: Гнев Мары"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb01_ChokingGrasp",
-        "form_id": "[02000869]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nChoking Grasp",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nУдушающая хватка"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental03Burst",
-        "form_id": "[02000864]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nElemental Burst",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nЭлементный толчок"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental04Blast",
-        "form_id": "[02000865]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Spell Tome: Elemental Blast",
-        "string": "Том заклинаний: Элементный взрыв"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental03Burst",
-        "form_id": "[02000864]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Spell Tome: Elemental Burst",
-        "string": "Том заклинаний: Элементный толчок"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_ConjureExpert_PrideOfHirstaang",
-        "form_id": "[02000861]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Spell Tome: Pride of Hirstaang",
-        "string": "Том заклинаний: Гордость Хирстаанга"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Alter_FenriksWelcome",
-        "form_id": "[02000867]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Spell Tome: Fenrik's Welcome",
-        "string": "Том заклинаний: Радушие Фенрика"
+        "original": "Spell Tome: Strangulation",
+        "string": "Том заклинаний: Удушение"
     },
     {
         "editor_id": "ccBGSSSE_TomesStrongBox_QA",
-        "form_id": "[02000881]",
+        "form_id": "02000881|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "CONT FULL",
         "original": "Strong Box BGSSSE014",
@@ -985,7 +985,7 @@
     },
     {
         "editor_id": "ccBGSSSE014_BossChestSpellTomesAll",
-        "form_id": "[02000882]",
+        "form_id": "02000882|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "CONT FULL",
         "original": "Ancient Tome Chest",
@@ -993,7 +993,7 @@
     },
     {
         "editor_id": "ccBGSSSE014_SummonBear",
-        "form_id": "[02000873]",
+        "form_id": "02000873|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Bear",
@@ -1001,7 +1001,7 @@
     },
     {
         "editor_id": "ccBGSSSE014SkyShockHazard",
-        "form_id": "[0200080B]",
+        "form_id": "0200080B|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "HAZD FULL",
         "original": "Shock",
@@ -1009,31 +1009,23 @@
     },
     {
         "editor_id": "ccBGSSSE014_ShockBarrierHazard01",
-        "form_id": "[02000879]",
+        "form_id": "02000879|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "HAZD FULL",
         "original": "Shock",
         "string": "Шок"
     },
     {
-        "editor_id": "HobsFallCave01",
-        "form_id": "[0001525F]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Hob's Fall Cave",
-        "string": "Пещера Хоба"
+        "editor_id": "ccBGSSSE014_SpellPack_StartupQuest",
+        "form_id": "0200083C|ccbgssse014-spellpack01.esl",
+        "index": 85,
+        "type": "QUST CNAM",
+        "original": "I've heard tales of a long-lost ancient library of spell tomes, rumored to be somewhere in the area of Winterhold.  I should explore the area and see what I can find.",
+        "string": "Я слышал рассказы о давно затерянной библиотеке, полной томов заклинаний. Говорят, что она находится где-то в Винтерхолде. Надо осмотреть эту область, может быть, я что-то найду."
     },
     {
         "editor_id": "ccBGSSSE014_SpellPack_StartupQuest",
-        "form_id": "[0200083C]",
-        "index": 0,
-        "type": "QUST NNAM",
-        "original": "Find the Lost Library of Spell Tomes",
-        "string": "Найти Потерянную библиотеку с томами заклинаний"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellPack_StartupQuest",
-        "form_id": "[0200083C]",
+        "form_id": "0200083C|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "QUST FULL",
         "original": "The Lost Library",
@@ -1041,34 +1033,34 @@
     },
     {
         "editor_id": "ccBGSSSE014_SpellPack_StartupQuest",
-        "form_id": "[0200083C]",
-        "index": 83,
-        "type": "QUST CNAM",
-        "original": "I've heard tales of a long-lost ancient library of spell tomes, rumored to be somewhere in the area of Winterhold.  I should explore the area and see what I can find.",
-        "string": "Я слышал рассказы о давно затерянной библиотеке, полной томов заклинаний. Говорят, что она находится где-то в Винтерхолде. Надо осмотреть эту область, может быть, я что-то найду."
+        "form_id": "0200083C|ccbgssse014-spellpack01.esl",
+        "index": 0,
+        "type": "QUST NNAM",
+        "original": "Find the Lost Library of Spell Tomes",
+        "string": "Найти Потерянную библиотеку с томами заклинаний"
     },
     {
         "editor_id": "ccBGSSSE014_SpellPack_StartupQuest",
-        "form_id": "[0200083C]",
-        "index": 108,
+        "form_id": "0200083C|ccbgssse014-spellpack01.esl",
+        "index": 92,
         "type": "QUST CNAM",
         "original": "I've found the fabled chest filled with long-lost ancient spell tomes in Hob's Fall Cave.",
         "string": "В Пещере Хоба я нашел легендарный сундук, битком набитый давно утерянными томами заклинаний."
     },
     {
         "editor_id": "ccBGSSSE014_FenriksWelcomePerk",
-        "form_id": "[02000880]",
-        "index": null,
-        "type": "PERK FULL",
-        "original": "Fenrik's Welcome",
-        "string": "Радушие Фенрика"
-    },
-    {
-        "editor_id": "ccBGSSSE014_FenriksWelcomePerk",
-        "form_id": "[02000880]",
+        "form_id": "02000880|ccbgssse014-spellpack01.esl",
         "index": 0,
         "type": "PERK EPF2",
         "original": "Fenrik's Welcome: Unlock",
         "string": "Радушие Фенрика: Открыть"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FenriksWelcomePerk",
+        "form_id": "02000880|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Fenrik's Welcome",
+        "string": "Радушие Фенрика"
     }
 ]

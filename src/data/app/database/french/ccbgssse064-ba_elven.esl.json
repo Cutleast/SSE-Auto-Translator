@@ -1,7 +1,7 @@
 [
     {
         "editor_id": "ccBGSSSE064_ArmorElvenMailGauntlets",
-        "form_id": "[05000802]",
+        "form_id": "05000802|ccbgssse064-ba_elven.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Elven Hunter Gauntlets",
@@ -9,7 +9,7 @@
     },
     {
         "editor_id": "ccBGSSSE064_ArmorElvenMailCuirass",
-        "form_id": "[05000801]",
+        "form_id": "05000801|ccbgssse064-ba_elven.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Elven Hunter Armor",
@@ -17,95 +17,95 @@
     },
     {
         "editor_id": "ccBGSSSE064_ArmorElvenMailBoots",
-        "form_id": "[05000800]",
+        "form_id": "05000800|ccbgssse064-ba_elven.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Elven Hunter Boots",
         "string": "Bottes de chasseur elfiques"
     },
     {
-        "editor_id": "ccBGSSSE064_BountyLetterNote",
-        "form_id": "[05000826]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Guard's Note",
-        "string": "Mot du garde"
-    },
-    {
-        "editor_id": "ccBGSSSE064_BountyLetterNote",
-        "form_id": "[05000826]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face=\"$HandwrittenFont\">\r\nThe steward will have to sign off on it, but I was thinking we should have the bandit's possessions serve as a reward in lieu of gold. According to the informant, he might be carrying valuables with him. I'll bring it up with the Steward when I have her sign the bounty.\r\n\r\nBesides, the more gold we save on bounty hunters, the more we have for the guard. I still haven't gotten approval for the funds to have Lod fix my shield. At this rate, I might as well just use the lid from my pot.",
-        "string": "<font face=\"$HandwrittenFont\">\r\nLe chambellan devra signer ce décret, mais je pensais que les effets du bandit pourraient servir de récompense, à la place de l'or. D'après notre informateur, il transporterait des articles précieux avec lui. J'en parlerai au chambellan lorsque je lui ferai signer la prime.\r\n\r\nDe plus, plus nous économiserons d'or sur les chasseurs de primes, plus nous en aurons pour la garde. Je n'ai pas encore reçu l'accord pour les fonds dont j'ai besoin pour que Lod répare mon bouclier. Si ça continue, je ferais mieux d'utiliser un couvercle de marmite."
-    },
-    {
         "editor_id": "ccBGSSSE064_GuardDossier",
-        "form_id": "[0500081C]",
+        "form_id": "0500081C|ccbgssse064-ba_elven.esl",
         "index": null,
         "type": "BOOK DESC",
         "original": "<font face='$HandwrittenFont'>\r\nStatus: Active (Capture or Kill), High Priority\r\n\r\nDescription: Male, High Elf, age unknown\r\n\r\nBackground:\r\nA member of the Crimson Dirks, a notorious group of bandits and marauders originally based in Cyrodiil. Little else is known about the target, although some intelligence suggests he was often used as an information gatherer for the bandits.\r\n\r\nOperational Notes:\r\nIt was originally thought that an Altmer might attempt to blend into wealthier circles, but according to our informant, he's done the opposite. He's stripped his armor and gone native, hunting game in the forests south of Sunderstone Gorge. He should still be considered dangerous, however, and it would be wise to put up a bounty when his identity is confirmed.\r\n</font>",
         "string": "<font face='$HandwrittenFont'>\r\nStatut : active (mort ou vif), priorité haute\r\n\r\nDescription : Homme, Haut-Elfe, âge inconnu\r\n\r\nAntécédents :\r\nMembre des Dagues Empourprées, un groupe notoire de bandits et de malandrins originaires de Cyrodiil. On en sait peu sur la cible, bien que des renseignements indiquent que les bandits avaient souvent recours à lui pour obtenir des renseignements.\r\n\r\nNotes opérationnelles :\r\nNous pensions au départ qu'un Altmer tenterait de se fondre dans des cercles plus riches, mais d'après notre informateur, il fit l'exact contraire. Il abandonna son armure pour rejoindre la nature, chassant du gibier dans les forêts au sud de la Gorge de Scindepierre. Considérez-le comme dangereux, et il serait fort avisé de mettre sa tête à prix lorsque son identité sera confirmée.\r\n</font>"
     },
     {
-        "editor_id": "ccBGSSSE064_BookV7",
-        "form_id": "[05000828]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "The Crimson Dirks, v7",
-        "string": "Les Dagues Empourprées, vol. 7"
-    },
-    {
-        "editor_id": "ccBGSSSE064_ElvenNote",
-        "form_id": "[0500081B]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face='$HandwrittenFont'>\r\nI didn't choose to be alone. A fish doesn't choose to swim, and a bird doesn't choose to fly. They just are, and so was I.\r\n\r\nWhen the guard raided our hideout, I didn't shed any tears. We were always going to be lost children, orphaned by the world if not by each other.\r\n\r\nThe others fled to the cities, but I sought the stillness of the forest, with only the moon and stars to keep me company. That is, until the day I met the wolf.\r\n\r\nWhen I found its leg caught in a bear trap, my first thought was to put it out of its misery. Yet for some reason I treated the wound, and fed the beast until it recovered.\r\n\r\nI don't know why I saved it. Perhaps part of me misses the others, and longs for a companion. \r\n\r\nI'm no stranger to solitude. I've spent years relying on no one save myself. But it seems at the end of the day, I'm still that boy at the orphanage, parked at the window sill, staring out into an empty street.</font>",
-        "string": "<font face='$HandwrittenFont'>\r\nJe n'ai pas choisi d'être seul. Un poisson ne choisit pas de nager, et un oiseau ne choisit pas de voler. Ils sont ce qu'ils sont, et je ne suis pas différent.\r\n\r\nLorsque la garde a attaqué notre repère, je n'ai pas versé une seule larme. Nous avons toujours été voués à être des enfants perdus, rendus orphelins par ce monde, ou par nous-mêmes.\r\n\r\nLes autres ont fui vers les villes, mais moi, je désirais le calme de la forêt, avec la lune et les étoiles pour seule compagnie. Enfin, jusqu'à ce que je rencontre le loup.\r\n\r\nQuand je l'ai trouvé, la patte prise dans un piège, je me suis d'abord dit qu'il valait mieux mettre un terme à ses souffrances. Et pourtant, pour une raison que j'ignore, j'ai soigné sa blessure, et nourri la bête jusqu'à son rétablissement.\r\n\r\nJe ne sais pas pourquoi je l'ai sauvé. Peut-être qu'au fond de moi, les autres me manquent, et que je désire un compagnon. \r\n\r\nLa solitude ne m'est pas inconnue. J'ai passé des années à ne compter que sur moi-même. Mais il semblerait qu'au final, je sois toujours ce petit garçon d'orphelinat, perché sur le rebord de la fenêtre à observer une rue déserte.</font>"
-    },
-    {
-        "editor_id": "ccBGSSSE064_BookV7",
-        "form_id": "[05000828]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nThe Crimson Dirks\r\nBook Seven\r\n\r\nby \r\nGathers-the-Coin\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/T_letter.png'>he assassin's trail stretched further into the woods. Aesrael took the lead, with the Argonian and the Bosmer in close pursuit, following the thread of tangled brush and loose mud. As he knelt to study the tracks, a hint of jazbay bloomed on his tongue, a side effect of the Night-Eye that the mages could not explain. \r\n\r\nThe tracks seemed to pause around a great oak tree, as if their owner had stopped to rethink his method of escape. Thumbing the crook of his chin, Aesrael listened for the footsteps of his fellow bandits, not wanting to turn his head. The assassin was close.\r\n\r\nHours prior, the night began with a toast. A courier had brought news of merchandise coming in from jobs in the Highlands and the Gold Coast. It was the first sign of charity Stendarr had showed them in months, ever since the guard and the East Empire Company had taken a special interest in squashing their operations. With all their leads dried up, the Crimson Dirks were left to sacking caravans and petty thievery, the kind of work they were willing to do but always resented. \r\n\r\nHowever, with this latest news their coffers would be as full as their cups. In addition to obtaining a cache of valuables from a Daedric cult, they had raided warehouses holding enchanted swords from Anvil, Colovian furs from Chorrol, along with crates of silks and fine robes weighted with perfume. \r\n\r\nIn order to launder the goods, the bandits, led by the Dunmer scribe Casival, made contact with a merchant noble, knowing he had connections across Cyrodiil. That night, they solidified the pact over a flask of wine and a gourmet feast. It was a landmark occasion for this group of rogues and misfits, to be legitimized in their dealings by a class above their own.\r\n\r\nAt that moment, the end of the Crimson Dirks might've seemed like the furthest thing from reality. Now, with Casival wounded and the merchant dead, it seemed almost inevitable. \r\n\r\n\"The trail ends here,\" Aesrael said, motioning to the trunk of the looming oak.\r\n\r\n\"Maybe the tree ate him,\" quipped the Bosmer, his Argonian partner Pale-Eyes trailing behind him.\r\n\r\n\"You jest, Ehlhiel,\" replied Pale-Eyes, \"but in this one's village, there is a story of a Hist, corrupted by magic, that would kidnap and devour the hatchlings.\"\r\n\r\n\"Okay, I have to ask,\" the Bosmer replied, \"Why are there so many stories about monsters that eat children? Are parents so inept they have to constantly frighten their young into behaving, or are children really that delicious?\"\r\n\r\n\"I feel like as a Bosmer,\" countered the Argonian, \"you would know better than I.\"\r\n\r\n\"Quiet, you two,\" warned Aesrael, \"He's here.\"\r\n\r\nAesrael knew this was no time for banter. He could feel the taste of jazbay dim in his mouth. The Night-Eye would not last much longer, and when the spell snapped, their eyes would be ill-adjusted to the sudden darkness.\r\n\r\nThe assassin knew this as well. He had counted the seconds left in the spell and baited them to this point, where the long trees shrouded the moonlight. He had wagered on the fleeting light in the eyes of his pursuers, knowing his had yet to expire. He knew that blinded by the night, the Altmer would raise his hand and use the last of his magicka to recast the spell. And in that moment, he struck. \r\n\r\nThe assassin's dagger aimed for Aesrael's neck, slicing at the seam between his armor. He knew the Elf's left arm would be occupied by the spell casting, unable to guard his naked artery. And when he fell, the others would turn to his falling corpse, giving him ample distraction to kill them both. All of this seemed as academic as the death of the merchant, the one whom just hours ago they had failed to protect.\r\n\r\nAnd yet, inches away from its mark, his dagger was stopped cold. The assassin tried to wrestle it free, only to find it clenched in the Altmer's fist.\r\n\r\nIt was a feint. The Elf had raised his hand, but never cast the spell. \r\n\r\nDropping the dagger, the assassin leapt back, having given away his position for no more than a bloody hand. Aesrael and the others rushed to subdue him, but he was far too quick. With his remaining dagger, he slit his own throat, taking the secrets of his masters to the grave.\r\n\r\n\"So, who wants to explain this to the boss?\" Ehlhiel quipped, trying to lighten the mood, \"Because I've got a list of about thirty people I like to blame in situations like this.\"\r\n\r\n\"There are no words that can justify the depth of our failure,\" Aesrael grumbled, wrapping his wound, \"we lost the merchant and his killer. Casival is wounded. But perhaps, despite all this, we can learn something from the corpse.\"\r\n\r\n\"An assassin this skilled,\" remarked Pale-Eyes, \"must work for the East Empire Company.\"\r\n\r\n\"Worse,\" said Aesrael, examining the cut of his armor, \"it seems our merchant friend was dealing with more than just bandits, but the Thalmor as well. Because this man we killed isn't with the company. He's a Spectre.\"\r\n\r\nEhlhiel's face grew dim with the implication. It was one thing to make an enemy of the guards in the city, the East Empire Company, the Clan Mothers and even the Great Houses of Morrowind, but this was altogether different. \r\n\r\nIt was not the size or strength of their foe, but their knowledge they feared, and the Penitus Oculatus were spies of the highest order. If the Empire had been tracking the merchant's dealings, it was only a matter of time before their identities would be discovered and shared with all who opposed them.\r\n\r\nThe only question was, how much time was left.\r\n\r\n",
-        "string": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nLes Dagues Empourprées\r\nLivre Septième\r\n\r\npar \r\nTire-sou\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/T_letter.png'>antôt se dirigeant d'un côté, puis prenant une autre direction, la piste de l'assassin s'enfonçait dans les bois. Aesrael prit la tête, suivi de près par l'Argonien et par le Bosmer, relevant les traces de buissons secoués et de boue retournée. Tandis qu'il se baissait pour examiner les traces, un goût de jazbay se fit sentir sur sa langue, un effet secondaire de l'Oeil-Nocturne que les mages ne parvenaient pas à expliquer. \r\n\r\nLes traces marquaient une pause autour d'un grand chêne, comme si la proie d'Aesrael s'était arrêtée pour repenser à sa fuite. Aesrael se frotta la fossette du menton, à l'affût du bruit des pas des bandits, n'osant pas se retourner. L'assassin était tout près.\r\n\r\nPlusieurs heures plus tôt, la nuit commença par un toast. Un messager porta des nouvelles concernant des marchandises en provenance des hauts-plateaux ou de la Côte d'Or. C'était le premier signe de pitié que Stendarr leur avait montré depuis des mois, depuis que la garde et la Compagnie de l'Empire oriental s'étaient mises en tête de saborder leurs opérations. Aucune de leurs pistes ne menant quelque part, les Dagues Empourprées n'eurent d'autre choix que de piller des caravanes ou de recourir au vol de bas étage, le genre de travail qu'ils ne refusaient pas, mais qu'ils avaient toujours méprisé. \r\n\r\nCependant, grâce à ces dernières informations, leurs coffres n'allaient pas tarder à déborder. En plus d'avoir mis la main sur de nombreux articles de valeur d'un culte Daedra, ils avaient pillé des entrepôts où étaient stockées des épées enchantées en provenance d'Anvil, des fourrures coloviennes de Chorrol, et des caisses remplies de soies, de robes, et de parfums. \r\n\r\nAfin de receler tout cela, les bandits, menés par le scribe dunmer Casival, entrèrent en contact avec un marchand noble, sachant qu'il comptait des relations dans tout Cyrodiil. Cette nuit-là, ils scellèrent le pacte autour d'une flasque de vin et d'un banquet des plus fins. C'était une occasion à marquer d'une croix blanche pour ce groupe de renégats et d'inadaptés, une occasion d'être acceptés par une classe sociale supérieure à la leur.\r\n\r\nÀ ce moment, personne n'aurait pu imaginer que les Dagues Empourprées puissent connaître leur fin. Aujourd'hui, Casival étant blessé, et le marchand mort, elle semble pratiquement inéluctable. \r\n\r\nLa piste s'arrête ici, dit Aesrael en désignant le tronc du chêne.\r\n\r\nL'arbre l'a peut-être mangé, ricana le Bosmer, suivi par son partenaire argonien, Yeux-Pâles.\r\n\r\nTu plaisantes, Ehlhiel, répondit Yeux-Pâles, \"mais il y a ce village, où l'on raconte qu'un Hist corrompu par la magie enlève et dévore la progéniture.\"\r\n\r\nBon, répondit Bosmer, il faut que je pose la question. \"Pourquoi raconte-t-ton autant d'histoires sur des monstres dévoreurs d'enfants ? Leurs parents sont-ils aussi incompétents qu'ils doivent effrayer en permanence leurs enfants pour qu'ils se comportent bien, ou bien les bambins sont-ils aussi délicieux ?\"\r\n\r\nEn tant que Bosmer, répondit l'Argonien, \"n'es-tu pas mieux placé que moi pour y répondre ?\"\r\n\r\nSilence, tous les deux, siffla Aesrael. \"Il est là.\"\r\n\r\nAesrael savait que l'heure n'était pas aux plaisanteries. Il sentait le goût de jazbay s'estomper dans sa bouche. L'Œil-Nocturne ne ferait plus effet bien longtemps, et lorsque le sort se dissiperait, leurs yeux seraient perdus dans l'obscurité soudaine.\r\n\r\nL'assassin le savait bien. Il avait compté les secondes restantes au sort, et les avait attirés à cet endroit, là où les arbres cachaient le clair de lune. Il avait tout misé sur la perte de vision de ses poursuivants, sachant que lui avait encore quelques minutes de répit. Il savait qu'aveuglé par la nuit, l'Altmer lèverait sa main, et utiliserait ses dernières onces de magie pour lancer de nouveau le sort. C'est à ce moment qu'il frappa. \r\n\r\nLa dague de l'assassin filait vers la gorge d'Aesrael, tranchant la couture de son armure. Il savait que le bras gauche de l'Elfe serait occupé par le lancement du sort, et qu'il ne pourrait pas protéger son artère exposée. Et lorsqu'il tomberait, ses compagnons se retourneraient vers son cadavre, lui donnant plus de temps que nécessaire pour les tuer tous les deux. Tout cela semblait aussi clair que la mort du marchand, celui-là même qu'ils avaient échoué à protéger il y a à peine quelques heures.\r\n\r\nEt pourtant, à quelques centimètres de sa cible, la dague s'arrêta net. L'assassin tenta de la libérer, seulement pour se rendre compte que le poing de l'Altmer était solidement fermé dessus.\r\n\r\nC'était une feinte. L'Elfe avait bien levé sa main, mais n'avait jamais lancé de sort. \r\n\r\nLâchant sa dague, l'assassin bondit en arrière après avoir compromis sa position pour une misérable main ensanglantée. Aesrael et les autres accoururent pour le maîtriser, mais il était bien trop rapide. Avec sa dague restante, il se trancha la gorge, emportant les secrets de son maître dans la tombe.\r\n\r\nAlors, qui va vouloir expliquer ça au patron ? dit Ehlhiel avec amusement pour détendre l'atmosphère, \"parce que dans ce genre de situations, j'ai une liste d'au moins 30 personnes à qui faire porter le chapeau.\"\r\n\r\nAucune explication ne peut excuser l'ampleur de notre échec, grommela Aesrael en bandant sa blessure. \"Nous avons perdu le marchand, et son tueur. Casival est blessé. Mais peut-être que malgré tout cela, ce corps nous apprendra quelque chose.\"\r\n\r\nUn assassin aussi talentueux, remarqua Yeux-Pâles, \"doit forcément travailler pour la Compagnie de l'Empire oriental.\"\r\n\r\nPire, répondit Aesrael en examinant la coupure sur son armure, \"il semblerait que notre ami marchand ne faisait pas affaire qu'avec des bandits, mais également avec les Thalmor. L'homme que nous venons de tuer n'est pas de la Compagnie, c'est un Spectre.\"\r\n\r\nEn entendant cela, le visage d'Ehlhiel se déconfit. Compter la garde civile, la Compagnie de l'Empire oriental, des matriarches, ou même les Grandes Maisons de Morrowind comme ennemis, c'était une chose, mais ça, ça n'avait rien à voir. \r\n\r\nCe n'était pas le nombre ou la force de leurs ennemis qu'ils redoutaient, mais leur savoir, et le Penitus Oculatus représentait l'élite des espions. Si l'Empire surveillait les affaires du marchand, ce n'était qu'une question de temps avant que l'on ne découvre son identité, et qu'on ne la transmette à ses ennemis.\r\n\r\nLa seule question, c'était combien de temps il leur restait.\r\n\r\n"
-    },
-    {
         "editor_id": "ccBGSSSE064_BountyLetter",
-        "form_id": "[0500081E]",
+        "form_id": "0500081E|ccbgssse064-ba_elven.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "Guard's Bounty Letter Draft",
         "string": "Brouillon de l'avis de recherche du garde"
     },
     {
+        "editor_id": "ccBGSSSE064_BookV7",
+        "form_id": "05000828|ccbgssse064-ba_elven.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "The Crimson Dirks, v7",
+        "string": "Les Dagues Empourprées, vol. 7"
+    },
+    {
         "editor_id": "ccBGSSSE064_BountyLetter",
-        "form_id": "[0500081E]",
+        "form_id": "0500081E|ccbgssse064-ba_elven.esl",
         "index": null,
         "type": "BOOK DESC",
         "original": "<font face=\"$HandwrittenFont\">\r\n<font size=\"40\">Bounty</font>\r\n\r\nBy order of <Alias=Jarl>:\r\n\r\nTo all able bodied men and women of Falkreath. A wanted bandit has been hiding in the forests south of Sunderstone Gorge, posing as a hunter. Rumor has it that he is accompanied by a fearsome wolf. \r\n\r\nA reward will be offered to anyone who kills him.\r\n\r\n--<Alias=Steward>",
         "string": "<font face=\"$HandwrittenFont\">\r\n<font size=\"40\">Prime</font>\r\n\r\nSur ordres de <Alias=Jarl> :\r\n\r\nÀ tous les hommes et femmes aptes d'Épervine : un bandit recherché se cache dans les forêts au sud de la Gorge de Scindepierre et se fait passer pour un chasseur. D'après les rumeurs, il serait accompagné d'un loup redoutable. \r\n\r\nUne récompense est offerte à quiconque pourra l'éliminer.\r\n\r\n--<Alias=Steward>"
     },
     {
+        "editor_id": "ccBGSSSE064_BookV7",
+        "form_id": "05000828|ccbgssse064-ba_elven.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nThe Crimson Dirks\r\nBook Seven\r\n\r\nby \r\nGathers-the-Coin\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/T_letter.png'>he assassin's trail stretched further into the woods. Aesrael took the lead, with the Argonian and the Bosmer in close pursuit, following the thread of tangled brush and loose mud. As he knelt to study the tracks, a hint of jazbay bloomed on his tongue, a side effect of the Night-Eye that the mages could not explain. \r\n\r\nThe tracks seemed to pause around a great oak tree, as if their owner had stopped to rethink his method of escape. Thumbing the crook of his chin, Aesrael listened for the footsteps of his fellow bandits, not wanting to turn his head. The assassin was close.\r\n\r\nHours prior, the night began with a toast. A courier had brought news of merchandise coming in from jobs in the Highlands and the Gold Coast. It was the first sign of charity Stendarr had showed them in months, ever since the guard and the East Empire Company had taken a special interest in squashing their operations. With all their leads dried up, the Crimson Dirks were left to sacking caravans and petty thievery, the kind of work they were willing to do but always resented. \r\n\r\nHowever, with this latest news their coffers would be as full as their cups. In addition to obtaining a cache of valuables from a Daedric cult, they had raided warehouses holding enchanted swords from Anvil, Colovian furs from Chorrol, along with crates of silks and fine robes weighted with perfume. \r\n\r\nIn order to launder the goods, the bandits, led by the Dunmer scribe Casival, made contact with a merchant noble, knowing he had connections across Cyrodiil. That night, they solidified the pact over a flask of wine and a gourmet feast. It was a landmark occasion for this group of rogues and misfits, to be legitimized in their dealings by a class above their own.\r\n\r\nAt that moment, the end of the Crimson Dirks might've seemed like the furthest thing from reality. Now, with Casival wounded and the merchant dead, it seemed almost inevitable. \r\n\r\n\"The trail ends here,\" Aesrael said, motioning to the trunk of the looming oak.\r\n\r\n\"Maybe the tree ate him,\" quipped the Bosmer, his Argonian partner Pale-Eyes trailing behind him.\r\n\r\n\"You jest, Ehlhiel,\" replied Pale-Eyes, \"but in this one's village, there is a story of a Hist, corrupted by magic, that would kidnap and devour the hatchlings.\"\r\n\r\n\"Okay, I have to ask,\" the Bosmer replied, \"Why are there so many stories about monsters that eat children? Are parents so inept they have to constantly frighten their young into behaving, or are children really that delicious?\"\r\n\r\n\"I feel like as a Bosmer,\" countered the Argonian, \"you would know better than I.\"\r\n\r\n\"Quiet, you two,\" warned Aesrael, \"He's here.\"\r\n\r\nAesrael knew this was no time for banter. He could feel the taste of jazbay dim in his mouth. The Night-Eye would not last much longer, and when the spell snapped, their eyes would be ill-adjusted to the sudden darkness.\r\n\r\nThe assassin knew this as well. He had counted the seconds left in the spell and baited them to this point, where the long trees shrouded the moonlight. He had wagered on the fleeting light in the eyes of his pursuers, knowing his had yet to expire. He knew that blinded by the night, the Altmer would raise his hand and use the last of his magicka to recast the spell. And in that moment, he struck. \r\n\r\nThe assassin's dagger aimed for Aesrael's neck, slicing at the seam between his armor. He knew the Elf's left arm would be occupied by the spell casting, unable to guard his naked artery. And when he fell, the others would turn to his falling corpse, giving him ample distraction to kill them both. All of this seemed as academic as the death of the merchant, the one whom just hours ago they had failed to protect.\r\n\r\nAnd yet, inches away from its mark, his dagger was stopped cold. The assassin tried to wrestle it free, only to find it clenched in the Altmer's fist.\r\n\r\nIt was a feint. The Elf had raised his hand, but never cast the spell. \r\n\r\nDropping the dagger, the assassin leapt back, having given away his position for no more than a bloody hand. Aesrael and the others rushed to subdue him, but he was far too quick. With his remaining dagger, he slit his own throat, taking the secrets of his masters to the grave.\r\n\r\n\"So, who wants to explain this to the boss?\" Ehlhiel quipped, trying to lighten the mood, \"Because I've got a list of about thirty people I like to blame in situations like this.\"\r\n\r\n\"There are no words that can justify the depth of our failure,\" Aesrael grumbled, wrapping his wound, \"we lost the merchant and his killer. Casival is wounded. But perhaps, despite all this, we can learn something from the corpse.\"\r\n\r\n\"An assassin this skilled,\" remarked Pale-Eyes, \"must work for the East Empire Company.\"\r\n\r\n\"Worse,\" said Aesrael, examining the cut of his armor, \"it seems our merchant friend was dealing with more than just bandits, but the Thalmor as well. Because this man we killed isn't with the company. He's a Spectre.\"\r\n\r\nEhlhiel's face grew dim with the implication. It was one thing to make an enemy of the guards in the city, the East Empire Company, the Clan Mothers and even the Great Houses of Morrowind, but this was altogether different. \r\n\r\nIt was not the size or strength of their foe, but their knowledge they feared, and the Penitus Oculatus were spies of the highest order. If the Empire had been tracking the merchant's dealings, it was only a matter of time before their identities would be discovered and shared with all who opposed them.\r\n\r\nThe only question was, how much time was left.\r\n\r\n",
+        "string": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nLes Dagues Empourprées\r\nLivre Septième\r\n\r\npar \r\nTire-sou\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/T_letter.png'>antôt se dirigeant d'un côté, puis prenant une autre direction, la piste de l'assassin s'enfonçait dans les bois. Aesrael prit la tête, suivi de près par l'Argonien et par le Bosmer, relevant les traces de buissons secoués et de boue retournée. Tandis qu'il se baissait pour examiner les traces, un goût de jazbay se fit sentir sur sa langue, un effet secondaire de l'Oeil-Nocturne que les mages ne parvenaient pas à expliquer. \r\n\r\nLes traces marquaient une pause autour d'un grand chêne, comme si la proie d'Aesrael s'était arrêtée pour repenser à sa fuite. Aesrael se frotta la fossette du menton, à l'affût du bruit des pas des bandits, n'osant pas se retourner. L'assassin était tout près.\r\n\r\nPlusieurs heures plus tôt, la nuit commença par un toast. Un messager porta des nouvelles concernant des marchandises en provenance des hauts-plateaux ou de la Côte d'Or. C'était le premier signe de pitié que Stendarr leur avait montré depuis des mois, depuis que la garde et la Compagnie de l'Empire oriental s'étaient mises en tête de saborder leurs opérations. Aucune de leurs pistes ne menant quelque part, les Dagues Empourprées n'eurent d'autre choix que de piller des caravanes ou de recourir au vol de bas étage, le genre de travail qu'ils ne refusaient pas, mais qu'ils avaient toujours méprisé. \r\n\r\nCependant, grâce à ces dernières informations, leurs coffres n'allaient pas tarder à déborder. En plus d'avoir mis la main sur de nombreux articles de valeur d'un culte Daedra, ils avaient pillé des entrepôts où étaient stockées des épées enchantées en provenance d'Anvil, des fourrures coloviennes de Chorrol, et des caisses remplies de soies, de robes, et de parfums. \r\n\r\nAfin de receler tout cela, les bandits, menés par le scribe dunmer Casival, entrèrent en contact avec un marchand noble, sachant qu'il comptait des relations dans tout Cyrodiil. Cette nuit-là, ils scellèrent le pacte autour d'une flasque de vin et d'un banquet des plus fins. C'était une occasion à marquer d'une croix blanche pour ce groupe de renégats et d'inadaptés, une occasion d'être acceptés par une classe sociale supérieure à la leur.\r\n\r\nÀ ce moment, personne n'aurait pu imaginer que les Dagues Empourprées puissent connaître leur fin. Aujourd'hui, Casival étant blessé, et le marchand mort, elle semble pratiquement inéluctable. \r\n\r\nLa piste s'arrête ici, dit Aesrael en désignant le tronc du chêne.\r\n\r\nL'arbre l'a peut-être mangé, ricana le Bosmer, suivi par son partenaire argonien, Yeux-Pâles.\r\n\r\nTu plaisantes, Ehlhiel, répondit Yeux-Pâles, \"mais il y a ce village, où l'on raconte qu'un Hist corrompu par la magie enlève et dévore la progéniture.\"\r\n\r\nBon, répondit Bosmer, il faut que je pose la question. \"Pourquoi raconte-t-ton autant d'histoires sur des monstres dévoreurs d'enfants ? Leurs parents sont-ils aussi incompétents qu'ils doivent effrayer en permanence leurs enfants pour qu'ils se comportent bien, ou bien les bambins sont-ils aussi délicieux ?\"\r\n\r\nEn tant que Bosmer, répondit l'Argonien, \"n'es-tu pas mieux placé que moi pour y répondre ?\"\r\n\r\nSilence, tous les deux, siffla Aesrael. \"Il est là.\"\r\n\r\nAesrael savait que l'heure n'était pas aux plaisanteries. Il sentait le goût de jazbay s'estomper dans sa bouche. L'Œil-Nocturne ne ferait plus effet bien longtemps, et lorsque le sort se dissiperait, leurs yeux seraient perdus dans l'obscurité soudaine.\r\n\r\nL'assassin le savait bien. Il avait compté les secondes restantes au sort, et les avait attirés à cet endroit, là où les arbres cachaient le clair de lune. Il avait tout misé sur la perte de vision de ses poursuivants, sachant que lui avait encore quelques minutes de répit. Il savait qu'aveuglé par la nuit, l'Altmer lèverait sa main, et utiliserait ses dernières onces de magie pour lancer de nouveau le sort. C'est à ce moment qu'il frappa. \r\n\r\nLa dague de l'assassin filait vers la gorge d'Aesrael, tranchant la couture de son armure. Il savait que le bras gauche de l'Elfe serait occupé par le lancement du sort, et qu'il ne pourrait pas protéger son artère exposée. Et lorsqu'il tomberait, ses compagnons se retourneraient vers son cadavre, lui donnant plus de temps que nécessaire pour les tuer tous les deux. Tout cela semblait aussi clair que la mort du marchand, celui-là même qu'ils avaient échoué à protéger il y a à peine quelques heures.\r\n\r\nEt pourtant, à quelques centimètres de sa cible, la dague s'arrêta net. L'assassin tenta de la libérer, seulement pour se rendre compte que le poing de l'Altmer était solidement fermé dessus.\r\n\r\nC'était une feinte. L'Elfe avait bien levé sa main, mais n'avait jamais lancé de sort. \r\n\r\nLâchant sa dague, l'assassin bondit en arrière après avoir compromis sa position pour une misérable main ensanglantée. Aesrael et les autres accoururent pour le maîtriser, mais il était bien trop rapide. Avec sa dague restante, il se trancha la gorge, emportant les secrets de son maître dans la tombe.\r\n\r\nAlors, qui va vouloir expliquer ça au patron ? dit Ehlhiel avec amusement pour détendre l'atmosphère, \"parce que dans ce genre de situations, j'ai une liste d'au moins 30 personnes à qui faire porter le chapeau.\"\r\n\r\nAucune explication ne peut excuser l'ampleur de notre échec, grommela Aesrael en bandant sa blessure. \"Nous avons perdu le marchand, et son tueur. Casival est blessé. Mais peut-être que malgré tout cela, ce corps nous apprendra quelque chose.\"\r\n\r\nUn assassin aussi talentueux, remarqua Yeux-Pâles, \"doit forcément travailler pour la Compagnie de l'Empire oriental.\"\r\n\r\nPire, répondit Aesrael en examinant la coupure sur son armure, \"il semblerait que notre ami marchand ne faisait pas affaire qu'avec des bandits, mais également avec les Thalmor. L'homme que nous venons de tuer n'est pas de la Compagnie, c'est un Spectre.\"\r\n\r\nEn entendant cela, le visage d'Ehlhiel se déconfit. Compter la garde civile, la Compagnie de l'Empire oriental, des matriarches, ou même les Grandes Maisons de Morrowind comme ennemis, c'était une chose, mais ça, ça n'avait rien à voir. \r\n\r\nCe n'était pas le nombre ou la force de leurs ennemis qu'ils redoutaient, mais leur savoir, et le Penitus Oculatus représentait l'élite des espions. Si l'Empire surveillait les affaires du marchand, ce n'était qu'une question de temps avant que l'on ne découvre son identité, et qu'on ne la transmette à ses ennemis.\r\n\r\nLa seule question, c'était combien de temps il leur restait.\r\n\r\n"
+    },
+    {
         "editor_id": "ccBGSSSE064_ElvenNote",
-        "form_id": "[0500081B]",
+        "form_id": "0500081B|ccbgssse064-ba_elven.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "Aesrael's Journal",
         "string": "Journal d'Aesrael"
     },
     {
+        "editor_id": "ccBGSSSE064_BountyLetterNote",
+        "form_id": "05000826|ccbgssse064-ba_elven.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Guard's Note",
+        "string": "Mot du garde"
+    },
+    {
         "editor_id": "ccBGSSSE064_GuardDossier",
-        "form_id": "[0500081C]",
+        "form_id": "0500081C|ccbgssse064-ba_elven.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "Guard Dossier: Aesrael",
         "string": "Dossier du garde : Aesrael"
     },
     {
+        "editor_id": "ccBGSSSE064_ElvenNote",
+        "form_id": "0500081B|ccbgssse064-ba_elven.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nI didn't choose to be alone. A fish doesn't choose to swim, and a bird doesn't choose to fly. They just are, and so was I.\r\n\r\nWhen the guard raided our hideout, I didn't shed any tears. We were always going to be lost children, orphaned by the world if not by each other.\r\n\r\nThe others fled to the cities, but I sought the stillness of the forest, with only the moon and stars to keep me company. That is, until the day I met the wolf.\r\n\r\nWhen I found its leg caught in a bear trap, my first thought was to put it out of its misery. Yet for some reason I treated the wound, and fed the beast until it recovered.\r\n\r\nI don't know why I saved it. Perhaps part of me misses the others, and longs for a companion. \r\n\r\nI'm no stranger to solitude. I've spent years relying on no one save myself. But it seems at the end of the day, I'm still that boy at the orphanage, parked at the window sill, staring out into an empty street.</font>",
+        "string": "<font face='$HandwrittenFont'>\r\nJe n'ai pas choisi d'être seul. Un poisson ne choisit pas de nager, et un oiseau ne choisit pas de voler. Ils sont ce qu'ils sont, et je ne suis pas différent.\r\n\r\nLorsque la garde a attaqué notre repère, je n'ai pas versé une seule larme. Nous avons toujours été voués à être des enfants perdus, rendus orphelins par ce monde, ou par nous-mêmes.\r\n\r\nLes autres ont fui vers les villes, mais moi, je désirais le calme de la forêt, avec la lune et les étoiles pour seule compagnie. Enfin, jusqu'à ce que je rencontre le loup.\r\n\r\nQuand je l'ai trouvé, la patte prise dans un piège, je me suis d'abord dit qu'il valait mieux mettre un terme à ses souffrances. Et pourtant, pour une raison que j'ignore, j'ai soigné sa blessure, et nourri la bête jusqu'à son rétablissement.\r\n\r\nJe ne sais pas pourquoi je l'ai sauvé. Peut-être qu'au fond de moi, les autres me manquent, et que je désire un compagnon. \r\n\r\nLa solitude ne m'est pas inconnue. J'ai passé des années à ne compter que sur moi-même. Mais il semblerait qu'au final, je sois toujours ce petit garçon d'orphelinat, perché sur le rebord de la fenêtre à observer une rue déserte.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE064_BountyLetterNote",
+        "form_id": "05000826|ccbgssse064-ba_elven.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nThe steward will have to sign off on it, but I was thinking we should have the bandit's possessions serve as a reward in lieu of gold. According to the informant, he might be carrying valuables with him. I'll bring it up with the Steward when I have her sign the bounty.\r\n\r\nBesides, the more gold we save on bounty hunters, the more we have for the guard. I still haven't gotten approval for the funds to have Lod fix my shield. At this rate, I might as well just use the lid from my pot.",
+        "string": "<font face=\"$HandwrittenFont\">\r\nLe chambellan devra signer ce décret, mais je pensais que les effets du bandit pourraient servir de récompense, à la place de l'or. D'après notre informateur, il transporterait des articles précieux avec lui. J'en parlerai au chambellan lorsque je lui ferai signer la prime.\r\n\r\nDe plus, plus nous économiserons d'or sur les chasseurs de primes, plus nous en aurons pour la garde. Je n'ai pas encore reçu l'accord pour les fonds dont j'ai besoin pour que Lod répare mon bouclier. Si ça continue, je ferais mieux d'utiliser un couvercle de marmite."
+    },
+    {
         "editor_id": "ccBGSSSE064_Aesrael",
-        "form_id": "[05000821]",
+        "form_id": "05000821|ccbgssse064-ba_elven.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Aesrael",
@@ -113,7 +113,7 @@
     },
     {
         "editor_id": "ccBGSSSE064_Wolf",
-        "form_id": "[05000824]",
+        "form_id": "05000824|ccbgssse064-ba_elven.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Dusk",
@@ -121,23 +121,15 @@
     },
     {
         "editor_id": "ccBGSSSE064_Key",
-        "form_id": "[05000823]",
+        "form_id": "05000823|ccbgssse064-ba_elven.esl",
         "index": null,
         "type": "KEYM FULL",
         "original": "Aesrael's Key",
         "string": "Clé d'Aesrael"
     },
     {
-        "editor_id": "FalkreathBarracks",
-        "form_id": "[000EF325]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Falkreath Barracks",
-        "string": "Baraquements d'Épervine"
-    },
-    {
         "editor_id": "Tamriel",
-        "form_id": "[0000003C]",
+        "form_id": "0000003C|Skyrim.esm",
         "index": null,
         "type": "WRLD FULL",
         "original": "Skyrim",
@@ -145,39 +137,7 @@
     },
     {
         "editor_id": "ccBGSSSE064_Quest",
-        "form_id": "[05000819]",
-        "index": null,
-        "type": "QUST FULL",
-        "original": "Once a Hunter",
-        "string": "Il était une fois, un chasseur"
-    },
-    {
-        "editor_id": "ccBGSSSE064_Quest",
-        "form_id": "[05000819]",
-        "index": 84,
-        "type": "QUST CNAM",
-        "original": "At the barracks in Falkreath, I found information implicating a hunter to the south of Sunderstone Gorge. Apparently in another life, he was a notorious bandit. After reading the note, I found a camp in the area and killed the High Elf.",
-        "string": "Dans les baraquements d'Épervine, j'ai trouvé des informations impliquant un chasseur, au sud de la Gorge de Scindepierre. Apparemment, il avait un passé de bandit notoire. Après avoir lu la note, j'ai trouvé un campement dans les environs et tué le Haut-Elfe."
-    },
-    {
-        "editor_id": "ccBGSSSE064_Quest",
-        "form_id": "[05000819]",
-        "index": 89,
-        "type": "QUST CNAM",
-        "original": "At the barracks in Falkreath, I found information implicating a hunter to the south of Sunderstone Gorge. Apparently in another life, he was a notorious bandit. After reading the note, I found a camp in the area and killed the High Elf. On his body was a key to a nearby chest. Inside the chest I found a valuable set of armor.",
-        "string": "Dans les baraquements d'Épervine, j'ai trouvé des informations impliquant un chasseur, au sud de la Gorge de Scindepierre. Apparemment, il avait un passé de bandit notoire. Après avoir lu la note, j'ai trouvé un camp dans les environs et tué le Haut-Elfe. Il portait sur lui la clé d'un coffre, contenant une armure précieuse."
-    },
-    {
-        "editor_id": "ccBGSSSE064_Quest",
-        "form_id": "[05000819]",
-        "index": 104,
-        "type": "QUST CNAM",
-        "original": "At the barracks in Falkreath, I found information implicating a hunter to the south of Sunderstone Gorge. Apparently in another life, he was a notorious bandit. I should investigate the camps in the area and see what I can find.",
-        "string": "Dans les baraquements d'Épervine, j'ai trouvé des informations impliquant un chasseur, au sud de la Gorge de Scindepierre. Apparemment, il avait un passé de bandit notoire. Je ferais bien de fouiller les camps de la zone pour voir ce que je peux y trouver."
-    },
-    {
-        "editor_id": "ccBGSSSE064_Quest",
-        "form_id": "[05000819]",
+        "form_id": "05000819|ccbgssse064-ba_elven.esl",
         "index": 30,
         "type": "QUST NNAM",
         "original": "Retrieve the armor",
@@ -185,15 +145,7 @@
     },
     {
         "editor_id": "ccBGSSSE064_Quest",
-        "form_id": "[05000819]",
-        "index": 10,
-        "type": "QUST NNAM",
-        "original": "Kill Aesrael",
-        "string": "Tuez Aesrael."
-    },
-    {
-        "editor_id": "ccBGSSSE064_Quest",
-        "form_id": "[05000819]",
+        "form_id": "05000819|ccbgssse064-ba_elven.esl",
         "index": 20,
         "type": "QUST NNAM",
         "original": "Search Aesrael's body",
@@ -201,18 +153,58 @@
     },
     {
         "editor_id": "ccBGSSSE064_Quest",
-        "form_id": "[05000819]",
-        "index": 88,
+        "form_id": "05000819|ccbgssse064-ba_elven.esl",
+        "index": 87,
         "type": "QUST CNAM",
-        "original": "At the barracks in Falkreath, I found information implicating a hunter to the south of Sunderstone Gorge. Apparently in another life, he was a notorious bandit. After reading the note, I found a camp in the area and killed the High Elf. On his body was a key to a nearby chest.",
-        "string": "Dans les baraquements d'Épervine, j'ai trouvé des informations impliquant un chasseur, au sud de la Gorge de Scindepierre. Apparemment, il avait un passé de bandit notoire. Après avoir lu la note, j'ai trouvé un camp dans les environs et tué le Haut-Elfe. Il portait sur lui la clé d'un coffre."
+        "original": "At the barracks in Falkreath, I found information implicating a hunter to the south of Sunderstone Gorge. Apparently in another life, he was a notorious bandit. After reading the note, I found a camp in the area and killed the High Elf.",
+        "string": "Dans les baraquements d'Épervine, j'ai trouvé des informations impliquant un chasseur, au sud de la Gorge de Scindepierre. Apparemment, il avait un passé de bandit notoire. Après avoir lu la note, j'ai trouvé un campement dans les environs et tué le Haut-Elfe."
+    },
+    {
+        "editor_id": "ccBGSSSE064_Quest",
+        "form_id": "05000819|ccbgssse064-ba_elven.esl",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Kill Aesrael",
+        "string": "Tuez Aesrael."
+    },
+    {
+        "editor_id": "ccBGSSSE064_Quest",
+        "form_id": "05000819|ccbgssse064-ba_elven.esl",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Once a Hunter",
+        "string": "Il était une fois, un chasseur"
     },
     {
         "editor_id": "ccBGSSSE064_MiscQuest",
-        "form_id": "[0500081A]",
+        "form_id": "0500081A|ccbgssse064-ba_elven.esl",
         "index": 10,
         "type": "QUST NNAM",
         "original": "Look for bounty information at the Falkreath Barracks",
         "string": "Cherchez des informations aux Baraquements d'Épervine."
+    },
+    {
+        "editor_id": "ccBGSSSE064_Quest",
+        "form_id": "05000819|ccbgssse064-ba_elven.esl",
+        "index": 74,
+        "type": "QUST CNAM",
+        "original": "At the barracks in Falkreath, I found information implicating a hunter to the south of Sunderstone Gorge. Apparently in another life, he was a notorious bandit. I should investigate the camps in the area and see what I can find.",
+        "string": "Dans les baraquements d'Épervine, j'ai trouvé des informations impliquant un chasseur, au sud de la Gorge de Scindepierre. Apparemment, il avait un passé de bandit notoire. Je ferais bien de fouiller les camps de la zone pour voir ce que je peux y trouver."
+    },
+    {
+        "editor_id": "ccBGSSSE064_Quest",
+        "form_id": "05000819|ccbgssse064-ba_elven.esl",
+        "index": 58,
+        "type": "QUST CNAM",
+        "original": "At the barracks in Falkreath, I found information implicating a hunter to the south of Sunderstone Gorge. Apparently in another life, he was a notorious bandit. After reading the note, I found a camp in the area and killed the High Elf. On his body was a key to a nearby chest. Inside the chest I found a valuable set of armor.",
+        "string": "Dans les baraquements d'Épervine, j'ai trouvé des informations impliquant un chasseur, au sud de la Gorge de Scindepierre. Apparemment, il avait un passé de bandit notoire. Après avoir lu la note, j'ai trouvé un camp dans les environs et tué le Haut-Elfe. Il portait sur lui la clé d'un coffre, contenant une armure précieuse."
+    },
+    {
+        "editor_id": "ccBGSSSE064_Quest",
+        "form_id": "05000819|ccbgssse064-ba_elven.esl",
+        "index": 65,
+        "type": "QUST CNAM",
+        "original": "At the barracks in Falkreath, I found information implicating a hunter to the south of Sunderstone Gorge. Apparently in another life, he was a notorious bandit. After reading the note, I found a camp in the area and killed the High Elf. On his body was a key to a nearby chest.",
+        "string": "Dans les baraquements d'Épervine, j'ai trouvé des informations impliquant un chasseur, au sud de la Gorge de Scindepierre. Apparemment, il avait un passé de bandit notoire. Après avoir lu la note, j'ai trouvé un camp dans les environs et tué le Haut-Elfe. Il portait sur lui la clé d'un coffre."
     }
 ]

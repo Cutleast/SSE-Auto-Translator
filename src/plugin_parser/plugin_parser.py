@@ -10,7 +10,7 @@ from utilities.string import String
 from .group import Group
 from .plugin import Plugin
 from .record import Record
-from .subrecord import EDID, StringSubrecord
+from .subrecord import EDID, StringSubrecord, MAST
 
 
 import logging
@@ -92,12 +92,25 @@ class PluginParser:
 
         strings: list[String] = []
 
+        masters = [
+            subrecord.file
+            for subrecord in self.parsed_data.header.subrecords
+            if isinstance(subrecord, MAST)
+        ]
+
         for record in group.records:
             if isinstance(record, Group):
                 strings += self.extract_group_strings(record)
             else:
                 edid = self.get_record_edid(record)
-                formid = f"[{record.formid}]"
+                master_index = int(record.formid[:2], base=16)
+                # Get plugin that first defines this record from masters
+                try:
+                    master = masters[master_index]
+                    formid = f"{record.formid}|{master}"
+                # If index is not in masters, then the record is first defined in this plugin
+                except IndexError:
+                    formid = f"{record.formid}|{self.plugin_path.name}"
 
                 for subrecord in record.subrecords:
                     if isinstance(subrecord, StringSubrecord):

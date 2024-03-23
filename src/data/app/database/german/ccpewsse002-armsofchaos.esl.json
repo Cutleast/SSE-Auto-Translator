@@ -1,55 +1,215 @@
 [
     {
-        "editor_id": "ccPEWSSE002_DLC2EnchInfluenceAggDownFFContact",
-        "form_id": "[05000898]",
+        "editor_id": "ccPEWSSEE02_CalmFake",
+        "form_id": "0500089B|ccpewsse002-armsofchaos.esl",
         "index": null,
-        "type": "MGEF FULL",
-        "original": "Calm",
-        "string": "Calm"
+        "type": "MGEF DNAM",
+        "original": "Random chance to calm, demoralize, or frenzy a target for <60> seconds.",
+        "string": "Random chance to calm, demoralize, or frenzy a target for <60> seconds."
     },
     {
-        "editor_id": "ccPEWSSE002_InfluenceConfDownFFAimedArea",
-        "form_id": "[05000858]",
+        "editor_id": "ccPEWSSE002_AbsorbHealth",
+        "form_id": "05000801|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "MGEF FULL",
-        "original": "Rout",
-        "string": "Panik"
+        "original": "Absorb Health",
+        "string": "Gesundheit absorbieren"
+    },
+    {
+        "editor_id": "ccPEWSSE002_Staff01Stun",
+        "form_id": "05000803|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "With the Sovereign Band equipped, <10>% chance targets that fail to resist are paralyzed for <dur> seconds.",
+        "string": "Wenn das Band der Herrschaft ausgerüstet ist, besteht eine Chance von <10> %, dass Ziele, deren Resistenz versagt, für <dur> Sekunden gelähmt werden."
     },
     {
         "editor_id": "ccPEWSSE002_NecklaceDummyEffect",
-        "form_id": "[05000854]",
+        "form_id": "05000854|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "Adds the spell <Waters of Oblivion>.",
         "string": "Verleiht den Zauber <Wasser aus dem Reich des Vergessens>."
     },
     {
-        "editor_id": "ccPEWSSE002_InfluenceRandom",
-        "form_id": "[0500086A]",
+        "editor_id": "ccPEWSSE002_InfluenceConfDownFFAimedArea",
+        "form_id": "05000858|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "MGEF FULL",
-        "original": "Mind of Chaos",
-        "string": "Geist des Chaos"
+        "original": "Rout",
+        "string": "Panik"
     },
     {
-        "editor_id": "ccPEWSSE002_SummonFrostAtronach",
-        "form_id": "[0500083E]",
+        "editor_id": "ccPEWSSEE02_CalmFake",
+        "form_id": "0500089B|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Calm",
+        "string": "Calm"
+    },
+    {
+        "editor_id": "ccPEWSSE002_Staff01Stun",
+        "form_id": "05000803|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Paralyze",
+        "string": "Lähmen"
+    },
+    {
+        "editor_id": "ccPEWSSE002_EnchSummonFlameAtronach",
+        "form_id": "05000826|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "MGEF DNAM",
-        "original": "Summons a Frost Atronach for <dur> seconds wherever the caster is pointing.",
-        "string": "Beschwört einen Frost-Atronachen für <dur> Sekunden an der Stelle, auf die der Zaubernde zeigt."
+        "original": "Summons a Flame Atronach for <dur> seconds wherever the caster is pointing.",
+        "string": "Beschwört einen Feuer-Atronachen für <dur> Sekunden an der Stelle, auf die der Zaubernde zeigt."
+    },
+    {
+        "editor_id": "ccPEWSSE002_NecklaceDummyEffect",
+        "form_id": "05000854|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Waters of Oblivion",
+        "string": "Wasser aus dem Reich des Vergessens"
     },
     {
         "editor_id": "ccPEWSSE002_InfluenceRandom",
-        "form_id": "[0500086A]",
+        "form_id": "0500086A|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "Random chance to demoralize or frenzy a target for <dur> seconds.",
         "string": "Zufällige Chance, ein Ziel bis zu Stufe <mag> für <dur> Sekunden zu beruhigen, zu demoralisieren oder zu erzürnen."
     },
     {
+        "editor_id": "ccPEWSSE002_EnchInfluenceConfDownFFContactLow",
+        "form_id": "05000896|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Creatures and people up to level <mag> flee from combat for <dur> seconds.",
+        "string": "Creatures and people up to level <mag> flee from combat for <dur> seconds."
+    },
+    {
+        "editor_id": "ccPEWSSE002_InfluenceAggDownFFAimedArea",
+        "form_id": "05000869|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Pacify",
+        "string": "Beruhigen"
+    },
+    {
+        "editor_id": "ccPEWSSE002_AbsorbStamina",
+        "form_id": "05000802|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "<30>% chance to absorb <mag> points of stamina.",
+        "string": "<30> % Chance, <mag> Punkte Ausdauer zu absorbieren."
+    },
+    {
+        "editor_id": "ccPEWSSE002_SummonFrostAtronach",
+        "form_id": "0500083E|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Summons a Frost Atronach for <dur> seconds wherever the caster is pointing.",
+        "string": "Beschwört einen Frost-Atronachen für <dur> Sekunden an der Stelle, auf die der Zaubernde zeigt."
+    },
+    {
+        "editor_id": "ccPEWSSE002_EnchSummonFlameAtronach",
+        "form_id": "05000826|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Conjure Flame Atronach",
+        "string": "Feuer-Atronach beschwören"
+    },
+    {
+        "editor_id": "ccPEWSSE002_InfluenceRandom",
+        "form_id": "0500086A|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Mind of Chaos",
+        "string": "Geist des Chaos"
+    },
+    {
+        "editor_id": "ccPEWSSE002_EnchInfluenceConfDownFFContactLow",
+        "form_id": "05000896|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fear",
+        "string": "Fear"
+    },
+    {
+        "editor_id": "ccPEWSSE002_AbsorbMagicka",
+        "form_id": "05000800|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "<30>% chance to absorb <mag> points of magicka.",
+        "string": "<30> % Chance, <mag> Punkte Magicka zu absorbieren."
+    },
+    {
         "editor_id": "ccPEWSSE002_SummonDaedricEntity",
-        "form_id": "[0500084B]",
+        "form_id": "0500084B|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Summons a random Daedra for <dur> seconds.",
+        "string": "Beschwört einen zufälligen Daedra für <dur> Sekunden."
+    },
+    {
+        "editor_id": "ccPEWSSE002_AbsorbStamina",
+        "form_id": "05000802|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Absorb Stamina",
+        "string": "Ausdauer absorbieren"
+    },
+    {
+        "editor_id": "ccPEWSSE002_SummonFrostAtronach",
+        "form_id": "0500083E|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Conjure Frost Atronach",
+        "string": "Frost-Atronach beschwören"
+    },
+    {
+        "editor_id": "ccPEWSSE002_DLC2EnchInfluenceAggUpFFContact",
+        "form_id": "05000897|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Fury",
+        "string": "Fury"
+    },
+    {
+        "editor_id": "ccPEWSSE002_DLC2EnchInfluenceAggDownFFContact",
+        "form_id": "05000898|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Calm",
+        "string": "Calm"
+    },
+    {
+        "editor_id": "ccPEWSSE002_FrostDamage",
+        "form_id": "05000805|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Frost Damage",
+        "string": "Frostschaden"
+    },
+    {
+        "editor_id": "ccPEWSSE002_MasterChaos",
+        "form_id": "05000853|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Adds the power <Master Over Chaos>. <8>% chance to summon a Dremora Sovereign when casting <Waters of Oblivion>.",
+        "string": "Verleiht die Macht <Beherrschung des Chaos>. <8> % Chance, beim Zaubern von <Wasser aus dem Reich des Vergessens> einen Dremora-Herrscher zu beschwören."
+    },
+    {
+        "editor_id": "ccPEWSSE002_AbsorbMagicka",
+        "form_id": "05000800|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Absorb Magicka",
+        "string": "Magicka absorbieren"
+    },
+    {
+        "editor_id": "ccPEWSSE002_SummonDaedricEntity",
+        "form_id": "0500084B|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Conjure Daedra",
@@ -57,351 +217,159 @@
     },
     {
         "editor_id": "ccPEWSSE002_InfluenceAggUpFFAimedArea",
-        "form_id": "[0500085D]",
+        "form_id": "0500085D|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Frenzy",
         "string": "Erzürnen"
     },
     {
-        "editor_id": "ccPEWSSE002_SummonLurkerEffect",
-        "form_id": "[05000811]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Summons a Lurker for <dur> seconds wherever the caster is pointing.",
-        "string": "Beschwört einen Schleicher für <dur> Sekunden an der Stelle, auf die der Zaubernde zeigt."
-    },
-    {
-        "editor_id": "ccPEWSSE002_DLC2EnchInfluenceAggUpFFContact",
-        "form_id": "[05000897]",
+        "editor_id": "ccPEWSSE002_MasterChaos",
+        "form_id": "05000853|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "MGEF FULL",
-        "original": "Fury",
-        "string": "Fury"
-    },
-    {
-        "editor_id": "ccPEWSSEE02_CalmFake",
-        "form_id": "[0500089B]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Calm",
-        "string": "Calm"
-    },
-    {
-        "editor_id": "ccPEWSSE002_SummonFrostAtronach",
-        "form_id": "[0500083E]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Conjure Frost Atronach",
-        "string": "Frost-Atronach beschwören"
-    },
-    {
-        "editor_id": "ccPEWSSE002_FrostDamage",
-        "form_id": "[05000805]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Frost Damage",
-        "string": "Frostschaden"
-    },
-    {
-        "editor_id": "ccPEWSSE002_EnchInfluenceConfDownFFContactLow",
-        "form_id": "[05000896]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Creatures and people up to level <mag> flee from combat for <dur> seconds.",
-        "string": "Creatures and people up to level <mag> flee from combat for <dur> seconds."
-    },
-    {
-        "editor_id": "ccPEWSSE002_SummonLurkerEffect",
-        "form_id": "[05000811]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Conjure Lurker",
-        "string": "Schleicher beschwören"
-    },
-    {
-        "editor_id": "ccPEWSSE002_Staff01Stun",
-        "form_id": "[05000803]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Paralyze",
-        "string": "Lähmen"
+        "original": "Master Over Chaos",
+        "string": "Beherrschung des Chaos"
     },
     {
         "editor_id": "ccPEWSSE002_SummonDremoraLord",
-        "form_id": "[05000834]",
+        "form_id": "05000834|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "Summons a Dremora Lord for <dur> seconds.",
         "string": "Beschwört für <dur> Sekunden einen Dremora-Fürsten."
     },
     {
-        "editor_id": "ccPEWSSE002_AbsorbMagicka",
-        "form_id": "[05000800]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Absorb Magicka",
-        "string": "Magicka absorbieren"
-    },
-    {
         "editor_id": "ccPEWSSE002_FireDamage",
-        "form_id": "[05000808]",
+        "form_id": "05000808|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "Burns the target for <mag> points. 30% chance for frost and shock to do <mag> points of damage.",
         "string": "Steckt das Ziel für <mag> Punkte in Brand. 30 % Chance für Frost und Blitz, <mag> Punkte Schaden zu verursachen."
     },
     {
-        "editor_id": "ccPEWSSE002_AbsorbHealth",
-        "form_id": "[05000801]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Absorb Health",
-        "string": "Gesundheit absorbieren"
-    },
-    {
-        "editor_id": "ccPEWSSE002_AbsorbMagicka",
-        "form_id": "[05000800]",
+        "editor_id": "ccPEWSSE002_SummonLurkerEffect",
+        "form_id": "05000811|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "MGEF DNAM",
-        "original": "<30>% chance to absorb <mag> points of magicka.",
-        "string": "<30> % Chance, <mag> Punkte Magicka zu absorbieren."
-    },
-    {
-        "editor_id": "ccPEWSSE002_MasterChaos",
-        "form_id": "[05000853]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Master Over Chaos",
-        "string": "Beherrschung des Chaos"
+        "original": "Summons a Lurker for <dur> seconds wherever the caster is pointing.",
+        "string": "Beschwört einen Schleicher für <dur> Sekunden an der Stelle, auf die der Zaubernde zeigt."
     },
     {
         "editor_id": "ccPEWSSE002_SummonDremoraLord",
-        "form_id": "[05000834]",
+        "form_id": "05000834|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Conjure Dremora Lord",
         "string": "Dremora-Fürst beschwören"
     },
     {
-        "editor_id": "ccPEWSSE002_InfluenceAggDownFFAimedArea",
-        "form_id": "[05000869]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Pacify",
-        "string": "Beruhigen"
-    },
-    {
-        "editor_id": "ccPEWSSEE02_CalmFake",
-        "form_id": "[0500089B]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Random chance to calm, demoralize, or frenzy a target for <60> seconds.",
-        "string": "Random chance to calm, demoralize, or frenzy a target for <60> seconds."
-    },
-    {
-        "editor_id": "ccPEWSSE002_AbsorbStamina",
-        "form_id": "[05000802]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Absorb Stamina",
-        "string": "Ausdauer absorbieren"
-    },
-    {
-        "editor_id": "ccPEWSSE002_ShockDamage",
-        "form_id": "[05000807]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Shock Damage",
-        "string": "Blitzschaden"
-    },
-    {
-        "editor_id": "ccPEWSSE002_SummonDaedricEntity",
-        "form_id": "[0500084B]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Summons a random Daedra for <dur> seconds.",
-        "string": "Beschwört einen zufälligen Daedra für <dur> Sekunden."
-    },
-    {
-        "editor_id": "ccPEWSSE002_AbsorbHealth",
-        "form_id": "[05000801]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Absorb <mag> points of health.",
-        "string": "<mag> Gesundheitspunkte absorbieren."
-    },
-    {
-        "editor_id": "ccPEWSSE002_NecklaceDummyEffect",
-        "form_id": "[05000854]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Waters of Oblivion",
-        "string": "Wasser aus dem Reich des Vergessens"
-    },
-    {
-        "editor_id": "ccPEWSSE002_EnchSummonFlameAtronach",
-        "form_id": "[05000826]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Conjure Flame Atronach",
-        "string": "Feuer-Atronach beschwören"
-    },
-    {
-        "editor_id": "ccPEWSSE002_EnchInfluenceConfDownFFContactLow",
-        "form_id": "[05000896]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Fear",
-        "string": "Fear"
-    },
-    {
         "editor_id": "ccPEWSSE002_SunDamage",
-        "form_id": "[05000806]",
+        "form_id": "05000806|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Sun Damage",
         "string": "Sonnenlichtschaden"
     },
     {
-        "editor_id": "ccPEWSSE002_MasterChaos",
-        "form_id": "[05000853]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Adds the power <Master Over Chaos>. <8>% chance to summon a Dremora Sovereign when casting <Waters of Oblivion>.",
-        "string": "Verleiht die Macht <Beherrschung des Chaos>. <8> % Chance, beim Zaubern von <Wasser aus dem Reich des Vergessens> einen Dremora-Herrscher zu beschwören."
-    },
-    {
-        "editor_id": "ccPEWSSE002_Staff01Stun",
-        "form_id": "[05000803]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "With the Sovereign Band equipped, <10>% chance targets that fail to resist are paralyzed for <dur> seconds.",
-        "string": "Wenn das Band der Herrschaft ausgerüstet ist, besteht eine Chance von <10> %, dass Ziele, deren Resistenz versagt, für <dur> Sekunden gelähmt werden."
-    },
-    {
-        "editor_id": "ccPEWSSE002_EnchSummonFlameAtronach",
-        "form_id": "[05000826]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Summons a Flame Atronach for <dur> seconds wherever the caster is pointing.",
-        "string": "Beschwört einen Feuer-Atronachen für <dur> Sekunden an der Stelle, auf die der Zaubernde zeigt."
-    },
-    {
-        "editor_id": "ccPEWSSE002_AbsorbStamina",
-        "form_id": "[05000802]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "<30>% chance to absorb <mag> points of stamina.",
-        "string": "<30> % Chance, <mag> Punkte Ausdauer zu absorbieren."
-    },
-    {
         "editor_id": "ccPEWSSE002_FireDamage",
-        "form_id": "[05000808]",
+        "form_id": "05000808|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Fire Damage",
         "string": "Feuerschaden"
     },
     {
+        "editor_id": "ccPEWSSE002_SummonLurkerEffect",
+        "form_id": "05000811|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Conjure Lurker",
+        "string": "Schleicher beschwören"
+    },
+    {
+        "editor_id": "ccPEWSSE002_ShockDamage",
+        "form_id": "05000807|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Shock Damage",
+        "string": "Blitzschaden"
+    },
+    {
+        "editor_id": "ccPEWSSE002_AbsorbHealth",
+        "form_id": "05000801|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Absorb <mag> points of health.",
+        "string": "<mag> Gesundheitspunkte absorbieren."
+    },
+    {
         "editor_id": "ccPEWSSE002_Staff01Frenzy",
-        "form_id": "[05000892]",
+        "form_id": "05000892|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Mind of Chaos",
         "string": "Mind of Chaos"
     },
     {
-        "editor_id": "ccPEWSSE002_Staff01Fear",
-        "form_id": "[05000893]",
+        "editor_id": "ccPEWSSE002_Staff01Calm",
+        "form_id": "05000891|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Mind of Chaos",
         "string": "Mind of Chaos"
-    },
-    {
-        "editor_id": "ccPEWSSE002_NecklaceEnch",
-        "form_id": "[0500080A]",
-        "index": null,
-        "type": "ENCH FULL",
-        "original": "Deep Wisdom",
-        "string": "Tiefe Weisheit"
-    },
-    {
-        "editor_id": "ccPEWSSE002_Staff01Ench",
-        "form_id": "[05000804]",
-        "index": null,
-        "type": "ENCH FULL",
-        "original": "Mind of Chaos",
-        "string": "Geist des Chaos"
     },
     {
         "editor_id": "ccPEWSSE002_Staff02Ench",
-        "form_id": "[05000809]",
+        "form_id": "05000809|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Burning Chaos",
         "string": "Brennendes Chaos"
     },
     {
-        "editor_id": "ccPEWSSE002_RingEnch",
-        "form_id": "[05000851]",
-        "index": null,
-        "type": "ENCH FULL",
-        "original": "Sovereign Band",
-        "string": "Band der Herrschaft"
-    },
-    {
-        "editor_id": "ccPEWSSE002_Staff01Calm",
-        "form_id": "[05000891]",
+        "editor_id": "ccPEWSSE002_Staff01Fear",
+        "form_id": "05000893|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Mind of Chaos",
         "string": "Mind of Chaos"
     },
     {
-        "editor_id": "ccPEWSSE002_AbsorbSpell",
-        "form_id": "[05000852]",
+        "editor_id": "ccPEWSSE002_Staff01Ench",
+        "form_id": "05000804|ccpewsse002-armsofchaos.esl",
         "index": null,
-        "type": "SPEL FULL",
-        "original": "Master Over Chaos",
-        "string": "Beherrschung des Chaos"
+        "type": "ENCH FULL",
+        "original": "Mind of Chaos",
+        "string": "Geist des Chaos"
     },
     {
-        "editor_id": "ccPEWSSE002_ConjureSpell",
-        "form_id": "[05000812]",
+        "editor_id": "ccPEWSSE002_RingEnch",
+        "form_id": "05000851|ccpewsse002-armsofchaos.esl",
         "index": null,
-        "type": "SPEL FULL",
-        "original": "Waters of Oblivion",
-        "string": "Wasser aus dem Reich des Vergessens"
+        "type": "ENCH FULL",
+        "original": "Sovereign Band",
+        "string": "Band der Herrschaft"
     },
     {
-        "editor_id": "ccPEWSSE002_SummonDremoraFire",
-        "form_id": "[05000833]",
+        "editor_id": "ccPEWSSE002_NecklaceEnch",
+        "form_id": "0500080A|ccpewsse002-armsofchaos.esl",
         "index": null,
-        "type": "SPEL FULL",
-        "original": "Summon Unbound Dremora",
-        "string": "Ungebundenen Dremora beschwören"
-    },
-    {
-        "editor_id": "ccPEWSSE002_Frenzy",
-        "form_id": "[0500086E]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Fear",
-        "string": "Furcht"
+        "type": "ENCH FULL",
+        "original": "Deep Wisdom",
+        "string": "Tiefe Weisheit"
     },
     {
         "editor_id": "ccPEWSSE002_SummonDremoraIce",
-        "form_id": "[0500083F]",
+        "form_id": "0500083F|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Summon Unbound Dremora",
         "string": "Ungebundenen Dremora beschwören"
     },
     {
-        "editor_id": "ccPEWSSE002_SummonDremoraStorm",
-        "form_id": "[05000841]",
+        "editor_id": "ccPEWSSE002_SummonDremoraFire",
+        "form_id": "05000833|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Summon Unbound Dremora",
@@ -409,23 +377,55 @@
     },
     {
         "editor_id": "ccPEWSSE002_Calm",
-        "form_id": "[0500086B]",
+        "form_id": "0500086B|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Calm",
         "string": "Besänftigen"
     },
     {
+        "editor_id": "ccPEWSSE002_AbsorbSpell",
+        "form_id": "05000852|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Master Over Chaos",
+        "string": "Beherrschung des Chaos"
+    },
+    {
+        "editor_id": "ccPEWSSE002_SummonDremoraStorm",
+        "form_id": "05000841|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Summon Unbound Dremora",
+        "string": "Ungebundenen Dremora beschwören"
+    },
+    {
+        "editor_id": "ccPEWSSE002_Fear",
+        "form_id": "0500086C|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Fear",
+        "string": "Furcht"
+    },
+    {
         "editor_id": "ccPEWSSE002_ConjureSpell",
-        "form_id": "[05000812]",
+        "form_id": "05000812|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Waters of Oblivion",
+        "string": "Wasser aus dem Reich des Vergessens"
+    },
+    {
+        "editor_id": "ccPEWSSE002_ConjureSpell",
+        "form_id": "05000812|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "SPEL DESC",
         "original": "Summons a random Daedra for <300> seconds.",
         "string": "Beschwört einen zufälligen Daedra für <300> Sekunden."
     },
     {
-        "editor_id": "ccPEWSSE002_Fear",
-        "form_id": "[0500086C]",
+        "editor_id": "ccPEWSSE002_Frenzy",
+        "form_id": "0500086E|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Fear",
@@ -433,7 +433,7 @@
     },
     {
         "editor_id": "ccPEWSSE002AoCActivatorTrigger",
-        "form_id": "[0500086D]",
+        "form_id": "0500086D|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Take",
@@ -441,7 +441,7 @@
     },
     {
         "editor_id": "ccPEWSSE002_ChaliceActivatorFull",
-        "form_id": "[0500082E]",
+        "form_id": "0500082E|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "ACTI FULL",
         "original": "Summon Daedra",
@@ -449,111 +449,95 @@
     },
     {
         "editor_id": "ccPEWSSE002AoCActivatorTrigger",
-        "form_id": "[0500086D]",
+        "form_id": "0500086D|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "ACTI FULL",
         "original": "Arms of Chaos",
         "string": "Waffen des Chaos"
     },
     {
-        "editor_id": "ccPEWSSE002_Ring",
-        "form_id": "[05000813]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Sovereign Band",
-        "string": "Band der Herrschaft"
-    },
-    {
         "editor_id": "ccPEWSSE002_Necklace",
-        "form_id": "[0500080F]",
+        "form_id": "0500080F|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Warlock's Mark",
         "string": "Zeichen des Hexenmeisters"
     },
     {
-        "editor_id": "ccPEWSSE002_MasterNotes",
-        "form_id": "[05000855]",
+        "editor_id": "ccPEWSSE002_Ring",
+        "form_id": "05000813|ccpewsse002-armsofchaos.esl",
         "index": null,
-        "type": "BOOK FULL",
-        "original": "Master Ellane's Last Words",
-        "string": "Meisterin Ellanes letzte Worte"
-    },
-    {
-        "editor_id": "ccPEWSSE002_EECNote",
-        "form_id": "[0500081B]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Loss of the Sea Stallion",
-        "string": "Der Untergang der Seehengst"
+        "type": "ARMO FULL",
+        "original": "Sovereign Band",
+        "string": "Band der Herrschaft"
     },
     {
         "editor_id": "ccPEWSSE002_MagesJournal",
-        "form_id": "[0500081A]",
+        "form_id": "0500081A|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "Hyenril's Journal",
         "string": "Hyenrils Tagebuch"
     },
     {
-        "editor_id": "ccPEWSSE002_EECNote",
-        "form_id": "[0500081B]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face=\"$HandwrittenFont\">\r\nOrthrus,\r\n\r\nThe new route you suggested may help us avoid the pirates, but not the storms. The Sea Stallion now lies at the bottom of Pilgrim's Trench, and its cargo along with it.  If I ever find that charlatan of a priest we paid to bless the ships, I'm going to rip the amulet of Kynareth off his neck and strangle him with it.\r\n\r\nAnyways, if you know any divers looking for a challenge, I've enclosed a potion of waterbreathing and some scrolls with this letter. It won't do anything about the slaughterfish, but at least it'll help you hold your breath.</font>",
-        "string": "<font face=\"$HandwrittenFont\">\r\nOrthrus,\r\n\r\nmit der neuen Route, die Ihr vorgeschlagen habt, können wir vielleicht Piraten aus dem Weg gehen, aber keinen Stürmen. Die Seehengst liegt nun auf dem Grund des Pilgergrabens und mit ihr ihre Fracht. Wenn ich diesen Scharlatan von einem Priester in die Finger kriege, den wir für das Segnen der Schiffe bezahlt haben, reiße ich ihm sein Kynareth-Amulett vom Hals und erwürge ihn damit.\r\n\r\nWie auch immer, falls Ihr irgendwelche Taucher kennt, die eine Herausforderung suchen, habe ich diesem Brief einen Zaubertrank der Wasseratmung und ein paar Schriftrollen beigelegt. Das wird ihnen nicht gegen die Schlachterfische helfen, aber immerhin beim Luftanhalten.</font>"
-    },
-    {
         "editor_id": "ccPEWSSE002_MagesJournal",
-        "form_id": "[0500081A]",
+        "form_id": "0500081A|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "BOOK DESC",
         "original": "<font face=\"$HandwrittenFont\">\r\n<b>1st of Sun's Dawn, 4E 201</b>\r\nMaster Ellane said the Staff of Chaos was crafted by Loreth, and passed on through the generations until it was stolen by Jagar Tharn, before being shattered into pieces by the Eternal Champion. \r\n\r\nWhile the pieces may be lost forever, they say centuries later, a descendant of Loreth sought to recreate their magic. The results were the Arms of Chaos, magical staves that harnessed the power of the Sun and the Moon. Yet one day, the mage dismantled the staves and left them lifeless, convinced they were possessed by some unknown madness. \r\n\r\nIt was my master's obsession to restore these artifacts, and in her honor, it has become mine. If only I could speak to her, I would know what to do next.\r\n\r\n<b>17th of Rain's Hand, 4E 201</b>\r\nLeave it to my late master to provide guidance on how to proceed. Going through her effects, I found a sketch of the necklace she often wore. It's identical in all ways but one - there's an orb set in the center of the amulet, teeming with fire. If it's true that Loreth's magic allowed one to travel to distant worlds, then it's possible this orb is a Sigil Stone! If my hunch is right, the staves are missing the same. \r\n\r\n<b>22nd of Rain's Hand, 4E 201</b>\r\nMy spirit renewed, I scoured the archives in Winterhold and found my path forward. I must find a way to summon three Daedra, Guardians of the Sigil Stones. There's an altar on the eastern shore of Skytemple Ruins, bearing a Daedric mark. It may be what I need.\r\n\r\n<b>28th of Rain's Hand, 4E 201</b>\r\nI've hit a snag. The ring used to activate the summoning circle was buried with my late master, which I foolishly had shipped to her ancestral home. To think she even gifted me the ring, and I mistook it for sentiment! I feel thicker than Netch Jelly.\r\n\r\nStill, complaining won't undo my mistake. The name of the ship was the Sea Stallion, I wonder if I can catch it before it departs.\r\n\r\n<b>2nd of Last Seed, 4E 201</b>\r\nThe courier has yet to return. I'm beginning to fear the worst; that the ship had already left the dock long before my letter arrived. I'm not sure what to do at this point. I haven't had much sleep, and my mind is starting to hear creaking noises where nothing exists. \r\n\r\nI wish my master were here still, so I could seek her wisdom. They say there is a Shrine of Akray at the pass to the south. Come morning, I will visit it and pray for an answer.</font>\r\n",
         "string": "<font face=\"$HandwrittenFont\">\r\n<b>1. Sonnenaufgang, 4Ä 201</b>\r\nLaut Meisterin Ellane wurde der Stab des Chaos von Loreth angefertigt und über Generationen hinweg weitergegeben, bis er von Jagar Tharn gestohlen und schließlich vom Ewigen Champion in Tausend Stücke zerschmettert wurde. \r\n\r\nDie Stücke mögen für immer verloren sein, doch es heißt, dass Jahrhunderte später ein Nachkomme Loreths versuchte, ihre Magie nachzubilden. Das Ergebnis waren die Waffen des Chaos, magische Stäbe mit der Macht der Sonne und des Mondes. Doch eines Tages zerlegte der Magier die Stäbe und raubte ihnen die Kraft, da er glaubte, sie seien von einem unbekannten Wahnsinn befallen. \r\n\r\nMeine Meisterin war besessen von dem Gedanken, diese Artefakte wiederherzustellen, und ihr zu Ehren habe ich mir diese Aufgabe ebenfalls zu eigen gemacht. Wenn ich nur mit ihr sprechen könnte, dann wüsste ich, was ich als Nächstes tun muss.\r\n\r\n<b>17. Regenhand, 4Ä 201</b>\r\nDank meiner verstorbenen Meisterin weiß ich nun, wie ich vorgehen muss. Als ich ihre Sachen durchging, fand ich eine Zeichnung der Halskette, die sie oft trug. Im Gegensatz zu ihrem Schmuckstück sitzt in der Mitte des Amuletts jedoch eine flammende Kugel. Wenn es wahr ist, dass man mit Loreths Magie zu fernen Welten reisen kann, ist diese Kugel womöglich ein Siegelstein! Wenn meine Vermutung stimmt, könnte dieses Element vielleicht auch in den Stäben fehlen. \r\n\r\n<b>22. Regenhand, 4Ä 201</b>\r\nMit neuer Hoffnung stöberte ich in den Archiven von Winterfeste und fand heraus, was es als Nächstes zu tun gilt. Ich muss drei Daedra herbeirufen, die Wächter der Siegelsteine. Am östlichen Ufer der Himmelstempelruinen befindet sich ein Altar, der ein daedrisches Symbol trägt. Vielleicht kann ich dort die Beschwörung durchführen.\r\n\r\n<b>28. Regenhand, 4Ä 201</b>\r\nIch habe einen herben Rückschlag erlitten. Der Ring, der zur Aktivierung des Beschwörungskreises benötigt wird, wurde zusammen mit meiner Meisterin bestattet und die habe ich törichterweise in die Heimat ihrer Vorfahren verschifft. Sie hatte mir ihren Ring sogar geschenkt - und ich habe sie für rührselig gehalten! Jedes Netchgelee hat mehr Hirn als ich.\r\n\r\nAber es führt ja zu nichts, sich zu beklagen. Der Name des Schiffs war \"Seehengst\". Vielleicht kann ich es abfangen, bevor es ablegt.\r\n\r\n<b>2. Letzte Saat, 4Ä 201</b>\r\nDer Kurier ist noch nicht zurück. Ich fürchte langsam das Schlimmste - dass das Schiff den Hafen bereits verlassen hat, bevor mein Brief eingetroffen ist. Ich weiß nicht, was ich jetzt tun soll. Ich habe nicht viel geschlafen und bilde mir schon ein, irgendwelche knarzende Geräusche zu hören. \r\n\r\nIch wünschte, meine Meisterin wäre noch am Leben, um mich an ihrer Weisheit teilhaben zu lassen. Angeblich gibt es beim Pass nach Süden einen Schrein von Arkay. Morgen früh werde ich dort um eine Antwort beten.</font>\r\n"
     },
     {
+        "editor_id": "ccPEWSSE002_EECNote",
+        "form_id": "0500081B|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Loss of the Sea Stallion",
+        "string": "Der Untergang der Seehengst"
+    },
+    {
+        "editor_id": "ccPEWSSE002_EECNote",
+        "form_id": "0500081B|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\nOrthrus,\r\n\r\nThe new route you suggested may help us avoid the pirates, but not the storms. The Sea Stallion now lies at the bottom of Pilgrim's Trench, and its cargo along with it.  If I ever find that charlatan of a priest we paid to bless the ships, I'm going to rip the amulet of Kynareth off his neck and strangle him with it.\r\n\r\nAnyways, if you know any divers looking for a challenge, I've enclosed a potion of waterbreathing and some scrolls with this letter. It won't do anything about the slaughterfish, but at least it'll help you hold your breath.</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\nOrthrus,\r\n\r\nmit der neuen Route, die Ihr vorgeschlagen habt, können wir vielleicht Piraten aus dem Weg gehen, aber keinen Stürmen. Die Seehengst liegt nun auf dem Grund des Pilgergrabens und mit ihr ihre Fracht. Wenn ich diesen Scharlatan von einem Priester in die Finger kriege, den wir für das Segnen der Schiffe bezahlt haben, reiße ich ihm sein Kynareth-Amulett vom Hals und erwürge ihn damit.\r\n\r\nWie auch immer, falls Ihr irgendwelche Taucher kennt, die eine Herausforderung suchen, habe ich diesem Brief einen Zaubertrank der Wasseratmung und ein paar Schriftrollen beigelegt. Das wird ihnen nicht gegen die Schlachterfische helfen, aber immerhin beim Luftanhalten.</font>"
+    },
+    {
         "editor_id": "ccPEWSSE002_MasterNotes",
-        "form_id": "[05000855]",
+        "form_id": "05000855|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Master Ellane's Last Words",
+        "string": "Meisterin Ellanes letzte Worte"
+    },
+    {
+        "editor_id": "ccPEWSSE002_MasterNotes",
+        "form_id": "05000855|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "BOOK DESC",
         "original": "<font face='$HandwrittenFont'>\r\nIf you're reading this, it means I'm dead, a fate I'm sure brings a smile to your face, if you're standing on your head anyway. Otherwise it would just be a frown, and we can't have that. That would be far too predictable.\r\n\r\nFor who doesn't appreciate a little chaos? Maybe I'll finish this sentence by saying flying horker loaf. Hopefully now your frowns are facing the right direction.\r\n\r\nAfter all, neither rhyme nor reason has a home here. Fire is water, up is down, right is wrong. Death is life. \r\n\r\nAnd so like Dalak to Loreth before me, I speak to you now, dear apprentice, from inside this box. A wise sage might caution you to be careful when you follow my path, lest you end up in the same place. \r\n\r\nBut I have never claimed to be wise. To me, death is yet another adventure, another possibility to explore. The same should be true of your life.</font>\r\n",
         "string": "<font face='$HandwrittenFont'>\r\nWenn du dies lest, bedeutet das, dass ich tot bin, ein Schicksal, das dich sicher lächeln lässt - zumindest wenn du auf dem Kopf stehst. Sonst wäre es nur ein trauriges Gesicht und das wollen wir ja nicht. Das wäre viel zu vorhersehbar.\r\n\r\nDenn sind wir nicht alle auf der Suche nach einem Funken Chaos? Vielleicht beende ich diesen Satz mit \"fliegendes Horkerfleisch\". Hoffentlich zeigen deine Mundwinkel nun in die richtige Richtung.\r\n\r\nSchließlich hat das hier alles weder Hand noch Fuß. Feuer ist Wasser, oben ist unten, richtig ist falsch. Tod ist Leben. \r\n\r\nUnd so wie Dalak zu Loreth spreche ich nun zu dir, mein lieber Lehrling, aus dem Inneren dieser Kiste. Eine weise Frau würde dich sicher davor warnen, in meine Fußstapfen zu treten, auf dass du nicht genauso enden mögest wie ich. \r\n\r\nDoch ich habe nie behauptet, weise zu sein. Für mich ist der Tod nur ein weiteres Abenteuer, eine weitere Möglichkeit der Forschung. Bitte beherzige das auch für dein eigenes Leben.</font>\r\n"
     },
     {
-        "editor_id": "ccPEWSSE002_Staff02_NoStone_NonPlayable",
-        "form_id": "[0500088D]",
-        "index": null,
-        "type": "MISC FULL",
-        "original": "Arm of the Sun",
-        "string": "Arm of the Sun"
-    },
-    {
         "editor_id": "ccPEWSSE002_SigilStoneGreen_NonPlayable",
-        "form_id": "[0500082D]",
+        "form_id": "0500082D|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "MISC FULL",
         "original": "Green Sigil Stone",
         "string": "Green Sigil Stone"
     },
     {
-        "editor_id": "ccPEWSSE002_Staff01_NoStone_NonPlayable",
-        "form_id": "[0500088E]",
+        "editor_id": "ccPEWSSE002_Staff02_NoStone_NonPlayable",
+        "form_id": "0500088D|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "MISC FULL",
-        "original": "Arm of the Moon",
-        "string": "Arm of the Moon"
-    },
-    {
-        "editor_id": "ccPEWSSE002_SigilStoneGreen",
-        "form_id": "[05000815]",
-        "index": null,
-        "type": "MISC FULL",
-        "original": "Green Sigil Stone",
-        "string": "Grüner Siegelstein"
+        "original": "Arm of the Sun",
+        "string": "Arm of the Sun"
     },
     {
         "editor_id": "ccPEWSSE002_Staff01_NoStone",
-        "form_id": "[0500081C]",
+        "form_id": "0500081C|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "MISC FULL",
         "original": "Arm of the Moon",
@@ -561,79 +545,135 @@
     },
     {
         "editor_id": "ccPEWSSE002_SigilStoneOrange_NonPlayable",
-        "form_id": "[05000883]",
+        "form_id": "05000883|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "MISC FULL",
         "original": "Orange Sigil Stone",
         "string": "Orange Sigil Stone"
     },
     {
-        "editor_id": "ccPEWSSE002_SigilStoneOrange",
-        "form_id": "[05000816]",
+        "editor_id": "ccPEWSSE002_Staff02_NoStone",
+        "form_id": "05000823|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "MISC FULL",
-        "original": "Orange Sigil Stone",
-        "string": "Oranger Siegelstein"
+        "original": "Arm of the Sun",
+        "string": "Waffen der Sonne"
     },
     {
         "editor_id": "ccPEWSSE002_Necklace_NoStone",
-        "form_id": "[05000827]",
+        "form_id": "05000827|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "MISC FULL",
         "original": "Warlock's Mark",
         "string": "Zeichen des Hexenmeisters"
     },
     {
-        "editor_id": "ccPEWSSE002_Necklace_NoStone_NonPlayable",
-        "form_id": "[05000884]",
-        "index": null,
-        "type": "MISC FULL",
-        "original": "Warlock's Mark",
-        "string": "Warlock's Mark"
-    },
-    {
-        "editor_id": "ccPEWSSE002_SigilStoneBlue",
-        "form_id": "[05000814]",
-        "index": null,
-        "type": "MISC FULL",
-        "original": "Blue Sigil Stone",
-        "string": "Blauer Siegelstein"
-    },
-    {
-        "editor_id": "ccPEWSSE002_Staff02_NoStone",
-        "form_id": "[05000823]",
-        "index": null,
-        "type": "MISC FULL",
-        "original": "Arm of the Sun",
-        "string": "Waffen der Sonne"
-    },
-    {
         "editor_id": "ccPEWSSE002_SigilStoneBlue_NonPlayable",
-        "form_id": "[0500082C]",
+        "form_id": "0500082C|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "MISC FULL",
         "original": "Blue Sigil Stone",
         "string": "Blue Sigil Stone"
     },
     {
-        "editor_id": "ccPEWSSE002_Staff02",
-        "form_id": "[0500080B]",
+        "editor_id": "ccPEWSSE002_Staff01_NoStone_NonPlayable",
+        "form_id": "0500088E|ccpewsse002-armsofchaos.esl",
         "index": null,
-        "type": "WEAP FULL",
-        "original": "Arm of the Sun",
-        "string": "Waffen der Sonne"
+        "type": "MISC FULL",
+        "original": "Arm of the Moon",
+        "string": "Arm of the Moon"
+    },
+    {
+        "editor_id": "ccPEWSSE002_Necklace_NoStone_NonPlayable",
+        "form_id": "05000884|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Warlock's Mark",
+        "string": "Warlock's Mark"
+    },
+    {
+        "editor_id": "ccPEWSSE002_SigilStoneOrange",
+        "form_id": "05000816|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Orange Sigil Stone",
+        "string": "Oranger Siegelstein"
+    },
+    {
+        "editor_id": "ccPEWSSE002_SigilStoneBlue",
+        "form_id": "05000814|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Blue Sigil Stone",
+        "string": "Blauer Siegelstein"
+    },
+    {
+        "editor_id": "ccPEWSSE002_SigilStoneGreen",
+        "form_id": "05000815|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Green Sigil Stone",
+        "string": "Grüner Siegelstein"
     },
     {
         "editor_id": "ccPEWSSE002_Staff01",
-        "form_id": "[0500080D]",
+        "form_id": "0500080D|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "WEAP FULL",
         "original": "Arm of the Moon",
         "string": "Waffen des Mondes"
     },
     {
+        "editor_id": "ccPEWSSE002_Staff02",
+        "form_id": "0500080B|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Arm of the Sun",
+        "string": "Waffen der Sonne"
+    },
+    {
+        "editor_id": "ccPEWSSE002_SummonLurker",
+        "form_id": "05000817|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Lurker",
+        "string": "Schleicher"
+    },
+    {
+        "editor_id": "ccPEWSSE002_SummonSeeker",
+        "form_id": "0500084E|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Lurker",
+        "string": "Schleicher"
+    },
+    {
+        "editor_id": "ccPEWSSE002_HynerilNPC",
+        "form_id": "0500081D|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Hyenril",
+        "string": "Hyenril"
+    },
+    {
+        "editor_id": "ccPEWSSE002_EncDremoraWarlockIce",
+        "form_id": "05000837|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Dremora Sehtkynaz",
+        "string": "Dremora Sehtkynaz"
+    },
+    {
+        "editor_id": "ccPEWSSE002_EncDremoraWarlockStorm",
+        "form_id": "05000835|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Dremora Lyrkynaz",
+        "string": "Dremora Lyrkynaz"
+    },
+    {
         "editor_id": "ccPEWSSE002_EncDremoraFire",
-        "form_id": "[05000839]",
+        "form_id": "05000839|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Dremora Sovereign",
@@ -641,71 +681,15 @@
     },
     {
         "editor_id": "ccPEWSSE002_SummonEncDremoraSovereign",
-        "form_id": "[05000850]",
+        "form_id": "05000850|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Dremora Sovereign",
         "string": "Dremora-Herrscher"
     },
     {
-        "editor_id": "ccPEWSSE002_SummonSeeker",
-        "form_id": "[0500084E]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Lurker",
-        "string": "Schleicher"
-    },
-    {
-        "editor_id": "ccPEWSSE002_SummonLurker",
-        "form_id": "[05000817]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Lurker",
-        "string": "Schleicher"
-    },
-    {
-        "editor_id": "ccPEWSSE002_EncDremoraWarlockIce",
-        "form_id": "[05000837]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Dremora Sehtkynaz",
-        "string": "Dremora Sehtkynaz"
-    },
-    {
-        "editor_id": "ccPEWSSE002_HynerilNPC",
-        "form_id": "[0500081D]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Hyenril",
-        "string": "Hyenril"
-    },
-    {
-        "editor_id": "ccPEWSSE002_EncDremoraWarlockStorm",
-        "form_id": "[05000835]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Dremora Lyrkynaz",
-        "string": "Dremora Lyrkynaz"
-    },
-    {
-        "editor_id": "WindhelmEastEmpireCompany",
-        "form_id": "[00016777]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "East Empire Company",
-        "string": "Ost-Kaiserliche Handelsgesellschaft"
-    },
-    {
-        "editor_id": "DLC2TelMithryn",
-        "form_id": "[04017787]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Tel Mithryn",
-        "string": "Tel Mithryn"
-    },
-    {
         "editor_id": "Tamriel",
-        "form_id": "[0000003C]",
+        "form_id": "0000003C|Skyrim.esm",
         "index": null,
         "type": "WRLD FULL",
         "original": "Skyrim",
@@ -713,119 +697,7 @@
     },
     {
         "editor_id": "ccPEWSSE002_Quest",
-        "form_id": "[05000819]",
-        "index": 100,
-        "type": "QUST NNAM",
-        "original": "Craft the Arm of the Moon at a Staff Enchanter",
-        "string": "Stelle bei einem Stabverzauberer die Waffen des Mondes her."
-    },
-    {
-        "editor_id": "ccPEWSSE002_Quest",
-        "form_id": "[05000819]",
-        "index": 10,
-        "type": "QUST NNAM",
-        "original": "Investigate the Skytemple Ruins",
-        "string": "Erforsche die Himmelstempelruinen."
-    },
-    {
-        "editor_id": "ccPEWSSE002_Quest",
-        "form_id": "[05000819]",
-        "index": 70,
-        "type": "QUST NNAM",
-        "original": "Defeat the Dremora Sehtkynaz",
-        "string": "Besiege den Dremora Sehtkynaz."
-    },
-    {
-        "editor_id": "ccPEWSSE002_Quest",
-        "form_id": "[05000819]",
-        "index": null,
-        "type": "QUST FULL",
-        "original": "The Arms of Chaos",
-        "string": "Die Waffen des Chaos"
-    },
-    {
-        "editor_id": "ccPEWSSE002_Quest",
-        "form_id": "[05000819]",
-        "index": 80,
-        "type": "QUST NNAM",
-        "original": "Defeat the Dremora Lyrkynaz",
-        "string": "Besiege den Dremora Lyrkynaz."
-    },
-    {
-        "editor_id": "ccPEWSSE002_Quest",
-        "form_id": "[05000819]",
-        "index": 91,
-        "type": "QUST CNAM",
-        "original": "At the Skytemple Ruins, I found the body of a mage who was attempting to obtain three Sigil Stones to restore her magical items. However, I'll need a special ring to summon the necessary Daedra, which the mage accidentally shipped away on a cargo ship called the Sea Stallion. I'll need to visit the East Empire Company and find more information about where the cargo ship was headed.",
-        "string": "Ich habe in den Himmelstempelruinen die Leiche einer Magierin gefunden, die versucht hatte, drei Siegelsteine zu beschaffen, um ihre magischen Gegenstände zu restaurieren. Ich brauche dazu einen besonderen Ring, um den nötigen Daedra zu beschwören, den hat die Magierin allerdings versehentlich auf einem Frachter namens \"Seehengst\" verschifft. Ich sollte die Ost-Kaiserliche Handelsgesellschaft aufsuchen und herausfinden, welchen Kurs das Frachtschiff eingeschlagen hat."
-    },
-    {
-        "editor_id": "ccPEWSSE002_Quest",
-        "form_id": "[05000819]",
-        "index": 84,
-        "type": "QUST CNAM",
-        "original": "At the Skytemple Ruins, I found the body of a mage who was attempting to obtain three Sigil Stones to restore her magical items. However, I'll need a special ring to summon the necessary Daedra, which the mage accidentally shipped away on a cargo ship called the Sea Stallion. I found the ring in a coffin deep in Pilgrim's Trench.",
-        "string": "Ich habe in den Himmelstempelruinen die Leiche einer Magierin gefunden, die versucht hatte, drei Siegelsteine zu beschaffen, um ihre magischen Gegenstände zu restaurieren. Ich brauche dazu einen besonderen Ring, um den nötigen Daedra zu beschwören, den hat die Magierin allerdings versehentlich auf einem Frachter namens \"Seehengst\" verschifft. Ich habe den Ring in einem Sarg tief im Pilgergraben gefunden."
-    },
-    {
-        "editor_id": "ccPEWSSE002_Quest",
-        "form_id": "[05000819]",
-        "index": 95,
-        "type": "QUST NNAM",
-        "original": "Retrieve the Sigil Stones",
-        "string": "Besorge die Siegelsteine."
-    },
-    {
-        "editor_id": "ccPEWSSE002_Quest",
-        "form_id": "[05000819]",
-        "index": 200,
-        "type": "QUST NNAM",
-        "original": "Craft the Arm of the Sun at a Staff Enchanter",
-        "string": "Stelle bei einem Stabverzauberer die Waffen der Sonne her."
-    },
-    {
-        "editor_id": "ccPEWSSE002_Quest",
-        "form_id": "[05000819]",
-        "index": 50,
-        "type": "QUST CNAM",
-        "original": "At the Skytemple Ruins, I found the body of a mage who was attempting to obtain three Sigil Stones to restore her magical items. Using a ring I found at the bottom of Pilgrim's Trench, I summoned three Daedra and engaged them in battle.",
-        "string": "Ich habe in den Himmelstempelruinen die Leiche einer Magierin gefunden, die versucht hatte, drei Siegelsteine zu beschaffen, um ihre magischen Gegenstände zu restaurieren. Mit einem Ring, den ich am Grund des Pilgergrabens gefunden hatte, beschwor ich drei Daedra und griff sie an."
-    },
-    {
-        "editor_id": "ccPEWSSE002_Quest",
-        "form_id": "[05000819]",
-        "index": 20,
-        "type": "QUST NNAM",
-        "original": "Read Hyneril's Journal",
-        "string": "Lies Hyenrils Tagebuch."
-    },
-    {
-        "editor_id": "ccPEWSSE002_Quest",
-        "form_id": "[05000819]",
-        "index": 103,
-        "type": "QUST CNAM",
-        "original": "There are stories of strange rituals taking place north of Winterhold. It may be worthwhile to investigate the surrounding ruins.",
-        "string": "Die Leute munkeln von seltsamen Ritualen, die nördlich von Winterfeste stattfinden sollen. Es könnte sich lohnen, einmal die dortigen Ruinen zu untersuchen."
-    },
-    {
-        "editor_id": "ccPEWSSE002_Quest",
-        "form_id": "[05000819]",
-        "index": 300,
-        "type": "QUST NNAM",
-        "original": "Craft the Warlock's Mark at a forge",
-        "string": "Stelle an einer Schmiede das Zeichen des Hexenmeisters her."
-    },
-    {
-        "editor_id": "ccPEWSSE002_Quest",
-        "form_id": "[05000819]",
-        "index": 101,
-        "type": "QUST CNAM",
-        "original": "At the Skytemple Ruins, I found the body of a mage who was attempting to obtain three Sigil Stones to restore her magical items. Using a ring I found at the bottom of Pilgrim's Trench, I summoned three Daedra and vanquished them. On their bodies were the Sigil Stones I need to restore the relics the mage left behind.",
-        "string": "Ich habe in den Himmelstempelruinen die Leiche einer Magierin gefunden, die versucht hatte, drei Siegelsteine zu beschaffen, um ihre magischen Gegenstände zu restaurieren. Mit einem Ring, den ich am Grund des Pilgergrabens gefunden hatte, beschwor und vernichtete ich drei Daedra. Bei ihren Leichen fand ich die Siegelsteine, die ich zum Restaurieren der Relikte der toten Magierin brauche."
-    },
-    {
-        "editor_id": "ccPEWSSE002_Quest",
-        "form_id": "[05000819]",
+        "form_id": "05000819|ccpewsse002-armsofchaos.esl",
         "index": 30,
         "type": "QUST NNAM",
         "original": "Pick up the artifacts",
@@ -833,15 +705,95 @@
     },
     {
         "editor_id": "ccPEWSSE002_Quest",
-        "form_id": "[05000819]",
-        "index": 77,
+        "form_id": "05000819|ccpewsse002-armsofchaos.esl",
+        "index": 104,
+        "type": "QUST CNAM",
+        "original": "There are stories of strange rituals taking place north of Winterhold. It may be worthwhile to investigate the surrounding ruins.",
+        "string": "Die Leute munkeln von seltsamen Ritualen, die nördlich von Winterfeste stattfinden sollen. Es könnte sich lohnen, einmal die dortigen Ruinen zu untersuchen."
+    },
+    {
+        "editor_id": "ccPEWSSE002_Quest",
+        "form_id": "05000819|ccpewsse002-armsofchaos.esl",
+        "index": 51,
+        "type": "QUST CNAM",
+        "original": "At the Skytemple Ruins, I found the body of a mage who was attempting to obtain three Sigil Stones to restore her magical items. However, I'll need a special ring to summon the necessary Daedra, which the mage accidentally shipped away on a cargo ship called the Sea Stallion. I found the ring in a coffin deep in Pilgrim's Trench, and can now use it to summon the Daedra.",
+        "string": "Ich habe in den Himmelstempelruinen die Leiche einer Magierin gefunden, die versucht hatte, drei Siegelsteine zu beschaffen, um ihre magischen Gegenstände zu restaurieren. Ich brauche dazu einen besonderen Ring, um den nötigen Daedra zu beschwören, den hat die Magierin allerdings versehentlich auf einem Frachter namens \"Seehengst\" verschifft. Ich habe den Ring in einem Sarg tief im Pilgergraben gefunden und kann nun den Daedra beschwören."
+    },
+    {
+        "editor_id": "ccPEWSSE002_Quest",
+        "form_id": "05000819|ccpewsse002-armsofchaos.esl",
+        "index": 84,
+        "type": "QUST CNAM",
+        "original": "At the Skytemple Ruins, I found the body of a mage who was attempting to obtain three Sigil Stones to restore her magical items. Using a ring I found at the bottom of Pilgrim's Trench, I summoned three Daedra and vanquished them.",
+        "string": "Ich habe in den Himmelstempelruinen die Leiche einer Magierin gefunden, die versucht hatte, drei Siegelsteine zu beschaffen, um ihre magischen Gegenstände zu restaurieren. Mit einem Ring, den ich am Grund des Pilgergrabens gefunden hatte, beschwor und vernichtete ich drei Daedra."
+    },
+    {
+        "editor_id": "ccPEWSSE002_Quest",
+        "form_id": "05000819|ccpewsse002-armsofchaos.esl",
+        "index": 95,
         "type": "QUST CNAM",
         "original": "At the Skytemple Ruins, I found the body of a mage who was attempting to obtain three Sigil Stones to restore her magical items. Using a ring I found at the bottom of Pilgrim's Trench, I summoned three Daedra and vanquished them. Using the Sigil Stones I found on their bodies, I restored the relics the mage left behind.",
         "string": "Ich habe in den Himmelstempelruinen die Leiche einer Magierin gefunden, die versucht hatte, drei Siegelsteine zu beschaffen, um ihre magischen Gegenstände zu restaurieren. Mit einem Ring, den ich am Grund des Pilgergrabens gefunden hatte, beschwor und vernichtete ich drei Daedra. Mit Hilfe der Siegelsteine, die ich bei ihren Leichen fand, restaurierte ich die Relikte der toten Magierin."
     },
     {
         "editor_id": "ccPEWSSE002_Quest",
-        "form_id": "[05000819]",
+        "form_id": "05000819|ccpewsse002-armsofchaos.esl",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Investigate the Skytemple Ruins",
+        "string": "Erforsche die Himmelstempelruinen."
+    },
+    {
+        "editor_id": "ccPEWSSE002_Quest",
+        "form_id": "05000819|ccpewsse002-armsofchaos.esl",
+        "index": 100,
+        "type": "QUST NNAM",
+        "original": "Craft the Arm of the Moon at a Staff Enchanter",
+        "string": "Stelle bei einem Stabverzauberer die Waffen des Mondes her."
+    },
+    {
+        "editor_id": "ccPEWSSE002_Quest",
+        "form_id": "05000819|ccpewsse002-armsofchaos.esl",
+        "index": 97,
+        "type": "QUST CNAM",
+        "original": "At the Skytemple Ruins, I found the body of a mage who was attempting to obtain three Sigil Stones to restore her magical items. However, I'll need a special ring to summon the necessary Daedra, which the mage accidentally shipped away on a cargo ship called the Sea Stallion. According to a note I read at the East Empire Company, the ship is at the bottom of Pilgrim's Trench.",
+        "string": "Ich habe in den Himmelstempelruinen die Leiche einer Magierin gefunden, die versucht hatte, drei Siegelsteine zu beschaffen, um ihre magischen Gegenstände zu restaurieren. Ich brauche dazu einen besonderen Ring, um den nötigen Daedra zu beschwören, den hat die Magierin allerdings versehentlich auf einem Frachter namens \"Seehengst\" verschifft. Laut einer Nachricht, die ich in der Ost-Kaiserlichen Handelsgesellschaft gelesen habe, liegt das Schiff auf dem Grund des Pilgergrabens."
+    },
+    {
+        "editor_id": "ccPEWSSE002_Quest",
+        "form_id": "05000819|ccpewsse002-armsofchaos.esl",
+        "index": 300,
+        "type": "QUST NNAM",
+        "original": "Craft the Warlock's Mark at a forge",
+        "string": "Stelle an einer Schmiede das Zeichen des Hexenmeisters her."
+    },
+    {
+        "editor_id": "ccPEWSSE002_Quest",
+        "form_id": "05000819|ccpewsse002-armsofchaos.esl",
+        "index": 88,
+        "type": "QUST CNAM",
+        "original": "At the Skytemple Ruins, I found the body of a mage who was attempting to obtain three Sigil Stones to restore her magical items. However, I'll need a special ring to summon the necessary Daedra, which the mage accidentally shipped away on a cargo ship called the Sea Stallion. I'll need to visit the East Empire Company and find more information about where the cargo ship was headed.",
+        "string": "Ich habe in den Himmelstempelruinen die Leiche einer Magierin gefunden, die versucht hatte, drei Siegelsteine zu beschaffen, um ihre magischen Gegenstände zu restaurieren. Ich brauche dazu einen besonderen Ring, um den nötigen Daedra zu beschwören, den hat die Magierin allerdings versehentlich auf einem Frachter namens \"Seehengst\" verschifft. Ich sollte die Ost-Kaiserliche Handelsgesellschaft aufsuchen und herausfinden, welchen Kurs das Frachtschiff eingeschlagen hat."
+    },
+    {
+        "editor_id": "ccPEWSSE002_Quest",
+        "form_id": "05000819|ccpewsse002-armsofchaos.esl",
+        "index": 80,
+        "type": "QUST NNAM",
+        "original": "Defeat the Dremora Lyrkynaz",
+        "string": "Besiege den Dremora Lyrkynaz."
+    },
+    {
+        "editor_id": "ccPEWSSE002_Quest",
+        "form_id": "05000819|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "The Arms of Chaos",
+        "string": "Die Waffen des Chaos"
+    },
+    {
+        "editor_id": "ccPEWSSE002_Quest",
+        "form_id": "05000819|ccpewsse002-armsofchaos.esl",
         "index": 60,
         "type": "QUST NNAM",
         "original": "Summon the Dremora",
@@ -849,39 +801,31 @@
     },
     {
         "editor_id": "ccPEWSSE002_Quest",
-        "form_id": "[05000819]",
-        "index": 103,
-        "type": "QUST CNAM",
-        "original": "At the Skytemple Ruins, I found the body of a mage who was attempting to obtain three Sigil Stones to restore her magical items. However, I'll need a special ring to summon the necessary Daedra, which the mage accidentally shipped away on a cargo ship called the Sea Stallion. According to a note I read at the East Empire Company, the ship is at the bottom of Pilgrim's Trench.",
-        "string": "Ich habe in den Himmelstempelruinen die Leiche einer Magierin gefunden, die versucht hatte, drei Siegelsteine zu beschaffen, um ihre magischen Gegenstände zu restaurieren. Ich brauche dazu einen besonderen Ring, um den nötigen Daedra zu beschwören, den hat die Magierin allerdings versehentlich auf einem Frachter namens \"Seehengst\" verschifft. Laut einer Nachricht, die ich in der Ost-Kaiserlichen Handelsgesellschaft gelesen habe, liegt das Schiff auf dem Grund des Pilgergrabens."
-    },
-    {
-        "editor_id": "ccPEWSSE002_Quest",
-        "form_id": "[05000819]",
-        "index": 93,
-        "type": "QUST CNAM",
-        "original": "At the Skytemple Ruins, I found the body of a mage who was attempting to obtain three Sigil Stones to restore her magical items. However, I'll need a special ring to summon the necessary Daedra, which the mage accidentally shipped away on a cargo ship called the Sea Stallion. I found the ring in a coffin deep in Pilgrim's Trench, and can now use it to summon the Daedra.",
-        "string": "Ich habe in den Himmelstempelruinen die Leiche einer Magierin gefunden, die versucht hatte, drei Siegelsteine zu beschaffen, um ihre magischen Gegenstände zu restaurieren. Ich brauche dazu einen besonderen Ring, um den nötigen Daedra zu beschwören, den hat die Magierin allerdings versehentlich auf einem Frachter namens \"Seehengst\" verschifft. Ich habe den Ring in einem Sarg tief im Pilgergraben gefunden und kann nun den Daedra beschwören."
-    },
-    {
-        "editor_id": "ccPEWSSE002_Quest",
-        "form_id": "[05000819]",
-        "index": 50,
+        "form_id": "05000819|ccpewsse002-armsofchaos.esl",
+        "index": 95,
         "type": "QUST NNAM",
-        "original": "Retrieve the ring",
-        "string": "Besorge den Ring."
+        "original": "Retrieve the Sigil Stones",
+        "string": "Besorge die Siegelsteine."
     },
     {
         "editor_id": "ccPEWSSE002_Quest",
-        "form_id": "[05000819]",
-        "index": 97,
+        "form_id": "05000819|ccpewsse002-armsofchaos.esl",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Read Hyneril's Journal",
+        "string": "Lies Hyenrils Tagebuch."
+    },
+    {
+        "editor_id": "ccPEWSSE002_Quest",
+        "form_id": "05000819|ccpewsse002-armsofchaos.esl",
+        "index": 83,
         "type": "QUST CNAM",
-        "original": "At the Skytemple Ruins, I found the body of a mage who was attempting to obtain three Sigil Stones to restore her magical items. Using a ring I found at the bottom of Pilgrim's Trench, I summoned three Daedra and vanquished them.",
-        "string": "Ich habe in den Himmelstempelruinen die Leiche einer Magierin gefunden, die versucht hatte, drei Siegelsteine zu beschaffen, um ihre magischen Gegenstände zu restaurieren. Mit einem Ring, den ich am Grund des Pilgergrabens gefunden hatte, beschwor und vernichtete ich drei Daedra."
+        "original": "At the Skytemple Ruins, I found the body of a mage who was attempting to obtain three Sigil Stones to restore her magical items. Using a ring I found at the bottom of Pilgrim's Trench, I summoned three Daedra and engaged them in battle.",
+        "string": "Ich habe in den Himmelstempelruinen die Leiche einer Magierin gefunden, die versucht hatte, drei Siegelsteine zu beschaffen, um ihre magischen Gegenstände zu restaurieren. Mit einem Ring, den ich am Grund des Pilgergrabens gefunden hatte, beschwor ich drei Daedra und griff sie an."
     },
     {
         "editor_id": "ccPEWSSE002_Quest",
-        "form_id": "[05000819]",
+        "form_id": "05000819|ccpewsse002-armsofchaos.esl",
         "index": 40,
         "type": "QUST NNAM",
         "original": "Search for information on the Sea Stallion",
@@ -889,34 +833,74 @@
     },
     {
         "editor_id": "ccPEWSSE002_Quest",
-        "form_id": "[05000819]",
+        "form_id": "05000819|ccpewsse002-armsofchaos.esl",
+        "index": 200,
+        "type": "QUST NNAM",
+        "original": "Craft the Arm of the Sun at a Staff Enchanter",
+        "string": "Stelle bei einem Stabverzauberer die Waffen der Sonne her."
+    },
+    {
+        "editor_id": "ccPEWSSE002_Quest",
+        "form_id": "05000819|ccpewsse002-armsofchaos.esl",
+        "index": 70,
+        "type": "QUST NNAM",
+        "original": "Defeat the Dremora Sehtkynaz",
+        "string": "Besiege den Dremora Sehtkynaz."
+    },
+    {
+        "editor_id": "ccPEWSSE002_Quest",
+        "form_id": "05000819|ccpewsse002-armsofchaos.esl",
+        "index": 76,
+        "type": "QUST CNAM",
+        "original": "At the Skytemple Ruins, I found the body of a mage who was attempting to obtain three Sigil Stones to restore her magical items. Using a ring I found at the bottom of Pilgrim's Trench, I summoned three Daedra and vanquished them. On their bodies were the Sigil Stones I need to restore the relics the mage left behind.",
+        "string": "Ich habe in den Himmelstempelruinen die Leiche einer Magierin gefunden, die versucht hatte, drei Siegelsteine zu beschaffen, um ihre magischen Gegenstände zu restaurieren. Mit einem Ring, den ich am Grund des Pilgergrabens gefunden hatte, beschwor und vernichtete ich drei Daedra. Bei ihren Leichen fand ich die Siegelsteine, die ich zum Restaurieren der Relikte der toten Magierin brauche."
+    },
+    {
+        "editor_id": "ccPEWSSE002_Quest",
+        "form_id": "05000819|ccpewsse002-armsofchaos.esl",
+        "index": 100,
+        "type": "QUST CNAM",
+        "original": "At the Skytemple Ruins, I found the body of a mage who was attempting to obtain three Sigil Stones to restore her magical items. However, I'll need a special ring to summon the necessary Daedra, which the mage accidentally shipped away on a cargo ship called the Sea Stallion. I found the ring in a coffin deep in Pilgrim's Trench.",
+        "string": "Ich habe in den Himmelstempelruinen die Leiche einer Magierin gefunden, die versucht hatte, drei Siegelsteine zu beschaffen, um ihre magischen Gegenstände zu restaurieren. Ich brauche dazu einen besonderen Ring, um den nötigen Daedra zu beschwören, den hat die Magierin allerdings versehentlich auf einem Frachter namens \"Seehengst\" verschifft. Ich habe den Ring in einem Sarg tief im Pilgergraben gefunden."
+    },
+    {
+        "editor_id": "ccPEWSSE002_Quest",
+        "form_id": "05000819|ccpewsse002-armsofchaos.esl",
         "index": 90,
         "type": "QUST NNAM",
         "original": "Defeat the Dremora Sovereign",
         "string": "Besiege den Dremora-Herrscher."
     },
     {
+        "editor_id": "ccPEWSSE002_Quest",
+        "form_id": "05000819|ccpewsse002-armsofchaos.esl",
+        "index": 50,
+        "type": "QUST NNAM",
+        "original": "Retrieve the ring",
+        "string": "Besorge den Ring."
+    },
+    {
         "editor_id": "ccPEWSSE002_FearMessage",
-        "form_id": "[0500089A]",
+        "form_id": "0500089A|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "MESG DESC",
         "original": "FEAR",
         "string": "FEAR"
     },
     {
-        "editor_id": "ccPEWSSE002_CalmMessage",
-        "form_id": "[05000899]",
-        "index": null,
-        "type": "MESG DESC",
-        "original": "CALM",
-        "string": "CALM"
-    },
-    {
         "editor_id": "ccPEWSSE002_FrenzyMessage",
-        "form_id": "[0500089C]",
+        "form_id": "0500089C|ccpewsse002-armsofchaos.esl",
         "index": null,
         "type": "MESG DESC",
         "original": "FRENZY",
         "string": "FRENZY"
+    },
+    {
+        "editor_id": "ccPEWSSE002_CalmMessage",
+        "form_id": "05000899|ccpewsse002-armsofchaos.esl",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "CALM",
+        "string": "CALM"
     }
 ]

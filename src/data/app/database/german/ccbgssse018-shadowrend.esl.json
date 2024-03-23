@@ -1,55 +1,39 @@
 [
     {
-        "editor_id": "BGSSSE018_WoodElfRaceDoppelganger",
-        "form_id": "[0300082B]",
+        "editor_id": "BGSSSE018_NordRaceDoppelganger",
+        "form_id": "03000829|ccbgssse018-shadowrend.esl",
         "index": null,
         "type": "RACE FULL",
-        "original": "Wood Elf",
-        "string": "Wood Elf"
+        "original": "Nord",
+        "string": "Nord"
     },
     {
         "editor_id": "BGSSSE018_OrcRaceDoppelganger",
-        "form_id": "[0300082A]",
-        "index": null,
-        "type": "RACE DESC",
-        "original": "The people of the Wrothgarian and Dragontail Mountains, Orcish smiths are prized for their craftsmanship. Orc troops in Heavy Armor are among the finest in the Empire, and are fearsome when using their Berserker Rage.",
-        "string": "The people of the Wrothgarian and Dragontail Mountains, Orcish smiths are prized for their craftsmanship. Orc troops in Heavy Armor are among the finest in the Empire, and are fearsome when using their Berserker Rage."
-    },
-    {
-        "editor_id": "BGSSSE018_ArgonianRaceDoppelganger",
-        "form_id": "[03000824]",
-        "index": null,
-        "type": "RACE FULL",
-        "original": "Argonian",
-        "string": "Argonian"
-    },
-    {
-        "editor_id": "BGSSSE018_OrcRaceDoppelganger",
-        "form_id": "[0300082A]",
+        "form_id": "0300082A|ccbgssse018-shadowrend.esl",
         "index": null,
         "type": "RACE FULL",
         "original": "Orc",
         "string": "Orc"
     },
     {
-        "editor_id": "BGSSSE018_KhajiitRaceDoppelganger",
-        "form_id": "[03000828]",
+        "editor_id": "BGSSSE018_ArgonianRaceDoppelganger",
+        "form_id": "03000824|ccbgssse018-shadowrend.esl",
         "index": null,
-        "type": "RACE DESC",
-        "original": "Hailing from the province of Elsweyr, they are intelligent, quick, and agile.  They make excellent thieves due to their natural stealthiness. All Khajiit can see in the dark at will and have unarmed claw attacks.",
-        "string": "Hailing from the province of Elsweyr, they are intelligent, quick, and agile.  They make excellent thieves due to their natural stealthiness. All Khajiit can see in the dark at will and have unarmed claw attacks."
+        "type": "RACE FULL",
+        "original": "Argonian",
+        "string": "Argonian"
     },
     {
-        "editor_id": "BGSSSE018_ArgonianRaceDoppelganger",
-        "form_id": "[03000824]",
+        "editor_id": "BGSSSE018_KhajiitRaceDoppelganger",
+        "form_id": "03000828|ccbgssse018-shadowrend.esl",
         "index": null,
-        "type": "RACE DESC",
-        "original": "This reptilian race, well-suited for the treacherous swamps of their Black Marsh homeland, has developed a natural resistance to diseases and the ability to breathe underwater. They can call upon the Histskin to regenerate health very quickly.",
-        "string": "This reptilian race, well-suited for the treacherous swamps of their Black Marsh homeland, has developed a natural resistance to diseases and the ability to breathe underwater. They can call upon the Histskin to regenerate health very quickly."
+        "type": "RACE FULL",
+        "original": "Khajiit",
+        "string": "Khajiit"
     },
     {
         "editor_id": "BGSSSE018_WoodElfRaceDoppelganger",
-        "form_id": "[0300082B]",
+        "form_id": "0300082B|ccbgssse018-shadowrend.esl",
         "index": null,
         "type": "RACE DESC",
         "original": "The clanfolk of the Western Valenwood forests, also known as \"Bosmer.\" Wood elves make good scouts and thieves, and there are no finer archers in all of Tamriel. They have natural resistances to both poisons and diseases. They can Command Animals to fight for them.",
@@ -57,39 +41,47 @@
     },
     {
         "editor_id": "BGSSSE018_NordRaceDoppelganger",
-        "form_id": "[03000829]",
-        "index": null,
-        "type": "RACE FULL",
-        "original": "Nord",
-        "string": "Nord"
-    },
-    {
-        "editor_id": "BGSSSE018_NordRaceDoppelganger",
-        "form_id": "[03000829]",
+        "form_id": "03000829|ccbgssse018-shadowrend.esl",
         "index": null,
         "type": "RACE DESC",
         "original": "Citizens of Skyrim, they are a tall and fair-haired people.  Strong and hardy, Nords are famous for their resistance to cold and their talent as warriors. They can use a Battlecry to make opponents flee.",
         "string": "Citizens of Skyrim, they are a tall and fair-haired people.  Strong and hardy, Nords are famous for their resistance to cold and their talent as warriors. They can use a Battlecry to make opponents flee."
     },
     {
-        "editor_id": "BGSSSE018_KhajiitRaceDoppelganger",
-        "form_id": "[03000828]",
+        "editor_id": "BGSSSE018_OrcRaceDoppelganger",
+        "form_id": "0300082A|ccbgssse018-shadowrend.esl",
         "index": null,
-        "type": "RACE FULL",
-        "original": "Khajiit",
-        "string": "Khajiit"
+        "type": "RACE DESC",
+        "original": "The people of the Wrothgarian and Dragontail Mountains, Orcish smiths are prized for their craftsmanship. Orc troops in Heavy Armor are among the finest in the Empire, and are fearsome when using their Berserker Rage.",
+        "string": "The people of the Wrothgarian and Dragontail Mountains, Orcish smiths are prized for their craftsmanship. Orc troops in Heavy Armor are among the finest in the Empire, and are fearsome when using their Berserker Rage."
     },
     {
-        "editor_id": "BGSSSE018ShadowrendFXSword",
-        "form_id": "[03000805]",
+        "editor_id": "BGSSSE018_ArgonianRaceDoppelganger",
+        "form_id": "03000824|ccbgssse018-shadowrend.esl",
         "index": null,
-        "type": "MGEF FULL",
-        "original": "Shadowrend FX",
-        "string": "Effekte für Schattenriss"
+        "type": "RACE DESC",
+        "original": "This reptilian race, well-suited for the treacherous swamps of their Black Marsh homeland, has developed a natural resistance to diseases and the ability to breathe underwater. They can call upon the Histskin to regenerate health very quickly.",
+        "string": "This reptilian race, well-suited for the treacherous swamps of their Black Marsh homeland, has developed a natural resistance to diseases and the ability to breathe underwater. They can call upon the Histskin to regenerate health very quickly."
+    },
+    {
+        "editor_id": "BGSSSE018_KhajiitRaceDoppelganger",
+        "form_id": "03000828|ccbgssse018-shadowrend.esl",
+        "index": null,
+        "type": "RACE DESC",
+        "original": "Hailing from the province of Elsweyr, they are intelligent, quick, and agile.  They make excellent thieves due to their natural stealthiness. All Khajiit can see in the dark at will and have unarmed claw attacks.",
+        "string": "Hailing from the province of Elsweyr, they are intelligent, quick, and agile.  They make excellent thieves due to their natural stealthiness. All Khajiit can see in the dark at will and have unarmed claw attacks."
+    },
+    {
+        "editor_id": "BGSSSE018_WoodElfRaceDoppelganger",
+        "form_id": "0300082B|ccbgssse018-shadowrend.esl",
+        "index": null,
+        "type": "RACE FULL",
+        "original": "Wood Elf",
+        "string": "Wood Elf"
     },
     {
         "editor_id": "BGSSSE018ShadowrendFXAxe",
-        "form_id": "[03000800]",
+        "form_id": "03000800|ccbgssse018-shadowrend.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Shadowrend FX",
@@ -97,87 +89,87 @@
     },
     {
         "editor_id": "BGSSSE018_WeaknessMagic",
-        "form_id": "[03000820]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Weakness to Magic",
-        "string": "Weakness to Magic"
-    },
-    {
-        "editor_id": "BGSSSE018_AbGhostShadowrend",
-        "form_id": "[0300080D]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Shadowrend Ghost Visuals",
-        "string": "Geisteroptik für Schattenriss"
-    },
-    {
-        "editor_id": "BGSSSE018_AbscondSpellShadowrendMagicEffect",
-        "form_id": "[0300080C]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Abscond Spell Magic Effect",
-        "string": "Magieeffekt für Flucht-Zauber"
-    },
-    {
-        "editor_id": "BGSSSE018_WeaknessMagic",
-        "form_id": "[03000820]",
+        "form_id": "03000820|ccbgssse018-shadowrend.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "Target is <mag>% weaker to magic for <dur> seconds.",
         "string": "Target is <mag>% weaker to magic for <dur> seconds."
     },
     {
-        "editor_id": "BGSSSE018ShadowrendEnchAxe",
-        "form_id": "[03000801]",
+        "editor_id": "BGSSSE018ShadowrendFXSword",
+        "form_id": "03000805|ccbgssse018-shadowrend.esl",
         "index": null,
-        "type": "ENCH FULL",
-        "original": "Shadowrend FX Ench",
-        "string": "Verzauberungseffekte für Schattenriss"
+        "type": "MGEF FULL",
+        "original": "Shadowrend FX",
+        "string": "Effekte für Schattenriss"
+    },
+    {
+        "editor_id": "BGSSSE018_WeaknessMagic",
+        "form_id": "03000820|ccbgssse018-shadowrend.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Weakness to Magic",
+        "string": "Weakness to Magic"
+    },
+    {
+        "editor_id": "BGSSSE018_AbscondSpellShadowrendMagicEffect",
+        "form_id": "0300080C|ccbgssse018-shadowrend.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Abscond Spell Magic Effect",
+        "string": "Magieeffekt für Flucht-Zauber"
+    },
+    {
+        "editor_id": "BGSSSE018_AbGhostShadowrend",
+        "form_id": "0300080D|ccbgssse018-shadowrend.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Shadowrend Ghost Visuals",
+        "string": "Geisteroptik für Schattenriss"
     },
     {
         "editor_id": "BGSSSE018ShadowrendEnchSword",
-        "form_id": "[03000806]",
+        "form_id": "03000806|ccbgssse018-shadowrend.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Shadowrend FX Ench",
         "string": "Verzauberungseffekte für Schattenriss"
     },
     {
-        "editor_id": "BGSSSE018_AbscondSpellShadowrend",
-        "form_id": "[0300080E]",
+        "editor_id": "BGSSSE018ShadowrendEnchAxe",
+        "form_id": "03000801|ccbgssse018-shadowrend.esl",
         "index": null,
-        "type": "SPEL FULL",
-        "original": "Abscond Spell",
-        "string": "Flucht-Zauber"
+        "type": "ENCH FULL",
+        "original": "Shadowrend FX Ench",
+        "string": "Verzauberungseffekte für Schattenriss"
     },
     {
         "editor_id": "BGSSSE018_GhostAbilityShadowrend",
-        "form_id": "[0300080F]",
+        "form_id": "0300080F|ccbgssse018-shadowrend.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Ghost Ability",
         "string": "Geist-Fähigkeit"
     },
     {
+        "editor_id": "BGSSSE018_AbscondSpellShadowrend",
+        "form_id": "0300080E|ccbgssse018-shadowrend.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Abscond Spell",
+        "string": "Flucht-Zauber"
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendActivatorWeaponAxe",
+        "form_id": "03000810|ccbgssse018-shadowrend.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Shadowrend",
+        "string": "Schattenriss"
+    },
+    {
         "editor_id": "BGSSSE018_ShadowrendActivatorWeapon",
-        "form_id": "[03000811]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Shadowrend",
-        "string": "Schattenriss"
-    },
-    {
-        "editor_id": "BGSSSE018_ShadowrendActivatorWeaponAxe",
-        "form_id": "[03000810]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Shadowrend",
-        "string": "Schattenriss"
-    },
-    {
-        "editor_id": "BGSSSE018_ShadowrendActivatorWeaponAxe",
-        "form_id": "[03000810]",
+        "form_id": "03000811|ccbgssse018-shadowrend.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Take",
@@ -185,23 +177,31 @@
     },
     {
         "editor_id": "BGSSSE018_ShadowrendActivatorWeapon",
-        "form_id": "[03000811]",
+        "form_id": "03000811|ccbgssse018-shadowrend.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Shadowrend",
+        "string": "Schattenriss"
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendActivatorWeaponAxe",
+        "form_id": "03000810|ccbgssse018-shadowrend.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Take",
         "string": "Nehmen"
     },
     {
-        "editor_id": "BGSSSE018ShadowrendClaymore",
-        "form_id": "[03000D63]",
+        "editor_id": "BGSSSE018ShadowrendBattleaxe",
+        "form_id": "03000D62|ccbgssse018-shadowrend.esl",
         "index": null,
         "type": "WEAP FULL",
         "original": "Shadowrend",
         "string": "Schattenriss"
     },
     {
-        "editor_id": "BGSSSE018ShadowrendBattleaxe",
-        "form_id": "[03000D62]",
+        "editor_id": "BGSSSE018ShadowrendClaymore",
+        "form_id": "03000D63|ccbgssse018-shadowrend.esl",
         "index": null,
         "type": "WEAP FULL",
         "original": "Shadowrend",
@@ -209,39 +209,7 @@
     },
     {
         "editor_id": "BGSSSE018_DoppelgangerHumanFemale",
-        "form_id": "[03000837]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Shadow",
-        "string": "Shadow"
-    },
-    {
-        "editor_id": "BGSSSE018_DoppelgangerArgonian",
-        "form_id": "[03000839]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Shadow",
-        "string": "Shadow"
-    },
-    {
-        "editor_id": "BGSSSE018_DoppelgangerMerFemale",
-        "form_id": "[03000836]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Shadow",
-        "string": "Shadow"
-    },
-    {
-        "editor_id": "BGSSSE018_DoppelgangerKhajit",
-        "form_id": "[0300083A]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Shadow",
-        "string": "Shadow"
-    },
-    {
-        "editor_id": "BGSSSE018_DoppelgangerKhajitFemale",
-        "form_id": "[03000835]",
+        "form_id": "03000837|ccbgssse018-shadowrend.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Shadow",
@@ -249,15 +217,23 @@
     },
     {
         "editor_id": "BGSSSE018_DoppelgangerArgonianFemale",
-        "form_id": "[03000838]",
+        "form_id": "03000838|ccbgssse018-shadowrend.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Shadow",
         "string": "Shadow"
     },
     {
-        "editor_id": "BGSSSE018_DoppelgangerMer",
-        "form_id": "[03000832]",
+        "editor_id": "BGSSSE018_DoppelgangerKhajitFemale",
+        "form_id": "03000835|ccbgssse018-shadowrend.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Shadow",
+        "string": "Shadow"
+    },
+    {
+        "editor_id": "BGSSSE018_DoppelgangerMerFemale",
+        "form_id": "03000836|ccbgssse018-shadowrend.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Shadow",
@@ -265,23 +241,39 @@
     },
     {
         "editor_id": "Player",
-        "form_id": "[00000007]",
+        "form_id": "00000007|Skyrim.esm",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Prisoner",
         "string": "Prisoner"
     },
     {
-        "editor_id": "BGSSSE018_DoppelgangerHuman",
-        "form_id": "[0300083B]",
+        "editor_id": "BGSSSE018_DoppelgangerMer",
+        "form_id": "03000832|ccbgssse018-shadowrend.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Shadow",
         "string": "Shadow"
     },
     {
-        "editor_id": "BGSSSE018_DoppelgangerOrcFemale",
-        "form_id": "[03000834]",
+        "editor_id": "BGSSSE018_DoppelgangerArgonian",
+        "form_id": "03000839|ccbgssse018-shadowrend.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Shadow",
+        "string": "Shadow"
+    },
+    {
+        "editor_id": "BGSSSE018_DoppelgangerHuman",
+        "form_id": "0300083B|ccbgssse018-shadowrend.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Shadow",
+        "string": "Shadow"
+    },
+    {
+        "editor_id": "BGSSSE018_DoppelgangerKhajit",
+        "form_id": "0300083A|ccbgssse018-shadowrend.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Shadow",
@@ -289,7 +281,15 @@
     },
     {
         "editor_id": "BGSSSE018_DoppelgangerOrc",
-        "form_id": "[03000833]",
+        "form_id": "03000833|ccbgssse018-shadowrend.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Shadow",
+        "string": "Shadow"
+    },
+    {
+        "editor_id": "BGSSSE018_DoppelgangerOrcFemale",
+        "form_id": "03000834|ccbgssse018-shadowrend.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Shadow",
@@ -297,7 +297,7 @@
     },
     {
         "editor_id": "Tamriel",
-        "form_id": "[0000003C]",
+        "form_id": "0000003C|Skyrim.esm",
         "index": null,
         "type": "WRLD FULL",
         "original": "Skyrim",
@@ -305,31 +305,15 @@
     },
     {
         "editor_id": "BGSSSE018_ShadowrendQuest",
-        "form_id": "[0300081C]",
-        "index": 5,
-        "type": "QUST NNAM",
-        "original": "Go to Eastmarch Geysers",
-        "string": "Begib dich zu den Geysiren von Ostmarsch."
-    },
-    {
-        "editor_id": "BGSSSE018_ShadowrendQuest",
-        "form_id": "[0300081C]",
-        "index": 108,
+        "form_id": "0300081C|ccbgssse018-shadowrend.esl",
+        "index": 74,
         "type": "QUST CNAM",
-        "original": "I discovered and defeated my shadow doppelganger, and have obtained the weapon Shadowrend.",
-        "string": "I discovered and defeated my shadow doppelganger, and have obtained the weapon Shadowrend."
+        "original": "An inner voice is telling me I must confront a darkness within myself. I am drawn toward a geyser pool in Eastmarch. Perhaps answers lie there.",
+        "string": "Eine Stimme in mir flüstert mir zu, dass ich mich nicht nur dem Bösen von außerhalb stellen muss, sondern auch dem Bösen in mir. Sie sagt, ich soll mich zu einem Geysir in Ostmarsch aufmachen. Dort finde ich weitere Antworten."
     },
     {
         "editor_id": "BGSSSE018_ShadowrendQuest",
-        "form_id": "[0300081C]",
-        "index": 8,
-        "type": "QUST NNAM",
-        "original": "Return to Eastmarch Geysers",
-        "string": "Kehre zu den Geysiren von Ostmatsch zurück."
-    },
-    {
-        "editor_id": "BGSSSE018_ShadowrendQuest",
-        "form_id": "[0300081C]",
+        "form_id": "0300081C|ccbgssse018-shadowrend.esl",
         "index": 15,
         "type": "QUST NNAM",
         "original": "Retrieve Shadowrend",
@@ -337,7 +321,7 @@
     },
     {
         "editor_id": "BGSSSE018_ShadowrendQuest",
-        "form_id": "[0300081C]",
+        "form_id": "0300081C|ccbgssse018-shadowrend.esl",
         "index": 10,
         "type": "QUST NNAM",
         "original": "Defeat your Shadow",
@@ -345,7 +329,15 @@
     },
     {
         "editor_id": "BGSSSE018_ShadowrendQuest",
-        "form_id": "[0300081C]",
+        "form_id": "0300081C|ccbgssse018-shadowrend.esl",
+        "index": 5,
+        "type": "QUST NNAM",
+        "original": "Go to Eastmarch Geysers",
+        "string": "Begib dich zu den Geysiren von Ostmarsch."
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendQuest",
+        "form_id": "0300081C|ccbgssse018-shadowrend.esl",
         "index": null,
         "type": "QUST FULL",
         "original": "Through a Glass, Darkly",
@@ -353,31 +345,47 @@
     },
     {
         "editor_id": "BGSSSE018_ShadowrendQuest",
-        "form_id": "[0300081C]",
-        "index": 99,
-        "type": "QUST CNAM",
-        "original": "I have defeated my shadow and feel at peace.  I should retrieve the weapon from its remains.",
-        "string": "Ich fühle einen inneren Frieden. Doch noch sind nicht alle meine Schatten verschwunden. Diese Waffe, nun so greifbar wie alles andere um mich herum, liegt auf seinen Überresten."
+        "form_id": "0300081C|ccbgssse018-shadowrend.esl",
+        "index": 8,
+        "type": "QUST NNAM",
+        "original": "Return to Eastmarch Geysers",
+        "string": "Kehre zu den Geysiren von Ostmatsch zurück."
     },
     {
         "editor_id": "BGSSSE018_ShadowrendQuest",
-        "form_id": "[0300081C]",
-        "index": 82,
+        "form_id": "0300081C|ccbgssse018-shadowrend.esl",
+        "index": 95,
         "type": "QUST CNAM",
-        "original": "An inner voice is telling me I must confront a darkness within myself. I am drawn toward a geyser pool in Eastmarch. Perhaps answers lie there.",
-        "string": "Eine Stimme in mir flüstert mir zu, dass ich mich nicht nur dem Bösen von außerhalb stellen muss, sondern auch dem Bösen in mir. Sie sagt, ich soll mich zu einem Geysir in Ostmarsch aufmachen. Dort finde ich weitere Antworten."
+        "original": "I discovered and defeated my shadow doppelganger, and have obtained the weapon Shadowrend.",
+        "string": "I discovered and defeated my shadow doppelganger, and have obtained the weapon Shadowrend."
     },
     {
         "editor_id": "BGSSSE018_ShadowrendQuest",
-        "form_id": "[0300081C]",
-        "index": 82,
+        "form_id": "0300081C|ccbgssse018-shadowrend.esl",
+        "index": 66,
         "type": "QUST CNAM",
         "original": "The weapon I attempted to take has pulled something from within me - a dark shadow of myself. I must defeat this doppelganger.",
         "string": "Die Waffe, nach der ich griff, hat stattdessen etwas in mir gegriffen und es herausgezogen. Ein Schatten, der nicht länger in meinem Inneren ruhen muss und sich nun mit Freuden meiner entledigen möchte."
     },
     {
+        "editor_id": "BGSSSE018_ShadowrendQuest",
+        "form_id": "0300081C|ccbgssse018-shadowrend.esl",
+        "index": 88,
+        "type": "QUST CNAM",
+        "original": "I have defeated my shadow and feel at peace.  I should retrieve the weapon from its remains.",
+        "string": "Ich fühle einen inneren Frieden. Doch noch sind nicht alle meine Schatten verschwunden. Diese Waffe, nun so greifbar wie alles andere um mich herum, liegt auf seinen Überresten."
+    },
+    {
+        "editor_id": "BGSSSE018_ShadowrendLordAndBeastMessage",
+        "form_id": "03000D95|ccbgssse018-shadowrend.esl",
+        "index": null,
+        "type": "MESG DESC",
+        "original": "Your shadow is dormant while transformed.",
+        "string": "Your shadow is dormant while transformed."
+    },
+    {
         "editor_id": "BGSSSE018_ShadowrendDoppelgangerName",
-        "form_id": "[0300081D]",
+        "form_id": "0300081D|ccbgssse018-shadowrend.esl",
         "index": null,
         "type": "MESG FULL",
         "original": "<Alias=Player>'s Shadow",
@@ -385,18 +393,10 @@
     },
     {
         "editor_id": "BGSSSE018_ShadowrendDoppelgangerName",
-        "form_id": "[0300081D]",
+        "form_id": "0300081D|ccbgssse018-shadowrend.esl",
         "index": null,
         "type": "MESG DESC",
         "original": "Doppelganger",
         "string": "Doppelgänger"
-    },
-    {
-        "editor_id": "BGSSSE018_ShadowrendLordAndBeastMessage",
-        "form_id": "[03000D95]",
-        "index": null,
-        "type": "MESG DESC",
-        "original": "Your shadow is dormant while transformed.",
-        "string": "Your shadow is dormant while transformed."
     }
 ]

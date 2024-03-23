@@ -1,7 +1,7 @@
 [
     {
         "editor_id": "ccBGSSSE010_PetDwarvenMudcrabRace",
-        "form_id": "[05000800]",
+        "form_id": "05000800|ccbgssse010-petdwarvenarmoredmudcrab.esl",
         "index": null,
         "type": "RACE FULL",
         "original": "Dwarven Mudcrab Pet",
@@ -9,15 +9,15 @@
     },
     {
         "editor_id": "ccBGSSSE010_SummonMudcrabEffect",
-        "form_id": "[0500080F]",
+        "form_id": "0500080F|ccbgssse010-petdwarvenarmoredmudcrab.esl",
         "index": null,
-        "type": "MGEF FULL",
-        "original": "Teleport Dwarven Mudcrab",
-        "string": "Teletransportar cangrejo del barro enano"
+        "type": "MGEF DNAM",
+        "original": "Teleports pet Dwarven Mudcrab.",
+        "string": "Teletransporta la mascota cangrejo del barro enano."
     },
     {
         "editor_id": "ccBGSSSE010_PetGiveItemEffect",
-        "form_id": "[0500080A]",
+        "form_id": "0500080A|ccbgssse010-petdwarvenarmoredmudcrab.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Scrounger Effect",
@@ -25,15 +25,23 @@
     },
     {
         "editor_id": "ccBGSSSE010_SummonMudcrabEffect",
-        "form_id": "[0500080F]",
+        "form_id": "0500080F|ccbgssse010-petdwarvenarmoredmudcrab.esl",
         "index": null,
-        "type": "MGEF DNAM",
-        "original": "Teleports pet Dwarven Mudcrab.",
-        "string": "Teletransporta la mascota cangrejo del barro enano."
+        "type": "MGEF FULL",
+        "original": "Teleport Dwarven Mudcrab",
+        "string": "Teletransportar cangrejo del barro enano"
+    },
+    {
+        "editor_id": "ccBGSSSE010_PetGiveItemAbility",
+        "form_id": "05000809|ccbgssse010-petdwarvenarmoredmudcrab.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Scrounger Ability",
+        "string": "Habilidad Buscador"
     },
     {
         "editor_id": "ccBGSSSE010_SummonMudcrabSpell",
-        "form_id": "[05000810]",
+        "form_id": "05000810|ccbgssse010-petdwarvenarmoredmudcrab.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Teleport Pet: Dwarven Mudcrab",
@@ -41,39 +49,31 @@
     },
     {
         "editor_id": "ccBGSSSE010_MagicResist100",
-        "form_id": "[05000812]",
+        "form_id": "05000812|ccbgssse010-petdwarvenarmoredmudcrab.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Pet Magic Resistance",
         "string": "Resistencia mágica de la mascota"
     },
     {
-        "editor_id": "ccBGSSSE010_PetGiveItemAbility",
-        "form_id": "[05000809]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Scrounger Ability",
-        "string": "Habilidad Buscador"
-    },
-    {
         "editor_id": "ccBGSSSE010_SpellTomeSummonMudcrab",
-        "form_id": "[05000811]",
+        "form_id": "05000811|ccbgssse010-petdwarvenarmoredmudcrab.esl",
         "index": null,
         "type": "BOOK DESC",
         "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nTeleport Pet: Dwarven Mudcrab",
         "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nTeletransportar mascota: cangrejo del barro enano"
     },
     {
-        "editor_id": "ccBGSSSE010_OwnershipDeedDwarvenPet",
-        "form_id": "[05000807]",
+        "editor_id": "ccBGSSSE010_LetterFromCalcelmo",
+        "form_id": "05000806|ccbgssse010-petdwarvenarmoredmudcrab.esl",
         "index": null,
         "type": "BOOK DESC",
-        "original": "<font face='$HandwrittenFont'>This deed signifies ownership of the Dwarven Mudcrab to the undersigned.  Ownership may only be transferred with an accompanying Bill of Sale.\r\n\r\nP.S. He will follow you anywhere you go, but he's cautious of aggressive strangers.  He's smart and fast, so you can dismiss him to stay at any of your owned homes, just inside a city, or right where he stands, if you think it makes him a good home.\r\n\r\nFrom time to time he may also dig up something useful or valuable!  Lastly, I've included a Spell Tome so you can summon him to your location at any time.\r\n\r\nI hope you enjoy him.  Back to work for me.\r\n\r\n-Calcelmo\r\n</font>",
-        "string": "<font face='$HandwrittenFont'>Esta escritura confiere la propiedad del cangrejo del barro enano al abajo firmante. La propiedad solo será transferible si va acompañada de una factura.\r\n\r\nP. D.: Te seguirá allá donde vayas, pero se muestra prudente con los extraños agresivos. Es inteligente y rápido, así que puedes ordenarle que permanezca en cualquiera de tus viviendas, dentro de una ciudad, o que se quede donde está, si crees que es un buen sitio para él.\r\n\r\n¡De vez en cuando, también podría dar con algo útil o valioso! Por último, he incluido un grimorio para que puedas invocarle donde te encuentres, en cualquier momento.\r\n\r\nEspero que disfrutes con él. Vuelvo al trabajo.\r\n\r\n- Calcelmo\r\n</font>"
+        "original": "<font face=\"$HandwrittenFont\" size=\"17\">\r\nDuring my excavations, I came across a quite peculiar little fellow - a Mudcrab, clad in plated Dwarven armor.  He's quite friendly, but with all of my studies I have no time to take care of such a thing.\r\n\r\nFrom what I have seen, you seem to be quite trustworthy.  Would you be interested in purchasing him?  If so, please meet with me in my laboratory in Understone Keep.\r\n\r\n-Calcelmo\r\n</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"17\">\r\nDurante mis excavaciones me topé con un bicho de lo más peculiar, un cangrejo del barro recubierto con una armadura de placas enana. Es bastante simpático, pero debido a mis estudios, no tengo tiempo de ocuparme de él.\r\n\r\nPor lo que he visto, pareces ser de confianza. ¿Te interesaría comprarlo? En caso afirmativo, reúnete conmigo en mi laboratorio de Piedra Baja.\r\n\r\n- Calcelmo\r\n</font>"
     },
     {
         "editor_id": "ccBGSSSE010_OwnershipDeedDwarvenPet",
-        "form_id": "[05000807]",
+        "form_id": "05000807|ccbgssse010-petdwarvenarmoredmudcrab.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "Ownership Deed - Mudcrab",
@@ -81,31 +81,31 @@
     },
     {
         "editor_id": "ccBGSSSE010_LetterFromCalcelmo",
-        "form_id": "[05000806]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face=\"$HandwrittenFont\" size=\"17\">\r\nDuring my excavations, I came across a quite peculiar little fellow - a Mudcrab, clad in plated Dwarven armor.  He's quite friendly, but with all of my studies I have no time to take care of such a thing.\r\n\r\nFrom what I have seen, you seem to be quite trustworthy.  Would you be interested in purchasing him?  If so, please meet with me in my laboratory in Understone Keep.\r\n\r\n-Calcelmo\r\n</font>",
-        "string": "<font face=\"$HandwrittenFont\" size=\"17\">\r\nDurante mis excavaciones me topé con un bicho de lo más peculiar, un cangrejo del barro recubierto con una armadura de placas enana. Es bastante simpático, pero debido a mis estudios, no tengo tiempo de ocuparme de él.\r\n\r\nPor lo que he visto, pareces ser de confianza. ¿Te interesaría comprarlo? En caso afirmativo, reúnete conmigo en mi laboratorio de Piedra Baja.\r\n\r\n- Calcelmo\r\n</font>"
-    },
-    {
-        "editor_id": "ccBGSSSE010_SpellTomeSummonMudcrab",
-        "form_id": "[05000811]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Spell Tome: Teleport Pet Mudcrab",
-        "string": "Grimorio: teletransportar mascota cangrejo del barro"
-    },
-    {
-        "editor_id": "ccBGSSSE010_LetterFromCalcelmo",
-        "form_id": "[05000806]",
+        "form_id": "05000806|ccbgssse010-petdwarvenarmoredmudcrab.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "Notice of Sale - Dwarven Mudcrab",
         "string": "Aviso de venta: cangrejo del barro enano"
     },
     {
+        "editor_id": "ccBGSSSE010_OwnershipDeedDwarvenPet",
+        "form_id": "05000807|ccbgssse010-petdwarvenarmoredmudcrab.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>This deed signifies ownership of the Dwarven Mudcrab to the undersigned.  Ownership may only be transferred with an accompanying Bill of Sale.\r\n\r\nP.S. He will follow you anywhere you go, but he's cautious of aggressive strangers.  He's smart and fast, so you can dismiss him to stay at any of your owned homes, just inside a city, or right where he stands, if you think it makes him a good home.\r\n\r\nFrom time to time he may also dig up something useful or valuable!  Lastly, I've included a Spell Tome so you can summon him to your location at any time.\r\n\r\nI hope you enjoy him.  Back to work for me.\r\n\r\n-Calcelmo\r\n</font>",
+        "string": "<font face='$HandwrittenFont'>Esta escritura confiere la propiedad del cangrejo del barro enano al abajo firmante. La propiedad solo será transferible si va acompañada de una factura.\r\n\r\nP. D.: Te seguirá allá donde vayas, pero se muestra prudente con los extraños agresivos. Es inteligente y rápido, así que puedes ordenarle que permanezca en cualquiera de tus viviendas, dentro de una ciudad, o que se quede donde está, si crees que es un buen sitio para él.\r\n\r\n¡De vez en cuando, también podría dar con algo útil o valioso! Por último, he incluido un grimorio para que puedas invocarle donde te encuentres, en cualquier momento.\r\n\r\nEspero que disfrutes con él. Vuelvo al trabajo.\r\n\r\n- Calcelmo\r\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE010_SpellTomeSummonMudcrab",
+        "form_id": "05000811|ccbgssse010-petdwarvenarmoredmudcrab.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Teleport Pet Mudcrab",
+        "string": "Grimorio: teletransportar mascota cangrejo del barro"
+    },
+    {
         "editor_id": "ccBGSSSE010_PetDwarvenMudcrab",
-        "form_id": "[05000D62]",
+        "form_id": "05000D62|ccbgssse010-petdwarvenarmoredmudcrab.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Dwarven Armored Mudcrab",
@@ -113,63 +113,23 @@
     },
     {
         "editor_id": "ccBGSSSE010_PetDwarvenMudcrab",
-        "form_id": "[05000D62]",
+        "form_id": "05000D62|ccbgssse010-petdwarvenarmoredmudcrab.esl",
         "index": null,
         "type": "NPC_ SHRT",
         "original": "Mudcrab",
         "string": "Cangrejo del barro"
     },
     {
-        "editor_id": "MarkarthUnderStoneKeep",
-        "form_id": "[00016DF2]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Understone Keep",
-        "string": "Fortaleza de Piedra Baja"
-    },
-    {
         "editor_id": "ccBGSSSE010_PetPurchaseQuest",
-        "form_id": "[05000808]",
-        "index": 90,
-        "type": "QUST CNAM",
-        "original": "Calcelmo found a Dwarven Armored Mudcrab during his excavations, and offered to sell him to me.  I obliged, and now keep him as a pet, who I can bring with me, or send to any of my homes, or main cities.",
-        "string": "Calcelmo encontró un cangrejo del barro enano acorazado en sus excavaciones y se ha ofrecido a vendérmelo. Accedí y ahora lo conservaré como mascota, que puedo llevar conmigo o enviar a cualquiera de mis viviendas o de las ciudades principales."
-    },
-    {
-        "editor_id": "ccBGSSSE010_PetPurchaseQuest",
-        "form_id": "[05000808]",
-        "index": 0,
-        "type": "QUST NNAM",
-        "original": "Read Notice of Sale",
-        "string": "Leer aviso de venta"
-    },
-    {
-        "editor_id": "ccBGSSSE010_PetPurchaseQuest",
-        "form_id": "[05000808]",
-        "index": 83,
-        "type": "QUST CNAM",
-        "original": "I've received a Notice of Sale from Calcelmo.  I should read it and see what it's about.",
-        "string": "He recibido un aviso de venta de Calcelmo. Debería leerlo y ver de qué trata."
-    },
-    {
-        "editor_id": "ccBGSSSE010_PetPurchaseQuest",
-        "form_id": "[05000808]",
-        "index": 101,
+        "form_id": "05000808|ccbgssse010-petdwarvenarmoredmudcrab.esl",
+        "index": 56,
         "type": "QUST CNAM",
         "original": "I've purchased a Pet Dwarven Mudcrab from Calcelmo.  I should talk to him, and either send him to his new home, or bring him with me.",
         "string": "He comprado a Calcelmo una mascota: un cangrejo del barro enano. Debería hablar con él y enviarle a su nuevo hogar o llevármelo conmigo."
     },
     {
-        "editor_id": "ccBGSSSE010_PetPurchaseQuest",
-        "form_id": "[05000808]",
-        "index": 76,
-        "type": "QUST CNAM",
-        "original": "Calcelmo has found a Dwarven Armored Mudcrab during his excavations, and has offered to sell him to me.  I should head to Understone Keep to speak with him, and purchase the Mudcrab.",
-        "string": "Calcelmo ha encontrado un cangrejo del barro enano acorazado en sus excavaciones y se ha ofrecido a vendérmelo. Debería dirigirme a la fortaleza de Piedra Baja para hablar con él y comprar el cangrejo del barro."
-    },
-    {
         "editor_id": "ccBGSSSE010_PetControlQuest",
-        "form_id": "[05000803]",
+        "form_id": "05000803|ccbgssse010-petdwarvenarmoredmudcrab.esl",
         "index": null,
         "type": "QUST FULL",
         "original": "Mudcrab Control Quest",
@@ -177,7 +137,31 @@
     },
     {
         "editor_id": "ccBGSSSE010_PetPurchaseQuest",
-        "form_id": "[05000808]",
+        "form_id": "05000808|ccbgssse010-petdwarvenarmoredmudcrab.esl",
+        "index": 79,
+        "type": "QUST CNAM",
+        "original": "Calcelmo has found a Dwarven Armored Mudcrab during his excavations, and has offered to sell him to me.  I should head to Understone Keep to speak with him, and purchase the Mudcrab.",
+        "string": "Calcelmo ha encontrado un cangrejo del barro enano acorazado en sus excavaciones y se ha ofrecido a vendérmelo. Debería dirigirme a la fortaleza de Piedra Baja para hablar con él y comprar el cangrejo del barro."
+    },
+    {
+        "editor_id": "ccBGSSSE010_PetPurchaseQuest",
+        "form_id": "05000808|ccbgssse010-petdwarvenarmoredmudcrab.esl",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "My Pet Mudcrab",
+        "string": "Mi mascota cangrejo del barro"
+    },
+    {
+        "editor_id": "ccBGSSSE010_PetPurchaseQuest",
+        "form_id": "05000808|ccbgssse010-petdwarvenarmoredmudcrab.esl",
+        "index": 0,
+        "type": "QUST NNAM",
+        "original": "Read Notice of Sale",
+        "string": "Leer aviso de venta"
+    },
+    {
+        "editor_id": "ccBGSSSE010_PetPurchaseQuest",
+        "form_id": "05000808|ccbgssse010-petdwarvenarmoredmudcrab.esl",
         "index": 20,
         "type": "QUST NNAM",
         "original": "Meet your new pet",
@@ -185,7 +169,7 @@
     },
     {
         "editor_id": "ccBGSSSE010_PetPurchaseQuest",
-        "form_id": "[05000808]",
+        "form_id": "05000808|ccbgssse010-petdwarvenarmoredmudcrab.esl",
         "index": 10,
         "type": "QUST NNAM",
         "original": "Purchase the Mudcrab",
@@ -193,15 +177,15 @@
     },
     {
         "editor_id": "ccBGSSSE010_PetPurchaseQuest",
-        "form_id": "[05000808]",
-        "index": null,
-        "type": "QUST FULL",
-        "original": "My Pet Mudcrab",
-        "string": "Mi mascota cangrejo del barro"
+        "form_id": "05000808|ccbgssse010-petdwarvenarmoredmudcrab.esl",
+        "index": 85,
+        "type": "QUST CNAM",
+        "original": "I've received a Notice of Sale from Calcelmo.  I should read it and see what it's about.",
+        "string": "He recibido un aviso de venta de Calcelmo. Debería leerlo y ver de qué trata."
     },
     {
         "editor_id": "ccBGSSSE010_MudcrabGivePlayerItemMsg",
-        "form_id": "[0500080E]",
+        "form_id": "0500080E|ccbgssse010-petdwarvenarmoredmudcrab.esl",
         "index": null,
         "type": "MESG DESC",
         "original": "Dwarven Mudcrab found something...",

@@ -1,119 +1,63 @@
 [
     {
         "editor_id": "ccBGSSSE021_EnchResistPoisonConstantSelf",
-        "form_id": "[03000806]",
+        "form_id": "03000806|ccbgssse021-lordsmail.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "Increases Poison Resistance by <mag>%.",
         "string": "Zwiększa odporność na trucizny o <mag>%."
     },
     {
-        "editor_id": "ccBGSSSE021_LordsMailDiseaseUncleansed",
-        "form_id": "[03000807]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Lord's Mail (Cursed)",
-        "string": "Kolczuga Władcy (przeklęta)"
-    },
-    {
-        "editor_id": "ccBGSSSE021_DisDamageMagicka",
-        "form_id": "[0300080B]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Drains <mag> points of Magicka.",
-        "string": "Zmniejsza magię o <mag> pkt."
-    },
-    {
-        "editor_id": "ccBGSSSE021_DisDamageHealth",
-        "form_id": "[0300080A]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Reduced Health",
-        "string": "Zmniejszone zdrowie"
-    },
-    {
-        "editor_id": "ccBGSSSE021_DisDamageStamina",
-        "form_id": "[03000809]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Reduced Stamina",
-        "string": "Zmniejszona kondycja"
-    },
-    {
-        "editor_id": "ccBGSSSE021_EnchResistMagicConstantSelf",
-        "form_id": "[03000805]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Resist Magic",
-        "string": "Odporność na magię"
-    },
-    {
-        "editor_id": "ccBGSSSE021_EnchResistPoisonConstantSelf",
-        "form_id": "[03000806]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Resist Poison",
-        "string": "Odporność na trucizny"
-    },
-    {
-        "editor_id": "ccBGSSSE021_DisDamageHealth",
-        "form_id": "[0300080A]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Reduces Health by <mag>.",
-        "string": "Zmniejsza zdrowie o <mag> pkt."
-    },
-    {
-        "editor_id": "ccBGSSSE021_ArmorAbsorbHealth_FFContact_Effect",
-        "form_id": "[03000802]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Lord's Mail Absorb Health",
-        "string": "Absorpcja Zdrowia - Kolczuga Władcy"
-    },
-    {
-        "editor_id": "ccBGSSSE021_DisDamageMagicka",
-        "form_id": "[0300080B]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Reduced Magicka",
-        "string": "Zmniejszona magia"
-    },
-    {
         "editor_id": "ccBGSSSE021_LordsMailDescription",
-        "form_id": "[03000808]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Opponents in melee range have <5> points of health absorbed per second.  Increases Poison Resistance by <75>%.  Increases Magic Resistance by <17>%.",
-        "string": "Absorpcja <5> pkt. zdrowia na sekundę od przeciwników znajdujących się na wyciągnięcie ręki. Zwiększona o <75>% odporność na trucizny i o <17>% odporność na magię ."
-    },
-    {
-        "editor_id": "ccBGSSSE021_DisDamageStamina",
-        "form_id": "[03000809]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Drains <mag> points from stamina.",
-        "string": "Zmniejsza kondycję o <mag> pkt."
-    },
-    {
-        "editor_id": "ccBGSSSE021_LordsMailDescription",
-        "form_id": "[03000808]",
+        "form_id": "03000808|ccbgssse021-lordsmail.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Lord's Mail",
         "string": "Kolczuga Władcy"
     },
     {
+        "editor_id": "ccBGSSSE021_DisDamageStamina",
+        "form_id": "03000809|ccbgssse021-lordsmail.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Stamina",
+        "string": "Zmniejszona kondycja"
+    },
+    {
+        "editor_id": "ccBGSSSE021_DisDamageHealth",
+        "form_id": "0300080A|ccbgssse021-lordsmail.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Health",
+        "string": "Zmniejszone zdrowie"
+    },
+    {
+        "editor_id": "ccBGSSSE021_ArmorAbsorbHealth_FFContact_Effect",
+        "form_id": "03000802|ccbgssse021-lordsmail.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Lord's Mail Absorb Health",
+        "string": "Absorpcja Zdrowia - Kolczuga Władcy"
+    },
+    {
         "editor_id": "ccBGSSSE021_LordsMailDiseaseUncleansed",
-        "form_id": "[03000807]",
+        "form_id": "03000807|ccbgssse021-lordsmail.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "Wearer suffers a reduction of <50> points to Health, Stamina, and Magicka.",
         "string": "Noszący ma o <50> pkt. mniejsze zdrowie, kondycję i magię."
     },
     {
+        "editor_id": "ccBGSSSE021_DisDamageStamina",
+        "form_id": "03000809|ccbgssse021-lordsmail.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Drains <mag> points from stamina.",
+        "string": "Zmniejsza kondycję o <mag> pkt."
+    },
+    {
         "editor_id": "ccBGSSSE021_EnchResistMagicConstantSelf",
-        "form_id": "[03000805]",
+        "form_id": "03000805|ccbgssse021-lordsmail.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "Increases Magic Resistance by <mag>%.",
@@ -121,15 +65,71 @@
     },
     {
         "editor_id": "ccBGSSSE021_ArmorAsborbHealthCloak_Effect",
-        "form_id": "[03000800]",
+        "form_id": "03000800|ccbgssse021-lordsmail.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Lord's Mail Cloak",
         "string": "Maskowanie - Kolczuga Władcy"
     },
     {
+        "editor_id": "ccBGSSSE021_DisDamageMagicka",
+        "form_id": "0300080B|ccbgssse021-lordsmail.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Drains <mag> points of Magicka.",
+        "string": "Zmniejsza magię o <mag> pkt."
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailDescription",
+        "form_id": "03000808|ccbgssse021-lordsmail.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Opponents in melee range have <5> points of health absorbed per second.  Increases Poison Resistance by <75>%.  Increases Magic Resistance by <17>%.",
+        "string": "Absorpcja <5> pkt. zdrowia na sekundę od przeciwników znajdujących się na wyciągnięcie ręki. Zwiększona o <75>% odporność na trucizny i o <17>% odporność na magię ."
+    },
+    {
+        "editor_id": "ccBGSSSE021_EnchResistPoisonConstantSelf",
+        "form_id": "03000806|ccbgssse021-lordsmail.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Resist Poison",
+        "string": "Odporność na trucizny"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailDiseaseUncleansed",
+        "form_id": "03000807|ccbgssse021-lordsmail.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Lord's Mail (Cursed)",
+        "string": "Kolczuga Władcy (przeklęta)"
+    },
+    {
+        "editor_id": "ccBGSSSE021_DisDamageHealth",
+        "form_id": "0300080A|ccbgssse021-lordsmail.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Reduces Health by <mag>.",
+        "string": "Zmniejsza zdrowie o <mag> pkt."
+    },
+    {
+        "editor_id": "ccBGSSSE021_DisDamageMagicka",
+        "form_id": "0300080B|ccbgssse021-lordsmail.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Reduced Magicka",
+        "string": "Zmniejszona magia"
+    },
+    {
+        "editor_id": "ccBGSSSE021_EnchResistMagicConstantSelf",
+        "form_id": "03000805|ccbgssse021-lordsmail.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Resist Magic",
+        "string": "Odporność na magię"
+    },
+    {
         "editor_id": "ccBGSSSE021_ArmorCursed_Ench",
-        "form_id": "[0300083C]",
+        "form_id": "0300083C|ccbgssse021-lordsmail.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Lord's Mail (Cursed)",
@@ -137,23 +137,15 @@
     },
     {
         "editor_id": "ccBGSSSE021_ArmorAbsorbHealthCloak_Ench",
-        "form_id": "[03000803]",
+        "form_id": "03000803|ccbgssse021-lordsmail.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Lord's Mail",
         "string": "Kolczuga Władcy"
     },
     {
-        "editor_id": "ccBGSSSE021_ArmorAbsorbHealth_Spell",
-        "form_id": "[03000801]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Lord's Mail Absorb Health",
-        "string": "Absorpcja Zdrowia - Kolczuga Władcy"
-    },
-    {
         "editor_id": "ccBGSSSE021_LordsMail_KynarethsBaneDisease",
-        "form_id": "[0300080C]",
+        "form_id": "0300080C|ccbgssse021-lordsmail.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Bane of Kynareth",
@@ -161,39 +153,31 @@
     },
     {
         "editor_id": "ccBGSSSE021_LordsMail_KynarethsBaneDisease",
-        "form_id": "[0300080C]",
+        "form_id": "0300080C|ccbgssse021-lordsmail.esl",
         "index": null,
         "type": "SPEL DESC",
         "original": "Wearer suffers a reduction of <50> points to Health, Stamina, and Magicka.",
         "string": "Noszący ma o <50> pkt. mniejsze zdrowie, kondycję i magię."
     },
     {
+        "editor_id": "ccBGSSSE021_ArmorAbsorbHealth_Spell",
+        "form_id": "03000801|ccbgssse021-lordsmail.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Lord's Mail Absorb Health",
+        "string": "Absorpcja Zdrowia - Kolczuga Władcy"
+    },
+    {
         "editor_id": "ccBGSSSE021_InvisibleShrineOfKynarethActivator",
-        "form_id": "[03000DA3]",
+        "form_id": "03000DA3|ccbgssse021-lordsmail.esl",
         "index": null,
         "type": "ACTI FULL",
         "original": "Shrine of Kynareth",
         "string": "Kapliczka Kynaret"
     },
     {
-        "editor_id": "ccBGSSSE021_RedguardClothesTan",
-        "form_id": "[0300082E]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Redguard Clothes",
-        "string": "Ubiór Redgarda"
-    },
-    {
-        "editor_id": "ccBGSSSE021_RedguardHoodTan",
-        "form_id": "[03000830]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Redguard Hood",
-        "string": "Kaptur Redgarda"
-    },
-    {
         "editor_id": "ccBGSSSE021LordsMail",
-        "form_id": "[03000D63]",
+        "form_id": "03000D63|ccbgssse021-lordsmail.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Lord's Mail",
@@ -201,95 +185,95 @@
     },
     {
         "editor_id": "ccBGSSSE021LordsMail_Cursed",
-        "form_id": "[03000804]",
+        "form_id": "03000804|ccbgssse021-lordsmail.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Lord's Mail (Cursed)",
         "string": "Kolczuga Władcy (przeklęta)"
     },
     {
-        "editor_id": "ccBGSSSE021_RedguardClothesGreen",
-        "form_id": "[0300082D]",
+        "editor_id": "ccBGSSSE021_RedguardClothesTan",
+        "form_id": "0300082E|ccbgssse021-lordsmail.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Redguard Clothes",
         "string": "Ubiór Redgarda"
     },
     {
-        "editor_id": "ccBGSSSE021_RedguardHoodGreen",
-        "form_id": "[0300082F]",
+        "editor_id": "ccBGSSSE021_RedguardHoodRed",
+        "form_id": "03000DA0|ccbgssse021-lordsmail.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Redguard Hood",
         "string": "Kaptur Redgarda"
     },
     {
-        "editor_id": "ccBGSSSE021_RedguardHoodRed",
-        "form_id": "[03000DA0]",
+        "editor_id": "ccBGSSSE021_RedguardHoodGreen",
+        "form_id": "0300082F|ccbgssse021-lordsmail.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Redguard Hood",
         "string": "Kaptur Redgarda"
+    },
+    {
+        "editor_id": "ccBGSSSE021_RedguardHoodTan",
+        "form_id": "03000830|ccbgssse021-lordsmail.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Redguard Hood",
+        "string": "Kaptur Redgarda"
+    },
+    {
+        "editor_id": "ccBGSSSE021_RedguardClothesGreen",
+        "form_id": "0300082D|ccbgssse021-lordsmail.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Redguard Clothes",
+        "string": "Ubiór Redgarda"
     },
     {
         "editor_id": "ccBGSSSE021_LordsMailQuestNote",
-        "form_id": "[0300080D]",
+        "form_id": "0300080D|ccbgssse021-lordsmail.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "Letter to General Tullius",
         "string": "List do generała Tulliusa"
     },
     {
-        "editor_id": "ccBGSSSE021_LordsMailQuestNote",
-        "form_id": "[0300080D]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face=\"$HandwrittenFont\" size=\"16\">\r\n15th of Last Seed, 4E 201\r\n\r\nGeneral Tullius,\r\n\r\nDuring these times of war, I strongly believe it is important to inspire our population through a show of military strength and pageantry.  To the younger among us, nothing is as inspiring as the sight of an Imperial Soldier wearing the finest armors our Empire has ever set its hands to.\r\n\r\nIt is for this reason I am formally requesting that several Imperial relics be placed back into the service of the Empire, and distributed among high ranking officials. We must do all we can to inspire awe, and help galvanize the image of our cause among the populace.\r\n\r\nIt has come to my attention that a paticular artifact, the Armor of Morihaus, Gift of Kynareth, also known as The Lord's Mail, has recently gone missing.  It is believed a group of Redguard mercenaries have stolen it with the aim to sell to the highest bidder.  They were last seen traveling south of Fort Greymoor.\r\n\r\nFind these mercenaries, and reclaim The Lord's Mail.  Wear it proudly.  Show the people that Kynareth favors the realm of the Empire.\r\n\r\nEmperor Titus Mede II\r\n</font>",
-        "string": "<font face=\"$HandwrittenFont\" size=\"16\">\r\n15. Ostatniego Siewu, 4E 201\r\n\r\nGenerale Tulliusie,\r\n\r\nNastał czas wojny, a ja święcie wierzę, że trzeba inspirować mieszkańców ceremonialnymi pokazami siły wojskowej. Dla młodzieńców nie ma nic bardziej inspirującego niż widok żołnierza w najlepszym pancerzu, jakim dysponuje nasze cesarstwo.\r\n\r\nZ tego też względu oficjalnie poprosiłem o przywrócenie kilku cesarskich artefaktów z powrotem do dyspozycji dla cesarskiego wojska. Zostały one rozdzielone pomiędzy ważne osobistości. Musimy zrobić wszystko, aby wzbudzić podziw i odpowiednio ukształtować swój wizerunek wśród populacji.\r\n\r\nDowiedziałem się, że pewien artefakt, Pancerz Morihausa, dar Kynaret, zwany także Kolczugą Władcy, zaginął jakiś czas temu. Istnieją podejrzenia, że to grupa najemników, Redgardów, ukradła kolczugę i zamierza ją sprzedać temu, kto zapłaci najwięcej. Widziano ich ostatnio, jak podróżowali na południe od fortu Szara Przystań.\r\n\r\nZnajdź tych najemników i odzyskaj Kolczugę Władcy. Noś ją z dumą. Pokaż ludowi, że Kynaret jest łaskawa dla cesarstwa.\r\n\r\nCesarz Titus Mede II\r\n</font>"
-    },
-    {
         "editor_id": "ccBGSSSE021_ChestArmorNote",
-        "form_id": "[03000839]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face=\"$HandwrittenFont\" size=\"16\">\r\nMajid,\r\n\r\nAs we discussed, this armor is extremely valuable.  Please protect it at all costs.  You and your men should sleep in shifts in order to prevent any surprises, and dispose of anyone you do not recognize.  We cannot be found out.\r\n\r\nThe buyer will be traveling to meet you in the coming days.  We stand to make a small fortune, and you and your men will get the proper cut of the profits, as agreed.  The loss of such an artifact will bring disgrace to the Empire, and we should all be proud.\r\n\r\nPlease be aware, it is extremely important that you do not put this armor on.  I did not believe the stories, but when I put it on I was overcome with an uneasy fatigue.  Do not tell the prospective buyer about this lest they change their minds.  Let them seek out Kynareth's blessing themselves.\r\n</font>",
-        "string": "<font face=\"$HandwrittenFont\" size=\"16\">\r\nMajidzie,\r\n\r\nTak jak rozmawialiśmy, ten pancerz jest niezwykle cenny. Chroń go za wszelką cenę. Twoi ludzie powinni spać na zmiany, aby zapobiec wszelkim niespodziankom, i likwidować każdego, kogo nie rozpoznasz. Nie możemy zostać odkryci.\r\n\r\nW ciągu kilku dni przybędzie kupiec, który ma się z tobą spotkać. Chcemy zbić małą fortunę, a ty i twoi ludzie otrzymacie stosowną część zysku, tak jak to uzgodniliśmy. Utrata tego artefaktu przyniesie hańbę cesarstwu, a więc powinniśmy być z siebie dumni.\r\n\r\nJeszcze jedna, bardzo ważna sprawa - absolutnie nie zakładaj tego pancerza. Ja nie wierzyłem opowieściom, ale kiedy go założyłem, pojawiło się u mnie niepokojące zmęczenie. Nie mów o tym kupcowi, bo jeszcze zmieni zdanie. Niech sam odkryje błogosławieństwo Kynaret.\r\n</font>"
-    },
-    {
-        "editor_id": "ccBGSSSE021_ChestArmorNote",
-        "form_id": "[03000839]",
+        "form_id": "03000839|ccbgssse021-lordsmail.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "Majid - Please Read",
         "string": "Majidzie - proszę, przeczytaj"
     },
     {
+        "editor_id": "ccBGSSSE021_ChestArmorNote",
+        "form_id": "03000839|ccbgssse021-lordsmail.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"16\">\r\nMajid,\r\n\r\nAs we discussed, this armor is extremely valuable.  Please protect it at all costs.  You and your men should sleep in shifts in order to prevent any surprises, and dispose of anyone you do not recognize.  We cannot be found out.\r\n\r\nThe buyer will be traveling to meet you in the coming days.  We stand to make a small fortune, and you and your men will get the proper cut of the profits, as agreed.  The loss of such an artifact will bring disgrace to the Empire, and we should all be proud.\r\n\r\nPlease be aware, it is extremely important that you do not put this armor on.  I did not believe the stories, but when I put it on I was overcome with an uneasy fatigue.  Do not tell the prospective buyer about this lest they change their minds.  Let them seek out Kynareth's blessing themselves.\r\n</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"16\">\r\nMajidzie,\r\n\r\nTak jak rozmawialiśmy, ten pancerz jest niezwykle cenny. Chroń go za wszelką cenę. Twoi ludzie powinni spać na zmiany, aby zapobiec wszelkim niespodziankom, i likwidować każdego, kogo nie rozpoznasz. Nie możemy zostać odkryci.\r\n\r\nW ciągu kilku dni przybędzie kupiec, który ma się z tobą spotkać. Chcemy zbić małą fortunę, a ty i twoi ludzie otrzymacie stosowną część zysku, tak jak to uzgodniliśmy. Utrata tego artefaktu przyniesie hańbę cesarstwu, a więc powinniśmy być z siebie dumni.\r\n\r\nJeszcze jedna, bardzo ważna sprawa - absolutnie nie zakładaj tego pancerza. Ja nie wierzyłem opowieściom, ale kiedy go założyłem, pojawiło się u mnie niepokojące zmęczenie. Nie mów o tym kupcowi, bo jeszcze zmieni zdanie. Niech sam odkryje błogosławieństwo Kynaret.\r\n</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuestNote",
+        "form_id": "0300080D|ccbgssse021-lordsmail.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"16\">\r\n15th of Last Seed, 4E 201\r\n\r\nGeneral Tullius,\r\n\r\nDuring these times of war, I strongly believe it is important to inspire our population through a show of military strength and pageantry.  To the younger among us, nothing is as inspiring as the sight of an Imperial Soldier wearing the finest armors our Empire has ever set its hands to.\r\n\r\nIt is for this reason I am formally requesting that several Imperial relics be placed back into the service of the Empire, and distributed among high ranking officials. We must do all we can to inspire awe, and help galvanize the image of our cause among the populace.\r\n\r\nIt has come to my attention that a paticular artifact, the Armor of Morihaus, Gift of Kynareth, also known as The Lord's Mail, has recently gone missing.  It is believed a group of Redguard mercenaries have stolen it with the aim to sell to the highest bidder.  They were last seen traveling south of Fort Greymoor.\r\n\r\nFind these mercenaries, and reclaim The Lord's Mail.  Wear it proudly.  Show the people that Kynareth favors the realm of the Empire.\r\n\r\nEmperor Titus Mede II\r\n</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"16\">\r\n15. Ostatniego Siewu, 4E 201\r\n\r\nGenerale Tulliusie,\r\n\r\nNastał czas wojny, a ja święcie wierzę, że trzeba inspirować mieszkańców ceremonialnymi pokazami siły wojskowej. Dla młodzieńców nie ma nic bardziej inspirującego niż widok żołnierza w najlepszym pancerzu, jakim dysponuje nasze cesarstwo.\r\n\r\nZ tego też względu oficjalnie poprosiłem o przywrócenie kilku cesarskich artefaktów z powrotem do dyspozycji dla cesarskiego wojska. Zostały one rozdzielone pomiędzy ważne osobistości. Musimy zrobić wszystko, aby wzbudzić podziw i odpowiednio ukształtować swój wizerunek wśród populacji.\r\n\r\nDowiedziałem się, że pewien artefakt, Pancerz Morihausa, dar Kynaret, zwany także Kolczugą Władcy, zaginął jakiś czas temu. Istnieją podejrzenia, że to grupa najemników, Redgardów, ukradła kolczugę i zamierza ją sprzedać temu, kto zapłaci najwięcej. Widziano ich ostatnio, jak podróżowali na południe od fortu Szara Przystań.\r\n\r\nZnajdź tych najemników i odzyskaj Kolczugę Władcy. Noś ją z dumą. Pokaż ludowi, że Kynaret jest łaskawa dla cesarstwa.\r\n\r\nCesarz Titus Mede II\r\n</font>"
+    },
+    {
         "editor_id": "ccBGSSSE021_ChestLordsMail",
-        "form_id": "[03000817]",
+        "form_id": "03000817|ccbgssse021-lordsmail.esl",
         "index": null,
         "type": "CONT FULL",
         "original": "Chest",
         "string": "Skrzynia"
     },
     {
-        "editor_id": "ccBGSSSE021_EncAlikrBoss2HM01",
-        "form_id": "[0300080E]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Majid the Mad",
-        "string": "Majid Szalony"
-    },
-    {
-        "editor_id": "ccBGSSSE021_EncAlikrBoss2HM01",
-        "form_id": "[0300080E]",
-        "index": null,
-        "type": "NPC_ SHRT",
-        "original": "Majid",
-        "string": "Majid"
-    },
-    {
         "editor_id": "ccBGSSSE021_EncRedguardMercMissileM01",
-        "form_id": "[03000810]",
+        "form_id": "03000810|ccbgssse021-lordsmail.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Alik'r Mercenary",
@@ -297,39 +281,39 @@
     },
     {
         "editor_id": "ccBGSSSE021_EncRedguardMercMagicM01",
-        "form_id": "[0300080F]",
+        "form_id": "0300080F|ccbgssse021-lordsmail.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Alik'r Mercenary",
         "string": "Najemnik Alik`r"
     },
     {
+        "editor_id": "ccBGSSSE021_EncAlikrBoss2HM01",
+        "form_id": "0300080E|ccbgssse021-lordsmail.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Majid the Mad",
+        "string": "Majid Szalony"
+    },
+    {
+        "editor_id": "ccBGSSSE021_EncAlikrBoss2HM01",
+        "form_id": "0300080E|ccbgssse021-lordsmail.esl",
+        "index": null,
+        "type": "NPC_ SHRT",
+        "original": "Majid",
+        "string": "Majid"
+    },
+    {
         "editor_id": "ccBGSSSE021_ChestKey",
-        "form_id": "[03000826]",
+        "form_id": "03000826|ccbgssse021-lordsmail.esl",
         "index": null,
         "type": "KEYM FULL",
         "original": "Key to Alik'r Mercenary Chest",
         "string": "Klucz do skrzyni najemników Alik`r"
     },
     {
-        "editor_id": "SolitudeCastleDour",
-        "form_id": "[000213A0]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Castle Dour",
-        "string": "Zamek Dour"
-    },
-    {
-        "editor_id": "SolitudeTempleoftheDivines",
-        "form_id": "[00016A02]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Temple of the Divines",
-        "string": "Niebiańska Świątynia"
-    },
-    {
         "editor_id": "Tamriel",
-        "form_id": "[0000003C]",
+        "form_id": "0000003C|Skyrim.esm",
         "index": null,
         "type": "WRLD FULL",
         "original": "Skyrim",
@@ -337,79 +321,7 @@
     },
     {
         "editor_id": "ccBGSSSE021_LordsMailQuest",
-        "form_id": "[03000813]",
-        "index": 71,
-        "type": "QUST CNAM",
-        "original": "I've confronted the Alik'r mercenaries and found a locked chest.  I just need to find the key...",
-        "string": "Po starciu z najemcami Alik`r udało mi się znaleźć zamkniętą skrzynię. Muszę tylko dowiedzieć się, gdzie jest klucz..."
-    },
-    {
-        "editor_id": "ccBGSSSE021_SeedQuest",
-        "form_id": "[0300083E]",
-        "index": null,
-        "type": "QUST FULL",
-        "original": "Seeding Redguard Armor",
-        "string": "Seeding Redguard Armor"
-    },
-    {
-        "editor_id": "ccBGSSSE021_LordsMailQuest",
-        "form_id": "[03000813]",
-        "index": 59,
-        "type": "QUST CNAM",
-        "original": "I've found a letter addressed to General Tullius from the Emperor of Tamriel instructing that The Lord's Mail, a treasured Imperial relic, be found and reclaimed.  A band of Redguard mercenaries are rumored to have taken it.  I should locate their whereabouts and see if I can obtain the artifact.",
-        "string": "Wpadł mi w ręce list od cesarza Tamriel do generała Tulliusa. Można w nim wyczytać, że Kolczuga Władcy, cesarski artefakt, ma zostać odnaleziona i odzyskana. Ponoć wykradła ją grupa redgardzkich najemników. Muszę ich odnaleźć i sprawdzić, czy zdołam odzyskać artefakt."
-    },
-    {
-        "editor_id": "ccBGSSSE021_LordsMailQuest",
-        "form_id": "[03000813]",
-        "index": 15,
-        "type": "QUST NNAM",
-        "original": "Retrieve the Lord's Mail",
-        "string": "Zdobądź Kolczugę Władcy"
-    },
-    {
-        "editor_id": "ccBGSSSE021_LordsMailQuest",
-        "form_id": "[03000813]",
-        "index": 64,
-        "type": "QUST CNAM",
-        "original": "The Lord's Mail has been retreived, blessed by Kynareth, and can now be worn safely.",
-        "string": "Kolczuga Władcy została odzyskana i pobłogosławiona przez Kynaret. Można ją teraz nosić bezpiecznie."
-    },
-    {
-        "editor_id": "ccBGSSSE021_LordsMailQuest",
-        "form_id": "[03000813]",
-        "index": 62,
-        "type": "QUST CNAM",
-        "original": "I've retrieved The Lord's Mail, the legendary Imperial armor.  Before it can be worn, it must be cleansed at the shrine of Kynareth in Solitude.",
-        "string": "Udało mi się zdobyć Kolczugę Władcy, legendarny cesarski pancerz. Zanim będzie go można założyć, musi zostać oczyszczony w kapliczce Kynaret, w Samotni."
-    },
-    {
-        "editor_id": "ccBGSSSE021_LordsMailQuest",
-        "form_id": "[03000813]",
-        "index": null,
-        "type": "QUST FULL",
-        "original": "Gift of Kynareth",
-        "string": "Dar Kynaret"
-    },
-    {
-        "editor_id": "ccBGSSSE021_LordsMailQuest",
-        "form_id": "[03000813]",
-        "index": 0,
-        "type": "QUST NNAM",
-        "original": "Read the Emperor's Letter",
-        "string": "Przeczytaj list cesarza"
-    },
-    {
-        "editor_id": "ccBGSSSE021_LordsMailQuest",
-        "form_id": "[03000813]",
-        "index": 10,
-        "type": "QUST NNAM",
-        "original": "Confront the Alik'r Mercenaries",
-        "string": "Zmierz się z najemnikami Alik`r"
-    },
-    {
-        "editor_id": "ccBGSSSE021_LordsMailQuest",
-        "form_id": "[03000813]",
+        "form_id": "03000813|ccbgssse021-lordsmail.esl",
         "index": 20,
         "type": "QUST NNAM",
         "original": "Cleanse the Lord's Mail in Solitude",
@@ -417,15 +329,87 @@
     },
     {
         "editor_id": "ccBGSSSE021_LordsMailQuest",
-        "form_id": "[03000813]",
-        "index": 82,
+        "form_id": "03000813|ccbgssse021-lordsmail.esl",
+        "index": 15,
+        "type": "QUST NNAM",
+        "original": "Retrieve the Lord's Mail",
+        "string": "Zdobądź Kolczugę Władcy"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "form_id": "03000813|ccbgssse021-lordsmail.esl",
+        "index": 98,
+        "type": "QUST CNAM",
+        "original": "I've found a letter addressed to General Tullius from the Emperor of Tamriel instructing that The Lord's Mail, a treasured Imperial relic, be found and reclaimed.  A band of Redguard mercenaries are rumored to have taken it.  I should locate their whereabouts and see if I can obtain the artifact.",
+        "string": "Wpadł mi w ręce list od cesarza Tamriel do generała Tulliusa. Można w nim wyczytać, że Kolczuga Władcy, cesarski artefakt, ma zostać odnaleziona i odzyskana. Ponoć wykradła ją grupa redgardzkich najemników. Muszę ich odnaleźć i sprawdzić, czy zdołam odzyskać artefakt."
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "form_id": "03000813|ccbgssse021-lordsmail.esl",
+        "index": 88,
+        "type": "QUST CNAM",
+        "original": "The Lord's Mail has been retreived, blessed by Kynareth, and can now be worn safely.",
+        "string": "Kolczuga Władcy została odzyskana i pobłogosławiona przez Kynaret. Można ją teraz nosić bezpiecznie."
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "form_id": "03000813|ccbgssse021-lordsmail.esl",
+        "index": 95,
         "type": "QUST CNAM",
         "original": "A letter from the Emperor pertaining to an Imperial artifact was found at Castle Dour.  I should read it and find out what it's about.",
         "string": "Na zamku Dour znaleziono list od cesarza dotyczący cesarskiego artefaktu. Muszę go przeczytać i dowiedzieć się, o co chodzi."
     },
     {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "form_id": "03000813|ccbgssse021-lordsmail.esl",
+        "index": 63,
+        "type": "QUST CNAM",
+        "original": "I've retrieved The Lord's Mail, the legendary Imperial armor.  Before it can be worn, it must be cleansed at the shrine of Kynareth in Solitude.",
+        "string": "Udało mi się zdobyć Kolczugę Władcy, legendarny cesarski pancerz. Zanim będzie go można założyć, musi zostać oczyszczony w kapliczce Kynaret, w Samotni."
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "form_id": "03000813|ccbgssse021-lordsmail.esl",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Confront the Alik'r Mercenaries",
+        "string": "Zmierz się z najemnikami Alik`r"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "form_id": "03000813|ccbgssse021-lordsmail.esl",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Gift of Kynareth",
+        "string": "Dar Kynaret"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "form_id": "03000813|ccbgssse021-lordsmail.esl",
+        "index": 0,
+        "type": "QUST NNAM",
+        "original": "Read the Emperor's Letter",
+        "string": "Przeczytaj list cesarza"
+    },
+    {
+        "editor_id": "ccBGSSSE021_SeedQuest",
+        "form_id": "0300083E|ccbgssse021-lordsmail.esl",
+        "index": null,
+        "type": "QUST FULL",
+        "original": "Seeding Redguard Armor",
+        "string": "Seeding Redguard Armor"
+    },
+    {
+        "editor_id": "ccBGSSSE021_LordsMailQuest",
+        "form_id": "03000813|ccbgssse021-lordsmail.esl",
+        "index": 64,
+        "type": "QUST CNAM",
+        "original": "I've confronted the Alik'r mercenaries and found a locked chest.  I just need to find the key...",
+        "string": "Po starciu z najemcami Alik`r udało mi się znaleźć zamkniętą skrzynię. Muszę tylko dowiedzieć się, gdzie jest klucz..."
+    },
+    {
         "editor_id": "ccBGSSSE021_MessageCleanseSuccess",
-        "form_id": "[03000814]",
+        "form_id": "03000814|ccbgssse021-lordsmail.esl",
         "index": null,
         "type": "MESG DESC",
         "original": "The Lord's Mail has been cleansed",

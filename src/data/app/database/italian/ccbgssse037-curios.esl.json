@@ -1,95 +1,175 @@
 [
     {
-        "editor_id": "ccBGSSSE037_AlchDamageHealthDuration",
-        "form_id": "[05000852]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Apple Poisoning",
-        "string": "Avvelenamento della mela"
-    },
-    {
-        "editor_id": "ccBGSSSE037_NightEyeEffect",
-        "form_id": "[05000803]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Improved night vision for <dur> seconds.",
-        "string": "La visione notturna è migliorata per <dur> secondi."
-    },
-    {
-        "editor_id": "ccBGSSSE037_RaceBretonAbsorbSpellChance",
-        "form_id": "[05000812]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Absorb <mag>% of the magicka from hostile spells for <dur> seconds.",
-        "string": "Assorbi una quantità di magicka pari a: <mag>% dagli incantesimi nemici per <dur> secondi."
-    },
-    {
-        "editor_id": "ccBGSSSE037_AlchDamageHealthDuration",
-        "form_id": "[05000852]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Causes <mag> points of poison damage for <dur> seconds.",
-        "string": "Causa <mag> punti di danno da veleno per <dur> secondi."
-    },
-    {
-        "editor_id": "ccBGSSSE037_NightEyeEffect",
-        "form_id": "[05000803]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Night Eye",
-        "string": "Visione Notturna"
-    },
-    {
-        "editor_id": "ccBGSSSE037_RaceBretonAbsorbSpellChance",
-        "form_id": "[05000812]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Spell Absorption",
-        "string": "Assorbimento magico"
-    },
-    {
         "editor_id": "ccBGSSSE037_LightFFSelf",
-        "form_id": "[05000846]",
+        "form_id": "05000846|ccBGSSSE037-Curios.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Light",
         "string": "Luce"
     },
     {
+        "editor_id": "ccBGSSSE037_RaceBretonAbsorbSpellChance",
+        "form_id": "05000812|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Absorb <mag>% of the magicka from hostile spells for <dur> seconds.",
+        "string": "Assorbi una quantità di magicka pari a: <mag>% dagli incantesimi nemici per <dur> secondi."
+    },
+    {
+        "editor_id": "ccBGSSSE037_NightEyeEffect",
+        "form_id": "05000803|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Improved night vision for <dur> seconds.",
+        "string": "La visione notturna è migliorata per <dur> secondi."
+    },
+    {
+        "editor_id": "ccBGSSSE037_AlchDamageHealthDuration",
+        "form_id": "05000852|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Causes <mag> points of poison damage for <dur> seconds.",
+        "string": "Causa <mag> punti di danno da veleno per <dur> secondi."
+    },
+    {
+        "editor_id": "ccBGSSSE037_RaceBretonAbsorbSpellChance",
+        "form_id": "05000812|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Spell Absorption",
+        "string": "Assorbimento magico"
+    },
+    {
+        "editor_id": "ccBGSSSE037_NightEyeEffect",
+        "form_id": "05000803|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Night Eye",
+        "string": "Visione Notturna"
+    },
+    {
         "editor_id": "ccBGSSSE037_LightFFSelf",
-        "form_id": "[05000846]",
+        "form_id": "05000846|ccBGSSSE037-Curios.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "Emits a small light that lasts for <dur> seconds.",
         "string": "Emette una flebile luce che dura per <dur> secondi."
     },
     {
+        "editor_id": "ccBGSSSE037_AlchDamageHealthDuration",
+        "form_id": "05000852|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Apple Poisoning",
+        "string": "Avvelenamento della mela"
+    },
+    {
         "editor_id": "ccBGSSSE037_QA_CuriosChest",
-        "form_id": "[05000830]",
+        "form_id": "05000830|ccBGSSSE037-Curios.esl",
         "index": null,
         "type": "CONT FULL",
         "original": "Chest",
         "string": "Baule"
     },
     {
+        "editor_id": "ccBGSSSE037_KreshFiber",
+        "form_id": "05000811|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Kresh Fiber",
+        "string": "Fibra di Kresh"
+    },
+    {
+        "editor_id": "ccBGSSSE037_ElytraIchor",
+        "form_id": "05000828|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Elytra Ichor",
+        "string": "Icore di Elytra"
+    },
+    {
+        "editor_id": "ccBGSSSE037_CongealedPutrescence",
+        "form_id": "05000807|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Congealed Putrescence",
+        "string": "Marciume rappreso"
+    },
+    {
         "editor_id": "ccBGSSSE037_Chokeberry",
-        "form_id": "[05000838]",
+        "form_id": "05000838|ccBGSSSE037-Curios.esl",
         "index": null,
         "type": "INGR FULL",
         "original": "Chokeberry",
         "string": "Soffobacca"
     },
     {
-        "editor_id": "ccBGSSSE037_Redwort",
-        "form_id": "[05000818]",
+        "editor_id": "ccBGSSSE037_FungusStalk",
+        "form_id": "0500082B|ccBGSSSE037-Curios.esl",
         "index": null,
         "type": "INGR FULL",
-        "original": "Redwort Flower",
-        "string": "Fiore di crisciola rossa"
+        "original": "Fungus Stalk",
+        "string": "Fungo a stelo"
+    },
+    {
+        "editor_id": "ccBGSSSE037_Ambrosia",
+        "form_id": "05000836|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Ambrosia",
+        "string": "Ambrosia"
+    },
+    {
+        "editor_id": "ccBGSSSE037_RedKelpGasBladder",
+        "form_id": "05000817|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Red Kelp Gas Bladder",
+        "string": "Vescica dei gas di alga rossa"
+    },
+    {
+        "editor_id": "ccBGSSSE037_KagoutiHide",
+        "form_id": "05000810|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Kagouti Hide",
+        "string": "Pelle di kagouti"
+    },
+    {
+        "editor_id": "ccBGSSSE037_Saltrice",
+        "form_id": "0500081A|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Saltrice",
+        "string": "Salriso"
+    },
+    {
+        "editor_id": "ccBGSSSE037_ScribJerky",
+        "form_id": "0500081D|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Scrib Jerky",
+        "string": "Carne essiccata di Scrib"
+    },
+    {
+        "editor_id": "ccBGSSSE037_Chokeweed",
+        "form_id": "05000804|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Chokeweed",
+        "string": "Strozzerba"
+    },
+    {
+        "editor_id": "ccBGSSSE037_HyphaFacia",
+        "form_id": "0500080E|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Hypha Facia",
+        "string": "Hypha Facia"
     },
     {
         "editor_id": "ccBGSSSE037_FirePetal",
-        "form_id": "[05000829]",
+        "form_id": "05000829|ccBGSSSE037-Curios.esl",
         "index": null,
         "type": "INGR FULL",
         "original": "Fire Petal",
@@ -97,255 +177,191 @@
     },
     {
         "editor_id": "ccBGSSSE037_BlisterPodCap",
-        "form_id": "[05000D6A]",
+        "form_id": "05000D6A|ccBGSSSE037-Curios.esl",
         "index": null,
         "type": "INGR FULL",
         "original": "Blister Pod Cap",
         "string": "Cappelli di fungo vescica"
     },
     {
-        "editor_id": "ccBGSSSE037_HydnumAzureGiantSpore",
-        "form_id": "[0500080D]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Hydnum Azure Giant Spore",
-        "string": "Spora gigante di hydnum azzurro"
-    },
-    {
-        "editor_id": "ccBGSSSE037_AsterBloomCore",
-        "form_id": "[05000D66]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Aster Bloom Core",
-        "string": "Nucleo di fiore astro"
-    },
-    {
-        "editor_id": "ccBGSSSE037_SloadSoap",
-        "form_id": "[0500081E]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Sload Soap",
-        "string": "Sapone di Sload"
-    },
-    {
-        "editor_id": "ccBGSSSE037_KreshFiber",
-        "form_id": "[05000811]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Kresh Fiber",
-        "string": "Fibra di Kresh"
-    },
-    {
-        "editor_id": "ccBGSSSE037_HungerTongue",
-        "form_id": "[0500080C]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Hunger Tongue",
-        "string": "Lingua di famelico"
-    },
-    {
-        "editor_id": "ccBGSSSE037_Saltrice",
-        "form_id": "[0500081A]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Saltrice",
-        "string": "Salriso"
-    },
-    {
-        "editor_id": "ccBGSSSE037_FlameStalk",
-        "form_id": "[0500082A]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Flame Stalk",
-        "string": "Bulbo di fiamma"
-    },
-    {
-        "editor_id": "ccBGSSSE037_DaedraVenin",
-        "form_id": "[0500080B]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Daedra Venin",
-        "string": "Venin di Daedra"
-    },
-    {
         "editor_id": "ccBGSSSE037_HackleLoLeaf",
-        "form_id": "[0500082E]",
+        "form_id": "0500082E|ccBGSSSE037-Curios.esl",
         "index": null,
         "type": "INGR FULL",
         "original": "Hackle-Lo Leaf",
         "string": "Foglia di Hackle-Lo"
     },
     {
-        "editor_id": "ccBGSSSE037_ScribJelly",
-        "form_id": "[0500081C]",
+        "editor_id": "ccBGSSSE037_HungerTongue",
+        "form_id": "0500080C|ccBGSSSE037-Curios.esl",
         "index": null,
         "type": "INGR FULL",
-        "original": "Scrib Jelly",
-        "string": "Gelatina di Scrib"
+        "original": "Hunger Tongue",
+        "string": "Lingua di famelico"
     },
     {
-        "editor_id": "ccBGSSSE037_WatchersEye",
-        "form_id": "[05000821]",
+        "editor_id": "ccBGSSSE037_HeartofOrderIngredient",
+        "form_id": "05000851|ccBGSSSE037-Curios.esl",
         "index": null,
         "type": "INGR FULL",
-        "original": "Watcher's Eye",
-        "string": "Occhio della vedetta"
-    },
-    {
-        "editor_id": "ccBGSSSE037_BogBeacon",
-        "form_id": "[05000D6C]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Bog Beacon",
-        "string": "Mitrula paludosa"
-    },
-    {
-        "editor_id": "ccBGSSSE037_ImpGall",
-        "form_id": "[0500080F]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Imp Gall",
-        "string": "Fiele di Imp"
-    },
-    {
-        "editor_id": "ccBGSSSE037_HyphaFacia",
-        "form_id": "[0500080E]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Hypha Facia",
-        "string": "Hypha Facia"
-    },
-    {
-        "editor_id": "ccBGSSSE037_WatchersEyeBlind",
-        "form_id": "[05000822]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Blind Watcher's Eye",
-        "string": "Occhio della vedetta cieca"
-    },
-    {
-        "editor_id": "ccBGSSSE037_DaedraSilk",
-        "form_id": "[0500080A]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Daedra Silk",
-        "string": "Seta di Daedra"
-    },
-    {
-        "editor_id": "ccBGSSSE037_CodaFlower",
-        "form_id": "[05000805]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Coda Flower",
-        "string": "Fiore di coda"
-    },
-    {
-        "editor_id": "ccBGSSSE037_ScalonFin",
-        "form_id": "[0500081B]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Scalon Fin",
-        "string": "Pinna di Scalon"
-    },
-    {
-        "editor_id": "ccBGSSSE037_Marshmerrow",
-        "form_id": "[05000814]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Marshmerrow",
-        "string": "Piantalude"
-    },
-    {
-        "editor_id": "ccBGSSSE037_WispStalkCaps",
-        "form_id": "[05000823]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Wisp Stalk Caps",
-        "string": "Cappelli di stelo fatuo"
+        "original": "Heart of Order",
+        "string": "Cuore dell'Ordine"
     },
     {
         "editor_id": "ccBGSSSE037_Comberry",
-        "form_id": "[05000806]",
+        "form_id": "05000806|ccBGSSSE037-Curios.esl",
         "index": null,
         "type": "INGR FULL",
         "original": "Comberry",
         "string": "Bacca amara"
     },
     {
-        "editor_id": "ccBGSSSE037_VoidEssence",
-        "form_id": "[05000820]",
+        "editor_id": "ccBGSSSE037_MinotaurHorn",
+        "form_id": "05000815|ccBGSSSE037-Curios.esl",
         "index": null,
         "type": "INGR FULL",
-        "original": "Void Essence",
-        "string": "Essenza del vuoto"
-    },
-    {
-        "editor_id": "ccBGSSSE037_AlocasiaFruit",
-        "form_id": "[05000D62]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Alocasia Fruit",
-        "string": "Frutto di alocasia"
-    },
-    {
-        "editor_id": "ccBGSSSE037_CongealedPutrescence",
-        "form_id": "[05000807]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Congealed Putrescence",
-        "string": "Marciume rappreso"
-    },
-    {
-        "editor_id": "ccBGSSSE037_Roobrush",
-        "form_id": "[05000819]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Roobrush",
-        "string": "Arbonace"
-    },
-    {
-        "editor_id": "ccBGSSSE037_BunglersBane",
-        "form_id": "[05000802]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Bungler's Bane",
-        "string": "Rovina del dilettante"
-    },
-    {
-        "editor_id": "ccBGSSSE037_RedKelpGasBladder",
-        "form_id": "[05000817]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Red Kelp Gas Bladder",
-        "string": "Vescica dei gas di alga rossa"
-    },
-    {
-        "editor_id": "ccBGSSSE037_ScribJerky",
-        "form_id": "[0500081D]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Scrib Jerky",
-        "string": "Carne essiccata di Scrib"
+        "original": "Minotaur Horn",
+        "string": "Corno di minotauro"
     },
     {
         "editor_id": "ccBGSSSE037_CorkbulbRoot",
-        "form_id": "[05000809]",
+        "form_id": "05000809|ccBGSSSE037-Curios.esl",
         "index": null,
         "type": "INGR FULL",
         "original": "Corkbulb Root",
         "string": "Radice di sugherato"
     },
     {
-        "editor_id": "ccBGSSSE037_Ambrosia",
-        "form_id": "[05000836]",
+        "editor_id": "ccBGSSSE037_FlameStalk",
+        "form_id": "0500082A|ccBGSSSE037-Curios.esl",
         "index": null,
         "type": "INGR FULL",
-        "original": "Ambrosia",
-        "string": "Ambrosia"
+        "original": "Flame Stalk",
+        "string": "Bulbo di fiamma"
+    },
+    {
+        "editor_id": "ccBGSSSE037_WormsHeadCap",
+        "form_id": "05000825|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Worm's Head Cap",
+        "string": "Cappelli di fungo verme"
+    },
+    {
+        "editor_id": "ccBGSSSE037_DaedraVenin",
+        "form_id": "0500080B|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Daedra Venin",
+        "string": "Venin di Daedra"
+    },
+    {
+        "editor_id": "ccBGSSSE037_DreughWax",
+        "form_id": "05000827|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Dreugh Wax",
+        "string": "Cera di Dreugh"
+    },
+    {
+        "editor_id": "ccBGSSSE037_WatchersEyeBlind",
+        "form_id": "05000822|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Blind Watcher's Eye",
+        "string": "Occhio della vedetta cieca"
+    },
+    {
+        "editor_id": "ccBGSSSE037_Redwort",
+        "form_id": "05000818|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Redwort Flower",
+        "string": "Fiore di crisciola rossa"
+    },
+    {
+        "editor_id": "ccBGSSSE037_Marshmerrow",
+        "form_id": "05000814|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Marshmerrow",
+        "string": "Piantalude"
+    },
+    {
+        "editor_id": "ccBGSSSE037_ImpGall",
+        "form_id": "0500080F|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Imp Gall",
+        "string": "Fiele di Imp"
+    },
+    {
+        "editor_id": "ccBGSSSE037_WatchersEye",
+        "form_id": "05000821|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Watcher's Eye",
+        "string": "Occhio della vedetta"
+    },
+    {
+        "editor_id": "ccBGSSSE037_SloadSoap",
+        "form_id": "0500081E|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Sload Soap",
+        "string": "Sapone di Sload"
+    },
+    {
+        "editor_id": "ccBGSSSE037_HydnumAzureGiantSpore",
+        "form_id": "0500080D|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Hydnum Azure Giant Spore",
+        "string": "Spora gigante di hydnum azzurro"
+    },
+    {
+        "editor_id": "ccBGSSSE037_WitheringMoon",
+        "form_id": "05000824|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Withering Moon",
+        "string": "Luna appassita"
+    },
+    {
+        "editor_id": "ccBGSSSE037_StoneflowerPetals",
+        "form_id": "0500081F|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Stoneflower Petals",
+        "string": "Petali di fiorpietra"
+    },
+    {
+        "editor_id": "ccBGSSSE037_ScribJelly",
+        "form_id": "0500081C|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Scrib Jelly",
+        "string": "Gelatina di Scrib"
+    },
+    {
+        "editor_id": "ccBGSSSE037_LuminousRussula",
+        "form_id": "05000813|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Luminous Russula",
+        "string": "Russula Luminosa"
+    },
+    {
+        "editor_id": "ccBGSSSE037_CodaFlower",
+        "form_id": "05000805|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Coda Flower",
+        "string": "Fiore di coda"
     },
     {
         "editor_id": "ccBGSSSE037_OgresTeeth",
-        "form_id": "[05000816]",
+        "form_id": "05000816|ccBGSSSE037-Curios.esl",
         "index": null,
         "type": "INGR FULL",
         "original": "Ogre's Teeth",
@@ -353,135 +369,151 @@
     },
     {
         "editor_id": "ccBGSSSE037_GoldKanet",
-        "form_id": "[0500082D]",
+        "form_id": "0500082D|ccBGSSSE037-Curios.esl",
         "index": null,
         "type": "INGR FULL",
         "original": "Gold Kanet",
         "string": "Kanet d'oro"
     },
     {
-        "editor_id": "ccBGSSSE037_DaedrothTeeth",
-        "form_id": "[05000826]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Daedroth Teeth",
-        "string": "Dente di Daedroth"
-    },
-    {
-        "editor_id": "ccBGSSSE037_FungusStalk",
-        "form_id": "[0500082B]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Fungus Stalk",
-        "string": "Fungo a stelo"
-    },
-    {
-        "editor_id": "ccBGSSSE037_StoneflowerPetals",
-        "form_id": "[0500081F]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Stoneflower Petals",
-        "string": "Petali di fiorpietra"
-    },
-    {
-        "editor_id": "ccBGSSSE037_WitheringMoon",
-        "form_id": "[05000824]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Withering Moon",
-        "string": "Luna appassita"
-    },
-    {
-        "editor_id": "ccBGSSSE037_ElytraIchor",
-        "form_id": "[05000828]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Elytra Ichor",
-        "string": "Icore di Elytra"
-    },
-    {
-        "editor_id": "ccBGSSSE037_LuminousRussula",
-        "form_id": "[05000813]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Luminous Russula",
-        "string": "Russula Luminosa"
-    },
-    {
-        "editor_id": "ccBGSSSE037_MinotaurHorn",
-        "form_id": "[05000815]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Minotaur Horn",
-        "string": "Corno di minotauro"
-    },
-    {
-        "editor_id": "ccBGSSSE037_Lichor",
-        "form_id": "[05000837]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Lichor",
-        "string": "Licore"
-    },
-    {
-        "editor_id": "ccBGSSSE037_GnarlBark",
-        "form_id": "[0500082C]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Gnarl Bark",
-        "string": "Corteccia di Gnarl"
-    },
-    {
-        "editor_id": "ccBGSSSE037_DreughWax",
-        "form_id": "[05000827]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Dreugh Wax",
-        "string": "Cera di Dreugh"
-    },
-    {
-        "editor_id": "ccBGSSSE037_HeartofOrderIngredient",
-        "form_id": "[05000851]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Heart of Order",
-        "string": "Cuore dell'Ordine"
-    },
-    {
-        "editor_id": "ccBGSSSE037_WormsHeadCap",
-        "form_id": "[05000825]",
-        "index": null,
-        "type": "INGR FULL",
-        "original": "Worm's Head Cap",
-        "string": "Cappelli di fungo verme"
-    },
-    {
         "editor_id": "ccBGSSSE037_BittergreenPetals",
-        "form_id": "[05000D68]",
+        "form_id": "05000D68|ccBGSSSE037-Curios.esl",
         "index": null,
         "type": "INGR FULL",
         "original": "Bittergreen Petals",
         "string": "Petali di verdamaro"
     },
     {
-        "editor_id": "ccBGSSSE037_KagoutiHide",
-        "form_id": "[05000810]",
+        "editor_id": "ccBGSSSE037_AlocasiaFruit",
+        "form_id": "05000D62|ccBGSSSE037-Curios.esl",
         "index": null,
         "type": "INGR FULL",
-        "original": "Kagouti Hide",
-        "string": "Pelle di kagouti"
+        "original": "Alocasia Fruit",
+        "string": "Frutto di alocasia"
     },
     {
-        "editor_id": "ccBGSSSE037_Chokeweed",
-        "form_id": "[05000804]",
+        "editor_id": "ccBGSSSE037_ScalonFin",
+        "form_id": "0500081B|ccBGSSSE037-Curios.esl",
         "index": null,
         "type": "INGR FULL",
-        "original": "Chokeweed",
-        "string": "Strozzerba"
+        "original": "Scalon Fin",
+        "string": "Pinna di Scalon"
+    },
+    {
+        "editor_id": "ccBGSSSE037_Roobrush",
+        "form_id": "05000819|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Roobrush",
+        "string": "Arbonace"
+    },
+    {
+        "editor_id": "ccBGSSSE037_BunglersBane",
+        "form_id": "05000802|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Bungler's Bane",
+        "string": "Rovina del dilettante"
+    },
+    {
+        "editor_id": "ccBGSSSE037_Lichor",
+        "form_id": "05000837|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Lichor",
+        "string": "Licore"
+    },
+    {
+        "editor_id": "ccBGSSSE037_DaedraSilk",
+        "form_id": "0500080A|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Daedra Silk",
+        "string": "Seta di Daedra"
+    },
+    {
+        "editor_id": "ccBGSSSE037_BogBeacon",
+        "form_id": "05000D6C|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Bog Beacon",
+        "string": "Mitrula paludosa"
+    },
+    {
+        "editor_id": "ccBGSSSE037_VoidEssence",
+        "form_id": "05000820|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Void Essence",
+        "string": "Essenza del vuoto"
+    },
+    {
+        "editor_id": "ccBGSSSE037_GnarlBark",
+        "form_id": "0500082C|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Gnarl Bark",
+        "string": "Corteccia di Gnarl"
+    },
+    {
+        "editor_id": "ccBGSSSE037_AsterBloomCore",
+        "form_id": "05000D66|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Aster Bloom Core",
+        "string": "Nucleo di fiore astro"
+    },
+    {
+        "editor_id": "ccBGSSSE037_DaedrothTeeth",
+        "form_id": "05000826|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Daedroth Teeth",
+        "string": "Dente di Daedroth"
+    },
+    {
+        "editor_id": "ccBGSSSE037_WispStalkCaps",
+        "form_id": "05000823|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "INGR FULL",
+        "original": "Wisp Stalk Caps",
+        "string": "Cappelli di stelo fatuo"
+    },
+    {
+        "editor_id": "ccBGSSSE037_SilverBolt",
+        "form_id": "0500083F|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "AMMO FULL",
+        "original": "Silver Bolt",
+        "string": "Dardo d'argento"
+    },
+    {
+        "editor_id": "ccBGSSSE037_OrcishBolt",
+        "form_id": "05000841|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "AMMO FULL",
+        "original": "Orcish Bolt",
+        "string": "Dardo orchesco"
+    },
+    {
+        "editor_id": "ccBGSSSE037_BonemoldBolt",
+        "form_id": "05000840|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "AMMO FULL",
+        "original": "Bonemold Bolt",
+        "string": "Dardo d'ossa fuse"
+    },
+    {
+        "editor_id": "ccBGSSSE037_IronBolt",
+        "form_id": "0500083A|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "AMMO FULL",
+        "original": "Iron Bolt",
+        "string": "Dardo di ferro"
     },
     {
         "editor_id": "ccBGSSSE037_CorkbulbBolt",
-        "form_id": "[05000832]",
+        "form_id": "05000832|ccBGSSSE037-Curios.esl",
         "index": null,
         "type": "AMMO FULL",
         "original": "Corkbulb Bolt",
@@ -489,47 +521,23 @@
     },
     {
         "editor_id": "ccBGSSSE037_CorkbulbArrow",
-        "form_id": "[0500082F]",
+        "form_id": "0500082F|ccBGSSSE037-Curios.esl",
         "index": null,
         "type": "AMMO FULL",
         "original": "Corkbulb Arrow",
         "string": "Freccia di sugherato"
     },
     {
-        "editor_id": "ccBGSSSE037_SilverBolt",
-        "form_id": "[0500083F]",
+        "editor_id": "ccBGSSSE037_PoisonedFoodAppleGreen",
+        "form_id": "05000849|ccBGSSSE037-Curios.esl",
         "index": null,
-        "type": "AMMO FULL",
-        "original": "Silver Bolt",
-        "string": "Dardo d'argento"
-    },
-    {
-        "editor_id": "ccBGSSSE037_BonemoldBolt",
-        "form_id": "[05000840]",
-        "index": null,
-        "type": "AMMO FULL",
-        "original": "Bonemold Bolt",
-        "string": "Dardo d'ossa fuse"
-    },
-    {
-        "editor_id": "ccBGSSSE037_OrcishBolt",
-        "form_id": "[05000841]",
-        "index": null,
-        "type": "AMMO FULL",
-        "original": "Orcish Bolt",
-        "string": "Dardo orchesco"
-    },
-    {
-        "editor_id": "ccBGSSSE037_IronBolt",
-        "form_id": "[0500083A]",
-        "index": null,
-        "type": "AMMO FULL",
-        "original": "Iron Bolt",
-        "string": "Dardo di ferro"
+        "type": "ALCH FULL",
+        "original": "Poisoned Green Apple",
+        "string": "Mela verde avvelenata"
     },
     {
         "editor_id": "ccBGSSSE037_PoisonedFoodAppleRed",
-        "form_id": "[05000D98]",
+        "form_id": "05000D98|ccBGSSSE037-Curios.esl",
         "index": null,
         "type": "ALCH FULL",
         "original": "Poisoned Red Apple",
@@ -537,39 +545,15 @@
     },
     {
         "editor_id": "ccBGSSSE037_WelkyndStone",
-        "form_id": "[05000800]",
+        "form_id": "05000800|ccBGSSSE037-Curios.esl",
         "index": null,
         "type": "ALCH FULL",
         "original": "Welkynd Stone",
         "string": "Pietra di Welkynd"
     },
     {
-        "editor_id": "ccBGSSSE037_PoisonedFoodAppleGreen",
-        "form_id": "[05000849]",
-        "index": null,
-        "type": "ALCH FULL",
-        "original": "Poisoned Green Apple",
-        "string": "Mela verde avvelenata"
-    },
-    {
-        "editor_id": "ccBGSSSE037_ArrowCorkbulbProjectile",
-        "form_id": "[05000835]",
-        "index": null,
-        "type": "PROJ FULL",
-        "original": "Corkbulb Arrow",
-        "string": "Freccia di sugherato"
-    },
-    {
-        "editor_id": "ccBGSSSE037_BoltCorkbulbProjectile",
-        "form_id": "[05000831]",
-        "index": null,
-        "type": "PROJ FULL",
-        "original": "Corkbulb Bolt",
-        "string": "Dardo di sugherato"
-    },
-    {
         "editor_id": "ccBGSSSE037_BoltIronProjectile",
-        "form_id": "[0500083B]",
+        "form_id": "0500083B|ccBGSSSE037-Curios.esl",
         "index": null,
         "type": "PROJ FULL",
         "original": "Iron Bolt",
@@ -577,7 +561,7 @@
     },
     {
         "editor_id": "ccBGSSSE037_BoltBonemoldProjectile",
-        "form_id": "[0500083D]",
+        "form_id": "0500083D|ccBGSSSE037-Curios.esl",
         "index": null,
         "type": "PROJ FULL",
         "original": "Bonemold Bolt",
@@ -585,23 +569,39 @@
     },
     {
         "editor_id": "ccBGSSSE037_BoltSilverProjectile",
-        "form_id": "[0500083C]",
+        "form_id": "0500083C|ccBGSSSE037-Curios.esl",
         "index": null,
         "type": "PROJ FULL",
         "original": "Silver Bolt",
         "string": "Dardo d'argento"
     },
     {
+        "editor_id": "ccBGSSSE037_ArrowCorkbulbProjectile",
+        "form_id": "05000835|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "PROJ FULL",
+        "original": "Corkbulb Arrow",
+        "string": "Freccia di sugherato"
+    },
+    {
         "editor_id": "ccBGSSSE037_BoltOrcishProjectile",
-        "form_id": "[0500083E]",
+        "form_id": "0500083E|ccBGSSSE037-Curios.esl",
         "index": null,
         "type": "PROJ FULL",
         "original": "Orcish Bolt",
         "string": "Dardo orchesco"
     },
     {
+        "editor_id": "ccBGSSSE037_BoltCorkbulbProjectile",
+        "form_id": "05000831|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "PROJ FULL",
+        "original": "Corkbulb Bolt",
+        "string": "Dardo di sugherato"
+    },
+    {
         "editor_id": "ccBGSSSE037_VarlaStone",
-        "form_id": "[05000801]",
+        "form_id": "05000801|ccBGSSSE037-Curios.esl",
         "index": null,
         "type": "SLGM FULL",
         "original": "Flawed Varla Stone",
@@ -609,15 +609,31 @@
     },
     {
         "editor_id": "ccBGSSSE037_RareCuriosQuest",
-        "form_id": "[0500084D]",
+        "form_id": "0500084D|ccBGSSSE037-Curios.esl",
         "index": null,
         "type": "QUST FULL",
         "original": "Rare Curios",
         "string": "Rarità ricercate"
     },
     {
+        "editor_id": "ccBGSSSE037_PoisonedPerk",
+        "form_id": "0500084F|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Poisoned",
+        "string": "Avvelenato"
+    },
+    {
         "editor_id": "ccBGSSSE037_SilverboltPerk",
-        "form_id": "[05000854]",
+        "form_id": "05000854|ccBGSSSE037-Curios.esl",
+        "index": null,
+        "type": "PERK DESC",
+        "original": "Silver damage against werewolves and the undead.",
+        "string": "L'argento danneggia i lupi mannari e i non-morti."
+    },
+    {
+        "editor_id": "ccBGSSSE037_SilverboltPerk",
+        "form_id": "05000854|ccBGSSSE037-Curios.esl",
         "index": null,
         "type": "PERK FULL",
         "original": "Silverbolt Perk",
@@ -625,26 +641,10 @@
     },
     {
         "editor_id": "ccBGSSSE037_PoisonedPerk",
-        "form_id": "[0500084F]",
-        "index": null,
-        "type": "PERK FULL",
-        "original": "Poisoned",
-        "string": "Avvelenato"
-    },
-    {
-        "editor_id": "ccBGSSSE037_PoisonedPerk",
-        "form_id": "[0500084F]",
+        "form_id": "0500084F|ccBGSSSE037-Curios.esl",
         "index": null,
         "type": "PERK DESC",
         "original": "Silently harm enemies by placing poisoned apples in their pockets.",
         "string": "Le mele velenose piazzate nell'inventario del bersaglio lo feriscono silenziosamente."
-    },
-    {
-        "editor_id": "ccBGSSSE037_SilverboltPerk",
-        "form_id": "[05000854]",
-        "index": null,
-        "type": "PERK DESC",
-        "original": "Silver damage against werewolves and the undead.",
-        "string": "L'argento danneggia i lupi mannari e i non-morti."
     }
 ]

@@ -1,39 +1,7 @@
 [
     {
-        "editor_id": "ccMTYSSE001_WardEffect",
-        "form_id": "[0500081D]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "While blocking, creates a ward that protects against spells for up to <mag> points.",
-        "string": "Erschafft beim Blocken einen Schutzzauber, der Zauber bis zu <mag> Punkten absorbiert."
-    },
-    {
-        "editor_id": "ccMTYSSE001_AbHolyAura",
-        "form_id": "[0500081E]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "10% Armor bonus, and 10% reduced damage from undead while wearing matched set.",
-        "string": "Rüstungsbonus von 10 Prozent und 10 Prozent weniger Schaden von Untoten, wenn ein passendes Rüstungsset getragen wird."
-    },
-    {
-        "editor_id": "ccMTYSSE001_CrusaderAbEffect04",
-        "form_id": "[05000852]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Check on Equip",
-        "string": "Ausgerüstetes überprüfen"
-    },
-    {
-        "editor_id": "ccMTYSSE001_WardEffect",
-        "form_id": "[0500081D]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Ward - Deflection",
-        "string": "Schutz - Abwehr"
-    },
-    {
         "editor_id": "ccMTYSSE001_AbHolyAura_Light",
-        "form_id": "[05000841]",
+        "form_id": "05000841|ccmtysse001-knightsofthenine.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "10% Armor bonus, and 10% reduced damage from undead while wearing matched set.",
@@ -41,31 +9,47 @@
     },
     {
         "editor_id": "ccMTYSSE001_CrusaderAbEffect03",
-        "form_id": "[05000851]",
+        "form_id": "05000851|ccmtysse001-knightsofthenine.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Check If Armor Equipped",
         "string": "Überprüfen, ob Rüstung ausgerüstet"
     },
     {
-        "editor_id": "ccMTYSSE001_CrusaderAbEffect02",
-        "form_id": "[05000850]",
+        "editor_id": "ccMTYSSE001_AbHolyAura",
+        "form_id": "0500081E|ccmtysse001-knightsofthenine.esl",
         "index": null,
         "type": "MGEF FULL",
-        "original": "Relics of the Crusader",
-        "string": "Relikte des Kreuzritters"
+        "original": "Holy Aura",
+        "string": "Heilige Aura"
+    },
+    {
+        "editor_id": "ccMTYSSE001_CrusaderAbEffect04",
+        "form_id": "05000852|ccmtysse001-knightsofthenine.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Check on Equip",
+        "string": "Ausgerüstetes überprüfen"
     },
     {
         "editor_id": "ccMTYSSE001_CrusaderAbEffect01",
-        "form_id": "[05000849]",
+        "form_id": "05000849|ccmtysse001-knightsofthenine.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Shrine Pray Reset Effect",
         "string": "Am-Schrein-beten-Effekt"
     },
     {
+        "editor_id": "ccMTYSSE001_WardEffect",
+        "form_id": "0500081D|ccmtysse001-knightsofthenine.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "While blocking, creates a ward that protects against spells for up to <mag> points.",
+        "string": "Erschafft beim Blocken einen Schutzzauber, der Zauber bis zu <mag> Punkten absorbiert."
+    },
+    {
         "editor_id": "ccMTYSSE001_AbHolyAura_Light",
-        "form_id": "[05000841]",
+        "form_id": "05000841|ccmtysse001-knightsofthenine.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Holy Aura",
@@ -73,7 +57,7 @@
     },
     {
         "editor_id": "ccMTYSSE001_CrusaderAbEffect02",
-        "form_id": "[05000850]",
+        "form_id": "05000850|ccmtysse001-knightsofthenine.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "Stamina and health regenerates <300> points more slowly. Carry weight reduced by <mag>.",
@@ -81,55 +65,31 @@
     },
     {
         "editor_id": "ccMTYSSE001_AbHolyAura",
-        "form_id": "[0500081E]",
+        "form_id": "0500081E|ccmtysse001-knightsofthenine.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "10% Armor bonus, and 10% reduced damage from undead while wearing matched set.",
+        "string": "Rüstungsbonus von 10 Prozent und 10 Prozent weniger Schaden von Untoten, wenn ein passendes Rüstungsset getragen wird."
+    },
+    {
+        "editor_id": "ccMTYSSE001_WardEffect",
+        "form_id": "0500081D|ccmtysse001-knightsofthenine.esl",
         "index": null,
         "type": "MGEF FULL",
-        "original": "Holy Aura",
-        "string": "Heilige Aura"
+        "original": "Ward - Deflection",
+        "string": "Schutz - Abwehr"
     },
     {
-        "editor_id": "ccMTYSSE001_EnchArmorGauntlets_Light",
-        "form_id": "[0500083F]",
+        "editor_id": "ccMTYSSE001_CrusaderAbEffect02",
+        "form_id": "05000850|ccmtysse001-knightsofthenine.esl",
         "index": null,
-        "type": "ENCH FULL",
-        "original": "Reforged Divine Crusader Gauntlets",
-        "string": "Neu geschmiedete Panzerhandschuhe des heiligen Kreuzritters"
-    },
-    {
-        "editor_id": "ccMTYSSE001_EnchArmorBoots",
-        "form_id": "[05000820]",
-        "index": null,
-        "type": "ENCH FULL",
-        "original": "Divine Crusader Boots",
-        "string": "Stiefel des heiligen des Kreuzritters"
-    },
-    {
-        "editor_id": "ccMTYSSE001_EnchArmorCrusaderCuirass",
-        "form_id": "[05000823]",
-        "index": null,
-        "type": "ENCH FULL",
-        "original": "Divine Crusader Cuirass",
-        "string": "Brustpanzer des heiligen des Kreuzritters"
-    },
-    {
-        "editor_id": "ccMTYSSE001_EnchShieldWard",
-        "form_id": "[05000822]",
-        "index": null,
-        "type": "ENCH FULL",
-        "original": "Spellbreaker",
-        "string": "Zauberbrecher"
-    },
-    {
-        "editor_id": "ccMTYSSE001_EnchArmorGauntlets",
-        "form_id": "[05000821]",
-        "index": null,
-        "type": "ENCH FULL",
-        "original": "Divine Crusader Gauntlets",
-        "string": "Panzerhandschuhe des heiligen Kreuzritters"
+        "type": "MGEF FULL",
+        "original": "Relics of the Crusader",
+        "string": "Relikte des Kreuzritters"
     },
     {
         "editor_id": "ccMTYSSE001_EnchArmorHelm_Light",
-        "form_id": "[0500083D]",
+        "form_id": "0500083D|ccmtysse001-knightsofthenine.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Reforged Divine Crusader Helm",
@@ -137,7 +97,7 @@
     },
     {
         "editor_id": "ccMTYSSE001_EnchArmorCrusaderCuirass_Light",
-        "form_id": "[0500083E]",
+        "form_id": "0500083E|ccmtysse001-knightsofthenine.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Reforged Divine Crusader Cuirass",
@@ -145,7 +105,7 @@
     },
     {
         "editor_id": "ccMTYSSE001_EnchArmorHelm",
-        "form_id": "[0500081F]",
+        "form_id": "0500081F|ccmtysse001-knightsofthenine.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Divine Crusader Helm",
@@ -153,119 +113,159 @@
     },
     {
         "editor_id": "ccMTYSSE001_EnchArmorBoots_Light",
-        "form_id": "[05000840]",
+        "form_id": "05000840|ccmtysse001-knightsofthenine.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Reforged Divine Crusader Boots",
         "string": "Neu geschmiedete Stiefel des heiligen Kreuzritters"
     },
     {
-        "editor_id": "ccMTYSSE001_Spell_MatchingSet_HolyAura",
-        "form_id": "[05000824]",
+        "editor_id": "ccMTYSSE001_EnchArmorGauntlets_Light",
+        "form_id": "0500083F|ccmtysse001-knightsofthenine.esl",
         "index": null,
-        "type": "SPEL FULL",
-        "original": "Holy Aura",
-        "string": "Heilige Aura"
+        "type": "ENCH FULL",
+        "original": "Reforged Divine Crusader Gauntlets",
+        "string": "Neu geschmiedete Panzerhandschuhe des heiligen Kreuzritters"
+    },
+    {
+        "editor_id": "ccMTYSSE001_EnchShieldWard",
+        "form_id": "05000822|ccmtysse001-knightsofthenine.esl",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Spellbreaker",
+        "string": "Zauberbrecher"
+    },
+    {
+        "editor_id": "ccMTYSSE001_EnchArmorCrusaderCuirass",
+        "form_id": "05000823|ccmtysse001-knightsofthenine.esl",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Divine Crusader Cuirass",
+        "string": "Brustpanzer des heiligen des Kreuzritters"
+    },
+    {
+        "editor_id": "ccMTYSSE001_EnchArmorBoots",
+        "form_id": "05000820|ccmtysse001-knightsofthenine.esl",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Divine Crusader Boots",
+        "string": "Stiefel des heiligen des Kreuzritters"
+    },
+    {
+        "editor_id": "ccMTYSSE001_EnchArmorGauntlets",
+        "form_id": "05000821|ccmtysse001-knightsofthenine.esl",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Divine Crusader Gauntlets",
+        "string": "Panzerhandschuhe des heiligen Kreuzritters"
     },
     {
         "editor_id": "ccMTYSSE001_AbilityCrusaderCheck",
-        "form_id": "[0500084A]",
+        "form_id": "0500084A|ccmtysse001-knightsofthenine.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Relics of the Crusader",
         "string": "Relikte des Kreuzritters"
     },
     {
+        "editor_id": "ccMTYSSE001_Spell_MatchingSet_HolyAura",
+        "form_id": "05000824|ccmtysse001-knightsofthenine.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Holy Aura",
+        "string": "Heilige Aura"
+    },
+    {
         "editor_id": "ccMTYSSE001_ShrineActivator",
-        "form_id": "[05000854]",
+        "form_id": "05000854|ccmtysse001-knightsofthenine.esl",
         "index": null,
         "type": "ACTI FULL",
         "original": "Shrine of Akatosh",
         "string": "Schrein von Akatosh"
     },
     {
-        "editor_id": "ccMTYSSE001_ArmorKOTNCuirassReforged",
-        "form_id": "[05000801]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Reforged Cuirass of the Crusader",
-        "string": "Neu geschmiedeter Brustpanzer des Kreuzritters"
-    },
-    {
-        "editor_id": "ccMTYSSE001_ArmorKOTNBootsReforged",
-        "form_id": "[05000805]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Reforged Boots of the Crusader",
-        "string": "Neu geschmiedete Stiefel des Kreuzritters"
-    },
-    {
-        "editor_id": "ccMTYSSE001_ArmorKOTNBoots",
-        "form_id": "[05000804]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Boots of the Crusader",
-        "string": "Stiefel des Kreuzritters"
-    },
-    {
-        "editor_id": "ccMTYSSE001_ArmorKOTNShieldBack",
-        "form_id": "[05000809]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Fastened Shield of the Crusader",
-        "string": "Verstärkter Schild des Kreuzritters"
-    },
-    {
-        "editor_id": "ccMTYSSE001_ArmorKOTNCuirass",
-        "form_id": "[05000800]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Cuirass of the Crusader",
-        "string": "Brustpanzer des Kreuzritters"
-    },
-    {
-        "editor_id": "ccMTYSSE001_ArmorKOTNHelmet",
-        "form_id": "[05000806]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Helm of the Crusader",
-        "string": "Helm des Kreuzritters"
-    },
-    {
         "editor_id": "ccMTYSSE001_ArmorKOTNShield",
-        "form_id": "[05000808]",
+        "form_id": "05000808|ccmtysse001-knightsofthenine.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Shield of the Crusader",
         "string": "Schild des Kreuzritters"
     },
     {
-        "editor_id": "ccMTYSSE001_ArmorKOTNHelmetReforged",
-        "form_id": "[05000807]",
+        "editor_id": "ccMTYSSE001_ArmorKOTNBoots",
+        "form_id": "05000804|ccmtysse001-knightsofthenine.esl",
         "index": null,
         "type": "ARMO FULL",
-        "original": "Reforged Helm of the Crusader",
-        "string": "Neu geschmiedeter Helm des Kreuzritters"
+        "original": "Boots of the Crusader",
+        "string": "Stiefel des Kreuzritters"
     },
     {
-        "editor_id": "ccMTYSSE001_ArmorKOTNGauntletsReforged",
-        "form_id": "[05000803]",
+        "editor_id": "ccMTYSSE001_ArmorKOTNCuirass",
+        "form_id": "05000800|ccmtysse001-knightsofthenine.esl",
         "index": null,
         "type": "ARMO FULL",
-        "original": "Reforged Gauntlets of the Crusader",
-        "string": "Neu geschmiedete Panzerhandschuhe des Kreuzritters"
+        "original": "Cuirass of the Crusader",
+        "string": "Brustpanzer des Kreuzritters"
+    },
+    {
+        "editor_id": "ccMTYSSE001_ArmorKOTNShieldBack",
+        "form_id": "05000809|ccmtysse001-knightsofthenine.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Fastened Shield of the Crusader",
+        "string": "Verstärkter Schild des Kreuzritters"
+    },
+    {
+        "editor_id": "ccMTYSSE001_ArmorKOTNBootsReforged",
+        "form_id": "05000805|ccmtysse001-knightsofthenine.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Reforged Boots of the Crusader",
+        "string": "Neu geschmiedete Stiefel des Kreuzritters"
+    },
+    {
+        "editor_id": "ccMTYSSE001_ArmorKOTNHelmet",
+        "form_id": "05000806|ccmtysse001-knightsofthenine.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Helm of the Crusader",
+        "string": "Helm des Kreuzritters"
     },
     {
         "editor_id": "ccMTYSSE001_ArmorKOTNGauntlets",
-        "form_id": "[05000802]",
+        "form_id": "05000802|ccmtysse001-knightsofthenine.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Gauntlets of the Crusader",
         "string": "Panzerhandschuhe des Kreuzritters"
     },
     {
+        "editor_id": "ccMTYSSE001_ArmorKOTNGauntletsReforged",
+        "form_id": "05000803|ccmtysse001-knightsofthenine.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Reforged Gauntlets of the Crusader",
+        "string": "Neu geschmiedete Panzerhandschuhe des Kreuzritters"
+    },
+    {
+        "editor_id": "ccMTYSSE001_ArmorKOTNHelmetReforged",
+        "form_id": "05000807|ccmtysse001-knightsofthenine.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Reforged Helm of the Crusader",
+        "string": "Neu geschmiedeter Helm des Kreuzritters"
+    },
+    {
+        "editor_id": "ccMTYSSE001_ArmorKOTNCuirassReforged",
+        "form_id": "05000801|ccmtysse001-knightsofthenine.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Reforged Cuirass of the Crusader",
+        "string": "Neu geschmiedeter Brustpanzer des Kreuzritters"
+    },
+    {
         "editor_id": "ccMTYSSE001_KOTNJournal",
-        "form_id": "[05000845]",
+        "form_id": "05000845|ccmtysse001-knightsofthenine.esl",
         "index": null,
         "type": "BOOK DESC",
         "original": "<font face=\"$HandwrittenFont\">\r\nSo the other day me and the boys robbed this caravan full of monks. Real easy, except there wasn't any loot. But one monk, he was a squealing type. Put a knife to his throat and he sang like nirnroot.\r\n\r\nThe monk tells us there's a secret compartment in the carriage. We pop it open, and find the shiniest set of weapons and armor I ever laid my eyes upon. The kind you have to squint to look at it. \r\n\r\nWhen we got back to camp, first thing I did was try on a boot. Funny thing is, it didn't fit. I swear it was the right size, but Remy laughs and snatches it from me, saying some rubbish about how only real warriors can wear real armor.\r\n\r\nExcept jokes on him, they wouldn't fit him neither. Soon the whole crew is trying on the set, but no matter the piece, no matter the size, they can't keep it on. Some manage to get it on for a second, right up until the color goes out of their face.\r\n\r\nAnd it ain't just the armor. You try and swing one of the weapons, and you feel sick to your stomach. Like the thing don't want you wielding it.\r\n\r\nSo we're all sitting by the campfire, out of ideas, when Orenn, the new blood, gets the idea to have their kin Eigorn try the armor on. Everyone laughs.\r\n\r\nThe kid ain't even one of the crew, just some green little bastard who decided to tag along for the raid. Like Orenn, they ain't even killed their first man yet. But lo and behold, the kid tries on a boot, and the damn thing fits.\r\n\r\n\"I guess Eigorn's part of the crew now,\" Orenn says, but the pup ain't having it. Turns out, they ain't wanna do the work! They don't even LIKE being a bandit. \r\n\r\nSo I tell Orenn, either the kid fights with us, or I cut their throat. I'm about to do it, when Orenn, that bloody traitor, picks up the big shiny mace and nearly clobbers my head off. \r\n\r\nLuckily the rest of the crew was there to keep that mace from turning my skull to porridge. But that's when I get the idea to try the armor on Orenn. And by the Nine, it fits that bastard too.\r\n\r\nWhich brings us to where we are now. The two of them are following orders, sure, but I don't trust them one bit. It's not just about the armor. Orenn's been talking nonsense for a while now, saying we should let people go like they ain't bloody witnesses, and other bleeding heart shit you just don't do.\r\n\r\nRemy pointed out that we just need them to wear the armor, and look all intimidating like. The crew will do the rest. But that ain't gonna cut it. I want to test them. If we get into a fight, I need to know the person standing next to me is willing to kill a man if they have to.\r\n\r\nAnd if either of them refuse, we kill them both.</font>",
@@ -273,7 +273,7 @@
     },
     {
         "editor_id": "ccMTYSSE001_KOTNJournal",
-        "form_id": "[05000845]",
+        "form_id": "05000845|ccmtysse001-knightsofthenine.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "Viparth's Journal",
@@ -281,7 +281,7 @@
     },
     {
         "editor_id": "ccMTYSSE001_KOTNMace",
-        "form_id": "[0500080D]",
+        "form_id": "0500080D|ccmtysse001-knightsofthenine.esl",
         "index": null,
         "type": "WEAP FULL",
         "original": "Mace of the Crusader",
@@ -289,31 +289,15 @@
     },
     {
         "editor_id": "ccMTYSSE001_KOTNSword",
-        "form_id": "[0500080C]",
+        "form_id": "0500080C|ccmtysse001-knightsofthenine.esl",
         "index": null,
         "type": "WEAP FULL",
         "original": "Sword of the Crusader",
         "string": "Schwert des Kreuzritters"
     },
     {
-        "editor_id": "ccMTYSSE001_LvlBanditBoss02",
-        "form_id": "[05000825]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Eigorn",
-        "string": "Eigorn"
-    },
-    {
-        "editor_id": "ccMTYSSE001_LvlBanditBoss03",
-        "form_id": "[05000843]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Viparth",
-        "string": "Viparth"
-    },
-    {
         "editor_id": "ccMTYSSE001_LvlBanditBoss04",
-        "form_id": "[05000844]",
+        "form_id": "05000844|ccmtysse001-knightsofthenine.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Remy",
@@ -321,15 +305,31 @@
     },
     {
         "editor_id": "ccMTYSSE001_LvlBanditBoss01",
-        "form_id": "[05000826]",
+        "form_id": "05000826|ccmtysse001-knightsofthenine.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Oren",
         "string": "Oren"
     },
     {
+        "editor_id": "ccMTYSSE001_LvlBanditBoss03",
+        "form_id": "05000843|ccmtysse001-knightsofthenine.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Viparth",
+        "string": "Viparth"
+    },
+    {
+        "editor_id": "ccMTYSSE001_LvlBanditBoss02",
+        "form_id": "05000825|ccmtysse001-knightsofthenine.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Eigorn",
+        "string": "Eigorn"
+    },
+    {
         "editor_id": "Tamriel",
-        "form_id": "[0000003C]",
+        "form_id": "0000003C|Skyrim.esm",
         "index": null,
         "type": "WRLD FULL",
         "original": "Skyrim",
@@ -337,15 +337,47 @@
     },
     {
         "editor_id": "ccMTYSSE001_StartupQuest_Alt",
-        "form_id": "[0500083C]",
+        "form_id": "0500083C|ccmtysse001-knightsofthenine.esl",
+        "index": 85,
+        "type": "QUST CNAM",
+        "original": "Bandits have stolen the fabled Relics of the Crusader.  I should find and reclaim them.",
+        "string": "Banditen haben die berühmten Relikte des Kreuzritters gestohlen. Ich sollte sie finden und zurückholen."
+    },
+    {
+        "editor_id": "ccMTYSSE001_StartupQuest_Alt",
+        "form_id": "0500083C|ccmtysse001-knightsofthenine.esl",
         "index": null,
         "type": "QUST FULL",
         "original": "Relics of the Crusader",
         "string": "Relikte des Kreuzritters"
     },
     {
+        "editor_id": "ccMTYSSE001_StartupQuest_Alt",
+        "form_id": "0500083C|ccmtysse001-knightsofthenine.esl",
+        "index": 0,
+        "type": "QUST NNAM",
+        "original": "Obtain the Relics of the Crusader",
+        "string": "Beschaffe die Relikte des Kreuzritters."
+    },
+    {
         "editor_id": "ccMTYSSE001_Quest",
-        "form_id": "[05000865]",
+        "form_id": "05000865|ccmtysse001-knightsofthenine.esl",
+        "index": 82,
+        "type": "QUST CNAM",
+        "original": "I have committed acts that have made me unfit to wear the Crusader's Relics. I will need to make a pilgrimage to nine shrines in order to repent.",
+        "string": "Ich habe Taten begangen, die mir verbieten, die Reliquien des Kreuzritters zu tragen. Ich muss auf eine Pilgerreise zu neun Schreinen gehen, um Buße zu tun."
+    },
+    {
+        "editor_id": "ccMTYSSE001_StartupQuest_Alt",
+        "form_id": "0500083C|ccmtysse001-knightsofthenine.esl",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Obtain the Reforged Relics of the Crusader",
+        "string": "Beschaffe die neu geschmiedeten Relikte des Kreuzritters."
+    },
+    {
+        "editor_id": "ccMTYSSE001_Quest",
+        "form_id": "05000865|ccmtysse001-knightsofthenine.esl",
         "index": 10,
         "type": "QUST NNAM",
         "original": "Pray at the shrines (<Global=ccMTYSSE001_CrusaderGlobalShrines>/9)",
@@ -353,7 +385,7 @@
     },
     {
         "editor_id": "ccMTYSSE001_Quest",
-        "form_id": "[05000865]",
+        "form_id": "05000865|ccmtysse001-knightsofthenine.esl",
         "index": null,
         "type": "QUST FULL",
         "original": "The Pilgrim's Path",
@@ -361,87 +393,71 @@
     },
     {
         "editor_id": "ccMTYSSE001_StartupQuest_Alt",
-        "form_id": "[0500083C]",
-        "index": 83,
-        "type": "QUST CNAM",
-        "original": "Bandits have stolen the fabled Relics of the Crusader.  I should find and reclaim them.",
-        "string": "Banditen haben die berühmten Relikte des Kreuzritters gestohlen. Ich sollte sie finden und zurückholen."
-    },
-    {
-        "editor_id": "ccMTYSSE001_StartupQuest_Alt",
-        "form_id": "[0500083C]",
-        "index": 10,
-        "type": "QUST NNAM",
-        "original": "Obtain the Reforged Relics of the Crusader",
-        "string": "Beschaffe die neu geschmiedeten Relikte des Kreuzritters."
-    },
-    {
-        "editor_id": "ccMTYSSE001_StartupQuest_Alt",
-        "form_id": "[0500083C]",
-        "index": 0,
-        "type": "QUST NNAM",
-        "original": "Obtain the Relics of the Crusader",
-        "string": "Beschaffe die Relikte des Kreuzritters."
-    },
-    {
-        "editor_id": "ccMTYSSE001_StartupQuest_Alt",
-        "form_id": "[0500083C]",
-        "index": 113,
+        "form_id": "0500083C|ccmtysse001-knightsofthenine.esl",
+        "index": 66,
         "type": "QUST CNAM",
         "original": "I've reclaimed the Relics of the Crusader.",
         "string": "Ich habe die Relikte des Kreuzritters errungen."
     },
     {
-        "editor_id": "ccMTYSSE001_Quest",
-        "form_id": "[05000865]",
-        "index": 91,
-        "type": "QUST CNAM",
-        "original": "I have committed acts that have made me unfit to wear the Crusader's Relics. I will need to make a pilgrimage to nine shrines in order to repent.",
-        "string": "Ich habe Taten begangen, die mir verbieten, die Reliquien des Kreuzritters zu tragen. Ich muss auf eine Pilgerreise zu neun Schreinen gehen, um Buße zu tun."
-    },
-    {
         "editor_id": "ccMTYSSE001_Perk_MatchingSet_HolyAura",
-        "form_id": "[05000839]",
-        "index": null,
-        "type": "PERK FULL",
-        "original": "Holy Aura",
-        "string": "Heilige Aura"
-    },
-    {
-        "editor_id": "ccMTYSSE001_Perk_MatchingSet_HolyAura",
-        "form_id": "[05000839]",
+        "form_id": "05000839|ccmtysse001-knightsofthenine.esl",
         "index": null,
         "type": "PERK DESC",
         "original": "Additional 10% Armor bonus, and 10% reduced damage from undead creatures or Daedra if wearing a matched set of Divine Crusader Armor.",
         "string": "Zusätzlicher Rüstungsbonus von 10 Prozent und 10 Prozent weniger Schaden von Untoten oder Daedra, wenn ein passendes Rüstungsset des heiligen Kreuzritters getragen wird."
     },
     {
+        "editor_id": "ccMTYSSE001_Perk_MatchingSet_HolyAura",
+        "form_id": "05000839|ccmtysse001-knightsofthenine.esl",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Holy Aura",
+        "string": "Heilige Aura"
+    },
+    {
+        "editor_id": "ccMTYSSE001_CrusaderShrineNameTalos",
+        "form_id": "0500086D|ccmtysse001-knightsofthenine.esl",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Shrine of Talos",
+        "string": "Schrein von Talos"
+    },
+    {
         "editor_id": "ccMTYSSE001_CrusaderShrineNameKynareth",
-        "form_id": "[0500086B]",
+        "form_id": "0500086B|ccmtysse001-knightsofthenine.esl",
         "index": null,
         "type": "MESG FULL",
         "original": "Shrine of Kynareth",
         "string": "Schrein von Kynareth"
     },
     {
-        "editor_id": "ccMTYSSE001_CrusaderShrineNameZenithar",
-        "form_id": "[05000869]",
-        "index": null,
-        "type": "MESG FULL",
-        "original": "Shrine of Zenithar",
-        "string": "Schrein von Zenithar"
-    },
-    {
         "editor_id": "ccMTYSSE001_CrusaderShrineNameJulianos",
-        "form_id": "[05000867]",
+        "form_id": "05000867|ccmtysse001-knightsofthenine.esl",
         "index": null,
         "type": "MESG FULL",
         "original": "Shrine of Julianos",
         "string": "Schrein von Julianos"
     },
     {
+        "editor_id": "ccMTYSSE001_CrusaderShrineNameMara",
+        "form_id": "05000866|ccmtysse001-knightsofthenine.esl",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Shrine of Mara",
+        "string": "Schrein von Mara"
+    },
+    {
+        "editor_id": "ccMTYSSE001_CrusaderShrineNameZenithar",
+        "form_id": "05000869|ccmtysse001-knightsofthenine.esl",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Shrine of Zenithar",
+        "string": "Schrein von Zenithar"
+    },
+    {
         "editor_id": "ccMTYSSE001_CrusaderShrineNameStendarr",
-        "form_id": "[0500086A]",
+        "form_id": "0500086A|ccmtysse001-knightsofthenine.esl",
         "index": null,
         "type": "MESG FULL",
         "original": "Shrine of Stendarr",
@@ -449,42 +465,26 @@
     },
     {
         "editor_id": "ccMTYSSE001_CrusaderRelicsShrine",
-        "form_id": "[0500084F]",
+        "form_id": "0500084F|ccmtysse001-knightsofthenine.esl",
         "index": null,
         "type": "MESG DESC",
         "original": "Your crimes have made you unfit to wield the Crusader's Relics. Make the pilgrimage to repent your sins and once again seek the favor of the gods.\r\n",
         "string": "Eure Verbrechen verbieten es, dass Ihr die Reliquien des Kreuszritters tragt. Begebt Euch auf die Pilgerreise, um Buße für Eure Sünden zu tun, und bittet die Götter erneut um ihre Gunst.\r\n"
     },
     {
-        "editor_id": "ccMTYSSE001_CrusaderShrineNameDibella",
-        "form_id": "[0500086C]",
-        "index": null,
-        "type": "MESG FULL",
-        "original": "Shrine of Dibella",
-        "string": "Schrein von Dibella"
-    },
-    {
-        "editor_id": "ccMTYSSE001_CrusaderShrineNameTalos",
-        "form_id": "[0500086D]",
-        "index": null,
-        "type": "MESG FULL",
-        "original": "Shrine of Talos",
-        "string": "Schrein von Talos"
-    },
-    {
         "editor_id": "ccMTYSSE001_CrusaderShrineNameArkay",
-        "form_id": "[05000868]",
+        "form_id": "05000868|ccmtysse001-knightsofthenine.esl",
         "index": null,
         "type": "MESG FULL",
         "original": "Shrine of Arkay",
         "string": "Schrein von Arkay"
     },
     {
-        "editor_id": "ccMTYSSE001_CrusaderShrineNameMara",
-        "form_id": "[05000866]",
+        "editor_id": "ccMTYSSE001_CrusaderShrineNameDibella",
+        "form_id": "0500086C|ccmtysse001-knightsofthenine.esl",
         "index": null,
         "type": "MESG FULL",
-        "original": "Shrine of Mara",
-        "string": "Schrein von Mara"
+        "original": "Shrine of Dibella",
+        "string": "Schrein von Dibella"
     }
 ]

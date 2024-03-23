@@ -1,191 +1,39 @@
 [
     {
         "editor_id": "ccEEJSSE002_SummonGhostEffect",
-        "form_id": "[05000FDB]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Summons the ghost of the Mage's Tower",
-        "string": "Invoque le fantôme de la tour du Mage"
-    },
-    {
-        "editor_id": "ccEEJSSE002_SummonGhostEffect",
-        "form_id": "[05000FDB]",
+        "form_id": "05000FDB|cceejsse002-tower.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Tower Ghost",
         "string": "Fantôme de la tour"
     },
     {
+        "editor_id": "ccEEJSSE002_SummonGhostEffect",
+        "form_id": "05000FDB|cceejsse002-tower.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Summons the ghost of the Mage's Tower",
+        "string": "Invoque le fantôme de la tour du Mage"
+    },
+    {
         "editor_id": "ccEEJSSE002_SummonGhost",
-        "form_id": "[05000FDC]",
+        "form_id": "05000FDC|cceejsse002-tower.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Summon Tower Ghost",
         "string": "Invocation du fantôme de la tour"
     },
     {
-        "editor_id": "ccEEJSSE002_DPMaskFrostActivator",
-        "form_id": "[05000CA3]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_FireflyJarActivator",
-        "form_id": "[05000938]",
+        "editor_id": "ccEEJSSE002_NettlebaneActivator",
+        "form_id": "0500094C|cceejsse002-tower.esl",
         "index": null,
         "type": "ACTI FULL",
-        "original": "Firefly in a Jar",
-        "string": "Bocal à luciole"
-    },
-    {
-        "editor_id": "ccEEJSSE002_DawnguardRuneAxeActivator",
-        "form_id": "[05000D26]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_DawnguardShieldActivator",
-        "form_id": "[05000D0C]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_MehrunesRazorActivator",
-        "form_id": "[0500094A]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_SanguineRoseActivator",
-        "form_id": "[05000945]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Sanguine Rose",
-        "string": "Rose sanghine"
-    },
-    {
-        "editor_id": "ccEEJSSE002_TargeoftheBloodedActivator",
-        "form_id": "[05000988]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_SkullofCorruptionActivator",
-        "form_id": "[05000947]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Skull of Corruption",
-        "string": "Crâne de la Corruption"
-    },
-    {
-        "editor_id": "ccEEJSSE002_BladeofWoeActivator",
-        "form_id": "[05000953]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_ShieldofYsgramorActivator",
-        "form_id": "[0500096B]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Shield of Ysgramor",
-        "string": "Bouclier d'Ysgramor"
-    },
-    {
-        "editor_id": "ccEEJSSE002_AurielsBowActivator",
-        "form_id": "[05000CE1]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_DawnguardRuneHammerActivator",
-        "form_id": "[05000D28]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_DPMaskHevnoraakActivator",
-        "form_id": "[05000CA1]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_WuuthradActivator",
-        "form_id": "[05000971]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Wuuthrad",
-        "string": "Wuuthrad"
-    },
-    {
-        "editor_id": "ccEEJSSE002_GauldurStaffActivator",
-        "form_id": "[0500093C]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_AurielsBowActivator",
-        "form_id": "[05000CE1]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Auriel's Bow",
-        "string": "Arc d'Auriel"
-    },
-    {
-        "editor_id": "ccEEJSSE002_DPMaskHevnoraakActivator",
-        "form_id": "[05000CA1]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Hevnoraak",
-        "string": "Hevnoraak"
-    },
-    {
-        "editor_id": "ccEEJSSE002_SoulrenderActivator",
-        "form_id": "[0500089A]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Soulrender",
-        "string": "Animortis"
-    },
-    {
-        "editor_id": "ccEEJSSE002_ButterflyJarActivator",
-        "form_id": "[05000933]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Butterfly in a Jar",
-        "string": "Bocal à papillon"
-    },
-    {
-        "editor_id": "ccEEJSSE002_TorstenSkullActivator",
-        "form_id": "[0500093B]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Torsten's Skull Key",
-        "string": "Clé au crâne de Torsten"
+        "original": "Nettlebane",
+        "string": "Fléortie"
     },
     {
         "editor_id": "ccEEJSSE002_DPMaskVolsungActivator",
-        "form_id": "[05000CA7]",
+        "form_id": "05000CA7|cceejsse002-tower.esl",
         "index": null,
         "type": "ACTI FULL",
         "original": "Volsung",
@@ -193,351 +41,39 @@
     },
     {
         "editor_id": "ccEEJSSE002_DPMaskVokunActivator",
-        "form_id": "[05000C9E]",
+        "form_id": "05000C9E|cceejsse002-tower.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Place",
         "string": "Placer"
     },
     {
-        "editor_id": "ccEEJSSE002_SpellbreakerActivator",
-        "form_id": "[05000986]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Spellbreaker",
-        "string": "Parasortis"
-    },
-    {
         "editor_id": "ccEEJSSE002_HarkonSwordActivator",
-        "form_id": "[05000D22]",
+        "form_id": "05000D22|cceejsse002-tower.esl",
         "index": null,
         "type": "ACTI FULL",
         "original": "Harkon's Sword",
         "string": "Épée d'Harkon"
     },
     {
-        "editor_id": "ccEEJSSE002_DragonflyJarActivator",
-        "form_id": "[05000955]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_DPMaskKrosisActivator",
-        "form_id": "[05000CA8]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Krosis",
-        "string": "Krosis"
-    },
-    {
-        "editor_id": "ccEEJSSE002_PortalGemredActivator",
-        "form_id": "[05000CE9]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Ruby Paragon",
-        "string": "Parangon rubis"
-    },
-    {
-        "editor_id": "ccEEJSSE002_SearekSkullActivator",
-        "form_id": "[0500093A]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Saerek's Skull Key",
-        "string": "Clé au crâne de Saerek"
-    },
-    {
-        "editor_id": "ccEEJSSE002_AetherialShieldActivator",
-        "form_id": "[05000987]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_DawnguardRuneAxeActivator",
-        "form_id": "[05000D26]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Dawnguard Rune Axe",
-        "string": "Hache runique de la Garde de l'aube"
-    },
-    {
-        "editor_id": "ccEEJSSE002_PortalGemWhiteActivator",
-        "form_id": "[05000CE8]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_AurielsShieldActivator",
-        "form_id": "[05000CDF]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Auriel's Shield",
-        "string": "Bouclier d'Auriel"
-    },
-    {
-        "editor_id": "ccEEJSSE002_AetherialShieldActivator",
-        "form_id": "[05000987]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Aetherial Shield",
-        "string": "Bouclier d'aethérium"
-    },
-    {
-        "editor_id": "ccEEJSSE002_DawnguardRuneHammerActivator",
-        "form_id": "[05000D28]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Dawnguard Rune Hammer",
-        "string": "Marteau runique de la Garde de l'aube"
-    },
-    {
-        "editor_id": "ccEEJSSE002_DPMaskVokunActivator",
-        "form_id": "[05000C9E]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Vokun",
-        "string": "Vokun"
-    },
-    {
-        "editor_id": "ccEEJSSE002_NettlebaneActivator",
-        "form_id": "[0500094C]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Nettlebane",
-        "string": "Fléortie"
-    },
-    {
-        "editor_id": "ccEEJSSE002_PortalGemredActivator",
-        "form_id": "[05000CE9]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_PortalGemBlueActivator",
-        "form_id": "[05000CEB]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Sapphire Paragon",
-        "string": "Saphir parangon"
-    },
-    {
-        "editor_id": "ccEEJSSE002_GlassBowoftheStagPrinceActivator",
-        "form_id": "[050008C7]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Glass Bow of the Stag Prince",
-        "string": "Arc de verre du Prince des cerfs"
-    },
-    {
-        "editor_id": "ccEEJSSE002_DPMaskFireActivator",
-        "form_id": "[05000CA5]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Ahzidal",
-        "string": "Ahzidal"
-    },
-    {
-        "editor_id": "ccEEJSSE002_FireflyJarActivator",
-        "form_id": "[05000938]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_WuuthradActivator",
-        "form_id": "[05000971]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_TargeoftheBloodedActivator",
-        "form_id": "[05000988]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Targe of the Blooded",
-        "string": "Targe sanguinaire"
-    },
-    {
-        "editor_id": "ccEEJSSE001_BakingSurfaceTrigger",
-        "form_id": "[05000806]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Use",
-        "string": "Utiliser"
-    },
-    {
-        "editor_id": "ccEEJSSE002_ChampionsCudgelActivator",
-        "form_id": "[0500092F]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Champion's Cudgel",
-        "string": "Gourdin du champion"
-    },
-    {
-        "editor_id": "ccEEJSSE002_AurielsShieldActivator",
-        "form_id": "[05000CDF]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_BloodskalBladeActivator",
-        "form_id": "[0500092E]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_DPMaskNahkriinActivator",
-        "form_id": "[05000C9F]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Nahkriin",
-        "string": "Nahkriin"
-    },
-    {
-        "editor_id": "ccEEJSSE002_GauldurStaffActivator",
-        "form_id": "[0500093C]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Staff of Jyrik Gauldurson",
-        "string": "Bâton de Jyrik Gauldurson"
-    },
-    {
-        "editor_id": "ccEEJSSE002_DPMaskKrosisActivator",
-        "form_id": "[05000CA8]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_InitiatesEwerActivator",
-        "form_id": "[05000CDD]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Initiate's Ewer",
-        "string": "Pichet de l'Initié"
-    },
-    {
-        "editor_id": "ccEEJSSE002_SkullofCorruptionActivator",
-        "form_id": "[05000947]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_StaffofMagnusActivator",
-        "form_id": "[0500093D]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_TorstenSkullActivator",
-        "form_id": "[0500093B]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_DPMaskKonahrikActivator",
-        "form_id": "[05000CA2]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_DPMaskShockActivator",
-        "form_id": "[05000CA4]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_DPMaskKonahrikActivator",
-        "form_id": "[05000CA2]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Konahrik",
-        "string": "Konahrik"
-    },
-    {
-        "editor_id": "ccEEJSSE002_WabbajackActivator",
-        "form_id": "[05000946]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Wabbajack",
-        "string": "Wabbajack"
-    },
-    {
-        "editor_id": "ccEEJSSE002_PortalGemGreenActivator",
-        "form_id": "[05000CEC]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_InitiatesEwerActivator",
-        "form_id": "[05000CDD]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_PortalGemWhiteActivator",
-        "form_id": "[05000CE8]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Diamond Paragon",
-        "string": "Parangon diamant"
-    },
-    {
-        "editor_id": "ccEEJSSE002_BlackBowActivator",
-        "form_id": "[05000930]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Dwarven Black Bow of Fate",
-        "string": "Arc noir du destin"
-    },
-    {
-        "editor_id": "ccEEJSSE002_DPMaskWoodenActivator",
-        "form_id": "[05000CA6]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
         "editor_id": "ccEEJSSE002_MothJarActivator",
-        "form_id": "[05000932]",
+        "form_id": "05000932|cceejsse002-tower.esl",
         "index": null,
         "type": "ACTI FULL",
         "original": "Moth in a Jar",
         "string": "Bocal à papillon de nuit"
     },
     {
-        "editor_id": "ccEEJSSE002_HarkonSwordActivator",
-        "form_id": "[05000D22]",
+        "editor_id": "ccEEJSSE002_DPMaskKonahrikActivator",
+        "form_id": "05000CA2|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_ChampionsCudgelActivator",
+        "form_id": "0500092F|cceejsse002-tower.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Place",
@@ -545,175 +81,7 @@
     },
     {
         "editor_id": "ccEEJSSE002_SoulrenderActivator",
-        "form_id": "[0500089A]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_DPMaskFireActivator",
-        "form_id": "[05000CA5]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_WabbajackActivator",
-        "form_id": "[05000946]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_StaffofMagnusActivator",
-        "form_id": "[0500093D]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Staff of Magnus",
-        "string": "Bâton de Magnus"
-    },
-    {
-        "editor_id": "ccEEJSSE002_PortalGemGreenActivator",
-        "form_id": "[05000CEC]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Emerald Paragon",
-        "string": "Parangon émeraude"
-    },
-    {
-        "editor_id": "ccEEJSSE002_PortalGemPurpleActivator",
-        "form_id": "[05000CEA]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Amethyst Paragon",
-        "string": "Parangon améthyste"
-    },
-    {
-        "editor_id": "ccEEJSSE002_KeeningActivator",
-        "form_id": "[05000948]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Keening",
-        "string": "Lamentation"
-    },
-    {
-        "editor_id": "ccEEJSSE002_DPMaskWoodenActivator",
-        "form_id": "[05000CA6]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Wooden Mask",
-        "string": "Masque en bois"
-    },
-    {
-        "editor_id": "ccEEJSSE002_BladeofSacrificeActivator",
-        "form_id": "[0500094B]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_BloodscytheActivator",
-        "form_id": "[05000807]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_BladeofWoeActivator",
-        "form_id": "[05000953]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Blade of Woe",
-        "string": "Lame de la souffrance"
-    },
-    {
-        "editor_id": "ccEEJSSE002_SpiderControlRodActivator",
-        "form_id": "[0500093F]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Spider Control Rod",
-        "string": "Baguette d'arachnologie"
-    },
-    {
-        "editor_id": "ccEEJSSE002_KahvozeinsFangActivator",
-        "form_id": "[0500094D]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_ChampionsCudgelActivator",
-        "form_id": "[0500092F]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_DPMaskMorokeiActivator",
-        "form_id": "[05000CA0]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Morokei",
-        "string": "Morokei"
-    },
-    {
-        "editor_id": "ccEEJSSE002_DPMaskOtarActivator",
-        "form_id": "[05000CA9]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_ButterflyJarActivator",
-        "form_id": "[05000933]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_GlassBowoftheStagPrinceActivator",
-        "form_id": "[050008C7]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_DragonflyJarActivator",
-        "form_id": "[05000955]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Dragonfly in a Jar",
-        "string": "Bocal à libellule"
-    },
-    {
-        "editor_id": "ccEEJSSE002_MehrunesRazorActivator",
-        "form_id": "[0500094A]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Mehrunes' Razor",
-        "string": "Dague de Mehrunes"
-    },
-    {
-        "editor_id": "ccEEJSSE002_DPMaskShockActivator",
-        "form_id": "[05000CA4]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Zahkriisos",
-        "string": "Zahkriisos"
-    },
-    {
-        "editor_id": "ccEEJSSE002_SpellbreakerActivator",
-        "form_id": "[05000986]",
+        "form_id": "0500089A|cceejsse002-tower.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Place",
@@ -721,79 +89,7 @@
     },
     {
         "editor_id": "ccEEJSSE002_DPMaskOtarActivator",
-        "form_id": "[05000CA9]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Otar",
-        "string": "Otar"
-    },
-    {
-        "editor_id": "ccEEJSSE002_PortalGemPurpleActivator",
-        "form_id": "[05000CEA]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_DPMaskMorokeiActivator",
-        "form_id": "[05000CA0]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_SearekSkullActivator",
-        "form_id": "[0500093A]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_MothJarActivator",
-        "form_id": "[05000932]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_NettlebaneActivator",
-        "form_id": "[0500094C]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_DawnguardShieldActivator",
-        "form_id": "[05000D0C]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Dawnguard Rune Shield",
-        "string": "Bouclier runique"
-    },
-    {
-        "editor_id": "ccEEJSSE002_KahvozeinsFangActivator",
-        "form_id": "[0500094D]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Kahvozein's Fang",
-        "string": "Croc de Kahvozein"
-    },
-    {
-        "editor_id": "ccEEJSSE002_DPMaskVolsungActivator",
-        "form_id": "[05000CA7]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_DPMaskRahgotActivator",
-        "form_id": "[05000CAA]",
+        "form_id": "05000CA9|cceejsse002-tower.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Place",
@@ -801,63 +97,95 @@
     },
     {
         "editor_id": "ccEEJSSE002_BeeJarActivator",
-        "form_id": "[05000936]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_BlackBowActivator",
-        "form_id": "[05000930]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
-    },
-    {
-        "editor_id": "ccEEJSSE002_DPMaskFrostActivator",
-        "form_id": "[05000CA3]",
+        "form_id": "05000936|cceejsse002-tower.esl",
         "index": null,
         "type": "ACTI FULL",
-        "original": "Dukaan",
-        "string": "Dukaan"
-    },
-    {
-        "editor_id": "ccEEJSSE001_BakingSurfaceTrigger",
-        "form_id": "[05000806]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Baking Surface",
-        "string": "Plaque de cuisson"
-    },
-    {
-        "editor_id": "ccEEJSSE002_DPMaskRahgotActivator",
-        "form_id": "[05000CAA]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Rahgot",
-        "string": "Rahgot"
-    },
-    {
-        "editor_id": "ccEEJSSE002_SanguineRoseActivator",
-        "form_id": "[05000945]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Placer"
+        "original": "Bee in a Jar",
+        "string": "Bocal à abeille"
     },
     {
         "editor_id": "ccEEJSSE002_PortalGemBlueActivator",
-        "form_id": "[05000CEB]",
+        "form_id": "05000CEB|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Sapphire Paragon",
+        "string": "Saphir parangon"
+    },
+    {
+        "editor_id": "ccEEJSSE002_PortalGemPurpleActivator",
+        "form_id": "05000CEA|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Amethyst Paragon",
+        "string": "Parangon améthyste"
+    },
+    {
+        "editor_id": "ccEEJSSE002_WabbajackActivator",
+        "form_id": "05000946|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Wabbajack",
+        "string": "Wabbajack"
+    },
+    {
+        "editor_id": "ccEEJSSE002_GlassBowoftheStagPrinceActivator",
+        "form_id": "050008C7|cceejsse002-tower.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Place",
         "string": "Placer"
     },
     {
-        "editor_id": "ccEEJSSE002_ShieldofYsgramorActivator",
-        "form_id": "[0500096B]",
+        "editor_id": "ccEEJSSE002_PortalGemredActivator",
+        "form_id": "05000CE9|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_AetherialShieldActivator",
+        "form_id": "05000987|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Aetherial Shield",
+        "string": "Bouclier d'aethérium"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskShockActivator",
+        "form_id": "05000CA4|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Zahkriisos",
+        "string": "Zahkriisos"
+    },
+    {
+        "editor_id": "ccEEJSSE002_TorstenSkullActivator",
+        "form_id": "0500093B|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Torsten's Skull Key",
+        "string": "Clé au crâne de Torsten"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DragonflyJarActivator",
+        "form_id": "05000955|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Dragonfly in a Jar",
+        "string": "Bocal à libellule"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SpellbreakerActivator",
+        "form_id": "05000986|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Spellbreaker",
+        "string": "Parasortis"
+    },
+    {
+        "editor_id": "ccEEJSSE002_KahvozeinsFangActivator",
+        "form_id": "0500094D|cceejsse002-tower.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Place",
@@ -865,7 +193,95 @@
     },
     {
         "editor_id": "ccEEJSSE002_DPMaskNahkriinActivator",
-        "form_id": "[05000C9F]",
+        "form_id": "05000C9F|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MehrunesRazorActivator",
+        "form_id": "0500094A|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Mehrunes' Razor",
+        "string": "Dague de Mehrunes"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskRahgotActivator",
+        "form_id": "05000CAA|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_BlackBowActivator",
+        "form_id": "05000930|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DawnguardRuneAxeActivator",
+        "form_id": "05000D26|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Dawnguard Rune Axe",
+        "string": "Hache runique de la Garde de l'aube"
+    },
+    {
+        "editor_id": "ccEEJSSE002_ShieldofYsgramorActivator",
+        "form_id": "0500096B|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_ButterflyJarActivator",
+        "form_id": "05000933|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Butterfly in a Jar",
+        "string": "Bocal à papillon"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SpiderControlRodActivator",
+        "form_id": "0500093F|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Spider Control Rod",
+        "string": "Baguette d'arachnologie"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskFrostActivator",
+        "form_id": "05000CA3|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Dukaan",
+        "string": "Dukaan"
+    },
+    {
+        "editor_id": "ccEEJSSE002_FireflyJarActivator",
+        "form_id": "05000938|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Firefly in a Jar",
+        "string": "Bocal à luciole"
+    },
+    {
+        "editor_id": "ccEEJSSE002_StaffofMagnusActivator",
+        "form_id": "0500093D|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_GauldurStaffActivator",
+        "form_id": "0500093C|cceejsse002-tower.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Place",
@@ -873,31 +289,207 @@
     },
     {
         "editor_id": "ccEEJSSE002_BloodscytheActivator",
-        "form_id": "[05000807]",
+        "form_id": "05000807|cceejsse002-tower.esl",
         "index": null,
         "type": "ACTI FULL",
         "original": "Bloodscythe",
         "string": "Sangalfange"
     },
     {
-        "editor_id": "ccEEJSSE002_BloodskalBladeActivator",
-        "form_id": "[0500092E]",
+        "editor_id": "ccEEJSSE002_PortalGemWhiteActivator",
+        "form_id": "05000CE8|cceejsse002-tower.esl",
         "index": null,
-        "type": "ACTI FULL",
-        "original": "Bloodskal Blade",
-        "string": "Lame des Skalsangue"
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
     },
     {
-        "editor_id": "ccEEJSSE002_BeeJarActivator",
-        "form_id": "[05000936]",
+        "editor_id": "ccEEJSSE002_SkullofCorruptionActivator",
+        "form_id": "05000947|cceejsse002-tower.esl",
         "index": null,
         "type": "ACTI FULL",
-        "original": "Bee in a Jar",
-        "string": "Bocal à abeille"
+        "original": "Skull of Corruption",
+        "string": "Crâne de la Corruption"
+    },
+    {
+        "editor_id": "ccEEJSSE001_BakingSurfaceTrigger",
+        "form_id": "05000806|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Use",
+        "string": "Utiliser"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskMorokeiActivator",
+        "form_id": "05000CA0|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Morokei",
+        "string": "Morokei"
+    },
+    {
+        "editor_id": "ccEEJSSE002_TargeoftheBloodedActivator",
+        "form_id": "05000988|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_WuuthradActivator",
+        "form_id": "05000971|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DawnguardRuneHammerActivator",
+        "form_id": "05000D28|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Dawnguard Rune Hammer",
+        "string": "Marteau runique de la Garde de l'aube"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskKrosisActivator",
+        "form_id": "05000CA8|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_PortalGemGreenActivator",
+        "form_id": "05000CEC|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_AurielsBowActivator",
+        "form_id": "05000CE1|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Auriel's Bow",
+        "string": "Arc d'Auriel"
+    },
+    {
+        "editor_id": "ccEEJSSE002_BloodskalBladeActivator",
+        "form_id": "0500092E|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskVokunActivator",
+        "form_id": "05000C9E|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Vokun",
+        "string": "Vokun"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SanguineRoseActivator",
+        "form_id": "05000945|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SearekSkullActivator",
+        "form_id": "0500093A|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskKonahrikActivator",
+        "form_id": "05000CA2|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Konahrik",
+        "string": "Konahrik"
+    },
+    {
+        "editor_id": "ccEEJSSE002_ChampionsCudgelActivator",
+        "form_id": "0500092F|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Champion's Cudgel",
+        "string": "Gourdin du champion"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SoulrenderActivator",
+        "form_id": "0500089A|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Soulrender",
+        "string": "Animortis"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskOtarActivator",
+        "form_id": "05000CA9|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Otar",
+        "string": "Otar"
+    },
+    {
+        "editor_id": "ccEEJSSE002_InitiatesEwerActivator",
+        "form_id": "05000CDD|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskFireActivator",
+        "form_id": "05000CA5|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_GlassBowoftheStagPrinceActivator",
+        "form_id": "050008C7|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Glass Bow of the Stag Prince",
+        "string": "Arc de verre du Prince des cerfs"
     },
     {
         "editor_id": "ccEEJSSE002_KeeningActivator",
-        "form_id": "[05000948]",
+        "form_id": "05000948|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_AurielsShieldActivator",
+        "form_id": "05000CDF|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_PortalGemredActivator",
+        "form_id": "05000CE9|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ruby Paragon",
+        "string": "Parangon rubis"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskWoodenActivator",
+        "form_id": "05000CA6|cceejsse002-tower.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Place",
@@ -905,15 +497,423 @@
     },
     {
         "editor_id": "ccEEJSSE002_BladeofSacrificeActivator",
-        "form_id": "[0500094B]",
+        "form_id": "0500094B|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_BladeofWoeActivator",
+        "form_id": "05000953|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DawnguardShieldActivator",
+        "form_id": "05000D0C|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_NettlebaneActivator",
+        "form_id": "0500094C|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskVolsungActivator",
+        "form_id": "05000CA7|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskHevnoraakActivator",
+        "form_id": "05000CA1|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Hevnoraak",
+        "string": "Hevnoraak"
+    },
+    {
+        "editor_id": "ccEEJSSE002_HarkonSwordActivator",
+        "form_id": "05000D22|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MothJarActivator",
+        "form_id": "05000932|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_KahvozeinsFangActivator",
+        "form_id": "0500094D|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Kahvozein's Fang",
+        "string": "Croc de Kahvozein"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskNahkriinActivator",
+        "form_id": "05000C9F|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Nahkriin",
+        "string": "Nahkriin"
+    },
+    {
+        "editor_id": "ccEEJSSE002_BeeJarActivator",
+        "form_id": "05000936|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_PortalGemBlueActivator",
+        "form_id": "05000CEB|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskRahgotActivator",
+        "form_id": "05000CAA|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Rahgot",
+        "string": "Rahgot"
+    },
+    {
+        "editor_id": "ccEEJSSE002_BlackBowActivator",
+        "form_id": "05000930|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Dwarven Black Bow of Fate",
+        "string": "Arc noir du destin"
+    },
+    {
+        "editor_id": "ccEEJSSE002_PortalGemPurpleActivator",
+        "form_id": "05000CEA|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_ShieldofYsgramorActivator",
+        "form_id": "0500096B|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Shield of Ysgramor",
+        "string": "Bouclier d'Ysgramor"
+    },
+    {
+        "editor_id": "ccEEJSSE002_WabbajackActivator",
+        "form_id": "05000946|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_StaffofMagnusActivator",
+        "form_id": "0500093D|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Staff of Magnus",
+        "string": "Bâton de Magnus"
+    },
+    {
+        "editor_id": "ccEEJSSE002_GauldurStaffActivator",
+        "form_id": "0500093C|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Staff of Jyrik Gauldurson",
+        "string": "Bâton de Jyrik Gauldurson"
+    },
+    {
+        "editor_id": "ccEEJSSE002_AetherialShieldActivator",
+        "form_id": "05000987|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskShockActivator",
+        "form_id": "05000CA4|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_PortalGemWhiteActivator",
+        "form_id": "05000CE8|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Diamond Paragon",
+        "string": "Parangon diamant"
+    },
+    {
+        "editor_id": "ccEEJSSE001_BakingSurfaceTrigger",
+        "form_id": "05000806|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Baking Surface",
+        "string": "Plaque de cuisson"
+    },
+    {
+        "editor_id": "ccEEJSSE002_TargeoftheBloodedActivator",
+        "form_id": "05000988|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Targe of the Blooded",
+        "string": "Targe sanguinaire"
+    },
+    {
+        "editor_id": "ccEEJSSE002_TorstenSkullActivator",
+        "form_id": "0500093B|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DragonflyJarActivator",
+        "form_id": "05000955|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_WuuthradActivator",
+        "form_id": "05000971|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Wuuthrad",
+        "string": "Wuuthrad"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SpellbreakerActivator",
+        "form_id": "05000986|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskKrosisActivator",
+        "form_id": "05000CA8|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Krosis",
+        "string": "Krosis"
+    },
+    {
+        "editor_id": "ccEEJSSE002_PortalGemGreenActivator",
+        "form_id": "05000CEC|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Emerald Paragon",
+        "string": "Parangon émeraude"
+    },
+    {
+        "editor_id": "ccEEJSSE002_BloodskalBladeActivator",
+        "form_id": "0500092E|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Bloodskal Blade",
+        "string": "Lame des Skalsangue"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MehrunesRazorActivator",
+        "form_id": "0500094A|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SanguineRoseActivator",
+        "form_id": "05000945|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Sanguine Rose",
+        "string": "Rose sanghine"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SearekSkullActivator",
+        "form_id": "0500093A|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Saerek's Skull Key",
+        "string": "Clé au crâne de Saerek"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DawnguardRuneAxeActivator",
+        "form_id": "05000D26|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_ButterflyJarActivator",
+        "form_id": "05000933|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SpiderControlRodActivator",
+        "form_id": "0500093F|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_InitiatesEwerActivator",
+        "form_id": "05000CDD|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Initiate's Ewer",
+        "string": "Pichet de l'Initié"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskFrostActivator",
+        "form_id": "05000CA3|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_FireflyJarActivator",
+        "form_id": "05000938|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskFireActivator",
+        "form_id": "05000CA5|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ahzidal",
+        "string": "Ahzidal"
+    },
+    {
+        "editor_id": "ccEEJSSE002_BloodscytheActivator",
+        "form_id": "05000807|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_KeeningActivator",
+        "form_id": "05000948|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Keening",
+        "string": "Lamentation"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskHevnoraakActivator",
+        "form_id": "05000CA1|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_AurielsShieldActivator",
+        "form_id": "05000CDF|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Auriel's Shield",
+        "string": "Bouclier d'Auriel"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskWoodenActivator",
+        "form_id": "05000CA6|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Wooden Mask",
+        "string": "Masque en bois"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SkullofCorruptionActivator",
+        "form_id": "05000947|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DPMaskMorokeiActivator",
+        "form_id": "05000CA0|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_BladeofSacrificeActivator",
+        "form_id": "0500094B|cceejsse002-tower.esl",
         "index": null,
         "type": "ACTI FULL",
         "original": "Blade of Sacrifice",
         "string": "Lame du sacrifice"
     },
     {
-        "editor_id": "ccEEJSSE002_SpiderControlRodActivator",
-        "form_id": "[0500093F]",
+        "editor_id": "ccEEJSSE002_BladeofWoeActivator",
+        "form_id": "05000953|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Blade of Woe",
+        "string": "Lame de la souffrance"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DawnguardRuneHammerActivator",
+        "form_id": "05000D28|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Placer"
+    },
+    {
+        "editor_id": "ccEEJSSE002_DawnguardShieldActivator",
+        "form_id": "05000D0C|cceejsse002-tower.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Dawnguard Rune Shield",
+        "string": "Bouclier runique"
+    },
+    {
+        "editor_id": "ccEEJSSE002_AurielsBowActivator",
+        "form_id": "05000CE1|cceejsse002-tower.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Place",
@@ -921,55 +921,23 @@
     },
     {
         "editor_id": "ccEEJSSE002_DarkElfJournal",
-        "form_id": "[05000FDE]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face=\"$HandwrittenFont\">\r\n\"When the eye is doused in flames, the hair will light the way.\"\r\n\r\nI've heard that fool Sindnar say it over and over, breath stinking of ale, as if it were a limerick. Given his dark hood you might think it was a dangerous spell. But so long as no one's hair caught on fire or found imps in their cupboards, the words were harmless. Just the mad ramblings of a drunk.\r\n\r\nOf the inn patrons, only I bothered to humor him. We bonded over a bottle of Honningbrew and the bucket with which we had history.\r\n\r\nSo when the Elf bit the dust, it was only natural he left his things to me. Among them were countless pieces of junk, including full ownership of the bucket, and a spell tome written in some long dead language. \r\n\r\nBut as soon as I started cursing the old fool for willing me his trash, out slipped two items of value, a map and notes to a tower deep in the swamps. It was only after reading it that I realized his drunken words weren't part of any limerick. They were instructions. A way in.\r\n\r\nNow that I'm here, things are getting even more clear. The hair part still doesn't make a lick of sense, but the eye is the stone seal, that much I'm sure. Yet nothing I do seems to work. I've doused it in the fire from my torch. I've chopped kindling for hours and built a bonfire high enough to scorch the bloody moon. Still, nothing.\r\n\r\nMaybe the seal can only be broken with magic. Well, if that drunken fool can learn to cast spells, so can I. I've got the bastard's tome, I just need to make sense of the words.\r\n\r\nBut I better be quick. The fire seems to be attracting all sorts of creatures from the belly of this unholy marsh. Hopefully I can manage to survive long enough to discover whatever treasure lies within.\r\n</font>",
-        "string": "<font face=\"$HandwrittenFont\">\r\nLorsque l'oeil sera baigné de flammes, le lièvre illuminera la voie.\r\n\r\nJ'avais entendu Sindnar le répéter encore et encore, l'haleine empestant la bière, comme un refrain. Avec sa capuche sombre, on pourrait penser qu'il s'agissait d'un redoutable sort. Mais puisque personne n'avait vu ses cheveux prendre feu ou trouvé de lutin dans leurs placards, les mots étaient sans danger. Rien de plus que les délires d'un ivrogne.\r\n\r\nParmi les clients de la taverne, moi seul lui faisais le plaisir de l'écouter. Nous avions tissé un lien autour d'une bouteille d'hydrhonning et d'un seau avec lequel nous avions une histoire commune.\r\n\r\nLorsque l'Elfe trépassa, c'est donc tout naturellement à moi que revinrent ses possessions. Parmi elles, une quantité impressionnante de camelote, dont la propriété complète du seau, et un livre de sorts écrit dans une langue morte depuis des lustres. \r\n\r\nMais alors que je maudissais le vieux fou de m'avoir légué ses déchets, deux objets de valeurs apparurent : une carte et des notes au sujet d'une tour dans les marais. Ce n'est qu'après avoir lu cette dernière que je réalisais que ses élucubrations alcoolisées n'étaient pas un refrain. Il s'agissait d'instructions. D'un moyen d'entrer.\r\n\r\nMaintenant que je suis ici, les choses sont encore plus claires. La partie sur le lièvre n'a toujours aucun sens, mais l'oeil est le sceau de pierre, j'en suis certain. Mais rien ne semble fonctionner. Je l'ai couvert des flammes de ma torche. J'ai coupé du petit bois pendant des heures et bâti un bûcher si haut qu'il aurait pu brûler la lune. Mais toujours rien.\r\n\r\nPeut-être que le sceau doit être brisé par magie. Si cet ivrogne peut apprendre à lancer des sorts, moi aussi. J'ai son livre, je dois simplement en comprendre les mots.\r\n\r\nJe dois me hâter. Le feu semble attirer toutes sortes de créatures hors des profondeurs de ces marais maudits. J'espère survivre assez longtemps pour découvrir le trésor qui s'y cache.\r\n</font>"
-    },
-    {
-        "editor_id": "ccEEJSSE002_EyeNote",
-        "form_id": "[05000FE6]",
+        "form_id": "05000FDE|cceejsse002-tower.esl",
         "index": null,
         "type": "BOOK FULL",
-        "original": "The Eye",
-        "string": "L'Oeil"
+        "original": "Hans's Journal",
+        "string": "Journal d'Hans"
     },
     {
         "editor_id": "ccEEJSSE002_LoreNotes",
-        "form_id": "[05000FF8]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Sindnar's Tower Notes",
-        "string": "Notes de la tour de Sindnar"
-    },
-    {
-        "editor_id": "ccEEJSSE002_LoreNotes",
-        "form_id": "[05000FF8]",
+        "form_id": "05000FF8|cceejsse002-tower.esl",
         "index": null,
         "type": "BOOK DESC",
         "original": "<font face=\"$HandwrittenFont\">\r\nDeep in the swamps of Hjaalmarch, where the branches are gnarled and the mist is thick, lies a tower of unknown provenance.\r\n\r\nFew in the province dare speak the name Myrwatch, and those that do couch their words with apprehension and fear. Yet the mystery of the tower only piques my interest further, and so I have made it my life's work to discover its secrets.\r\n\r\nWhat I can deduce of its past comes from its present. From the cut of the stone to the wards that surround it, every piece is a clue, a signature that can be traced back to a pen and hand.\r\n\r\nThe stone seal that guards the entrance is none other than the Eye of Magnus, a symbol born from the legacy of Shalidor. Its burning gaze can be found not just in Myrwatch, but outside the College of Winterhold.\r\n\r\nCould it be the mages here were cast out from the college, and set out to carve their own path? This is but a theory, and yet, one I feel has merit.\r\n\r\nNevertheless, without access to the mind of its occupants, true insight will remain frustratingly out of grasp.\r\n</font>",
         "string": "<font face=\"$HandwrittenFont\">\r\nAu fin fond des marais de Hjaalmarch, où les branches sont noueuses et le brouillard dense, se dresse une tour d'origine inconnue.\r\n\r\nRares sont ceux dans la province qui osent prononcer le nom Myrwatch, et ils le font avec appréhension et crainte. Cependant, le mystère de la tour n'en pique mon intérêt que plus, c'est pourquoi je ferai ma mission de découvrir ses secrets.\r\n\r\nCe que je peux déduire de son passé me vient de son présent. De la taille des pierres aux barrières qui l'entourent, chaque élément est un indice, tel une signature pouvant être reliée à une plume et une main.\r\n\r\nLe sceau de pierre qui garde l'entrée n'est autre que l'Oeil de Magnus, un symbole né de l'héritage de Shalidor. Son regard brûlant se trouve non seulement à Myrwatch, mais aussi devant l'Académie de Fortdhiver.\r\n\r\nEst-il possible que les mages vivant ici aient été chassés de l'académie et aient choisi de suivre leur propre voie ? Il ne s'agit que d'une théorie, mais je pense qu'elle est valable.\r\n\r\nQuoi qu'il en soit, sans avoir accès aux esprits des occupants de la tour, la vérité reste désespérément hors de portée.\r\n</font>"
     },
     {
-        "editor_id": "ccEEJSSE002_EyeNote",
-        "form_id": "[05000FE6]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "\r\n<p align='center'>\r\n<img src='img://Textures/creationclub/ccEEJSSE002/Books/ccEEJSSE002_Eye.png' width='300' height='300'>\r\n</p>",
-        "string": "\r\n<p align='center'>\r\n<img src='img://Textures/creationclub/ccEEJSSE002/Books/ccEEJSSE002_Eye.png' width='300' height='300'>\r\n</p>"
-    },
-    {
         "editor_id": "ccEEJSSE002_LoreJournal",
-        "form_id": "[05000FF9]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face=\"$HandwrittenFont\">\r\n<b>1st of Morning Star, 3E 423</b>\r\nA wise mage once told me the power of a spell lies in one's conviction. \r\n\r\nIt's evident to me now that the college has lost all desire and purpose, and has become feckless under its current stewardship.\r\n\r\nThe Arch-Mage Shalidor believed the halls to be a proving ground where a mage could test the limits of their abilities. Now the college is a tomb of knowledge, where grand spells and lofty ideals are left to wither and rot. \r\n\r\nWe should not let the outside world dictate how we conduct ourselves. Placating their ignorance is not a virtue. The augurs speak of a great war on the horizon, and we should be doing everything in our power to prepare for it. \r\n\r\nThat is why Teel-Ja and I have chosen to leave. We know the road ahead will be hard, but one thing we do not lack is the conviction to see it through.\r\n[pagebreak]\r\n<b>23rd of Rain's Hand, 3E 428</b>\r\nConstruction of the tower is almost complete. Teel-Ja accused me of being impatient, a crime which I've been guilty of more often than not. Between us he has always been the tortoise, and I the hare. Still, our needs are pressing. The coming war will not wait for the mortar to dry.\r\n\r\nThe location has much to do with the delays, but that can't be helped. The Nords are distrustful of magic by nature, and some would frown upon our efforts. Others might take a more violent approach. For that reason, we've put a ward on the door that requires magic to dispel.\r\n\r\nWe've chosen to honor Shalidor in much of what we do, including the seal outside the door. Teel-Ja seemed pleased with the idea of setting it on fire, while others seemed uncomfortable with the idea. I warned them that pride is the enemy of progress. If we are to survive in the coming storm, we must not be bound by tradition. We must be willing to set it aflame.\r\n[pagebreak]\r\n<b>11th of First Seed, 3E 429</b>\r\nIt's been a year since construction has finished, yet there is still much that needs to be done. The tower is only the foundation for our defense. Our minds and our magic must serve as its ramparts, and for them to hold we must amplify our strength.\r\n\r\nAs such, I have sent scouts throughout Tamriel to find powerful artifacts that may help us in our efforts; artifacts the college wizards refused to obtain out of cowardice or comfort. Many of these relics played a role in preventing calamities of the past. Perhaps it is their destiny as much as ours to stand between the world and its ruin.\r\n\r\n[pagebreak]\r\n<b>17th of Frost Fall, 3E 429</b>\r\nWe've had little luck finding artifacts of note. Based on the information I've culled from the Arcanaeum records, I know there are several here in Skyrim, including the Staff of Gauldur. We must endeavor to find them all.\r\n\r\nMore concerning, however, is the disposition and morale of the mages. Even Teel-Ja seems to have fallen into the trappings of routine and idleness. It is hard to convince weary souls to explore yet another ruin when the task has been stripped of all urgency.\r\n[pagebreak]\r\n<b>29th of Sun's Height, 3E 433</b>\r\nIt's now halfway through the year 433, more than ten years since we left the college. Yet all remains blissfully calm. One of the new acolytes even suggested abandoning her training to become a cook, happily showing me her spell for preserving apple pies. I reminded her that she is here to study battle magic, not pastries. She will have more than enough time to indulge her sweet tooth when her youth is behind her.\r\n\r\nIt is why we've devoted half the library to the placement of powerful artifacts, to serve as a reminder of our pursuit. Yet seeing the racks as they are now, collecting only dust, makes me wonder if I've led us all astray. \r\n[pagebreak]\r\nAs leader of this guild, I have the training to fight and the knowledge of what's to come. What I don't have, sadly, is the conviction that it will.\r\n[pagebreak]\r\n<b>28th of Last Seed, 3E 433</b>\r\nA courier came by with news from Cyrodiil. Emperor Septim is dead. The Gates of Oblivion have opened. Divines help us all.\r\n</font>\r\n\r\n",
-        "string": "<font face=\"$HandwrittenFont\">\r\n<b>1er de primétoile, 3E 423</b>\r\nUn mage avisé m'a un jour dit que la puissance d'un sort repose sur la conviction de celui qui le lance. \r\n\r\nIl est désormais évident à mes yeux que l'académie a perdu toute volonté et toute raison d'être, et est devenue inefficace sous sa direction actuelle.\r\n\r\nL'Archimage Shalidor pensait que ces murs étaient un terrain d'essai où un mage pouvait tester les limites de ses capacités. L'académie est maintenant un mausolée de savoir, où les sorts grandioses et les nobles idées se flétrissent et pourrissent. \r\n\r\nNous ne devrions pas laisser le monde extérieur dicter notre conduite. Calmer leur ignorance n'est pas une vertu. L'oracle parle d'une grande guerre à l'horizon, et nous devrions faire tout ce qui est en notre pouvoir pour nous y préparer. \r\n\r\nC'est pourquoi Teel-Ja et moi avons décidé de partir. Nous savons que la route sera longue et difficile, mais s'il y a une chose dont nous ne manquons pas, c'est de conviction pour arriver au bout.\r\n[pagebreak]\r\n<b>23 d'ondepluie, 3E 428</b>\r\nLa construction de la tour est presque terminée. Teel-Ja me reproche d'être impatient, un crime que j'ai commis plus souvent qu'à mon tour. De nous deux, il a toujours été la tortue et moi le lièvre. Mais nos besoins sont pressants. La guerre qui arrive n'attendra pas que le mortier soit sec.\r\n\r\nL'endroit est en grande partie responsable du retard, mais nous n'y pouvons rien. Les Nordiques n'ont par nature aucune confiance en la magie, et certains n'apprécieraient pas nos efforts. Certains pourraient avoir une approche plus belliqueuse. C'est pourquoi nous avons créé une barrière qui doit être désactivée par magie pour protéger la porte.\r\n\r\nNous avons choisi de rendre hommage à Shalidor dans la plupart de nos travaux, y compris avec le sceau devant la porte. Si Teel-Ja semble aimer l'idée devoir utiliser du feu, d'autres paraissent mal à l'aise. Je leur ai expliqué que la fierté est l'ennemi du progrès. Si nous voulons survivre aux tempêtes qui nous attendent, nous ne devons pas être prisonniers de la tradition. Nous devons être capables de la laisser brûler.\r\n[pagebreak]\r\n<b>11 de semailles, 3E 429</b>\r\nLa construction est terminée depuis un an, mais il reste tant à faire. La tour n'est que la fondation de notre défense. Nos esprits et notre magie devront servir de remparts, et pour que ces remparts tiennent nous devons en amplifier la puissance.\r\n\r\nC'est pourquoi j'ai envoyé des éclaireurs dans tout Tamriel afin de dénicher de puissants artéfacts qui pourraient nous être utiles, des artéfacts que les sorciers de l'académie refusaient de chercher par couardise ou par paresse. Grâce à nos efforts en Morrowind, nous avons réussi à acquérir l'Anneau du Sorcier, qui était porté par le légendaire Archimage Syrabane. \r\n\r\nD'après la légende, Syrabane aurait utilisé la puissance de l'anneau pour mettre fin à la Peste thrassienne qui menaçait tout Tamriel. Peut-être que tel est le destin de l'anneau : se dresser entre le monde et sa fin.\r\n\r\n[pagebreak]\r\n<b>17 de soufflegivre, 3E 429</b>\r\nNous n'avons pas réussi à trouver beaucoup d'autres artéfacts notables. D'après les informations que j'ai récoltées dans les archives de l'Arcanaeum, je sais qu'il y en a plusieurs en Bordeciel, dont le Bâton de Gauldur. Nous devons nous lancer à la recherche de chacun d'entre eux.\r\n\r\nCependant, je m'inquiète de la disposition et du moral des mages. Même Teel-Ja semble être tombé dans le piège de la routine et de l'oisiveté. Il est malaisé de convaincre des âmes fatiguées d'explorer une ruine de plus lorsque la tâche n'est plus urgente.\r\n[pagebreak]\r\n<b>29 de hautzénith, 3E 433</b>\r\nNous sommes désormais à la moitié de l'an 433, nous avons quitté l'académie il y a plus de dix ans. Tout est toujours merveilleusement calme. L'une des nouvelles acolytes a même évoqué la possibilité d'abandonner son entraînement afin de devenir cuisinière, me montrant joyeusement son sort pour conserver les tartes aux pommes. Je lui ai rappelé qu'elle était ici pour apprendre la magie de combat, pas la pâtisserie. Elle aura tout le temps de s'abandonner à sa passion des douceurs dans ses vieux jours.\r\n\r\nC'est pourquoi nous avons dédié la moitié de la bibliothèque à l'exposition de puissants artéfacts, afin de servir de rappel de l'objet de notre quête. Mais lorsque je vois les présentoirs actuellement, ne supportant que le poids de la poussière, je me demande si je ne nous ai pas tous détournés du droit chemin. \r\n[pagebreak]\r\nEn tant que dirigeant de cette guilde, j'ai l'entraînement au combat et la connaissance de ce qui nous attend. Ce qu'il me manque, malheureusement, c'est la conviction que cela arrivera réellement.\r\n[pagebreak]\r\n<b>28 de vifazur, 3E 433</b>\r\nUn messager est arrivé avec des nouvelles de Cyrodiil. L'empereur Septim est mort. Les portes d'Oblivion sont ouvertes. Divins, ayez pitié de nous tous.\r\n</font>\r\n\r\n"
-    },
-    {
-        "editor_id": "ccEEJSSE002_LoreJournal",
-        "form_id": "[05000FF9]",
+        "form_id": "05000FF9|cceejsse002-tower.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "Anora's Journal",
@@ -977,199 +945,167 @@
     },
     {
         "editor_id": "ccEEJSSE002_DarkElfJournal",
-        "form_id": "[05000FDE]",
+        "form_id": "05000FDE|cceejsse002-tower.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\n\"When the eye is doused in flames, the hair will light the way.\"\r\n\r\nI've heard that fool Sindnar say it over and over, breath stinking of ale, as if it were a limerick. Given his dark hood you might think it was a dangerous spell. But so long as no one's hair caught on fire or found imps in their cupboards, the words were harmless. Just the mad ramblings of a drunk.\r\n\r\nOf the inn patrons, only I bothered to humor him. We bonded over a bottle of Honningbrew and the bucket with which we had history.\r\n\r\nSo when the Elf bit the dust, it was only natural he left his things to me. Among them were countless pieces of junk, including full ownership of the bucket, and a spell tome written in some long dead language. \r\n\r\nBut as soon as I started cursing the old fool for willing me his trash, out slipped two items of value, a map and notes to a tower deep in the swamps. It was only after reading it that I realized his drunken words weren't part of any limerick. They were instructions. A way in.\r\n\r\nNow that I'm here, things are getting even more clear. The hair part still doesn't make a lick of sense, but the eye is the stone seal, that much I'm sure. Yet nothing I do seems to work. I've doused it in the fire from my torch. I've chopped kindling for hours and built a bonfire high enough to scorch the bloody moon. Still, nothing.\r\n\r\nMaybe the seal can only be broken with magic. Well, if that drunken fool can learn to cast spells, so can I. I've got the bastard's tome, I just need to make sense of the words.\r\n\r\nBut I better be quick. The fire seems to be attracting all sorts of creatures from the belly of this unholy marsh. Hopefully I can manage to survive long enough to discover whatever treasure lies within.\r\n</font>",
+        "string": "<font face=\"$HandwrittenFont\">\r\nLorsque l'oeil sera baigné de flammes, le lièvre illuminera la voie.\r\n\r\nJ'avais entendu Sindnar le répéter encore et encore, l'haleine empestant la bière, comme un refrain. Avec sa capuche sombre, on pourrait penser qu'il s'agissait d'un redoutable sort. Mais puisque personne n'avait vu ses cheveux prendre feu ou trouvé de lutin dans leurs placards, les mots étaient sans danger. Rien de plus que les délires d'un ivrogne.\r\n\r\nParmi les clients de la taverne, moi seul lui faisais le plaisir de l'écouter. Nous avions tissé un lien autour d'une bouteille d'hydrhonning et d'un seau avec lequel nous avions une histoire commune.\r\n\r\nLorsque l'Elfe trépassa, c'est donc tout naturellement à moi que revinrent ses possessions. Parmi elles, une quantité impressionnante de camelote, dont la propriété complète du seau, et un livre de sorts écrit dans une langue morte depuis des lustres. \r\n\r\nMais alors que je maudissais le vieux fou de m'avoir légué ses déchets, deux objets de valeurs apparurent : une carte et des notes au sujet d'une tour dans les marais. Ce n'est qu'après avoir lu cette dernière que je réalisais que ses élucubrations alcoolisées n'étaient pas un refrain. Il s'agissait d'instructions. D'un moyen d'entrer.\r\n\r\nMaintenant que je suis ici, les choses sont encore plus claires. La partie sur le lièvre n'a toujours aucun sens, mais l'oeil est le sceau de pierre, j'en suis certain. Mais rien ne semble fonctionner. Je l'ai couvert des flammes de ma torche. J'ai coupé du petit bois pendant des heures et bâti un bûcher si haut qu'il aurait pu brûler la lune. Mais toujours rien.\r\n\r\nPeut-être que le sceau doit être brisé par magie. Si cet ivrogne peut apprendre à lancer des sorts, moi aussi. J'ai son livre, je dois simplement en comprendre les mots.\r\n\r\nJe dois me hâter. Le feu semble attirer toutes sortes de créatures hors des profondeurs de ces marais maudits. J'espère survivre assez longtemps pour découvrir le trésor qui s'y cache.\r\n</font>"
+    },
+    {
+        "editor_id": "ccEEJSSE002_EyeNote",
+        "form_id": "05000FE6|cceejsse002-tower.esl",
         "index": null,
         "type": "BOOK FULL",
-        "original": "Hans's Journal",
-        "string": "Journal d'Hans"
+        "original": "The Eye",
+        "string": "L'Oeil"
     },
     {
-        "editor_id": "ccEEJSSE002_Barrel",
-        "form_id": "[0500099D]",
+        "editor_id": "ccEEJSSE002_LoreJournal",
+        "form_id": "05000FF9|cceejsse002-tower.esl",
         "index": null,
-        "type": "CONT FULL",
-        "original": "Barrel",
-        "string": "Baril"
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\">\r\n<b>1st of Morning Star, 3E 423</b>\r\nA wise mage once told me the power of a spell lies in one's conviction. \r\n\r\nIt's evident to me now that the college has lost all desire and purpose, and has become feckless under its current stewardship.\r\n\r\nThe Arch-Mage Shalidor believed the halls to be a proving ground where a mage could test the limits of their abilities. Now the college is a tomb of knowledge, where grand spells and lofty ideals are left to wither and rot. \r\n\r\nWe should not let the outside world dictate how we conduct ourselves. Placating their ignorance is not a virtue. The augurs speak of a great war on the horizon, and we should be doing everything in our power to prepare for it. \r\n\r\nThat is why Teel-Ja and I have chosen to leave. We know the road ahead will be hard, but one thing we do not lack is the conviction to see it through.\r\n[pagebreak]\r\n<b>23rd of Rain's Hand, 3E 428</b>\r\nConstruction of the tower is almost complete. Teel-Ja accused me of being impatient, a crime which I've been guilty of more often than not. Between us he has always been the tortoise, and I the hare. Still, our needs are pressing. The coming war will not wait for the mortar to dry.\r\n\r\nThe location has much to do with the delays, but that can't be helped. The Nords are distrustful of magic by nature, and some would frown upon our efforts. Others might take a more violent approach. For that reason, we've put a ward on the door that requires magic to dispel.\r\n\r\nWe've chosen to honor Shalidor in much of what we do, including the seal outside the door. Teel-Ja seemed pleased with the idea of setting it on fire, while others seemed uncomfortable with the idea. I warned them that pride is the enemy of progress. If we are to survive in the coming storm, we must not be bound by tradition. We must be willing to set it aflame.\r\n[pagebreak]\r\n<b>11th of First Seed, 3E 429</b>\r\nIt's been a year since construction has finished, yet there is still much that needs to be done. The tower is only the foundation for our defense. Our minds and our magic must serve as its ramparts, and for them to hold we must amplify our strength.\r\n\r\nAs such, I have sent scouts throughout Tamriel to find powerful artifacts that may help us in our efforts; artifacts the college wizards refused to obtain out of cowardice or comfort. Many of these relics played a role in preventing calamities of the past. Perhaps it is their destiny as much as ours to stand between the world and its ruin.\r\n\r\n[pagebreak]\r\n<b>17th of Frost Fall, 3E 429</b>\r\nWe've had little luck finding artifacts of note. Based on the information I've culled from the Arcanaeum records, I know there are several here in Skyrim, including the Staff of Gauldur. We must endeavor to find them all.\r\n\r\nMore concerning, however, is the disposition and morale of the mages. Even Teel-Ja seems to have fallen into the trappings of routine and idleness. It is hard to convince weary souls to explore yet another ruin when the task has been stripped of all urgency.\r\n[pagebreak]\r\n<b>29th of Sun's Height, 3E 433</b>\r\nIt's now halfway through the year 433, more than ten years since we left the college. Yet all remains blissfully calm. One of the new acolytes even suggested abandoning her training to become a cook, happily showing me her spell for preserving apple pies. I reminded her that she is here to study battle magic, not pastries. She will have more than enough time to indulge her sweet tooth when her youth is behind her.\r\n\r\nIt is why we've devoted half the library to the placement of powerful artifacts, to serve as a reminder of our pursuit. Yet seeing the racks as they are now, collecting only dust, makes me wonder if I've led us all astray. \r\n[pagebreak]\r\nAs leader of this guild, I have the training to fight and the knowledge of what's to come. What I don't have, sadly, is the conviction that it will.\r\n[pagebreak]\r\n<b>28th of Last Seed, 3E 433</b>\r\nA courier came by with news from Cyrodiil. Emperor Septim is dead. The Gates of Oblivion have opened. Divines help us all.\r\n</font>\r\n\r\n",
+        "string": "<font face=\"$HandwrittenFont\">\r\n<b>1er de primétoile, 3E 423</b>\r\nUn mage avisé m'a un jour dit que la puissance d'un sort repose sur la conviction de celui qui le lance. \r\n\r\nIl est désormais évident à mes yeux que l'académie a perdu toute volonté et toute raison d'être, et est devenue inefficace sous sa direction actuelle.\r\n\r\nL'Archimage Shalidor pensait que ces murs étaient un terrain d'essai où un mage pouvait tester les limites de ses capacités. L'académie est maintenant un mausolée de savoir, où les sorts grandioses et les nobles idées se flétrissent et pourrissent. \r\n\r\nNous ne devrions pas laisser le monde extérieur dicter notre conduite. Calmer leur ignorance n'est pas une vertu. L'oracle parle d'une grande guerre à l'horizon, et nous devrions faire tout ce qui est en notre pouvoir pour nous y préparer. \r\n\r\nC'est pourquoi Teel-Ja et moi avons décidé de partir. Nous savons que la route sera longue et difficile, mais s'il y a une chose dont nous ne manquons pas, c'est de conviction pour arriver au bout.\r\n[pagebreak]\r\n<b>23 d'ondepluie, 3E 428</b>\r\nLa construction de la tour est presque terminée. Teel-Ja me reproche d'être impatient, un crime que j'ai commis plus souvent qu'à mon tour. De nous deux, il a toujours été la tortue et moi le lièvre. Mais nos besoins sont pressants. La guerre qui arrive n'attendra pas que le mortier soit sec.\r\n\r\nL'endroit est en grande partie responsable du retard, mais nous n'y pouvons rien. Les Nordiques n'ont par nature aucune confiance en la magie, et certains n'apprécieraient pas nos efforts. Certains pourraient avoir une approche plus belliqueuse. C'est pourquoi nous avons créé une barrière qui doit être désactivée par magie pour protéger la porte.\r\n\r\nNous avons choisi de rendre hommage à Shalidor dans la plupart de nos travaux, y compris avec le sceau devant la porte. Si Teel-Ja semble aimer l'idée devoir utiliser du feu, d'autres paraissent mal à l'aise. Je leur ai expliqué que la fierté est l'ennemi du progrès. Si nous voulons survivre aux tempêtes qui nous attendent, nous ne devons pas être prisonniers de la tradition. Nous devons être capables de la laisser brûler.\r\n[pagebreak]\r\n<b>11 de semailles, 3E 429</b>\r\nLa construction est terminée depuis un an, mais il reste tant à faire. La tour n'est que la fondation de notre défense. Nos esprits et notre magie devront servir de remparts, et pour que ces remparts tiennent nous devons en amplifier la puissance.\r\n\r\nC'est pourquoi j'ai envoyé des éclaireurs dans tout Tamriel afin de dénicher de puissants artéfacts qui pourraient nous être utiles, des artéfacts que les sorciers de l'académie refusaient de chercher par couardise ou par paresse. Grâce à nos efforts en Morrowind, nous avons réussi à acquérir l'Anneau du Sorcier, qui était porté par le légendaire Archimage Syrabane. \r\n\r\nD'après la légende, Syrabane aurait utilisé la puissance de l'anneau pour mettre fin à la Peste thrassienne qui menaçait tout Tamriel. Peut-être que tel est le destin de l'anneau : se dresser entre le monde et sa fin.\r\n\r\n[pagebreak]\r\n<b>17 de soufflegivre, 3E 429</b>\r\nNous n'avons pas réussi à trouver beaucoup d'autres artéfacts notables. D'après les informations que j'ai récoltées dans les archives de l'Arcanaeum, je sais qu'il y en a plusieurs en Bordeciel, dont le Bâton de Gauldur. Nous devons nous lancer à la recherche de chacun d'entre eux.\r\n\r\nCependant, je m'inquiète de la disposition et du moral des mages. Même Teel-Ja semble être tombé dans le piège de la routine et de l'oisiveté. Il est malaisé de convaincre des âmes fatiguées d'explorer une ruine de plus lorsque la tâche n'est plus urgente.\r\n[pagebreak]\r\n<b>29 de hautzénith, 3E 433</b>\r\nNous sommes désormais à la moitié de l'an 433, nous avons quitté l'académie il y a plus de dix ans. Tout est toujours merveilleusement calme. L'une des nouvelles acolytes a même évoqué la possibilité d'abandonner son entraînement afin de devenir cuisinière, me montrant joyeusement son sort pour conserver les tartes aux pommes. Je lui ai rappelé qu'elle était ici pour apprendre la magie de combat, pas la pâtisserie. Elle aura tout le temps de s'abandonner à sa passion des douceurs dans ses vieux jours.\r\n\r\nC'est pourquoi nous avons dédié la moitié de la bibliothèque à l'exposition de puissants artéfacts, afin de servir de rappel de l'objet de notre quête. Mais lorsque je vois les présentoirs actuellement, ne supportant que le poids de la poussière, je me demande si je ne nous ai pas tous détournés du droit chemin. \r\n[pagebreak]\r\nEn tant que dirigeant de cette guilde, j'ai l'entraînement au combat et la connaissance de ce qui nous attend. Ce qu'il me manque, malheureusement, c'est la conviction que cela arrivera réellement.\r\n[pagebreak]\r\n<b>28 de vifazur, 3E 433</b>\r\nUn messager est arrivé avec des nouvelles de Cyrodiil. L'empereur Septim est mort. Les portes d'Oblivion sont ouvertes. Divins, ayez pitié de nous tous.\r\n</font>\r\n\r\n"
     },
     {
-        "editor_id": "ccEEJSSE002_IngredientsCupboard",
-        "form_id": "[05000808]",
+        "editor_id": "ccEEJSSE002_EyeNote",
+        "form_id": "05000FE6|cceejsse002-tower.esl",
         "index": null,
-        "type": "CONT FULL",
-        "original": "Cupboard",
-        "string": "Placard"
+        "type": "BOOK DESC",
+        "original": "\r\n<p align='center'>\r\n<img src='img://Textures/creationclub/ccEEJSSE002/Books/ccEEJSSE002_Eye.png' width='300' height='300'>\r\n</p>",
+        "string": "\r\n<p align='center'>\r\n<img src='img://Textures/creationclub/ccEEJSSE002/Books/ccEEJSSE002_Eye.png' width='300' height='300'>\r\n</p>"
     },
     {
-        "editor_id": "ccEEJSSE002_TestStongBox",
-        "form_id": "[05000CEE]",
+        "editor_id": "ccEEJSSE002_LoreNotes",
+        "form_id": "05000FF8|cceejsse002-tower.esl",
         "index": null,
-        "type": "CONT FULL",
-        "original": "Test Items",
-        "string": "Objets de test"
-    },
-    {
-        "editor_id": "ccEEJSSE002_SoulGemBarrel",
-        "form_id": "[0500098E]",
-        "index": null,
-        "type": "CONT FULL",
-        "original": "Barrel",
-        "string": "Baril"
-    },
-    {
-        "editor_id": "ccEEJSSE002_LargeFlat_NRS",
-        "form_id": "[05000994]",
-        "index": null,
-        "type": "CONT FULL",
-        "original": "Sack",
-        "string": "Sac"
-    },
-    {
-        "editor_id": "ccEEJSSE002_Curio1",
-        "form_id": "[05000991]",
-        "index": null,
-        "type": "CONT FULL",
-        "original": "Cabinet",
-        "string": "Armoire"
-    },
-    {
-        "editor_id": "ccEEJSSE002_Curio2",
-        "form_id": "[05000989]",
-        "index": null,
-        "type": "CONT FULL",
-        "original": "Cabinet",
-        "string": "Armoire"
-    },
-    {
-        "editor_id": "ccEEJSSE002_LargeSackNRS",
-        "form_id": "[05000809]",
-        "index": null,
-        "type": "CONT FULL",
-        "original": "Sack",
-        "string": "Sac"
-    },
-    {
-        "editor_id": "ccEEJSSE002_SackEmptyNRS",
-        "form_id": "[05000993]",
-        "index": null,
-        "type": "CONT FULL",
-        "original": "Large Sack",
-        "string": "Grand sac"
-    },
-    {
-        "editor_id": "ccEEJSSE002_SackSmallFlat_NRS",
-        "form_id": "[05000995]",
-        "index": null,
-        "type": "CONT FULL",
-        "original": "Sack",
-        "string": "Sac"
-    },
-    {
-        "editor_id": "ccEEJSSE002_NobleCupboard",
-        "form_id": "[0500085B]",
-        "index": null,
-        "type": "CONT FULL",
-        "original": "Cupboard",
-        "string": "Placard"
+        "type": "BOOK FULL",
+        "original": "Sindnar's Tower Notes",
+        "string": "Notes de la tour de Sindnar"
     },
     {
         "editor_id": "ccEEJSSE002_Bookcase",
-        "form_id": "[0500083A]",
+        "form_id": "0500083A|cceejsse002-tower.esl",
         "index": null,
         "type": "CONT FULL",
         "original": "Bookcase",
         "string": "Bibliothèque"
     },
     {
+        "editor_id": "ccEEJSSE002_SackSmallFlat_NRS",
+        "form_id": "05000995|cceejsse002-tower.esl",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Sack",
+        "string": "Sac"
+    },
+    {
+        "editor_id": "ccEEJSSE002_IngredientsCupboard",
+        "form_id": "05000808|cceejsse002-tower.esl",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Cupboard",
+        "string": "Placard"
+    },
+    {
+        "editor_id": "ccEEJSSE002_LargeSackNRS",
+        "form_id": "05000809|cceejsse002-tower.esl",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Sack",
+        "string": "Sac"
+    },
+    {
+        "editor_id": "ccEEJSSE002_LargeFlat_NRS",
+        "form_id": "05000994|cceejsse002-tower.esl",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Sack",
+        "string": "Sac"
+    },
+    {
         "editor_id": "ccEEJSSE002_UrnSilver",
-        "form_id": "[0500098A]",
+        "form_id": "0500098A|cceejsse002-tower.esl",
         "index": null,
         "type": "CONT FULL",
         "original": "Urn",
         "string": "Urne"
     },
     {
+        "editor_id": "ccEEJSSE002_SoulGemBarrel",
+        "form_id": "0500098E|cceejsse002-tower.esl",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Barrel",
+        "string": "Baril"
+    },
+    {
+        "editor_id": "ccEEJSSE002_Curio1",
+        "form_id": "05000991|cceejsse002-tower.esl",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Cabinet",
+        "string": "Armoire"
+    },
+    {
+        "editor_id": "ccEEJSSE002_NobleCupboard",
+        "form_id": "0500085B|cceejsse002-tower.esl",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Cupboard",
+        "string": "Placard"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SackEmptyNRS",
+        "form_id": "05000993|cceejsse002-tower.esl",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Large Sack",
+        "string": "Grand sac"
+    },
+    {
+        "editor_id": "ccEEJSSE002_Curio2",
+        "form_id": "05000989|cceejsse002-tower.esl",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Cabinet",
+        "string": "Armoire"
+    },
+    {
+        "editor_id": "ccEEJSSE002_Barrel",
+        "form_id": "0500099D|cceejsse002-tower.esl",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Barrel",
+        "string": "Baril"
+    },
+    {
+        "editor_id": "ccEEJSSE002_TestStongBox",
+        "form_id": "05000CEE|cceejsse002-tower.esl",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Test Items",
+        "string": "Objets de test"
+    },
+    {
         "editor_id": "ccEEJSSE002_PortalDoor",
-        "form_id": "[0500080A]",
+        "form_id": "0500080A|cceejsse002-tower.esl",
         "index": null,
         "type": "DOOR FULL",
         "original": "Portal",
         "string": "Portail"
     },
     {
-        "editor_id": "ccEEJSSE002_Basket2",
-        "form_id": "[05000813]",
-        "index": null,
-        "type": "MISC FULL",
-        "original": "Basket",
-        "string": "Panier"
-    },
-    {
-        "editor_id": "ccEEJSSE002_SilverCup",
-        "form_id": "[0500087D]",
-        "index": null,
-        "type": "MISC FULL",
-        "original": "Cup",
-        "string": "Tasse"
-    },
-    {
-        "editor_id": "ccEEJSSE002_JugDwemer",
-        "form_id": "[05000812]",
-        "index": null,
-        "type": "MISC FULL",
-        "original": "Jug",
-        "string": "Cruche"
-    },
-    {
-        "editor_id": "ccEEJSSE002_Pitcher",
-        "form_id": "[05000861]",
-        "index": null,
-        "type": "MISC FULL",
-        "original": "Jeweled Pitcher",
-        "string": "Cruche ornée"
-    },
-    {
         "editor_id": "ccEEJSSE002_SilverUrn",
-        "form_id": "[0500086E]",
+        "form_id": "0500086E|cceejsse002-tower.esl",
         "index": null,
         "type": "MISC FULL",
         "original": "Urn",
         "string": "Urne"
     },
     {
-        "editor_id": "ccEEJSSE002_SilverBowl01",
-        "form_id": "[0500087B]",
-        "index": null,
-        "type": "MISC FULL",
-        "original": "Bowl",
-        "string": "Bol"
-    },
-    {
-        "editor_id": "ccEEJSSE002_SilverCandleStick2Misc",
-        "form_id": "[05000899]",
-        "index": null,
-        "type": "MISC FULL",
-        "original": "Candlestick",
-        "string": "Bougie"
-    },
-    {
-        "editor_id": "ccEEJSSE002_Platter",
-        "form_id": "[05000858]",
-        "index": null,
-        "type": "MISC FULL",
-        "original": "Platter",
-        "string": "Plat"
-    },
-    {
-        "editor_id": "ccEEJSSE002_GobletSilver",
-        "form_id": "[0500084A]",
-        "index": null,
-        "type": "MISC FULL",
-        "original": "Goblet",
-        "string": "Gobelet"
-    },
-    {
-        "editor_id": "ccEEJSSE002_LargeJug",
-        "form_id": "[0500086D]",
+        "editor_id": "ccEEJSSE002_NordJug",
+        "form_id": "05000815|cceejsse002-tower.esl",
         "index": null,
         "type": "MISC FULL",
         "original": "Jug",
@@ -1177,111 +1113,119 @@
     },
     {
         "editor_id": "ccEEJSSE002_SilverJug",
-        "form_id": "[05000847]",
+        "form_id": "05000847|cceejsse002-tower.esl",
         "index": null,
         "type": "MISC FULL",
         "original": "Jug",
         "string": "Cruche"
     },
     {
-        "editor_id": "ccEEJSSE002_SilverCandleStick1Misc",
-        "form_id": "[050008A9]",
+        "editor_id": "ccEEJSSE002_LargeJug",
+        "form_id": "0500086D|cceejsse002-tower.esl",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "Cruche"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SilverCandleStick2Misc",
+        "form_id": "05000899|cceejsse002-tower.esl",
         "index": null,
         "type": "MISC FULL",
         "original": "Candlestick",
         "string": "Bougie"
-    },
-    {
-        "editor_id": "ccEEJSSE002_SilverCandleStick3Misc",
-        "form_id": "[0500089B]",
-        "index": null,
-        "type": "MISC FULL",
-        "original": "Candlestick",
-        "string": "Bougie"
-    },
-    {
-        "editor_id": "ccEEJSSE002_NordJug",
-        "form_id": "[05000815]",
-        "index": null,
-        "type": "MISC FULL",
-        "original": "Jug",
-        "string": "Cruche"
-    },
-    {
-        "editor_id": "ccEEJSSE002_SilverJugLg",
-        "form_id": "[05000868]",
-        "index": null,
-        "type": "MISC FULL",
-        "original": "Jug",
-        "string": "Cruche"
     },
     {
         "editor_id": "ccEEJSSE002_Basket1",
-        "form_id": "[05000814]",
+        "form_id": "05000814|cceejsse002-tower.esl",
         "index": null,
         "type": "MISC FULL",
         "original": "Basket",
         "string": "Panier"
     },
     {
-        "editor_id": "ccEEJSSE002_DoubleBed",
-        "form_id": "[05000837]",
+        "editor_id": "ccEEJSSE002_SilverCup",
+        "form_id": "0500087D|cceejsse002-tower.esl",
         "index": null,
-        "type": "FURN FULL",
-        "original": "Bed",
-        "string": "Lit"
+        "type": "MISC FULL",
+        "original": "Cup",
+        "string": "Tasse"
     },
     {
-        "editor_id": "ccEEJSSE002_ChildBedL",
-        "form_id": "[05000836]",
+        "editor_id": "ccEEJSSE002_SilverBowl01",
+        "form_id": "0500087B|cceejsse002-tower.esl",
         "index": null,
-        "type": "FURN FULL",
-        "original": "Bed",
-        "string": "Lit"
+        "type": "MISC FULL",
+        "original": "Bowl",
+        "string": "Bol"
     },
     {
-        "editor_id": "ccEEJSSE002_ArmChair",
-        "form_id": "[05000839]",
+        "editor_id": "ccEEJSSE002_GobletSilver",
+        "form_id": "0500084A|cceejsse002-tower.esl",
         "index": null,
-        "type": "FURN FULL",
-        "original": "Armchair",
-        "string": "Fauteuil"
+        "type": "MISC FULL",
+        "original": "Goblet",
+        "string": "Gobelet"
     },
     {
-        "editor_id": "ccEEJSSE002_AllForge",
-        "form_id": "[05000834]",
+        "editor_id": "ccEEJSSE002_Pitcher",
+        "form_id": "05000861|cceejsse002-tower.esl",
         "index": null,
-        "type": "FURN FULL",
-        "original": "All Forge",
-        "string": "Toutes les forges"
+        "type": "MISC FULL",
+        "original": "Jeweled Pitcher",
+        "string": "Cruche ornée"
     },
     {
-        "editor_id": "ccEEJSSE002_ChildBedR",
-        "form_id": "[05000838]",
+        "editor_id": "ccEEJSSE002_SilverJugLg",
+        "form_id": "05000868|cceejsse002-tower.esl",
         "index": null,
-        "type": "FURN FULL",
-        "original": "Bed",
-        "string": "Lit"
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "Cruche"
     },
     {
-        "editor_id": "ccEEJSSE002_NarrowBench",
-        "form_id": "[050009D5]",
+        "editor_id": "ccEEJSSE002_Basket2",
+        "form_id": "05000813|cceejsse002-tower.esl",
         "index": null,
-        "type": "FURN FULL",
-        "original": "Bench",
-        "string": "Banc"
+        "type": "MISC FULL",
+        "original": "Basket",
+        "string": "Panier"
     },
     {
-        "editor_id": "ccEEJSSE002_StaffWorkbench",
-        "form_id": "[05000CB3]",
+        "editor_id": "ccEEJSSE002_SilverCandleStick3Misc",
+        "form_id": "0500089B|cceejsse002-tower.esl",
         "index": null,
-        "type": "FURN FULL",
-        "original": "Staff Enchanter",
-        "string": "Enchanteur de bâton"
+        "type": "MISC FULL",
+        "original": "Candlestick",
+        "string": "Bougie"
+    },
+    {
+        "editor_id": "ccEEJSSE002_Platter",
+        "form_id": "05000858|cceejsse002-tower.esl",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Platter",
+        "string": "Plat"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SilverCandleStick1Misc",
+        "form_id": "050008A9|cceejsse002-tower.esl",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Candlestick",
+        "string": "Bougie"
+    },
+    {
+        "editor_id": "ccEEJSSE002_JugDwemer",
+        "form_id": "05000812|cceejsse002-tower.esl",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "Cruche"
     },
     {
         "editor_id": "ccEEJSSE002_Enchanter",
-        "form_id": "[05000CB2]",
+        "form_id": "05000CB2|cceejsse002-tower.esl",
         "index": null,
         "type": "FURN FULL",
         "original": "Arcane Enchanter",
@@ -1289,79 +1233,103 @@
     },
     {
         "editor_id": "ccEEJSSE002_SmeltingPot",
-        "form_id": "[05000C65]",
+        "form_id": "05000C65|cceejsse002-tower.esl",
         "index": null,
         "type": "FURN FULL",
         "original": "Smelting Pot",
         "string": "Marmite de fonderie"
     },
     {
+        "editor_id": "ccEEJSSE002_DoubleBed",
+        "form_id": "05000837|cceejsse002-tower.esl",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "Lit"
+    },
+    {
+        "editor_id": "ccEEJSSE002_ChildBedR",
+        "form_id": "05000838|cceejsse002-tower.esl",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "Lit"
+    },
+    {
+        "editor_id": "ccEEJSSE002_StaffWorkbench",
+        "form_id": "05000CB3|cceejsse002-tower.esl",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Staff Enchanter",
+        "string": "Enchanteur de bâton"
+    },
+    {
+        "editor_id": "ccEEJSSE002_AllForge",
+        "form_id": "05000834|cceejsse002-tower.esl",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "All Forge",
+        "string": "Toutes les forges"
+    },
+    {
         "editor_id": "ccEEJSSE002_OvenMarker",
-        "form_id": "[05000835]",
+        "form_id": "05000835|cceejsse002-tower.esl",
         "index": null,
         "type": "FURN FULL",
         "original": "Baking Surface",
         "string": "Plaque de cuisson"
     },
     {
-        "editor_id": "ccEEJSSE002_GhostMageNordF",
-        "form_id": "[05000FE0]",
+        "editor_id": "ccEEJSSE002_NarrowBench",
+        "form_id": "050009D5|cceejsse002-tower.esl",
         "index": null,
-        "type": "NPC_ FULL",
-        "original": "Elianora",
-        "string": "Elianora"
+        "type": "FURN FULL",
+        "original": "Bench",
+        "string": "Banc"
+    },
+    {
+        "editor_id": "ccEEJSSE002_ArmChair",
+        "form_id": "05000839|cceejsse002-tower.esl",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Armchair",
+        "string": "Fauteuil"
+    },
+    {
+        "editor_id": "ccEEJSSE002_ChildBedL",
+        "form_id": "05000836|cceejsse002-tower.esl",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Bed",
+        "string": "Lit"
     },
     {
         "editor_id": "ccEEJSSE002_CorpseBanditDarkElfMale",
-        "form_id": "[05000FDF]",
+        "form_id": "05000FDF|cceejsse002-tower.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Hans",
         "string": "Hans"
     },
     {
+        "editor_id": "ccEEJSSE002_GhostMageNordF",
+        "form_id": "05000FE0|cceejsse002-tower.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Elianora",
+        "string": "Elianora"
+    },
+    {
         "editor_id": "ccEEJSSE002_MageTowerKey",
-        "form_id": "[05000FE1]",
+        "form_id": "05000FE1|cceejsse002-tower.esl",
         "index": null,
         "type": "KEYM FULL",
         "original": "Enchanted Tower Key",
         "string": "Clé de la tour enchantée"
     },
     {
-        "editor_id": "ccEEJSSE002MageTowerSecond",
-        "form_id": "[0500092C]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Myrwatch Gallery",
-        "string": "Galerie de Myrwatch"
-    },
-    {
-        "editor_id": "ccEEJSSE002MageTowerMain",
-        "form_id": "[0500083B]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Myrwatch",
-        "string": "Myrwatch"
-    },
-    {
-        "editor_id": "CTest",
-        "form_id": "[000B1783]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Quick Test Cell",
-        "string": "Cellule test rapide"
-    },
-    {
-        "editor_id": null,
-        "form_id": "[05000FA2]",
-        "index": null,
-        "type": "REFR FULL",
-        "original": "Myrwatch",
-        "string": "Myrwatch"
-    },
-    {
         "editor_id": "Tamriel",
-        "form_id": "[0000003C]",
+        "form_id": "0000003C|Skyrim.esm",
         "index": null,
         "type": "WRLD FULL",
         "original": "Skyrim",
@@ -1369,15 +1337,15 @@
     },
     {
         "editor_id": "ccEEJSSE002_MageTowerQuest",
-        "form_id": "[05000FF3]",
-        "index": 76,
+        "form_id": "05000FF3|cceejsse002-tower.esl",
+        "index": 69,
         "type": "QUST CNAM",
-        "original": "I've found a mysterious tower in the swamps of Hjaalmarch. However, the door to tower is locked. I should investigate the area to see if there's a way in.",
-        "string": "J'ai découvert une tour mystérieuse dans les marais de Hjaalmarch. Cependant, la porte de la tour est verrouillée. Je devrais inspecter la zone pour voir si je peux trouver un moyen d'entrer."
+        "original": "I've found a mysterious tower in the swamps of Hjaalmarch. Activating a seal by the front door summoned a ghostly apparition which unlocked the tower.",
+        "string": "J'ai découvert une tour mystérieuse dans les marais de Hjaalmarch. Activer le sceau à l'entrée a invoqué une apparition fantomatique, ce qui a déverrouillé la porte."
     },
     {
         "editor_id": "ccEEJSSE002_MageTowerQuest",
-        "form_id": "[05000FF3]",
+        "form_id": "05000FF3|cceejsse002-tower.esl",
         "index": 20,
         "type": "QUST NNAM",
         "original": "Find a way inside the tower",
@@ -1385,47 +1353,7 @@
     },
     {
         "editor_id": "ccEEJSSE002_MageTowerQuest",
-        "form_id": "[05000FF3]",
-        "index": 30,
-        "type": "QUST NNAM",
-        "original": "Activate the seal",
-        "string": "Activez le sceau"
-    },
-    {
-        "editor_id": "ccEEJSSE002_MageTowerQuest",
-        "form_id": "[05000FF3]",
-        "index": 93,
-        "type": "QUST CNAM",
-        "original": "I've found a mysterious tower in the swamps of Hjaalmarch. After finding my way inside, it appears to be an elaborate home built for a powerful mage. I may be able to make use of the lodgings in my travels through Skyrim. ",
-        "string": "J'ai découvert une tour mystérieuse dans les marais de Hjaalmarch. Après avoir réussi à entrer, il semble s'agir d'une maison élaborée construite pour un puissant mage. Je pourrais peut-être utiliser cet endroit pour me loger au fil de mes voyages en Bordeciel. "
-    },
-    {
-        "editor_id": "ccEEJSSE002_MageTowerQuest",
-        "form_id": "[05000FF3]",
-        "index": 93,
-        "type": "QUST CNAM",
-        "original": "I've found a mysterious tower in the swamps of Hjaalmarch. Activating a seal by the front door summoned a ghostly apparition which unlocked the tower.",
-        "string": "J'ai découvert une tour mystérieuse dans les marais de Hjaalmarch. Activer le sceau à l'entrée a invoqué une apparition fantomatique, ce qui a déverrouillé la porte."
-    },
-    {
-        "editor_id": "ccEEJSSE002_MageTowerQuest",
-        "form_id": "[05000FF3]",
-        "index": 110,
-        "type": "QUST CNAM",
-        "original": "I've heard rumors of a mysterious tower somewhere east of Morthal. If it's abandoned, I may be able to make of use of it.",
-        "string": "J'ai entendu des rumeurs au sujet d'une tour mystérieuse à l'est de Morthal. Si elle est abandonnée, je pourrais peut-être en faire usage."
-    },
-    {
-        "editor_id": "ccEEJSSE002_MageTowerQuest",
-        "form_id": "[05000FF3]",
-        "index": 85,
-        "type": "QUST CNAM",
-        "original": "I've heard rumors of a mysterious tower somewhere east of Morthal. If it's abandoned, I may be able to make of use of it. When I reached the tower, I found a journal that may provide clues on how to enter it.",
-        "string": "J'ai entendu des rumeurs au sujet d'une tour mystérieuse à l'est de Morthal. Si elle est abandonnée, je pourrais peut-être en faire usage. Lorsque j'ai atteint la tour, j'ai trouvé un journal qui pourrait contenir des indices pour réussir à entrer."
-    },
-    {
-        "editor_id": "ccEEJSSE002_MageTowerQuest",
-        "form_id": "[05000FF3]",
+        "form_id": "05000FF3|cceejsse002-tower.esl",
         "index": 10,
         "type": "QUST NNAM",
         "original": "Investigate Myrwatch",
@@ -1433,31 +1361,15 @@
     },
     {
         "editor_id": "ccEEJSSE002_MageTowerQuest",
-        "form_id": "[05000FF3]",
-        "index": 82,
+        "form_id": "05000FF3|cceejsse002-tower.esl",
+        "index": 84,
         "type": "QUST CNAM",
-        "original": "I've found a mysterious tower in the swamps of Hjaalmarch. However, the door to tower is locked. A journal on a nearby body indicates I need to activate a stone seal to light the way.",
-        "string": "J'ai découvert une tour mystérieuse dans les marais de Hjaalmarch. Cependant, la porte de la tour est verrouillée. Un journal sur un cadavre non loin indique que je dois activer un sceau de pierre pour illuminer la voie."
+        "original": "I've found a mysterious tower in the swamps of Hjaalmarch. However, the door to tower is locked. A journal on a nearby body indicates I need to activate a stone seal. Activating it summoned a ghostly apparition. I should follow it and see where it leads.",
+        "string": "J'ai découvert une tour mystérieuse dans les marais de Hjaalmarch. Cependant, la porte de la tour est verrouillée. Un journal sur un cadavre non loin indique que je dois activer un sceau de pierre. Activer le sceau à l'entrée a invoqué une apparition fantomatique. Je devrais la suivre pour voir où elle me conduit."
     },
     {
         "editor_id": "ccEEJSSE002_MageTowerQuest",
-        "form_id": "[05000FF3]",
-        "index": 86,
-        "type": "QUST CNAM",
-        "original": "I've found a mysterious tower in the swamps of Hjaalmarch. However, the door to tower is locked. A journal on a nearby body indicates I need to activate a stone seal. Activating it summoned a ghostly apparition which unlocked the tower.",
-        "string": "J'ai découvert une tour mystérieuse dans les marais de Hjaalmarch. Cependant, la porte de la tour est verrouillée. Un journal sur un cadavre non loin indique que je dois activer un sceau de pierre. Activer le sceau à l'entrée a invoqué une apparition fantomatique, ce qui a déverrouillé la porte."
-    },
-    {
-        "editor_id": "ccEEJSSE002_MageTowerQuest",
-        "form_id": "[05000FF3]",
-        "index": 5,
-        "type": "QUST NNAM",
-        "original": "Read Hans's journal",
-        "string": "Lisez le journal d'Hans"
-    },
-    {
-        "editor_id": "ccEEJSSE002_MageTowerQuest",
-        "form_id": "[05000FF3]",
+        "form_id": "05000FF3|cceejsse002-tower.esl",
         "index": 60,
         "type": "QUST NNAM",
         "original": "Enter Myrwatch",
@@ -1465,7 +1377,47 @@
     },
     {
         "editor_id": "ccEEJSSE002_MageTowerQuest",
-        "form_id": "[05000FF3]",
+        "form_id": "05000FF3|cceejsse002-tower.esl",
+        "index": 40,
+        "type": "QUST NNAM",
+        "original": "Follow the hare",
+        "string": "Suivez le lièvre"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "form_id": "05000FF3|cceejsse002-tower.esl",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Activate the seal",
+        "string": "Activez le sceau"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "form_id": "05000FF3|cceejsse002-tower.esl",
+        "index": 65,
+        "type": "QUST CNAM",
+        "original": "I've found a mysterious tower in the swamps of Hjaalmarch. After finding my way inside, it appears to be an elaborate home built for a powerful mage. I may be able to make use of the lodgings in my travels through Skyrim. ",
+        "string": "J'ai découvert une tour mystérieuse dans les marais de Hjaalmarch. Après avoir réussi à entrer, il semble s'agir d'une maison élaborée construite pour un puissant mage. Je pourrais peut-être utiliser cet endroit pour me loger au fil de mes voyages en Bordeciel. "
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "form_id": "05000FF3|cceejsse002-tower.esl",
+        "index": 79,
+        "type": "QUST CNAM",
+        "original": "I've found a mysterious tower in the swamps of Hjaalmarch. However, the door to tower is locked. I should investigate the area to see if there's a way in.",
+        "string": "J'ai découvert une tour mystérieuse dans les marais de Hjaalmarch. Cependant, la porte de la tour est verrouillée. Je devrais inspecter la zone pour voir si je peux trouver un moyen d'entrer."
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "form_id": "05000FF3|cceejsse002-tower.esl",
+        "index": 5,
+        "type": "QUST NNAM",
+        "original": "Read Hans's journal",
+        "string": "Lisez le journal d'Hans"
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "form_id": "05000FF3|cceejsse002-tower.esl",
         "index": null,
         "type": "QUST FULL",
         "original": "Myrwatch",
@@ -1473,23 +1425,31 @@
     },
     {
         "editor_id": "ccEEJSSE002_MageTowerQuest",
-        "form_id": "[05000FF3]",
-        "index": 96,
+        "form_id": "05000FF3|cceejsse002-tower.esl",
+        "index": 110,
         "type": "QUST CNAM",
-        "original": "I've found a mysterious tower in the swamps of Hjaalmarch. However, the door to tower is locked. A journal on a nearby body indicates I need to activate a stone seal. Activating it summoned a ghostly apparition. I should follow it and see where it leads.",
-        "string": "J'ai découvert une tour mystérieuse dans les marais de Hjaalmarch. Cependant, la porte de la tour est verrouillée. Un journal sur un cadavre non loin indique que je dois activer un sceau de pierre. Activer le sceau à l'entrée a invoqué une apparition fantomatique. Je devrais la suivre pour voir où elle me conduit."
+        "original": "I've heard rumors of a mysterious tower somewhere east of Morthal. If it's abandoned, I may be able to make of use of it. When I reached the tower, I found a journal that may provide clues on how to enter it.",
+        "string": "J'ai entendu des rumeurs au sujet d'une tour mystérieuse à l'est de Morthal. Si elle est abandonnée, je pourrais peut-être en faire usage. Lorsque j'ai atteint la tour, j'ai trouvé un journal qui pourrait contenir des indices pour réussir à entrer."
     },
     {
         "editor_id": "ccEEJSSE002_MageTowerQuest",
-        "form_id": "[05000FF3]",
-        "index": 40,
-        "type": "QUST NNAM",
-        "original": "Follow the hare",
-        "string": "Suivez le lièvre"
+        "form_id": "05000FF3|cceejsse002-tower.esl",
+        "index": 67,
+        "type": "QUST CNAM",
+        "original": "I've found a mysterious tower in the swamps of Hjaalmarch. However, the door to tower is locked. A journal on a nearby body indicates I need to activate a stone seal to light the way.",
+        "string": "J'ai découvert une tour mystérieuse dans les marais de Hjaalmarch. Cependant, la porte de la tour est verrouillée. Un journal sur un cadavre non loin indique que je dois activer un sceau de pierre pour illuminer la voie."
+    },
+    {
+        "editor_id": "ccEEJSSE002_MageTowerQuest",
+        "form_id": "05000FF3|cceejsse002-tower.esl",
+        "index": 54,
+        "type": "QUST CNAM",
+        "original": "I've heard rumors of a mysterious tower somewhere east of Morthal. If it's abandoned, I may be able to make of use of it.",
+        "string": "J'ai entendu des rumeurs au sujet d'une tour mystérieuse à l'est de Morthal. Si elle est abandonnée, je pourrais peut-être en faire usage."
     },
     {
         "editor_id": "ccEEJSSE002_StaffEnchanterPerk",
-        "form_id": "[05000940]",
+        "form_id": "05000940|cceejsse002-tower.esl",
         "index": null,
         "type": "PERK FULL",
         "original": "Staff Enchanting Mult",
@@ -1497,7 +1457,7 @@
     },
     {
         "editor_id": "ccEEJSSE002_MageTowerEXTLocation",
-        "form_id": "[05000FA6]",
+        "form_id": "05000FA6|cceejsse002-tower.esl",
         "index": null,
         "type": "LCTN FULL",
         "original": "Myrwatch",
@@ -1505,7 +1465,7 @@
     },
     {
         "editor_id": "ccEEJSSE002_MageTowerINTLocation",
-        "form_id": "[05000FA7]",
+        "form_id": "05000FA7|cceejsse002-tower.esl",
         "index": null,
         "type": "LCTN FULL",
         "original": "Myrwatch",
@@ -1513,7 +1473,7 @@
     },
     {
         "editor_id": "ccEEJSSE002_DisplayLackMsg",
-        "form_id": "[05000CAB]",
+        "form_id": "05000CAB|cceejsse002-tower.esl",
         "index": null,
         "type": "MESG DESC",
         "original": "You do not have the required item.",
@@ -1521,7 +1481,7 @@
     },
     {
         "editor_id": "ccEEJSSE002_DoorUnlockedMsg",
-        "form_id": "[05000D1C]",
+        "form_id": "05000D1C|cceejsse002-tower.esl",
         "index": null,
         "type": "MESG DESC",
         "original": "The tower door was unlocked by mysterious forces.",

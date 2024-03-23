@@ -1,39 +1,39 @@
 [
     {
-        "editor_id": "ccBGSSSE057_ArmorStalhrimCuirass",
-        "form_id": "[05000801]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Stalhrim Fur Armor",
-        "string": "Сталгримовая меховая броня"
-    },
-    {
-        "editor_id": "ccBGSSSE057_ArmorStalhrimGauntlets",
-        "form_id": "[05000802]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Stalhrim Fur Gauntlets",
-        "string": "Сталгримовые меховые перчатки"
-    },
-    {
         "editor_id": "ccBGSSSE057_ArmorStalhrimBoots",
-        "form_id": "[05000800]",
+        "form_id": "05000800|ccbgssse057-ba_stalhrim.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Stalhrim Fur Boots",
         "string": "Сталгримовые меховые сапоги"
     },
     {
+        "editor_id": "ccBGSSSE057_ArmorStalhrimGauntlets",
+        "form_id": "05000802|ccbgssse057-ba_stalhrim.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Stalhrim Fur Gauntlets",
+        "string": "Сталгримовые меховые перчатки"
+    },
+    {
         "editor_id": "ccBGSSSE057_ArmorStalhrimHelmet",
-        "form_id": "[05000803]",
+        "form_id": "05000803|ccbgssse057-ba_stalhrim.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Stalhrim Fur Helmet",
         "string": "Сталгримовый меховой шлем"
     },
     {
+        "editor_id": "ccBGSSSE057_ArmorStalhrimCuirass",
+        "form_id": "05000801|ccbgssse057-ba_stalhrim.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Stalhrim Fur Armor",
+        "string": "Сталгримовая меховая броня"
+    },
+    {
         "editor_id": "ccBGSSSE057_SkjolNote",
-        "form_id": "[05000819]",
+        "form_id": "05000819|ccbgssse057-ba_stalhrim.esl",
         "index": null,
         "type": "BOOK DESC",
         "original": "<font face=\"$HandwrittenFont\" size=\"20\">\r\nTyra tell Skjol to wait, so he wait. But then he meet nice man from village, who show him magic ice. He call it stalhrim.\r\n\r\nSkjol like stalhrim. He like way it look. He like way it sound. H is silent, just like Skjol, because Skjol have no tongue. \r\n\r\nBut Skjol's axe is loud. It make good crunch noise in ice.\r\n\r\nBut stalhrim make different noise. Most ice go \"REEEEE!\" but magic ice go \"UNFH!\"\r\n\r\nSkjol should be bard. \r\n\r\nNice man say there island north of Cassookar...Cassookarst...he say there island all way north with much magic ice. The kind Skjol can wear.\r\n\r\nSkjol think man very nice, he sorry he have to crush him.</font>",
@@ -41,7 +41,7 @@
     },
     {
         "editor_id": "ccBGSSSE057_SkjolNote",
-        "form_id": "[05000819]",
+        "form_id": "05000819|ccbgssse057-ba_stalhrim.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "Skjol's Journal",
@@ -49,7 +49,15 @@
     },
     {
         "editor_id": "ccBGSSSE057_Skjol",
-        "form_id": "[05000828]",
+        "form_id": "05000828|ccbgssse057-ba_stalhrim.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Skjol the Tongueless",
+        "string": "Скьол Безъязыкий"
+    },
+    {
+        "editor_id": "ccBGSSSE057_Skjol",
+        "form_id": "05000828|ccbgssse057-ba_stalhrim.esl",
         "index": null,
         "type": "NPC_ SHRT",
         "original": "Skjol",
@@ -57,31 +65,47 @@
     },
     {
         "editor_id": "ccBGSSSE057_TreasCorpseBanditNordMale",
-        "form_id": "[05000825]",
+        "form_id": "05000825|ccbgssse057-ba_stalhrim.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Skaal Villager",
         "string": "Житель деревни скаалов"
     },
     {
-        "editor_id": "ccBGSSSE057_Skjol",
-        "form_id": "[05000828]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Skjol the Tongueless",
-        "string": "Скьол Безъязыкий"
-    },
-    {
         "editor_id": "DLC2SolstheimWorld",
-        "form_id": "[04000800]",
+        "form_id": "04000800|Dragonborn.esm",
         "index": null,
         "type": "WRLD FULL",
         "original": "Solstheim",
         "string": "Солстейм"
     },
     {
+        "editor_id": "ccBGSSSE057_Quest",
+        "form_id": "0500081A|ccbgssse057-ba_stalhrim.esl",
+        "index": 85,
+        "type": "QUST CNAM",
+        "original": "At a camp to the south of Skaal Village, I found a dead villager and a journal. The journal implies a warrior named Skjol killed the villager and went north in search of stalhrim. I should investigate the area and see what I can find.",
+        "string": "В лагере к югу от деревни скаалов мне попался мертвый селянин. Рядом нашелся дневник, в котором говорилось, что селянина убил некий воин по имени Скьол, который затем отправился на север в поисках сталгрима. Надо обследовать местность: вдруг удастся еще что-то выяснить."
+    },
+    {
+        "editor_id": "ccBGSSSE057_Quest",
+        "form_id": "0500081A|ccbgssse057-ba_stalhrim.esl",
+        "index": 66,
+        "type": "QUST CNAM",
+        "original": "At a camp to the south of Skaal Village, I found a dead villager and a journal. The journal implies a warrior named Skjol killed the villager and went north in search of stalhrim. At the location I found a burial tomb and was attacked by a Nord. I defeated the Nord and claimed the armor he uncovered.",
+        "string": "В лагере к югу от деревни скаалов мне попался мертвый селянин. Рядом нашелся дневник, в котором говорилось, что селянина убил некий воин по имени Скьол, который затем отправился на север в поисках сталгрима. В указанном месте близ гробницы на меня напал какой-то норд. Мне удалось победить его и забрать добытую им броню."
+    },
+    {
+        "editor_id": "ccBGSSSE057_Quest",
+        "form_id": "0500081A|ccbgssse057-ba_stalhrim.esl",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Retrieve the armor",
+        "string": "Забрать броню"
+    },
+    {
         "editor_id": "ccBGSSSE057_MiscQuest",
-        "form_id": "[0500081B]",
+        "form_id": "0500081B|ccbgssse057-ba_stalhrim.esl",
         "index": 10,
         "type": "QUST NNAM",
         "original": "Search the camp near Skaal Village",
@@ -89,31 +113,15 @@
     },
     {
         "editor_id": "ccBGSSSE057_Quest",
-        "form_id": "[0500081A]",
-        "index": 88,
+        "form_id": "0500081A|ccbgssse057-ba_stalhrim.esl",
+        "index": 102,
         "type": "QUST CNAM",
-        "original": "At a camp to the south of Skaal Village, I found a dead villager and a journal. The journal implies a warrior named Skjol killed the villager and went north in search of stalhrim. At the location I found a burial tomb and was attacked by a Nord. I defeated the Nord and can now claim the armor he uncovered.",
-        "string": "В лагере к югу от деревни скаалов мне попался мертвый селянин. Рядом нашелся дневник, в котором говорилось, что селянина убил некий воин по имени Скьол, который затем отправился на север в поисках сталгрима. В указанном месте близ гробницы на меня напал какой-то норд. Мне удалось победить его, и теперь я могу забрать добытую им броню."
+        "original": "At a camp to the south of Skaal Village, I found a dead villager and a journal. The journal implies a warrior named Skjol killed the villager and went north in search of stalhrim. At the location I found a burial tomb and was attacked by a Nord.",
+        "string": "В лагере к югу от деревни скаалов мне попался мертвый селянин. Рядом нашелся дневник, в котором говорилось, что селянина убил некий воин по имени Скьол, который затем отправился на север в поисках сталгрима. В указанном месте близ гробницы на меня напал какой-то норд."
     },
     {
         "editor_id": "ccBGSSSE057_Quest",
-        "form_id": "[0500081A]",
-        "index": 113,
-        "type": "QUST CNAM",
-        "original": "At a camp to the south of Skaal Village, I found a dead villager and a journal. The journal implies a warrior named Skjol killed the villager and went north in search of stalhrim. At the location I found a burial tomb and was attacked by a Nord. I defeated the Nord and claimed the armor he uncovered.",
-        "string": "В лагере к югу от деревни скаалов мне попался мертвый селянин. Рядом нашелся дневник, в котором говорилось, что селянина убил некий воин по имени Скьол, который затем отправился на север в поисках сталгрима. В указанном месте близ гробницы на меня напал какой-то норд. Мне удалось победить его и забрать добытую им броню."
-    },
-    {
-        "editor_id": "ccBGSSSE057_Quest",
-        "form_id": "[0500081A]",
-        "index": 30,
-        "type": "QUST NNAM",
-        "original": "Retrieve the armor",
-        "string": "Забрать броню"
-    },
-    {
-        "editor_id": "ccBGSSSE057_Quest",
-        "form_id": "[0500081A]",
+        "form_id": "0500081A|ccbgssse057-ba_stalhrim.esl",
         "index": 10,
         "type": "QUST NNAM",
         "original": "Search the island for stalhrim",
@@ -121,23 +129,7 @@
     },
     {
         "editor_id": "ccBGSSSE057_Quest",
-        "form_id": "[0500081A]",
-        "index": 20,
-        "type": "QUST NNAM",
-        "original": "Kill Skjol",
-        "string": "Убить Скьола"
-    },
-    {
-        "editor_id": "ccBGSSSE057_Quest",
-        "form_id": "[0500081A]",
-        "index": 89,
-        "type": "QUST CNAM",
-        "original": "At a camp to the south of Skaal Village, I found a dead villager and a journal. The journal implies a warrior named Skjol killed the villager and went north in search of stalhrim. I should investigate the area and see what I can find.",
-        "string": "В лагере к югу от деревни скаалов мне попался мертвый селянин. Рядом нашелся дневник, в котором говорилось, что селянина убил некий воин по имени Скьол, который затем отправился на север в поисках сталгрима. Надо обследовать местность: вдруг удастся еще что-то выяснить."
-    },
-    {
-        "editor_id": "ccBGSSSE057_Quest",
-        "form_id": "[0500081A]",
+        "form_id": "0500081A|ccbgssse057-ba_stalhrim.esl",
         "index": null,
         "type": "QUST FULL",
         "original": "Ancient Ice",
@@ -145,10 +137,18 @@
     },
     {
         "editor_id": "ccBGSSSE057_Quest",
-        "form_id": "[0500081A]",
-        "index": 88,
+        "form_id": "0500081A|ccbgssse057-ba_stalhrim.esl",
+        "index": 65,
         "type": "QUST CNAM",
-        "original": "At a camp to the south of Skaal Village, I found a dead villager and a journal. The journal implies a warrior named Skjol killed the villager and went north in search of stalhrim. At the location I found a burial tomb and was attacked by a Nord.",
-        "string": "В лагере к югу от деревни скаалов мне попался мертвый селянин. Рядом нашелся дневник, в котором говорилось, что селянина убил некий воин по имени Скьол, который затем отправился на север в поисках сталгрима. В указанном месте близ гробницы на меня напал какой-то норд."
+        "original": "At a camp to the south of Skaal Village, I found a dead villager and a journal. The journal implies a warrior named Skjol killed the villager and went north in search of stalhrim. At the location I found a burial tomb and was attacked by a Nord. I defeated the Nord and can now claim the armor he uncovered.",
+        "string": "В лагере к югу от деревни скаалов мне попался мертвый селянин. Рядом нашелся дневник, в котором говорилось, что селянина убил некий воин по имени Скьол, который затем отправился на север в поисках сталгрима. В указанном месте близ гробницы на меня напал какой-то норд. Мне удалось победить его, и теперь я могу забрать добытую им броню."
+    },
+    {
+        "editor_id": "ccBGSSSE057_Quest",
+        "form_id": "0500081A|ccbgssse057-ba_stalhrim.esl",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Kill Skjol",
+        "string": "Убить Скьола"
     }
 ]

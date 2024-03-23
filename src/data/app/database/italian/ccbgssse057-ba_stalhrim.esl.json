@@ -1,39 +1,39 @@
 [
     {
-        "editor_id": "ccBGSSSE057_ArmorStalhrimCuirass",
-        "form_id": "[05000801]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Stalhrim Fur Armor",
-        "string": "Armatura di pelliccia con stalhrim"
-    },
-    {
-        "editor_id": "ccBGSSSE057_ArmorStalhrimGauntlets",
-        "form_id": "[05000802]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Stalhrim Fur Gauntlets",
-        "string": "Guanti di pelliccia con stalhrim"
-    },
-    {
         "editor_id": "ccBGSSSE057_ArmorStalhrimBoots",
-        "form_id": "[05000800]",
+        "form_id": "05000800|ccbgssse057-ba_stalhrim.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Stalhrim Fur Boots",
         "string": "Stivali di pelliccia con stalhrim"
     },
     {
+        "editor_id": "ccBGSSSE057_ArmorStalhrimGauntlets",
+        "form_id": "05000802|ccbgssse057-ba_stalhrim.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Stalhrim Fur Gauntlets",
+        "string": "Guanti di pelliccia con stalhrim"
+    },
+    {
         "editor_id": "ccBGSSSE057_ArmorStalhrimHelmet",
-        "form_id": "[05000803]",
+        "form_id": "05000803|ccbgssse057-ba_stalhrim.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Stalhrim Fur Helmet",
         "string": "Elmo di pelliccia con stalhrim"
     },
     {
+        "editor_id": "ccBGSSSE057_ArmorStalhrimCuirass",
+        "form_id": "05000801|ccbgssse057-ba_stalhrim.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Stalhrim Fur Armor",
+        "string": "Armatura di pelliccia con stalhrim"
+    },
+    {
         "editor_id": "ccBGSSSE057_SkjolNote",
-        "form_id": "[05000819]",
+        "form_id": "05000819|ccbgssse057-ba_stalhrim.esl",
         "index": null,
         "type": "BOOK DESC",
         "original": "<font face=\"$HandwrittenFont\" size=\"20\">\r\nTyra tell Skjol to wait, so he wait. But then he meet nice man from village, who show him magic ice. He call it stalhrim.\r\n\r\nSkjol like stalhrim. He like way it look. He like way it sound. H is silent, just like Skjol, because Skjol have no tongue. \r\n\r\nBut Skjol's axe is loud. It make good crunch noise in ice.\r\n\r\nBut stalhrim make different noise. Most ice go \"REEEEE!\" but magic ice go \"UNFH!\"\r\n\r\nSkjol should be bard. \r\n\r\nNice man say there island north of Cassookar...Cassookarst...he say there island all way north with much magic ice. The kind Skjol can wear.\r\n\r\nSkjol think man very nice, he sorry he have to crush him.</font>",
@@ -41,7 +41,7 @@
     },
     {
         "editor_id": "ccBGSSSE057_SkjolNote",
-        "form_id": "[05000819]",
+        "form_id": "05000819|ccbgssse057-ba_stalhrim.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "Skjol's Journal",
@@ -49,7 +49,15 @@
     },
     {
         "editor_id": "ccBGSSSE057_Skjol",
-        "form_id": "[05000828]",
+        "form_id": "05000828|ccbgssse057-ba_stalhrim.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Skjol the Tongueless",
+        "string": "Skjol Senzalingua"
+    },
+    {
+        "editor_id": "ccBGSSSE057_Skjol",
+        "form_id": "05000828|ccbgssse057-ba_stalhrim.esl",
         "index": null,
         "type": "NPC_ SHRT",
         "original": "Skjol",
@@ -57,31 +65,47 @@
     },
     {
         "editor_id": "ccBGSSSE057_TreasCorpseBanditNordMale",
-        "form_id": "[05000825]",
+        "form_id": "05000825|ccbgssse057-ba_stalhrim.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Skaal Villager",
         "string": "Abitante di Skaal"
     },
     {
-        "editor_id": "ccBGSSSE057_Skjol",
-        "form_id": "[05000828]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Skjol the Tongueless",
-        "string": "Skjol Senzalingua"
-    },
-    {
         "editor_id": "DLC2SolstheimWorld",
-        "form_id": "[04000800]",
+        "form_id": "04000800|Dragonborn.esm",
         "index": null,
         "type": "WRLD FULL",
         "original": "Solstheim",
         "string": "Solstheim"
     },
     {
+        "editor_id": "ccBGSSSE057_Quest",
+        "form_id": "0500081A|ccbgssse057-ba_stalhrim.esl",
+        "index": 85,
+        "type": "QUST CNAM",
+        "original": "At a camp to the south of Skaal Village, I found a dead villager and a journal. The journal implies a warrior named Skjol killed the villager and went north in search of stalhrim. I should investigate the area and see what I can find.",
+        "string": "In un accampamento a sud del villaggio di Skaal, ho trovato un abitante morto e un diario. Nel diario c'è scritto che è stato un guerriero di nome Skjol a uccidere l'abitante e che si è diretto a nord in cerca di stalhrim. Devo esplorare la zona per saperne di più."
+    },
+    {
+        "editor_id": "ccBGSSSE057_Quest",
+        "form_id": "0500081A|ccbgssse057-ba_stalhrim.esl",
+        "index": 66,
+        "type": "QUST CNAM",
+        "original": "At a camp to the south of Skaal Village, I found a dead villager and a journal. The journal implies a warrior named Skjol killed the villager and went north in search of stalhrim. At the location I found a burial tomb and was attacked by a Nord. I defeated the Nord and claimed the armor he uncovered.",
+        "string": "In un accampamento a sud del villaggio di Skaal, ho trovato un abitante morto e un diario. Nel diario c'è scritto che è stato un guerriero di nome Skjol a uccidere l'abitante e che si è diretto a nord in cerca di stalhrim. Una volta arrivato ho trovato una tomba e sono stato attaccato da un nord. Ho sconfitto il nord e mi sono impossessato dell'armatura che aveva scoperto."
+    },
+    {
+        "editor_id": "ccBGSSSE057_Quest",
+        "form_id": "0500081A|ccbgssse057-ba_stalhrim.esl",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Retrieve the armor",
+        "string": "Recupera l'armatura"
+    },
+    {
         "editor_id": "ccBGSSSE057_MiscQuest",
-        "form_id": "[0500081B]",
+        "form_id": "0500081B|ccbgssse057-ba_stalhrim.esl",
         "index": 10,
         "type": "QUST NNAM",
         "original": "Search the camp near Skaal Village",
@@ -89,31 +113,15 @@
     },
     {
         "editor_id": "ccBGSSSE057_Quest",
-        "form_id": "[0500081A]",
-        "index": 88,
+        "form_id": "0500081A|ccbgssse057-ba_stalhrim.esl",
+        "index": 102,
         "type": "QUST CNAM",
-        "original": "At a camp to the south of Skaal Village, I found a dead villager and a journal. The journal implies a warrior named Skjol killed the villager and went north in search of stalhrim. At the location I found a burial tomb and was attacked by a Nord. I defeated the Nord and can now claim the armor he uncovered.",
-        "string": "In un accampamento a sud del villaggio di Skaal, ho trovato un abitante morto e un diario. Nel diario c'è scritto che è stato un guerriero di nome Skjol a uccidere l'abitante e che si è diretto a nord in cerca di stalhrim. Una volta arrivato ho trovato una tomba e sono stato attaccato da un nord. Ho sconfitto il nord e adesso posso prendere l'armatura che aveva scoperto."
+        "original": "At a camp to the south of Skaal Village, I found a dead villager and a journal. The journal implies a warrior named Skjol killed the villager and went north in search of stalhrim. At the location I found a burial tomb and was attacked by a Nord.",
+        "string": "In un accampamento a sud del villaggio di Skaal, ho trovato un abitante morto e un diario. Nel diario c'è scritto che è stato un guerriero di nome Skjol a uccidere l'abitante e che si è diretto a nord in cerca di stalhrim. Una volta arrivato ho trovato una tomba e sono stato attaccato da un nord."
     },
     {
         "editor_id": "ccBGSSSE057_Quest",
-        "form_id": "[0500081A]",
-        "index": 113,
-        "type": "QUST CNAM",
-        "original": "At a camp to the south of Skaal Village, I found a dead villager and a journal. The journal implies a warrior named Skjol killed the villager and went north in search of stalhrim. At the location I found a burial tomb and was attacked by a Nord. I defeated the Nord and claimed the armor he uncovered.",
-        "string": "In un accampamento a sud del villaggio di Skaal, ho trovato un abitante morto e un diario. Nel diario c'è scritto che è stato un guerriero di nome Skjol a uccidere l'abitante e che si è diretto a nord in cerca di stalhrim. Una volta arrivato ho trovato una tomba e sono stato attaccato da un nord. Ho sconfitto il nord e mi sono impossessato dell'armatura che aveva scoperto."
-    },
-    {
-        "editor_id": "ccBGSSSE057_Quest",
-        "form_id": "[0500081A]",
-        "index": 30,
-        "type": "QUST NNAM",
-        "original": "Retrieve the armor",
-        "string": "Recupera l'armatura"
-    },
-    {
-        "editor_id": "ccBGSSSE057_Quest",
-        "form_id": "[0500081A]",
+        "form_id": "0500081A|ccbgssse057-ba_stalhrim.esl",
         "index": 10,
         "type": "QUST NNAM",
         "original": "Search the island for stalhrim",
@@ -121,23 +129,7 @@
     },
     {
         "editor_id": "ccBGSSSE057_Quest",
-        "form_id": "[0500081A]",
-        "index": 20,
-        "type": "QUST NNAM",
-        "original": "Kill Skjol",
-        "string": "Uccidi Skjol"
-    },
-    {
-        "editor_id": "ccBGSSSE057_Quest",
-        "form_id": "[0500081A]",
-        "index": 89,
-        "type": "QUST CNAM",
-        "original": "At a camp to the south of Skaal Village, I found a dead villager and a journal. The journal implies a warrior named Skjol killed the villager and went north in search of stalhrim. I should investigate the area and see what I can find.",
-        "string": "In un accampamento a sud del villaggio di Skaal, ho trovato un abitante morto e un diario. Nel diario c'è scritto che è stato un guerriero di nome Skjol a uccidere l'abitante e che si è diretto a nord in cerca di stalhrim. Devo esplorare la zona per saperne di più."
-    },
-    {
-        "editor_id": "ccBGSSSE057_Quest",
-        "form_id": "[0500081A]",
+        "form_id": "0500081A|ccbgssse057-ba_stalhrim.esl",
         "index": null,
         "type": "QUST FULL",
         "original": "Ancient Ice",
@@ -145,10 +137,18 @@
     },
     {
         "editor_id": "ccBGSSSE057_Quest",
-        "form_id": "[0500081A]",
-        "index": 88,
+        "form_id": "0500081A|ccbgssse057-ba_stalhrim.esl",
+        "index": 65,
         "type": "QUST CNAM",
-        "original": "At a camp to the south of Skaal Village, I found a dead villager and a journal. The journal implies a warrior named Skjol killed the villager and went north in search of stalhrim. At the location I found a burial tomb and was attacked by a Nord.",
-        "string": "In un accampamento a sud del villaggio di Skaal, ho trovato un abitante morto e un diario. Nel diario c'è scritto che è stato un guerriero di nome Skjol a uccidere l'abitante e che si è diretto a nord in cerca di stalhrim. Una volta arrivato ho trovato una tomba e sono stato attaccato da un nord."
+        "original": "At a camp to the south of Skaal Village, I found a dead villager and a journal. The journal implies a warrior named Skjol killed the villager and went north in search of stalhrim. At the location I found a burial tomb and was attacked by a Nord. I defeated the Nord and can now claim the armor he uncovered.",
+        "string": "In un accampamento a sud del villaggio di Skaal, ho trovato un abitante morto e un diario. Nel diario c'è scritto che è stato un guerriero di nome Skjol a uccidere l'abitante e che si è diretto a nord in cerca di stalhrim. Una volta arrivato ho trovato una tomba e sono stato attaccato da un nord. Ho sconfitto il nord e adesso posso prendere l'armatura che aveva scoperto."
+    },
+    {
+        "editor_id": "ccBGSSSE057_Quest",
+        "form_id": "0500081A|ccbgssse057-ba_stalhrim.esl",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Kill Skjol",
+        "string": "Uccidi Skjol"
     }
 ]

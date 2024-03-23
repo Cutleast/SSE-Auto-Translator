@@ -1,15 +1,23 @@
 [
     {
         "editor_id": "ccBGSSSE055_ArmorBladesGauntlets",
-        "form_id": "[05000802]",
+        "form_id": "05000802|ccbgssse055-ba_orcishscaled.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Orcish Scaled Gauntlets",
         "string": "Orkowe rękawice łuskowe"
     },
     {
+        "editor_id": "ccBGSSSE055_ArmorBladesCuirass",
+        "form_id": "05000801|ccbgssse055-ba_orcishscaled.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Orcish Scaled Armor",
+        "string": "Orkowa zbroja łuskowa"
+    },
+    {
         "editor_id": "ccBGSSSE055_ArmorBladesHelmet",
-        "form_id": "[05000803]",
+        "form_id": "05000803|ccbgssse055-ba_orcishscaled.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Orcish Scaled Helmet",
@@ -17,39 +25,31 @@
     },
     {
         "editor_id": "ccBGSSSE055_ArmorBladesBoots",
-        "form_id": "[05000800]",
+        "form_id": "05000800|ccbgssse055-ba_orcishscaled.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Orcish Scaled Boots",
         "string": "Orkowe buty łuskowe"
     },
     {
-        "editor_id": "ccBGSSSE055_ArmorBladesCuirass",
-        "form_id": "[05000801]",
+        "editor_id": "ccBGSSSE055_ThalmorNote",
+        "form_id": "0500081B|ccbgssse055-ba_orcishscaled.esl",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Orcish Scaled Armor",
-        "string": "Orkowa zbroja łuskowa"
+        "type": "BOOK FULL",
+        "original": "Orders",
+        "string": "Rozkazy"
     },
     {
         "editor_id": "ccBGSSSE055_GamblerDossier",
-        "form_id": "[0500081C]",
+        "form_id": "0500081C|ccbgssse055-ba_orcishscaled.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "Guard's Dossier: Antonius",
         "string": "Dossier gwardii: Antonius"
     },
     {
-        "editor_id": "ccBGSSSE055_GamblerDossier",
-        "form_id": "[0500081C]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face='$HandwrittenFont'>\r\nStatus: Active (Capture or Kill), High Priority\r\n\r\nDescription: Antonius, Male, mid 70s\r\n\r\nBackground:\r\nAntonius is a former battlemage said to possess a highly analytical mind that is matched only by his more prurient inclinations. He is sought after by aristocrats in Firsthold for allegedly poisoning a court wizard named Allenia with skooma, although it's unclear if he did so maliciously or simply introduced her to the substance. After fleeing to Cyrodiil he joined the Crimson Dirks and advised them on the acquisition and smuggling of magical artifacts. \r\n\r\nBottled spirits and old age have made him less urgent of a target, but all members of the bandit clan are still considered high priority and should be captured or eliminated.\r\n\r\nOperational Notes:\r\nAntonius is believed to have a number of vices, most notably an addiction to gambling. Rather than search for him, it would be best to have a guardsman stationed near the pits where like-minded degenerates tend to gather. Cragslane Cavern is said to be thriving with activity as of late, and may be worth a look.\r\n</font>",
-        "string": "<font face='$HandwrittenFont'>\r\nStatus: zlecenie aktywne (pojmać lub zabić), wysoki priorytet\r\n\r\nOpis: Antonius, mężczyzna, po 70\r\n\r\nHistoria:\r\nAntonius jest byłym magiem bitewnym, posiadającym ponoć analityczny umysł, z silnymi inklinacjami lubieżnymi. Obecnie poszukiwany przez arystokratów z Pierwszej Twierdzy za rzekome otrucie skoomą dworskiej czarodziejki, Allenii. Nie wiadomo jednak, czy było to działanie celowe, czy po prostu wypadek podczas pokazywania jej efektów działania substancji. Po ucieczce do Cyrodiil dołączył do Szkarłatnych Sztyletów i doradzał im w sprawie zdobywania i szmuglowania artefaktów magicznych. \r\n\r\nAlkohole butelkowane i zaawansowany wiek sprawiają, że nie jest najważniejszym celem, ale wszyscy członkowie klanu bandytów mają wysoki priorytet i trzeba ich jak najszybciej pojmać lub zlikwidować.\r\n\r\nUwagi:\r\nUważamy, że Antonius ma sporo na sumieniu i jest uzależniony od hazardu. Zamiast go szukać, najlepiej postawić gwardzistę w miejscu, gdzie przesiadują podobni mu degeneraci. Ponoć ostatnio aktywność taką można zauważyć przy Grocie na Turni - może warto to sprawdzić?\r\n</font>"
-    },
-    {
         "editor_id": "ccBGSSSE055_ThalmorNote",
-        "form_id": "[0500081B]",
+        "form_id": "0500081B|ccbgssse055-ba_orcishscaled.esl",
         "index": null,
         "type": "BOOK DESC",
         "original": "<font face='$HandwrittenFont'><font size='18'>\r\nIf the armor is verified as authentic, dispose of it and the target as you see fit. The guard would imprison him, but Antonius will die for what he did to my dear Allenia.\r\n\r\n-- A\r\n</font>",
@@ -57,15 +57,23 @@
     },
     {
         "editor_id": "ccBGSSSE055_AntoniusNote",
-        "form_id": "[0500081A]",
+        "form_id": "0500081A|ccbgssse055-ba_orcishscaled.esl",
         "index": null,
-        "type": "BOOK FULL",
-        "original": "Antonius' Note",
-        "string": "Notatka Antoniusa"
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nYakhtu once told me I'd wager off my own mother if the odds were right. So it's probably no surprise to her that I lost her armor on a bet. \r\n\r\nWhat I would explain to the blacksmith, after she was done yelling at me, was that my plan was foolproof. \r\n\r\nI had in my coin purse a total of three hundred and twenty septims. My strategy was to wager ten pieces at a time. If I lost, my next bet would be ten pieces, to cover the last wager. If I lost again, I would wager twenty, and once again attempt to break even. If I lost a fourth time, I would wager forty, and so on. \r\n\r\nSo unless I lost six straight times, I'd always break even in the end. Well, ten straight losses later, I not only have no gold, but no armor and bed to sleep on. I must have slept with Zenithar's mother or something, not sure why he hates me so.\r\n\r\nAnyways, I sold the armor to some High Elf collector at the Bee and Barb. I should probably just kill her. I would kill the bandits running the pits, but then where would I get my fix.</font>",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nYakhtu powiedziała mi kiedyś, że jeśli szanse będą dobre, postawię na wygraną własną matkę. Nie zdziwi się więc pewnie, gdy usłyszy, że jej pancerz przepadł w wyniku zakładu. \r\n\r\nKiedy już skończy na mnie wrzeszczeć, wyjaśnię, że mój plan był niezawodny. \r\n\r\nW moim trzosie znajdowało się trzysta i dwadzieścia septimów. Moją strategią było obstawiać dziesięć septimów na raz. W przypadku przegranej kolejny zakład wynosiłby dziesięć septimów, aby pokryć poprzednią stratę. W przypadku kolejnej przegranej, następny zakład to dwadzieścia i próba wyjścia na swoje. Po czwartej porażce kolejny zakład to czterdzieści i tak dalej. \r\n\r\nZawsze wyszłoby na moje, chyba że doszłoby do sześciu porażek z rzędu. Cóż, dziesięć porażek później, nie mam ani złota, ani zbroi, ani łóżka na noc. Dlaczego Zenithar tak mnie nienawidzi? Nic nie wiem o romansie z jego matką.\r\n\r\nTak czy inaczej, pancerz trafił do jakiejś kolekcjonerki, wysokiej elfki w Pod Pszczelim Żądłem. Trzeba było ją zabić. I bandytów w lochach, ale wtedy… skąd wziąć działkę?</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE055_GamblerDossier",
+        "form_id": "0500081C|ccbgssse055-ba_orcishscaled.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'>\r\nStatus: Active (Capture or Kill), High Priority\r\n\r\nDescription: Antonius, Male, mid 70s\r\n\r\nBackground:\r\nAntonius is a former battlemage said to possess a highly analytical mind that is matched only by his more prurient inclinations. He is sought after by aristocrats in Firsthold for allegedly poisoning a court wizard named Allenia with skooma, although it's unclear if he did so maliciously or simply introduced her to the substance. After fleeing to Cyrodiil he joined the Crimson Dirks and advised them on the acquisition and smuggling of magical artifacts. \r\n\r\nBottled spirits and old age have made him less urgent of a target, but all members of the bandit clan are still considered high priority and should be captured or eliminated.\r\n\r\nOperational Notes:\r\nAntonius is believed to have a number of vices, most notably an addiction to gambling. Rather than search for him, it would be best to have a guardsman stationed near the pits where like-minded degenerates tend to gather. Cragslane Cavern is said to be thriving with activity as of late, and may be worth a look.\r\n</font>",
+        "string": "<font face='$HandwrittenFont'>\r\nStatus: zlecenie aktywne (pojmać lub zabić), wysoki priorytet\r\n\r\nOpis: Antonius, mężczyzna, po 70\r\n\r\nHistoria:\r\nAntonius jest byłym magiem bitewnym, posiadającym ponoć analityczny umysł, z silnymi inklinacjami lubieżnymi. Obecnie poszukiwany przez arystokratów z Pierwszej Twierdzy za rzekome otrucie skoomą dworskiej czarodziejki, Allenii. Nie wiadomo jednak, czy było to działanie celowe, czy po prostu wypadek podczas pokazywania jej efektów działania substancji. Po ucieczce do Cyrodiil dołączył do Szkarłatnych Sztyletów i doradzał im w sprawie zdobywania i szmuglowania artefaktów magicznych. \r\n\r\nAlkohole butelkowane i zaawansowany wiek sprawiają, że nie jest najważniejszym celem, ale wszyscy członkowie klanu bandytów mają wysoki priorytet i trzeba ich jak najszybciej pojmać lub zlikwidować.\r\n\r\nUwagi:\r\nUważamy, że Antonius ma sporo na sumieniu i jest uzależniony od hazardu. Zamiast go szukać, najlepiej postawić gwardzistę w miejscu, gdzie przesiadują podobni mu degeneraci. Ponoć ostatnio aktywność taką można zauważyć przy Grocie na Turni - może warto to sprawdzić?\r\n</font>"
     },
     {
         "editor_id": "ccBGSSSE055_Bookv6",
-        "form_id": "[05000839]",
+        "form_id": "05000839|ccbgssse055-ba_orcishscaled.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "The Crimson Dirks, v6",
@@ -73,127 +81,79 @@
     },
     {
         "editor_id": "ccBGSSSE055_AntoniusNote",
-        "form_id": "[0500081A]",
+        "form_id": "0500081A|ccbgssse055-ba_orcishscaled.esl",
         "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nYakhtu once told me I'd wager off my own mother if the odds were right. So it's probably no surprise to her that I lost her armor on a bet. \r\n\r\nWhat I would explain to the blacksmith, after she was done yelling at me, was that my plan was foolproof. \r\n\r\nI had in my coin purse a total of three hundred and twenty septims. My strategy was to wager ten pieces at a time. If I lost, my next bet would be ten pieces, to cover the last wager. If I lost again, I would wager twenty, and once again attempt to break even. If I lost a fourth time, I would wager forty, and so on. \r\n\r\nSo unless I lost six straight times, I'd always break even in the end. Well, ten straight losses later, I not only have no gold, but no armor and bed to sleep on. I must have slept with Zenithar's mother or something, not sure why he hates me so.\r\n\r\nAnyways, I sold the armor to some High Elf collector at the Bee and Barb. I should probably just kill her. I would kill the bandits running the pits, but then where would I get my fix.</font>",
-        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\r\nYakhtu powiedziała mi kiedyś, że jeśli szanse będą dobre, postawię na wygraną własną matkę. Nie zdziwi się więc pewnie, gdy usłyszy, że jej pancerz przepadł w wyniku zakładu. \r\n\r\nKiedy już skończy na mnie wrzeszczeć, wyjaśnię, że mój plan był niezawodny. \r\n\r\nW moim trzosie znajdowało się trzysta i dwadzieścia septimów. Moją strategią było obstawiać dziesięć septimów na raz. W przypadku przegranej kolejny zakład wynosiłby dziesięć septimów, aby pokryć poprzednią stratę. W przypadku kolejnej przegranej, następny zakład to dwadzieścia i próba wyjścia na swoje. Po czwartej porażce kolejny zakład to czterdzieści i tak dalej. \r\n\r\nZawsze wyszłoby na moje, chyba że doszłoby do sześciu porażek z rzędu. Cóż, dziesięć porażek później, nie mam ani złota, ani zbroi, ani łóżka na noc. Dlaczego Zenithar tak mnie nienawidzi? Nic nie wiem o romansie z jego matką.\r\n\r\nTak czy inaczej, pancerz trafił do jakiejś kolekcjonerki, wysokiej elfki w Pod Pszczelim Żądłem. Trzeba było ją zabić. I bandytów w lochach, ale wtedy… skąd wziąć działkę?</font>"
+        "type": "BOOK FULL",
+        "original": "Antonius' Note",
+        "string": "Notatka Antoniusa"
     },
     {
         "editor_id": "ccBGSSSE055_Bookv6",
-        "form_id": "[05000839]",
+        "form_id": "05000839|ccbgssse055-ba_orcishscaled.esl",
         "index": null,
         "type": "BOOK DESC",
         "original": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nThe Crimson Dirks\r\nBook Six\r\n\r\n\r\nby \r\nGathers-the-Coin\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/E_letter.png'>dward taught Antonius the game he learned in Elsweyr, as Casival, Ehlhiel and Zaharia joined them at the table. A cloth, stained with every conceivable color of wine and spirit, was placed over the top of the wood, allowing the bones and tiles to slide across its otherwise splintered face. While some of the rules were lost in translation, Edward knew enough for the game to function. Moreover, if he were to bend said rules to his favor, his opponents would be none the wiser.\r\n\r\n\"There are two types of games,\" Edward explained, laying the tiles out on the surface, \"those with perfect information, and those that are imperfect. Chess, for example, is a game with perfect information. We know each other's pieces and their placement on the board. Card games, on the other hand, are of the imperfect variety. We are each dealt a hand with a set value, and must divine, through whatever means are available to us, who has the better of it.\"\r\n\r\n\"And which type do you prefer?\" asked Casival.\r\n\r\n\"I prefer to know who and what I'm dealing with,\" replied Edward, \"but at the same time, I know the more practical skill is to play games where the information is imperfect. After all, that is how the world around us is played.\"\r\n\r\n\"I wasn't aware life was a game,\" said Ehlhiel, \"because if so, I need to find a better way to cheat.\"\r\n\r\n\"Don't be so modest,\" replied Edward, raking in another pot, \"I think you're doing just fine. The same can't be said for our friend Antonius here.\"\r\n\r\n\"I only lost because you distracted me,\" barked Antonius, \"with that inhaling and exhaling thing you do with your nose.\"\r\n\r\n\"Do you mean breathing?\" asked Edward.\r\n\r\n\"Yes, that.\"\r\n\r\nAs a careful study of others, Casival understood the gist of Edward's speech. There were layers beyond what faces advertised. Edward, for instance, used his charm and intellect like a sword, his sly demeanor having a purpose that disarmed his opponents. Ehlhiel, on the other hand, wore his humor like armor, deflecting any inkling of emotion or motive. Zaharia, for all her straightforwardness, was also passionate and sincere, making her prone to falling victim to her temper. Even Antonius, for all his inebriation, was a skilled hedge mage, and one wondered at times if his drunkenness was merely a performance that allowed people to excuse his worst impulses. \r\n\r\nThe same rules applied to the crew as a whole. The less that was known about the bandits - the more imperfect the information - the better their chance of survival. Their enemies would always hold the better cards. The only way to win was to bluff.\r\n\r\nIt's for this reason Casival was uneasy about the last job. They had purchased a building near a warehouse, tunneling into it and stealing the goods. The plan was solid and the profit healthy, but it was the target that worried him still, even now after it was complete. After all, unlike some enterprises, the East Empire Company was a machine that counted every coin to its last, and weighed every commodity to the gram. Their employees were punctual, their accountants circumspect, and their ledgers pristine. They would identify precisely what goods were stolen, and investigate thoroughly the time and manner of the theft. \r\n\r\nThus it weighed heavy on his mind when the forger who purchased the building next to the warehouse had not responded to his last letter. Casival wrote the missive posing as a concerned relative, not wishing to betray any secrets lest the forger had been compromised. Another concern was news that the Company had enlisted the help of the local guard captains, in an effort to pool their information. With the added protection, caravans had been harder to sack. And with a more watchful eye on merchants, goods had been much harder to smuggle. As it turned out, it was possible to rob from the East Empire Company, but not without revealing some of their cards. \r\n\r\n\"Did you know that Pale-Eyes can sing?\" Ehlhiel said, much to everyone's surprise.\r\n\r\n\"Is that a joke?\" asked Zaharia, somewhat surprised.\r\n\r\n\"I'm being serious, he's actually better than most bards,\" Ehlhiel replied, for once completely sincere, \"Trust me, it shocked me more than anything. I wasn't even aware Argonians could even make that kind of noise, let alone do it on key.\"\r\n\r\nCasival laughed at the thought of the shy Argonian melodically strumming his lute. Even after he thought he'd learned everything there was to know about the others, they were always surprising him in strange and interesting ways. Perhaps the same could be said about their current predicament. So long as they were free, it meant whatever information their pursuers had was still imperfect. \r\n\r\nThe bandits had revealed much of their cards already, but hopefully, they had yet to give away their entire hand. ",
         "string": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nSzkarłatne Sztylety\r\nKsięga Szósta\r\n\r\n\r\nAutor: \r\nGathers-Moneta\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/E_letter.png'>dward uczył Antoniusa gry, którą poznał w Elsweyr, a Casival, Ehlhiel i Zaharia dołączyli do nich przy stole. Na drewnie leżał obrus zaplamiony wszelkimi możliwymi kolorami win i mocnych alkoholi, dzięki czemu kości i kafle można było z łatwością przesuwać bez obawy o wbijające się drzazgi. Choć część zasad przepadła w wyniku nieścisłości w tłumaczeniu, Edward znał ich dość, aby dało się grać. Co więcej, jeśli czasem naginał zasady dla swoich korzyści, pozostałym trudno było się w tym połapać.\r\n\r\n- Istnieją dwa rodzaje gier - wyjaśnił Edward, wykładając kafle na stół. - Te, w których wszystko jest jasne, i te, ze zgadywaniem. Na przykład w szachach wszystko wiadomo. Znamy wszystkie figury i ich rozmieszczenie na szachownicy. Z kolei w grach karcianych trzeba zgadywać. Każdy otrzymuje karty według pewnego rozkładu, ale musimy zgadywać, wszelkimi możliwymi środkami, jakie karty mają przeciwnicy.\r\n\r\n- Który rodzaj preferujesz? - zapytał Casival.\r\n\r\n- Wolę wiedzieć, z czym mam do czynienia - odparł Edward. - Ale jednocześnie wiem, że bardziej praktyczna jest gra w zgadywanie. W końcu w taki sposób gra z nami świat wokół nas.\r\n\r\n- Nie sądziłem, że życie to gra - mruknął Ehlhiel. - Jeśli tak jest, muszę znaleźć jakiś sposób na oszukiwanie.\r\n\r\n- Nie bądź taki skromny - odpowiedział Edward, zgarniając kolejną pulę. - Chyba nieźle sobie radzisz, w przeciwieństwie do naszego przyjaciela, Antoniusa.\r\n\r\n- Przegrałem tylko dlatego, że się rozkojarzyłem - warknął Antonius. - Strasznie mi przeszkadza to twoje świszczenie i syczenie przez nos.\r\n\r\n- Mówisz o oddychaniu? - zapytał Edward.\r\n\r\n- Właśnie.\r\n\r\nUważnie obserwując innych, Casival zrozumiał przesłanie słów Edwarda. Twarze nie zdradzały tego, co wszyscy naprawdę myśleli. Na przykład Edward używał swojego uroku i intelektu jak miecza, a jego chytre zachowanie miało na celu uśpienie czujności przeciwników. Z kolei Ehlhiel posługiwał się humorem niczym tarczą, chroniąc wszelkie ślady emocji czy motywów. Zaharia, choć bardzo bezpośrednia, była też pełna pasji i uczynna, ale często ponosiły ją emocje. Nawet Antonius, choć w tej chwili upojony, pozostawał utalentowanym magiem. Można było się zastanawiać, czy jego pijaństwo nie jest przedstawieniem, dzięki któremu ludzie wybaczają mu jego najgorsze zachowania. \r\n\r\nTe same zasady dotyczyły całej grupy. Im mniej inni wiedzieli o bandytach, im bardziej trzeba było zgadywać, tym większe stawały się szanse na przetrwanie. Wrogowie zawsze mieli lepsze karty. Jedynym sposobem na zwycięstwo był blef.\r\n\r\nI to właśnie z tego powodu Casival nie był zachwycony z powodu przebiegu ostatniej akcji. Kupili budynek w okolicy magazynu, wykopali tunel i tak kradli towary. Plan był solidny, zyski spore, a akcja przeszła bez problemów, ale martwili go właściciele magazynu. W końcu, w odróżnieniu od innych celów, Kompania Wschodniocesarska była maszyną liczącą wszystko co do ostatniej monety i ważącą każdy towar co do grama. Jej pracownicy byli punktualni, księgowi przezorni, a księgi rachunkowe prowadzone z najwyższą starannością. Na pewno sprawdzą, jakie towary zostały skradzione oraz dokładnie zbadają czas i sposób dokonania kradzieży. \r\n\r\nPoczuł ukłucie w sercu, kiedy fałszerz, który zakupił budynek przy magazynie, nie odpowiedział na jego ostatni list. Casival podszył się w nim pod zmartwionego krewnego, nie chcąc zdradzić żadnych szczegółów, w razie gdyby fałszerz został zdemaskowany. Kolejnym zmartwieniem była wieść, że Kompania korzysta z pomocy miejscowych kapitanów gwardii, aby pozyskać więcej informacji. Karawany było coraz trudniej złupić, gdyż otrzymały dodatkową ochronę, a kupcy byli lepiej pilnowani, więc szmuglowanie towarów stawało się coraz trudniejsze. Jak się okazało, można było okraść Kompanię Wschodniocesarską, ale wymagało to odkrycia części kart. \r\n\r\n- Wiedzieliście, że Blade Oko potrafi śpiewać? - zapytał nagle Ehlhiel, zaskakując wszystkich.\r\n\r\n- To żart? - prychnęła Zaharia z niedowierzaniem.\r\n\r\n- Mówię serio, jest lepszy niż większość bardów - potwierdził Ehlhiel, przynajmniej raz naprawdę szczerze. - Uwierzcie mi, też byłem zszokowany. Nie sądziłem, że Argonianie są w stanie wydobywać z siebie takie dźwięki, a co dopiero przyjemne melodie.\r\n\r\nCasival zaśmiał się, wyobrażając sobie nieśmiałego Argonianina brzdąkającego pięknie na lutni. Choć uważał, że wie już wszystko o wszystkich, kompani zawsze zaskakiwali go na dziwne i interesujące sposoby. Być może tak samo było z ich obecnym położeniem. Skoro wciąż znajdowali się na wolności, ścigający chyba nie mieli na ich temat kompletu informacji. \r\n\r\nBandyci jak dotąd odkryli już sporo kart, ale kilka jeszcze im pozostało. "
     },
     {
-        "editor_id": "ccBGSSSE055_ThalmorNote",
-        "form_id": "[0500081B]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Orders",
-        "string": "Rozkazy"
-    },
-    {
-        "editor_id": "ccBGSSSE055_LvlThalmorSpy",
-        "form_id": "[0500081E]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Armor Collector",
-        "string": "Kolekcjonerka pancerzy"
-    },
-    {
         "editor_id": "ccBGSSSE055_Antonius",
-        "form_id": "[0500081D]",
+        "form_id": "0500081D|ccbgssse055-ba_orcishscaled.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Antonius",
         "string": "Antonius"
     },
     {
-        "editor_id": "CragslaneCavern01",
-        "form_id": "[000152A5]",
+        "editor_id": "ccBGSSSE055_LvlThalmorSpy",
+        "form_id": "0500081E|ccbgssse055-ba_orcishscaled.esl",
         "index": null,
-        "type": "CELL FULL",
-        "original": "Cragslane Cavern",
-        "string": "Grota na Turni"
-    },
-    {
-        "editor_id": "RiftenBeeandBarb",
-        "form_id": "[00016BDF]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "The Bee and Barb",
-        "string": "Pod Pszczelim Żądłem"
-    },
-    {
-        "editor_id": "RiftenMistveilBarracks",
-        "form_id": "[00045A1D]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Mistveil Keep Barracks",
-        "string": "Koszary Mglistej Twierdzy"
-    },
-    {
-        "editor_id": "ccBGSSSE055_QuestTopic3TopicB",
-        "form_id": "[0500082C]",
-        "index": null,
-        "type": "DIAL FULL",
-        "original": "Riften is dangerous. You need to leave before something happens. (Persuade)",
-        "string": "Pęknina jest niebezpieczna. Lepiej stąd odejdź, zanim coś się stanie. (Perswazja)"
-    },
-    {
-        "editor_id": null,
-        "form_id": "[0500083C]",
-        "index": null,
-        "type": "INFO RNAM",
-        "original": "I have something else I want to say.",
-        "string": "Chcę jeszcze coś powiedzieć."
-    },
-    {
-        "editor_id": "ccBGSSSE055_QuestTopic3Topic",
-        "form_id": "[05000828]",
-        "index": null,
-        "type": "DIAL FULL",
-        "original": "There's something we need to talk about.",
-        "string": "Musimy o czymś porozmawiać."
-    },
-    {
-        "editor_id": "ccBGSSSE055_QuestTopic3TopicA",
-        "form_id": "[0500082A]",
-        "index": null,
-        "type": "DIAL FULL",
-        "original": "You've got something I want. I'm going to kill you for it. (Intimidate)",
-        "string": "Masz coś, czego chcę. Jeśli trzeba, zabiję cię, by to zdobyć. (Zastraszenie)"
+        "type": "NPC_ FULL",
+        "original": "Armor Collector",
+        "string": "Kolekcjonerka pancerzy"
     },
     {
         "editor_id": "ccBGSSSE055_QuestTopic1A",
-        "form_id": "[05000823]",
+        "form_id": "05000823|ccbgssse055-ba_orcishscaled.esl",
         "index": null,
         "type": "DIAL FULL",
         "original": "I know you're an assassin.",
         "string": "Wiem, że jesteś zabójcą."
     },
     {
+        "editor_id": "ccBGSSSE055_QuestTopic3Topic",
+        "form_id": "05000828|ccbgssse055-ba_orcishscaled.esl",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "There's something we need to talk about.",
+        "string": "Musimy o czymś porozmawiać."
+    },
+    {
+        "editor_id": "ccBGSSSE055_QuestTopic3TopicB",
+        "form_id": "0500082C|ccbgssse055-ba_orcishscaled.esl",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "Riften is dangerous. You need to leave before something happens. (Persuade)",
+        "string": "Pęknina jest niebezpieczna. Lepiej stąd odejdź, zanim coś się stanie. (Perswazja)"
+    },
+    {
+        "editor_id": "ccBGSSSE055_QuestTopic3TopicA",
+        "form_id": "0500082A|ccbgssse055-ba_orcishscaled.esl",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "You've got something I want. I'm going to kill you for it. (Intimidate)",
+        "string": "Masz coś, czego chcę. Jeśli trzeba, zabiję cię, by to zdobyć. (Zastraszenie)"
+    },
+    {
         "editor_id": "ccBGSSSE055_QuestTopic2A",
-        "form_id": "[05000825]",
+        "form_id": "05000825|ccbgssse055-ba_orcishscaled.esl",
         "index": null,
         "type": "DIAL FULL",
         "original": "I'd like to buy the armor you bought from Antonius. (1000 gold)",
         "string": "Chcę kupić pancerz, który masz od Antoniusa. (1000 szt. złota)"
     },
     {
-        "editor_id": null,
-        "form_id": "[05000827]",
-        "index": null,
-        "type": "INFO RNAM",
-        "original": "I'd like to buy Antonius' armor, but I don't have a lot of gold. (1000 gold)",
-        "string": "Chcę kupić pancerz Antoniusa, ale nie mam zbyt wiele złota. (1000 szt. złota)"
-    },
-    {
         "editor_id": "ccBGSSSE055_QuestTopic3TopicC",
-        "form_id": "[0500082E]",
+        "form_id": "0500082E|ccbgssse055-ba_orcishscaled.esl",
         "index": null,
         "type": "DIAL FULL",
         "original": "You know what you did. I just want to hear you say it. (Persuade)",
@@ -201,23 +161,7 @@
     },
     {
         "editor_id": "ccBGSSSE055_Quest",
-        "form_id": "[05000830]",
-        "index": 96,
-        "type": "QUST CNAM",
-        "original": "I've heard stories of former bandits living as fugitives across Tamriel. At the barracks in Riften, I found information on an Imperial wagering on the pit fights at Cragslane Cavern. Unfortunately, the gambler was already dead by the time I arrived. It seems he incurred some debts, and sold his armor to a collector in Riften.",
-        "string": "Dotarły do mnie historie o byłych bandytach, którzy jako zbiegowie ukrywają się w całym Tamriel. W koszarach w Pękninie udało mi się zdobyć informacje o Cesarskich stawiających na nielegalne walki w Grocie na Turni. Niestety, w momencie mojego przybycia hazardzista był już martwy. Najwyraźniej narobił sobie długów i sprzedał pancerz kolekcjonerce z Pękniny."
-    },
-    {
-        "editor_id": "ccBGSSSE055_Quest",
-        "form_id": "[05000830]",
-        "index": 87,
-        "type": "QUST CNAM",
-        "original": "I've heard stories of former bandits living as fugitives across Tamriel. Perhaps if I visit the guard barracks in Riften I might find some information on their whereabouts.",
-        "string": "Dotarły do mnie historie o byłych bandytach, którzy jako zbiegowie ukrywają się w całym Tamriel. Może warto odwiedzić koszary gwardii w Pękninie? Mogą tam być jakieś informacje o tym, gdzie ich znajdę."
-    },
-    {
-        "editor_id": "ccBGSSSE055_MiscQuest",
-        "form_id": "[05000833]",
+        "form_id": "05000830|ccbgssse055-ba_orcishscaled.esl",
         "index": 10,
         "type": "QUST NNAM",
         "original": "Search for a dossier at the Mistveil Keep Barracks",
@@ -225,63 +169,7 @@
     },
     {
         "editor_id": "ccBGSSSE055_Quest",
-        "form_id": "[05000830]",
-        "index": 115,
-        "type": "QUST CNAM",
-        "original": "I've heard stories of former bandits living as fugitives across Tamriel. At the barracks in Riften, I found information on an Imperial wagering on the pit fights at Cragslane Cavern. ",
-        "string": "Dotarły do mnie historie o byłych bandytach, którzy jako zbiegowie ukrywają się w całym Tamriel. W koszarach w Pękninie udało mi się zdobyć informacje o Cesarskich stawiających na nielegalne walki w Grocie na Turni. "
-    },
-    {
-        "editor_id": "ccBGSSSE055_Quest",
-        "form_id": "[05000830]",
-        "index": 20,
-        "type": "QUST NNAM",
-        "original": "Find Antonius in Cragslane Cavern",
-        "string": "Znajdź Antoniusa w Grocie na Turni."
-    },
-    {
-        "editor_id": "ccBGSSSE055_Quest",
-        "form_id": "[05000830]",
-        "index": 35,
-        "type": "QUST NNAM",
-        "original": "(Optional) Intimidate or persuade the collector into leaving the city's protection",
-        "string": "(Opcjonalne) Zastrasz lub przekonaj kolekcjonerkę, aby opuściła miasto i tym samym zrezygnowała z ochrony."
-    },
-    {
-        "editor_id": "ccBGSSSE055_Quest",
-        "form_id": "[05000830]",
-        "index": 10,
-        "type": "QUST NNAM",
-        "original": "Search for a dossier at the Mistveil Keep Barracks",
-        "string": "Poszukaj dossier w Koszarach Mglistej Twierdzy."
-    },
-    {
-        "editor_id": "ccBGSSSE055_Quest",
-        "form_id": "[05000830]",
-        "index": 60,
-        "type": "QUST NNAM",
-        "original": "Retrieve the armor",
-        "string": "Zabierz pancerz."
-    },
-    {
-        "editor_id": "ccBGSSSE055_Quest",
-        "form_id": "[05000830]",
-        "index": 84,
-        "type": "QUST CNAM",
-        "original": "I've heard stories of former bandits living as fugitives across Tamriel. At the barracks in Riften, I found information on an Imperial wagering on the pit fights at Cragslane Cavern. Unfortunately, the gambler was already dead by the time I arrived. It seems he incurred some debts, and sold his armor to a collector in Riften. I killed the collector in order to take the armor from her.",
-        "string": "Dotarły do mnie historie o byłych bandytach, którzy jako zbiegowie ukrywają się w całym Tamriel. W koszarach w Pękninie udało mi się zdobyć informacje o Cesarskich stawiających na nielegalne walki w Grocie na Turni. Niestety, w momencie mojego przybycia hazardzista był już martwy. Najwyraźniej narobił sobie długów i sprzedał pancerz kolekcjonerce z Pękniny. Aby zabrać jej pancerz, należało ją zabić."
-    },
-    {
-        "editor_id": "ccBGSSSE055_Quest",
-        "form_id": "[05000830]",
-        "index": 30,
-        "type": "QUST NNAM",
-        "original": "Read Antonius' Note",
-        "string": "Przeczytaj notatkę Antoniusa."
-    },
-    {
-        "editor_id": "ccBGSSSE055_Quest",
-        "form_id": "[05000830]",
+        "form_id": "05000830|ccbgssse055-ba_orcishscaled.esl",
         "index": null,
         "type": "QUST FULL",
         "original": "Gambler's Edge",
@@ -289,7 +177,15 @@
     },
     {
         "editor_id": "ccBGSSSE055_Quest",
-        "form_id": "[05000830]",
+        "form_id": "05000830|ccbgssse055-ba_orcishscaled.esl",
+        "index": 60,
+        "type": "QUST NNAM",
+        "original": "Retrieve the armor",
+        "string": "Zabierz pancerz."
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "form_id": "05000830|ccbgssse055-ba_orcishscaled.esl",
         "index": 50,
         "type": "QUST NNAM",
         "original": "Kill the collector",
@@ -297,31 +193,95 @@
     },
     {
         "editor_id": "ccBGSSSE055_Quest",
-        "form_id": "[05000830]",
-        "index": 73,
-        "type": "QUST CNAM",
-        "original": "I've heard stories of former bandits living as fugitives across Tamriel. At the barracks in Riften, I found information on an Imperial wagering on the pit fights at Cragslane Cavern. Unfortunately, the gambler was already dead by the time I arrived.",
-        "string": "Dotarły do mnie historie o byłych bandytach, którzy jako zbiegowie ukrywają się w całym Tamriel. W koszarach w Pękninie udało mi się zdobyć informacje o Cesarskich stawiających na nielegalne walki w Grocie na Turni. Niestety, w momencie mojego przybycia hazardzista był już martwy."
+        "form_id": "05000830|ccbgssse055-ba_orcishscaled.esl",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Find Antonius in Cragslane Cavern",
+        "string": "Znajdź Antoniusa w Grocie na Turni."
     },
     {
         "editor_id": "ccBGSSSE055_Quest",
-        "form_id": "[05000830]",
-        "index": 76,
+        "form_id": "05000830|ccbgssse055-ba_orcishscaled.esl",
+        "index": 103,
+        "type": "QUST CNAM",
+        "original": "I've heard stories of former bandits living as fugitives across Tamriel. At the barracks in Riften, I found information on an Imperial wagering on the pit fights at Cragslane Cavern. ",
+        "string": "Dotarły do mnie historie o byłych bandytach, którzy jako zbiegowie ukrywają się w całym Tamriel. W koszarach w Pękninie udało mi się zdobyć informacje o Cesarskich stawiających na nielegalne walki w Grocie na Turni. "
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "form_id": "05000830|ccbgssse055-ba_orcishscaled.esl",
+        "index": 90,
+        "type": "QUST CNAM",
+        "original": "I've heard stories of former bandits living as fugitives across Tamriel. At the barracks in Riften, I found information on an Imperial wagering on the pit fights at Cragslane Cavern. Unfortunately, the gambler was already dead by the time I arrived. It seems he incurred some debts, and sold his armor to a collector in Riften. I killed the collector in order to take the armor from her.",
+        "string": "Dotarły do mnie historie o byłych bandytach, którzy jako zbiegowie ukrywają się w całym Tamriel. W koszarach w Pękninie udało mi się zdobyć informacje o Cesarskich stawiających na nielegalne walki w Grocie na Turni. Niestety, w momencie mojego przybycia hazardzista był już martwy. Najwyraźniej narobił sobie długów i sprzedał pancerz kolekcjonerce z Pękniny. Aby zabrać jej pancerz, należało ją zabić."
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "form_id": "05000830|ccbgssse055-ba_orcishscaled.esl",
+        "index": 96,
+        "type": "QUST CNAM",
+        "original": "I've heard stories of former bandits living as fugitives across Tamriel. At the barracks in Riften, I found information on an Imperial wagering on the pit fights at Cragslane Cavern. Unfortunately, the gambler was already dead by the time I arrived. It seems he incurred some debts, and sold his armor to a collector in Riften.",
+        "string": "Dotarły do mnie historie o byłych bandytach, którzy jako zbiegowie ukrywają się w całym Tamriel. W koszarach w Pękninie udało mi się zdobyć informacje o Cesarskich stawiających na nielegalne walki w Grocie na Turni. Niestety, w momencie mojego przybycia hazardzista był już martwy. Najwyraźniej narobił sobie długów i sprzedał pancerz kolekcjonerce z Pękniny."
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "form_id": "05000830|ccbgssse055-ba_orcishscaled.esl",
+        "index": 107,
         "type": "QUST CNAM",
         "original": "I've heard stories of former bandits living as fugitives across Tamriel. At the barracks in Riften, I found information on an Imperial wagering on the pit fights at Cragslane Cavern. Unfortunately, the gambler was already dead by the time I arrived. It seems he incurred some debts, and sold his armor to a collector in Riften. After some effort, I managed to get the custom armor from the collector.",
         "string": "Dotarły do mnie historie o byłych bandytach, którzy jako zbiegowie ukrywają się w całym Tamriel. W koszarach w Pękninie udało mi się zdobyć informacje o Cesarskich stawiających na nielegalne walki w Grocie na Turni. Niestety, w momencie mojego przybycia hazardzista był już martwy. Najwyraźniej narobił sobie długów i sprzedał pancerz kolekcjonerce z Pękniny. Nie było łatwo, ale udało mi się przejąć pancerz od kolekcjonerki."
     },
     {
         "editor_id": "ccBGSSSE055_Quest",
-        "form_id": "[05000830]",
+        "form_id": "05000830|ccbgssse055-ba_orcishscaled.esl",
+        "index": 75,
+        "type": "QUST CNAM",
+        "original": "I've heard stories of former bandits living as fugitives across Tamriel. Perhaps if I visit the guard barracks in Riften I might find some information on their whereabouts.",
+        "string": "Dotarły do mnie historie o byłych bandytach, którzy jako zbiegowie ukrywają się w całym Tamriel. Może warto odwiedzić koszary gwardii w Pękninie? Mogą tam być jakieś informacje o tym, gdzie ich znajdę."
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "form_id": "05000830|ccbgssse055-ba_orcishscaled.esl",
+        "index": 83,
+        "type": "QUST CNAM",
+        "original": "I've heard stories of former bandits living as fugitives across Tamriel. At the barracks in Riften, I found information on an Imperial wagering on the pit fights at Cragslane Cavern. Unfortunately, the gambler was already dead by the time I arrived.",
+        "string": "Dotarły do mnie historie o byłych bandytach, którzy jako zbiegowie ukrywają się w całym Tamriel. W koszarach w Pękninie udało mi się zdobyć informacje o Cesarskich stawiających na nielegalne walki w Grocie na Turni. Niestety, w momencie mojego przybycia hazardzista był już martwy."
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "form_id": "05000830|ccbgssse055-ba_orcishscaled.esl",
         "index": 40,
         "type": "QUST NNAM",
         "original": "Buy the armor from collector at the Bee and Barb",
         "string": "Kup pancerz od kolekcjonerki Pod Pszczelim Żądłem."
     },
     {
+        "editor_id": "ccBGSSSE055_MiscQuest",
+        "form_id": "05000833|ccbgssse055-ba_orcishscaled.esl",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Search for a dossier at the Mistveil Keep Barracks",
+        "string": "Poszukaj dossier w Koszarach Mglistej Twierdzy."
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "form_id": "05000830|ccbgssse055-ba_orcishscaled.esl",
+        "index": 35,
+        "type": "QUST NNAM",
+        "original": "(Optional) Intimidate or persuade the collector into leaving the city's protection",
+        "string": "(Opcjonalne) Zastrasz lub przekonaj kolekcjonerkę, aby opuściła miasto i tym samym zrezygnowała z ochrony."
+    },
+    {
+        "editor_id": "ccBGSSSE055_Quest",
+        "form_id": "05000830|ccbgssse055-ba_orcishscaled.esl",
+        "index": 30,
+        "type": "QUST NNAM",
+        "original": "Read Antonius' Note",
+        "string": "Przeczytaj notatkę Antoniusa."
+    },
+    {
         "editor_id": "ccBGSSSE055_MatchingSet",
-        "form_id": "[05000804]",
+        "form_id": "05000804|ccbgssse055-ba_orcishscaled.esl",
         "index": null,
         "type": "PERK FULL",
         "original": "Matching Set",
@@ -329,7 +289,15 @@
     },
     {
         "editor_id": "ccBGSSSE055_OrcishSmithing",
-        "form_id": "[05000812]",
+        "form_id": "05000812|ccbgssse055-ba_orcishscaled.esl",
+        "index": null,
+        "type": "PERK DESC",
+        "original": "Can create Orcish armor and weapons at forges, and improve them twice as much.",
+        "string": "Pozwala tworzyć w kuźniach orkowe pancerze i broń oraz ulepszać je dwa razy skuteczniej."
+    },
+    {
+        "editor_id": "ccBGSSSE055_OrcishSmithing",
+        "form_id": "05000812|ccbgssse055-ba_orcishscaled.esl",
         "index": null,
         "type": "PERK FULL",
         "original": "Orcish Smithing",
@@ -337,18 +305,10 @@
     },
     {
         "editor_id": "ccBGSSSE055_MatchingSet",
-        "form_id": "[05000804]",
+        "form_id": "05000804|ccbgssse055-ba_orcishscaled.esl",
         "index": null,
         "type": "PERK DESC",
         "original": "Additional 25% Armor bonus if wearing a matched set of Light Armor.",
         "string": "Dodatkowe 25% premii do pancerza w razie zastosowania pełnego zestawu lekkiego pancerza."
-    },
-    {
-        "editor_id": "ccBGSSSE055_OrcishSmithing",
-        "form_id": "[05000812]",
-        "index": null,
-        "type": "PERK DESC",
-        "original": "Can create Orcish armor and weapons at forges, and improve them twice as much.",
-        "string": "Pozwala tworzyć w kuźniach orkowe pancerze i broń oraz ulepszać je dwa razy skuteczniej."
     }
 ]

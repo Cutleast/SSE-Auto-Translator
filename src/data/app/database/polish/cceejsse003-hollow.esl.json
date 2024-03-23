@@ -1,87 +1,87 @@
 [
     {
-        "editor_id": "ccEEJSSE003_FireflyJarActivator",
-        "form_id": "[05000844]",
+        "editor_id": "EEJSSE003_GlassClawActivator",
+        "form_id": "0500083A|cceejsse003-hollow.esl",
         "index": null,
-        "type": "ACTI FULL",
-        "original": "Torchbug in a Jar",
-        "string": "Świetlik w słoiku"
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umieść"
     },
     {
-        "editor_id": "ccEEJSSE003_HonningbrewDecanterActivator",
-        "form_id": "[050009D0]",
+        "editor_id": "EEJSSE003_IvoryClawActivator",
+        "form_id": "05000841|cceejsse003-hollow.esl",
         "index": null,
-        "type": "ACTI FULL",
-        "original": "Honningbrew Decanter",
-        "string": "Karafka czerwoniaka"
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umieść"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskRahgotActivator",
+        "form_id": "05000838|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umieść"
     },
     {
         "editor_id": "ccEEJSSE003_NightingaleBowActivator",
-        "form_id": "[0500086E]",
+        "form_id": "0500086E|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI FULL",
         "original": "Nightingale Bow",
         "string": "Łuk Słowików"
     },
     {
-        "editor_id": "ccEEJSSE003_DPMaskFrostActivator",
-        "form_id": "[05000832]",
+        "editor_id": "ccEEJSSE003_DPMaskVolsungActivator",
+        "form_id": "05000835|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI FULL",
-        "original": "Dukaan",
-        "string": "Dukaan"
+        "original": "Volsung",
+        "string": "Volsung"
     },
     {
-        "editor_id": "ccEEJSSE003_PortalGemWhiteActivator",
-        "form_id": "[05000849]",
+        "editor_id": "ccEEJSSE003_DPMaskWoodenActivator",
+        "form_id": "05000834|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI FULL",
-        "original": "Diamond Paragon",
-        "string": "Diamentowy talizman"
+        "original": "Wooden Mask",
+        "string": "Drewniana maska"
     },
     {
-        "editor_id": "ccEEJSSE003_DPMaskFireActivator",
-        "form_id": "[05000833]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Ahzidal",
-        "string": "Ahzidal"
-    },
-    {
-        "editor_id": "ccEEJSSE003_DPMaskVokunActivator",
-        "form_id": "[05000848]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Vokun",
-        "string": "Vokun"
-    },
-    {
-        "editor_id": "ccEEJSSE003_LeftEyeoftheFalmerActivator",
-        "form_id": "[05000936]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Left Eye of the Falmer",
-        "string": "Lewe Oko Falmera"
-    },
-    {
-        "editor_id": "ccEEJSSE003_EESMapActivator",
-        "form_id": "[05000D7F]",
+        "editor_id": "ccEEJSSE003_PortalGemredActivator",
+        "form_id": "0500084A|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Place",
         "string": "Umieść"
     },
     {
-        "editor_id": "EEJSSE003_EmeraldClawActivator",
-        "form_id": "[05000843]",
+        "editor_id": "ccEEJSSE003_ChillrendActivator",
+        "form_id": "0500086A|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI FULL",
-        "original": "Emerald Dragon Claw",
-        "string": "Szpon szmaragdowego smoka"
+        "original": "Chillrend",
+        "string": "Rozdzieracz Chłodu"
     },
     {
-        "editor_id": "EEJSSE003_GlassClawActivator",
-        "form_id": "[0500083A]",
+        "editor_id": "ccEEJSSE003_HonningbrewDecanterActivator",
+        "form_id": "050009D0|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Honningbrew Decanter",
+        "string": "Karafka czerwoniaka"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemPurpleActivator",
+        "form_id": "0500084D|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umieść"
+    },
+    {
+        "editor_id": "EEJSSE003_GoldenClawActivator",
+        "form_id": "05000842|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Place",
@@ -89,47 +89,255 @@
     },
     {
         "editor_id": "ccEEJSSE003_DPMaskMorokeiActivator",
-        "form_id": "[05000850]",
+        "form_id": "05000850|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Place",
         "string": "Umieść"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskFireActivator",
+        "form_id": "05000833|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ahzidal",
+        "string": "Ahzidal"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskHevnoraakActivator",
+        "form_id": "05000830|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umieść"
+    },
+    {
+        "editor_id": "ccEEJSSE003_RightEyeoftheFalmerActivator",
+        "form_id": "05000C52|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umieść"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BeeJarActivator",
+        "form_id": "0500084E|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Bee in a Jar",
+        "string": "Pszczoła w słoiku"
+    },
+    {
+        "editor_id": "ccEEJSSE003_LeftEyeoftheFalmerActivator",
+        "form_id": "05000936|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Left Eye of the Falmer",
+        "string": "Lewe Oko Falmera"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskKonahrikActivator",
+        "form_id": "05000831|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umieść"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskFrostActivator",
+        "form_id": "05000832|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Dukaan",
+        "string": "Dukaan"
     },
     {
         "editor_id": "EEJSSE003_EbonyClawActivator",
-        "form_id": "[0500083B]",
+        "form_id": "0500083B|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umieść"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemGreenActivator",
+        "form_id": "0500084C|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umieść"
+    },
+    {
+        "editor_id": "EEJSSE003_CoralClawActivator",
+        "form_id": "0500083E|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI FULL",
-        "original": "Ebony Dragon Claw",
-        "string": "Szpon ebonowego smoka"
+        "original": "Coral Dragon Claw",
+        "string": "Szpon koralowego smoka"
     },
     {
-        "editor_id": "ccEEJSSE003_GreyFoxBustActivator",
-        "form_id": "[05000A55]",
+        "editor_id": "ccEEJSSE003_PortalGemBlueActivator",
+        "form_id": "0500084B|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Sapphire Paragon",
+        "string": "Szafirowy talizman"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DragonflyJarActivator",
+        "form_id": "05000845|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Place",
         "string": "Umieść"
     },
     {
-        "editor_id": "ccEEJSSE003_HonningbrewDecanterActivator",
-        "form_id": "[050009D0]",
+        "editor_id": "ccEEJSSE003_PortalGemWhiteActivator",
+        "form_id": "05000849|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Diamond Paragon",
+        "string": "Diamentowy talizman"
+    },
+    {
+        "editor_id": "ccEEJSSE003_GrimseverActivator",
+        "form_id": "0500086D|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Grimsever",
+        "string": "Ponury Siekacz"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PuzzleCubeActivator",
+        "form_id": "05000BC1|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Place",
         "string": "Umieść"
     },
     {
-        "editor_id": "EEJSSE003_DiamondClawActivator",
-        "form_id": "[0500083F]",
+        "editor_id": "EEJSSE003_RubyClawActivator",
+        "form_id": "0500083D|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ruby Dragon Claw",
+        "string": "Szpon rubinowego smoka"
+    },
+    {
+        "editor_id": "ccEEJSSE003_MothJarActivator",
+        "form_id": "05000846|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Moth in a Jar",
+        "string": "Ćma w słoiku"
+    },
+    {
+        "editor_id": "ccEEJSSE003_EESMapActivator",
+        "form_id": "05000D7F|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Place",
         "string": "Umieść"
+    },
+    {
+        "editor_id": "EEJSSE003_IronClawActivator",
+        "form_id": "05000840|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Iron Dragon Claw",
+        "string": "Szpon żelaznego smoka"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskKrosisActivator",
+        "form_id": "05000836|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umieść"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskShockActivator",
+        "form_id": "0500084F|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umieść"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskNahkriinActivator",
+        "form_id": "05000839|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umieść"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskVokunActivator",
+        "form_id": "05000848|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Vokun",
+        "string": "Vokun"
     },
     {
         "editor_id": "ccEEJSSE003_ButterflyJarActivator",
-        "form_id": "[05000847]",
+        "form_id": "05000847|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Butterfly in a Jar",
+        "string": "Motyl w słoiku"
+    },
+    {
+        "editor_id": "EEJSSE003_GlassClawActivator",
+        "form_id": "0500083A|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Glass Dragon Claw",
+        "string": "Szpon szklanego smoka"
+    },
+    {
+        "editor_id": "ccEEJSSE003_GreyFoxBustActivator",
+        "form_id": "05000A55|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umieść"
+    },
+    {
+        "editor_id": "EEJSSE003_IvoryClawActivator",
+        "form_id": "05000841|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ivory Dragon Claw",
+        "string": "Szpon kościanego smoka"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskRahgotActivator",
+        "form_id": "05000838|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Rahgot",
+        "string": "Rahgot"
+    },
+    {
+        "editor_id": "EEJSSE003_SapphireClawActivator",
+        "form_id": "0500083C|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Sapphire Dragon Claw",
+        "string": "Szpon szafirowego smoka"
+    },
+    {
+        "editor_id": "ccEEJSSE003_ModelShipActivator",
+        "form_id": "05000D47|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umieść"
+    },
+    {
+        "editor_id": "ccEEJSSE003_QueenBeeStatueActivator",
+        "form_id": "05000D0B|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Place",
@@ -137,151 +345,7 @@
     },
     {
         "editor_id": "ccEEJSSE003_FireflyJarActivator",
-        "form_id": "[05000844]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Umieść"
-    },
-    {
-        "editor_id": "ccEEJSSE003_DPMaskRahgotActivator",
-        "form_id": "[05000838]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Rahgot",
-        "string": "Rahgot"
-    },
-    {
-        "editor_id": "ccEEJSSE003_PortalGemBlueActivator",
-        "form_id": "[0500084B]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Sapphire Paragon",
-        "string": "Szafirowy talizman"
-    },
-    {
-        "editor_id": "ccEEJSSE003_DPMaskVokunActivator",
-        "form_id": "[05000848]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Umieść"
-    },
-    {
-        "editor_id": "EEJSSE003_RubyClawActivator",
-        "form_id": "[0500083D]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Ruby Dragon Claw",
-        "string": "Szpon rubinowego smoka"
-    },
-    {
-        "editor_id": "ccEEJSSE003_SpiderControlRodActivator",
-        "form_id": "[05000F7C]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Spider Control Rod",
-        "string": "Pręt pajęczej kontroli"
-    },
-    {
-        "editor_id": "ccEEJSSE003_SpiderControlRodActivator",
-        "form_id": "[05000F7C]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Umieść"
-    },
-    {
-        "editor_id": "ccEEJSSE003_ChillrendActivator",
-        "form_id": "[0500086A]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Umieść"
-    },
-    {
-        "editor_id": "ccEEJSSE003_DPMaskNahkriinActivator",
-        "form_id": "[05000839]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Nahkriin",
-        "string": "Nahkriin"
-    },
-    {
-        "editor_id": "ccEEJSSE003_DPMaskHevnoraakActivator",
-        "form_id": "[05000830]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Hevnoraak",
-        "string": "Hevnoraak"
-    },
-    {
-        "editor_id": "EEJSSE003_IvoryClawActivator",
-        "form_id": "[05000841]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Ivory Dragon Claw",
-        "string": "Szpon kościanego smoka"
-    },
-    {
-        "editor_id": "ccEEJSSE003_QueenBeeStatueActivator",
-        "form_id": "[05000D0B]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Umieść"
-    },
-    {
-        "editor_id": "EEJSSE003_CoralClawActivator",
-        "form_id": "[0500083E]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Coral Dragon Claw",
-        "string": "Szpon koralowego smoka"
-    },
-    {
-        "editor_id": "EEJSSE003_GoldenClawActivator",
-        "form_id": "[05000842]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Umieść"
-    },
-    {
-        "editor_id": "ccEEJSSE003_DragonflyJarActivator",
-        "form_id": "[05000845]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Umieść"
-    },
-    {
-        "editor_id": "EEJSSE003_CoralClawActivator",
-        "form_id": "[0500083E]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Umieść"
-    },
-    {
-        "editor_id": "ccEEJSSE003_DPMaskVolsungActivator",
-        "form_id": "[05000835]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Umieść"
-    },
-    {
-        "editor_id": "EEJSSE003_IronClawActivator",
-        "form_id": "[05000840]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Iron Dragon Claw",
-        "string": "Szpon żelaznego smoka"
-    },
-    {
-        "editor_id": "ccEEJSSE003_BeeJarActivator",
-        "form_id": "[0500084E]",
+        "form_id": "05000844|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Place",
@@ -289,39 +353,15 @@
     },
     {
         "editor_id": "ccEEJSSE003_NightingaleBladeActivator",
-        "form_id": "[05000877]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Nightingale Blade",
-        "string": "Ostrze Słowików"
-    },
-    {
-        "editor_id": "ccEEJSSE003_EESMapActivator",
-        "form_id": "[05000D7F]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "East Empire Shipping Map",
-        "string": "Mapa szlaków Kompanii Wschodniocesarskiej"
-    },
-    {
-        "editor_id": "ccEEJSSE003_PortalGemPurpleActivator",
-        "form_id": "[0500084D]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Amethyst Paragon",
-        "string": "Ametystowy talizman"
-    },
-    {
-        "editor_id": "ccEEJSSE003_RightEyeoftheFalmerActivator",
-        "form_id": "[05000C52]",
+        "form_id": "05000877|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Place",
         "string": "Umieść"
     },
     {
-        "editor_id": "ccEEJSSE003_LeftEyeoftheFalmerActivator",
-        "form_id": "[05000936]",
+        "editor_id": "ccEEJSSE003_DPMaskOtarActivator",
+        "form_id": "05000837|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Place",
@@ -329,23 +369,31 @@
     },
     {
         "editor_id": "ccEEJSSE003_PortalGemredActivator",
-        "form_id": "[0500084A]",
+        "form_id": "0500084A|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ruby Paragon",
+        "string": "Rubinowy talizman"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemPurpleActivator",
+        "form_id": "0500084D|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Amethyst Paragon",
+        "string": "Ametystowy talizman"
+    },
+    {
+        "editor_id": "EEJSSE003_DiamondClawActivator",
+        "form_id": "0500083F|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Place",
         "string": "Umieść"
     },
     {
-        "editor_id": "EEJSSE003_SapphireClawActivator",
-        "form_id": "[0500083C]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Sapphire Dragon Claw",
-        "string": "Szpon szafirowego smoka"
-    },
-    {
-        "editor_id": "ccEEJSSE003_DPMaskHevnoraakActivator",
-        "form_id": "[05000830]",
+        "editor_id": "EEJSSE003_EmeraldClawActivator",
+        "form_id": "05000843|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Place",
@@ -353,95 +401,39 @@
     },
     {
         "editor_id": "ccEEJSSE003_DPMaskMorokeiActivator",
-        "form_id": "[05000850]",
+        "form_id": "05000850|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI FULL",
         "original": "Morokei",
         "string": "Morokej"
     },
     {
-        "editor_id": "ccEEJSSE003_DPMaskKrosisActivator",
-        "form_id": "[05000836]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Umieść"
-    },
-    {
-        "editor_id": "ccEEJSSE003_GrimseverActivator",
-        "form_id": "[0500086D]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Umieść"
-    },
-    {
-        "editor_id": "EEJSSE003_GlassClawActivator",
-        "form_id": "[0500083A]",
+        "editor_id": "ccEEJSSE003_RightEyeoftheFalmerActivator",
+        "form_id": "05000C52|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI FULL",
-        "original": "Glass Dragon Claw",
-        "string": "Szpon szklanego smoka"
+        "original": "Right Eye of the Falmer",
+        "string": "Prawe Oko Falmera"
     },
     {
-        "editor_id": "ccEEJSSE003_ModelShipActivator",
-        "form_id": "[05000D47]",
+        "editor_id": "ccEEJSSE003_SpiderControlRodActivator",
+        "form_id": "05000F7C|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Place",
         "string": "Umieść"
     },
     {
-        "editor_id": "ccEEJSSE003_DPMaskRahgotActivator",
-        "form_id": "[05000838]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Umieść"
-    },
-    {
-        "editor_id": "ccEEJSSE003_DPMaskShockActivator",
-        "form_id": "[0500084F]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Umieść"
-    },
-    {
-        "editor_id": "ccEEJSSE003_DPMaskWoodenActivator",
-        "form_id": "[05000834]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Umieść"
-    },
-    {
-        "editor_id": "EEJSSE003_GoldenClawActivator",
-        "form_id": "[05000842]",
+        "editor_id": "ccEEJSSE003_DPMaskKonahrikActivator",
+        "form_id": "05000831|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI FULL",
-        "original": "Golden Dragon Claw",
-        "string": "Szpon złotego smoka"
+        "original": "Konahrik",
+        "string": "Konahrik"
     },
     {
-        "editor_id": "ccEEJSSE003_GrimseverActivator",
-        "form_id": "[0500086D]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Grimsever",
-        "string": "Ponury Siekacz"
-    },
-    {
-        "editor_id": "ccEEJSSE003_DPMaskShockActivator",
-        "form_id": "[0500084F]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Zahkriisos",
-        "string": "Zahkriisos"
-    },
-    {
-        "editor_id": "ccEEJSSE003_DPMaskFrostActivator",
-        "form_id": "[05000832]",
+        "editor_id": "ccEEJSSE003_NightingaleBowActivator",
+        "form_id": "0500086E|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Place",
@@ -449,103 +441,15 @@
     },
     {
         "editor_id": "ccEEJSSE003_PortalGemGreenActivator",
-        "form_id": "[0500084C]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Umieść"
-    },
-    {
-        "editor_id": "ccEEJSSE003_DPMaskNahkriinActivator",
-        "form_id": "[05000839]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Umieść"
-    },
-    {
-        "editor_id": "EEJSSE003_IvoryClawActivator",
-        "form_id": "[05000841]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Umieść"
-    },
-    {
-        "editor_id": "ccEEJSSE003_RightEyeoftheFalmerActivator",
-        "form_id": "[05000C52]",
+        "form_id": "0500084C|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI FULL",
-        "original": "Right Eye of the Falmer",
-        "string": "Prawe Oko Falmera"
+        "original": "Emerald Paragon",
+        "string": "Szmaragdowy talizman"
     },
     {
         "editor_id": "ccEEJSSE003_DPMaskVolsungActivator",
-        "form_id": "[05000835]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Volsung",
-        "string": "Volsung"
-    },
-    {
-        "editor_id": "ccEEJSSE003_DPMaskFireActivator",
-        "form_id": "[05000833]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Umieść"
-    },
-    {
-        "editor_id": "EEJSSE003_DiamondClawActivator",
-        "form_id": "[0500083F]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Diamond Dragon Claw",
-        "string": "Szpon diamentowego smoka"
-    },
-    {
-        "editor_id": "ccEEJSSE003_PortalGemredActivator",
-        "form_id": "[0500084A]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Ruby Paragon",
-        "string": "Rubinowy talizman"
-    },
-    {
-        "editor_id": "EEJSSE003_IronClawActivator",
-        "form_id": "[05000840]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Umieść"
-    },
-    {
-        "editor_id": "EEJSSE003_RubyClawActivator",
-        "form_id": "[0500083D]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Umieść"
-    },
-    {
-        "editor_id": "ccEEJSSE003_ModelShipActivator",
-        "form_id": "[05000D47]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Model Ship",
-        "string": "Model okrętu"
-    },
-    {
-        "editor_id": "ccEEJSSE003_PuzzleCubeActivator",
-        "form_id": "[05000BC1]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Umieść"
-    },
-    {
-        "editor_id": "ccEEJSSE003_NightingaleBowActivator",
-        "form_id": "[0500086E]",
+        "form_id": "05000835|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Place",
@@ -553,39 +457,15 @@
     },
     {
         "editor_id": "ccEEJSSE003_DPMaskWoodenActivator",
-        "form_id": "[05000834]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Wooden Mask",
-        "string": "Drewniana maska"
-    },
-    {
-        "editor_id": "ccEEJSSE003_DPMaskOtarActivator",
-        "form_id": "[05000837]",
+        "form_id": "05000834|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Place",
         "string": "Umieść"
     },
     {
-        "editor_id": "ccEEJSSE003_NightingaleBladeActivator",
-        "form_id": "[05000877]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Umieść"
-    },
-    {
-        "editor_id": "ccEEJSSE003_PortalGemPurpleActivator",
-        "form_id": "[0500084D]",
-        "index": null,
-        "type": "ACTI RNAM",
-        "original": "Place",
-        "string": "Umieść"
-    },
-    {
-        "editor_id": "EEJSSE003_SapphireClawActivator",
-        "form_id": "[0500083C]",
+        "editor_id": "EEJSSE003_IronClawActivator",
+        "form_id": "05000840|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Place",
@@ -593,23 +473,31 @@
     },
     {
         "editor_id": "ccEEJSSE003_ChillrendActivator",
-        "form_id": "[0500086A]",
+        "form_id": "0500086A|cceejsse003-hollow.esl",
         "index": null,
-        "type": "ACTI FULL",
-        "original": "Chillrend",
-        "string": "Rozdzieracz Chłodu"
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umieść"
+    },
+    {
+        "editor_id": "ccEEJSSE003_HonningbrewDecanterActivator",
+        "form_id": "050009D0|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umieść"
     },
     {
         "editor_id": "ccEEJSSE003_DragonflyJarActivator",
-        "form_id": "[05000845]",
+        "form_id": "05000845|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI FULL",
         "original": "Dragonfly in a Jar",
         "string": "Ważka w słoiku"
     },
     {
-        "editor_id": "ccEEJSSE003_DPMaskKonahrikActivator",
-        "form_id": "[05000831]",
+        "editor_id": "ccEEJSSE003_DPMaskFireActivator",
+        "form_id": "05000833|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Place",
@@ -617,71 +505,79 @@
     },
     {
         "editor_id": "ccEEJSSE003_BeeJarActivator",
-        "form_id": "[0500084E]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Bee in a Jar",
-        "string": "Pszczoła w słoiku"
-    },
-    {
-        "editor_id": "ccEEJSSE003_PortalGemGreenActivator",
-        "form_id": "[0500084C]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Emerald Paragon",
-        "string": "Szmaragdowy talizman"
-    },
-    {
-        "editor_id": "EEJSSE003_EbonyClawActivator",
-        "form_id": "[0500083B]",
+        "form_id": "0500084E|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Place",
         "string": "Umieść"
     },
     {
-        "editor_id": "ccEEJSSE003_ButterflyJarActivator",
-        "form_id": "[05000847]",
+        "editor_id": "ccEEJSSE003_EESMapActivator",
+        "form_id": "05000D7F|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI FULL",
-        "original": "Butterfly in a Jar",
-        "string": "Motyl w słoiku"
+        "original": "East Empire Shipping Map",
+        "string": "Mapa szlaków Kompanii Wschodniocesarskiej"
     },
     {
-        "editor_id": "ccEEJSSE003_PortalGemBlueActivator",
-        "form_id": "[0500084B]",
+        "editor_id": "ccEEJSSE003_LeftEyeoftheFalmerActivator",
+        "form_id": "05000936|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Place",
         "string": "Umieść"
-    },
-    {
-        "editor_id": "ccEEJSSE003_DPMaskOtarActivator",
-        "form_id": "[05000837]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Otar",
-        "string": "Otar"
-    },
-    {
-        "editor_id": "ccEEJSSE003_PuzzleCubeActivator",
-        "form_id": "[05000BC1]",
-        "index": null,
-        "type": "ACTI FULL",
-        "original": "Dwemer Puzzle Cube",
-        "string": "Dwemerska kostka-układanka"
     },
     {
         "editor_id": "ccEEJSSE003_DPMaskKrosisActivator",
-        "form_id": "[05000836]",
+        "form_id": "05000836|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI FULL",
         "original": "Krosis",
         "string": "Krosis"
     },
     {
-        "editor_id": "ccEEJSSE003_PortalGemWhiteActivator",
-        "form_id": "[05000849]",
+        "editor_id": "ccEEJSSE003_DPMaskShockActivator",
+        "form_id": "0500084F|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Zahkriisos",
+        "string": "Zahkriisos"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskNahkriinActivator",
+        "form_id": "05000839|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Nahkriin",
+        "string": "Nahkriin"
+    },
+    {
+        "editor_id": "EEJSSE003_SapphireClawActivator",
+        "form_id": "0500083C|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umieść"
+    },
+    {
+        "editor_id": "EEJSSE003_GoldenClawActivator",
+        "form_id": "05000842|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Golden Dragon Claw",
+        "string": "Szpon złotego smoka"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskHevnoraakActivator",
+        "form_id": "05000830|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Hevnoraak",
+        "string": "Hevnoraak"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskFrostActivator",
+        "form_id": "05000832|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Place",
@@ -689,111 +585,207 @@
     },
     {
         "editor_id": "ccEEJSSE003_GreyFoxBustActivator",
-        "form_id": "[05000A55]",
+        "form_id": "05000A55|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI FULL",
         "original": "Bust of the Gray Fox",
         "string": "Popiersie Szarego Lisa"
     },
     {
-        "editor_id": "EEJSSE003_EmeraldClawActivator",
-        "form_id": "[05000843]",
+        "editor_id": "EEJSSE003_CoralClawActivator",
+        "form_id": "0500083E|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Place",
         "string": "Umieść"
     },
     {
+        "editor_id": "ccEEJSSE003_PortalGemBlueActivator",
+        "form_id": "0500084B|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umieść"
+    },
+    {
+        "editor_id": "ccEEJSSE003_ModelShipActivator",
+        "form_id": "05000D47|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Model Ship",
+        "string": "Model okrętu"
+    },
+    {
         "editor_id": "ccEEJSSE003_QueenBeeStatueActivator",
-        "form_id": "[05000D0B]",
+        "form_id": "05000D0B|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI FULL",
         "original": "Queen Bee Statue",
         "string": "Posążek królowej pszczół "
     },
     {
-        "editor_id": "ccEEJSSE003_MothJarActivator",
-        "form_id": "[05000846]",
+        "editor_id": "ccEEJSSE003_FireflyJarActivator",
+        "form_id": "05000844|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Torchbug in a Jar",
+        "string": "Świetlik w słoiku"
+    },
+    {
+        "editor_id": "ccEEJSSE003_NightingaleBladeActivator",
+        "form_id": "05000877|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Nightingale Blade",
+        "string": "Ostrze Słowików"
+    },
+    {
+        "editor_id": "ccEEJSSE003_PortalGemWhiteActivator",
+        "form_id": "05000849|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI RNAM",
         "original": "Place",
         "string": "Umieść"
     },
     {
-        "editor_id": "ccEEJSSE003_DPMaskKonahrikActivator",
-        "form_id": "[05000831]",
+        "editor_id": "ccEEJSSE003_DPMaskOtarActivator",
+        "form_id": "05000837|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI FULL",
-        "original": "Konahrik",
-        "string": "Konahrik"
+        "original": "Otar",
+        "string": "Otar"
+    },
+    {
+        "editor_id": "ccEEJSSE003_GrimseverActivator",
+        "form_id": "0500086D|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umieść"
+    },
+    {
+        "editor_id": "EEJSSE003_EbonyClawActivator",
+        "form_id": "0500083B|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Ebony Dragon Claw",
+        "string": "Szpon ebonowego smoka"
+    },
+    {
+        "editor_id": "EEJSSE003_DiamondClawActivator",
+        "form_id": "0500083F|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Diamond Dragon Claw",
+        "string": "Szpon diamentowego smoka"
+    },
+    {
+        "editor_id": "EEJSSE003_RubyClawActivator",
+        "form_id": "0500083D|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umieść"
+    },
+    {
+        "editor_id": "EEJSSE003_EmeraldClawActivator",
+        "form_id": "05000843|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI FULL",
+        "original": "Emerald Dragon Claw",
+        "string": "Szpon szmaragdowego smoka"
     },
     {
         "editor_id": "ccEEJSSE003_MothJarActivator",
-        "form_id": "[05000846]",
+        "form_id": "05000846|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umieść"
+    },
+    {
+        "editor_id": "ccEEJSSE003_SpiderControlRodActivator",
+        "form_id": "05000F7C|cceejsse003-hollow.esl",
         "index": null,
         "type": "ACTI FULL",
-        "original": "Moth in a Jar",
-        "string": "Ćma w słoiku"
+        "original": "Spider Control Rod",
+        "string": "Pręt pajęczej kontroli"
     },
     {
-        "editor_id": "ccEEJSSE003_Note",
-        "form_id": "[05000A22]",
+        "editor_id": "ccEEJSSE003_PuzzleCubeActivator",
+        "form_id": "05000BC1|cceejsse003-hollow.esl",
         "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\r\n\r\nVekel,\r\n\r\nThere's gotta be someone in the guild we can sell the Ratway home to, so I cleared out that manhole exit in the crafting room. It can be used to quickly access the dockside, possibly to evade.. unwanted guests.\r\n\r\nBjorn\r\n\r\n",
-        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\r\n\r\nVekelu,\r\n\r\nMusi się znaleźć ktoś z gildii, komu zdołamy sprzedać dom w Szczurzych Norach. Oczyściłem już nawet wyjście przez właz w pomieszczeniu rzemieślniczym. Można przez niego szybko dojść do doków, żeby na przykład uniknąć... nieproszonych gości.\r\n\r\nBjorn\r\n\r\n"
+        "type": "ACTI FULL",
+        "original": "Dwemer Puzzle Cube",
+        "string": "Dwemerska kostka-układanka"
+    },
+    {
+        "editor_id": "ccEEJSSE003_DPMaskVokunActivator",
+        "form_id": "05000848|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umieść"
+    },
+    {
+        "editor_id": "ccEEJSSE003_ButterflyJarActivator",
+        "form_id": "05000847|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "ACTI RNAM",
+        "original": "Place",
+        "string": "Umieść"
     },
     {
         "editor_id": "ccEEJSSE003_Note",
-        "form_id": "[05000A22]",
+        "form_id": "05000A22|cceejsse003-hollow.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "Note to Vekel",
         "string": "Wiadomość dla Vekela"
     },
     {
-        "editor_id": "ccEEJSSE003_Barrel",
-        "form_id": "[05000803]",
+        "editor_id": "ccEEJSSE003_Note",
+        "form_id": "05000A22|cceejsse003-hollow.esl",
         "index": null,
-        "type": "CONT FULL",
-        "original": "Barrel",
-        "string": "Beczka"
+        "type": "BOOK DESC",
+        "original": "<font face=\"$HandwrittenFont\" size=\"18\">\r\n\r\nVekel,\r\n\r\nThere's gotta be someone in the guild we can sell the Ratway home to, so I cleared out that manhole exit in the crafting room. It can be used to quickly access the dockside, possibly to evade.. unwanted guests.\r\n\r\nBjorn\r\n\r\n",
+        "string": "<font face=\"$HandwrittenFont\" size=\"18\">\r\n\r\nVekelu,\r\n\r\nMusi się znaleźć ktoś z gildii, komu zdołamy sprzedać dom w Szczurzych Norach. Oczyściłem już nawet wyjście przez właz w pomieszczeniu rzemieślniczym. Można przez niego szybko dojść do doków, żeby na przykład uniknąć... nieproszonych gości.\r\n\r\nBjorn\r\n\r\n"
     },
     {
-        "editor_id": "ccEEJSSE003_Bookcase",
-        "form_id": "[050008EC]",
-        "index": null,
-        "type": "CONT FULL",
-        "original": "Bookcase",
-        "string": "Regał"
-    },
-    {
-        "editor_id": "ccEEJSSE002_SmithingChest",
-        "form_id": "[05000804]",
-        "index": null,
-        "type": "CONT FULL",
-        "original": "Chest",
-        "string": "Skrzynia"
-    },
-    {
-        "editor_id": "ccEEJSSE003_MiscSackLargeFlat03",
-        "form_id": "[05000802]",
-        "index": null,
-        "type": "CONT FULL",
-        "original": "Large Sack",
-        "string": "Duży wór"
-    },
-    {
-        "editor_id": "ccEEJSSE003_SmallUrn2",
-        "form_id": "[050008F5]",
+        "editor_id": "ccEEJSSE003_SmallUrn",
+        "form_id": "0500089E|cceejsse003-hollow.esl",
         "index": null,
         "type": "CONT FULL",
         "original": "Small Urn",
         "string": "Mała urna"
     },
     {
+        "editor_id": "ccEEJSSE003_Barrel",
+        "form_id": "05000803|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Barrel",
+        "string": "Beczka"
+    },
+    {
+        "editor_id": "ccEEJSSE003_NobleCupboard",
+        "form_id": "05000806|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Cupboard",
+        "string": "Kredens"
+    },
+    {
+        "editor_id": "ccEEJSSE002_SmithingChest",
+        "form_id": "05000804|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Chest",
+        "string": "Skrzynia"
+    },
+    {
         "editor_id": "ccEEJSSE003_TestItems",
-        "form_id": "[05000851]",
+        "form_id": "05000851|cceejsse003-hollow.esl",
         "index": null,
         "type": "CONT FULL",
         "original": "Test Items",
@@ -801,31 +793,39 @@
     },
     {
         "editor_id": "ccEEJSSE003_LargeChest",
-        "form_id": "[05000EB8]",
+        "form_id": "05000EB8|cceejsse003-hollow.esl",
         "index": null,
         "type": "CONT FULL",
         "original": "Chest",
         "string": "Skrzynia"
     },
     {
-        "editor_id": "ccEEJSSE003_NobleCupboard",
-        "form_id": "[05000806]",
+        "editor_id": "ccEEJSSE003_MiscSackLargeFlat03",
+        "form_id": "05000802|cceejsse003-hollow.esl",
         "index": null,
         "type": "CONT FULL",
-        "original": "Cupboard",
-        "string": "Kredens"
+        "original": "Large Sack",
+        "string": "Duży wór"
     },
     {
-        "editor_id": "ccEEJSSE003_SmallUrn",
-        "form_id": "[0500089E]",
+        "editor_id": "ccEEJSSE003_SmallUrn2",
+        "form_id": "050008F5|cceejsse003-hollow.esl",
         "index": null,
         "type": "CONT FULL",
         "original": "Small Urn",
         "string": "Mała urna"
     },
     {
+        "editor_id": "ccEEJSSE003_Bookcase",
+        "form_id": "050008EC|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "CONT FULL",
+        "original": "Bookcase",
+        "string": "Regał"
+    },
+    {
         "editor_id": "ccEEJSSE003_MiscSackLargeNRS",
-        "form_id": "[05000805]",
+        "form_id": "05000805|cceejsse003-hollow.esl",
         "index": null,
         "type": "CONT FULL",
         "original": "Large Sack",
@@ -833,7 +833,7 @@
     },
     {
         "editor_id": "ccEEJSSE003_RiftenRWDoorLoad01",
-        "form_id": "[01002FCA]",
+        "form_id": "01002FCA|Update.esm",
         "index": null,
         "type": "DOOR FULL",
         "original": "Door",
@@ -841,111 +841,119 @@
     },
     {
         "editor_id": "ccEEJSSE003_Cabinet",
-        "form_id": "[05000807]",
+        "form_id": "05000807|cceejsse003-hollow.esl",
         "index": null,
         "type": "DOOR FULL",
         "original": "Cabinet",
         "string": "Szafka"
     },
     {
-        "editor_id": "ccEEJSSE003_BronzeCup",
-        "form_id": "[05000813]",
+        "editor_id": "ccEEJSSE003_BronzeCandleStick1Misc",
+        "form_id": "0500080A|cceejsse003-hollow.esl",
         "index": null,
         "type": "MISC FULL",
-        "original": "Cup",
-        "string": "Kubek"
+        "original": "Candlestick",
+        "string": "Świecznik"
     },
     {
         "editor_id": "ccEEJSSE003_Basket03",
-        "form_id": "[05000B08]",
+        "form_id": "05000B08|cceejsse003-hollow.esl",
         "index": null,
         "type": "MISC FULL",
         "original": "Basket",
         "string": "Kosz"
     },
     {
-        "editor_id": "ccEEJSSE003_BronzeUrn",
-        "form_id": "[05000811]",
-        "index": null,
-        "type": "MISC FULL",
-        "original": "Urn",
-        "string": "Urna"
-    },
-    {
-        "editor_id": "ccEEJSSE003_JeweledShip",
-        "form_id": "[05000853]",
-        "index": null,
-        "type": "MISC FULL",
-        "original": "Jeweled Ship Model",
-        "string": "Zdobiony klejnotami model statku"
-    },
-    {
-        "editor_id": "ccEEJSSE003_GobletBronze",
-        "form_id": "[05000812]",
-        "index": null,
-        "type": "MISC FULL",
-        "original": "Goblet",
-        "string": "Puchar"
-    },
-    {
-        "editor_id": "ccEEJSSE004_BronzeBowl",
-        "form_id": "[0500080C]",
+        "editor_id": "ccEEJSSE003_BronzeBowl2",
+        "form_id": "05000B71|cceejsse003-hollow.esl",
         "index": null,
         "type": "MISC FULL",
         "original": "Bowl",
         "string": "Miska"
     },
     {
-        "editor_id": "ccEEJSSE003_BronzeCandleStick3Misc",
-        "form_id": "[05000809]",
+        "editor_id": "ccEEJSSE003_BronzeCup",
+        "form_id": "05000813|cceejsse003-hollow.esl",
         "index": null,
         "type": "MISC FULL",
-        "original": "Candlestick",
-        "string": "Świecznik"
+        "original": "Cup",
+        "string": "Kubek"
     },
     {
-        "editor_id": "ccEEJSSE003_BronzeJug",
-        "form_id": "[05000810]",
-        "index": null,
-        "type": "MISC FULL",
-        "original": "Jug",
-        "string": "Dzban"
-    },
-    {
-        "editor_id": "ccEEJSSE003_Pitcher",
-        "form_id": "[0500080D]",
+        "editor_id": "ccEEJSSE002_PitcherDUPLICATE001",
+        "form_id": "05000861|cceejsse003-hollow.esl",
         "index": null,
         "type": "MISC FULL",
         "original": "Jeweled Pitcher",
         "string": "Zdobiony klejnotami dzban"
     },
     {
-        "editor_id": "ccEEJSSE003_BronzeCandleStick2Misc",
-        "form_id": "[0500080B]",
+        "editor_id": "ccEEJSSE003_Basket05",
+        "form_id": "05000B43|cceejsse003-hollow.esl",
         "index": null,
         "type": "MISC FULL",
-        "original": "Candlestick",
-        "string": "Świecznik"
+        "original": "Basket",
+        "string": "Kosz"
     },
     {
-        "editor_id": "ccEEJSSE003_Platter",
-        "form_id": "[05000ABD]",
+        "editor_id": "ccEEJSSE004_BronzeBowl",
+        "form_id": "0500080C|cceejsse003-hollow.esl",
         "index": null,
         "type": "MISC FULL",
-        "original": "Platter",
-        "string": "Taca"
+        "original": "Bowl",
+        "string": "Miska"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BronzeUrn",
+        "form_id": "05000811|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Urn",
+        "string": "Urna"
     },
     {
         "editor_id": "ccEEJSSE003_JeweledGoblet",
-        "form_id": "[05000A7F]",
+        "form_id": "05000A7F|cceejsse003-hollow.esl",
         "index": null,
         "type": "MISC FULL",
         "original": "Jeweled Goblet",
         "string": "Zdobiony klejnotami puchar"
     },
     {
-        "editor_id": "ccEEJSSE003_Basket05",
-        "form_id": "[05000B43]",
+        "editor_id": "ccEEJSSE003_BronzeCandleStick3Misc",
+        "form_id": "05000809|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Candlestick",
+        "string": "Świecznik"
+    },
+    {
+        "editor_id": "ccEEJSSE003_JeweledShip",
+        "form_id": "05000853|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Jeweled Ship Model",
+        "string": "Zdobiony klejnotami model statku"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BronzeJugLg",
+        "form_id": "0500080E|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "Dzban"
+    },
+    {
+        "editor_id": "ccEEJSSE003_BronzeJug",
+        "form_id": "05000810|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "MISC FULL",
+        "original": "Jug",
+        "string": "Dzban"
+    },
+    {
+        "editor_id": "ccEEJSSE003_Basket01",
+        "form_id": "050009DF|cceejsse003-hollow.esl",
         "index": null,
         "type": "MISC FULL",
         "original": "Basket",
@@ -953,87 +961,79 @@
     },
     {
         "editor_id": "ccEEJSSE003_LargeJug",
-        "form_id": "[0500080F]",
+        "form_id": "0500080F|cceejsse003-hollow.esl",
         "index": null,
         "type": "MISC FULL",
         "original": "Jug",
         "string": "Dzban"
     },
     {
-        "editor_id": "ccEEJSSE003_BronzeBowl2",
-        "form_id": "[05000B71]",
+        "editor_id": "ccEEJSSE003_GobletBronze",
+        "form_id": "05000812|cceejsse003-hollow.esl",
         "index": null,
         "type": "MISC FULL",
-        "original": "Bowl",
-        "string": "Miska"
-    },
-    {
-        "editor_id": "ccEEJSSE003_BronzeCandleStick1Misc",
-        "form_id": "[0500080A]",
-        "index": null,
-        "type": "MISC FULL",
-        "original": "Candlestick",
-        "string": "Świecznik"
-    },
-    {
-        "editor_id": "ccEEJSSE002_PitcherDUPLICATE001",
-        "form_id": "[05000861]",
-        "index": null,
-        "type": "MISC FULL",
-        "original": "Jeweled Pitcher",
-        "string": "Zdobiony klejnotami dzban"
+        "original": "Goblet",
+        "string": "Puchar"
     },
     {
         "editor_id": "ccEEJSSE003_EmptyJar",
-        "form_id": "[05000B70]",
+        "form_id": "05000B70|cceejsse003-hollow.esl",
         "index": null,
         "type": "MISC FULL",
         "original": "Glass Jar",
         "string": "Szklany słój"
     },
     {
-        "editor_id": "ccEEJSSE003_Basket01",
-        "form_id": "[050009DF]",
+        "editor_id": "ccEEJSSE003_Pitcher",
+        "form_id": "0500080D|cceejsse003-hollow.esl",
         "index": null,
         "type": "MISC FULL",
-        "original": "Basket",
-        "string": "Kosz"
+        "original": "Jeweled Pitcher",
+        "string": "Zdobiony klejnotami dzban"
     },
     {
         "editor_id": "ccEEJSSE003_BronzePlate",
-        "form_id": "[05000B6F]",
+        "form_id": "05000B6F|cceejsse003-hollow.esl",
         "index": null,
         "type": "MISC FULL",
         "original": "Plate",
         "string": "Talerz"
     },
     {
-        "editor_id": "ccEEJSSE003_BronzeJugLg",
-        "form_id": "[0500080E]",
+        "editor_id": "ccEEJSSE003_Platter",
+        "form_id": "05000ABD|cceejsse003-hollow.esl",
         "index": null,
         "type": "MISC FULL",
-        "original": "Jug",
-        "string": "Dzban"
+        "original": "Platter",
+        "string": "Taca"
     },
     {
-        "editor_id": "ccEEJSSE003_ArmChair",
-        "form_id": "[05000B78]",
+        "editor_id": "ccEEJSSE003_BronzeCandleStick2Misc",
+        "form_id": "0500080B|cceejsse003-hollow.esl",
         "index": null,
-        "type": "FURN FULL",
-        "original": "Armchair",
-        "string": "Fotel"
+        "type": "MISC FULL",
+        "original": "Candlestick",
+        "string": "Świecznik"
     },
     {
         "editor_id": "ccEEJSSE003_Smelter",
-        "form_id": "[05000825]",
+        "form_id": "05000825|cceejsse003-hollow.esl",
         "index": null,
         "type": "FURN FULL",
         "original": "Smelter",
         "string": "Piec hutniczy"
     },
     {
+        "editor_id": "ccEEJSSE003_ArmChair",
+        "form_id": "05000B78|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "FURN FULL",
+        "original": "Armchair",
+        "string": "Fotel"
+    },
+    {
         "editor_id": "ccEEJSSE003_ChildBedR",
-        "form_id": "[05000B77]",
+        "form_id": "05000B77|cceejsse003-hollow.esl",
         "index": null,
         "type": "FURN FULL",
         "original": "Bed",
@@ -1041,7 +1041,7 @@
     },
     {
         "editor_id": "ccEEJSSE003_AllForge",
-        "form_id": "[05000826]",
+        "form_id": "05000826|cceejsse003-hollow.esl",
         "index": null,
         "type": "FURN FULL",
         "original": "Anvil",
@@ -1049,7 +1049,7 @@
     },
     {
         "editor_id": "ccEEJSSE003_DoubleBed",
-        "form_id": "[05000828]",
+        "form_id": "05000828|cceejsse003-hollow.esl",
         "index": null,
         "type": "FURN FULL",
         "original": "Bed",
@@ -1057,103 +1057,55 @@
     },
     {
         "editor_id": "ccEEJSSE003_ThiefHouseKey",
-        "form_id": "[05000829]",
+        "form_id": "05000829|cceejsse003-hollow.esl",
         "index": null,
         "type": "KEYM FULL",
         "original": "Key to Shadowfoot Sanctum",
         "string": "Klucz do Sanktuarium Cieniostopych"
     },
     {
-        "editor_id": "RiftenRatway01",
-        "form_id": "[0003B698]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "The Ratway",
-        "string": "Szczurze Nory"
-    },
-    {
-        "editor_id": "ccEEJSSE003Interior01",
-        "form_id": "[01002F98]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Shadowfoot Sanctum",
-        "string": "Sanktuarium Cieniostopych"
-    },
-    {
         "editor_id": "Tamriel",
-        "form_id": "[0000003C]",
+        "form_id": "0000003C|Skyrim.esm",
         "index": null,
         "type": "WRLD FULL",
         "original": "Skyrim",
         "string": "Skyrim"
     },
     {
-        "editor_id": null,
-        "form_id": "[05000F72]",
-        "index": null,
-        "type": "REFR FULL",
-        "original": "Riften Docks",
-        "string": "Doki w Pękninie"
-    },
-    {
-        "editor_id": null,
-        "form_id": "[05000FD9]",
-        "index": null,
-        "type": "INFO RNAM",
-        "original": "I'll take it. (7500 gold)",
-        "string": "Biorę. (7500 szt. złota)"
-    },
-    {
-        "editor_id": "ccEEJSSE003_HouseQuestBranchTopic",
-        "form_id": "[05000FD4]",
-        "index": null,
-        "type": "DIAL FULL",
-        "original": "I'm looking to make a home here in the Ratways.",
-        "string": "Chcę się urządzić tutaj, w Szczurzych Norach."
-    },
-    {
-        "editor_id": "ccEEJSSE003_HouseQuestTopicYES",
-        "form_id": "[05000FD7]",
-        "index": null,
-        "type": "DIAL FULL",
-        "original": "I'm a bit short of money right now. (7500 gold)",
-        "string": "Chwilowo mam trochę za mało pieniędzy. (7500 szt. złota)"
-    },
-    {
         "editor_id": "ccEEJSSE003_HouseQuestTopicNO",
-        "form_id": "[05000FD6]",
+        "form_id": "05000FD6|cceejsse003-hollow.esl",
         "index": null,
         "type": "DIAL FULL",
         "original": "I'll have to think about it.",
         "string": "Muszę to przemyśleć."
     },
     {
-        "editor_id": "ccEEJSSE003_HouseQuest",
-        "form_id": "[0500082A]",
-        "index": 20,
-        "type": "QUST NNAM",
-        "original": "Enter Shadowfoot Sanctum",
-        "string": "Wejdź do Sanktuarium Cieniostopych"
-    },
-    {
-        "editor_id": "ccEEJSSE003_HouseInitQuest",
-        "form_id": "[05000FDC]",
+        "editor_id": "ccEEJSSE003_HouseQuestTopicYES",
+        "form_id": "05000FD7|cceejsse003-hollow.esl",
         "index": null,
-        "type": "QUST FULL",
-        "original": "House Enable Quest",
-        "string": "Zadanie aktywacji domu"
+        "type": "DIAL FULL",
+        "original": "I'm a bit short of money right now. (7500 gold)",
+        "string": "Chwilowo mam trochę za mało pieniędzy. (7500 szt. złota)"
+    },
+    {
+        "editor_id": "ccEEJSSE003_HouseQuestBranchTopic",
+        "form_id": "05000FD4|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "DIAL FULL",
+        "original": "I'm looking to make a home here in the Ratways.",
+        "string": "Chcę się urządzić tutaj, w Szczurzych Norach."
     },
     {
         "editor_id": "ccEEJSSE003_HouseQuest",
-        "form_id": "[0500082A]",
-        "index": 78,
+        "form_id": "0500082A|cceejsse003-hollow.esl",
+        "index": 87,
         "type": "QUST CNAM",
         "original": "After meeting with the Thieves Guild in the Ragged Flagon, I purchased a home in the Ratways from Vekel. I should find the location and make myself at home.",
         "string": "Po spotkaniu z Gildią Złodziei w Wyszczerbionej Bani, udało mi się kupić od Vekela dom w Szczurzych Norach. Muszę go teraz odnaleźć i nieco się urządzić."
     },
     {
         "editor_id": "ccEEJSSE003_HouseQuest",
-        "form_id": "[0500082A]",
+        "form_id": "0500082A|cceejsse003-hollow.esl",
         "index": 10,
         "type": "QUST NNAM",
         "original": "Purchase a home in the Riften Ratways",
@@ -1161,7 +1113,7 @@
     },
     {
         "editor_id": "ccEEJSSE003_HouseQuest",
-        "form_id": "[0500082A]",
+        "form_id": "0500082A|cceejsse003-hollow.esl",
         "index": null,
         "type": "QUST FULL",
         "original": "Shadowfoot Sanctum",
@@ -1169,55 +1121,71 @@
     },
     {
         "editor_id": "ccEEJSSE003_HouseQuest",
-        "form_id": "[0500082A]",
-        "index": 73,
+        "form_id": "0500082A|cceejsse003-hollow.esl",
+        "index": 86,
         "type": "QUST CNAM",
         "original": "Not every home in Skyrim is built above ground. If I'm ever in the need of a more discreet hideout, I should head over to Riften and talk to those in the know.",
         "string": "Nie wszystkie domy w Skyrimie są budowane nad ziemią. Jeśli kiedyś potrzebna mi będzie bardziej dyskretna kryjówka, wyruszę do Pękniny i porozmawiam z odpowiednimi osobami."
     },
     {
         "editor_id": "ccEEJSSE003_HouseQuest",
-        "form_id": "[0500082A]",
-        "index": 84,
+        "form_id": "0500082A|cceejsse003-hollow.esl",
+        "index": 76,
         "type": "QUST CNAM",
         "original": "After meeting with the Thieves Guild in the Ragged Flagon, I purchased a home in the Ratways from Vekel. I found the entrance to Shadowfoot Sanctum and can now settle in.",
         "string": "Po spotkaniu z Gildią Złodziei w Wyszczerbionej Bani, udało mi się kupić od Vekela dom w Szczurzych Norach. Muszę tylko odnaleźć wejście do Sanktuarium Cieniostopych i nieco się urządzić."
     },
     {
-        "editor_id": "ccEEJSSE003_ThiefHouseINTLocation",
-        "form_id": "[05000D41]",
+        "editor_id": "ccEEJSSE003_HouseQuest",
+        "form_id": "0500082A|cceejsse003-hollow.esl",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Enter Shadowfoot Sanctum",
+        "string": "Wejdź do Sanktuarium Cieniostopych"
+    },
+    {
+        "editor_id": "ccEEJSSE003_HouseInitQuest",
+        "form_id": "05000FDC|cceejsse003-hollow.esl",
         "index": null,
-        "type": "LCTN FULL",
-        "original": "Shadowfoot Sanctum",
-        "string": "Sanktuarium Cieniostopych"
+        "type": "QUST FULL",
+        "original": "House Enable Quest",
+        "string": "Zadanie aktywacji domu"
     },
     {
         "editor_id": "RiftenRatwayLocation",
-        "form_id": "[0003B871]",
+        "form_id": "0003B871|Skyrim.esm",
         "index": null,
         "type": "LCTN FULL",
         "original": "Riften Ratway",
         "string": "Szczurze Nory w Pękninie"
     },
     {
-        "editor_id": "ccEEJSSE003_TeleportHollowMessage",
-        "form_id": "[05000B6E]",
+        "editor_id": "ccEEJSSE003_ThiefHouseINTLocation",
+        "form_id": "05000D41|cceejsse003-hollow.esl",
         "index": null,
-        "type": "MESG FULL",
-        "original": "Sewer Entrance to Shadowfoot Sanctum",
-        "string": "Wejście do kanałów do Sanktuarium Cieniostopych"
+        "type": "LCTN FULL",
+        "original": "Shadowfoot Sanctum",
+        "string": "Sanktuarium Cieniostopych"
     },
     {
         "editor_id": "ccEEJSSE003_TeleportRiftenMessage",
-        "form_id": "[05000B6D]",
+        "form_id": "05000B6D|cceejsse003-hollow.esl",
         "index": null,
         "type": "MESG FULL",
         "original": "Sewer Exit to Riften",
         "string": "Wyjście z kanałów do Pękniny"
     },
     {
+        "editor_id": "ccEEJSSE003_TeleportHollowMessage",
+        "form_id": "05000B6E|cceejsse003-hollow.esl",
+        "index": null,
+        "type": "MESG FULL",
+        "original": "Sewer Entrance to Shadowfoot Sanctum",
+        "string": "Wejście do kanałów do Sanktuarium Cieniostopych"
+    },
+    {
         "editor_id": "ccEEJSSE003_DisplayLackMsg",
-        "form_id": "[05000E3D]",
+        "form_id": "05000E3D|cceejsse003-hollow.esl",
         "index": null,
         "type": "MESG DESC",
         "original": "You do not have the required item.",

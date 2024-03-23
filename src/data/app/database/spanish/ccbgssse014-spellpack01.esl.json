@@ -1,31 +1,215 @@
 [
     {
-        "editor_id": "ccBGSSSE014_IceSpellParalyzeEffect",
-        "form_id": "[02000813]",
+        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_50",
+        "form_id": "0200084C|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Absorb <mag> points of health per second from target, for <dur> seconds.",
+        "string": "Absorbe <mag> puntos de salud por segundo del objetivo durante <dur> segundos."
+    },
+    {
+        "editor_id": "ccBGSSSE014_FrostDamageConcAimedCloak",
+        "form_id": "0200081E|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "A blast of cold that does <mag> points of damage per second to Health and Stamina.",
+        "string": "Una ráfaga de frío que inflige <mag> puntos de daño por segundo a la salud y al aguante."
+    },
+    {
+        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_00",
+        "form_id": "0200084A|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Absorb Health",
+        "string": "Absorber salud"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FF_Self_ResistFrost_NoUI",
+        "form_id": "02000841|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Resist Frost",
+        "string": "Resistencia a la escarcha"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ShockEffectCloak",
+        "form_id": "02000807|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Unbounded Storms",
+        "string": "Tormentas ilimitadas"
+    },
+    {
+        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_75",
+        "form_id": "0200084D|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Absorb <mag> points of health per second from target, for <dur> seconds.",
+        "string": "Absorbe <mag> puntos de salud por segundo del objetivo durante <dur> segundos."
+    },
+    {
+        "editor_id": "ccBGSSSE014_UnboundedFreeze_IceSpellEffect",
+        "form_id": "02000809|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Unbounded Freeze",
         "string": "Congelación ilimitada"
     },
     {
-        "editor_id": "ccBGSSSE014_RuneParalysisFFLocation",
-        "form_id": "[02000D62]",
+        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_50",
+        "form_id": "0200084C|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "MGEF FULL",
-        "original": "Paralysis Rune",
-        "string": "Runa paralizante"
+        "original": "Absorb Health",
+        "string": "Absorber salud"
     },
     {
-        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea01",
-        "form_id": "[02000840]",
+        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea03",
+        "form_id": "02000845|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "An elemental explosion for <mag> points of fire damage, <mag> points of shock damage, and half as much damage to stamina.",
         "string": "Una explosión elemental por <mag> puntos de daño por fuego, <mag> puntos de daño por descarga y la mitad de daño a la resistencia."
     },
     {
+        "editor_id": "ccBGSSSE014_FrostDamageConcAimedCloak",
+        "form_id": "0200081E|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Unbounded Frostbite",
+        "string": "Helamiento ilimitado"
+    },
+    {
+        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_25",
+        "form_id": "0200084E|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Absorb <mag> points of health per second from target, for <dur> seconds.",
+        "string": "Absorbe <mag> puntos de salud por segundo del objetivo durante <dur> segundos."
+    },
+    {
+        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_75",
+        "form_id": "0200084D|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Absorb Health",
+        "string": "Absorber salud"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea04",
+        "form_id": "02000844|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "An elemental explosion for <mag> points of fire damage, <mag> points of shock damage, and half as much damage to stamina.",
+        "string": "Una explosión elemental por <mag> puntos de daño por fuego, <mag> puntos de daño por descarga y la mitad de daño a la resistencia."
+    },
+    {
+        "editor_id": "ccBGSSSE014_FireSpellEffect",
+        "form_id": "0200080C|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Casts a stream of long-distance fireballs in an arc. Impact creates a wall of fire that does <50> points of fire damage per second.",
+        "string": "Lanza una andanada en forma de arco de bolas de fuego de largo alcance. El impacto crea un muro de fuego que inflige <50> puntos de daño por fuego cada segundo."
+    },
+    {
+        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea03",
+        "form_id": "02000845|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Elemental Flare",
+        "string": "Destello elemental"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea02",
+        "form_id": "02000846|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "An elemental explosion for <mag> points of fire damage, <mag> points of shock damage, and half as much damage to stamina.",
+        "string": "Una explosión elemental por <mag> puntos de daño por fuego, <mag> puntos de daño por descarga y la mitad de daño a la resistencia."
+    },
+    {
+        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_25",
+        "form_id": "0200084E|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Absorb Health",
+        "string": "Absorber salud"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea04",
+        "form_id": "02000844|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Elemental Flare",
+        "string": "Destello elemental"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FireSpellEffect",
+        "form_id": "0200080C|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Unbounded Flames",
+        "string": "Llamas ilimitadas"
+    },
+    {
         "editor_id": "ccBGSSSE014_OrumsAquaticEscape_InvisibillityFFSelf",
-        "form_id": "[02000848]",
+        "form_id": "02000848|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Caster is invisible for <dur> seconds. Activating an object or attacking will break the spell. Can breathe water for <dur> seconds. Improved night vision for <dur> seconds.",
+        "string": "El lanzador es invisible durante <dur> segundos. El hechizo se romperá si se activa un objeto o se lanza un ataque. Se puedes respirar agua durante <dur> segundos. Visión nocturna mejorada durante <dur> segundos."
+    },
+    {
+        "editor_id": "ccBGSSSE014_MarasWrath_FireCloakFFSelf",
+        "form_id": "02000849|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "For <dur> seconds, opponents in melee range take <16> points fire damage per second.  Undead up to level <26> flee for <dur> seconds.",
+        "string": "Durante <dur> segundos, los rivales al alcance de cuerpo a cuerpo reciben <16> puntos de daño por fuego cada segundo. Los no muertos hasta el nivel <26> huyen durante <dur> segundos."
+    },
+    {
+        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea02",
+        "form_id": "02000846|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Elemental Flare",
+        "string": "Destello elemental"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ShockBoltStorm",
+        "form_id": "02000806|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Storm Lightning",
+        "string": "Relámpagos tormentosos"
+    },
+    {
+        "editor_id": "ccBGSSSE014_OrumsAquaticEscape_NightEyeEffect",
+        "form_id": "02000DEB|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Night Eye",
+        "string": "Ojo nocturno"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ShockBoltStormFX",
+        "form_id": "02000805|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Shock Bolt Storm",
+        "string": "Tormenta de rayos de descarga"
+    },
+    {
+        "editor_id": "ccBGSSSE014_IceSpellParalyzeEffect",
+        "form_id": "02000813|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Unbounded Freeze",
+        "string": "Congelación ilimitada"
+    },
+    {
+        "editor_id": "ccBGSSSE014_OrumsAquaticEscape_InvisibillityFFSelf",
+        "form_id": "02000848|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Orum's Aquatic Escape",
@@ -33,375 +217,199 @@
     },
     {
         "editor_id": "ccBGSSSE014_ShockDamageConcAimed",
-        "form_id": "[0200083E]",
+        "form_id": "0200083E|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "Lightning that does <mag> points of shock damage to Health and Magicka per second.",
         "string": "Relámpago que inflige <mag> puntos de daño por descarga a la salud y a la magia por segundo."
     },
     {
-        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea01",
-        "form_id": "[02000840]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Elemental Flare",
-        "string": "Destello elemental"
-    },
-    {
-        "editor_id": "ccBGSSSE014_UnboundedFreeze_IceSpellEffect",
-        "form_id": "[02000809]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "A freezing wind envelops the caster, knocking down nearby enemies and freezing them for <50> points of damage per second to Health and Stamina.",
-        "string": "Un viento helado envuelve al lanzador, derriba a los enemigos cercanos y los congela causándoles <50> puntos de daño por segundo a la salud y al aguante."
-    },
-    {
-        "editor_id": "ccBGSSSE014_PrideOfHirstaang_SummonBear_PlayerEffects",
-        "form_id": "[02000843]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Summons a Bear for <dur> seconds wherever the caster is pointing. Resist <50>% of frost damage for <60> seconds. Health regenerates <50>% faster for <60> seconds.",
-        "string": "Invoca a un oso durante <dur> segundos donde apunte el lanzador. Resiste un <50>% del daño por escarcha durante <60> segundos. Regenera salud un <50>% más rápido durante <60> segundos."
-    },
-    {
-        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_00",
-        "form_id": "[0200084A]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Absorb Health",
-        "string": "Absorber salud"
-    },
-    {
-        "editor_id": "ccBGSSSE014_FF_Self_FortifyHealRate_NoUI",
-        "form_id": "[02000842]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Health regenerates <mag>% faster for <dur> seconds.",
-        "string": "La salud se regenera un <mag>% más rápido durante <dur> segundos."
-    },
-    {
-        "editor_id": "ccBGSSSE014_FF_Self_FortifyHealRate_NoUI",
-        "form_id": "[02000842]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Regenerate Health",
-        "string": "Regenerar salud"
-    },
-    {
         "editor_id": "ccBGSSSE014_MarasWrath_FireCloakFFSelf",
-        "form_id": "[02000849]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "For <dur> seconds, opponents in melee range take <16> points fire damage per second.  Undead up to level <26> flee for <dur> seconds.",
-        "string": "Durante <dur> segundos, los rivales al alcance de cuerpo a cuerpo reciben <16> puntos de daño por fuego cada segundo. Los no muertos hasta el nivel <26> huyen durante <dur> segundos."
-    },
-    {
-        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea04",
-        "form_id": "[02000844]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Elemental Flare",
-        "string": "Destello elemental"
-    },
-    {
-        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea04",
-        "form_id": "[02000844]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "An elemental explosion for <mag> points of fire damage, <mag> points of shock damage, and half as much damage to stamina.",
-        "string": "Una explosión elemental por <mag> puntos de daño por fuego, <mag> puntos de daño por descarga y la mitad de daño a la resistencia."
-    },
-    {
-        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_25",
-        "form_id": "[0200084E]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Absorb <mag> points of health per second from target, for <dur> seconds.",
-        "string": "Absorbe <mag> puntos de salud por segundo del objetivo durante <dur> segundos."
-    },
-    {
-        "editor_id": "ccBGSSSE014_ShockDamageConcAimed",
-        "form_id": "[0200083E]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Sparks",
-        "string": "Chispas"
-    },
-    {
-        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_50",
-        "form_id": "[0200084C]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Absorb <mag> points of health per second from target, for <dur> seconds.",
-        "string": "Absorbe <mag> puntos de salud por segundo del objetivo durante <dur> segundos."
-    },
-    {
-        "editor_id": "ccBGSSSE014_FrostDamageConcAimedCloak",
-        "form_id": "[0200081E]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "A blast of cold that does <mag> points of damage per second to Health and Stamina.",
-        "string": "Una ráfaga de frío que inflige <mag> puntos de daño por segundo a la salud y al aguante."
-    },
-    {
-        "editor_id": "ccBGSSSE014_FF_Self_ResistFrost_NoUI",
-        "form_id": "[02000841]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Resist Frost",
-        "string": "Resistencia a la escarcha"
-    },
-    {
-        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_75",
-        "form_id": "[0200084D]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Absorb <mag> points of health per second from target, for <dur> seconds.",
-        "string": "Absorbe <mag> puntos de salud por segundo del objetivo durante <dur> segundos."
-    },
-    {
-        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea03",
-        "form_id": "[02000845]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "An elemental explosion for <mag> points of fire damage, <mag> points of shock damage, and half as much damage to stamina.",
-        "string": "Una explosión elemental por <mag> puntos de daño por fuego, <mag> puntos de daño por descarga y la mitad de daño a la resistencia."
-    },
-    {
-        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea02",
-        "form_id": "[02000846]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Elemental Flare",
-        "string": "Destello elemental"
-    },
-    {
-        "editor_id": "ccBGSSSE014_FenriksWelcome_UnlockDoorAdeptFFSelf",
-        "form_id": "[02000847]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Caster becomes invisible and can open locks with level Expert and below for <dur> seconds.  Activating an object or attacking will break the spell.",
-        "string": "El lanzador se vuelve invisible y puede abrir cerraduras de nivel Experto e inferiores durante <dur> segundos. El hechizo se romperá si se activa un objeto o se ejecuta un ataque."
-    },
-    {
-        "editor_id": "ccBGSSSE014_FireSpellEffect",
-        "form_id": "[0200080C]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Casts a stream of long-distance fireballs in an arc. Impact creates a wall of fire that does <50> points of fire damage per second.",
-        "string": "Lanza una andanada en forma de arco de bolas de fuego de largo alcance. El impacto crea un muro de fuego que inflige <50> puntos de daño por fuego cada segundo."
-    },
-    {
-        "editor_id": "ccBGSSSE014_ShockEffectCloak",
-        "form_id": "[02000807]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Targets in melee range take <40> points of shock damage per second to Health, and half that to Magicka.  Random lightning strikes deal an additional <30> damage.",
-        "string": "Los objetivos en alcance de cuerpo a cuerpo reciben <40> puntos de daño por descarga cada segundo a la salud y la mitad de ellos a la magia. Rayos al azar provocan un daño adicional de <30>."
-    },
-    {
-        "editor_id": "ccBGSSSE014_ShockBoltStorm",
-        "form_id": "[02000806]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Storm Lightning",
-        "string": "Relámpagos tormentosos"
-    },
-    {
-        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea02",
-        "form_id": "[02000846]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "An elemental explosion for <mag> points of fire damage, <mag> points of shock damage, and half as much damage to stamina.",
-        "string": "Una explosión elemental por <mag> puntos de daño por fuego, <mag> puntos de daño por descarga y la mitad de daño a la resistencia."
-    },
-    {
-        "editor_id": "ccBGSSSE014_FrostDamageConcAimedCloak",
-        "form_id": "[0200081E]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Unbounded Frostbite",
-        "string": "Helamiento ilimitado"
-    },
-    {
-        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_50",
-        "form_id": "[0200084C]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Absorb Health",
-        "string": "Absorber salud"
-    },
-    {
-        "editor_id": "ccBGSSSE014_PrideOfHirstaang_SummonBear_PlayerEffects",
-        "form_id": "[02000843]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Pride of Hirstaang",
-        "string": "El orgullo de Hirstaang"
-    },
-    {
-        "editor_id": "ccBGSSSE014_MarasWrath_ConfDownConcAimed",
-        "form_id": "[0200084B]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Turn Undead Fear",
-        "string": "Miedo de expulsión de no muertos"
-    },
-    {
-        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_75",
-        "form_id": "[0200084D]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Absorb Health",
-        "string": "Absorber salud"
-    },
-    {
-        "editor_id": "ccBGSSSE014_OrumsAquaticEscape_NightEyeEffect",
-        "form_id": "[02000DEB]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Night Eye",
-        "string": "Ojo nocturno"
-    },
-    {
-        "editor_id": "ccBGSSSE014_ShockEffectCloak",
-        "form_id": "[02000807]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Unbounded Storms",
-        "string": "Tormentas ilimitadas"
-    },
-    {
-        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_00",
-        "form_id": "[0200084A]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Absorb <mag> points of health per second from target, for <dur> seconds.",
-        "string": "Absorbe <mag> puntos de salud por segundo del objetivo durante <dur> segundos."
-    },
-    {
-        "editor_id": "ccBGSSSE014_FF_Self_ResistFrost_NoUI",
-        "form_id": "[02000841]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Resist <mag>% of frost damage for <dur> seconds.",
-        "string": "Resiste un <mag>% de daño por escarcha durante <dur> segundos."
-    },
-    {
-        "editor_id": "ccBGSSSE014_OrumsAquaticEscape_WaterbreathingFFSelf",
-        "form_id": "[02000DEA]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Water Breathing",
-        "string": "Respirar bajo el agua"
-    },
-    {
-        "editor_id": "ccBGSSSE014_RuneParalysisFFLocation",
-        "form_id": "[02000D62]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Cast on a nearby surface, it explodes when enemies are nearby, immobilizing them for <dur> seconds.",
-        "string": "Si se lanza en una superficie cercana, explota cuando los enemigos están cerca y los inmoviliza durante <dur> segundos."
-    },
-    {
-        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea03",
-        "form_id": "[02000845]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Elemental Flare",
-        "string": "Destello elemental"
-    },
-    {
-        "editor_id": "ccBGSSSE014_MarasWrath_FireCloakFFSelf",
-        "form_id": "[02000849]",
+        "form_id": "02000849|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Mara's Wrath",
         "string": "La furia de Mara"
     },
     {
-        "editor_id": "ccBGSSSE014_ShockBoltStormFX",
-        "form_id": "[02000805]",
+        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea01",
+        "form_id": "02000840|ccbgssse014-spellpack01.esl",
         "index": null,
-        "type": "MGEF FULL",
-        "original": "Shock Bolt Storm",
-        "string": "Tormenta de rayos de descarga"
+        "type": "MGEF DNAM",
+        "original": "An elemental explosion for <mag> points of fire damage, <mag> points of shock damage, and half as much damage to stamina.",
+        "string": "Una explosión elemental por <mag> puntos de daño por fuego, <mag> puntos de daño por descarga y la mitad de daño a la resistencia."
     },
     {
-        "editor_id": "ccBGSSSE014_FireSpellEffect",
-        "form_id": "[0200080C]",
+        "editor_id": "ccBGSSSE014_OrumsAquaticEscape_WaterbreathingFFSelf",
+        "form_id": "02000DEA|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "MGEF FULL",
-        "original": "Unbounded Flames",
-        "string": "Llamas ilimitadas"
+        "original": "Water Breathing",
+        "string": "Respirar bajo el agua"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ShockDamageConcAimed",
+        "form_id": "0200083E|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Sparks",
+        "string": "Chispas"
+    },
+    {
+        "editor_id": "ccBGSSSE014_PrideOfHirstaang_SummonBear_PlayerEffects",
+        "form_id": "02000843|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Summons a Bear for <dur> seconds wherever the caster is pointing. Resist <50>% of frost damage for <60> seconds. Health regenerates <50>% faster for <60> seconds.",
+        "string": "Invoca a un oso durante <dur> segundos donde apunte el lanzador. Resiste un <50>% del daño por escarcha durante <60> segundos. Regenera salud un <50>% más rápido durante <60> segundos."
+    },
+    {
+        "editor_id": "ccBGSSSE014_FF_Self_FortifyHealRate_NoUI",
+        "form_id": "02000842|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Health regenerates <mag>% faster for <dur> seconds.",
+        "string": "La salud se regenera un <mag>% más rápido durante <dur> segundos."
+    },
+    {
+        "editor_id": "ccBGSSSE014_ElementalFlareDamageFFAimedArea01",
+        "form_id": "02000840|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Elemental Flare",
+        "string": "Destello elemental"
     },
     {
         "editor_id": "ccBGSSSE014_FenriksWelcome_UnlockDoorAdeptFFSelf",
-        "form_id": "[02000847]",
+        "form_id": "02000847|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Caster becomes invisible and can open locks with level Expert and below for <dur> seconds.  Activating an object or attacking will break the spell.",
+        "string": "El lanzador se vuelve invisible y puede abrir cerraduras de nivel Experto e inferiores durante <dur> segundos. El hechizo se romperá si se activa un objeto o se ejecuta un ataque."
+    },
+    {
+        "editor_id": "ccBGSSSE014_RuneParalysisFFLocation",
+        "form_id": "02000D62|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Cast on a nearby surface, it explodes when enemies are nearby, immobilizing them for <dur> seconds.",
+        "string": "Si se lanza en una superficie cercana, explota cuando los enemigos están cerca y los inmoviliza durante <dur> segundos."
+    },
+    {
+        "editor_id": "ccBGSSSE014_MarasWrath_ConfDownConcAimed",
+        "form_id": "0200084B|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Turn Undead Fear",
+        "string": "Miedo de expulsión de no muertos"
+    },
+    {
+        "editor_id": "ccBGSSSE014_PrideOfHirstaang_SummonBear_PlayerEffects",
+        "form_id": "02000843|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Pride of Hirstaang",
+        "string": "El orgullo de Hirstaang"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FF_Self_FortifyHealRate_NoUI",
+        "form_id": "02000842|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Regenerate Health",
+        "string": "Regenerar salud"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FenriksWelcome_UnlockDoorAdeptFFSelf",
+        "form_id": "02000847|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Fenrik's Welcome",
         "string": "La bienvenida de Fenrik"
     },
     {
-        "editor_id": "ccBGSSSE014_OrumsAquaticEscape_InvisibillityFFSelf",
-        "form_id": "[02000848]",
+        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_00",
+        "form_id": "0200084A|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "MGEF DNAM",
-        "original": "Caster is invisible for <dur> seconds. Activating an object or attacking will break the spell. Can breathe water for <dur> seconds. Improved night vision for <dur> seconds.",
-        "string": "El lanzador es invisible durante <dur> segundos. El hechizo se romperá si se activa un objeto o se lanza un ataque. Se puedes respirar agua durante <dur> segundos. Visión nocturna mejorada durante <dur> segundos."
+        "original": "Absorb <mag> points of health per second from target, for <dur> seconds.",
+        "string": "Absorbe <mag> puntos de salud por segundo del objetivo durante <dur> segundos."
+    },
+    {
+        "editor_id": "ccBGSSSE014_RuneParalysisFFLocation",
+        "form_id": "02000D62|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Paralysis Rune",
+        "string": "Runa paralizante"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FF_Self_ResistFrost_NoUI",
+        "form_id": "02000841|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Resist <mag>% of frost damage for <dur> seconds.",
+        "string": "Resiste un <mag>% de daño por escarcha durante <dur> segundos."
+    },
+    {
+        "editor_id": "ccBGSSSE014_ShockEffectCloak",
+        "form_id": "02000807|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Targets in melee range take <40> points of shock damage per second to Health, and half that to Magicka.  Random lightning strikes deal an additional <30> damage.",
+        "string": "Los objetivos en alcance de cuerpo a cuerpo reciben <40> puntos de daño por descarga cada segundo a la salud y la mitad de ellos a la magia. Rayos al azar provocan un daño adicional de <30>."
     },
     {
         "editor_id": "ccBGSSSE014_UnboundedFreeze_IceSpellEffect",
-        "form_id": "[02000809]",
+        "form_id": "02000809|ccbgssse014-spellpack01.esl",
         "index": null,
-        "type": "MGEF FULL",
-        "original": "Unbounded Freeze",
-        "string": "Congelación ilimitada"
+        "type": "MGEF DNAM",
+        "original": "A freezing wind envelops the caster, knocking down nearby enemies and freezing them for <50> points of damage per second to Health and Stamina.",
+        "string": "Un viento helado envuelve al lanzador, derriba a los enemigos cercanos y los congela causándoles <50> puntos de daño por segundo a la salud y al aguante."
     },
     {
-        "editor_id": "ccBGSSSE014_AbsorbHealthFFAimed_25",
-        "form_id": "[0200084E]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Absorb Health",
-        "string": "Absorber salud"
-    },
-    {
-        "editor_id": "ccBGSSSE014_EnchRobesFortifyDestructionAndAlteration02",
-        "form_id": "[0200081F]",
+        "editor_id": "ccBGSSSE014_EnchRobesFortifyConjurationAndIllusion03",
+        "form_id": "02000832|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "ENCH FULL",
-        "original": "Fortify Destruction and Alteration",
-        "string": "Reforzar destrucción y alteración"
+        "original": "Fortify Conjuration & Illusion",
+        "string": "Reforzar conjuración e ilusión"
     },
     {
         "editor_id": "ccBGSSSE014_EnchRobesFortifyConjurationAndIllusion05",
-        "form_id": "[02000834]",
+        "form_id": "02000834|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Fortify Conjuration & Illusion",
         "string": "Reforzar conjuración e ilusión"
     },
     {
-        "editor_id": "ccBGSSSE014_EnchRobesFortifyDestructionAndAlteration01",
-        "form_id": "[02000823]",
+        "editor_id": "ccBGSSSE014_EnchRobesFortifyDestructionAndAlteration03",
+        "form_id": "02000820|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Fortify Destruction and Alteration",
         "string": "Reforzar destrucción y alteración"
     },
     {
-        "editor_id": "ccBGSSSE014_EnchRobesFortifyConjurationAndIllusion04",
-        "form_id": "[02000833]",
+        "editor_id": "ccBGSSSE014_EnchRobesFortifyDestructionAndAlteration05",
+        "form_id": "02000822|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "ENCH FULL",
-        "original": "Fortify Conjuration & Illusion",
-        "string": "Reforzar conjuración e ilusión"
+        "original": "Fortify Destruction and Alteration",
+        "string": "Reforzar destrucción y alteración"
+    },
+    {
+        "editor_id": "ccBGSSSE014_EnchRobesFortifyDestructionAndAlteration02",
+        "form_id": "0200081F|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Fortify Destruction and Alteration",
+        "string": "Reforzar destrucción y alteración"
     },
     {
         "editor_id": "ccBGSSSE014_EnchRobesFortifyDestructionAndAlteration04",
-        "form_id": "[02000821]",
+        "form_id": "02000821|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Fortify Destruction and Alteration",
@@ -409,15 +417,23 @@
     },
     {
         "editor_id": "ccBGSSSE014_EnchRobesFortifyConjurationAndIllusion01",
-        "form_id": "[02000830]",
+        "form_id": "02000830|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Fortify Conjuration & Illusion",
         "string": "Reforzar conjuración e ilusión"
     },
     {
-        "editor_id": "ccBGSSSE014_EnchRobesFortifyConjurationAndIllusion03",
-        "form_id": "[02000832]",
+        "editor_id": "ccBGSSSE014_EnchRobesFortifyDestructionAndAlteration01",
+        "form_id": "02000823|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Fortify Destruction and Alteration",
+        "string": "Reforzar destrucción y alteración"
+    },
+    {
+        "editor_id": "ccBGSSSE014_EnchRobesFortifyConjurationAndIllusion04",
+        "form_id": "02000833|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Fortify Conjuration & Illusion",
@@ -425,135 +441,111 @@
     },
     {
         "editor_id": "ccBGSSSE014_EnchRobesFortifyConjurationAndIllusion02",
-        "form_id": "[02000831]",
+        "form_id": "02000831|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Fortify Conjuration & Illusion",
         "string": "Reforzar conjuración e ilusión"
     },
     {
-        "editor_id": "ccBGSSSE014_EnchRobesFortifyDestructionAndAlteration05",
-        "form_id": "[02000822]",
-        "index": null,
-        "type": "ENCH FULL",
-        "original": "Fortify Destruction and Alteration",
-        "string": "Reforzar destrucción y alteración"
-    },
-    {
-        "editor_id": "ccBGSSSE014_EnchRobesFortifyDestructionAndAlteration03",
-        "form_id": "[02000820]",
-        "index": null,
-        "type": "ENCH FULL",
-        "original": "Fortify Destruction and Alteration",
-        "string": "Reforzar destrucción y alteración"
-    },
-    {
         "editor_id": "ccBGSSSE014_Oblivion_MarasWrath",
-        "form_id": "[02000855]",
+        "form_id": "02000855|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Mara's Wrath",
         "string": "La furia de Mara"
     },
     {
-        "editor_id": "ccBGSSSE014_LightningCloakDmg",
-        "form_id": "[02000824]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Lightning Cloak Drain",
-        "string": "Absorción de Manto de relámpagos"
-    },
-    {
-        "editor_id": "ccBGSSSE014_Oblivion_Absorb01_ChokingGrasp",
-        "form_id": "[0200085A]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Choking Grasp",
-        "string": "Asimiento asfixiante"
-    },
-    {
-        "editor_id": "ccBGSSSE014_UnboundedFlames",
-        "form_id": "[0200080E]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Unbounded Flames",
-        "string": "Llamas ilimitadas"
-    },
-    {
-        "editor_id": "ccBGSSSE014_Oblivion_Absorb04_TouchOfDeath",
-        "form_id": "[02000857]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Touch of Death",
-        "string": "Toque de la muerte"
-    },
-    {
-        "editor_id": "ccBGSSSE014_HazardShockSpell01",
-        "form_id": "[02000860]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Shock",
-        "string": "Descarga"
-    },
-    {
-        "editor_id": "ccBGSSSE014_Oblivion_Absorb02_Strangulation",
-        "form_id": "[02000859]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Strangulation",
-        "string": "Estrangulación"
-    },
-    {
         "editor_id": "ccBGSSSE014_Oblivion_Elemental01Flare",
-        "form_id": "[02000850]",
+        "form_id": "02000850|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Elemental Flare",
         "string": "Destello elemental"
     },
     {
-        "editor_id": "ccBGSSSE014_Oblivion_FenriksWelcome",
-        "form_id": "[0200084F]",
+        "editor_id": "ccBGSSSE014_UnboundedFlames",
+        "form_id": "0200080E|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "SPEL FULL",
-        "original": "Fenrik's Welcome",
-        "string": "La bienvenida de Fenrik"
+        "original": "Unbounded Flames",
+        "string": "Llamas ilimitadas"
     },
     {
-        "editor_id": "ccBGSSSE014_FrostCloakDmg",
-        "form_id": "[02000825]",
+        "editor_id": "ccBGSSSE014_Oblivion_Elemental03Burst",
+        "form_id": "0200085B|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "SPEL FULL",
-        "original": "Frost Cloak Freeze",
-        "string": "Congelación de manto de escarcha"
+        "original": "Elemental Burst",
+        "string": "Estallido elemental"
     },
     {
         "editor_id": "ccBGSSSE014_Oblivion_Absorb03_HangmansNoose",
-        "form_id": "[02000858]",
+        "form_id": "02000858|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Hangman's Noose",
         "string": "Lazo del Ahorcado"
     },
     {
+        "editor_id": "ccBGSSSE014_LightningCloakDmg",
+        "form_id": "02000824|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Lightning Cloak Drain",
+        "string": "Absorción de Manto de relámpagos"
+    },
+    {
         "editor_id": "ccBGSSSE014_Oblivion_Elemental04Blast",
-        "form_id": "[02000856]",
+        "form_id": "02000856|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Elemental Blast",
         "string": "Ráfaga elemental"
     },
     {
-        "editor_id": "ccBGSSSE014_ParalysisRune",
-        "form_id": "[02000D64]",
+        "editor_id": "ccBGSSSE014_UnboundedStorms",
+        "form_id": "02000808|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "SPEL FULL",
-        "original": "Paralysis Rune",
-        "string": "Runa paralizante"
+        "original": "Unbounded Storms",
+        "string": "Tormentas ilimitadas"
     },
     {
-        "editor_id": "ccBGSSSE014_Oblivion_PrideOfHirstaang_SecondaryEffects",
-        "form_id": "[02000852]",
+        "editor_id": "ccBGSSSE014_Oblivion_OrumsAquaticEscape",
+        "form_id": "02000851|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Orum's Aquatic Escape",
+        "string": "La fuga acuática de Orum"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FrostCloakDmg",
+        "form_id": "02000825|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Frost Cloak Freeze",
+        "string": "Congelación de manto de escarcha"
+    },
+    {
+        "editor_id": "ccBGSSSE014_Oblivion_FenriksWelcome",
+        "form_id": "0200084F|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Fenrik's Welcome",
+        "string": "La bienvenida de Fenrik"
+    },
+    {
+        "editor_id": "ccBGSSSE014_UnboundedFreeze",
+        "form_id": "0200080D|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Unbounded Freezing",
+        "string": "Congelación ilimitada"
+    },
+    {
+        "editor_id": "ccBGSSSE014_Oblivion_PrideOfHirstaang",
+        "form_id": "02000853|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Pride of Hirstaang",
@@ -561,151 +553,87 @@
     },
     {
         "editor_id": "ccBGSSSE014_Oblivion_Elemental02Bolt",
-        "form_id": "[0200085F]",
+        "form_id": "0200085F|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Elemental Bolt",
         "string": "Rayo elemental"
     },
     {
-        "editor_id": "ccBGSSSE014_UnboundedFreeze",
-        "form_id": "[0200080D]",
+        "editor_id": "ccBGSSSE014_Oblivion_Absorb04_TouchOfDeath",
+        "form_id": "02000857|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "SPEL FULL",
-        "original": "Unbounded Freezing",
-        "string": "Congelación ilimitada"
+        "original": "Touch of Death",
+        "string": "Toque de la muerte"
     },
     {
-        "editor_id": "ccBGSSSE014_Oblivion_Elemental03Burst",
-        "form_id": "[0200085B]",
+        "editor_id": "ccBGSSSE014_HazardShockSpell01",
+        "form_id": "02000860|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "SPEL FULL",
-        "original": "Elemental Burst",
-        "string": "Estallido elemental"
+        "original": "Shock",
+        "string": "Descarga"
     },
     {
-        "editor_id": "ccBGSSSE014_Oblivion_OrumsAquaticEscape",
-        "form_id": "[02000851]",
+        "editor_id": "ccBGSSSE014_ParalysisRune",
+        "form_id": "02000D64|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "SPEL FULL",
-        "original": "Orum's Aquatic Escape",
-        "string": "La fuga acuática de Orum"
-    },
-    {
-        "editor_id": "ccBGSSSE014_ShockBoltSpell",
-        "form_id": "[0200080A]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Storm Call Lightning Bolt",
-        "string": "Relámpago de invocación de tormenta"
-    },
-    {
-        "editor_id": "ccBGSSSE014_UnboundedStorms",
-        "form_id": "[02000808]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Unbounded Storms",
-        "string": "Tormentas ilimitadas"
-    },
-    {
-        "editor_id": "ccBGSSSE014_Oblivion_PrideOfHirstaang",
-        "form_id": "[02000853]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Pride of Hirstaang",
-        "string": "El orgullo de Hirstaang"
+        "original": "Paralysis Rune",
+        "string": "Runa paralizante"
     },
     {
         "editor_id": "ccBGSSSE014_MarasWrath_FlameCloakDmg",
-        "form_id": "[02000854]",
+        "form_id": "02000854|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Flames",
         "string": "Llamas"
     },
     {
-        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange",
-        "form_id": "[02000826]",
+        "editor_id": "ccBGSSSE014_Oblivion_PrideOfHirstaang_SecondaryEffects",
+        "form_id": "02000852|ccbgssse014-spellpack01.esl",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Mage Robes",
-        "string": "Túnica de mago"
+        "type": "SPEL FULL",
+        "original": "Pride of Hirstaang",
+        "string": "El orgullo de Hirstaang"
     },
     {
-        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackBlue_Ench04",
-        "form_id": "[0200082B]",
+        "editor_id": "ccBGSSSE014_Oblivion_Absorb01_ChokingGrasp",
+        "form_id": "0200085A|ccbgssse014-spellpack01.esl",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Expert Robes of Destruction & Alteration",
-        "string": "Túnica de destrucción y alteración de mago experto"
+        "type": "SPEL FULL",
+        "original": "Choking Grasp",
+        "string": "Asimiento asfixiante"
     },
     {
-        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange_Ench04",
-        "form_id": "[02000838]",
+        "editor_id": "ccBGSSSE014_Oblivion_Absorb02_Strangulation",
+        "form_id": "02000859|ccbgssse014-spellpack01.esl",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Expert Robes of Conjuration & Illusion",
-        "string": "Túnica de conjuración e ilusión de mago experto"
+        "type": "SPEL FULL",
+        "original": "Strangulation",
+        "string": "Estrangulación"
     },
     {
-        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange_Ench05",
-        "form_id": "[02000839]",
+        "editor_id": "ccBGSSSE014_ShockBoltSpell",
+        "form_id": "0200080A|ccbgssse014-spellpack01.esl",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Master Robes of Conjuration & Illusion",
-        "string": "Túnica de conjuración e ilusión de mago maestro"
-    },
-    {
-        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackBlue_Ench03",
-        "form_id": "[0200082A]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Adept Robes of Destruction & Alteration",
-        "string": "Túnica de destrucción y alteración de mago hábil"
+        "type": "SPEL FULL",
+        "original": "Storm Call Lightning Bolt",
+        "string": "Relámpago de invocación de tormenta"
     },
     {
         "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackBlue",
-        "form_id": "[0200082D]",
+        "form_id": "0200082D|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Mage Robes",
         "string": "Túnica de mago"
     },
     {
-        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange_Ench01",
-        "form_id": "[02000835]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Novice Robes of Conjuration & Illusion",
-        "string": "Túnica de conjuración e ilusión de mago principiante"
-    },
-    {
-        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackBlue_Ench05",
-        "form_id": "[0200082C]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Master Robes of Destruction & Alteration",
-        "string": "Túnica de destrucción y alteración de mago maestro"
-    },
-    {
-        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange_Ench02",
-        "form_id": "[02000836]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Apprentice Robes of Conjuration & Illusion",
-        "string": "Túnica de conjuración e ilusión para aprendiz"
-    },
-    {
-        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackBlue_Ench02",
-        "form_id": "[02000829]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Apprentice Robes of Destruction & Alteration",
-        "string": "Túnica de destrucción y alteración para aprendiz"
-    },
-    {
         "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackBlue_Ench01",
-        "form_id": "[02000827]",
+        "form_id": "02000827|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Novice Robes of Destruction & Alteration",
@@ -713,87 +641,295 @@
     },
     {
         "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange_Ench03",
-        "form_id": "[02000837]",
+        "form_id": "02000837|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Adept Robes of Conjuration & Illusion",
         "string": "Túnica de conjuración e ilusión de mago hábil"
     },
     {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental02Bolt",
-        "form_id": "[02000863]",
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackBlue_Ench03",
+        "form_id": "0200082A|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Adept Robes of Destruction & Alteration",
+        "string": "Túnica de destrucción y alteración de mago hábil"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange_Ench02",
+        "form_id": "02000836|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Apprentice Robes of Conjuration & Illusion",
+        "string": "Túnica de conjuración e ilusión para aprendiz"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange_Ench01",
+        "form_id": "02000835|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Novice Robes of Conjuration & Illusion",
+        "string": "Túnica de conjuración e ilusión de mago principiante"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange_Ench05",
+        "form_id": "02000839|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Master Robes of Conjuration & Illusion",
+        "string": "Túnica de conjuración e ilusión de mago maestro"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackBlue_Ench02",
+        "form_id": "02000829|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Apprentice Robes of Destruction & Alteration",
+        "string": "Túnica de destrucción y alteración para aprendiz"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackBlue_Ench05",
+        "form_id": "0200082C|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Master Robes of Destruction & Alteration",
+        "string": "Túnica de destrucción y alteración de mago maestro"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange_Ench04",
+        "form_id": "02000838|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Expert Robes of Conjuration & Illusion",
+        "string": "Túnica de conjuración e ilusión de mago experto"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackOrange",
+        "form_id": "02000826|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Mage Robes",
+        "string": "Túnica de mago"
+    },
+    {
+        "editor_id": "ccBGSSSE014_ClothesRobesMasterBlackBlue_Ench04",
+        "form_id": "0200082B|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Expert Robes of Destruction & Alteration",
+        "string": "Túnica de destrucción y alteración de mago experto"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_UnboundedLightning",
+        "form_id": "02000817|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nUnbounded Storms",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nTormentas ilimitadas"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Alter_FenriksWelcome",
+        "form_id": "02000867|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nFenrik's Welcome",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nLa bienvenida de Fenrik"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental03Burst",
+        "form_id": "02000864|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "BOOK FULL",
-        "original": "Spell Tome: Elemental Bolt",
-        "string": "Grimorio: rayo elemental"
+        "original": "Spell Tome: Elemental Burst",
+        "string": "Grimorio: estallido elemental"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental01Flare",
+        "form_id": "02000862|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Elemental Flare",
+        "string": "Grimorio: destello elemental"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_UnboundedFire",
+        "form_id": "02000815|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Unbounded Flames",
+        "string": "Grimorio: llamas ilimitadas"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_ConjureExpert_PrideOfHirstaang",
+        "form_id": "02000861|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nPride of Hirstaang",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nEl orgullo de Hirstaang"
     },
     {
         "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental04Blast",
-        "form_id": "[02000865]",
+        "form_id": "02000865|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "BOOK DESC",
         "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nElemental Blast",
         "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nRáfaga elemental"
     },
     {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb04_TouchOfDeath",
-        "form_id": "[0200086C]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nTouch of Death",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nToque de la muerte"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental02Bolt",
-        "form_id": "[02000863]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nElemental Bolt",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nRayo elemental"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_UnboundedIce",
-        "form_id": "[02000816]",
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_UnboundedLightning",
+        "form_id": "02000817|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "BOOK FULL",
-        "original": "Spell Tome: Unbounded Freezing",
-        "string": "Grimorio: congelación ilimitada"
+        "original": "Spell Tome: Unbounded Storms",
+        "string": "Grimorio: tormentas ilimitadas"
     },
     {
-        "editor_id": "ccBGSSSE014_SpellTome_Illus_Adept_OrumsAquaticEscape",
-        "form_id": "[02000866]",
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_MarasWrath",
+        "form_id": "02000868|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nOrum's Aquatic Escape",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nLa fuga acuática de Orum"
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nMara's Wrath",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nLa furia de Mara"
     },
     {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb01_ChokingGrasp",
-        "form_id": "[02000869]",
+        "editor_id": "ccBGSSSE014_SpellTome_Alter_ParalysisRune",
+        "form_id": "02000818|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nParalysis Rune",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nRuna paralizante"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Alter_FenriksWelcome",
+        "form_id": "02000867|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "BOOK FULL",
-        "original": "Spell Tome: Choking Grasp",
-        "string": "Grimorio: asimiento asfixiante"
+        "original": "Spell Tome: Fenrik's Welcome",
+        "string": "Grimorio: la bienvenida de Fenrik"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_ConjureExpert_PrideOfHirstaang",
+        "form_id": "02000861|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Pride of Hirstaang",
+        "string": "Grimorio: el orgullo de Hirstaang"
     },
     {
         "editor_id": "ccBGSSSE014_SpellTome_Dest_UnboundedFire",
-        "form_id": "[02000815]",
+        "form_id": "02000815|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "BOOK DESC",
         "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nUnbounded Flames",
         "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nLlamas ilimitadas"
     },
     {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb02_Strangulation",
-        "form_id": "[0200086A]",
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental04Blast",
+        "form_id": "02000865|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "BOOK FULL",
-        "original": "Spell Tome: Strangulation",
-        "string": "Grimorio: estrangulación"
+        "original": "Spell Tome: Elemental Blast",
+        "string": "Grimorio: rayo elemental"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_MarasWrath",
+        "form_id": "02000868|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Mara's Wrath",
+        "string": "Grimorio: la furia de Mara"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Alter_ParalysisRune",
+        "form_id": "02000818|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Paralysis Rune",
+        "string": "Grimorio: runa paralizante"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb01_ChokingGrasp",
+        "form_id": "02000869|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nChoking Grasp",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nAsimiento asfixiante"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Illus_Adept_OrumsAquaticEscape",
+        "form_id": "02000866|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nOrum's Aquatic Escape",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nLa fuga acuática de Orum"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental02Bolt",
+        "form_id": "02000863|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nElemental Bolt",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nRayo elemental"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb01_ChokingGrasp",
+        "form_id": "02000869|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Choking Grasp",
+        "string": "Grimorio: asimiento asfixiante"
     },
     {
         "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb03_HangmansNoose",
-        "form_id": "[0200086B]",
+        "form_id": "0200086B|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nHangman's Noose",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nLazo del Ahorcado"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_UnboundedIce",
+        "form_id": "02000816|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nUnbounded Freezing",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nCongelación ilimitada"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Illus_Adept_OrumsAquaticEscape",
+        "form_id": "02000866|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Orum's Aquatic Escape",
+        "string": "Grimorio: la fuga acuática de Orum"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb04_TouchOfDeath",
+        "form_id": "0200086C|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nTouch of Death",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nToque de la muerte"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb02_Strangulation",
+        "form_id": "0200086A|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nStrangulation",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nEstrangulación"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental02Bolt",
+        "form_id": "02000863|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Elemental Bolt",
+        "string": "Grimorio: rayo elemental"
+    },
+    {
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb03_HangmansNoose",
+        "form_id": "0200086B|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "Spell Tome: Hangman's Noose",
@@ -801,103 +937,23 @@
     },
     {
         "editor_id": "ccBGSSSE014_SpellTome_Dest_UnboundedIce",
-        "form_id": "[02000816]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nUnbounded Freezing",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nCongelación ilimitada"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_ConjureExpert_PrideOfHirstaang",
-        "form_id": "[02000861]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nPride of Hirstaang",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nEl orgullo de Hirstaang"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb03_HangmansNoose",
-        "form_id": "[0200086B]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nHangman's Noose",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nLazo del Ahorcado"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Alter_FenriksWelcome",
-        "form_id": "[02000867]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nFenrik's Welcome",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nLa bienvenida de Fenrik"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb02_Strangulation",
-        "form_id": "[0200086A]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nStrangulation",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nEstrangulación"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_UnboundedLightning",
-        "form_id": "[02000817]",
+        "form_id": "02000816|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "BOOK FULL",
-        "original": "Spell Tome: Unbounded Storms",
-        "string": "Grimorio: tormentas ilimitadas"
+        "original": "Spell Tome: Unbounded Freezing",
+        "string": "Grimorio: congelación ilimitada"
     },
     {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_UnboundedFire",
-        "form_id": "[02000815]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Spell Tome: Unbounded Flames",
-        "string": "Grimorio: llamas ilimitadas"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental01Flare",
-        "form_id": "[02000862]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Spell Tome: Elemental Flare",
-        "string": "Grimorio: destello elemental"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_MarasWrath",
-        "form_id": "[02000868]",
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental03Burst",
+        "form_id": "02000864|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nMara's Wrath",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nLa furia de Mara"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Illus_Adept_OrumsAquaticEscape",
-        "form_id": "[02000866]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Spell Tome: Orum's Aquatic Escape",
-        "string": "Grimorio: la fuga acuática de Orum"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Alter_ParalysisRune",
-        "form_id": "[02000818]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Spell Tome: Paralysis Rune",
-        "string": "Grimorio: runa paralizante"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_UnboundedLightning",
-        "form_id": "[02000817]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nUnbounded Storms",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nTormentas ilimitadas"
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nElemental Burst",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nEstallido elemental"
     },
     {
         "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb04_TouchOfDeath",
-        "form_id": "[0200086C]",
+        "form_id": "0200086C|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "Spell Tome: Touch of Death",
@@ -905,79 +961,23 @@
     },
     {
         "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental01Flare",
-        "form_id": "[02000862]",
+        "form_id": "02000862|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "BOOK DESC",
         "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nElemental Flare",
         "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nDestello elemental"
     },
     {
-        "editor_id": "ccBGSSSE014_SpellTome_Alter_ParalysisRune",
-        "form_id": "[02000818]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nParalysis Rune",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nRuna paralizante"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_MarasWrath",
-        "form_id": "[02000868]",
+        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb02_Strangulation",
+        "form_id": "0200086A|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "BOOK FULL",
-        "original": "Spell Tome: Mara's Wrath",
-        "string": "Grimorio: la furia de Mara"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_Absorb01_ChokingGrasp",
-        "form_id": "[02000869]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nChoking Grasp",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nAsimiento asfixiante"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental03Burst",
-        "form_id": "[02000864]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nElemental Burst",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nEstallido elemental"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental04Blast",
-        "form_id": "[02000865]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Spell Tome: Elemental Blast",
-        "string": "Grimorio: rayo elemental"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Dest_Elemental03Burst",
-        "form_id": "[02000864]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Spell Tome: Elemental Burst",
-        "string": "Grimorio: estallido elemental"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_ConjureExpert_PrideOfHirstaang",
-        "form_id": "[02000861]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Spell Tome: Pride of Hirstaang",
-        "string": "Grimorio: el orgullo de Hirstaang"
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellTome_Alter_FenriksWelcome",
-        "form_id": "[02000867]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Spell Tome: Fenrik's Welcome",
-        "string": "Grimorio: la bienvenida de Fenrik"
+        "original": "Spell Tome: Strangulation",
+        "string": "Grimorio: estrangulación"
     },
     {
         "editor_id": "ccBGSSSE_TomesStrongBox_QA",
-        "form_id": "[02000881]",
+        "form_id": "02000881|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "CONT FULL",
         "original": "Strong Box BGSSSE014",
@@ -985,7 +985,7 @@
     },
     {
         "editor_id": "ccBGSSSE014_BossChestSpellTomesAll",
-        "form_id": "[02000882]",
+        "form_id": "02000882|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "CONT FULL",
         "original": "Ancient Tome Chest",
@@ -993,7 +993,7 @@
     },
     {
         "editor_id": "ccBGSSSE014_SummonBear",
-        "form_id": "[02000873]",
+        "form_id": "02000873|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Bear",
@@ -1001,7 +1001,7 @@
     },
     {
         "editor_id": "ccBGSSSE014SkyShockHazard",
-        "form_id": "[0200080B]",
+        "form_id": "0200080B|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "HAZD FULL",
         "original": "Shock",
@@ -1009,31 +1009,23 @@
     },
     {
         "editor_id": "ccBGSSSE014_ShockBarrierHazard01",
-        "form_id": "[02000879]",
+        "form_id": "02000879|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "HAZD FULL",
         "original": "Shock",
         "string": "Descarga"
     },
     {
-        "editor_id": "HobsFallCave01",
-        "form_id": "[0001525F]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Hob's Fall Cave",
-        "string": "Cueva de Hob"
+        "editor_id": "ccBGSSSE014_SpellPack_StartupQuest",
+        "form_id": "0200083C|ccbgssse014-spellpack01.esl",
+        "index": 85,
+        "type": "QUST CNAM",
+        "original": "I've heard tales of a long-lost ancient library of spell tomes, rumored to be somewhere in the area of Winterhold.  I should explore the area and see what I can find.",
+        "string": "He oído historias de una biblioteca de grimorios antiguos perdidos hace mucho tiempo. Se rumorea que está en algún lugar en la zona de Hibernalia. Debería explorar la zona, a ver qué puedo encontrar."
     },
     {
         "editor_id": "ccBGSSSE014_SpellPack_StartupQuest",
-        "form_id": "[0200083C]",
-        "index": 0,
-        "type": "QUST NNAM",
-        "original": "Find the Lost Library of Spell Tomes",
-        "string": "Encuentra la biblioteca perdida de grimorios."
-    },
-    {
-        "editor_id": "ccBGSSSE014_SpellPack_StartupQuest",
-        "form_id": "[0200083C]",
+        "form_id": "0200083C|ccbgssse014-spellpack01.esl",
         "index": null,
         "type": "QUST FULL",
         "original": "The Lost Library",
@@ -1041,34 +1033,34 @@
     },
     {
         "editor_id": "ccBGSSSE014_SpellPack_StartupQuest",
-        "form_id": "[0200083C]",
-        "index": 83,
-        "type": "QUST CNAM",
-        "original": "I've heard tales of a long-lost ancient library of spell tomes, rumored to be somewhere in the area of Winterhold.  I should explore the area and see what I can find.",
-        "string": "He oído historias de una biblioteca de grimorios antiguos perdidos hace mucho tiempo. Se rumorea que está en algún lugar en la zona de Hibernalia. Debería explorar la zona, a ver qué puedo encontrar."
+        "form_id": "0200083C|ccbgssse014-spellpack01.esl",
+        "index": 0,
+        "type": "QUST NNAM",
+        "original": "Find the Lost Library of Spell Tomes",
+        "string": "Encuentra la biblioteca perdida de grimorios."
     },
     {
         "editor_id": "ccBGSSSE014_SpellPack_StartupQuest",
-        "form_id": "[0200083C]",
-        "index": 108,
+        "form_id": "0200083C|ccbgssse014-spellpack01.esl",
+        "index": 92,
         "type": "QUST CNAM",
         "original": "I've found the fabled chest filled with long-lost ancient spell tomes in Hob's Fall Cave.",
         "string": "He encontrado el cofre legendario con antiguos grimorios perdidos hace mucho tiempo en la Cueva de Hob."
     },
     {
         "editor_id": "ccBGSSSE014_FenriksWelcomePerk",
-        "form_id": "[02000880]",
-        "index": null,
-        "type": "PERK FULL",
-        "original": "Fenrik's Welcome",
-        "string": "La bienvenida de Fenrik"
-    },
-    {
-        "editor_id": "ccBGSSSE014_FenriksWelcomePerk",
-        "form_id": "[02000880]",
+        "form_id": "02000880|ccbgssse014-spellpack01.esl",
         "index": 0,
         "type": "PERK EPF2",
         "original": "Fenrik's Welcome: Unlock",
         "string": "La bienvenida de Fenrik: desbloquear"
+    },
+    {
+        "editor_id": "ccBGSSSE014_FenriksWelcomePerk",
+        "form_id": "02000880|ccbgssse014-spellpack01.esl",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Fenrik's Welcome",
+        "string": "La bienvenida de Fenrik"
     }
 ]

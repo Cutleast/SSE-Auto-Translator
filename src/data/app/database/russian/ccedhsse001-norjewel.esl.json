@@ -1,175 +1,175 @@
 [
     {
-        "editor_id": "ccEDHSSE001_EnchNorAmuletHealth06",
-        "form_id": "[0500081A]",
+        "editor_id": "ccEDHSSE001_EnchNorCircletMagicka05",
+        "form_id": "0500080E|ccedhsse001-norjewel.esl",
         "index": null,
         "type": "ARMO FULL",
-        "original": "Nordic Amulet of Peerless Health",
-        "string": "Нордский амулет несравненного здоровья"
+        "original": "Nordic Circlet of Extreme Magicka",
+        "string": "Нордский обруч великой магии"
     },
     {
         "editor_id": "ccEDHSSE001_EnchNorRingStamina06",
-        "form_id": "[05000817]",
+        "form_id": "05000817|ccedhsse001-norjewel.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Nordic Ring of Peerless Stamina",
         "string": "Нордское кольцо несравненного запаса сил"
     },
     {
-        "editor_id": "ccEDHSSE001_EnchNorRingStamina03",
-        "form_id": "[05000814]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Nordic Ring of Major Stamina",
-        "string": "Нордское кольцо настоящего запаса сил"
-    },
-    {
-        "editor_id": "ccEDHSSE001_EnchNorRingStamina04",
-        "form_id": "[05000815]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Nordic Ring of Eminent Stamina",
-        "string": "Нордское кольцо истинного запаса сил"
-    },
-    {
         "editor_id": "ccEDHSSE001_EnchNorCircletMagicka01",
-        "form_id": "[05000812]",
+        "form_id": "05000812|ccedhsse001-norjewel.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Nordic Circlet of Minor Magicka",
         "string": "Нордский обруч малой магии"
     },
     {
-        "editor_id": "ccEDHSSE001_EnchNorRingStamina01",
-        "form_id": "[0500081E]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Nordic Ring of Minor Stamina",
-        "string": "Нордское кольцо малого запаса сил"
-    },
-    {
-        "editor_id": "ccEDHSSE001_EnchNorCircletMagicka04",
-        "form_id": "[0500080F]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Nordic Circlet of Extreme Magicka",
-        "string": "Нордский обруч великой магии"
-    },
-    {
-        "editor_id": "ccEDHSSE001_EnchNorAmuletHealth02",
-        "form_id": "[05000819]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Nordic Amulet of Health",
-        "string": "Нордский амулет здоровья"
-    },
-    {
-        "editor_id": "ccEDHSSE001_EnchNorCircletMagicka02",
-        "form_id": "[05000811]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Nordic Circlet of Magicka",
-        "string": "Нордский обруч магии"
-    },
-    {
-        "editor_id": "ccEDHSSE001_EnchNorAmuletHealth01",
-        "form_id": "[05000818]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Nordic Amulet of Minor Health",
-        "string": "Нордский амулет малого здоровья"
-    },
-    {
-        "editor_id": "ccEDHSSE001_NorRing",
-        "form_id": "[05000800]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Nordic Ring",
-        "string": "Нордское кольцо"
-    },
-    {
-        "editor_id": "ccEDHSSE001_EnchNorCircletMagicka05",
-        "form_id": "[0500080E]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Nordic Circlet of Extreme Magicka",
-        "string": "Нордский обруч великой магии"
-    },
-    {
-        "editor_id": "ccEDHSSE001_NorAmulet",
-        "form_id": "[05000801]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Nordic Amulet",
-        "string": "Нордский амулет"
-    },
-    {
         "editor_id": "ccEDHSSE001_EnchNorAmuletHealth04",
-        "form_id": "[0500081C]",
+        "form_id": "0500081C|ccedhsse001-norjewel.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Nordic Amulet of Eminent Health",
         "string": "Нордский амулет истинного здоровья"
     },
     {
-        "editor_id": "ccEDHSSE001_NorCirclet",
-        "form_id": "[05000D62]",
+        "editor_id": "ccEDHSSE001_EnchNorRingStamina03",
+        "form_id": "05000814|ccedhsse001-norjewel.esl",
         "index": null,
         "type": "ARMO FULL",
-        "original": "Nordic Circlet",
-        "string": "Нордский обруч"
+        "original": "Nordic Ring of Major Stamina",
+        "string": "Нордское кольцо настоящего запаса сил"
     },
     {
-        "editor_id": "ccEDHSSE001_EnchNorCircletMagicka06",
-        "form_id": "[0500080D]",
+        "editor_id": "ccEDHSSE001_EnchNorAmuletHealth06",
+        "form_id": "0500081A|ccedhsse001-norjewel.esl",
         "index": null,
         "type": "ARMO FULL",
-        "original": "Nordic Circlet of Peerless Magicka",
-        "string": "Нордский обруч несравненной магии"
-    },
-    {
-        "editor_id": "ccEDHSSE001_EnchNorRingStamina02",
-        "form_id": "[05000813]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Nordic Ring of Stamina",
-        "string": "Нордское кольцо запаса сил"
+        "original": "Nordic Amulet of Peerless Health",
+        "string": "Нордский амулет несравненного здоровья"
     },
     {
         "editor_id": "ccEDHSSE001_EnchNorCircletMagicka03",
-        "form_id": "[05000810]",
+        "form_id": "05000810|ccedhsse001-norjewel.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Nordic Circlet of Major Magicka",
         "string": "Нордский обруч настоящей магии"
     },
     {
-        "editor_id": "ccEDHSSE001_EnchNorRingStamina05",
-        "form_id": "[05000816]",
+        "editor_id": "ccEDHSSE001_EnchNorCircletMagicka04",
+        "form_id": "0500080F|ccedhsse001-norjewel.esl",
         "index": null,
         "type": "ARMO FULL",
-        "original": "Nordic Ring of Extreme Stamina",
-        "string": "Нордское кольцо великого запаса сил"
+        "original": "Nordic Circlet of Extreme Magicka",
+        "string": "Нордский обруч великой магии"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorRingStamina02",
+        "form_id": "05000813|ccedhsse001-norjewel.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Nordic Ring of Stamina",
+        "string": "Нордское кольцо запаса сил"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorRingStamina01",
+        "form_id": "0500081E|ccedhsse001-norjewel.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Nordic Ring of Minor Stamina",
+        "string": "Нордское кольцо малого запаса сил"
+    },
+    {
+        "editor_id": "ccEDHSSE001_NorCirclet",
+        "form_id": "05000D62|ccedhsse001-norjewel.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Nordic Circlet",
+        "string": "Нордский обруч"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorRingStamina04",
+        "form_id": "05000815|ccedhsse001-norjewel.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Nordic Ring of Eminent Stamina",
+        "string": "Нордское кольцо истинного запаса сил"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorCircletMagicka02",
+        "form_id": "05000811|ccedhsse001-norjewel.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Nordic Circlet of Magicka",
+        "string": "Нордский обруч магии"
+    },
+    {
+        "editor_id": "ccEDHSSE001_NorRing",
+        "form_id": "05000800|ccedhsse001-norjewel.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Nordic Ring",
+        "string": "Нордское кольцо"
     },
     {
         "editor_id": "ccEDHSSE001_EnchNorAmuletHealth03",
-        "form_id": "[0500081D]",
+        "form_id": "0500081D|ccedhsse001-norjewel.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Nordic Amulet of Major Health",
         "string": "Нордский амулет настоящего здоровья"
     },
     {
+        "editor_id": "ccEDHSSE001_EnchNorAmuletHealth02",
+        "form_id": "05000819|ccedhsse001-norjewel.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Nordic Amulet of Health",
+        "string": "Нордский амулет здоровья"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorRingStamina05",
+        "form_id": "05000816|ccedhsse001-norjewel.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Nordic Ring of Extreme Stamina",
+        "string": "Нордское кольцо великого запаса сил"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorAmuletHealth01",
+        "form_id": "05000818|ccedhsse001-norjewel.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Nordic Amulet of Minor Health",
+        "string": "Нордский амулет малого здоровья"
+    },
+    {
         "editor_id": "ccEDHSSE001_EnchNorAmuletHealth05",
-        "form_id": "[0500081B]",
+        "form_id": "0500081B|ccedhsse001-norjewel.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Nordic Amulet of Extreme Health",
         "string": "Нордский амулет великого здоровья"
     },
     {
+        "editor_id": "ccEDHSSE001_NorAmulet",
+        "form_id": "05000801|ccedhsse001-norjewel.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Nordic Amulet",
+        "string": "Нордский амулет"
+    },
+    {
+        "editor_id": "ccEDHSSE001_EnchNorCircletMagicka06",
+        "form_id": "0500080D|ccedhsse001-norjewel.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Nordic Circlet of Peerless Magicka",
+        "string": "Нордский обруч несравненной магии"
+    },
+    {
         "editor_id": "ccEDHSSE001_Certificate",
-        "form_id": "[05000820]",
+        "form_id": "05000820|ccedhsse001-norjewel.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "Certificate of Authenticity",
@@ -177,15 +177,7 @@
     },
     {
         "editor_id": "ccEDHSSE001_CraftsmansJournal",
-        "form_id": "[0500081F]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Hugin Ice-Shaper's Notebook",
-        "string": "Записи Хугина Ледяного Кроя"
-    },
-    {
-        "editor_id": "ccEDHSSE001_CraftsmansJournal",
-        "form_id": "[0500081F]",
+        "form_id": "0500081F|ccedhsse001-norjewel.esl",
         "index": null,
         "type": "BOOK DESC",
         "original": "<font face='$HandwrittenFont'>\r\n<font alpha='#4C'>Finding naturally occurring</font><font alpha='#80'> raw pieces</font> of a suitable size and <font alpha='#80'>shape is </font><font alpha='#4C'>unlikely</font><font alpha='#25'>         re                   eth      ha    ot     e     ed</font>\r\n\r\n<font alpha='#26'>perha   t  re are some alter   ive methods I hav  </font><font alpha='#25'>not yet expl    </font><font alpha='#4C'>I quickly</font><font alpha='#80'> discovered grinding with </font>traditional methods is nearly impossible, but this material fascinates me. I am<font alpha='#80'> determined to incorporate </font><font alpha='#4C'>it into my work</font><font alpha='#25'>      t    lects   f the su   ce w  h</font>\r\n\r\n<font alpha='#25'>     sha    are m    re  l    n s   e than     is       </font><font alpha='#4C'>Shattering large chunks with an </font><font alpha='#80'> application of violent force</font> after repeated bouts of extreme heating and cooling (note: magical methods are the most viable) yields far more material to select from.\r\n\r\nIn addition, the shards are more regular in shape than debris left by a pickaxe. The amount of waste is disappointing, but<font alpha='#80'> the cost may </font><font alpha='#4C'>be offset</font><font alpha='#25'>         sel   ed a collec   n   of p  ces for        f   e  r   c     </font>\r\n\r\n<font alpha='#4C'>Further shaping by using a </font><font alpha='#80'> second appropriately sized </font>piece of stalhrim yields particularly satisfactory results. The product is quite rough, but <font alpha='#80'>has sort of a </font><font alpha='#4C'>naturalistic appeal </font><font alpha='#25'>   a few des   s. Some   ng is s  ll m  s ng</font>\r\n\r\n<font alpha='#25'>      o   t       t   o     b     h s  s   of  at     st   a   </font><font alpha='#4C'> set in quicksilver with a </font><font alpha='#80'> traditional </font>Nordic motif. Perfection. With a bit of hired help, I have adequate materials to reproduce the design and distribute to the mainland. \r\n\r\nI <font alpha='#80'>will finally make</font><font alpha='#4C'> a name for myself!</font>",
@@ -193,31 +185,31 @@
     },
     {
         "editor_id": "ccEDHSSE001_Certificate",
-        "form_id": "[05000820]",
+        "form_id": "05000820|ccedhsse001-norjewel.esl",
         "index": null,
         "type": "BOOK DESC",
         "original": "\r\n<p align='center'><img src='img://Textures/Interface/Books/Illuminated_Letters/C_letter.png'><font color='#910000'><font size='30'>ertificate of Authenticity</font></font>\r\n\r\nThis item is certified to be of the highest quality Nordic stahlrim, hand selected for its purity, color, and magical affinity. Guaranteed to retain its luster and resist weathering for years to come.\r\n\r\n<font face='$HandwrittenFont'>Crafted by Hugin Ice-Shaper of Raven Rock, Master Artisan</font></p>",
         "string": "\r\n<p align='center'><img src='img://Textures/Interface/Books/Illuminated_Letters/C_letter.png'><font color='#910000'><font size='30'>Свидетельство о подлинности</font></font>\r\n\r\nЭтот предмет является выполненным из нордского сталгрима высочайшего качества, отобранного за чистоту, цвет и магические свойства. Изготовитель гарантирует, что предмет на долгие годы сохранит свой блеск и не будет подвержен влиянию времени.\r\n\r\n<font face='$HandwrittenFont'>Изготовлено Хугином Ледяным Кроем, мастером-ремесленником</font></p>"
     },
     {
+        "editor_id": "ccEDHSSE001_CraftsmansJournal",
+        "form_id": "0500081F|ccedhsse001-norjewel.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Hugin Ice-Shaper's Notebook",
+        "string": "Записи Хугина Ледяного Кроя"
+    },
+    {
         "editor_id": "ccEDHSSE001_CraftsmanSatchel",
-        "form_id": "[05000821]",
+        "form_id": "05000821|ccedhsse001-norjewel.esl",
         "index": null,
         "type": "CONT FULL",
         "original": "Satchel",
         "string": "Кошель"
     },
     {
-        "editor_id": "ccEDHSSE001_Craftsman",
-        "form_id": "[05000822]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Hugin Ice-Shaper",
-        "string": "Хугин Ледяной Крой"
-    },
-    {
         "editor_id": "ccEDHSSE001_LvlBanditMissile",
-        "form_id": "[05000824]",
+        "form_id": "05000824|ccedhsse001-norjewel.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Reaver",
@@ -225,63 +217,63 @@
     },
     {
         "editor_id": "ccEDHSSE001_LvlBanditMelee1H",
-        "form_id": "[05000823]",
+        "form_id": "05000823|ccedhsse001-norjewel.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Reaver",
         "string": "Разбойник"
     },
     {
-        "editor_id": "SolitudeRadiantRaiment",
-        "form_id": "[00016A0F]",
+        "editor_id": "ccEDHSSE001_Craftsman",
+        "form_id": "05000822|ccedhsse001-norjewel.esl",
         "index": null,
-        "type": "CELL FULL",
-        "original": "Radiant Raiment",
-        "string": "Сияющие одежды"
-    },
-    {
-        "editor_id": "DLC2RRAlorHouse",
-        "form_id": "[04017EBF]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Alor House",
-        "string": "Дом Алора"
-    },
-    {
-        "editor_id": "DLC2SolstheimWorld",
-        "form_id": "[04000800]",
-        "index": null,
-        "type": "WRLD FULL",
-        "original": "Solstheim",
-        "string": "Солстейм"
+        "type": "NPC_ FULL",
+        "original": "Hugin Ice-Shaper",
+        "string": "Хугин Ледяной Крой"
     },
     {
         "editor_id": "RiftenWorld",
-        "form_id": "[00016BB4]",
+        "form_id": "00016BB4|Skyrim.esm",
         "index": null,
         "type": "WRLD FULL",
         "original": "Riften",
         "string": "Рифтен"
     },
     {
+        "editor_id": "DLC2SolstheimWorld",
+        "form_id": "04000800|Dragonborn.esm",
+        "index": null,
+        "type": "WRLD FULL",
+        "original": "Solstheim",
+        "string": "Солстейм"
+    },
+    {
         "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
-        "form_id": "[0500082F]",
-        "index": 67,
+        "form_id": "0500082F|ccedhsse001-norjewel.esl",
+        "index": 99,
+        "type": "QUST CNAM",
+        "original": "I stumbled on a bandit attack near Raven Rock. I should search the area before anything of value is lost.",
+        "string": "Близ Вороньей Скалы на меня напали бандиты. Нужно обыскать окрестности, пока ценности не пропали навсегда."
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "form_id": "0500082F|ccedhsse001-norjewel.esl",
+        "index": 94,
         "type": "QUST CNAM",
         "original": "Using Hugin Ice-Shaper's notes, I learned to forge my own pieces of Nordic Jewelry.",
         "string": "С помощью записей Хугина Ледяного Кроя мне удалось научиться изготавливать нордские драгоценности."
     },
     {
         "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
-        "form_id": "[0500082F]",
-        "index": 10,
-        "type": "QUST NNAM",
-        "original": "Read the Certificate of Authenticity",
-        "string": "Прочесть свидетельство о подлинности"
+        "form_id": "0500082F|ccedhsse001-norjewel.esl",
+        "index": 69,
+        "type": "QUST CNAM",
+        "original": "Hugin Ice-Shaper met an untimely fate. I recovered his belongings before they could be looted by reavers. With what is left of his notes, perhaps I can continue his work.",
+        "string": "Хугин Ледяной Крой безвременно погиб. Мне удалось найти его вещи прежде, чем до них добрались разбойники. Возможно, по его записям я смогу продолжить его работу."
     },
     {
         "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
-        "form_id": "[0500082F]",
+        "form_id": "0500082F|ccedhsse001-norjewel.esl",
         "index": null,
         "type": "QUST FULL",
         "original": "Nordic Jewelry",
@@ -289,39 +281,7 @@
     },
     {
         "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
-        "form_id": "[0500082F]",
-        "index": 90,
-        "type": "QUST CNAM",
-        "original": "I have located the craftsman, but a pair of bandits seem to have found him first. I should search the area before anything of value is lost.",
-        "string": "Мне удалось найти ремесленника, но, похоже, пара бандитов меня опередила. Нужно обыскать окрестности, пока ценности не пропали навсегда."
-    },
-    {
-        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
-        "form_id": "[0500082F]",
-        "index": 85,
-        "type": "QUST CNAM",
-        "original": "Hugin Ice-Shaper met an untimely fate. I recovered his belongings before they could be looted by reavers. With what is left of his notes, perhaps I can continue his work.",
-        "string": "Хугин Ледяной Крой безвременно погиб. Мне удалось найти его вещи прежде, чем до них добрались разбойники. Возможно, по его записям я смогу продолжить его работу."
-    },
-    {
-        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
-        "form_id": "[0500082F]",
-        "index": 20,
-        "type": "QUST NNAM",
-        "original": "Find the craftsman in Raven Rock",
-        "string": "Найти ремесленника в Вороньей Скале"
-    },
-    {
-        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
-        "form_id": "[0500082F]",
-        "index": 93,
-        "type": "QUST CNAM",
-        "original": "I stumbled on a bandit attack near Raven Rock. I should search the area before anything of value is lost.",
-        "string": "Близ Вороньей Скалы на меня напали бандиты. Нужно обыскать окрестности, пока ценности не пропали навсегда."
-    },
-    {
-        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
-        "form_id": "[0500082F]",
+        "form_id": "0500082F|ccedhsse001-norjewel.esl",
         "index": 60,
         "type": "QUST NNAM",
         "original": "Craft a piece of Nordic Jewelry at a forge",
@@ -329,31 +289,7 @@
     },
     {
         "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
-        "form_id": "[0500082F]",
-        "index": 83,
-        "type": "QUST CNAM",
-        "original": "I've heard traders are selling unique jewelry from Solstheim. I should see what they have to offer.",
-        "string": "Говорят, что торговцы иногда продают уникальные драгоценности c Солстейма. Надо узнать, что у них есть."
-    },
-    {
-        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
-        "form_id": "[0500082F]",
-        "index": 0,
-        "type": "QUST NNAM",
-        "original": "Purchase a piece of Nordic Jewelry",
-        "string": "Купить нордскую драгоценность"
-    },
-    {
-        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
-        "form_id": "[0500082F]",
-        "index": 15,
-        "type": "QUST NNAM",
-        "original": "Travel to Solstheim",
-        "string": "Отправиться на Солстейм"
-    },
-    {
-        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
-        "form_id": "[0500082F]",
+        "form_id": "0500082F|ccedhsse001-norjewel.esl",
         "index": 50,
         "type": "QUST NNAM",
         "original": "Read Hugin Ice-Shaper's Notebook",
@@ -361,34 +297,82 @@
     },
     {
         "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
-        "form_id": "[0500082F]",
-        "index": 84,
-        "type": "QUST CNAM",
-        "original": "This jewelry is made exclusively by a man named Hugin Ice-Shaper in Solstheim with rare stalhrim ore. Perhaps the craftsman has more items for sale. I should visit him in Raven Rock.",
-        "string": "Такие драгоценности изготавливает из редкой сталгримовой руды только один человек – Хугин Ледяной Крой c Солстейма. Возможно, у него есть еще предметы на продажу. Нужно навестить его в Вороньей Скале."
+        "form_id": "0500082F|ccedhsse001-norjewel.esl",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Read the Certificate of Authenticity",
+        "string": "Прочесть свидетельство о подлинности"
     },
     {
         "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
-        "form_id": "[0500082F]",
+        "form_id": "0500082F|ccedhsse001-norjewel.esl",
         "index": 40,
         "type": "QUST NNAM",
         "original": "Inspect the area",
         "string": "Осмотреть окрестности"
     },
     {
-        "editor_id": "ccEDHSSE001_NorJewelryEnchanting",
-        "form_id": "[05000845]",
-        "index": null,
-        "type": "PERK FULL",
-        "original": "Nordic Jewelry Enchanting",
-        "string": "Зачарование нордских драгоценностей"
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "form_id": "0500082F|ccedhsse001-norjewel.esl",
+        "index": 0,
+        "type": "QUST NNAM",
+        "original": "Purchase a piece of Nordic Jewelry",
+        "string": "Купить нордскую драгоценность"
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "form_id": "0500082F|ccedhsse001-norjewel.esl",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Find the craftsman in Raven Rock",
+        "string": "Найти ремесленника в Вороньей Скале"
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "form_id": "0500082F|ccedhsse001-norjewel.esl",
+        "index": 15,
+        "type": "QUST NNAM",
+        "original": "Travel to Solstheim",
+        "string": "Отправиться на Солстейм"
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "form_id": "0500082F|ccedhsse001-norjewel.esl",
+        "index": 85,
+        "type": "QUST CNAM",
+        "original": "I've heard traders are selling unique jewelry from Solstheim. I should see what they have to offer.",
+        "string": "Говорят, что торговцы иногда продают уникальные драгоценности c Солстейма. Надо узнать, что у них есть."
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "form_id": "0500082F|ccedhsse001-norjewel.esl",
+        "index": 87,
+        "type": "QUST CNAM",
+        "original": "This jewelry is made exclusively by a man named Hugin Ice-Shaper in Solstheim with rare stalhrim ore. Perhaps the craftsman has more items for sale. I should visit him in Raven Rock.",
+        "string": "Такие драгоценности изготавливает из редкой сталгримовой руды только один человек – Хугин Ледяной Крой c Солстейма. Возможно, у него есть еще предметы на продажу. Нужно навестить его в Вороньей Скале."
+    },
+    {
+        "editor_id": "ccEDHSSE001_CraftsmanEncounterQuest",
+        "form_id": "0500082F|ccedhsse001-norjewel.esl",
+        "index": 82,
+        "type": "QUST CNAM",
+        "original": "I have located the craftsman, but a pair of bandits seem to have found him first. I should search the area before anything of value is lost.",
+        "string": "Мне удалось найти ремесленника, но, похоже, пара бандитов меня опередила. Нужно обыскать окрестности, пока ценности не пропали навсегда."
     },
     {
         "editor_id": "ccEDHSSE001_NorJewelryEnchanting",
-        "form_id": "[05000845]",
+        "form_id": "05000845|ccedhsse001-norjewel.esl",
         "index": null,
         "type": "PERK DESC",
         "original": "Frost enchantments are 25% stronger.",
         "string": "Зачарования с эффектом холода на 25% сильнее."
+    },
+    {
+        "editor_id": "ccEDHSSE001_NorJewelryEnchanting",
+        "form_id": "05000845|ccedhsse001-norjewel.esl",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Nordic Jewelry Enchanting",
+        "string": "Зачарование нордских драгоценностей"
     }
 ]

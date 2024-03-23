@@ -1,15 +1,7 @@
 [
     {
-        "editor_id": "ccVSVSSE003_BoneColossusRace",
-        "form_id": "[0400080E]",
-        "index": null,
-        "type": "RACE FULL",
-        "original": "Giant",
-        "string": "Великан"
-    },
-    {
         "editor_id": "ccVSVSSE003_LichRace",
-        "form_id": "[0400080C]",
+        "form_id": "0400080C|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "RACE FULL",
         "original": "Dragon Priest",
@@ -17,527 +9,407 @@
     },
     {
         "editor_id": "ccVSVSSE003_WailingWraithRace",
-        "form_id": "[0400080F]",
+        "form_id": "0400080F|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "RACE FULL",
         "original": "Wisp",
         "string": "Дымок"
     },
     {
+        "editor_id": "ccVSVSSE003_BoneColossusRace",
+        "form_id": "0400080E|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "RACE FULL",
+        "original": "Giant",
+        "string": "Великан"
+    },
+    {
         "editor_id": "ccVSVSSE003_TorturedShadeRace",
-        "form_id": "[0400080D]",
+        "form_id": "0400080D|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "RACE FULL",
         "original": "Skeleton",
         "string": "Скелет"
     },
     {
-        "editor_id": "ccVSVSSE003_MGEF__SpawnTestFF",
-        "form_id": "[04000965]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Spawn Test",
-        "string": "Проба выводка"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_BoneColossus_cloakEff",
-        "form_id": "[0400083E]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Bone Colossus Heal Skele",
-        "string": "Bone Colossus Heal Skele"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_AncientLichAb",
-        "form_id": "[04000830]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Ancient Lich Ab",
-        "string": "Ancient Lich Ab"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_NecroRitual_heal",
-        "form_id": "[04000828]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Restore Health",
-        "string": "Восстановление здоровья"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_SoulSplit_WailingWraith",
-        "form_id": "[0400082C]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Conjure Sundered Shade",
-        "string": "Вызов разделенной тени"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_NecroRitual",
-        "form_id": "[04000826]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Regain <30> health and magicka every time a friendly conjured or reanimated minion dies for <dur> seconds.",
-        "string": "Восстанавливает <30> ед. здоровья и магии каждый раз, когда умирает дружественный призванный или оживленный слуга. Действует <dur> сек."
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_Gloomwraith_poison",
-        "form_id": "[04000845]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "<mag> points of poison damage.",
-        "string": "<mag> ед. урона ядом."
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_BattleFury_cloak",
-        "form_id": "[0400081D]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Cloak",
-        "string": "Плащ"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_GloomwraithFX",
-        "form_id": "[04000831]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Gloomwraith FX",
-        "string": "Эффект: Мрачное привидение"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_Skeleton_champion",
-        "form_id": "[0400082E]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Summons a Skeleton Champion that gains +<10>% attack damage for each nearby enemy (up to <5>) for <dur> seconds.",
-        "string": "Призывает скелета-чемпиона, который получает +<10>% урона атаки за каждого врага поблизости (максимум <5>). Действует <dur> сек."
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_HauntingSpirit_StealSkillsDummy",
-        "form_id": "[04000838]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "+<10> to all skills for <dur> seconds.",
-        "string": "+<10> ко всем навыкам на <dur> сек."
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_TombGuardianFX",
-        "form_id": "[0400081B]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Tomb Guardian FX",
-        "string": "Эффект: стражник гробницы"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_Skeleton_archerDS",
-        "form_id": "[04000970]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Conjure Skeleton Marksman",
-        "string": "Conjure Skeleton Marksman"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_SoulSplit_WailingWraithDS",
-        "form_id": "[0400096C]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Conjure Sundered Shade",
-        "string": "Conjure Sundered Shade"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_Skeleton_warriorDS",
-        "form_id": "[0400096D]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Conjure Skeleton Minion",
-        "string": "Conjure Skeleton Minion"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_EnchEmpowerConjuration",
-        "form_id": "[0400083A]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Empower Necromancy",
-        "string": "Усиление некромантии"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_HauntingSpirt",
-        "form_id": "[04000810]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Conjure Haunting Spirit",
-        "string": "Вызов назойливого духа"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_Weakness_stamina",
-        "form_id": "[04000820]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Damage Stamina Regen",
-        "string": "Повреждение регенерации запаса сил"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_TombGuardianDS",
-        "form_id": "[0400096B]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Conjure Tomb Guardian",
-        "string": "Conjure Tomb Guardian"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF__UnsummonTimer",
-        "form_id": "[04000823]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Unsummon",
-        "string": "Отзыв"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_Skeleton_warrior",
-        "form_id": "[0400081E]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Conjure Skeleton Minion",
-        "string": "Вызов скелета-слуги"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_BoneColossus",
-        "form_id": "[0400083B]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Conjure Bone Colossus",
-        "string": "Вызов костяного колосса"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_Weakness_stamina",
-        "form_id": "[04000820]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Decreases the target's Stamina regeneration by <mag>% for <dur> seconds.",
-        "string": "Снижает регенерацию запаса сил цели на <mag>%, действует <dur> сек."
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_BoneColossus_cloak",
-        "form_id": "[04000841]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Cloak",
-        "string": "Плащ"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_NecroRitual_aoe",
-        "form_id": "[04000827]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Necro Ritual AOE",
-        "string": "Necro Ritual AOE"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_CommandUndeadPush",
-        "form_id": "[04000818]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Banish/Command Undead Push",
-        "string": "Изгнание/приказ нежити - отталкивание"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_Gloomwraith_absorbMag",
-        "form_id": "[04000844]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Absorb <mag> points of magicka per second from the target.",
-        "string": "Поглощает у цели <mag> ед. магии в секунду."
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_BoneColossus_stompStagger",
-        "form_id": "[0400083D]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Stagger Attack",
-        "string": "Ошеломляющая атака"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_HauntingSpirit_StealSkillsDummy",
-        "form_id": "[04000838]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Haunting Gift",
-        "string": "Назойливый дар"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_EnchEmpowerConjuration",
-        "form_id": "[0400083A]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Conjuration spells last <mag>% longer. Increases summon limit by <1> for lesser conjured or reanimated undead.",
-        "string": "Заклинания колдовства действуют на <mag>% дольше. Увеличивает лимит призыва на <1> для низшей призванной или оживленной нежити."
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_TombGuardian",
-        "form_id": "[04000821]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Conjure Tomb Guardian",
-        "string": "Вызов стражника гробницы"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_HauntingSpirit_StealSkills",
-        "form_id": "[04000839]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Steal Skills",
-        "string": "Украсть навыки"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_TombGuardian",
-        "form_id": "[04000821]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Summons a Tomb Guardian for <dur> seconds that conjures a Shade when it kills an enemy.",
-        "string": "Призывает стражника гробницы на <dur> сек. Убив врага, стражник создает слабую Тень. Тень получает те же параметры, что и убитый враг, но обладает <1> ед. здоровья."
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_Gloomwraith_absorbHealth",
-        "form_id": "[04000847]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Absorb <mag> points of health per second from the target.",
-        "string": "Поглощает у цели <mag> ед. здоровья в секунду."
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_BattleFury03",
-        "form_id": "[04000814]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Battle Fury 3",
-        "string": "Ярость боя 3"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_HauntingSpiritFX",
-        "form_id": "[04000835]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Haunting Spirit FX",
-        "string": "Эффект: Назойливый дух"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_AncientLich",
-        "form_id": "[04000833]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Conjure Ancient Deathpriest",
-        "string": "Вызов древнего жреца смерти"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_TombGuardian_shadeFX",
-        "form_id": "[04000822]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Shade FX",
-        "string": "Эффект: Тень"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_Gloomwraith_absorbHealth",
-        "form_id": "[04000847]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Drain Health",
-        "string": "Высасывание здоровья"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_EnchNecroHood",
-        "form_id": "[0400083F]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Increases your Magicka by <mag> points. Health regeneration decreased by <30>%.",
-        "string": "Увеличивает вашу магию на <mag> очков. Регенерация здоровья снижается на <30>%."
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_AncientLich_soultearDmg",
-        "form_id": "[04000967]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Deals <mag> points of arcane damage.",
-        "string": "Наносит <mag> ед. урона магией."
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_AncientLichDS",
-        "form_id": "[04000974]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Conjure Ancient Deathpriest",
-        "string": "Conjure Ancient Deathpriest"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_GloomwraithPoisonCloak",
-        "form_id": "[0400086C]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Poison Cloak",
-        "string": "Ядовитый плащ"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_BoneColossusAb",
-        "form_id": "[04000842]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Bone Colossus Ab",
-        "string": "Bone Colossus Ab"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_NecroRitual_heal",
-        "form_id": "[04000828]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Restore <mag> health.",
-        "string": "Восстанавливает <mag> ед. здоровья."
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_NecroRitual_restore",
-        "form_id": "[04000895]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Restore <mag> magicka.",
-        "string": "Восстанавливает <mag> ед. магии."
-    },
-    {
         "editor_id": "ccVSVSSE003_MGEF_Skeleton_warlock",
-        "form_id": "[0400082F]",
+        "form_id": "0400082F|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Conjure Skeleton Warlock",
         "string": "Вызов скелета-чародея"
     },
     {
-        "editor_id": "ccVSVSSE003_MGEF_AncientLich_soultearDmg",
-        "form_id": "[04000967]",
+        "editor_id": "ccVSVSSE003_MGEF_HauntingSpirt",
+        "form_id": "04000810|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "MGEF FULL",
-        "original": "Soul Curse - Damage",
-        "string": "Проклятие души - Урон"
+        "original": "Conjure Haunting Spirit",
+        "string": "Вызов назойливого духа"
     },
     {
         "editor_id": "ccVSVSSE003_MGEF_Skeleton_archer",
-        "form_id": "[0400082A]",
+        "form_id": "0400082A|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Conjure Skeleton Marksman",
+        "string": "Вызов скелета-лучника"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_Gloomwraith_absorbHealth",
+        "form_id": "04000847|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "MGEF DNAM",
-        "original": "Summons a Skeleton Marksman whose arrows weaken foes for <dur> seconds.",
-        "string": "Призывает скелета-лучника, чьи стрелы ослабляют врагов на <dur> сек."
+        "original": "Absorb <mag> points of health per second from the target.",
+        "string": "Поглощает у цели <mag> ед. здоровья в секунду."
     },
     {
-        "editor_id": "ccVSVSSE003_MGEF__UnsummonTimer_combatOnly",
-        "form_id": "[04000907]",
+        "editor_id": "ccVSVSSE003_MGEF_TombGuardian",
+        "form_id": "04000821|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "MGEF FULL",
-        "original": "Unsummon",
-        "string": "Отзыв"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_BoneColossusDS",
-        "form_id": "[04000973]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Conjure Bone Colossus",
-        "string": "Conjure Bone Colossus"
+        "original": "Conjure Tomb Guardian",
+        "string": "Вызов стражника гробницы"
     },
     {
         "editor_id": "ccVSVSSE003_MGEF__UnsummonFX",
-        "form_id": "[0400081F]",
+        "form_id": "0400081F|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Unsummon FX",
         "string": "Эффект: Отзыв"
     },
     {
-        "editor_id": "ccVSVSSE003_MGEF_BattleFury_cloakEff",
-        "form_id": "[0400081C]",
+        "editor_id": "ccVSVSSE003_MGEF_BattleFury04",
+        "form_id": "04000815|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "MGEF FULL",
-        "original": "Cloak Effect",
-        "string": "Эффект плаща"
+        "original": "Battle Fury 4",
+        "string": "Ярость боя 4"
     },
     {
-        "editor_id": "ccVSVSSE003_MGEF_EnchNecroHoodDmg",
-        "form_id": "[04000879]",
+        "editor_id": "ccVSVSSE003_MGEF_UndyingGhost_swordFX",
+        "form_id": "04000832|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "MGEF FULL",
-        "original": "Dark Moon",
-        "string": "Темная луна"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_PoisonDamageFFContact",
-        "form_id": "[04000857]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Poison Damage",
-        "string": "Урон ядом"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF__UnsummonShadeFX",
-        "form_id": "[04000825]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Unsummon FX",
-        "string": "Эффект: Отзыв"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_Skeleton_warlockDS",
-        "form_id": "[0400096E]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Conjure Skeleton Warlock",
-        "string": "Conjure Skeleton Warlock"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_Skeleton_champion",
-        "form_id": "[0400082E]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Conjure Skeleton Champion",
-        "string": "Вызов скелета-чемпиона"
+        "original": "Sword FX",
+        "string": "Эффект: Меч"
     },
     {
         "editor_id": "ccVSVSSE003_MGEF_AncientLich",
-        "form_id": "[04000833]",
+        "form_id": "04000833|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "Summons an Ancient Deathpriest that wields powerful magic and commands the undead for <dur> seconds. When killed, the Deathpriest splits into <3> Tortured Shades.",
         "string": "Призывает древнего жреца смерти, который владеет могущественной магией и повелевает нежитью. Действует <dur> сек. Когда древний жрец смерти умирает, он превращается в <3> истерзанные тени."
     },
     {
-        "editor_id": "ccVSVSSE003_MGEF_Gloomwraith",
-        "form_id": "[04000843]",
+        "editor_id": "ccVSVSSE003_MGEF_BattleFury_cloak",
+        "form_id": "0400081D|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "MGEF FULL",
-        "original": "Conjure Cursed Spectre",
-        "string": "Вызов проклятого призрака"
+        "original": "Cloak",
+        "string": "Плащ"
     },
     {
-        "editor_id": "ccVSVSSE003_MGEF_UndyingGhostDS",
-        "form_id": "[04000975]",
+        "editor_id": "ccVSVSSE003_MGEF_Gloomwraith_absorbHealth",
+        "form_id": "04000847|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "MGEF FULL",
-        "original": "Conjure Undying Ghost",
-        "string": "Conjure Undying Ghost"
+        "original": "Drain Health",
+        "string": "Высасывание здоровья"
     },
     {
-        "editor_id": "ccVSVSSE003_MGEF_UndyingGhostFX",
-        "form_id": "[04000834]",
+        "editor_id": "ccVSVSSE003_MGEF_HauntingSpiritFX",
+        "form_id": "04000835|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "MGEF FULL",
-        "original": "Undying Ghost FX",
-        "string": "Эффект: бессмертный призрак"
+        "original": "Haunting Spirit FX",
+        "string": "Эффект: Назойливый дух"
     },
     {
         "editor_id": "ccVSVSSE003_MGEF_BoneColossus",
-        "form_id": "[0400083B]",
+        "form_id": "0400083B|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "Summons a Bone Colossus for <dur> seconds. While active, conjured skeletons regenerate health and you can summon <2> additional skeletons. Only <1> colossus can be summoned at a time.",
         "string": "Призывает костяного колосса на <dur> сек. Пока колосс призван, остальные дружественные скелеты восстанавливают здоровье, а ваш лимит призыва увеличен на <2> для скелетов. Вы можете призвать лишь <1> колосса за раз."
     },
     {
+        "editor_id": "ccVSVSSE003_MGEF_HauntingSpirit_StealSkills",
+        "form_id": "04000839|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Steal Skills",
+        "string": "Украсть навыки"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_NecroRitual",
+        "form_id": "04000826|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Regain <30> health and magicka every time a friendly conjured or reanimated minion dies for <dur> seconds.",
+        "string": "Восстанавливает <30> ед. здоровья и магии каждый раз, когда умирает дружественный призванный или оживленный слуга. Действует <dur> сек."
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF__UnsummonTimer_combatOnly",
+        "form_id": "04000907|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Unsummon",
+        "string": "Отзыв"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_Gloomwraith_poison",
+        "form_id": "04000845|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Poison",
+        "string": "Яд"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF__SpawnTestFF",
+        "form_id": "04000965|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Spawn Test",
+        "string": "Проба выводка"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_PoisonDamageFFContact",
+        "form_id": "04000857|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Poison Damage",
+        "string": "Урон ядом"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_BattleFury01",
+        "form_id": "04000812|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Battle Fury 1",
+        "string": "Ярость боя 1"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_TombGuardian",
+        "form_id": "04000821|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Summons a Tomb Guardian for <dur> seconds that conjures a Shade when it kills an enemy.",
+        "string": "Призывает стражника гробницы на <dur> сек. Убив врага, стражник создает слабую Тень. Тень получает те же параметры, что и убитый враг, но обладает <1> ед. здоровья."
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_AncientLichAb",
+        "form_id": "04000830|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Ancient Lich Ab",
+        "string": "Ancient Lich Ab"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_Gloomwraith",
+        "form_id": "04000843|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Conjure Cursed Spectre",
+        "string": "Вызов проклятого призрака"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_CommandUndead",
+        "form_id": "04000817|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Command Undead",
+        "string": "Приказ нежити"
+    },
+    {
         "editor_id": "ccVSVSSE003_MGEF_SoulSplit",
-        "form_id": "[0400082D]",
+        "form_id": "0400082D|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Soul Split",
+        "string": "Расщепление души"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_Skeleton_warlockDS",
+        "form_id": "0400096E|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Conjure Skeleton Warlock",
+        "string": "Conjure Skeleton Warlock"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_BoneColossus_cloakEff",
+        "form_id": "0400083E|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Bone Colossus Heal Skele",
+        "string": "Bone Colossus Heal Skele"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_BoneColossus_cloak",
+        "form_id": "04000841|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Cloak",
+        "string": "Плащ"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_SoulSplit_WailingWraith",
+        "form_id": "0400082C|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Conjure Sundered Shade",
+        "string": "Вызов разделенной тени"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_GloomwraithPoisonCloak",
+        "form_id": "0400086C|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Poison Cloak",
+        "string": "Ядовитый плащ"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_TombGuardian_SummonShade",
+        "form_id": "04000824|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Summon Shade",
+        "string": "Вызов тени"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_NecroRitual_aoe",
+        "form_id": "04000827|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Necro Ritual AOE",
+        "string": "Necro Ritual AOE"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_UndyingGhostDS",
+        "form_id": "04000975|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Conjure Undying Ghost",
+        "string": "Conjure Undying Ghost"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_Skeleton_warrior",
+        "form_id": "0400081E|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Conjure Skeleton Minion",
+        "string": "Вызов скелета-слуги"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_AncientLich_soultear",
+        "form_id": "04000846|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Soul Curse",
+        "string": "Проклятие души"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_GloomwraithFX",
+        "form_id": "04000831|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Gloomwraith FX",
+        "string": "Эффект: Мрачное привидение"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_TorturedShadeFX",
+        "form_id": "04000837|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Tortured Shade FX",
+        "string": "Эффект: Истерзанная тень"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_Gloomwraith_poison",
+        "form_id": "04000845|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "<mag> points of poison damage.",
+        "string": "<mag> ед. урона ядом."
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF__SpawnTestFF",
+        "form_id": "04000965|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Spawn a thing",
+        "string": "Вывести тварь"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_NecroRitual_heal",
+        "form_id": "04000828|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Restore Health",
+        "string": "Восстановление здоровья"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_BanishUndead",
+        "form_id": "04000819|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Banish Undead",
+        "string": "Изгнание нежити"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_UndyingGhost",
+        "form_id": "04000840|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Conjure Undying Ghost",
+        "string": "Вызов бессмертного призрака"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_BattleFury03",
+        "form_id": "04000814|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Battle Fury 3",
+        "string": "Ярость боя 3"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF__UnsummonShadeFX",
+        "form_id": "04000825|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Unsummon FX",
+        "string": "Эффект: Отзыв"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_Skeleton_champion",
+        "form_id": "0400082E|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Conjure Skeleton Champion",
+        "string": "Вызов скелета-чемпиона"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_Gloomwraith",
+        "form_id": "04000843|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Summons a Cursed Spectre for <dur> seconds that drains health and magicka from enemies. ",
+        "string": "Призывает проклятого призрака, который высасывает из врагов здоровье и магию. Действует <dur> сек. "
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_CommandUndead",
+        "form_id": "04000817|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Summoned and raised undead up to level <mag> are put under your control.",
+        "string": "Подчиняет вам призванную и оживленную нежить вплоть до уровня <mag>."
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_SoulSplit",
+        "form_id": "0400082D|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "Sacrifice a friendly conjured or reanimated minion to summon <2> Sundered Shades for <dur> seconds.",
@@ -545,295 +417,447 @@
     },
     {
         "editor_id": "ccVSVSSE003_MGEF_Weakness_attackdmg",
-        "form_id": "[04000829]",
+        "form_id": "04000829|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Reduce Attack Damage",
         "string": "Снижение урона атаки"
     },
     {
-        "editor_id": "ccVSVSSE003_MGEF_CommandUndead",
-        "form_id": "[04000817]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Command Undead",
-        "string": "Приказ нежити"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_CommandUndead",
-        "form_id": "[04000817]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Summoned and raised undead up to level <mag> are put under your control.",
-        "string": "Подчиняет вам призванную и оживленную нежить вплоть до уровня <mag>."
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_BoneColossus_stompEff",
-        "form_id": "[0400083C]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Shock Damage Area",
-        "string": "Урон электричеством по площади"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_BattleFury05",
-        "form_id": "[04000816]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Battle Fury 5",
-        "string": "Ярость боя 5"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_BattleFury02",
-        "form_id": "[04000813]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Battle Fury 2",
-        "string": "Ярость боя 2"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_BanishUndead",
-        "form_id": "[04000819]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Banish Undead",
-        "string": "Изгнание нежити"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_Gloomwraith",
-        "form_id": "[04000843]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Summons a Cursed Spectre for <dur> seconds that drains health and magicka from enemies. ",
-        "string": "Призывает проклятого призрака, который высасывает из врагов здоровье и магию. Действует <dur> сек. "
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_TorturedShadeFX",
-        "form_id": "[04000837]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Tortured Shade FX",
-        "string": "Эффект: Истерзанная тень"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_Gloomwraith_poison",
-        "form_id": "[04000845]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Poison",
-        "string": "Яд"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_NecroRitual",
-        "form_id": "[04000826]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Necromancer's Ritual",
-        "string": "Ритуал некроманта"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_BanishUndead",
-        "form_id": "[04000819]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Summoned or raised undead up to level <mag> are sent back to the grave.",
-        "string": "Призванная и оживленная нежить цели вплоть до уровня <mag> изгоняется обратно в могилу."
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_UndyingGhost_swordFX",
-        "form_id": "[04000832]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Sword FX",
-        "string": "Эффект: Меч"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_TombGuardian_SummonShade",
-        "form_id": "[04000824]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Summon Shade",
-        "string": "Вызов тени"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_BattleFury04",
-        "form_id": "[04000815]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Battle Fury 4",
-        "string": "Ярость боя 4"
-    },
-    {
         "editor_id": "ccVSVSSE003_MGEF_SoulSplit_WailingWraith",
-        "form_id": "[0400082C]",
+        "form_id": "0400082C|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "Summons a Sundered Shade for <dur> seconds.",
         "string": "Призывает разделенную тень на <dur> сек."
     },
     {
-        "editor_id": "ccVSVSSE003_MGEF_Weakness_attackdmg",
-        "form_id": "[04000829]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Decreases the target's Attack damage by <15>% for <dur> seconds.",
-        "string": "Снижает урон атаки цели на <15>% на <dur> сек."
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_EnchNecroHood",
-        "form_id": "[0400083F]",
+        "editor_id": "ccVSVSSE003_MGEF_EnchNecroHoodDmg",
+        "form_id": "04000879|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Dark Moon",
         "string": "Темная луна"
     },
     {
-        "editor_id": "ccVSVSSE003_MGEF_SoulSplit",
-        "form_id": "[0400082D]",
+        "editor_id": "ccVSVSSE003_MGEF_Skeleton_warriorDS",
+        "form_id": "0400096D|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "MGEF FULL",
-        "original": "Soul Split",
-        "string": "Расщепление души"
+        "original": "Conjure Skeleton Minion",
+        "string": "Conjure Skeleton Minion"
     },
     {
-        "editor_id": "ccVSVSSE003_MGEF_GloomwraithDS",
-        "form_id": "[04000972]",
+        "editor_id": "ccVSVSSE003_MGEF_EnchEmpowerConjuration",
+        "form_id": "0400083A|ccvsvsse003-necroarts.esl",
         "index": null,
-        "type": "MGEF FULL",
-        "original": "Conjure Cursed Spectre",
-        "string": "Conjure Cursed Spectre"
+        "type": "MGEF DNAM",
+        "original": "Conjuration spells last <mag>% longer. Increases summon limit by <1> for lesser conjured or reanimated undead.",
+        "string": "Заклинания колдовства действуют на <mag>% дольше. Увеличивает лимит призыва на <1> для низшей призванной или оживленной нежити."
     },
     {
-        "editor_id": "ccVSVSSE003_MGEF_AncientLich_soultear",
-        "form_id": "[04000846]",
+        "editor_id": "ccVSVSSE003_MGEF_AncientLich_soultearDmg",
+        "form_id": "04000967|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "MGEF FULL",
-        "original": "Soul Curse",
-        "string": "Проклятие души"
+        "original": "Soul Curse - Damage",
+        "string": "Проклятие души - Урон"
     },
     {
-        "editor_id": "ccVSVSSE003_MGEF_BattleFury01",
-        "form_id": "[04000812]",
+        "editor_id": "ccVSVSSE003_MGEF_SoulSplit_WailingWraithDS",
+        "form_id": "0400096C|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "MGEF FULL",
-        "original": "Battle Fury 1",
-        "string": "Ярость боя 1"
+        "original": "Conjure Sundered Shade",
+        "string": "Conjure Sundered Shade"
     },
     {
         "editor_id": "ccVSVSSE003_MGEF_Skeleton_warrior",
-        "form_id": "[0400081E]",
+        "form_id": "0400081E|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "Summons a weak Skeleton warrior for <dur> seconds.",
         "string": "Призывает слабого скелета-воина на <dur> сек."
     },
     {
-        "editor_id": "ccVSVSSE003_MGEF_HauntingSpirtDS",
-        "form_id": "[04000971]",
+        "editor_id": "ccVSVSSE003_MGEF_BattleFury02",
+        "form_id": "04000813|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "MGEF FULL",
-        "original": "Conjure Haunting Spirit",
-        "string": "Conjure Haunting Spirit"
+        "original": "Battle Fury 2",
+        "string": "Ярость боя 2"
     },
     {
-        "editor_id": "ccVSVSSE003_MGEF__SpawnTestFF",
-        "form_id": "[04000965]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Spawn a thing",
-        "string": "Вывести тварь"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_HauntingSpirt",
-        "form_id": "[04000810]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Summons a Haunting Spirit for <dur> seconds. When killed, the spirit steals <10> points from the skills of its killer and transfers them to the caster for a short time.",
-        "string": "Призывает назойливого духа на <dur> сек. Когда его убивают, дух навсегда крадет <10> очков от навыков его убийцы и передает их тому, кто призвал духа."
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_BanishUndead_dmgHealth",
-        "form_id": "[0400081A]",
+        "editor_id": "ccVSVSSE003_MGEF_EnchEmpowerConjuration",
+        "form_id": "0400083A|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "MGEF FULL",
-        "original": "Banish - Damage Health",
-        "string": "Изгнание - урон здоровью"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_BattleFury",
-        "form_id": "[0400082B]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Battle Fury",
-        "string": "Ярость боя"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_GloomwraithFX2",
-        "form_id": "[040008F4]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Gloomwraith FX",
-        "string": "Эффект: Мрачное привидение"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_UndyingGhost",
-        "form_id": "[04000840]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Conjure Undying Ghost",
-        "string": "Вызов бессмертного призрака"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_UndyingGhost",
-        "form_id": "[04000840]",
-        "index": null,
-        "type": "MGEF DNAM",
-        "original": "Consumes all magicka and summons an Undying Ghost for <dur> seconds. The ghost's attributes are equal to twice the amount of magicka consumed (up to <600>).",
-        "string": "Тратит всю доступную магию и призывает бессмертного призрака на <dur> сек. Параметры призрака вдвое больше количества потраченной магии. (Базовое <30>, максимум <600>)"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_NecroRitual_restore",
-        "form_id": "[04000895]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Restore Magicka",
-        "string": "Восстановление магии"
-    },
-    {
-        "editor_id": "ccVSVSSE003_MGEF_Skeleton_championDS",
-        "form_id": "[0400096F]",
-        "index": null,
-        "type": "MGEF FULL",
-        "original": "Conjure Skeleton Champion",
-        "string": "Conjure Skeleton Champion"
+        "original": "Empower Necromancy",
+        "string": "Усиление некромантии"
     },
     {
         "editor_id": "ccVSVSSE003_MGEF_Gloomwraith_absorbMag",
-        "form_id": "[04000844]",
+        "form_id": "04000844|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Drain Magicka",
         "string": "Высасывание магии"
     },
     {
-        "editor_id": "ccVSVSSE003_MGEF_Skeleton_archer",
-        "form_id": "[0400082A]",
+        "editor_id": "ccVSVSSE003_MGEF_GloomwraithFX2",
+        "form_id": "040008F4|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Gloomwraith FX",
+        "string": "Эффект: Мрачное привидение"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_Weakness_stamina",
+        "form_id": "04000820|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Damage Stamina Regen",
+        "string": "Повреждение регенерации запаса сил"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_NecroRitual_heal",
+        "form_id": "04000828|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Restore <mag> health.",
+        "string": "Восстанавливает <mag> ед. здоровья."
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_EnchNecroHood",
+        "form_id": "0400083F|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Dark Moon",
+        "string": "Темная луна"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_BanishUndead",
+        "form_id": "04000819|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Summoned or raised undead up to level <mag> are sent back to the grave.",
+        "string": "Призванная и оживленная нежить цели вплоть до уровня <mag> изгоняется обратно в могилу."
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_UndyingGhost",
+        "form_id": "04000840|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Consumes all magicka and summons an Undying Ghost for <dur> seconds. The ghost's attributes are equal to twice the amount of magicka consumed (up to <600>).",
+        "string": "Тратит всю доступную магию и призывает бессмертного призрака на <dur> сек. Параметры призрака вдвое больше количества потраченной магии. (Базовое <30>, максимум <600>)"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_HauntingSpirit_StealSkillsDummy",
+        "form_id": "04000838|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Haunting Gift",
+        "string": "Назойливый дар"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_AncientLichDS",
+        "form_id": "04000974|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Conjure Ancient Deathpriest",
+        "string": "Conjure Ancient Deathpriest"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_NecroRitual_restore",
+        "form_id": "04000895|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Restore Magicka",
+        "string": "Восстановление магии"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_BoneColossusDS",
+        "form_id": "04000973|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Conjure Bone Colossus",
+        "string": "Conjure Bone Colossus"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_Skeleton_champion",
+        "form_id": "0400082E|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Summons a Skeleton Champion that gains +<10>% attack damage for each nearby enemy (up to <5>) for <dur> seconds.",
+        "string": "Призывает скелета-чемпиона, который получает +<10>% урона атаки за каждого врага поблизости (максимум <5>). Действует <dur> сек."
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_Skeleton_archerDS",
+        "form_id": "04000970|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "MGEF FULL",
         "original": "Conjure Skeleton Marksman",
-        "string": "Вызов скелета-лучника"
+        "string": "Conjure Skeleton Marksman"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_CommandUndeadPush",
+        "form_id": "04000818|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Banish/Command Undead Push",
+        "string": "Изгнание/приказ нежити - отталкивание"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_BanishUndead_dmgHealth",
+        "form_id": "0400081A|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Banish - Damage Health",
+        "string": "Изгнание - урон здоровью"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_Skeleton_championDS",
+        "form_id": "0400096F|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Conjure Skeleton Champion",
+        "string": "Conjure Skeleton Champion"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_HauntingSpirtDS",
+        "form_id": "04000971|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Conjure Haunting Spirit",
+        "string": "Conjure Haunting Spirit"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_GloomwraithDS",
+        "form_id": "04000972|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Conjure Cursed Spectre",
+        "string": "Conjure Cursed Spectre"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_TombGuardian_shadeFX",
+        "form_id": "04000822|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Shade FX",
+        "string": "Эффект: Тень"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_Weakness_attackdmg",
+        "form_id": "04000829|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Decreases the target's Attack damage by <15>% for <dur> seconds.",
+        "string": "Снижает урон атаки цели на <15>% на <dur> сек."
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_AncientLich_soultearDmg",
+        "form_id": "04000967|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Deals <mag> points of arcane damage.",
+        "string": "Наносит <mag> ед. урона магией."
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_BattleFury",
+        "form_id": "0400082B|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Battle Fury",
+        "string": "Ярость боя"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF__UnsummonTimer",
+        "form_id": "04000823|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Unsummon",
+        "string": "Отзыв"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_TombGuardianDS",
+        "form_id": "0400096B|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Conjure Tomb Guardian",
+        "string": "Conjure Tomb Guardian"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_BoneColossusAb",
+        "form_id": "04000842|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Bone Colossus Ab",
+        "string": "Bone Colossus Ab"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_BoneColossus_stompStagger",
+        "form_id": "0400083D|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Stagger Attack",
+        "string": "Ошеломляющая атака"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_Gloomwraith_absorbMag",
+        "form_id": "04000844|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Absorb <mag> points of magicka per second from the target.",
+        "string": "Поглощает у цели <mag> ед. магии в секунду."
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_AncientLich",
+        "form_id": "04000833|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Conjure Ancient Deathpriest",
+        "string": "Вызов древнего жреца смерти"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_BoneColossus_stompEff",
+        "form_id": "0400083C|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Shock Damage Area",
+        "string": "Урон электричеством по площади"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_Weakness_stamina",
+        "form_id": "04000820|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Decreases the target's Stamina regeneration by <mag>% for <dur> seconds.",
+        "string": "Снижает регенерацию запаса сил цели на <mag>%, действует <dur> сек."
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_TombGuardianFX",
+        "form_id": "0400081B|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Tomb Guardian FX",
+        "string": "Эффект: стражник гробницы"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_BoneColossus",
+        "form_id": "0400083B|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Conjure Bone Colossus",
+        "string": "Вызов костяного колосса"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_UndyingGhostFX",
+        "form_id": "04000834|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Undying Ghost FX",
+        "string": "Эффект: бессмертный призрак"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_BattleFury_cloakEff",
+        "form_id": "0400081C|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Cloak Effect",
+        "string": "Эффект плаща"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_NecroRitual",
+        "form_id": "04000826|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Necromancer's Ritual",
+        "string": "Ритуал некроманта"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_EnchNecroHood",
+        "form_id": "0400083F|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Increases your Magicka by <mag> points. Health regeneration decreased by <30>%.",
+        "string": "Увеличивает вашу магию на <mag> очков. Регенерация здоровья снижается на <30>%."
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_BattleFury05",
+        "form_id": "04000816|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF FULL",
+        "original": "Battle Fury 5",
+        "string": "Ярость боя 5"
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_HauntingSpirit_StealSkillsDummy",
+        "form_id": "04000838|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "+<10> to all skills for <dur> seconds.",
+        "string": "+<10> ко всем навыкам на <dur> сек."
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_NecroRitual_restore",
+        "form_id": "04000895|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Restore <mag> magicka.",
+        "string": "Восстанавливает <mag> ед. магии."
     },
     {
         "editor_id": "ccVSVSSE003_MGEF_Skeleton_warlock",
-        "form_id": "[0400082F]",
+        "form_id": "0400082F|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "MGEF DNAM",
         "original": "Summons a Skeleton Warlock that wields powerful shock magic for <dur> seconds.",
         "string": "Призывает скелета-чародея, который владеет могущественной магией электричества. Действует <dur> сек."
     },
     {
-        "editor_id": "ccVSVSSE003_ENCH_NecromancerHood06",
-        "form_id": "[040008D8]",
+        "editor_id": "ccVSVSSE003_MGEF_HauntingSpirt",
+        "form_id": "04000810|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Summons a Haunting Spirit for <dur> seconds. When killed, the spirit steals <10> points from the skills of its killer and transfers them to the caster for a short time.",
+        "string": "Призывает назойливого духа на <dur> сек. Когда его убивают, дух навсегда крадет <10> очков от навыков его убийцы и передает их тому, кто призвал духа."
+    },
+    {
+        "editor_id": "ccVSVSSE003_MGEF_Skeleton_archer",
+        "form_id": "0400082A|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "MGEF DNAM",
+        "original": "Summons a Skeleton Marksman whose arrows weaken foes for <dur> seconds.",
+        "string": "Призывает скелета-лучника, чьи стрелы ослабляют врагов на <dur> сек."
+    },
+    {
+        "editor_id": "ccVSVSSE003_ENCH_TombGuardianAxe",
+        "form_id": "0400084B|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Summon Shade",
+        "string": "Вызов тени"
+    },
+    {
+        "editor_id": "ccVSVSSE003_ENCH_NecromancerRobes06",
+        "form_id": "04000888|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "Empower Necromancy",
+        "string": "Усиление некромантии"
+    },
+    {
+        "editor_id": "ccVSVSSE003_ENCH_UndyingGhostSword",
+        "form_id": "04000848|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "ENCH FULL",
+        "original": "FX",
+        "string": "Эффект"
+    },
+    {
+        "editor_id": "ccVSVSSE003_ENCH_NecromancerHoodBase",
+        "form_id": "040008CC|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Dark Moon",
@@ -841,87 +865,7 @@
     },
     {
         "editor_id": "ccVSVSSE003_ENCH_NecromancerRobes05",
-        "form_id": "[040008A6]",
-        "index": null,
-        "type": "ENCH FULL",
-        "original": "Empower Necromancy",
-        "string": "Усиление некромантии"
-    },
-    {
-        "editor_id": "ccVSVSSE003_ENCH_LichStaff_soultear",
-        "form_id": "[0400084C]",
-        "index": null,
-        "type": "ENCH FULL",
-        "original": "Soul Curse",
-        "string": "Проклятие души"
-    },
-    {
-        "editor_id": "ccVSVSSE003_ENCH_TombGuardianAxe",
-        "form_id": "[0400084B]",
-        "index": null,
-        "type": "ENCH FULL",
-        "original": "Summon Shade",
-        "string": "Вызов тени"
-    },
-    {
-        "editor_id": "ccVSVSSE003_ENCH_NecromancerHood05",
-        "form_id": "[040008C5]",
-        "index": null,
-        "type": "ENCH FULL",
-        "original": "Dark Moon",
-        "string": "Темная луна"
-    },
-    {
-        "editor_id": "ccVSVSSE003_ENCH_UndyingGhostSword",
-        "form_id": "[04000848]",
-        "index": null,
-        "type": "ENCH FULL",
-        "original": "FX",
-        "string": "Эффект"
-    },
-    {
-        "editor_id": "ccVSVSSE003_ENCH_NecromancerRobesBase",
-        "form_id": "[0400087E]",
-        "index": null,
-        "type": "ENCH FULL",
-        "original": "Empower Necromancy",
-        "string": "Усиление некромантии"
-    },
-    {
-        "editor_id": "ccVSVSSE003_ENCH_NecromancerHoodBase",
-        "form_id": "[040008CC]",
-        "index": null,
-        "type": "ENCH FULL",
-        "original": "Dark Moon",
-        "string": "Темная луна"
-    },
-    {
-        "editor_id": "ccVSVSSE003_ENCH_SkeleBow",
-        "form_id": "[0400084A]",
-        "index": null,
-        "type": "ENCH FULL",
-        "original": "Weakness",
-        "string": "Слабость"
-    },
-    {
-        "editor_id": "ccVSVSSE003_ENCH_LichStaff_iceStorm",
-        "form_id": "[0400084D]",
-        "index": null,
-        "type": "ENCH FULL",
-        "original": "Ice Storm",
-        "string": "Ледяная буря"
-    },
-    {
-        "editor_id": "ccVSVSSE003_ENCH_NecromancerRobes06",
-        "form_id": "[04000888]",
-        "index": null,
-        "type": "ENCH FULL",
-        "original": "Empower Necromancy",
-        "string": "Усиление некромантии"
-    },
-    {
-        "editor_id": "ccVSVSSE003_ENCH_NecromancerRobes04",
-        "form_id": "[040008B8]",
+        "form_id": "040008A6|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Empower Necromancy",
@@ -929,367 +873,135 @@
     },
     {
         "editor_id": "ccVSVSSE003_ENCH_BoneColossusStomp",
-        "form_id": "[04000849]",
+        "form_id": "04000849|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Stagger",
         "string": "Ошеломление"
     },
     {
-        "editor_id": "ccVSVSSE003_ENCH_NecromancerRobes03",
-        "form_id": "[040008BE]",
+        "editor_id": "ccVSVSSE003_ENCH_NecromancerRobesBase",
+        "form_id": "0400087E|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "ENCH FULL",
         "original": "Empower Necromancy",
         "string": "Усиление некромантии"
     },
     {
-        "editor_id": "ccVSVSSE003_SPELL_Gloomwraith",
-        "form_id": "[04000870]",
+        "editor_id": "ccVSVSSE003_ENCH_NecromancerRobes04",
+        "form_id": "040008B8|ccvsvsse003-necroarts.esl",
         "index": null,
-        "type": "SPEL FULL",
-        "original": "Conjure Cursed Spectre",
-        "string": "Вызов проклятого призрака"
+        "type": "ENCH FULL",
+        "original": "Empower Necromancy",
+        "string": "Усиление некромантии"
     },
     {
-        "editor_id": "ccVSVSSE003_SPELL_NecroRitual_aoe",
-        "form_id": "[04000865]",
+        "editor_id": "ccVSVSSE003_ENCH_NecromancerHood06",
+        "form_id": "040008D8|ccvsvsse003-necroarts.esl",
         "index": null,
-        "type": "SPEL FULL",
-        "original": "Necro Ritual AOE",
-        "string": "Necro Ritual AOE"
+        "type": "ENCH FULL",
+        "original": "Dark Moon",
+        "string": "Темная луна"
     },
     {
-        "editor_id": "ccVSVSSE003_SPELL_SkeletonMarksmanLeftHand",
-        "form_id": "[040008DA]",
+        "editor_id": "ccVSVSSE003_ENCH_NecromancerRobes03",
+        "form_id": "040008BE|ccvsvsse003-necroarts.esl",
         "index": null,
-        "type": "SPEL FULL",
-        "original": "Conjure Skeleton Marksman",
-        "string": "Вызов скелета-лучника"
+        "type": "ENCH FULL",
+        "original": "Empower Necromancy",
+        "string": "Усиление некромантии"
     },
     {
-        "editor_id": "ccVSVSSE003_AB_BattleFury",
-        "form_id": "[0400085A]",
+        "editor_id": "ccVSVSSE003_ENCH_LichStaff_soultear",
+        "form_id": "0400084C|ccvsvsse003-necroarts.esl",
         "index": null,
-        "type": "SPEL FULL",
-        "original": "Battle Fury",
-        "string": "Ярость боя"
+        "type": "ENCH FULL",
+        "original": "Soul Curse",
+        "string": "Проклятие души"
     },
     {
-        "editor_id": "ccVSVSSE003_AB_TorturedShadeFX",
-        "form_id": "[0400085C]",
+        "editor_id": "ccVSVSSE003_ENCH_LichStaff_iceStorm",
+        "form_id": "0400084D|ccvsvsse003-necroarts.esl",
         "index": null,
-        "type": "SPEL FULL",
-        "original": "Tortured Shade FX",
-        "string": "Эффект: Истерзанная тень"
+        "type": "ENCH FULL",
+        "original": "Ice Storm",
+        "string": "Ледяная буря"
     },
     {
-        "editor_id": "ccVSVSSE003_SPELL_BoneColossus_Shout",
-        "form_id": "[04000872]",
+        "editor_id": "ccVSVSSE003_ENCH_NecromancerHood05",
+        "form_id": "040008C5|ccvsvsse003-necroarts.esl",
         "index": null,
-        "type": "SPEL FULL",
-        "original": "Unrelenting Force",
-        "string": "Безжалостная сила"
+        "type": "ENCH FULL",
+        "original": "Dark Moon",
+        "string": "Темная луна"
     },
     {
-        "editor_id": "ccVSVSSE003_AB_ShadeAbility",
-        "form_id": "[04000858]",
+        "editor_id": "ccVSVSSE003_ENCH_SkeleBow",
+        "form_id": "0400084A|ccvsvsse003-necroarts.esl",
         "index": null,
-        "type": "SPEL FULL",
-        "original": "Shade Ability",
-        "string": "Способности тени"
-    },
-    {
-        "editor_id": "ccVSVSSE003_SPELL_BanishUndeadRightHand",
-        "form_id": "[04000963]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Banish Undead",
-        "string": "Изгнание нежити"
-    },
-    {
-        "editor_id": "ccVSVSSE003_SPELL_HauntingSpirit_StealSkills",
-        "form_id": "[04000863]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Haunting Spirit Steal Skills",
-        "string": "Украсть навыки: назойливый дух"
-    },
-    {
-        "editor_id": "ccVSVSSE003_SPELL_UndyingGhost",
-        "form_id": "[0400085E]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Conjure Undying Ghost",
-        "string": "Вызов бессмертного призрака"
-    },
-    {
-        "editor_id": "ccVSVSSE003_AB_HauntingSpiritFX",
-        "form_id": "[04000864]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Haunting Spirit FX",
-        "string": "Эффект: Назойливый дух"
-    },
-    {
-        "editor_id": "ccVSVSSE003_AB_GhostAbility",
-        "form_id": "[04000875]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Ghost Ability",
-        "string": "Способности призрака"
-    },
-    {
-        "editor_id": "ccVSVSSE003_SPELL_SkeletonMinionLeftHand",
-        "form_id": "[040008D9]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Conjure Skeleton Minion",
-        "string": "Вызов скелета-слуги"
-    },
-    {
-        "editor_id": "ccVSVSSE003_SPELL_BoneColossus",
-        "form_id": "[04000861]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Conjure Bone Colossus",
-        "string": "Вызов костяного колосса"
-    },
-    {
-        "editor_id": "ccVSVSSE003_SPELL_BattleFury_cloakEff",
-        "form_id": "[04000866]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Cloak Eff",
-        "string": "Cloak Eff"
-    },
-    {
-        "editor_id": "ccVSVSSE003_SPELL_SkeletonChampionLeftHand",
-        "form_id": "[040008F8]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Conjure Skeleton Champion",
-        "string": "Вызов скелета-чемпиона"
-    },
-    {
-        "editor_id": "ccVSVSSE003_AB_GloomwraithAb",
-        "form_id": "[04000905]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Gloomwraith ability",
-        "string": "Способность мрачного привидения"
-    },
-    {
-        "editor_id": "ccVSVSSE003_SPELL_AncientLich",
-        "form_id": "[04000852]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Conjure Ancient Deathpriest",
-        "string": "Вызов древнего жреца смерти"
-    },
-    {
-        "editor_id": "ccVSVSSE003_SPELL_SkeletonMarksman",
-        "form_id": "[04000856]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Conjure Skeleton Marksman",
-        "string": "Вызов скелета-лучника"
-    },
-    {
-        "editor_id": "ccVSVSSE003_AB_GloomwraithFX",
-        "form_id": "[0400084F]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Gloomwraith FX",
-        "string": "Эффект: Мрачное привидение"
-    },
-    {
-        "editor_id": "ccVSVSSE003_SPELL_SoulSplit_WraithIceVolley",
-        "form_id": "[04000876]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Ice Volley",
-        "string": "Ледяной залп"
-    },
-    {
-        "editor_id": "ccVSVSSE003_SPELL_NecroRitual_heal",
-        "form_id": "[0400086D]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Restore Health and Magicka",
-        "string": "Восстановление здоровья и магии"
-    },
-    {
-        "editor_id": "ccVSVSSE003_AB_TombGuardianFX",
-        "form_id": "[0400086F]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Tomb Guardian FX",
-        "string": "Эффект: стражник гробницы"
-    },
-    {
-        "editor_id": "ccVSVSSE003_SPELL_BoneColossus_cloak",
-        "form_id": "[0400086B]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Cloak",
-        "string": "Плащ"
+        "type": "ENCH FULL",
+        "original": "Weakness",
+        "string": "Слабость"
     },
     {
         "editor_id": "ccVSVSSE003_SPELL_NecroRitual",
-        "form_id": "[04000869]",
+        "form_id": "04000869|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Necromancer's Ritual",
         "string": "Ритуал некроманта"
     },
     {
-        "editor_id": "ccVSVSSE003_AB_GloomwraithFX2",
-        "form_id": "[040008F5]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Gloomwraith FX",
-        "string": "Эффект: Мрачное привидение"
-    },
-    {
-        "editor_id": "ccVSVSSE003_SPELL_HauntingSpirit",
-        "form_id": "[04000868]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Conjure Haunting Spirit",
-        "string": "Вызов назойливого духа"
-    },
-    {
         "editor_id": "ccVSVSSE003_AB_BoneColossus",
-        "form_id": "[0400085F]",
+        "form_id": "0400085F|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Bone Colossus Ab",
         "string": "Bone Colossus Ab"
     },
     {
-        "editor_id": "ccVSVSSE003_SPELL_TombGuardian",
-        "form_id": "[04000854]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Conjure Tomb Guardian",
-        "string": "Вызов стражника гробницы"
-    },
-    {
-        "editor_id": "ccVSVSSE003_SPELL_BattleFury_cloak",
-        "form_id": "[04000860]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Cloak",
-        "string": "Плащ"
-    },
-    {
-        "editor_id": "ccVSVSSE003_SPELL__Unsummon30",
-        "form_id": "[04000855]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Unsummon 30 sec",
-        "string": "Отзыв 30 сек."
-    },
-    {
-        "editor_id": "ccVSVSSE003_SPELL_HauntingSpirit_StealSkillsDummy",
-        "form_id": "[04000859]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Haunting Gift",
-        "string": "Назойливый дар"
-    },
-    {
-        "editor_id": "ccVSVSSE003_SPELL__Unsummon30_combatOnly",
-        "form_id": "[04000906]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Unsummon 30 sec",
-        "string": "Отзыв 30 сек."
-    },
-    {
-        "editor_id": "ccVSVSSE003_AB_UndyingGhostFX",
-        "form_id": "[04000850]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Undying Ghost FX",
-        "string": "Эффект: бессмертный призрак"
-    },
-    {
-        "editor_id": "ccVSVSSE003_SPELL_SoulSplit_SummonWraith",
-        "form_id": "[04000873]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Conjure  Sundered Shade",
-        "string": "Вызов разделенной тени"
-    },
-    {
-        "editor_id": "ccVSVSSE003_SPELL_BoneColossus_cloakEff",
-        "form_id": "[04000867]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Cloak Eff",
-        "string": "Cloak Eff"
-    },
-    {
-        "editor_id": "ccVSVSSE003_SPELL_SkeletonWarlockLeftHand",
-        "form_id": "[04000900]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Conjure Skeleton Warlock",
-        "string": "Вызов скелета-чародея"
-    },
-    {
-        "editor_id": "ccVSVSSE003_POW__SpawnTest",
-        "form_id": "[04000968]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Spawn Test",
-        "string": "Проба выводка"
-    },
-    {
-        "editor_id": "ccVSVSSE003_SPELL_BoneColossus_stomp",
-        "form_id": "[04000862]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Bone Colossus Stomp",
-        "string": "Топот костяного колосса"
-    },
-    {
-        "editor_id": "ccVSVSSE003_SPELL_SkeletonWarlock",
-        "form_id": "[0400084E]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Conjure Skeleton Warlock",
-        "string": "Вызов скелета-чародея"
-    },
-    {
-        "editor_id": "ccVSVSSE003_SPELL_SoulSplit",
-        "form_id": "[04000874]",
-        "index": null,
-        "type": "SPEL FULL",
-        "original": "Soul Split",
-        "string": "Расщепление души"
-    },
-    {
         "editor_id": "ccVSVSSE003_SPELL_SkeletonChampion",
-        "form_id": "[04000877]",
+        "form_id": "04000877|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Conjure Skeleton Champion",
         "string": "Вызов скелета-чемпиона"
     },
     {
-        "editor_id": "ccVSVSSE003_AB_AncientLichAb",
-        "form_id": "[04000851]",
+        "editor_id": "ccVSVSSE003_SPELL_HauntingSpirit_StealSkillsDummy",
+        "form_id": "04000859|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "SPEL FULL",
-        "original": "Ancient Lich FX",
-        "string": "Ancient Lich FX"
+        "original": "Haunting Gift",
+        "string": "Назойливый дар"
+    },
+    {
+        "editor_id": "ccVSVSSE003_SPELL_NecroRitual_aoe",
+        "form_id": "04000865|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Necro Ritual AOE",
+        "string": "Necro Ritual AOE"
+    },
+    {
+        "editor_id": "ccVSVSSE003_SPELL_SkeletonWarlock",
+        "form_id": "0400084E|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Conjure Skeleton Warlock",
+        "string": "Вызов скелета-чародея"
+    },
+    {
+        "editor_id": "ccVSVSSE003_SPELL__Unsummon30",
+        "form_id": "04000855|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Unsummon 30 sec",
+        "string": "Отзыв 30 сек."
     },
     {
         "editor_id": "ccVSVSSE003_SPELL_GloomwraithPoisonCloakDmg",
-        "form_id": "[04000904]",
+        "form_id": "04000904|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Poison Cloak",
@@ -1297,199 +1009,415 @@
     },
     {
         "editor_id": "ccVSVSSE003_SPELL_SkeletonMinion",
-        "form_id": "[0400085B]",
+        "form_id": "0400085B|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Conjure Skeleton Minion",
         "string": "Вызов скелета-слуги"
     },
     {
-        "editor_id": "ccVSVSSE003_SPELL_BanishUndead",
-        "form_id": "[0400086A]",
+        "editor_id": "ccVSVSSE003_AB_ShadeAbility",
+        "form_id": "04000858|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Shade Ability",
+        "string": "Способности тени"
+    },
+    {
+        "editor_id": "ccVSVSSE003_SPELL_UndyingGhost",
+        "form_id": "0400085E|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Conjure Undying Ghost",
+        "string": "Вызов бессмертного призрака"
+    },
+    {
+        "editor_id": "ccVSVSSE003_SPELL_BanishUndeadRightHand",
+        "form_id": "04000963|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Banish Undead",
         "string": "Изгнание нежити"
     },
     {
-        "editor_id": "ccVSVSSE003_SPELL_Gloomwraith_absorb",
-        "form_id": "[0400086E]",
+        "editor_id": "ccVSVSSE003_SPELL_SkeletonMarksmanLeftHand",
+        "form_id": "040008DA|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "SPEL FULL",
-        "original": "Absorb Health and Magicka",
-        "string": "Поглощение здоровья и магии"
+        "original": "Conjure Skeleton Marksman",
+        "string": "Вызов скелета-лучника"
     },
     {
-        "editor_id": "ccVSVSSE003_AB_SkeleAbility",
-        "form_id": "[04000853]",
+        "editor_id": "ccVSVSSE003_SPELL_SoulSplit_SummonWraith",
+        "form_id": "04000873|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "SPEL FULL",
-        "original": "Skele Ability",
-        "string": "Способности скелета"
+        "original": "Conjure  Sundered Shade",
+        "string": "Вызов разделенной тени"
+    },
+    {
+        "editor_id": "ccVSVSSE003_AB_GloomwraithFX2",
+        "form_id": "040008F5|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Gloomwraith FX",
+        "string": "Эффект: Мрачное привидение"
+    },
+    {
+        "editor_id": "ccVSVSSE003_SPELL_Gloomwraith",
+        "form_id": "04000870|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Conjure Cursed Spectre",
+        "string": "Вызов проклятого призрака"
+    },
+    {
+        "editor_id": "ccVSVSSE003_SPELL_SkeletonWarlockLeftHand",
+        "form_id": "04000900|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Conjure Skeleton Warlock",
+        "string": "Вызов скелета-чародея"
+    },
+    {
+        "editor_id": "ccVSVSSE003_AB_TorturedShadeFX",
+        "form_id": "0400085C|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Tortured Shade FX",
+        "string": "Эффект: Истерзанная тень"
+    },
+    {
+        "editor_id": "ccVSVSSE003_SPELL_BattleFury_cloak",
+        "form_id": "04000860|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Cloak",
+        "string": "Плащ"
     },
     {
         "editor_id": "ccVSVSSE003_SPELL_Gloomwraith_poison",
-        "form_id": "[04000871]",
+        "form_id": "04000871|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Poison",
         "string": "Яд"
     },
     {
+        "editor_id": "ccVSVSSE003_SPELL_BanishUndead",
+        "form_id": "0400086A|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Banish Undead",
+        "string": "Изгнание нежити"
+    },
+    {
+        "editor_id": "ccVSVSSE003_SPELL_NecroRitual_heal",
+        "form_id": "0400086D|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Restore Health and Magicka",
+        "string": "Восстановление здоровья и магии"
+    },
+    {
+        "editor_id": "ccVSVSSE003_AB_UndyingGhostFX",
+        "form_id": "04000850|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Undying Ghost FX",
+        "string": "Эффект: бессмертный призрак"
+    },
+    {
+        "editor_id": "ccVSVSSE003_SPELL_BoneColossus_stomp",
+        "form_id": "04000862|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Bone Colossus Stomp",
+        "string": "Топот костяного колосса"
+    },
+    {
+        "editor_id": "ccVSVSSE003_AB_TombGuardianFX",
+        "form_id": "0400086F|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Tomb Guardian FX",
+        "string": "Эффект: стражник гробницы"
+    },
+    {
+        "editor_id": "ccVSVSSE003_SPELL_HauntingSpirit_StealSkills",
+        "form_id": "04000863|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Haunting Spirit Steal Skills",
+        "string": "Украсть навыки: назойливый дух"
+    },
+    {
+        "editor_id": "ccVSVSSE003_SPELL_BoneColossus_Shout",
+        "form_id": "04000872|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Unrelenting Force",
+        "string": "Безжалостная сила"
+    },
+    {
+        "editor_id": "ccVSVSSE003_AB_GloomwraithFX",
+        "form_id": "0400084F|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Gloomwraith FX",
+        "string": "Эффект: Мрачное привидение"
+    },
+    {
+        "editor_id": "ccVSVSSE003_SPELL_Gloomwraith_absorb",
+        "form_id": "0400086E|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Absorb Health and Magicka",
+        "string": "Поглощение здоровья и магии"
+    },
+    {
+        "editor_id": "ccVSVSSE003_SPELL_SkeletonMinionLeftHand",
+        "form_id": "040008D9|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Conjure Skeleton Minion",
+        "string": "Вызов скелета-слуги"
+    },
+    {
         "editor_id": "ccVSVSSE003_SPELL_CommandUndead",
-        "form_id": "[0400085D]",
+        "form_id": "0400085D|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "SPEL FULL",
         "original": "Command Undead",
         "string": "Приказ нежити"
     },
     {
-        "editor_id": "ccVSVSSE003_UndyingGhostArmor",
-        "form_id": "[04000883]",
+        "editor_id": "ccVSVSSE003_SPELL_AncientLich",
+        "form_id": "04000852|ccvsvsse003-necroarts.esl",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Ancient Nord Armor",
-        "string": "Древняя нордская броня"
+        "type": "SPEL FULL",
+        "original": "Conjure Ancient Deathpriest",
+        "string": "Вызов древнего жреца смерти"
     },
     {
-        "editor_id": "ccVSVSSE003_HauntingSpiritHood",
-        "form_id": "[04000884]",
+        "editor_id": "ccVSVSSE003_AB_HauntingSpiritFX",
+        "form_id": "04000864|ccvsvsse003-necroarts.esl",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Haunting Spirit Hood",
-        "string": "Капюшон назойливого духа"
+        "type": "SPEL FULL",
+        "original": "Haunting Spirit FX",
+        "string": "Эффект: Назойливый дух"
     },
     {
-        "editor_id": "ccVSVSSE003_UndyingGhostGloves",
-        "form_id": "[04000882]",
+        "editor_id": "ccVSVSSE003_SPELL_SoulSplit_WraithIceVolley",
+        "form_id": "04000876|ccvsvsse003-necroarts.esl",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Ancient Nord Gauntlets",
-        "string": "Древние нордские перчатки"
+        "type": "SPEL FULL",
+        "original": "Ice Volley",
+        "string": "Ледяной залп"
     },
     {
-        "editor_id": "ccVSVSSE003_EnchNecroRobesMagickaRate05",
-        "form_id": "[0400090D]",
+        "editor_id": "ccVSVSSE003_AB_SkeleAbility",
+        "form_id": "04000853|ccvsvsse003-necroarts.esl",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Necromancer Robes of Resurgence",
-        "string": "Некромантское одеяние второго дыхания"
+        "type": "SPEL FULL",
+        "original": "Skele Ability",
+        "string": "Способности скелета"
     },
     {
-        "editor_id": "ccVSVSSE003_EnchNecroHoodMagicka04",
-        "form_id": "[04000914]",
+        "editor_id": "ccVSVSSE003_SPELL__Unsummon30_combatOnly",
+        "form_id": "04000906|ccvsvsse003-necroarts.esl",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Necromancer Hood of Eminent Magicka",
-        "string": "Некромантский капюшон истинной магии"
+        "type": "SPEL FULL",
+        "original": "Unsummon 30 sec",
+        "string": "Отзыв 30 сек."
     },
     {
-        "editor_id": "ccVSVSSE003_EnchNecroHoodMagicka02",
-        "form_id": "[04000912]",
+        "editor_id": "ccVSVSSE003_AB_BattleFury",
+        "form_id": "0400085A|ccvsvsse003-necroarts.esl",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Necromancer Hood of Magicka",
-        "string": "Некромантский капюшон магии"
+        "type": "SPEL FULL",
+        "original": "Battle Fury",
+        "string": "Ярость боя"
     },
     {
-        "editor_id": "ccVSVSSE003_UndyingGhostHelmet",
-        "form_id": "[04000886]",
+        "editor_id": "ccVSVSSE003_SPELL_TombGuardian",
+        "form_id": "04000854|ccvsvsse003-necroarts.esl",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Helmet",
-        "string": "Шлем"
+        "type": "SPEL FULL",
+        "original": "Conjure Tomb Guardian",
+        "string": "Вызов стражника гробницы"
     },
     {
-        "editor_id": "ccVSVSSE003_EnchNecroRobesSummon06",
-        "form_id": "[0400090F]",
+        "editor_id": "ccVSVSSE003_SPELL_BoneColossus_cloakEff",
+        "form_id": "04000867|ccvsvsse003-necroarts.esl",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Ascendant Necromancer Robes",
-        "string": "Одеяние старшего некроманта"
+        "type": "SPEL FULL",
+        "original": "Cloak Eff",
+        "string": "Cloak Eff"
     },
     {
-        "editor_id": "ccVSVSSE003_EnchNecroHoodMagicka05",
-        "form_id": "[04000915]",
+        "editor_id": "ccVSVSSE003_SPELL_BoneColossus_cloak",
+        "form_id": "0400086B|ccvsvsse003-necroarts.esl",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Necromancer Hood of Extreme Magicka",
-        "string": "Некромантский капюшон великой магии"
+        "type": "SPEL FULL",
+        "original": "Cloak",
+        "string": "Плащ"
     },
     {
-        "editor_id": "ccVSVSSE003_EnchNecroHoodSpecial05",
-        "form_id": "[04000910]",
+        "editor_id": "ccVSVSSE003_SPELL_SkeletonChampionLeftHand",
+        "form_id": "040008F8|ccvsvsse003-necroarts.esl",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Elite Necromancer Hood",
-        "string": "Элитный некромантский капюшон"
+        "type": "SPEL FULL",
+        "original": "Conjure Skeleton Champion",
+        "string": "Вызов скелета-чемпиона"
     },
     {
-        "editor_id": "ccVSVSSE003_EnchNecroRobesMagickaRate04",
-        "form_id": "[0400090C]",
+        "editor_id": "ccVSVSSE003_SPELL_SkeletonMarksman",
+        "form_id": "04000856|ccvsvsse003-necroarts.esl",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Necromancer Robes of Replenishing",
-        "string": "Некромантское одеяние пополнения"
+        "type": "SPEL FULL",
+        "original": "Conjure Skeleton Marksman",
+        "string": "Вызов скелета-лучника"
     },
     {
-        "editor_id": "ccVSVSSE003_EnchNecroRobesMagickaRate03",
-        "form_id": "[0400090B]",
+        "editor_id": "ccVSVSSE003_AB_AncientLichAb",
+        "form_id": "04000851|ccvsvsse003-necroarts.esl",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Necromancer Robes of Recharging",
-        "string": "Некромантское одеяние перезарядки"
+        "type": "SPEL FULL",
+        "original": "Ancient Lich FX",
+        "string": "Ancient Lich FX"
     },
     {
-        "editor_id": "ccVSVSSE003_NecroHood",
-        "form_id": "[040008F6]",
+        "editor_id": "ccVSVSSE003_SPELL_BattleFury_cloakEff",
+        "form_id": "04000866|ccvsvsse003-necroarts.esl",
         "index": null,
-        "type": "ARMO FULL",
-        "original": "Necromancer Hood",
-        "string": "Некромантский капюшон"
+        "type": "SPEL FULL",
+        "original": "Cloak Eff",
+        "string": "Cloak Eff"
+    },
+    {
+        "editor_id": "ccVSVSSE003_POW__SpawnTest",
+        "form_id": "04000968|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Spawn Test",
+        "string": "Проба выводка"
+    },
+    {
+        "editor_id": "ccVSVSSE003_AB_GloomwraithAb",
+        "form_id": "04000905|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Gloomwraith ability",
+        "string": "Способность мрачного привидения"
+    },
+    {
+        "editor_id": "ccVSVSSE003_AB_GhostAbility",
+        "form_id": "04000875|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Ghost Ability",
+        "string": "Способности призрака"
+    },
+    {
+        "editor_id": "ccVSVSSE003_SPELL_SoulSplit",
+        "form_id": "04000874|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Soul Split",
+        "string": "Расщепление души"
+    },
+    {
+        "editor_id": "ccVSVSSE003_SPELL_BoneColossus",
+        "form_id": "04000861|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Conjure Bone Colossus",
+        "string": "Вызов костяного колосса"
+    },
+    {
+        "editor_id": "ccVSVSSE003_SPELL_HauntingSpirit",
+        "form_id": "04000868|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "SPEL FULL",
+        "original": "Conjure Haunting Spirit",
+        "string": "Вызов назойливого духа"
     },
     {
         "editor_id": "ccVSVSSE003_EnchNecroHoodMagicka03",
-        "form_id": "[04000913]",
+        "form_id": "04000913|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Necromancer Hood of Major Magicka",
         "string": "Некромантский капюшон настоящей магии"
     },
     {
-        "editor_id": "ccVSVSSE003_EnchNecroRobesMagickaRate02",
-        "form_id": "[0400090A]",
+        "editor_id": "ccVSVSSE003_EnchNecroHoodMagicka04",
+        "form_id": "04000914|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "ARMO FULL",
-        "original": "Necromancer Robes of Quickening",
-        "string": "Некромантское одеяние стремительной магии"
+        "original": "Necromancer Hood of Eminent Magicka",
+        "string": "Некромантский капюшон истинной магии"
     },
     {
-        "editor_id": "ccVSVSSE003_NecroRobes",
-        "form_id": "[040008F7]",
+        "editor_id": "ccVSVSSE003_EnchNecroRobesMagickaRate05",
+        "form_id": "0400090D|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "ARMO FULL",
-        "original": "Necromancer Robes",
-        "string": "Некромантское одеяние"
+        "original": "Necromancer Robes of Resurgence",
+        "string": "Некромантское одеяние второго дыхания"
+    },
+    {
+        "editor_id": "ccVSVSSE003_UndyingGhostArmor",
+        "form_id": "04000883|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ancient Nord Armor",
+        "string": "Древняя нордская броня"
+    },
+    {
+        "editor_id": "ccVSVSSE003_UndyingGhostHelmet",
+        "form_id": "04000886|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Helmet",
+        "string": "Шлем"
     },
     {
         "editor_id": "ccVSVSSE003_EnchNecroHoodSpecial06",
-        "form_id": "[04000911]",
+        "form_id": "04000911|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Ascendant Necromancer Hood",
         "string": "Капюшон старшего некроманта"
     },
     {
-        "editor_id": "ccVSVSSE003_NecroRobesRunes",
-        "form_id": "[04000909]",
+        "editor_id": "ccVSVSSE003_EnchNecroHoodMagicka02",
+        "form_id": "04000912|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "ARMO FULL",
-        "original": "Runic Necromancer Robes",
-        "string": "Рунное некромантское одеяние"
+        "original": "Necromancer Hood of Magicka",
+        "string": "Некромантский капюшон магии"
+    },
+    {
+        "editor_id": "ccVSVSSE003_HauntingSpiritHood",
+        "form_id": "04000884|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Haunting Spirit Hood",
+        "string": "Капюшон назойливого духа"
+    },
+    {
+        "editor_id": "ccVSVSSE003_EnchNecroRobesSummon06",
+        "form_id": "0400090F|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ascendant Necromancer Robes",
+        "string": "Одеяние старшего некроманта"
     },
     {
         "editor_id": "ccVSVSSE003_EnchNecroRobesSummon05",
-        "form_id": "[0400090E]",
+        "form_id": "0400090E|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Elite Necromancer Robes",
@@ -1497,135 +1425,135 @@
     },
     {
         "editor_id": "ccVSVSSE003_NecroHoodMask",
-        "form_id": "[04000908]",
+        "form_id": "04000908|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Masked Necromancer Hood",
         "string": "Некромантский капюшон с маской"
     },
     {
-        "editor_id": "ccVSVSSE003_BOOK_BanishUndead",
-        "form_id": "[04000889]",
+        "editor_id": "ccVSVSSE003_EnchNecroRobesMagickaRate02",
+        "form_id": "0400090A|ccvsvsse003-necroarts.esl",
         "index": null,
-        "type": "BOOK FULL",
-        "original": "Spell Tome: Banish Undead",
-        "string": "Том заклинаний: Изгнание нежити"
+        "type": "ARMO FULL",
+        "original": "Necromancer Robes of Quickening",
+        "string": "Некромантское одеяние стремительной магии"
     },
     {
-        "editor_id": "ccVSVSSE003_BOOK_UndyingGhost",
-        "form_id": "[0400088A]",
+        "editor_id": "ccVSVSSE003_NecroRobes",
+        "form_id": "040008F7|ccvsvsse003-necroarts.esl",
         "index": null,
-        "type": "BOOK FULL",
-        "original": "Spell Tome: Conjure Undying Ghost",
-        "string": "Том заклинаний: Вызов бессмертного призрака"
+        "type": "ARMO FULL",
+        "original": "Necromancer Robes",
+        "string": "Некромантское одеяние"
     },
     {
-        "editor_id": "ccVSVSSE003_BOOK_Gloomwraith",
-        "form_id": "[0400088E]",
+        "editor_id": "ccVSVSSE003_NecroRobesRunes",
+        "form_id": "04000909|ccvsvsse003-necroarts.esl",
         "index": null,
-        "type": "BOOK FULL",
-        "original": "Spell Tome: Conjure Cursed Spectre",
-        "string": "Том заклинаний: Вызов проклятого призрака"
+        "type": "ARMO FULL",
+        "original": "Runic Necromancer Robes",
+        "string": "Рунное некромантское одеяние"
     },
     {
-        "editor_id": "ccVSVSSE003_BOOK_SkeletonWarlock",
-        "form_id": "[04000892]",
+        "editor_id": "ccVSVSSE003_EnchNecroHoodSpecial05",
+        "form_id": "04000910|ccvsvsse003-necroarts.esl",
         "index": null,
-        "type": "BOOK FULL",
-        "original": "Spell Tome: Conjure Skeleton Warlock",
-        "string": "Том заклинаний: Вызов скелета-чародея"
+        "type": "ARMO FULL",
+        "original": "Elite Necromancer Hood",
+        "string": "Элитный некромантский капюшон"
     },
     {
-        "editor_id": "ccVSVSSE003_BOOK_TombGuardian",
-        "form_id": "[04000890]",
+        "editor_id": "ccVSVSSE003_EnchNecroRobesMagickaRate03",
+        "form_id": "0400090B|ccvsvsse003-necroarts.esl",
         "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nSkeleton Champion",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nСкелет-чемпион"
+        "type": "ARMO FULL",
+        "original": "Necromancer Robes of Recharging",
+        "string": "Некромантское одеяние перезарядки"
     },
     {
-        "editor_id": "ccVSVSSE003_BOOK_BanishUndead",
-        "form_id": "[04000889]",
+        "editor_id": "ccVSVSSE003_NecroHood",
+        "form_id": "040008F6|ccvsvsse003-necroarts.esl",
         "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nBanish Undead",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nИзгнание нежити"
+        "type": "ARMO FULL",
+        "original": "Necromancer Hood",
+        "string": "Некромантский капюшон"
     },
     {
-        "editor_id": "ccVSVSSE003_BOOK_SkeletonWarlock",
-        "form_id": "[04000892]",
+        "editor_id": "ccVSVSSE003_EnchNecroRobesMagickaRate04",
+        "form_id": "0400090C|ccvsvsse003-necroarts.esl",
         "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nSkeleton Warlock",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nСкелет-чародей"
+        "type": "ARMO FULL",
+        "original": "Necromancer Robes of Replenishing",
+        "string": "Некромантское одеяние пополнения"
+    },
+    {
+        "editor_id": "ccVSVSSE003_UndyingGhostGloves",
+        "form_id": "04000882|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Ancient Nord Gauntlets",
+        "string": "Древние нордские перчатки"
+    },
+    {
+        "editor_id": "ccVSVSSE003_EnchNecroHoodMagicka05",
+        "form_id": "04000915|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Necromancer Hood of Extreme Magicka",
+        "string": "Некромантский капюшон великой магии"
     },
     {
         "editor_id": "ccVSVSSE003_BOOK_NecroRitual",
-        "form_id": "[0400088D]",
+        "form_id": "0400088D|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nNecromancer's Ritual",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nРитуал некроманта"
+    },
+    {
+        "editor_id": "ccVSVSSE003_BOOK_SkeletonChampion",
+        "form_id": "04000893|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "BOOK FULL",
-        "original": "Spell Tome: Necromancer's Ritual",
-        "string": "Том заклинаний: Ритуал некроманта"
+        "original": "Spell Tome: Conjure Skeleton Champion",
+        "string": "Том заклинаний: Вызов скелета-чемпиона"
+    },
+    {
+        "editor_id": "ccVSVSSE003_BOOK_BoneColossus",
+        "form_id": "04000891|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Conjure Bone Colossus",
+        "string": "Том заклинаний: Вызов костяного колосса"
     },
     {
         "editor_id": "ccVSVSSE003_BOOK_HauntingSpirit",
-        "form_id": "[0400088F]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Spell Tome: Conjure Haunting Spirit",
-        "string": "Том заклинаний: Вызов назойливого духа"
-    },
-    {
-        "editor_id": "ccVSVSSE003_BOOK_SkeletonMarksman",
-        "form_id": "[04000894]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Spell Tome: Conjure Skeleton Marksman",
-        "string": "Том заклинаний: Вызов скелета-лучника"
-    },
-    {
-        "editor_id": "ccVSVSSE003_BOOK_HauntingSpirit",
-        "form_id": "[0400088F]",
+        "form_id": "0400088F|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "BOOK DESC",
         "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nHaunting Spirit",
         "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nНазойливый дух"
     },
     {
-        "editor_id": "ccVSVSSE003_BOOK_UndyingGhost",
-        "form_id": "[0400088A]",
+        "editor_id": "ccVSVSSE003_BOOK_SkeletonMarksman",
+        "form_id": "04000894|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nUndying Ghost",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nБессмертный призрак"
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nSkeleton Marksman",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nСкелет-лучник"
     },
     {
-        "editor_id": "ccVSVSSE003_BOOK_AncientLich",
-        "form_id": "[0400088B]",
+        "editor_id": "ccVSVSSE003_BOOK_BanishUndead",
+        "form_id": "04000889|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "BOOK FULL",
-        "original": "Spell Tome: Conjure Ancient Deathpriest",
-        "string": "Том заклинаний: Вызов древнего жреца смерти"
-    },
-    {
-        "editor_id": "ccVSVSSE003_BOOK_AncientLich",
-        "form_id": "[0400088B]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nAncient Lich",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nДревний лич"
+        "original": "Spell Tome: Banish Undead",
+        "string": "Том заклинаний: Изгнание нежити"
     },
     {
         "editor_id": "ccVSVSSE003_BOOK_SkeletonMinion",
-        "form_id": "[0400088C]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Spell Tome: Conjure Skeleton Minion",
-        "string": "Том заклинаний: Вызов скелета-слуги"
-    },
-    {
-        "editor_id": "ccVSVSSE003_BOOK_SkeletonMinion",
-        "form_id": "[0400088C]",
+        "form_id": "0400088C|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "BOOK DESC",
         "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nSkeleton Warrior",
@@ -1633,87 +1561,159 @@
     },
     {
         "editor_id": "ccVSVSSE003_BOOK_NecroRitual",
-        "form_id": "[0400088D]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nNecromancer's Ritual",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nРитуал некроманта"
-    },
-    {
-        "editor_id": "ccVSVSSE003_BOOK_SoulSplit",
-        "form_id": "[04000896]",
+        "form_id": "0400088D|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "BOOK FULL",
-        "original": "Spell Tome: Soul Split",
-        "string": "Том заклинаний: Расщепление души"
-    },
-    {
-        "editor_id": "ccVSVSSE003_BOOK_SkeletonChampion",
-        "form_id": "[04000893]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Spell Tome: Conjure Skeleton Champion",
-        "string": "Том заклинаний: Вызов скелета-чемпиона"
+        "original": "Spell Tome: Necromancer's Ritual",
+        "string": "Том заклинаний: Ритуал некроманта"
     },
     {
         "editor_id": "ccVSVSSE003_BOOK_Gloomwraith",
-        "form_id": "[0400088E]",
+        "form_id": "0400088E|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "BOOK DESC",
         "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nGloomwraith",
         "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nМрачное привидение"
     },
     {
-        "editor_id": "ccVSVSSE003_BOOK_BoneColossus",
-        "form_id": "[04000891]",
+        "editor_id": "ccVSVSSE003_BOOK_UndyingGhost",
+        "form_id": "0400088A|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nBone Colossus",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nКостяной колосс"
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nUndying Ghost",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nБессмертный призрак"
+    },
+    {
+        "editor_id": "ccVSVSSE003_BOOK_HauntingSpirit",
+        "form_id": "0400088F|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Conjure Haunting Spirit",
+        "string": "Том заклинаний: Вызов назойливого духа"
     },
     {
         "editor_id": "ccVSVSSE003_BOOK_SoulSplit",
-        "form_id": "[04000896]",
+        "form_id": "04000896|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "BOOK DESC",
         "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nSoul Split",
         "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nРасщепление души"
     },
     {
-        "editor_id": "ccVSVSSE003_BOOK_SkeletonMarksman",
-        "form_id": "[04000894]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nSkeleton Marksman",
-        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nСкелет-лучник"
-    },
-    {
         "editor_id": "ccVSVSSE003_BOOK_TombGuardian",
-        "form_id": "[04000890]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Spell Tome: Conjure Tomb Guardian",
-        "string": "Том заклинаний: Вызов стражника гробницы"
-    },
-    {
-        "editor_id": "ccVSVSSE003_BOOK_BoneColossus",
-        "form_id": "[04000891]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "Spell Tome: Conjure Bone Colossus",
-        "string": "Том заклинаний: Вызов костяного колосса"
-    },
-    {
-        "editor_id": "ccVSVSSE003_BOOK_SkeletonChampion",
-        "form_id": "[04000893]",
+        "form_id": "04000890|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "BOOK DESC",
         "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nSkeleton Champion",
         "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nСкелет-чемпион"
     },
     {
+        "editor_id": "ccVSVSSE003_BOOK_SkeletonMarksman",
+        "form_id": "04000894|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Conjure Skeleton Marksman",
+        "string": "Том заклинаний: Вызов скелета-лучника"
+    },
+    {
+        "editor_id": "ccVSVSSE003_BOOK_UndyingGhost",
+        "form_id": "0400088A|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Conjure Undying Ghost",
+        "string": "Том заклинаний: Вызов бессмертного призрака"
+    },
+    {
+        "editor_id": "ccVSVSSE003_BOOK_SkeletonMinion",
+        "form_id": "0400088C|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Conjure Skeleton Minion",
+        "string": "Том заклинаний: Вызов скелета-слуги"
+    },
+    {
+        "editor_id": "ccVSVSSE003_BOOK_Gloomwraith",
+        "form_id": "0400088E|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Conjure Cursed Spectre",
+        "string": "Том заклинаний: Вызов проклятого призрака"
+    },
+    {
+        "editor_id": "ccVSVSSE003_BOOK_SoulSplit",
+        "form_id": "04000896|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Soul Split",
+        "string": "Том заклинаний: Расщепление души"
+    },
+    {
+        "editor_id": "ccVSVSSE003_BOOK_TombGuardian",
+        "form_id": "04000890|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Conjure Tomb Guardian",
+        "string": "Том заклинаний: Вызов стражника гробницы"
+    },
+    {
+        "editor_id": "ccVSVSSE003_BOOK_AncientLich",
+        "form_id": "0400088B|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nAncient Lich",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nДревний лич"
+    },
+    {
+        "editor_id": "ccVSVSSE003_BOOK_SkeletonWarlock",
+        "form_id": "04000892|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nSkeleton Warlock",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nСкелет-чародей"
+    },
+    {
+        "editor_id": "ccVSVSSE003_BOOK_AncientLich",
+        "form_id": "0400088B|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Conjure Ancient Deathpriest",
+        "string": "Том заклинаний: Вызов древнего жреца смерти"
+    },
+    {
+        "editor_id": "ccVSVSSE003_BOOK_SkeletonWarlock",
+        "form_id": "04000892|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "Spell Tome: Conjure Skeleton Warlock",
+        "string": "Том заклинаний: Вызов скелета-чародея"
+    },
+    {
+        "editor_id": "ccVSVSSE003_BOOK_BoneColossus",
+        "form_id": "04000891|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nBone Colossus",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nКостяной колосс"
+    },
+    {
+        "editor_id": "ccVSVSSE003_BOOK_SkeletonChampion",
+        "form_id": "04000893|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nSkeleton Champion",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nСкелет-чемпион"
+    },
+    {
+        "editor_id": "ccVSVSSE003_BOOK_BanishUndead",
+        "form_id": "04000889|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nBanish Undead",
+        "string": "<font face'$HandwrittenFont'><font size='40'><p align='center'>\r\nИзгнание нежити"
+    },
+    {
         "editor_id": "ccVSVSSE003_QAChest",
-        "form_id": "[040008F1]",
+        "form_id": "040008F1|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "CONT FULL",
         "original": "Necromantic Arts Chest",
@@ -1721,343 +1721,223 @@
     },
     {
         "editor_id": "ccVSVSSE003_WPN_HauntingSpiritDagger",
-        "form_id": "[0400089B]",
+        "form_id": "0400089B|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "WEAP FULL",
         "original": "Bound Dagger",
         "string": "Призванный кинжал"
     },
     {
-        "editor_id": "ccVSVSSE003_WPN_TombGuardianAxe",
-        "form_id": "[04000898]",
-        "index": null,
-        "type": "WEAP FULL",
-        "original": "Headsman's Axe",
-        "string": "Топор палача"
-    },
-    {
-        "editor_id": "ccVSVSSE003_WPN_SkeleBow",
-        "form_id": "[04000897]",
-        "index": null,
-        "type": "WEAP FULL",
-        "original": "Skeleton Marksman Bow",
-        "string": "Лук скелета-лучника"
-    },
-    {
-        "editor_id": "ccVSVSSE003_WPN_LichStaff",
-        "form_id": "[04000899]",
-        "index": null,
-        "type": "WEAP FULL",
-        "original": "Staff of Ancient Lich",
-        "string": "Посох древнего лича"
-    },
-    {
-        "editor_id": "ccVSVSSE003_WPN_SkeleWarAxe",
-        "form_id": "[040008F9]",
-        "index": null,
-        "type": "WEAP FULL",
-        "original": "Skeleton Minion War Axe",
-        "string": "Боевой топор скелета-слуги"
-    },
-    {
-        "editor_id": "ccVSVSSE003_WPN_SkeleGreatsword",
-        "form_id": "[04000916]",
-        "index": null,
-        "type": "WEAP FULL",
-        "original": "Skeleton Champion Greatsword",
-        "string": "Двуручный меч скелета-чемпиона"
-    },
-    {
         "editor_id": "ccVSVSSE003_WPN_UndyingGhostSword",
-        "form_id": "[0400089A]",
+        "form_id": "0400089A|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "WEAP FULL",
         "original": "Undying Ghost Sword",
         "string": "Меч бессмертного призрака"
     },
     {
+        "editor_id": "ccVSVSSE003_WPN_SkeleGreatsword",
+        "form_id": "04000916|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Skeleton Champion Greatsword",
+        "string": "Двуручный меч скелета-чемпиона"
+    },
+    {
+        "editor_id": "ccVSVSSE003_WPN_SkeleBow",
+        "form_id": "04000897|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Skeleton Marksman Bow",
+        "string": "Лук скелета-лучника"
+    },
+    {
+        "editor_id": "ccVSVSSE003_WPN_SkeleWarAxe",
+        "form_id": "040008F9|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Skeleton Minion War Axe",
+        "string": "Боевой топор скелета-слуги"
+    },
+    {
+        "editor_id": "ccVSVSSE003_WPN_TombGuardianAxe",
+        "form_id": "04000898|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Headsman's Axe",
+        "string": "Топор палача"
+    },
+    {
+        "editor_id": "ccVSVSSE003_WPN_LichStaff",
+        "form_id": "04000899|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "WEAP FULL",
+        "original": "Staff of Ancient Lich",
+        "string": "Посох древнего лича"
+    },
+    {
         "editor_id": "ccVSVSSE003_AMMO_SkeleArrow",
-        "form_id": "[0400089C]",
+        "form_id": "0400089C|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "AMMO FULL",
         "original": "Skeleton Marksman Arrow",
         "string": "Стрела скелета-лучника"
     },
     {
-        "editor_id": "ccVSVSSE003_Skeleton_minionDS",
-        "form_id": "[04000980]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Skeleton Minion",
-        "string": "Skeleton Minion"
-    },
-    {
-        "editor_id": "ccVSVSSE003_Skeleton_minion",
-        "form_id": "[040008A2]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Skeleton Minion",
-        "string": "Скелет-слуга"
-    },
-    {
-        "editor_id": "ccVSVSSE003_AncientLich",
-        "form_id": "[040008A3]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Ancient Deathpriest",
-        "string": "Древний жрец смерти"
-    },
-    {
-        "editor_id": "ccVSVSSE003_EncWarlock02TemplateBossNecro",
-        "form_id": "[04000922]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Apprentice Necromancer",
-        "string": "Некромант-ученик"
-    },
-    {
-        "editor_id": "ccVSVSSE003_GloomwraithDS",
-        "form_id": "[0400097B]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Cursed Spectre",
-        "string": "Cursed Spectre"
-    },
-    {
-        "editor_id": "ccVSVSSE003_Skeleton_champion",
-        "form_id": "[040008A7]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Skeleton Champion",
-        "string": "Скелет-чемпион"
-    },
-    {
-        "editor_id": "ccVSVSSE003_Skeleton_championDS",
-        "form_id": "[04000977]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Skeleton Champion",
-        "string": "Skeleton Champion"
-    },
-    {
-        "editor_id": "ccVSVSSE003_AncientLichDS",
-        "form_id": "[0400097E]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Ancient Deathpriest",
-        "string": "Ancient Deathpriest"
-    },
-    {
-        "editor_id": "ccVSVSSE003_TorturedShade",
-        "form_id": "[040008A8]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Tortured Shade",
-        "string": "Истерзанная тень"
-    },
-    {
-        "editor_id": "ccVSVSSE003_HumanShadeM",
-        "form_id": "[0400080A]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Ghost",
-        "string": "Ghost"
-    },
-    {
-        "editor_id": "ccVSVSSE003_Skeleton_archerDS",
-        "form_id": "[04000976]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Skeleton Marksman",
-        "string": "Skeleton Marksman"
-    },
-    {
-        "editor_id": "ccVSVSSE003_EncWarlock03TemplateNecro",
-        "form_id": "[0400091C]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Necromancer Adept",
-        "string": "Некромант-адепт"
-    },
-    {
-        "editor_id": "ccVSVSSE003_HauntingSpiritDS",
-        "form_id": "[0400097A]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Haunting Spirit",
-        "string": "Haunting Spirit"
-    },
-    {
-        "editor_id": "ccVSVSSE003_Skeleton_warlock",
-        "form_id": "[040008A5]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Skeleton Warlock",
-        "string": "Скелет-чародей"
-    },
-    {
-        "editor_id": "ccVSVSSE003_TombGuardianDS",
-        "form_id": "[04000979]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Tomb Guardian",
-        "string": "Tomb Guardian"
-    },
-    {
-        "editor_id": "ccVSVSSE003_EncWarlock01TemplateNecro",
-        "form_id": "[04000917]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Novice Necromancer",
-        "string": "Некромант-новичок"
-    },
-    {
-        "editor_id": "ccVSVSSE003_EncWarlock05TemplateNecro",
-        "form_id": "[0400091A]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Ascendant Necromancer",
-        "string": "Старший некромант"
-    },
-    {
-        "editor_id": "ccVSVSSE003_HumanShadeF",
-        "form_id": "[04000982]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Ghost",
-        "string": "Ghost"
-    },
-    {
-        "editor_id": "ccVSVSSE003_Skeleton_archer",
-        "form_id": "[040008A1]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Skeleton Marksman",
-        "string": "Скелет-лучник"
-    },
-    {
-        "editor_id": "ccVSVSSE003_HauntingSpirit",
-        "form_id": "[040008A0]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Haunting Spirit",
-        "string": "Назойливый дух"
-    },
-    {
-        "editor_id": "ccVSVSSE003_UndyingGhostDS",
-        "form_id": "[0400097D]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Undying Ghost",
-        "string": "Undying Ghost"
-    },
-    {
-        "editor_id": "ccVSVSSE003_Gloomwraith",
-        "form_id": "[0400089E]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Cursed Spectre",
-        "string": "Проклятый призрак"
-    },
-    {
-        "editor_id": "ccVSVSSE003_WailingWraith",
-        "form_id": "[040008A9]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Sundered Shade",
-        "string": "Разделенная тень"
-    },
-    {
-        "editor_id": "ccVSVSSE003_EncWarlock02TemplateNecro",
-        "form_id": "[0400091D]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Apprentice Necromancer",
-        "string": "Некромант-ученик"
-    },
-    {
-        "editor_id": "ccVSVSSE003_EncWarlock06TemplateBossNecro",
-        "form_id": "[0400091E]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Master Necromancer",
-        "string": "Некромант-мастер"
-    },
-    {
-        "editor_id": "ccVSVSSE003_EncWarlock04TemplateNecro",
-        "form_id": "[0400091B]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Necromage",
-        "string": "Некромаг"
-    },
-    {
         "editor_id": "ccVSVSSE003_TombGuardian",
-        "form_id": "[040008A4]",
+        "form_id": "040008A4|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Tomb Guardian",
         "string": "Стражник гробницы"
     },
     {
-        "editor_id": "ccVSVSSE003_BoneColossusDS",
-        "form_id": "[0400097F]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Bone Colossus",
-        "string": "Bone Colossus"
-    },
-    {
         "editor_id": "ccVSVSSE003_EncWarlock04TemplateBossNecro",
-        "form_id": "[04000920]",
+        "form_id": "04000920|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Necromage",
         "string": "Некромаг"
     },
     {
-        "editor_id": "ccVSVSSE003_EncWarlock05TemplateBossNecro",
-        "form_id": "[0400091F]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Ascendant Necromancer",
-        "string": "Старший некромант"
-    },
-    {
-        "editor_id": "ccVSVSSE003_EncWarlock03TemplateBossNecro",
-        "form_id": "[04000921]",
-        "index": null,
-        "type": "NPC_ FULL",
-        "original": "Necromancer Adept",
-        "string": "Некромант-адепт"
-    },
-    {
-        "editor_id": "ccVSVSSE003_BoneColossus",
-        "form_id": "[0400089F]",
+        "editor_id": "ccVSVSSE003_BoneColossusDS",
+        "form_id": "0400097F|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Bone Colossus",
-        "string": "Костяной колосс"
+        "string": "Bone Colossus"
     },
     {
         "editor_id": "ccVSVSSE003_WailingWraithDS",
-        "form_id": "[0400097C]",
+        "form_id": "0400097C|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Sundered Shade",
         "string": "Sundered Shade"
     },
     {
-        "editor_id": "ccVSVSSE003_Skeleton_warlockDS",
-        "form_id": "[04000978]",
+        "editor_id": "ccVSVSSE003_EncWarlock02TemplateNecro",
+        "form_id": "0400091D|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Apprentice Necromancer",
+        "string": "Некромант-ученик"
+    },
+    {
+        "editor_id": "ccVSVSSE003_Skeleton_archerDS",
+        "form_id": "04000976|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Skeleton Marksman",
+        "string": "Skeleton Marksman"
+    },
+    {
+        "editor_id": "ccVSVSSE003_EncWarlock05TemplateNecro",
+        "form_id": "0400091A|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Ascendant Necromancer",
+        "string": "Старший некромант"
+    },
+    {
+        "editor_id": "ccVSVSSE003_HauntingSpiritDS",
+        "form_id": "0400097A|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Haunting Spirit",
+        "string": "Haunting Spirit"
+    },
+    {
+        "editor_id": "ccVSVSSE003_Gloomwraith",
+        "form_id": "0400089E|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Cursed Spectre",
+        "string": "Проклятый призрак"
+    },
+    {
+        "editor_id": "ccVSVSSE003_GloomwraithDS",
+        "form_id": "0400097B|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Cursed Spectre",
+        "string": "Cursed Spectre"
+    },
+    {
+        "editor_id": "ccVSVSSE003_Skeleton_warlock",
+        "form_id": "040008A5|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Skeleton Warlock",
-        "string": "Skeleton Warlock"
+        "string": "Скелет-чародей"
+    },
+    {
+        "editor_id": "ccVSVSSE003_EncWarlock02TemplateBossNecro",
+        "form_id": "04000922|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Apprentice Necromancer",
+        "string": "Некромант-ученик"
+    },
+    {
+        "editor_id": "ccVSVSSE003_TorturedShade",
+        "form_id": "040008A8|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Tortured Shade",
+        "string": "Истерзанная тень"
+    },
+    {
+        "editor_id": "ccVSVSSE003_AncientLichDS",
+        "form_id": "0400097E|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Ancient Deathpriest",
+        "string": "Ancient Deathpriest"
+    },
+    {
+        "editor_id": "ccVSVSSE003_HumanShadeF",
+        "form_id": "04000982|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Ghost",
+        "string": "Ghost"
+    },
+    {
+        "editor_id": "ccVSVSSE003_EncWarlock01TemplateNecro",
+        "form_id": "04000917|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Novice Necromancer",
+        "string": "Некромант-новичок"
+    },
+    {
+        "editor_id": "ccVSVSSE003_EncWarlock05TemplateBossNecro",
+        "form_id": "0400091F|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Ascendant Necromancer",
+        "string": "Старший некромант"
+    },
+    {
+        "editor_id": "ccVSVSSE003_HauntingSpirit",
+        "form_id": "040008A0|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Haunting Spirit",
+        "string": "Назойливый дух"
+    },
+    {
+        "editor_id": "ccVSVSSE003_TombGuardianDS",
+        "form_id": "04000979|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Tomb Guardian",
+        "string": "Tomb Guardian"
     },
     {
         "editor_id": "ccVSVSSE003_UndyingGhost",
-        "form_id": "[0400089D]",
+        "form_id": "0400089D|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Undying Ghost",
@@ -2065,95 +1945,175 @@
     },
     {
         "editor_id": "ccVSVSSE003_EncWarlock07TemplateNecro",
-        "form_id": "[04000918]",
+        "form_id": "04000918|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Arch Necromancer",
         "string": "Высший некромант"
     },
     {
-        "editor_id": "ccVSVSSE003_EncWarlock06TemplateNecro",
-        "form_id": "[04000919]",
+        "editor_id": "ccVSVSSE003_EncWarlock06TemplateBossNecro",
+        "form_id": "0400091E|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Master Necromancer",
         "string": "Некромант-мастер"
     },
     {
+        "editor_id": "ccVSVSSE003_HumanShadeM",
+        "form_id": "0400080A|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Ghost",
+        "string": "Ghost"
+    },
+    {
+        "editor_id": "ccVSVSSE003_EncWarlock03TemplateBossNecro",
+        "form_id": "04000921|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Necromancer Adept",
+        "string": "Некромант-адепт"
+    },
+    {
+        "editor_id": "ccVSVSSE003_WailingWraith",
+        "form_id": "040008A9|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Sundered Shade",
+        "string": "Разделенная тень"
+    },
+    {
+        "editor_id": "ccVSVSSE003_AncientLich",
+        "form_id": "040008A3|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Ancient Deathpriest",
+        "string": "Древний жрец смерти"
+    },
+    {
+        "editor_id": "ccVSVSSE003_UndyingGhostDS",
+        "form_id": "0400097D|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Undying Ghost",
+        "string": "Undying Ghost"
+    },
+    {
+        "editor_id": "ccVSVSSE003_Skeleton_championDS",
+        "form_id": "04000977|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Skeleton Champion",
+        "string": "Skeleton Champion"
+    },
+    {
+        "editor_id": "ccVSVSSE003_Skeleton_minionDS",
+        "form_id": "04000980|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Skeleton Minion",
+        "string": "Skeleton Minion"
+    },
+    {
+        "editor_id": "ccVSVSSE003_Skeleton_champion",
+        "form_id": "040008A7|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Skeleton Champion",
+        "string": "Скелет-чемпион"
+    },
+    {
+        "editor_id": "ccVSVSSE003_EncWarlock04TemplateNecro",
+        "form_id": "0400091B|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Necromage",
+        "string": "Некромаг"
+    },
+    {
+        "editor_id": "ccVSVSSE003_Skeleton_archer",
+        "form_id": "040008A1|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Skeleton Marksman",
+        "string": "Скелет-лучник"
+    },
+    {
+        "editor_id": "ccVSVSSE003_Skeleton_warlockDS",
+        "form_id": "04000978|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Skeleton Warlock",
+        "string": "Skeleton Warlock"
+    },
+    {
+        "editor_id": "ccVSVSSE003_EncWarlock03TemplateNecro",
+        "form_id": "0400091C|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Necromancer Adept",
+        "string": "Некромант-адепт"
+    },
+    {
+        "editor_id": "ccVSVSSE003_Skeleton_minion",
+        "form_id": "040008A2|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Skeleton Minion",
+        "string": "Скелет-слуга"
+    },
+    {
+        "editor_id": "ccVSVSSE003_EncWarlock06TemplateNecro",
+        "form_id": "04000919|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Master Necromancer",
+        "string": "Некромант-мастер"
+    },
+    {
+        "editor_id": "ccVSVSSE003_BoneColossus",
+        "form_id": "0400089F|ccvsvsse003-necroarts.esl",
+        "index": null,
+        "type": "NPC_ FULL",
+        "original": "Bone Colossus",
+        "string": "Костяной колосс"
+    },
+    {
         "editor_id": "ccVSVSSE003_PROJ_SkeleArrow",
-        "form_id": "[040008AA]",
+        "form_id": "040008AA|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "PROJ FULL",
         "original": "Skeleton Marksman Arrow",
         "string": "Стрела скелета-лучника"
     },
     {
-        "editor_id": "WolfSkullCave02",
-        "form_id": "[000AC5D2]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Wolfskull Ruins",
-        "string": "Руины Волчий Череп"
-    },
-    {
-        "editor_id": "FellglowKeep02",
-        "form_id": "[0003FF10]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Fellglow Keep",
-        "string": "Крепость Феллглоу"
-    },
-    {
-        "editor_id": "IlinaltasDeep01",
-        "form_id": "[00015258]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Ilinalta's Deep",
-        "string": "Глубины Илиналты"
-    },
-    {
-        "editor_id": "Yngvild02",
-        "form_id": "[000227B9]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Yngvild Throne Room",
-        "string": "Ингвильд - Тронный зал"
-    },
-    {
         "editor_id": "Tamriel",
-        "form_id": "[0000003C]",
+        "form_id": "0000003C|Skyrim.esm",
         "index": null,
         "type": "WRLD FULL",
         "original": "Skyrim",
         "string": "Скайрим"
     },
     {
-        "editor_id": "ccVSVSSE003_CreatureDialogueBoneColossus",
-        "form_id": "[040008B6]",
-        "index": null,
-        "type": "QUST FULL",
-        "original": "CreatureDialogueBoneColossus",
-        "string": "CreatureDialogueBoneColossus"
-    },
-    {
         "editor_id": "ccVSVSSE003_MainQuest",
-        "form_id": "[040008B7]",
+        "form_id": "040008B7|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "QUST FULL",
         "original": "Necromantic Arts",
         "string": "Некромантское искусство"
     },
     {
-        "editor_id": "TwinSouls",
-        "form_id": "[000D5F1C]",
+        "editor_id": "ccVSVSSE003_CreatureDialogueBoneColossus",
+        "form_id": "040008B6|ccvsvsse003-necroarts.esl",
         "index": null,
-        "type": "PERK FULL",
-        "original": "Twin Souls",
-        "string": "Парные души"
+        "type": "QUST FULL",
+        "original": "CreatureDialogueBoneColossus",
+        "string": "CreatureDialogueBoneColossus"
     },
     {
         "editor_id": "ccVSVSSE003_PERK_IncreaseSummonCount",
-        "form_id": "[040008D2]",
+        "form_id": "040008D2|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "PERK FULL",
         "original": "Summon Count Perk",
@@ -2161,7 +2121,7 @@
     },
     {
         "editor_id": "TwinSouls",
-        "form_id": "[000D5F1C]",
+        "form_id": "000D5F1C|Skyrim.esm",
         "index": null,
         "type": "PERK DESC",
         "original": "You can have two atronachs or reanimated zombies.",
@@ -2169,10 +2129,18 @@
     },
     {
         "editor_id": "ccVSVSSE003_PERK_BoneColossus",
-        "form_id": "[040008D1]",
+        "form_id": "040008D1|ccvsvsse003-necroarts.esl",
         "index": null,
         "type": "PERK FULL",
         "original": "Bone Colossus Perk",
         "string": "Особенность: Костяной колосс"
+    },
+    {
+        "editor_id": "TwinSouls",
+        "form_id": "000D5F1C|Skyrim.esm",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Twin Souls",
+        "string": "Парные души"
     }
 ]

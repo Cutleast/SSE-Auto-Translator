@@ -1,7 +1,7 @@
 [
     {
         "editor_id": "ccBGSSSE056_ArmorBladesGauntlets",
-        "form_id": "[05000802]",
+        "form_id": "05000802|ccbgssse056-ba_silver.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Silver Gauntlets",
@@ -9,31 +9,31 @@
     },
     {
         "editor_id": "ccBGSSSE056_ArmorBladesHelmet",
-        "form_id": "[05000803]",
+        "form_id": "05000803|ccbgssse056-ba_silver.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Silver Helmet",
         "string": "Yelmo de plata"
     },
     {
-        "editor_id": "ccBGSSSE056_ArmorBladesBoots",
-        "form_id": "[05000800]",
-        "index": null,
-        "type": "ARMO FULL",
-        "original": "Silver Boots",
-        "string": "Botas de plata"
-    },
-    {
         "editor_id": "ccBGSSSE056_ArmorBladesCuirass",
-        "form_id": "[05000801]",
+        "form_id": "05000801|ccbgssse056-ba_silver.esl",
         "index": null,
         "type": "ARMO FULL",
         "original": "Silver Armor",
         "string": "Armadura de plata"
     },
     {
+        "editor_id": "ccBGSSSE056_ArmorBladesBoots",
+        "form_id": "05000800|ccbgssse056-ba_silver.esl",
+        "index": null,
+        "type": "ARMO FULL",
+        "original": "Silver Boots",
+        "string": "Botas de plata"
+    },
+    {
         "editor_id": "ccBGSSSE056_PrisonNote",
-        "form_id": "[05000815]",
+        "form_id": "05000815|ccbgssse056-ba_silver.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "M'Sharra's Confession",
@@ -41,7 +41,23 @@
     },
     {
         "editor_id": "ccBGSSSE056_BookV2",
-        "form_id": "[05000824]",
+        "form_id": "05000824|ccbgssse056-ba_silver.esl",
+        "index": null,
+        "type": "BOOK FULL",
+        "original": "The Crimson Dirks, v2",
+        "string": "Las Dagas carmesíes, v2"
+    },
+    {
+        "editor_id": "ccBGSSSE056_PrisonNote",
+        "form_id": "05000815|ccbgssse056-ba_silver.esl",
+        "index": null,
+        "type": "BOOK DESC",
+        "original": "<font face='$HandwrittenFont'><font size='18'>\r\nM'Sharra enjoyed her fight with the guard. Plus, her new home is better than the last. It is a very tiny cage, but she does not beg for food. It is given.\r\n\r\nStill, M'Sharra longs to see the night sky. When she was a kitten, the elders warned her that if she stared too long at the moons, they would grow shy, and M'Sharra would never see them again. This made her sad, and so M'Sharra vowed to stop looking at the sky, and kept her head down toward the dirt where the beggars belonged.\r\n\r\nOne day, she tried to steal the silver out of the pockets of a Nord named Tyra. When she heard Khajiit's story, she took pity on the kitten, and told her that the moons were not the timid creatures she had believed. She said that as long as Khajiit held her head up high, they would shine brighter than any star.\r\n\r\nFrom that day on she spent her life in service to the Crimson Dirks. And when she was ready, her new litter-mates forged her an armor made of silver, and in its heart, the piece Tyra had in her pocket so many moons ago.\r\n\r\nM'Sharra hid the armor in a hut, northwest of Rorikstead. At times, M'Sharra has longed to retrieve it, and wear it proudly. \r\n\r\nBut she must be careful not to let sentiment cloud her judgment. M'Sharra suspects she is being followed. So she will leave the armor for another. Besides, it is not the silver in the armor or the moonlight in the sky that M'Sharra treasures, but the friends she has lost. Perhaps in death, she will see them again.</font>",
+        "string": "<font face='$HandwrittenFont'><font size='18'>\r\nA M'Sharra le ha gustado pelear con el guardia. Además, su nuevo hogar es mejor que el anterior. Es una jaula diminuta, pero no tiene que mendigar comida. Ahora se la dan.\r\n\r\nAun así, M'Sharra echa de menos contemplar el cielo de noche. Cuando era una cachorrita, los mayores le advirtieron que si pasaba demasiado tiempo contemplando las lunas, a estas les daría vergüenza salir y nunca más volvería a verlas. Esto la entristeció, así que juró que dejaría de alzar la cabeza hacia el cielo y solo miraría al suelo, que es el lugar que corresponde a los mendigos.\r\n\r\nUn día intentó robar plata de los bolsillos de una nórdica llamada Tyra. Al oír la historia de la khajiita, esta se compadeció de la gatita y le dijo que las lunas no eran tan tímidas como ella creía. Le dijo que siempre que la khajiita mirase con la cabeza bien alta, las vería brillar con más fuerza que cualquier estrella.\r\n\r\nA partir de aquel día, la khajiita pasó su vida al servicio de las Dagas carmesíes. Cuando estuvo lista, sus nuevos compañeros de camada le forjaron una armadura hecha de plata, y en el centro colocaron la pieza que Tyra llevaba en su bolsillo hacía tantas lunas.\r\n\r\nM'Sharra ocultó la armadura en una choza al noroeste de Paraje de Rorik. A veces ha querido ir a por ella para lucirla con orgullo.\r\n\r\nPero debe tener cuidado y no dejarse llevar por los sentimientos. M'Sharra sospecha que alguien la sigue. Por eso va a dejar la armadura para otro. Además, lo importante para ella no es la plata de la armadura, ni la luz de las lunas en el cielo, sino los amigos a los que ha perdido. Quizá al morir pueda reunirse con ellos.</font>"
+    },
+    {
+        "editor_id": "ccBGSSSE056_BookV2",
+        "form_id": "05000824|ccbgssse056-ba_silver.esl",
         "index": null,
         "type": "BOOK DESC",
         "original": "[pagebreak]\r\n<p align=\"center\">\r\n\r\n\r\nThe Crimson Dirks\r\nBook Two\r\n\r\n\r\nby \r\nGathers-the-Coin\r\n</p>\r\n\r\n\r\n\r\n[pagebreak]\r\n<p align=\"left\">\r\n<img src='img://Textures/Interface/Books/Illuminated_Letters/I_letter.png'>n the year following its inception, the Crimson Dirks had more than tripled in size, and now numbered fifteen. \r\n\r\nTyra Blood-Fire had found her blacksmith in the Imperial City, an Orc named Yakhtu. She had recruited cunning battlemages in the Breton twins, Erwan and Edward. In Elsweyr she met M'Sharra, a street thief who had grown into a capable blade. There were the Wood Elf archers, Fathrys and Ehlhiel - one a hopeless romantic, the other cynical beyond his years. There was the Argonian Pale-Eyes, a loyal and true soul, and the Redguard Zaharia, a born leader of men. And lastly, she found her muscle in the Orc warrior Urgnok, and in the Nords Skjol and Bjormund, their bodies as unbreakable as the ice of their ancestors. \r\n\r\nAltogether it had the makings of a full-fledged organization, rivaling that of any major guild. They had members pulling off jobs from Bruma to Dune, raiding warehouses and pillaging farms. With every crate added to their coffers, Tyra hoped their influence could spider across the breadth of Tamriel, earning both fear and respect amongst those who plied their trade in the shadows.\r\n\r\nAs bandits, however, they would rely first and foremost on the sacking of caravans. They would stalk the highways and thoroughfares for carriages full of goods, and quickly relieve them of their belongings. For this task the Khajiit, M'Sharra, found herself best suited. Her eyes were keen at identifying a heavy wagon, from the spin of its wheels to the tracks carving through the dirt. She could spot a weary guard by the slump of his shoulders or the pace of his gait. Her eyes saw clearly even in the dead of night, while others were slaves to the light of their torches.\r\n\r\nAnd what she lacked in strength, the other bandits were willing to provide. \r\n\r\nOn this night, however, their victims put up little fight, their numbers comprised of monks and priests who were all too ready to unite with their makers. The wagon they plundered was destined for a temple, and its crates full of treasures that offered more tribute than gold.\r\n\r\n\"Do you think Tyra would like this?\" asked M'Sharra, popping her head out from behind the wagon, an Amulet of Talos dangling from her ear.  \r\n\r\n\"A bandit has no need for gods or prayer,\" grumbled Urgnok, wiping the blood from his battleaxe, \"it's a terrible gift.\"\r\n\r\n\"Nonsense,\" countered Bjormund, unloading a crate, \"all Nords love Talos, almost as much as they love mead!\"\r\n\r\n\"Of course you would say that, frost licker,\" snarled Urgnok, \"but by Malacath, Tyra is not like the rest of you idiots. She has taste.\"\r\n\r\nIf Tyra were like any other Nord, Urgnok would have never pledged her his axe. In his mind, the Nords were pale-faced, poetry loving giants who ate with their fingers and drank from a horn. Tyra, however, did not think or feel or smell like the other Nords did, and more importantly, did not fight like them. She preferred the acrid bite of a sujamma bottle to a snowback's honeyed drink, and despised poetry in all its forms. He surmised she might've been from Morrowind, but the Orc was not the type to pry into another's business.\r\n\r\n\"Oh?\" said M'Sharra with a mischievous grin, the amulet swaying as her ears perked up, \"and what are you planning to get her, Urgnok?\"\r\n\r\n\"What? Why would I get her anything?\" the Orc replied coldly, \"you'll all be dead in a year anyway.\"\r\n\r\nM'Sharra blanched at the words, unsure if the Orc was making a joke or speaking prophecy. While hardly a mage, Urgnok was known to dabble in dark magic, wearing tribal scars and marks on his body, and totems of bone around his neck. Unlike with the blacksmith Yakhtu, his anger seemed to stem not from the hardened nature of his blood, but something deeper and personal, and it colored every conversation they had. The others stewed in silence at his remarks until the young Bosmer, Fathrys, broke the ice.\r\n\r\n\"Speaking of which, did you want anything for the holidays, Zaharia?\" he mewled, a rose of blush affecting his soft brown skin. The Redguard, in return, paid him little heed as she examined the wagon's horses.\r\n\r\n\"If you want to get me a Saturalia gift,\" said Zaharia, pointing at the arrows lodged in the wagon's side, \"work on your aim. I'll feel better about having you at my back when you can kill more than planks of wood.\"\r\n\r\n\"That is all well and good,\" interrupted M'Sharra, \"but there is a far more important matter than life and death, for this Khajiit still does not have a suitable present.\"\r\n\r\n\"If it's from the heart,\" Fathrys said, eyes fixated on the Redguard, \"the amulet will be good enough.\"\r\n\r\nTwo weeks later on a cold Saturalia night, Tyra Blood-Fire awoke to the sound of a crackling fire. A note was placed on her private safe, which she opened to find an amulet wrapped in cloth. The Khajiit had snuck into her room earlier and left the gift and the fire behind, as proof of both her generosity and skill. \r\n\r\nTyra was not religious by nature, but as she stood in that warm, reddish glow, something about the Amulet of Talos resonated with her. Perhaps it was the letter she received from Peladius that morning, about an encounter with the Thalmor in Dune. In that instance, a thought crept into her mind and soon blossomed into an idea. The following day she beckoned the blacksmith to her chambers, the idea having matured into a plan.\r\n\r\n\"I want you to forge me more of these amulets,\" Tyra said, placing the axe-shaped necklace on the table before her. \r\n\r\nThe blacksmith picked up the artifact and studied its make, thumbing across the intricate patterns grooved into the piece. Unlike other amulets, it was simple yet ornate, its blades casting a neutral tone that neither reflected nor absorbed the surrounding candlelight.\r\n \r\n\"This is made with dragonbone and scales,\" Yakhtu replied, \"hard to come by these days, but a replica should be simple enough. I guess my only question is, why? Seems odd for bandits to turn to the Divines for help.\"\r\n\r\n\"Last week, there was a trade caravan traveling on the Silver Road, torched by Thalmor Justiciars,\" Tyra said, \"Apparently they killed the merchant on suspicion of Talos worship. And it's not just here. I've gotten word from Peladius that the Thalmor are making an effort to eliminate anyone and everyone in possession of these amulets, whether it be men in the streets or wagons on the road.\"\r\n\r\n\"Wagons,\" replied Yakhtu, \"like the ones we sack.\"\r\n\r\n\"Exactly. The amulets aren't armor or jewelry or tribute,\" said Tyra, \"they're a motive. We place one on every caravan we sack, and torch the wagons when we're done looting them. The guards blame the Thalmor, and we keep the spoils.\"\r\n\r\nYakhtu nodded and took her leave, mind set on forging the amulets. Tyra knew well enough that the smith didn't need the artifact with her, having already committed it to memory. The blacksmith's genius was different from the others - quiet, removed, and matched only by her insatiable work ethic. The amulets would be done by daybreak, and there was no need for this one to be included.\r\n\r\nTyra returned the amulet to the safe, when she noticed another item nestled amongst the piles of gold and gems. It was the tooth of an Orc chief, one typically earned by besting its owner in single combat. \r\n\r\nTyra herself knew of one such Orc, a son who had been forced to kill his father against his will. Heartbroken, the son wore this tooth as a keepsake around his neck, fearing the day he would have to slay his future children. Until one day the son met a Nord bandit, who became Blood-Kin of the tribe and challenged him to a duel. \r\n\r\nThe bandit bested the Orc in single combat, and recognizing the pain that haunted him, freed him from his duties as chief. She asked not for his tooth, but his blade when the time came. Yet it wasn't until after the Nord formed the Crimson Dirks that she returned to that Orc, and asked him to make good on his oath.\r\n\r\nTyra smiled as she recalled the memory. She didn't know Urgnok had pulled the tooth, but it didn't surprise her in the least.\r\n",
@@ -49,39 +65,23 @@
     },
     {
         "editor_id": "ccBGSSSE056_CatNote",
-        "form_id": "[05000816]",
+        "form_id": "05000816|ccbgssse056-ba_silver.esl",
         "index": null,
         "type": "BOOK FULL",
         "original": "M'Sharra's Diary",
         "string": "Diario de M'Sharra"
     },
     {
-        "editor_id": "ccBGSSSE056_PrisonNote",
-        "form_id": "[05000815]",
-        "index": null,
-        "type": "BOOK DESC",
-        "original": "<font face='$HandwrittenFont'><font size='18'>\r\nM'Sharra enjoyed her fight with the guard. Plus, her new home is better than the last. It is a very tiny cage, but she does not beg for food. It is given.\r\n\r\nStill, M'Sharra longs to see the night sky. When she was a kitten, the elders warned her that if she stared too long at the moons, they would grow shy, and M'Sharra would never see them again. This made her sad, and so M'Sharra vowed to stop looking at the sky, and kept her head down toward the dirt where the beggars belonged.\r\n\r\nOne day, she tried to steal the silver out of the pockets of a Nord named Tyra. When she heard Khajiit's story, she took pity on the kitten, and told her that the moons were not the timid creatures she had believed. She said that as long as Khajiit held her head up high, they would shine brighter than any star.\r\n\r\nFrom that day on she spent her life in service to the Crimson Dirks. And when she was ready, her new litter-mates forged her an armor made of silver, and in its heart, the piece Tyra had in her pocket so many moons ago.\r\n\r\nM'Sharra hid the armor in a hut, northwest of Rorikstead. At times, M'Sharra has longed to retrieve it, and wear it proudly. \r\n\r\nBut she must be careful not to let sentiment cloud her judgment. M'Sharra suspects she is being followed. So she will leave the armor for another. Besides, it is not the silver in the armor or the moonlight in the sky that M'Sharra treasures, but the friends she has lost. Perhaps in death, she will see them again.</font>",
-        "string": "<font face='$HandwrittenFont'><font size='18'>\r\nA M'Sharra le ha gustado pelear con el guardia. Además, su nuevo hogar es mejor que el anterior. Es una jaula diminuta, pero no tiene que mendigar comida. Ahora se la dan.\r\n\r\nAun así, M'Sharra echa de menos contemplar el cielo de noche. Cuando era una cachorrita, los mayores le advirtieron que si pasaba demasiado tiempo contemplando las lunas, a estas les daría vergüenza salir y nunca más volvería a verlas. Esto la entristeció, así que juró que dejaría de alzar la cabeza hacia el cielo y solo miraría al suelo, que es el lugar que corresponde a los mendigos.\r\n\r\nUn día intentó robar plata de los bolsillos de una nórdica llamada Tyra. Al oír la historia de la khajiita, esta se compadeció de la gatita y le dijo que las lunas no eran tan tímidas como ella creía. Le dijo que siempre que la khajiita mirase con la cabeza bien alta, las vería brillar con más fuerza que cualquier estrella.\r\n\r\nA partir de aquel día, la khajiita pasó su vida al servicio de las Dagas carmesíes. Cuando estuvo lista, sus nuevos compañeros de camada le forjaron una armadura hecha de plata, y en el centro colocaron la pieza que Tyra llevaba en su bolsillo hacía tantas lunas.\r\n\r\nM'Sharra ocultó la armadura en una choza al noroeste de Paraje de Rorik. A veces ha querido ir a por ella para lucirla con orgullo.\r\n\r\nPero debe tener cuidado y no dejarse llevar por los sentimientos. M'Sharra sospecha que alguien la sigue. Por eso va a dejar la armadura para otro. Además, lo importante para ella no es la plata de la armadura, ni la luz de las lunas en el cielo, sino los amigos a los que ha perdido. Quizá al morir pueda reunirse con ellos.</font>"
-    },
-    {
         "editor_id": "ccBGSSSE056_CatNote",
-        "form_id": "[05000816]",
+        "form_id": "05000816|ccbgssse056-ba_silver.esl",
         "index": null,
         "type": "BOOK DESC",
         "original": "<font face='$HandwrittenFont'><font size='18'>\r\nM'Sharra has a secret. \r\n\r\nNot a bad secret, like the Battle-Born's secret affair. Not a boring secret, like the shopkeeper who hates his sister. M'Sharra's secret is too good to be believed.\r\n\r\nM'Sharra did not always spend her days like this, a cat who pretends to be a dog. No, M'Sharra used to be a bandit warrior, a member of the Crimson Dirks - famous rogues wanted by the East Empire Company, the Clan Mothers of Elsweyr, and lawbringers from here to the Summerset Isles. If the guards only knew, they would come kill her. That is why M'Sharra can never tell.\r\n\r\nBut her time is short. She longs for company. The other day she took to begging outside the city, and saw her litter-mate, Zaharia, walk through the gates. M'Sharra called her by name, but the Redguard ignored her. M'Sharra is sure she heard her, and it made her sad to know this.\r\n\r\nM'Sharra does not want to die a rug. Perhaps she will do something mischievous, and get the Whiterun guards to attack. Then she will be a warrior once more.</font>",
         "string": "<font face='$HandwrittenFont'><font size='18'>\r\nM'Sharra tiene un secreto. \r\n\r\nNo es un secreto malo, como el del romance secreto del Batallador. Ni un secreto aburrido, como el del tendero que odia a su hermana. El secreto de M'Sharra es demasiado bueno como para creerlo.\r\n\r\nM'Sharra no siempre ha vivido así, como un gato que se hace pasar por perro. No, M'Sharra antes era una guerrera bandida, miembro de las Dagas carmesíes: famosos bandidos reclamados por la Compañía del Imperio Oriental, las matriarcas de Elsweyr y las fuerzas de la ley de aquí a las islas de Estivalia. Si los guardias lo supieran, vendrían a matarla. Por eso, M'Sharra nunca podrá hablar de ello.\r\n\r\nPero tiene poco tiempo. Echa de menos la compañía. El otro día se puso a mendigar a las afueras de la ciudad y vio a su compañera de camada Zaharia atravesar las puertas. M'Sharra la llamó por su nombre, pero la guardia roja no le hizo caso. M'Sharra está segura de que la oyó, y esto la puso triste.\r\n\r\nM'Sharra no quiere morir convertida en alfombra. Quizá haga algo travieso para que los guardias de Carrera Blanca ataquen. Entonces volverá a ser una guerrera.</font>"
     },
     {
-        "editor_id": "ccBGSSSE056_BookV2",
-        "form_id": "[05000824]",
-        "index": null,
-        "type": "BOOK FULL",
-        "original": "The Crimson Dirks, v2",
-        "string": "Las Dagas carmesíes, v2"
-    },
-    {
         "editor_id": "ccBGSSSE056_EECCaptain",
-        "form_id": "[05000822]",
+        "form_id": "05000822|ccbgssse056-ba_silver.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "Imperial Captain",
@@ -89,7 +89,7 @@
     },
     {
         "editor_id": "ccBGSSSE056_EECGuard",
-        "form_id": "[05000821]",
+        "form_id": "05000821|ccbgssse056-ba_silver.esl",
         "index": null,
         "type": "NPC_ FULL",
         "original": "East Empire Warden",
@@ -97,39 +97,15 @@
     },
     {
         "editor_id": "ccBGSSSE056_Key",
-        "form_id": "[05000820]",
+        "form_id": "05000820|ccbgssse056-ba_silver.esl",
         "index": null,
         "type": "KEYM FULL",
         "original": "M'Sharra's Key",
         "string": "Llave de M'Sharra"
     },
     {
-        "editor_id": "WhiterunDragonsreachBasement",
-        "form_id": "[0004A376]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Dragonsreach Dungeon",
-        "string": "Mazmorra de Cuenca del Dragón"
-    },
-    {
-        "editor_id": "LundsHut01",
-        "form_id": "[000DB070]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "Lund's Hut",
-        "string": "Choza de Lund"
-    },
-    {
-        "editor_id": "WhiterunBanneredMare",
-        "form_id": "[0001605E]",
-        "index": null,
-        "type": "CELL FULL",
-        "original": "The Bannered Mare",
-        "string": "La yegua abanderada"
-    },
-    {
         "editor_id": "Tamriel",
-        "form_id": "[0000003C]",
+        "form_id": "0000003C|Skyrim.esm",
         "index": null,
         "type": "WRLD FULL",
         "original": "Skyrim",
@@ -137,23 +113,7 @@
     },
     {
         "editor_id": "ccBGSSSE056_Quest",
-        "form_id": "[05000814]",
-        "index": 20,
-        "type": "QUST NNAM",
-        "original": "Inspect Dragonsreach Dungeon for clues on M'Sharra",
-        "string": "Busca pistas sobre M'Sharra en la mazmorra de Cuenca del Dragón."
-    },
-    {
-        "editor_id": "ccBGSSSE056_Quest",
-        "form_id": "[05000814]",
-        "index": 81,
-        "type": "QUST CNAM",
-        "original": "People from across Tamriel have migrated to Skyrim in the wake of the Great War. Perhaps if I poke around the tavern in Whiterun, I can learn some of their stories.",
-        "string": "La Gran Guerra ha llevado a gente de todo Tamriel hasta Skyrim. A lo mejor fisgando un poco en la taberna de Carrera Blanca puedo descubrir algunas de sus historias."
-    },
-    {
-        "editor_id": "ccBGSSSE056_Quest",
-        "form_id": "[05000814]",
+        "form_id": "05000814|ccbgssse056-ba_silver.esl",
         "index": 10,
         "type": "QUST NNAM",
         "original": "Search for a note at the Bannered Mare",
@@ -161,39 +121,23 @@
     },
     {
         "editor_id": "ccBGSSSE056_Quest",
-        "form_id": "[05000814]",
-        "index": 87,
-        "type": "QUST CNAM",
-        "original": "I found a note at the Bannered Mare written by a Khajiit named M'Sharra. She claims to have been a warrior in another life, and decided to start a fight with the guards so she could relive some of her past glory. While she was no longer present, I found a note next to the evidence chest that implies she left an armor set in an abandoned hut near Rorikstead. Inside the hut was a set of silver armor.",
-        "string": "He encontrado en La yegua abanderada una nota escrita por una khajiita llamada M'Sharra. En ella afirma haber sido una guerrera en otra vida, y cuenta que ha provocado una pelea con los guardias para poder revivir en parte sus glorias pasadas. Aunque ella ya no estaba, encontré una nota cerca del cofre con las pruebas que sugiere que dejó una armadura en una choza abandonada cerca de Paraje de Rorik. En la choza había una armadura de plata."
-    },
-    {
-        "editor_id": "ccBGSSSE056_Quest",
-        "form_id": "[05000814]",
-        "index": 95,
-        "type": "QUST CNAM",
-        "original": "I found a note at the Bannered Mare written by a Khajiit named M'Sharra. She claims to have been a warrior in another life, and decided to start a fight with the guards so she could relive some of her past glory. I should visit the dungeon to see what became of her.",
-        "string": "He encontrado en La yegua abanderada una nota escrita por una khajiita llamada M'Sharra. En ella afirma haber sido una guerrera en otra vida, y cuenta que ha provocado una pelea con los guardias para poder revivir en parte sus glorias pasadas. Debería visitar la mazmorra para ver qué ha sido de ella."
-    },
-    {
-        "editor_id": "ccBGSSSE056_Quest",
-        "form_id": "[05000814]",
+        "form_id": "05000814|ccbgssse056-ba_silver.esl",
         "index": null,
         "type": "QUST FULL",
         "original": "When the Cat's Away",
         "string": "El escondite de la gata"
     },
     {
-        "editor_id": "ccBGSSSE056_MiscQuest",
-        "form_id": "[05000823]",
-        "index": 10,
-        "type": "QUST NNAM",
-        "original": "Search for a note at the Bannered Mare",
-        "string": "Busca una nota en La yegua abanderada."
+        "editor_id": "ccBGSSSE056_Quest",
+        "form_id": "05000814|ccbgssse056-ba_silver.esl",
+        "index": 65,
+        "type": "QUST CNAM",
+        "original": "I found a note at the Bannered Mare written by a Khajiit named M'Sharra. She claims to have been a warrior in another life, and decided to start a fight with the guards so she could relive some of her past glory. While she was no longer present, I found a note next to the evidence chest that implies she left an armor set in an abandoned hut near Rorikstead.",
+        "string": "He encontrado en La yegua abanderada una nota escrita por una khajiita llamada M'Sharra. En ella afirma haber sido una guerrera en otra vida, y cuenta que ha provocado una pelea con los guardias para poder revivir en parte sus glorias pasadas. Aunque ella ya no estaba, encontré una nota cerca del cofre con las pruebas que sugieren que dejó una armadura en una choza abandonada cerca de Paraje de Rorik."
     },
     {
         "editor_id": "ccBGSSSE056_Quest",
-        "form_id": "[05000814]",
+        "form_id": "05000814|ccbgssse056-ba_silver.esl",
         "index": 30,
         "type": "QUST NNAM",
         "original": "Retrieve the armor from the Hut",
@@ -201,15 +145,55 @@
     },
     {
         "editor_id": "ccBGSSSE056_Quest",
-        "form_id": "[05000814]",
-        "index": 88,
+        "form_id": "05000814|ccbgssse056-ba_silver.esl",
+        "index": 20,
+        "type": "QUST NNAM",
+        "original": "Inspect Dragonsreach Dungeon for clues on M'Sharra",
+        "string": "Busca pistas sobre M'Sharra en la mazmorra de Cuenca del Dragón."
+    },
+    {
+        "editor_id": "ccBGSSSE056_Quest",
+        "form_id": "05000814|ccbgssse056-ba_silver.esl",
+        "index": 85,
         "type": "QUST CNAM",
-        "original": "I found a note at the Bannered Mare written by a Khajiit named M'Sharra. She claims to have been a warrior in another life, and decided to start a fight with the guards so she could relive some of her past glory. While she was no longer present, I found a note next to the evidence chest that implies she left an armor set in an abandoned hut near Rorikstead.",
-        "string": "He encontrado en La yegua abanderada una nota escrita por una khajiita llamada M'Sharra. En ella afirma haber sido una guerrera en otra vida, y cuenta que ha provocado una pelea con los guardias para poder revivir en parte sus glorias pasadas. Aunque ella ya no estaba, encontré una nota cerca del cofre con las pruebas que sugieren que dejó una armadura en una choza abandonada cerca de Paraje de Rorik."
+        "original": "I found a note at the Bannered Mare written by a Khajiit named M'Sharra. She claims to have been a warrior in another life, and decided to start a fight with the guards so she could relive some of her past glory. While she was no longer present, I found a note next to the evidence chest that implies she left an armor set in an abandoned hut near Rorikstead. Inside the hut was a set of silver armor.",
+        "string": "He encontrado en La yegua abanderada una nota escrita por una khajiita llamada M'Sharra. En ella afirma haber sido una guerrera en otra vida, y cuenta que ha provocado una pelea con los guardias para poder revivir en parte sus glorias pasadas. Aunque ella ya no estaba, encontré una nota cerca del cofre con las pruebas que sugiere que dejó una armadura en una choza abandonada cerca de Paraje de Rorik. En la choza había una armadura de plata."
+    },
+    {
+        "editor_id": "ccBGSSSE056_Quest",
+        "form_id": "05000814|ccbgssse056-ba_silver.esl",
+        "index": 83,
+        "type": "QUST CNAM",
+        "original": "I found a note at the Bannered Mare written by a Khajiit named M'Sharra. She claims to have been a warrior in another life, and decided to start a fight with the guards so she could relive some of her past glory. I should visit the dungeon to see what became of her.",
+        "string": "He encontrado en La yegua abanderada una nota escrita por una khajiita llamada M'Sharra. En ella afirma haber sido una guerrera en otra vida, y cuenta que ha provocado una pelea con los guardias para poder revivir en parte sus glorias pasadas. Debería visitar la mazmorra para ver qué ha sido de ella."
+    },
+    {
+        "editor_id": "ccBGSSSE056_Quest",
+        "form_id": "05000814|ccbgssse056-ba_silver.esl",
+        "index": 105,
+        "type": "QUST CNAM",
+        "original": "People from across Tamriel have migrated to Skyrim in the wake of the Great War. Perhaps if I poke around the tavern in Whiterun, I can learn some of their stories.",
+        "string": "La Gran Guerra ha llevado a gente de todo Tamriel hasta Skyrim. A lo mejor fisgando un poco en la taberna de Carrera Blanca puedo descubrir algunas de sus historias."
+    },
+    {
+        "editor_id": "ccBGSSSE056_MiscQuest",
+        "form_id": "05000823|ccbgssse056-ba_silver.esl",
+        "index": 10,
+        "type": "QUST NNAM",
+        "original": "Search for a note at the Bannered Mare",
+        "string": "Busca una nota en La yegua abanderada."
+    },
+    {
+        "editor_id": "ccBGSSSE056_SmithingBonus",
+        "form_id": "05000805|ccbgssse056-ba_silver.esl",
+        "index": null,
+        "type": "PERK FULL",
+        "original": "Smithing",
+        "string": "Herrería"
     },
     {
         "editor_id": "ccBGSSSE056_MatchingSetHeavy",
-        "form_id": "[05000804]",
+        "form_id": "05000804|ccbgssse056-ba_silver.esl",
         "index": null,
         "type": "PERK DESC",
         "original": "Additional 25% Armor bonus if wearing a matched set of Heavy Armor.",
@@ -217,18 +201,10 @@
     },
     {
         "editor_id": "ccBGSSSE056_MatchingSetHeavy",
-        "form_id": "[05000804]",
+        "form_id": "05000804|ccbgssse056-ba_silver.esl",
         "index": null,
         "type": "PERK FULL",
         "original": "Matching Set",
         "string": "Conjunto"
-    },
-    {
-        "editor_id": "ccBGSSSE056_SmithingBonus",
-        "form_id": "[05000805]",
-        "index": null,
-        "type": "PERK FULL",
-        "original": "Smithing",
-        "string": "Herrería"
     }
 ]
