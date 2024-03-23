@@ -122,3 +122,6 @@ class Translation:
 
             with translation_path.open("w", encoding="utf8") as translation_file:
                 json.dump(strings, translation_file, indent=4, ensure_ascii=False)
+
+    def __hash__(self):
+        return hash((self.name, self.path))

@@ -10,11 +10,13 @@ from pathlib import Path
 from queue import Queue
 
 import qtpy.QtCore as qtc
+import qtpy.QtGui as qtg
 import qtpy.QtWidgets as qtw
 
 import utilities as utils
 from main import MainApp
 from nm_api import Download, Downloader
+from widgets import ProgressWidget
 
 from .translation import Translation
 
@@ -30,6 +32,12 @@ class DownloadsWidget(qtw.QWidget):
 
     download_finished = qtc.Signal()
     queue_finished = qtc.Signal()
+    update_signal = qtc.Signal()
+
+    start_timer_signal = qtc.Signal()
+    stop_timer_signal = qtc.Signal()
+
+    timer_id: int | None = None
 
     class Status(Enum):
         Running = auto()
@@ -41,6 +49,8 @@ class DownloadsWidget(qtw.QWidget):
 
     status: Status = Status.Running
 
+    items: dict[Translation, qtw.QTreeWidgetItem] = {}
+
     def __init__(self, app: MainApp):
         super().__init__()
 
@@ -48,18 +58,22 @@ class DownloadsWidget(qtw.QWidget):
         self.loc = app.loc
         self.mloc = app.loc.database
 
+        self.update_signal.connect(self._update_progress)
+        self.start_timer_signal.connect(self.start_timer)
+        self.stop_timer_signal.connect(self.stop_timer)
+
         self.queue = Queue()
         self.downloader = Downloader(self.app.api, "skyrimspecialedition")
         self.thread = utils.Thread(self.download_thread)
         self.thread.start()
 
-        self.startTimer(100, qtc.Qt.TimerType.PreciseTimer)
-
         vlayout = qtw.QVBoxLayout()
         self.setLayout(vlayout)
 
         self.downloads_widget = qtw.QTreeWidget()
+        self.downloads_widget.setObjectName("download_list")
         self.downloads_widget.setAlternatingRowColors(True)
+        # self.downloads_widget.setUniformRowHeights(False)
         vlayout.addWidget(self.downloads_widget)
 
         self.downloads_widget.setHeaderLabels(
@@ -77,17 +91,41 @@ class DownloadsWidget(qtw.QWidget):
             qtw.QHeaderView.ResizeMode.Stretch
         )
 
+    def start_timer(self):
+        if self.timer_id is None:
+            self.timer_id = self.startTimer(1000, qtc.Qt.TimerType.PreciseTimer)
+
+    def stop_timer(self):
+        if self.timer_id is not None:
+            self.killTimer(self.timer_id)
+            self.timer_id = None
+
     def timerEvent(self, event: qtc.QTimerEvent):
         super().timerEvent(event)
 
-        self.update_progress()
+        self._update_progress()
 
     def update_progress(self):
+        self.update_signal.emit()
+
+    def _update_progress(self):
         """
         Updates progress of current downloading translation.
         """
 
         if self.current_download and self.current_translation:
+            item = self.items.get(self.current_translation)
+            if item is None:
+                return
+
+            if self.downloads_widget.itemWidget(item, 1) is None:
+                item.setText(1, "")
+                progress_widget = ProgressWidget()
+                self.downloads_widget.setItemWidget(item, 1, progress_widget)
+                # item.setSizeHint(1, qtc.QSize(item.sizeHint(1).width(), progress_widget.sizeHint().height()))
+
+            progress_widget: ProgressWidget = self.downloads_widget.itemWidget(item, 1)
+
             match self.current_translation.status:
                 case Translation.Status.Downloading:
                     if (
@@ -96,10 +134,16 @@ class DownloadsWidget(qtw.QWidget):
                     ):
                         cur_size = utils.scale_value(self.current_download.current_size)
                         tot_size = utils.scale_value(self.current_download.file_size)
+                        progress_widget.progress_bar.setMaximum(
+                            self.current_download.file_size
+                        )
+                        progress_widget.progress_bar.setValue(
+                            self.current_download.current_size
+                        )
                         spd = (
                             self.current_download.current_size
                             - self.current_download.previous_size
-                        ) * 10
+                        )
                         cur_speed = utils.scale_value(spd) + "/s"
                         percentage = f"{(self.current_download.current_size / self.current_download.file_size * 100):.2f} %"
                         status = f"{self.loc.main.downloading} ({cur_size}/{tot_size} - {percentage} - {cur_speed})"
@@ -110,21 +154,28 @@ class DownloadsWidget(qtw.QWidget):
                         self.current_download.current_size
                     )
 
-                    self.current_translation.tree_item.setText(1, status)
+                    progress_widget.status_label.setText(status)
                 case Translation.Status.Processing:
-                    self.current_translation.tree_item.setText(
-                        1, self.loc.main.processing
-                    )
+                    progress_widget.status_label.setText(self.loc.main.processing)
+                    progress_widget.progress_bar.setRange(0, 0)
                 case Translation.Status.DownloadFailed:
-                    self.current_translation.tree_item.setText(
-                        1, self.loc.main.download_failed
-                    )
+                    progress_widget.status_label.setText(self.loc.main.download_failed)
+                    progress_widget.progress_bar.hide()
                 case Translation.Status.DownloadSuccess:
-                    self.current_translation.tree_item.setText(
-                        1, self.loc.main.download_success
-                    )
+                    item.setHidden(True)
+                case Translation.Status.Ok:
+                    item.setHidden(True)
                 case status:
-                    self.current_translation.tree_item.setText(1, str(status))
+                    progress_widget.status_label.setText(str(status))
+                    progress_widget.progress_bar.setRange(0, 0)
+
+        for translation, item in self.items.copy().items():
+            if translation.status in [
+                Translation.Status.DownloadSuccess,
+                Translation.Status.Ok,
+            ]:
+                item.setHidden(True)
+                self.items.pop(translation)
 
         self.update()
 
@@ -137,7 +188,7 @@ class DownloadsWidget(qtw.QWidget):
 
         while self.status == self.Status.Running:
             self.current_translation: Translation = self.queue.get()
-            self.current_translation.status = Translation.Status.Downloading
+            self.current_translation.status = Translation.Status.Processing
             tmp_path = self.app.get_tmp_dir()
             mod_id = self.current_translation.mod_id
             file_id = self.current_translation.file_id
@@ -151,12 +202,16 @@ class DownloadsWidget(qtw.QWidget):
             self.app.log.info(f"Downloading file {file_id} from mod {mod_id}...")
 
             downloaded_file = self.current_download.dl_path
+            self.current_translation.status = Translation.Status.Downloading
+            self.start_timer_signal.emit()
             if not downloaded_file.is_file():
                 self.current_download.download()
+            self.stop_timer_signal.emit()
 
             if downloaded_file.is_file():
                 self.app.log.info(f"Processing file {downloaded_file.name!r}...")
                 self.current_translation.status = Translation.Status.Processing
+                self.update_progress()
                 strings = utils.import_from_archive(
                     downloaded_file, self.app.mainpage_widget.mods
                 )
@@ -179,7 +234,6 @@ class DownloadsWidget(qtw.QWidget):
                     self.current_translation.strings = strings
                     self.current_translation.save_translation()
                     self.current_translation.status = Translation.Status.Ok
-                    self.current_translation.tree_item.setHidden(True)
                     self.app.database.add_translation(self.current_translation)
                     self.app.log.info("Processing complete.")
                 else:
@@ -192,6 +246,7 @@ class DownloadsWidget(qtw.QWidget):
                 self.app.log.error("Download failed!")
                 self.current_translation.status = Translation.Status.DownloadFailed
 
+            self.update_progress()
             self.current_download = None
             self.current_translation = None
             self.queue.task_done()
@@ -260,10 +315,11 @@ class DownloadsWidget(qtw.QWidget):
         item = qtw.QTreeWidgetItem(
             [
                 translation.name,
-                self.app.loc.main.waiting_for_download,
+                self.loc.main.waiting_for_download,
             ]
         )
-        translation.tree_item = item
+        item.setFont(1, qtg.QFont("Consolas"))
+        self.items[translation] = item
         self.downloads_widget.addTopLevelItem(item)
 
         self.queue.put(translation)
@@ -272,6 +328,9 @@ class DownloadsWidget(qtw.QWidget):
         """
         Shows messagebox to tell that all downloads in queue are finished.
         """
+
+        self.downloads_widget.clear()
+        self.items.clear()
 
         messagebox = qtw.QMessageBox(self.app.root)
         messagebox.setWindowTitle(self.loc.main.success)

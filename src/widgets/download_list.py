@@ -344,7 +344,8 @@ class DownloadListDialog(qtw.QWidget):
                     / self.app.database.language
                     / translation_name,
                 )
-                download_translations.append(translation)
+                if translation not in download_translations:
+                    download_translations.append(translation)
 
         self.app.mainpage_widget.update_modlist()
 
@@ -355,7 +356,8 @@ class DownloadListDialog(qtw.QWidget):
                     self.app.loc.main.waiting_for_download,
                 ]
             )
-            translation.tree_item = item
+            item.setFont(1, qtg.QFont("Consolas"))
+            self.app.mainpage_widget.database_widget.downloads_widget.items[translation] = item
             self.app.mainpage_widget.database_widget.downloads_widget.downloads_widget.addTopLevelItem(
                 item
             )
