@@ -2,6 +2,7 @@
 Copyright (c) Cutleast
 """
 
+import logging
 import os
 import zlib
 from io import BufferedReader, BytesIO
@@ -30,6 +31,8 @@ class Record:
         0x00000020: "Deleted",
     }
     flags: dict[str, bool] = {}
+
+    log = logging.getLogger("PluginParser")
 
     def __init__(self, stream: BufferedReader, header_flags: dict[str, bool]):
         self.stream = stream
@@ -164,10 +167,7 @@ class Record:
                         subrecord = Subrecord(stream, self.header_flags)
                     subrecord.parse()
 
-            if (
-                subrecord_type in PARSE_WHITELIST[self.type]
-                or subrecord_type == "EDID"
-            ):
+            if subrecord_type in PARSE_WHITELIST[self.type] or subrecord_type == "EDID":
                 self.subrecords.append(subrecord)
 
     def parse_info_record(self, stream: BytesIO):
@@ -226,7 +226,7 @@ class Record:
         self.subrecords: list[Subrecord] = []
 
         perk_type = None
-        perk_index = 0
+        epfd_index = 0
 
         itxt_index = 0
 
@@ -248,9 +248,32 @@ class Record:
                 perk_type == 7 and subrecord_type == "EPFD"
             ):
                 subrecord = StringSubrecord(stream, self.header_flags)
-                subrecord.index = perk_index
 
-                perk_index += 1
+                if subrecord_type == "EPFD":
+                    subrecord.index = epfd_index
+
+                    epfd_index += 1
+
+                else:
+                    subrecord.parse()
+
+                    if subrecord.string is None:
+                        continue
+
+                    if peek(stream, 4) == b"EPF3":
+                        index_subrecord = Subrecord(stream, self.header_flags)
+                        index_subrecord.parse()
+                        epf2_index = int.from_bytes(
+                            index_subrecord.data[2:], byteorder="little"
+                        )
+                        subrecord.index = epf2_index
+                        if subrecord_type in PARSE_WHITELIST[self.type]:
+                            self.subrecords.append(subrecord)
+                        continue
+                    else:
+                        self.log.warning(
+                            f"EPF2 Subrecord without following EPF3! Record: {self}"
+                        )
 
             elif (
                 subrecord_type in SUBRECORD_MAPPING
