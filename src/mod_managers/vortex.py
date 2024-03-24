@@ -122,7 +122,7 @@ class Vortex(ModManager):
                 key = b"settings###mods###installPath###skyrimse"
                 value = database.get(key)
                 if value is not None:
-                    staging_folder = Path(value.decode())
+                    staging_folder = Path(value.decode()[1:-1])  # Get path without quotation marks
                 else:
                     staging_folder = appdata_path / "skyrimse" / "mods"
 
