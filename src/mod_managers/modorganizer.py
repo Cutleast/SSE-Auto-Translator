@@ -190,6 +190,9 @@ class ModOrganizer(ModManager):
         Parses ini file at `ini_path` and returns a list of available profiles.
         """
 
+        if not ini_path.is_file():
+            return []
+
         parser = utils.IniParser(ini_path)
         instance_data = parser.load_file()
 
