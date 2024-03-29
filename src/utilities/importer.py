@@ -127,40 +127,6 @@ def import_from_archive(archive_path: Path, modlist: list[Mod], ldialog=None):
     return translation_strings
 
 
-def import_xtranslator_translation(file_path: Path) -> dict[str, list[String]]:
-    """
-    Reads xTranslator translation XML file
-    and returns dict with plugin name and strings.
-    """
-
-    with file_path.open(encoding="utf8") as file:
-        parser = bs4.BeautifulSoup(file, features="xml")
-
-    plugin_name = parser.find("Addon").text
-
-    strings: list[String] = []
-
-    string_element: bs4.PageElement
-    for string_element in parser.find_all("String"):
-        editor_id = string_element.find_next("EDID").text
-        type = string_element.find_next("REC").text.replace(":", " ")
-        original_string = string_element.find_next("Source").text
-        translated_string = string_element.find_next("Dest").text
-
-        string = String(
-            editor_id,
-            type,
-            original_string,
-            translated_string,
-            status=String.Status.TranslationComplete,
-        )
-
-        if string not in strings:
-            strings.append(string)
-
-    return {plugin_name: strings}
-
-
 def merge_plugin_strings(
     translation_plugin: Path, original_plugin: Path
 ) -> list[String]:

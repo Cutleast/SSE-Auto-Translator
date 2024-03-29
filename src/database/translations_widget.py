@@ -599,7 +599,6 @@ class TranslationsWidget(qtw.QWidget):
             [
                 "Mod Archive (*.7z *.rar *.zip)",
                 "Bethesda Plugin (*.esp *.esm *.esl)",
-                "Exported xTranslator Translation (*.xml)",
             ]
         )
         fdialog.setWindowTitle(self.mloc.import_local)
@@ -642,9 +641,6 @@ class TranslationsWidget(qtw.QWidget):
                     plugin_strings = utils.merge_plugin_strings(file, plugin.path)
                     strings[file.name.lower()] = plugin_strings
 
-                elif file.suffix.lower() == ".xml":
-                    self.app.log.info("Importing xTranslator Translation...")
-                    strings = utils.import_xtranslator_translation(file)
                 else:
                     continue
 
