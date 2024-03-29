@@ -18,6 +18,7 @@ UNUSED_ITEMS: list[Path] = [
     DIST_FOLDER / "data" / "user.old",
     DIST_FOLDER / "data" / "logs",
     DIST_FOLDER / "data" / "translator",
+    DIST_FOLDER / "data" / "icons" / "Confrerie.svg",
 ]
 OUTPUT_FOLDER = DIST_FOLDER.with_name("SSE-AT")
 OUTPUT_ARCHIVE = Path(f"SSE-AT v{VERSION}.7z").resolve()
