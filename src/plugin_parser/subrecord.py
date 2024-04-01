@@ -166,6 +166,7 @@ SUBRECORD_MAPPING: dict[str, Subrecord] = {
     "ITXT": StringSubrecord,
     "EPF2": StringSubrecord,
     "EPFD": StringSubrecord,
+    "RDMP": StringSubrecord,
     "MAST": MAST,
     "TIFC": TIFC,
 }
