@@ -451,6 +451,8 @@ class EditorTab(qtw.QWidget):
                     case string.Status.TranslationRequired:
                         string_visible = self.filter_translation_required.isChecked()
 
+            # If string is still visible, increase resp. counter
+            if string_visible:
                 match string.status:
                     case string.Status.NoTranslationRequired:
                         no_translation_required_strings += 1
