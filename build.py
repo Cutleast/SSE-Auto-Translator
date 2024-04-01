@@ -35,7 +35,7 @@ cmd = f'nuitka \
 --include-data-dir="./.venv/Lib/site-packages/qtawesome=./qtawesome" \
 --enable-plugin=pyside6 \
 --remove-output \
---enable-console \
+--disable-console \
 --company-name="{AUTHOR}" \
 --product-name="{APPNAME}" \
 --file-version="{VERSION}" \
