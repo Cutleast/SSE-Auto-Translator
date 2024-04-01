@@ -10,6 +10,7 @@ import re
 from copy import copy
 from pathlib import Path
 
+import jstyleson as json
 import pyperclip
 import qtawesome as qta
 import qtpy.QtCore as qtc
@@ -155,6 +156,12 @@ class EditorTab(qtw.QWidget):
         help_action.triggered.connect(self.show_help)
 
         self.tool_bar.addSeparator()
+
+        import_legacy_action = self.tool_bar.addAction(
+            qta.icon("ri.inbox-archive-fill", color="#ffffff"),
+            self.mloc.import_legacy,
+        )
+        import_legacy_action.triggered.connect(self.import_legacy)
 
         apply_database_action = self.tool_bar.addAction(
             qta.icon("mdi6.database-refresh-outline", color="#ffffff"),
@@ -404,6 +411,84 @@ class EditorTab(qtw.QWidget):
         )
         self.strings_widget.customContextMenuRequested.connect(on_context_menu)
 
+    def import_legacy(self):
+        """
+        Opens file dialog to choose a DSD JSON of pre-v1.1 format.
+        """
+
+        fdialog = qtw.QFileDialog()
+        fdialog.setFileMode(fdialog.FileMode.ExistingFile)
+        fdialog.setNameFilters(["DSD File (*.json)"])
+        fdialog.setWindowTitle(self.mloc.import_legacy)
+
+        if fdialog.exec() == fdialog.DialogCode.Rejected:
+            return
+
+        selected_files = fdialog.selectedFiles()
+
+        if len(selected_files):
+            filepath = Path(selected_files[0])
+            if not filepath.is_file():
+                return
+
+            self.log.info(f"Importing legacy translation from {str(filepath)!r}...")
+
+            with filepath.open(encoding="utf8") as file:
+                legacy_strings: list[dict] = json.load(file)
+
+            self.log.debug(
+                f"Found {len(legacy_strings)} string(s) in legacy translation."
+            )
+
+            translation_strings: dict[str, list[utils.String]] = {}
+
+            for string in self.strings:
+                if string.original_string in translation_strings:
+                    translation_strings[string.original_string].append(string)
+                else:
+                    translation_strings[string.original_string] = [string]
+
+            applied = 0
+
+            for legacy_string in legacy_strings:
+                original = legacy_string.get("original")
+                translated = legacy_string.get("string")
+
+                if original is None or translated is None:
+                    continue
+
+                matching_strings = translation_strings.get(original)
+
+                if matching_strings is None:
+                    continue
+
+                for matching_string in matching_strings:
+                    matching_string.translated_string = translated
+                    matching_string.tree_item.setText(4, utils.trim_string(translated))
+
+                    if (
+                        legacy_string.get("type") == matching_string.type
+                        and legacy_string.get("editor_id") == matching_string.editor_id
+                        and legacy_string.get("index") == matching_string.index
+                    ):
+                        legacy_status = utils.String.Status.get(
+                            legacy_string.get("status")
+                        )
+
+                        if legacy_status is not None:
+                            matching_string.status = legacy_status
+                        else:
+                            matching_string.status = (
+                                utils.String.Status.TranslationComplete
+                            )
+
+                applied += 1
+
+            if applied:
+                self.update_string_list()
+
+            self.log.info(f"Translated {applied} string(s) from legacy translation.")
+
     def open_translator_dialog(self, item: qtw.QTreeWidgetItem, column: int):
         """
         Opens double clicked string in popup.
@@ -560,7 +645,9 @@ class EditorTab(qtw.QWidget):
         def process(ldialog: LoadingDialog):
             ldialog.updateProgress(text1=self.mloc.applying_database)
 
-            self.app.database.apply_db_to_translation(self.translation, self.plugin_name)
+            self.app.database.apply_db_to_translation(
+                self.translation, self.plugin_name
+            )
 
         loadingdialog = LoadingDialog(self.app.root, self.app, process)
         loadingdialog.exec()
