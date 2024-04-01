@@ -54,8 +54,6 @@ class ApiSetup(qtw.QWidget):
 
         def start_sso():
             api = NexusModsApi("")
-            api.log.addHandler(app.log_handler)
-            api.log.setLevel(app.log_level)
             self.api_key = api.get_sso_key()
             sso_button.setText(self.mloc.sso_successful)
             self.setDisabled(True)
