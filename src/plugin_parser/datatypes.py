@@ -171,7 +171,12 @@ class String:
         except UnicodeDecodeError:
             pass
 
-        return data.decode("cp1251")
+        try:
+            return data.decode("cp1251")
+        except UnicodeDecodeError:
+            pass
+
+        return data.decode(errors="replace")
 
     @staticmethod
     def chars(stream: BufferedReader, size: int) -> bytes:
