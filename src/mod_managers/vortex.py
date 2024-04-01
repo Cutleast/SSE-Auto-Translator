@@ -142,8 +142,8 @@ class Vortex(ModManager):
                     mod_path: Path = staging_folder / moddata.get(
                         "installationPath", modname
                     )
-                    mod_id: int = mod_meta_data.get("modId", 0)
-                    file_id: int = mod_meta_data.get("fileId", 0)
+                    mod_id: int = int(mod_meta_data.get("modId", 0))
+                    file_id: int = int(mod_meta_data.get("fileId", 0))
                     version: str = mod_meta_data.get("version", "")
 
                     plugin_files = [

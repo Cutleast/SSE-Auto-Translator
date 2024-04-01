@@ -89,11 +89,11 @@ class TranslationDatabase:
 
         for translation_data in translation_list:
             name: str = translation_data["name"]
-            mod_id: int = translation_data["mod_id"]
-            file_id: int = translation_data["file_id"]
+            mod_id: int = int(translation_data["mod_id"])
+            file_id: int = int(translation_data["file_id"])
             version: str = translation_data["version"]
-            original_mod_id: int = translation_data["original_mod_id"]
-            original_file_id: int = translation_data["original_file_id"]
+            original_mod_id: int = int(translation_data["original_mod_id"])
+            original_file_id: int = int(translation_data["original_file_id"])
             original_version: str = translation_data["original_version"]
             translation_path: Path = self.userdb_path / self.language / name
 
