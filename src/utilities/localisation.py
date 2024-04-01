@@ -70,7 +70,7 @@ class Localisator:
             except Exception as ex:
                 log.error(f"Failed to get system language: {ex}")
                 self.language = "en_US"
-                self.lang_path = self.lang_path.parent / system_language
+                self.lang_path = self.lang_path.parent / "en_US"
 
         # Fall back to english localisation
         if not self.lang_path.is_dir():
