@@ -45,21 +45,11 @@ class Group:
         self.header_flags = header_flags
 
         self.parse()
-    
-    def __repr__(self) -> str:
-        import pprint
-
-        _dict = self.__dict__.copy()
-        _dict.pop("parent")
-        _dict.pop("data")
-
-        return "\n" + pprint.pformat(_dict, indent=4, sort_dicts=False)
 
     def __repr__(self) -> str:
         import pprint
 
         _dict = self.__dict__.copy()
-        _dict.pop("parent")
         _dict.pop("data")
 
         return "\n" + pprint.pformat(_dict, indent=4, sort_dicts=False)
