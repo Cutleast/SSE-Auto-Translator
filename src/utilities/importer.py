@@ -114,15 +114,18 @@ def import_from_archive(archive_path: Path, modlist: list[Mod], ldialog=None):
                 string_datas: list[dict[str, str]] = json.load(file)
 
                 strings = [
-                    String.from_string_data(string_data) for string_data in string_datas
+                    String.from_string_data(string_data)
+                    for string_data in string_datas
+                    if string_data.get("form_id")
                 ]
                 for string in strings:
                     string.status = String.Status.TranslationComplete
 
-            if plugin_name.lower() in translation_strings:
-                translation_strings[plugin_name.lower()] += strings
-            else:
-                translation_strings[plugin_name.lower()] = strings
+            if len(strings):
+                if plugin_name.lower() in translation_strings:
+                    translation_strings[plugin_name.lower()] += strings
+                else:
+                    translation_strings[plugin_name.lower()] = strings
 
     return translation_strings
 
