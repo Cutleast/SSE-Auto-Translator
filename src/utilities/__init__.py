@@ -263,6 +263,9 @@ def trim_string(text: str, max_length: int = 100):
     Appends "..." suffix if `text` was longer than `max_length`.
     """
 
+    if not isinstance(text, str):
+        return str(text)
+
     if len(text) > max_length:
         trimmed_text = text[: max_length - 3] + "..."
         return f"{trimmed_text!r}"[1:-1]
