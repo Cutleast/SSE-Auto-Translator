@@ -30,7 +30,7 @@ See [Documentation](/doc/Instructions_en_US.md).
   - Search and Replace Feature
   - Built-in support for Google Translator (free) and DeepL API (API Key required)
   - Export Feature to share own translations
-- Import Feature for manually installing translations and exported (XML format only) xTranslator translations
+- Import Feature for manually installing translations
 - Ignore-List Feature to completely ignore plugins that are falsely marked as "Translation Required"
 - Built-in Documentation
 - Deep Scan Feature to find incomplete translations
