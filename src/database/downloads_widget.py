@@ -4,6 +4,8 @@ and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+import logging
+
 import urllib.parse
 from enum import Enum, auto
 from pathlib import Path
@@ -50,6 +52,8 @@ class DownloadsWidget(qtw.QWidget):
     status: Status = Status.Running
 
     items: dict[Translation, qtw.QTreeWidgetItem] = {}
+
+    log = logging.getLogger("Downloader")
 
     def __init__(self, app: MainApp):
         super().__init__()
@@ -212,33 +216,46 @@ class DownloadsWidget(qtw.QWidget):
                 self.app.log.info(f"Processing file {downloaded_file.name!r}...")
                 self.current_translation.status = Translation.Status.Processing
                 self.update_progress()
-                strings = utils.import_from_archive(
-                    downloaded_file, self.app.mainpage_widget.mods
-                )
-
-                if (
-                    self.current_translation.mod_id == 0
-                    or self.current_translation.file_id == 0
-                ):
-                    plugin_name: str = strings.keys()[0].lower()
-
-                    for mod in self.app.mainpage_widget.mods:
-                        if any(
-                            plugin_name == plugin.name.lower() for plugin in mod.plugins
-                        ):
-                            self.current_translation.original_mod_id = mod.mod_id
-                            self.current_translation.original_file_id = mod.file_id
-                            self.current_translation.original_version = mod.version
-
-                if strings:
-                    self.current_translation.strings = strings
-                    self.current_translation.save_translation()
-                    self.current_translation.status = Translation.Status.Ok
-                    self.app.database.add_translation(self.current_translation)
-                    self.app.log.info("Processing complete.")
-                else:
-                    self.app.log.warning("Translation does not contain any strings!")
+                try:
+                    strings = utils.import_from_archive(
+                        downloaded_file, self.app.mainpage_widget.mods
+                    )
+                except Exception as ex:
+                    self.log.error(
+                        f"Failed to import translation from downloaded archive: {ex}",
+                        exc_info=ex,
+                    )
                     self.current_translation.status = Translation.Status.DownloadFailed
+
+                else:
+                    if (
+                        self.current_translation.mod_id == 0
+                        or self.current_translation.file_id == 0
+                    ):
+                        plugin_name: str = strings.keys()[0].lower()
+
+                        for mod in self.app.mainpage_widget.mods:
+                            if any(
+                                plugin_name == plugin.name.lower()
+                                for plugin in mod.plugins
+                            ):
+                                self.current_translation.original_mod_id = mod.mod_id
+                                self.current_translation.original_file_id = mod.file_id
+                                self.current_translation.original_version = mod.version
+
+                    if strings:
+                        self.current_translation.strings = strings
+                        self.current_translation.save_translation()
+                        self.current_translation.status = Translation.Status.Ok
+                        self.app.database.add_translation(self.current_translation)
+                        self.app.log.info("Processing complete.")
+                    else:
+                        self.app.log.warning(
+                            "Translation does not contain any strings!"
+                        )
+                        self.current_translation.status = (
+                            Translation.Status.DownloadFailed
+                        )
 
                 self.download_finished.emit()
 
