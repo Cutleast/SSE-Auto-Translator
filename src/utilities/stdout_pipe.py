@@ -56,7 +56,7 @@ class StdoutPipe:
         try:
             self.stdout.write(string)
             if self.app.statusbar is not None and string.strip():
-                self.app.status_label.setText(
+                self.app.log_signal.emit(
                     trim_string(
                         string.removeprefix("\n").removesuffix("\n"), max_length=200
                     ),
