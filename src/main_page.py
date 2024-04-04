@@ -18,7 +18,7 @@ from main import MainApp
 from mod_managers import SUPPORTED_MOD_MANAGERS
 from plugin_parser import PluginParser
 from processor import Processor
-from widgets import LoadingDialog, StringListDialog, IgnoreListDialog
+from widgets import IgnoreListDialog, LoadingDialog, StringListDialog
 
 
 class MainPageWidget(qtw.QWidget):
