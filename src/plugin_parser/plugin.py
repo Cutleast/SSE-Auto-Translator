@@ -20,6 +20,18 @@ class Plugin:
     header: Record = None
     groups: list[Group] = None
 
+    def __repr__(self) -> str:
+        import pprint
+
+        text = "\n" + pprint.pformat(self.__dict__, indent=4, sort_dicts=False)
+        lines: list[str] = []
+        for line in text.splitlines():
+            lines.append(line)
+        return "\n".join(lines)
+
+    def __str__(self) -> str:
+        return self.__repr__()
+
     def parse(self):
         self.groups = []
 

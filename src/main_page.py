@@ -5,6 +5,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import os
+from concurrent.futures import ThreadPoolExecutor
 
 import jstyleson as json
 import qtawesome as qta
@@ -323,6 +324,41 @@ class MainPageWidget(qtw.QWidget):
 
                     dialog = StringListDialog(self.app, selected_plugin.name, strings)
                     dialog.show()
+            
+            def show_structure():
+                if plugin_selected:
+                    parser = PluginParser(selected_plugin.path)
+                    parser.parse_plugin()
+
+                    with ThreadPoolExecutor(thread_name_prefix="Processor") as exec:
+                        text = exec.submit(lambda data: str(data), parser.parsed_data).result()
+                    self.app.log.debug(f"Text Length: {len(text)}")
+
+                    with open("debug.txt", "w", encoding="utf8") as file:
+                        file.write(text)
+                    
+                    self.app.log.debug(f"Written to 'debug.txt'.")
+
+                    dialog = qtw.QDialog(self.app.root)
+                    dialog.setWindowTitle(selected_plugin.name)
+                    dialog.setMinimumSize(1400, 800)
+                    utils.apply_dark_title_bar(dialog)
+
+                    vlayout = qtw.QVBoxLayout()
+                    dialog.setLayout(vlayout)
+
+                    textbox = qtw.QPlainTextEdit()
+                    textbox.setFont(qtg.QFont("Consolas"))
+                    textbox.setReadOnly(True)
+                    textbox.setPlainText(text)
+                    textbox.setTextInteractionFlags(
+                        qtc.Qt.TextInteractionFlag.TextSelectableByMouse
+                    )
+                    textbox.setCursor(qtc.Qt.CursorShape.IBeamCursor)
+                    textbox.setFocus()
+                    vlayout.addWidget(textbox)
+
+                    dialog.exec()
 
             def check_selected():
                 for item in self.mods_widget.selectedItems():
@@ -670,6 +706,12 @@ class MainPageWidget(qtw.QWidget):
                     qta.icon("mdi6.book-open-outline", color="#ffffff")
                 )
                 show_strings_action.triggered.connect(show_strings)
+
+                show_structure_action = menu.addAction(self.loc.main.show_structure)
+                show_structure_action.setIcon(
+                    qta.icon("ph.tree-structure", color="#ffffff")
+                )
+                show_structure_action.triggered.connect(show_structure)
 
                 add_to_ignore_list_action = menu.addAction(self.mloc.add_to_ignore_list)
                 add_to_ignore_list_action.setIcon(

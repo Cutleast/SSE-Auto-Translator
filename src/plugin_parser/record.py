@@ -206,6 +206,15 @@ class Record:
                     subrecord = StringSubrecord(stream, self.header_flags)
                     subrecord.parse()
                     subrecord.index = current_index
+                
+                case "DNAM":
+                    subrecord = Subrecord(stream, self.header_flags)
+                    subrecord.parse()
+
+                    subrecord.formid = Hex.hex(BytesIO(subrecord.data), 4)
+
+                    # self.log.debug(f"Found linked INFO Record {subrecord.formid!r} in {self.type} Record {self.formid!r}.")
+                    self.subrecords.append(subrecord)
 
                 case _:
                     if (

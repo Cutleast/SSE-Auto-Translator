@@ -12,3 +12,4 @@ SSE-AT
 *.code-workspace
 __pycache__
 support
+src/debug.txt

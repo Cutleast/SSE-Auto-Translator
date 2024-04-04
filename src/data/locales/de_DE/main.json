@@ -103,5 +103,6 @@
     "used_software": "Verwendete Software",
     "instance_profile": "Profil (MO2)",
     "form_id": "FormID",
-    "open": "Öffnen"
+    "open": "Öffnen",
+    "show_structure": "Zeige Plugin Struktur (Warnung: das kann eine Weile dauern)"
 }
