@@ -312,19 +312,8 @@ class MainPageWidget(qtw.QWidget):
                     mod_selected = True
 
             def show_strings():
-                item = self.mods_widget.selectedItems()[0]
-                if (
-                    qtc.Qt.ItemFlag.ItemIsUserCheckable in item.flags()
-                    and not item.text(2)
-                ):
-                    plugin = [
-                        plugin
-                        for mod in self.mods
-                        for plugin in mod.plugins
-                        if plugin.tree_item == item
-                    ][0]
-
-                    parser = PluginParser(plugin.path)
+                if plugin_selected:
+                    parser = PluginParser(selected_plugin.path)
                     parser.parse_plugin()
                     strings = [
                         string
@@ -332,7 +321,7 @@ class MainPageWidget(qtw.QWidget):
                         for string in group
                     ]
 
-                    dialog = StringListDialog(self.app, plugin.name, strings)
+                    dialog = StringListDialog(self.app, selected_plugin.name, strings)
                     dialog.show()
 
             def check_selected():
