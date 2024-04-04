@@ -1,3 +1,27 @@
+# v1.1.1
+
+##### If not already done for the last update: Please wipe your SSE-AT folder before updating. See v1.1 below for more information.
+
+### New Features
+
+- Advanced Users only: Added a button to Plugin's Contextmenu to view the Structure of Plugins
+  - This can take a while and block the rest of the app for large and complex Plugins
+
+### Fixes and Improvements
+
+- Fix potential NoneType Error when trimming Strings
+- Fix error when debugging Parser
+- Fix extraction of missing REGN RDMP strings
+- Catch rare decoding errors due to invalid encoded strings in some plugins
+- Fix edited strings appearing in wrong column
+  - this time when using *Search and Replace* or *API Translation*
+- Database is now saved more often to reduce potential of lost translations due to crashes
+- Minor improvement to Plugin's Contextmenu
+- Fix crashes caused by log spamming
+- First two digits of FormIDs are now ignored when merging translation and original or translating with the database
+  - This previously lead to the issue that strings could not be merged for an outdated translation if the original has different masters
+- Added failsafe for corrupt archives instead of getting stuck
+
 # v1.1.0
 
 ##### This Update requires a complete wipe of your existing SSE-AT data!! This is a one-time only and we think the advantages outweigh the disadvantages.
