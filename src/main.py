@@ -273,6 +273,7 @@ class MainApp(qtw.QApplication):
 
             def save():
                 self.user_config["api_key"] = api_setup.api_key
+                self.api.api_key = self.user_config["api_key"]
 
                 with self.user_conf_path.open("w", encoding="utf8") as file:
                     json.dump(self.user_config, file, indent=4)
