@@ -283,7 +283,6 @@ class EditorTab(qtw.QWidget):
             lambda: self.set_status(utils.String.Status.TranslationRequired)
         )
 
-
         def on_context_menu(point: qtc.QPoint):
             if not self.strings_widget.selectedItems():
                 return
@@ -506,9 +505,15 @@ class EditorTab(qtw.QWidget):
 
         while currentIndex < self.strings_widget.topLevelItemCount():
             nextItem = self.strings_widget.topLevelItem(currentIndex)
-            string = next((_string for _string in self.strings if _string.tree_item == nextItem), None)
+            string = next(
+                (_string for _string in self.strings if _string.tree_item == nextItem),
+                None,
+            )
 
-            if string is not None and string.status != string.Status.TranslationComplete:
+            if (
+                string is not None
+                and string.status != string.Status.TranslationComplete
+            ):
                 from .translator_dialog import TranslatorDialog
 
                 dialog = TranslatorDialog(self, string)
@@ -516,9 +521,8 @@ class EditorTab(qtw.QWidget):
                 dialog.string_entry.setFocus()
                 self.current_translation_index = currentIndex
                 break
-            
+
             currentIndex += 1
-                
 
     def open_translator_dialog(self, item: qtw.QTreeWidgetItem, column: int):
         """
@@ -534,7 +538,6 @@ class EditorTab(qtw.QWidget):
         dialog.show()
         dialog.string_entry.setFocus()
 
-
     def update_matching_strings(self, original, translation, status):
         """
         Update strings that are matching
@@ -543,7 +546,9 @@ class EditorTab(qtw.QWidget):
             if string.original_string == original:
                 if string.status != string.Status.TranslationComplete:
                     string.translated_string = str(translation)
-                    string.tree_item.setText(4, utils.trim_string(string.translated_string))
+                    string.tree_item.setText(
+                        4, utils.trim_string(string.translated_string)
+                    )
                     string.status = status
 
         self.update_string_list()
@@ -967,14 +972,13 @@ class EditorTab(qtw.QWidget):
 
     def set_status(self, status: utils.String.Status):
         for item in self.strings_widget.selectedItems():
-            string = [
-                _string for _string in self.strings if _string.tree_item == item
-            ][0]
+            string = [_string for _string in self.strings if _string.tree_item == item][
+                0
+            ]
             string.status = status
 
         self.update_string_list()
         self.changes_signal.emit()
-
 
     def copy_selected(self):
         """
