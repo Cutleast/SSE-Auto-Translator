@@ -86,6 +86,7 @@ class TranslatorDialog(qtw.QWidget):
         translate_button = qtw.QPushButton(self.mloc.translate_with_api)
         translate_button.setIcon(qta.icon("ri.translate", color="#ffffff"))
         translate_button.clicked.connect(self.translate_with_api)
+        translate_button.setShortcut(qtg.QKeySequence("F4"))
         hlayout.addWidget(translate_button)
 
         splitter = qtw.QSplitter()
@@ -111,8 +112,29 @@ class TranslatorDialog(qtw.QWidget):
 
         hlayout.addStretch()
 
+        next_complete_shortcut = qtg.QShortcut(qtg.QKeySequence("F1"), self)
+        next_complete_shortcut.activated.connect(
+            lambda: self.finish(
+                proceed_to_next=True, status=utils.String.Status.TranslationComplete
+            )
+        )
+
+        next_incomplete_shortcut = qtg.QShortcut(qtg.QKeySequence("F2"), self)
+        next_incomplete_shortcut.activated.connect(
+            lambda: self.finish(
+                proceed_to_next=True, status=utils.String.Status.TranslationIncomplete
+            )
+        )
+
+        next_required_shortcut = qtg.QShortcut(qtg.QKeySequence("F3"), self)
+        next_required_shortcut.activated.connect(
+            lambda: self.finish(
+                proceed_to_next=True, status=utils.String.Status.TranslationRequired
+            )
+        )
+
         finish_button = qtw.QPushButton(self.loc.main.done + " (Ctrl+Enter)")
-        finish_button.clicked.connect(self.finish)
+        finish_button.clicked.connect(lambda: self.finish())
         finish_button.setShortcut(qtg.QKeySequence("Ctrl+Return"))
         finish_button.setObjectName("accent_button")
         hlayout.addWidget(finish_button)
@@ -156,19 +178,33 @@ class TranslatorDialog(qtw.QWidget):
 
         event.accept()
 
-    def finish(self):
+    def finish(
+        self, proceed_to_next=False, status=utils.String.Status.TranslationComplete
+    ):
         """
         Saves edited string and marks as "Translation Complete" and closes dialog.
         """
+        self.string.status = status
 
-        self.string.translated_string = self.string_entry.toPlainText()
-        self.string.status = utils.String.Status.TranslationComplete
-        self.string.tree_item.setText(
-            4, utils.trim_string(self.string.translated_string)
+        if self.string.translated_string != self.string_entry.toPlainText():
+            self.string.translated_string = self.string_entry.toPlainText()
+
+            if self.string.translated_string != self.string.original_string:
+                self.string.tree_item.setText(
+                    4, utils.trim_string(self.string.translated_string)
+                )
+
+            self.changes_pending = False
+
+        self.tab.update_matching_strings(
+            self.string.original_string,
+            utils.trim_string(self.string.translated_string),
+            status,
         )
-        self.changes_pending = False
-
         self.tab.update_string_list()
         self.tab.changes_signal.emit()
+
+        if proceed_to_next:
+            self.tab.next_signal.emit()
 
         self.close()

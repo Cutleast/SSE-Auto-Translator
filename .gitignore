@@ -2,6 +2,7 @@ src/data/app/config.json
 src/data/user
 src/data/translator
 src/data/logs
+src/SSE-AT Output
 tests
 SSE-AT
 .vscode
