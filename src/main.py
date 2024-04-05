@@ -71,7 +71,9 @@ class MainApp(qtw.QApplication):
     log_name = f"{time.strftime('%d.%m.%Y')}-{time.strftime('%H.%M.%S')}.log"
     log_path = data_path / "logs"
     log_level = 10  # Debug level as default
-    log_fmt = "[%(asctime)s.%(msecs)03d][%(levelname)s][%(name)s.%(funcName)s]: %(message)s"
+    log_fmt = (
+        "[%(asctime)s.%(msecs)03d][%(levelname)s][%(name)s.%(funcName)s]: %(message)s"
+    )
     log = logging.getLogger("MainApp")
     log_signal = qtc.Signal(str)
 
@@ -273,6 +275,7 @@ class MainApp(qtw.QApplication):
 
             def save():
                 self.user_config["api_key"] = api_setup.api_key
+                self.api.api_key = self.user_config["api_key"]
 
                 with self.user_conf_path.open("w", encoding="utf8") as file:
                     json.dump(self.user_config, file, indent=4)
@@ -376,7 +379,9 @@ class MainApp(qtw.QApplication):
         self.status_label = qtw.QLabel()
         self.status_label.setObjectName("status_label")
         self.status_label.setTextFormat(qtc.Qt.TextFormat.PlainText)
-        self.log_signal.connect(self.status_label.setText, qtc.Qt.ConnectionType.QueuedConnection)
+        self.log_signal.connect(
+            self.status_label.setText, qtc.Qt.ConnectionType.QueuedConnection
+        )
         self.statusbar.insertPermanentWidget(0, self.status_label, stretch=1)
 
         self.api_label = qtw.QLabel()
