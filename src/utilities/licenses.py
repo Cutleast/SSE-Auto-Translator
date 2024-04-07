@@ -28,5 +28,5 @@ LICENSES = {
     "unrar": "https://github.com/matiasb/python-unrar/blob/master/LICENSE.txt",
     "googletrans": "https://github.com/ssut/py-googletrans/blob/master/LICENSE",
     "deepl": "https://github.com/DeepLcom/deepl-python/blob/main/LICENSE",
-    "zmq": "https://github.com/zeromq/pyzmq/blob/main/LICENSE.md",
+    "pyzmq": "https://github.com/zeromq/pyzmq/blob/main/LICENSE.md",
 }
