@@ -25,5 +25,10 @@
     "translate_with_api": "Translate with API",
     "api_translation_text": "Are you sure you want to translate [NUMBER] String(s) via Translator API?\nDepending on the Translator API this can raise unexpected costs.\nYou can always cancel by closing the Processing Window without losing progress.",
     "translating_with_api": "Translating with API...",
-    "import_legacy": "Import pre-v1.1 Translation..."
+    "import_legacy": "Import pre-v1.1 Translation...",
+    "goto_prev": "Go to previous String",
+    "goto_next": "Go to next String",
+    "changed_string": "String was modified",
+    "changed_string_text": "String was modified. Do you want to save it before switching to another string?",
+    "shortcut_hint": "Press F1 (Translation complete), F2 (Translation incomplete/Work in Progress) or F3 (No translation required)\nto finalize the string and go to the next one."
 }

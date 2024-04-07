@@ -15,4 +15,5 @@ from .loading_dialog import LoadingDialog
 from .paste_entry import PasteLineEdit
 from .progress_widget import ProgressWidget
 from .stacked_widget import StackedWidget
+from .shortcut_button import ShortcutButton
 from .string_list_dialog import StringListDialog

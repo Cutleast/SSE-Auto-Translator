@@ -106,5 +106,6 @@
     "instance_profile": "Instance Profile (MO2)",
     "form_id": "FormID",
     "open": "Open",
-    "show_structure": "Show Plugin Structure (Warning: this may take a while)"
+    "show_structure": "Show Plugin Structure (Warning: this may take a while)",
+    "dont_save": "Don't save"
 }

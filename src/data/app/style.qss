@@ -145,8 +145,18 @@ QPushButton, QToolButton {
     border: 1px solid #0cffffff;
     border-radius: 4px;
 }
+ShortcutButton {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+ShortcutButton QLabel {
+    margin: 0px;
+}
 QPushButton#accent_button {
     background: <accent_color>;
+    color: #000000;
+}
+ShortcutButton#accent_button QLabel {
     color: #000000;
 }
 QToolButton#accent_button {

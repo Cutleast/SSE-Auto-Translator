@@ -25,5 +25,10 @@
     "translate_with_api": "Mit API übersetzen",
     "api_translation_text": "Sind Sie sicher, dass Sie [NUMBER] String(s) über die Übersetzer-API übersetzen möchten?\nAbhängig von der Übersetzer-API kann dies unerwartete Kosten verursachen.\nSie können jederzeit abbrechen, indem Sie das Verarbeitungsfenster schließen, ohne dass der Fortschritt verloren geht.",
     "translating_with_api": "Übersetze mit API...",
-    "import_legacy": "Pre-v1.1 Übersetzung importieren..."
+    "import_legacy": "Pre-v1.1 Übersetzung importieren...",
+    "goto_prev": "Gehe zum vorherigen String",
+    "goto_next": "Gehe zum nächsten String",
+    "changed_string": "String wurde verändert",
+    "changed_string_text": "String wurde verändert. Möchten Sie den String speichern bevor Sie zum anderen String wechseln?",
+    "shortcut_hint": "F1 (Übersetzung vollständig), F2 (Übersetzung unvollständig/ in Arbeit) oder F3 (keine Übersetzung benötigt) drücken,\num den String zu bestätigen und zum nächsten zu wechseln."
 }

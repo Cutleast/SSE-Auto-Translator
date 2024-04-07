@@ -30,7 +30,6 @@ class EditorTab(qtw.QWidget):
 
     changes_pending: bool = False
     changes_signal = qtc.Signal()
-    next_signal = qtc.Signal()
 
     tree_item: qtw.QTreeWidgetItem = None
 
@@ -45,7 +44,6 @@ class EditorTab(qtw.QWidget):
             self.changes_pending = True
 
         self.changes_signal.connect(on_change)
-        self.next_signal.connect(self.on_next_signal)
 
         self.app = app
         self.loc = app.loc
@@ -269,7 +267,8 @@ class EditorTab(qtw.QWidget):
 
         complete_shortcut = qtg.QShortcut(qtg.QKeySequence("F1"), self)
         incomplete_shortcut = qtg.QShortcut(qtg.QKeySequence("F2"), self)
-        required_shortcut = qtg.QShortcut(qtg.QKeySequence("F3"), self)
+        no_required_shortcut = qtg.QShortcut(qtg.QKeySequence("F3"), self)
+        reset_shortcut = qtg.QShortcut(qtg.QKeySequence("F4"), self)
 
         complete_shortcut.activated.connect(
             lambda: self.set_status(utils.String.Status.TranslationComplete)
@@ -279,9 +278,11 @@ class EditorTab(qtw.QWidget):
             lambda: self.set_status(utils.String.Status.TranslationIncomplete)
         )
 
-        required_shortcut.activated.connect(
-            lambda: self.set_status(utils.String.Status.TranslationRequired)
+        no_required_shortcut.activated.connect(
+            lambda: self.set_status(utils.String.Status.NoTranslationRequired)
         )
+
+        reset_shortcut.activated.connect(self.reset_translation)
 
         def on_context_menu(point: qtc.QPoint):
             if not self.strings_widget.selectedItems():
@@ -299,40 +300,6 @@ class EditorTab(qtw.QWidget):
             def open_translator():
                 self.open_translator_dialog(current_item, 0)
 
-            def reset_translation():
-                message_box = qtw.QMessageBox(self)
-                utils.apply_dark_title_bar(message_box)
-                message_box.setWindowTitle(self.mloc.reset_translation)
-                message_box.setText(self.mloc.reset_translation_text)
-                message_box.setStandardButtons(
-                    qtw.QMessageBox.StandardButton.No
-                    | qtw.QMessageBox.StandardButton.Yes
-                )
-                message_box.setDefaultButton(qtw.QMessageBox.StandardButton.No)
-                message_box.button(qtw.QMessageBox.StandardButton.No).setText(
-                    self.loc.main.no
-                )
-                message_box.button(qtw.QMessageBox.StandardButton.Yes).setText(
-                    self.loc.main.yes
-                )
-                choice = message_box.exec()
-
-                if choice == qtw.QMessageBox.StandardButton.Yes:
-                    for item in self.strings_widget.selectedItems():
-                        string = [
-                            _string
-                            for _string in self.strings
-                            if _string.tree_item == item
-                        ][0]
-                        string.translated_string = string.original_string
-                        string.status = string.Status.TranslationRequired
-                        string.tree_item.setText(
-                            4, utils.trim_string(string.translated_string)
-                        )
-
-                    self.update_string_list()
-                    self.changes_signal.emit()
-
             menu = qtw.QMenu()
 
             open_translator_action = menu.addAction(self.mloc.open_translator)
@@ -348,7 +315,8 @@ class EditorTab(qtw.QWidget):
             reset_translation_action.setIcon(
                 qta.icon("ri.arrow-go-back-line", color="#ffffff")
             )
-            reset_translation_action.triggered.connect(reset_translation)
+            reset_translation_action.setShortcut(qtg.QKeySequence("F4"))
+            reset_translation_action.triggered.connect(self.reset_translation)
 
             menu.addSeparator()
 
@@ -363,6 +331,7 @@ class EditorTab(qtw.QWidget):
                     ),
                 )
             )
+            no_translation_required_action.setShortcut(qtg.QKeySequence("F3"))
             no_translation_required_action.triggered.connect(
                 lambda: self.set_status(utils.String.Status.NoTranslationRequired)
             )
@@ -378,6 +347,7 @@ class EditorTab(qtw.QWidget):
                     ),
                 )
             )
+            translation_complete_action.setShortcut(qtg.QKeySequence("F1"))
             translation_complete_action.triggered.connect(
                 lambda: self.set_status(utils.String.Status.TranslationComplete)
             )
@@ -393,6 +363,7 @@ class EditorTab(qtw.QWidget):
                     ),
                 )
             )
+            translation_incomplete_action.setShortcut(qtg.QKeySequence("F2"))
             translation_incomplete_action.triggered.connect(
                 lambda: self.set_status(utils.String.Status.TranslationIncomplete)
             )
@@ -497,33 +468,6 @@ class EditorTab(qtw.QWidget):
 
             self.log.info(f"Translated {applied} string(s) from legacy translation.")
 
-    def on_next_signal(self):
-        """
-        Opens next string in popup.
-        """
-        currentIndex = self.current_translation_index + 1
-
-        while currentIndex < self.strings_widget.topLevelItemCount():
-            nextItem = self.strings_widget.topLevelItem(currentIndex)
-            string = next(
-                (_string for _string in self.strings if _string.tree_item == nextItem),
-                None,
-            )
-
-            if (
-                string is not None
-                and string.status != string.Status.TranslationComplete
-            ):
-                from .translator_dialog import TranslatorDialog
-
-                dialog = TranslatorDialog(self, string)
-                dialog.show()
-                dialog.string_entry.setFocus()
-                self.current_translation_index = currentIndex
-                break
-
-            currentIndex += 1
-
     def open_translator_dialog(self, item: qtw.QTreeWidgetItem, column: int):
         """
         Opens double clicked string in popup.
@@ -538,18 +482,19 @@ class EditorTab(qtw.QWidget):
         dialog.show()
         dialog.string_entry.setFocus()
 
-    def update_matching_strings(self, original, translation, status):
+    def update_matching_strings(self, original: str, translation: str):
         """
         Update strings that are matching
         """
+
         for string in self.strings:
             if string.original_string == original:
                 if string.status != string.Status.TranslationComplete:
-                    string.translated_string = str(translation)
+                    string.translated_string = translation
                     string.tree_item.setText(
                         4, utils.trim_string(string.translated_string)
                     )
-                    string.status = status
+                    string.status = string.Status.TranslationComplete
 
         self.update_string_list()
         self.changes_signal.emit()
@@ -979,6 +924,43 @@ class EditorTab(qtw.QWidget):
 
         self.update_string_list()
         self.changes_signal.emit()
+
+    def reset_translation(self):
+        if not self.strings_widget.selectedItems():
+            return
+
+        message_box = qtw.QMessageBox(self)
+        utils.apply_dark_title_bar(message_box)
+        message_box.setWindowTitle(self.mloc.reset_translation)
+        message_box.setText(self.mloc.reset_translation_text)
+        message_box.setStandardButtons(
+            qtw.QMessageBox.StandardButton.No
+            | qtw.QMessageBox.StandardButton.Yes
+        )
+        message_box.setDefaultButton(qtw.QMessageBox.StandardButton.No)
+        message_box.button(qtw.QMessageBox.StandardButton.No).setText(
+            self.loc.main.no
+        )
+        message_box.button(qtw.QMessageBox.StandardButton.Yes).setText(
+            self.loc.main.yes
+        )
+        choice = message_box.exec()
+
+        if choice == qtw.QMessageBox.StandardButton.Yes:
+            for item in self.strings_widget.selectedItems():
+                string = [
+                    _string
+                    for _string in self.strings
+                    if _string.tree_item == item
+                ][0]
+                string.translated_string = string.original_string
+                string.status = string.Status.TranslationRequired
+                string.tree_item.setText(
+                    4, utils.trim_string(string.translated_string)
+                )
+
+            self.update_string_list()
+            self.changes_signal.emit()
 
     def copy_selected(self):
         """

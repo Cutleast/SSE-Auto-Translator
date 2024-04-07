@@ -10,6 +10,7 @@ import qtpy.QtGui as qtg
 import qtpy.QtWidgets as qtw
 
 import utilities as utils
+from widgets import ShortcutButton
 
 from .editor_tab import EditorTab
 
@@ -31,7 +32,10 @@ class TranslatorDialog(qtw.QWidget):
 
         def on_change():
             self.changes_pending = True
-            self.setWindowTitle(f"{string.editor_id} - {string.type}*")
+            current_index = self.tab.strings_widget.indexFromItem(self.string.tree_item, 0).row()
+            self.setWindowTitle(
+                f"{string.editor_id} - {string.type} ({current_index+1}/{len(self.tab.strings)})*"
+            )
 
         self.changes_signal.connect(on_change)
 
@@ -39,12 +43,10 @@ class TranslatorDialog(qtw.QWidget):
         self.app = tab.app
         self.loc = tab.loc
         self.mloc = tab.mloc
-        self.string = string
 
         self.setWindowFlags(qtc.Qt.WindowType.Window)
         self.resize(1000, 600)
         self.closeEvent = self.cancel
-        self.setWindowTitle(f"{string.editor_id} - {string.type}")
         self.setObjectName("root")
         utils.apply_dark_title_bar(self)
 
@@ -54,90 +56,106 @@ class TranslatorDialog(qtw.QWidget):
         hlayout = qtw.QHBoxLayout()
         vlayout.addLayout(hlayout)
 
-        label_vlayout = qtw.QVBoxLayout()
-        hlayout.addLayout(label_vlayout)
-
-        edid_label = qtw.QLabel(f"{self.loc.main.editor_id}: {string.editor_id}")
-        edid_label.setTextInteractionFlags(
-            qtc.Qt.TextInteractionFlag.TextSelectableByMouse
+        prev_button = ShortcutButton(
+            qta.icon("fa5s.chevron-left", color="#ffffff"),
+            self.mloc.goto_prev,
         )
-        edid_label.setCursor(qtc.Qt.CursorShape.IBeamCursor)
-        edid_label.setAlignment(qtc.Qt.AlignmentFlag.AlignLeft)
-        label_vlayout.addWidget(edid_label)
-
-        type_label = qtw.QLabel(f"{self.loc.main.type}: {string.type}")
-        type_label.setTextInteractionFlags(
-            qtc.Qt.TextInteractionFlag.TextSelectableByMouse
-        )
-        type_label.setCursor(qtc.Qt.CursorShape.IBeamCursor)
-        type_label.setAlignment(qtc.Qt.AlignmentFlag.AlignLeft)
-        label_vlayout.addWidget(type_label)
-
-        index_label = qtw.QLabel(f"{self.loc.main.index}: {string.index}")
-        index_label.setTextInteractionFlags(
-            qtc.Qt.TextInteractionFlag.TextSelectableByMouse
-        )
-        index_label.setCursor(qtc.Qt.CursorShape.IBeamCursor)
-        index_label.setAlignment(qtc.Qt.AlignmentFlag.AlignLeft)
-        label_vlayout.addWidget(index_label)
+        prev_button.clicked.connect(self.goto_prev)
+        prev_button.setShortcut(qtg.QKeySequence("Ctrl+Alt+Left"))
+        hlayout.addWidget(prev_button)
 
         hlayout.addStretch()
 
-        translate_button = qtw.QPushButton(self.mloc.translate_with_api)
+        next_button = ShortcutButton(
+            qta.icon("fa5s.chevron-right", color="#ffffff"),
+            self.mloc.goto_next,
+        )
+        next_button.clicked.connect(self.goto_next)
+        next_button.setShortcut(qtg.QKeySequence("Ctrl+Alt+Right"))
+        next_button.setLayoutDirection(qtc.Qt.LayoutDirection.RightToLeft)
+        hlayout.addWidget(next_button)
+
+        hlayout = qtw.QHBoxLayout()
+        vlayout.addLayout(hlayout)
+
+        label_vlayout = qtw.QVBoxLayout()
+        hlayout.addLayout(label_vlayout)
+
+        self.edid_label = qtw.QLabel()
+        self.edid_label.setTextInteractionFlags(
+            qtc.Qt.TextInteractionFlag.TextSelectableByMouse
+        )
+        self.edid_label.setCursor(qtc.Qt.CursorShape.IBeamCursor)
+        self.edid_label.setAlignment(qtc.Qt.AlignmentFlag.AlignLeft)
+        label_vlayout.addWidget(self.edid_label)
+
+        self.type_label = qtw.QLabel()
+        self.type_label.setTextInteractionFlags(
+            qtc.Qt.TextInteractionFlag.TextSelectableByMouse
+        )
+        self.type_label.setCursor(qtc.Qt.CursorShape.IBeamCursor)
+        self.type_label.setAlignment(qtc.Qt.AlignmentFlag.AlignLeft)
+        label_vlayout.addWidget(self.type_label)
+
+        self.index_label = qtw.QLabel()
+        self.index_label.setTextInteractionFlags(
+            qtc.Qt.TextInteractionFlag.TextSelectableByMouse
+        )
+        self.index_label.setCursor(qtc.Qt.CursorShape.IBeamCursor)
+        self.index_label.setAlignment(qtc.Qt.AlignmentFlag.AlignLeft)
+        label_vlayout.addWidget(self.index_label)
+
+        hlayout.addStretch()
+
+        translate_button = ShortcutButton(self.mloc.translate_with_api)
         translate_button.setIcon(qta.icon("ri.translate", color="#ffffff"))
         translate_button.clicked.connect(self.translate_with_api)
-        translate_button.setShortcut(qtg.QKeySequence("F4"))
+        translate_button.setShortcut(qtg.QKeySequence("Ctrl+F5"))
         hlayout.addWidget(translate_button)
 
         splitter = qtw.QSplitter()
         vlayout.addWidget(splitter, stretch=1)
 
-        original_entry = qtw.QPlainTextEdit()
-        original_entry.setReadOnly(True)
-        original_entry.setPlainText(string.original_string)
-        splitter.addWidget(original_entry)
+        self.original_entry = qtw.QPlainTextEdit()
+        self.original_entry.setReadOnly(True)
+        splitter.addWidget(self.original_entry)
 
         self.string_entry = qtw.QPlainTextEdit()
-        self.string_entry.setPlainText(string.translated_string)
         self.string_entry.textChanged.connect(self.changes_signal.emit)
         splitter.addWidget(self.string_entry)
 
         hlayout = qtw.QHBoxLayout()
         vlayout.addLayout(hlayout)
 
-        cancel_button = qtw.QPushButton(self.loc.main.cancel + " (Escape)")
+        cancel_button = ShortcutButton(self.loc.main.cancel)
         cancel_button.clicked.connect(self.close)
         cancel_button.setShortcut(qtc.Qt.Key.Key_Escape)
         hlayout.addWidget(cancel_button)
 
         hlayout.addStretch()
 
-        next_complete_shortcut = qtg.QShortcut(qtg.QKeySequence("F1"), self)
-        next_complete_shortcut.activated.connect(
-            lambda: self.finish(
-                proceed_to_next=True, status=utils.String.Status.TranslationComplete
-            )
-        )
+        hint_label = qtw.QLabel(self.mloc.shortcut_hint)
+        hint_label.setAlignment(qtc.Qt.AlignmentFlag.AlignHCenter)
+        hlayout.addWidget(hint_label)
 
-        next_incomplete_shortcut = qtg.QShortcut(qtg.QKeySequence("F2"), self)
-        next_incomplete_shortcut.activated.connect(
-            lambda: self.finish(
-                proceed_to_next=True, status=utils.String.Status.TranslationIncomplete
-            )
-        )
+        hlayout.addStretch()
 
-        next_required_shortcut = qtg.QShortcut(qtg.QKeySequence("F3"), self)
-        next_required_shortcut.activated.connect(
-            lambda: self.finish(
-                proceed_to_next=True, status=utils.String.Status.TranslationRequired
-            )
-        )
-
-        finish_button = qtw.QPushButton(self.loc.main.done + " (Ctrl+Enter)")
+        finish_button = ShortcutButton(self.loc.main.done)
         finish_button.clicked.connect(lambda: self.finish())
         finish_button.setShortcut(qtg.QKeySequence("Ctrl+Return"))
         finish_button.setObjectName("accent_button")
         hlayout.addWidget(finish_button)
+
+        complete_shortcut = qtg.QShortcut(qtg.QKeySequence("F1"), self)
+        complete_shortcut.activated.connect(lambda: self.goto_next(utils.String.Status.TranslationComplete))
+
+        incomplete_shortcut = qtg.QShortcut(qtg.QKeySequence("F2"), self)
+        incomplete_shortcut.activated.connect(lambda: self.goto_next(utils.String.Status.TranslationIncomplete))
+
+        no_required_shortcut = qtg.QShortcut(qtg.QKeySequence("F3"), self)
+        no_required_shortcut.activated.connect(lambda: self.goto_next(utils.String.Status.NoTranslationRequired))
+
+        self.set_string(string)
 
     def translate_with_api(self):
         """
@@ -178,33 +196,132 @@ class TranslatorDialog(qtw.QWidget):
 
         event.accept()
 
-    def finish(
-        self, proceed_to_next=False, status=utils.String.Status.TranslationComplete
+    def set_string(
+        self,
+        string: utils.String,
+        finalize_with_status: utils.String.Status | None = None,
     ):
         """
-        Saves edited string and marks as "Translation Complete" and closes dialog.
+        Sets `string` as current displayed string.
         """
+
+        if finalize_with_status:
+            self.finalize_string(finalize_with_status)
+
+        elif self.changes_pending:
+            message_box = qtw.QMessageBox(self)
+            utils.apply_dark_title_bar(message_box)
+            message_box.setWindowTitle(self.mloc.changed_string)
+            message_box.setText(self.mloc.changed_string_text)
+            message_box.setStandardButtons(
+                qtw.QMessageBox.StandardButton.Save | qtw.QMessageBox.StandardButton.No
+            )
+            message_box.setDefaultButton(qtw.QMessageBox.StandardButton.Save)
+            message_box.button(qtw.QMessageBox.StandardButton.No).setText(
+                self.loc.main.dont_save
+            )
+            message_box.button(qtw.QMessageBox.StandardButton.Save).setText(
+                self.loc.main.save
+            )
+            choice = message_box.exec()
+
+            if choice == qtw.QMessageBox.StandardButton.Save:
+                self.finalize_string()
+
+        self.string = string
+
+        current_index = self.tab.strings_widget.indexFromItem(self.string.tree_item, 0).row()
+        self.setWindowTitle(
+            f"{string.editor_id} - {string.type} ({current_index+1}/{len(self.tab.strings)})"
+        )
+
+        self.edid_label.setText(f"{self.loc.main.editor_id}: {string.editor_id}")
+        self.type_label.setText(f"{self.loc.main.type}: {string.type}")
+        self.index_label.setText(f"{self.loc.main.index}: {string.index}")
+
+        self.original_entry.setPlainText(string.original_string)
+        self.string_entry.textChanged.disconnect()
+        self.string_entry.setPlainText(string.translated_string)
+        self.string_entry.textChanged.connect(self.changes_signal.emit)
+        self.changes_pending = False
+
+    def goto_next(self, finalize_with_status: utils.String.Status | None = None):
+        """
+        Goes to next string.
+        """
+
+        # current_index = self.tab.strings.index(self.string)
+        current_index = self.tab.strings_widget.indexFromItem(self.string.tree_item, 0).row()
+
+        if current_index == (len(self.tab.strings) - 1):
+            new_index = 0
+        else:
+            new_index = current_index + 1
+
+        # new_string = self.tab.strings[new_index]
+        new_item = self.tab.strings_widget.itemFromIndex(self.tab.strings_widget.model().index(new_index, 0))
+        items = {
+            string.tree_item: string
+            for string in self.tab.strings
+        }
+        new_string = items[new_item]
+        self.set_string(new_string, finalize_with_status)
+
+    def goto_prev(self):
+        """
+        Goes to previous string.
+        """
+
+        # current_index = self.tab.strings.index(self.string)
+        current_index = self.tab.strings_widget.indexFromItem(self.string.tree_item, 0).row()
+        
+        if current_index > 0:
+            new_index = current_index - 1
+        else:
+            new_index = len(self.tab.strings) - 1
+
+        # new_string = self.tab.strings[new_index]
+        new_item = self.tab.strings_widget.itemFromIndex(self.tab.strings_widget.model().index(new_index, 0))
+        items = {
+            string.tree_item: string
+            for string in self.tab.strings
+        }
+        new_string = items[new_item]
+        self.set_string(new_string)
+
+    def finalize_string(
+        self, status: utils.String.Status = utils.String.Status.TranslationComplete
+    ):
+        """
+        Saves changes to current string and applies translation to similar strings.
+        """
+
         self.string.status = status
 
-        if self.string.translated_string != self.string_entry.toPlainText():
+        if self.changes_pending:
             self.string.translated_string = self.string_entry.toPlainText()
 
-            if self.string.translated_string != self.string.original_string:
-                self.string.tree_item.setText(
-                    4, utils.trim_string(self.string.translated_string)
-                )
+        elif status == utils.String.Status.NoTranslationRequired:
+            self.string.translated_string = self.string.original_string
 
-            self.changes_pending = False
-
-        self.tab.update_matching_strings(
-            self.string.original_string,
-            utils.trim_string(self.string.translated_string),
-            status,
+        self.string.tree_item.setText(
+            4, utils.trim_string(self.string.translated_string)
         )
+
+        self.changes_pending = False
+
+        if status == utils.String.Status.TranslationComplete:
+            self.tab.update_matching_strings(
+                self.string.original_string,
+                self.string.translated_string,
+            )
         self.tab.update_string_list()
         self.tab.changes_signal.emit()
 
-        if proceed_to_next:
-            self.tab.next_signal.emit()
+    def finish(self):
+        """
+        Finalizes edited string with status "Translation Complete" and closes dialog.
+        """
 
+        self.finalize_string()
         self.close()
