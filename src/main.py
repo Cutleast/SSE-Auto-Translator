@@ -183,6 +183,13 @@ class MainApp(qtw.QApplication):
         else:
             with open(self.app_conf_path, "r", encoding="utf8") as file:
                 self.app_config: dict = json.load(file)
+        
+        if self.app_config.keys() != self.default_app_config.keys():
+            config = self.default_app_config | self.app_config
+            self.app_config = config
+
+            with open(self.app_conf_path, "w", encoding="utf8") as file:
+                json.dump(self.app_config, file, indent=4)
 
         self.log_level = utils.strlevel2intlevel(self.app_config["log_level"])
         self.log_handler.setLevel(self.log_level)
