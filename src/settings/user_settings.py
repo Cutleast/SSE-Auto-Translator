@@ -43,13 +43,7 @@ class UserSettings(qtw.QWidget):
         # Language
         self.lang_box = qtw.QComboBox()
         self.lang_box.setEditable(False)
-        self.lang_box.addItems(
-            [
-                str(lang).removeprefix("Language.").capitalize()
-                for lang in utils.LangDetector.get_available_langs()
-                if lang != utils.Language.ENGLISH
-            ]
-        )
+        self.lang_box.addItems([lang[0].capitalize() for lang in utils.SUPPORTED_LANGS])
         self.lang_box.setCurrentText(self.app.user_config["language"])
         self.lang_box.currentTextChanged.connect(self.on_change)
         flayout.addRow(self.mloc.game_lang, self.lang_box)

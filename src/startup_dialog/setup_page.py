@@ -8,7 +8,7 @@ import qtawesome as qta
 import qtpy.QtCore as qtc
 import qtpy.QtWidgets as qtw
 
-from utilities import LangDetector, Language
+import utilities as utils
 from widgets import ApiSetup, CompletionBox
 
 from .startup_dialog import StartupDialog
@@ -54,11 +54,7 @@ class SetupPage(qtw.QWidget):
         hlayout.addWidget(lang_label)
         self.lang_box = CompletionBox()
         self.lang_box.setPlaceholderText(self.loc.main.please_select)
-        lang_items = [
-            str(lang).removeprefix("Language.").capitalize()
-            for lang in LangDetector.get_available_langs()
-            if lang != Language.ENGLISH
-        ]
+        lang_items = [lang[0].capitalize() for lang in utils.SUPPORTED_LANGS]
         self.lang_box.addItems(lang_items)
         hlayout.addWidget(self.lang_box)
 

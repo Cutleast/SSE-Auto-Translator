@@ -89,3 +89,17 @@ AE_CC_PLUGINS = [
     "ccasvsse001-almsivi.esm",
     "ccbgssse001-fish.esm",
 ]
+
+# Supported languages
+SUPPORTED_LANGS: list[tuple[str]] = [
+    ("chinese", "zh_CN"),
+    ("french", "fr_FR"),
+    ("german", "de_DE"),
+    ("italian", "it_IT"),
+    ("japanese", "jp_JP"),
+    ("korean", "ko_KR"),
+    ("polish", "pl_PL"),
+    ("portuguese", "pt_BR"),
+    ("russian", "ru_RU"),
+    ("spanish", "es_ES"),
+]
