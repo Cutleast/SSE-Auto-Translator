@@ -16,4 +16,5 @@ from .paste_entry import PasteLineEdit
 from .progress_widget import ProgressWidget
 from .stacked_widget import StackedWidget
 from .shortcut_button import ShortcutButton
+from .spell_check_entry import SpellCheckEntry
 from .string_list_dialog import StringListDialog

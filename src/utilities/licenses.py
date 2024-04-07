@@ -29,4 +29,15 @@ LICENSES = {
     "googletrans": "https://github.com/ssut/py-googletrans/blob/master/LICENSE",
     "deepl": "https://github.com/DeepLcom/deepl-python/blob/main/LICENSE",
     "pyzmq": "https://github.com/zeromq/pyzmq/blob/main/LICENSE.md",
+    "cyhunspell": "https://github.com/MSeal/cython_hunspell/blob/master/LICENSE",
+
+    "french_libreoffice_dict": "http://www.mozilla.org/MPL/2.0/",
+    "german_libreoffice_dict": "https://github.com/LibreOffice/dictionaries/blob/master/de/COPYING_GPLv3",
+    "italian_libreoffice_dict": "https://www.gnu.org/licenses/gpl-3.0.html.en#license-text",
+    "japanese_dict": "https://github.com/MrCorn0-0/hunspell_ja_JP",
+    "korean_libreoffice_dict": "https://www.gnu.org/licenses/lgpl-3.0.html.en#license-text",
+    "polish_libreoffice_dict": "https://github.com/LibreOffice/dictionaries/blob/master/pl_PL/README_en.txt",
+    "portuguese_libreoffice_dict": "https://github.com/LibreOffice/dictionaries/blob/master/pt_BR/README_en.txt",
+    "russian_libreoffice_dict": "https://github.com/LibreOffice/dictionaries/blob/master/ru_RU/README_ru_RU.txt",
+    "spanish_libreoffice_dict": "https://github.com/LibreOffice/dictionaries/blob/master/es/LICENSE.md",
 }

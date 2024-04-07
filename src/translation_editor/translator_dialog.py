@@ -10,7 +10,7 @@ import qtpy.QtGui as qtg
 import qtpy.QtWidgets as qtw
 
 import utilities as utils
-from widgets import ShortcutButton
+from widgets import ShortcutButton, SpellCheckEntry
 
 from .editor_tab import EditorTab
 
@@ -120,7 +120,7 @@ class TranslatorDialog(qtw.QWidget):
         self.original_entry.setReadOnly(True)
         splitter.addWidget(self.original_entry)
 
-        self.string_entry = qtw.QPlainTextEdit()
+        self.string_entry = SpellCheckEntry(language=self.app.user_config["language"].lower())
         self.string_entry.textChanged.connect(self.changes_signal.emit)
         splitter.addWidget(self.string_entry)
 
@@ -181,7 +181,7 @@ class TranslatorDialog(qtw.QWidget):
             message_box.setStandardButtons(
                 qtw.QMessageBox.StandardButton.No | qtw.QMessageBox.StandardButton.Yes
             )
-            message_box.setDefaultButton(qtw.QMessageBox.StandardButton.No)
+            message_box.setDefaultButton(qtw.QMessageBox.StandardButton.Yes)
             message_box.button(qtw.QMessageBox.StandardButton.No).setText(
                 self.loc.main.no
             )
@@ -240,7 +240,10 @@ class TranslatorDialog(qtw.QWidget):
         self.index_label.setText(f"{self.loc.main.index}: {string.index}")
 
         self.original_entry.setPlainText(string.original_string)
-        self.string_entry.textChanged.disconnect()
+        try:
+            self.string_entry.textChanged.disconnect(self.changes_signal.emit)
+        except RuntimeError:
+            pass
         self.string_entry.setPlainText(string.translated_string)
         self.string_entry.textChanged.connect(self.changes_signal.emit)
         self.changes_pending = False

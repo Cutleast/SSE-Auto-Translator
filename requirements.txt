@@ -20,3 +20,4 @@ unrar
 googletrans==3.1.0a0
 deepl
 pyzmq
+https://github.com/MSeal/cython_hunspell/archive/refs/tags/2.0.3.tar.gz
