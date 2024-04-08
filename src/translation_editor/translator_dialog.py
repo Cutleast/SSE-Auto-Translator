@@ -247,6 +247,8 @@ class TranslatorDialog(qtw.QWidget):
 
             if choice == qtw.QMessageBox.StandardButton.Save:
                 self.finalize_string()
+            elif choice == qtw.QMessageBox.DialogCode.Rejected:
+                return
 
         self.string = string
 
