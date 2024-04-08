@@ -107,11 +107,21 @@ class TranslatorDialog(qtw.QWidget):
 
         hlayout.addStretch()
 
+        btn_vlayout = qtw.QVBoxLayout()
+        hlayout.addLayout(btn_vlayout)
+
         translate_button = ShortcutButton(self.mloc.translate_with_api)
         translate_button.setIcon(qta.icon("ri.translate", color="#ffffff"))
         translate_button.clicked.connect(self.translate_with_api)
         translate_button.setShortcut(qtg.QKeySequence("Ctrl+F5"))
-        hlayout.addWidget(translate_button)
+        btn_vlayout.addWidget(translate_button)
+
+        reset_button = ShortcutButton(self.mloc.reset_string)
+        reset_button.setIcon(qta.icon("ri.arrow-go-back-line", color="#ffffff"))
+        reset_button.clicked.connect(self.reset_translation)
+        reset_button.setShortcut(qtg.QKeySequence("F4"))
+        reset_button.setFixedWidth(reset_button.minimumWidth())
+        btn_vlayout.addWidget(reset_button, alignment=qtc.Qt.AlignmentFlag.AlignRight)
 
         splitter = qtw.QSplitter()
         vlayout.addWidget(splitter, stretch=1)
@@ -170,6 +180,13 @@ class TranslatorDialog(qtw.QWidget):
         )
 
         self.string_entry.setPlainText(translated)
+    
+    def reset_translation(self):
+        """
+        Resets string to original string.
+        """
+
+        self.string_entry.setPlainText(self.string.original_string)
 
     def cancel(self, event: qtg.QCloseEvent):
         """

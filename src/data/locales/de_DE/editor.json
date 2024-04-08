@@ -30,5 +30,6 @@
     "goto_next": "Gehe zum nächsten String",
     "changed_string": "String wurde verändert",
     "changed_string_text": "String wurde verändert. Möchten Sie den String speichern bevor Sie zum anderen String wechseln?",
-    "shortcut_hint": "F1 (Übersetzung vollständig), F2 (Übersetzung unvollständig/ in Arbeit) oder F3 (keine Übersetzung benötigt) drücken,\num den String zu bestätigen und zum nächsten zu wechseln."
+    "shortcut_hint": "F1 (Übersetzung vollständig), F2 (Übersetzung unvollständig/ in Arbeit) oder F3 (keine Übersetzung benötigt) drücken,\num den String zu bestätigen und zum nächsten zu wechseln.",
+    "reset_string": "String zurücksetzen"
 }
