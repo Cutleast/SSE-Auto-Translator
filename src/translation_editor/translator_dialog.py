@@ -252,11 +252,6 @@ class TranslatorDialog(qtw.QWidget):
 
         self.string = string
 
-        current_index = self.tab.strings_widget.indexFromItem(self.string.tree_item, 0).row()
-        self.setWindowTitle(
-            f"{string.editor_id} - {string.type} ({current_index+1}/{len(self.tab.strings)})"
-        )
-
         self.edid_label.setText(f"{self.loc.main.editor_id}: {string.editor_id}")
         self.type_label.setText(f"{self.loc.main.type}: {string.type}")
         self.index_label.setText(f"{self.loc.main.index}: {string.index}")
@@ -269,6 +264,11 @@ class TranslatorDialog(qtw.QWidget):
         self.string_entry.setPlainText(string.translated_string)
         self.string_entry.textChanged.connect(self.changes_signal.emit)
         self.changes_pending = False
+
+        current_index = self.tab.strings_widget.indexFromItem(self.string.tree_item, 0).row()
+        self.setWindowTitle(
+            f"{string.editor_id} - {string.type} ({current_index+1}/{len(self.tab.strings)})"
+        )
 
     def goto_next(self, finalize_with_status: utils.String.Status | None = None):
         """
