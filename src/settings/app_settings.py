@@ -4,6 +4,9 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+import os
+from pathlib import Path
+
 import qtawesome as qta
 import qtpy.QtCore as qtc
 import qtpy.QtGui as qtg
@@ -102,12 +105,50 @@ class AppSettings(qtw.QWidget):
         self.confidence_box.valueChanged.connect(self.on_change)
         flayout.addRow(self.mloc.detector_confidence, self.confidence_box)
 
+        # Output path
+        output_path_label = qtw.QLabel(self.mloc.output_path)
+        hlayout = qtw.QHBoxLayout()
+        flayout.addRow(output_path_label, hlayout)
+
+        self.output_path_entry = qtw.QLineEdit()
+        self.output_path_entry.setPlaceholderText(str(self.app.cur_path / "SSE-AT Output"))
+        if self.app.app_config["output_path"] is not None:
+            self.output_path_entry.setText(self.app.app_config["output_path"])
+        self.output_path_entry.textChanged.connect(self.on_change)
+        hlayout.addWidget(self.output_path_entry)
+        browse_output_path_button = qtw.QPushButton()
+        browse_output_path_button.setIcon(
+            qta.icon("fa5s.folder-open", color="#ffffff")
+        )
+
+        def browse():
+            file_dialog = qtw.QFileDialog(self.app.activeModalWidget())
+            file_dialog.setWindowTitle(self.loc.main.browse)
+            file_dialog.setFileMode(qtw.QFileDialog.FileMode.Directory)
+            utils.apply_dark_title_bar(file_dialog)
+            if cur_text := self.output_path_entry.text().strip():
+                path = Path(cur_text)
+                if path.is_dir():
+                    file_dialog.setDirectoryUrl(str(path))
+            if file_dialog.exec():
+                file = file_dialog.selectedFiles()[0]
+                file = os.path.normpath(file)
+                self.output_path_entry.setText(file)
+
+        browse_output_path_button.clicked.connect(browse)
+        hlayout.addWidget(browse_output_path_button)
+
         self.bind_nxm_checkbox = qtw.QCheckBox(
             self.mloc.auto_bind_nxm + " [EXPERIMENTAL]"
         )
         self.bind_nxm_checkbox.setChecked(self.app.app_config["auto_bind_nxm"])
         self.bind_nxm_checkbox.stateChanged.connect(self.on_change)
         flayout.addRow(self.bind_nxm_checkbox)
+
+        self.use_spell_check_checkbox = qtw.QCheckBox(self.mloc.use_spell_check)
+        self.use_spell_check_checkbox.setChecked(self.app.app_config["use_spell_check"])
+        self.use_spell_check_checkbox.stateChanged.connect(self.on_change)
+        flayout.addRow(self.use_spell_check_checkbox)
 
     def on_change(self, *args):
         """
@@ -124,4 +165,6 @@ class AppSettings(qtw.QWidget):
             "accent_color": self.accent_color_entry.text(),
             "detector_confidence": self.confidence_box.value(),
             "auto_bind_nxm": self.bind_nxm_checkbox.isChecked(),
+            "use_spell_check": self.use_spell_check_checkbox.isChecked(),
+            "output_path": self.output_path_entry.text().strip() or None,
         }

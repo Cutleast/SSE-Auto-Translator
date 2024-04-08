@@ -120,7 +120,10 @@ class TranslatorDialog(qtw.QWidget):
         self.original_entry.setReadOnly(True)
         splitter.addWidget(self.original_entry)
 
-        self.string_entry = SpellCheckEntry(language=self.app.user_config["language"].lower())
+        if self.app.app_config["use_spell_check"]:
+            self.string_entry = SpellCheckEntry(language=self.app.user_config["language"].lower())
+        else:
+            self.string_entry = qtw.QPlainTextEdit()
         self.string_entry.textChanged.connect(self.changes_signal.emit)
         splitter.addWidget(self.string_entry)
 

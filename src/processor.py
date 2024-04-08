@@ -559,7 +559,10 @@ class Processor:
 
         app.log.info("Building DSD Dictionary...")
 
-        output_folder = Path(".") / "SSE-AT Output"
+        if app.app_config["output_path"] is None:
+            output_folder = Path(".") / "SSE-AT Output"
+        else:
+            output_folder = Path(app.app_config["output_path"])
 
         installed_plugins = list(
             set(plugin.name.lower() for mod in modlist for plugin in mod.plugins)

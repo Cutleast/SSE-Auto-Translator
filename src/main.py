@@ -55,6 +55,8 @@ class MainApp(qtw.QApplication):
         "accent_color": "#a998d2",
         "detector_confidence": 0.8,
         "auto_bind_nxm": False,
+        "use_spell_check": True,
+        "output_path": None,
     }
     app_config = default_app_config
     user_config: dict = None
@@ -183,7 +185,7 @@ class MainApp(qtw.QApplication):
         else:
             with open(self.app_conf_path, "r", encoding="utf8") as file:
                 self.app_config: dict = json.load(file)
-        
+
         if self.app_config.keys() != self.default_app_config.keys():
             config = self.default_app_config | self.app_config
             self.app_config = config
