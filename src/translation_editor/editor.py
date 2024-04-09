@@ -65,7 +65,7 @@ class TranslationEditor(qtw.QSplitter):
         tab = [_tab for _tab in self.tabs if _tab.tree_item == item][0]
 
         self.page_widget.setCurrentWidget(tab)
-    
+
     def get_current_tab(self) -> EditorTab | None:
         """
         Returns current `tab` that is open.
@@ -140,9 +140,8 @@ class TranslationEditor(qtw.QSplitter):
             translation_item = qtw.QTreeWidgetItem([translation.name, ""])
             close_button = qtw.QPushButton()
             close_button.setObjectName("list_close_button")
-            close_button.setIcon(
-                qta.icon("fa.close", color="#ffffff", color_selected="#d12525")
-            )
+            close_button.setFocusPolicy(qtc.Qt.FocusPolicy.NoFocus)
+            close_button.setIcon(qta.icon("fa.close", color="#ffffff"))
             close_button.setFixedSize(26, 26)
 
             for plugin_name in translation.strings:
