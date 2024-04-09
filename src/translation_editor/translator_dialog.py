@@ -81,7 +81,17 @@ class TranslatorDialog(qtw.QWidget):
         label_vlayout = qtw.QVBoxLayout()
         hlayout.addLayout(label_vlayout)
 
+        self.formid_label = qtw.QLabel()
+        self.formid_label.setFont(qtg.QFont("Consolas"))
+        self.formid_label.setTextInteractionFlags(
+            qtc.Qt.TextInteractionFlag.TextSelectableByMouse
+        )
+        self.formid_label.setCursor(qtc.Qt.CursorShape.IBeamCursor)
+        self.formid_label.setAlignment(qtc.Qt.AlignmentFlag.AlignLeft)
+        label_vlayout.addWidget(self.formid_label)
+
         self.edid_label = qtw.QLabel()
+        self.edid_label.setFont(qtg.QFont("Consolas"))
         self.edid_label.setTextInteractionFlags(
             qtc.Qt.TextInteractionFlag.TextSelectableByMouse
         )
@@ -90,6 +100,7 @@ class TranslatorDialog(qtw.QWidget):
         label_vlayout.addWidget(self.edid_label)
 
         self.type_label = qtw.QLabel()
+        self.type_label.setFont(qtg.QFont("Consolas"))
         self.type_label.setTextInteractionFlags(
             qtc.Qt.TextInteractionFlag.TextSelectableByMouse
         )
@@ -98,6 +109,7 @@ class TranslatorDialog(qtw.QWidget):
         label_vlayout.addWidget(self.type_label)
 
         self.index_label = qtw.QLabel()
+        self.index_label.setFont(qtg.QFont("Consolas"))
         self.index_label.setTextInteractionFlags(
             qtc.Qt.TextInteractionFlag.TextSelectableByMouse
         )
@@ -252,6 +264,7 @@ class TranslatorDialog(qtw.QWidget):
 
         self.string = string
 
+        self.formid_label.setText(f"{self.loc.main.form_id}: {string.form_id}")
         self.edid_label.setText(f"{self.loc.main.editor_id}: {string.editor_id}")
         self.type_label.setText(f"{self.loc.main.type}: {string.type}")
         self.index_label.setText(f"{self.loc.main.index}: {string.index}")
