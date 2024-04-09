@@ -122,6 +122,10 @@ class TranslationsWidget(qtw.QWidget):
         self.translations_widget.setSortingEnabled(True)
         self.translations_widget.sortByColumn(2, qtc.Qt.SortOrder.AscendingOrder)
 
+        del_shortcut = qtg.QShortcut(qtg.QKeySequence("Del"), self.translations_widget)
+        del_shortcut.setContext(qtc.Qt.ShortcutContext.WidgetWithChildrenShortcut)
+        del_shortcut.activated.connect(self.delete_selected)
+
         def on_sort_change(section: int, order: qtc.Qt.SortOrder):
             if section == -1:
                 # "Hack" to restore original order by repopulating
@@ -275,46 +279,6 @@ class TranslationsWidget(qtw.QWidget):
                     if selected_translation.path.is_dir():
                         os.system(f'explorer.exe "{selected_translation.path}"')
 
-            def delete_selected():
-                items = self.translations_widget.selectedItems()
-                matching = [
-                    _translation
-                    for _translation in self.app.database.user_translations
-                    if _translation.tree_item in items
-                ]
-                if matching:
-                    message_box = qtw.QMessageBox(self.app.root)
-                    message_box.setWindowTitle(self.loc.main.delete)
-                    message_box.setText(self.loc.main.delete_text)
-                    message_box.setStandardButtons(
-                        qtw.QMessageBox.StandardButton.No
-                        | qtw.QMessageBox.StandardButton.Yes
-                    )
-                    message_box.setDefaultButton(qtw.QMessageBox.StandardButton.No)
-                    message_box.button(qtw.QMessageBox.StandardButton.No).setText(
-                        self.loc.main.no
-                    )
-                    message_box.button(qtw.QMessageBox.StandardButton.Yes).setText(
-                        self.loc.main.yes
-                    )
-                    utils.apply_dark_title_bar(message_box)
-                    if message_box.exec() != qtw.QMessageBox.StandardButton.Yes:
-                        return
-
-                    self.app.log.info("Deleting selected translations...")
-                    for translation in matching:
-                        self.app.translation_editor.close_translation(
-                            translation, silent=True
-                        )
-                        self.app.database.delete_translation(translation)
-                    self.app.log.info("Translations deleted. Updating database...")
-
-                    self.app.database.save_database()
-                    self.load_translations()
-                    self.app.mainpage_widget.update_modlist()
-
-                    self.app.log.info("Database updated.")
-
             def ignore_update():
                 selected_translation.status = Translation.Status.UpdateIgnored
                 self.update_translations()
@@ -386,7 +350,8 @@ class TranslationsWidget(qtw.QWidget):
 
             delete_action = menu.addAction(self.loc.main.delete_selected)
             delete_action.setIcon(qta.icon("mdi6.trash-can", color="#ffffff"))
-            delete_action.triggered.connect(delete_selected)
+            delete_action.triggered.connect(self.delete_selected)
+            delete_action.setShortcut(qtg.QKeySequence("Del"))
 
             menu.exec(self.translations_widget.mapToGlobal(point), at=expand_all_action)
 
@@ -394,6 +359,46 @@ class TranslationsWidget(qtw.QWidget):
             qtc.Qt.ContextMenuPolicy.CustomContextMenu
         )
         self.translations_widget.customContextMenuRequested.connect(on_context_menu)
+
+    def delete_selected(self):
+        items = self.translations_widget.selectedItems()
+        matching = [
+            _translation
+            for _translation in self.app.database.user_translations
+            if _translation.tree_item in items
+        ]
+        if matching:
+            message_box = qtw.QMessageBox(self.app.root)
+            message_box.setWindowTitle(self.loc.main.delete)
+            message_box.setText(self.loc.main.delete_text)
+            message_box.setStandardButtons(
+                qtw.QMessageBox.StandardButton.No
+                | qtw.QMessageBox.StandardButton.Yes
+            )
+            message_box.setDefaultButton(qtw.QMessageBox.StandardButton.No)
+            message_box.button(qtw.QMessageBox.StandardButton.No).setText(
+                self.loc.main.no
+            )
+            message_box.button(qtw.QMessageBox.StandardButton.Yes).setText(
+                self.loc.main.yes
+            )
+            utils.apply_dark_title_bar(message_box)
+            if message_box.exec() != qtw.QMessageBox.StandardButton.Yes:
+                return
+
+            self.app.log.info("Deleting selected translations...")
+            for translation in matching:
+                self.app.translation_editor.close_translation(
+                    translation, silent=True
+                )
+                self.app.database.delete_translation(translation)
+            self.app.log.info("Translations deleted. Updating database...")
+
+            self.app.database.save_database()
+            self.load_translations()
+            self.app.mainpage_widget.update_modlist()
+
+            self.app.log.info("Database updated.")
 
     def check_for_updates(self):
         """
