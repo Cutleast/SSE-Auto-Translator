@@ -92,8 +92,8 @@ class Updater(qtc.QObject):
                 )
                 self.log.debug(f"Request URL: {url}")
 
-        except requests.exceptions.SSLError as ex:
-            self.log.error(f"Failed to request update. SSL Error: {ex}")
+        except requests.exceptions.RequestException as ex:
+            self.log.error(f"Failed to request update: {ex}")
             self.log.debug(f"Request URL: {url}")
 
     def get_changelog(self):
@@ -119,8 +119,8 @@ class Updater(qtc.QObject):
                 self.log.debug(f"Request URL: {url}")
 
                 return f"Status Code: {response.status_code}"
-        except requests.exceptions.SSLError as ex:
-            self.log.error(f"Failed to request changelog. SSL Error: {ex}")
+        except requests.exceptions.RequestException as ex:
+            self.log.error(f"Failed to request changelog: {ex}")
             self.log.debug(f"Request URL: {url}")
 
-            return f"SSL Error: {ex}"
+            return str(ex)
