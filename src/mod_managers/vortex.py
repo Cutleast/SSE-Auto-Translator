@@ -36,25 +36,15 @@ class Vortex(ModManager):
         database_path = appdata_path / "state.v2"
 
         if database_path.is_dir():
-            flat_data: dict[str, str] = {}
-
-            self.log.debug("Loading database...")
+            leveldb = utils.LevelDB(database_path)
 
             try:
-                with ldb.DB(str(database_path)) as database:
-                    prefix = "persistent###profiles###"
-                    for key, value in database.iterator(prefix=prefix.encode()):
-                        key, value = key.decode(), value.decode()
-                        flat_data[key] = value
+                data = leveldb.get_section("persistent###profiles###")
             except ldb.IOError as ex:
                 self.log.debug(ex, exc_info=ex)
                 raise Exception("Close Vortex and try again!")
 
-            self.log.debug("Database loaded.")
-
-            json_data = utils.parse_flat_dict(flat_data)
-
-            profiles: dict[str, dict] = json_data["persistent"]["profiles"]
+            profiles: dict[str, dict] = data["persistent"]["profiles"]
 
             for profile_id, profile_data in profiles.items():
                 profile_name: str = profile_data["name"]
@@ -88,16 +78,10 @@ class Vortex(ModManager):
         profile_id = instance_name.rsplit("(", 1)[1].removesuffix(")")
 
         if database_path.is_dir():
-            flat_data: dict[str, str] = {}
-            with ldb.DB(str(database_path)) as database:
-                prefix = "persistent###profiles###"
-                for key, value in database.iterator(prefix=prefix.encode()):
-                    key, value = key.decode(), value.decode()
-                    flat_data[key] = value
+            leveldb = utils.LevelDB(database_path)
+            data = leveldb.get_section("persistent###profiles###")
 
-            json_data = utils.parse_flat_dict(flat_data)
-            profiles: dict[str, dict] = json_data["persistent"]["profiles"]
-
+            profiles: dict[str, dict] = data["persistent"]["profiles"]
             profile_data = profiles[profile_id]
             profile_mods: dict[str, dict] = profile_data["modState"]
 
@@ -106,25 +90,16 @@ class Vortex(ModManager):
                 if moddata["enabled"]:
                     modnames.append(modname)
 
-            flat_data: dict[str, str] = {}
-            with ldb.DB(str(database_path)) as database:
-                prefix = "persistent###mods###skyrimse###"
-                for key, value in database.iterator(prefix=prefix.encode()):
-                    key, value = key.decode(), value.decode()
-                    flat_data[key] = value
+            data = leveldb.get_section("persistent###mods###skyrimse###")
 
-            json_data = utils.parse_flat_dict(flat_data)
-            installed_mods: dict[str, dict] = json_data["persistent"]["mods"][
-                "skyrimse"
-            ]
+            installed_mods: dict[str, dict] = data["persistent"]["mods"]["skyrimse"]
 
-            with ldb.DB(str(database_path)) as database:
-                key = b"settings###mods###installPath###skyrimse"
-                value = database.get(key)
-                if value is not None:
-                    staging_folder = Path(value.decode()[1:-1])  # Get path without quotation marks
-                else:
-                    staging_folder = appdata_path / "skyrimse" / "mods"
+            staging_folder = leveldb.get_key("settings###mods###installPath###skyrimse")
+
+            if staging_folder is None:
+                staging_folder = appdata_path / "skyrimse" / "mods"
+            else:
+                staging_folder = Path(staging_folder)
 
             self.rules = {}
             self.mods = {}

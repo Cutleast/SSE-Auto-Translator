@@ -19,6 +19,7 @@ from .download import Download
 from .exceptions import *
 from .importer import *
 from .ini_parser import IniParser
+from .leveldb import LevelDB
 from .licenses import LICENSES
 from .localisation import Localisator
 from .mod import Mod
@@ -220,41 +221,6 @@ def extract_file_paths(data: dict):
             file_paths.extend(extract_file_paths(item))
 
     return file_paths
-
-
-def parse_flat_dict(data: dict[str, str]):
-    """
-    This function takes a dict in the
-    format of
-    {'key1###subkey1###subsubkey1###subsubsubkey1': 'subsubsubvalue1'}
-    and converts it into a nested dictionary.
-
-    Parameters:
-        data: dict of format above
-
-    Returns:
-        result: dict (nested dictionary)
-    """
-
-    result: dict = {}
-
-    for keys, value in data.items():
-        try:
-            keys = keys.strip().split("###")
-
-            # Add keys and value to result
-            current = result
-            for key in keys[:-1]:
-                if key not in current:
-                    current[key] = {}
-                current: dict[str, dict] = current[key]
-            value = json.loads(value)
-            current[keys[-1]] = value
-        except ValueError:
-            print(f"Failed to process key: {keys:20}...")
-            continue
-
-    return result
 
 
 def trim_string(text: str, max_length: int = 100):
