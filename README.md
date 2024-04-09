@@ -126,3 +126,4 @@ If you are interested in testing pre-release versions of SSE-AT, join our Discor
 - [Nuitka](https://github.com/Nuitka/Nuitka)
 - [DynamicStringDistributor](https://github.com/SkyHorizon3/SSE-Dynamic-String-Distributor) by [SkyHorizon](https://github.com/SkyHorizon3)
 - Icon by [Wuerfelhusten](https://nexusmods.com/users/122160268)
+- Editor QoL Improvements by [FuchieSteph](https://github.com/FuchieSteph)
