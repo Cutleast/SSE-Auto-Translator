@@ -770,7 +770,7 @@ class MainApp(qtw.QApplication):
                     qtw.QMessageBox.StandardButton.Yes
                     | qtw.QMessageBox.StandardButton.Cancel
                 )
-                message_box.setDefaultButton(qtw.QMessageBox.StandardButton.Cancel)
+                message_box.setDefaultButton(qtw.QMessageBox.StandardButton.Yes)
                 message_box.button(qtw.QMessageBox.StandardButton.Yes).setText(
                     self.loc.main._continue
                 )
@@ -793,7 +793,7 @@ class MainApp(qtw.QApplication):
                     qtw.QMessageBox.StandardButton.Yes
                     | qtw.QMessageBox.StandardButton.Cancel
                 )
-                message_box.setDefaultButton(qtw.QMessageBox.StandardButton.Cancel)
+                message_box.setDefaultButton(qtw.QMessageBox.StandardButton.Yes)
                 message_box.button(qtw.QMessageBox.StandardButton.Yes).setText(
                     self.loc.main._continue
                 )

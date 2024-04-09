@@ -99,7 +99,7 @@ class TranslationEditor(qtw.QSplitter):
             message_box.setStandardButtons(
                 qtw.QMessageBox.StandardButton.No | qtw.QMessageBox.StandardButton.Yes
             )
-            message_box.setDefaultButton(qtw.QMessageBox.StandardButton.No)
+            message_box.setDefaultButton(qtw.QMessageBox.StandardButton.Yes)
             message_box.button(qtw.QMessageBox.StandardButton.No).setText(
                 self.loc.main.no
             )

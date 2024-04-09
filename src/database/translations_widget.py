@@ -375,7 +375,7 @@ class TranslationsWidget(qtw.QWidget):
                 qtw.QMessageBox.StandardButton.No
                 | qtw.QMessageBox.StandardButton.Yes
             )
-            message_box.setDefaultButton(qtw.QMessageBox.StandardButton.No)
+            message_box.setDefaultButton(qtw.QMessageBox.StandardButton.Yes)
             message_box.button(qtw.QMessageBox.StandardButton.No).setText(
                 self.loc.main.no
             )
