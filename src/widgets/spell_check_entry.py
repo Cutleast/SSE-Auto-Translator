@@ -53,10 +53,10 @@ class SpellCheckEntry(qtw.QPlainTextEdit):
         self.log.debug(f"Clicked on {word!r}")
         fmt = text_cursor.charFormat()
 
-        def add_word():
+        def ignore():
             self.checker.add(word)
             self.on_text_edit()
-            self.log.debug(f"Added {word!r} to dictionary.")
+            self.log.debug(f"Ignored {word!r}.")
 
         menu = self.createStandardContextMenu()
 
@@ -86,9 +86,9 @@ class SpellCheckEntry(qtw.QPlainTextEdit):
 
                 separator = menu.insertSeparator(first_std_action)
 
-                add_action = qtg.QAction("Add to Dictionary")
-                add_action.triggered.connect(add_word)
-                menu.insertAction(separator, add_action)
+                ignore_action = qtg.QAction("Ignore")
+                ignore_action.triggered.connect(ignore)
+                menu.insertAction(separator, ignore_action)
 
         menu.exec(self.mapToGlobal(point))
 
