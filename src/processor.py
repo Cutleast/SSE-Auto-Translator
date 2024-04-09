@@ -633,7 +633,7 @@ class Processor:
         loadingdialog = LoadingDialog(app.root, app, process)
         loadingdialog.exec()
 
-        app.log.info(f"Builded DSD Dictionary in '{output_folder.resolve()}'.")
+        app.log.info(f"Built DSD Dictionary in '{output_folder.resolve()}'.")
 
         message_box = qtw.QMessageBox()
         message_box.setWindowTitle(app.loc.main.success)
