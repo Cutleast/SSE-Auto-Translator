@@ -104,15 +104,12 @@ class InstancePage(qtw.QWidget):
                 self.modinstance_name = modinstance
                 self.instance_path_entry.setDisabled(True)
                 browse_instance_path_button.setDisabled(True)
-                self.done_button.setEnabled(True)
             elif modinstance == "Portable":
                 self.modinstance_name = modinstance
-                self.done_button.setDisabled(True)
             else:
                 self.modinstance_name = None
                 self.instance_path_entry.setDisabled(True)
                 browse_instance_path_button.setDisabled(True)
-                self.done_button.setDisabled(True)
 
             instance_profile_dropdown.clear()
             self.profile_name = None
@@ -135,7 +132,7 @@ class InstancePage(qtw.QWidget):
             self.instance_path_entry.setEnabled(modinstance == "Portable")
             browse_instance_path_button.setEnabled(modinstance == "Portable")
             self.instance_path_entry.clear()
-            self.done_button.setDisabled(modinstance == "Portable")
+            self.done_button.setDisabled(modinstance in ["Portable", self.loc.main.please_select])
 
         modinstance_dropdown.currentTextChanged.connect(on_modinstance_select)
         hlayout.addWidget(modinstance_dropdown)
