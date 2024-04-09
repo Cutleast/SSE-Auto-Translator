@@ -21,7 +21,6 @@
     "search_and_replace": "Search and Replace",
     "search": "Search",
     "replace": "Replace",
-    "case_sensitivity": "Case Sensitivity",
     "translate_with_api": "Translate with API",
     "api_translation_text": "Are you sure you want to translate [NUMBER] String(s) via Translator API?\nDepending on the Translator API this can raise unexpected costs.\nYou can always cancel by closing the Processing Window without losing progress.",
     "translating_with_api": "Translating with API...",

@@ -205,6 +205,18 @@ QToolButton {
     height: 20px;
 }
 
+QLineEdit QPushButton {
+    background: transparent;
+    border-color: transparent;
+    margin: 0px;
+}
+QLineEdit QPushButton:hover {
+    background: #15ffffff;
+}
+QLineEdit QPushButton:checked {
+    border-color: <accent_color>;
+}
+
 
 /* Input Fields */
 QSpinBox,

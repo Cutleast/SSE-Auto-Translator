@@ -21,7 +21,6 @@
     "search_and_replace": "Suchen und ersetzen",
     "search": "Suchen",
     "replace": "Ersetzen durch",
-    "case_sensitivity": "Groß- und Kleinschreibung beachten",
     "translate_with_api": "Mit API übersetzen",
     "api_translation_text": "Sind Sie sicher, dass Sie [NUMBER] String(s) über die Übersetzer-API übersetzen möchten?\nAbhängig von der Übersetzer-API kann dies unerwartete Kosten verursachen.\nSie können jederzeit abbrechen, indem Sie das Verarbeitungsfenster schließen, ohne dass der Fortschritt verloren geht.",
     "translating_with_api": "Übersetze mit API...",

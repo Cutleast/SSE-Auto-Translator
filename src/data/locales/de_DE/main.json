@@ -105,5 +105,6 @@
     "form_id": "FormID",
     "open": "Öffnen",
     "show_structure": "Zeige Plugin Struktur (Warnung: das kann eine Weile dauern)",
-    "dont_save": "Nicht speichern"
+    "dont_save": "Nicht speichern",
+    "case_sensitivity": "Groß- und Kleinschreibung beachten"
 }

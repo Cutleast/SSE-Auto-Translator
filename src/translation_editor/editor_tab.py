@@ -20,7 +20,7 @@ import qtpy.QtWidgets as qtw
 import utilities as utils
 from database import Translation
 from main import MainApp
-from widgets import LoadingDialog
+from widgets import LoadingDialog, SearchBar
 
 
 class EditorTab(qtw.QWidget):
@@ -196,15 +196,11 @@ class EditorTab(qtw.QWidget):
         )
         export_action.triggered.connect(self.export)
 
-        self.search_box = qtw.QLineEdit()
-        self.search_box.setClearButtonEnabled(True)
-        self.search_icon: qtg.QAction = self.search_box.addAction(
-            qta.icon("fa.search", color="#ffffff"),
-            qtw.QLineEdit.ActionPosition.LeadingPosition,
-        )
-        self.search_box.textChanged.connect(lambda text: self.update_string_list())
-        self.search_box.setPlaceholderText(self.loc.main.search)
-        hlayout.addWidget(self.search_box)
+        self.search_bar = SearchBar()
+        self.search_bar.setPlaceholderText(self.loc.main.search)
+        self.search_bar.cs_toggle.setToolTip(self.loc.main.case_sensitivity)
+        self.search_bar.textChanged.connect(lambda text: self.update_string_list())
+        hlayout.addWidget(self.search_bar)
 
         self.strings_widget = qtw.QTreeWidget()
         self.strings_widget.itemSelectionChanged.connect(
@@ -504,7 +500,8 @@ class EditorTab(qtw.QWidget):
         Updates visible string list.
         """
 
-        cur_search = self.search_box.text().lower()
+        cur_search = self.search_bar.text()
+        case_sensitive = self.search_bar.cs_toggle.isChecked()
 
         no_translation_required_strings = 0
         translation_complete_strings = 0
@@ -520,7 +517,10 @@ class EditorTab(qtw.QWidget):
             if string.translated_string is not None:
                 string_text += string.translated_string
 
-            string_visible = cur_search in string_text.lower()
+            if case_sensitive:
+                string_visible = cur_search in string_text
+            else:
+                string_visible = cur_search.lower() in string_text.lower()
 
             if string_visible:
                 match string.status:
@@ -705,7 +705,7 @@ class EditorTab(qtw.QWidget):
         replace_entry = qtw.QLineEdit()
         flayout.addRow(self.mloc.replace, replace_entry)
 
-        case_sensitivity_checkbox = qtw.QCheckBox(self.mloc.case_sensitivity)
+        case_sensitivity_checkbox = qtw.QCheckBox(self.loc.main.case_sensitivity)
         flayout.addRow(case_sensitivity_checkbox)
 
         vlayout.addStretch()
@@ -934,13 +934,10 @@ class EditorTab(qtw.QWidget):
         message_box.setWindowTitle(self.mloc.reset_translation)
         message_box.setText(self.mloc.reset_translation_text)
         message_box.setStandardButtons(
-            qtw.QMessageBox.StandardButton.No
-            | qtw.QMessageBox.StandardButton.Yes
+            qtw.QMessageBox.StandardButton.No | qtw.QMessageBox.StandardButton.Yes
         )
         message_box.setDefaultButton(qtw.QMessageBox.StandardButton.No)
-        message_box.button(qtw.QMessageBox.StandardButton.No).setText(
-            self.loc.main.no
-        )
+        message_box.button(qtw.QMessageBox.StandardButton.No).setText(self.loc.main.no)
         message_box.button(qtw.QMessageBox.StandardButton.Yes).setText(
             self.loc.main.yes
         )
@@ -949,15 +946,11 @@ class EditorTab(qtw.QWidget):
         if choice == qtw.QMessageBox.StandardButton.Yes:
             for item in self.strings_widget.selectedItems():
                 string = [
-                    _string
-                    for _string in self.strings
-                    if _string.tree_item == item
+                    _string for _string in self.strings if _string.tree_item == item
                 ][0]
                 string.translated_string = string.original_string
                 string.status = string.Status.TranslationRequired
-                string.tree_item.setText(
-                    4, utils.trim_string(string.translated_string)
-                )
+                string.tree_item.setText(4, utils.trim_string(string.translated_string))
 
             self.update_string_list()
             self.changes_signal.emit()

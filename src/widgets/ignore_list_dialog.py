@@ -9,8 +9,10 @@ import qtpy.QtCore as qtc
 import qtpy.QtGui as qtg
 import qtpy.QtWidgets as qtw
 
-from main import MainApp
 import utilities as utils
+from main import MainApp
+
+from .search_bar import SearchBar
 
 
 class IgnoreListDialog(qtw.QDialog):
@@ -49,7 +51,9 @@ class IgnoreListDialog(qtw.QDialog):
 
         userlist_widget = qtw.QListWidget()
         userlist_widget.setAlternatingRowColors(True)
-        userlist_widget.setSelectionMode(userlist_widget.SelectionMode.ExtendedSelection)
+        userlist_widget.setSelectionMode(
+            userlist_widget.SelectionMode.ExtendedSelection
+        )
 
         def on_select():
             items = userlist_widget.selectedItems()
@@ -72,22 +76,25 @@ class IgnoreListDialog(qtw.QDialog):
         userlist_widget.addItems(self.app.mainpage_widget.ignore_list)
         vlayout.addWidget(userlist_widget)
 
-        search_box = qtw.QLineEdit()
-        search_box.setClearButtonEnabled(True)
-        search_box.addAction(
-            qta.icon("fa.search", color="#ffffff"),
-            qtw.QLineEdit.ActionPosition.LeadingPosition,
-        )
-        search_box.setPlaceholderText(self.loc.main.search)
+        search_bar = SearchBar()
+        search_bar.setPlaceholderText(self.loc.main.search)
+        search_bar.cs_toggle.setToolTip(self.loc.main.case_sensitivity)
 
         def search(text: str):
-            for rindex in range(userlist_widget.count()):
-                userlist_widget.setRowHidden(
-                    rindex, text.lower() not in userlist_widget.item(rindex).text().lower()
-                )
+            case_sensitive = search_bar.cs_toggle.isChecked()
 
-        search_box.textChanged.connect(search)
-        vlayout.addWidget(search_box)
+            for rindex in range(userlist_widget.count()):
+                if case_sensitive:
+                    item_visible = text in userlist_widget.item(rindex).text()
+                else:
+                    item_visible = (
+                        text.lower() in userlist_widget.item(rindex).text().lower()
+                    )
+
+                userlist_widget.setRowHidden(rindex, not item_visible)
+
+        search_bar.textChanged.connect(search)
+        vlayout.addWidget(search_bar)
 
         vanilla_list_widget = qtw.QListWidget()
         vanilla_list_widget.setSelectionMode(qtw.QListWidget.SelectionMode.NoSelection)
@@ -105,4 +112,3 @@ class IgnoreListDialog(qtw.QDialog):
         )
         tab_widget.addTab(masterlist_widget, self.mloc.masterlist)
         tab_widget.setTabEnabled(2, bool(masterlist_widget.count()))
-

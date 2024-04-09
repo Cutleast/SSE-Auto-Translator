@@ -14,7 +14,7 @@ import qtpy.QtWidgets as qtw
 
 import utilities as utils
 from main import MainApp
-from widgets import LoadingDialog, StringListDialog, DownloadListDialog
+from widgets import DownloadListDialog, LoadingDialog, StringListDialog
 
 from .translation import Translation
 
@@ -101,7 +101,9 @@ class TranslationsWidget(qtw.QWidget):
         )
         self.nxmhandler_button.setCheckable(True)
         if not self.app.api.premium:
-            self.tool_bar.widgetForAction(self.nxmhandler_button).setObjectName("accent_button")
+            self.tool_bar.widgetForAction(self.nxmhandler_button).setObjectName(
+                "accent_button"
+            )
         self.nxmhandler_button.triggered.connect(toggle_nxm)
 
         hlayout.addStretch()
@@ -343,7 +345,9 @@ class TranslationsWidget(qtw.QWidget):
             menu.addSeparator()
 
             show_strings_action = menu.addAction(self.loc.main.show_strings)
-            show_strings_action.setIcon(qta.icon("mdi6.book-open-outline", color="#ffffff"))
+            show_strings_action.setIcon(
+                qta.icon("mdi6.book-open-outline", color="#ffffff")
+            )
             show_strings_action.triggered.connect(show_strings)
 
             if not selected_plugin_name:
@@ -506,17 +510,26 @@ class TranslationsWidget(qtw.QWidget):
         Updates translations in case of search or similar.
         """
 
-        cur_search = self.app.mainpage_widget.search_box.text().lower()
+        cur_search = self.app.mainpage_widget.search_bar.text()
+        case_sensitive = self.app.mainpage_widget.search_bar.cs_toggle.isChecked()
 
         for translation in self.app.database.user_translations:
             if not translation.tree_item:
                 continue
 
-            translation_visible = cur_search in translation.name.lower()
+            if case_sensitive:
+                translation_visible = cur_search in translation.name
+            else:
+                translation_visible = cur_search.lower() in translation.name.lower()
 
             for cindex in range(translation.tree_item.childCount()):
                 plugin_item = translation.tree_item.child(cindex)
-                plugin_visible = cur_search in plugin_item.text(0).lower()
+
+                if case_sensitive:
+                    plugin_visible = cur_search in plugin_item.text(0)
+                else:
+                    plugin_visible = cur_search.lower() in plugin_item.text(0).lower()
+
                 if plugin_visible:
                     translation_visible = True
 

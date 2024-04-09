@@ -19,7 +19,8 @@ from main import MainApp
 from mod_managers import SUPPORTED_MOD_MANAGERS
 from plugin_parser import PluginParser
 from processor import Processor
-from widgets import IgnoreListDialog, LoadingDialog, StringListDialog
+from widgets import (IgnoreListDialog, LoadingDialog, SearchBar,
+                     StringListDialog)
 
 
 class MainPageWidget(qtw.QWidget):
@@ -240,16 +241,11 @@ class MainPageWidget(qtw.QWidget):
             lambda: Processor.run_deep_scan(self.mods, self.app)
         )
 
-        self.search_box = qtw.QLineEdit()
-        self.search_box.setClearButtonEnabled(True)
-        self.search_box.setPlaceholderText(self.loc.main.search)
-        self.search_icon: qtg.QAction = self.search_box.addAction(
-            qta.icon("fa.search", color="#ffffff"),
-            qtw.QLineEdit.ActionPosition.LeadingPosition,
-        )
-        self.search_box.textChanged.connect(lambda text: self.update_modlist())
-        self.search_box.returnPressed.connect(self.update_modlist)
-        hlayout.addWidget(self.search_box)
+        self.search_bar = SearchBar()
+        self.search_bar.setPlaceholderText(self.loc.main.search)
+        self.search_bar.cs_toggle.setToolTip(self.loc.main.case_sensitivity)
+        self.search_bar.textChanged.connect(lambda text: self.update_modlist())
+        hlayout.addWidget(self.search_bar)
 
         splitter = qtw.QSplitter()
         vlayout.addWidget(splitter, stretch=1)
@@ -324,19 +320,21 @@ class MainPageWidget(qtw.QWidget):
 
                     dialog = StringListDialog(self.app, selected_plugin.name, strings)
                     dialog.show()
-            
+
             def show_structure():
                 if plugin_selected:
                     parser = PluginParser(selected_plugin.path)
                     parser.parse_plugin()
 
                     with ThreadPoolExecutor(thread_name_prefix="Processor") as exec:
-                        text = exec.submit(lambda data: str(data), parser.parsed_data).result()
+                        text = exec.submit(
+                            lambda data: str(data), parser.parsed_data
+                        ).result()
                     self.app.log.debug(f"Text Length: {len(text)}")
 
                     with open("debug.txt", "w", encoding="utf8") as file:
                         file.write(text)
-                    
+
                     self.app.log.debug(f"Written to 'debug.txt'.")
 
                     dialog = qtw.QDialog(self.app.root)
@@ -733,10 +731,10 @@ class MainPageWidget(qtw.QWidget):
 
             if plugin_selected:
                 open_action = menu.addAction(self.loc.main.open)
-                open_action.setIcon(
-                    qta.icon("fa5s.external-link-alt", color="#ffffff")
+                open_action.setIcon(qta.icon("fa5s.external-link-alt", color="#ffffff"))
+                open_action.triggered.connect(
+                    lambda: os.startfile(selected_plugin.path)
                 )
-                open_action.triggered.connect(lambda: os.startfile(selected_plugin.path))
 
             if mod_selected:
                 open_modpage_action = menu.addAction(self.loc.main.open_on_nexusmods)
@@ -763,11 +761,8 @@ class MainPageWidget(qtw.QWidget):
         )
         splitter.addWidget(self.database_widget)
 
-        self.search_box.textChanged.connect(
+        self.search_bar.textChanged.connect(
             lambda text: self.database_widget.translations_widget.update_translations()
-        )
-        self.search_box.returnPressed.connect(
-            self.database_widget.translations_widget.update_translations
         )
 
         splitter.setSizes([0.8 * splitter.width(), 0.2 * splitter.width()])
@@ -779,7 +774,8 @@ class MainPageWidget(qtw.QWidget):
         Updates visible modlist.
         """
 
-        cur_search = self.search_box.text().lower()
+        cur_search = self.search_bar.text()
+        case_sensitive = self.search_bar.cs_toggle.isChecked()
 
         ignore_list = (
             self.ignore_list
@@ -818,7 +814,11 @@ class MainPageWidget(qtw.QWidget):
             global no_translation_available_plugins
 
             mod_visible = (
-                cur_search in mod_item.text(0).lower()
+                cur_search in mod_item.text(0)
+                or (
+                    cur_search.lower() in mod_item.text(0).lower()
+                    and not case_sensitive
+                )
                 if cur_search
                 else not mod_item.childCount() and self.filter_none.isChecked()
             )
@@ -826,7 +826,10 @@ class MainPageWidget(qtw.QWidget):
             mod = [_mod for _mod in self.mods if _mod.tree_item == mod_item][0]
 
             for plugin in mod.plugins:
-                plugin_visible = cur_search in plugin.name.lower()
+                if case_sensitive:
+                    plugin_visible = cur_search in plugin.name
+                else:
+                    plugin_visible = cur_search.lower() in plugin.name.lower()
 
                 if plugin.name.lower() in ignore_list:
                     plugin.status = plugin.Status.NoneStatus
@@ -930,7 +933,11 @@ class MainPageWidget(qtw.QWidget):
             else:
                 separator_item = toplevel_item
                 separator_visible = (
-                    cur_search in separator_item.text(0).lower()
+                    cur_search in separator_item.text(0)
+                    or (
+                        cur_search.lower() in separator_item.text(0).lower()
+                        and not case_sensitive
+                    )
                     if cur_search
                     else (
                         not separator_item.childCount() and self.filter_none.isChecked()

@@ -14,6 +14,8 @@ import qtpy.QtWidgets as qtw
 
 import utilities as utils
 
+from .search_bar import SearchBar
+
 
 class StringListDialog(qtw.QWidget):
     """
@@ -114,15 +116,11 @@ class StringListDialog(qtw.QWidget):
         )
         self.tool_bar.addAction(filter_action)
 
-        self.search_box = qtw.QLineEdit()
-        self.search_box.setClearButtonEnabled(True)
-        self.search_icon: qtg.QAction = self.search_box.addAction(
-            qta.icon("fa.search", color="#ffffff"),
-            qtw.QLineEdit.ActionPosition.LeadingPosition,
-        )
-        self.search_box.textChanged.connect(lambda text: self.update_string_list())
-        self.search_box.setPlaceholderText(self.loc.main.search)
-        hlayout.addWidget(self.search_box)
+        self.search_bar = SearchBar()
+        self.search_bar.setPlaceholderText(self.loc.main.search)
+        self.search_bar.cs_toggle.setToolTip(self.loc.main.case_sensitivity)
+        self.search_bar.textChanged.connect(lambda text: self.update_string_list())
+        hlayout.addWidget(self.search_bar)
 
         self.strings_widget = qtw.QTreeWidget()
         self.strings_widget.setContextMenuPolicy(
@@ -177,7 +175,7 @@ class StringListDialog(qtw.QWidget):
                 ]
             )
 
-        self.string_items: dict[utils.String, qtw.QTreeWidgetItem] = {}
+        self.string_items: list[tuple[utils.String, qtw.QTreeWidgetItem]] = []
 
         for string in strings:
             if show_translation:
@@ -223,9 +221,7 @@ class StringListDialog(qtw.QWidget):
             item.setFont(0, qtg.QFont("Consolas"))
             item.setFont(1, qtg.QFont("Consolas"))
             item.setFont(2, qtg.QFont("Consolas"))
-            if string in self.string_items:
-                self.log.warning(f"String {string} already has an item!")
-            self.string_items[string] = item
+            self.string_items.append((string, item))
 
             self.strings_widget.addTopLevelItem(item)
 
@@ -240,9 +236,10 @@ class StringListDialog(qtw.QWidget):
             self.strings_widget.header().resizeSection(3, 600)
 
     def update_string_list(self):
-        cur_search = self.search_box.text().lower()
+        cur_search = self.search_bar.text()
+        case_sensitive = self.search_bar.cs_toggle.isChecked()
 
-        for string, item in self.string_items.items():
+        for string, item in self.string_items:
             string_text = string.type + string.original_string
             if string.form_id is not None:
                 string_text += string.form_id
@@ -251,7 +248,10 @@ class StringListDialog(qtw.QWidget):
             if string.translated_string is not None:
                 string_text += string.translated_string
 
-            string_visible = cur_search in string_text.lower()
+            if case_sensitive:
+                string_visible = cur_search in string_text
+            else:
+                string_visible = cur_search.lower() in string_text.lower()
 
             if string_visible:
                 match string.status:
