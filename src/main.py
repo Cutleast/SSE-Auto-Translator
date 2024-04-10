@@ -93,7 +93,7 @@ class MainApp(qtw.QApplication):
         super().__init__()
 
         self.setApplicationName(self.name)
-        self.setApplicationDisplayName(self.name)
+        self.setApplicationDisplayName(f"{self.name} v{self.version}")
         self.setApplicationVersion(self.version)
 
         self.setWindowIcon(qtg.QIcon(str(self.data_path / "icons" / "icon.png")))
