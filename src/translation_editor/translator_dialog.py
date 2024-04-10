@@ -22,6 +22,7 @@ class TranslatorDialog(qtw.QWidget):
 
     changes_pending: bool = False
     changes_signal = qtc.Signal()
+    prev_text = None
 
     def __init__(
         self,
@@ -31,11 +32,17 @@ class TranslatorDialog(qtw.QWidget):
         super().__init__()
 
         def on_change():
-            self.changes_pending = True
-            current_index = self.tab.strings_widget.indexFromItem(self.string.tree_item, 0).row()
-            self.setWindowTitle(
-                f"{string.editor_id} - {string.type} ({current_index+1}/{len(self.tab.strings)})*"
-            )
+            if self.string_entry.toPlainText() != self.prev_text:
+                self.changes_pending = True
+                current_index = self.tab.strings_widget.indexFromItem(
+                    self.string.tree_item, 0
+                ).row()
+                self.setWindowTitle(
+                    f"\
+{self.string.editor_id or self.string.form_id} - \
+{self.string.type} ({current_index+1}/{len(self.tab.strings)})*"
+                )
+                self.prev_text = self.string_entry.toPlainText()
 
         self.changes_signal.connect(on_change)
 
@@ -143,7 +150,9 @@ class TranslatorDialog(qtw.QWidget):
         splitter.addWidget(self.original_entry)
 
         if self.app.app_config["use_spell_check"]:
-            self.string_entry = SpellCheckEntry(language=self.app.user_config["language"].lower())
+            self.string_entry = SpellCheckEntry(
+                language=self.app.user_config["language"].lower()
+            )
         else:
             self.string_entry = qtw.QPlainTextEdit()
         self.string_entry.textChanged.connect(self.changes_signal.emit)
@@ -172,13 +181,19 @@ class TranslatorDialog(qtw.QWidget):
         hlayout.addWidget(finish_button)
 
         complete_shortcut = qtg.QShortcut(qtg.QKeySequence("F1"), self)
-        complete_shortcut.activated.connect(lambda: self.goto_next(utils.String.Status.TranslationComplete))
+        complete_shortcut.activated.connect(
+            lambda: self.goto_next(utils.String.Status.TranslationComplete)
+        )
 
         incomplete_shortcut = qtg.QShortcut(qtg.QKeySequence("F2"), self)
-        incomplete_shortcut.activated.connect(lambda: self.goto_next(utils.String.Status.TranslationIncomplete))
+        incomplete_shortcut.activated.connect(
+            lambda: self.goto_next(utils.String.Status.TranslationIncomplete)
+        )
 
         no_required_shortcut = qtg.QShortcut(qtg.QKeySequence("F3"), self)
-        no_required_shortcut.activated.connect(lambda: self.goto_next(utils.String.Status.NoTranslationRequired))
+        no_required_shortcut.activated.connect(
+            lambda: self.goto_next(utils.String.Status.NoTranslationRequired)
+        )
 
         self.set_string(string)
 
@@ -192,7 +207,7 @@ class TranslatorDialog(qtw.QWidget):
         )
 
         self.string_entry.setPlainText(translated)
-    
+
     def reset_translation(self):
         """
         Resets string to original string.
@@ -276,11 +291,16 @@ class TranslatorDialog(qtw.QWidget):
             pass
         self.string_entry.setPlainText(string.translated_string)
         self.string_entry.textChanged.connect(self.changes_signal.emit)
+        self.prev_text = self.string_entry.toPlainText()
         self.changes_pending = False
 
-        current_index = self.tab.strings_widget.indexFromItem(self.string.tree_item, 0).row()
+        current_index = self.tab.strings_widget.indexFromItem(
+            self.string.tree_item, 0
+        ).row()
         self.setWindowTitle(
-            f"{string.editor_id} - {string.type} ({current_index+1}/{len(self.tab.strings)})"
+            f"\
+{string.editor_id or string.form_id} - \
+{string.type} ({current_index+1}/{len(self.tab.strings)})"
         )
 
     def goto_next(self, finalize_with_status: utils.String.Status | None = None):
@@ -289,7 +309,9 @@ class TranslatorDialog(qtw.QWidget):
         """
 
         # current_index = self.tab.strings.index(self.string)
-        current_index = self.tab.strings_widget.indexFromItem(self.string.tree_item, 0).row()
+        current_index = self.tab.strings_widget.indexFromItem(
+            self.string.tree_item, 0
+        ).row()
 
         if current_index == (len(self.tab.strings) - 1):
             new_index = 0
@@ -297,11 +319,10 @@ class TranslatorDialog(qtw.QWidget):
             new_index = current_index + 1
 
         # new_string = self.tab.strings[new_index]
-        new_item = self.tab.strings_widget.itemFromIndex(self.tab.strings_widget.model().index(new_index, 0))
-        items = {
-            string.tree_item: string
-            for string in self.tab.strings
-        }
+        new_item = self.tab.strings_widget.itemFromIndex(
+            self.tab.strings_widget.model().index(new_index, 0)
+        )
+        items = {string.tree_item: string for string in self.tab.strings}
         new_string = items[new_item]
         self.set_string(new_string, finalize_with_status)
 
@@ -311,19 +332,20 @@ class TranslatorDialog(qtw.QWidget):
         """
 
         # current_index = self.tab.strings.index(self.string)
-        current_index = self.tab.strings_widget.indexFromItem(self.string.tree_item, 0).row()
-        
+        current_index = self.tab.strings_widget.indexFromItem(
+            self.string.tree_item, 0
+        ).row()
+
         if current_index > 0:
             new_index = current_index - 1
         else:
             new_index = len(self.tab.strings) - 1
 
         # new_string = self.tab.strings[new_index]
-        new_item = self.tab.strings_widget.itemFromIndex(self.tab.strings_widget.model().index(new_index, 0))
-        items = {
-            string.tree_item: string
-            for string in self.tab.strings
-        }
+        new_item = self.tab.strings_widget.itemFromIndex(
+            self.tab.strings_widget.model().index(new_index, 0)
+        )
+        items = {string.tree_item: string for string in self.tab.strings}
         new_string = items[new_item]
         self.set_string(new_string)
 
