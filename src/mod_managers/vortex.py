@@ -121,6 +121,9 @@ class Vortex(ModManager):
                     file_id: int = int(mod_meta_data.get("fileId", 0))
                     version: str = mod_meta_data.get("version", "")
 
+                    while version.endswith(".0") and version.count(".") > 1:
+                        version = version.removesuffix(".0")
+
                     plugin_files = [
                         file
                         for suffix in [".esl", ".esm", ".esp"]
