@@ -117,6 +117,12 @@ class Vortex(ModManager):
                     mod_path: Path = staging_folder / moddata.get(
                         "installationPath", modname
                     )
+
+                    if not mod_path.is_dir():
+                        self.log.warning(
+                            f"Failed to load mod files of mod {new_name!r}: {str(mod_path)!r} does not exist!"
+                        )
+
                     mod_id: int = int(mod_meta_data.get("modId", 0))
                     file_id: int = int(mod_meta_data.get("fileId", 0))
                     version: str = mod_meta_data.get("version", "")
@@ -152,6 +158,8 @@ class Vortex(ModManager):
         self.log.debug("Sorting modlist according to conflict rules...")
 
         sorted_list = self.sort_modlist(mods)
+
+        self.log.debug("Sorting complete.")
 
         self.log.info(f"Got {len(sorted_list)} mod(s) from profile.")
 
