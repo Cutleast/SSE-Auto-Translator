@@ -35,7 +35,7 @@ class MainApp(qtw.QApplication):
     version = "1.1.1"
 
     loc: "utils.Localisator" = None
-    cur_path = Path(__file__).parent
+    cur_path = Path(__file__).parent.resolve()
     data_path = cur_path / "data"
     app_conf_path = data_path / "app" / "config.json"
     user_conf_path = data_path / "user" / "config.json"
