@@ -106,7 +106,7 @@ class AppSettings(qtw.QWidget):
         flayout.addRow(self.mloc.detector_confidence, self.confidence_box)
 
         # Output path
-        output_path_label = qtw.QLabel(self.mloc.output_path)
+        output_path_label = qtw.QLabel(f"{self.mloc.output_path} ({self.mloc.no_restart_required})")
         hlayout = qtw.QHBoxLayout()
         flayout.addRow(output_path_label, hlayout)
 
@@ -146,7 +146,7 @@ class AppSettings(qtw.QWidget):
         self.bind_nxm_checkbox.stateChanged.connect(self.on_change)
         flayout.addRow(self.bind_nxm_checkbox)
 
-        self.use_spell_check_checkbox = qtw.QCheckBox(self.mloc.use_spell_check)
+        self.use_spell_check_checkbox = qtw.QCheckBox(f"{self.mloc.use_spell_check} ({self.mloc.no_restart_required})")
         self.use_spell_check_checkbox.setChecked(self.app.app_config["use_spell_check"])
         self.use_spell_check_checkbox.stateChanged.connect(self.on_change)
         flayout.addRow(self.use_spell_check_checkbox)

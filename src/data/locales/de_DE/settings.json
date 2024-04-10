@@ -25,5 +25,6 @@
     "empty_translator_api_key": "Translator API Key ist leer",
     "empty_translator_api_key_text": "Die ausgewählte Translator API benötigt einen API Key! Bitte einen eingeben und erneut versuchen.",
     "use_spell_check": "Aktiviere Rechtschreibprüfung im Editor",
-    "output_path": "Pfad für den DSD Output"
+    "output_path": "Pfad für den DSD Output",
+    "no_restart_required": "Für diese Einstellung ist kein Neustart notwendig"
 }
