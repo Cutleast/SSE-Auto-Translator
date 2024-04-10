@@ -61,7 +61,7 @@ class TranslatorDialog(qtw.QWidget):
             self.mloc.goto_prev,
         )
         prev_button.clicked.connect(self.goto_prev)
-        prev_button.setShortcut(qtg.QKeySequence("Ctrl+Alt+Left"))
+        prev_button.setShortcut(qtg.QKeySequence("Alt+Left"))
         hlayout.addWidget(prev_button)
 
         hlayout.addStretch()
@@ -71,7 +71,7 @@ class TranslatorDialog(qtw.QWidget):
             self.mloc.goto_next,
         )
         next_button.clicked.connect(self.goto_next)
-        next_button.setShortcut(qtg.QKeySequence("Ctrl+Alt+Right"))
+        next_button.setShortcut(qtg.QKeySequence("Alt+Right"))
         next_button.setLayoutDirection(qtc.Qt.LayoutDirection.RightToLeft)
         hlayout.addWidget(next_button)
 
