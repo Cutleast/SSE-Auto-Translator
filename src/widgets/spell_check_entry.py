@@ -50,7 +50,6 @@ class SpellCheckEntry(qtw.QPlainTextEdit):
         text_cursor.select(text_cursor.SelectionType.WordUnderCursor)
 
         word = text_cursor.selectedText()
-        self.log.debug(f"Clicked on {word!r}")
         fmt = text_cursor.charFormat()
 
         def ignore():
@@ -66,8 +65,6 @@ class SpellCheckEntry(qtw.QPlainTextEdit):
         ):
             first_std_action = menu.actions()[0]
             suggestions: tuple[str] = self.checker.suggest(word)
-
-            self.log.debug(f"Suggestions for {word!r}: {suggestions}")
 
             if suggestions is not None:
                 separator = menu.insertSeparator(first_std_action)
@@ -125,7 +122,6 @@ class SpellCheckEntry(qtw.QPlainTextEdit):
             cursor.select(cursor.SelectionType.WordUnderCursor)
 
             word_correct = self.checker.spell(word)
-            self.log.info(f"Word {word!r} correct: {word_correct}")
 
             fmt = qtg.QTextCharFormat()
 
