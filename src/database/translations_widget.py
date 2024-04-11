@@ -5,6 +5,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import os
+import time
 from pathlib import Path
 
 import qtawesome as qta
@@ -372,8 +373,7 @@ class TranslationsWidget(qtw.QWidget):
             message_box.setWindowTitle(self.loc.main.delete)
             message_box.setText(self.loc.main.delete_text)
             message_box.setStandardButtons(
-                qtw.QMessageBox.StandardButton.No
-                | qtw.QMessageBox.StandardButton.Yes
+                qtw.QMessageBox.StandardButton.No | qtw.QMessageBox.StandardButton.Yes
             )
             message_box.setDefaultButton(qtw.QMessageBox.StandardButton.Yes)
             message_box.button(qtw.QMessageBox.StandardButton.No).setText(
@@ -388,9 +388,7 @@ class TranslationsWidget(qtw.QWidget):
 
             self.app.log.info("Deleting selected translations...")
             for translation in matching:
-                self.app.translation_editor.close_translation(
-                    translation, silent=True
-                )
+                self.app.translation_editor.close_translation(translation, silent=True)
                 self.app.database.delete_translation(translation)
             self.app.log.info("Translations deleted. Updating database...")
 
@@ -676,6 +674,8 @@ class TranslationsWidget(qtw.QWidget):
                         path=self.app.database.userdb_path
                         / self.app.database.language
                         / file.stem,
+                        source=Translation.Source.Local,
+                        timestamp=int(time.time()),
                     )
                     translation.strings = strings
                     translation.save_translation()

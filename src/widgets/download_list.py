@@ -343,6 +343,10 @@ class DownloadListDialog(qtw.QWidget):
                     path=self.app.database.userdb_path
                     / self.app.database.language
                     / translation_name,
+                    source=Translation.Source.NexusMods,
+                    timestamp=self.app.api.get_timestamp_of_file(
+                        "skyrimspecialedition", mod_id, file_id
+                    ),
                 )
                 if translation not in download_translations:
                     download_translations.append(translation)
@@ -357,7 +361,9 @@ class DownloadListDialog(qtw.QWidget):
                 ]
             )
             item.setFont(1, qtg.QFont("Consolas"))
-            self.app.mainpage_widget.database_widget.downloads_widget.items[translation] = item
+            self.app.mainpage_widget.database_widget.downloads_widget.items[
+                translation
+            ] = item
             self.app.mainpage_widget.database_widget.downloads_widget.downloads_widget.addTopLevelItem(
                 item
             )

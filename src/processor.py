@@ -6,6 +6,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 import os
 import shutil
+import time
 from copy import copy
 from fnmatch import fnmatch
 from pathlib import Path
@@ -204,6 +205,13 @@ class Processor:
                     f"Found original mod {original_mod.name!r} for DSD translation {mod.name!r}."
                 )
 
+                if mod.mod_id and mod.file_id:
+                    source = Translation.Source.NexusMods
+                elif mod.mod_id:
+                    source = Translation.Source.Confrerie
+                else:
+                    source = Translation.Source.Local
+
                 translation = Translation(
                     mod.name,
                     mod.mod_id,
@@ -214,6 +222,8 @@ class Processor:
                     original_mod.version,
                     app.database.userdb_path / app.database.language / mod.name,
                     strings=strings,
+                    source=source,
+                    timestamp=int(time.time()),
                 )
                 translation.save_translation()
                 app.database.add_translation(translation)
@@ -284,6 +294,13 @@ class Processor:
                 for string in plugin_strings:
                     string.status = string.Status.TranslationComplete
 
+            if translated_mod.mod_id and translated_mod.file_id:
+                source = Translation.Source.NexusMods
+            elif translated_mod.mod_id:
+                source = Translation.Source.Confrerie
+            else:
+                source = Translation.Source.Local
+
             if len(strings):
                 translation = Translation(
                     translated_mod.name,
@@ -297,6 +314,8 @@ class Processor:
                     / app.database.language
                     / translated_mod.name,
                     strings=strings,
+                    source=source,
+                    timestamp=int(time.time()),
                 )
                 translation.save_translation()
                 app.database.add_translation(translation)

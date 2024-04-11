@@ -5,7 +5,6 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import logging
-
 import urllib.parse
 from enum import Enum, auto
 from pathlib import Path
@@ -296,6 +295,9 @@ class DownloadsWidget(qtw.QWidget):
         mod_details = self.app.api.get_mod_details("skyrimspecialedition", mod_id)
         mod_name: str = mod_details["name"]
         mod_version: str = mod_details["version"]
+        timestamp = self.app.api.get_timestamp_of_file(
+            "skyrimspecialedition", mod_id, file_id
+        )
 
         installed_translation = self.app.database.get_translation_by_id(mod_id)
 
@@ -322,6 +324,8 @@ class DownloadsWidget(qtw.QWidget):
                 path=self.app.database.userdb_path
                 / self.app.user_config["language"]
                 / mod_name,
+                source=Translation.Source.NexusMods,
+                timestamp=timestamp,
             )
 
         download = self.downloader.download_file(

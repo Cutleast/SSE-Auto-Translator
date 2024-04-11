@@ -5,6 +5,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import logging
+import time
 from pathlib import Path
 from shutil import rmtree
 
@@ -61,6 +62,7 @@ class TranslationDatabase:
             original_file_id=0,
             original_version="",
             path=translation_path,
+            source=Translation.Source.Local,
         )
         translation.load_translation()
         self.vanilla_translation = translation
@@ -95,6 +97,19 @@ class TranslationDatabase:
             original_mod_id: int = int(translation_data["original_mod_id"])
             original_file_id: int = int(translation_data["original_file_id"])
             original_version: str = translation_data["original_version"]
+            source = translation_data.get("source")
+            source = Translation.Source.get(source)
+
+            if source is None:
+                if mod_id and file_id:
+                    source = Translation.Source.NexusMods
+                elif mod_id:
+                    source = Translation.Source.Confrerie
+                else:
+                    source = Translation.Source.Local
+
+            timestamp: int | None = translation_data.get("file_timestamp")
+
             translation_path: Path = self.userdb_path / self.language / name
 
             translation = Translation(
@@ -106,6 +121,8 @@ class TranslationDatabase:
                 original_file_id,
                 original_version,
                 translation_path,
+                source=source,
+                timestamp=timestamp,
             )
             translation.load_translation()
             translations.append(translation)
@@ -139,6 +156,8 @@ class TranslationDatabase:
                 "original_mod_id": translation.original_mod_id,
                 "original_file_id": translation.original_file_id,
                 "original_version": translation.original_version,
+                "source": translation.source.name,
+                "timestamp": translation.timestamp,
             }
             for translation in self.user_translations
         ]
@@ -329,6 +348,8 @@ class TranslationDatabase:
             original_version="",
             path=self.userdb_path / self.language / translation_name,
             strings={plugin_path.name.lower(): plugin_strings},
+            source=Translation.Source.Local,
+            timestamp=int(time.time()),
         )
         self.apply_db_to_translation(translation, plugin_path.name.lower())
 
