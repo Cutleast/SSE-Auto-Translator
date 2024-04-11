@@ -9,7 +9,7 @@ from pathlib import Path
 
 DIST_FOLDER = Path("app.dist").resolve()
 APPNAME = "SSE Auto Translator"
-VERSION = "1.1.1"
+VERSION = "1.2.0"
 AUTHOR = "Cutleast"
 LICENSE = "Attribution-NonCommercial-NoDerivatives 4.0 International"
 UNUSED_ITEMS: list[Path] = [
