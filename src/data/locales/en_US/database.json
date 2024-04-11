@@ -28,5 +28,6 @@
     "translations_imported": "Translations successfully imported into Database.",
     "checking_for_updates": "Checking for available Updates...",
     "update_check_complete": "Update Check complete",
-    "updates_available": "Found Updates for [NUMBER] Translation(s)."
+    "updates_available": "Found Updates for [NUMBER] Translation(s).",
+    "source": "Source"
 }

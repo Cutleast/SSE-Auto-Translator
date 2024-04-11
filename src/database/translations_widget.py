@@ -139,6 +139,7 @@ class TranslationsWidget(qtw.QWidget):
             [
                 self.mloc.translation_name,
                 self.loc.main.version,
+                self.mloc.source,
             ]
         )
 
@@ -579,6 +580,7 @@ class TranslationsWidget(qtw.QWidget):
                 [
                     translation.name,
                     translation.version,
+                    translation.source.name,
                 ]
             )
 
@@ -586,6 +588,7 @@ class TranslationsWidget(qtw.QWidget):
                 plugin_item = qtw.QTreeWidgetItem(
                     [
                         plugin_name,
+                        "",
                         "",
                     ]
                 )
