@@ -235,7 +235,7 @@ class MainPageWidget(qtw.QWidget):
 
         deep_scan_action = self.tool_bar.addAction(
             qta.icon("mdi6.line-scan", color="#ffffff"),
-            self.loc.main.deep_scan + "\n[Experimental]",
+            self.loc.main.deep_scan,
         )
         deep_scan_action.triggered.connect(
             lambda: Processor.run_deep_scan(self.mods, self.app)
