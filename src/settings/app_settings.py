@@ -14,6 +14,7 @@ import qtpy.QtWidgets as qtw
 
 import utilities as utils
 from main import MainApp
+from widgets import ClearEntry
 
 
 class AppSettings(qtw.QWidget):
@@ -110,8 +111,7 @@ class AppSettings(qtw.QWidget):
         hlayout = qtw.QHBoxLayout()
         flayout.addRow(output_path_label, hlayout)
 
-        self.output_path_entry = qtw.QLineEdit()
-        self.output_path_entry.setClearButtonEnabled(True)
+        self.output_path_entry = ClearEntry()
         self.output_path_entry.setPlaceholderText(str(self.app.cur_path / "SSE-AT Output"))
         if self.app.app_config["output_path"] is not None:
             self.output_path_entry.setText(self.app.app_config["output_path"])

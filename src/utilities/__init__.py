@@ -270,14 +270,3 @@ def get_masterlist(language: str, cache: bool = True) -> dict[str, dict]:
             raise Exception(f"Request failed! Status Code: {res.status_code}")
 
     return masterlist
-
-
-class ProxyStyle(qtw.QProxyStyle):
-    """
-    Proxy Style to replace icon of clear button in QLineEdit.
-    """
-
-    def standardIcon(self, standardIcon, option=None, widget=None):
-        if standardIcon == qtw.QStyle.StandardPixmap.SP_LineEditClearButton:
-            return qtg.QIcon("./data/icons/close.svg")
-        return super().standardIcon(standardIcon, option, widget)
