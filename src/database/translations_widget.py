@@ -46,20 +46,10 @@ class TranslationsWidget(qtw.QWidget):
         )
 
         def show_vanilla_strings():
-            vanilla_strings = list(
-                set(  # Remove duplicates
-                    [
-                        string
-                        for plugin_strings in self.app.database.vanilla_translation.strings.values()
-                        for string in plugin_strings
-                    ]
-                )
-            )
-
             dialog = StringListDialog(
                 self.app,
                 "Base Game + AE CC Content",
-                vanilla_strings,
+                self.app.database.vanilla_translation.strings,
                 show_translation=True,
             )
             dialog.show()
@@ -192,18 +182,15 @@ class TranslationsWidget(qtw.QWidget):
                         self.app,
                         f"{selected_translation.name} > {selected_plugin_name}",
                         strings,
-                        True,
+                        show_translation=True,
                     )
                     dialog.show()
                 else:
-                    strings = [
-                        string
-                        for plugin_strings in selected_translation.strings.values()
-                        for string in plugin_strings
-                    ]
-
                     dialog = StringListDialog(
-                        self.app, selected_translation.name, strings, True
+                        self.app,
+                        selected_translation.name,
+                        selected_translation.strings,
+                        show_translation=True,
                     )
                     dialog.show()
 

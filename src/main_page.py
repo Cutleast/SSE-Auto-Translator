@@ -19,8 +19,7 @@ from main import MainApp
 from mod_managers import SUPPORTED_MOD_MANAGERS
 from plugin_parser import PluginParser
 from processor import Processor
-from widgets import (IgnoreListDialog, LoadingDialog, SearchBar,
-                     StringListDialog)
+from widgets import IgnoreListDialog, LoadingDialog, SearchBar, StringListDialog
 
 
 class MainPageWidget(qtw.QWidget):
@@ -320,6 +319,21 @@ class MainPageWidget(qtw.QWidget):
 
                     dialog = StringListDialog(self.app, selected_plugin.name, strings)
                     dialog.show()
+                elif mod_selected:
+                    strings: dict[str, list[utils.String]] = {}
+
+                    for plugin in selected_mod.plugins:
+                        parser = PluginParser(plugin.path)
+                        parser.parse_plugin()
+                        plugin_strings = [
+                            string
+                            for group in parser.extract_strings().values()
+                            for string in group
+                        ]
+                        strings[plugin.name] = plugin_strings
+
+                    dialog = StringListDialog(self.app, selected_mod.name, strings)
+                    dialog.show()
 
             def show_structure():
                 if plugin_selected:
@@ -477,13 +491,12 @@ class MainPageWidget(qtw.QWidget):
                     translation = self.app.database.get_translation_by_mod(selected_mod)
 
                 if translation:
-                    strings = [
-                        string
-                        for plugin_strings in translation.strings.values()
-                        for string in plugin_strings
-                    ]
-
-                    dialog = StringListDialog(self.app, translation.name, strings, True)
+                    dialog = StringListDialog(
+                        self.app,
+                        translation.name,
+                        translation.strings,
+                        show_translation=True,
+                    )
                     dialog.show()
 
             def show_translation():
@@ -696,15 +709,15 @@ class MainPageWidget(qtw.QWidget):
                         import_as_translation
                     )
 
+            menu.addSeparator()
+
+            show_strings_action = menu.addAction(self.loc.main.show_strings)
+            show_strings_action.setIcon(
+                qta.icon("mdi6.book-open-outline", color="#ffffff")
+            )
+            show_strings_action.triggered.connect(show_strings)
+
             if plugin_selected:
-                menu.addSeparator()
-
-                show_strings_action = menu.addAction(self.loc.main.show_strings)
-                show_strings_action.setIcon(
-                    qta.icon("mdi6.book-open-outline", color="#ffffff")
-                )
-                show_strings_action.triggered.connect(show_strings)
-
                 show_structure_action = menu.addAction(self.loc.main.show_structure)
                 show_structure_action.setIcon(
                     qta.icon("ph.tree-structure", color="#ffffff")
