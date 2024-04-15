@@ -14,7 +14,13 @@ import qtpy.QtWidgets as qtw
 
 import utilities as utils
 from main import MainApp
-from widgets import DownloadListDialog, LoadingDialog, StringListDialog, ShortcutButton, ErrorDialog
+from widgets import (
+    DownloadListDialog,
+    LoadingDialog,
+    StringListDialog,
+    ShortcutButton,
+    ErrorDialog,
+)
 
 from .translation import Translation
 
@@ -370,35 +376,51 @@ class TranslationsWidget(qtw.QWidget):
         type_box = qtw.QCheckBox(self.loc.main.type)
         type_entry = qtw.QLineEdit()
         type_entry.setDisabled(True)
-        type_box.stateChanged.connect(lambda state: type_entry.setEnabled(state == qtc.Qt.CheckState.Checked.value))
+        type_box.stateChanged.connect(
+            lambda state: type_entry.setEnabled(
+                state == qtc.Qt.CheckState.Checked.value
+            )
+        )
         type_box.clicked.connect(type_entry.setFocus)
         flayout.addRow(type_box, type_entry)
 
         formid_box = qtw.QCheckBox(self.loc.main.form_id)
         formid_entry = qtw.QLineEdit()
         formid_entry.setDisabled(True)
-        formid_box.stateChanged.connect(lambda state: formid_entry.setEnabled(state == qtc.Qt.CheckState.Checked.value))
+        formid_box.stateChanged.connect(
+            lambda state: formid_entry.setEnabled(
+                state == qtc.Qt.CheckState.Checked.value
+            )
+        )
         formid_box.clicked.connect(formid_entry.setFocus)
         flayout.addRow(formid_box, formid_entry)
 
         edid_box = qtw.QCheckBox(self.loc.main.editor_id)
         edid_entry = qtw.QLineEdit()
         edid_entry.setDisabled(True)
-        edid_box.stateChanged.connect(lambda state: edid_entry.setEnabled(state == qtc.Qt.CheckState.Checked.value))
+        edid_box.stateChanged.connect(
+            lambda state: edid_entry.setEnabled(
+                state == qtc.Qt.CheckState.Checked.value
+            )
+        )
         edid_box.clicked.connect(edid_entry.setFocus)
         flayout.addRow(edid_box, edid_entry)
 
         original_box = qtw.QRadioButton(self.loc.main.original)
         original_entry = qtw.QLineEdit()
         original_entry.setDisabled(True)
-        original_box.toggled.connect(lambda: original_entry.setEnabled(original_box.isChecked()))
+        original_box.toggled.connect(
+            lambda: original_entry.setEnabled(original_box.isChecked())
+        )
         original_box.clicked.connect(original_entry.setFocus)
         flayout.addRow(original_box, original_entry)
 
         string_box = qtw.QRadioButton(self.loc.main.string)
         string_entry = qtw.QLineEdit()
         string_entry.setDisabled(True)
-        string_box.toggled.connect(lambda: string_entry.setEnabled(string_box.isChecked()))
+        string_box.toggled.connect(
+            lambda: string_entry.setEnabled(string_box.isChecked())
+        )
         string_box.clicked.connect(string_entry.setFocus)
         flayout.addRow(string_box, string_entry)
 
@@ -423,19 +445,18 @@ class TranslationsWidget(qtw.QWidget):
 
             if type_box.isChecked():
                 filter["type"] = type_entry.text()
-            
+
             if formid_box.isChecked():
                 filter["form_id"] = formid_entry.text()
-            
+
             if edid_box.isChecked():
                 filter["editor_id"] = edid_entry.text()
-            
+
             if original_box.isChecked() and original_entry.text():
                 filter["original"] = original_entry.text()
             elif string_box.isChecked() and string_box.text():
                 filter["string"] = string_entry.text()
 
-            # def process(ldialog)
             matching = self.app.database.search_database(filter)
 
             if len(matching):
@@ -450,10 +471,10 @@ class TranslationsWidget(qtw.QWidget):
                 dialog = ErrorDialog(
                     self.app.root,
                     self.app,
-                    title=self.mloc.no_strings_found,
-                    text=self.mloc.no_strings_found_text,
+                    title=self.loc.main.no_strings_found,
+                    text=self.loc.main.no_strings_found_text,
                     details=str(filter),
-                    yesno=False
+                    yesno=False,
                 )
                 dialog.exec()
 

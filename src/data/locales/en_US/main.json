@@ -108,5 +108,9 @@
     "open": "Open",
     "show_structure": "Show Plugin Structure (Warning: this may take a while)",
     "dont_save": "Don't save",
-    "case_sensitivity": "Case Sensitivity"
+    "case_sensitivity": "Case Sensitivity",
+    "string_search": "Search Modlist for String",
+    "running_string_search": "Searching Modlist for String...",
+    "no_strings_found": "No Strings found",
+    "no_strings_found_text": "Did not find any strings matching the given filter!\nClick on \"Show Details\" to view used filter."
 }

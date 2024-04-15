@@ -19,7 +19,14 @@ from main import MainApp
 from mod_managers import SUPPORTED_MOD_MANAGERS
 from plugin_parser import PluginParser
 from processor import Processor
-from widgets import IgnoreListDialog, LoadingDialog, SearchBar, StringListDialog
+from widgets import (
+    ErrorDialog,
+    IgnoreListDialog,
+    LoadingDialog,
+    SearchBar,
+    ShortcutButton,
+    StringListDialog,
+)
 
 
 class MainPageWidget(qtw.QWidget):
@@ -239,6 +246,12 @@ class MainPageWidget(qtw.QWidget):
         deep_scan_action.triggered.connect(
             lambda: Processor.run_deep_scan(self.mods, self.app)
         )
+
+        string_search_action = self.tool_bar.addAction(
+            qta.icon("mdi6.layers-search", color="#ffffff"),
+            self.loc.main.string_search,
+        )
+        string_search_action.triggered.connect(self.run_string_search)
 
         self.search_bar = SearchBar()
         self.search_bar.setPlaceholderText(self.loc.main.search)
@@ -1277,3 +1290,121 @@ class MainPageWidget(qtw.QWidget):
         vlayout.addWidget(ok_button)
 
         dialog.exec()
+
+    def run_string_search(self):
+        """
+        Similar to Database Search feature but for loaded modlist.
+        """
+
+        dialog = qtw.QDialog(self.app.root)
+        dialog.setWindowTitle(self.loc.main.string_search)
+        dialog.setModal(True)
+        dialog.setMinimumWidth(700)
+        utils.apply_dark_title_bar(dialog)
+
+        flayout = qtw.QFormLayout()
+        dialog.setLayout(flayout)
+
+        type_box = qtw.QCheckBox(self.loc.main.type)
+        type_entry = qtw.QLineEdit()
+        type_entry.setDisabled(True)
+        type_box.stateChanged.connect(
+            lambda state: type_entry.setEnabled(
+                state == qtc.Qt.CheckState.Checked.value
+            )
+        )
+        type_box.clicked.connect(type_entry.setFocus)
+        flayout.addRow(type_box, type_entry)
+
+        formid_box = qtw.QCheckBox(self.loc.main.form_id)
+        formid_entry = qtw.QLineEdit()
+        formid_entry.setDisabled(True)
+        formid_box.stateChanged.connect(
+            lambda state: formid_entry.setEnabled(
+                state == qtc.Qt.CheckState.Checked.value
+            )
+        )
+        formid_box.clicked.connect(formid_entry.setFocus)
+        flayout.addRow(formid_box, formid_entry)
+
+        edid_box = qtw.QCheckBox(self.loc.main.editor_id)
+        edid_entry = qtw.QLineEdit()
+        edid_entry.setDisabled(True)
+        edid_box.stateChanged.connect(
+            lambda state: edid_entry.setEnabled(
+                state == qtc.Qt.CheckState.Checked.value
+            )
+        )
+        edid_box.clicked.connect(edid_entry.setFocus)
+        flayout.addRow(edid_box, edid_entry)
+
+        original_box = qtw.QRadioButton(self.loc.main.original)
+        original_entry = qtw.QLineEdit()
+        original_entry.setDisabled(True)
+        original_box.toggled.connect(
+            lambda: original_entry.setEnabled(original_box.isChecked())
+        )
+        original_box.clicked.connect(original_entry.setFocus)
+        flayout.addRow(original_box, original_entry)
+
+        string_box = qtw.QRadioButton(self.loc.main.string)
+        string_entry = qtw.QLineEdit()
+        string_entry.setDisabled(True)
+        string_box.toggled.connect(
+            lambda: string_entry.setEnabled(string_box.isChecked())
+        )
+        string_box.clicked.connect(string_entry.setFocus)
+        flayout.addRow(string_box, string_entry)
+
+        hlayout = qtw.QHBoxLayout()
+        flayout.addRow(hlayout)
+
+        cancel_button = ShortcutButton(self.loc.main.cancel)
+        cancel_button.setShortcut(qtg.QKeySequence("Esc"))
+        cancel_button.clicked.connect(dialog.reject)
+        hlayout.addWidget(cancel_button)
+
+        hlayout.addStretch()
+
+        search_button = ShortcutButton(self.loc.main.search[:-3])
+        search_button.setObjectName("accent_button")
+        search_button.setShortcut(qtg.QKeySequence("Return"))
+        search_button.clicked.connect(dialog.accept)
+        hlayout.addWidget(search_button)
+
+        if dialog.exec() == dialog.DialogCode.Accepted:
+            filter: dict[str, str] = {}
+
+            if type_box.isChecked():
+                filter["type"] = type_entry.text()
+
+            if formid_box.isChecked():
+                filter["form_id"] = formid_entry.text()
+
+            if edid_box.isChecked():
+                filter["editor_id"] = edid_entry.text()
+
+            if original_box.isChecked() and original_entry.text():
+                filter["original"] = original_entry.text()
+            elif string_box.isChecked() and string_box.text():
+                filter["string"] = string_entry.text()
+
+            matching = Processor.run_string_search(self.mods, filter, self.app)
+
+            if len(matching):
+                dialog = StringListDialog(
+                    self.app,
+                    self.loc.main.scan_result,
+                    matching,
+                )
+                dialog.show()
+            else:
+                dialog = ErrorDialog(
+                    self.app.root,
+                    self.app,
+                    title=self.loc.main.no_strings_found,
+                    text=self.loc.main.no_strings_found_text,
+                    details=str(filter),
+                    yesno=False,
+                )
+                dialog.exec()

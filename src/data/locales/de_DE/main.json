@@ -106,5 +106,9 @@
     "open": "Öffnen",
     "show_structure": "Zeige Plugin Struktur (Warnung: das kann eine Weile dauern)",
     "dont_save": "Nicht speichern",
-    "case_sensitivity": "Groß- und Kleinschreibung beachten"
+    "case_sensitivity": "Groß- und Kleinschreibung beachten",
+    "string_search": "Modliste nach String durchsuchen",
+    "running_string_search": "Modliste wird nach String durchsucht...",
+    "no_strings_found": "Keine Strings gefunden",
+    "no_strings_found_text": "Es wurden keine Strings gefunden, die dem angegebenen Filter entsprechen!\nAuf \"Details anzeigen\" klicken, um den verwendeten Filter anzuzeigen."
 }

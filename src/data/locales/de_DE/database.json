@@ -29,7 +29,5 @@
     "checking_for_updates": "Suche nach verfügbaren Updates...",
     "update_check_complete": "Update-Suche abgeschlossen",
     "updates_available": "Updates für [NUMBER] Übersetzung(en) gefunden.",
-    "search_database": "Installierte Übersetzungen durchsuchen",
-    "no_strings_found": "Keine Strings gefunden",
-    "no_strings_found_text": "Es wurden keine Strings gefunden, die dem angegebenen Filter entsprechen!\nAuf \"Details anzeigen\" klicken, um den verwendeten Filter anzuzeigen."
+    "search_database": "Installierte Übersetzungen durchsuchen"
 }
