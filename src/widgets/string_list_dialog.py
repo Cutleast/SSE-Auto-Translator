@@ -28,16 +28,17 @@ class StringListDialog(qtw.QWidget):
         self,
         app,
         name: str,
-        strings: list[utils.String],
+        strings: list[utils.String] | dict[str, list[utils.String]],
         show_translation: bool = False,
     ):
         super().__init__()
 
         self.app = app
         self.loc: utils.Localisator = app.loc
+        self.name = name
         self.strings = strings
+        self.nested = isinstance(strings, dict)
         self.show_translation = show_translation
-        self.setWindowTitle(f"{name} - {len(strings)} String(s)")
         self.setWindowFlag(qtc.Qt.WindowType.Window, True)
         self.setObjectName("root")
         self.setMinimumSize(1200, 700)
@@ -130,6 +131,21 @@ class StringListDialog(qtw.QWidget):
         def on_context_menu(point: qtc.QPoint):
             menu = qtw.QMenu()
 
+            if self.nested:
+                expand_all_action = menu.addAction(self.loc.main.expand_all)
+                expand_all_action.setIcon(
+                    qta.icon("mdi6.arrow-expand-vertical", color="#ffffff")
+                )
+                expand_all_action.triggered.connect(self.strings_widget.expandAll)
+
+                collapse_all_action = menu.addAction(self.loc.main.collapse_all)
+                collapse_all_action.setIcon(
+                    qta.icon("mdi6.arrow-collapse-vertical", color="#ffffff")
+                )
+                collapse_all_action.triggered.connect(self.strings_widget.collapseAll)
+
+                menu.addSeparator()
+
             copy_action = menu.addAction(self.loc.main.copy)
             copy_action.setIcon(qta.icon("mdi6.content-copy", color="#ffffff"))
             copy_action.setIconVisibleInMenu(True)
@@ -140,8 +156,10 @@ class StringListDialog(qtw.QWidget):
         self.strings_widget.customContextMenuRequested.connect(on_context_menu)
         self.strings_widget.setAlternatingRowColors(True)
         self.strings_widget.setSortingEnabled(True)
+        self.strings_widget.sortByColumn(1, qtc.Qt.SortOrder.AscendingOrder)
         self.strings_widget.header().setFirstSectionMovable(True)
-        self.strings_widget.setIndentation(0)
+        if not self.nested:
+            self.strings_widget.setIndentation(0)
         self.strings_widget.setSelectionMode(
             qtw.QTreeView.SelectionMode.ExtendedSelection
         )
@@ -158,7 +176,7 @@ class StringListDialog(qtw.QWidget):
         if show_translation:
             self.strings_widget.setHeaderLabels(
                 [
-                    self.loc.main.type,
+                    self.loc.main.type + (" / Plugin Name" if self.nested else ""),
                     self.loc.main.form_id,
                     self.loc.main.editor_id,
                     self.loc.main.original,
@@ -168,17 +186,21 @@ class StringListDialog(qtw.QWidget):
         else:
             self.strings_widget.setHeaderLabels(
                 [
-                    self.loc.main.type,
+                    self.loc.main.type + (" / Plugin Name" if self.nested else ""),
                     self.loc.main.form_id,
                     self.loc.main.editor_id,
                     self.loc.main.string,
                 ]
             )
 
+        self.load_strings()
+
+    def load_strings(self):
+        self.strings_widget.clear()
         self.string_items: list[tuple[utils.String, qtw.QTreeWidgetItem]] = []
 
-        for string in strings:
-            if show_translation:
+        def process_string(string: utils.String):
+            if self.show_translation:
                 item = qtw.QTreeWidgetItem(
                     [
                         string.type,
@@ -221,9 +243,26 @@ class StringListDialog(qtw.QWidget):
             item.setFont(0, qtg.QFont("Consolas"))
             item.setFont(1, qtg.QFont("Consolas"))
             item.setFont(2, qtg.QFont("Consolas"))
-            self.string_items.append((string, item))
 
-            self.strings_widget.addTopLevelItem(item)
+            return item
+
+        if self.nested:
+            for section, strings in self.strings.items():
+                section_item = qtw.QTreeWidgetItem([section])
+
+                for string in strings:
+                    item = process_string(string)
+
+                    self.string_items.append((string, item))
+                    section_item.addChild(item)
+
+                self.strings_widget.addTopLevelItem(section_item)
+        else:
+            for string in self.strings:
+                item = process_string(string)
+
+                self.string_items.append((string, item))
+                self.strings_widget.addTopLevelItem(item)
 
         self.strings_widget.resizeColumnToContents(0)
         self.strings_widget.resizeColumnToContents(1)
@@ -234,6 +273,8 @@ class StringListDialog(qtw.QWidget):
             self.strings_widget.header().resizeSection(4, 300)
         else:
             self.strings_widget.header().resizeSection(3, 600)
+
+        self.setWindowTitle(f"{self.name} - {len(self.string_items)} String(s)")
 
     def update_string_list(self):
         cur_search = self.search_bar.text()
@@ -315,6 +356,9 @@ class StringListDialog(qtw.QWidget):
 
         clipboard_text = ""
         for item in selected_items:
+            if item.childCount():  # Skip items with children (sections if nested)
+                continue
+
             for c in range(self.strings_widget.columnCount()):
                 clipboard_text += f"{item.toolTip(c)!r}"[1:-1] + "\t"
 
