@@ -1,6 +1,6 @@
 lingua-language-detector
 qtpy
-PySide6
+PySide6==6.6.1
 qtawesome
 nuitka
 pyperclip
