@@ -8,7 +8,6 @@ import logging
 from copy import copy
 from pathlib import Path
 
-import bs4
 import jstyleson as json
 
 from archiver import Archive

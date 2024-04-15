@@ -7,8 +7,6 @@ pyperclip
 requests
 jstyleson
 semantic-version
-BeautifulSoup4
-lxml
 plyvel-ci
 py7zr
 rarfile
