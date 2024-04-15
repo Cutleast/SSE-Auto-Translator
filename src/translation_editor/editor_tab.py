@@ -719,6 +719,8 @@ class EditorTab(qtw.QWidget):
 
         def apply():
             for string in selected_strings:
+                old_string = string.translated_string
+
                 if case_sensitivity_checkbox.isChecked():
                     string.translated_string = string.translated_string.replace(
                         search_entry.text(), replace_entry.text()
@@ -728,8 +730,10 @@ class EditorTab(qtw.QWidget):
                     res = compiled.sub(replace_entry.text(), string.translated_string)
                     string.translated_string = str(res)
 
-                string.tree_item.setText(4, utils.trim_string(string.translated_string))
-                string.status = string.Status.TranslationIncomplete
+                # Only set String to "TranslationIncomplete" if it was changed
+                if old_string != string.translated_string:
+                    string.tree_item.setText(4, utils.trim_string(string.translated_string))
+                    string.status = string.Status.TranslationIncomplete
 
             self.update_string_list()
             self.changes_signal.emit()
