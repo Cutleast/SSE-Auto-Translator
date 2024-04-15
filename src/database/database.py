@@ -356,3 +356,72 @@ class TranslationDatabase:
         ]
 
         return result
+
+    def search_database(self, filter: dict[str, str]):
+        """
+        Returns strings from database that match `filter`.
+
+        Example for `filter`:
+        ```
+        {
+            "editor_id": "SomeEditorID123",
+            "form_id": "00123456|Skyrim.esm",
+            "original": "Some untranslated string",
+        }
+        ```
+
+        Keys that are not in `filter` are ignored.
+        """
+
+        self.log.info("Searching database...")
+        self.log.debug(f"Filter: {filter}")
+
+        type_filter = filter.get("type")
+        form_id_filter = filter.get("form_id")
+        editor_id_filter = filter.get("editor_id")
+        original_filter = filter.get("original")
+        string_filter = filter.get("string")
+
+        result: dict[str, list[String]] = {}
+
+        translations = self.user_translations + [self.vanilla_translation]
+
+        for translation in translations:
+            self.log.debug(f"Searching translation {translation.name!r}...")
+
+            for plugin, strings in translation.strings.items():
+                self.log.debug(f"Searching plugin translation {plugin!r}...")
+
+                for string in strings:
+                    matching = True
+
+                    if type_filter:
+                        matching = type_filter.lower() in string.type.lower()
+
+                    if form_id_filter and matching:
+                        matching = form_id_filter.lower() in string.form_id.lower()
+
+                    if editor_id_filter and matching:
+                        matching = editor_id_filter.lower() in string.editor_id.lower()
+
+                    if original_filter and matching:
+                        matching = (
+                            original_filter.lower() in string.original_string.lower()
+                        )
+
+                    if string_filter and matching:
+                        matching = (
+                            string_filter.lower() in string.translated_string.lower()
+                        )
+
+                    if matching:
+                        if plugin in result:
+                            result[plugin].append(string)
+                        else:
+                            result[plugin] = [string]
+
+        self.log.info(
+            f"Found {sum(len(strings) for strings in result.values())} matching string(s) in {len(result)} plugin(s)."
+        )
+
+        return result

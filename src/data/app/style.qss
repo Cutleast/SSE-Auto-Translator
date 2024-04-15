@@ -429,7 +429,7 @@ QTreeView::indicator:checked {
     image: url(./data/icons/checkmark.svg);
 }
 QRadioButton::indicator {
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 

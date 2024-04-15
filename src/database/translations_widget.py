@@ -14,7 +14,7 @@ import qtpy.QtWidgets as qtw
 
 import utilities as utils
 from main import MainApp
-from widgets import DownloadListDialog, LoadingDialog, StringListDialog
+from widgets import DownloadListDialog, LoadingDialog, StringListDialog, ShortcutButton, ErrorDialog
 
 from .translation import Translation
 
@@ -55,6 +55,12 @@ class TranslationsWidget(qtw.QWidget):
             dialog.show()
 
         show_vanilla_strings_action.triggered.connect(show_vanilla_strings)
+
+        search_database_action = self.tool_bar.addAction(
+            qta.icon("fa.search", color="#ffffff", scale_factor=0.85),
+            self.mloc.search_database,
+        )
+        search_database_action.triggered.connect(self.search_database)
 
         self.tool_bar.addSeparator()
 
@@ -347,6 +353,110 @@ class TranslationsWidget(qtw.QWidget):
         )
         self.translations_widget.customContextMenuRequested.connect(on_context_menu)
 
+    def search_database(self):
+        """
+        Opens dialog for searching the entire translation database.
+        """
+
+        dialog = qtw.QDialog(self.app.root)
+        dialog.setWindowTitle(self.mloc.search_database)
+        dialog.setModal(True)
+        dialog.setMinimumWidth(700)
+        utils.apply_dark_title_bar(dialog)
+
+        flayout = qtw.QFormLayout()
+        dialog.setLayout(flayout)
+
+        type_box = qtw.QCheckBox(self.loc.main.type)
+        type_entry = qtw.QLineEdit()
+        type_entry.setDisabled(True)
+        type_box.stateChanged.connect(lambda state: type_entry.setEnabled(state == qtc.Qt.CheckState.Checked.value))
+        type_box.clicked.connect(type_entry.setFocus)
+        flayout.addRow(type_box, type_entry)
+
+        formid_box = qtw.QCheckBox(self.loc.main.form_id)
+        formid_entry = qtw.QLineEdit()
+        formid_entry.setDisabled(True)
+        formid_box.stateChanged.connect(lambda state: formid_entry.setEnabled(state == qtc.Qt.CheckState.Checked.value))
+        formid_box.clicked.connect(formid_entry.setFocus)
+        flayout.addRow(formid_box, formid_entry)
+
+        edid_box = qtw.QCheckBox(self.loc.main.editor_id)
+        edid_entry = qtw.QLineEdit()
+        edid_entry.setDisabled(True)
+        edid_box.stateChanged.connect(lambda state: edid_entry.setEnabled(state == qtc.Qt.CheckState.Checked.value))
+        edid_box.clicked.connect(edid_entry.setFocus)
+        flayout.addRow(edid_box, edid_entry)
+
+        original_box = qtw.QRadioButton(self.loc.main.original)
+        original_entry = qtw.QLineEdit()
+        original_entry.setDisabled(True)
+        original_box.toggled.connect(lambda: original_entry.setEnabled(original_box.isChecked()))
+        original_box.clicked.connect(original_entry.setFocus)
+        flayout.addRow(original_box, original_entry)
+
+        string_box = qtw.QRadioButton(self.loc.main.string)
+        string_entry = qtw.QLineEdit()
+        string_entry.setDisabled(True)
+        string_box.toggled.connect(lambda: string_entry.setEnabled(string_box.isChecked()))
+        string_box.clicked.connect(string_entry.setFocus)
+        flayout.addRow(string_box, string_entry)
+
+        hlayout = qtw.QHBoxLayout()
+        flayout.addRow(hlayout)
+
+        cancel_button = ShortcutButton(self.loc.main.cancel)
+        cancel_button.setShortcut(qtg.QKeySequence("Esc"))
+        cancel_button.clicked.connect(dialog.reject)
+        hlayout.addWidget(cancel_button)
+
+        hlayout.addStretch()
+
+        search_button = ShortcutButton(self.loc.main.search[:-3])
+        search_button.setObjectName("accent_button")
+        search_button.setShortcut(qtg.QKeySequence("Return"))
+        search_button.clicked.connect(dialog.accept)
+        hlayout.addWidget(search_button)
+
+        if dialog.exec() == dialog.DialogCode.Accepted:
+            filter: dict[str, str] = {}
+
+            if type_box.isChecked():
+                filter["type"] = type_entry.text()
+            
+            if formid_box.isChecked():
+                filter["form_id"] = formid_entry.text()
+            
+            if edid_box.isChecked():
+                filter["editor_id"] = edid_entry.text()
+            
+            if original_box.isChecked() and original_entry.text():
+                filter["original"] = original_entry.text()
+            elif string_box.isChecked() and string_box.text():
+                filter["string"] = string_entry.text()
+
+            # def process(ldialog)
+            matching = self.app.database.search_database(filter)
+
+            if len(matching):
+                dialog = StringListDialog(
+                    self.app,
+                    self.loc.main.scan_result,
+                    matching,
+                    show_translation=True,
+                )
+                dialog.show()
+            else:
+                dialog = ErrorDialog(
+                    self.app.root,
+                    self.app,
+                    title=self.mloc.no_strings_found,
+                    text=self.mloc.no_strings_found_text,
+                    details=str(filter),
+                    yesno=False
+                )
+                dialog.exec()
+
     def delete_selected(self):
         items = self.translations_widget.selectedItems()
         matching = [
@@ -359,8 +469,7 @@ class TranslationsWidget(qtw.QWidget):
             message_box.setWindowTitle(self.loc.main.delete)
             message_box.setText(self.loc.main.delete_text)
             message_box.setStandardButtons(
-                qtw.QMessageBox.StandardButton.No
-                | qtw.QMessageBox.StandardButton.Yes
+                qtw.QMessageBox.StandardButton.No | qtw.QMessageBox.StandardButton.Yes
             )
             message_box.setDefaultButton(qtw.QMessageBox.StandardButton.Yes)
             message_box.button(qtw.QMessageBox.StandardButton.No).setText(
@@ -375,9 +484,7 @@ class TranslationsWidget(qtw.QWidget):
 
             self.app.log.info("Deleting selected translations...")
             for translation in matching:
-                self.app.translation_editor.close_translation(
-                    translation, silent=True
-                )
+                self.app.translation_editor.close_translation(translation, silent=True)
                 self.app.database.delete_translation(translation)
             self.app.log.info("Translations deleted. Updating database...")
 
