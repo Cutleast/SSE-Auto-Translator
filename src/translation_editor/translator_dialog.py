@@ -308,7 +308,6 @@ class TranslatorDialog(qtw.QWidget):
         Goes to next string.
         """
 
-        # current_index = self.tab.strings.index(self.string)
         current_index = self.tab.strings_widget.indexFromItem(
             self.string.tree_item, 0
         ).row()
@@ -318,10 +317,20 @@ class TranslatorDialog(qtw.QWidget):
         else:
             new_index = current_index + 1
 
-        # new_string = self.tab.strings[new_index]
-        new_item = self.tab.strings_widget.itemFromIndex(
-            self.tab.strings_widget.model().index(new_index, 0)
-        )
+        while True:
+            new_item = self.tab.strings_widget.itemFromIndex(
+                self.tab.strings_widget.model().index(new_index, 0)
+            )
+
+            # Go to next item that's visible with current filter
+            if not new_item.isHidden():
+                break
+
+            if new_index == (len(self.tab.strings) - 1):
+                new_index = 0
+            else:
+                new_index += 1
+
         items = {string.tree_item: string for string in self.tab.strings}
         new_string = items[new_item]
         self.set_string(new_string, finalize_with_status)
@@ -331,7 +340,6 @@ class TranslatorDialog(qtw.QWidget):
         Goes to previous string.
         """
 
-        # current_index = self.tab.strings.index(self.string)
         current_index = self.tab.strings_widget.indexFromItem(
             self.string.tree_item, 0
         ).row()
@@ -341,10 +349,19 @@ class TranslatorDialog(qtw.QWidget):
         else:
             new_index = len(self.tab.strings) - 1
 
-        # new_string = self.tab.strings[new_index]
-        new_item = self.tab.strings_widget.itemFromIndex(
-            self.tab.strings_widget.model().index(new_index, 0)
-        )
+        while True:
+            new_item = self.tab.strings_widget.itemFromIndex(
+                self.tab.strings_widget.model().index(new_index, 0)
+            )
+
+            if not new_item.isHidden():
+                break
+
+            if new_index == 0:
+                new_index = len(self.tab.strings) - 1
+            else:
+                new_index -= 1
+
         items = {string.tree_item: string for string in self.tab.strings}
         new_string = items[new_item]
         self.set_string(new_string)
