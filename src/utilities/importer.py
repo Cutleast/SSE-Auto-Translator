@@ -37,11 +37,16 @@ def import_from_archive(archive_path: Path, modlist: list[Mod], ldialog=None):
 
     files = archive.get_files()
 
-    plugin_files = [
-        filename
-        for filename in files
-        if Path(filename).suffix.lower() in [".esl", ".esm", ".esp"]
-    ]
+    _plugins: set[str] = {}
+    plugin_files: list[str] = []
+
+    for file in files:
+        path = Path(file)
+
+        if path.name.lower() not in _plugins and path.suffix.lower() in [".esl", ".esm", ".esp"]:
+            _plugins.add(path.name.lower())
+            plugin_files.append(file)
+
     if plugin_files:
         for p, plugin_file in enumerate(plugin_files):
             extracted_file = archive_path.parent / plugin_file
