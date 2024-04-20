@@ -18,14 +18,14 @@ from translation_provider import FileDownload, TranslationDownload
 from .download_list_item import DownloadListItem
 
 
-class DownloadListDialog(qtw.QDialog):
+class DownloadListDialog(qtw.QWidget):
     """
     Dialog for download list for users that
     don't have Nexus Mods Premium.
     """
 
     download_items: list[DownloadListItem] = None
-    
+
     log = logging.getLogger("DownloadList")
 
     def __init__(
@@ -34,7 +34,7 @@ class DownloadListDialog(qtw.QDialog):
         translation_downloads: dict[str, list[TranslationDownload]],
         updates: bool = False,
     ):
-        super().__init__()
+        super().__init__(app.root)
 
         self.app = app
         self.loc = app.loc
@@ -44,7 +44,7 @@ class DownloadListDialog(qtw.QDialog):
         self.updates = updates
 
         self.setObjectName("root")
-        # self.setWindowFlags(qtc.Qt.WindowType.Window)
+        self.setWindowFlags(qtc.Qt.WindowType.Window)
         self.setWindowTitle(self.mloc.download_list_title)
         self.setMinimumSize(1400, 800)
         utils.apply_dark_title_bar(self)
@@ -91,21 +91,24 @@ class DownloadListDialog(qtw.QDialog):
             ]
         )
         self.list_widget.setIndentation(0)
+
+        self.load_downloads()
+
         self.list_widget.header().setSectionResizeMode(
             0, qtw.QHeaderView.ResizeMode.ResizeToContents
         )
         self.list_widget.header().setSectionResizeMode(
             1, qtw.QHeaderView.ResizeMode.Stretch
         )
+        self.list_widget.header().resizeSection(2, 200)
         self.list_widget.header().setSectionResizeMode(
             3, qtw.QHeaderView.ResizeMode.ResizeToContents
         )
+        self.list_widget.header().resizeSection(4, 200)
         self.list_widget.header().resizeSection(5, 150)
         self.list_widget.header().setStretchLastSection(False)
 
-        self.load_downloads()
-
-        self.exec()
+        self.show()
 
     def load_downloads(self):
         """
@@ -130,7 +133,9 @@ class DownloadListDialog(qtw.QDialog):
             self.list_widget.setItemWidget(item, 2, translation_combobox)
 
             translation_modpage_button = qtw.QPushButton()
-            translation_modpage_button.setIcon(qta.icon("fa5s.external-link-alt", color="#ffffff"))
+            translation_modpage_button.setIcon(
+                qta.icon("fa5s.external-link-alt", color="#ffffff")
+            )
             translation_modpage_button.setToolTip(self.loc.main.open_modpage)
             self.list_widget.setItemWidget(item, 3, translation_modpage_button)
 
