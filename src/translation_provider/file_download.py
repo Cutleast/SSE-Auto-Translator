@@ -29,21 +29,6 @@ class FileDownload(qtc.QObject):
     file_name: str = None
     direct_url: str = None
 
-    previous_size: int = None
-    """
-    Previous Size of downloaded Data, for calculation of Speed
-    """
-
-    current_size: int = None
-    """
-    Size of downloaded Data in Bytes
-    """
-
-    file_size: int = None
-    """
-    Total Download Size
-    """
-
     tree_item: qtw.QTreeWidgetItem = None
     """
     Item in "Downloads" Tab.

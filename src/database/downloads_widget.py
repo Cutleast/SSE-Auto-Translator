@@ -121,6 +121,7 @@ class DownloadsWidget(qtw.QWidget):
             if self.downloads_widget.itemWidget(item, 1) is None:
                 item.setText(1, "")
                 progress_widget = ProgressWidget()
+                progress_widget.progress_bar.setMaximum(1000)
                 self.downloads_widget.setItemWidget(item, 1, progress_widget)
 
             progress_widget: ProgressWidget = self.downloads_widget.itemWidget(item, 1)
@@ -130,11 +131,9 @@ class DownloadsWidget(qtw.QWidget):
                     if self.downloader.current_size and self.downloader.previous_size:
                         cur_size = utils.scale_value(self.downloader.current_size)
                         tot_size = utils.scale_value(self.downloader.file_size)
-                        progress_widget.progress_bar.setMaximum(
-                            self.downloader.file_size
-                        )
                         progress_widget.progress_bar.setValue(
-                            self.downloader.current_size
+                            (self.downloader.current_size / self.downloader.file_size)
+                            * 1000
                         )
                         spd = (
                             self.downloader.current_size - self.downloader.previous_size

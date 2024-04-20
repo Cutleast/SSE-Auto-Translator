@@ -27,6 +27,21 @@ class Downloader:
     Current Speed in Bytes per Second
     """
 
+    previous_size: int = None
+    """
+    Previous Size of downloaded Data, for calculation of Speed
+    """
+
+    current_size: int = None
+    """
+    Size of downloaded Data in Bytes
+    """
+
+    file_size: int = None
+    """
+    Total Download Size
+    """
+
     current_download: FileDownload = None
 
     def download(self, download: FileDownload, folder: Path):
