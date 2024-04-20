@@ -83,10 +83,10 @@ class DownloadListItem(qtw.QTreeWidgetItem):
         translation_download = self.translation_downloads[
             self.translations_combobox.currentIndex()
         ]
-        details = self.app.provider.get_details(
+        modpage_url = self.app.provider.get_modpage_link(
             translation_download.original_mod.mod_id, source=Source.NexusMods
         )
-        modpage_url = details["modpage_url"] + "?tab=files"
+        modpage_url += "?tab=files"
         os.startfile(modpage_url)
 
     def __open_translation(self):

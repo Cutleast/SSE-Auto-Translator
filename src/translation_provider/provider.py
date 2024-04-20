@@ -191,6 +191,29 @@ class Provider:
 
         return details
 
+    def get_modpage_link(
+        self, mod_id: int, file_id: int = None, source: Source = None
+    ) -> str | None:
+        """
+        Gets modpage url for `mod_id` (and `file_id` if given) from `source`.
+        """
+
+        if source is None:
+            if self.preference in [
+                self.Preference.OnlyNexusMods,
+                self.Preference.PreferNexusMods,
+            ]:
+                source = Source.NexusMods
+            else:
+                source = Source.Confrerie
+
+        if source == Source.NexusMods:
+            return NexusModsApi.create_nexus_mods_url(
+                "skyrimspecialedition", mod_id, file_id
+            )
+        else:
+            return self.__cdt_api.get_modpage_link(mod_id)
+
     def get_translations(
         self, mod_id: int, plugin_name: str, language: str
     ) -> list[tuple[int, list[int], Source]]:
