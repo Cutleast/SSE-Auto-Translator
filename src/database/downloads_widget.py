@@ -127,10 +127,7 @@ class DownloadsWidget(qtw.QWidget):
 
             match self.current_download.status:
                 case FileDownload.Status.Downloading:
-                    if (
-                        self.downloader.current_size
-                        and self.downloader.previous_size
-                    ):
+                    if self.downloader.current_size and self.downloader.previous_size:
                         cur_size = utils.scale_value(self.downloader.current_size)
                         tot_size = utils.scale_value(self.downloader.file_size)
                         progress_widget.progress_bar.setMaximum(
@@ -140,8 +137,7 @@ class DownloadsWidget(qtw.QWidget):
                             self.downloader.current_size
                         )
                         spd = (
-                            self.downloader.current_size
-                            - self.downloader.previous_size
+                            self.downloader.current_size - self.downloader.previous_size
                         )
                         cur_speed = utils.scale_value(spd) + "/s"
                         percentage = f"{(self.downloader.current_size / self.downloader.file_size * 100):.2f} %"
@@ -149,9 +145,7 @@ class DownloadsWidget(qtw.QWidget):
                     else:
                         status = self.loc.main.downloading
 
-                    self.downloader.previous_size = (
-                        self.downloader.current_size
-                    )
+                    self.downloader.previous_size = self.downloader.current_size
 
                     progress_widget.status_label.setText(status)
                 case FileDownload.Status.Processing:
@@ -180,7 +174,9 @@ class DownloadsWidget(qtw.QWidget):
 
             tmp_path = self.app.get_tmp_dir()
 
-            self.app.log.info(f"Downloading file {download.file_name!r} from {download.direct_url!r}...")
+            self.app.log.info(
+                f"Downloading file {download.file_name!r} from {download.direct_url!r}..."
+            )
 
             downloaded_file = tmp_path / download.file_name
             download.status = download.Status.Downloading
@@ -232,7 +228,9 @@ class DownloadsWidget(qtw.QWidget):
                             download.original_mod.mod_id,
                             download.original_mod.file_id,
                             download.original_mod.version,
-                            self.app.database.userdb_path / self.app.database.language / download.name,
+                            self.app.database.userdb_path
+                            / self.app.database.language
+                            / download.name,
                             strings=strings,
                             status=Translation.Status.Ok,
                             source=download.source,
@@ -304,7 +302,9 @@ class DownloadsWidget(qtw.QWidget):
             mod_id,
             file_id,
             file_name=self.app.provider.get_file_name_of_id(mod_id, file_id, raw=True),
-            direct_url=self.app.provider.get_direct_download_url(mod_id, file_id, key, int(expires)),
+            direct_url=self.app.provider.get_direct_download_url(
+                mod_id, file_id, key, int(expires)
+            ),
         )
 
         item = qtw.QTreeWidgetItem(

@@ -603,25 +603,37 @@ class TranslationsWidget(qtw.QWidget):
                     translation.mod_id, translation.file_id
                 )
 
-                matching_mods = list(filter(
-                    lambda mod: mod.mod_id == translation.original_mod_id
-                    and (
-                        mod.file_id == translation.file_id
-                        or translation.file_id is None
-                    ),
-                    self.app.mainpage_widget.mods,
-                ))
+                matching_mods = list(
+                    filter(
+                        lambda mod: mod.mod_id == translation.original_mod_id
+                        and (
+                            mod.file_id == translation.file_id
+                            or translation.file_id is None
+                        ),
+                        self.app.mainpage_widget.mods,
+                    )
+                )
 
                 if not matching_mods:
-                    self.app.log.warning(f"Failed to update translation {translation.name!r}: Original Mod not installed!")
+                    self.app.log.warning(
+                        f"Failed to update translation {translation.name!r}: Original Mod not installed!"
+                    )
                     continue
 
                 original_mod = matching_mods[0]
 
-                original_plugins = list(filter(lambda plugin: plugin.name.lower() == translation.strings.keys()[0].lower(), original_mod.plugins))
+                original_plugins = list(
+                    filter(
+                        lambda plugin: plugin.name.lower()
+                        == translation.strings.keys()[0].lower(),
+                        original_mod.plugins,
+                    )
+                )
 
                 if not original_plugins:
-                    self.app.log.warning(f"Failed to update translation {translation.name!r}: Original Plugin not found in original mod {original_mod.name!r}!")
+                    self.app.log.warning(
+                        f"Failed to update translation {translation.name!r}: Original Plugin not found in original mod {original_mod.name!r}!"
+                    )
                     continue
 
                 original_plugin = original_plugins[0]
@@ -643,7 +655,9 @@ class TranslationsWidget(qtw.QWidget):
                             mod_id=translation.mod_id,
                             file_id=new_file_id,
                             original_mod=original_mod,
-                            file_name=self.app.provider.get_details(translation.mod_id, new_file_id, translation.source)["filename"]
+                            file_name=self.app.provider.get_details(
+                                translation.mod_id, new_file_id, translation.source
+                            )["filename"],
                         )
                     ],
                 )
