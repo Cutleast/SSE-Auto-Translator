@@ -112,8 +112,6 @@ class MainApp(qtw.QApplication):
         utils.apply_dark_title_bar(self.root)
         self.root.hide()
 
-        self.setStyle(utils.ProxyStyle(self.style()))
-
         self.log.info("Application started.")
 
         # Check for updates

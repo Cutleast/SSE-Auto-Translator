@@ -771,6 +771,106 @@ class Processor:
         Processor.show_result(modlist, app)
 
     @staticmethod
+    def run_string_search(
+        modlist: list[utils.Mod], filter: dict[str, str], app: MainApp
+    ):
+        """
+        Similar to `TranslationDatabase.search_database()` but for `modlist`.
+        """
+
+        app.log.info("Running string search...")
+        app.log.debug(f"Filter: {filter}")
+
+        type_filter = filter.get("type")
+        form_id_filter = filter.get("form_id")
+        editor_id_filter = filter.get("editor_id")
+        original_filter = filter.get("original")
+        string_filter = filter.get("string")
+
+        result: dict[str, list[utils.String]] = {}
+
+        def process(ldialog: LoadingDialog):
+            relevant_mods = [
+                mod
+                for mod in modlist
+                if any(
+                    plugin.tree_item.checkState(0) == qtc.Qt.CheckState.Checked
+                    for plugin in mod.plugins
+                )
+            ]
+
+            for m, mod in enumerate(relevant_mods):
+                plugins = [
+                    plugin
+                    for plugin in mod.plugins
+                    if plugin.tree_item.checkState(0) == qtc.Qt.CheckState.Checked
+                ]
+
+                ldialog.updateProgress(
+                    text1=f"{app.loc.main.running_string_search} ({m}/{len(relevant_mods)})",
+                    value1=m,
+                    max1=len(relevant_mods),
+                )
+
+                for p, plugin in enumerate(plugins):
+                    ldialog.updateProgress(
+                        show2=True,
+                        text2=f"{mod.name} ({p}/{len(plugins)})",
+                        value2=p,
+                        max2=len(plugins),
+                        show3=True,
+                        text3=plugin.name,
+                    )
+
+                    parser = PluginParser(plugin.path)
+                    strings = [
+                        string
+                        for group in parser.extract_strings().values()
+                        for string in group
+                    ]
+                    for string in strings:
+                        matching = True
+
+                        if type_filter:
+                            matching = type_filter.lower() in string.type.lower()
+
+                        if form_id_filter and matching:
+                            matching = form_id_filter.lower() in string.form_id.lower()
+
+                        if editor_id_filter and matching:
+                            matching = (
+                                editor_id_filter.lower() in string.editor_id.lower()
+                            )
+
+                        if original_filter and matching:
+                            matching = (
+                                original_filter.lower()
+                                in string.original_string.lower()
+                            )
+
+                        if string_filter and matching:
+                            matching = (
+                                string_filter.lower()
+                                in string.translated_string.lower()
+                            )
+
+                        if matching:
+                            key = f"{mod.name} > {plugin.name}"
+                            if key in result:
+                                result[key].append(string)
+                            else:
+                                result[key] = [string]
+
+        loadingdialog = LoadingDialog(app.root, app, process)
+        loadingdialog.exec()
+
+        app.log.info(
+            f"Found {sum(len(strings) for strings in result.values())} matching string(s) in {len(result)} plugin(s)."
+        )
+
+        return result
+
+    @staticmethod
     def update_status_colors(modlist: list[utils.Mod]):
         for mod in modlist:
             most_urgent = -1

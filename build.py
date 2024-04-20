@@ -33,6 +33,8 @@ cmd = f'nuitka \
 --include-data-file="LICENSE=." \
 --include-data-files="./.venv/Lib/site-packages/cloudscraper/user_agent/browsers.json=cloudscraper/user_agent/" \
 --include-data-dir="./.venv/Lib/site-packages/qtawesome=./qtawesome" \
+--include-package=hunspell \
+--include-package=cacheman \
 --enable-plugin=pyside6 \
 --remove-output \
 --disable-console \

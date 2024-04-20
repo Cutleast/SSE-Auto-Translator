@@ -6,6 +6,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 from .api_setup import ApiSetup
 from .completion_box import CompletionBox
+from .clear_entry import ClearEntry
 from .copy_entry import CopyLineEdit
 from .download_list_dialog import DownloadListDialog
 from .error_dialog import ErrorDialog
