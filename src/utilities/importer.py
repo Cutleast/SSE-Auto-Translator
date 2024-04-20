@@ -19,7 +19,9 @@ from .string import String
 log = logging.getLogger("Utilities.Importer")
 
 
-def import_from_archive(archive_path: Path, modlist: list[Mod], ldialog=None):
+def import_from_archive(
+    archive_path: Path, modlist: list[Mod], tmp_dir: Path, ldialog=None
+):
     """
     Imports translation from `archive_path` and
     combines the strings with installed plugins in `modlist`.
@@ -36,14 +38,14 @@ def import_from_archive(archive_path: Path, modlist: list[Mod], ldialog=None):
 
     files = archive.get_files()
 
-    plugin_files = [
-        filename
-        for filename in files
-        if Path(filename).suffix.lower() in [".esl", ".esm", ".esp"]
+    plugin_files: list[str] = [
+        file for file in files if Path(file).suffix.lower() in [".esl", ".esm", ".esp"]
     ]
+    archive.extract_files(plugin_files, tmp_dir)
+
     if plugin_files:
         for p, plugin_file in enumerate(plugin_files):
-            extracted_file = archive_path.parent / plugin_file
+            extracted_file = tmp_dir / plugin_file
             plugin_name = extracted_file.name
 
             if ldialog:
@@ -54,6 +56,9 @@ def import_from_archive(archive_path: Path, modlist: list[Mod], ldialog=None):
                     show2=True,
                     text2=plugin_name,
                 )
+
+            if plugin_name.lower() in translation_strings:
+                continue
 
             # Find original plugin in modlist
             installed_plugins = [
@@ -75,13 +80,12 @@ def import_from_archive(archive_path: Path, modlist: list[Mod], ldialog=None):
 
             plugin = matching[-1]
 
-            archive.extract(plugin_file, archive_path.parent)
-
             plugin_strings = merge_plugin_strings(extracted_file, plugin.path)
-            for string in plugin_strings:
-                string.status = String.Status.TranslationComplete
+            if plugin_strings:
+                for string in plugin_strings:
+                    string.status = String.Status.TranslationComplete
 
-            translation_strings[plugin.name.lower()] = plugin_strings
+                translation_strings[plugin_name.lower()] = plugin_strings
 
     elif any(
         "skse/plugins/dynamicstringdistributor/" in filename.lower()
@@ -155,6 +159,7 @@ def merge_plugin_strings(
     )
 
     merged_strings: list[String] = []
+    unmerged_strings: list[String] = []
 
     for translation_string in translation_strings:
         original_string = original_strings.get(
@@ -162,7 +167,7 @@ def merge_plugin_strings(
         )
 
         if original_string is None:
-            log.warning(f"Not found in Original: {translation_string}")
+            unmerged_strings.append(translation_string)
             continue
 
         translation_string = copy(translation_string)
@@ -170,6 +175,12 @@ def merge_plugin_strings(
         translation_string.original_string = original_string.original_string
         merged_strings.append(translation_string)
 
-    log.debug(f"Merged {len(merged_strings)} String(s).")
+    if len(unmerged_strings) < len(translation_strings):
+        for unmerged_string in unmerged_strings:
+            log.warning(f"Not found in Original: {unmerged_string}")
+
+        log.debug(f"Merged {len(merged_strings)} String(s).")
+    else:
+        log.error("Merging failed!")
 
     return merged_strings

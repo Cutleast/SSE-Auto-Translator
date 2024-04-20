@@ -755,7 +755,11 @@ class TranslationsWidget(qtw.QWidget):
                     __temp = []
 
                     def process(ldialog: LoadingDialog):
-                        __temp.append(utils.import_from_archive(file, modlist, ldialog))
+                        __temp.append(
+                            utils.import_from_archive(
+                                file, modlist, self.app.get_tmp_dir(), ldialog
+                            )
+                        )
 
                     loadingdialog = LoadingDialog(self.app.root, self.app, process)
                     loadingdialog.exec()
