@@ -196,7 +196,9 @@ class DownloadsWidget(qtw.QWidget):
                 self.update_progress()
                 try:
                     strings = utils.import_from_archive(
-                        downloaded_file, self.app.mainpage_widget.mods
+                        downloaded_file,
+                        self.app.mainpage_widget.mods,
+                        self.app.get_tmp_dir(),
                     )
                 except Exception as ex:
                     self.log.error(
