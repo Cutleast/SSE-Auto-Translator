@@ -61,8 +61,6 @@ class CDTApi:
         ```
         """
 
-        self.log.info(f"Requesting translation info for mod {nm_mod_id}...")
-
         url = f"https://www.confrerie-des-traducteurs.fr/api/skyrim/sse-at/{nm_mod_id}"
 
         if url not in self.cache:
