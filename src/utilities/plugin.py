@@ -81,6 +81,7 @@ class Plugin:
                 cls.TranslationIncomplete: QColor.fromString("#c24cd4"),
                 cls.TranslationAvailableInDatabase: QColor.fromString("#51c6d9"),
                 cls.TranslationAvailableOnline: QColor.fromString("#51c6d9"),
+                cls.RequiresTranslation: QColor.fromString("#e9e042"),
                 cls.NoTranslationAvailable: QColor.fromString("#d74343"),
             }
 
