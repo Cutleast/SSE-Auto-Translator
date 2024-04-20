@@ -762,7 +762,8 @@ class TranslationsWidget(qtw.QWidget):
 
         self.translations_num_label.display(len(self.app.database.user_translations))
 
-        self.update_translations()
+        if hasattr(self.app, "mainpage_widget"):
+            self.update_translations()
 
     def import_local_translation(self):
         """
