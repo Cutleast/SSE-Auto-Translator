@@ -18,5 +18,6 @@ from .progress_widget import ProgressWidget
 from .search_bar import SearchBar
 from .shortcut_button import ShortcutButton
 from .spell_check_entry import SpellCheckEntry
+from .stacked_bar import StackedBar
 from .stacked_widget import StackedWidget
 from .string_list_dialog import StringListDialog

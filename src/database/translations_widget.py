@@ -762,6 +762,8 @@ class TranslationsWidget(qtw.QWidget):
 
         self.translations_num_label.display(len(self.app.database.user_translations))
 
+        self.update_translations()
+
     def import_local_translation(self):
         """
         Shows File Dialog for importing a local translation.

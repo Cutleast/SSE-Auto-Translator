@@ -92,6 +92,17 @@ class String:
 
             return COLORS.get(status)
 
+        @classmethod
+        def get_members(cls):
+            result: list[cls] = [
+                cls.NoTranslationRequired,
+                cls.TranslationComplete,
+                cls.TranslationIncomplete,
+                cls.TranslationRequired,
+            ]
+
+            return result
+
     status: Status = None
     """
     Status visible in Editor Tab.

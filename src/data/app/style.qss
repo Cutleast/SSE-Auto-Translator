@@ -614,3 +614,13 @@ QTextBrowser {
 
     border: 0px;
 }
+
+
+/* StackedBar */
+StackedBar {
+    margin: 0px;
+    padding: 0px;
+    spacing: 0px;
+
+    background: transparent;
+}

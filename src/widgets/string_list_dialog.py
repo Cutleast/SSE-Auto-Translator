@@ -41,7 +41,7 @@ class StringListDialog(qtw.QWidget):
         self.show_translation = show_translation
         self.setWindowFlag(qtc.Qt.WindowType.Window, True)
         self.setObjectName("root")
-        self.setMinimumSize(1200, 700)
+        self.setMinimumSize(1400, 800)
         utils.apply_dark_title_bar(self)
 
         vlayout = qtw.QVBoxLayout()
@@ -176,7 +176,7 @@ class StringListDialog(qtw.QWidget):
         if show_translation:
             self.strings_widget.setHeaderLabels(
                 [
-                    self.loc.main.type + (" / Plugin Name" if self.nested else ""),
+                    self.loc.main.type,
                     self.loc.main.form_id,
                     self.loc.main.editor_id,
                     self.loc.main.original,
@@ -186,7 +186,7 @@ class StringListDialog(qtw.QWidget):
         else:
             self.strings_widget.setHeaderLabels(
                 [
-                    self.loc.main.type + (" / Plugin Name" if self.nested else ""),
+                    self.loc.main.type,
                     self.loc.main.form_id,
                     self.loc.main.editor_id,
                     self.loc.main.string,
@@ -257,6 +257,7 @@ class StringListDialog(qtw.QWidget):
                     section_item.addChild(item)
 
                 self.strings_widget.addTopLevelItem(section_item)
+                section_item.setFirstColumnSpanned(True)
         else:
             for string in self.strings:
                 item = process_string(string)
@@ -264,7 +265,7 @@ class StringListDialog(qtw.QWidget):
                 self.string_items.append((string, item))
                 self.strings_widget.addTopLevelItem(item)
 
-        self.strings_widget.resizeColumnToContents(0)
+        self.strings_widget.header().resizeSection(0, 130)
         self.strings_widget.resizeColumnToContents(1)
         self.strings_widget.header().resizeSection(2, 200)
 

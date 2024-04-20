@@ -26,6 +26,7 @@ from widgets import (
     SearchBar,
     ShortcutButton,
     StringListDialog,
+    StackedBar,
 )
 
 
@@ -258,6 +259,16 @@ class MainPageWidget(qtw.QWidget):
         self.search_bar.cs_toggle.setToolTip(self.loc.main.case_sensitivity)
         self.search_bar.textChanged.connect(lambda text: self.update_modlist())
         hlayout.addWidget(self.search_bar)
+
+        self.bar_chart = StackedBar(
+            [0 for s in utils.Plugin.Status.get_members()],
+            colors=[
+                utils.Plugin.Status.get_color(s)
+                for s in utils.Plugin.Status.get_members()
+            ],
+        )
+        self.bar_chart.setFixedHeight(3)
+        vlayout.addWidget(self.bar_chart)
 
         splitter = qtw.QSplitter()
         vlayout.addWidget(splitter, stretch=1)
@@ -950,6 +961,17 @@ class MainPageWidget(qtw.QWidget):
             + translation_available_plugins
             + requires_translation_plugins
             + no_translation_available_plugins
+        )
+
+        self.bar_chart.setValues(
+            [
+                none_status_plugins + no_strings_plugins,
+                translation_installed_plugins,
+                translation_incomplete_plugins,
+                translation_available_plugins,
+                requires_translation_plugins,
+                no_translation_available_plugins,
+            ]
         )
 
         num_tooltip = f"""
