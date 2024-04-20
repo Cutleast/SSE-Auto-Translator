@@ -121,7 +121,7 @@ class DownloadsWidget(qtw.QWidget):
             if self.downloads_widget.itemWidget(item, 1) is None:
                 item.setText(1, "")
                 progress_widget = ProgressWidget()
-                progress_widget.progress_bar.setMaximum(1000)
+                progress_widget.progress_bar.setRange(0, 1000)
                 self.downloads_widget.setItemWidget(item, 1, progress_widget)
 
             progress_widget: ProgressWidget = self.downloads_widget.itemWidget(item, 1)
