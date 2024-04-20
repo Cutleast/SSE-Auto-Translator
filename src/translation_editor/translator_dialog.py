@@ -69,6 +69,7 @@ class TranslatorDialog(qtw.QWidget):
         )
         prev_button.clicked.connect(self.goto_prev)
         prev_button.setShortcut(qtg.QKeySequence("Alt+Left"))
+        prev_button.setEnabled(len(self.tab.get_visible_strings()) > 1)
         hlayout.addWidget(prev_button)
 
         hlayout.addStretch()
@@ -80,6 +81,7 @@ class TranslatorDialog(qtw.QWidget):
         next_button.clicked.connect(self.goto_next)
         next_button.setShortcut(qtg.QKeySequence("Alt+Right"))
         next_button.setLayoutDirection(qtc.Qt.LayoutDirection.RightToLeft)
+        next_button.setEnabled(len(self.tab.get_visible_strings()) > 1)
         hlayout.addWidget(next_button)
 
         hlayout = qtw.QHBoxLayout()
@@ -184,16 +186,19 @@ class TranslatorDialog(qtw.QWidget):
         complete_shortcut.activated.connect(
             lambda: self.goto_next(utils.String.Status.TranslationComplete)
         )
+        complete_shortcut.setEnabled(len(self.tab.get_visible_strings()) > 1)
 
         incomplete_shortcut = qtg.QShortcut(qtg.QKeySequence("F2"), self)
         incomplete_shortcut.activated.connect(
             lambda: self.goto_next(utils.String.Status.TranslationIncomplete)
         )
+        incomplete_shortcut.setEnabled(len(self.tab.get_visible_strings()) > 1)
 
         no_required_shortcut = qtg.QShortcut(qtg.QKeySequence("F3"), self)
         no_required_shortcut.activated.connect(
             lambda: self.goto_next(utils.String.Status.NoTranslationRequired)
         )
+        no_required_shortcut.setEnabled(len(self.tab.get_visible_strings()) > 1)
 
         self.set_string(string)
 

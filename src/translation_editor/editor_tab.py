@@ -996,3 +996,13 @@ class EditorTab(qtw.QWidget):
             clipboard_text += "\n"
 
         pyperclip.copy(clipboard_text.strip())
+
+    def get_visible_strings(self):
+        """
+        Returns a list of strings that are visible with current filter.
+        """
+
+        return [
+            string for string in self.strings
+            if not string.tree_item.isHidden()
+        ]
