@@ -61,6 +61,9 @@ class CDTApi:
         ```
         """
 
+        if not nm_mod_id:
+            return
+
         url = f"https://www.confrerie-des-traducteurs.fr/api/skyrim/sse-at/{nm_mod_id}"
 
         if url not in self.cache:

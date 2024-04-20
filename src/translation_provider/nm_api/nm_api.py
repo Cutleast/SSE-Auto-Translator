@@ -166,6 +166,9 @@ class NexusModsApi:
         ```
         """
 
+        if not mod_id:
+            return
+
         self.log.info(f"Requesting mod info for {mod_id!r}...")
         res = self.request(f"games/{game_id}/mods/{mod_id}.json")
         data: dict = json.loads(res.content.decode("utf8"))
