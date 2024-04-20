@@ -4,6 +4,8 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+import subprocess
+
 from fnmatch import fnmatch
 from pathlib import Path
 
@@ -30,14 +32,39 @@ class Archive:
         Extracts all files to `dest`.
         """
 
-        raise NotImplementedError
+        retcode = subprocess.run(
+            f'7z.exe x "{self.path}" -o"{dest}" -aoa -y', shell=True
+        )
+
+        if retcode:
+            raise Exception("Unpacking command failed!")
 
     def extract(self, filename: str, dest: Path):
         """
         Extracts `filename` from archive to `dest`.
         """
 
-        raise NotImplementedError
+        process = subprocess.run(
+            f'7z.exe x -o"{dest}" -aoa -y "{self.path}" "{filename}"', shell=True
+        )
+
+        if process.returncode:
+            raise Exception("Unpacking command failed!")
+
+    def extract_files(self, filenames: list[str], dest: Path):
+        """
+        Extracts `filenames` from archive to `dest`.
+        """
+
+        cmd = f'7z.exe x -o"{dest}" -aoa -y "{self.path}"'
+
+        for filename in filenames:
+            cmd += f' "{filename}"'
+
+        process = subprocess.run(cmd, shell=True)
+
+        if process.returncode:
+            raise Exception("Unpacking command failed!")
 
     def find(self, pattern: str) -> list[str]:
         """
