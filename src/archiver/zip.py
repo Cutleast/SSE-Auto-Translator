@@ -5,7 +5,6 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import zipfile
-from pathlib import Path
 
 from .archive import Archive
 
@@ -21,9 +20,3 @@ class ZIPARchive(Archive):
             for file in zipfile.ZipFile(self.path).filelist
             if not file.is_dir()
         ]
-
-    def extract_all(self, dest: Path):
-        zipfile.ZipFile(self.path).extractall(dest)
-
-    def extract(self, filename: str, dest: Path):
-        zipfile.ZipFile(self.path).extract(filename, dest)
