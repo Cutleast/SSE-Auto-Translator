@@ -431,10 +431,9 @@ class MainPageWidget(qtw.QWidget):
                 if matching:
                     mod = matching[0]
                     if mod.mod_id:
-                        url = self.app.provider.get_details(
-                            mod.mod_id,
-                            source=utils.Source.NexusMods,
-                        )["modpage_url"]
+                        url = self.app.provider.get_modpage_link(
+                            mod.mod_id, source=utils.Source.NexusMods
+                        )
                         os.startfile(url)
 
             def open_in_explorer():

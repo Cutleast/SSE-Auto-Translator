@@ -265,10 +265,9 @@ class TranslationsWidget(qtw.QWidget):
 
             def open_modpage():
                 if selected_translation.mod_id:
-                    url = self.app.provider.get_details(
-                        selected_translation.mod_id,
-                        source=selected_translation.source,
-                    )["modpage_url"]
+                    url = self.app.provider.get_modpage_link(
+                        selected_translation.mod_id, source=selected_translation.source
+                    )
                     os.startfile(url)
 
             def open_in_explorer():

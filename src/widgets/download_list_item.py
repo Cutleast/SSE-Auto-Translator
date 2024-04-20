@@ -94,11 +94,9 @@ class DownloadListItem(qtw.QTreeWidgetItem):
             self.translations_combobox.currentIndex()
         ]
 
-        details = self.app.provider.get_details(
-            translation_download.mod_id,
-            source=translation_download.source,
+        modpage_url = self.app.provider.get_modpage_link(
+            translation_download.mod_id, source=translation_download.source
         )
-        modpage_url = details["modpage_url"]
         os.startfile(modpage_url)
 
     def __free_download(self):
@@ -110,10 +108,9 @@ class DownloadListItem(qtw.QTreeWidgetItem):
             self.files_combobox.currentIndex()
         ]
 
-        details = self.app.provider.get_details(
-            download.mod_id, download.file_id, translation_download.source
+        url = self.app.provider.get_modpage_link(
+            download.mod_id, download.file_id, download.source
         )
-        url = details["modpage_url"]
         if translation_download.source == Source.NexusMods:
             url += "&nmm=1"
 
