@@ -62,3 +62,5 @@ class FileDownload(qtc.QObject):
 
     status: Status = Status.WaitingForDownload
 
+    def __hash__(self):
+        return hash((self.mod_id, self.file_id, self.source))

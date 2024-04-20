@@ -13,7 +13,7 @@ import qtpy.QtWidgets as qtw
 
 import utilities as utils
 from main import MainApp
-from translation_provider import TranslationDownload
+from translation_provider import FileDownload, TranslationDownload
 
 from .download_list_item import DownloadListItem
 
@@ -166,6 +166,8 @@ class DownloadListDialog(qtw.QDialog):
         Closes dialog and starts all downloads.
         """
 
+        _queue: set[FileDownload] = set()
+
         for download_item in self.download_items:
             translation_download = download_item.translation_downloads[
                 download_item.translations_combobox.currentIndex()
@@ -173,6 +175,10 @@ class DownloadListDialog(qtw.QDialog):
             download = translation_download.available_downloads[
                 download_item.files_combobox.currentIndex()
             ]
+
+            if download in _queue:
+                continue
+
             download.direct_url = self.app.provider.get_direct_download_url(
                 download.mod_id, download.file_id, source=translation_download.source
             )
@@ -204,6 +210,7 @@ class DownloadListDialog(qtw.QDialog):
             self.app.mainpage_widget.database_widget.downloads_widget.queue.put(
                 download
             )
+            _queue.add(download)
 
         self.app.mainpage_widget.update_modlist()
 
