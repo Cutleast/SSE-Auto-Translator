@@ -12,8 +12,7 @@ from pathlib import Path
 import jstyleson as json
 from qtpy.QtWidgets import QTreeWidgetItem
 
-from nm_api import Download
-from utilities import String
+from utilities import String, Source
 
 
 @dataclass
@@ -25,7 +24,7 @@ class Translation:
     name: str
 
     mod_id: int
-    file_id: int
+    file_id: int | None
     version: str
 
     original_mod_id: int
@@ -35,7 +34,6 @@ class Translation:
     path: Path = None
 
     _original_path: Path = None
-    _download: Download = None
 
     strings: dict[str, list[String]] = None
     """
@@ -48,42 +46,10 @@ class Translation:
         """
 
         Ok = "Ok"
-        WaitingForDownload = "Waiting for Download"
-        Downloading = "Downloading"
-        DownloadSuccess = "Download successful"
-        DownloadFailed = "Download failed"
         UpdateAvailable = "Update available"
         UpdateIgnored = "Update ignored"
-        Processing = "Processing"
 
     status: Status = None
-
-    class Source(StrEnum):
-        """
-        Enum for different Sources (for eg. Nexus Mods or Confrérie des Traducteurs).
-        """
-
-        NexusMods = "NexusMods"
-        """
-        Translation is downloaded and installed from Nexus Mods.
-        """
-
-        Confrerie = "Confrérie des Traducteurs"
-        """
-        Translation is downloaded and installed from Confrérie des Traducteurs.
-        """
-
-        Local = "Local"
-        """
-        Translation is either imported from local disk or created from database.
-        """
-
-        @classmethod
-        def get(cls, name: str, default=None, /):
-            try:
-                return cls[name]
-            except KeyError:
-                return default
 
     source: Source = None
 

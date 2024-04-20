@@ -7,7 +7,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 from .api_setup import ApiSetup
 from .completion_box import CompletionBox
 from .copy_entry import CopyLineEdit
-from .download_list import DownloadListDialog
+from .download_list_dialog import DownloadListDialog
 from .error_dialog import ErrorDialog
 from .ignore_list_dialog import IgnoreListDialog
 from .key_entry import KeyEntry

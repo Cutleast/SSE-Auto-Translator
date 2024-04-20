@@ -19,8 +19,7 @@ from main import MainApp
 from mod_managers import SUPPORTED_MOD_MANAGERS
 from plugin_parser import PluginParser
 from processor import Processor
-from widgets import (IgnoreListDialog, LoadingDialog, SearchBar,
-                     StringListDialog)
+from widgets import IgnoreListDialog, LoadingDialog, SearchBar, StringListDialog
 
 
 class MainPageWidget(qtw.QWidget):
@@ -179,7 +178,7 @@ class MainPageWidget(qtw.QWidget):
         scan_modlist_action.triggered.connect(
             lambda: (
                 Processor.scan_modlist(self.mods, self.app),
-                self.tool_bar.widgetForAction(scan_nm_action).setObjectName(
+                self.tool_bar.widgetForAction(scan_online_action).setObjectName(
                     "accent_button"
                 ),
                 self.tool_bar.widgetForAction(scan_modlist_action).setObjectName(""),
@@ -187,17 +186,17 @@ class MainPageWidget(qtw.QWidget):
             )
         )
 
-        scan_nm_action = self.tool_bar.addAction(
-            qtg.QIcon(str(self.app.data_path / "icons" / "scan_nm.svg")),
-            self.loc.main.scan_nm_translations,
+        scan_online_action = self.tool_bar.addAction(
+            qtg.QIcon(str(self.app.data_path / "icons" / "scan_online.svg")),
+            self.loc.main.scan_online,
         )
-        scan_nm_action.triggered.connect(
+        scan_online_action.triggered.connect(
             lambda: (
-                Processor.scan_nm(self.mods, self.app),
+                Processor.scan_online(self.mods, self.app),
                 self.tool_bar.widgetForAction(
                     download_translations_action
                 ).setObjectName("accent_button"),
-                self.tool_bar.widgetForAction(scan_nm_action).setObjectName(""),
+                self.tool_bar.widgetForAction(scan_online_action).setObjectName(""),
                 self.tool_bar.setStyleSheet(self.app.styleSheet()),
             )
         )
@@ -393,9 +392,10 @@ class MainPageWidget(qtw.QWidget):
                 if matching:
                     mod = matching[0]
                     if mod.mod_id:
-                        url = utils.create_nexus_mods_url(
-                            "skyrimspecialedition", mod.mod_id
-                        )
+                        url = self.app.provider.get_details(
+                            mod.mod_id,
+                            source=utils.Source.NexusMods,
+                        )["modpage_url"]
                         os.startfile(url)
 
             def open_in_explorer():
@@ -405,41 +405,6 @@ class MainPageWidget(qtw.QWidget):
                 elif plugin_selected:
                     if selected_plugin.path.is_file():
                         os.system(f'explorer.exe /select,"{selected_plugin.path}"')
-
-            def show_translation_at_nm():
-                if not plugin_selected and not mod_selected:
-                    return
-
-                if plugin_selected:
-                    translation = self.app.database.get_translation_by_plugin_name(
-                        selected_plugin.name
-                    )
-                else:
-                    translation = self.app.database.get_translation_by_mod(selected_mod)
-
-                if translation:
-                    if translation.mod_id and translation.file_id:
-                        url = utils.create_nexus_mods_url(
-                            "skyrimspecialedition", translation.mod_id
-                        )
-                        os.startfile(url)
-                else:
-                    if plugin_selected:
-                        mod = [
-                            _mod
-                            for _mod in self.mods
-                            if selected_plugin in _mod.plugins
-                        ][0]
-                    else:
-                        mod = selected_mod
-                    translations = self.app.api.get_mod_translations(
-                        "skyrimspecialedition", mod.mod_id
-                    )
-                    translation_urls = translations.get(
-                        self.app.user_config["language"]
-                    )
-                    if translation_urls:
-                        os.startfile(translation_urls[0])
 
             def show_untranslated_strings():
                 if not plugin_selected:
@@ -647,14 +612,6 @@ class MainPageWidget(qtw.QWidget):
                 show_translation_strings_action.triggered.connect(
                     show_translation_strings
                 )
-
-                show_translation_at_nm_action = menu.addAction(
-                    self.loc.main.open_translation_on_nexusmods
-                )
-                show_translation_at_nm_action.setIcon(
-                    qtg.QIcon(str(self.app.data_path / "icons" / "nexus_mods.svg"))
-                )
-                show_translation_at_nm_action.triggered.connect(show_translation_at_nm)
 
                 edit_translation_action = menu.addAction(self.mloc.edit_translation)
                 edit_translation_action.setIcon(
@@ -870,7 +827,7 @@ class MainPageWidget(qtw.QWidget):
                             plugin_visible = (
                                 self.filter_translation_available.isChecked()
                             )
-                        case plugin.Status.TranslationAvailableAtNexusMods:
+                        case plugin.Status.TranslationAvailableOnline:
                             plugin_visible = (
                                 self.filter_translation_available.isChecked()
                             )
@@ -900,7 +857,7 @@ class MainPageWidget(qtw.QWidget):
                             translation_incomplete_plugins += 1
                         case plugin.Status.TranslationAvailableInDatabase:
                             translation_available_plugins += 1
-                        case plugin.Status.TranslationAvailableAtNexusMods:
+                        case plugin.Status.TranslationAvailableOnline:
                             translation_available_plugins += 1
                         case plugin.Status.RequiresTranslation:
                             requires_translation_plugins += 1
@@ -984,10 +941,10 @@ class MainPageWidget(qtw.QWidget):
 ).name()}">{translation_installed_plugins}</font></td></tr>
 
 <tr><td><font color="{utils.Plugin.Status.get_color(
-    utils.Plugin.Status.TranslationAvailableAtNexusMods
+    utils.Plugin.Status.TranslationAvailableOnline
 ).name()}">{self.mloc.translation_available}:\
 </font></td><td align=right><font color="{utils.Plugin.Status.get_color(
-    utils.Plugin.Status.TranslationAvailableAtNexusMods
+    utils.Plugin.Status.TranslationAvailableOnline
 ).name()}">{translation_available_plugins}</font></td></tr>
 
 <tr><td><font color="{utils.Plugin.Status.get_color(
@@ -1216,7 +1173,7 @@ class MainPageWidget(qtw.QWidget):
             qta.icon(
                 "mdi6.square-rounded",
                 color=utils.Plugin.Status.get_color(
-                    utils.Plugin.Status.TranslationAvailableAtNexusMods
+                    utils.Plugin.Status.TranslationAvailableOnline
                 ),
             ).pixmap(32, 32)
         )

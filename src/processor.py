@@ -19,6 +19,7 @@ import utilities as utils
 from database import Translation
 from main import MainApp
 from plugin_parser import PluginParser
+from translation_provider import FileDownload, TranslationDownload
 from widgets import DownloadListDialog, LoadingDialog
 
 
@@ -325,14 +326,14 @@ class Processor:
             app.log.error("Found no original mod in installed mods. Import failed!")
 
     @staticmethod
-    def scan_nm(modlist: list[utils.Mod], app: MainApp):
+    def scan_online(modlist: list[utils.Mod], app: MainApp):
         """
-        Scans for translations at Nexus Mods.
+        Scans online for available translations.
         """
 
-        desired_lang: str = app.user_config["language"]
+        language: str = app.user_config["language"]
 
-        app.log.info("Scanning Nexus Mods for available translations...")
+        app.log.info("Scanning online for available translations...")
 
         def process(ldialog: LoadingDialog):
             relevant_mods = [
@@ -357,7 +358,7 @@ class Processor:
                     continue
 
                 ldialog.updateProgress(
-                    text1=f"{app.loc.main.scanning_nm_translations} ({m}/{len(relevant_mods)})",
+                    text1=f"{app.loc.main.scanning_online} ({m}/{len(relevant_mods)})",
                     value1=m,
                     max1=len(relevant_mods),
                 )
@@ -372,44 +373,28 @@ class Processor:
                         text3=plugin.name,
                     )
 
-                    translations = app.api.get_mod_translations(
-                        "skyrimspecialedition", mod.mod_id
+                    available_translations = app.provider.get_translations(
+                        mod.mod_id, plugin.name, language
                     )
 
                     if plugin.name.lower() in app.masterlist:
                         if app.masterlist[plugin.name.lower()]["type"] == "route":
-                            plugin.status = (
-                                plugin.Status.TranslationAvailableAtNexusMods
-                            )
+                            plugin.status = plugin.Status.TranslationAvailableOnline
                             app.log.info(
-                                f"Found {plugin.name!r} in Masterlist of type 'route'. Skipping Nexus Mods Scan..."
+                                f"Found entry for {plugin.name!r} in Masterlist of type 'route'."
                             )
                             continue
 
-                    if desired_lang in translations:
-                        translation_urls = translations[desired_lang]
-                        for translation_url in translation_urls:
-                            translation_mod_id = int(
-                                translation_url.split("/")[-1].split("?")[0]
-                            )
-                            if app.api.scan_mod_for_filename(
-                                "skyrimspecialedition", translation_mod_id, plugin.name
-                            ):
-                                plugin.status = (
-                                    plugin.Status.TranslationAvailableAtNexusMods
-                                )
-                                break
-                        else:
-                            plugin.status = plugin.Status.NoTranslationAvailable
+                    if available_translations:
+                        plugin.status = plugin.Status.TranslationAvailableOnline
                     else:
                         plugin.status = plugin.Status.NoTranslationAvailable
 
         loadingdialog = LoadingDialog(app.root, app, process)
         loadingdialog.exec()
 
-        app.log.info("Nexus Mods scan complete.")
+        app.log.info("Online scan complete.")
 
-        # Processor.update_status_colors(modlist)
         app.mainpage_widget.update_modlist()
         Processor.show_result(modlist, app)
 
@@ -477,8 +462,8 @@ class Processor:
 
         app.log.info("Getting downloads for required translations...")
 
-        desired_lang: str = app.user_config["language"]
-        downloads: list[utils.Download] = []
+        language: str = app.user_config["language"]
+        translation_downloads: dict[str, list[TranslationDownload]] = {}
 
         def process(ldialog: LoadingDialog):
             ldialog.updateProgress(text1=app.loc.main.getting_downloads)
@@ -486,78 +471,92 @@ class Processor:
             for mod in modlist:
                 for plugin in mod.plugins:
                     if (
-                        plugin.status == plugin.Status.TranslationAvailableAtNexusMods
+                        plugin.status == plugin.Status.TranslationAvailableOnline
                         and plugin.tree_item.checkState(0) == qtc.Qt.CheckState.Checked
                     ):
-                        _translations = app.api.get_mod_translations(
-                            "skyrimspecialedition", mod.mod_id
-                        ).get(desired_lang)
-                        if _translations is not None:
-                            available_translations = [
-                                int(url.rsplit("/", 1)[1].split("?")[0])
-                                for url in _translations
-                            ]
-                        else:
-                            available_translations = []
+                        available_translations = app.provider.get_translations(
+                            mod.mod_id, plugin.name, language
+                        )
 
-                        available_translation_files: dict[int, list[int]] = {}
+                        mod_translations: list[TranslationDownload] = []
 
-                        for translation_mod_id in available_translations.copy():
-                            file_ids = app.api.scan_mod_for_filename(
-                                "skyrimspecialedition", translation_mod_id, plugin.name
-                            )
-
-                            if file_ids:
-                                available_translation_files[translation_mod_id] = (
-                                    file_ids
-                                )
-                            else:
-                                available_translations.remove(translation_mod_id)
-
-                        masterlist_entry = app.masterlist.get(plugin.name.lower())
-                        if masterlist_entry is not None:
-                            if masterlist_entry["type"] == "route":
-                                for target in masterlist_entry["targets"]:
-                                    mod_id: int = target["mod_id"]
-                                    file_id: int = target["file_id"]
-
-                                    if mod_id in available_translation_files:
-                                        available_translation_files[mod_id].append(
-                                            file_id
-                                        )
-                                    else:
-                                        available_translation_files[mod_id] = [file_id]
-
-                                    available_translation_files[mod_id] = list(
-                                        set(available_translation_files[mod_id])
+                        for mod_id, file_ids, source in available_translations:
+                            downloads: list[FileDownload] = []
+                            if source == utils.Source.NexusMods:
+                                for file_id in file_ids:
+                                    file_details = app.provider.get_details(
+                                        mod_id, file_id, source
                                     )
-
-                                    available_translations.append(mod_id)
-
-                                available_translations = list(
-                                    set(available_translations)
+                                    download = FileDownload(
+                                        name=file_details["name"],
+                                        source=source,
+                                        mod_id=mod_id,
+                                        file_id=file_id,
+                                        original_mod=mod,
+                                        file_name=file_details["filename"],
+                                    )
+                                    downloads.append(download)
+                            else:
+                                file_details = app.provider.get_details(mod_id, source)
+                                download = FileDownload(
+                                    name=file_details["name"],
+                                    source=source,
+                                    mod_id=mod_id,
+                                    original_mod=mod,
+                                    file_name=file_details["filename"],
                                 )
-
-                                app.log.info(
-                                    f"Found {plugin.name!r} in Masterlist of type 'route'. Added Targets to Downloads."
-                                )
-
-                        if available_translations and available_translation_files:
-                            download = utils.Download(
-                                mod.name,
-                                mod.mod_id,
-                                plugin.name,
-                                available_translations,
-                                available_translation_files,
-                            )
-                            if download not in downloads:
                                 downloads.append(download)
+
+                            translation_details = app.provider.get_details(
+                                mod_id, source=source
+                            )
+                            translation_download = TranslationDownload(
+                                name=translation_details["name"],
+                                mod_id=mod_id,
+                                original_mod=mod,
+                                original_plugin=plugin,
+                                source=source,
+                                available_downloads=downloads,
+                            )
+                            mod_translations.append(translation_download)
+
+                        translation_downloads[f"{mod.name} > {plugin.name}"] = (
+                            mod_translations
+                        )
+
+                        # masterlist_entry = app.masterlist.get(plugin.name.lower())
+                        # if masterlist_entry is not None:
+                        #     if masterlist_entry["type"] == "route":
+                        #         for target in masterlist_entry["targets"]:
+                        #             mod_id: int = target["mod_id"]
+                        #             file_id: int = target["file_id"]
+
+                        #             if mod_id in available_translation_files:
+                        #                 available_translation_files[mod_id].append(
+                        #                     file_id
+                        #                 )
+                        #             else:
+                        #                 available_translation_files[mod_id] = [file_id]
+
+                        #             available_translation_files[mod_id] = list(
+                        #                 set(available_translation_files[mod_id])
+                        #             )
+
+                        #             available_translations.append(mod_id)
+
+                        #         available_translations = list(
+                        #             set(available_translations)
+                        #         )
+
+                        #         app.log.info(
+                        #             f"Found {plugin.name!r} in Masterlist of type 'route'. Added Targets to Downloads."
+                        #         )
 
         loadingdialog = LoadingDialog(app.root, app, process)
         loadingdialog.exec()
 
-        if len(downloads):
-            DownloadListDialog(app, downloads)
+        if len(translation_downloads):
+            DownloadListDialog(app, translation_downloads)
 
     @staticmethod
     def download_and_install_translations(modlist: list[utils.Mod], app: MainApp):
@@ -883,12 +882,12 @@ class Processor:
                 plugin
                 for mod in modlist
                 for plugin in mod.plugins
-                if plugin.status == plugin.Status.TranslationAvailableAtNexusMods
+                if plugin.status == plugin.Status.TranslationAvailableOnline
                 or plugin.status == plugin.Status.TranslationAvailableInDatabase
             ]
         )
         color = utils.Plugin.Status.get_color(
-            utils.Plugin.Status.TranslationAvailableAtNexusMods
+            utils.Plugin.Status.TranslationAvailableOnline
         ).name()
         label = qtw.QLabel(
             f'<font color="{color}">{app.loc.main_page.translation_available}:</font>'

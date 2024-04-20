@@ -51,9 +51,9 @@ class Plugin:
         Translation for Plugin is available in Database (cyan).
         """
 
-        TranslationAvailableAtNexusMods = 4
+        TranslationAvailableOnline = 4
         """
-        Translation for Plugin is available at Nexus Mods (cyan).
+        Translation for Plugin is available online at Nexus Mods or Confrérie des Traducteurs (cyan).
         """
 
         TranslationIncomplete = 5
@@ -81,7 +81,7 @@ class Plugin:
                 cls.TranslationIncomplete: QColor.fromString("#c24cd4"),
                 cls.RequiresTranslation: QColor.fromString("#e9e042"),
                 cls.TranslationAvailableInDatabase: QColor.fromString("#51c6d9"),
-                cls.TranslationAvailableAtNexusMods: QColor.fromString("#51c6d9"),
+                cls.TranslationAvailableOnline: QColor.fromString("#51c6d9"),
                 cls.NoTranslationAvailable: QColor.fromString("#d74343"),
             }
 

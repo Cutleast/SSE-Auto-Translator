@@ -1,9 +1,9 @@
 {
-    "startup": "Welcome!",
-    "introduction": "This Guide will help you setting up this Tool for your modlist.",
-    "setup_title": "Initial Setup",
-    "setup_help": "On this page you setup basic settings.",
-    "instance_title": "Modinstance Selection",
+    "choose_lang": "Choose Game Language:",
     "instance_help": "On this page you select a Modinstance to load from a Mod Manager.\nYou can always change the selected modinstance and mod manager under Settings > User Settings.",
-    "choose_lang": "Choose Game Language:"
+    "instance_title": "Modinstance Selection",
+    "introduction": "This Guide will help you setting up this Tool for your modlist.",
+    "setup_help": "On this page you setup basic settings.",
+    "setup_title": "Initial Setup",
+    "startup": "Welcome!"
 }

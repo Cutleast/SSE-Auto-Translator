@@ -12,7 +12,7 @@ from shutil import rmtree
 import jstyleson as json
 
 from plugin_parser import PluginParser
-from utilities import Mod, String
+from utilities import Mod, String, Source
 
 from .translation import Translation
 
@@ -62,7 +62,7 @@ class TranslationDatabase:
             original_file_id=0,
             original_version="",
             path=translation_path,
-            source=Translation.Source.Local,
+            source=Source.Local,
         )
         translation.load_translation()
         self.vanilla_translation = translation
@@ -92,35 +92,34 @@ class TranslationDatabase:
         for translation_data in translation_list:
             name: str = translation_data["name"]
             mod_id: int = int(translation_data["mod_id"])
-            file_id: int = int(translation_data["file_id"])
+            file_id: int | None = translation_data["file_id"]
             version: str = translation_data["version"]
             original_mod_id: int = int(translation_data["original_mod_id"])
             original_file_id: int = int(translation_data["original_file_id"])
             original_version: str = translation_data["original_version"]
+            translation_path: Path = self.userdb_path / self.language / name
             source = translation_data.get("source")
-            source = Translation.Source.get(source)
+            source = Source.get(source)
 
             if source is None:
                 if mod_id and file_id:
-                    source = Translation.Source.NexusMods
+                    source = Source.NexusMods
                 elif mod_id:
-                    source = Translation.Source.Confrerie
+                    source = Source.Confrerie
                 else:
-                    source = Translation.Source.Local
+                    source = Source.Local
 
             timestamp: int | None = translation_data.get("file_timestamp")
 
-            translation_path: Path = self.userdb_path / self.language / name
-
             translation = Translation(
-                name,
-                mod_id,
-                file_id,
-                version,
-                original_mod_id,
-                original_file_id,
-                original_version,
-                translation_path,
+                name=name,
+                mod_id=mod_id,
+                file_id=file_id,
+                version=version,
+                original_mod_id=original_mod_id,
+                original_file_id=original_file_id,
+                original_version=original_version,
+                path=translation_path,
                 source=source,
                 timestamp=timestamp,
             )
@@ -348,7 +347,7 @@ class TranslationDatabase:
             original_version="",
             path=self.userdb_path / self.language / translation_name,
             strings={plugin_path.name.lower(): plugin_strings},
-            source=Translation.Source.Local,
+            source=Source.Local,
             timestamp=int(time.time()),
         )
         self.apply_db_to_translation(translation, plugin_path.name.lower())

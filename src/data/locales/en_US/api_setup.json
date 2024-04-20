@@ -1,11 +1,11 @@
 {
-    "sso_setup": "Single-Sign-On (Browser)",
-    "manual_setup": "Manual Setup",
-    "insert_api_key": "Insert your API Key",
-    "check_api_key": "Check API Key",
-    "start_sso": "Click here to login to Nexus Mods via Browser",
-    "sso_successful": "Successfully logged into Nexus Mods",
     "api_help": "In order to get translations from Nexus Mods this tool needs access to the Nexus Mods API. You can setup access by two methods: insert API key manually or via SSO (Single-Sign-On).",
+    "api_key_invalid": "API Key is invalid!",
     "api_key_valid": "API Key is valid!",
-    "api_key_invalid": "API Key is invalid!"
+    "check_api_key": "Check API Key",
+    "insert_api_key": "Insert your API Key",
+    "manual_setup": "Manual Setup",
+    "sso_setup": "Single-Sign-On (Browser)",
+    "sso_successful": "Successfully logged into Nexus Mods",
+    "start_sso": "Click here to login to Nexus Mods via Browser"
 }

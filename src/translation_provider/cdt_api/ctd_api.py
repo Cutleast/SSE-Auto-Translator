@@ -43,6 +43,22 @@ class CDTApi:
         """
         Requests details for translation for `nm_mod_id`
         and returns it as `dict`.
+
+        Example response:
+        ```
+        {
+            "NexusModId": 24595,
+            "FrenchName": "Observateurs et Veilleurs",
+            "Version": "6",
+            "Filename": "observateurs_et_veilleurs_6_sse.7z",
+            "DownloadLink": "https://www.confrerie-des-traducteurs.fr/skyrim/telechargement_se/4228/sse?fromSseAtAPI=1",
+            "LastArchiveUpdateDate": {
+                "date": "2024-03-22 21:16:32.000000",
+                "timezone_type": 3,
+                "timezone": "Europe/Paris"
+            }
+        }
+        ```
         """
 
         self.log.info(f"Requesting translation info for mod {nm_mod_id}...")
@@ -104,6 +120,20 @@ class CDTApi:
 
             return timestamp
 
+    def get_modpage_link(self, nm_mod_id: int) -> str | None:
+        """
+        Returns modpage URL for translation for `nm_mod_id`.
+        """
+
+        mod_details = self.get_mod_details(nm_mod_id)
+
+        if mod_details is not None:
+            dl_url: str = mod_details["DownloadLink"]
+            cdt_id = dl_url.rsplit("/", 2)[1]
+            url = f"https://www.confrerie-des-traducteurs.fr/skyrim/mods/{cdt_id}"
+
+            return url
+
     def get_download_link(self, nm_mod_id: int) -> str | None:
         """
         Returns direct download URL for translation for `nm_mod_id`.
@@ -113,3 +143,13 @@ class CDTApi:
 
         if mod_details is not None:
             return mod_details["DownloadLink"]
+
+    def get_filename_of_id(self, nm_mod_id: int) -> str | None:
+        """
+        Gets filename for `nm_mod_id`.
+        """
+
+        mod_details = self.get_mod_details(nm_mod_id)
+
+        if mod_details is not None:
+            return mod_details["Filename"]

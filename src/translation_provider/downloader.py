@@ -9,12 +9,13 @@ from pathlib import Path
 
 import requests as req
 
-from .api import NexusModsApi
+from .file_download import FileDownload
+from .provider import Provider
 
 
-class Download:
+class Downloader:
     """
-    Class for single file downloads.
+    Class for downloading.
     """
 
     CHUNK_SIZE = 1024 * 1024  # 1 MB
@@ -26,34 +27,17 @@ class Download:
     Current Speed in Bytes per Second
     """
 
-    previous_size: int = None
-    """
-    Previous Size of downloaded Data, for calculation of Speed
-    """
+    current_download: FileDownload = None
 
-    current_size: int = None
-    """
-    Size of downloaded Data in Bytes
-    """
-
-    file_size: int = None
-    """
-    Total Download Size
-    """
-
-    def __init__(self, url: str, dl_path: Path):
-        self.url = url
-        self.dl_path = dl_path
-
-    def download(self):
+    def download(self, download: FileDownload, folder: Path):
         """
-        Downloads file.
+        Downloads file to `folder`.
         """
 
         headers = {
-            "User-Agent": NexusModsApi.user_agent,
+            "User-Agent": Provider.user_agent,
         }
-        stream = req.get(self.url, stream=True, headers=headers)
+        stream = req.get(download.direct_url, stream=True, headers=headers)
 
         self.file_size = int(stream.headers.get("Content-Length", "0"))
 
@@ -61,8 +45,11 @@ class Download:
         self.previous_size = 0
         self.current_size = 0
         self.cur_speed = 0
+        self.current_download = download
 
-        with self.dl_path.open("wb") as file:
+        dl_path = folder / download.file_name
+
+        with dl_path.open("wb") as file:
             for data in stream.iter_content(chunk_size=self.CHUNK_SIZE):
                 if self.running:
                     file.write(data)
@@ -71,9 +58,10 @@ class Download:
                     break
 
         self.running = False
+        self.current_download = None
 
         if self.current_size < self.file_size:
-            os.remove(self.dl_path)
+            os.remove(dl_path)
 
     def cancel_download(self):
         """

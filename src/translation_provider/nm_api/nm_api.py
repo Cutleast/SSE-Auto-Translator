@@ -19,6 +19,8 @@ import websocket
 import utilities as utils
 from main import MainApp
 
+from ..file_download import FileDownload
+
 
 class NexusModsApi:
     """
@@ -122,6 +124,46 @@ class NexusModsApi:
     def get_mod_details(self, game_id: str, mod_id: int) -> dict:
         """
         Gets mod details from `mod_id` in `game_id`.
+
+        Example response:
+        ```
+        {
+            "name": "TESL - Loading Screens - German",
+            "summary": "Eine deutsche Übersetzung der Mod The Elder Scrolls Legends - Loading Screens von Jampion.",
+            "description": "...",
+            "picture_url": "https://staticdelivery.nexusmods.com/mods/1704/images/73920/73920-1661277111-1914574655.png",
+            "mod_downloads": 1278,
+            "mod_unique_downloads": 674,
+            "uid": 7318624346304,
+            "mod_id": 73920,
+            "game_id": 1704,
+            "allow_rating": True,
+            "domain_name": "skyrimspecialedition",
+            "category_id": 42,
+            "version": "v2.1.1",
+            "endorsement_count": 46,
+            "created_timestamp": 1661277660,
+            "created_time": "2022-08-23T18:01:00.000+00:00",
+            "updated_timestamp": 1688886211,
+            "updated_time": "2023-07-09T07:03:31.000+00:00",
+            "author": "Cutleast",
+            "uploaded_by": "Cutleast",
+            "uploaded_users_profile_url": "https://nexusmods.com/users/65733731",
+            "contains_adult_content": False,
+            "status": "published",
+            "available": True,
+            "user": {
+                "member_id": 65733731,
+                "member_group_id": 27,
+                "name": "Cutleast"
+            },
+            "endorsement": {
+                "endorse_status": "Undecided",
+                "timestamp": None,
+                "version": None
+            }
+        }
+        ```
         """
 
         self.log.info(f"Requesting mod info for {mod_id!r}...")
@@ -152,6 +194,49 @@ class NexusModsApi:
             return mod_files
         else:
             self.log.error(f"Failed to get mod files! Status code: {res.status_code}")
+            return []
+
+    def get_file_details(self, game_id: str, mod_id: int, file_id: int) -> dict:
+        """
+        Returns file details for `file_id` at `mod_id`.
+
+        Example response:
+        ```
+        {
+            "id": [
+                405401,
+                1704
+            ],
+            "uid": 7318624677785,
+            "file_id": 405401,
+            "name": "TESL Loading Screens - German",
+            "version": "v2.1.1",
+            "category_id": 1,
+            "category_name": "MAIN",
+            "is_primary": True,
+            "size": 15,
+            "file_name": "TESL Loading Screens - German-73920-v2-1-1-1688886211.7z",
+            "uploaded_timestamp": 1688886211,
+            "uploaded_time": "2023-07-09T07:03:31.000+00:00",
+            "mod_version": "v2.1.1",
+            "external_virus_scan_url": "https://www.virustotal.com/gui/file/e5acb9d2f7cc5b7decc62ad5421f281c294ed27390dfa40570d7f73826e4dcba/detection/f-e5acb9d2f7cc5b7decc62ad5421f281c294ed27390dfa40570d7f73826e4dcba-1688886216",
+            "description": "Die Original-Mod wird zwingend benötigt!!!",
+            "size_kb": 15,
+            "size_in_bytes": 15269,
+            "changelog_html": None,
+            "content_preview_link": "https://file-metadata.nexusmods.com/file/nexus-files-s3-meta/1704/73920/TESL Loading Screens - German-73920-v2-1-1-1688886211.7z.json"
+        }
+        ```
+        """
+
+        path = f"/games/{game_id}/mods/{mod_id}/files/{file_id}.json"
+        res = self.request(path)
+
+        if res.status_code == 200:
+            details: dict = json.loads(res.content.decode())
+            return details
+        else:
+            self.log.error(f"Failed to get details for mod file! Status code: {res.status_code}")
             return []
 
     def get_file_contents(self, game_id: str, mod_id: int, file_name: str):
@@ -403,3 +488,119 @@ class NexusModsApi:
         self.log.info("Request successful.")
 
         return {update["old_file_id"]: update["new_file_id"] for update in updates}
+
+    def get_premium_download_url(
+        self, game_id: str, mod_id: int, file_id: int, server_id: str = "Nexus CDN"
+    ):
+        """
+        Generates premium download URL for `file_id` from `mod_id`.
+        Uses `server` if specified.
+        """
+
+        path = f"games/{game_id}/mods/{mod_id}/files/{file_id}/download_link.json"
+
+        res = self.request(path)
+
+        match res.status_code:
+            case 200:
+                data: list[dict[str, str]] = json.loads(res.content.decode())
+
+                for url_data in data:
+                    if url_data["short_name"].lower() == server_id.lower():
+                        return url_data["URI"]
+
+                # Handle errors
+                else:
+                    raise utils.ApiInvalidServerError
+            case 400:
+                raise utils.ApiKeyInvalidError
+            case 403:
+                raise utils.ApiPermissionError
+            case 404:
+                raise FileNotFoundError
+            case 410:
+                raise utils.ApiExpiredError
+            case _:
+                raise utils.ApiException
+
+    def get_download_url(
+        self, game_id: str, mod_id: int, file_id: int, key: str, expires: int
+    ):
+        """
+        Generates non-premium download URL for `file_id` from `mod_id`
+        by using `key` and `expires`.
+        """
+
+        path = f"games/{game_id}/mods/{mod_id}/files/{file_id}/download_link.json"
+        path += f"?key={key}&expires={expires}"
+
+        res = self.request(path)
+
+        match res.status_code:
+            case 200:
+                data: list[dict[str, str]] = json.loads(res.content.decode())
+
+                for url_data in data:
+                    return url_data["URI"]
+                else:
+                    print(data)
+                    raise utils.ApiException("No server in response!")
+
+            case 400:
+                raise utils.ApiKeyInvalidError
+            case 403:
+                raise utils.ApiPermissionError
+            case 404:
+                raise FileNotFoundError
+            case 410:
+                raise utils.ApiExpiredError
+            case _:
+                raise utils.ApiException
+
+    def get_direct_download_url(
+        self,
+        game_id: str,
+        mod_id: int,
+        file_id: int,
+        key: str = None,
+        expires: int = None,
+    ):
+        """
+        Downloads `file_id` from `mod_id`.
+        """
+
+        if self.premium:
+            self.log.info(f"Starting premium download...")
+
+            url = self.get_premium_download_url(game_id, mod_id, file_id)
+
+        else:
+            if key is None or expires is None:
+                raise utils.ApiException("Key and/or expires timestamp is/are missing!")
+
+            self.log.info(f"Starting non-premium download...")
+
+            url = self.get_download_url(game_id, mod_id, file_id, key, expires)
+
+        return url
+
+    @staticmethod
+    def create_nexus_mods_url(
+        game_id: str, mod_id: int, file_id: int = None, mod_manager: bool = False
+    ):
+        """
+        Creates URL to Nexus Mods page of `mod_id` in `game_id` nexus.
+
+        `file_id` is optional and can be used to link directly to a file.
+        """
+
+        base_url = "https://www.nexusmods.com"
+
+        if file_id is None:
+            url = f"{base_url}/{game_id}/mods/{mod_id}"
+        else:
+            url = f"{base_url}/{game_id}/mods/{mod_id}?tab=files&file_id={file_id}"
+            if mod_manager:
+                url += "&nmm=1"
+
+        return url

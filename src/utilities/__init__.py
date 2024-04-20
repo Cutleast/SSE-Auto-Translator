@@ -15,7 +15,6 @@ import requests as req
 
 from .constants import *
 from .detector import LangDetector, Language
-from .download import Download
 from .exceptions import *
 from .importer import *
 from .ini_parser import IniParser
@@ -25,6 +24,7 @@ from .localisation import Localisator
 from .mod import Mod
 from .nxm_listener import NXMListener
 from .plugin import Plugin
+from .source import Source
 from .stdout_pipe import StdoutPipe
 from .string import String
 from .thread import Thread
@@ -180,27 +180,6 @@ def scale_value(value: int | float, suffix="B", factor: int = 1024):
         value /= factor
 
     return str(value)
-
-
-def create_nexus_mods_url(
-    game_id: str, mod_id: int, file_id: int = None, mod_manager: bool = False
-):
-    """
-    Creates URL to Nexus Mods page of `mod_id` in `game_id` nexus.
-
-    `file_id` is optional and can be used to link directly to a file.
-    """
-
-    base_url = "https://www.nexusmods.com"
-
-    if file_id is None:
-        url = f"{base_url}/{game_id}/mods/{mod_id}"
-    else:
-        url = f"{base_url}/{game_id}/mods/{mod_id}?tab=files&file_id={file_id}"
-        if mod_manager:
-            url += "&nmm=1"
-
-    return url
 
 
 def extract_file_paths(data: dict):

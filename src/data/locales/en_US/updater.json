@@ -1,8 +1,8 @@
 {
-    "update_available": "An Update is available to download!",
+    "download_update": "Download Update",
+    "download_updates": "Download Updates",
+    "ignore_update": "Ignore Update",
     "installed_version": "Installed Version",
     "latest_version": "Latest Version",
-    "ignore_update": "Ignore Update",
-    "download_update": "Download Update",
-    "download_updates": "Download Updates"
+    "update_available": "An Update is available to download!"
 }

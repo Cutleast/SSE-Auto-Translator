@@ -68,7 +68,7 @@ class MainApp(qtw.QApplication):
 
     translator: "translator_api.Translator" = None
 
-    api: "NexusModsApi" = None
+    provider: "Provider" = None
 
     log_name = f"{time.strftime('%d.%m.%Y')}-{time.strftime('%H.%M.%S')}.log"
     log_path = data_path / "logs"
@@ -235,6 +235,19 @@ class MainApp(qtw.QApplication):
             with self.user_conf_path.open("w", encoding="utf8") as file:
                 json.dump(self.user_config, file, indent=4)
 
+        if "provider_preference" not in self.user_config:
+            if self.user_config["language"] == "French":
+                self.user_config["provider_preference"] = (
+                    Provider.Preference.PreferConfrerie.name
+                )
+            else:
+                self.user_config["provider_preference"] = (
+                    Provider.Preference.OnlyNexusMods.name
+                )
+
+            with self.user_conf_path.open("w", encoding="utf8") as file:
+                json.dump(self.user_config, file, indent=4)
+
         if self.translator_conf_path.is_file():
             with open(self.translator_conf_path, encoding="utf8") as file:
                 self.translator_config = json.load(file)
@@ -255,10 +268,16 @@ class MainApp(qtw.QApplication):
             self.log.info("Falling back to Google Translator...")
             self.translator = translator_api.GoogleTranslator(self)
 
-        self.api = NexusModsApi(self.user_config["api_key"])
-        api_valid = self.api.check_api_key()
+        self.provider = Provider(
+            self.user_config["api_key"],
+            Provider.Preference.get(
+                self.user_config["provider_preference"],
+                Provider.Preference.OnlyNexusMods,
+            ),
+        )
+        nm_api_valid = self.provider.check_api_key()
 
-        if not api_valid:
+        if not nm_api_valid:
             self.log.error("Nexus Mods API Key is invalid!")
 
             dialog = qtw.QDialog(self.root)
@@ -284,7 +303,7 @@ class MainApp(qtw.QApplication):
 
             def save():
                 self.user_config["api_key"] = api_setup.api_key
-                self.api.api_key = self.user_config["api_key"]
+                self.provider.api_key = self.user_config["api_key"]
 
                 with self.user_conf_path.open("w", encoding="utf8") as file:
                     json.dump(self.user_config, file, indent=4)
@@ -740,12 +759,13 @@ class MainApp(qtw.QApplication):
         super().timerEvent(event)
 
         if hasattr(self, "api_label"):
+            rem_hreq, rem_dreq = self.provider.get_remaining_requests()
             self.api_label.setText(
-                f"API: {self.loc.main.api_hleft}: {self.api.rem_hreq} | {self.loc.main.api_dleft}: {self.api.rem_dreq}"
+                f"API: {self.loc.main.api_hleft}: {rem_hreq} | {self.loc.main.api_dleft}: {rem_dreq}"
             )
-            if self.api.rem_hreq < 50 and self.api.rem_dreq == 0:
+            if rem_hreq < 50 and rem_dreq == 0:
                 self.api_label.setObjectName("critical_label")
-            elif self.api.rem_hreq < 100 and self.api.rem_dreq == 0:
+            elif rem_hreq < 100 and rem_dreq == 0:
                 self.api_label.setObjectName("warning_label")
             else:
                 self.api_label.setObjectName("label")
@@ -851,7 +871,7 @@ def main():
     global widgets
     global TranslationDatabase
     global MainPageWidget
-    global NexusModsApi
+    global Provider
     global SettingsDialog
     global StartupDialog
     global TranslationEditor
@@ -862,9 +882,9 @@ def main():
     import widgets
     from database import TranslationDatabase
     from main_page import MainPageWidget
-    from nm_api import NexusModsApi
     from settings import SettingsDialog
     from startup_dialog import StartupDialog
     from translation_editor import TranslationEditor
+    from translation_provider import Provider
 
     MainApp().exec()

@@ -48,6 +48,32 @@ class UserSettings(qtw.QWidget):
         self.lang_box.currentTextChanged.connect(self.on_change)
         flayout.addRow(self.mloc.game_lang, self.lang_box)
 
+        # Source
+        source_label = qtw.QLabel(self.loc.main.source)
+        source_label.setEnabled(self.app.user_config["language"] == "French")
+        self.source_dropdown = qtw.QComboBox()
+        self.source_dropdown.setEnabled(self.app.user_config["language"] == "French")
+        self.source_dropdown.setEditable(False)
+        self.source_dropdown.addItems(app.provider.Preference._member_names_)
+        self.source_dropdown.setCurrentText(self.app.user_config["provider_preference"])
+        self.source_dropdown.currentTextChanged.connect(self.on_change)
+
+        def on_lang_change(lang: str):
+            source_label.setEnabled(lang == "French")
+            self.source_dropdown.setEnabled(lang == "French")
+
+            if lang == "French":
+                self.source_dropdown.setCurrentText(
+                    app.provider.Preference.PreferConfrerie.name
+                )
+            else:
+                self.source_dropdown.setCurrentText(
+                    app.provider.Preference.OnlyNexusMods.name
+                )
+
+        self.lang_box.currentTextChanged.connect(on_lang_change)
+        flayout.addRow(source_label, self.source_dropdown)
+
         # API Setup / Settings
         api_key_hlayout = qtw.QHBoxLayout()
         self.api_key_entry = KeyEntry()
@@ -256,4 +282,5 @@ class UserSettings(qtw.QWidget):
             "modinstance": self.modinstance_dropdown.currentText(),
             "use_masterlist": self.masterlist_box.isChecked(),
             "instance_profile": profile,
+            "provider_preference": self.source_dropdown.currentText(),
         }

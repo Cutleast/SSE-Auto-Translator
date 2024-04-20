@@ -1,9 +1,9 @@
 {
-    "startup": "Willkommen!",
-    "introduction": "Diese Anleitung hilft Ihnen, dieses Tool für Ihre Modliste einzurichten.",
-    "setup_title": "Grundlegende Einstellungen",
-    "setup_help": "Auf dieser Seite nehmen Sie grundlegende Einstellungen vor.",
-    "instance_title": "Modinstanz auswählen",
+    "choose_lang": "Sprache des Spiels auswählen:",
     "instance_help": "Auf dieser Seite wählen Sie eine Modinstanz aus, die von einem Mod Manager geladen werden soll.\nSie können die ausgewählte Modinstanz und den Mod Manager jederzeit unter Einstellungen > Nutzereinstellungen ändern.",
-    "choose_lang": "Sprache des Spiels auswählen:"
+    "instance_title": "Modinstanz auswählen",
+    "introduction": "Diese Anleitung hilft Ihnen, dieses Tool für Ihre Modliste einzurichten.",
+    "setup_help": "Auf dieser Seite nehmen Sie grundlegende Einstellungen vor.",
+    "setup_title": "Grundlegende Einstellungen",
+    "startup": "Willkommen!"
 }

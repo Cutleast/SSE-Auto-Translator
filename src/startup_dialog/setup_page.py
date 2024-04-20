@@ -9,6 +9,7 @@ import qtpy.QtCore as qtc
 import qtpy.QtWidgets as qtw
 
 import utilities as utils
+from translation_provider import Provider
 from widgets import ApiSetup, CompletionBox
 
 from .startup_dialog import StartupDialog
@@ -46,10 +47,10 @@ class SetupPage(qtw.QWidget):
 
         vlayout.addSpacing(25)
 
+        # Language
         hlayout = qtw.QHBoxLayout()
         vlayout.addLayout(hlayout)
 
-        # Language
         lang_label = qtw.QLabel(self.mloc.choose_lang)
         hlayout.addWidget(lang_label)
         self.lang_box = CompletionBox()
@@ -60,12 +61,40 @@ class SetupPage(qtw.QWidget):
 
         vlayout.addSpacing(10)
 
+        # Source
+        hlayout = qtw.QHBoxLayout()
+        vlayout.addLayout(hlayout)
+
+        source_label = qtw.QLabel(self.loc.main.source)
+        hlayout.addWidget(source_label)
+        self.source_dropdown = qtw.QComboBox()
+        self.source_dropdown.setDisabled(True)
+        self.source_dropdown.setEditable(False)
+        self.source_dropdown.addItems(Provider.Preference._member_names_)
+        self.source_dropdown.setCurrentText(Provider.Preference.OnlyNexusMods.name)
+
+        def on_lang_change(lang: str):
+            source_label.setEnabled(lang == "French")
+            self.source_dropdown.setEnabled(lang == "French")
+
+            if lang == "French":
+                self.source_dropdown.setCurrentText(
+                    Provider.Preference.PreferConfrerie.name
+                )
+            else:
+                self.source_dropdown.setCurrentText(
+                    Provider.Preference.OnlyNexusMods.name
+                )
+
+        self.lang_box.currentTextChanged.connect(on_lang_change)
+        hlayout.addWidget(self.source_dropdown)
+
         # Masterlist
         self.masterlist_box = qtw.QCheckBox(self.loc.settings.use_masterlist)
         self.masterlist_box.setChecked(True)
         vlayout.addWidget(self.masterlist_box)
 
-        vlayout.addSpacing(10)
+        vlayout.addSpacing(5)
 
         # API Setup Widget
         self.api_setup = ApiSetup(self.startup_dialog.app)

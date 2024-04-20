@@ -39,7 +39,7 @@ class StartupDialog(qtw.QWidget):
         self.setWindowFlag(qtc.Qt.WindowType.Window, True)
         self.setObjectName("root")
         self.setWindowTitle(self.mloc.startup)
-        self.setFixedSize(900, 570)
+        self.setFixedSize(900, 610)
         utils.apply_dark_title_bar(self)
 
         # Create layout
@@ -65,6 +65,7 @@ class StartupDialog(qtw.QWidget):
 
     def finish(self):
         language = self.setup_page.lang_box.currentText()
+        provider_preference = self.setup_page.source_dropdown.currentText()
         api_key = self.setup_page.api_setup.api_key
         use_masterlist = self.setup_page.masterlist_box.isChecked()
         mod_manager_name = self.instance_page.mod_manager.name
@@ -80,6 +81,7 @@ class StartupDialog(qtw.QWidget):
             "modinstance": instance_name,
             "use_masterlist": use_masterlist,
             "instance_profile": instance_profile,
+            "provider_preference": provider_preference,
         }
 
         if not user_path.is_dir():

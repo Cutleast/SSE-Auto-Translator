@@ -8,7 +8,7 @@ import qtpy.QtCore as qtc
 import qtpy.QtWidgets as qtw
 
 from main import MainApp
-from nm_api import NexusModsApi
+from translation_provider.nm_api import NexusModsApi
 
 from .paste_entry import PasteLineEdit
 

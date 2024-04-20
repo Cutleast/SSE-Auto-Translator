@@ -5,10 +5,10 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import logging
+import os
 from copy import copy
 from pathlib import Path
 
-import bs4
 import jstyleson as json
 
 from archiver import Archive
@@ -37,13 +37,17 @@ def import_from_archive(archive_path: Path, modlist: list[Mod], ldialog=None):
 
     files = archive.get_files()
 
-    _plugins: set[str] = {}
+    _plugins: set[str] = set()
     plugin_files: list[str] = []
 
     for file in files:
         path = Path(file)
 
-        if path.name.lower() not in _plugins and path.suffix.lower() in [".esl", ".esm", ".esp"]:
+        if path.name.lower() not in _plugins and path.suffix.lower() in [
+            ".esl",
+            ".esm",
+            ".esp",
+        ]:
             _plugins.add(path.name.lower())
             plugin_files.append(file)
 
@@ -81,11 +85,14 @@ def import_from_archive(archive_path: Path, modlist: list[Mod], ldialog=None):
 
             plugin = matching[-1]
 
+            log.debug(f"Extracting {plugin_file!r} from {str(archive_path)!r}...")
             archive.extract(plugin_file, archive_path.parent)
 
             plugin_strings = merge_plugin_strings(extracted_file, plugin.path)
             for string in plugin_strings:
                 string.status = String.Status.TranslationComplete
+
+            os.remove(extracted_file)
 
             translation_strings[plugin.name.lower()] = plugin_strings
 
