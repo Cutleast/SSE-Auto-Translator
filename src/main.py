@@ -768,6 +768,7 @@ class MainApp(qtw.QApplication):
             else:
                 self.api_label.setObjectName("label")
             self.api_label.setStyleSheet(self.styleSheet())
+            self.api_label.setVisible(rem_hreq == -1 and rem_dreq == -1)
 
         if hasattr(self, "mainpage_widget"):
             if self.nxm_listener is not None:
