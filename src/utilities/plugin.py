@@ -79,13 +79,26 @@ class Plugin:
                 cls.IsTranslated: QColor.fromString("#8be248"),
                 cls.TranslationInstalled: QColor.fromString("#8be248"),
                 cls.TranslationIncomplete: QColor.fromString("#c24cd4"),
-                cls.RequiresTranslation: QColor.fromString("#e9e042"),
                 cls.TranslationAvailableInDatabase: QColor.fromString("#51c6d9"),
                 cls.TranslationAvailableAtNexusMods: QColor.fromString("#51c6d9"),
+                cls.RequiresTranslation: QColor.fromString("#e9e042"),
                 cls.NoTranslationAvailable: QColor.fromString("#d74343"),
             }
 
             return COLORS.get(status)
+
+        @classmethod
+        def get_members(cls):
+            result: list[cls] = [
+                cls.NoneStatus,
+                cls.TranslationInstalled,
+                cls.TranslationIncomplete,
+                cls.TranslationAvailableAtNexusMods,
+                cls.RequiresTranslation,
+                cls.NoTranslationAvailable,
+            ]
+
+            return result
 
     status: Status = Status.NoneStatus
 

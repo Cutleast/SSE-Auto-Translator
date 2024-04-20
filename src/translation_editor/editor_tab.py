@@ -20,7 +20,7 @@ import qtpy.QtWidgets as qtw
 import utilities as utils
 from database import Translation
 from main import MainApp
-from widgets import LoadingDialog, SearchBar
+from widgets import LoadingDialog, SearchBar, StackedBar
 
 
 class EditorTab(qtw.QWidget):
@@ -201,6 +201,16 @@ class EditorTab(qtw.QWidget):
         self.search_bar.cs_toggle.setToolTip(self.loc.main.case_sensitivity)
         self.search_bar.textChanged.connect(lambda text: self.update_string_list())
         hlayout.addWidget(self.search_bar)
+
+        self.bar_chart = StackedBar(
+            [0 for s in utils.String.Status.get_members()],
+            colors=[
+                utils.String.Status.get_color(s)
+                for s in utils.String.Status.get_members()
+            ],
+        )
+        self.bar_chart.setFixedHeight(3)
+        vlayout.addWidget(self.bar_chart)
 
         self.strings_widget = qtw.QTreeWidget()
         self.strings_widget.itemSelectionChanged.connect(
@@ -567,6 +577,15 @@ class EditorTab(qtw.QWidget):
             + translation_required_strings
         )
 
+        self.bar_chart.setValues(
+            [
+                no_translation_required_strings,
+                translation_complete_strings,
+                translation_incomplete_strings,
+                translation_required_strings,
+            ]
+        )
+
         num_tooltip = f"""
 <table cellspacing="5">
 <tr><td><font color="{utils.String.Status.get_color(
@@ -732,7 +751,9 @@ class EditorTab(qtw.QWidget):
 
                 # Only set String to "TranslationIncomplete" if it was changed
                 if old_string != string.translated_string:
-                    string.tree_item.setText(4, utils.trim_string(string.translated_string))
+                    string.tree_item.setText(
+                        4, utils.trim_string(string.translated_string)
+                    )
                     string.status = string.Status.TranslationIncomplete
 
             self.update_string_list()

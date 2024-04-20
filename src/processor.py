@@ -144,9 +144,9 @@ class Processor:
 
         app.log.info("Modlist scan complete.")
 
+        Processor.show_result(modlist, app)
         app.mainpage_widget.database_widget.translations_widget.load_translations()
         app.mainpage_widget.update_modlist()
-        Processor.show_result(modlist, app)
 
     @staticmethod
     def import_dsd_translations(modlist: list[utils.Mod], app: MainApp):
@@ -391,8 +391,8 @@ class Processor:
         app.log.info("Nexus Mods scan complete.")
 
         # Processor.update_status_colors(modlist)
-        app.mainpage_widget.update_modlist()
         Processor.show_result(modlist, app)
+        app.mainpage_widget.update_modlist()
 
     @staticmethod
     def process_database_translations(modlist: list[utils.Mod], app: MainApp):
@@ -749,8 +749,8 @@ class Processor:
 
         app.log.info("Deep scan complete.")
 
-        app.mainpage_widget.update_modlist()
         Processor.show_result(modlist, app)
+        app.mainpage_widget.update_modlist()
 
     @staticmethod
     def run_string_search(
