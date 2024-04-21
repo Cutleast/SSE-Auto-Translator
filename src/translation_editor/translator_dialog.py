@@ -69,6 +69,7 @@ class TranslatorDialog(qtw.QWidget):
         )
         prev_button.clicked.connect(self.goto_prev)
         prev_button.setShortcut(qtg.QKeySequence("Alt+Left"))
+        prev_button.setEnabled(len(self.tab.get_visible_strings()) > 1)
         hlayout.addWidget(prev_button)
 
         hlayout.addStretch()
@@ -80,6 +81,7 @@ class TranslatorDialog(qtw.QWidget):
         next_button.clicked.connect(self.goto_next)
         next_button.setShortcut(qtg.QKeySequence("Alt+Right"))
         next_button.setLayoutDirection(qtc.Qt.LayoutDirection.RightToLeft)
+        next_button.setEnabled(len(self.tab.get_visible_strings()) > 1)
         hlayout.addWidget(next_button)
 
         hlayout = qtw.QHBoxLayout()
@@ -305,35 +307,39 @@ class TranslatorDialog(qtw.QWidget):
 
     def goto_next(self, finalize_with_status: utils.String.Status | None = None):
         """
-        Goes to next string.
+        Goes to next string or closes dialog if there is no other string.
         """
 
-        current_index = self.tab.strings_widget.indexFromItem(
-            self.string.tree_item, 0
-        ).row()
+        if len(self.tab.get_visible_strings()) > 1:
+            current_index = self.tab.strings_widget.indexFromItem(
+                self.string.tree_item, 0
+            ).row()
 
-        if current_index == (len(self.tab.strings) - 1):
-            new_index = 0
-        else:
-            new_index = current_index + 1
-
-        while True:
-            new_item = self.tab.strings_widget.itemFromIndex(
-                self.tab.strings_widget.model().index(new_index, 0)
-            )
-
-            # Go to next item that's visible with current filter
-            if not new_item.isHidden():
-                break
-
-            if new_index == (len(self.tab.strings) - 1):
+            if current_index == (len(self.tab.strings) - 1):
                 new_index = 0
             else:
-                new_index += 1
+                new_index = current_index + 1
 
-        items = {string.tree_item: string for string in self.tab.strings}
-        new_string = items[new_item]
-        self.set_string(new_string, finalize_with_status)
+            while True:
+                new_item = self.tab.strings_widget.itemFromIndex(
+                    self.tab.strings_widget.model().index(new_index, 0)
+                )
+
+                # Go to next item that's visible with current filter
+                if not new_item.isHidden():
+                    break
+
+                if new_index == (len(self.tab.strings) - 1):
+                    new_index = 0
+                else:
+                    new_index += 1
+
+            items = {string.tree_item: string for string in self.tab.strings}
+            new_string = items[new_item]
+            self.set_string(new_string, finalize_with_status)
+        else:
+            self.finalize_string(finalize_with_status)
+            self.close()
 
     def goto_prev(self):
         """
