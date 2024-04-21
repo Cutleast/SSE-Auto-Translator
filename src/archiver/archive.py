@@ -4,6 +4,7 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+import logging
 import subprocess
 
 from fnmatch import fnmatch
@@ -16,6 +17,8 @@ class Archive:
 
     #### Do not instantiate directly, use Archive.load_archive() instead!
     """
+
+    log = logging.getLogger("Archiver")
 
     def __init__(self, path: Path):
         self.path = path
@@ -45,10 +48,14 @@ class Archive:
         """
 
         process = subprocess.run(
-            f'7z.exe x -o"{dest}" -aoa -y "{self.path}" "{filename}"', shell=True
+            f'7z.exe x -o"{dest}" -aoa -y -- "{self.path}" "{filename}"',
+            shell=True,
+            capture_output=True,
+            text=True,
         )
 
         if process.returncode:
+            self.log.error(process.stderr)
             raise Exception("Unpacking command failed!")
 
     def extract_files(self, filenames: list[str], dest: Path):
@@ -56,14 +63,15 @@ class Archive:
         Extracts `filenames` from archive to `dest`.
         """
 
-        cmd = f'7z.exe x -o"{dest}" -aoa -y "{self.path}"'
+        cmd = f'7z.exe x -o"{dest}" -aoa -y -- "{self.path}"'
 
         for filename in filenames:
             cmd += f' "{filename}"'
 
-        process = subprocess.run(cmd, shell=True)
+        process = subprocess.run(cmd, shell=True, capture_output=True, text=True)
 
         if process.returncode:
+            self.log.error(process.stderr)
             raise Exception("Unpacking command failed!")
 
     def find(self, pattern: str) -> list[str]:
