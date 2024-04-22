@@ -766,7 +766,6 @@ class Processor:
         type_filter = filter.get("type")
         form_id_filter = filter.get("form_id")
         editor_id_filter = filter.get("editor_id")
-        original_filter = filter.get("original")
         string_filter = filter.get("string")
 
         result: dict[str, list[utils.String]] = {}
@@ -824,16 +823,10 @@ class Processor:
                                 editor_id_filter.lower() in string.editor_id.lower()
                             )
 
-                        if original_filter and matching:
-                            matching = (
-                                original_filter.lower()
-                                in string.original_string.lower()
-                            )
-
                         if string_filter and matching:
                             matching = (
                                 string_filter.lower()
-                                in string.translated_string.lower()
+                                in string.original_string.lower()
                             )
 
                         if matching:

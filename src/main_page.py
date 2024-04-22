@@ -1360,15 +1360,6 @@ class MainPageWidget(qtw.QWidget):
         edid_box.clicked.connect(edid_entry.setFocus)
         flayout.addRow(edid_box, edid_entry)
 
-        original_box = qtw.QRadioButton(self.loc.main.original)
-        original_entry = qtw.QLineEdit()
-        original_entry.setDisabled(True)
-        original_box.toggled.connect(
-            lambda: original_entry.setEnabled(original_box.isChecked())
-        )
-        original_box.clicked.connect(original_entry.setFocus)
-        flayout.addRow(original_box, original_entry)
-
         string_box = qtw.QRadioButton(self.loc.main.string)
         string_entry = qtw.QLineEdit()
         string_entry.setDisabled(True)
@@ -1406,9 +1397,7 @@ class MainPageWidget(qtw.QWidget):
             if edid_box.isChecked():
                 filter["editor_id"] = edid_entry.text()
 
-            if original_box.isChecked() and original_entry.text():
-                filter["original"] = original_entry.text()
-            elif string_box.isChecked() and string_box.text():
+            if string_box.isChecked() and string_entry.text():
                 filter["string"] = string_entry.text()
 
             matching = Processor.run_string_search(self.mods, filter, self.app)
