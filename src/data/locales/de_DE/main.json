@@ -110,5 +110,6 @@
     "string_search": "Modliste nach String durchsuchen",
     "running_string_search": "Modliste wird nach String durchsucht...",
     "no_strings_found": "Keine Strings gefunden",
-    "no_strings_found_text": "Es wurden keine Strings gefunden, die dem angegebenen Filter entsprechen!\nAuf \"Details anzeigen\" klicken, um den verwendeten Filter anzuzeigen."
+    "no_strings_found_text": "Es wurden keine Strings gefunden, die dem angegebenen Filter entsprechen!\nAuf \"Details anzeigen\" klicken, um den verwendeten Filter anzuzeigen.",
+    "copy_plugin_name": "Pluginnamen in Zwischenablage kopieren"
 }

@@ -112,5 +112,6 @@
     "string_search": "Search Modlist for String",
     "running_string_search": "Searching Modlist for String...",
     "no_strings_found": "No Strings found",
-    "no_strings_found_text": "Did not find any strings matching the given filter!\nClick on \"Show Details\" to view used filter."
+    "no_strings_found_text": "Did not find any strings matching the given filter!\nClick on \"Show Details\" to view used filter.",
+    "copy_plugin_name": "Copy Plugin Name to Clipboard"
 }
