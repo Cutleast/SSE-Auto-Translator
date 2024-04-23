@@ -37,6 +37,8 @@ class DownloadsWidget(qtw.QWidget):
     queue_finished = qtc.Signal()
     update_signal = qtc.Signal()
 
+    hide_item_signal = qtc.Signal(qtw.QTreeWidgetItem)
+
     start_timer_signal = qtc.Signal()
     stop_timer_signal = qtc.Signal()
 
@@ -59,6 +61,7 @@ class DownloadsWidget(qtw.QWidget):
         self.mloc = app.loc.database
 
         self.update_signal.connect(self._update_progress)
+        self.hide_item_signal.connect(self._hide_item)
         self.start_timer_signal.connect(self.start_timer)
         self.stop_timer_signal.connect(self.stop_timer)
 
@@ -157,6 +160,10 @@ class DownloadsWidget(qtw.QWidget):
                     item.setHidden(True)
 
         self.update()
+    
+    @staticmethod
+    def _hide_item(item: qtw.QTreeWidgetItem):
+        item.setHidden(True)
 
     def download_thread(self):
         """
@@ -238,6 +245,7 @@ class DownloadsWidget(qtw.QWidget):
                         translation.save_translation()
                         self.app.database.add_translation(translation)
                         download.status = download.Status.DownloadSuccess
+                        self.hide_item_signal.emit(download.tree_item)
 
                         self.app.log.info("Processing complete.")
                     else:
