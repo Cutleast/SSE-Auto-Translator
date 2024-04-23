@@ -237,6 +237,7 @@ class DownloadsWidget(qtw.QWidget):
                         )
                         translation.save_translation()
                         self.app.database.add_translation(translation)
+                        download.status = download.Status.DownloadSuccess
 
                         self.app.log.info("Processing complete.")
                     else:
