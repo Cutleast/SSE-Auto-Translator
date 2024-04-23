@@ -131,6 +131,8 @@ class StringListDialog(qtw.QWidget):
         def on_context_menu(point: qtc.QPoint):
             menu = qtw.QMenu()
 
+            selected_item = self.strings_widget.selectedItems()[0]
+
             if self.nested:
                 expand_all_action = menu.addAction(self.loc.main.expand_all)
                 expand_all_action.setIcon(
@@ -145,6 +147,11 @@ class StringListDialog(qtw.QWidget):
                 collapse_all_action.triggered.connect(self.strings_widget.collapseAll)
 
                 menu.addSeparator()
+
+                if selected_item.isFirstColumnSpanned():
+                    copy_plugin_name_action = menu.addAction(self.loc.main.copy_plugin_name)
+                    copy_plugin_name_action.setIcon(qta.icon("mdi6.content-copy", color="#ffffff"))
+                    copy_plugin_name_action.triggered.connect(lambda: pyperclip.copy(selected_item.text(0)))
 
             copy_action = menu.addAction(self.loc.main.copy)
             copy_action.setIcon(qta.icon("mdi6.content-copy", color="#ffffff"))

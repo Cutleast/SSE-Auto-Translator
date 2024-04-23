@@ -18,6 +18,7 @@
     "collapse_all": "Collapse All",
     "copy": "Copy to Clipboard",
     "copy_log": "Copy Log to Clipboard",
+    "copy_plugin_name": "Copy Plugin Name to Clipboard",
     "creating_translation": "Creating Translation...",
     "deep_scan": "Scan Plugins with installed Translations for untranslated Strings\n(This can take a while, depending on the number of Plugins and installed Translations)",
     "delete": "Delete",
