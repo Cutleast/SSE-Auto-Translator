@@ -154,6 +154,9 @@ def merge_plugin_strings(
         for string in group
     }
 
+    if not translation_strings and not original_strings:
+        return []
+
     log.debug(
         f"Merging {len(original_strings)} original String(s) to {len(translation_strings)} translated String(s)..."
     )
