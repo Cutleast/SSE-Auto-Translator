@@ -536,7 +536,6 @@ class TranslationsWidget(qtw.QWidget):
                 translation
                 for translation in self.app.database.user_translations
                 if translation.mod_id
-                and translation.file_id
                 and translation.status != translation.Status.UpdateIgnored
                 and translation.status != translation.Status.UpdateAvailable
                 and translation.source != utils.Source.Local
@@ -552,7 +551,10 @@ class TranslationsWidget(qtw.QWidget):
                 )
 
                 if self.app.provider.is_update_available(
-                    translation.mod_id, translation.file_id, translation.timestamp
+                    translation.mod_id,
+                    translation.file_id,
+                    translation.timestamp,
+                    translation.source,
                 ):
                     translation.status = translation.Status.UpdateAvailable
 

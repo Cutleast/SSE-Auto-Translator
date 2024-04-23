@@ -266,21 +266,21 @@ class Provider:
 
         return available_translations
 
-    def is_update_available(self, mod_id: int, file_id: int, timestamp: int) -> bool:
+    def is_update_available(self, mod_id: int, file_id: int, timestamp: int, source: Source) -> bool:
         """
         Checks if an update is available for the specified mod and file.
         Uses `mod_id` and `file_id` for Nexus Mods and `timestamp`
         for Confrérie des Traducteurs.
         """
 
-        if (self.preference == self.Preference.OnlyNexusMods) or file_id:
+        if source == Source.NexusMods and self.preference != self.Preference.OnlyConfrerie:
             return file_id in self.__nm_api.get_mod_updates(
                 "skyrimspecialedition", mod_id
             )
 
-        elif (self.preference == self.Preference.OnlyConfrerie) or not file_id:
+        elif source == Source.Confrerie and self.preference != self.Preference.OnlyNexusMods:
             cdt_timestamp = self.__cdt_api.get_timestamp_of_file(mod_id)
-            if cdt_timestamp is not None:
+            if cdt_timestamp is not None and timestamp is not None:
                 return cdt_timestamp > timestamp
 
         return False
