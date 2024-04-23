@@ -42,6 +42,7 @@ class StringListDialog(qtw.QWidget):
         self.setWindowFlag(qtc.Qt.WindowType.Window, True)
         self.setObjectName("root")
         self.setMinimumSize(1400, 800)
+        self.setAttribute(qtc.Qt.WidgetAttribute.WA_DeleteOnClose)
         utils.apply_dark_title_bar(self)
 
         vlayout = qtw.QVBoxLayout()
