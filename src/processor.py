@@ -18,7 +18,7 @@ import qtpy.QtWidgets as qtw
 import utilities as utils
 from database import Translation
 from main import MainApp
-from plugin_parser import PluginParser
+from string_extractor import extractor
 from translation_provider import FileDownload, TranslationDownload
 from widgets import DownloadListDialog, LoadingDialog
 
@@ -92,12 +92,13 @@ class Processor:
 
                     ldialog.updateProgress(text3=app.loc.main.extracting_strings)
 
-                    parser = PluginParser(plugin.path)
-                    strings = [
-                        string
-                        for group in parser.extract_strings().values()
-                        for string in group
-                    ]
+                    # parser = PluginParser(plugin.path)
+                    # strings = [
+                    #     string
+                    #     for group in parser.extract_strings().values()
+                    #     for string in group
+                    # ]
+                    strings = extractor.extract_strings(plugin.path)
                     if not len(strings):
                         plugin.status = plugin.Status.NoStrings
                         continue
@@ -718,12 +719,13 @@ class Processor:
                     text2=f"{plugin.name}: {app.loc.main.extracting_strings}"
                 )
 
-                parser = PluginParser(plugin.path)
-                plugin_strings = [
-                    string
-                    for group in parser.extract_strings().values()
-                    for string in group
-                ]
+                # parser = PluginParser(plugin.path)
+                # plugin_strings = [
+                #     string
+                #     for group in parser.extract_strings().values()
+                #     for string in group
+                # ]
+                plugin_strings = extractor.extract_strings(plugin.path)
 
                 translation_strings = {
                     f"{string.editor_id}###{string.type}": string
@@ -821,12 +823,13 @@ class Processor:
                         text3=plugin.name,
                     )
 
-                    parser = PluginParser(plugin.path)
-                    strings = [
-                        string
-                        for group in parser.extract_strings().values()
-                        for string in group
-                    ]
+                    # parser = PluginParser(plugin.path)
+                    # strings = [
+                    #     string
+                    #     for group in parser.extract_strings().values()
+                    #     for string in group
+                    # ]
+                    strings = extractor.extract_strings(plugin.path)
                     for string in strings:
                         matching = True
 
@@ -843,8 +846,7 @@ class Processor:
 
                         if string_filter and matching:
                             matching = (
-                                string_filter.lower()
-                                in string.original_string.lower()
+                                string_filter.lower() in string.original_string.lower()
                             )
 
                         if matching:

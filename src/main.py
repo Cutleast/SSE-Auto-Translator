@@ -135,6 +135,7 @@ class MainApp(qtw.QApplication):
     def start_main_app(self):
         self.load_user_data()
         self.load_masterlist()
+        extractor.load_cache()
         self.init_gui()
 
         self.startTimer(1000, qtc.Qt.TimerType.PreciseTimer)
@@ -837,6 +838,8 @@ class MainApp(qtw.QApplication):
     def clean_and_exit(self):
         self.log.info("Exiting application...")
 
+        extractor.save_cache()
+
         if hasattr(self, "mainpage_widget"):
             downloader_thread = (
                 self.mainpage_widget.database_widget.downloads_widget.thread
@@ -874,6 +877,7 @@ def main():
     global SettingsDialog
     global StartupDialog
     global TranslationEditor
+    global extractor
 
     import translator_api
     import updater
@@ -885,5 +889,6 @@ def main():
     from startup_dialog import StartupDialog
     from translation_editor import TranslationEditor
     from translation_provider import Provider
+    from string_extractor import extractor
 
     MainApp().exec()

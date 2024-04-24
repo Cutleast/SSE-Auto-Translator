@@ -11,7 +11,6 @@ from pathlib import Path
 import jstyleson as json
 
 from archiver import Archive
-from plugin_parser import PluginParser
 
 from .mod import Mod
 from .string import String
@@ -140,19 +139,23 @@ def merge_plugin_strings(
     Extracts strings from translation and original plugin and merges.
     """
 
-    parser = PluginParser(translation_plugin)
-    parser.parse_plugin()
-    translation_strings = [
-        string for group in parser.extract_strings().values() for string in group
-    ]
+    from string_extractor import extractor
 
-    parser = PluginParser(original_plugin)
-    parser.parse_plugin()
-    original_strings = {
-        f"{string.form_id.lower()[2:]}###{string.editor_id}###{string.type}###{string.index}": string
-        for group in parser.extract_strings().values()
-        for string in group
-    }
+    # parser = PluginParser(translation_plugin)
+    # parser.parse_plugin()
+    # translation_strings = [
+    #     string for group in parser.extract_strings().values() for string in group
+    # ]
+    translation_strings = extractor.extract_strings(translation_plugin)
+
+    # parser = PluginParser(original_plugin)
+    # parser.parse_plugin()
+    # original_strings = {
+    #     f"{string.form_id.lower()[2:]}###{string.editor_id}###{string.type}###{string.index}": string
+    #     for group in parser.extract_strings().values()
+    #     for string in group
+    # }
+    original_strings = extractor.extract_strings(original_plugin)
 
     if not translation_strings and not original_strings:
         return []

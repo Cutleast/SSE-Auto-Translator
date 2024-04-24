@@ -17,7 +17,7 @@ import utilities as utils
 from database import DatabaseWidget
 from main import MainApp
 from mod_managers import SUPPORTED_MOD_MANAGERS
-from plugin_parser import PluginParser
+from string_extractor import extractor
 from processor import Processor
 from widgets import (
     ErrorDialog,
@@ -333,13 +333,14 @@ class MainPageWidget(qtw.QWidget):
 
             def show_strings():
                 if plugin_selected:
-                    parser = PluginParser(selected_plugin.path)
-                    parser.parse_plugin()
-                    strings = [
-                        string
-                        for group in parser.extract_strings().values()
-                        for string in group
-                    ]
+                    # parser = PluginParser(selected_plugin.path)
+                    # parser.parse_plugin()
+                    # strings = [
+                    #     string
+                    #     for group in parser.extract_strings().values()
+                    #     for string in group
+                    # ]
+                    strings = extractor.extract_strings(selected_plugin.path)
 
                     dialog = StringListDialog(self.app, selected_plugin.name, strings)
                     dialog.show()
@@ -347,13 +348,14 @@ class MainPageWidget(qtw.QWidget):
                     strings: dict[str, list[utils.String]] = {}
 
                     for plugin in selected_mod.plugins:
-                        parser = PluginParser(plugin.path)
-                        parser.parse_plugin()
-                        plugin_strings = [
-                            string
-                            for group in parser.extract_strings().values()
-                            for string in group
-                        ]
+                        # parser = PluginParser(plugin.path)
+                        # parser.parse_plugin()
+                        # plugin_strings = [
+                        #     string
+                        #     for group in parser.extract_strings().values()
+                        #     for string in group
+                        # ]
+                        plugin_strings = extractor.extract_strings(plugin.path)
                         strings[plugin.name] = plugin_strings
 
                     dialog = StringListDialog(self.app, selected_mod.name, strings)
@@ -361,6 +363,8 @@ class MainPageWidget(qtw.QWidget):
 
             def show_structure():
                 if plugin_selected:
+                    from plugin_parser import PluginParser
+
                     parser = PluginParser(selected_plugin.path)
                     parser.parse_plugin()
 

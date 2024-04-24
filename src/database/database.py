@@ -11,7 +11,7 @@ from shutil import rmtree
 
 import jstyleson as json
 
-from plugin_parser import PluginParser
+from string_extractor import extractor
 from utilities import Mod, String, Source
 
 from .translation import Translation
@@ -325,12 +325,13 @@ class TranslationDatabase:
         if translation:
             return translation
 
-        parser = PluginParser(plugin_path)
-        parser.parse_plugin()
-        plugin_groups = parser.extract_strings()
-        plugin_strings = [
-            string for group in plugin_groups.values() for string in group
-        ]
+        # parser = PluginParser(plugin_path)
+        # parser.parse_plugin()
+        # plugin_groups = parser.extract_strings()
+        # plugin_strings = [
+        #     string for group in plugin_groups.values() for string in group
+        # ]
+        plugin_strings = extractor.extract_strings(plugin_path)
 
         for string in plugin_strings:
             string.translated_string = string.original_string
