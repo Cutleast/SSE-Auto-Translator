@@ -48,9 +48,15 @@ Scans are finished when this dialog pops up.
 <img src="./imgs/scan_result.png" />
 
 4. Download and install available Translations (button 3, see below)
+   - Choose your desired translations then download them
 
 <br/>
 <img src="./imgs/download_list.png" width="800" />
+
+   - Wait until you get this message:
+
+<br/>
+<img src="./imgs/downloads_complete.png">
 
 5. Build the Output for the Dynamic String Distributor SKSE Plugin (button 4, see below)
    - **This must be done everytime after you edited, installed or deleted a translation**
@@ -59,6 +65,7 @@ Scans are finished when this dialog pops up.
 <img src="./imgs/dsd_output.png" />
 
 6. Install the Output folder as a mod (modlist position does not matter) so that the "SKSE" folder lands in the game's "Data" folder
+   - You can also change the Output folder under Settings > App Settings > Path for DSD Output.
 
 Now you're ready to play!
 
@@ -85,7 +92,11 @@ More features are available when right-clicking on one or more Plugins/Mods.
 
 **e**: Import button, to import a translation from a local file (or multiple when selected). The import supports downloaded mods from Nexus Mods (.rar, .7z, .zip), Plugins (.esp, .esm, .esl), DSD Translations (.json) and exported xTranslator translations (.xml).
 
-**f**: Link button, to link SSE-AT to Mod Manager Downloads on Nexus Mods, primarily used for non-Premium downloads. When exited regularly, SSE-AT unbinds itself and binds the app that was previously bound to Mod Manager Downloads. A crash might prevent this, so that SSE-AT stays bound. In this case you have to link your Mod Manager again.
+**f**: Update Check button, to check for available translation updates.
+
+**g**: Download Updates button, to download available translation updates if any. Works exactly like regular translation downloads.
+
+**h**: Link button, to link SSE-AT to Mod Manager Downloads on Nexus Mods, primarily used for non-Premium downloads. When exited regularly, SSE-AT unbinds itself and binds the app that was previously bound to Mod Manager Downloads. A crash might prevent this, so that SSE-AT stays bound. In this case you have to link your Mod Manager again.
 
 More features are available when right-clicking on one or more Plugins/Translations.
 
@@ -99,11 +110,12 @@ More features are available when right-clicking on one or more Plugins/Translati
 
 **4**: Builds the Output folder for the SKSE Plugin (Dynamic String Distributor) that must be installed as mod in order to replace the strings ingame.
 
-**5**: Scans database for incomplete translations. This scan take a while depending on the number of installed translations. (Experimental)
+**5**: Scans database for incomplete translations. This scan take a while depending on the number of installed translations.
 
 ### Ignore List
 
 Plugins can be added to an Ignore List that completely excludes them from any functionality. They can be added by a right click on them in the Modlist panel (see above).
+SSE-AT also ignores all Base Game and CC Plugins and depending on your language there may be a masterlist available that also has a list of plugins that are ignored.
 
 <br/>
 <img src="./imgs/ignore_list.png" />
@@ -123,14 +135,16 @@ The SSE-AT has an inbuilt Editor for creating new translations or editing alread
 
 **b**: Help button, opens a dialog showing the different Status and their colors
 
-**1**: Attempts to translate untranslated string using Database of installed Translations
+**1**: Legacy import button, to import DSD translations that are created before the v1.1 update
 
-**2**: Opens a *Search and Replace* Dialog for selected strings
+**2**: Attempts to translate untranslated string using Database of installed Translations
+
+**3**: Opens a *Search and Replace* Dialog for selected strings
 
 <br/>
 <img src="./imgs/search_and_replace.png" />
 
-**3**: Translates selected strings using selected Translator API (configurable in *Settings*)
+**4**: Translates selected strings using selected Translator API (configurable in *Settings*)
 
 **c**: Saves changed translation to database
 
@@ -151,7 +165,13 @@ A string can be edited by either double-clicking on it or right click > Edit Str
 
 **a**: Information Label about String, displays EditorID (or FormID in case of Dialogues), Type (Record and Subrecord) and Index (if existing, mostly for dialogues and quests)
 
-**1**: Translates String with configured Translator API
+**1**: Goes to previous String in list
+
+**2**: Goes to next String in list
+
+**3**: Translates String with configured Translator API
+
+**4**: Resets String back to its Original
 
 # String List
 
