@@ -90,6 +90,8 @@ class Translation:
                 ]
                 strings = list(set(strings))  # Remove duplicates
                 self.strings[translation_path.stem.lower()] = strings
+            
+            self.optimize_translation()
 
     def save_translation(self):
         """
