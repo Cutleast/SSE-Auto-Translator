@@ -1,3 +1,7 @@
+# v1.2.1 (Hotfix)
+
+- Fix missing 7-zip files that are required for extraction of archives
+
 # v1.2.0
 
 ### New Features
