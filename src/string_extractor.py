@@ -4,9 +4,6 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-import logging
-import os
-import pickle
 from pathlib import Path
 
 import utilities as utils
@@ -20,41 +17,6 @@ class StringExtractor:
     """
 
     cache: dict[str, list[utils.String]] = {}
-
-    log = logging.getLogger("StringExtractor")
-
-    def __init__(self):
-        self.path = Path(".").resolve() / "data" / "cache" / "string_extractor.cache"
-
-    def load_cache(self):
-        """
-        Loads cache if existing.
-        """
-
-        if self.path.is_file():
-            self.log.info(f"Loading cache from {str(self.path)!r}...")
-
-            with self.path.open("rb") as file:
-                cache = pickle.load(file)
-
-            self.cache = cache
-
-            self.log.info(f"Loaded strings for {len(self.cache)} plugin(s) from cache.")
-
-    def save_cache(self):
-        """
-        Saves cache.
-        """
-
-        if self.cache:
-            self.log.info(f"Saving cache to {str(self.path)!r}...")
-
-            os.makedirs(self.path.parent, exist_ok=True)
-
-            with self.path.open("wb") as file:
-                pickle.dump(self.cache, file)
-
-            self.log.info(f"Saved strings for {len(self.cache)} plugin(s) to cache.")
 
     def extract_strings(self, plugin_path: Path, *args, **kwargs):
         """
@@ -73,6 +35,5 @@ class StringExtractor:
             self.cache[key] = strings
 
         return self.cache[key]
-
 
 extractor = StringExtractor()

@@ -42,6 +42,7 @@ class MainApp(qtw.QApplication):
     translator_conf_path = data_path / "translator" / "config.json"
     style_path = data_path / "app" / "style.qss"
     loc_path = data_path / "locales"
+    cache_path = data_path / "cache"
 
     executable = str(cur_path / "SSE-AT.exe")
     """
@@ -89,6 +90,8 @@ class MainApp(qtw.QApplication):
 
     masterlist: dict[str, dict] = None
 
+    cacher: "Cacher" = None
+
     def __init__(self):
         super().__init__()
 
@@ -135,7 +138,10 @@ class MainApp(qtw.QApplication):
     def start_main_app(self):
         self.load_user_data()
         self.load_masterlist()
-        extractor.load_cache()
+
+        self.cacher = Cacher(self)
+        self.cacher.load_caches()
+
         self.init_gui()
 
         self.startTimer(1000, qtc.Qt.TimerType.PreciseTimer)
@@ -360,6 +366,7 @@ class MainApp(qtw.QApplication):
         self.log.info(f"Commandline Arguments: {sys.argv}")
         self.log.info(f"Data Path: {self.data_path}")
         self.log.info(f"Config Path: {self.app_conf_path}")
+        self.log.info(f"Cache Path: {self.cache_path}")
         self.log.info(f"Log Path: {self.log_path}")
         self.log.info(f"Log Level: {utils.intlevel2strlevel(self.log_level)}")
         self.log.debug(
@@ -838,7 +845,7 @@ class MainApp(qtw.QApplication):
     def clean_and_exit(self):
         self.log.info("Exiting application...")
 
-        extractor.save_cache()
+        self.cacher.save_caches()
 
         if hasattr(self, "mainpage_widget"):
             downloader_thread = (
@@ -871,24 +878,26 @@ def main():
     global updater
     global utils
     global widgets
+    global Cacher
     global TranslationDatabase
     global MainPageWidget
     global Provider
     global SettingsDialog
+    global extractor
     global StartupDialog
     global TranslationEditor
-    global extractor
 
     import translator_api
     import updater
     import utilities as utils
     import widgets
+    from cacher import Cacher
     from database import TranslationDatabase
     from main_page import MainPageWidget
     from settings import SettingsDialog
     from startup_dialog import StartupDialog
+    from string_extractor import extractor
     from translation_editor import TranslationEditor
     from translation_provider import Provider
-    from string_extractor import extractor
 
     MainApp().exec()

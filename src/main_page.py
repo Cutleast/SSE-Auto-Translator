@@ -1023,6 +1023,8 @@ class MainPageWidget(qtw.QWidget):
 """
         self.plugins_num_label.setToolTip(num_tooltip)
 
+        self.app.cacher.update_plugin_states_cache(self.mods)
+
         Processor.update_status_colors(self.mods)
 
     def load_mods(self):
@@ -1139,6 +1141,16 @@ class MainPageWidget(qtw.QWidget):
                         else:
                             plugin_item.setCheckState(0, qtc.Qt.CheckState.Checked)
                             plugin_item.setDisabled(False)
+                        
+                        # Apply cache
+                        state = self.app.cacher.get_from_plugin_states_cache(plugin.path)
+                        if state:
+                            checked, status = state
+                            plugin.status = status
+                            if checked:
+                                plugin_item.setCheckState(0, qtc.Qt.CheckState.Checked)
+                            else:
+                                plugin_item.setCheckState(0, qtc.Qt.CheckState.Unchecked)
                         mod_item.addChild(plugin_item)
 
                 if cur_separator is not None:
