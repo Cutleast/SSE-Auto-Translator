@@ -1,3 +1,44 @@
+# v1.2.0
+
+### New Features
+
+- Translation Editor
+  - Add Shortcuts for finalizing and switching to next/prev string
+  - Same untranslated Strings now get auto-translated upon finalization
+  - Add optional Spell Checking Feature to Translator Dialog
+  - Add Reset Button with Shortcut to Translator Dialog
+  - Add FormID Label to Translator Dialog
+- Improve Search Bars and add Case Sensitivity Toggle
+- Add Delete Shortcut to "Translations" Tab
+- Add new Settings for toggling Spell Checking Feature and setting DSD Output path
+- Add nesting feature to StringListDialog
+  - Strings from multiple Plugins now get grouped together
+  - Add "Copy Plugin Name" option to contextmenu
+- Add String Search Features to the entire modlist and the database
+- Add Bar Graph to MainPage and TranslationEditor displaying Status Ratios
+
+### Fixes and Improvements
+
+- Set "Yes" as Standard Button in most messageboxes
+- Fix API Key not applying when starting with invalid API Key
+- Limit supported languages to relevant ones
+  - This includes all languages supported by the game + Korean and Portuguese
+- Fix issue with Vortex database that came from non-ASCII characters in the database's path
+- Translation Editor: fix tab close button changing selected tab on hover
+- Startup Dialog: fix validation on modinstance selection
+- Catch all requests exceptions in Updater
+- Strip Mod Versions of obsolete ".0" for Vortex modlists
+- Add additional logging to Vortex
+- Display App Version in Titlebars
+- Add "no restart required" note to some settings
+- Fix Vortex Staging Folder Path
+- Replace default clear buttons in input fields by custom ones
+- Remove "[Experimental]" note from Deep Scan
+- Fix unchanged strings marked as "TranslationIncomplete" when using Search and Replace
+- Switch completely to 7-zip commandline
+- Fix Translation Import from Archives
+- Fix reloading of translations ignoring active filter in "Translations" Tab
+
 # v1.1.1
 
 ##### If not already done for the last update: Please wipe your SSE-AT folder before updating. See v1.1 below for more information.
