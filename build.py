@@ -58,7 +58,7 @@ for item in UNUSED_ITEMS:
         os.remove(item)
         print(f"Removed file '{item.name}'.")
 
-shutil.copytree("./7-zip", DIST_FOLDER)
+shutil.copytree("./7-zip", DIST_FOLDER, dirs_exist_ok=True)
 print("Copied 7-zip files to build folder.")
 
 print("Renaming Output folder...")
