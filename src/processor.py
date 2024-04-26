@@ -297,11 +297,11 @@ class Processor:
                     string.status = string.Status.TranslationComplete
 
             if translated_mod.mod_id and translated_mod.file_id:
-                source = Translation.Source.NexusMods
+                source = utils.Source.NexusMods
             elif translated_mod.mod_id:
-                source = Translation.Source.Confrerie
+                source = utils.Source.Confrerie
             else:
-                source = Translation.Source.Local
+                source = utils.Source.Local
 
             if len(strings):
                 translation = Translation(
