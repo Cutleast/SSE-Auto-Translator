@@ -521,37 +521,46 @@ class Processor:
                             )
                             mod_translations.append(translation_download)
 
+                        masterlist_entry = app.masterlist.get(plugin.name.lower())
+                        if masterlist_entry is not None:
+                            if masterlist_entry["type"] == "route":
+                                for target in masterlist_entry["targets"]:
+                                    mod_id: int = target["mod_id"]
+                                    file_id: int = target["file_id"]
+                                    source = utils.Source.NexusMods
+
+                                    file_details = app.provider.get_details(
+                                        mod_id, file_id, source
+                                    )
+                                    download = FileDownload(
+                                        name=file_details["name"],
+                                        source=source,
+                                        mod_id=mod_id,
+                                        file_id=file_id,
+                                        original_mod=mod,
+                                        file_name=file_details["filename"],
+                                    )
+
+                                    translation_details = app.provider.get_details(
+                                        mod_id, source=source
+                                    )
+                                    translation_download = TranslationDownload(
+                                        name=translation_details["name"],
+                                        mod_id=mod_id,
+                                        original_mod=mod,
+                                        original_plugin=plugin,
+                                        source=source,
+                                        available_downloads=[download],
+                                    )
+                                    mod_translations.append(translation_download)
+
+                                app.log.info(
+                                    f"Found {plugin.name!r} in Masterlist of type 'route'. Added Targets to Downloads."
+                                )
+
                         translation_downloads[f"{mod.name} > {plugin.name}"] = (
                             mod_translations
                         )
-
-                        # masterlist_entry = app.masterlist.get(plugin.name.lower())
-                        # if masterlist_entry is not None:
-                        #     if masterlist_entry["type"] == "route":
-                        #         for target in masterlist_entry["targets"]:
-                        #             mod_id: int = target["mod_id"]
-                        #             file_id: int = target["file_id"]
-
-                        #             if mod_id in available_translation_files:
-                        #                 available_translation_files[mod_id].append(
-                        #                     file_id
-                        #                 )
-                        #             else:
-                        #                 available_translation_files[mod_id] = [file_id]
-
-                        #             available_translation_files[mod_id] = list(
-                        #                 set(available_translation_files[mod_id])
-                        #             )
-
-                        #             available_translations.append(mod_id)
-
-                        #         available_translations = list(
-                        #             set(available_translations)
-                        #         )
-
-                        #         app.log.info(
-                        #             f"Found {plugin.name!r} in Masterlist of type 'route'. Added Targets to Downloads."
-                        #         )
 
         loadingdialog = LoadingDialog(app.root, app, process)
         loadingdialog.exec()
