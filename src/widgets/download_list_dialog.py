@@ -78,6 +78,7 @@ class DownloadListDialog(qtw.QWidget):
         self.list_widget.setSelectionMode(qtw.QTreeWidget.SelectionMode.NoSelection)
         self.list_widget.setObjectName("download_list")
         self.list_widget.setAlternatingRowColors(True)
+        self.list_widget.header().setSectionsMovable(False)
         vlayout.addWidget(self.list_widget)
 
         self.list_widget.setHeaderLabels(
@@ -100,11 +101,11 @@ class DownloadListDialog(qtw.QWidget):
         self.list_widget.header().setSectionResizeMode(
             1, qtw.QHeaderView.ResizeMode.Stretch
         )
-        self.list_widget.header().resizeSection(2, 200)
+        self.list_widget.header().resizeSection(2, 400)
         self.list_widget.header().setSectionResizeMode(
             3, qtw.QHeaderView.ResizeMode.ResizeToContents
         )
-        self.list_widget.header().resizeSection(4, 200)
+        self.list_widget.header().resizeSection(4, 400)
         self.list_widget.header().resizeSection(5, 150)
         self.list_widget.header().setStretchLastSection(False)
 
