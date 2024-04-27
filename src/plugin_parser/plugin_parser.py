@@ -100,7 +100,7 @@ class PluginParser:
 
         for record in group.records:
             if isinstance(record, Group):
-                strings += self.extract_group_strings(record)
+                strings += self.extract_group_strings(record, extract_localized)
             else:
                 edid = self.get_record_edid(record)
                 master_index = int(record.formid[:2], base=16)
