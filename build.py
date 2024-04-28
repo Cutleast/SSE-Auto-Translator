@@ -27,7 +27,6 @@ print("Building with nuitka...")
 cmd = f'nuitka \
 --msvc="latest" \
 --standalone \
---include-data-dir="./7-zip=." \
 --include-data-dir="./src/data=./data" \
 --include-data-dir="./doc=./doc" \
 --include-data-file="LICENSE=." \
@@ -59,8 +58,8 @@ for item in UNUSED_ITEMS:
         os.remove(item)
         print(f"Removed file '{item.name}'.")
 
-shutil.copyfile("./7-zip/7z.dll", DIST_FOLDER / "7z.dll")
-print("Copied 7z.dll to build folder.")
+shutil.copytree("./7-zip", DIST_FOLDER, dirs_exist_ok=True)
+print("Copied 7-zip files to build folder.")
 
 print("Renaming Output folder...")
 if OUTPUT_FOLDER.is_dir():
