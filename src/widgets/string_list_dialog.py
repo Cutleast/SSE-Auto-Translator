@@ -266,6 +266,9 @@ class StringListDialog(qtw.QWidget):
 
                 self.strings_widget.addTopLevelItem(section_item)
                 section_item.setFirstColumnSpanned(True)
+
+            if len(self.strings) == 1:
+                self.strings_widget.topLevelItem(0).setExpanded(True)
         else:
             for string in self.strings:
                 item = process_string(string)
