@@ -1022,6 +1022,7 @@ class MainPageWidget(qtw.QWidget):
 </table>
 """
         self.plugins_num_label.setToolTip(num_tooltip)
+        self.bar_chart.setToolTip(num_tooltip)
 
         self.app.cacher.update_plugin_states_cache(self.mods)
 
