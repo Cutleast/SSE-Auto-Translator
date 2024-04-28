@@ -6,7 +6,6 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 import os
 
-import qtawesome as qta
 import qtpy.QtGui as qtg
 import qtpy.QtWidgets as qtw
 
@@ -29,7 +28,7 @@ class DownloadListItem(qtw.QTreeWidgetItem):
     def __init__(
         self, app: MainApp, name: str, translation_downloads: list[TranslationDownload]
     ):
-        super().__init__(["", name, "", "", "", ""])
+        super().__init__(["", name, "", "", ""])
 
         self.app = app
         self.translation_downloads = translation_downloads
@@ -57,9 +56,6 @@ class DownloadListItem(qtw.QTreeWidgetItem):
             self.__on_translation_selected
         )
         self.__on_translation_selected()
-
-        self.download_button.clicked.connect(self.__free_download)
-        self.download_button.setDisabled(self.app.provider.direct_downloads_possible())
 
     def __on_translation_selected(self, *args):
         translation_download = self.translation_downloads[
@@ -98,21 +94,3 @@ class DownloadListItem(qtw.QTreeWidgetItem):
             translation_download.mod_id, source=translation_download.source
         )
         os.startfile(modpage_url)
-
-    def __free_download(self):
-        translation_download = self.translation_downloads[
-            self.translations_combobox.currentIndex()
-        ]
-
-        download = translation_download.available_downloads[
-            self.files_combobox.currentIndex()
-        ]
-
-        url = self.app.provider.get_modpage_link(
-            download.mod_id, download.file_id, download.source
-        )
-        if translation_download.source == Source.NexusMods:
-            url += "&nmm=1"
-
-        os.startfile(url)
-        self.download_button.setIcon(qta.icon("fa5s.check", color="#ffffff"))

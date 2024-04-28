@@ -31,6 +31,8 @@ class DownloadsWidget(qtw.QWidget):
     thread: utils.Thread = None
     downloader: Downloader = None
 
+    pending_non_prem_downloads: dict[tuple[int, int], FileDownload] = {}
+
     current_download: FileDownload | None = None
 
     download_finished = qtc.Signal()
@@ -90,9 +92,12 @@ class DownloadsWidget(qtw.QWidget):
             qtw.QAbstractItemView.SelectionMode.NoSelection
         )
         self.downloads_widget.header().setStretchLastSection(False)
-        self.downloads_widget.header().setSectionResizeMode(
-            qtw.QHeaderView.ResizeMode.Stretch
-        )
+        self.downloads_widget.header().setSectionResizeMode(0, qtw.QHeaderView.ResizeMode.Stretch)
+
+    def showEvent(self, event):
+        super().showEvent(event)
+
+        self.downloads_widget.header().resizeSection(1, 400)
 
     def start_timer(self):
         if self.timer_id is None:
@@ -160,7 +165,7 @@ class DownloadsWidget(qtw.QWidget):
                     item.setHidden(True)
 
         self.update()
-    
+
     @staticmethod
     def _hide_item(item: qtw.QTreeWidgetItem):
         item.setHidden(True)
@@ -211,7 +216,7 @@ class DownloadsWidget(qtw.QWidget):
 
                 else:
                     if download.original_mod is None:
-                        plugin_name: str = strings.keys()[0].lower()
+                        plugin_name = list(strings.keys())[0].lower()
 
                         for mod in self.app.mainpage_widget.mods:
                             if any(
@@ -264,7 +269,7 @@ class DownloadsWidget(qtw.QWidget):
             self.current_download = None
             self.queue.task_done()
 
-            if self.queue.empty():
+            if self.queue.empty() and not self.pending_non_prem_downloads:
                 self.queue_finished.emit()
 
         self.app.log.debug("Thread stopped.")
@@ -282,6 +287,7 @@ class DownloadsWidget(qtw.QWidget):
         path_parts = Path(path).parts
         mod_id = int(path_parts[2])
         file_id = int(path_parts[4])
+        source = utils.Source.NexusMods
 
         parsed_query = urllib.parse.parse_qs(query)
 
@@ -289,13 +295,10 @@ class DownloadsWidget(qtw.QWidget):
         (expires,) = parsed_query["expires"]
         (user_id,) = parsed_query["user_id"]
 
-        mod_version = self.app.provider.get_file_version_of_id(mod_id, file_id)
-
         installed_translation = self.app.database.get_translation_by_id(mod_id)
 
         if installed_translation:
-            translation = installed_translation
-            if installed_translation.version == mod_version:
+            if installed_translation.file_id == file_id:
                 mb = qtw.QMessageBox(self.app.root)
                 mb.setWindowTitle(self.mloc.already_installed)
                 mb.setText(self.mloc.already_installed_text)
@@ -305,25 +308,37 @@ class DownloadsWidget(qtw.QWidget):
 
                 return
 
-        download = FileDownload(
-            self.app.provider.get_translation_name_of_id(mod_id, file_id),
-            mod_id,
-            file_id,
-            file_name=self.app.provider.get_file_name_of_id(mod_id, file_id, raw=True),
-            direct_url=self.app.provider.get_direct_download_url(
-                mod_id, file_id, key, int(expires)
-            ),
-        )
+        if (mod_id, file_id) not in self.pending_non_prem_downloads:
+            mod_details = self.app.provider.get_details(mod_id, file_id, source)
+            download = FileDownload(
+                name=mod_details["name"],
+                source=source,
+                mod_id=mod_id,
+                file_id=file_id,
+                file_name=mod_details["filename"],
+                direct_url=self.app.provider.get_direct_download_url(
+                    mod_id, file_id, key, int(expires)
+                ),
+            )
 
-        item = qtw.QTreeWidgetItem(
-            [
-                translation.name,
-                self.loc.main.waiting_for_download,
-            ]
-        )
-        download.tree_item = item
-        item.setFont(1, qtg.QFont("Consolas"))
-        self.downloads_widget.addTopLevelItem(item)
+            item = qtw.QTreeWidgetItem(
+                [
+                    download.name,
+                    self.loc.main.waiting_for_download,
+                ]
+            )
+            item.setIcon(0, qtg.QIcon(str(self.app.data_path / "icons" / "nexus_mods.svg")))
+            item.setFont(1, qtg.QFont("Consolas"))
+            download.tree_item = item
+            self.downloads_widget.addTopLevelItem(item)
+        else:
+            download = self.pending_non_prem_downloads.pop((mod_id, file_id))
+            download.direct_url = self.app.provider.get_direct_download_url(
+                mod_id, file_id, key, int(expires)
+            )
+            self.downloads_widget.itemWidget(download.tree_item, 1).hide()
+            self.downloads_widget.removeItemWidget(download.tree_item, 1)
+            download.tree_item.setText(1, self.loc.main.waiting_for_download)
 
         self.queue.put(download)
 
@@ -341,5 +356,7 @@ class DownloadsWidget(qtw.QWidget):
         messagebox.setText(self.mloc.queue_finished)
         utils.apply_dark_title_bar(messagebox)
         messagebox.exec()
+
+        self.app.mainpage_widget.database_widget.setCurrentIndex(0)
 
         self.queue_finished.disconnect(self.all_finished)

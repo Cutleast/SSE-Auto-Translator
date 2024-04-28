@@ -763,7 +763,7 @@ class MainPageWidget(qtw.QWidget):
             lambda text: self.database_widget.translations_widget.update_translations()
         )
 
-        splitter.setSizes([0.8 * splitter.width(), 0.2 * splitter.width()])
+        splitter.setSizes([0.6 * splitter.width(), 0.4 * splitter.width()])
 
         self.mods_widget.resizeColumnToContents(2)
 

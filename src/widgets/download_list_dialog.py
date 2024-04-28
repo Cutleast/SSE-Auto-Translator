@@ -5,6 +5,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import logging
+import os
 
 import qtawesome as qta
 import qtpy.QtCore as qtc
@@ -13,7 +14,7 @@ import qtpy.QtWidgets as qtw
 
 import utilities as utils
 from main import MainApp
-from translation_provider import TranslationDownload
+from translation_provider import FileDownload, TranslationDownload
 
 from .download_list_item import DownloadListItem
 from .loading_dialog import LoadingDialog
@@ -69,9 +70,6 @@ class DownloadListDialog(qtw.QWidget):
             qta.icon("mdi.download-multiple", color="#000000")
         )
         self.download_all_button.setObjectName("accent_button")
-        self.download_all_button.setDisabled(
-            not app.provider.direct_downloads_possible()
-        )
         self.download_all_button.clicked.connect(self.download_all)
         hlayout.addWidget(self.download_all_button)
 
@@ -89,7 +87,6 @@ class DownloadListDialog(qtw.QWidget):
                 self.mloc.choose_translation,
                 "",  # Modpage button for translation mod
                 self.mloc.choose_file,
-                self.mloc.free_download,
             ]
         )
         self.list_widget.setIndentation(0)
@@ -107,7 +104,6 @@ class DownloadListDialog(qtw.QWidget):
             3, qtw.QHeaderView.ResizeMode.ResizeToContents
         )
         self.list_widget.header().resizeSection(4, 400)
-        self.list_widget.header().resizeSection(5, 150)
         self.list_widget.header().setStretchLastSection(False)
 
         self.show()
@@ -147,17 +143,10 @@ class DownloadListDialog(qtw.QWidget):
             files_combobox.setEditable(False)
             self.list_widget.setItemWidget(item, 4, files_combobox)
 
-            download_button = qtw.QPushButton(self.mloc.download + "  ")
-            download_button.setObjectName("download_button")
-            download_button.setLayoutDirection(qtc.Qt.LayoutDirection.RightToLeft)
-            download_button.setFixedWidth(150)
-            self.list_widget.setItemWidget(item, 5, download_button)
-
             item.open_original_button = original_modpage_button
             item.translations_combobox = translation_combobox
             item.open_translation_button = translation_modpage_button
             item.files_combobox = files_combobox
-            item.download_button = download_button
 
             item.init_widgets()
             self.download_items.append(item)
@@ -176,6 +165,7 @@ class DownloadListDialog(qtw.QWidget):
         """
 
         _queue: list[tuple] = []
+        _downloads: list[FileDownload] = []
 
         def process(ldialog: LoadingDialog):
             ldialog.updateProgress(text1=self.loc.main.starting_downloads)
@@ -204,6 +194,7 @@ class DownloadListDialog(qtw.QWidget):
                     download.file_id,
                     source=translation_download.source,
                 )
+                _downloads.append(download)
 
                 if self.updates:
                     old_translation = self.app.database.get_translation_by_plugin_name(
@@ -220,31 +211,53 @@ class DownloadListDialog(qtw.QWidget):
         loadingdialog = LoadingDialog(self, self.app, process)
         loadingdialog.exec()
 
-        for download_item in self.download_items:
-            translation_download = download_item.translation_downloads[
-                download_item.translations_combobox.currentIndex()
-            ]
-            download = translation_download.available_downloads[
-                download_item.files_combobox.currentIndex()
-            ]
+        for download in _downloads:
+            if download.direct_url:
+                item = qtw.QTreeWidgetItem(
+                    [
+                        download.name,
+                        self.app.loc.main.waiting_for_download,
+                    ]
+                )
+            else:
+                item = qtw.QTreeWidgetItem([download.name, ""])
+            
+            if download.source == utils.Source.NexusMods:
+                item.setIcon(0, qtg.QIcon(str(self.app.data_path / "icons" / "nexus_mods.svg")))
+            else:
+                item.setIcon(0, qtg.QIcon(str(self.app.data_path / "icons" / "cdt.svg")))
 
-            if not download.direct_url:
-                continue
-
-            item = qtw.QTreeWidgetItem(
-                [
-                    download.name,
-                    self.app.loc.main.waiting_for_download,
-                ]
-            )
             item.setFont(1, qtg.QFont("Consolas"))
             download.tree_item = item
             self.app.mainpage_widget.database_widget.downloads_widget.downloads_widget.addTopLevelItem(
                 item
             )
-            self.app.mainpage_widget.database_widget.downloads_widget.queue.put(
-                download
-            )
+
+            if download.direct_url:
+                self.app.mainpage_widget.database_widget.downloads_widget.queue.put(
+                    download
+                )
+
+            else:
+                download_button = qtw.QPushButton(self.mloc.download)
+
+                def get_func(mod_id: int, file_id: int, source: utils.Source):
+                    def func():
+                        os.startfile(
+                            self.app.provider.get_modpage_link(mod_id, file_id, source)
+                        )
+
+                    return func
+
+                download_button.clicked.connect(
+                    get_func(download.mod_id, download.file_id, download.source)
+                )
+                self.app.mainpage_widget.database_widget.downloads_widget.downloads_widget.setItemWidget(
+                    item, 1, download_button
+                )
+                self.app.mainpage_widget.database_widget.downloads_widget.pending_non_prem_downloads[
+                    (download.mod_id, download.file_id)
+                ] = download
 
         self.app.mainpage_widget.update_modlist()
 
@@ -254,6 +267,8 @@ class DownloadListDialog(qtw.QWidget):
             )
 
         self.close()
+
+        self.app.mainpage_widget.database_widget.setCurrentIndex(1)
 
     def eventFilter(self, source: qtc.QObject, event: qtc.QEvent):
         if event.type() == qtc.QEvent.Type.Wheel and isinstance(source, qtw.QComboBox):

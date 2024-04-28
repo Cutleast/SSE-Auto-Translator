@@ -320,9 +320,12 @@ class Provider:
                 source = Source.Confrerie
 
         if source == Source.NexusMods:
-            return self.__nm_api.get_direct_download_url(
-                "skyrimspecialedition", mod_id, file_id, key, expires
-            )
+            if self.__nm_api.premium or (key and expires):
+                return self.__nm_api.get_direct_download_url(
+                    "skyrimspecialedition", mod_id, file_id, key, expires
+                )
+            else:
+                return None
 
         else:
             return self.__cdt_api.get_download_link(mod_id)
