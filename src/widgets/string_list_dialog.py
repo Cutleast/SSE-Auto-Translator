@@ -149,15 +149,22 @@ class StringListDialog(qtw.QWidget):
 
                 menu.addSeparator()
 
-                if selected_item.isFirstColumnSpanned():
-                    copy_plugin_name_action = menu.addAction(self.loc.main.copy_plugin_name)
-                    copy_plugin_name_action.setIcon(qta.icon("mdi6.content-copy", color="#ffffff"))
-                    copy_plugin_name_action.triggered.connect(lambda: pyperclip.copy(selected_item.text(0)))
+            if selected_item.isFirstColumnSpanned():
+                copy_plugin_name_action = menu.addAction(
+                    self.loc.main.copy_plugin_name
+                )
+                copy_plugin_name_action.setIcon(
+                    qta.icon("mdi6.content-copy", color="#ffffff")
+                )
+                copy_plugin_name_action.triggered.connect(
+                    lambda: pyperclip.copy(selected_item.text(0))
+                )
 
-            copy_action = menu.addAction(self.loc.main.copy)
-            copy_action.setIcon(qta.icon("mdi6.content-copy", color="#ffffff"))
-            copy_action.setIconVisibleInMenu(True)
-            copy_action.triggered.connect(self.copy_selected)
+            else:
+                copy_action = menu.addAction(self.loc.main.copy)
+                copy_action.setIcon(qta.icon("mdi6.content-copy", color="#ffffff"))
+                copy_action.setIconVisibleInMenu(True)
+                copy_action.triggered.connect(self.copy_selected)
 
             menu.exec(self.strings_widget.mapToGlobal(point))
 
