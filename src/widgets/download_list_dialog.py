@@ -131,6 +131,7 @@ class DownloadListDialog(qtw.QWidget):
             self.list_widget.setItemWidget(item, 0, original_modpage_button)
 
             translation_combobox = qtw.QComboBox()
+            translation_combobox.installEventFilter(self)
             translation_combobox.setEditable(False)
             self.list_widget.setItemWidget(item, 2, translation_combobox)
 
@@ -142,6 +143,7 @@ class DownloadListDialog(qtw.QWidget):
             self.list_widget.setItemWidget(item, 3, translation_modpage_button)
 
             files_combobox = qtw.QComboBox()
+            files_combobox.installEventFilter(self)
             files_combobox.setEditable(False)
             self.list_widget.setItemWidget(item, 4, files_combobox)
 
@@ -252,3 +254,10 @@ class DownloadListDialog(qtw.QWidget):
             )
 
         self.close()
+
+    def eventFilter(self, source: qtc.QObject, event: qtc.QEvent):
+        if event.type() == qtc.QEvent.Type.Wheel and isinstance(source, qtw.QComboBox):
+            self.list_widget.wheelEvent(event)
+            return True
+
+        return super().eventFilter(source, event)
