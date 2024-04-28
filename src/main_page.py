@@ -1142,16 +1142,20 @@ class MainPageWidget(qtw.QWidget):
                         else:
                             plugin_item.setCheckState(0, qtc.Qt.CheckState.Checked)
                             plugin_item.setDisabled(False)
-                        
+
                         # Apply cache
-                        state = self.app.cacher.get_from_plugin_states_cache(plugin.path)
+                        state = self.app.cacher.get_from_plugin_states_cache(
+                            plugin.path
+                        )
                         if state:
                             checked, status = state
                             plugin.status = status
                             if checked:
                                 plugin_item.setCheckState(0, qtc.Qt.CheckState.Checked)
                             else:
-                                plugin_item.setCheckState(0, qtc.Qt.CheckState.Unchecked)
+                                plugin_item.setCheckState(
+                                    0, qtc.Qt.CheckState.Unchecked
+                                )
                         mod_item.addChild(plugin_item)
 
                 if cur_separator is not None:
@@ -1334,11 +1338,13 @@ class MainPageWidget(qtw.QWidget):
         edid_box.clicked.connect(edid_entry.setFocus)
         flayout.addRow(edid_box, edid_entry)
 
-        string_box = qtw.QRadioButton(self.loc.main.string)
+        string_box = qtw.QCheckBox(self.loc.main.string)
         string_entry = qtw.QLineEdit()
         string_entry.setDisabled(True)
-        string_box.toggled.connect(
-            lambda: string_entry.setEnabled(string_box.isChecked())
+        string_box.stateChanged.connect(
+            lambda state: string_entry.setEnabled(
+                state == qtc.Qt.CheckState.Checked.value
+            )
         )
         string_box.clicked.connect(string_entry.setFocus)
         flayout.addRow(string_box, string_entry)
@@ -1371,7 +1377,7 @@ class MainPageWidget(qtw.QWidget):
             if edid_box.isChecked():
                 filter["editor_id"] = edid_entry.text()
 
-            if string_box.isChecked() and string_entry.text():
+            if string_box.isChecked():
                 filter["string"] = string_entry.text()
 
             matching = Processor.run_string_search(self.mods, filter, self.app)
