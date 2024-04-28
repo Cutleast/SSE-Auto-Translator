@@ -16,6 +16,7 @@ from main import MainApp
 from translation_provider import TranslationDownload
 
 from .download_list_item import DownloadListItem
+from .loading_dialog import LoadingDialog
 
 
 class DownloadListDialog(qtw.QWidget):
@@ -174,6 +175,49 @@ class DownloadListDialog(qtw.QWidget):
 
         _queue: list[tuple] = []
 
+        def process(ldialog: LoadingDialog):
+            ldialog.updateProgress(text1=self.loc.main.starting_downloads)
+
+            for download_item in self.download_items:
+                translation_download = download_item.translation_downloads[
+                    download_item.translations_combobox.currentIndex()
+                ]
+                download = translation_download.available_downloads[
+                    download_item.files_combobox.currentIndex()
+                ]
+
+                if (
+                    download.name,
+                    download.mod_id,
+                    download.file_id,
+                    download.source,
+                ) in _queue:
+                    continue
+                _queue.append(
+                    (download.name, download.mod_id, download.file_id, download.source)
+                )
+
+                download.direct_url = self.app.provider.get_direct_download_url(
+                    download.mod_id,
+                    download.file_id,
+                    source=translation_download.source,
+                )
+
+                if self.updates:
+                    old_translation = self.app.database.get_translation_by_plugin_name(
+                        translation_download.original_plugin.name
+                    )
+                    if old_translation is not None:
+                        self.app.database.delete_translation(old_translation)
+                        self.log.info("Deleted old Translation from Database.")
+                    else:
+                        self.log.warning(
+                            "Old Translation could not be found in Database!"
+                        )
+
+        loadingdialog = LoadingDialog(self, self.app, process)
+        loadingdialog.exec()
+
         for download_item in self.download_items:
             translation_download = download_item.translation_downloads[
                 download_item.translations_combobox.currentIndex()
@@ -182,33 +226,8 @@ class DownloadListDialog(qtw.QWidget):
                 download_item.files_combobox.currentIndex()
             ]
 
-            if (
-                download.name,
-                download.mod_id,
-                download.file_id,
-                download.source,
-            ) in _queue:
+            if not download.direct_url:
                 continue
-            _queue.append(
-                (download.name, download.mod_id, download.file_id, download.source)
-            )
-
-            download.direct_url = self.app.provider.get_direct_download_url(
-                download.mod_id, download.file_id, source=translation_download.source
-            )
-
-            # if self.updates:
-            #     old_translation = self.app.database.get_translation_by_id(
-            #         mod_id,
-            #         int(self.translation_downloads[rindex].original_plugin_name),
-            #     )
-            #     if old_translation is not None:
-            #         self.app.database.delete_translation(old_translation)
-            #         self.log.info("Deleted old Translation from Database.")
-            #     else:
-            #         self.log.warning(
-            #             "Old Translation could not be found in Database!"
-            #         )
 
             item = qtw.QTreeWidgetItem(
                 [
