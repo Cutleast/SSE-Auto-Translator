@@ -150,9 +150,7 @@ class StringListDialog(qtw.QWidget):
                 menu.addSeparator()
 
             if selected_item.isFirstColumnSpanned():
-                copy_plugin_name_action = menu.addAction(
-                    self.loc.main.copy_plugin_name
-                )
+                copy_plugin_name_action = menu.addAction(self.loc.main.copy_plugin_name)
                 copy_plugin_name_action.setIcon(
                     qta.icon("mdi6.content-copy", color="#ffffff")
                 )
@@ -162,6 +160,7 @@ class StringListDialog(qtw.QWidget):
 
             else:
                 copy_action = menu.addAction(self.loc.main.copy)
+                copy_action.setShortcut(qtg.QKeySequence("Ctrl+C"))
                 copy_action.setIcon(qta.icon("mdi6.content-copy", color="#ffffff"))
                 copy_action.setIconVisibleInMenu(True)
                 copy_action.triggered.connect(self.copy_selected)
@@ -207,6 +206,9 @@ class StringListDialog(qtw.QWidget):
                     self.loc.main.string,
                 ]
             )
+
+        copy_shortcut = qtg.QShortcut(qtg.QKeySequence("Ctrl+C"), self)
+        copy_shortcut.activated.connect(self.copy_selected)
 
         self.load_strings()
 
