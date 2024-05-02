@@ -4,6 +4,7 @@ and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+import logging
 import os
 import pickle
 import sys
@@ -59,6 +60,8 @@ class Translation:
 
     tree_item: QTreeWidgetItem = None
 
+    log = logging.getLogger("TranslationDatabase")
+
     def load_translation(self):
         """
         Loads strings from translation.
@@ -72,8 +75,12 @@ class Translation:
             # Fix translation files that were generated outside of SSE-AT
             sys.modules["plugin_parser.string"] = utils.string
             for translation_path in translation_paths:
-                with translation_path.open("rb") as file:
-                    self.strings[translation_path.stem.lower()] = pickle.load(file)
+                try:
+                    with translation_path.open("rb") as file:
+                        self.strings[translation_path.stem.lower()] = pickle.load(file)
+                except EOFError as ex:
+                    self.log.error(f"Failed to load strings from database file {str(translation_path)!r}", exc_info=ex)
+
             sys.modules.pop("plugin_parser.string")
 
             translation_paths = list(self.path.glob("*.json"))
