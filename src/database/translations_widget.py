@@ -273,7 +273,7 @@ class TranslationsWidget(qtw.QWidget):
             def open_in_explorer():
                 if selected_plugin_name:
                     plugin_path = selected_translation.path / (
-                        selected_plugin_name + ".json"
+                        selected_plugin_name + ".ats"
                     )
                     if plugin_path.is_file():
                         os.system(f'explorer.exe /select,"{plugin_path}"')
