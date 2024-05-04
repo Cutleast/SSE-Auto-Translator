@@ -120,7 +120,9 @@ class SettingsDialog(qtw.QDialog):
             message_box.button(qtw.QMessageBox.StandardButton.No).setText(
                 self.loc.main.no
             )
-            message_box.button(qtw.QMessageBox.StandardButton.No).setObjectName("accent_button")
+            message_box.button(qtw.QMessageBox.StandardButton.No).setObjectName(
+                "accent_button"
+            )
             message_box.button(qtw.QMessageBox.StandardButton.Yes).setText(
                 self.loc.main.yes
             )
@@ -142,7 +144,38 @@ class SettingsDialog(qtw.QDialog):
         user_settings = self.user_settings.get_settings()
         translator_settings = self.translator_settings.get_settings()
 
-        if translator_settings["translator"] == "DeepL" and not translator_settings["api_key"]:
+        if app_settings["output_path"] is not None:
+            if os.path.isdir(app_settings["output_path"]):
+                files = os.listdir(app_settings["output_path"])
+
+                # Only warn about a path that contains 
+                # folders other than an SKSE folder
+                # (which is then very likely an already existing output folder)
+                if files and files != ["SKSE"]:
+                    messagebox = qtw.QMessageBox()
+                    utils.apply_dark_title_bar(messagebox)
+                    messagebox.setIcon(messagebox.Icon.Warning)
+                    messagebox.setWindowTitle(self.loc.main.warning)
+                    messagebox.setText(self.mloc.output_path_not_empty)
+                    messagebox.setStandardButtons(
+                        qtw.QMessageBox.StandardButton.Yes
+                        | qtw.QMessageBox.StandardButton.Cancel
+                    )
+                    messagebox.button(qtw.QMessageBox.StandardButton.Cancel).setText(
+                        self.loc.main.cancel
+                    )
+                    messagebox.button(qtw.QMessageBox.StandardButton.Yes).setText(
+                        self.loc.main._continue
+                    )
+                    choice = messagebox.exec()
+
+                    if choice != qtw.QMessageBox.StandardButton.Yes:
+                        return
+
+        if (
+            translator_settings["translator"] == "DeepL"
+            and not translator_settings["api_key"]
+        ):
             ErrorDialog(
                 self,
                 self.app,
@@ -185,9 +218,7 @@ class SettingsDialog(qtw.QDialog):
 
         self.accept()
 
-        self.log.info(
-            "New settings saved. Changes will take effect after a restart."
-        )
+        self.log.info("New settings saved. Changes will take effect after a restart.")
 
         if self.changes_pending:
             messagebox = qtw.QMessageBox()
