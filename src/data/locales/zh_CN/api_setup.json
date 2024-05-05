@@ -1,0 +1,11 @@
+{
+    "api_help": "为了从N网获取翻译，该工具需要访问N网API。您可以通过两种方法设置访问权限：手动输入API密钥或通过一键登录。",
+    "api_key_invalid": "API密钥无效！",
+    "api_key_valid": "API密钥有效！",
+    "check_api_key": "检查API密钥",
+    "insert_api_key": "输入你的API密钥",
+    "manual_setup": "手动设置",
+    "sso_setup": "一键登录（浏览器）",
+    "sso_successful": "已成功登录到N网",
+    "start_sso": "点击这里来使用浏览器登录到N网"
+}
