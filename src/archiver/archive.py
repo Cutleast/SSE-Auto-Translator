@@ -6,7 +6,6 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 import logging
 import subprocess
-
 from fnmatch import fnmatch
 from pathlib import Path
 
@@ -35,11 +34,12 @@ class Archive:
         Extracts all files to `dest`.
         """
 
-        retcode = subprocess.run(
-            f'7z.exe x "{self.path}" -o"{dest}" -aoa -y', shell=True
-        )
+        cmd = ["7z.exe", "x", str(self.path), f"-o{dest}", "-aoa", "-y"]
 
-        if retcode:
+        process = subprocess.run(cmd, capture_output=True, text=True)
+
+        if process.returncode:
+            self.log.error(process.stderr)
             raise Exception("Unpacking command failed!")
 
     def extract(self, filename: str, dest: Path):
@@ -47,12 +47,9 @@ class Archive:
         Extracts `filename` from archive to `dest`.
         """
 
-        process = subprocess.run(
-            f'7z.exe x -o"{dest}" -aoa -y -- "{self.path}" "{filename}"',
-            shell=True,
-            capture_output=True,
-            text=True,
-        )
+        cmd = ["7z.exe", "x", f"-o{dest}", "-aoa", "-y", "--", str(self.path), filename]
+
+        process = subprocess.run(cmd, capture_output=True, text=True)
 
         if process.returncode:
             self.log.error(process.stderr)
@@ -63,12 +60,18 @@ class Archive:
         Extracts `filenames` from archive to `dest`.
         """
 
-        cmd = f'7z.exe x -o"{dest}" -aoa -y -- "{self.path}"'
+        cmd = [
+            "7z.exe",
+            "x",
+            f"-o{dest}",
+            "-aoa",
+            "-y",
+            "--",
+            str(self.path),
+        ]
+        cmd += filenames
 
-        for filename in filenames:
-            cmd += f' "{filename}"'
-
-        process = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+        process = subprocess.run(cmd, capture_output=True, text=True)
 
         if process.returncode:
             self.log.error(process.stderr)
