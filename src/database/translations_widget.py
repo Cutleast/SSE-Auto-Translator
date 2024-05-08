@@ -245,6 +245,15 @@ class TranslationsWidget(qtw.QWidget):
                     )
 
             def export_translation():
+                items = self.translations_widget.selectedItems()
+                selected_translations = [
+                    _translation
+                    for _translation in self.app.database.user_translations
+                    if _translation.tree_item in items
+                ]
+                if not selected_translations:
+                    return
+
                 file_dialog = qtw.QFileDialog(self.app.root)
                 file_dialog.setWindowTitle(self.mloc.export_translation)
                 file_dialog.setFileMode(qtw.QFileDialog.FileMode.Directory)
@@ -255,7 +264,8 @@ class TranslationsWidget(qtw.QWidget):
                     folder = os.path.normpath(folder)
                     folder = Path(folder)
 
-                    selected_translation.export_translation(folder)
+                    for translation in selected_translations:
+                        translation.export_translation(folder)
 
                     messagebox = qtw.QMessageBox(self.app.root)
                     messagebox.setWindowTitle(self.loc.main.success)
