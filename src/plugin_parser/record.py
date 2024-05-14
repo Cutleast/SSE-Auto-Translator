@@ -29,6 +29,7 @@ class Record:
         0x00040000: "Compressed",
         0x00000800: "Initially Disabled",
         0x00000020: "Deleted",
+        0x00000200: "Light Master",
     }
     flags: dict[str, bool] = {}
 

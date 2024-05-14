@@ -111,6 +111,11 @@ class PluginParser:
                 # If index is not in masters, then the record is first defined in this plugin
                 except IndexError:
                     formid = f"{record.formid}|{self.plugin_path.name}"
+                
+                # Replace Master Index by "FE" Prefix to indicate Light Plugin
+                # This is especially relevant for DSD
+                if self.parsed_data.header.flags["Light Master"]:
+                    formid = "FE" + formid[2:]
 
                 for subrecord in record.subrecords:
                     if isinstance(subrecord, StringSubrecord):
