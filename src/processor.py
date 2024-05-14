@@ -558,6 +558,14 @@ class Processor:
                                     f"Found {plugin.name!r} in Masterlist of type 'route'. Added Targets to Downloads."
                                 )
 
+                        # Sort mod translations in descending order after timestamp
+                        mod_translations.sort(
+                            key=lambda download: app.provider.get_details(
+                                download.mod_id, source=download.source
+                            )["timestamp"],
+                            reverse=True,
+                        )
+
                         translation_downloads[f"{mod.name} > {plugin.name}"] = (
                             mod_translations
                         )
@@ -566,6 +574,17 @@ class Processor:
         loadingdialog.exec()
 
         if len(translation_downloads):
+            # Sort translation downloads in descending order
+            # after last updated/uploaded timestamp
+            translation_downloads = {
+                display_name: downloads
+                for display_name, downloads in sorted(
+                    translation_downloads.copy().items(),
+                    key=lambda item: app.provider.get_details(
+                        item[1][0].mod_id, source=item[1][0].source
+                    )["timestamp"],
+                )
+            }
             DownloadListDialog(app, translation_downloads)
 
     @staticmethod
