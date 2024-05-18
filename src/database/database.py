@@ -422,18 +422,26 @@ class TranslationDatabase:
                     if form_id_filter and matching:
                         matching = form_id_filter.lower() in string.form_id.lower()
 
-                    if editor_id_filter and matching:
+                    if editor_id_filter and matching and string.editor_id is not None:
                         matching = editor_id_filter.lower() in string.editor_id.lower()
+                    elif editor_id_filter:
+                        matching = False
 
                     if original_filter and matching:
                         matching = (
                             original_filter.lower() in string.original_string.lower()
                         )
 
-                    if string_filter and matching:
+                    if (
+                        string_filter
+                        and matching
+                        and string.translated_string is not None
+                    ):
                         matching = (
                             string_filter.lower() in string.translated_string.lower()
                         )
+                    elif string_filter:
+                        matching = False
 
                     if matching:
                         if plugin in result:
