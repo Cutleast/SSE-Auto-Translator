@@ -711,7 +711,7 @@ class Processor:
 
         def process(ldialog: LoadingDialog):
             plugins = {
-                plugin: mod
+                plugin.name.lower(): (plugin, mod)
                 for mod in modlist
                 for plugin in mod.plugins
                 if plugin.status
@@ -722,7 +722,7 @@ class Processor:
                 and plugin.tree_item.checkState(0) == qtc.Qt.CheckState.Checked
             }
 
-            for p, (plugin, mod) in enumerate(plugins.items()):
+            for p, (plugin_name, (plugin, mod)) in enumerate(plugins.items()):
                 translation = app.database.get_translation_by_plugin_name(plugin.name)
                 if translation is None:
                     continue
@@ -733,7 +733,7 @@ class Processor:
                 ):
                     continue
 
-                app.log.info(f"Scanning {plugin.name!r}...")
+                app.log.info(f"Scanning {mod.name!r} > {plugin.name!r}...")
 
                 ldialog.updateProgress(
                     text1=f"{app.loc.main.running_deep_scan} ({p}/{len(plugins)})",
