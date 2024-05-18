@@ -233,16 +233,32 @@ def get_masterlist(language: str, cache: bool = True) -> dict[str, dict]:
     REPO_NAME = "SSE-Auto-Translator"
     REPO_OWNER = "Cutleast"
     BRANCH = "master"
-    MASTERLIST_PATH = f"masterlists/{language.lower()}.json"
+    INDEX_PATH = f"masterlists/index.json"
 
     if masterlist is None or cache == False:
-        url = f"https://raw.githubusercontent.com/{REPO_OWNER}/{REPO_NAME}/{BRANCH}/{MASTERLIST_PATH}"
+        url = f"https://raw.githubusercontent.com/{REPO_OWNER}/{REPO_NAME}/{BRANCH}/{INDEX_PATH}"
 
         res = req.get(url, timeout=3)
 
         if res.status_code == 200:
             data = res.content.decode()
-            masterlist = json.loads(data)
+            index: dict[str, str] = json.loads(data)
+
+            url = index.get(language)
+
+            if not url:
+                masterlist = {}
+
+                return masterlist
+            
+            res = req.get(url, timeout=3)
+
+            if res.status_code == 200:
+                data = res.content.decode()
+                masterlist = json.loads(data)
+            else:
+                log.debug(f"Request URL: {url!r}")
+                raise Exception(f"Request failed! Status Code: {res.status_code}")
 
         else:
             log.debug(f"Request URL: {url!r}")
