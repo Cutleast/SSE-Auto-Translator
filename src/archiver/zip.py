@@ -14,9 +14,15 @@ class ZIPARchive(Archive):
     Class for ZIP Archives.
     """
 
-    def get_files(self) -> list[str]:
-        return [
-            file.filename
-            for file in zipfile.ZipFile(self.path).filelist
-            if not file.is_dir()
-        ]
+    __files: list[str] = None
+
+    @property
+    def files(self) -> list[str]:
+        if self.__files is None:
+            self.__files = [
+                file.filename
+                for file in zipfile.ZipFile(self.path).filelist
+                if not file.is_dir()
+            ]
+        
+        return self.__files

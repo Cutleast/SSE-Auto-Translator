@@ -9,6 +9,8 @@ import subprocess
 from fnmatch import fnmatch
 from pathlib import Path
 
+from virtual_glob import InMemoryPath, glob
+
 
 class Archive:
     """
@@ -19,15 +21,25 @@ class Archive:
 
     log = logging.getLogger("Archiver")
 
+    __files: list[str] = None
+
     def __init__(self, path: Path):
         self.path = path
 
-    def get_files(self) -> list[str]:
+    @property
+    def files(self) -> list[str]:
         """
         Returns a list of filenames in archive.
         """
 
         raise NotImplementedError
+
+    def get_files(self) -> list[str]:
+        """
+        Alias method for `files` property.
+        """
+
+        return self.files
 
     def extract_all(self, dest: Path):
         """
@@ -90,6 +102,23 @@ class Archive:
             )
 
         return result
+
+    def glob(self, pattern: str) -> list[str]:
+        """
+        Returns a list of file paths that
+        match the <pattern>.
+
+        Parameters:
+            pattern: str, everything that fnmatch supports
+
+        Returns:
+            list of matching filenames
+        """
+
+        fs = InMemoryPath.from_list(self.files)
+        matches = [p.path for p in glob(fs, pattern)]
+
+        return matches
 
     @staticmethod
     def load_archive(archive_path: Path) -> "Archive":
