@@ -27,5 +27,10 @@
     "translator_settings": "Translator API Settings",
     "use_masterlist": "Use global Masterlist from GitHub Repository (recommended)",
     "use_spell_check": "Enable Spell Checking in Translation Editor",
-    "user_settings": "User Settings"
+    "user_settings": "User Settings",
+    "enabled_file_types": "Enabled File Types",
+    "enable_interface_files": "Enable Interface Files (Data/Interface/*.txt)",
+    "enable_scripts": "Enable Papyrus Scripts (Data/Scripts/*.pex)",
+    "enable_textures": "Enable Textures (Data/Textures/*)",
+    "enable_sound_files": "Enable Sound Files (Data/Sound/*)"
 }

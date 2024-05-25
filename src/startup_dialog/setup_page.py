@@ -33,41 +33,54 @@ class SetupPage(qtw.QWidget):
         vlayout.setAlignment(qtc.Qt.AlignmentFlag.AlignTop)
         self.setLayout(vlayout)
 
+        self.scroll_area = qtw.QScrollArea()
+        self.scroll_area.setWidgetResizable(True)
+        self.scroll_area.setObjectName("transparent")
+        vlayout.addWidget(self.scroll_area, 1)
+        scroll_widget = qtw.QWidget()
+        scroll_widget.setObjectName("transparent")
+        self.scroll_area.setWidget(scroll_widget)
+        slayout = qtw.QVBoxLayout()
+        scroll_widget.setLayout(slayout)
+
         # Title label
         title_label = qtw.QLabel(self.mloc.setup_title)
         title_label.setAlignment(qtc.Qt.AlignmentFlag.AlignHCenter)
         title_label.setObjectName("title_label")
-        vlayout.addWidget(title_label, 0, qtc.Qt.AlignmentFlag.AlignHCenter)
-        vlayout.addSpacing(25)
+        slayout.addWidget(title_label, 0, qtc.Qt.AlignmentFlag.AlignHCenter)
+        slayout.addSpacing(25)
 
         # Help label
         help_label = qtw.QLabel(self.mloc.setup_help)
         help_label.setWordWrap(True)
-        vlayout.addWidget(help_label)
+        slayout.addWidget(help_label)
 
-        vlayout.addSpacing(25)
+        slayout.addSpacing(25)
 
         # Language
         hlayout = qtw.QHBoxLayout()
-        vlayout.addLayout(hlayout)
+        slayout.addLayout(hlayout)
 
         lang_label = qtw.QLabel(self.mloc.choose_lang)
         hlayout.addWidget(lang_label)
         self.lang_box = CompletionBox()
+        self.lang_box.installEventFilter(self)
         self.lang_box.setPlaceholderText(self.loc.main.please_select)
         lang_items = [lang[0].capitalize() for lang in utils.SUPPORTED_LANGS]
         self.lang_box.addItems(lang_items)
         hlayout.addWidget(self.lang_box)
 
-        vlayout.addSpacing(10)
+        slayout.addSpacing(10)
 
         # Source
         hlayout = qtw.QHBoxLayout()
-        vlayout.addLayout(hlayout)
+        slayout.addLayout(hlayout)
 
         source_label = qtw.QLabel(self.loc.main.source)
+        source_label.setDisabled(True)
         hlayout.addWidget(source_label)
         self.source_dropdown = qtw.QComboBox()
+        self.source_dropdown.installEventFilter(self)
         self.source_dropdown.setDisabled(True)
         self.source_dropdown.setEditable(False)
         self.source_dropdown.addItems(Provider.Preference._member_names_)
@@ -92,13 +105,45 @@ class SetupPage(qtw.QWidget):
         # Masterlist
         self.masterlist_box = qtw.QCheckBox(self.loc.settings.use_masterlist)
         self.masterlist_box.setChecked(True)
-        vlayout.addWidget(self.masterlist_box)
+        slayout.addWidget(self.masterlist_box)
 
-        vlayout.addSpacing(5)
+        slayout.addSpacing(5)
+
+        # Enabled File Types
+        filetypes_label = qtw.QLabel(self.loc.settings.enabled_file_types)
+        filetypes_label.setAlignment(qtc.Qt.AlignmentFlag.AlignLeft)
+        filetypes_label.setObjectName("relevant_label")
+        slayout.addWidget(filetypes_label, 0, qtc.Qt.AlignmentFlag.AlignLeft)
+
+        self.enable_interface_files_box = qtw.QCheckBox(
+            self.loc.settings.enable_interface_files
+        )
+        self.enable_interface_files_box.setChecked(True)
+        slayout.addWidget(self.enable_interface_files_box)
+
+        self.enable_scripts_box = qtw.QCheckBox(
+            self.loc.settings.enable_scripts + " [EXPERIMENTAL]"
+        )
+        self.enable_scripts_box.setChecked(True)
+        slayout.addWidget(self.enable_scripts_box)
+
+        self.enable_textures_box = qtw.QCheckBox(
+            self.loc.settings.enable_textures + " [EXPERIMENTAL]"
+        )
+        self.enable_textures_box.setChecked(True)
+        slayout.addWidget(self.enable_textures_box)
+
+        self.enable_sound_files_box = qtw.QCheckBox(
+            self.loc.settings.enable_sound_files + " [EXPERIMENTAL]"
+        )
+        self.enable_sound_files_box.setChecked(True)
+        slayout.addWidget(self.enable_sound_files_box)
+
+        slayout.addSpacing(5)
 
         # API Setup Widget
         self.api_setup = ApiSetup(self.startup_dialog.app)
-        vlayout.addWidget(self.api_setup)
+        slayout.addWidget(self.api_setup)
 
         # Back and Next Button
         vlayout.addStretch()
@@ -130,3 +175,10 @@ class SetupPage(qtw.QWidget):
 
         self.lang_box.currentTextChanged.connect(lambda _: validate())
         self.api_setup.valid_signal.connect(lambda _: validate())
+    
+    def eventFilter(self, source: qtc.QObject, event: qtc.QEvent):
+        if event.type() == qtc.QEvent.Type.Wheel and isinstance(source, qtw.QComboBox):
+            self.scroll_area.wheelEvent(event)
+            return True
+
+        return super().eventFilter(source, event)

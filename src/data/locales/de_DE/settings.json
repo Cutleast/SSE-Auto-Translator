@@ -27,5 +27,10 @@
     "translator_settings": "Übersetzer-API Einstellungen",
     "use_masterlist": "Globale Masterlist aus GitHub Repository verwenden (empfohlen)",
     "use_spell_check": "Aktiviere Rechtschreibprüfung im Editor",
-    "user_settings": "Nutzereinstellungen"
+    "user_settings": "Nutzereinstellungen",
+    "enabled_file_types": "Aktivierte Dateitypen",
+    "enable_interface_files": "Aktiviere Interface-Dateien (Data/Interface/*.txt)",
+    "enable_scripts": "Aktiviere Papyrus Scripts (Data/Scripts/*.pex)",
+    "enable_textures": "Aktiviere Texturen (Data/Textures/*)",
+    "enable_sound_files": "Aktiviere Sound-Dateien (Data/Sound/*)"
 }

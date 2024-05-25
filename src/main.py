@@ -232,15 +232,24 @@ class MainApp(qtw.QApplication):
 
         self.log.info("Loading user data...")
 
+        default_user_config = {
+            "language": "",
+            "api_key": "",
+            "mod_manager": "",
+            "modinstance": "",
+            "use_masterlist": True,
+            "instance_profile": "",
+            "provider_preference": "",
+            "enable_interface_files": True,
+            "enable_scripts": True,
+            "enable_textures": True,
+            "enable_sound_files": True
+        }
+
         with open(self.user_conf_path, "r", encoding="utf8") as file:
-            self.user_config: dict = json.load(file)
+            self.user_config: dict = default_user_config | json.load(file)
 
-        if "use_masterlist" not in self.user_config:
-            self.user_config["use_masterlist"] = True
-            with self.user_conf_path.open("w", encoding="utf8") as file:
-                json.dump(self.user_config, file, indent=4)
-
-        if "provider_preference" not in self.user_config:
+        if self.user_config["provider_preference"]:
             if self.user_config["language"] == "French":
                 self.user_config["provider_preference"] = (
                     Provider.Preference.PreferConfrerie.name
@@ -249,9 +258,6 @@ class MainApp(qtw.QApplication):
                 self.user_config["provider_preference"] = (
                     Provider.Preference.OnlyNexusMods.name
                 )
-
-            with self.user_conf_path.open("w", encoding="utf8") as file:
-                json.dump(self.user_config, file, indent=4)
 
         if self.translator_conf_path.is_file():
             with open(self.translator_conf_path, encoding="utf8") as file:
@@ -845,7 +851,8 @@ class MainApp(qtw.QApplication):
     def clean_and_exit(self):
         self.log.info("Exiting application...")
 
-        self.cacher.save_caches()
+        if self.cacher is not None:
+            self.cacher.save_caches()
 
         if hasattr(self, "mainpage_widget"):
             downloader_thread = (
