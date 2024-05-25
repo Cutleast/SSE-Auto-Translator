@@ -92,7 +92,9 @@ class DownloadsWidget(qtw.QWidget):
             qtw.QAbstractItemView.SelectionMode.NoSelection
         )
         self.downloads_widget.header().setStretchLastSection(False)
-        self.downloads_widget.header().setSectionResizeMode(0, qtw.QHeaderView.ResizeMode.Stretch)
+        self.downloads_widget.header().setSectionResizeMode(
+            0, qtw.QHeaderView.ResizeMode.Stretch
+        )
 
     def showEvent(self, event):
         super().showEvent(event)
@@ -249,6 +251,15 @@ class DownloadsWidget(qtw.QWidget):
                         )
                         translation.save_translation()
                         self.app.database.add_translation(translation)
+
+                        utils.import_non_plugin_files(
+                            downloaded_file,
+                            download.original_mod,
+                            translation,
+                            self.app.get_tmp_dir(),
+                            self.app.user_config,
+                        )
+
                         download.status = download.Status.DownloadSuccess
                         self.hide_item_signal.emit(download.tree_item)
 
@@ -327,7 +338,9 @@ class DownloadsWidget(qtw.QWidget):
                     self.loc.main.waiting_for_download,
                 ]
             )
-            item.setIcon(0, qtg.QIcon(str(self.app.data_path / "icons" / "nexus_mods.svg")))
+            item.setIcon(
+                0, qtg.QIcon(str(self.app.data_path / "icons" / "nexus_mods.svg"))
+            )
             item.setFont(1, qtg.QFont("Consolas"))
             download.tree_item = item
             self.downloads_widget.addTopLevelItem(item)

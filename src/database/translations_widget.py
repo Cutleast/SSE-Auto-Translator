@@ -865,6 +865,8 @@ class TranslationsWidget(qtw.QWidget):
                     translation.save_translation()
                     self.app.database.add_translation(translation)
 
+                    original_mod: utils.Mod = None
+
                     for mod in self.app.mainpage_widget.mods:
                         if any(
                             list(strings.keys())[0].lower() == plugin.name.lower()
@@ -873,6 +875,27 @@ class TranslationsWidget(qtw.QWidget):
                             translation.original_mod_id = mod.mod_id
                             translation.original_file_id = mod.file_id
                             translation.original_version = mod.version
+                            original_mod = mod
+                            break
+
+                    if original_mod:
+
+                        def process(ldialog: LoadingDialog):
+                            utils.import_non_plugin_files(
+                                file,
+                                original_mod,
+                                translation,
+                                self.app.get_tmp_dir(),
+                                self.app.user_config,
+                                ldialog,
+                            )
+
+                        loadingdialog = LoadingDialog(self.app.root, self.app, process)
+                        loadingdialog.exec()
+                    else:
+                        self.app.log.info(
+                            f"Failed to import non-Plugin files! No original mod found!"
+                        )
 
                     self.app.log.info(f"Translation {translation.name!r} imported.")
                 else:

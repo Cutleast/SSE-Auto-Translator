@@ -5,17 +5,156 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import logging
+import os
+import shutil
 from copy import copy
 from pathlib import Path
 
 import jstyleson as json
 
+from archive_parser import ArchiveParser
 from archiver import Archive
 
 from .mod import Mod
 from .string import String
 
 log = logging.getLogger("Utilities.Importer")
+
+
+def import_non_plugin_files(
+    archive_path: Path,
+    original_mod: Mod,
+    translation,
+    tmp_dir: Path,
+    user_config: dict,
+    ldialog=None,
+):
+    """
+    Imports non-Plugin files that are enabled in `user_config`
+    and exist in `original_mod` to `translation`.
+    """
+
+    if ldialog:
+        ldialog.updateProgress(
+            text1=ldialog.loc.main.processing_archive,
+        )
+
+    output_folder = tmp_dir / "Output"
+
+    if output_folder.is_dir():
+        shutil.rmtree(output_folder)
+
+    os.mkdir(output_folder)
+
+    incl_interface = user_config["enable_interface_files"]
+    incl_scripts = user_config["enable_scripts"]
+    incl_textures = user_config["enable_textures"]
+    incl_sound = user_config["enable_sound_files"]
+
+    if not incl_interface and not incl_scripts and not incl_textures and not incl_sound:
+        return
+
+    archive = Archive.load_archive(archive_path)
+    archive_files = archive.get_files()
+
+    bsas: list[str] = [
+        file for file in archive_files if Path(file).suffix.lower() == ".bsa"
+    ]
+    archive.extract_files(bsas, tmp_dir)
+
+    for b, bsa in enumerate(bsas):
+        extracted_archive = tmp_dir / bsa
+
+        if ldialog:
+            ldialog.updateProgress(
+                text1=f"{ldialog.loc.main.processing_bsas} ({b}/{len(bsas)})",
+                value1=b,
+                max1=len(bsas),
+                show2=True,
+                text2=extracted_archive.name,
+            )
+
+        parser = ArchiveParser(extracted_archive)
+        parsed_bsa = parser.parse_archive()
+        bsa_files_to_extract: list[str] = []
+
+        if incl_interface:
+            bsa_files_to_extract.extend(parsed_bsa.glob("**/interface/**/*.txt"))
+
+        if incl_scripts:
+            bsa_files_to_extract.extend(parsed_bsa.glob("**/scripts/*.pex"))
+
+        if incl_textures:
+            bsa_files_to_extract.extend(parsed_bsa.glob("**/textures/**/*.dds"))
+            bsa_files_to_extract.extend(parsed_bsa.glob("**/textures/**/*.png"))
+
+        if incl_sound:
+            bsa_files_to_extract.extend(parsed_bsa.glob("**/sound/**/*.fuz"))
+            bsa_files_to_extract.extend(parsed_bsa.glob("**/sound/**/*.wav"))
+            bsa_files_to_extract.extend(parsed_bsa.glob("**/sound/**/*.lip"))
+
+        log.debug(
+            f"Matching files in {str(extracted_archive)!r}: {len(bsa_files_to_extract)}"
+        )
+
+        for b, bsa_file in enumerate(bsa_files_to_extract):
+            if ldialog:
+                ldialog.updateProgress(
+                    value2=b,
+                    max2=len(bsa_files_to_extract),
+                    show3=True,
+                    text3=bsa_file,
+                )
+
+            parsed_bsa.extract_file(bsa_file, output_folder)
+
+    log.debug(f"Scanning {str(archive.path)!r}...")
+
+    matching_files: list[str] = []
+
+    if incl_interface:
+        matching_files.extend(archive.glob("**/interface/**/*.txt"))
+
+    if incl_scripts:
+        matching_files.extend(archive.glob("**/scripts/*.pex"))
+
+    if incl_textures:
+        matching_files.extend(archive.glob("**/textures/**/*.dds"))
+        matching_files.extend(archive.glob("**/textures/**/*.png"))
+
+    if incl_sound:
+        matching_files.extend(archive.glob("**/sound/**/*.fuz"))
+        matching_files.extend(archive.glob("**/sound/**/*.wav"))
+        matching_files.extend(archive.glob("**/sound/**/*.lip"))
+
+    log.debug(f"Matching files in {str(archive.path)!r}: {len(matching_files)}")
+
+    files_to_extract: list[str] = []
+    for file in matching_files:
+        if file.lower() in original_mod.files:
+            log.debug(f"Extracting {file!r} to {str(output_folder)!r}...")
+            files_to_extract.append(file)
+
+    if ldialog:
+        ldialog.updateProgress(
+            text1=ldialog.loc.main.processing_archive,
+            value1=0,
+            max1=0,
+            show2=False,
+            show3=False,
+        )
+
+    if files_to_extract:
+        archive.extract_files(files_to_extract, output_folder)
+
+    if ldialog:
+        ldialog.updateProgress(
+            text1=ldialog.loc.main.copying_files,
+        )
+
+    shutil.copytree(output_folder, translation.path / "data")
+
+    shutil.rmtree(output_folder)
 
 
 def import_from_archive(
