@@ -28,4 +28,9 @@
     "use_masterlist": "使用GitHub仓库中的全局主列表（推荐）",
     "use_spell_check": "在翻译编辑器中启用拼写检查功能",
     "user_settings": "用户设置"
+    "enabled_file_types": "启用文件类型",
+    "enable_interface_files": "启用Interface文件（Data/Interface/*.txt）",
+    "enable_scripts": "启用Papyrus脚本（Data/Scripts/*.pex）",
+    "enable_textures": "启用材质（Data/Textures/*）",
+    "enable_sound_files": "启用声音文件（Data/Sound/*）"
 }
