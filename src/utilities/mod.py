@@ -5,7 +5,6 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 from dataclasses import dataclass
-from fnmatch import fnmatch
 from pathlib import Path
 
 from qtpy.QtWidgets import QTreeWidgetItem
@@ -37,7 +36,7 @@ class Mod:
     @property
     def files(self):
         """
-        Returns a list of files, including from BSAs but no BSA itself.
+        List of files, including from BSAs but no BSA itself.
         """
 
         if not self.__files:
@@ -56,9 +55,9 @@ class Mod:
             for f, file in enumerate(files):
                 files[f] = file.lower()
 
-            return files
-        else:
-            return self.__files
+            self.__files = files
+
+        return self.__files
 
     def glob(self, pattern: str):
         """
