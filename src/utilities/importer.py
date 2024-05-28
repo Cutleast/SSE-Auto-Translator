@@ -106,7 +106,8 @@ def import_non_plugin_files(
                     text3=bsa_file,
                 )
 
-            parsed_bsa.extract_file(bsa_file, output_folder)
+            if bsa_file in original_mod.files:
+                parsed_bsa.extract_file(bsa_file, output_folder)
 
     log.debug(f"Scanning {str(archive.path)!r}...")
 
@@ -131,8 +132,7 @@ def import_non_plugin_files(
 
     files_to_extract: list[str] = []
     for file in matching_files:
-        if file.lower() in original_mod.files:
-            log.debug(f"Extracting {file!r} to {str(output_folder)!r}...")
+        if file in original_mod.files:
             files_to_extract.append(file)
 
     if ldialog:
