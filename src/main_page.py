@@ -216,7 +216,7 @@ class MainPageWidget(qtw.QWidget):
         download_translations_action.triggered.connect(
             lambda: (
                 Processor.download_and_install_translations(self.mods, self.app),
-                self.tool_bar.widgetForAction(build_dict_action).setObjectName(
+                self.tool_bar.widgetForAction(build_output_action).setObjectName(
                     "accent_button"
                 ),
                 self.tool_bar.widgetForAction(
@@ -226,14 +226,14 @@ class MainPageWidget(qtw.QWidget):
             )
         )
 
-        build_dict_action = self.tool_bar.addAction(
+        build_output_action = self.tool_bar.addAction(
             qta.icon("mdi6.export-variant", color="#ffffff"),
-            self.loc.main.build_dictionary,
+            self.loc.main.build_output_mod,
         )
-        build_dict_action.triggered.connect(
+        build_output_action.triggered.connect(
             lambda: (
-                Processor.build_dsd_dictionary(self.mods, self.app),
-                self.tool_bar.widgetForAction(build_dict_action).setObjectName(""),
+                Processor.build_output_mod(self.mods, self.app),
+                self.tool_bar.widgetForAction(build_output_action).setObjectName(""),
                 self.tool_bar.setStyleSheet(self.app.styleSheet()),
             )
         )

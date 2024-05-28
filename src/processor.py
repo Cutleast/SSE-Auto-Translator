@@ -593,12 +593,12 @@ class Processor:
         Processor.get_downloads(modlist, app)
 
     @staticmethod
-    def build_dsd_dictionary(modlist: list[utils.Mod], app: MainApp):
+    def build_output_mod(modlist: list[utils.Mod], app: MainApp):
         """
-        Builds DSD Dictionary by putting the translations in an Output folder.
+        Builds Output mod by putting the translations and enabled file types in an Output folder.
         """
 
-        app.log.info("Building DSD Dictionary...")
+        app.log.info("Building Output mod...")
 
         if app.app_config["output_path"] is None:
             output_folder = Path(".") / "SSE-AT Output"
@@ -609,8 +609,13 @@ class Processor:
             set(plugin.name.lower() for mod in modlist for plugin in mod.plugins)
         )
 
+        incl_interface = app.user_config["enable_interface_files"]
+        incl_scripts = app.user_config["enable_scripts"]
+        incl_textures = app.user_config["enable_textures"]
+        incl_sound = app.user_config["enable_sound_files"]
+
         def process(ldialog: LoadingDialog):
-            ldialog.updateProgress(text1=app.loc.main.building_dsd_dict)
+            ldialog.updateProgress(text1=app.loc.main.building_output_mod)
 
             if output_folder.is_dir():
                 shutil.rmtree(output_folder)
@@ -625,7 +630,7 @@ class Processor:
                     translation.strings.items()
                 ):
                     ldialog.updateProgress(
-                        text1=f"{app.loc.main.building_dsd_dict} ({t}/{len(app.database.user_translations)})",
+                        text1=f"{app.loc.main.building_output_mod} ({t}/{len(app.database.user_translations)})",
                         value1=t,
                         max1=len(app.database.user_translations),
                         show2=True,
@@ -671,15 +676,92 @@ class Processor:
                             strings, translation_file, indent=4, ensure_ascii=False
                         )
 
+                # Copy non-Plugin files
+                if (
+                    not incl_interface
+                    and not incl_scripts
+                    and not incl_textures
+                    and not incl_sound
+                ):
+                    continue
+
+                # Find original mod in modlist
+                for mod in modlist:
+                    if mod.mod_id == translation.original_mod_id:
+                        break
+                else:
+                    # Fallback to plugin search
+                    plugin_name = list(translation.strings.keys())[0].lower()
+
+                    for _mod in modlist:
+                        if any(
+                            (
+                                plugin_name.lower() == p.name.lower()
+                                and p.status != p.Status.IsTranslated
+                            )
+                            for p in _mod.plugins
+                        ):
+                            original_mod = _mod
+                            break
+                    else:
+                        continue
+
+                # Copy enabled file types
+                data_path: Path = translation.path / "data"
+                available_files: list[Path] = []
+
+                if incl_interface:
+                    available_files.extend(list(data_path.glob("interface/**/*.txt")))
+                if incl_scripts:
+                    available_files.extend(list(data_path.glob("scripts/*.pex")))
+                if incl_textures:
+                    available_files.extend(
+                        list(data_path.glob("textures/**/*.dds"))
+                        + list(data_path.glob("textures/**/*.png"))
+                    )
+                if incl_sound:
+                    available_files.extend(
+                        list(data_path.glob("sound/**/*.fuz"))
+                        + list(data_path.glob("sound/**/*.wav"))
+                        + list(data_path.glob("sound/**/*.lip"))
+                    )
+
+                if not available_files:
+                    continue
+
+                app.log.debug(
+                    f"Copying {len(available_files)} file(s) for {translation.name!r}..."
+                )
+                for f, file in enumerate(available_files):
+                    file = str(file.relative_to(data_path)).lower().replace("\\", "/")
+                    ldialog.updateProgress(
+                        show2=True,
+                        text2=f"{translation.name} ({p}/{len(available_files)})",
+                        value2=f,
+                        max2=len(available_files),
+                        show3=True,
+                        text3=utils.trim_string(file, 50),
+                    )
+                    if file in original_mod.files:
+                        os.makedirs(
+                            output_folder / file.rsplit("/", 1)[0], exist_ok=True
+                        )
+                        if data_path.drive == output_folder.drive:
+                            os.link(data_path / file, output_folder / file)
+                        else:
+                            shutil.copyfile(data_path / file, output_folder / file)
+                    else:
+                        app.log.debug(f"Skipping {file!r}...")
+
         loadingdialog = LoadingDialog(app.root, app, process)
         loadingdialog.exec()
 
-        app.log.info(f"Built DSD Dictionary in '{output_folder.resolve()}'.")
+        app.log.info(f"Built Output mod in '{output_folder.resolve()}'.")
 
         message_box = qtw.QMessageBox()
         message_box.setWindowTitle(app.loc.main.success)
         message_box.setText(
-            app.loc.main.dsd_build_complete + str(output_folder.resolve())
+            app.loc.main.output_mod_complete + str(output_folder.resolve())
         )
         message_box.setStandardButtons(
             qtw.QMessageBox.StandardButton.Ok | qtw.QMessageBox.StandardButton.Help
