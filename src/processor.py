@@ -764,12 +764,23 @@ class Processor:
             app.loc.main.output_mod_complete + str(output_folder.resolve())
         )
         message_box.setStandardButtons(
-            qtw.QMessageBox.StandardButton.Ok | qtw.QMessageBox.StandardButton.Help
+            qtw.QMessageBox.StandardButton.Ok
+            | qtw.QMessageBox.StandardButton.Help
+            | qtw.QMessageBox.StandardButton.Open
         )
         message_box.button(qtw.QMessageBox.StandardButton.Ok).setText(app.loc.main.ok)
         message_box.button(qtw.QMessageBox.StandardButton.Help).setText(
             app.loc.main.open_in_explorer
         )
+        btn = message_box.button(qtw.QMessageBox.StandardButton.Open)
+        btn.setText(app.loc.main.open_dsd_on_nexus_mods)
+        btn.clicked.disconnect()
+        btn.clicked.connect(
+            lambda: os.startfile(
+                "https://www.nexusmods.com/skyrimspecialedition/mods/107676"
+            )
+        )
+
         utils.apply_dark_title_bar(message_box)
         choice = message_box.exec()
 
