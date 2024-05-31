@@ -242,8 +242,8 @@ class MainApp(qtw.QApplication):
             "provider_preference": "",
             "enable_interface_files": True,
             "enable_scripts": True,
-            "enable_textures": True,
-            "enable_sound_files": True
+            "enable_textures": False,
+            "enable_sound_files": False
         }
 
         with open(self.user_conf_path, "r", encoding="utf8") as file:

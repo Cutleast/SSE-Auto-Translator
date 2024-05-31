@@ -130,13 +130,13 @@ class SetupPage(qtw.QWidget):
         self.enable_textures_box = qtw.QCheckBox(
             self.loc.settings.enable_textures + " [EXPERIMENTAL]"
         )
-        self.enable_textures_box.setChecked(True)
+        self.enable_textures_box.setChecked(False)
         slayout.addWidget(self.enable_textures_box)
 
         self.enable_sound_files_box = qtw.QCheckBox(
             self.loc.settings.enable_sound_files + " [EXPERIMENTAL]"
         )
-        self.enable_sound_files_box.setChecked(True)
+        self.enable_sound_files_box.setChecked(False)
         slayout.addWidget(self.enable_sound_files_box)
 
         slayout.addSpacing(5)
