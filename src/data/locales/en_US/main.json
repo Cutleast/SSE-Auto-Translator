@@ -38,6 +38,7 @@
     "error": "Error",
     "exit": "Exit",
     "expand_all": "Expand All",
+    "extracting_files": "Extracting Files...",
     "extracting_strings": "Extracting Plugin Strings...",
     "file": "File",
     "filter_options": "Filter Options",

@@ -60,18 +60,24 @@ def import_non_plugin_files(
     bsas: list[str] = [
         file for file in archive_files if Path(file).suffix.lower() == ".bsa"
     ]
-    archive.extract_files(bsas, tmp_dir)
 
     for b, bsa in enumerate(bsas):
+        if ldialog:
+            ldialog.updateProgress(
+                text1=f"{ldialog.loc.main.extracting_files} ({b}/{len(bsas)})",
+                value1=b,
+                max1=len(bsas),
+                show2=True,
+                text2=extracted_archive.name,
+            )
+
+        archive.extract(bsa, tmp_dir)
+
         extracted_archive = tmp_dir / bsa
 
         if ldialog:
             ldialog.updateProgress(
                 text1=f"{ldialog.loc.main.processing_bsas} ({b}/{len(bsas)})",
-                value1=b,
-                max1=len(bsas),
-                show2=True,
-                text2=extracted_archive.name,
             )
 
         parser = ArchiveParser(extracted_archive)

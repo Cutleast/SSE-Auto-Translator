@@ -38,6 +38,7 @@
     "error": "Fehler",
     "exit": "Beenden",
     "expand_all": "Alle ausklappen",
+    "extracting_files": "Dateien werden extrahiert...",
     "extracting_strings": "Strings werden aus Plugin extrahiert...",
     "file": "Datei",
     "filter_options": "Filteroptionen",
