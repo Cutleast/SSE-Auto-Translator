@@ -3,6 +3,7 @@
     "instance_help": "On this page you select a Modinstance to load from a Mod Manager.\nYou can always change the selected modinstance and mod manager under Settings > User Settings.",
     "instance_title": "Modinstance Selection",
     "introduction": "This Guide will help you setting up this Tool for your modlist.",
+    "path_limit": "Windows has a length limit of 255 characters for paths. Click below, grant admin rights and reboot to disable it.",
     "setup_help": "On this page you setup basic settings.",
     "setup_title": "Initial Setup",
     "startup": "Welcome!"

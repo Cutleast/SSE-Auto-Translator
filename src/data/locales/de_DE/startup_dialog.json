@@ -3,6 +3,7 @@
     "instance_help": "Auf dieser Seite wählen Sie eine Modinstanz aus, die von einem Mod Manager geladen werden soll.\nSie können die ausgewählte Modinstanz und den Mod Manager jederzeit unter Einstellungen > Nutzereinstellungen ändern.",
     "instance_title": "Modinstanz auswählen",
     "introduction": "Diese Anleitung hilft Ihnen, dieses Tool für Ihre Modliste einzurichten.",
+    "path_limit": "Windows hat eine Längenbegrenzung von 255 Zeichen für Pfade. Klicken Sie unten, gewähren Sie Administratorrechte und starten Sie neu, um sie zu deaktivieren.",
     "setup_help": "Auf dieser Seite nehmen Sie grundlegende Einstellungen vor.",
     "setup_title": "Grundlegende Einstellungen",
     "startup": "Willkommen!"
