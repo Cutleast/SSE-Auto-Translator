@@ -617,8 +617,8 @@ class TranslationsWidget(qtw.QWidget):
                     filter(
                         lambda mod: mod.mod_id == translation.original_mod_id
                         and (
-                            mod.file_id == translation.file_id
-                            or translation.file_id is None
+                            mod.file_id == translation.original_file_id
+                            or translation.original_file_id is None
                         ),
                         self.app.mainpage_widget.mods,
                     )
