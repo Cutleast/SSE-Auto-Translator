@@ -170,7 +170,7 @@ def import_non_plugin_files(
             text1=ldialog.loc.main.copying_files,
         )
 
-    shutil.copytree(output_folder, translation.path / "data")
+    shutil.copytree(output_folder, translation.path / "data", dirs_exist_ok=True)
 
     shutil.rmtree(output_folder)
 
