@@ -111,6 +111,10 @@ class NexusModsApi:
                 self.rem_hreq = int(rem_hreq)
             if rem_dreq.isnumeric():
                 self.rem_dreq = int(rem_dreq)
+            
+            if res.status_code == 429:
+                self.log.warning("API rate limit reached!")
+                raise utils.ApiLimitReachedError
 
             if cache_result:
                 self.cache[url] = res

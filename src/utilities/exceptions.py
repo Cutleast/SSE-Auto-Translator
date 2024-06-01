@@ -60,3 +60,13 @@ class ApiInvalidServerError(ApiException):
 
     text = "Server is invalid"
     id = "server_invalid"
+
+
+class ApiLimitReachedError(ApiException):
+    """
+    Exception when request has reached limit.
+    """
+
+    text = "API Request Limit reached"
+    id = "limit_reached"
+
