@@ -315,4 +315,4 @@ class Hex:
 
     @staticmethod
     def hex(stream: BufferedReader, size: int):
-        return hex(Integer._int(stream, size)).removeprefix("0x").upper().zfill(8)
+        return hex(Integer.uint(stream, size)).removeprefix("0x").upper().zfill(8)
