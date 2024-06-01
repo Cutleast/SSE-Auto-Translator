@@ -635,7 +635,7 @@ class TranslationsWidget(qtw.QWidget):
                 original_plugins = list(
                     filter(
                         lambda plugin: plugin.name.lower()
-                        == translation.strings.keys()[0].lower(),
+                        == list(translation.strings.keys())[0].lower(),
                         original_mod.plugins,
                     )
                 )
