@@ -688,6 +688,7 @@ class Processor:
                 # Find original mod in modlist
                 for mod in modlist:
                     if mod.mod_id == translation.original_mod_id:
+                        original_mod = mod
                         break
                 else:
                     # Fallback to plugin search
