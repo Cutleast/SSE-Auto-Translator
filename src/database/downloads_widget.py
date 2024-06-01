@@ -360,8 +360,6 @@ class DownloadsWidget(qtw.QWidget):
         Shows messagebox to tell that all downloads in queue are finished.
         """
 
-        self.app.database.save_database()
-
         self.downloads_widget.clear()
 
         messagebox = qtw.QMessageBox(self.app.root)

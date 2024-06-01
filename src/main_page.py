@@ -538,7 +538,6 @@ class MainPageWidget(qtw.QWidget):
                         loadingdialog = LoadingDialog(self.app.root, self.app, process)
                         loadingdialog.exec()
 
-                        self.app.database.save_database()
                         self.database_widget.translations_widget.load_translations()
                         self.database_widget.translations_widget.translations_widget.scrollToItem(
                             translation.tree_item,
@@ -571,7 +570,6 @@ class MainPageWidget(qtw.QWidget):
                 loadingdialog = LoadingDialog(self.app.root, self.app, process)
                 loadingdialog.exec()
 
-                self.app.database.save_database()
                 self.app.mainpage_widget.database_widget.translations_widget.load_translations()
                 self.update_modlist()
 

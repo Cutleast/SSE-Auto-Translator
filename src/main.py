@@ -130,9 +130,6 @@ class MainApp(qtw.QApplication):
 
         super().exec()
 
-        if self.setup_complete:
-            self.database.save_database()
-
         self.clean_and_exit()
 
     def start_main_app(self):

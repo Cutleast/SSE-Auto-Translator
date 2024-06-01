@@ -528,7 +528,6 @@ class TranslationsWidget(qtw.QWidget):
                 self.app.database.delete_translation(translation)
             self.app.log.info("Translations deleted. Updating database...")
 
-            self.app.database.save_database()
             self.load_translations()
             self.app.mainpage_widget.update_modlist()
 
@@ -903,7 +902,6 @@ class TranslationsWidget(qtw.QWidget):
                         "Translation not imported. Translation does not contain any strings!"
                     )
 
-            self.app.database.save_database()
             self.load_translations()
             self.app.mainpage_widget.update_modlist()
 

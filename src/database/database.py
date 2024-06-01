@@ -174,6 +174,8 @@ class TranslationDatabase:
         if translation not in self.user_translations:
             self.user_translations.append(translation)
 
+        self.save_database()
+
     def delete_translation(self, translation: Translation):
         """
         Deletes `translation` from database.
@@ -183,6 +185,8 @@ class TranslationDatabase:
             rmtree(translation.path)
         if translation in self.user_translations:
             self.user_translations.remove(translation)
+
+        self.save_database()
 
     def get_translation_by_plugin_name(self, plugin_name: str):
         """
