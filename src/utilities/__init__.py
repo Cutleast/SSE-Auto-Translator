@@ -218,6 +218,23 @@ def trim_string(text: str, max_length: int = 100):
     return f"{text!r}"[1:-1]
 
 
+def relative_data_path(file: str):
+    """
+    Example:
+        `"000 Data/interface/translations/requiem_french.txt"`
+        -> `"interface/translations/requiem_french.txt"`
+    """
+
+    filters = ["/interface/", "/scripts/", "/textures/", "/sound/"]
+
+    for filter in filters:
+        index = file.find(filter)
+        if index != -1:
+            return file[index + 1 :]
+
+    return file
+
+
 masterlist: dict[str, dict] = None
 
 
@@ -250,7 +267,7 @@ def get_masterlist(language: str, cache: bool = True) -> dict[str, dict]:
                 masterlist = {}
 
                 return masterlist
-            
+
             res = req.get(url, timeout=3)
 
             if res.status_code == 200:

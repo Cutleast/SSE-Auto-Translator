@@ -34,6 +34,8 @@ def import_non_plugin_files(
     and exist in `original_mod` to `translation`.
     """
 
+    from . import relative_data_path
+
     if ldialog:
         ldialog.updateProgress(
             text1=ldialog.loc.main.processing_archive,
@@ -62,6 +64,8 @@ def import_non_plugin_files(
     ]
 
     for b, bsa in enumerate(bsas):
+        extracted_archive = tmp_dir / bsa
+
         if ldialog:
             ldialog.updateProgress(
                 text1=f"{ldialog.loc.main.extracting_files} ({b}/{len(bsas)})",
@@ -72,8 +76,6 @@ def import_non_plugin_files(
             )
 
         archive.extract(bsa, tmp_dir)
-
-        extracted_archive = tmp_dir / bsa
 
         if ldialog:
             ldialog.updateProgress(
@@ -112,8 +114,10 @@ def import_non_plugin_files(
                     text3=bsa_file,
                 )
 
-            if bsa_file in original_mod.files:
+            if bsa_file.lower() in original_mod.files:
                 parsed_bsa.extract_file(bsa_file, output_folder)
+            else:
+                log.debug(f"Skipping {bsa_file!r}...")
 
     log.debug(f"Scanning {str(archive.path)!r}...")
 
@@ -138,8 +142,10 @@ def import_non_plugin_files(
 
     files_to_extract: list[str] = []
     for file in matching_files:
-        if file in original_mod.files:
+        if relative_data_path(file).lower() in original_mod.files:
             files_to_extract.append(file)
+        else:
+            log.debug(f"Skipping {relative_data_path(file)!r}...")
 
     if ldialog:
         ldialog.updateProgress(
@@ -151,7 +157,13 @@ def import_non_plugin_files(
         )
 
     if files_to_extract:
-        archive.extract_files(files_to_extract, output_folder)
+        for file in files_to_extract:
+            archive.extract(file, output_folder)
+            src = output_folder / file
+            dst = output_folder / relative_data_path(file)
+            os.makedirs(dst.parent, exist_ok=True)
+            shutil.move(src, dst)
+            shutil.rmtree(output_folder / Path(file).parts[0])
 
     if ldialog:
         ldialog.updateProgress(
