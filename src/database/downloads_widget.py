@@ -177,7 +177,7 @@ class DownloadsWidget(qtw.QWidget):
         Thread to download items from queue.
         """
 
-        self.app.log.debug("Thread started.")
+        self.log.debug("Thread started.")
 
         while self.status == self.Status.Running:
             download: FileDownload = self.queue.get()
@@ -187,7 +187,7 @@ class DownloadsWidget(qtw.QWidget):
 
             tmp_path = self.app.get_tmp_dir()
 
-            self.app.log.info(
+            self.log.info(
                 f"Downloading file {download.file_name!r} from {download.direct_url!r}..."
             )
 
@@ -196,11 +196,15 @@ class DownloadsWidget(qtw.QWidget):
 
             self.start_timer_signal.emit()
             if not downloaded_file.is_file():
-                self.downloader.download(download, tmp_path)
+                try:
+                    self.downloader.download(download, tmp_path)
+                except Exception as ex:
+                    self.log.error(f"Download failed: {ex}", exc_info=ex)
+
             self.stop_timer_signal.emit()
 
             if downloaded_file.is_file():
-                self.app.log.debug(f"Processing file...")
+                self.log.debug(f"Processing file...")
                 download.status = download.Status.Processing
                 self.update_progress()
                 try:
@@ -263,17 +267,15 @@ class DownloadsWidget(qtw.QWidget):
                         download.status = download.Status.DownloadSuccess
                         self.hide_item_signal.emit(download.tree_item)
 
-                        self.app.log.info("Processing complete.")
+                        self.log.info("Processing complete.")
                     else:
-                        self.app.log.warning(
-                            "Translation does not contain any strings!"
-                        )
+                        self.log.warning("Translation does not contain any strings!")
                         download.status = download.Status.DownloadFailed
 
                 self.download_finished.emit()
 
             else:
-                self.app.log.error("Download failed!")
+                self.log.error("Download failed!")
                 download.status = download.Status.DownloadFailed
 
             self.update_progress()
@@ -283,7 +285,7 @@ class DownloadsWidget(qtw.QWidget):
             if self.queue.empty() and not self.pending_non_prem_downloads:
                 self.queue_finished.emit()
 
-        self.app.log.debug("Thread stopped.")
+        self.log.debug("Thread stopped.")
 
     def add_download(self, nxm_url: str):
         """
