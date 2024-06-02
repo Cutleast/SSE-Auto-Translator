@@ -877,7 +877,7 @@ class TranslationsWidget(qtw.QWidget):
                             original_mod = mod
                             break
 
-                    if original_mod:
+                    if original_mod and file.suffix.lower() in [".7z", ".rar", ".zip"]:
 
                         def process(ldialog: LoadingDialog):
                             utils.import_non_plugin_files(
@@ -891,7 +891,7 @@ class TranslationsWidget(qtw.QWidget):
 
                         loadingdialog = LoadingDialog(self.app.root, self.app, process)
                         loadingdialog.exec()
-                    else:
+                    elif file.suffix.lower() in [".7z", ".rar", ".zip"]:
                         self.app.log.info(
                             f"Failed to import non-Plugin files! No original mod found!"
                         )
