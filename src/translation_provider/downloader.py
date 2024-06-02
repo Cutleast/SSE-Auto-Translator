@@ -19,6 +19,7 @@ class Downloader:
     """
 
     CHUNK_SIZE = 1024 * 1024  # 1 MB
+    TIMEOUT = 5  # 5 seconds
 
     running: bool = None
 
@@ -52,7 +53,7 @@ class Downloader:
         headers = {
             "User-Agent": Provider.user_agent,
         }
-        stream = req.get(download.direct_url, stream=True, headers=headers)
+        stream = req.get(download.direct_url, stream=True, headers=headers, timeout=Downloader.TIMEOUT)
 
         self.file_size = int(stream.headers.get("Content-Length", "0"))
 
