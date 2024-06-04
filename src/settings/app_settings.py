@@ -17,7 +17,7 @@ from main import MainApp
 from widgets import ClearEntry
 
 
-class AppSettings(qtw.QWidget):
+class AppSettings(qtw.QScrollArea):
     """
     Widget for application settings.
     """
@@ -37,8 +37,14 @@ class AppSettings(qtw.QWidget):
 
         self.setObjectName("root")
 
+        self.setWidgetResizable(True)
+        self.setObjectName("transparent")
+        scroll_widget = qtw.QWidget()
+        scroll_widget.setObjectName("transparent")
+        self.setWidget(scroll_widget)
+
         flayout = qtw.QFormLayout()
-        self.setLayout(flayout)
+        scroll_widget.setLayout(flayout)
 
         self.logs_num_box = qtw.QSpinBox()
         self.logs_num_box.setRange(-1, 100)
