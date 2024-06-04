@@ -42,8 +42,6 @@ class UserSettings(qtw.QScrollArea):
         scroll_widget = qtw.QWidget()
         scroll_widget.setObjectName("transparent")
         self.setWidget(scroll_widget)
-        # slayout = qtw.QVBoxLayout()
-        # scroll_widget.setLayout(slayout)
 
         flayout = qtw.QFormLayout()
         scroll_widget.setLayout(flayout)
