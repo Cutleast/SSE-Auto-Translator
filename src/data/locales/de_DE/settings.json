@@ -22,6 +22,7 @@
     "restart_title": "Neustart erforderlich",
     "settings": "Einstellungen",
     "start_api_setup": "API-Einrichtung starten",
+    "temp_path": "Pfad für temporären Ordner\n(für Downloads und Co., wird beim Beenden geleert!)",
     "translator": "Übersetzer-API",
     "translator_api_key": "Übersetzer-API Key",
     "translator_settings": "Übersetzer-API Einstellungen",

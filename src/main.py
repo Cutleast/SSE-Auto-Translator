@@ -58,6 +58,7 @@ class MainApp(qtw.QApplication):
         "auto_bind_nxm": False,
         "use_spell_check": True,
         "output_path": None,
+        "temp_path": None,
     }
     app_config = default_app_config
     user_config: dict = None
@@ -760,7 +761,7 @@ class MainApp(qtw.QApplication):
         """
 
         if self.tmp_dir is None:
-            self.tmp_dir = Path(tempfile.mkdtemp(prefix="SSE-AT_temp-"))
+            self.tmp_dir = Path(tempfile.mkdtemp(prefix="SSE-AT_temp-", dir=self.app_config["temp_path"]))
 
         return self.tmp_dir
 

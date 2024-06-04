@@ -22,6 +22,7 @@
     "restart_title": "Restart required",
     "settings": "Settings",
     "start_api_setup": "Start API Setup",
+    "temp_path": "Path for Temporary Folder\n(for Downloads and co., will be wiped after exit!)",
     "translator": "Translator API",
     "translator_api_key": "Translator API Key",
     "translator_settings": "Translator API Settings",
