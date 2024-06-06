@@ -241,7 +241,10 @@ def import_from_archive(
                 for string in plugin_strings:
                     string.status = String.Status.TranslationComplete
 
-                translation_strings[plugin_name.lower()] = plugin_strings
+                if plugin_name.lower() in translation_strings:
+                    translation_strings[plugin_name.lower()].extend(plugin_strings)
+                else:
+                    translation_strings[plugin_name.lower()] = plugin_strings
 
     elif any(
         "skse/plugins/dynamicstringdistributor/" in filename.lower()
@@ -285,6 +288,9 @@ def import_from_archive(
                     translation_strings[plugin_name.lower()] += strings
                 else:
                     translation_strings[plugin_name.lower()] = strings
+
+    for plugin_name, plugin_strings in translation_strings.items():
+        translation_strings[plugin_name] = list(set(plugin_strings))
 
     return translation_strings
 
