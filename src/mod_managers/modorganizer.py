@@ -116,6 +116,9 @@ class ModOrganizer(ModManager):
                         mod_id = general.get("modid")
                         if mod_id is None:
                             mod_id = 0
+                        else:
+                            mod_id = int(mod_id)
+
                         version = general.get("version", None)
 
                         if version is None:

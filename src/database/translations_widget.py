@@ -597,7 +597,7 @@ class TranslationsWidget(qtw.QWidget):
 
         self.app.log.info("Getting downloads for translation updates...")
 
-        downloads: dict[str, list[TranslationDownload]] = []
+        downloads: dict[str, list[TranslationDownload]] = {}
 
         def process(ldialog: LoadingDialog):
             ldialog.updateProgress(text1=self.loc.main.getting_downloads)
@@ -675,7 +675,7 @@ class TranslationsWidget(qtw.QWidget):
                         )
                     ],
                 )
-                downloads[translation.name] = download
+                downloads[translation.name] = [download]
 
         loadingdialog = LoadingDialog(self.app.root, self.app, process)
         loadingdialog.exec()
