@@ -479,9 +479,13 @@ class Processor:
                             downloads: list[FileDownload] = []
                             if source == utils.Source.NexusMods:
                                 for file_id in file_ids:
-                                    file_details = app.provider.get_details(
-                                        mod_id, file_id, source
-                                    )
+                                    try:
+                                        file_details = app.provider.get_details(
+                                            mod_id, file_id, source
+                                        )
+                                    except Exception as ex:
+                                        app.log.error(ex)
+                                        continue
                                     download = FileDownload(
                                         name=file_details["name"],
                                         source=source,
@@ -492,7 +496,13 @@ class Processor:
                                     )
                                     downloads.append(download)
                             else:
-                                file_details = app.provider.get_details(mod_id, source)
+                                try:
+                                    file_details = app.provider.get_details(
+                                        mod_id, source
+                                    )
+                                except Exception as ex:
+                                    app.log.error(ex)
+                                    continue
                                 download = FileDownload(
                                     name=file_details["name"],
                                     source=source,

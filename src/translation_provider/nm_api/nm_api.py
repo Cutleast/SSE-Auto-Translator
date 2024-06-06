@@ -244,7 +244,7 @@ class NexusModsApi:
             return details
         else:
             self.log.error(f"Failed to get details for mod file! Status code: {res.status_code}")
-            return {}
+            raise utils.ApiException
 
     def get_file_contents(self, game_id: str, mod_id: int, file_name: str):
         """
