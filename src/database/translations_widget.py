@@ -615,10 +615,14 @@ class TranslationsWidget(qtw.QWidget):
 
                 matching_mods = list(
                     filter(
-                        lambda mod: mod.mod_id == translation.original_mod_id
-                        and (
-                            mod.file_id == translation.original_file_id
-                            or translation.original_file_id is None
+                        lambda mod: (
+                            mod.mod_id == translation.original_mod_id
+                            and (
+                                mod.file_id == translation.original_file_id
+                                or translation.original_file_id is None
+                            )
+                            and mod.mod_id != 0
+                            and translation.original_mod_id != 0
                         ),
                         self.app.mainpage_widget.mods,
                     )
@@ -634,8 +638,10 @@ class TranslationsWidget(qtw.QWidget):
 
                 original_plugins = list(
                     filter(
-                        lambda plugin: plugin.name.lower()
-                        == list(translation.strings.keys())[0].lower(),
+                        lambda plugin: (
+                            plugin.name.lower()
+                            == list(translation.strings.keys())[0].lower()
+                        ),
                         original_mod.plugins,
                     )
                 )
