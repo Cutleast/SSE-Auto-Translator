@@ -621,8 +621,6 @@ class TranslationsWidget(qtw.QWidget):
                                 mod.file_id == translation.original_file_id
                                 or translation.original_file_id is None
                             )
-                            and mod.mod_id != 0
-                            and translation.original_mod_id != 0
                         ),
                         self.app.mainpage_widget.mods,
                     )
