@@ -753,7 +753,7 @@ class Processor:
                     file = str(file.relative_to(data_path)).lower().replace("\\", "/")
                     ldialog.updateProgress(
                         show2=True,
-                        text2=f"{translation.name} ({p}/{len(available_files)})",
+                        text2=f"{translation.name} ({f}/{len(available_files)})",
                         value2=f,
                         max2=len(available_files),
                         show3=True,
