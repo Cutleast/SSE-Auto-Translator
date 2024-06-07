@@ -241,7 +241,7 @@ class MainApp(qtw.QApplication):
             "enable_interface_files": True,
             "enable_scripts": True,
             "enable_textures": False,
-            "enable_sound_files": False
+            "enable_sound_files": False,
         }
 
         with open(self.user_conf_path, "r", encoding="utf8") as file:
@@ -466,8 +466,21 @@ class MainApp(qtw.QApplication):
 
         update_action = help_menu.addAction(self.loc.main.check_for_updates)
         update_action.setIcon(qta.icon("fa.refresh", color="#ffffff"))
-        update_action.setDisabled(True)
-        update_action.setToolTip("WIP")
+
+        def check_for_updates():
+            upd = updater.Updater(self)
+            if upd.update_available():
+                upd.run()
+            else:
+                messagebox = qtw.QMessageBox(self.root)
+                utils.apply_dark_title_bar(messagebox)
+                messagebox.setWindowTitle(self.loc.updater.no_updates)
+                messagebox.setText(self.loc.updater.no_updates_available)
+                messagebox.setTextFormat(qtc.Qt.TextFormat.RichText)
+                messagebox.setIcon(qtw.QMessageBox.Icon.Information)
+                messagebox.exec()
+
+        update_action.triggered.connect(check_for_updates)
 
         help_menu.addSeparator()
 
@@ -761,7 +774,11 @@ class MainApp(qtw.QApplication):
         """
 
         if self.tmp_dir is None:
-            self.tmp_dir = Path(tempfile.mkdtemp(prefix="SSE-AT_temp-", dir=self.app_config["temp_path"]))
+            self.tmp_dir = Path(
+                tempfile.mkdtemp(
+                    prefix="SSE-AT_temp-", dir=self.app_config["temp_path"]
+                )
+            )
 
         return self.tmp_dir
 
@@ -780,7 +797,9 @@ class MainApp(qtw.QApplication):
             else:
                 self.api_label.setObjectName("label")
             self.api_label.setStyleSheet(self.styleSheet())
-            self.api_label.setVisible(self.provider.preference != self.provider.Preference.OnlyConfrerie)
+            self.api_label.setVisible(
+                self.provider.preference != self.provider.Preference.OnlyConfrerie
+            )
 
         if hasattr(self, "mainpage_widget"):
             if self.nxm_listener is not None:

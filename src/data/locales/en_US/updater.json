@@ -4,5 +4,7 @@
     "ignore_update": "Ignore Update",
     "installed_version": "Installed Version",
     "latest_version": "Latest Version",
+    "no_updates": "No Updates Available!",
+    "no_updates_available": "You are already using the latest version.\nCheck out our <a href=\"https://discord.gg/pqEHdWDf8z\">Discord server</a> for pre-release versions!",
     "update_available": "An Update is available to download!"
 }
