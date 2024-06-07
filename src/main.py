@@ -811,7 +811,10 @@ class MainApp(qtw.QApplication):
 
                 choice = message_box.exec()
 
-                if choice != qtw.QMessageBox.StandardButton.Yes:
+                if choice == qtw.QMessageBox.StandardButton.Yes:
+                    confirmation = True
+                    self.mainpage_widget.database_widget.downloads_widget.thread.terminate()
+                else:
                     confirmation = False
 
         if hasattr(self, "translation_editor"):
