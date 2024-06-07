@@ -484,7 +484,10 @@ class Processor:
                                             mod_id, file_id, source
                                         )
                                     except Exception as ex:
-                                        app.log.error(ex)
+                                        app.log.error(
+                                            f"Failed to get details for {mod_id} > {file_id}: {ex}",
+                                            exc_info=ex,
+                                        )
                                         continue
                                     download = FileDownload(
                                         name=file_details["name"],
@@ -501,7 +504,10 @@ class Processor:
                                         mod_id, source
                                     )
                                 except Exception as ex:
-                                    app.log.error(ex)
+                                    app.log.error(
+                                        f"Failed to get details for {mod_id}: {ex}",
+                                        exc_info=ex,
+                                    )
                                     continue
                                 download = FileDownload(
                                     name=file_details["name"],
