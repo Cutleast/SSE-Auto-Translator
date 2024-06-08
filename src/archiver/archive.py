@@ -48,10 +48,21 @@ class Archive:
 
         cmd = ["7z.exe", "x", str(self.path), f"-o{dest}", "-aoa", "-y"]
 
-        process = subprocess.run(cmd, capture_output=True, text=True)
+        with subprocess.Popen(
+            cmd,
+            shell=True,
+            stdin=subprocess.PIPE,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            encoding="utf8",
+            errors="ignore",
+        ) as process:
+            process.wait()
+            output = process.stderr.read()
 
         if process.returncode:
-            self.log.error(process.stderr)
+            self.log.error(output)
             raise Exception("Unpacking command failed!")
 
     def extract(self, filename: str, dest: Path):
@@ -61,10 +72,21 @@ class Archive:
 
         cmd = ["7z.exe", "x", f"-o{dest}", "-aoa", "-y", "--", str(self.path), filename]
 
-        process = subprocess.run(cmd, capture_output=True, text=True)
+        with subprocess.Popen(
+            cmd,
+            shell=True,
+            stdin=subprocess.PIPE,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            encoding="utf8",
+            errors="ignore",
+        ) as process:
+            process.wait()
+            output = process.stderr.read()
 
         if process.returncode:
-            self.log.error(process.stderr)
+            self.log.error(output)
             raise Exception("Unpacking command failed!")
 
     def extract_files(self, filenames: list[str], dest: Path):
@@ -78,15 +100,30 @@ class Archive:
             f"-o{dest}",
             "-aoa",
             "-y",
-            "--",
             str(self.path),
         ]
-        cmd += filenames
 
-        process = subprocess.run(cmd, capture_output=True, text=True)
+        # Write filenames to a txt file to workaround commandline length limit
+        filenames_txt = self.path.with_suffix(".txt")
+        with open(filenames_txt, "w") as file:
+            file.write("\n".join(filenames))
+        cmd.append(f"@{filenames_txt}")
+
+        with subprocess.Popen(
+            cmd,
+            shell=True,
+            stdin=subprocess.PIPE,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            encoding="utf8",
+            errors="ignore",
+        ) as process:
+            process.wait()
+            output = process.stderr.read()
 
         if process.returncode:
-            self.log.error(process.stderr)
+            self.log.error(output)
             raise Exception("Unpacking command failed!")
 
     def find(self, pattern: str) -> list[str]:
