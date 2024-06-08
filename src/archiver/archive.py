@@ -62,6 +62,7 @@ class Archive:
             output = process.stderr.read()
 
         if process.returncode:
+            self.log.debug(f"Command: {cmd}")
             self.log.error(output)
             raise Exception("Unpacking command failed!")
 
@@ -86,6 +87,7 @@ class Archive:
             output = process.stderr.read()
 
         if process.returncode:
+            self.log.debug(f"Command: {cmd}")
             self.log.error(output)
             raise Exception("Unpacking command failed!")
 
@@ -126,6 +128,7 @@ class Archive:
             output = process.stderr.read()
 
         if process.returncode:
+            self.log.debug(f"Command: {cmd}")
             self.log.error(output)
             raise Exception("Unpacking command failed!")
 
