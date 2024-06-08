@@ -384,6 +384,8 @@ class DownloadsWidget(qtw.QWidget):
         visible_items = False
         for index in range(self.downloads_widget.topLevelItemCount()):
             item = self.downloads_widget.topLevelItem(index)
+            if item is None:
+                continue
             if item.isHidden():
                 self.downloads_widget.takeTopLevelItem(index)
             else:
