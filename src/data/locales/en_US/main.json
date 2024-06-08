@@ -29,6 +29,7 @@
     "documentation": "Documentation",
     "done": "Done",
     "dont_save": "Don't save",
+    "download_failed": "Download failed! See ToolTip or Log for more information.",
     "download_success": "Download successful",
     "download_translations": "Download and install available Translations",
     "downloading": "Downloading...",

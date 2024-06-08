@@ -29,6 +29,7 @@
     "documentation": "Dokumentation",
     "done": "Fertig",
     "dont_save": "Nicht speichern",
+    "download_failed": "Herunterladen fehlgeschlagen! Siehe Tooltip oder Log für mehr Informationen.",
     "download_success": "Herunterladen abgeschlossen",
     "download_translations": "Verfügbare Übersetzungen herunterladen und installieren",
     "downloading": "Wird heruntergeladen...",

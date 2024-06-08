@@ -5,6 +5,8 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import logging
+import time
+import traceback
 import urllib.parse
 from enum import Enum, auto
 from pathlib import Path
@@ -130,7 +132,7 @@ class DownloadsWidget(qtw.QWidget):
 
             if self.downloads_widget.itemWidget(item, 1) is None:
                 item.setText(1, "")
-                progress_widget = ProgressWidget()
+                progress_widget = ProgressWidget(item)
                 progress_widget.progress_bar.setRange(0, 1000)
                 self.downloads_widget.setItemWidget(item, 1, progress_widget)
 
@@ -219,6 +221,13 @@ class DownloadsWidget(qtw.QWidget):
                         exc_info=ex,
                     )
                     download.status = download.Status.DownloadFailed
+                    self.update_progress()
+                    progress_widget: ProgressWidget = self.downloads_widget.itemWidget(
+                        download.tree_item, 1
+                    )
+                    progress_widget.set_exception(
+                        "".join(traceback.format_exception(ex))
+                    )
 
                 else:
                     if download.original_mod is None:
@@ -279,6 +288,9 @@ class DownloadsWidget(qtw.QWidget):
                 download.status = download.Status.DownloadFailed
 
             self.update_progress()
+            # This is required so that current_download
+            # isn't None before update_progress is done
+            time.sleep(0.1)
             self.current_download = None
             self.queue.task_done()
 
@@ -362,7 +374,14 @@ class DownloadsWidget(qtw.QWidget):
         Shows messagebox to tell that all downloads in queue are finished.
         """
 
-        self.downloads_widget.clear()
+        # Remove hidden (finished) items from download list
+        visible_items = False
+        for index in range(self.downloads_widget.topLevelItemCount()):
+            item = self.downloads_widget.topLevelItem(index)
+            if item.isHidden():
+                self.downloads_widget.takeTopLevelItem(index)
+            else:
+                visible_items = True
 
         messagebox = qtw.QMessageBox(self.app.root)
         messagebox.setWindowTitle(self.loc.main.success)
@@ -370,6 +389,8 @@ class DownloadsWidget(qtw.QWidget):
         utils.apply_dark_title_bar(messagebox)
         messagebox.exec()
 
-        self.app.mainpage_widget.database_widget.setCurrentIndex(0)
+        # Only switch to translations tab if there are no download items left
+        if not visible_items:
+            self.app.mainpage_widget.database_widget.setCurrentIndex(0)
 
         self.queue_finished.disconnect(self.all_finished)

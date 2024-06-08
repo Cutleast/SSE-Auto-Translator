@@ -624,3 +624,8 @@ StackedBar {
 
     background: transparent;
 }
+
+/* ProgressWidget */
+ProgressWidget QToolTip {
+    font-family: Consolas;
+}
