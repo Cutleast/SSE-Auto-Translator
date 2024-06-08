@@ -11,6 +11,7 @@ from copy import copy
 from pathlib import Path
 
 import jstyleson as json
+import qtpy.QtCore as qtc
 
 from archive_parser import ArchiveParser
 from archiver import Archive
@@ -213,9 +214,6 @@ def import_from_archive(
                     text2=plugin_name,
                 )
 
-            if plugin_name.lower() in translation_strings:
-                continue
-
             # Find original plugin in modlist
             installed_plugins = [
                 plugin
@@ -223,6 +221,7 @@ def import_from_archive(
                 for plugin in mod.plugins
                 if plugin.status != plugin.Status.TranslationInstalled
                 and plugin.status != plugin.Status.IsTranslated
+                and plugin.tree_item.checkState(0) == qtc.Qt.CheckState.Checked
             ]
             matching = list(
                 filter(
