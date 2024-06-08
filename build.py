@@ -12,8 +12,10 @@ APPNAME = "SSE Auto Translator"
 VERSION = "2.0.0"
 AUTHOR = "Cutleast"
 LICENSE = "Attribution-NonCommercial-NoDerivatives 4.0 International"
+CONSOLE_MODE = "attach"  # "attach": Attaches to console it was started with (if any), "force": starts own console window, "disable": disables console completely
 UNUSED_ITEMS: list[Path] = [
     DIST_FOLDER / "data" / "app" / "config.json",
+    DIST_FOLDER / "data" / "cache",
     DIST_FOLDER / "data" / "user",
     DIST_FOLDER / "data" / "user.old",
     DIST_FOLDER / "data" / "logs",
@@ -36,7 +38,7 @@ cmd = f'nuitka \
 --include-package=cacheman \
 --enable-plugin=pyside6 \
 --remove-output \
---disable-console \
+--windows-console-mode={CONSOLE_MODE} \
 --company-name="{AUTHOR}" \
 --product-name="{APPNAME}" \
 --file-version="{VERSION}" \
