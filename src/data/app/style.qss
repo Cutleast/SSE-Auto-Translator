@@ -625,6 +625,20 @@ StackedBar {
     background: transparent;
 }
 
+/* Toast */
+Toast, Toast QLabel {
+    background: transparent;
+    color: #ffffff;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+}
+Toast QFrame {
+    background: #202020;
+    padding: 5px;
+    border-radius: 8px;
+}
+
 /* ProgressWidget */
 ProgressWidget QToolTip {
     font-family: Consolas;

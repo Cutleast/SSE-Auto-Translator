@@ -19,7 +19,7 @@ import qtpy.QtWidgets as qtw
 import utilities as utils
 from main import MainApp
 from translation_provider import FileDownload, Downloader
-from widgets import ProgressWidget
+from widgets import ProgressWidget, Toast
 
 from .translation import Translation
 
@@ -73,6 +73,9 @@ class DownloadsWidget(qtw.QWidget):
         self.downloader = Downloader()
         self.thread = utils.Thread(self.download_thread)
         self.thread.start()
+
+        self.toast = Toast(self.loc.main.download_started, parent=self.app.root)
+        self.toast.setIcon(self.app.windowIcon())
 
         vlayout = qtw.QVBoxLayout()
         self.setLayout(vlayout)
@@ -368,6 +371,9 @@ class DownloadsWidget(qtw.QWidget):
             download.tree_item.setText(1, self.loc.main.waiting_for_download)
 
         self.queue.put(download)
+
+        self.app.mainpage_widget.database_widget.setCurrentIndex(1)
+        self.toast.show()
 
     def all_finished(self):
         """
