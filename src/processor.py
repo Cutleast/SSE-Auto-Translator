@@ -202,11 +202,11 @@ class Processor:
                 )
 
                 if mod.mod_id and mod.file_id:
-                    source = Translation.Source.NexusMods
+                    source = utils.Source.NexusMods
                 elif mod.mod_id:
-                    source = Translation.Source.Confrerie
+                    source = utils.Source.Confrerie
                 else:
-                    source = Translation.Source.Local
+                    source = utils.Source.Local
 
                 translation = Translation(
                     mod.name,
