@@ -94,6 +94,9 @@ class Archive:
         Extracts `filenames` from archive to `dest`.
         """
 
+        if not len(filenames):
+            return
+
         cmd = [
             "7z.exe",
             "x",
