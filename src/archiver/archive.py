@@ -105,7 +105,7 @@ class Archive:
 
         # Write filenames to a txt file to workaround commandline length limit
         filenames_txt = self.path.with_suffix(".txt")
-        with open(filenames_txt, "w") as file:
+        with open(filenames_txt, "w", encoding="utf8") as file:
             file.write("\n".join(filenames))
         cmd.append(f"@{filenames_txt}")
 
