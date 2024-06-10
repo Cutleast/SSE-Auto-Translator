@@ -618,10 +618,9 @@ class TranslationsWidget(qtw.QWidget):
                         lambda mod: (
                             mod.mod_id == translation.original_mod_id
                             and any(
-                                plugin_name in [
-                                    plugin.name.lower()
-                                    for plugin in mod.plugins
-                                ] for plugin_name in translation.strings
+                                plugin_name
+                                in [plugin.name.lower() for plugin in mod.plugins]
+                                for plugin_name in translation.strings
                             )
                         ),
                         self.app.mainpage_widget.mods,
