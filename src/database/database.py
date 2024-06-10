@@ -174,6 +174,20 @@ class TranslationDatabase:
         if translation not in self.user_translations:
             self.user_translations.append(translation)
 
+        # Merge new translation with existing one
+        else:
+            installed_translation = self.user_translations[
+                self.user_translations.index(translation)
+            ]
+
+            for plugin_name, plugin_strings in translation.strings.items():
+                _strings = (
+                    installed_translation.strings.get(plugin_name, []) + plugin_strings
+                )
+
+                # Remove duplicates
+                installed_translation.strings[plugin_name] = list(set(_strings))
+
         self.save_database()
 
     def delete_translation(self, translation: Translation):
