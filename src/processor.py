@@ -284,35 +284,44 @@ class Processor:
                                     translated_plugin.path, original_plugin.path
                                 )
                             )
+                            original_plugin.status = utils.Plugin.Status.TranslationInstalled
+                            translated_plugin.status = utils.Plugin.Status.IsTranslated
                             break
 
             for plugin_strings in strings.values():
                 for string in plugin_strings:
                     string.status = string.Status.TranslationComplete
 
-            if translated_mod.mod_id and translated_mod.file_id:
-                source = utils.Source.NexusMods
-            elif translated_mod.mod_id:
-                source = utils.Source.Confrerie
-            else:
-                source = utils.Source.Local
-
             if len(strings):
-                translation = Translation(
-                    translated_mod.name,
-                    translated_mod.mod_id,
-                    translated_mod.file_id,
-                    translated_mod.version,
-                    original_mod.mod_id,
-                    original_mod.file_id,
-                    original_mod.version,
-                    app.database.userdb_path
-                    / app.database.language
-                    / translated_mod.name,
-                    strings=strings,
-                    source=source,
-                    timestamp=int(time.time()),
-                )
+                translation = app.database.get_translation_by_mod(original_mod)
+                if translation is None:
+                    if translated_mod.mod_id and translated_mod.file_id:
+                        source = utils.Source.NexusMods
+                    else:
+                        source = utils.Source.Local
+
+                    translation = Translation(
+                        translated_mod.name,
+                        translated_mod.mod_id,
+                        translated_mod.file_id,
+                        translated_mod.version,
+                        original_mod.mod_id,
+                        original_mod.file_id,
+                        original_mod.version,
+                        app.database.userdb_path
+                        / app.database.language
+                        / translated_mod.name,
+                        strings=strings,
+                        source=source,
+                        timestamp=int(time.time()),
+                    )
+                else:
+                    for plugin_name, plugin_strings in strings.items():
+                        if plugin_name in translation.strings:
+                            translation.strings[plugin_name].extend(plugin_strings)
+                        else:
+                            translation.strings[plugin_name] = plugin_strings
+
                 translation.save_translation()
                 app.database.add_translation(translation)
 
