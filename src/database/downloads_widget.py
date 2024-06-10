@@ -225,6 +225,7 @@ class DownloadsWidget(qtw.QWidget):
                     )
                     download.status = download.Status.DownloadFailed
                     self.update_progress()
+                    time.sleep(0.1)
                     progress_widget: ProgressWidget = self.downloads_widget.itemWidget(
                         download.tree_item, 1
                     )
