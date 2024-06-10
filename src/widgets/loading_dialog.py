@@ -222,13 +222,14 @@ class LoadingDialog(qtw.QDialog):
 
         # Prevent dialog from getting to wide
         # and resize only if difference is
-        # bigger than 100 pixels to avoid
+        # bigger than 200 pixels to reduce
         # flickering
         if widthhint < widthbefore:
-            if abs(widthbefore - widthhint) > 100:
+            if abs(widthbefore - widthhint) > 200:
                 self.setFixedWidth(widthhint)
         else:
-            self.setFixedWidth(widthhint)
+            # Limit maximum width to 800 px
+            self.setFixedWidth(min(800, widthhint))
 
         # Move back to center
         utils.center(self, self.app.root)
