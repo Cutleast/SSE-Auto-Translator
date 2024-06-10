@@ -317,10 +317,12 @@ class Processor:
                     )
                 else:
                     for plugin_name, plugin_strings in strings.items():
-                        if plugin_name in translation.strings:
-                            translation.strings[plugin_name].extend(plugin_strings)
-                        else:
-                            translation.strings[plugin_name] = plugin_strings
+                        _strings = (
+                            translation.strings.get(plugin_name, []) + plugin_strings
+                        )
+
+                        # Remove duplicates
+                        translation.strings[plugin_name] = list(set(_strings))
 
                 translation.save_translation()
                 app.database.add_translation(translation)
