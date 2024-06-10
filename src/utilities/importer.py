@@ -60,28 +60,36 @@ def import_non_plugin_files(
     archive = Archive.load_archive(archive_path)
     archive_files = archive.get_files()
 
+    if ldialog:
+        ldialog.updateProgress(
+            text1=ldialog.loc.main.extracting_files,
+            value1=0,
+            max1=0,
+            show2=False,
+            show3=False,
+        )
     bsas: list[str] = [
         file for file in archive_files if Path(file).suffix.lower() == ".bsa"
     ]
+    log.debug(f"Extracting {len(bsas)} BSA(s) from {str(archive_path)!r}...")
+    archive.extract_files(bsas, tmp_dir)
 
     for b, bsa in enumerate(bsas):
         extracted_archive = tmp_dir / bsa
 
         if ldialog:
             ldialog.updateProgress(
-                text1=f"{ldialog.loc.main.extracting_files} ({b}/{len(bsas)})",
+                text1=f"{ldialog.loc.main.processing_bsas} ({b}/{len(bsas)})",
                 value1=b,
                 max1=len(bsas),
                 show2=True,
-                text2=extracted_archive.name,
+                text2=bsa,
+                value2=0,
+                max2=0,
+                show3=False,
             )
 
-        archive.extract(bsa, tmp_dir)
-
-        if ldialog:
-            ldialog.updateProgress(
-                text1=f"{ldialog.loc.main.processing_bsas} ({b}/{len(bsas)})",
-            )
+        log.debug(f"Scanning {str(extracted_archive)!r}...")
 
         parser = ArchiveParser(extracted_archive)
         parsed_bsa = parser.parse_archive()
@@ -106,9 +114,14 @@ def import_non_plugin_files(
             f"Matching files in {str(extracted_archive)!r}: {len(bsa_files_to_extract)}"
         )
 
+        if bsa_files_to_extract:
+            log.info(f"Extracting files from {str(extracted_archive)!r}...")
+
         for b, bsa_file in enumerate(bsa_files_to_extract):
             if ldialog:
                 ldialog.updateProgress(
+                    show2=True,
+                    text2=f"{extracted_archive.name} ({b}/{len(bsa_files_to_extract)})",
                     value2=b,
                     max2=len(bsa_files_to_extract),
                     show3=True,
@@ -119,6 +132,8 @@ def import_non_plugin_files(
                 parsed_bsa.extract_file(bsa_file, output_folder)
             else:
                 log.debug(f"Skipping {bsa_file!r}...")
+
+        parser.close_stream()
 
     log.debug(f"Scanning {str(archive.path)!r}...")
 
@@ -150,7 +165,7 @@ def import_non_plugin_files(
 
     if ldialog:
         ldialog.updateProgress(
-            text1=ldialog.loc.main.processing_archive,
+            text1=ldialog.loc.main.extracting_files,
             value1=0,
             max1=0,
             show2=False,
@@ -158,22 +173,32 @@ def import_non_plugin_files(
         )
 
     if files_to_extract:
+        log.info(
+            f"Extracting {len(files_to_extract)} file(s) from {str(archive.path)!r}..."
+        )
+        archive.extract_files(files_to_extract, output_folder)
         for file in files_to_extract:
-            archive.extract(file, output_folder)
             src = output_folder / file
             dst = output_folder / relative_data_path(file)
             os.makedirs(dst.parent, exist_ok=True)
             shutil.move(src, dst)
-            shutil.rmtree(output_folder / Path(file).parts[0])
+
+        # Clean up
+        for file in files_to_extract:
+            folder = output_folder / Path(file).parts[0]
+            if folder.is_dir():
+                shutil.rmtree(folder)
 
     if ldialog:
         ldialog.updateProgress(
             text1=ldialog.loc.main.copying_files,
+            value1=0,
+            max1=0,
+            show2=False,
         )
 
-    shutil.copytree(output_folder, translation.path / "data", dirs_exist_ok=True)
-
-    shutil.rmtree(output_folder)
+    log.info(f"Moving output to {str(translation.path)!r}...")
+    shutil.move(output_folder, translation.path / "data")
 
 
 def import_from_archive(
