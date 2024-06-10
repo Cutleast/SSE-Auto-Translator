@@ -185,20 +185,22 @@ def import_non_plugin_files(
 
         # Clean up
         for file in files_to_extract:
-            folder = output_folder / Path(file).parts[0]
-            if folder.is_dir():
+            parts = Path(file).parts
+            folder = output_folder / parts[0]
+            if folder.is_dir() and parts[0].lower() not in ["interface", "scripts", "textures", "sound"]:
                 shutil.rmtree(folder)
 
     if ldialog:
         ldialog.updateProgress(
             text1=ldialog.loc.main.copying_files,
-            value1=0,
-            max1=0,
-            show2=False,
         )
 
-    log.info(f"Moving output to {str(translation.path)!r}...")
-    shutil.move(output_folder, translation.path / "data")
+    if os.listdir(output_folder):
+        log.info(f"Moving output to {str(translation.path)!r}...")
+        shutil.move(output_folder, translation.path / "data")
+    else:
+        shutil.rmtree(output_folder)
+        log.info(f"Imported no non-plugin files.")
 
 
 def import_from_archive(
