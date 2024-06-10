@@ -617,9 +617,11 @@ class TranslationsWidget(qtw.QWidget):
                     filter(
                         lambda mod: (
                             mod.mod_id == translation.original_mod_id
-                            and (
-                                mod.file_id == translation.original_file_id
-                                or translation.original_file_id is None
+                            and any(
+                                plugin_name in [
+                                    plugin.name.lower()
+                                    for plugin in mod.plugins
+                                ] for plugin_name in translation.strings
                             )
                         ),
                         self.app.mainpage_widget.mods,
@@ -633,24 +635,7 @@ class TranslationsWidget(qtw.QWidget):
                     continue
 
                 original_mod = matching_mods[0]
-
-                original_plugins = list(
-                    filter(
-                        lambda plugin: (
-                            plugin.name.lower()
-                            == list(translation.strings.keys())[0].lower()
-                        ),
-                        original_mod.plugins,
-                    )
-                )
-
-                if not original_plugins:
-                    self.app.log.warning(
-                        f"Failed to update translation {translation.name!r}: Original Plugin not found in original mod {original_mod.name!r}!"
-                    )
-                    continue
-
-                original_plugin = original_plugins[0]
+                original_plugin = original_mod.plugins[0]
 
                 if new_file_id is None and translation.source == utils.Source.NexusMods:
                     translation.status = translation.Status.Ok
