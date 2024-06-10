@@ -284,7 +284,9 @@ class Processor:
                                     translated_plugin.path, original_plugin.path
                                 )
                             )
-                            original_plugin.status = utils.Plugin.Status.TranslationInstalled
+                            original_plugin.status = (
+                                utils.Plugin.Status.TranslationInstalled
+                            )
                             translated_plugin.status = utils.Plugin.Status.IsTranslated
                             break
 
