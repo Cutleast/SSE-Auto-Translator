@@ -5,7 +5,6 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import logging
-import time
 import traceback
 import urllib.parse
 from enum import Enum, auto
@@ -39,7 +38,7 @@ class DownloadsWidget(qtw.QWidget):
 
     download_finished = qtc.Signal()
     queue_finished = qtc.Signal()
-    update_signal = qtc.Signal()
+    update_signal = qtc.Signal(FileDownload)
 
     hide_item_signal = qtc.Signal(qtw.QTreeWidgetItem)
 
@@ -118,18 +117,21 @@ class DownloadsWidget(qtw.QWidget):
     def timerEvent(self, event: qtc.QTimerEvent):
         super().timerEvent(event)
 
-        self._update_progress()
+        self._update_progress(None)
 
-    def update_progress(self):
-        self.update_signal.emit()
+    def update_progress(self, download: FileDownload | None = None):
+        self.update_signal.emit(download)
 
-    def _update_progress(self):
+    def _update_progress(self, download: FileDownload | None = None):
         """
         Updates progress of current downloading translation.
         """
 
-        if self.current_download:
-            item = self.current_download.tree_item
+        if download is None:
+            download = self.current_download
+
+        if download:
+            item = download.tree_item
             if item is None:
                 return
 
@@ -141,7 +143,7 @@ class DownloadsWidget(qtw.QWidget):
 
             progress_widget: ProgressWidget = self.downloads_widget.itemWidget(item, 1)
 
-            match self.current_download.status:
+            match download.status:
                 case FileDownload.Status.Downloading:
                     if self.downloader.current_size and self.downloader.previous_size:
                         cur_size = utils.scale_value(self.downloader.current_size)
@@ -188,7 +190,7 @@ class DownloadsWidget(qtw.QWidget):
             download: FileDownload = self.queue.get()
             self.current_download = download
             download.status = download.Status.Processing
-            self.update_progress()
+            self.update_progress(download)
 
             tmp_path = self.app.get_tmp_dir()
 
@@ -211,7 +213,7 @@ class DownloadsWidget(qtw.QWidget):
             if downloaded_file.is_file():
                 self.log.debug(f"Processing file...")
                 download.status = download.Status.Processing
-                self.update_progress()
+                self.update_progress(download)
                 try:
                     strings = utils.import_from_archive(
                         downloaded_file,
@@ -224,8 +226,7 @@ class DownloadsWidget(qtw.QWidget):
                         exc_info=ex,
                     )
                     download.status = download.Status.DownloadFailed
-                    self.update_progress()
-                    time.sleep(0.1)
+                    self.update_progress(download)
                     progress_widget: ProgressWidget = self.downloads_widget.itemWidget(
                         download.tree_item, 1
                     )
@@ -234,7 +235,7 @@ class DownloadsWidget(qtw.QWidget):
                     )
 
                 else:
-                    if download.original_mod is None:
+                    if download.original_mod is None and strings:
                         plugin_name = list(strings.keys())[0].lower()
 
                         for mod in self.app.mainpage_widget.mods:
@@ -291,10 +292,7 @@ class DownloadsWidget(qtw.QWidget):
                 self.log.error("Download failed!")
                 download.status = download.Status.DownloadFailed
 
-            self.update_progress()
-            # This is required so that current_download
-            # isn't None before update_progress is done
-            time.sleep(0.1)
+            self.update_progress(download)
             self.current_download = None
             self.queue.task_done()
 
