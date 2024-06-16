@@ -193,7 +193,12 @@ def import_non_plugin_files(
         for file in files_to_extract:
             parts = Path(file).parts
             folder = output_folder / parts[0]
-            if folder.is_dir() and parts[0].lower() not in ["interface", "scripts", "textures", "sound"]:
+            if folder.is_dir() and parts[0].lower() not in [
+                "interface",
+                "scripts",
+                "textures",
+                "sound",
+            ]:
                 shutil.rmtree(folder)
 
     if ldialog:
@@ -210,7 +215,7 @@ def import_non_plugin_files(
 
 
 def import_from_archive(
-    archive_path: Path, modlist: list[Mod], tmp_dir: Path, ldialog=None
+    archive_path: Path, modlist: list[Mod], tmp_dir: Path, cache, ldialog=None
 ):
     """
     Imports translation from `archive_path` and
@@ -268,7 +273,7 @@ def import_from_archive(
 
             plugin = matching[-1]
 
-            plugin_strings = merge_plugin_strings(extracted_file, plugin.path)
+            plugin_strings = merge_plugin_strings(extracted_file, plugin.path, cache)
             if plugin_strings:
                 for string in plugin_strings:
                     string.status = String.Status.TranslationComplete
@@ -328,19 +333,17 @@ def import_from_archive(
 
 
 def merge_plugin_strings(
-    translation_plugin: Path, original_plugin: Path
+    translation_plugin: Path, original_plugin: Path, cache
 ) -> list[String]:
     """
     Extracts strings from translation and original plugin and merges.
     """
 
-    from string_extractor import extractor
-
-    translation_strings = extractor.extract_strings(translation_plugin)
+    translation_strings = cache.get_plugin_strings(translation_plugin)
 
     original_strings = {
         f"{string.form_id.lower()[2:]}###{string.editor_id}###{string.type}###{string.index}": string
-        for string in extractor.extract_strings(original_plugin)
+        for string in cache.get_plugin_strings(original_plugin)
     }
 
     if not translation_strings and not original_strings:

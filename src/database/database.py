@@ -11,8 +11,8 @@ from shutil import rmtree
 
 import jstyleson as json
 
-from string_extractor import extractor
-from utilities import Mod, String, Source
+from cacher import Cacher
+from utilities import Mod, Source, String
 
 from .translation import Translation
 
@@ -333,7 +333,7 @@ class TranslationDatabase:
 
         self.log.info(f"Translated {translated} string(s) from database.")
 
-    def create_translation(self, plugin_path: Path):
+    def create_translation(self, plugin_path: Path, cache: Cacher):
         """
         Creates translation for plugin at `plugin_path` by extracting its strings
         and applying translations from database to them.
@@ -343,13 +343,7 @@ class TranslationDatabase:
         if translation:
             return translation
 
-        # parser = PluginParser(plugin_path)
-        # parser.parse_plugin()
-        # plugin_groups = parser.extract_strings()
-        # plugin_strings = [
-        #     string for group in plugin_groups.values() for string in group
-        # ]
-        plugin_strings = extractor.extract_strings(plugin_path)
+        plugin_strings = cache.get_plugin_strings(plugin_path)
 
         for string in plugin_strings:
             string.translated_string = string.original_string

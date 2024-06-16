@@ -17,7 +17,7 @@ import qtpy.QtWidgets as qtw
 
 import utilities as utils
 from main import MainApp
-from translation_provider import FileDownload, Downloader
+from translation_provider import Downloader, FileDownload
 from widgets import ProgressWidget, Toast
 
 from .translation import Translation
@@ -219,6 +219,7 @@ class DownloadsWidget(qtw.QWidget):
                         downloaded_file,
                         self.app.mainpage_widget.mods,
                         self.app.get_tmp_dir(),
+                        self.app.cacher,
                     )
                 except Exception as ex:
                     self.log.error(

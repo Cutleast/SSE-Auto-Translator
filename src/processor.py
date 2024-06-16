@@ -18,7 +18,6 @@ import qtpy.QtWidgets as qtw
 import utilities as utils
 from database import Translation
 from main import MainApp
-from string_extractor import extractor
 from translation_provider import FileDownload, TranslationDownload
 from widgets import DownloadListDialog, LoadingDialog
 
@@ -92,7 +91,7 @@ class Processor:
 
                     ldialog.updateProgress(text3=app.loc.main.extracting_strings)
 
-                    strings = extractor.extract_strings(plugin.path)
+                    strings = app.cacher.get_plugin_strings(plugin.path)
                     if not len(strings):
                         plugin.status = plugin.Status.NoStrings
                         continue
@@ -442,7 +441,9 @@ class Processor:
                         text3=plugin.name,
                     )
 
-                    translation = app.database.create_translation(plugin.path)
+                    translation = app.database.create_translation(
+                        plugin.path, app.cacher
+                    )
                     for string in [
                         string
                         for group in translation.strings.values()
@@ -864,7 +865,7 @@ class Processor:
                     text2=f"{plugin.name}: {app.loc.main.extracting_strings}"
                 )
 
-                plugin_strings = extractor.extract_strings(plugin.path)
+                plugin_strings = app.cacher.get_plugin_strings(plugin.path)
 
                 translation_strings = {
                     f"{string.editor_id}###{string.type}": string
@@ -962,7 +963,7 @@ class Processor:
                         text3=plugin.name,
                     )
 
-                    strings = extractor.extract_strings(plugin.path)
+                    strings = app.cacher.get_plugin_strings(plugin.path)
                     for string in strings:
                         matching = True
 

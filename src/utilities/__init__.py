@@ -5,6 +5,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import ctypes
+import hashlib
 import logging
 from datetime import datetime
 
@@ -233,6 +234,35 @@ def relative_data_path(file: str):
             return file[index + 1 :]
 
     return file
+
+
+def get_file_identifier(file_path: os.PathLike, block_size: int = 1024 * 1024):
+    """
+    Creates a sha256 hash of the first and last block with `block_size`
+    and returns first 8 characters of the hash.
+    """
+
+    hasher = hashlib.sha256()
+    file_size = os.path.getsize(file_path)
+
+    with open(file_path, "rb") as f:
+        if file_size <= block_size:
+            # File is smaller than block_size, hash the entire file
+            chunk = f.read()
+            hasher.update(chunk)
+        else:
+            # Hash the first block
+            chunk = f.read(block_size)
+            if chunk:
+                hasher.update(chunk)
+
+            # Move to the end and hash the last block
+            f.seek(-block_size, os.SEEK_END)
+            chunk = f.read(block_size)
+            if chunk:
+                hasher.update(chunk)
+
+    return hasher.hexdigest()[:8]
 
 
 masterlist: dict[str, dict] = None

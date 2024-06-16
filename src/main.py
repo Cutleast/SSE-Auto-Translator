@@ -910,7 +910,6 @@ def main():
     global MainPageWidget
     global Provider
     global SettingsDialog
-    global extractor
     global StartupDialog
     global TranslationEditor
 
@@ -923,7 +922,6 @@ def main():
     from main_page import MainPageWidget
     from settings import SettingsDialog
     from startup_dialog import StartupDialog
-    from string_extractor import extractor
     from translation_editor import TranslationEditor
     from translation_provider import Provider
 

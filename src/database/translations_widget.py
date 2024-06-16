@@ -18,10 +18,10 @@ from main import MainApp
 from translation_provider import FileDownload, TranslationDownload
 from widgets import (
     DownloadListDialog,
-    LoadingDialog,
-    StringListDialog,
-    ShortcutButton,
     ErrorDialog,
+    LoadingDialog,
+    ShortcutButton,
+    StringListDialog,
 )
 
 from .translation import Translation
@@ -807,7 +807,11 @@ class TranslationsWidget(qtw.QWidget):
                     def process(ldialog: LoadingDialog):
                         __temp.append(
                             utils.import_from_archive(
-                                file, modlist, self.app.get_tmp_dir(), ldialog
+                                file,
+                                modlist,
+                                self.app.get_tmp_dir(),
+                                self.app.cacher,
+                                ldialog,
                             )
                         )
 
