@@ -172,6 +172,12 @@ def import_non_plugin_files(
             show3=False,
         )
 
+    def safe_copy(src: os.PathLike, dst: os.PathLike, *, follow_symlinks=True):
+        if os.path.exists(dst):
+            return dst
+
+        return shutil.copy(src, dst, follow_symlinks=follow_symlinks)
+
     if files_to_extract:
         log.info(
             f"Extracting {len(files_to_extract)} file(s) from {str(archive.path)!r}..."
@@ -181,7 +187,7 @@ def import_non_plugin_files(
             src = output_folder / file
             dst = output_folder / relative_data_path(file)
             os.makedirs(dst.parent, exist_ok=True)
-            shutil.move(src, dst)
+            shutil.move(src, dst, copy_function=safe_copy)
 
         # Clean up
         for file in files_to_extract:
@@ -197,7 +203,7 @@ def import_non_plugin_files(
 
     if os.listdir(output_folder):
         log.info(f"Moving output to {str(translation.path)!r}...")
-        shutil.move(output_folder, translation.path / "data")
+        shutil.move(output_folder, translation.path / "data", copy_function=safe_copy)
     else:
         shutil.rmtree(output_folder)
         log.info(f"Imported no non-plugin files.")
