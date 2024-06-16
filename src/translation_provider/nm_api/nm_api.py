@@ -507,7 +507,7 @@ class NexusModsApi:
 
         path = f"games/{game_id}/mods/{mod_id}/files/{file_id}/download_link.json"
 
-        res = self.request(path)
+        res = self.request(path, cache_result=False)
 
         match res.status_code:
             case 200:
@@ -542,7 +542,7 @@ class NexusModsApi:
         path = f"games/{game_id}/mods/{mod_id}/files/{file_id}/download_link.json"
         path += f"?key={key}&expires={expires}"
 
-        res = self.request(path)
+        res = self.request(path, cache_result=False)
 
         match res.status_code:
             case 200:
