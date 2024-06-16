@@ -4,13 +4,17 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+import hashlib
 import logging
 import os
 import pickle
 import shutil
+import time
+from datetime import datetime
 from pathlib import Path
 
 import qtpy.QtCore as qtc
+import requests
 
 import utilities as utils
 from main import MainApp
@@ -152,6 +156,41 @@ class Cacher:
         self.log.debug(
             f"Saved Plugin States for {len(self.__plugin_states_cache)} Plugin(s)."
         )
+
+    def get_from_web_cache(self, url: str, max_age: int = 43200):
+        """
+        Returns cached Response for `url` if existing else None.
+
+        Responses older than `max_age` are considered stale and deleted.
+        """
+
+        request_id = hashlib.sha256(url.encode()).hexdigest()[:8]
+        cache_file = self.path / "web_cache" / f"{request_id}.cache"
+
+        if cache_file.is_file():
+            with cache_file.open("rb") as file:
+                response: requests.Response = pickle.load(file)
+
+            response_timestamp = datetime.strptime(
+                response.headers["Date"], "%a, %d %b %Y %H:%M:%S %Z"
+            ).timestamp()
+
+            if (time.time() - response_timestamp) < max_age:
+                return response
+            else:
+                os.remove(cache_file)
+
+    def add_to_web_cache(self, url: str, response: requests.Response):
+        """
+        Adds `response` to Web Cache for `url`.
+        """
+
+        request_id = hashlib.sha256(url.encode()).hexdigest()[:8]
+        cache_file = self.path / "web_cache" / f"{request_id}.cache"
+
+        os.makedirs(cache_file.parent, exist_ok=True)
+        with cache_file.open("wb") as file:
+            pickle.dump(response, file)
 
     def save_caches(self):
         """

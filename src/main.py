@@ -134,11 +134,11 @@ class MainApp(qtw.QApplication):
         self.clean_and_exit()
 
     def start_main_app(self):
-        self.load_user_data()
-        self.load_masterlist()
-
         self.cacher = Cacher(self)
         self.cacher.load_caches()
+
+        self.load_user_data()
+        self.load_masterlist()
 
         self.init_gui()
 
@@ -279,6 +279,7 @@ class MainApp(qtw.QApplication):
 
         self.provider = Provider(
             self.user_config["api_key"],
+            self.cacher,
             Provider.Preference.get(
                 self.user_config["provider_preference"],
                 Provider.Preference.OnlyNexusMods,

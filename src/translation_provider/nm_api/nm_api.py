@@ -17,9 +17,8 @@ import requests as req
 import websocket
 
 import utilities as utils
+from cacher import Cacher
 from main import MainApp
-
-from ..file_download import FileDownload
 
 
 class NexusModsApi:
@@ -46,18 +45,14 @@ class NexusModsApi:
     rem_hreq: int = None  # Remaining API requests at current hour
     rem_dreq: int = None  # Remaining API requests at current day
 
-    cache: dict[str, req.Response] = {}
-    """
-    Cache for Web and API requests.
-
-    `{url: response}`
-    """
+    cacher: Cacher = None
 
     scraper: cs.CloudScraper = None
 
     log = logging.getLogger("NexusModsAPI")
 
-    def __init__(self, api_key: str):
+    def __init__(self, cacher: Cacher, api_key: str):
+        self.cacher = cacher
         self.api_key = api_key
 
     def check_api_key(self):
@@ -93,7 +88,9 @@ class NexusModsApi:
 
         url = "https://api.nexusmods.com/v1/" + path
 
-        if url not in self.cache or not cache_result:
+        cached = self.cacher.get_from_web_cache(url)
+
+        if cached is None or not cache_result:
             headers = {
                 "accept": "application/json",
                 "apikey": self.api_key,
@@ -111,19 +108,19 @@ class NexusModsApi:
                 self.rem_hreq = int(rem_hreq)
             if rem_dreq.isnumeric():
                 self.rem_dreq = int(rem_dreq)
-            
+
             if res.status_code == 429:
                 self.log.warning("API rate limit reached!")
                 raise utils.ApiLimitReachedError
 
             if cache_result:
-                self.cache[url] = res
-            else:
-                return res
+                self.cacher.add_to_web_cache(url, res)
+
+            return res
         else:
             self.log.debug(f"Got cached API response for {url!r}.")
 
-        return self.cache[url]
+        return cached
 
     def get_mod_details(self, game_id: str, mod_id: int) -> dict:
         """
@@ -243,7 +240,9 @@ class NexusModsApi:
             details: dict = json.loads(res.content.decode())
             return details
         else:
-            self.log.error(f"Failed to get details for mod file! Status code: {res.status_code}")
+            self.log.error(
+                f"Failed to get details for mod file! Status code: {res.status_code}"
+            )
             raise utils.ApiException
 
     def get_file_contents(self, game_id: str, mod_id: int, file_name: str):
@@ -255,13 +254,14 @@ class NexusModsApi:
 
         url = f"https://file-metadata.nexusmods.com/file/nexus-files-s3-meta/{game_id}/{mod_id}/{urllib.parse.quote(file_name)}.json"
 
-        if url not in self.cache:
-            res = req.get(url)
-            self.cache[url] = res
-        else:
-            self.log.debug(f"Got cached Web response for {url!r}.")
+        cached = self.cacher.get_from_web_cache(url)
 
-        res = self.cache[url]
+        if cached is None:
+            res = req.get(url)
+            self.cacher.add_to_web_cache(url, res)
+        else:
+            res = cached
+            self.log.debug(f"Got cached Web response for {url!r}.")
 
         if res.status_code == 200:
             data = res.content.decode()
@@ -388,7 +388,9 @@ class NexusModsApi:
 
         url = f"https://www.nexusmods.com/{game_id}/mods/{mod_id}"
 
-        if url not in self.cache:
+        cached = self.cacher.get_from_web_cache(url)
+
+        if cached is None:
             if self.scraper is None:
                 self.scraper = cs.CloudScraper()
 
@@ -397,11 +399,10 @@ class NexusModsApi:
             }
 
             res = self.scraper.get(url, headers=headers)
-            self.cache[url] = res
+            self.cacher.add_to_web_cache(url, res)
         else:
+            res = cached
             self.log.debug(f"Got cached Web response for {url!r}")
-
-        res = self.cache[url]
 
         if res.status_code != 200:
             self.log.error(f"Failed to scan modpage! Status Code: {res.status_code}")

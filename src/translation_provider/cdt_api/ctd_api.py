@@ -13,6 +13,7 @@ import jstyleson as json
 import pytz
 import requests as req
 
+from cacher import Cacher
 from main import MainApp
 
 
@@ -28,16 +29,15 @@ class CDTApi:
 {platform.version()}; \
 {platform.architecture()[0]}\
 )"
-    cache: dict[str, req.Response] = {}
-    """
-    Cache for Web and API requests.
 
-    `{url: response}`
-    """
+    cacher: Cacher = None
 
     scraper: cs.CloudScraper = None
 
     log = logging.getLogger("CDTApi")
+
+    def __init__(self, cacher: Cacher):
+        self.cacher = cacher
 
     def get_mod_details(self, nm_mod_id: int) -> dict | None:
         """
@@ -66,12 +66,14 @@ class CDTApi:
 
         url = f"https://www.confrerie-des-traducteurs.fr/api/skyrim/sse-at/{nm_mod_id}"
 
-        if url not in self.cache:
-            res = req.get(url, headers={"User-Agent": self.user_agent})
+        cached = self.cacher.get_from_web_cache(url)
 
-            self.cache[url] = res
+        if cached is None:
+            res = req.get(url, headers={"User-Agent": self.user_agent})
+            self.cacher.add_to_web_cache(url, res)
         else:
-            res = self.cache[url]
+            res = cached
+            self.log.debug(f"Got cached API response for {url!r}.")
 
         if res.status_code == 200:
             data: dict = json.loads(res.content.decode())

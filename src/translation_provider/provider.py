@@ -8,12 +8,12 @@ import logging
 import platform
 from enum import Enum, auto
 
+from cacher import Cacher
 from main import MainApp
+from utilities import Source
 
 from .cdt_api import CDTApi
 from .nm_api import NexusModsApi
-
-from utilities import Source
 
 
 class Provider:
@@ -61,11 +61,11 @@ class Provider:
     # Confrérie attributes
     __cdt_api: CDTApi = None
 
-    def __init__(self, api_key: str, preference: Preference):
+    def __init__(self, api_key: str, cacher: Cacher, preference: Preference):
         self.preference = preference
-        self.__init_apis(api_key)
+        self.__init_apis(api_key, cacher)
 
-    def __init_apis(self, api_key: str):
+    def __init_apis(self, api_key: str, cacher: Cacher):
         """
         Initializes APIs according to preference.
         """
@@ -76,13 +76,13 @@ class Provider:
 
         match self.preference:
             case self.Preference.OnlyNexusMods:
-                self.__nm_api = NexusModsApi(api_key)
+                self.__nm_api = NexusModsApi(cacher, api_key)
             case self.Preference.OnlyConfrerie:
-                self.__cdt_api = CDTApi()
+                self.__cdt_api = CDTApi(cacher)
 
             case self.Preference.PreferNexusMods | self.Preference.PreferConfrerie:
-                self.__nm_api = NexusModsApi(api_key)
-                self.__cdt_api = CDTApi()
+                self.__nm_api = NexusModsApi(cacher, api_key)
+                self.__cdt_api = CDTApi(cacher)
 
         if self.__nm_api is not None:
             self.log.info("Initialized Nexus Mods API.")
@@ -266,19 +266,27 @@ class Provider:
 
         return available_translations
 
-    def is_update_available(self, mod_id: int, file_id: int, timestamp: int, source: Source) -> bool:
+    def is_update_available(
+        self, mod_id: int, file_id: int, timestamp: int, source: Source
+    ) -> bool:
         """
         Checks if an update is available for the specified mod and file.
         Uses `mod_id` and `file_id` for Nexus Mods and `timestamp`
         for Confrérie des Traducteurs.
         """
 
-        if source == Source.NexusMods and self.preference != self.Preference.OnlyConfrerie:
+        if (
+            source == Source.NexusMods
+            and self.preference != self.Preference.OnlyConfrerie
+        ):
             return file_id in self.__nm_api.get_mod_updates(
                 "skyrimspecialedition", mod_id
             )
 
-        elif source == Source.Confrerie and self.preference != self.Preference.OnlyNexusMods:
+        elif (
+            source == Source.Confrerie
+            and self.preference != self.Preference.OnlyNexusMods
+        ):
             cdt_timestamp = self.__cdt_api.get_timestamp_of_file(mod_id)
             if cdt_timestamp is not None and timestamp is not None:
                 return cdt_timestamp > timestamp
