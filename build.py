@@ -32,6 +32,7 @@ cmd = f'nuitka \
 --include-data-dir="./src/data=./data" \
 --include-data-dir="./doc=./doc" \
 --include-data-file="LICENSE=." \
+--include-data-file="./src/TaskbarLib.tlb=." \
 --include-data-files="./.venv/Lib/site-packages/cloudscraper/user_agent/browsers.json=cloudscraper/user_agent/" \
 --include-data-dir="./.venv/Lib/site-packages/qtawesome=./qtawesome" \
 --include-package=hunspell \

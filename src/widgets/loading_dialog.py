@@ -8,12 +8,21 @@ import logging
 import time
 from typing import Callable
 
+import comtypes.client as cc
 import qtpy.QtCore as qtc
 import qtpy.QtGui as qtg
 import qtpy.QtWidgets as qtw
 
 import main
 import utilities as utils
+
+cc.GetModule("TaskbarLib.tlb")
+
+import comtypes.gen.TaskbarLib as tbl
+
+taskbar = cc.CreateObject(
+    "{56FDF344-FD6D-11d0-958A-006097C9A090}", interface=tbl.ITaskbarList3
+)
 
 
 class LoadingDialog(qtw.QDialog):
@@ -104,6 +113,10 @@ class LoadingDialog(qtw.QDialog):
         self.progress_signal.connect(
             self.setProgress, type=qtc.Qt.ConnectionType.QueuedConnection
         )
+
+        # Set up Taskbar Progress API
+        self.parent_hwnd = parent.winId()
+        taskbar.ActivateTab(self.parent_hwnd)
 
     def updateProgress(
         self,
@@ -234,6 +247,15 @@ class LoadingDialog(qtw.QDialog):
         # Move back to center
         utils.center(self, self.app.root)
 
+        # Update Taskbar Progress
+        if self.pbar1.maximum() == 0:
+            taskbar.SetProgressState(self.parent_hwnd, 0x1)  # Indeterminate
+        else:
+            taskbar.SetProgressState(self.parent_hwnd, 0x2)  # Determinate
+            taskbar.SetProgressValue(
+                self.parent_hwnd, self.pbar1.value(), self.pbar1.maximum()
+            )
+
     def timerEvent(self, event: qtc.QTimerEvent):
         """
         Callback for timer timeout.
@@ -267,7 +289,13 @@ class LoadingDialog(qtw.QDialog):
             f"Time: {utils.get_diff(self.starttime, time.strftime('%H:%M:%S'))}"
         )
 
+        # Clear taskbar state
+        taskbar.SetProgressState(self.parent_hwnd, 0x0)
+
         if self.dialog_thread.exception is not None:
+            # Set taskbar state to error
+            taskbar.SetProgressState(self.parent_hwnd, 0x4)
+
             raise self.dialog_thread.exception
 
     def start(self):
