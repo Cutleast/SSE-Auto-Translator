@@ -14,6 +14,7 @@
     "cancel_text": "Are you sure you want to cancel? All changes will be lost!",
     "case_sensitivity": "Case Sensitivity",
     "check_for_updates": "Check for Updates",
+    "clear_cache": "Clear Cache (This will reset all plugin states and delete cached API requests!)",
     "close": "Close",
     "collapse_all": "Collapse All",
     "copy": "Copy to Clipboard",

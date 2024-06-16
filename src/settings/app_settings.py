@@ -190,12 +190,21 @@ class AppSettings(qtw.QScrollArea):
         self.use_spell_check_checkbox.stateChanged.connect(self.on_change)
         flayout.addRow(self.use_spell_check_checkbox)
 
+        self.clear_cache_button = qtw.QPushButton(self.mloc.clear_cache)
+        self.clear_cache_button.clicked.connect(self.clear_cache)
+        self.clear_cache_button.setEnabled(self.app.cacher.path.is_dir())
+        flayout.addRow(self.clear_cache_button)
+
     def on_change(self, *args):
         """
         This emits change signal without passing parameters.
         """
 
         self.on_change_signal.emit()
+    
+    def clear_cache(self):
+        self.app.cacher.clear_caches()
+        self.clear_cache_button.setEnabled(False)
 
     def get_settings(self):
         return {

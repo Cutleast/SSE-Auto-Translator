@@ -14,6 +14,7 @@
     "cancel_text": "Sind Sie sicher, dass Sie abbrechen wollen? Alle Änderungen gehen dann verloren!",
     "case_sensitivity": "Groß- und Kleinschreibung beachten",
     "check_for_updates": "Nach Updates suchen",
+    "clear_cache": "Cache leeren (Dadurch werden alle Plugin-Status zurückgesetzt und zwischengespeicherte API-Anfragen gelöscht!)",
     "close": "Schließen",
     "collapse_all": "Alle einklappen",
     "copy": "In Zwischenablage kopieren",

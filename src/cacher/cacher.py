@@ -50,6 +50,15 @@ class Cacher:
 
             self.log.info("Caches loaded.")
 
+    def clear_caches(self):
+        """
+        Clears all caches.
+        """
+
+        self.clear_plugin_states_cache()
+
+        shutil.rmtree(self.path, ignore_errors=True)
+
     def get_plugin_strings(self, plugin_path: Path):
         """
         Gets strings of `plugin_path` from cache or extracts them if not in cache.
