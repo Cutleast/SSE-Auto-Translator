@@ -280,7 +280,9 @@ class Processor:
                             app.log.debug(f"Merging {original_plugin.name!r}...")
                             strings[original_plugin.name.lower()] = (
                                 utils.merge_plugin_strings(
-                                    translated_plugin.path, original_plugin.path
+                                    translated_plugin.path,
+                                    original_plugin.path,
+                                    app.cacher,
                                 )
                             )
                             original_plugin.status = (
