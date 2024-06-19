@@ -5,6 +5,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import logging
+import time
 import traceback
 import urllib.parse
 from enum import Enum, auto
@@ -38,7 +39,7 @@ class DownloadsWidget(qtw.QWidget):
 
     download_finished = qtc.Signal()
     queue_finished = qtc.Signal()
-    update_signal = qtc.Signal(FileDownload)
+    update_signal = qtc.Signal(tuple)
 
     hide_item_signal = qtc.Signal(qtw.QTreeWidgetItem)
 
@@ -63,8 +64,12 @@ class DownloadsWidget(qtw.QWidget):
         self.loc = app.loc
         self.mloc = app.loc.database
 
-        self.update_signal.connect(self._update_progress)
-        self.hide_item_signal.connect(self._hide_item)
+        self.update_signal.connect(
+            self._update_progress, qtc.Qt.ConnectionType.QueuedConnection
+        )
+        self.hide_item_signal.connect(
+            self._hide_item, qtc.Qt.ConnectionType.QueuedConnection
+        )
         self.start_timer_signal.connect(self.start_timer)
         self.stop_timer_signal.connect(self.stop_timer)
 
@@ -117,15 +122,19 @@ class DownloadsWidget(qtw.QWidget):
     def timerEvent(self, event: qtc.QTimerEvent):
         super().timerEvent(event)
 
-        self._update_progress(None)
+        self._update_progress((None, None))
 
-    def update_progress(self, download: FileDownload | None = None):
-        self.update_signal.emit(download)
+    def update_progress(self, download_data: tuple[FileDownload, FileDownload.Status]):
+        self.update_signal.emit(download_data)
 
-    def _update_progress(self, download: FileDownload | None = None):
+    def _update_progress(
+        self, download_data: tuple[FileDownload | None, FileDownload.Status | None]
+    ):
         """
         Updates progress of current downloading translation.
         """
+
+        download, status = download_data
 
         if download is None:
             download = self.current_download
@@ -143,27 +152,36 @@ class DownloadsWidget(qtw.QWidget):
 
             progress_widget: ProgressWidget = self.downloads_widget.itemWidget(item, 1)
 
-            match download.status:
+            if status is None:
+                status = download.status
+
+            match status:
                 case FileDownload.Status.Downloading:
                     if self.downloader.current_size and self.downloader.previous_size:
                         cur_size = utils.scale_value(self.downloader.current_size)
                         tot_size = utils.scale_value(self.downloader.file_size)
+                        progress_widget.progress_bar.setRange(0, 1000)
                         progress_widget.progress_bar.setValue(
-                            (self.downloader.current_size / self.downloader.file_size)
-                            * 1000
+                            int(
+                                (
+                                    self.downloader.current_size
+                                    / self.downloader.file_size
+                                )
+                                * 1000
+                            )
                         )
                         spd = (
                             self.downloader.current_size - self.downloader.previous_size
                         )
                         cur_speed = utils.scale_value(spd) + "/s"
                         percentage = f"{(self.downloader.current_size / self.downloader.file_size * 100):.2f} %"
-                        status = f"{self.loc.main.downloading} ({cur_size}/{tot_size} - {percentage} - {cur_speed})"
+                        status_text = f"{self.loc.main.downloading} ({cur_size}/{tot_size} - {percentage} - {cur_speed})"
                     else:
-                        status = self.loc.main.downloading
+                        status_text = self.loc.main.downloading
 
                     self.downloader.previous_size = self.downloader.current_size
 
-                    progress_widget.status_label.setText(status)
+                    progress_widget.status_label.setText(status_text)
                 case FileDownload.Status.Processing:
                     progress_widget.status_label.setText(self.loc.main.processing)
                     progress_widget.progress_bar.setRange(0, 0)
@@ -190,7 +208,7 @@ class DownloadsWidget(qtw.QWidget):
             download: FileDownload = self.queue.get()
             self.current_download = download
             download.status = download.Status.Processing
-            self.update_progress(download)
+            self.update_progress((download, download.Status.Processing))
 
             tmp_path = self.app.get_tmp_dir()
 
@@ -200,6 +218,16 @@ class DownloadsWidget(qtw.QWidget):
 
             downloaded_file = tmp_path / download.file_name
             download.status = download.Status.Downloading
+            self.update_progress((download, download.Status.Downloading))
+
+            progress_widget: ProgressWidget
+            while (
+                progress_widget := self.downloads_widget.itemWidget(
+                    download.tree_item, 1
+                )
+            ) is None:
+                self.update_progress((download, download.Status.Downloading))
+                time.sleep(0.1)
 
             self.start_timer_signal.emit()
             if not downloaded_file.is_file():
@@ -207,13 +235,18 @@ class DownloadsWidget(qtw.QWidget):
                     self.downloader.download(download, tmp_path)
                 except Exception as ex:
                     self.log.error(f"Download failed: {ex}", exc_info=ex)
+                    download.status = download.Status.DownloadFailed
+                    progress_widget.set_exception(
+                        "".join(traceback.format_exception(ex))
+                    )
+                    self.update_progress((download, download.Status.DownloadFailed))
 
             self.stop_timer_signal.emit()
 
             if downloaded_file.is_file():
                 self.log.debug(f"Processing file...")
                 download.status = download.Status.Processing
-                self.update_progress(download)
+                self.update_progress((download, download.Status.Processing))
                 try:
                     strings = utils.import_from_archive(
                         downloaded_file,
@@ -227,10 +260,7 @@ class DownloadsWidget(qtw.QWidget):
                         exc_info=ex,
                     )
                     download.status = download.Status.DownloadFailed
-                    self.update_progress(download)
-                    progress_widget: ProgressWidget = self.downloads_widget.itemWidget(
-                        download.tree_item, 1
-                    )
+                    self.update_progress((download, download.Status.DownloadFailed))
                     progress_widget.set_exception(
                         "".join(traceback.format_exception(ex))
                     )
@@ -280,20 +310,21 @@ class DownloadsWidget(qtw.QWidget):
                         )
 
                         download.status = download.Status.DownloadSuccess
-                        self.hide_item_signal.emit(download.tree_item)
+                        self.update_progress(
+                            (download, download.Status.DownloadSuccess)
+                        )
 
                         self.log.info("Processing complete.")
                     else:
                         self.log.warning("Translation does not contain any strings!")
                         download.status = download.Status.DownloadFailed
+                        progress_widget.set_exception(
+                            "Merging failed! Translation does not contain any matching strings!"
+                        )
+                        self.update_progress((download, download.Status.DownloadFailed))
 
                 self.download_finished.emit()
 
-            else:
-                self.log.error("Download failed!")
-                download.status = download.Status.DownloadFailed
-
-            self.update_progress(download)
             self.current_download = None
             self.queue.task_done()
 
