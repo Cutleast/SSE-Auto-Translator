@@ -190,7 +190,7 @@ class AppSettings(qtw.QScrollArea):
         self.use_spell_check_checkbox.stateChanged.connect(self.on_change)
         flayout.addRow(self.use_spell_check_checkbox)
 
-        self.clear_cache_button = qtw.QPushButton(self.mloc.clear_cache)
+        self.clear_cache_button = qtw.QPushButton(self.loc.main.clear_cache)
         self.clear_cache_button.clicked.connect(self.clear_cache)
         self.clear_cache_button.setEnabled(self.app.cacher.path.is_dir())
         flayout.addRow(self.clear_cache_button)
