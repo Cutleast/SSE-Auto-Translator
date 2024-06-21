@@ -22,6 +22,7 @@
     "restart_title": "需要重新启动",
     "settings": "设置",
     "start_api_setup": "开始API设置",
+	"temp_path": "临时文件夹路径\n（用于下载等操作，退出后将被清除！）",
     "translator": "翻译器API",
     "translator_api_key": "翻译器API密钥",
     "translator_settings": "翻译器API设置",
