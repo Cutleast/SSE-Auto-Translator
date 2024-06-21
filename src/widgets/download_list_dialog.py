@@ -170,13 +170,21 @@ class DownloadListDialog(qtw.QWidget):
         def process(ldialog: LoadingDialog):
             ldialog.updateProgress(text1=self.loc.main.starting_downloads)
 
-            for download_item in self.download_items:
+            for d, download_item in enumerate(self.download_items):
                 translation_download = download_item.translation_downloads[
                     download_item.translations_combobox.currentIndex()
                 ]
                 download = translation_download.available_downloads[
                     download_item.files_combobox.currentIndex()
                 ]
+
+                ldialog.updateProgress(
+                    text1=f"{self.loc.main.starting_downloads} {d}/{len(self.download_items)}",
+                    value1=d,
+                    max1=len(self.download_items),
+                    show2=True,
+                    text2=download.name,
+                )
 
                 if (
                     download.name,

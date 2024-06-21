@@ -479,49 +479,54 @@ class Processor:
         def process(ldialog: LoadingDialog):
             ldialog.updateProgress(text1=app.loc.main.getting_downloads)
 
-            for mod in modlist:
-                for plugin in mod.plugins:
-                    if (
-                        plugin.status == plugin.Status.TranslationAvailableOnline
-                        and plugin.tree_item.checkState(0) == qtc.Qt.CheckState.Checked
-                    ):
-                        available_translations = app.provider.get_translations(
-                            mod.mod_id, plugin.name, language
-                        )
+            mods = [
+                mod
+                for mod in modlist
+                if any(
+                    plugin.status == plugin.Status.TranslationAvailableOnline
+                    and plugin.tree_item.checkState(0) == qtc.Qt.CheckState.Checked
+                    for plugin in mod.plugins
+                )
+            ]
 
-                        mod_translations: list[TranslationDownload] = []
+            for m, mod in enumerate(mods):
+                plugins = [
+                    plugin
+                    for plugin in mod.plugins
+                    if plugin.status == plugin.Status.TranslationAvailableOnline
+                    and plugin.tree_item.checkState(0) == qtc.Qt.CheckState.Checked
+                ]
 
-                        for mod_id, file_ids, source in available_translations:
-                            downloads: list[FileDownload] = []
-                            if source == utils.Source.NexusMods:
-                                for file_id in file_ids:
-                                    try:
-                                        file_details = app.provider.get_details(
-                                            mod_id, file_id, source
-                                        )
-                                    except Exception as ex:
-                                        app.log.error(
-                                            f"Failed to get details for {mod_id} > {file_id}: {ex}",
-                                            exc_info=ex,
-                                        )
-                                        continue
-                                    download = FileDownload(
-                                        name=file_details["name"],
-                                        source=source,
-                                        mod_id=mod_id,
-                                        file_id=file_id,
-                                        original_mod=mod,
-                                        file_name=file_details["filename"],
-                                    )
-                                    downloads.append(download)
-                            else:
+                for p, plugin in enumerate(plugins):
+                    ldialog.updateProgress(
+                        text1=f"{app.loc.main.getting_downloads} ({m}/{len(mods)})",
+                        value1=m,
+                        max1=len(mods),
+                        show2=True,
+                        text2=f"{mod.name} ({p}/{len(plugins)})",
+                        value2=p,
+                        max2=len(plugins),
+                        show3=True,
+                        text3=plugin.name,
+                    )
+
+                    available_translations = app.provider.get_translations(
+                        mod.mod_id, plugin.name, language
+                    )
+
+                    mod_translations: list[TranslationDownload] = []
+
+                    for mod_id, file_ids, source in available_translations:
+                        downloads: list[FileDownload] = []
+                        if source == utils.Source.NexusMods:
+                            for file_id in file_ids:
                                 try:
                                     file_details = app.provider.get_details(
-                                        mod_id, source
+                                        mod_id, file_id, source
                                     )
                                 except Exception as ex:
                                     app.log.error(
-                                        f"Failed to get details for {mod_id}: {ex}",
+                                        f"Failed to get details for {mod_id} > {file_id}: {ex}",
                                         exc_info=ex,
                                     )
                                     continue
@@ -529,72 +534,90 @@ class Processor:
                                     name=file_details["name"],
                                     source=source,
                                     mod_id=mod_id,
+                                    file_id=file_id,
                                     original_mod=mod,
                                     file_name=file_details["filename"],
                                 )
                                 downloads.append(download)
-
-                            translation_details = app.provider.get_details(
-                                mod_id, source=source
-                            )
-                            translation_download = TranslationDownload(
-                                name=translation_details["name"],
+                        else:
+                            try:
+                                file_details = app.provider.get_details(mod_id, source)
+                            except Exception as ex:
+                                app.log.error(
+                                    f"Failed to get details for {mod_id}: {ex}",
+                                    exc_info=ex,
+                                )
+                                continue
+                            download = FileDownload(
+                                name=file_details["name"],
+                                source=source,
                                 mod_id=mod_id,
                                 original_mod=mod,
-                                original_plugin=plugin,
-                                source=source,
-                                available_downloads=downloads,
+                                file_name=file_details["filename"],
                             )
-                            mod_translations.append(translation_download)
+                            downloads.append(download)
 
-                        masterlist_entry = app.masterlist.get(plugin.name.lower())
-                        if masterlist_entry is not None:
-                            if masterlist_entry["type"] == "route":
-                                for target in masterlist_entry["targets"]:
-                                    mod_id: int = target["mod_id"]
-                                    file_id: int = target["file_id"]
-                                    source = utils.Source.NexusMods
+                        translation_details = app.provider.get_details(
+                            mod_id, source=source
+                        )
+                        translation_download = TranslationDownload(
+                            name=translation_details["name"],
+                            mod_id=mod_id,
+                            original_mod=mod,
+                            original_plugin=plugin,
+                            source=source,
+                            available_downloads=downloads,
+                        )
+                        mod_translations.append(translation_download)
 
-                                    file_details = app.provider.get_details(
-                                        mod_id, file_id, source
-                                    )
-                                    download = FileDownload(
-                                        name=file_details["name"],
-                                        source=source,
-                                        mod_id=mod_id,
-                                        file_id=file_id,
-                                        original_mod=mod,
-                                        file_name=file_details["filename"],
-                                    )
+                    masterlist_entry = app.masterlist.get(plugin.name.lower())
+                    if masterlist_entry is not None:
+                        if masterlist_entry["type"] == "route":
+                            for target in masterlist_entry["targets"]:
+                                mod_id: int = target["mod_id"]
+                                file_id: int = target["file_id"]
+                                source = utils.Source.NexusMods
 
-                                    translation_details = app.provider.get_details(
-                                        mod_id, source=source
-                                    )
-                                    translation_download = TranslationDownload(
-                                        name=translation_details["name"],
-                                        mod_id=mod_id,
-                                        original_mod=mod,
-                                        original_plugin=plugin,
-                                        source=source,
-                                        available_downloads=[download],
-                                    )
-                                    mod_translations.append(translation_download)
-
-                                app.log.info(
-                                    f"Found {plugin.name!r} in Masterlist of type 'route'. Added Targets to Downloads."
+                                file_details = app.provider.get_details(
+                                    mod_id, file_id, source
+                                )
+                                download = FileDownload(
+                                    name=file_details["name"],
+                                    source=source,
+                                    mod_id=mod_id,
+                                    file_id=file_id,
+                                    original_mod=mod,
+                                    file_name=file_details["filename"],
                                 )
 
-                        # Sort mod translations in descending order after timestamp
-                        mod_translations.sort(
-                            key=lambda download: app.provider.get_details(
-                                download.mod_id, source=download.source
-                            )["timestamp"],
-                            reverse=True,
-                        )
+                                translation_details = app.provider.get_details(
+                                    mod_id, source=source
+                                )
+                                translation_download = TranslationDownload(
+                                    name=translation_details["name"],
+                                    mod_id=mod_id,
+                                    original_mod=mod,
+                                    original_plugin=plugin,
+                                    source=source,
+                                    available_downloads=[download],
+                                )
+                                mod_translations.append(translation_download)
 
-                        translation_downloads[f"{mod.name} > {plugin.name}"] = (
-                            mod_translations
-                        )
+                            app.log.info(
+                                f"Found {plugin.name!r} in Masterlist of type 'route'. Added Targets to Downloads."
+                            )
+
+                    # Sort mod translations in descending order after timestamp
+                    mod_translations.sort(
+                        key=lambda download: app.provider.get_details(
+                            download.mod_id, source=download.source
+                        )["timestamp"],
+                        reverse=True,
+                    )
+
+                    translation_downloads[f"{mod.name} > {plugin.name}"] = (
+                        mod_translations
+                    )
 
         loadingdialog = LoadingDialog(app.root, app, process)
         loadingdialog.exec()
