@@ -191,7 +191,7 @@ class DownloadsWidget(qtw.QWidget):
                 case FileDownload.Status.DownloadSuccess:
                     item.setHidden(True)
 
-        self.update()
+        self.app.processEvents(qtc.QEventLoop.ProcessEventsFlag.AllEvents)
 
     @staticmethod
     def _hide_item(item: qtw.QTreeWidgetItem):
