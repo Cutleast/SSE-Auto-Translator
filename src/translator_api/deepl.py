@@ -22,8 +22,8 @@ class DeepLTranslator(Translator):
     cache: dict[str, str] = {}
 
     langs = {
-        "portuguese": "PT",
-        "chinese": "ZH"
+        "portuguese": "PT-BR",
+        "chinese": "ZH",
     }
 
     def __init__(self, app: MainApp):
@@ -43,11 +43,14 @@ class DeepLTranslator(Translator):
 
     def translate(self, text: str, src: str, dst: str) -> str:
         if text not in self.cache:
-            src_code = googletrans.LANGCODES.get(src.lower(), src)
-            dst_code = googletrans.LANGCODES.get(dst.lower(), dst)
-
-            src_code = self.langs.get(src_code, src_code)
-            dst_code = self.langs.get(dst_code, dst_code)
+            # Get language codes from DeepLTranslator.langs
+            # and googletrans.LANGCODES as fallback
+            src_code = self.langs.get(
+                src.lower(), googletrans.LANGCODES.get(src.lower(), src)
+            )
+            dst_code = self.langs.get(
+                dst.lower(), googletrans.LANGCODES.get(dst.lower(), dst)
+            )
 
             if self.glossary is not None:
                 result: deepl.TextResult = self.translator.translate_text_with_glossary(

@@ -23,6 +23,7 @@ class GoogleTranslator(Translator):
 
     langs = {
         "chinese": "zh-cn",
+        "portuguese": "pt-br",
     }
 
     def __init__(self, app: MainApp):
@@ -32,8 +33,8 @@ class GoogleTranslator(Translator):
 
     def translate(self, text: str, src: str, dst: str) -> str:
         if text not in self.cache:
-            src = self.langs.get(src, src)
-            dst = self.langs.get(dst, dst)
+            src = self.langs.get(src.lower(), src)
+            dst = self.langs.get(dst.lower(), dst)
 
             self.cache[text] = self.translator.translate(
                 text,
