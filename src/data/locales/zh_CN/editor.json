@@ -23,7 +23,7 @@
     "reset_translation_text": "您确定要将所选字符串重置为原始字符串吗？这是无法撤销的！",
     "search": "搜索",
     "search_and_replace": "搜索和替换",
-    "shortcut_hint": "按F1（完成翻译）、F2（翻译中）或F3（不需翻译）\n完成字符串并转到下一个字符串。",
+    "shortcut_hint": "按F1（完成翻译）、F2（翻译未完成/翻译中）或F3（不需翻译）\n完成字符串并转到下一个字符串。",
     "show_help": "显示字符串状态颜色的说明",
     "strings": "字符串",
     "translate_with_api": "使用API翻译",

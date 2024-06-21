@@ -31,7 +31,7 @@
     "user_settings": "用户设置",
     "enabled_file_types": "启用文件类型",
     "enable_interface_files": "启用Interface文件（Data/Interface/*.txt）",
-    "enable_scripts": "启用Papyrus脚本（Data/Scripts/*.pex）",
-    "enable_textures": "启用材质（Data/Textures/*）",
+    "enable_scripts": "启用Papyrus脚本文件（Data/Scripts/*.pex）",
+    "enable_textures": "启用材质文件（Data/Textures/*）",
     "enable_sound_files": "启用声音文件（Data/Sound/*）"
 }
