@@ -33,14 +33,16 @@ class GoogleTranslator(Translator):
 
     def translate(self, text: str, src: str, dst: str) -> str:
         if text not in self.cache:
-            src = self.langs.get(src.lower(), src)
-            dst = self.langs.get(dst.lower(), dst)
+            # Get language codes from DeepLTranslator.langs
+            # and googletrans.LANGCODES as fallback
+            src_code = self.langs.get(
+                src.lower(), googletrans.LANGCODES.get(src.lower(), src)
+            )
+            dst_code = self.langs.get(
+                dst.lower(), googletrans.LANGCODES.get(dst.lower(), dst)
+            )
 
-            self.cache[text] = self.translator.translate(
-                text,
-                googletrans.LANGCODES[dst.lower()],
-                googletrans.LANGCODES[src.lower()],
-            ).text
+            self.cache[text] = self.translator.translate(text, dst_code, src_code).text
 
         return self.cache[text]
 
