@@ -117,20 +117,22 @@ class AppSettings(qtw.QScrollArea):
         flayout.addRow(self.mloc.detector_confidence, self.confidence_box)
 
         # Output path
-        output_path_label = qtw.QLabel(f"{self.mloc.output_path} ({self.mloc.no_restart_required})")
+        output_path_label = qtw.QLabel(
+            f"{self.mloc.output_path} ({self.mloc.no_restart_required})"
+        )
         hlayout = qtw.QHBoxLayout()
         flayout.addRow(output_path_label, hlayout)
 
         self.output_path_entry = ClearEntry()
-        self.output_path_entry.setPlaceholderText(str(self.app.cur_path / "SSE-AT Output"))
+        self.output_path_entry.setPlaceholderText(
+            str(self.app.cur_path / "SSE-AT Output")
+        )
         if self.app.app_config["output_path"] is not None:
             self.output_path_entry.setText(self.app.app_config["output_path"])
         self.output_path_entry.textChanged.connect(self.on_change)
         hlayout.addWidget(self.output_path_entry)
         browse_output_path_button = qtw.QPushButton()
-        browse_output_path_button.setIcon(
-            qta.icon("fa5s.folder-open", color="#ffffff")
-        )
+        browse_output_path_button.setIcon(qta.icon("fa5s.folder-open", color="#ffffff"))
 
         def browse():
             file_dialog = qtw.QFileDialog(self.app.activeModalWidget())
@@ -161,9 +163,7 @@ class AppSettings(qtw.QScrollArea):
         self.temp_path_entry.textChanged.connect(self.on_change)
         hlayout.addWidget(self.temp_path_entry)
         browse_temp_path_button = qtw.QPushButton()
-        browse_temp_path_button.setIcon(
-            qta.icon("fa5s.folder-open", color="#ffffff")
-        )
+        browse_temp_path_button.setIcon(qta.icon("fa5s.folder-open", color="#ffffff"))
 
         def browse():
             file_dialog = qtw.QFileDialog(self.app.activeModalWidget())
@@ -189,7 +189,9 @@ class AppSettings(qtw.QScrollArea):
         self.bind_nxm_checkbox.stateChanged.connect(self.on_change)
         flayout.addRow(self.bind_nxm_checkbox)
 
-        self.use_spell_check_checkbox = qtw.QCheckBox(f"{self.mloc.use_spell_check} ({self.mloc.no_restart_required})")
+        self.use_spell_check_checkbox = qtw.QCheckBox(
+            f"{self.mloc.use_spell_check} ({self.mloc.no_restart_required})"
+        )
         self.use_spell_check_checkbox.setChecked(self.app.app_config["use_spell_check"])
         self.use_spell_check_checkbox.stateChanged.connect(self.on_change)
         flayout.addRow(self.use_spell_check_checkbox)
