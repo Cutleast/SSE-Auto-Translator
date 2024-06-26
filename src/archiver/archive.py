@@ -58,7 +58,6 @@ class Archive:
             encoding="utf8",
             errors="ignore",
         ) as process:
-            process.wait()
             output = process.stderr.read()
 
         if process.returncode:
@@ -83,7 +82,6 @@ class Archive:
             encoding="utf8",
             errors="ignore",
         ) as process:
-            process.wait()
             output = process.stderr.read()
 
         if process.returncode:
@@ -124,7 +122,6 @@ class Archive:
             encoding="utf8",
             errors="ignore",
         ) as process:
-            process.wait()
             output = process.stderr.read()
 
         if process.returncode:
