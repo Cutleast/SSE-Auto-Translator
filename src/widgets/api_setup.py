@@ -8,7 +8,7 @@ import qtpy.QtCore as qtc
 import qtpy.QtWidgets as qtw
 
 from main import MainApp
-from nm_api import NexusModsApi
+from translation_provider.nm_api import NexusModsApi
 
 from .paste_entry import PasteLineEdit
 
@@ -53,7 +53,7 @@ class ApiSetup(qtw.QWidget):
         sso_button = qtw.QPushButton(self.mloc.start_sso)
 
         def start_sso():
-            api = NexusModsApi("")
+            api = NexusModsApi(self.app.cacher, "")
             self.api_key = api.get_sso_key()
             sso_button.setText(self.mloc.sso_successful)
             self.setDisabled(True)
@@ -83,7 +83,7 @@ class ApiSetup(qtw.QWidget):
                 return
 
             api_key_check_button.setText("Checking API Key...")
-            if NexusModsApi(key).check_api_key():
+            if NexusModsApi(self.app.cacher, key).check_api_key():
                 self.api_key = key
                 self.is_valid = True
                 self.valid_signal.emit(True)

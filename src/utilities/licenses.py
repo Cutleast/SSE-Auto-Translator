@@ -27,7 +27,9 @@ LICENSES = {
     "googletrans": "https://github.com/ssut/py-googletrans/blob/master/LICENSE",
     "deepl": "https://github.com/DeepLcom/deepl-python/blob/main/LICENSE",
     "pyzmq": "https://github.com/zeromq/pyzmq/blob/main/LICENSE.md",
+    "pytz": "https://github.com/stub42/pytz/blob/master/LICENSE.txt",
     "cyhunspell": "https://github.com/MSeal/cython_hunspell/blob/master/LICENSE",
+    "comtypes": "https://github.com/enthought/comtypes/blob/main/LICENSE.txt",
 
     "french_libreoffice_dict": "http://www.mozilla.org/MPL/2.0/",
     "german_libreoffice_dict": "https://github.com/LibreOffice/dictionaries/blob/master/de/COPYING_GPLv3",

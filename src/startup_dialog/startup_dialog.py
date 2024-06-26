@@ -39,7 +39,7 @@ class StartupDialog(qtw.QWidget):
         self.setWindowFlag(qtc.Qt.WindowType.Window, True)
         self.setObjectName("root")
         self.setWindowTitle(self.mloc.startup)
-        self.setFixedSize(900, 570)
+        self.setFixedSize(900, 610)
         utils.apply_dark_title_bar(self)
 
         # Create layout
@@ -65,8 +65,13 @@ class StartupDialog(qtw.QWidget):
 
     def finish(self):
         language = self.setup_page.lang_box.currentText()
+        provider_preference = self.setup_page.source_dropdown.currentText()
         api_key = self.setup_page.api_setup.api_key
         use_masterlist = self.setup_page.masterlist_box.isChecked()
+        enable_interface_files = self.setup_page.enable_interface_files_box.isChecked()
+        enable_scripts = self.setup_page.enable_scripts_box.isChecked()
+        enable_textures = self.setup_page.enable_textures_box.isChecked()
+        enable_sound_files = self.setup_page.enable_sound_files_box.isChecked()
         mod_manager_name = self.instance_page.mod_manager.name
         instance_name = self.instance_page.modinstance_name
         instance_path = self.instance_page.instance_path_entry.text()
@@ -80,6 +85,11 @@ class StartupDialog(qtw.QWidget):
             "modinstance": instance_name,
             "use_masterlist": use_masterlist,
             "instance_profile": instance_profile,
+            "provider_preference": provider_preference,
+            "enable_interface_files": enable_interface_files,
+            "enable_scripts": enable_scripts,
+            "enable_textures": enable_textures,
+            "enable_sound_files": enable_sound_files,
         }
 
         if not user_path.is_dir():

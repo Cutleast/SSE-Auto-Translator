@@ -1,0 +1,10 @@
+{
+    "download_update": "下载更新",
+    "download_updates": "下载更新",
+    "ignore_update": "忽略更新",
+    "installed_version": "已安装版本",
+    "latest_version": "最新版本",
+    "no_updates": "无可用更新！",
+    "no_updates_available": "你已经在使用最新版本。\n查看我们的<a href=\"https://discord.gg/pqEHdWDf8z\">Discord服务器</a>来获得预发布版本！",
+    "update_available": "有更新可供下载！"
+}

@@ -5,6 +5,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import os
+import time
 from pathlib import Path
 
 import qtawesome as qta
@@ -14,12 +15,13 @@ import qtpy.QtWidgets as qtw
 
 import utilities as utils
 from main import MainApp
+from translation_provider import FileDownload, TranslationDownload
 from widgets import (
     DownloadListDialog,
-    LoadingDialog,
-    StringListDialog,
-    ShortcutButton,
     ErrorDialog,
+    LoadingDialog,
+    ShortcutButton,
+    StringListDialog,
 )
 
 from .translation import Translation
@@ -102,7 +104,7 @@ class TranslationsWidget(qtw.QWidget):
             self.mloc.handle_nxm + " [Experimental]",
         )
         self.nxmhandler_button.setCheckable(True)
-        if not self.app.api.premium:
+        if not self.app.provider.direct_downloads_possible():
             self.tool_bar.widgetForAction(self.nxmhandler_button).setObjectName(
                 "accent_button"
             )
@@ -140,6 +142,7 @@ class TranslationsWidget(qtw.QWidget):
             [
                 self.mloc.translation_name,
                 self.loc.main.version,
+                self.loc.main.source,
             ]
         )
 
@@ -242,6 +245,15 @@ class TranslationsWidget(qtw.QWidget):
                     )
 
             def export_translation():
+                items = self.translations_widget.selectedItems()
+                selected_translations = [
+                    _translation
+                    for _translation in self.app.database.user_translations
+                    if _translation.tree_item in items
+                ]
+                if not selected_translations:
+                    return
+
                 file_dialog = qtw.QFileDialog(self.app.root)
                 file_dialog.setWindowTitle(self.mloc.export_translation)
                 file_dialog.setFileMode(qtw.QFileDialog.FileMode.Directory)
@@ -252,7 +264,8 @@ class TranslationsWidget(qtw.QWidget):
                     folder = os.path.normpath(folder)
                     folder = Path(folder)
 
-                    selected_translation.export_translation(folder)
+                    for translation in selected_translations:
+                        translation.export_translation(folder)
 
                     messagebox = qtw.QMessageBox(self.app.root)
                     messagebox.setWindowTitle(self.loc.main.success)
@@ -262,15 +275,15 @@ class TranslationsWidget(qtw.QWidget):
 
             def open_modpage():
                 if selected_translation.mod_id:
-                    url = utils.create_nexus_mods_url(
-                        "skyrimspecialedition", selected_translation.mod_id
+                    url = self.app.provider.get_modpage_link(
+                        selected_translation.mod_id, source=selected_translation.source
                     )
                     os.startfile(url)
 
             def open_in_explorer():
                 if selected_plugin_name:
                     plugin_path = selected_translation.path / (
-                        selected_plugin_name + ".json"
+                        selected_plugin_name + ".ats"
                     )
                     if plugin_path.is_file():
                         os.system(f'explorer.exe /select,"{plugin_path}"')
@@ -334,12 +347,18 @@ class TranslationsWidget(qtw.QWidget):
 
             menu.addSeparator()
 
-            open_modpage_action = menu.addAction(self.loc.main.open_on_nexusmods)
-            open_modpage_action.setIcon(
-                qtg.QIcon(str(self.app.data_path / "icons" / "nexus_mods.svg"))
-            )
-            open_modpage_action.triggered.connect(open_modpage)
-            open_modpage_action.setDisabled(selected_translation.mod_id == 0)
+            if selected_translation.source == utils.Source.NexusMods:
+                open_modpage_action = menu.addAction(self.loc.main.open_on_nexusmods)
+                open_modpage_action.setIcon(
+                    qtg.QIcon(str(self.app.data_path / "icons" / "nexus_mods.svg"))
+                )
+                open_modpage_action.triggered.connect(open_modpage)
+            elif selected_translation.source == utils.Source.Confrerie:
+                open_modpage_action = menu.addAction(self.loc.main.open_on_confrerie)
+                open_modpage_action.setIcon(
+                    qtg.QIcon(str(self.app.data_path / "icons" / "cdt.svg"))
+                )
+                open_modpage_action.triggered.connect(open_modpage)
 
             open_in_explorer_action = menu.addAction(self.loc.main.open_in_explorer)
             open_in_explorer_action.setIcon(qta.icon("fa5s.folder", color="#ffffff"))
@@ -509,7 +528,6 @@ class TranslationsWidget(qtw.QWidget):
                 self.app.database.delete_translation(translation)
             self.app.log.info("Translations deleted. Updating database...")
 
-            self.app.database.save_database()
             self.load_translations()
             self.app.mainpage_widget.update_modlist()
 
@@ -527,9 +545,9 @@ class TranslationsWidget(qtw.QWidget):
                 translation
                 for translation in self.app.database.user_translations
                 if translation.mod_id
-                and translation.file_id
                 and translation.status != translation.Status.UpdateIgnored
                 and translation.status != translation.Status.UpdateAvailable
+                and translation.source != utils.Source.Local
             ]
 
             for t, translation in enumerate(translations):
@@ -541,10 +559,12 @@ class TranslationsWidget(qtw.QWidget):
                     text2=translation.name,
                 )
 
-                updates = self.app.api.get_mod_updates(
-                    "skyrimspecialedition", translation.mod_id
-                )
-                if translation.file_id in updates.keys():
+                if self.app.provider.is_update_available(
+                    translation.mod_id,
+                    translation.file_id,
+                    translation.timestamp,
+                    translation.source,
+                ):
                     translation.status = translation.Status.UpdateAvailable
 
         loadingdialog = LoadingDialog(self.app.root, self.app, process)
@@ -577,7 +597,7 @@ class TranslationsWidget(qtw.QWidget):
 
         self.app.log.info("Getting downloads for translation updates...")
 
-        downloads: list[utils.Download] = []
+        downloads: dict[str, list[TranslationDownload]] = {}
 
         def process(ldialog: LoadingDialog):
             ldialog.updateProgress(text1=self.loc.main.getting_downloads)
@@ -589,32 +609,57 @@ class TranslationsWidget(qtw.QWidget):
             ]
 
             for translation in translations:
-                updates = self.app.api.get_mod_updates(
-                    "skyrimspecialedition", translation.mod_id
+                new_file_id = self.app.provider.get_updated_file_id(
+                    translation.mod_id, translation.file_id
                 )
 
-                old_file_id = translation.file_id
-                new_file_id = None
+                matching_mods = list(
+                    filter(
+                        lambda mod: (
+                            mod.mod_id == translation.original_mod_id
+                            and any(
+                                plugin_name
+                                in [plugin.name.lower() for plugin in mod.plugins]
+                                for plugin_name in translation.strings
+                            )
+                        ),
+                        self.app.mainpage_widget.mods,
+                    )
+                )
 
-                while old_file_id := updates.get(old_file_id):
-                    new_file_id = old_file_id
+                if not matching_mods:
+                    self.app.log.warning(
+                        f"Failed to update translation {translation.name!r}: Original Mod not installed!"
+                    )
+                    continue
 
-                if new_file_id is None:
+                original_mod = matching_mods[0]
+                original_plugin = original_mod.plugins[0]
+
+                if new_file_id is None and translation.source == utils.Source.NexusMods:
                     translation.status = translation.Status.Ok
                     continue
 
-                self.app.log.debug(
-                    f"Available update for {translation.name!r}: {new_file_id}"
+                download = TranslationDownload(
+                    name=translation.name,
+                    mod_id=translation.mod_id,
+                    original_mod=original_mod,
+                    original_plugin=original_plugin,
+                    source=translation.source,
+                    available_downloads=[
+                        FileDownload(
+                            name=translation.name,
+                            source=translation.source,
+                            mod_id=translation.mod_id,
+                            file_id=new_file_id,
+                            original_mod=original_mod,
+                            file_name=self.app.provider.get_details(
+                                translation.mod_id, new_file_id, translation.source
+                            )["filename"],
+                        )
+                    ],
                 )
-
-                download = utils.Download(
-                    translation.name,
-                    translation.mod_id,
-                    str(translation.file_id),
-                    available_translations=[translation.mod_id],
-                    available_translation_files={translation.mod_id: [new_file_id]},
-                )
-                downloads.append(download)
+                downloads[translation.name] = [download]
 
         loadingdialog = LoadingDialog(self.app.root, self.app, process)
         loadingdialog.exec()
@@ -696,6 +741,7 @@ class TranslationsWidget(qtw.QWidget):
                 [
                     translation.name,
                     translation.version,
+                    translation.source.name,
                 ]
             )
 
@@ -703,6 +749,7 @@ class TranslationsWidget(qtw.QWidget):
                 plugin_item = qtw.QTreeWidgetItem(
                     [
                         plugin_name,
+                        "",
                         "",
                     ]
                 )
@@ -760,7 +807,11 @@ class TranslationsWidget(qtw.QWidget):
                     def process(ldialog: LoadingDialog):
                         __temp.append(
                             utils.import_from_archive(
-                                file, modlist, self.app.get_tmp_dir(), ldialog
+                                file,
+                                modlist,
+                                self.app.get_tmp_dir(),
+                                self.app.cacher,
+                                ldialog,
                             )
                         )
 
@@ -780,7 +831,7 @@ class TranslationsWidget(qtw.QWidget):
                         )
                         continue
 
-                    plugin_strings = utils.merge_plugin_strings(file, plugin.path)
+                    plugin_strings = utils.merge_plugin_strings(file, plugin.path, self.app.cacher)
                     strings[file.name.lower()] = plugin_strings
 
                 else:
@@ -798,10 +849,14 @@ class TranslationsWidget(qtw.QWidget):
                         path=self.app.database.userdb_path
                         / self.app.database.language
                         / file.stem,
+                        source=utils.Source.Local,
+                        timestamp=int(time.time()),
                     )
                     translation.strings = strings
                     translation.save_translation()
                     self.app.database.add_translation(translation)
+
+                    original_mod: utils.Mod = None
 
                     for mod in self.app.mainpage_widget.mods:
                         if any(
@@ -811,6 +866,27 @@ class TranslationsWidget(qtw.QWidget):
                             translation.original_mod_id = mod.mod_id
                             translation.original_file_id = mod.file_id
                             translation.original_version = mod.version
+                            original_mod = mod
+                            break
+
+                    if original_mod and file.suffix.lower() in [".7z", ".rar", ".zip"]:
+
+                        def process(ldialog: LoadingDialog):
+                            utils.import_non_plugin_files(
+                                file,
+                                original_mod,
+                                translation,
+                                self.app.get_tmp_dir(),
+                                self.app.user_config,
+                                ldialog,
+                            )
+
+                        loadingdialog = LoadingDialog(self.app.root, self.app, process)
+                        loadingdialog.exec()
+                    elif file.suffix.lower() in [".7z", ".rar", ".zip"]:
+                        self.app.log.info(
+                            f"Failed to import non-Plugin files! No original mod found!"
+                        )
 
                     self.app.log.info(f"Translation {translation.name!r} imported.")
                 else:
@@ -818,7 +894,6 @@ class TranslationsWidget(qtw.QWidget):
                         "Translation not imported. Translation does not contain any strings!"
                     )
 
-            self.app.database.save_database()
             self.load_translations()
             self.app.mainpage_widget.update_modlist()
 

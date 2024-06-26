@@ -1,8 +1,10 @@
 {
-    "update_available": "Ein Update ist zum Herunterladen verfügbar!",
+    "download_update": "Update herunterladen",
+    "download_updates": "Updates herunterladen",
+    "ignore_update": "Update ignorieren",
     "installed_version": "Installierte Version",
     "latest_version": "Aktuellste Version",
-    "ignore_update": "Update ignorieren",
-    "download_update": "Update herunterladen",
-    "download_updates": "Updates herunterladen"
+    "no_updates": "Kein Update verfügbar!",
+    "no_updates_available": "Es ist bereits die neueste Version installiert.\nAuf unserem <a href=\"https://discord.gg/pqEHdWDf8z\">Discord Server</a> gibt es auch Vorabversionen.",
+    "update_available": "Ein Update ist zum Herunterladen verfügbar!"
 }

@@ -10,6 +10,7 @@ import jstyleson as json
 # Whitelist for record types that are known to work
 # And that contain strings that are visible in-game
 whitelist_path = Path(".") / "data" / "app" / "parser_whitelist.json"
+whitelist_path = whitelist_path.resolve()
 with whitelist_path.open() as whitelist_file:
     PARSE_WHITELIST: dict[str, list[str]] = json.load(whitelist_file)
 

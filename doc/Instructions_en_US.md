@@ -11,7 +11,8 @@ If already done, skip to the next section [Basic Usage](#basic-usage).
 5. Click on *Next*, choose the language you want to play with and login to Nexus Mods via Browser
 
 <br/>
-<img src="./imgs/initial_setup.png" width="800" />
+<img src="./imgs/initial_setup_1.png" width="800" />
+<img src="./imgs/initial_setup_2.png" width="800" />
 
 6. Click on *Next* when you're done
 7. Select your mod manager and the instance/profile you want to load. You can always change the loaded instance and mod manager under *Settings* > *User Settings*.
@@ -49,22 +50,25 @@ Scans are finished when this dialog pops up.
 
 4. Download and install available Translations (button 3, see below)
    - Choose your desired translations then download them
+   - If you don't have Nexus Mods Premium, downloads from Nexus Mods have to be started manually
+     - Downloads with a "Download" button in the "Downloads" tab have to be started manually
 
 <br/>
 <img src="./imgs/download_list.png" width="800" />
+<img src="./imgs/downloading.png" width="800" />
 
-   - Wait until you get this message:
+- Wait until you get this message:
 
 <br/>
 <img src="./imgs/downloads_complete.png">
 
-5. Build the Output for the Dynamic String Distributor SKSE Plugin (button 4, see below)
+5. Build the Output Mod for the Dynamic String Distributor SKSE Plugin (button 4, see below)
    - **This must be done everytime after you edited, installed or deleted a translation**
 
 </br>
 <img src="./imgs/dsd_output.png" />
 
-6. Install the Output folder as a mod (modlist position does not matter) so that the "SKSE" folder lands in the game's "Data" folder
+6. Install the Output folder as a mod (should be at the very bottom) so that the "SKSE" folder lands in the game's "Data" folder
    - You can also change the Output folder under Settings > App Settings > Path for DSD Output.
 
 Now you're ready to play!

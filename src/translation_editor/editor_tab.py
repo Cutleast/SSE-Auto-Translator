@@ -619,6 +619,7 @@ class EditorTab(qtw.QWidget):
 </table>
 """
         self.strings_num_label.setToolTip(num_tooltip)
+        self.bar_chart.setToolTip(num_tooltip)
 
         if self.strings_widget.selectedItems():
             self.strings_widget.scrollToItem(

@@ -5,6 +5,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import ctypes
+import hashlib
 import logging
 from datetime import datetime
 
@@ -15,7 +16,6 @@ import requests as req
 
 from .constants import *
 from .detector import LangDetector, Language
-from .download import Download
 from .exceptions import *
 from .importer import *
 from .ini_parser import IniParser
@@ -25,6 +25,7 @@ from .localisation import Localisator
 from .mod import Mod
 from .nxm_listener import NXMListener
 from .plugin import Plugin
+from .source import Source
 from .stdout_pipe import StdoutPipe
 from .string import String
 from .thread import Thread
@@ -182,27 +183,6 @@ def scale_value(value: int | float, suffix="B", factor: int = 1024):
     return str(value)
 
 
-def create_nexus_mods_url(
-    game_id: str, mod_id: int, file_id: int = None, mod_manager: bool = False
-):
-    """
-    Creates URL to Nexus Mods page of `mod_id` in `game_id` nexus.
-
-    `file_id` is optional and can be used to link directly to a file.
-    """
-
-    base_url = "https://www.nexusmods.com"
-
-    if file_id is None:
-        url = f"{base_url}/{game_id}/mods/{mod_id}"
-    else:
-        url = f"{base_url}/{game_id}/mods/{mod_id}?tab=files&file_id={file_id}"
-        if mod_manager:
-            url += "&nmm=1"
-
-    return url
-
-
 def extract_file_paths(data: dict):
     """
     Extracts file paths from Nexus Mods file contents preview data.
@@ -239,6 +219,66 @@ def trim_string(text: str, max_length: int = 100):
     return f"{text!r}"[1:-1]
 
 
+def relative_data_path(file: str):
+    """
+    Example:
+        `"000 Data/interface/translations/requiem_french.txt"`
+        -> `"interface/translations/requiem_french.txt"`
+    """
+
+    filters = ["/interface/", "/scripts/", "/textures/", "/sound/"]
+
+    for filter in filters:
+        index = file.find(filter)
+        if index != -1:
+            return file[index + 1 :]
+
+    return file
+
+
+def get_file_identifier(file_path: os.PathLike, block_size: int = 1024 * 1024):
+    """
+    Creates a sha256 hash of the first and last block with `block_size`
+    and returns first 8 characters of the hash.
+    """
+
+    hasher = hashlib.sha256()
+    file_size = os.path.getsize(file_path)
+
+    with open(file_path, "rb") as f:
+        if file_size <= block_size:
+            # File is smaller than block_size, hash the entire file
+            chunk = f.read()
+            hasher.update(chunk)
+        else:
+            # Hash the first block
+            chunk = f.read(block_size)
+            if chunk:
+                hasher.update(chunk)
+
+            # Move to the end and hash the last block
+            f.seek(-block_size, os.SEEK_END)
+            chunk = f.read(block_size)
+            if chunk:
+                hasher.update(chunk)
+
+    return hasher.hexdigest()[:8]
+
+
+def get_folder_size(folder: Path):
+    """
+    Returns folder size in bytes.
+    """
+
+    total_size = 0
+
+    for path in folder.rglob("*"):
+        if path.is_file():
+            total_size += path.stat().st_size
+
+    return total_size
+
+
 masterlist: dict[str, dict] = None
 
 
@@ -254,16 +294,32 @@ def get_masterlist(language: str, cache: bool = True) -> dict[str, dict]:
     REPO_NAME = "SSE-Auto-Translator"
     REPO_OWNER = "Cutleast"
     BRANCH = "master"
-    MASTERLIST_PATH = f"masterlists/{language.lower()}.json"
+    INDEX_PATH = f"masterlists/index.json"
 
     if masterlist is None or cache == False:
-        url = f"https://raw.githubusercontent.com/{REPO_OWNER}/{REPO_NAME}/{BRANCH}/{MASTERLIST_PATH}"
+        url = f"https://raw.githubusercontent.com/{REPO_OWNER}/{REPO_NAME}/{BRANCH}/{INDEX_PATH}"
 
         res = req.get(url, timeout=3)
 
         if res.status_code == 200:
             data = res.content.decode()
-            masterlist = json.loads(data)
+            index: dict[str, str] = json.loads(data)
+
+            url = index.get(language)
+
+            if not url:
+                masterlist = {}
+
+                return masterlist
+
+            res = req.get(url, timeout=3)
+
+            if res.status_code == 200:
+                data = res.content.decode()
+                masterlist = json.loads(data)
+            else:
+                log.debug(f"Request URL: {url!r}")
+                raise Exception(f"Request failed! Status Code: {res.status_code}")
 
         else:
             log.debug(f"Request URL: {url!r}")

@@ -2,6 +2,7 @@
 Copyright (c) Cutleast
 """
 
+import logging
 from io import BufferedReader
 from pathlib import Path
 
@@ -10,10 +11,7 @@ from utilities.string import String
 from .group import Group
 from .plugin import Plugin
 from .record import Record
-from .subrecord import EDID, StringSubrecord, MAST
-
-
-import logging
+from .subrecord import EDID, MAST, StringSubrecord
 
 log = logging.getLogger("PluginParser")
 
@@ -100,7 +98,7 @@ class PluginParser:
 
         for record in group.records:
             if isinstance(record, Group):
-                strings += self.extract_group_strings(record)
+                strings += self.extract_group_strings(record, extract_localized)
             else:
                 edid = self.get_record_edid(record)
                 master_index = int(record.formid[:2], base=16)
@@ -111,6 +109,12 @@ class PluginParser:
                 # If index is not in masters, then the record is first defined in this plugin
                 except IndexError:
                     formid = f"{record.formid}|{self.plugin_path.name}"
+
+                # Replace Master Index by "FE" Prefix to indicate Light Plugin
+                # This is especially relevant for DSD
+                # DISABLED for now because it worsened the situation
+                # if self.parsed_data.header.flags["Light Master"]:
+                #     formid = "FE" + formid[2:]
 
                 for subrecord in record.subrecords:
                     if isinstance(subrecord, StringSubrecord):

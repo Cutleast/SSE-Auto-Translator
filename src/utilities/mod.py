@@ -8,6 +8,9 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from qtpy.QtWidgets import QTreeWidgetItem
+from virtual_glob import InMemoryPath, glob
+
+from archive_parser import ArchiveParser
 
 from .plugin import Plugin
 
@@ -27,3 +30,68 @@ class Mod:
     version: str
 
     tree_item: QTreeWidgetItem = None
+
+    __files: list[str] = None
+
+    @property
+    def files(self):
+        """
+        List of files, including from BSAs but no BSA itself.
+        """
+
+        if not self.__files:
+            bsas = self.path.glob("*.bsa")
+            files = [
+                str(file.relative_to(self.path))
+                for file in self.path.glob("*")
+                if not file.suffix.lower() == ".bsa"
+            ]
+
+            for bsa_path in bsas:
+                parser = ArchiveParser(bsa_path)
+                files.extend(parser.parse_archive().glob("**/*.*"))
+
+            # Make case-insensitive
+            for f, file in enumerate(files):
+                files[f] = file.lower()
+
+            self.__files = files
+
+        return self.__files
+
+    def glob(self, pattern: str):
+        """
+        Returns a list of file paths that
+        match the <pattern>.
+
+        Parameters:
+            pattern: str, everything that fnmatch supports
+
+        Returns:
+            list of matching filenames
+        """
+
+        fs = InMemoryPath.from_list(self.files)
+        matches = [p.path for p in glob(fs, pattern)]
+
+        return matches
+
+    def __getstate__(self):
+        state = self.__dict__.copy()
+
+        # Don't pickle tree_item
+        del state["tree_item"]
+
+        # Don't pickle __files that could change
+        del state["__files"]
+
+        return state
+
+    def __setstate__(self, state):
+        self.__dict__.update(state)
+
+        # Add tree_item back
+        self.tree_item = None
+
+        # Add __files back
+        self.__files = None

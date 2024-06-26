@@ -51,9 +51,9 @@ class Plugin:
         Translation for Plugin is available in Database (cyan).
         """
 
-        TranslationAvailableAtNexusMods = 4
+        TranslationAvailableOnline = 4
         """
-        Translation for Plugin is available at Nexus Mods (cyan).
+        Translation for Plugin is available online at Nexus Mods or Confrérie des Traducteurs (cyan).
         """
 
         TranslationIncomplete = 5
@@ -80,7 +80,7 @@ class Plugin:
                 cls.TranslationInstalled: QColor.fromString("#8be248"),
                 cls.TranslationIncomplete: QColor.fromString("#c24cd4"),
                 cls.TranslationAvailableInDatabase: QColor.fromString("#51c6d9"),
-                cls.TranslationAvailableAtNexusMods: QColor.fromString("#51c6d9"),
+                cls.TranslationAvailableOnline: QColor.fromString("#51c6d9"),
                 cls.RequiresTranslation: QColor.fromString("#e9e042"),
                 cls.NoTranslationAvailable: QColor.fromString("#d74343"),
             }
@@ -93,7 +93,7 @@ class Plugin:
                 cls.NoneStatus,
                 cls.TranslationInstalled,
                 cls.TranslationIncomplete,
-                cls.TranslationAvailableAtNexusMods,
+                cls.TranslationAvailableOnline,
                 cls.RequiresTranslation,
                 cls.NoTranslationAvailable,
             ]
@@ -106,3 +106,17 @@ class Plugin:
 
     def __hash__(self) -> int:
         return hash((self.name.lower(), str(self.path).lower()))
+    
+    def __getstate__(self):
+        state = self.__dict__.copy()
+
+        # Don't pickle tree_item
+        del state["tree_item"]
+
+        return state
+
+    def __setstate__(self, state):
+        self.__dict__.update(state)
+
+        # Add tree_item back
+        self.tree_item = None

@@ -189,3 +189,17 @@ class String:
         raise ValueError(
             f"Comparison between String and object of type {type(__value)} not possible!"
         )
+
+    def __getstate__(self):
+        state = self.__dict__.copy()
+
+        # Don't pickle tree_item
+        del state["tree_item"]
+
+        return state
+
+    def __setstate__(self, state):
+        self.__dict__.update(state)
+
+        # Add tree_item back
+        self.tree_item = None

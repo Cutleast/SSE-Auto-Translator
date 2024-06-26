@@ -17,7 +17,6 @@ import utilities as utils
 from database import DatabaseWidget
 from main import MainApp
 from mod_managers import SUPPORTED_MOD_MANAGERS
-from plugin_parser import PluginParser
 from processor import Processor
 from widgets import (
     ErrorDialog,
@@ -25,8 +24,8 @@ from widgets import (
     LoadingDialog,
     SearchBar,
     ShortcutButton,
-    StringListDialog,
     StackedBar,
+    StringListDialog,
 )
 
 
@@ -186,7 +185,7 @@ class MainPageWidget(qtw.QWidget):
         scan_modlist_action.triggered.connect(
             lambda: (
                 Processor.scan_modlist(self.mods, self.app),
-                self.tool_bar.widgetForAction(scan_nm_action).setObjectName(
+                self.tool_bar.widgetForAction(scan_online_action).setObjectName(
                     "accent_button"
                 ),
                 self.tool_bar.widgetForAction(scan_modlist_action).setObjectName(""),
@@ -194,17 +193,17 @@ class MainPageWidget(qtw.QWidget):
             )
         )
 
-        scan_nm_action = self.tool_bar.addAction(
-            qtg.QIcon(str(self.app.data_path / "icons" / "scan_nm.svg")),
-            self.loc.main.scan_nm_translations,
+        scan_online_action = self.tool_bar.addAction(
+            qtg.QIcon(str(self.app.data_path / "icons" / "scan_online.svg")),
+            self.loc.main.scan_online,
         )
-        scan_nm_action.triggered.connect(
+        scan_online_action.triggered.connect(
             lambda: (
-                Processor.scan_nm(self.mods, self.app),
+                Processor.scan_online(self.mods, self.app),
                 self.tool_bar.widgetForAction(
                     download_translations_action
                 ).setObjectName("accent_button"),
-                self.tool_bar.widgetForAction(scan_nm_action).setObjectName(""),
+                self.tool_bar.widgetForAction(scan_online_action).setObjectName(""),
                 self.tool_bar.setStyleSheet(self.app.styleSheet()),
             )
         )
@@ -216,7 +215,7 @@ class MainPageWidget(qtw.QWidget):
         download_translations_action.triggered.connect(
             lambda: (
                 Processor.download_and_install_translations(self.mods, self.app),
-                self.tool_bar.widgetForAction(build_dict_action).setObjectName(
+                self.tool_bar.widgetForAction(build_output_action).setObjectName(
                     "accent_button"
                 ),
                 self.tool_bar.widgetForAction(
@@ -226,14 +225,14 @@ class MainPageWidget(qtw.QWidget):
             )
         )
 
-        build_dict_action = self.tool_bar.addAction(
+        build_output_action = self.tool_bar.addAction(
             qta.icon("mdi6.export-variant", color="#ffffff"),
-            self.loc.main.build_dictionary,
+            self.loc.main.build_output_mod,
         )
-        build_dict_action.triggered.connect(
+        build_output_action.triggered.connect(
             lambda: (
-                Processor.build_dsd_dictionary(self.mods, self.app),
-                self.tool_bar.widgetForAction(build_dict_action).setObjectName(""),
+                Processor.build_output_mod(self.mods, self.app),
+                self.tool_bar.widgetForAction(build_output_action).setObjectName(""),
                 self.tool_bar.setStyleSheet(self.app.styleSheet()),
             )
         )
@@ -333,13 +332,7 @@ class MainPageWidget(qtw.QWidget):
 
             def show_strings():
                 if plugin_selected:
-                    parser = PluginParser(selected_plugin.path)
-                    parser.parse_plugin()
-                    strings = [
-                        string
-                        for group in parser.extract_strings().values()
-                        for string in group
-                    ]
+                    strings = self.app.cacher.get_plugin_strings(selected_plugin.path)
 
                     dialog = StringListDialog(self.app, selected_plugin.name, strings)
                     dialog.show()
@@ -347,13 +340,7 @@ class MainPageWidget(qtw.QWidget):
                     strings: dict[str, list[utils.String]] = {}
 
                     for plugin in selected_mod.plugins:
-                        parser = PluginParser(plugin.path)
-                        parser.parse_plugin()
-                        plugin_strings = [
-                            string
-                            for group in parser.extract_strings().values()
-                            for string in group
-                        ]
+                        plugin_strings = self.app.cacher.get_plugin_strings(plugin.path)
                         strings[plugin.name] = plugin_strings
 
                     dialog = StringListDialog(self.app, selected_mod.name, strings)
@@ -361,6 +348,8 @@ class MainPageWidget(qtw.QWidget):
 
             def show_structure():
                 if plugin_selected:
+                    from plugin_parser import PluginParser
+
                     parser = PluginParser(selected_plugin.path)
                     parser.parse_plugin()
 
@@ -431,8 +420,8 @@ class MainPageWidget(qtw.QWidget):
                 if matching:
                     mod = matching[0]
                     if mod.mod_id:
-                        url = utils.create_nexus_mods_url(
-                            "skyrimspecialedition", mod.mod_id
+                        url = self.app.provider.get_modpage_link(
+                            mod.mod_id, source=utils.Source.NexusMods
                         )
                         os.startfile(url)
 
@@ -443,41 +432,6 @@ class MainPageWidget(qtw.QWidget):
                 elif plugin_selected:
                     if selected_plugin.path.is_file():
                         os.system(f'explorer.exe /select,"{selected_plugin.path}"')
-
-            def show_translation_at_nm():
-                if not plugin_selected and not mod_selected:
-                    return
-
-                if plugin_selected:
-                    translation = self.app.database.get_translation_by_plugin_name(
-                        selected_plugin.name
-                    )
-                else:
-                    translation = self.app.database.get_translation_by_mod(selected_mod)
-
-                if translation:
-                    if translation.mod_id and translation.file_id:
-                        url = utils.create_nexus_mods_url(
-                            "skyrimspecialedition", translation.mod_id
-                        )
-                        os.startfile(url)
-                else:
-                    if plugin_selected:
-                        mod = [
-                            _mod
-                            for _mod in self.mods
-                            if selected_plugin in _mod.plugins
-                        ][0]
-                    else:
-                        mod = selected_mod
-                    translations = self.app.api.get_mod_translations(
-                        "skyrimspecialedition", mod.mod_id
-                    )
-                    translation_urls = translations.get(
-                        self.app.user_config["language"]
-                    )
-                    if translation_urls:
-                        os.startfile(translation_urls[0])
 
             def show_untranslated_strings():
                 if not plugin_selected:
@@ -561,7 +515,7 @@ class MainPageWidget(qtw.QWidget):
 
                             global translation
                             translation = self.app.database.create_translation(
-                                selected_plugin.path
+                                selected_plugin.path, self.app.cacher
                             )
                             translation.save_translation()
                             self.app.database.add_translation(translation)
@@ -569,7 +523,6 @@ class MainPageWidget(qtw.QWidget):
                         loadingdialog = LoadingDialog(self.app.root, self.app, process)
                         loadingdialog.exec()
 
-                        self.app.database.save_database()
                         self.database_widget.translations_widget.load_translations()
                         self.database_widget.translations_widget.translations_widget.scrollToItem(
                             translation.tree_item,
@@ -602,7 +555,6 @@ class MainPageWidget(qtw.QWidget):
                 loadingdialog = LoadingDialog(self.app.root, self.app, process)
                 loadingdialog.exec()
 
-                self.app.database.save_database()
                 self.app.mainpage_widget.database_widget.translations_widget.load_translations()
                 self.update_modlist()
 
@@ -684,14 +636,6 @@ class MainPageWidget(qtw.QWidget):
                 show_translation_strings_action.triggered.connect(
                     show_translation_strings
                 )
-
-                show_translation_at_nm_action = menu.addAction(
-                    self.loc.main.open_translation_on_nexusmods
-                )
-                show_translation_at_nm_action.setIcon(
-                    qtg.QIcon(str(self.app.data_path / "icons" / "nexus_mods.svg"))
-                )
-                show_translation_at_nm_action.triggered.connect(show_translation_at_nm)
 
                 edit_translation_action = menu.addAction(self.mloc.edit_translation)
                 edit_translation_action.setIcon(
@@ -802,7 +746,7 @@ class MainPageWidget(qtw.QWidget):
             lambda text: self.database_widget.translations_widget.update_translations()
         )
 
-        splitter.setSizes([0.8 * splitter.width(), 0.2 * splitter.width()])
+        splitter.setSizes([0.6 * splitter.width(), 0.4 * splitter.width()])
 
         self.mods_widget.resizeColumnToContents(2)
 
@@ -907,7 +851,7 @@ class MainPageWidget(qtw.QWidget):
                             plugin_visible = (
                                 self.filter_translation_available.isChecked()
                             )
-                        case plugin.Status.TranslationAvailableAtNexusMods:
+                        case plugin.Status.TranslationAvailableOnline:
                             plugin_visible = (
                                 self.filter_translation_available.isChecked()
                             )
@@ -937,7 +881,7 @@ class MainPageWidget(qtw.QWidget):
                             translation_incomplete_plugins += 1
                         case plugin.Status.TranslationAvailableInDatabase:
                             translation_available_plugins += 1
-                        case plugin.Status.TranslationAvailableAtNexusMods:
+                        case plugin.Status.TranslationAvailableOnline:
                             translation_available_plugins += 1
                         case plugin.Status.RequiresTranslation:
                             requires_translation_plugins += 1
@@ -1032,10 +976,10 @@ class MainPageWidget(qtw.QWidget):
 ).name()}">{translation_installed_plugins}</font></td></tr>
 
 <tr><td><font color="{utils.Plugin.Status.get_color(
-    utils.Plugin.Status.TranslationAvailableAtNexusMods
+    utils.Plugin.Status.TranslationAvailableOnline
 ).name()}">{self.mloc.translation_available}:\
 </font></td><td align=right><font color="{utils.Plugin.Status.get_color(
-    utils.Plugin.Status.TranslationAvailableAtNexusMods
+    utils.Plugin.Status.TranslationAvailableOnline
 ).name()}">{translation_available_plugins}</font></td></tr>
 
 <tr><td><font color="{utils.Plugin.Status.get_color(
@@ -1061,6 +1005,9 @@ class MainPageWidget(qtw.QWidget):
 </table>
 """
         self.plugins_num_label.setToolTip(num_tooltip)
+        self.bar_chart.setToolTip(num_tooltip)
+
+        self.app.cacher.update_plugin_states_cache(self.mods)
 
         Processor.update_status_colors(self.mods)
 
@@ -1178,6 +1125,20 @@ class MainPageWidget(qtw.QWidget):
                         else:
                             plugin_item.setCheckState(0, qtc.Qt.CheckState.Checked)
                             plugin_item.setDisabled(False)
+
+                        # Apply cache
+                        state = self.app.cacher.get_from_plugin_states_cache(
+                            plugin.path
+                        )
+                        if state:
+                            checked, status = state
+                            plugin.status = status
+                            if checked:
+                                plugin_item.setCheckState(0, qtc.Qt.CheckState.Checked)
+                            else:
+                                plugin_item.setCheckState(
+                                    0, qtc.Qt.CheckState.Unchecked
+                                )
                         mod_item.addChild(plugin_item)
 
                 if cur_separator is not None:
@@ -1264,7 +1225,7 @@ class MainPageWidget(qtw.QWidget):
             qta.icon(
                 "mdi6.square-rounded",
                 color=utils.Plugin.Status.get_color(
-                    utils.Plugin.Status.TranslationAvailableAtNexusMods
+                    utils.Plugin.Status.TranslationAvailableOnline
                 ),
             ).pixmap(32, 32)
         )
@@ -1360,11 +1321,13 @@ class MainPageWidget(qtw.QWidget):
         edid_box.clicked.connect(edid_entry.setFocus)
         flayout.addRow(edid_box, edid_entry)
 
-        string_box = qtw.QRadioButton(self.loc.main.string)
+        string_box = qtw.QCheckBox(self.loc.main.string)
         string_entry = qtw.QLineEdit()
         string_entry.setDisabled(True)
-        string_box.toggled.connect(
-            lambda: string_entry.setEnabled(string_box.isChecked())
+        string_box.stateChanged.connect(
+            lambda state: string_entry.setEnabled(
+                state == qtc.Qt.CheckState.Checked.value
+            )
         )
         string_box.clicked.connect(string_entry.setFocus)
         flayout.addRow(string_box, string_entry)
@@ -1397,7 +1360,7 @@ class MainPageWidget(qtw.QWidget):
             if edid_box.isChecked():
                 filter["editor_id"] = edid_entry.text()
 
-            if string_box.isChecked() and string_entry.text():
+            if string_box.isChecked():
                 filter["string"] = string_entry.text()
 
             matching = Processor.run_string_search(self.mods, filter, self.app)

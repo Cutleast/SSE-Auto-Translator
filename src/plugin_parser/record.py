@@ -24,11 +24,13 @@ class Record:
     subrecords: list[Subrecord] = []
 
     flag_types = {
+        0x00000001: "Master",
         0x00000080: "Localized",
         0x00001000: "Ignored",
         0x00040000: "Compressed",
         0x00000800: "Initially Disabled",
         0x00000020: "Deleted",
+        0x00000200: "Light Master",
     }
     flags: dict[str, bool] = {}
 

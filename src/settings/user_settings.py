@@ -17,7 +17,7 @@ from main import MainApp
 from widgets import KeyEntry, ApiSetup
 
 
-class UserSettings(qtw.QWidget):
+class UserSettings(qtw.QScrollArea):
     """
     Widget for user settings.
     """
@@ -37,16 +37,50 @@ class UserSettings(qtw.QWidget):
 
         self.setObjectName("root")
 
+        self.setWidgetResizable(True)
+        self.setObjectName("transparent")
+        scroll_widget = qtw.QWidget()
+        scroll_widget.setObjectName("transparent")
+        self.setWidget(scroll_widget)
+
         flayout = qtw.QFormLayout()
-        self.setLayout(flayout)
+        scroll_widget.setLayout(flayout)
 
         # Language
         self.lang_box = qtw.QComboBox()
+        self.lang_box.installEventFilter(self)
         self.lang_box.setEditable(False)
         self.lang_box.addItems([lang[0].capitalize() for lang in utils.SUPPORTED_LANGS])
         self.lang_box.setCurrentText(self.app.user_config["language"])
         self.lang_box.currentTextChanged.connect(self.on_change)
         flayout.addRow(self.mloc.game_lang, self.lang_box)
+
+        # Source
+        source_label = qtw.QLabel(self.loc.main.source)
+        source_label.setEnabled(self.app.user_config["language"] == "French")
+        self.source_dropdown = qtw.QComboBox()
+        self.source_dropdown.installEventFilter(self)
+        self.source_dropdown.setEnabled(self.app.user_config["language"] == "French")
+        self.source_dropdown.setEditable(False)
+        self.source_dropdown.addItems(app.provider.Preference._member_names_)
+        self.source_dropdown.setCurrentText(self.app.user_config["provider_preference"])
+        self.source_dropdown.currentTextChanged.connect(self.on_change)
+
+        def on_lang_change(lang: str):
+            source_label.setEnabled(lang == "French")
+            self.source_dropdown.setEnabled(lang == "French")
+
+            if lang == "French":
+                self.source_dropdown.setCurrentText(
+                    app.provider.Preference.PreferConfrerie.name
+                )
+            else:
+                self.source_dropdown.setCurrentText(
+                    app.provider.Preference.OnlyNexusMods.name
+                )
+
+        self.lang_box.currentTextChanged.connect(on_lang_change)
+        flayout.addRow(source_label, self.source_dropdown)
 
         # API Setup / Settings
         api_key_hlayout = qtw.QHBoxLayout()
@@ -60,6 +94,7 @@ class UserSettings(qtw.QWidget):
 
         # Mod Manager selection
         self.mod_manager_dropdown = qtw.QComboBox()
+        self.mod_manager_dropdown.installEventFilter(self)
         self.mod_manager_dropdown.setEditable(False)
         self.mod_manager_dropdown.addItems(
             [mod_manager.name for mod_manager in mod_managers.SUPPORTED_MOD_MANAGERS]
@@ -78,6 +113,7 @@ class UserSettings(qtw.QWidget):
 
         # Modinstance Selection
         self.modinstance_dropdown = qtw.QComboBox()
+        self.modinstance_dropdown.installEventFilter(self)
         self.modinstance_dropdown.setEditable(False)
         flayout.addRow(self.loc.main.modinstance, self.modinstance_dropdown)
 
@@ -114,6 +150,7 @@ class UserSettings(qtw.QWidget):
         # Profile Selection
         profile_label = qtw.QLabel(self.loc.main.instance_profile)
         self.instance_profile_dropdown = qtw.QComboBox()
+        self.instance_profile_dropdown.installEventFilter(self)
         self.instance_profile_dropdown.setDisabled(True)
         self.instance_profile_dropdown.setEditable(False)
         self.instance_profile_dropdown.currentTextChanged.connect(self.on_change)
@@ -196,6 +233,44 @@ class UserSettings(qtw.QWidget):
         self.masterlist_box.stateChanged.connect(self.on_change)
         flayout.addRow(self.masterlist_box)
 
+        # Enabled File Types
+        filetypes_label = qtw.QLabel(self.loc.settings.enabled_file_types)
+        filetypes_label.setAlignment(qtc.Qt.AlignmentFlag.AlignLeft)
+        filetypes_label.setObjectName("relevant_label")
+        flayout.addRow(filetypes_label)
+
+        self.enable_interface_files_box = qtw.QCheckBox(
+            self.loc.settings.enable_interface_files
+        )
+        self.enable_interface_files_box.stateChanged.connect(self.on_change)
+        self.enable_interface_files_box.setChecked(
+            self.app.user_config["enable_interface_files"]
+        )
+        flayout.addRow(self.enable_interface_files_box)
+
+        self.enable_scripts_box = qtw.QCheckBox(
+            self.loc.settings.enable_scripts + " [EXPERIMENTAL]"
+        )
+        self.enable_scripts_box.stateChanged.connect(self.on_change)
+        self.enable_scripts_box.setChecked(self.app.user_config["enable_scripts"])
+        flayout.addRow(self.enable_scripts_box)
+
+        self.enable_textures_box = qtw.QCheckBox(
+            self.loc.settings.enable_textures + " [EXPERIMENTAL]"
+        )
+        self.enable_textures_box.stateChanged.connect(self.on_change)
+        self.enable_textures_box.setChecked(self.app.user_config["enable_textures"])
+        flayout.addRow(self.enable_textures_box)
+
+        self.enable_sound_files_box = qtw.QCheckBox(
+            self.loc.settings.enable_sound_files + " [EXPERIMENTAL]"
+        )
+        self.enable_sound_files_box.stateChanged.connect(self.on_change)
+        self.enable_sound_files_box.setChecked(
+            self.app.user_config["enable_sound_files"]
+        )
+        flayout.addRow(self.enable_sound_files_box)
+
     def start_api_setup(self):
         """
         Opens API Setup in a separate dialog.
@@ -256,4 +331,16 @@ class UserSettings(qtw.QWidget):
             "modinstance": self.modinstance_dropdown.currentText(),
             "use_masterlist": self.masterlist_box.isChecked(),
             "instance_profile": profile,
+            "provider_preference": self.source_dropdown.currentText(),
+            "enable_interface_files": self.enable_interface_files_box.isChecked(),
+            "enable_scripts": self.enable_scripts_box.isChecked(),
+            "enable_textures": self.enable_textures_box.isChecked(),
+            "enable_sound_files": self.enable_sound_files_box.isChecked(),
         }
+    
+    def eventFilter(self, source: qtc.QObject, event: qtc.QEvent):
+        if event.type() == qtc.QEvent.Type.Wheel and isinstance(source, qtw.QComboBox):
+            self.wheelEvent(event)
+            return True
+
+        return super().eventFilter(source, event)

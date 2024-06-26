@@ -4,6 +4,8 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+import os
+
 import qtawesome as qta
 import qtpy.QtCore as qtc
 import qtpy.QtWidgets as qtw
@@ -45,6 +47,23 @@ class IntroductionPage(qtw.QWidget):
         documentation_button = qtw.QPushButton(self.loc.main.show_documentation)
         documentation_button.clicked.connect(self.startup_dialog.app.show_documentation)
         vlayout.addWidget(documentation_button)
+
+        vlayout.addSpacing(50)
+
+        # Path Limit
+        path_limit_label = qtw.QLabel(self.mloc.path_limit)
+        vlayout.addWidget(path_limit_label)
+
+        fix_button = qtw.QPushButton(self.loc.main.fix_path_limit)
+
+        def fix_path_limit():
+            try:
+                os.startfile(self.startup_dialog.app.data_path / "path_limit.reg")
+            except OSError:
+                pass
+
+        fix_button.clicked.connect(fix_path_limit)
+        vlayout.addWidget(fix_button)
 
         vlayout.addStretch()
 

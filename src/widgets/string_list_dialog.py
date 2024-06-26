@@ -42,6 +42,7 @@ class StringListDialog(qtw.QWidget):
         self.setWindowFlag(qtc.Qt.WindowType.Window, True)
         self.setObjectName("root")
         self.setMinimumSize(1400, 800)
+        self.setAttribute(qtc.Qt.WidgetAttribute.WA_DeleteOnClose)
         utils.apply_dark_title_bar(self)
 
         vlayout = qtw.QVBoxLayout()
@@ -148,15 +149,21 @@ class StringListDialog(qtw.QWidget):
 
                 menu.addSeparator()
 
-                if selected_item.isFirstColumnSpanned():
-                    copy_plugin_name_action = menu.addAction(self.loc.main.copy_plugin_name)
-                    copy_plugin_name_action.setIcon(qta.icon("mdi6.content-copy", color="#ffffff"))
-                    copy_plugin_name_action.triggered.connect(lambda: pyperclip.copy(selected_item.text(0)))
+            if selected_item.isFirstColumnSpanned():
+                copy_plugin_name_action = menu.addAction(self.loc.main.copy_plugin_name)
+                copy_plugin_name_action.setIcon(
+                    qta.icon("mdi6.content-copy", color="#ffffff")
+                )
+                copy_plugin_name_action.triggered.connect(
+                    lambda: pyperclip.copy(selected_item.text(0))
+                )
 
-            copy_action = menu.addAction(self.loc.main.copy)
-            copy_action.setIcon(qta.icon("mdi6.content-copy", color="#ffffff"))
-            copy_action.setIconVisibleInMenu(True)
-            copy_action.triggered.connect(self.copy_selected)
+            else:
+                copy_action = menu.addAction(self.loc.main.copy)
+                copy_action.setShortcut(qtg.QKeySequence("Ctrl+C"))
+                copy_action.setIcon(qta.icon("mdi6.content-copy", color="#ffffff"))
+                copy_action.setIconVisibleInMenu(True)
+                copy_action.triggered.connect(self.copy_selected)
 
             menu.exec(self.strings_widget.mapToGlobal(point))
 
@@ -199,6 +206,9 @@ class StringListDialog(qtw.QWidget):
                     self.loc.main.string,
                 ]
             )
+
+        copy_shortcut = qtg.QShortcut(qtg.QKeySequence("Ctrl+C"), self)
+        copy_shortcut.activated.connect(self.copy_selected)
 
         self.load_strings()
 
@@ -265,6 +275,9 @@ class StringListDialog(qtw.QWidget):
 
                 self.strings_widget.addTopLevelItem(section_item)
                 section_item.setFirstColumnSpanned(True)
+
+            if len(self.strings) == 1:
+                self.strings_widget.topLevelItem(0).setExpanded(True)
         else:
             for string in self.strings:
                 item = process_string(string)

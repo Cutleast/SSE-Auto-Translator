@@ -6,9 +6,10 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 import logging
 import subprocess
-
 from fnmatch import fnmatch
 from pathlib import Path
+
+from virtual_glob import InMemoryPath, glob
 
 
 class Archive:
@@ -20,26 +21,48 @@ class Archive:
 
     log = logging.getLogger("Archiver")
 
+    __files: list[str] = None
+
     def __init__(self, path: Path):
         self.path = path
 
-    def get_files(self) -> list[str]:
+    @property
+    def files(self) -> list[str]:
         """
         Returns a list of filenames in archive.
         """
 
         raise NotImplementedError
 
+    def get_files(self) -> list[str]:
+        """
+        Alias method for `files` property.
+        """
+
+        return self.files
+
     def extract_all(self, dest: Path):
         """
         Extracts all files to `dest`.
         """
 
-        retcode = subprocess.run(
-            f'7z.exe x "{self.path}" -o"{dest}" -aoa -y', shell=True
-        )
+        cmd = ["7z.exe", "x", str(self.path), f"-o{dest}", "-aoa", "-y"]
 
-        if retcode:
+        with subprocess.Popen(
+            cmd,
+            shell=True,
+            stdin=subprocess.PIPE,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            encoding="utf8",
+            errors="ignore",
+        ) as process:
+            output = process.stderr.read()
+
+        if process.returncode:
+            self.log.debug(f"Command: {cmd}")
+            self.log.error(output)
             raise Exception("Unpacking command failed!")
 
     def extract(self, filename: str, dest: Path):
@@ -47,15 +70,23 @@ class Archive:
         Extracts `filename` from archive to `dest`.
         """
 
-        process = subprocess.run(
-            f'7z.exe x -o"{dest}" -aoa -y -- "{self.path}" "{filename}"',
+        cmd = ["7z.exe", "x", f"-o{dest}", "-aoa", "-y", "--", str(self.path), filename]
+
+        with subprocess.Popen(
+            cmd,
             shell=True,
-            capture_output=True,
+            stdin=subprocess.PIPE,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
             text=True,
-        )
+            encoding="utf8",
+            errors="ignore",
+        ) as process:
+            output = process.stderr.read()
 
         if process.returncode:
-            self.log.error(process.stderr)
+            self.log.debug(f"Command: {cmd}")
+            self.log.error(output)
             raise Exception("Unpacking command failed!")
 
     def extract_files(self, filenames: list[str], dest: Path):
@@ -63,15 +94,39 @@ class Archive:
         Extracts `filenames` from archive to `dest`.
         """
 
-        cmd = f'7z.exe x -o"{dest}" -aoa -y -- "{self.path}"'
+        if not len(filenames):
+            return
 
-        for filename in filenames:
-            cmd += f' "{filename}"'
+        cmd = [
+            "7z.exe",
+            "x",
+            f"-o{dest}",
+            "-aoa",
+            "-y",
+            str(self.path),
+        ]
 
-        process = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+        # Write filenames to a txt file to workaround commandline length limit
+        filenames_txt = self.path.with_suffix(".txt")
+        with open(filenames_txt, "w", encoding="utf8") as file:
+            file.write("\n".join(filenames))
+        cmd.append(f"@{filenames_txt}")
+
+        with subprocess.Popen(
+            cmd,
+            shell=True,
+            stdin=subprocess.PIPE,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            encoding="utf8",
+            errors="ignore",
+        ) as process:
+            output = process.stderr.read()
 
         if process.returncode:
-            self.log.error(process.stderr)
+            self.log.debug(f"Command: {cmd}")
+            self.log.error(output)
             raise Exception("Unpacking command failed!")
 
     def find(self, pattern: str) -> list[str]:
@@ -87,6 +142,23 @@ class Archive:
             )
 
         return result
+
+    def glob(self, pattern: str) -> list[str]:
+        """
+        Returns a list of file paths that
+        match the <pattern>.
+
+        Parameters:
+            pattern: str, everything that fnmatch supports
+
+        Returns:
+            list of matching filenames
+        """
+
+        fs = InMemoryPath.from_list(self.files)
+        matches = [p.path for p in glob(fs, pattern)]
+
+        return matches
 
     @staticmethod
     def load_archive(archive_path: Path) -> "Archive":

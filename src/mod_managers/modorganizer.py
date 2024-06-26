@@ -113,7 +113,12 @@ class ModOrganizer(ModManager):
 
                     general = mod_meta_data.get("General")
                     if general is not None:
-                        mod_id = int(general.get("modid", "0"))
+                        mod_id = general.get("modid")
+                        if mod_id is None:
+                            mod_id = 0
+                        else:
+                            mod_id = int(mod_id)
+
                         version = general.get("version", None)
 
                         if version is None:
@@ -134,7 +139,7 @@ class ModOrganizer(ModManager):
                         version = ""
 
                         self.log.warning(
-                            f"Incomplete meta.ini in {str(mod_meta_path.relative_to(modlist_path))!r}!"
+                            f"Incomplete meta.ini in {str(mod_meta_path.parent)!r}!"
                         )
                 else:
                     mod_id = 0

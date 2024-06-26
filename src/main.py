@@ -32,7 +32,7 @@ class MainApp(qtw.QApplication):
     """
 
     name = "SSE Auto Translator"
-    version = "1.2.1"
+    version = "2.0.0"
 
     loc: "utils.Localisator" = None
     cur_path = Path(__file__).parent.resolve()
@@ -42,6 +42,7 @@ class MainApp(qtw.QApplication):
     translator_conf_path = data_path / "translator" / "config.json"
     style_path = data_path / "app" / "style.qss"
     loc_path = data_path / "locales"
+    cache_path = data_path / "cache"
 
     executable = str(cur_path / "SSE-AT.exe")
     """
@@ -57,6 +58,7 @@ class MainApp(qtw.QApplication):
         "auto_bind_nxm": False,
         "use_spell_check": True,
         "output_path": None,
+        "temp_path": None,
     }
     app_config = default_app_config
     user_config: dict = None
@@ -68,7 +70,7 @@ class MainApp(qtw.QApplication):
 
     translator: "translator_api.Translator" = None
 
-    api: "NexusModsApi" = None
+    provider: "Provider" = None
 
     log_name = f"{time.strftime('%d.%m.%Y')}-{time.strftime('%H.%M.%S')}.log"
     log_path = data_path / "logs"
@@ -88,6 +90,8 @@ class MainApp(qtw.QApplication):
     tmp_dir: Path = None
 
     masterlist: dict[str, dict] = None
+
+    cacher: "Cacher" = None
 
     def __init__(self):
         super().__init__()
@@ -127,14 +131,15 @@ class MainApp(qtw.QApplication):
 
         super().exec()
 
-        if self.setup_complete:
-            self.database.save_database()
-
         self.clean_and_exit()
 
     def start_main_app(self):
+        self.cacher = Cacher(self)
+        self.cacher.load_caches()
+
         self.load_user_data()
         self.load_masterlist()
+
         self.init_gui()
 
         self.startTimer(1000, qtc.Qt.TimerType.PreciseTimer)
@@ -225,13 +230,32 @@ class MainApp(qtw.QApplication):
 
         self.log.info("Loading user data...")
 
-        with open(self.user_conf_path, "r", encoding="utf8") as file:
-            self.user_config: dict = json.load(file)
+        default_user_config = {
+            "language": "",
+            "api_key": "",
+            "mod_manager": "",
+            "modinstance": "",
+            "use_masterlist": True,
+            "instance_profile": "",
+            "provider_preference": "",
+            "enable_interface_files": True,
+            "enable_scripts": True,
+            "enable_textures": False,
+            "enable_sound_files": False,
+        }
 
-        if "use_masterlist" not in self.user_config:
-            self.user_config["use_masterlist"] = True
-            with self.user_conf_path.open("w", encoding="utf8") as file:
-                json.dump(self.user_config, file, indent=4)
+        with open(self.user_conf_path, "r", encoding="utf8") as file:
+            self.user_config: dict = default_user_config | json.load(file)
+
+        if self.user_config["provider_preference"]:
+            if self.user_config["language"] == "French":
+                self.user_config["provider_preference"] = (
+                    Provider.Preference.PreferConfrerie.name
+                )
+            else:
+                self.user_config["provider_preference"] = (
+                    Provider.Preference.OnlyNexusMods.name
+                )
 
         if self.translator_conf_path.is_file():
             with open(self.translator_conf_path, encoding="utf8") as file:
@@ -253,10 +277,17 @@ class MainApp(qtw.QApplication):
             self.log.info("Falling back to Google Translator...")
             self.translator = translator_api.GoogleTranslator(self)
 
-        self.api = NexusModsApi(self.user_config["api_key"])
-        api_valid = self.api.check_api_key()
+        self.provider = Provider(
+            self.user_config["api_key"],
+            self.cacher,
+            Provider.Preference.get(
+                self.user_config["provider_preference"],
+                Provider.Preference.OnlyNexusMods,
+            ),
+        )
+        nm_api_valid = self.provider.check_api_key()
 
-        if not api_valid:
+        if not nm_api_valid:
             self.log.error("Nexus Mods API Key is invalid!")
 
             dialog = qtw.QDialog(self.root)
@@ -282,7 +313,7 @@ class MainApp(qtw.QApplication):
 
             def save():
                 self.user_config["api_key"] = api_setup.api_key
-                self.api.api_key = self.user_config["api_key"]
+                self.provider.api_key = self.user_config["api_key"]
 
                 with self.user_conf_path.open("w", encoding="utf8") as file:
                     json.dump(self.user_config, file, indent=4)
@@ -340,6 +371,7 @@ class MainApp(qtw.QApplication):
         self.log.info(f"Commandline Arguments: {sys.argv}")
         self.log.info(f"Data Path: {self.data_path}")
         self.log.info(f"Config Path: {self.app_conf_path}")
+        self.log.info(f"Cache Path: {self.cache_path}")
         self.log.info(f"Log Path: {self.log_path}")
         self.log.info(f"Log Level: {utils.intlevel2strlevel(self.log_level)}")
         self.log.debug(
@@ -435,8 +467,21 @@ class MainApp(qtw.QApplication):
 
         update_action = help_menu.addAction(self.loc.main.check_for_updates)
         update_action.setIcon(qta.icon("fa.refresh", color="#ffffff"))
-        update_action.setDisabled(True)
-        update_action.setToolTip("WIP")
+
+        def check_for_updates():
+            upd = updater.Updater(self)
+            if upd.update_available():
+                upd.run()
+            else:
+                messagebox = qtw.QMessageBox(self.root)
+                utils.apply_dark_title_bar(messagebox)
+                messagebox.setWindowTitle(self.loc.updater.no_updates)
+                messagebox.setText(self.loc.updater.no_updates_available)
+                messagebox.setTextFormat(qtc.Qt.TextFormat.RichText)
+                messagebox.setIcon(qtw.QMessageBox.Icon.Information)
+                messagebox.exec()
+
+        update_action.triggered.connect(check_for_updates)
 
         help_menu.addSeparator()
 
@@ -730,7 +775,11 @@ class MainApp(qtw.QApplication):
         """
 
         if self.tmp_dir is None:
-            self.tmp_dir = Path(tempfile.mkdtemp(prefix="SSE-AT_temp-"))
+            self.tmp_dir = Path(
+                tempfile.mkdtemp(
+                    prefix="SSE-AT_temp-", dir=self.app_config["temp_path"]
+                )
+            )
 
         return self.tmp_dir
 
@@ -738,16 +787,20 @@ class MainApp(qtw.QApplication):
         super().timerEvent(event)
 
         if hasattr(self, "api_label"):
+            rem_hreq, rem_dreq = self.provider.get_remaining_requests()
             self.api_label.setText(
-                f"API: {self.loc.main.api_hleft}: {self.api.rem_hreq} | {self.loc.main.api_dleft}: {self.api.rem_dreq}"
+                f"API: {self.loc.main.api_hleft}: {rem_hreq} | {self.loc.main.api_dleft}: {rem_dreq}"
             )
-            if self.api.rem_hreq < 50 and self.api.rem_dreq == 0:
+            if rem_hreq < 50 and rem_dreq == 0:
                 self.api_label.setObjectName("critical_label")
-            elif self.api.rem_hreq < 100 and self.api.rem_dreq == 0:
+            elif rem_hreq < 100 and rem_dreq == 0:
                 self.api_label.setObjectName("warning_label")
             else:
                 self.api_label.setObjectName("label")
             self.api_label.setStyleSheet(self.styleSheet())
+            self.api_label.setVisible(
+                self.provider.preference != self.provider.Preference.OnlyConfrerie
+            )
 
         if hasattr(self, "mainpage_widget"):
             if self.nxm_listener is not None:
@@ -778,7 +831,10 @@ class MainApp(qtw.QApplication):
 
                 choice = message_box.exec()
 
-                if choice != qtw.QMessageBox.StandardButton.Yes:
+                if choice == qtw.QMessageBox.StandardButton.Yes:
+                    confirmation = True
+                    self.mainpage_widget.database_widget.downloads_widget.thread.terminate()
+                else:
                     confirmation = False
 
         if hasattr(self, "translation_editor"):
@@ -816,6 +872,9 @@ class MainApp(qtw.QApplication):
     def clean_and_exit(self):
         self.log.info("Exiting application...")
 
+        if self.cacher is not None:
+            self.cacher.save_caches()
+
         if hasattr(self, "mainpage_widget"):
             downloader_thread = (
                 self.mainpage_widget.database_widget.downloads_widget.thread
@@ -847,9 +906,10 @@ def main():
     global updater
     global utils
     global widgets
+    global Cacher
     global TranslationDatabase
     global MainPageWidget
-    global NexusModsApi
+    global Provider
     global SettingsDialog
     global StartupDialog
     global TranslationEditor
@@ -858,11 +918,12 @@ def main():
     import updater
     import utilities as utils
     import widgets
+    from cacher import Cacher
     from database import TranslationDatabase
     from main_page import MainPageWidget
-    from nm_api import NexusModsApi
     from settings import SettingsDialog
     from startup_dialog import StartupDialog
     from translation_editor import TranslationEditor
+    from translation_provider import Provider
 
     MainApp().exec()

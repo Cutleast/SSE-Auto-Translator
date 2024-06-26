@@ -5,13 +5,14 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import logging
+import time
 from pathlib import Path
 from shutil import rmtree
 
 import jstyleson as json
 
-from plugin_parser import PluginParser
-from utilities import Mod, String
+from cacher import Cacher
+from utilities import Mod, Source, String
 
 from .translation import Translation
 
@@ -61,6 +62,7 @@ class TranslationDatabase:
             original_file_id=0,
             original_version="",
             path=translation_path,
+            source=Source.Local,
         )
         translation.load_translation()
         self.vanilla_translation = translation
@@ -90,22 +92,36 @@ class TranslationDatabase:
         for translation_data in translation_list:
             name: str = translation_data["name"]
             mod_id: int = int(translation_data["mod_id"])
-            file_id: int = int(translation_data["file_id"])
+            file_id: int | None = translation_data["file_id"]
             version: str = translation_data["version"]
             original_mod_id: int = int(translation_data["original_mod_id"])
             original_file_id: int = int(translation_data["original_file_id"])
             original_version: str = translation_data["original_version"]
             translation_path: Path = self.userdb_path / self.language / name
+            source = translation_data.get("source")
+            source = Source.get(source)
+
+            if source is None:
+                if mod_id and file_id:
+                    source = Source.NexusMods
+                elif mod_id:
+                    source = Source.Confrerie
+                else:
+                    source = Source.Local
+
+            timestamp: int | None = translation_data.get("file_timestamp")
 
             translation = Translation(
-                name,
-                mod_id,
-                file_id,
-                version,
-                original_mod_id,
-                original_file_id,
-                original_version,
-                translation_path,
+                name=name,
+                mod_id=mod_id,
+                file_id=file_id,
+                version=version,
+                original_mod_id=original_mod_id,
+                original_file_id=original_file_id,
+                original_version=original_version,
+                path=translation_path,
+                source=source,
+                timestamp=timestamp,
             )
             translation.load_translation()
             translations.append(translation)
@@ -139,6 +155,8 @@ class TranslationDatabase:
                 "original_mod_id": translation.original_mod_id,
                 "original_file_id": translation.original_file_id,
                 "original_version": translation.original_version,
+                "source": translation.source.name,
+                "timestamp": translation.timestamp,
             }
             for translation in self.user_translations
         ]
@@ -156,6 +174,22 @@ class TranslationDatabase:
         if translation not in self.user_translations:
             self.user_translations.append(translation)
 
+        # Merge new translation with existing one
+        else:
+            installed_translation = self.user_translations[
+                self.user_translations.index(translation)
+            ]
+
+            for plugin_name, plugin_strings in translation.strings.items():
+                _strings = (
+                    installed_translation.strings.get(plugin_name, []) + plugin_strings
+                )
+
+                # Remove duplicates
+                installed_translation.strings[plugin_name] = list(set(_strings))
+
+        self.save_database()
+
     def delete_translation(self, translation: Translation):
         """
         Deletes `translation` from database.
@@ -165,6 +199,8 @@ class TranslationDatabase:
             rmtree(translation.path)
         if translation in self.user_translations:
             self.user_translations.remove(translation)
+
+        self.save_database()
 
     def get_translation_by_plugin_name(self, plugin_name: str):
         """
@@ -297,7 +333,7 @@ class TranslationDatabase:
 
         self.log.info(f"Translated {translated} string(s) from database.")
 
-    def create_translation(self, plugin_path: Path):
+    def create_translation(self, plugin_path: Path, cache: Cacher):
         """
         Creates translation for plugin at `plugin_path` by extracting its strings
         and applying translations from database to them.
@@ -307,12 +343,7 @@ class TranslationDatabase:
         if translation:
             return translation
 
-        parser = PluginParser(plugin_path)
-        parser.parse_plugin()
-        plugin_groups = parser.extract_strings()
-        plugin_strings = [
-            string for group in plugin_groups.values() for string in group
-        ]
+        plugin_strings = cache.get_plugin_strings(plugin_path)
 
         for string in plugin_strings:
             string.translated_string = string.original_string
@@ -329,6 +360,8 @@ class TranslationDatabase:
             original_version="",
             path=self.userdb_path / self.language / translation_name,
             strings={plugin_path.name.lower(): plugin_strings},
+            source=Source.Local,
+            timestamp=int(time.time()),
         )
         self.apply_db_to_translation(translation, plugin_path.name.lower())
 
@@ -401,18 +434,26 @@ class TranslationDatabase:
                     if form_id_filter and matching:
                         matching = form_id_filter.lower() in string.form_id.lower()
 
-                    if editor_id_filter and matching:
+                    if editor_id_filter and matching and string.editor_id is not None:
                         matching = editor_id_filter.lower() in string.editor_id.lower()
+                    elif editor_id_filter:
+                        matching = False
 
                     if original_filter and matching:
                         matching = (
                             original_filter.lower() in string.original_string.lower()
                         )
 
-                    if string_filter and matching:
+                    if (
+                        string_filter
+                        and matching
+                        and string.translated_string is not None
+                    ):
                         matching = (
                             string_filter.lower() in string.translated_string.lower()
                         )
+                    elif string_filter:
+                        matching = False
 
                     if matching:
                         if plugin in result:
