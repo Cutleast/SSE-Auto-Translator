@@ -9,7 +9,7 @@ from pathlib import Path
 
 DIST_FOLDER = Path("app.dist").resolve()
 APPNAME = "SSE Auto Translator"
-VERSION = "2.0.0"
+VERSION = "2.1.0"
 AUTHOR = "Cutleast"
 LICENSE = "Attribution-NonCommercial-NoDerivatives 4.0 International"
 CONSOLE_MODE = "attach"  # "attach": Attaches to console it was started with (if any), "force": starts own console window, "disable": disables console completely
