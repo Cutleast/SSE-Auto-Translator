@@ -139,7 +139,7 @@ class ModOrganizer(ModManager):
                         version = ""
 
                         self.log.warning(
-                            f"Incomplete meta.ini in {str(mod_meta_path.relative_to(modlist_path))!r}!"
+                            f"Incomplete meta.ini in {str(mod_meta_path.parent)!r}!"
                         )
                 else:
                     mod_id = 0
