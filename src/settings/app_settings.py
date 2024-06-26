@@ -47,12 +47,14 @@ class AppSettings(qtw.QScrollArea):
         scroll_widget.setLayout(flayout)
 
         self.logs_num_box = qtw.QSpinBox()
+        self.logs_num_box.installEventFilter(self)
         self.logs_num_box.setRange(-1, 100)
         self.logs_num_box.setValue(self.app.app_config["keep_logs_num"])
         self.logs_num_box.valueChanged.connect(self.on_change)
         flayout.addRow(self.mloc.keep_logs_num, self.logs_num_box)
 
         self.log_level_box = qtw.QComboBox()
+        self.log_level_box.installEventFilter(self)
         self.log_level_box.addItems(
             [loglevel.capitalize() for loglevel in utils.LOG_LEVELS.values()]
         )
@@ -61,6 +63,7 @@ class AppSettings(qtw.QScrollArea):
         flayout.addRow(self.mloc.log_level, self.log_level_box)
 
         self.app_lang_box = qtw.QComboBox()
+        self.app_lang_box.installEventFilter(self)
         self.app_lang_box.addItem("System")
         self.app_lang_box.addItems(self.app.loc.get_available_langs())
         self.app_lang_box.setCurrentText(self.app.app_config["language"])
@@ -105,6 +108,7 @@ class AppSettings(qtw.QScrollArea):
         flayout.addRow(self.mloc.accent_color, color_hlayout)
 
         self.confidence_box = qtw.QDoubleSpinBox()
+        self.confidence_box.installEventFilter(self)
         self.confidence_box.setLocale(qtc.QLocale.Language.English)
         self.confidence_box.setRange(0, 1)
         self.confidence_box.setSingleStep(0.05)
@@ -201,10 +205,21 @@ class AppSettings(qtw.QScrollArea):
         """
 
         self.on_change_signal.emit()
-    
+
     def clear_cache(self):
         self.app.cacher.clear_caches()
         self.clear_cache_button.setEnabled(False)
+
+    def eventFilter(self, source: qtc.QObject, event: qtc.QEvent):
+        if event.type() == qtc.QEvent.Type.Wheel and (
+            isinstance(source, qtw.QComboBox)
+            or isinstance(source, qtw.QSpinBox)
+            or isinstance(source, qtw.QDoubleSpinBox)
+        ):
+            self.wheelEvent(event)
+            return True
+
+        return super().eventFilter(source, event)
 
     def get_settings(self):
         return {
