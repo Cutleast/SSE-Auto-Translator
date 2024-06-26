@@ -1,3 +1,44 @@
+# v2.0.0
+
+### Highlights
+
+- Support for la Confrérie des Traducteurs (thanks to [Oaristys](https://next.nexusmods.com/profile/Oaristys) and [Aldranor](https://github.com/Aldranor) for their help)
+- **Limited** support for non-Plugin files like interface translations, Papyrus scripts, textures and sounds
+  - The files are not scanned, cannot be edited from within SSE-AT and are just extracted and copied from downloaded translations
+- Caching System
+  - Plugin strings are now cached to avoid multiple parsings
+  - Plugin states are saved when exiting SSE-AT
+  - Web and API requests are saved for 12 hours
+  - Add a "Clear Cache" button to App Settings
+- Support for third-party masterlists
+  - Please contact us via our Discord server if you want to maintain a masterlist for your language or have questions
+- Overhaul non-Premium downloads from Nexus Mods (see Documentation for more info)
+  - Add toast notification for downloads started from browser
+
+### Other Fixes and Improvements
+
+- Add warning to settings if path to output mod is not empty
+- Add setting for path of temp folder
+- Fix obsolete processing of duplicate plugins
+- Fix duplicate downloads in queue
+- Improve DownloadListDialog
+- Improve handling of failed downloads
+  - The actual error is now displayed when hovering over the downloads
+- Display progress of LoadingDialog in taskbar
+- Reduce flickering of LoadingDialog
+- Optimize startup time by switching to new database format instead of JSON files
+- Save database everytime a translation is added or deleted
+- Update chinese translation (thanks to [grox1313](https://github.com/grox1313))
+- Replace pointless RadioButton in Modlist String Search by CheckBox
+- Fix archive extraction when there is a large number of plugins to extract
+- Fix export of multiple translations
+  - It is now possible to select multiple translations in the "Translations" tab and export them all at once
+- Fix and improve import of multiple variants of the same plugin in a translation
+- Fix download thread not stopping when exiting SSE-AT
+- Fix "Check for Updates" button in "Help" menu
+- Fix Chinese and Portuguese in Google Translator and DeepL APIs
+- Fix ValueError for incomplete meta.ini files in MO2 instances
+
 # v1.2.1 (Hotfix)
 
 - Fix missing 7-zip files that are required for extraction of archives

@@ -32,7 +32,7 @@ class MainApp(qtw.QApplication):
     """
 
     name = "SSE Auto Translator"
-    version = "2.0.0-rc-1"
+    version = "2.0.0"
 
     loc: "utils.Localisator" = None
     cur_path = Path(__file__).parent.resolve()
