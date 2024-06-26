@@ -198,7 +198,14 @@ class AppSettings(qtw.QScrollArea):
 
         self.clear_cache_button = qtw.QPushButton(self.loc.main.clear_cache)
         self.clear_cache_button.clicked.connect(self.clear_cache)
-        self.clear_cache_button.setEnabled(self.app.cacher.path.is_dir())
+        if self.app.cacher.path.is_dir():
+            self.clear_cache_button.setEnabled(True)
+            self.clear_cache_button.setText(
+                self.loc.main.clear_cache
+                + f" ({utils.scale_value(utils.get_folder_size(self.app.cacher.path))})"
+            )
+        else:
+            self.clear_cache_button.setEnabled(False)
         flayout.addRow(self.clear_cache_button)
 
     def on_change(self, *args):
@@ -210,6 +217,7 @@ class AppSettings(qtw.QScrollArea):
 
     def clear_cache(self):
         self.app.cacher.clear_caches()
+        self.clear_cache_button.setText(self.loc.main.clear_cache)
         self.clear_cache_button.setEnabled(False)
 
     def eventFilter(self, source: qtc.QObject, event: qtc.QEvent):

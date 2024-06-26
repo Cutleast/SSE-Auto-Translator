@@ -265,6 +265,20 @@ def get_file_identifier(file_path: os.PathLike, block_size: int = 1024 * 1024):
     return hasher.hexdigest()[:8]
 
 
+def get_folder_size(folder: Path):
+    """
+    Returns folder size in bytes.
+    """
+
+    total_size = 0
+
+    for path in folder.rglob("*"):
+        if path.is_file():
+            total_size += path.stat().st_size
+
+    return total_size
+
+
 masterlist: dict[str, dict] = None
 
 
