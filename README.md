@@ -42,14 +42,18 @@ See [Documentation](/doc/Instructions_en_US.md).
   - "Auto-bind" is available in settings (experimental)
     - with this enabled, SSE-AT gets auto-linked to Mod Manager Downloads on startup and unlinked when closed
     - experimental, because a crash might prevent unlinking
+- Update feature to update downloaded translations
+- Automated inclusion of non-Plugin files like interface translations and Papyrus scripts (if enabled in User Settings)
+- Support for French translation website [La Confrérie des Traducteurs](https://www.confrerie-des-traducteurs.fr)
 
 # Limitations
 
-- Only Plugin Files (.esp, .esm and .esl) are supported at the moment
-  - this means that there is no support for sound files, interface translations (data/interface/*.txt) or Papyrus scripts (.pex), etc.
-- Translations that are not on a separate modpage and/or linked (under "Translations") on the original modpage cannot be found by SSE-AT
-  - for eg. the german translation for [Unofficial Skyrim Modder&#39;s Patch](https://www.nexusmods.com/skyrimspecialedition/mods/49616?tab=files)
-  - those have to be installed manually in SSE-AT by either downloading and importing them or by starting the download via SSE-AT itself (see [Documentation](/doc/Instructions_en_US.md) for more)
+- Only Plugin Files (.esp, .esm and .esl) are fully supported at the moment
+  - Non-Plugin files like interface translations (.txt) or Papyrus scripts (.pex) only get extracted and copied from imported translations if enabled in User Settings
+- Translations that are not on a separate modpage and/or linked (under "Translations") on the original modpage cannot automatically be found by SSE-AT unless linked in a masterlist
+  - Masterlists are a way to link to translations that are not linked from the original mod like regular translations, for eg. the german translation for [Unofficial Skyrim Modder's Patch](https://www.nexusmods.com/skyrimspecialedition/mods/49616?tab=files)
+  - They have to be maintained by volunteers but so far, there is only a small masterlist for German
+  - If you're interested in maintaining a masterlist for your language, contact us (@cutleast or @whusten) on our Discord server linked above
 - Vortex: SSE-AT and Vortex must not be run at the same time!
   - This is a limitation of Vortex's database which only allows one app to access it at a time
 
@@ -118,6 +122,9 @@ If you encountered an issue/error or you have a suggestion, create an issue unde
 ## 3. Beta-Testing
 
 If you are interested in testing pre-release versions of SSE-AT, join our Discord server above.
+
+## 4. Maintaining a Masterlist
+If you're interested in maintaining a masterlist for your language, contact us (@cutleast or @whusten) on our Discord server linked above!
 
 # Credits
 
