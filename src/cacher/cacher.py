@@ -86,11 +86,29 @@ class Cacher:
             return strings
 
         with cache_file.open(mode="rb") as data:
-            strings = pickle.load(data)
+            strings: list[utils.String] = pickle.load(data)
 
-        self.log.debug(f"Loaded strings for plugin {str(plugin_path)!r} from cache.")
+        self.log.debug(
+            f"Loaded {len(strings)} string(s) for plugin {str(plugin_path)!r} from cache."
+        )
 
         return strings
+
+    def update_plugin_strings(self, plugin_path: Path, strings: list[utils.String]):
+        """
+        Updates cached strings of `plugin_path`.
+        """
+
+        identifier = utils.get_file_identifier(plugin_path)
+        cache_file = self.path / "plugin_strings" / f"{identifier}.cache"
+
+        os.makedirs(cache_file.parent, exist_ok=True)
+        with cache_file.open(mode="wb") as data:
+            pickle.dump(strings, data)
+
+        self.log.debug(
+            f"Updated {len(strings)} string(s) for plugin {str(plugin_path)!r}."
+        )
 
     def clear_plugin_strings_cache(self):
         """

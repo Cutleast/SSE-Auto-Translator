@@ -18,6 +18,7 @@ import qtpy.QtWidgets as qtw
 import utilities as utils
 from database import Translation
 from main import MainApp
+from plugin_parser import PluginParser
 from translation_provider import FileDownload, TranslationDownload
 from widgets import DownloadListDialog, LoadingDialog
 
@@ -30,10 +31,79 @@ class Processor:
     """
 
     @staticmethod
+    def parse_modlist(modlist: list[utils.Mod], app: MainApp):
+        """
+        Parses all plugins in `modlist` and sets "FE" formid prefix
+        depending on the first-defined plugins.
+        """
+
+        app.log.info("Parsing modlist...")
+
+        def process(ldialog: LoadingDialog):
+            light_plugins: list[str] = []
+
+            plugins = list(
+                {  # Get list of conflict winners
+                    plugin.name.lower(): plugin
+                    for mod in modlist
+                    for plugin in mod.plugins
+                    if plugin.tree_item.checkState(0) == qtc.Qt.CheckState.Checked
+                }.values()
+            )
+
+            # Create a list of all light-flagged Plugins
+            for p, plugin in enumerate(plugins):
+                ldialog.updateProgress(
+                    text1=f"{app.loc.main.parsing_modlist} ({p}/{len(plugins)})",
+                    value1=p,
+                    max1=len(plugins),
+                    show2=True,
+                    text2=plugin.name,
+                )
+
+                app.log.debug(f"Parsing {plugin.name!r}...")
+
+                parser = PluginParser(plugin.path)
+                parser.parse_plugin()
+                if parser.is_light():
+                    light_plugins.append(plugin.name.lower())
+
+            # Post-process FormIDs
+            for p, plugin in enumerate(plugins):
+                ldialog.updateProgress(
+                    text1=f"{app.loc.main.processing_light_forms} ({p}/{len(plugins)})",
+                    value1=p,
+                    max1=len(plugins),
+                    show2=True,
+                    text2=plugin.name,
+                )
+
+                strings = app.cacher.get_plugin_strings(plugin.path)
+                edited = False
+
+                for string in strings:
+                    form_id, master = string.form_id.split("|", 1)
+
+                    if master.lower() in light_plugins:
+                        form_id = f"FE{form_id[2:]}|{master}"
+                        string.form_id = form_id
+                        edited = True
+
+                if edited:
+                    app.cacher.update_plugin_strings(plugin.path, strings)
+
+        loadingdialog = LoadingDialog(app.root, app, process)
+        loadingdialog.exec()
+
+        app.log.info("Parsing complete.")
+
+    @staticmethod
     def scan_modlist(modlist: list[utils.Mod], app: MainApp):
         """
         Scans `modlist` for required and installed translations.
         """
+
+        Processor.parse_modlist(modlist, app)
 
         confidence: float = app.app_config["detector_confidence"]
         language: utils.Language = getattr(
@@ -431,53 +501,31 @@ class Processor:
                     text1=f"{app.loc.main.processing_translations} ({m}/{len(modlist)})",
                     value1=m,
                     max1=len(modlist),
-                    show2=True,
-                    text2=mod.name,
                 )
 
-                # Create empty translation
-                translation_strings: dict[str, list[utils.String]] = {}
-
-                for plugin in plugins:
-                    plugin_strings = app.cacher.get_plugin_strings(plugin.path)
-                    for string in plugin_strings:
-                        string.translated_string = string.original_string
-                        string.status = string.Status.TranslationRequired
-
-                    if plugin.name.lower() in translation_strings:
-                        translation_strings[plugin.name.lower()] += plugin_strings
-                    else:
-                        translation_strings[plugin.name.lower()] = plugin_strings
-
-                    # Remove duplicates
-                    translation_strings[plugin.name.lower()] = list(
-                        set(translation_strings[plugin.name.lower()])
+                for p, plugin in enumerate(plugins):
+                    ldialog.updateProgress(
+                        show2=True,
+                        text2=f"{mod.name} ({p}/{len(plugins)})",
+                        value2=p,
+                        max2=len(plugins),
+                        show3=True,
+                        text3=plugin.name,
                     )
 
+                    translation = app.database.create_translation(
+                        plugin.path, app.cacher
+                    )
+                    for string in [
+                        string
+                        for group in translation.strings.values()
+                        for string in group
+                    ]:
+                        if string.status == string.Status.TranslationIncomplete:
+                            string.status = string.Status.TranslationComplete
+                    translation.save_translation()
+                    app.database.add_translation(translation)
                     plugin.status = plugin.Status.TranslationInstalled
-
-                translation_name = f"{mod.name} - {app.user_config['language']}"
-                translation = Translation(
-                    name=translation_name,
-                    mod_id=0,
-                    file_id=0,
-                    version=mod.version,
-                    original_mod_id=mod.mod_id,
-                    original_file_id=mod.file_id,
-                    original_version=mod.version,
-                    path=app.database.userdb_path
-                    / app.user_config["language"]
-                    / translation_name,
-                    strings=translation_strings,
-                    source=utils.Source.Local,
-                    timestamp=int(time.time()),
-                )
-
-                # Fill translation with strings from database
-                app.database.apply_db_to_translation(translation)
-
-                translation.save_translation()
-                app.database.add_translation(translation)
 
         loadingdialog = LoadingDialog(app.root, app, process)
         loadingdialog.exec()
