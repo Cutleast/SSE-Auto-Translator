@@ -56,6 +56,18 @@ class PluginParser:
             self.plugin_stream.close()
             self.plugin_stream = None
 
+    def is_light(self):
+        """
+        Returns if the plugin is a light plugin.
+        This is either indicated by the file extension (.esl)
+        or the Light Flag in the plugin header.
+        """
+
+        return (
+            self.plugin_path.suffix.lower() == ".esl"
+            or self.parsed_data.header.flags["Light Master"]
+        )
+
     def parse_plugin(self):
         """
         Parses raw data and returns parsed
