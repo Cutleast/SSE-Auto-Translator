@@ -63,9 +63,13 @@ class PluginParser:
         or the Light Flag in the plugin header.
         """
 
+        with open(self.plugin_path, "rb") as stream:
+            plugin = Plugin(stream)
+            plugin.parse_header_only()
+
         return (
             self.plugin_path.suffix.lower() == ".esl"
-            or self.parsed_data.header.flags["Light Master"]
+            or plugin.header.flags["Light Master"]
         )
 
     def parse_plugin(self):

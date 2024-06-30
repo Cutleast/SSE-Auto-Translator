@@ -32,6 +32,9 @@ class Plugin:
     def __str__(self) -> str:
         return self.__repr__()
 
+    def parse_header_only(self):
+        self.header = Record(self.data_stream, header_flags={})
+
     def parse(self):
         self.groups = []
 

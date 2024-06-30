@@ -63,9 +63,7 @@ class Processor:
 
                 app.log.debug(f"Parsing {plugin.name!r}...")
 
-                parser = PluginParser(plugin.path)
-                parser.parse_plugin()
-                if parser.is_light():
+                if PluginParser(plugin.path).is_light():
                     light_plugins.append(plugin.name.lower())
 
             # Post-process FormIDs
