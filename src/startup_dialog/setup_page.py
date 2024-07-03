@@ -92,7 +92,7 @@ class SetupPage(qtw.QWidget):
 
             if lang == "French":
                 self.source_dropdown.setCurrentText(
-                    Provider.Preference.PreferConfrerie.name
+                    Provider.Preference.PreferNexusMods.name
                 )
             else:
                 self.source_dropdown.setCurrentText(

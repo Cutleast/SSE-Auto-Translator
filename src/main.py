@@ -250,7 +250,7 @@ class MainApp(qtw.QApplication):
         if self.user_config["provider_preference"]:
             if self.user_config["language"] == "French":
                 self.user_config["provider_preference"] = (
-                    Provider.Preference.PreferConfrerie.name
+                    Provider.Preference.PreferNexusMods.name
                 )
             else:
                 self.user_config["provider_preference"] = (

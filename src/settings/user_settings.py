@@ -72,7 +72,7 @@ class UserSettings(qtw.QScrollArea):
 
             if lang == "French":
                 self.source_dropdown.setCurrentText(
-                    app.provider.Preference.PreferConfrerie.name
+                    app.provider.Preference.PreferNexusMods.name
                 )
             else:
                 self.source_dropdown.setCurrentText(
