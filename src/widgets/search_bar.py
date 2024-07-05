@@ -44,6 +44,7 @@ class SearchBar(qtw.QLineEdit):
         clear_button.setIcon(qta.icon("fa.close", color="#ffffff"))
         clear_button.clicked.connect(lambda: self.setText(""))
         clear_button.clicked.connect(self.setFocus)
+        clear_button.clicked.connect(self.returnPressed.emit)
         clear_button.hide()
         hlayout.addWidget(clear_button)
 

@@ -256,7 +256,7 @@ class MainPageWidget(qtw.QWidget):
         self.search_bar = SearchBar()
         self.search_bar.setPlaceholderText(self.loc.main.search)
         self.search_bar.cs_toggle.setToolTip(self.loc.main.case_sensitivity)
-        self.search_bar.textChanged.connect(lambda text: self.update_modlist())
+        self.search_bar.textChanged.connect(self.update_modlist)
         hlayout.addWidget(self.search_bar)
 
         self.bar_chart = StackedBar(
@@ -743,14 +743,14 @@ class MainPageWidget(qtw.QWidget):
         splitter.addWidget(self.database_widget)
 
         self.search_bar.textChanged.connect(
-            lambda text: self.database_widget.translations_widget.update_translations()
+            self.database_widget.translations_widget.update_translations
         )
 
         splitter.setSizes([0.6 * splitter.width(), 0.4 * splitter.width()])
 
         self.mods_widget.resizeColumnToContents(2)
 
-    def update_modlist(self):
+    def update_modlist(self, *args):
         """
         Updates visible modlist.
         """
@@ -1156,6 +1156,17 @@ class MainPageWidget(qtw.QWidget):
         else:
             self.title_label.setText(user_modinstance)
         self.update_modlist()
+
+        # Change search bar behaviour depending on size of modlist and database
+        if len(self.mods) > 1000 or len(self.app.database.user_translations) > 1000:
+            self.search_bar.textChanged.disconnect(self.update_modlist)
+            self.search_bar.textChanged.disconnect(
+                self.database_widget.translations_widget.update_translations
+            )
+            self.search_bar.returnPressed.connect(self.update_modlist)
+            self.search_bar.returnPressed.connect(
+                self.database_widget.translations_widget.update_translations
+            )
 
         self.app.log.info(f"Loaded {len(self.mods)} mod(s).")
 

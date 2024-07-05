@@ -295,6 +295,10 @@ class StringListDialog(qtw.QWidget):
         else:
             self.strings_widget.header().resizeSection(3, 600)
 
+        if len(self.string_items) > 1000:
+            self.search_bar.textChanged.disconnect()
+            self.search_bar.returnPressed.connect(self.update_string_list)
+
         self.setWindowTitle(f"{self.name} - {len(self.string_items)} String(s)")
 
     def update_string_list(self):

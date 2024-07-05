@@ -670,7 +670,7 @@ class TranslationsWidget(qtw.QWidget):
         if len(downloads):
             DownloadListDialog(self.app, downloads, updates=True)
 
-    def update_translations(self):
+    def update_translations(self, *args):
         """
         Updates translations in case of search or similar.
         """
