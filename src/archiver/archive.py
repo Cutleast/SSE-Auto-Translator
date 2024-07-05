@@ -155,8 +155,11 @@ class Archive:
             list of matching filenames
         """
 
-        fs = InMemoryPath.from_list(self.files)
-        matches = [p.path for p in glob(fs, pattern)]
+        # Workaround case-sensitivity
+        files: dict[str, str] = {file.lower(): file for file in self.files}
+
+        fs = InMemoryPath.from_list(list(files.keys()))
+        matches = [files[p.path] for p in glob(fs, pattern)]
 
         return matches
 

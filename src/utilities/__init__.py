@@ -229,7 +229,7 @@ def relative_data_path(file: str):
     filters = ["/interface/", "/scripts/", "/textures/", "/sound/"]
 
     for filter in filters:
-        index = file.find(filter)
+        index = file.lower().find(filter)
         if index != -1:
             return file[index + 1 :]
 

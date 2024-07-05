@@ -43,8 +43,9 @@ class Mod:
             bsas = self.path.glob("*.bsa")
             files = [
                 str(file.relative_to(self.path))
-                for file in self.path.glob("*")
+                for file in self.path.rglob("*")
                 if not file.suffix.lower() == ".bsa"
+                and file.is_file()
             ]
 
             for bsa_path in bsas:
@@ -53,7 +54,7 @@ class Mod:
 
             # Make case-insensitive
             for f, file in enumerate(files):
-                files[f] = file.lower()
+                files[f] = file.lower().replace("\\", "/")
 
             self.__files = files
 
