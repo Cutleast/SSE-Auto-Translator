@@ -328,6 +328,20 @@ class StringListDialog(qtw.QWidget):
 
             item.setHidden(not string_visible)
 
+        # Update root items
+        if self.nested:
+            for rindex in range(self.strings_widget.topLevelItemCount()):
+                root_item = self.strings_widget.topLevelItem(rindex)
+                visible = False
+
+                for cindex in range(root_item.childCount()):
+                    child_item = root_item.child(cindex)
+
+                    if not child_item.isHidden():
+                        visible = True
+
+                root_item.setHidden(not visible)
+
         if self.strings_widget.selectedItems():
             self.strings_widget.scrollToItem(
                 self.strings_widget.selectedItems()[0],
