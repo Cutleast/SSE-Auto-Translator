@@ -192,7 +192,11 @@ class Provider:
         return details
 
     def get_modpage_link(
-        self, mod_id: int, file_id: int = None, source: Source = None
+        self,
+        mod_id: int,
+        file_id: int = None,
+        source: Source = None,
+        mod_manager: bool = False,
     ) -> str | None:
         """
         Gets modpage url for `mod_id` (and `file_id` if given) from `source`.
@@ -209,7 +213,7 @@ class Provider:
 
         if source == Source.NexusMods:
             return NexusModsApi.create_nexus_mods_url(
-                "skyrimspecialedition", mod_id, file_id
+                "skyrimspecialedition", mod_id, file_id, mod_manager
             )
         else:
             return self.__cdt_api.get_modpage_link(mod_id)

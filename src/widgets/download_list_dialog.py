@@ -252,7 +252,9 @@ class DownloadListDialog(qtw.QWidget):
                 def get_func(mod_id: int, file_id: int, source: utils.Source):
                     def func():
                         os.startfile(
-                            self.app.provider.get_modpage_link(mod_id, file_id, source)
+                            self.app.provider.get_modpage_link(
+                                mod_id, file_id, source, mod_manager=True
+                            )
                         )
 
                     return func
