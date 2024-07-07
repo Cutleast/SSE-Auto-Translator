@@ -501,6 +501,8 @@ class Processor:
                     max1=len(modlist),
                 )
 
+                translation_strings: dict[str, list[utils.String]] = {}
+
                 for p, plugin in enumerate(plugins):
                     ldialog.updateProgress(
                         show2=True,
@@ -511,19 +513,39 @@ class Processor:
                         text3=plugin.name,
                     )
 
-                    translation = app.database.create_translation(
-                        plugin.path, app.cacher
+                    translation_strings[plugin.name.lower()] = (
+                        app.cacher.get_plugin_strings(plugin.path)
                     )
-                    for string in [
-                        string
-                        for group in translation.strings.values()
-                        for string in group
-                    ]:
-                        if string.status == string.Status.TranslationIncomplete:
-                            string.status = string.Status.TranslationComplete
-                    translation.save_translation()
-                    app.database.add_translation(translation)
                     plugin.status = plugin.Status.TranslationInstalled
+
+                translation_name = f"{mod.name} - {app.database.language.capitalize()}"
+                translation = Translation(
+                    name=translation_name,
+                    mod_id=0,
+                    file_id=0,
+                    version=mod.version,
+                    original_mod_id=mod.mod_id,
+                    original_file_id=mod.file_id,
+                    original_version=mod.version,
+                    path=app.database.userdb_path
+                    / app.database.language
+                    / translation_name,
+                    strings=translation_strings,
+                    source=utils.Source.Local,
+                    timestamp=int(time.time()),
+                )
+                app.database.apply_db_to_translation(translation)
+
+                for string in [
+                    string
+                    for _plugin in translation.strings.values()
+                    for string in _plugin
+                ]:
+                    if string.status == string.Status.TranslationIncomplete:
+                        string.status = string.Status.TranslationComplete
+
+                translation.save_translation()
+                app.database.add_translation(translation)
 
         loadingdialog = LoadingDialog(app.root, app, process)
         loadingdialog.exec()
