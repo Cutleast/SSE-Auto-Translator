@@ -7,7 +7,9 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 import ctypes
 import hashlib
 import logging
+import time
 from datetime import datetime
+from fnmatch import fnmatch
 
 import jstyleson as json
 import qtpy.QtGui as qtg
@@ -277,6 +279,28 @@ def get_folder_size(folder: Path):
             total_size += path.stat().st_size
 
     return total_size
+
+
+def to_timestamp(time_string: str):
+    """
+    Converts `time_string` into a UNIX timestamp.
+    """
+
+    if time_string is None:
+        return ""
+
+    if fnmatch(time_string, "*.*.* *:*"):
+        return time.mktime(time.strptime(time_string, "%d.%m.%Y %H:%M"))
+    else:
+        return time.mktime(time.strptime(time_string, "%d.%m.%Y"))
+
+
+def fmt_timestamp(timestamp: int | float, fmt: str = "%d.%m.%Y %H:%M:%S"):
+    """
+    Creates a time string from a UNIX timestamp.
+    """
+
+    return time.strftime(fmt, time.localtime(timestamp))
 
 
 masterlist: dict[str, dict] = None
