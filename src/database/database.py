@@ -109,7 +109,7 @@ class TranslationDatabase:
                 else:
                     source = Source.Local
 
-            timestamp: int | None = translation_data.get("file_timestamp")
+            timestamp: int | None = translation_data.get("timestamp")
 
             translation = Translation(
                 name=name,
@@ -172,6 +172,10 @@ class TranslationDatabase:
         """
 
         if translation not in self.user_translations:
+            # Set timestamp of translation
+            if translation.timestamp is None:
+                translation.timestamp = int(time.time())
+
             self.user_translations.append(translation)
 
         # Merge new translation with existing one
