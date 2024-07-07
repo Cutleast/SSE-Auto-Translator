@@ -143,6 +143,8 @@ class TranslationsWidget(qtw.QWidget):
                 self.mloc.translation_name,
                 self.loc.main.version,
                 self.loc.main.source,
+                self.loc.main.date,
+                self.loc.main.size,
             ]
         )
 
@@ -737,18 +739,33 @@ class TranslationsWidget(qtw.QWidget):
         self.translations_widget.clear()
 
         for translation in self.app.database.user_translations:
+            translation_size = utils.get_folder_size(translation.path)
             translation_item = qtw.QTreeWidgetItem(
                 [
                     translation.name,
                     translation.version,
                     translation.source.name,
+                    (
+                        utils.fmt_timestamp(translation.timestamp, "%d.%m.%Y %H:%M")
+                        if translation.timestamp is not None
+                        else ""
+                    ),
+                    utils.scale_value(translation_size),
                 ]
             )
+
+            if translation.timestamp is not None:
+                translation_item.setToolTip(
+                    3, utils.fmt_timestamp(translation.timestamp, "%d.%m.%Y %H:%M:%S")
+                )
+            translation_item.setToolTip(4, f"{translation_size} Bytes")
 
             for plugin_name in translation.strings:
                 plugin_item = qtw.QTreeWidgetItem(
                     [
                         plugin_name,
+                        "",
+                        "",
                         "",
                         "",
                     ]

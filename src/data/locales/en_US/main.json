@@ -22,6 +22,7 @@
     "copy_plugin_name": "Copy Plugin Name to Clipboard",
     "copying_files": "Copying Files...",
     "creating_translation": "Creating Translation...",
+    "date": "Date",
     "deep_scan": "Scan Plugins with installed Translations for untranslated Strings\n(This can take a while, depending on the number of Plugins and installed Translations)",
     "delete": "Delete",
     "delete_selected": "Delete Selected",
