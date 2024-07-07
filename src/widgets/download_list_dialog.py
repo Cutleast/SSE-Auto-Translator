@@ -229,11 +229,15 @@ class DownloadListDialog(qtw.QWidget):
                 )
             else:
                 item = qtw.QTreeWidgetItem([download.name, ""])
-            
+
             if download.source == utils.Source.NexusMods:
-                item.setIcon(0, qtg.QIcon(str(self.app.data_path / "icons" / "nexus_mods.svg")))
+                item.setIcon(
+                    0, qtg.QIcon(str(self.app.data_path / "icons" / "nexus_mods.svg"))
+                )
             else:
-                item.setIcon(0, qtg.QIcon(str(self.app.data_path / "icons" / "cdt.svg")))
+                item.setIcon(
+                    0, qtg.QIcon(str(self.app.data_path / "icons" / "cdt.svg"))
+                )
 
             item.setFont(1, qtg.QFont("Consolas"))
             download.tree_item = item
