@@ -892,6 +892,7 @@ class Processor:
                         os.makedirs(
                             output_folder / file.rsplit("/", 1)[0], exist_ok=True
                         )
+                        if not (output_folder / file).is_file():
                         if data_path.drive == output_folder.drive:
                             os.link(data_path / file, output_folder / file)
                         else:
