@@ -172,10 +172,6 @@ class TranslationDatabase:
         """
 
         if translation not in self.user_translations:
-            # Set timestamp of translation
-            if translation.timestamp is None:
-                translation.timestamp = int(time.time())
-
             self.user_translations.append(translation)
 
         # Merge new translation with existing one
@@ -191,6 +187,14 @@ class TranslationDatabase:
 
                 # Remove duplicates
                 installed_translation.strings[plugin_name] = list(set(_strings))
+
+            # Merge metadata
+            installed_translation.mod_id = translation.mod_id
+            installed_translation.file_id = translation.file_id
+            installed_translation.version = translation.version
+            installed_translation.original_mod_id = translation.original_mod_id
+            installed_translation.original_file_id = translation.original_file_id
+            installed_translation.original_version = translation.original_version
 
         self.save_database()
 
