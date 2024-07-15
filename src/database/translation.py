@@ -81,7 +81,10 @@ class Translation:
                     with translation_path.open("rb") as file:
                         self.strings[translation_path.stem.lower()] = pickle.load(file)
                 except EOFError as ex:
-                    self.log.error(f"Failed to load strings from database file {str(translation_path)!r}", exc_info=ex)
+                    self.log.error(
+                        f"Failed to load strings from database file {str(translation_path)!r}",
+                        exc_info=ex,
+                    )
 
             sys.modules.pop("plugin_parser.string")
             sys.modules.pop("plugin_parser")
@@ -100,7 +103,7 @@ class Translation:
                 ]
                 strings = list(set(strings))  # Remove duplicates
                 self.strings[translation_path.stem.lower()] = strings
-            
+
             self.optimize_translation()
 
     def save_translation(self):

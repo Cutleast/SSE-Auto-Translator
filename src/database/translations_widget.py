@@ -923,7 +923,9 @@ class TranslationsWidget(qtw.QWidget):
                         )
                         continue
 
-                    plugin_strings = utils.merge_plugin_strings(file, plugin.path, self.app.cacher)
+                    plugin_strings = utils.merge_plugin_strings(
+                        file, plugin.path, self.app.cacher
+                    )
                     strings[file.name.lower()] = plugin_strings
 
                 else:
