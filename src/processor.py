@@ -31,77 +31,10 @@ class Processor:
     """
 
     @staticmethod
-    def parse_modlist(modlist: list[utils.Mod], app: MainApp):
-        """
-        Parses all plugins in `modlist` and sets "FE" formid prefix
-        depending on the first-defined plugins.
-        """
-
-        app.log.info("Parsing modlist...")
-
-        def process(ldialog: LoadingDialog):
-            light_plugins: list[str] = []
-
-            plugins = list(
-                {  # Get list of conflict winners
-                    plugin.name.lower(): plugin
-                    for mod in modlist
-                    for plugin in mod.plugins
-                    if plugin.tree_item.checkState(0) == qtc.Qt.CheckState.Checked
-                }.values()
-            )
-
-            # Create a list of all light-flagged Plugins
-            for p, plugin in enumerate(plugins):
-                ldialog.updateProgress(
-                    text1=f"{app.loc.main.parsing_modlist} ({p}/{len(plugins)})",
-                    value1=p,
-                    max1=len(plugins),
-                    show2=True,
-                    text2=plugin.name,
-                )
-
-                app.log.debug(f"Parsing {plugin.name!r}...")
-
-                if Plugin.is_light(plugin.path):
-                    light_plugins.append(plugin.name.lower())
-
-            # Post-process FormIDs
-            for p, plugin in enumerate(plugins):
-                ldialog.updateProgress(
-                    text1=f"{app.loc.main.processing_light_forms} ({p}/{len(plugins)})",
-                    value1=p,
-                    max1=len(plugins),
-                    show2=True,
-                    text2=plugin.name,
-                )
-
-                strings = app.cacher.get_plugin_strings(plugin.path)
-                edited = False
-
-                for string in strings:
-                    form_id, master = string.form_id.split("|", 1)
-
-                    if master.lower() in light_plugins:
-                        form_id = f"FE{form_id[2:]}|{master}"
-                        string.form_id = form_id
-                        edited = True
-
-                if edited:
-                    app.cacher.update_plugin_strings(plugin.path, strings)
-
-        loadingdialog = LoadingDialog(app.root, app, process)
-        loadingdialog.exec()
-
-        app.log.info("Parsing complete.")
-
-    @staticmethod
     def scan_modlist(modlist: list[utils.Mod], app: MainApp):
         """
         Scans `modlist` for required and installed translations.
         """
-
-        Processor.parse_modlist(modlist, app)
 
         confidence: float = app.app_config["detector_confidence"]
         language: utils.Language = getattr(
@@ -750,9 +683,15 @@ class Processor:
         else:
             output_folder = Path(app.app_config["output_path"])
 
-        installed_plugins = list(
-            set(plugin.name.lower() for mod in modlist for plugin in mod.plugins)
-        )
+        installed_plugins = {
+            plugin.name.lower(): plugin.path
+            for mod in modlist for plugin in mod.plugins
+            if plugin.tree_item.checkState(0) == qtc.Qt.CheckState.Checked
+        }
+        light_plugins = [
+            plugin_name for plugin_name, plugin_path in installed_plugins.items()
+            if Plugin.is_light(plugin_path)
+        ]
 
         incl_interface = app.user_config["enable_interface_files"]
         incl_scripts = app.user_config["enable_scripts"]
@@ -798,6 +737,12 @@ class Processor:
 
                     if not len(strings):
                         continue
+
+                    # Process "FE" prefix for light plugins
+                    for string in strings:
+                        master = string["form_id"].split("|", 1)[1].lower()
+                        if master in light_plugins:
+                            string["form_id"] = "FE" + string["form_id"][2:]
 
                     plugin_folder = (
                         output_folder
