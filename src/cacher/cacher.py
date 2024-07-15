@@ -16,9 +16,9 @@ from pathlib import Path
 import qtpy.QtCore as qtc
 import requests
 
+import plugin_interface
 import utilities as utils
 from main import MainApp
-from plugin_parser import PluginParser
 
 
 class Cacher:
@@ -32,6 +32,11 @@ class Cacher:
     """
     This cache is persistent
     and stores the states of the plugins of a modlist.
+    """
+
+    __plugin_strings_cache: dict[str, list[utils.String]] = {}
+    """
+    This cache is persistent and stores extracted strings.
     """
 
     def __init__(self, app: MainApp):
@@ -70,23 +75,26 @@ class Cacher:
 
         identifier = utils.get_file_identifier(plugin_path)
 
-        cache_file = self.path / "plugin_strings" / f"{identifier}.cache"
+        if identifier not in self.__plugin_strings_cache:
+            cache_file = self.path / "plugin_strings" / f"{identifier}.cache"
 
-        if not cache_file.is_file():
-            plugin_parser = PluginParser(plugin_path)
-            strings = [
-                string
-                for group in plugin_parser.extract_strings().values()
-                for string in group
-            ]
-            os.makedirs(cache_file.parent, exist_ok=True)
-            with cache_file.open(mode="wb") as data:
-                pickle.dump(strings, data)
+            if not cache_file.is_file():
+                plugin = plugin_interface.Plugin(plugin_path)
+                strings = plugin.extract_strings()
+                os.makedirs(cache_file.parent, exist_ok=True)
+                with cache_file.open(mode="wb") as data:
+                    pickle.dump(strings, data)
 
-            return strings
+                self.__plugin_strings_cache[identifier] = strings
 
-        with cache_file.open(mode="rb") as data:
-            strings: list[utils.String] = pickle.load(data)
+                return strings
+
+            with cache_file.open(mode="rb") as data:
+                strings: list[utils.String] = pickle.load(data)
+
+            self.__plugin_strings_cache[identifier] = strings
+
+        strings = self.__plugin_strings_cache[identifier]
 
         self.log.debug(
             f"Loaded {len(strings)} string(s) for plugin {str(plugin_path)!r} from cache."
