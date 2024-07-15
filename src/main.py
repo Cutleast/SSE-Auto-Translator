@@ -239,7 +239,7 @@ class MainApp(qtw.QApplication):
             "instance_profile": "",
             "provider_preference": "",
             "enable_interface_files": True,
-            "enable_scripts": True,
+            "enable_scripts": False,
             "enable_textures": False,
             "enable_sound_files": False,
         }

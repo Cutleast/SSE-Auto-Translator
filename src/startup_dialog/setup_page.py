@@ -124,7 +124,7 @@ class SetupPage(qtw.QWidget):
         self.enable_scripts_box = qtw.QCheckBox(
             self.loc.settings.enable_scripts + " [EXPERIMENTAL]"
         )
-        self.enable_scripts_box.setChecked(True)
+        self.enable_scripts_box.setChecked(False)
         slayout.addWidget(self.enable_scripts_box)
 
         self.enable_textures_box = qtw.QCheckBox(
