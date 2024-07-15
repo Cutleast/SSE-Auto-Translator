@@ -3,7 +3,6 @@ QWidget,
 QWidget#regular {
     background: #08ffffff;
     color: #ffffff;
-    font-size: 14px;
     border: 0px solid;
     border-radius: 8px;
 }
