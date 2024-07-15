@@ -177,7 +177,7 @@ class MainPageWidget(qtw.QWidget):
 
         scan_modlist_action = self.tool_bar.addAction(
             qtg.QIcon(str(self.app.data_path / "icons" / "detect_lang.svg")),
-            self.loc.main.scan_modlist,
+            self.loc.main.basic_scan,
         )
         self.tool_bar.widgetForAction(scan_modlist_action).setObjectName(
             "accent_button"
@@ -329,6 +329,12 @@ class MainPageWidget(qtw.QWidget):
                 if matching:
                     selected_mod = matching[0]
                     mod_selected = True
+
+            selected_mods = [
+                mod
+                for mod in self.mods
+                if mod.tree_item in self.mods_widget.selectedItems()
+            ]
 
             def show_strings():
                 if plugin_selected:
@@ -678,6 +684,35 @@ class MainPageWidget(qtw.QWidget):
                         qta.icon("mdi6.passport-plus", color="#ffffff")
                     )
                     create_translation_action.triggered.connect(create_translation)
+
+                # Show action submenu
+                action_menu = menu.addMenu(self.loc.main.actions)
+                action_menu.setIcon(qta.icon("mdi6.lightning-bolt", color="#ffffff"))
+
+                basic_scan_action = action_menu.addAction(
+                    qtg.QIcon(str(self.app.data_path / "icons" / "detect_lang.svg")),
+                    self.loc.main.basic_scan,
+                )
+                basic_scan_action.triggered.connect(lambda: Processor.scan_modlist(selected_mods, self.app))
+
+                online_scan_action = action_menu.addAction(
+                    qtg.QIcon(str(self.app.data_path / "icons" / "scan_online.svg")),
+                    self.loc.main.scan_online,
+                )
+                online_scan_action.triggered.connect(lambda: Processor.scan_online(selected_mods, self.app))
+
+                download_translations_action = action_menu.addAction(
+                    qta.icon("mdi6.download-multiple", color="#ffffff"),
+                    self.loc.main.download_translations,
+                )
+                download_translations_action.triggered.connect(lambda: Processor.download_and_install_translations(selected_mods, self.app))
+
+                deep_scan_action = action_menu.addAction(
+                    qta.icon("mdi6.line-scan", color="#ffffff"),
+                    self.loc.main.deep_scan,
+                )
+                deep_scan_action.triggered.connect(lambda: Processor.run_deep_scan(selected_mods, self.app))
+
             elif plugin_selected:
                 if self.app.database.get_translation_by_plugin_name(
                     selected_plugin.name
