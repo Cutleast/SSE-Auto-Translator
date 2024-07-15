@@ -5,6 +5,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import os
+import time
 
 import jstyleson as json
 import qtawesome as qta
@@ -13,7 +14,7 @@ import qtpy.QtGui as qtg
 import qtpy.QtWidgets as qtw
 
 import utilities as utils
-from database import DatabaseWidget
+from database import DatabaseWidget, Translation
 from main import MainApp
 from mod_managers import SUPPORTED_MOD_MANAGERS
 from processor import Processor
@@ -531,6 +532,78 @@ class MainPageWidget(qtw.QWidget):
                         self.app.tab_widget.setCurrentWidget(
                             self.app.translation_editor
                         )
+                elif mod_selected:
+                    existing_translation = self.app.database.get_translation_by_mod(
+                        selected_mod
+                    )
+
+                    def process(ldialog: LoadingDialog):
+                        ldialog.updateProgress(text1=self.loc.main.creating_translation)
+
+                        plugins = [
+                            plugin
+                            for plugin in selected_mod.plugins
+                            if plugin.status
+                            in [
+                                utils.Plugin.Status.RequiresTranslation,
+                                utils.Plugin.Status.NoTranslationAvailable,
+                            ]
+                        ]
+
+                        translation_strings: dict[str, list[utils.String]] = {}
+
+                        for p, plugin in enumerate(plugins):
+                            ldialog.updateProgress(
+                                show2=True,
+                                text2=f"{plugin.name} ({p}/{len(plugins)})",
+                                value2=p,
+                                max2=len(plugins),
+                            )
+
+                            translation_strings[plugin.name.lower()] = (
+                                app.cacher.get_plugin_strings(plugin.path)
+                            )
+                            plugin.status = plugin.Status.TranslationIncomplete
+
+                        if existing_translation is None:
+                            translation_name = f"{selected_mod.name} - {app.database.language.capitalize()}"
+                            translation = Translation(
+                                name=translation_name,
+                                mod_id=0,
+                                file_id=0,
+                                version=selected_mod.version,
+                                original_mod_id=selected_mod.mod_id,
+                                original_file_id=selected_mod.file_id,
+                                original_version=selected_mod.version,
+                                path=app.database.userdb_path
+                                / app.database.language
+                                / translation_name,
+                                strings=translation_strings,
+                                source=utils.Source.Local,
+                                timestamp=int(time.time()),
+                            )
+                            app.database.apply_db_to_translation(translation)
+
+                            for string in [
+                                string
+                                for _plugin in translation.strings.values()
+                                for string in _plugin
+                            ]:
+                                if string.status == string.Status.TranslationIncomplete:
+                                    string.status = string.Status.TranslationComplete
+
+                            translation.save_translation()
+                            app.database.add_translation(translation)
+
+                        else:
+                            existing_translation.strings.update(translation_strings)
+                            app.database.apply_db_to_translation(existing_translation)
+                            existing_translation.save_translation()
+
+                    loadingdialog = LoadingDialog(self.app.root, self.app, process)
+                    loadingdialog.exec()
+                    self.database_widget.translations_widget.load_translations()
+                    self.update_modlist()
 
             def import_as_translation():
                 mod = [
@@ -592,6 +665,19 @@ class MainPageWidget(qtw.QWidget):
             if mod_selected:
                 if self.app.database.get_translation_by_mod(selected_mod):
                     show_translation_actions = True
+
+                if any(
+                    plugin.status == utils.Plugin.Status.NoTranslationAvailable
+                    or plugin.status == utils.Plugin.Status.RequiresTranslation
+                    for plugin in selected_mod.plugins
+                ):
+                    create_translation_action = menu.addAction(
+                        self.mloc.create_translation
+                    )
+                    create_translation_action.setIcon(
+                        qta.icon("mdi6.passport-plus", color="#ffffff")
+                    )
+                    create_translation_action.triggered.connect(create_translation)
             elif plugin_selected:
                 if self.app.database.get_translation_by_plugin_name(
                     selected_plugin.name
