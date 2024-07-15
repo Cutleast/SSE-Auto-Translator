@@ -13,6 +13,7 @@ import qtpy.QtCore as qtc
 import qtpy.QtGui as qtg
 import qtpy.QtWidgets as qtw
 
+import plugin_interface
 import utilities as utils
 from main import MainApp
 from translation_provider import FileDownload, TranslationDownload
@@ -275,6 +276,72 @@ class TranslationsWidget(qtw.QWidget):
                     utils.apply_dark_title_bar(messagebox)
                     messagebox.exec()
 
+            def apply_translation():
+                messagebox = qtw.QMessageBox()
+                utils.apply_dark_title_bar(messagebox)
+                messagebox.setIcon(messagebox.Icon.Warning)
+                messagebox.setWindowTitle(self.loc.main.warning)
+                messagebox.setText(
+                    "This feature is highly experimental and there is a high chance that the plugin won't work at all. Use at your own risk!"
+                )
+                messagebox.setStandardButtons(
+                    qtw.QMessageBox.StandardButton.Yes
+                    | qtw.QMessageBox.StandardButton.Cancel
+                )
+                messagebox.button(qtw.QMessageBox.StandardButton.Cancel).setText(
+                    self.loc.main.cancel
+                )
+                messagebox.button(qtw.QMessageBox.StandardButton.Yes).setText(
+                    self.loc.main._continue
+                )
+                choice = messagebox.exec()
+
+                if choice != qtw.QMessageBox.StandardButton.Yes:
+                    return
+
+                # Find original plugin
+                original_plugin: utils.Plugin | None = None
+                for mod in self.app.mainpage_widget.mods:
+                    for plugin in mod.plugins:
+                        if (
+                            plugin.name.lower() == selected_plugin_name.lower()
+                            and plugin.tree_item.checkState(0)
+                            == qtc.Qt.CheckState.Checked
+                            and plugin.status != plugin.Status.IsTranslated
+                        ):
+                            original_plugin = plugin
+
+                if not original_plugin:
+                    raise Exception("Original plugin not found!")
+
+                file_dialog = qtw.QFileDialog(self.app.root)
+                file_dialog.setWindowTitle("Apply Translation to Plugin...")
+                file_dialog.setFileMode(qtw.QFileDialog.FileMode.AnyFile)
+                file_dialog.setNameFilter(
+                    f"Plugin File (*{original_plugin.path.suffix})"
+                )
+                file_dialog.selectFile(original_plugin.name)
+                utils.apply_dark_title_bar(file_dialog)
+
+                if file_dialog.exec():
+                    file = file_dialog.selectedFiles()[0]
+                    file = os.path.normpath(file)
+                    file = Path(file)
+
+                    plugin = plugin_interface.Plugin(original_plugin.path)
+                    plugin.replace_strings(
+                        selected_translation.strings[selected_plugin_name]
+                    )
+
+                    with file.open("wb") as stream:
+                        stream.write(plugin.dump())
+
+                    messagebox = qtw.QMessageBox(self.app.root)
+                    messagebox.setWindowTitle(self.loc.main.success)
+                    messagebox.setText(self.mloc.export_complete)
+                    utils.apply_dark_title_bar(messagebox)
+                    messagebox.exec()
+
             def open_modpage():
                 if selected_translation.mod_id:
                     url = self.app.provider.get_modpage_link(
@@ -346,6 +413,14 @@ class TranslationsWidget(qtw.QWidget):
                     qta.icon("fa5s.share", color="#ffffff")
                 )
                 export_translation_action.triggered.connect(export_translation)
+            else:
+                apply_translation_action = menu.addAction(
+                    "Apply Translation to Plugin [HIGHLY EXPERIMENTAL]"
+                )
+                apply_translation_action.setIcon(
+                    qta.icon("fa5s.file-signature", color="#ffffff")
+                )
+                apply_translation_action.triggered.connect(apply_translation)
 
             menu.addSeparator()
 
