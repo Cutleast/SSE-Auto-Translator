@@ -5,7 +5,6 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import os
-from concurrent.futures import ThreadPoolExecutor
 
 import jstyleson as json
 import qtawesome as qta
@@ -348,15 +347,11 @@ class MainPageWidget(qtw.QWidget):
 
             def show_structure():
                 if plugin_selected:
-                    from plugin_parser import PluginParser
+                    from plugin_interface import Plugin
 
-                    parser = PluginParser(selected_plugin.path)
-                    parser.parse_plugin()
+                    plugin = Plugin(selected_plugin.path)
 
-                    with ThreadPoolExecutor(thread_name_prefix="Processor") as exec:
-                        text = exec.submit(
-                            lambda data: str(data), parser.parsed_data
-                        ).result()
+                    text = str(plugin)
                     self.app.log.debug(f"Text Length: {len(text)}")
 
                     with open("debug.txt", "w", encoding="utf8") as file:

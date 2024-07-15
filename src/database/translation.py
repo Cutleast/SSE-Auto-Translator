@@ -15,6 +15,7 @@ from pathlib import Path
 import jstyleson as json
 from qtpy.QtWidgets import QTreeWidgetItem
 
+import plugin_interface
 import utilities as utils
 
 
@@ -73,6 +74,7 @@ class Translation:
             translation_paths = list(self.path.glob("*.ats"))
 
             # Fix translation files that were generated outside of SSE-AT
+            sys.modules["plugin_parser"] = plugin_interface
             sys.modules["plugin_parser.string"] = utils.string
             for translation_path in translation_paths:
                 try:
@@ -82,6 +84,7 @@ class Translation:
                     self.log.error(f"Failed to load strings from database file {str(translation_path)!r}", exc_info=ex)
 
             sys.modules.pop("plugin_parser.string")
+            sys.modules.pop("plugin_parser")
 
             translation_paths = list(self.path.glob("*.json"))
 

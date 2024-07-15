@@ -15,6 +15,7 @@ import qtpy.QtCore as qtc
 
 from archive_parser import ArchiveParser
 from archiver import Archive
+from plugin_interface import Plugin
 
 from .mod import Mod
 from .string import String
@@ -333,17 +334,18 @@ def import_from_archive(
 
 
 def merge_plugin_strings(
-    translation_plugin: Path, original_plugin: Path, cache
+    translation_plugin_path: Path, original_plugin_path: Path, cache
 ) -> list[String]:
     """
     Extracts strings from translation and original plugin and merges.
     """
 
-    translation_strings = cache.get_plugin_strings(translation_plugin)
+    translation_plugin = Plugin(translation_plugin_path)
+    translation_strings = translation_plugin.extract_strings()
 
     original_strings = {
         f"{string.form_id.lower()[2:]}###{string.editor_id}###{string.type}###{string.index}": string
-        for string in cache.get_plugin_strings(original_plugin)
+        for string in cache.get_plugin_strings(original_plugin_path)
     }
 
     if not translation_strings and not original_strings:

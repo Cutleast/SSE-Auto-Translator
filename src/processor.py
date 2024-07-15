@@ -18,7 +18,7 @@ import qtpy.QtWidgets as qtw
 import utilities as utils
 from database import Translation
 from main import MainApp
-from plugin_parser import PluginParser
+from plugin_interface import Plugin
 from translation_provider import FileDownload, TranslationDownload
 from widgets import DownloadListDialog, LoadingDialog
 
@@ -63,7 +63,7 @@ class Processor:
 
                 app.log.debug(f"Parsing {plugin.name!r}...")
 
-                if PluginParser(plugin.path).is_light():
+                if Plugin.is_light(plugin.path):
                     light_plugins.append(plugin.name.lower())
 
             # Post-process FormIDs

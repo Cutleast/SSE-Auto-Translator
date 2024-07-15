@@ -34,8 +34,7 @@
         "FULL"
     ],
     "DIAL": [
-        "FULL",
-        "TIFC"
+        "FULL"
     ],
     "DOOR": [
         "FULL"
@@ -139,9 +138,6 @@
     ],
     "TREE": [
         "FULL"
-    ],
-    "TES4": [
-        "MAST"
     ],
     "WEAP": [
         "DESC",
