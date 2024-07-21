@@ -2,7 +2,9 @@ lingua-language-detector
 qtpy
 PySide6==6.6.1
 qtawesome
-nuitka
+nuitka  # Has problems with AV detections
+pyinstaller
+pyinstaller-versionfile
 pyperclip
 requests
 jstyleson

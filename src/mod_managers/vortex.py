@@ -99,7 +99,11 @@ class Vortex(ModManager):
             if staging_folder is None:
                 staging_folder = appdata_path / "skyrimse" / "mods"
             else:
-                staging_folder = Path(staging_folder.replace(r"{game}", "skyrimse"))
+                staging_folder = Path(
+                    staging_folder.replace(r"{game}", "skyrimse").replace(
+                        r"{USERDATA}", str(appdata_path)
+                    )
+                )
 
             self.rules = {}
             self.mods = {}

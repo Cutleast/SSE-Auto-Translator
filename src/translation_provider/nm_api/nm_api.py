@@ -88,7 +88,10 @@ class NexusModsApi:
 
         url = "https://api.nexusmods.com/v1/" + path
 
-        cached = self.cacher.get_from_web_cache(url)
+        if cache_result:
+            cached = self.cacher.get_from_web_cache(url)
+        else:
+            cached = None
 
         if cached is None or not cache_result:
             headers = {
