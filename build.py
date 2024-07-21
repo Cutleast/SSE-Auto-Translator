@@ -7,6 +7,8 @@ import shutil
 import os
 from pathlib import Path
 
+COMPILER = "nuitka"  # "pyinstaller" or "nuitka"
+
 DIST_FOLDER = Path("app.dist").resolve()
 APPNAME = "SSE Auto Translator"
 VERSION = "2.0.0"
@@ -25,8 +27,10 @@ UNUSED_ITEMS: list[Path] = [
 OUTPUT_FOLDER = DIST_FOLDER.with_name("SSE-AT")
 OUTPUT_ARCHIVE = Path(f"SSE-AT v{VERSION}.7z").resolve()
 
-print("Building with nuitka...")
-cmd = f'nuitka \
+
+print(f"Building with {COMPILER}...")
+if COMPILER == "nuitka":
+    cmd = f'nuitka \
 --msvc="latest" \
 --standalone \
 --include-data-dir="./src/data=./data" \
@@ -50,6 +54,46 @@ cmd = f'nuitka \
 --windows-icon-from-ico="./src/data/icons/icon.ico" \
 --output-filename="SSE-AT.exe" \
 "./src/app.py"'
+
+elif COMPILER == "pyinstaller":
+    # Create version file
+    import pyinstaller_versionfile
+
+    pyinstaller_versionfile.create_versionfile(
+        output_file="versioninfo.txt",
+        version=VERSION,
+        company_name=AUTHOR,
+        file_description=APPNAME,
+        internal_name=APPNAME,
+        legal_copyright=LICENSE,
+        original_filename="SSE-AT.exe",
+        product_name=APPNAME,
+    )
+
+    print("Created version info at: versioninfo.txt")
+
+    cmd = f'pyinstaller \
+--noconfirm \
+--hide-console=hide-late \
+--version-file="versioninfo.txt" \
+--add-data="./src/data:./data" \
+--add-data="./doc:./doc" \
+--add-data="LICENSE:." \
+--add-data="./src/TaskbarLib.tlb:." \
+--add-data="./.venv/Lib/site-packages/cloudscraper/user_agent/browsers.json:./cloudscraper/user_agent/" \
+--add-data="./.venv/Lib/site-packages/qtawesome:./qtawesome" \
+--hidden-import=hunspell \
+--hidden-import=hunspell.platform \
+--hidden-import=cacheman \
+--hidden-import=cacheman.cachewrap \
+--distpath="{DIST_FOLDER}" \
+-i="./src/data/icons/icon.ico" \
+--name="SSE-AT" \
+"./src/app.py"'
+
+else:
+    raise ValueError(f"Compiler {COMPILER!r} is not supported!")
+
 os.system(cmd)
 
 print("Deleting unused files and folders...")
