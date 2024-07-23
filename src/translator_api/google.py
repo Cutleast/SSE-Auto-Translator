@@ -23,7 +23,6 @@ class GoogleTranslator(Translator):
 
     langs = {
         "chinese": "zh-cn",
-        "portuguese": "pt-br",
     }
 
     def __init__(self, app: MainApp):
