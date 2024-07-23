@@ -24,6 +24,22 @@ UNUSED_ITEMS: list[Path] = [
     DIST_FOLDER / "data" / "translator",
     DIST_FOLDER / "data" / "icons" / "Confrerie.svg",
 ]
+ADDITIONAL_ITEMS: dict[Path, Path] = {
+    Path("src") / "data": DIST_FOLDER / "data",
+    Path("doc"): DIST_FOLDER / "doc",
+    Path("LICENSE"): DIST_FOLDER / "LICENSE",
+    Path("src") / "TaskbarLib.tlb": DIST_FOLDER / "TaskbarLib.tlb",
+    Path(".venv")
+    / "Lib"
+    / "site-packages"
+    / "cloudscraper"
+    / "user_agent"
+    / "browsers.json": DIST_FOLDER
+    / "cloudscraper"
+    / "user_agent"
+    / "browsers.json",
+    Path("7-zip"): DIST_FOLDER,
+}
 OUTPUT_FOLDER = DIST_FOLDER.with_name("SSE-AT")
 OUTPUT_ARCHIVE = Path(f"SSE-AT v{VERSION}.7z").resolve()
 
@@ -33,12 +49,6 @@ if COMPILER == "nuitka":
     cmd = f'nuitka \
 --msvc="latest" \
 --standalone \
---include-data-dir="./src/data=./data" \
---include-data-dir="./doc=./doc" \
---include-data-file="LICENSE=." \
---include-data-file="./src/TaskbarLib.tlb=." \
---include-data-files="./.venv/Lib/site-packages/cloudscraper/user_agent/browsers.json=cloudscraper/user_agent/" \
---include-data-dir="./.venv/Lib/site-packages/qtawesome=./qtawesome" \
 --include-package=hunspell \
 --include-package=cacheman \
 --enable-plugin=pyside6 \
@@ -51,9 +61,9 @@ if COMPILER == "nuitka":
 --file-description="{APPNAME}" \
 --copyright="{LICENSE}" \
 --nofollow-import-to=tkinter \
---windows-icon-from-ico="./src/data/icons/icon.ico" \
+--windows-icon-from-ico="src/data/icons/icon.ico" \
 --output-filename="SSE-AT.exe" \
-"./src/app.py"'
+"src/app.py"'
 
 elif COMPILER == "pyinstaller":
     # Create version file
@@ -76,12 +86,6 @@ elif COMPILER == "pyinstaller":
 --noconfirm \
 --hide-console=hide-late \
 --version-file="versioninfo.txt" \
---add-data="./src/data:./data" \
---add-data="./doc:./doc" \
---add-data="LICENSE:." \
---add-data="./src/TaskbarLib.tlb:." \
---add-data="./.venv/Lib/site-packages/cloudscraper/user_agent/browsers.json:./cloudscraper/user_agent/" \
---add-data="./.venv/Lib/site-packages/qtawesome:./qtawesome" \
 --hidden-import=hunspell \
 --hidden-import=hunspell.platform \
 --hidden-import=cacheman \
@@ -94,9 +98,27 @@ elif COMPILER == "pyinstaller":
 else:
     raise ValueError(f"Compiler {COMPILER!r} is not supported!")
 
-os.system(cmd)
+return_code = os.system(cmd)
 
-print("Deleting unused files and folders...")
+if return_code != 0:
+    print("Build command failed!")
+    shutil.rmtree(DIST_FOLDER)
+    exit()
+
+print(f"Copying {len(ADDITIONAL_ITEMS)} additional item(s)...")
+for item, dest in ADDITIONAL_ITEMS.items():
+    if item.is_dir():
+        shutil.copytree(item, dest, dirs_exist_ok=True, copy_function=os.link)
+    elif item.is_file():
+        os.makedirs(dest.parent, exist_ok=True)
+        os.link(item, dest)
+    else:
+        print(f"{str(item)!r} does not exist!")
+        continue
+
+    print(f"Copied {str(item)!r} to {str(dest.relative_to(DIST_FOLDER))!r}.")
+
+print(f"Deleting {len(UNUSED_ITEMS)} unused item(s)...")
 for item in UNUSED_ITEMS:
     if item.is_dir():
         shutil.rmtree(item)
