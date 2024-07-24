@@ -7,7 +7,7 @@ import shutil
 import os
 from pathlib import Path
 
-COMPILER = "nuitka"  # "pyinstaller" or "nuitka"
+COMPILER = "cx_freeze"  # "pyinstaller" or "nuitka" or "cx_freeze"
 
 DIST_FOLDER = Path("app.dist").resolve()
 APPNAME = "SSE Auto Translator"
@@ -42,6 +42,11 @@ ADDITIONAL_ITEMS: dict[Path, Path] = {
 }
 OUTPUT_FOLDER = DIST_FOLDER.with_name("SSE-AT")
 OUTPUT_ARCHIVE = Path(f"SSE-AT v{VERSION}.7z").resolve()
+
+
+if OUTPUT_FOLDER.is_dir():
+    shutil.rmtree(OUTPUT_FOLDER)
+    print(f"Deleted already existing {OUTPUT_FOLDER.name!r} folder.")
 
 
 print(f"Building with {COMPILER}...")
@@ -90,20 +95,58 @@ elif COMPILER == "pyinstaller":
 --hidden-import=hunspell.platform \
 --hidden-import=cacheman \
 --hidden-import=cacheman.cachewrap \
---distpath="{DIST_FOLDER}" \
+--distpath="{OUTPUT_FOLDER.parent}" \
 -i="./src/data/icons/icon.ico" \
 --name="SSE-AT" \
 "./src/app.py"'
 
+elif COMPILER == "cx_freeze":
+    from cx_Freeze import setup, Executable
+    import sys
+
+    build_options = {
+        "packages": ["hunspell", "cacheman"],
+        "excludes": [],
+        "includes": ["hunspell.platform", "cacheman.cachewrap"],
+        "include_files": [("./.venv/Lib/site-packages/plyvel_ci.libs", "./lib/plyvel")],
+        "include_path": "./src",
+        "build_exe": DIST_FOLDER.name,
+    }
+
+    base = "gui"
+
+    executables = [
+        Executable(
+            "./src/app.py",
+            base=base,
+            target_name="SSE-AT.exe",
+            icon="./src/data/icons/icon.ico",
+            copyright=LICENSE,
+        )
+    ]
+
+    sys.argv.append("build_exe")
+
+    setup(
+        name=APPNAME,
+        version=VERSION,
+        description=APPNAME,
+        author=AUTHOR,
+        license=LICENSE,
+        options={"build_exe": build_options},
+        executables=executables,
+    )
+
 else:
     raise ValueError(f"Compiler {COMPILER!r} is not supported!")
 
-return_code = os.system(cmd)
+if COMPILER != "cx_freeze":
+    return_code = os.system(cmd)
 
-if return_code != 0:
-    print("Build command failed!")
-    shutil.rmtree(DIST_FOLDER)
-    exit()
+    if return_code != 0 and COMPILER == "nuitka":
+        print("Build command failed!")
+        shutil.rmtree(DIST_FOLDER)
+        exit()
 
 print(f"Copying {len(ADDITIONAL_ITEMS)} additional item(s)...")
 for item, dest in ADDITIONAL_ITEMS.items():
@@ -127,13 +170,7 @@ for item in UNUSED_ITEMS:
         os.remove(item)
         print(f"Removed file '{item.name}'.")
 
-shutil.copytree("./7-zip", DIST_FOLDER, dirs_exist_ok=True)
-print("Copied 7-zip files to build folder.")
-
 print("Renaming Output folder...")
-if OUTPUT_FOLDER.is_dir():
-    shutil.rmtree(OUTPUT_FOLDER)
-    print(f"Deleted already existing {OUTPUT_FOLDER.name!r} folder.")
 os.rename(DIST_FOLDER, OUTPUT_FOLDER)
 
 print("Done!")
