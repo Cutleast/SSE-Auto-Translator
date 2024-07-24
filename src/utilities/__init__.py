@@ -291,6 +291,8 @@ def get_masterlist(language: str, cache: bool = True) -> dict[str, dict]:
 
     global masterlist
 
+    language = language.lower()
+
     REPO_NAME = "SSE-Auto-Translator"
     REPO_OWNER = "Cutleast"
     BRANCH = "master"
@@ -308,6 +310,7 @@ def get_masterlist(language: str, cache: bool = True) -> dict[str, dict]:
             url = index.get(language)
 
             if not url:
+                log.error(f"No masterlist for {language} available!")
                 masterlist = {}
 
                 return masterlist
