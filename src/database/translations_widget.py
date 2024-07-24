@@ -40,6 +40,8 @@ class TranslationsWidget(qtw.QWidget):
         self.loc = app.loc
         self.mloc = app.loc.database
 
+        self.setAcceptDrops(True)
+
         vlayout = qtw.QVBoxLayout()
         self.setLayout(vlayout)
 
@@ -455,6 +457,55 @@ class TranslationsWidget(qtw.QWidget):
         )
         self.translations_widget.customContextMenuRequested.connect(on_context_menu)
 
+    @staticmethod
+    def is_valid_translation_file(path: Path | str):
+        path = Path(path)
+
+        SUPPORTED_EXTS = [".7z", ".rar", ".zip", ".esp", ".esm", ".esl"]
+
+        return path.is_file() and path.suffix.lower() in SUPPORTED_EXTS
+
+    def dragEnterEvent(self, event: qtg.QDragEnterEvent):
+        if (
+            all(
+                self.is_valid_translation_file(url.toLocalFile())
+                for url in event.mimeData().urls()
+            )
+            and event.mimeData().hasUrls()
+        ):
+            event.acceptProposedAction()
+            return
+
+        super().dragEnterEvent(event)
+
+    def dragMoveEvent(self, event: qtg.QDragMoveEvent):
+        if (
+            all(
+                self.is_valid_translation_file(url.toLocalFile())
+                for url in event.mimeData().urls()
+            )
+            and event.mimeData().hasUrls()
+        ):
+            event.acceptProposedAction()
+            return
+
+        super().dragMoveEvent(event)
+
+    def dropEvent(self, event: qtg.QDropEvent):
+        urls = event.mimeData().urls()
+
+        if (
+            all(self.is_valid_translation_file(url.toLocalFile()) for url in urls)
+            and urls
+        ):
+            files = [Path(file.toLocalFile()) for file in urls]
+            if files:
+                self.import_local_translation(files)
+            event.acceptProposedAction()
+            return
+
+        super().dropEvent(event)
+
     def search_database(self):
         """
         Opens dialog for searching the entire translation database.
@@ -855,7 +906,7 @@ class TranslationsWidget(qtw.QWidget):
         if hasattr(self.app, "mainpage_widget"):
             self.update_translations()
 
-    def import_local_translation(self):
+    def import_local_translation(self, files: list[Path] | None = None):
         """
         Shows File Dialog for importing a local translation.
         """
@@ -870,25 +921,24 @@ class TranslationsWidget(qtw.QWidget):
             and plugin.status != plugin.Status.TranslationIncomplete
         }
 
-        fdialog = qtw.QFileDialog()
-        fdialog.setFileMode(fdialog.FileMode.ExistingFiles)
-        fdialog.setNameFilters(
-            [
-                "Mod Archive (*.7z *.rar *.zip)",
-                "Bethesda Plugin (*.esp *.esm *.esl)",
-            ]
-        )
-        fdialog.setWindowTitle(self.mloc.import_local)
+        if not files:
+            fdialog = qtw.QFileDialog()
+            fdialog.setFileMode(fdialog.FileMode.ExistingFiles)
+            fdialog.setNameFilters(
+                [
+                    "Mod Archive (*.7z *.rar *.zip)",
+                    "Bethesda Plugin (*.esp *.esm *.esl)",
+                ]
+            )
+            fdialog.setWindowTitle(self.mloc.import_local)
 
-        if fdialog.exec() == fdialog.DialogCode.Rejected:
-            return
+            if fdialog.exec() == fdialog.DialogCode.Rejected:
+                return
 
-        selected_files = fdialog.selectedFiles()
+            files = [Path(file) for file in fdialog.selectedFiles()]
 
-        if selected_files:
-            for file in selected_files:
-                file = Path(file)
-
+        if files:
+            for file in files:
                 strings: dict[str, list[utils.String]] = {}
 
                 if file.suffix.lower() in [".7z", ".rar", ".zip"]:
