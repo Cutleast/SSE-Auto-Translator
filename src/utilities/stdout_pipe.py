@@ -54,7 +54,10 @@ class StdoutPipe:
         self._lines.append(string)
 
         try:
-            self.stdout.write(string)
+            # sys.stdout is None if built with cx_freeze
+            if self.stdout is not None:
+                self.stdout.write(string)
+
             if self.app.statusbar is not None and string.strip():
                 self.app.log_signal.emit(
                     trim_string(
