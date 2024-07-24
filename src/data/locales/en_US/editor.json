@@ -1,5 +1,5 @@
 {
-    "api_translation_text": "Are you sure you want to translate [NUMBER] String(s) via Translator API?\nDepending on the Translator API this can raise unexpected costs.\nYou can always cancel by closing the Processing Window without losing progress.",
+    "api_translation_text": "Are you sure you want to translate [NUMBER] String(s) via Translator API?\nDepending on the Translator API this can raise unexpected costs.",
     "apply_database": "Apply Database to untranslated Strings",
     "applying_database": "Applying Database to untranslated Strings...",
     "changed_string": "String was modified",

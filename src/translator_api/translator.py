@@ -26,6 +26,13 @@ class Translator:
 
         raise NotImplementedError
 
+    def mass_translate(self, texts: list[str], src: str, dst: str) -> dict[str, str]:
+        """
+        Translates `texts` and returns translated result with original texts as keys.
+        """
+
+        raise NotImplementedError
+
     def get_settings_widget(self) -> qtw.QWidget:
         """
         Returns settings widget for configuring translator API.

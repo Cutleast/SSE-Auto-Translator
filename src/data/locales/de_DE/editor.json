@@ -1,5 +1,5 @@
 {
-    "api_translation_text": "Sind Sie sicher, dass Sie [NUMBER] String(s) über die Übersetzer-API übersetzen möchten?\nAbhängig von der Übersetzer-API kann dies unerwartete Kosten verursachen.\nSie können jederzeit abbrechen, indem Sie das Verarbeitungsfenster schließen, ohne dass der Fortschritt verloren geht.",
+    "api_translation_text": "Sind Sie sicher, dass Sie [NUMBER] String(s) über die Übersetzer-API übersetzen möchten?\nAbhängig von der Übersetzer-API kann dies unerwartete Kosten verursachen.",
     "apply_database": "Datenbank auf unübersetzte Strings anwenden",
     "applying_database": "Wende Datenbank auf unübersetzte Strings an...",
     "changed_string": "String wurde verändert",

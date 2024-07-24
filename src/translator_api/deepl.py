@@ -41,6 +41,18 @@ class DeepLTranslator(Translator):
         else:
             self.glossary = None
 
+    def mass_translate(self, texts: list[str], src: str, dst: str) -> dict[str, str]:
+        result: dict[str, str] = {}
+
+        texts = list(set(texts))  # Remove duplicates
+
+        # This can't be further optimized because DeepL charges
+        # per translated characters not per requests
+        for text in texts:
+            result[text] = self.translate(text, src, dst)
+
+        return result
+
     def translate(self, text: str, src: str, dst: str) -> str:
         if text not in self.cache:
             # Get language codes from DeepLTranslator.langs

@@ -783,18 +783,18 @@ class EditorTab(qtw.QWidget):
 
         def _run():
             def process(ldialog: LoadingDialog):
-                for s, string in enumerate(selected_strings):
-                    ldialog.updateProgress(
-                        text1=f"{self.mloc.translating_with_api} ({s}/{len(selected_strings)})",
-                        value1=s,
-                        max1=len(selected_strings),
-                    )
+                ldialog.updateProgress(text1=self.mloc.translating_with_api)
 
-                    string.translated_string = self.app.translator.translate(
-                        string.original_string,
-                        "English",
-                        self.app.user_config["language"],
-                    )
+                texts = [
+                    selected_string.original_string
+                    for selected_string in selected_strings
+                ]
+                result = self.app.translator.mass_translate(
+                    texts, "English", self.app.user_config["language"]
+                )
+
+                for string in selected_strings:
+                    string.translated_string = result[string.original_string]
                     string.status = string.Status.TranslationIncomplete
 
             loadingdialog = LoadingDialog(self.app.root, self.app, process)
