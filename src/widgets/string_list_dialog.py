@@ -159,11 +159,30 @@ class StringListDialog(qtw.QWidget):
                 )
 
             else:
-                copy_action = menu.addAction(self.loc.main.copy)
-                copy_action.setShortcut(qtg.QKeySequence("Ctrl+C"))
-                copy_action.setIcon(qta.icon("mdi6.content-copy", color="#ffffff"))
-                copy_action.setIconVisibleInMenu(True)
-                copy_action.triggered.connect(self.copy_selected)
+                copy_menu = menu.addMenu(self.loc.main.copy)
+                copy_menu.setIcon(qta.icon("mdi6.content-copy", color="#ffffff"))
+
+                copy_all_action = copy_menu.addAction(self.loc.main.copy)
+                copy_all_action.setShortcut(qtg.QKeySequence("Ctrl+C"))
+                copy_all_action.setIcon(qta.icon("mdi6.content-copy", color="#ffffff"))
+                copy_all_action.triggered.connect(self.copy_selected)
+
+                headers = ["type", "form_id", "editor_id", "string"]
+                if show_translation:
+                    headers.insert(-1, "original")
+
+                def get_func(c: int):
+                    def func():
+                        self.copy_selected(c)
+
+                    return func
+
+                for c, header in enumerate(headers):
+                    copy_action = copy_menu.addAction(
+                        getattr(self.loc.main, f"copy_{header}", f"copy_{header}")
+                    )
+                    copy_action.setIcon(qta.icon("mdi6.content-copy", color="#ffffff"))
+                    copy_action.triggered.connect(get_func(c))
 
             menu.exec(self.strings_widget.mapToGlobal(point))
 
@@ -386,7 +405,7 @@ class StringListDialog(qtw.QWidget):
 
         dialog.exec()
 
-    def copy_selected(self):
+    def copy_selected(self, column: int | None = None):
         """
         Copies current selected strings to clipboard.
         """
@@ -398,8 +417,11 @@ class StringListDialog(qtw.QWidget):
             if item.childCount():  # Skip items with children (sections if nested)
                 continue
 
-            for c in range(self.strings_widget.columnCount()):
-                clipboard_text += f"{item.toolTip(c)!r}"[1:-1] + "\t"
+            if column is None:
+                for c in range(self.strings_widget.columnCount()):
+                    clipboard_text += f"{item.toolTip(c)!r}"[1:-1] + "\t"
+            else:
+                clipboard_text += item.toolTip(column)
 
             clipboard_text = clipboard_text.removesuffix("\t")
             clipboard_text += "\n"

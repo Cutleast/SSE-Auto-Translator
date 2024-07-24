@@ -55,6 +55,7 @@ QMenuBar::item:disabled {
 }
 QMenu {
     padding: 4px;
+    padding-right: 24px;
     border-radius: 8px;
 }
 QMenu::separator,
@@ -74,6 +75,7 @@ QMenu::item {
     border-radius: 4px;
     margin: 2px;
     padding: 6px;
+    padding-right: 24px;
 }
 QMenu::item:selected:!disabled {
     background: #1cffffff;
