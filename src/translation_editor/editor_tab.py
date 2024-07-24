@@ -781,6 +781,35 @@ class EditorTab(qtw.QWidget):
             if string.tree_item in self.strings_widget.selectedItems()
         ]
 
+        def _run():
+            def process(ldialog: LoadingDialog):
+                for s, string in enumerate(selected_strings):
+                    ldialog.updateProgress(
+                        text1=f"{self.mloc.translating_with_api} ({s}/{len(selected_strings)})",
+                        value1=s,
+                        max1=len(selected_strings),
+                    )
+
+                    string.translated_string = self.app.translator.translate(
+                        string.original_string,
+                        "English",
+                        self.app.user_config["language"],
+                    )
+                    string.status = string.Status.TranslationIncomplete
+
+            loadingdialog = LoadingDialog(self.app.root, self.app, process)
+            loadingdialog.exec()
+
+            for string in selected_strings:
+                string.tree_item.setText(4, utils.trim_string(string.translated_string))
+
+            self.update_string_list()
+            self.changes_signal.emit()
+
+        if not self.app.translator_config.get("show_confirmation_dialogs", True):
+            _run()
+            return
+
         dialog = qtw.QDialog(self.app.root)
         dialog.setWindowTitle(self.mloc.translate_with_api)
         utils.apply_dark_title_bar(dialog)
@@ -805,29 +834,12 @@ class EditorTab(qtw.QWidget):
         apply_button = qtw.QPushButton(self.loc.main.apply)
 
         def apply():
-            def process(ldialog: LoadingDialog):
-                for s, string in enumerate(selected_strings):
-                    ldialog.updateProgress(
-                        text1=f"{self.mloc.translating_with_api} ({s}/{len(selected_strings)})",
-                        value1=s,
-                        max1=len(selected_strings),
-                    )
+            _run()
 
-                    string.translated_string = self.app.translator.translate(
-                        string.original_string,
-                        "English",
-                        self.app.user_config["language"],
-                    )
-                    string.status = string.Status.TranslationIncomplete
-
-            loadingdialog = LoadingDialog(self.app.root, self.app, process)
-            loadingdialog.exec()
-
-            for string in selected_strings:
-                string.tree_item.setText(4, utils.trim_string(string.translated_string))
-
-            self.update_string_list()
-            self.changes_signal.emit()
+            if do_not_show_again_checkbox.isChecked():
+                self.app.translator_config["show_confirmation_dialog"] = False
+                with open(self.app.translator_conf_path, "w", encoding="utf8") as file:
+                    json.dump(self.app.translator_config, file, indent=4)
             dialog.accept()
 
         apply_button.clicked.connect(apply)
@@ -836,6 +848,9 @@ class EditorTab(qtw.QWidget):
         cancel_button = qtw.QPushButton(self.loc.main.cancel)
         cancel_button.clicked.connect(dialog.accept)
         hlayout.addWidget(cancel_button)
+
+        do_not_show_again_checkbox = qtw.QCheckBox(self.loc.main.do_not_show_again)
+        hlayout.addWidget(do_not_show_again_checkbox)
 
         dialog.exec()
 
@@ -1003,7 +1018,4 @@ class EditorTab(qtw.QWidget):
         Returns a list of strings that are visible with current filter.
         """
 
-        return [
-            string for string in self.strings
-            if not string.tree_item.isHidden()
-        ]
+        return [string for string in self.strings if not string.tree_item.isHidden()]

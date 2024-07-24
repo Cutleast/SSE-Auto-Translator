@@ -69,6 +69,7 @@ class MainApp(qtw.QApplication):
     default_translator_config = {
         "translator": "Google Translator",
         "api_key": None,
+        "show_confirmation_dialogs": True,
     }
     translator_config = default_translator_config
 

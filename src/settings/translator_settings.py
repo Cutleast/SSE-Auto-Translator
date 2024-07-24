@@ -4,6 +4,7 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+import jstyleson as json
 import qtpy.QtCore as qtc
 import qtpy.QtWidgets as qtw
 
@@ -60,6 +61,23 @@ class TranslatorSettings(qtw.QWidget):
             )
         )
 
+        # Reset Confirmation Dialogs
+        reset_confirmations_button = qtw.QPushButton(self.loc.main.reset_confirmations)
+        reset_confirmations_button.setDisabled(
+            self.app.translator_config.get("show_confirmation_dialogs")
+        )
+
+        def reset_confirmations():
+            self.app.translator_config["show_confirmation_dialogs"] = True
+
+            with open(self.app.translator_conf_path, "w", encoding="utf8") as file:
+                json.dump(self.app.translator_config, file, indent=4)
+
+            reset_confirmations_button.setDisabled(True)
+
+        reset_confirmations_button.clicked.connect(reset_confirmations)
+        flayout.addRow(reset_confirmations_button)
+
     def on_change(self, *args):
         """
         This emits change signal without passing parameters.
@@ -73,4 +91,7 @@ class TranslatorSettings(qtw.QWidget):
         return {
             "translator": self.translator_box.currentText(),
             "api_key": api_key,
+            "show_confirmation_dialogs": self.app.translator_config.get(
+                "show_confirmation_dialogs", True
+            ),
         }
