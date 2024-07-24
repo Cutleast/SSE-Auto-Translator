@@ -52,6 +52,7 @@ class IntroductionPage(qtw.QWidget):
 
         # Path Limit
         path_limit_label = qtw.QLabel(self.mloc.path_limit)
+        path_limit_label.setWordWrap(True)
         vlayout.addWidget(path_limit_label)
 
         fix_button = qtw.QPushButton(self.loc.main.fix_path_limit)

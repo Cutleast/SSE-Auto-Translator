@@ -1,3 +1,13 @@
+# v2.0.1
+
+#### Due to a change in the way SSE-AT is built, to deal with AV false positives, it is heavily recommended to delete everything but the "data" folder from the "SSE-AT" folder before updating! Your User Data is not affected.
+
+- Fix Manual API Setup in StartupDialog
+- Fix "{USERDATA}" in Vortex's staging folder path
+- Attempt to fix AV false detections
+- Fix PT-BR when translating with Google
+- Fix masterlist not loading
+
 # v2.0.0
 
 ### Highlights

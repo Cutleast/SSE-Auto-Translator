@@ -35,7 +35,11 @@ class MainApp(qtw.QApplication):
     version = "2.1.0-alpha-1"
 
     loc: "utils.Localisator" = None
-    cur_path = Path(__file__).parent.resolve()
+    cur_path = (  # Get path of executable/script depending on building status
+        Path(sys.executable).parent.resolve()
+        if getattr(sys, "frozen", False)
+        else Path(__file__).parent.resolve()
+    )
     data_path = cur_path / "data"
     app_conf_path = data_path / "app" / "config.json"
     user_conf_path = data_path / "user" / "config.json"

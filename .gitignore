@@ -18,3 +18,4 @@ cache
 build
 dist
 *.spec
+versioninfo.txt
