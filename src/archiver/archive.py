@@ -5,6 +5,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import logging
+import os
 import subprocess
 from fnmatch import fnmatch
 from pathlib import Path
@@ -128,6 +129,8 @@ class Archive:
             self.log.debug(f"Command: {cmd}")
             self.log.error(output)
             raise Exception("Unpacking command failed!")
+        else:
+            os.remove(filenames_txt)
 
     def find(self, pattern: str) -> list[str]:
         """
