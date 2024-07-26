@@ -44,8 +44,20 @@ class IntroductionPage(qtw.QWidget):
         vlayout.addWidget(info_label)
 
         # Documentation button
-        documentation_button = qtw.QPushButton(self.loc.main.show_documentation)
+        documentation_button = qtw.QPushButton(
+            self.loc.main.show_documentation + " (Offline)"
+        )
         documentation_button.clicked.connect(self.startup_dialog.app.show_documentation)
+        vlayout.addWidget(documentation_button)
+
+        documentation_button = qtw.QPushButton(
+            self.loc.main.show_documentation + " (Browser)"
+        )
+        documentation_button.clicked.connect(
+            lambda: os.startfile(
+                "https://github.com/Cutleast/SSE-Auto-Translator/blob/master/doc/Instructions_en_US.md"
+            )
+        )
         vlayout.addWidget(documentation_button)
 
         vlayout.addSpacing(50)
