@@ -211,12 +211,15 @@ class DownloadsWidget(qtw.QWidget):
             self.update_progress((download, download.Status.Processing))
 
             tmp_path = self.app.get_tmp_dir()
+            dl_path = (
+                Path(self.app.app_config["downloads_path"]) or self.app.get_tmp_dir()
+            )
 
             self.log.info(
                 f"Downloading file {download.file_name!r} from {download.direct_url!r}..."
             )
 
-            downloaded_file = tmp_path / download.file_name
+            downloaded_file = dl_path / download.file_name
             download.status = download.Status.Downloading
             self.update_progress((download, download.Status.Downloading))
 
@@ -232,7 +235,7 @@ class DownloadsWidget(qtw.QWidget):
             self.start_timer_signal.emit()
             if not downloaded_file.is_file():
                 try:
-                    self.downloader.download(download, tmp_path)
+                    self.downloader.download(download, dl_path)
                 except Exception as ex:
                     self.log.error(f"Download failed: {ex}", exc_info=ex)
                     download.status = download.Status.DownloadFailed
@@ -251,7 +254,7 @@ class DownloadsWidget(qtw.QWidget):
                     strings = utils.import_from_archive(
                         downloaded_file,
                         self.app.mainpage_widget.mods,
-                        self.app.get_tmp_dir(),
+                        tmp_path,
                         self.app.cacher,
                     )
                 except Exception as ex:
@@ -324,6 +327,11 @@ class DownloadsWidget(qtw.QWidget):
                         self.update_progress((download, download.Status.DownloadFailed))
 
                 self.download_finished.emit()
+            else:
+                self.log.error("Download failed: File could not be downloaded!")
+                download.status = download.Status.DownloadFailed
+                progress_widget.set_exception("File could not be downloaded!")
+                self.update_progress((download, download.Status.DownloadFailed))
 
             self.current_download = None
             self.queue.task_done()

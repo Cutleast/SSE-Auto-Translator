@@ -63,6 +63,7 @@ class MainApp(qtw.QApplication):
         "use_spell_check": True,
         "output_path": None,
         "temp_path": None,
+        "downloads_path": None,
     }
     app_config = default_app_config
     user_config: dict = None

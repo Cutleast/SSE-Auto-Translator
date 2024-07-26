@@ -182,6 +182,37 @@ class AppSettings(qtw.QScrollArea):
         browse_temp_path_button.clicked.connect(browse)
         hlayout.addWidget(browse_temp_path_button)
 
+        # Downloads path
+        downloads_path_label = qtw.QLabel(self.mloc.downloads_path)
+        hlayout = qtw.QHBoxLayout()
+        flayout.addRow(downloads_path_label, hlayout)
+
+        self.downloads_path_entry = ClearEntry()
+        self.downloads_path_entry.setPlaceholderText(self.mloc.temp_path.split("\n")[0])
+        if self.app.app_config["downloads_path"] is not None:
+            self.downloads_path_entry.setText(self.app.app_config["downloads_path"])
+        self.downloads_path_entry.textChanged.connect(self.on_change)
+        hlayout.addWidget(self.downloads_path_entry)
+        browse_downloads_path_button = qtw.QPushButton()
+        browse_downloads_path_button.setIcon(qta.icon("fa5s.folder-open", color="#ffffff"))
+
+        def browse():
+            file_dialog = qtw.QFileDialog(self.app.activeModalWidget())
+            file_dialog.setWindowTitle(self.loc.main.browse)
+            file_dialog.setFileMode(qtw.QFileDialog.FileMode.Directory)
+            utils.apply_dark_title_bar(file_dialog)
+            if cur_text := self.downloads_path_entry.text().strip():
+                path = Path(cur_text)
+                if path.is_dir():
+                    file_dialog.setDirectoryUrl(str(path))
+            if file_dialog.exec():
+                file = file_dialog.selectedFiles()[0]
+                file = os.path.normpath(file)
+                self.downloads_path_entry.setText(file)
+
+        browse_downloads_path_button.clicked.connect(browse)
+        hlayout.addWidget(browse_downloads_path_button)
+
         self.bind_nxm_checkbox = qtw.QCheckBox(
             self.mloc.auto_bind_nxm + " [EXPERIMENTAL]"
         )
@@ -242,4 +273,5 @@ class AppSettings(qtw.QScrollArea):
             "use_spell_check": self.use_spell_check_checkbox.isChecked(),
             "output_path": self.output_path_entry.text().strip() or None,
             "temp_path": self.temp_path_entry.text().strip() or None,
+            "downloads_path": self.downloads_path_entry.text().strip() or None,
         }
