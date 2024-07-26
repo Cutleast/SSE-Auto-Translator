@@ -44,6 +44,7 @@ def import_non_plugin_files(
         )
 
     output_folder = tmp_dir / "Output"
+    language: str = user_config["language"].lower()
 
     if output_folder.is_dir():
         shutil.rmtree(output_folder)
@@ -97,7 +98,7 @@ def import_non_plugin_files(
         bsa_files_to_extract: list[str] = []
 
         if incl_interface:
-            bsa_files_to_extract.extend(parsed_bsa.glob("**/interface/**/*.txt"))
+            bsa_files_to_extract.extend(parsed_bsa.glob(f"**/interface/**/*_{language}.txt"))
 
         if incl_scripts:
             bsa_files_to_extract.extend(parsed_bsa.glob("**/scripts/*.pex"))
@@ -141,7 +142,7 @@ def import_non_plugin_files(
     matching_files: list[str] = []
 
     if incl_interface:
-        matching_files.extend(archive.glob("**/interface/**/*.txt"))
+        matching_files.extend(archive.glob(f"**/interface/**/*_{language}.txt"))
 
     if incl_scripts:
         matching_files.extend(archive.glob("**/scripts/*.pex"))
