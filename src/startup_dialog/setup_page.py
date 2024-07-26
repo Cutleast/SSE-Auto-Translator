@@ -110,40 +110,44 @@ class SetupPage(qtw.QWidget):
         slayout.addSpacing(5)
 
         # Enabled File Types
-        filetypes_label = qtw.QLabel(self.loc.settings.enabled_file_types)
-        filetypes_label.setAlignment(qtc.Qt.AlignmentFlag.AlignLeft)
-        filetypes_label.setObjectName("relevant_label")
-        slayout.addWidget(filetypes_label, 0, qtc.Qt.AlignmentFlag.AlignLeft)
+        filetypes_groupbox = qtw.QGroupBox(self.loc.settings.enabled_file_types)
+        slayout.addWidget(filetypes_groupbox)
+        filetypes_vlayout = qtw.QVBoxLayout()
+        filetypes_groupbox.setLayout(filetypes_vlayout)
 
         self.enable_interface_files_box = qtw.QCheckBox(
             self.loc.settings.enable_interface_files
         )
         self.enable_interface_files_box.setChecked(True)
-        slayout.addWidget(self.enable_interface_files_box)
+        filetypes_vlayout.addWidget(self.enable_interface_files_box)
 
         self.enable_scripts_box = qtw.QCheckBox(
             self.loc.settings.enable_scripts + " [EXPERIMENTAL]"
         )
         self.enable_scripts_box.setChecked(False)
-        slayout.addWidget(self.enable_scripts_box)
+        filetypes_vlayout.addWidget(self.enable_scripts_box)
 
         self.enable_textures_box = qtw.QCheckBox(
             self.loc.settings.enable_textures + " [EXPERIMENTAL]"
         )
         self.enable_textures_box.setChecked(False)
-        slayout.addWidget(self.enable_textures_box)
+        filetypes_vlayout.addWidget(self.enable_textures_box)
 
         self.enable_sound_files_box = qtw.QCheckBox(
             self.loc.settings.enable_sound_files + " [EXPERIMENTAL]"
         )
         self.enable_sound_files_box.setChecked(False)
-        slayout.addWidget(self.enable_sound_files_box)
+        filetypes_vlayout.addWidget(self.enable_sound_files_box)
 
         slayout.addSpacing(5)
 
         # API Setup Widget
+        api_groupbox = qtw.QGroupBox(self.loc.settings.nm_api_key)
+        slayout.addWidget(api_groupbox)
+        api_vlayout = qtw.QVBoxLayout()
+        api_groupbox.setLayout(api_vlayout)
         self.api_setup = ApiSetup(self.startup_dialog.app)
-        slayout.addWidget(self.api_setup)
+        api_vlayout.addWidget(self.api_setup)
 
         # Back and Next Button
         vlayout.addStretch()

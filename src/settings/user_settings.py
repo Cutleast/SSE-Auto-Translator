@@ -234,42 +234,42 @@ class UserSettings(qtw.QScrollArea):
         flayout.addRow(self.masterlist_box)
 
         # Enabled File Types
-        filetypes_label = qtw.QLabel(self.loc.settings.enabled_file_types)
-        filetypes_label.setAlignment(qtc.Qt.AlignmentFlag.AlignLeft)
-        filetypes_label.setObjectName("relevant_label")
-        flayout.addRow(filetypes_label)
+        filetypes_groupbox = qtw.QGroupBox(self.mloc.enabled_file_types)
+        flayout.addRow(filetypes_groupbox)
+        filetypes_vlayout = qtw.QVBoxLayout()
+        filetypes_groupbox.setLayout(filetypes_vlayout)
 
         self.enable_interface_files_box = qtw.QCheckBox(
-            self.loc.settings.enable_interface_files
+            self.mloc.enable_interface_files
         )
         self.enable_interface_files_box.stateChanged.connect(self.on_change)
         self.enable_interface_files_box.setChecked(
             self.app.user_config["enable_interface_files"]
         )
-        flayout.addRow(self.enable_interface_files_box)
+        filetypes_vlayout.addWidget(self.enable_interface_files_box)
 
         self.enable_scripts_box = qtw.QCheckBox(
-            self.loc.settings.enable_scripts + " [EXPERIMENTAL]"
+            self.mloc.enable_scripts + " [EXPERIMENTAL]"
         )
         self.enable_scripts_box.stateChanged.connect(self.on_change)
         self.enable_scripts_box.setChecked(self.app.user_config["enable_scripts"])
-        flayout.addRow(self.enable_scripts_box)
+        filetypes_vlayout.addWidget(self.enable_scripts_box)
 
         self.enable_textures_box = qtw.QCheckBox(
-            self.loc.settings.enable_textures + " [EXPERIMENTAL]"
+            self.mloc.enable_textures + " [EXPERIMENTAL]"
         )
         self.enable_textures_box.stateChanged.connect(self.on_change)
         self.enable_textures_box.setChecked(self.app.user_config["enable_textures"])
-        flayout.addRow(self.enable_textures_box)
+        filetypes_vlayout.addWidget(self.enable_textures_box)
 
         self.enable_sound_files_box = qtw.QCheckBox(
-            self.loc.settings.enable_sound_files + " [EXPERIMENTAL]"
+            self.mloc.enable_sound_files + " [EXPERIMENTAL]"
         )
         self.enable_sound_files_box.stateChanged.connect(self.on_change)
         self.enable_sound_files_box.setChecked(
             self.app.user_config["enable_sound_files"]
         )
-        flayout.addRow(self.enable_sound_files_box)
+        filetypes_vlayout.addWidget(self.enable_sound_files_box)
 
     def start_api_setup(self):
         """

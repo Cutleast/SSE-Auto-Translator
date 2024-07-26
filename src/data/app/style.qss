@@ -644,3 +644,23 @@ Toast QFrame {
 ProgressWidget QToolTip {
     font-family: Consolas;
 }
+
+
+/* GroupBox */
+QGroupBox {
+    background: transparent;
+    border: 1px solid #1cffffff;
+    margin-top: 30px;
+    padding: 5px;
+    padding-top: 10px;
+    font-size: 22px;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding-top: 10px;
+    padding-left: 15px;
+    margin-right: 5px;
+    background-color: #202020;
+}

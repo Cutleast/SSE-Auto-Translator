@@ -33,13 +33,11 @@ class ApiSetup(qtw.QWidget):
         vlayout.setAlignment(qtc.Qt.AlignmentFlag.AlignTop)
         self.setLayout(vlayout)
 
-        vlayout.addSpacing(25)
-
         api_help_label = qtw.QLabel(self.mloc.api_help)
         api_help_label.setWordWrap(True)
         vlayout.addWidget(api_help_label)
 
-        vlayout.addSpacing(25)
+        vlayout.addSpacing(10)
 
         tab_widget = qtw.QTabWidget()
         tab_widget.tabBar().setExpanding(True)
