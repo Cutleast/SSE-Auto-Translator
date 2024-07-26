@@ -329,32 +329,41 @@ QToolTip {
 
 /* Scrollbar */
 QScrollBar {
-    background: transparent;
+    margin: 5px 2px 5px 2px;
+    width: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 QScrollBar, QScrollBar::handle {
     border-radius: 3px;
-    width: 6px;
 }
 QScrollBar::handle {
     background: #15ffffff;
     min-height: 24px;
+    width: 6px;
 }
 QScrollBar::handle:hover {
-    background: #1cffffff;
+    background: #66ffffff;
 }
 QScrollBar::handle:pressed {
     background: #202020;
 }
 QScrollBar::up-arrow {
     image: url(./data/icons/arrow_up.svg);
+    width: 12px;
+    height: 12px;
+    padding-bottom: 15px;
 }
 QScrollBar::down-arrow {
     image: url(./data/icons/arrow_down.svg);
+    width: 12px;
+    height: 12px;
+    padding-top: 15px;
 }
 QScrollBar::add-line,
 QScrollBar::sub-line {
-    width: 0px;
-    height: 0px;
+    border: 0px solid;
+    height: 12px;
 }
 QScrollBar::add-page,
 QScrollBar::sub-page {
