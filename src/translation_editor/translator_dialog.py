@@ -35,7 +35,7 @@ class TranslatorDialog(qtw.QWidget):
             if self.string_entry.toPlainText() != self.prev_text:
                 self.changes_pending = True
                 current_index = self.tab.strings_widget.indexFromItem(
-                    self.string.tree_item, 0
+                    self.tab.strings[self.string], 0
                 ).row()
                 self.setWindowTitle(
                     f"\
@@ -280,6 +280,7 @@ class TranslatorDialog(qtw.QWidget):
                 return
 
         self.string = string
+        self.tree_item = self.tab.strings[string]
 
         self.formid_label.setText(f"{self.loc.main.form_id}: {string.form_id}")
         self.edid_label.setText(f"{self.loc.main.editor_id}: {string.editor_id}")
@@ -296,9 +297,7 @@ class TranslatorDialog(qtw.QWidget):
         self.prev_text = self.string_entry.toPlainText()
         self.changes_pending = False
 
-        current_index = self.tab.strings_widget.indexFromItem(
-            self.string.tree_item, 0
-        ).row()
+        current_index = self.tab.strings_widget.indexFromItem(self.tree_item, 0).row()
         self.setWindowTitle(
             f"\
 {string.editor_id or string.form_id} - \
@@ -312,7 +311,7 @@ class TranslatorDialog(qtw.QWidget):
 
         if len(self.tab.get_visible_strings()) > 1:
             current_index = self.tab.strings_widget.indexFromItem(
-                self.string.tree_item, 0
+                self.tree_item, 0
             ).row()
 
             if current_index == (len(self.tab.strings) - 1):
@@ -334,8 +333,9 @@ class TranslatorDialog(qtw.QWidget):
                 else:
                     new_index += 1
 
-            items = {string.tree_item: string for string in self.tab.strings}
-            new_string = items[new_item]
+            new_string = list(self.tab.strings.keys())[
+                list(self.tab.strings.values()).index(new_item)
+            ]
             self.set_string(new_string, finalize_with_status)
         else:
             self.finalize_string(finalize_with_status)
@@ -347,7 +347,7 @@ class TranslatorDialog(qtw.QWidget):
         """
 
         current_index = self.tab.strings_widget.indexFromItem(
-            self.string.tree_item, 0
+            self.tree_item, 0
         ).row()
 
         if current_index > 0:
@@ -368,8 +368,9 @@ class TranslatorDialog(qtw.QWidget):
             else:
                 new_index -= 1
 
-        items = {string.tree_item: string for string in self.tab.strings}
-        new_string = items[new_item]
+        new_string = list(self.tab.strings.keys())[
+            list(self.tab.strings.values()).index(new_item)
+        ]
         self.set_string(new_string)
 
     def finalize_string(
@@ -387,7 +388,7 @@ class TranslatorDialog(qtw.QWidget):
         elif status == utils.String.Status.NoTranslationRequired:
             self.string.translated_string = self.string.original_string
 
-        self.string.tree_item.setText(
+        self.tree_item.setText(
             4, utils.trim_string(self.string.translated_string)
         )
 

@@ -108,11 +108,6 @@ class String:
     Status visible in Editor Tab.
     """
 
-    tree_item: QTreeWidgetItem = None
-    """
-    Tree Item in Editor Tab.
-    """
-
     @classmethod
     def from_string_data(cls, string_data: dict[str, str]) -> "String":
         if "original" in string_data:
@@ -189,17 +184,3 @@ class String:
         raise ValueError(
             f"Comparison between String and object of type {type(__value)} not possible!"
         )
-
-    def __getstate__(self):
-        state = self.__dict__.copy()
-
-        # Don't pickle tree_item
-        del state["tree_item"]
-
-        return state
-
-    def __setstate__(self, state):
-        self.__dict__.update(state)
-
-        # Add tree_item back
-        self.tree_item = None
