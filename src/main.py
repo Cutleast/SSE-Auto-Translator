@@ -739,16 +739,18 @@ class MainApp(qtw.QApplication):
 
         # Show normal uncatched exceptions
         else:
-            self.log.critical(
-                "An uncaught exception occured:",
-                exc_info=(exc_type, exc_value, exc_traceback),
+            tb = "".join(traceback.format_exception(exc_type, exc_value, exc_traceback))
+            # Remove dev environment paths from traceback
+            # cx_freeze, why ever, keeps them when building
+            tb = tb.replace(
+                "C:\\Users\\robin\\OneDrive\\Development\\SSE-Auto-Translator\\src\\",
+                "",
             )
+            self.log.critical("An uncaught exception occured:\n" + tb)
 
             # Get exception info
             error_msg = f"{self.loc.errors.error_text} {exc_value}"
-            detailed_msg = "".join(
-                traceback.format_exception(exc_type, exc_value, exc_traceback)
-            )
+            detailed_msg = tb
             yesno = True
 
             # Set exception to True
