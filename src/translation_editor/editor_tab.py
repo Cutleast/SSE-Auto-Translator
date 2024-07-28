@@ -31,7 +31,7 @@ class EditorTab(qtw.QWidget):
     changes_pending: bool = False
     changes_signal = qtc.Signal()
 
-    strings: dict[utils.String, qtw.QTreeWidgetItem] = None
+    items: dict[qtw.QTreeWidgetItem, utils.String] = None
     plugins: dict[str, list[utils.String]] = None
 
     log = logging.getLogger("TranslationEditor")
@@ -248,7 +248,7 @@ class EditorTab(qtw.QWidget):
 
         translation.load_translation()
 
-        self.strings = {}
+        self.items = {}
         self.plugins = {}
         if plugin_name:
             self.plugins[plugin_name] = []
@@ -269,7 +269,7 @@ class EditorTab(qtw.QWidget):
 
                 # Create copy of string to prevent unwanted changes to original string
                 string = copy(string)
-                self.strings[string] = item
+                self.items[item] = string
                 self.plugins[plugin_name].append(string)
 
                 self.strings_widget.addTopLevelItem(item)
@@ -293,7 +293,7 @@ class EditorTab(qtw.QWidget):
 
                     # Create copy of string to prevent unwanted changes to original string
                     string = copy(string)
-                    self.strings[string] = item
+                    self.items[item] = string
                     self.plugins[plugin_name].append(string)
 
                     self.strings_widget.addTopLevelItem(item)
@@ -459,7 +459,7 @@ class EditorTab(qtw.QWidget):
 
             translation_strings: dict[str, list[utils.String]] = {}
 
-            for string in self.strings:
+            for string in self.items.values():
                 if string.original_string in translation_strings:
                     translation_strings[string.original_string].append(string)
                 else:
@@ -481,9 +481,10 @@ class EditorTab(qtw.QWidget):
 
                 for matching_string in matching_strings:
                     matching_string.translated_string = translated
-                    self.strings[matching_string].setText(
-                        4, utils.trim_string(translated)
-                    )
+
+                    for item, string in self.items.items():
+                        if string == matching_string:
+                            item.setText(4, utils.trim_string(translated))
 
                     if (
                         legacy_string.get("type") == matching_string.type
@@ -515,10 +516,9 @@ class EditorTab(qtw.QWidget):
 
         from .translator_dialog import TranslatorDialog
 
-        string = list(self.strings.keys())[list(self.strings.values()).index(item)]
         self.current_translation_index = self.strings_widget.indexOfTopLevelItem(item)
 
-        dialog = TranslatorDialog(self, string)
+        dialog = TranslatorDialog(self, item)
         dialog.show()
         dialog.string_entry.setFocus()
 
@@ -527,7 +527,7 @@ class EditorTab(qtw.QWidget):
         Update strings that are matching
         """
 
-        for string, tree_item in self.strings.items():
+        for tree_item, string in self.items.items():
             if string.original_string == original:
                 if string.status != string.Status.TranslationComplete:
                     string.translated_string = translation
@@ -550,7 +550,7 @@ class EditorTab(qtw.QWidget):
         translation_incomplete_strings = 0
         translation_required_strings = 0
 
-        for string, tree_item in self.strings.items():
+        for tree_item, string in self.items.items():
             string_text = string.type + string.original_string
             if string.form_id is not None:
                 string_text += string.form_id
@@ -688,12 +688,12 @@ class EditorTab(qtw.QWidget):
         Applies database to untranslated strings.
         """
 
-        self.log.info(f"Applying database to {len(self.strings)} string(s)...")
+        self.log.info(f"Applying database to {len(self.items)} string(s)...")
 
         pre_translated_strings = len(
             [
                 string
-                for string in self.strings
+                for string in self.items.values()
                 if string.status == string.Status.TranslationComplete
                 or string.status == string.Status.TranslationIncomplete
             ]
@@ -712,7 +712,7 @@ class EditorTab(qtw.QWidget):
         newly_translated_strings = len(
             [
                 string
-                for string in self.strings
+                for string in self.items.values()
                 if string.status == string.Status.TranslationComplete
                 or string.status == string.Status.TranslationIncomplete
             ]
@@ -744,7 +744,7 @@ class EditorTab(qtw.QWidget):
 
         selected_strings = {
             string: tree_item
-            for string, tree_item in self.strings.items()
+            for tree_item, string in self.items.items()
             if tree_item in self.strings_widget.selectedItems()
         }
 
@@ -815,7 +815,7 @@ class EditorTab(qtw.QWidget):
 
         selected_strings = {
             string: tree_item
-            for string, tree_item in self.strings.items()
+            for tree_item, string in self.items.items()
             if tree_item in self.strings_widget.selectedItems()
         }
 
@@ -994,27 +994,26 @@ class EditorTab(qtw.QWidget):
 
         dialog.exec()
 
-    def set_status(self, status: utils.String.Status):
-        selected_strings = [
-            string
-            for string, tree_item in self.strings.items()
+    def get_selected_items(self):
+        return {
+            tree_item: string
+            for tree_item, string in self.items.items()
             if tree_item in self.strings_widget.selectedItems()
-        ]
+        }
 
-        for string in selected_strings:
+    def set_status(self, status: utils.String.Status):
+        selected_items = self.get_selected_items()
+
+        for string in selected_items.values():
             string.status = status
 
         self.update_string_list()
         self.changes_signal.emit()
 
     def reset_translation(self):
-        selected_strings = {
-            string: tree_item
-            for string, tree_item in self.strings.items()
-            if tree_item in self.strings_widget.selectedItems()
-        }
+        selected_items = self.get_selected_items()
 
-        if not selected_strings:
+        if not selected_items:
             return
 
         message_box = qtw.QMessageBox(self)
@@ -1032,7 +1031,7 @@ class EditorTab(qtw.QWidget):
         choice = message_box.exec()
 
         if choice == qtw.QMessageBox.StandardButton.Yes:
-            for string, tree_item in selected_strings.items():
+            for tree_item, string in selected_items.items():
                 string.translated_string = string.original_string
                 string.status = string.Status.TranslationRequired
                 tree_item.setText(4, utils.trim_string(string.translated_string))
@@ -1064,6 +1063,6 @@ class EditorTab(qtw.QWidget):
 
         return [
             string
-            for string, tree_item in self.strings.items()
+            for tree_item, string in self.items.items()
             if not tree_item.isHidden()
         ]
