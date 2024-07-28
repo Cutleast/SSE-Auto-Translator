@@ -758,7 +758,7 @@ class MainApp(qtw.QApplication):
 
         # Create error messagebox
         messagebox = widgets.ErrorDialog(
-            parent=self.root,
+            parent=self.activeModalWidget(),
             app=self,
             title=f"{self.name} - {self.loc.errors.error}",
             text=error_msg,
