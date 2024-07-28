@@ -31,13 +31,12 @@ class EditorTab(qtw.QWidget):
     changes_pending: bool = False
     changes_signal = qtc.Signal()
 
-    tree_item: qtw.QTreeWidgetItem = None
-
     strings: dict[utils.String, qtw.QTreeWidgetItem] = None
+    plugins: dict[str, list[utils.String]] = None
 
     log = logging.getLogger("TranslationEditor")
 
-    def __init__(self, app: MainApp, translation: Translation, plugin_name: str):
+    def __init__(self, app: MainApp, translation: Translation, plugin_name: str = None):
         super().__init__()
 
         def on_change():
@@ -65,10 +64,16 @@ class EditorTab(qtw.QWidget):
         hlayout = qtw.QHBoxLayout()
         vlayout.addLayout(hlayout)
 
-        self.title_label = qtw.QLabel(f"{translation.name} > {plugin_name}")
+        self.title_label = qtw.QLabel(
+            f"{translation.name} > {plugin_name}" if plugin_name else translation.name
+        )
         self.title_label.setObjectName("relevant_label")
         self.changes_signal.connect(
-            lambda: self.title_label.setText(f"{translation.name} > {plugin_name}*")
+            lambda: self.title_label.setText(
+                f"{self.translation.name} > {self.plugin_name}*"
+                if self.plugin_name
+                else self.translation.name + "*"
+            )
         )
         hlayout.addWidget(self.title_label)
 
@@ -244,26 +249,54 @@ class EditorTab(qtw.QWidget):
         translation.load_translation()
 
         self.strings = {}
-        for string in translation.strings[plugin_name]:
-            item = qtw.QTreeWidgetItem(
-                [
-                    string.type,
-                    string.form_id if string.form_id is not None else "",
-                    string.editor_id if string.editor_id is not None else "",
-                    utils.trim_string(string.original_string),
-                    utils.trim_string(string.translated_string),
-                ]
-            )
+        self.plugins = {}
+        if plugin_name:
+            self.plugins[plugin_name] = []
+            for string in translation.strings[plugin_name]:
+                item = qtw.QTreeWidgetItem(
+                    [
+                        string.type,
+                        string.form_id if string.form_id is not None else "",
+                        string.editor_id if string.editor_id is not None else "",
+                        utils.trim_string(string.original_string),
+                        utils.trim_string(string.translated_string),
+                    ]
+                )
 
-            item.setFont(0, qtg.QFont("Consolas"))
-            item.setFont(1, qtg.QFont("Consolas"))
-            item.setFont(2, qtg.QFont("Consolas"))
+                item.setFont(0, qtg.QFont("Consolas"))
+                item.setFont(1, qtg.QFont("Consolas"))
+                item.setFont(2, qtg.QFont("Consolas"))
 
-            # Create copy of string to prevent unwanted changes to original string
-            string = copy(string)
-            self.strings[string] = item
+                # Create copy of string to prevent unwanted changes to original string
+                string = copy(string)
+                self.strings[string] = item
+                self.plugins[plugin_name].append(string)
 
-            self.strings_widget.addTopLevelItem(item)
+                self.strings_widget.addTopLevelItem(item)
+        else:
+            for plugin_name, strings in translation.strings.items():
+                self.plugins[plugin_name] = []
+                for string in strings:
+                    item = qtw.QTreeWidgetItem(
+                        [
+                            string.type,
+                            string.form_id if string.form_id is not None else "",
+                            string.editor_id if string.editor_id is not None else "",
+                            utils.trim_string(string.original_string),
+                            utils.trim_string(string.translated_string),
+                        ]
+                    )
+
+                    item.setFont(0, qtg.QFont("Consolas"))
+                    item.setFont(1, qtg.QFont("Consolas"))
+                    item.setFont(2, qtg.QFont("Consolas"))
+
+                    # Create copy of string to prevent unwanted changes to original string
+                    string = copy(string)
+                    self.strings[string] = item
+                    self.plugins[plugin_name].append(string)
+
+                    self.strings_widget.addTopLevelItem(item)
 
         self.update_string_list()
 
@@ -448,7 +481,9 @@ class EditorTab(qtw.QWidget):
 
                 for matching_string in matching_strings:
                     matching_string.translated_string = translated
-                    self.strings[matching_string].setText(4, utils.trim_string(translated))
+                    self.strings[matching_string].setText(
+                        4, utils.trim_string(translated)
+                    )
 
                     if (
                         legacy_string.get("type") == matching_string.type
@@ -629,12 +664,22 @@ class EditorTab(qtw.QWidget):
 
         self.log.info(f"Saving Translation {self.translation.name!r}...")
 
-        self.translation.strings[self.plugin_name] = list(self.strings.keys())
+        for plugin_name, strings in self.plugins.items():
+            self.translation.strings[plugin_name] = strings
         self.translation.save_translation()
         self.changes_pending = False
 
-        self.title_label.setText(f"{self.translation.name} > {self.plugin_name}")
-        self.tree_item.setText(0, self.plugin_name)
+        self.title_label.setText(
+            f"{self.translation.name} > {self.plugin_name}"
+            if self.plugin_name
+            else self.translation.name
+        )
+
+        # Get tree item belonging to this tab
+        item = list(self.app.translation_editor.tabs)[
+            list(self.app.translation_editor.tabs.values()).index(self)
+        ]
+        item.setText(0, self.plugin_name or self.translation.name)
 
         self.log.info("Translation saved.")
 
@@ -1017,4 +1062,8 @@ class EditorTab(qtw.QWidget):
         Returns a list of strings that are visible with current filter.
         """
 
-        return [string for string, tree_item in self.strings.items() if not tree_item.isHidden()]
+        return [
+            string
+            for string, tree_item in self.strings.items()
+            if not tree_item.isHidden()
+        ]

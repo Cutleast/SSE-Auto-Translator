@@ -20,7 +20,7 @@ class TranslationEditor(qtw.QSplitter):
     Page for translation editor.
     """
 
-    tabs: list[EditorTab] = []
+    tabs: dict[qtw.QTreeWidgetItem, EditorTab] = {}
 
     def __init__(self, app: MainApp):
         super().__init__()
@@ -58,13 +58,7 @@ class TranslationEditor(qtw.QSplitter):
         if item is None:
             return
 
-        # Do nothing if item belongs to a translation itself
-        if item.childCount():
-            return
-
-        tab = [_tab for _tab in self.tabs if _tab.tree_item == item][0]
-
-        self.page_widget.setCurrentWidget(tab)
+        self.page_widget.setCurrentWidget(self.tabs[item])
 
     def get_current_tab(self) -> EditorTab | None:
         """
@@ -79,19 +73,22 @@ class TranslationEditor(qtw.QSplitter):
         Sets `tab` as current visible tab.
         """
 
-        self.translations_list.setCurrentItem(tab.tree_item)
+        self.translations_list.setCurrentItem(list(self.tabs)[list(self.tabs.values()).index(tab)])
 
     def close_translation(self, translation: Translation, silent: bool = False):
         """
         Closes all tabs belonging to `translation`.
         """
 
-        tabs = [tab for tab in self.tabs if tab.translation == translation]
+        tabs = {
+            item: tab
+            for item, tab in self.tabs.items() if tab.translation == translation
+        }
 
         if not len(tabs):
             return
 
-        if any(tab.changes_pending for tab in tabs) and not silent:
+        if any(tab.changes_pending for tab in tabs.values()) and not silent:
             message_box = qtw.QMessageBox(self)
             utils.apply_dark_title_bar(message_box)
             message_box.setWindowTitle(self.loc.main.close)
@@ -111,17 +108,17 @@ class TranslationEditor(qtw.QSplitter):
             if choice != qtw.QMessageBox.StandardButton.Yes:
                 return
 
-        translation_item = tabs[0].tree_item.parent()
+        translation_item = list(tabs.keys())[-1].parent()
 
-        for tab in tabs:
-            self.tabs.remove(tab)
+        for item in tabs:
+            self.tabs.pop(item)
 
         self.translations_list.takeTopLevelItem(
             self.translations_list.invisibleRootItem().indexOfChild(translation_item)
         )
 
         if self.tabs:
-            self.set_tab(self.tabs[-1])
+            self.set_tab(list(self.tabs.values())[-1])
         else:
             self.app.tab_widget.setCurrentIndex(0)
             self.app.tab_widget.setTabEnabled(1, False)
@@ -136,8 +133,16 @@ class TranslationEditor(qtw.QSplitter):
         set_width = not self.tabs
 
         # Create new tab if translation is not already open
-        if not any(tab.translation == translation for tab in self.tabs):
+        if not any(tab.translation == translation for tab in self.tabs.values()):
             translation_item = qtw.QTreeWidgetItem([translation.name, ""])
+            
+            translation_tab = EditorTab(self.app, translation)
+            translation_tab.changes_signal.connect(
+                lambda: translation_item.setText(0, f"{translation.name}*")
+            )
+            self.tabs[translation_item] = translation_tab
+            self.page_widget.addWidget(translation_tab)
+
             close_button = qtw.QPushButton()
             close_button.setObjectName("list_close_button")
             close_button.setFocusPolicy(qtc.Qt.FocusPolicy.NoFocus)
@@ -149,11 +154,10 @@ class TranslationEditor(qtw.QSplitter):
                 translation_item.addChild(plugin_item)
 
                 plugin_tab = EditorTab(self.app, translation, plugin_name)
-                plugin_tab.tree_item = plugin_item
                 plugin_tab.changes_signal.connect(
                     lambda: plugin_item.setText(0, f"{plugin_name}*")
                 )
-                self.tabs.append(plugin_tab)
+                self.tabs[plugin_item] = plugin_tab
                 self.page_widget.addWidget(plugin_tab)
 
             self.translations_list.addTopLevelItem(translation_item)
@@ -164,7 +168,7 @@ class TranslationEditor(qtw.QSplitter):
         self.translations_list.resizeColumnToContents(1)
 
         # Switch to Tab
-        self.set_tab(self.tabs[-1])
+        self.set_tab(list(self.tabs.values())[-1])
 
         if set_width:
             self.setSizes([0.3 * self.width(), 0.7 * self.width()])
