@@ -844,7 +844,9 @@ class MainApp(qtw.QApplication):
                     confirmation = False
 
         if hasattr(self, "translation_editor"):
-            if any(tab.changes_pending for tab in self.translation_editor.tabs):
+            if any(
+                tab.changes_pending for tab in self.translation_editor.tabs.values()
+            ):
                 message_box = qtw.QMessageBox(self.root)
                 message_box.setWindowTitle(self.loc.main.exit + "?")
                 message_box.setText(self.loc.main.unsaved_exit)
