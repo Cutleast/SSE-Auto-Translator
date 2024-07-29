@@ -16,6 +16,8 @@
     "nm_api_key": "Nexus Mods API Key",
     "no_config_required": "No configuration required for this Translator API.",
     "no_restart_required": "No Restart required",
+    "open_author_blacklist": "Open Translation Author Blacklist...",
+    "open_masterlist": "Open Masterlist (in Browser)",
     "output_path": "Path for Output Mod",
     "output_path_not_empty": "The selected Output Path is not empty! Its contents will be deleted when continuing!",
     "restart_hint": "A restart is required for the changes to take effect.",

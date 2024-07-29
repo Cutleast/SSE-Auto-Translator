@@ -219,7 +219,7 @@ class Provider:
             return self.__cdt_api.get_modpage_link(mod_id)
 
     def get_translations(
-        self, mod_id: int, plugin_name: str, language: str
+        self, mod_id: int, plugin_name: str, language: str, author_blacklist: list[str]
     ) -> list[tuple[int, list[int], Source]]:
         """
         Scans for translations for `language` that contain `plugin_name` and
@@ -235,8 +235,25 @@ class Provider:
             translation_urls = self.__nm_api.get_mod_translations(
                 "skyrimspecialedition", mod_id
             ).get(language, [])
+
             for translation_url in translation_urls:
                 translation_mod_id = int(translation_url.split("/")[-1].split("?")[0])
+
+                translation_details = self.__nm_api.get_mod_details(
+                    "skyrimspecialedition", translation_mod_id
+                )
+
+                # Skip translations from authors on the author_blacklist
+                if translation_details["author"].lower() in author_blacklist:
+                    self.log.debug(
+                        f"Skipped translation by author {translation_details['author']!r} due to configured blacklist."
+                    )
+                    continue
+                elif translation_details["uploaded_by"].lower() in author_blacklist:
+                    self.log.debug(
+                        f"Skipped translation by uploader {translation_details['uploaded_by']!r} due to configured blacklist."
+                    )
+                    continue
 
                 translation_file_ids = self.__nm_api.scan_mod_for_filename(
                     "skyrimspecialedition", translation_mod_id, plugin_name

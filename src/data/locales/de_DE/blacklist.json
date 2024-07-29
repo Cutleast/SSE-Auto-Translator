@@ -1,0 +1,6 @@
+{
+    "add_author": "Autoren hinzufügen",
+    "blacklist": "Ignorierliste für Übersetzungsautoren",
+    "info": "Dies ist eine Ignorierliste, um Übersetzungen von bestimmten Autoren auszuschließen.\nAlle Übersetzungen von Autoren auf dieser Liste (unabhängig von der Groß-/Kleinschreibung) werden ignoriert und tauchen beim Online-Scan nicht auf.\nDiese Liste hat nur eine Auswirkung auf Übersetzungen von Nexus Mods!",
+    "enter_author_name": "Name eines Autoren eingeben:"
+}

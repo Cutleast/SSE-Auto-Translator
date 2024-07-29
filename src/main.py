@@ -66,6 +66,20 @@ class MainApp(qtw.QApplication):
         "downloads_path": None,
     }
     app_config = default_app_config
+    default_user_config = {
+        "language": "",
+        "api_key": "",
+        "mod_manager": "",
+        "modinstance": "",
+        "use_masterlist": True,
+        "instance_profile": "",
+        "provider_preference": "",
+        "enable_interface_files": True,
+        "enable_scripts": False,
+        "enable_textures": False,
+        "enable_sound_files": False,
+        "author_blacklist": [],
+    }
     user_config: dict = None
     default_translator_config = {
         "translator": "Google Translator",
@@ -236,22 +250,8 @@ class MainApp(qtw.QApplication):
 
         self.log.info("Loading user data...")
 
-        default_user_config = {
-            "language": "",
-            "api_key": "",
-            "mod_manager": "",
-            "modinstance": "",
-            "use_masterlist": True,
-            "instance_profile": "",
-            "provider_preference": "",
-            "enable_interface_files": True,
-            "enable_scripts": False,
-            "enable_textures": False,
-            "enable_sound_files": False,
-        }
-
         with open(self.user_conf_path, "r", encoding="utf8") as file:
-            self.user_config: dict = default_user_config | json.load(file)
+            self.user_config: dict = self.default_user_config | json.load(file)
 
         if self.user_config["provider_preference"]:
             if self.user_config["language"] == "French":

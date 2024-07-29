@@ -384,7 +384,10 @@ class Processor:
                     )
 
                     available_translations = app.provider.get_translations(
-                        mod.mod_id, plugin.name, language
+                        mod.mod_id,
+                        plugin.name,
+                        language,
+                        app.user_config["author_blacklist"],
                     )
 
                     if plugin.name.lower() in app.masterlist:
@@ -534,7 +537,7 @@ class Processor:
                     )
 
                     available_translations = app.provider.get_translations(
-                        mod.mod_id, plugin.name, language
+                        mod.mod_id, plugin.name, language, app.user_config["author_blacklist"]
                     )
 
                     mod_translations: list[TranslationDownload] = []
@@ -685,11 +688,13 @@ class Processor:
 
         installed_plugins = {
             plugin.name.lower(): plugin.path
-            for mod in modlist for plugin in mod.plugins
+            for mod in modlist
+            for plugin in mod.plugins
             if plugin.tree_item.checkState(0) == qtc.Qt.CheckState.Checked
         }
         light_plugins = [
-            plugin_name for plugin_name, plugin_path in installed_plugins.items()
+            plugin_name
+            for plugin_name, plugin_path in installed_plugins.items()
             if Plugin.is_light(plugin_path)
         ]
 

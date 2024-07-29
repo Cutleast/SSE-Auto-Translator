@@ -1,0 +1,6 @@
+{
+    "add_author": "Add Author",
+    "blacklist": "Blacklist for Translation Authors",
+    "info": "This is a blacklist to exclude translations from certain authors.\nAll translations from authors on this list below (case-insensitive) are ignored and do not show up when scanning online.\nThis list only affects translations from Nexus Mods!",
+    "enter_author_name": "Enter Author Name:"
+}

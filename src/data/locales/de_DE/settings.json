@@ -16,6 +16,8 @@
     "nm_api_key": "Nexus Mods API Key",
     "no_config_required": "Für diese Übersetzer-API ist keine Konfiguration erforderlich.",
     "no_restart_required": "Kein Neustart notwendig",
+    "open_author_blacklist": "Ignorierliste für Übersetzer öffnen...",
+    "open_masterlist": "Masterlist (im Browser) öffnen",
     "output_path": "Pfad für die Output Mod",
     "output_path_not_empty": "Der ausgewählte Output-Pfad ist nicht leer! Der Inhalt des Ordners wird bei Fortfahren gelöscht!",
     "restart_hint": "Damit die Änderungen wirksam werden, ist ein Neustart der App erforderlich.",

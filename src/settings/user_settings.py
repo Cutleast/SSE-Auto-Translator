@@ -7,6 +7,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 import os
 from pathlib import Path
 
+import jstyleson as json
 import qtawesome as qta
 import qtpy.QtCore as qtc
 import qtpy.QtWidgets as qtw
@@ -14,7 +15,9 @@ import qtpy.QtWidgets as qtw
 import mod_managers
 import utilities as utils
 from main import MainApp
-from widgets import KeyEntry, ApiSetup
+from widgets import ApiSetup, KeyEntry
+
+from .blacklist_dialog import BlacklistDialog
 
 
 class UserSettings(qtw.QScrollArea):
@@ -56,6 +59,11 @@ class UserSettings(qtw.QScrollArea):
         flayout.addRow(self.mloc.game_lang, self.lang_box)
 
         # Source
+        provider_box = qtw.QGroupBox(self.loc.main.source)
+        flayout.addRow(provider_box)
+        provider_flayout = qtw.QFormLayout()
+        provider_box.setLayout(provider_flayout)
+
         source_label = qtw.QLabel(self.loc.main.source)
         source_label.setEnabled(self.app.user_config["language"] == "French")
         self.source_dropdown = qtw.QComboBox()
@@ -80,7 +88,7 @@ class UserSettings(qtw.QScrollArea):
                 )
 
         self.lang_box.currentTextChanged.connect(on_lang_change)
-        flayout.addRow(source_label, self.source_dropdown)
+        provider_flayout.addRow(source_label, self.source_dropdown)
 
         # API Setup / Settings
         api_key_hlayout = qtw.QHBoxLayout()
@@ -90,9 +98,35 @@ class UserSettings(qtw.QScrollArea):
         api_setup_button = qtw.QPushButton(self.mloc.start_api_setup)
         api_setup_button.clicked.connect(self.start_api_setup)
         api_key_hlayout.addWidget(api_setup_button)
-        flayout.addRow(self.mloc.nm_api_key, api_key_hlayout)
+        provider_flayout.addRow(self.mloc.nm_api_key, api_key_hlayout)
+
+        # Masterlist
+        self.masterlist_box = qtw.QCheckBox(self.mloc.use_masterlist)
+        self.masterlist_box.setChecked(self.app.user_config.get("use_masterlist", True))
+        self.masterlist_box.stateChanged.connect(self.on_change)
+        open_masterlist_button = qtw.QPushButton(self.mloc.open_masterlist + "    ")
+        open_masterlist_button.clicked.connect(
+            lambda: os.startfile(
+                "https://github.com/Cutleast/SSE-Auto-Translator/tree/master/masterlists"
+            )
+        )
+        open_masterlist_button.setIcon(
+            qta.icon("fa5s.external-link-alt", color="#ffffff")
+        )
+        open_masterlist_button.setLayoutDirection(qtc.Qt.LayoutDirection.RightToLeft)
+        provider_flayout.addRow(self.masterlist_box, open_masterlist_button)
+
+        # Author Blacklist
+        author_blacklist_button = qtw.QPushButton(self.mloc.open_author_blacklist)
+        author_blacklist_button.clicked.connect(self.edit_blacklist)
+        provider_flayout.addRow(author_blacklist_button)
 
         # Mod Manager selection
+        instance_groupbox = qtw.QGroupBox(self.loc.main.modinstance)
+        flayout.addRow(instance_groupbox)
+        instance_flayout = qtw.QFormLayout()
+        instance_groupbox.setLayout(instance_flayout)
+
         self.mod_manager_dropdown = qtw.QComboBox()
         self.mod_manager_dropdown.installEventFilter(self)
         self.mod_manager_dropdown.setEditable(False)
@@ -109,13 +143,13 @@ class UserSettings(qtw.QScrollArea):
             self.modinstance_dropdown.setCurrentIndex(0)
 
         self.mod_manager_dropdown.currentIndexChanged.connect(on_mod_manager_select)
-        flayout.addRow(self.loc.main.mod_manager, self.mod_manager_dropdown)
+        instance_flayout.addRow(self.loc.main.mod_manager, self.mod_manager_dropdown)
 
         # Modinstance Selection
         self.modinstance_dropdown = qtw.QComboBox()
         self.modinstance_dropdown.installEventFilter(self)
         self.modinstance_dropdown.setEditable(False)
-        flayout.addRow(self.loc.main.modinstance, self.modinstance_dropdown)
+        instance_flayout.addRow(self.loc.main.modinstance, self.modinstance_dropdown)
 
         self.mod_manager_dropdown.setCurrentText(self.app.user_config["mod_manager"])
         self.mod_manager_dropdown.currentTextChanged.connect(self.on_change)
@@ -169,7 +203,7 @@ class UserSettings(qtw.QScrollArea):
             self.instance_profile_dropdown.setCurrentText(
                 self.app.user_config["instance_profile"]
             )
-        flayout.addRow(profile_label, self.instance_profile_dropdown)
+        instance_flayout.addRow(profile_label, self.instance_profile_dropdown)
 
         # Path to portable modinstance
         instance_path_label = qtw.QLabel(self.loc.main.instance_path)
@@ -177,7 +211,7 @@ class UserSettings(qtw.QScrollArea):
             self.app.user_config["modinstance"] == "Portable"
         )
         hlayout = qtw.QHBoxLayout()
-        flayout.addRow(instance_path_label, hlayout)
+        instance_flayout.addRow(instance_path_label, hlayout)
 
         self.instance_path_entry = qtw.QLineEdit()
         path_file = self.app.data_path / "user" / "portable.txt"
@@ -227,12 +261,6 @@ class UserSettings(qtw.QScrollArea):
         browse_instance_path_button.clicked.connect(browse)
         hlayout.addWidget(browse_instance_path_button)
 
-        # Masterlist
-        self.masterlist_box = qtw.QCheckBox(self.mloc.use_masterlist)
-        self.masterlist_box.setChecked(self.app.user_config.get("use_masterlist", True))
-        self.masterlist_box.stateChanged.connect(self.on_change)
-        flayout.addRow(self.masterlist_box)
-
         # Enabled File Types
         filetypes_groupbox = qtw.QGroupBox(self.mloc.enabled_file_types)
         flayout.addRow(filetypes_groupbox)
@@ -270,6 +298,20 @@ class UserSettings(qtw.QScrollArea):
             self.app.user_config["enable_sound_files"]
         )
         filetypes_vlayout.addWidget(self.enable_sound_files_box)
+
+    def edit_blacklist(self):
+        dialog = BlacklistDialog(
+            self.app.activeModalWidget(),
+            self.app.user_config["author_blacklist"].copy(),
+            self.loc,
+        )
+        utils.apply_dark_title_bar(dialog)
+
+        if dialog.exec() == dialog.DialogCode.Accepted:
+            self.app.user_config["author_blacklist"] = dialog.blacklist
+
+            with self.app.user_conf_path.open("w") as file:
+                json.dump(self.app.user_config, file, indent=4, ensure_ascii=False)
 
     def start_api_setup(self):
         """
@@ -336,8 +378,9 @@ class UserSettings(qtw.QScrollArea):
             "enable_scripts": self.enable_scripts_box.isChecked(),
             "enable_textures": self.enable_textures_box.isChecked(),
             "enable_sound_files": self.enable_sound_files_box.isChecked(),
+            "author_blacklist": self.app.user_config["author_blacklist"],
         }
-    
+
     def eventFilter(self, source: qtc.QObject, event: qtc.QEvent):
         if event.type() == qtc.QEvent.Type.Wheel and isinstance(source, qtw.QComboBox):
             self.wheelEvent(event)
