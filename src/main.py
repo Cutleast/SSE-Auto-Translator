@@ -253,7 +253,7 @@ class MainApp(qtw.QApplication):
         with open(self.user_conf_path, "r", encoding="utf8") as file:
             self.user_config: dict = self.default_user_config | json.load(file)
 
-        if self.user_config["provider_preference"]:
+        if not self.user_config["provider_preference"]:
             if self.user_config["language"] == "French":
                 self.user_config["provider_preference"] = (
                     Provider.Preference.PreferNexusMods.name
