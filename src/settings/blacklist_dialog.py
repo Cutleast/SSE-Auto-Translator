@@ -125,6 +125,7 @@ class BlacklistDialog(qtw.QDialog):
 
         done_button = qtw.QPushButton(self.loc.main.done)
         done_button.clicked.connect(self.accept)
+        done_button.setObjectName("accent_button")
         hlayout.addWidget(done_button)
 
         cancel_button = qtw.QPushButton(self.loc.main.cancel)
