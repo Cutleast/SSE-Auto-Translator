@@ -176,4 +176,15 @@ for item in UNUSED_ITEMS:
 print("Renaming Output folder...")
 os.rename(DIST_FOLDER, OUTPUT_FOLDER)
 
+print("Packing into 7-zip archive...")
+if OUTPUT_ARCHIVE.is_file():
+    os.remove(OUTPUT_ARCHIVE)
+    print("Deleted already existing 7-zip archive.")
+
+cmd = f'7-zip\\7z.exe \
+a \
+"{OUTPUT_ARCHIVE}" \
+"{OUTPUT_FOLDER}"'
+os.system(cmd)
+
 print("Done!")
