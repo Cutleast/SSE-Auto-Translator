@@ -3,15 +3,17 @@ This script builds the SSE-AT.exe and packs
 all its dependencies in one folder.
 """
 
-import shutil
 import os
+import shutil
 from pathlib import Path
+
+from src.main import MainApp
 
 COMPILER = "cx_freeze"  # "pyinstaller" or "nuitka" or "cx_freeze"
 
 DIST_FOLDER = Path("app.dist").resolve()
 APPNAME = "SSE Auto Translator"
-VERSION = "2.1.0"
+VERSION = MainApp.version.split("-")[0]
 AUTHOR = "Cutleast"
 LICENSE = "Attribution-NonCommercial-NoDerivatives 4.0 International"
 CONSOLE_MODE = "attach"  # "attach": Attaches to console it was started with (if any), "force": starts own console window, "disable": disables console completely
@@ -41,7 +43,7 @@ ADDITIONAL_ITEMS: dict[Path, Path] = {
     Path("7-zip"): DIST_FOLDER,
 }
 OUTPUT_FOLDER = DIST_FOLDER.with_name("SSE-AT")
-OUTPUT_ARCHIVE = Path(f"SSE-AT v{VERSION}.7z").resolve()
+OUTPUT_ARCHIVE = Path(f"SSE-AT v{MainApp.version}.7z").resolve()
 
 
 if OUTPUT_FOLDER.is_dir():
@@ -101,8 +103,9 @@ elif COMPILER == "pyinstaller":
 "./src/app.py"'
 
 elif COMPILER == "cx_freeze":
-    from cx_Freeze import setup, Executable
     import sys
+
+    from cx_Freeze import Executable, setup
 
     build_options = {
         "packages": ["hunspell", "cacheman"],
