@@ -42,12 +42,19 @@ class Archive:
 
         return self.files
 
-    def extract_all(self, dest: Path):
+    def extract_all(self, dest: Path, full_paths: bool = True):
         """
         Extracts all files to `dest`.
         """
 
-        cmd = ["7z.exe", "x", str(self.path), f"-o{dest}", "-aoa", "-y"]
+        cmd = [
+            "7z.exe",
+            "x" if full_paths else "e",
+            str(self.path),
+            f"-o{dest}",
+            "-aoa",
+            "-y",
+        ]
 
         with subprocess.Popen(
             cmd,
@@ -66,12 +73,21 @@ class Archive:
             self.log.error(output)
             raise Exception("Unpacking command failed!")
 
-    def extract(self, filename: str, dest: Path):
+    def extract(self, filename: str, dest: Path, full_paths: bool = True):
         """
         Extracts `filename` from archive to `dest`.
         """
 
-        cmd = ["7z.exe", "x", f"-o{dest}", "-aoa", "-y", "--", str(self.path), filename]
+        cmd = [
+            "7z.exe",
+            "x" if full_paths else "e",
+            f"-o{dest}",
+            "-aoa",
+            "-y",
+            "--",
+            str(self.path),
+            filename,
+        ]
 
         with subprocess.Popen(
             cmd,
@@ -90,7 +106,7 @@ class Archive:
             self.log.error(output)
             raise Exception("Unpacking command failed!")
 
-    def extract_files(self, filenames: list[str], dest: Path):
+    def extract_files(self, filenames: list[str], dest: Path, full_paths: bool = True):
         """
         Extracts `filenames` from archive to `dest`.
         """
@@ -100,7 +116,7 @@ class Archive:
 
         cmd = [
             "7z.exe",
-            "x",
+            "x" if full_paths else "e",
             f"-o{dest}",
             "-aoa",
             "-y",
