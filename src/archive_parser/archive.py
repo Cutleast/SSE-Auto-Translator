@@ -3,12 +3,11 @@ Copyright (c) Cutleast
 """
 
 from dataclasses import dataclass
-from fnmatch import fnmatch
-from virtual_glob import glob, InMemoryPath
 from io import BufferedReader, BytesIO
 from pathlib import Path
 
 import lz4.frame
+from virtual_glob import InMemoryPath, glob
 
 from .datatypes import *
 from .file_name_block import FileNameBlock
@@ -37,7 +36,6 @@ class Archive:
         index = 0
         for file_record_block in self.file_record_blocks:
             for file_record in file_record_block.file_records:
-                # result[self.file_name_block.file_names[index]] = file_record
                 file_path = file_record_block.name.decode()[:-1]
                 file_name = self.file_name_block.file_names[index]
                 file = str(Path(file_path) / file_name).replace("\\", "/")
@@ -83,7 +81,7 @@ class Archive:
     def glob(self, pattern: str):
         """
         Returns a list of file paths that
-        match the <pattern>.
+        match the `pattern`.
 
         Parameters:
             pattern: str, everything that fnmatch supports
@@ -102,7 +100,6 @@ class Archive:
         Extracts `filename` from archive to `dest_folder`.
         """
 
-        # filename = Path(filename).name
         filename = str(filename)
 
         if filename not in self.files:
