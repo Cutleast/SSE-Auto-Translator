@@ -745,25 +745,35 @@ class MainPageWidget(qtw.QWidget):
                     qtg.QIcon(str(self.app.data_path / "icons" / "detect_lang.svg")),
                     self.loc.main.basic_scan,
                 )
-                basic_scan_action.triggered.connect(lambda: Processor.scan_modlist(selected_mods, self.app))
+                basic_scan_action.triggered.connect(
+                    lambda: Processor.scan_modlist(selected_mods, self.app)
+                )
 
                 online_scan_action = action_menu.addAction(
                     qtg.QIcon(str(self.app.data_path / "icons" / "scan_online.svg")),
                     self.loc.main.scan_online,
                 )
-                online_scan_action.triggered.connect(lambda: Processor.scan_online(selected_mods, self.app))
+                online_scan_action.triggered.connect(
+                    lambda: Processor.scan_online(selected_mods, self.app)
+                )
 
                 download_translations_action = action_menu.addAction(
                     qta.icon("mdi6.download-multiple", color="#ffffff"),
                     self.loc.main.download_translations,
                 )
-                download_translations_action.triggered.connect(lambda: Processor.download_and_install_translations(selected_mods, self.app))
+                download_translations_action.triggered.connect(
+                    lambda: Processor.download_and_install_translations(
+                        selected_mods, self.app
+                    )
+                )
 
                 deep_scan_action = action_menu.addAction(
                     qta.icon("mdi6.line-scan", color="#ffffff"),
                     self.loc.main.deep_scan,
                 )
-                deep_scan_action.triggered.connect(lambda: Processor.run_deep_scan(selected_mods, self.app))
+                deep_scan_action.triggered.connect(
+                    lambda: Processor.run_deep_scan(selected_mods, self.app)
+                )
 
             elif plugin_selected:
                 if self.app.database.get_translation_by_plugin_name(
