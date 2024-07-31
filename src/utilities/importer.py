@@ -124,11 +124,11 @@ def get_non_plugin_files(
         for b, bsa_file in enumerate(bsa_files):
             if ldialog:
                 ldialog.updateProgress(
-                    text1=f"{ldialog.loc.main.processing_bsas} ({b}/{len(bsas)})",
+                    text1=f"{ldialog.loc.main.processing_bsas} ({b}/{len(bsa_files)})",
                     value1=b,
-                    max1=len(bsas),
+                    max1=len(bsa_files),
                     show2=True,
-                    text2=bsa,
+                    text2=bsa_file.name,
                     value2=0,
                     max2=0,
                     show3=False,
