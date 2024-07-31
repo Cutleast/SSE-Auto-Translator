@@ -5,7 +5,9 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import os
+import shutil
 import time
+from pathlib import Path
 
 import jstyleson as json
 import qtawesome as qta
@@ -14,6 +16,7 @@ import qtpy.QtGui as qtg
 import qtpy.QtWidgets as qtw
 
 import utilities as utils
+from archive_parser import ArchiveParser
 from database import DatabaseWidget, Translation
 from main import MainApp
 from mod_managers import SUPPORTED_MOD_MANAGERS
@@ -600,6 +603,55 @@ class MainPageWidget(qtw.QWidget):
 
                             translation.save_translation()
                             app.database.add_translation(translation)
+
+                            # Copy non-Plugin files
+                            non_plugin_files = utils.get_non_plugin_files(
+                                selected_mod.path,
+                                self.app.get_tmp_dir(),
+                                incl_interface=self.app.user_config[
+                                    "enable_interface_files"
+                                ],
+                                incl_scripts=self.app.user_config["enable_scripts"],
+                                incl_textures=self.app.user_config["enable_textures"],
+                                incl_sound=self.app.user_config["enable_sound_files"],
+                                language=self.app.user_config["language"],
+                                ldialog=ldialog,
+                            )
+
+                            ldialog.updateProgress(
+                                text1=ldialog.loc.main.copying_files,
+                                value1=0,
+                                max1=0,
+                                show2=False,
+                                show3=False,
+                            )
+
+                            bsa_files_to_extract: dict[Path, list[str]] = {}
+                            for file in non_plugin_files:
+                                bsa, file = utils.parse_path(Path(file))
+
+                                if bsa:
+                                    bsa = selected_mod.path / bsa.name
+                                    if bsa not in bsa_files_to_extract:
+                                        bsa_files_to_extract[bsa] = []
+                                    bsa_files_to_extract[bsa].append(str(file))
+                                else:
+                                    shutil.copyfile(
+                                        selected_mod.path / utils.relative_data_path(file),
+                                        translation / "data" / utils.relative_data_path(file),
+                                    )
+
+                            ldialog.updateProgress(
+                                text1=ldialog.loc.main.extracting_files,
+                            )
+
+                            for bsa, files in bsa_files_to_extract.items():
+                                self.app.log.info(
+                                    f"Extracting {len(files)} file(s) from {str(bsa)!r}..."
+                                )
+                                parsed_bsa = ArchiveParser(bsa).parse_archive()
+                                for file in files:
+                                    parsed_bsa.extract_file(file, translation.path / "data")
 
                         else:
                             existing_translation.strings.update(translation_strings)
