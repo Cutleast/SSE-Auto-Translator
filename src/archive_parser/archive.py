@@ -100,7 +100,7 @@ class Archive:
         Extracts `filename` from archive to `dest_folder`.
         """
 
-        filename = str(filename)
+        filename = str(filename).replace("\\", "/")
 
         if filename not in self.files:
             raise FileNotFoundError(f"{filename!r} is not in archive!")
