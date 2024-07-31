@@ -212,7 +212,7 @@ class DownloadsWidget(qtw.QWidget):
 
             tmp_path = self.app.get_tmp_dir()
             dl_path = (
-                Path(self.app.app_config["downloads_path"]) or self.app.get_tmp_dir()
+                Path(self.app.app_config["downloads_path"] or self.app.get_tmp_dir())
             )
 
             self.log.info(
