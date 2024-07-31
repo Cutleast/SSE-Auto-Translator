@@ -23,6 +23,206 @@ from .string import String
 log = logging.getLogger("Utilities.Importer")
 
 
+def parse_path(path: Path):
+    """
+    Parses path and returns tuple with
+    two components:
+    bsa path and file path
+
+    For example:
+    ```python
+        path = 'C:/Modding/RaceMenu/RaceMenu.bsa/interface/racesex_menu.swf'
+        => (
+            'C:/Modding/RaceMenu/RaceMenu.bsa',
+            'interface/racesex_menu.swf'
+        )
+    ```
+    """
+
+    bsa_path = file_path = None
+
+    parts: list[str] = []
+
+    for part in path.parts:
+        parts.append(part)
+
+        if part.endswith(".bsa"):
+            bsa_path = Path("/".join(parts))
+            parts.clear()
+    if parts:
+        file_path = Path("/".join(parts))
+
+    return (bsa_path, file_path)
+
+
+def get_non_plugin_files(
+    path: Path,
+    tmp_dir: Path,
+    incl_interface: bool,
+    incl_scripts: bool,
+    incl_textures: bool,
+    incl_sound: bool,
+    language: str,
+    ldialog=None,
+) -> list[str]:
+    """
+    Returns a list of matching non-plugin files from `path`.
+
+    `path` should be a folder or an archive file (.7z, .rar, .zip)!
+
+    Extracts BSAs to `tmp_dir` if `path` is an archive file.
+    """
+
+    matching_files: list[str] = []
+
+    def process_bsa(bsa_file: Path):
+        matching_files: list[str] = []
+        parser = ArchiveParser(bsa_file)
+        relative_bsa = Path(bsa_file.name)
+        parsed_bsa = parser.parse_archive()
+
+        if incl_interface:
+            matching_files.extend(
+                str(relative_bsa / file)
+                for file in parsed_bsa.glob(f"**/interface/**/*_{language}.txt")
+            )
+
+        if incl_scripts:
+            matching_files.extend(
+                str(relative_bsa / file) for file in parsed_bsa.glob("**/scripts/*.pex")
+            )
+
+        if incl_textures:
+            matching_files.extend(
+                str(relative_bsa / file)
+                for file in parsed_bsa.glob("**/textures/**/*.dds")
+            )
+            matching_files.extend(
+                str(relative_bsa / file)
+                for file in parsed_bsa.glob("**/textures/**/*.png")
+            )
+
+        if incl_sound:
+            matching_files.extend(
+                str(relative_bsa / file)
+                for file in parsed_bsa.glob("**/sound/**/*.fuz")
+            )
+            matching_files.extend(
+                str(relative_bsa / file)
+                for file in parsed_bsa.glob("**/sound/**/*.wav")
+            )
+            matching_files.extend(
+                str(relative_bsa / file)
+                for file in parsed_bsa.glob("**/sound/**/*.lip")
+            )
+
+        return matching_files
+
+    if path.is_dir():
+        bsa_files = [file for file in path.glob("*.bsa") if file.is_file()]
+
+        for b, bsa_file in enumerate(bsa_files):
+            if ldialog:
+                ldialog.updateProgress(
+                    text1=f"{ldialog.loc.main.processing_bsas} ({b}/{len(bsas)})",
+                    value1=b,
+                    max1=len(bsas),
+                    show2=True,
+                    text2=bsa,
+                    value2=0,
+                    max2=0,
+                    show3=False,
+                )
+
+            log.debug(f"Scanning {str(bsa_file)!r}...")
+            matching_files.extend(process_bsa(bsa_file))
+
+        if incl_interface:
+            matching_files.extend(
+                file.relative_to(path)
+                for file in path.glob(f"**/interface/**/*_{language}.txt")
+            )
+
+        if incl_scripts:
+            matching_files.extend(
+                file.relative_to(path) for file in path.glob("**/scripts/*.pex")
+            )
+
+        if incl_textures:
+            matching_files.extend(
+                file.relative_to(path) for file in path.glob("**/textures/**/*.dds")
+            )
+            matching_files.extend(
+                file.relative_to(path) for file in path.glob("**/textures/**/*.png")
+            )
+
+        if incl_sound:
+            matching_files.extend(
+                file.relative_to(path) for file in path.glob("**/sound/**/*.fuz")
+            )
+            matching_files.extend(
+                file.relative_to(path) for file in path.glob("**/sound/**/*.wav")
+            )
+            matching_files.extend(
+                file.relative_to(path) for file in path.glob("**/sound/**/*.lip")
+            )
+
+    elif path.suffix.lower() in [".7z", ".rar", ".zip"]:
+        if ldialog:
+            ldialog.updateProgress(
+                text1=ldialog.loc.main.extracting_files,
+                value1=0,
+                max1=0,
+                show2=False,
+                show3=False,
+            )
+
+        archive = Archive.load_archive(path)
+        archive_files = archive.get_files()
+
+        bsas: list[str] = [
+            file for file in archive_files if Path(file).suffix.lower() == ".bsa"
+        ]
+        log.debug(f"Extracting {len(bsas)} BSA(s) from {str(path)!r}...")
+        archive.extract_files(
+            [bsa for bsa in bsas if not (tmp_dir / bsa).is_file()], tmp_dir, full_paths=False
+        )
+
+        for b, bsa in enumerate(bsas):
+            bsa_file = tmp_dir / Path(bsa).name
+            if ldialog:
+                ldialog.updateProgress(
+                    text1=f"{ldialog.loc.main.processing_bsas} ({b}/{len(bsas)})",
+                    value1=b,
+                    max1=len(bsas),
+                    show2=True,
+                    text2=bsa,
+                    value2=0,
+                    max2=0,
+                    show3=False,
+                )
+
+            log.debug(f"Scanning {str(bsa_file)!r}...")
+            matching_files.extend(process_bsa(bsa_file))
+
+        if incl_interface:
+            matching_files.extend(archive.glob(f"**/interface/**/*_{language}.txt"))
+
+        if incl_scripts:
+            matching_files.extend(archive.glob("**/scripts/*.pex"))
+
+        if incl_textures:
+            matching_files.extend(archive.glob("**/textures/**/*.dds"))
+            matching_files.extend(archive.glob("**/textures/**/*.png"))
+
+        if incl_sound:
+            matching_files.extend(archive.glob("**/sound/**/*.fuz"))
+            matching_files.extend(archive.glob("**/sound/**/*.wav"))
+            matching_files.extend(archive.glob("**/sound/**/*.lip"))
+
+    return matching_files
+
+
 def import_non_plugin_files(
     archive_path: Path,
     original_mod: Mod,
@@ -60,110 +260,33 @@ def import_non_plugin_files(
         return
 
     archive = Archive.load_archive(archive_path)
-    archive_files = archive.get_files()
-
-    if ldialog:
-        ldialog.updateProgress(
-            text1=ldialog.loc.main.extracting_files,
-            value1=0,
-            max1=0,
-            show2=False,
-            show3=False,
-        )
-    bsas: list[str] = [
-        file for file in archive_files if Path(file).suffix.lower() == ".bsa"
-    ]
-    log.debug(f"Extracting {len(bsas)} BSA(s) from {str(archive_path)!r}...")
-    archive.extract_files(bsas, tmp_dir)
-
-    for b, bsa in enumerate(bsas):
-        extracted_archive = tmp_dir / bsa
-
-        if ldialog:
-            ldialog.updateProgress(
-                text1=f"{ldialog.loc.main.processing_bsas} ({b}/{len(bsas)})",
-                value1=b,
-                max1=len(bsas),
-                show2=True,
-                text2=bsa,
-                value2=0,
-                max2=0,
-                show3=False,
-            )
-
-        log.debug(f"Scanning {str(extracted_archive)!r}...")
-
-        parser = ArchiveParser(extracted_archive)
-        parsed_bsa = parser.parse_archive()
-        bsa_files_to_extract: list[str] = []
-
-        if incl_interface:
-            bsa_files_to_extract.extend(parsed_bsa.glob(f"**/interface/**/*_{language}.txt"))
-
-        if incl_scripts:
-            bsa_files_to_extract.extend(parsed_bsa.glob("**/scripts/*.pex"))
-
-        if incl_textures:
-            bsa_files_to_extract.extend(parsed_bsa.glob("**/textures/**/*.dds"))
-            bsa_files_to_extract.extend(parsed_bsa.glob("**/textures/**/*.png"))
-
-        if incl_sound:
-            bsa_files_to_extract.extend(parsed_bsa.glob("**/sound/**/*.fuz"))
-            bsa_files_to_extract.extend(parsed_bsa.glob("**/sound/**/*.wav"))
-            bsa_files_to_extract.extend(parsed_bsa.glob("**/sound/**/*.lip"))
-
-        log.debug(
-            f"Matching files in {str(extracted_archive)!r}: {len(bsa_files_to_extract)}"
-        )
-
-        if bsa_files_to_extract:
-            log.info(f"Extracting files from {str(extracted_archive)!r}...")
-
-        for b, bsa_file in enumerate(bsa_files_to_extract):
-            if ldialog:
-                ldialog.updateProgress(
-                    show2=True,
-                    text2=f"{extracted_archive.name} ({b}/{len(bsa_files_to_extract)})",
-                    value2=b,
-                    max2=len(bsa_files_to_extract),
-                    show3=True,
-                    text3=bsa_file,
-                )
-
-            if bsa_file.lower() in original_mod.files:
-                parsed_bsa.extract_file(bsa_file, output_folder)
-            else:
-                log.debug(f"Skipping {bsa_file!r}...")
-
-        parser.close_stream()
-
-    log.debug(f"Scanning {str(archive.path)!r}...")
-
-    matching_files: list[str] = []
-
-    if incl_interface:
-        matching_files.extend(archive.glob(f"**/interface/**/*_{language}.txt"))
-
-    if incl_scripts:
-        matching_files.extend(archive.glob("**/scripts/*.pex"))
-
-    if incl_textures:
-        matching_files.extend(archive.glob("**/textures/**/*.dds"))
-        matching_files.extend(archive.glob("**/textures/**/*.png"))
-
-    if incl_sound:
-        matching_files.extend(archive.glob("**/sound/**/*.fuz"))
-        matching_files.extend(archive.glob("**/sound/**/*.wav"))
-        matching_files.extend(archive.glob("**/sound/**/*.lip"))
-
-    log.debug(f"Matching files in {str(archive.path)!r}: {len(matching_files)}")
-
     files_to_extract: list[str] = []
+    bsa_files_to_extract: dict[Path, list[str]] = {}
+
+    matching_files = get_non_plugin_files(
+        archive_path,
+        tmp_dir,
+        incl_interface,
+        incl_scripts,
+        incl_textures,
+        incl_sound,
+        language,
+        ldialog,
+    )
+
     for file in matching_files:
-        if relative_data_path(file).lower() in original_mod.files:
-            files_to_extract.append(file)
+        bsa, file = parse_path(Path(file))
+
+        if str(file).lower().replace("\\", "/") in original_mod.files:
+            if bsa:
+                bsa = tmp_dir / bsa.name
+                if bsa not in bsa_files_to_extract:
+                    bsa_files_to_extract[bsa] = []
+                bsa_files_to_extract[bsa].append(str(file))
+            else:
+                files_to_extract.append(str(file))
         else:
-            log.debug(f"Skipping {relative_data_path(file)!r}...")
+            log.debug(f"Skipped file {str(file)!r} because not in original mod files!")
 
     if ldialog:
         ldialog.updateProgress(
@@ -173,6 +296,12 @@ def import_non_plugin_files(
             show2=False,
             show3=False,
         )
+
+    for bsa, files in bsa_files_to_extract.items():
+        log.info(f"Extracting {len(files)} file(s) from {str(bsa)!r}...")
+        parsed_bsa = ArchiveParser(bsa).parse_archive()
+        for file in files:
+            parsed_bsa.extract_file(file, output_folder)
 
     def safe_copy(src: os.PathLike, dst: os.PathLike, *, follow_symlinks=True):
         if os.path.exists(dst):
