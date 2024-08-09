@@ -1,0 +1,10 @@
+{
+    "download_update": "Загрузить обновление",
+    "download_updates": "Загрузить обновления",
+    "ignore_update": "Игнорировать обновление",
+    "installed_version": "Установленная версия",
+    "latest_version": "Последняя версия",
+    "no_updates": "Нет доступных обновлений!",
+    "no_updates_available": "Вы уже используете последнюю версию.\nПосетите наш <a href=\"https://discord.gg/pqEHdWDf8z\">Discord-сервер</a> для получения предварительных версий!",
+    "update_available": "Обновление доступно для загрузки!"
+}
