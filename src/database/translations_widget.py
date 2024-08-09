@@ -127,6 +127,7 @@ class TranslationsWidget(qtw.QWidget):
         self.translations_widget.setAlternatingRowColors(True)
         self.translations_widget.header().setSortIndicatorClearable(True)
         self.translations_widget.setSortingEnabled(True)
+        self.translations_widget.setUniformRowHeights(True)
         self.translations_widget.sortByColumn(2, qtc.Qt.SortOrder.AscendingOrder)
 
         del_shortcut = qtg.QShortcut(qtg.QKeySequence("Del"), self.translations_widget)

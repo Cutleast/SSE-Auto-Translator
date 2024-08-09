@@ -276,6 +276,7 @@ class MainPageWidget(qtw.QWidget):
         vlayout.addWidget(splitter, stretch=1)
 
         self.mods_widget = qtw.QTreeWidget()
+        self.mods_widget.setUniformRowHeights(True)
         self.mods_widget.setAlternatingRowColors(True)
         splitter.addWidget(self.mods_widget)
 

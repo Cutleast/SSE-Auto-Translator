@@ -230,6 +230,7 @@ class EditorTab(qtw.QWidget):
         self.strings_widget.setSelectionMode(
             qtw.QTreeWidget.SelectionMode.ExtendedSelection
         )
+        self.strings_widget.setUniformRowHeights(True)
         self.strings_widget.header().setSortIndicatorClearable(True)
         self.strings_widget.header().setFirstSectionMovable(True)
         self.strings_widget.setIndentation(0)

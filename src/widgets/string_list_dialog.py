@@ -125,6 +125,7 @@ class StringListDialog(qtw.QWidget):
         hlayout.addWidget(self.search_bar)
 
         self.strings_widget = qtw.QTreeWidget()
+        self.strings_widget.setUniformRowHeights(True)
         self.strings_widget.setContextMenuPolicy(
             qtc.Qt.ContextMenuPolicy.CustomContextMenu
         )
