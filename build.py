@@ -43,7 +43,7 @@ ADDITIONAL_ITEMS: dict[Path, Path] = {
     Path("7-zip"): DIST_FOLDER,
 }
 OUTPUT_FOLDER = DIST_FOLDER.with_name("SSE-AT")
-OUTPUT_ARCHIVE = Path(f"SSE-AT v{MainApp.version}.7z").resolve()
+OUTPUT_ARCHIVE = Path(f"SSE-AT v{MainApp.version}.zip").resolve()
 
 
 if OUTPUT_FOLDER.is_dir():
@@ -176,10 +176,10 @@ for item in UNUSED_ITEMS:
 print("Renaming Output folder...")
 os.rename(DIST_FOLDER, OUTPUT_FOLDER)
 
-print("Packing into 7-zip archive...")
+print("Packing into archive...")
 if OUTPUT_ARCHIVE.is_file():
     os.remove(OUTPUT_ARCHIVE)
-    print("Deleted already existing 7-zip archive.")
+    print("Deleted already existing archive.")
 
 cmd = f'7-zip\\7z.exe \
 a \
