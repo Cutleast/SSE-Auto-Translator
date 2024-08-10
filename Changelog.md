@@ -1,3 +1,53 @@
+# v2.1.0
+
+#### If not already done for v2.0.1: It is heavily recommended to delete everything but the "data" folder from the "SSE-AT" folder before updating! Your User Data is not affected. See v2.0.1 Changelog for more information.
+
+### Highlights
+
+- Add "Date" and "Size" columns to "Translations" list
+- Add experimental "Apply Translation" feature to context menu of Plugin translations
+  - This writes the translated strings to a copy of the original Plugin (similar to xTranslator's "Finalize ESP/ESM")
+- Add runtime cache for Plugin Strings (optimizes access times)
+- Add actions for current mod selection
+- Add drag'n drop import for Translations
+  - To import one or more Translations, just drag them in the Translations panel
+- Add more "Copy" buttons to StringListDialog
+- Add "Do not show again" button to Translator APIs
+- Add setting for persistent Downloads path
+  - This defaults to the temp folder which gets wiped after exit
+  - Changing this to a separate folder prevents it from getting wiped
+  - This can be set to an existing Downloads folder
+- Add Browser Documentation button to StartupDialog
+- Add option to edit all Plugins of a Translation at once
+  - You can now click on the Translation item itself in the TranslationEditor and it will show all Strings from all Plugins of that Translation
+- Add author blacklist to UserSettings
+- Add Russian localisation (thanks to [xsSplater](https://github.com/xsSplater)!)
+
+### Other Fixes and Improvements
+
+- Database translations for same mods are now merged
+- Set FE FormID Prefix for Records first-defined in light-flagged Plugins
+- Hide Plugin items without visible Strings in StringListDialog
+- Change default Provider Setting for French
+- Disable inclusion of Papyrus Scripts by default
+- Replace improvised Plugin Parser by new Plugin Interface
+- Decrease default font size in UI to increase number of visible items on screen
+  - It now matches your system font size
+- Delete temporary text file after archive extraction with 7-zip commandline
+- Show error messageboxes over active modal widget
+- Copy non-Plugin files when manually creating a new Translation
+- Import only interface translations for desired language
+- Improve layouts in UserSettings and StartupDialog by adding group boxes
+- Improve Scrollbar visibilty
+- Optimize search bar behaviour for large (>1k) modlists and databases
+- Optimize mass API translations
+- Optimize import of non-Plugin files
+- Optimize scrolling when there are a lot of items (Modlist, Translations, StringListDialog, TranslationEditor)
+- Fix import of loose non-Plugin files
+- Fix non-Premium "Download" buttons
+- Fix FileExistsError when building Output Mod
+- Fix provider preference setting getting resetted at each start
+
 # v2.0.1
 
 #### Due to a change in the way SSE-AT is built, to deal with AV false positives, it is heavily recommended to delete everything but the "data" folder from the "SSE-AT" folder before updating! Your User Data is not affected.
