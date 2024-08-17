@@ -1,3 +1,9 @@
+# v2.1.1
+
+#### If not already done for v2.0.1: It is heavily recommended to delete everything but the "data" folder from the "SSE-AT" folder before updating! Your User Data is not affected. See v2.0.1 Changelog for more information.
+
+- Fix rare IndexError when sorting TranslationDownloads
+
 # v2.1.0
 
 #### If not already done for v2.0.1: It is heavily recommended to delete everything but the "data" folder from the "SSE-AT" folder before updating! Your User Data is not affected. See v2.0.1 Changelog for more information.
