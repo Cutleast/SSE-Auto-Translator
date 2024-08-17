@@ -641,9 +641,10 @@ class Processor:
                         reverse=True,
                     )
 
-                    translation_downloads[f"{mod.name} > {plugin.name}"] = (
-                        mod_translations
-                    )
+                    if mod_translations:
+                        translation_downloads[f"{mod.name} > {plugin.name}"] = (
+                            mod_translations
+                        )
 
         loadingdialog = LoadingDialog(app.root, app, process)
         loadingdialog.exec()
