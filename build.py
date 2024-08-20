@@ -108,6 +108,7 @@ elif COMPILER == "cx_freeze":
     from cx_Freeze import Executable, setup
 
     build_options = {
+        "replace_paths": [("*", "")],
         "packages": ["hunspell", "cacheman"],
         "excludes": [],
         "includes": ["hunspell.platform", "cacheman.cachewrap"],
