@@ -38,7 +38,7 @@ class ModOrganizer(ModManager):
                 parser = utils.IniParser(instance_ini)
                 instance_data = parser.load_file()
 
-                if not "General" in instance_data:
+                if "General" not in instance_data:
                     continue
 
                 if instance_data["General"].get("gameName") in [
@@ -78,14 +78,14 @@ class ModOrganizer(ModManager):
 
         if "mod_directory" in settings:
             mods_dir = Path(
-                settings["mod_directory"].replace("%BASE_DIR", str(base_dir))
+                settings["mod_directory"].replace("%BASE_DIR%", str(base_dir))
             )
         else:
             mods_dir = base_dir / "mods"
 
         if "profiles_directory" in settings:
             prof_dir = (
-                Path(settings["profiles_directory"].replace("%BASE_DIR", str(base_dir)))
+                Path(settings["profiles_directory"].replace("%BASE_DIR%", str(base_dir)))
                 / instance_profile
             )
         else:
@@ -205,7 +205,7 @@ class ModOrganizer(ModManager):
         base_dir = Path(settings.get("base_directory", ini_path.parent))
         if "profiles_directory" in settings:
             prof_dir = Path(
-                settings["profiles_directory"].replace("%BASE_DIR", str(base_dir))
+                settings["profiles_directory"].replace("%BASE_DIR%", str(base_dir))
             )
         else:
             prof_dir = base_dir / "profiles"
