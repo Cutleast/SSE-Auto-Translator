@@ -1,3 +1,8 @@
+# v2.1.2
+
+- Fix "%BASE_DIR%" not being fully resolved when loading some MO2 instances
+- Fix dev environment paths appearing in tracebacks
+
 # v2.1.1
 
 #### If not already done for v2.0.1: It is heavily recommended to delete everything but the "data" folder from the "SSE-AT" folder before updating! Your User Data is not affected. See v2.0.1 Changelog for more information.
