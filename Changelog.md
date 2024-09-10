@@ -1,3 +1,7 @@
+# v2.1.3
+
+- Fix NotADirectoryError when downloading translations with illegal characters (for eg. ":")
+
 # v2.1.2
 
 - Fix "%BASE_DIR%" not being fully resolved when loading some MO2 instances
