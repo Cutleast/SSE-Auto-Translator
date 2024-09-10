@@ -557,7 +557,7 @@ class Processor:
                                     )
                                     continue
                                 download = FileDownload(
-                                    name=file_details["name"],
+                                    name=utils.clean_fs_name(file_details["name"]),
                                     source=source,
                                     mod_id=mod_id,
                                     file_id=file_id,
@@ -575,7 +575,7 @@ class Processor:
                                 )
                                 continue
                             download = FileDownload(
-                                name=file_details["name"],
+                                name=utils.clean_fs_name(file_details["name"]),
                                 source=source,
                                 mod_id=mod_id,
                                 original_mod=mod,
@@ -608,7 +608,7 @@ class Processor:
                                     mod_id, file_id, source
                                 )
                                 download = FileDownload(
-                                    name=file_details["name"],
+                                    name=utils.clean_fs_name(file_details["name"]),
                                     source=source,
                                     mod_id=mod_id,
                                     file_id=file_id,

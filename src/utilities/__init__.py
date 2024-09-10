@@ -7,12 +7,14 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 import ctypes
 import hashlib
 import logging
+import os
+import re
 import time
 from datetime import datetime
 from fnmatch import fnmatch
+from pathlib import Path
 
 import jstyleson as json
-import qtpy.QtGui as qtg
 import qtpy.QtWidgets as qtw
 import requests as req
 
@@ -353,3 +355,17 @@ def get_masterlist(language: str, cache: bool = True) -> dict[str, dict]:
             raise Exception(f"Request failed! Status Code: {res.status_code}")
 
     return masterlist
+
+
+def clean_fs_name(folder_or_file_name: str) -> str:
+    """
+    Cleans a folder or file name of illegal characters like ":".
+
+    Args:
+        folder_or_file_name (str): File or folder name to clean.
+
+    Returns:
+        str: Cleaned file or folder name.
+    """
+
+    return re.sub(r'[:<>?*"|]', "", folder_or_file_name)

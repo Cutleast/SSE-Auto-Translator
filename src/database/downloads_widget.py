@@ -378,7 +378,7 @@ class DownloadsWidget(qtw.QWidget):
         if (mod_id, file_id) not in self.pending_non_prem_downloads:
             mod_details = self.app.provider.get_details(mod_id, file_id, source)
             download = FileDownload(
-                name=mod_details["name"],
+                name=utils.clean_fs_name(mod_details["name"]),
                 source=source,
                 mod_id=mod_id,
                 file_id=file_id,
