@@ -117,6 +117,3 @@ class Plugin:
 
     def __setstate__(self, state):
         self.__dict__.update(state)
-
-        # Add tree_item back
-        self.tree_item = None
