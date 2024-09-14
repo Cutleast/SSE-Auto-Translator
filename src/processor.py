@@ -170,15 +170,24 @@ class Processor:
             strings: dict[str, list[utils.String]] = {}
 
             for dsd_file in dsd_files:
-                plugin_name = dsd_file.parent.name.lower()
+                try:
+                    plugin_name = dsd_file.parent.name.lower()
 
-                if app.database.get_translation_by_plugin_name(plugin_name):
-                    continue
+                    if app.database.get_translation_by_plugin_name(plugin_name):
+                        continue
+                    
+                    plugin_strings: list[utils.String] = []
+                    for string_data in json.loads(dsd_file.read_text("utf8")):
+                        try:
+                            plugin_strings.append(utils.String.from_string_data(string_data))
+                        except Exception as ex:
+                            app.log.debug(f"File: {str(dsd_file)!r}")
+                            app.log.error(f"Failed to process invalid string: {ex}", exc_info=ex)
 
-                strings[plugin_name] = [
-                    utils.String.from_string_data(string_data)
-                    for string_data in json.loads(dsd_file.read_text(encoding="utf8"))
-                ]
+                    if len(plugin_strings):
+                        strings[plugin_name] = plugin_strings
+                except Exception as ex:
+                    app.log.error(f"Failed to import {str(dsd_file)!r}: {ex}", exc_info=ex)
 
             if not len(strings):
                 continue
@@ -191,7 +200,8 @@ class Processor:
             matching_original = [
                 installed_mod
                 for installed_mod in modlist
-                if dsd_files[0].parent.name.lower()
+                for dsd_file in dsd_files
+                if dsd_file.parent.name.lower()
                 in [plugin.name.lower() for plugin in installed_mod.plugins]
             ]
             if len(matching_original):

@@ -8,7 +8,6 @@ from dataclasses import dataclass
 from enum import Enum, auto
 
 from qtpy.QtGui import QColor
-from qtpy.QtWidgets import QTreeWidgetItem
 
 
 @dataclass
@@ -115,7 +114,7 @@ class String:
                 string_data.get("status"), cls.Status.TranslationComplete
             )
 
-            editor_id = string_data["editor_id"]
+            editor_id = string_data.get("editor_id")
             form_id = string_data.get("form_id")
             if editor_id and not form_id:
                 if editor_id.startswith("[") and editor_id.endswith("]"):
@@ -137,7 +136,7 @@ class String:
                 string_data.get("status"), cls.Status.TranslationRequired
             )
 
-            editor_id = string_data["editor_id"]
+            editor_id = string_data.get("editor_id")
             form_id = string_data.get("form_id")
             if editor_id and not form_id:
                 if editor_id.startswith("[") and editor_id.endswith("]"):
