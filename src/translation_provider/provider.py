@@ -239,9 +239,13 @@ class Provider:
             for translation_url in translation_urls:
                 translation_mod_id = int(translation_url.split("/")[-1].split("?")[0])
 
-                translation_details = self.__nm_api.get_mod_details(
-                    "skyrimspecialedition", translation_mod_id
-                )
+                try:
+                    translation_details = self.__nm_api.get_mod_details(
+                        "skyrimspecialedition", translation_mod_id
+                    )
+                except Exception as ex:
+                    self.log.error(f"Failed to get details of mod {translation_mod_id}: {ex}", exc_info=ex)
+                    continue
 
                 # Skip translations from authors on the author_blacklist
                 if translation_details["author"].lower() in author_blacklist:
@@ -254,10 +258,14 @@ class Provider:
                         f"Skipped translation by uploader {translation_details['uploaded_by']!r} due to configured blacklist."
                     )
                     continue
-
-                translation_file_ids = self.__nm_api.scan_mod_for_filename(
-                    "skyrimspecialedition", translation_mod_id, plugin_name
-                )
+                
+                try:
+                    translation_file_ids = self.__nm_api.scan_mod_for_filename(
+                        "skyrimspecialedition", translation_mod_id, plugin_name
+                    )
+                except Exception as ex:
+                    self.log.error(f"Failed to scan mod {translation_mod_id} for files: {ex}", exc_info=ex)
+                    continue
 
                 if translation_file_ids:
                     nm_translations.append(
