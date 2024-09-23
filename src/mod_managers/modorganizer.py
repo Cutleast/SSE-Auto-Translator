@@ -148,16 +148,19 @@ class ModOrganizer(ModManager):
 
                     self.log.warning(f"No Metadata available for {active_mod!r}!")
 
-                plugin_files = [
-                    file
-                    for suffix in [".esl", ".esm", ".esp"]
-                    for file in (mods_dir / active_mod).glob(f"*{suffix}")
-                    if file.is_file()
-                ]
-                plugins = [
-                    utils.Plugin(plugin_file.name, plugin_file)
-                    for plugin_file in plugin_files
-                ]
+                plugins: list[utils.Plugin] = []
+                # Only load plugins from non-separators
+                if not active_mod.endswith("_separator"):
+                    plugin_files = [
+                        file
+                        for suffix in [".esl", ".esm", ".esp"]
+                        for file in (mods_dir / active_mod).glob(f"*{suffix}")
+                        if file.is_file()
+                    ]
+                    plugins = [
+                        utils.Plugin(plugin_file.name, plugin_file)
+                        for plugin_file in plugin_files
+                    ]
 
                 mod = utils.Mod(
                     name=active_mod,
