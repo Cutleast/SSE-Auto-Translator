@@ -32,7 +32,7 @@ class MainApp(qtw.QApplication):
     """
 
     name = "SSE Auto Translator"
-    version = "2.1.4-beta-1"
+    version = "2.1.4-beta-2"
 
     loc: "utils.Localisator" = None
     cur_path = (  # Get path of executable/script depending on building status
