@@ -1,3 +1,9 @@
+# v2.1.4
+
+- Catch potential API errors when scanning for translations
+- Fix NoneType AttributeError that's caused by a plugin in a separator (Eldergleam)
+- Increase resiliency for malformed DSD translations
+
 # v2.1.3
 
 - Fix NotADirectoryError when downloading translations with illegal characters (for eg. ":")
