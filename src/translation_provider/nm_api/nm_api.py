@@ -411,7 +411,7 @@ class NexusModsApi:
             self.log.error(f"Failed to scan modpage! Status Code: {res.status_code}")
             return {}
 
-        html = res.content.decode()
+        html = res.content.decode(errors="replace")
         parsed = bs4.BeautifulSoup(html, features="html.parser")
 
         translation_list = parsed.find("ul", {"class": "translations"})
