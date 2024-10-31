@@ -174,8 +174,11 @@ for item in UNUSED_ITEMS:
         os.remove(item)
         print(f"Removed file '{item.name}'.")
 
-print("Renaming Output folder...")
-os.rename(DIST_FOLDER, OUTPUT_FOLDER)
+print("Creating Output folder...")
+os.makedirs(OUTPUT_FOLDER, exist_ok=True)
+
+print("Hardlinking files into Output folder...")
+shutil.copytree(DIST_FOLDER, OUTPUT_FOLDER, dirs_exist_ok=True, copy_function=os.link)
 
 print("Packing into archive...")
 if OUTPUT_ARCHIVE.is_file():
@@ -187,5 +190,8 @@ a \
 "{OUTPUT_ARCHIVE}" \
 "{OUTPUT_FOLDER}"'
 os.system(cmd)
+
+print("Cleaning dist folder...")
+shutil.rmtree(DIST_FOLDER)
 
 print("Done!")
