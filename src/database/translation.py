@@ -95,14 +95,24 @@ class Translation:
                 if translation_path.stem.lower() in self.strings:
                     continue
 
-                with open(translation_path, "r", encoding="utf8") as translation_file:
-                    strings_data: list[dict[str, str]] = json.load(translation_file)
-                strings = [
-                    utils.String.from_string_data(string_data)
-                    for string_data in strings_data
-                ]
-                strings = list(set(strings))  # Remove duplicates
-                self.strings[translation_path.stem.lower()] = strings
+                try:
+                    with open(
+                        translation_path, "r", encoding="utf8"
+                    ) as translation_file:
+                        strings_data: list[dict[str, str]] = json.load(translation_file)
+
+                    strings = [
+                        utils.String.from_string_data(string_data)
+                        for string_data in strings_data
+                    ]
+
+                    strings = list(set(strings))  # Remove duplicates
+                    self.strings[translation_path.stem.lower()] = strings
+                except Exception as ex:
+                    self.log.error(
+                        f"Failed to load strings from database file {str(translation_path)!r}",
+                        exc_info=ex,
+                    )
 
             self.optimize_translation()
 
