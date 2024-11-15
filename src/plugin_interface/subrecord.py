@@ -164,7 +164,7 @@ class XXXX(Subrecord):
 
         self.field_size = Integer.parse(self.data, (self.size, False))
         # Add header and data of following subrecord to this
-        self.data = stream.read(self.field_size + 7)
+        self.data = stream.read(self.field_size + 6)
 
     def dump(self):
         data = b""
