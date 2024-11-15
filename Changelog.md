@@ -1,3 +1,9 @@
+# v2.1.5
+
+- Fix UnicodeDecodeError when requesting mod translations
+- Catch and log potential errors when loading a translation from a JSON file
+- Fix UnicodeDecodeError when parsing certain plugins with QUST XXXX fields (eg. "Inns Can Be Closed.esp")
+
 # v2.1.4
 
 - Catch potential API errors when scanning for translations
