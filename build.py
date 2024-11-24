@@ -93,8 +93,6 @@ elif COMPILER == "pyinstaller":
 --noconfirm \
 --hide-console=hide-late \
 --version-file="versioninfo.txt" \
---hidden-import=hunspell \
---hidden-import=hunspell.platform \
 --hidden-import=cacheman \
 --hidden-import=cacheman.cachewrap \
 --distpath="{OUTPUT_FOLDER.parent}" \
@@ -109,9 +107,9 @@ elif COMPILER == "cx_freeze":
 
     build_options = {
         "replace_paths": [("*", "")],
-        "packages": ["hunspell", "cacheman"],
+        "packages": ["cacheman"],
         "excludes": [],
-        "includes": ["hunspell.platform", "cacheman.cachewrap"],
+        "includes": ["cacheman.cachewrap"],
         "include_files": [("./.venv/Lib/site-packages/plyvel_ci.libs", "./lib/plyvel")],
         "include_path": "./src",
         "build_exe": DIST_FOLDER.name,

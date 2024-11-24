@@ -6,8 +6,9 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 import logging
 import string
+from typing import Iterator
 
-from hunspell import Hunspell, HunspellFilePathError
+import spylls.hunspell as hunspell
 import qtpy.QtCore as qtc
 import qtpy.QtGui as qtg
 import qtpy.QtWidgets as qtw
@@ -26,9 +27,9 @@ class SpellCheckEntry(qtw.QPlainTextEdit):
         super().__init__(*args, **kwargs)
 
         try:
-            self.checker = Hunspell(language, hunspell_data_dir="./data/hunspell")
+            self.checker = hunspell.Dictionary.from_files("./data/hunspell/" + language)
             self.log.info("Loaded Hunspell dictionary.")
-        except HunspellFilePathError:
+        except FileNotFoundError:
             self.log.error(
                 f"Failed to load dictionary for specified language {language!r}: Dictionary not found!"
             )
@@ -53,7 +54,9 @@ class SpellCheckEntry(qtw.QPlainTextEdit):
         fmt = text_cursor.charFormat()
 
         def ignore():
-            self.checker.add(word)
+            # TODO: Reimplement
+            raise NotImplementedError
+            # self.checker.add(word)
             self.on_text_edit()
             self.log.debug(f"Ignored {word!r}.")
 
@@ -64,7 +67,7 @@ class SpellCheckEntry(qtw.QPlainTextEdit):
             and self.checker is not None
         ):
             first_std_action = menu.actions()[0]
-            suggestions: tuple[str] = self.checker.suggest(word)
+            suggestions: Iterator[str] = self.checker.suggest(word)
 
             if suggestions is not None:
                 separator = menu.insertSeparator(first_std_action)
@@ -85,7 +88,7 @@ class SpellCheckEntry(qtw.QPlainTextEdit):
 
                 ignore_action = qtg.QAction("Ignore")
                 ignore_action.triggered.connect(ignore)
-                menu.insertAction(separator, ignore_action)
+                # menu.insertAction(separator, ignore_action)
 
         menu.exec(self.mapToGlobal(point))
 
@@ -121,7 +124,7 @@ class SpellCheckEntry(qtw.QPlainTextEdit):
 
             cursor.select(cursor.SelectionType.WordUnderCursor)
 
-            word_correct = self.checker.spell(word)
+            word_correct = self.checker.lookup(word)
 
             fmt = qtg.QTextCharFormat()
 

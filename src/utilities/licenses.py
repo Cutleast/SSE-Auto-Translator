@@ -28,7 +28,7 @@ LICENSES = {
     "deepl": "https://github.com/DeepLcom/deepl-python/blob/main/LICENSE",
     "pyzmq": "https://github.com/zeromq/pyzmq/blob/main/LICENSE.md",
     "pytz": "https://github.com/stub42/pytz/blob/master/LICENSE.txt",
-    "cyhunspell": "https://github.com/MSeal/cython_hunspell/blob/master/LICENSE",
+    "spylls": "https://github.com/zverok/spylls/blob/master/LICENSE",
     "comtypes": "https://github.com/enthought/comtypes/blob/main/LICENSE.txt",
 
     "french_libreoffice_dict": "http://www.mozilla.org/MPL/2.0/",
