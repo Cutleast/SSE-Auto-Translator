@@ -7,7 +7,7 @@ import os
 import shutil
 from pathlib import Path
 
-from src.main import MainApp
+from src.app import MainApp
 
 COMPILER = "cx_freeze"  # "pyinstaller" or "nuitka" or "cx_freeze"
 
