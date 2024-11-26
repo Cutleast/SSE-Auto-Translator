@@ -1,0 +1,62 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"[qss]": {
+			"editor.defaultFormatter": "vscode.css-language-features"
+		},
+		"[python]": {
+			"editor.codeActionsOnSave": {
+				"source.organizeImports": "explicit",
+			},
+		},
+		"files.associations": {
+			"*.ts": "xml"
+		},
+		"python.testing.unittestArgs": [
+			"-v",
+			"-s",
+			".",
+			"-p",
+			"test_*.py"
+		],
+		"python.testing.pytestEnabled": false,
+		"python.testing.unittestEnabled": true,
+		"xml.format.maxLineWidth": 0,
+		"mypy-type-checker.args": [
+			"--config-file=${workspaceFolder}\\mypy.ini"
+		],
+		"mypy-type-checker.reportingScope": "workspace"
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Debug SSE-AT",
+				"type": "debugpy",
+				"request": "launch",
+				"program": "${workspaceFolder}/src/app.py",
+				"console": "integratedTerminal",
+				"cwd": "${workspaceFolder}",
+			}
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "Build",
+				"detail": "Build SSE-AT with build.py",
+				"type": "shell",
+				"command": "${workspaceFolder}/.venv/scripts/python",
+				"args": [
+					"${workspaceFolder}/build.py"
+				],
+				"problemMatcher": []
+			}
+		]
+	}
+}
