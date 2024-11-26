@@ -24,3 +24,6 @@ pyzmq
 spylls
 pytz
 comtypes
+lz4
+virtual_glob
+beautifulsoup4
