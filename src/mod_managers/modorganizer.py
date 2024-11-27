@@ -113,12 +113,7 @@ class ModOrganizer(ModManager):
 
                     general = mod_meta_data.get("General")
                     if general is not None:
-                        mod_id = general.get("modid")
-                        if mod_id is None:
-                            mod_id = 0
-                        else:
-                            mod_id = int(mod_id)
-
+                        mod_id = int(general.get("modid") or 0)
                         version = general.get("version", None)
 
                         if version is None:
@@ -129,7 +124,7 @@ class ModOrganizer(ModManager):
 
                         if "installedFiles" in mod_meta_data:
                             file_id = int(
-                                mod_meta_data["installedFiles"].get("1\\fileid", 0)
+                                mod_meta_data["installedFiles"].get("1\\fileid") or 0
                             )
                         else:
                             file_id = 0
