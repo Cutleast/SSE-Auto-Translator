@@ -1,3 +1,7 @@
+# v2.1.6
+
+- Fix loading of MO2 mods where "file_id" is empty in meta.ini
+
 # v2.1.5
 
 - Fix UnicodeDecodeError when requesting mod translations
