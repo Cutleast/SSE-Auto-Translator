@@ -41,6 +41,12 @@ class NexusModsApi:
     game_ids = {
         "skyrimspecialedition": 1704,
     }
+    language_overrides = {
+        "Mandarin": "Chinese",
+    }
+    """
+    Map for languages that are named differently on the Nexus Mods site.
+    """
 
     rem_hreq: int = None  # Remaining API requests at current hour
     rem_dreq: int = None  # Remaining API requests at current day
@@ -427,7 +433,7 @@ class NexusModsApi:
             tags = parsed.find_all("a", {"class": f"sortme flag flag-{tag.text}"})
             urls: list[str] = [tag["href"] for tag in tags]
 
-            language = tag.text
+            language = NexusModsApi.language_overrides.get(tag.text, tag.text)
 
             available_translations[language] = urls
 
