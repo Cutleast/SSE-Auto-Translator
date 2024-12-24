@@ -1,0 +1,38 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource>
+        <!-- Icons -->
+        <file>icons/arrow_down.svg</file>
+        <file>icons/arrow_left.svg</file>
+        <file>icons/arrow_right.svg</file>
+        <file>icons/arrow_up.svg</file>
+        <file>icons/cdt.svg</file>
+        <file>icons/checkmark.svg</file>
+        <file>icons/close.svg</file>
+        <file>icons/detect_lang.svg</file>
+        <file>icons/discord.png</file>
+        <file>icons/grip.png</file>
+        <file>icons/icon.ico</file>
+        <file>icons/icon.png</file>
+        <file>icons/icon.svg</file>
+        <file>icons/ko-fi.png</file>
+        <file>icons/nexus_mods.png</file>
+        <file>icons/nexus_mods.svg</file>
+        <file>icons/plugin.svg</file>
+        <file>icons/scan_online.svg</file>
+
+        <!-- Default Config Files -->
+        <file>app/config.json</file>
+        <file>translator/config.json</file>
+        <file>user/config.json</file>
+
+        <!-- Localisation Files -->
+        <file>loc/de_DE.qm</file>
+        <file>loc/ru_RU.qm</file>
+        <file>loc/zh_CN.qm</file>
+
+        <!-- Other -->
+        <file>string_records.json</file>
+        <file>style.qss</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,16 @@
+{
+    "language": "",
+    "api_key": "",
+    "mod_manager": "",
+    "modinstance": "",
+    "use_masterlist": true,
+    "instance_profile": "",
+    "instance_path": null,
+    "provider_preference": "",
+    "enable_interface_files": true,
+    "enable_scripts": false,
+    "enable_textures": false,
+    "enable_sound_files": false,
+    "author_blacklist": [],
+    "plugin_ignorelist": []
+}

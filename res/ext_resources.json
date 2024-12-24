@@ -1,0 +1,11 @@
+// This file contains all the resource files and folders 
+// that are not included in the Qt resource file
+[
+    "7-zip/*",
+    "app/database/*/*.ats",
+    "hunspell/*.aff",
+    "hunspell/*.dic",
+    "path_limit.reg",
+    "string_records.json",
+    "TaskbarLib.tlb"
+]
