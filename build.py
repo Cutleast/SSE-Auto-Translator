@@ -7,44 +7,39 @@ import os
 import shutil
 from pathlib import Path
 
-from src.app import MainApp
+import jstyleson as json
+
+from src.app import App
 
 COMPILER = "cx_freeze"  # "pyinstaller" or "nuitka" or "cx_freeze"
 
-DIST_FOLDER = Path("app.dist").resolve()
 APPNAME = "SSE Auto Translator"
-VERSION = MainApp.version.split("-")[0]
+VERSION = App.APP_VERSION.split("-")[0]
 AUTHOR = "Cutleast"
 LICENSE = "Attribution-NonCommercial-NoDerivatives 4.0 International"
 CONSOLE_MODE = "attach"  # "attach": Attaches to console it was started with (if any), "force": starts own console window, "disable": disables console completely
-UNUSED_ITEMS: list[Path] = [
-    DIST_FOLDER / "data" / "app" / "config.json",
-    DIST_FOLDER / "data" / "cache",
-    DIST_FOLDER / "data" / "user",
-    DIST_FOLDER / "data" / "user.old",
-    DIST_FOLDER / "data" / "logs",
-    DIST_FOLDER / "data" / "translator",
-    DIST_FOLDER / "data" / "icons" / "Confrerie.svg",
-]
+DIST_FOLDER = Path("app.dist")
+SRC_FOLDER = Path("src")
+RES_FOLDER = Path("res")
+UNUSED_ITEMS: list[Path] = []
 ADDITIONAL_ITEMS: dict[Path, Path] = {
-    Path("src") / "data": DIST_FOLDER / "data",
     Path("doc"): DIST_FOLDER / "doc",
     Path("LICENSE"): DIST_FOLDER / "LICENSE",
-    Path("src") / "TaskbarLib.tlb": DIST_FOLDER / "TaskbarLib.tlb",
     Path(".venv")
     / "Lib"
     / "site-packages"
     / "cloudscraper"
     / "user_agent"
-    / "browsers.json": DIST_FOLDER
-    / "cloudscraper"
-    / "user_agent"
-    / "browsers.json",
-    Path("7-zip"): DIST_FOLDER,
+    / "browsers.json": DIST_FOLDER / "cloudscraper" / "user_agent" / "browsers.json",
 }
 OUTPUT_FOLDER = DIST_FOLDER.with_name("SSE-AT")
-OUTPUT_ARCHIVE = Path(f"SSE-AT v{MainApp.version}.zip").resolve()
+OUTPUT_ARCHIVE = Path(f"SSE-AT v{App.APP_VERSION}.zip").resolve()
 
+# Add external resources from res/ext_resources.json
+with open("res/ext_resources.json", encoding="utf8") as f:
+    for item in json.load(f):
+        for i in RES_FOLDER.glob(item):
+            ADDITIONAL_ITEMS[i] = DIST_FOLDER / "res" / i
 
 if OUTPUT_FOLDER.is_dir():
     shutil.rmtree(OUTPUT_FOLDER)

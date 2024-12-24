@@ -10,26 +10,31 @@
 		},
 		"[python]": {
 			"editor.codeActionsOnSave": {
-				"source.organizeImports": "explicit",
-			},
+				"source.organizeImports.ruff": "explicit"
+			}
 		},
+		"editor.formatOnSave": true,
 		"files.associations": {
-			"*.ts": "xml"
+			"*.ts": "xml",
+			"*.qrc": "xml"
 		},
-		"python.testing.unittestArgs": [
-			"-v",
-			"-s",
-			".",
-			"-p",
-			"test_*.py"
-		],
-		"python.testing.pytestEnabled": false,
-		"python.testing.unittestEnabled": true,
+		"python.testing.pytestEnabled": true,
+		"python.testing.unittestEnabled": false,
 		"xml.format.maxLineWidth": 0,
 		"mypy-type-checker.args": [
-			"--config-file=${workspaceFolder}\\mypy.ini"
+			"--no-namespace-packages"
 		],
-		"mypy-type-checker.reportingScope": "workspace"
+		"mypy-type-checker.interpreter": [
+			"${workspaceFolder}\\.venv\\Scripts\\python.exe"
+		],
+		"mypy-type-checker.reportingScope": "workspace",
+		"python-envs.pythonProjects": [
+			{
+				"path": "src/core/utilities/__init__.py",
+				"envManager": "ms-python.python:venv",
+				"packageManager": "ms-python.python:pip"
+			}
+		]
 	},
 	"launch": {
 		"version": "0.2.0",
@@ -38,9 +43,18 @@
 				"name": "Debug SSE-AT",
 				"type": "debugpy",
 				"request": "launch",
-				"program": "${workspaceFolder}/src/app.py",
+				"program": "${workspaceFolder}/src/main.py",
 				"console": "integratedTerminal",
 				"cwd": "${workspaceFolder}",
+				"preLaunchTask": "compile-qrc",
+			},
+			{
+				"name": "Launch current file",
+				"type": "debugpy",
+				"request": "launch",
+				"program": "${file}",
+				"console": "integratedTerminal",
+				"cwd": "${workspaceFolder}/src",
 			}
 		]
 	},
@@ -48,13 +62,164 @@
 		"version": "2.0.0",
 		"tasks": [
 			{
+				"label": "update-venv",
+				"type": "shell",
+				"command": "${workspaceFolder}/.venv/scripts/pip",
+				"args": [
+					"install",
+					"--upgrade",
+					"-r",
+					"${workspaceFolder}/requirements.txt"
+				],
+				"detail": "Updates virtual environment with requirements.txt",
+				"problemMatcher": []
+			},
+			{
 				"label": "Build",
 				"detail": "Build SSE-AT with build.py",
 				"type": "shell",
+				"group": "build",
 				"command": "${workspaceFolder}/.venv/scripts/python",
 				"args": [
 					"${workspaceFolder}/build.py"
 				],
+				"problemMatcher": []
+			},
+			{
+				"label": "update-project-file",
+				"type": "shell",
+				"command": "${workspaceFolder}/.venv/scripts/python",
+				"args": [
+					"${workspaceFolder}/scripts/generate_qt_project_file.py",
+					"--relative-to",
+					"${workspaceFolder}",
+					"--include-directory",
+					"${workspaceFolder}/src",
+					"--out-file",
+					"${workspaceFolder}/qt_project.pyproject"
+				]
+			},
+			{
+				"label": "update-lupdate-file",
+				"type": "shell",
+				"command": "${workspaceFolder}/.venv/scripts/python",
+				"args": [
+					"${workspaceFolder}/scripts/generate_qt_lupdate_file.py",
+					"--include-directory",
+					"${workspaceFolder}/src/ui",
+					"--include-directory",
+					"${workspaceFolder}/src/core",
+					"--relative-to",
+					"${workspaceFolder}",
+					"--add-translation",
+					"${workspaceFolder}/res/loc/de_DE.ts",
+					"--add-translation",
+					"${workspaceFolder}/res/loc/ru_RU.ts",
+					"--add-translation",
+					"${workspaceFolder}/res/loc/zh_CN.ts",
+					"--out-file",
+					"${workspaceFolder}/qt_lupdate.json"
+				]
+			},
+			{
+				"label": "compile-qrc",
+				"type": "shell",
+				"command": "${workspaceFolder}/.venv/scripts/pyside6-rcc",
+				"args": [
+					"${workspaceFolder}/res/resources.qrc",
+					"-o",
+					"${workspaceFolder}/src/resources_rc.py"
+				],
+				"dependsOn": [
+					"compile-qts"
+				],
+				"problemMatcher": [],
+				"detail": "Compiles Qt resources into a usable Python module."
+			},
+			{
+				"label": "run-main",
+				"type": "shell",
+				"command": "${workspaceFolder}/.venv/scripts/python",
+				"args": [
+					"${workspaceFolder}/src/main.py"
+				],
+				"dependsOn": [
+					"compile-qrc"
+				],
+				"detail": "Executes main.py via Python interpreter.",
+				"problemMatcher": []
+			},
+			{
+				"label": "update-venv",
+				"type": "shell",
+				"command": "${workspaceFolder}/.venv/scripts/pip",
+				"args": [
+					"install",
+					"--upgrade",
+					"-r",
+					"${workspaceFolder}/requirements.txt"
+				],
+				"detail": "Updates virtual environment with requirements.txt",
+				"problemMatcher": []
+			},
+			{
+				"label": "update-qts",
+				"type": "shell",
+				"command": "${workspaceFolder}/.venv/scripts/pyside6-lupdate",
+				"args": [
+					"-ts",
+					"${workspaceFolder}/res/loc/de_DE.ts",
+					"-ts",
+					"${workspaceFolder}/res/loc/ru_RU.ts",
+					"-ts",
+					"${workspaceFolder}/res/loc/zh_CN.ts",
+					"-project",
+					"${workspaceFolder}/qt_lupdate.json",
+					"-no-obsolete"
+				],
+				"dependsOn": [
+					"update-lupdate-file"
+				],
+				"detail": "Updates Qt language files"
+			},
+			{
+				"label": "compile-qts",
+				"type": "shell",
+				"command": "${workspaceFolder}/.venv/scripts/pyside6-lrelease",
+				"args": [
+					"-project",
+					"${workspaceFolder}/qt_lupdate.json"
+				],
+				"dependsOn": [
+					"update-qts"
+				],
+				"detail": "Compiles Qt language files"
+			},
+			{
+				"label": "run-linguist",
+				"type": "shell",
+				"command": "${workspaceFolder}/.venv/scripts/pyside6-linguist",
+				"args": [
+					"${workspaceFolder}/res/loc/de_DE.ts"
+				],
+				"options": {
+					"cwd": "${workspaceFolder}"
+				},
+				"dependsOn": [
+					"update-qts"
+				],
+				"detail": "Opens Qt Linguist with German language file",
+				"problemMatcher": []
+			},
+			{
+				"label": "dump-vortex-profiles",
+				"type": "shell",
+				"command": "${workspaceFolder}/.venv/scripts/python",
+				"args": [
+					"${workspaceFolder}/scripts/dump_leveldb_to_json.py",
+					"--prefix=persistent###profiles"
+				],
+				"detail": "Dumps Vortex profiles to JSON",
 				"problemMatcher": []
 			}
 		]
