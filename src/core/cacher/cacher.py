@@ -12,16 +12,14 @@ import shutil
 import time
 from datetime import datetime
 from pathlib import Path
+from typing import Optional
 
 import requests
-from PySide6.QtCore import Qt
 
 import core.plugin_interface as plugin_interface
-from app import MainApp
-from core.utilities import get_file_identifier
-from core.utilities.mod import Mod
-from core.utilities.plugin import Plugin
-from core.utilities.string import String
+from core.database.string import String
+from core.mod_instance.plugin import Plugin
+from core.utilities.filesystem import get_file_identifier
 
 
 class Cacher:
@@ -42,12 +40,10 @@ class Cacher:
     This cache is persistent and stores extracted strings.
     """
 
-    def __init__(self, app: MainApp):
-        self.app = app
+    def __init__(self, cache_path: Path):
+        self.path = cache_path
 
-        self.path = app.cache_path
-
-    def load_caches(self):
+    def load_caches(self) -> None:
         """
         Loads available caches.
         """
@@ -62,7 +58,7 @@ class Cacher:
 
             self.log.info("Caches loaded.")
 
-    def clear_caches(self):
+    def clear_caches(self) -> None:
         """
         Clears all caches.
         """
@@ -71,15 +67,16 @@ class Cacher:
 
         shutil.rmtree(self.path, ignore_errors=True)
 
-    def get_plugin_strings(self, plugin_path: Path):
+    def get_plugin_strings(self, plugin_path: Path) -> list[String]:
         """
         Gets strings of `plugin_path` from cache or extracts them if not in cache.
         """
 
-        identifier = get_file_identifier(plugin_path)
+        strings: list[String]
+        identifier: str = get_file_identifier(plugin_path)
 
         if identifier not in self.__plugin_strings_cache:
-            cache_file = self.path / "plugin_strings" / f"{identifier}.cache"
+            cache_file: Path = self.path / "plugin_strings" / f"{identifier}.cache"
 
             if not cache_file.is_file():
                 plugin = plugin_interface.Plugin(plugin_path)
@@ -93,7 +90,7 @@ class Cacher:
                 return strings
 
             with cache_file.open(mode="rb") as data:
-                strings: list[String] = pickle.load(data)
+                strings = pickle.load(data)
 
             self.__plugin_strings_cache[identifier] = strings
 
@@ -105,7 +102,7 @@ class Cacher:
 
         return strings
 
-    def update_plugin_strings(self, plugin_path: Path, strings: list[String]):
+    def update_plugin_strings(self, plugin_path: Path, strings: list[String]) -> None:
         """
         Updates cached strings of `plugin_path`.
         """
@@ -121,18 +118,18 @@ class Cacher:
             f"Updated {len(strings)} string(s) for plugin {str(plugin_path)!r}."
         )
 
-    def clear_plugin_strings_cache(self):
+    def clear_plugin_strings_cache(self) -> None:
         """
         Clears Plugin Strings Cache.
         """
 
         shutil.rmtree(self.path / "plugin_strings", ignore_errors=True)
 
-    def load_plugin_states_cache(self, path: Path):
+    def load_plugin_states_cache(self, path: Path) -> None:
         self.log.debug(f"Loading Plugin States Cache from {str(path)!r}...")
 
         with path.open("rb") as file:
-            cache: dict[str, Plugin.Status] = pickle.load(file)
+            cache: dict[str, tuple[bool, Plugin.Status]] = pickle.load(file)
 
         self.__plugin_states_cache = cache
 
@@ -140,43 +137,35 @@ class Cacher:
             f"Loaded Plugin States for {len(self.__plugin_states_cache)} Plugin(s)."
         )
 
-    def clear_plugin_states_cache(self):
+    def clear_plugin_states_cache(self) -> None:
         """
         Clears Plugin States Cache.
         """
 
         self.__plugin_states_cache.clear()
 
-    def update_plugin_states_cache(self, modlist: list[Mod]):
+    def update_plugin_states_cache(self, plugin_states: dict[Plugin, bool]) -> None:
         """
         Updates Plugin States Cache from `modlist`.
         """
 
-        plugins = [
-            plugin
-            for mod in modlist
-            for plugin in mod.plugins
-            if plugin.status != plugin.Status.NoneStatus
-        ]
-
         cache = {
-            get_file_identifier(plugin.path): (
-                plugin.tree_item.checkState(0) == Qt.CheckState.Checked,
-                plugin.status,
-            )
-            for plugin in plugins
+            get_file_identifier(plugin.path): (checked, plugin.status)
+            for plugin, checked in plugin_states.items()
         }
 
         self.__plugin_states_cache = cache
 
-    def get_from_plugin_states_cache(self, plugin_path: Path):
+    def get_from_plugin_states_cache(
+        self, plugin_path: Path
+    ) -> Optional[tuple[bool, Plugin.Status]]:
         """
         Returns cached State for `plugin_path` if existing else None.
         """
 
         return self.__plugin_states_cache.get(get_file_identifier(plugin_path))
 
-    def save_plugin_states_cache(self, path: Path):
+    def save_plugin_states_cache(self, path: Path) -> None:
         self.log.debug(f"Saving Plugin States Cache to {str(path)!r}...")
 
         with path.open("wb") as file:
@@ -186,30 +175,38 @@ class Cacher:
             f"Saved Plugin States for {len(self.__plugin_states_cache)} Plugin(s)."
         )
 
-    def get_from_web_cache(self, url: str, max_age: int = 43200):
+    def get_from_web_cache(
+        self, url: str, max_age: int = 43200
+    ) -> Optional[requests.Response]:
         """
         Returns cached Response for `url` if existing else None.
 
         Responses older than `max_age` are considered stale and deleted.
+
+        TODO: Optimize the access time by caching them in-memory
         """
+
+        response: Optional[requests.Response] = None
 
         request_id = hashlib.sha256(url.encode()).hexdigest()[:8]
         cache_file = self.path / "web_cache" / f"{request_id}.cache"
 
         if cache_file.is_file():
             with cache_file.open("rb") as file:
-                response: requests.Response = pickle.load(file)
+                _response: requests.Response = pickle.load(file)
 
             response_timestamp = datetime.strptime(
-                response.headers["Date"], "%a, %d %b %Y %H:%M:%S %Z"
+                _response.headers["Date"], "%a, %d %b %Y %H:%M:%S %Z"
             ).timestamp()
 
             if (time.time() - response_timestamp) < max_age:
-                return response
+                response = _response
             else:
                 os.remove(cache_file)
 
-    def add_to_web_cache(self, url: str, response: requests.Response):
+        return response
+
+    def add_to_web_cache(self, url: str, response: requests.Response) -> None:
         """
         Adds `response` to Web Cache for `url`.
         """
@@ -221,7 +218,7 @@ class Cacher:
         with cache_file.open("wb") as file:
             pickle.dump(response, file)
 
-    def save_caches(self):
+    def save_caches(self) -> None:
         """
         Saves non-empty caches.
         """

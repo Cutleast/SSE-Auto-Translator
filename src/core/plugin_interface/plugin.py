@@ -3,10 +3,10 @@ Copyright (c) Cutleast
 """
 
 import logging
-from io import BufferedReader
 from pathlib import Path
+from typing import Optional
 
-from utilities.string import String as PluginString
+from core.database.string import String as PluginString
 
 from . import utilities as utils
 from .datatypes import RawString
@@ -14,6 +14,7 @@ from .flags import RecordFlags
 from .group import Group
 from .record import Record
 from .subrecord import EDID, MAST, StringSubrecord
+from .utilities import Stream
 
 
 class Plugin:
@@ -26,7 +27,7 @@ class Plugin:
     header: Record
     groups: list[Group]
 
-    __string_subrecords: dict[PluginString, StringSubrecord] = None
+    __string_subrecords: Optional[dict[PluginString, StringSubrecord]] = None
 
     log = logging.getLogger("PluginInterface")
 
@@ -38,23 +39,23 @@ class Plugin:
     def __repr__(self) -> str:
         return utils.prettyprint_object(self)
 
-    def __len__(self):
+    def __len__(self) -> int:
         return len(self.dump())
 
     def __str__(self) -> str:
         return self.__repr__()
 
-    def load(self):
+    def load(self) -> None:
         with self.path.open("rb") as stream:
             self.parse(stream)
 
-    def parse(self, stream: BufferedReader):
+    def parse(self, stream: Stream) -> None:
         self.log.info(f"Parsing {str(self.path)!r}...")
 
         self.groups = []
 
         self.header = Record()
-        self.header.parse(stream, [])
+        self.header.parse(stream, RecordFlags(0))
 
         self.masters = [
             subrecord.file
@@ -69,7 +70,7 @@ class Plugin:
 
         self.log.info("Parsing complete.")
 
-    def dump(self):
+    def dump(self) -> bytes:
         data = b""
 
         data += self.header.dump()
@@ -79,21 +80,25 @@ class Plugin:
 
         return data
 
-    def save(self):
+    def save(self) -> None:
         self.path.write_bytes(self.dump())
 
     @staticmethod
-    def get_record_edid(record: Record):
+    def get_record_edid(record: Record) -> Optional[RawString]:
+        editor_id: Optional[RawString] = None
         try:
             for subrecord in record.subrecords:
                 if isinstance(subrecord, EDID):
-                    return subrecord.editor_id
+                    editor_id = subrecord.editor_id
+                    break
         except AttributeError:
-            return None
+            pass
+
+        return editor_id
 
     def extract_group_strings(
         self, group: Group, extract_localized: bool = False, unfiltered: bool = False
-    ):
+    ) -> dict[PluginString, StringSubrecord]:
         """
         Extracts strings from parsed <group>.
         """
@@ -109,8 +114,9 @@ class Plugin:
                 master_index = int(record.formid[:2], base=16)
 
                 # Get plugin that first defines this record from masters
+                master: str
                 try:
-                    master = self.masters[master_index]
+                    master = str(self.masters[master_index])
                 # If index is not in masters, then the record is first defined in this plugin
                 except IndexError:
                     master = self.path.name
@@ -129,18 +135,20 @@ class Plugin:
                     if isinstance(subrecord, StringSubrecord):
                         string: RawString | int = subrecord.string
 
-                        if (isinstance(string, RawString) or extract_localized) and (
-                            utils.is_valid_string(string) or unfiltered
-                        ):
+                        if (
+                            isinstance(string, RawString)
+                            and (utils.is_valid_string(string) or unfiltered)
+                        ) or extract_localized:
                             string_data = PluginString(
-                                edid,
-                                formid,
-                                subrecord.index,
-                                f"{record.type} {subrecord.type}",
+                                editor_id=edid,
+                                form_id=formid,
+                                index=subrecord.index,
+                                type=f"{record.type} {subrecord.type}",
                                 original_string=str(string),
                                 status=(
                                     PluginString.Status.TranslationRequired
-                                    if utils.is_valid_string(string)
+                                    if isinstance(string, int)
+                                    or utils.is_valid_string(string)
                                     else PluginString.Status.NoTranslationRequired
                                 ),
                             )
@@ -151,7 +159,7 @@ class Plugin:
 
     def extract_strings(
         self, extract_localized: bool = False, unfiltered: bool = False
-    ):
+    ) -> list[PluginString]:
         """
         Extracts strings from parsed plugin.
 
@@ -175,6 +183,8 @@ class Plugin:
         Finds subrecord that matches the given parameters.
         """
 
+        string_subrecord: Optional[StringSubrecord] = None
+
         if self.__string_subrecords is None:
             string_subrecords: dict[PluginString, StringSubrecord] = {}
 
@@ -192,9 +202,12 @@ class Plugin:
                 and plugin_string.original_string == string
                 and plugin_string.index == index
             ):
-                return subrecord
+                string_subrecord = subrecord
+                break
 
-    def replace_strings(self, strings: list[PluginString]):
+        return string_subrecord
+
+    def replace_strings(self, strings: list[PluginString]) -> None:
         """
         Replaces strings in plugin by `strings`.
         """
@@ -205,14 +218,14 @@ class Plugin:
             )
 
             if subrecord:
-                subrecord.set_string(string.translated_string)
+                subrecord.set_string(string.translated_string or string.original_string)
             else:
                 self.log.error(
                     f"Failed to replace string {string}: Subrecord not found!"
                 )
 
     @staticmethod
-    def extract_group_records(group: Group, recursive: bool = True):
+    def extract_group_records(group: Group, recursive: bool = True) -> list[Record]:
         """
         Returns all records from `group`
         and records from child groups if `recursive` is `True`.
@@ -228,7 +241,7 @@ class Plugin:
 
         return records
 
-    def eslify_formids(self):
+    def eslify_formids(self) -> None:
         """
         Recounts FormIDs beginning with `0x800`.
         """
@@ -247,20 +260,20 @@ class Plugin:
                 record.formid = new_formid
 
                 cur_formid += 1
-    
-    def eslify_plugin(self):
+
+    def eslify_plugin(self) -> None:
         """
         Recounts FormIDs and sets Light Flag in Header.
         """
 
         if RecordFlags.LightMaster in self.header.flags:
             return
-        
+
         self.eslify_formids()
         self.header.flags |= RecordFlags.LightMaster
 
     @staticmethod
-    def is_light(plugin_path: Path):
+    def is_light(plugin_path: Path) -> bool:
         """
         Checks if `plugin_path` is a light plugin.
         This is indicated either by the file extension (.esl)
@@ -272,6 +285,6 @@ class Plugin:
 
         with plugin_path.open("rb") as stream:
             header = Record()
-            header.parse(stream, [])
+            header.parse(stream, RecordFlags(0))
 
         return RecordFlags.LightMaster in header.flags

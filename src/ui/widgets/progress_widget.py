@@ -1,8 +1,8 @@
 """
-This file is part of SEE Auto Translator
-and falls under the license
-Attribution-NonCommercial-NoDerivatives 4.0 International.
+Copyright (c) Cutleast
 """
+
+from typing import Optional
 
 import qtawesome as qta
 from pyperclip import copy
@@ -19,14 +19,23 @@ from PySide6.QtWidgets import (
 
 
 class ProgressWidget(QWidget):
-    exception_signal = Signal(str)
+    """
+    Custom widget for displaying progress updates in a QTreeWidgetItem.
+    """
 
-    def __init__(self, item: QTreeWidgetItem, parent=None):
+    __exception_signal = Signal(str)
+
+    __status_label: QLabel
+    __progress_bar: QProgressBar
+    __copy_button: QPushButton
+    __close_button: QPushButton
+
+    def __init__(self, item: QTreeWidgetItem, parent: Optional[QWidget] = None):
         super().__init__(parent)
 
         self.item = item
 
-        self.exception_signal.connect(self.__set_exception)
+        self.__exception_signal.connect(self.__set_exception)
 
         hlayout = QHBoxLayout()
         hlayout.setContentsMargins(0, 0, 0, 0)
@@ -37,46 +46,80 @@ class ProgressWidget(QWidget):
         vlayout.setAlignment(Qt.AlignmentFlag.AlignTop)
         hlayout.addLayout(vlayout)
 
-        self.status_label = QLabel()
-        self.status_label.setObjectName("status_label")
-        vlayout.addWidget(self.status_label)
+        self.__status_label = QLabel()
+        self.__status_label.setObjectName("console")
+        vlayout.addWidget(self.__status_label)
 
         vlayout.addSpacing(2)
 
-        self.progress_bar = QProgressBar()
-        self.progress_bar.setTextVisible(False)
-        self.progress_bar.setFixedHeight(2)
-        vlayout.addWidget(self.progress_bar)
+        self.__progress_bar = QProgressBar()
+        self.__progress_bar.setTextVisible(False)
+        self.__progress_bar.setFixedHeight(2)
+        vlayout.addWidget(self.__progress_bar)
 
-        self.copy_button = QPushButton()
-        self.copy_button.setFixedSize(35, 35)
-        self.copy_button.setObjectName("download_button")
-        self.copy_button.setIcon(qta.icon("mdi6.content-copy", color="#ffffff"))
-        self.copy_button.clicked.connect(lambda: copy(self.toolTip()))
-        hlayout.addWidget(self.copy_button)
-        self.copy_button.hide()
+        self.__copy_button = QPushButton()
+        self.__copy_button.setFixedSize(35, 35)
+        self.__copy_button.setObjectName("download_button")
+        self.__copy_button.setIcon(
+            qta.icon("mdi6.content-copy", color=self.palette().text().color())
+        )
+        self.__copy_button.clicked.connect(lambda: copy(self.toolTip()))
+        hlayout.addWidget(self.__copy_button)
+        self.__copy_button.hide()
 
-        self.close_button = QPushButton()
-        self.close_button.setFixedSize(35, 35)
-        self.close_button.setObjectName("download_button")
-        self.close_button.setIcon(qta.icon("fa.close", color="#ffffff"))
-        self.close_button.clicked.connect(lambda: self.item.setHidden(True))
-        hlayout.addWidget(self.close_button)
-        self.close_button.hide()
+        self.__close_button = QPushButton()
+        self.__close_button.setFixedSize(35, 35)
+        self.__close_button.setObjectName("download_button")
+        self.__close_button.setIcon(
+            qta.icon("fa.close", color=self.palette().text().color())
+        )
+        self.__close_button.clicked.connect(lambda: self.item.setHidden(True))
+        hlayout.addWidget(self.__close_button)
+        self.__close_button.hide()
 
         self.setFixedHeight(40)
 
-    def set_exception(self, text: str):
+    def setText(self, text: str) -> None:
         """
-        Shows copy and close button and sets `text` as tooltip.
+        Sets text of status label.
+
+        Args:
+            text (str): Text to display.
+        """
+
+        self.__status_label.setText(text)
+
+    def setProgress(self, current: int, maximum: int) -> None:
+        """
+        Progress to display on progress bar.
+
+        Args:
+            current (int): Current progress.
+            maximum (int): Total size or maximum progress.
+        """
+
+        if maximum > 1:
+            current = round(current / maximum * 100)
+            self.__progress_bar.setMaximum(100)
+        else:
+            self.__progress_bar.setMaximum(maximum)
+
+        self.__progress_bar.setValue(current)
+
+    def set_exception(self, text: str) -> None:
+        """
+        Shows copy and close button and sets an error message as tooltip.
         This method is thread-safe.
+
+        Args:
+            text (str): Error message to display. (Usually the exception message).
         """
 
-        self.exception_signal.emit(text)
+        self.__exception_signal.emit(text)
 
-    def __set_exception(self, text: str):
-        self.copy_button.show()
-        self.close_button.show()
-        self.progress_bar.hide()
-        self.status_label.setWordWrap(True)
+    def __set_exception(self, text: str) -> None:
+        self.__copy_button.show()
+        self.__close_button.show()
+        self.__progress_bar.hide()
+        self.__status_label.setWordWrap(True)
         self.setToolTip(text)

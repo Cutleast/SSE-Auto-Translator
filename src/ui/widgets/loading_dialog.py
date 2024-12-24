@@ -6,7 +6,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 import logging
 import time
-from typing import Callable
+from typing import Any, Callable, Generic, Optional, TypeVar
 
 import comtypes.client as cc
 from PySide6.QtCore import Qt, QTimerEvent, Signal
@@ -21,11 +21,11 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-import app
-from core.utilities import apply_dark_title_bar, center, get_diff
+from core.utilities.datetime import get_diff
 from core.utilities.thread import Thread
+from ui.utilities import move_to_center
 
-cc.GetModule("TaskbarLib.tlb")
+cc.GetModule("res/TaskbarLib.tlb")
 
 import comtypes.gen.TaskbarLib as tbl  # noqa: E402
 
@@ -33,15 +33,17 @@ taskbar = cc.CreateObject(
     "{56FDF344-FD6D-11d0-958A-006097C9A090}", interface=tbl.ITaskbarList3
 )
 
+T = TypeVar("T")
 
-class LoadingDialog(QDialog):
+
+class LoadingDialog(QDialog, Generic[T]):
     """
     Custom QProgressDialog designed for multiple progress bars.
 
     Use updateProgress to update bars.
 
     Parameters:
-        parent: QWidget
+        parent: Optional[QWidget]
         app: main.MainApp
         func: function or method that is called in a background thread
     """
@@ -49,72 +51,64 @@ class LoadingDialog(QDialog):
     start_signal = Signal()
     stop_signal = Signal()
     progress_signal = Signal(dict)
-    _timer: int = None
+    _timer: Optional[int] = None
 
     log = logging.getLogger("LoadingDialog")
 
-    def __init__(self, parent: QWidget, app: app.MainApp, func: Callable):
+    parent_hwnd: Optional[int] = None
+
+    def __init__(self, parent: Optional[QWidget], func: Callable[["LoadingDialog"], T]):
         super().__init__(parent)
 
         # Force focus
         self.setModal(True)
 
-        apply_dark_title_bar(self)
-
         # Dialog attributes
-        self.app = app
-        self.loc = app.loc
         self.success = True
-        self.func = lambda: (
-            self.start_signal.emit(),
-            func(self),
-            self.stop_signal.emit(),
-        )
-        self.dialog_thread = LoadingDialogThread(
-            dialog=self, target=self.func, name="BackgroundThread"
-        )
-        self.starttime = None
+        self._thread = Thread(target=lambda: func(self), parent=self)
+        self._thread.finished.connect(self.stop_signal.emit)
+        self.starttime = ""
 
         # Set up dialog layout
-        self.layout = QVBoxLayout()
-        self.layout.setAlignment(Qt.AlignmentFlag.AlignTop)
-        self.setLayout(self.layout)
+        vlayout = QVBoxLayout()
+        vlayout.setAlignment(Qt.AlignmentFlag.AlignTop)
+        self.setLayout(vlayout)
 
         # Create placeholder to ensure minimum width
         # for time to be visible in title
         placeholder = QSpacerItem(350, 0)
-        self.layout.addSpacerItem(placeholder)
+        vlayout.addSpacerItem(placeholder)
 
         # Set up first label and progressbar
         self.label1 = QLabel()
         self.label1.setAlignment(Qt.AlignmentFlag.AlignHCenter)
-        self.layout.addWidget(self.label1)
+        vlayout.addWidget(self.label1)
         self.pbar1 = QProgressBar()
         self.pbar1.setTextVisible(False)
         self.pbar1.setFixedHeight(3)
-        self.layout.addWidget(self.pbar1)
+        vlayout.addWidget(self.pbar1)
 
         # Set up second label and progressbar
         self.label2 = QLabel()
         self.label2.setAlignment(Qt.AlignmentFlag.AlignHCenter)
         self.label2.hide()
-        self.layout.addWidget(self.label2)
+        vlayout.addWidget(self.label2)
         self.pbar2 = QProgressBar()
         self.pbar2.setTextVisible(False)
         self.pbar2.setFixedHeight(3)
         self.pbar2.hide()
-        self.layout.addWidget(self.pbar2)
+        vlayout.addWidget(self.pbar2)
 
         # Set up third label and progressbar
         self.label3 = QLabel()
         self.label3.setAlignment(Qt.AlignmentFlag.AlignHCenter)
         self.label3.hide()
-        self.layout.addWidget(self.label3)
+        vlayout.addWidget(self.label3)
         self.pbar3 = QProgressBar()
         self.pbar3.setTextVisible(False)
         self.pbar3.setFixedHeight(3)
         self.pbar3.hide()
-        self.layout.addWidget(self.pbar3)
+        vlayout.addWidget(self.pbar3)
 
         # Connect signals
         self.start_signal.connect(self.on_start)
@@ -124,23 +118,24 @@ class LoadingDialog(QDialog):
         )
 
         # Set up Taskbar Progress API
-        self.parent_hwnd = parent.winId()
-        taskbar.ActivateTab(self.parent_hwnd)
+        if parent is not None:
+            self.parent_hwnd = parent.winId()
+            taskbar.ActivateTab(self.parent_hwnd)
 
     def updateProgress(
         self,
-        text1: str = None,
-        value1: int = None,
-        max1: int = None,
-        show2: bool = None,
-        text2: str = None,
-        value2: int = None,
-        max2: int = None,
-        show3: bool = None,
-        text3: str = None,
-        value3: int = None,
-        max3: int = None,
-    ):
+        text1: Optional[str] = None,
+        value1: Optional[int] = None,
+        max1: Optional[int] = None,
+        show2: Optional[bool] = None,
+        text2: Optional[str] = None,
+        value2: Optional[int] = None,
+        max2: Optional[int] = None,
+        show3: Optional[bool] = None,
+        text3: Optional[str] = None,
+        value3: Optional[int] = None,
+        max3: Optional[int] = None,
+    ) -> None:
         """
         Updates progress of progressbars.
         This method is thread safe for usage with Qt.
@@ -177,7 +172,7 @@ class LoadingDialog(QDialog):
             }
         )
 
-    def setProgress(self, progress: dict):
+    def setProgress(self, progress: dict[str, Any]) -> None:
         """
         Sets progress from <progress>.
 
@@ -254,18 +249,19 @@ class LoadingDialog(QDialog):
             self.setFixedWidth(min(800, widthhint))
 
         # Move back to center
-        center(self, self.app.root)
+        move_to_center(self, self.parentWidget())
 
         # Update Taskbar Progress
-        if self.pbar1.maximum() == 0:
-            taskbar.SetProgressState(self.parent_hwnd, 0x1)  # Indeterminate
-        else:
-            taskbar.SetProgressState(self.parent_hwnd, 0x2)  # Determinate
-            taskbar.SetProgressValue(
-                self.parent_hwnd, self.pbar1.value(), self.pbar1.maximum()
-            )
+        if self.parent_hwnd is not None:
+            if self.pbar1.maximum() == 0:
+                taskbar.SetProgressState(self.parent_hwnd, 0x1)  # Indeterminate
+            else:
+                taskbar.SetProgressState(self.parent_hwnd, 0x2)  # Determinate
+                taskbar.SetProgressValue(
+                    self.parent_hwnd, self.pbar1.value(), self.pbar1.maximum()
+                )
 
-    def timerEvent(self, event: QTimerEvent):
+    def timerEvent(self, event: QTimerEvent) -> None:
         """
         Callback for timer timeout.
         Updates window title time.
@@ -274,18 +270,20 @@ class LoadingDialog(QDialog):
         super().timerEvent(event)
 
         self.setWindowTitle(
-            f"{self.loc.main.elapsed}: \
-{get_diff(self.starttime, time.strftime('%H:%M:%S'))}"
+            self.tr("Elapsed time:")
+            + " "
+            + get_diff(self.starttime, time.strftime("%H:%M:%S"))
         )
 
-    def exec(self):
+    def exec(self) -> T:  # type: ignore[override]
         """
         Shows dialog and executes thread.
         Blocks code until thread is done
         and dialog is closed.
         """
 
-        self.dialog_thread.start()
+        self.start_signal.emit()
+        self._thread.start()
 
         self.starttime = time.strftime("%H:%M:%S")
         self._timer = self.startTimer(1000)
@@ -294,20 +292,26 @@ class LoadingDialog(QDialog):
 
         self.killTimer(self._timer)
 
-        self.log.debug(
-            f"Time: {get_diff(self.starttime, time.strftime('%H:%M:%S'))}"
-        )
+        self.log.debug(f"Time: {get_diff(self.starttime, time.strftime('%H:%M:%S'))}")
 
         # Clear taskbar state
-        taskbar.SetProgressState(self.parent_hwnd, 0x0)
+        if self.parent_hwnd is not None:
+            taskbar.SetProgressState(self.parent_hwnd, 0x0)
 
-        if self.dialog_thread.exception is not None:
-            # Set taskbar state to error
-            taskbar.SetProgressState(self.parent_hwnd, 0x4)
+        # if self._thread.exception is not None:
+        #     # Set taskbar state to error
+        #     taskbar.SetProgressState(self.parent_hwnd, 0x4)
 
-            raise self.dialog_thread.exception
+        #     raise self._thread.exception
 
-    def start(self):
+        result: T | Exception = self._thread.get_result()
+
+        if isinstance(result, Exception):
+            raise result
+
+        return result
+
+    def start(self) -> None:
         """
         Shows dialog and progress bars
         without blocking code.
@@ -318,16 +322,17 @@ class LoadingDialog(QDialog):
         self.start_signal.emit()
         self._timer = self.startTimer(1000)
 
-    def stop(self):
+    def stop(self) -> None:
         """
         Closes dialog.
         """
 
         super().hide()
 
-        self.killTimer(self._timer)
+        if self._timer is not None:
+            self.killTimer(self._timer)
 
-    def on_start(self):
+    def on_start(self) -> None:
         """
         Callback for thread start.
         """
@@ -337,7 +342,7 @@ class LoadingDialog(QDialog):
         self.pbar3.setRange(0, 0)
         self.show()
 
-    def on_finish(self):
+    def on_finish(self) -> None:
         """
         Callback for thread done.
         """
@@ -350,53 +355,56 @@ class LoadingDialog(QDialog):
         self.pbar3.setValue(1)
         self.accept()
 
-    def closeEvent(self, event: QCloseEvent, confirmation=False):
+    def closeEvent(self, event: QCloseEvent, confirmation: bool = False) -> None:
         if not confirmation:
-            message_box = QMessageBox(self.app.root)
-            message_box.setWindowTitle(self.loc.main.cancel)
-            message_box.setText(self.loc.main.cancel_text)
-            apply_dark_title_bar(message_box)
+            message_box = QMessageBox(self)
+            message_box.setWindowTitle(self.tr("Cancel?"))
+            message_box.setText(
+                self.tr(
+                    "Are you sure you want to cancel? This may have unwanted "
+                    "consequences, depending on the current running process!"
+                )
+            )
             message_box.setStandardButtons(
                 QMessageBox.StandardButton.No | QMessageBox.StandardButton.Yes
             )
             message_box.setDefaultButton(QMessageBox.StandardButton.Yes)
-            message_box.button(QMessageBox.StandardButton.No).setText(
-                self.loc.main.no
-            )
-            message_box.button(QMessageBox.StandardButton.Yes).setText(
-                self.loc.main.yes
-            )
+            message_box.button(QMessageBox.StandardButton.No).setText(self.tr("No"))
+            message_box.button(QMessageBox.StandardButton.Yes).setText(self.tr("Yes"))
             confirmation = message_box.exec() == QMessageBox.StandardButton.Yes
 
         if confirmation:
-            if self.dialog_thread.isRunning():
+            if self._thread.isRunning():
                 self.log.critical("Terminating background thread...")
-                self.dialog_thread.terminate()
+                self._thread.terminate()
             super().closeEvent(event)
         elif event:
             event.ignore()
 
-
-class LoadingDialogThread(Thread):
-    """
-    Thread for LoadingDialog.
-    Passes exceptions from target to MainThread.
-    """
-
-    exception: Exception = None
-
-    def __init__(self, dialog: LoadingDialog, target: Callable, *args, **kwargs):
-        super().__init__(target, *args, **kwargs)
-
-        self.dialog = dialog
-
-    def run(self):
+    @staticmethod
+    def run_callable(
+        parent: Optional[QWidget], target: Callable[["LoadingDialog"], T]
+    ) -> T:
         """
-        Runs thread and passes error from target to MainThread.
+        Runs a callable in a loading dialog.
+
+        Args:
+            parent (Optional[QWidget]): Parent widget.
+            target (Callable[[LoadingDialog], T]): Callable to run.
+
+        Raises:
+            Exception: If callable raises an exception.
+
+        Returns:
+            T: Return value of callable
         """
 
-        try:
-            super().run()
-        except Exception as ex:
-            self.exception = ex
-            self.dialog.stop_signal.emit()
+        ldialog = LoadingDialog(parent, target)
+        ldialog.exec()
+
+        result: T | Exception = ldialog._thread.get_result()
+
+        if isinstance(result, Exception):
+            raise result
+
+        return result

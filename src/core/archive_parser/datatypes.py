@@ -12,46 +12,60 @@ class Integer:
     Class for all types of signed and unsigned integers.
     """
 
-    def int(stream: BufferedReader, size: int):
+    @staticmethod
+    def _int(stream: BufferedReader, size: int) -> int:
         return int.from_bytes(stream.read(size), byteorder="little", signed=True)
 
-    def uint(stream: BufferedReader, size: int):
+    @staticmethod
+    def uint(stream: BufferedReader, size: int) -> int:
         return int.from_bytes(stream.read(size), byteorder="little")
 
-    def int8(stream: BufferedReader):
-        return Integer.int(stream, 1)
+    @staticmethod
+    def int8(stream: BufferedReader) -> int:
+        return Integer._int(stream, 1)
 
-    def int16(stream: BufferedReader):
-        return Integer.int(stream, 2)
+    @staticmethod
+    def int16(stream: BufferedReader) -> int:
+        return Integer._int(stream, 2)
 
-    def int32(stream: BufferedReader):
-        return Integer.int(stream, 4)
+    @staticmethod
+    def int32(stream: BufferedReader) -> int:
+        return Integer._int(stream, 4)
 
-    def int64(stream: BufferedReader):
-        return Integer.int(stream, 8)
+    @staticmethod
+    def int64(stream: BufferedReader) -> int:
+        return Integer._int(stream, 8)
 
-    def uint8(stream: BufferedReader):
+    @staticmethod
+    def uint8(stream: BufferedReader) -> int:
         return Integer.uint(stream, 1)
 
-    def uint16(stream: BufferedReader):
+    @staticmethod
+    def uint16(stream: BufferedReader) -> int:
         return Integer.uint(stream, 2)
 
-    def uint32(stream: BufferedReader):
+    @staticmethod
+    def uint32(stream: BufferedReader) -> int:
         return Integer.uint(stream, 4)
 
-    def uint64(stream: BufferedReader):
+    @staticmethod
+    def uint64(stream: BufferedReader) -> int:
         return Integer.uint(stream, 8)
 
-    def short(stream: BufferedReader):
+    @staticmethod
+    def short(stream: BufferedReader) -> int:
         return Integer.int16(stream)
 
-    def ushort(stream: BufferedReader):
+    @staticmethod
+    def ushort(stream: BufferedReader) -> int:
         return Integer.uint16(stream)
 
-    def long(stream: BufferedReader):
+    @staticmethod
+    def long(stream: BufferedReader) -> int:
         return Integer.int32(stream)
 
-    def ulong(stream: BufferedReader):
+    @staticmethod
+    def ulong(stream: BufferedReader) -> int:
         return Integer.uint32(stream)
 
 
@@ -60,16 +74,21 @@ class Float:
     Class for all types of floats.
     """
 
-    def _float(stream: BufferedReader, size: int):
-        return struct.unpack("f", stream.read(size))[0]
+    @staticmethod
+    def _float(stream: BufferedReader, size: int) -> float:
+        value: float = struct.unpack("f", stream.read(size))[0]
+        return value
 
-    def float32(stream: BufferedReader):
+    @staticmethod
+    def float32(stream: BufferedReader) -> float:
         return Float._float(stream, 4)
 
-    def float64(stream: BufferedReader):
+    @staticmethod
+    def float64(stream: BufferedReader) -> float:
         return Float._float(stream, 4)
 
-    def float(stream: BufferedReader):
+    @staticmethod
+    def float(stream: BufferedReader) -> float:
         return Float.float32(stream)
 
 
@@ -78,28 +97,36 @@ class String:
     Class for all types of chars and strings.
     """
 
-    def _char(stream: BufferedReader, size: int):
+    @staticmethod
+    def _char(stream: BufferedReader, size: int) -> bytes:
         return stream.read(size)
 
-    def char(stream: BufferedReader):
+    @staticmethod
+    def char(stream: BufferedReader) -> bytes:
         return String._char(stream, 1)
 
-    def wchar(stream: BufferedReader):
+    @staticmethod
+    def wchar(stream: BufferedReader) -> bytes:
         return String._char(stream, 2)
 
-    def _string(stream: BufferedReader, size: int):
+    @staticmethod
+    def _string(stream: BufferedReader, size: int) -> str:
         return stream.read(size).decode()
 
-    def wstring(stream: BufferedReader):
+    @staticmethod
+    def wstring(stream: BufferedReader) -> str:
         return String._string(stream, Integer.uint16(stream))
 
-    def bzstring(stream: BufferedReader):
+    @staticmethod
+    def bzstring(stream: BufferedReader) -> bytes:
         return String._char(stream, Integer.uint8(stream))
 
-    def bstring(stream: BufferedReader):
+    @staticmethod
+    def bstring(stream: BufferedReader) -> bytes:
         return String.bzstring(stream)
 
-    def list(stream: BufferedReader, count: int, sep=b"\x00"):
+    @staticmethod
+    def list(stream: BufferedReader, count: int, sep: bytes = b"\x00") -> list[str]:
         """
         Returns a list of all strings seperated by <sep>
         until <count> is reached.
@@ -112,7 +139,7 @@ class String:
             while (char := stream.read(1)) != sep:
                 string += char
 
-            strings.append(string.decode())
+            strings.append(string.decode("cp1252"))
 
         return strings
 
@@ -122,11 +149,14 @@ class Flags:
     Class for all types of flags.
     """
 
-    def flags(stream: BufferedReader, size: int, flags: dict[int, str]):
+    @staticmethod
+    def flags(
+        stream: BufferedReader, size: int, flags: dict[int, str]
+    ) -> dict[str, bool]:
         # Convert the bytestring to an integer
-        value = Integer.int(stream, size)
+        value: int = Integer._int(stream, size)
 
-        parsed_flags = {}
+        parsed_flags: dict[str, bool] = {}
 
         for flag, description in flags.items():
             parsed_flags[description] = bool(value & flag)
@@ -139,7 +169,8 @@ class Hex:
     Class for all types of hexadecimal strings.
     """
 
-    def hex(stream: BufferedReader, size: int):
+    @staticmethod
+    def hex(stream: BufferedReader, size: int) -> str:
         return stream.read(size).hex()
 
 
@@ -148,10 +179,12 @@ class Hash:
     Class for all types of hashes.
     """
 
-    def hash(stream: BufferedReader):
+    @staticmethod
+    def hash(stream: BufferedReader) -> int:
         return Integer.uint64(stream)
 
-    def calc_hash(filename: str):
+    @staticmethod
+    def calc_hash(filename: str) -> int:
         """
         Returns tes4's two hash values for filename.
         Based on TimeSlips code with cleanup and pythonization.
@@ -166,10 +199,10 @@ class Hash:
         # --Hash1
         chars = map(ord, root)  # --'bob' >> chars = [98,111,98]
         hash1 = (
-            chars[-1]
-            | (0, chars[-2])[len(chars) > 2] << 8
-            | len(chars) << 16
-            | chars[0] << 24
+            chars[-1]  # type: ignore
+            | (0, chars[-2])[len(chars) > 2] << 8  # type: ignore
+            | len(chars) << 16  # type: ignore
+            | chars[0] << 24  # type: ignore
         )
         # --(a,b)[test] is similar to test?a:b in C. (Except that evaluation is not shortcut.)
         if ext == ".kf":
@@ -183,10 +216,12 @@ class Hash:
         # --Hash2
         # --Python integers have no upper limit. Use uintMask to restrict these to 32 bits.
         uintMask, hash2, hash3 = 0xFFFFFFFF, 0, 0
-        for char in chars[1:-2]:  # --Slice of the chars array
+        for char in chars[1:-2]:  # type: ignore[index]  # --Slice of the chars array
             hash2 = ((hash2 * 0x1003F) + char) & uintMask
         for char in map(ord, ext):
             hash3 = ((hash3 * 0x1003F) + char) & uintMask
         hash2 = (hash2 + hash3) & uintMask
         # --Done
-        return (hash2 << 32) + hash1  # --Return as uint64
+        return (  # type: ignore[no-any-return]
+            hash2 << 32
+        ) + hash1  # --Return as uint64

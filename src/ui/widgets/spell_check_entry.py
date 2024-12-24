@@ -6,28 +6,31 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 import logging
 import string
-from typing import Iterator
+from typing import Any, Callable, Iterator
 
 import spylls.hunspell as hunspell
 from PySide6.QtCore import QPoint, Qt
 from PySide6.QtGui import QAction, QCursor, QTextCharFormat
 from PySide6.QtWidgets import QApplication, QPlainTextEdit
 
+from ..utilities import apply_shadow
+
 
 class SpellCheckEntry(QPlainTextEdit):
     """
     Adapted QPlainTextEdit with spell check feature.
 
-    Given `language` must be one of the languages in `utilities.constants.SUPPORTED_LANGS`!
+    Given `language` must be one of the languages in `core.utilities.constants.SUPPORTED_LANGS`!
     """
 
     log = logging.getLogger("SpellCheckEntry")
 
-    def __init__(self, *args, language: str, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(self, *args: Any, language: str, **kwargs: dict[str, Any]):
+        super().__init__(*args, **kwargs)  # type: ignore[call-overload]
 
+        # TODO: Optimize this by moving this to the app
         try:
-            self.checker = hunspell.Dictionary.from_files("./data/hunspell/" + language)
+            self.checker = hunspell.Dictionary.from_files("./res/hunspell/" + language)
             self.log.info("Loaded Hunspell dictionary.")
         except FileNotFoundError:
             self.log.error(
@@ -41,7 +44,7 @@ class SpellCheckEntry(QPlainTextEdit):
 
         self.textChanged.connect(self.on_text_edit)
 
-    def on_context_menu(self, point: QPoint):
+    def on_context_menu(self, point: QPoint) -> None:
         mouse_pos = self.mapFromGlobal(QCursor.pos())
         mouse_pos.setY(mouse_pos.y() - 9)
         text_cursor = self.cursorForPosition(mouse_pos)
@@ -53,7 +56,7 @@ class SpellCheckEntry(QPlainTextEdit):
         word = text_cursor.selectedText()
         fmt = text_cursor.charFormat()
 
-        def ignore():
+        def ignore() -> None:
             # TODO: Reimplement
             raise NotImplementedError
             # self.checker.add(word)
@@ -61,6 +64,8 @@ class SpellCheckEntry(QPlainTextEdit):
             self.log.debug(f"Ignored {word!r}.")
 
         menu = self.createStandardContextMenu()
+        menu.setWindowFlag(Qt.WindowType.NoDropShadowWindowHint, True)
+        apply_shadow(menu, size=4, shadow_color="#181818")
 
         if (
             fmt.underlineStyle() == fmt.UnderlineStyle.WaveUnderline
@@ -72,8 +77,8 @@ class SpellCheckEntry(QPlainTextEdit):
             if suggestions is not None:
                 separator = menu.insertSeparator(first_std_action)
 
-                def get_func(sug):
-                    def func():
+                def get_func(sug: str) -> Callable[[], None]:
+                    def func() -> None:
                         text_cursor.insertText(sug)
                         self.setTextCursor(text_cursor)
 
@@ -92,7 +97,7 @@ class SpellCheckEntry(QPlainTextEdit):
 
         menu.exec(self.mapToGlobal(point))
 
-    def on_text_edit(self):
+    def on_text_edit(self) -> None:
         text = self.toPlainText()
 
         if text[-1:] in string.punctuation + string.whitespace:
@@ -103,7 +108,7 @@ class SpellCheckEntry(QPlainTextEdit):
             self.spell_check()
             self.textChanged.connect(self.on_text_edit)
 
-    def spell_check(self):
+    def spell_check(self) -> None:
         if self.checker is None:
             return
 

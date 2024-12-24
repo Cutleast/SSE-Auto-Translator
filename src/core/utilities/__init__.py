@@ -1,135 +1,22 @@
 """
-This file is part of SSE Auto Translator
-by Cutleast and falls under the license
-Attribution-NonCommercial-NoDerivatives 4.0 International.
+Copyright (c) Cutleast
 """
 
-import ctypes
-import hashlib
 import logging
-import os
-import re
-import time
-from datetime import datetime
-from fnmatch import fnmatch
-from pathlib import Path
-
-import jstyleson as json
-import requests as req
-from PySide6.QtWidgets import QApplication, QWidget
-
-LOG_LEVELS = {
-    10: "debug",  # DEBUG
-    20: "info",  # INFO
-    30: "warning",  # WARNING
-    40: "error",  # ERROR
-    50: "critical",  # CRITICAL
-}
-
+from typing import Optional
 
 log = logging.getLogger("Utilities")
 
 
-def strlevel2intlevel(level: str) -> int:
+def is_valid_hex_color(color_code: str) -> bool:
     """
-    Converts logging level from string to integer.
-    Returns 20 (info level) if string is invalid.
+    Checks if a string is a valid hex color code.
 
-    Example: "debug" -> 10
-    """
+    Args:
+        color_code (str): String to check.
 
-    intlevel: int = getattr(logging, level.upper(), 20)
-
-    return intlevel
-
-
-def intlevel2strlevel(level: int) -> str:
-    """
-    Converts logging level from integer to string.
-    Returns "info" if integer is invalid.
-
-    Example: 10 -> "debug"
-    """
-
-    if level == logging.DEBUG:
-        return "debug"
-    elif level == logging.INFO:
-        return "info"
-    elif level == logging.CRITICAL:
-        return "critical"
-    elif level == logging.ERROR:
-        return "error"
-    elif level == logging.FATAL:
-        return "fatal"
-    else:
-        return "info"
-
-
-def center(widget: QWidget, referent: QWidget = None) -> None:
-    """
-    Moves <widget> to center of its parent or if given to
-    center of <referent>.
-
-    Parameters:
-        widget: QWidget (widget to move)
-        referent: QWidget (widget reference for center coords;
-        uses widget.parent() if None)
-    """
-
-    size = widget.size()
-    w = size.width()
-    h = size.height()
-
-    if referent is None:
-        rsize = QApplication.primaryScreen().size()
-    else:
-        rsize = referent.size()
-    rw = rsize.width()
-    rh = rsize.height()
-
-    x = int((rw / 2) - (w / 2))
-    y = int((rh / 2) - (h / 2))
-
-    widget.move(x, y)
-
-
-def get_diff(start_time: str, end_time: str, str_format: str = "%H:%M:%S"):
-    """
-    Returns difference between <start_time> and <end_time> in <str_format>.
-    """
-
-    tdelta = str(
-        datetime.strptime(end_time, str_format)
-        - datetime.strptime(start_time, str_format)
-    )
-    return tdelta
-
-
-def apply_dark_title_bar(widget: QWidget):
-    """
-    Applies dark title bar to <widget>.
-
-
-    More information here:
-
-    https://docs.microsoft.com/en-us/windows/win32/api/dwmapi/ne-dwmapi-dwmwindowattribute
-    """
-
-    DWMWA_USE_IMMERSIVE_DARK_MODE = 20
-    set_window_attribute = ctypes.windll.dwmapi.DwmSetWindowAttribute
-    hwnd = widget.winId()
-    rendering_policy = DWMWA_USE_IMMERSIVE_DARK_MODE
-    value = 2  # on
-    value = ctypes.c_int(value)
-    set_window_attribute(
-        hwnd, rendering_policy, ctypes.byref(value), ctypes.sizeof(value)
-    )
-
-
-def is_valid_hex_color(color_code: str):
-    """
-    Checks if color code is valid
-    and returns True or False.
+    Returns:
+        bool: True if string is a valid hex color code, False otherwise.
     """
 
     color_code = color_code.removeprefix("#")
@@ -145,56 +32,18 @@ def is_valid_hex_color(color_code: str):
         return False
 
 
-def scale_value(value: int | float, suffix="B", factor: int = 1024):
+def trim_string(text: str, max_length: int = 100) -> str:
     """
-    Scales `value` to its proper format
-    with `suffix` as unit and `factor` as scaling
-    and returns it as string; for e.g:
+    Returns raw representation (for eg. "\\n" instead of a line break) of a text
+    trimmed to a specified number of characters.
+    Appends "..." suffix if the text was longer than the specified length.
 
-        1253656 => '1.20 MB'
+    Args:
+        text (str): String to trim.
+        max_length (int, optional): Maximum length of trimmed string. Defaults to 100.
 
-        1253656678 => '1.17 GB'
-    """
-
-    if value is None:
-        return f"0 {suffix}"
-
-    for unit in ["", "K", "M", "G", "T", "P", "H"]:
-        if value < factor:
-            if f"{value:.2f}".split(".")[1] == "00":
-                return f"{int(value)} {unit}{suffix}"
-
-            return f"{value:.2f} {unit}{suffix}"
-
-        value /= factor
-
-    return str(value)
-
-
-def extract_file_paths(data: dict):
-    """
-    Extracts file paths from Nexus Mods file contents preview data.
-    Returns them in a flat list of strings.
-    """
-
-    file_paths: list[str] = []
-
-    for item in data["children"]:
-        path = item["path"]
-        item_type = item["type"]
-
-        if item_type == "file":
-            file_paths.append(path)
-        elif item_type == "directory":
-            file_paths.extend(extract_file_paths(item))
-
-    return file_paths
-
-
-def trim_string(text: str, max_length: int = 100):
-    """
-    Returns raw representation (for eg. "\\n" instead of a line break) of `text` trimmed to `max_length` characters.
-    Appends "..." suffix if `text` was longer than `max_length`.
+    Returns:
+        str: Trimmed string
     """
 
     if not isinstance(text, str):
@@ -207,149 +56,26 @@ def trim_string(text: str, max_length: int = 100):
     return f"{text!r}"[1:-1]
 
 
-def relative_data_path(file: str):
+def matches_filter(
+    text: str, filter: Optional[str], case_sensitive: bool = False
+) -> bool:
     """
-    Example:
-        `"000 Data/interface/translations/requiem_french.txt"`
-        -> `"interface/translations/requiem_french.txt"`
-    """
-
-    filters = ["/interface/", "/scripts/", "/textures/", "/sound/"]
-
-    for filter in filters:
-        index = file.lower().find(filter)
-        if index != -1:
-            return file[index + 1 :]
-
-    return file
-
-
-def get_file_identifier(file_path: os.PathLike, block_size: int = 1024 * 1024):
-    """
-    Creates a sha256 hash of the first and last block with `block_size`
-    and returns first 8 characters of the hash.
-    """
-
-    hasher = hashlib.sha256()
-    file_size = os.path.getsize(file_path)
-
-    with open(file_path, "rb") as f:
-        if file_size <= block_size:
-            # File is smaller than block_size, hash the entire file
-            chunk = f.read()
-            hasher.update(chunk)
-        else:
-            # Hash the first block
-            chunk = f.read(block_size)
-            if chunk:
-                hasher.update(chunk)
-
-            # Move to the end and hash the last block
-            f.seek(-block_size, os.SEEK_END)
-            chunk = f.read(block_size)
-            if chunk:
-                hasher.update(chunk)
-
-    return hasher.hexdigest()[:8]
-
-
-def get_folder_size(folder: Path):
-    """
-    Returns folder size in bytes.
-    """
-
-    total_size = 0
-
-    for path in folder.rglob("*"):
-        if path.is_file():
-            total_size += path.stat().st_size
-
-    return total_size
-
-
-def to_timestamp(time_string: str):
-    """
-    Converts `time_string` into a UNIX timestamp.
-    """
-
-    if time_string is None:
-        return ""
-
-    if fnmatch(time_string, "*.*.* *:*"):
-        return time.mktime(time.strptime(time_string, "%d.%m.%Y %H:%M"))
-    else:
-        return time.mktime(time.strptime(time_string, "%d.%m.%Y"))
-
-
-def fmt_timestamp(timestamp: int | float, fmt: str = "%d.%m.%Y %H:%M:%S"):
-    """
-    Creates a time string from a UNIX timestamp.
-    """
-
-    return time.strftime(fmt, time.localtime(timestamp))
-
-
-masterlist: dict[str, dict] = None
-
-
-def get_masterlist(language: str, cache: bool = True) -> dict[str, dict]:
-    """
-    Gets Masterlist from GitHub Repository.
-
-    Caches response if `cache` is True.
-    """
-
-    global masterlist
-
-    language = language.lower()
-
-    REPO_NAME = "SSE-Auto-Translator"
-    REPO_OWNER = "Cutleast"
-    BRANCH = "master"
-    INDEX_PATH = f"masterlists/index.json"
-
-    if masterlist is None or cache == False:
-        url = f"https://raw.githubusercontent.com/{REPO_OWNER}/{REPO_NAME}/{BRANCH}/{INDEX_PATH}"
-
-        res = req.get(url, timeout=3)
-
-        if res.status_code == 200:
-            data = res.content.decode()
-            index: dict[str, str] = json.loads(data)
-
-            url = index.get(language)
-
-            if not url:
-                log.error(f"No masterlist for {language} available!")
-                masterlist = {}
-
-                return masterlist
-
-            res = req.get(url, timeout=3)
-
-            if res.status_code == 200:
-                data = res.content.decode()
-                masterlist = json.loads(data)
-            else:
-                log.debug(f"Request URL: {url!r}")
-                raise Exception(f"Request failed! Status Code: {res.status_code}")
-
-        else:
-            log.debug(f"Request URL: {url!r}")
-            raise Exception(f"Request failed! Status Code: {res.status_code}")
-
-    return masterlist
-
-
-def clean_fs_name(folder_or_file_name: str) -> str:
-    """
-    Cleans a folder or file name of illegal characters like ":".
+    Checks if a string matches a filter.
 
     Args:
-        folder_or_file_name (str): File or folder name to clean.
+        text (str): Text to check.
+        filter (Optional[str]): Filter to check against.
+        case_sensitive (bool, optional): Case sensitivity. Defaults to False.
 
     Returns:
-        str: Cleaned file or folder name.
+        bool: True if string matches filter or filter is None, False otherwise.
     """
 
-    return re.sub(r'[:<>?*"|]', "", folder_or_file_name)
+    if filter is None:
+        return True
+
+    if not case_sensitive:
+        text = text.lower()
+        filter = filter.lower()
+
+    return filter in text

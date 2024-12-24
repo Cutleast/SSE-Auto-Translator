@@ -4,6 +4,8 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+from typing import Any
+
 import qtawesome as qta
 from PySide6.QtWidgets import QApplication, QLineEdit
 
@@ -15,8 +17,8 @@ class KeyEntry(QLineEdit):
 
     __is_visible = False
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(self, *args: Any, **kwargs: dict[str, Any]):
+        super().__init__(*args, **kwargs)  # type: ignore[call-overload]
 
         self.setEchoMode(QLineEdit.EchoMode.Password)
 
@@ -26,7 +28,7 @@ class KeyEntry(QLineEdit):
         )
         self.toggle_visibility_action.triggered.connect(self.toggle_visibility)
 
-    def toggle_visibility(self):
+    def toggle_visibility(self) -> None:
         self.__is_visible = not self.__is_visible
 
         if self.__is_visible:

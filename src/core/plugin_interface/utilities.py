@@ -4,18 +4,24 @@ Copyright (c) Cutleast
 
 from io import BufferedReader, BytesIO
 from pathlib import Path
+from typing import TypeAlias
 
 import jstyleson as json
 
+Stream: TypeAlias = BufferedReader | BytesIO
+"""
+Type alias for `BufferedReader` and `BytesIO`.
+"""
+
 # Load file that defines which records contain subrecords that are strings
-whitelist_path = Path(".") / "data" / "app" / "string_records.json"
+whitelist_path = Path("res") / "string_records.json"
 # whitelist_path = Path(__file__).parent / "string_records.json"
 whitelist_path = whitelist_path.resolve()
 with whitelist_path.open() as whitelist_file:
     STRING_RECORDS: dict[str, list[str]] = json.load(whitelist_file)
 
 
-def peek(stream: BufferedReader, length: int):
+def peek(stream: Stream, length: int) -> bytes:
     """
     Peeks into stream and returns data.
     """
@@ -31,7 +37,7 @@ CHAR_WHITELIST = [
     "\n",
     "\r",
     "\t",
-    "\u200B",
+    "\u200b",
     "\xa0",
     "\u3000",
 ]
@@ -48,7 +54,7 @@ STRING_WHITELIST = [
 ]
 
 
-def get_checksum(number: int):
+def get_checksum(number: int) -> int:
     """
     Returns horizontal checksum of `number` (sum of all digits).
     """
@@ -58,7 +64,7 @@ def get_checksum(number: int):
     return sum(int(digit) for digit in str(number))
 
 
-def is_camel_case(text: str):
+def is_camel_case(text: str) -> bool:
     """
     Checks if `text` is camel case without spaces.
     """
@@ -73,7 +79,7 @@ def is_camel_case(text: str):
     )
 
 
-def is_snake_case(text: str):
+def is_snake_case(text: str) -> bool:
     """
     Checks if `text` is snake case without spaces.
     """
@@ -81,7 +87,7 @@ def is_snake_case(text: str):
     return " " not in text and "_" in text
 
 
-def is_valid_string(text: str):
+def is_valid_string(text: str) -> bool:
     """
     Checks if <text> is a valid string.
     """
@@ -98,14 +104,14 @@ def is_valid_string(text: str):
     return all(char.isprintable() or char in CHAR_WHITELIST for char in text)
 
 
-def get_stream(data: BufferedReader | bytes) -> BytesIO:
+def get_stream(data: BytesIO | BufferedReader | bytes) -> Stream:
     if isinstance(data, bytes):
         return BytesIO(data)
 
     return data
 
 
-def read_data(data: BufferedReader | bytes, size: int) -> bytes:
+def read_data(data: Stream | bytes, size: int) -> bytes:
     """
     Returns `size` bytes from `data`.
     """
@@ -116,7 +122,7 @@ def read_data(data: BufferedReader | bytes, size: int) -> bytes:
         return data.read(size)
 
 
-def indent_text(text: str, indent: int = 4):
+def indent_text(text: str, indent: int = 4) -> str:
     lines: list[str] = []
 
     for line in text.splitlines():
@@ -129,7 +135,7 @@ def indent_text(text: str, indent: int = 4):
         return "\n".join(lines)
 
 
-def prettyprint_object(obj: object):
+def prettyprint_object(obj: object) -> str:
     text = "\r{\n"
     text += f"    class = {type(obj).__name__}\n"
 

@@ -4,12 +4,13 @@ Copyright (c) Cutleast
 
 import logging
 import zlib
-from io import BufferedReader, BytesIO
+from io import BytesIO
+from typing import Optional
 
 from .datatypes import Hex, Integer
 from .flags import RecordFlags
-from .subrecord import SUBRECORD_MAP, StringSubrecord, Subrecord
-from .utilities import STRING_RECORDS, get_checksum, peek, prettyprint_object
+from .subrecord import EPFT, SUBRECORD_MAP, TRDT, StringSubrecord, Subrecord
+from .utilities import STRING_RECORDS, Stream, get_checksum, peek, prettyprint_object
 
 
 class Record:
@@ -34,10 +35,10 @@ class Record:
     def __repr__(self) -> str:
         return prettyprint_object(self)
 
-    def __len__(self):
+    def __len__(self) -> int:
         return len(self.dump())
 
-    def parse(self, stream: BufferedReader, header_flags: RecordFlags):
+    def parse(self, stream: Stream, header_flags: RecordFlags) -> None:
         self.type = stream.read(4).decode()
         self.size = Integer.parse(stream, Integer.IntType.UInt32)
         self.flags = RecordFlags.parse(stream, Integer.IntType.UInt32)
@@ -66,7 +67,7 @@ class Record:
             case _:
                 self.parse_subrecords(header_flags)
 
-    def parse_qust_record(self, header_flags: RecordFlags):
+    def parse_qust_record(self, header_flags: RecordFlags) -> None:
         stream = BytesIO(self.data)
         self.subrecords = []
 
@@ -81,7 +82,7 @@ class Record:
             # Get previous block of CTDA subrecords
             # after previous INDX subrecord
             ctda_subrecords: list[Subrecord] = []
-            indx_subrecord: Subrecord = None
+            indx_subrecord: Optional[Subrecord] = None
 
             for subrecord in self.subrecords[::-1]:
                 if subrecord.type == "CTDA":
@@ -95,6 +96,9 @@ class Record:
                 # Only break if INDX subrecord is reached
                 elif ctda_subrecords and indx_subrecord is not None:
                     break
+
+            if indx_subrecord is None:
+                raise ValueError(f"No INDX subrecord found in record {self.formid}!")
 
             stage_index = abs(hash(indx_subrecord.data))
 
@@ -118,10 +122,11 @@ class Record:
         while stream.tell() < len(self.data):
             subrecord_type = peek(stream, 4).decode()
 
+            subrecord: Subrecord
             if subrecord_type in STRING_RECORDS.get(self.type, []):
                 subrecord = StringSubrecord(subrecord_type)
             else:
-                subrecord: Subrecord = SUBRECORD_MAP.get(subrecord_type, Subrecord)()
+                subrecord = SUBRECORD_MAP.get(subrecord_type, Subrecord)()
 
             subrecord.parse(stream, header_flags)
             self.subrecords.append(subrecord)
@@ -133,13 +138,13 @@ class Record:
 
                 # Get quest objective index
                 case "QOBJ":
-                    current_objective_index = subrecord.index
+                    current_objective_index = subrecord.index or 0
 
                 # Set current objective index as index of string
                 case "NNAM":
                     subrecord.index = current_objective_index
 
-    def parse_info_record(self, header_flags: RecordFlags):
+    def parse_info_record(self, header_flags: RecordFlags) -> None:
         stream = BytesIO(self.data)
         self.subrecords = []
         current_index = 0
@@ -147,25 +152,24 @@ class Record:
         while stream.tell() < len(self.data):
             subrecord_type = peek(stream, 4).decode()
 
+            subrecord: Subrecord
             if subrecord_type in STRING_RECORDS.get(self.type, []):
                 subrecord = StringSubrecord(subrecord_type)
             else:
-                subrecord: Subrecord = SUBRECORD_MAP.get(subrecord_type, Subrecord)()
+                subrecord = SUBRECORD_MAP.get(subrecord_type, Subrecord)()
 
             subrecord.parse(stream, header_flags)
 
-            match subrecord_type:
-                # Get response id
-                case "TRDT":
-                    current_index = subrecord.response_id
-
-                # Set current response id as index of string
-                case "NAM1":
-                    subrecord.index = current_index
+            # Get response id
+            if isinstance(subrecord, TRDT):
+                current_index = subrecord.response_id
+            # Set current response id as index of string
+            elif subrecord_type == "NAM1":
+                subrecord.index = current_index
 
             self.subrecords.append(subrecord)
 
-    def parse_perk_record(self, header_flags: RecordFlags):
+    def parse_perk_record(self, header_flags: RecordFlags) -> None:
         stream = BytesIO(self.data)
         self.subrecords = []
 
@@ -175,6 +179,7 @@ class Record:
         while stream.tell() < len(self.data):
             subrecord_type = peek(stream, 4).decode()
 
+            subrecord: Subrecord
             if (
                 (perk_type == 4 and subrecord_type == "EPF2")
                 or (perk_type == 7 and subrecord_type == "EPFD")
@@ -185,35 +190,34 @@ class Record:
             ):
                 subrecord = StringSubrecord(subrecord_type)
             else:
-                subrecord: Subrecord = SUBRECORD_MAP.get(subrecord_type, Subrecord)()
+                subrecord = SUBRECORD_MAP.get(subrecord_type, Subrecord)()
 
             subrecord.parse(stream, header_flags)
             self.subrecords.append(subrecord)
 
-            match subrecord_type:
-                case "EPFT":
-                    perk_type = subrecord.perk_type
+            if isinstance(subrecord, EPFT):
+                perk_type = subrecord.perk_type
 
-                case "EPFD":
-                    subrecord.index = epfd_index
-                    epfd_index += 1
+            elif subrecord_type == "EPFD":
+                subrecord.index = epfd_index
+                epfd_index += 1
 
-                case "EPF2":
-                    if peek(stream, 4) == b"EPF3":
-                        index_subrecord = Subrecord()
-                        index_subrecord.parse(stream, header_flags)
-                        epf2_index = int.from_bytes(
-                            index_subrecord.data[2:], byteorder="little"
-                        )
-                        subrecord.index = epf2_index
-                        self.subrecords.append(index_subrecord)
+            elif subrecord_type == "EPF2":
+                if peek(stream, 4) == b"EPF3":
+                    index_subrecord = Subrecord()
+                    index_subrecord.parse(stream, header_flags)
+                    epf2_index = int.from_bytes(
+                        index_subrecord.data[2:], byteorder="little"
+                    )
+                    subrecord.index = epf2_index
+                    self.subrecords.append(index_subrecord)
 
-                    else:
-                        self.log.warning(
-                            f"EPF2 Subrecord without following EPF3! Record: {self}"
-                        )
+                else:
+                    self.log.warning(
+                        f"EPF2 Subrecord without following EPF3! Record: {self}"
+                    )
 
-    def parse_subrecords(self, header_flags: RecordFlags):
+    def parse_subrecords(self, header_flags: RecordFlags) -> None:
         stream = BytesIO(self.data)
         self.subrecords = []
         itxt_index = 0
@@ -221,10 +225,11 @@ class Record:
         while stream.tell() < len(self.data):
             subrecord_type = peek(stream, 4).decode()
 
+            subrecord: Subrecord
             if subrecord_type in STRING_RECORDS.get(self.type, []):
                 subrecord = StringSubrecord(subrecord_type)
             else:
-                subrecord: Subrecord = SUBRECORD_MAP.get(subrecord_type, Subrecord)()
+                subrecord = SUBRECORD_MAP.get(subrecord_type, Subrecord)()
 
             subrecord.parse(stream, header_flags)
 

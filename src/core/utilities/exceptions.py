@@ -1,29 +1,40 @@
 """
-This file is part of SSE Auto Translator
-by Cutleast and falls under the license
-Attribution-NonCommercial-NoDerivatives 4.0 International.
+Copyright (c) Cutleast
 """
 
+from abc import abstractmethod
 
-class GeneralException(Exception):
+from PySide6.QtWidgets import QApplication
+
+
+class ExceptionBase(Exception):
     """
-    General Exception class.
-    """
-
-    text: str = None  # Text for traceback
-    id: str = None  # Localisation id
-
-    def __init__(self, *args: object):
-        super().__init__(self.text, *args)
-
-
-class ApiException(Exception):
-    """
-    General Exception class for API errors.
+    Base Exception class for localized exceptions.
     """
 
-    text = "Request failed"
-    id = "api_error"
+    @abstractmethod
+    def getLocalizedMessage(self) -> str:
+        """
+        Returns localised message
+
+        Returns:
+            str: Localised message
+        """
+
+    def __str__(self) -> str:
+        return self.getLocalizedMessage()
+
+    def __repr__(self) -> str:
+        return self.getLocalizedMessage()
+
+
+class ApiException(ExceptionBase):
+    """
+    Base Exception class for API errors.
+    """
+
+    def getLocalizedMessage(self) -> str:
+        return QApplication.translate("exceptions", "An API error occured!")
 
 
 class ApiKeyInvalidError(ApiException):
@@ -31,8 +42,8 @@ class ApiKeyInvalidError(ApiException):
     Exception when api key is invalid for attempted request.
     """
 
-    text = "Key invalid for request"
-    id = "key_invalid"
+    def getLocalizedMessage(self) -> str:
+        return QApplication.translate("exceptions", "Key invalid for request!")
 
 
 class ApiPermissionError(ApiException):
@@ -40,8 +51,8 @@ class ApiPermissionError(ApiException):
     Exception when request is blocked by NM because of missing permissions.
     """
 
-    text = "No Permission for request"
-    id = "no_permission"
+    def getLocalizedMessage(self) -> str:
+        return QApplication.translate("exceptions", "No Permission for request!")
 
 
 class ApiExpiredError(ApiException):
@@ -49,8 +60,8 @@ class ApiExpiredError(ApiException):
     Exception when request has expired.
     """
 
-    text = "Request has expired"
-    id = "request_expired"
+    def getLocalizedMessage(self) -> str:
+        return QApplication.translate("exceptions", "Request has expired!")
 
 
 class ApiInvalidServerError(ApiException):
@@ -58,8 +69,8 @@ class ApiInvalidServerError(ApiException):
     Exception when specified server is invalid. (Downloader)
     """
 
-    text = "Server is invalid"
-    id = "server_invalid"
+    def getLocalizedMessage(self) -> str:
+        return QApplication.translate("exceptions", "Server is invalid!")
 
 
 class ApiLimitReachedError(ApiException):
@@ -67,6 +78,46 @@ class ApiLimitReachedError(ApiException):
     Exception when request has reached limit.
     """
 
-    text = "API Request Limit reached"
-    id = "limit_reached"
+    def getLocalizedMessage(self) -> str:
+        return QApplication.translate("exceptions", "API Request Limit reached!")
 
+
+class DownloadFailedError(ExceptionBase):
+    """
+    Exception when download failed.
+    """
+
+    def getLocalizedMessage(self) -> str:
+        return QApplication.translate("exceptions", "Download failed!")
+
+
+class InstallationFailedError(ExceptionBase):
+    """
+    Exception when installation failed.
+    """
+
+    def getLocalizedMessage(self) -> str:
+        return QApplication.translate("exceptions", "Installation failed!")
+
+
+class MappingFailedError(InstallationFailedError):
+    """
+    Exception when the translation could not be mapped to the original mod.
+    """
+
+    def getLocalizedMessage(self) -> str:
+        return QApplication.translate(
+            "exceptions",
+            "Mapping failed! Translation does not contain any matching strings!",
+        )
+
+
+class NoOriginalModFound(InstallationFailedError):
+    """
+    Exception when no original mod could be found for the translation.
+    """
+
+    def getLocalizedMessage(self) -> str:
+        return QApplication.translate(
+            "exceptions", "No original mod found for the translation!"
+        )

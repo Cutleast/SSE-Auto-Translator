@@ -5,6 +5,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import zipfile
+from typing import Optional
 
 from .archive import Archive
 
@@ -14,7 +15,7 @@ class ZIPARchive(Archive):
     Class for ZIP Archives.
     """
 
-    __files: list[str] = None
+    __files: Optional[list[str]] = None
 
     @property
     def files(self) -> list[str]:
@@ -24,5 +25,5 @@ class ZIPARchive(Archive):
                 for file in zipfile.ZipFile(self.path).filelist
                 if not file.is_dir()
             ]
-        
+
         return self.__files

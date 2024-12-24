@@ -2,14 +2,16 @@
 Copyright (c) Cutleast
 """
 
+import os
 from dataclasses import dataclass
 from io import BufferedReader, BytesIO
 from pathlib import Path
 
 import lz4.frame
-from virtual_glob import InMemoryPath, glob
 
-from .datatypes import *
+from core.utilities.filesystem import glob
+
+from .datatypes import Integer, String
 from .file_name_block import FileNameBlock
 from .file_record import FileRecord, FileRecordBlock
 from .folder_record import FolderRecord
@@ -24,9 +26,8 @@ class Archive:
 
     archive_path: Path
     data_stream: BufferedReader
-    parsed_data = None
 
-    def match_names(self):
+    def match_names(self) -> dict[str, FileRecord]:
         """
         Matches file names to their records.
         """
@@ -44,7 +45,7 @@ class Archive:
 
         return result
 
-    def process_compression_flags(self):
+    def process_compression_flags(self) -> None:
         """
         Processes compression flags in files.
         """
@@ -59,7 +60,7 @@ class Archive:
             else:
                 file_record.compressed = self.header.archive_flags["Compressed Archive"]
 
-    def parse(self):
+    def parse(self) -> "Archive":
         self.header = Header(self.data_stream).parse()
         self.folders = [
             FolderRecord(self.data_stream).parse()
@@ -78,24 +79,21 @@ class Archive:
 
         return self
 
-    def glob(self, pattern: str):
+    def glob(self, pattern: str, case_sensitive: bool = False) -> list[str]:
         """
-        Returns a list of file paths that
-        match the `pattern`.
+        Returns a list of file paths that match a specified glob pattern.
 
-        Parameters:
-            pattern: str, everything that fnmatch supports
+        Args:
+            pattern (str): Glob pattern.
+            case_sensitive (bool, optional): Case sensitive. Defaults to False.
 
         Returns:
-            list of matching filenames
+            list[str]: List of matching filenames
         """
 
-        fs = InMemoryPath.from_list(list(self.files.keys()))
-        matches = [p.path for p in glob(fs, pattern)]
+        return glob(pattern, list(self.files.keys()), case_sensitive)
 
-        return matches
-
-    def extract_file(self, filename: str | Path, dest_folder: Path):
+    def extract_file(self, filename: str | Path, dest_folder: Path) -> None:
         """
         Extracts `filename` from archive to `dest_folder`.
         """
@@ -114,7 +112,7 @@ class Archive:
             filename = String.bstring(self.data_stream).decode(errors="ignore")
 
         if file_record.compressed:
-            original_size = Integer.ulong(self.data_stream)
+            original_size = Integer.ulong(self.data_stream)  # noqa: F841
             data = self.data_stream.read(file_record.size - 4)
             data = lz4.frame.decompress(data)
         else:
@@ -130,7 +128,7 @@ class Archive:
                 f"Failed to extract file '{filename}' from archive '{self.archive_path}'!"
             )
 
-    def get_file_stream(self, filename: str | Path):
+    def get_file_stream(self, filename: str | Path) -> BytesIO:
         """
         Instead of extracting the file this returns a file stream to the file data.
         """
@@ -152,7 +150,7 @@ class Archive:
             filename = String.bstring(self.data_stream).decode(errors="ignore")
 
         if file_record.compressed:
-            original_size = Integer.ulong(self.data_stream)
+            original_size = Integer.ulong(self.data_stream)  # noqa: F841
             data = self.data_stream.read(file_record.size - 4)
             data = lz4.frame.decompress(data)
         else:

@@ -5,9 +5,17 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 from enum import Enum
+from typing import Optional
 
-from PySide6.QtCore import QEasingCurve, Signal
-from PySide6.QtWidgets import QStackedWidget
+from PySide6.QtCore import (
+    QEasingCurve,
+    QParallelAnimationGroup,
+    QPoint,
+    QPropertyAnimation,
+    Signal,
+)
+from PySide6.QtGui import QMouseEvent, QPainter, QPaintEvent
+from PySide6.QtWidgets import QLabel, QStackedWidget, QStyle, QStyleOption, QWidget
 
 
 class StackedWidget(QStackedWidget):
@@ -41,7 +49,7 @@ class StackedWidget(QStackedWidget):
 
     def __init__(
         self,
-        parent=None,
+        parent: Optional[QWidget] = None,
         orientation: Orientation = Orientation.Vertical,
         reverse: bool = False,
     ):
@@ -50,13 +58,15 @@ class StackedWidget(QStackedWidget):
         self.orientation = orientation
         self.reverse = reverse
 
-    def setSpeed(self, speed: int):
+    def setSpeed(self, speed: int) -> None:
         self.duration = speed
 
-    def setAnimationCurve(self, easingCurve: QEasingCurve.Type):
+    def setAnimationCurve(self, easingCurve: QEasingCurve.Type) -> None:
         self.anim_curve = easingCurve
 
-    def slideInIndex(self, index: int, direction: Direction = Direction.Automatic):
+    def slideInIndex(
+        self, index: int, direction: Direction = Direction.Automatic
+    ) -> None:
         if index > (self.count() - 1):
             direction = (
                 self.Direction.TopToBottom
@@ -76,7 +86,7 @@ class StackedWidget(QStackedWidget):
 
     def slideInWidget(
         self, nextWidget: QWidget, direction: Direction = Direction.Automatic
-    ):
+    ) -> None:
         if self._active:
             return
 
@@ -191,29 +201,29 @@ class StackedWidget(QStackedWidget):
             )
         )
 
-    def finish_anim(self):
+    def finish_anim(self) -> None:
         self._active = False
 
-    def slideInNext(self):
+    def slideInNext(self) -> None:
         self.slideInIndex(
             self.currentIndex() + 1 if self.currentIndex() < (self.count() - 1) else 0
         )
 
-    def slideInPrev(self):
+    def slideInPrev(self) -> None:
         self.slideInIndex(
             self.currentIndex() - 1 if self.currentIndex() > 0 else self.count() - 1
         )
 
-    def mousePressEvent(self, event: qtg.QMouseEvent):
+    def mousePressEvent(self, event: QMouseEvent) -> None:
         self.anim_cancel_signal.emit()
         event.ignore()
 
-    def paintEvent(self, arg__1: qtg.QPaintEvent):
+    def paintEvent(self, arg__1: QPaintEvent) -> None:
         super().paintEvent(arg__1)
 
         option = QStyleOption()
         option.initFrom(self)
-        painter = qtg.QPainter(self)
+        painter = QPainter(self)
         self.style().drawPrimitive(
             QStyle.PrimitiveElement.PE_Widget, option, painter, self
         )

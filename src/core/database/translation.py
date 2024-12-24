@@ -1,49 +1,76 @@
 """
-This file is part of SEE Auto Translator
-and falls under the license
-Attribution-NonCommercial-NoDerivatives 4.0 International.
+Copyright (c) Cutleast
 """
 
 import logging
 import os
 import pickle
 import sys
-from dataclasses import dataclass
+import time
+from dataclasses import dataclass, field
 from enum import StrEnum
 from pathlib import Path
+from typing import Any, Optional
 
 import jstyleson as json
-from PySide6.QtWidgets import QTreeWidgetItem
 
-from core import plugin_interface
-from core.utilities import string
-from core.utilities.source import Source
-from core.utilities.string import String
+from core import plugin_interface, utilities
+from core.database import string
+from core.database.string import String
+from core.translation_provider.source import Source
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Translation:
     """
     Class for mod translations.
     """
 
     name: str
-
-    mod_id: int
-    file_id: int | None
-    version: str
-
-    original_mod_id: int
-    original_file_id: int
-    original_version: str
-
-    path: Path = None
-
-    _original_path: Path = None
-
-    strings: dict[str, list[String]] = None
     """
-    `{plugin name: list of strings}`
+    The name of the translation.
+    """
+
+    path: Path
+    """
+    The path to the translation.
+    """
+
+    mod_id: int = field(default=0)
+    """
+    The mod id of the translation at its source.
+    """
+
+    file_id: Optional[int] = None
+    """
+    The file id of the translation at its source.
+
+    (Nexus Mods only)
+    """
+
+    version: str = field(default="")
+    """
+    The version of the translation at its source.
+    """
+
+    original_mod_id: int = field(default=0)
+    """
+    The mod id of the original mod.
+    """
+
+    original_file_id: int = field(default=0)
+    """
+    The file id of the original mod.
+    """
+
+    original_version: str = field(default="")
+    """
+    The version of the original mod.
+    """
+
+    _strings: Optional[dict[str, list[String]]] = None
+    """
+    Map of plugin names to list of strings.
     """
 
     class Status(StrEnum):
@@ -55,23 +82,33 @@ class Translation:
         UpdateAvailable = "Update available"
         UpdateIgnored = "Update ignored"
 
-    status: Status = None
+    status: Optional[Status] = field(default=Status.Ok)
+    """
+    The (update) status of the translation.
+    """
 
-    source: Source = None
+    source: Optional[Source] = field(default=Source.Local)
+    """
+    The source of the translation.
+    """
 
-    timestamp: int = None
+    timestamp: Optional[int] = field(default_factory=lambda: int(time.time()))
+    """
+    The install timestamp of the translation.
+    """
 
-    tree_item: QTreeWidgetItem = None
+    log: logging.Logger = logging.getLogger("TranslationDatabase")
 
-    log = logging.getLogger("TranslationDatabase")
-
-    def load_translation(self):
+    def load_translation(self) -> None:
         """
         Loads strings from translation.
         """
 
-        if self.strings is None:
-            self.strings = {}
+        if self._strings is None:
+            self._strings = {}
+
+            if self.path is None:
+                raise ValueError("Translation path is not set")
 
             translation_paths = list(self.path.glob("*.ats"))
 
@@ -79,10 +116,13 @@ class Translation:
             # TODO: Improve this
             sys.modules["plugin_parser"] = plugin_interface
             sys.modules["plugin_parser.string"] = string
+            sys.modules["utilities"] = utilities
+            sys.modules["utilities.string"] = string
+            sys.modules["plugin_interface"] = plugin_interface
             for translation_path in translation_paths:
                 try:
                     with translation_path.open("rb") as file:
-                        self.strings[translation_path.stem.lower()] = pickle.load(file)
+                        self._strings[translation_path.stem.lower()] = pickle.load(file)
                 except EOFError as ex:
                     self.log.error(
                         f"Failed to load strings from database file {str(translation_path)!r}",
@@ -91,11 +131,14 @@ class Translation:
 
             sys.modules.pop("plugin_parser.string")
             sys.modules.pop("plugin_parser")
+            sys.modules.pop("utilities")
+            sys.modules.pop("utilities.string")
+            sys.modules.pop("plugin_interface")
 
             translation_paths = list(self.path.glob("*.json"))
 
             for translation_path in translation_paths:
-                if translation_path.stem.lower() in self.strings:
+                if translation_path.stem.lower() in self._strings:
                     continue
 
                 try:
@@ -109,8 +152,9 @@ class Translation:
                         for string_data in strings_data
                     ]
 
-                    strings = list(set(strings))  # Remove duplicates
-                    self.strings[translation_path.stem.lower()] = strings
+                    self._strings[translation_path.stem.lower()] = String.unique(
+                        strings
+                    )
                 except Exception as ex:
                     self.log.error(
                         f"Failed to load strings from database file {str(translation_path)!r}",
@@ -119,25 +163,33 @@ class Translation:
 
             self.optimize_translation()
 
-    def save_translation(self):
+    def save_translation(self) -> None:
         """
         Saves strings to folder.
         """
 
+        if self.path is None:
+            raise ValueError("Translation path is not set")
+
+        if self._strings is None:
+            return
+
         if not self.path.is_dir():
             os.mkdir(self.path)
 
-        for plugin_name, plugin_strings in self.strings.items():
+        for plugin_name, plugin_strings in self._strings.items():
             plugin_name = plugin_name.lower()
-            plugin_strings = list(set(plugin_strings))  # Remove duplicates
             with open(self.path / (plugin_name + ".ats"), "wb") as file:
-                pickle.dump(plugin_strings, file)
+                pickle.dump(String.unique(plugin_strings), file)
 
-    def optimize_translation(self):
+    def optimize_translation(self) -> None:
         """
         Optimizes translation by converting it from JSON files to pickle files
         if not already done.
         """
+
+        if self.path is None:
+            raise ValueError("Translation path is not set")
 
         json_files = list(self.path.glob("*.json"))
 
@@ -147,33 +199,88 @@ class Translation:
             for json_file in json_files:
                 os.remove(json_file)
 
-    def export_translation(self, path: Path):
+    def export(self, path: Path) -> None:
         """
-        Exports translation strings to `path`.
+        Exports translation strings to a specified path in the DSD format.
+
+        Args:
+            path (Path): Path to export translation strings to.
         """
+
+        if self.path is None:
+            raise ValueError("Translation path is not set")
+
+        if self._strings is None:
+            return
 
         if not path.is_dir():
             os.makedirs(path)
 
-        for plugin_name, plugin_strings in self.strings.items():
-            plugin_folder = (
+        for plugin_name, plugin_strings in self._strings.items():
+            plugin_folder: Path = (
                 path / "SKSE" / "Plugins" / "DynamicStringDistributor" / plugin_name
             )
 
             if not plugin_folder.is_dir():
                 os.makedirs(plugin_folder)
 
-            strings = [
+            strings: list[dict[str, Optional[str | int]]] = [
                 string.to_string_data()
                 for string in plugin_strings
                 if string.original_string != string.translated_string
                 and string.translated_string
             ]
 
-            translation_path = plugin_folder / "SSE-AT_exported.json"
+            dsd_path: Path = plugin_folder / "SSE-AT_exported.json"
+            with dsd_path.open("w", encoding="utf8") as dsd_file:
+                json.dump(strings, dsd_file, indent=4, ensure_ascii=False)
 
-            with translation_path.open("w", encoding="utf8") as translation_file:
-                json.dump(strings, translation_file, indent=4, ensure_ascii=False)
+    def to_index_data(self) -> dict[str, Any]:
+        """
+        Generates index data for the index.json file in the database.
 
-    def __hash__(self):
+        Returns:
+            dict[str, Any]: Index data.
+        """
+
+        return {
+            "name": self.name,
+            "mod_id": self.mod_id,
+            "file_id": self.file_id,
+            "version": self.version,
+            "original_mod_id": self.original_mod_id,
+            "original_file_id": self.original_file_id,
+            "original_version": self.original_version,
+            "source": self.source.name if self.source is not None else None,
+            "timestamp": self.timestamp,
+        }
+
+    @property
+    def id(self) -> str:
+        """
+        Generates a unique id for the translation.
+
+        Included attributes:
+        - `name`
+        - `path`
+        """
+
+        return f"{self.name}###{self.path}"
+
+    def __hash__(self) -> int:
         return hash((self.name, self.path))
+
+    @property
+    def strings(self) -> dict[str, list[String]]:
+        """
+        List of strings for each plugin name.
+        """
+
+        if self._strings is None:
+            self.load_translation()
+
+        return self._strings or {}
+
+    @strings.setter
+    def strings(self, strings: dict[str, list[String]]) -> None:
+        self._strings = strings

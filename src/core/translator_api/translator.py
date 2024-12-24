@@ -4,38 +4,38 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-from PySide6.QtWidgets import QWidget
+from abc import abstractmethod
 
-from app import MainApp
+from PySide6.QtCore import QObject
+
+from app_context import AppContext
 
 
-class Translator:
+class Translator(QObject):
     """
     Base class for all Translator APIs.
     """
 
-    name: str = None
+    name: str
+    translator_config: "TranslatorConfig"
 
-    def __init__(self, app: MainApp):
-        self.app = app
+    def __init__(self) -> None:
+        super().__init__()
 
+        self.translator_config = AppContext.get_app().translator_config
+
+    @abstractmethod
     def translate(self, text: str, src: str, dst: str) -> str:
         """
         Translates `text` from `src` language to `dst` language.
         """
 
-        raise NotImplementedError
-
+    @abstractmethod
     def mass_translate(self, texts: list[str], src: str, dst: str) -> dict[str, str]:
         """
         Translates `texts` and returns translated result with original texts as keys.
         """
 
-        raise NotImplementedError
 
-    def get_settings_widget(self) -> QWidget:
-        """
-        Returns settings widget for configuring translator API.
-        """
-
-        raise NotImplementedError
+if __name__ == "__main__":
+    from core.config.translator_config import TranslatorConfig

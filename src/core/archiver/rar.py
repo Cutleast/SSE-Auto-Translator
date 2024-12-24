@@ -4,6 +4,8 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+from typing import Optional
+
 import rarfile
 
 from .archive import Archive
@@ -14,7 +16,7 @@ class RARArchive(Archive):
     Class for RAR Archives.
     """
 
-    __files: list[str] = None
+    __files: Optional[list[str]] = None
 
     @property
     def files(self) -> list[str]:
@@ -24,5 +26,5 @@ class RARArchive(Archive):
                 for file in rarfile.RarFile(self.path).infolist()
                 if file.is_file()
             ]
-        
+
         return self.__files

@@ -6,11 +6,13 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 import logging
 import platform
-from enum import Enum, auto
+from enum import auto
+from typing import Any, Optional
 
-from app import MainApp
+from app_context import AppContext
 from core.cacher.cacher import Cacher
-from core.utilities.source import Source
+from core.translation_provider.source import Source
+from core.utilities.base_enum import BaseEnum
 
 from .cdt_api import CDTApi
 from .nm_api import NexusModsApi
@@ -23,74 +25,51 @@ class Provider:
 
     log = logging.getLogger("Provider")
 
-    class Preference(Enum):
+    class Preference(BaseEnum):
         OnlyNexusMods = auto()
         PreferNexusMods = auto()
         OnlyConfrerie = auto()
         PreferConfrerie = auto()
 
-        @classmethod
-        def get(cls, name: str, default=None, /):
-            try:
-                return cls[name]
-            except KeyError:
-                return default
-
     preference: Preference = Preference.PreferNexusMods
 
     # Common attributes
-    user_agent = f"\
-{MainApp.name}/{MainApp.version} \
-(\
-{platform.system()} \
-{platform.version()}; \
-{platform.architecture()[0]}\
-)"
+    user_agent: str
 
     # Nexus Mods attributes
-    __nm_api: NexusModsApi = None
+    __nm_api: NexusModsApi
 
     @property
-    def api_key(self):
+    def api_key(self) -> str:
         return self.__nm_api.api_key
 
     @api_key.setter
-    def api_key(self, key: str):
+    def api_key(self, key: str) -> None:
         self.__nm_api.api_key = key
 
     # Confrérie attributes
-    __cdt_api: CDTApi = None
+    __cdt_api: CDTApi
 
     def __init__(self, api_key: str, cacher: Cacher, preference: Preference):
         self.preference = preference
         self.__init_apis(api_key, cacher)
 
-    def __init_apis(self, api_key: str, cacher: Cacher):
+        self.user_agent = (
+            f"{AppContext.get_app_type().APP_NAME}/"
+            f"{AppContext.get_app_type().APP_VERSION} "
+            f"({platform.system()} {platform.version()}; "
+            f"{platform.architecture()[0]})"
+        )
+
+    def __init_apis(self, api_key: str, cacher: Cacher) -> None:
         """
         Initializes APIs according to preference.
         """
 
-        self.log.info(
-            f"Initializing APIs according to preference {self.preference.name!r}..."
-        )
+        self.__nm_api = NexusModsApi(cacher, api_key)
+        self.__cdt_api = CDTApi(cacher)
 
-        match self.preference:
-            case self.Preference.OnlyNexusMods:
-                self.__nm_api = NexusModsApi(cacher, api_key)
-            case self.Preference.OnlyConfrerie:
-                self.__cdt_api = CDTApi(cacher)
-
-            case self.Preference.PreferNexusMods | self.Preference.PreferConfrerie:
-                self.__nm_api = NexusModsApi(cacher, api_key)
-                self.__cdt_api = CDTApi(cacher)
-
-        if self.__nm_api is not None:
-            self.log.info("Initialized Nexus Mods API.")
-
-        if self.__cdt_api is not None:
-            self.log.info("Initialized Confrérie API.")
-
-    def check_api_key(self):
+    def check_api_key(self) -> bool:
         """
         Checks Nexus Mods API Key if Nexus Mods API is initialized and enabled.
 
@@ -102,7 +81,14 @@ class Provider:
 
         return True
 
-    def direct_downloads_possible(self):
+    def direct_downloads_possible(self) -> bool:
+        """
+        Checks if direct downloads are possible for Nexus Mods API.
+
+        Returns:
+            bool: `True` if direct downloads are possible, `False` otherwise
+        """
+
         if self.preference != self.Preference.OnlyConfrerie:
             return self.__nm_api.premium
 
@@ -124,8 +110,11 @@ class Provider:
         return (-1, -1)
 
     def get_details(
-        self, mod_id: int, file_id: int = None, source: Source = None
-    ) -> dict:
+        self,
+        mod_id: int,
+        file_id: Optional[int] = None,
+        source: Optional[Source] = None,
+    ) -> dict[str, Any]:
         """
         Returns details for `mod_id` (and `file_id` if given) from `source` as unified dictionary.
 
@@ -157,6 +146,11 @@ class Provider:
                 nm_details = self.__nm_api.get_file_details(
                     "skyrimspecialedition", mod_id, file_id
                 )
+                if nm_details is None:
+                    raise FileNotFoundError(
+                        f"File {mod_id} > {file_id} not found on Nexus Mods!"
+                    )
+
                 details = {
                     "name": nm_details["name"],
                     "filename": nm_details["file_name"],
@@ -170,6 +164,9 @@ class Provider:
                 nm_details = self.__nm_api.get_mod_details(
                     "skyrimspecialedition", mod_id
                 )
+                if nm_details is None:
+                    raise FileNotFoundError(f"Mod {mod_id} not found on Nexus Mods!")
+
                 details = {
                     "name": nm_details["name"],
                     "filename": None,
@@ -181,6 +178,9 @@ class Provider:
                 }
         else:
             cdt_details = self.__cdt_api.get_mod_details(mod_id)
+            if cdt_details is None:
+                raise FileNotFoundError(f"Mod {mod_id} not found on Confrérie!")
+
             details = {
                 "name": cdt_details["FrenchName"],
                 "filename": cdt_details["Filename"],
@@ -194,8 +194,8 @@ class Provider:
     def get_modpage_link(
         self,
         mod_id: int,
-        file_id: int = None,
-        source: Source = None,
+        file_id: Optional[int] = None,
+        source: Optional[Source] = None,
         mod_manager: bool = False,
     ) -> str | None:
         """
@@ -243,8 +243,15 @@ class Provider:
                     translation_details = self.__nm_api.get_mod_details(
                         "skyrimspecialedition", translation_mod_id
                     )
+                    if translation_details is None:
+                        raise FileNotFoundError(
+                            f"Translation {translation_mod_id} not found on Nexus Mods!"
+                        )
                 except Exception as ex:
-                    self.log.error(f"Failed to get details of mod {translation_mod_id}: {ex}", exc_info=ex)
+                    self.log.error(
+                        f"Failed to get details of mod {translation_mod_id}: {ex}",
+                        exc_info=ex,
+                    )
                     continue
 
                 # Skip translations from authors on the author_blacklist
@@ -258,13 +265,16 @@ class Provider:
                         f"Skipped translation by uploader {translation_details['uploaded_by']!r} due to configured blacklist."
                     )
                     continue
-                
+
                 try:
                     translation_file_ids = self.__nm_api.scan_mod_for_filename(
                         "skyrimspecialedition", translation_mod_id, plugin_name
                     )
                 except Exception as ex:
-                    self.log.error(f"Failed to scan mod {translation_mod_id} for files: {ex}", exc_info=ex)
+                    self.log.error(
+                        f"Failed to scan mod {translation_mod_id} for files: {ex}",
+                        exc_info=ex,
+                    )
                     continue
 
                 if translation_file_ids:
@@ -322,32 +332,42 @@ class Provider:
 
         return False
 
-    def get_updated_file_id(self, mod_id: int, file_id: int) -> int | None:
+    def get_updated_file_id(self, mod_id: int, file_id: int) -> Optional[int]:
         """
         Returns file id of updated file for `file_id` if NexusMods is enabled as source.
         """
 
+        new_file_id: Optional[int] = None
         if self.preference != self.Preference.OnlyConfrerie:
             updates = self.__nm_api.get_mod_updates("skyrimspecialedition", mod_id)
 
-            old_file_id = file_id
-            new_file_id = None
+            old_file_id: Optional[int] = file_id
 
-            while old_file_id := updates.get(old_file_id):
+            while old_file_id := updates.get(old_file_id):  # type: ignore[arg-type]
                 new_file_id = old_file_id
 
-            return new_file_id
+        return new_file_id
 
-    def get_direct_download_url(
+    def request_download(
         self,
         mod_id: int,
-        file_id: int = None,
-        key: str = None,
-        expires: int = None,
-        source: Source = None,
-    ):
+        file_id: Optional[int] = None,
+        source: Optional[Source] = None,
+    ) -> str:
         """
-        Returns direct download url from `source`. Auto-selects source if `source` is None.
+        Requests a download for a mod file from a specified source.
+        Attempts to determine source automatically if not specified.
+
+        Args:
+            mod_id (int): Nexus Mods mod id.
+            file_id (Optional[int], optional): Nexus Mods file id. Defaults to None.
+            source (Optional[Source], optional): Source. Defaults to None.
+
+        Raises:
+            FileNotFoundError: when the mod is not found on the source.
+
+        Returns:
+            str: Download link.
         """
 
         if source is None:
@@ -357,12 +377,17 @@ class Provider:
                 source = Source.Confrerie
 
         if source == Source.NexusMods:
-            if self.__nm_api.premium or (key and expires):
-                return self.__nm_api.get_direct_download_url(
-                    "skyrimspecialedition", mod_id, file_id, key, expires
-                )
-            else:
-                return None
+            if file_id is None:
+                raise ValueError("File id must be specified for Nexus Mods!")
+
+            return self.__nm_api.request_download(
+                "skyrimspecialedition", mod_id, file_id
+            )
 
         else:
-            return self.__cdt_api.get_download_link(mod_id)
+            url: Optional[str] = self.__cdt_api.get_download_link(mod_id)
+
+            if url is None:
+                raise FileNotFoundError("File not found on Confrérie des Traducteurs!")
+
+            return url

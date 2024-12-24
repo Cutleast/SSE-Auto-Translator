@@ -4,235 +4,171 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-import os
 from pathlib import Path
+from typing import Optional
 
-import qtawesome as qta
-from PySide6.QtCore import Qt
-from PySide6.QtWidgets import (
-    QComboBox,
-    QFileDialog,
-    QHBoxLayout,
-    QLabel,
-    QLineEdit,
-    QPushButton,
-    QVBoxLayout,
-    QWidget,
-)
+from PySide6.QtWidgets import QComboBox, QFileDialog, QFormLayout, QLabel
 
 from core.mod_managers import SUPPORTED_MOD_MANAGERS
 from core.mod_managers.mod_manager import ModManager
 from core.mod_managers.modorganizer import ModOrganizer
-from core.utilities import apply_dark_title_bar
+from ui.startup_dialog.page import Page
+from ui.widgets.browse_edit import BrowseLineEdit
 
-from .startup_dialog import StartupDialog
 
-
-class InstancePage(QWidget):
+class InstancePage(Page):
     """
     Third page. Asks user which mod instance from which mod manager to load.
     """
 
-    mod_manager: ModManager = None
-    modinstance_name: str = None
-    profile_name: str | None = None
+    __cur_mod_manager: Optional[ModManager] = None
+    __cur_modinstance_name: Optional[str] = None
 
-    def __init__(self, startup_dialog: StartupDialog):
-        super().__init__()
+    __mod_manager_dropdown: QComboBox
+    __modinstance_dropdown: QComboBox
+    __instance_profile_label: QLabel
+    __instance_profile_dropdown: QComboBox
+    __instance_path_label: QLabel
+    __instance_path_entry: BrowseLineEdit
 
-        self.startup_dialog = startup_dialog
-        self.loc = startup_dialog.loc
-        self.mloc = startup_dialog.mloc
-
-        self.setObjectName("primary")
-
-        vlayout = QVBoxLayout()
-        vlayout.setAlignment(Qt.AlignmentFlag.AlignTop)
-        self.setLayout(vlayout)
-
-        # Title label
-        title_label = QLabel(self.mloc.instance_title)
-        title_label.setAlignment(Qt.AlignmentFlag.AlignHCenter)
-        title_label.setObjectName("title_label")
-        vlayout.addWidget(title_label, 0, Qt.AlignmentFlag.AlignHCenter)
-        vlayout.addSpacing(25)
-
-        # Help label
-        help_label = QLabel(self.mloc.instance_help)
-        help_label.setWordWrap(True)
-        vlayout.addWidget(help_label)
-
-        vlayout.addSpacing(25)
+    def _init_form(self) -> None:
+        flayout = QFormLayout()
+        self._vlayout.addLayout(flayout)
 
         # Mod Manager selection
-        hlayout = QHBoxLayout()
-        vlayout.addLayout(hlayout)
-
-        mod_manager_label = QLabel(self.loc.main.mod_manager)
-        hlayout.addWidget(mod_manager_label)
-
-        mod_manager_dropdown = QComboBox()
-        mod_manager_dropdown.setEditable(False)
-        mod_manager_dropdown.addItem(self.loc.main.please_select)
-        mod_manager_dropdown.addItems(
+        self.__mod_manager_dropdown = QComboBox()
+        self.__mod_manager_dropdown.setEditable(False)
+        self.__mod_manager_dropdown.addItem(self.tr("Please select..."))
+        self.__mod_manager_dropdown.addItems(
             [mod_manager.name for mod_manager in SUPPORTED_MOD_MANAGERS]
         )
 
-        def on_mod_manager_select(mod_manager: str):
-            if mod_manager != self.loc.main.please_select:
-                self.mod_manager = SUPPORTED_MOD_MANAGERS[
-                    mod_manager_dropdown.currentIndex() - 1
-                ]()
-            else:
-                self.mod_manager = None
-
-            modinstance_dropdown.clear()
-            modinstance_dropdown.addItem(self.loc.main.please_select)
-            if self.mod_manager:
-                instances = self.mod_manager.get_instances()
-                modinstance_dropdown.addItems(instances)
-
-            modinstance_dropdown.setEnabled(bool(self.mod_manager))
-            modinstance_dropdown.setCurrentIndex(0)
-
-        mod_manager_dropdown.currentTextChanged.connect(on_mod_manager_select)
-        hlayout.addWidget(mod_manager_dropdown)
+        self.__mod_manager_dropdown.currentTextChanged.connect(
+            self.__on_mod_manager_select
+        )
+        flayout.addRow(self.tr("Mod Manager"), self.__mod_manager_dropdown)
 
         # Modinstance Selection
-        hlayout = QHBoxLayout()
-        vlayout.addLayout(hlayout)
-
-        modinstance_label = QLabel(self.loc.main.modinstance)
-        hlayout.addWidget(modinstance_label)
-
-        modinstance_dropdown = QComboBox()
-        modinstance_dropdown.setDisabled(True)
-        modinstance_dropdown.setEditable(False)
-        modinstance_dropdown.addItem(self.loc.main.please_select)
-
-        def on_modinstance_select(modinstance: str):
-            if modinstance != self.loc.main.please_select:
-                self.modinstance_name = modinstance
-                self.instance_path_entry.setDisabled(True)
-                browse_instance_path_button.setDisabled(True)
-            elif modinstance == "Portable":
-                self.modinstance_name = modinstance
-            else:
-                self.modinstance_name = None
-                self.instance_path_entry.setDisabled(True)
-                browse_instance_path_button.setDisabled(True)
-
-            instance_profile_dropdown.clear()
-            self.profile_name = None
-            if (
-                self.mod_manager is not None
-                and self.modinstance_name
-                and self.modinstance_name != "Portable"
-            ):
-                profiles = self.mod_manager.get_instance_profiles(self.modinstance_name)
-                instance_profile_dropdown.addItems(profiles)
-                if "Default" in profiles:
-                    instance_profile_dropdown.setCurrentText("Default")
-                profile_label.setEnabled(len(profiles) > 1)
-                instance_profile_dropdown.setEnabled(len(profiles) > 1)
-            else:
-                profile_label.setDisabled(True)
-                instance_profile_dropdown.setDisabled(True)
-
-            instance_path_label.setEnabled(modinstance == "Portable")
-            self.instance_path_entry.setEnabled(modinstance == "Portable")
-            browse_instance_path_button.setEnabled(modinstance == "Portable")
-            self.instance_path_entry.clear()
-            self.done_button.setDisabled(modinstance in ["Portable", self.loc.main.please_select])
-
-        modinstance_dropdown.currentTextChanged.connect(on_modinstance_select)
-        hlayout.addWidget(modinstance_dropdown)
+        self.__modinstance_dropdown = QComboBox()
+        self.__modinstance_dropdown.setDisabled(True)
+        self.__modinstance_dropdown.setEditable(False)
+        self.__modinstance_dropdown.addItem(self.tr("Please select..."))
+        self.__modinstance_dropdown.currentTextChanged.connect(
+            self.__on_modinstance_select
+        )
+        flayout.addRow(self.tr("Modinstance"), self.__modinstance_dropdown)
 
         # Profile Selection
-        hlayout = QHBoxLayout()
-        vlayout.addLayout(hlayout)
-
-        profile_label = QLabel(self.loc.main.instance_profile)
-        hlayout.addWidget(profile_label)
-
-        instance_profile_dropdown = QComboBox()
-        instance_profile_dropdown.setDisabled(True)
-        instance_profile_dropdown.setEditable(False)
-
-        def on_instance_profile_select(profile_name: str):
-            self.profile_name = profile_name
-
-        instance_profile_dropdown.currentTextChanged.connect(on_instance_profile_select)
-        hlayout.addWidget(instance_profile_dropdown)
+        self.__instance_profile_label = QLabel(self.tr("Instance Profile (MO2)"))
+        self.__instance_profile_dropdown = QComboBox()
+        self.__instance_profile_dropdown.setDisabled(True)
+        self.__instance_profile_dropdown.setEditable(False)
+        self.__instance_profile_dropdown.currentTextChanged.connect(self._validate)
+        flayout.addRow(self.__instance_profile_label, self.__instance_profile_dropdown)
 
         # Path to portable MO2 instance
-        hlayout = QHBoxLayout()
-        vlayout.addLayout(hlayout)
+        self.__instance_path_label = QLabel(self.tr("Path to Portable Instance"))
+        self.__instance_path_label.setDisabled(True)
+        self.__instance_path_entry = BrowseLineEdit()
+        self.__instance_path_entry.setFileMode(QFileDialog.FileMode.Directory)
+        self.__instance_path_entry.setDisabled(True)
+        self.__instance_path_entry.textChanged.connect(self.__on_path_change)
+        flayout.addRow(self.__instance_path_label, self.__instance_path_entry)
 
-        instance_path_label = QLabel(self.loc.main.instance_path)
-        instance_path_label.setDisabled(True)
-        hlayout.addWidget(instance_path_label, 9)
-        self.instance_path_entry = QLineEdit()
-        self.instance_path_entry.setDisabled(True)
+    def _get_title(self) -> str:
+        return self.tr("Mod Instance")
 
-        def on_path_change(new_path: str):
-            ini_path = Path(new_path) / "ModOrganizer.ini"
-
-            if ini_path.is_file():
-                profiles = ModOrganizer.get_profiles_from_ini(ini_path)
-
-            else:
-                profiles = []
-
-            instance_profile_dropdown.clear()
-            instance_profile_dropdown.addItems(profiles)
-            instance_profile_dropdown.setEnabled(len(profiles) > 1)
-            profile_label.setEnabled(len(profiles) > 1)
-
-            self.done_button.setEnabled(ini_path.is_file())
-
-        self.instance_path_entry.textChanged.connect(on_path_change)
-        hlayout.addWidget(self.instance_path_entry, 8)
-        browse_instance_path_button = QPushButton()
-        browse_instance_path_button.setIcon(
-            qta.icon("fa5s.folder-open", color="#ffffff")
+    def _get_description(self) -> str:
+        return self.tr(
+            "On this page you select a Modinstance to load from a Mod Manager. "
+            "You can always change the selected modinstance and mod manager "
+            "under Settings > User Settings."
         )
-        browse_instance_path_button.setDisabled(True)
 
-        def browse():
-            file_dialog = QFileDialog(self.startup_dialog)
-            file_dialog.setWindowTitle(self.loc.main.browse)
-            file_dialog.setFileMode(QFileDialog.FileMode.Directory)
-            apply_dark_title_bar(file_dialog)
-            if cur_text := self.instance_path_entry.text().strip():
-                path = Path(cur_text)
-                if path.is_dir():
-                    file_dialog.setDirectoryUrl(str(path))
-            if file_dialog.exec():
-                file = file_dialog.selectedFiles()[0]
-                file = os.path.normpath(file)
-                self.instance_path_entry.setText(file)
+    def _validate(self) -> None:
+        valid: bool = True
 
-        browse_instance_path_button.clicked.connect(browse)
-        hlayout.addWidget(browse_instance_path_button)
+        if self.__cur_modinstance_name is None:
+            valid = False
 
-        # Back and Done Button
-        vlayout.addStretch()
-        hlayout = QHBoxLayout()
-        vlayout.addLayout(hlayout)
+        if self.__cur_modinstance_name == "Portable":
+            instance_path_str: str = self.__instance_path_entry.text().strip()
+            if not instance_path_str:
+                valid = False
+            elif not (Path(instance_path_str) / "ModOrganizer.ini").is_file():
+                valid = False
 
-        self.back_button = QPushButton()
-        self.back_button.setIcon(qta.icon("fa5s.chevron-left", color="#ffffff"))
-        self.back_button.setText(self.loc.main.back)
-        self.back_button.clicked.connect(self.startup_dialog.page_widget.slideInPrev)
-        hlayout.addWidget(self.back_button, 0, Qt.AlignmentFlag.AlignLeft)
+        self.valid_signal.emit(valid)
 
-        hlayout.addStretch()
+    def get_values(self) -> tuple[str, str, str, str]:
+        return (
+            self.__mod_manager_dropdown.currentText(),
+            self.__modinstance_dropdown.currentText(),
+            self.__instance_profile_dropdown.currentText(),
+            self.__instance_path_entry.text(),
+        )
 
-        self.done_button = QPushButton()
-        self.done_button.setDisabled(True)
-        self.done_button.setIcon(qta.icon("fa5s.check", color="#ffffff"))
-        self.done_button.setText(self.loc.main.done)
-        self.done_button.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
-        self.done_button.clicked.connect(self.startup_dialog.finish)
-        hlayout.addWidget(self.done_button)
+    def __on_mod_manager_select(self, mod_manager: str) -> None:
+        if mod_manager != self.tr("Please select..."):
+            self.__cur_mod_manager = SUPPORTED_MOD_MANAGERS[
+                self.__mod_manager_dropdown.currentIndex() - 1
+            ]()
+        else:
+            self.__cur_mod_manager = None
+
+        self.__modinstance_dropdown.clear()
+        self.__modinstance_dropdown.addItem(self.tr("Please select..."))
+        if self.__cur_mod_manager:
+            instances = self.__cur_mod_manager.get_instances()
+            self.__modinstance_dropdown.addItems(instances)
+
+        self.__modinstance_dropdown.setEnabled(bool(self.__cur_mod_manager))
+        self.__modinstance_dropdown.setCurrentIndex(0)
+
+    def __on_modinstance_select(self, modinstance: str) -> None:
+        if modinstance != self.tr("Please select..."):
+            self.__cur_modinstance_name = modinstance
+            self.__instance_path_entry.setEnabled(modinstance == "Portable")
+        else:
+            self.__cur_modinstance_name = None
+            self.__instance_path_entry.setDisabled(True)
+
+        self.__instance_profile_dropdown.clear()
+        if (
+            self.__cur_mod_manager is not None
+            and self.__cur_modinstance_name
+            and self.__cur_modinstance_name != "Portable"
+        ):
+            profiles = self.__cur_mod_manager.get_instance_profiles(
+                self.__cur_modinstance_name
+            )
+            self.__instance_profile_dropdown.addItems(profiles)
+            if "Default" in profiles:
+                self.__instance_profile_dropdown.setCurrentText("Default")
+            self.__instance_profile_label.setEnabled(len(profiles) > 1)
+            self.__instance_profile_dropdown.setEnabled(len(profiles) > 1)
+        else:
+            self.__instance_profile_label.setDisabled(True)
+            self.__instance_profile_dropdown.setDisabled(True)
+
+        self.__instance_path_label.setEnabled(modinstance == "Portable")
+        self.__instance_path_entry.setEnabled(modinstance == "Portable")
+        self.__instance_path_entry.clear()
+
+        self._validate()
+
+    def __on_path_change(self, new_path: str) -> None:
+        ini_path = Path(new_path) / "ModOrganizer.ini"
+
+        if ini_path.is_file():
+            profiles = ModOrganizer.get_profiles_from_ini(ini_path)
+
+        else:
+            profiles = []
+
+        self.__instance_profile_dropdown.clear()
+        self.__instance_profile_dropdown.addItems(profiles)
+        self.__instance_profile_dropdown.setEnabled(len(profiles) > 1)
+        self.__instance_profile_label.setEnabled(len(profiles) > 1)
+
+        self._validate()

@@ -5,13 +5,12 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import logging
+from typing import Optional
 
 import jstyleson as json
 import requests
 import semantic_version as semver
 from PySide6.QtCore import QObject
-
-from app import MainApp
 
 
 class Updater(QObject):
@@ -22,19 +21,18 @@ class Updater(QObject):
     repo_name = "SSE-Auto-Translator"
     repo_owner = "Cutleast"
 
-    installed_version: semver.Version = None
-    latest_version: semver.Version = None
-    download_url: str = None
+    installed_version: semver.Version
+    latest_version: Optional[semver.Version] = None
+    download_url: str
 
     log = logging.getLogger("Updater")
 
-    def __init__(self, app: MainApp):
+    def __init__(self, installed_version: str):
         super().__init__()
 
-        self.app = app
-        self.installed_version = semver.Version(self.app.version)
+        self.installed_version = semver.Version(installed_version)
 
-    def run(self):
+    def run(self) -> None:
         """
         Checks for updates and runs dialog.
         """
@@ -46,9 +44,9 @@ class Updater(QObject):
                 f"Update available: Installed: {self.installed_version} - Latest: {self.latest_version}"
             )
 
-            from ...ui.widgets.updater_dialog import UpdaterDialog
+            from ui.widgets.updater_dialog import UpdaterDialog
 
-            UpdaterDialog(self.app, self)
+            UpdaterDialog(self)
         else:
             self.log.info("No update available.")
 
@@ -64,9 +62,10 @@ class Updater(QObject):
         if self.latest_version is None:
             return False
 
-        return self.installed_version < self.latest_version
+        update_available: bool = self.installed_version < self.latest_version
+        return update_available
 
-    def request_update(self):
+    def request_update(self) -> None:
         """
         Requests latest available version and download url
         from GitHub repository.
@@ -96,7 +95,7 @@ class Updater(QObject):
             self.log.error(f"Failed to request update: {ex}")
             self.log.debug(f"Request URL: {url}")
 
-    def get_changelog(self):
+    def get_changelog(self) -> str:
         """
         Gets changelog from repository.
 

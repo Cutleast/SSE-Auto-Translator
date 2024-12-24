@@ -5,14 +5,16 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import logging
-import os
 from pathlib import Path
+from typing import Any, Optional
 
 import plyvel as ldb
 
+from core.mod_instance.mod import Mod
+from core.mod_instance.mod_instance import ModInstance
+from core.mod_instance.plugin import Plugin
+from core.utilities.env_resolver import resolve
 from core.utilities.leveldb import LevelDB
-from core.utilities.mod import Mod
-from core.utilities.plugin import Plugin
 
 from .mod_manager import ModManager
 
@@ -24,17 +26,17 @@ class Vortex(ModManager):
 
     name = "Vortex"
 
-    rules: dict[str, list[dict]] = None
-    mods: dict[str, Mod] = None
+    rules: Optional[dict[str, list[dict[str, Any]]]] = None
+    mods: Optional[dict[str, Mod]] = None
 
     log = logging.getLogger("ModManager.Vortex")
 
-    def get_instances(self):
+    def get_instances(self) -> list[str]:
         self.log.info("Getting profiles...")
 
         instances: list[str] = []
 
-        appdata_path = Path(os.getenv("APPDATA")) / "Vortex"
+        appdata_path = resolve(Path("%APPDATA%") / "Vortex")
         database_path = appdata_path / "state.v2"
 
         if database_path.is_dir():
@@ -46,7 +48,7 @@ class Vortex(ModManager):
                 self.log.debug(ex, exc_info=ex)
                 raise Exception("Close Vortex and try again!")
 
-            profiles: dict[str, dict] = data["persistent"]["profiles"]
+            profiles: dict[str, dict[str, Any]] = data["persistent"]["profiles"]
 
             for profile_id, profile_data in profiles.items():
                 profile_name: str = profile_data["name"]
@@ -64,17 +66,24 @@ class Vortex(ModManager):
 
         return instances
 
-    def get_instance_profiles(self, instance_name: str):
+    def get_instance_profiles(
+        self, instance_name: str, instance_path: Path | None = None
+    ) -> list[str]:
         # Do not return anything because Vortex instances (profiles) don't
         # have "subprofiles" like MO2 instances
         return []
 
-    def get_modlist(self, instance_name: str, instance_profile: str | None = None):
+    def load_mod_instance(
+        self,
+        instance_name: str,
+        instance_profile: str | None = None,
+        instance_path: Path | None = None,
+    ) -> ModInstance:
         self.log.info(f"Getting mods from {instance_name!r}...")
 
         mods: list[Mod] = []
 
-        appdata_path = Path(os.getenv("APPDATA")) / "Vortex"
+        appdata_path = resolve(Path("%APPDATA%") / "Vortex")
         database_path = appdata_path / "state.v2"
 
         profile_id = instance_name.rsplit("(", 1)[1].removesuffix(")")
@@ -83,9 +92,9 @@ class Vortex(ModManager):
             leveldb = LevelDB(database_path)
             data = leveldb.get_section("persistent###profiles###")
 
-            profiles: dict[str, dict] = data["persistent"]["profiles"]
+            profiles: dict[str, dict[str, Any]] = data["persistent"]["profiles"]
             profile_data = profiles[profile_id]
-            profile_mods: dict[str, dict] = profile_data["modState"]
+            profile_mods: dict[str, dict[str, Any]] = profile_data["modState"]
 
             modnames: list[str] = []
             for modname, moddata in profile_mods.items():
@@ -94,7 +103,9 @@ class Vortex(ModManager):
 
             data = leveldb.get_section("persistent###mods###skyrimse###")
 
-            installed_mods: dict[str, dict] = data["persistent"]["mods"]["skyrimse"]
+            installed_mods: dict[str, dict[str, Any]] = data["persistent"]["mods"][
+                "skyrimse"
+            ]
 
             staging_folder = leveldb.get_key("settings###mods###installPath###skyrimse")
 
@@ -157,23 +168,25 @@ class Vortex(ModManager):
                     )
                     mods.append(mod)
 
-                    rules: list[dict] = moddata.get("rules", [])
+                    rules: list[dict[str, Any]] = moddata.get("rules", [])
                     self.rules[mod.name] = rules
                     self.mods[modname] = mod
 
         self.log.debug("Sorting modlist according to conflict rules...")
-
         sorted_list = self.sort_modlist(mods)
-
         self.log.debug("Sorting complete.")
 
         self.log.info(f"Got {len(sorted_list)} mod(s) from profile.")
 
-        return sorted_list
+        mod_instance = ModInstance(instance_name, sorted_list)
 
-    def sort_modlist(self, mods: list[Mod]):
+        return mod_instance
+
+    def sort_modlist(self, mods: list[Mod]) -> list[Mod]:
         """
         Sorts modlist according to conflict rules.
+
+        TODO: Overhaul this method
         """
 
         new_loadorder = mods.copy()
@@ -182,18 +195,18 @@ class Vortex(ModManager):
         overwriting_mods: dict[str, list[Mod]] = {}
 
         for mod in mods:
-            rules = self.rules[mod.name]
+            rules = self.rules[mod.name]  # type: ignore
 
             for rule in rules:
-                reference: dict = rule["reference"]
+                reference: dict[str, Any] = rule["reference"]
                 if "id" in reference:
                     ref_modname: str = reference["id"].strip()
                 elif "fileExpression" in reference:
-                    ref_modname: str = reference["fileExpression"].strip()
+                    ref_modname: str = reference["fileExpression"].strip()  # type: ignore
                 else:
                     continue
 
-                ref_mod = self.mods.get(ref_modname)
+                ref_mod = self.mods.get(ref_modname)  # type: ignore
 
                 if ref_mod:
                     ruletype = rule["type"]

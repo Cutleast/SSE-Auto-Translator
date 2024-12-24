@@ -8,6 +8,7 @@ import os
 
 from PySide6.QtGui import QFont
 from PySide6.QtWidgets import (
+    QApplication,
     QDialog,
     QHBoxLayout,
     QLabel,
@@ -16,8 +17,6 @@ from PySide6.QtWidgets import (
     QVBoxLayout,
 )
 
-from app import MainApp
-from core.utilities import apply_dark_title_bar
 from core.utilities.updater import Updater
 
 
@@ -26,29 +25,22 @@ class UpdaterDialog(QDialog):
     Class for updater dialog.
     """
 
-    def __init__(self, app: MainApp, updater: Updater):
-        super().__init__(app.root)
+    def __init__(self, updater: Updater):
+        super().__init__(QApplication.activeModalWidget())
 
-        self.app = app
         self.updater = updater
-
-        self.loc = app.loc
-        self.mloc = app.loc.updater
-        self.log = updater.log
-
-        apply_dark_title_bar(self)
 
         vlayout = QVBoxLayout()
         self.setLayout(vlayout)
 
-        title_label = QLabel(self.mloc.update_available)
+        title_label = QLabel(self.tr("An Update is available to download!"))
         title_label.setObjectName("title_label")
         vlayout.addWidget(title_label)
 
         version_label = QLabel(
             f"\
-{self.mloc.installed_version}: {updater.installed_version} \
-{self.mloc.latest_version}: {updater.latest_version}"
+{self.tr("Installed Version")}: {updater.installed_version} \
+{self.tr("Latest Version")}: {updater.latest_version}"
         )
         version_label.setObjectName("relevant_label")
         vlayout.addWidget(version_label)
@@ -61,13 +53,13 @@ class UpdaterDialog(QDialog):
         hlayout = QHBoxLayout()
         vlayout.addLayout(hlayout)
 
-        self.cancel_button = QPushButton(self.mloc.ignore_update)
+        self.cancel_button = QPushButton(self.tr("Ignore Update"))
         self.cancel_button.clicked.connect(self.accept)
         hlayout.addWidget(self.cancel_button)
 
         hlayout.addStretch()
 
-        download_button = QPushButton(self.mloc.download_update)
+        download_button = QPushButton(self.tr("Download Update"))
         download_button.clicked.connect(
             lambda: (
                 os.startfile(updater.download_url),

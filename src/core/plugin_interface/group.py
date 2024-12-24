@@ -2,13 +2,16 @@
 Copyright (c) Cutleast
 """
 
+from __future__ import annotations
+
 import logging
 from enum import IntEnum
-from io import BufferedReader, BytesIO
+from io import BytesIO
 
-from .datatypes import Flags, Hex, Integer
+from .datatypes import Hex, Integer
+from .flags import RecordFlags
 from .record import Record
-from .utilities import peek, prettyprint_object
+from .utilities import Stream, peek, prettyprint_object
 
 log = logging.getLogger("PluginParser.Group")
 
@@ -20,14 +23,14 @@ class Group:
 
     type: str
     group_size: int
-    label: bytes | str | int
+    label: str
     group_type: int
     timestamp: int
     version_control_info: int
     unknown: int
     data: bytes
 
-    children: list
+    children: list[Group | Record]
 
     class GroupType(IntEnum):
         """
@@ -48,10 +51,10 @@ class Group:
     def __repr__(self) -> str:
         return prettyprint_object(self)
 
-    def __len__(self):
+    def __len__(self) -> int:
         return len(self.dump())
 
-    def parse(self, stream: BufferedReader, header_flags: Flags):
+    def parse(self, stream: Stream, header_flags: RecordFlags) -> None:
         self.type = stream.read(4).decode()
         self.group_size = Integer.parse(stream, Integer.IntType.UInt32)
         label = stream.read(4)
@@ -119,13 +122,14 @@ class Group:
                 log.warning(f"Unknown Group Type: {self.group_type}")
                 raise Exception(f"Unknown Group Type: {self.group_type}")
 
-    def parse_records(self, stream: BytesIO, header_flags: Flags):
+    def parse_records(self, stream: Stream, header_flags: RecordFlags) -> None:
         self.children = []
 
         while child_type := peek(stream, 4):
-            child_type = child_type.decode()
+            child_type_name = child_type.decode()
 
-            if child_type == "GRUP":
+            child: Group | Record
+            if child_type_name == "GRUP":
                 child = Group()
             else:
                 child = Record()
@@ -161,7 +165,8 @@ class Group:
                 data += Hex.dump(self.parent_cell)
 
             case (
-                Group.GroupType.ExteriorCellBlock | Group.GroupType.ExteriorCellSubBlock
+                Group.GroupType.ExteriorCellBlock
+                | Group.GroupType.ExteriorCellSubBlock
             ):
                 data += Integer.dump(self.grid[0], Integer.IntType.Int16)  # Y
                 data += Integer.dump(self.grid[1], Integer.IntType.Int16)  # X

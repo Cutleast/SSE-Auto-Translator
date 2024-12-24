@@ -4,10 +4,10 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+from typing import Optional
+
 import deepl
 import googletrans
-
-from app import MainApp
 
 from .translator import Translator
 
@@ -26,15 +26,19 @@ class DeepLTranslator(Translator):
         "chinese": "ZH",
     }
 
-    def __init__(self, app: MainApp):
-        super().__init__(app)
+    glossary_id: Optional[str]
+    glossary: Optional[deepl.GlossaryInfo]
 
-        self.api_key = app.translator_config["api_key"]
+    def __init__(self) -> None:
+        super().__init__()
 
-        self.translator = deepl.Translator(self.api_key)
+        if self.translator_config.api_key is None:
+            raise ValueError("DeepL API key is required")
 
-        # Todo: Load glossary from user config
-        self.glossary_id: str = None
+        self.translator = deepl.Translator(self.translator_config.api_key)
+
+        # TODO: Load glossary from user config
+        self.glossary_id = None
 
         if self.glossary_id is not None:
             self.glossary = self.translator.get_glossary(self.glossary_id)
@@ -64,13 +68,14 @@ class DeepLTranslator(Translator):
                 dst.lower(), googletrans.LANGCODES.get(dst.lower(), dst)
             )
 
+            result: deepl.TextResult
             if self.glossary is not None:
-                result: deepl.TextResult = self.translator.translate_text_with_glossary(
+                result = self.translator.translate_text_with_glossary(  # type: ignore[assignment]
                     text, self.glossary, dst_code
                 )
 
             else:
-                result: deepl.TextResult = self.translator.translate_text(
+                result = self.translator.translate_text(  # type: ignore[assignment]
                     text, source_lang=src_code, target_lang=dst_code
                 )
 

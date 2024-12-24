@@ -8,9 +8,11 @@ import logging
 import os
 from pathlib import Path
 
+from core.mod_instance.mod import Mod
+from core.mod_instance.mod_instance import ModInstance
+from core.mod_instance.plugin import Plugin
+from core.utilities.env_resolver import resolve
 from core.utilities.ini_parser import IniParser
-from core.utilities.mod import Mod
-from core.utilities.plugin import Plugin
 
 from .mod_manager import ModManager
 
@@ -24,12 +26,12 @@ class ModOrganizer(ModManager):
 
     log = logging.getLogger("ModManager.ModOrganizer")
 
-    def get_instances(self):
+    def get_instances(self) -> list[str]:
         self.log.info("Getting instances...")
 
         instances: list[str] = []
 
-        appdata_path = Path(os.getenv("LOCALAPPDATA")) / "ModOrganizer"
+        appdata_path = resolve(Path("%LOCALAPPDATA%") / "ModOrganizer")
 
         if appdata_path.is_dir():
             instance_inis = [
@@ -55,7 +57,12 @@ class ModOrganizer(ModManager):
 
         return instances
 
-    def get_modlist(self, instance_name: str, instance_profile: str | None = None):
+    def load_mod_instance(
+        self,
+        instance_name: str,
+        instance_profile: str | None = None,
+        instance_path: Path | None = None,
+    ) -> ModInstance:
         self.log.info(
             f"Getting mods from {instance_name!r} (Profile: {instance_profile!r})..."
         )
@@ -66,10 +73,12 @@ class ModOrganizer(ModManager):
             instance_profile = "Default"
 
         if instance_name == "Portable":
-            path_file = Path(".") / "data" / "user" / "portable.txt"
-            instance_ini_path = Path(path_file.read_text().strip()) / "ModOrganizer.ini"
+            if instance_path is None:
+                raise ValueError("instance_path is required for a portable instance!")
+
+            instance_ini_path = instance_path / "ModOrganizer.ini"
         else:
-            appdata_path = Path(os.getenv("LOCALAPPDATA")) / "ModOrganizer"
+            appdata_path = resolve(Path("%LOCALAPPDATA%") / "ModOrganizer")
             instance_ini_path = appdata_path / instance_name / "ModOrganizer.ini"
 
         parser = IniParser(instance_ini_path)
@@ -87,7 +96,9 @@ class ModOrganizer(ModManager):
 
         if "profiles_directory" in settings:
             prof_dir = (
-                Path(settings["profiles_directory"].replace("%BASE_DIR%", str(base_dir)))
+                Path(
+                    settings["profiles_directory"].replace("%BASE_DIR%", str(base_dir))
+                )
                 / instance_profile
             )
         else:
@@ -171,16 +182,26 @@ class ModOrganizer(ModManager):
 
         self.log.info(f"Got {len(mods)} mod(s) from instance.")
 
-        return mods
+        display_name: str = instance_name
+        if instance_profile != "Default":
+            display_name += f" > {instance_profile}"
 
-    def get_instance_profiles(self, instance_name: str) -> list[str]:
+        mod_instance = ModInstance(display_name=display_name, mods=mods)
+
+        return mod_instance
+
+    def get_instance_profiles(
+        self, instance_name: str, instance_path: Path | None = None
+    ) -> list[str]:
         self.log.info(f"Getting profiles from instance {instance_name!r}...")
 
         if instance_name == "Portable":
-            path_file = Path(".") / "data" / "user" / "portable.txt"
-            instance_ini_path = Path(path_file.read_text().strip()) / "ModOrganizer.ini"
+            if instance_path is None:
+                raise ValueError("instance_path is required for a portable instance!")
+
+            instance_ini_path = instance_path / "ModOrganizer.ini"
         else:
-            appdata_path = Path(os.getenv("LOCALAPPDATA")) / "ModOrganizer"
+            appdata_path = resolve(Path("%LOCALAPPDATA%") / "ModOrganizer")
             instance_ini_path = appdata_path / instance_name / "ModOrganizer.ini"
 
         profiles = ModOrganizer.get_profiles_from_ini(instance_ini_path)

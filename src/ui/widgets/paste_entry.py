@@ -4,6 +4,8 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+from typing import Any
+
 import pyperclip
 import qtawesome as qta
 from PySide6.QtWidgets import QApplication, QLineEdit
@@ -14,8 +16,8 @@ class PasteLineEdit(QLineEdit):
     LineEdit with paste button.
     """
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(self, *args: Any, **kwargs: dict[str, Any]):
+        super().__init__(*args, **kwargs)  # type: ignore[call-overload]
 
         self.paste_action = self.addAction(
             qta.icon("fa5s.paste", color="#ffffff"),

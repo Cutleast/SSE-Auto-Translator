@@ -16,7 +16,7 @@ class FileNameBlock:
 
     data_stream: BufferedReader
 
-    def parse(self, count: int):
+    def parse(self, count: int) -> "FileNameBlock":
         self.file_names = String.list(self.data_stream, count)
 
         return self

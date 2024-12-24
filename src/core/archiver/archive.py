@@ -6,11 +6,13 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 import logging
 import os
-import subprocess
+from abc import abstractmethod
 from fnmatch import fnmatch
 from pathlib import Path
+from typing import Optional
 
-from virtual_glob import InMemoryPath, glob
+from core.utilities.filesystem import glob
+from core.utilities.process_runner import run_process
 
 
 class Archive:
@@ -22,12 +24,13 @@ class Archive:
 
     log = logging.getLogger("Archiver")
 
-    __files: list[str] = None
+    __files: Optional[list[str]] = None
 
     def __init__(self, path: Path):
         self.path = path
 
     @property
+    @abstractmethod
     def files(self) -> list[str]:
         """
         Returns a list of filenames in archive.
@@ -42,7 +45,7 @@ class Archive:
 
         return self.files
 
-    def extract_all(self, dest: Path, full_paths: bool = True):
+    def extract_all(self, dest: Path, full_paths: bool = True) -> None:
         """
         Extracts all files to `dest`.
         """
@@ -56,24 +59,12 @@ class Archive:
             "-y",
         ]
 
-        with subprocess.Popen(
-            cmd,
-            shell=True,
-            stdin=subprocess.PIPE,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True,
-            encoding="utf8",
-            errors="ignore",
-        ) as process:
-            output = process.stderr.read()
-
-        if process.returncode:
-            self.log.debug(f"Command: {cmd}")
-            self.log.error(output)
+        try:
+            run_process(cmd)
+        except RuntimeError:
             raise Exception("Unpacking command failed!")
 
-    def extract(self, filename: str, dest: Path, full_paths: bool = True):
+    def extract(self, filename: str, dest: Path, full_paths: bool = True) -> None:
         """
         Extracts `filename` from archive to `dest`.
         """
@@ -89,24 +80,14 @@ class Archive:
             filename,
         ]
 
-        with subprocess.Popen(
-            cmd,
-            shell=True,
-            stdin=subprocess.PIPE,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True,
-            encoding="utf8",
-            errors="ignore",
-        ) as process:
-            output = process.stderr.read()
-
-        if process.returncode:
-            self.log.debug(f"Command: {cmd}")
-            self.log.error(output)
+        try:
+            run_process(cmd)
+        except RuntimeError:
             raise Exception("Unpacking command failed!")
 
-    def extract_files(self, filenames: list[str], dest: Path, full_paths: bool = True):
+    def extract_files(
+        self, filenames: list[str], dest: Path, full_paths: bool = True
+    ) -> None:
         """
         Extracts `filenames` from archive to `dest`.
         """
@@ -129,21 +110,9 @@ class Archive:
             file.write("\n".join(filenames))
         cmd.append(f"@{filenames_txt}")
 
-        with subprocess.Popen(
-            cmd,
-            shell=True,
-            stdin=subprocess.PIPE,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True,
-            encoding="utf8",
-            errors="ignore",
-        ) as process:
-            output = process.stderr.read()
-
-        if process.returncode:
-            self.log.debug(f"Command: {cmd}")
-            self.log.error(output)
+        try:
+            run_process(cmd)
+        except RuntimeError:
             raise Exception("Unpacking command failed!")
         else:
             os.remove(filenames_txt)
@@ -162,25 +131,19 @@ class Archive:
 
         return result
 
-    def glob(self, pattern: str) -> list[str]:
+    def glob(self, pattern: str, case_sensitive: bool = False) -> list[str]:
         """
-        Returns a list of file paths that
-        match the <pattern>.
+        Returns a list of file paths that match a specified glob pattern.
 
-        Parameters:
-            pattern: str, everything that fnmatch supports
+        Args:
+            pattern (str): Glob pattern.
+            case_sensitive (bool, optional): Case sensitive. Defaults to False.
 
         Returns:
-            list of matching filenames
+            list[str]: List of matching filenames
         """
 
-        # Workaround case-sensitivity
-        files: dict[str, str] = {file.lower(): file for file in self.files}
-
-        fs = InMemoryPath.from_list(list(files.keys()))
-        matches = [files[p.path] for p in glob(fs, pattern)]
-
-        return matches
+        return glob(pattern, self.files, case_sensitive)
 
     @staticmethod
     def load_archive(archive_path: Path) -> "Archive":

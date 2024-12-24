@@ -4,15 +4,14 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-import qtawesome as qta
-from PySide6.QtCore import QEvent, QObject, Qt
+from PySide6.QtCore import QEvent, QObject
+from PySide6.QtGui import QWheelEvent
 from PySide6.QtWidgets import (
     QCheckBox,
     QComboBox,
     QGroupBox,
     QHBoxLayout,
     QLabel,
-    QPushButton,
     QScrollArea,
     QVBoxLayout,
     QWidget,
@@ -20,180 +19,176 @@ from PySide6.QtWidgets import (
 
 from core.translation_provider.provider import Provider
 from core.utilities.constants import SUPPORTED_LANGS
+from ui.startup_dialog.page import Page
 from ui.widgets.api_setup import ApiSetup
 from ui.widgets.completion_box import CompletionBox
+from ui.widgets.smooth_scroll_area import SmoothScrollArea
 
-from .startup_dialog import StartupDialog
 
-
-class SetupPage(QWidget):
+class SetupPage(Page):
     """
     Second page. For setting up game language and API Key.
     """
 
-    def __init__(self, startup_dialog: StartupDialog):
-        super().__init__()
+    __lang_dropdown: CompletionBox
+    __source_label: QLabel
+    __source_dropdown: QComboBox
+    __masterlist_box: QCheckBox
+    __api_setup: ApiSetup
 
-        self.startup_dialog = startup_dialog
-        self.loc = startup_dialog.loc
-        self.mloc = startup_dialog.mloc
+    __interface_files_box: QCheckBox
+    __scripts_box: QCheckBox
+    __textures_box: QCheckBox
+    __sound_files_box: QCheckBox
 
-        self.setObjectName("primary")
-
-        vlayout = QVBoxLayout()
-        vlayout.setAlignment(Qt.AlignmentFlag.AlignTop)
-        self.setLayout(vlayout)
-
-        self.scroll_area = QScrollArea()
-        self.scroll_area.setWidgetResizable(True)
-        self.scroll_area.setObjectName("transparent")
-        vlayout.addWidget(self.scroll_area, 1)
+    def _init_form(self) -> None:
+        # TODO: Move the scroll area to the Page class
+        self.__scroll_area = SmoothScrollArea()
+        self.__scroll_area.setObjectName("transparent")
+        self._vlayout.addWidget(self.__scroll_area, 1)
         scroll_widget = QWidget()
         scroll_widget.setObjectName("transparent")
-        self.scroll_area.setWidget(scroll_widget)
-        slayout = QVBoxLayout()
-        scroll_widget.setLayout(slayout)
+        self.__scroll_area.setWidget(scroll_widget)
 
-        # Title label
-        title_label = QLabel(self.mloc.setup_title)
-        title_label.setAlignment(Qt.AlignmentFlag.AlignHCenter)
-        title_label.setObjectName("title_label")
-        slayout.addWidget(title_label, 0, Qt.AlignmentFlag.AlignHCenter)
-        slayout.addSpacing(25)
-
-        # Help label
-        help_label = QLabel(self.mloc.setup_help)
-        help_label.setWordWrap(True)
-        slayout.addWidget(help_label)
-
-        slayout.addSpacing(25)
+        vlayout = QVBoxLayout()
+        scroll_widget.setLayout(vlayout)
 
         # Language
         hlayout = QHBoxLayout()
-        slayout.addLayout(hlayout)
+        vlayout.addLayout(hlayout)
 
-        lang_label = QLabel(self.mloc.choose_lang)
+        lang_label = QLabel(self.tr("Choose Game Language:"))
         hlayout.addWidget(lang_label)
-        self.lang_box = CompletionBox()
-        self.lang_box.installEventFilter(self)
-        self.lang_box.setPlaceholderText(self.loc.main.please_select)
+        self.__lang_dropdown = CompletionBox()
+        self.__lang_dropdown.installEventFilter(self)
+        self.__lang_dropdown.setPlaceholderText(self.tr("Please select..."))
         lang_items = [lang[0].capitalize() for lang in SUPPORTED_LANGS]
-        self.lang_box.addItems(lang_items)
-        hlayout.addWidget(self.lang_box)
+        self.__lang_dropdown.addItems(lang_items)
+        hlayout.addWidget(self.__lang_dropdown)
 
-        slayout.addSpacing(10)
+        vlayout.addSpacing(10)
 
         # Source
         hlayout = QHBoxLayout()
-        slayout.addLayout(hlayout)
+        vlayout.addLayout(hlayout)
 
-        source_label = QLabel(self.loc.main.source)
-        source_label.setDisabled(True)
-        hlayout.addWidget(source_label)
-        self.source_dropdown = QComboBox()
-        self.source_dropdown.installEventFilter(self)
-        self.source_dropdown.setDisabled(True)
-        self.source_dropdown.setEditable(False)
-        self.source_dropdown.addItems(Provider.Preference._member_names_)
-        self.source_dropdown.setCurrentText(Provider.Preference.OnlyNexusMods.name)
-
-        def on_lang_change(lang: str):
-            source_label.setEnabled(lang == "French")
-            self.source_dropdown.setEnabled(lang == "French")
-
-            if lang == "French":
-                self.source_dropdown.setCurrentText(
-                    Provider.Preference.PreferNexusMods.name
-                )
-            else:
-                self.source_dropdown.setCurrentText(
-                    Provider.Preference.OnlyNexusMods.name
-                )
-
-        self.lang_box.currentTextChanged.connect(on_lang_change)
-        hlayout.addWidget(self.source_dropdown)
+        self.__source_label = QLabel(self.tr("Source"))
+        self.__source_label.setDisabled(True)
+        hlayout.addWidget(self.__source_label)
+        self.__source_dropdown = QComboBox()
+        self.__source_dropdown.installEventFilter(self)
+        self.__source_dropdown.setDisabled(True)
+        self.__source_dropdown.setEditable(False)
+        self.__source_dropdown.addItems(Provider.Preference._member_names_)
+        self.__source_dropdown.setCurrentText(Provider.Preference.OnlyNexusMods.name)
+        self.__lang_dropdown.currentTextChanged.connect(self.__on_lang_change)
+        hlayout.addWidget(self.__source_dropdown)
 
         # Masterlist
-        self.masterlist_box = QCheckBox(self.loc.settings.use_masterlist)
-        self.masterlist_box.setChecked(True)
-        slayout.addWidget(self.masterlist_box)
+        self.__masterlist_box = QCheckBox(
+            self.tr("Use global Masterlist from GitHub Repository (recommended)")
+        )
+        self.__masterlist_box.setChecked(True)
+        vlayout.addWidget(self.__masterlist_box)
 
-        slayout.addSpacing(5)
+        vlayout.addSpacing(5)
 
         # Enabled File Types
-        filetypes_groupbox = QGroupBox(self.loc.settings.enabled_file_types)
-        slayout.addWidget(filetypes_groupbox)
+        filetypes_groupbox = QGroupBox(self.tr("Enabled File Types"))
+        vlayout.addWidget(filetypes_groupbox)
         filetypes_vlayout = QVBoxLayout()
         filetypes_groupbox.setLayout(filetypes_vlayout)
 
-        self.enable_interface_files_box = QCheckBox(
-            self.loc.settings.enable_interface_files
+        self.__interface_files_box = QCheckBox(
+            self.tr("Enable Interface Files (Data/Interface/*.txt)")
         )
-        self.enable_interface_files_box.setChecked(True)
-        filetypes_vlayout.addWidget(self.enable_interface_files_box)
+        self.__interface_files_box.setChecked(True)
+        filetypes_vlayout.addWidget(self.__interface_files_box)
 
-        self.enable_scripts_box = QCheckBox(
-            self.loc.settings.enable_scripts + " [EXPERIMENTAL]"
+        self.__scripts_box = QCheckBox(
+            self.tr("Enable Papyrus Scripts (Data/Scripts/*.pex)")
+            + " "
+            + self.tr("[EXPERIMENTAL]")
         )
-        self.enable_scripts_box.setChecked(False)
-        filetypes_vlayout.addWidget(self.enable_scripts_box)
+        self.__scripts_box.setChecked(False)
+        filetypes_vlayout.addWidget(self.__scripts_box)
 
-        self.enable_textures_box = QCheckBox(
-            self.loc.settings.enable_textures + " [EXPERIMENTAL]"
+        self.__textures_box = QCheckBox(
+            self.tr("Enable Textures (Data/Textures/*)")
+            + " "
+            + self.tr("[EXPERIMENTAL]")
         )
-        self.enable_textures_box.setChecked(False)
-        filetypes_vlayout.addWidget(self.enable_textures_box)
+        self.__textures_box.setChecked(False)
+        filetypes_vlayout.addWidget(self.__textures_box)
 
-        self.enable_sound_files_box = QCheckBox(
-            self.loc.settings.enable_sound_files + " [EXPERIMENTAL]"
+        self.__sound_files_box = QCheckBox(
+            self.tr("Enable Sound Files (Data/Sound/*)")
+            + " "
+            + self.tr("[EXPERIMENTAL]")
         )
-        self.enable_sound_files_box.setChecked(False)
-        filetypes_vlayout.addWidget(self.enable_sound_files_box)
+        self.__sound_files_box.setChecked(False)
+        filetypes_vlayout.addWidget(self.__sound_files_box)
 
-        slayout.addSpacing(5)
+        vlayout.addSpacing(5)
 
         # API Setup Widget
-        api_groupbox = QGroupBox(self.loc.settings.nm_api_key)
-        slayout.addWidget(api_groupbox)
+        api_groupbox = QGroupBox(self.tr("Nexus Mods API Key"))
+        vlayout.addWidget(api_groupbox)
         api_vlayout = QVBoxLayout()
         api_groupbox.setLayout(api_vlayout)
-        self.api_setup = ApiSetup(self.startup_dialog.app)
-        api_vlayout.addWidget(self.api_setup)
+        self.__api_setup = ApiSetup()
+        api_vlayout.addWidget(self.__api_setup)
 
-        # Back and Next Button
-        vlayout.addStretch()
-        hlayout = QHBoxLayout()
-        vlayout.addLayout(hlayout)
+        self.__lang_dropdown.currentTextChanged.connect(lambda _: self._validate())
+        self.__api_setup.valid_signal.connect(lambda _: self._validate())
 
-        self.back_button = QPushButton()
-        self.back_button.setIcon(qta.icon("fa5s.chevron-left", color="#ffffff"))
-        self.back_button.setText(self.loc.main.back)
-        self.back_button.clicked.connect(self.startup_dialog.page_widget.slideInPrev)
-        hlayout.addWidget(self.back_button, 0, Qt.AlignmentFlag.AlignLeft)
+    def _get_title(self) -> str:
+        return self.tr("Initial Setup")
 
-        hlayout.addStretch()
+    def _get_description(self) -> str:
+        return self.tr("On this page you setup basic settings.")
 
-        self.next_button = QPushButton()
-        self.next_button.setDisabled(True)
-        self.next_button.setIcon(qta.icon("fa5s.chevron-right", color="#ffffff"))
-        self.next_button.setText(self.loc.main.next)
-        self.next_button.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
-        self.next_button.clicked.connect(self.startup_dialog.page_widget.slideInNext)
-        hlayout.addWidget(self.next_button)
+    def __on_lang_change(self, lang: str) -> None:
+        self.__source_label.setEnabled(lang == "French")
+        self.__source_dropdown.setEnabled(lang == "French")
 
-        def validate():
-            self.next_button.setEnabled(
-                self.lang_box.currentText() != self.loc.main.please_select
-                and self.lang_box.currentText() in lang_items
-                and self.api_setup.is_valid
+        if lang == "French":
+            self.__source_dropdown.setCurrentText(
+                Provider.Preference.PreferNexusMods.name
+            )
+        else:
+            self.__source_dropdown.setCurrentText(
+                Provider.Preference.OnlyNexusMods.name
             )
 
-        self.lang_box.currentTextChanged.connect(lambda _: validate())
-        self.api_setup.valid_signal.connect(lambda _: validate())
-    
-    def eventFilter(self, source: QObject, event: QEvent):
-        if event.type() == QEvent.Type.Wheel and isinstance(source, QComboBox):
-            self.scroll_area.wheelEvent(event)
+    def _validate(self) -> None:
+        lang_items: list[str] = [lang[0].capitalize() for lang in SUPPORTED_LANGS]
+
+        self.valid_signal.emit(
+            self.__lang_dropdown.currentIndex() != 0
+            and self.__lang_dropdown.currentText() in lang_items
+            and self.__api_setup.is_valid
+        )
+
+    def get_values(self) -> tuple[str, str, str, bool, bool, bool, bool, bool]:
+        return (
+            self.__lang_dropdown.currentText(),
+            self.__source_dropdown.currentText(),
+            self.__api_setup.api_key or "",
+            self.__masterlist_box.isChecked(),
+            self.__interface_files_box.isChecked(),
+            self.__scripts_box.isChecked(),
+            self.__textures_box.isChecked(),
+            self.__sound_files_box.isChecked(),
+        )
+
+    def eventFilter(self, source: QObject, event: QEvent) -> bool:
+        if (
+            event.type() == QEvent.Type.Wheel
+            and isinstance(source, QComboBox)
+            and isinstance(event, QWheelEvent)
+        ):
+            self.__scroll_area.wheelEvent(event)
             return True
 
         return super().eventFilter(source, event)

@@ -4,6 +4,8 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+from typing import Any
+
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QIcon, QKeySequence, QPixmap
 from PySide6.QtWidgets import QApplication, QHBoxLayout, QLabel, QPushButton, QWidget
@@ -14,8 +16,8 @@ class ShortcutButton(QPushButton):
     Adapted QPushButton that automatically displays set shortcuts.
     """
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(self, *args: Any, **kwargs: dict[str, Any]) -> None:
+        super().__init__(*args, **kwargs)  # type: ignore[call-overload]
 
         hlayout = QHBoxLayout()
         hlayout.setContentsMargins(7, 0, 7, 0)
@@ -41,7 +43,7 @@ class ShortcutButton(QPushButton):
         # Set minimum width
         self.updateSizeHint()
 
-    def updateSizeHint(self):
+    def updateSizeHint(self) -> None:
         padding = 20
 
         label_width = self.__label.sizeHint().width()
@@ -55,7 +57,7 @@ class ShortcutButton(QPushButton):
 
         self.setMinimumWidth(combined_width)
 
-    def setShortcut(self, shortcut):
+    def setShortcut(self, shortcut: QKeySequence) -> None:  # type: ignore[override]
         super().setShortcut(shortcut)
 
         key = self.shortcut().toString()
@@ -67,13 +69,16 @@ class ShortcutButton(QPushButton):
 
         self.updateSizeHint()
 
-    def setText(self, text: str):
+    def setText(self, text: str) -> None:
         self.__label.setText(text)
 
         self.updateSizeHint()
 
-    def setIcon(self, icon: QIcon | QPixmap):
-        self.__icon_label.setPixmap(icon.pixmap(self.iconSize()))
+    def setIcon(self, icon: QIcon | QPixmap) -> None:
+        if isinstance(icon, QPixmap):
+            self.__icon_label.setPixmap(icon)
+        else:
+            self.__icon_label.setPixmap(icon.pixmap(self.iconSize()))
         self.__icon_label.show()
 
         self.updateSizeHint()

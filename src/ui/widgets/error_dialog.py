@@ -4,13 +4,12 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+from typing import Optional
+
 import pyperclip as clipboard
 import qtawesome as qta
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QLabel, QMessageBox, QPushButton, QWidget
-
-from app import MainApp
-from core.utilities import apply_dark_title_bar
 
 
 class ErrorDialog(QMessageBox):
@@ -30,33 +29,26 @@ class ErrorDialog(QMessageBox):
 
     def __init__(
         self,
-        parent: QWidget,
-        app: MainApp,
+        parent: Optional[QWidget],
         title: str,
         text: str,
         details: str = "",
         yesno: bool = True,
     ):
         super().__init__(parent)
-        self.app = app
 
         # Basic configuration
         self.setWindowTitle(title)
         self.setIcon(QMessageBox.Icon.Critical)
         self.setText(text)
-        apply_dark_title_bar(self)
 
         # Show 'continue' and 'cancel' button
         if yesno:
             self.setStandardButtons(
                 QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No
             )
-            self.button(QMessageBox.StandardButton.Yes).setText(
-                self.app.loc.main._continue
-            )
-            self.button(QMessageBox.StandardButton.No).setText(
-                self.app.loc.main.exit
-            )
+            self.button(QMessageBox.StandardButton.Yes).setText(self.tr("Continue"))
+            self.button(QMessageBox.StandardButton.No).setText(self.tr("Exit"))
 
         # Only show 'ok' button
         else:
@@ -65,7 +57,7 @@ class ErrorDialog(QMessageBox):
         # Add details button if details are given
         if details:
             self.details_button: QPushButton = self.addButton(
-                self.app.loc.main.show_details, QMessageBox.ButtonRole.AcceptRole
+                self.tr("Show details..."), QMessageBox.ButtonRole.AcceptRole
             )
             self.details_button.setIcon(qta.icon("fa5s.chevron-down", color="#ffffff"))
 
@@ -78,34 +70,36 @@ class ErrorDialog(QMessageBox):
             self.copy_button.clicked.connect(lambda: clipboard.copy(details))
 
             self._details = False
-            label: QLabel = self.findChild(QLabel)
+            label: Optional[QLabel] = self.findChild(QLabel)
 
-            def toggle_details():
+            def toggle_details() -> None:
                 # toggle details
                 if not self._details:
                     self._details = True
-                    self.details_button.setText(self.app.loc.main.hide_details)
+                    self.details_button.setText(self.tr("Hide details..."))
                     self.details_button.setIcon(
                         qta.icon("fa5s.chevron-up", color="#ffffff")
                     )
                     self.setInformativeText(
                         f"<font><p style='font-family: Consolas;font-size: 12px'>{details}</p>"
                     )
-                    label.setTextInteractionFlags(
-                        Qt.TextInteractionFlag.TextSelectableByMouse
-                    )
-                    label.setCursor(Qt.CursorShape.IBeamCursor)
+                    if label is not None:
+                        label.setTextInteractionFlags(
+                            Qt.TextInteractionFlag.TextSelectableByMouse
+                        )
+                        label.setCursor(Qt.CursorShape.IBeamCursor)
                 else:
                     self._details = False
-                    self.details_button.setText(self.app.loc.main.show_details)
+                    self.details_button.setText(self.tr("Show details..."))
                     self.details_button.setIcon(
                         qta.icon("fa5s.chevron-down", color="#ffffff")
                     )
                     self.setInformativeText("")
-                    label.setTextInteractionFlags(
-                        Qt.TextInteractionFlag.NoTextInteraction
-                    )
-                    label.setCursor(Qt.CursorShape.ArrowCursor)
+                    if label is not None:
+                        label.setTextInteractionFlags(
+                            Qt.TextInteractionFlag.NoTextInteraction
+                        )
+                        label.setCursor(Qt.CursorShape.ArrowCursor)
 
                 # update messagebox size
                 self.adjustSize()

@@ -2,87 +2,104 @@
 This file is part of SSE Auto Translator
 by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
+
+# TODO: Move this and DownloadListItem to their own module in ui.downloader
 """
 
 import logging
-import os
+from typing import Optional
 
 import qtawesome as qta
 from PySide6.QtCore import QEvent, QObject, Qt
-from PySide6.QtGui import QFont, QIcon
+from PySide6.QtGui import QIcon, QWheelEvent
 from PySide6.QtWidgets import (
     QComboBox,
+    QDialog,
     QHBoxLayout,
     QHeaderView,
     QLabel,
     QPushButton,
     QTreeWidget,
-    QTreeWidgetItem,
     QVBoxLayout,
     QWidget,
 )
 
-from app import MainApp
-from core.translation_provider.file_download import FileDownload
-from core.translation_provider.translation_download import TranslationDownload
-from core.utilities import apply_dark_title_bar
-from core.utilities.source import Source
+from app_context import AppContext
+from core.database.database import TranslationDatabase
+from core.downloader.download_manager import DownloadManager
+from core.downloader.file_download import FileDownload
+from core.downloader.translation_download import TranslationDownload
+from core.translation_provider.provider import Provider
+from core.utilities.container_utils import unique
 
 from .download_list_item import DownloadListItem
 from .loading_dialog import LoadingDialog
 
 
-class DownloadListDialog(QWidget):
+class DownloadListDialog(QDialog):
     """
     Dialog for download list for users that
     don't have Nexus Mods Premium.
     """
 
-    download_items: list[DownloadListItem] = None
+    log: logging.Logger = logging.getLogger("DownloadList")
 
-    log = logging.getLogger("DownloadList")
+    download_items: list[DownloadListItem]
+
+    provider: Provider
+    database: TranslationDatabase
+    download_manager: DownloadManager
 
     def __init__(
         self,
-        app: MainApp,
         translation_downloads: dict[str, list[TranslationDownload]],
         updates: bool = False,
+        parent: Optional[QWidget] = None,
     ):
-        super().__init__(app.root)
+        super().__init__(parent)
 
-        self.app = app
-        self.loc = app.loc
-        self.mloc = app.loc.database
+        self.provider = AppContext.get_app().provider
+        self.database = AppContext.get_app().database
+        self.download_manager = AppContext.get_app().download_manager
 
         self.translation_downloads = translation_downloads
         self.updates = updates
 
         self.setObjectName("root")
         self.setWindowFlags(Qt.WindowType.Window)
-        self.setWindowTitle(self.mloc.download_list_title)
+        self.setModal(False)
+        self.setWindowTitle(self.tr("Translation Downloads"))
         self.setMinimumSize(1400, 800)
-        apply_dark_title_bar(self)
 
         vlayout = QVBoxLayout()
         self.setLayout(vlayout)
 
-        title_label = QLabel(self.mloc.download_list_title)
+        title_label = QLabel(self.tr("Translation Downloads"))
         title_label.setObjectName("subtitle_label")
         vlayout.addWidget(title_label)
 
         hlayout = QHBoxLayout()
         vlayout.addLayout(hlayout)
 
-        help_label = QLabel(self.mloc.download_list_text)
+        help_label = QLabel(
+            self.tr(
+                "Below are the Translations that are required and available online. "
+                "Choose desired translations where appropiate and click "
+                'on "Download all".\n'
+                "If you don't have Nexus Mods Premium, make sure that SSE-AT "
+                "is linked to Mod Manager Downloads "
+                "(link button is in Translations panel)"
+            )
+        )
         help_label.setWordWrap(True)
         hlayout.addWidget(help_label, stretch=1)
 
-        self.download_all_button = QPushButton(self.mloc.download_all)
+        self.download_all_button = QPushButton(self.tr("Start all downloads"))
         self.download_all_button.setIcon(
             qta.icon("mdi.download-multiple", color="#000000")
         )
         self.download_all_button.setObjectName("accent_button")
-        self.download_all_button.clicked.connect(self.download_all)
+        self.download_all_button.clicked.connect(self.__download_all)
         hlayout.addWidget(self.download_all_button)
 
         self.list_widget = QTreeWidget()
@@ -95,15 +112,15 @@ class DownloadListDialog(QWidget):
         self.list_widget.setHeaderLabels(
             [
                 "",  # Modpage button for original mod
-                self.mloc.original,
-                self.mloc.choose_translation,
+                self.tr("Original"),
+                self.tr("Choose translation"),
                 "",  # Modpage button for translation mod
-                self.mloc.choose_file,
+                self.tr("Choose translation file"),
             ]
         )
         self.list_widget.setIndentation(0)
 
-        self.load_downloads()
+        self.__load_downloads()
 
         self.list_widget.header().setSectionResizeMode(
             0, QHeaderView.ResizeMode.ResizeToContents
@@ -118,24 +135,23 @@ class DownloadListDialog(QWidget):
         self.list_widget.header().resizeSection(4, 400)
         self.list_widget.header().setStretchLastSection(False)
 
-        self.show()
-
-    def load_downloads(self):
+    def __load_downloads(self) -> None:
         """
         Displays downloads in list with comboboxes.
         """
 
         self.download_items = []
 
-        for label, translation_downloads in self.translation_downloads.items():
-            item = DownloadListItem(self.app, label, translation_downloads)
+        for label, translation_download in self.translation_downloads.items():
+            item = DownloadListItem(label, translation_download)
             self.list_widget.addTopLevelItem(item)
 
+            # TODO: Move this part to DownloadListItem
             original_modpage_button = QPushButton()
-            original_modpage_button.setIcon(
-                QIcon(str(self.app.res_path / "icons" / "nexus_mods.svg"))
+            original_modpage_button.setIcon(QIcon(":/icons/nexus_mods.svg"))
+            original_modpage_button.setToolTip(
+                self.tr("Open mod page on Nexus Mods...")
             )
-            original_modpage_button.setToolTip(self.loc.main.open_on_nexusmods)
             self.list_widget.setItemWidget(item, 0, original_modpage_button)
 
             translation_combobox = QComboBox()
@@ -147,7 +163,9 @@ class DownloadListDialog(QWidget):
             translation_modpage_button.setIcon(
                 qta.icon("fa5s.external-link-alt", color="#ffffff")
             )
-            translation_modpage_button.setToolTip(self.loc.main.open_modpage)
+            translation_modpage_button.setToolTip(
+                self.tr("Open translation on Nexus Mods...")
+            )
             self.list_widget.setItemWidget(item, 3, translation_modpage_button)
 
             files_combobox = QComboBox()
@@ -171,16 +189,15 @@ class DownloadListDialog(QWidget):
         self.list_widget.resizeColumnToContents(2)
         self.list_widget.resizeColumnToContents(4)
 
-    def download_all(self):
+    def __download_all(self) -> None:
         """
         Closes dialog and starts all downloads.
         """
 
-        _queue: list[tuple] = []
         _downloads: list[FileDownload] = []
 
-        def process(ldialog: LoadingDialog):
-            ldialog.updateProgress(text1=self.loc.main.starting_downloads)
+        def process(ldialog: LoadingDialog) -> None:
+            ldialog.updateProgress(text1=self.tr("Starting downloads..."))
 
             for d, download_item in enumerate(self.download_items):
                 translation_download = download_item.translation_downloads[
@@ -191,111 +208,41 @@ class DownloadListDialog(QWidget):
                 ]
 
                 ldialog.updateProgress(
-                    text1=f"{self.loc.main.starting_downloads} {d}/{len(self.download_items)}",
+                    text1=f"{self.tr('Starting downloads...')} {d}/{len(self.download_items)}",
                     value1=d,
                     max1=len(self.download_items),
                     show2=True,
-                    text2=download.name,
+                    text2=download.display_name,
                 )
 
-                if (
-                    download.name,
-                    download.mod_id,
-                    download.file_id,
-                    download.source,
-                ) in _queue:
-                    continue
-                _queue.append(
-                    (download.name, download.mod_id, download.file_id, download.source)
-                )
-
-                download.direct_url = self.app.provider.get_direct_download_url(
-                    download.mod_id,
-                    download.file_id,
-                    source=translation_download.source,
-                )
                 _downloads.append(download)
 
                 if self.updates:
-                    old_translation = self.app.database.get_translation_by_plugin_name(
-                        translation_download.original_plugin.name
+                    old_translation = self.database.get_translation_by_plugin_name(
+                        translation_download.plugin_name
                     )
                     if old_translation is not None:
-                        self.app.database.delete_translation(old_translation)
+                        self.database.delete_translation(old_translation)
                         self.log.info("Deleted old Translation from Database.")
                     else:
                         self.log.warning(
                             "Old Translation could not be found in Database!"
                         )
 
-        loadingdialog = LoadingDialog(self, self.app, process)
-        loadingdialog.exec()
+        LoadingDialog.run_callable(self, process)
 
-        for download in _downloads:
-            if download.direct_url:
-                item = QTreeWidgetItem(
-                    [
-                        download.name,
-                        self.app.loc.main.waiting_for_download,
-                    ]
-                )
-            else:
-                item = QTreeWidgetItem([download.name, ""])
+        for download in unique(_downloads):
+            self.download_manager.request_download(download)
 
-            if download.source == Source.NexusMods:
-                item.setIcon(
-                    0, QIcon(str(self.app.res_path / "icons" / "nexus_mods.svg"))
-                )
-            else:
-                item.setIcon(0, QIcon(str(self.app.res_path / "icons" / "cdt.svg")))
-
-            item.setFont(1, QFont("Consolas"))
-            download.tree_item = item
-            self.app.mainpage_widget.database_widget.downloads_widget.downloads_widget.addTopLevelItem(
-                item
-            )
-
-            if download.direct_url:
-                self.app.mainpage_widget.database_widget.downloads_widget.queue.put(
-                    download
-                )
-
-            else:
-                download_button = QPushButton(self.mloc.download)
-
-                def get_func(mod_id: int, file_id: int, source: Source):
-                    def func():
-                        os.startfile(
-                            self.app.provider.get_modpage_link(
-                                mod_id, file_id, source, mod_manager=True
-                            )
-                        )
-
-                    return func
-
-                download_button.clicked.connect(
-                    get_func(download.mod_id, download.file_id, download.source)
-                )
-                self.app.mainpage_widget.database_widget.downloads_widget.downloads_widget.setItemWidget(
-                    item, 1, download_button
-                )
-                self.app.mainpage_widget.database_widget.downloads_widget.pending_non_prem_downloads[
-                    (download.mod_id, download.file_id)
-                ] = download
-
-        self.app.mainpage_widget.update_modlist()
-
-        if self.list_widget.topLevelItemCount():
-            self.app.mainpage_widget.database_widget.downloads_widget.queue_finished.connect(
-                self.app.mainpage_widget.database_widget.downloads_widget.all_finished
-            )
-
+        self.download_manager.start()
         self.close()
 
-        self.app.mainpage_widget.database_widget.setCurrentIndex(1)
-
-    def eventFilter(self, source: QObject, event: QEvent):
-        if event.type() == QEvent.Type.Wheel and isinstance(source, QComboBox):
+    def eventFilter(self, source: QObject, event: QEvent) -> bool:
+        if (
+            event.type() == QEvent.Type.Wheel
+            and isinstance(source, QComboBox)
+            and isinstance(event, QWheelEvent)
+        ):
             self.list_widget.wheelEvent(event)
             return True
 

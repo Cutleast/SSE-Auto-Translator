@@ -7,13 +7,14 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 import logging
 import platform
 from datetime import datetime
+from typing import Any, Optional
 
 import cloudscraper as cs
 import jstyleson as json
 import pytz
 import requests as req
 
-from app import MainApp
+from app_context import AppContext
 from core.cacher.cacher import Cacher
 
 
@@ -22,15 +23,8 @@ class CDTApi:
     Class for communication with Confrérie des Traducteurs API.
     """
 
-    user_agent = f"\
-{MainApp.name}/{MainApp.version} \
-(\
-{platform.system()} \
-{platform.version()}; \
-{platform.architecture()[0]}\
-)"
-
-    cacher: Cacher = None
+    user_agent: str
+    cacher: Cacher
 
     scraper: cs.CloudScraper = None
 
@@ -39,7 +33,14 @@ class CDTApi:
     def __init__(self, cacher: Cacher):
         self.cacher = cacher
 
-    def get_mod_details(self, nm_mod_id: int) -> dict | None:
+        self.user_agent = (
+            f"{AppContext.get_app_type().APP_NAME}/"
+            f"{AppContext.get_app_type().APP_VERSION} "
+            f"({platform.system()} {platform.version()}; "
+            f"{platform.architecture()[0]})"
+        )
+
+    def get_mod_details(self, nm_mod_id: int) -> Optional[dict[str, Any]]:
         """
         Requests details for translation for `nm_mod_id`
         and returns it as `dict`.
@@ -62,7 +63,7 @@ class CDTApi:
         """
 
         if not nm_mod_id:
-            return
+            return None
 
         url = f"https://www.confrerie-des-traducteurs.fr/api/skyrim/sse-at/{nm_mod_id}"
 
@@ -76,23 +77,26 @@ class CDTApi:
             self.log.debug(f"Got cached API response for {url!r}.")
 
         if res.status_code == 200:
-            data: dict = json.loads(res.content.decode())
+            data: dict[str, Any] = json.loads(res.content.decode())
         else:
             self.log.error(f"Request failed! Status code: {res.status_code}")
             self.log.debug(f"Request URL: {url}")
-            return
+            return None
 
         return data
 
-    def get_modname_of_id(self, nm_mod_id: int) -> str | None:
+    def get_modname_of_id(self, nm_mod_id: int) -> Optional[str]:
         """
         Gets modname for `nm_mod_id`.
         """
 
-        mod_details = self.get_mod_details(nm_mod_id)
+        mod_details: Optional[dict[str, Any]] = self.get_mod_details(nm_mod_id)
+        mod_name: Optional[str] = None
 
         if mod_details is not None:
-            return mod_details["FrenchName"]
+            mod_name = mod_details["FrenchName"]
+
+        return mod_name
 
     def has_translation(self, nm_mod_id: int) -> bool:
         """
@@ -103,12 +107,13 @@ class CDTApi:
 
         return mod_details is not None
 
-    def get_timestamp_of_file(self, nm_mod_id: int) -> int | None:
+    def get_timestamp_of_file(self, nm_mod_id: int) -> Optional[int]:
         """
         Gets upload timestamp (seconds since epoch) for `nm_mod_id`.
         """
 
-        mod_details = self.get_mod_details(nm_mod_id)
+        mod_details: Optional[dict[str, Any]] = self.get_mod_details(nm_mod_id)
+        timestamp: Optional[int] = None
 
         if mod_details is not None:
             upload_details = mod_details["LastArchiveUpdateDate"]
@@ -121,38 +126,47 @@ class CDTApi:
             )
             timestamp = int(date_obj_utc.timestamp())
 
-            return timestamp
+        return timestamp
 
-    def get_modpage_link(self, nm_mod_id: int) -> str | None:
+    def get_modpage_link(self, nm_mod_id: int) -> Optional[str]:
         """
         Returns modpage URL for translation for `nm_mod_id`.
         """
 
-        mod_details = self.get_mod_details(nm_mod_id)
+        mod_details: Optional[dict[str, Any]] = self.get_mod_details(nm_mod_id)
+        url: Optional[str] = None
 
         if mod_details is not None:
             dl_url: str = mod_details["DownloadLink"]
             cdt_id = dl_url.rsplit("/", 2)[1]
             url = f"https://www.confrerie-des-traducteurs.fr/skyrim/mods/{cdt_id}"
 
-            return url
+        return url
 
-    def get_download_link(self, nm_mod_id: int) -> str | None:
+    def get_download_link(self, nm_mod_id: int) -> Optional[str]:
         """
         Returns direct download URL for translation for `nm_mod_id`.
         """
 
-        mod_details = self.get_mod_details(nm_mod_id)
+        mod_details: Optional[dict[str, Any]] = self.get_mod_details(nm_mod_id)
+        url: Optional[str] = None
 
         if mod_details is not None:
-            return mod_details["DownloadLink"]
+            url = mod_details["DownloadLink"]
+        else:
+            raise FileNotFoundError(f"Translation for {nm_mod_id} not found!")
 
-    def get_filename_of_id(self, nm_mod_id: int) -> str | None:
+        return url
+
+    def get_filename_of_id(self, nm_mod_id: int) -> Optional[str]:
         """
         Gets filename for `nm_mod_id`.
         """
 
-        mod_details = self.get_mod_details(nm_mod_id)
+        mod_details: Optional[dict[str, Any]] = self.get_mod_details(nm_mod_id)
+        filename: Optional[str] = None
 
         if mod_details is not None:
-            return mod_details["Filename"]
+            filename = mod_details["Filename"]
+
+        return filename

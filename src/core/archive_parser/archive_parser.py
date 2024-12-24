@@ -4,6 +4,7 @@ Copyright (c) Cutleast
 
 from io import BufferedReader
 from pathlib import Path
+from typing import Optional
 
 from .archive import Archive
 
@@ -22,14 +23,14 @@ class ArchiveParser:
     - fileNameBlock
     """
 
-    archive_path: Path = None
-    archive_stream: BufferedReader = None
-    parsed_data: Archive = None
+    archive_path: Path
+    archive_stream: Optional[BufferedReader] = None
+    parsed_data: Optional[Archive] = None
 
     def __init__(self, archive_path: Path):
         self.archive_path = archive_path
 
-    def open_stream(self):
+    def open_stream(self) -> BufferedReader:
         """
         Opens file stream if not already open.
         """
@@ -37,7 +38,9 @@ class ArchiveParser:
         if self.archive_stream is None:
             self.archive_stream = open(self.archive_path, "rb")
 
-    def close_stream(self):
+        return self.archive_stream
+
+    def close_stream(self) -> None:
         """
         Closes file stream if opened.
         """
@@ -46,14 +49,13 @@ class ArchiveParser:
             self.archive_stream.close()
             self.archive_stream = None
 
-    def parse_archive(self):
+    def parse_archive(self) -> Archive:
         """
         Parses raw data and returns parsed
         Archive instance.
         """
 
-        self.open_stream()
-
-        self.parsed_data = Archive(self.archive_path, self.archive_stream).parse()
+        stream: BufferedReader = self.open_stream()
+        self.parsed_data = Archive(self.archive_path, stream).parse()
 
         return self.parsed_data

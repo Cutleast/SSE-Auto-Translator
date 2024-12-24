@@ -6,6 +6,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 import os
 from pathlib import Path
+from typing import Any
 
 
 class IniParser:
@@ -13,14 +14,13 @@ class IniParser:
     Parser for ini files. Supports loading, changing and saving.
     """
 
+    data: dict[str, Any]
+
     def __init__(self, filename: str | Path):
         self.filename = Path(filename)
         self.data = {}
 
-    def __repr__(self):
-        return "IniParser"
-
-    def save_file(self):
+    def save_file(self) -> None:
         """
         Saves data to file.
         """
@@ -37,7 +37,7 @@ class IniParser:
         with open(self.filename, "w", encoding="utf8") as file:
             file.writelines(lines)
 
-    def load_file(self):
+    def load_file(self) -> dict[str, Any]:
         """
         Loads and parses data from file. Returns it as nested dict.
         """
@@ -45,7 +45,7 @@ class IniParser:
         with open(self.filename, "r", encoding="utf8") as file:
             lines = file.readlines()
 
-        data = {}
+        data: dict[str, Any] = {}
         cur_section = data
         for line in lines:
             line = line.strip()

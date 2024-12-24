@@ -6,9 +6,6 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 import googletrans
 from googletrans.client import Translated
-from PySide6.QtWidgets import QLabel
-
-from app import MainApp
 
 from .translator import Translator
 
@@ -26,8 +23,8 @@ class GoogleTranslator(Translator):
         "chinese": "zh-cn",
     }
 
-    def __init__(self, app: MainApp):
-        super().__init__(app)
+    def __init__(self) -> None:
+        super().__init__()
 
         self.translator = googletrans.Translator()
 
@@ -75,6 +72,3 @@ class GoogleTranslator(Translator):
             self.cache[text] = self.translator.translate(text, dst_code, src_code).text
 
         return self.cache[text]
-
-    def get_settings_widget(self):
-        return QLabel(self.app.loc.settings.no_config_required)

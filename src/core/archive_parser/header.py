@@ -26,7 +26,7 @@ class Header:
         0x40: "Xbox360 archive",
         0x80: "Retain Strings During Startup",
         0x100: "Embed File Names",
-        0x200: "XMem Codec"
+        0x200: "XMem Codec",
     }
 
     FILE_FLAGS = {
@@ -38,10 +38,10 @@ class Header:
         0x20: "Shaders",
         0x40: "Tress",
         0x80: "Fonts",
-        0x100: "Miscellaneous"
+        0x100: "Miscellaneous",
     }
 
-    def parse(self):
+    def parse(self) -> "Header":
         self.file_id = String._char(self.data_stream, 4)
         self.version = Integer.ulong(self.data_stream)
         self.offset = Integer.ulong(self.data_stream)
@@ -54,4 +54,3 @@ class Header:
         self.padding = Integer.ushort(self.data_stream)
 
         return self
-

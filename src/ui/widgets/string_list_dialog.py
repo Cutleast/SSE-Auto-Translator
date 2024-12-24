@@ -5,6 +5,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import logging
+from typing import Callable, Optional
 
 import pyperclip
 import qtawesome as qta
@@ -14,7 +15,6 @@ from PySide6.QtWidgets import (
     QCheckBox,
     QDialog,
     QHBoxLayout,
-    QMenu,
     QPlainTextEdit,
     QToolBar,
     QTreeView,
@@ -25,10 +25,10 @@ from PySide6.QtWidgets import (
     QWidgetAction,
 )
 
-from core.utilities import apply_dark_title_bar, trim_string
-from core.utilities.localisation import Localisator
-from core.utilities.string import String
+from core.database.string import String
+from core.utilities import matches_filter, trim_string
 
+from .menu import Menu
 from .search_bar import SearchBar
 
 
@@ -41,15 +41,12 @@ class StringListDialog(QWidget):
 
     def __init__(
         self,
-        app,
         name: str,
         strings: list[String] | dict[str, list[String]],
         show_translation: bool = False,
     ):
         super().__init__()
 
-        self.app = app
-        self.loc: Localisator = app.loc
         self.name = name
         self.strings = strings
         self.nested = isinstance(strings, dict)
@@ -58,7 +55,6 @@ class StringListDialog(QWidget):
         self.setObjectName("root")
         self.setMinimumSize(1400, 800)
         self.setAttribute(Qt.WidgetAttribute.WA_DeleteOnClose)
-        apply_dark_title_bar(self)
 
         vlayout = QVBoxLayout()
         self.setLayout(vlayout)
@@ -73,10 +69,10 @@ class StringListDialog(QWidget):
         if show_translation:
             hlayout.addWidget(self.tool_bar)
 
-        filter_menu = QMenu()
+        filter_menu = Menu()
 
         self.filter_no_translation_required = QCheckBox(
-            self.loc.editor.filter_no_translation_required, filter_menu
+            self.tr("Show Strings that require no Translation"), filter_menu
         )
         self.filter_no_translation_required.setObjectName("menu_checkbox")
         self.filter_no_translation_required.setChecked(True)
@@ -88,7 +84,7 @@ class StringListDialog(QWidget):
         filter_menu.addAction(widget_action)
 
         self.filter_translation_complete = QCheckBox(
-            self.loc.editor.filter_translation_complete, filter_menu
+            self.tr("Show Strings with complete Translation"), filter_menu
         )
         self.filter_translation_complete.setObjectName("menu_checkbox")
         self.filter_translation_complete.setChecked(True)
@@ -100,7 +96,7 @@ class StringListDialog(QWidget):
         filter_menu.addAction(widget_action)
 
         self.filter_translation_incomplete = QCheckBox(
-            self.loc.editor.filter_translation_incomplete, filter_menu
+            self.tr("Show Strings with incomplete Translation"), filter_menu
         )
         self.filter_translation_incomplete.setObjectName("menu_checkbox")
         self.filter_translation_incomplete.setChecked(True)
@@ -112,7 +108,7 @@ class StringListDialog(QWidget):
         filter_menu.addAction(widget_action)
 
         self.filter_translation_required = QCheckBox(
-            self.loc.editor.filter_translation_required, filter_menu
+            self.tr("Show Strings that require a Translation"), filter_menu
         )
         self.filter_translation_required.setObjectName("menu_checkbox")
         self.filter_translation_required.setChecked(True)
@@ -125,7 +121,7 @@ class StringListDialog(QWidget):
 
         filter_action = self.tool_bar.addAction(
             qta.icon("mdi6.filter", color="#ffffff"),
-            self.loc.main.filter_options,
+            self.tr("Filter Options"),
         )
         filter_action.setMenu(filter_menu)
         filter_action.triggered.connect(
@@ -134,30 +130,28 @@ class StringListDialog(QWidget):
         self.tool_bar.addAction(filter_action)
 
         self.search_bar = SearchBar()
-        self.search_bar.setPlaceholderText(self.loc.main.search)
-        self.search_bar.cs_toggle.setToolTip(self.loc.main.case_sensitivity)
-        self.search_bar.textChanged.connect(lambda text: self.update_string_list())
+        self.search_bar.setPlaceholderText(self.tr("Search..."))
+        self.search_bar.searchChanged.connect(self.update_string_list)
         hlayout.addWidget(self.search_bar)
 
         self.strings_widget = QTreeWidget()
         self.strings_widget.setUniformRowHeights(True)
-        self.strings_widget.setContextMenuPolicy(
-            Qt.ContextMenuPolicy.CustomContextMenu
-        )
+        self.strings_widget.setContextMenuPolicy(Qt.ContextMenuPolicy.CustomContextMenu)
 
-        def on_context_menu(point: QPoint):
-            menu = QMenu()
+        # TODO: Refactor this
+        def on_context_menu(point: QPoint) -> None:
+            menu = Menu()
 
             selected_item = self.strings_widget.selectedItems()[0]
 
             if self.nested:
-                expand_all_action = menu.addAction(self.loc.main.expand_all)
+                expand_all_action = menu.addAction(self.tr("Expand all"))
                 expand_all_action.setIcon(
                     qta.icon("mdi6.arrow-expand-vertical", color="#ffffff")
                 )
                 expand_all_action.triggered.connect(self.strings_widget.expandAll)
 
-                collapse_all_action = menu.addAction(self.loc.main.collapse_all)
+                collapse_all_action = menu.addAction(self.tr("Collapse all"))
                 collapse_all_action.setIcon(
                     qta.icon("mdi6.arrow-collapse-vertical", color="#ffffff")
                 )
@@ -166,7 +160,7 @@ class StringListDialog(QWidget):
                 menu.addSeparator()
 
             if selected_item.isFirstColumnSpanned():
-                copy_plugin_name_action = menu.addAction(self.loc.main.copy_plugin_name)
+                copy_plugin_name_action = menu.addAction(self.tr("Copy plugin name"))
                 copy_plugin_name_action.setIcon(
                     qta.icon("mdi6.content-copy", color="#ffffff")
                 )
@@ -175,27 +169,32 @@ class StringListDialog(QWidget):
                 )
 
             else:
-                copy_menu = menu.addMenu(self.loc.main.copy)
+                copy_menu = menu.addMenu(self.tr("Copy"))
                 copy_menu.setIcon(qta.icon("mdi6.content-copy", color="#ffffff"))
 
-                copy_all_action = copy_menu.addAction(self.loc.main.copy)
+                copy_all_action = copy_menu.addAction(self.tr("Copy"))
                 copy_all_action.setShortcut(QKeySequence("Ctrl+C"))
                 copy_all_action.setIcon(qta.icon("mdi6.content-copy", color="#ffffff"))
                 copy_all_action.triggered.connect(self.copy_selected)
 
-                headers = ["type", "form_id", "editor_id", "string"]
+                headers = [
+                    self.tr("Type"),
+                    self.tr("Form ID"),
+                    self.tr("Editor ID"),
+                    self.tr("String"),
+                ]
                 if show_translation:
-                    headers.insert(-1, "original")
+                    headers.insert(-1, self.tr("Original"))
 
-                def get_func(c: int):
-                    def func():
+                def get_func(c: int) -> Callable[[], None]:
+                    def func() -> None:
                         self.copy_selected(c)
 
                     return func
 
                 for c, header in enumerate(headers):
                     copy_action = copy_menu.addAction(
-                        getattr(self.loc.main, f"copy_{header}", f"copy_{header}")
+                        self.tr("Copy {}").format(header),
                     )
                     copy_action.setIcon(qta.icon("mdi6.content-copy", color="#ffffff"))
                     copy_action.triggered.connect(get_func(c))
@@ -209,9 +208,7 @@ class StringListDialog(QWidget):
         self.strings_widget.header().setFirstSectionMovable(True)
         if not self.nested:
             self.strings_widget.setIndentation(0)
-        self.strings_widget.setSelectionMode(
-            QTreeView.SelectionMode.ExtendedSelection
-        )
+        self.strings_widget.setSelectionMode(QTreeView.SelectionMode.ExtendedSelection)
         self.strings_widget.setVerticalScrollBarPolicy(
             Qt.ScrollBarPolicy.ScrollBarAsNeeded
         )
@@ -225,20 +222,20 @@ class StringListDialog(QWidget):
         if show_translation:
             self.strings_widget.setHeaderLabels(
                 [
-                    self.loc.main.type,
-                    self.loc.main.form_id,
-                    self.loc.main.editor_id,
-                    self.loc.main.original,
-                    self.loc.main.string,
+                    self.tr("Type"),
+                    self.tr("Form ID"),
+                    self.tr("Editor ID"),
+                    self.tr("Original"),
+                    self.tr("String"),
                 ]
             )
         else:
             self.strings_widget.setHeaderLabels(
                 [
-                    self.loc.main.type,
-                    self.loc.main.form_id,
-                    self.loc.main.editor_id,
-                    self.loc.main.string,
+                    self.tr("Type"),
+                    self.tr("Form ID"),
+                    self.tr("Editor ID"),
+                    self.tr("String"),
                 ]
             )
 
@@ -247,11 +244,11 @@ class StringListDialog(QWidget):
 
         self.load_strings()
 
-    def load_strings(self):
+    def load_strings(self) -> None:
         self.strings_widget.clear()
         self.string_items: list[tuple[String, QTreeWidgetItem]] = []
 
-        def process_string(string: String):
+        def process_string(string: String) -> QTreeWidgetItem:
             if self.show_translation:
                 item = QTreeWidgetItem(
                     [
@@ -259,7 +256,7 @@ class StringListDialog(QWidget):
                         string.form_id if string.form_id is not None else "",
                         string.editor_id if string.editor_id is not None else "",
                         trim_string(string.original_string),
-                        trim_string(string.translated_string),
+                        trim_string(string.translated_string or string.original_string),
                     ]
                 )
 
@@ -269,7 +266,7 @@ class StringListDialog(QWidget):
                 if string.editor_id is not None:
                     item.setToolTip(2, string.editor_id)
                 item.setToolTip(3, string.original_string)
-                item.setToolTip(4, string.translated_string)
+                item.setToolTip(4, string.translated_string or string.original_string)
 
                 color = string.Status.get_color(string.status)
                 if color:
@@ -298,7 +295,7 @@ class StringListDialog(QWidget):
 
             return item
 
-        if self.nested:
+        if self.nested and isinstance(self.strings, dict):
             for section, strings in self.strings.items():
                 section_item = QTreeWidgetItem([section])
 
@@ -313,7 +310,7 @@ class StringListDialog(QWidget):
 
             if len(self.strings) == 1:
                 self.strings_widget.topLevelItem(0).setExpanded(True)
-        else:
+        elif isinstance(self.strings, list):
             for string in self.strings:
                 item = process_string(string)
 
@@ -330,15 +327,24 @@ class StringListDialog(QWidget):
         else:
             self.strings_widget.header().resizeSection(3, 600)
 
-        if len(self.string_items) > 1000:
-            self.search_bar.textChanged.disconnect()
-            self.search_bar.returnPressed.connect(self.update_string_list)
+        # if len(self.string_items) > 1000:
+        #     self.search_bar.textChanged.disconnect()
+        #     self.search_bar.returnPressed.connect(self.update_string_list)
+        self.search_bar.setLiveMode(len(self.string_items) > 1000)
 
         self.setWindowTitle(f"{self.name} - {len(self.string_items)} String(s)")
 
-    def update_string_list(self):
-        cur_search = self.search_bar.text()
-        case_sensitive = self.search_bar.cs_toggle.isChecked()
+    def update_string_list(
+        self, name_filter: Optional[tuple[str, bool]] = None
+    ) -> None:
+        cur_search: str = (
+            name_filter[0] if name_filter is not None else self.search_bar.text()
+        )
+        case_sensitive: bool = (
+            name_filter[1]
+            if name_filter is not None
+            else self.search_bar.getCaseSensitivity()
+        )
 
         for string, item in self.string_items:
             string_text = string.type + string.original_string
@@ -349,10 +355,7 @@ class StringListDialog(QWidget):
             if string.translated_string is not None:
                 string_text += string.translated_string
 
-            if case_sensitive:
-                string_visible = cur_search in string_text
-            else:
-                string_visible = cur_search.lower() in string_text.lower()
+            string_visible = matches_filter(string_text, cur_search, case_sensitive)
 
             if string_visible:
                 match string.status:
@@ -387,7 +390,7 @@ class StringListDialog(QWidget):
                 QTreeWidget.ScrollHint.PositionAtCenter,
             )
 
-    def show_string(self, item: QTreeWidgetItem, column: int):
+    def show_string(self, item: QTreeWidgetItem, column: int) -> None:
         """
         Shows `string` in a separate text box window.
         """
@@ -404,7 +407,6 @@ class StringListDialog(QWidget):
         else:
             dialog.setWindowTitle(f"{form_id} ({type})")
         dialog.setMinimumSize(800, 500)
-        apply_dark_title_bar(dialog)
 
         vlayout = QVBoxLayout()
         dialog.setLayout(vlayout)
@@ -412,16 +414,14 @@ class StringListDialog(QWidget):
         textbox = QPlainTextEdit()
         textbox.setReadOnly(True)
         textbox.setPlainText(item.toolTip(column))
-        textbox.setTextInteractionFlags(
-            Qt.TextInteractionFlag.TextSelectableByMouse
-        )
+        textbox.setTextInteractionFlags(Qt.TextInteractionFlag.TextSelectableByMouse)
         textbox.setCursor(Qt.CursorShape.IBeamCursor)
         textbox.setFocus()
         vlayout.addWidget(textbox)
 
         dialog.exec()
 
-    def copy_selected(self, column: int | None = None):
+    def copy_selected(self, column: int | None = None) -> None:
         """
         Copies current selected strings to clipboard.
         """

@@ -4,6 +4,8 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+from typing import Optional
+
 from PySide6.QtWidgets import (
     QDialog,
     QHBoxLayout,
@@ -15,8 +17,6 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from core.utilities import apply_dark_title_bar
-from core.utilities.localisation import Localisator
 from ui.widgets.search_bar import SearchBar
 
 
@@ -26,35 +26,37 @@ class BlacklistDialog(QDialog):
     to exclude translations from authors on this list.
     """
 
-    def __init__(
-        self,
-        parent: QWidget,
-        author_blacklist: list[str],
-        loc: Localisator,
-    ):
+    blacklist: list[str]
+
+    def __init__(self, parent: Optional[QWidget], author_blacklist: list[str]):
         super().__init__(parent)
 
         self.blacklist = author_blacklist
-        self.loc = loc
-        self.mloc = loc.blacklist
 
-        self.setWindowTitle(self.mloc.blacklist)
+        self.setWindowTitle(self.tr("Blacklist for Translation Authors"))
         self.resize(500, 700)
 
         vlayout = QVBoxLayout()
         self.setLayout(vlayout)
 
-        info_label = QLabel(self.mloc.info)
+        info_label = QLabel(
+            self.tr(
+                "This is a blacklist to exclude translations from certain authors.\n"
+                "All translations from authors on this list below (case-insensitive) "
+                "are ignored and do not show up when scanning online.\n"
+                "This list only affects translations from Nexus Mods!"
+            )
+        )
         info_label.setWordWrap(True)
         vlayout.addWidget(info_label)
 
         hlayout = QHBoxLayout()
         vlayout.addLayout(hlayout)
 
-        remove_button = QPushButton(self.loc.main.remove_selected)
+        remove_button = QPushButton(self.tr("Remove selected authors from list..."))
         remove_button.setDisabled(True)
 
-        def remove_selected():
+        def remove_selected() -> None:
             items = blacklist_widget.selectedItems()
             entries = [item.text() for item in items]
 
@@ -67,20 +69,19 @@ class BlacklistDialog(QDialog):
         remove_button.clicked.connect(remove_selected)
         hlayout.addWidget(remove_button)
 
-        add_button = QPushButton(self.mloc.add_author)
+        add_button = QPushButton(self.tr("Add Author..."))
 
-        def add_author():
+        def add_author() -> None:
             dialog = QInputDialog(self)
-            dialog.setWindowTitle(self.mloc.add_author)
-            dialog.setLabelText(self.mloc.enter_author_name)
+            dialog.setWindowTitle(self.tr("Add Author..."))
+            dialog.setLabelText(self.tr("Enter Author Name:"))
             dialog.setInputMode(QInputDialog.InputMode.TextInput)
-            dialog.setOkButtonText(self.loc.main.ok)
-            dialog.setCancelButtonText(self.loc.main.cancel)
+            dialog.setOkButtonText(self.tr("Ok"))
+            dialog.setCancelButtonText(self.tr("Cancel"))
             dialog.setMinimumWidth(800)
             size = dialog.size()
             size.setWidth(800)
             dialog.resize(size)
-            apply_dark_title_bar(dialog)
 
             if dialog.exec() == dialog.DialogCode.Accepted:
                 author_name = dialog.textValue()
@@ -93,11 +94,9 @@ class BlacklistDialog(QDialog):
         hlayout.addWidget(add_button)
 
         search_bar = SearchBar()
-        search_bar.setPlaceholderText(self.loc.main.search)
-        search_bar.cs_toggle.setToolTip(self.loc.main.case_sensitivity)
 
-        def search(text: str):
-            case_sensitive = search_bar.cs_toggle.isChecked()
+        def search(text: str) -> None:
+            case_sensitive = search_bar.__cs_toggle.isChecked()
 
             for rindex in range(blacklist_widget.count()):
                 if case_sensitive:
@@ -118,7 +117,7 @@ class BlacklistDialog(QDialog):
             blacklist_widget.SelectionMode.ExtendedSelection
         )
 
-        def on_select():
+        def on_select() -> None:
             items = blacklist_widget.selectedItems()
             remove_button.setEnabled(bool(items))
 
@@ -131,11 +130,11 @@ class BlacklistDialog(QDialog):
 
         hlayout.addStretch()
 
-        done_button = QPushButton(self.loc.main.done)
+        done_button = QPushButton(self.tr("Done"))
         done_button.clicked.connect(self.accept)
         done_button.setObjectName("accent_button")
         hlayout.addWidget(done_button)
 
-        cancel_button = QPushButton(self.loc.main.cancel)
+        cancel_button = QPushButton(self.tr("Cancel"))
         cancel_button.clicked.connect(self.reject)
         hlayout.addWidget(cancel_button)

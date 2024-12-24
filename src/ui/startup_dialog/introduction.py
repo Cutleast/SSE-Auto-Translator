@@ -5,98 +5,79 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import os
+from pathlib import Path
 
-import qtawesome as qta
-from PySide6.QtCore import Qt
-from PySide6.QtWidgets import QHBoxLayout, QLabel, QPushButton, QVBoxLayout, QWidget
+from PySide6.QtWidgets import QLabel, QPushButton
 
-from .startup_dialog import StartupDialog
+from app_context import AppContext
+from ui.startup_dialog.page import Page
 
 
-class IntroductionPage(QWidget):
+class IntroductionPage(Page):
     """
     First page. Informs user about further steps
     and usage of this application.
     """
 
-    def __init__(self, startup_dialog: StartupDialog):
+    def __init__(self) -> None:
         super().__init__()
 
-        self.startup_dialog = startup_dialog
-        self.loc = startup_dialog.loc
-        self.mloc = startup_dialog.mloc
+        self._back_button.setText("Exit")
+        self.valid_signal.emit(True)
 
-        self.setObjectName("primary")
+    def _get_title(self) -> str:
+        return self.tr("Welcome!")
 
-        vlayout = QVBoxLayout()
-        vlayout.setAlignment(Qt.AlignmentFlag.AlignTop)
-        self.setLayout(vlayout)
-
-        # Title label
-        title_label = QLabel(self.mloc.startup)
-        title_label.setAlignment(Qt.AlignmentFlag.AlignHCenter)
-        title_label.setObjectName("title_label")
-        vlayout.addWidget(title_label, 0, Qt.AlignmentFlag.AlignHCenter)
-        vlayout.addSpacing(50)
-
-        # Info label
-        info_label = QLabel(self.mloc.introduction)
-        vlayout.addWidget(info_label)
-
-        # Documentation button
-        documentation_button = QPushButton(
-            self.loc.main.show_documentation + " (Offline)"
+    def _get_description(self) -> str:
+        return self.tr(
+            "This Guide will help you setting up this Tool for your modlist."
         )
-        documentation_button.clicked.connect(self.startup_dialog.app.show_documentation)
-        vlayout.addWidget(documentation_button)
 
-        documentation_button = QPushButton(
-            self.loc.main.show_documentation + " (Browser)"
-        )
+    def _init_form(self) -> None:
+        documentation_button = QPushButton(self.tr("Open Documentation (Offline)"))
+        documentation_button.clicked.connect(self.__show_documentation)
+        self._vlayout.addWidget(documentation_button)
+
+        documentation_button = QPushButton(self.tr("Open Documentation (Browser)"))
         documentation_button.clicked.connect(
             lambda: os.startfile(
                 "https://github.com/Cutleast/SSE-Auto-Translator/blob/master/doc/Instructions_en_US.md"
             )
         )
-        vlayout.addWidget(documentation_button)
+        self._vlayout.addWidget(documentation_button)
 
-        vlayout.addSpacing(50)
+        self._vlayout.addSpacing(50)
 
         # Path Limit
-        path_limit_label = QLabel(self.mloc.path_limit)
-        path_limit_label.setWordWrap(True)
-        vlayout.addWidget(path_limit_label)
-
-        fix_button = QPushButton(self.loc.main.fix_path_limit)
-
-        def fix_path_limit():
-            try:
-                os.startfile(self.startup_dialog.app.res_path / "path_limit.reg")
-            except OSError:
-                pass
-
-        fix_button.clicked.connect(fix_path_limit)
-        vlayout.addWidget(fix_button)
-
-        vlayout.addStretch()
-
-        # Exit and Next Button
-        hlayout = QHBoxLayout()
-        vlayout.addLayout(hlayout)
-
-        self.exit_button = QPushButton()
-        self.exit_button.setIcon(qta.icon("fa.close", color="#ffffff"))
-        self.exit_button.setText(self.loc.main.exit)
-        self.exit_button.clicked.connect(
-            lambda: (self.startup_dialog.close(), self.startup_dialog.app.exit())
+        path_limit_label = QLabel(
+            self.tr(
+                "Windows has a length limit of 255 characters for paths. "
+                "Click below, grant admin rights and reboot to disable it."
+            )
         )
-        hlayout.addWidget(self.exit_button, 0, Qt.AlignmentFlag.AlignLeft)
+        path_limit_label.setWordWrap(True)
+        self._vlayout.addWidget(path_limit_label)
 
-        hlayout.addStretch()
+        fix_button = QPushButton(self.tr("Fix Windows Path Limit"))
+        fix_button.clicked.connect(self.__fix_path_limit)
+        self._vlayout.addWidget(fix_button)
 
-        self.next_button = QPushButton()
-        self.next_button.setIcon(qta.icon("fa5s.chevron-right", color="#ffffff"))
-        self.next_button.setText(self.loc.main.next)
-        self.next_button.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
-        self.next_button.clicked.connect(self.startup_dialog.page_widget.slideInNext)
-        hlayout.addWidget(self.next_button)
+        self._vlayout.addStretch()
+
+    def _validate(self) -> None:
+        return None
+
+    def get_values(self) -> None:
+        return None
+
+    def __show_documentation(self) -> None:
+        exe_path: str = AppContext.get_app().executable
+        os.startfile(exe_path, arguments="--show-docs")
+
+    def __fix_path_limit(self) -> None:
+        res_path: Path = AppContext.get_app().res_path
+
+        try:
+            os.startfile(res_path / "path_limit.reg")
+        except OSError:
+            pass

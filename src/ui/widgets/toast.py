@@ -4,6 +4,8 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+from typing import Optional
+
 from PySide6.QtCore import (
     QAbstractAnimation,
     QEvent,
@@ -37,16 +39,17 @@ class Toast(QWidget):
         duration: int = 2,
         opacity: float = 1,
         anim_duration: float = 0.2,
-        pos: QPoint = None,
-        parent: QWidget = None,
+        pos: Optional[QPoint] = None,
+        parent: Optional[QWidget] = None,
     ):
         super().__init__(parent)
 
         self.__parent = parent
-        self.__parent.installEventFilter(self)
+        if self.__parent is not None:
+            self.__parent.installEventFilter(self)
         self.installEventFilter(self)
         self.__timer = QTimer(self)
-        self.__timer.setInterval((duration + anim_duration) * 1000)
+        self.__timer.setInterval(int((duration + anim_duration) * 1000))
         self.__timer.setTimerType(Qt.TimerType.PreciseTimer)
         self.__timer.timeout.connect(self.hide)
 
@@ -60,7 +63,7 @@ class Toast(QWidget):
         self.setAttribute(Qt.WidgetAttribute.WA_ShowWithoutActivating, True)
 
         self.__animation = QPropertyAnimation(self, b"windowOpacity")
-        self.__animation.setDuration(anim_duration * 1000)
+        self.__animation.setDuration(int(anim_duration * 1000))
         self.__animation.setStartValue(0.0)
         self.__animation.setEndValue(opacity)
         self.__animation.valueChanged.connect(self.__set_opacity)
@@ -89,20 +92,20 @@ class Toast(QWidget):
 
         super().hide()
 
-    def __set_opacity(self, opacity: float):
+    def __set_opacity(self, opacity: float) -> None:
         self.setWindowOpacity(opacity)
 
         if opacity == 0.0:
             super().hide()
 
-    def hide(self):
+    def hide(self) -> None:
         self.__animation.setDirection(QAbstractAnimation.Direction.Backward)
         self.__animation.start()
 
         if self.__timer.isActive():
             self.__timer.stop()
 
-    def set_position(self, pos: QPoint = None):
+    def set_position(self, pos: Optional[QPoint] = None) -> None:
         # If pos is None, set pos to center of lower third of screen
         if pos is None:
             scr = QApplication.primaryScreen().availableGeometry()
@@ -113,7 +116,7 @@ class Toast(QWidget):
         rect.moveCenter(pos)
         self.setGeometry(rect)
 
-    def show(self):
+    def show(self) -> None:
         if self.__timer.isActive():
             self.__timer.stop()
             super().hide()
@@ -124,7 +127,7 @@ class Toast(QWidget):
 
         super().show()
 
-    def __update_size(self):
+    def __update_size(self) -> None:
         self.text_label.adjustSize()
         self.icon_label.adjustSize()
         self.__frame.adjustSize()
@@ -132,12 +135,14 @@ class Toast(QWidget):
         self.setFixedWidth(max(120, self.__frame.sizeHint().width() + 20))
         self.setFixedHeight(max(60, self.__frame.sizeHint().height() + 20))
 
-    def setText(self, text: str):
+    def setText(self, text: str) -> None:
         self.text_label.setText(text)
 
-    def setIcon(self, icon: QIcon | QPixmap | str):
+    def setIcon(self, icon: QIcon | QPixmap | str) -> None:
         if isinstance(icon, QIcon):
             icon = icon.pixmap(24, 24)
+        elif isinstance(icon, str):
+            icon = QIcon(icon).pixmap(24, 24)
         self.icon_label.setPixmap(icon)
 
     def eventFilter(self, object: QObject, event: QEvent) -> bool:
@@ -190,7 +195,12 @@ if __name__ == "__main__":
     toast.setIcon(QIcon("./data/icons/icon.svg"))
 
     button.clicked.connect(lambda: root.startTimer(1000))
-    root.timerEvent = lambda event: (toast.show(), root.killTimer(event.timerId()))
+    root.timerEvent = lambda event: (  # type: ignore[assignment]
+        toast.show(),
+        root.killTimer(
+            event.timerId(),
+        ),
+    )
 
     root.show()
     app.exec()

@@ -4,6 +4,8 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+from typing import Optional
+
 from PySide6.QtCharts import QBarSet, QChart, QChartView, QHorizontalPercentBarSeries
 from PySide6.QtCore import QMargins, Qt
 from PySide6.QtGui import QPainter
@@ -14,7 +16,7 @@ class StackedBar(QChartView):
     Class for stacked bar for displaying data ratios.
     """
 
-    def __init__(self, values: list[int], colors: list = None):
+    def __init__(self, values: list[int], colors: Optional[list] = None):
         super().__init__()
 
         self.setRubberBand(self.RubberBand.NoRubberBand)
@@ -49,13 +51,13 @@ class StackedBar(QChartView):
             self.__series.append(bar_set)
             self.__bar_sets.append(bar_set)
 
-    def setValues(self, values: list[int]):
+    def setValues(self, values: list[int]) -> None:
         for v, value in enumerate(values):
             bar_set = self.__bar_sets[v]
             bar_set.remove(0)
             bar_set.append(value)
 
-    def setColors(self, colors: list):
+    def setColors(self, colors: list) -> None:
         for c, color in enumerate(colors):
             bar_set = self.__bar_sets[c]
             if color is None:

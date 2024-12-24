@@ -2,12 +2,14 @@
 Copyright (c) Cutleast
 """
 
+from __future__ import annotations
+
 import enum
 import struct
 from enum import Enum, auto
-from io import BufferedReader
+from typing import Optional, Self
 
-from .utilities import get_stream, read_data
+from .utilities import Stream, get_stream, read_data
 
 
 class Integer:
@@ -41,7 +43,7 @@ class Integer:
         """Signed Integer of Size 8."""
 
     @staticmethod
-    def parse(data: BufferedReader | bytes, type: IntType | tuple[int, bool]):
+    def parse(data: Stream | bytes, type: IntType | tuple[int, bool]) -> int:
         if isinstance(type, Integer.IntType):
             size, signed = type.value
         else:
@@ -52,7 +54,7 @@ class Integer:
         )
 
     @staticmethod
-    def dump(value: int, type: IntType | tuple[int, bool]):
+    def dump(value: int, type: IntType | tuple[int, bool]) -> bytes:
         if isinstance(type, Integer.IntType):
             size, signed = type.value
         else:
@@ -80,13 +82,14 @@ class Float:
         """Alias for Float64."""
 
     @staticmethod
-    def parse(data: BufferedReader | bytes, type: FloatType) -> float:
+    def parse(data: Stream | bytes, type: FloatType) -> float:
         size, format = type.value
 
-        return struct.unpack(format, get_stream(data).read(size))[0]
+        value: float = struct.unpack(format, get_stream(data).read(size))[0]
+        return value
 
     @staticmethod
-    def dump(value: float, type: FloatType):
+    def dump(value: float, type: FloatType) -> bytes:
         size, format = type.value
 
         return struct.pack(format, value)
@@ -130,7 +133,7 @@ class RawString(str):
     encoding: str
 
     @staticmethod
-    def from_str(string: str, encoding: str):
+    def from_str(string: str, encoding: str) -> RawString:
         """
         Converts `string` to a RawString object.
         """
@@ -141,7 +144,7 @@ class RawString(str):
         return raw
 
     @staticmethod
-    def decode(data: bytes):
+    def decode(data: bytes) -> RawString:
         """
         Tries to decode `data` using all supported encodings.
         """
@@ -157,9 +160,9 @@ class RawString(str):
             string = RawString(data.decode(encoding, errors="replace"))
             string.encoding = "utf8"  # Fallback to UTF-8 if encoding is unknown
             return string
-    
+
     @staticmethod
-    def encode(string: "RawString") -> bytes:
+    def encode(string: RawString) -> bytes:
         """
         Tries to encode `string` using all supported encodings.
         """
@@ -177,8 +180,10 @@ class RawString(str):
             return data
 
     @staticmethod
-    def parse(data: BufferedReader | bytes, type: StrType, size: int = None):
-        stream = get_stream(data)
+    def parse(
+        data: Stream | bytes, type: StrType, size: Optional[int] = None
+    ) -> bytes | RawString | list[RawString]:
+        stream: Stream = get_stream(data)
 
         match type:
             case type.Char:
@@ -225,6 +230,8 @@ class RawString(str):
     def dump(value: "list[RawString]|RawString", type: StrType) -> bytes:
         match type:
             case type.Char | type.WChar | type.String:
+                if isinstance(value, list):
+                    raise ValueError("Wrong type for list of strings!")
                 return RawString.encode(value)
 
             case type.BString:
@@ -262,14 +269,14 @@ class Flags(enum.IntFlag):
     """
 
     @classmethod
-    def parse(cls, data: BufferedReader | bytes, type: Integer.IntType):
+    def parse(cls, data: Stream | bytes, type: Integer.IntType) -> Self:
         value = Integer.parse(data, type)
 
         flag = cls(value)
 
         return flag
 
-    def dump(self, type: Integer.IntType):
+    def dump(self, type: Integer.IntType) -> bytes:
         return Integer.dump(self.value, type)
 
 
@@ -282,14 +289,14 @@ class Hex:
 
     @staticmethod
     def parse(
-        data: BufferedReader | bytes, type: Integer.IntType = Integer.IntType.ULong
-    ):
+        data: Stream | bytes, type: Integer.IntType = Integer.IntType.ULong
+    ) -> str:
         number = Integer.parse(data, type)
 
         return hex(number).removeprefix("0x").upper().zfill(8)
 
     @staticmethod
-    def dump(value: str, type: Integer.IntType = Integer.IntType.ULong):
+    def dump(value: str, type: Integer.IntType = Integer.IntType.ULong) -> bytes:
         number = int(value, base=16)
 
         return Integer.dump(number, type)

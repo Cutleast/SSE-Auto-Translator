@@ -4,12 +4,15 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-import jstyleson as json
+from typing import Any
+
 from PySide6.QtCore import Signal
 from PySide6.QtWidgets import QComboBox, QFormLayout, QLabel, QPushButton, QWidget
 
-from app import MainApp
+from app_context import AppContext
+from core.config.translator_config import TranslatorConfig
 from core.translator_api import AVAILABLE_APIS
+from core.translator_api.translator import Translator
 from ui.widgets.key_entry import KeyEntry
 
 
@@ -24,14 +27,16 @@ class TranslatorSettings(QWidget):
     the user changes some setting.
     """
 
-    def __init__(self, app: MainApp):
+    translator_config: TranslatorConfig
+
+    def __init__(self) -> None:
         super().__init__()
 
-        self.app = app
-        self.loc = app.loc
-        self.mloc = app.loc.settings
+        self.translator_config = AppContext.get_app().translator_config
 
-        self.setObjectName("root")
+        self.setObjectName("transparent")
+
+        # TODO: Refactor this
 
         flayout = QFormLayout()
         self.setLayout(flayout)
@@ -40,20 +45,21 @@ class TranslatorSettings(QWidget):
         self.translator_box = QComboBox()
         self.translator_box.setEditable(False)
         self.translator_box.addItems([translator.name for translator in AVAILABLE_APIS])
-        self.translator_box.setCurrentText(self.app.translator_config["translator"])
+        self.translator_box.setCurrentText(self.translator_config.translator.name)
         self.translator_box.currentTextChanged.connect(self.on_change)
-        flayout.addRow(self.mloc.translator, self.translator_box)
+        flayout.addRow(self.tr("Translator API"), self.translator_box)
 
         # API Key
-        api_key_label = QLabel(self.mloc.translator_api_key)
+        api_key_label = QLabel(self.tr("Translator API Key"))
         self.api_key_entry = KeyEntry()
         self.api_key_entry.setDisabled(True)
         self.api_key_entry.textChanged.connect(self.on_change)
-        if self.app.translator_config["api_key"]:
-            self.api_key_entry.setText(self.app.translator_config["api_key"])
+        if self.translator_config.api_key:
+            self.api_key_entry.setText(self.translator_config.api_key)
             self.api_key_entry.setDisabled(False)
         flayout.addRow(api_key_label, self.api_key_entry)
 
+        # TODO: Make this dynamic depending on the selected translator
         self.translator_box.currentTextChanged.connect(
             lambda text: (
                 self.api_key_entry.setEnabled(text == "DeepL"),
@@ -62,36 +68,37 @@ class TranslatorSettings(QWidget):
         )
 
         # Reset Confirmation Dialogs
-        reset_confirmations_button = QPushButton(self.loc.main.reset_confirmations)
+        reset_confirmations_button = QPushButton(
+            self.tr("Show Confirmation Dialogs again")
+        )
         reset_confirmations_button.setDisabled(
-            self.app.translator_config.get("show_confirmation_dialogs")
+            self.translator_config.show_confirmation_dialogs
         )
 
-        def reset_confirmations():
-            self.app.translator_config["show_confirmation_dialogs"] = True
-
-            with open(self.app.translator_conf_path, "w", encoding="utf8") as file:
-                json.dump(self.app.translator_config, file, indent=4)
+        def reset_confirmations() -> None:
+            self.translator_config.show_confirmation_dialogs = True
+            self.translator_config.save()
 
             reset_confirmations_button.setDisabled(True)
 
         reset_confirmations_button.clicked.connect(reset_confirmations)
         flayout.addRow(reset_confirmations_button)
 
-    def on_change(self, *args):
+    def on_change(self, *args: Any) -> None:
         """
         This emits change signal without passing parameters.
         """
 
         self.on_change_signal.emit()
 
-    def get_settings(self):
-        api_key = self.api_key_entry.text() if self.api_key_entry.text() else None
-
-        return {
-            "translator": self.translator_box.currentText(),
-            "api_key": api_key,
-            "show_confirmation_dialogs": self.app.translator_config.get(
-                "show_confirmation_dialogs", True
-            ),
+    def save_settings(self) -> None:
+        translators: dict[str, type[Translator]] = {
+            translator.name: translator for translator in AVAILABLE_APIS
         }
+
+        self.translator_config.translator = translators[
+            self.translator_box.currentText()
+        ]
+        self.translator_config.api_key = self.api_key_entry.text()
+
+        self.translator_config.save()

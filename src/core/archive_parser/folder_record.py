@@ -16,7 +16,7 @@ class FolderRecord:
 
     data_stream: BufferedReader
 
-    def parse(self):
+    def parse(self) -> "FolderRecord":
         self.name_hash = Hash.hash(self.data_stream)
         self.count = Integer.ulong(self.data_stream)
         self.padding = Integer.ulong(self.data_stream)

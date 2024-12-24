@@ -3,9 +3,10 @@ Copyright (c) Cutleast
 """
 
 import logging
-from io import BufferedReader, BytesIO
+from io import BytesIO
+from typing import Optional
 
-from .datatypes import Float, Hex, Integer, RawString
+from .datatypes import Float, Hex, Integer, RawString, Stream
 from .flags import RecordFlags
 from .utilities import prettyprint_object
 
@@ -18,25 +19,24 @@ class Subrecord:
     type: str
     size: int
     data: bytes
+    index: Optional[int] = None
 
     log = logging.getLogger("PluginParser.Subrecord")
 
-    def __init__(
-        self,
-        type: str = None,
-    ):
-        self.type = type
+    def __init__(self, type: Optional[str] = None):
+        if type is not None:
+            self.type = type
 
     def __repr__(self) -> str:
         return prettyprint_object(self)
 
-    def __str__(self):
+    def __str__(self) -> str:
         return str(self.__dict__)
 
-    def __len__(self):
+    def __len__(self) -> int:
         return len(self.dump())
 
-    def parse(self, stream: BufferedReader, header_flags: RecordFlags):
+    def parse(self, stream: Stream, header_flags: RecordFlags) -> None:
         self.type = stream.read(4).decode()
         self.size = Integer.parse(stream, Integer.IntType.UInt16)
         self.data = stream.read(self.size)
@@ -61,7 +61,7 @@ class HEDR(Subrecord):
     records_num: int
     next_object_id: str
 
-    def parse(self, stream: BufferedReader, header_flags: RecordFlags):
+    def parse(self, stream: Stream, header_flags: RecordFlags) -> None:
         super().parse(stream, header_flags)
 
         stream = BytesIO(self.data)
@@ -87,10 +87,10 @@ class EDID(Subrecord):
 
     editor_id: RawString
 
-    def parse(self, stream: BufferedReader, header_flags: RecordFlags):
+    def parse(self, stream: Stream, header_flags: RecordFlags) -> None:
         super().parse(stream, header_flags)
 
-        self.editor_id = RawString.parse(self.data, RawString.StrType.ZString)
+        self.editor_id = RawString.parse(self.data, RawString.StrType.ZString)  # type: ignore
 
     def dump(self) -> bytes:
         self.data = RawString.dump(self.editor_id, RawString.StrType.ZString)
@@ -104,22 +104,24 @@ class StringSubrecord(Subrecord):
     """
 
     string: RawString | int
-    index: int = None
 
     log = logging.getLogger("PluginParser.StringSubrecord")
 
-    def parse(self, stream: BufferedReader, header_flags: RecordFlags):
+    def parse(self, stream: Stream, header_flags: RecordFlags) -> None:
         super().parse(stream, header_flags)
 
         if RecordFlags.Localized in header_flags:
             self.string = Integer.parse(self.data, Integer.IntType.UInt32)
 
         else:
-            self.string = RawString.parse(
+            self.string = RawString.parse(  # type: ignore
                 self.data, RawString.StrType.ZString, self.size
             )
 
-    def set_string(self, string: str):
+    def set_string(self, string: str) -> None:
+        if isinstance(self.string, int):
+            raise ValueError("Cannot replace string in a localized record!")
+
         encoding = self.string.encoding
 
         self.string = RawString.from_str(string, encoding)
@@ -139,12 +141,12 @@ class MAST(Subrecord):
     Class for MAST subrecord.
     """
 
-    file: str
+    file: RawString
 
-    def parse(self, stream: BufferedReader, header_flags: RecordFlags):
+    def parse(self, stream: Stream, header_flags: RecordFlags) -> None:
         super().parse(stream, header_flags)
 
-        self.file = RawString.parse(self.data, RawString.StrType.ZString)
+        self.file = RawString.parse(self.data, RawString.StrType.ZString)  # type: ignore
 
     def dump(self) -> bytes:
         self.data = RawString.dump(self.file, RawString.StrType.ZString)
@@ -159,14 +161,14 @@ class XXXX(Subrecord):
 
     field_size: int
 
-    def parse(self, stream: BufferedReader, header_flags: RecordFlags):
+    def parse(self, stream: Stream, header_flags: RecordFlags) -> None:
         super().parse(stream, header_flags)
 
         self.field_size = Integer.parse(self.data, (self.size, False))
         # Add header and data of following subrecord to this
         self.data = stream.read(self.field_size + 6)
 
-    def dump(self):
+    def dump(self) -> bytes:
         data = b""
 
         data += self.type.encode()
@@ -191,7 +193,7 @@ class TRDT(Subrecord):
     use_emo_anim: int
     junk2: bytes
 
-    def parse(self, stream: BufferedReader, header_flags: RecordFlags):
+    def parse(self, stream: Stream, header_flags: RecordFlags) -> None:
         super().parse(stream, header_flags)
 
         stream = BytesIO(self.data)
@@ -205,7 +207,7 @@ class TRDT(Subrecord):
         self.use_emo_anim = Integer.parse(stream, Integer.IntType.UInt8)
         self.junk2 = stream.read(3)
 
-    def dump(self):
+    def dump(self) -> bytes:
         self.data = b""
 
         self.data += Integer.dump(self.emotion_type, Integer.IntType.UInt32)
@@ -227,12 +229,12 @@ class QOBJ(Subrecord):
 
     index: int
 
-    def parse(self, stream: BufferedReader, header_flags: RecordFlags):
+    def parse(self, stream: Stream, header_flags: RecordFlags) -> None:
         super().parse(stream, header_flags)
 
         self.index = Integer.parse(self.data, Integer.IntType.Int16)
 
-    def dump(self):
+    def dump(self) -> bytes:
         self.data = Integer.dump(self.index, Integer.IntType.Int16)
 
         return super().dump()
@@ -245,12 +247,12 @@ class EPFT(Subrecord):
 
     perk_type: int
 
-    def parse(self, stream: BufferedReader, header_flags: RecordFlags):
+    def parse(self, stream: Stream, header_flags: RecordFlags) -> None:
         super().parse(stream, header_flags)
 
         self.perk_type = Integer.parse(self.data, Integer.IntType.UInt8)
 
-    def dump(self):
+    def dump(self) -> bytes:
         self.data = Integer.dump(self.perk_type, Integer.IntType.UInt8)
 
         return super().dump()

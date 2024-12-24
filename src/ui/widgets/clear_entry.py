@@ -4,6 +4,8 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+from typing import Any
+
 import qtawesome as qta
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QHBoxLayout, QLineEdit, QPushButton
@@ -14,8 +16,8 @@ class ClearEntry(QLineEdit):
     Adapted QLineEdit with dedicated clear button.
     """
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(self, *args: Any, **kwargs: dict[str, Any]):
+        super().__init__(*args, **kwargs)  # type: ignore[call-overload]
 
         hlayout = QHBoxLayout()
         hlayout.setContentsMargins(0, 0, 0, 0)

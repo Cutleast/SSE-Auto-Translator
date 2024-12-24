@@ -1,7 +1,5 @@
 """
-This file is part of SSE Auto Translator
-by Cutleast and falls under the license
-Attribution-NonCommercial-NoDerivatives 4.0 International.
+Copyright (c) Cutleast
 """
 
 # Vanilla Plugins
@@ -13,6 +11,10 @@ BASE_GAME_PLUGINS = [
     "dragonborn.esm",
     "skyrimvr.esm",
 ]
+"""
+A list of all base game plugins, excluding Creation Club.
+"""
+
 AE_CC_PLUGINS = [
     "ccbgssse002-exoticarrows.esl",
     "ccbgssse003-zombies.esl",
@@ -89,9 +91,17 @@ AE_CC_PLUGINS = [
     "ccasvsse001-almsivi.esm",
     "ccbgssse001-fish.esm",
 ]
+"""
+A list of all Creation Club plugins that came with the AE update and upgrade.
+"""
+
+DSD_FILE_PATTERN: str = "**/SKSE/Plugins/DynamicStringDistributor/*/*.json"
+"""
+The glob pattern for DSD files.
+"""
 
 # Supported languages
-SUPPORTED_LANGS: list[tuple[str]] = [
+SUPPORTED_LANGS: list[tuple[str, str]] = [
     ("chinese", "zh_CN"),
     ("french", "fr_FR"),
     ("german", "de_DE"),
@@ -103,3 +113,6 @@ SUPPORTED_LANGS: list[tuple[str]] = [
     ("russian", "ru_RU"),
     ("spanish", "es_ES"),
 ]
+"""
+A list of supported languages.
+"""

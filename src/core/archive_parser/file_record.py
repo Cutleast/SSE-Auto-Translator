@@ -4,6 +4,7 @@ Copyright (c) Cutleast
 
 from dataclasses import dataclass
 from io import BufferedReader
+from typing import Optional
 
 from .datatypes import Hash, Integer
 
@@ -16,7 +17,7 @@ class FileRecordBlock:
 
     data_stream: BufferedReader
 
-    def parse(self, count: int):
+    def parse(self, count: int) -> "FileRecordBlock":
         self.name_length = Integer.int8(self.data_stream)
         self.name = self.data_stream.read(self.name_length)
         self.file_records = [FileRecord(self.data_stream).parse() for i in range(count)]
@@ -31,7 +32,7 @@ class FileRecord:
     """
 
     data_stream: BufferedReader
-    compressed = None
+    compressed: Optional[bool] = None
 
     def has_compression_flag(self) -> bool:
         # Mask for the 30th bit (0x40000000)
@@ -42,7 +43,7 @@ class FileRecord:
 
         return is_set != 0
 
-    def parse(self):
+    def parse(self) -> "FileRecord":
         self.name_hash = Hash.hash(self.data_stream)
         self.size = Integer.ulong(self.data_stream)
         self.offset = Integer.ulong(self.data_stream)

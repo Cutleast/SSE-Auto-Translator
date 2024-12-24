@@ -1,9 +1,5 @@
 """
-Name: SSE Auto Translator
-Author: Cutleast
-License: Attribution-NonCommercial-NoDerivatives 4.0 International
-Python Version: 3.11.2
-Qt Version: 6.6.1
+Copyright (c) Cutleast
 """
 
 import logging
@@ -13,344 +9,259 @@ import shutil
 import sys
 import tempfile
 import time
-import traceback
-from datetime import datetime
+from argparse import Namespace
 from pathlib import Path
-from winsound import MessageBeep as alert
+from typing import Any, Callable, Optional
 
 import jstyleson as json
-import pyperclip as clipboard
-import qtawesome as qta
-from PySide6.QtCore import QSize, Qt, QTimerEvent, QUrl, Signal
-from PySide6.QtGui import (
-    QCloseEvent,
-    QColor,
-    QIcon,
-    QImage,
-    QKeySequence,
-    QShortcut,
-    QTextDocument,
-)
+from PySide6.QtCore import Qt, QTimerEvent, QTranslator, Signal
+from PySide6.QtGui import QColor, QIcon, QPalette
 from PySide6.QtWidgets import (
     QApplication,
     QDialog,
     QHBoxLayout,
-    QLabel,
-    QListWidget,
-    QMainWindow,
-    QMessageBox,
     QPushButton,
-    QTabWidget,
-    QTextBrowser,
     QVBoxLayout,
-    QWidget,
 )
 
-from core import translator_api
 from core.cacher.cacher import Cacher
+from core.config.app_config import AppConfig
+from core.config.translator_config import TranslatorConfig
+from core.config.user_config import UserConfig
 from core.database.database import TranslationDatabase
+from core.downloader.download_manager import DownloadManager
+from core.masterlist.masterlist import Masterlist
+from core.mod_instance.mod_instance import ModInstance
+from core.mod_managers.mod_manager import ModManager
+from core.scanner.scanner import Scanner
+from core.translation_provider.nm_api.nxm_handler import NXMHandler
 from core.translation_provider.provider import Provider
-from core.utilities import (
-    apply_dark_title_bar,
-    get_masterlist,
-    intlevel2strlevel,
-    is_valid_hex_color,
-    strlevel2intlevel,
-    updater,
-)
-from core.utilities.exceptions import GeneralException
-from core.utilities.licenses import LICENSES
-from core.utilities.localisation import Localisator
-from core.utilities.nxm_listener import NXMListener
-from core.utilities.stdout_pipe import StdoutPipe
-from ui.main_page import MainPageWidget
-from ui.settings.settings_dialog import SettingsDialog
+from core.translator_api.translator import Translator
+from core.utilities.container_utils import unique
+from core.utilities.exception_handler import ExceptionHandler
+from core.utilities.localisation import detect_system_locale
+from core.utilities.logger import Logger
+from core.utilities.masterlist import get_masterlist
+from core.utilities.qt_res_provider import read_resource
+from core.utilities.updater import Updater
+from ui.main_window import MainWindow
 from ui.startup_dialog.startup_dialog import StartupDialog
-from ui.translation_editor.editor import TranslationEditor
 from ui.widgets.api_setup import ApiSetup
-from ui.widgets.error_dialog import ErrorDialog
 from ui.widgets.loading_dialog import LoadingDialog
 
 
-class MainApp(QApplication):
+class App(QApplication):
     """
     Main Application Class.
     """
 
-    name = "SSE Auto Translator"
-    version = "3.0.0-alpha-1"
+    APP_NAME: str = "SSE Auto Translator"
+    APP_VERSION: str = "3.0.0-alpha-1"
 
-    loc: "Localisator" = None
-    cur_path = Path.cwd()
-    res_path = cur_path / "res"
-    data_path = cur_path / "data"
-    app_conf_path = data_path / "app" / "config.json"
-    user_conf_path = data_path / "user" / "config.json"
-    translator_conf_path = data_path / "translator" / "config.json"
-    style_path = res_path / "app" / "style.qss"
-    loc_path = res_path / "locales"
-    cache_path = data_path / "cache"
+    args: Namespace
+    app_config: AppConfig
+    user_config: UserConfig
+    translator_config: TranslatorConfig
+
+    cur_path: Path = Path.cwd()
+    res_path: Path = cur_path / "res"
+    data_path: Path = cur_path / "data"
+    loc_path: Path = res_path / "locales"
+    cache_path: Path = data_path / "cache"
+    style_path: str = ":/style.qss"
+    tmp_path: Optional[Path] = None
 
     executable = str(cur_path / "SSE-AT.exe")
     """
     Stores command to execute this app.
     """
 
-    default_app_config = {
-        "keep_logs_num": 5,  # Only keep 5 newest log files and delete rest
-        "log_level": "debug",
-        "language": "System",
-        "accent_color": "#a998d2",
-        "detector_confidence": 0.8,
-        "auto_bind_nxm": False,
-        "use_spell_check": True,
-        "output_path": None,
-        "temp_path": None,
-        "downloads_path": None,
-    }
-    app_config = default_app_config
-    default_user_config = {
-        "language": "",
-        "api_key": "",
-        "mod_manager": "",
-        "modinstance": "",
-        "use_masterlist": True,
-        "instance_profile": "",
-        "provider_preference": "",
-        "enable_interface_files": True,
-        "enable_scripts": False,
-        "enable_textures": False,
-        "enable_sound_files": False,
-        "author_blacklist": [],
-    }
-    user_config: dict = None
-    default_translator_config = {
-        "translator": "Google Translator",
-        "api_key": None,
-        "show_confirmation_dialogs": True,
-    }
-    translator_config = default_translator_config
+    log: logging.Logger = logging.getLogger("App")
+    logger: Logger
+    log_path: Path = data_path / "logs"
 
-    translator: "translator_api.Translator" = None
+    timer_signal = Signal()
+    """
+    This signal gets emitted every 1000ms.
+    """
 
-    provider: "Provider" = None
+    ready_signal = Signal()
+    """
+    This signal gets emitted when the application is ready.
+    """
 
-    log_name = f"{time.strftime('%d.%m.%Y')}-{time.strftime('%H.%M.%S')}.log"
-    log_path = data_path / "logs"
-    log_level = 10  # Debug level as default
-    log_fmt = (
-        "[%(asctime)s.%(msecs)03d][%(levelname)s][%(name)s.%(funcName)s]: %(message)s"
-    )
-    log = logging.getLogger("MainApp")
-    log_signal = Signal(str)
+    exit_chain: list[Callable[[], None]] = []
+    """
+    List of functions to call before the application exits.
+    """
 
-    first_start = not user_conf_path.is_file()
-    setup_complete = True
+    first_start: bool = not (data_path / "user" / "config.json").is_file()
+    setup_complete: bool = True
 
-    database: "TranslationDatabase" = None
-    nxm_listener: "NXMListener" = None
+    main_window: MainWindow
+    provider: Provider
+    database: TranslationDatabase
+    nxm_listener: NXMHandler
+    translator: Translator
+    cacher: Cacher
+    exception_handler: ExceptionHandler
+    mod_instance: ModInstance
+    scanner: Scanner
+    download_manager: DownloadManager
+    masterlist: Masterlist
 
-    tmp_dir: Path = None
-
-    masterlist: dict[str, dict] = None
-
-    cacher: "Cacher" = None
-
-    def __init__(self):
+    def __init__(self, args: Namespace):
         super().__init__()
 
-        self.setApplicationName(self.name)
-        self.setApplicationDisplayName(f"{self.name} v{self.version}")
-        self.setApplicationVersion(self.version)
+        self.args = args
 
-        self.setWindowIcon(QIcon(str(self.res_path / "icons" / "icon.png")))
+    def init(self) -> None:
+        """
+        Initializes the application.
+        """
 
-    def exec(self):
-        self.init_logger()
-        self.load_config()
-        self.log_basic_info()
-        self.load_locale()
+        self.app_config = AppConfig(self.data_path / "app")
+
+        log_file: Path = self.log_path / time.strftime(self.app_config.log_file_name)
+        self.logger = Logger(
+            log_file, self.app_config.log_format, self.app_config.log_date_format
+        )
+        self.logger.setLevel(self.app_config.log_level)
+
+        self.load_localisation()
         self.load_theme()
 
-        self.root = QMainWindow()
-        self.root_close = self.root.closeEvent
-        self.root.closeEvent = self.exit
-        self.root.setObjectName("root")
-        apply_dark_title_bar(self.root)
-        self.root.hide()
-
-        self.log.info("Application started.")
-
-        # Check for updates
-        updater.Updater(self).run()
-
-        if self.first_start:
-            self.setup_complete = False
-            startup_dialog = StartupDialog(app=self)
-            startup_dialog.log.addHandler(self.log_handler)
-
-        if self.setup_complete:
-            self.start_main_app()
-
-        super().exec()
-
-        self.clean_and_exit()
-
-    def start_main_app(self):
-        self.cacher = Cacher(self)
+        self.cacher = Cacher(self.cache_path)
         self.cacher.load_caches()
 
+        self.exception_handler = ExceptionHandler(self)
+        self.main_window = MainWindow()
+
+        self.setApplicationName(self.APP_NAME)
+        self.setApplicationDisplayName(f"{self.APP_NAME} v{self.APP_VERSION}")
+        self.setApplicationVersion(self.APP_VERSION)
+        self.setWindowIcon(QIcon(":/icons/icon.png"))
+
+        self.log_basic_info()
+
+    def exec(self) -> int:
+        self.log.info("Application started.")
+
+        Updater(self.APP_VERSION).run()
+
+        if self.first_start:
+            self.setup_complete = (
+                StartupDialog(QApplication.activeModalWidget()).exec()
+                == QDialog.DialogCode.Accepted
+            )
+
+        retcode: int = 0
+        if self.setup_complete:
+            self.__start_main_app()
+            retcode = super().exec()
+
+        self.log.info("Exiting application...")
+
+        for function in unique(self.exit_chain):
+            function()
+
+        self.cacher.save_caches()
+        self.clean()
+
+        return retcode
+
+    def __start_main_app(self) -> None:
         self.load_user_data()
         self.load_masterlist()
 
-        self.init_gui()
-
-        self.startTimer(1000, Qt.TimerType.PreciseTimer)
-
-        self.nxm_listener = NXMListener()
-        if self.app_config["auto_bind_nxm"]:
+        self.nxm_listener = NXMHandler()
+        if self.app_config.auto_bind_nxm:
             self.nxm_listener.bind()
             self.log.info("Bound Nexus Mods Links.")
-        self.nxm_listener.download_signal.connect(
-            self.mainpage_widget.database_widget.downloads_widget.add_download
-        )
-        self.nxm_listener.download_signal.connect(
-            lambda url: self.log.info(f"Handled NXM link: {url}")
-        )
+        # TODO: Reimplement this
+        # self.nxm_listener.request_signal.connect(
+        #     self.download_manager.add_download_item
+        # )
+        # self.nxm_listener.download_signal.connect(
+        #     lambda url: self.log.info(f"Handled NXM link: {url}")
+        # )
+        self.scanner = Scanner()
+        self.download_manager = DownloadManager()
 
-        self.root.showMaximized()
+        self.ready_signal.emit()
 
-    def init_logger(self):
-        """
-        Initializes application logger.
-        """
+        self.main_window.showMaximized()
+        self.startTimer(1000, Qt.TimerType.PreciseTimer)
 
-        if not self.log_path.is_dir():
-            os.makedirs(self.log_path, exist_ok=True)
-
-        self.statusbar = None
-        log = logging.getLogger()
-        self.stdout = StdoutPipe(self)
-        formatter = logging.Formatter(self.log_fmt, datefmt="%d.%m.%Y %H:%M:%S")
-        self.log_handler = logging.StreamHandler(self.stdout)
-        self.log_handler.setFormatter(formatter)
-        log.addHandler(self.log_handler)
-        log.setLevel(self.log_level)
-        sys.excepthook = self.handle_exception
-
-        self.log.info("Starting program...")
-
-    def load_config(self):
-        """
-        Loads or creates config file.
-        """
-
-        if not self.data_path.is_dir():
-            os.makedirs(self.data_path, exist_ok=True)
-
-        if not self.app_conf_path.is_file():
-            with open(self.app_conf_path, "w", encoding="utf8") as file:
-                json.dump(self.default_app_config, file, indent=4)
-        else:
-            with open(self.app_conf_path, "r", encoding="utf8") as file:
-                self.app_config: dict = json.load(file)
-
-        if self.app_config.keys() != self.default_app_config.keys():
-            config = self.default_app_config | self.app_config
-            self.app_config = config
-
-            with open(self.app_conf_path, "w", encoding="utf8") as file:
-                json.dump(self.app_config, file, indent=4)
-
-        self.log_level = strlevel2intlevel(self.app_config["log_level"])
-        self.log_handler.setLevel(self.log_level)
-
-    def load_masterlist(self):
+    def load_masterlist(self) -> None:
         """
         Loads masterlist from repository.
+
+        TODO: Move this to the masterlist module
         """
 
-        if not self.user_config["use_masterlist"]:
+        if not self.user_config.use_masterlist:
             self.log.info("Masterlist disabled by user.")
-            self.masterlist = {}
+            self.masterlist = Masterlist(entries={})
             return
 
         self.log.info("Loading Masterlist from Repository...")
 
         try:
-            self.masterlist = get_masterlist(self.user_config["language"])
+            masterlist_data: dict[str, dict[str, Any]] = get_masterlist(
+                self.user_config.language
+            )
+            self.masterlist = Masterlist.from_data(masterlist_data)
             self.log.info("Masterlist loaded.")
         except Exception as ex:
             if str(ex).endswith("404"):
                 self.log.error(
-                    f"No Masterlist available for {self.user_config['language']!r}."
+                    f"No Masterlist available for {self.user_config.language!r}."
                 )
             else:
-                self.log.error(f"Failed to get Masterlist from Repository: {ex}")
-            self.masterlist = {}
+                self.log.error(f"Failed to load masterlist: {ex}")
+            self.masterlist = Masterlist(entries={})
 
-    def load_user_data(self):
+    def load_user_data(self) -> None:
         """
         Loads user config and translation database.
+
+        TODO: Refactor this
         """
 
         self.log.info("Loading user data...")
 
-        with open(self.user_conf_path, "r", encoding="utf8") as file:
-            self.user_config: dict = self.default_user_config | json.load(file)
+        self.user_config = UserConfig(self.data_path / "user")
+        self.translator_config = TranslatorConfig(self.data_path / "translator")
+        self.translator = self.translator_config.translator()
 
-        if not self.user_config["provider_preference"]:
-            if self.user_config["language"] == "French":
-                self.user_config["provider_preference"] = (
-                    Provider.Preference.PreferNexusMods.name
-                )
-            else:
-                self.user_config["provider_preference"] = (
-                    Provider.Preference.OnlyNexusMods.name
-                )
-
-        if self.translator_conf_path.is_file():
-            with open(self.translator_conf_path, encoding="utf8") as file:
-                self.translator_config = json.load(file)
-        else:
-            os.makedirs(self.translator_conf_path.parent, exist_ok=True)
-            with open(self.translator_conf_path, "w", encoding="utf8") as file:
-                json.dump(self.default_translator_config, file, indent=4)
-
-        for translator in translator_api.AVAILABLE_APIS:
-            if translator.name == self.translator_config["translator"]:
-                self.translator = translator(self)
-                self.log.info(f"Loaded translator API {translator.name!r}.")
-                break
-        else:
-            self.log.error(
-                f"Invalid Translator {self.translator_config['translator']!r}!"
+        # Backwards-compatibility with portable.txt
+        portable_txt_path: Path = self.data_path / "user" / "portable.txt"
+        if self.user_config.modinstance == "Portable" and portable_txt_path.is_file():
+            self.user_config.instance_path = Path(
+                portable_txt_path.read_text("utf-8").strip()
             )
-            self.log.info("Falling back to Google Translator...")
-            self.translator = translator_api.GoogleTranslator(self)
+            os.remove(portable_txt_path)
+            self.user_config.save()
 
         self.provider = Provider(
-            self.user_config["api_key"],
+            self.user_config.api_key,
             self.cacher,
-            Provider.Preference.get(
-                self.user_config["provider_preference"],
-                Provider.Preference.OnlyNexusMods,
-            ),
+            self.user_config.provider_preference,
         )
         nm_api_valid = self.provider.check_api_key()
 
         if not nm_api_valid:
             self.log.error("Nexus Mods API Key is invalid!")
 
-            dialog = QDialog(self.root)
-            dialog.setWindowTitle(self.loc.api_setup.api_key_invalid)
+            dialog = QDialog(self.main_window)
+            dialog.setWindowTitle(self.tr("API Key is invalid!"))
             dialog.setMinimumSize(800, 400)
-            apply_dark_title_bar(dialog)
 
             vlayout = QVBoxLayout()
             dialog.setLayout(vlayout)
 
-            api_setup = ApiSetup(self)
+            api_setup = ApiSetup()
             vlayout.addWidget(api_setup)
 
             hlayout = QHBoxLayout()
@@ -358,34 +269,34 @@ class MainApp(QApplication):
 
             hlayout.addStretch()
 
-            save_button = QPushButton(self.loc.main.save)
+            save_button = QPushButton(self.tr("Save"))
             save_button.setObjectName("accent_button")
             save_button.setDisabled(True)
             api_setup.valid_signal.connect(lambda valid: save_button.setEnabled(valid))
 
-            def save():
-                self.user_config["api_key"] = api_setup.api_key
-                self.provider.api_key = self.user_config["api_key"]
+            def save() -> None:
+                if api_setup.api_key is None:
+                    raise ValueError("API Key is required")
+                self.user_config.api_key = api_setup.api_key
+                self.provider.api_key = self.user_config.api_key
 
-                with self.user_conf_path.open("w", encoding="utf8") as file:
-                    json.dump(self.user_config, file, indent=4)
-
+                self.user_config.save()
                 dialog.accept()
 
             save_button.clicked.connect(save)
             hlayout.addWidget(save_button)
 
-            exit_button = QPushButton(self.loc.main.cancel)
+            exit_button = QPushButton(self.tr("Cancel"))
             exit_button.clicked.connect(dialog.reject)
             hlayout.addWidget(exit_button)
 
             if dialog.exec() == dialog.DialogCode.Rejected:
-                self.clean_and_exit()
+                self.clean()
                 sys.exit()
 
-        language = self.user_config["language"].lower()
+        language = self.user_config.language.lower()
         userdb_path: Path = self.data_path / "user" / "database" / language
-        appdb_path = self.res_path / "app" / "database"
+        appdb_path: Path = self.res_path / "app" / "database"
 
         if not userdb_path.is_dir():
             os.makedirs(userdb_path, exist_ok=True)
@@ -396,37 +307,56 @@ class MainApp(QApplication):
 
         self.log.info("Loading translation database...")
 
-        def process(ldialog: LoadingDialog):
+        def process(ldialog: LoadingDialog) -> None:
             ldialog.updateProgress(
-                text1=self.loc.main.loading_database,
+                text1=self.tr("Loading translation database..."),
             )
 
             self.database = TranslationDatabase(
                 userdb_path.parent, appdb_path, language
             )
 
-        loadingdialog = LoadingDialog(self.root, self, process)
-        loadingdialog.exec()
+        LoadingDialog.run_callable(QApplication.activeModalWidget(), process)
+        LoadingDialog.run_callable(
+            QApplication.activeModalWidget(), self.__load_modinstance
+        )
 
         self.log.info("Loaded user data.")
 
-    def log_basic_info(self):
+    def __load_modinstance(self, ldialog: Optional[LoadingDialog] = None) -> None:
+        self.log.info("Loading modinstance...")
+
+        if ldialog is not None:
+            ldialog.updateProgress(text1=self.tr("Loading modinstance..."))
+
+        mod_manager: ModManager = self.user_config.mod_manager()
+        self.mod_instance = mod_manager.load_mod_instance(
+            self.user_config.modinstance,
+            self.user_config.instance_profile,
+            self.user_config.instance_path,
+        )
+
+        self.log.info(
+            f"Loaded {self.mod_instance.display_name!r} with "
+            f"{len(self.mod_instance.mods)} mod(s) and "
+            f"{len(self.mod_instance.plugins)} plugin(s)."
+        )
+
+    def log_basic_info(self) -> None:
         """
         Logs basic information.
         """
 
         width = 100
-        log_title = f" {self.name} ".center(width, "=")
+        log_title = f" {self.APP_NAME} ".center(width, "=")
         self.log.info(f"\n{'=' * width}\n{log_title}\n{'=' * width}")
-        self.log.info(f"Program Version: {self.version}")
+        self.log.info(f"Program Version: {self.APP_VERSION}")
         self.log.info(f"Executable: {self.executable}")
         self.log.info(f"Commandline Arguments: {sys.argv}")
         self.log.info(f"Resource Path: {self.res_path}")
         self.log.info(f"Data Path: {self.data_path}")
-        self.log.info(f"Config Path: {self.app_conf_path}")
         self.log.info(f"Cache Path: {self.cache_path}")
         self.log.info(f"Log Path: {self.log_path}")
-        self.log.info(f"Log Level: {intlevel2strlevel(self.log_level)}")
         self.log.debug(
             f"Detected Platform: \
 {platform.system()} \
@@ -435,513 +365,79 @@ class MainApp(QApplication):
         )
         self.log.info(f"First start: {self.first_start}")
 
-    def load_locale(self):
-        self.loc = Localisator(self.app_config["language"], self.loc_path)
-        self.loc.load_lang()
+        self.app_config.print_settings_to_log()
 
-    def load_theme(self):
+    def load_localisation(self) -> None:
+        translator = QTranslator(self)
+
+        language: str
+        if self.app_config.language == "System":
+            language = detect_system_locale() or "en_US"
+        else:
+            language = self.app_config.language
+
+        translator.load(f":/loc/{language}.qm")
+        self.installTranslator(translator)
+
+        self.log.info(f"Loaded localisation for {language}.")
+
+    def load_theme(self) -> None:
         """
         Loads stylesheet and applies user set accent color.
         """
 
-        stylesheet = self.style_path.read_text("utf8")
-        if is_valid_hex_color(self.app_config["accent_color"]):
-            accent_color = self.app_config["accent_color"]
-        else:
-            self.log.error(f"{accent_color!r} is not a valid hex color code!")
-            accent_color = self.default_app_config["accent_color"]
+        stylesheet: str = read_resource(self.style_path)
+        accent_color: str = self.app_config.accent_color
 
-        highlighted_accent = QColor(accent_color).darker(120).name()
+        highlighted_accent: str = QColor(accent_color).darker(120).name()
 
         stylesheet = stylesheet.replace("<accent_color>", accent_color)
         stylesheet = stylesheet.replace("<highlighted_accent>", highlighted_accent)
 
         self.setStyleSheet(stylesheet)
 
-        palette = self.palette()
-        palette.setColor(
-            palette.ColorRole.Link, QColor(self.app_config["accent_color"])
-        )
+        palette: QPalette = self.palette()
+        palette.setColor(palette.ColorRole.Link, QColor(accent_color))
+        palette.setColor(palette.ColorRole.Highlight, QColor(highlighted_accent))
+        palette.setColor(palette.ColorRole.Text, QColor("#ffffff"))
+        palette.setColor(palette.ColorRole.Accent, QColor(accent_color))
         self.setPalette(palette)
 
-    def init_gui(self):
-        # Statusbar
-        self.statusbar = self.root.statusBar()
-
-        self.status_label = QLabel()
-        self.status_label.setObjectName("status_label")
-        self.status_label.setTextFormat(Qt.TextFormat.PlainText)
-        self.log_signal.connect(
-            self.status_label.setText, Qt.ConnectionType.QueuedConnection
-        )
-        self.statusbar.insertPermanentWidget(0, self.status_label, stretch=1)
-
-        self.api_label = QLabel()
-        self.api_label.setToolTip(self.loc.main.api_limit_hint)
-        self.statusbar.addPermanentWidget(self.api_label)
-
-        copy_log_button = QPushButton()
-        copy_log_button.setFixedSize(20, 20)
-        copy_log_button.setIcon(qta.icon("mdi6.content-copy", color="#ffffff"))
-        copy_log_button.setIconSize(QSize(16, 16))
-        copy_log_button.clicked.connect(
-            lambda: clipboard.copy("".join(self.stdout._lines))
-        )
-        copy_log_button.setToolTip(self.loc.main.copy_log)
-        self.statusbar.addPermanentWidget(copy_log_button)
-
-        open_log_button = QPushButton()
-        open_log_button.setFixedSize(20, 20)
-        open_log_button.setIcon(qta.icon("fa5s.external-link-alt", color="#ffffff"))
-        open_log_button.setIconSize(QSize(16, 16))
-        open_log_button.clicked.connect(
-            lambda: os.startfile(self.log_path / self.log_name)
-        )
-        open_log_button.setToolTip(self.loc.main.open_log)
-        self.statusbar.addPermanentWidget(open_log_button)
-
-        # Menubar
-        self.menubar = self.root.menuBar()
-
-        file_menu = self.menubar.addMenu(self.loc.main.file)
-
-        exit_action = file_menu.addAction(self.loc.main.exit)
-        exit_action.setIcon(qta.icon("fa5s.window-close", color="#ffffff"))
-        exit_action.triggered.connect(self.exit)
-
-        settings_action = self.menubar.addAction(self.loc.settings.settings)
-        settings_action.triggered.connect(self.open_settings)
-
-        help_menu = self.menubar.addMenu(self.loc.main.help)
-
-        documentation_action = help_menu.addAction(self.loc.main.show_documentation)
-        documentation_action.setIcon(qta.icon("mdi6.note-text", color="#ffffff"))
-        documentation_action.triggered.connect(self.show_documentation)
-
-        update_action = help_menu.addAction(self.loc.main.check_for_updates)
-        update_action.setIcon(qta.icon("fa.refresh", color="#ffffff"))
-
-        def check_for_updates():
-            upd = updater.Updater(self)
-            if upd.update_available():
-                upd.run()
-            else:
-                messagebox = QMessageBox(self.root)
-                apply_dark_title_bar(messagebox)
-                messagebox.setWindowTitle(self.loc.updater.no_updates)
-                messagebox.setText(self.loc.updater.no_updates_available)
-                messagebox.setTextFormat(Qt.TextFormat.RichText)
-                messagebox.setIcon(QMessageBox.Icon.Information)
-                messagebox.exec()
-
-        update_action.triggered.connect(check_for_updates)
-
-        help_menu.addSeparator()
-
-        path_limit_action = help_menu.addAction(self.loc.main.fix_path_limit)
-
-        def fix_path_limit():
-            try:
-                os.startfile(self.res_path / "path_limit.reg")
-            except OSError:
-                pass
-
-        path_limit_action.triggered.connect(fix_path_limit)
-
-        help_menu.addSeparator()
-
-        about_action = help_menu.addAction(self.loc.main.about)
-        about_action.setIcon(qta.icon("fa5s.info-circle", color="#ffffff"))
-        about_action.triggered.connect(self.about)
-
-        about_qt_action = help_menu.addAction(self.loc.main.about + " Qt")
-        about_qt_action.triggered.connect(self.about_qt)
-
-        # Tab Widget
-        self.tab_widget = QTabWidget()
-        self.tab_widget.setObjectName("root")
-        self.tab_widget.setTabPosition(QTabWidget.TabPosition.South)
-        self.tab_widget.tabBar().setDocumentMode(True)
-        self.root.setCentralWidget(self.tab_widget)
-
-        # Main Page Widget
-        self.mainpage_widget = MainPageWidget(self)
-        self.mainpage_widget.load_mods()
-        self.tab_widget.addTab(self.mainpage_widget, self.loc.main_page.modlist)
-
-        # Translation Editor Widget
-        self.translation_editor = TranslationEditor(self)
-        self.tab_widget.addTab(self.translation_editor, self.loc.editor.editor)
-        self.tab_widget.setTabEnabled(1, False)
-
-        # Refresh Hotkey
-        refresh_shortcut = QShortcut(QKeySequence("F5"), self.root)
-
-        def refresh():
-            self.mainpage_widget.update_modlist()
-            self.mainpage_widget.database_widget.translations_widget.update_translations()
-
-            current_editor_tab = self.translation_editor.get_current_tab()
-
-            if current_editor_tab:
-                current_editor_tab.update_string_list()
-
-            self.load_theme()
-            apply_dark_title_bar(self.root)
-
-        refresh_shortcut.activated.connect(refresh)
-
-    def show_documentation(self):
-        """
-        Displays Documentation Markdown in an own dialog.
-        """
-
-        os.startfile(self.executable, arguments="--show-docs")
-
-    def show_documentation_standalone(self):
-        """
-        Starts app in minimal mode and just opens Documentation in an own window.
-        """
-
-        self.init_logger()
-        self.load_config()
-        self.log_basic_info()
-        self.load_locale()
-        self.load_theme()
-
-        self.log.info(f"Mode: Documentation only")
-
-        self.root = QMainWindow()
-        self.root.setWindowTitle(self.loc.main.documentation)
-        self.root.setMinimumSize(1000, 800)
-        apply_dark_title_bar(self.root)
-
-        widget = QWidget()
-        widget.setObjectName("root")
-        self.root.setCentralWidget(widget)
-
-        hlayout = QHBoxLayout()
-        widget.setLayout(hlayout)
-
-        hlayout.addStretch(2)
-
-        document = QTextDocument()
-        documentation_path = (
-            Path(".").resolve() / "doc" / f"Instructions_{self.loc.language}.md"
-        )
-        if not documentation_path.is_file():
-            self.log.warning(
-                f"No documentation available for {self.loc.language!r}. Falling back to 'en_US'..."
-            )
-            documentation_path = Path(".").resolve() / "doc" / f"Instructions_en_US.md"
-        document.setUseDesignMetrics(True)
-
-        # Modify document.loadResource to ensure that images are loaded
-        _loadResource = document.loadResource
-
-        def loadResource(type: QTextDocument.ResourceType, url: QUrl):
-            if type == QTextDocument.ResourceType.ImageResource:
-                image_path = documentation_path.parent / url.path()
-                if image_path.is_file():
-                    return QImage(str(image_path))
-
-            return _loadResource(type, url)
-
-        document.loadResource = loadResource
-
-        document.setBaseUrl(str(documentation_path.parent))
-        document.setMarkdown(
-            documentation_path.read_text(),
-            document.MarkdownFeature.MarkdownDialectGitHub,
-        )
-
-        documentation_box = QTextBrowser()
-        documentation_box.setSearchPaths([str(documentation_path.parent)])
-        documentation_box.setDocument(document)
-        documentation_box.setObjectName("regular")
-        documentation_box.setTextInteractionFlags(
-            Qt.TextInteractionFlag.LinksAccessibleByMouse
-        )
-        documentation_box.setOpenExternalLinks(True)
-
-        hlayout.addWidget(documentation_box, stretch=6)
-
-        hlayout.addStretch(2)
-
-        self.root.showMaximized()
-
-        super().exec()
-
-        self.clean_and_exit()
-
-    def open_settings(self):
-        """
-        Opens Settings dialog.
-        """
-
-        SettingsDialog(self).exec()
-
-    def about(self):
-        """
-        Displays about dialog.
-        """
-
-        dialog = QDialog(self.root)
-        dialog.setWindowTitle(self.loc.main.about)
-        apply_dark_title_bar(dialog)
-
-        vlayout = QVBoxLayout()
-        dialog.setLayout(vlayout)
-
-        tab_widget = QTabWidget()
-        tab_widget.tabBar().setExpanding(True)
-        tab_widget.setObjectName("centered_tab")
-        vlayout.addWidget(tab_widget)
-
-        about_tab = QWidget()
-        about_tab.setObjectName("transparent")
-        tab_widget.addTab(about_tab, self.loc.main.about)
-
-        hlayout = QHBoxLayout()
-        about_tab.setLayout(hlayout)
-
-        hlayout.addSpacing(25)
-
-        icon = self.windowIcon()
-        pixmap = icon.pixmap(128, 128)
-        icon_label = QLabel()
-        icon_label.setPixmap(pixmap)
-        hlayout.addWidget(icon_label)
-
-        hlayout.addSpacing(15)
-
-        vlayout = QVBoxLayout()
-        hlayout.addLayout(vlayout, 1)
-
-        hlayout.addSpacing(25)
-        vlayout.addSpacing(25)
-
-        title_label = QLabel(f"{self.name} v{self.version}")
-        title_label.setObjectName("title_label")
-        vlayout.addWidget(title_label)
-
-        text = self.loc.main.about_text
-        text = text.replace("[VERSION]", self.version)
-
-        # Add translator credit if available
-        if self.loc.main.translator_url.startswith("http"):
-            text += "<br><br>Translation by "
-            text += f"<a href='{self.loc.main.translator_url}'>"
-            text += f"{self.loc.main.translator_name}</a>"
-
-        credits_label = QLabel(text)
-        credits_label.setTextFormat(Qt.TextFormat.RichText)
-        credits_label.setOpenExternalLinks(True)
-        vlayout.addWidget(credits_label)
-
-        vlayout.addSpacing(25)
-
-        licenses_tab = QListWidget()
-        tab_widget.addTab(licenses_tab, self.loc.main.used_software)
-
-        licenses_tab.addItems(LICENSES.keys())
-
-        licenses_tab.itemDoubleClicked.connect(
-            lambda item: os.startfile(LICENSES[item.text()])
-        )
-
-        dialog.exec()
-
-    def about_qt(self):
-        """
-        Displays about Qt dialog.
-        """
-
-        QMessageBox.aboutQt(self.root, self.loc.main.about + " Qt")
-
-    def handle_exception(self, exc_type, exc_value, exc_traceback):
-        """
-        Processes uncatched exceptions and shows them in a QMessageBox.
-        """
-
-        # Pass through if exception is KeyboardInterrupt
-        # for eg. CTRL+C
-        if issubclass(exc_type, KeyboardInterrupt):
-            sys.__excepthook__(exc_type, exc_value, exc_traceback)
-            return
-
-        # Handle ui exceptions separately
-        if issubclass(exc_type, GeneralException):
-            self.log.error(f"An error occured: {exc_type.text}")
-
-            # Show translation if available
-            error_msg = getattr(self.loc.errors, exc_type.id, exc_type.id)
-
-            # Disable details
-            detailed_msg = ""
-            yesno = False
-
-        # Show normal uncatched exceptions
-        else:
-            tb = "".join(traceback.format_exception(exc_type, exc_value, exc_traceback))
-            self.log.critical("An uncaught exception occured:\n" + tb)
-
-            # Get exception info
-            error_msg = f"{self.loc.errors.error_text} {exc_value}"
-            detailed_msg = tb
-            yesno = True
-
-            # Set exception to True
-            # to save log file when exit
-            # this ignores user configuration
-            self.exception = True
-
-        # Create error messagebox
-        messagebox = ErrorDialog(
-            parent=self.activeModalWidget(),
-            app=self,
-            title=f"{self.name} - {self.loc.errors.error}",
-            text=error_msg,
-            details=detailed_msg,
-            yesno=yesno,
-        )
-
-        # Play system alarm sound
-        alert()
-
-        choice = messagebox.exec()
-
-        if choice == QMessageBox.StandardButton.No:
-            self.exit()
-
-    def get_tmp_dir(self):
+    def get_tmp_dir(self) -> Path:
         """
         Returns path to a temporary directory.
         Creates one if needed.
         """
 
-        if self.tmp_dir is None:
-            self.tmp_dir = Path(
-                tempfile.mkdtemp(
-                    prefix="SSE-AT_temp-", dir=self.app_config["temp_path"]
-                )
+        if self.tmp_path is None:
+            self.tmp_path = Path(
+                tempfile.mkdtemp(prefix="SSE-AT_temp-", dir=self.app_config.temp_path)
             )
 
-        return self.tmp_dir
+        return self.tmp_path
 
-    def timerEvent(self, event: QTimerEvent):
+    def timerEvent(self, event: QTimerEvent) -> None:
         super().timerEvent(event)
 
-        if hasattr(self, "api_label"):
-            rem_hreq, rem_dreq = self.provider.get_remaining_requests()
-            self.api_label.setText(
-                f"API: {self.loc.main.api_hleft}: {rem_hreq} | {self.loc.main.api_dleft}: {rem_dreq}"
-            )
-            if rem_hreq < 50 and rem_dreq == 0:
-                self.api_label.setObjectName("critical_label")
-            elif rem_hreq < 100 and rem_dreq == 0:
-                self.api_label.setObjectName("warning_label")
-            else:
-                self.api_label.setObjectName("label")
-            self.api_label.setStyleSheet(self.styleSheet())
-            self.api_label.setVisible(
-                self.provider.preference != self.provider.Preference.OnlyConfrerie
-            )
+        self.timer_signal.emit()
 
-        if hasattr(self, "mainpage_widget"):
-            if self.nxm_listener is not None:
-                self.mainpage_widget.database_widget.translations_widget.nxmhandler_button.setChecked(
-                    self.nxm_listener.is_bound()
-                )
+    def clean(self) -> None:
+        """
+        Cleans up temporary files, running downloads and log folder.
+        """
 
-    def exit(self, event: QCloseEvent = None):
-        confirmation = True
+        if self.setup_complete:
+            self.download_manager.stop()
 
-        if hasattr(self, "mainpage_widget"):
-            if not self.mainpage_widget.database_widget.downloads_widget.queue.empty():
-                message_box = QMessageBox(self.root)
-                message_box.setWindowTitle(self.loc.main.exit + "?")
-                message_box.setText(self.loc.main.unfinished_downloads)
-                apply_dark_title_bar(message_box)
-                message_box.setStandardButtons(
-                    QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.Cancel
-                )
-                message_box.setDefaultButton(QMessageBox.StandardButton.Yes)
-                message_box.button(QMessageBox.StandardButton.Yes).setText(
-                    self.loc.main._continue
-                )
-                message_box.button(QMessageBox.StandardButton.Cancel).setText(
-                    self.loc.main.cancel
-                )
-
-                choice = message_box.exec()
-
-                if choice == QMessageBox.StandardButton.Yes:
-                    confirmation = True
-                    self.mainpage_widget.database_widget.downloads_widget.thread.terminate()
-                else:
-                    confirmation = False
-
-        if hasattr(self, "translation_editor"):
-            if any(
-                tab.changes_pending for tab in self.translation_editor.tabs.values()
-            ):
-                message_box = QMessageBox(self.root)
-                message_box.setWindowTitle(self.loc.main.exit + "?")
-                message_box.setText(self.loc.main.unsaved_exit)
-                apply_dark_title_bar(message_box)
-                message_box.setStandardButtons(
-                    QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.Cancel
-                )
-                message_box.setDefaultButton(QMessageBox.StandardButton.Yes)
-                message_box.button(QMessageBox.StandardButton.Yes).setText(
-                    self.loc.main._continue
-                )
-                message_box.button(QMessageBox.StandardButton.Cancel).setText(
-                    self.loc.main.cancel
-                )
-
-                choice = message_box.exec()
-
-                if choice != QMessageBox.StandardButton.Yes:
-                    confirmation = False
-
-        if confirmation:
-            if event:
-                self.root_close(event)
-            else:
-                self.root.destroy()
-            super().exit()
-        elif event:
-            event.ignore()
-
-    def clean_and_exit(self):
-        self.log.info("Exiting application...")
-
-        if self.cacher is not None:
-            self.cacher.save_caches()
-
-        if hasattr(self, "mainpage_widget"):
-            downloader_thread = (
-                self.mainpage_widget.database_widget.downloads_widget.thread
-            )
-            if downloader_thread.isRunning():
-                downloader_thread.terminate()
-
-        if self.tmp_dir is not None:
-            shutil.rmtree(self.tmp_dir)
-
-        if self.nxm_listener:
             if self.nxm_listener.is_bound():
                 self.nxm_listener.unbind()
                 self.log.info("Unbound Nexus Mods Links.")
 
-        if self.app_config["keep_logs_num"] >= 0:
-            while (
-                len(log_files := os.listdir(self.log_path))
-                > self.app_config["keep_logs_num"]
-            ):
-                log_files.sort(
-                    key=lambda name: datetime.strptime(name, "%d.%m.%Y-%H.%M.%S.log")
-                )
-                os.remove(self.log_path / log_files[0])
+        if self.tmp_path is not None:
+            shutil.rmtree(self.tmp_path)
+
+        self.logger.clean_log_folder(
+            self.log_path,
+            self.app_config.log_file_name,
+            self.app_config.log_num_of_files,
+        )
