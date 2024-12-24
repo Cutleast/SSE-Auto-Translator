@@ -122,7 +122,6 @@ class MainPageWidget(QWidget):
         self.__search_bar = SearchBar()
         hlayout.addWidget(self.__search_bar)
 
-        # TODO: Add buttons for Ko-Fi, Discord, Nexus Mods
         ko_fi_button = LinkButton(
             "https://ko-fi.com/cutleast",
             self.tr("Support us on Ko-Fi"),
