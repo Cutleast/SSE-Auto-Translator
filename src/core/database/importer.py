@@ -564,6 +564,7 @@ class Importer(QObject):
             merged_string: String = copy(translation_string)
             merged_string.translated_string = merged_string.original_string
             merged_string.original_string = original_string.original_string
+            merged_string.status = String.Status.TranslationComplete
             merged_strings.append(merged_string)
 
         if len(unmerged_strings) < len(translation_strings):

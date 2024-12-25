@@ -212,29 +212,41 @@ class TranslationDatabase(QObject):
             save (bool, optional): Whether to save the database. Defaults to True.
         """
 
-        if translation not in self.__user_translations:
+        # Add new translation
+        if translation.id not in [t.id for t in self.__user_translations]:
             self.__user_translations.append(translation)
             self.log.info(f"Added translation {translation.name!r} to database.")
 
+        # Merge with existing translation
+        else:
+            # Merge new translation with existing one
+            translations: dict[str, Translation] = {
+                t.id: t for t in self.user_translations
+            }
+            installed_translation = translations[translation.id]
+
+            for plugin_name, plugin_strings in translation.strings.items():
+                installed_translation.strings.setdefault(plugin_name, []).extend(
+                    plugin_strings
+                )
+
+                # Remove duplicates
+                installed_translation.strings[plugin_name] = String.unique(
+                    installed_translation.strings[plugin_name]
+                )
+
+            # Merge metadata
+            installed_translation.mod_id = translation.mod_id
+            installed_translation.file_id = translation.file_id
+            installed_translation.version = translation.version
+            installed_translation.original_mod_id = translation.original_mod_id
+            installed_translation.original_file_id = translation.original_file_id
+            installed_translation.original_version = translation.original_version
+
+        # Set original plugins status to TranslationInstalled
         mod_instance: ModInstance = AppContext.get_app().mod_instance
-
-        # Merge new translation with existing one
-        installed_translation = self.__user_translations[
-            self.__user_translations.index(translation)
-        ]
-
         plugin_states: dict[Plugin, Plugin.Status] = {}
-        for plugin_name, plugin_strings in translation.strings.items():
-            installed_translation.strings.setdefault(plugin_name, []).extend(
-                plugin_strings
-            )
-
-            # Remove duplicates
-            installed_translation.strings[plugin_name] = String.unique(
-                installed_translation.strings[plugin_name]
-            )
-
-            # Set original plugin status to TranslationInstalled
+        for plugin_name in translation.strings:
             original_plugin: Optional[Plugin] = mod_instance.get_plugin(
                 plugin_name,
                 ignore_states=[
@@ -246,14 +258,6 @@ class TranslationDatabase(QObject):
 
             if original_plugin is not None:
                 plugin_states[original_plugin] = Plugin.Status.TranslationInstalled
-
-        # Merge metadata
-        installed_translation.mod_id = translation.mod_id
-        installed_translation.file_id = translation.file_id
-        installed_translation.version = translation.version
-        installed_translation.original_mod_id = translation.original_mod_id
-        installed_translation.original_file_id = translation.original_file_id
-        installed_translation.original_version = translation.original_version
 
         if save:
             self.save_database()

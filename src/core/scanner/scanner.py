@@ -111,11 +111,31 @@ class Scanner(QObject):
         if self.app_config.auto_import_translations:
             mods: list[Mod] = self.mod_instance.mods
 
-            dsd_translations: dict[Mod, Mod] = self.run_dsd_scan(mods, ldialog)
-            for dsd_translation, original_mod in dsd_translations.items():
+            installed_translations: dict[Mod, Mod] = self.run_translation_scan(
+                mods, ldialog
+            )
+            for m, (installed_translation, original_mod) in enumerate(
+                installed_translations.items()
+            ):
+                if ldialog is not None:
+                    ldialog.updateProgress(
+                        text1=self.tr("Importing translations...")
+                        + f" ({m}/{len(installed_translations)})",
+                        value1=m,
+                        max1=len(installed_translations),
+                        show2=True,
+                        text2=installed_translation.name,
+                        value2=0,
+                        max2=0,
+                    )
+
                 self.database.importer.import_mod_as_translation(
-                    dsd_translation, original_mod
+                    installed_translation, original_mod
                 )
+
+                # Prevent scan result from overwriting the TranslationInstalled status
+                # of the plugins in the original mod
+                scan_result.pop(original_mod, None)
 
         self.log.info("Modlist scan complete.")
 
@@ -480,11 +500,11 @@ class Scanner(QObject):
 
         return result
 
-    def run_dsd_scan(
+    def run_translation_scan(
         self, mods: list[Mod], ldialog: Optional[LoadingDialog] = None
     ) -> dict[Mod, Mod]:
         """
-        Scans for installed DSD translations.
+        Scans for installed translations.
 
         Args:
             mods (list[Mod]): The mods to scan.
@@ -492,17 +512,17 @@ class Scanner(QObject):
                 Optional loading dialog. Defaults to None.
 
         Returns:
-            dict[Mod, Mod]: Map of DSD translations to their (approximate) original mod.
+            dict[Mod, Mod]: Map of translations to their (approximate) original mod.
         """
 
         result: dict[Mod, Mod] = {}
 
-        self.log.info(f"Scanning {len(mods)} mod(s) for DSD translations...")
+        self.log.info(f"Scanning {len(mods)} mod(s) for installed translations...")
 
         for m, mod in enumerate(mods):
             if ldialog is not None:
                 ldialog.updateProgress(
-                    text1=self.tr("Scanning for DSD translations...")
+                    text1=self.tr("Scanning for installed translations...")
                     + f" ({m}/{len(mods)})",
                     value1=m,
                     max1=len(mods),
@@ -510,34 +530,40 @@ class Scanner(QObject):
                     show3=False,
                 )
 
-            self.log.info(f"Scanning for DSD translations in {mod.name!r}...")
+            self.log.info(f"Scanning for installed translations in {mod.name!r}...")
 
-            original_mod: Optional[Mod] = self.__dsd_scan_mod(mod, ldialog)
+            original_mod: Optional[Mod] = self.__translation_scan_mod(mod, ldialog)
 
             if original_mod is not None:
                 result[mod] = original_mod
 
-        self.log.info("Scanning for DSD translations complete.")
+        self.log.info("Scanning for installed translations complete.")
 
         return result
 
-    def __dsd_scan_mod(
+    def __translation_scan_mod(
         self, mod: Mod, ldialog: Optional[LoadingDialog] = None
     ) -> Optional[Mod]:
         original_mod: Optional[Mod] = None
 
-        dsd_files: list[str] = mod.dsd_files
-        for d, dsd_file in enumerate(dsd_files):
+        plugin_names: list[str] = list(
+            filter(
+                lambda p: self.database.get_translation_by_plugin_name(p) is None,
+                unique(
+                    [plugin.name for plugin in mod.plugins]
+                    + [Path(dsd_file).parent.name for dsd_file in mod.dsd_files],
+                    key=lambda s: s.lower(),
+                ),
+            )
+        )
+        for p, plugin_name in enumerate(plugin_names):
             if ldialog is not None:
                 ldialog.updateProgress(
                     show2=True,
-                    text2=f"{mod.name} > {dsd_file} ({d}/{len(dsd_files)})",
-                    value2=d,
-                    max2=len(dsd_files),
+                    text2=f"{mod.name} > {plugin_name} ({p}/{len(plugin_names)})",
+                    value2=p,
+                    max2=len(plugin_names),
                 )
-
-            dsd_path: Path = Path(dsd_file)
-            plugin_name: str = dsd_path.parent.name
 
             original_mod = self.mod_instance.get_mod_with_plugin(
                 plugin_name,
@@ -553,9 +579,9 @@ class Scanner(QObject):
                 break
 
         else:
-            if dsd_files:
+            if plugin_names:
                 self.log.warning(
-                    f"No original mod found for DSD translation in {mod.name!r}!"
+                    f"No original mod found for installed translation {mod.name!r}!"
                 )
 
         return original_mod

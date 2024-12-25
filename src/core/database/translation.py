@@ -265,7 +265,7 @@ class Translation:
         - `path`
         """
 
-        return f"{self.name}###{self.path}"
+        return f"{self.name}###{self.path}".lower()
 
     def __hash__(self) -> int:
         return hash((self.name, self.path))

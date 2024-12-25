@@ -833,32 +833,32 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
         <translation>Plugins:</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="128"/>
+        <location filename="src/ui/main_page/main_page.py" line="127"/>
         <source>Support us on Ko-Fi</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="135"/>
+        <location filename="src/ui/main_page/main_page.py" line="134"/>
         <source>Join us on Discord</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="142"/>
+        <location filename="src/ui/main_page/main_page.py" line="141"/>
         <source>Check out my profile on Nexus Mods</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="329"/>
+        <location filename="src/ui/main_page/main_page.py" line="328"/>
         <source>Search Results</source>
         <translation type="unfinished">Suchergebnisse</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="334"/>
+        <location filename="src/ui/main_page/main_page.py" line="333"/>
         <source>No strings found!</source>
         <translation type="unfinished">Keine Strings gefunden!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="338"/>
+        <location filename="src/ui/main_page/main_page.py" line="337"/>
         <source>Did not find any strings matching the given filter!
 Click on &quot;Show Details&quot; to view used filter.</source>
         <translation type="unfinished">Keine passenden Strings für den angegebenen Filter gefunden!
@@ -1220,38 +1220,43 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
         <translation>Modliste wird gescannt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="161"/>
+        <location filename="src/core/scanner/scanner.py" line="123"/>
+        <source>Importing translations...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/scanner/scanner.py" line="181"/>
         <source>Extracting strings...</source>
         <translation>Strings werden extrahiert...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="169"/>
+        <location filename="src/core/scanner/scanner.py" line="189"/>
         <source>Detecting language...</source>
         <translation>Sprache wird erkannt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="231"/>
+        <location filename="src/core/scanner/scanner.py" line="251"/>
         <source>Scanning online...</source>
         <translation>Übersetzungen werden online gesucht...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="314"/>
+        <location filename="src/core/scanner/scanner.py" line="334"/>
         <source>Running deep scan...</source>
         <translation>Tiefenscan wird ausgeführt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="368"/>
+        <location filename="src/core/scanner/scanner.py" line="388"/>
         <source>Scanning strings...</source>
         <translation>Strings werden gescannt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="432"/>
+        <location filename="src/core/scanner/scanner.py" line="452"/>
         <source>Searching modlist for strings...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="506"/>
-        <source>Scanning for DSD translations...</source>
+        <location filename="src/core/scanner/scanner.py" line="526"/>
+        <source>Scanning for installed translations...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
