@@ -302,7 +302,7 @@ If you don&apos;t have Nexus Mods Premium, make sure that SSE-AT is linked to Mo
 <context>
     <name>Downloader</name>
     <message>
-        <location filename="src/core/downloader/downloader.py" line="125"/>
+        <location filename="src/core/downloader/downloader.py" line="127"/>
         <source>Downloading...</source>
         <translation type="unfinished"></translation>
     </message>

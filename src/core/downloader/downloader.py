@@ -106,7 +106,7 @@ class Downloader(QObject):
             self.__running = True
             current_size: int = 0
             with dl_path.open("wb") as output_file:
-                __start: float = time.time()
+                __start: tuple[float, int] = time.time(), 0
                 for data in stream.iter_content(Downloader.CHUNK_SIZE):
                     if self.__running:
                         output_file.write(data)
@@ -114,9 +114,11 @@ class Downloader(QObject):
                     else:
                         break
 
-                    __duration: float = time.time() - __start
+                    __duration: float = time.time() - __start[0]
                     if __duration > 0.5:
-                        __speed: int = round(Downloader.CHUNK_SIZE / __duration)
+                        __speed: int = round(
+                            (Downloader.CHUNK_SIZE * __start[1]) / __duration
+                        )
                         safe_run_callback(
                             progress_callback,
                             ProgressUpdate(
@@ -126,7 +128,9 @@ class Downloader(QObject):
                                 speed=__speed,
                             ),
                         )
-                        __start = time.time()
+                        __start = time.time(), 0
+                    else:
+                        __start = __start[0], __start[1] + 1
 
         if self.__running and current_size == total_size:
             self.log.info("Download complete!")
