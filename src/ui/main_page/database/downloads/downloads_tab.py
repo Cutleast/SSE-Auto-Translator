@@ -3,6 +3,7 @@ Copyright (c) Cutleast
 """
 
 import qtawesome as qta
+from PySide6.QtGui import QColor
 from PySide6.QtWidgets import (
     QApplication,
     QHBoxLayout,
@@ -58,6 +59,9 @@ class DownloadsTab(QWidget):
         self.__init_header()
         self.__init_downloads_widget()
 
+    def __update(self) -> None:
+        self.__downloads_num_label.display(len(self.__download_items))
+
     def __init_header(self) -> None:
         hlayout = QHBoxLayout()
         self.__vlayout.addLayout(hlayout)
@@ -90,21 +94,27 @@ class DownloadsTab(QWidget):
 
     def __add_download(self, download: FileDownload) -> None:
         download_item = DownloadItem(download)
-        download_item.finished_signal.connect(self.__download_finished)
+        download_item.finished_signal.connect(self.__remove_download_item)
+        download_item.remove_signal.connect(self.__remove_download_item)
+        download_item.remove_signal.connect(
+            lambda: self.download_manager.remove_download_item(download)
+        )
         self.__downloads_widget.addTopLevelItem(download_item)
         self.__download_items.append(download_item)
-
         self.download_manager.add_download_item(download, download_item.update_progress)
 
-    def __download_finished(self, download_item: DownloadItem) -> None:
+        self.__update()
+
+    def __remove_download_item(self, download_item: DownloadItem) -> None:
         download_item.setHidden(True)
         self.__downloads_widget.takeTopLevelItem(
             self.__downloads_widget.indexOfTopLevelItem(download_item)
         )
         self.__download_items.remove(download_item)
+        self.__update()
 
     def stop(self) -> None:
-        # TODO: Reevaluate this
+        # TODO: Change this so that it cancels the entire queue
         message_box = QMessageBox(QApplication.activeModalWidget())
         message_box.setWindowTitle(self.tr("Stop installation?"))
         message_box.setText(
@@ -126,6 +136,7 @@ class DownloadsTab(QWidget):
         thread.start()
 
     def toggle_pause(self) -> None:
+        text_color: QColor = self.palette().text().color()
         self.setDisabled(True)
 
         if self.download_manager.running:
@@ -133,13 +144,13 @@ class DownloadsTab(QWidget):
             thread.start()
             self.__toolbar.toggle_pause_action.setText(self.tr("Resume"))
             self.__toolbar.toggle_pause_action.setIcon(
-                qta.icon("fa5s.play", color=self.palette().text().color())
+                qta.icon("fa5s.play", color=text_color)
             )
         else:
             self.download_manager.resume()
             self.__toolbar.toggle_pause_action.setText(self.tr("Pause"))
             self.__toolbar.toggle_pause_action.setIcon(
-                qta.icon("fa5s.pause", color=self.palette().text().color())
+                qta.icon("fa5s.pause", color=text_color)
             )
 
         self.setDisabled(False)

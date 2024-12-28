@@ -392,6 +392,9 @@ QProgressBar::chunk {
     background: <accent_color>;
     border-radius: 8px;
 }
+QProgressBar#error::chunk {
+    background: #d74343;
+}
 
 
 /* Radiobuttons & Checkboxes */

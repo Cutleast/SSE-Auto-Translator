@@ -43,9 +43,19 @@ class ProgressUpdate:
         Process is finished and item can be removed from GUI.
         """
 
+        Failed = "failed"
+        """
+        Process has failed and `ProgressUpdate.exception` is displayed to the user.
+        """
+
     speed: Optional[int] = None
     """
     Measured download speed in bytes per second, if any.
+    """
+
+    exception: Optional[Exception] = None
+    """
+    Exception to be displayed, if any. Has only an effect if `status` is `Failed`.
     """
 
 

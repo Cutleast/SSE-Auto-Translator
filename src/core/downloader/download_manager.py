@@ -43,6 +43,11 @@ class DownloadManager(QObject):
     This signal gets emitted when a new download is added to the queue.
     """
 
+    download_finished = Signal(FileDownload)
+    """
+    This signal gets emitted when a download has finished.
+    """
+
     finished = Signal()
     """
     This signal gets emitted when all worker threads have finished.
@@ -108,6 +113,7 @@ class DownloadManager(QObject):
 
         for worker in self.workers:
             worker.finished.connect(self.__on_worker_finished)
+            worker.download_finished.connect(self.download_finished.emit)
             worker.start()
 
         self.log.info("Threads started, ready for downloads.")
@@ -147,7 +153,7 @@ class DownloadManager(QObject):
 
         for worker in self.workers:
             # Terminate paused workers
-            if worker.paused and not worker.running:
+            if worker.paused:
                 worker.terminate()
             # Or signal them to stop
             else:
@@ -187,6 +193,17 @@ class DownloadManager(QObject):
 
         self.queue.put((download, progress_callback))
 
+    def remove_download_item(self, download: FileDownload) -> None:
+        """
+        Removes a download item from the queue. This does not cancel it
+        if it is already running and just set its `stale` flag to `True`.
+
+        Args:
+            download (FileDownload): Download to remove.
+        """
+
+        download.stale = True
+
     def collect_available_downloads(
         self, items: dict[Mod, list[Plugin]], ldialog: Optional[LoadingDialog] = None
     ) -> dict[str, list[TranslationDownload]]:
@@ -209,6 +226,17 @@ class DownloadManager(QObject):
 
         if ldialog is not None:
             ldialog.updateProgress(text1=self.tr("Collecting available downloads..."))
+
+        # Filter items for plugins that have an available translation
+        items = {
+            mod: [
+                plugin
+                for plugin in plugins
+                if plugin.status == Plugin.Status.TranslationAvailableOnline
+            ]
+            for mod, plugins in items.items()
+        }
+        items = {mod: plugins for mod, plugins in items.items() if plugins}
 
         translation_downloads: dict[str, list[TranslationDownload]] = {}
         for m, (mod, plugins) in enumerate(items.items()):

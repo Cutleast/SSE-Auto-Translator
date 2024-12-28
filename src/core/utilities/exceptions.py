@@ -3,6 +3,7 @@ Copyright (c) Cutleast
 """
 
 from abc import abstractmethod
+from typing import Optional
 
 from PySide6.QtWidgets import QApplication
 
@@ -12,6 +13,9 @@ class ExceptionBase(Exception):
     Base Exception class for localized exceptions.
     """
 
+    def __init__(self, message: Optional[str] = None) -> None:
+        super().__init__(message or self.getLocalizedMessage())
+
     @abstractmethod
     def getLocalizedMessage(self) -> str:
         """
@@ -20,12 +24,6 @@ class ExceptionBase(Exception):
         Returns:
             str: Localised message
         """
-
-    def __str__(self) -> str:
-        return self.getLocalizedMessage()
-
-    def __repr__(self) -> str:
-        return self.getLocalizedMessage()
 
 
 class ApiException(ExceptionBase):

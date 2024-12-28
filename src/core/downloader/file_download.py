@@ -4,7 +4,7 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Optional
 
 from core.mod_instance.mod import Mod
@@ -45,6 +45,11 @@ class FileDownload:
     original_mod: Optional[Mod] = None
     """
     Installed mod the translation is for.
+    """
+
+    stale: bool = field(default=False)
+    """
+    Whether the download is stale and should be removed as soon as a thread picks it up.
     """
 
     def __hash__(self) -> int:

@@ -3,12 +3,11 @@ Copyright (c) Cutleast
 """
 
 import logging
-import traceback
 from pathlib import Path
 from queue import Empty, Queue
 from typing import Optional
 
-from PySide6.QtCore import QThread
+from PySide6.QtCore import QThread, Signal
 
 from app_context import AppContext
 from core.config.app_config import AppConfig
@@ -38,6 +37,11 @@ class Worker(QThread):
 
     running: bool = False
     paused: bool = False
+
+    download_finished = Signal(FileDownload)
+    """
+    This signal gets emitted everytime the worker finishes a download.
+    """
 
     download_queue: Queue[tuple[FileDownload, ProgressCallback]]
     downloader: Downloader
@@ -87,7 +91,7 @@ class Worker(QThread):
                 ProgressUpdate(0, 0, ProgressUpdate.Status.UserActionRequired)
             )
 
-        if download.file_name is None:
+        if download.file_name is None or True:
             raise DownloadFailedError
 
         file_name: str = download.file_name
@@ -112,6 +116,7 @@ class Worker(QThread):
             raise DownloadFailedError()
 
         self.log.info("Processing complete.")
+        self.download_finished.emit(download)
         progress_callback(ProgressUpdate(1, 1, ProgressUpdate.Status.Finished))
 
     def __install_translation(
@@ -202,16 +207,20 @@ class Worker(QThread):
             except Empty:
                 continue
 
-            try:
-                self.__process_download(download, progress_callback)
-            except Exception as ex:
-                progress_callback(
-                    ProgressUpdate(0, 1, traceback.format_exc().splitlines()[-1])
-                )
-                self.log.error(
-                    f"Failed to process translation {download.file_name!r}: {ex}",
-                    exc_info=ex,
-                )
+            if not download.stale:
+                try:
+                    self.__process_download(download, progress_callback)
+                except Exception as ex:
+                    progress_callback(
+                        ProgressUpdate(1, 1, ProgressUpdate.Status.Failed, exception=ex)
+                    )
+                    self.log.error(
+                        f"Failed to process translation {download.file_name!r}: {ex}",
+                        exc_info=ex,
+                    )
+            else:
+                self.download_finished.emit(download)
+                progress_callback(ProgressUpdate(1, 1, ProgressUpdate.Status.Finished))
 
             self.download_queue.task_done()
 

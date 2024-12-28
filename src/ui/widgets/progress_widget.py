@@ -2,6 +2,7 @@
 Copyright (c) Cutleast
 """
 
+import traceback
 from typing import Optional
 
 import qtawesome as qta
@@ -17,13 +18,18 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
+from core.utilities.exceptions import ExceptionBase
+
 
 class ProgressWidget(QWidget):
     """
     Custom widget for displaying progress updates in a QTreeWidgetItem.
     """
 
-    __exception_signal = Signal(str)
+    close_signal = Signal()
+    """
+    This signal gets emitted when the close button is pressed.
+    """
 
     __status_label: QLabel
     __progress_bar: QProgressBar
@@ -34,8 +40,6 @@ class ProgressWidget(QWidget):
         super().__init__(parent)
 
         self.item = item
-
-        self.__exception_signal.connect(self.__set_exception)
 
         hlayout = QHBoxLayout()
         hlayout.setContentsMargins(0, 0, 0, 0)
@@ -73,7 +77,7 @@ class ProgressWidget(QWidget):
         self.__close_button.setIcon(
             qta.icon("fa.close", color=self.palette().text().color())
         )
-        self.__close_button.clicked.connect(lambda: self.item.setHidden(True))
+        self.__close_button.clicked.connect(self.close_signal.emit)
         hlayout.addWidget(self.__close_button)
         self.__close_button.hide()
 
@@ -106,20 +110,25 @@ class ProgressWidget(QWidget):
 
         self.__progress_bar.setValue(current)
 
-    def set_exception(self, text: str) -> None:
+    def setException(self, exception: Exception) -> None:
         """
         Shows copy and close button and sets an error message as tooltip.
-        This method is thread-safe.
 
         Args:
-            text (str): Error message to display. (Usually the exception message).
+            exception (Exception): Exception to display.
         """
 
-        self.__exception_signal.emit(text)
-
-    def __set_exception(self, text: str) -> None:
         self.__copy_button.show()
         self.__close_button.show()
-        self.__progress_bar.hide()
+        self.__progress_bar.setObjectName("error")
+        self.__progress_bar.setStyleSheet(self.styleSheet())
+        self.__progress_bar.setValue(1)
+        self.__progress_bar.setMaximum(1)
         self.__status_label.setWordWrap(True)
-        self.setToolTip(text)
+
+        if isinstance(exception, ExceptionBase):
+            self.__status_label.setText(exception.getLocalizedMessage())
+        else:
+            self.__status_label.setText(traceback.format_exception(exception)[-1])
+
+        self.setToolTip("".join(traceback.format_exception(exception)))

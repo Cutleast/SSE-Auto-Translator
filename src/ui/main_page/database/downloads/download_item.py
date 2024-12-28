@@ -20,6 +20,8 @@ from ui.widgets.progress_widget import ProgressWidget
 class DownloadItem(QTreeWidgetItem, QObject):  # type: ignore[misc]
     """
     Class for items in the Downloads tab.
+
+    TODO: Add button to remove a download from the queue
     """
 
     __update_signal = Signal(ProgressUpdate)
@@ -27,6 +29,11 @@ class DownloadItem(QTreeWidgetItem, QObject):  # type: ignore[misc]
     finished_signal = Signal(object)
     """
     This signal gets emitted when the download is finished and can be removed.
+    """
+
+    remove_signal = Signal(object)
+    """
+    This signal gets emitted when the download should be removed from the queue.
     """
 
     log: logging.Logger = logging.getLogger("DownloadItem")
@@ -82,6 +89,7 @@ class DownloadItem(QTreeWidgetItem, QObject):  # type: ignore[misc]
 
         parent: QTreeWidget = self.treeWidget()
         progress_widget = ProgressWidget(self)
+        progress_widget.close_signal.connect(lambda: self.remove_signal.emit(self))
         parent.setItemWidget(self, 2, progress_widget)
         self.current_widget = progress_widget
 
@@ -103,6 +111,15 @@ class DownloadItem(QTreeWidgetItem, QObject):  # type: ignore[misc]
 
             case ProgressUpdate.Status.Finished:
                 self.finished_signal.emit(self)
+
+            case ProgressUpdate.Status.Failed:
+                self.__show_progress_widget()
+
+                if (
+                    isinstance(self.current_widget, ProgressWidget)
+                    and progress_update.exception
+                ):
+                    self.current_widget.setException(progress_update.exception)
 
             case text:
                 self.__show_progress_widget()
