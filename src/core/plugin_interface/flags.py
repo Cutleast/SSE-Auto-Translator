@@ -6,6 +6,12 @@ from .datatypes import Flags
 
 
 class RecordFlags(Flags):
+    """
+    Enum for all flags used by Bethesda in their plugin files.
+
+    See: https://en.uesp.net/wiki/Skyrim_Mod:Mod_File_Format#Records
+    """
+
     Master = 0x1
     DeletedGroup = 0x10
     Deleted = 0x20

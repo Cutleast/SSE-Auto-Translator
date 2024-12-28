@@ -37,16 +37,35 @@ class Group:
         Group types. See https://en.uesp.net/wiki/Skyrim_Mod:Mod_File_Format#Groups for more.
         """
 
-        Normal = 0  # Regular Record
-        WorldChildren = 1  # Worldspace
-        InteriorCellBlock = 2  # Interior Cell
-        InteriorCellSubBlock = 3  # Interior Cell
-        ExteriorCellBlock = 4  # Exterior Cell
-        ExteriorCellSubBlock = 5  # Exterior Cell
-        CellChildren = 6  # Cell Record
-        TopicChildren = 7  # Dialogue
-        CellPersistentChildren = 8  # Persistent Cell Record
-        CellTemporaryChildren = 9  # Temporary Cell Record
+        Normal = 0
+        """Regular Record"""
+
+        WorldChildren = 1
+        """Worldspace"""
+
+        InteriorCellBlock = 2
+        """Interior Cell Block"""
+
+        InteriorCellSubBlock = 3
+        """Interior Cell Sub Block"""
+
+        ExteriorCellBlock = 4
+        """Exterior Cell Block"""
+
+        ExteriorCellSubBlock = 5
+        """Exterior Cell Sub Block"""
+
+        CellChildren = 6
+        """Cell Record Children"""
+
+        TopicChildren = 7
+        """Dialogue"""
+
+        CellPersistentChildren = 8
+        """Persistent Cell Record"""
+
+        CellTemporaryChildren = 9
+        """Temporary Cell Record"""
 
     def __repr__(self) -> str:
         return prettyprint_object(self)

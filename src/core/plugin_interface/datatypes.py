@@ -18,6 +18,10 @@ class Integer:
     """
 
     class IntType(Enum):
+        """
+        Various integer types used by Bethesda in their plugin files.
+        """
+
         UInt8 = (1, False)
         """Unsigned Integer of size 1."""
 
@@ -44,6 +48,17 @@ class Integer:
 
     @staticmethod
     def parse(data: Stream | bytes, type: IntType | tuple[int, bool]) -> int:
+        """
+        Parses an integer from a stream or byte array.
+
+        Args:
+            data (Stream | bytes): Stream or byte array.
+            type (IntType | tuple[int, bool]): Integer type.
+
+        Returns:
+            int: Parsed Python integer.
+        """
+
         if isinstance(type, Integer.IntType):
             size, signed = type.value
         else:
@@ -55,6 +70,17 @@ class Integer:
 
     @staticmethod
     def dump(value: int, type: IntType | tuple[int, bool]) -> bytes:
+        """
+        Dumps an integer to a byte array.
+
+        Args:
+            value (int): Integer to dump.
+            type (IntType | tuple[int, bool]): Integer type.
+
+        Returns:
+            bytes: Byte array.
+        """
+
         if isinstance(type, Integer.IntType):
             size, signed = type.value
         else:
@@ -69,6 +95,10 @@ class Float:
     """
 
     class FloatType(Enum):
+        """
+        Various float types used by Bethesda in their plugin files.
+        """
+
         Float32 = (4, "f")
         """Float of Size 4."""
 
@@ -83,6 +113,17 @@ class Float:
 
     @staticmethod
     def parse(data: Stream | bytes, type: FloatType) -> float:
+        """
+        Parses a float from a stream or byte array.
+
+        Args:
+            data (Stream | bytes): Stream or byte array.
+            type (FloatType): Float type.
+
+        Returns:
+            float: Parsed Python float.
+        """
+
         size, format = type.value
 
         value: float = struct.unpack(format, get_stream(data).read(size))[0]
@@ -90,6 +131,17 @@ class Float:
 
     @staticmethod
     def dump(value: float, type: FloatType) -> bytes:
+        """
+        Dumps a float to a byte array.
+
+        Args:
+            value (float): Float to dump.
+            type (FloatType): Float type.
+
+        Returns:
+            bytes: Byte array.
+        """
+
         size, format = type.value
 
         return struct.pack(format, value)
@@ -103,6 +155,10 @@ class RawString(str):
     SUPPORTED_ENCODINGS = ["utf8", "cp1250", "cp1252", "cp1251"]
 
     class StrType(Enum):
+        """
+        Various string types used by Bethesda in their plugin files.
+        """
+
         Char = auto()
         """8-bit character."""
 
@@ -180,9 +236,25 @@ class RawString(str):
             return data
 
     @staticmethod
-    def parse(
+    def parse(  # type: ignore[return]
         data: Stream | bytes, type: StrType, size: Optional[int] = None
     ) -> bytes | RawString | list[RawString]:
+        """
+        Parses a string from a stream or byte array.
+
+        Args:
+            type (StrType): String type.
+            size (Optional[int], optional):
+                Size of the string or length of the list of strings.
+                Not required for `Char` and `WChar`.
+
+        Raises:
+            ValueError: when the size is not specified where required.
+
+        Returns:
+            bytes | RawString | list[RawString]: Parsed string, list of strings or char.
+        """
+
         stream: Stream = get_stream(data)
 
         match type:
@@ -210,11 +282,17 @@ class RawString(str):
                 return RawString.decode(data)
 
             case type.String:
+                if size is None:
+                    raise ValueError("Size is must not be None!")
+
                 data = read_data(stream, size)
                 return RawString.decode(data)
 
             case type.List:
                 strings: list[RawString] = []
+
+                if size is None:
+                    raise ValueError("Size is required for list of strings!")
 
                 while len(strings) < size:
                     string = b""
@@ -227,7 +305,21 @@ class RawString(str):
                 return strings
 
     @staticmethod
-    def dump(value: "list[RawString]|RawString", type: StrType) -> bytes:
+    def dump(value: list[RawString] | RawString, type: StrType) -> bytes:  # type: ignore[return]
+        """
+        Dumps a string to a byte array.
+
+        Args:
+            value (list[RawString] | RawString): List of strings or a single string.
+            type (StrType): String type.
+
+        Raises:
+            ValueError: when value is a list of strings and type is not `List`.
+
+        Returns:
+            bytes: Byte array.
+        """
+
         match type:
             case type.Char | type.WChar | type.String:
                 if isinstance(value, list):
@@ -235,29 +327,47 @@ class RawString(str):
                 return RawString.encode(value)
 
             case type.BString:
+                if isinstance(value, list):
+                    raise ValueError("Value must not be a list of strings!")
+
                 text = RawString.encode(value)
                 size = Integer.dump(len(text), Integer.IntType.UInt8)
                 return size + text
 
             case type.BZString:
+                if isinstance(value, list):
+                    raise ValueError("Value must not be a list of strings!")
+
                 text = RawString.encode(value) + b"\x00"
                 size = Integer.dump(len(text), Integer.IntType.UInt8)
                 return size + text
 
             case type.WString:
+                if isinstance(value, list):
+                    raise ValueError("Value must not be a list of strings!")
+
                 text = RawString.encode(value)
                 size = Integer.dump(len(text), Integer.IntType.UInt16)
                 return size + text
 
             case type.WZString:
+                if isinstance(value, list):
+                    raise ValueError("Value must not be a list of strings!")
+
                 text = RawString.encode(value) + b"\x00"
                 size = Integer.dump(len(text), Integer.IntType.UInt16)
                 return size + text
 
             case type.ZString:
+                if isinstance(value, list):
+                    raise ValueError("Value must not be a list of strings!")
+
                 return RawString.encode(value) + b"\x00"
 
             case type.List:
+                if isinstance(value, RawString):
+                    raise ValueError("Value must be a list of strings!")
+
                 data = b"\x00".join(RawString.encode(v) for v in value) + b"\x00"
 
                 return data
@@ -270,6 +380,17 @@ class Flags(enum.IntFlag):
 
     @classmethod
     def parse(cls, data: Stream | bytes, type: Integer.IntType) -> Self:
+        """
+        Parses a flag from a stream or byte array.
+
+        Args:
+            data (Stream | bytes): Stream or byte array.
+            type (Integer.IntType): Integer type.
+
+        Returns:
+            Self: Parsed flag.
+        """
+
         value = Integer.parse(data, type)
 
         flag = cls(value)
@@ -277,6 +398,16 @@ class Flags(enum.IntFlag):
         return flag
 
     def dump(self, type: Integer.IntType) -> bytes:
+        """
+        Dumps a flag to a byte array.
+
+        Args:
+            type (Integer.IntType): Integer type.
+
+        Returns:
+            bytes: Byte array.
+        """
+
         return Integer.dump(self.value, type)
 
 
@@ -291,12 +422,36 @@ class Hex:
     def parse(
         data: Stream | bytes, type: Integer.IntType = Integer.IntType.ULong
     ) -> str:
+        """
+        Parses a hexadecimal string from a stream or byte array.
+
+        Args:
+            data (Stream | bytes): Stream or byte array.
+            type (Integer.IntType, optional):
+                Integer type. Defaults to `Integer.IntType.ULong` (suitable for FormIDs).
+
+        Returns:
+            str: Parsed hexadecimal string.
+        """
+
         number = Integer.parse(data, type)
 
         return hex(number).removeprefix("0x").upper().zfill(8)
 
     @staticmethod
     def dump(value: str, type: Integer.IntType = Integer.IntType.ULong) -> bytes:
+        """
+        Dumps a hexadecimal string to a byte array.
+
+        Args:
+            value (str): Hexadecimal string.
+            type (Integer.IntType, optional):
+                Integer type. Defaults to `Integer.IntType.ULong` (suitable for FormIDs).
+
+        Returns:
+            bytes: Byte array.
+        """
+
         number = int(value, base=16)
 
         return Integer.dump(number, type)
