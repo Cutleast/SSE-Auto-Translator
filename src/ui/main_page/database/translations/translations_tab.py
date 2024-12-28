@@ -63,6 +63,8 @@ class TranslationsTab(QWidget):
             self.__toolbar.handle_nxm_action.setObjectName("accent_button")
 
         AppContext.get_app().timer_signal.connect(self.__check_nxm_link)
+
+        self.database.update_signal.connect(self.__update)
         self.__update()
 
     def __init_ui(self) -> None:
