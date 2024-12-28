@@ -518,8 +518,16 @@ class ModInstanceWidget(QTreeWidget):
     def edit_translation(self) -> None:
         current_item: Optional[Mod | Plugin] = self.get_current_item()
 
-        if isinstance(current_item, Translation):
-            self.database.edit_signal.emit(current_item)
+        translation: Optional[Translation] = None
+        if isinstance(current_item, Plugin):
+            translation = self.database.get_translation_by_plugin_name(
+                current_item.name
+            )
+        elif isinstance(current_item, Mod):
+            translation = self.database.get_translation_by_mod(current_item)
+
+        if translation is not None:
+            self.database.edit_signal.emit(translation)
 
     def open_plugin(self) -> None:
         current_item: Optional[Mod | Plugin] = self.get_current_item()
