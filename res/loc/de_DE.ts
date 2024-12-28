@@ -1220,7 +1220,7 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
         <translation>Modliste wird gescannt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="492"/>
+        <location filename="src/core/scanner/scanner.py" line="496"/>
         <source>Importing translations...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1245,17 +1245,17 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
         <translation>Tiefenscan wird ausgeführt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="356"/>
+        <location filename="src/core/scanner/scanner.py" line="362"/>
         <source>Scanning strings...</source>
         <translation>Strings werden gescannt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="420"/>
+        <location filename="src/core/scanner/scanner.py" line="424"/>
         <source>Searching modlist for strings...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="532"/>
+        <location filename="src/core/scanner/scanner.py" line="536"/>
         <source>Scanning for installed translations...</source>
         <translation type="unfinished"></translation>
     </message>

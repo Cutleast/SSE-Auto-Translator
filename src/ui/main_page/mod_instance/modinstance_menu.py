@@ -226,7 +226,8 @@ class ModInstanceMenu(Menu):
         self.__plugin_menu.menuAction().setVisible(isinstance(current_item, Plugin))
         self.__translation_menu.menuAction().setVisible(
             isinstance(current_item, Plugin)
-            and current_item.status == Plugin.Status.TranslationInstalled
+            and current_item.status
+            in [Plugin.Status.TranslationInstalled, Plugin.Status.TranslationIncomplete]
         )
 
         self.__show_strings_action.setVisible(

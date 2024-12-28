@@ -324,7 +324,11 @@ class Scanner(QObject):
                     max2=len(translation.strings),
                 )
 
-            plugin: Optional[Plugin] = self.mod_instance.get_plugin(plugin_name)
+            plugin: Optional[Plugin] = self.mod_instance.get_plugin(
+                plugin_name,
+                ignore_states=[Plugin.Status.IsTranslated],
+                ignore_case=True,
+            )
 
             if plugin is None:
                 self.log.warning(f"Plugin {plugin_name!r} not found in modlist.")
@@ -334,6 +338,7 @@ class Scanner(QObject):
             result[plugin] = self.__deep_scan_plugin_translation(
                 strings, plugin, ldialog
             )
+            translation.save_translation()
 
         return result
 
@@ -353,7 +358,8 @@ class Scanner(QObject):
             if ldialog is not None:
                 ldialog.updateProgress(
                     show3=True,
-                    text3=self.tr("Scanning strings..."),
+                    text3=self.tr("Scanning strings...")
+                    + f" ({s}/{len(plugin_strings)})",
                     value3=s,
                     max3=len(plugin_strings),
                 )
@@ -362,11 +368,9 @@ class Scanner(QObject):
 
             if matching is None:
                 new_string: String = copy(plugin_string)
-                new_string.status = new_string.Status.TranslationRequired
+                new_string.status = String.Status.TranslationRequired
                 new_string.translated_string = new_string.original_string
-                translation_map[f"{new_string.editor_id}###{new_string.type}"] = (
-                    new_string
-                )
+                translation_map[new_string.id] = new_string
                 translation_strings.append(new_string)
                 translation_complete = False
 

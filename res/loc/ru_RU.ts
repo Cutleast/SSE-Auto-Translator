@@ -1217,7 +1217,7 @@ Click on &quot;Show Details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="492"/>
+        <location filename="src/core/scanner/scanner.py" line="496"/>
         <source>Importing translations...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1242,17 +1242,17 @@ Click on &quot;Show Details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="356"/>
+        <location filename="src/core/scanner/scanner.py" line="362"/>
         <source>Scanning strings...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="420"/>
+        <location filename="src/core/scanner/scanner.py" line="424"/>
         <source>Searching modlist for strings...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="532"/>
+        <location filename="src/core/scanner/scanner.py" line="536"/>
         <source>Scanning for installed translations...</source>
         <translation type="unfinished"></translation>
     </message>
