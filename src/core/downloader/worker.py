@@ -91,7 +91,7 @@ class Worker(QThread):
                 ProgressUpdate(0, 0, ProgressUpdate.Status.UserActionRequired)
             )
 
-        if download.file_name is None or True:
+        if download.file_name is None:
             raise DownloadFailedError
 
         file_name: str = download.file_name
