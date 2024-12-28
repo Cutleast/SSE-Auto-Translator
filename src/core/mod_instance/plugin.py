@@ -51,7 +51,7 @@ class Plugin:
 
         TranslationAvailableInDatabase = 3
         """
-        Translation for Plugin is available in Database (cyan).
+        Translation for Plugin is available in Database (green).
         """
 
         TranslationAvailableOnline = 4
@@ -82,7 +82,7 @@ class Plugin:
                 cls.IsTranslated: QColor.fromString("#8be248"),
                 cls.TranslationInstalled: QColor.fromString("#8be248"),
                 cls.TranslationIncomplete: QColor.fromString("#c24cd4"),
-                cls.TranslationAvailableInDatabase: QColor.fromString("#51c6d9"),
+                cls.TranslationAvailableInDatabase: QColor.fromString("#8be248"),
                 cls.TranslationAvailableOnline: QColor.fromString("#51c6d9"),
                 cls.RequiresTranslation: QColor.fromString("#e9e042"),
                 cls.NoTranslationAvailable: QColor.fromString("#d74343"),

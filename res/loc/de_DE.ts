@@ -823,42 +823,42 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
 <context>
     <name>MainPageWidget</name>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="102"/>
+        <location filename="src/ui/main_page/main_page.py" line="103"/>
         <source>Modlist</source>
         <translation>Modliste</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="108"/>
+        <location filename="src/ui/main_page/main_page.py" line="109"/>
         <source>Plugins:</source>
         <translation>Plugins:</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="127"/>
+        <location filename="src/ui/main_page/main_page.py" line="128"/>
         <source>Support us on Ko-Fi</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="134"/>
+        <location filename="src/ui/main_page/main_page.py" line="135"/>
         <source>Join us on Discord</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="141"/>
+        <location filename="src/ui/main_page/main_page.py" line="142"/>
         <source>Check out my profile on Nexus Mods</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="328"/>
+        <location filename="src/ui/main_page/main_page.py" line="344"/>
         <source>Search Results</source>
         <translation type="unfinished">Suchergebnisse</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="333"/>
+        <location filename="src/ui/main_page/main_page.py" line="349"/>
         <source>No strings found!</source>
         <translation type="unfinished">Keine Strings gefunden!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="337"/>
+        <location filename="src/ui/main_page/main_page.py" line="353"/>
         <source>Did not find any strings matching the given filter!
 Click on &quot;Show Details&quot; to view used filter.</source>
         <translation type="unfinished">Keine passenden Strings für den angegebenen Filter gefunden!
@@ -1144,37 +1144,37 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
 <context>
     <name>ModInstanceWidget</name>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="123"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="125"/>
         <source>Name</source>
         <translation>Name</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="124"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="126"/>
         <source>Version</source>
         <translation>Version</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="125"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="127"/>
         <source>Priority</source>
         <translation>Priorität</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="456"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="458"/>
         <source>Creating translation...</source>
         <translation>Übersetzung wird erstellt...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="479"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="481"/>
         <source>Importing installed translation...</source>
         <translation>Installierte Übersetzungen werden importiert...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="510"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="512"/>
         <source>Success!</source>
         <translation>Erfolgreich!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="513"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="515"/>
         <source>Translation successfully imported into database.</source>
         <translation>Übersetzung erfolgreich in die Datenbank importiert.</translation>
     </message>
@@ -1220,42 +1220,42 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
         <translation>Modliste wird gescannt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="123"/>
+        <location filename="src/core/scanner/scanner.py" line="492"/>
         <source>Importing translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="181"/>
+        <location filename="src/core/scanner/scanner.py" line="149"/>
         <source>Extracting strings...</source>
         <translation>Strings werden extrahiert...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="189"/>
+        <location filename="src/core/scanner/scanner.py" line="157"/>
         <source>Detecting language...</source>
         <translation>Sprache wird erkannt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="251"/>
+        <location filename="src/core/scanner/scanner.py" line="219"/>
         <source>Scanning online...</source>
         <translation>Übersetzungen werden online gesucht...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="334"/>
+        <location filename="src/core/scanner/scanner.py" line="302"/>
         <source>Running deep scan...</source>
         <translation>Tiefenscan wird ausgeführt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="388"/>
+        <location filename="src/core/scanner/scanner.py" line="356"/>
         <source>Scanning strings...</source>
         <translation>Strings werden gescannt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="452"/>
+        <location filename="src/core/scanner/scanner.py" line="420"/>
         <source>Searching modlist for strings...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="526"/>
+        <location filename="src/core/scanner/scanner.py" line="532"/>
         <source>Scanning for installed translations...</source>
         <translation type="unfinished"></translation>
     </message>

@@ -21,6 +21,7 @@ from PySide6.QtWidgets import (
 
 from app_context import AppContext
 from core.cacher.cacher import Cacher
+from core.config.app_config import AppConfig
 from core.config.user_config import UserConfig
 from core.database.database import TranslationDatabase
 from core.database.string import String
@@ -34,6 +35,7 @@ from core.plugin_interface import plugin as esp
 from core.scanner.scanner import Scanner
 from core.translation_provider.source import Source
 from core.utilities import matches_filter
+from core.utilities.container_utils import join_dicts
 from ui.utilities.tree_widget import are_children_visible
 from ui.widgets.download_list_dialog import DownloadListDialog
 from ui.widgets.loading_dialog import LoadingDialog
@@ -618,11 +620,26 @@ class ModInstanceWidget(QTreeWidget):
             item.setExpanded(not item.isExpanded())
 
     def basic_scan(self) -> None:
+        selected_mods: list[Mod] = self.get_selected_items()[0]
         selected_plugins: dict[Mod, list[Plugin]] = self.get_selected_plugins()
-        LoadingDialog.run_callable(
-            QApplication.activeModalWidget(),
-            lambda ldialog: self.scanner.run_basic_scan(selected_plugins, ldialog),
+
+        scan_result: dict[Plugin, Plugin.Status] = join_dicts(
+            *LoadingDialog.run_callable(
+                QApplication.activeModalWidget(),
+                lambda ldialog: self.scanner.run_basic_scan(selected_plugins, ldialog),
+            ).values()
         )
+        self.mod_instance.set_plugin_states(scan_result)
+
+        app_config: AppConfig = AppContext.get_app().app_config
+        if app_config.auto_import_translations:
+            LoadingDialog.run_callable(
+                QApplication.activeModalWidget(),
+                lambda ldialog: self.scanner.import_installed_translations(
+                    selected_mods, ldialog
+                ),
+            )
+
         ResultDialog(
             self.mod_instance.get_plugin_state_summary(
                 [plugin for plugins in selected_plugins.values() for plugin in plugins]
@@ -632,10 +649,15 @@ class ModInstanceWidget(QTreeWidget):
 
     def online_scan(self) -> None:
         selected_plugins: dict[Mod, list[Plugin]] = self.get_selected_plugins()
-        LoadingDialog.run_callable(
-            QApplication.activeModalWidget(),
-            lambda ldialog: self.scanner.run_online_scan(selected_plugins, ldialog),
+
+        scan_result: dict[Plugin, Plugin.Status] = join_dicts(
+            *LoadingDialog.run_callable(
+                QApplication.activeModalWidget(),
+                lambda ldialog: self.scanner.run_online_scan(selected_plugins, ldialog),
+            ).values()
         )
+        self.mod_instance.set_plugin_states(scan_result)
+
         ResultDialog(
             self.mod_instance.get_plugin_state_summary(
                 [plugin for plugins in selected_plugins.values() for plugin in plugins]
@@ -659,9 +681,11 @@ class ModInstanceWidget(QTreeWidget):
         ).exec()
 
     def deep_scan(self) -> None:
-        LoadingDialog.run_callable(
+        result: dict[Plugin, Plugin.Status] = LoadingDialog.run_callable(
             QApplication.activeModalWidget(), self.scanner.run_deep_scan
         )
+        self.mod_instance.set_plugin_states(result)
+
         ResultDialog(
             self.mod_instance.get_plugin_state_summary(),
             QApplication.activeModalWidget(),

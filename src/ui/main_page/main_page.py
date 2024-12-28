@@ -3,7 +3,7 @@ Copyright (c) Cutleast
 """
 
 import logging
-from typing import Callable, Optional, TypeVar
+from typing import Optional, TypeVar
 
 from PySide6.QtGui import QColor, QIcon
 from PySide6.QtWidgets import (
@@ -18,6 +18,7 @@ from PySide6.QtWidgets import (
 
 from app_context import AppContext
 from core.cacher.cacher import Cacher
+from core.config.app_config import AppConfig
 from core.config.user_config import UserConfig
 from core.database.database import TranslationDatabase
 from core.database.search_filter import SearchFilter
@@ -235,10 +236,31 @@ class MainPageWidget(QWidget):
         Runs a basic scan over the currently checked plugins.
         """
 
-        self.__run_scan(
-            self.__modinstance_widget.get_checked_items(),
-            AppContext.get_app().scanner.run_basic_scan,
+        scanner: Scanner = AppContext.get_app().scanner
+
+        checked_items: dict[Mod, list[Plugin]] = (
+            self.__modinstance_widget.get_checked_items()
         )
+        checked_mods: list[Mod] = list(checked_items.keys())
+
+        scan_result: dict[Plugin, Plugin.Status] = join_dicts(
+            *LoadingDialog.run_callable(
+                QApplication.activeModalWidget(),
+                lambda ldialog: scanner.run_basic_scan(checked_items, ldialog),
+            ).values()
+        )
+        self.mod_instance.set_plugin_states(scan_result)
+
+        app_config: AppConfig = AppContext.get_app().app_config
+        if app_config.auto_import_translations:
+            LoadingDialog.run_callable(
+                QApplication.activeModalWidget(),
+                lambda ldialog: scanner.import_installed_translations(
+                    checked_mods, ldialog
+                ),
+            )
+
+        self.show_scan_result(list(scan_result.keys()))
         self.__tool_bar.highlight_action(self.__tool_bar.online_scan_action)
 
     def online_scan(self) -> None:
@@ -246,28 +268,22 @@ class MainPageWidget(QWidget):
         Runs an online scan over the currently checked plugins.
         """
 
-        self.__run_scan(
-            self.__modinstance_widget.get_checked_items(),
-            AppContext.get_app().scanner.run_online_scan,
-        )
-        self.__tool_bar.highlight_action(self.__tool_bar.download_action)
+        scanner: Scanner = AppContext.get_app().scanner
 
-    def __run_scan(
-        self,
-        items_to_scan: T,
-        scan_function: Callable[
-            [T, Optional[LoadingDialog]], dict[Mod, dict[Plugin, Plugin.Status]]
-        ],
-    ) -> None:
+        checked_items: dict[Mod, list[Plugin]] = (
+            self.__modinstance_widget.get_checked_items()
+        )
+
         scan_result: dict[Plugin, Plugin.Status] = join_dicts(
             *LoadingDialog.run_callable(
                 QApplication.activeModalWidget(),
-                lambda ldialog: scan_function(items_to_scan, ldialog),
+                lambda ldialog: scanner.run_online_scan(checked_items, ldialog),
             ).values()
         )
         self.mod_instance.set_plugin_states(scan_result)
+
         self.show_scan_result(list(scan_result.keys()))
-        self.__tool_bar.highlight_action(self.__tool_bar.online_scan_action)
+        self.__tool_bar.highlight_action(self.__tool_bar.download_action)
 
     def download_and_install_translations(self) -> None:
         """

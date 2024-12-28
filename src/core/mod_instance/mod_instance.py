@@ -113,12 +113,10 @@ class ModInstance(QObject):
 
         mods: dict[Mod, Plugin] = {
             mod: plugin
-            for mod in self.mods
-            for plugin in mod.plugins
+            for mod in filter(lambda m: m not in ignore_mods, self.mods)
+            for plugin in filter(lambda p: p.status not in ignore_states, mod.plugins)
             if plugin.name == plugin_name
             or (ignore_case and plugin.name.lower() == plugin_name.lower())
-            and mod not in ignore_mods
-            and plugin.status not in ignore_states
         }
 
         # Get the plugin from the mod with the highest modlist index

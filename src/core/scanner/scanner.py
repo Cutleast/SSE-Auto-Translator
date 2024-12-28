@@ -108,35 +108,6 @@ class Scanner(QObject):
                 mod, plugins, database_strings, database_originals, ldialog
             )
 
-        if self.app_config.auto_import_translations:
-            mods: list[Mod] = self.mod_instance.mods
-
-            installed_translations: dict[Mod, Mod] = self.run_translation_scan(
-                mods, ldialog
-            )
-            for m, (installed_translation, original_mod) in enumerate(
-                installed_translations.items()
-            ):
-                if ldialog is not None:
-                    ldialog.updateProgress(
-                        text1=self.tr("Importing translations...")
-                        + f" ({m}/{len(installed_translations)})",
-                        value1=m,
-                        max1=len(installed_translations),
-                        show2=True,
-                        text2=installed_translation.name,
-                        value2=0,
-                        max2=0,
-                    )
-
-                self.database.importer.import_mod_as_translation(
-                    installed_translation, original_mod
-                )
-
-                # Prevent scan result from overwriting the TranslationInstalled status
-                # of the plugins in the original mod
-                scan_result.pop(original_mod, None)
-
         self.log.info("Modlist scan complete.")
 
         return scan_result
@@ -174,9 +145,6 @@ class Scanner(QObject):
         database_originals: list[str],
         ldialog: Optional[LoadingDialog] = None,
     ) -> Plugin.Status:
-        if self.database.get_translation_by_plugin_name(plugin.name) is not None:
-            return Plugin.Status.TranslationInstalled
-
         if ldialog is not None:
             ldialog.updateProgress(show3=True, text3=self.tr("Extracting strings..."))
 
@@ -192,7 +160,10 @@ class Scanner(QObject):
 
         status: Plugin.Status
         if self.detector.requires_translation(plugin_strings):
-            if any(
+            if self.database.get_translation_by_plugin_name(plugin.name) is not None:
+                status = Plugin.Status.TranslationInstalled
+
+            elif any(
                 string.original_string not in database_originals
                 and string not in database_strings
                 for string in plugin_strings
@@ -204,9 +175,6 @@ class Scanner(QObject):
         else:
             status = Plugin.Status.IsTranslated
             self.log.info("Plugin is already translated.")
-
-            # TODO: Make auto-import configurable
-            # TODO: Reimplement auto-import
 
         return status
 
@@ -499,6 +467,44 @@ class Scanner(QObject):
                 result.append(string)
 
         return result
+
+    def import_installed_translations(
+        self, mods: list[Mod], ldialog: Optional[LoadingDialog] = None
+    ) -> None:
+        """
+        Scans for and imports installed translations.
+
+        Args:
+            mods (list[Mod]): The mods to scan.
+            ldialog (Optional[LoadingDialog], optional):
+                Optional loading dialog. Defaults to None.
+        """
+
+        installed_translations: dict[Mod, Mod] = self.run_translation_scan(
+            mods, ldialog
+        )
+        for m, (installed_translation, original_mod) in enumerate(
+            installed_translations.items()
+        ):
+            if ldialog is not None:
+                ldialog.updateProgress(
+                    text1=self.tr("Importing translations...")
+                    + f" ({m}/{len(installed_translations)})",
+                    value1=m,
+                    max1=len(installed_translations),
+                    show2=True,
+                    text2=installed_translation.name,
+                    value2=0,
+                    max2=0,
+                )
+
+            self.log.info(
+                f"Importing translation {installed_translation.name!r} "
+                f"for original mod {original_mod.name!r}..."
+            )
+            self.database.importer.import_mod_as_translation(
+                installed_translation, original_mod
+            )
 
     def run_translation_scan(
         self, mods: list[Mod], ldialog: Optional[LoadingDialog] = None
