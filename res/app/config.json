@@ -13,5 +13,6 @@
     "temp_path": null,
     "downloads_path": null,
     "auto_import_translations": true,
+    "auto_create_database_translations": true,
     "show_strings_on_double_click": true
 }

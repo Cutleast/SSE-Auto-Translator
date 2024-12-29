@@ -457,7 +457,7 @@ class ModInstanceWidget(QTreeWidget):
                 def process(ldialog: LoadingDialog) -> Translation:
                     ldialog.updateProgress(text1=self.tr("Creating translation..."))
 
-                    return self.database.create_translation(current_item.path)
+                    return self.database.create_translation(current_item)
 
                 translation = LoadingDialog.run_callable(
                     QApplication.activeModalWidget(), process

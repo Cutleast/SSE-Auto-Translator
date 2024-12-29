@@ -7,7 +7,7 @@ import os
 from copy import copy
 from pathlib import Path
 from shutil import rmtree
-from typing import Any, Optional
+from typing import Any, Optional, overload
 
 import jstyleson as json
 from PySide6.QtCore import QObject, Signal
@@ -407,18 +407,19 @@ class TranslationDatabase(QObject):
             if string.status != String.Status.TranslationRequired
         }
 
+        strings: list[String]
         if plugin_name is not None:
             strings = [
                 string
                 for string in translation._strings[plugin_name]
-                if string.status == string.Status.TranslationRequired
+                if string.status == String.Status.TranslationRequired
             ]
         else:
             strings = [
                 string
                 for plugin_strings in translation._strings.values()
                 for string in plugin_strings
-                if string.status == string.Status.TranslationRequired
+                if string.status == String.Status.TranslationRequired
             ]
 
         if not len(strings):
@@ -440,7 +441,7 @@ class TranslationDatabase(QObject):
             if matching is None:
                 continue
 
-            full_matching = string == matching
+            full_matching = string.id == matching.id
             string.translated_string = matching.translated_string
 
             if full_matching or matching.status == String.Status.NoTranslationRequired:
@@ -452,15 +453,37 @@ class TranslationDatabase(QObject):
 
         self.log.info(f"Translated {translated} string(s) from database.")
 
+    @overload
     def create_translation(
-        self, plugin_path: Path, apply_db: bool = True, add_and_save: bool = True
+        self,
+        item: tuple[Mod, list[Plugin]],
+        apply_db: bool = True,
+        add_and_save: bool = True,
+    ) -> Translation:
+        """
+        Creates translation for a mod by extracting the strings from the specified
+        plugins and applying translations from database to them if enabled.
+
+        Args:
+            item (tuple[Mod, list[Plugin]]): Mod and plugins to create translation for.
+            apply_db (bool, optional): Whether to apply database. Defaults to True.
+            add_and_save (bool, optional):
+                Whether to save the translation. Defaults to True.
+
+        Returns:
+            Translation: Created translation.
+        """
+
+    @overload
+    def create_translation(
+        self, item: Plugin, apply_db: bool = True, add_and_save: bool = True
     ) -> Translation:
         """
         Creates translation for a plugin by extracting its strings
         and applying translations from database to them if enabled.
 
         Args:
-            plugin_path (Path): Path to the plugin.
+            item (Plugin): Plugin to create translation for.
             apply_db (bool, optional): Whether to apply database. Defaults to True.
             add_and_save (bool, optional):
                 Whether to save the translation and database. Defaults to True.
@@ -469,34 +492,75 @@ class TranslationDatabase(QObject):
             Translation: Created translation.
         """
 
-        translation: Optional[Translation] = self.get_translation_by_plugin_name(
-            plugin_path.name
-        )
-        if translation:
-            return translation
+    def create_translation(
+        self,
+        item: Plugin | tuple[Mod, list[Plugin]],
+        apply_db: bool = True,
+        add_and_save: bool = True,
+    ) -> Optional[Translation]:
+        mod: Optional[Mod] = None
+        plugins: list[Plugin] = []
+        translation: Optional[Translation] = None
+        translation_name: str
+
+        if isinstance(item, Plugin):
+            plugins = [item]
+            translation = self.get_translation_by_plugin_name(item.path.name)
+
+            if translation is not None:
+                return translation
+
+            translation_name = f"{item.name} - {self.language.capitalize()}"
+
+        else:
+            mod, plugins = item
+            translation = self.get_translation_by_mod(mod)
+            translation_name = f"{mod.name} - {self.language.capitalize()}"
 
         cacher: Cacher = AppContext.get_app().cacher
-        plugin_strings: list[String] = cacher.get_plugin_strings(plugin_path)
-
-        for string in plugin_strings:
-            string.translated_string = string.original_string
-            string.status = string.Status.TranslationRequired
-
-        translation_name: str = f"{plugin_path.name} - {self.language.capitalize()}"
-        translation = Translation(
-            name=translation_name,
-            path=self.userdb_path / self.language / translation_name,
-            _strings={plugin_path.name.lower(): plugin_strings},
+        plugins = list(
+            filter(
+                lambda p: p.status
+                in [
+                    Plugin.Status.RequiresTranslation,
+                    Plugin.Status.TranslationAvailableInDatabase,
+                ],
+                plugins,
+            )
         )
 
+        if not len(plugins):
+            return translation
+
+        self.log.info(f"Creating translation for {len(plugins)} plugin(s)...")
+
+        if translation is None:
+            translation_path: Path = self.userdb_path / self.language / translation_name
+            translation = Translation(name=translation_name, path=translation_path)
+
+        translation_strings: dict[str, list[String]] = translation._strings or {}
+        for plugin in plugins:
+            plugin_strings: list[String] = cacher.get_plugin_strings(plugin.path)
+
+            for string in plugin_strings:
+                string.translated_string = string.original_string
+                string.status = String.Status.TranslationRequired
+
+            translation_strings.setdefault(plugin.name.lower(), []).extend(
+                plugin_strings
+            )
+
+        translation.strings = translation_strings
+        translation.remove_duplicates(save=False)
+
         if apply_db:
-            self.apply_db_to_translation(translation, plugin_path.name.lower())
+            self.apply_db_to_translation(translation)
 
         if add_and_save:
             translation.save_translation()
             self.add_translation(translation)
 
-        self.log.info(f"Created translation for plugin {plugin_path.name}.")
+        self.log.info(f"Created translation {translation.name!r}.")
 
         return translation
 

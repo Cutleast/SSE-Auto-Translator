@@ -476,7 +476,8 @@ class Scanner(QObject):
         self, mods: list[Mod], ldialog: Optional[LoadingDialog] = None
     ) -> None:
         """
-        Scans for and imports installed translations.
+        Scans for and imports installed translations. Creates database translations for
+        plugins that are entirely covered by installed translations if enabled.
 
         Args:
             mods (list[Mod]): The mods to scan.
@@ -509,6 +510,37 @@ class Scanner(QObject):
             self.database.importer.import_mod_as_translation(
                 installed_translation, original_mod
             )
+
+        if self.app_config.auto_create_database_translations:
+            self.log.info("Creating database translations...")
+            items: dict[Mod, list[Plugin]] = {
+                mod: [
+                    plugin
+                    for plugin in mod.plugins
+                    if plugin.status == Plugin.Status.TranslationAvailableInDatabase
+                ]
+                for mod in mods
+                if any(
+                    plugin.status == Plugin.Status.TranslationAvailableInDatabase
+                    for plugin in mod.plugins
+                )
+            }
+
+            for m, (mod, plugins) in enumerate(items.items()):
+                if ldialog is not None:
+                    ldialog.updateProgress(
+                        text1=self.tr("Creating database translations...")
+                        + f" ({m}/{len(items)})",
+                        value1=m,
+                        max1=len(items),
+                        show2=True,
+                        text2=mod.name,
+                        value2=0,
+                        max2=0,
+                    )
+
+                self.log.info(f"Creating database translation for {mod.name!r}...")
+                self.database.create_translation((mod, plugins))
 
     def run_translation_scan(
         self, mods: list[Mod], ldialog: Optional[LoadingDialog] = None

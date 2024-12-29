@@ -284,3 +284,17 @@ class Translation:
     @strings.setter
     def strings(self, strings: dict[str, list[String]]) -> None:
         self._strings = strings
+
+    def remove_duplicates(self, save: bool = True) -> None:
+        """
+        Removes duplicate strings from the translation.
+
+        Args:
+            save (bool, optional): Whether to save the translation. Defaults to True.
+        """
+
+        for plugin_name, plugin_strings in self.strings.items():
+            self.strings[plugin_name] = String.unique(plugin_strings)
+
+        if save:
+            self.save_translation()

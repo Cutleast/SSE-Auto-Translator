@@ -248,6 +248,25 @@ class AppConfig(BaseConfig):
         self._settings["auto_import_translations"] = auto_import_translations
 
     @property
+    def auto_create_database_translations(self) -> bool:
+        """
+        Automatically create translations for plugins that are entirely covered
+        by already installed translations.
+        """
+
+        return self._settings["auto_create_database_translations"]
+
+    @auto_create_database_translations.setter
+    def auto_create_database_translations(
+        self, auto_create_database_translations: bool
+    ) -> None:
+        AppConfig.validate_type(auto_create_database_translations, bool)
+
+        self._settings["auto_create_database_translations"] = (
+            auto_create_database_translations
+        )
+
+    @property
     def show_strings_on_double_click(self) -> bool:
         """
         Show strings when a mod or plugin is double clicked in the modlist

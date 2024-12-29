@@ -200,6 +200,19 @@ class AppSettings(SmoothScrollArea):
         self.auto_import_checkbox.stateChanged.connect(self.on_change)
         flayout.addRow(self.auto_import_checkbox)
 
+        self.auto_create_db_translations_checkbox = QCheckBox(
+            self.tr(
+                "Automatically create translations for plugins that are entirely "
+                "covered by installed translations"
+            )
+            + self.tr(" (No Restart Required)")
+        )
+        self.auto_create_db_translations_checkbox.setChecked(
+            self.app_config.auto_create_database_translations
+        )
+        self.auto_create_db_translations_checkbox.stateChanged.connect(self.on_change)
+        flayout.addRow(self.auto_create_db_translations_checkbox)
+
         self.double_click_strings = QCheckBox(
             self.tr(
                 "Show strings when double clicking a mod or plugin "
@@ -275,6 +288,9 @@ class AppSettings(SmoothScrollArea):
         self.app_config.auto_bind_nxm = self.bind_nxm_checkbox.isChecked()
         self.app_config.use_spell_check = self.use_spell_check_checkbox.isChecked()
         self.app_config.auto_import_translations = self.auto_import_checkbox.isChecked()
+        self.app_config.auto_create_database_translations = (
+            self.auto_create_db_translations_checkbox.isChecked()
+        )
         self.app_config.show_strings_on_double_click = (
             self.double_click_strings.isChecked()
         )
