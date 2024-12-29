@@ -140,7 +140,9 @@ class AppSettings(SmoothScrollArea):
         # Output path
         self.output_path_entry = BrowseLineEdit()
         cur_path: Path = AppContext.get_app().cur_path
-        self.output_path_entry.setPlaceholderText(str(cur_path / "SSE-AT Output"))
+        self.output_path_entry.setPlaceholderText(
+            self.tr("Default: ") + str(cur_path / "SSE-AT Output")
+        )
         self.output_path_entry.setText(str(self.app_config.output_path or ""))
         self.output_path_entry.textChanged.connect(self.on_change)
         self.output_path_entry.setFileMode(QFileDialog.FileMode.Directory)
@@ -151,7 +153,9 @@ class AppSettings(SmoothScrollArea):
 
         # Temp path
         self.temp_path_entry = BrowseLineEdit()
-        self.temp_path_entry.setPlaceholderText(os.getenv("TEMP") or "")
+        self.temp_path_entry.setPlaceholderText(
+            self.tr("Default: ") + (os.getenv("TEMP") or "")
+        )
         self.temp_path_entry.setText(str(self.app_config.temp_path or ""))
         self.temp_path_entry.textChanged.connect(self.on_change)
         self.temp_path_entry.setFileMode(QFileDialog.FileMode.Directory)

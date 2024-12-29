@@ -106,66 +106,78 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="148"/>
+        <location filename="src/ui/settings/app_settings.py" line="144"/>
+        <location filename="src/ui/settings/app_settings.py" line="157"/>
+        <source>Default: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/app_settings.py" line="150"/>
         <source>Path for Output Mod</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="148"/>
-        <location filename="src/ui/settings/app_settings.py" line="190"/>
-        <location filename="src/ui/settings/app_settings.py" line="198"/>
-        <location filename="src/ui/settings/app_settings.py" line="209"/>
+        <location filename="src/ui/settings/app_settings.py" line="150"/>
+        <location filename="src/ui/settings/app_settings.py" line="194"/>
+        <location filename="src/ui/settings/app_settings.py" line="202"/>
+        <location filename="src/ui/settings/app_settings.py" line="213"/>
+        <location filename="src/ui/settings/app_settings.py" line="226"/>
         <source> (No Restart Required)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="160"/>
+        <location filename="src/ui/settings/app_settings.py" line="164"/>
         <source>Path for Temporary Folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="161"/>
+        <location filename="src/ui/settings/app_settings.py" line="165"/>
         <source>(for temporary files, will be wiped after exit!)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="169"/>
+        <location filename="src/ui/settings/app_settings.py" line="173"/>
         <source>Defaults to Temporary Folder configured above</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="173"/>
+        <location filename="src/ui/settings/app_settings.py" line="177"/>
         <source>Downloads Path</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="180"/>
+        <location filename="src/ui/settings/app_settings.py" line="184"/>
         <source>Automatically bind to &quot;Mod Manager Download&quot; Buttons on Nexus Mods on Startup</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="182"/>
+        <location filename="src/ui/settings/app_settings.py" line="186"/>
         <source>[EXPERIMENTAL]</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="189"/>
+        <location filename="src/ui/settings/app_settings.py" line="193"/>
         <source>Enable Spell Checking in Translation Editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="197"/>
+        <location filename="src/ui/settings/app_settings.py" line="201"/>
         <source>Automatically import installed translations into the database</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="208"/>
+        <location filename="src/ui/settings/app_settings.py" line="212"/>
+        <source>Automatically create translations for plugins that are entirely covered by installed translations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/app_settings.py" line="225"/>
         <source>Show strings when double clicking a mod or plugin in the modlist or a translation in the &quot;Translations&quot; tab</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="221"/>
-        <location filename="src/ui/settings/app_settings.py" line="249"/>
+        <location filename="src/ui/settings/app_settings.py" line="238"/>
+        <location filename="src/ui/settings/app_settings.py" line="266"/>
         <source>Clear Cache (This will reset all plugin states and delete cached API requests!)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1213,7 +1225,7 @@ Click on &quot;Show Details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="496"/>
+        <location filename="src/core/scanner/scanner.py" line="497"/>
         <source>Importing translations...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1248,7 +1260,12 @@ Click on &quot;Show Details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="536"/>
+        <location filename="src/core/scanner/scanner.py" line="533"/>
+        <source>Creating database translations...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/scanner/scanner.py" line="568"/>
         <source>Scanning for installed translations...</source>
         <translation type="unfinished"></translation>
     </message>

@@ -376,10 +376,11 @@ class App(QApplication):
         else:
             language = self.app_config.language
 
-        translator.load(f":/loc/{language}.qm")
-        self.installTranslator(translator)
+        if language != "en_US":
+            translator.load(f":/loc/{language}.qm")
+            self.installTranslator(translator)
 
-        self.log.info(f"Loaded localisation for {language}.")
+            self.log.info(f"Loaded localisation for {language}.")
 
     def load_theme(self) -> None:
         """
