@@ -8,15 +8,15 @@ from typing import TypeAlias
 
 import jstyleson as json
 
+from core.utilities.exe_info import get_current_path
+
 Stream: TypeAlias = BufferedReader | BytesIO
 """
 Type alias for `BufferedReader` and `BytesIO`.
 """
 
 # Load file that defines which records contain subrecords that are strings
-whitelist_path = Path("res") / "string_records.json"
-# whitelist_path = Path(__file__).parent / "string_records.json"
-whitelist_path = whitelist_path.resolve()
+whitelist_path: Path = get_current_path() / "res" / "string_records.json"
 with whitelist_path.open() as whitelist_file:
     STRING_RECORDS: dict[str, list[str]] = json.load(whitelist_file)
 

@@ -3,14 +3,13 @@ Copyright (c) Cutleast
 """
 
 import qtawesome as qta
-from PySide6.QtGui import QColor
+from PySide6.QtCore import Qt
+from PySide6.QtGui import QColor, QShowEvent
 from PySide6.QtWidgets import (
-    QApplication,
     QHBoxLayout,
     QHeaderView,
     QLabel,
     QLCDNumber,
-    QMessageBox,
     QTreeWidget,
     QVBoxLayout,
     QWidget,
@@ -19,6 +18,8 @@ from PySide6.QtWidgets import (
 from app_context import AppContext
 from core.downloader.download_manager import DownloadManager
 from core.downloader.file_download import FileDownload
+from core.translation_provider.nm_api.nxm_handler import NXMHandler
+from core.translation_provider.provider import Provider
 from core.utilities.blocking_thread import BlockingThread
 
 from .download_item import DownloadItem
@@ -31,6 +32,8 @@ class DownloadsTab(QWidget):
     """
 
     download_manager: DownloadManager
+    provider: Provider
+    nxm_listener: NXMHandler
 
     __download_items: list[DownloadItem]
 
@@ -51,6 +54,17 @@ class DownloadsTab(QWidget):
     def __post_init(self) -> None:
         self.download_manager = AppContext.get_app().download_manager
         self.download_manager.download_added.connect(self.__add_download)
+
+        self.provider = AppContext.get_app().provider
+        self.nxm_listener = AppContext.get_app().nxm_listener
+        AppContext.get_app().timer_signal.connect(self.__check_nxm_link)
+
+        # Highlight NXM button if the user has no Premium
+        if not self.provider.direct_downloads_possible():
+            self.__toolbar.widgetForAction(
+                self.__toolbar.handle_nxm_action
+            ).setObjectName("accent_button")
+            self.__toolbar.setStyleSheet(self.styleSheet())
 
     def __init_ui(self) -> None:
         self.__vlayout = QVBoxLayout()
@@ -81,8 +95,10 @@ class DownloadsTab(QWidget):
 
     def __init_downloads_widget(self) -> None:
         self.__downloads_widget = QTreeWidget()
+        self.__downloads_widget.setObjectName("download_list")
         self.__downloads_widget.setAlternatingRowColors(True)
         self.__downloads_widget.setSelectionMode(QTreeWidget.SelectionMode.NoSelection)
+        self.__downloads_widget.setFocusPolicy(Qt.FocusPolicy.NoFocus)
         self.__downloads_widget.setHeaderLabels(
             [self.tr("Name"), self.tr("Size"), self.tr("Progress")]
         )
@@ -91,6 +107,11 @@ class DownloadsTab(QWidget):
             0, QHeaderView.ResizeMode.Stretch
         )
         self.__vlayout.addWidget(self.__downloads_widget)
+
+    def showEvent(self, event: QShowEvent) -> None:
+        super().showEvent(event)
+
+        self.__downloads_widget.header().resizeSection(2, 300)
 
     def __add_download(self, download: FileDownload) -> None:
         download_item = DownloadItem(download)
@@ -113,27 +134,14 @@ class DownloadsTab(QWidget):
         self.__download_items.remove(download_item)
         self.__update()
 
-    def stop(self) -> None:
-        # TODO: Change this so that it cancels the entire queue
-        message_box = QMessageBox(QApplication.activeModalWidget())
-        message_box.setWindowTitle(self.tr("Stop installation?"))
-        message_box.setText(
-            self.tr(
-                "Are you sure you want to stop the installation? "
-                "Once stopped, the process cannot be resumed!"
-            )
-        )
-        message_box.setStandardButtons(
-            QMessageBox.StandardButton.No | QMessageBox.StandardButton.Yes
-        )
-        message_box.setDefaultButton(QMessageBox.StandardButton.Yes)
-        if message_box.exec() != QMessageBox.StandardButton.Yes:
-            return
+    def toggle_nxm(self) -> None:
+        if self.__toolbar.handle_nxm_action.isChecked():
+            self.nxm_listener.bind()
+        else:
+            self.nxm_listener.unbind()
 
-        self.__toolbar.setDisabled(True)
-
-        thread = BlockingThread(self.download_manager.stop)
-        thread.start()
+    def __check_nxm_link(self) -> None:
+        self.__toolbar.handle_nxm_action.setChecked(self.nxm_listener.is_bound())
 
     def toggle_pause(self) -> None:
         text_color: QColor = self.palette().text().color()
@@ -154,4 +162,3 @@ class DownloadsTab(QWidget):
             )
 
         self.setDisabled(False)
-        self.__toolbar.stop_action.setDisabled(not self.download_manager.running)

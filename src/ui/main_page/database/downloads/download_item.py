@@ -60,7 +60,7 @@ class DownloadItem(QTreeWidgetItem, QObject):  # type: ignore[misc]
 
         button = QPushButton(
             qta.icon("ri.download-line", color=parent.palette().text().color()),
-            self.tr("Free Download..."),
+            self.tr("Non-premium download..."),
         )
 
         def open_download_page() -> None:

@@ -15,7 +15,7 @@ class DownloadsToolbar(QToolBar):
 
     __parent: "DownloadsTab"
 
-    stop_action: QAction
+    handle_nxm_action: QAction
     toggle_pause_action: QAction
 
     def __init__(self, parent: "DownloadsTab"):
@@ -29,10 +29,12 @@ class DownloadsToolbar(QToolBar):
         self.__init_actions()
 
     def __init_actions(self) -> None:
-        self.stop_action = self.addAction(
-            qta.icon("fa5s.stop", color=self.palette().text().color()), ""
+        self.handle_nxm_action = self.addAction(
+            qta.icon("fa.chain", color="#ffffff"),
+            self.tr("Handle Nexus Mods Downloads") + " " + self.tr("[Experimental]"),
         )
-        # self.stop_action.triggered.connect(self.__parent.stop_downloads)
+        self.handle_nxm_action.setCheckable(True)
+        self.handle_nxm_action.triggered.connect(lambda _: self.__parent.toggle_nxm())
 
         self.toggle_pause_action = self.addAction(
             qta.icon("fa5s.pause", color=self.palette().text().color()), ""

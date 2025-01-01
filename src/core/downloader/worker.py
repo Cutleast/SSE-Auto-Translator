@@ -37,6 +37,7 @@ class Worker(QThread):
 
     running: bool = False
     paused: bool = False
+    waiting: bool = False
 
     download_finished = Signal(FileDownload)
     """
@@ -95,7 +96,9 @@ class Worker(QThread):
             raise DownloadFailedError
 
         file_name: str = download.file_name
+        self.waiting = True
         url: str = self.provider.request_download(download.mod_id, download.file_id)
+        self.waiting = False
 
         downloads_folder: Path = (
             self.app_config.downloads_path or AppContext.get_app().get_tmp_dir()

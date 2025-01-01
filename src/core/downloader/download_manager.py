@@ -153,7 +153,7 @@ class DownloadManager(QObject):
 
         for worker in self.workers:
             # Terminate paused workers
-            if worker.paused:
+            if worker.paused or worker.waiting:
                 worker.terminate()
             # Or signal them to stop
             else:

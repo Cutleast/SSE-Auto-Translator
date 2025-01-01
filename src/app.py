@@ -6,6 +6,7 @@ import logging
 import os
 import platform
 import shutil
+import subprocess
 import sys
 import tempfile
 import time
@@ -39,6 +40,7 @@ from core.translation_provider.provider import Provider
 from core.translator_api.translator import Translator
 from core.utilities.container_utils import unique
 from core.utilities.exception_handler import ExceptionHandler
+from core.utilities.exe_info import get_current_path, get_execution_info
 from core.utilities.localisation import detect_system_locale
 from core.utilities.logger import Logger
 from core.utilities.masterlist import get_masterlist
@@ -63,18 +65,21 @@ class App(QApplication):
     user_config: UserConfig
     translator_config: TranslatorConfig
 
-    cur_path: Path = Path.cwd()
+    compiled: bool
+    executable: list[str]
+    """
+    Stores command to execute this app.
+    """
+
+    executable, compiled = get_execution_info()
+
+    cur_path: Path = get_current_path()
     res_path: Path = cur_path / "res"
     data_path: Path = cur_path / "data"
     loc_path: Path = res_path / "locales"
     cache_path: Path = data_path / "cache"
     style_path: str = ":/style.qss"
     tmp_path: Optional[Path] = None
-
-    executable = str(cur_path / "SSE-AT.exe")
-    """
-    Stores command to execute this app.
-    """
 
     log: logging.Logger = logging.getLogger("App")
     logger: Logger
@@ -174,7 +179,7 @@ class App(QApplication):
         self.load_user_data()
         self.load_masterlist()
 
-        self.nxm_listener = NXMHandler()
+        self.nxm_listener = NXMHandler(self.get_execution_command())
         if self.app_config.auto_bind_nxm:
             self.nxm_listener.bind()
             self.log.info("Bound Nexus Mods Links.")
@@ -351,8 +356,9 @@ class App(QApplication):
         log_title = f" {self.APP_NAME} ".center(width, "=")
         self.log.info(f"\n{'=' * width}\n{log_title}\n{'=' * width}")
         self.log.info(f"Program Version: {self.APP_VERSION}")
-        self.log.info(f"Executable: {self.executable}")
-        self.log.info(f"Commandline Arguments: {sys.argv}")
+        self.log.info(f"Executed command: {self.executable}")
+        self.log.info(f"Compiled: {self.compiled}")
+        self.log.info(f"Current Path: {self.cur_path}")
         self.log.info(f"Resource Path: {self.res_path}")
         self.log.info(f"Data Path: {self.data_path}")
         self.log.info(f"Cache Path: {self.cache_path}")
@@ -442,3 +448,17 @@ class App(QApplication):
             self.app_config.log_file_name,
             self.app_config.log_num_of_files,
         )
+
+    def get_execution_command(self) -> str:
+        """
+        Returns the joined command this application was started with.
+        """
+
+        return subprocess.list2cmdline(self.executable)
+
+    def open_documentation(self) -> None:
+        """
+        Opens the documentation in the default browser.
+        """
+
+        os.startfile(self.cur_path / "doc" / "Instructions_en_US.html")

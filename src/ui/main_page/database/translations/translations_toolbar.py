@@ -16,7 +16,6 @@ class TranslationsToolbar(QToolBar):
     __parent: "TranslationsTab"
 
     update_action: QAction
-    handle_nxm_action: QAction
 
     def __init__(self, parent: "TranslationsTab"):
         super().__init__(parent)
@@ -69,13 +68,6 @@ class TranslationsToolbar(QToolBar):
         )
         self.update_action.setDisabled(True)
         self.update_action.triggered.connect(lambda _: self.__parent.download_updates())
-
-        self.handle_nxm_action = self.addAction(
-            qta.icon("fa.chain", color="#ffffff"),
-            self.tr("Handle Nexus Mods Downloads") + " " + self.tr("[Experimental]"),
-        )
-        self.handle_nxm_action.setCheckable(True)
-        self.handle_nxm_action.triggered.connect(lambda _: self.__parent.toggle_nxm())
 
 
 if __name__ == "__main__":

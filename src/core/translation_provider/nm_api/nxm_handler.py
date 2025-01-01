@@ -27,7 +27,7 @@ class NXMHandler(QObject):
     __listening: bool = False
 
     REG_PATH: str = "nxm\\shell\\open\\command"
-    REG_VALUE: str = sys.executable
+    reg_value: str
     PORT: int = 1248
 
     prev_value: Optional[str]
@@ -38,9 +38,10 @@ class NXMHandler(QObject):
 
     log: logging.Logger = logging.getLogger("NXMHandler")
 
-    def __init__(self) -> None:
+    def __init__(self, executable: str) -> None:
         super().__init__()
 
+        self.reg_value = executable + ' --download "%1"'
         self._thread = Thread(self.__listen)
 
     def bind(self) -> None:
@@ -91,6 +92,8 @@ class NXMHandler(QObject):
         """
         Sets Registry key to link to this app.
 
+        TODO: Store original value in a persistent cache in case of a crash
+
         Args:
             start_uac (bool, optional):
                 Toggles whether admin rights are requested if necessary
@@ -112,14 +115,14 @@ class NXMHandler(QObject):
 
         try:
             with winreg.CreateKey(winreg.HKEY_CLASSES_ROOT, self.REG_PATH) as hkey:
-                winreg.SetValue(hkey, "", winreg.REG_SZ, self.REG_VALUE)
+                winreg.SetValue(hkey, "", winreg.REG_SZ, self.reg_value)
 
         except PermissionError as ex:
             self.log.error("Failed to bind to NXM Links: Admin Rights required!")
 
             if start_uac:
                 try:
-                    pyuac.runAsAdmin([NXMHandler.REG_VALUE, "--bind-nxm"])
+                    pyuac.runAsAdmin([NXMHandler.reg_value, "--bind-nxm"])
                 except pywintypes.error:
                     self.log.warning("Failed to bind to NXM Links: Canceled by User.")
                     return
@@ -167,7 +170,7 @@ class NXMHandler(QObject):
         except FileNotFoundError:
             return False
 
-        return cur_value == self.REG_VALUE
+        return cur_value == self.reg_value
 
     @staticmethod
     def send_request(request: str) -> NoReturn:
