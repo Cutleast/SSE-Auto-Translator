@@ -34,16 +34,8 @@ class IntroductionPage(Page):
         )
 
     def _init_form(self) -> None:
-        documentation_button = QPushButton(self.tr("Open Documentation (Offline)"))
-        documentation_button.clicked.connect(self.__show_documentation)
-        self._vlayout.addWidget(documentation_button)
-
-        documentation_button = QPushButton(self.tr("Open Documentation (Browser)"))
-        documentation_button.clicked.connect(
-            lambda: os.startfile(
-                "https://github.com/Cutleast/SSE-Auto-Translator/blob/master/doc/Instructions_en_US.md"
-            )
-        )
+        documentation_button = QPushButton(self.tr("Open Documentation"))
+        documentation_button.clicked.connect(AppContext.get_app().open_documentation)
         self._vlayout.addWidget(documentation_button)
 
         self._vlayout.addSpacing(50)
@@ -69,10 +61,6 @@ class IntroductionPage(Page):
 
     def get_values(self) -> None:
         return None
-
-    def __show_documentation(self) -> None:
-        exe_path: str = AppContext.get_app().executable
-        os.startfile(exe_path, arguments="--show-docs")
 
     def __fix_path_limit(self) -> None:
         res_path: Path = AppContext.get_app().res_path

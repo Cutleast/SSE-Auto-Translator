@@ -40,7 +40,7 @@ class MenuBar(QMenuBar):
 
         documentation_action = help_menu.addAction(self.tr("Show Documentation..."))
         documentation_action.setIcon(qta.icon("mdi6.note-text", color="#ffffff"))
-        documentation_action.triggered.connect(self.__show_documentation)
+        documentation_action.triggered.connect(AppContext.get_app().open_documentation)
 
         update_action = help_menu.addAction(self.tr("Check for updates..."))
         update_action.setIcon(qta.icon("fa.refresh", color="#ffffff"))
@@ -59,10 +59,6 @@ class MenuBar(QMenuBar):
 
         about_qt_action = help_menu.addAction(self.tr("About Qt"))
         about_qt_action.triggered.connect(self.__show_about_qt)
-
-    def __show_documentation(self) -> None:
-        exe_path: str = AppContext.get_app().executable
-        os.startfile(exe_path, arguments="--show-docs")
 
     def __open_settings(self) -> None:
         SettingsDialog().exec()
