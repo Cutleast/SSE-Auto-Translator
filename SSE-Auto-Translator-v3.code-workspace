@@ -4,6 +4,20 @@
 			"path": "."
 		}
 	],
+	"extensions": {
+		"recommendations": [
+			"njpwerner.autodocstring",
+			"aeschli.vscode-css-formatter",
+			"ms-python.mypy-type-checker",
+			"ms-python.vscode-pylance",
+			"ms-python.python",
+			"ms-python.debugpy",
+			"ms-python.vscode-python-envs",
+			"theqtcompany.qt",
+			"charliermarsh.ruff",
+			"redhat.vscode-xml"
+		]
+	},
 	"settings": {
 		"[qss]": {
 			"editor.defaultFormatter": "vscode.css-language-features"
@@ -27,14 +41,11 @@
 		"mypy-type-checker.interpreter": [
 			"${workspaceFolder}\\.venv\\Scripts\\python.exe"
 		],
-		"mypy-type-checker.reportingScope": "workspace",
-		"python-envs.pythonProjects": [
-			{
-				"path": "src/core/utilities/__init__.py",
-				"envManager": "ms-python.python:venv",
-				"packageManager": "ms-python.python:pip"
-			}
-		]
+		"mypy-type-checker.ignorePatterns": [
+			"SSE-AT/**/*.py",
+			"SSE-AT/**/*.pyi"
+		],
+		"mypy-type-checker.reportingScope": "workspace"
 	},
 	"launch": {
 		"version": "0.2.0",
@@ -79,9 +90,9 @@
 				"detail": "Build SSE-AT with build.py",
 				"type": "shell",
 				"group": "build",
-				"command": "${workspaceFolder}/.venv/scripts/python",
-				"args": [
-					"${workspaceFolder}/build.py"
+				"command": "${workspaceFolder}/build.bat",
+				"dependsOn": [
+					"compile-qrc"
 				],
 				"problemMatcher": []
 			},
@@ -220,6 +231,16 @@
 					"--prefix=persistent###profiles"
 				],
 				"detail": "Dumps Vortex profiles to JSON",
+				"problemMatcher": []
+			},
+			{
+				"label": "launch-built-exe",
+				"detail": "Launches built SSE-AT.exe with workspace folder as cwd",
+				"type": "shell",
+				"command": "${workspaceFolder}\\SSE-AT\\SSE-AT.exe",
+				"options": {
+					"cwd": "${workspaceFolder}/SSE-AT"
+				},
 				"problemMatcher": []
 			}
 		]
