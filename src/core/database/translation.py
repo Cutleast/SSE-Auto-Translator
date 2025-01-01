@@ -199,42 +199,6 @@ class Translation:
             for json_file in json_files:
                 os.remove(json_file)
 
-    def export(self, path: Path) -> None:
-        """
-        Exports translation strings to a specified path in the DSD format.
-
-        Args:
-            path (Path): Path to export translation strings to.
-        """
-
-        if self.path is None:
-            raise ValueError("Translation path is not set")
-
-        if self._strings is None:
-            return
-
-        if not path.is_dir():
-            os.makedirs(path)
-
-        for plugin_name, plugin_strings in self._strings.items():
-            plugin_folder: Path = (
-                path / "SKSE" / "Plugins" / "DynamicStringDistributor" / plugin_name
-            )
-
-            if not plugin_folder.is_dir():
-                os.makedirs(plugin_folder)
-
-            strings: list[dict[str, Optional[str | int]]] = [
-                string.to_string_data()
-                for string in plugin_strings
-                if string.original_string != string.translated_string
-                and string.translated_string
-            ]
-
-            dsd_path: Path = plugin_folder / "SSE-AT_exported.json"
-            with dsd_path.open("w", encoding="utf8") as dsd_file:
-                json.dump(strings, dsd_file, indent=4, ensure_ascii=False)
-
     def to_index_data(self) -> dict[str, Any]:
         """
         Generates index data for the index.json file in the database.

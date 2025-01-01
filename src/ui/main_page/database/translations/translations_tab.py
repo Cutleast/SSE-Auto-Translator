@@ -20,8 +20,6 @@ from core.database.database import TranslationDatabase
 from core.database.search_filter import SearchFilter
 from core.database.string import String
 from core.database.translation import Translation
-from core.translation_provider.nm_api.nxm_handler import NXMHandler
-from core.translation_provider.provider import Provider
 from ui.widgets.error_dialog import ErrorDialog
 from ui.widgets.lcd_number import LCDNumber
 from ui.widgets.loading_dialog import LoadingDialog
@@ -38,8 +36,6 @@ class TranslationsTab(QWidget):
     """
 
     database: TranslationDatabase
-    provider: Provider
-    nxm_listener: NXMHandler
 
     __vlayout: QVBoxLayout
     __toolbar: TranslationsToolbar
@@ -55,14 +51,6 @@ class TranslationsTab(QWidget):
 
     def __post_init(self) -> None:
         self.database = AppContext.get_app().database
-        self.provider = AppContext.get_app().provider
-        self.nxm_listener = AppContext.get_app().nxm_listener
-
-        # Highlight NXM button if the user has no Premium
-        if not self.provider.direct_downloads_possible():
-            self.__toolbar.handle_nxm_action.setObjectName("accent_button")
-
-        AppContext.get_app().timer_signal.connect(self.__check_nxm_link)
 
         self.database.update_signal.connect(self.__update)
         self.__update()
@@ -185,13 +173,8 @@ class TranslationsTab(QWidget):
 
     def download_updates(self) -> None: ...
 
-    def toggle_nxm(self) -> None: ...
-
     def __update(self) -> None:
         self.__update_translations_num()
-
-    def __check_nxm_link(self) -> None:
-        self.__toolbar.handle_nxm_action.setChecked(self.nxm_listener.is_bound())
 
     def __update_translations_num(self) -> None:
         self.__translations_num_label.display(len(self.database.user_translations))

@@ -468,7 +468,9 @@ class EditorTab(QWidget):
             folder = os.path.normpath(folder)
             folder_path = Path(folder)
 
-            self.translation.export(folder_path)
+            AppContext.get_app().database.exporter.export_translation_dsd(
+                self.translation, folder_path
+            )
 
             messagebox = QMessageBox(QApplication.activeModalWidget())
             messagebox.setWindowTitle(self.tr("Success!"))

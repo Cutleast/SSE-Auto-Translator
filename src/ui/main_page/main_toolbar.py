@@ -109,7 +109,7 @@ class MainToolBar(QToolBar):
             qta.icon("mdi6.export-variant", color=self.palette().text().color()),
             self.tr("Build output mod..."),
         )
-        # self.build_output_action.triggered.connect(self.build_output)
+        self.build_output_action.triggered.connect(self.__parent.build_output)
 
         self.addSeparator()
 

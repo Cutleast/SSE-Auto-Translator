@@ -14,7 +14,9 @@ from PySide6.QtCore import QObject, Signal
 
 from app_context import AppContext
 from core.cacher.cacher import Cacher
+from core.database.exporter import Exporter
 from core.database.string import String
+from core.database.utilities import Utilities
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.mod_instance.plugin import Plugin
@@ -51,6 +53,8 @@ class TranslationDatabase(QObject):
     language: str
 
     importer: Importer
+    exporter: Exporter
+    utils: Utilities
 
     __vanilla_translation: Translation
     __user_translations: list[Translation]
@@ -65,6 +69,8 @@ class TranslationDatabase(QObject):
         self.language = language
 
         self.importer = Importer(self)
+        self.exporter = Exporter(self)
+        self.utils = Utilities()
 
         self.load_database()
 

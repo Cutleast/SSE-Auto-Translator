@@ -3,6 +3,8 @@ Copyright (c) Cutleast
 """
 
 import logging
+import os
+from pathlib import Path
 from typing import Optional, TypeVar
 
 from PySide6.QtGui import QColor, QIcon
@@ -11,6 +13,7 @@ from PySide6.QtWidgets import (
     QDialog,
     QHBoxLayout,
     QLabel,
+    QMessageBox,
     QSplitter,
     QVBoxLayout,
     QWidget,
@@ -305,6 +308,43 @@ class MainPageWidget(QWidget):
         ).exec()
 
         self.__tool_bar.highlight_action(self.__tool_bar.build_output_action)
+
+    def build_output(self) -> None:
+        """
+        Builds the output mod at the configured location.
+        """
+
+        output_path: Path = LoadingDialog.run_callable(
+            QApplication.activeModalWidget(), self.database.exporter.build_output_mod
+        )
+
+        message_box = QMessageBox()
+        message_box.setWindowTitle(self.tr("Success!"))
+        message_box.setText(
+            self.tr("Created output mod for DSD at: ") + str(output_path)
+        )
+        message_box.setStandardButtons(
+            QMessageBox.StandardButton.Ok
+            | QMessageBox.StandardButton.Help
+            | QMessageBox.StandardButton.Open
+        )
+        message_box.button(QMessageBox.StandardButton.Ok).setText(self.tr("Ok"))
+        message_box.button(QMessageBox.StandardButton.Help).setText(
+            self.tr("Open output mod in Explorer")
+        )
+        btn = message_box.button(QMessageBox.StandardButton.Open)
+        btn.setText(self.tr("Open DSD modpage on Nexus Mods"))
+        btn.clicked.disconnect()
+        btn.clicked.connect(
+            lambda: os.startfile(
+                "https://www.nexusmods.com/skyrimspecialedition/mods/107676"
+            )
+        )
+
+        choice = message_box.exec()
+
+        if choice == message_box.StandardButton.Help:
+            os.startfile(output_path)
 
     def deep_scan(self) -> None:
         """

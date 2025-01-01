@@ -12,6 +12,8 @@ from PySide6.QtGui import QDragEnterEvent, QDragMoveEvent, QDropEvent
 from PySide6.QtWidgets import (
     QAbstractItemView,
     QApplication,
+    QDialog,
+    QFileDialog,
     QHeaderView,
     QInputDialog,
     QMessageBox,
@@ -29,6 +31,7 @@ from core.utilities.scale import scale_value
 from ui.utilities.tree_widget import are_children_visible
 from ui.widgets.string_list_dialog import StringListDialog
 
+from .export_dialog import ExportDialog
 from .translations_menu import TranslationsMenu
 
 
@@ -367,7 +370,47 @@ class TranslationsWidget(QTreeWidget):
                 new_name = dialog.textValue()
                 self.database.rename_translation(current_item, new_name)
 
-    def export_translation(self) -> None: ...
+    def export_translation(self) -> None:
+        """
+        Opens the translation export dialog and exports the current translation.
+        """
+
+        current_item: Optional[Translation | str] = self.get_current_item()
+
+        if not isinstance(current_item, Translation):
+            return
+
+        export_dialog = ExportDialog(QApplication.activeModalWidget())
+
+        if export_dialog.exec() != QDialog.DialogCode.Accepted:
+            return
+
+        export_format: Optional[ExportDialog.ExportFormat] = export_dialog.get_value()
+
+        if export_format is None:
+            return
+
+        file_dialog = QFileDialog(QApplication.activeModalWidget())
+        file_dialog.setWindowTitle(self.tr("Export translation..."))
+        file_dialog.setFileMode(QFileDialog.FileMode.Directory)
+
+        if file_dialog.exec() != QDialog.DialogCode.Accepted:
+            return
+
+        selected_folder: str = os.path.normpath(file_dialog.selectedFiles()[0])
+        folder = Path(selected_folder)
+
+        match export_format:
+            case ExportDialog.ExportFormat.DSD:
+                self.database.exporter.export_translation_dsd(current_item, folder)
+            case ExportDialog.ExportFormat.ESP:
+                self.database.exporter.export_translation_esp(current_item, folder)
+
+        QMessageBox.information(
+            AppContext.get_app().main_window,
+            self.tr("Export successful!"),
+            self.tr("Translation successfully exported."),
+        )
 
     def delete_translation(self) -> None:
         selected_translations: list[Translation] = self.get_selected_items()[0]

@@ -126,6 +126,32 @@ class ModInstance(QObject):
             default=(None, None),
         )[1]
 
+    def get_mod(self, mod_id: int, file_id: Optional[int] = None) -> Optional[Mod]:
+        """
+        Get a mod by its id or None if it doesn't exist.
+        Returns the mod with the highest index if there are
+        multiple mods with the same id.
+
+        Args:
+            mod_id (int): Mod id.
+            file_id (Optional[int], optional): File id. Defaults to None.
+
+        Returns:
+            Optional[Mod]: Mod or None
+        """
+
+        mods: list[Mod] = unique(
+            mod
+            for mod in filter(
+                lambda m: (m.mod_id == mod_id)
+                and (file_id is None or m.file_id == file_id),
+                self.mods,
+            )
+        )
+
+        # Get the mod with the highest modlist index
+        return max(mods, key=lambda m: self.mods.index(m), default=None)  # type: ignore[arg-type]
+
     def get_mod_with_plugin(
         self,
         plugin_name: str,
