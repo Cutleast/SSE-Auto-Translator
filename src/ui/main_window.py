@@ -96,9 +96,7 @@ class MainWindow(QMainWindow):
 
         # TODO: Move this to the translation editor
         if hasattr(self, "translation_editor"):
-            if any(
-                tab.changes_pending for tab in self.translation_editor.tabs.values()
-            ):
+            if any(tab.changes_pending for tab in self.translation_editor.tabs):
                 message_box = QMessageBox(self)
                 message_box.setWindowTitle(self.tr("Exit?"))
                 message_box.setText(

@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import Optional
 
 import pyperclip
-from PySide6.QtCore import Qt, Signal
+from PySide6.QtCore import Qt
 from PySide6.QtGui import QColor, QKeySequence, QShortcut
 from PySide6.QtWidgets import (
     QApplication,
@@ -49,32 +49,20 @@ class EditorTab(QWidget):
     __editor: Editor
 
     translation: Translation
-    plugin_name: Optional[str]
-
-    changes_pending: bool = False
-    changes_pending_signal = Signal(bool)
-    """
-    This signal gets emitted when the changes pending state changes.
-    """
 
     __vlayout: QVBoxLayout
     __title_label: QLabel
     __tool_bar: EditorToolbar
     __menu: EditorMenu
+    __strings_widget: StringsWidget
 
-    def __init__(self, translation: Translation, plugin_name: Optional[str] = None):
+    def __init__(self, translation: Translation) -> None:
         super().__init__()
 
         self.translation = translation
-        self.plugin_name = plugin_name
 
-        self.changes_pending_signal.connect(self.__on_change)
-
-        self.__editor = Editor(translation, plugin_name)
+        self.__editor = Editor(translation)
         self.__editor.update_signal.connect(self.update)
-        self.__editor.update_signal.connect(
-            lambda: self.changes_pending_signal.emit(True)
-        )
 
         self.__init_ui()
         self.__init_shortcuts()
@@ -92,11 +80,7 @@ class EditorTab(QWidget):
         hlayout = QHBoxLayout()
         self.__vlayout.addLayout(hlayout)
 
-        self.__title_label = QLabel(
-            f"{self.translation.name} > {self.plugin_name}"
-            if self.plugin_name
-            else self.translation.name
-        )
+        self.__title_label = QLabel(self.translation.name)
         self.__title_label.setObjectName("relevant_label")
         hlayout.addWidget(self.__title_label)
 
@@ -131,7 +115,7 @@ class EditorTab(QWidget):
         self.__vlayout.addWidget(self.__bar_chart)
 
     def __init_strings_widget(self) -> None:
-        self.__strings_widget = StringsWidget(self, self.__editor.strings)
+        self.__strings_widget = StringsWidget(self.__editor.strings)
         self.__strings_widget.itemSelectionChanged.connect(
             lambda: (
                 self.__tool_bar.search_and_replace_action.setEnabled(
@@ -184,8 +168,13 @@ class EditorTab(QWidget):
         )
         self.__strings_widget.customContextMenuRequested.connect(self.__menu.open)
 
-    def __on_change(self, changes_pending: bool = True) -> None:
-        self.changes_pending = changes_pending
+    @property
+    def changes_pending(self) -> bool:
+        """
+        Whether there are unsaved changes.
+        """
+
+        return self.__editor.changes_pending
 
     def import_legacy(self) -> None:
         """
@@ -193,11 +182,11 @@ class EditorTab(QWidget):
         """
 
         fdialog = QFileDialog()
-        fdialog.setFileMode(fdialog.FileMode.ExistingFile)
+        fdialog.setFileMode(QFileDialog.FileMode.ExistingFile)
         fdialog.setNameFilters([self.tr("DSD File (*.json)")])
         fdialog.setWindowTitle(self.tr("Import pre-v1.1 Translation..."))
 
-        if fdialog.exec() == fdialog.DialogCode.Rejected:
+        if fdialog.exec() == QFileDialog.DialogCode.Rejected:
             return
 
         selected_files = fdialog.selectedFiles()
@@ -221,7 +210,7 @@ class EditorTab(QWidget):
             string = self.__strings_widget.get_current_string()
 
         if string is not None:
-            assert string in self.__editor.strings
+            assert string.id in [s.id for s in self.__editor.all_strings]
 
             dialog = TranslatorDialog(self, string)
             dialog.update_signal.connect(self.update)
@@ -245,21 +234,25 @@ class EditorTab(QWidget):
 
         return {
             state: len(
-                [string for string in self.__editor.strings if string.status == state]
+                [
+                    string
+                    for string in self.__editor.all_strings
+                    if string.status == state
+                ]
             )
             for state in String.Status
         }
 
-    def get_visible_strings(self) -> list[String]:
+    def get_visible_string_count(self) -> int:
         """
-        Get a list of all strings that are visible with the current filter.
+        Gets the number of visible strings.
 
         Returns:
-            list[String]: The visible strings
+            int: Number of visible strings
         """
 
-        strings: list[String] = self.__strings_widget.get_visible_strings()
-        return strings
+        count: int = self.__strings_widget.get_visible_string_count()
+        return count
 
     def get_index(self, string: String) -> int:
         """
@@ -272,8 +265,26 @@ class EditorTab(QWidget):
             int: The index
         """
 
-        index: int = self.__strings_widget.get_index_of_string(string)
+        index: int = self.__strings_widget.get_index_of_string(
+            string, only_visible=True
+        )
         return index
+
+    def get_string(self, index: int) -> Optional[String]:
+        """
+        Gets a string from an index.
+
+        Args:
+            index (int): The index.
+
+        Returns:
+            Optional[String]: The string or None if not found.
+        """
+
+        string: Optional[String] = self.__strings_widget.get_string_from_index(
+            index, only_visible=True
+        )
+        return string
 
     def update(self) -> None:
         """
@@ -282,22 +293,14 @@ class EditorTab(QWidget):
 
         self.__strings_widget.update()
 
-        if self.changes_pending:
-            self.__title_label.setText(
-                f"{self.translation.name} > {self.plugin_name}*"
-                if self.plugin_name
-                else self.translation.name
-            )
+        if self.__editor.changes_pending:
+            self.__title_label.setText(self.translation.name + "*")
         else:
-            self.__title_label.setText(
-                f"{self.translation.name} > {self.plugin_name}"
-                if self.plugin_name
-                else self.translation.name
-            )
+            self.__title_label.setText(self.translation.name)
 
         summary: dict[String.Status, int] = self.get_string_states_summary()
 
-        self.__strings_num_label.display(len(self.__editor.strings))
+        self.__strings_num_label.display(self.get_visible_string_count())
         self.__bar_chart.setValues(list(summary.values()))
 
         num_tooltip = ""
@@ -321,18 +324,16 @@ class EditorTab(QWidget):
         """
 
         self.__editor.save()
-        self.changes_pending_signal.emit(False)
-
-    @property
-    def __selected_string_ids(self) -> list[str]:
-        return [string.id for string in self.__strings_widget.get_selected_strings()]
+        self.update()
 
     def apply_database(self) -> None:
         """
         Applies database to untranslated strings.
         """
 
-        modified_strings: int = self.__editor.apply_database(self.__selected_string_ids)
+        modified_strings: int = self.__editor.apply_database(
+            self.__strings_widget.get_selected_strings()
+        )
 
         messagebox = QMessageBox(QApplication.activeModalWidget())
         messagebox.setWindowTitle(self.tr("Success!"))
@@ -394,7 +395,9 @@ class EditorTab(QWidget):
                 pattern = re.compile(re.escape(search_entry.text()), re.IGNORECASE)
 
             self.__editor.apply_regex(
-                self.__selected_string_ids, replace_entry.text(), pattern
+                self.__strings_widget.get_selected_strings(),
+                replace_entry.text(),
+                pattern,
             )
 
     def translate_with_api(self) -> None:
@@ -415,7 +418,7 @@ class EditorTab(QWidget):
                     "Depending on the Translator API this can raise unexpected costs.",
                     "Are you sure you want to translate %n Strings via Translator API?\n"
                     "Depending on the Translator API this can raise unexpected costs.",
-                    len(self.__selected_string_ids),
+                    len(self.__strings_widget.get_selected_strings()),
                 )
             )
             vlayout.addWidget(label)
@@ -450,7 +453,7 @@ class EditorTab(QWidget):
         LoadingDialog.run_callable(
             QApplication.activeModalWidget(),
             lambda ldialog: self.__editor.translate_with_api(
-                self.__selected_string_ids, ldialog
+                self.__strings_widget.get_selected_strings(), ldialog
             ),
         )
 
@@ -486,7 +489,7 @@ class EditorTab(QWidget):
 
     def set_status(self, status: String.Status) -> None:
         selected_items: list[String] = self.__strings_widget.get_selected_strings()
-        self.__editor.set_status([string.id for string in selected_items], status)
+        self.__editor.set_status(selected_items, status)
 
     def reset_translation(self) -> None:
         selected_items: list[String] = self.__strings_widget.get_selected_strings()
@@ -506,7 +509,7 @@ class EditorTab(QWidget):
         choice = message_box.exec()
 
         if choice == QMessageBox.StandardButton.Yes:
-            self.__editor.reset_strings([string.id for string in selected_items])
+            self.__editor.reset_strings(selected_items)
 
     def copy_selected(self) -> None:
         """
@@ -546,3 +549,19 @@ class EditorTab(QWidget):
 
         self.__strings_widget.set_state_filter(state_filter)
         self.update()
+
+    def go_to_plugin(self, plugin_name: str) -> None:
+        """
+        Selects and scrolls to a specified plugin item.
+
+        Args:
+            plugin_name (str): The name of the plugin.
+        """
+
+        self.__strings_widget.go_to_plugin(plugin_name)
+
+    def collapseAll(self) -> None:
+        self.__strings_widget.collapseAll()
+
+    def expandAll(self) -> None:
+        self.__strings_widget.expandAll()

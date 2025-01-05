@@ -4,6 +4,8 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+from typing import Optional
+
 import qtawesome as qta
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import (
@@ -27,7 +29,13 @@ class EditorPage(QSplitter):
     Page for translation editor.
     """
 
-    tabs: dict[QTreeWidgetItem, EditorTab] = {}
+    __tabs: dict[Translation, tuple[EditorTab, QTreeWidgetItem]] = {}
+    """
+    Mapping of translations to their tabs and the respective item in the list.
+    """
+
+    __tab_list_widget: QTreeWidget
+    __page_widget: QStackedWidget
 
     def __init__(self) -> None:
         super().__init__()
@@ -39,29 +47,29 @@ class EditorPage(QSplitter):
         self.__init_ui()
 
     def __init_ui(self) -> None:
-        self.translations_list = QTreeWidget()
-        self.translations_list.header().hide()
-        self.translations_list.setColumnCount(2)
-        self.translations_list.header().setStretchLastSection(False)
-        self.translations_list.header().setSectionResizeMode(
+        self.__tab_list_widget = QTreeWidget()
+        self.__tab_list_widget.header().hide()
+        self.__tab_list_widget.setColumnCount(2)
+        self.__tab_list_widget.header().setStretchLastSection(False)
+        self.__tab_list_widget.header().setSectionResizeMode(
             0, QHeaderView.ResizeMode.Stretch
         )
-        self.translations_list.header().setSectionResizeMode(
+        self.__tab_list_widget.header().setSectionResizeMode(
             1, QHeaderView.ResizeMode.ResizeToContents
         )
-        self.addWidget(self.translations_list)
+        self.addWidget(self.__tab_list_widget)
 
-        self.page_widget = QStackedWidget()
-        self.addWidget(self.page_widget)
+        self.__page_widget = QStackedWidget()
+        self.addWidget(self.__page_widget)
 
-        self.translations_list.currentItemChanged.connect(
+        self.__tab_list_widget.currentItemChanged.connect(
             lambda cur, _: self.__set_tab_from_item(cur)
         )
 
     def __post_init(self) -> None:
         AppContext.get_app().database.edit_signal.connect(self.open_translation)
 
-    def __set_tab_from_item(self, item: QTreeWidgetItem) -> None:
+    def __set_tab_from_item(self, item: Optional[QTreeWidgetItem]) -> None:
         """
         Sets page according to selected `item`.
         """
@@ -69,23 +77,49 @@ class EditorPage(QSplitter):
         if item is None:
             return
 
-        self.page_widget.setCurrentWidget(self.tabs[item])
+        tabs: dict[QTreeWidgetItem, EditorTab] = {
+            item: tab for tab, item in self.__tabs.values()
+        }
 
-    def __set_tab(self, tab: EditorTab) -> None:
+        # Check if item is a top level item
+        tab: EditorTab
+        if item.parent() is None:
+            tab = tabs[item]
+        else:
+            tab = tabs[item.parent()]
+            tab.go_to_plugin(item.text(0))
+
+        self.__page_widget.setCurrentWidget(tab)
+
+    def __set_tab(self, tab: EditorTab, plugin_name: Optional[str] = None) -> None:
         """
-        Sets `tab` as current visible tab.
+        Switches to a specified tab and goes to a specified plugin, if any.
+
+        Args:
+            tab (EditorTab): The tab to switch to.
+            plugin_name (Optional[str]): The name of the plugin to go to.
         """
 
-        self.translations_list.setCurrentItem(
-            list(self.tabs)[list(self.tabs.values()).index(tab)]
-        )
+        item: QTreeWidgetItem = self.__tabs[tab.translation][1]
+        self.__tab_list_widget.setCurrentItem(item)
+
+        if plugin_name is not None:
+            tab.go_to_plugin(plugin_name)
+
+    @property
+    def tabs(self) -> list[EditorTab]:
+        """
+        List of all open editor tabs.
+        """
+
+        return [tab for tab, _ in self.__tabs.values()]
 
     def update(self) -> None:
         """
         Updates the displayed editor tabs.
         """
 
-        for item, tab in self.tabs.items():
+        for tab, item in self.__tabs.values():
             tab.update()
 
             if tab.changes_pending and not item.text(0).endswith("*"):
@@ -98,16 +132,11 @@ class EditorPage(QSplitter):
         Closes all tabs belonging to `translation`.
         """
 
-        tabs = {
-            item: tab
-            for item, tab in self.tabs.items()
-            if tab.translation == translation
-        }
+        tab: EditorTab
+        item: QTreeWidgetItem
+        tab, item = self.__tabs[translation]
 
-        if not len(tabs):
-            return
-
-        if any(tab.changes_pending for tab in tabs.values()) and not silent:
+        if tab.changes_pending and not silent:
             message_box = QMessageBox(self)
             message_box.setWindowTitle(self.tr("Close"))
             message_box.setText(
@@ -124,17 +153,14 @@ class EditorPage(QSplitter):
             if choice != QMessageBox.StandardButton.Yes:
                 return
 
-        translation_item = list(tabs.keys())[-1].parent()
+        self.__tabs.pop(translation)
 
-        for item in tabs:
-            self.tabs.pop(item)
-
-        self.translations_list.takeTopLevelItem(
-            self.translations_list.invisibleRootItem().indexOfChild(translation_item)
+        self.__tab_list_widget.takeTopLevelItem(
+            self.__tab_list_widget.invisibleRootItem().indexOfChild(item)
         )
 
         if self.tabs:
-            self.__set_tab(list(self.tabs.values())[-1])
+            self.__set_tab(self.tabs[-1])
 
         AppContext.get_app().main_window.update()
         self.update()
@@ -144,16 +170,16 @@ class EditorPage(QSplitter):
         Opens `translation` in new tab.
         """
 
-        set_width = not self.tabs
+        set_width = not self.__tabs
 
         # Create new tab if translation is not already open
-        if not any(tab.translation == translation for tab in self.tabs.values()):
-            translation_item = QTreeWidgetItem([translation.name, ""])
+        if translation not in self.__tabs:
+            translation_item = QTreeWidgetItem([translation.name])
 
             translation_tab = EditorTab(translation)
-            translation_tab.changes_pending_signal.connect(self.update)
-            self.tabs[translation_item] = translation_tab
-            self.page_widget.addWidget(translation_tab)
+            # translation_tab.changes_pending_signal.connect(self.update)
+            self.__tabs[translation] = translation_tab, translation_item
+            self.__page_widget.addWidget(translation_tab)
 
             close_button = QPushButton()
             close_button.setObjectName("list_close_button")
@@ -162,26 +188,28 @@ class EditorPage(QSplitter):
             close_button.setFixedSize(26, 26)
 
             for plugin_name in translation.strings:
-                plugin_item = QTreeWidgetItem([plugin_name, ""])
+                plugin_item = QTreeWidgetItem([plugin_name])
                 translation_item.addChild(plugin_item)
 
-                plugin_tab = EditorTab(translation, plugin_name)
-                plugin_tab.changes_pending_signal.connect(self.update)
-                self.tabs[plugin_item] = plugin_tab
-                self.page_widget.addWidget(plugin_tab)
+            self.__tab_list_widget.addTopLevelItem(translation_item)
 
-            self.translations_list.addTopLevelItem(translation_item)
-            self.translations_list.setItemWidget(translation_item, 1, close_button)
-
+            self.__tab_list_widget.setItemWidget(translation_item, 1, close_button)
             close_button.clicked.connect(lambda: self.close_translation(translation))
 
-        self.translations_list.resizeColumnToContents(1)
+            translation_item.setExpanded(True)
+
+        self.__tab_list_widget.resizeColumnToContents(1)
 
         # Switch to Tab
-        self.__set_tab(list(self.tabs.values())[-1])
+        self.__set_tab(self.tabs[-1])
 
         if set_width:
-            self.setSizes([int(0.3 * self.width()), int(0.7 * self.width())])
+            self.setSizes(
+                [
+                    int(0.25 * (self.parentWidget() or self).width()),
+                    int(0.75 * (self.parentWidget() or self).width()),
+                ]
+            )
 
         AppContext.get_app().main_window.update()
         self.update()

@@ -4,6 +4,7 @@ Copyright (c) Cutleast
 
 import logging
 import re
+from copy import copy, deepcopy
 from pathlib import Path
 from typing import Optional
 
@@ -26,7 +27,6 @@ class Editor(QObject):
     log: logging.Logger = logging.getLogger("Editor")
 
     __translation: Translation
-    __current_plugin: Optional[str]
     __strings_cache: dict[str, list[String]]
     """
     Stores a deep copy of the strings in the translation.
@@ -37,23 +37,17 @@ class Editor(QObject):
     This signal gets emitted when any of the strings in the translation change.
     """
 
-    def __init__(self, translation: Translation, current_plugin: Optional[str] = None):
+    __changes_pending: bool = False
+
+    def __init__(self, translation: Translation) -> None:
         super().__init__()
 
         self.__translation = translation
-        self.__current_plugin = current_plugin
 
-        # TODO: Make a deep copy to prevent immediately modifying the translation
-        # This seems to break the link to the strings widget
-        # self.__strings_cache = deepcopy(self.__translation.strings)
-        self.__strings_cache = self.__translation.strings
+        # Make a deep copy to prevent immediately modifying the translation
+        self.__strings_cache = deepcopy(self.__translation.strings)
 
-    def set_current_plugin(self, plugin_name: str) -> None:
-        """
-        Sets the current plugin.
-        """
-
-        self.__current_plugin = plugin_name
+        self.update_signal.connect(self.__on_change)
 
     def save(self) -> None:
         """
@@ -64,84 +58,93 @@ class Editor(QObject):
         self.__translation.save_translation()
 
         self.log.info(f"Saved translation {self.__translation.name!r}.")
+        self.__changes_pending = False
 
-        self.update_signal.emit()
+    def __on_change(self, changes_pending: bool = True) -> None:
+        self.__changes_pending = changes_pending
 
     @property
-    def strings(self) -> list[String]:
+    def changes_pending(self) -> bool:
         """
-        List of currently relevant strings.
-        (All strings if no plugin is selected, otherwise only strings
-        from the selected plugin)
+        Whether there are unsaved changes.
         """
 
-        if self.__current_plugin is None:
-            return [
-                string
-                for strings in self.__strings_cache.values()
-                for string in strings
-            ]
-        else:
-            return self.__strings_cache[self.__current_plugin]
+        return self.__changes_pending
 
-    def __get_string_from_id(self, string_id: str) -> Optional[String]:
-        target_string: Optional[String] = None
+    @property
+    def strings(self) -> dict[str, list[String]]:
+        """
+        Map of plugin names to their list of strings.
+        Returns their current editing state.
+        """
 
-        strings: list[String]
-        if self.__current_plugin is None:
-            strings = [
-                string
-                for strings in self.__translation.strings.values()
-                for string in strings
-            ]
-        else:
-            strings = self.__translation.strings[self.__current_plugin]
+        return copy(self.__strings_cache)
 
-        for string in strings:
-            if string.id == string_id:
-                target_string = string
-                break
+    @property
+    def all_strings(self) -> list[String]:
+        """
+        List of all strings.
+        """
 
-        return target_string
-
-    def __get_strings_from_ids(self, string_ids: list[str]) -> list[String]:
         return [
-            _string
-            for string_id in string_ids
-            if (_string := self.__get_string_from_id(string_id)) is not None
+            string for strings in self.__strings_cache.values() for string in strings
         ]
 
-    def set_status(self, string_ids: list[str], status: String.Status) -> None:
+    def set_status(self, strings: list[String], status: String.Status) -> None:
         """
         Sets the status of a list of strings.
 
         Args:
-            string_ids (list[str]): List of string ids
+            strings (list[String]): List of strings
             status (String.Status): The status to set
         """
 
-        for string in self.__get_strings_from_ids(string_ids):
+        for string in strings:
             if string is not None:
                 string.status = status
 
         self.update_signal.emit()
-        self.log.info(f"Updated status for {len(string_ids)} string(s).")
+        self.log.info(f"Updated status for {len(strings)} string(s).")
+
+    def update_string(
+        self,
+        string: String,
+        translation: Optional[str] = None,
+        status: Optional[String.Status] = None,
+    ) -> None:
+        """
+        Updates a string.
+
+        Args:
+            string (String): The string
+            translation (Optional[str], optional): Translation string to set. Defaults to None.
+            status (Optional[String.Status], optional): Status to set. Defaults to None.
+        """
+
+        if translation is not None:
+            string.translated_string = translation
+
+        if status is not None:
+            string.status = status
+
+            if status == String.Status.NoTranslationRequired:
+                string.translated_string = string.original_string
+
+        self.update_signal.emit()
 
     def translate_with_api(
-        self, string_ids: list[str], ldialog: Optional[LoadingDialog]
+        self, strings: list[String], ldialog: Optional[LoadingDialog]
     ) -> None:
         """
         Translates a list of strings with a translator API.
 
         Args:
-            string_ids (list[str]): List of string ids
+            strings (list[String]): List of strings
             ldialog (Optional[LoadingDialog]): Optional loading dialog, defaults to None
         """
 
         if ldialog is not None:
             ldialog.updateProgress(text1=self.tr("Translating with API..."))
-
-        strings: list[String] = self.__get_strings_from_ids(string_ids)
 
         self.log.info(f"Translating {len(strings)} string(s) with API...")
 
@@ -161,13 +164,13 @@ class Editor(QObject):
         self.log.info("API translation complete.")
 
     def apply_regex(
-        self, string_ids: list[str], replace_text: str, pattern: re.Pattern
+        self, strings: list[String], replace_text: str, pattern: re.Pattern
     ) -> int:
         """
         Applies a regex to a list of strings.
 
         Args:
-            string_ids (list[str]): List of string ids
+            strings (list[String]): List of strings
             replace_text (str): Replacer text
             pattern (re.Pattern): Regex pattern
 
@@ -175,10 +178,10 @@ class Editor(QObject):
             int: Number of strings modified
         """
 
-        self.log.info(f"Applying regex to {len(string_ids)} string(s)...")
+        self.log.info(f"Applying regex to {len(strings)} string(s)...")
 
         modified_strings: int = 0
-        for string in self.__get_strings_from_ids(string_ids):
+        for string in strings:
             src: str = string.translated_string or string.original_string
             res: str = pattern.sub(replace_text, src)
             string.translated_string = res
@@ -192,18 +195,18 @@ class Editor(QObject):
 
         return modified_strings
 
-    def apply_database(self, string_ids: list[str]) -> int:
+    def apply_database(self, strings: list[String]) -> int:
         """
         Applies database to a list of strings.
 
         Args:
-            string_ids (list[str]): List of string ids
+            strings (list[String]): List of strings
 
         Returns:
             int: Number of strings modified
         """
 
-        self.log.info(f"Applying database to {len(string_ids)} string(s)...")
+        self.log.info(f"Applying database to {len(strings)} string(s)...")
 
         database: TranslationDatabase = AppContext.get_app().database
 
@@ -215,7 +218,7 @@ class Editor(QObject):
         }
 
         modified_strings: int = 0
-        for string in self.__get_strings_from_ids(string_ids):
+        for string in strings:
             if string.id in database_strings:
                 string.translated_string = database_strings[string.id].translated_string
                 string.status = String.Status.TranslationComplete
@@ -246,7 +249,7 @@ class Editor(QObject):
         """
 
         modified_strings: int = 0
-        for string in self.strings:
+        for string in self.all_strings:
             if (
                 string.original_string == original
                 and string.status != String.Status.TranslationComplete
@@ -260,17 +263,17 @@ class Editor(QObject):
 
         return modified_strings
 
-    def reset_strings(self, string_ids: list[str]) -> None:
+    def reset_strings(self, strings: list[String]) -> None:
         """
         Resets the translation and the status of a list of strings.
 
         Args:
-            string_ids (list[str]): List of string ids
+            strings (list[String]): List of strings
         """
 
-        self.log.info(f"Resetting {len(string_ids)} string(s)...")
+        self.log.info(f"Resetting {len(strings)} string(s)...")
 
-        for string in self.__get_strings_from_ids(string_ids):
+        for string in strings:
             string.translated_string = None
             string.status = String.Status.TranslationRequired
 
@@ -296,8 +299,7 @@ class Editor(QObject):
         self.log.debug(f"Found {len(legacy_strings)} string(s) in legacy translation.")
 
         translation_strings: dict[str, list[String]] = {}
-
-        for string in self.strings:
+        for string in self.all_strings:
             translation_strings.setdefault(string.original_string, []).append(string)
 
         strings_modified: int = 0

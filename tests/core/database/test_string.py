@@ -11,6 +11,7 @@ import pytest
 sys.path.append(os.path.join(os.getcwd(), "src"))
 
 from core.database.string import String
+from core.utilities.container_utils import ReferenceDict
 
 
 class TestString:
@@ -158,3 +159,28 @@ class TestString:
 
         # then
         assert real_output == expected_output
+
+    def test_in_referencedict(self) -> None:
+        """
+        Tests hashing and indexing of strings in
+        `core.utilities.container_utils.ReferenceDict`.
+        """
+
+        # given
+        string1: String = String(
+            editor_id="TestString",
+            form_id="00123456|Skyrim.esm",
+            index=None,
+            type="BOOK FULL",
+            original_string="The title of the book",
+            translated_string="Der Titel des Buchs",
+            status=String.Status.TranslationComplete,
+        )
+        test_dict: ReferenceDict[String, str] = ReferenceDict({string1: "test"})
+
+        # when
+        string1.translated_string = "The title of the book"
+        string1.status = String.Status.TranslationRequired
+
+        # then
+        assert test_dict[string1] == "test"

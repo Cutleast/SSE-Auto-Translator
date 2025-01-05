@@ -226,6 +226,16 @@ class String:
             (self.id, self.original_string, self.translated_string, self.status)
         )
 
+    def __eq__(self, value: Any) -> bool:
+        if not isinstance(value, String):
+            return False
+
+        return (
+            self.id == value.id
+            and self.status == value.status
+            and self.translated_string == value.translated_string
+        )
+
     @staticmethod
     def unique(strings: Iterable["String"]) -> list["String"]:
         """

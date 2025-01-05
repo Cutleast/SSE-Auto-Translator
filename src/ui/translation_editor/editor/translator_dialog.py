@@ -76,7 +76,7 @@ class TranslatorDialog(QWidget):
     def __init_ui(self) -> None:
         self.setWindowFlags(Qt.WindowType.Window)
         self.resize(1000, 600)
-        self.closeEvent = self.cancel  # type: ignore[method-assign]
+        self.closeEvent = self.cancel
         self.setObjectName("root")
 
         vlayout = QVBoxLayout()
@@ -91,7 +91,7 @@ class TranslatorDialog(QWidget):
         )
         prev_button.clicked.connect(self.goto_prev)
         prev_button.setShortcut(QKeySequence("Alt+Left"))
-        prev_button.setEnabled(len(self.__parent.get_visible_strings()) > 1)
+        prev_button.setEnabled(self.__parent.get_visible_string_count() > 1)
         hlayout.addWidget(prev_button)
 
         hlayout.addStretch()
@@ -103,7 +103,7 @@ class TranslatorDialog(QWidget):
         next_button.clicked.connect(self.goto_next)
         next_button.setShortcut(QKeySequence("Alt+Right"))
         next_button.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
-        next_button.setEnabled(len(self.__parent.get_visible_strings()) > 1)
+        next_button.setEnabled(self.__parent.get_visible_string_count() > 1)
         hlayout.addWidget(next_button)
 
         hlayout = QHBoxLayout()
@@ -229,18 +229,18 @@ class TranslatorDialog(QWidget):
         )
 
     def __update_title(self) -> None:
-        visible_strings: int = len(self.__parent.get_visible_strings())
+        visible_string_count: int = self.__parent.get_visible_string_count()
         current_index: int = self.__parent.get_index(self.__current_string)
 
         if self.changes_pending:
             self.setWindowTitle(
                 f"{self.__current_string.editor_id or self.__current_string.form_id} - "
-                f"{self.__current_string.type} ({current_index+1}/{visible_strings})*"
+                f"{self.__current_string.type} ({current_index+1}/{visible_string_count})*"
             )
         else:
             self.setWindowTitle(
                 f"{self.__current_string.editor_id or self.__current_string.form_id} - "
-                f"{self.__current_string.type} ({current_index+1}/{visible_strings})"
+                f"{self.__current_string.type} ({current_index+1}/{visible_string_count})"
             )
 
     def __on_change(self) -> None:
@@ -371,17 +371,21 @@ class TranslatorDialog(QWidget):
                 The status to finalize the current string with. Defaults to TranslationComplete.
         """
 
-        visible_strings: list[String] = self.__parent.get_visible_strings()
+        visible_strings_count: int = self.__parent.get_visible_string_count()
 
-        if len(visible_strings) > 1:
+        if visible_strings_count > 1:
             current_index = self.__parent.get_index(self.__current_string)
 
-            if current_index == (len(visible_strings) - 1):
+            if current_index == (visible_strings_count - 1):
                 new_index = 0
             else:
                 new_index = current_index + 1
 
-            new_string: String = visible_strings[new_index]
+            new_string: Optional[String] = self.__parent.get_string(new_index)
+
+            if new_string is None:
+                raise ValueError("Next string not found!")
+
             self.set_string(new_string, finalize_with_status)
 
         else:
@@ -393,15 +397,19 @@ class TranslatorDialog(QWidget):
         Goes to previous string.
         """
 
-        visible_strings: list[String] = self.__parent.get_visible_strings()
-        current_index = self.__parent.get_index(self.__current_string)
+        visible_strings_count: int = self.__parent.get_visible_string_count()
+        current_index: int = self.__parent.get_index(self.__current_string)
 
         if current_index > 0:
             new_index = current_index - 1
         else:
-            new_index = len(visible_strings) - 1
+            new_index = visible_strings_count - 1
 
-        new_string: String = visible_strings[new_index]
+        new_string: Optional[String] = self.__parent.get_string(new_index)
+
+        if new_string is None:
+            raise ValueError("Previous string not found!")
+
         self.set_string(new_string)
 
     def finalize_string(

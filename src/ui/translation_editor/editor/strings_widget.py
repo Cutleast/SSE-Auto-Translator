@@ -10,6 +10,12 @@ from PySide6.QtWidgets import QTreeWidget, QTreeWidgetItem
 
 from core.database.string import String
 from core.utilities import matches_filter, trim_string
+from core.utilities.container_utils import ReferenceDict
+from ui.utilities.tree_widget import (
+    are_children_visible,
+    iter_children,
+    iter_toplevel_items,
+)
 
 
 class StringsWidget(QTreeWidget):
@@ -17,16 +23,22 @@ class StringsWidget(QTreeWidget):
     Class for strings widget in an editor tab.
     """
 
-    __parent: "EditorTab"
-
-    __string_items: dict[String, QTreeWidgetItem]
+    __string_items: ReferenceDict[String, QTreeWidgetItem]
     """
     Mapping of strings to their tree items.
+
+    A `ReferenceDict` is required here because the Strings are used as the keys
+    but they're mutable and their hash may change.
+    """
+
+    __plugin_items: dict[str, QTreeWidgetItem]
+    """
+    Mapping of plugin names to their tree items.
     """
 
     __name_filter: Optional[tuple[str, bool]] = None
     """
-    Optional nem filter and case-sensitivity.
+    Optional name filter and case-sensitivity.
     """
 
     __state_filter: Optional[list[String.Status]] = None
@@ -34,10 +46,8 @@ class StringsWidget(QTreeWidget):
     Optional state filter.
     """
 
-    def __init__(self, parent: "EditorTab", strings: list[String]) -> None:
-        super().__init__(parent)
-
-        self.__parent = parent
+    def __init__(self, strings: dict[str, list[String]]) -> None:
+        super().__init__()
 
         self.__init_ui()
         self.__init_strings(strings)
@@ -46,7 +56,6 @@ class StringsWidget(QTreeWidget):
         self.setAlternatingRowColors(True)
         self.setSelectionMode(QTreeWidget.SelectionMode.ExtendedSelection)
         self.setUniformRowHeights(True)
-        self.setIndentation(0)
         self.setSortingEnabled(True)
 
         self.__init_header()
@@ -64,18 +73,29 @@ class StringsWidget(QTreeWidget):
 
         self.header().setDefaultSectionSize(200)
         self.header().setSortIndicatorClearable(True)
-        self.header().setFirstSectionMovable(True)
 
-    def __init_strings(self, strings: list[String]) -> None:
-        self.__string_items = {}
+    def __init_strings(self, strings: dict[str, list[String]]) -> None:
+        self.__string_items = ReferenceDict()
+        self.__plugin_items = {}
 
         self.clear()
 
-        for string in strings:
-            item = self.__create_string_item(string)
-            self.__string_items[string] = item
-            self.addTopLevelItem(item)
+        for plugin_name, plugin_strings in strings.items():
+            plugin_item = QTreeWidgetItem([plugin_name])
+            self.__plugin_items[plugin_name] = plugin_item
 
+            for string in plugin_strings:
+                if string in self.__string_items:
+                    raise ValueError(f"Duplicate string: {string}")
+
+                item = self.__create_string_item(string)
+                self.__string_items[string] = item
+                plugin_item.addChild(item)
+
+            self.addTopLevelItem(plugin_item)
+            plugin_item.setFirstColumnSpanned(True)
+
+        self.expandAll()
         self.resizeColumnToContents(0)
         self.resizeColumnToContents(1)
         self.header().resizeSection(3, 500)
@@ -98,6 +118,14 @@ class StringsWidget(QTreeWidget):
         item.setFont(2, QFont("Consolas"))
 
         return item
+
+    def __get_items(self, only_visible: bool = False) -> list[QTreeWidgetItem]:
+        return [
+            string_item
+            for plugin_item in iter_toplevel_items(self)
+            for string_item in iter_children(plugin_item)
+            if not only_visible or not string_item.isHidden()
+        ]
 
     def update(self) -> None:
         """
@@ -135,10 +163,34 @@ class StringsWidget(QTreeWidget):
                     c, String.Status.get_color(string.status) or Qt.GlobalColor.white
                 )
 
-        if self.selectedItems():
-            self.scrollToItem(
-                self.selectedItems()[0], QTreeWidget.ScrollHint.PositionAtCenter
+        for plugin_name, plugin_item in self.__plugin_items.items():
+            plugin_item.setHidden(
+                not are_children_visible(plugin_item)
+                and (
+                    not matches_filter(
+                        plugin_name, name_filter, case_sensitive or False
+                    )
+                    or self.__state_filter is not None
+                )
             )
+
+        if self.currentItem():
+            self.scrollToItem(
+                self.currentItem(), QTreeWidget.ScrollHint.PositionAtCenter
+            )
+
+    def go_to_plugin(self, plugin_name: str) -> None:
+        """
+        Selects and scrolls to a specified plugin item.
+
+        Args:
+            plugin_name (str): The name of the plugin.
+        """
+
+        item: QTreeWidgetItem = self.__plugin_items[plugin_name]
+        item.setSelected(True)
+        self.setCurrentItem(item)
+        self.scrollToItem(item, QTreeWidget.ScrollHint.PositionAtTop)
 
     def set_name_filter(self, name_filter: tuple[str, bool]) -> None:
         """
@@ -188,36 +240,53 @@ class StringsWidget(QTreeWidget):
 
         return items.get(self.currentItem())
 
-    def get_visible_strings(self) -> list[String]:
+    def get_visible_string_count(self) -> int:
         """
-        Returns a list of strings that are visible with current filter.
+        Gets number of visible strings.
 
         Returns:
-            list[String]: The visible strings.
+            int: Number of visible strings
         """
 
-        return [
-            string
-            for string, item in sorted(
-                self.__string_items.items(),
-                key=lambda i: self.indexOfTopLevelItem(i[1]),
-            )
-            if not item.isHidden()
-        ]
+        return len(self.__get_items(only_visible=True))
 
-    def get_index_of_string(self, string: String) -> int:
+    def get_index_of_string(self, string: String, only_visible: bool = False) -> int:
         """
         Gets the index of a string in the list.
 
         Args:
             string (String): The string to get the index of.
+            only_visible (bool, optional):
+                Whether to get the index within the visible strings.
 
         Returns:
             int: The index
         """
 
-        return self.indexOfTopLevelItem(self.__string_items[string])
+        return self.__get_items(only_visible).index(self.__string_items[string])
 
+    def get_string_from_index(
+        self, index: int, only_visible: bool = False
+    ) -> Optional[String]:
+        """
+        Gets a string from an index.
 
-if __name__ == "__main__":
-    from .editor_tab import EditorTab
+        Args:
+            index (int): The index.
+            only_visible (bool, optional):
+                Whether to get the string within the visible strings. Defaults to False.
+
+        Returns:
+            Optional[String]: The string or None if not found.
+        """
+
+        items: list[QTreeWidgetItem] = self.__get_items(only_visible)
+
+        if index >= len(items):
+            return None
+
+        string_items: dict[QTreeWidgetItem, String] = {
+            item: string for string, item in self.__string_items.items()
+        }
+
+        return string_items[items[index]]

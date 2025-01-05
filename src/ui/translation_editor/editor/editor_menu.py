@@ -21,8 +21,26 @@ class EditorMenu(Menu):
 
         self.__parent = parent
 
+        self.__init_separator_actions()
         self.__init_actions()
         self.__init_mark_actions()
+
+    def __init_separator_actions(self) -> None:
+        expand_all_action: QAction = self.addAction(
+            qta.icon("mdi6.arrow-expand-vertical", color=self.palette().text().color()),
+            self.tr("Expand all"),
+        )
+        expand_all_action.triggered.connect(self.__parent.expandAll)
+
+        collapse_all_action: QAction = self.addAction(
+            qta.icon(
+                "mdi6.arrow-collapse-vertical", color=self.palette().text().color()
+            ),
+            self.tr("Collapse all"),
+        )
+        collapse_all_action.triggered.connect(self.__parent.collapseAll)
+
+        self.addSeparator()
 
     def __init_actions(self) -> None:
         open_translator_action: QAction = self.addAction(

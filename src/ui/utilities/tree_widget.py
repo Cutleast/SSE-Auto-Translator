@@ -4,7 +4,7 @@ Copyright (c) Cutleast
 
 from collections.abc import Generator
 
-from PySide6.QtWidgets import QTreeWidgetItem
+from PySide6.QtWidgets import QTreeWidget, QTreeWidgetItem
 
 
 def iter_children(item: QTreeWidgetItem) -> Generator[QTreeWidgetItem]:
@@ -20,6 +20,21 @@ def iter_children(item: QTreeWidgetItem) -> Generator[QTreeWidgetItem]:
 
     for i in range(item.childCount()):
         yield item.child(i)
+
+
+def iter_toplevel_items(widget: QTreeWidget) -> Generator[QTreeWidgetItem]:
+    """
+    Iterates over all top level items of a tree widget.
+
+    Args:
+        widget (QTreeWidget): Tree widget
+
+    Yields:
+        Generator[QTreeWidgetItem]: Tree items
+    """
+
+    for i in range(widget.topLevelItemCount()):
+        yield widget.topLevelItem(i)
 
 
 def are_children_visible(item: QTreeWidgetItem) -> bool:
