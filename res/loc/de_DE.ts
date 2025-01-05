@@ -30,7 +30,7 @@
     <message>
         <location filename="src/ui/widgets/api_setup.py" line="50"/>
         <source>In order to get translations from Nexus Mods this tool needs access to the Nexus Mods API. You can setup access by two methods: insert API key manually or via SSO (Single-Sign-On).</source>
-        <translation type="unfinished"></translation>
+        <translation>Um Übersetzungen von Nexus Mods herunterladen zu können, benötigt dieses Tool Zugang zur Nexus Mods API. Sie können diesen Zugang auf zwei Weisen einrichten: API-Schlüssel manuell eingeben oder über Anmeldung im Browser (Single-Sign-On).</translation>
     </message>
     <message>
         <location filename="src/ui/widgets/api_setup.py" line="67"/>
@@ -368,7 +368,7 @@ If you don&apos;t have Nexus Mods Premium, make sure that SSE-AT is linked to Mo
 <context>
     <name>Editor</name>
     <message>
-        <location filename="src/core/editor/editor.py" line="142"/>
+        <location filename="src/core/editor/editor.py" line="147"/>
         <source>Translating with API...</source>
         <translation>Übersetze mit API...</translation>
     </message>
@@ -394,22 +394,32 @@ If you don&apos;t have Nexus Mods Premium, make sure that SSE-AT is linked to Mo
 <context>
     <name>EditorMenu</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_menu.py" line="30"/>
+        <location filename="src/ui/translation_editor/editor/editor_menu.py" line="31"/>
+        <source>Expand all</source>
+        <translation>Alle aufklappen</translation>
+    </message>
+    <message>
+        <location filename="src/ui/translation_editor/editor/editor_menu.py" line="39"/>
+        <source>Collapse all</source>
+        <translation>Alle zuklappen</translation>
+    </message>
+    <message>
+        <location filename="src/ui/translation_editor/editor/editor_menu.py" line="48"/>
         <source>Edit String...</source>
         <translation>String bearbeiten...</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_menu.py" line="37"/>
+        <location filename="src/ui/translation_editor/editor/editor_menu.py" line="55"/>
         <source>Copy String</source>
         <translation>String kopieren</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_menu.py" line="43"/>
+        <location filename="src/ui/translation_editor/editor/editor_menu.py" line="61"/>
         <source>Reset selected String(s)</source>
         <translation>Ausgewählte(n) String(s) zurücksetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_menu.py" line="69"/>
+        <location filename="src/ui/translation_editor/editor/editor_menu.py" line="87"/>
         <source>Mark as &quot;{0}&quot;</source>
         <translation>Als &quot;{0}&quot; markieren</translation>
     </message>
@@ -417,22 +427,22 @@ If you don&apos;t have Nexus Mods Premium, make sure that SSE-AT is linked to Mo
 <context>
     <name>EditorPage</name>
     <message>
-        <location filename="src/ui/translation_editor/editor_page.py" line="112"/>
+        <location filename="src/ui/translation_editor/editor_page.py" line="141"/>
         <source>Close</source>
         <translation>Schließen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor_page.py" line="115"/>
+        <location filename="src/ui/translation_editor/editor_page.py" line="144"/>
         <source>Are you sure you want to close? All changes will be lost!</source>
         <translation>Sind Sie sicher, dass Sie den Tab schließen möchten? Alle Änderungen gehen dabei verloren!</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor_page.py" line="120"/>
+        <location filename="src/ui/translation_editor/editor_page.py" line="149"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor_page.py" line="121"/>
+        <location filename="src/ui/translation_editor/editor_page.py" line="150"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
@@ -440,49 +450,49 @@ If you don&apos;t have Nexus Mods Premium, make sure that SSE-AT is linked to Mo
 <context>
     <name>EditorTab</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="107"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="89"/>
         <source>Strings</source>
         <translation>Strings</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="200"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="187"/>
         <source>Import pre-v1.1 Translation...</source>
         <translation>Pre-v1.1 Übersetzung importieren...</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="357"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="356"/>
         <source>Search and Replace</source>
         <translation>Suchen und Ersetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="409"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="410"/>
         <source>Translate with API</source>
         <translation>Mit der API übersetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="465"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="466"/>
         <source>Export Translation (DSD Format only)</source>
         <translation>Übersetzung exportieren (nur DSD-Format)</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="500"/>
         <location filename="src/ui/translation_editor/editor/editor_tab.py" line="501"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="502"/>
         <source>Reset selected String(s)</source>
         <translation>Ausgewählte(n) String(s) zurücksetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="199"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="186"/>
         <source>DSD File (*.json)</source>
         <translation>DSD Datei (*.json)</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="340"/>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="478"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="339"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="479"/>
         <source>Success!</source>
         <translation>Erfolgreich!</translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="345"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="344"/>
         <source>Translated %n String with database.</source>
         <comment>Translated %n Strings with database.</comment>
         <translation>
@@ -491,34 +501,34 @@ If you don&apos;t have Nexus Mods Premium, make sure that SSE-AT is linked to Mo
         </translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="366"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="365"/>
         <source>Search</source>
         <translation>Suchen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="369"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="368"/>
         <source>Replace</source>
         <translation>Ersetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="371"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="370"/>
         <source>Case Sensitive</source>
         <translation>Groß-/Kleinschreibung beachten</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="381"/>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="432"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="380"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="433"/>
         <source>Apply</source>
         <translation>Übernehmen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="387"/>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="436"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="386"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="437"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="420"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="421"/>
         <source>Are you sure you want to translate %n String via Translator API?
 Depending on the Translator API this can raise unexpected costs.</source>
         <comment>Are you sure you want to translate %n Strings via Translator API?
@@ -531,22 +541,22 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
         </translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="440"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="441"/>
         <source>Don&apos;t show again</source>
         <translation>Nicht erneut zeigen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="479"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="480"/>
         <source>Translation successfully exported.</source>
         <translation>Übersetzung erfolgreich exportiert.</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="506"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="507"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="507"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="508"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
@@ -992,22 +1002,22 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
         <translation>Übersetzungseditor</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="103"/>
+        <location filename="src/ui/main_window.py" line="101"/>
         <source>Exit?</source>
         <translation>Beenden?</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="116"/>
+        <location filename="src/ui/main_window.py" line="114"/>
         <source>Continue</source>
         <translation>Fortfahren</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="119"/>
+        <location filename="src/ui/main_window.py" line="117"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="109"/>
+        <location filename="src/ui/main_window.py" line="107"/>
         <source>Are you sure you want to exit? There are still unsaved translations open in the editor. All unsaved changes will be lost!</source>
         <translation>Sind Sie sicher, dass Sie beenden möchten? Es sind ungespeicherte Übersetzungen im Editor offen. Alle ungespeicherten Änderungen gehen dabei verloren!</translation>
     </message>
@@ -1368,67 +1378,67 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
 <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="43"/>
-        <location filename="src/ui/settings/settings_dialog.py" line="51"/>
-        <location filename="src/ui/settings/settings_dialog.py" line="106"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="42"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="50"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="105"/>
         <source>Settings</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="59"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="58"/>
         <source>A restart is required for the changes to take effect.</source>
         <translation>Ein Neustart ist erforderlich, damit die Änderungen wirksam werden.</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="72"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="71"/>
         <source>App Settings</source>
         <translation>App-Einstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="76"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="75"/>
         <source>User Settings</source>
         <translation>Nutzer-Einstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="80"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="79"/>
         <source>Translator Settings</source>
         <translation>Übersetzer-Einstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="88"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="87"/>
         <source>Save</source>
         <translation>Speichern</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="95"/>
-        <location filename="src/ui/settings/settings_dialog.py" line="116"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="94"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="115"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="119"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="118"/>
         <source>Are you sure you want to cancel? All changes will be lost.</source>
         <translation>Sind Sie sicher, dass Sie abbrechen möchten? Alle ungespeicherten Änderungen gehen dabei verloren.</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="124"/>
-        <location filename="src/ui/settings/settings_dialog.py" line="235"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="123"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="234"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="128"/>
-        <location filename="src/ui/settings/settings_dialog.py" line="236"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="127"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="235"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="226"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="225"/>
         <source>Restart required</source>
         <translation>Neustart erforderlich</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="231"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="230"/>
         <source>SSE-AT must be restarted for the changes to take effect! Restart now?</source>
         <translation>SSE-AT muss neugestartet werden, damit die Änderungen wirksam werden! Jetzt neustarten?</translation>
     </message>
@@ -1674,27 +1684,27 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
 <context>
     <name>StringsWidget</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="57"/>
+        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="66"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="58"/>
+        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="67"/>
         <source>Form ID</source>
         <translation>Form ID</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="59"/>
+        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="68"/>
         <source>Editor ID</source>
         <translation>Editor ID</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="60"/>
+        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="69"/>
         <source>Original</source>
         <translation>Original</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="61"/>
+        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="70"/>
         <source>String</source>
         <translation>String</translation>
     </message>
