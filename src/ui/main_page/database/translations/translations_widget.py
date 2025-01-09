@@ -29,7 +29,7 @@ from core.utilities.datetime import fmt_timestamp
 from core.utilities.filesystem import get_folder_size
 from core.utilities.scale import scale_value
 from ui.utilities.tree_widget import are_children_visible
-from ui.widgets.string_list_dialog import StringListDialog
+from ui.widgets.string_list.string_list_dialog import StringListDialog
 
 from .export_dialog import ExportDialog
 from .translations_menu import TranslationsMenu

@@ -1546,95 +1546,87 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
 </context>
 <context>
     <name>StringListDialog</name>
-    <message>
-        <location filename="src/ui/widgets/string_list_dialog.py" line="75"/>
-        <source>Show Strings that require no Translation</source>
-        <translation>Zeige Strings, die keine Übersetzung benötigen</translation>
+    <message numerus="yes">
+        <location filename="src/ui/widgets/string_list/string_list_dialog.py" line="33"/>
+        <source> (%n Strings)</source>
+        <comment> (%n String)</comment>
+        <translation>
+            <numerusform> (%n Strings)</numerusform>
+            <numerusform> (%n String)</numerusform>
+        </translation>
     </message>
+</context>
+<context>
+    <name>StringListMenu</name>
     <message>
-        <location filename="src/ui/widgets/string_list_dialog.py" line="87"/>
-        <source>Show Strings with complete Translation</source>
-        <translation>Zeige Strings mit vollständiger Übersetzung</translation>
-    </message>
-    <message>
-        <location filename="src/ui/widgets/string_list_dialog.py" line="99"/>
-        <source>Show Strings with incomplete Translation</source>
-        <translation>Zeige Strings mit unvollständiger Übersetzung</translation>
-    </message>
-    <message>
-        <location filename="src/ui/widgets/string_list_dialog.py" line="111"/>
-        <source>Show Strings that require a Translation</source>
-        <translation>Zeige Strings, die eine Übersetzung benötigen</translation>
-    </message>
-    <message>
-        <location filename="src/ui/widgets/string_list_dialog.py" line="124"/>
-        <source>Filter Options</source>
-        <translation>Filteroptionen</translation>
-    </message>
-    <message>
-        <location filename="src/ui/widgets/string_list_dialog.py" line="133"/>
-        <source>Search...</source>
-        <translation>Suchen...</translation>
-    </message>
-    <message>
-        <location filename="src/ui/widgets/string_list_dialog.py" line="148"/>
+        <location filename="src/ui/widgets/string_list/string_list_menu.py" line="39"/>
         <source>Expand all</source>
         <translation>Alle aufklappen</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_list_dialog.py" line="154"/>
+        <location filename="src/ui/widgets/string_list/string_list_menu.py" line="47"/>
         <source>Collapse all</source>
         <translation>Alle zuklappen</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_list_dialog.py" line="163"/>
-        <source>Copy plugin name</source>
-        <translation>Pluginnamen kopieren</translation>
-    </message>
-    <message>
-        <location filename="src/ui/widgets/string_list_dialog.py" line="172"/>
-        <location filename="src/ui/widgets/string_list_dialog.py" line="175"/>
+        <location filename="src/ui/widgets/string_list/string_list_menu.py" line="56"/>
+        <location filename="src/ui/widgets/string_list/string_list_menu.py" line="61"/>
         <source>Copy</source>
         <translation>Kopieren</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_list_dialog.py" line="181"/>
-        <location filename="src/ui/widgets/string_list_dialog.py" line="225"/>
-        <location filename="src/ui/widgets/string_list_dialog.py" line="235"/>
+        <location filename="src/ui/widgets/string_list/string_list_menu.py" line="70"/>
+        <source>Copy {0}</source>
+        <translation>{0} kopieren</translation>
+    </message>
+</context>
+<context>
+    <name>StringListToolbar</name>
+    <message>
+        <location filename="src/ui/widgets/string_list/string_list_toolbar.py" line="54"/>
+        <source>Filter Options</source>
+        <translation>Filteroptionen</translation>
+    </message>
+</context>
+<context>
+    <name>StringListWidget</name>
+    <message>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="66"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_list_dialog.py" line="182"/>
-        <location filename="src/ui/widgets/string_list_dialog.py" line="226"/>
-        <location filename="src/ui/widgets/string_list_dialog.py" line="236"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="67"/>
         <source>Form ID</source>
         <translation>Form ID</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_list_dialog.py" line="183"/>
-        <location filename="src/ui/widgets/string_list_dialog.py" line="227"/>
-        <location filename="src/ui/widgets/string_list_dialog.py" line="237"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="68"/>
         <source>Editor ID</source>
         <translation>Editor ID</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_list_dialog.py" line="184"/>
-        <location filename="src/ui/widgets/string_list_dialog.py" line="229"/>
-        <location filename="src/ui/widgets/string_list_dialog.py" line="238"/>
-        <source>String</source>
-        <translation>String</translation>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="69"/>
+        <source>Index</source>
+        <translation>Index</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_list_dialog.py" line="187"/>
-        <location filename="src/ui/widgets/string_list_dialog.py" line="228"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="70"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="179"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="201"/>
         <source>Original</source>
         <translation>Original</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_list_dialog.py" line="197"/>
-        <source>Copy {}</source>
-        <translation>{} kopieren</translation>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="71"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="180"/>
+        <source>String</source>
+        <translation>String</translation>
+    </message>
+    <message>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="100"/>
+        <source>Strings:</source>
+        <translation>Strings:</translation>
     </message>
 </context>
 <context>

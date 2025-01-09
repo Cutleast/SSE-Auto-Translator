@@ -41,7 +41,7 @@ from ui.widgets.link_button import LinkButton
 from ui.widgets.loading_dialog import LoadingDialog
 from ui.widgets.search_bar import SearchBar
 from ui.widgets.stacked_bar import StackedBar
-from ui.widgets.string_list_dialog import StringListDialog
+from ui.widgets.string_list.string_list_dialog import StringListDialog
 from ui.widgets.string_search_dialog import StringSearchDialog
 
 from .database.database_widget import DatabaseWidget

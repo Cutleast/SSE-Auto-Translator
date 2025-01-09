@@ -23,7 +23,7 @@ from core.database.translation import Translation
 from ui.widgets.error_dialog import ErrorDialog
 from ui.widgets.lcd_number import LCDNumber
 from ui.widgets.loading_dialog import LoadingDialog
-from ui.widgets.string_list_dialog import StringListDialog
+from ui.widgets.string_list.string_list_dialog import StringListDialog
 from ui.widgets.string_search_dialog import StringSearchDialog
 
 from .translations_toolbar import TranslationsToolbar

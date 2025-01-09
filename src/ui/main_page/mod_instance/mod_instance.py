@@ -40,7 +40,7 @@ from core.utilities.container_utils import join_dicts
 from ui.utilities.tree_widget import are_children_visible
 from ui.widgets.download_list_dialog import DownloadListDialog
 from ui.widgets.loading_dialog import LoadingDialog
-from ui.widgets.string_list_dialog import StringListDialog
+from ui.widgets.string_list.string_list_dialog import StringListDialog
 
 from ..result_dialog import ResultDialog
 from .help_dialog import ModInstanceHelpDialog

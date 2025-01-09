@@ -1,0 +1,346 @@
+"""
+Copyright (c) Cutleast
+"""
+
+from typing import Optional, TypeAlias
+
+from PySide6.QtCore import Qt
+from PySide6.QtGui import QColor, QFont, QKeySequence, QShortcut
+from PySide6.QtWidgets import (
+    QApplication,
+    QDialog,
+    QHBoxLayout,
+    QLabel,
+    QPlainTextEdit,
+    QTreeWidget,
+    QTreeWidgetItem,
+    QVBoxLayout,
+    QWidget,
+)
+
+from core.database.string import String
+from core.utilities import matches_filter, trim_string
+from core.utilities.container_utils import ReferenceDict
+from ui.utilities.tree_widget import are_children_visible, iter_toplevel_items
+from ui.widgets.lcd_number import LCDNumber
+from ui.widgets.search_bar import SearchBar
+
+from .string_list_menu import StringListMenu
+from .string_list_toolbar import StringListToolbar
+
+Strings: TypeAlias = list[String] | dict[str, list[String]]
+"""
+A list of strings or several lists of strings.
+"""
+
+
+class StringListWidget(QWidget):
+    """
+    A widget for displaying a list of strings.
+    Has its own toolbar, context menu and a search bar.
+    """
+
+    __strings: Strings
+    __nested: bool
+    __translation_mode: bool
+    __columns: list[str]
+    __string_items: ReferenceDict[String, QTreeWidgetItem]
+
+    __state_filter: Optional[list[String.Status]] = None
+    __text_filter: Optional[tuple[str, bool]] = None
+
+    __vlayout: QVBoxLayout
+    __toolbar: StringListToolbar
+    __search_bar: SearchBar
+    __strings_num_label: LCDNumber
+    __strings_widget: QTreeWidget
+    __menu: StringListMenu
+
+    def __init__(self, strings: Strings, translation_mode: bool = False) -> None:
+        super().__init__()
+
+        self.__strings = strings
+        self.__nested = isinstance(strings, dict)
+        self.__translation_mode = translation_mode
+        self.__columns = [
+            self.tr("Type"),
+            self.tr("Form ID"),
+            self.tr("Editor ID"),
+            self.tr("Index"),
+            self.tr("Original"),
+            self.tr("String"),
+        ]
+
+        self.__init_ui()
+        self.__init_strings()
+
+    def __init_ui(self) -> None:
+        self.__vlayout = QVBoxLayout()
+        self.setLayout(self.__vlayout)
+
+        self.__init_header()
+        self.__init_strings_widget()
+        self.__init_context_menu()
+
+        copy_shortcut = QShortcut(QKeySequence("Ctrl+C"), self)
+        copy_shortcut.activated.connect(self.copy_selected)
+
+    def __init_header(self) -> None:
+        hlayout = QHBoxLayout()
+        self.__vlayout.addLayout(hlayout)
+
+        self.__toolbar = StringListToolbar(self)
+        self.__toolbar.setVisible(self.__translation_mode)
+        hlayout.addWidget(self.__toolbar)
+
+        self.__search_bar = SearchBar()
+        self.__search_bar.searchChanged.connect(self.set_text_filter)
+        hlayout.addWidget(self.__search_bar)
+
+        strings_num_label = QLabel(self.tr("Strings:"))
+        strings_num_label.setObjectName("relevant_label")
+        hlayout.addWidget(strings_num_label)
+
+        self.__strings_num_label = LCDNumber()
+        self.__strings_num_label.setDigitCount(4)
+        hlayout.addWidget(self.__strings_num_label)
+
+    def __init_strings_widget(self) -> None:
+        self.__strings_widget = QTreeWidget()
+        self.__strings_widget.setUniformRowHeights(True)
+        self.__strings_widget.setAlternatingRowColors(True)
+        self.__strings_widget.setSortingEnabled(True)
+        self.__strings_widget.sortByColumn(1, Qt.SortOrder.AscendingOrder)
+        self.__strings_widget.header().setFirstSectionMovable(True)
+        if not self.__nested:
+            self.__strings_widget.setIndentation(0)
+        self.__strings_widget.setSelectionMode(
+            QTreeWidget.SelectionMode.ExtendedSelection
+        )
+        self.__strings_widget.setVerticalScrollBarPolicy(
+            Qt.ScrollBarPolicy.ScrollBarAsNeeded
+        )
+        self.__strings_widget.setHorizontalScrollBarPolicy(
+            Qt.ScrollBarPolicy.ScrollBarAsNeeded
+        )
+        self.__strings_widget.itemActivated.connect(self.__show_string)
+        self.__vlayout.addWidget(self.__strings_widget)
+
+        self.__strings_widget.setHeaderLabels(self.__columns)
+        self.__strings_widget.setColumnHidden(4, not self.__translation_mode)
+
+    def __init_context_menu(self) -> None:
+        self.__menu = StringListMenu(self, self.__nested)
+
+        self.__strings_widget.setContextMenuPolicy(
+            Qt.ContextMenuPolicy.CustomContextMenu
+        )
+        self.__strings_widget.customContextMenuRequested.connect(self.__menu.open)
+
+    def __update(self) -> None:
+        text_filter: Optional[str] = (
+            self.__text_filter[0] if self.__text_filter else None
+        )
+        case_sensitive: Optional[bool] = (
+            self.__text_filter[1] if self.__text_filter else None
+        )
+
+        for string, item in self.__string_items.items():
+            string_text: str = string.type + string.original_string
+            if string.form_id is not None:
+                string_text += string.form_id
+            if string.editor_id is not None:
+                string_text += string.editor_id
+            if string.translated_string is not None:
+                string_text += string.translated_string
+
+            item.setHidden(
+                not matches_filter(string_text, text_filter, case_sensitive or False)
+                or (
+                    self.__state_filter is not None
+                    and string.status not in self.__state_filter
+                )
+            )
+
+        if self.__nested:
+            for item in iter_toplevel_items(self.__strings_widget):
+                item.setHidden(
+                    not matches_filter(
+                        item.text(0), text_filter, case_sensitive or False
+                    )
+                    and not are_children_visible(item)
+                )
+
+        self.__strings_num_label.display(self.get_visible_item_count())
+
+    def __show_string(self, item: QTreeWidgetItem, column_index: int) -> None:
+        column: str = self.__columns[column_index]
+
+        if column not in [self.tr("Original"), self.tr("String")]:
+            return
+
+        strings: dict[QTreeWidgetItem, String] = {
+            item: string for string, item in self.__string_items.items()
+        }
+        string: String = strings[item]
+
+        # TODO: Add info box with details about the string
+        dialog = QDialog(self)
+        if string.editor_id:
+            dialog.setWindowTitle(f"{string.editor_id} ({string.type})")
+        else:
+            dialog.setWindowTitle(f"{string.form_id} ({string.type})")
+        dialog.setMinimumSize(800, 500)
+
+        vlayout = QVBoxLayout()
+        dialog.setLayout(vlayout)
+
+        textbox = QPlainTextEdit()
+        textbox.setReadOnly(True)
+        if column == self.tr("Original"):
+            textbox.setPlainText(string.original_string)
+        else:
+            textbox.setPlainText(string.translated_string or string.original_string)
+        textbox.setTextInteractionFlags(Qt.TextInteractionFlag.TextSelectableByMouse)
+        textbox.setCursor(Qt.CursorShape.IBeamCursor)
+        textbox.setFocus()
+        vlayout.addWidget(textbox)
+
+        dialog.exec()
+
+    def __init_strings(self) -> None:
+        self.__strings_widget.clear()
+        self.__string_items = ReferenceDict()
+
+        item: QTreeWidgetItem
+        if self.__nested and isinstance(self.__strings, dict):
+            for separator_name, strings in self.__strings.items():
+                separator_item = QTreeWidgetItem([separator_name])
+
+                for string in strings:
+                    item = self.__create_string_item(string)
+                    separator_item.addChild(item)
+                    self.__string_items[string] = item
+
+                self.__strings_widget.addTopLevelItem(separator_item)
+                separator_item.setFirstColumnSpanned(True)
+
+        elif isinstance(self.__strings, list):
+            for string in self.__strings:
+                item = self.__create_string_item(string)
+                self.__string_items[string] = item
+                self.__strings_widget.addTopLevelItem(item)
+
+        self.expandAll()
+
+        self.__strings_widget.header().resizeSection(0, 130)
+        self.__strings_widget.resizeColumnToContents(1)
+        self.__strings_widget.header().resizeSection(2, 200)
+
+        if self.__translation_mode:
+            self.__strings_widget.header().resizeSection(4, 300)
+            self.__strings_widget.header().resizeSection(5, 300)
+        else:
+            self.__strings_widget.header().resizeSection(4, 600)
+
+        if self.__nested and self.__strings_widget.topLevelItemCount() > 1:
+            self.collapseAll()
+
+        self.__search_bar.setLiveMode(len(self.__string_items) < 1000)
+        self.__update()
+
+    def __create_string_item(self, string: String) -> QTreeWidgetItem:
+        item = QTreeWidgetItem(
+            [
+                string.type,
+                string.form_id if string.form_id is not None else "",
+                string.editor_id if string.editor_id is not None else "",
+                str(string.index) if string.index is not None else "",
+                trim_string(string.original_string),
+                trim_string(string.translated_string or string.original_string),
+            ]
+        )
+
+        item.setToolTip(0, string.type)
+        if string.form_id is not None:
+            item.setToolTip(1, string.form_id)
+        if string.editor_id is not None:
+            item.setToolTip(2, string.editor_id)
+        item.setToolTip(4, string.original_string)
+        item.setToolTip(5, string.translated_string or string.original_string)
+
+        if self.__translation_mode:
+            color: Optional[QColor] = String.Status.get_color(string.status)
+            if color:
+                for c in range(len(self.__columns)):
+                    item.setForeground(c, color)
+
+        item.setFont(0, QFont("Consolas"))
+        item.setFont(1, QFont("Consolas"))
+        item.setFont(2, QFont("Consolas"))
+        item.setFont(3, QFont("Consolas"))
+
+        return item
+
+    @property
+    def columns(self) -> list[str]:
+        return self.__columns
+
+    def set_text_filter(self, text_filter: tuple[str, bool]) -> None:
+        """
+        Sets the text filter.
+
+        Args:
+            text_filter (tuple[str, bool]): The text to filter by and case-sensitivity.
+        """
+
+        self.__text_filter = text_filter if text_filter[0].strip() else None
+        self.__update()
+
+    def set_state_filter(self, state_filter: list[String.Status]) -> None:
+        """
+        Sets the state filter.
+
+        Args:
+            state_filter (list[String.Status]): The states to filter by.
+        """
+
+        self.__state_filter = state_filter
+        self.__update()
+
+    def copy_selected(self, columns: Optional[list[int]] = None) -> None:
+        """
+        Copies current selected strings to clipboard.
+        """
+
+        clipboard_text: str = ""
+        for item in self.__string_items.values():
+            if not item.isSelected():
+                continue
+
+            if columns is None:
+                columns = list(range(len(self.__columns)))
+
+            for c in columns:
+                clipboard_text += f"{item.toolTip(c)!r}"[1:-1] + "\t"
+
+            clipboard_text = clipboard_text.removesuffix("\t")
+            clipboard_text += "\n"
+
+        QApplication.clipboard().setText(clipboard_text.strip())
+
+    def expandAll(self) -> None:
+        self.__strings_widget.expandAll()
+
+    def collapseAll(self) -> None:
+        self.__strings_widget.collapseAll()
+
+    def get_selected_items(self) -> list[String]:
+        return [
+            string for string, item in self.__string_items.items() if item.isSelected()
+        ]
+
+    def get_visible_item_count(self) -> int:
+        return len(
+            [item for item in self.__string_items.values() if not item.isHidden()]
+        )
