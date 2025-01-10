@@ -86,5 +86,16 @@ class ReferenceDict(Generic[K, V]):
     def __contains__(self, key: K) -> bool:
         return id(key) in self.__values
 
+    def __len__(self) -> int:
+        return len(self.__values)
+
+    def keys(self) -> Iterable[K]:
+        for item in self.__values.values():
+            yield item[0]
+
+    def values(self) -> Iterable[V]:
+        for item in self.__values.values():
+            yield item[1]
+
     def items(self) -> Iterable[tuple[K, V]]:
         return self.__values.values()
