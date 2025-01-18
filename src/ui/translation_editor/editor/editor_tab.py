@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import Optional
 
 import pyperclip
-from PySide6.QtCore import Qt
+from PySide6.QtCore import Qt, Signal
 from PySide6.QtGui import QColor, QKeySequence, QShortcut
 from PySide6.QtWidgets import (
     QApplication,
@@ -44,6 +44,11 @@ from .translator_dialog import TranslatorDialog
 class EditorTab(QWidget):
     """
     Class for editor tabs.
+    """
+
+    close_signal = Signal(Translation)
+    """
+    This signal gets emitted when tab is to be closed.
     """
 
     __editor: Editor
@@ -135,11 +140,10 @@ class EditorTab(QWidget):
         save_shortcut = QShortcut(QKeySequence("Ctrl+S"), self)
         save_shortcut.activated.connect(self.save)
 
-        # TODO: Reimplement this
-        # close_shortcut = QShortcut(QKeySequence("Ctrl+W"), self)
-        # close_shortcut.activated.connect(
-        #     lambda: app.translation_editor.close_translation(translation)
-        # )
+        close_shortcut = QShortcut(QKeySequence("Ctrl+W"), self)
+        close_shortcut.activated.connect(
+            lambda: self.close_signal.emit(self.translation)
+        )
 
         complete_shortcut = QShortcut(QKeySequence("F1"), self)
         incomplete_shortcut = QShortcut(QKeySequence("F2"), self)

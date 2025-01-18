@@ -177,7 +177,7 @@ class EditorPage(QSplitter):
             translation_item = QTreeWidgetItem([translation.name])
 
             translation_tab = EditorTab(translation)
-            # translation_tab.changes_pending_signal.connect(self.update)
+            translation_tab.close_signal.connect(self.close_translation)
             self.__tabs[translation] = translation_tab, translation_item
             self.__page_widget.addWidget(translation_tab)
 
