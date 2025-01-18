@@ -11,6 +11,8 @@ from typing import Any, Optional
 
 from app_context import AppContext
 from core.cacher.cacher import Cacher
+from core.masterlist.masterlist import Masterlist
+from core.masterlist.masterlist_entry import MasterlistEntry
 from core.translation_provider.source import Source
 from core.utilities.base_enum import BaseEnum
 
@@ -21,6 +23,8 @@ from .nm_api import NexusModsApi
 class Provider:
     """
     Unified class for available translation sources.
+
+    TODO: Overhaul this
     """
 
     log = logging.getLogger("Provider")
@@ -76,7 +80,7 @@ class Provider:
         Returns always `True` for Confrérie API.
         """
 
-        if self.preference != self.Preference.OnlyConfrerie:
+        if self.preference != Provider.Preference.OnlyConfrerie:
             return self.__nm_api.check_api_key()
 
         return True
@@ -89,7 +93,7 @@ class Provider:
             bool: `True` if direct downloads are possible, `False` otherwise
         """
 
-        if self.preference != self.Preference.OnlyConfrerie:
+        if self.preference != Provider.Preference.OnlyConfrerie:
             return self.__nm_api.premium
 
         return True
@@ -103,7 +107,7 @@ class Provider:
 
         if (
             self.__nm_api is not None
-            and self.preference != self.Preference.OnlyConfrerie
+            and self.preference != Provider.Preference.OnlyConfrerie
         ):
             return (self.__nm_api.rem_hreq, self.__nm_api.rem_dreq)
 
@@ -134,8 +138,8 @@ class Provider:
 
         if source is None:
             if self.preference in [
-                self.Preference.OnlyNexusMods,
-                self.Preference.PreferNexusMods,
+                Provider.Preference.OnlyNexusMods,
+                Provider.Preference.PreferNexusMods,
             ]:
                 source = Source.NexusMods
             else:
@@ -204,8 +208,8 @@ class Provider:
 
         if source is None:
             if self.preference in [
-                self.Preference.OnlyNexusMods,
-                self.Preference.PreferNexusMods,
+                Provider.Preference.OnlyNexusMods,
+                Provider.Preference.PreferNexusMods,
             ]:
                 source = Source.NexusMods
             else:
@@ -231,7 +235,7 @@ class Provider:
         nm_translations: list[tuple[int, list[int], Source]] = []
         cdt_translations: list[tuple[int, list[int], Source]] = []
 
-        if self.preference != self.Preference.OnlyConfrerie:
+        if self.preference != Provider.Preference.OnlyConfrerie:
             translation_urls = self.__nm_api.get_mod_translations(
                 "skyrimspecialedition", mod_id
             ).get(language, [])
@@ -286,21 +290,55 @@ class Provider:
                         )
                     )
 
-        if self.preference != self.Preference.OnlyNexusMods:
+        if self.preference != Provider.Preference.OnlyNexusMods:
             if self.__cdt_api.has_translation(mod_id):
                 cdt_translations.append((mod_id, [], Source.Confrerie))
 
+        masterlist: Masterlist = AppContext.get_app().masterlist
+        masterlist_entry: Optional[MasterlistEntry] = masterlist.entries.get(
+            plugin_name.lower()
+        )
+        if masterlist_entry is not None:
+            if (
+                masterlist_entry.type == MasterlistEntry.Type.Route
+                and masterlist_entry.targets
+            ):
+                for target in masterlist_entry.targets:
+                    masterlist_mod_id: int = target.mod_id
+                    masterlist_file_id: Optional[int] = target.file_id
+                    masterlist_source: Source = target.source
+
+                    # TODO: Improve this to prevent overriding other translations with the same mod id
+                    if masterlist_source == Source.NexusMods:
+                        if masterlist_file_id is not None:
+                            nm_translations.append(
+                                (
+                                    masterlist_mod_id,
+                                    [masterlist_file_id or 0],
+                                    masterlist_source,
+                                )
+                            )
+                        else:
+                            self.log.warning(
+                                f"Failed to process masterlist entry for {plugin_name} "
+                                "due to missing file id!"
+                            )
+                    elif masterlist_source == Source.Confrerie:
+                        cdt_translations.append(
+                            (masterlist_mod_id, [], masterlist_source)
+                        )
+
         match self.preference:
-            case self.Preference.PreferNexusMods:
+            case Provider.Preference.PreferNexusMods:
                 available_translations = nm_translations + cdt_translations
 
-            case self.Preference.PreferConfrerie:
+            case Provider.Preference.PreferConfrerie:
                 available_translations = cdt_translations + nm_translations
 
-            case self.Preference.OnlyNexusMods:
+            case Provider.Preference.OnlyNexusMods:
                 available_translations = nm_translations
 
-            case self.Preference.OnlyConfrerie:
+            case Provider.Preference.OnlyConfrerie:
                 available_translations = cdt_translations
 
         return available_translations
@@ -316,7 +354,7 @@ class Provider:
 
         if (
             source == Source.NexusMods
-            and self.preference != self.Preference.OnlyConfrerie
+            and self.preference != Provider.Preference.OnlyConfrerie
         ):
             return file_id in self.__nm_api.get_mod_updates(
                 "skyrimspecialedition", mod_id
@@ -324,7 +362,7 @@ class Provider:
 
         elif (
             source == Source.Confrerie
-            and self.preference != self.Preference.OnlyNexusMods
+            and self.preference != Provider.Preference.OnlyNexusMods
         ):
             cdt_timestamp = self.__cdt_api.get_timestamp_of_file(mod_id)
             if cdt_timestamp is not None and timestamp is not None:
@@ -338,7 +376,7 @@ class Provider:
         """
 
         new_file_id: Optional[int] = None
-        if self.preference != self.Preference.OnlyConfrerie:
+        if self.preference != Provider.Preference.OnlyConfrerie:
             updates = self.__nm_api.get_mod_updates("skyrimspecialedition", mod_id)
 
             old_file_id: Optional[int] = file_id
@@ -371,7 +409,7 @@ class Provider:
         """
 
         if source is None:
-            if (self.preference == self.Preference.OnlyNexusMods) or file_id:
+            if (self.preference == Provider.Preference.OnlyNexusMods) or file_id:
                 source = Source.NexusMods
             else:
                 source = Source.Confrerie

@@ -10,8 +10,6 @@ from PySide6.QtCore import QObject, Signal
 
 from app_context import AppContext
 from core.config.user_config import UserConfig
-from core.masterlist.masterlist import Masterlist
-from core.masterlist.masterlist_entry import MasterlistEntry
 from core.mod_instance.mod import Mod
 from core.mod_instance.plugin import Plugin
 from core.translation_provider.provider import Provider
@@ -296,7 +294,6 @@ class DownloadManager(QObject):
     ) -> list[TranslationDownload]:
         provider: Provider = AppContext.get_app().provider
         user_config: UserConfig = AppContext.get_app().user_config
-        masterlist: Masterlist = AppContext.get_app().masterlist
 
         translation_downloads: list[TranslationDownload] = []
         available_translations: list[tuple[int, list[int], Source]] = (
@@ -350,37 +347,6 @@ class DownloadManager(QObject):
                     file_name=file_details["filename"],
                 )
                 downloads.append(download)
-
-            masterlist_entry: Optional[MasterlistEntry] = masterlist.entries.get(
-                plugin.name.lower()
-            )
-            if masterlist_entry is not None:
-                if (
-                    masterlist_entry.type == MasterlistEntry.Type.Route
-                    and masterlist_entry.targets
-                ):
-                    for target in masterlist_entry.targets:
-                        masterlist_mod_id: int = target.mod_id
-                        masterlist_file_id: Optional[int] = target.file_id
-                        masterlist_source: Source = target.source
-
-                        file_details = provider.get_details(
-                            masterlist_mod_id, masterlist_file_id, masterlist_source
-                        )
-                        download = FileDownload(
-                            display_name=clean_fs_name(file_details["name"]),
-                            source=masterlist_source,
-                            mod_id=masterlist_mod_id,
-                            file_id=masterlist_file_id,
-                            original_mod=mod,
-                            file_name=file_details["filename"],
-                        )
-                        downloads.append(download)
-
-                    self.log.info(
-                        f"Found {plugin.name!r} in masterlist of type 'route'. "
-                        "Added targets to downloads."
-                    )
 
             if not downloads:
                 continue
