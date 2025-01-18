@@ -9,6 +9,7 @@ from typing import Optional
 from PySide6.QtWidgets import (
     QDialog,
     QListWidget,
+    QListWidgetItem,
     QPushButton,
     QTabWidget,
     QVBoxLayout,
@@ -16,7 +17,9 @@ from PySide6.QtWidgets import (
 )
 
 from app_context import AppContext
+from core.masterlist.masterlist import Masterlist
 from core.masterlist.masterlist_entry import MasterlistEntry
+from core.utilities import matches_filter
 from core.utilities.constants import AE_CC_PLUGINS, BASE_GAME_PLUGINS
 
 from .search_bar import SearchBar
@@ -27,10 +30,17 @@ class IgnoreListDialog(QDialog):
     Dialog for ignore lists.
     """
 
-    def __init__(self, parent: Optional[QWidget]):
+    masterlist: Masterlist
+
+    __userlist_widget: QListWidget
+    __remove_button: QPushButton
+
+    def __init__(self, parent: Optional[QWidget] = None) -> None:
         super().__init__(parent)
 
-        self.setWindowTitle(self.tr("Plugin ignore list"))
+        self.masterlist = AppContext.get_app().masterlist
+
+        self.setWindowTitle(self.tr("Ignore list"))
         self.resize(600, 500)
 
         vlayout = QVBoxLayout()
@@ -47,70 +57,70 @@ class IgnoreListDialog(QDialog):
         vlayout = QVBoxLayout()
         user_tab.setLayout(vlayout)
 
-        remove_button = QPushButton(self.tr("Remove selected plugins from list"))
-        remove_button.setDisabled(True)
-        vlayout.addWidget(remove_button)
+        self.__remove_button = QPushButton(self.tr("Remove selected plugins from list"))
+        self.__remove_button.setDisabled(True)
+        self.__remove_button.clicked.connect(self.__remove_selected)
+        vlayout.addWidget(self.__remove_button)
 
-        userlist_widget = QListWidget()
-        userlist_widget.setAlternatingRowColors(True)
-        userlist_widget.setSelectionMode(
-            userlist_widget.SelectionMode.ExtendedSelection
+        self.__userlist_widget = QListWidget()
+        self.__userlist_widget.setAlternatingRowColors(True)
+        self.__userlist_widget.setSelectionMode(
+            QListWidget.SelectionMode.ExtendedSelection
         )
-
-        def on_select() -> None:
-            items = userlist_widget.selectedItems()
-            remove_button.setEnabled(bool(items))
-
-        userlist_widget.itemSelectionChanged.connect(on_select)
-
-        def remove_selected() -> None:
-            items = userlist_widget.selectedItems()
-            # TODO: Reimplement this
-            # entries = [item.text() for item in items]
-
-            # for entry in entries:
-            #     self.app.mainpage_widget.ignore_list.remove(entry)
-
-            for item in items:
-                userlist_widget.takeItem(userlist_widget.indexFromItem(item).row())
-
-        remove_button.clicked.connect(remove_selected)
-
-        # TODO: Reimplement this
-        # userlist_widget.addItems(self.app.mainpage_widget.ignore_list)
-        vlayout.addWidget(userlist_widget)
+        self.__userlist_widget.setUniformItemSizes(True)
+        self.__userlist_widget.itemSelectionChanged.connect(self.__on_select)
+        self.__userlist_widget.addItems(self.masterlist.user_ignore_list)
+        vlayout.addWidget(self.__userlist_widget)
 
         search_bar = SearchBar()
-
-        def search(text: str) -> None:
-            case_sensitive = search_bar.__cs_toggle.isChecked()
-
-            for rindex in range(userlist_widget.count()):
-                if case_sensitive:
-                    item_visible = text in userlist_widget.item(rindex).text()
-                else:
-                    item_visible = (
-                        text.lower() in userlist_widget.item(rindex).text().lower()
-                    )
-
-                userlist_widget.setRowHidden(rindex, not item_visible)
-
-        search_bar.textChanged.connect(search)
+        search_bar.searchChanged.connect(self.__on_text_filter_change)
         vlayout.addWidget(search_bar)
 
         vanilla_list_widget = QListWidget()
         vanilla_list_widget.setSelectionMode(QListWidget.SelectionMode.NoSelection)
+        vanilla_list_widget.setUniformItemSizes(True)
         vanilla_list_widget.addItems(BASE_GAME_PLUGINS + AE_CC_PLUGINS)
         tab_widget.addTab(vanilla_list_widget, self.tr("Base Game + CC Plugins"))
 
         masterlist_widget = QListWidget()
         masterlist_widget.setSelectionMode(QListWidget.SelectionMode.NoSelection)
+        masterlist_widget.setUniformItemSizes(True)
         masterlist_widget.addItems(
             sorted(
                 plugin
-                for plugin, masterlist_entry in AppContext.get_app().masterlist.entries.items()
+                for plugin, masterlist_entry in self.masterlist.entries.items()
                 if masterlist_entry.type == MasterlistEntry.Type.Ignore
             )
         )
         tab_widget.addTab(masterlist_widget, self.tr("Masterlist Entries"))
         tab_widget.setTabEnabled(2, bool(masterlist_widget.count()))
+
+    def __on_select(self) -> None:
+        items: list[QListWidgetItem] = self.__userlist_widget.selectedItems()
+        self.__remove_button.setEnabled(bool(items))
+
+    def __remove_selected(self) -> None:
+        items: list[QListWidgetItem] = self.__userlist_widget.selectedItems()
+
+        for item in items:
+            self.masterlist.remove_from_ignore_list(item.text())
+            self.__userlist_widget.takeItem(
+                self.__userlist_widget.indexFromItem(item).row()
+            )
+
+        AppContext.get_app().user_config.save()
+
+    def __on_text_filter_change(self, _text_filter: tuple[str, bool]) -> None:
+        text_filter: str
+        case_sensitive: bool
+        text_filter, case_sensitive = _text_filter
+
+        for rindex in range(self.__userlist_widget.count()):
+            self.__userlist_widget.setRowHidden(
+                rindex,
+                not matches_filter(
+                    self.__userlist_widget.item(rindex).text(),
+                    text_filter,
+                    case_sensitive or False,
+                ),
+            )

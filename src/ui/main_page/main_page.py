@@ -205,6 +205,9 @@ class MainPageWidget(QWidget):
         IgnoreListDialog(QApplication.activeModalWidget()).exec()
         self.user_config.save()
 
+        # TODO: Make this more elegant
+        self.mod_instance.update_signal.emit()
+
     def show_scan_result(self, plugins: Optional[list[Plugin]] = None) -> None:
         """
         Displays scan result popup.

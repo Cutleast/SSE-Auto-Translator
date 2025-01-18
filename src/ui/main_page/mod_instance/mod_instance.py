@@ -29,6 +29,7 @@ from core.database.string import String
 from core.database.translation import Translation
 from core.downloader.download_manager import DownloadManager
 from core.downloader.translation_download import TranslationDownload
+from core.masterlist.masterlist import Masterlist
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.mod_instance.plugin import Plugin
@@ -57,6 +58,7 @@ class ModInstanceWidget(QTreeWidget):
     cacher: Cacher
     database: TranslationDatabase
     user_config: UserConfig
+    masterlist: Masterlist
     scanner: Scanner
 
     mod_instance: ModInstance
@@ -100,6 +102,7 @@ class ModInstanceWidget(QTreeWidget):
         self.cacher = AppContext.get_app().cacher
         self.database = AppContext.get_app().database
         self.user_config = AppContext.get_app().user_config
+        self.masterlist = AppContext.get_app().masterlist
         self.scanner = AppContext.get_app().scanner
         self.mod_instance = AppContext.get_app().mod_instance
 
@@ -251,6 +254,11 @@ class ModInstanceWidget(QTreeWidget):
             )
 
             for plugin, item in plugin_items.items():
+                ignored: bool = self.masterlist.is_ignored(plugin.name)
+                item.setDisabled(ignored)
+                if ignored:
+                    item.setCheckState(0, Qt.CheckState.Unchecked)
+
                 item.setHidden(
                     (
                         self.__state_filter is not None
@@ -351,10 +359,7 @@ class ModInstanceWidget(QTreeWidget):
         _, selected_plugins = self.get_selected_items()
 
         for plugin in selected_plugins:
-            plugin_name: str = plugin.name.lower()
-
-            if plugin_name not in self.user_config.plugin_ignorelist:
-                self.user_config.plugin_ignorelist.append(plugin_name)
+            self.masterlist.add_to_ignore_list(plugin.name)
 
         self.user_config.save()
         self.__update()
@@ -565,10 +570,9 @@ class ModInstanceWidget(QTreeWidget):
         """
 
         return {
-            mod: [plugin for plugin in plugin_items.keys()]
+            mod: [plugin for plugin, item in plugin_items.items() if item.isSelected()]
             for mod, plugin_items in self.__plugin_items.items()
-            for item in plugin_items.values()
-            if item.isSelected()
+            if any(item.isSelected() for item in plugin_items.values())
         }
 
     def get_checked_items(self) -> dict[Mod, list[Plugin]]:
@@ -580,10 +584,16 @@ class ModInstanceWidget(QTreeWidget):
         """
 
         return {
-            mod: [plugin for plugin in plugin_items.keys()]
+            mod: [
+                plugin
+                for plugin, item in plugin_items.items()
+                if item.checkState(0) == Qt.CheckState.Checked
+            ]
             for mod, plugin_items in self.__plugin_items.items()
-            for item in plugin_items.values()
-            if item.checkState(0) == Qt.CheckState.Checked
+            if any(
+                item.checkState(0) == Qt.CheckState.Checked
+                for item in plugin_items.values()
+            )
         }
 
     def get_current_item(self) -> Optional[Mod | Plugin]:

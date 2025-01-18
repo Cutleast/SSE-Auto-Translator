@@ -34,6 +34,8 @@ class TestMasterlist:
 
         # then
         assert masterlist.entries["test"].type == MasterlistEntry.Type.Ignore
+        assert masterlist.is_ignored("test")
+        assert masterlist.is_ignored("TeST")
 
     def test_masterlist_incomplete(self) -> None:
         """
