@@ -117,6 +117,33 @@ class Archive:
         else:
             os.remove(filenames_txt)
 
+    def add_files(self, files: list[Path]) -> None:
+        """
+        Adds `files` to archive.
+        """
+
+        if not len(files):
+            return
+
+        cmd: list[str] = [
+            "7z.exe",
+            "a",
+            str(self.path),
+        ]
+
+        # Write filenames to a txt file to workaround commandline length limit
+        filenames_txt_path: Path = self.path.with_suffix(".txt")
+        with filenames_txt_path.open("w", encoding="utf8") as filenames_txt_file:
+            filenames_txt_file.write("\n".join([str(f) for f in files]))
+        cmd.append(f"@{filenames_txt_path}")
+
+        try:
+            run_process(cmd)
+        except RuntimeError:
+            raise Exception("Packing command failed!")
+        else:
+            os.remove(filenames_txt_path)
+
     def find(self, pattern: str) -> list[str]:
         """
         Returns all files in archive that match `pattern` (wildcard).

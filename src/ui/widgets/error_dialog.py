@@ -8,7 +8,7 @@ from typing import Optional
 
 import pyperclip as clipboard
 import qtawesome as qta
-from PySide6.QtCore import Qt
+from PySide6.QtCore import Qt, Signal
 from PySide6.QtWidgets import QLabel, QMessageBox, QPushButton, QWidget
 
 
@@ -25,6 +25,12 @@ class ErrorDialog(QMessageBox):
         details: str (will be displayed when details are shown)
         yesno: bool (determines if 'continue' and 'cancel' buttons are shown
         or only an 'ok' button)
+        dump: bool (determines if the dump button is shown)
+    """
+
+    dump_signal = Signal()
+    """
+    This signal gets emitted when the user clicks the dump button.
     """
 
     def __init__(
@@ -34,6 +40,7 @@ class ErrorDialog(QMessageBox):
         text: str,
         details: str = "",
         yesno: bool = True,
+        dump: bool = False,
     ):
         super().__init__(parent)
 
@@ -106,3 +113,13 @@ class ErrorDialog(QMessageBox):
 
             self.details_button.clicked.disconnect()
             self.details_button.clicked.connect(toggle_details)
+
+        if dump:
+            dump_button: QPushButton = self.addButton(
+                "", QMessageBox.ButtonRole.HelpRole
+            )
+            dump_button.setText("")
+            dump_button.setToolTip(self.tr("Dump application state..."))
+            dump_button.setIcon(qta.icon("mdi6.package-down", color="#ffffff"))
+            dump_button.clicked.disconnect()
+            dump_button.clicked.connect(self.dump_signal.emit)
