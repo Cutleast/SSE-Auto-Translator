@@ -601,37 +601,47 @@ Depending on the Translator API this can raise unexpected costs.</comment>
 <context>
     <name>ErrorDialog</name>
     <message>
-        <location filename="src/ui/widgets/error_dialog.py" line="50"/>
+        <location filename="src/ui/widgets/error_dialog.py" line="57"/>
         <source>Continue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/error_dialog.py" line="51"/>
+        <location filename="src/ui/widgets/error_dialog.py" line="58"/>
         <source>Exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/error_dialog.py" line="60"/>
-        <location filename="src/ui/widgets/error_dialog.py" line="93"/>
+        <location filename="src/ui/widgets/error_dialog.py" line="67"/>
+        <location filename="src/ui/widgets/error_dialog.py" line="100"/>
         <source>Show details...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/error_dialog.py" line="79"/>
+        <location filename="src/ui/widgets/error_dialog.py" line="86"/>
         <source>Hide details...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/widgets/error_dialog.py" line="122"/>
+        <source>Dump application state...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ExceptionHandler</name>
     <message>
-        <location filename="src/core/utilities/exception_handler.py" line="74"/>
+        <location filename="src/core/utilities/exception_handler.py" line="81"/>
         <source>An unexpected error occured: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/utilities/exception_handler.py" line="79"/>
+        <location filename="src/core/utilities/exception_handler.py" line="85"/>
         <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/utilities/exception_handler.py" line="93"/>
+        <source>Dumping application state...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -607,38 +607,48 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
 <context>
     <name>ErrorDialog</name>
     <message>
-        <location filename="src/ui/widgets/error_dialog.py" line="50"/>
+        <location filename="src/ui/widgets/error_dialog.py" line="57"/>
         <source>Continue</source>
         <translation>Fortfahren</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/error_dialog.py" line="51"/>
+        <location filename="src/ui/widgets/error_dialog.py" line="58"/>
         <source>Exit</source>
         <translation>Beenden</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/error_dialog.py" line="60"/>
-        <location filename="src/ui/widgets/error_dialog.py" line="93"/>
+        <location filename="src/ui/widgets/error_dialog.py" line="67"/>
+        <location filename="src/ui/widgets/error_dialog.py" line="100"/>
         <source>Show details...</source>
         <translation>Mehr Details...</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/error_dialog.py" line="79"/>
+        <location filename="src/ui/widgets/error_dialog.py" line="86"/>
         <source>Hide details...</source>
         <translation>Weniger Details...</translation>
+    </message>
+    <message>
+        <location filename="src/ui/widgets/error_dialog.py" line="122"/>
+        <source>Dump application state...</source>
+        <translation>App-Zustand abspeichern...</translation>
     </message>
 </context>
 <context>
     <name>ExceptionHandler</name>
     <message>
-        <location filename="src/core/utilities/exception_handler.py" line="74"/>
+        <location filename="src/core/utilities/exception_handler.py" line="81"/>
         <source>An unexpected error occured: </source>
         <translation>Ein Fehler ist aufgetreten: </translation>
     </message>
     <message>
-        <location filename="src/core/utilities/exception_handler.py" line="79"/>
+        <location filename="src/core/utilities/exception_handler.py" line="85"/>
         <source>Error</source>
         <translation>Fehler</translation>
+    </message>
+    <message>
+        <location filename="src/core/utilities/exception_handler.py" line="93"/>
+        <source>Dumping application state...</source>
+        <translation>App-Zustand wird abgespeichert...</translation>
     </message>
 </context>
 <context>
