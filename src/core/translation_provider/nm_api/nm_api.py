@@ -37,6 +37,8 @@ from .nxm_handler import NXMHandler
 class NexusModsApi:
     """
     Class for communication with Nexus Mods API.
+
+    TODO: Improve handling of errors caused by Nexus Mods
     """
 
     api_key: str

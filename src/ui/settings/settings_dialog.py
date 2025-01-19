@@ -29,6 +29,8 @@ from .user_settings import UserSettings
 class SettingsDialog(QDialog):
     """
     Class for Settings dialog.
+
+    TODO: Overhaul backend and UI
     """
 
     changes_pending: bool = False
