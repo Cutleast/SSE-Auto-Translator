@@ -30,6 +30,7 @@ virtual_glob
 beautifulsoup4
 pytest
 pytest-cov
+pytest-qt
 mypy
 pydantic
 sse-bsa
