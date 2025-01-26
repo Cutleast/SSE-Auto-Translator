@@ -32,3 +32,4 @@ pytest
 pytest-cov
 mypy
 pydantic
+sse-bsa

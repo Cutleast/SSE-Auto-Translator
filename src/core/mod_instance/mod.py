@@ -9,9 +9,9 @@ from fnmatch import fnmatch
 from pathlib import Path
 from typing import Optional
 
+from sse_bsa import BSAArchive
 from virtual_glob import InMemoryPath, glob
 
-from core.archive_parser.archive_parser import ArchiveParser
 from core.utilities.constants import DSD_FILE_PATTERN
 
 from .plugin import Plugin
@@ -59,8 +59,8 @@ class Mod:
             ]
 
             for bsa_path in bsas:
-                parser = ArchiveParser(bsa_path)
-                files.extend(parser.parse_archive().glob("**/*.*"))
+                archive = BSAArchive(bsa_path)
+                files.extend(archive.files)
 
             # Make case-insensitive
             for f, file in enumerate(files):

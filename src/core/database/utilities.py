@@ -7,9 +7,9 @@ from pathlib import Path
 from typing import Optional
 
 from PySide6.QtCore import QObject
+from sse_bsa import BSAArchive
 
 from app_context import AppContext
-from core import archive_parser as bsa
 from core.archiver import Archive
 from core.config.user_config import UserConfig
 from ui.widgets.loading_dialog import LoadingDialog
@@ -154,9 +154,8 @@ class Utilities(QObject):
         """
 
         matching_files: list[str] = []
-        parser = bsa.ArchiveParser(bsa_file)
         relative_bsa = Path(bsa_file.name)
-        parsed_bsa = parser.parse_archive()
+        parsed_bsa = BSAArchive(bsa_file)
 
         for pattern, enabled in patterns.items():
             if enabled:

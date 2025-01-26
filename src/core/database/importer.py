@@ -13,9 +13,9 @@ from typing import Optional
 
 import jstyleson as json
 from PySide6.QtCore import QObject
+from sse_bsa import BSAArchive
 
 from app_context import AppContext
-from core import archive_parser as bsa
 from core import plugin_interface as esp
 from core.archiver import Archive
 from core.cacher.cacher import Cacher
@@ -199,7 +199,7 @@ class Importer(QObject):
 
         for bsa_file, files in bsa_files_to_extract.items():
             self.log.info(f"Extracting {len(files)} file(s) from {str(bsa_file)!r}...")
-            parsed_bsa = bsa.ArchiveParser(bsa_file).parse_archive()
+            parsed_bsa = BSAArchive(bsa_file)
             for file in files:
                 parsed_bsa.extract_file(file, output_folder)
 
