@@ -823,32 +823,17 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
 <context>
     <name>JsonDataView</name>
     <message>
-        <location filename="src/ui/widgets/json_data_view.py" line="24"/>
-        <source>Key</source>
-        <translation>Schlüssel</translation>
-    </message>
-    <message>
-        <location filename="src/ui/widgets/json_data_view.py" line="24"/>
-        <source>Value/Size</source>
-        <translation>Wert/Größe</translation>
-    </message>
-    <message>
-        <location filename="src/ui/widgets/json_data_view.py" line="24"/>
-        <source>Type</source>
-        <translation>Typ</translation>
-    </message>
-    <message>
-        <location filename="src/ui/widgets/json_data_view.py" line="40"/>
+        <location filename="src/ui/widgets/json_data_view/json_data_view.py" line="45"/>
         <source>Expand all</source>
         <translation>Alle aufklappen</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/json_data_view.py" line="46"/>
+        <location filename="src/ui/widgets/json_data_view/json_data_view.py" line="51"/>
         <source>Collapse all</source>
         <translation>Alle zuklappen</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/json_data_view.py" line="54"/>
+        <location filename="src/ui/widgets/json_data_view/json_data_view.py" line="59"/>
         <source>Copy</source>
         <translation>Kopieren</translation>
     </message>
