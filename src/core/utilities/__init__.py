@@ -78,4 +78,4 @@ def matches_filter(
         text = text.lower()
         filter = filter.lower()
 
-    return filter in text
+    return filter.strip() in text.strip()
