@@ -568,8 +568,10 @@ class Scanner(QObject):
                     + f" ({m}/{len(mods)})",
                     value1=m,
                     max1=len(mods),
-                    show2=False,
-                    show3=False,
+                    show2=True,
+                    text2=mod.name,
+                    value2=0,
+                    max2=0,
                 )
 
             self.log.info(f"Scanning for installed translations in {mod.name!r}...")
@@ -592,7 +594,11 @@ class Scanner(QObject):
             filter(
                 lambda p: self.database.get_translation_by_plugin_name(p) is None,
                 unique(
-                    [plugin.name for plugin in mod.plugins]
+                    [
+                        plugin.name
+                        for plugin in mod.plugins
+                        if plugin.status == Plugin.Status.IsTranslated
+                    ]
                     + [Path(dsd_file).parent.name for dsd_file in mod.dsd_files],
                     key=lambda s: s.lower(),
                 ),
