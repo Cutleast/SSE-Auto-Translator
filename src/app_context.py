@@ -45,6 +45,18 @@ class AppContext:
         cls._app_instance = app
 
     @classmethod
+    def has_app(cls) -> bool:
+        """
+        Checks if the main application instance has been initialized.
+
+        Returns:
+            bool: `True` if the application instance has been initialized,
+                `False` otherwise.
+        """
+
+        return cls._app_instance is not None
+
+    @classmethod
     def get_app_type(cls) -> type["App"]:
         from app import App
 
