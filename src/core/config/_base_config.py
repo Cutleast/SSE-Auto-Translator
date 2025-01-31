@@ -9,7 +9,6 @@ from typing import Any, Callable, Iterable, TypeVar, overload
 
 import jstyleson as json
 
-from app_context import AppContext
 from core.utilities.qt_res_provider import load_json_resource
 
 T = TypeVar("T")
@@ -26,14 +25,11 @@ class BaseConfig:
     _default_settings: dict[str, Any]
     _settings: dict[str, Any]
 
-    def __init__(self, config_path: Path):
+    def __init__(self, config_path: Path, config_name: str):
         self._config_path = config_path
 
         # Load default config values from resources
-        config_name: str = (
-            f":/{config_path.relative_to(AppContext.get_app().data_path)}"
-        )
-        self._default_settings = load_json_resource(config_name)
+        self._default_settings = load_json_resource(f":/{config_name}/config.json")
 
         self.load()
 

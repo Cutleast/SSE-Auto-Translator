@@ -22,7 +22,7 @@ class UserConfig(BaseConfig):
     log = logging.getLogger("UserConfig")
 
     def __init__(self, config_folder: Path):
-        super().__init__(config_folder / "config.json")
+        super().__init__(config_folder / "config.json", "user")
 
     @property
     def language(self) -> str:

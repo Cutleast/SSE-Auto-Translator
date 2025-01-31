@@ -100,24 +100,24 @@ If you encountered an issue/error or you have a suggestion, create an issue unde
 
 ### 1. Install requirements
 
-1. Install Python 3.11 (Make sure that you add it to PATH!)
+1. Install Python 3.12 (Make sure that you add it to PATH!)
 2. Clone repository
 3. Open terminal in repository folder
 4. Create a virtual environment and activate it by running following command:
-   `python -m venv .venv`
+   `py -3.12 -m venv .venv`
 5. Type in following command to install all requirements:
    `pip install -r requirements.txt`
 
 ### 2. Execute from source
 
-1. Open terminal in src folder
+1. Open terminal in src folder (make sure to activate the venv with `.venv\scripts\activate`)
 2. Execute main file
-   `python app.py`
+   `python main.py`
 
 ### 3. Compile and build executable
 
 1. Run `build.bat` with activated virtual environment from the root folder of this repo.
-2. The executable and all dependencies are built in the main.dist-Folder.
+2. The executable and all dependencies are built in the SSE-AT-Folder and gets packed in a `SSE-AT v[version].zip`.
 
 ## 3. Beta-Testing
 
@@ -134,3 +134,13 @@ If you're interested in maintaining a masterlist for your language, contact us (
 - [DynamicStringDistributor](https://github.com/SkyHorizon3/SSE-Dynamic-String-Distributor) by [SkyHorizon](https://github.com/SkyHorizon3)
 - Icon by [Wuerfelhusten](https://nexusmods.com/users/122160268)
 - Editor QoL Improvements by [FuchieSteph](https://github.com/FuchieSteph)
+- Other used software and libraries:
+  - Open SSE-AT > Help > About > Used Software
+  - Alternatively: [licenses.py](./src/core/utilities/licenses.py)
+- Test data used (only distributed with the source code and used for automated tests in [tests](./tests/)):
+  - [Obsidian Weathers and Seasons](https://www.nexusmods.com/skyrimspecialedition/mods/12125) by [DrJacopo](https://next.nexusmods.com/profile/DrJacopo)
+  - [Obsidian Weathers and Seasons - German](https://www.nexusmods.com/skyrimspecialedition/mods/16286) by [Hilli1](https://next.nexusmods.com/profile/Hilli1)
+  - [Ordinator - Perks of Skyrim](https://www.nexusmods.com/skyrimspecialedition/mods/1137) by [Enai Siaion](https://next.nexusmods.com/profile/EnaiSiaion)
+  - [RS Children Overhaul](https://www.nexusmods.com/skyrimspecialedition/mods/2650) by [isophe](https://next.nexusmods.com/profile/isophe)
+  - [Wet and Cold SE](https://www.nexusmods.com/skyrimspecialedition/mods/644) by [StepModifications](https://next.nexusmods.com/profile/StepModifications)
+  - [Wet and Cold SE - German](https://www.nexusmods.com/skyrimspecialedition/mods/89391) by [kroenel](https://next.nexusmods.com/profile/kroenel)

@@ -16,4 +16,5 @@ __pycache__
 debug.txt
 qt_lupdate.json
 state.v2.json
+!/tests/test_data/mod_instance/state.v2.json
 versioninfo.txt

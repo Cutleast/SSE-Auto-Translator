@@ -1,0 +1,27 @@
+{
+    // TODO: Adapt to real mod instance in this folder
+    "persistent": {
+        "profiles": {
+            "Bk-jDV0_A": {
+                "gameId": "skyrimse",
+                "id": "Bk-jDV0_A",
+                "lastActivated": 1732299629780,
+                "modState": {
+                    "RaceMenu Anniversary Edition v0-4-19-16-19080-0-4-19-16-1706297897": {
+                        "enabled": true,
+                        "enabledTime": 1722098976347
+                    },
+                    "Unofficial Skyrim Special Edition Patch-266-4-3-2-1721451025": {
+                        "enabled": true,
+                        "enabledTime": 1721809024192
+                    },
+                    "Untarnished UI - RaceMenu Patch-97347-v1-3-1713561432": {
+                        "enabled": true,
+                        "enabledTime": 1722099010484
+                    }
+                },
+                "name": "Default"
+            }
+        }
+    }
+}

@@ -20,7 +20,7 @@ class AppConfig(BaseConfig):
     log = logging.getLogger("AppConfig")
 
     def __init__(self, config_folder: Path):
-        super().__init__(config_folder / "config.json")
+        super().__init__(config_folder / "config.json", "app")
 
     @property
     def log_level(self) -> Logger.LogLevel:

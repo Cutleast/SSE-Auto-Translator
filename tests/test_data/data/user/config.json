@@ -1,0 +1,9 @@
+{
+    "language": "German",
+    "api_key": "...",
+    "mod_manager": "Mod Organizer 2",
+    "modinstance": "Portable",
+    "instance_profile": null,
+    "instance_path": "tests\\test_data\\data\\mod_instance",
+    "provider_preference": "OnlyNexusMods"
+}

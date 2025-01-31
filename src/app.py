@@ -25,6 +25,7 @@ from PySide6.QtWidgets import (
     QVBoxLayout,
 )
 
+import resources_rc  # noqa: F401
 from core.cacher.cacher import Cacher
 from core.config.app_config import AppConfig
 from core.config.translator_config import TranslatorConfig

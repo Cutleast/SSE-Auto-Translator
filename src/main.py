@@ -5,7 +5,6 @@ Copyright (c) Cutleast
 import sys
 from argparse import ArgumentParser, Namespace, _SubParsersAction
 
-import resources_rc  # noqa: F401
 from app import App
 from app_context import AppContext
 from core.translation_provider.nm_api.nxm_handler import NXMHandler

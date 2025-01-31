@@ -19,7 +19,7 @@ class TranslatorConfig(BaseConfig):
     log = logging.getLogger("TranslatorConfig")
 
     def __init__(self, config_folder: Path):
-        super().__init__(config_folder / "config.json")
+        super().__init__(config_folder / "config.json", "translator")
 
     @property
     def translator(self) -> type[Translator]:
