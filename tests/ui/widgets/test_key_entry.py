@@ -8,10 +8,10 @@ from pytestqt.qtbot import QtBot
 
 from src.ui.widgets.key_entry import KeyEntry
 
-from ..base_test import BaseTest
+from ..ui_test import UiTest
 
 
-class TestKeyEntry(BaseTest):
+class TestKeyEntry(UiTest):
     """
     Tests `ui.widgets.key_entry.KeyEntry`.
     """

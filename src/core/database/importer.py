@@ -399,26 +399,43 @@ class Importer(QObject):
         cacher: Cacher = AppContext.get_app().cacher
 
         translation_plugin = esp.Plugin(translation_plugin_path)
-        translation_strings = translation_plugin.extract_strings()
-
-        original_strings = {
-            string.id: string
-            for string in cacher.get_plugin_strings(original_plugin_path)
-        }
+        translation_strings: list[String] = translation_plugin.extract_strings()
+        original_strings: list[String] = cacher.get_plugin_strings(original_plugin_path)
 
         if not translation_strings and not original_strings:
             return []
 
-        self.log.debug(
+        return Importer.map_strings(translation_strings, original_strings)
+
+    @staticmethod
+    def map_strings(
+        translation_strings: list[String], original_strings: list[String]
+    ) -> list[String]:
+        """
+        Maps translated strings to the original strings.
+
+        Args:
+            translation_strings (list[String]): List of translated strings
+            original_strings (list[String]): List of original strings
+
+        Returns:
+            list[String]: List of mapped strings
+        """
+
+        Importer.log.debug(
             f"Mapping {len(translation_strings)} translated string(s) to "
             f"{len(original_strings)} original string(s)..."
         )
+
+        original_strings_ids: dict[str, String] = {
+            string.id: string for string in original_strings
+        }
 
         merged_strings: list[String] = []
         unmerged_strings: list[String] = []
 
         for translation_string in translation_strings:
-            original_string: Optional[String] = original_strings.get(
+            original_string: Optional[String] = original_strings_ids.get(
                 translation_string.id
             )
 
@@ -434,11 +451,11 @@ class Importer(QObject):
 
         if len(unmerged_strings) < len(translation_strings):
             for unmerged_string in unmerged_strings:
-                self.log.warning(f"Not found in Original: {unmerged_string}")
+                Importer.log.warning(f"Not found in Original: {unmerged_string}")
 
-            self.log.debug(f"Mapped {len(merged_strings)} String(s).")
+            Importer.log.debug(f"Mapped {len(merged_strings)} String(s).")
         else:
-            self.log.error("Mapping failed!")
+            Importer.log.error("Mapping failed!")
 
         return merged_strings
 

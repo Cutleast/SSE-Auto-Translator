@@ -74,32 +74,56 @@ class Exporter(QObject):
                 continue
 
             self.log.debug(f"Exporting translation for plugin {plugin_name!r}...")
-
-            plugin_folder: Path = (
-                path / "SKSE" / "Plugins" / "DynamicStringDistributor" / plugin_name
+            Exporter.export_strings_to_dsd(
+                plugin_strings, plugin_name, path, output_mod
             )
 
-            if not plugin_folder.is_dir():
-                os.makedirs(plugin_folder)
-
-            strings: list[dict[str, Optional[str | int]]] = [
-                string.to_string_data()
-                for string in plugin_strings
-                if string.original_string != string.translated_string
-                and string.translated_string
-            ]
-
-            json_filename: str
-            if output_mod:
-                json_filename = f"{len(os.listdir(plugin_folder))}_SSEAT.json"
-            else:
-                json_filename = "SSE-AT_exported.json"
-
-            dsd_path: Path = plugin_folder / json_filename
-            with dsd_path.open("w", encoding="utf8") as dsd_file:
-                json.dump(strings, dsd_file, indent=4, ensure_ascii=False)
-
         self.log.info("Export complete.")
+
+    @staticmethod
+    def export_strings_to_dsd(
+        strings: list[String], plugin_name: str, path: Path, output_mod: bool = False
+    ) -> Path:
+        """
+        Exports strings to a DSD file at the specified path.
+
+        Args:
+            strings (list[String]): Strings to export.
+            plugin_name (str): Name of the plugin.
+            path (Path): Path to export to.
+            output_mod (bool, optional):
+                Whether the export is used in the output mod. Affects the JSON filename.
+                Defaults to False.
+
+        Returns:
+            Path: Path to the exported DSD file.
+        """
+
+        plugin_folder: Path = (
+            path / "SKSE" / "Plugins" / "DynamicStringDistributor" / plugin_name
+        )
+
+        if not plugin_folder.is_dir():
+            os.makedirs(plugin_folder)
+
+        string_data: list[dict[str, Optional[str | int]]] = [
+            string.to_string_data()
+            for string in strings
+            if string.original_string != string.translated_string
+            and string.translated_string
+        ]
+
+        json_filename: str
+        if output_mod:
+            json_filename = f"{len(os.listdir(plugin_folder))}_SSEAT.json"
+        else:
+            json_filename = "SSE-AT_exported.json"
+
+        dsd_path: Path = plugin_folder / json_filename
+        with dsd_path.open("w", encoding="utf8") as dsd_file:
+            json.dump(string_data, dsd_file, indent=4, ensure_ascii=False)
+
+        return dsd_path
 
     def export_additional_files(
         self, translation: "Translation", original_mod: "Mod", path: Path

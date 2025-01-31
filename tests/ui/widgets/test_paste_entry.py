@@ -8,10 +8,10 @@ from pytestqt.qtbot import QtBot
 from src.ui.widgets.paste_entry import PasteLineEdit
 
 from .._setup.clipboard import Clipboard
-from ..base_test import BaseTest
+from ..ui_test import UiTest
 
 
-class TestPasteLineEdit(BaseTest):
+class TestPasteLineEdit(UiTest):
     """
     Tests `ui.widgets.paste_entry.PasteLineEdit`.
     """

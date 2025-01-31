@@ -12,12 +12,12 @@ from pytestqt.qtbot import QtBot
 
 from src.ui.widgets.search_bar import SearchBar
 
-from ..base_test import BaseTest
+from ..ui_test import UiTest
 
 os.environ["QT_QPA_PLATFORM"] = "offscreen"  # render widgets off-screen
 
 
-class TestSearchBar(BaseTest):
+class TestSearchBar(UiTest):
     """
     Tests `ui.widgets.search_bar.SearchBar`.
     """

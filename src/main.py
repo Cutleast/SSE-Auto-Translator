@@ -3,12 +3,14 @@ Copyright (c) Cutleast
 """
 
 import sys
-from argparse import ArgumentParser, Namespace
+from argparse import ArgumentParser, Namespace, _SubParsersAction
 
 import resources_rc  # noqa: F401
 from app import App
 from app_context import AppContext
 from core.translation_provider.nm_api.nxm_handler import NXMHandler
+from utilities import UTILS
+from utilities.utility import Utility
 
 
 def __init_argparser() -> ArgumentParser:
@@ -63,8 +65,33 @@ def __init_argparser() -> ArgumentParser:
     return parser
 
 
+def __init_utils(parser: ArgumentParser) -> list[Utility]:
+    """
+    Initializes commandline utilities.
+
+    Args:
+        parser (ArgumentParser): Commandline argument parser
+
+    Returns:
+        list[Utility]: List of initialized utilities
+    """
+
+    utils: list[Utility] = []
+    utility_type: type[Utility]
+    subparsers: _SubParsersAction = parser.add_subparsers()
+    for utility_type in UTILS:
+        util: Utility = utility_type()
+        util.add_subparser(subparsers)
+        utils.append(util)
+
+    print(f"Loaded {len(utils)} commandline utility/utilities.")
+
+    return utils
+
+
 if __name__ == "__main__":
     parser: ArgumentParser = __init_argparser()
+    utils: list[Utility] = __init_utils(parser)
     arg_namespace: Namespace = parser.parse_args()
 
     if arg_namespace.bind_nxm:
@@ -72,6 +99,9 @@ if __name__ == "__main__":
         sys.exit()
     elif arg_namespace.download:
         NXMHandler.send_request(arg_namespace.download)
+
+    for util in utils:
+        util.run(arg_namespace)
 
     app = App(arg_namespace)
     AppContext.set_app(app)

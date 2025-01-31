@@ -4,10 +4,11 @@ Copyright (c) Cutleast
 
 import pytest
 
+from ..base_test import BaseTest
 from ._setup.clipboard import Clipboard
 
 
-class BaseTest:
+class UiTest(BaseTest):
     """
     Base class for all ui-related tests.
     """
