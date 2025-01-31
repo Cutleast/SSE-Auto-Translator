@@ -687,8 +687,8 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
 <context>
     <name>Exporter</name>
     <message>
-        <location filename="src/core/database/exporter.py" line="226"/>
-        <location filename="src/core/database/exporter.py" line="232"/>
+        <location filename="src/core/database/exporter.py" line="250"/>
+        <location filename="src/core/database/exporter.py" line="256"/>
         <source>Building output mod...</source>
         <translation>Output-Mod wird erstellt...</translation>
     </message>
@@ -1373,67 +1373,67 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
 <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="43"/>
-        <location filename="src/ui/settings/settings_dialog.py" line="51"/>
-        <location filename="src/ui/settings/settings_dialog.py" line="106"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="44"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="52"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="107"/>
         <source>Settings</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="59"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="60"/>
         <source>A restart is required for the changes to take effect.</source>
         <translation>Ein Neustart ist erforderlich, damit die Änderungen wirksam werden.</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="72"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="73"/>
         <source>App Settings</source>
         <translation>App-Einstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="76"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="77"/>
         <source>User Settings</source>
         <translation>Nutzer-Einstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="80"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="81"/>
         <source>Translator Settings</source>
         <translation>Übersetzer-Einstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="88"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="89"/>
         <source>Save</source>
         <translation>Speichern</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="95"/>
-        <location filename="src/ui/settings/settings_dialog.py" line="116"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="96"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="117"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="119"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="120"/>
         <source>Are you sure you want to cancel? All changes will be lost.</source>
         <translation>Sind Sie sicher, dass Sie abbrechen möchten? Alle ungespeicherten Änderungen gehen dabei verloren.</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="124"/>
-        <location filename="src/ui/settings/settings_dialog.py" line="235"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="125"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="236"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="128"/>
-        <location filename="src/ui/settings/settings_dialog.py" line="236"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="129"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="237"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="226"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="227"/>
         <source>Restart required</source>
         <translation>Neustart erforderlich</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="231"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="232"/>
         <source>SSE-AT must be restarted for the changes to take effect! Restart now?</source>
         <translation>SSE-AT muss neugestartet werden, damit die Änderungen wirksam werden! Jetzt neustarten?</translation>
     </message>
