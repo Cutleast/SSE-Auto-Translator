@@ -7,7 +7,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 from dataclasses import dataclass
 from enum import IntEnum
 from pathlib import Path
-from typing import Any, Optional
+from typing import Optional
 
 from PySide6.QtGui import QColor
 from PySide6.QtWidgets import QApplication
@@ -160,18 +160,5 @@ class Plugin:
 
     status: Status = Status.NoneStatus
 
-    tree_item: None = None
-
     def __hash__(self) -> int:
         return hash((self.name.lower(), str(self.path).lower()))
-
-    def __getstate__(self) -> dict[str, Any]:
-        state = self.__dict__.copy()
-
-        # Don't pickle tree_item
-        del state["tree_item"]
-
-        return state
-
-    def __setstate__(self, state: dict[str, Any]) -> None:
-        self.__dict__.update(state)
