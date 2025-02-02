@@ -1,6 +1,5 @@
 """
-This script builds the SSE-AT.exe and packs
-all its dependencies in one folder.
+This script builds the SSE-AT.exe and bundles all its dependencies in one folder.
 """
 
 import os
@@ -9,18 +8,14 @@ from pathlib import Path
 
 import jstyleson as json
 
-from src.app import App
-
-COMPILER = "cx_freeze"  # "pyinstaller" or "nuitka" or "cx_freeze"
-
-APPNAME = "SSE Auto Translator"
-VERSION = App.APP_VERSION.split("-")[0]
-AUTHOR = "Cutleast"
-LICENSE = "Attribution-NonCommercial-NoDerivatives 4.0 International"
-CONSOLE_MODE = "attach"  # "attach": Attaches to console it was started with (if any), "force": starts own console window, "disable": disables console completely
-DIST_FOLDER = Path("app.dist")
-SRC_FOLDER = Path("src")
-RES_FOLDER = Path("res")
+APPNAME: str = "SSE Auto Translator"
+VERSION: str = "3.0.0-alpha"
+EXE_VERSION: str = VERSION.split("-")[0]
+AUTHOR: str = "Cutleast"
+LICENSE: str = "Attribution-NonCommercial-NoDerivatives 4.0 International"
+DIST_FOLDER: Path = Path("main.dist")
+SRC_FOLDER: Path = Path("src")
+RES_FOLDER: Path = Path("res")
 UNUSED_ITEMS: list[Path] = []
 ADDITIONAL_ITEMS: dict[Path, Path] = {
     Path("doc"): DIST_FOLDER / "doc",
@@ -32,131 +27,67 @@ ADDITIONAL_ITEMS: dict[Path, Path] = {
     / "user_agent"
     / "browsers.json": DIST_FOLDER / "cloudscraper" / "user_agent" / "browsers.json",
 }
-OUTPUT_FOLDER = DIST_FOLDER.with_name("SSE-AT")
-OUTPUT_ARCHIVE = Path(f"SSE-AT v{App.APP_VERSION}.zip").resolve()
+OUTPUT_FOLDER: Path = DIST_FOLDER.with_name("SSE-AT")
+OUTPUT_ARCHIVE: Path = Path(f"SSE-AT v{VERSION}.zip").resolve()
 
 # Add external resources from res/ext_resources.json
 with open("res/ext_resources.json", encoding="utf8") as f:
     for item in json.load(f):
         for i in RES_FOLDER.glob(item):
-            ADDITIONAL_ITEMS[i] = DIST_FOLDER / "res" / i
+            ADDITIONAL_ITEMS[i] = DIST_FOLDER / "res" / i.relative_to(RES_FOLDER)
 
 if OUTPUT_FOLDER.is_dir():
     shutil.rmtree(OUTPUT_FOLDER)
     print(f"Deleted already existing {OUTPUT_FOLDER.name!r} folder.")
 
-
-print(f"Building with {COMPILER}...")
-if COMPILER == "nuitka":
-    cmd = f'nuitka \
+print("Building with nuitka...")
+cmd: str = f'.venv\\scripts\\nuitka \
 --msvc="latest" \
 --standalone \
---include-package=hunspell \
---include-package=cacheman \
 --enable-plugin=pyside6 \
 --remove-output \
---windows-console-mode={CONSOLE_MODE} \
+--windows-console-mode=attach \
 --company-name="{AUTHOR}" \
 --product-name="{APPNAME}" \
---file-version="{VERSION}" \
---product-version="{VERSION}" \
+--file-version="{EXE_VERSION}" \
+--product-version="{EXE_VERSION}" \
 --file-description="{APPNAME}" \
 --copyright="{LICENSE}" \
 --nofollow-import-to=tkinter \
---windows-icon-from-ico="src/data/icons/icon.ico" \
+--windows-icon-from-ico="res/icons/icon.ico" \
 --output-filename="SSE-AT.exe" \
-"src/app.py"'
+"src/main.py"'
+return_code: int = os.system(cmd)
 
-elif COMPILER == "pyinstaller":
-    # Create version file
-    import pyinstaller_versionfile
-
-    pyinstaller_versionfile.create_versionfile(
-        output_file="versioninfo.txt",
-        version=VERSION,
-        company_name=AUTHOR,
-        file_description=APPNAME,
-        internal_name=APPNAME,
-        legal_copyright=LICENSE,
-        original_filename="SSE-AT.exe",
-        product_name=APPNAME,
-    )
-
-    print("Created version info at: versioninfo.txt")
-
-    cmd = f'pyinstaller \
---noconfirm \
---hide-console=hide-late \
---version-file="versioninfo.txt" \
---hidden-import=cacheman \
---hidden-import=cacheman.cachewrap \
---distpath="{OUTPUT_FOLDER.parent}" \
--i="./src/data/icons/icon.ico" \
---name="SSE-AT" \
-"./src/app.py"'
-
-elif COMPILER == "cx_freeze":
-    import sys
-
-    from cx_Freeze import Executable, setup
-
-    build_options = {
-        "replace_paths": [("*", "")],
-        "packages": ["cacheman"],
-        "excludes": [],
-        "includes": ["cacheman.cachewrap"],
-        "include_files": [("./.venv/Lib/site-packages/plyvel_ci.libs", "./lib/plyvel")],
-        "include_path": "./src",
-        "build_exe": DIST_FOLDER.name,
-    }
-
-    base = "gui"
-
-    executables = [
-        Executable(
-            "./src/app.py",
-            base=base,
-            target_name="SSE-AT.exe",
-            icon="./src/data/icons/icon.ico",
-            copyright=LICENSE,
-        )
-    ]
-
-    sys.argv.append("build_exe")
-
-    setup(
-        name=APPNAME,
-        version=VERSION,
-        description=APPNAME,
-        author=AUTHOR,
-        license=LICENSE,
-        options={"build_exe": build_options},
-        executables=executables,
-    )
-
-else:
-    raise ValueError(f"Compiler {COMPILER!r} is not supported!")
-
-if COMPILER != "cx_freeze":
-    return_code = os.system(cmd)
-
-    if return_code != 0 and COMPILER == "nuitka":
-        print("Build command failed!")
+if return_code != 0:
+    print("Build command failed! Check the output above.")
+    if DIST_FOLDER.is_dir():
         shutil.rmtree(DIST_FOLDER)
-        exit()
+    exit(return_code)
+
+
+def safe_copy(
+    src: os.PathLike, dst: os.PathLike, *, follow_symlinks: bool = True
+) -> os.PathLike:
+    if os.path.exists(dst):
+        return dst
+
+    return shutil.copy(src, dst, follow_symlinks=follow_symlinks)  # type: ignore[no-any-return]
+
 
 print(f"Copying {len(ADDITIONAL_ITEMS)} additional item(s)...")
 for item, dest in ADDITIONAL_ITEMS.items():
     if item.is_dir():
-        shutil.copytree(item, dest, dirs_exist_ok=True, copy_function=os.link)
+        shutil.copytree(item, dest, dirs_exist_ok=True, copy_function=safe_copy)  # type: ignore[arg-type]
     elif item.is_file():
-        os.makedirs(dest.parent, exist_ok=True)
-        os.link(item, dest)
+        if not dest.is_file():
+            os.makedirs(dest.parent, exist_ok=True)
+            os.link(item, dest)
     else:
         print(f"{str(item)!r} does not exist!")
         continue
 
-    print(f"Copied {str(item)!r} to {str(dest.relative_to(DIST_FOLDER))!r}.")
+    print(f"Copied {str(item)!r} to {str(dest)!r}.")
 
 print(f"Deleting {len(UNUSED_ITEMS)} unused item(s)...")
 for item in UNUSED_ITEMS:
@@ -167,24 +98,18 @@ for item in UNUSED_ITEMS:
         os.remove(item)
         print(f"Removed file '{item.name}'.")
 
-print("Creating Output folder...")
-os.makedirs(OUTPUT_FOLDER, exist_ok=True)
-
-print("Hardlinking files into Output folder...")
-shutil.copytree(DIST_FOLDER, OUTPUT_FOLDER, dirs_exist_ok=True, copy_function=os.link)
+print("Renaming Output folder...")
+os.rename(DIST_FOLDER, OUTPUT_FOLDER)
 
 print("Packing into archive...")
 if OUTPUT_ARCHIVE.is_file():
     os.remove(OUTPUT_ARCHIVE)
     print("Deleted already existing archive.")
 
-cmd = f'7-zip\\7z.exe \
+cmd = f'res\\7-zip\\7z.exe \
 a \
 "{OUTPUT_ARCHIVE}" \
 "{OUTPUT_FOLDER}"'
 os.system(cmd)
-
-print("Cleaning dist folder...")
-shutil.rmtree(DIST_FOLDER)
 
 print("Done!")
