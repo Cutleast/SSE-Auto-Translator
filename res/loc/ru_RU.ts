@@ -1017,58 +1017,58 @@ Click on &quot;Show Details&quot; to view used filter.</source>
 <context>
     <name>MenuBar</name>
     <message>
-        <location filename="src/ui/menubar.py" line="28"/>
+        <location filename="src/ui/menubar.py" line="29"/>
         <source>File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="31"/>
+        <location filename="src/ui/menubar.py" line="38"/>
         <source>Exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="35"/>
+        <location filename="src/ui/menubar.py" line="32"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="38"/>
+        <location filename="src/ui/menubar.py" line="42"/>
         <source>Help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="41"/>
+        <location filename="src/ui/menubar.py" line="45"/>
         <source>Show Documentation...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="45"/>
+        <location filename="src/ui/menubar.py" line="49"/>
         <source>Check for updates...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="51"/>
+        <location filename="src/ui/menubar.py" line="55"/>
         <source>Fix Windows Path Limit...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="56"/>
+        <location filename="src/ui/menubar.py" line="60"/>
         <source>About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="60"/>
-        <location filename="src/ui/menubar.py" line="90"/>
+        <location filename="src/ui/menubar.py" line="64"/>
+        <location filename="src/ui/menubar.py" line="94"/>
         <source>About Qt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="72"/>
+        <location filename="src/ui/menubar.py" line="76"/>
         <source>No Updates Available</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="73"/>
+        <location filename="src/ui/menubar.py" line="77"/>
         <source>There are no updates available.</source>
         <translation type="unfinished"></translation>
     </message>

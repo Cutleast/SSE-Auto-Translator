@@ -7,6 +7,7 @@ from pathlib import Path
 
 import qtawesome as qta
 from PySide6.QtCore import Qt
+from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QApplication, QMenuBar, QMessageBox
 
 from app_context import AppContext
@@ -28,12 +29,15 @@ class MenuBar(QMenuBar):
         file_menu = Menu(title=self.tr("File"))
         self.addMenu(file_menu)
 
-        exit_action = file_menu.addAction(self.tr("Exit"))
-        exit_action.setIcon(qta.icon("fa5s.window-close", color="#ffffff"))
-        exit_action.triggered.connect(QApplication.exit)
-
-        settings_action = self.addAction(self.tr("Settings"))
+        settings_action = file_menu.addAction(self.tr("Settings"))
+        settings_action.setIcon(qta.icon("mdi6.cog", color="#ffffff"))
         settings_action.triggered.connect(self.__open_settings)
+
+        file_menu.addSeparator()
+
+        exit_action = file_menu.addAction(self.tr("Exit"))
+        exit_action.setIcon(QIcon(":/icons/exit.svg"))
+        exit_action.triggered.connect(QApplication.exit)
 
         help_menu = Menu(title=self.tr("Help"))
         self.addMenu(help_menu)
