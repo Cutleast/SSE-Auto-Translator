@@ -305,10 +305,15 @@ If you don&apos;t have Nexus Mods Premium, make sure that SSE-AT is linked to Mo
 <context>
     <name>DownloadManager</name>
     <message>
-        <location filename="src/core/downloader/download_manager.py" line="226"/>
-        <location filename="src/core/downloader/download_manager.py" line="244"/>
+        <location filename="src/core/downloader/download_manager.py" line="227"/>
+        <location filename="src/core/downloader/download_manager.py" line="245"/>
         <source>Collecting available downloads...</source>
         <translation>Sammle verfügbare Übersetzungen...</translation>
+    </message>
+    <message>
+        <location filename="src/core/downloader/download_manager.py" line="406"/>
+        <source>Collecting available translation updates...</source>
+        <translation>Sammle verfügbare Updates für Übersetzungen...</translation>
     </message>
 </context>
 <context>
@@ -1356,6 +1361,11 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
         <source>Scanning for installed translations...</source>
         <translation>Nach installierten Übersetzungen scannen...</translation>
     </message>
+    <message>
+        <location filename="src/core/scanner/scanner.py" line="666"/>
+        <source>Checking for translation updates...</source>
+        <translation>Verfügbare Updates für Übersetzungen werden gesucht...</translation>
+    </message>
 </context>
 <context>
     <name>SearchBar</name>
@@ -1752,41 +1762,65 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
 <context>
     <name>TranslationsTab</name>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="74"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="86"/>
         <source>Translations:</source>
         <translation>Übersetzungen:</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="92"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="104"/>
         <source>Base Game + AE CC Content</source>
         <translation>Grundspiel + AE CC Inhalte</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="113"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="125"/>
         <source>Search Results</source>
         <translation>Suchergebnisse</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="120"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="132"/>
         <source>No strings found!</source>
         <translation>Keine Strings gefunden!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="124"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="136"/>
         <source>Did not find any strings matching the given filter!
 Click on &quot;Show Details&quot; to view used filter.</source>
         <translation>Keine passenden Strings für den angegebenen Filter gefunden!
 Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="144"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="156"/>
         <source>Mod Archive (*.7z *.rar *.zip)</source>
         <translation>Mod Archiv (*.7z *.rar *.zip)</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="149"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="161"/>
         <source>Import Translation...</source>
         <translation>Übersetzung importieren...</translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="202"/>
+        <source>Update check complete!</source>
+        <translation>Update-Überprüfung abgeschlossen!</translation>
+    </message>
+    <message numerus="yes">
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="207"/>
+        <source>Found updates for %n translations.</source>
+        <comment>Found an update for one translation.</comment>
+        <translation>
+            <numerusform>Es ist ein Update für eine Übersetzung verfügbar.</numerusform>
+            <numerusform>Es sind Updates für %n Übersetzungen verfügbar.</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="250"/>
+        <source>No updates available!</source>
+        <translation>Keine Updates verfügbar!</translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="253"/>
+        <source>There are no updates available for translations with installed original mods.</source>
+        <translation>Es sind keine Updates für Übersetzungen mit installierter Originalmod verfügbar.</translation>
     </message>
 </context>
 <context>

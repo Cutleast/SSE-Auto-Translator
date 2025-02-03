@@ -303,9 +303,14 @@ If you don&apos;t have Nexus Mods Premium, make sure that SSE-AT is linked to Mo
 <context>
     <name>DownloadManager</name>
     <message>
-        <location filename="src/core/downloader/download_manager.py" line="226"/>
-        <location filename="src/core/downloader/download_manager.py" line="244"/>
+        <location filename="src/core/downloader/download_manager.py" line="227"/>
+        <location filename="src/core/downloader/download_manager.py" line="245"/>
         <source>Collecting available downloads...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/downloader/download_manager.py" line="406"/>
+        <source>Collecting available translation updates...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1349,6 +1354,11 @@ Click on &quot;Show Details&quot; to view used filter.</source>
         <source>Scanning for installed translations...</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="src/core/scanner/scanner.py" line="666"/>
+        <source>Checking for translation updates...</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SearchBar</name>
@@ -1744,39 +1754,62 @@ Click on &quot;Show Details&quot; to view used filter.</source>
 <context>
     <name>TranslationsTab</name>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="74"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="86"/>
         <source>Translations:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="92"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="104"/>
         <source>Base Game + AE CC Content</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="113"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="125"/>
         <source>Search Results</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="120"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="132"/>
         <source>No strings found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="124"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="136"/>
         <source>Did not find any strings matching the given filter!
 Click on &quot;Show Details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="144"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="156"/>
         <source>Mod Archive (*.7z *.rar *.zip)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="149"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="161"/>
         <source>Import Translation...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="202"/>
+        <source>Update check complete!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="207"/>
+        <source>Found updates for %n translations.</source>
+        <comment>Found an update for one translation.</comment>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="250"/>
+        <source>No updates available!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="253"/>
+        <source>There are no updates available for translations with installed original mods.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
