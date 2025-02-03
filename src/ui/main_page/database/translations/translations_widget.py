@@ -158,7 +158,7 @@ class TranslationsWidget(QTreeWidget):
                     not matches_filter(file, name_filter, case_sensitive or False)
                 )
 
-            if translation.status == translation.Status.UpdateAvailable:
+            if translation.status == Translation.Status.UpdateAvailable:
                 translation_item.setForeground(1, Qt.GlobalColor.yellow)
             else:
                 translation_item.setForeground(1, Qt.GlobalColor.white)

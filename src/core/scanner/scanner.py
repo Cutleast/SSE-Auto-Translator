@@ -633,3 +633,50 @@ class Scanner(QObject):
                 )
 
         return original_mod
+
+    def check_for_translation_updates(
+        self, ldialog: Optional[LoadingDialog] = None
+    ) -> dict[Translation, bool]:
+        """
+        Checks for available updates for the installed translations.
+
+        Args:
+            ldialog (Optional[LoadingDialog], optional):
+                Optional loading dialog. Defaults to None.
+
+        Returns:
+            dict[Translation, bool]:
+                Map of translations and whether an update is available
+        """
+
+        result: dict[Translation, bool] = {}
+
+        relevant_translations = [
+            translation
+            for translation in self.database.user_translations
+            if translation.mod_id
+            and translation.status != Translation.Status.UpdateIgnored
+            and translation.status != Translation.Status.UpdateAvailable
+            and translation.source != Source.Local
+        ]
+        for t, translation in enumerate(relevant_translations):
+            if ldialog is not None:
+                ldialog.updateProgress(
+                    text1=self.tr("Checking for translation updates...")
+                    + f" ({t}/{len(relevant_translations)})",
+                    value1=t,
+                    max1=len(relevant_translations),
+                    show2=True,
+                    text2=translation.name,
+                    value2=0,
+                    max2=0,
+                )
+
+            result[translation] = self.provider.is_update_available(
+                translation.mod_id,
+                translation.file_id,
+                translation.timestamp,
+                translation.source,
+            )
+
+        return result

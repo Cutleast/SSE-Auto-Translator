@@ -10,6 +10,7 @@ from PySide6.QtCore import QObject, Signal
 
 from app_context import AppContext
 from core.config.user_config import UserConfig
+from core.database.translation import Translation
 from core.mod_instance.mod import Mod
 from core.mod_instance.plugin import Plugin
 from core.translation_provider.provider import Provider
@@ -372,3 +373,81 @@ class DownloadManager(QObject):
         )
 
         return translation_downloads
+
+    def collect_available_updates(
+        self,
+        translations: dict[Translation, Mod],
+        ldialog: Optional[LoadingDialog] = None,
+    ) -> dict[str, list[TranslationDownload]]:
+        """
+        Collects available updates for the installed translations.
+
+        Args:
+            translations (dict[Translation, Mod]):
+                Map of installed translations that have an available update
+                and their original mod.
+            ldialog (Optional[LoadingDialog], optional):
+                Optional loading dialog. Defaults to None.
+
+        Returns:
+            dict[str, list[TranslationDownload]]:
+                Dictionary of mod-plugin combinations and their downloads.
+        """
+
+        self.log.info(
+            f"Collecting available updates for {len(translations)} translation(s)..."
+        )
+
+        downloads: dict[str, list[TranslationDownload]] = {}
+        for t, (translation, original_mod) in enumerate(translations.items()):
+            if ldialog is not None:
+                ldialog.updateProgress(
+                    text1=self.tr("Collecting available translation updates...")
+                    + f" ({t}/{len(translations)})",
+                    value1=t,
+                    max1=len(translations),
+                    show2=True,
+                    text2=translation.name,
+                    value2=0,
+                    max2=0,
+                )
+
+            downloads.update(
+                self.__collect_update_for_translation(translation, original_mod)
+            )
+
+        return downloads
+
+    def __collect_update_for_translation(
+        self, translation: Translation, original_mod: Mod
+    ) -> dict[str, list[TranslationDownload]]:
+        provider: Provider = AppContext.get_app().provider
+        new_file_id: Optional[int] = provider.get_updated_file_id(
+            translation.mod_id, translation.file_id
+        )
+
+        downloads: dict[str, list[TranslationDownload]] = {}
+
+        for plugin_name in translation.strings:
+            downloads[f"{translation.name} > {plugin_name}"] = [
+                TranslationDownload(
+                    name=translation.name,
+                    mod_id=translation.mod_id,
+                    source=translation.source,
+                    available_downloads=[
+                        FileDownload(
+                            name=translation.name,
+                            source=translation.source,
+                            mod_id=translation.mod_id,
+                            file_id=new_file_id,
+                            original_mod=original_mod,
+                            file_name=provider.get_details(
+                                translation.mod_id, new_file_id, translation.source
+                            )["filename"],
+                        )
+                    ],
+                    original_mod=original_mod,
+                )
+            ]
+
+        return downloads

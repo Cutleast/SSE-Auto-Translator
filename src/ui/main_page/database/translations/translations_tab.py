@@ -2,6 +2,7 @@
 Copyright (c) Cutleast
 """
 
+import logging
 from pathlib import Path
 from typing import Optional
 
@@ -11,6 +12,7 @@ from PySide6.QtWidgets import (
     QFileDialog,
     QHBoxLayout,
     QLabel,
+    QMessageBox,
     QVBoxLayout,
     QWidget,
 )
@@ -20,6 +22,12 @@ from core.database.database import TranslationDatabase
 from core.database.search_filter import SearchFilter
 from core.database.string import String
 from core.database.translation import Translation
+from core.downloader.download_manager import DownloadManager
+from core.downloader.translation_download import TranslationDownload
+from core.mod_instance.mod import Mod
+from core.mod_instance.mod_instance import ModInstance
+from core.scanner.scanner import Scanner
+from ui.widgets.download_list_dialog import DownloadListDialog
 from ui.widgets.error_dialog import ErrorDialog
 from ui.widgets.lcd_number import LCDNumber
 from ui.widgets.loading_dialog import LoadingDialog
@@ -35,7 +43,10 @@ class TranslationsTab(QWidget):
     Tab for Translations Database.
     """
 
+    log: logging.Logger = logging.getLogger("TranslationsTab")
+
     database: TranslationDatabase
+    scanner: Scanner
 
     __vlayout: QVBoxLayout
     __toolbar: TranslationsToolbar
@@ -51,6 +62,7 @@ class TranslationsTab(QWidget):
 
     def __post_init(self) -> None:
         self.database = AppContext.get_app().database
+        self.scanner = AppContext.get_app().scanner
 
         self.database.update_signal.connect(self.__update)
         self.__update()
@@ -169,9 +181,77 @@ class TranslationsTab(QWidget):
                     translation.save_translation()
                     self.database.add_translation(translation)
 
-    def check_for_updates(self) -> None: ...
+    def check_for_updates(self) -> None:
+        """
+        Checks for updates for all installed translations and updates their status.
+        """
 
-    def download_updates(self) -> None: ...
+        scan_result: dict[Translation, bool] = LoadingDialog.run_callable(
+            QApplication.activeModalWidget(), self.scanner.check_for_translation_updates
+        )
+
+        for translation, update_available in scan_result.items():
+            if update_available:
+                translation.status = Translation.Status.UpdateAvailable
+
+        # TODO: Find better way to update the translations widget
+        self.database.update_signal.emit()
+
+        available_updates_count: int = sum(scan_result.values())
+        messagebox = QMessageBox(QApplication.activeModalWidget())
+        messagebox.setWindowTitle(self.tr("Update check complete!"))
+        messagebox.setText(
+            self.tr(
+                "Found updates for %n translations.",
+                "Found an update for one translation.",
+                available_updates_count,
+            )
+        )
+        messagebox.exec()
+
+        self.__toolbar.update_action.setEnabled(available_updates_count > 0)
+
+    def download_updates(self) -> None:
+        mod_instance: ModInstance = AppContext.get_app().mod_instance
+        download_manager: DownloadManager = AppContext.get_app().download_manager
+
+        translations: dict[Translation, Mod] = {}
+        for translation in filter(
+            lambda t: t.status == Translation.Status.UpdateAvailable,
+            self.database.user_translations,
+        ):
+            original_mod: Optional[Mod] = mod_instance.get_mod(
+                translation.original_mod_id, translation.original_file_id
+            )
+
+            if original_mod is None:
+                self.log.warning(
+                    f"Original mod for translation {translation.name!r} not installed!"
+                )
+                continue
+
+            translations[translation] = original_mod
+
+        download_entries: dict[str, list[TranslationDownload]] = (
+            LoadingDialog.run_callable(
+                QApplication.activeModalWidget(),
+                lambda ldialog: download_manager.collect_available_downloads(
+                    translations, ldialog
+                ),
+            )
+        )
+        if download_entries:
+            DownloadListDialog(
+                download_entries, updates=True, parent=QApplication.activeModalWidget()
+            ).exec()
+        else:
+            QMessageBox.warning(
+                QApplication.activeModalWidget(),
+                self.tr("No updates available!"),
+                self.tr(
+                    "There are no updates available for translations with installed original mods."
+                ),
+            )
 
     def __update(self) -> None:
         self.__update_translations_num()
