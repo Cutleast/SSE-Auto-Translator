@@ -235,7 +235,7 @@ class TranslationsTab(QWidget):
         download_entries: dict[str, list[TranslationDownload]] = (
             LoadingDialog.run_callable(
                 QApplication.activeModalWidget(),
-                lambda ldialog: download_manager.collect_available_downloads(
+                lambda ldialog: download_manager.collect_available_updates(
                     translations, ldialog
                 ),
             )
@@ -245,8 +245,8 @@ class TranslationsTab(QWidget):
                 download_entries, updates=True, parent=QApplication.activeModalWidget()
             ).exec()
         else:
-            QMessageBox.warning(
-                QApplication.activeModalWidget(),
+            QMessageBox.warning(  # type: ignore[call-arg]
+                QApplication.activeModalWidget() or AppContext.get_app().main_window,
                 self.tr("No updates available!"),
                 self.tr(
                     "There are no updates available for translations with installed original mods."

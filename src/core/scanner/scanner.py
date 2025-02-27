@@ -672,6 +672,15 @@ class Scanner(QObject):
                     max2=0,
                 )
 
+            # TODO: Improve this filter
+            if (
+                not translation.mod_id
+                or not translation.file_id
+                or not translation.timestamp
+                or not translation.source
+            ):
+                continue
+
             result[translation] = self.provider.is_update_available(
                 translation.mod_id,
                 translation.file_id,

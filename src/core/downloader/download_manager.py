@@ -426,6 +426,9 @@ class DownloadManager(QObject):
             translation.mod_id, translation.file_id
         )
 
+        if new_file_id is None:
+            return {}
+
         downloads: dict[str, list[TranslationDownload]] = {}
 
         for plugin_name in translation.strings:
@@ -433,16 +436,17 @@ class DownloadManager(QObject):
                 TranslationDownload(
                     name=translation.name,
                     mod_id=translation.mod_id,
-                    source=translation.source,
+                    plugin_name=plugin_name,
+                    source=Source.NexusMods,  # TODO: Reimplement translation updates from CDT
                     available_downloads=[
                         FileDownload(
-                            name=translation.name,
-                            source=translation.source,
+                            display_name=translation.name,
+                            source=Source.NexusMods,
                             mod_id=translation.mod_id,
                             file_id=new_file_id,
                             original_mod=original_mod,
                             file_name=provider.get_details(
-                                translation.mod_id, new_file_id, translation.source
+                                translation.mod_id, new_file_id, Source.NexusMods
                             )["filename"],
                         )
                     ],

@@ -370,7 +370,7 @@ class Provider:
 
         return False
 
-    def get_updated_file_id(self, mod_id: int, file_id: int) -> Optional[int]:
+    def get_updated_file_id(self, mod_id: int, file_id: Optional[int]) -> Optional[int]:
         """
         Returns file id of updated file for `file_id` if NexusMods is enabled as source.
         """
