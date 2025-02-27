@@ -31,7 +31,7 @@ class Esp2Dsd(Utility):
     OUTPUT_PATH_ARG_NAMES: tuple[str, str] = ("--output-path", "-o")
     OUTPUT_PATH_ARG_HELP: str = "Optional path to output folder"
     HELP: str = (
-        "Converts a plugin translation to a DSD file."
+        "Converts a plugin translation to a DSD file. "
         f"Arguments {TRANSLATED_PLUGIN_ARG_NAME!r} and "
         f"{ORIGINAL_PLUGIN_ARG_NAME!r} are required when used."
     )
@@ -53,14 +53,14 @@ class Esp2Dsd(Utility):
             *Esp2Dsd.OUTPUT_PATH_ARG_NAMES, help=Esp2Dsd.OUTPUT_PATH_ARG_HELP
         )
 
-    def run(self, args: Namespace, exit: bool = True) -> None | NoReturn:
+    def run(self, args: Namespace, exit: bool = True) -> None | NoReturn:  # type: ignore[return]
         activated: bool = hasattr(args, Esp2Dsd.ORIGINAL_PLUGIN_ARG_NAME) and hasattr(
             args, Esp2Dsd.TRANSLATED_PLUGIN_ARG_NAME
         )
 
         if not activated:
             # Just continue with normal execution since module was not enabled
-            return
+            return  # type: ignore[return-value]
 
         translated_plugin_name: Optional[str] = getattr(
             args, Esp2Dsd.TRANSLATED_PLUGIN_ARG_NAME, None
