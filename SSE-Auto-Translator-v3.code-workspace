@@ -34,6 +34,9 @@
 		},
 		"python.testing.pytestEnabled": true,
 		"python.testing.unittestEnabled": false,
+		"python.testing.pytestArgs": [
+			"--log-level=DEBUG"
+		],
 		"xml.format.maxLineWidth": 0,
 		"mypy-type-checker.args": [
 			"--no-namespace-packages"
@@ -45,7 +48,8 @@
 			"SSE-AT/**/*.py",
 			"SSE-AT/**/*.pyi"
 		],
-		"mypy-type-checker.reportingScope": "workspace"
+		"mypy-type-checker.reportingScope": "workspace",
+		"debugpy.debugJustMyCode": false
 	},
 	"launch": {
 		"version": "0.2.0",
