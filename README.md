@@ -144,3 +144,4 @@ If you're interested in maintaining a masterlist for your language, contact us (
   - [RS Children Overhaul](https://www.nexusmods.com/skyrimspecialedition/mods/2650) by [isophe](https://next.nexusmods.com/profile/isophe)
   - [Wet and Cold SE](https://www.nexusmods.com/skyrimspecialedition/mods/644) by [StepModifications](https://next.nexusmods.com/profile/StepModifications)
   - [Wet and Cold SE - German](https://www.nexusmods.com/skyrimspecialedition/mods/89391) by [kroenel](https://next.nexusmods.com/profile/kroenel)
+  - `_ResourcePack.esl & _ResourcePack.bsa` by Bethesda from the Vanilla base game, stripped down to the bare minimum
