@@ -3,9 +3,13 @@ Copyright (c) Cutleast
 """
 
 from abc import abstractmethod
-from typing import Callable, Optional
+from typing import Callable, Optional, ParamSpec, TypeVar
 
 from PySide6.QtWidgets import QApplication
+
+# Nuitka doesn't support the new syntax, yet
+T = TypeVar("T")
+P = ParamSpec("P")
 
 
 class ExceptionBase(Exception):
@@ -26,7 +30,7 @@ class ExceptionBase(Exception):
         """
 
     @classmethod
-    def wrap[**P, T](cls, func_or_meth: Callable[P, T]) -> Callable[P, T]:
+    def wrap(cls, func_or_meth: Callable[P, T]) -> Callable[P, T]:
         """
         Wraps function or method in a try-except-block
         that raises an exception of this type.

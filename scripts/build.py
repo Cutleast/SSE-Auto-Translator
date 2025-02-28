@@ -57,6 +57,7 @@ cmd: str = f'.venv\\scripts\\nuitka \
 --file-description="{APPNAME}" \
 --copyright="{LICENSE}" \
 --nofollow-import-to=tkinter \
+--nofollow-import-to=mypy \
 --windows-icon-from-ico="res/icons/icon.ico" \
 --output-filename="SSE-AT.exe" \
 "src/main.py"'
@@ -101,8 +102,8 @@ for item in UNUSED_ITEMS:
         os.remove(item)
         print(f"Removed file '{item.name}'.")
 
-print("Renaming Output folder...")
-os.rename(BUILD_FOLDER, OUTPUT_FOLDER)
+print("Moving build output to output folder...")
+shutil.move(BUILD_FOLDER, OUTPUT_FOLDER)
 
 print("Packing into archive...")
 if OUTPUT_ARCHIVE.is_file():
