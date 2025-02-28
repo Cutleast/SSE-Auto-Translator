@@ -3,7 +3,7 @@ Copyright (c) Cutleast
 """
 
 from abc import abstractmethod
-from typing import Optional
+from typing import Callable, Optional
 
 from PySide6.QtWidgets import QApplication
 
@@ -24,6 +24,27 @@ class ExceptionBase(Exception):
         Returns:
             str: Localised message
         """
+
+    @classmethod
+    def wrap[**P, T](cls, func_or_meth: Callable[P, T]) -> Callable[P, T]:
+        """
+        Wraps function or method in a try-except-block
+        that raises an exception of this type.
+
+        Args:
+            func_or_meth (F): Function or method
+
+        Returns:
+            F: Wrapped function or method
+        """
+
+        def wrapper(*args: P.args, **kwargs: P.kwargs) -> T:
+            try:
+                return func_or_meth(*args, **kwargs)
+            except Exception as e:
+                raise cls() from e
+
+        return wrapper
 
 
 class ApiException(ExceptionBase):
