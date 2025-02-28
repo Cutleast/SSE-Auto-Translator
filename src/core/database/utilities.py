@@ -10,7 +10,7 @@ from PySide6.QtCore import QObject
 from sse_bsa import BSAArchive
 
 from app_context import AppContext
-from core.archiver import Archive
+from core.archiver.archive import Archive
 from core.config.user_config import UserConfig
 from ui.widgets.loading_dialog import LoadingDialog
 

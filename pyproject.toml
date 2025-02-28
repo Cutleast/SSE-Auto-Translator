@@ -1,0 +1,49 @@
+[project]
+name = "sse-auto-translator"
+version = "3.0.0-alpha-1"
+description = "A tool for translating entire modlists by auto-downloading available translations from Nexus Mods. "
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "beautifulsoup4>=4.13.3",
+    "cloudscraper>=1.2.71",
+    "comtypes>=1.4.10",
+    "deepl>=1.21.0",
+    "googletrans==3.1.0a0",
+    "jstyleson>=0.0.2",
+    "lingua-language-detector>=2.0.2",
+    "lz4>=4.4.3",
+    "plyvel-ci>=1.5.1",
+    "py7zr>=0.22.0",
+    "pydantic>=2.10.6",
+    "pyperclip>=1.9.0",
+    "pyside6>=6.8.2.1",
+    "pytz>=2025.1",
+    "pyuac>=0.0.3",
+    "pywin32>=308",
+    "pyzmq>=26.2.1",
+    "qtawesome<1.4.0",
+    "qtpy>=2.4.3",
+    "rarfile>=4.2",
+    "requests>=2.32.3",
+    "semantic-version>=2.10.0",
+    "spylls>=0.1.7",
+    "sse-bsa>=1.0.2",
+    "unrar>=0.4",
+    "virtual-glob>=0.2.0",
+    "websocket-client>=1.8.0",
+]
+
+[dependency-groups]
+dev = [
+    "cx-freeze>=7.2.10",
+    "mypy>=1.15.0",
+    "nuitka>=2.6.7",
+    "pyinstaller>=6.12.0",
+    "pyinstaller-versionfile>=3.0.0",
+    "pytest>=8.3.4",
+    "pytest-cov>=6.0.0",
+    "pytest-qt>=4.4.0",
+    "ruff==0.9.7",
+    "types-requests>=2.32.0.20241016",
+]

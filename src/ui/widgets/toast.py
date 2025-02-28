@@ -8,6 +8,7 @@ from typing import Optional
 
 from PySide6.QtCore import (
     QAbstractAnimation,
+    QByteArray,
     QEvent,
     QObject,
     QPoint,
@@ -62,7 +63,7 @@ class Toast(QWidget):
         self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground, True)
         self.setAttribute(Qt.WidgetAttribute.WA_ShowWithoutActivating, True)
 
-        self.__animation = QPropertyAnimation(self, b"windowOpacity")
+        self.__animation = QPropertyAnimation(self, QByteArray(b"windowOpacity"))
         self.__animation.setDuration(int(anim_duration * 1000))
         self.__animation.setStartValue(0.0)
         self.__animation.setEndValue(opacity)

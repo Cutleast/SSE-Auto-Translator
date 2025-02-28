@@ -100,30 +100,30 @@ If you encountered an issue/error or you have a suggestion, create an issue unde
 
 ### 1. Install requirements
 
-1. Install Python 3.12 (Make sure that you add it to PATH!)
-2. Clone repository
-3. Open terminal in repository folder
-4. Create a virtual environment and activate it by running following command:
-   `py -3.12 -m venv .venv`
-5. Type in following command to install all requirements:
-   `pip install -r requirements.txt`
+1. Install [Python 3.12](https://www.python.org/downloads/) (Make sure that you add it to PATH!)
+2. Install [uv](https://github.com/astral-sh/uv#installation)
+3. Clone repository
+4. Open terminal in repository folder
+5. Run the following command to init your local environment and to install all dependencies
+   `uv sync`
 
 ### 2. Execute from source
 
-1. Open terminal in src folder (make sure to activate the venv with `.venv\scripts\activate`)
-2. Execute main file
-   `python main.py`
+1. Open terminal in src folder
+2. Execute main file with uv
+   `uv run src\main.py`
 
 ### 3. Compile and build executable
 
 1. Run `build.bat` with activated virtual environment from the root folder of this repo.
-2. The executable and all dependencies are built in the SSE-AT-Folder and gets packed in a `SSE-AT v[version].zip`.
+2. The executable and all dependencies are built in the `dist/SSE-AT`-Folder and gets packed in a `dist/SSE-AT v[version].zip`.
 
 ## 3. Beta-Testing
 
 If you are interested in testing pre-release versions of SSE-AT, join our Discord server above.
 
 ## 4. Maintaining a Masterlist
+
 If you're interested in maintaining a masterlist for your language, contact us (@cutleast or @whusten) on our Discord server linked above!
 
 # Credits

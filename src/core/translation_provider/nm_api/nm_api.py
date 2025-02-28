@@ -503,12 +503,12 @@ class NexusModsApi:
 
         available_translations: dict[str, list[str]] = {}
 
-        for tag in translation_list.children:
+        for tag in translation_list.children:  # type: ignore[attr-defined]
             if tag.text == "\n":
                 continue
 
             tags = parsed.find_all("a", {"class": f"sortme flag flag-{tag.text}"})
-            urls: list[str] = [tag["href"] for tag in tags]
+            urls: list[str] = [tag["href"] for tag in tags]  # type: ignore[misc,index]
 
             language = NexusModsApi.language_overrides.get(tag.text, tag.text)
 

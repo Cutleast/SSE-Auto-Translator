@@ -16,7 +16,7 @@ from typing import Optional
 
 import requests
 
-import core.plugin_interface as plugin_interface
+import core.plugin_interface.plugin as plugin_interface
 from core.database.string import String
 from core.mod_instance.plugin import Plugin
 from core.utilities.filesystem import get_file_identifier

@@ -12,12 +12,12 @@ import jstyleson as json
 from PySide6.QtCore import QObject
 
 from app_context import AppContext
-from core import plugin_interface as esp
 from core.config.user_config import UserConfig
 from core.database.string import String
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.mod_instance.plugin import Plugin
+from core.plugin_interface import plugin as esp
 from ui.widgets.loading_dialog import LoadingDialog
 
 

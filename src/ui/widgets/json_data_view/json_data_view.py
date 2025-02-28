@@ -31,7 +31,7 @@ class JsonDataView(QTreeView):
         self.setSelectionMode(QTreeView.SelectionMode.ExtendedSelection)
         self.setUniformRowHeights(True)
 
-        copy_shortcut = QShortcut(QKeySequence.StandardKey.Copy, self)
+        copy_shortcut = QShortcut(QKeySequence.StandardKey.Copy, self)  # type: ignore[call-overload]
         copy_shortcut.activated.connect(self.copy_selected_items)
 
         self.setContextMenuPolicy(Qt.ContextMenuPolicy.CustomContextMenu)

@@ -18,7 +18,7 @@ from PySide6.QtWidgets import (
 
 from app_context import AppContext
 from core.cacher.cacher import Cacher
-from core.translation_provider.nm_api import NexusModsApi
+from core.translation_provider.nm_api.nm_api import NexusModsApi
 
 from .paste_entry import PasteLineEdit
 

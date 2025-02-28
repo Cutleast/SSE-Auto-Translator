@@ -8,6 +8,7 @@ from enum import Enum
 from typing import Optional
 
 from PySide6.QtCore import (
+    QByteArray,
     QEasingCurve,
     QParallelAnimationGroup,
     QPoint,
@@ -159,8 +160,8 @@ class StackedWidget(QStackedWidget):
         label_current.move(0, 0)
         label_next.move(point_next.x() - x_offset, point_next.y() - y_offset)
 
-        anim_current = QPropertyAnimation(label_current, b"pos")
-        anim_next = QPropertyAnimation(label_next, b"pos")
+        anim_current = QPropertyAnimation(label_current, QByteArray(b"pos"))
+        anim_next = QPropertyAnimation(label_next, QByteArray(b"pos"))
         anim_group = QParallelAnimationGroup()
 
         anim_current.setDuration(self.duration)

@@ -410,6 +410,7 @@ class TranslationsWidget(QTreeWidget):
             AppContext.get_app().main_window,
             self.tr("Export successful!"),
             self.tr("Translation successfully exported."),
+            QMessageBox.StandardButton.Ok,
         )
 
     def delete_translation(self) -> None:

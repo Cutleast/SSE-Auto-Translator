@@ -16,8 +16,8 @@ from core.masterlist.masterlist_entry import MasterlistEntry
 from core.translation_provider.source import Source
 from core.utilities.base_enum import BaseEnum
 
-from .cdt_api import CDTApi
-from .nm_api import NexusModsApi
+from .cdt_api.ctd_api import CDTApi
+from .nm_api.nm_api import NexusModsApi
 
 
 class Provider:

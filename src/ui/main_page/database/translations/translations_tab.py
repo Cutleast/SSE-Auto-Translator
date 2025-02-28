@@ -245,7 +245,7 @@ class TranslationsTab(QWidget):
                 download_entries, updates=True, parent=QApplication.activeModalWidget()
             ).exec()
         else:
-            QMessageBox.warning(  # type: ignore[call-arg]
+            QMessageBox.warning(
                 QApplication.activeModalWidget() or AppContext.get_app().main_window,
                 self.tr("No updates available!"),
                 self.tr(

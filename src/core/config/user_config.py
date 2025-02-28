@@ -51,7 +51,7 @@ class UserConfig(BaseConfig):
 
     @api_key.setter
     def api_key(self, value: str) -> None:
-        from core.translation_provider.nm_api import NexusModsApi
+        from core.translation_provider.nm_api.nm_api import NexusModsApi
 
         UserConfig.validate_type(value, str)
         UserConfig.validate_value(

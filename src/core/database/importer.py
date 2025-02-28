@@ -16,8 +16,7 @@ from PySide6.QtCore import QObject
 from sse_bsa import BSAArchive
 
 from app_context import AppContext
-from core import plugin_interface as esp
-from core.archiver import Archive
+from core.archiver.archive import Archive
 from core.cacher.cacher import Cacher
 from core.config.user_config import UserConfig
 from core.database.string import String
@@ -25,6 +24,7 @@ from core.database.translation import Translation
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.mod_instance.plugin import Plugin
+from core.plugin_interface import plugin as esp
 from core.translation_provider.source import Source
 from core.utilities.constants import DSD_FILE_PATTERN
 from core.utilities.container_utils import unique
