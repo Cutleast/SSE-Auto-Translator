@@ -1,5 +1,6 @@
 """
 Script to view a JSON file in a specialized QTreeView with lazy loading for huge files.
+Parsing the JSON still takes some time depending on its size.
 """
 
 import json
