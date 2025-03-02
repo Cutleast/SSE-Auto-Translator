@@ -50,7 +50,8 @@ def are_children_visible(item: QTreeWidgetItem) -> bool:
 
     for child in iter_children(item):
         if child.childCount() > 0:
-            return are_children_visible(child)
+            if not child.isHidden() or are_children_visible(child):
+                return True
         elif not child.isHidden():
             return True
 

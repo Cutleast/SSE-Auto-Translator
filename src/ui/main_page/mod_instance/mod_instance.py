@@ -273,8 +273,11 @@ class ModInstanceWidget(QTreeWidget):
                 )
 
             mod_item.setHidden(
-                (not are_children_visible(mod_item) and self.__state_filter is not None)
-                or not matches_filter(mod.name, name_filter, case_sensitive or False)
+                (self.__state_filter is not None and not are_children_visible(mod_item))
+                or (
+                    not matches_filter(mod.name, name_filter, case_sensitive or False)
+                    and not are_children_visible(mod_item)
+                )
             )
             mod_item.setForeground(
                 0,
