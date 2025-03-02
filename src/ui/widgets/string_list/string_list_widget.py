@@ -102,7 +102,7 @@ class StringListWidget(QWidget):
         hlayout.addWidget(strings_num_label)
 
         self.__strings_num_label = LCDNumber()
-        self.__strings_num_label.setDigitCount(4)
+        self.__strings_num_label.setDigitCount(6)
         hlayout.addWidget(self.__strings_num_label)
 
     def __init_strings_widget(self) -> None:
