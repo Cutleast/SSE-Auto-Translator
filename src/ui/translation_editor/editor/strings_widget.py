@@ -80,7 +80,9 @@ class StringsWidget(QTreeWidget):
 
         self.clear()
 
-        for plugin_name, plugin_strings in strings.items():
+        for plugin_name, plugin_strings in sorted(
+            strings.items(), key=lambda p: p[0].lower()
+        ):
             plugin_item = QTreeWidgetItem([plugin_name])
             self.__plugin_items[plugin_name] = plugin_item
 
@@ -99,6 +101,7 @@ class StringsWidget(QTreeWidget):
         self.resizeColumnToContents(0)
         self.resizeColumnToContents(1)
         self.header().resizeSection(3, 500)
+        self.sortByColumn(0, Qt.SortOrder.AscendingOrder)
         self.sortByColumn(1, Qt.SortOrder.AscendingOrder)
         self.update()
 

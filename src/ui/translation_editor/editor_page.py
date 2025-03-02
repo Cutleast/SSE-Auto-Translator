@@ -187,7 +187,7 @@ class EditorPage(QSplitter):
             close_button.setIcon(qta.icon("fa.close", color="#ffffff"))
             close_button.setFixedSize(26, 26)
 
-            for plugin_name in translation.strings:
+            for plugin_name in sorted(translation.strings, key=lambda p: p.lower()):
                 plugin_item = QTreeWidgetItem([plugin_name])
                 translation_item.addChild(plugin_item)
 
