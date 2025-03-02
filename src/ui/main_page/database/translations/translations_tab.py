@@ -26,6 +26,7 @@ from core.downloader.download_manager import DownloadManager
 from core.downloader.translation_download import TranslationDownload
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
+from core.mod_instance.plugin import Plugin
 from core.scanner.scanner import Scanner
 from ui.widgets.download_list_dialog import DownloadListDialog
 from ui.widgets.error_dialog import ErrorDialog
@@ -148,14 +149,15 @@ class TranslationsTab(QWidget):
                 The files to import. Defaults to None.
         """
 
+        mod_instance: ModInstance = AppContext.get_app().mod_instance
+
         if files is None:
             fdialog = QFileDialog()
             fdialog.setFileMode(fdialog.FileMode.ExistingFiles)
             fdialog.setNameFilters(
                 [
                     self.tr("Mod Archive (*.7z *.rar *.zip)"),
-                    # TODO: Reimplement this
-                    # self.tr("Bethesda Plugin (*.esp *.esm *.esl)"),
+                    self.tr("Skyrim SE Plugin (*.esp *.esm *.esl)"),
                 ]
             )
             fdialog.setWindowTitle(self.tr("Import Translation..."))
@@ -165,9 +167,11 @@ class TranslationsTab(QWidget):
 
             files = [Path(file) for file in fdialog.selectedFiles()]
 
+        translation: Translation
+        strings: dict[str, list[String]]
         for file in files:
             if file.suffix.lower() in [".7z", ".rar", ".zip"]:
-                strings: dict[str, list[String]] = LoadingDialog.run_callable(
+                strings = LoadingDialog.run_callable(
                     QApplication.activeModalWidget(),
                     lambda ldialog: self.database.importer.extract_strings_from_archive(
                         file, ldialog
@@ -175,11 +179,36 @@ class TranslationsTab(QWidget):
                 )
 
                 if strings:
-                    translation: Translation = self.database.create_blank_translation(
+                    translation = self.database.create_blank_translation(
                         file.stem, strings
                     )
                     translation.save_translation()
                     self.database.add_translation(translation)
+
+            elif file.suffix.lower() in [".esp", ".esm", ".esl"]:
+                original_plugin: Optional[Plugin] = mod_instance.get_plugin(
+                    file.name,
+                    ignore_states=[
+                        Plugin.Status.IsTranslated,
+                        Plugin.Status.TranslationInstalled,
+                    ],
+                    ignore_case=True,
+                )
+
+                if original_plugin is not None:
+                    strings = {
+                        original_plugin.name: self.database.importer.map_translation_strings(
+                            file, original_plugin.path
+                        )
+                    }
+
+                    if strings:
+                        translation = self.database.create_blank_translation(
+                            f"{file.name} - {self.database.language.capitalize()}",
+                            strings,
+                        )
+                        translation.save_translation()
+                        self.database.add_translation(translation)
 
     def check_for_updates(self) -> None:
         """
