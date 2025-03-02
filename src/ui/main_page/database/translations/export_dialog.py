@@ -62,6 +62,8 @@ class ExportDialog(QDialog):
         vlayout.addLayout(hlayout)
 
         dsd_button = QPushButton(self.tr("DSD Files"))
+        dsd_button.setDefault(True)
+        dsd_button.setObjectName("accent_button")
         dsd_button.clicked.connect(
             lambda: self.__exit_with_value(ExportDialog.ExportFormat.DSD)
         )
