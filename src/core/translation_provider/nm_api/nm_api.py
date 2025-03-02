@@ -20,7 +20,7 @@ import requests as req
 import websocket
 
 from app_context import AppContext
-from core.cacher.cacher import Cacher
+from core.cache.cache import Cache
 from core.utilities.exceptions import (
     ApiException,
     ApiExpiredError,
@@ -60,15 +60,15 @@ class NexusModsApi:
     rem_hreq: int = 0  # Remaining API requests at current hour
     rem_dreq: int = 0  # Remaining API requests at current day
 
-    cacher: Cacher
+    cache: Cache
     nxm_handler: NXMHandler
 
     scraper: Optional[cs.CloudScraper] = None
 
     log: logging.Logger = logging.getLogger("NexusModsAPI")
 
-    def __init__(self, cacher: Cacher, api_key: str):
-        self.cacher = cacher
+    def __init__(self, cache: Cache, api_key: str):
+        self.cache = cache
         self.api_key = api_key
 
         self.user_agent = (
@@ -150,7 +150,7 @@ class NexusModsApi:
         url = "https://api.nexusmods.com/v1/" + path
 
         if cache_result:
-            cached = self.cacher.get_from_web_cache(url)
+            cached = self.cache.get_from_web_cache(url)
         else:
             cached = None
 
@@ -178,7 +178,7 @@ class NexusModsApi:
                 raise ApiLimitReachedError
 
             if cache_result:
-                self.cacher.add_to_web_cache(url, res)
+                self.cache.add_to_web_cache(url, res)
 
             return res
         else:
@@ -325,11 +325,11 @@ class NexusModsApi:
 
         url = f"https://file-metadata.nexusmods.com/file/nexus-files-s3-meta/{_game_id}/{mod_id}/{urllib.parse.quote(file_name)}.json"
 
-        cached = self.cacher.get_from_web_cache(url)
+        cached = self.cache.get_from_web_cache(url)
 
         if cached is None:
             res = req.get(url)
-            self.cacher.add_to_web_cache(url, res)
+            self.cache.add_to_web_cache(url, res)
         else:
             res = cached
             self.log.debug(f"Got cached Web response for {url!r}.")
@@ -474,7 +474,7 @@ class NexusModsApi:
 
         url = f"https://www.nexusmods.com/{game_id}/mods/{mod_id}"
 
-        cached = self.cacher.get_from_web_cache(url)
+        cached = self.cache.get_from_web_cache(url)
 
         if cached is None:
             if self.scraper is None:
@@ -485,7 +485,7 @@ class NexusModsApi:
             }
 
             res = self.scraper.get(url, headers=headers)
-            self.cacher.add_to_web_cache(url, res)
+            self.cache.add_to_web_cache(url, res)
         else:
             res = cached
             self.log.debug(f"Got cached Web response for {url!r}")

@@ -17,7 +17,7 @@ from PySide6.QtWidgets import (
 )
 
 from app_context import AppContext
-from core.cacher.cacher import Cacher
+from core.cache.cache import Cache
 from core.translation_provider.nm_api.nm_api import NexusModsApi
 
 from .paste_entry import PasteLineEdit
@@ -35,7 +35,7 @@ class ApiSetup(QWidget):
     def __init__(self) -> None:
         super().__init__()
 
-        cacher: Cacher = AppContext.get_app().cacher
+        cache: Cache = AppContext.get_app().cache
 
         vlayout = QVBoxLayout()
         vlayout.setAlignment(Qt.AlignmentFlag.AlignTop)
@@ -67,7 +67,7 @@ class ApiSetup(QWidget):
         )
 
         def start_sso() -> None:
-            api = NexusModsApi(cacher, "")
+            api = NexusModsApi(cache, "")
             self.api_key = api.get_sso_key()
             sso_button.setText(self.tr("Successfully logged into Nexus Mods"))
             self.setDisabled(True)
@@ -97,7 +97,7 @@ class ApiSetup(QWidget):
                 return
 
             api_key_check_button.setText("Checking API Key...")
-            if NexusModsApi(cacher, key).check_api_key():
+            if NexusModsApi(cache, key).check_api_key():
                 self.api_key = key
                 self.is_valid = True
                 self.valid_signal.emit(True)

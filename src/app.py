@@ -26,7 +26,7 @@ from PySide6.QtWidgets import (
 )
 
 import resources_rc  # noqa: F401
-from core.cacher.cacher import Cacher
+from core.cache.cache import Cache
 from core.config.app_config import AppConfig
 from core.config.translator_config import TranslatorConfig
 from core.config.user_config import UserConfig
@@ -109,7 +109,7 @@ class App(QApplication):
     database: TranslationDatabase
     nxm_listener: NXMHandler
     translator: Translator
-    cacher: Cacher
+    cache: Cache
     exception_handler: ExceptionHandler
     mod_instance: ModInstance
     scanner: Scanner
@@ -137,8 +137,8 @@ class App(QApplication):
         self.load_localisation()
         self.load_theme()
 
-        self.cacher = Cacher(self.cache_path)
-        self.cacher.load_caches()
+        self.cache = Cache(self.cache_path)
+        self.cache.load_caches()
 
         self.exception_handler = ExceptionHandler(self)
         self.main_window = MainWindow()
@@ -171,7 +171,7 @@ class App(QApplication):
         for function in unique(self.exit_chain):
             function()
 
-        self.cacher.save_caches()
+        self.cache.save_caches()
         self.clean()
 
         return retcode
@@ -252,7 +252,7 @@ class App(QApplication):
 
         self.provider = Provider(
             self.user_config.api_key,
-            self.cacher,
+            self.cache,
             self.user_config.provider_preference,
         )
         nm_api_valid = self.provider.check_api_key()

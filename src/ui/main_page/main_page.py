@@ -20,7 +20,7 @@ from PySide6.QtWidgets import (
 )
 
 from app_context import AppContext
-from core.cacher.cacher import Cacher
+from core.cache.cache import Cache
 from core.config.app_config import AppConfig
 from core.config.user_config import UserConfig
 from core.database.database import TranslationDatabase
@@ -62,7 +62,7 @@ class MainPageWidget(QWidget):
     mod_instance: ModInstance
     ignore_list: list[str]
 
-    cacher: Cacher
+    cache: Cache
     database: TranslationDatabase
     user_config: UserConfig
 
@@ -84,7 +84,7 @@ class MainPageWidget(QWidget):
         AppContext.get_app().ready_signal.connect(self.__post_init)
 
     def __post_init(self) -> None:
-        self.cacher = AppContext.get_app().cacher
+        self.cache = AppContext.get_app().cache
         self.database = AppContext.get_app().database
         self.user_config = AppContext.get_app().user_config
         self.mod_instance = AppContext.get_app().mod_instance

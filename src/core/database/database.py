@@ -13,7 +13,7 @@ import jstyleson as json
 from PySide6.QtCore import QObject, Signal
 
 from app_context import AppContext
-from core.cacher.cacher import Cacher
+from core.cache.cache import Cache
 from core.database.exporter import Exporter
 from core.database.string import String
 from core.database.utilities import Utilities
@@ -523,7 +523,7 @@ class TranslationDatabase(QObject):
             translation = self.get_translation_by_mod(mod)
             translation_name = f"{mod.name} - {self.language.capitalize()}"
 
-        cacher: Cacher = AppContext.get_app().cacher
+        cache: Cache = AppContext.get_app().cache
         plugins = list(
             filter(
                 lambda p: p.status
@@ -546,7 +546,7 @@ class TranslationDatabase(QObject):
 
         translation_strings: dict[str, list[String]] = translation._strings or {}
         for plugin in plugins:
-            plugin_strings: list[String] = cacher.get_plugin_strings(plugin.path)
+            plugin_strings: list[String] = cache.get_plugin_strings(plugin.path)
 
             for string in plugin_strings:
                 string.translated_string = string.original_string

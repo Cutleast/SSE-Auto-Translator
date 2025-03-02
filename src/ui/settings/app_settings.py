@@ -27,7 +27,7 @@ from PySide6.QtWidgets import (
 )
 
 from app_context import AppContext
-from core.cacher.cacher import Cacher
+from core.cache.cache import Cache
 from core.config.app_config import AppConfig
 from core.utilities.filesystem import get_folder_size
 from core.utilities.logger import Logger
@@ -237,12 +237,12 @@ class AppSettings(SmoothScrollArea):
             )
         )
         self.clear_cache_button.clicked.connect(self.clear_cache)
-        cacher: Cacher = AppContext.get_app().cacher
-        if cacher.path.is_dir():
+        cache: Cache = AppContext.get_app().cache
+        if cache.path.is_dir():
             self.clear_cache_button.setEnabled(True)
             self.clear_cache_button.setText(
                 self.clear_cache_button.text()
-                + f" ({scale_value(get_folder_size(cacher.path))})"
+                + f" ({scale_value(get_folder_size(cache.path))})"
             )
         else:
             self.clear_cache_button.setEnabled(False)
@@ -256,8 +256,8 @@ class AppSettings(SmoothScrollArea):
         self.on_change_signal.emit()
 
     def clear_cache(self) -> None:
-        cacher: Cacher = AppContext.get_app().cacher
-        cacher.clear_caches()
+        cache: Cache = AppContext.get_app().cache
+        cache.clear_caches()
         self.clear_cache_button.setText(
             self.tr(
                 "Clear Cache (This will reset all plugin states "

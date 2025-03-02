@@ -22,12 +22,12 @@ from core.mod_instance.plugin import Plugin
 from core.utilities.filesystem import get_file_identifier
 
 
-class Cacher:
+class Cache:
     """
     Class for managing cache data in SSE-AT/data/cache.
     """
 
-    log = logging.getLogger("Cacher")
+    log = logging.getLogger("Cache")
 
     __plugin_states_cache: dict[str, tuple[bool, Plugin.Status]] = {}
     """

@@ -10,7 +10,7 @@ from enum import auto
 from typing import Any, Optional
 
 from app_context import AppContext
-from core.cacher.cacher import Cacher
+from core.cache.cache import Cache
 from core.masterlist.masterlist import Masterlist
 from core.masterlist.masterlist_entry import MasterlistEntry
 from core.translation_provider.source import Source
@@ -54,9 +54,9 @@ class Provider:
     # Confrérie attributes
     __cdt_api: CDTApi
 
-    def __init__(self, api_key: str, cacher: Cacher, preference: Preference):
+    def __init__(self, api_key: str, cache: Cache, preference: Preference):
         self.preference = preference
-        self.__init_apis(api_key, cacher)
+        self.__init_apis(api_key, cache)
 
         self.user_agent = (
             f"{AppContext.get_app_type().APP_NAME}/"
@@ -65,13 +65,13 @@ class Provider:
             f"{platform.architecture()[0]})"
         )
 
-    def __init_apis(self, api_key: str, cacher: Cacher) -> None:
+    def __init_apis(self, api_key: str, cache: Cache) -> None:
         """
         Initializes APIs according to preference.
         """
 
-        self.__nm_api = NexusModsApi(cacher, api_key)
-        self.__cdt_api = CDTApi(cacher)
+        self.__nm_api = NexusModsApi(cache, api_key)
+        self.__cdt_api = CDTApi(cache)
 
     def check_api_key(self) -> bool:
         """

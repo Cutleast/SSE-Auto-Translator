@@ -21,7 +21,7 @@ from PySide6.QtWidgets import (
 )
 
 from app_context import AppContext
-from core.cacher.cacher import Cacher
+from core.cache.cache import Cache
 from core.config.app_config import AppConfig
 from core.config.user_config import UserConfig
 from core.database.database import TranslationDatabase
@@ -55,7 +55,7 @@ class ModInstanceWidget(QTreeWidget):
 
     log: logging.Logger = logging.getLogger("ModInstance")
 
-    cacher: Cacher
+    cache: Cache
     database: TranslationDatabase
     user_config: UserConfig
     masterlist: Masterlist
@@ -99,7 +99,7 @@ class ModInstanceWidget(QTreeWidget):
         AppContext.get_app().ready_signal.connect(self.__post_init)
 
     def __post_init(self) -> None:
-        self.cacher = AppContext.get_app().cacher
+        self.cache = AppContext.get_app().cache
         self.database = AppContext.get_app().database
         self.user_config = AppContext.get_app().user_config
         self.masterlist = AppContext.get_app().masterlist
@@ -299,7 +299,7 @@ class ModInstanceWidget(QTreeWidget):
 
         if isinstance(current_item, Plugin):
             dialog = StringListDialog(
-                current_item.name, self.cacher.get_plugin_strings(current_item.path)
+                current_item.name, self.cache.get_plugin_strings(current_item.path)
             )
             dialog.show()
 
@@ -307,7 +307,7 @@ class ModInstanceWidget(QTreeWidget):
             strings: dict[str, list[String]] = {}
 
             for plugin in current_item.plugins:
-                plugin_strings = self.cacher.get_plugin_strings(plugin.path)
+                plugin_strings = self.cache.get_plugin_strings(plugin.path)
                 strings[plugin.name] = plugin_strings
 
             dialog = StringListDialog(current_item.name, strings)
@@ -782,5 +782,5 @@ class ModInstanceWidget(QTreeWidget):
             for plugin, item in plugin_items.items()
         }
 
-        cacher: Cacher = AppContext.get_app().cacher
-        cacher.update_plugin_states_cache(plugin_states)
+        cache: Cache = AppContext.get_app().cache
+        cache.update_plugin_states_cache(plugin_states)

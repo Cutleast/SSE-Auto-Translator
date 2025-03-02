@@ -17,7 +17,7 @@ from sse_bsa import BSAArchive
 
 from app_context import AppContext
 from core.archiver.archive import Archive
-from core.cacher.cacher import Cacher
+from core.cache.cache import Cache
 from core.config.user_config import UserConfig
 from core.database.string import String
 from core.database.translation import Translation
@@ -396,11 +396,11 @@ class Importer(QObject):
             list[String]: List of mapped strings
         """
 
-        cacher: Cacher = AppContext.get_app().cacher
+        cache: Cache = AppContext.get_app().cache
 
         translation_plugin = esp.Plugin(translation_plugin_path)
         translation_strings: list[String] = translation_plugin.extract_strings()
-        original_strings: list[String] = cacher.get_plugin_strings(original_plugin_path)
+        original_strings: list[String] = cache.get_plugin_strings(original_plugin_path)
 
         if not translation_strings and not original_strings:
             return []

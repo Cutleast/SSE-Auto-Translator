@@ -15,7 +15,7 @@ import pytz
 import requests as req
 
 from app_context import AppContext
-from core.cacher.cacher import Cacher
+from core.cache.cache import Cache
 
 
 class CDTApi:
@@ -24,14 +24,14 @@ class CDTApi:
     """
 
     user_agent: str
-    cacher: Cacher
+    cache: Cache
 
     scraper: cs.CloudScraper = None
 
     log = logging.getLogger("CDTApi")
 
-    def __init__(self, cacher: Cacher):
-        self.cacher = cacher
+    def __init__(self, cache: Cache):
+        self.cache = cache
 
         self.user_agent = (
             f"{AppContext.get_app_type().APP_NAME}/"
@@ -67,11 +67,11 @@ class CDTApi:
 
         url = f"https://www.confrerie-des-traducteurs.fr/api/skyrim/sse-at/{nm_mod_id}"
 
-        cached = self.cacher.get_from_web_cache(url)
+        cached = self.cache.get_from_web_cache(url)
 
         if cached is None:
             res = req.get(url, headers={"User-Agent": self.user_agent})
-            self.cacher.add_to_web_cache(url, res)
+            self.cache.add_to_web_cache(url, res)
         else:
             res = cached
             self.log.debug(f"Got cached API response for {url!r}.")

@@ -7,7 +7,7 @@ from typing import Optional
 from PySide6.QtCore import QObject, Signal
 
 from app_context import AppContext
-from core.cacher.cacher import Cacher
+from core.cache.cache import Cache
 from core.utilities.container_utils import unique
 
 from .mod import Mod
@@ -215,12 +215,12 @@ class ModInstance(QObject):
             dict[Plugin, bool]: Dictionary of plugins and their checkstate.
         """
 
-        cacher: Cacher = AppContext.get_app().cacher
+        cache: Cache = AppContext.get_app().cache
         check_state: dict[Plugin, bool] = {}
 
         for mod in self.mods:
             for plugin in mod.plugins:
-                checked, plugin.status = cacher.get_from_plugin_states_cache(
+                checked, plugin.status = cache.get_from_plugin_states_cache(
                     plugin.path
                 ) or (True, plugin.Status.NoneStatus)
                 check_state[plugin] = checked

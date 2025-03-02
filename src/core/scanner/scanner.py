@@ -10,7 +10,7 @@ from typing import Optional
 from PySide6.QtCore import QObject
 
 from app_context import AppContext
-from core.cacher.cacher import Cacher
+from core.cache.cache import Cache
 from core.config.app_config import AppConfig
 from core.config.user_config import UserConfig
 from core.database.database import TranslationDatabase
@@ -36,7 +36,7 @@ class Scanner(QObject):
 
     log: logging.Logger = logging.getLogger("Scanner")
 
-    cacher: Cacher
+    cache: Cache
     mod_instance: ModInstance
     database: TranslationDatabase
     app_config: AppConfig
@@ -48,7 +48,7 @@ class Scanner(QObject):
     def __init__(self) -> None:
         super().__init__()
 
-        self.cacher = AppContext.get_app().cacher
+        self.cache = AppContext.get_app().cache
         self.mod_instance = AppContext.get_app().mod_instance
         self.database = AppContext.get_app().database
         self.app_config = AppContext.get_app().app_config
@@ -149,7 +149,7 @@ class Scanner(QObject):
             ldialog.updateProgress(show3=True, text3=self.tr("Extracting strings..."))
 
         self.log.debug("Extracting strings...")
-        plugin_strings: list[String] = self.cacher.get_plugin_strings(plugin.path)
+        plugin_strings: list[String] = self.cache.get_plugin_strings(plugin.path)
         if not len(plugin_strings):
             return Plugin.Status.NoStrings
 
@@ -348,7 +348,7 @@ class Scanner(QObject):
         plugin: Plugin,
         ldialog: Optional[LoadingDialog] = None,
     ) -> Plugin.Status:
-        plugin_strings: list[String] = self.cacher.get_plugin_strings(plugin.path)
+        plugin_strings: list[String] = self.cache.get_plugin_strings(plugin.path)
         translation_map: dict[str, String] = {
             string.id: string for string in translation_strings
         }
@@ -465,7 +465,7 @@ class Scanner(QObject):
     def __search_plugin(self, plugin: Plugin, filter: SearchFilter) -> list[String]:
         result: list[String] = []
 
-        strings: list[String] = self.cacher.get_plugin_strings(plugin.path)
+        strings: list[String] = self.cache.get_plugin_strings(plugin.path)
         for string in strings:
             if matches_filter(filter, string):
                 result.append(string)

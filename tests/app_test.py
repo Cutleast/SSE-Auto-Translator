@@ -14,7 +14,7 @@ sys.path.append(os.path.join(os.getcwd(), "src"))
 
 from app import App
 from app_context import AppContext
-from core.cacher.cacher import Cacher
+from core.cache.cache import Cache
 from core.config.app_config import AppConfig
 from core.config.translator_config import TranslatorConfig
 from core.config.user_config import UserConfig
@@ -75,7 +75,7 @@ class AppTest(BaseTest):
         app.app_config = self.app_config(init=True)
         app.user_config = self.user_config(init=True)
         app.translator_config = self.translator_config(init=True)
-        app.cacher = self.cacher(init=True)
+        app.cache = self.cache(init=True)
         app.database = self.database(init=True)
         app.mod_instance = self.modinstance(init=True)
         app.provider = self.provider(init=True)
@@ -142,24 +142,24 @@ class AppTest(BaseTest):
 
         return TranslatorConfig(self.data_path() / "data" / "translator")
 
-    def cacher(self, init: bool = False) -> Cacher:
+    def cache(self, init: bool = False) -> Cache:
         """
-        Creates a cacher instance in the temporary test folder.
+        Creates a cache instance in the temporary test folder.
 
-        Returns the created `Cacher` instance from the `AppContext` singleton
+        Returns the created `Cache` instance from the `AppContext` singleton
         or initializes a new one if `init` is `True`.
 
         Args:
-            init (bool, optional): Toggles whether to initialize a new `Cacher`
+            init (bool, optional): Toggles whether to initialize a new `Cache`
 
         Returns:
-            Cacher: The created `Cacher` instance
+            Cache: The created `Cache` instance
         """
 
         if AppContext.has_app() and not init:
-            return AppContext.get_app().cacher
+            return AppContext.get_app().cache
 
-        return Cacher(self.tmp_folder() / "cache")
+        return Cache(self.tmp_folder() / "cache")
 
     def scanner(self, init: bool = False) -> Scanner:
         """
@@ -265,9 +265,9 @@ class AppTest(BaseTest):
         user_config: UserConfig = self.user_config()
         api_key: str = user_config.api_key
         preference: Provider.Preference = user_config.provider_preference
-        cacher: Cacher = self.cacher()
+        cache: Cache = self.cache()
 
-        return Provider(api_key, cacher, preference)
+        return Provider(api_key, cache, preference)
 
     def modinstance(self, init: bool = False) -> ModInstance:
         """
