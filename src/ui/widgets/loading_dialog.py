@@ -34,6 +34,7 @@ taskbar = cc.CreateObject(
 )
 
 T = TypeVar("T")
+V = TypeVar("V")
 
 
 class LoadingDialog(QDialog, Generic[T]):
@@ -44,7 +45,6 @@ class LoadingDialog(QDialog, Generic[T]):
 
     Parameters:
         parent: Optional[QWidget]
-        app: main.MainApp
         func: function or method that is called in a background thread
     """
 
@@ -57,7 +57,9 @@ class LoadingDialog(QDialog, Generic[T]):
 
     parent_hwnd: Optional[int] = None
 
-    def __init__(self, parent: Optional[QWidget], func: Callable[["LoadingDialog"], T]):
+    def __init__(
+        self, parent: Optional[QWidget], func: Callable[["LoadingDialog"], T]
+    ) -> None:
         super().__init__(parent)
 
         # Force focus
@@ -180,19 +182,19 @@ class LoadingDialog(QDialog, Generic[T]):
             progress: dict ('value': int, 'max': int, 'text': str)
         """
 
-        text1: str = progress.get("text", None)
-        value1: int = progress.get("value", None)
-        max1: int = progress.get("max", None)
+        text1: Optional[str] = progress.get("text", None)
+        value1: Optional[int] = progress.get("value", None)
+        max1: Optional[int] = progress.get("max", None)
 
-        show2: bool = progress.get("show2", None)
-        text2: str = progress.get("text2", None)
-        value2: int = progress.get("value2", None)
-        max2: int = progress.get("max2", None)
+        show2: Optional[bool] = progress.get("show2", None)
+        text2: Optional[str] = progress.get("text2", None)
+        value2: Optional[int] = progress.get("value2", None)
+        max2: Optional[int] = progress.get("max2", None)
 
-        show3: bool = progress.get("show3", None)
-        value3: int = progress.get("value3", None)
-        max3: int = progress.get("max3", None)
-        text3: str = progress.get("text3", None)
+        show3: Optional[bool] = progress.get("show3", None)
+        value3: Optional[int] = progress.get("value3", None)
+        max3: Optional[int] = progress.get("max3", None)
+        text3: Optional[str] = progress.get("text3", None)
 
         # Update first row (always shown)
         if max1 is not None:
@@ -383,26 +385,26 @@ class LoadingDialog(QDialog, Generic[T]):
 
     @staticmethod
     def run_callable(
-        parent: Optional[QWidget], target: Callable[["LoadingDialog"], T]
-    ) -> T:
+        parent: Optional[QWidget], target: Callable[["LoadingDialog"], V]
+    ) -> V:
         """
         Runs a callable in a loading dialog.
 
         Args:
             parent (Optional[QWidget]): Parent widget.
-            target (Callable[[LoadingDialog], T]): Callable to run.
+            target (Callable[[LoadingDialog], V]): Callable to run.
 
         Raises:
             Exception: If callable raises an exception.
 
         Returns:
-            T: Return value of callable
+            V: Return value of callable
         """
 
         ldialog = LoadingDialog(parent, target)
         ldialog.exec()
 
-        result: T | Exception = ldialog._thread.get_result()
+        result: V | Exception = ldialog._thread.get_result()
 
         if isinstance(result, Exception):
             raise result
