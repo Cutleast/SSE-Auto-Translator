@@ -1235,43 +1235,43 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
         <translation>Priorität</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="471"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="467"/>
         <source>Creating translation...</source>
         <translation>Übersetzung wird erstellt...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="494"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="490"/>
         <source>Importing installed translation...</source>
         <translation>Installierte Übersetzungen werden importiert...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="525"/>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="715"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="521"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="711"/>
         <source>Success!</source>
         <translation>Erfolgreich!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="528"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="524"/>
         <source>Translation successfully imported into database.</source>
         <translation>Übersetzung erfolgreich in die Datenbank importiert.</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="717"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="713"/>
         <source>Created output mod for DSD at: </source>
         <translation>Output-Mod für DSD an diesem Ort erstellt: </translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="724"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="720"/>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="727"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="723"/>
         <source>Open output mod in Explorer</source>
         <translation>Output-Mod im Explorer öffnen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="729"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="725"/>
         <source>Open DSD modpage on Nexus Mods</source>
         <translation>DSD auf Nexus Mods öffnen</translation>
     </message>
