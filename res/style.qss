@@ -38,7 +38,7 @@ QMenu {
 }
 QMenu {
     background: #292929;
-    /* background: #202020; */
+    border: 1px solid #303030;
     margin: 4px;
     padding: 4px;
     padding-right: 24px;
@@ -265,10 +265,6 @@ QTextEdit, QPlainTextEdit {
 
 
 /* Spinbox */
-QSpinBox,
-QDoubleSpinBox {
-    height: 40px;
-}
 QSpinBox::up-button, QSpinBox::down-button,
 QDoubleSpinBox::up-button, QDoubleSpinBox::down-button {
     border: 0px;
@@ -306,8 +302,8 @@ QComboBox::down-arrow {
 QComboBox QAbstractItemView,
 QComboBox QAbstractItemView#completer_popup {
     border-radius: 4px;
-    border: 0px solid;
-    background-color: #202020;
+    border: 1px solid #303030;
+    background-color: #292929;
     color: #ffffff;
     font-family: Arial;
     font-size: 14px;
@@ -330,7 +326,8 @@ QComboBox QAbstractItemView#completer_popup::item:selected {
 
 /* Tooltips */
 QToolTip {
-    background: #202020;
+    background: #292929;
+    border: 1px solid #303030;
     color: #ffffff;
     spacing: 5px;
     border: 0px;
