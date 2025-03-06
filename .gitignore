@@ -6,6 +6,7 @@
 /experiments
 /main.dist
 /qt_lupdate.json
+/res/loc/*.qm
 /src/resources_rc.py
 .coverage
 .pytest_cache
