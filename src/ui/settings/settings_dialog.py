@@ -240,7 +240,7 @@ class SettingsDialog(QDialog):
             choice = messagebox.exec()
 
             if choice == QMessageBox.StandardButton.Yes:
-                exe_path: str = AppContext.get_app().executable
+                exe_path: str = AppContext.get_app().get_execution_command()
                 if os.path.isfile(exe_path):
                     os.startfile(exe_path)
                 QApplication.exit()
