@@ -8,37 +8,72 @@ from typing import Optional
 
 import win32api
 
-log: logging.Logger = logging.getLogger("Utilities.Localisation")
+from .constants import SUPPORTED_LANGS, SUPPORTED_LOCALES
 
 
-SUPPORTED_LOCALES: list[str] = ["de_DE", "en_US", "ru_RU", "zh_CN"]
-
-
-def detect_system_locale() -> Optional[str]:
+class LocalisationUtils:
     """
-    Attempts to detect the system locale.
-
-    Returns:
-        str: System locale
+    Class for utilities related to localisation.
     """
 
-    log.info("Detecting system locale...")
+    log: logging.Logger = logging.getLogger("LocalisationUtils")
 
-    system_locale: Optional[str] = None
+    @classmethod
+    def detect_preferred_lang(cls) -> Optional[str]:
+        """
+        Attempts to detect the preferred language for the translations and the game based
+        on the system locale.
 
-    try:
-        language_id = win32api.GetUserDefaultLangID()
-        system_language = locale.windows_locale[language_id]
-        log.debug(f"Detected system language: {system_language}")
+        Returns:
+            Optional[str]:
+                Preferred language or None if the system language is not supported.
+        """
 
-        if system_language in SUPPORTED_LOCALES:
-            system_locale = system_language
-        else:
-            log.warning(
-                "Detected system language is not supported! Falling back to en_US..."
-            )
+        cls.log.info("Detecting system language...")
 
-    except Exception as ex:
-        log.error(f"Failed to get system language: {ex}", exc_info=ex)
+        langs: dict[str, str] = {lang[1]: lang[0] for lang in SUPPORTED_LANGS}
+        pref_lang: Optional[str] = None
 
-    return system_locale
+        try:
+            language_id: int = win32api.GetUserDefaultLangID()
+            system_language: str = locale.windows_locale[language_id]
+            cls.log.debug(f"Detected system language: {system_language}")
+
+            pref_lang = langs.get(system_language)
+            if pref_lang is None:
+                cls.log.warning("Detected system language is not supported!")
+
+        except Exception as ex:
+            cls.log.error(f"Failed to get system language: {ex}", exc_info=ex)
+
+        return pref_lang
+
+    @classmethod
+    def detect_system_locale(cls) -> Optional[str]:
+        """
+        Attempts to detect the system locale.
+
+        Returns:
+            str: System locale
+        """
+
+        cls.log.info("Detecting system locale...")
+
+        system_locale: Optional[str] = None
+
+        try:
+            language_id = win32api.GetUserDefaultLangID()
+            system_language = locale.windows_locale[language_id]
+            cls.log.debug(f"Detected system language: {system_language}")
+
+            if system_language in SUPPORTED_LOCALES:
+                system_locale = system_language
+            else:
+                cls.log.warning(
+                    "Detected system language is not supported! Falling back to en_US..."
+                )
+
+        except Exception as ex:
+            cls.log.error(f"Failed to get system language: {ex}", exc_info=ex)
+
+        return system_locale

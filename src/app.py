@@ -42,7 +42,7 @@ from core.translator_api.translator import Translator
 from core.utilities.container_utils import unique
 from core.utilities.exception_handler import ExceptionHandler
 from core.utilities.exe_info import get_current_path, get_execution_info
-from core.utilities.localisation import detect_system_locale
+from core.utilities.localisation import LocalisationUtils
 from core.utilities.logger import Logger
 from core.utilities.masterlist import get_masterlist
 from core.utilities.qt_res_provider import read_resource
@@ -380,7 +380,7 @@ class App(QApplication):
 
         language: str
         if self.app_config.language == "System":
-            language = detect_system_locale() or "en_US"
+            language = LocalisationUtils.detect_system_locale() or "en_US"
         else:
             language = self.app_config.language
 

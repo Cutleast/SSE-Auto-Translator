@@ -4,7 +4,7 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-from typing import override
+from typing import Optional, override
 
 from PySide6.QtCore import QEvent, QObject
 from PySide6.QtGui import QWheelEvent
@@ -20,6 +20,7 @@ from PySide6.QtWidgets import (
 
 from core.translation_provider.provider import Provider
 from core.utilities.constants import SUPPORTED_LANGS
+from core.utilities.localisation import LocalisationUtils
 from ui.startup_dialog.page import Page
 from ui.widgets.api_setup import ApiSetup
 from ui.widgets.completion_box import CompletionBox
@@ -143,6 +144,11 @@ class SetupPage(Page):
 
         self.__lang_dropdown.currentTextChanged.connect(lambda _: self._validate())
         self.__api_setup.valid_signal.connect(lambda _: self._validate())
+
+        # Preselect system language if supported
+        system_lang: Optional[str] = LocalisationUtils.detect_preferred_lang()
+        if system_lang is not None:
+            self.__lang_dropdown.setCurrentText(system_lang.capitalize())
 
     @override
     def _get_title(self) -> str:
