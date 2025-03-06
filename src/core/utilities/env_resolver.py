@@ -8,13 +8,14 @@ from pathlib import Path
 from typing import Optional, overload
 
 
-@overload  # type: ignore[no-overload-impl]
-def resolve(text: str, **vars: str) -> str:
+@overload
+def resolve(text: str, sep: tuple[str, str] = ("%", "%"), **vars: str) -> str:
     """
     Resolves all (environment) variables in a string.
 
     Args:
         text (str): String with (environment) variables
+        sep (tuple[str, str], optional): Variable indicators, for eg. `("{", "}")`
         vars (str): Additional variables to resolve
 
     Returns:
@@ -23,12 +24,13 @@ def resolve(text: str, **vars: str) -> str:
 
 
 @overload
-def resolve(path: Path, **vars: str) -> Path:
+def resolve(path: Path, sep: tuple[str, str] = ("%", "%"), **vars: str) -> Path:
     """
     Resolves all (environment) variables in a path.
 
     Args:
         path (Path): Path with (environment) variables
+        sep (tuple[str, str], optional): Variable indicators, for eg. `("{", "}")`
         vars (str): Additional variables to resolve
 
     Returns:
@@ -70,12 +72,13 @@ def resolve_path(path: Path, sep: tuple[str, str] = ("%", "%"), **vars: str) -> 
     return Path().joinpath(*parts)
 
 
-def resolve_str(text: str, **vars: str) -> str:
+def resolve_str(text: str, sep: tuple[str, str] = ("%", "%"), **vars: str) -> str:
     """
     Resolves all (environment) variables in a string.
 
     Args:
         text (str): String with (environment) variables
+        sep (tuple[str, str], optional): Variable indicators, for eg. `("{", "}")`
         vars (str): Additional variables to resolve
 
     Returns:
@@ -96,8 +99,10 @@ def resolve_str(text: str, **vars: str) -> str:
     return text
 
 
-def resolve(text_or_path: str | Path, **vars: str) -> str | Path:  # type: ignore[no-redef]
+def resolve(  # type: ignore
+    text_or_path: str | Path, sep: tuple[str, str] = ("%", "%"), **vars: str
+) -> str | Path:
     if isinstance(text_or_path, Path):
-        return resolve_path(text_or_path, **vars)  # type: ignore[arg-type]
+        return resolve_path(text_or_path, sep, **vars)
     else:
-        return resolve_str(text_or_path, **vars)
+        return resolve_str(text_or_path, sep, **vars)

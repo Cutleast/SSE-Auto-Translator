@@ -546,7 +546,7 @@ class NexusModsApi:
         if isinstance(response, bytes):
             response = response.decode()
         res_data = json.loads(response)
-        token: str = res_data["data"]["connection_token"]  # noqa: F841
+        token: str = res_data["data"]["connection_token"]  # type: ignore  # noqa: F841
 
         self.log.debug("Opening page in Web Browser...")
         url = f"https://www.nexusmods.com/sso?id={uuid}&application={self.application_slug}"
@@ -739,7 +739,7 @@ class NexusModsApi:
                 Download details (mod id, file id, key, expires and user id).
         """
 
-        scheme, netloc, path, params, query, fragment = urllib.parse.urlparse(url)
+        scheme, netloc, path, params, query, fragment = urllib.parse.urlparse(url)  # type: ignore
 
         path_parts = Path(path).parts
         game: str = netloc

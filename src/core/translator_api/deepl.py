@@ -4,7 +4,7 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-from typing import Optional
+from typing import Optional, override
 
 import deepl
 import googletrans
@@ -45,6 +45,7 @@ class DeepLTranslator(Translator):
         else:
             self.glossary = None
 
+    @override
     def mass_translate(self, texts: list[str], src: str, dst: str) -> dict[str, str]:
         result: dict[str, str] = {}
 
@@ -57,15 +58,18 @@ class DeepLTranslator(Translator):
 
         return result
 
+    @override
     def translate(self, text: str, src: str, dst: str) -> str:
         if text not in self.cache:
             # Get language codes from DeepLTranslator.langs
             # and googletrans.LANGCODES as fallback
             src_code = self.langs.get(
-                src.lower(), googletrans.LANGCODES.get(src.lower(), src)
+                src.lower(),
+                googletrans.LANGCODES.get(src.lower(), src),  # type: ignore
             )
             dst_code = self.langs.get(
-                dst.lower(), googletrans.LANGCODES.get(dst.lower(), dst)
+                dst.lower(),
+                googletrans.LANGCODES.get(dst.lower(), dst),  # type: ignore
             )
 
             result: deepl.TextResult

@@ -5,7 +5,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 from pathlib import Path
-from typing import Any
+from typing import Any, override
 
 from PySide6.QtCore import QEvent, QObject, Signal
 from PySide6.QtGui import QWheelEvent
@@ -371,6 +371,7 @@ class UserSettings(SmoothScrollArea):
         self.user_config.enable_sound_files = self.enable_sound_files_box.isChecked()
         self.user_config.save()
 
+    @override
     def eventFilter(self, source: QObject, event: QEvent) -> bool:
         if (
             event.type() == QEvent.Type.Wheel

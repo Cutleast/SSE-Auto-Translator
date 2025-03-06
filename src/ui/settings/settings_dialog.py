@@ -6,6 +6,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 import logging
 import os
+from typing import override
 
 from PySide6.QtGui import QCloseEvent
 from PySide6.QtWidgets import (
@@ -106,6 +107,7 @@ class SettingsDialog(QDialog):
         self.save_button.setDisabled(False)
         self.setWindowTitle(self.tr("Settings") + "*")
 
+    @override
     def closeEvent(self, event: QCloseEvent) -> None:
         """
         Cancels dialog and asks for confirmation

@@ -131,9 +131,10 @@ class ExceptionHandler(QObject):
                 # Walk through the traceback to find the last frame
                 # (where the exception was raised)
                 tb: TracebackType = exc_traceback
+                frame: FrameType = tb.tb_frame
                 while tb.tb_next:
                     tb = tb.tb_next
-                    frame: FrameType = tb.tb_frame
+                    frame = tb.tb_frame
                     frame_locals[tb.tb_frame.f_code.co_qualname] = tb.tb_frame.f_locals
                 # Get local variables from the frame
                 locals_from_exception = frame.f_locals

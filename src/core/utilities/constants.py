@@ -114,5 +114,10 @@ SUPPORTED_LANGS: list[tuple[str, str]] = [
     ("spanish", "es_ES"),
 ]
 """
-A list of supported languages.
+A list of supported languages for the game.
+"""
+
+SUPPORTED_LOCALES: list[str] = ["de_DE", "en_US", "ru_RU", "zh_CN"]
+"""
+A list of locales that are available for this app.
 """

@@ -105,10 +105,7 @@ class Provider:
         Returns: `(rem_hreq, rem_dreq)`
         """
 
-        if (
-            self.__nm_api is not None
-            and self.preference != Provider.Preference.OnlyConfrerie
-        ):
+        if self.preference != Provider.Preference.OnlyConfrerie:
             return (self.__nm_api.rem_hreq, self.__nm_api.rem_dreq)
 
         return (-1, -1)
@@ -365,7 +362,7 @@ class Provider:
             and self.preference != Provider.Preference.OnlyNexusMods
         ):
             cdt_timestamp = self.__cdt_api.get_timestamp_of_file(mod_id)
-            if cdt_timestamp is not None and timestamp is not None:
+            if cdt_timestamp is not None:
                 return cdt_timestamp > timestamp
 
         return False

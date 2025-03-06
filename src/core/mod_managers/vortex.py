@@ -6,7 +6,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 import logging
 from pathlib import Path
-from typing import Any, Optional
+from typing import Any, Optional, override
 
 import plyvel as ldb
 
@@ -31,6 +31,7 @@ class Vortex(ModManager):
 
     log = logging.getLogger("ModManager.Vortex")
 
+    @override
     def get_instances(self) -> list[str]:
         self.log.info("Getting profiles...")
 
@@ -66,6 +67,7 @@ class Vortex(ModManager):
 
         return instances
 
+    @override
     def get_instance_profiles(
         self, instance_name: str, instance_path: Path | None = None
     ) -> list[str]:
@@ -73,6 +75,7 @@ class Vortex(ModManager):
         # have "subprofiles" like MO2 instances
         return []
 
+    @override
     def load_mod_instance(
         self,
         instance_name: str,
@@ -202,7 +205,7 @@ class Vortex(ModManager):
                 if "id" in reference:
                     ref_modname: str = reference["id"].strip()
                 elif "fileExpression" in reference:
-                    ref_modname: str = reference["fileExpression"].strip()  # type: ignore
+                    ref_modname: str = reference["fileExpression"].strip()
                 else:
                     continue
 

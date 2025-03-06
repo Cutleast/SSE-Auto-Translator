@@ -17,7 +17,7 @@ class CopyLineEdit(QLineEdit):
     """
 
     def __init__(self, *args: Any, **kwargs: dict[str, Any]):
-        super().__init__(*args, **kwargs)  # type: ignore[call-overload]
+        super().__init__(*args, **kwargs)
 
         self.copy_action = self.addAction(
             qta.icon("fa5s.copy", color="#ffffff"),

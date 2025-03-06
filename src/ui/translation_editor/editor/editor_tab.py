@@ -5,7 +5,7 @@ Copyright (c) Cutleast
 import os
 import re
 from pathlib import Path
-from typing import Optional
+from typing import Optional, override
 
 import pyperclip
 from PySide6.QtCore import Qt, Signal
@@ -110,7 +110,7 @@ class EditorTab(QWidget):
         hlayout.addWidget(self.__search_bar)
 
         self.__bar_chart = StackedBar(
-            [0 for s in String.Status],
+            [0 for _ in String.Status],
             colors=[
                 String.Status.get_color(s) or Qt.GlobalColor.white
                 for s in String.Status
@@ -290,6 +290,7 @@ class EditorTab(QWidget):
         )
         return string
 
+    @override
     def update(self) -> None:
         """
         Updates visible string list.

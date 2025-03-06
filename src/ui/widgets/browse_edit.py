@@ -19,7 +19,7 @@ class BrowseLineEdit(QLineEdit):
     __file_dialog: QFileDialog
 
     def __init__(self, *args: Any, **kwargs: dict[str, Any]) -> None:
-        super().__init__(*args, **kwargs)  # type: ignore[call-overload]
+        super().__init__(*args, **kwargs)
 
         self.__file_dialog = QFileDialog()
 
@@ -46,7 +46,7 @@ class BrowseLineEdit(QLineEdit):
         Redirects `args` and `kwargs` to constructor of `QFileDialog`.
         """
 
-        self.__file_dialog = QFileDialog(*args, **kwargs)  # type: ignore[call-overload]
+        self.__file_dialog = QFileDialog(*args, **kwargs)
 
     def setFileMode(self, mode: QFileDialog.FileMode) -> None:
         """

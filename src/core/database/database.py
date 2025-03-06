@@ -100,17 +100,16 @@ class TranslationDatabase(QObject):
 
         result: list[String] = []
 
-        if self.__vanilla_translation._strings is not None:
-            result += [
-                string
-                for plugin_strings in self.__vanilla_translation._strings.values()
-                for string in plugin_strings
-            ]
+        result += [
+            string
+            for plugin_strings in self.__vanilla_translation.strings.values()
+            for string in plugin_strings
+        ]
 
         result += [
             string
             for translation in self.__user_translations
-            for plugin_strings in (translation._strings or {}).values()
+            for plugin_strings in (translation.strings or {}).values()
             for string in plugin_strings
             if string.status != String.Status.TranslationRequired
         ]
@@ -130,7 +129,7 @@ class TranslationDatabase(QObject):
         self.__vanilla_translation = translation
 
         self.log.info(
-            f"Loaded vanilla database for {len(translation._strings or {})} base game plugin(s)."
+            f"Loaded vanilla database for {len(translation.strings)} base game plugin(s)."
         )
 
     def __load_user_database(self) -> None:
@@ -280,7 +279,7 @@ class TranslationDatabase(QObject):
             save (bool, optional): Whether to save the database. Defaults to True.
         """
 
-        if translation.path is not None and translation.path.is_dir():
+        if translation.path.is_dir():
             rmtree(translation.path)
         if translation in self.__user_translations:
             self.__user_translations.remove(translation)
@@ -390,8 +389,7 @@ class TranslationDatabase(QObject):
                 Name of the plugin to apply database to. Defaults to None.
         """
 
-        if translation._strings is None:
-            return
+        translation_strings: Optional[dict[str, list[String]]] = translation.strings
 
         installed_translations: list[Translation] = [
             self.__vanilla_translation
@@ -399,16 +397,16 @@ class TranslationDatabase(QObject):
 
         database_originals: dict[str, String] = {
             string.original_string: string
-            for _translation in installed_translations
-            for _plugin_name, plugin_strings in (_translation._strings or {}).items()
-            if _translation != translation or _plugin_name != plugin_name
+            for t in installed_translations
+            for _plugin_name, plugin_strings in t.strings.items()
+            if t != translation or _plugin_name != plugin_name
             for string in plugin_strings
             if string.status != String.Status.TranslationRequired
         }
         database_strings: dict[str, String] = {
             string.id: string
-            for translation in installed_translations
-            for plugin_strings in (translation._strings or {}).values()
+            for t in installed_translations
+            for plugin_strings in t.strings.values()
             for string in plugin_strings
             if string.status != String.Status.TranslationRequired
         }
@@ -417,13 +415,13 @@ class TranslationDatabase(QObject):
         if plugin_name is not None:
             strings = [
                 string
-                for string in translation._strings[plugin_name]
+                for string in translation_strings[plugin_name]
                 if string.status == String.Status.TranslationRequired
             ]
         else:
             strings = [
                 string
-                for plugin_strings in translation._strings.values()
+                for plugin_strings in translation_strings.values()
                 for string in plugin_strings
                 if string.status == String.Status.TranslationRequired
             ]
@@ -544,7 +542,7 @@ class TranslationDatabase(QObject):
             translation_path: Path = self.userdb_path / self.language / translation_name
             translation = Translation(name=translation_name, path=translation_path)
 
-        translation_strings: dict[str, list[String]] = translation._strings or {}
+        translation_strings: dict[str, list[String]] = translation.strings or {}
         for plugin in plugins:
             plugin_strings: list[String] = cache.get_plugin_strings(plugin.path)
 
@@ -592,10 +590,7 @@ class TranslationDatabase(QObject):
         for translation in translations:
             self.log.debug(f"Searching translation {translation.name!r}...")
 
-            if translation._strings is None:
-                continue
-
-            for plugin, strings in translation._strings.items():
+            for plugin, strings in translation.strings.items():
                 self.log.debug(f"Searching plugin translation {plugin!r}...")
 
                 for string in strings:
@@ -643,7 +638,7 @@ class TranslationDatabase(QObject):
                 Whether to save the changes to the database. Defaults to True.
         """
 
-        if translation.path is None or not translation.path.is_dir():
+        if not translation.path.is_dir():
             raise FileNotFoundError(f"{translation.name!r} is not in database!")
 
         old_name: str = translation.name

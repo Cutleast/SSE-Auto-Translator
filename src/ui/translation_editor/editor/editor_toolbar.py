@@ -9,7 +9,7 @@ from PySide6.QtCore import QSize
 from PySide6.QtGui import QAction
 from PySide6.QtWidgets import QCheckBox, QToolBar, QWidgetAction
 
-from core.database.database import String
+from core.database.string import String
 from ui.widgets.menu import Menu
 
 

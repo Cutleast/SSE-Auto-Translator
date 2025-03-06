@@ -3,7 +3,7 @@ Copyright (c) Cutleast
 """
 
 import logging
-from typing import Optional
+from typing import Optional, override
 
 from PySide6.QtCore import Signal
 from PySide6.QtGui import QCloseEvent, QKeySequence, QShortcut
@@ -73,6 +73,7 @@ class MainWindow(QMainWindow):
         self.__refresh_shortcut = QShortcut(QKeySequence("F5"), self)
         self.__refresh_shortcut.activated.connect(self.refresh)
 
+    @override
     def update(self) -> None:
         """
         Updates the displayed tabs for main page and translation editor.

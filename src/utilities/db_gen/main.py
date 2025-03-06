@@ -5,9 +5,9 @@ Copyright (c) Cutleast
 import json
 import logging
 import sys
-from argparse import ArgumentParser, Namespace, _SubParsersAction
+from argparse import ArgumentParser, Namespace, _SubParsersAction  # type: ignore
 from pathlib import Path
-from typing import Any, NoReturn, Optional
+from typing import Any, NoReturn, Optional, override
 
 from sse_bsa import BSAArchive
 
@@ -53,9 +53,11 @@ class DbGen(Utility):
     the interface file.
     """
 
+    @override
     def __repr__(self) -> str:
         return "DbGen"
 
+    @override
     def add_subparser(self, subparsers: _SubParsersAction) -> None:
         subparser: ArgumentParser = subparsers.add_parser(
             DbGen.COMMAND, help=DbGen.HELP
@@ -71,7 +73,8 @@ class DbGen(Utility):
             *DbGen.OUTPUT_PATH_ARG_NAMES, help=DbGen.OUTPUT_PATH_ARG_HELP
         )
 
-    def run(self, args: Namespace, exit: bool = True) -> None | NoReturn:  # type: ignore[return]
+    @override
+    def run(self, args: Namespace, exit: bool = True) -> None | NoReturn:
         activated: bool = (
             hasattr(args, DbGen.INPUT_FOLDER_ARG_NAME)
             and hasattr(args, DbGen.STRINGS_FOLDER_ARG_NAME)
@@ -80,7 +83,7 @@ class DbGen(Utility):
 
         if not activated:
             # Just continue with normal execution since module was not enabled
-            return  # type: ignore[return-value]
+            return
 
         input_folder_name: Optional[str] = getattr(args, DbGen.INPUT_FOLDER_ARG_NAME)
         strings_folder_name: Optional[str] = getattr(

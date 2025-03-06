@@ -5,7 +5,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, override
 
 from core.mod_instance.mod import Mod
 from core.translation_provider.source import Source
@@ -52,5 +52,6 @@ class FileDownload:
     Whether the download is stale and should be removed as soon as a thread picks it up.
     """
 
+    @override
     def __hash__(self) -> int:
         return hash((self.source.name, self.mod_id, self.file_id, self.file_name))

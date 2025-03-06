@@ -148,7 +148,7 @@ class MainPageWidget(QWidget):
         hlayout.addWidget(nexus_mods_button)
 
         self.__bar_chart = StackedBar(
-            [0 for s in Plugin.Status],
+            [0 for _ in Plugin.Status],
             colors=[Plugin.Status.get_color(s) for s in Plugin.Status],
         )
         self.__bar_chart.setFixedHeight(3)

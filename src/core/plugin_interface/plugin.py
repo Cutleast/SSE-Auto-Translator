@@ -4,7 +4,7 @@ Copyright (c) Cutleast
 
 import logging
 from pathlib import Path
-from typing import Optional
+from typing import Optional, override
 
 from core.database.string import String as PluginString
 
@@ -36,12 +36,14 @@ class Plugin:
 
         self.load()
 
+    @override
     def __repr__(self) -> str:
         return utils.prettyprint_object(self)
 
     def __len__(self) -> int:
         return len(self.dump())
 
+    @override
     def __str__(self) -> str:
         return self.__repr__()
 
@@ -236,7 +238,7 @@ class Plugin:
         for child in group.children:
             if isinstance(child, Record):
                 records.append(child)
-            elif isinstance(child, Group) and recursive:
+            elif recursive:
                 records.extend(Plugin.extract_group_records(child, recursive))
 
         return records

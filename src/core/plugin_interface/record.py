@@ -5,7 +5,7 @@ Copyright (c) Cutleast
 import logging
 import zlib
 from io import BytesIO
-from typing import Optional
+from typing import Optional, override
 
 from .datatypes import Hex, Integer
 from .flags import RecordFlags
@@ -32,6 +32,7 @@ class Record:
 
     log = logging.getLogger("PluginParser")
 
+    @override
     def __repr__(self) -> str:
         return prettyprint_object(self)
 

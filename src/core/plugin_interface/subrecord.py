@@ -4,7 +4,7 @@ Copyright (c) Cutleast
 
 import logging
 from io import BytesIO
-from typing import Optional
+from typing import Optional, override
 
 from .datatypes import Float, Hex, Integer, RawString, Stream
 from .flags import RecordFlags
@@ -27,9 +27,11 @@ class Subrecord:
         if type is not None:
             self.type = type
 
+    @override
     def __repr__(self) -> str:
         return prettyprint_object(self)
 
+    @override
     def __str__(self) -> str:
         return str(self.__dict__)
 
@@ -61,6 +63,7 @@ class HEDR(Subrecord):
     records_num: int
     next_object_id: str
 
+    @override
     def parse(self, stream: Stream, header_flags: RecordFlags) -> None:
         super().parse(stream, header_flags)
 
@@ -70,6 +73,7 @@ class HEDR(Subrecord):
         self.records_num = Integer.parse(stream, Integer.IntType.UInt32)
         self.next_object_id = Hex.parse(stream)
 
+    @override
     def dump(self) -> bytes:
         self.data = b""
 
@@ -87,11 +91,13 @@ class EDID(Subrecord):
 
     editor_id: RawString
 
+    @override
     def parse(self, stream: Stream, header_flags: RecordFlags) -> None:
         super().parse(stream, header_flags)
 
         self.editor_id = RawString.parse(self.data, RawString.StrType.ZString)  # type: ignore
 
+    @override
     def dump(self) -> bytes:
         self.data = RawString.dump(self.editor_id, RawString.StrType.ZString)
 
@@ -107,6 +113,7 @@ class StringSubrecord(Subrecord):
 
     log = logging.getLogger("PluginParser.StringSubrecord")
 
+    @override
     def parse(self, stream: Stream, header_flags: RecordFlags) -> None:
         super().parse(stream, header_flags)
 
@@ -126,6 +133,7 @@ class StringSubrecord(Subrecord):
 
         self.string = RawString.from_str(string, encoding)
 
+    @override
     def dump(self) -> bytes:
         if isinstance(self.string, int):
             self.data = Integer.dump(self.string, Integer.IntType.UInt32)
@@ -143,11 +151,13 @@ class MAST(Subrecord):
 
     file: RawString
 
+    @override
     def parse(self, stream: Stream, header_flags: RecordFlags) -> None:
         super().parse(stream, header_flags)
 
         self.file = RawString.parse(self.data, RawString.StrType.ZString)  # type: ignore
 
+    @override
     def dump(self) -> bytes:
         self.data = RawString.dump(self.file, RawString.StrType.ZString)
 
@@ -161,6 +171,7 @@ class XXXX(Subrecord):
 
     field_size: int
 
+    @override
     def parse(self, stream: Stream, header_flags: RecordFlags) -> None:
         super().parse(stream, header_flags)
 
@@ -168,6 +179,7 @@ class XXXX(Subrecord):
         # Add header and data of following subrecord to this
         self.data = stream.read(self.field_size + 6)
 
+    @override
     def dump(self) -> bytes:
         data = b""
 
@@ -193,6 +205,7 @@ class TRDT(Subrecord):
     use_emo_anim: int
     junk2: bytes
 
+    @override
     def parse(self, stream: Stream, header_flags: RecordFlags) -> None:
         super().parse(stream, header_flags)
 
@@ -207,6 +220,7 @@ class TRDT(Subrecord):
         self.use_emo_anim = Integer.parse(stream, Integer.IntType.UInt8)
         self.junk2 = stream.read(3)
 
+    @override
     def dump(self) -> bytes:
         self.data = b""
 
@@ -229,11 +243,13 @@ class QOBJ(Subrecord):
 
     index: int
 
+    @override
     def parse(self, stream: Stream, header_flags: RecordFlags) -> None:
         super().parse(stream, header_flags)
 
-        self.index = Integer.parse(self.data, Integer.IntType.Int16)
+        self.index = Integer.parse(self.data, Integer.IntType.Int16)  # type: ignore
 
+    @override
     def dump(self) -> bytes:
         self.data = Integer.dump(self.index, Integer.IntType.Int16)
 
@@ -247,11 +263,13 @@ class EPFT(Subrecord):
 
     perk_type: int
 
+    @override
     def parse(self, stream: Stream, header_flags: RecordFlags) -> None:
         super().parse(stream, header_flags)
 
         self.perk_type = Integer.parse(self.data, Integer.IntType.UInt8)
 
+    @override
     def dump(self) -> bytes:
         self.data = Integer.dump(self.perk_type, Integer.IntType.UInt8)
 

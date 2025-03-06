@@ -4,7 +4,7 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-from typing import Any
+from typing import Any, override
 
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QIcon, QKeySequence, QPixmap
@@ -17,7 +17,7 @@ class ShortcutButton(QPushButton):
     """
 
     def __init__(self, *args: Any, **kwargs: dict[str, Any]) -> None:
-        super().__init__(*args, **kwargs)  # type: ignore[call-overload]
+        super().__init__(*args, **kwargs)
 
         hlayout = QHBoxLayout()
         hlayout.setContentsMargins(7, 0, 7, 0)
@@ -69,11 +69,13 @@ class ShortcutButton(QPushButton):
 
         self.updateSizeHint()
 
+    @override
     def setText(self, text: str) -> None:
         self.__label.setText(text)
 
         self.updateSizeHint()
 
+    @override
     def setIcon(self, icon: QIcon | QPixmap) -> None:
         if isinstance(icon, QPixmap):
             self.__icon_label.setPixmap(icon)

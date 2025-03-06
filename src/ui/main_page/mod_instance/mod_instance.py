@@ -401,7 +401,7 @@ class ModInstanceWidget(QTreeWidget):
                 current_item.name
             )
 
-        elif isinstance(current_item, Mod):
+        else:
             translation = self.database.get_translation_by_mod(current_item)
 
         if translation is not None:
@@ -427,7 +427,7 @@ class ModInstanceWidget(QTreeWidget):
             translation = self.database.get_translation_by_plugin_name(
                 current_item.name
             )
-        elif isinstance(current_item, Mod):
+        else:
             translation = self.database.get_translation_by_mod(current_item)
 
         if translation is not None:
@@ -449,7 +449,7 @@ class ModInstanceWidget(QTreeWidget):
             translation = self.database.get_translation_by_plugin_name(
                 current_item.name
             )
-        elif isinstance(current_item, Mod):
+        else:
             translation = self.database.get_translation_by_mod(current_item)
 
         self.database.highlight_signal.emit(translation)

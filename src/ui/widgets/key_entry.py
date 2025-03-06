@@ -18,7 +18,7 @@ class KeyEntry(QLineEdit):
     __is_visible = False
 
     def __init__(self, *args: Any, **kwargs: dict[str, Any]):
-        super().__init__(*args, **kwargs)  # type: ignore[call-overload]
+        super().__init__(*args, **kwargs)
 
         self.setEchoMode(QLineEdit.EchoMode.Password)
 

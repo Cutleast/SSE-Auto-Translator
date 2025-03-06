@@ -2,7 +2,7 @@
 Copyright (c) Cutleast
 """
 
-from typing import Callable, Generic, TypeVar
+from typing import Callable, Generic, TypeVar, override
 
 from PySide6.QtCore import QEventLoop, QThread
 from PySide6.QtWidgets import QWidget
@@ -51,6 +51,7 @@ class BlockingThread(QThread, Generic[T]):
 
         return self.__return_result
 
+    @override
     def run(self) -> None:
         """
         Runs the target function, storing its return value.

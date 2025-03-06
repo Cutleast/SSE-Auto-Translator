@@ -24,7 +24,7 @@ class EditorHelpDialog(QDialog):
     Dialog for showing help about the string states.
     """
 
-    def __init__(self, parent: QWidget) -> None:
+    def __init__(self, parent: Optional[QWidget] = None) -> None:
         super().__init__(parent)
 
         self.setModal(True)

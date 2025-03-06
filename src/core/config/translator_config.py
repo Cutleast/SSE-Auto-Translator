@@ -4,6 +4,7 @@ Copyright (c) Cutleast
 
 import logging
 from pathlib import Path
+from typing import Optional
 
 from core.translator_api import AVAILABLE_APIS
 from core.translator_api.translator import Translator
@@ -39,7 +40,7 @@ class TranslatorConfig(BaseConfig):
         self._settings["translator"] = translator.name
 
     @property
-    def api_key(self) -> str:
+    def api_key(self) -> Optional[str]:
         """
         The API key for the translator API.
         """
@@ -47,9 +48,9 @@ class TranslatorConfig(BaseConfig):
         return self._settings["api_key"]
 
     @api_key.setter
-    def api_key(self, key: str) -> None:
+    def api_key(self, key: Optional[str]) -> None:
         if key is not None:
-            TranslatorConfig.validate_type(key, str)
+            TranslatorConfig.validate_type(key, str, may_be_none=True)
 
         self._settings["api_key"] = key
 

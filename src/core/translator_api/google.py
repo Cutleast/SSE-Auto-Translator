@@ -4,6 +4,8 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+from typing import override
+
 import googletrans
 from googletrans.client import Translated
 
@@ -28,14 +30,17 @@ class GoogleTranslator(Translator):
 
         self.translator = googletrans.Translator()
 
+    @override
     def mass_translate(self, texts: list[str], src: str, dst: str) -> dict[str, str]:
         # Get language codes from DeepLTranslator.langs
         # and googletrans.LANGCODES as fallback
         src_code = self.langs.get(
-            src.lower(), googletrans.LANGCODES.get(src.lower(), src)
+            src.lower(),
+            googletrans.LANGCODES.get(src.lower(), src),  # type: ignore
         )
         dst_code = self.langs.get(
-            dst.lower(), googletrans.LANGCODES.get(dst.lower(), dst)
+            dst.lower(),
+            googletrans.LANGCODES.get(dst.lower(), dst),  # type: ignore
         )
 
         result: dict[str, str] = {}
@@ -47,7 +52,7 @@ class GoogleTranslator(Translator):
 
         translated_items: list[Translated] = self.translator.translate(
             to_translate, dst_code, src_code
-        )
+        )  # type: ignore
 
         for translated_item in translated_items:
             self.cache[translated_item.origin] = translated_item.text
@@ -58,17 +63,20 @@ class GoogleTranslator(Translator):
 
         return result
 
+    @override
     def translate(self, text: str, src: str, dst: str) -> str:
         if text not in self.cache:
             # Get language codes from DeepLTranslator.langs
             # and googletrans.LANGCODES as fallback
             src_code = self.langs.get(
-                src.lower(), googletrans.LANGCODES.get(src.lower(), src)
+                src.lower(),
+                googletrans.LANGCODES.get(src.lower(), src),  # type: ignore
             )
             dst_code = self.langs.get(
-                dst.lower(), googletrans.LANGCODES.get(dst.lower(), dst)
+                dst.lower(),
+                googletrans.LANGCODES.get(dst.lower(), dst),  # type: ignore
             )
 
-            self.cache[text] = self.translator.translate(text, dst_code, src_code).text
+            self.cache[text] = self.translator.translate(text, dst_code, src_code).text  # type: ignore
 
         return self.cache[text]

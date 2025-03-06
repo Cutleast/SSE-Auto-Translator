@@ -3,6 +3,7 @@ Copyright (c) Cutleast
 """
 
 from dataclasses import dataclass
+from typing import override
 
 import pytest
 
@@ -26,6 +27,7 @@ class TestContainerUtils:
             age: int
             num_of_children: int
 
+            @override
             def __hash__(self) -> int:
                 return hash((self.name, self.age, self.num_of_children))
 

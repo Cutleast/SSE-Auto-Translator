@@ -3,6 +3,7 @@ Copyright (c) Cutleast
 """
 
 import os
+from typing import override
 
 import pyperclip as clipboard
 import qtawesome as qta
@@ -77,6 +78,7 @@ class StatusBar(QStatusBar):
     def __post_init(self) -> None:
         AppContext.get_app().timer_signal.connect(self.update)
 
+    @override
     def update(self) -> None:
         """
         Updates status labels and API limit label.

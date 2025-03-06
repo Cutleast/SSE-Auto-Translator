@@ -9,7 +9,7 @@ import sys
 from datetime import datetime
 from io import TextIOWrapper
 from pathlib import Path
-from typing import Callable, TextIO
+from typing import Callable, Optional, TextIO
 
 from .base_enum import BaseEnum
 from .datetime import datetime_format_to_regex
@@ -37,8 +37,8 @@ class Logger(logging.Logger):
     __root_logger: logging.Logger
     __log_handler: logging.StreamHandler
 
-    __stdout: TextIO
-    __stderr: TextIO
+    __stdout: Optional[TextIO]
+    __stderr: Optional[TextIO]
 
     __log_file_path: Path
     __log_file: TextIOWrapper

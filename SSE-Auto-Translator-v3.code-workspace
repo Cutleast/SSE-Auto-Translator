@@ -34,22 +34,16 @@
 		},
 		"python.testing.pytestEnabled": true,
 		"python.testing.unittestEnabled": false,
-		"python.testing.pytestArgs": [
-			"--log-level=DEBUG"
-		],
 		"xml.format.maxLineWidth": 0,
-		"mypy-type-checker.args": [
-			"--no-namespace-packages"
-		],
-		"mypy-type-checker.interpreter": [
-			"${workspaceFolder}\\.venv\\Scripts\\python.exe"
-		],
-		"mypy-type-checker.ignorePatterns": [
-			"SSE-AT/**/*.py",
-			"SSE-AT/**/*.pyi"
-		],
-		"mypy-type-checker.reportingScope": "workspace",
-		"debugpy.debugJustMyCode": false
+		"debugpy.debugJustMyCode": false,
+		"python.analysis.autoFormatStrings": true,
+		"python.analysis.autoImportCompletions": true,
+		"python.analysis.completeFunctionParens": true,
+		"python.analysis.diagnosticMode": "workspace",
+		"python.analysis.generateWithTypeAnnotation": true,
+		"python.analysis.languageServerMode": "full",
+		"python.analysis.typeCheckingMode": "strict",
+		"git.diagnosticsCommitHook.Enabled": true
 	},
 	"launch": {
 		"version": "0.2.0",

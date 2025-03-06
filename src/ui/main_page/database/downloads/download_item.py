@@ -17,7 +17,7 @@ from core.utilities.scale import scale_value
 from ui.widgets.progress_widget import ProgressWidget
 
 
-class DownloadItem(QTreeWidgetItem, QObject):  # type: ignore[misc]
+class DownloadItem(QTreeWidgetItem, QObject):
     """
     Class for items in the Downloads tab.
 

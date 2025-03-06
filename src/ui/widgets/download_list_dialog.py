@@ -7,7 +7,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import logging
-from typing import Optional
+from typing import Optional, override
 
 import qtawesome as qta
 from PySide6.QtCore import QEvent, QObject, Qt
@@ -237,6 +237,7 @@ class DownloadListDialog(QDialog):
         self.download_manager.start()
         self.close()
 
+    @override
     def eventFilter(self, source: QObject, event: QEvent) -> bool:
         if (
             event.type() == QEvent.Type.Wheel

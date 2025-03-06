@@ -4,8 +4,8 @@ Copyright (c) Cutleast
 
 import logging
 from abc import abstractmethod
-from argparse import Namespace, _SubParsersAction
-from typing import NoReturn
+from argparse import Namespace, _SubParsersAction  # type: ignore
+from typing import NoReturn, override
 
 
 class Utility:
@@ -19,6 +19,7 @@ class Utility:
         self.log = logging.getLogger(self.__repr__())
 
     @abstractmethod
+    @override
     def __repr__(self) -> str: ...
 
     @abstractmethod

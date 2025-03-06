@@ -122,7 +122,7 @@ class UserConfig(BaseConfig):
     @instance_path.setter
     def instance_path(self, value: Optional[Path]) -> None:
         UserConfig.validate_type(value, Path, may_be_none=True)
-        UserConfig.validate_value(value, lambda value: value.is_dir(), may_be_none=True)
+        UserConfig.validate_value(value, lambda value: value.is_dir(), may_be_none=True)  # type: ignore
 
         self._settings["instance_path"] = str(value)
 
@@ -222,7 +222,8 @@ class UserConfig(BaseConfig):
     def author_blacklist(self, value: list[str]) -> None:
         # UserConfig.validate_type(value, list[str])
         UserConfig.validate_value(
-            value, lambda value: all(isinstance(author, str) for author in value)
+            value,
+            lambda value: all(isinstance(author, str) for author in value),  # type: ignore
         )
 
         self._settings["author_blacklist"] = value
@@ -239,7 +240,8 @@ class UserConfig(BaseConfig):
     def plugin_ignorelist(self, value: list[str]) -> None:
         # UserConfig.validate_type(value, list[str])
         UserConfig.validate_value(
-            value, lambda value: all(isinstance(plugin, str) for plugin in value)
+            value,
+            lambda value: all(isinstance(plugin, str) for plugin in value),  # type: ignore
         )
 
         self._settings["plugin_ignorelist"] = value

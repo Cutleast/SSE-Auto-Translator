@@ -6,7 +6,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 import logging
 import time
-from typing import Any, Callable, Generic, Optional, TypeVar
+from typing import Any, Callable, Generic, Optional, TypeVar, override
 
 import comtypes.client as cc
 from PySide6.QtCore import Qt, QTimerEvent, Signal
@@ -263,6 +263,7 @@ class LoadingDialog(QDialog, Generic[T]):
                     self.parent_hwnd, self.pbar1.value(), self.pbar1.maximum()
                 )
 
+    @override
     def timerEvent(self, event: QTimerEvent) -> None:
         """
         Callback for timer timeout.
@@ -357,6 +358,7 @@ class LoadingDialog(QDialog, Generic[T]):
         self.pbar3.setValue(1)
         self.accept()
 
+    @override
     def closeEvent(self, event: QCloseEvent, confirmation: bool = False) -> None:
         if not confirmation:
             message_box = QMessageBox(self)

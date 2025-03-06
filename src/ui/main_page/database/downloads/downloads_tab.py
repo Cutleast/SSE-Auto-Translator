@@ -2,6 +2,8 @@
 Copyright (c) Cutleast
 """
 
+from typing import override
+
 import qtawesome as qta
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QColor, QShowEvent
@@ -108,6 +110,7 @@ class DownloadsTab(QWidget):
         )
         self.__vlayout.addWidget(self.__downloads_widget)
 
+    @override
     def showEvent(self, event: QShowEvent) -> None:
         super().showEvent(event)
 

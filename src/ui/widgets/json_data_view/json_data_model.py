@@ -2,7 +2,7 @@
 Copyright (c) Cutleast
 """
 
-from typing import Any, Optional, TypeAlias, TypeVar, overload
+from typing import Any, Generic, Optional, TypeAlias, TypeVar, overload, override
 
 from PySide6.QtCore import (
     QAbstractItemModel,
@@ -20,7 +20,7 @@ T = TypeVar("T")
 ModelIndex: TypeAlias = QModelIndex | QPersistentModelIndex
 
 
-class JsonDataModel(QAbstractItemModel):
+class JsonDataModel(QAbstractItemModel, Generic[T]):
     """
     Model for the JsonDataView widget.
     """
@@ -34,9 +34,11 @@ class JsonDataModel(QAbstractItemModel):
 
         self.clear()
 
+    @override
     def columnCount(self, parent: Optional[ModelIndex] = None) -> int:
         return len(JsonDataModel.COLUMN_NAMES)
 
+    @override
     def data(self, index: ModelIndex, role: Optional[int] = None) -> Optional[Any]:
         if not index.isValid():
             return None
@@ -51,7 +53,7 @@ class JsonDataModel(QAbstractItemModel):
     def clear(self) -> None:
         self.load(None)
 
-    def load(self, obj: T) -> None:
+    def load(self, obj: Optional[T]) -> None:
         self.beginResetModel()
 
         self.root_item = JsonDataModel.createItem(name="", value=obj)
@@ -59,9 +61,11 @@ class JsonDataModel(QAbstractItemModel):
 
         self.endResetModel()
 
+    @override
     def setData(self, index: ModelIndex, value: Any, role: Qt.ItemDataRole) -> bool:
         return False
 
+    @override
     def canFetchMore(self, index: ModelIndex) -> bool:
         if not index.isValid():
             return False
@@ -69,6 +73,7 @@ class JsonDataModel(QAbstractItemModel):
         item: DataItem = index.internalPointer()
         return not item.isLoaded
 
+    @override
     def fetchMore(self, index: ModelIndex) -> None:
         self.beginInsertRows(index, index.row(), index.row())
 
@@ -77,6 +82,7 @@ class JsonDataModel(QAbstractItemModel):
 
         self.endInsertRows()
 
+    @override
     def headerData(
         self, section: int, orientation: Qt.Orientation, role: Qt.ItemDataRole
     ) -> Any:
@@ -86,6 +92,7 @@ class JsonDataModel(QAbstractItemModel):
         if orientation == Qt.Orientation.Horizontal:
             return JsonDataModel.COLUMN_NAMES[section]
 
+    @override
     def rowCount(self, index: ModelIndex) -> int:
         if index.column() > 0:
             return 0
@@ -98,6 +105,7 @@ class JsonDataModel(QAbstractItemModel):
 
         return item.childCount()
 
+    @override
     def index(self, row: int, column: int, parent: ModelIndex) -> ModelIndex:
         if not self.hasIndex(row, column, parent):
             return QModelIndex()
@@ -117,6 +125,7 @@ class JsonDataModel(QAbstractItemModel):
 
         return QModelIndex()
 
+    @override
     def parent(self, index: ModelIndex) -> ModelIndex:
         if not index.isValid():
             return QModelIndex()
@@ -145,7 +154,7 @@ class JsonDataModel(QAbstractItemModel):
 
     @staticmethod
     def createItem(
-        name: str, value: T, parent: Optional[DataItem] = None
+        name: str, value: T | list | dict, parent: Optional[DataItem] = None
     ) -> DataItem[T] | ListItem | DictItem:
         match value:
             case list():

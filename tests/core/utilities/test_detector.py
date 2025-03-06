@@ -4,6 +4,7 @@ Copyright (c) Cutleast
 
 import os
 import sys
+from typing import Optional
 
 import pytest
 
@@ -51,7 +52,7 @@ class TestLangDetector:
         detector: LangDetector = self.setup(target_language)
 
         # when
-        real_output: Language = detector.detect_lang(text)
+        real_output: Optional[Language] = detector.detect_lang(text)
 
         # then
         assert real_output == expected_output

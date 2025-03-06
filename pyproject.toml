@@ -37,13 +37,65 @@ dependencies = [
 [dependency-groups]
 dev = [
     "cx-freeze>=7.2.10",
-    "mypy>=1.15.0",
     "nuitka>=2.6.7",
     "pyinstaller>=6.12.0",
     "pyinstaller-versionfile>=3.0.0",
+    "pyright>=1.1.396",
     "pytest>=8.3.4",
     "pytest-cov>=6.0.0",
     "pytest-qt>=4.4.0",
     "ruff==0.9.7",
     "types-requests>=2.32.0.20241016",
 ]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+log_cli = true
+log_cli_level = "DEBUG"
+log_cli_format = "[%(asctime)s.%(msecs)03d][%(levelname)s][%(name)s.%(funcName)s]: %(message)s"
+
+[tool.pyright]
+include = ["src", "tests"]
+typeCheckingMode = "standard"
+exclude = ["**/__pycache__"]
+
+# Check here for a full list of options: https://github.com/microsoft/pyright/blob/main/docs/configuration.md#diagnostic-settings-defaults
+deprecateTypingAliases = false
+reportConstantRedefinition = true
+reportDeprecated = "warning"
+reportDuplicateImport = true
+reportIncompleteStub = "warning"
+reportIncompatibleMethodOverride = false
+reportInconsistentConstructor = "warning"
+reportImplicitOverride = "warning"
+reportInvalidStubStatement = "warning"
+reportMatchNotExhaustive = false
+reportMissingImports = "error"
+reportMissingParameterType = "error"
+reportMissingTypeArgument = false
+reportMissingTypeStubs = false
+reportPrivateUsage = "warning"
+reportShadowedImports = "warning"
+reportTypeCommentUsage = "information"
+reportUnknownArgumentType = false
+reportUnknownLambdaType = false
+reportUnknownMemberType = false
+reportUnknownParameterType = false
+reportUnknownVariableType = false
+reportUnnecessaryCast = "information"
+reportUnnecessaryComparison = "information"
+reportUnnecessaryContains = "information"
+reportUnnecessaryIsInstance = "information"
+reportUnnecessaryTypeIgnoreComment = "information"
+reportUnusedClass = "warning"
+reportUnusedImport = "warning"
+reportUnusedFunction = "warning"
+reportUnusedVariable = "warning"
+reportUntypedBaseClass = "error"
+reportUntypedClassDecorator = "error"
+reportUntypedFunctionDecorator = "error"
+reportUntypedNamedTuple = "error"
+reportWildcardImportFromLibrary = "warning"
+strictDictionaryInference = true
+strictListInference = true
+strictSetInference = true

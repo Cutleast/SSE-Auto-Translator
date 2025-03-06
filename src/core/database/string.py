@@ -6,7 +6,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 from dataclasses import field
 from enum import auto
-from typing import Any, Iterable, Optional, TypeVar
+from typing import Any, Iterable, Optional, TypeVar, override
 
 from pydantic.dataclasses import dataclass
 from PySide6.QtGui import QColor
@@ -221,11 +221,13 @@ class String:
 
         return f"{self.form_id[2:].lower()}###{self.editor_id}###{self.type}###{self.index}"
 
+    @override
     def __hash__(self) -> int:
         return hash(
             (self.id, self.original_string, self.translated_string, self.status)
         )
 
+    @override
     def __eq__(self, value: Any) -> bool:
         if not isinstance(value, String):
             return False

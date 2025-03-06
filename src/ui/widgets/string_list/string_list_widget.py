@@ -146,9 +146,7 @@ class StringListWidget(QWidget):
         )
 
         for string, item in self.__string_items.items():
-            string_text: str = string.type + string.original_string
-            if string.form_id is not None:
-                string_text += string.form_id
+            string_text: str = string.type + string.original_string + string.form_id
             if string.editor_id is not None:
                 string_text += string.editor_id
             if string.translated_string is not None:
@@ -253,7 +251,7 @@ class StringListWidget(QWidget):
         item = QTreeWidgetItem(
             [
                 string.type,
-                string.form_id if string.form_id is not None else "",
+                string.form_id,
                 string.editor_id if string.editor_id is not None else "",
                 str(string.index) if string.index is not None else "",
                 trim_string(string.original_string),
@@ -262,8 +260,7 @@ class StringListWidget(QWidget):
         )
 
         item.setToolTip(0, string.type)
-        if string.form_id is not None:
-            item.setToolTip(1, string.form_id)
+        item.setToolTip(1, string.form_id)
         if string.editor_id is not None:
             item.setToolTip(2, string.editor_id)
         item.setToolTip(4, string.original_string)

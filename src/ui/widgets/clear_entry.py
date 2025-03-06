@@ -17,7 +17,7 @@ class ClearEntry(QLineEdit):
     """
 
     def __init__(self, *args: Any, **kwargs: dict[str, Any]):
-        super().__init__(*args, **kwargs)  # type: ignore[call-overload]
+        super().__init__(*args, **kwargs)
 
         hlayout = QHBoxLayout()
         hlayout.setContentsMargins(0, 0, 0, 0)

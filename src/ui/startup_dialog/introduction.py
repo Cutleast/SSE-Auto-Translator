@@ -6,6 +6,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 import os
 from pathlib import Path
+from typing import override
 
 from PySide6.QtWidgets import QLabel, QPushButton
 
@@ -25,14 +26,17 @@ class IntroductionPage(Page):
         self._back_button.setText("Exit")
         self.valid_signal.emit(True)
 
+    @override
     def _get_title(self) -> str:
         return self.tr("Welcome!")
 
+    @override
     def _get_description(self) -> str:
         return self.tr(
             "This Guide will help you setting up this Tool for your modlist."
         )
 
+    @override
     def _init_form(self) -> None:
         documentation_button = QPushButton(self.tr("Open Documentation"))
         documentation_button.clicked.connect(AppContext.get_app().open_documentation)
@@ -56,9 +60,11 @@ class IntroductionPage(Page):
 
         self._vlayout.addStretch()
 
+    @override
     def _validate(self) -> None:
         return None
 
+    @override
     def get_values(self) -> None:
         return None
 

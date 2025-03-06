@@ -229,9 +229,6 @@ class Importer(QObject):
         if ldialog:
             ldialog.updateProgress(text1=self.tr("Copying files..."))
 
-        if translation.path is None:
-            raise ValueError("Translation path is None!")
-
         if os.listdir(output_folder):
             self.log.info(f"Moving output to {str(translation.path)!r}...")
             shutil.move(

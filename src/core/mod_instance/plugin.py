@@ -7,7 +7,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 from dataclasses import dataclass
 from enum import IntEnum
 from pathlib import Path
-from typing import Optional
+from typing import Optional, override
 
 from PySide6.QtGui import QColor
 from PySide6.QtWidgets import QApplication
@@ -160,5 +160,6 @@ class Plugin:
 
     status: Status = Status.NoneStatus
 
+    @override
     def __hash__(self) -> int:
         return hash((self.name.lower(), str(self.path).lower()))

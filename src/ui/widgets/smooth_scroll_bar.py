@@ -6,6 +6,8 @@ Original code from here:
 and adapted for usage in SSE-AT.
 """
 
+from typing import override
+
 from PySide6.QtCore import QEasingCurve, QPropertyAnimation, Signal
 from PySide6.QtGui import QMouseEvent
 from PySide6.QtWidgets import QScrollBar, QWidget
@@ -37,6 +39,7 @@ class SmoothScrollBar(QScrollBar):
         self.__moveEventSignal.emit()
         return
 
+    @override
     def setValue(self, value: int) -> None:
         if value == self.value():
             return
@@ -64,16 +67,19 @@ class SmoothScrollBar(QScrollBar):
     def resetValue(self, value: int) -> None:
         self.__value = value
 
+    @override
     def mousePressEvent(self, event: QMouseEvent) -> None:
         self.__animation.stop()
         super().mousePressEvent(event)
         self.__value = self.value()
 
+    @override
     def mouseReleaseEvent(self, event: QMouseEvent) -> None:
         self.__animation.stop()
         super().mouseReleaseEvent(event)
         self.__value = self.value()
 
+    @override
     def mouseMoveEvent(self, event: QMouseEvent) -> None:
         self.__animation.stop()
         super().mouseMoveEvent(event)

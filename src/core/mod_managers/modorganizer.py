@@ -7,6 +7,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 import logging
 import os
 from pathlib import Path
+from typing import override
 
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
@@ -26,6 +27,7 @@ class ModOrganizer(ModManager):
 
     log = logging.getLogger("ModManager.ModOrganizer")
 
+    @override
     def get_instances(self) -> list[str]:
         self.log.info("Getting instances...")
 
@@ -57,6 +59,7 @@ class ModOrganizer(ModManager):
 
         return instances
 
+    @override
     def load_mod_instance(
         self,
         instance_name: str,
@@ -190,6 +193,7 @@ class ModOrganizer(ModManager):
 
         return mod_instance
 
+    @override
     def get_instance_profiles(
         self, instance_name: str, instance_path: Path | None = None
     ) -> list[str]:

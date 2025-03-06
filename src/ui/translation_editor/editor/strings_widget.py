@@ -2,7 +2,7 @@
 Copyright (c) Cutleast
 """
 
-from typing import Optional
+from typing import Optional, override
 
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QFont
@@ -109,7 +109,7 @@ class StringsWidget(QTreeWidget):
         item = QTreeWidgetItem(
             [
                 string.type,
-                string.form_id if string.form_id is not None else "",
+                string.form_id,
                 string.editor_id if string.editor_id is not None else "",
                 trim_string(string.original_string),
                 trim_string(string.translated_string or string.original_string),
@@ -130,6 +130,7 @@ class StringsWidget(QTreeWidget):
             if not only_visible or not string_item.isHidden()
         ]
 
+    @override
     def update(self) -> None:
         """
         Updates the strings widget.

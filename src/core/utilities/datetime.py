@@ -75,9 +75,6 @@ def to_timestamp(time_string: str) -> float:
     Converts `time_string` into a UNIX timestamp.
     """
 
-    if time_string is None:
-        return 0.0
-
     if fnmatch(time_string, "*.*.* *:*"):
         return time.mktime(time.strptime(time_string, "%d.%m.%Y %H:%M"))
     else:

@@ -95,8 +95,10 @@ class BlacklistDialog(QDialog):
 
         search_bar = SearchBar()
 
-        def search(text: str) -> None:
-            case_sensitive = search_bar.__cs_toggle.isChecked()
+        def search(text_filter: tuple[str, bool]) -> None:
+            text: str
+            case_sensitive: bool
+            text, case_sensitive = text_filter
 
             for rindex in range(blacklist_widget.count()):
                 if case_sensitive:
@@ -108,7 +110,7 @@ class BlacklistDialog(QDialog):
 
                 blacklist_widget.setRowHidden(rindex, not item_visible)
 
-        search_bar.textChanged.connect(search)
+        search_bar.searchChanged.connect(search)
         vlayout.addWidget(search_bar)
 
         blacklist_widget = QListWidget()

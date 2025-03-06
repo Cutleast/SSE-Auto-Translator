@@ -5,7 +5,7 @@ Copyright (c) Cutleast
 import logging
 import os
 from pathlib import Path
-from typing import Optional
+from typing import Optional, override
 
 from PySide6.QtCore import QItemSelectionModel, Qt, QUrl, Signal
 from PySide6.QtGui import QDragEnterEvent, QDragMoveEvent, QDropEvent
@@ -172,9 +172,7 @@ class TranslationsWidget(QTreeWidget):
             )
 
     def _create_translation_item(self, translation: Translation) -> QTreeWidgetItem:
-        translation_size: Optional[int] = (
-            get_folder_size(translation.path) if translation.path is not None else None
-        )
+        translation_size: int = get_folder_size(translation.path)
         item = QTreeWidgetItem(
             [
                 translation.name,
@@ -185,7 +183,7 @@ class TranslationsWidget(QTreeWidget):
                     if translation.timestamp is not None
                     else ""
                 ),
-                scale_value(translation_size) if translation_size is not None else "",
+                scale_value(translation_size),
             ]
         )
         item.addChildren(
@@ -198,8 +196,7 @@ class TranslationsWidget(QTreeWidget):
             item.setToolTip(
                 3, fmt_timestamp(translation.timestamp, "%d.%m.%Y %H:%M:%S")
             )
-        if translation_size is not None:
-            item.setToolTip(4, f"{translation_size} Bytes")
+        item.setToolTip(4, f"{translation_size} Bytes")
 
         return item
 
@@ -233,6 +230,7 @@ class TranslationsWidget(QTreeWidget):
         else:
             item.setExpanded(not item.isExpanded())
 
+    @override
     def dragEnterEvent(self, event: QDragEnterEvent) -> None:
         if (
             all(
@@ -246,6 +244,7 @@ class TranslationsWidget(QTreeWidget):
 
         super().dragEnterEvent(event)
 
+    @override
     def dragMoveEvent(self, event: QDragMoveEvent) -> None:
         if (
             all(
@@ -259,6 +258,7 @@ class TranslationsWidget(QTreeWidget):
 
         super().dragMoveEvent(event)
 
+    @override
     def dropEvent(self, event: QDropEvent) -> None:
         urls: list[QUrl] = event.mimeData().urls()
 
@@ -463,11 +463,7 @@ class TranslationsWidget(QTreeWidget):
     def open_in_explorer(self) -> None:
         current_item: Optional[Translation | str] = self.get_current_item()
 
-        if (
-            isinstance(current_item, Translation)
-            and current_item.path is not None
-            and current_item.path.is_dir()
-        ):
+        if isinstance(current_item, Translation) and current_item.path.is_dir():
             os.startfile(current_item.path)
 
     def set_name_filter(self, name_filter: tuple[str, bool]) -> None:

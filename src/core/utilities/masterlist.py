@@ -43,10 +43,10 @@ def get_masterlist(language: str, cache: bool = True) -> dict[str, dict]:
             f"https://raw.githubusercontent.com/{REPO_OWNER}/{REPO_NAME}/{BRANCH}/{INDEX_PATH}"
         )
 
-        res = req.get(url, timeout=3)  # type: ignore[arg-type]
+        res: req.Response = req.get(url, timeout=3)
 
         if res.status_code == 200:
-            data = res.content.decode()
+            data: str = res.content.decode()
             index: dict[str, str] = json.loads(data)
 
             url = index.get(language)

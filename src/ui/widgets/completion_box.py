@@ -4,7 +4,7 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-from typing import Sequence
+from typing import Sequence, override
 
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QComboBox, QCompleter
@@ -20,6 +20,7 @@ class CompletionBox(QComboBox):
 
         self.setEditable(True)
 
+    @override
     def addItems(self, texts: Sequence[str]) -> None:
         super().addItems(texts)
 

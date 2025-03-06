@@ -3,7 +3,7 @@ Copyright (c) Cutleast
 """
 
 import sys
-from argparse import ArgumentParser, Namespace, _SubParsersAction
+from argparse import ArgumentParser, Namespace, _SubParsersAction  # type: ignore
 
 from app import App
 from app_context import AppContext

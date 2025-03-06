@@ -4,6 +4,8 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+from typing import override
+
 from PySide6.QtCore import QEvent, QObject
 from PySide6.QtGui import QWheelEvent
 from PySide6.QtWidgets import (
@@ -40,6 +42,7 @@ class SetupPage(Page):
     __textures_box: QCheckBox
     __sound_files_box: QCheckBox
 
+    @override
     def _init_form(self) -> None:
         # TODO: Move the scroll area to the Page class
         self.__scroll_area = SmoothScrollArea()
@@ -141,9 +144,11 @@ class SetupPage(Page):
         self.__lang_dropdown.currentTextChanged.connect(lambda _: self._validate())
         self.__api_setup.valid_signal.connect(lambda _: self._validate())
 
+    @override
     def _get_title(self) -> str:
         return self.tr("Initial Setup")
 
+    @override
     def _get_description(self) -> str:
         return self.tr("On this page you setup basic settings.")
 
@@ -160,6 +165,7 @@ class SetupPage(Page):
                 Provider.Preference.OnlyNexusMods.name
             )
 
+    @override
     def _validate(self) -> None:
         lang_items: list[str] = [lang[0].capitalize() for lang in SUPPORTED_LANGS]
 
@@ -169,6 +175,7 @@ class SetupPage(Page):
             and self.__api_setup.is_valid
         )
 
+    @override
     def get_values(self) -> tuple[str, str, str, bool, bool, bool, bool, bool]:
         return (
             self.__lang_dropdown.currentText(),
@@ -181,6 +188,7 @@ class SetupPage(Page):
             self.__sound_files_box.isChecked(),
         )
 
+    @override
     def eventFilter(self, source: QObject, event: QEvent) -> bool:
         if (
             event.type() == QEvent.Type.Wheel

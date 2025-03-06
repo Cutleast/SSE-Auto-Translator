@@ -6,7 +6,7 @@ import qtawesome as qta
 from PySide6.QtGui import QAction, QCursor, QKeySequence
 from PySide6.QtWidgets import QCheckBox, QWidgetAction
 
-from core.database.database import String
+from core.database.string import String
 from ui.widgets.menu import Menu
 
 

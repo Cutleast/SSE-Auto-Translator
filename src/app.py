@@ -12,7 +12,7 @@ import tempfile
 import time
 from argparse import Namespace
 from pathlib import Path
-from typing import Any, Callable, Optional
+from typing import Any, Callable, Optional, override
 
 import jstyleson as json
 from PySide6.QtCore import Qt, QTimerEvent, QTranslator, Signal
@@ -25,7 +25,7 @@ from PySide6.QtWidgets import (
     QVBoxLayout,
 )
 
-import resources_rc  # noqa: F401
+import resources_rc  # type: ignore # noqa: F401
 from core.cache.cache import Cache
 from core.config.app_config import AppConfig
 from core.config.translator_config import TranslatorConfig
@@ -150,6 +150,7 @@ class App(QApplication):
 
         self.log_basic_info()
 
+    @override
     def exec(self) -> int:
         self.log.info("Application started.")
 
@@ -424,6 +425,7 @@ class App(QApplication):
 
         return self.tmp_path
 
+    @override
     def timerEvent(self, event: QTimerEvent) -> None:
         super().timerEvent(event)
 

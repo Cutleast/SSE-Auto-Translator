@@ -5,7 +5,7 @@ Copyright (c) Cutleast
 import logging
 from pathlib import Path
 from queue import Empty, Queue
-from typing import Optional
+from typing import Optional, override
 
 from PySide6.QtCore import QThread, Signal
 
@@ -188,6 +188,7 @@ class Worker(QThread):
             else:
                 raise MappingFailedError
 
+    @override
     def run(self) -> None:
         self.log.info("Thread started.")
         self.running = True

@@ -58,15 +58,15 @@ class NXMHandler(QObject):
     def __listen(self) -> None:
         with zmq.Context() as self.__context:
             self.__socket = self.__context.socket(zmq.REP)
-            self.__socket.bind(f"tcp://127.0.0.1:{NXMHandler.PORT}")
+            self.__socket.bind(f"tcp://127.0.0.1:{NXMHandler.PORT}")  # type: ignore
 
             while self.__listening:
-                request: str = self.__socket.recv_string()
+                request: str = self.__socket.recv_string()  # type: ignore
 
                 self.log.debug(f"Received download request: {request!r}")
                 self.request_signal.emit(request)
 
-                self.__socket.send_string("SUCCESS")
+                self.__socket.send_string("SUCCESS")  # type: ignore
 
     def unbind(self) -> None:
         """
@@ -107,7 +107,7 @@ class NXMHandler(QObject):
 
         try:
             with winreg.OpenKey(winreg.HKEY_CLASSES_ROOT, self.REG_PATH) as hkey:
-                self.prev_value: str = winreg.QueryValue(hkey, None)
+                self.prev_value = winreg.QueryValue(hkey, None)
         except FileNotFoundError:
             self.prev_value = None
 

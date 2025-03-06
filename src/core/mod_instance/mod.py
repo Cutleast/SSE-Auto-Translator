@@ -7,7 +7,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 from dataclasses import dataclass
 from fnmatch import fnmatch
 from pathlib import Path
-from typing import Optional
+from typing import Optional, override
 
 from sse_bsa import BSAArchive
 from virtual_glob import InMemoryPath, glob
@@ -42,7 +42,7 @@ class Mod:
     file_id: int
     version: str
 
-    __files: Optional[list[str]] = None
+    __files: Optional[list[str]] = None  # type: ignore
 
     @property
     def files(self) -> list[str]:
@@ -101,5 +101,6 @@ class Mod:
 
         return matches
 
+    @override
     def __hash__(self) -> int:
         return hash((self.name, self.path, self.mod_id))

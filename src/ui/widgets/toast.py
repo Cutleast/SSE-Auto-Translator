@@ -4,7 +4,7 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-from typing import Optional
+from typing import Optional, override
 
 from PySide6.QtCore import (
     QAbstractAnimation,
@@ -99,6 +99,7 @@ class Toast(QWidget):
         if opacity == 0.0:
             super().hide()
 
+    @override
     def hide(self) -> None:
         self.__animation.setDirection(QAbstractAnimation.Direction.Backward)
         self.__animation.start()
@@ -117,6 +118,7 @@ class Toast(QWidget):
         rect.moveCenter(pos)
         self.setGeometry(rect)
 
+    @override
     def show(self) -> None:
         if self.__timer.isActive():
             self.__timer.stop()
@@ -146,6 +148,7 @@ class Toast(QWidget):
             icon = QIcon(icon).pixmap(24, 24)
         self.icon_label.setPixmap(icon)
 
+    @override
     def eventFilter(self, object: QObject, event: QEvent) -> bool:
         if event.type() == event.Type.Resize:
             self.set_position()

@@ -6,6 +6,8 @@ Original code from here:
 and adapted for usage in SSE-AT.
 """
 
+from typing import override
+
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QWheelEvent
 from PySide6.QtWidgets import QApplication, QLabel, QScrollArea, QWidget
@@ -29,6 +31,7 @@ class SmoothScrollArea(QScrollArea):
 
         self.setWidgetResizable(True)
 
+    @override
     def wheelEvent(self, arg__1: QWheelEvent) -> None:
         self.__verticalScrollBar.setScrollValue(-arg__1.angleDelta().y())
 

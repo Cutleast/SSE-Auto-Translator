@@ -6,7 +6,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 import os
 from pathlib import Path
-from typing import Any
+from typing import Any, override
 
 import qtawesome as qta
 from PySide6.QtCore import QEvent, QLocale, QObject, QSize, Signal
@@ -266,6 +266,7 @@ class AppSettings(SmoothScrollArea):
         )
         self.clear_cache_button.setEnabled(False)
 
+    @override
     def eventFilter(self, source: QObject, event: QEvent) -> bool:
         if (
             event.type() == QEvent.Type.Wheel

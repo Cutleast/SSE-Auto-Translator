@@ -4,7 +4,7 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-from typing import Optional
+from typing import Optional, override
 
 import qtawesome as qta
 from PySide6.QtCore import Qt
@@ -83,7 +83,7 @@ class EditorPage(QSplitter):
 
         # Check if item is a top level item
         tab: EditorTab
-        if item.parent() is None:
+        if item.parent() is None:  # type: ignore
             tab = tabs[item]
         else:
             tab = tabs[item.parent()]
@@ -114,6 +114,7 @@ class EditorPage(QSplitter):
 
         return [tab for tab, _ in self.__tabs.values()]
 
+    @override
     def update(self) -> None:
         """
         Updates the displayed editor tabs.

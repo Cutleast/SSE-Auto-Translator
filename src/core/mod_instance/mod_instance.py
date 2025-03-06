@@ -150,7 +150,7 @@ class ModInstance(QObject):
         )
 
         # Get the mod with the highest modlist index
-        return max(mods, key=lambda m: self.mods.index(m), default=None)  # type: ignore[arg-type]
+        return max(mods, key=lambda m: self.mods.index(m), default=None)
 
     def get_mod_with_plugin(
         self,
@@ -184,7 +184,7 @@ class ModInstance(QObject):
         )
 
         # Get the mod with the highest modlist index
-        return max(mods, key=lambda m: self.mods.index(m), default=None)  # type: ignore[arg-type]
+        return max(mods, key=lambda m: self.mods.index(m), default=None)
 
     def get_plugin_state_summary(
         self, plugins: Optional[list[Plugin]] = None

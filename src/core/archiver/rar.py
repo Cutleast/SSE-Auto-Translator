@@ -4,7 +4,7 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-from typing import Optional
+from typing import Optional, override
 
 import rarfile
 
@@ -19,6 +19,7 @@ class RARArchive(Archive):
     __files: Optional[list[str]] = None
 
     @property
+    @override
     def files(self) -> list[str]:
         if self.__files is None:
             self.__files = [

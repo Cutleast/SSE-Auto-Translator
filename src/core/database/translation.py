@@ -10,7 +10,7 @@ import time
 from dataclasses import dataclass, field
 from enum import StrEnum
 from pathlib import Path
-from typing import Any, Optional
+from typing import Any, Optional, override
 
 import jstyleson as json
 
@@ -107,9 +107,6 @@ class Translation:
         if self._strings is None:
             self._strings = {}
 
-            if self.path is None:
-                raise ValueError("Translation path is not set")
-
             translation_paths = list(self.path.glob("*.ats"))
 
             # Fix translation files that were generated outside of SSE-AT
@@ -168,9 +165,6 @@ class Translation:
         Saves strings to folder.
         """
 
-        if self.path is None:
-            raise ValueError("Translation path is not set")
-
         if self._strings is None:
             return
 
@@ -187,9 +181,6 @@ class Translation:
         Optimizes translation by converting it from JSON files to pickle files
         if not already done.
         """
-
-        if self.path is None:
-            raise ValueError("Translation path is not set")
 
         json_files = list(self.path.glob("*.json"))
 
@@ -231,6 +222,7 @@ class Translation:
 
         return f"{self.name}###{self.path}".lower()
 
+    @override
     def __hash__(self) -> int:
         return hash((self.name, self.path))
 

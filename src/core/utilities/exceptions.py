@@ -3,7 +3,7 @@ Copyright (c) Cutleast
 """
 
 from abc import abstractmethod
-from typing import Callable, Optional, ParamSpec, TypeVar
+from typing import Callable, Optional, ParamSpec, TypeVar, override
 
 from PySide6.QtWidgets import QApplication
 
@@ -56,6 +56,7 @@ class ApiException(ExceptionBase):
     Base Exception class for API errors.
     """
 
+    @override
     def getLocalizedMessage(self) -> str:
         return QApplication.translate("exceptions", "An API error occured!")
 
@@ -65,6 +66,7 @@ class ApiKeyInvalidError(ApiException):
     Exception when api key is invalid for attempted request.
     """
 
+    @override
     def getLocalizedMessage(self) -> str:
         return QApplication.translate("exceptions", "Key invalid for request!")
 
@@ -74,6 +76,7 @@ class ApiPermissionError(ApiException):
     Exception when request is blocked by NM because of missing permissions.
     """
 
+    @override
     def getLocalizedMessage(self) -> str:
         return QApplication.translate("exceptions", "No Permission for request!")
 
@@ -83,6 +86,7 @@ class ApiExpiredError(ApiException):
     Exception when request has expired.
     """
 
+    @override
     def getLocalizedMessage(self) -> str:
         return QApplication.translate("exceptions", "Request has expired!")
 
@@ -92,6 +96,7 @@ class ApiInvalidServerError(ApiException):
     Exception when specified server is invalid. (Downloader)
     """
 
+    @override
     def getLocalizedMessage(self) -> str:
         return QApplication.translate("exceptions", "Server is invalid!")
 
@@ -101,6 +106,7 @@ class ApiLimitReachedError(ApiException):
     Exception when request has reached limit.
     """
 
+    @override
     def getLocalizedMessage(self) -> str:
         return QApplication.translate("exceptions", "API Request Limit reached!")
 
@@ -110,6 +116,7 @@ class DownloadFailedError(ExceptionBase):
     Exception when download failed.
     """
 
+    @override
     def getLocalizedMessage(self) -> str:
         return QApplication.translate("exceptions", "Download failed!")
 
@@ -119,6 +126,7 @@ class InstallationFailedError(ExceptionBase):
     Exception when installation failed.
     """
 
+    @override
     def getLocalizedMessage(self) -> str:
         return QApplication.translate("exceptions", "Installation failed!")
 
@@ -128,6 +136,7 @@ class MappingFailedError(InstallationFailedError):
     Exception when the translation could not be mapped to the original mod.
     """
 
+    @override
     def getLocalizedMessage(self) -> str:
         return QApplication.translate(
             "exceptions",
@@ -140,6 +149,7 @@ class NoOriginalModFound(InstallationFailedError):
     Exception when no original mod could be found for the translation.
     """
 
+    @override
     def getLocalizedMessage(self) -> str:
         return QApplication.translate(
             "exceptions", "No original mod found for the translation!"

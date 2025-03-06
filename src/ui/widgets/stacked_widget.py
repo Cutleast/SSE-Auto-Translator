@@ -5,7 +5,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 from enum import Enum
-from typing import Optional
+from typing import Optional, override
 
 from PySide6.QtCore import (
     QByteArray,
@@ -215,10 +215,12 @@ class StackedWidget(QStackedWidget):
             self.currentIndex() - 1 if self.currentIndex() > 0 else self.count() - 1
         )
 
+    @override
     def mousePressEvent(self, event: QMouseEvent) -> None:
         self.anim_cancel_signal.emit()
         event.ignore()
 
+    @override
     def paintEvent(self, arg__1: QPaintEvent) -> None:
         super().paintEvent(arg__1)
 

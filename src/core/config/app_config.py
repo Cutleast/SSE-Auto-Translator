@@ -182,7 +182,9 @@ class AppConfig(BaseConfig):
     def output_path(self, output_path: Optional[Path]) -> None:
         AppConfig.validate_type(output_path, Path, may_be_none=True)
         AppConfig.validate_value(
-            output_path, lambda p: p.parent.is_dir(), may_be_none=True
+            output_path,
+            lambda p: p.parent.is_dir(),  # type: ignore
+            may_be_none=True,
         )
 
         self._settings["output_path"] = (
@@ -204,7 +206,9 @@ class AppConfig(BaseConfig):
     def temp_path(self, temp_path: Optional[Path]) -> None:
         AppConfig.validate_type(temp_path, Path, may_be_none=True)
         AppConfig.validate_value(
-            temp_path, lambda p: p.parent.is_dir(), may_be_none=True
+            temp_path,
+            lambda p: p.parent.is_dir(),  # type: ignore
+            may_be_none=True,
         )
 
         self._settings["temp_path"] = str(temp_path) if temp_path is not None else None
@@ -226,7 +230,9 @@ class AppConfig(BaseConfig):
     def downloads_path(self, downloads_path: Optional[Path]) -> None:
         AppConfig.validate_type(downloads_path, Path, may_be_none=True)
         AppConfig.validate_value(
-            downloads_path, lambda p: p.parent.is_dir(), may_be_none=True
+            downloads_path,
+            lambda p: p.parent.is_dir(),  # type: ignore
+            may_be_none=True,
         )
 
         self._settings["downloads_path"] = (

@@ -7,6 +7,7 @@ from __future__ import annotations
 import logging
 from enum import IntEnum
 from io import BytesIO
+from typing import override
 
 from .datatypes import Hex, Integer
 from .flags import RecordFlags
@@ -67,6 +68,7 @@ class Group:
         CellTemporaryChildren = 9
         """Temporary Cell Record"""
 
+    @override
     def __repr__(self) -> str:
         return prettyprint_object(self)
 
@@ -184,8 +186,7 @@ class Group:
                 data += Hex.dump(self.parent_cell)
 
             case (
-                Group.GroupType.ExteriorCellBlock
-                | Group.GroupType.ExteriorCellSubBlock
+                Group.GroupType.ExteriorCellBlock | Group.GroupType.ExteriorCellSubBlock
             ):
                 data += Integer.dump(self.grid[0], Integer.IntType.Int16)  # Y
                 data += Integer.dump(self.grid[1], Integer.IntType.Int16)  # X

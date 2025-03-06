@@ -5,7 +5,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import zipfile
-from typing import Optional
+from typing import Optional, override
 
 from .archive import Archive
 
@@ -18,6 +18,7 @@ class ZIPARchive(Archive):
     __files: Optional[list[str]] = None
 
     @property
+    @override
     def files(self) -> list[str]:
         if self.__files is None:
             self.__files = [

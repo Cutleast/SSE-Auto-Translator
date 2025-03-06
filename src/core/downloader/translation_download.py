@@ -5,7 +5,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 from dataclasses import dataclass
-from typing import Optional
+from typing import Optional, override
 
 from core.mod_instance.mod import Mod
 from core.translation_provider.source import Source
@@ -49,5 +49,6 @@ class TranslationDownload:
     Installed mod the translation is for.
     """
 
+    @override
     def __hash__(self) -> int:
         return hash((self.mod_id, self.plugin_name, self.source.name))

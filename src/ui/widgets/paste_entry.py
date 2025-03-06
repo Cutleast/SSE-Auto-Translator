@@ -17,7 +17,7 @@ class PasteLineEdit(QLineEdit):
     """
 
     def __init__(self, *args: Any, **kwargs: dict[str, Any]):
-        super().__init__(*args, **kwargs)  # type: ignore[call-overload]
+        super().__init__(*args, **kwargs)
 
         self.paste_action = self.addAction(
             qta.icon("fa5s.paste", color="#ffffff"),

@@ -4,6 +4,8 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+from typing import override
+
 from PySide6.QtWidgets import QTabWidget
 
 from app_context import AppContext
@@ -45,6 +47,7 @@ class DatabaseWidget(QTabWidget):
 
         self.translations_tab.set_name_filter(name_filter)
 
+    @override
     def update(self) -> None:
         """
         Updates the displayed database.

@@ -7,7 +7,7 @@ from __future__ import annotations
 import enum
 import struct
 from enum import Enum, auto
-from typing import Optional, Self
+from typing import Optional, Self, override
 
 from .utilities import Stream, get_stream, read_data
 
@@ -142,7 +142,7 @@ class Float:
             bytes: Byte array.
         """
 
-        size, format = type.value
+        size, format = type.value  # type: ignore
 
         return struct.pack(format, value)
 
@@ -205,6 +205,7 @@ class RawString(str):
         Tries to decode `data` using all supported encodings.
         """
 
+        encoding: str = "utf8"
         for encoding in RawString.SUPPORTED_ENCODINGS:
             try:
                 string = RawString(data.decode(encoding))
@@ -218,6 +219,7 @@ class RawString(str):
             return string
 
     @staticmethod
+    @override
     def encode(string: RawString) -> bytes:
         """
         Tries to encode `string` using all supported encodings.
@@ -236,7 +238,7 @@ class RawString(str):
             return data
 
     @staticmethod
-    def parse(  # type: ignore[return]
+    def parse(
         data: Stream | bytes, type: StrType, size: Optional[int] = None
     ) -> bytes | RawString | list[RawString]:
         """
@@ -305,7 +307,7 @@ class RawString(str):
                 return strings
 
     @staticmethod
-    def dump(value: list[RawString] | RawString, type: StrType) -> bytes:  # type: ignore[return]
+    def dump(value: list[RawString] | RawString, type: StrType) -> bytes:
         """
         Dumps a string to a byte array.
 

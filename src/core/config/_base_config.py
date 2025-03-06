@@ -133,7 +133,7 @@ class BaseConfig:
         if callable(validator):
             if not validator(value):
                 raise ValueError(f"{value!r} is not a valid value!")
-        elif isinstance(validator, Iterable):
+        else:
             if value not in list(validator):
                 raise ValueError(f"{value!r} is not a valid value!")
 

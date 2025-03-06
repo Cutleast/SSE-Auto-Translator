@@ -76,7 +76,7 @@ def safe_copy(
     if os.path.exists(dst):
         return dst
 
-    return shutil.copy(src, dst, follow_symlinks=follow_symlinks)  # type: ignore[no-any-return]
+    return shutil.copy(src, dst, follow_symlinks=follow_symlinks)
 
 
 print(f"Copying {len(ADDITIONAL_ITEMS)} additional item(s)...")

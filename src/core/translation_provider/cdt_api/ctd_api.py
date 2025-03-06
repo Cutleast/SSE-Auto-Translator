@@ -9,7 +9,6 @@ import platform
 from datetime import datetime
 from typing import Any, Optional
 
-import cloudscraper as cs
 import jstyleson as json
 import pytz
 import requests as req
@@ -25,8 +24,6 @@ class CDTApi:
 
     user_agent: str
     cache: Cache
-
-    scraper: cs.CloudScraper = None
 
     log = logging.getLogger("CDTApi")
 

@@ -4,9 +4,9 @@ Copyright (c) Cutleast
 
 import logging
 import sys
-from argparse import ArgumentParser, Namespace, _SubParsersAction
+from argparse import ArgumentParser, Namespace, _SubParsersAction  # type: ignore
 from pathlib import Path
-from typing import NoReturn, Optional
+from typing import NoReturn, Optional, override
 
 from core.database.exporter import Exporter
 from core.database.importer import Importer
@@ -36,9 +36,11 @@ class Esp2Dsd(Utility):
         f"{ORIGINAL_PLUGIN_ARG_NAME!r} are required when used."
     )
 
+    @override
     def __repr__(self) -> str:
         return "Esp2Dsd"
 
+    @override
     def add_subparser(self, subparsers: _SubParsersAction) -> None:
         subparser: ArgumentParser = subparsers.add_parser(
             Esp2Dsd.COMMAND, help=Esp2Dsd.HELP
@@ -53,14 +55,15 @@ class Esp2Dsd(Utility):
             *Esp2Dsd.OUTPUT_PATH_ARG_NAMES, help=Esp2Dsd.OUTPUT_PATH_ARG_HELP
         )
 
-    def run(self, args: Namespace, exit: bool = True) -> None | NoReturn:  # type: ignore[return]
+    @override
+    def run(self, args: Namespace, exit: bool = True) -> None | NoReturn:
         activated: bool = hasattr(args, Esp2Dsd.ORIGINAL_PLUGIN_ARG_NAME) and hasattr(
             args, Esp2Dsd.TRANSLATED_PLUGIN_ARG_NAME
         )
 
         if not activated:
             # Just continue with normal execution since module was not enabled
-            return  # type: ignore[return-value]
+            return
 
         translated_plugin_name: Optional[str] = getattr(
             args, Esp2Dsd.TRANSLATED_PLUGIN_ARG_NAME, None

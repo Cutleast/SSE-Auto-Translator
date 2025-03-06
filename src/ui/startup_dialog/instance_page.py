@@ -5,7 +5,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 from pathlib import Path
-from typing import Optional
+from typing import Optional, override
 
 from PySide6.QtWidgets import QComboBox, QFileDialog, QFormLayout, QLabel
 
@@ -31,6 +31,7 @@ class InstancePage(Page):
     __instance_path_label: QLabel
     __instance_path_entry: BrowseLineEdit
 
+    @override
     def _init_form(self) -> None:
         flayout = QFormLayout()
         self._vlayout.addLayout(flayout)
@@ -75,9 +76,11 @@ class InstancePage(Page):
         self.__instance_path_entry.textChanged.connect(self.__on_path_change)
         flayout.addRow(self.__instance_path_label, self.__instance_path_entry)
 
+    @override
     def _get_title(self) -> str:
         return self.tr("Mod Instance")
 
+    @override
     def _get_description(self) -> str:
         return self.tr(
             "On this page you select a Modinstance to load from a Mod Manager. "
@@ -85,6 +88,7 @@ class InstancePage(Page):
             "under Settings > User Settings."
         )
 
+    @override
     def _validate(self) -> None:
         valid: bool = True
 
@@ -100,6 +104,7 @@ class InstancePage(Page):
 
         self.valid_signal.emit(valid)
 
+    @override
     def get_values(self) -> tuple[str, str, str, str]:
         return (
             self.__mod_manager_dropdown.currentText(),
