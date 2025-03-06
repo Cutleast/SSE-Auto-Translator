@@ -866,6 +866,14 @@ Depending on the Translator API this can raise unexpected costs.</comment>
     </message>
 </context>
 <context>
+    <name>LogWindow</name>
+    <message>
+        <location filename="src/ui/widgets/log_window.py" line="18"/>
+        <source>Log</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>MainPageWidget</name>
     <message>
         <location filename="src/ui/main_page/main_page.py" line="106"/>
@@ -1522,22 +1530,22 @@ Click on &quot;Show Details&quot; to view used filter.</source>
 <context>
     <name>StatusBar</name>
     <message>
-        <location filename="src/ui/statusbar.py" line="49"/>
+        <location filename="src/ui/statusbar.py" line="51"/>
         <source>The hourly limit only applies if the daily limit has been used up.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/statusbar.py" line="61"/>
+        <location filename="src/ui/statusbar.py" line="63"/>
         <source>Copy log to clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/statusbar.py" line="70"/>
-        <source>Open log file</source>
+        <location filename="src/ui/statusbar.py" line="72"/>
+        <source>View log</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/statusbar.py" line="91"/>
+        <location filename="src/ui/statusbar.py" line="98"/>
         <source>API: Hourly: {0} | Daily: {1}</source>
         <translation type="unfinished"></translation>
     </message>

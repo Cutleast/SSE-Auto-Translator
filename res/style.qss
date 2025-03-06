@@ -136,7 +136,7 @@ QLabel#subtitle_label {
 QLabel#relevant_label {
     font-size: 22px;
 }
-QLabel#status_label {
+#protocol {
     font-family: Consolas;
     font-size: 13px;
 }
@@ -693,4 +693,9 @@ QGroupBox::title {
     padding-left: 15px;
     margin-right: 5px;
     background-color: #202020;
+}
+
+/* Log Window */
+LogWindow {
+    background: #202020;
 }

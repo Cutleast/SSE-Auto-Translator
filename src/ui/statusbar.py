@@ -2,8 +2,7 @@
 Copyright (c) Cutleast
 """
 
-import os
-from typing import override
+from typing import Optional, override
 
 import pyperclip as clipboard
 import qtawesome as qta
@@ -14,6 +13,7 @@ from app_context import AppContext
 from core.translation_provider.provider import Provider
 from core.utilities import trim_string
 from core.utilities.logger import Logger
+from ui.widgets.log_window import LogWindow
 
 
 class StatusBar(QStatusBar):
@@ -24,6 +24,8 @@ class StatusBar(QStatusBar):
     log_signal = Signal(str)
     __logger: Logger
 
+    __log_window: Optional[LogWindow] = None
+
     def __init__(self) -> None:
         super().__init__()
 
@@ -31,7 +33,7 @@ class StatusBar(QStatusBar):
         self.__logger.set_callback(self.log_signal.emit)
 
         self.status_label = QLabel()
-        self.status_label.setObjectName("status_label")
+        self.status_label.setObjectName("protocol")
         self.status_label.setTextFormat(Qt.TextFormat.PlainText)
         self.log_signal.connect(
             lambda text: self.status_label.setText(
@@ -67,16 +69,21 @@ class StatusBar(QStatusBar):
             qta.icon("fa5s.external-link-alt", color=self.palette().text().color())
         )
         open_log_button.setIconSize(QSize(16, 16))
-        open_log_button.setToolTip(self.tr("Open log file"))
-        open_log_button.clicked.connect(
-            lambda: os.startfile(self.__logger.get_file_path())
-        )
+        open_log_button.setToolTip(self.tr("View log"))
+        open_log_button.clicked.connect(self.__open_log_window)
         self.addPermanentWidget(open_log_button)
 
         AppContext.get_app().ready_signal.connect(self.__post_init)
 
     def __post_init(self) -> None:
         AppContext.get_app().timer_signal.connect(self.update)
+
+    def __open_log_window(self) -> None:
+        self.__log_window = LogWindow(self.__logger.get_content())
+        self.log_signal.connect(
+            self.__log_window.addMessage, Qt.ConnectionType.QueuedConnection
+        )
+        self.__log_window.show()
 
     @override
     def update(self) -> None:

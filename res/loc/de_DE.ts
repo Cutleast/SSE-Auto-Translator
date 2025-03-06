@@ -872,6 +872,14 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
     </message>
 </context>
 <context>
+    <name>LogWindow</name>
+    <message>
+        <location filename="src/ui/widgets/log_window.py" line="18"/>
+        <source>Log</source>
+        <translation>Log</translation>
+    </message>
+</context>
+<context>
     <name>MainPageWidget</name>
     <message>
         <location filename="src/ui/main_page/main_page.py" line="106"/>
@@ -1529,22 +1537,22 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
 <context>
     <name>StatusBar</name>
     <message>
-        <location filename="src/ui/statusbar.py" line="49"/>
+        <location filename="src/ui/statusbar.py" line="51"/>
         <source>The hourly limit only applies if the daily limit has been used up.</source>
         <translation>Das stündliche Limit gilt nur, wenn das tägliche Limit erreicht wurde.</translation>
     </message>
     <message>
-        <location filename="src/ui/statusbar.py" line="61"/>
+        <location filename="src/ui/statusbar.py" line="63"/>
         <source>Copy log to clipboard</source>
         <translation>Log in Zwischenablage kopieren</translation>
     </message>
     <message>
-        <location filename="src/ui/statusbar.py" line="70"/>
-        <source>Open log file</source>
-        <translation>Log-Datei öffnen</translation>
+        <location filename="src/ui/statusbar.py" line="72"/>
+        <source>View log</source>
+        <translation>Log anzeigen</translation>
     </message>
     <message>
-        <location filename="src/ui/statusbar.py" line="91"/>
+        <location filename="src/ui/statusbar.py" line="98"/>
         <source>API: Hourly: {0} | Daily: {1}</source>
         <translation>API: Stündlich: {0} | Täglich: {1}</translation>
     </message>
