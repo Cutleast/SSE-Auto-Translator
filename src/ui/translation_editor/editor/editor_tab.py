@@ -135,6 +135,9 @@ class EditorTab(QWidget):
         self.__strings_widget.itemActivated.connect(
             lambda item, col: self.open_translator_dialog()
         )
+        self.__strings_num_label.setDigitCount(
+            max((len(str(self.__strings_widget.get_visible_string_count())), 4))
+        )
 
     def __init_shortcuts(self) -> None:
         save_shortcut = QShortcut(QKeySequence("Ctrl+S"), self)

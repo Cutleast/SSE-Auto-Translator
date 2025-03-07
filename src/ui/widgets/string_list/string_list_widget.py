@@ -245,6 +245,9 @@ class StringListWidget(QWidget):
             self.collapseAll()
 
         self.__search_bar.setLiveMode(len(self.__string_items) < 1000)
+        self.__strings_num_label.setDigitCount(
+            max((len(str(len(self.__string_items))), 4))
+        )
         self.__update()
 
     def __create_string_item(self, string: String) -> QTreeWidgetItem:

@@ -460,44 +460,44 @@ If you don&apos;t have Nexus Mods Premium, make sure that SSE-AT is linked to Mo
         <translation>Strings</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="191"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="194"/>
         <source>Import pre-v1.1 Translation...</source>
         <translation>Pre-v1.1 Übersetzung importieren...</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="361"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="364"/>
         <source>Search and Replace</source>
         <translation>Suchen und Ersetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="415"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="418"/>
         <source>Translate with API</source>
         <translation>Mit der API übersetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="471"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="474"/>
         <source>Export Translation (DSD Format only)</source>
         <translation>Übersetzung exportieren (nur DSD-Format)</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="506"/>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="507"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="509"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="510"/>
         <source>Reset selected String(s)</source>
         <translation>Ausgewählte(n) String(s) zurücksetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="190"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="193"/>
         <source>DSD File (*.json)</source>
         <translation>DSD Datei (*.json)</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="344"/>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="484"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="347"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="487"/>
         <source>Success!</source>
         <translation>Erfolgreich!</translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="349"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="352"/>
         <source>Translated %n String with database.</source>
         <comment>Translated %n Strings with database.</comment>
         <translation>
@@ -506,34 +506,34 @@ If you don&apos;t have Nexus Mods Premium, make sure that SSE-AT is linked to Mo
         </translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="370"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="373"/>
         <source>Search</source>
         <translation>Suchen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="373"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="376"/>
         <source>Replace</source>
         <translation>Ersetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="375"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="378"/>
         <source>Case Sensitive</source>
         <translation>Groß-/Kleinschreibung beachten</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="385"/>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="438"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="388"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="441"/>
         <source>Apply</source>
         <translation>Übernehmen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="391"/>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="442"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="394"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="445"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="426"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="429"/>
         <source>Are you sure you want to translate %n String via Translator API?
 Depending on the Translator API this can raise unexpected costs.</source>
         <comment>Are you sure you want to translate %n Strings via Translator API?
@@ -546,22 +546,22 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
         </translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="446"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="449"/>
         <source>Don&apos;t show again</source>
         <translation>Nicht erneut zeigen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="485"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="488"/>
         <source>Translation successfully exported.</source>
         <translation>Übersetzung erfolgreich exportiert.</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="512"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="515"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="513"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="516"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
