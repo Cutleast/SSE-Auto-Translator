@@ -125,7 +125,7 @@ class App(QApplication):
         self.res_path = self.cur_path / "res"
         self.loc_path = self.res_path / "locales"
         self.data_path = (
-            self.cur_path / "data" if args.data_path is None else Path(args.data_path)
+            (self.cur_path / "data") if not args.data_path else Path(args.data_path)
         )
         self.cache_path = self.data_path / "cache"
         self.log_path = self.data_path / "logs"
