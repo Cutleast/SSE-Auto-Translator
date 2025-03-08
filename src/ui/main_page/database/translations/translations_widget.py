@@ -25,7 +25,6 @@ from core.database.database import TranslationDatabase
 from core.database.translation import Translation
 from core.utilities import matches_filter
 from core.utilities.datetime import fmt_timestamp
-from core.utilities.filesystem import get_folder_size
 from core.utilities.path import Path
 from core.utilities.scale import scale_value
 from ui.utilities.tree_widget import are_children_visible
@@ -172,7 +171,6 @@ class TranslationsWidget(QTreeWidget):
             )
 
     def _create_translation_item(self, translation: Translation) -> QTreeWidgetItem:
-        translation_size: int = get_folder_size(translation.path)
         item = QTreeWidgetItem(
             [
                 translation.name,
@@ -183,7 +181,7 @@ class TranslationsWidget(QTreeWidget):
                     if translation.timestamp is not None
                     else ""
                 ),
-                scale_value(translation_size),
+                scale_value(translation.size),
             ]
         )
         item.addChildren(
@@ -196,7 +194,7 @@ class TranslationsWidget(QTreeWidget):
             item.setToolTip(
                 3, fmt_timestamp(translation.timestamp, "%d.%m.%Y %H:%M:%S")
             )
-        item.setToolTip(4, f"{translation_size} Bytes")
+        item.setToolTip(4, f"{translation.size} Bytes")
 
         return item
 

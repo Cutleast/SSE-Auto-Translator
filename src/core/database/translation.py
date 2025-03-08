@@ -17,6 +17,7 @@ from core import plugin_interface, utilities
 from core.database import string
 from core.database.string import String
 from core.translation_provider.source import Source
+from core.utilities.filesystem import get_folder_size
 from core.utilities.path import Path
 
 
@@ -99,6 +100,8 @@ class Translation:
 
     log: logging.Logger = logging.getLogger("TranslationDatabase")
 
+    __size: Optional[int] = None  # type: ignore
+
     def load_translation(self) -> None:
         """
         Loads strings from translation.
@@ -176,6 +179,9 @@ class Translation:
             with open(self.path / (plugin_name + ".ats"), "wb") as file:
                 pickle.dump(String.unique(plugin_strings), file)
 
+        # Reset cached size
+        self.__size = None
+
     def optimize_translation(self) -> None:
         """
         Optimizes translation by converting it from JSON files to pickle files
@@ -240,6 +246,20 @@ class Translation:
     @strings.setter
     def strings(self, strings: dict[str, list[String]]) -> None:
         self._strings = strings
+
+    @property
+    def size(self) -> int:
+        """
+        Returns the size of the translation in bytes.
+
+        Returns:
+            int: Size of the translation in bytes.
+        """
+
+        if self.__size is None:
+            self.__size = get_folder_size(self.path)
+
+        return self.__size
 
     def remove_duplicates(self, save: bool = True) -> None:
         """
