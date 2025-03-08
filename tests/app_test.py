@@ -49,9 +49,7 @@ class AppTest(BaseTest):
         if not AppContext.has_app():
             self.log.info("Initializing app...")
 
-            app = App(Namespace())
-            app.data_path = self.tmp_folder()
-            app.cache_path = app.data_path / "cache"
+            app = App(self.args_namespace())
 
             self.log.info("Setting app context...")
             AppContext.set_app(app)
@@ -62,6 +60,15 @@ class AppTest(BaseTest):
             self.log.info("App initialization complete.")
 
         return AppContext.get_app()
+
+    def args_namespace(self) -> Namespace:
+        """
+        Mocks the command line arguments for the `App` instance.
+        """
+
+        namespace = Namespace()
+        namespace.data_path = str(self.tmp_folder() / "data")
+        return namespace
 
     def mock_app_components(self, app: App) -> None:
         """

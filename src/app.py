@@ -74,17 +74,17 @@ class App(QApplication):
 
     executable, compiled = get_execution_info()
 
-    cur_path: Path = get_current_path()
-    res_path: Path = cur_path / "res"
-    data_path: Path = cur_path / "data"
-    loc_path: Path = res_path / "locales"
-    cache_path: Path = data_path / "cache"
+    cur_path: Path
+    res_path: Path
+    loc_path: Path
+    data_path: Path
+    cache_path: Path
     style_path: str = ":/style.qss"
     tmp_path: Optional[Path] = None
 
     log: logging.Logger = logging.getLogger("App")
     logger: Logger
-    log_path: Path = data_path / "logs"
+    log_path: Path
 
     timer_signal = Signal()
     """
@@ -101,7 +101,7 @@ class App(QApplication):
     List of functions to call before the application exits.
     """
 
-    first_start: bool = not (data_path / "user" / "config.json").is_file()
+    first_start: bool
     setup_complete: bool = True
 
     main_window: MainWindow
@@ -120,6 +120,17 @@ class App(QApplication):
         super().__init__()
 
         self.args = args
+
+        self.cur_path = get_current_path()
+        self.res_path = self.cur_path / "res"
+        self.loc_path = self.res_path / "locales"
+        self.data_path = (
+            self.cur_path / "data" if args.data_path is None else Path(args.data_path)
+        )
+        self.cache_path = self.data_path / "cache"
+        self.log_path = self.data_path / "logs"
+
+        self.first_start: bool = not (self.data_path / "user" / "config.json").is_file()
 
     def init(self) -> None:
         """

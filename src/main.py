@@ -61,6 +61,13 @@ def __init_argparser() -> ArgumentParser:
         ),
     )
 
+    parser.add_argument(
+        "--data-path",
+        nargs="?",
+        default="",
+        help="Overrides the path to the data directory.",
+    )
+
     return parser
 
 
