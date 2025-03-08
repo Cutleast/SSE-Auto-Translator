@@ -128,14 +128,17 @@ class Cache:
     def load_plugin_states_cache(self, path: Path) -> None:
         self.log.debug(f"Loading Plugin States Cache from {str(path)!r}...")
 
-        with path.open("rb") as file:
-            cache: dict[str, tuple[bool, Plugin.Status]] = pickle.load(file)
+        try:
+            with path.open("rb") as file:
+                cache: dict[str, tuple[bool, Plugin.Status]] = pickle.load(file)
 
-        self.__plugin_states_cache = cache
+            self.__plugin_states_cache = cache
 
-        self.log.debug(
-            f"Loaded Plugin States for {len(self.__plugin_states_cache)} Plugin(s)."
-        )
+            self.log.debug(
+                f"Loaded Plugin States for {len(self.__plugin_states_cache)} Plugin(s)."
+            )
+        except Exception as ex:
+            self.log.error(f"Failed to load plugin states cache: {ex}", exc_info=ex)
 
     def clear_plugin_states_cache(self) -> None:
         """
