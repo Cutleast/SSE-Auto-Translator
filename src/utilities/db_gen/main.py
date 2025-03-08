@@ -159,14 +159,14 @@ class DbGen(Utility):
             string_ids, original_string_tables, translated_string_tables
         )
 
-        self.log.info(f"Writing database to {str(output_folder_path)!r}...")
+        self.log.info(f"Writing database to '{output_folder_path}'...")
 
         output_folder_path.mkdir(parents=True, exist_ok=True)
 
         for plugin_name, plugin_strings in database.items():
             output_file_path: Path = output_folder_path / f"{plugin_name}.json"
             self.log.debug(
-                f"Writing {len(plugin_strings)} string(s) to {str(output_file_path)!r}..."
+                f"Writing {len(plugin_strings)} string(s) to '{output_file_path}'..."
             )
             with output_file_path.open("w", encoding="utf-8") as output_file:
                 json.dump(plugin_strings, output_file, indent=4, ensure_ascii=False)
@@ -191,8 +191,8 @@ class DbGen(Utility):
         """
 
         self.log.debug(
-            f"Mapping strings files from plugins in {str(plugins_folder_path)!r}"
-            f" to {str(strings_folder_path)!r}..."
+            f"Mapping strings files from plugins in '{plugins_folder_path}'"
+            f" to '{strings_folder_path}'..."
         )
         strings_files: dict[Path, list[Path]] = DbGen.map_strings_files(
             plugins_folder_path, strings_folder_path

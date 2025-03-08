@@ -80,7 +80,7 @@ class Utilities(QObject):
                         show3=False,
                     )
 
-                self.log.debug(f"Scanning {str(bsa_file)!r}...")
+                self.log.debug(f"Scanning '{bsa_file}'...")
                 matching_files.extend(
                     Utilities.get_additional_files_from_bsa(PATTERNS, bsa_file)
                 )
@@ -106,7 +106,7 @@ class Utilities(QObject):
             archive = Archive.load_archive(path)
             bsas: list[str] = archive.glob("*.bsa")
 
-            self.log.debug(f"Extracting {len(bsas)} BSA(s) from {str(path)!r}...")
+            self.log.debug(f"Extracting {len(bsas)} BSA(s) from '{path}'...")
             archive.extract_files(
                 [bsa for bsa in bsas if not (TMP_DIR / bsa).is_file()],
                 TMP_DIR,
@@ -127,7 +127,7 @@ class Utilities(QObject):
                         show3=False,
                     )
 
-                self.log.debug(f"Scanning {str(bsa_file)!r}...")
+                self.log.debug(f"Scanning '{bsa_file}'...")
                 matching_files.extend(
                     Utilities.get_additional_files_from_bsa(PATTERNS, bsa_file)
                 )

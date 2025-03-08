@@ -90,8 +90,8 @@ class Esp2Dsd(Utility):
         self.log.info(f"Converting {len(plugins)} plugins...")
         for p, (translated_plugin, original_plugin) in enumerate(plugins.items()):
             self.log.info(
-                f"Converting translated plugin {str(translated_plugin_path)!r} for "
-                f"{str(original_plugin_path)!r} to DSD... ({p + 1}/{len(plugins)})"
+                f"Converting translated plugin '{translated_plugin_path}' for "
+                f"'{original_plugin_path}' to DSD... ({p + 1}/{len(plugins)})"
             )
             self.convert(
                 translated_plugin,
@@ -173,7 +173,7 @@ class Esp2Dsd(Utility):
         """
 
         self.log.debug(
-            f"Converting {str(translated_plugin_path)!r} for {str(original_plugin_path)!r} to DSD..."
+            f"Converting '{translated_plugin_path}' for '{original_plugin_path}' to DSD..."
         )
 
         translated_plugin = Plugin(translated_plugin_path)
@@ -190,7 +190,7 @@ class Esp2Dsd(Utility):
             original_plugin_path.name,
             output_path or Path("esp2dsd Output"),
         )
-        self.log.debug(f"Created output file at {str(output_file_path)!r}.")
+        self.log.debug(f"Created output file at '{output_file_path}'.")
 
         return output_file_path
 

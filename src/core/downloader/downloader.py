@@ -85,7 +85,7 @@ class Downloader(QObject):
             dl_path = dest_folder / file_name
 
             self.log.info(
-                f"Downloading {file_name!r} from {download_url!r} to {str(dest_folder)!r}..."
+                f"Downloading {file_name!r} from {download_url!r} to '{dest_folder}'..."
             )
 
             if total_size == 0:
@@ -99,9 +99,7 @@ class Downloader(QObject):
                     return dl_path
                 else:
                     os.remove(dl_path)
-                    self.log.warning(
-                        f"Removed already existing file from {str(dl_path)!r}!"
-                    )
+                    self.log.warning(f"Removed already existing file from '{dl_path}'!")
 
             self.__running = True
             current_size: int = 0

@@ -114,7 +114,7 @@ class ModOrganizer(ModManager):
                 prof_dir = prof_dir.parent / os.listdir(prof_dir.parent)[0]
             except (IndexError, FileNotFoundError):
                 self.log.debug(f"{settings = }")
-                raise Exception(f"No MO2 Profile found in {str(prof_dir.parent)!r}!")
+                raise Exception(f"No MO2 Profile found in '{prof_dir.parent}'!")
 
         modlist_path = prof_dir / "modlist.txt"
 
@@ -150,7 +150,7 @@ class ModOrganizer(ModManager):
                         version = ""
 
                         self.log.warning(
-                            f"Incomplete meta.ini in {str(mod_meta_path.parent)!r}!"
+                            f"Incomplete meta.ini in '{mod_meta_path.parent}'!"
                         )
                 else:
                     mod_id = 0

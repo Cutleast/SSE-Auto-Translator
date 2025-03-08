@@ -97,7 +97,7 @@ class Cache:
         strings = self.__plugin_strings_cache[identifier]
 
         self.log.debug(
-            f"Loaded {len(strings)} string(s) for plugin {str(plugin_path)!r} from cache."
+            f"Loaded {len(strings)} string(s) for plugin '{plugin_path}' from cache."
         )
 
         return strings
@@ -114,9 +114,7 @@ class Cache:
         with cache_file.open(mode="wb") as data:
             pickle.dump(strings, data)
 
-        self.log.debug(
-            f"Updated {len(strings)} string(s) for plugin {str(plugin_path)!r}."
-        )
+        self.log.debug(f"Updated {len(strings)} string(s) for plugin '{plugin_path}'.")
 
     def clear_plugin_strings_cache(self) -> None:
         """
@@ -126,7 +124,7 @@ class Cache:
         shutil.rmtree(self.path / "plugin_strings", ignore_errors=True)
 
     def load_plugin_states_cache(self, path: Path) -> None:
-        self.log.debug(f"Loading Plugin States Cache from {str(path)!r}...")
+        self.log.debug(f"Loading Plugin States Cache from '{path}'...")
 
         try:
             with path.open("rb") as file:
@@ -169,7 +167,7 @@ class Cache:
         return self.__plugin_states_cache.get(get_file_identifier(plugin_path))
 
     def save_plugin_states_cache(self, path: Path) -> None:
-        self.log.debug(f"Saving Plugin States Cache to {str(path)!r}...")
+        self.log.debug(f"Saving Plugin States Cache to '{path}'...")
 
         with path.open("wb") as file:
             pickle.dump(self.__plugin_states_cache, file)

@@ -125,7 +125,7 @@ class Translation:
                         self._strings[translation_path.stem.lower()] = pickle.load(file)
                 except EOFError as ex:
                     self.log.error(
-                        f"Failed to load strings from database file {str(translation_path)!r}",
+                        f"Failed to load strings from database file '{translation_path}'",
                         exc_info=ex,
                     )
 
@@ -157,7 +157,7 @@ class Translation:
                     )
                 except Exception as ex:
                     self.log.error(
-                        f"Failed to load strings from database file {str(translation_path)!r}",
+                        f"Failed to load strings from database file '{translation_path}'",
                         exc_info=ex,
                     )
 

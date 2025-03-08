@@ -47,9 +47,7 @@ class LevelDB:
             os.symlink(self.path, symlink_path, target_is_directory=True)
             self.symlink_path = symlink_path
 
-            self.log.debug(
-                f"Created symlink from {str(symlink_path)!r} to {str(self.path)!r}."
-            )
+            self.log.debug(f"Created symlink from '{symlink_path}' to '{self.path}'.")
 
         return self.symlink_path
 
@@ -81,7 +79,7 @@ class LevelDB:
 
         db_path = self.get_symlink_path()
 
-        self.log.info(f"Loading database from {str(db_path)!r}...")
+        self.log.info(f"Loading database from '{db_path}'...")
 
         flat_data: dict[str, str] = {}
 
@@ -116,7 +114,7 @@ class LevelDB:
 
         flat_dict: dict[str, str] = LevelDB.flatten_nested_dict(data)
 
-        self.log.info(f"Saving keys to {str(db_path)!r}...")
+        self.log.info(f"Saving keys to '{db_path}'...")
 
         with ldb.DB(str(db_path)) as database:
             with database.write_batch() as batch:
@@ -138,7 +136,7 @@ class LevelDB:
 
         db_path = self.get_symlink_path()
 
-        self.log.info(f"Saving key to {str(db_path)!r}...")
+        self.log.info(f"Saving key to '{db_path}'...")
 
         with ldb.DB(str(db_path)) as database:
             database.put(key.encode(), json.dumps(value).encode())
@@ -160,7 +158,7 @@ class LevelDB:
 
         db_path = self.get_symlink_path()
 
-        self.log.info(f"Loading database from {str(db_path)!r}...")
+        self.log.info(f"Loading database from '{db_path}'...")
 
         with ldb.DB(str(db_path)) as database:
             value = database.get(key.encode())

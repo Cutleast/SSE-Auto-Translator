@@ -121,7 +121,7 @@ class ExceptionHandler(QObject):
         log_file_path = Path("SSE_AT.log")
         archive_file_path: Path = dump_file_path.with_suffix(".7z")
 
-        self.log.info(f"Dumping application state to {str(archive_file_path)!r}...")
+        self.log.info(f"Dumping application state to '{archive_file_path}'...")
 
         try:
             # Capture the local variables from the frame where the exception occurred

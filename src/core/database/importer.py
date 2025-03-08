@@ -104,7 +104,7 @@ class Importer(QObject):
                         plugin_strings
                     )
             except Exception as ex:
-                self.log.error(f"Failed to import {str(dsd_path)!r}: {ex}", exc_info=ex)
+                self.log.error(f"Failed to import '{dsd_path}': {ex}", exc_info=ex)
 
         source: Source
         if mod.mod_id and mod.file_id:
@@ -185,7 +185,7 @@ class Importer(QObject):
                     files_to_extract.append(str(file_path))
             else:
                 self.log.debug(
-                    f"Skipped file {str(file_path)!r} because not in original mod files!"
+                    f"Skipped file '{file_path}' because not in original mod files!"
                 )
 
         if ldialog is not None:
@@ -198,14 +198,14 @@ class Importer(QObject):
             )
 
         for bsa_file, files in bsa_files_to_extract.items():
-            self.log.info(f"Extracting {len(files)} file(s) from {str(bsa_file)!r}...")
+            self.log.info(f"Extracting {len(files)} file(s) from '{bsa_file}'...")
             parsed_bsa = BSAArchive(bsa_file)
             for file in files:
                 parsed_bsa.extract_file(file, output_folder)
 
         if files_to_extract:
             self.log.info(
-                f"Extracting {len(files_to_extract)} file(s) from {str(archive.path)!r}..."
+                f"Extracting {len(files_to_extract)} file(s) from '{archive.path}'..."
             )
             archive.extract_files(files_to_extract, output_folder)
             for file in files_to_extract:
@@ -230,7 +230,7 @@ class Importer(QObject):
             ldialog.updateProgress(text1=self.tr("Copying files..."))
 
         if os.listdir(output_folder):
-            self.log.info(f"Moving output to {str(translation.path)!r}...")
+            self.log.info(f"Moving output to '{translation.path}'...")
             shutil.move(
                 output_folder,
                 translation.path / "data",
@@ -273,7 +273,7 @@ class Importer(QObject):
         dsd_files: list[str] = archive.glob(DSD_FILE_PATTERN)
 
         self.log.debug(
-            f"Extracting {len(plugin_files + dsd_files)} file(s) to {str(tmp_dir)!r}..."
+            f"Extracting {len(plugin_files + dsd_files)} file(s) to '{tmp_dir}'..."
         )
         archive.extract_files(plugin_files + dsd_files, tmp_dir)
 
@@ -346,7 +346,7 @@ class Importer(QObject):
 
         self.log.info(
             f"Extracted {sum(len(strings) for strings in translation_strings.values())}"
-            f" string(s) from {str(archive_path)!r}."
+            f" string(s) from '{archive_path}'."
         )
 
         return translation_strings
@@ -362,7 +362,7 @@ class Importer(QObject):
             list[String]: List of strings
         """
 
-        self.log.debug(f"Extracting strings from DSD file {str(dsd_file)!r}...")
+        self.log.debug(f"Extracting strings from DSD file '{dsd_file}'...")
 
         with open(dsd_file, encoding="utf8") as file:
             string_items: list[dict[str, str]] = json.load(file)
@@ -372,7 +372,7 @@ class Importer(QObject):
             try:
                 strings.append(String.from_string_data(string_item))
             except Exception as ex:
-                self.log.debug(f"File: {str(dsd_file)!r}")
+                self.log.debug(f"File: '{dsd_file}'")
                 self.log.error(f"Failed to process invalid string: {ex}", exc_info=ex)
 
         self.log.debug(f"Extracted {len(strings)} string(s) from DSD file.")

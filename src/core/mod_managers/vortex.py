@@ -140,7 +140,7 @@ class Vortex(ModManager):
 
                     if not mod_path.is_dir():
                         self.log.warning(
-                            f"Failed to load mod files of mod {new_name!r}: {str(mod_path)!r} does not exist!"
+                            f"Failed to load mod files of mod {new_name!r}: '{mod_path}' does not exist!"
                         )
 
                     mod_id: int = int(mod_meta_data.get("modId", 0))

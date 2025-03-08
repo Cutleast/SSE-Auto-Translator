@@ -291,7 +291,7 @@ class Editor(QObject):
             int: Number of strings modified
         """
 
-        self.log.info(f"Importing legacy translation from {str(dsd_file)!r}...")
+        self.log.info(f"Importing legacy translation from '{dsd_file}'...")
 
         with dsd_file.open(encoding="utf8") as file:
             legacy_strings: list[dict] = json.load(file)

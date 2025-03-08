@@ -52,7 +52,7 @@ class Plugin:
             self.parse(stream)
 
     def parse(self, stream: Stream) -> None:
-        self.log.info(f"Parsing {str(self.path)!r}...")
+        self.log.info(f"Parsing '{self.path}'...")
 
         self.groups = []
 

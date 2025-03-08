@@ -109,7 +109,7 @@ class Worker(QThread):
             self.downloader.download(
                 url, downloads_folder, file_name, progress_callback
             )
-            self.log.info(f"Downloaded translation to {str(mod_file)!r}.")
+            self.log.info(f"Downloaded translation to '{mod_file}'.")
         else:
             self.log.info("Translation already downloaded.")
 
