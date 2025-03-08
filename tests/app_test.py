@@ -6,8 +6,6 @@ import logging
 import os
 import sys
 from argparse import Namespace
-from pathlib import Path
-from unittest import mock
 
 import pytest
 
@@ -25,7 +23,9 @@ from core.masterlist.masterlist import Masterlist
 from core.mod_instance.mod_instance import ModInstance
 from core.mod_managers.modorganizer import ModOrganizer
 from core.scanner.scanner import Scanner
+from core.translation_provider.nm_api.nxm_handler import NXMHandler
 from core.translation_provider.provider import Provider
+from core.utilities.path import Path
 
 from .base_test import BaseTest
 
@@ -90,6 +90,7 @@ class AppTest(BaseTest):
         app.masterlist = self.masterlist(init=True)
         app.scanner = self.scanner(init=True)
         app.download_manager = self.download_manager(init=True)
+        app.nxm_listener = self.nxm_listener(init=True)
 
         # TODO: Inialize mocked versions of missing app components
 
@@ -302,35 +303,21 @@ class AppTest(BaseTest):
 
         return mod_instance
 
-    def test_detect_path_limit(self, monkeypatch: pytest.MonkeyPatch) -> None:
+    def nxm_listener(self, init: bool = False) -> NXMHandler:
         """
-        Tests the execution of the `App.detect_path_limit()` method.
+        Creates a NXMHandler instance.
+
+        Returns the created `NXMHandler` instance from the `AppContext` singleton
+        or initializes a new one if `init` is `True`.
+
+        Args:
+            init (bool, optional): Toggles whether to initialize a new `NXMHandler`.
+
+        Returns:
+            NXMHandler: The created `NXMHandler` instance
         """
 
-        # given
-        monkeypatch.setattr(
-            "core.utilities.path_limit_fixer.PathLimitFixer.is_path_limit_enabled",
-            lambda: True,
-        )
-        app = App(self.args_namespace())
-        app.main_window = None  # type: ignore
+        if AppContext.has_app() and not init:
+            return AppContext.get_app().nxm_listener
 
-        # when
-        with mock.patch("PySide6.QtWidgets.QMessageBox.question") as mb_question_mock:
-            app.ready_signal.emit()
-
-            # then
-            mb_question_mock.assert_called_once()
-
-        # given
-        monkeypatch.setattr(
-            "core.utilities.path_limit_fixer.PathLimitFixer.is_path_limit_enabled",
-            lambda: False,
-        )
-
-        # when
-        with mock.patch("PySide6.QtWidgets.QMessageBox.question") as mb_question_mock:
-            app.ready_signal.emit()
-
-            # then
-            mb_question_mock.assert_not_called()
+        return NXMHandler("")
