@@ -43,7 +43,9 @@
 		"python.analysis.generateWithTypeAnnotation": true,
 		"python.analysis.languageServerMode": "full",
 		"python.analysis.typeCheckingMode": "strict",
-		"git.diagnosticsCommitHook.Enabled": true
+		"git.diagnosticsCommitHook.Enabled": true,
+		"python.testing.autoTestDiscoverOnSavePattern": "**/tests/**/*.py",
+		"python.testing.autoTestDiscoverOnSaveEnabled": true
 	},
 	"launch": {
 		"version": "0.2.0",
