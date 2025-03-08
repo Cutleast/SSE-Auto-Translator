@@ -1,3 +1,8 @@
+# v2.1.7
+
+- Fix online scan for Chinese translations because their named "Mandarin" on Nexus Mods now
+- Improve Chinese localisation for TranslationInstalled plugin status (thanks to [GF-Huang](https://github.com/Cutleast/SSE-Auto-Translator/commits?author=GF-Huang)!)
+
 # v2.1.6
 
 - Fix loading of MO2 mods where "file_id" is empty in meta.ini

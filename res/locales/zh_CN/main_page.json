@@ -31,7 +31,7 @@
     "show_untranslated_strings": "显示未翻译字符串",
     "translation_available": "插件翻译在N网可用或在数据库中",
     "translation_incomplete": "插件翻译已安装但不完整",
-    "translation_installed": "插件翻译在N网可用或在数据库中",
+    "translation_installed": "插件翻译已安装在数据库中",
     "translations_menu": "翻译",
     "uncheck_selected": "不检查选中插件",
     "user_ignore_list": "用户忽略名单",
