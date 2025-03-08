@@ -4,11 +4,11 @@ Copyright (c) Cutleast
 
 import logging
 import os
-from pathlib import Path
 from typing import Any, Callable, Iterable, TypeVar, overload
 
 import jstyleson as json
 
+from core.utilities.path import Path
 from core.utilities.qt_res_provider import load_json_resource
 
 T = TypeVar("T")

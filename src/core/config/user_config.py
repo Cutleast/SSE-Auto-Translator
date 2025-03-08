@@ -3,13 +3,13 @@ Copyright (c) Cutleast
 """
 
 import logging
-from pathlib import Path
 from typing import Optional
 
 from core.mod_managers import SUPPORTED_MOD_MANAGERS
 from core.mod_managers.mod_manager import ModManager
 from core.translation_provider.provider import Provider
 from core.utilities.constants import SUPPORTED_LANGS
+from core.utilities.path import Path
 
 from ._base_config import BaseConfig
 

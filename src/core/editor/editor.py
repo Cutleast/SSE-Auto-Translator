@@ -5,7 +5,6 @@ Copyright (c) Cutleast
 import logging
 import re
 from copy import copy, deepcopy
-from pathlib import Path
 from typing import Optional
 
 import jstyleson as json
@@ -16,6 +15,7 @@ from core.database.database import TranslationDatabase
 from core.database.string import String
 from core.database.translation import Translation
 from core.translator_api.translator import Translator
+from core.utilities.path import Path
 from ui.widgets.loading_dialog import LoadingDialog
 
 

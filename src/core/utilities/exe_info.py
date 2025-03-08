@@ -3,7 +3,8 @@ Copyright (c) Cutleast
 """
 
 import sys
-from pathlib import Path
+
+from .path import Path
 
 
 def get_execution_info() -> tuple[list[str], bool]:

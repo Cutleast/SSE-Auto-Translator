@@ -8,11 +8,11 @@ import re
 import sys
 from datetime import datetime
 from io import TextIOWrapper
-from pathlib import Path
 from typing import Callable, Optional, TextIO
 
 from .base_enum import BaseEnum
 from .datetime import datetime_format_to_regex
+from .path import Path
 
 
 class Logger(logging.Logger):

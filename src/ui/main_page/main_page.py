@@ -4,7 +4,6 @@ Copyright (c) Cutleast
 
 import logging
 import os
-from pathlib import Path
 from typing import Optional, TypeVar
 
 from PySide6.QtGui import QColor, QIcon
@@ -33,6 +32,7 @@ from core.mod_instance.mod_instance import ModInstance
 from core.mod_instance.plugin import Plugin
 from core.scanner.scanner import Scanner
 from core.utilities.container_utils import join_dicts
+from core.utilities.path import Path
 from ui.widgets.download_list_dialog import DownloadListDialog
 from ui.widgets.error_dialog import ErrorDialog
 from ui.widgets.ignore_list_dialog import IgnoreListDialog

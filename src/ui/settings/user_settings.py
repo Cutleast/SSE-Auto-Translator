@@ -4,7 +4,6 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-from pathlib import Path
 from typing import Any, override
 
 from PySide6.QtCore import QEvent, QObject, Signal
@@ -31,6 +30,7 @@ from core.mod_managers.mod_manager import ModManager
 from core.mod_managers.modorganizer import ModOrganizer
 from core.translation_provider.provider import Provider
 from core.utilities.constants import SUPPORTED_LANGS
+from core.utilities.path import Path
 from ui.widgets.api_setup import ApiSetup
 from ui.widgets.browse_edit import BrowseLineEdit
 from ui.widgets.key_entry import KeyEntry

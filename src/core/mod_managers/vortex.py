@@ -5,7 +5,6 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import logging
-from pathlib import Path
 from typing import Any, Optional, override
 
 import plyvel as ldb
@@ -15,6 +14,7 @@ from core.mod_instance.mod_instance import ModInstance
 from core.mod_instance.plugin import Plugin
 from core.utilities.env_resolver import resolve
 from core.utilities.leveldb import LevelDB
+from core.utilities.path import Path
 
 from .mod_manager import ModManager
 

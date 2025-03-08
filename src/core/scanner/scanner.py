@@ -4,7 +4,6 @@ Copyright (c) Cutleast
 
 import logging
 from copy import copy
-from pathlib import Path
 from typing import Optional
 
 from PySide6.QtCore import QObject
@@ -26,6 +25,7 @@ from core.translation_provider.provider import Provider
 from core.translation_provider.source import Source
 from core.utilities.container_utils import unique
 from core.utilities.detector import LangDetector, Language
+from core.utilities.path import Path
 from ui.widgets.loading_dialog import LoadingDialog
 
 

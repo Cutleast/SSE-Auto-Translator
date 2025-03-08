@@ -5,7 +5,6 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import os
-from pathlib import Path
 from typing import Any, override
 
 import qtawesome as qta
@@ -31,6 +30,7 @@ from core.cache.cache import Cache
 from core.config.app_config import AppConfig
 from core.utilities.filesystem import get_folder_size
 from core.utilities.logger import Logger
+from core.utilities.path import Path
 from core.utilities.scale import scale_value
 from ui.widgets.browse_edit import BrowseLineEdit
 from ui.widgets.smooth_scroll_area import SmoothScrollArea

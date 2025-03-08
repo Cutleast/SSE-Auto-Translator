@@ -8,10 +8,10 @@ import logging
 import os
 from abc import abstractmethod
 from fnmatch import fnmatch
-from pathlib import Path
 from typing import Optional
 
 from core.utilities.filesystem import glob
+from core.utilities.path import Path
 from core.utilities.process_runner import run_process
 
 

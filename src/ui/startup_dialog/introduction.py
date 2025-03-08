@@ -5,12 +5,12 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import os
-from pathlib import Path
 from typing import override
 
 from PySide6.QtWidgets import QLabel, QPushButton
 
 from app_context import AppContext
+from core.utilities.path import Path
 from ui.startup_dialog.page import Page
 
 

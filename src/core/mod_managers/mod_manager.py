@@ -5,9 +5,9 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 from abc import abstractmethod
-from pathlib import Path
 
 from core.mod_instance.mod_instance import ModInstance
+from core.utilities.path import Path
 
 
 class ModManager:

@@ -6,7 +6,6 @@ import logging
 import os
 import time
 from cgi import parse_header
-from pathlib import Path
 from typing import Optional
 
 import requests as req
@@ -14,6 +13,7 @@ from PySide6.QtCore import QObject, Signal
 
 from app_context import AppContext
 from core.translation_provider.provider import Provider
+from core.utilities.path import Path
 from core.utilities.progress_update import (
     ProgressCallback,
     ProgressUpdate,

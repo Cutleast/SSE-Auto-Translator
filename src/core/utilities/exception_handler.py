@@ -6,7 +6,6 @@ import json
 import logging
 import re
 import sys
-from pathlib import Path
 from traceback import format_exception
 from types import FrameType, TracebackType
 from typing import Any, Callable
@@ -19,6 +18,7 @@ from app_context import AppContext
 from ui.widgets.error_dialog import ErrorDialog
 from ui.widgets.loading_dialog import LoadingDialog
 
+from .path import Path
 from .serializer import Serializer
 
 

@@ -8,7 +8,6 @@ import logging
 import os
 import platform
 import urllib.parse
-from pathlib import Path
 from queue import Queue
 from typing import Any, Optional
 from uuid import uuid4
@@ -30,6 +29,7 @@ from core.utilities.exceptions import (
     ApiPermissionError,
 )
 from core.utilities.filesystem import extract_file_paths
+from core.utilities.path import Path
 
 from .nxm_handler import NXMHandler
 

@@ -11,7 +11,6 @@ import pickle
 import shutil
 import time
 from datetime import datetime
-from pathlib import Path
 from typing import Optional
 
 import requests
@@ -20,6 +19,7 @@ import core.plugin_interface.plugin as plugin_interface
 from core.database.string import String
 from core.mod_instance.plugin import Plugin
 from core.utilities.filesystem import get_file_identifier
+from core.utilities.path import Path
 
 
 class Cache:

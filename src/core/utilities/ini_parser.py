@@ -5,8 +5,9 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import os
-from pathlib import Path
 from typing import Any
+
+from .path import Path
 
 
 class IniParser:

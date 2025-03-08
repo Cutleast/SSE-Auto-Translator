@@ -3,11 +3,11 @@ Copyright (c) Cutleast
 """
 
 import logging
-from pathlib import Path
 from typing import Optional
 
 from core.utilities import is_valid_hex_color
 from core.utilities.logger import Logger
+from core.utilities.path import Path
 
 from ._base_config import BaseConfig
 

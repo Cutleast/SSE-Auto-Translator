@@ -6,13 +6,13 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 from dataclasses import dataclass
 from enum import IntEnum
-from pathlib import Path
 from typing import Optional, override
 
 from PySide6.QtGui import QColor
 from PySide6.QtWidgets import QApplication
 
 from core.utilities.base_enum import BaseEnum
+from core.utilities.path import Path
 
 
 @dataclass

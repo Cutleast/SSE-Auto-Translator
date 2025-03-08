@@ -9,7 +9,6 @@ import sys
 import time
 from dataclasses import dataclass, field
 from enum import StrEnum
-from pathlib import Path
 from typing import Any, Optional, override
 
 import jstyleson as json
@@ -18,6 +17,7 @@ from core import plugin_interface, utilities
 from core.database import string
 from core.database.string import String
 from core.translation_provider.source import Source
+from core.utilities.path import Path
 
 
 @dataclass(kw_only=True)

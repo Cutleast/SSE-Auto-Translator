@@ -3,10 +3,10 @@ Copyright (c) Cutleast
 """
 
 import logging
-from pathlib import Path
 from typing import Optional, override
 
 from core.database.string import String as PluginString
+from core.utilities.path import Path
 
 from . import utilities as utils
 from .datatypes import RawString

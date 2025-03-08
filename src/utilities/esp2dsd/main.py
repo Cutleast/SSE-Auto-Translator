@@ -5,13 +5,13 @@ Copyright (c) Cutleast
 import logging
 import sys
 from argparse import ArgumentParser, Namespace, _SubParsersAction  # type: ignore
-from pathlib import Path
 from typing import NoReturn, Optional, override
 
 from core.database.exporter import Exporter
 from core.database.importer import Importer
 from core.database.string import String
 from core.plugin_interface.plugin import Plugin
+from core.utilities.path import Path
 from utilities.utility import Utility
 
 

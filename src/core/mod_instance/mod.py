@@ -6,13 +6,13 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 from dataclasses import dataclass
 from fnmatch import fnmatch
-from pathlib import Path
 from typing import Optional, override
 
 from sse_bsa import BSAArchive
 from virtual_glob import InMemoryPath, glob
 
 from core.utilities.constants import DSD_FILE_PATTERN
+from core.utilities.path import Path
 
 from .plugin import Plugin
 

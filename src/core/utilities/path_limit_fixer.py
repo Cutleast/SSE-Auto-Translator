@@ -4,7 +4,8 @@ Copyright (c) Cutleast
 
 import os
 import winreg
-from pathlib import Path
+
+from .path import Path
 
 
 class PathLimitFixer:

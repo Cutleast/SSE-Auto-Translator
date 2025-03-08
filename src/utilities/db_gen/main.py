@@ -6,7 +6,6 @@ import json
 import logging
 import sys
 from argparse import ArgumentParser, Namespace, _SubParsersAction  # type: ignore
-from pathlib import Path
 from typing import Any, NoReturn, Optional, override
 
 from sse_bsa import BSAArchive
@@ -17,6 +16,7 @@ from core.string_table_parser.string_table import StringTable
 from core.string_table_parser.string_table_parser import StringTableParser
 from core.utilities.constants import BASE_GAME_PLUGINS
 from core.utilities.filesystem import split_path_with_bsa
+from core.utilities.path import Path
 from utilities.utility import Utility
 
 

@@ -4,11 +4,12 @@ Copyright (c) Cutleast
 
 import logging
 import os
-from pathlib import Path
 from typing import Any, Optional
 
 import jstyleson as json
 import plyvel as ldb
+
+from .path import Path
 
 
 class LevelDB:

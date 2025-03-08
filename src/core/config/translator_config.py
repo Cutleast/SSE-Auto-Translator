@@ -3,11 +3,11 @@ Copyright (c) Cutleast
 """
 
 import logging
-from pathlib import Path
 from typing import Optional
 
 from core.translator_api import AVAILABLE_APIS
 from core.translator_api.translator import Translator
+from core.utilities.path import Path
 
 from ._base_config import BaseConfig
 

@@ -4,7 +4,6 @@ Copyright (c) Cutleast
 
 import os
 import sys
-from pathlib import Path
 
 import pytest
 
@@ -14,6 +13,7 @@ sys.path.append(os.path.join(os.getcwd(), "src"))
 
 from src.core.mod_instance.mod_instance import ModInstance
 from src.core.mod_managers.modorganizer import ModOrganizer
+from src.core.utilities.path import Path
 
 
 class TestModOrganizer(CoreTest):
