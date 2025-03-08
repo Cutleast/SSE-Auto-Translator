@@ -118,6 +118,8 @@
 					"${workspaceFolder}/src/ui",
 					"--include-directory",
 					"${workspaceFolder}/src/core",
+					"--include-file",
+					"${workspaceFolder}/src/app.py",
 					"--relative-to",
 					"${workspaceFolder}",
 					"--add-translation",

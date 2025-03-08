@@ -2,15 +2,13 @@
 Copyright (c) Cutleast
 """
 
-import os
-from pathlib import Path
-
 import qtawesome as qta
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QApplication, QMenuBar, QMessageBox
 
 from app_context import AppContext
+from core.utilities.path_limit_fixer import PathLimitFixer
 from core.utilities.updater import Updater
 
 from .settings.settings_dialog import SettingsDialog
@@ -53,7 +51,14 @@ class MenuBar(QMenuBar):
         help_menu.addSeparator()
 
         path_limit_action = help_menu.addAction(self.tr("Fix Windows Path Limit..."))
-        path_limit_action.triggered.connect(self.__fix_path_limit)
+        path_limit_action.setIcon(
+            qta.icon(
+                "mdi6.bug-check", color=self.palette().text().color(), scale_factor=1.3
+            )
+        )
+        path_limit_action.triggered.connect(
+            lambda: PathLimitFixer.disable_path_limit(AppContext.get_app().res_path)
+        )
 
         help_menu.addSeparator()
 
@@ -78,14 +83,6 @@ class MenuBar(QMenuBar):
             messagebox.setTextFormat(Qt.TextFormat.RichText)
             messagebox.setIcon(QMessageBox.Icon.Information)
             messagebox.exec()
-
-    def __fix_path_limit(self) -> None:
-        res_path: Path = AppContext.get_app().res_path
-
-        try:
-            os.startfile(res_path / "path_limit.reg")
-        except OSError:
-            pass
 
     def __show_about(self) -> None:
         AboutDialog(AppContext.get_app().main_window).exec()

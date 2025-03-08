@@ -21,6 +21,7 @@ from PySide6.QtWidgets import (
     QApplication,
     QDialog,
     QHBoxLayout,
+    QMessageBox,
     QPushButton,
     QVBoxLayout,
 )
@@ -45,6 +46,7 @@ from core.utilities.exe_info import get_current_path, get_execution_info
 from core.utilities.localisation import LocalisationUtils
 from core.utilities.logger import Logger
 from core.utilities.masterlist import get_masterlist
+from core.utilities.path_limit_fixer import PathLimitFixer
 from core.utilities.qt_res_provider import read_resource
 from core.utilities.updater import Updater
 from ui.main_window import MainWindow
@@ -131,6 +133,7 @@ class App(QApplication):
         self.log_path = self.data_path / "logs"
 
         self.first_start: bool = not (self.data_path / "user" / "config.json").is_file()
+        self.ready_signal.connect(self.detect_path_limit)
 
     def init(self) -> None:
         """
@@ -435,6 +438,34 @@ class App(QApplication):
             )
 
         return self.tmp_path
+
+    def detect_path_limit(self) -> None:
+        """
+        Detects if the NTFS path length limit is enabled
+        and asks if the user wants to disable it.
+        """
+
+        path_limit_enabled: bool = PathLimitFixer.is_path_limit_enabled()
+        self.log.info(f"Path length limit enabled: {path_limit_enabled}")
+
+        if path_limit_enabled:
+            reply = QMessageBox.question(
+                self.main_window,
+                self.tr("Path Limit Enabled"),
+                self.tr(
+                    "The NTFS path length limit is enabled and paths longer than 255 "
+                    "characters will cause issues. Would you like to disable it now "
+                    "(admin rights may be required)? "
+                    "A reboot is required for this to take effect.\n\n"
+                    "You can always disable it later under "
+                    "Help > Fix Windows Path Limit."
+                ),
+                QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
+                QMessageBox.StandardButton.No,
+            )
+
+            if reply == QMessageBox.StandardButton.Yes:
+                PathLimitFixer.disable_path_limit(self.res_path)
 
     @override
     def timerEvent(self, event: QTimerEvent) -> None:
