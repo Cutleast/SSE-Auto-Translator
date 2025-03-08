@@ -57,7 +57,7 @@ class TestSetupPage(UiTest, AppTest):
 
         # given
         monkeypatch.setattr(
-            "core.utilities.localisation_utils.LocalisationUtils.detect_preferred_lang",
+            "core.utilities.localisation.LocalisationUtils.detect_preferred_lang",
             lambda: lang,
         )
 
