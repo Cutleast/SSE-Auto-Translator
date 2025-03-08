@@ -74,6 +74,48 @@
     </message>
 </context>
 <context>
+    <name>App</name>
+    <message>
+        <location filename="src/app.py" line="280"/>
+        <source>API Key is invalid!</source>
+        <translation>API-Schlüssel ist ungültig!</translation>
+    </message>
+    <message>
+        <location filename="src/app.py" line="294"/>
+        <source>Save</source>
+        <translation>Speichern</translation>
+    </message>
+    <message>
+        <location filename="src/app.py" line="311"/>
+        <source>Cancel</source>
+        <translation>Abbrechen</translation>
+    </message>
+    <message>
+        <location filename="src/app.py" line="334"/>
+        <source>Loading translation database...</source>
+        <translation>Übersetzungsdatenbank wird geladen...</translation>
+    </message>
+    <message>
+        <location filename="src/app.py" line="352"/>
+        <source>Loading modinstance...</source>
+        <translation>Modinstanz wird geladen...</translation>
+    </message>
+    <message>
+        <location filename="src/app.py" line="455"/>
+        <source>Path Limit Enabled</source>
+        <translation>Pfadlängenbegrenzung aktiviert</translation>
+    </message>
+    <message>
+        <location filename="src/app.py" line="463"/>
+        <source>The NTFS path length limit is enabled and paths longer than 255 characters will cause issues. Would you like to disable it now (admin rights may be required)? A reboot is required for this to take effect.
+
+You can always disable it later under Help &gt; Fix Windows Path Limit.</source>
+        <translation>Die NTFS-Pfadlängenbegrenzung ist aktiviert und Pfade mit mehr als 255 Zeichen verursachen Probleme. Möchten Sie diese Option jetzt deaktivieren (möglicherweise sind Administratorrechte erforderlich)? Ein Neustart ist erforderlich, damit dies wirksam wird.
+
+Sie können diese Funktion später unter Hilfe &gt; Windows-Pfadlängenbegrenzung beheben deaktivieren.</translation>
+    </message>
+</context>
+<context>
     <name>AppSettings</name>
     <message>
         <location filename="src/ui/settings/app_settings.py" line="74"/>
@@ -264,7 +306,8 @@ Diese Liste hat nur eine Auswirkung auf Übersetzungen von Nexus Mods!</translat
         <location filename="src/ui/widgets/download_list_dialog.py" line="93"/>
         <source>Below are the Translations that are required and available online. Choose desired translations where appropiate and click on &quot;Download all&quot;.
 If you don&apos;t have Nexus Mods Premium, make sure that SSE-AT is linked to Mod Manager Downloads (link button is in Translations panel)</source>
-        <translation type="unfinished"></translation>
+        <translation>Unten finden Sie die Übersetzungen, die Sie benötigen und die online verfügbar sind. Wählen Sie die gewünschten Übersetzungen aus und klicken Sie auf „ Alle herunterladen“.
+Wenn Sie nicht über Nexus Mods Premium verfügen, stellen Sie sicher, dass SSE-AT mit den Mod Manager Downloads verlinkt ist (der Link-Button befindet sich im Übersetzungs-Panel)</translation>
     </message>
     <message>
         <location filename="src/ui/widgets/download_list_dialog.py" line="97"/>
@@ -388,7 +431,7 @@ If you don&apos;t have Nexus Mods Premium, make sure that SSE-AT is linked to Mo
     <message>
         <location filename="src/ui/translation_editor/editor/help_dialog.py" line="38"/>
         <source>Below is an overview of the various states a string can have:</source>
-        <translation type="unfinished"></translation>
+        <translation>Strings können diese Markierungen aufweisen:</translation>
     </message>
     <message>
         <location filename="src/ui/translation_editor/editor/help_dialog.py" line="66"/>
@@ -794,7 +837,7 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
     <message>
         <location filename="src/ui/startup_dialog/instance_page.py" line="91"/>
         <source>On this page you select a Modinstance to load from a Mod Manager. You can always change the selected modinstance and mod manager under Settings &gt; User Settings.</source>
-        <translation type="unfinished"></translation>
+        <translation>Auf dieser Seite wählen Sie eine Modinstanz aus, die von einem Mod Manager geladen werden soll. Sie können die ausgewählte Modinstanz und den Mod-Manager jederzeit unter Einstellungen &gt; Nutzereinstellungen ändern.</translation>
     </message>
 </context>
 <context>
@@ -822,7 +865,7 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
     <message>
         <location filename="src/ui/startup_dialog/introduction.py" line="57"/>
         <source>Fix Windows Path Limit</source>
-        <translation>Windows-PFadlängenbegrenzung deaktivieren</translation>
+        <translation>Windows-Pfadlängenbegrenzung deaktivieren</translation>
     </message>
 </context>
 <context>
@@ -1033,58 +1076,58 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
 <context>
     <name>MenuBar</name>
     <message>
-        <location filename="src/ui/menubar.py" line="29"/>
+        <location filename="src/ui/menubar.py" line="27"/>
         <source>File</source>
         <translation>Datei</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="38"/>
+        <location filename="src/ui/menubar.py" line="36"/>
         <source>Exit</source>
         <translation>Beenden</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="32"/>
+        <location filename="src/ui/menubar.py" line="30"/>
         <source>Settings</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="42"/>
+        <location filename="src/ui/menubar.py" line="40"/>
         <source>Help</source>
         <translation>Hilfe</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="45"/>
+        <location filename="src/ui/menubar.py" line="43"/>
         <source>Show Documentation...</source>
         <translation>Öffne Dokumentation...</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="49"/>
+        <location filename="src/ui/menubar.py" line="47"/>
         <source>Check for updates...</source>
         <translation>Nach Updates suchen...</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="55"/>
+        <location filename="src/ui/menubar.py" line="53"/>
         <source>Fix Windows Path Limit...</source>
         <translation>Windows-Pfadlängenbegrenzung deaktivieren...</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="60"/>
+        <location filename="src/ui/menubar.py" line="65"/>
         <source>About</source>
         <translation>Über</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="64"/>
-        <location filename="src/ui/menubar.py" line="94"/>
+        <location filename="src/ui/menubar.py" line="69"/>
+        <location filename="src/ui/menubar.py" line="91"/>
         <source>About Qt</source>
         <translation>Über Qt</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="76"/>
+        <location filename="src/ui/menubar.py" line="81"/>
         <source>No Updates Available</source>
         <translation>Keine Updates verfügbar</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="77"/>
+        <location filename="src/ui/menubar.py" line="82"/>
         <source>There are no updates available.</source>
         <translation>Es sind keine Updates verfügbar.</translation>
     </message>

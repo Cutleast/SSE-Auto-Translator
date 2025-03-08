@@ -74,6 +74,46 @@
     </message>
 </context>
 <context>
+    <name>App</name>
+    <message>
+        <location filename="src/app.py" line="280"/>
+        <source>API Key is invalid!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/app.py" line="294"/>
+        <source>Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/app.py" line="311"/>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/app.py" line="334"/>
+        <source>Loading translation database...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/app.py" line="352"/>
+        <source>Loading modinstance...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/app.py" line="455"/>
+        <source>Path Limit Enabled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/app.py" line="463"/>
+        <source>The NTFS path length limit is enabled and paths longer than 255 characters will cause issues. Would you like to disable it now (admin rights may be required)? A reboot is required for this to take effect.
+
+You can always disable it later under Help &gt; Fix Windows Path Limit.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>AppSettings</name>
     <message>
         <location filename="src/ui/settings/app_settings.py" line="74"/>
@@ -1030,58 +1070,58 @@ Click on &quot;Show Details&quot; to view used filter.</source>
 <context>
     <name>MenuBar</name>
     <message>
-        <location filename="src/ui/menubar.py" line="29"/>
+        <location filename="src/ui/menubar.py" line="27"/>
         <source>File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="38"/>
+        <location filename="src/ui/menubar.py" line="36"/>
         <source>Exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="32"/>
+        <location filename="src/ui/menubar.py" line="30"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="42"/>
+        <location filename="src/ui/menubar.py" line="40"/>
         <source>Help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="45"/>
+        <location filename="src/ui/menubar.py" line="43"/>
         <source>Show Documentation...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="49"/>
+        <location filename="src/ui/menubar.py" line="47"/>
         <source>Check for updates...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="55"/>
+        <location filename="src/ui/menubar.py" line="53"/>
         <source>Fix Windows Path Limit...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="60"/>
+        <location filename="src/ui/menubar.py" line="65"/>
         <source>About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="64"/>
-        <location filename="src/ui/menubar.py" line="94"/>
+        <location filename="src/ui/menubar.py" line="69"/>
+        <location filename="src/ui/menubar.py" line="91"/>
         <source>About Qt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="76"/>
+        <location filename="src/ui/menubar.py" line="81"/>
         <source>No Updates Available</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="77"/>
+        <location filename="src/ui/menubar.py" line="82"/>
         <source>There are no updates available.</source>
         <translation type="unfinished"></translation>
     </message>
