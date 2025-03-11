@@ -3,7 +3,7 @@ Copyright (c) Cutleast
 """
 
 from abc import abstractmethod
-from typing import Callable, Optional, ParamSpec, TypeVar, override
+from typing import Any, Callable, ParamSpec, TypeVar, override
 
 from PySide6.QtWidgets import QApplication
 
@@ -17,8 +17,11 @@ class ExceptionBase(Exception):
     Base Exception class for localized exceptions.
     """
 
-    def __init__(self, message: Optional[str] = None) -> None:
-        super().__init__(message or self.getLocalizedMessage())
+    def __init__(self, *values: Any) -> None:
+        if self.getLocalizedMessage():
+            super().__init__(self.getLocalizedMessage().format(*values))
+        else:
+            super().__init__(*values)
 
     @abstractmethod
     def getLocalizedMessage(self) -> str:
@@ -49,66 +52,6 @@ class ExceptionBase(Exception):
                 raise cls() from e
 
         return wrapper
-
-
-class ApiException(ExceptionBase):
-    """
-    Base Exception class for API errors.
-    """
-
-    @override
-    def getLocalizedMessage(self) -> str:
-        return QApplication.translate("exceptions", "An API error occured!")
-
-
-class ApiKeyInvalidError(ApiException):
-    """
-    Exception when api key is invalid for attempted request.
-    """
-
-    @override
-    def getLocalizedMessage(self) -> str:
-        return QApplication.translate("exceptions", "Key invalid for request!")
-
-
-class ApiPermissionError(ApiException):
-    """
-    Exception when request is blocked by NM because of missing permissions.
-    """
-
-    @override
-    def getLocalizedMessage(self) -> str:
-        return QApplication.translate("exceptions", "No Permission for request!")
-
-
-class ApiExpiredError(ApiException):
-    """
-    Exception when request has expired.
-    """
-
-    @override
-    def getLocalizedMessage(self) -> str:
-        return QApplication.translate("exceptions", "Request has expired!")
-
-
-class ApiInvalidServerError(ApiException):
-    """
-    Exception when specified server is invalid. (Downloader)
-    """
-
-    @override
-    def getLocalizedMessage(self) -> str:
-        return QApplication.translate("exceptions", "Server is invalid!")
-
-
-class ApiLimitReachedError(ApiException):
-    """
-    Exception when request has reached limit.
-    """
-
-    @override
-    def getLocalizedMessage(self) -> str:
-        return QApplication.translate("exceptions", "API Request Limit reached!")
 
 
 class DownloadFailedError(ExceptionBase):

@@ -4,8 +4,8 @@ Copyright (c) Cutleast
 
 import pytest
 
+from src.core.translation_provider.exceptions import RequestError
 from src.core.utilities.exceptions import (
-    ApiException,
     ExceptionBase,
     InstallationFailedError,
 )
@@ -22,21 +22,25 @@ class TestExceptionBase:
         def func() -> None:
             raise RuntimeError("Test")
 
-        # then
+        # when
         with pytest.raises(ExceptionBase) as exc:
             func()
-            assert exc.group_contains(RuntimeError)
+
+        # then
+        isinstance(exc.value.__cause__, RuntimeError)
 
     def test_wrap_with_subclass(self) -> None:
         # given
-        @ApiException.wrap
+        @RequestError.wrap
         def func() -> None:
             raise RuntimeError("Test")
 
-        # then
-        with pytest.raises(ApiException) as exc:
+        # when
+        with pytest.raises(RequestError) as exc:
             func()
-            assert exc.group_contains(RuntimeError)
+
+        # then
+        isinstance(exc.value.__cause__, RuntimeError)
 
     def test_wrap_with_params(self) -> None:
         # given
@@ -45,8 +49,9 @@ class TestExceptionBase:
             assert x == 1
             raise RuntimeError("Test")
 
-        # then
+        # when
         with pytest.raises(InstallationFailedError) as exc:
             func(1)
-            assert exc.group_contains(RuntimeError)
-            assert not exc.group_contains(AssertionError)
+
+        # then
+        isinstance(exc.value.__cause__, RuntimeError)

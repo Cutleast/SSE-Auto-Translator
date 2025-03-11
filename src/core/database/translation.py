@@ -16,6 +16,7 @@ import jstyleson as json
 from core import plugin_interface, utilities
 from core.database import string
 from core.database.string import String
+from core.translation_provider.mod_id import ModId
 from core.translation_provider.source import Source
 from core.utilities.filesystem import get_folder_size
 from core.utilities.path import Path
@@ -37,16 +38,9 @@ class Translation:
     The path to the translation.
     """
 
-    mod_id: int = field(default=0)
+    mod_id: ModId = field(default=ModId(mod_id=0))
     """
-    The mod id of the translation at its source.
-    """
-
-    file_id: Optional[int] = None
-    """
-    The file id of the translation at its source.
-
-    (Nexus Mods only)
+    The mod identifier of the translation at its source.
     """
 
     version: str = field(default="")
@@ -54,14 +48,9 @@ class Translation:
     The version of the translation at its source.
     """
 
-    original_mod_id: int = field(default=0)
+    original_mod_id: ModId = field(default=ModId(mod_id=0))
     """
     The mod id of the original mod.
-    """
-
-    original_file_id: int = field(default=0)
-    """
-    The file id of the original mod.
     """
 
     original_version: str = field(default="")
@@ -102,7 +91,7 @@ class Translation:
 
     __size: Optional[int] = None  # type: ignore
 
-    def load_translation(self) -> None:
+    def load_strings(self) -> None:
         """
         Loads strings from translation.
         """
@@ -161,9 +150,9 @@ class Translation:
                         exc_info=ex,
                     )
 
-            self.optimize_translation()
+            self.optimize_strings()
 
-    def save_translation(self) -> None:
+    def save_strings(self) -> None:
         """
         Saves strings to folder.
         """
@@ -182,7 +171,7 @@ class Translation:
         # Reset cached size
         self.__size = None
 
-    def optimize_translation(self) -> None:
+    def optimize_strings(self) -> None:
         """
         Optimizes translation by converting it from JSON files to pickle files
         if not already done.
@@ -191,7 +180,7 @@ class Translation:
         json_files = list(self.path.glob("*.json"))
 
         if json_files:
-            self.save_translation()
+            self.save_strings()
 
             for json_file in json_files:
                 os.remove(json_file)
@@ -206,11 +195,11 @@ class Translation:
 
         return {
             "name": self.name,
-            "mod_id": self.mod_id,
-            "file_id": self.file_id,
+            "mod_id": self.mod_id.mod_id,
+            "file_id": self.mod_id.file_id,
             "version": self.version,
-            "original_mod_id": self.original_mod_id,
-            "original_file_id": self.original_file_id,
+            "original_mod_id": self.original_mod_id.mod_id,
+            "original_file_id": self.original_mod_id.file_id,
             "original_version": self.original_version,
             "source": self.source.name if self.source is not None else None,
             "timestamp": self.timestamp,
@@ -239,7 +228,7 @@ class Translation:
         """
 
         if self._strings is None:
-            self.load_translation()
+            self.load_strings()
 
         return self._strings or {}
 
@@ -273,4 +262,4 @@ class Translation:
             self.strings[plugin_name] = String.unique(plugin_strings)
 
         if save:
-            self.save_translation()
+            self.save_strings()

@@ -16,7 +16,7 @@ from app_context import AppContext
 from core.config.user_config import UserConfig
 from core.mod_managers import SUPPORTED_MOD_MANAGERS
 from core.mod_managers.mod_manager import ModManager
-from core.translation_provider.provider import Provider
+from core.translation_provider.provider_preference import ProviderPreference
 from core.utilities.path import Path
 from ui.widgets.stacked_widget import StackedWidget
 
@@ -121,7 +121,7 @@ class StartupDialog(QDialog):
         user_config.use_masterlist = use_masterlist
         user_config.instance_profile = instance_profile
         user_config.instance_path = Path(instance_path)
-        user_config.provider_preference = Provider.Preference[provider_preference]
+        user_config.provider_preference = ProviderPreference[provider_preference]
         user_config.enable_interface_files = enable_interface_files
         user_config.enable_scripts = enable_scripts
         user_config.enable_textures = enable_textures

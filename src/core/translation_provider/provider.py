@@ -5,85 +5,29 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import logging
-import platform
-from enum import auto
-from typing import Any, Optional
+from typing import Optional
 
 from app_context import AppContext
 from core.cache.cache import Cache
+from core.config.user_config import UserConfig
 from core.masterlist.masterlist import Masterlist
 from core.masterlist.masterlist_entry import MasterlistEntry
-from core.translation_provider.source import Source
-from core.utilities.base_enum import BaseEnum
 
-from .cdt_api.ctd_api import CDTApi
-from .nm_api.nm_api import NexusModsApi
+from .mod_details import ModDetails
+from .mod_id import ModId
+from .provider_manager import ProviderManager
+from .source import Source
 
 
 class Provider:
     """
     Unified class for available translation sources.
-
-    TODO: Overhaul this
     """
 
-    log = logging.getLogger("Provider")
+    log: logging.Logger = logging.getLogger("Provider")
 
-    class Preference(BaseEnum):
-        OnlyNexusMods = auto()
-        PreferNexusMods = auto()
-        OnlyConfrerie = auto()
-        PreferConfrerie = auto()
-
-    preference: Preference = Preference.PreferNexusMods
-
-    # Common attributes
-    user_agent: str
-
-    # Nexus Mods attributes
-    __nm_api: NexusModsApi
-
-    @property
-    def api_key(self) -> str:
-        return self.__nm_api.api_key
-
-    @api_key.setter
-    def api_key(self, key: str) -> None:
-        self.__nm_api.api_key = key
-
-    # Confrérie attributes
-    __cdt_api: CDTApi
-
-    def __init__(self, api_key: str, cache: Cache, preference: Preference):
-        self.preference = preference
-        self.__init_apis(api_key, cache)
-
-        self.user_agent = (
-            f"{AppContext.get_app_type().APP_NAME}/"
-            f"{AppContext.get_app_type().APP_VERSION} "
-            f"({platform.system()} {platform.version()}; "
-            f"{platform.architecture()[0]})"
-        )
-
-    def __init_apis(self, api_key: str, cache: Cache) -> None:
-        """
-        Initializes APIs according to preference.
-        """
-
-        self.__nm_api = NexusModsApi(cache, api_key)
-        self.__cdt_api = CDTApi(cache)
-
-    def check_api_key(self) -> bool:
-        """
-        Checks Nexus Mods API Key if Nexus Mods API is initialized and enabled.
-
-        Returns always `True` for Confrérie API.
-        """
-
-        if self.preference != Provider.Preference.OnlyConfrerie:
-            return self.__nm_api.check_api_key()
-
-        return True
+    def __init__(self, user_config: UserConfig, cache: Cache) -> None:
+        ProviderManager.init(user_config, cache)
 
     def direct_downloads_possible(self) -> bool:
         """
@@ -93,10 +37,7 @@ class Provider:
             bool: `True` if direct downloads are possible, `False` otherwise
         """
 
-        if self.preference != Provider.Preference.OnlyConfrerie:
-            return self.__nm_api.premium
-
-        return True
+        return ProviderManager.get_default_provider().is_direct_download_possible()
 
     def get_remaining_requests(self) -> tuple[int, int]:
         """
@@ -105,195 +46,110 @@ class Provider:
         Returns: `(rem_hreq, rem_dreq)`
         """
 
-        if self.preference != Provider.Preference.OnlyConfrerie:
-            return (self.__nm_api.rem_hreq, self.__nm_api.rem_dreq)
+        return ProviderManager.get_default_provider().get_remaining_requests()
 
-        return (-1, -1)
-
-    def get_details(
-        self,
-        mod_id: int,
-        file_id: Optional[int] = None,
-        source: Optional[Source] = None,
-    ) -> dict[str, Any]:
+    def get_details(self, mod_id: ModId, source: Optional[Source] = None) -> ModDetails:
         """
-        Returns details for `mod_id` (and `file_id` if given) from `source` as unified dictionary.
+        Returns the details for a mod.
 
-        Example:
-        ```
-        {
-            "name": "<name>",
-            "filename": "<filename if file_id is specified else None>",
-            "version": "<version>",
-            "timestamp": "<UNIX timestamp of upload / last update>",
-            "modpage_url": "<url to modpage (and file if file_id is specified)",
-        }
-        ```
+        Args:
+            mod_id (int): Mod identifier
+            source (Optional[Source], optional): Source. Defaults to preferred.
+
+        Raises:
+            ValueError: when the Source is specified as `Source.Local`
+            ModNotFoundError: when the requested mod could not be found
+
+        Returns:
+            ModDetails: Mod details
         """
-
-        details: dict = {}
 
         if source is None:
-            if self.preference in [
-                Provider.Preference.OnlyNexusMods,
-                Provider.Preference.PreferNexusMods,
-            ]:
-                source = Source.NexusMods
-            else:
-                source = Source.Confrerie
+            return ProviderManager.get_default_provider().get_mod_details(mod_id)
 
-        if source == Source.NexusMods:
-            if file_id:
-                nm_details = self.__nm_api.get_file_details(
-                    "skyrimspecialedition", mod_id, file_id
-                )
-                if nm_details is None:
-                    raise FileNotFoundError(
-                        f"File {mod_id} > {file_id} not found on Nexus Mods!"
-                    )
-
-                details = {
-                    "name": nm_details["name"],
-                    "filename": nm_details["file_name"],
-                    "version": nm_details["mod_version"],
-                    "timestamp": nm_details["uploaded_timestamp"],
-                    "modpage_url": self.__nm_api.create_nexus_mods_url(
-                        "skyrimspecialedition", mod_id, file_id
-                    ),
-                }
-            else:
-                nm_details = self.__nm_api.get_mod_details(
-                    "skyrimspecialedition", mod_id
-                )
-                if nm_details is None:
-                    raise FileNotFoundError(f"Mod {mod_id} not found on Nexus Mods!")
-
-                details = {
-                    "name": nm_details["name"],
-                    "filename": None,
-                    "version": nm_details["version"],
-                    "timestamp": nm_details["updated_timestamp"],
-                    "modpage_url": self.__nm_api.create_nexus_mods_url(
-                        "skyrimspecialedition", mod_id
-                    ),
-                }
         else:
-            cdt_details = self.__cdt_api.get_mod_details(mod_id)
-            if cdt_details is None:
-                raise FileNotFoundError(f"Mod {mod_id} not found on Confrérie!")
-
-            details = {
-                "name": cdt_details["FrenchName"],
-                "filename": cdt_details["Filename"],
-                "version": cdt_details["Version"],
-                "timestamp": self.__cdt_api.get_timestamp_of_file(mod_id),
-                "modpage_url": self.__cdt_api.get_modpage_link(mod_id),
-            }
-
-        return details
-
-    def get_modpage_link(
-        self,
-        mod_id: int,
-        file_id: Optional[int] = None,
-        source: Optional[Source] = None,
-        mod_manager: bool = False,
-    ) -> str | None:
-        """
-        Gets modpage url for `mod_id` (and `file_id` if given) from `source`.
-        """
-
-        if source is None:
-            if self.preference in [
-                Provider.Preference.OnlyNexusMods,
-                Provider.Preference.PreferNexusMods,
-            ]:
-                source = Source.NexusMods
-            else:
-                source = Source.Confrerie
-
-        if source == Source.NexusMods:
-            return NexusModsApi.create_nexus_mods_url(
-                "skyrimspecialedition", mod_id, file_id, mod_manager
+            return ProviderManager.get_provider_by_source(source).get_mod_details(
+                mod_id
             )
+
+    def get_modpage_url(self, mod_id: ModId, source: Optional[Source] = None) -> str:
+        """
+        Gets modpage url for the specified mod.
+
+        Args:
+            mod_id (ModId): Mod identifier
+            source (Optional[Source], optional): Source. Defaults to preferred.
+
+        Raises:
+            ValueError: when the Source is specified as `Source.Local`
+            ModNotFoundError: when the requested mod could not be found
+
+        Returns:
+            str: Url to the modpage
+        """
+
+        if source is None:
+            return ProviderManager.get_default_provider().get_modpage_url(mod_id)
+
         else:
-            return self.__cdt_api.get_modpage_link(mod_id)
+            return ProviderManager.get_provider_by_source(source).get_modpage_url(
+                mod_id
+            )
 
     def get_translations(
-        self, mod_id: int, plugin_name: str, language: str, author_blacklist: list[str]
-    ) -> list[tuple[int, list[int], Source]]:
+        self, mod_id: ModId, file_name: str, language: str, author_blacklist: list[str]
+    ) -> dict[Source, list[ModId]]:
         """
-        Scans for translations for `language` that contain `plugin_name` and
-        returns a list of tuples `(translation mod id, [translation file ids], source)`
-        specifying available translations.
+        Gets available translations for the specified file from all available providers.
+
+        Args:
+            mod_id (ModId): Mod identifier
+            file_name (str): Name of file that requires a translation.
+            language (str): Language to filter for
+            author_blacklist (list[str]): List of authors to ignore
+
+        Returns:
+            dict[Source, list[ModId]]: Map of sources and available translations
         """
 
-        available_translations: list[tuple[int, list[int], Source]] = []
-        nm_translations: list[tuple[int, list[int], Source]] = []
-        cdt_translations: list[tuple[int, list[int], Source]] = []
+        available_translations: dict[Source, list[ModId]] = {}
 
-        if self.preference != Provider.Preference.OnlyConfrerie:
-            translation_urls = self.__nm_api.get_mod_translations(
-                "skyrimspecialedition", mod_id
-            ).get(language, [])
+        for provider in ProviderManager.providers:
+            translation_ids: list[ModId] = provider.get_translations(
+                mod_id, file_name, language
+            )
 
-            for translation_url in translation_urls:
-                translation_mod_id = int(translation_url.split("/")[-1].split("?")[0])
+            for translation_id in translation_ids:
+                translation_details: ModDetails = provider.get_mod_details(
+                    translation_id
+                )
 
-                try:
-                    translation_details = self.__nm_api.get_mod_details(
-                        "skyrimspecialedition", translation_mod_id
-                    )
-                    if translation_details is None:
-                        raise FileNotFoundError(
-                            f"Translation {translation_mod_id} not found on Nexus Mods!"
-                        )
-                except Exception as ex:
-                    self.log.error(
-                        f"Failed to get details of mod {translation_mod_id}: {ex}",
-                        exc_info=ex,
-                    )
-                    continue
-
-                # Skip translations from authors on the author_blacklist
-                if translation_details["author"].lower() in author_blacklist:
+                if (
+                    translation_details.author
+                    and translation_details.author.lower() in author_blacklist
+                ):
                     self.log.debug(
-                        f"Skipped translation by author {translation_details['author']!r} due to configured blacklist."
+                        f"Skipped translation by author {translation_details.author!r} "
+                        "due to configured blacklist."
                     )
                     continue
-                elif translation_details["uploaded_by"].lower() in author_blacklist:
+                elif (
+                    translation_details.uploader
+                    and translation_details.uploader.lower() in author_blacklist
+                ):
                     self.log.debug(
-                        f"Skipped translation by uploader {translation_details['uploaded_by']!r} due to configured blacklist."
+                        f"Skipped translation by uploader "
+                        f"{translation_details.uploader!r} due to configured blacklist."
                     )
                     continue
 
-                try:
-                    translation_file_ids = self.__nm_api.scan_mod_for_filename(
-                        "skyrimspecialedition", translation_mod_id, plugin_name
-                    )
-                except Exception as ex:
-                    self.log.error(
-                        f"Failed to scan mod {translation_mod_id} for files: {ex}",
-                        exc_info=ex,
-                    )
-                    continue
-
-                if translation_file_ids:
-                    nm_translations.append(
-                        (
-                            translation_mod_id,
-                            translation_file_ids,
-                            Source.NexusMods,
-                        )
-                    )
-
-        if self.preference != Provider.Preference.OnlyNexusMods:
-            if self.__cdt_api.has_translation(mod_id):
-                cdt_translations.append((mod_id, [], Source.Confrerie))
+                available_translations.setdefault(provider.get_source(), []).append(
+                    translation_id
+                )
 
         masterlist: Masterlist = AppContext.get_app().masterlist
         masterlist_entry: Optional[MasterlistEntry] = masterlist.entries.get(
-            plugin_name.lower()
+            file_name.lower()
         )
         if masterlist_entry is not None:
             if (
@@ -305,124 +161,83 @@ class Provider:
                     masterlist_file_id: Optional[int] = target.file_id
                     masterlist_source: Source = target.source
 
-                    # TODO: Improve this to prevent overriding other translations with the same mod id
-                    if masterlist_source == Source.NexusMods:
-                        if masterlist_file_id is not None:
-                            nm_translations.append(
-                                (
-                                    masterlist_mod_id,
-                                    [masterlist_file_id or 0],
-                                    masterlist_source,
-                                )
-                            )
-                        else:
-                            self.log.warning(
-                                f"Failed to process masterlist entry for {plugin_name} "
-                                "due to missing file id!"
-                            )
-                    elif masterlist_source == Source.Confrerie:
-                        cdt_translations.append(
-                            (masterlist_mod_id, [], masterlist_source)
-                        )
-
-        match self.preference:
-            case Provider.Preference.PreferNexusMods:
-                available_translations = nm_translations + cdt_translations
-
-            case Provider.Preference.PreferConfrerie:
-                available_translations = cdt_translations + nm_translations
-
-            case Provider.Preference.OnlyNexusMods:
-                available_translations = nm_translations
-
-            case Provider.Preference.OnlyConfrerie:
-                available_translations = cdt_translations
+                    available_translations.setdefault(masterlist_source, []).append(
+                        ModId(mod_id=masterlist_mod_id, file_id=masterlist_file_id)
+                    )
 
         return available_translations
 
     def is_update_available(
-        self, mod_id: int, file_id: int, timestamp: int, source: Source
+        self, mod_id: ModId, timestamp: int, source: Optional[Source] = None
     ) -> bool:
         """
-        Checks if an update is available for the specified mod and file.
-        Uses `mod_id` and `file_id` for Nexus Mods and `timestamp`
-        for Confrérie des Traducteurs.
-        """
-
-        if (
-            source == Source.NexusMods
-            and self.preference != Provider.Preference.OnlyConfrerie
-        ):
-            return file_id in self.__nm_api.get_mod_updates(
-                "skyrimspecialedition", mod_id
-            )
-
-        elif (
-            source == Source.Confrerie
-            and self.preference != Provider.Preference.OnlyNexusMods
-        ):
-            cdt_timestamp = self.__cdt_api.get_timestamp_of_file(mod_id)
-            if cdt_timestamp is not None:
-                return cdt_timestamp > timestamp
-
-        return False
-
-    def get_updated_file_id(self, mod_id: int, file_id: Optional[int]) -> Optional[int]:
-        """
-        Returns file id of updated file for `file_id` if NexusMods is enabled as source.
-        """
-
-        new_file_id: Optional[int] = None
-        if self.preference != Provider.Preference.OnlyConfrerie:
-            updates = self.__nm_api.get_mod_updates("skyrimspecialedition", mod_id)
-
-            old_file_id: Optional[int] = file_id
-
-            while old_file_id := updates.get(old_file_id):  # type: ignore[arg-type]
-                new_file_id = old_file_id
-
-        return new_file_id
-
-    def request_download(
-        self,
-        mod_id: int,
-        file_id: Optional[int] = None,
-        source: Optional[Source] = None,
-    ) -> str:
-        """
-        Requests a download for a mod file from a specified source.
-        Attempts to determine source automatically if not specified.
+        Checks if an update is available for the specified mod and file by comparing
+        the timestamps.
 
         Args:
-            mod_id (int): Nexus Mods mod id.
-            file_id (Optional[int], optional): Nexus Mods file id. Defaults to None.
+            mod_id (ModId): Mod identifier
+            timestamp (int): Timestamp of local file
             source (Optional[Source], optional): Source. Defaults to None.
 
         Raises:
-            FileNotFoundError: when the mod is not found on the source.
+            ValueError: when the Source is specified as `Source.Local`
+            ModNotFoundError: when the requested mod could not be found
 
         Returns:
-            str: Download link.
+            bool: Whether an update is available
         """
 
         if source is None:
-            if (self.preference == Provider.Preference.OnlyNexusMods) or file_id:
-                source = Source.NexusMods
-            else:
-                source = Source.Confrerie
-
-        if source == Source.NexusMods:
-            if file_id is None:
-                raise ValueError("File id must be specified for Nexus Mods!")
-
-            return self.__nm_api.request_download(
-                "skyrimspecialedition", mod_id, file_id
+            return ProviderManager.get_default_provider().is_update_available(
+                mod_id, timestamp
             )
 
         else:
-            url: Optional[str] = self.__cdt_api.get_download_link(mod_id)
+            return ProviderManager.get_provider_by_source(source).is_update_available(
+                mod_id, timestamp
+            )
 
-            if url is None:
-                raise FileNotFoundError("File not found on Confrérie des Traducteurs!")
+    def get_updated_mod_id(self, mod_id: ModId) -> Optional[ModId]:
+        """
+        Gets the updated mod id for the specified mod.
 
-            return url
+        Args:
+            mod_id (ModId): Mod identifier
+
+        Returns:
+            Optional[ModId]: Updated mod id or None if there is no update available
+        """
+
+        # TODO: Reimplement this
+
+    def request_download(self, mod_id: ModId, source: Optional[Source] = None) -> str:
+        """
+        Requests a download url for a mod file from a specified source.
+
+        Args:
+            mod_id (int): Nexus Mods mod id.
+            source (Optional[Source], optional): Source. Defaults to preferred.
+
+        Raises:
+            ValueError: when the Source is specified as `Source.Local`
+            ModNotFoundError: when the mod is not found on the source.
+
+        Returns:
+            str: Download url
+        """
+
+        if source is None:
+            return ProviderManager.get_default_provider().request_download(mod_id)
+
+        else:
+            return ProviderManager.get_provider_by_source(source).request_download(
+                mod_id
+            )
+
+    @property
+    def user_agent(self) -> str:
+        """
+        The user agent of the default provider.
+        """
+
+        return ProviderManager.get_default_provider().user_agent

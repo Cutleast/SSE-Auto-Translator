@@ -8,6 +8,7 @@ from dataclasses import dataclass, field
 from typing import Optional, override
 
 from core.mod_instance.mod import Mod
+from core.translation_provider.mod_id import ModId
 from core.translation_provider.source import Source
 
 
@@ -27,14 +28,9 @@ class FileDownload:
     Source the download is from.
     """
 
-    mod_id: int
+    mod_id: ModId
     """
     Nexus Mods mod id.
-    """
-
-    file_id: Optional[int] = None
-    """
-    Nexus Mods file id.
     """
 
     file_name: Optional[str] = None
@@ -54,4 +50,4 @@ class FileDownload:
 
     @override
     def __hash__(self) -> int:
-        return hash((self.source.name, self.mod_id, self.file_id, self.file_name))
+        return hash((self.source.name, self.mod_id, self.file_name))

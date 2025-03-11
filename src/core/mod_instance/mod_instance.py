@@ -8,6 +8,7 @@ from PySide6.QtCore import QObject, Signal
 
 from app_context import AppContext
 from core.cache.cache import Cache
+from core.translation_provider.mod_id import ModId
 from core.utilities.container_utils import unique
 
 from .mod import Mod
@@ -126,14 +127,14 @@ class ModInstance(QObject):
             default=(None, None),
         )[1]
 
-    def get_mod(self, mod_id: int, file_id: Optional[int] = None) -> Optional[Mod]:
+    def get_mod(self, mod_id: ModId) -> Optional[Mod]:
         """
         Get a mod by its id or None if it doesn't exist.
         Returns the mod with the highest index if there are
         multiple mods with the same id.
 
         Args:
-            mod_id (int): Mod id.
+            mod_id (int): Mod identifier.
             file_id (Optional[int], optional): File id. Defaults to None.
 
         Returns:
@@ -141,12 +142,7 @@ class ModInstance(QObject):
         """
 
         mods: list[Mod] = unique(
-            mod
-            for mod in filter(
-                lambda m: (m.mod_id == mod_id)
-                and (file_id is None or m.file_id == file_id),
-                self.mods,
-            )
+            mod for mod in filter(lambda m: (m.mod_id == mod_id), self.mods)
         )
 
         # Get the mod with the highest modlist index

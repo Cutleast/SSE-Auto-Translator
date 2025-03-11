@@ -55,7 +55,7 @@ class Editor(QObject):
         """
 
         self.__translation.strings = self.__strings_cache
-        self.__translation.save_translation()
+        self.__translation.save_strings()
 
         self.log.info(f"Saved translation {self.__translation.name!r}.")
         self.__changes_pending = False

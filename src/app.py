@@ -36,8 +36,10 @@ from core.masterlist.masterlist import Masterlist
 from core.mod_instance.mod_instance import ModInstance
 from core.mod_managers.mod_manager import ModManager
 from core.scanner.scanner import Scanner
+from core.translation_provider.nm_api.nm_api import NexusModsApi
 from core.translation_provider.nm_api.nxm_handler import NXMHandler
 from core.translation_provider.provider import Provider
+from core.translation_provider.provider_manager import ProviderManager
 from core.translator_api.translator import Translator
 from core.utilities.container_utils import unique
 from core.utilities.exception_handler import ExceptionHandler
@@ -195,7 +197,7 @@ class App(QApplication):
         self.load_user_data()
         self.load_masterlist()
 
-        self.nxm_listener = NXMHandler(self.get_execution_command())
+        self.nxm_listener = NexusModsApi.NXM_HANDLER
         if self.app_config.auto_bind_nxm:
             self.nxm_listener.bind()
             self.log.info("Bound Nexus Mods Links.")
@@ -265,12 +267,9 @@ class App(QApplication):
             os.remove(portable_txt_path)
             self.user_config.save()
 
-        self.provider = Provider(
-            self.user_config.api_key,
-            self.cache,
-            self.user_config.provider_preference,
-        )
-        nm_api_valid = self.provider.check_api_key()
+        self.provider = Provider(self.user_config, self.cache)
+        nm_api: NexusModsApi = ProviderManager.get_provider(NexusModsApi)
+        nm_api_valid = nm_api.is_api_key_valid(self.user_config.api_key)
 
         if not nm_api_valid:
             self.log.error("Nexus Mods API Key is invalid!")
@@ -299,7 +298,7 @@ class App(QApplication):
                 if api_setup.api_key is None:
                     raise ValueError("API Key is required")
                 self.user_config.api_key = api_setup.api_key
-                self.provider.api_key = self.user_config.api_key
+                nm_api.set_api_key(self.user_config.api_key)
 
                 self.user_config.save()
                 dialog.accept()

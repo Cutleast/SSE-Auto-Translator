@@ -107,6 +107,4 @@ class StatusBar(QStatusBar):
             self.api_label.setObjectName("label")
 
         self.api_label.setStyleSheet(self.styleSheet())
-        self.api_label.setVisible(
-            provider.preference != Provider.Preference.OnlyConfrerie
-        )
+        self.api_label.setVisible(rem_hreq != -1 and rem_dreq != -1)

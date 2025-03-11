@@ -4,166 +4,187 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-import logging
-import platform
+import re
 from datetime import datetime
-from typing import Any, Optional
+from typing import Any, Optional, override
 
 import jstyleson as json
 import pytz
 import requests as req
 
-from app_context import AppContext
-from core.cache.cache import Cache
+from core.translation_provider.source import Source
+
+from ..exceptions import ModNotFoundError, Non200HttpError, UnexpectedResponseError
+from ..mod_details import ModDetails
+from ..mod_id import ModId
+from ..provider_api import ProviderApi
 
 
-class CDTApi:
+class CDTApi(ProviderApi):
     """
     Class for communication with Confrérie des Traducteurs API.
     """
 
-    user_agent: str
-    cache: Cache
+    DL_URL_PATTERN: re.Pattern[str] = re.compile(
+        r"https://www\.confrerie-des-traducteurs\.fr/skyrim/telechargement_se/([0-9]+)/sse\?fromSseAtAPI=1"
+    )
+    """
+    Regex pattern for capturing the CDT mod id from a download url.
+    """
 
-    log = logging.getLogger("CDTApi")
+    MODPAGE_URL_PATTERN: re.Pattern[str] = re.compile(
+        r"https://www\.confrerie-des-traducteurs\.fr/skyrim/mods/([0-9]+)"
+    )
+    """
+    Regex pattern for capturing the CDT mod id from a modpage url.
+    """
 
-    def __init__(self, cache: Cache):
-        self.cache = cache
+    @override
+    def is_api_key_valid(self, key: str) -> bool:
+        return True
 
-        self.user_agent = (
-            f"{AppContext.get_app_type().APP_NAME}/"
-            f"{AppContext.get_app_type().APP_VERSION} "
-            f"({platform.system()} {platform.version()}; "
-            f"{platform.architecture()[0]})"
+    @override
+    def is_direct_download_possible(self) -> bool:
+        return True
+
+    @override
+    def get_remaining_requests(self) -> tuple[int, int]:
+        return (-1, -1)
+
+    @override
+    def get_mod_details(self, mod_id: ModId) -> ModDetails:
+        if not mod_id.nm_id:
+            ProviderApi.raise_mod_not_found_error(mod_id)
+
+        url: str = (
+            f"https://www.confrerie-des-traducteurs.fr/api/skyrim/sse-at/{mod_id.nm_id}"
         )
+        res: req.Response = self._request(url)
 
-    def get_mod_details(self, nm_mod_id: int) -> Optional[dict[str, Any]]:
-        """
-        Requests details for translation for `nm_mod_id`
-        and returns it as `dict`.
-
-        Example response:
-        ```
-        {
-            "NexusModId": 24595,
-            "FrenchName": "Observateurs et Veilleurs",
-            "Version": "6",
-            "Filename": "observateurs_et_veilleurs_6_sse.7z",
-            "DownloadLink": "https://www.confrerie-des-traducteurs.fr/skyrim/telechargement_se/4228/sse?fromSseAtAPI=1",
-            "LastArchiveUpdateDate": {
-                "date": "2024-03-22 21:16:32.000000",
-                "timezone_type": 3,
-                "timezone": "Europe/Paris"
-            }
-        }
-        ```
-        """
-
-        if not nm_mod_id:
-            return None
-
-        url = f"https://www.confrerie-des-traducteurs.fr/api/skyrim/sse-at/{nm_mod_id}"
-
-        cached = self.cache.get_from_web_cache(url)
-
-        if cached is None:
-            res = req.get(url, headers={"User-Agent": self.user_agent})
-            self.cache.add_to_web_cache(url, res)
-        else:
-            res = cached
-            self.log.debug(f"Got cached API response for {url!r}.")
-
-        if res.status_code == 200:
-            data: dict[str, Any] = json.loads(res.content.decode())
-        else:
-            self.log.error(f"Request failed! Status code: {res.status_code}")
-            self.log.debug(f"Request URL: {url}")
-            return None
-
-        return data
-
-    def get_modname_of_id(self, nm_mod_id: int) -> Optional[str]:
-        """
-        Gets modname for `nm_mod_id`.
-        """
-
-        mod_details: Optional[dict[str, Any]] = self.get_mod_details(nm_mod_id)
-        mod_name: Optional[str] = None
-
-        if mod_details is not None:
-            mod_name = mod_details["FrenchName"]
-
-        return mod_name
-
-    def has_translation(self, nm_mod_id: int) -> bool:
-        """
-        Checks if CDT has a translation for `nm_mod_id`.
-        """
-
-        mod_details = self.get_mod_details(nm_mod_id)
-
-        return mod_details is not None
-
-    def get_timestamp_of_file(self, nm_mod_id: int) -> Optional[int]:
-        """
-        Gets upload timestamp (seconds since epoch) for `nm_mod_id`.
-        """
-
-        mod_details: Optional[dict[str, Any]] = self.get_mod_details(nm_mod_id)
-        timestamp: Optional[int] = None
-
-        if mod_details is not None:
-            upload_details = mod_details["LastArchiveUpdateDate"]
-            date = upload_details["date"]
-            timezone = upload_details["timezone"]
-
-            date_obj = datetime.strptime(date, "%Y-%m-%d %H:%M:%S.%f")
-            date_obj_utc = date_obj.replace(tzinfo=pytz.timezone(timezone)).astimezone(
-                pytz.utc
+        try:
+            response_data: dict[str, Any] = json.loads(res.content.decode())
+            mod_details: ModDetails = ModDetails(
+                display_name=response_data["FrenchName"],
+                version=response_data["Version"],
+                file_name=response_data["Filename"],
+                mod_id=ModId(
+                    mod_id=CDTApi.get_cdt_id_from_url(response_data["DownloadLink"]),
+                    nm_id=response_data["NexusModId"],
+                ),
+                timestamp=CDTApi.get_timestamp_from_response_data(response_data),
+                author=None,
+                uploader=None,
+                modpage_url=(
+                    "https://www.confrerie-des-traducteurs.fr/skyrim/mods/"
+                    + str(CDTApi.get_cdt_id_from_url(response_data["DownloadLink"]))
+                ),
             )
-            timestamp = int(date_obj_utc.timestamp())
+        except Exception as ex:
+            raise UnexpectedResponseError(url, res.content.decode()) from ex
+
+        return mod_details
+
+    @override
+    def get_modpage_url(self, mod_id: ModId) -> str:
+        return self.get_mod_details(mod_id).modpage_url
+
+    @override
+    def get_translations(
+        self, mod_id: ModId, file_name: str, language: str
+    ) -> list[ModId]:
+        try:
+            mod_details: ModDetails = self.get_mod_details(mod_id)
+            translation_id = ModId(
+                mod_id=CDTApi.get_cdt_id_from_url(mod_details.modpage_url),
+                nm_id=mod_id.nm_id,
+            )
+
+            return [translation_id]
+
+        except ModNotFoundError:
+            return []
+
+    @override
+    def is_update_available(self, mod_id: ModId, timestamp: int) -> bool:
+        return self.get_mod_details(mod_id).timestamp > timestamp
+
+    @override
+    def request_download(self, mod_id: ModId) -> str:
+        if not mod_id.nm_id:
+            ProviderApi.raise_mod_not_found_error(mod_id)
+
+        url: str = (
+            f"https://www.confrerie-des-traducteurs.fr/api/skyrim/sse-at/{mod_id.nm_id}"
+        )
+        res: req.Response = self._request(url)
+
+        try:
+            response_data: dict[str, Any] = json.loads(res.content.decode())
+            download_url: str = response_data["DownloadLink"]
+
+        except Non200HttpError as ex:
+            if ex.args[1] == 404:
+                ProviderApi.raise_mod_not_found_error(mod_id)
+            else:
+                raise ex
+
+        except Exception as ex:
+            raise UnexpectedResponseError(url, res.content.decode()) from ex
+
+        return download_url
+
+    @override
+    @classmethod
+    def get_source(cls) -> Source:
+        return Source.Confrerie
+
+    @staticmethod
+    def get_cdt_id_from_url(url: str) -> int:
+        """
+        Extracts the CDT id of a mod file from a specified download or modpage url.
+
+        Args:
+            url (str): Modpage or download url
+
+        Raises:
+            ValueError: when the CDT id could not be extracted
+
+        Returns:
+            int: CDT id
+        """
+
+        dl_url_match: Optional[re.Match[str]] = CDTApi.DL_URL_PATTERN.match(url)
+        if dl_url_match is not None:
+            return int(dl_url_match.group(1))
+
+        modpage_url_match: Optional[re.Match[str]] = CDTApi.MODPAGE_URL_PATTERN.match(
+            url
+        )
+        if modpage_url_match is not None:
+            return int(modpage_url_match.group(1))
+
+        raise ValueError(f"Could not extract CDT id from {url!r}")
+
+    @staticmethod
+    def get_timestamp_from_response_data(response_data: dict[str, Any]) -> int:
+        """
+        Extracts the upload timestamp from the response data returned by the CDT API.
+
+        Args:
+            response_data (dict[str, Any]): Deserialized response data
+
+        Returns:
+            int: Upload timestamp
+        """
+
+        upload_details: dict[str, Any] = response_data["LastArchiveUpdateDate"]
+        date: str = upload_details["date"]
+        timezone: str = upload_details["timezone"]
+
+        date_obj: datetime = datetime.strptime(date, "%Y-%m-%d %H:%M:%S.%f")
+        date_obj_utc: datetime = date_obj.replace(
+            tzinfo=pytz.timezone(timezone)
+        ).astimezone(pytz.utc)
+        timestamp = int(date_obj_utc.timestamp())
 
         return timestamp
-
-    def get_modpage_link(self, nm_mod_id: int) -> Optional[str]:
-        """
-        Returns modpage URL for translation for `nm_mod_id`.
-        """
-
-        mod_details: Optional[dict[str, Any]] = self.get_mod_details(nm_mod_id)
-        url: Optional[str] = None
-
-        if mod_details is not None:
-            dl_url: str = mod_details["DownloadLink"]
-            cdt_id = dl_url.rsplit("/", 2)[1]
-            url = f"https://www.confrerie-des-traducteurs.fr/skyrim/mods/{cdt_id}"
-
-        return url
-
-    def get_download_link(self, nm_mod_id: int) -> Optional[str]:
-        """
-        Returns direct download URL for translation for `nm_mod_id`.
-        """
-
-        mod_details: Optional[dict[str, Any]] = self.get_mod_details(nm_mod_id)
-        url: Optional[str] = None
-
-        if mod_details is not None:
-            url = mod_details["DownloadLink"]
-        else:
-            raise FileNotFoundError(f"Translation for {nm_mod_id} not found!")
-
-        return url
-
-    def get_filename_of_id(self, nm_mod_id: int) -> Optional[str]:
-        """
-        Gets filename for `nm_mod_id`.
-        """
-
-        mod_details: Optional[dict[str, Any]] = self.get_mod_details(nm_mod_id)
-        filename: Optional[str] = None
-
-        if mod_details is not None:
-            filename = mod_details["Filename"]
-
-        return filename

@@ -107,9 +107,9 @@ class Importer(QObject):
                 self.log.error(f"Failed to import '{dsd_path}': {ex}", exc_info=ex)
 
         source: Source
-        if mod.mod_id and mod.file_id:
+        if mod.mod_id.mod_id and mod.mod_id.file_id:
             source = Source.NexusMods
-        elif mod.mod_id and self.user_config.language == "French":
+        elif mod.mod_id.mod_id and self.user_config.language == "French":
             source = Source.Confrerie
         else:
             source = Source.Local
@@ -118,15 +118,13 @@ class Importer(QObject):
             name=mod.name,
             path=self.database.userdb_path / self.database.language / mod.name,
             mod_id=mod.mod_id,
-            file_id=mod.file_id,
             version=mod.version,
             original_mod_id=original_mod.mod_id,
-            original_file_id=original_mod.file_id,
             original_version=original_mod.version,
             _strings=strings,
             source=source,
         )
-        translation.save_translation()
+        translation.save_strings()
         self.database.add_translation(translation)
 
         self.log.info(f"Imported translation for {len(strings)} plugin(s).")

@@ -13,7 +13,8 @@ from core.config.user_config import UserConfig
 from core.database.translation import Translation
 from core.mod_instance.mod import Mod
 from core.mod_instance.plugin import Plugin
-from core.translation_provider.provider import Provider
+from core.translation_provider.mod_id import ModId
+from core.translation_provider.provider import ModDetails, Provider
 from core.translation_provider.source import Source
 from core.utilities.filesystem import clean_fs_name
 from core.utilities.progress_update import ProgressCallback
@@ -263,7 +264,7 @@ class DownloadManager(QObject):
                 translation_downloads.copy().items(),
                 key=lambda item: provider.get_details(
                     item[1][0].mod_id, source=item[1][0].source
-                )["timestamp"],
+                ).timestamp,
             )
         }
 
@@ -296,83 +297,67 @@ class DownloadManager(QObject):
         provider: Provider = AppContext.get_app().provider
         user_config: UserConfig = AppContext.get_app().user_config
 
-        translation_downloads: list[TranslationDownload] = []
-        available_translations: list[tuple[int, list[int], Source]] = (
-            provider.get_translations(
-                mod.mod_id,
-                plugin.name,
-                user_config.language,
-                user_config.author_blacklist,
-            )
+        available_translations: dict[Source, list[ModId]] = provider.get_translations(
+            mod.mod_id,
+            plugin.name,
+            user_config.language,
+            user_config.author_blacklist,
         )
 
-        for mod_id, file_ids, source in available_translations:
-            downloads: list[FileDownload] = []
-
-            if source == Source.NexusMods:
-                for file_id in file_ids:
-                    try:
-                        file_details = provider.get_details(mod_id, file_id, source)
-                    except Exception as ex:
-                        self.log.error(
-                            f"Failed to get details for {mod_id} > {file_id}: {ex}",
-                            exc_info=ex,
-                        )
-                        continue
-
-                    download = FileDownload(
-                        display_name=clean_fs_name(file_details["name"]),
-                        source=source,
-                        mod_id=mod_id,
-                        file_id=file_id,
-                        original_mod=mod,
-                        file_name=file_details["filename"],
-                    )
-                    downloads.append(download)
-
-            else:
+        # Use a dict to group translation files from the same mod and source together
+        translation_downloads: dict[tuple[int, Source], TranslationDownload] = {}
+        for source, translation_ids in available_translations.items():
+            for translation_id in translation_ids:
                 try:
-                    file_details = provider.get_details(mod_id, source=source)
+                    file_details: ModDetails = provider.get_details(
+                        translation_id, source
+                    )
                 except Exception as ex:
                     self.log.error(
-                        f"Failed to get details for {mod_id}: {ex}",
+                        f"Failed to get details for {translation_id}: {ex}",
                         exc_info=ex,
                     )
                     continue
 
                 download = FileDownload(
-                    display_name=clean_fs_name(file_details["name"]),
+                    display_name=clean_fs_name(file_details.display_name),
                     source=source,
-                    mod_id=mod_id,
+                    mod_id=translation_id,
                     original_mod=mod,
-                    file_name=file_details["filename"],
+                    file_name=file_details.file_name,
                 )
-                downloads.append(download)
 
-            if not downloads:
-                continue
+                download_id = ModId(
+                    mod_id=translation_id.mod_id,
+                    nm_id=translation_id.nm_id,
+                    nm_game_id=translation_id.nm_game_id,
+                )
+                translation_name: str = provider.get_details(
+                    download_id, source=source
+                ).display_name
+                translation_download = TranslationDownload(
+                    name=translation_name,
+                    mod_id=download_id,
+                    original_mod=mod,
+                    plugin_name=plugin.name,
+                    source=source,
+                    available_downloads=[],
+                )
+                translation_downloads.setdefault(
+                    (download_id.mod_id, source), translation_download
+                ).available_downloads.append(download)
 
-            translation_name: str = provider.get_details(mod_id, source=source).get(
-                "name", f"{mod.name} - {user_config.language}"
-            )
-            translation_download = TranslationDownload(
-                name=translation_name,
-                mod_id=mod_id,
-                original_mod=mod,
-                plugin_name=plugin.name,
-                source=source,
-                available_downloads=downloads,
-            )
-            translation_downloads.append(translation_download)
+        result: list[TranslationDownload] = list(translation_downloads.values())
 
-        translation_downloads.sort(
+        # Sort after upload timestamp so that newest translations are first
+        result.sort(
             key=lambda download: provider.get_details(
                 download.mod_id, source=download.source
-            )["timestamp"],
+            ).timestamp,
             reverse=True,
         )
 
-        return translation_downloads
+        return result
 
     def collect_available_updates(
         self,
@@ -422,9 +407,7 @@ class DownloadManager(QObject):
         self, translation: Translation, original_mod: Mod
     ) -> dict[str, list[TranslationDownload]]:
         provider: Provider = AppContext.get_app().provider
-        new_file_id: Optional[int] = provider.get_updated_file_id(
-            translation.mod_id, translation.file_id
-        )
+        new_file_id: Optional[ModId] = provider.get_updated_mod_id(translation.mod_id)
 
         if new_file_id is None:
             return {}
@@ -443,11 +426,10 @@ class DownloadManager(QObject):
                             display_name=translation.name,
                             source=Source.NexusMods,
                             mod_id=translation.mod_id,
-                            file_id=new_file_id,
                             original_mod=original_mod,
                             file_name=provider.get_details(
-                                translation.mod_id, new_file_id, Source.NexusMods
-                            )["filename"],
+                                new_file_id, Source.NexusMods
+                            ).file_name,
                         )
                     ],
                     original_mod=original_mod,

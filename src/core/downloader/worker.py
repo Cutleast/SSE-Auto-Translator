@@ -15,6 +15,7 @@ from core.database.translation import Translation
 from core.downloader.downloader import Downloader
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
+from core.translation_provider.mod_details import ModDetails
 from core.translation_provider.provider import Provider
 from core.utilities.exceptions import (
     DownloadFailedError,
@@ -97,7 +98,7 @@ class Worker(QThread):
 
         file_name: str = download.file_name
         self.waiting = True
-        url: str = self.provider.request_download(download.mod_id, download.file_id)
+        url: str = self.provider.request_download(download.mod_id, download.source)
         self.waiting = False
 
         downloads_folder: Path = (
@@ -156,10 +157,8 @@ class Worker(QThread):
                 raise NoOriginalModFound
 
             if strings:
-                translation_details = self.provider.get_details(
-                    mod_id=download.mod_id,
-                    file_id=download.file_id,
-                    source=download.source,
+                translation_details: ModDetails = self.provider.get_details(
+                    mod_id=download.mod_id, source=download.source
                 )
                 translation = Translation(
                     name=download.display_name,
@@ -169,17 +168,15 @@ class Worker(QThread):
                         / download.display_name
                     ),
                     mod_id=download.mod_id,
-                    file_id=download.file_id,
-                    version=translation_details["version"],
+                    version=translation_details.version,
                     original_mod_id=original_mod.mod_id,
-                    original_file_id=original_mod.file_id,
                     original_version=original_mod.version,
                     _strings=strings,
                     status=Translation.Status.Ok,
                     source=download.source,
-                    timestamp=translation_details["timestamp"],
+                    timestamp=translation_details.timestamp,
                 )
-                translation.save_translation()
+                translation.save_strings()
                 self.database.add_translation(translation)
 
                 self.database.importer.extract_additional_files(

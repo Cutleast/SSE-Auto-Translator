@@ -67,7 +67,7 @@ class ApiSetup(QWidget):
         )
 
         def start_sso() -> None:
-            api = NexusModsApi(cache, "")
+            api = NexusModsApi(cache)
             self.api_key = api.get_sso_key()
             sso_button.setText(self.tr("Successfully logged into Nexus Mods"))
             self.setDisabled(True)
@@ -97,7 +97,7 @@ class ApiSetup(QWidget):
                 return
 
             api_key_check_button.setText("Checking API Key...")
-            if NexusModsApi(cache, key).check_api_key():
+            if NexusModsApi(cache).is_api_key_valid(key):
                 self.api_key = key
                 self.is_valid = True
                 self.valid_signal.emit(True)

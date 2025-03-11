@@ -23,6 +23,7 @@ from PySide6.QtWidgets import (
 from app_context import AppContext
 from core.database.database import TranslationDatabase
 from core.database.translation import Translation
+from core.translation_provider.exceptions import ModNotFoundError
 from core.utilities import matches_filter
 from core.utilities.datetime import fmt_timestamp
 from core.utilities.path import Path
@@ -451,12 +452,13 @@ class TranslationsWidget(QTreeWidget):
         current_item: Optional[Translation | str] = self.get_current_item()
 
         if isinstance(current_item, Translation) and current_item.source:
-            url: Optional[str] = AppContext.get_app().provider.get_modpage_link(
-                current_item.mod_id, current_item.file_id, current_item.source
-            )
-
-            if url is not None:
+            try:
+                url: str = AppContext.get_app().provider.get_modpage_url(
+                    current_item.mod_id, current_item.source
+                )
                 os.startfile(url)
+            except ModNotFoundError:
+                pass
 
     def open_in_explorer(self) -> None:
         current_item: Optional[Translation | str] = self.get_current_item()

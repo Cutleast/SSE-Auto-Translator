@@ -28,7 +28,7 @@ from core.config.user_config import UserConfig
 from core.mod_managers import SUPPORTED_MOD_MANAGERS
 from core.mod_managers.mod_manager import ModManager
 from core.mod_managers.modorganizer import ModOrganizer
-from core.translation_provider.provider import Provider
+from core.translation_provider.provider_preference import ProviderPreference
 from core.utilities.constants import SUPPORTED_LANGS
 from core.utilities.path import Path
 from ui.widgets.api_setup import ApiSetup
@@ -90,7 +90,7 @@ class UserSettings(SmoothScrollArea):
         self.source_dropdown.setEnabled(self.user_config.language == "French")
         self.source_dropdown.setEditable(False)
         self.source_dropdown.addItems(
-            [preference.name for preference in Provider.Preference]
+            [preference.name for preference in ProviderPreference]
         )
         self.source_dropdown.setCurrentText(self.user_config.provider_preference.name)
         self.source_dropdown.currentTextChanged.connect(self.on_change)
@@ -238,11 +238,9 @@ class UserSettings(SmoothScrollArea):
         self.source_dropdown.setEnabled(lang == "French")
 
         if lang == "French":
-            self.source_dropdown.setCurrentText(
-                Provider.Preference.PreferNexusMods.name
-            )
+            self.source_dropdown.setCurrentText(ProviderPreference.PreferNexusMods.name)
         else:
-            self.source_dropdown.setCurrentText(Provider.Preference.OnlyNexusMods.name)
+            self.source_dropdown.setCurrentText(ProviderPreference.OnlyNexusMods.name)
 
     def __on_mod_manager_select(self, index: int) -> None:
         mod_manager = SUPPORTED_MOD_MANAGERS[index]()
@@ -360,7 +358,7 @@ class UserSettings(SmoothScrollArea):
             if self.instance_path_entry.text()
             else None
         )
-        self.user_config.provider_preference = Provider.Preference[
+        self.user_config.provider_preference = ProviderPreference[
             self.source_dropdown.currentText()
         ]
         self.user_config.enable_interface_files = (

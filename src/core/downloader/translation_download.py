@@ -8,6 +8,7 @@ from dataclasses import dataclass
 from typing import Optional, override
 
 from core.mod_instance.mod import Mod
+from core.translation_provider.mod_id import ModId
 from core.translation_provider.source import Source
 
 from .file_download import FileDownload
@@ -24,9 +25,9 @@ class TranslationDownload:
     The name of the translation.
     """
 
-    mod_id: int
+    mod_id: ModId
     """
-    Nexus Mods mod id used to open the mod page.
+    Mod identifier used to open the mod page.
     """
 
     plugin_name: str

@@ -21,6 +21,7 @@ from core.masterlist.masterlist_entry import MasterlistEntry
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.mod_instance.plugin import Plugin
+from core.translation_provider.mod_id import ModId
 from core.translation_provider.provider import Provider
 from core.translation_provider.source import Source
 from core.utilities.container_utils import unique
@@ -247,9 +248,9 @@ class Scanner(QObject):
         return result
 
     def __online_scan_plugin(
-        self, mod_id: int, plugin: Plugin, ldialog: Optional[LoadingDialog] = None
+        self, mod_id: ModId, plugin: Plugin, ldialog: Optional[LoadingDialog] = None
     ) -> Plugin.Status:
-        available_translations: list[tuple[int, list[int], Source]] = (
+        available_translations: dict[Source, list[ModId]] = (
             self.provider.get_translations(
                 mod_id,
                 plugin.name,
@@ -338,7 +339,7 @@ class Scanner(QObject):
             result[plugin] = self.__deep_scan_plugin_translation(
                 strings, plugin, ldialog
             )
-            translation.save_translation()
+            translation.save_strings()
 
         return result
 
@@ -675,17 +676,13 @@ class Scanner(QObject):
             # TODO: Improve this filter
             if (
                 not translation.mod_id
-                or not translation.file_id
                 or not translation.timestamp
                 or not translation.source
             ):
                 continue
 
             result[translation] = self.provider.is_update_available(
-                translation.mod_id,
-                translation.file_id,
-                translation.timestamp,
-                translation.source,
+                translation.mod_id, translation.timestamp, translation.source
             )
 
         return result

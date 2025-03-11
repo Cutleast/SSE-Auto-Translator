@@ -65,9 +65,9 @@ class DownloadItem(QTreeWidgetItem, QObject):
 
         def open_download_page() -> None:
             url = NexusModsApi.create_nexus_mods_url(
-                "skyrimspecialedition",
-                self.download.mod_id,
-                self.download.file_id,
+                self.download.mod_id.nm_game_id,
+                self.download.mod_id.mod_id,
+                self.download.mod_id.file_id,
                 mod_manager=True,
             )
 

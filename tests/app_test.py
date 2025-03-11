@@ -272,11 +272,9 @@ class AppTest(BaseTest):
             return AppContext.get_app().provider
 
         user_config: UserConfig = self.user_config()
-        api_key: str = user_config.api_key
-        preference: Provider.Preference = user_config.provider_preference
         cache: Cache = self.cache()
 
-        return Provider(api_key, cache, preference)
+        return Provider(user_config, cache)
 
     def modinstance(self, init: bool = False) -> ModInstance:
         """

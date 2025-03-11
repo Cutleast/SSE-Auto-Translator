@@ -18,7 +18,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from core.translation_provider.provider import Provider
+from core.translation_provider.provider_preference import ProviderPreference
 from core.utilities.constants import SUPPORTED_LANGS
 from core.utilities.localisation import LocalisationUtils
 from ui.startup_dialog.page import Page
@@ -82,8 +82,8 @@ class SetupPage(Page):
         self.__source_dropdown.installEventFilter(self)
         self.__source_dropdown.setDisabled(True)
         self.__source_dropdown.setEditable(False)
-        self.__source_dropdown.addItems(Provider.Preference._member_names_)
-        self.__source_dropdown.setCurrentText(Provider.Preference.OnlyNexusMods.name)
+        self.__source_dropdown.addItems(ProviderPreference._member_names_)
+        self.__source_dropdown.setCurrentText(ProviderPreference.OnlyNexusMods.name)
         self.__lang_dropdown.currentTextChanged.connect(self.__on_lang_change)
         hlayout.addWidget(self.__source_dropdown)
 
@@ -164,12 +164,10 @@ class SetupPage(Page):
 
         if lang == "French":
             self.__source_dropdown.setCurrentText(
-                Provider.Preference.PreferNexusMods.name
+                ProviderPreference.PreferNexusMods.name
             )
         else:
-            self.__source_dropdown.setCurrentText(
-                Provider.Preference.OnlyNexusMods.name
-            )
+            self.__source_dropdown.setCurrentText(ProviderPreference.OnlyNexusMods.name)
 
     @override
     def _validate(self) -> None:

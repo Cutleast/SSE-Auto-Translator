@@ -19,6 +19,7 @@ from core.database.utilities import Utilities
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.mod_instance.plugin import Plugin
+from core.translation_provider.mod_id import ModId
 from core.translation_provider.source import Source
 from core.utilities.container_utils import unique
 from core.utilities.path import Path
@@ -125,7 +126,7 @@ class TranslationDatabase(QObject):
 
         translation_path: Path = self.appdb_path / self.language.lower()
         translation = Translation(name="", path=translation_path, source=Source.Local)
-        translation.load_translation()
+        translation.load_strings()
         self.__vanilla_translation = translation
 
         self.log.info(
@@ -153,8 +154,8 @@ class TranslationDatabase(QObject):
         for translation_data in translation_list:
             name: str = translation_data["name"]
             try:
-                mod_id: int = int(translation_data["mod_id"])
-                file_id: Optional[int] = translation_data.get("file_id", None)
+                mod_id: int = int(translation_data.pop("mod_id"))
+                file_id: Optional[int] = translation_data.pop("file_id", None)
                 translation_path: Path = self.userdb_path / self.language / name
                 source_name: str = translation_data.pop("source", "")
                 source: Optional[Source] = Source.get(source_name)
@@ -169,10 +170,15 @@ class TranslationDatabase(QObject):
 
                 translation = Translation(
                     path=translation_path,
+                    mod_id=ModId(mod_id=mod_id, file_id=file_id),
+                    original_mod_id=ModId(
+                        mod_id=translation_data.pop("original_mod_id", 0),
+                        file_id=translation_data.pop("original_file_id", None),
+                    ),
                     **translation_data,
                     source=source,
                 )
-                translation.load_translation()
+                translation.load_strings()
                 translations.append(translation)
             except Exception as ex:
                 self.log.error(
@@ -242,10 +248,8 @@ class TranslationDatabase(QObject):
 
             # Merge metadata
             installed_translation.mod_id = translation.mod_id
-            installed_translation.file_id = translation.file_id
             installed_translation.version = translation.version
             installed_translation.original_mod_id = translation.original_mod_id
-            installed_translation.original_file_id = translation.original_file_id
             installed_translation.original_version = translation.original_version
 
         # Set original plugins status to TranslationInstalled
@@ -337,21 +341,21 @@ class TranslationDatabase(QObject):
         installed_translations = {
             translation.id: translation
             for translation in self.__user_translations
-            if translation.mod_id and translation.file_id
+            if translation.mod_id
         }
 
         translation: Optional[Translation] = None
-        if f"{mod.mod_id}###{mod.file_id}" in installed_translations:
-            translation = installed_translations[f"{mod.mod_id}###{mod.file_id}"]
+        if f"{mod.mod_id.mod_id}###{mod.mod_id.file_id}" in installed_translations:
+            translation = installed_translations[
+                f"{mod.mod_id.mod_id}###{mod.mod_id.file_id}"
+            ]
 
         elif mod.plugins:
             translation = self.get_translation_by_plugin_name(mod.plugins[0].name)
 
         return translation
 
-    def get_translation_by_id(
-        self, mod_id: int, file_id: Optional[int] = None
-    ) -> Optional[Translation]:
+    def get_translation_by_id(self, mod_id: ModId) -> Optional[Translation]:
         """
         Gets a translation for a specified mod and file id if installed.
 
@@ -363,17 +367,9 @@ class TranslationDatabase(QObject):
             Optional[Translation]: Translation or None.
         """
 
-        translation: Optional[Translation] = None
-        if mod_id and file_id:
-            translation = {
-                translation.id: translation for translation in self.__user_translations
-            }.get(f"{mod_id}###{file_id}")
-
-        elif mod_id:
-            translation = {
-                translation.mod_id: translation
-                for translation in self.__user_translations
-            }.get(mod_id)
+        translation: Optional[Translation] = {
+            translation.mod_id: translation for translation in self.__user_translations
+        }.get(mod_id)
 
         return translation
 
@@ -562,7 +558,7 @@ class TranslationDatabase(QObject):
             self.apply_db_to_translation(translation)
 
         if add_and_save:
-            translation.save_translation()
+            translation.save_strings()
             self.add_translation(translation)
 
         self.log.info(f"Created translation {translation.name!r}.")

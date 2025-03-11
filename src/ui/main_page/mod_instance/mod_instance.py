@@ -34,6 +34,7 @@ from core.mod_instance.mod_instance import ModInstance
 from core.mod_instance.plugin import Plugin
 from core.plugin_interface import plugin as esp
 from core.scanner.scanner import Scanner
+from core.translation_provider.exceptions import ModNotFoundError
 from core.translation_provider.source import Source
 from core.utilities import matches_filter
 from core.utilities.container_utils import join_dicts
@@ -371,12 +372,13 @@ class ModInstanceWidget(QTreeWidget):
         current_item: Optional[Mod | Plugin] = self.get_current_item()
 
         if isinstance(current_item, Mod) and current_item.mod_id:
-            url: Optional[str] = AppContext.get_app().provider.get_modpage_link(
-                current_item.mod_id, source=Source.NexusMods
-            )
-
-            if url is not None:
+            try:
+                url: Optional[str] = AppContext.get_app().provider.get_modpage_url(
+                    current_item.mod_id, source=Source.NexusMods
+                )
                 os.startfile(url)
+            except ModNotFoundError:
+                pass
 
     def open_in_explorer(self) -> None:
         current_item: Optional[Mod | Plugin] = self.get_current_item()

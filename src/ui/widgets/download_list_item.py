@@ -13,6 +13,7 @@ from PySide6.QtWidgets import QComboBox, QPushButton, QTreeWidgetItem
 from app_context import AppContext
 from core.downloader.translation_download import TranslationDownload
 from core.mod_instance.mod import Mod
+from core.translation_provider.exceptions import ModNotFoundError
 from core.translation_provider.provider import Provider
 from core.translation_provider.source import Source
 
@@ -70,7 +71,7 @@ class DownloadListItem(QTreeWidgetItem):
 
         for download in translation_download.available_downloads:
             if translation_download.source == Source.NexusMods:
-                text = f"{download.display_name} ({download.file_id})"
+                text = f"{download.display_name} ({download.mod_id.file_id})"
             else:
                 text = download.display_name
             self.files_combobox.addItem(text)
@@ -86,20 +87,25 @@ class DownloadListItem(QTreeWidgetItem):
         original_mod: Optional[Mod] = translation_download.original_mod
         if original_mod is None:
             return
-        modpage_url: Optional[str] = self.provider.get_modpage_link(
-            original_mod.mod_id, source=Source.NexusMods
-        )
-        if modpage_url is not None:
+
+        try:
+            modpage_url: str = self.provider.get_modpage_url(
+                original_mod.mod_id, source=Source.NexusMods
+            )
             modpage_url += "?tab=files"
             os.startfile(modpage_url)
+        except ModNotFoundError:
+            pass
 
     def __open_translation(self) -> None:
         translation_download = self.translation_downloads[
             self.translations_combobox.currentIndex()
         ]
 
-        modpage_url = self.provider.get_modpage_link(
-            translation_download.mod_id, source=translation_download.source
-        )
-        if modpage_url is not None:
+        try:
+            modpage_url: str = self.provider.get_modpage_url(
+                translation_download.mod_id, source=translation_download.source
+            )
             os.startfile(modpage_url)
+        except ModNotFoundError:
+            pass

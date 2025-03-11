@@ -7,7 +7,7 @@ from typing import Optional
 
 from core.mod_managers import SUPPORTED_MOD_MANAGERS
 from core.mod_managers.mod_manager import ModManager
-from core.translation_provider.provider import Provider
+from core.translation_provider.provider_preference import ProviderPreference
 from core.utilities.constants import SUPPORTED_LANGS
 from core.utilities.path import Path
 
@@ -52,10 +52,14 @@ class UserConfig(BaseConfig):
     @api_key.setter
     def api_key(self, value: str) -> None:
         from core.translation_provider.nm_api.nm_api import NexusModsApi
+        from core.translation_provider.provider_manager import ProviderManager
 
         UserConfig.validate_type(value, str)
         UserConfig.validate_value(
-            value, lambda value: NexusModsApi.is_api_key_valid(value)
+            value,
+            lambda value: ProviderManager.get_provider(NexusModsApi).is_api_key_valid(
+                value
+            ),
         )
 
         self._settings["api_key"] = value
@@ -141,16 +145,16 @@ class UserConfig(BaseConfig):
         self._settings["use_masterlist"] = value
 
     @property
-    def provider_preference(self) -> Provider.Preference:
+    def provider_preference(self) -> ProviderPreference:
         """
         Preferred translation provider.
         """
 
-        return Provider.Preference[self._settings["provider_preference"]]
+        return ProviderPreference[self._settings["provider_preference"]]
 
     @provider_preference.setter
-    def provider_preference(self, value: Provider.Preference) -> None:
-        UserConfig.validate_type(value, Provider.Preference)
+    def provider_preference(self, value: ProviderPreference) -> None:
+        UserConfig.validate_type(value, ProviderPreference)
 
         self._settings["provider_preference"] = value.name
 

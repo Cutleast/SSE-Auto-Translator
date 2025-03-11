@@ -182,7 +182,7 @@ class TranslationsTab(QWidget):
                     translation = self.database.create_blank_translation(
                         file.stem, strings
                     )
-                    translation.save_translation()
+                    translation.save_strings()
                     self.database.add_translation(translation)
 
             elif file.suffix.lower() in [".esp", ".esm", ".esl"]:
@@ -207,7 +207,7 @@ class TranslationsTab(QWidget):
                             f"{file.name} - {self.database.language.capitalize()}",
                             strings,
                         )
-                        translation.save_translation()
+                        translation.save_strings()
                         self.database.add_translation(translation)
 
     def check_for_updates(self) -> None:
@@ -250,7 +250,7 @@ class TranslationsTab(QWidget):
             self.database.user_translations,
         ):
             original_mod: Optional[Mod] = mod_instance.get_mod(
-                translation.original_mod_id, translation.original_file_id
+                translation.original_mod_id
             )
 
             if original_mod is None:

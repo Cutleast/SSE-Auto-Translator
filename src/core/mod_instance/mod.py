@@ -11,6 +11,7 @@ from typing import Optional, override
 from sse_bsa import BSAArchive
 from virtual_glob import InMemoryPath, glob
 
+from core.translation_provider.mod_id import ModId
 from core.utilities.constants import DSD_FILE_PATTERN
 from core.utilities.path import Path
 
@@ -24,23 +25,19 @@ class Mod:
     """
 
     name: str
-    """
-    Display name of the mod.
-    """
+    """Display name of the mod."""
 
     path: Path
-    """
-    Path to the mod's folder.
-    """
+    """Path to the mod's folder."""
 
     plugins: list[Plugin]
-    """
-    List of plugins in mod.
-    """
+    """List of plugins in mod."""
 
-    mod_id: int
-    file_id: int
+    mod_id: ModId
+    """Identifier of this mod at its source."""
+
     version: str
+    """Local version of the mod."""
 
     __files: Optional[list[str]] = None  # type: ignore
 

@@ -11,6 +11,7 @@ from typing import override
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.mod_instance.plugin import Plugin
+from core.translation_provider.mod_id import ModId
 from core.utilities.env_resolver import resolve
 from core.utilities.ini_parser import IniParser
 from core.utilities.path import Path
@@ -177,8 +178,7 @@ class ModOrganizer(ModManager):
                     name=active_mod,
                     path=mods_dir / active_mod,
                     plugins=plugins,
-                    mod_id=mod_id,
-                    file_id=file_id,
+                    mod_id=ModId(mod_id=mod_id, file_id=file_id),
                     version=version,
                 )
                 mods.append(mod)

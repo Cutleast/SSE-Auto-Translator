@@ -260,9 +260,7 @@ class Exporter(QObject):
 
             original_mod: Optional[Mod]
             if translation.original_mod_id:
-                original_mod = modinstance.get_mod(
-                    translation.original_mod_id, translation.original_file_id
-                )
+                original_mod = modinstance.get_mod(translation.original_mod_id)
             else:
                 original_mod = modinstance.get_mod_with_plugin(
                     list(translation.strings.keys())[0], ignore_case=True

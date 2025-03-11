@@ -12,6 +12,7 @@ import plyvel as ldb
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.mod_instance.plugin import Plugin
+from core.translation_provider.mod_id import ModId
 from core.utilities.env_resolver import resolve
 from core.utilities.leveldb import LevelDB
 from core.utilities.path import Path
@@ -165,8 +166,7 @@ class Vortex(ModManager):
                         name=new_name,
                         path=mod_path,
                         plugins=plugins,
-                        mod_id=mod_id,
-                        file_id=file_id,
+                        mod_id=ModId(mod_id=mod_id, file_id=file_id),
                         version=version,
                     )
                     mods.append(mod)
