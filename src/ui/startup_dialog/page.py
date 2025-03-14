@@ -13,6 +13,8 @@ from PySide6.QtWidgets import QHBoxLayout, QLabel, QPushButton, QVBoxLayout, QWi
 class Page(QWidget):
     """
     Base class for startup dialog pages.
+
+    TODO: Make generic with BaseConfig subclass and replace get_values()-method by a apply()-method, see `SettingsPage`
     """
 
     next_signal = Signal()

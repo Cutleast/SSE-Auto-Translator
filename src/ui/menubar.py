@@ -70,7 +70,7 @@ class MenuBar(QMenuBar):
         about_qt_action.triggered.connect(self.__show_about_qt)
 
     def __open_settings(self) -> None:
-        SettingsDialog().exec()
+        SettingsDialog(AppContext.get_app().main_window).show()
 
     def __check_for_updates(self) -> None:
         upd = Updater(AppContext.get_app().APP_VERSION)

@@ -1,27 +1,21 @@
 """
-This file is part of SSE Auto Translator
-by Cutleast and falls under the license
-Attribution-NonCommercial-NoDerivatives 4.0 International.
+Copyright (c) Cutleast
 """
 
 import os
-from typing import Any, override
+from typing import override
 
-import qtawesome as qta
-from PySide6.QtCore import QEvent, QLocale, QObject, QSize, Signal
-from PySide6.QtGui import QColor, QWheelEvent
+from PySide6.QtCore import QLocale
 from PySide6.QtWidgets import (
-    QApplication,
     QCheckBox,
-    QColorDialog,
     QComboBox,
     QDoubleSpinBox,
     QFileDialog,
     QFormLayout,
-    QHBoxLayout,
-    QLineEdit,
+    QGroupBox,
     QPushButton,
     QSpinBox,
+    QVBoxLayout,
     QWidget,
 )
 
@@ -33,286 +27,277 @@ from core.utilities.logger import Logger
 from core.utilities.path import Path
 from core.utilities.scale import scale_value
 from ui.widgets.browse_edit import BrowseLineEdit
-from ui.widgets.smooth_scroll_area import SmoothScrollArea
+from ui.widgets.color_entry import ColorLineEdit
+
+from .settings_page import SettingsPage
 
 
-class AppSettings(SmoothScrollArea):
+class AppSettings(SettingsPage[AppConfig]):
     """
-    Widget for application settings.
-    """
-
-    on_change_signal = Signal()
-    """
-    This signal gets emitted every time
-    the user changes some setting.
+    Page for application settings.
     """
 
-    app_config: AppConfig
+    __vlayout: QVBoxLayout
 
-    def __init__(self) -> None:
-        super().__init__()
+    __logs_num_box: QSpinBox
+    __log_level_box: QComboBox
+    __app_lang_box: QComboBox
+    __accent_color_entry: ColorLineEdit
+    __clear_cache_button: QPushButton
 
-        self.app_config = AppContext.get_app().app_config
+    __output_path_entry: BrowseLineEdit
+    __temp_path_entry: BrowseLineEdit
+    __downloads_path_entry: BrowseLineEdit
 
-        self.setObjectName("transparent")
+    __confidence_box: QDoubleSpinBox
+    __bind_nxm_checkbox: QCheckBox
+    __use_spell_check_checkbox: QCheckBox
+    __auto_import_checkbox: QCheckBox
+    __auto_create_db_translations_checkbox: QCheckBox
+    __double_click_strings: QCheckBox
 
-        self.__init_ui()
-
-    def __init_ui(self) -> None:
+    @override
+    def _init_ui(self) -> None:
         scroll_widget = QWidget()
         scroll_widget.setObjectName("transparent")
         self.setWidget(scroll_widget)
 
-        flayout = QFormLayout()
-        scroll_widget.setLayout(flayout)
+        self.__vlayout = QVBoxLayout()
+        scroll_widget.setLayout(self.__vlayout)
 
-        self.logs_num_box = QSpinBox()
-        self.logs_num_box.installEventFilter(self)
-        self.logs_num_box.setRange(-1, 100)
-        self.logs_num_box.setValue(self.app_config.log_num_of_files)
-        self.logs_num_box.valueChanged.connect(self.on_change)
-        flayout.addRow(self.tr("Number of newest log files to keep"), self.logs_num_box)
+        self.__init_basic_settings()
+        self.__init_path_settings()
+        self.__init_behavior_settings()
 
-        self.log_level_box = QComboBox()
-        self.log_level_box.installEventFilter(self)
-        self.log_level_box.addItems(
+    def __init_basic_settings(self) -> None:
+        basic_group = QGroupBox(self.tr("Basic App Settings"))
+        self.__vlayout.addWidget(basic_group)
+        basic_flayout = QFormLayout()
+        basic_group.setLayout(basic_flayout)
+
+        self.__logs_num_box = QSpinBox()
+        self.__logs_num_box.installEventFilter(self)
+        self.__logs_num_box.setRange(-1, 100)
+        self.__logs_num_box.setValue(self._initial_config.log_num_of_files)
+        self.__logs_num_box.valueChanged.connect(self._on_change)
+        self.__logs_num_box.valueChanged.connect(self._on_restart_required)
+        basic_flayout.addRow(
+            "*" + self.tr("Number of newest log files to keep"), self.__logs_num_box
+        )
+
+        self.__log_level_box = QComboBox()
+        self.__log_level_box.installEventFilter(self)
+        self.__log_level_box.addItems(
             [loglevel.name.capitalize() for loglevel in Logger.LogLevel]
         )
-        self.log_level_box.setCurrentText(self.app_config.log_level.name.capitalize())
-        self.log_level_box.currentTextChanged.connect(self.on_change)
-        flayout.addRow(self.tr("Log Level"), self.log_level_box)
-
-        self.app_lang_box = QComboBox()
-        self.app_lang_box.installEventFilter(self)
-        self.app_lang_box.addItem("System")
-        # TODO: Make this dynamic
-        self.app_lang_box.addItems(["de_DE", "en_US", "ru_RU", "zh_CN"])
-        self.app_lang_box.setCurrentText(self.app_config.language)
-        self.app_lang_box.currentTextChanged.connect(self.on_change)
-        flayout.addRow(self.tr("App language"), self.app_lang_box)
-
-        color_hlayout = QHBoxLayout()
-        self.accent_color_entry = QLineEdit()
-        self.accent_color_entry.setText(self.app_config.accent_color)
-        self.accent_color_entry.textChanged.connect(self.on_change)
-        color_hlayout.addWidget(self.accent_color_entry)
-        self.choose_color_button = QPushButton()
-
-        def choose_color() -> None:
-            colordialog = QColorDialog(QApplication.activeModalWidget())
-            colordialog.setOption(
-                colordialog.ColorDialogOption.DontUseNativeDialog, on=True
-            )
-            colordialog.setCustomColor(
-                0, QColor(self.app_config.get_default_value("accent_color"))
-            )
-            color = self.accent_color_entry.text()
-            if QColor.isValidColor(color):
-                colordialog.setCurrentColor(QColor(color))
-            if colordialog.exec():
-                self.accent_color_entry.setText(
-                    colordialog.currentColor().name(QColor.NameFormat.HexRgb)
-                )
-                self.choose_color_button.setIcon(
-                    qta.icon(
-                        "mdi6.square-rounded", color=self.accent_color_entry.text()
-                    )
-                )
-
-        self.choose_color_button.setText(self.tr("Choose Accent Color..."))
-        self.choose_color_button.setIconSize(QSize(24, 24))
-        self.choose_color_button.clicked.connect(choose_color)
-        self.choose_color_button.setIcon(
-            qta.icon("mdi6.square-rounded", color=self.app_config.accent_color)
+        self.__log_level_box.setCurrentText(
+            self._initial_config.log_level.name.capitalize()
         )
-        color_hlayout.addWidget(self.choose_color_button)
-        flayout.addRow(self.tr("Accent Color"), color_hlayout)
+        self.__log_level_box.currentTextChanged.connect(self._on_change)
+        self.__log_level_box.currentTextChanged.connect(self._on_restart_required)
+        basic_flayout.addRow("*" + self.tr("Log Level"), self.__log_level_box)
 
-        self.confidence_box = QDoubleSpinBox()
-        self.confidence_box.installEventFilter(self)
-        self.confidence_box.setLocale(QLocale.Language.English)
-        self.confidence_box.setRange(0, 1)
-        self.confidence_box.setSingleStep(0.05)
-        self.confidence_box.setValue(self.app_config.detector_confidence)
-        self.confidence_box.valueChanged.connect(self.on_change)
-        flayout.addRow(self.tr("Language Detector Confidence"), self.confidence_box)
+        self.__app_lang_box = QComboBox()
+        self.__app_lang_box.installEventFilter(self)
+        self.__app_lang_box.addItem("System")
+        # TODO: Make this dynamic
+        self.__app_lang_box.addItems(["de_DE", "en_US", "ru_RU", "zh_CN"])
+        self.__app_lang_box.setCurrentText(self._initial_config.language)
+        self.__app_lang_box.currentTextChanged.connect(self._on_change)
+        self.__app_lang_box.currentTextChanged.connect(self._on_restart_required)
+        basic_flayout.addRow("*" + self.tr("App language"), self.__app_lang_box)
+
+        self.__accent_color_entry = ColorLineEdit(
+            [self._initial_config.get_default_value("accent_color")]
+        )
+        self.__accent_color_entry.installEventFilter(self)
+        self.__accent_color_entry.setText(self._initial_config.accent_color)
+        self.__accent_color_entry.textChanged.connect(self._on_change)
+        self.__accent_color_entry.textChanged.connect(self._on_restart_required)
+        basic_flayout.addRow("*" + self.tr("Accent Color"), self.__accent_color_entry)
+
+        self.__clear_cache_button = QPushButton(
+            self.tr(
+                "Clear Cache (This will reset all plugin states "
+                "and delete cached API requests!)"
+            )
+        )
+        self.__clear_cache_button.clicked.connect(self.__clear_cache)
+        cache: Cache = AppContext.get_app().cache
+        self.__clear_cache_button.setEnabled(cache.path.is_dir())
+        if cache.path.is_dir():
+            self.__clear_cache_button.setText(
+                self.__clear_cache_button.text()
+                + f" ({scale_value(get_folder_size(cache.path))})"
+            )
+        basic_flayout.addRow(self.__clear_cache_button)
+
+    def __init_path_settings(self) -> None:
+        cur_path: Path = AppContext.get_app().cur_path
+
+        path_group = QGroupBox(self.tr("Path Settings"))
+        self.__vlayout.addWidget(path_group)
+        path_flayout = QFormLayout()
+        path_group.setLayout(path_flayout)
 
         # Output path
-        self.output_path_entry = BrowseLineEdit()
-        cur_path: Path = AppContext.get_app().cur_path
-        self.output_path_entry.setPlaceholderText(
+        self.__output_path_entry = BrowseLineEdit()
+        self.__output_path_entry.setPlaceholderText(
             self.tr("Default: ") + str(cur_path / "SSE-AT Output")
         )
-        self.output_path_entry.setText(str(self.app_config.output_path or ""))
-        self.output_path_entry.textChanged.connect(self.on_change)
-        self.output_path_entry.setFileMode(QFileDialog.FileMode.Directory)
-        flayout.addRow(
+        self.__output_path_entry.setText(str(self._initial_config.output_path or ""))
+        self.__output_path_entry.textChanged.connect(self._on_change)
+        self.__output_path_entry.setFileMode(QFileDialog.FileMode.Directory)
+        path_flayout.addRow(
             self.tr("Path for Output Mod") + self.tr(" (No Restart Required)"),
-            self.output_path_entry,
+            self.__output_path_entry,
         )
 
         # Temp path
-        self.temp_path_entry = BrowseLineEdit()
-        self.temp_path_entry.setPlaceholderText(
+        self.__temp_path_entry = BrowseLineEdit()
+        self.__temp_path_entry.setPlaceholderText(
             self.tr("Default: ") + (os.getenv("TEMP") or "")
         )
-        self.temp_path_entry.setText(str(self.app_config.temp_path or ""))
-        self.temp_path_entry.textChanged.connect(self.on_change)
-        self.temp_path_entry.setFileMode(QFileDialog.FileMode.Directory)
-        flayout.addRow(
+        self.__temp_path_entry.setText(str(self._initial_config.temp_path or ""))
+        self.__temp_path_entry.textChanged.connect(self._on_change)
+        self.__temp_path_entry.setFileMode(QFileDialog.FileMode.Directory)
+        path_flayout.addRow(
             self.tr("Path for Temporary Folder")
             + "\n"
             + self.tr("(for temporary files, will be wiped after exit!)"),
-            self.temp_path_entry,
+            self.__temp_path_entry,
         )
 
         # Downloads path
-        self.downloads_path_entry = BrowseLineEdit()
-        self.downloads_path_entry.setPlaceholderText(
+        self.__downloads_path_entry = BrowseLineEdit()
+        self.__downloads_path_entry.setPlaceholderText(
             self.tr("Defaults to Temporary Folder configured above")
         )
-        self.downloads_path_entry.setText(str(self.app_config.downloads_path or ""))
-        self.downloads_path_entry.textChanged.connect(self.on_change)
-        self.downloads_path_entry.setFileMode(QFileDialog.FileMode.Directory)
-        flayout.addRow(self.tr("Downloads Path"), self.downloads_path_entry)
+        self.__downloads_path_entry.setText(
+            str(self._initial_config.downloads_path or "")
+        )
+        self.__downloads_path_entry.textChanged.connect(self._on_change)
+        self.__downloads_path_entry.setFileMode(QFileDialog.FileMode.Directory)
+        path_flayout.addRow(self.tr("Downloads Path"), self.__downloads_path_entry)
 
-        self.bind_nxm_checkbox = QCheckBox(
-            self.tr(
+    def __init_behavior_settings(self) -> None:
+        behavior_group = QGroupBox(self.tr("Behavior Settings"))
+        self.__vlayout.addWidget(behavior_group)
+        behavior_flayout = QFormLayout()
+        behavior_group.setLayout(behavior_flayout)
+
+        self.__confidence_box = QDoubleSpinBox()
+        self.__confidence_box.installEventFilter(self)
+        self.__confidence_box.setLocale(QLocale.Language.English)
+        self.__confidence_box.setRange(0, 1)
+        self.__confidence_box.setSingleStep(0.05)
+        self.__confidence_box.setValue(self._initial_config.detector_confidence)
+        self.__confidence_box.valueChanged.connect(self._on_change)
+        self.__confidence_box.valueChanged.connect(self._on_restart_required)
+        behavior_flayout.addRow(
+            "*" + self.tr("Language Detector Confidence"), self.__confidence_box
+        )
+
+        self.__bind_nxm_checkbox = QCheckBox(
+            "*"
+            + self.tr(
                 'Automatically bind to "Mod Manager Download" '
                 "Buttons on Nexus Mods on Startup"
             )
             + " "
             + self.tr("[EXPERIMENTAL]")
         )
-        self.bind_nxm_checkbox.setChecked(self.app_config.auto_bind_nxm)
-        self.bind_nxm_checkbox.stateChanged.connect(self.on_change)
-        flayout.addRow(self.bind_nxm_checkbox)
+        self.__bind_nxm_checkbox.setToolTip(
+            self.tr(
+                "This will automatically bind to Mod Manager downloads and unbind "
+                "when SSE-AT is closed.\nThis feature is considered experimental because "
+                "a crash might prevent it from unbinding properly."
+            )
+        )
+        self.__bind_nxm_checkbox.setChecked(self._initial_config.auto_bind_nxm)
+        self.__bind_nxm_checkbox.stateChanged.connect(self._on_change)
+        self.__bind_nxm_checkbox.stateChanged.connect(self._on_restart_required)
+        behavior_flayout.addRow(self.__bind_nxm_checkbox)
 
-        self.use_spell_check_checkbox = QCheckBox(
+        self.__use_spell_check_checkbox = QCheckBox(
             self.tr("Enable Spell Checking in Translation Editor")
-            + self.tr(" (No Restart Required)")
         )
-        self.use_spell_check_checkbox.setChecked(self.app_config.use_spell_check)
-        self.use_spell_check_checkbox.stateChanged.connect(self.on_change)
-        flayout.addRow(self.use_spell_check_checkbox)
+        self.__use_spell_check_checkbox.setChecked(self._initial_config.use_spell_check)
+        self.__use_spell_check_checkbox.stateChanged.connect(self._on_change)
+        behavior_flayout.addRow(self.__use_spell_check_checkbox)
 
-        self.auto_import_checkbox = QCheckBox(
+        self.__auto_import_checkbox = QCheckBox(
             self.tr("Automatically import installed translations into the database")
-            + self.tr(" (No Restart Required)")
         )
-        self.auto_import_checkbox.setChecked(self.app_config.auto_import_translations)
-        self.auto_import_checkbox.stateChanged.connect(self.on_change)
-        flayout.addRow(self.auto_import_checkbox)
+        self.__auto_import_checkbox.setChecked(
+            self._initial_config.auto_import_translations
+        )
+        self.__auto_import_checkbox.stateChanged.connect(self._on_change)
+        behavior_flayout.addRow(self.__auto_import_checkbox)
 
-        self.auto_create_db_translations_checkbox = QCheckBox(
+        self.__auto_create_db_translations_checkbox = QCheckBox(
             self.tr(
                 "Automatically create translations for plugins that are entirely "
                 "covered by installed translations"
             )
-            + self.tr(" (No Restart Required)")
         )
-        self.auto_create_db_translations_checkbox.setChecked(
-            self.app_config.auto_create_database_translations
+        self.__auto_create_db_translations_checkbox.setChecked(
+            self._initial_config.auto_create_database_translations
         )
-        self.auto_create_db_translations_checkbox.stateChanged.connect(self.on_change)
-        flayout.addRow(self.auto_create_db_translations_checkbox)
+        self.__auto_create_db_translations_checkbox.stateChanged.connect(
+            self._on_change
+        )
+        behavior_flayout.addRow(self.__auto_create_db_translations_checkbox)
 
-        self.double_click_strings = QCheckBox(
+        self.__double_click_strings = QCheckBox(
             self.tr(
                 "Show strings when double clicking a mod or plugin "
                 'in the modlist or a translation in the "Translations" tab'
             )
-            + self.tr(" (No Restart Required)")
         )
-        self.double_click_strings.setChecked(
-            self.app_config.show_strings_on_double_click
+        self.__double_click_strings.setChecked(
+            self._initial_config.show_strings_on_double_click
         )
-        self.double_click_strings.stateChanged.connect(self.on_change)
-        flayout.addRow(self.double_click_strings)
+        self.__double_click_strings.stateChanged.connect(self._on_change)
+        behavior_flayout.addRow(self.__double_click_strings)
 
-        self.clear_cache_button = QPushButton(
-            self.tr(
-                "Clear Cache (This will reset all plugin states "
-                "and delete cached API requests!)"
-            )
-        )
-        self.clear_cache_button.clicked.connect(self.clear_cache)
-        cache: Cache = AppContext.get_app().cache
-        if cache.path.is_dir():
-            self.clear_cache_button.setEnabled(True)
-            self.clear_cache_button.setText(
-                self.clear_cache_button.text()
-                + f" ({scale_value(get_folder_size(cache.path))})"
-            )
-        else:
-            self.clear_cache_button.setEnabled(False)
-        flayout.addRow(self.clear_cache_button)
-
-    def on_change(self, *args: Any) -> None:
-        """
-        This emits change signal without passing parameters.
-        """
-
-        self.on_change_signal.emit()
-
-    def clear_cache(self) -> None:
+    def __clear_cache(self) -> None:
         cache: Cache = AppContext.get_app().cache
         cache.clear_caches()
-        self.clear_cache_button.setText(
+        self.__clear_cache_button.setText(
             self.tr(
                 "Clear Cache (This will reset all plugin states "
                 "and delete cached API requests!)"
             )
         )
-        self.clear_cache_button.setEnabled(False)
+        self.__clear_cache_button.setEnabled(False)
 
     @override
-    def eventFilter(self, source: QObject, event: QEvent) -> bool:
-        if (
-            event.type() == QEvent.Type.Wheel
-            and (
-                isinstance(source, QComboBox)
-                or isinstance(source, QSpinBox)
-                or isinstance(source, QDoubleSpinBox)
-            )
-            and isinstance(event, QWheelEvent)
-        ):
-            self.wheelEvent(event)
-            return True
-
-        return super().eventFilter(source, event)
-
-    def save_settings(self) -> None:
-        self.app_config.log_num_of_files = self.logs_num_box.value()
-        self.app_config.log_level = Logger.LogLevel[
-            self.log_level_box.currentText().upper()
-        ]
-        self.app_config.language = self.app_lang_box.currentText()
-        self.app_config.accent_color = self.accent_color_entry.text()
-        self.app_config.detector_confidence = self.confidence_box.value()
-        self.app_config.auto_bind_nxm = self.bind_nxm_checkbox.isChecked()
-        self.app_config.use_spell_check = self.use_spell_check_checkbox.isChecked()
-        self.app_config.auto_import_translations = self.auto_import_checkbox.isChecked()
-        self.app_config.auto_create_database_translations = (
-            self.auto_create_db_translations_checkbox.isChecked()
+    def apply(self, config: AppConfig) -> None:
+        config.log_num_of_files = self.__logs_num_box.value()
+        config.log_level = Logger.LogLevel[self.__log_level_box.currentText().upper()]
+        config.language = self.__app_lang_box.currentText()
+        config.accent_color = self.__accent_color_entry.text()
+        config.detector_confidence = self.__confidence_box.value()
+        config.auto_bind_nxm = self.__bind_nxm_checkbox.isChecked()
+        config.use_spell_check = self.__use_spell_check_checkbox.isChecked()
+        config.auto_import_translations = self.__auto_import_checkbox.isChecked()
+        config.auto_create_database_translations = (
+            self.__auto_create_db_translations_checkbox.isChecked()
         )
-        self.app_config.show_strings_on_double_click = (
-            self.double_click_strings.isChecked()
-        )
-        self.app_config.output_path = (
-            Path(self.output_path_entry.text().strip())
-            if self.output_path_entry.text().strip()
+        config.show_strings_on_double_click = self.__double_click_strings.isChecked()
+        config.output_path = (
+            Path(self.__output_path_entry.text().strip())
+            if self.__output_path_entry.text().strip()
             else None
         )
-        self.app_config.temp_path = (
-            Path(self.temp_path_entry.text().strip())
-            if self.temp_path_entry.text().strip()
+        config.temp_path = (
+            Path(self.__temp_path_entry.text().strip())
+            if self.__temp_path_entry.text().strip()
             else None
         )
-        self.app_config.downloads_path = (
-            Path(self.downloads_path_entry.text().strip())
-            if self.downloads_path_entry.text().strip()
+        config.downloads_path = (
+            Path(self.__downloads_path_entry.text().strip())
+            if self.__downloads_path_entry.text().strip()
             else None
         )
-
-        self.app_config.save()

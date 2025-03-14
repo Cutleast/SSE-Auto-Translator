@@ -506,3 +506,13 @@ class App(QApplication):
         """
 
         os.startfile(self.cur_path / "doc" / "Instructions_en_US.html")
+
+    def restart_application(self) -> None:
+        """
+        Restarts the application.
+        """
+
+        exe_path: str = self.get_execution_command()
+        if os.path.isfile(exe_path):
+            os.startfile(exe_path)
+        self.exit()
