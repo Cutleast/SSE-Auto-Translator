@@ -38,7 +38,6 @@
 		"debugpy.debugJustMyCode": false,
 		"python.analysis.autoFormatStrings": true,
 		"python.analysis.autoImportCompletions": true,
-		"python.analysis.completeFunctionParens": true,
 		"python.analysis.diagnosticMode": "workspace",
 		"python.analysis.generateWithTypeAnnotation": true,
 		"python.analysis.languageServerMode": "full",
