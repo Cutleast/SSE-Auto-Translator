@@ -2,6 +2,7 @@
 name = "sse-auto-translator"
 version = "3.0.0-alpha-1"
 description = "A tool for translating entire modlists by auto-downloading available translations from Nexus Mods. "
+license = { file = "LICENSE" }
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
