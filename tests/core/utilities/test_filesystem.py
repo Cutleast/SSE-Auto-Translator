@@ -4,7 +4,7 @@ Copyright (c) Cutleast
 
 from typing import TypeVar
 
-from src.core.utilities.filesystem import glob
+from core.utilities.filesystem import glob
 
 T = TypeVar("T")
 

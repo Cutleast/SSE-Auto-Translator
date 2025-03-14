@@ -2,7 +2,7 @@
 Copyright (c) Cutleast
 """
 
-from src.core.utilities.scale import scale_value
+from core.utilities.scale import scale_value
 
 
 class TestScale:

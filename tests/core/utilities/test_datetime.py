@@ -4,7 +4,7 @@ Copyright (c) Cutleast
 
 import pytest
 
-from src.core.utilities.datetime import datetime_format_to_regex, get_diff
+from core.utilities.datetime import datetime_format_to_regex, get_diff
 
 
 class TestDatetime:

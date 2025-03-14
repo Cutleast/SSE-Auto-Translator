@@ -9,7 +9,7 @@ import tempfile
 from abc import ABC
 from typing import Optional
 
-from src.core.utilities.path import Path
+from core.utilities.path import Path
 
 logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
 

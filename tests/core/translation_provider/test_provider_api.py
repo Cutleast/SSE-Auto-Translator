@@ -2,20 +2,15 @@
 Copyright (c) Cutleast
 """
 
-import os
-import sys
 from typing import Optional
 
 import pytest
 
-from tests.core.core_test import CoreTest
-
-sys.path.append(os.path.join(os.getcwd(), "src"))
-
+from app import App
+from core.translation_provider.exceptions import ModNotFoundError
+from core.translation_provider.mod_id import ModId
 from core.translation_provider.provider_api import ProviderApi
-from src.app import App
-from src.core.translation_provider.exceptions import ModNotFoundError
-from src.core.translation_provider.mod_id import ModId
+from tests.core.core_test import CoreTest
 
 
 class TestProviderApi(CoreTest):

@@ -5,7 +5,7 @@ Copyright (c) Cutleast
 import pytest
 from pytestqt.qtbot import QtBot
 
-from src.ui.widgets.copy_entry import CopyLineEdit
+from ui.widgets.copy_entry import CopyLineEdit
 
 from .._setup.clipboard import Clipboard
 from ..ui_test import UiTest

@@ -2,18 +2,13 @@
 Copyright (c) Cutleast
 """
 
-import os
-import sys
-
 import pytest
 
+from core.mod_instance.mod_instance import ModInstance
+from core.mod_managers.modorganizer import ModOrganizer
+from core.utilities.path import Path
+
 from ..core_test import CoreTest
-
-sys.path.append(os.path.join(os.getcwd(), "src"))
-
-from src.core.mod_instance.mod_instance import ModInstance
-from src.core.mod_managers.modorganizer import ModOrganizer
-from src.core.utilities.path import Path
 
 
 class TestModOrganizer(CoreTest):

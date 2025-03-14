@@ -3,10 +3,6 @@ Copyright (c) Cutleast
 """
 
 import logging
-import os
-import sys
-
-sys.path.append(os.path.join(os.getcwd(), "src"))
 
 from core.mod_instance.mod import Mod
 from core.mod_instance.plugin import Plugin

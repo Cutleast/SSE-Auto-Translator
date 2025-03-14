@@ -2,13 +2,9 @@
 Copyright (c) Cutleast
 """
 
-import os
-import sys
 from typing import Any
 
 import pytest
-
-sys.path.append(os.path.join(os.getcwd(), "src"))
 
 from core.database.string import String
 from core.utilities.container_utils import ReferenceDict

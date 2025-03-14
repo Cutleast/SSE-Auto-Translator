@@ -6,7 +6,7 @@ import pytest
 from PySide6.QtWidgets import QLineEdit
 from pytestqt.qtbot import QtBot
 
-from src.ui.widgets.key_entry import KeyEntry
+from ui.widgets.key_entry import KeyEntry
 
 from ..ui_test import UiTest
 

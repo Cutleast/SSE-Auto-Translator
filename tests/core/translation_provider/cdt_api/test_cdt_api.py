@@ -2,17 +2,13 @@
 Copyright (c) Cutleast
 """
 
-import os
-import sys
 from typing import Any
 
 import pytest
 
+from core.translation_provider.cdt_api.ctd_api import CDTApi
+
 from ...core_test import CoreTest
-
-sys.path.append(os.path.join(os.getcwd(), "src"))
-
-from src.core.translation_provider.cdt_api.ctd_api import CDTApi
 
 
 class TestCDTApi(CoreTest):

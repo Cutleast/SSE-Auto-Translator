@@ -7,7 +7,7 @@ from typing import override
 
 import pytest
 
-from src.core.utilities.container_utils import ReferenceDict
+from core.utilities.container_utils import ReferenceDict
 
 
 class TestContainerUtils:

@@ -8,7 +8,7 @@ import pytest
 from PySide6.QtWidgets import QTreeWidget, QTreeWidgetItem
 from pytestqt.qtbot import QtBot
 
-from src.ui.utilities.tree_widget import are_children_visible
+from ui.utilities.tree_widget import are_children_visible
 
 from ..ui_test import UiTest
 

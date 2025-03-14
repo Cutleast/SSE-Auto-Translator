@@ -3,15 +3,11 @@ Copyright (c) Cutleast
 """
 
 import json
-import os
-import sys
+
+from core.utilities.path import Path
+from utilities.esp2dsd.main import Esp2Dsd
 
 from ...base_test import BaseTest
-
-sys.path.append(os.path.join(os.getcwd(), "src"))
-
-from src.core.utilities.path import Path
-from src.utilities.esp2dsd.main import Esp2Dsd
 
 
 class TestEsp2Dsd(BaseTest):

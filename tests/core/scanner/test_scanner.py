@@ -2,18 +2,13 @@
 Copyright (c) Cutleast
 """
 
-import os
-import sys
+from app import App
+from core.mod_instance.mod import Mod
+from core.mod_instance.mod_instance import ModInstance
+from core.mod_instance.plugin import Plugin
+from core.scanner.scanner import Scanner
 
 from ..core_test import CoreTest
-
-sys.path.append(os.path.join(os.getcwd(), "src"))
-
-from src.app import App
-from src.core.mod_instance.mod import Mod
-from src.core.mod_instance.mod_instance import ModInstance
-from src.core.mod_instance.plugin import Plugin
-from src.core.scanner.scanner import Scanner
 
 
 class TestScanner(CoreTest):

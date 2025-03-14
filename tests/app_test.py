@@ -3,13 +3,9 @@ Copyright (c) Cutleast
 """
 
 import logging
-import os
-import sys
 from argparse import Namespace
 
 import pytest
-
-sys.path.append(os.path.join(os.getcwd(), "src"))
 
 from app import App
 from app_context import AppContext

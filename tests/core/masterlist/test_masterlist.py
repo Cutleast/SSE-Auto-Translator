@@ -2,18 +2,14 @@
 Copyright (c) Cutleast
 """
 
-import os
-import sys
 from typing import Any
 
 import pytest
 from pydantic import ValidationError
 
-sys.path.append(os.path.join(os.getcwd(), "src"))
-
-from src.core.masterlist.masterlist import Masterlist
-from src.core.masterlist.masterlist_entry import MasterlistEntry
-from src.core.translation_provider.source import Source
+from core.masterlist.masterlist import Masterlist
+from core.masterlist.masterlist_entry import MasterlistEntry
+from core.translation_provider.source import Source
 
 
 class TestMasterlist:

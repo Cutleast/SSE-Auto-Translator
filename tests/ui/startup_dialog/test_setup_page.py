@@ -2,20 +2,16 @@
 Copyright (c) Cutleast
 """
 
-import os
-import sys
 from typing import Any, Optional
 
 import pytest
 from PySide6.QtWidgets import QComboBox
 
+from app import App
+from ui.startup_dialog.setup_page import SetupPage
+
 from ...app_test import AppTest
 from ..ui_test import UiTest
-
-sys.path.append(os.path.join(os.getcwd(), "src"))
-
-from src.app import App
-from src.ui.startup_dialog.setup_page import SetupPage
 
 
 class TestSetupPage(UiTest, AppTest):

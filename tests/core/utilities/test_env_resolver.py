@@ -4,8 +4,8 @@ Copyright (c) Cutleast
 
 import os
 
-from src.core.utilities.env_resolver import resolve
-from src.core.utilities.path import Path
+from core.utilities.env_resolver import resolve
+from core.utilities.path import Path
 
 
 class TestEnvResolver:

@@ -2,7 +2,7 @@
 Copyright (c) Cutleast
 """
 
-from src.core.utilities.path import Path
+from core.utilities.path import Path
 
 
 class TestPath:

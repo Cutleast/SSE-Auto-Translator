@@ -2,16 +2,13 @@
 Copyright (c) Cutleast
 """
 
-import os
-import sys
 from unittest import mock
 
 import pytest
 
-from .app_test import AppTest
+from app import App
 
-sys.path.append(os.path.join(os.getcwd(), "src"))
-from src.app import App
+from .app_test import AppTest
 
 
 class TestApp(AppTest):

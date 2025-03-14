@@ -10,7 +10,7 @@ from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QPushButton
 from pytestqt.qtbot import QtBot
 
-from src.ui.widgets.search_bar import SearchBar
+from ui.widgets.search_bar import SearchBar
 
 from ..ui_test import UiTest
 

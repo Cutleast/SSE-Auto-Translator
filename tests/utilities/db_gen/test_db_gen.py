@@ -3,15 +3,11 @@ Copyright (c) Cutleast
 """
 
 import json
-import os
-import sys
+
+from core.utilities.path import Path
+from utilities.db_gen.main import DbGen
 
 from ...base_test import BaseTest
-
-sys.path.append(os.path.join(os.getcwd(), "src"))
-
-from src.core.utilities.path import Path
-from src.utilities.db_gen.main import DbGen
 
 
 class TestDbGen(BaseTest):

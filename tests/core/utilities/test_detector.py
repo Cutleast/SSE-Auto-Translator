@@ -2,16 +2,12 @@
 Copyright (c) Cutleast
 """
 
-import os
-import sys
 from typing import Optional
 
 import pytest
 
-sys.path.append(os.path.join(os.getcwd(), "src"))
-
-from src.core.database.string import String
-from src.core.utilities.detector import LangDetector, Language
+from core.database.string import String
+from core.utilities.detector import LangDetector, Language
 
 
 class TestLangDetector:
