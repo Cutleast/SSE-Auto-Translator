@@ -4,13 +4,14 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-import os
 from typing import override
 
+from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QLabel, QPushButton
 
 from app_context import AppContext
-from core.utilities.path import Path
+from core.config.user_config import UserConfig
+from core.utilities.path_limit_fixer import PathLimitFixer
 from ui.startup_dialog.page import Page
 
 
@@ -55,8 +56,17 @@ class IntroductionPage(Page):
         self._vlayout.addWidget(path_limit_label)
 
         fix_button = QPushButton(self.tr("Fix Windows Path Limit"))
-        fix_button.clicked.connect(self.__fix_path_limit)
+        fix_button.clicked.connect(
+            lambda: PathLimitFixer.disable_path_limit(AppContext.get_app().res_path)
+        )
         self._vlayout.addWidget(fix_button)
+
+        if not PathLimitFixer.is_path_limit_enabled():
+            fix_button.setDisabled(True)
+            self._vlayout.addWidget(
+                QLabel(self.tr("Path Limit is already disabled.")),
+                alignment=Qt.AlignmentFlag.AlignHCenter,
+            )
 
         self._vlayout.addStretch()
 
@@ -65,13 +75,5 @@ class IntroductionPage(Page):
         return None
 
     @override
-    def get_values(self) -> None:
+    def apply(self, config: UserConfig) -> None:
         return None
-
-    def __fix_path_limit(self) -> None:
-        res_path: Path = AppContext.get_app().res_path
-
-        try:
-            os.startfile(res_path / "path_limit.reg")
-        except OSError:
-            pass

@@ -3,18 +3,28 @@ Copyright (c) Cutleast
 """
 
 from abc import abstractmethod
-from typing import Any, Optional
+from typing import Optional, override
 
 import qtawesome as qta
-from PySide6.QtCore import Qt, Signal
-from PySide6.QtWidgets import QHBoxLayout, QLabel, QPushButton, QVBoxLayout, QWidget
+from PySide6.QtCore import QEvent, QObject, Qt, Signal
+from PySide6.QtGui import QWheelEvent
+from PySide6.QtWidgets import (
+    QComboBox,
+    QDoubleSpinBox,
+    QHBoxLayout,
+    QLabel,
+    QPushButton,
+    QSpinBox,
+    QVBoxLayout,
+    QWidget,
+)
+
+from core.config.user_config import UserConfig
 
 
 class Page(QWidget):
     """
     Base class for startup dialog pages.
-
-    TODO: Make generic with BaseConfig subclass and replace get_values()-method by a apply()-method, see `SettingsPage`
     """
 
     next_signal = Signal()
@@ -97,10 +107,26 @@ class Page(QWidget):
     def _validate(self) -> None: ...
 
     @abstractmethod
-    def get_values(self) -> Any:
+    def apply(self, config: UserConfig) -> None:
         """
-        Get the values from the page.
+        Applies user input to the config.
 
-        Returns:
-            Any: The values from the page.
+        Args:
+            config (UserConfig): Config to apply user input to
         """
+
+    @override
+    def eventFilter(self, source: QObject, event: QEvent) -> bool:
+        if (
+            event.type() == QEvent.Type.Wheel
+            and (
+                isinstance(source, QComboBox)
+                or isinstance(source, QSpinBox)
+                or isinstance(source, QDoubleSpinBox)
+            )
+            and isinstance(event, QWheelEvent)
+        ):
+            self.wheelEvent(event)
+            return True
+
+        return super().eventFilter(source, event)

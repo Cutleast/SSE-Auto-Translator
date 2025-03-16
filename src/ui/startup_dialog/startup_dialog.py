@@ -14,9 +14,6 @@ from PySide6.QtWidgets import QDialog, QVBoxLayout, QWidget
 
 from app_context import AppContext
 from core.config.user_config import UserConfig
-from core.mod_managers import SUPPORTED_MOD_MANAGERS
-from core.mod_managers.mod_manager import ModManager
-from core.translation_provider.provider_preference import ProviderPreference
 from core.utilities.path import Path
 from ui.widgets.stacked_widget import StackedWidget
 
@@ -79,56 +76,15 @@ class StartupDialog(QDialog):
         self.__page_widget.setCurrentWidget(self.__introduction_page)
 
     def finish(self) -> None:
-        mod_managers: dict[str, type[ModManager]] = {
-            mod_manager.name: mod_manager for mod_manager in SUPPORTED_MOD_MANAGERS
-        }
-
-        language: str
-        provider_preference: str
-        api_key: str
-        use_masterlist: bool
-        enable_interface_files: bool
-        enable_scripts: bool
-        enable_textures: bool
-        enable_sound_files: bool
-        (
-            language,
-            provider_preference,
-            api_key,
-            use_masterlist,
-            enable_interface_files,
-            enable_scripts,
-            enable_textures,
-            enable_sound_files,
-        ) = self.__setup_page.get_values()
-
-        mod_manager_name: str
-        instance_name: str
-        instance_profile: str
-        instance_path: str
-        mod_manager_name, instance_name, instance_profile, instance_path = (
-            self.__instance_page.get_values()
-        )
-
         data_path: Path = AppContext.get_app().data_path
         user_path: Path = data_path / "user"
 
         user_config = UserConfig(user_path)
-        user_config.language = language
-        user_config.api_key = api_key
-        user_config.mod_manager = mod_managers[mod_manager_name]
-        user_config.modinstance = instance_name
-        user_config.use_masterlist = use_masterlist
-        user_config.instance_profile = instance_profile
-        user_config.instance_path = Path(instance_path)
-        user_config.provider_preference = ProviderPreference[provider_preference]
-        user_config.enable_interface_files = enable_interface_files
-        user_config.enable_scripts = enable_scripts
-        user_config.enable_textures = enable_textures
-        user_config.enable_sound_files = enable_sound_files
+        self.__instance_page.apply(user_config)
+        self.__setup_page.apply(user_config)
         user_config.save()
 
-        database_path: Path = user_path / "database" / language.lower()
+        database_path: Path = user_path / "database" / user_config.language.lower()
         if not database_path.is_dir():
             os.makedirs(database_path, exist_ok=True)
 

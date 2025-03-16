@@ -6,8 +6,6 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 from typing import Optional, override
 
-from PySide6.QtCore import QEvent, QObject
-from PySide6.QtGui import QWheelEvent
 from PySide6.QtWidgets import (
     QCheckBox,
     QComboBox,
@@ -18,6 +16,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
+from core.config.user_config import UserConfig
 from core.translation_provider.provider_preference import ProviderPreference
 from core.utilities.constants import SUPPORTED_LANGS
 from core.utilities.localisation import LocalisationUtils
@@ -180,26 +179,17 @@ class SetupPage(Page):
         )
 
     @override
-    def get_values(self) -> tuple[str, str, str, bool, bool, bool, bool, bool]:
-        return (
-            self.__lang_dropdown.currentText(),
-            self.__source_dropdown.currentText(),
-            self.__api_setup.api_key or "",
-            self.__masterlist_box.isChecked(),
-            self.__interface_files_box.isChecked(),
-            self.__scripts_box.isChecked(),
-            self.__textures_box.isChecked(),
-            self.__sound_files_box.isChecked(),
-        )
+    def apply(self, config: UserConfig) -> None:
+        if self.__api_setup.api_key is None:
+            raise ValueError("API key is required!")
 
-    @override
-    def eventFilter(self, source: QObject, event: QEvent) -> bool:
-        if (
-            event.type() == QEvent.Type.Wheel
-            and isinstance(source, QComboBox)
-            and isinstance(event, QWheelEvent)
-        ):
-            self.__scroll_area.wheelEvent(event)
-            return True
-
-        return super().eventFilter(source, event)
+        config.language = self.__lang_dropdown.currentText()
+        config.provider_preference = ProviderPreference[
+            self.__source_dropdown.currentText()
+        ]
+        config.api_key = self.__api_setup.api_key
+        config.use_masterlist = self.__masterlist_box.isChecked()
+        config.enable_interface_files = self.__interface_files_box.isChecked()
+        config.enable_scripts = self.__scripts_box.isChecked()
+        config.enable_textures = self.__textures_box.isChecked()
+        config.enable_sound_files = self.__sound_files_box.isChecked()

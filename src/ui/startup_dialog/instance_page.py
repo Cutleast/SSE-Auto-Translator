@@ -8,6 +8,7 @@ from typing import Optional, override
 
 from PySide6.QtWidgets import QComboBox, QFileDialog, QFormLayout, QLabel
 
+from core.config.user_config import UserConfig
 from core.mod_managers import SUPPORTED_MOD_MANAGERS
 from core.mod_managers.mod_manager import ModManager
 from core.mod_managers.modorganizer import ModOrganizer
@@ -105,12 +106,18 @@ class InstancePage(Page):
         self.valid_signal.emit(valid)
 
     @override
-    def get_values(self) -> tuple[str, str, str, str]:
-        return (
-            self.__mod_manager_dropdown.currentText(),
-            self.__modinstance_dropdown.currentText(),
-            self.__instance_profile_dropdown.currentText(),
-            self.__instance_path_entry.text(),
+    def apply(self, config: UserConfig) -> None:
+        mod_managers: dict[str, type[ModManager]] = {
+            mod_manager.name: mod_manager for mod_manager in SUPPORTED_MOD_MANAGERS
+        }
+
+        config.mod_manager = mod_managers[self.__mod_manager_dropdown.currentText()]
+        config.modinstance = self.__modinstance_dropdown.currentText()
+        config.instance_profile = self.__instance_profile_dropdown.currentText()
+        config.instance_path = (
+            Path(self.__instance_path_entry.text())
+            if self.__instance_path_entry.text()
+            else None
         )
 
     def __on_mod_manager_select(self, mod_manager: str) -> None:
