@@ -283,11 +283,18 @@ class DownloadManager(QObject):
                     max2=len(plugins),
                 )
 
-            plugin_downloads: list[TranslationDownload] = (
-                self.__collect_downloads_for_plugin(mod, plugin, ldialog)
-            )
-            if plugin_downloads:
-                download_units[f"{mod.name} > {plugin.name}"] = plugin_downloads
+            try:
+                plugin_downloads: list[TranslationDownload] = (
+                    self.__collect_downloads_for_plugin(mod, plugin, ldialog)
+                )
+                if plugin_downloads:
+                    download_units[f"{mod.name} > {plugin.name}"] = plugin_downloads
+            except Exception as ex:
+                self.log.error(
+                    f"Failed to collect downloads for {mod.name!r} > {plugin.name!r}: "
+                    + str(ex),
+                    exc_info=ex,
+                )
 
         return download_units
 
