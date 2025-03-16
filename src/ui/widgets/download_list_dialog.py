@@ -200,34 +200,42 @@ class DownloadListDialog(QDialog):
             ldialog.updateProgress(text1=self.tr("Starting downloads..."))
 
             for d, download_item in enumerate(self.download_items):
-                translation_download = download_item.translation_downloads[
-                    download_item.translations_combobox.currentIndex()
-                ]
-                download = translation_download.available_downloads[
-                    download_item.files_combobox.currentIndex()
-                ]
+                try:
+                    translation_download = download_item.translation_downloads[
+                        download_item.translations_combobox.currentIndex()
+                    ]
+                    download = translation_download.available_downloads[
+                        download_item.files_combobox.currentIndex()
+                    ]
 
-                ldialog.updateProgress(
-                    text1=f"{self.tr('Starting downloads...')} {d}/{len(self.download_items)}",
-                    value1=d,
-                    max1=len(self.download_items),
-                    show2=True,
-                    text2=download.display_name,
-                )
-
-                _downloads.append(download)
-
-                if self.updates:
-                    old_translation = self.database.get_translation_by_plugin_name(
-                        translation_download.plugin_name
+                    ldialog.updateProgress(
+                        text1=f"{self.tr('Starting downloads...')} {d}/{len(self.download_items)}",
+                        value1=d,
+                        max1=len(self.download_items),
+                        show2=True,
+                        text2=download.display_name,
                     )
-                    if old_translation is not None:
-                        self.database.delete_translation(old_translation)
-                        self.log.info("Deleted old Translation from Database.")
-                    else:
-                        self.log.warning(
-                            "Old Translation could not be found in Database!"
+
+                    _downloads.append(download)
+
+                    if self.updates:
+                        old_translation = self.database.get_translation_by_plugin_name(
+                            translation_download.plugin_name
                         )
+                        if old_translation is not None:
+                            self.database.delete_translation(old_translation)
+                            self.log.info("Deleted old Translation from Database.")
+                        else:
+                            self.log.warning(
+                                "Old Translation could not be found in Database!"
+                            )
+                except Exception as ex:
+                    self.log.error(
+                        "Failed to start "
+                        f"{download_item.translations_combobox.currentText()!r} > "
+                        f"{download_item.files_combobox.currentText()!r}: {ex}",
+                        exc_info=ex,
+                    )
 
         LoadingDialog.run_callable(self, process)
 
