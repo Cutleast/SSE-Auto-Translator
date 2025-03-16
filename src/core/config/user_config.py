@@ -51,15 +51,12 @@ class UserConfig(BaseConfig):
 
     @api_key.setter
     def api_key(self, value: str) -> None:
+        from app_context import AppContext
         from core.translation_provider.nm_api.nm_api import NexusModsApi
-        from core.translation_provider.provider_manager import ProviderManager
 
         UserConfig.validate_type(value, str)
         UserConfig.validate_value(
-            value,
-            lambda value: ProviderManager.get_provider(NexusModsApi).is_api_key_valid(
-                value
-            ),
+            value, NexusModsApi(AppContext.get_app().cache).is_api_key_valid
         )
 
         self._settings["api_key"] = value
