@@ -48,7 +48,7 @@ class DownloadListItem(QTreeWidgetItem):
 
         for translation_download in self.translation_downloads:
             if translation_download.source == Source.NexusMods:
-                text = f"{translation_download.name} ({translation_download.mod_id})"
+                text = f"{translation_download.name} ({translation_download.mod_id.mod_id})"
                 icon = QIcon(":/icons/nexus_mods.svg")
             else:
                 text = translation_download.name

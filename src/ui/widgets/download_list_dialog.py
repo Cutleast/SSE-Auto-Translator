@@ -13,6 +13,7 @@ import qtawesome as qta
 from PySide6.QtCore import QEvent, QObject, Qt
 from PySide6.QtGui import QIcon, QWheelEvent
 from PySide6.QtWidgets import (
+    QApplication,
     QComboBox,
     QDialog,
     QHBoxLayout,
@@ -23,12 +24,14 @@ from PySide6.QtWidgets import (
     QVBoxLayout,
     QWidget,
 )
+from qtpy.QtWidgets import QMessageBox
 
 from app_context import AppContext
 from core.database.database import TranslationDatabase
 from core.downloader.download_manager import DownloadManager
 from core.downloader.file_download import FileDownload
 from core.downloader.translation_download import TranslationDownload
+from core.translation_provider.nm_api.nxm_handler import NXMHandler
 from core.translation_provider.provider import Provider
 from core.utilities.container_utils import unique
 
@@ -219,8 +222,8 @@ class DownloadListDialog(QDialog):
                     _downloads.append(download)
 
                     if self.updates:
-                        old_translation = self.database.get_translation_by_plugin_name(
-                            translation_download.plugin_name
+                        old_translation = self.database.get_translation_by_modfile_name(
+                            translation_download.modfile_name
                         )
                         if old_translation is not None:
                             self.database.delete_translation(old_translation)
@@ -244,6 +247,30 @@ class DownloadListDialog(QDialog):
 
         self.download_manager.start()
         self.close()
+
+        nxm_handler: NXMHandler = AppContext.get_app().nxm_listener
+        if not self.provider.direct_downloads_possible() and not nxm_handler.is_bound():
+            messagebox = QMessageBox(QApplication.activeModalWidget())
+            messagebox.setWindowTitle(self.tr("Link to Mod Manager downloads?"))
+            messagebox.setText(
+                self.tr(
+                    "You don't have Nexus Mods Premium and direct downloads are "
+                    'not possible. Do you want to link to the "Mod Manager Download"'
+                    "buttons on Nexus Mods now?"
+                )
+            )
+            messagebox.setStandardButtons(
+                QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No
+            )
+            messagebox.setDefaultButton(QMessageBox.StandardButton.Yes)
+            messagebox.button(QMessageBox.StandardButton.Yes).setText(self.tr("Yes"))
+            messagebox.button(QMessageBox.StandardButton.Yes).setObjectName(
+                "accent_button"
+            )
+            messagebox.button(QMessageBox.StandardButton.No).setText(self.tr("No"))
+
+            if messagebox.exec() == QMessageBox.StandardButton.Yes:
+                nxm_handler.bind()
 
     @override
     def eventFilter(self, source: QObject, event: QEvent) -> bool:
