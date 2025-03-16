@@ -12,6 +12,8 @@ from core.cache.cache import Cache
 from core.config.user_config import UserConfig
 from core.masterlist.masterlist import Masterlist
 from core.masterlist.masterlist_entry import MasterlistEntry
+from core.translation_provider.exceptions import ModNotFoundError
+from core.translation_provider.provider_api import ProviderApi
 
 from .mod_details import ModDetails
 from .mod_id import ModId
@@ -233,6 +235,40 @@ class Provider:
             return ProviderManager.get_provider_by_source(source).request_download(
                 mod_id
             )
+
+    def is_mod_id_valid(
+        self, mod_id: ModId, source: Optional[Source] = None, check_online: bool = True
+    ) -> bool:
+        """
+        Checks if the mod id is valid at the specified source by attempting to get its
+        details if `check_online` is True.
+
+        Args:
+            mod_id (ModId): Mod identifier
+            source (Optional[Source], optional): Source. Defaults to preferred.
+            check_online (bool, optional):
+                Whether to check by attempting to get the mod details. Defaults to True.
+
+        Returns:
+            bool: Whether the mod id is valid
+        """
+
+        if not mod_id.mod_id or mod_id.file_id == 0:
+            return False
+
+        if check_online:
+            provider_api: ProviderApi
+            if source is None:
+                provider_api = ProviderManager.get_default_provider()
+            else:
+                provider_api = ProviderManager.get_provider_by_source(source)
+
+            try:
+                provider_api.get_mod_details(mod_id)
+            except ModNotFoundError:
+                return False
+
+        return True
 
     @property
     def user_agent(self) -> str:

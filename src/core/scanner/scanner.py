@@ -133,9 +133,14 @@ class Scanner(QObject):
                 )
 
             self.log.info(f"Scanning {mod.name!r} > {plugin.name!r}...")
-            result[plugin] = self.__basic_scan_plugin(
-                plugin, database_strings, database_originals, ldialog
-            )
+            try:
+                result[plugin] = self.__basic_scan_plugin(
+                    plugin, database_strings, database_originals, ldialog
+                )
+            except Exception as ex:
+                self.log.error(
+                    f"Failed to scan {mod.name!r} > {plugin.name!r}: {ex}", exc_info=ex
+                )
 
         return result
 
@@ -205,6 +210,7 @@ class Scanner(QObject):
             if any(
                 plugin.status == Plugin.Status.RequiresTranslation for plugin in plugins
             )
+            and self.provider.is_mod_id_valid(mod.mod_id)
         }
 
         self.log.info(
@@ -243,7 +249,13 @@ class Scanner(QObject):
                 )
 
             self.log.info(f"Scanning for {mod.name!r} > {plugin.name!r}...")
-            result[plugin] = self.__online_scan_plugin(mod.mod_id, plugin, ldialog)
+            try:
+                result[plugin] = self.__online_scan_plugin(mod.mod_id, plugin, ldialog)
+            except Exception as ex:
+                self.log.error(
+                    f"Failed to scan for {mod.name!r} > {plugin.name!r}: {ex}",
+                    exc_info=ex,
+                )
 
         return result
 
