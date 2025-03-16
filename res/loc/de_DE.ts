@@ -367,7 +367,7 @@ Wenn Sie nicht über Nexus Mods Premium verfügen, stellen Sie sicher, dass SSE-
         <translation>Sammle verfügbare Übersetzungen...</translation>
     </message>
     <message>
-        <location filename="src/core/downloader/download_manager.py" line="391"/>
+        <location filename="src/core/downloader/download_manager.py" line="398"/>
         <source>Collecting available translation updates...</source>
         <translation>Sammle verfügbare Updates für Übersetzungen...</translation>
     </message>
@@ -668,30 +668,40 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
 <context>
     <name>ErrorDialog</name>
     <message>
-        <location filename="src/ui/widgets/error_dialog.py" line="57"/>
+        <location filename="src/ui/widgets/error_dialog.py" line="94"/>
         <source>Continue</source>
         <translation>Fortfahren</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/error_dialog.py" line="58"/>
+        <location filename="src/ui/widgets/error_dialog.py" line="100"/>
         <source>Exit</source>
         <translation>Beenden</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/error_dialog.py" line="67"/>
-        <location filename="src/ui/widgets/error_dialog.py" line="100"/>
+        <location filename="src/ui/widgets/error_dialog.py" line="120"/>
+        <location filename="src/ui/widgets/error_dialog.py" line="146"/>
         <source>Show details...</source>
         <translation>Mehr Details...</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/error_dialog.py" line="86"/>
+        <location filename="src/ui/widgets/error_dialog.py" line="140"/>
         <source>Hide details...</source>
         <translation>Weniger Details...</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/error_dialog.py" line="122"/>
+        <location filename="src/ui/widgets/error_dialog.py" line="129"/>
         <source>Dump application state...</source>
         <translation>App-Zustand abspeichern...</translation>
+    </message>
+    <message>
+        <location filename="src/ui/widgets/error_dialog.py" line="104"/>
+        <source>Ok</source>
+        <translation>Ok</translation>
+    </message>
+    <message>
+        <location filename="src/ui/widgets/error_dialog.py" line="111"/>
+        <source>Copy error details...</source>
+        <translation>Fehlerdetails kopieren...</translation>
     </message>
 </context>
 <context>
@@ -814,41 +824,41 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
 <context>
     <name>InstancePage</name>
     <message>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="50"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="51"/>
         <source>Mod Manager</source>
         <translation>Mod Manager</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="42"/>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="56"/>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="118"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="43"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="57"/>
         <location filename="src/ui/startup_dialog/instance_page.py" line="125"/>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="135"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="132"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="142"/>
         <source>Please select...</source>
         <translation>Bitte auswählen...</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="60"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="61"/>
         <source>Modinstance</source>
         <translation>Modinstanz</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="63"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="64"/>
         <source>Instance Profile (MO2)</source>
         <translation>Instanzprofil (MO2)</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="71"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="72"/>
         <source>Path to Portable Instance</source>
         <translation>Pfad zur portablen Instanz</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="83"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="84"/>
         <source>Mod Instance</source>
         <translation>Modinstanz</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="91"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="92"/>
         <source>On this page you select a Modinstance to load from a Mod Manager. You can always change the selected modinstance and mod manager under Settings &gt; User Settings.</source>
         <translation>Auf dieser Seite wählen Sie eine Modinstanz aus, die von einem Mod Manager geladen werden soll. Sie können die ausgewählte Modinstanz und den Mod-Manager jederzeit unter Einstellungen &gt; Nutzereinstellungen ändern.</translation>
     </message>
@@ -856,29 +866,34 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
 <context>
     <name>IntroductionPage</name>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="33"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="34"/>
         <source>Welcome!</source>
         <translation>Willkommen!</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="39"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="40"/>
         <source>This Guide will help you setting up this Tool for your modlist.</source>
         <translation>Diese Einführung soll Ihnen helfen, das Tool für Ihre Modliste einzurichten.</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="41"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="42"/>
         <source>Open Documentation</source>
         <translation>Dokumentation (nur Englisch) öffnen</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="53"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="54"/>
         <source>Windows has a length limit of 255 characters for paths. Click below, grant admin rights and reboot to disable it.</source>
         <translation>Windows hat eine Begrenzung von 255 Zeichen auf Pfade. Unten klicken, Administratorrechte gewähren und neustarten, um diese Begrenzung zu deaktivieren.</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="57"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="58"/>
         <source>Fix Windows Path Limit</source>
         <translation>Windows-Pfadlängenbegrenzung deaktivieren</translation>
+    </message>
+    <message>
+        <location filename="src/ui/startup_dialog/introduction.py" line="67"/>
+        <source>Path Limit is already disabled.</source>
+        <translation>Pfadlängenbegrenzung ist bereits deaktiviert.</translation>
     </message>
 </context>
 <context>
@@ -1343,12 +1358,12 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
 <context>
     <name>Page</name>
     <message>
-        <location filename="src/ui/startup_dialog/page.py" line="80"/>
+        <location filename="src/ui/startup_dialog/page.py" line="90"/>
         <source>Back</source>
         <translation>Zurück</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/page.py" line="87"/>
+        <location filename="src/ui/startup_dialog/page.py" line="97"/>
         <source>Next</source>
         <translation>Weiter</translation>
     </message>
@@ -1381,52 +1396,52 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
         <translation>Modliste wird gescannt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="498"/>
+        <location filename="src/core/scanner/scanner.py" line="510"/>
         <source>Importing translations...</source>
         <translation>Übersetzungen werden importiert...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="150"/>
+        <location filename="src/core/scanner/scanner.py" line="155"/>
         <source>Extracting strings...</source>
         <translation>Strings werden extrahiert...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="158"/>
+        <location filename="src/core/scanner/scanner.py" line="163"/>
         <source>Detecting language...</source>
         <translation>Sprache wird erkannt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="220"/>
+        <location filename="src/core/scanner/scanner.py" line="226"/>
         <source>Scanning online...</source>
         <translation>Übersetzungen werden online gesucht...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="303"/>
+        <location filename="src/core/scanner/scanner.py" line="315"/>
         <source>Running deep scan...</source>
         <translation>Tiefenscan wird ausgeführt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="363"/>
+        <location filename="src/core/scanner/scanner.py" line="375"/>
         <source>Scanning strings...</source>
         <translation>Strings werden gescannt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="425"/>
+        <location filename="src/core/scanner/scanner.py" line="437"/>
         <source>Searching modlist for strings...</source>
         <translation>Modliste wird nach Strings durchsucht...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="534"/>
+        <location filename="src/core/scanner/scanner.py" line="546"/>
         <source>Creating database translations...</source>
         <translation>Datenbank-Übersetzungen werden erstellt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="569"/>
+        <location filename="src/core/scanner/scanner.py" line="581"/>
         <source>Scanning for installed translations...</source>
         <translation>Nach installierten Übersetzungen scannen...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="667"/>
+        <location filename="src/core/scanner/scanner.py" line="679"/>
         <source>Checking for translation updates...</source>
         <translation>Verfügbare Updates für Übersetzungen werden gesucht...</translation>
     </message>
@@ -1534,69 +1549,69 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
 <context>
     <name>SetupPage</name>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="157"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="156"/>
         <source>Initial Setup</source>
         <translation>Erste Einrichtung</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="161"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="160"/>
         <source>On this page you setup basic settings.</source>
         <translation>Auf dieser Seite stellen Sie grundlegende Einstellungen ein.</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="63"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="62"/>
         <source>Choose Game Language:</source>
         <translation>Sprache des Spiels auswählen:</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="67"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="66"/>
         <source>Please select...</source>
         <translation>Bitte auswählen...</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="78"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="77"/>
         <source>Source</source>
         <translation>Quelle</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="93"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="92"/>
         <source>Use global Masterlist from GitHub Repository (recommended)</source>
         <translation>Globale Masterlist von GitHub verwenden (empfohlen)</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="100"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="99"/>
         <source>Enabled File Types</source>
         <translation>Aktivierte Dateitypen</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="107"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="106"/>
         <source>Enable Interface Files (Data/Interface/*.txt)</source>
         <translation>Aktiviere Interface-Dateien (Data/Interface/*.txt)</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="113"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="112"/>
         <source>Enable Papyrus Scripts (Data/Scripts/*.pex)</source>
         <translation>Aktiviere Papyrus-Skripte (Data/Scripts/*.pex)</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="115"/>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="123"/>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="131"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="114"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="122"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="130"/>
         <source>[EXPERIMENTAL]</source>
         <translation>[EXPERIMENTELL]</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="121"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="120"/>
         <source>Enable Textures (Data/Textures/*)</source>
         <translation>Aktiviere Texturen (Data/Textures/*)</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="129"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="128"/>
         <source>Enable Sound Files (Data/Sound/*)</source>
         <translation>Aktiviere Sound-Dateien (Data/Sound/*)</translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="138"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="137"/>
         <source>Nexus Mods API Key</source>
         <translation>Nexus Mods API-Schlüssel</translation>
     </message>
@@ -1604,7 +1619,7 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
 <context>
     <name>StartupDialog</name>
     <message>
-        <location filename="src/ui/startup_dialog/startup_dialog.py" line="47"/>
+        <location filename="src/ui/startup_dialog/startup_dialog.py" line="44"/>
         <source>Welcome!</source>
         <translation>Willkommen!</translation>
     </message>

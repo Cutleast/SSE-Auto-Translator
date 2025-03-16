@@ -361,7 +361,7 @@ If you don&apos;t have Nexus Mods Premium, make sure that SSE-AT is linked to Mo
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/downloader/download_manager.py" line="391"/>
+        <location filename="src/core/downloader/download_manager.py" line="398"/>
         <source>Collecting available translation updates...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -658,29 +658,39 @@ Depending on the Translator API this can raise unexpected costs.</comment>
 <context>
     <name>ErrorDialog</name>
     <message>
-        <location filename="src/ui/widgets/error_dialog.py" line="57"/>
+        <location filename="src/ui/widgets/error_dialog.py" line="94"/>
         <source>Continue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/error_dialog.py" line="58"/>
+        <location filename="src/ui/widgets/error_dialog.py" line="100"/>
         <source>Exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/error_dialog.py" line="67"/>
-        <location filename="src/ui/widgets/error_dialog.py" line="100"/>
+        <location filename="src/ui/widgets/error_dialog.py" line="120"/>
+        <location filename="src/ui/widgets/error_dialog.py" line="146"/>
         <source>Show details...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/error_dialog.py" line="86"/>
+        <location filename="src/ui/widgets/error_dialog.py" line="140"/>
         <source>Hide details...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/error_dialog.py" line="122"/>
+        <location filename="src/ui/widgets/error_dialog.py" line="129"/>
         <source>Dump application state...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/widgets/error_dialog.py" line="104"/>
+        <source>Ok</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/widgets/error_dialog.py" line="111"/>
+        <source>Copy error details...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -804,41 +814,41 @@ Depending on the Translator API this can raise unexpected costs.</comment>
 <context>
     <name>InstancePage</name>
     <message>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="50"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="51"/>
         <source>Mod Manager</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="42"/>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="56"/>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="118"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="43"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="57"/>
         <location filename="src/ui/startup_dialog/instance_page.py" line="125"/>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="135"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="132"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="142"/>
         <source>Please select...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="60"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="61"/>
         <source>Modinstance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="63"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="64"/>
         <source>Instance Profile (MO2)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="71"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="72"/>
         <source>Path to Portable Instance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="83"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="84"/>
         <source>Mod Instance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="91"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="92"/>
         <source>On this page you select a Modinstance to load from a Mod Manager. You can always change the selected modinstance and mod manager under Settings &gt; User Settings.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -846,28 +856,33 @@ Depending on the Translator API this can raise unexpected costs.</comment>
 <context>
     <name>IntroductionPage</name>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="33"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="34"/>
         <source>Welcome!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="39"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="40"/>
         <source>This Guide will help you setting up this Tool for your modlist.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="41"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="42"/>
         <source>Open Documentation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="53"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="54"/>
         <source>Windows has a length limit of 255 characters for paths. Click below, grant admin rights and reboot to disable it.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="57"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="58"/>
         <source>Fix Windows Path Limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/startup_dialog/introduction.py" line="67"/>
+        <source>Path Limit is already disabled.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1332,12 +1347,12 @@ Click on &quot;Show Details&quot; to view used filter.</source>
 <context>
     <name>Page</name>
     <message>
-        <location filename="src/ui/startup_dialog/page.py" line="80"/>
+        <location filename="src/ui/startup_dialog/page.py" line="90"/>
         <source>Back</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/page.py" line="87"/>
+        <location filename="src/ui/startup_dialog/page.py" line="97"/>
         <source>Next</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1370,52 +1385,52 @@ Click on &quot;Show Details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="498"/>
+        <location filename="src/core/scanner/scanner.py" line="510"/>
         <source>Importing translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="150"/>
+        <location filename="src/core/scanner/scanner.py" line="155"/>
         <source>Extracting strings...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="158"/>
+        <location filename="src/core/scanner/scanner.py" line="163"/>
         <source>Detecting language...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="220"/>
+        <location filename="src/core/scanner/scanner.py" line="226"/>
         <source>Scanning online...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="303"/>
+        <location filename="src/core/scanner/scanner.py" line="315"/>
         <source>Running deep scan...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="363"/>
+        <location filename="src/core/scanner/scanner.py" line="375"/>
         <source>Scanning strings...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="425"/>
+        <location filename="src/core/scanner/scanner.py" line="437"/>
         <source>Searching modlist for strings...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="534"/>
+        <location filename="src/core/scanner/scanner.py" line="546"/>
         <source>Creating database translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="569"/>
+        <location filename="src/core/scanner/scanner.py" line="581"/>
         <source>Scanning for installed translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="667"/>
+        <location filename="src/core/scanner/scanner.py" line="679"/>
         <source>Checking for translation updates...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1523,69 +1538,69 @@ Click on &quot;Show Details&quot; to view used filter.</source>
 <context>
     <name>SetupPage</name>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="157"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="156"/>
         <source>Initial Setup</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="161"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="160"/>
         <source>On this page you setup basic settings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="63"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="62"/>
         <source>Choose Game Language:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="67"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="66"/>
         <source>Please select...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="78"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="77"/>
         <source>Source</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="93"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="92"/>
         <source>Use global Masterlist from GitHub Repository (recommended)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="100"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="99"/>
         <source>Enabled File Types</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="107"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="106"/>
         <source>Enable Interface Files (Data/Interface/*.txt)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="113"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="112"/>
         <source>Enable Papyrus Scripts (Data/Scripts/*.pex)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="115"/>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="123"/>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="131"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="114"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="122"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="130"/>
         <source>[EXPERIMENTAL]</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="121"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="120"/>
         <source>Enable Textures (Data/Textures/*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="129"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="128"/>
         <source>Enable Sound Files (Data/Sound/*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="138"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="137"/>
         <source>Nexus Mods API Key</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1593,7 +1608,7 @@ Click on &quot;Show Details&quot; to view used filter.</source>
 <context>
     <name>StartupDialog</name>
     <message>
-        <location filename="src/ui/startup_dialog/startup_dialog.py" line="47"/>
+        <location filename="src/ui/startup_dialog/startup_dialog.py" line="44"/>
         <source>Welcome!</source>
         <translation type="unfinished"></translation>
     </message>
