@@ -27,8 +27,9 @@ from core.database.search_filter import SearchFilter
 from core.database.string import String
 from core.downloader.download_manager import DownloadManager
 from core.downloader.translation_download import TranslationDownload
+from core.mod_file.mod_file import ModFile
+from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
-from core.mod_instance.mod_file import ModFile
 from core.mod_instance.mod_instance import ModInstance
 from core.scanner.scanner import Scanner
 from core.utilities.container_utils import join_dicts
@@ -148,8 +149,8 @@ class MainPageWidget(QWidget):
         hlayout.addWidget(nexus_mods_button)
 
         self.__bar_chart = StackedBar(
-            [0 for _ in ModFile.Status],
-            colors=[ModFile.Status.get_color(s) for s in ModFile.Status],
+            [0 for _ in TranslationStatus],
+            colors=[TranslationStatus.get_color(s) for s in TranslationStatus],
         )
         self.__bar_chart.setFixedHeight(3)
         self.__vlayout.addWidget(self.__bar_chart)
@@ -177,7 +178,7 @@ class MainPageWidget(QWidget):
         self.__update_header()
 
     def __update_header(self) -> None:
-        modfile_states: dict[ModFile.Status, int] = (
+        modfile_states: dict[TranslationStatus, int] = (
             self.mod_instance.get_modfile_state_summary()
         )
         self.__bar_chart.setValues(list(modfile_states.values()))
@@ -185,7 +186,7 @@ class MainPageWidget(QWidget):
         num_tooltip = ""
 
         for status, count in modfile_states.items():
-            color: Optional[QColor] = ModFile.Status.get_color(status)
+            color: Optional[QColor] = TranslationStatus.get_color(status)
 
             if color is None:
                 num_tooltip += f"<tr><td>{status.get_localized_name()}:\
@@ -249,7 +250,7 @@ class MainPageWidget(QWidget):
         )
         checked_mods: list[Mod] = list(checked_items.keys())
 
-        scan_result: dict[ModFile, ModFile.Status] = join_dicts(
+        scan_result: dict[ModFile, TranslationStatus] = join_dicts(
             *LoadingDialog.run_callable(
                 QApplication.activeModalWidget(),
                 lambda ldialog: scanner.run_basic_scan(checked_items, ldialog),
@@ -280,7 +281,7 @@ class MainPageWidget(QWidget):
             self.__modinstance_widget.get_checked_items()
         )
 
-        scan_result: dict[ModFile, ModFile.Status] = join_dicts(
+        scan_result: dict[ModFile, TranslationStatus] = join_dicts(
             *LoadingDialog.run_callable(
                 QApplication.activeModalWidget(),
                 lambda ldialog: scanner.run_online_scan(checked_items, ldialog),
@@ -352,7 +353,7 @@ class MainPageWidget(QWidget):
         Runs a deep scan over the installed translations.
         """
 
-        result: dict[ModFile, ModFile.Status] = LoadingDialog.run_callable(
+        result: dict[ModFile, TranslationStatus] = LoadingDialog.run_callable(
             QApplication.activeModalWidget(), AppContext.get_app().scanner.run_deep_scan
         )
         self.mod_instance.set_modfile_states(result)
@@ -396,12 +397,12 @@ class MainPageWidget(QWidget):
                     yesno=False,
                 ).show()
 
-    def set_state_filter(self, state_filter: list[ModFile.Status]) -> None:
+    def set_state_filter(self, state_filter: list[TranslationStatus]) -> None:
         """
         Sets the state filter.
 
         Args:
-            state_filter (list[Plugin.Status]): The states to filter by.
+            state_filter (list[TranslationStatus]): The states to filter by.
         """
 
         self.__modinstance_widget.set_state_filter(state_filter)

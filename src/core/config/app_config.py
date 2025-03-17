@@ -256,7 +256,7 @@ class AppConfig(BaseConfig):
     @property
     def auto_create_database_translations(self) -> bool:
         """
-        Automatically create translations for plugins that are entirely covered
+        Automatically create translations for mod files that are entirely covered
         by already installed translations.
         """
 
@@ -275,7 +275,7 @@ class AppConfig(BaseConfig):
     @property
     def show_strings_on_double_click(self) -> bool:
         """
-        Show strings when a mod or plugin is double clicked in the modlist
+        Show strings when a mod or mod file is double clicked in the modlist
         or a translation in the "Translations" tab.
         """
 

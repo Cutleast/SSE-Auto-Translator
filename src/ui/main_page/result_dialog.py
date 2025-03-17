@@ -15,7 +15,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from core.mod_instance.mod_file import ModFile
+from core.mod_file.translation_status import TranslationStatus
 
 
 class ResultDialog(QDialog):
@@ -24,7 +24,7 @@ class ResultDialog(QDialog):
     """
 
     def __init__(
-        self, summary: dict[ModFile.Status, int], parent: Optional[QWidget]
+        self, summary: dict[TranslationStatus, int], parent: Optional[QWidget]
     ) -> None:
         super().__init__(parent)
         self.setWindowTitle(self.tr("Scan Result"))
@@ -46,7 +46,7 @@ class ResultDialog(QDialog):
         vlayout.addLayout(flayout)
 
         for status, count in summary.items():
-            color: Optional[QColor] = ModFile.Status.get_color(status)
+            color: Optional[QColor] = TranslationStatus.get_color(status)
 
             if color is None:
                 label = QLabel(status.get_localized_name())

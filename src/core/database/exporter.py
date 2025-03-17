@@ -13,8 +13,9 @@ from PySide6.QtCore import QObject
 from app_context import AppContext
 from core.config.user_config import UserConfig
 from core.database.string import String
+from core.mod_file.mod_file import ModFile
+from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
-from core.mod_instance.mod_file import ModFile
 from core.mod_instance.mod_instance import ModInstance
 from core.plugin_interface import plugin as esp
 from core.utilities.path import Path
@@ -148,7 +149,7 @@ class Exporter(QObject):
         )
         additional_files = list(
             filter(
-                lambda f: f.replace("\\", "/").lower() in original_mod.files,
+                lambda f: f.replace("\\", "/").lower() in original_mod.files_names,
                 additional_files,
             )
         )
@@ -194,7 +195,7 @@ class Exporter(QObject):
         for plugin_name in plugins:
             plugin: Optional[ModFile] = modinstance.get_modfile(
                 plugin_name,
-                ignore_states=[ModFile.Status.IsTranslated],
+                ignore_states=[TranslationStatus.IsTranslated],
                 ignore_case=True,
             )
 

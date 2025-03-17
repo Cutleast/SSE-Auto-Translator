@@ -48,7 +48,7 @@ class LangDetector:
         self, strings: list[String], max_string_count: int = 40
     ) -> bool:
         """
-        Checks if a plugin requires a translation.
+        Checks if a mod file requires a translation.
 
         Args:
             strings (list[String]): List of strings to check.
@@ -75,7 +75,8 @@ class LangDetector:
                     break
         else:
             self.log.warning(
-                f"Treshold not reached! Plugin has only {c} different string(s). Reliable detection not possible!"
+                f"Treshold not reached! Mod file has only {c} different string(s). "
+                "Reliable detection not possible!"
             )
 
         detected_lang: Optional[Language] = self.detect_lang(detection_string)

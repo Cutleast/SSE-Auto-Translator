@@ -20,10 +20,11 @@ from core.cache.cache import Cache
 from core.config.user_config import UserConfig
 from core.database.string import String
 from core.database.translation import Translation
+from core.mod_file.mod_file import ModFile
+from core.mod_file.plugin_file import PluginFile
+from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
-from core.mod_instance.mod_file import ModFile
 from core.mod_instance.mod_instance import ModInstance
-from core.plugin_interface import plugin as esp
 from core.translation_provider.source import Source
 from core.utilities.constants import DSD_FILE_PATTERN
 from core.utilities.container_utils import unique
@@ -65,11 +66,11 @@ class Importer(QObject):
         strings: dict[str, list[String]] = {}
 
         # Import strings from mod files
-        ignore_status: list[ModFile.Status] = [
-            ModFile.Status.NoStrings,
-            ModFile.Status.IsTranslated,
-            ModFile.Status.TranslationInstalled,
-            ModFile.Status.TranslationIncomplete,
+        ignore_status: list[TranslationStatus] = [
+            TranslationStatus.NoStrings,
+            TranslationStatus.IsTranslated,
+            TranslationStatus.TranslationInstalled,
+            TranslationStatus.TranslationIncomplete,
         ]
 
         modfiles: dict[ModFile, ModFile] = {
@@ -86,7 +87,7 @@ class Importer(QObject):
         self.log.debug(f"Importing strings from {len(modfiles)} mod file(s)...")
         for modfile, original_modfile in modfiles.items():
             strings[modfile.name.lower()] = self.map_translation_strings(
-                modfile.path, original_modfile.path
+                modfile, original_modfile
             )
 
         # Import strings from DSD files
@@ -173,7 +174,7 @@ class Importer(QObject):
         for file in matching_files:
             bsa_file, file_path = parse_path(Path(file))
 
-            if str(file_path).lower().replace("\\", "/") in original_mod.files:
+            if str(file_path).lower().replace("\\", "/") in original_mod.files_names:
                 if bsa_file:
                     bsa_file = tmp_dir / bsa_file.name
                     if bsa_file not in bsa_files_to_extract:
@@ -295,8 +296,8 @@ class Importer(QObject):
             original_modfile: Optional[ModFile] = mod_instance.get_modfile(
                 modfile_name,
                 ignore_states=[
-                    ModFile.Status.IsTranslated,
-                    ModFile.Status.TranslationInstalled,
+                    TranslationStatus.IsTranslated,
+                    TranslationStatus.TranslationInstalled,
                 ],
                 ignore_case=True,
             )
@@ -309,7 +310,7 @@ class Importer(QObject):
                 continue
 
             modfile_strings: list[String] = self.map_translation_strings(
-                extracted_plugin, original_modfile.path
+                PluginFile(extracted_plugin.name, extracted_plugin), original_modfile
             )
             if modfile_strings:
                 for string in modfile_strings:
@@ -377,14 +378,14 @@ class Importer(QObject):
         return strings
 
     def map_translation_strings(
-        self, translation_plugin_path: Path, original_plugin_path: Path
+        self, translation_modfile: ModFile, original_modfile: ModFile
     ) -> list[String]:
         """
-        Extracts strings from translation and original plugin and maps them together.
+        Extracts strings from translation and original mod files and maps them together.
 
         Args:
-            translation_plugin_path (Path): Path to the translated plugin
-            original_plugin_path (Path): Path to the original plugin
+            translation_modfile (ModFile): The translated mod file
+            original_modfile (ModFile): The original mod file
 
         Returns:
             list[String]: List of mapped strings
@@ -392,9 +393,8 @@ class Importer(QObject):
 
         cache: Cache = AppContext.get_app().cache
 
-        translation_plugin = esp.Plugin(translation_plugin_path)
-        translation_strings: list[String] = translation_plugin.extract_strings()
-        original_strings: list[String] = cache.get_strings(original_plugin_path)
+        translation_strings: list[String] = translation_modfile.get_strings(cache)
+        original_strings: list[String] = original_modfile.get_strings(cache)
 
         if not translation_strings and not original_strings:
             return []

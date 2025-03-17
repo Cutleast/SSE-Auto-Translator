@@ -4,8 +4,8 @@ Copyright (c) Cutleast
 
 import logging
 
+from core.mod_file.mod_file import ModFile
 from core.mod_instance.mod import Mod
-from core.mod_instance.mod_file import ModFile
 
 from ..app_test import AppTest
 
@@ -49,13 +49,13 @@ class CoreTest(AppTest):
             modfile_name (str): The name of the mod file
 
         Returns:
-            Plugin: The mod file
+            ModFile: The mod file
         """
 
         try:
             modfile: ModFile = next((m for m in mod.modfiles if m.name == modfile_name))
         except StopIteration:
-            raise ValueError(f"No plugin with name {modfile_name} found in mod.")
+            raise ValueError(f"No mod file with name {modfile_name} found in mod.")
 
         return modfile
 

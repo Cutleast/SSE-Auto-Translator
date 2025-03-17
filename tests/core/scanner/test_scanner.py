@@ -3,8 +3,9 @@ Copyright (c) Cutleast
 """
 
 from app import App
+from core.mod_file.mod_file import ModFile
+from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
-from core.mod_instance.mod_file import ModFile
 from core.mod_instance.mod_instance import ModInstance
 from core.scanner.scanner import Scanner
 
@@ -27,27 +28,27 @@ class TestScanner(CoreTest):
         items: dict[Mod, list[ModFile]] = {
             mod: mod.modfiles for mod in modinstance.mods
         }
-        expected_results: dict[Mod, dict[ModFile, ModFile.Status]] = {
+        expected_results: dict[Mod, dict[ModFile, TranslationStatus]] = {
             self.get_mod_by_name("Wet and Cold SE"): {
                 self.get_modfile_from_mod_name(
                     "Wet and Cold SE", "WetandCold.esp"
-                ): ModFile.Status.RequiresTranslation
+                ): TranslationStatus.RequiresTranslation
             },
             self.get_mod_by_name("Wet and Cold SE - German"): {
                 self.get_modfile_from_mod_name(
                     "Wet and Cold SE - German", "WetandCold.esp"
-                ): ModFile.Status.IsTranslated
+                ): TranslationStatus.IsTranslated
             },
             self.get_mod_by_name("Obsidian Weathers and Seasons"): {
                 self.get_modfile_from_mod_name(
                     "Obsidian Weathers and Seasons", "Obsidian Weathers.esp"
-                ): ModFile.Status.RequiresTranslation
+                ): TranslationStatus.RequiresTranslation
             },
         }
 
         # when
-        scan_result: dict[Mod, dict[ModFile, ModFile.Status]] = scanner.run_basic_scan(
-            items
+        scan_result: dict[Mod, dict[ModFile, TranslationStatus]] = (
+            scanner.run_basic_scan(items)
         )
 
         # then

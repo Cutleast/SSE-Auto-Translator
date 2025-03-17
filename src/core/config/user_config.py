@@ -230,19 +230,33 @@ class UserConfig(BaseConfig):
         self._settings["author_blacklist"] = value
 
     @property
-    def plugin_ignorelist(self) -> list[str]:
+    def modfile_ignorelist(self) -> list[str]:
         """
-        List of plugins that are completly ignored.
+        List of mod files that are completly ignored.
         """
 
-        return self._settings["plugin_ignorelist"]
+        return self._settings["modfile_ignorelist"]
 
-    @plugin_ignorelist.setter
-    def plugin_ignorelist(self, value: list[str]) -> None:
+    @modfile_ignorelist.setter
+    def modfile_ignorelist(self, value: list[str]) -> None:
         # UserConfig.validate_type(value, list[str])
         UserConfig.validate_value(
             value,
-            lambda value: all(isinstance(plugin, str) for plugin in value),  # type: ignore
+            lambda value: all(isinstance(filename, str) for filename in value),  # type: ignore
         )
 
-        self._settings["plugin_ignorelist"] = value
+        self._settings["modfile_ignorelist"] = value
+
+    @property
+    def parse_bsa_archives(self) -> bool:
+        """
+        Whether to parse the BSA archives of a modlist.
+        """
+
+        return self._settings["parse_bsa_archives"]
+
+    @parse_bsa_archives.setter
+    def parse_bsa_archives(self, value: bool) -> None:
+        UserConfig.validate_type(value, bool)
+
+        self._settings["parse_bsa_archives"] = value

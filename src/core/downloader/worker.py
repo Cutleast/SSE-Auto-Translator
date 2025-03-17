@@ -149,7 +149,7 @@ class Worker(QThread):
 
                 for mod in mod_instance.mods:
                     if any(
-                        modfile_name == plugin.name.lower() for plugin in mod.modfiles
+                        modfile_name == modfile.name.lower() for modfile in mod.modfiles
                     ):
                         original_mod = mod
 

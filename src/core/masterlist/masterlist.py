@@ -34,7 +34,7 @@ class Masterlist:
         """
 
         if AppContext.has_app():
-            return AppContext.get_app().user_config.plugin_ignorelist
+            return AppContext.get_app().user_config.modfile_ignorelist
         else:
             return []
 

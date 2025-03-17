@@ -29,8 +29,9 @@ from core.database.translation import Translation
 from core.downloader.download_manager import DownloadManager
 from core.downloader.translation_download import TranslationDownload
 from core.masterlist.masterlist import Masterlist
+from core.mod_file.mod_file import ModFile
+from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
-from core.mod_instance.mod_file import ModFile
 from core.mod_instance.mod_instance import ModInstance
 from core.plugin_interface import plugin as esp
 from core.scanner.scanner import Scanner
@@ -87,7 +88,7 @@ class ModInstanceWidget(QTreeWidget):
     Optional name filter and case-sensitivity.
     """
 
-    __state_filter: Optional[list[ModFile.Status]] = None
+    __state_filter: Optional[list[TranslationStatus]] = None
     """
     Optional list of mod file states to filter by.
     """
@@ -268,7 +269,8 @@ class ModInstanceWidget(QTreeWidget):
                     )
                 )
                 item.setForeground(
-                    0, ModFile.Status.get_color(modfile.status) or Qt.GlobalColor.white
+                    0,
+                    TranslationStatus.get_color(modfile.status) or Qt.GlobalColor.white,
                 )
 
             mod_item.setHidden(
@@ -280,10 +282,10 @@ class ModInstanceWidget(QTreeWidget):
             )
             mod_item.setForeground(
                 0,
-                ModFile.Status.get_color(
+                TranslationStatus.get_color(
                     max(
                         [modfile.status for modfile in mod.modfiles],
-                        default=ModFile.Status.NoneStatus,
+                        default=TranslationStatus.NoneStatus,
                     )
                 )
                 or Qt.GlobalColor.white,
@@ -298,7 +300,7 @@ class ModInstanceWidget(QTreeWidget):
 
         if isinstance(current_item, ModFile):
             dialog = StringListDialog(
-                current_item.name, self.cache.get_strings(current_item.path)
+                current_item.name, current_item.get_strings(self.cache)
             )
             dialog.show()
 
@@ -306,7 +308,7 @@ class ModInstanceWidget(QTreeWidget):
             strings: dict[str, list[String]] = {}
 
             for modfile in current_item.modfiles:
-                modfile_strings = self.cache.get_strings(modfile.path)
+                modfile_strings = modfile.get_strings(self.cache)
                 strings[modfile.name] = modfile_strings
 
             dialog = StringListDialog(current_item.name, strings)
@@ -472,7 +474,7 @@ class ModInstanceWidget(QTreeWidget):
                     QApplication.activeModalWidget(), process
                 )
 
-                current_item.status = ModFile.Status.TranslationIncomplete
+                current_item.status = TranslationStatus.TranslationIncomplete
 
                 self.database.highlight_signal.emit(translation)
                 self.database.edit_signal.emit(translation)
@@ -489,7 +491,7 @@ class ModInstanceWidget(QTreeWidget):
                     text1=self.tr("Importing installed translation...")
                 )
 
-                # TODO: Make the import dependent on the original plugins instead of a single mod
+                # TODO: Make the import dependent on the original mod files instead of a single mod
                 # Find the original mod
                 original_mod: Optional[Mod] = None
                 for modfile in current_item.modfiles:
@@ -497,8 +499,8 @@ class ModInstanceWidget(QTreeWidget):
                         modfile.name,
                         ignore_mods=[current_item],
                         ignore_states=[
-                            ModFile.Status.IsTranslated,
-                            ModFile.Status.TranslationInstalled,
+                            TranslationStatus.IsTranslated,
+                            TranslationStatus.TranslationInstalled,
                         ],
                         ignore_case=True,
                     )
@@ -634,7 +636,7 @@ class ModInstanceWidget(QTreeWidget):
             and (
                 not isinstance(current_item, Mod)
                 or any(
-                    modfile.status != ModFile.Status.NoStrings
+                    modfile.status != TranslationStatus.NoStrings
                     for modfile in current_item.modfiles
                 )
             )
@@ -647,7 +649,7 @@ class ModInstanceWidget(QTreeWidget):
         selected_mods: list[Mod] = self.get_selected_items()[0]
         selected_modfiles: dict[Mod, list[ModFile]] = self.get_selected_modfiles()
 
-        scan_result: dict[ModFile, ModFile.Status] = join_dicts(
+        scan_result: dict[ModFile, TranslationStatus] = join_dicts(
             *LoadingDialog.run_callable(
                 QApplication.activeModalWidget(),
                 lambda ldialog: self.scanner.run_basic_scan(selected_modfiles, ldialog),
@@ -674,7 +676,7 @@ class ModInstanceWidget(QTreeWidget):
     def online_scan(self) -> None:
         selected_modfiles: dict[Mod, list[ModFile]] = self.get_selected_modfiles()
 
-        scan_result: dict[ModFile, ModFile.Status] = join_dicts(
+        scan_result: dict[ModFile, TranslationStatus] = join_dicts(
             *LoadingDialog.run_callable(
                 QApplication.activeModalWidget(),
                 lambda ldialog: self.scanner.run_online_scan(
@@ -738,7 +740,7 @@ class ModInstanceWidget(QTreeWidget):
             os.startfile(output_path)
 
     def deep_scan(self) -> None:
-        result: dict[ModFile, ModFile.Status] = LoadingDialog.run_callable(
+        result: dict[ModFile, TranslationStatus] = LoadingDialog.run_callable(
             QApplication.activeModalWidget(), self.scanner.run_deep_scan
         )
         self.mod_instance.set_modfile_states(result)
@@ -766,20 +768,20 @@ class ModInstanceWidget(QTreeWidget):
         self.__name_filter = name_filter if name_filter[0].strip() else None
         self.__update()
 
-    def set_state_filter(self, state_filter: list[ModFile.Status]) -> None:
+    def set_state_filter(self, state_filter: list[TranslationStatus]) -> None:
         """
         Sets the state filter.
 
         Args:
-            state_filter (list[Plugin.Status]): The states to filter by.
+            state_filter (list[TranslationStatus]): The states to filter by.
         """
 
         self.__state_filter = state_filter
         self.__update()
 
     def __save_modfile_states(self) -> None:
-        modfile_states: dict[ModFile, bool] = {
-            modfile: item.checkState(0) == Qt.CheckState.Checked
+        modfile_states: dict[Path, tuple[bool, TranslationStatus]] = {
+            modfile.path: (item.checkState(0) == Qt.CheckState.Checked, modfile.status)
             for modfile_item in self.__modfile_items.values()
             for modfile, item in modfile_item.items()
         }

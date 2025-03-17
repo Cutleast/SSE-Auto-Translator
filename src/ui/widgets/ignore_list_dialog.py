@@ -57,7 +57,9 @@ class IgnoreListDialog(QDialog):
         vlayout = QVBoxLayout()
         user_tab.setLayout(vlayout)
 
-        self.__remove_button = QPushButton(self.tr("Remove selected plugins from list"))
+        self.__remove_button = QPushButton(
+            self.tr("Remove selected mod file(s) from list")
+        )
         self.__remove_button.setDisabled(True)
         self.__remove_button.clicked.connect(self.__remove_selected)
         vlayout.addWidget(self.__remove_button)
@@ -87,8 +89,8 @@ class IgnoreListDialog(QDialog):
         masterlist_widget.setUniformItemSizes(True)
         masterlist_widget.addItems(
             sorted(
-                plugin
-                for plugin, masterlist_entry in self.masterlist.entries.items()
+                filename
+                for filename, masterlist_entry in self.masterlist.entries.items()
                 if masterlist_entry.type == MasterlistEntry.Type.Ignore
             )
         )

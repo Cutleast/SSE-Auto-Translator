@@ -12,5 +12,6 @@
     "enable_textures": false,
     "enable_sound_files": false,
     "author_blacklist": [],
-    "plugin_ignorelist": []
+    "modfile_ignorelist": [],
+    "parse_bsa_archives": true
 }

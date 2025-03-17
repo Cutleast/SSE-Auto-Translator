@@ -11,8 +11,9 @@ from PySide6.QtCore import QObject, Signal
 from app_context import AppContext
 from core.config.user_config import UserConfig
 from core.database.translation import Translation
+from core.mod_file.mod_file import ModFile
+from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
-from core.mod_instance.mod_file import ModFile
 from core.translation_provider.mod_id import ModId
 from core.translation_provider.provider import ModDetails, Provider
 from core.translation_provider.source import Source
@@ -232,7 +233,7 @@ class DownloadManager(QObject):
             mod: [
                 modfile
                 for modfile in modfiles
-                if modfile.status == ModFile.Status.TranslationAvailableOnline
+                if modfile.status == TranslationStatus.TranslationAvailableOnline
             ]
             for mod, modfiles in items.items()
         }
@@ -421,12 +422,12 @@ class DownloadManager(QObject):
 
         downloads: dict[str, list[TranslationDownload]] = {}
 
-        for plugin_name in translation.strings:
-            downloads[f"{translation.name} > {plugin_name}"] = [
+        for modfile_name in translation.strings:
+            downloads[f"{translation.name} > {modfile_name}"] = [
                 TranslationDownload(
                     name=translation.name,
                     mod_id=translation.mod_id,
-                    modfile_name=plugin_name,
+                    modfile_name=modfile_name,
                     source=Source.NexusMods,  # TODO: Reimplement translation updates from CDT
                     available_downloads=[
                         FileDownload(

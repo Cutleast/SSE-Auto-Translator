@@ -23,8 +23,10 @@ from core.database.string import String
 from core.database.translation import Translation
 from core.downloader.download_manager import DownloadManager
 from core.downloader.translation_download import TranslationDownload
+from core.mod_file.mod_file import ModFile
+from core.mod_file.plugin_file import PluginFile
+from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
-from core.mod_instance.mod_file import ModFile
 from core.mod_instance.mod_instance import ModInstance
 from core.scanner.scanner import Scanner
 from core.utilities.path import Path
@@ -189,8 +191,8 @@ class TranslationsTab(QWidget):
                 original_plugin: Optional[ModFile] = mod_instance.get_modfile(
                     file.name,
                     ignore_states=[
-                        ModFile.Status.IsTranslated,
-                        ModFile.Status.TranslationInstalled,
+                        TranslationStatus.IsTranslated,
+                        TranslationStatus.TranslationInstalled,
                     ],
                     ignore_case=True,
                 )
@@ -198,7 +200,7 @@ class TranslationsTab(QWidget):
                 if original_plugin is not None:
                     strings = {
                         original_plugin.name: self.database.importer.map_translation_strings(
-                            file, original_plugin.path
+                            PluginFile(file.name, file), original_plugin
                         )
                     }
 

@@ -8,11 +8,12 @@ from PySide6.QtCore import QObject, Signal
 
 from app_context import AppContext
 from core.cache.cache import Cache
+from core.mod_file.mod_file import ModFile
+from core.mod_file.translation_status import TranslationStatus
 from core.translation_provider.mod_id import ModId
 from core.utilities.container_utils import unique
 
 from .mod import Mod
-from .mod_file import ModFile
 
 
 class ModInstance(QObject):
@@ -22,7 +23,7 @@ class ModInstance(QObject):
 
     update_signal = Signal()
     """
-    This signal gets emitted everytime, the status of one or more plugins changes.
+    This signal gets emitted everytime, the status of one or more mod files changes.
     """
 
     display_name: str
@@ -50,7 +51,7 @@ class ModInstance(QObject):
         List of all translatable mod files in this instance.
         """
 
-        return [plugin for mod in self.mods for plugin in mod.modfiles]
+        return [modfile for mod in self.mods for modfile in mod.modfiles]
 
     @property
     def selected_modfiles(self) -> list[ModFile]:
@@ -95,7 +96,7 @@ class ModInstance(QObject):
         self,
         modfile_name: str,
         ignore_mods: list[Mod] = [],
-        ignore_states: list[ModFile.Status] = [],
+        ignore_states: list[TranslationStatus] = [],
         ignore_case: bool = False,
     ) -> Optional[ModFile]:
         """
@@ -106,7 +107,7 @@ class ModInstance(QObject):
         Args:
             modfile_name (str): Name of the mod file
             ignore_mods (list[Mod], optional): List of mods to ignore. Defaults to [].
-            ignore_states (list[ModFile.Status], optional):
+            ignore_states (list[TranslationStatus], optional):
                 List of mod file states to ignore. Defaults to [].
             ignore_case (bool, optional): Whether to ignore case. Defaults to False.
 
@@ -122,7 +123,7 @@ class ModInstance(QObject):
             or (ignore_case and modfile.name.lower() == modfile_name.lower())
         }
 
-        # Get the plugin from the mod with the highest modlist index
+        # Get the mod file from the mod with the highest modlist index
         return max(
             mods.items(),
             key=lambda item: self.mods.index(item[0]),
@@ -154,7 +155,7 @@ class ModInstance(QObject):
         self,
         modfile_name: str,
         ignore_mods: list[Mod] = [],
-        ignore_states: list[ModFile.Status] = [],
+        ignore_states: list[TranslationStatus] = [],
         ignore_case: bool = False,
     ) -> Optional[Mod]:
         """
@@ -165,7 +166,7 @@ class ModInstance(QObject):
         Args:
             modfile_name (str): Name of the mod file
             ignore_mods (list[Mod], optional): List of mods to ignore. Defaults to [].
-            ignore_states (list[ModFile.Status], optional):
+            ignore_states (list[TranslationStatus], optional):
                 List of mod file states to ignore. Defaults to [].
             ignore_case (bool, optional): Whether to ignore case. Defaults to False.
 
@@ -186,7 +187,7 @@ class ModInstance(QObject):
 
     def get_modfile_state_summary(
         self, modfiles: Optional[list[ModFile]] = None
-    ) -> dict[ModFile.Status, int]:
+    ) -> dict[TranslationStatus, int]:
         """
         Gets a summary of the mod file states.
 
@@ -195,14 +196,14 @@ class ModInstance(QObject):
                 List of mod files to count. Defaults to the entire modlist.
 
         Returns:
-            dict[ModFile.Status, int]: Summary of the mod file states
+            dict[TranslationStatus, int]: Summary of the mod file states
         """
 
         modfiles = modfiles or self.modfiles
 
         return {
             state: len([modfile for modfile in modfiles if modfile.status == state])
-            for state in ModFile.Status
+            for state in TranslationStatus
         }
 
     def load_states_from_cache(self) -> dict[ModFile, bool]:
@@ -220,7 +221,7 @@ class ModInstance(QObject):
             for modfile in mod.modfiles:
                 checked, modfile.status = cache.get_from_states_cache(modfile.path) or (
                     True,
-                    ModFile.Status.NoneStatus,
+                    TranslationStatus.NoneStatus,
                 )
                 check_state[modfile] = checked
 
@@ -228,12 +229,12 @@ class ModInstance(QObject):
 
         return check_state
 
-    def set_modfile_states(self, states: dict[ModFile, ModFile.Status]) -> None:
+    def set_modfile_states(self, states: dict[ModFile, TranslationStatus]) -> None:
         """
         Applies the given mod file states to the modlist and emits the update signal.
 
         Args:
-            states (dict[ModFile, ModFile.Status]):
+            states (dict[ModFile, TranslationStatus]):
                 Dictionary of mod files and their states
         """
 

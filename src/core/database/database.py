@@ -16,8 +16,9 @@ from core.cache.cache import Cache
 from core.database.exporter import Exporter
 from core.database.string import String
 from core.database.utilities import Utilities
+from core.mod_file.mod_file import ModFile
+from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
-from core.mod_instance.mod_file import ModFile
 from core.mod_instance.mod_instance import ModInstance
 from core.translation_provider.mod_id import ModId
 from core.translation_provider.source import Source
@@ -252,21 +253,23 @@ class TranslationDatabase(QObject):
             installed_translation.original_mod_id = translation.original_mod_id
             installed_translation.original_version = translation.original_version
 
-        # Set original plugins status to TranslationInstalled
+        # Set original mod files status to TranslationInstalled
         mod_instance: ModInstance = AppContext.get_app().mod_instance
-        modfile_states: dict[ModFile, ModFile.Status] = {}
+        modfile_states: dict[ModFile, TranslationStatus] = {}
         for modfile_name in translation.strings:
             original_modfile: Optional[ModFile] = mod_instance.get_modfile(
                 modfile_name,
                 ignore_states=[
-                    ModFile.Status.TranslationInstalled,
-                    ModFile.Status.IsTranslated,
+                    TranslationStatus.TranslationInstalled,
+                    TranslationStatus.IsTranslated,
                 ],
                 ignore_case=True,
             )
 
             if original_modfile is not None:
-                modfile_states[original_modfile] = ModFile.Status.TranslationInstalled
+                modfile_states[original_modfile] = (
+                    TranslationStatus.TranslationInstalled
+                )
 
         if save:
             self.save_database()
@@ -291,15 +294,15 @@ class TranslationDatabase(QObject):
         self.log.info(f"Deleted translation {translation.name!r} from database.")
 
         mod_instance: ModInstance = AppContext.get_app().mod_instance
-        modfile_states: dict[ModFile, ModFile.Status] = {}
+        modfile_states: dict[ModFile, TranslationStatus] = {}
         for modfile_name in translation.strings.keys():
             original_modfile: Optional[ModFile] = mod_instance.get_modfile(
                 modfile_name,
-                ignore_states=[ModFile.Status.IsTranslated],
+                ignore_states=[TranslationStatus.IsTranslated],
                 ignore_case=True,
             )
             if original_modfile is not None:
-                modfile_states[original_modfile] = ModFile.Status.RequiresTranslation
+                modfile_states[original_modfile] = TranslationStatus.RequiresTranslation
 
         if save:
             self.save_database()
@@ -526,8 +529,8 @@ class TranslationDatabase(QObject):
             filter(
                 lambda p: p.status
                 in [
-                    ModFile.Status.RequiresTranslation,
-                    ModFile.Status.TranslationAvailableInDatabase,
+                    TranslationStatus.RequiresTranslation,
+                    TranslationStatus.TranslationAvailableInDatabase,
                 ],
                 modfiles,
             )
@@ -544,7 +547,7 @@ class TranslationDatabase(QObject):
 
         translation_strings: dict[str, list[String]] = translation.strings or {}
         for modfile in modfiles:
-            modfile_strings: list[String] = cache.get_strings(modfile.path)
+            modfile_strings: list[String] = modfile.get_strings(cache)
 
             for string in modfile_strings:
                 string.translated_string = string.original_string

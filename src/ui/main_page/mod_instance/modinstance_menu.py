@@ -7,8 +7,9 @@ from typing import Optional
 import qtawesome as qta
 from PySide6.QtGui import QAction, QCursor, QIcon
 
+from core.mod_file.mod_file import ModFile
+from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
-from core.mod_instance.mod_file import ModFile
 from ui.widgets.menu import Menu
 
 
@@ -65,11 +66,11 @@ class ModInstanceMenu(Menu):
         )
         collapse_all_action.triggered.connect(self.__parent.collapseAll)
 
-        self.__uncheck_action = self.addAction(self.tr("Uncheck selected plugin(s)"))
+        self.__uncheck_action = self.addAction(self.tr("Uncheck selected mod file(s)"))
         self.__uncheck_action.setIcon(qta.icon("fa.close", color="#ffffff"))
         self.__uncheck_action.triggered.connect(self.__parent.uncheck_selected)
 
-        self.__check_action = self.addAction(self.tr("Check selected plugin(s)"))
+        self.__check_action = self.addAction(self.tr("Check selected mod file(s)"))
         self.__check_action.setIcon(qta.icon("fa.check", color="#ffffff"))
         self.__check_action.triggered.connect(self.__parent.check_selected)
 
@@ -219,8 +220,8 @@ class ModInstanceMenu(Menu):
         self.__import_as_translation_action.setVisible(
             isinstance(current_item, Mod)
             and any(
-                plugin.status == ModFile.Status.IsTranslated
-                for plugin in current_item.modfiles
+                modfile.status == TranslationStatus.IsTranslated
+                for modfile in current_item.modfiles
             )
         )
         self.__modfile_menu.menuAction().setVisible(isinstance(current_item, ModFile))
@@ -228,8 +229,8 @@ class ModInstanceMenu(Menu):
             isinstance(current_item, ModFile)
             and current_item.status
             in [
-                ModFile.Status.TranslationInstalled,
-                ModFile.Status.TranslationIncomplete,
+                TranslationStatus.TranslationInstalled,
+                TranslationStatus.TranslationIncomplete,
             ]
         )
 
@@ -238,7 +239,7 @@ class ModInstanceMenu(Menu):
             or (
                 isinstance(current_item, Mod)
                 and any(
-                    modfile.status != ModFile.Status.NoStrings
+                    modfile.status != TranslationStatus.NoStrings
                     for modfile in current_item.modfiles
                 )
             )

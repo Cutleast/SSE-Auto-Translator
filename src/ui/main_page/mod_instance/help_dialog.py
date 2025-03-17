@@ -16,7 +16,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from core.mod_instance.mod_file import ModFile
+from core.mod_file.translation_status import TranslationStatus
 
 
 class ModInstanceHelpDialog(QDialog):
@@ -46,8 +46,8 @@ class ModInstanceHelpDialog(QDialog):
         flayout.setAlignment(Qt.AlignmentFlag.AlignHCenter)
         vlayout.addLayout(flayout)
 
-        for status in ModFile.Status:
-            color: Optional[QColor] = ModFile.Status.get_color(status)
+        for status in TranslationStatus:
+            color: Optional[QColor] = TranslationStatus.get_color(status)
 
             if color is None:
                 label = QLabel(status.get_localized_name())

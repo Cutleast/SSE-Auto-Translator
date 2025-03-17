@@ -8,8 +8,8 @@ import logging
 import os
 from typing import override
 
+from core.mod_file import MODFILE_TYPES
 from core.mod_instance.mod import Mod
-from core.mod_instance.mod_file import ModFile
 from core.mod_instance.mod_instance import ModInstance
 from core.translation_provider.mod_id import ModId
 from core.utilities.env_resolver import resolve
@@ -160,27 +160,23 @@ class ModOrganizer(ModManager):
 
                     self.log.warning(f"No Metadata available for {active_mod!r}!")
 
-                plugins: list[ModFile] = []
-                # Only load plugins from non-separators
-                if not active_mod.endswith("_separator"):
-                    plugin_files = [
-                        file
-                        for suffix in [".esl", ".esm", ".esp"]
-                        for file in (mods_dir / active_mod).glob(f"*{suffix}")
-                        if file.is_file()
-                    ]
-                    plugins = [
-                        ModFile(plugin_file.name, plugin_file)
-                        for plugin_file in plugin_files
-                    ]
-
                 mod = Mod(
                     name=active_mod,
                     path=mods_dir / active_mod,
-                    modfiles=plugins,
+                    modfiles=[],
                     mod_id=ModId(mod_id=mod_id, file_id=file_id),
                     version=version,
                 )
+
+                # Only load mod files from non-separators
+                if not mod.name.endswith("_separator"):
+                    mod.modfiles = [
+                        modfile_type(name=Path(m).name, path=mod.path / m)
+                        for modfile_type in MODFILE_TYPES
+                        for p in modfile_type.get_glob_patterns("*")
+                        for m in mod.glob(p)
+                    ]
+
                 mods.append(mod)
 
         self.log.info(f"Got {len(mods)} mod(s) from instance.")

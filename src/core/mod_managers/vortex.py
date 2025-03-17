@@ -9,8 +9,8 @@ from typing import Any, Optional, override
 
 import plyvel as ldb
 
+from core.mod_file import MODFILE_TYPES
 from core.mod_instance.mod import Mod
-from core.mod_instance.mod_file import ModFile
 from core.mod_instance.mod_instance import ModInstance
 from core.translation_provider.mod_id import ModId
 from core.utilities.env_resolver import resolve
@@ -151,24 +151,21 @@ class Vortex(ModManager):
                     while version.endswith(".0") and version.count(".") > 1:
                         version = version.removesuffix(".0")
 
-                    plugin_files = [
-                        file
-                        for suffix in [".esl", ".esm", ".esp"]
-                        for file in mod_path.glob(f"*{suffix}")
-                        if file.is_file()
-                    ]
-                    plugins = [
-                        ModFile(plugin_file.name, plugin_file)
-                        for plugin_file in plugin_files
-                    ]
-
                     mod = Mod(
                         name=new_name,
                         path=mod_path,
-                        modfiles=plugins,
+                        modfiles=[],
                         mod_id=ModId(mod_id=mod_id, file_id=file_id),
                         version=version,
                     )
+
+                    mod.modfiles = [
+                        modfile_type(name=Path(m).name, path=mod.path / m)
+                        for modfile_type in MODFILE_TYPES
+                        for p in modfile_type.get_glob_patterns("*")
+                        for m in mod.glob(p)
+                    ]
+
                     mods.append(mod)
 
                     rules: list[dict[str, Any]] = moddata.get("rules", [])
