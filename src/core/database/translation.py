@@ -60,7 +60,7 @@ class Translation:
 
     _strings: Optional[dict[str, list[String]]] = None
     """
-    Map of plugin names to list of strings.
+    Map of mod file names to list of strings.
     """
 
     class Status(StrEnum):
@@ -163,10 +163,10 @@ class Translation:
         if not self.path.is_dir():
             os.mkdir(self.path)
 
-        for plugin_name, plugin_strings in self._strings.items():
-            plugin_name = plugin_name.lower()
-            with open(self.path / (plugin_name + ".ats"), "wb") as file:
-                pickle.dump(String.unique(plugin_strings), file)
+        for modfile_name, modfile_strings in self._strings.items():
+            modfile_name = modfile_name.lower()
+            with open(self.path / (modfile_name + ".ats"), "wb") as file:
+                pickle.dump(String.unique(modfile_strings), file)
 
         # Reset cached size
         self.__size = None
@@ -224,7 +224,7 @@ class Translation:
     @property
     def strings(self) -> dict[str, list[String]]:
         """
-        List of strings for each plugin name.
+        List of strings for each mod file name.
         """
 
         if self._strings is None:
@@ -258,8 +258,8 @@ class Translation:
             save (bool, optional): Whether to save the translation. Defaults to True.
         """
 
-        for plugin_name, plugin_strings in self.strings.items():
-            self.strings[plugin_name] = String.unique(plugin_strings)
+        for modfile_name, modfile_strings in self.strings.items():
+            self.strings[modfile_name] = String.unique(modfile_strings)
 
         if save:
             self.save_strings()

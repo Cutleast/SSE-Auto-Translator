@@ -17,7 +17,7 @@ import requests
 
 import core.plugin_interface.plugin as plugin_interface
 from core.database.string import String
-from core.mod_instance.plugin import Plugin
+from core.mod_instance.mod_file import ModFile
 from core.utilities.filesystem import get_file_identifier
 from core.utilities.path import Path
 
@@ -29,13 +29,12 @@ class Cache:
 
     log = logging.getLogger("Cache")
 
-    __plugin_states_cache: dict[str, tuple[bool, Plugin.Status]] = {}
+    __states_cache: dict[str, tuple[bool, ModFile.Status]] = {}
     """
-    This cache is persistent
-    and stores the states of the plugins of a modlist.
+    This cache is persistent and stores the states of the mod files of a modlist.
     """
 
-    __plugin_strings_cache: dict[str, list[String]] = {}
+    __strings_cache: dict[str, list[String]] = {}
     """
     This cache is persistent and stores extracted strings.
     """
@@ -51,10 +50,10 @@ class Cache:
         if self.path.is_dir():
             self.log.info("Loading caches...")
 
-            plugin_states_cache_path = self.path / "plugin_states.cache"
+            states_cache_path = self.path / "plugin_states.cache"
 
-            if plugin_states_cache_path.is_file():
-                self.load_plugin_states_cache(plugin_states_cache_path)
+            if states_cache_path.is_file():
+                self.load_states_cache(states_cache_path)
 
             self.log.info("Caches loaded.")
 
@@ -63,118 +62,120 @@ class Cache:
         Clears all caches.
         """
 
-        self.clear_plugin_states_cache()
+        self.clear_states_cache()
 
         shutil.rmtree(self.path, ignore_errors=True)
 
-    def get_plugin_strings(self, plugin_path: Path) -> list[String]:
+    def get_strings(self, modfile_path: Path) -> list[String]:
         """
-        Gets strings of `plugin_path` from cache or extracts them if not in cache.
+        Returns cached strings of the specified mod file.
+
+        Args:
+            modfile_path (Path): Path to the mod file
+
+        Returns:
+            list[String]: List of strings
         """
 
         strings: list[String]
-        identifier: str = get_file_identifier(plugin_path)
+        identifier: str = get_file_identifier(modfile_path)
 
-        if identifier not in self.__plugin_strings_cache:
+        if identifier not in self.__strings_cache:
             cache_file: Path = self.path / "plugin_strings" / f"{identifier}.cache"
 
             if not cache_file.is_file():
-                plugin = plugin_interface.Plugin(plugin_path)
+                plugin = plugin_interface.Plugin(modfile_path)
                 strings = plugin.extract_strings()
                 os.makedirs(cache_file.parent, exist_ok=True)
                 with cache_file.open(mode="wb") as data:
                     pickle.dump(strings, data)
 
-                self.__plugin_strings_cache[identifier] = strings
+                self.__strings_cache[identifier] = strings
 
                 return strings
 
             with cache_file.open(mode="rb") as data:
                 strings = pickle.load(data)
 
-            self.__plugin_strings_cache[identifier] = strings
+            self.__strings_cache[identifier] = strings
 
-        strings = self.__plugin_strings_cache[identifier]
+        strings = self.__strings_cache[identifier]
 
         self.log.debug(
-            f"Loaded {len(strings)} string(s) for plugin '{plugin_path}' from cache."
+            f"Loaded {len(strings)} string(s) for mod file '{modfile_path}' from cache."
         )
 
         return strings
 
-    def update_plugin_strings(self, plugin_path: Path, strings: list[String]) -> None:
+    def update_strings(self, modfile_path: Path, strings: list[String]) -> None:
         """
-        Updates cached strings of `plugin_path`.
+        Updates cached strings of `modfile_path`.
         """
 
-        identifier = get_file_identifier(plugin_path)
+        identifier = get_file_identifier(modfile_path)
         cache_file = self.path / "plugin_strings" / f"{identifier}.cache"
 
         os.makedirs(cache_file.parent, exist_ok=True)
         with cache_file.open(mode="wb") as data:
             pickle.dump(strings, data)
 
-        self.log.debug(f"Updated {len(strings)} string(s) for plugin '{plugin_path}'.")
+        self.log.debug(f"Updated {len(strings)} string(s) for plugin '{modfile_path}'.")
 
-    def clear_plugin_strings_cache(self) -> None:
+    def clear_strings_cache(self) -> None:
         """
         Clears Plugin Strings Cache.
         """
 
         shutil.rmtree(self.path / "plugin_strings", ignore_errors=True)
 
-    def load_plugin_states_cache(self, path: Path) -> None:
-        self.log.debug(f"Loading Plugin States Cache from '{path}'...")
+    def load_states_cache(self, path: Path) -> None:
+        self.log.debug(f"Loading states Cache from '{path}'...")
 
         try:
             with path.open("rb") as file:
-                cache: dict[str, tuple[bool, Plugin.Status]] = pickle.load(file)
+                cache: dict[str, tuple[bool, ModFile.Status]] = pickle.load(file)
 
-            self.__plugin_states_cache = cache
+            self.__states_cache = cache
 
-            self.log.debug(
-                f"Loaded Plugin States for {len(self.__plugin_states_cache)} Plugin(s)."
-            )
+            self.log.debug(f"Loaded states for {len(self.__states_cache)} mod file(s).")
         except Exception as ex:
-            self.log.error(f"Failed to load plugin states cache: {ex}", exc_info=ex)
+            self.log.error(f"Failed to load states cache: {ex}", exc_info=ex)
 
-    def clear_plugin_states_cache(self) -> None:
+    def clear_states_cache(self) -> None:
         """
-        Clears Plugin States Cache.
+        Clears states cache.
         """
 
-        self.__plugin_states_cache.clear()
+        self.__states_cache.clear()
 
-    def update_plugin_states_cache(self, plugin_states: dict[Plugin, bool]) -> None:
+    def update_states_cache(self, states: dict[ModFile, bool]) -> None:
         """
-        Updates Plugin States Cache from `modlist`.
+        Updates cache from the specified mod file states.
         """
 
         cache = {
-            get_file_identifier(plugin.path): (checked, plugin.status)
-            for plugin, checked in plugin_states.items()
+            get_file_identifier(modfile.path): (checked, modfile.status)
+            for modfile, checked in states.items()
         }
 
-        self.__plugin_states_cache = cache
+        self.__states_cache = cache
 
-    def get_from_plugin_states_cache(
-        self, plugin_path: Path
-    ) -> Optional[tuple[bool, Plugin.Status]]:
+    def get_from_states_cache(
+        self, modfile_path: Path
+    ) -> Optional[tuple[bool, ModFile.Status]]:
         """
-        Returns cached State for `plugin_path` if existing else None.
+        Returns cached state for `modfile_path` if existing else None.
         """
 
-        return self.__plugin_states_cache.get(get_file_identifier(plugin_path))
+        return self.__states_cache.get(get_file_identifier(modfile_path))
 
-    def save_plugin_states_cache(self, path: Path) -> None:
-        self.log.debug(f"Saving Plugin States Cache to '{path}'...")
+    def save_states_cache(self, path: Path) -> None:
+        self.log.debug(f"Saving states cache to '{path}'...")
 
         with path.open("wb") as file:
-            pickle.dump(self.__plugin_states_cache, file)
+            pickle.dump(self.__states_cache, file)
 
-        self.log.debug(
-            f"Saved Plugin States for {len(self.__plugin_states_cache)} Plugin(s)."
-        )
+        self.log.debug(f"Saved states for {len(self.__states_cache)} mod file(s).")
 
     def get_from_web_cache(
         self, url: str, max_age: int = 43200
@@ -228,9 +229,9 @@ class Cache:
 
         os.makedirs(self.path, exist_ok=True)
 
-        if self.__plugin_states_cache:
-            plugin_states_cache_path = self.path / "plugin_states.cache"
+        if self.__states_cache:
+            states_cache_path = self.path / "plugin_states.cache"
 
-            self.save_plugin_states_cache(plugin_states_cache_path)
+            self.save_states_cache(states_cache_path)
 
         self.log.info("Caches saved.")

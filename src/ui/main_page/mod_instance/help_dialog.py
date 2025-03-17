@@ -16,7 +16,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from core.mod_instance.plugin import Plugin
+from core.mod_instance.mod_file import ModFile
 
 
 class ModInstanceHelpDialog(QDialog):
@@ -34,7 +34,7 @@ class ModInstanceHelpDialog(QDialog):
         self.setLayout(vlayout)
 
         help_label = QLabel(
-            self.tr("Below is an overview of the various states a plugin can have:")
+            self.tr("Below is an overview of the various states a mod file can have:")
         )
         help_label.setObjectName("relevant_label")
         help_label.setWordWrap(True)
@@ -46,8 +46,8 @@ class ModInstanceHelpDialog(QDialog):
         flayout.setAlignment(Qt.AlignmentFlag.AlignHCenter)
         vlayout.addLayout(flayout)
 
-        for status in Plugin.Status:
-            color: Optional[QColor] = Plugin.Status.get_color(status)
+        for status in ModFile.Status:
+            color: Optional[QColor] = ModFile.Status.get_color(status)
 
             if color is None:
                 label = QLabel(status.get_localized_name())

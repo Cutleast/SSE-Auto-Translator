@@ -5,7 +5,7 @@ Copyright (c) Cutleast
 import logging
 
 from core.mod_instance.mod import Mod
-from core.mod_instance.plugin import Plugin
+from core.mod_instance.mod_file import ModFile
 
 from ..app_test import AppTest
 
@@ -40,43 +40,41 @@ class CoreTest(AppTest):
 
         return mod
 
-    def get_plugin_from_mod(self, mod: Mod, plugin_name: str) -> Plugin:
+    def get_modfile_from_mod(self, mod: Mod, modfile_name: str) -> ModFile:
         """
-        Gets a plugin by its name from the specified mod.
+        Gets a mod file by its name from the specified mod.
 
         Args:
-            mod (Mod): Mod to get plugin from
-            plugin_name (str): The name of the plugin
+            mod (Mod): Mod to get mod file from
+            modfile_name (str): The name of the mod file
 
         Returns:
-            Plugin: The plugin
+            Plugin: The mod file
         """
 
         try:
-            plugin: Plugin = next(
-                (plugin for plugin in mod.plugins if plugin.name == plugin_name)
-            )
+            modfile: ModFile = next((m for m in mod.modfiles if m.name == modfile_name))
         except StopIteration:
-            raise ValueError(f"No plugin with name {plugin_name} found in mod.")
+            raise ValueError(f"No plugin with name {modfile_name} found in mod.")
 
-        return plugin
+        return modfile
 
-    def get_plugin_from_mod_name(self, mod_name: str, plugin_name: str) -> Plugin:
+    def get_modfile_from_mod_name(self, mod_name: str, modfile_name: str) -> ModFile:
         """
-        Gets a plugin by its name from the specified mod.
+        Gets a mod file by its name from the specified mod.
 
         Args:
-            mod_name (str): Name of the mod to get plugin from
-            plugin_name (str): The name of the plugin
+            mod_name (str): Name of the mod to get mod file from
+            modfile_name (str): The name of the mod file
 
         Raises:
             ValueError: When no mod with the specified name is found
-            ValueError: When no plugin with the specified name is found
+            ValueError: When no mod file with the specified name is found
 
         Returns:
-            Plugin: The plugin
+            ModFile: The mod file
         """
 
         mod: Mod = self.get_mod_by_name(mod_name)
 
-        return self.get_plugin_from_mod(mod, plugin_name)
+        return self.get_modfile_from_mod(mod, modfile_name)

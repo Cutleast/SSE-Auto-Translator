@@ -24,8 +24,8 @@ from core.database.translation import Translation
 from core.downloader.download_manager import DownloadManager
 from core.downloader.translation_download import TranslationDownload
 from core.mod_instance.mod import Mod
+from core.mod_instance.mod_file import ModFile
 from core.mod_instance.mod_instance import ModInstance
-from core.mod_instance.plugin import Plugin
 from core.scanner.scanner import Scanner
 from core.utilities.path import Path
 from ui.widgets.download_list_dialog import DownloadListDialog
@@ -186,11 +186,11 @@ class TranslationsTab(QWidget):
                     self.database.add_translation(translation)
 
             elif file.suffix.lower() in [".esp", ".esm", ".esl"]:
-                original_plugin: Optional[Plugin] = mod_instance.get_plugin(
+                original_plugin: Optional[ModFile] = mod_instance.get_modfile(
                     file.name,
                     ignore_states=[
-                        Plugin.Status.IsTranslated,
-                        Plugin.Status.TranslationInstalled,
+                        ModFile.Status.IsTranslated,
+                        ModFile.Status.TranslationInstalled,
                     ],
                     ignore_case=True,
                 )

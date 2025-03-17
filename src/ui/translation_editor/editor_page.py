@@ -87,24 +87,24 @@ class EditorPage(QSplitter):
             tab = tabs[item]
         else:
             tab = tabs[item.parent()]
-            tab.go_to_plugin(item.text(0))
+            tab.go_to_modfile(item.text(0))
 
         self.__page_widget.setCurrentWidget(tab)
 
-    def __set_tab(self, tab: EditorTab, plugin_name: Optional[str] = None) -> None:
+    def __set_tab(self, tab: EditorTab, modfile_name: Optional[str] = None) -> None:
         """
-        Switches to a specified tab and goes to a specified plugin, if any.
+        Switches to a specified tab and goes to a specified mod file, if any.
 
         Args:
             tab (EditorTab): The tab to switch to.
-            plugin_name (Optional[str]): The name of the plugin to go to.
+            modfile_name (Optional[str]): The name of the mod file to go to.
         """
 
         item: QTreeWidgetItem = self.__tabs[tab.translation][1]
         self.__tab_list_widget.setCurrentItem(item)
 
-        if plugin_name is not None:
-            tab.go_to_plugin(plugin_name)
+        if modfile_name is not None:
+            tab.go_to_modfile(modfile_name)
 
     @property
     def tabs(self) -> list[EditorTab]:
@@ -188,9 +188,9 @@ class EditorPage(QSplitter):
             close_button.setIcon(qta.icon("fa.close", color="#ffffff"))
             close_button.setFixedSize(26, 26)
 
-            for plugin_name in sorted(translation.strings, key=lambda p: p.lower()):
-                plugin_item = QTreeWidgetItem([plugin_name])
-                translation_item.addChild(plugin_item)
+            for modfile_name in sorted(translation.strings, key=lambda m: m.lower()):
+                modfile_item = QTreeWidgetItem([modfile_name])
+                translation_item.addChild(modfile_item)
 
             self.__tab_list_widget.addTopLevelItem(translation_item)
 

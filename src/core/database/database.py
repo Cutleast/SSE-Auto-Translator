@@ -17,8 +17,8 @@ from core.database.exporter import Exporter
 from core.database.string import String
 from core.database.utilities import Utilities
 from core.mod_instance.mod import Mod
+from core.mod_instance.mod_file import ModFile
 from core.mod_instance.mod_instance import ModInstance
-from core.mod_instance.plugin import Plugin
 from core.translation_provider.mod_id import ModId
 from core.translation_provider.source import Source
 from core.utilities.container_utils import unique
@@ -103,15 +103,15 @@ class TranslationDatabase(QObject):
 
         result += [
             string
-            for plugin_strings in self.__vanilla_translation.strings.values()
-            for string in plugin_strings
+            for modfile_strings in self.__vanilla_translation.strings.values()
+            for string in modfile_strings
         ]
 
         result += [
             string
             for translation in self.__user_translations
-            for plugin_strings in (translation.strings or {}).values()
-            for string in plugin_strings
+            for modfile_strings in (translation.strings or {}).values()
+            for string in modfile_strings
             if string.status != String.Status.TranslationRequired
         ]
 
@@ -236,14 +236,14 @@ class TranslationDatabase(QObject):
             }
             installed_translation = translations[translation.id]
 
-            for plugin_name, plugin_strings in translation.strings.items():
-                installed_translation.strings.setdefault(plugin_name, []).extend(
-                    plugin_strings
+            for modfile_name, modfile_strings in translation.strings.items():
+                installed_translation.strings.setdefault(modfile_name, []).extend(
+                    modfile_strings
                 )
 
                 # Remove duplicates
-                installed_translation.strings[plugin_name] = String.unique(
-                    installed_translation.strings[plugin_name]
+                installed_translation.strings[modfile_name] = String.unique(
+                    installed_translation.strings[modfile_name]
                 )
 
             # Merge metadata
@@ -254,24 +254,24 @@ class TranslationDatabase(QObject):
 
         # Set original plugins status to TranslationInstalled
         mod_instance: ModInstance = AppContext.get_app().mod_instance
-        plugin_states: dict[Plugin, Plugin.Status] = {}
-        for plugin_name in translation.strings:
-            original_plugin: Optional[Plugin] = mod_instance.get_plugin(
-                plugin_name,
+        modfile_states: dict[ModFile, ModFile.Status] = {}
+        for modfile_name in translation.strings:
+            original_modfile: Optional[ModFile] = mod_instance.get_modfile(
+                modfile_name,
                 ignore_states=[
-                    Plugin.Status.TranslationInstalled,
-                    Plugin.Status.IsTranslated,
+                    ModFile.Status.TranslationInstalled,
+                    ModFile.Status.IsTranslated,
                 ],
                 ignore_case=True,
             )
 
-            if original_plugin is not None:
-                plugin_states[original_plugin] = Plugin.Status.TranslationInstalled
+            if original_modfile is not None:
+                modfile_states[original_modfile] = ModFile.Status.TranslationInstalled
 
         if save:
             self.save_database()
 
-        mod_instance.set_plugin_states(plugin_states)
+        mod_instance.set_modfile_states(modfile_states)
         self.update_signal.emit()
 
     def delete_translation(self, translation: Translation, save: bool = True) -> None:
@@ -291,41 +291,43 @@ class TranslationDatabase(QObject):
         self.log.info(f"Deleted translation {translation.name!r} from database.")
 
         mod_instance: ModInstance = AppContext.get_app().mod_instance
-        plugin_states: dict[Plugin, Plugin.Status] = {}
-        for plugin_name in translation.strings.keys():
-            plugin: Optional[Plugin] = mod_instance.get_plugin(
-                plugin_name,
-                ignore_states=[Plugin.Status.IsTranslated],
+        modfile_states: dict[ModFile, ModFile.Status] = {}
+        for modfile_name in translation.strings.keys():
+            original_modfile: Optional[ModFile] = mod_instance.get_modfile(
+                modfile_name,
+                ignore_states=[ModFile.Status.IsTranslated],
                 ignore_case=True,
             )
-            if plugin is not None:
-                plugin_states[plugin] = Plugin.Status.RequiresTranslation
+            if original_modfile is not None:
+                modfile_states[original_modfile] = ModFile.Status.RequiresTranslation
 
         if save:
             self.save_database()
 
-        mod_instance.set_plugin_states(plugin_states)
+        mod_instance.set_modfile_states(modfile_states)
         self.update_signal.emit()
 
-    def get_translation_by_plugin_name(self, plugin_name: str) -> Optional[Translation]:
+    def get_translation_by_modfile_name(
+        self, modfile_name: str
+    ) -> Optional[Translation]:
         """
-        Gets a translation that covers a specified plugin.
+        Gets a translation that covers a specified mod file.
         This method is case-insensitive.
 
         Args:
-            plugin_name (str): Name of the plugin.
+            modfile_name (str): Name of the mod file.
 
         Returns:
-            Optional[Translation]: Translation that covers the plugin or None.
+            Optional[Translation]: Translation that covers the mod file or None.
         """
 
         translations = {
-            _plugin_name.lower(): translation
+            _modfile_name.lower(): translation
             for translation in self.__user_translations
-            for _plugin_name in translation.strings
+            for _modfile_name in translation.strings
         }
 
-        return translations.get(plugin_name.lower())
+        return translations.get(modfile_name.lower())
 
     def get_translation_by_mod(self, mod: Mod) -> Optional[Translation]:
         """
@@ -350,8 +352,8 @@ class TranslationDatabase(QObject):
                 f"{mod.mod_id.mod_id}###{mod.mod_id.file_id}"
             ]
 
-        elif mod.plugins:
-            translation = self.get_translation_by_plugin_name(mod.plugins[0].name)
+        elif mod.modfiles:
+            translation = self.get_translation_by_modfile_name(mod.modfiles[0].name)
 
         return translation
 
@@ -374,15 +376,15 @@ class TranslationDatabase(QObject):
         return translation
 
     def apply_db_to_translation(
-        self, translation: Translation, plugin_name: Optional[str] = None
+        self, translation: Translation, modfile_name: Optional[str] = None
     ) -> None:
         """
         Applies database to untranslated strings in a translation.
 
         Args:
             translation (Translation): Translation to apply database to.
-            plugin_name (Optional[str], optional):
-                Name of the plugin to apply database to. Defaults to None.
+            modfile_name (Optional[str], optional):
+                Name of the mod file to apply database to. Defaults to None.
         """
 
         translation_strings: Optional[dict[str, list[String]]] = translation.strings
@@ -395,31 +397,31 @@ class TranslationDatabase(QObject):
         database_originals: dict[str, String] = {
             string.original_string: string
             for t in installed_translations
-            for _plugin_name, plugin_strings in t.strings.items()
-            if t != translation or _plugin_name != plugin_name
-            for string in plugin_strings
+            for _modfile_name, modfile_strings in t.strings.items()
+            if t != translation or _modfile_name != modfile_name
+            for string in modfile_strings
             if string.status != String.Status.TranslationRequired
         }
         database_strings: dict[str, String] = {
             string.id: string
             for t in installed_translations
-            for plugin_strings in t.strings.values()
-            for string in plugin_strings
+            for modfile_strings in t.strings.values()
+            for string in modfile_strings
             if string.status != String.Status.TranslationRequired
         }
 
         strings: list[String]
-        if plugin_name is not None:
+        if modfile_name is not None:
             strings = [
                 string
-                for string in translation_strings[plugin_name]
+                for string in translation_strings[modfile_name]
                 if string.status == String.Status.TranslationRequired
             ]
         else:
             strings = [
                 string
-                for plugin_strings in translation_strings.values()
-                for string in plugin_strings
+                for modfile_strings in translation_strings.values()
+                for string in modfile_strings
                 if string.status == String.Status.TranslationRequired
             ]
 
@@ -457,16 +459,17 @@ class TranslationDatabase(QObject):
     @overload
     def create_translation(
         self,
-        item: tuple[Mod, list[Plugin]],
+        item: tuple[Mod, list[ModFile]],
         apply_db: bool = True,
         add_and_save: bool = True,
     ) -> Translation:
         """
         Creates translation for a mod by extracting the strings from the specified
-        plugins and applying translations from database to them if enabled.
+        mod files and applying translations from database to them if enabled.
 
         Args:
-            item (tuple[Mod, list[Plugin]]): Mod and plugins to create translation for.
+            item (tuple[Mod, list[ModFile]]):
+                Mod and mod files to create translation for.
             apply_db (bool, optional): Whether to apply database. Defaults to True.
             add_and_save (bool, optional):
                 Whether to save the translation. Defaults to True.
@@ -477,14 +480,14 @@ class TranslationDatabase(QObject):
 
     @overload
     def create_translation(
-        self, item: Plugin, apply_db: bool = True, add_and_save: bool = True
+        self, item: ModFile, apply_db: bool = True, add_and_save: bool = True
     ) -> Translation:
         """
-        Creates translation for a plugin by extracting its strings
+        Creates translation for a mod file by extracting its strings
         and applying translations from database to them if enabled.
 
         Args:
-            item (Plugin): Plugin to create translation for.
+            item (ModFile): Mod file to create translation for.
             apply_db (bool, optional): Whether to apply database. Defaults to True.
             add_and_save (bool, optional):
                 Whether to save the translation and database. Defaults to True.
@@ -495,18 +498,18 @@ class TranslationDatabase(QObject):
 
     def create_translation(
         self,
-        item: Plugin | tuple[Mod, list[Plugin]],
+        item: ModFile | tuple[Mod, list[ModFile]],
         apply_db: bool = True,
         add_and_save: bool = True,
     ) -> Optional[Translation]:
         mod: Optional[Mod] = None
-        plugins: list[Plugin] = []
+        modfiles: list[ModFile] = []
         translation: Optional[Translation] = None
         translation_name: str
 
-        if isinstance(item, Plugin):
-            plugins = [item]
-            translation = self.get_translation_by_plugin_name(item.path.name)
+        if isinstance(item, ModFile):
+            modfiles = [item]
+            translation = self.get_translation_by_modfile_name(item.path.name)
 
             if translation is not None:
                 return translation
@@ -514,41 +517,41 @@ class TranslationDatabase(QObject):
             translation_name = f"{item.name} - {self.language.capitalize()}"
 
         else:
-            mod, plugins = item
+            mod, modfiles = item
             translation = self.get_translation_by_mod(mod)
             translation_name = f"{mod.name} - {self.language.capitalize()}"
 
         cache: Cache = AppContext.get_app().cache
-        plugins = list(
+        modfiles = list(
             filter(
                 lambda p: p.status
                 in [
-                    Plugin.Status.RequiresTranslation,
-                    Plugin.Status.TranslationAvailableInDatabase,
+                    ModFile.Status.RequiresTranslation,
+                    ModFile.Status.TranslationAvailableInDatabase,
                 ],
-                plugins,
+                modfiles,
             )
         )
 
-        if not len(plugins):
+        if not len(modfiles):
             return translation
 
-        self.log.info(f"Creating translation for {len(plugins)} plugin(s)...")
+        self.log.info(f"Creating translation for {len(modfiles)} mod file(s)...")
 
         if translation is None:
             translation_path: Path = self.userdb_path / self.language / translation_name
             translation = Translation(name=translation_name, path=translation_path)
 
         translation_strings: dict[str, list[String]] = translation.strings or {}
-        for plugin in plugins:
-            plugin_strings: list[String] = cache.get_plugin_strings(plugin.path)
+        for modfile in modfiles:
+            modfile_strings: list[String] = cache.get_strings(modfile.path)
 
-            for string in plugin_strings:
+            for string in modfile_strings:
                 string.translated_string = string.original_string
                 string.status = String.Status.TranslationRequired
 
-            translation_strings.setdefault(plugin.name.lower(), []).extend(
-                plugin_strings
+            translation_strings.setdefault(modfile.name.lower(), []).extend(
+                modfile_strings
             )
 
         translation.strings = translation_strings
@@ -587,19 +590,19 @@ class TranslationDatabase(QObject):
         for translation in translations:
             self.log.debug(f"Searching translation {translation.name!r}...")
 
-            for plugin, strings in translation.strings.items():
-                self.log.debug(f"Searching plugin translation {plugin!r}...")
+            for modfile, strings in translation.strings.items():
+                self.log.debug(f"Searching mod file translation {modfile!r}...")
 
                 for string in strings:
                     if matches_filter(filter, string):
-                        if plugin in result:
-                            result[plugin].append(string)
+                        if modfile in result:
+                            result[modfile].append(string)
                         else:
-                            result[plugin] = [string]
+                            result[modfile] = [string]
 
         self.log.info(
             f"Found {sum(len(strings) for strings in result.values())} "
-            f"matching string(s) in {len(result)} plugin(s)."
+            f"matching string(s) in {len(result)} mod file(s)."
         )
 
         return result

@@ -30,9 +30,9 @@ class TranslationDownload:
     Mod identifier used to open the mod page.
     """
 
-    plugin_name: str
+    modfile_name: str
     """
-    The name of the plugin this translation is for.
+    The name of the mod file this translation is for.
     """
 
     source: Source
@@ -52,4 +52,4 @@ class TranslationDownload:
 
     @override
     def __hash__(self) -> int:
-        return hash((self.mod_id, self.plugin_name, self.source.name))
+        return hash((self.mod_id, self.modfile_name, self.source.name))

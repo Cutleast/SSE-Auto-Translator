@@ -34,7 +34,7 @@ class TestModOrganizer(CoreTest):
         # then
         assert mod_instance.display_name == "Portable"
         assert len(mod_instance.mods) == 7
-        assert len(mod_instance.plugins) == 8
+        assert len(mod_instance.modfiles) == 8
 
     def test_load_mod_instance_fail(self) -> None:
         """

@@ -30,8 +30,8 @@ from core.downloader.download_manager import DownloadManager
 from core.downloader.translation_download import TranslationDownload
 from core.masterlist.masterlist import Masterlist
 from core.mod_instance.mod import Mod
+from core.mod_instance.mod_file import ModFile
 from core.mod_instance.mod_instance import ModInstance
-from core.mod_instance.plugin import Plugin
 from core.plugin_interface import plugin as esp
 from core.scanner.scanner import Scanner
 from core.translation_provider.exceptions import ModNotFoundError
@@ -72,9 +72,9 @@ class ModInstanceWidget(QTreeWidget):
     Mapping of loaded mods to their tree items.
     """
 
-    __plugin_items: dict[Mod, dict[Plugin, QTreeWidgetItem]]
+    __modfile_items: dict[Mod, dict[ModFile, QTreeWidgetItem]]
     """
-    Mapping of loaded mods to their plugin tree items.
+    Mapping of loaded mods to their mod file tree items.
     """
 
     __menu: ModInstanceMenu
@@ -87,9 +87,9 @@ class ModInstanceWidget(QTreeWidget):
     Optional name filter and case-sensitivity.
     """
 
-    __state_filter: Optional[list[Plugin.Status]] = None
+    __state_filter: Optional[list[ModFile.Status]] = None
     """
-    Optional list of plugin states to filter by.
+    Optional list of mod file states to filter by.
     """
 
     def __init__(self) -> None:
@@ -109,7 +109,7 @@ class ModInstanceWidget(QTreeWidget):
 
         self.database.update_signal.connect(self.update)
         self.mod_instance.update_signal.connect(self.__update)
-        AppContext.get_app().exit_chain.append(self.__save_plugin_states)
+        AppContext.get_app().exit_chain.append(self.__save_modfile_states)
 
         self.__load_mod_instance()
 
@@ -147,12 +147,10 @@ class ModInstanceWidget(QTreeWidget):
         """
 
         self.__mod_items = {}
-        self.__plugin_items = {}
+        self.__modfile_items = {}
         self.clear()
 
-        checkstates: dict[Plugin, bool] = (
-            self.mod_instance.load_plugin_states_from_cache()
-        )
+        checkstates: dict[ModFile, bool] = self.mod_instance.load_states_from_cache()
 
         cur_separator: Optional[QTreeWidgetItem] = None
         for i, mod in enumerate(self.mod_instance.mods):
@@ -164,13 +162,13 @@ class ModInstanceWidget(QTreeWidget):
                 mod_item: QTreeWidgetItem = ModInstanceWidget._create_mod_item(mod, i)
 
                 self.__mod_items[mod] = mod_item
-                self.__plugin_items[mod] = {
-                    plugin: ModInstanceWidget._create_plugin_item(
-                        plugin, checkstates[plugin]
+                self.__modfile_items[mod] = {
+                    modfile: ModInstanceWidget._create_modfile_item(
+                        modfile, checkstates[modfile]
                     )
-                    for plugin in mod.plugins
+                    for modfile in mod.modfiles
                 }
-                mod_item.addChildren(list(self.__plugin_items[mod].values()))
+                mod_item.addChildren(list(self.__modfile_items[mod].values()))
 
                 if cur_separator is not None:
                     cur_separator.addChild(mod_item)
@@ -218,24 +216,24 @@ class ModInstanceWidget(QTreeWidget):
         return mod_item
 
     @staticmethod
-    def _create_plugin_item(plugin: Plugin, checked: bool = True) -> QTreeWidgetItem:
-        plugin_item = QTreeWidgetItem(
+    def _create_modfile_item(modfile: ModFile, checked: bool = True) -> QTreeWidgetItem:
+        modfile_item = QTreeWidgetItem(
             [
-                plugin.name,
+                modfile.name,
                 "",  # Version
                 "",  # Priority
             ]
         )
-        plugin_item.setToolTip(0, plugin.name)
-        plugin_item.setFlags(
+        modfile_item.setToolTip(0, modfile.name)
+        modfile_item.setFlags(
             Qt.ItemFlag.ItemIsUserCheckable | Qt.ItemFlag.ItemIsSelectable
         )
-        plugin_item.setDisabled(False)
-        plugin_item.setCheckState(
+        modfile_item.setDisabled(False)
+        modfile_item.setCheckState(
             0, Qt.CheckState.Checked if checked else Qt.CheckState.Unchecked
         )
 
-        return plugin_item
+        return modfile_item
 
     def __update(self) -> None:
         """
@@ -250,12 +248,12 @@ class ModInstanceWidget(QTreeWidget):
         )
 
         for mod, mod_item in self.__mod_items.items():
-            plugin_items: dict[Plugin, QTreeWidgetItem] = self.__plugin_items.get(
+            modfile_items: dict[ModFile, QTreeWidgetItem] = self.__modfile_items.get(
                 mod, {}
             )
 
-            for plugin, item in plugin_items.items():
-                ignored: bool = self.masterlist.is_ignored(plugin.name)
+            for modfile, item in modfile_items.items():
+                ignored: bool = self.masterlist.is_ignored(modfile.name)
                 item.setDisabled(ignored)
                 if ignored:
                     item.setCheckState(0, Qt.CheckState.Unchecked)
@@ -263,14 +261,14 @@ class ModInstanceWidget(QTreeWidget):
                 item.setHidden(
                     (
                         self.__state_filter is not None
-                        and plugin.status not in self.__state_filter
+                        and modfile.status not in self.__state_filter
                     )
                     or not matches_filter(
-                        plugin.name, name_filter, case_sensitive or False
+                        modfile.name, name_filter, case_sensitive or False
                     )
                 )
                 item.setForeground(
-                    0, Plugin.Status.get_color(plugin.status) or Qt.GlobalColor.white
+                    0, ModFile.Status.get_color(modfile.status) or Qt.GlobalColor.white
                 )
 
             mod_item.setHidden(
@@ -282,10 +280,10 @@ class ModInstanceWidget(QTreeWidget):
             )
             mod_item.setForeground(
                 0,
-                Plugin.Status.get_color(
+                ModFile.Status.get_color(
                     max(
-                        [plugin.status for plugin in mod.plugins],
-                        default=Plugin.Status.NoneStatus,
+                        [modfile.status for modfile in mod.modfiles],
+                        default=ModFile.Status.NoneStatus,
                     )
                 )
                 or Qt.GlobalColor.white,
@@ -296,29 +294,29 @@ class ModInstanceWidget(QTreeWidget):
         Show the strings of the current item.
         """
 
-        current_item: Optional[Mod | Plugin] = self.get_current_item()
+        current_item: Optional[Mod | ModFile] = self.get_current_item()
 
-        if isinstance(current_item, Plugin):
+        if isinstance(current_item, ModFile):
             dialog = StringListDialog(
-                current_item.name, self.cache.get_plugin_strings(current_item.path)
+                current_item.name, self.cache.get_strings(current_item.path)
             )
             dialog.show()
 
         elif isinstance(current_item, Mod):
             strings: dict[str, list[String]] = {}
 
-            for plugin in current_item.plugins:
-                plugin_strings = self.cache.get_plugin_strings(plugin.path)
-                strings[plugin.name] = plugin_strings
+            for modfile in current_item.modfiles:
+                modfile_strings = self.cache.get_strings(modfile.path)
+                strings[modfile.name] = modfile_strings
 
             dialog = StringListDialog(current_item.name, strings)
             dialog.show()
 
     def show_structure(self) -> None:
         # TODO: Overhaul this
-        current_item: Optional[Mod | Plugin] = self.get_current_item()
+        current_item: Optional[Mod | ModFile] = self.get_current_item()
 
-        if isinstance(current_item, Plugin):
+        if isinstance(current_item, ModFile):
             plugin = esp.Plugin(current_item.path)
 
             text = str(plugin)
@@ -360,16 +358,16 @@ class ModInstanceWidget(QTreeWidget):
                 item.setCheckState(0, Qt.CheckState.Unchecked)
 
     def add_to_ignore_list(self) -> None:
-        _, selected_plugins = self.get_selected_items()
+        _, selected_modfiles = self.get_selected_items()
 
-        for plugin in selected_plugins:
-            self.masterlist.add_to_ignore_list(plugin.name)
+        for modfile in selected_modfiles:
+            self.masterlist.add_to_ignore_list(modfile.name)
 
         self.user_config.save()
         self.__update()
 
     def open_modpage(self) -> None:
-        current_item: Optional[Mod | Plugin] = self.get_current_item()
+        current_item: Optional[Mod | ModFile] = self.get_current_item()
 
         if isinstance(current_item, Mod) and current_item.mod_id:
             try:
@@ -381,25 +379,25 @@ class ModInstanceWidget(QTreeWidget):
                 pass
 
     def open_in_explorer(self) -> None:
-        current_item: Optional[Mod | Plugin] = self.get_current_item()
+        current_item: Optional[Mod | ModFile] = self.get_current_item()
 
         if isinstance(current_item, Mod):
             if current_item.path.is_dir():
                 os.system(f'explorer.exe "{current_item.path}"')
 
-        elif isinstance(current_item, Plugin):
+        elif isinstance(current_item, ModFile):
             if current_item.path.is_file():
                 os.system(f'explorer.exe /select,"{current_item.path}"')
 
     def show_untranslated_strings(self) -> None:
-        current_item: Optional[Mod | Plugin] = self.get_current_item()
+        current_item: Optional[Mod | ModFile] = self.get_current_item()
         translation: Optional[Translation] = None
 
         if current_item is None:
             return
 
-        if isinstance(current_item, Plugin):
-            translation = self.database.get_translation_by_plugin_name(
+        if isinstance(current_item, ModFile):
+            translation = self.database.get_translation_by_modfile_name(
                 current_item.name
             )
 
@@ -419,14 +417,14 @@ class ModInstanceWidget(QTreeWidget):
                 dialog.show()
 
     def show_translation_strings(self) -> None:
-        current_item: Optional[Mod | Plugin] = self.get_current_item()
+        current_item: Optional[Mod | ModFile] = self.get_current_item()
         translation: Optional[Translation] = None
 
         if current_item is None:
             return
 
-        if isinstance(current_item, Plugin):
-            translation = self.database.get_translation_by_plugin_name(
+        if isinstance(current_item, ModFile):
+            translation = self.database.get_translation_by_modfile_name(
                 current_item.name
             )
         else:
@@ -441,14 +439,14 @@ class ModInstanceWidget(QTreeWidget):
             dialog.show()
 
     def show_translation(self) -> None:
-        current_item: Optional[Mod | Plugin] = self.get_current_item()
+        current_item: Optional[Mod | ModFile] = self.get_current_item()
         translation: Optional[Translation] = None
 
         if current_item is None:
             return
 
-        if isinstance(current_item, Plugin):
-            translation = self.database.get_translation_by_plugin_name(
+        if isinstance(current_item, ModFile):
+            translation = self.database.get_translation_by_modfile_name(
                 current_item.name
             )
         else:
@@ -457,11 +455,11 @@ class ModInstanceWidget(QTreeWidget):
         self.database.highlight_signal.emit(translation)
 
     def create_translation(self) -> None:
-        current_item: Optional[Mod | Plugin] = self.get_current_item()
+        current_item: Optional[Mod | ModFile] = self.get_current_item()
 
-        if isinstance(current_item, Plugin):
+        if isinstance(current_item, ModFile):
             translation: Optional[Translation] = (
-                self.database.get_translation_by_plugin_name(current_item.name)
+                self.database.get_translation_by_modfile_name(current_item.name)
             )
             if translation is None:
 
@@ -474,7 +472,7 @@ class ModInstanceWidget(QTreeWidget):
                     QApplication.activeModalWidget(), process
                 )
 
-                current_item.status = Plugin.Status.TranslationIncomplete
+                current_item.status = ModFile.Status.TranslationIncomplete
 
                 self.database.highlight_signal.emit(translation)
                 self.database.edit_signal.emit(translation)
@@ -482,7 +480,7 @@ class ModInstanceWidget(QTreeWidget):
         # TODO: Implement this for entire mods
 
     def import_as_translation(self) -> None:
-        current_item: Optional[Mod | Plugin] = self.get_current_item()
+        current_item: Optional[Mod | ModFile] = self.get_current_item()
 
         if isinstance(current_item, Mod):
 
@@ -494,13 +492,13 @@ class ModInstanceWidget(QTreeWidget):
                 # TODO: Make the import dependent on the original plugins instead of a single mod
                 # Find the original mod
                 original_mod: Optional[Mod] = None
-                for plugin in current_item.plugins:
-                    original_mod = self.mod_instance.get_mod_with_plugin(
-                        plugin.name,
+                for modfile in current_item.modfiles:
+                    original_mod = self.mod_instance.get_mod_with_modfile(
+                        modfile.name,
                         ignore_mods=[current_item],
                         ignore_states=[
-                            Plugin.Status.IsTranslated,
-                            Plugin.Status.TranslationInstalled,
+                            ModFile.Status.IsTranslated,
+                            ModFile.Status.TranslationInstalled,
                         ],
                         ignore_case=True,
                     )
@@ -527,11 +525,11 @@ class ModInstanceWidget(QTreeWidget):
             messagebox.exec()
 
     def edit_translation(self) -> None:
-        current_item: Optional[Mod | Plugin] = self.get_current_item()
+        current_item: Optional[Mod | ModFile] = self.get_current_item()
 
         translation: Optional[Translation] = None
-        if isinstance(current_item, Plugin):
-            translation = self.database.get_translation_by_plugin_name(
+        if isinstance(current_item, ModFile):
+            translation = self.database.get_translation_by_modfile_name(
                 current_item.name
             )
         elif isinstance(current_item, Mod):
@@ -540,90 +538,92 @@ class ModInstanceWidget(QTreeWidget):
         if translation is not None:
             self.database.edit_signal.emit(translation)
 
-    def open_plugin(self) -> None:
-        current_item: Optional[Mod | Plugin] = self.get_current_item()
+    def open_modfile(self) -> None:
+        current_item: Optional[Mod | ModFile] = self.get_current_item()
 
-        if isinstance(current_item, Plugin):
+        if isinstance(current_item, ModFile):
             os.startfile(current_item.path)
 
-    def get_selected_items(self) -> tuple[list[Mod], list[Plugin]]:
+    def get_selected_items(self) -> tuple[list[Mod], list[ModFile]]:
         """
         Returns the currently selected items.
 
         Returns:
-            tuple[list[Mod], list[Plugin]]: Selected mods and plugins
+            tuple[list[Mod], list[ModFile]]: Selected mods and mod files
         """
 
         selected_mods: list[Mod] = [
             mod for mod, item in self.__mod_items.items() if item.isSelected()
         ]
-        selected_plugins: list[Plugin] = [
-            plugin
-            for plugin_items in self.__plugin_items.values()
-            for plugin, item in plugin_items.items()
+        selected_modfiles: list[ModFile] = [
+            modfile
+            for modfile_items in self.__modfile_items.values()
+            for modfile, item in modfile_items.items()
             if item.isSelected()
         ]
 
-        return selected_mods, selected_plugins
+        return selected_mods, selected_modfiles
 
-    def get_selected_plugins(self) -> dict[Mod, list[Plugin]]:
+    def get_selected_modfiles(self) -> dict[Mod, list[ModFile]]:
         """
-        Returns the currently selected plugins.
+        Returns the currently selected mod files.
 
         Returns:
-            dict[Mod, list[Plugin]]: Mods with selected plugins
-        """
-
-        return {
-            mod: [plugin for plugin, item in plugin_items.items() if item.isSelected()]
-            for mod, plugin_items in self.__plugin_items.items()
-            if any(item.isSelected() for item in plugin_items.values())
-        }
-
-    def get_checked_items(self) -> dict[Mod, list[Plugin]]:
-        """
-        Returns the currently checked items.
-
-        Returns:
-            dict[Mod, list[Plugin]]: Mods with checked plugins
+            dict[Mod, list[ModFile]]: Mods with selected mod files
         """
 
         return {
             mod: [
-                plugin
-                for plugin, item in plugin_items.items()
+                modfile for modfile, item in modfile_items.items() if item.isSelected()
+            ]
+            for mod, modfile_items in self.__modfile_items.items()
+            if any(item.isSelected() for item in modfile_items.values())
+        }
+
+    def get_checked_items(self) -> dict[Mod, list[ModFile]]:
+        """
+        Returns the currently checked items.
+
+        Returns:
+            dict[Mod, list[ModFile]]: Mods with checked mod files
+        """
+
+        return {
+            mod: [
+                modfile
+                for modfile, item in modfile_items.items()
                 if item.checkState(0) == Qt.CheckState.Checked
             ]
-            for mod, plugin_items in self.__plugin_items.items()
+            for mod, modfile_items in self.__modfile_items.items()
             if any(
                 item.checkState(0) == Qt.CheckState.Checked
-                for item in plugin_items.values()
+                for item in modfile_items.values()
             )
         }
 
-    def get_current_item(self) -> Optional[Mod | Plugin]:
+    def get_current_item(self) -> Optional[Mod | ModFile]:
         """
         Returns the item where the cursor is.
 
         Returns:
-            Optional[Mod | Plugin]: Current item or None
+            Optional[Mod | ModFile]: Current item or None
         """
 
-        item: Optional[Mod | Plugin] = None
+        item: Optional[Mod | ModFile] = None
 
         for mod in self.__mod_items:
             if self.__mod_items[mod].isSelected():
                 item = mod
                 break
-            for plugin, plugin_item in self.__plugin_items.get(mod, {}).items():
-                if plugin_item.isSelected():
-                    item = plugin
+            for modfile, modfile_item in self.__modfile_items.get(mod, {}).items():
+                if modfile_item.isSelected():
+                    item = modfile
                     break
 
         return item
 
     def __item_double_clicked(self, item: QTreeWidgetItem, column: int) -> None:
-        current_item: Optional[Mod | Plugin] = self.get_current_item()
+        current_item: Optional[Mod | ModFile] = self.get_current_item()
 
         if (
             current_item is not None
@@ -634,8 +634,8 @@ class ModInstanceWidget(QTreeWidget):
             and (
                 not isinstance(current_item, Mod)
                 or any(
-                    plugin.status != Plugin.Status.NoStrings
-                    for plugin in current_item.plugins
+                    modfile.status != ModFile.Status.NoStrings
+                    for modfile in current_item.modfiles
                 )
             )
         ) and AppContext.get_app().app_config.show_strings_on_double_click:
@@ -645,15 +645,15 @@ class ModInstanceWidget(QTreeWidget):
 
     def basic_scan(self) -> None:
         selected_mods: list[Mod] = self.get_selected_items()[0]
-        selected_plugins: dict[Mod, list[Plugin]] = self.get_selected_plugins()
+        selected_modfiles: dict[Mod, list[ModFile]] = self.get_selected_modfiles()
 
-        scan_result: dict[Plugin, Plugin.Status] = join_dicts(
+        scan_result: dict[ModFile, ModFile.Status] = join_dicts(
             *LoadingDialog.run_callable(
                 QApplication.activeModalWidget(),
-                lambda ldialog: self.scanner.run_basic_scan(selected_plugins, ldialog),
+                lambda ldialog: self.scanner.run_basic_scan(selected_modfiles, ldialog),
             ).values()
         )
-        self.mod_instance.set_plugin_states(scan_result)
+        self.mod_instance.set_modfile_states(scan_result)
 
         app_config: AppConfig = AppContext.get_app().app_config
         if app_config.auto_import_translations:
@@ -665,26 +665,28 @@ class ModInstanceWidget(QTreeWidget):
             )
 
         ResultDialog(
-            self.mod_instance.get_plugin_state_summary(
-                [plugin for plugins in selected_plugins.values() for plugin in plugins]
+            self.mod_instance.get_modfile_state_summary(
+                [m for modfiles in selected_modfiles.values() for m in modfiles]
             ),
             QApplication.activeModalWidget(),
         ).exec()
 
     def online_scan(self) -> None:
-        selected_plugins: dict[Mod, list[Plugin]] = self.get_selected_plugins()
+        selected_modfiles: dict[Mod, list[ModFile]] = self.get_selected_modfiles()
 
-        scan_result: dict[Plugin, Plugin.Status] = join_dicts(
+        scan_result: dict[ModFile, ModFile.Status] = join_dicts(
             *LoadingDialog.run_callable(
                 QApplication.activeModalWidget(),
-                lambda ldialog: self.scanner.run_online_scan(selected_plugins, ldialog),
+                lambda ldialog: self.scanner.run_online_scan(
+                    selected_modfiles, ldialog
+                ),
             ).values()
         )
-        self.mod_instance.set_plugin_states(scan_result)
+        self.mod_instance.set_modfile_states(scan_result)
 
         ResultDialog(
-            self.mod_instance.get_plugin_state_summary(
-                [plugin for plugins in selected_plugins.values() for plugin in plugins]
+            self.mod_instance.get_modfile_state_summary(
+                [m for modfiles in selected_modfiles.values() for m in modfiles]
             ),
             QApplication.activeModalWidget(),
         ).exec()
@@ -695,7 +697,7 @@ class ModInstanceWidget(QTreeWidget):
             LoadingDialog.run_callable(
                 QApplication.activeModalWidget(),
                 lambda ldialog: download_manager.collect_available_downloads(
-                    self.get_selected_plugins(), ldialog
+                    self.get_selected_modfiles(), ldialog
                 ),
             )
         )
@@ -711,9 +713,7 @@ class ModInstanceWidget(QTreeWidget):
 
         message_box = QMessageBox()
         message_box.setWindowTitle(self.tr("Success!"))
-        message_box.setText(
-            self.tr("Created output mod for DSD at: ") + str(output_path)
-        )
+        message_box.setText(self.tr("Created output mod at: ") + str(output_path))
         message_box.setStandardButtons(
             QMessageBox.StandardButton.Ok
             | QMessageBox.StandardButton.Help
@@ -738,13 +738,13 @@ class ModInstanceWidget(QTreeWidget):
             os.startfile(output_path)
 
     def deep_scan(self) -> None:
-        result: dict[Plugin, Plugin.Status] = LoadingDialog.run_callable(
+        result: dict[ModFile, ModFile.Status] = LoadingDialog.run_callable(
             QApplication.activeModalWidget(), self.scanner.run_deep_scan
         )
-        self.mod_instance.set_plugin_states(result)
+        self.mod_instance.set_modfile_states(result)
 
         ResultDialog(
-            self.mod_instance.get_plugin_state_summary(),
+            self.mod_instance.get_modfile_state_summary(),
             QApplication.activeModalWidget(),
         ).exec()
 
@@ -766,7 +766,7 @@ class ModInstanceWidget(QTreeWidget):
         self.__name_filter = name_filter if name_filter[0].strip() else None
         self.__update()
 
-    def set_state_filter(self, state_filter: list[Plugin.Status]) -> None:
+    def set_state_filter(self, state_filter: list[ModFile.Status]) -> None:
         """
         Sets the state filter.
 
@@ -777,12 +777,12 @@ class ModInstanceWidget(QTreeWidget):
         self.__state_filter = state_filter
         self.__update()
 
-    def __save_plugin_states(self) -> None:
-        plugin_states: dict[Plugin, bool] = {
-            plugin: item.checkState(0) == Qt.CheckState.Checked
-            for plugin_items in self.__plugin_items.values()
-            for plugin, item in plugin_items.items()
+    def __save_modfile_states(self) -> None:
+        modfile_states: dict[ModFile, bool] = {
+            modfile: item.checkState(0) == Qt.CheckState.Checked
+            for modfile_item in self.__modfile_items.values()
+            for modfile, item in modfile_item.items()
         }
 
         cache: Cache = AppContext.get_app().cache
-        cache.update_plugin_states_cache(plugin_states)
+        cache.update_states_cache(modfile_states)

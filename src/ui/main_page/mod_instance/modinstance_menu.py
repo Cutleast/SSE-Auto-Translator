@@ -8,7 +8,7 @@ import qtawesome as qta
 from PySide6.QtGui import QAction, QCursor, QIcon
 
 from core.mod_instance.mod import Mod
-from core.mod_instance.plugin import Plugin
+from core.mod_instance.mod_file import ModFile
 from ui.widgets.menu import Menu
 
 
@@ -29,9 +29,9 @@ class ModInstanceMenu(Menu):
     Submenu for translation-related actions.
     """
 
-    __plugin_menu: Menu
+    __modfile_menu: Menu
     """
-    Submenu for plugin-related actions.
+    Submenu for mod file-related actions.
     """
 
     __uncheck_action: QAction
@@ -47,7 +47,7 @@ class ModInstanceMenu(Menu):
         self.__init_item_actions()
         self.__init_actions_menu()
         self.__init_translation_actions()
-        self.__init_plugin_actions()
+        self.__init_modfile_actions()
         self.__init_general_actions()
 
     def __init_item_actions(self) -> None:
@@ -155,33 +155,33 @@ class ModInstanceMenu(Menu):
 
         self.addSeparator()
 
-    def __init_plugin_actions(self) -> None:
-        self.__plugin_menu = Menu(QIcon(":/icons/plugin.svg"), self.tr("Plugins"))
-        self.addMenu(self.__plugin_menu)
+    def __init_modfile_actions(self) -> None:
+        self.__modfile_menu = Menu(QIcon(":/icons/plugin.svg"), self.tr("Mod files"))
+        self.addMenu(self.__modfile_menu)
 
-        create_translation_action: QAction = self.__plugin_menu.addAction(
+        create_translation_action: QAction = self.__modfile_menu.addAction(
             qta.icon("mdi6.passport-plus", color=self.palette().text().color()),
             self.tr("Create new translation..."),
         )
         create_translation_action.triggered.connect(self.__parent.create_translation)
 
-        show_structure_action: QAction = self.__plugin_menu.addAction(
+        show_structure_action: QAction = self.__modfile_menu.addAction(
             qta.icon("ph.tree-structure", color=self.palette().text().color()),
             self.tr("Show Plugin Structure... (Warning: this may take a while)"),
         )
         show_structure_action.triggered.connect(self.__parent.show_structure)
 
-        add_to_ignore_list_action: QAction = self.__plugin_menu.addAction(
+        add_to_ignore_list_action: QAction = self.__modfile_menu.addAction(
             qta.icon("mdi.playlist-remove", color=self.palette().text().color()),
-            self.tr("Add plugin to ignore list"),
+            self.tr("Add mod file to ignore list"),
         )
         add_to_ignore_list_action.triggered.connect(self.__parent.add_to_ignore_list)
 
-        open_action = self.__plugin_menu.addAction(
+        open_action = self.__modfile_menu.addAction(
             qta.icon("fa5s.external-link-alt", color=self.palette().text().color()),
             self.tr("Open..."),
         )
-        open_action.triggered.connect(self.__parent.open_plugin)
+        open_action.triggered.connect(self.__parent.open_modfile)
 
         self.addSeparator()
 
@@ -209,34 +209,37 @@ class ModInstanceMenu(Menu):
         Opens the context menu at the current cursor position.
         """
 
-        current_item: Optional[Mod | Plugin] = self.__parent.get_current_item()
-        selected_plugins: list[Plugin] = self.__parent.get_selected_items()[1]
+        current_item: Optional[Mod | ModFile] = self.__parent.get_current_item()
+        selected_modfiles: list[ModFile] = self.__parent.get_selected_items()[1]
 
-        self.__uncheck_action.setVisible(len(selected_plugins) > 0)
-        self.__check_action.setVisible(len(selected_plugins) > 0)
+        self.__uncheck_action.setVisible(len(selected_modfiles) > 0)
+        self.__check_action.setVisible(len(selected_modfiles) > 0)
 
         self.__action_menu.menuAction().setVisible(isinstance(current_item, Mod))
         self.__import_as_translation_action.setVisible(
             isinstance(current_item, Mod)
             and any(
-                plugin.status == Plugin.Status.IsTranslated
-                for plugin in current_item.plugins
+                plugin.status == ModFile.Status.IsTranslated
+                for plugin in current_item.modfiles
             )
         )
-        self.__plugin_menu.menuAction().setVisible(isinstance(current_item, Plugin))
+        self.__modfile_menu.menuAction().setVisible(isinstance(current_item, ModFile))
         self.__translation_menu.menuAction().setVisible(
-            isinstance(current_item, Plugin)
+            isinstance(current_item, ModFile)
             and current_item.status
-            in [Plugin.Status.TranslationInstalled, Plugin.Status.TranslationIncomplete]
+            in [
+                ModFile.Status.TranslationInstalled,
+                ModFile.Status.TranslationIncomplete,
+            ]
         )
 
         self.__show_strings_action.setVisible(
-            isinstance(current_item, Plugin)
+            isinstance(current_item, ModFile)
             or (
                 isinstance(current_item, Mod)
                 and any(
-                    plugin.status != Plugin.Status.NoStrings
-                    for plugin in current_item.plugins
+                    modfile.status != ModFile.Status.NoStrings
+                    for modfile in current_item.modfiles
                 )
             )
         )

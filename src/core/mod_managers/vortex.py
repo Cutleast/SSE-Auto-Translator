@@ -10,8 +10,8 @@ from typing import Any, Optional, override
 import plyvel as ldb
 
 from core.mod_instance.mod import Mod
+from core.mod_instance.mod_file import ModFile
 from core.mod_instance.mod_instance import ModInstance
-from core.mod_instance.plugin import Plugin
 from core.translation_provider.mod_id import ModId
 from core.utilities.env_resolver import resolve
 from core.utilities.leveldb import LevelDB
@@ -158,14 +158,14 @@ class Vortex(ModManager):
                         if file.is_file()
                     ]
                     plugins = [
-                        Plugin(plugin_file.name, plugin_file)
+                        ModFile(plugin_file.name, plugin_file)
                         for plugin_file in plugin_files
                     ]
 
                     mod = Mod(
                         name=new_name,
                         path=mod_path,
-                        plugins=plugins,
+                        modfiles=plugins,
                         mod_id=ModId(mod_id=mod_id, file_id=file_id),
                         version=version,
                     )

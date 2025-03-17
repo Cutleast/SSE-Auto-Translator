@@ -4,8 +4,8 @@ Copyright (c) Cutleast
 
 from app import App
 from core.mod_instance.mod import Mod
+from core.mod_instance.mod_file import ModFile
 from core.mod_instance.mod_instance import ModInstance
-from core.mod_instance.plugin import Plugin
 from core.scanner.scanner import Scanner
 
 from ..core_test import CoreTest
@@ -24,36 +24,38 @@ class TestScanner(CoreTest):
         # given
         scanner: Scanner = self.scanner()
         modinstance: ModInstance = self.modinstance()
-        items: dict[Mod, list[Plugin]] = {mod: mod.plugins for mod in modinstance.mods}
-        expected_results: dict[Mod, dict[Plugin, Plugin.Status]] = {
+        items: dict[Mod, list[ModFile]] = {
+            mod: mod.modfiles for mod in modinstance.mods
+        }
+        expected_results: dict[Mod, dict[ModFile, ModFile.Status]] = {
             self.get_mod_by_name("Wet and Cold SE"): {
-                self.get_plugin_from_mod_name(
+                self.get_modfile_from_mod_name(
                     "Wet and Cold SE", "WetandCold.esp"
-                ): Plugin.Status.RequiresTranslation
+                ): ModFile.Status.RequiresTranslation
             },
             self.get_mod_by_name("Wet and Cold SE - German"): {
-                self.get_plugin_from_mod_name(
+                self.get_modfile_from_mod_name(
                     "Wet and Cold SE - German", "WetandCold.esp"
-                ): Plugin.Status.IsTranslated
+                ): ModFile.Status.IsTranslated
             },
             self.get_mod_by_name("Obsidian Weathers and Seasons"): {
-                self.get_plugin_from_mod_name(
+                self.get_modfile_from_mod_name(
                     "Obsidian Weathers and Seasons", "Obsidian Weathers.esp"
-                ): Plugin.Status.RequiresTranslation
+                ): ModFile.Status.RequiresTranslation
             },
         }
 
         # when
-        scan_result: dict[Mod, dict[Plugin, Plugin.Status]] = scanner.run_basic_scan(
+        scan_result: dict[Mod, dict[ModFile, ModFile.Status]] = scanner.run_basic_scan(
             items
         )
 
         # then
         assert len(scan_result) == len(items)
 
-        for mod, plugins in scan_result.items():
-            assert len(plugins) == len(items[mod])
+        for mod, modfiles in scan_result.items():
+            assert len(modfiles) == len(items[mod])
 
-            for plugin, status in plugins.items():
-                if mod in expected_results and plugin in expected_results[mod]:
-                    assert status == expected_results[mod][plugin]
+            for modfile, status in modfiles.items():
+                if mod in expected_results and modfile in expected_results[mod]:
+                    assert status == expected_results[mod][modfile]

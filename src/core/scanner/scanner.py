@@ -19,8 +19,8 @@ from core.database.translation import Translation
 from core.masterlist.masterlist import Masterlist
 from core.masterlist.masterlist_entry import MasterlistEntry
 from core.mod_instance.mod import Mod
+from core.mod_instance.mod_file import ModFile
 from core.mod_instance.mod_instance import ModInstance
-from core.mod_instance.plugin import Plugin
 from core.translation_provider.mod_id import ModId
 from core.translation_provider.provider import Provider
 from core.translation_provider.source import Source
@@ -62,20 +62,20 @@ class Scanner(QObject):
         )
 
     def run_basic_scan(
-        self, items: dict[Mod, list[Plugin]], ldialog: Optional[LoadingDialog] = None
-    ) -> dict[Mod, dict[Plugin, Plugin.Status]]:
+        self, items: dict[Mod, list[ModFile]], ldialog: Optional[LoadingDialog] = None
+    ) -> dict[Mod, dict[ModFile, ModFile.Status]]:
         """
         Scans mods for required and installed translations.
         Automatically imports installed translations if enabled by the user.
 
         Args:
-            items (dict[Mod, list[Plugin]]): The items to scan.
+            items (dict[Mod, list[ModFile]]): The items to scan.
             ldialog (Optional[LoadingDialog], optional):
                 Optional loading dialog. Defaults to None.
 
         Returns:
-            dict[Mod, dict[Plugin, Plugin.Status]]:
-                A dictionary of mods, their plugins and their status.
+            dict[Mod, dict[ModFile, ModFile.Status]]:
+                A dictionary of mods, their mod files and their status.
         """
 
         self.log.info(f"Scanning {len(items)} mod(s)...")
@@ -95,8 +95,8 @@ class Scanner(QObject):
         if ldialog is not None:
             ldialog.updateProgress(text1=self.tr("Scanning modlist..."))
 
-        scan_result: dict[Mod, dict[Plugin, Plugin.Status]] = {}
-        for m, (mod, plugins) in enumerate(items.items()):
+        scan_result: dict[Mod, dict[ModFile, ModFile.Status]] = {}
+        for m, (mod, modfiles) in enumerate(items.items()):
             if ldialog is not None:
                 ldialog.updateProgress(
                     text1=self.tr("Scanning modlist...") + f" ({m}/{len(items)})",
@@ -106,7 +106,7 @@ class Scanner(QObject):
 
             self.log.info(f"Scanning {mod.name!r}...")
             scan_result[mod] = self.__basic_scan_mod(
-                mod, plugins, database_strings, database_originals, ldialog
+                mod, modfiles, database_strings, database_originals, ldialog
             )
 
         self.log.info("Modlist scan complete.")
@@ -116,101 +116,102 @@ class Scanner(QObject):
     def __basic_scan_mod(
         self,
         mod: Mod,
-        plugins: list[Plugin],
+        modfiles: list[ModFile],
         database_strings: list[String],
         database_originals: list[str],
         ldialog: Optional[LoadingDialog] = None,
-    ) -> dict[Plugin, Plugin.Status]:
-        result: dict[Plugin, Plugin.Status] = {}
+    ) -> dict[ModFile, ModFile.Status]:
+        result: dict[ModFile, ModFile.Status] = {}
 
-        for p, plugin in enumerate(plugins):
+        for m, modfile in enumerate(modfiles):
             if ldialog is not None:
                 ldialog.updateProgress(
                     show2=True,
-                    text2=f"{mod.name} > {plugin.name} ({p}/{len(plugins)})",
-                    value2=p,
-                    max2=len(plugins),
+                    text2=f"{mod.name} > {modfile.name} ({m}/{len(modfiles)})",
+                    value2=m,
+                    max2=len(modfiles),
                 )
 
-            self.log.info(f"Scanning {mod.name!r} > {plugin.name!r}...")
+            self.log.info(f"Scanning {mod.name!r} > {modfile.name!r}...")
             try:
-                result[plugin] = self.__basic_scan_plugin(
-                    plugin, database_strings, database_originals, ldialog
+                result[modfile] = self.__basic_scan_modfile(
+                    modfile, database_strings, database_originals, ldialog
                 )
             except Exception as ex:
                 self.log.error(
-                    f"Failed to scan {mod.name!r} > {plugin.name!r}: {ex}", exc_info=ex
+                    f"Failed to scan {mod.name!r} > {modfile.name!r}: {ex}", exc_info=ex
                 )
 
         return result
 
-    def __basic_scan_plugin(
+    def __basic_scan_modfile(
         self,
-        plugin: Plugin,
+        modfile: ModFile,
         database_strings: list[String],
         database_originals: list[str],
         ldialog: Optional[LoadingDialog] = None,
-    ) -> Plugin.Status:
+    ) -> ModFile.Status:
         if ldialog is not None:
             ldialog.updateProgress(show3=True, text3=self.tr("Extracting strings..."))
 
         self.log.debug("Extracting strings...")
-        plugin_strings: list[String] = self.cache.get_plugin_strings(plugin.path)
-        if not len(plugin_strings):
-            return Plugin.Status.NoStrings
+        modfile_strings: list[String] = self.cache.get_strings(modfile.path)
+        if not len(modfile_strings):
+            return ModFile.Status.NoStrings
 
         if ldialog is not None:
             ldialog.updateProgress(text3=self.tr("Detecting language..."))
 
         self.log.debug("Detecting language...")
 
-        status: Plugin.Status
-        if self.detector.requires_translation(plugin_strings):
-            if self.database.get_translation_by_plugin_name(plugin.name) is not None:
-                status = Plugin.Status.TranslationInstalled
+        status: ModFile.Status
+        if self.detector.requires_translation(modfile_strings):
+            if self.database.get_translation_by_modfile_name(modfile.name) is not None:
+                status = ModFile.Status.TranslationInstalled
 
             elif any(
                 string.original_string not in database_originals
                 and string not in database_strings
-                for string in plugin_strings
+                for string in modfile_strings
             ):
-                status = Plugin.Status.RequiresTranslation
+                status = ModFile.Status.RequiresTranslation
             else:
-                status = Plugin.Status.TranslationAvailableInDatabase
+                status = ModFile.Status.TranslationAvailableInDatabase
 
         else:
-            status = Plugin.Status.IsTranslated
-            self.log.info("Plugin is already translated.")
+            status = ModFile.Status.IsTranslated
+            self.log.info("Mod file is already translated.")
 
         return status
 
     def run_online_scan(
-        self, items: dict[Mod, list[Plugin]], ldialog: Optional[LoadingDialog] = None
-    ) -> dict[Mod, dict[Plugin, Plugin.Status]]:
+        self, items: dict[Mod, list[ModFile]], ldialog: Optional[LoadingDialog] = None
+    ) -> dict[Mod, dict[ModFile, ModFile.Status]]:
         """
         Scans online for available translations.
 
         Args:
-            items (dict[Mod, list[Plugin]]): The items to scan.
+            items (dict[Mod, list[ModFile]]): The items to scan.
             ldialog (Optional[LoadingDialog], optional):
                 Optional loading dialog. Defaults to None.
 
         Returns:
-            dict[Mod, dict[Plugin, Plugin.Status]]:
-                A dictionary of mods, their plugins and their status.
+            dict[Mod, dict[ModFile, ModFile.Status]]:
+                A dictionary of mods, their mod files and their status.
         """
 
-        relevant_items: dict[Mod, list[Plugin]] = {
+        relevant_items: dict[Mod, list[ModFile]] = {
             mod: [
-                plugin
-                for plugin in plugins
-                if plugin.status == Plugin.Status.RequiresTranslation
+                modfile
+                for modfile in modfiles
+                if modfile.status == ModFile.Status.RequiresTranslation
             ]
-            for mod, plugins in items.items()
+            for mod, modfiles in items.items()
             if any(
-                plugin.status == Plugin.Status.RequiresTranslation for plugin in plugins
+                modfile.status == ModFile.Status.RequiresTranslation
+                for modfile in modfiles
             )
-            and self.provider.is_mod_id_valid(mod.mod_id)
+            and self.provider.is_mod_id_valid(mod.mod_id, check_online=False)
         }
 
         self.log.info(
@@ -218,8 +219,8 @@ class Scanner(QObject):
             f"for {len(relevant_items)} mod(s)..."
         )
 
-        scan_result: dict[Mod, dict[Plugin, Plugin.Status]] = {}
-        for m, (mod, plugins) in enumerate(relevant_items.items()):
+        scan_result: dict[Mod, dict[ModFile, ModFile.Status]] = {}
+        for m, (mod, modfiles) in enumerate(relevant_items.items()):
             if ldialog is not None:
                 ldialog.updateProgress(
                     text1=self.tr("Scanning online...")
@@ -229,50 +230,52 @@ class Scanner(QObject):
                 )
 
             self.log.info(f"Scanning for {mod.name!r}...")
-            scan_result[mod] = self.__online_scan_mod(mod, plugins, ldialog)
+            scan_result[mod] = self.__online_scan_mod(mod, modfiles, ldialog)
 
         self.log.info("Online scan complete.")
 
         return scan_result
 
     def __online_scan_mod(
-        self, mod: Mod, plugins: list[Plugin], ldialog: Optional[LoadingDialog] = None
-    ) -> dict[Plugin, Plugin.Status]:
-        result: dict[Plugin, Plugin.Status] = {}
-        for p, plugin in enumerate(plugins):
+        self, mod: Mod, modfiles: list[ModFile], ldialog: Optional[LoadingDialog] = None
+    ) -> dict[ModFile, ModFile.Status]:
+        result: dict[ModFile, ModFile.Status] = {}
+        for m, modfile in enumerate(modfiles):
             if ldialog is not None:
                 ldialog.updateProgress(
                     show2=True,
-                    text2=f"{mod.name} > {plugin.name} ({p}/{len(plugins)})",
-                    value2=p,
-                    max2=len(plugins),
+                    text2=f"{mod.name} > {modfile.name} ({m}/{len(modfiles)})",
+                    value2=m,
+                    max2=len(modfiles),
                 )
 
-            self.log.info(f"Scanning for {mod.name!r} > {plugin.name!r}...")
+            self.log.info(f"Scanning for {mod.name!r} > {modfile.name!r}...")
             try:
-                result[plugin] = self.__online_scan_plugin(mod.mod_id, plugin, ldialog)
+                result[modfile] = self.__online_scan_modfile(
+                    mod.mod_id, modfile, ldialog
+                )
             except Exception as ex:
                 self.log.error(
-                    f"Failed to scan for {mod.name!r} > {plugin.name!r}: {ex}",
+                    f"Failed to scan for {mod.name!r} > {modfile.name!r}: {ex}",
                     exc_info=ex,
                 )
 
         return result
 
-    def __online_scan_plugin(
-        self, mod_id: ModId, plugin: Plugin, ldialog: Optional[LoadingDialog] = None
-    ) -> Plugin.Status:
+    def __online_scan_modfile(
+        self, mod_id: ModId, modfile: ModFile, ldialog: Optional[LoadingDialog] = None
+    ) -> ModFile.Status:
         available_translations: dict[Source, list[ModId]] = (
             self.provider.get_translations(
                 mod_id,
-                plugin.name,
+                modfile.name,
                 self.user_config.language,
                 self.user_config.author_blacklist,
             )
         )
 
         masterlist_entry: Optional[MasterlistEntry] = self.masterlist.entries.get(
-            plugin.name.lower()
+            modfile.name.lower()
         )
 
         if (
@@ -280,17 +283,17 @@ class Scanner(QObject):
             and masterlist_entry.type == MasterlistEntry.Type.Route
             and masterlist_entry.targets
         ):
-            self.log.info("Found route entry for plugin in masterlist.")
-            return Plugin.Status.TranslationAvailableOnline
+            self.log.info("Found route entry for mod file in masterlist.")
+            return ModFile.Status.TranslationAvailableOnline
 
         if len(available_translations):
-            return Plugin.Status.TranslationAvailableOnline
+            return ModFile.Status.TranslationAvailableOnline
         else:
-            return Plugin.Status.NoTranslationAvailable
+            return ModFile.Status.NoTranslationAvailable
 
     def run_deep_scan(
         self, ldialog: Optional[LoadingDialog] = None
-    ) -> dict[Plugin, Plugin.Status]:
+    ) -> dict[ModFile, ModFile.Status]:
         """
         Scans each installed translation for missing or untranslated strings.
 
@@ -299,15 +302,15 @@ class Scanner(QObject):
                 Optional loading dialog. Defaults to None.
 
         Returns:
-            dict[Plugin, Plugin.Status]:
-                Plugins with installed translations and their status
+            dict[ModFile, ModFile.Status]:
+                Mod files with installed translations and their status
         """
 
         translations: list[Translation] = self.database.user_translations
 
         self.log.info(f"Running deep scan for {len(translations)} translation(s)...")
 
-        scan_result: dict[Plugin, Plugin.Status] = {}
+        scan_result: dict[ModFile, ModFile.Status] = {}
         for t, translation in enumerate(translations):
             if ldialog is not None:
                 ldialog.updateProgress(
@@ -326,55 +329,55 @@ class Scanner(QObject):
 
     def __deep_scan_translation(
         self, translation: Translation, ldialog: Optional[LoadingDialog] = None
-    ) -> dict[Plugin, Plugin.Status]:
-        result: dict[Plugin, Plugin.Status] = {}
-        for p, (plugin_name, strings) in enumerate(translation.strings.items()):
+    ) -> dict[ModFile, ModFile.Status]:
+        result: dict[ModFile, ModFile.Status] = {}
+        for m, (modfile_name, strings) in enumerate(translation.strings.items()):
             if ldialog is not None:
                 ldialog.updateProgress(
                     show2=True,
-                    text2=f"{translation.name} > {plugin_name} ({p}/{len(translation.strings)})",
-                    value2=p,
+                    text2=f"{translation.name} > {modfile_name} ({m}/{len(translation.strings)})",
+                    value2=m,
                     max2=len(translation.strings),
                 )
 
-            plugin: Optional[Plugin] = self.mod_instance.get_plugin(
-                plugin_name,
-                ignore_states=[Plugin.Status.IsTranslated],
+            modfile: Optional[ModFile] = self.mod_instance.get_modfile(
+                modfile_name,
+                ignore_states=[ModFile.Status.IsTranslated],
                 ignore_case=True,
             )
 
-            if plugin is None:
-                self.log.warning(f"Plugin {plugin_name!r} not found in modlist.")
+            if modfile is None:
+                self.log.warning(f"Mod file {modfile_name!r} not found in modlist.")
                 continue
 
-            self.log.info(f"Scanning {translation.name!r} > {plugin_name!r}...")
-            result[plugin] = self.__deep_scan_plugin_translation(
-                strings, plugin, ldialog
+            self.log.info(f"Scanning {translation.name!r} > {modfile_name!r}...")
+            result[modfile] = self.__deep_scan_modfile_translation(
+                strings, modfile, ldialog
             )
             translation.save_strings()
 
         return result
 
-    def __deep_scan_plugin_translation(
+    def __deep_scan_modfile_translation(
         self,
         translation_strings: list[String],
-        plugin: Plugin,
+        modfile: ModFile,
         ldialog: Optional[LoadingDialog] = None,
-    ) -> Plugin.Status:
-        plugin_strings: list[String] = self.cache.get_plugin_strings(plugin.path)
+    ) -> ModFile.Status:
+        modfile_strings: list[String] = self.cache.get_strings(modfile.path)
         translation_map: dict[str, String] = {
             string.id: string for string in translation_strings
         }
 
         translation_complete = True
-        for s, plugin_string in enumerate(plugin_strings):
+        for s, plugin_string in enumerate(modfile_strings):
             if ldialog is not None:
                 ldialog.updateProgress(
                     show3=True,
                     text3=self.tr("Scanning strings...")
-                    + f" ({s}/{len(plugin_strings)})",
+                    + f" ({s}/{len(modfile_strings)})",
                     value3=s,
-                    max3=len(plugin_strings),
+                    max3=len(modfile_strings),
                 )
 
             matching: Optional[String] = translation_map.get(plugin_string.id)
@@ -394,15 +397,15 @@ class Scanner(QObject):
                 translation_complete = False
 
         if not translation_complete:
-            self.log.info(f"Translation for {plugin.name!r} is incomplete.")
-            return Plugin.Status.TranslationIncomplete
+            self.log.info(f"Translation for {modfile.name!r} is incomplete.")
+            return ModFile.Status.TranslationIncomplete
         else:
-            self.log.info(f"Translation for {plugin.name!r} is complete.")
-            return Plugin.Status.TranslationInstalled
+            self.log.info(f"Translation for {modfile.name!r} is complete.")
+            return ModFile.Status.TranslationInstalled
 
     def run_string_search(
         self,
-        items_to_search: dict[Mod, list[Plugin]],
+        items_to_search: dict[Mod, list[ModFile]],
         filter: SearchFilter,
         ldialog: Optional[LoadingDialog] = None,
     ) -> dict[str, list[String]]:
@@ -410,27 +413,30 @@ class Scanner(QObject):
         Searches the modlist for strings.
 
         Args:
-            items_to_search (dict[Mod, list[Plugin]]): The items to search.
+            items_to_search (dict[Mod, list[ModFile]]): The items to search.
             filter (SearchFilter): The search filter.
             ldialog (Optional[LoadingDialog], optional):
                 Optional loading dialog. Defaults to None.
 
         Returns:
-            dict[str, list[String]]: A dictionary of plugins and their matching strings.
+            dict[str, list[String]]:
+                A dictionary of mod file names and their matching strings.
         """
 
-        relevant_items: dict[Mod, list[Plugin]] = {
+        relevant_items: dict[Mod, list[ModFile]] = {
             mod: [
-                plugin for plugin in plugins if plugin.status != Plugin.Status.NoStrings
+                modfile
+                for modfile in plugins
+                if modfile.status != ModFile.Status.NoStrings
             ]
             for mod, plugins in items_to_search.items()
-            if any(plugin.status != Plugin.Status.NoStrings for plugin in plugins)
+            if any(plugin.status != ModFile.Status.NoStrings for plugin in plugins)
         }
 
         self.log.info(f"Searching {len(relevant_items)} mod(s) for strings...")
 
         results: dict[str, list[String]] = {}
-        for m, (mod, plugins) in enumerate(relevant_items.items()):
+        for m, (mod, modfiles) in enumerate(relevant_items.items()):
             if ldialog is not None:
                 ldialog.updateProgress(
                     text1=self.tr("Searching modlist for strings...")
@@ -441,7 +447,7 @@ class Scanner(QObject):
 
             self.log.info(f"Searching for strings in {mod.name!r}...")
             mod_result: dict[str, list[String]] = self.__search_mod(
-                mod, plugins, filter, ldialog
+                mod, modfiles, filter, ldialog
             )
             if mod_result:
                 results.update(mod_result)
@@ -453,32 +459,34 @@ class Scanner(QObject):
     def __search_mod(
         self,
         mod: Mod,
-        plugins: list[Plugin],
+        modfiles: list[ModFile],
         filter: SearchFilter,
         ldialog: Optional[LoadingDialog] = None,
     ) -> dict[str, list[String]]:
         result: dict[str, list[String]] = {}
 
-        for p, plugin in enumerate(plugins):
+        for m, modfile in enumerate(modfiles):
             if ldialog is not None:
                 ldialog.updateProgress(
                     show2=True,
-                    text2=f"{mod.name} > {plugin.name} ({p}/{len(plugins)})",
-                    value2=p,
-                    max2=len(plugins),
+                    text2=f"{mod.name} > {modfile.name} ({m}/{len(modfiles)})",
+                    value2=m,
+                    max2=len(modfiles),
                 )
 
-            self.log.info(f"Searching for strings in {mod.name!r} > {plugin.name!r}...")
-            plugin_result: list[String] = self.__search_plugin(plugin, filter)
-            if plugin_result:
-                result[f"{mod.name} > {plugin.name}"] = plugin_result
+            self.log.info(
+                f"Searching for strings in {mod.name!r} > {modfile.name!r}..."
+            )
+            modfile_result: list[String] = self.__search_modfile(modfile, filter)
+            if modfile_result:
+                result[f"{mod.name} > {modfile.name}"] = modfile_result
 
         return result
 
-    def __search_plugin(self, plugin: Plugin, filter: SearchFilter) -> list[String]:
+    def __search_modfile(self, modfile: ModFile, filter: SearchFilter) -> list[String]:
         result: list[String] = []
 
-        strings: list[String] = self.cache.get_plugin_strings(plugin.path)
+        strings: list[String] = self.cache.get_strings(modfile.path)
         for string in strings:
             if matches_filter(filter, string):
                 result.append(string)
@@ -490,7 +498,7 @@ class Scanner(QObject):
     ) -> None:
         """
         Scans for and imports installed translations. Creates database translations for
-        plugins that are entirely covered by installed translations if enabled.
+        mod files that are entirely covered by installed translations if enabled.
 
         Args:
             mods (list[Mod]): The mods to scan.
@@ -526,20 +534,20 @@ class Scanner(QObject):
 
         if self.app_config.auto_create_database_translations:
             self.log.info("Creating database translations...")
-            items: dict[Mod, list[Plugin]] = {
+            items: dict[Mod, list[ModFile]] = {
                 mod: [
-                    plugin
-                    for plugin in mod.plugins
-                    if plugin.status == Plugin.Status.TranslationAvailableInDatabase
+                    modfile
+                    for modfile in mod.modfiles
+                    if modfile.status == ModFile.Status.TranslationAvailableInDatabase
                 ]
                 for mod in mods
                 if any(
-                    plugin.status == Plugin.Status.TranslationAvailableInDatabase
-                    for plugin in mod.plugins
+                    modfile.status == ModFile.Status.TranslationAvailableInDatabase
+                    for modfile in mod.modfiles
                 )
             }
 
-            for m, (mod, plugins) in enumerate(items.items()):
+            for m, (mod, modfiles) in enumerate(items.items()):
                 if ldialog is not None:
                     ldialog.updateProgress(
                         text1=self.tr("Creating database translations...")
@@ -553,7 +561,7 @@ class Scanner(QObject):
                     )
 
                 self.log.info(f"Creating database translation for {mod.name!r}...")
-                self.database.create_translation((mod, plugins))
+                self.database.create_translation((mod, modfiles))
 
     def run_translation_scan(
         self, mods: list[Mod], ldialog: Optional[LoadingDialog] = None
@@ -603,35 +611,35 @@ class Scanner(QObject):
     ) -> Optional[Mod]:
         original_mod: Optional[Mod] = None
 
-        plugin_names: list[str] = list(
+        modfile_names: list[str] = list(
             filter(
-                lambda p: self.database.get_translation_by_plugin_name(p) is None,
+                lambda m: self.database.get_translation_by_modfile_name(m) is None,
                 unique(
                     [
-                        plugin.name
-                        for plugin in mod.plugins
-                        if plugin.status == Plugin.Status.IsTranslated
+                        modfile.name
+                        for modfile in mod.modfiles
+                        if modfile.status == ModFile.Status.IsTranslated
                     ]
                     + [Path(dsd_file).parent.name for dsd_file in mod.dsd_files],
                     key=lambda s: s.lower(),
                 ),
             )
         )
-        for p, plugin_name in enumerate(plugin_names):
+        for m, modfile_name in enumerate(modfile_names):
             if ldialog is not None:
                 ldialog.updateProgress(
                     show2=True,
-                    text2=f"{mod.name} > {plugin_name} ({p}/{len(plugin_names)})",
-                    value2=p,
-                    max2=len(plugin_names),
+                    text2=f"{mod.name} > {modfile_name} ({m}/{len(modfile_names)})",
+                    value2=m,
+                    max2=len(modfile_names),
                 )
 
-            original_mod = self.mod_instance.get_mod_with_plugin(
-                plugin_name,
+            original_mod = self.mod_instance.get_mod_with_modfile(
+                modfile_name,
                 ignore_mods=[mod],
                 ignore_states=[
-                    Plugin.Status.IsTranslated,
-                    Plugin.Status.TranslationInstalled,
+                    ModFile.Status.IsTranslated,
+                    ModFile.Status.TranslationInstalled,
                 ],
                 ignore_case=True,
             )
@@ -640,7 +648,7 @@ class Scanner(QObject):
                 break
 
         else:
-            if plugin_names:
+            if modfile_names:
                 self.log.warning(
                     f"No original mod found for installed translation {mod.name!r}!"
                 )

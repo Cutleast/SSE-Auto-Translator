@@ -12,7 +12,7 @@ from app_context import AppContext
 from core.config.user_config import UserConfig
 from core.database.translation import Translation
 from core.mod_instance.mod import Mod
-from core.mod_instance.plugin import Plugin
+from core.mod_instance.mod_file import ModFile
 from core.translation_provider.mod_id import ModId
 from core.translation_provider.provider import ModDetails, Provider
 from core.translation_provider.source import Source
@@ -205,19 +205,19 @@ class DownloadManager(QObject):
         download.stale = True
 
     def collect_available_downloads(
-        self, items: dict[Mod, list[Plugin]], ldialog: Optional[LoadingDialog] = None
+        self, items: dict[Mod, list[ModFile]], ldialog: Optional[LoadingDialog] = None
     ) -> dict[str, list[TranslationDownload]]:
         """
         Collects downloads for required translations that are available online.
 
         Args:
-            items (dict[Mod, list[Plugin]]): The items to collect downloads for.
+            items (dict[Mod, list[ModFile]]): The items to collect downloads for.
             ldialog (Optional[LoadingDialog], optional):
                 Optional Loading dialog. Defaults to None.
 
         Returns:
             dict[str, list[TranslationDownload]]:
-                Dictionary of mod-plugin combinations and their downloads.
+                Dictionary of mod-file combinations and their downloads.
         """
 
         self.log.info("Getting downloads for required translations...")
@@ -227,19 +227,19 @@ class DownloadManager(QObject):
         if ldialog is not None:
             ldialog.updateProgress(text1=self.tr("Collecting available downloads..."))
 
-        # Filter items for plugins that have an available translation
+        # Filter items for mod files that have an available translation
         items = {
             mod: [
-                plugin
-                for plugin in plugins
-                if plugin.status == Plugin.Status.TranslationAvailableOnline
+                modfile
+                for modfile in modfiles
+                if modfile.status == ModFile.Status.TranslationAvailableOnline
             ]
-            for mod, plugins in items.items()
+            for mod, modfiles in items.items()
         }
-        items = {mod: plugins for mod, plugins in items.items() if plugins}
+        items = {mod: modfiles for mod, modfiles in items.items() if modfiles}
 
         translation_downloads: dict[str, list[TranslationDownload]] = {}
-        for m, (mod, plugins) in enumerate(items.items()):
+        for m, (mod, modfiles) in enumerate(items.items()):
             if ldialog is not None:
                 ldialog.updateProgress(
                     text1=self.tr("Collecting available downloads...")
@@ -249,7 +249,7 @@ class DownloadManager(QObject):
                 )
 
             download_units: dict[str, list[TranslationDownload]] = (
-                self.__collect_downloads_for_mod(mod, plugins, ldialog)
+                self.__collect_downloads_for_mod(mod, modfiles, ldialog)
             )
 
             for name, downloads in download_units.items():
@@ -271,42 +271,42 @@ class DownloadManager(QObject):
         return translation_downloads
 
     def __collect_downloads_for_mod(
-        self, mod: Mod, plugins: list[Plugin], ldialog: Optional[LoadingDialog] = None
+        self, mod: Mod, modfiles: list[ModFile], ldialog: Optional[LoadingDialog] = None
     ) -> dict[str, list[TranslationDownload]]:
         download_units: dict[str, list[TranslationDownload]] = {}
-        for p, plugin in enumerate(plugins):
+        for m, modfile in enumerate(modfiles):
             if ldialog is not None:
                 ldialog.updateProgress(
                     show2=True,
-                    text2=f"{mod.name} > {plugin.name} ({p}/{len(plugins)})",
-                    value2=p,
-                    max2=len(plugins),
+                    text2=f"{mod.name} > {modfile.name} ({m}/{len(modfiles)})",
+                    value2=m,
+                    max2=len(modfiles),
                 )
 
             try:
-                plugin_downloads: list[TranslationDownload] = (
-                    self.__collect_downloads_for_plugin(mod, plugin, ldialog)
+                modfile_downloads: list[TranslationDownload] = (
+                    self.__collect_downloads_for_modfile(mod, modfile, ldialog)
                 )
-                if plugin_downloads:
-                    download_units[f"{mod.name} > {plugin.name}"] = plugin_downloads
+                if modfile_downloads:
+                    download_units[f"{mod.name} > {modfile.name}"] = modfile_downloads
             except Exception as ex:
                 self.log.error(
-                    f"Failed to collect downloads for {mod.name!r} > {plugin.name!r}: "
+                    f"Failed to collect downloads for {mod.name!r} > {modfile.name!r}: "
                     + str(ex),
                     exc_info=ex,
                 )
 
         return download_units
 
-    def __collect_downloads_for_plugin(
-        self, mod: Mod, plugin: Plugin, ldialog: Optional[LoadingDialog] = None
+    def __collect_downloads_for_modfile(
+        self, mod: Mod, modfile: ModFile, ldialog: Optional[LoadingDialog] = None
     ) -> list[TranslationDownload]:
         provider: Provider = AppContext.get_app().provider
         user_config: UserConfig = AppContext.get_app().user_config
 
         available_translations: dict[Source, list[ModId]] = provider.get_translations(
             mod.mod_id,
-            plugin.name,
+            modfile.name,
             user_config.language,
             user_config.author_blacklist,
         )
@@ -346,7 +346,7 @@ class DownloadManager(QObject):
                     name=translation_name,
                     mod_id=download_id,
                     original_mod=mod,
-                    plugin_name=plugin.name,
+                    modfile_name=modfile.name,
                     source=source,
                     available_downloads=[],
                 )
@@ -383,7 +383,7 @@ class DownloadManager(QObject):
 
         Returns:
             dict[str, list[TranslationDownload]]:
-                Dictionary of mod-plugin combinations and their downloads.
+                Dictionary of mod-file combinations and their downloads.
         """
 
         self.log.info(
@@ -426,7 +426,7 @@ class DownloadManager(QObject):
                 TranslationDownload(
                     name=translation.name,
                     mod_id=translation.mod_id,
-                    plugin_name=plugin_name,
+                    modfile_name=plugin_name,
                     source=Source.NexusMods,  # TODO: Reimplement translation updates from CDT
                     available_downloads=[
                         FileDownload(

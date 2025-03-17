@@ -558,15 +558,15 @@ class EditorTab(QWidget):
         self.__strings_widget.set_state_filter(state_filter)
         self.update()
 
-    def go_to_plugin(self, plugin_name: str) -> None:
+    def go_to_modfile(self, modfile_name: str) -> None:
         """
-        Selects and scrolls to a specified plugin item.
+        Selects and scrolls to a specified mod file item.
 
         Args:
-            plugin_name (str): The name of the plugin.
+            modfile_name (str): The name of the mod file.
         """
 
-        self.__strings_widget.go_to_plugin(plugin_name)
+        self.__strings_widget.go_to_modfile(modfile_name)
 
     def collapseAll(self) -> None:
         self.__strings_widget.collapseAll()

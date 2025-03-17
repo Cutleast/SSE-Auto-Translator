@@ -118,7 +118,7 @@ class AppSettings(SettingsPage[AppConfig]):
 
         self.__clear_cache_button = QPushButton(
             self.tr(
-                "Clear Cache (This will reset all plugin states "
+                "Clear Cache (This will reset all mod file states "
                 "and delete cached API requests!)"
             )
         )
@@ -237,7 +237,7 @@ class AppSettings(SettingsPage[AppConfig]):
 
         self.__auto_create_db_translations_checkbox = QCheckBox(
             self.tr(
-                "Automatically create translations for plugins that are entirely "
+                "Automatically create translations for mod files that are entirely "
                 "covered by installed translations"
             )
         )
@@ -251,7 +251,7 @@ class AppSettings(SettingsPage[AppConfig]):
 
         self.__double_click_strings = QCheckBox(
             self.tr(
-                "Show strings when double clicking a mod or plugin "
+                "Show strings when double clicking a mod or mod file "
                 'in the modlist or a translation in the "Translations" tab'
             )
         )
@@ -266,7 +266,7 @@ class AppSettings(SettingsPage[AppConfig]):
         cache.clear_caches()
         self.__clear_cache_button.setText(
             self.tr(
-                "Clear Cache (This will reset all plugin states "
+                "Clear Cache (This will reset all mod file states "
                 "and delete cached API requests!)"
             )
         )

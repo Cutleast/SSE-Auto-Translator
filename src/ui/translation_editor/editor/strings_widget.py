@@ -31,9 +31,9 @@ class StringsWidget(QTreeWidget):
     but they're mutable and their hash may change.
     """
 
-    __plugin_items: dict[str, QTreeWidgetItem]
+    __modfile_items: dict[str, QTreeWidgetItem]
     """
-    Mapping of plugin names to their tree items.
+    Mapping of mod file names to their tree items.
     """
 
     __name_filter: Optional[tuple[str, bool]] = None
@@ -76,26 +76,26 @@ class StringsWidget(QTreeWidget):
 
     def __init_strings(self, strings: dict[str, list[String]]) -> None:
         self.__string_items = ReferenceDict()
-        self.__plugin_items = {}
+        self.__modfile_items = {}
 
         self.clear()
 
-        for plugin_name, plugin_strings in sorted(
+        for modfile_name, modfile_strings in sorted(
             strings.items(), key=lambda p: p[0].lower()
         ):
-            plugin_item = QTreeWidgetItem([plugin_name])
-            self.__plugin_items[plugin_name] = plugin_item
+            modfile_item = QTreeWidgetItem([modfile_name])
+            self.__modfile_items[modfile_name] = modfile_item
 
-            for string in plugin_strings:
+            for string in modfile_strings:
                 if string in self.__string_items:
                     raise ValueError(f"Duplicate string: {string}")
 
                 item = self.__create_string_item(string)
                 self.__string_items[string] = item
-                plugin_item.addChild(item)
+                modfile_item.addChild(item)
 
-            self.addTopLevelItem(plugin_item)
-            plugin_item.setFirstColumnSpanned(True)
+            self.addTopLevelItem(modfile_item)
+            modfile_item.setFirstColumnSpanned(True)
 
         self.expandAll()
         self.resizeColumnToContents(0)
@@ -125,8 +125,8 @@ class StringsWidget(QTreeWidget):
     def __get_items(self, only_visible: bool = False) -> list[QTreeWidgetItem]:
         return [
             string_item
-            for plugin_item in iter_toplevel_items(self)
-            for string_item in iter_children(plugin_item)
+            for modfile_item in iter_toplevel_items(self)
+            for string_item in iter_children(modfile_item)
             if not only_visible or not string_item.isHidden()
         ]
 
@@ -167,12 +167,12 @@ class StringsWidget(QTreeWidget):
                     c, String.Status.get_color(string.status) or Qt.GlobalColor.white
                 )
 
-        for plugin_name, plugin_item in self.__plugin_items.items():
-            plugin_item.setHidden(
-                not are_children_visible(plugin_item)
+        for modfile_name, modfile_item in self.__modfile_items.items():
+            modfile_item.setHidden(
+                not are_children_visible(modfile_item)
                 and (
                     not matches_filter(
-                        plugin_name, name_filter, case_sensitive or False
+                        modfile_name, name_filter, case_sensitive or False
                     )
                     or self.__state_filter is not None
                 )
@@ -183,15 +183,15 @@ class StringsWidget(QTreeWidget):
                 self.currentItem(), QTreeWidget.ScrollHint.PositionAtCenter
             )
 
-    def go_to_plugin(self, plugin_name: str) -> None:
+    def go_to_modfile(self, modfile_name: str) -> None:
         """
-        Selects and scrolls to a specified plugin item.
+        Selects and scrolls to a specified mod file item.
 
         Args:
-            plugin_name (str): The name of the plugin.
+            modfile_name (str): The name of the mod file.
         """
 
-        item: QTreeWidgetItem = self.__plugin_items[plugin_name]
+        item: QTreeWidgetItem = self.__modfile_items[modfile_name]
         item.setSelected(True)
         self.setCurrentItem(item)
         self.scrollToItem(item, QTreeWidget.ScrollHint.PositionAtTop)

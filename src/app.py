@@ -359,7 +359,7 @@ class App(QApplication):
         self.log.info(
             f"Loaded {self.mod_instance.display_name!r} with "
             f"{len(self.mod_instance.mods)} mod(s) and "
-            f"{len(self.mod_instance.plugins)} plugin(s)."
+            f"{len(self.mod_instance.modfiles)} mod file(s)."
         )
 
     def log_basic_info(self) -> None:

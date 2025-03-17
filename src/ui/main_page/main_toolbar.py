@@ -10,7 +10,7 @@ from PySide6.QtGui import QAction, QIcon
 from PySide6.QtWidgets import QCheckBox, QToolBar, QWidgetAction
 
 from app_context import AppContext
-from core.mod_instance.plugin import Plugin
+from core.mod_instance.mod_file import ModFile
 from ui.widgets.menu import Menu
 
 
@@ -22,7 +22,7 @@ class MainToolBar(QToolBar):
     __parent: "MainPageWidget"
 
     __filter_menu: Menu
-    __filter_items: dict[Plugin.Status, QCheckBox]
+    __filter_items: dict[ModFile.Status, QCheckBox]
 
     modlist_scan_action: QAction
     online_scan_action: QAction
@@ -48,7 +48,7 @@ class MainToolBar(QToolBar):
         self.__filter_menu = Menu()
 
         self.__filter_items = {}
-        for status in Plugin.Status:
+        for status in ModFile.Status:
             filter_box = QCheckBox(
                 status.get_localized_filter_name(), self.__filter_menu
             )

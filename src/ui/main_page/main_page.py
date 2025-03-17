@@ -28,8 +28,8 @@ from core.database.string import String
 from core.downloader.download_manager import DownloadManager
 from core.downloader.translation_download import TranslationDownload
 from core.mod_instance.mod import Mod
+from core.mod_instance.mod_file import ModFile
 from core.mod_instance.mod_instance import ModInstance
-from core.mod_instance.plugin import Plugin
 from core.scanner.scanner import Scanner
 from core.utilities.container_utils import join_dicts
 from core.utilities.path import Path
@@ -68,7 +68,7 @@ class MainPageWidget(QWidget):
 
     __vlayout: QVBoxLayout
     __title_label: QLabel
-    __plugins_num_label: LCDNumber
+    __modfiles_num_label: LCDNumber
     __tool_bar: MainToolBar
     __search_bar: SearchBar
     __bar_chart: StackedBar
@@ -109,13 +109,13 @@ class MainPageWidget(QWidget):
 
         hlayout.addStretch()
 
-        num_label = QLabel(self.tr("Plugins:"))
+        num_label = QLabel(self.tr("Translatable files:"))
         num_label.setObjectName("relevant_label")
         hlayout.addWidget(num_label)
 
-        self.__plugins_num_label = LCDNumber()
-        self.__plugins_num_label.setDigitCount(4)
-        hlayout.addWidget(self.__plugins_num_label)
+        self.__modfiles_num_label = LCDNumber()
+        self.__modfiles_num_label.setDigitCount(4)
+        hlayout.addWidget(self.__modfiles_num_label)
 
         hlayout = QHBoxLayout()
         self.__vlayout.addLayout(hlayout)
@@ -148,8 +148,8 @@ class MainPageWidget(QWidget):
         hlayout.addWidget(nexus_mods_button)
 
         self.__bar_chart = StackedBar(
-            [0 for _ in Plugin.Status],
-            colors=[Plugin.Status.get_color(s) for s in Plugin.Status],
+            [0 for _ in ModFile.Status],
+            colors=[ModFile.Status.get_color(s) for s in ModFile.Status],
         )
         self.__bar_chart.setFixedHeight(3)
         self.__vlayout.addWidget(self.__bar_chart)
@@ -173,19 +173,19 @@ class MainPageWidget(QWidget):
 
     def __update(self) -> None:
         self.__title_label.setText(self.mod_instance.display_name)
-        self.__plugins_num_label.display(len(self.mod_instance.plugins))
+        self.__modfiles_num_label.display(len(self.mod_instance.modfiles))
         self.__update_header()
 
     def __update_header(self) -> None:
-        plugin_states: dict[Plugin.Status, int] = (
-            self.mod_instance.get_plugin_state_summary()
+        modfile_states: dict[ModFile.Status, int] = (
+            self.mod_instance.get_modfile_state_summary()
         )
-        self.__bar_chart.setValues(list(plugin_states.values()))
+        self.__bar_chart.setValues(list(modfile_states.values()))
 
         num_tooltip = ""
 
-        for status, count in plugin_states.items():
-            color: Optional[QColor] = Plugin.Status.get_color(status)
+        for status, count in modfile_states.items():
+            color: Optional[QColor] = ModFile.Status.get_color(status)
 
             if color is None:
                 num_tooltip += f"<tr><td>{status.get_localized_name()}:\
@@ -194,7 +194,7 @@ class MainPageWidget(QWidget):
                 num_tooltip += f"<tr><td><font color='{color.name()}'>{status.get_localized_name()}:\
                     </font></td><td align=right><font color='{color.name()}'>{count}</font></td></tr>"
 
-        self.__plugins_num_label.setToolTip(num_tooltip)
+        self.__modfiles_num_label.setToolTip(num_tooltip)
         self.__bar_chart.setToolTip(num_tooltip)
 
     def open_ignore_list(self) -> None:
@@ -208,25 +208,25 @@ class MainPageWidget(QWidget):
         # TODO: Make this more elegant
         self.mod_instance.update_signal.emit()
 
-    def show_scan_result(self, plugins: Optional[list[Plugin]] = None) -> None:
+    def show_scan_result(self, modfiles: Optional[list[ModFile]] = None) -> None:
         """
         Displays scan result popup.
 
         Args:
-            plugins (Optional[list[Plugin]]):
-                The plugins to display the result for.
-                Defaults to the currently checked plugins.
+            modfiles (Optional[list[ModFile]]):
+                The mod files to display the result for.
+                Defaults to the currently checked mod files.
         """
 
-        if plugins is None:
-            plugins = [
-                plugin
-                for plugins in self.__modinstance_widget.get_checked_items().values()
-                for plugin in plugins
+        if modfiles is None:
+            modfiles = [
+                modfile
+                for _modfiles in self.__modinstance_widget.get_checked_items().values()
+                for modfile in _modfiles
             ]
 
         ResultDialog(
-            self.mod_instance.get_plugin_state_summary(plugins),
+            self.mod_instance.get_modfile_state_summary(modfiles),
             QApplication.activeModalWidget(),
         ).exec()
 
@@ -239,23 +239,23 @@ class MainPageWidget(QWidget):
 
     def basic_scan(self) -> None:
         """
-        Runs a basic scan over the currently checked plugins.
+        Runs a basic scan over the currently checked mod files.
         """
 
         scanner: Scanner = AppContext.get_app().scanner
 
-        checked_items: dict[Mod, list[Plugin]] = (
+        checked_items: dict[Mod, list[ModFile]] = (
             self.__modinstance_widget.get_checked_items()
         )
         checked_mods: list[Mod] = list(checked_items.keys())
 
-        scan_result: dict[Plugin, Plugin.Status] = join_dicts(
+        scan_result: dict[ModFile, ModFile.Status] = join_dicts(
             *LoadingDialog.run_callable(
                 QApplication.activeModalWidget(),
                 lambda ldialog: scanner.run_basic_scan(checked_items, ldialog),
             ).values()
         )
-        self.mod_instance.set_plugin_states(scan_result)
+        self.mod_instance.set_modfile_states(scan_result)
 
         app_config: AppConfig = AppContext.get_app().app_config
         if app_config.auto_import_translations:
@@ -271,29 +271,29 @@ class MainPageWidget(QWidget):
 
     def online_scan(self) -> None:
         """
-        Runs an online scan over the currently checked plugins.
+        Runs an online scan over the currently checked mod files.
         """
 
         scanner: Scanner = AppContext.get_app().scanner
 
-        checked_items: dict[Mod, list[Plugin]] = (
+        checked_items: dict[Mod, list[ModFile]] = (
             self.__modinstance_widget.get_checked_items()
         )
 
-        scan_result: dict[Plugin, Plugin.Status] = join_dicts(
+        scan_result: dict[ModFile, ModFile.Status] = join_dicts(
             *LoadingDialog.run_callable(
                 QApplication.activeModalWidget(),
                 lambda ldialog: scanner.run_online_scan(checked_items, ldialog),
             ).values()
         )
-        self.mod_instance.set_plugin_states(scan_result)
+        self.mod_instance.set_modfile_states(scan_result)
 
         self.show_scan_result(list(scan_result.keys()))
         self.__tool_bar.highlight_action(self.__tool_bar.download_action)
 
     def download_and_install_translations(self) -> None:
         """
-        Collects available translations for the currently checked plugins
+        Collects available translations for the currently checked mod files
         and opens a DownloadListDialog.
         """
 
@@ -323,9 +323,7 @@ class MainPageWidget(QWidget):
 
         message_box = QMessageBox()
         message_box.setWindowTitle(self.tr("Success!"))
-        message_box.setText(
-            self.tr("Created output mod for DSD at: ") + str(output_path)
-        )
+        message_box.setText(self.tr("Created output mod at: ") + str(output_path))
         message_box.setStandardButtons(
             QMessageBox.StandardButton.Ok
             | QMessageBox.StandardButton.Help
@@ -354,10 +352,10 @@ class MainPageWidget(QWidget):
         Runs a deep scan over the installed translations.
         """
 
-        result: dict[Plugin, Plugin.Status] = LoadingDialog.run_callable(
+        result: dict[ModFile, ModFile.Status] = LoadingDialog.run_callable(
             QApplication.activeModalWidget(), AppContext.get_app().scanner.run_deep_scan
         )
-        self.mod_instance.set_plugin_states(result)
+        self.mod_instance.set_modfile_states(result)
         self.show_scan_result(list(result.keys()))
 
     def run_string_search(self) -> None:
@@ -398,7 +396,7 @@ class MainPageWidget(QWidget):
                     yesno=False,
                 ).show()
 
-    def set_state_filter(self, state_filter: list[Plugin.Status]) -> None:
+    def set_state_filter(self, state_filter: list[ModFile.Status]) -> None:
         """
         Sets the state filter.
 

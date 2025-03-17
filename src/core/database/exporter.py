@@ -14,8 +14,8 @@ from app_context import AppContext
 from core.config.user_config import UserConfig
 from core.database.string import String
 from core.mod_instance.mod import Mod
+from core.mod_instance.mod_file import ModFile
 from core.mod_instance.mod_instance import ModInstance
-from core.mod_instance.plugin import Plugin
 from core.plugin_interface import plugin as esp
 from core.utilities.path import Path
 from ui.widgets.loading_dialog import LoadingDialog
@@ -192,9 +192,9 @@ class Exporter(QObject):
         )
 
         for plugin_name in plugins:
-            plugin: Optional[Plugin] = modinstance.get_plugin(
+            plugin: Optional[ModFile] = modinstance.get_modfile(
                 plugin_name,
-                ignore_states=[Plugin.Status.IsTranslated],
+                ignore_states=[ModFile.Status.IsTranslated],
                 ignore_case=True,
             )
 
@@ -262,7 +262,7 @@ class Exporter(QObject):
             if translation.original_mod_id:
                 original_mod = modinstance.get_mod(translation.original_mod_id)
             else:
-                original_mod = modinstance.get_mod_with_plugin(
+                original_mod = modinstance.get_mod_with_modfile(
                     list(translation.strings.keys())[0], ignore_case=True
                 )
 

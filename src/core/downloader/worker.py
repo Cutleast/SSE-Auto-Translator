@@ -145,11 +145,11 @@ class Worker(QThread):
             original_mod: Optional[Mod] = download.original_mod
 
             if original_mod is None and strings:
-                plugin_name = list(strings.keys())[0].lower()
+                modfile_name = list(strings.keys())[0].lower()
 
                 for mod in mod_instance.mods:
                     if any(
-                        plugin_name == plugin.name.lower() for plugin in mod.plugins
+                        modfile_name == plugin.name.lower() for plugin in mod.modfiles
                     ):
                         original_mod = mod
 

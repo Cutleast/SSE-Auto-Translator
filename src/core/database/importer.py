@@ -21,8 +21,8 @@ from core.config.user_config import UserConfig
 from core.database.string import String
 from core.database.translation import Translation
 from core.mod_instance.mod import Mod
+from core.mod_instance.mod_file import ModFile
 from core.mod_instance.mod_instance import ModInstance
-from core.mod_instance.plugin import Plugin
 from core.plugin_interface import plugin as esp
 from core.translation_provider.source import Source
 from core.utilities.constants import DSD_FILE_PATTERN
@@ -51,7 +51,7 @@ class Importer(QObject):
     def import_mod_as_translation(self, mod: Mod, original_mod: Mod) -> None:
         """
         Imports a mod as a translation by importing all strings from
-        its plugins and DSD files and creating a new translation in the database.
+        its mod files and DSD files and creating a new translation in the database.
 
         Args:
             mod (Mod): The mod to import
@@ -64,29 +64,29 @@ class Importer(QObject):
 
         strings: dict[str, list[String]] = {}
 
-        # Import strings from plugins
-        ignore_status: list[Plugin.Status] = [
-            Plugin.Status.NoStrings,
-            Plugin.Status.IsTranslated,
-            Plugin.Status.TranslationInstalled,
-            Plugin.Status.TranslationIncomplete,
+        # Import strings from mod files
+        ignore_status: list[ModFile.Status] = [
+            ModFile.Status.NoStrings,
+            ModFile.Status.IsTranslated,
+            ModFile.Status.TranslationInstalled,
+            ModFile.Status.TranslationIncomplete,
         ]
 
-        plugins: dict[Plugin, Plugin] = {
-            plugin: original_plugin
-            for plugin in mod.plugins
-            for original_plugin in original_mod.plugins
-            if plugin.name.lower() == original_plugin.name.lower()
-            and original_plugin.status not in ignore_status
+        modfiles: dict[ModFile, ModFile] = {
+            modfile: original_modfile
+            for modfile in mod.modfiles
+            for original_modfile in original_mod.modfiles
+            if modfile.name.lower() == original_modfile.name.lower()
+            and original_modfile.status not in ignore_status
         }
         """
-        Map for plugins from translated mod and original mod.
+        Map for mod files from translated mod and original mod.
         """
 
-        self.log.debug(f"Importing strings from {len(plugins)} plugin(s)...")
-        for plugin, original_plugin in plugins.items():
-            strings[plugin.name.lower()] = self.map_translation_strings(
-                plugin.path, original_plugin.path
+        self.log.debug(f"Importing strings from {len(modfiles)} mod file(s)...")
+        for modfile, original_modfile in modfiles.items():
+            strings[modfile.name.lower()] = self.map_translation_strings(
+                modfile.path, original_modfile.path
             )
 
         # Import strings from DSD files
@@ -263,66 +263,65 @@ class Importer(QObject):
         mod_instance: ModInstance = AppContext.get_app().mod_instance
         archive: Archive = Archive.load_archive(archive_path)
 
-        plugin_files: list[str] = []
-        plugin_files += archive.glob("**/*.esl")
-        plugin_files += archive.glob("**/*.esm")
-        plugin_files += archive.glob("**/*.esp")
+        modfiles: list[str] = []
+        modfiles += archive.glob("**/*.esl")
+        modfiles += archive.glob("**/*.esm")
+        modfiles += archive.glob("**/*.esp")
 
         dsd_files: list[str] = archive.glob(DSD_FILE_PATTERN)
 
         self.log.debug(
-            f"Extracting {len(plugin_files + dsd_files)} file(s) to '{tmp_dir}'..."
+            f"Extracting {len(modfiles + dsd_files)} file(s) to '{tmp_dir}'..."
         )
-        archive.extract_files(plugin_files + dsd_files, tmp_dir)
+        archive.extract_files(modfiles + dsd_files, tmp_dir)
 
         self.log.debug("Processing extracted files...")
 
-        plugin_name: str
-        for p, plugin_file in enumerate(plugin_files):
-            extracted_plugin: Path = tmp_dir / plugin_file
-            plugin_name = extracted_plugin.name
+        modfile_name: str
+        for m, modfile in enumerate(modfiles):
+            extracted_plugin: Path = tmp_dir / modfile
+            modfile_name = extracted_plugin.name
 
             if ldialog:
                 ldialog.updateProgress(
-                    text1=self.tr("Processing plugins...")
-                    + f" ({p}/{len(plugin_files)})",
-                    value1=p,
-                    max1=len(plugin_files),
+                    text1=self.tr("Processing plugins...") + f" ({m}/{len(modfiles)})",
+                    value1=m,
+                    max1=len(modfiles),
                     show2=True,
-                    text2=plugin_name,
+                    text2=modfile_name,
                 )
 
             # Find original plugin in modlist
-            plugin: Optional[Plugin] = mod_instance.get_plugin(
-                plugin_name,
+            original_modfile: Optional[ModFile] = mod_instance.get_modfile(
+                modfile_name,
                 ignore_states=[
-                    Plugin.Status.IsTranslated,
-                    Plugin.Status.TranslationInstalled,
+                    ModFile.Status.IsTranslated,
+                    ModFile.Status.TranslationInstalled,
                 ],
                 ignore_case=True,
             )
 
-            if plugin is None:
+            if original_modfile is None:
                 self.log.warning(
-                    f"Failed to map strings for plugin {plugin_name!r}: "
-                    "Original plugin not found in modlist."
+                    f"Failed to map strings for mod file {modfile_name!r}: "
+                    "Original mod file not found in modlist."
                 )
                 continue
 
-            plugin_strings: list[String] = self.map_translation_strings(
-                extracted_plugin, plugin.path
+            modfile_strings: list[String] = self.map_translation_strings(
+                extracted_plugin, original_modfile.path
             )
-            if plugin_strings:
-                for string in plugin_strings:
+            if modfile_strings:
+                for string in modfile_strings:
                     string.status = String.Status.TranslationComplete
 
-                translation_strings.setdefault(plugin_name.lower(), []).extend(
-                    plugin_strings
+                translation_strings.setdefault(modfile_name.lower(), []).extend(
+                    modfile_strings
                 )
 
         for d, dsd_file in enumerate(dsd_files):
             extracted_dsd_file: Path = archive_path.parent / dsd_file
-            plugin_name = extracted_dsd_file.parent.name
+            modfile_name = extracted_dsd_file.parent.name
 
             if ldialog:
                 ldialog.updateProgress(
@@ -331,16 +330,16 @@ class Importer(QObject):
                     value1=d,
                     max1=len(dsd_files),
                     show2=True,
-                    text2=plugin_name,
+                    text2=modfile_name,
                 )
 
             strings: list[String] = self.extract_dsd_strings(extracted_dsd_file)
 
             if len(strings):
-                translation_strings.setdefault(plugin_name.lower(), []).extend(strings)
+                translation_strings.setdefault(modfile_name.lower(), []).extend(strings)
 
-        for plugin_name, plugin_strings in translation_strings.items():
-            translation_strings[plugin_name] = unique(plugin_strings)
+        for modfile_name, modfile_strings in translation_strings.items():
+            translation_strings[modfile_name] = unique(modfile_strings)
 
         self.log.info(
             f"Extracted {sum(len(strings) for strings in translation_strings.values())}"
@@ -395,7 +394,7 @@ class Importer(QObject):
 
         translation_plugin = esp.Plugin(translation_plugin_path)
         translation_strings: list[String] = translation_plugin.extract_strings()
-        original_strings: list[String] = cache.get_plugin_strings(original_plugin_path)
+        original_strings: list[String] = cache.get_strings(original_plugin_path)
 
         if not translation_strings and not original_strings:
             return []

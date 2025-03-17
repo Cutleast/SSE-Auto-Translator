@@ -15,7 +15,7 @@ from core.translation_provider.mod_id import ModId
 from core.utilities.constants import DSD_FILE_PATTERN
 from core.utilities.path import Path
 
-from .plugin import Plugin
+from .mod_file import ModFile
 
 
 @dataclass
@@ -30,8 +30,8 @@ class Mod:
     path: Path
     """Path to the mod's folder."""
 
-    plugins: list[Plugin]
-    """List of plugins in mod."""
+    modfiles: list[ModFile]
+    """List of translatable files in mod."""
 
     mod_id: ModId
     """Identifier of this mod at its source."""
