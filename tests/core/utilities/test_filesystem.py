@@ -2,9 +2,12 @@
 Copyright (c) Cutleast
 """
 
-from typing import TypeVar
+from typing import Optional, TypeVar
 
-from core.utilities.filesystem import glob
+import pytest
+
+from core.utilities.filesystem import glob, parse_path
+from core.utilities.path import Path
 
 T = TypeVar("T")
 
@@ -76,3 +79,40 @@ class TestFilesystem:
 
         # then
         assert TestFilesystem.compare_lists(real_output, expected_output)
+
+    TEST_PARSE_PATH_DATA: list[tuple[Path, Optional[Path], Optional[Path]]] = [
+        (
+            Path("C:\\Modding\\Test.bsa\\Test.txt"),
+            Path("C:\\Modding\\Test.bsa"),
+            Path("Test.txt"),
+        ),
+        (
+            Path("C:\\Modding\\Test\\Test.txt"),
+            None,
+            Path("C:\\Modding\\Test\\Test.txt"),
+        ),
+        (Path("Test.bsa\\Test.txt"), Path("Test.bsa"), Path("Test.txt")),
+        (Path("Test.bsa"), Path("Test.bsa"), None),
+    ]
+
+    @pytest.mark.parametrize(
+        "input_path, expected_bsa_path, expected_file_path", TEST_PARSE_PATH_DATA
+    )
+    def test_parse_path(
+        self,
+        input_path: Path,
+        expected_bsa_path: Optional[Path],
+        expected_file_path: Optional[Path],
+    ) -> None:
+        """
+        Tests `core.utilities.filesystem.parse_path()`.
+        """
+
+        # when
+        real_bsa_path: Optional[Path]
+        real_file_path: Optional[Path]
+        real_bsa_path, real_file_path = parse_path(input_path)
+
+        # then
+        assert real_bsa_path == expected_bsa_path
+        assert real_file_path == expected_file_path
