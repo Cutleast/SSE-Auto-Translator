@@ -64,7 +64,7 @@ class TranslatorSettings(qtw.QWidget):
         # Reset Confirmation Dialogs
         reset_confirmations_button = qtw.QPushButton(self.loc.main.reset_confirmations)
         reset_confirmations_button.setDisabled(
-            self.app.translator_config.get("show_confirmation_dialogs")
+            self.app.translator_config.get("show_confirmation_dialogs", True)
         )
 
         def reset_confirmations():

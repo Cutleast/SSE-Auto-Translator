@@ -265,7 +265,9 @@ class MainApp(qtw.QApplication):
 
         if self.translator_conf_path.is_file():
             with open(self.translator_conf_path, encoding="utf8") as file:
-                self.translator_config = json.load(file)
+                self.translator_config = self.default_translator_config | json.load(
+                    file
+                )
         else:
             os.makedirs(self.translator_conf_path.parent, exist_ok=True)
             with open(self.translator_conf_path, "w", encoding="utf8") as file:
