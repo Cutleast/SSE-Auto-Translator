@@ -96,6 +96,7 @@ SUPPORTED_LANGS: list[tuple[str]] = [
     ("french", "fr_FR"),
     ("german", "de_DE"),
     ("italian", "it_IT"),
+    ("indonesian", "id_ID"),
     ("japanese", "jp_JP"),
     ("korean", "ko_KR"),
     ("polish", "pl_PL"),
