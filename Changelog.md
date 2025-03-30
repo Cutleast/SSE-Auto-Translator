@@ -1,3 +1,11 @@
+# v2.1.8
+
+- Apply default values to translator config when loading user config
+- Improve error handling when requesting mod details
+- Catch exceptions when processing meta.ini files
+- Add support for Indonesian
+- Strip quotation marks from INI file values
+
 # v2.1.7
 
 - Fix online scan for Chinese translations because their named "Mandarin" on Nexus Mods now

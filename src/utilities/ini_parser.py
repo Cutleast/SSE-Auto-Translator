@@ -56,7 +56,7 @@ class IniParser:
                 cur_section[line[:-1]] = None
             elif "=" in line:
                 key, value = line.split("=", 1)
-                cur_section[key] = value.strip("\n")
+                cur_section[key] = value.strip('"\n')
 
         self.data = data
         return self.data

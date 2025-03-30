@@ -181,6 +181,13 @@ class NexusModsApi:
 
         self.log.info(f"Requesting mod info for {mod_id!r}...")
         res = self.request(f"games/{game_id}/mods/{mod_id}.json")
+
+        if res.status_code != 200:
+            self.log.error(f"Failed to get mod info! Status code: {res.status_code}")
+            raise utils.ApiException(
+                f"Failed to get mod info! Status code: {res.status_code}"
+            )
+
         data: dict = json.loads(res.content.decode("utf8"))
         self.log.info("Request successful.")
 

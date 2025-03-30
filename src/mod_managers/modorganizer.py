@@ -108,34 +108,41 @@ class ModOrganizer(ModManager):
             for active_mod in active_mods:
                 mod_meta_path = mods_dir / active_mod / "meta.ini"
                 if mod_meta_path.is_file():
-                    parser = utils.IniParser(mod_meta_path)
-                    mod_meta_data = parser.load_file()
+                    try:
+                        parser = utils.IniParser(mod_meta_path)
+                        mod_meta_data = parser.load_file()
 
-                    general = mod_meta_data.get("General")
-                    if general is not None:
-                        mod_id = int(general.get("modid") or 0)
-                        version = general.get("version", None)
+                        general = mod_meta_data.get("General")
+                        if general is not None:
+                            mod_id = int(general.get("modid") or 0)
+                            version = general.get("version", None)
 
-                        if version is None:
+                            if version is None:
+                                version = ""
+
+                            while version.endswith(".0") and version.count(".") > 1:
+                                version = version.removesuffix(".0")
+
+                            if "installedFiles" in mod_meta_data:
+                                file_id = int(
+                                    mod_meta_data["installedFiles"].get("1\\fileid") or 0
+                                )
+                            else:
+                                file_id = 0
+                        else:
+                            mod_id = 0
+                            file_id = 0
                             version = ""
 
-                        while version.endswith(".0") and version.count(".") > 1:
-                            version = version.removesuffix(".0")
-
-                        if "installedFiles" in mod_meta_data:
-                            file_id = int(
-                                mod_meta_data["installedFiles"].get("1\\fileid") or 0
+                            self.log.warning(
+                                f"Incomplete meta.ini in {str(mod_meta_path.parent)!r}!"
                             )
-                        else:
-                            file_id = 0
-                    else:
+                    except Exception as ex:
                         mod_id = 0
                         file_id = 0
                         version = ""
 
-                        self.log.warning(
-                            f"Incomplete meta.ini in {str(mod_meta_path.parent)!r}!"
-                        )
+                        self.log.error(f"Failed to process meta.ini at {mod_meta_path!r}: {ex}", exc_info=ex)
                 else:
                     mod_id = 0
                     file_id = 0
