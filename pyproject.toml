@@ -110,6 +110,7 @@ log_cli_format = "[%(asctime)s.%(msecs)03d][%(levelname)s][%(name)s.%(funcName)s
 include = ["src", "tests"]
 typeCheckingMode = "standard"
 exclude = ["**/__pycache__"]
+stubPath = "./stubs"
 
 # Check here for a full list of options: https://github.com/microsoft/pyright/blob/main/docs/configuration.md#diagnostic-settings-defaults
 deprecateTypingAliases = false
