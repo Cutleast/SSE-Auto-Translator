@@ -4,9 +4,11 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+from __future__ import annotations
+
 from dataclasses import field
 from enum import auto
-from typing import Any, Iterable, Optional, TypeVar, override
+from typing import Any, Iterable, Optional, override
 
 from pydantic.dataclasses import dataclass
 from PySide6.QtGui import QColor
@@ -14,8 +16,6 @@ from PySide6.QtWidgets import QApplication
 
 from core.utilities.base_enum import BaseEnum
 from core.utilities.container_utils import unique
-
-T = TypeVar("T")
 
 
 @dataclass
@@ -87,7 +87,7 @@ class String:
         """
 
         @classmethod
-        def get_color(cls, status: "String.Status") -> Optional[QColor]:
+        def get_color(cls, status: String.Status) -> Optional[QColor]:
             COLORS = {
                 cls.NoTranslationRequired: QColor.fromString("#e9e042"),
                 cls.TranslationComplete: QColor.fromString("#51c6d9"),
@@ -98,7 +98,7 @@ class String:
             return COLORS.get(status)
 
         def get_localized_name(self) -> str:
-            LOC_NAMES: dict["String.Status", str] = {
+            LOC_NAMES: dict[String.Status, str] = {
                 String.Status.NoneStatus: QApplication.translate(
                     "string", "No status (no color)"
                 ),
@@ -119,7 +119,7 @@ class String:
             return LOC_NAMES[self]
 
         def get_localized_filter_name(self) -> str:
-            LOC_NAMES: dict["String.Status", str] = {
+            LOC_NAMES: dict[String.Status, str] = {
                 String.Status.NoneStatus: QApplication.translate(
                     "string", "Show stateless strings"
                 ),
@@ -145,7 +145,7 @@ class String:
     """
 
     @classmethod
-    def from_string_data(cls, string_data: dict[str, Any]) -> "String":
+    def from_string_data(cls, string_data: dict[str, Any]) -> String:
         editor_id: Optional[str] = string_data.get("editor_id")
         form_id: Optional[str] = string_data.get("form_id")
         index: Optional[int | str] = string_data.get("index")
@@ -239,7 +239,7 @@ class String:
         )
 
     @staticmethod
-    def unique(strings: Iterable["String"]) -> list["String"]:
+    def unique(strings: Iterable[String]) -> list[String]:
         """
         Removes duplicates from a list of strings. Unique strings are
         identified by `String.id`.
