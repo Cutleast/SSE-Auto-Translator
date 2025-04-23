@@ -5,12 +5,12 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import hashlib
-import logging
 import os
 import pickle
 import shutil
 import time
 from datetime import datetime
+from functools import lru_cache
 from typing import Optional, override
 
 import requests
@@ -25,7 +25,12 @@ from .base_cache import BaseCache
 
 class Cache(BaseCache):
     """
-    Class for managing cache data in SSE-AT/data/cache.
+    Class for managing cache data in SSE-AT/data/cache and cache utilities.
+    """
+
+    path: Path
+    """
+    Path to the cache folder.
     """
 
     log = logging.getLogger("Cache")
@@ -176,6 +181,7 @@ class Cache(BaseCache):
 
         self.log.debug(f"Saved states for {len(self.__states_cache)} mod file(s).")
 
+    @lru_cache
     def get_from_web_cache(
         self, url: str, max_age: int = 43200
     ) -> Optional[requests.Response]:

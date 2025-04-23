@@ -6,14 +6,16 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 from dataclasses import dataclass
 from fnmatch import fnmatch
-from typing import Optional, override
+from functools import cache
+from typing import override
 
 from sse_bsa import BSAArchive
 
+from core.cache.cache import Cache
 from core.mod_file.mod_file import ModFile
 from core.translation_provider.mod_id import ModId
 from core.utilities.constants import DSD_FILE_PATTERN
-from core.utilities.filesystem import glob, parse_path
+from core.utilities.filesystem import get_file_identifier, glob, parse_path
 from core.utilities.path import Path
 
 
@@ -38,9 +40,8 @@ class Mod:
     version: str
     """Local version of the mod."""
 
-    __files: Optional[list[Path]] = None  # type: ignore
-
     @property
+    @cache
     def files_names(self) -> list[str]:
         """
         List of files, including from BSAs but removing the BSA parts, relative to this
@@ -52,28 +53,26 @@ class Mod:
         ]
 
     @property
+    @cache
     def files(self) -> list[Path]:
         """
         List of all files in the mod, treating BSA archives as folders, relative to this
         mod's path.
         """
 
-        if self.__files is None:
-            files: list[Path] = [
-                f.relative_to(self.path)
-                for f in self.path.rglob("*")
-                if not f.suffix.lower() == ".bsa" and f.is_file()
-            ]
+        files: list[Path] = [
+            f.relative_to(self.path)
+            for f in self.path.rglob("*")
+            if not f.suffix.lower() == ".bsa" and f.is_file()
+        ]
 
-            for bsa_path in self.path.glob("*.bsa"):
-                archive = BSAArchive(bsa_path)
-                files += [bsa_path.relative_to(self.path) / f for f in archive.files]
+        for bsa_path in self.path.glob("*.bsa"):
+            files += Mod.__get_files_from_bsa(bsa_path, self.path)
 
-            self.__files = files
-
-        return self.__files
+        return files
 
     @property
+    @cache
     def dsd_files(self) -> list[str]:
         """
         List of all DSD files in the mod, excluding the ones from generated Output mod.
@@ -100,6 +99,15 @@ class Mod:
         """
 
         return glob(pattern, [str(f) for f in self.files], case_sensitive)
+
+    @staticmethod
+    @Cache.persistent_cache(
+        cache_subfolder=Path("mod_cache"),
+        id_generator=lambda bsa_path, mod_path: get_file_identifier(bsa_path),
+    )
+    def __get_files_from_bsa(bsa_path: Path, mod_path: Path) -> list[Path]:
+        archive = BSAArchive(bsa_path)
+        return [bsa_path.relative_to(mod_path) / f for f in archive.files]
 
     @override
     def __hash__(self) -> int:

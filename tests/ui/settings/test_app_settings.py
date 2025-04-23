@@ -139,7 +139,7 @@ class TestAppSettings(UiTest, AppTest):
         assert log_level_box.currentText() == app_config.log_level.name.capitalize()
         assert app_lang_box.currentText() == app_config.language
         assert accent_color_entry.text() == app_config.accent_color
-        assert clear_cache_button.isEnabled() == app_context.cache_path.is_dir()
+        assert clear_cache_button.isEnabled() == app_context.cache.path.is_dir()
 
         assert output_path_entry.text() == str(app_config.output_path or "")
         assert temp_path_entry.text() == str(app_config.temp_path or "")
