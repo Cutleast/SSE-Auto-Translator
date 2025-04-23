@@ -140,17 +140,22 @@ class NexusModsApi(ProviderApi):
         use_cache: bool = True,
         handle_status_code: bool = True,
     ) -> req.Response:
+        cached: bool = (
+            self.cache.get_from_web_cache(url) is not None if use_cache else False
+        )
         res: req.Response = super()._request(
             url, headers, use_cache, handle_status_code
         )
 
-        rem_hreq: str = res.headers.get("X-RL-Hourly-Remaining", "0")
-        rem_dreq: str = res.headers.get("X-RL-Daily-Remaining", "0")
+        # Only update remaining requests if the request was not cached
+        if not cached:
+            rem_hreq: str = res.headers.get("X-RL-Hourly-Remaining", "0")
+            rem_dreq: str = res.headers.get("X-RL-Daily-Remaining", "0")
 
-        if rem_hreq.isnumeric():
-            self.__rem_hreq = int(rem_hreq)
-        if rem_dreq.isnumeric():
-            self.__rem_dreq = int(rem_dreq)
+            if rem_hreq.isnumeric():
+                self.__rem_hreq = int(rem_hreq)
+            if rem_dreq.isnumeric():
+                self.__rem_dreq = int(rem_dreq)
 
         return res
 
