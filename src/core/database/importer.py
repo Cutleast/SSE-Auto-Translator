@@ -43,11 +43,13 @@ class Importer(QObject):
     database: "TranslationDatabase"
     user_config: UserConfig
 
-    def __init__(self, database: "TranslationDatabase") -> None:
+    def __init__(
+        self, database: "TranslationDatabase", user_config: UserConfig
+    ) -> None:
         super().__init__()
 
         self.database = database
-        self.user_config = AppContext.get_app().user_config
+        self.user_config = user_config
 
     def import_mod_as_translation(self, mod: Mod, original_mod: Mod) -> None:
         """

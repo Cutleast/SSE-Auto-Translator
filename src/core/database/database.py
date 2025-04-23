@@ -13,6 +13,7 @@ from PySide6.QtCore import QObject, Signal
 
 from app_context import AppContext
 from core.cache.cache import Cache
+from core.config.user_config import UserConfig
 from core.database.exporter import Exporter
 from core.database.string import String
 from core.database.utilities import Utilities
@@ -63,14 +64,20 @@ class TranslationDatabase(QObject):
 
     log: logging.Logger = logging.getLogger("TranslationDatabase")
 
-    def __init__(self, userdb_path: Path, appdb_path: Path, language: str) -> None:
+    def __init__(
+        self,
+        userdb_path: Path,
+        appdb_path: Path,
+        language: str,
+        user_config: UserConfig,
+    ) -> None:
         super().__init__()
 
         self.userdb_path = userdb_path
         self.appdb_path = appdb_path
         self.language = language
 
-        self.importer = Importer(self)
+        self.importer = Importer(self, user_config)
         self.exporter = Exporter(self)
         self.utils = Utilities()
 

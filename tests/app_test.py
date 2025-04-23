@@ -240,7 +240,8 @@ class AppTest(BaseTest):
         if AppContext.has_app() and not init:
             return AppContext.get_app().database
 
-        language: str = self.user_config().language
+        user_config: UserConfig = self.user_config()
+        language: str = user_config.language
         userdb_path: Path = self.tmp_folder() / "user" / "database"
         appdb_path: Path = self.res_path() / "app" / "database"
 
@@ -248,7 +249,7 @@ class AppTest(BaseTest):
         index_path.parent.mkdir(parents=True, exist_ok=True)
         index_path.write_text("[]", encoding="utf8")
 
-        return TranslationDatabase(userdb_path, appdb_path, language)
+        return TranslationDatabase(userdb_path, appdb_path, language, user_config)
 
     def provider(self, init: bool = False) -> Provider:
         """

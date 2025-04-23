@@ -333,7 +333,7 @@ class App(QApplication):
             )
 
             self.database = TranslationDatabase(
-                userdb_path.parent, appdb_path, language
+                userdb_path.parent, appdb_path, language, self.user_config
             )
 
         LoadingDialog.run_callable(QApplication.activeModalWidget(), process)
