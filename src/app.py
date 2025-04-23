@@ -153,7 +153,7 @@ class App(QApplication):
         self.load_localisation()
         self.load_theme()
 
-        self.cache = Cache(self.cache_path)
+        self.cache = Cache(self.cache_path, App.APP_VERSION)
         self.cache.load_caches()
 
         self.exception_handler = ExceptionHandler(self)

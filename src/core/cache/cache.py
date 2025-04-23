@@ -14,6 +14,7 @@ from functools import lru_cache
 from typing import Optional, override
 
 import requests
+from semantic_version import Version
 
 from core.database.string import String
 from core.mod_file.translation_status import TranslationStatus
@@ -33,7 +34,10 @@ class Cache(BaseCache):
     Path to the cache folder.
     """
 
-    log = logging.getLogger("Cache")
+    __cache_version_file: Path
+    """
+    Path to the file containing the cache version.
+    """
 
     __states_cache: dict[str, tuple[bool, TranslationStatus]] = {}
     """
@@ -55,10 +59,28 @@ class Cache(BaseCache):
     Path to the folder for the strings cache files.
     """
 
-    def __init__(self, cache_path: Path):
+    def __init__(self, cache_path: Path, app_version: str) -> None:
         self.path = cache_path
+        self.__cache_version_file = self.path / "version"
         self.__states_cache_path = self.path / "modfile_states.cache"
         self.__strings_cache_path = self.path / "modfile_strings"
+
+        self.path.mkdir(parents=True, exist_ok=True)
+
+        if self.__cache_version_file.is_file():
+            cache_version: str = self.__cache_version_file.read_text().strip()
+
+            if Version(cache_version) < Version(app_version):
+                self.clear_caches()
+                self.path.mkdir(parents=True)
+                self.log.info("Cleared caches due to outdated cache version.")
+
+        elif os.listdir(self.path):
+            self.clear_caches()
+            self.path.mkdir(parents=True)
+            self.log.info("Cleared caches due to missing cache version file.")
+
+        self.__cache_version_file.write_text(app_version)
 
     def load_caches(self) -> None:
         """
