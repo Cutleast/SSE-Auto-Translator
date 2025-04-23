@@ -51,8 +51,10 @@ class GoogleTranslator(Translator):
         to_translate: list[str] = [text for text in texts if text not in self.cache]
 
         translated_items: list[Translated] = self.translator.translate(
-            to_translate, dst_code, src_code
-        )  # type: ignore
+            to_translate,
+            dst_code,  # type: ignore
+            src_code,  # type: ignore
+        )
 
         for translated_item in translated_items:
             self.cache[translated_item.origin] = translated_item.text

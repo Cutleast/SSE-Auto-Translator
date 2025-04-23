@@ -79,8 +79,10 @@ class DeepLTranslator(Translator):
                 )
 
             else:
-                result = self.translator.translate_text(  # type: ignore[assignment]
-                    text, source_lang=src_code, target_lang=dst_code
+                result = self.translator.translate_text(
+                    text,
+                    source_lang=src_code,
+                    target_lang=dst_code,  # type: ignore
                 )
 
             self.cache[text] = result.text
