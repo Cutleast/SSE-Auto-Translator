@@ -15,7 +15,8 @@
 			"ms-python.vscode-python-envs",
 			"theqtcompany.qt",
 			"charliermarsh.ruff",
-			"redhat.vscode-xml"
+			"redhat.vscode-xml",
+			"gruntfuggly.todo-tree"
 		]
 	},
 	"settings": {
@@ -44,7 +45,13 @@
 		"python.analysis.typeCheckingMode": "strict",
 		"git.diagnosticsCommitHook.Enabled": true,
 		"python.testing.autoTestDiscoverOnSavePattern": "**/tests/**/*.py",
-		"python.testing.autoTestDiscoverOnSaveEnabled": true
+		"python.testing.autoTestDiscoverOnSaveEnabled": true,
+		"todo-tree.filtering.excludeGlobs": [
+			".venv/**",
+			"dist/**",
+			"*.dic"
+		],
+		"todo-tree.highlights.enabled": false,
 	},
 	"launch": {
 		"version": "0.2.0",
