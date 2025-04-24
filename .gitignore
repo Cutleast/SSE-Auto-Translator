@@ -10,4 +10,5 @@
 /src/resources_rc.py
 .coverage
 .pytest_cache
+.vs
 __pycache__
