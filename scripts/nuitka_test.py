@@ -16,6 +16,8 @@ print(f"{sys.executable = }")
 print(f"{Path(sys.executable).resolve() = }")
 print(f"{getattr(sys, 'frozen', None) = }")
 print(f"{globals().get('__compiled__', None) = }")
+print(f"{sys.version = }")
+print(f"{sys.version_info = }")
 
 
 # Test src.core.utilities.exe_info
