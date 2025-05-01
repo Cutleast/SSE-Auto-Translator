@@ -160,8 +160,7 @@ class Translation:
         if self._strings is None:
             return
 
-        if not self.path.is_dir():
-            os.mkdir(self.path)
+        self.path.mkdir(parents=True, exist_ok=True)
 
         for modfile_name, modfile_strings in self._strings.items():
             modfile_name = modfile_name.lower()
