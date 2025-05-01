@@ -3,6 +3,7 @@ Copyright (c) Cutleast
 """
 
 from collections.abc import Generator
+from typing import Optional
 
 from PySide6.QtWidgets import QTreeWidget, QTreeWidgetItem
 
@@ -34,7 +35,9 @@ def iter_toplevel_items(widget: QTreeWidget) -> Generator[QTreeWidgetItem]:
     """
 
     for i in range(widget.topLevelItemCount()):
-        yield widget.topLevelItem(i)
+        item: Optional[QTreeWidgetItem] = widget.topLevelItem(i)
+        if item is not None:
+            yield item
 
 
 def are_children_visible(item: QTreeWidgetItem) -> bool:
