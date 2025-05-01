@@ -3,7 +3,9 @@ Copyright (c) Cutleast
 """
 
 import logging
+import shutil
 from argparse import Namespace
+from typing import Generator
 
 import pytest
 
@@ -34,7 +36,7 @@ class AppTest(BaseTest):
     log: logging.Logger = logging.getLogger("AppTest")
 
     @pytest.fixture
-    def app_context(self) -> App:
+    def app_context(self) -> Generator[App, None, None]:
         """
         Initalizes and sets a test `App` instance.
 
@@ -56,7 +58,9 @@ class AppTest(BaseTest):
 
             self.log.info("App initialization complete.")
 
-        return AppContext.get_app()
+        yield AppContext.get_app()
+
+        self.reset_app_components(AppContext.get_app())
 
     def args_namespace(self) -> Namespace:
         """
@@ -87,6 +91,9 @@ class AppTest(BaseTest):
         app.scanner = self.scanner(init=True)
         app.download_manager = self.download_manager(init=True)
         app.nxm_listener = self.nxm_listener(init=True)
+
+        app.tmp_path = self.tmp_folder() / "SSE-AT_temp"
+        app.tmp_path.mkdir()
 
         # TODO: Inialize mocked versions of missing app components
 
@@ -164,7 +171,7 @@ class AppTest(BaseTest):
         if AppContext.has_app() and not init:
             return AppContext.get_app().cache
 
-        return Cache(self.tmp_folder() / "cache")
+        return Cache(self.tmp_folder() / "cache", App.APP_VERSION)
 
     def scanner(self, init: bool = False) -> Scanner:
         """
@@ -316,3 +323,21 @@ class AppTest(BaseTest):
             return AppContext.get_app().nxm_listener
 
         return NXMHandler("")
+
+    def reset_app_components(self, app: App) -> None:
+        """
+        Resets app components to initial state and wipes out the temporary test folder.
+
+        Args:
+            app (App): The `App` instance to reset
+        """
+
+        self.log.info("Resetting app components...")
+
+        self.log.debug("Clearing temp folder...")
+        tmp_folder: Path = self.tmp_folder()
+        shutil.rmtree(tmp_folder, ignore_errors=True)
+        tmp_folder.mkdir()
+
+        self.log.debug("Reinitializing app components...")
+        self.mock_app_components(app)
