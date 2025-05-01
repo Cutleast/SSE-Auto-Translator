@@ -7,7 +7,6 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 from dataclasses import dataclass, field
 from typing import Optional, override
 
-from core.mod_instance.mod import Mod
 from core.translation_provider.mod_id import ModId
 from core.translation_provider.source import Source
 
@@ -36,11 +35,6 @@ class FileDownload:
     file_name: Optional[str] = None
     """
     Full name of the downloaded file.
-    """
-
-    original_mod: Optional[Mod] = None
-    """
-    Installed mod the translation is for.
     """
 
     stale: bool = field(default=False)

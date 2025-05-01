@@ -9,8 +9,10 @@ from typing import Optional, override
 from PySide6.QtCore import QThread, Signal
 
 from app_context import AppContext
+from core.cache.cache import TranslationStatus
 from core.config.app_config import AppConfig
 from core.database.database import TranslationDatabase
+from core.database.string import String
 from core.database.translation import Translation
 from core.downloader.downloader import Downloader
 from core.mod_instance.mod import Mod
@@ -135,55 +137,54 @@ class Worker(QThread):
         mod_instance: ModInstance = AppContext.get_app().mod_instance
 
         try:
-            strings = self.database.importer.extract_strings_from_archive(
-                downloaded_file
+            strings: dict[str, list[String]] = (
+                self.database.importer.extract_strings_from_archive(downloaded_file)
             )
         except Exception as ex:
             raise InstallationFailedError from ex
 
-        else:
-            original_mod: Optional[Mod] = download.original_mod
+        if not strings:
+            raise MappingFailedError
 
-            if original_mod is None and strings:
-                modfile_name = list(strings.keys())[0].lower()
+        # TODO: Improve this to work with modfiles from multiple original mods or to get at least the original mod with the most mod files
+        modfile_name = list(strings.keys())[0].lower()
+        original_mod: Optional[Mod] = mod_instance.get_mod_with_modfile(
+            modfile_name,
+            ignore_states=[
+                TranslationStatus.TranslationInstalled,
+                TranslationStatus.IsTranslated,
+            ],
+            ignore_case=True,
+        )
 
-                for mod in mod_instance.mods:
-                    if any(
-                        modfile_name == modfile.name.lower() for modfile in mod.modfiles
-                    ):
-                        original_mod = mod
+        if original_mod is None:
+            raise NoOriginalModFound
 
-            if original_mod is None:
-                raise NoOriginalModFound
+        translation_details: ModDetails = self.provider.get_details(
+            mod_id=download.mod_id, source=download.source
+        )
+        translation = Translation(
+            name=download.display_name,
+            path=(
+                self.database.userdb_path
+                / self.database.language
+                / download.display_name
+            ),
+            mod_id=download.mod_id,
+            version=translation_details.version,
+            original_mod_id=original_mod.mod_id,
+            original_version=original_mod.version,
+            _strings=strings,
+            status=Translation.Status.Ok,
+            source=download.source,
+            timestamp=translation_details.timestamp,
+        )
+        translation.save_strings()
+        self.database.add_translation(translation)
 
-            if strings:
-                translation_details: ModDetails = self.provider.get_details(
-                    mod_id=download.mod_id, source=download.source
-                )
-                translation = Translation(
-                    name=download.display_name,
-                    path=(
-                        self.database.userdb_path
-                        / self.database.language
-                        / download.display_name
-                    ),
-                    mod_id=download.mod_id,
-                    version=translation_details.version,
-                    original_mod_id=original_mod.mod_id,
-                    original_version=original_mod.version,
-                    _strings=strings,
-                    status=Translation.Status.Ok,
-                    source=download.source,
-                    timestamp=translation_details.timestamp,
-                )
-                translation.save_strings()
-                self.database.add_translation(translation)
-
-                self.database.importer.extract_additional_files(
-                    downloaded_file, original_mod, translation
-                )
-            else:
-                raise MappingFailedError
+        self.database.importer.extract_additional_files(
+            downloaded_file, original_mod, translation
+        )
 
     @override
     def run(self) -> None:

@@ -5,15 +5,15 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import os
-from typing import Any, Optional
+from typing import Any
 
 from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QComboBox, QPushButton, QTreeWidgetItem
 
 from app_context import AppContext
 from core.downloader.translation_download import TranslationDownload
-from core.mod_instance.mod import Mod
 from core.translation_provider.exceptions import ModNotFoundError
+from core.translation_provider.mod_id import ModId
 from core.translation_provider.provider import Provider
 from core.translation_provider.source import Source
 
@@ -23,6 +23,7 @@ class DownloadListItem(QTreeWidgetItem):
     Class for download items for DownloadListDialog.
     """
 
+    original_mod_id: ModId
     open_original_button: QPushButton
     translations_combobox: QComboBox
     open_translation_button: QPushButton
@@ -31,11 +32,16 @@ class DownloadListItem(QTreeWidgetItem):
 
     provider: Provider
 
-    def __init__(self, name: str, translation_downloads: list[TranslationDownload]):
+    def __init__(
+        self,
+        name: str,
+        original_mod_id: ModId,
+        translation_downloads: list[TranslationDownload],
+    ) -> None:
         super().__init__(["", name, "", "", ""])
 
+        self.original_mod_id = original_mod_id
         self.provider = AppContext.get_app().provider
-
         self.translation_downloads = translation_downloads
 
     def init_widgets(self) -> None:
@@ -81,16 +87,9 @@ class DownloadListItem(QTreeWidgetItem):
         )
 
     def __open_original(self) -> None:
-        translation_download = self.translation_downloads[
-            self.translations_combobox.currentIndex()
-        ]
-        original_mod: Optional[Mod] = translation_download.original_mod
-        if original_mod is None:
-            return
-
         try:
             modpage_url: str = self.provider.get_modpage_url(
-                original_mod.mod_id, source=Source.NexusMods
+                self.original_mod_id, source=Source.NexusMods
             )
             modpage_url += "?tab=files"
             os.startfile(modpage_url)

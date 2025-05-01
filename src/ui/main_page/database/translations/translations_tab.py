@@ -29,8 +29,10 @@ from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.scanner.scanner import Scanner
+from core.translation_provider.mod_id import ModId
+from core.translation_provider.provider import Provider
 from core.utilities.path import Path
-from ui.widgets.download_list_dialog import DownloadListDialog
+from ui.downloader.download_list_dialog import DownloadListDialog
 from ui.widgets.error_dialog import ErrorDialog
 from ui.widgets.lcd_number import LCDNumber
 from ui.widgets.loading_dialog import LoadingDialog
@@ -245,6 +247,7 @@ class TranslationsTab(QWidget):
     def download_updates(self) -> None:
         mod_instance: ModInstance = AppContext.get_app().mod_instance
         download_manager: DownloadManager = AppContext.get_app().download_manager
+        provider: Provider = AppContext.get_app().provider
 
         translations: dict[Translation, Mod] = {}
         for translation in filter(
@@ -263,7 +266,7 @@ class TranslationsTab(QWidget):
 
             translations[translation] = original_mod
 
-        download_entries: dict[str, list[TranslationDownload]] = (
+        download_entries: dict[tuple[str, ModId], list[TranslationDownload]] = (
             LoadingDialog.run_callable(
                 QApplication.activeModalWidget(),
                 lambda ldialog: download_manager.collect_available_updates(
@@ -273,7 +276,12 @@ class TranslationsTab(QWidget):
         )
         if download_entries:
             DownloadListDialog(
-                download_entries, updates=True, parent=QApplication.activeModalWidget()
+                download_entries,
+                provider,
+                self.database,
+                download_manager,
+                updates=True,
+                parent=QApplication.activeModalWidget(),
             ).exec()
         else:
             QMessageBox.warning(

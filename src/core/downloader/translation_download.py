@@ -5,9 +5,8 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 from dataclasses import dataclass
-from typing import Optional, override
+from typing import override
 
-from core.mod_instance.mod import Mod
 from core.translation_provider.mod_id import ModId
 from core.translation_provider.source import Source
 
@@ -43,11 +42,6 @@ class TranslationDownload:
     available_downloads: list[FileDownload]
     """
     List of available downloads.
-    """
-
-    original_mod: Optional[Mod] = None
-    """
-    Installed mod the translation is for.
     """
 
     @override

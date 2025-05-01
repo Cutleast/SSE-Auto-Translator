@@ -2,8 +2,6 @@
 This file is part of SSE Auto Translator
 by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
-
-# TODO: Move this and DownloadListItem to their own module in ui.downloader
 """
 
 import logging
@@ -31,12 +29,13 @@ from core.database.database import TranslationDatabase
 from core.downloader.download_manager import DownloadManager
 from core.downloader.file_download import FileDownload
 from core.downloader.translation_download import TranslationDownload
+from core.translation_provider.mod_id import ModId
 from core.translation_provider.nm_api.nxm_handler import NXMHandler
 from core.translation_provider.provider import Provider
 from core.utilities.container_utils import unique
+from ui.widgets.loading_dialog import LoadingDialog
 
 from .download_list_item import DownloadListItem
-from .loading_dialog import LoadingDialog
 
 
 class DownloadListDialog(QDialog):
@@ -55,15 +54,18 @@ class DownloadListDialog(QDialog):
 
     def __init__(
         self,
-        translation_downloads: dict[str, list[TranslationDownload]],
+        translation_downloads: dict[tuple[str, ModId], list[TranslationDownload]],
+        provider: Provider,
+        database: TranslationDatabase,
+        download_manager: DownloadManager,
         updates: bool = False,
         parent: Optional[QWidget] = None,
-    ):
+    ) -> None:
         super().__init__(parent)
 
-        self.provider = AppContext.get_app().provider
-        self.database = AppContext.get_app().database
-        self.download_manager = AppContext.get_app().download_manager
+        self.provider = provider
+        self.database = database
+        self.download_manager = download_manager
 
         self.translation_downloads = translation_downloads
         self.updates = updates
@@ -145,8 +147,11 @@ class DownloadListDialog(QDialog):
 
         self.download_items = []
 
-        for label, translation_download in self.translation_downloads.items():
-            item = DownloadListItem(label, translation_download)
+        for (
+            label,
+            original_mod_id,
+        ), translation_download in self.translation_downloads.items():
+            item = DownloadListItem(label, original_mod_id, translation_download)
             self.list_widget.addTopLevelItem(item)
 
             # TODO: Move this part to DownloadListItem
@@ -227,10 +232,10 @@ class DownloadListDialog(QDialog):
                         )
                         if old_translation is not None:
                             self.database.delete_translation(old_translation)
-                            self.log.info("Deleted old Translation from Database.")
+                            self.log.info("Deleted old translation from database.")
                         else:
                             self.log.warning(
-                                "Old Translation could not be found in Database!"
+                                "Old translation could not be found in database!"
                             )
                 except Exception as ex:
                     self.log.error(

@@ -36,12 +36,14 @@ from core.mod_instance.mod_instance import ModInstance
 from core.plugin_interface import plugin as esp
 from core.scanner.scanner import Scanner
 from core.translation_provider.exceptions import ModNotFoundError
+from core.translation_provider.mod_id import ModId
+from core.translation_provider.provider import Provider
 from core.translation_provider.source import Source
 from core.utilities import matches_filter
 from core.utilities.container_utils import join_dicts
 from core.utilities.path import Path
+from ui.downloader.download_list_dialog import DownloadListDialog
 from ui.utilities.tree_widget import are_children_visible
-from ui.widgets.download_list_dialog import DownloadListDialog
 from ui.widgets.loading_dialog import LoadingDialog
 from ui.widgets.string_list.string_list_dialog import StringListDialog
 
@@ -694,8 +696,9 @@ class ModInstanceWidget(QTreeWidget):
         ).exec()
 
     def download_and_install_translations(self) -> None:
+        provider: Provider = AppContext.get_app().provider
         download_manager: DownloadManager = AppContext.get_app().download_manager
-        download_entries: dict[str, list[TranslationDownload]] = (
+        download_entries: dict[tuple[str, ModId], list[TranslationDownload]] = (
             LoadingDialog.run_callable(
                 QApplication.activeModalWidget(),
                 lambda ldialog: download_manager.collect_available_downloads(
@@ -705,7 +708,11 @@ class ModInstanceWidget(QTreeWidget):
         )
 
         DownloadListDialog(
-            download_entries, parent=QApplication.activeModalWidget()
+            download_entries,
+            provider,
+            self.database,
+            download_manager,
+            parent=QApplication.activeModalWidget(),
         ).exec()
 
     def build_output(self) -> None:

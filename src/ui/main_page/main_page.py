@@ -32,9 +32,11 @@ from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.scanner.scanner import Scanner
+from core.translation_provider.mod_id import ModId
+from core.translation_provider.provider import Provider
 from core.utilities.container_utils import join_dicts
 from core.utilities.path import Path
-from ui.widgets.download_list_dialog import DownloadListDialog
+from ui.downloader.download_list_dialog import DownloadListDialog
 from ui.widgets.error_dialog import ErrorDialog
 from ui.widgets.ignore_list_dialog import IgnoreListDialog
 from ui.widgets.lcd_number import LCDNumber
@@ -298,8 +300,9 @@ class MainPageWidget(QWidget):
         and opens a DownloadListDialog.
         """
 
+        provider: Provider = AppContext.get_app().provider
         download_manager: DownloadManager = AppContext.get_app().download_manager
-        download_entries: dict[str, list[TranslationDownload]] = (
+        download_entries: dict[tuple[str, ModId], list[TranslationDownload]] = (
             LoadingDialog.run_callable(
                 QApplication.activeModalWidget(),
                 lambda ldialog: download_manager.collect_available_downloads(
@@ -308,7 +311,11 @@ class MainPageWidget(QWidget):
             )
         )
         DownloadListDialog(
-            download_entries, parent=QApplication.activeModalWidget()
+            download_entries,
+            provider,
+            self.database,
+            download_manager,
+            parent=QApplication.activeModalWidget(),
         ).exec()
 
         self.__tool_bar.highlight_action(self.__tool_bar.build_output_action)
