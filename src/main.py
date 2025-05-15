@@ -114,7 +114,7 @@ class MainApp(qtw.QApplication):
     cacher: "Cacher" = None
 
     def __init__(self):
-        super().__init__()
+        super().__init__(sys.argv)
 
         self.setApplicationName(self.name)
         self.setApplicationDisplayName(f"{self.name} v{self.version}")

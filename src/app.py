@@ -8,14 +8,15 @@ Qt Version: 6.6.1
 
 import sys
 
-sys.argv.pop(0)
+args = sys.argv.copy()
+args.pop(0)
 
-print(f"{sys.argv = }")
+print(f"{args = }")
 
-if len(sys.argv):
-    match sys.argv[0]:
+if len(args):
+    match args[0]:
         case "--download":
-            if sys.argv[-1].startswith("nxm://"):
+            if args[-1].startswith("nxm://"):
                 from nxm_handler import handle
 
                 handle()
@@ -50,7 +51,7 @@ if len(sys.argv):
         case "--extract-strings":
             from pathlib import Path
 
-            plugin_path = Path(sys.argv[-1])
+            plugin_path = Path(args[-1])
 
             if not plugin_path.is_file():
                 print(f"{str(plugin_path)!r} is not an existing file!")
