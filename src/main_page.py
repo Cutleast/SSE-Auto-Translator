@@ -7,6 +7,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 import os
 import shutil
 import time
+import webbrowser
 from pathlib import Path
 
 import jstyleson as json
@@ -429,7 +430,7 @@ class MainPageWidget(qtw.QWidget):
                         url = self.app.provider.get_modpage_link(
                             mod.mod_id, source=utils.Source.NexusMods
                         )
-                        os.startfile(url)
+                        webbrowser.open(url)
 
             def open_in_explorer():
                 if mod_selected:

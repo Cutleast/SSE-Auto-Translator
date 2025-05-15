@@ -5,9 +5,9 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import logging
-import os
 import platform
 import urllib.parse
+import webbrowser
 from uuid import uuid4
 
 import bs4
@@ -479,7 +479,7 @@ class NexusModsApi:
 
         self.log.debug("Opening page in Web Browser...")
         url = f"https://www.nexusmods.com/sso?id={uuid}&application={self.application_slug}"
-        os.startfile(url)
+        webbrowser.open(url)
 
         self.log.info("Waiting for User to sign in...")
         connection.settimeout(600)  # Timeout of 5 minutes

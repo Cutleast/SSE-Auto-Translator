@@ -5,6 +5,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import os
+import webbrowser
 from pathlib import Path
 
 import jstyleson as json
@@ -106,7 +107,7 @@ class UserSettings(qtw.QScrollArea):
         self.masterlist_box.stateChanged.connect(self.on_change)
         open_masterlist_button = qtw.QPushButton(self.mloc.open_masterlist + "    ")
         open_masterlist_button.clicked.connect(
-            lambda: os.startfile(
+            lambda: webbrowser.open(
                 "https://github.com/Cutleast/SSE-Auto-Translator/tree/master/masterlists"
             )
         )
