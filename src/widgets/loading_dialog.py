@@ -116,7 +116,10 @@ class LoadingDialog(qtw.QDialog):
 
         # Set up Taskbar Progress API
         self.parent_hwnd = parent.winId()
-        taskbar.ActivateTab(self.parent_hwnd)
+        try:
+            taskbar.ActivateTab(self.parent_hwnd)
+        except Exception as ex:  # Don't crash because of this
+            self.log.warning(f"Failed to access taskbar progress API: {ex}", exc_info=ex)
 
     def updateProgress(
         self,
@@ -248,13 +251,16 @@ class LoadingDialog(qtw.QDialog):
         utils.center(self, self.app.root)
 
         # Update Taskbar Progress
-        if self.pbar1.maximum() == 0:
-            taskbar.SetProgressState(self.parent_hwnd, 0x1)  # Indeterminate
-        else:
-            taskbar.SetProgressState(self.parent_hwnd, 0x2)  # Determinate
-            taskbar.SetProgressValue(
-                self.parent_hwnd, self.pbar1.value(), self.pbar1.maximum()
-            )
+        try:
+            if self.pbar1.maximum() == 0:
+                taskbar.SetProgressState(self.parent_hwnd, 0x1)  # Indeterminate
+            else:
+                taskbar.SetProgressState(self.parent_hwnd, 0x2)  # Determinate
+                taskbar.SetProgressValue(
+                    self.parent_hwnd, self.pbar1.value(), self.pbar1.maximum()
+                )
+        except Exception:  # Don't crash because of this
+            pass
 
     def timerEvent(self, event: qtc.QTimerEvent):
         """
@@ -290,11 +296,17 @@ class LoadingDialog(qtw.QDialog):
         )
 
         # Clear taskbar state
-        taskbar.SetProgressState(self.parent_hwnd, 0x0)
+        try:
+            taskbar.SetProgressState(self.parent_hwnd, 0x0)
+        except Exception:  # Don't crash because of this
+            pass
 
         if self.dialog_thread.exception is not None:
             # Set taskbar state to error
-            taskbar.SetProgressState(self.parent_hwnd, 0x4)
+            try:
+                taskbar.SetProgressState(self.parent_hwnd, 0x4)
+            except Exception:  # Don't crash because of this
+                pass
 
             raise self.dialog_thread.exception
 
