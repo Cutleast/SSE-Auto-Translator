@@ -1,0 +1,43 @@
+[project]
+name = "sse-auto-translator"
+version = "2.1.8"
+description = "SSE Auto Translator"
+authors = [{ name = "Cutleast", email = "cutleast@gmail.com" }]
+license = { file = "LICENSE" }
+readme = "README.md"
+requires-python = "==3.11.*"
+dependencies = [
+    "bs4",
+    "cloudscraper",
+    "comtypes",
+    "cyhunspell",
+    "deepl",
+    "googletrans==3.1.0a0",
+    "jstyleson",
+    "lingua-language-detector",
+    "lz4",
+    "plyvel-ci",
+    "py7zr",
+    "pyperclip",
+    "pyside6",
+    "pytz",
+    "pyuac",
+    "pywin32",
+    "pyzmq",
+    "qtawesome<1.4.0",
+    "qtpy",
+    "rarfile",
+    "requests",
+    "semantic-version",
+    "unrar",
+    "virtual-glob",
+    "websocket-client",
+]
+
+[tool.uv.sources]
+cyhunspell = { url = "https://github.com/MSeal/cython_hunspell/archive/refs/tags/2.0.3.tar.gz" }
+
+[dependency-groups]
+dev = [
+    "nuitka",
+]
