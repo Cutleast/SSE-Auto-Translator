@@ -5,7 +5,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import logging
-import os
+import webbrowser
 
 import qtawesome as qta
 import qtpy.QtCore as qtc
@@ -255,7 +255,7 @@ class DownloadListDialog(qtw.QWidget):
 
                 def get_func(mod_id: int, file_id: int, source: utils.Source):
                     def func():
-                        os.startfile(
+                        webbrowser.open(
                             self.app.provider.get_modpage_link(
                                 mod_id, file_id, source, mod_manager=True
                             )

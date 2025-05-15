@@ -14,6 +14,7 @@ import sys
 import tempfile
 import time
 import traceback
+import webbrowser
 from datetime import datetime
 from pathlib import Path
 from winsound import MessageBeep as alert
@@ -708,7 +709,7 @@ class MainApp(qtw.QApplication):
         licenses_tab.addItems(utils.LICENSES.keys())
 
         licenses_tab.itemDoubleClicked.connect(
-            lambda item: os.startfile(utils.LICENSES[item.text()])
+            lambda item: webbrowser.open(utils.LICENSES[item.text()])
         )
 
         dialog.exec()

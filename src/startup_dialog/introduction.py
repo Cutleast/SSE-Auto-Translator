@@ -5,6 +5,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import os
+import webbrowser
 
 import qtawesome as qta
 import qtpy.QtCore as qtc
@@ -54,7 +55,7 @@ class IntroductionPage(qtw.QWidget):
             self.loc.main.show_documentation + " (Browser)"
         )
         documentation_button.clicked.connect(
-            lambda: os.startfile(
+            lambda: webbrowser.open(
                 "https://github.com/Cutleast/SSE-Auto-Translator/blob/master/doc/Instructions_en_US.md"
             )
         )

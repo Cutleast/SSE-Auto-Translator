@@ -7,6 +7,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 import os
 import shutil
 import time
+import webbrowser
 from copy import copy
 from fnmatch import fnmatch
 from pathlib import Path
@@ -884,7 +885,7 @@ class Processor:
         btn.setText(app.loc.main.open_dsd_on_nexus_mods)
         btn.clicked.disconnect()
         btn.clicked.connect(
-            lambda: os.startfile(
+            lambda: webbrowser.open(
                 "https://www.nexusmods.com/skyrimspecialedition/mods/107676"
             )
         )

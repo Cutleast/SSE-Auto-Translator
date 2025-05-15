@@ -4,7 +4,7 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-import os
+import webbrowser
 
 import qtpy.QtGui as qtg
 import qtpy.QtWidgets as qtw
@@ -64,7 +64,7 @@ class UpdaterDialog(qtw.QDialog):
         download_button = qtw.QPushButton(self.mloc.download_update)
         download_button.clicked.connect(
             lambda: (
-                os.startfile(updater.download_url),
+                webbrowser.open(updater.download_url),
                 self.accept(),
             )
         )

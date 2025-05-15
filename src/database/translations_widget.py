@@ -6,6 +6,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 import os
 import time
+import webbrowser
 from pathlib import Path
 
 import qtawesome as qta
@@ -350,7 +351,7 @@ class TranslationsWidget(qtw.QWidget):
                     url = self.app.provider.get_modpage_link(
                         selected_translation.mod_id, source=selected_translation.source
                     )
-                    os.startfile(url)
+                    webbrowser.open(url)
 
             def open_in_explorer():
                 if selected_plugin_name:

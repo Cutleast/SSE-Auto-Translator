@@ -4,7 +4,7 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-import os
+import webbrowser
 
 import qtpy.QtGui as qtg
 import qtpy.QtWidgets as qtw
@@ -83,7 +83,7 @@ class DownloadListItem(qtw.QTreeWidgetItem):
             translation_download.original_mod.mod_id, source=Source.NexusMods
         )
         modpage_url += "?tab=files"
-        os.startfile(modpage_url)
+        webbrowser.open(modpage_url)
 
     def __open_translation(self):
         translation_download = self.translation_downloads[
@@ -93,4 +93,4 @@ class DownloadListItem(qtw.QTreeWidgetItem):
         modpage_url = self.app.provider.get_modpage_link(
             translation_download.mod_id, source=translation_download.source
         )
-        os.startfile(modpage_url)
+        webbrowser.open(modpage_url)
