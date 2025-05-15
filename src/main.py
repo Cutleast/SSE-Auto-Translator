@@ -32,7 +32,7 @@ class MainApp(qtw.QApplication):
     """
 
     name = "SSE Auto Translator"
-    version = "2.1.8"
+    version = "development"
 
     loc: "utils.Localisator" = None
     cur_path = (  # Get path of executable/script depending on building status
@@ -114,7 +114,7 @@ class MainApp(qtw.QApplication):
     cacher: "Cacher" = None
 
     def __init__(self):
-        super().__init__()
+        super().__init__(sys.argv)
 
         self.setApplicationName(self.name)
         self.setApplicationDisplayName(f"{self.name} v{self.version}")
@@ -139,7 +139,10 @@ class MainApp(qtw.QApplication):
         self.log.info("Application started.")
 
         # Check for updates
-        updater.Updater(self).run()
+        try:
+            updater.Updater(self).run()
+        except Exception as ex:
+            self.log.warning(f"Failed to check for app updates: {ex}", exc_info=ex)
 
         if self.first_start:
             self.setup_complete = False

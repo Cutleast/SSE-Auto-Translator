@@ -100,24 +100,23 @@ If you encountered an issue/error or you have a suggestion, create an issue unde
 
 ### 1. Install requirements
 
-1. Install Python 3.11 (Make sure that you add it to PATH!)
-2. Clone repository
-3. Open terminal in repository folder
-4. Create a virtual environment and activate it by running following command:
-   `python -m venv .venv`
-5. Type in following command to install all requirements:
-   `pip install -r requirements.txt`
+1. Install [Python 3.11](https://www.python.org/downloads/) (Make sure that you add it to PATH!)
+2. Install [uv](https://github.com/astral-sh/uv#installation)
+3. Clone repository
+4. Open a terminal in the cloned repository folder
+5. Run the following command to init your local environment and to install all dependencies
+   `uv sync`
 
 ### 2. Execute from source
 
-1. Open terminal in src folder
+1. Open terminal with activated venv in src folder
 2. Execute main file
    `python app.py`
 
 ### 3. Compile and build executable
 
 1. Run `build.bat` with activated virtual environment from the root folder of this repo.
-2. The executable and all dependencies are built in the main.dist-Folder.
+2. The executable and all dependencies are built in the dist-Folder.
 
 ## 3. Beta-Testing
 
