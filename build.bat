@@ -1,2 +1,2 @@
 @echo off
-python build.py
+uv run scripts\build.py

@@ -116,7 +116,7 @@ If you encountered an issue/error or you have a suggestion, create an issue unde
 ### 3. Compile and build executable
 
 1. Run `build.bat` with activated virtual environment from the root folder of this repo.
-2. The executable and all dependencies are built in the main.dist-Folder.
+2. The executable and all dependencies are built in the dist-Folder.
 
 ## 3. Beta-Testing
 
