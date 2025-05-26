@@ -1,3 +1,10 @@
+# v2.1.9
+
+- Add Turkish to supported languages (no Vanilla database, though as there is no official localisation of the game)
+- Fix random CTDs when downloading translations
+- Fix crash when launched via Wine (Linux)
+- Fix browser not opening when clicking on links in SSE-AT for some users
+
 # v2.1.8
 
 - Apply default values to translator config when loading user config
