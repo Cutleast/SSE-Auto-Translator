@@ -22,6 +22,7 @@ if len(args):
                 handle()
             else:
                 print("Missing Download URL!")
+                sys.exit(1)
 
         case "--bind-nxm":
             import winreg

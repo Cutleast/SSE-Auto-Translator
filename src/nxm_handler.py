@@ -14,9 +14,7 @@ def handle():
     client = context.socket(zmq.REQ)
     client.connect("tcp://127.0.0.1:1248")
 
-    sys.argv.pop(0)
-
-    client.send_string(sys.argv[0])
+    client.send_string(sys.argv[-1])
 
     if (client.poll(1000) & zmq.POLLIN) != 0:
         reply = client.recv_string()
