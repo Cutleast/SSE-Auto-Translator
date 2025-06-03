@@ -1,6 +1,6 @@
 [project]
 name = "sse-auto-translator"
-version = "2.1.9"
+version = "2.1.10"
 description = "SSE Auto Translator"
 authors = [{ name = "Cutleast", email = "cutleast@gmail.com" }]
 license = { file = "LICENSE" }

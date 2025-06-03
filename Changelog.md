@@ -1,3 +1,7 @@
+# v2.1.10 (Hotfix)
+
+- Fix Mod Manager (and non-premium Nexus Mods) downloads
+
 # v2.1.9
 
 - Add Turkish to supported languages (no Vanilla database, though as there is no official localisation of the game)

@@ -783,7 +783,7 @@ wheels = [
 
 [[package]]
 name = "sse-auto-translator"
-version = "2.1.9"
+version = "2.1.10"
 source = { virtual = "." }
 dependencies = [
     { name = "bs4" },
