@@ -188,7 +188,7 @@ def parse_path(path: Path) -> tuple[Optional[Path], Optional[Path]]:
 
 def safe_copy(
     src: os.PathLike, dst: os.PathLike, *, follow_symlinks: bool = True
-) -> os.PathLike:
+) -> os.PathLike | str:
     """
     Safe version of `shutil.copy` which ignores existing files.
 
@@ -198,7 +198,7 @@ def safe_copy(
         follow_symlinks (bool, optional): Follow symlinks. Defaults to True.
 
     Returns:
-        os.PathLike: Copied file.
+        os.PathLike | str: Copied file.
     """
 
     if os.path.exists(dst):
