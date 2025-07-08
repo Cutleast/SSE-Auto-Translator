@@ -61,7 +61,7 @@
 				"type": "debugpy",
 				"request": "launch",
 				"program": "${workspaceFolder}/src/main.py",
-				"console": "integratedTerminal",
+				"console": "internalConsole",
 				"cwd": "${workspaceFolder}",
 				"preLaunchTask": "compile-qrc",
 			},
@@ -70,7 +70,7 @@
 				"type": "debugpy",
 				"request": "launch",
 				"program": "${file}",
-				"console": "integratedTerminal",
+				"console": "internalConsole",
 				"cwd": "${workspaceFolder}/src",
 			}
 		]
