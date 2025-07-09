@@ -220,7 +220,7 @@ class RawString(str):
 
     @staticmethod
     @override
-    def encode(string: RawString) -> bytes:
+    def encode(string: RawString) -> bytes:  # type: ignore
         """
         Tries to encode `string` using all supported encodings.
         """

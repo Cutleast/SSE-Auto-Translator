@@ -27,7 +27,7 @@ from ui.utilities import move_to_center
 
 cc.GetModule("res/TaskbarLib.tlb")
 
-import comtypes.gen.TaskbarLib as tbl  # noqa: E402
+import comtypes.gen.TaskbarLib as tbl  # type: ignore # noqa: E402
 
 taskbar = cc.CreateObject(
     "{56FDF344-FD6D-11d0-958A-006097C9A090}", interface=tbl.ITaskbarList3
@@ -58,7 +58,7 @@ class LoadingDialog(QDialog, Generic[T]):
     parent_hwnd: Optional[int] = None
 
     def __init__(
-        self, parent: Optional[QWidget], func: Callable[["LoadingDialog"], T]
+        self, parent: Optional[QWidget], func: Callable[["LoadingDialog[T]"], T]
     ) -> None:
         super().__init__(parent)
 
@@ -387,14 +387,14 @@ class LoadingDialog(QDialog, Generic[T]):
 
     @staticmethod
     def run_callable(
-        parent: Optional[QWidget], target: Callable[["LoadingDialog"], V]
+        parent: Optional[QWidget], target: Callable[["LoadingDialog[V]"], V]
     ) -> V:
         """
         Runs a callable in a loading dialog.
 
         Args:
             parent (Optional[QWidget]): Parent widget.
-            target (Callable[[LoadingDialog], V]): Callable to run.
+            target (Callable[[LoadingDialog[V]], V]): Callable to run.
 
         Raises:
             Exception: If callable raises an exception.

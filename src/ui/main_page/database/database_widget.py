@@ -48,7 +48,7 @@ class DatabaseWidget(QTabWidget):
         self.translations_tab.set_name_filter(name_filter)
 
     @override
-    def update(self) -> None:
+    def update(self) -> None:  # type: ignore
         """
         Updates the displayed database.
         """

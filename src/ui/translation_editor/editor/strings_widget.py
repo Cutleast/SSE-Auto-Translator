@@ -131,7 +131,7 @@ class StringsWidget(QTreeWidget):
         ]
 
     @override
-    def update(self) -> None:
+    def update(self) -> None:  # type: ignore
         """
         Updates the strings widget.
         """

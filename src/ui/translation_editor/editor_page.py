@@ -115,7 +115,7 @@ class EditorPage(QSplitter):
         return [tab for tab, _ in self.__tabs.values()]
 
     @override
-    def update(self) -> None:
+    def update(self) -> None:  # type: ignore
         """
         Updates the displayed editor tabs.
         """

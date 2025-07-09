@@ -294,7 +294,7 @@ class EditorTab(QWidget):
         return string
 
     @override
-    def update(self) -> None:
+    def update(self) -> None:  # type: ignore
         """
         Updates visible string list.
         """

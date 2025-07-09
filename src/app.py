@@ -167,7 +167,7 @@ class App(QApplication):
         self.log_basic_info()
 
     @override
-    def exec(self) -> int:
+    def exec(self) -> int:  # type: ignore
         self.log.info("Application started.")
 
         Updater(self.APP_VERSION).run()
@@ -292,7 +292,7 @@ class App(QApplication):
             save_button = QPushButton(self.tr("Save"))
             save_button.setObjectName("accent_button")
             save_button.setDisabled(True)
-            api_setup.valid_signal.connect(lambda valid: save_button.setEnabled(valid))
+            api_setup.valid_signal.connect(save_button.setEnabled)
 
             def save() -> None:
                 if api_setup.api_key is None:

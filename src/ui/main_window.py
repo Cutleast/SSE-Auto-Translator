@@ -74,7 +74,7 @@ class MainWindow(QMainWindow):
         self.__refresh_shortcut.activated.connect(self.refresh)
 
     @override
-    def update(self) -> None:
+    def update(self) -> None:  # type: ignore
         """
         Updates the displayed tabs for main page and translation editor.
         """

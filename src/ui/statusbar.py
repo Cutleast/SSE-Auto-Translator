@@ -86,7 +86,7 @@ class StatusBar(QStatusBar):
         self.__log_window.show()
 
     @override
-    def update(self) -> None:
+    def update(self) -> None:  # type: ignore
         """
         Updates status labels and API limit label.
         """
