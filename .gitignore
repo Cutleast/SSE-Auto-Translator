@@ -1,6 +1,7 @@
 *.old
 /.venv
 /.vscode
+/app_state_dump.7z
 /data
 /dist
 /experiments
