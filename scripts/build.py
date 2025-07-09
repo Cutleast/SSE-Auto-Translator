@@ -72,7 +72,7 @@ if return_code != 0:
 
 def safe_copy(
     src: os.PathLike, dst: os.PathLike, *, follow_symlinks: bool = True
-) -> os.PathLike:
+) -> os.PathLike | str:
     if os.path.exists(dst):
         return dst
 
