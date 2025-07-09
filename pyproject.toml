@@ -108,28 +108,18 @@ log_cli_format = "[%(asctime)s.%(msecs)03d][%(levelname)s][%(name)s.%(funcName)s
 
 [tool.pyright]
 include = ["src", "tests"]
-typeCheckingMode = "standard"
-exclude = ["**/__pycache__"]
+typeCheckingMode = "strict"
+exclude = ["**/__pycache__", "**/*.old"]
 stubPath = "./stubs"
 
 # Check here for a full list of options: https://github.com/microsoft/pyright/blob/main/docs/configuration.md#diagnostic-settings-defaults
 deprecateTypingAliases = false
-reportConstantRedefinition = true
-reportDeprecated = "warning"
-reportDuplicateImport = true
-reportIncompleteStub = "warning"
-reportIncompatibleMethodOverride = false
-reportInconsistentConstructor = "warning"
 reportImplicitOverride = "warning"
-reportInvalidStubStatement = "warning"
 reportMatchNotExhaustive = false
-reportMissingImports = "error"
-reportMissingParameterType = "error"
 reportMissingTypeArgument = false
 reportMissingTypeStubs = false
-reportPrivateUsage = "warning"
+reportPropertyTypeMismatch = "warning"
 reportShadowedImports = "warning"
-reportTypeCommentUsage = "information"
 reportUnknownArgumentType = false
 reportUnknownLambdaType = false
 reportUnknownMemberType = false
@@ -144,11 +134,3 @@ reportUnusedClass = "warning"
 reportUnusedImport = "warning"
 reportUnusedFunction = "warning"
 reportUnusedVariable = "warning"
-reportUntypedBaseClass = "error"
-reportUntypedClassDecorator = "error"
-reportUntypedFunctionDecorator = "error"
-reportUntypedNamedTuple = "error"
-reportWildcardImportFromLibrary = "warning"
-strictDictionaryInference = true
-strictListInference = true
-strictSetInference = true
