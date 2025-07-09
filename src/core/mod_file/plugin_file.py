@@ -2,13 +2,13 @@
 Copyright (c) Cutleast
 """
 
+from pathlib import Path
 from typing import override
 
 from core.cache.base_cache import BaseCache
 from core.database.string import String
 from core.plugin_interface.plugin import Plugin
 from core.utilities.filesystem import get_file_identifier
-from core.utilities.path import Path
 
 from .mod_file import ModFile
 

@@ -3,6 +3,7 @@ Copyright (c) Cutleast
 """
 
 import logging
+from pathlib import Path
 from typing import Optional
 
 from PySide6.QtCore import QObject
@@ -11,7 +12,6 @@ from sse_bsa import BSAArchive
 from app_context import AppContext
 from core.archiver.archive import Archive
 from core.config.user_config import UserConfig
-from core.utilities.path import Path
 from ui.widgets.loading_dialog import LoadingDialog
 
 

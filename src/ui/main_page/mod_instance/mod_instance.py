@@ -4,6 +4,7 @@ Copyright (c) Cutleast
 
 import logging
 import os
+from pathlib import Path
 from typing import Optional
 
 from PySide6.QtCore import Qt
@@ -41,7 +42,6 @@ from core.translation_provider.provider import Provider
 from core.translation_provider.source import Source
 from core.utilities import matches_filter
 from core.utilities.container_utils import join_dicts
-from core.utilities.path import Path
 from ui.downloader.download_list_dialog import DownloadListDialog
 from ui.utilities.tree_widget import are_children_visible
 from ui.widgets.loading_dialog import LoadingDialog

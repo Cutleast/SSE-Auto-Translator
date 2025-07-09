@@ -2,11 +2,12 @@
 Copyright (c) Cutleast
 """
 
+from pathlib import Path
+
 import pytest
 
 from core.mod_instance.mod_instance import ModInstance
 from core.mod_managers.modorganizer import ModOrganizer
-from core.utilities.path import Path
 
 from ..core_test import CoreTest
 

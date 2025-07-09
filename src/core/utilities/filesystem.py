@@ -6,12 +6,11 @@ import hashlib
 import os
 import re
 import shutil
+from pathlib import Path
 from typing import Optional
 
 from virtual_glob import InMemoryPath
 from virtual_glob import glob as vglob
-
-from .path import Path
 
 
 def create_folder_list(folder: Path) -> list[Path]:

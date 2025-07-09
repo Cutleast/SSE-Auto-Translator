@@ -4,6 +4,7 @@ Copyright (c) Cutleast
 
 import logging
 import os
+from pathlib import Path
 from typing import Optional, override
 
 from PySide6.QtCore import QItemSelectionModel, Qt, QUrl, Signal
@@ -26,7 +27,6 @@ from core.database.translation import Translation
 from core.translation_provider.exceptions import ModNotFoundError
 from core.utilities import matches_filter
 from core.utilities.datetime import fmt_timestamp
-from core.utilities.path import Path
 from core.utilities.scale import scale_value
 from ui.utilities.tree_widget import are_children_visible
 from ui.widgets.string_list.string_list_dialog import StringListDialog

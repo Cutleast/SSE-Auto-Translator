@@ -6,6 +6,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 import logging
 import os
+from pathlib import Path
 from typing import Optional
 
 import jstyleson as json
@@ -14,7 +15,6 @@ from PySide6.QtWidgets import QDialog, QVBoxLayout, QWidget
 
 from app_context import AppContext
 from core.config.user_config import UserConfig
-from core.utilities.path import Path
 from ui.widgets.stacked_widget import StackedWidget
 
 from .instance_page import InstancePage

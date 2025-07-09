@@ -5,6 +5,7 @@ Copyright (c) Cutleast
 import logging
 import os
 import shutil
+from pathlib import Path
 from typing import Optional
 
 import jstyleson as json
@@ -18,7 +19,6 @@ from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.plugin_interface import plugin as esp
-from core.utilities.path import Path
 from ui.widgets.loading_dialog import LoadingDialog
 
 

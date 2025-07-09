@@ -3,10 +3,10 @@ Copyright (c) Cutleast
 """
 
 import time
+from pathlib import Path
 
 from app import App
 from core.cache.cache import Cache
-from core.utilities.path import Path
 
 from ..core_test import CoreTest
 

@@ -11,6 +11,7 @@ import shutil
 import time
 from datetime import datetime
 from functools import lru_cache
+from pathlib import Path
 from typing import Optional, override
 
 import requests
@@ -19,7 +20,6 @@ from semantic_version import Version
 from core.database.string import String
 from core.mod_file.translation_status import TranslationStatus
 from core.utilities.filesystem import get_file_identifier
-from core.utilities.path import Path
 
 from .base_cache import BaseCache
 

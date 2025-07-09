@@ -3,9 +3,9 @@ Copyright (c) Cutleast
 """
 
 import os
+from pathlib import Path
 
 from core.utilities.env_resolver import resolve
-from core.utilities.path import Path
 
 
 class TestEnvResolver:

@@ -2,8 +2,9 @@
 Copyright (c) Cutleast
 """
 
+from pathlib import Path
+
 from core.plugin_interface.datatypes import Stream
-from core.utilities.path import Path
 
 from .string_table import StringTable
 

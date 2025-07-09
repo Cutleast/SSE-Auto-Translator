@@ -8,6 +8,7 @@ import logging
 import os
 import shutil
 from copy import copy
+from pathlib import Path
 from typing import Optional
 
 import jstyleson as json
@@ -29,7 +30,7 @@ from core.translation_provider.source import Source
 from core.utilities.constants import DSD_FILE_PATTERN
 from core.utilities.container_utils import unique
 from core.utilities.filesystem import parse_path, relative_data_path, safe_copy
-from core.utilities.path import Path
+from core.utilities.game_language import GameLanguage
 from ui.widgets.loading_dialog import LoadingDialog
 
 
@@ -112,7 +113,7 @@ class Importer(QObject):
         source: Source
         if mod.mod_id.mod_id and mod.mod_id.file_id:
             source = Source.NexusMods
-        elif mod.mod_id.mod_id and self.user_config.language == "French":
+        elif mod.mod_id.mod_id and self.user_config.language == GameLanguage.French:
             source = Source.Confrerie
         else:
             source = Source.Local

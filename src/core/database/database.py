@@ -5,6 +5,7 @@ Copyright (c) Cutleast
 import logging
 import os
 from copy import copy
+from pathlib import Path
 from shutil import rmtree
 from typing import Any, Optional, overload
 
@@ -24,7 +25,6 @@ from core.mod_instance.mod_instance import ModInstance
 from core.translation_provider.mod_id import ModId
 from core.translation_provider.source import Source
 from core.utilities.container_utils import unique
-from core.utilities.path import Path
 
 from .importer import Importer
 from .search_filter import SearchFilter, matches_filter

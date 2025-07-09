@@ -8,11 +8,11 @@ import pickle
 import time
 from abc import ABCMeta, abstractmethod
 from functools import lru_cache, wraps
+from pathlib import Path
 from typing import Any, Callable, Optional
 
 from app_context import AppContext
 from core.database.string import String
-from core.utilities.path import Path
 
 
 class BaseCache(metaclass=ABCMeta):

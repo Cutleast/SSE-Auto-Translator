@@ -3,6 +3,7 @@ Copyright (c) Cutleast
 """
 
 import logging
+from pathlib import Path
 from typing import Optional
 
 from PySide6.QtWidgets import (
@@ -31,7 +32,6 @@ from core.mod_instance.mod_instance import ModInstance
 from core.scanner.scanner import Scanner
 from core.translation_provider.mod_id import ModId
 from core.translation_provider.provider import Provider
-from core.utilities.path import Path
 from ui.downloader.download_list_dialog import DownloadListDialog
 from ui.widgets.error_dialog import ErrorDialog
 from ui.widgets.lcd_number import LCDNumber

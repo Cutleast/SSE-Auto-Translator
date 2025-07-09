@@ -2,11 +2,12 @@
 Copyright (c) Cutleast
 """
 
+from pathlib import Path
+
 from app import App
 from core.config.user_config import UserConfig
 from core.database.database import TranslationDatabase
 from core.database.utilities import Utilities
-from core.utilities.path import Path
 
 from ..core_test import CoreTest
 

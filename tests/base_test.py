@@ -7,9 +7,8 @@ import shutil
 import sys
 import tempfile
 from abc import ABC
+from pathlib import Path
 from typing import Optional
-
-from core.utilities.path import Path
 
 logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
 

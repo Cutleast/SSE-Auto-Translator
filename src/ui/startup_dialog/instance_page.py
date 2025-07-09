@@ -4,6 +4,7 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+from pathlib import Path
 from typing import Optional, override
 
 from PySide6.QtWidgets import QComboBox, QFileDialog, QFormLayout, QLabel
@@ -12,7 +13,6 @@ from core.config.user_config import UserConfig
 from core.mod_managers import SUPPORTED_MOD_MANAGERS
 from core.mod_managers.mod_manager import ModManager
 from core.mod_managers.modorganizer import ModOrganizer
-from core.utilities.path import Path
 from ui.startup_dialog.page import Page
 from ui.widgets.browse_edit import BrowseLineEdit
 

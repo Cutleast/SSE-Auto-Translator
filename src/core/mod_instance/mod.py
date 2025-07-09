@@ -7,6 +7,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 from dataclasses import dataclass
 from fnmatch import fnmatch
 from functools import cache
+from pathlib import Path
 from typing import override
 
 from sse_bsa import BSAArchive
@@ -16,7 +17,6 @@ from core.mod_file.mod_file import ModFile
 from core.translation_provider.mod_id import ModId
 from core.utilities.constants import DSD_FILE_PATTERN
 from core.utilities.filesystem import get_file_identifier, glob, parse_path
-from core.utilities.path import Path
 
 
 @dataclass

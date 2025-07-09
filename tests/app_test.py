@@ -5,6 +5,7 @@ Copyright (c) Cutleast
 import logging
 import shutil
 from argparse import Namespace
+from pathlib import Path
 from typing import Generator
 
 import pytest
@@ -23,7 +24,6 @@ from core.mod_managers.modorganizer import ModOrganizer
 from core.scanner.scanner import Scanner
 from core.translation_provider.nm_api.nxm_handler import NXMHandler
 from core.translation_provider.provider import Provider
-from core.utilities.path import Path
 
 from .base_test import BaseTest
 

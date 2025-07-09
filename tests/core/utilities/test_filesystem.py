@@ -2,12 +2,12 @@
 Copyright (c) Cutleast
 """
 
+from pathlib import Path
 from typing import Optional, TypeVar
 
 import pytest
 
 from core.utilities.filesystem import glob, parse_path
-from core.utilities.path import Path
 
 T = TypeVar("T")
 

@@ -9,6 +9,7 @@ import sys
 import time
 from dataclasses import dataclass, field
 from enum import StrEnum
+from pathlib import Path
 from typing import Any, Optional, override
 
 import jstyleson as json
@@ -19,7 +20,6 @@ from core.database.string import String
 from core.translation_provider.mod_id import ModId
 from core.translation_provider.source import Source
 from core.utilities.filesystem import get_folder_size
-from core.utilities.path import Path
 
 
 @dataclass(kw_only=True)

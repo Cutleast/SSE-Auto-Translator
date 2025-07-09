@@ -3,8 +3,8 @@ Copyright (c) Cutleast
 """
 
 import json
+from pathlib import Path
 
-from core.utilities.path import Path
 from utilities.esp2dsd.main import Esp2Dsd
 
 from ...base_test import BaseTest

@@ -3,6 +3,7 @@ Copyright (c) Cutleast
 """
 
 import logging
+from pathlib import Path
 from queue import Empty, Queue
 from typing import Optional, override
 
@@ -25,7 +26,6 @@ from core.utilities.exceptions import (
     MappingFailedError,
     NoOriginalModFound,
 )
-from core.utilities.path import Path
 from core.utilities.progress_update import ProgressCallback, ProgressUpdate
 
 from .file_download import FileDownload

@@ -6,11 +6,11 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 from abc import ABCMeta, abstractmethod
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Optional, override
 
 from core.cache.base_cache import BaseCache
 from core.database.string import String
-from core.utilities.path import Path
 
 from .translation_status import TranslationStatus
 

@@ -11,6 +11,7 @@ import sys
 import tempfile
 import time
 from argparse import Namespace
+from pathlib import Path
 from typing import Any, Callable, Optional, override
 
 import jstyleson as json
@@ -47,7 +48,6 @@ from core.utilities.exe_info import get_current_path, get_execution_info
 from core.utilities.localisation import LocalisationUtils
 from core.utilities.logger import Logger
 from core.utilities.masterlist import get_masterlist
-from core.utilities.path import Path
 from core.utilities.path_limit_fixer import PathLimitFixer
 from core.utilities.qt_res_provider import read_resource
 from core.utilities.updater import Updater

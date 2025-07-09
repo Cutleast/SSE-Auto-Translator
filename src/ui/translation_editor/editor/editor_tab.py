@@ -4,6 +4,7 @@ Copyright (c) Cutleast
 
 import os
 import re
+from pathlib import Path
 from typing import Optional, override
 
 import pyperclip
@@ -28,7 +29,6 @@ from app_context import AppContext
 from core.database.string import String
 from core.database.translation import Translation
 from core.editor.editor import Editor
-from core.utilities.path import Path
 from ui.translation_editor.editor.help_dialog import EditorHelpDialog
 from ui.widgets.lcd_number import LCDNumber
 from ui.widgets.loading_dialog import LoadingDialog

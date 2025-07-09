@@ -4,9 +4,8 @@ Copyright (c) Cutleast
 
 import re
 from os import getenv
+from pathlib import Path
 from typing import Optional, overload
-
-from .path import Path
 
 
 @overload

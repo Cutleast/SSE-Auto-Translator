@@ -3,12 +3,12 @@ Copyright (c) Cutleast
 """
 
 from io import BufferedReader, BytesIO
+from pathlib import Path
 from typing import TypeAlias
 
 import jstyleson as json
 
 from core.utilities.exe_info import get_current_path
-from core.utilities.path import Path
 
 Stream: TypeAlias = BufferedReader | BytesIO
 """

@@ -157,9 +157,9 @@ class Toast(QWidget):
 
 
 if __name__ == "__main__":
-    import qtawesome as qta
+    from pathlib import Path
 
-    from core.utilities.path import Path
+    import qtawesome as qta
 
     app = QApplication()
 

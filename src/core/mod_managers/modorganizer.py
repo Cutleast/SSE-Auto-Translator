@@ -6,6 +6,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 import logging
 import os
+from pathlib import Path
 from typing import override
 
 from core.mod_file import MODFILE_TYPES
@@ -14,7 +15,6 @@ from core.mod_instance.mod_instance import ModInstance
 from core.translation_provider.mod_id import ModId
 from core.utilities.env_resolver import resolve
 from core.utilities.ini_parser import IniParser
-from core.utilities.path import Path
 
 from .mod_manager import ModManager
 

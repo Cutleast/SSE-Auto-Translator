@@ -2,6 +2,8 @@
 Copyright (c) Cutleast
 """
 
+from pathlib import Path
+
 from app import App
 from core.database.database import Translation, TranslationDatabase
 from core.database.importer import Importer
@@ -10,7 +12,6 @@ from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.translation_provider.source import Source
-from core.utilities.path import Path
 
 from ..core_test import CoreTest
 
