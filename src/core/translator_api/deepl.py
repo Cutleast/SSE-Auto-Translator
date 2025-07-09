@@ -10,6 +10,7 @@ import deepl
 import googletrans
 
 from .translator import Translator
+from .translator_api import TranslatorApi
 
 
 class DeepLTranslator(Translator):
@@ -17,7 +18,7 @@ class DeepLTranslator(Translator):
     Class for DeepL API (requires API key).
     """
 
-    name = "DeepL"
+    name = TranslatorApi.DeepL.value
 
     cache: dict[str, str] = {}
 

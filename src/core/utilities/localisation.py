@@ -4,11 +4,24 @@ Copyright (c) Cutleast
 
 import locale
 import logging
+from enum import Enum
 from typing import Optional
 
 import win32api
 
-from .constants import SUPPORTED_LANGS, SUPPORTED_LOCALES
+from core.utilities.game_language import GameLanguage
+
+
+class Language(Enum):
+    """
+    Enum for supported application languages.
+    """
+
+    System = "System"
+    German = "de_DE"
+    English = "en_US"
+    Russian = "ru_RU"
+    Chinese = "zh_CN"
 
 
 class LocalisationUtils:
@@ -31,7 +44,7 @@ class LocalisationUtils:
 
         cls.log.info("Detecting system language...")
 
-        langs: dict[str, str] = {lang[1]: lang[0] for lang in SUPPORTED_LANGS}
+        langs: dict[str, str] = {lang.iso_code: lang.id for lang in GameLanguage}
         pref_lang: Optional[str] = None
 
         try:
@@ -66,7 +79,7 @@ class LocalisationUtils:
             system_language = locale.windows_locale[language_id]
             cls.log.debug(f"Detected system language: {system_language}")
 
-            if system_language in SUPPORTED_LOCALES:
+            if system_language in [lang.value for lang in Language]:
                 system_locale = system_language
             else:
                 cls.log.warning(

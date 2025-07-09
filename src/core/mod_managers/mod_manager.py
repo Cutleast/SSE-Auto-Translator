@@ -4,10 +4,13 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+from __future__ import annotations
+
 from abc import abstractmethod
+from enum import Enum
+from pathlib import Path
 
 from core.mod_instance.mod_instance import ModInstance
-from core.utilities.path import Path
 
 
 class ModManager:
@@ -15,7 +18,27 @@ class ModManager:
     Base class for every mod manager instance.
     """
 
-    name: str
+    class Type(Enum):
+        """Enum for the available mod manager types."""
+
+        ModOrganizer = "Mod Organizer 2"
+        Vortex = "Vortex"
+
+        def get_mod_manager_class(self) -> type[ModManager]:
+            """
+            Returns:
+                type[ModManager]: Class for this mod manager type.
+            """
+
+            from .modorganizer import ModOrganizer
+            from .vortex import Vortex
+
+            mod_managers: dict[ModManager.Type, type[ModManager]] = {
+                ModManager.Type.ModOrganizer: ModOrganizer,
+                ModManager.Type.Vortex: Vortex,
+            }
+
+            return mod_managers[self]
 
     @abstractmethod
     def get_instances(self) -> list[str]:

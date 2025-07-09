@@ -2,24 +2,21 @@
 Copyright (c) Cutleast
 """
 
-from typing import Any
+from copy import copy
 
 import pytest
-from PySide6.QtWidgets import (
-    QCheckBox,
-    QComboBox,
-    QDoubleSpinBox,
-    QPushButton,
-    QSpinBox,
-)
+from PySide6.QtWidgets import QCheckBox, QDoubleSpinBox, QPushButton, QSpinBox
 
 from app import App
 from core.config.app_config import AppConfig
+from core.utilities.localisation import Language
+from core.utilities.logger import Logger
 from tests.app_test import AppTest
 from tests.utils import Utils
 from ui.settings.app_settings import AppSettings
 from ui.widgets.browse_edit import BrowseLineEdit
 from ui.widgets.color_entry import ColorLineEdit
+from ui.widgets.enum_dropdown import EnumDropdown
 
 from ..ui_test import UiTest
 
@@ -30,8 +27,14 @@ class TestAppSettings(UiTest, AppTest):
     """
 
     LOGS_NUM_BOX: tuple[str, type[QSpinBox]] = "logs_num_box", QSpinBox
-    LOG_LEVEL_BOX: tuple[str, type[QComboBox]] = "log_level_box", QComboBox
-    APP_LANG_BOX: tuple[str, type[QComboBox]] = "app_lang_box", QComboBox
+    LOG_LEVEL_BOX: tuple[str, type[EnumDropdown[Logger.Level]]] = (
+        "log_level_box",
+        EnumDropdown[Logger.Level],
+    )
+    APP_LANG_BOX: tuple[str, type[EnumDropdown[Language]]] = (
+        "app_lang_box",
+        EnumDropdown[Language],
+    )
     ACCENT_COLOR_ENTRY: tuple[str, type[ColorLineEdit]] = (
         "accent_color_entry",
         ColorLineEdit,
@@ -92,10 +95,10 @@ class TestAppSettings(UiTest, AppTest):
         logs_num_box: QSpinBox = Utils.get_private_field(
             app_settings, *TestAppSettings.LOGS_NUM_BOX
         )
-        log_level_box: QComboBox = Utils.get_private_field(
+        log_level_box: EnumDropdown[Logger.Level] = Utils.get_private_field(
             app_settings, *TestAppSettings.LOG_LEVEL_BOX
         )
-        app_lang_box: QComboBox = Utils.get_private_field(
+        app_lang_box: EnumDropdown[Language] = Utils.get_private_field(
             app_settings, *TestAppSettings.APP_LANG_BOX
         )
         accent_color_entry: ColorLineEdit = Utils.get_private_field(
@@ -136,8 +139,8 @@ class TestAppSettings(UiTest, AppTest):
 
         # then
         assert logs_num_box.value() == app_config.log_num_of_files
-        assert log_level_box.currentText() == app_config.log_level.name.capitalize()
-        assert app_lang_box.currentText() == app_config.language
+        assert log_level_box.getCurrentValue() == app_config.log_level
+        assert app_lang_box.getCurrentValue() == app_config.language
         assert accent_color_entry.text() == app_config.accent_color
         assert clear_cache_button.isEnabled() == app_context.cache.path.is_dir()
 
@@ -164,10 +167,10 @@ class TestAppSettings(UiTest, AppTest):
 
         # given
         app_config: AppConfig = app_context.app_config
-        old_config: dict[str, Any] = app_config._settings.copy()  # type: ignore
+        old_config: AppConfig = copy(app_config)
 
         # when
         app_settings.apply(app_config)
 
         # then
-        assert app_config._settings == old_config  # type: ignore
+        assert app_config == old_config

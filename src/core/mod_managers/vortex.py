@@ -25,8 +25,6 @@ class Vortex(ModManager):
     Class to load instances and modlists from Vortex.
     """
 
-    name = "Vortex"
-
     rules: Optional[dict[str, list[dict[str, Any]]]] = None
     mods: Optional[dict[str, Mod]] = None
 

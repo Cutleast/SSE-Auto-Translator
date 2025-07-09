@@ -2,19 +2,21 @@
 Copyright (c) Cutleast
 """
 
-from typing import Any
+from copy import copy
 
 import pytest
 from PySide6.QtWidgets import QCheckBox, QComboBox, QLabel, QLineEdit
 
 from app import App
 from core.config.user_config import UserConfig
-from core.mod_managers.modorganizer import ModOrganizer
-from core.translation_provider.nm_api.nm_api import NexusModsApi
+from core.mod_managers.mod_manager import ModManager
+from core.translation_provider.provider_preference import ProviderPreference
+from core.utilities.game_language import GameLanguage
 from tests.app_test import AppTest
 from tests.utils import Utils
 from ui.settings.user_settings import UserSettings
 from ui.widgets.browse_edit import BrowseLineEdit
+from ui.widgets.enum_dropdown import EnumDropdown
 
 from ..ui_test import UiTest
 
@@ -24,14 +26,22 @@ class TestUserSettings(UiTest, AppTest):
     Tests `ui.settings.user_settings.UserSettings`.
     """
 
-    LANG_BOX: tuple[str, type[QComboBox]] = "lang_box", QComboBox
-
+    LANG_BOX: tuple[str, type[EnumDropdown[GameLanguage]]] = (
+        "lang_box",
+        EnumDropdown[GameLanguage],
+    )
     SOURCE_LABEL: tuple[str, type[QLabel]] = "source_label", QLabel
-    SOURCE_BOX: tuple[str, type[QComboBox]] = "source_box", QComboBox
+    SOURCE_BOX: tuple[str, type[EnumDropdown[ProviderPreference]]] = (
+        "source_box",
+        EnumDropdown[ProviderPreference],
+    )
     API_KEY_ENTRY: tuple[str, type[QLineEdit]] = "api_key_entry", QLineEdit
     MASTERLIST_BOX: tuple[str, type[QCheckBox]] = "masterlist_box", QCheckBox
 
-    MOD_MANAGER_BOX: tuple[str, type[QComboBox]] = "mod_manager_box", QComboBox
+    MOD_MANAGER_BOX: tuple[str, type[EnumDropdown[ModManager.Type]]] = (
+        "mod_manager_box",
+        EnumDropdown[ModManager.Type],
+    )
     MODINSTANCE_BOX: tuple[str, type[QComboBox]] = "modinstance_box", QComboBox
     INSTANCE_PROFILE_LABEL: tuple[str, type[QLabel]] = "instance_profile_label", QLabel
     INSTANCE_PROFILE_BOX: tuple[str, type[QComboBox]] = (
@@ -71,14 +81,13 @@ class TestUserSettings(UiTest, AppTest):
         # given
         user_config: UserConfig = app_context.user_config
 
-        lang_box: QComboBox = Utils.get_private_field(
+        lang_box: EnumDropdown[GameLanguage] = Utils.get_private_field(
             user_settings, *TestUserSettings.LANG_BOX
         )
-
         source_label: QLabel = Utils.get_private_field(
             user_settings, *TestUserSettings.SOURCE_LABEL
         )
-        source_box: QComboBox = Utils.get_private_field(
+        source_box: EnumDropdown[ProviderPreference] = Utils.get_private_field(
             user_settings, *TestUserSettings.SOURCE_BOX
         )
         api_key_entry: QLineEdit = Utils.get_private_field(
@@ -88,7 +97,7 @@ class TestUserSettings(UiTest, AppTest):
             user_settings, *TestUserSettings.MASTERLIST_BOX
         )
 
-        mod_manager_box: QComboBox = Utils.get_private_field(
+        mod_manager_box: EnumDropdown[ModManager.Type] = Utils.get_private_field(
             user_settings, *TestUserSettings.MOD_MANAGER_BOX
         )
         modinstance_box: QComboBox = Utils.get_private_field(
@@ -121,25 +130,24 @@ class TestUserSettings(UiTest, AppTest):
         )
 
         # then
-        assert lang_box.currentText() == user_config.language
-
-        assert source_label.isEnabled() == (user_config.language == "French")
-        assert source_box.isEnabled() == (user_config.language == "French")
-        assert source_box.currentText() == user_config.provider_preference.name
+        assert lang_box.getCurrentValue() == user_config.language
+        assert source_label.isEnabled() == (user_config.language == GameLanguage.French)
+        assert source_box.isEnabled() == (user_config.language == GameLanguage.French)
+        assert source_box.getCurrentValue() == user_config.provider_preference
         assert api_key_entry.text() == user_config.api_key
         assert masterlist_box.isChecked() == user_config.use_masterlist
 
-        assert mod_manager_box.currentText() == user_config.mod_manager.name
+        assert mod_manager_box.getCurrentValue() == user_config.mod_manager
         assert modinstance_box.currentText() == user_config.modinstance
         assert instance_profile_label.isEnabled() == (
-            user_config.mod_manager is ModOrganizer
+            user_config.mod_manager == ModManager.Type.ModOrganizer
         )
         assert instance_profile_box.isEnabled() == (
-            user_config.mod_manager is ModOrganizer
+            user_config.mod_manager == ModManager.Type.ModOrganizer
         )
         assert instance_profile_box.currentText() == (
             (user_config.instance_profile or "Default")
-            if user_config.mod_manager is ModOrganizer
+            if user_config.mod_manager == ModManager.Type.ModOrganizer
             else user_config.instance_profile
         )
         assert instance_path_label.isEnabled() == (
@@ -157,30 +165,17 @@ class TestUserSettings(UiTest, AppTest):
         assert enable_textures_box.isChecked() == user_config.enable_textures
         assert enable_sound_files_box.isChecked() == user_config.enable_sound_files
 
-    def test_apply(
-        self,
-        user_settings: UserSettings,
-        app_context: App,
-        monkeypatch: pytest.MonkeyPatch,
-    ) -> None:
+    def test_apply(self, user_settings: UserSettings, app_context: App) -> None:
         """
         Tests the `apply` method of the `UserSettings` instance.
         """
 
         # given
         user_config: UserConfig = app_context.user_config
-        old_config: dict[str, Any] = user_config._settings.copy()  # type: ignore
+        old_config: UserConfig = copy(user_config)
 
         # when
-        monkeypatch.setattr(
-            "core.translation_provider.provider_manager.ProviderManager.get_provider",
-            lambda _: NexusModsApi(app_context.cache),
-        )
-        monkeypatch.setattr(
-            "core.translation_provider.nm_api.nm_api.NexusModsApi.is_api_key_valid",
-            lambda _, __: True,
-        )
         user_settings.apply(user_config)
 
         # then
-        assert user_config._settings == old_config  # type: ignore
+        assert user_config == old_config

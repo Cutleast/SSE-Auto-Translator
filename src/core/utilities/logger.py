@@ -8,11 +8,11 @@ import re
 import sys
 from datetime import datetime
 from io import TextIOWrapper
-from typing import Callable, Optional, TextIO
+from pathlib import Path
+from typing import Callable, Optional, TextIO, override
 
-from .base_enum import BaseEnum
 from .datetime import datetime_format_to_regex
-from .path import Path
+from .localized_enum import LocalizedEnum
 
 
 class Logger(logging.Logger):
@@ -22,7 +22,7 @@ class Logger(logging.Logger):
     with the new message.
     """
 
-    class LogLevel(BaseEnum):
+    class Level(LocalizedEnum):
         """
         Logging levels.
         """
@@ -32,6 +32,14 @@ class Logger(logging.Logger):
         WARNING = 30
         ERROR = 40
         CRITICAL = 50
+
+        @override
+        def get_localized_name(self) -> str:
+            return self.name.capitalize()
+
+        @override
+        def get_localized_description(self) -> str:
+            return self.get_localized_name()
 
     __lines: list[str]
     __root_logger: logging.Logger
@@ -73,7 +81,7 @@ class Logger(logging.Logger):
         sys.stdout = self
         sys.stderr = self
 
-    def setLevel(self, level: LogLevel) -> None:  # type: ignore[override]
+    def setLevel(self, level: Level) -> None:  # type: ignore[override]
         """
         Sets logging level.
 

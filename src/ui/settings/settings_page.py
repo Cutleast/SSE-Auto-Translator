@@ -3,7 +3,7 @@ Copyright (c) Cutleast
 """
 
 from abc import abstractmethod
-from typing import Any, override
+from typing import Any, Generic, TypeVar, override
 
 from PySide6.QtCore import QEvent, QObject, Signal
 from PySide6.QtGui import QWheelEvent
@@ -12,8 +12,10 @@ from PySide6.QtWidgets import QComboBox, QDoubleSpinBox, QSpinBox
 from core.config._base_config import BaseConfig
 from ui.widgets.smooth_scroll_area import SmoothScrollArea
 
+T = TypeVar("T", bound=BaseConfig)
 
-class SettingsPage[T: BaseConfig](SmoothScrollArea):
+
+class SettingsPage(SmoothScrollArea, Generic[T]):
     """
     Base class for settings pages.
     """

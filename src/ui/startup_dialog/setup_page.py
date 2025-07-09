@@ -18,11 +18,11 @@ from PySide6.QtWidgets import (
 
 from core.config.user_config import UserConfig
 from core.translation_provider.provider_preference import ProviderPreference
-from core.utilities.constants import SUPPORTED_LANGS
+from core.utilities.game_language import GameLanguage
 from core.utilities.localisation import LocalisationUtils
 from ui.startup_dialog.page import Page
 from ui.widgets.api_setup import ApiSetup
-from ui.widgets.completion_box import CompletionBox
+from ui.widgets.enum_dropdown import EnumDropdown
 from ui.widgets.smooth_scroll_area import SmoothScrollArea
 
 
@@ -31,7 +31,7 @@ class SetupPage(Page):
     Second page. For setting up game language and API Key.
     """
 
-    __lang_dropdown: CompletionBox
+    __lang_dropdown: EnumDropdown[GameLanguage]
     __source_label: QLabel
     __source_dropdown: QComboBox
     __masterlist_box: QCheckBox
@@ -61,11 +61,8 @@ class SetupPage(Page):
 
         lang_label = QLabel(self.tr("Choose Game Language:"))
         hlayout.addWidget(lang_label)
-        self.__lang_dropdown = CompletionBox()
+        self.__lang_dropdown = EnumDropdown(GameLanguage)
         self.__lang_dropdown.installEventFilter(self)
-        self.__lang_dropdown.setPlaceholderText(self.tr("Please select..."))
-        lang_items = [lang[0].capitalize() for lang in SUPPORTED_LANGS]
-        self.__lang_dropdown.addItems(lang_items)
         hlayout.addWidget(self.__lang_dropdown)
 
         vlayout.addSpacing(10)
@@ -170,20 +167,14 @@ class SetupPage(Page):
 
     @override
     def _validate(self) -> None:
-        lang_items: list[str] = [lang[0].capitalize() for lang in SUPPORTED_LANGS]
-
-        self.valid_signal.emit(
-            self.__lang_dropdown.currentIndex() != 0
-            and self.__lang_dropdown.currentText() in lang_items
-            and self.__api_setup.is_valid
-        )
+        self.valid_signal.emit(self.__api_setup.is_valid)
 
     @override
     def apply(self, config: UserConfig) -> None:
         if self.__api_setup.api_key is None:
             raise ValueError("API key is required!")
 
-        config.language = self.__lang_dropdown.currentText()
+        config.language = self.__lang_dropdown.getCurrentValue()
         config.provider_preference = ProviderPreference[
             self.__source_dropdown.currentText()
         ]

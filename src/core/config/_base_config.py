@@ -2,167 +2,116 @@
 Copyright (c) Cutleast
 """
 
+from __future__ import annotations
+
 import logging
-import os
-from typing import Any, Callable, Iterable, TypeVar, overload
+from abc import abstractmethod
+from pathlib import Path
+from typing import Any, TypeVar
 
 import jstyleson as json
+from pydantic import BaseModel, ConfigDict
 
-from core.utilities.path import Path
-from core.utilities.qt_res_provider import load_json_resource
+from core.utilities.cache import cache
 
-T = TypeVar("T")
+T = TypeVar("T", bound="BaseConfig")
 
 
-class BaseConfig:
+class BaseConfig(BaseModel):
     """
     Base class for app configurations.
     """
 
-    log: logging.Logger = logging.getLogger("BaseConfig")
+    model_config = ConfigDict(validate_assignment=True)
 
     _config_path: Path
-    _default_settings: dict[str, Any]
-    _settings: dict[str, Any]
 
-    def __init__(self, config_path: Path, config_name: str):
-        self._config_path = config_path
-
-        # Load default config values from resources
-        self._default_settings = load_json_resource(f":/{config_name}/config.json")
-
-        self.load()
-
-    def get_default_value(self, value_name: str) -> Any:
+    @classmethod
+    def load(cls: type[T], user_config_path: Path) -> T:
         """
-        Returns the default value of a configuration value.
+        Loads configuration.
 
         Args:
-            value_name (str): Name of the configuration value
+            user_config_path (Path): Path to folder with user configuration.
 
         Returns:
-            Any: Default value of the configuration value
+            T: Loaded configuration.
         """
 
-        return self._default_settings[value_name]
+        user_config_file_path: Path = user_config_path / cls.get_config_name()
 
-    def load(self) -> None:
-        """
-        Loads configuration from JSON File, if existing.
-        """
+        cls._get_logger().info(
+            f"Loading configuration from '{user_config_file_path}'..."
+        )
 
-        if self._config_path.is_file():
-            with self._config_path.open("r", encoding="utf8") as file:
-                self._settings = self._default_settings | json.load(file)
+        config_data: dict[str, Any] = {}
+        if user_config_file_path.is_file():
+            config_data = json.loads(user_config_file_path.read_text(encoding="utf8"))
 
-            for key in self._settings:
-                if key not in self._default_settings:
-                    self.log.warning(
-                        f"Unknown setting detected in {self._config_path.name}: {key!r}"
-                    )
-        else:
-            self._settings = self._default_settings.copy()
+        try:
+            config: T = cls.model_validate(config_data)
+        except Exception as ex:
+            cls._get_logger().error(
+                f"Failed to process user configuration: {ex}", exc_info=ex
+            )
+            config = cls.model_validate({})
+
+        config._config_path = user_config_path
+
+        cls._get_logger().info("Configuration loaded.")
+        config.print_settings_to_log()
+
+        return config
 
     def save(self) -> None:
         """
-        Saves non-default configuration values to JSON File, creating it if not existing.
+        Saves configuration.
         """
 
-        changed_values: dict[str, Any] = {
-            key: item
-            for key, item in self._settings.items()
-            if item != self._default_settings.get(key)
-        }
+        user_config_file_path: Path = self._config_path / self.get_config_name()
 
-        # Create config folder if it doesn't exist
-        os.makedirs(self._config_path.parent, exist_ok=True)
+        self._get_logger().info(f"Saving configuration to '{user_config_file_path}'...")
 
-        # Only save config file if there are changes
-        if changed_values:
-            with self._config_path.open("w", encoding="utf8") as file:
-                json.dump(changed_values, file, indent=4, ensure_ascii=False)
-
-        # Delete config file if there are no changes
-        elif self._config_path.is_file():
-            os.remove(self._config_path)
-
-    @overload
-    @staticmethod
-    def validate_value(
-        value: T, validator: Iterable[T], may_be_none: bool = False
-    ) -> None:
-        """
-        Validates a value by checking it against an iterable of valid values.
-
-        Args:
-            value (T): Value to validate.
-            validator (Iterable[T]): Iterable containing valid values.
-            may_be_none (bool, optional): Whether the value can be None.
-
-        Raises:
-            ValueError: When the value is not a valid value.
-        """
-
-    @overload
-    @staticmethod
-    def validate_value(
-        value: T, validator: Callable[[T], bool], may_be_none: bool = False
-    ) -> None:
-        """
-        Validates a value by checking it against a validator function.
-
-        Args:
-            value (T): Value to validate.
-            validator (Callable[[T], bool]):
-                A function that returns True if the value is valid.
-            may_be_none (bool, optional): Whether the value can be None.
-
-        Raises:
-            ValueError: When the value is not a valid value.
-        """
-
-    @staticmethod
-    def validate_value(
-        value: T,
-        validator: Iterable[T] | Callable[[T], bool],
-        may_be_none: bool = False,
-    ) -> None:
-        if value is None and may_be_none:
-            return
-
-        if callable(validator):
-            if not validator(value):
-                raise ValueError(f"{value!r} is not a valid value!")
+        user_config_file_path.parent.mkdir(parents=True, exist_ok=True)
+        serialized: str = self.model_dump_json(
+            indent=4, by_alias=True, exclude_defaults=True
+        )
+        if serialized != r"{}":
+            user_config_file_path.write_text(serialized, encoding="utf8")
+            self._get_logger().info("Configuration saved.")
         else:
-            if value not in list(validator):
-                raise ValueError(f"{value!r} is not a valid value!")
+            user_config_file_path.unlink(missing_ok=True)
+            self._get_logger().info("Deleted empty configuration file.")
 
     @staticmethod
-    def validate_type(value: Any, type: type, may_be_none: bool = False) -> None:
+    @abstractmethod
+    def get_config_name() -> str:
         """
-        Validates if value is of a certain type.
+        Returns the name of the configuration file.
 
-        Args:
-            value (Any): Value to validate.
-            type (type): Type the value should have.
-            may_be_none (bool, optional): Whether the value can be None.
-
-        Raises:
-            TypeError: When the value is not of the specified type.
+        Returns:
+            str: Name of the configuration file.
         """
 
-        if value is None and may_be_none:
-            return
+    @classmethod
+    @cache
+    def _get_logger(cls) -> logging.Logger:
+        """
+        Returns the config's logger.
 
-        if not isinstance(value, type):
-            raise TypeError(f"Value must be of type {type}!")
+        Returns:
+            logging.Logger: Config's logger.
+        """
+
+        return logging.getLogger(cls.__name__)
 
     def print_settings_to_log(self) -> None:
         """
         Prints current settings to log.
         """
 
-        self.log.info("Current Configuration:")
-        indent: int = max(len(key) for key in self._settings)
-        for key, item in self._settings.items():
-            self.log.info(f"{key.rjust(indent, ' ')} = {item!r}")
+        self._get_logger().info("Current Configuration:")
+        keys: list[str] = list(self.__pydantic_fields__.keys())
+        indent: int = max(len(key) + 1 for key in keys)
+        for key in keys:
+            self._get_logger().info(f"{key.rjust(indent)} = {getattr(self, key)!r}")

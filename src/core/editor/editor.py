@@ -153,7 +153,7 @@ class Editor(QObject):
         ]
         translator: Translator = AppContext.get_app().translator
         src: str = "English"
-        dst: str = AppContext.get_app().user_config.language
+        dst: str = AppContext.get_app().user_config.language.id
         result: dict[str, str] = translator.mass_translate(texts, src, dst)
 
         for string in strings:

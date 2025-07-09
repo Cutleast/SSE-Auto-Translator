@@ -3,7 +3,7 @@ Copyright (c) Cutleast
 """
 
 from enum import Enum
-from typing import Optional, Self, TypeVar, overload
+from typing import Any, Optional, Self, TypeVar, overload, override
 
 T = TypeVar("T")
 
@@ -27,3 +27,24 @@ class BaseEnum(Enum):
             return cls[name]
         except KeyError:
             return default
+
+    @overload
+    @classmethod
+    def get_by_value(cls, value: Any, /) -> Optional[Self]: ...
+
+    @overload
+    @classmethod
+    def get_by_value(cls, value: Any, default: T, /) -> Self | T: ...
+
+    @classmethod
+    def get_by_value(
+        cls, value: Any, default: Optional[T] = None, /
+    ) -> Optional[Self | T]:
+        try:
+            return cls(value)
+        except KeyError:
+            return default
+
+    @override
+    def __repr__(self) -> str:
+        return self.name

@@ -114,7 +114,7 @@ class AppTest(BaseTest):
         if AppContext.has_app() and not init:
             return AppContext.get_app().app_config
 
-        return AppConfig(self.data_path() / "data" / "app")
+        return AppConfig.load(self.data_path() / "data")
 
     def user_config(self, init: bool = False) -> UserConfig:
         """
@@ -133,7 +133,7 @@ class AppTest(BaseTest):
         if AppContext.has_app() and not init:
             return AppContext.get_app().user_config
 
-        return UserConfig(self.data_path() / "data" / "user")
+        return UserConfig.load(self.data_path() / "data")
 
     def translator_config(self, init: bool = False) -> TranslatorConfig:
         """
@@ -152,7 +152,7 @@ class AppTest(BaseTest):
         if AppContext.has_app() and not init:
             return AppContext.get_app().translator_config
 
-        return TranslatorConfig(self.data_path() / "data" / "translator")
+        return TranslatorConfig.load(self.data_path() / "data")
 
     def cache(self, init: bool = False) -> Cache:
         """
@@ -248,7 +248,7 @@ class AppTest(BaseTest):
             return AppContext.get_app().database
 
         user_config: UserConfig = self.user_config()
-        language: str = user_config.language
+        language: str = user_config.language.id
         userdb_path: Path = self.tmp_folder() / "user" / "database"
         appdb_path: Path = self.res_path() / "app" / "database"
 

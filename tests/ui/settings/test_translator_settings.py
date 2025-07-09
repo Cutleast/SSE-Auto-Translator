@@ -2,16 +2,18 @@
 Copyright (c) Cutleast
 """
 
-from typing import Any
+from copy import copy
 
 import pytest
-from PySide6.QtWidgets import QCheckBox, QComboBox
+from PySide6.QtWidgets import QCheckBox
 
 from app import App
 from core.config.translator_config import TranslatorConfig
+from core.translator_api.translator_api import TranslatorApi
 from tests.app_test import AppTest
 from tests.utils import Utils
 from ui.settings.translator_settings import TranslatorSettings
+from ui.widgets.enum_dropdown import EnumDropdown
 from ui.widgets.key_entry import KeyEntry
 
 from ..ui_test import UiTest
@@ -22,7 +24,10 @@ class TestTranslatorSettings(UiTest, AppTest):
     Tests `ui.settings.translator_settings.TranslatorSettings`.
     """
 
-    TRANSLATOR_BOX: tuple[str, type[QComboBox]] = "translator_box", QComboBox
+    TRANSLATOR_BOX: tuple[str, type[EnumDropdown[TranslatorApi]]] = (
+        "translator_box",
+        EnumDropdown[TranslatorApi],
+    )
     API_KEY_ENTRY: tuple[str, type[KeyEntry]] = "api_key_entry", KeyEntry
 
     SHOW_CONFIRMATIONS_BOX: tuple[str, type[QCheckBox]] = (
@@ -48,7 +53,7 @@ class TestTranslatorSettings(UiTest, AppTest):
         # given
         translator_config: TranslatorConfig = app_context.translator_config
 
-        translator_box: QComboBox = Utils.get_private_field(
+        translator_box: EnumDropdown[TranslatorApi] = Utils.get_private_field(
             translator_settings, *TestTranslatorSettings.TRANSLATOR_BOX
         )
         api_key_entry: KeyEntry = Utils.get_private_field(
@@ -60,11 +65,11 @@ class TestTranslatorSettings(UiTest, AppTest):
         )
 
         # then
-        assert translator_box.currentText() == translator_config.translator.name
+        assert translator_box.getCurrentValue() == translator_config.translator
         assert api_key_entry.isEnabled() == (
-            translator_config.translator.name == "DeepL"
+            translator_config.translator == TranslatorApi.DeepL
         )
-        assert api_key_entry.text() == translator_config.api_key
+        assert (api_key_entry.text().strip() or None) == translator_config.api_key
 
         assert (
             show_confirmations_box.isChecked()
@@ -80,10 +85,10 @@ class TestTranslatorSettings(UiTest, AppTest):
 
         # given
         translator_config: TranslatorConfig = app_context.translator_config
-        old_config: dict[str, Any] = translator_config._settings.copy()  # type: ignore
+        old_config: TranslatorConfig = copy(translator_config)
 
         # when
         translator_settings.apply(translator_config)
 
         # then
-        assert translator_config._settings == old_config  # type: ignore
+        assert translator_config == old_config

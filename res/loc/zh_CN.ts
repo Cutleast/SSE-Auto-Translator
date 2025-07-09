@@ -116,120 +116,120 @@ You can always disable it later under Help &gt; Fix Windows Path Limit.</source>
 <context>
     <name>AppSettings</name>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="85"/>
+        <location filename="src/ui/settings/app_settings.py" line="86"/>
         <source>Number of newest log files to keep</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="98"/>
+        <location filename="src/ui/settings/app_settings.py" line="95"/>
         <source>Log Level</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="108"/>
+        <location filename="src/ui/settings/app_settings.py" line="101"/>
         <source>App language</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="117"/>
+        <location filename="src/ui/settings/app_settings.py" line="108"/>
         <source>Accent Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="198"/>
+        <location filename="src/ui/settings/app_settings.py" line="189"/>
         <source>Language Detector Confidence</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="73"/>
+        <location filename="src/ui/settings/app_settings.py" line="74"/>
         <source>Basic App Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="124"/>
-        <location filename="src/ui/settings/app_settings.py" line="272"/>
+        <location filename="src/ui/settings/app_settings.py" line="115"/>
+        <location filename="src/ui/settings/app_settings.py" line="263"/>
         <source>Clear Cache (This will reset all mod file states and delete cached API requests!)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="138"/>
+        <location filename="src/ui/settings/app_settings.py" line="129"/>
         <source>Path Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="146"/>
-        <location filename="src/ui/settings/app_settings.py" line="159"/>
+        <location filename="src/ui/settings/app_settings.py" line="137"/>
+        <location filename="src/ui/settings/app_settings.py" line="150"/>
         <source>Default: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="152"/>
+        <location filename="src/ui/settings/app_settings.py" line="143"/>
         <source>Path for Output Mod</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="152"/>
+        <location filename="src/ui/settings/app_settings.py" line="143"/>
         <source> (No Restart Required)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="166"/>
+        <location filename="src/ui/settings/app_settings.py" line="157"/>
         <source>Path for Temporary Folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="167"/>
+        <location filename="src/ui/settings/app_settings.py" line="158"/>
         <source>(for temporary files, will be wiped after exit!)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="175"/>
+        <location filename="src/ui/settings/app_settings.py" line="166"/>
         <source>Defaults to Temporary Folder configured above</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="181"/>
+        <location filename="src/ui/settings/app_settings.py" line="172"/>
         <source>Downloads Path</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="184"/>
+        <location filename="src/ui/settings/app_settings.py" line="175"/>
         <source>Behavior Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="207"/>
+        <location filename="src/ui/settings/app_settings.py" line="198"/>
         <source>Automatically bind to &quot;Mod Manager Download&quot; Buttons on Nexus Mods on Startup</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="209"/>
+        <location filename="src/ui/settings/app_settings.py" line="200"/>
         <source>[EXPERIMENTAL]</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="216"/>
+        <location filename="src/ui/settings/app_settings.py" line="207"/>
         <source>This will automatically bind to Mod Manager downloads and unbind when SSE-AT is closed.
 This feature is considered experimental because a crash might prevent it from unbinding properly.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="224"/>
+        <location filename="src/ui/settings/app_settings.py" line="215"/>
         <source>Enable Spell Checking in Translation Editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="231"/>
+        <location filename="src/ui/settings/app_settings.py" line="222"/>
         <source>Automatically import installed translations into the database</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="243"/>
+        <location filename="src/ui/settings/app_settings.py" line="234"/>
         <source>Automatically create translations for mod files that are entirely covered by installed translations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="257"/>
+        <location filename="src/ui/settings/app_settings.py" line="248"/>
         <source>Show strings when double clicking a mod or mod file in the modlist or a translation in the &quot;Translations&quot; tab</source>
         <translation type="unfinished"></translation>
     </message>
@@ -805,28 +805,28 @@ Depending on the Translator API this can raise unexpected costs.</comment>
 <context>
     <name>Importer</name>
     <message>
-        <location filename="src/core/database/importer.py" line="158"/>
-        <location filename="src/core/database/importer.py" line="263"/>
+        <location filename="src/core/database/importer.py" line="159"/>
+        <location filename="src/core/database/importer.py" line="264"/>
         <source>Processing archive...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/database/importer.py" line="194"/>
+        <location filename="src/core/database/importer.py" line="195"/>
         <source>Extracting files...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/database/importer.py" line="231"/>
+        <location filename="src/core/database/importer.py" line="232"/>
         <source>Copying files...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/database/importer.py" line="290"/>
+        <location filename="src/core/database/importer.py" line="291"/>
         <source>Processing plugins...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/database/importer.py" line="332"/>
+        <location filename="src/core/database/importer.py" line="333"/>
         <source>Processing DSD files...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -834,41 +834,39 @@ Depending on the Translator API this can raise unexpected costs.</comment>
 <context>
     <name>InstancePage</name>
     <message>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="51"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="45"/>
         <source>Mod Manager</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="43"/>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="57"/>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="125"/>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="132"/>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="142"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="50"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="120"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="130"/>
         <source>Please select...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="61"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="54"/>
         <source>Modinstance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="64"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="57"/>
         <source>Instance Profile (MO2)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="72"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="65"/>
         <source>Path to Portable Instance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="84"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="79"/>
         <source>Mod Instance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/instance_page.py" line="92"/>
+        <location filename="src/ui/startup_dialog/instance_page.py" line="87"/>
         <source>On this page you select a Modinstance to load from a Mod Manager. You can always change the selected modinstance and mod manager under Settings &gt; User Settings.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -909,17 +907,17 @@ Depending on the Translator API this can raise unexpected costs.</comment>
 <context>
     <name>JsonDataView</name>
     <message>
-        <location filename="src/ui/widgets/json_data_view/json_data_view.py" line="45"/>
+        <location filename="src/ui/widgets/json_data_view.old/json_data_view.py" line="45"/>
         <source>Expand all</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/json_data_view/json_data_view.py" line="51"/>
+        <location filename="src/ui/widgets/json_data_view.old/json_data_view.py" line="51"/>
         <source>Collapse all</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/json_data_view/json_data_view.py" line="59"/>
+        <location filename="src/ui/widgets/json_data_view.old/json_data_view.py" line="59"/>
         <source>Copy</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1558,69 +1556,64 @@ Click on &quot;Show Details&quot; to view used filter.</source>
 <context>
     <name>SetupPage</name>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="156"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="154"/>
         <source>Initial Setup</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="160"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="158"/>
         <source>On this page you setup basic settings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="62"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="63"/>
         <source>Choose Game Language:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="66"/>
-        <source>Please select...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="77"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="75"/>
         <source>Source</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="92"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="90"/>
         <source>Use global Masterlist from GitHub Repository (recommended)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="99"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="97"/>
         <source>Enabled File Types</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="106"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="104"/>
         <source>Enable Interface Files (Data/Interface/*.txt)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="112"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="110"/>
         <source>Enable Papyrus Scripts (Data/Scripts/*.pex)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="114"/>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="122"/>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="130"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="112"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="120"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="128"/>
         <source>[EXPERIMENTAL]</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="120"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="118"/>
         <source>Enable Textures (Data/Textures/*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="128"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="126"/>
         <source>Enable Sound Files (Data/Sound/*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/setup_page.py" line="137"/>
+        <location filename="src/ui/startup_dialog/setup_page.py" line="135"/>
         <source>Nexus Mods API Key</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2078,7 +2071,7 @@ Click on &quot;Show Details&quot; to view used filter.</source>
     </message>
     <message>
         <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="189"/>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="278"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="280"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2093,37 +2086,37 @@ Click on &quot;Show Details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="281"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="283"/>
         <source>Are you sure you want to cancel? All changes will be lost!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="286"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="288"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="287"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="289"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="314"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="316"/>
         <source>String was modified</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="319"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="321"/>
         <source>String was modified. Do you want to save it before switching to another string?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="326"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="328"/>
         <source>Don&apos;t save and continue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="329"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="331"/>
         <source>Save and continue</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2131,17 +2124,17 @@ Click on &quot;Show Details&quot; to view used filter.</source>
 <context>
     <name>TranslatorSettings</name>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="49"/>
+        <location filename="src/ui/settings/translator_settings.py" line="46"/>
         <source>Translator API</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="51"/>
+        <location filename="src/ui/settings/translator_settings.py" line="48"/>
         <source>Translator API Key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/translator_settings.py" line="71"/>
+        <location filename="src/ui/settings/translator_settings.py" line="68"/>
         <source>Ask for confirmation before starting a batch machine translation</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2167,111 +2160,106 @@ Click on &quot;Show Details&quot; to view used filter.</source>
 <context>
     <name>UserSettings</name>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="87"/>
+        <location filename="src/ui/settings/user_settings.py" line="93"/>
         <source>Choose Game Language:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="92"/>
-        <source>Please select...</source>
+        <location filename="src/ui/settings/user_settings.py" line="82"/>
+        <source>Translations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="102"/>
-        <source>Source</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="src/ui/settings/user_settings.py" line="107"/>
+        <location filename="src/ui/settings/user_settings.py" line="96"/>
         <source>Source:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="127"/>
+        <location filename="src/ui/settings/user_settings.py" line="118"/>
         <source>Start API Setup</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="130"/>
-        <location filename="src/ui/settings/user_settings.py" line="314"/>
+        <location filename="src/ui/settings/user_settings.py" line="122"/>
+        <location filename="src/ui/settings/user_settings.py" line="303"/>
         <source>Nexus Mods API Key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="135"/>
+        <location filename="src/ui/settings/user_settings.py" line="128"/>
         <source>Use global Masterlist from GitHub Repository (recommended)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="140"/>
+        <location filename="src/ui/settings/user_settings.py" line="133"/>
         <source>Open Masterlist (in Browser)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="146"/>
+        <location filename="src/ui/settings/user_settings.py" line="139"/>
         <source>Open Translation Author Blacklist...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="151"/>
-        <location filename="src/ui/settings/user_settings.py" line="176"/>
+        <location filename="src/ui/settings/user_settings.py" line="144"/>
+        <location filename="src/ui/settings/user_settings.py" line="167"/>
         <source>Modinstance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="165"/>
+        <location filename="src/ui/settings/user_settings.py" line="156"/>
         <source>Mod Manager</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="178"/>
+        <location filename="src/ui/settings/user_settings.py" line="169"/>
         <source>Instance Profile (MO2)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="197"/>
+        <location filename="src/ui/settings/user_settings.py" line="188"/>
         <source>Path to Portable Instance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="210"/>
+        <location filename="src/ui/settings/user_settings.py" line="199"/>
         <source>Enabled File Types</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="217"/>
+        <location filename="src/ui/settings/user_settings.py" line="206"/>
         <source>Enable Interface Files (Data/Interface/*.txt)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="226"/>
+        <location filename="src/ui/settings/user_settings.py" line="215"/>
         <source>Enable Scripts (Data/Scripts/*.pex)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="228"/>
-        <location filename="src/ui/settings/user_settings.py" line="237"/>
-        <location filename="src/ui/settings/user_settings.py" line="246"/>
+        <location filename="src/ui/settings/user_settings.py" line="217"/>
+        <location filename="src/ui/settings/user_settings.py" line="226"/>
+        <location filename="src/ui/settings/user_settings.py" line="235"/>
         <source>[EXPERIMENTAL]</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="235"/>
+        <location filename="src/ui/settings/user_settings.py" line="224"/>
         <source>Enable Textures (Data/Textures/*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="244"/>
+        <location filename="src/ui/settings/user_settings.py" line="233"/>
         <source>Enable Sound Files (Data/Sound/*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="328"/>
+        <location filename="src/ui/settings/user_settings.py" line="317"/>
         <source>Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/user_settings.py" line="341"/>
+        <location filename="src/ui/settings/user_settings.py" line="330"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>

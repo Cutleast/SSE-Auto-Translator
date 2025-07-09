@@ -49,7 +49,7 @@ class Utilities(QObject):
         matching_files: list[str] = []
 
         TMP_DIR: Path = AppContext.get_app().get_tmp_dir()
-        lang: str = self.user_config.language
+        lang: str = self.user_config.language.id
         PATTERNS: dict[str, bool] = {
             f"**/interface/**/*_{lang}.txt": self.user_config.enable_interface_files,
             "**/scripts/*.pex": self.user_config.enable_scripts,

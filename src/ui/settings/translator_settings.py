@@ -4,11 +4,11 @@ Copyright (c) Cutleast
 
 from typing import override
 
-from PySide6.QtWidgets import QCheckBox, QComboBox, QFormLayout, QLabel, QWidget
+from PySide6.QtWidgets import QCheckBox, QFormLayout, QLabel, QWidget
 
 from core.config.translator_config import TranslatorConfig
-from core.translator_api import AVAILABLE_APIS
-from core.translator_api.translator import Translator
+from core.translator_api.translator_api import TranslatorApi
+from ui.widgets.enum_dropdown import EnumDropdown
 from ui.widgets.key_entry import KeyEntry
 
 from .settings_page import SettingsPage
@@ -21,7 +21,7 @@ class TranslatorSettings(SettingsPage[TranslatorConfig]):
 
     __flayout: QFormLayout
 
-    __translator_box: QComboBox
+    __translator_box: EnumDropdown[TranslatorApi]
     __api_key_entry: KeyEntry
 
     __show_confirmations_box: QCheckBox
@@ -39,13 +39,10 @@ class TranslatorSettings(SettingsPage[TranslatorConfig]):
         self.__init_confirmation_box()
 
     def __init_api_settings(self) -> None:
-        self.__translator_box = QComboBox()
-        self.__translator_box.setEditable(False)
-        self.__translator_box.addItems(
-            [translator.name for translator in AVAILABLE_APIS]
+        self.__translator_box = EnumDropdown(
+            TranslatorApi, self._initial_config.translator
         )
-        self.__translator_box.setCurrentText(self._initial_config.translator.name)
-        self.__translator_box.currentTextChanged.connect(self._on_change)
+        self.__translator_box.currentValueChanged.connect(self._on_change)
         self.__flayout.addRow(self.tr("Translator API"), self.__translator_box)
 
         api_key_label = QLabel(self.tr("Translator API Key"))
@@ -58,10 +55,10 @@ class TranslatorSettings(SettingsPage[TranslatorConfig]):
         self.__flayout.addRow(api_key_label, self.__api_key_entry)
 
         # TODO: Make this dynamic depending on the selected translator
-        self.__translator_box.currentTextChanged.connect(
-            lambda text: (
-                self.__api_key_entry.setEnabled(text == "DeepL"),
-                api_key_label.setEnabled(text == "DeepL"),
+        self.__translator_box.currentValueChanged.connect(
+            lambda translator_api: (
+                self.__api_key_entry.setEnabled(translator_api == TranslatorApi.DeepL),
+                api_key_label.setEnabled(translator_api == TranslatorApi.DeepL),
             )
         )
 
@@ -77,10 +74,6 @@ class TranslatorSettings(SettingsPage[TranslatorConfig]):
 
     @override
     def apply(self, config: TranslatorConfig) -> None:
-        translators: dict[str, type[Translator]] = {
-            translator.name: translator for translator in AVAILABLE_APIS
-        }
-
-        config.translator = translators[self.__translator_box.currentText()]
-        config.api_key = self.__api_key_entry.text()
+        config.translator = self.__translator_box.getCurrentValue()
+        config.api_key = self.__api_key_entry.text().strip() or None
         config.show_confirmation_dialogs = self.__show_confirmations_box.isChecked()

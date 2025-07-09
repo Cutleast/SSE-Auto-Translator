@@ -79,12 +79,12 @@ class StartupDialog(QDialog):
         data_path: Path = AppContext.get_app().data_path
         user_path: Path = data_path / "user"
 
-        user_config = UserConfig(user_path)
+        user_config = UserConfig.create(data_path)
         self.__instance_page.apply(user_config)
         self.__setup_page.apply(user_config)
         user_config.save()
 
-        database_path: Path = user_path / "database" / user_config.language.lower()
+        database_path: Path = user_path / "database" / user_config.language.id
         if not database_path.is_dir():
             os.makedirs(database_path, exist_ok=True)
 

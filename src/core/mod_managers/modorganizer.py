@@ -24,8 +24,6 @@ class ModOrganizer(ModManager):
     Class to load instances and modlists from ModOrganizer 2 instances.
     """
 
-    name = "Mod Organizer 2"
-
     log = logging.getLogger("ModManager.ModOrganizer")
 
     @override

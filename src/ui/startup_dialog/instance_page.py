@@ -10,11 +10,11 @@ from typing import Optional, override
 from PySide6.QtWidgets import QComboBox, QFileDialog, QFormLayout, QLabel
 
 from core.config.user_config import UserConfig
-from core.mod_managers import SUPPORTED_MOD_MANAGERS
 from core.mod_managers.mod_manager import ModManager
 from core.mod_managers.modorganizer import ModOrganizer
 from ui.startup_dialog.page import Page
 from ui.widgets.browse_edit import BrowseLineEdit
+from ui.widgets.enum_dropdown import EnumDropdown
 
 
 class InstancePage(Page):
@@ -25,7 +25,7 @@ class InstancePage(Page):
     __cur_mod_manager: Optional[ModManager] = None
     __cur_modinstance_name: Optional[str] = None
 
-    __mod_manager_dropdown: QComboBox
+    __mod_manager_dropdown: EnumDropdown[ModManager.Type]
     __modinstance_dropdown: QComboBox
     __instance_profile_label: QLabel
     __instance_profile_dropdown: QComboBox
@@ -38,21 +38,14 @@ class InstancePage(Page):
         self._vlayout.addLayout(flayout)
 
         # Mod Manager selection
-        self.__mod_manager_dropdown = QComboBox()
-        self.__mod_manager_dropdown.setEditable(False)
-        self.__mod_manager_dropdown.addItem(self.tr("Please select..."))
-        self.__mod_manager_dropdown.addItems(
-            [mod_manager.name for mod_manager in SUPPORTED_MOD_MANAGERS]
-        )
-
-        self.__mod_manager_dropdown.currentTextChanged.connect(
+        self.__mod_manager_dropdown = EnumDropdown(ModManager.Type)
+        self.__mod_manager_dropdown.currentValueChanged.connect(
             self.__on_mod_manager_select
         )
         flayout.addRow(self.tr("Mod Manager"), self.__mod_manager_dropdown)
 
         # Modinstance Selection
         self.__modinstance_dropdown = QComboBox()
-        self.__modinstance_dropdown.setDisabled(True)
         self.__modinstance_dropdown.setEditable(False)
         self.__modinstance_dropdown.addItem(self.tr("Please select..."))
         self.__modinstance_dropdown.currentTextChanged.connect(
@@ -76,6 +69,8 @@ class InstancePage(Page):
         self.__instance_path_entry.setDisabled(True)
         self.__instance_path_entry.textChanged.connect(self.__on_path_change)
         flayout.addRow(self.__instance_path_label, self.__instance_path_entry)
+
+        self.__on_mod_manager_select(self.__mod_manager_dropdown.getCurrentValue())
 
     @override
     def _get_title(self) -> str:
@@ -107,26 +102,19 @@ class InstancePage(Page):
 
     @override
     def apply(self, config: UserConfig) -> None:
-        mod_managers: dict[str, type[ModManager]] = {
-            mod_manager.name: mod_manager for mod_manager in SUPPORTED_MOD_MANAGERS
-        }
-
-        config.mod_manager = mod_managers[self.__mod_manager_dropdown.currentText()]
+        config.mod_manager = ModManager.Type[self.__mod_manager_dropdown.currentText()]
         config.modinstance = self.__modinstance_dropdown.currentText()
-        config.instance_profile = self.__instance_profile_dropdown.currentText()
+        config.instance_profile = (
+            self.__instance_profile_dropdown.currentText().strip() or None
+        )
         config.instance_path = (
             Path(self.__instance_path_entry.text())
             if self.__instance_path_entry.text()
             else None
         )
 
-    def __on_mod_manager_select(self, mod_manager: str) -> None:
-        if mod_manager != self.tr("Please select..."):
-            self.__cur_mod_manager = SUPPORTED_MOD_MANAGERS[
-                self.__mod_manager_dropdown.currentIndex() - 1
-            ]()
-        else:
-            self.__cur_mod_manager = None
+    def __on_mod_manager_select(self, mod_manager: ModManager.Type) -> None:
+        self.__cur_mod_manager = mod_manager.get_mod_manager_class()()
 
         self.__modinstance_dropdown.clear()
         self.__modinstance_dropdown.addItem(self.tr("Please select..."))

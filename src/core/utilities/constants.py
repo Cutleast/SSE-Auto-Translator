@@ -99,25 +99,3 @@ DSD_FILE_PATTERN: str = "**/SKSE/Plugins/DynamicStringDistributor/*/*.json"
 """
 The glob pattern for DSD files.
 """
-
-# Supported languages
-SUPPORTED_LANGS: list[tuple[str, str]] = [
-    ("chinese", "zh_CN"),
-    ("french", "fr_FR"),
-    ("german", "de_DE"),
-    ("italian", "it_IT"),
-    ("japanese", "jp_JP"),
-    ("korean", "ko_KR"),
-    ("polish", "pl_PL"),
-    ("portuguese", "pt_BR"),
-    ("russian", "ru_RU"),
-    ("spanish", "es_ES"),
-]
-"""
-A list of supported languages for the game.
-"""
-
-SUPPORTED_LOCALES: list[str] = ["de_DE", "en_US", "ru_RU", "zh_CN"]
-"""
-A list of locales that are available for this app.
-"""

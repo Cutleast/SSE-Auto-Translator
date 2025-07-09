@@ -59,7 +59,7 @@ class Scanner(QObject):
         self.masterlist = AppContext.get_app().masterlist
         self.detector = LangDetector(
             self.app_config.detector_confidence,
-            getattr(Language, self.user_config.language.upper()),
+            getattr(Language, self.user_config.language.id.upper()),
         )
 
     def run_basic_scan(
@@ -270,7 +270,7 @@ class Scanner(QObject):
             self.provider.get_translations(
                 mod_id,
                 modfile.name,
-                self.user_config.language,
+                self.user_config.language.id,
                 self.user_config.author_blacklist,
             )
         )

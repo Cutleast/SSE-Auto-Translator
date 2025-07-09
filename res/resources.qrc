@@ -22,11 +22,6 @@
         <file>icons/plugin.svg</file>
         <file>icons/scan_online.svg</file>
 
-        <!-- Default Config Files -->
-        <file>app/config.json</file>
-        <file>translator/config.json</file>
-        <file>user/config.json</file>
-
         <!-- Localisation Files -->
         <file>loc/de_DE.qm</file>
         <file>loc/ru_RU.qm</file>

@@ -2,6 +2,7 @@
 Copyright (c) Cutleast
 """
 
+from pathlib import Path
 from typing import override
 
 from PySide6.QtWidgets import (
@@ -24,11 +25,10 @@ from core.mod_managers import SUPPORTED_MOD_MANAGERS
 from core.mod_managers.mod_manager import ModManager
 from core.mod_managers.modorganizer import ModOrganizer
 from core.translation_provider.provider_preference import ProviderPreference
-from core.utilities.constants import SUPPORTED_LANGS
-from core.utilities.path import Path
+from core.utilities.game_language import GameLanguage
 from ui.widgets.api_setup import ApiSetup
 from ui.widgets.browse_edit import BrowseLineEdit
-from ui.widgets.completion_box import CompletionBox
+from ui.widgets.enum_dropdown import EnumDropdown
 from ui.widgets.key_entry import KeyEntry
 from ui.widgets.link_button import LinkButton
 
@@ -43,14 +43,13 @@ class UserSettings(SettingsPage[UserConfig]):
 
     __vlayout: QVBoxLayout
 
-    __lang_box: CompletionBox
-
+    __lang_box: EnumDropdown[GameLanguage]
     __source_label: QLabel
-    __source_box: QComboBox
+    __source_box: EnumDropdown[ProviderPreference]
     __api_key_entry: KeyEntry
     __masterlist_box: QCheckBox
 
-    __mod_manager_box: QComboBox
+    __mod_manager_box: EnumDropdown[ModManager.Type]
     __modinstance_box: QComboBox
     __instance_profile_label: QLabel
     __instance_profile_box: QComboBox
@@ -73,50 +72,42 @@ class UserSettings(SettingsPage[UserConfig]):
         self.__vlayout = QVBoxLayout()
         scroll_widget.setLayout(self.__vlayout)
 
-        self.__init_language_setting()
-        self.__init_source_settings()
+        self.__init_translations_settings()
         self.__init_instance_settings()
         self.__init_file_type_settings()
 
         self.__author_blacklist = self._initial_config.author_blacklist.copy()
 
-    def __init_language_setting(self) -> None:
-        hlayout = QHBoxLayout()
-        self.__vlayout.addLayout(hlayout)
+    def __init_translations_settings(self) -> None:
+        translations_group = QGroupBox(self.tr("Translations"))
+        self.__vlayout.addWidget(translations_group)
+        translations_flayout = QFormLayout()
+        translations_group.setLayout(translations_flayout)
 
-        lang_label = QLabel("*" + self.tr("Choose Game Language:"))
-        hlayout.addWidget(lang_label)
-
-        self.__lang_box = CompletionBox()
+        self.__lang_box = EnumDropdown(GameLanguage, self._initial_config.language)
         self.__lang_box.installEventFilter(self)
-        self.__lang_box.setPlaceholderText(self.tr("Please select..."))
-        lang_items = [lang[0].capitalize() for lang in SUPPORTED_LANGS]
-        self.__lang_box.addItems(lang_items)
-        self.__lang_box.setCurrentText(self._initial_config.language)
-        self.__lang_box.currentTextChanged.connect(self.__on_lang_change)
-        self.__lang_box.currentTextChanged.connect(self._on_change)
-        self.__lang_box.currentTextChanged.connect(self._on_restart_required)
-        hlayout.addWidget(self.__lang_box)
-
-    def __init_source_settings(self) -> None:
-        source_group = QGroupBox(self.tr("Source"))
-        self.__vlayout.addWidget(source_group)
-        source_flayout = QFormLayout()
-        source_group.setLayout(source_flayout)
+        self.__lang_box.currentValueChanged.connect(self.__on_lang_change)
+        self.__lang_box.currentValueChanged.connect(self._on_change)
+        self.__lang_box.currentValueChanged.connect(self._on_restart_required)
+        translations_flayout.addRow(
+            "*" + self.tr("Choose Game Language:"), self.__lang_box
+        )
 
         self.__source_label = QLabel("*" + self.tr("Source:"))
-        self.__source_label.setEnabled(self._initial_config.language == "French")
-
-        self.__source_box = QComboBox()
-        self.__source_box.installEventFilter(self)
-        self.__source_box.addItems(
-            [preference.name for preference in ProviderPreference]
+        self.__source_label.setEnabled(
+            self._initial_config.language == GameLanguage.French
         )
-        self.__source_box.setCurrentText(self._initial_config.provider_preference.name)
-        self.__source_box.currentTextChanged.connect(self._on_change)
-        self.__source_box.currentTextChanged.connect(self._on_restart_required)
-        self.__source_box.setEnabled(self._initial_config.language == "French")
-        source_flayout.addRow(self.__source_label, self.__source_box)
+
+        self.__source_box = EnumDropdown(
+            ProviderPreference, self._initial_config.provider_preference
+        )
+        self.__source_box.installEventFilter(self)
+        self.__source_box.currentValueChanged.connect(self._on_change)
+        self.__source_box.currentValueChanged.connect(self._on_restart_required)
+        self.__source_box.setEnabled(
+            self._initial_config.language == GameLanguage.French
+        )
+        translations_flayout.addRow(self.__source_label, self.__source_box)
 
         api_key_hlayout = QHBoxLayout()
         self.__api_key_entry = KeyEntry()
@@ -127,7 +118,9 @@ class UserSettings(SettingsPage[UserConfig]):
         api_setup_button = QPushButton(self.tr("Start API Setup"))
         api_setup_button.clicked.connect(self.__start_api_setup)
         api_key_hlayout.addWidget(api_setup_button)
-        source_flayout.addRow("*" + self.tr("Nexus Mods API Key"), api_key_hlayout)
+        translations_flayout.addRow(
+            "*" + self.tr("Nexus Mods API Key"), api_key_hlayout
+        )
 
         self.__masterlist_box = QCheckBox()
         self.__masterlist_box.setText(
@@ -139,13 +132,13 @@ class UserSettings(SettingsPage[UserConfig]):
             "https://github.com/Cutleast/SSE-Auto-Translator/tree/master/masterlists",
             self.tr("Open Masterlist (in Browser)"),
         )
-        source_flayout.addRow(self.__masterlist_box, open_masterlist_button)
+        translations_flayout.addRow(self.__masterlist_box, open_masterlist_button)
 
         author_blacklist_button = QPushButton(
             self.tr("Open Translation Author Blacklist...")
         )
         author_blacklist_button.clicked.connect(self.__open_author_blacklist)
-        source_flayout.addRow(author_blacklist_button)
+        translations_flayout.addRow(author_blacklist_button)
 
     def __init_instance_settings(self) -> None:
         instance_group = QGroupBox(self.tr("Modinstance"))
@@ -153,21 +146,19 @@ class UserSettings(SettingsPage[UserConfig]):
         instance_flayout = QFormLayout()
         instance_group.setLayout(instance_flayout)
 
-        self.__mod_manager_box = QComboBox()
-        self.__mod_manager_box.installEventFilter(self)
-        self.__mod_manager_box.addItems(
-            [manager.name for manager in SUPPORTED_MOD_MANAGERS]
+        self.__mod_manager_box = EnumDropdown(
+            ModManager.Type, self._initial_config.mod_manager
         )
-        self.__mod_manager_box.setCurrentText(self._initial_config.mod_manager.name)
-        self.__mod_manager_box.currentIndexChanged.connect(self.__on_mod_manager_select)
-        self.__mod_manager_box.currentTextChanged.connect(self._on_change)
-        self.__mod_manager_box.currentTextChanged.connect(self._on_restart_required)
+        self.__mod_manager_box.installEventFilter(self)
+        self.__mod_manager_box.currentValueChanged.connect(self.__on_mod_manager_select)
+        self.__mod_manager_box.currentValueChanged.connect(self._on_change)
+        self.__mod_manager_box.currentValueChanged.connect(self._on_restart_required)
         instance_flayout.addRow("*" + self.tr("Mod Manager"), self.__mod_manager_box)
 
         self.__modinstance_box = QComboBox()
         self.__modinstance_box.installEventFilter(self)
         self.__modinstance_box.addItems(
-            self._initial_config.mod_manager().get_instances()
+            self._initial_config.mod_manager.get_mod_manager_class()().get_instances()
         )
         self.__modinstance_box.setCurrentText(self._initial_config.modinstance)
         self.__modinstance_box.currentTextChanged.connect(self.__on_instance_select)
@@ -179,12 +170,12 @@ class UserSettings(SettingsPage[UserConfig]):
         self.__instance_profile_box = QComboBox()
         self.__instance_profile_box.installEventFilter(self)
         self.__instance_profile_box.addItems(
-            self._initial_config.mod_manager().get_instance_profiles(
+            self._initial_config.mod_manager.get_mod_manager_class()().get_instance_profiles(
                 self._initial_config.modinstance, self._initial_config.instance_path
             )
         )
         self.__instance_profile_box.setCurrentText(
-            self._initial_config.instance_profile
+            self._initial_config.instance_profile or ""
         )
         self.__instance_profile_box.currentTextChanged.connect(self._on_change)
         self.__instance_profile_box.currentTextChanged.connect(
@@ -198,9 +189,7 @@ class UserSettings(SettingsPage[UserConfig]):
         self.__instance_path_entry = BrowseLineEdit()
         self.__instance_path_entry.setFileMode(QFileDialog.FileMode.Directory)
         if self._initial_config.instance_path:
-            self.__instance_path_entry.setText(
-                str(self._initial_config.instance_path.normalize())
-            )
+            self.__instance_path_entry.setText(str(self._initial_config.instance_path))
         self.__instance_path_entry.textChanged.connect(self.__on_instance_path_change)
         self.__instance_path_entry.textChanged.connect(self._on_change)
         self.__instance_path_entry.textChanged.connect(self._on_restart_required)
@@ -250,17 +239,17 @@ class UserSettings(SettingsPage[UserConfig]):
         self.__enable_sound_files_box.stateChanged.connect(self._on_change)
         filetypes_vlayout.addWidget(self.__enable_sound_files_box)
 
-    def __on_lang_change(self, lang: str) -> None:
-        self.__source_label.setEnabled(lang == "French")
-        self.__source_box.setEnabled(lang == "French")
+    def __on_lang_change(self, lang: GameLanguage) -> None:
+        self.__source_label.setEnabled(lang == GameLanguage.French)
+        self.__source_box.setEnabled(lang == GameLanguage.French)
 
-        if lang == "French":
-            self.__source_box.setCurrentText(ProviderPreference.PreferNexusMods.name)
+        if lang == GameLanguage.French:
+            self.__source_box.setCurrentValue(ProviderPreference.PreferNexusMods)
         else:
-            self.__source_box.setCurrentText(ProviderPreference.OnlyNexusMods.name)
+            self.__source_box.setCurrentValue(ProviderPreference.OnlyNexusMods)
 
-    def __on_mod_manager_select(self, index: int) -> None:
-        mod_manager: ModManager = SUPPORTED_MOD_MANAGERS[index]()
+    def __on_mod_manager_select(self, mod_manager_type: ModManager.Type) -> None:
+        mod_manager: ModManager = mod_manager_type.get_mod_manager_class()()
 
         self.__modinstance_box.clear()
         instances: list[str] = mod_manager.get_instances()
@@ -346,26 +335,23 @@ class UserSettings(SettingsPage[UserConfig]):
 
     @override
     def apply(self, config: UserConfig) -> None:
-        mod_managers: dict[str, type[ModManager]] = {
-            mod_manager.name: mod_manager for mod_manager in SUPPORTED_MOD_MANAGERS
-        }
-
-        config.language = self.__lang_box.currentText()
+        config.language = self.__lang_box.getCurrentValue()
         config.api_key = self.__api_key_entry.text()
-        config.mod_manager = mod_managers[self.__mod_manager_box.currentText()]
+        config.mod_manager = self.__mod_manager_box.getCurrentValue()
         config.modinstance = self.__modinstance_box.currentText()
         config.use_masterlist = self.__masterlist_box.isChecked()
         config.instance_profile = (
             self.__instance_profile_box.currentText()
-            if self.__instance_profile_box.currentText() != "Default"
-            else ""
+            if self.__instance_profile_box.currentText()
+            and self.__instance_profile_box.currentText() != "Default"
+            else None
         )
         config.instance_path = (
             Path(self.__instance_path_entry.text())
             if self.__instance_path_entry.text()
             else None
         )
-        config.provider_preference = ProviderPreference[self.__source_box.currentText()]
+        config.provider_preference = self.__source_box.getCurrentValue()
         config.author_blacklist = self.__author_blacklist
         config.enable_interface_files = self.__enable_interface_files_box.isChecked()
         config.enable_scripts = self.__enable_scripts_box.isChecked()

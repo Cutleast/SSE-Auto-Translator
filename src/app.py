@@ -142,7 +142,7 @@ class App(QApplication):
         Initializes the application.
         """
 
-        self.app_config = AppConfig(self.data_path / "app")
+        self.app_config = AppConfig.load(self.data_path)
 
         log_file: Path = self.log_path / time.strftime(self.app_config.log_file_name)
         self.logger = Logger(
@@ -232,7 +232,7 @@ class App(QApplication):
 
         try:
             masterlist_data: dict[str, dict[str, Any]] = get_masterlist(
-                self.user_config.language
+                self.user_config.language.id
             )
             self.masterlist = Masterlist.from_data(masterlist_data)
             self.log.info("Masterlist loaded.")
@@ -254,9 +254,9 @@ class App(QApplication):
 
         self.log.info("Loading user data...")
 
-        self.user_config = UserConfig(self.data_path / "user")
-        self.translator_config = TranslatorConfig(self.data_path / "translator")
-        self.translator = self.translator_config.translator()
+        self.user_config = UserConfig.load(self.data_path)
+        self.translator_config = TranslatorConfig.load(self.data_path)
+        self.translator = self.translator_config.translator.get_api_class()()
 
         # Backwards-compatibility with portable.txt
         portable_txt_path: Path = self.data_path / "user" / "portable.txt"
@@ -314,7 +314,7 @@ class App(QApplication):
                 self.clean()
                 sys.exit()
 
-        language = self.user_config.language.lower()
+        language = self.user_config.language.id
         userdb_path: Path = self.data_path / "user" / "database" / language
         appdb_path: Path = self.res_path / "app" / "database"
 
@@ -349,7 +349,7 @@ class App(QApplication):
         if ldialog is not None:
             ldialog.updateProgress(text1=self.tr("Loading modinstance..."))
 
-        mod_manager: ModManager = self.user_config.mod_manager()
+        mod_manager: ModManager = self.user_config.mod_manager.get_mod_manager_class()()
         self.mod_instance = mod_manager.load_mod_instance(
             self.user_config.modinstance,
             self.user_config.instance_profile,
@@ -392,10 +392,10 @@ class App(QApplication):
         translator = QTranslator(self)
 
         language: str
-        if self.app_config.language == "System":
+        if self.app_config.language.name == "System":
             language = LocalisationUtils.detect_system_locale() or "en_US"
         else:
-            language = self.app_config.language
+            language = self.app_config.language.value
 
         if language != "en_US":
             translator.load(f":/loc/{language}.qm")

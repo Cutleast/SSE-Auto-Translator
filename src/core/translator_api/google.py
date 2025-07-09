@@ -10,6 +10,7 @@ import googletrans
 from googletrans.client import Translated
 
 from .translator import Translator
+from .translator_api import TranslatorApi
 
 
 class GoogleTranslator(Translator):
@@ -17,7 +18,7 @@ class GoogleTranslator(Translator):
     Class for Google Translator.
     """
 
-    name = "Google Translator"
+    name = TranslatorApi.Google.value
 
     cache: dict[str, str] = {}
 

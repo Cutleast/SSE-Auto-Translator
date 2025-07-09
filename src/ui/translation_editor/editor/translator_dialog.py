@@ -175,7 +175,7 @@ class TranslatorDialog(QWidget):
 
         if self.app_config.use_spell_check:
             self.__translated_entry = SpellCheckEntry(
-                language=self.user_config.language.lower()
+                language=self.user_config.language.id
             )
         else:
             self.__translated_entry = QPlainTextEdit()
@@ -256,7 +256,9 @@ class TranslatorDialog(QWidget):
         """
 
         translated: str = self.translator.translate(
-            self.__current_string.original_string, "English", self.user_config.language
+            self.__current_string.original_string,
+            "English",
+            self.user_config.language.id,
         )
 
         self.__translated_entry.setPlainText(translated)

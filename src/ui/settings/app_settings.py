@@ -9,7 +9,6 @@ from typing import override
 from PySide6.QtCore import QLocale
 from PySide6.QtWidgets import (
     QCheckBox,
-    QComboBox,
     QDoubleSpinBox,
     QFileDialog,
     QFormLayout,
@@ -22,12 +21,14 @@ from PySide6.QtWidgets import (
 
 from app_context import AppContext
 from core.cache.cache import Cache
-from core.config.app_config import AppConfig
+from core.config.app_config import DEFAULT_ACCENT_COLOR, AppConfig
 from core.utilities.filesystem import get_folder_size
+from core.utilities.localisation import Language
 from core.utilities.logger import Logger
 from core.utilities.scale import scale_value
 from ui.widgets.browse_edit import BrowseLineEdit
 from ui.widgets.color_entry import ColorLineEdit
+from ui.widgets.enum_dropdown import EnumDropdown
 
 from .settings_page import SettingsPage
 
@@ -40,8 +41,8 @@ class AppSettings(SettingsPage[AppConfig]):
     __vlayout: QVBoxLayout
 
     __logs_num_box: QSpinBox
-    __log_level_box: QComboBox
-    __app_lang_box: QComboBox
+    __log_level_box: EnumDropdown[Logger.Level]
+    __app_lang_box: EnumDropdown[Language]
     __accent_color_entry: ColorLineEdit
     __clear_cache_button: QPushButton
 
@@ -85,31 +86,21 @@ class AppSettings(SettingsPage[AppConfig]):
             "*" + self.tr("Number of newest log files to keep"), self.__logs_num_box
         )
 
-        self.__log_level_box = QComboBox()
+        self.__log_level_box = EnumDropdown(
+            Logger.Level, self._initial_config.log_level
+        )
         self.__log_level_box.installEventFilter(self)
-        self.__log_level_box.addItems(
-            [loglevel.name.capitalize() for loglevel in Logger.LogLevel]
-        )
-        self.__log_level_box.setCurrentText(
-            self._initial_config.log_level.name.capitalize()
-        )
-        self.__log_level_box.currentTextChanged.connect(self._on_change)
-        self.__log_level_box.currentTextChanged.connect(self._on_restart_required)
+        self.__log_level_box.currentValueChanged.connect(self._on_change)
+        self.__log_level_box.currentValueChanged.connect(self._on_restart_required)
         basic_flayout.addRow("*" + self.tr("Log Level"), self.__log_level_box)
 
-        self.__app_lang_box = QComboBox()
+        self.__app_lang_box = EnumDropdown(Language, self._initial_config.language)
         self.__app_lang_box.installEventFilter(self)
-        self.__app_lang_box.addItem("System")
-        # TODO: Make this dynamic
-        self.__app_lang_box.addItems(["de_DE", "en_US", "ru_RU", "zh_CN"])
-        self.__app_lang_box.setCurrentText(self._initial_config.language)
-        self.__app_lang_box.currentTextChanged.connect(self._on_change)
-        self.__app_lang_box.currentTextChanged.connect(self._on_restart_required)
+        self.__app_lang_box.currentValueChanged.connect(self._on_change)
+        self.__app_lang_box.currentValueChanged.connect(self._on_restart_required)
         basic_flayout.addRow("*" + self.tr("App language"), self.__app_lang_box)
 
-        self.__accent_color_entry = ColorLineEdit(
-            [self._initial_config.get_default_value("accent_color")]
-        )
+        self.__accent_color_entry = ColorLineEdit([DEFAULT_ACCENT_COLOR])
         self.__accent_color_entry.installEventFilter(self)
         self.__accent_color_entry.setText(self._initial_config.accent_color)
         self.__accent_color_entry.textChanged.connect(self._on_change)
@@ -275,8 +266,8 @@ class AppSettings(SettingsPage[AppConfig]):
     @override
     def apply(self, config: AppConfig) -> None:
         config.log_num_of_files = self.__logs_num_box.value()
-        config.log_level = Logger.LogLevel[self.__log_level_box.currentText().upper()]
-        config.language = self.__app_lang_box.currentText()
+        config.log_level = self.__log_level_box.getCurrentValue()
+        config.language = self.__app_lang_box.getCurrentValue()
         config.accent_color = self.__accent_color_entry.text()
         config.detector_confidence = self.__confidence_box.value()
         config.auto_bind_nxm = self.__bind_nxm_checkbox.isChecked()
