@@ -235,12 +235,12 @@ class TranslatorDialog(QWidget):
         if self.changes_pending:
             self.setWindowTitle(
                 f"{self.__current_string.editor_id or self.__current_string.form_id} - "
-                f"{self.__current_string.type} ({current_index+1}/{visible_string_count})*"
+                f"{self.__current_string.type} ({current_index + 1}/{visible_string_count})*"
             )
         else:
             self.setWindowTitle(
                 f"{self.__current_string.editor_id or self.__current_string.form_id} - "
-                f"{self.__current_string.type} ({current_index+1}/{visible_string_count})"
+                f"{self.__current_string.type} ({current_index + 1}/{visible_string_count})"
             )
 
     def __on_change(self) -> None:
