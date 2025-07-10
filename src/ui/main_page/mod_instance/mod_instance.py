@@ -34,14 +34,17 @@ from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
+from core.mod_instance.state_service import StateService
 from core.plugin_interface import plugin as esp
 from core.scanner.scanner import Scanner
 from core.translation_provider.exceptions import ModNotFoundError
 from core.translation_provider.mod_id import ModId
+from core.translation_provider.nm_api.nxm_handler import NXMHandler
 from core.translation_provider.provider import Provider
 from core.translation_provider.source import Source
 from core.utilities import matches_filter
 from core.utilities.container_utils import join_dicts
+from core.utilities.exe_info import get_current_path
 from ui.downloader.download_list_dialog import DownloadListDialog
 from ui.utilities.tree_widget import are_children_visible
 from ui.widgets.loading_dialog import LoadingDialog
@@ -61,14 +64,20 @@ class ModInstanceWidget(QTreeWidget):
 
     cache: Cache
     database: TranslationDatabase
+    app_config: AppConfig
     user_config: UserConfig
     masterlist: Masterlist
     scanner: Scanner
+    provider: Provider
+    download_manager: DownloadManager
+    nxm_listener: NXMHandler
 
     mod_instance: ModInstance
     """
     Currently loaded mod instance.
     """
+
+    state_service: StateService
 
     __mod_items: dict[Mod, QTreeWidgetItem]
     """
@@ -95,23 +104,38 @@ class ModInstanceWidget(QTreeWidget):
     Optional list of mod file states to filter by.
     """
 
-    def __init__(self) -> None:
+    def __init__(
+        self,
+        cache: Cache,
+        database: TranslationDatabase,
+        app_config: AppConfig,
+        user_config: UserConfig,
+        masterlist: Masterlist,
+        scanner: Scanner,
+        provider: Provider,
+        download_manager: DownloadManager,
+        nxm_listener: NXMHandler,
+        mod_instance: ModInstance,
+        state_service: StateService,
+    ) -> None:
         super().__init__()
+
+        self.cache = cache
+        self.database = database
+        self.app_config = app_config
+        self.user_config = user_config
+        self.masterlist = masterlist
+        self.scanner = scanner
+        self.provider = provider
+        self.download_manager = download_manager
+        self.nxm_listener = nxm_listener
+        self.mod_instance = mod_instance
+        self.state_service = state_service
 
         self.__init_ui()
 
-        AppContext.get_app().ready_signal.connect(self.__post_init)
-
-    def __post_init(self) -> None:
-        self.cache = AppContext.get_app().cache
-        self.database = AppContext.get_app().database
-        self.user_config = AppContext.get_app().user_config
-        self.masterlist = AppContext.get_app().masterlist
-        self.scanner = AppContext.get_app().scanner
-        self.mod_instance = AppContext.get_app().mod_instance
-
         self.database.update_signal.connect(self.update)
-        self.mod_instance.update_signal.connect(self.__update)
+        self.state_service.update_signal.connect(self.__update)
         AppContext.get_app().exit_chain.append(self.__save_modfile_states)
 
         self.__load_mod_instance()
@@ -153,7 +177,7 @@ class ModInstanceWidget(QTreeWidget):
         self.__modfile_items = {}
         self.clear()
 
-        checkstates: dict[ModFile, bool] = self.mod_instance.load_states_from_cache()
+        checkstates: dict[ModFile, bool] = self.state_service.load_states_from_cache()
 
         cur_separator: Optional[QTreeWidgetItem] = None
         for i, mod in enumerate(self.mod_instance.mods):
@@ -375,7 +399,7 @@ class ModInstanceWidget(QTreeWidget):
 
         if isinstance(current_item, Mod) and current_item.mod_id:
             try:
-                url: Optional[str] = AppContext.get_app().provider.get_modpage_url(
+                url: Optional[str] = self.provider.get_modpage_url(
                     current_item.mod_id, source=Source.NexusMods
                 )
                 os.startfile(url)
@@ -642,7 +666,7 @@ class ModInstanceWidget(QTreeWidget):
                     for modfile in current_item.modfiles
                 )
             )
-        ) and AppContext.get_app().app_config.show_strings_on_double_click:
+        ) and self.app_config.show_strings_on_double_click:
             self.show_strings()
         else:
             item.setExpanded(not item.isExpanded())
@@ -657,10 +681,9 @@ class ModInstanceWidget(QTreeWidget):
                 lambda ldialog: self.scanner.run_basic_scan(selected_modfiles, ldialog),
             ).values()
         )
-        self.mod_instance.set_modfile_states(scan_result)
+        self.state_service.set_modfile_states(scan_result)
 
-        app_config: AppConfig = AppContext.get_app().app_config
-        if app_config.auto_import_translations:
+        if self.app_config.auto_import_translations:
             LoadingDialog.run_callable(
                 QApplication.activeModalWidget(),
                 lambda ldialog: self.scanner.import_installed_translations(
@@ -669,7 +692,7 @@ class ModInstanceWidget(QTreeWidget):
             )
 
         ResultDialog(
-            self.mod_instance.get_modfile_state_summary(
+            self.state_service.get_modfile_state_summary(
                 [m for modfiles in selected_modfiles.values() for m in modfiles]
             ),
             QApplication.activeModalWidget(),
@@ -686,22 +709,20 @@ class ModInstanceWidget(QTreeWidget):
                 ),
             ).values()
         )
-        self.mod_instance.set_modfile_states(scan_result)
+        self.state_service.set_modfile_states(scan_result)
 
         ResultDialog(
-            self.mod_instance.get_modfile_state_summary(
+            self.state_service.get_modfile_state_summary(
                 [m for modfiles in selected_modfiles.values() for m in modfiles]
             ),
             QApplication.activeModalWidget(),
         ).exec()
 
     def download_and_install_translations(self) -> None:
-        provider: Provider = AppContext.get_app().provider
-        download_manager: DownloadManager = AppContext.get_app().download_manager
         download_entries: dict[tuple[str, ModId], list[TranslationDownload]] = (
             LoadingDialog.run_callable(
                 QApplication.activeModalWidget(),
-                lambda ldialog: download_manager.collect_available_downloads(
+                lambda ldialog: self.download_manager.collect_available_downloads(
                     self.get_selected_modfiles(), ldialog
                 ),
             )
@@ -709,15 +730,22 @@ class ModInstanceWidget(QTreeWidget):
 
         DownloadListDialog(
             download_entries,
-            provider,
+            self.provider,
             self.database,
-            download_manager,
+            self.download_manager,
+            self.nxm_listener,
             parent=QApplication.activeModalWidget(),
         ).exec()
 
     def build_output(self) -> None:
         output_path: Path = LoadingDialog.run_callable(
-            QApplication.activeModalWidget(), self.database.exporter.build_output_mod
+            QApplication.activeModalWidget(),
+            lambda ldialog: self.database.exporter.build_output_mod(
+                self.app_config.output_path or (get_current_path() / "SSE-AT Output"),
+                self.mod_instance,
+                self.app_config.get_tmp_dir(),
+                ldialog,
+            ),
         )
 
         message_box = QMessageBox()
@@ -750,10 +778,10 @@ class ModInstanceWidget(QTreeWidget):
         result: dict[ModFile, TranslationStatus] = LoadingDialog.run_callable(
             QApplication.activeModalWidget(), self.scanner.run_deep_scan
         )
-        self.mod_instance.set_modfile_states(result)
+        self.state_service.set_modfile_states(result)
 
         ResultDialog(
-            self.mod_instance.get_modfile_state_summary(),
+            self.state_service.get_modfile_state_summary(),
             QApplication.activeModalWidget(),
         ).exec()
 
@@ -793,5 +821,4 @@ class ModInstanceWidget(QTreeWidget):
             for modfile, item in modfile_item.items()
         }
 
-        cache: Cache = AppContext.get_app().cache
-        cache.update_states_cache(modfile_states)
+        self.cache.update_states_cache(modfile_states)

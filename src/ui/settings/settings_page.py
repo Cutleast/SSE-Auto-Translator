@@ -9,6 +9,7 @@ from PySide6.QtCore import QEvent, QObject, Signal
 from PySide6.QtGui import QWheelEvent
 from PySide6.QtWidgets import QComboBox, QDoubleSpinBox, QSpinBox
 
+from core.cache.cache import Cache
 from core.config._base_config import BaseConfig
 from ui.widgets.smooth_scroll_area import SmoothScrollArea
 
@@ -28,10 +29,13 @@ class SettingsPage(SmoothScrollArea, Generic[T]):
 
     _initial_config: T
 
-    def __init__(self, initial_config: T) -> None:
+    cache: Cache
+
+    def __init__(self, initial_config: T, cache: Cache) -> None:
         super().__init__()
 
         self._initial_config = initial_config
+        self.cache = cache
 
         self.setObjectName("transparent")
 

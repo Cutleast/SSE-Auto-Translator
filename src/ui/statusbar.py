@@ -23,14 +23,17 @@ class StatusBar(QStatusBar):
 
     log_signal = Signal(str)
     __logger: Logger
+    __provider: Provider
 
     __log_window: Optional[LogWindow] = None
 
-    def __init__(self) -> None:
+    def __init__(self, logger: Logger, provider: Provider) -> None:
         super().__init__()
 
-        self.__logger = AppContext.get_app().logger
+        self.__logger = logger
         self.__logger.set_callback(self.log_signal.emit)
+
+        self.__provider = provider
 
         self.status_label = QLabel()
         self.status_label.setObjectName("protocol")
@@ -73,9 +76,6 @@ class StatusBar(QStatusBar):
         open_log_button.clicked.connect(self.__open_log_window)
         self.addPermanentWidget(open_log_button)
 
-        AppContext.get_app().ready_signal.connect(self.__post_init)
-
-    def __post_init(self) -> None:
         AppContext.get_app().timer_signal.connect(self.update)
 
     def __open_log_window(self) -> None:
@@ -91,8 +91,7 @@ class StatusBar(QStatusBar):
         Updates status labels and API limit label.
         """
 
-        provider: Provider = AppContext.get_app().provider
-        rem_hreq, rem_dreq = provider.get_remaining_requests()
+        rem_hreq, rem_dreq = self.__provider.get_remaining_requests()
 
         self.api_label.setText(
             self.tr("API: Hourly: {0} | Daily: {1}").format(rem_hreq, rem_dreq)

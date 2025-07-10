@@ -16,7 +16,6 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from app_context import AppContext
 from core.cache.cache import Cache
 from core.translation_provider.nm_api.nm_api import NexusModsApi
 
@@ -32,10 +31,8 @@ class ApiSetup(QWidget):
     is_valid: bool = False
     api_key: Optional[str] = None
 
-    def __init__(self) -> None:
+    def __init__(self, cache: Cache) -> None:
         super().__init__()
-
-        cache: Cache = AppContext.get_app().cache
 
         vlayout = QVBoxLayout()
         vlayout.setAlignment(Qt.AlignmentFlag.AlignTop)

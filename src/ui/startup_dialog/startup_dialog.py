@@ -14,6 +14,7 @@ from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QDialog, QVBoxLayout, QWidget
 
 from app_context import AppContext
+from core.cache.cache import Cache
 from core.config.user_config import UserConfig
 from ui.widgets.stacked_widget import StackedWidget
 
@@ -29,14 +30,18 @@ class StartupDialog(QDialog):
 
     log: logging.Logger = logging.getLogger("StartupDialog")
 
+    cache: Cache
+
     __vlayout: QVBoxLayout
     __page_widget: StackedWidget
     __introduction_page: IntroductionPage
     __setup_page: SetupPage
     __instance_page: InstancePage
 
-    def __init__(self, parent: Optional[QWidget] = None) -> None:
+    def __init__(self, cache: Cache, parent: Optional[QWidget] = None) -> None:
         super().__init__(parent)
+
+        self.cache = cache
 
         # Configure window
         self.setWindowFlag(Qt.WindowType.Window, True)
@@ -58,17 +63,17 @@ class StartupDialog(QDialog):
         self.__page_widget.setObjectName("transparent")
         self.__vlayout.addWidget(self.__page_widget, 1)
 
-        self.__introduction_page = IntroductionPage()
+        self.__introduction_page = IntroductionPage(self.cache)
         self.__introduction_page.prev_signal.connect(self.reject)
         self.__introduction_page.next_signal.connect(self.__page_widget.slideInNext)
         self.__page_widget.addWidget(self.__introduction_page)
 
-        self.__setup_page = SetupPage()
+        self.__setup_page = SetupPage(self.cache)
         self.__setup_page.prev_signal.connect(self.__page_widget.slideInPrev)
         self.__setup_page.next_signal.connect(self.__page_widget.slideInNext)
         self.__page_widget.addWidget(self.__setup_page)
 
-        self.__instance_page = InstancePage()
+        self.__instance_page = InstancePage(self.cache)
         self.__instance_page.prev_signal.connect(self.__page_widget.slideInPrev)
         self.__instance_page.next_signal.connect(self.finish)
         self.__page_widget.addWidget(self.__instance_page)

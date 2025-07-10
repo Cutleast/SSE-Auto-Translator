@@ -41,7 +41,7 @@ class TestTranslatorSettings(UiTest, AppTest):
         Returns a new `TranslatorSettings` instance for the given `App` instance.
         """
 
-        return TranslatorSettings(app_context.translator_config)
+        return TranslatorSettings(app_context.translator_config, self.cache())
 
     def test_initial(
         self, translator_settings: TranslatorSettings, app_context: App

@@ -11,7 +11,7 @@ from typing import Optional
 import jstyleson as json
 from PySide6.QtCore import QObject, Signal
 
-from app_context import AppContext
+from core.config.user_config import UserConfig
 from core.database.database import TranslationDatabase
 from core.database.string import String
 from core.database.translation import Translation
@@ -26,6 +26,10 @@ class Editor(QObject):
 
     log: logging.Logger = logging.getLogger("Editor")
 
+    database: TranslationDatabase
+    user_config: UserConfig
+    translator: Translator
+
     __translation: Translation
     __strings_cache: dict[str, list[String]]
     """
@@ -39,10 +43,20 @@ class Editor(QObject):
 
     __changes_pending: bool = False
 
-    def __init__(self, translation: Translation) -> None:
+    def __init__(
+        self,
+        translation: Translation,
+        database: TranslationDatabase,
+        user_config: UserConfig,
+        translator: Translator,
+    ) -> None:
         super().__init__()
 
         self.__translation = translation
+
+        self.database = database
+        self.user_config = user_config
+        self.translator = translator
 
         # Make a deep copy to prevent immediately modifying the translation
         self.__strings_cache = deepcopy(self.__translation.strings)
@@ -100,8 +114,7 @@ class Editor(QObject):
         """
 
         for string in strings:
-            if string is not None:
-                string.status = status
+            string.status = status
 
         self.update_signal.emit()
         self.log.info(f"Updated status for {len(strings)} string(s).")
@@ -151,10 +164,9 @@ class Editor(QObject):
         texts: list[str] = [
             selected_string.original_string for selected_string in strings
         ]
-        translator: Translator = AppContext.get_app().translator
         src: str = "English"
-        dst: str = AppContext.get_app().user_config.language.id
-        result: dict[str, str] = translator.mass_translate(texts, src, dst)
+        dst: str = self.user_config.language.id
+        result: dict[str, str] = self.translator.mass_translate(texts, src, dst)
 
         for string in strings:
             string.translated_string = result[string.original_string]
@@ -208,13 +220,11 @@ class Editor(QObject):
 
         self.log.info(f"Applying database to {len(strings)} string(s)...")
 
-        database: TranslationDatabase = AppContext.get_app().database
-
         database_originals: dict[str, String] = {
-            string.original_string: string for string in database.strings
+            string.original_string: string for string in self.database.strings
         }
         database_strings: dict[str, String] = {
-            string.id: string for string in database.strings
+            string.id: string for string in self.database.strings
         }
 
         modified_strings: int = 0

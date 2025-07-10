@@ -4,8 +4,6 @@ Copyright (c) Cutleast
 
 from enum import Enum
 
-from .translator import Translator
-
 
 class TranslatorApi(Enum):
     """Enum for available translator APIs."""
@@ -16,7 +14,7 @@ class TranslatorApi(Enum):
     DeepL = "DeepL"
     """DeepL translator API (requires API key)."""
 
-    def get_api_class(self) -> type[Translator]:
+    def get_api_class(self) -> type["Translator"]:
         """
         Returns the API class for this API.
 
@@ -26,6 +24,7 @@ class TranslatorApi(Enum):
 
         from .deepl import DeepLTranslator
         from .google import GoogleTranslator
+        from .translator import Translator
 
         apis: dict[TranslatorApi, type[Translator]] = {
             TranslatorApi.Google: GoogleTranslator,
@@ -33,3 +32,7 @@ class TranslatorApi(Enum):
         }
 
         return apis[self]
+
+
+if __name__ == "__main__":
+    from .translator import Translator

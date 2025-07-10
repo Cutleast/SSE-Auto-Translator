@@ -17,7 +17,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from app_context import AppContext
+from core.config.app_config import AppConfig
 from core.database.database import TranslationDatabase
 from core.database.search_filter import SearchFilter
 from core.database.string import String
@@ -31,6 +31,7 @@ from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.scanner.scanner import Scanner
 from core.translation_provider.mod_id import ModId
+from core.translation_provider.nm_api.nxm_handler import NXMHandler
 from core.translation_provider.provider import Provider
 from ui.downloader.download_list_dialog import DownloadListDialog
 from ui.widgets.error_dialog import ErrorDialog
@@ -51,23 +52,39 @@ class TranslationsTab(QWidget):
     log: logging.Logger = logging.getLogger("TranslationsTab")
 
     database: TranslationDatabase
+    provider: Provider
+    mod_instance: ModInstance
+    app_config: AppConfig
     scanner: Scanner
+    download_manager: DownloadManager
+    nxm_listener: NXMHandler
 
     __vlayout: QVBoxLayout
     __toolbar: TranslationsToolbar
     __translations_num_label: LCDNumber
     __translations_widget: TranslationsWidget
 
-    def __init__(self) -> None:
+    def __init__(
+        self,
+        database: TranslationDatabase,
+        provider: Provider,
+        mod_instance: ModInstance,
+        app_config: AppConfig,
+        scanner: Scanner,
+        download_manager: DownloadManager,
+        nxm_listener: NXMHandler,
+    ) -> None:
         super().__init__()
 
+        self.database = database
+        self.provider = provider
+        self.mod_instance = mod_instance
+        self.app_config = app_config
+        self.scanner = scanner
+        self.download_manager = download_manager
+        self.nxm_listener = nxm_listener
+
         self.__init_ui()
-
-        AppContext.get_app().ready_signal.connect(self.__post_init)
-
-    def __post_init(self) -> None:
-        self.database = AppContext.get_app().database
-        self.scanner = AppContext.get_app().scanner
 
         self.database.update_signal.connect(self.__update)
         self.__update()
@@ -97,7 +114,9 @@ class TranslationsTab(QWidget):
         hlayout.addWidget(self.__translations_num_label)
 
     def __init_translations_widget(self) -> None:
-        self.__translations_widget = TranslationsWidget()
+        self.__translations_widget = TranslationsWidget(
+            self.database, self.provider, self.mod_instance, self.app_config
+        )
         self.__vlayout.addWidget(self.__translations_widget)
 
     def show_vanilla_strings(self) -> None:
@@ -153,8 +172,6 @@ class TranslationsTab(QWidget):
                 The files to import. Defaults to None.
         """
 
-        mod_instance: ModInstance = AppContext.get_app().mod_instance
-
         if files is None:
             fdialog = QFileDialog()
             fdialog.setFileMode(fdialog.FileMode.ExistingFiles)
@@ -178,7 +195,7 @@ class TranslationsTab(QWidget):
                 strings = LoadingDialog.run_callable(
                     QApplication.activeModalWidget(),
                     lambda ldialog: self.database.importer.extract_strings_from_archive(
-                        file, ldialog
+                        file, self.mod_instance, ldialog
                     ),
                 )
 
@@ -190,7 +207,7 @@ class TranslationsTab(QWidget):
                     self.database.add_translation(translation)
 
             elif file.suffix.lower() in [".esp", ".esm", ".esl"]:
-                original_plugin: Optional[ModFile] = mod_instance.get_modfile(
+                original_plugin: Optional[ModFile] = self.mod_instance.get_modfile(
                     file.name,
                     ignore_states=[
                         TranslationStatus.IsTranslated,
@@ -245,16 +262,12 @@ class TranslationsTab(QWidget):
         self.__toolbar.update_action.setEnabled(available_updates_count > 0)
 
     def download_updates(self) -> None:
-        mod_instance: ModInstance = AppContext.get_app().mod_instance
-        download_manager: DownloadManager = AppContext.get_app().download_manager
-        provider: Provider = AppContext.get_app().provider
-
         translations: dict[Translation, Mod] = {}
         for translation in filter(
             lambda t: t.status == Translation.Status.UpdateAvailable,
             self.database.user_translations,
         ):
-            original_mod: Optional[Mod] = mod_instance.get_mod(
+            original_mod: Optional[Mod] = self.mod_instance.get_mod(
                 translation.original_mod_id
             )
 
@@ -269,7 +282,7 @@ class TranslationsTab(QWidget):
         download_entries: dict[tuple[str, ModId], list[TranslationDownload]] = (
             LoadingDialog.run_callable(
                 QApplication.activeModalWidget(),
-                lambda ldialog: download_manager.collect_available_updates(
+                lambda ldialog: self.download_manager.collect_available_updates(
                     translations, ldialog
                 ),
             )
@@ -277,15 +290,16 @@ class TranslationsTab(QWidget):
         if download_entries:
             DownloadListDialog(
                 download_entries,
-                provider,
+                self.provider,
                 self.database,
-                download_manager,
+                self.download_manager,
+                self.nxm_listener,
                 updates=True,
                 parent=QApplication.activeModalWidget(),
             ).exec()
         else:
             QMessageBox.warning(
-                QApplication.activeModalWidget() or AppContext.get_app().main_window,
+                QApplication.activeModalWidget() or self,
                 self.tr("No updates available!"),
                 self.tr(
                     "There are no updates available for translations with installed original mods."

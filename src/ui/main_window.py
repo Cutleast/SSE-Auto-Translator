@@ -10,6 +10,20 @@ from PySide6.QtGui import QCloseEvent, QKeySequence, QShortcut
 from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox, QTabWidget
 
 from app_context import AppContext
+from core.cache.cache import Cache
+from core.config.app_config import AppConfig
+from core.config.translator_config import TranslatorConfig
+from core.config.user_config import UserConfig
+from core.database.database import TranslationDatabase
+from core.downloader.download_manager import DownloadManager
+from core.masterlist.masterlist import Masterlist
+from core.mod_instance.mod_instance import ModInstance
+from core.mod_instance.state_service import StateService
+from core.scanner.scanner import Scanner
+from core.translation_provider.nm_api.nxm_handler import NXMHandler
+from core.translation_provider.provider import Provider
+from core.translator_api.translator import Translator
+from core.utilities.logger import Logger
 
 from .main_page.main_page import MainPageWidget
 from .menubar import MenuBar
@@ -24,6 +38,21 @@ class MainWindow(QMainWindow):
 
     log: logging.Logger = logging.getLogger("App")
 
+    cache: Cache
+    database: TranslationDatabase
+    app_config: AppConfig
+    user_config: UserConfig
+    translator_config: TranslatorConfig
+    translator: Translator
+    masterlist: Masterlist
+    mod_instance: ModInstance
+    scanner: Scanner
+    provider: Provider
+    download_manager: DownloadManager
+    state_service: StateService
+    nxm_listener: NXMHandler
+    logger: Logger
+
     __refresh_shortcut: QShortcut
 
     tab_widget: QTabWidget
@@ -35,8 +64,39 @@ class MainWindow(QMainWindow):
     This signal is emitted when the refresh shortcut is activated.
     """
 
-    def __init__(self) -> None:
+    def __init__(
+        self,
+        cache: Cache,
+        database: TranslationDatabase,
+        app_config: AppConfig,
+        user_config: UserConfig,
+        translator_config: TranslatorConfig,
+        translator: Translator,
+        masterlist: Masterlist,
+        mod_instance: ModInstance,
+        scanner: Scanner,
+        provider: Provider,
+        download_manager: DownloadManager,
+        state_service: StateService,
+        nxm_listener: NXMHandler,
+        logger: Logger,
+    ) -> None:
         super().__init__()
+
+        self.cache = cache
+        self.database = database
+        self.app_config = app_config
+        self.user_config = user_config
+        self.translator_config = translator_config
+        self.translator = translator
+        self.masterlist = masterlist
+        self.mod_instance = mod_instance
+        self.scanner = scanner
+        self.provider = provider
+        self.download_manager = download_manager
+        self.state_service = state_service
+        self.nxm_listener = nxm_listener
+        self.logger = logger
 
         self.setObjectName("root")
 
@@ -48,7 +108,7 @@ class MainWindow(QMainWindow):
 
     def __init_ui(self) -> None:
         self.setMenuBar(MenuBar())
-        self.setStatusBar(StatusBar())
+        self.setStatusBar(StatusBar(self.logger, self.provider))
 
         self.resize(1500, 800)
         self.setStyleSheet(AppContext.get_app().styleSheet())
@@ -62,10 +122,28 @@ class MainWindow(QMainWindow):
         self.tab_widget.tabBar().setDocumentMode(True)
         self.setCentralWidget(self.tab_widget)
 
-        self.mainpage_widget = MainPageWidget()
+        self.mainpage_widget = MainPageWidget(
+            self.cache,
+            self.database,
+            self.app_config,
+            self.user_config,
+            self.masterlist,
+            self.mod_instance,
+            self.scanner,
+            self.provider,
+            self.download_manager,
+            self.state_service,
+            self.nxm_listener,
+        )
         self.tab_widget.addTab(self.mainpage_widget, self.tr("Modlist"))
 
-        self.translation_editor = EditorPage()
+        self.translation_editor = EditorPage(
+            self.database,
+            self.app_config,
+            self.user_config,
+            self.translator_config,
+            self.translator,
+        )
         self.tab_widget.addTab(self.translation_editor, self.tr("Translation Editor"))
         self.tab_widget.setTabEnabled(1, False)
 

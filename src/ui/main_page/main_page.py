@@ -19,7 +19,6 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from app_context import AppContext
 from core.cache.cache import Cache
 from core.config.app_config import AppConfig
 from core.config.user_config import UserConfig
@@ -28,14 +27,18 @@ from core.database.search_filter import SearchFilter
 from core.database.string import String
 from core.downloader.download_manager import DownloadManager
 from core.downloader.translation_download import TranslationDownload
+from core.masterlist.masterlist import Masterlist
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
+from core.mod_instance.state_service import StateService
 from core.scanner.scanner import Scanner
 from core.translation_provider.mod_id import ModId
+from core.translation_provider.nm_api.nxm_handler import NXMHandler
 from core.translation_provider.provider import Provider
 from core.utilities.container_utils import join_dicts
+from core.utilities.exe_info import get_current_path
 from ui.downloader.download_list_dialog import DownloadListDialog
 from ui.widgets.error_dialog import ErrorDialog
 from ui.widgets.ignore_list_dialog import IgnoreListDialog
@@ -67,7 +70,15 @@ class MainPageWidget(QWidget):
 
     cache: Cache
     database: TranslationDatabase
+    app_config: AppConfig
     user_config: UserConfig
+    masterlist: Masterlist
+    mod_instance: ModInstance
+    scanner: Scanner
+    provider: Provider
+    download_manager: DownloadManager
+    state_service: StateService
+    nxm_listener: NXMHandler
 
     __vlayout: QVBoxLayout
     __title_label: QLabel
@@ -79,20 +90,37 @@ class MainPageWidget(QWidget):
     __modinstance_widget: ModInstanceWidget
     __database_widget: DatabaseWidget
 
-    def __init__(self) -> None:
+    def __init__(
+        self,
+        cache: Cache,
+        database: TranslationDatabase,
+        app_config: AppConfig,
+        user_config: UserConfig,
+        masterlist: Masterlist,
+        mod_instance: ModInstance,
+        scanner: Scanner,
+        provider: Provider,
+        download_manager: DownloadManager,
+        state_service: StateService,
+        nxm_listener: NXMHandler,
+    ) -> None:
         super().__init__()
+
+        self.cache = cache
+        self.database = database
+        self.app_config = app_config
+        self.user_config = user_config
+        self.masterlist = masterlist
+        self.mod_instance = mod_instance
+        self.scanner = scanner
+        self.provider = provider
+        self.download_manager = download_manager
+        self.state_service = state_service
+        self.nxm_listener = nxm_listener
 
         self.__init_ui()
 
-        AppContext.get_app().ready_signal.connect(self.__post_init)
-
-    def __post_init(self) -> None:
-        self.cache = AppContext.get_app().cache
-        self.database = AppContext.get_app().database
-        self.user_config = AppContext.get_app().user_config
-        self.mod_instance = AppContext.get_app().mod_instance
-        self.mod_instance.update_signal.connect(self.__update)
-
+        self.state_service.update_signal.connect(self.__update)
         self.__update()
 
     def __init_ui(self) -> None:
@@ -161,10 +189,30 @@ class MainPageWidget(QWidget):
         splitter = QSplitter()
         self.__vlayout.addWidget(splitter, stretch=1)
 
-        self.__modinstance_widget = ModInstanceWidget()
+        self.__modinstance_widget = ModInstanceWidget(
+            self.cache,
+            self.database,
+            self.app_config,
+            self.user_config,
+            self.masterlist,
+            self.scanner,
+            self.provider,
+            self.download_manager,
+            self.nxm_listener,
+            self.mod_instance,
+            self.state_service,
+        )
         splitter.addWidget(self.__modinstance_widget)
 
-        self.__database_widget = DatabaseWidget()
+        self.__database_widget = DatabaseWidget(
+            self.database,
+            self.provider,
+            self.mod_instance,
+            self.app_config,
+            self.scanner,
+            self.download_manager,
+            self.nxm_listener,
+        )
         splitter.addWidget(self.__database_widget)
 
         self.__search_bar.searchChanged.connect(
@@ -181,7 +229,7 @@ class MainPageWidget(QWidget):
 
     def __update_header(self) -> None:
         modfile_states: dict[TranslationStatus, int] = (
-            self.mod_instance.get_modfile_state_summary()
+            self.state_service.get_modfile_state_summary()
         )
         self.__bar_chart.setValues(list(modfile_states.values()))
 
@@ -205,11 +253,13 @@ class MainPageWidget(QWidget):
         Opens Ignore List in a new Popup Dialog.
         """
 
-        IgnoreListDialog(QApplication.activeModalWidget()).exec()
+        IgnoreListDialog(
+            self.masterlist, self.user_config, QApplication.activeModalWidget()
+        ).exec()
         self.user_config.save()
 
         # TODO: Make this more elegant
-        self.mod_instance.update_signal.emit()
+        self.state_service.update_signal.emit()
 
     def show_scan_result(self, modfiles: Optional[list[ModFile]] = None) -> None:
         """
@@ -229,7 +279,7 @@ class MainPageWidget(QWidget):
             ]
 
         ResultDialog(
-            self.mod_instance.get_modfile_state_summary(modfiles),
+            self.state_service.get_modfile_state_summary(modfiles),
             QApplication.activeModalWidget(),
         ).exec()
 
@@ -245,8 +295,6 @@ class MainPageWidget(QWidget):
         Runs a basic scan over the currently checked mod files.
         """
 
-        scanner: Scanner = AppContext.get_app().scanner
-
         checked_items: dict[Mod, list[ModFile]] = (
             self.__modinstance_widget.get_checked_items()
         )
@@ -255,16 +303,15 @@ class MainPageWidget(QWidget):
         scan_result: dict[ModFile, TranslationStatus] = join_dicts(
             *LoadingDialog.run_callable(
                 QApplication.activeModalWidget(),
-                lambda ldialog: scanner.run_basic_scan(checked_items, ldialog),
+                lambda ldialog: self.scanner.run_basic_scan(checked_items, ldialog),
             ).values()
         )
-        self.mod_instance.set_modfile_states(scan_result)
+        self.state_service.set_modfile_states(scan_result)
 
-        app_config: AppConfig = AppContext.get_app().app_config
-        if app_config.auto_import_translations:
+        if self.app_config.auto_import_translations:
             LoadingDialog.run_callable(
                 QApplication.activeModalWidget(),
-                lambda ldialog: scanner.import_installed_translations(
+                lambda ldialog: self.scanner.import_installed_translations(
                     checked_mods, ldialog
                 ),
             )
@@ -277,8 +324,6 @@ class MainPageWidget(QWidget):
         Runs an online scan over the currently checked mod files.
         """
 
-        scanner: Scanner = AppContext.get_app().scanner
-
         checked_items: dict[Mod, list[ModFile]] = (
             self.__modinstance_widget.get_checked_items()
         )
@@ -286,10 +331,10 @@ class MainPageWidget(QWidget):
         scan_result: dict[ModFile, TranslationStatus] = join_dicts(
             *LoadingDialog.run_callable(
                 QApplication.activeModalWidget(),
-                lambda ldialog: scanner.run_online_scan(checked_items, ldialog),
+                lambda ldialog: self.scanner.run_online_scan(checked_items, ldialog),
             ).values()
         )
-        self.mod_instance.set_modfile_states(scan_result)
+        self.state_service.set_modfile_states(scan_result)
 
         self.show_scan_result(list(scan_result.keys()))
         self.__tool_bar.highlight_action(self.__tool_bar.download_action)
@@ -300,21 +345,20 @@ class MainPageWidget(QWidget):
         and opens a DownloadListDialog.
         """
 
-        provider: Provider = AppContext.get_app().provider
-        download_manager: DownloadManager = AppContext.get_app().download_manager
         download_entries: dict[tuple[str, ModId], list[TranslationDownload]] = (
             LoadingDialog.run_callable(
                 QApplication.activeModalWidget(),
-                lambda ldialog: download_manager.collect_available_downloads(
+                lambda ldialog: self.download_manager.collect_available_downloads(
                     self.__modinstance_widget.get_checked_items(), ldialog
                 ),
             )
         )
         DownloadListDialog(
             download_entries,
-            provider,
+            self.provider,
             self.database,
-            download_manager,
+            self.download_manager,
+            self.nxm_listener,
             parent=QApplication.activeModalWidget(),
         ).exec()
 
@@ -326,7 +370,13 @@ class MainPageWidget(QWidget):
         """
 
         output_path: Path = LoadingDialog.run_callable(
-            QApplication.activeModalWidget(), self.database.exporter.build_output_mod
+            QApplication.activeModalWidget(),
+            lambda ldialog: self.database.exporter.build_output_mod(
+                self.app_config.output_path or (get_current_path() / "SSE-AT Output"),
+                self.mod_instance,
+                self.app_config.get_tmp_dir(),
+                ldialog,
+            ),
         )
 
         message_box = QMessageBox()
@@ -361,9 +411,9 @@ class MainPageWidget(QWidget):
         """
 
         result: dict[ModFile, TranslationStatus] = LoadingDialog.run_callable(
-            QApplication.activeModalWidget(), AppContext.get_app().scanner.run_deep_scan
+            QApplication.activeModalWidget(), self.scanner.run_deep_scan
         )
-        self.mod_instance.set_modfile_states(result)
+        self.state_service.set_modfile_states(result)
         self.show_scan_result(list(result.keys()))
 
     def run_string_search(self) -> None:
@@ -377,14 +427,11 @@ class MainPageWidget(QWidget):
 
         if dialog.exec() == QDialog.DialogCode.Accepted:
             filter: SearchFilter = dialog.get_filter()
-            scanner: Scanner = AppContext.get_app().scanner
 
             search_result: dict[str, list[String]] = LoadingDialog.run_callable(
                 QApplication.activeModalWidget(),
-                lambda ldialog: scanner.run_string_search(
-                    self.__modinstance_widget.get_checked_items(),
-                    filter,
-                    ldialog,
+                lambda ldialog: self.scanner.run_string_search(
+                    self.__modinstance_widget.get_checked_items(), filter, ldialog
                 ),
             )
 

@@ -19,7 +19,12 @@ from PySide6.QtWidgets import (
 )
 
 from app_context import AppContext
+from core.config.app_config import AppConfig
+from core.config.translator_config import TranslatorConfig
+from core.config.user_config import UserConfig
+from core.database.database import TranslationDatabase
 from core.database.translation import Translation
+from core.translator_api.translator import Translator
 
 from .editor.editor_tab import EditorTab
 
@@ -29,6 +34,12 @@ class EditorPage(QSplitter):
     Page for translation editor.
     """
 
+    database: TranslationDatabase
+    app_config: AppConfig
+    user_config: UserConfig
+    translator_config: TranslatorConfig
+    translator: Translator
+
     __tabs: dict[Translation, tuple[EditorTab, QTreeWidgetItem]] = {}
     """
     Mapping of translations to their tabs and the respective item in the list.
@@ -37,14 +48,26 @@ class EditorPage(QSplitter):
     __tab_list_widget: QTreeWidget
     __page_widget: QStackedWidget
 
-    def __init__(self) -> None:
+    def __init__(
+        self,
+        database: TranslationDatabase,
+        app_config: AppConfig,
+        user_config: UserConfig,
+        translator_config: TranslatorConfig,
+        translator: Translator,
+    ) -> None:
         super().__init__()
 
+        self.database = database
+        self.app_config = app_config
+        self.user_config = user_config
+        self.translator_config = translator_config
+        self.translator = translator
+
         self.setOrientation(Qt.Orientation.Horizontal)
-
-        AppContext.get_app().ready_signal.connect(self.__post_init)
-
         self.__init_ui()
+
+        self.database.edit_signal.connect(self.open_translation)
 
     def __init_ui(self) -> None:
         self.__tab_list_widget = QTreeWidget()
@@ -65,9 +88,6 @@ class EditorPage(QSplitter):
         self.__tab_list_widget.currentItemChanged.connect(
             lambda cur, _: self.__set_tab_from_item(cur)
         )
-
-    def __post_init(self) -> None:
-        AppContext.get_app().database.edit_signal.connect(self.open_translation)
 
     def __set_tab_from_item(self, item: Optional[QTreeWidgetItem]) -> None:
         """
@@ -177,7 +197,14 @@ class EditorPage(QSplitter):
         if translation not in self.__tabs:
             translation_item = QTreeWidgetItem([translation.name])
 
-            translation_tab = EditorTab(translation)
+            translation_tab = EditorTab(
+                translation,
+                self.database,
+                self.app_config,
+                self.user_config,
+                self.translator_config,
+                self.translator,
+            )
             translation_tab.close_signal.connect(self.close_translation)
             self.__tabs[translation] = translation_tab, translation_item
             self.__page_widget.addWidget(translation_tab)

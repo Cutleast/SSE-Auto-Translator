@@ -8,12 +8,15 @@ from typing import Optional
 
 from PySide6.QtCore import QObject, Signal
 
-from app_context import AppContext
+from core.config.app_config import AppConfig
 from core.config.user_config import UserConfig
+from core.database.database import TranslationDatabase
 from core.database.translation import Translation
+from core.masterlist.masterlist import Masterlist
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
+from core.mod_instance.mod_instance import ModInstance
 from core.translation_provider.mod_id import ModId
 from core.translation_provider.provider import ModDetails, Provider
 from core.translation_provider.source import Source
@@ -59,11 +62,33 @@ class DownloadManager(QObject):
     This signal gets emitted when all worker threads have finished or have been stopped.
     """
 
-    def __init__(self) -> None:
+    database: TranslationDatabase
+    mod_instance: ModInstance
+    provider: Provider
+    app_config: AppConfig
+    user_config: UserConfig
+    masterlist: Masterlist
+
+    def __init__(
+        self,
+        database: TranslationDatabase,
+        mod_instance: ModInstance,
+        provider: Provider,
+        app_config: AppConfig,
+        user_config: UserConfig,
+        masterlist: Masterlist,
+    ) -> None:
         super().__init__()
 
         self.queue = Queue()
         self.workers = []
+
+        self.database = database
+        self.mod_instance = mod_instance
+        self.provider = provider
+        self.app_config = app_config
+        self.user_config = user_config
+        self.masterlist = masterlist
 
         self.finished.connect(self.stopped.emit)
 
@@ -109,7 +134,15 @@ class DownloadManager(QObject):
         self.running = True
 
         self.workers = [
-            Worker(self.queue, i) for i in range(DownloadManager.THREAD_NUM)
+            Worker(
+                self.queue,
+                i,
+                self.app_config,
+                self.provider,
+                self.database,
+                self.mod_instance,
+            )
+            for i in range(DownloadManager.THREAD_NUM)
         ]
 
         for worker in self.workers:
@@ -223,8 +256,6 @@ class DownloadManager(QObject):
 
         self.log.info("Getting downloads for required translations...")
 
-        provider: Provider = AppContext.get_app().provider
-
         if ldialog is not None:
             ldialog.updateProgress(text1=self.tr("Collecting available downloads..."))
 
@@ -265,7 +296,7 @@ class DownloadManager(QObject):
             index: downloads
             for index, downloads in sorted(
                 translation_downloads.copy().items(),
-                key=lambda item: provider.get_details(
+                key=lambda item: self.provider.get_details(
                     item[1][0].mod_id, source=item[1][0].source
                 ).timestamp,
             )
@@ -304,14 +335,14 @@ class DownloadManager(QObject):
     def __collect_downloads_for_modfile(
         self, mod: Mod, modfile: ModFile, ldialog: Optional[LoadingDialog] = None
     ) -> list[TranslationDownload]:
-        provider: Provider = AppContext.get_app().provider
-        user_config: UserConfig = AppContext.get_app().user_config
-
-        available_translations: dict[Source, list[ModId]] = provider.get_translations(
-            mod.mod_id,
-            modfile.name,
-            user_config.language.id,
-            user_config.author_blacklist,
+        available_translations: dict[Source, list[ModId]] = (
+            self.provider.get_translations(
+                mod.mod_id,
+                modfile.name,
+                self.user_config.language.id,
+                self.masterlist,
+                self.user_config.author_blacklist,
+            )
         )
 
         # Use a dict to group translation files from the same mod and source together
@@ -319,7 +350,7 @@ class DownloadManager(QObject):
         for source, translation_ids in available_translations.items():
             for translation_id in translation_ids:
                 try:
-                    file_details: ModDetails = provider.get_details(
+                    file_details: ModDetails = self.provider.get_details(
                         translation_id, source
                     )
                 except Exception as ex:
@@ -341,7 +372,7 @@ class DownloadManager(QObject):
                     nm_id=translation_id.nm_id,
                     nm_game_id=translation_id.nm_game_id,
                 )
-                translation_name: str = provider.get_details(
+                translation_name: str = self.provider.get_details(
                     download_id, source=source
                 ).display_name
                 translation_download = TranslationDownload(
@@ -359,7 +390,7 @@ class DownloadManager(QObject):
 
         # Sort after upload timestamp so that newest translations are first
         result.sort(
-            key=lambda download: provider.get_details(
+            key=lambda download: self.provider.get_details(
                 download.mod_id, source=download.source
             ).timestamp,
             reverse=True,
@@ -414,8 +445,9 @@ class DownloadManager(QObject):
     def __collect_update_for_translation(
         self, translation: Translation, original_mod: Mod
     ) -> dict[tuple[str, ModId], list[TranslationDownload]]:
-        provider: Provider = AppContext.get_app().provider
-        new_file_id: Optional[ModId] = provider.get_updated_mod_id(translation.mod_id)
+        new_file_id: Optional[ModId] = self.provider.get_updated_mod_id(
+            translation.mod_id
+        )
 
         if new_file_id is None:
             return {}
@@ -434,7 +466,7 @@ class DownloadManager(QObject):
                             display_name=translation.name,
                             source=Source.NexusMods,
                             mod_id=translation.mod_id,
-                            file_name=provider.get_details(
+                            file_name=self.provider.get_details(
                                 new_file_id, Source.NexusMods
                             ).file_name,
                         )

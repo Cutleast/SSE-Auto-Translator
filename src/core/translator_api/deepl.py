@@ -9,6 +9,8 @@ from typing import Optional, override
 import deepl
 import googletrans
 
+from core.config.translator_config import TranslatorConfig
+
 from .translator import Translator
 from .translator_api import TranslatorApi
 
@@ -30,8 +32,8 @@ class DeepLTranslator(Translator):
     glossary_id: Optional[str]
     glossary: Optional[deepl.GlossaryInfo]
 
-    def __init__(self) -> None:
-        super().__init__()
+    def __init__(self, translator_config: TranslatorConfig) -> None:
+        super().__init__(translator_config)
 
         if self.translator_config.api_key is None:
             raise ValueError("DeepL API key is required")

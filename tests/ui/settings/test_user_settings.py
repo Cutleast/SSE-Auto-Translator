@@ -71,7 +71,7 @@ class TestUserSettings(UiTest, AppTest):
         Returns a new `UserSettings` instance for the given `App` instance.
         """
 
-        return UserSettings(app_context.user_config)
+        return UserSettings(app_context.user_config, self.cache())
 
     def test_initial(self, user_settings: UserSettings, app_context: App) -> None:
         """

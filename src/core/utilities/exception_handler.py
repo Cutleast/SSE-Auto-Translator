@@ -15,7 +15,7 @@ from winsound import MessageBeep as alert
 from PySide6.QtCore import QObject
 from PySide6.QtWidgets import QApplication
 
-from app_context import AppContext
+from core.utilities.logger import Logger
 from ui.widgets.error_dialog import ErrorDialog
 from ui.widgets.loading_dialog import LoadingDialog
 
@@ -34,11 +34,13 @@ class ExceptionHandler(QObject):
     ) = None
 
     __parent: QApplication
+    logger: Logger
 
-    def __init__(self, parent: QApplication):
+    def __init__(self, parent: QApplication, logger: Logger):
         super().__init__(parent)
 
         self.__parent = parent
+        self.logger = logger
 
         self.bind_hook()
 
@@ -173,7 +175,7 @@ class ExceptionHandler(QObject):
 
             # Write log to a temporary log file
             with log_file_path.open("w", encoding="utf8") as log_file:
-                log_file.write(AppContext.get_app().logger.get_content())
+                log_file.write(self.logger.get_content())
 
             # Pack the dump file into a 7zip archive
             archive: Archive = Archive.load_archive(archive_file_path)

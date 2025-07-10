@@ -52,7 +52,7 @@ class TestSetupPage(UiTest, AppTest):
         )
 
         # when
-        setup_page = SetupPage()
+        setup_page = SetupPage(self.cache())
         lang_dropdown: EnumDropdown[GameLanguage] = Utils.get_private_field(
             setup_page, *TestSetupPage.LANG_DROPDOWN
         )

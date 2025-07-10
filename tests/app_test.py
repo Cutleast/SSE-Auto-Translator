@@ -92,9 +92,6 @@ class AppTest(BaseTest):
         app.download_manager = self.download_manager(init=True)
         app.nxm_listener = self.nxm_listener(init=True)
 
-        app.tmp_path = self.tmp_folder() / "SSE-AT_temp"
-        app.tmp_path.mkdir()
-
         # TODO: Inialize mocked versions of missing app components
 
     def app_config(self, init: bool = False) -> AppConfig:
@@ -114,7 +111,10 @@ class AppTest(BaseTest):
         if AppContext.has_app() and not init:
             return AppContext.get_app().app_config
 
-        return AppConfig.load(self.data_path() / "data")
+        app_config = AppConfig.load(self.data_path() / "data")
+        app_config.temp_path = self.tmp_folder()
+
+        return app_config
 
     def user_config(self, init: bool = False) -> UserConfig:
         """
@@ -190,7 +190,15 @@ class AppTest(BaseTest):
         if AppContext.has_app() and not init:
             return AppContext.get_app().scanner
 
-        return Scanner()
+        return Scanner(
+            self.cache(),
+            self.modinstance(),
+            self.database(),
+            self.app_config(),
+            self.user_config(),
+            self.provider(),
+            self.masterlist(),
+        )
 
     def download_manager(self, init: bool = False) -> DownloadManager:
         """
@@ -209,7 +217,14 @@ class AppTest(BaseTest):
         if AppContext.has_app() and not init:
             return AppContext.get_app().download_manager
 
-        return DownloadManager()
+        return DownloadManager(
+            self.database(),
+            self.modinstance(),
+            self.provider(),
+            self.app_config(),
+            self.user_config(),
+            self.masterlist(),
+        )
 
     def masterlist(self, init: bool = False) -> Masterlist:
         """
@@ -256,7 +271,14 @@ class AppTest(BaseTest):
         index_path.parent.mkdir(parents=True, exist_ok=True)
         index_path.write_text("[]", encoding="utf8")
 
-        return TranslationDatabase(userdb_path, appdb_path, language, user_config)
+        return TranslationDatabase(
+            userdb_path,
+            appdb_path,
+            language,
+            self.cache(),
+            self.app_config(),
+            user_config,
+        )
 
     def provider(self, init: bool = False) -> Provider:
         """

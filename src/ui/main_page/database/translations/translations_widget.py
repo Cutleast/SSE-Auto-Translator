@@ -21,10 +21,12 @@ from PySide6.QtWidgets import (
     QTreeWidgetItem,
 )
 
-from app_context import AppContext
+from core.config.app_config import AppConfig
 from core.database.database import TranslationDatabase
 from core.database.translation import Translation
+from core.mod_instance.mod_instance import ModInstance
 from core.translation_provider.exceptions import ModNotFoundError
+from core.translation_provider.provider import Provider
 from core.utilities import matches_filter
 from core.utilities.datetime import fmt_timestamp
 from core.utilities.scale import scale_value
@@ -48,6 +50,9 @@ class TranslationsWidget(QTreeWidget):
     """
 
     database: TranslationDatabase
+    provider: Provider
+    mod_instance: ModInstance
+    app_config: AppConfig
 
     __menu: TranslationsMenu
     """
@@ -69,12 +74,26 @@ class TranslationsWidget(QTreeWidget):
     Optional name filter and case-sensitivity.
     """
 
-    def __init__(self) -> None:
+    def __init__(
+        self,
+        database: TranslationDatabase,
+        provider: Provider,
+        mod_instance: ModInstance,
+        app_config: AppConfig,
+    ) -> None:
         super().__init__()
 
-        AppContext.get_app().ready_signal.connect(self.__post_init)
+        self.database = database
+        self.provider = provider
+        self.mod_instance = mod_instance
+        self.app_config = app_config
 
         self.__init_ui()
+
+        self.database.highlight_signal.connect(self.__highlight_translation)
+        self.database.update_signal.connect(self.__load_translations)
+
+        self.__load_translations()
 
     def __init_ui(self) -> None:
         self.setAlternatingRowColors(True)
@@ -103,13 +122,6 @@ class TranslationsWidget(QTreeWidget):
         self.__menu = TranslationsMenu(self)
         self.setContextMenuPolicy(Qt.ContextMenuPolicy.CustomContextMenu)
         self.customContextMenuRequested.connect(self.__menu.open)
-
-    def __post_init(self) -> None:
-        self.database = AppContext.get_app().database
-        self.database.highlight_signal.connect(self.__highlight_translation)
-        self.database.update_signal.connect(self.__load_translations)
-
-        self.__load_translations()
 
     def __highlight_translation(self, translation: Translation) -> None:
         if translation not in self.__translation_items:
@@ -221,10 +233,7 @@ class TranslationsWidget(QTreeWidget):
     def __item_double_clicked(self, item: QTreeWidgetItem, column: int) -> None:
         current_item: Optional[Translation | str] = self.get_current_item()
 
-        if (
-            current_item is not None
-            and AppContext.get_app().app_config.show_strings_on_double_click
-        ):
+        if current_item is not None and self.app_config.show_strings_on_double_click:
             self.show_strings()
         else:
             item.setExpanded(not item.isExpanded())
@@ -403,10 +412,12 @@ class TranslationsWidget(QTreeWidget):
             case ExportDialog.ExportFormat.DSD:
                 self.database.exporter.export_translation_dsd(current_item, folder)
             case ExportDialog.ExportFormat.ESP:
-                self.database.exporter.export_translation_esp(current_item, folder)
+                self.database.exporter.export_translation_esp(
+                    current_item, folder, self.mod_instance
+                )
 
         QMessageBox.information(
-            AppContext.get_app().main_window,
+            QApplication.activeModalWidget() or self,
             self.tr("Export successful!"),
             self.tr("Translation successfully exported."),
             QMessageBox.StandardButton.Ok,
@@ -453,7 +464,7 @@ class TranslationsWidget(QTreeWidget):
 
         if isinstance(current_item, Translation) and current_item.source:
             try:
-                url: str = AppContext.get_app().provider.get_modpage_url(
+                url: str = self.provider.get_modpage_url(
                     current_item.mod_id, current_item.source
                 )
                 os.startfile(url)

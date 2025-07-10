@@ -16,7 +16,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from app_context import AppContext
+from core.config.user_config import UserConfig
 from core.masterlist.masterlist import Masterlist
 from core.masterlist.masterlist_entry import MasterlistEntry
 from core.utilities import matches_filter
@@ -31,14 +31,21 @@ class IgnoreListDialog(QDialog):
     """
 
     masterlist: Masterlist
+    user_config: UserConfig
 
     __userlist_widget: QListWidget
     __remove_button: QPushButton
 
-    def __init__(self, parent: Optional[QWidget] = None) -> None:
+    def __init__(
+        self,
+        masterlist: Masterlist,
+        user_config: UserConfig,
+        parent: Optional[QWidget] = None,
+    ) -> None:
         super().__init__(parent)
 
-        self.masterlist = AppContext.get_app().masterlist
+        self.masterlist = masterlist
+        self.user_config = user_config
 
         self.setWindowTitle(self.tr("Ignore list"))
         self.resize(600, 500)
@@ -110,7 +117,7 @@ class IgnoreListDialog(QDialog):
                 self.__userlist_widget.indexFromItem(item).row()
             )
 
-        AppContext.get_app().user_config.save()
+        self.user_config.save()
 
     def __on_text_filter_change(self, _text_filter: tuple[str, bool]) -> None:
         text_filter: str

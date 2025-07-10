@@ -33,7 +33,9 @@ class TestUtilities(CoreTest):
         user_config.enable_scripts = True
         user_config.enable_sound_files = True
         user_config.enable_textures = True
-        additional_files: list[str] = utils.get_additional_files(test_file_path)
+        additional_files: list[str] = utils.get_additional_files(
+            test_file_path, self.app_config().get_tmp_dir()
+        )
 
         # then
         assert additional_files == [

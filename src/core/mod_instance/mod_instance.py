@@ -4,10 +4,6 @@ Copyright (c) Cutleast
 
 from typing import Optional
 
-from PySide6.QtCore import QObject, Signal
-
-from app_context import AppContext
-from core.cache.cache import Cache
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.translation_provider.mod_id import ModId
@@ -16,14 +12,9 @@ from core.utilities.container_utils import unique
 from .mod import Mod
 
 
-class ModInstance(QObject):
+class ModInstance:
     """
     Class to represent a loaded modlist.
-    """
-
-    update_signal = Signal()
-    """
-    This signal gets emitted everytime, the status of one or more mod files changes.
     """
 
     display_name: str
@@ -40,8 +31,6 @@ class ModInstance(QObject):
     __selected_mods: Optional[list[Mod]] = None
 
     def __init__(self, display_name: str, mods: list[Mod]) -> None:
-        super().__init__()
-
         self.display_name = display_name
         self.mods = mods
 
@@ -184,61 +173,3 @@ class ModInstance(QObject):
 
         # Get the mod with the highest modlist index
         return max(mods, key=lambda m: self.mods.index(m), default=None)
-
-    def get_modfile_state_summary(
-        self, modfiles: Optional[list[ModFile]] = None
-    ) -> dict[TranslationStatus, int]:
-        """
-        Gets a summary of the mod file states.
-
-        Args:
-            modfiles (Optional[list[ModFile]], optional):
-                List of mod files to count. Defaults to the entire modlist.
-
-        Returns:
-            dict[TranslationStatus, int]: Summary of the mod file states
-        """
-
-        modfiles = modfiles or self.modfiles
-
-        return {
-            state: len([modfile for modfile in modfiles if modfile.status == state])
-            for state in TranslationStatus
-        }
-
-    def load_states_from_cache(self) -> dict[ModFile, bool]:
-        """
-        Loads the mod file states from the cache and applies them.
-
-        Returns:
-            dict[ModFile, bool]: Dictionary of mod files and their checkstate.
-        """
-
-        cache: Cache = AppContext.get_app().cache
-        check_state: dict[ModFile, bool] = {}
-
-        for mod in self.mods:
-            for modfile in mod.modfiles:
-                checked, modfile.status = cache.get_from_states_cache(modfile.path) or (
-                    True,
-                    TranslationStatus.NoneStatus,
-                )
-                check_state[modfile] = checked
-
-        self.update_signal.emit()
-
-        return check_state
-
-    def set_modfile_states(self, states: dict[ModFile, TranslationStatus]) -> None:
-        """
-        Applies the given mod file states to the modlist and emits the update signal.
-
-        Args:
-            states (dict[ModFile, TranslationStatus]):
-                Dictionary of mod files and their states
-        """
-
-        for modfile, state in states.items():
-            modfile.status = state
-
-        self.update_signal.emit()

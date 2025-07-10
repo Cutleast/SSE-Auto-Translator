@@ -12,8 +12,6 @@ from typing import Optional
 import requests as req
 from PySide6.QtCore import QObject, Signal
 
-from app_context import AppContext
-from core.translation_provider.provider import Provider
 from core.utilities.progress_update import (
     ProgressCallback,
     ProgressUpdate,
@@ -44,6 +42,7 @@ class Downloader(QObject):
         self,
         download_url: str,
         dest_folder: Path,
+        user_agent: str,
         file_name: Optional[str] = None,
         progress_callback: Optional[ProgressCallback] = None,
     ) -> Path:
@@ -53,6 +52,7 @@ class Downloader(QObject):
         Args:
             download_url (str): Direct download URL to file.
             dest_folder (Path): Folder, to which the file gets downloaded to.
+            user_agent (str): User agent to use.
             file_name (str, optional):
                 Name of downloaded file, only required if the server doesn't return it.
             progress_callback (Optional[ProgressCallback], optional):
@@ -62,10 +62,8 @@ class Downloader(QObject):
             Path: Path to downloaded file.
         """
 
-        provider: Provider = AppContext.get_app().provider
-
         dl_path: Path
-        headers: dict[str, str] = {"User-Agent": provider.user_agent}
+        headers: dict[str, str] = {"User-Agent": user_agent}
 
         with req.Session() as session:
             stream = session.get(
@@ -153,6 +151,7 @@ class Downloader(QObject):
     def single_download(
         url: str,
         dest_folder: Path,
+        user_agent: str,
         file_name: Optional[str] = None,
         progress_callback: Optional[ProgressCallback] = None,
     ) -> Path:
@@ -162,6 +161,7 @@ class Downloader(QObject):
         Args:
             url (str): URL of the file to download.
             dest_folder (Path): Folder where the downloaded file should be saved.
+            user_agent (str): User agent to use.
             file_name (Optional[str], optional):
                 Optional filename to use instead of the one in the URL. Defaults to None.
             progress_callback (Optional[ProgressCallback], optional):
@@ -171,4 +171,6 @@ class Downloader(QObject):
             Path: Path to the downloaded file.
         """
 
-        return Downloader().download(url, dest_folder, file_name, progress_callback)
+        return Downloader().download(
+            url, dest_folder, user_agent, file_name, progress_callback
+        )

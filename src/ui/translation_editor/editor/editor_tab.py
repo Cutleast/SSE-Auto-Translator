@@ -25,10 +25,14 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from app_context import AppContext
+from core.config.app_config import AppConfig
+from core.config.translator_config import TranslatorConfig
+from core.config.user_config import UserConfig
+from core.database.database import TranslationDatabase
 from core.database.string import String
 from core.database.translation import Translation
 from core.editor.editor import Editor
+from core.translator_api.translator import Translator
 from ui.translation_editor.editor.help_dialog import EditorHelpDialog
 from ui.widgets.lcd_number import LCDNumber
 from ui.widgets.loading_dialog import LoadingDialog
@@ -54,6 +58,11 @@ class EditorTab(QWidget):
     __editor: Editor
 
     translation: Translation
+    database: TranslationDatabase
+    app_config: AppConfig
+    user_config: UserConfig
+    translator_config: TranslatorConfig
+    translator: Translator
 
     __vlayout: QVBoxLayout
     __title_label: QLabel
@@ -61,12 +70,25 @@ class EditorTab(QWidget):
     __menu: EditorMenu
     __strings_widget: StringsWidget
 
-    def __init__(self, translation: Translation) -> None:
+    def __init__(
+        self,
+        translation: Translation,
+        database: TranslationDatabase,
+        app_config: AppConfig,
+        user_config: UserConfig,
+        translator_config: TranslatorConfig,
+        translator: Translator,
+    ) -> None:
         super().__init__()
 
         self.translation = translation
+        self.database = database
+        self.app_config = app_config
+        self.user_config = user_config
+        self.translator_config = translator_config
+        self.translator = translator
 
-        self.__editor = Editor(translation)
+        self.__editor = Editor(translation, database, user_config, translator)
         self.__editor.update_signal.connect(self.update)
 
         self.__init_ui()
@@ -219,7 +241,9 @@ class EditorTab(QWidget):
         if string is not None:
             assert string.id in [s.id for s in self.__editor.all_strings]
 
-            dialog = TranslatorDialog(self, string)
+            dialog = TranslatorDialog(
+                self, string, self.app_config, self.user_config, self.translator
+            )
             dialog.update_signal.connect(self.update)
             dialog.show()
 
@@ -413,7 +437,7 @@ class EditorTab(QWidget):
         Opens dialog to configure batch translation via user configured API.
         """
 
-        if AppContext.get_app().translator_config.show_confirmation_dialogs:
+        if self.translator_config.show_confirmation_dialogs:
             dialog = QDialog(QApplication.activeModalWidget())
             dialog.setWindowTitle(self.tr("Translate with API"))
 
@@ -451,10 +475,8 @@ class EditorTab(QWidget):
 
             if dialog.exec() == QDialog.DialogCode.Accepted:
                 if do_not_show_again_checkbox.isChecked():
-                    AppContext.get_app().translator_config.show_confirmation_dialogs = (
-                        False
-                    )
-                    AppContext.get_app().translator_config.save()
+                    self.translator_config.show_confirmation_dialogs = False
+                    self.translator_config.save()
             else:
                 return
 
@@ -479,9 +501,7 @@ class EditorTab(QWidget):
             folder = os.path.normpath(folder)
             folder_path = Path(folder)
 
-            AppContext.get_app().database.exporter.export_translation_dsd(
-                self.translation, folder_path
-            )
+            self.database.exporter.export_translation_dsd(self.translation, folder_path)
 
             messagebox = QMessageBox(QApplication.activeModalWidget())
             messagebox.setWindowTitle(self.tr("Success!"))

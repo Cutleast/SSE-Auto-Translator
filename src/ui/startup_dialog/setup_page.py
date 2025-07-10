@@ -135,7 +135,7 @@ class SetupPage(Page):
         vlayout.addWidget(api_groupbox)
         api_vlayout = QVBoxLayout()
         api_groupbox.setLayout(api_vlayout)
-        self.__api_setup = ApiSetup()
+        self.__api_setup = ApiSetup(self.cache)
         api_vlayout.addWidget(self.__api_setup)
 
         self.__lang_dropdown.currentTextChanged.connect(lambda _: self._validate())

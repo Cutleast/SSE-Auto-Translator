@@ -9,6 +9,8 @@ from typing import override
 import googletrans
 from googletrans.client import Translated
 
+from core.config.translator_config import TranslatorConfig
+
 from .translator import Translator
 from .translator_api import TranslatorApi
 
@@ -26,8 +28,8 @@ class GoogleTranslator(Translator):
         "chinese": "zh-cn",
     }
 
-    def __init__(self) -> None:
-        super().__init__()
+    def __init__(self, translator_config: TranslatorConfig) -> None:
+        super().__init__(translator_config)
 
         self.translator = googletrans.Translator()
 

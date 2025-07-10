@@ -12,8 +12,8 @@ from typing import Any, Optional, overload
 import jstyleson as json
 from PySide6.QtCore import QObject, Signal
 
-from app_context import AppContext
 from core.cache.cache import Cache
+from core.config.app_config import AppConfig
 from core.config.user_config import UserConfig
 from core.database.exporter import Exporter
 from core.database.string import String
@@ -21,7 +21,6 @@ from core.database.utilities import Utilities
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
-from core.mod_instance.mod_instance import ModInstance
 from core.translation_provider.mod_id import ModId
 from core.translation_provider.source import Source
 from core.utilities.container_utils import unique
@@ -39,6 +38,8 @@ class TranslationDatabase(QObject):
     highlight_signal = Signal(Translation)
     """
     This signal gets emitted when a translation is to be highlighted.
+
+    TODO: Remove this signal from this class
     """
 
     update_signal = Signal()
@@ -46,15 +47,34 @@ class TranslationDatabase(QObject):
     This signal gets emitted everytime, a translation is added, removed or renamed.
     """
 
+    add_signal = Signal(Translation)
+    """
+    This signal gets emitted for every translation that is added.
+
+    Args:
+        Translation: The added translation.
+    """
+
     edit_signal = Signal(Translation)
     """
     This signal gets emitted when a translation is to be edited.
+
+    TODO: Remove this signal from this class
+    """
+
+    remove_signal = Signal(Translation)
+    """
+    This signal gets emitted for every translation that is removed.
+
+    Args:
+        Translation: The removed translation.
     """
 
     userdb_path: Path
     appdb_path: Path
     language: str
 
+    cache: Cache
     importer: Importer
     exporter: Exporter
     utils: Utilities
@@ -69,6 +89,8 @@ class TranslationDatabase(QObject):
         userdb_path: Path,
         appdb_path: Path,
         language: str,
+        cache: Cache,
+        app_config: AppConfig,
         user_config: UserConfig,
     ) -> None:
         super().__init__()
@@ -76,10 +98,11 @@ class TranslationDatabase(QObject):
         self.userdb_path = userdb_path
         self.appdb_path = appdb_path
         self.language = language
+        self.cache = cache
 
-        self.importer = Importer(self, user_config)
-        self.exporter = Exporter(self)
-        self.utils = Utilities()
+        self.importer = Importer(cache, self, app_config, user_config)
+        self.exporter = Exporter(self, user_config)
+        self.utils = Utilities(user_config)
 
         self.load_database()
 
@@ -259,29 +282,12 @@ class TranslationDatabase(QObject):
             installed_translation.version = translation.version
             installed_translation.original_mod_id = translation.original_mod_id
             installed_translation.original_version = translation.original_version
-
-        # Set original mod files status to TranslationInstalled
-        mod_instance: ModInstance = AppContext.get_app().mod_instance
-        modfile_states: dict[ModFile, TranslationStatus] = {}
-        for modfile_name in translation.strings:
-            original_modfile: Optional[ModFile] = mod_instance.get_modfile(
-                modfile_name,
-                ignore_states=[
-                    TranslationStatus.TranslationInstalled,
-                    TranslationStatus.IsTranslated,
-                ],
-                ignore_case=True,
-            )
-
-            if original_modfile is not None:
-                modfile_states[original_modfile] = (
-                    TranslationStatus.TranslationInstalled
-                )
+            translation = installed_translation
 
         if save:
             self.save_database()
 
-        mod_instance.set_modfile_states(modfile_states)
+        self.add_signal.emit(translation)
         self.update_signal.emit()
 
     def delete_translation(self, translation: Translation, save: bool = True) -> None:
@@ -300,21 +306,10 @@ class TranslationDatabase(QObject):
 
         self.log.info(f"Deleted translation {translation.name!r} from database.")
 
-        mod_instance: ModInstance = AppContext.get_app().mod_instance
-        modfile_states: dict[ModFile, TranslationStatus] = {}
-        for modfile_name in translation.strings.keys():
-            original_modfile: Optional[ModFile] = mod_instance.get_modfile(
-                modfile_name,
-                ignore_states=[TranslationStatus.IsTranslated],
-                ignore_case=True,
-            )
-            if original_modfile is not None:
-                modfile_states[original_modfile] = TranslationStatus.RequiresTranslation
-
         if save:
             self.save_database()
 
-        mod_instance.set_modfile_states(modfile_states)
+        self.remove_signal.emit(translation)
         self.update_signal.emit()
 
     def get_translation_by_modfile_name(
@@ -531,7 +526,6 @@ class TranslationDatabase(QObject):
             translation = self.get_translation_by_mod(mod)
             translation_name = f"{mod.name} - {self.language.capitalize()}"
 
-        cache: Cache = AppContext.get_app().cache
         modfiles = list(
             filter(
                 lambda p: p.status
@@ -554,7 +548,7 @@ class TranslationDatabase(QObject):
 
         translation_strings: dict[str, list[String]] = translation.strings or {}
         for modfile in modfiles:
-            modfile_strings: list[String] = modfile.get_strings(cache)
+            modfile_strings: list[String] = modfile.get_strings(self.cache)
 
             for string in modfile_strings:
                 string.translated_string = string.original_string

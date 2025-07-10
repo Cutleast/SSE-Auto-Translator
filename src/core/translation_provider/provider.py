@@ -7,7 +7,6 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 import logging
 from typing import Optional
 
-from app_context import AppContext
 from core.cache.cache import Cache
 from core.config.user_config import UserConfig
 from core.masterlist.masterlist import Masterlist
@@ -99,7 +98,12 @@ class Provider:
             )
 
     def get_translations(
-        self, mod_id: ModId, file_name: str, language: str, author_blacklist: list[str]
+        self,
+        mod_id: ModId,
+        file_name: str,
+        language: str,
+        masterlist: Masterlist,
+        author_blacklist: list[str],
     ) -> dict[Source, list[ModId]]:
         """
         Gets available translations for the specified file from all available providers.
@@ -108,6 +112,7 @@ class Provider:
             mod_id (ModId): Mod identifier
             file_name (str): Name of file that requires a translation.
             language (str): Language to filter for
+            masterlist (Masterlist): Masterlist to use
             author_blacklist (list[str]): List of authors to ignore
 
         Returns:
@@ -149,7 +154,6 @@ class Provider:
                     translation_id
                 )
 
-        masterlist: Masterlist = AppContext.get_app().masterlist
         masterlist_entry: Optional[MasterlistEntry] = masterlist.entries.get(
             file_name.lower()
         )

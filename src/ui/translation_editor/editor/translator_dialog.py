@@ -20,7 +20,6 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from app_context import AppContext
 from core.config.app_config import AppConfig
 from core.config.user_config import UserConfig
 from core.database.string import String
@@ -59,12 +58,19 @@ class TranslatorDialog(QWidget):
     __original_entry: QPlainTextEdit
     __translated_entry: QPlainTextEdit | SpellCheckEntry
 
-    def __init__(self, parent: "EditorTab", initial_string: String):
+    def __init__(
+        self,
+        parent: "EditorTab",
+        initial_string: String,
+        app_config: AppConfig,
+        user_config: UserConfig,
+        translator: Translator,
+    ):
         super().__init__(QApplication.activeModalWidget())
 
-        self.app_config = AppContext.get_app().app_config
-        self.user_config = AppContext.get_app().user_config
-        self.translator = AppContext.get_app().translator
+        self.app_config = app_config
+        self.user_config = user_config
+        self.translator = translator
 
         self.changes_signal.connect(self.__on_change)
 

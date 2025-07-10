@@ -9,7 +9,6 @@ from typing import Optional
 
 from PySide6.QtCore import QObject
 
-from app_context import AppContext
 from core.cache.cache import Cache
 from core.config.app_config import AppConfig
 from core.config.user_config import UserConfig
@@ -47,16 +46,25 @@ class Scanner(QObject):
     masterlist: Masterlist
     detector: LangDetector
 
-    def __init__(self) -> None:
+    def __init__(
+        self,
+        cache: Cache,
+        mod_instance: ModInstance,
+        database: TranslationDatabase,
+        app_config: AppConfig,
+        user_config: UserConfig,
+        provider: Provider,
+        masterlist: Masterlist,
+    ) -> None:
         super().__init__()
 
-        self.cache = AppContext.get_app().cache
-        self.mod_instance = AppContext.get_app().mod_instance
-        self.database = AppContext.get_app().database
-        self.app_config = AppContext.get_app().app_config
-        self.user_config = AppContext.get_app().user_config
-        self.provider = AppContext.get_app().provider
-        self.masterlist = AppContext.get_app().masterlist
+        self.cache = cache
+        self.mod_instance = mod_instance
+        self.database = database
+        self.app_config = app_config
+        self.user_config = user_config
+        self.provider = provider
+        self.masterlist = masterlist
         self.detector = LangDetector(
             self.app_config.detector_confidence,
             getattr(Language, self.user_config.language.id.upper()),
@@ -271,6 +279,7 @@ class Scanner(QObject):
                 mod_id,
                 modfile.name,
                 self.user_config.language.id,
+                self.masterlist,
                 self.user_config.author_blacklist,
             )
         )

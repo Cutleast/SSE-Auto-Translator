@@ -44,21 +44,23 @@ class DownloadsTab(QWidget):
     __downloads_num_label: QLCDNumber
     __downloads_widget: QTreeWidget
 
-    def __init__(self) -> None:
+    def __init__(
+        self,
+        download_manager: DownloadManager,
+        provider: Provider,
+        nxm_listener: NXMHandler,
+    ) -> None:
         super().__init__()
+
+        self.download_manager = download_manager
+        self.provider = provider
+        self.nxm_listener = nxm_listener
 
         self.__download_items = []
 
         self.__init_ui()
 
-        AppContext.get_app().ready_signal.connect(self.__post_init)
-
-    def __post_init(self) -> None:
-        self.download_manager = AppContext.get_app().download_manager
         self.download_manager.download_added.connect(self.__add_download)
-
-        self.provider = AppContext.get_app().provider
-        self.nxm_listener = AppContext.get_app().nxm_listener
         AppContext.get_app().timer_signal.connect(self.__check_nxm_link)
 
         # Highlight NXM button if the user has no Premium

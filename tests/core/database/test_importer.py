@@ -75,7 +75,7 @@ class TestImporter(CoreTest):
         )
         assert database.user_translations == []
         imported_strings: dict[str, list[String]] = (
-            importer.extract_strings_from_archive(test_file_path)
+            importer.extract_strings_from_archive(test_file_path, self.modinstance())
         )
 
         # then

@@ -8,6 +8,11 @@ from PySide6.QtCore import Qt
 from PySide6.QtGui import QCloseEvent
 from PySide6.QtWidgets import QMessageBox, QWidget
 
+from core.cache.cache import Cache
+from core.config.app_config import AppConfig
+from core.config.translator_config import TranslatorConfig
+from core.config.user_config import UserConfig
+
 from .settings_widget import SettingsWidget
 
 
@@ -16,8 +21,15 @@ class SettingsDialog(SettingsWidget):
     Class for settings dialog.
     """
 
-    def __init__(self, parent: Optional[QWidget] = None) -> None:
-        super().__init__(parent)
+    def __init__(
+        self,
+        cache: Cache,
+        app_config: AppConfig,
+        user_config: UserConfig,
+        translator_config: TranslatorConfig,
+        parent: Optional[QWidget] = None,
+    ) -> None:
+        super().__init__(cache, app_config, user_config, translator_config, parent)
 
         self.setWindowModality(Qt.WindowModality.WindowModal)
         self.setWindowFlag(Qt.WindowType.Window, True)

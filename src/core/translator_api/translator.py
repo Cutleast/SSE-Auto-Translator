@@ -8,7 +8,7 @@ from abc import abstractmethod
 
 from PySide6.QtCore import QObject
 
-from app_context import AppContext
+from core.config.translator_config import TranslatorConfig
 
 
 class Translator(QObject):
@@ -19,10 +19,10 @@ class Translator(QObject):
     name: str
     translator_config: "TranslatorConfig"
 
-    def __init__(self) -> None:
+    def __init__(self, translator_config: TranslatorConfig) -> None:
         super().__init__()
 
-        self.translator_config = AppContext.get_app().translator_config
+        self.translator_config = translator_config
 
     @abstractmethod
     def translate(self, text: str, src: str, dst: str) -> str:

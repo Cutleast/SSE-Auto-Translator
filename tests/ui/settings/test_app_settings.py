@@ -82,7 +82,7 @@ class TestAppSettings(UiTest, AppTest):
         Returns a new `AppSettings` instance for the given `App` instance.
         """
 
-        return AppSettings(app_context.app_config)
+        return AppSettings(app_context.app_config, self.cache())
 
     def test_initial(self, app_settings: AppSettings, app_context: App) -> None:
         """

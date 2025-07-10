@@ -2,14 +2,23 @@
 Copyright (c) Cutleast
 """
 
+import logging
 from typing import Any, Optional
 
+import jstyleson as json
 from pydantic import TypeAdapter
 from pydantic.dataclasses import dataclass
 
 from app_context import AppContext
+from core.utilities.game_language import GameLanguage
+from core.utilities.web_utils import get_raw_web_content
 
 from .masterlist_entry import MasterlistEntry
+
+REPOSITORY_URL: str = "https://raw.githubusercontent.com/Cutleast/SSE-Auto-Translator/master/masterlists/index.json"
+"""URL to the masterlist index file in the GitHub repository."""
+
+log: logging.Logger = logging.getLogger("Masterlist")
 
 
 @dataclass
@@ -27,6 +36,40 @@ class Masterlist:
     def from_data(data: dict[str, dict[str, Any]]) -> "Masterlist":
         return Masterlist(TypeAdapter(dict[str, MasterlistEntry]).validate_python(data))
 
+    @staticmethod
+    def load_from_repo(language: GameLanguage) -> "Masterlist":
+        """
+        Loads the masterlist from the repository.
+
+        Args:
+            language (GameLanguage): Language to load the masterlist for.
+
+        Returns:
+            Masterlist: Loaded masterlist.
+        """
+
+        log.info(
+            f"Loading masterlist from repository at '{REPOSITORY_URL}' for language "
+            f"'{language.name}'..."
+        )
+
+        data: bytes = get_raw_web_content(REPOSITORY_URL)
+        index: dict[str, str] = json.loads(data.decode())
+
+        url: Optional[str] = index.get(language.id)
+
+        if url is None:
+            log.warning(f"No masterlist available for language '{language.name}'.")
+            return Masterlist(entries={})
+
+        data = get_raw_web_content(url)
+        json_data: dict[str, dict[str, Any]] = json.loads(data.decode())
+        masterlist: Masterlist = Masterlist.from_data(json_data)
+
+        log.info(f"Loaded masterlist with {len(masterlist.entries)} entries.")
+
+        return masterlist
+
     @property
     def user_ignore_list(self) -> list[str]:
         """
@@ -34,6 +77,7 @@ class Masterlist:
         """
 
         if AppContext.has_app():
+            # TODO: Improve this
             return AppContext.get_app().user_config.modfile_ignorelist
         else:
             return []

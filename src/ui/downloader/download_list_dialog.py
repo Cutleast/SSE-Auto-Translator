@@ -24,7 +24,6 @@ from PySide6.QtWidgets import (
 )
 from qtpy.QtWidgets import QMessageBox
 
-from app_context import AppContext
 from core.database.database import TranslationDatabase
 from core.downloader.download_manager import DownloadManager
 from core.downloader.file_download import FileDownload
@@ -51,6 +50,7 @@ class DownloadListDialog(QDialog):
     provider: Provider
     database: TranslationDatabase
     download_manager: DownloadManager
+    nxm_handler: NXMHandler
 
     def __init__(
         self,
@@ -58,6 +58,7 @@ class DownloadListDialog(QDialog):
         provider: Provider,
         database: TranslationDatabase,
         download_manager: DownloadManager,
+        nxm_listener: NXMHandler,
         updates: bool = False,
         parent: Optional[QWidget] = None,
     ) -> None:
@@ -66,6 +67,7 @@ class DownloadListDialog(QDialog):
         self.provider = provider
         self.database = database
         self.download_manager = download_manager
+        self.nxm_handler = nxm_listener
 
         self.translation_downloads = translation_downloads
         self.updates = updates
@@ -151,7 +153,9 @@ class DownloadListDialog(QDialog):
             label,
             original_mod_id,
         ), translation_download in self.translation_downloads.items():
-            item = DownloadListItem(label, original_mod_id, translation_download)
+            item = DownloadListItem(
+                label, original_mod_id, translation_download, self.provider
+            )
             self.list_widget.addTopLevelItem(item)
 
             # TODO: Move this part to DownloadListItem
@@ -253,8 +257,10 @@ class DownloadListDialog(QDialog):
         self.download_manager.start()
         self.close()
 
-        nxm_handler: NXMHandler = AppContext.get_app().nxm_listener
-        if not self.provider.direct_downloads_possible() and not nxm_handler.is_bound():
+        if (
+            not self.provider.direct_downloads_possible()
+            and not self.nxm_handler.is_bound()
+        ):
             messagebox = QMessageBox(QApplication.activeModalWidget())
             messagebox.setWindowTitle(self.tr("Link to Mod Manager downloads?"))
             messagebox.setText(
@@ -275,7 +281,7 @@ class DownloadListDialog(QDialog):
             messagebox.button(QMessageBox.StandardButton.No).setText(self.tr("No"))
 
             if messagebox.exec() == QMessageBox.StandardButton.Yes:
-                nxm_handler.bind()
+                self.nxm_handler.bind()
 
     @override
     def eventFilter(self, source: QObject, event: QEvent) -> bool:

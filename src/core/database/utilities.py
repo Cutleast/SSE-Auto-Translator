@@ -9,7 +9,6 @@ from typing import Optional
 from PySide6.QtCore import QObject
 from sse_bsa import BSAArchive
 
-from app_context import AppContext
 from core.archiver.archive import Archive
 from core.config.user_config import UserConfig
 from ui.widgets.loading_dialog import LoadingDialog
@@ -24,13 +23,13 @@ class Utilities(QObject):
 
     user_config: UserConfig
 
-    def __init__(self) -> None:
+    def __init__(self, user_config: UserConfig) -> None:
         super().__init__()
 
-        self.user_config = AppContext.get_app().user_config
+        self.user_config = user_config
 
     def get_additional_files(
-        self, path: Path, ldialog: Optional[LoadingDialog] = None
+        self, path: Path, tmp_dir: Path, ldialog: Optional[LoadingDialog] = None
     ) -> list[str]:
         """
         Returns a list of matching additional files from a specified path.
@@ -39,6 +38,7 @@ class Utilities(QObject):
 
         Args:
             path (Path): Path to downloaded translation archive or folder.
+            tmp_dir (Path): Path to temporary directory.
             ldialog (Optional[LoadingDialog], optional):
                 Optional loading dialog. Defaults to None.
 
@@ -48,7 +48,6 @@ class Utilities(QObject):
 
         matching_files: list[str] = []
 
-        TMP_DIR: Path = AppContext.get_app().get_tmp_dir()
         lang: str = self.user_config.language.id
         PATTERNS: dict[str, bool] = {
             f"**/interface/**/*_{lang}.txt": self.user_config.enable_interface_files,
@@ -108,13 +107,13 @@ class Utilities(QObject):
 
             self.log.debug(f"Extracting {len(bsas)} BSA(s) from '{path}'...")
             archive.extract_files(
-                [bsa for bsa in bsas if not (TMP_DIR / bsa).is_file()],
-                TMP_DIR,
+                [bsa for bsa in bsas if not (tmp_dir / bsa).is_file()],
+                tmp_dir,
                 full_paths=False,
             )
 
             for b, bsa in enumerate(bsas):
-                bsa_file = TMP_DIR / Path(bsa).name
+                bsa_file = tmp_dir / Path(bsa).name
                 if ldialog:
                     ldialog.updateProgress(
                         text1=self.tr("Processing BSAs...") + f" ({b}/{len(bsas)})",

@@ -19,9 +19,8 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from app_context import AppContext
-from core.cache.cache import Cache
 from core.config.app_config import DEFAULT_ACCENT_COLOR, AppConfig
+from core.utilities.exe_info import get_current_path
 from core.utilities.filesystem import get_folder_size
 from core.utilities.localisation import Language
 from core.utilities.logger import Logger
@@ -114,17 +113,16 @@ class AppSettings(SettingsPage[AppConfig]):
             )
         )
         self.__clear_cache_button.clicked.connect(self.__clear_cache)
-        cache: Cache = AppContext.get_app().cache
-        self.__clear_cache_button.setEnabled(cache.path.is_dir())
-        if cache.path.is_dir():
+        self.__clear_cache_button.setEnabled(self.cache.path.is_dir())
+        if self.cache.path.is_dir():
             self.__clear_cache_button.setText(
                 self.__clear_cache_button.text()
-                + f" ({scale_value(get_folder_size(cache.path))})"
+                + f" ({scale_value(get_folder_size(self.cache.path))})"
             )
         basic_flayout.addRow(self.__clear_cache_button)
 
     def __init_path_settings(self) -> None:
-        cur_path: Path = AppContext.get_app().cur_path
+        cur_path: Path = get_current_path()
 
         path_group = QGroupBox(self.tr("Path Settings"))
         self.__vlayout.addWidget(path_group)
@@ -253,8 +251,7 @@ class AppSettings(SettingsPage[AppConfig]):
         behavior_flayout.addRow(self.__double_click_strings)
 
     def __clear_cache(self) -> None:
-        cache: Cache = AppContext.get_app().cache
-        cache.clear_caches()
+        self.cache.clear_caches()
         self.__clear_cache_button.setText(
             self.tr(
                 "Clear Cache (This will reset all mod file states "

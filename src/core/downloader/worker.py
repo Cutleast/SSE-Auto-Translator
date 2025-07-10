@@ -9,7 +9,6 @@ from typing import Optional, override
 
 from PySide6.QtCore import QThread, Signal
 
-from app_context import AppContext
 from core.cache.cache import TranslationStatus
 from core.config.app_config import AppConfig
 from core.database.database import TranslationDatabase
@@ -52,11 +51,16 @@ class Worker(QThread):
     app_config: AppConfig
     provider: Provider
     database: TranslationDatabase
+    mod_instance: ModInstance
 
     def __init__(
         self,
         installer_queue: Queue[tuple[FileDownload, ProgressCallback]],
         thread_id: int,
+        app_config: AppConfig,
+        provider: Provider,
+        database: TranslationDatabase,
+        mod_instance: ModInstance,
     ) -> None:
         super().__init__()
 
@@ -65,9 +69,10 @@ class Worker(QThread):
         self.download_queue = installer_queue
 
         self.downloader = Downloader()
-        self.app_config = AppContext.get_app().app_config
-        self.provider = AppContext.get_app().provider
-        self.database = AppContext.get_app().database
+        self.app_config = app_config
+        self.provider = provider
+        self.database = database
+        self.mod_instance = mod_instance
 
     def __process_download(
         self, download: FileDownload, progress_callback: ProgressCallback
@@ -104,13 +109,17 @@ class Worker(QThread):
         self.waiting = False
 
         downloads_folder: Path = (
-            self.app_config.downloads_path or AppContext.get_app().get_tmp_dir()
+            self.app_config.downloads_path or self.app_config.get_tmp_dir()
         )
         mod_file: Path = downloads_folder / file_name
 
         if not mod_file.is_file():
             self.downloader.download(
-                url, downloads_folder, file_name, progress_callback
+                url,
+                downloads_folder,
+                self.provider.user_agent,
+                file_name,
+                progress_callback,
             )
             self.log.info(f"Downloaded translation to '{mod_file}'.")
         else:
@@ -134,11 +143,11 @@ class Worker(QThread):
         self.log.info("Installing translation...")
         progress_callback(ProgressUpdate(0, 0, self.tr("Installing translation...")))
 
-        mod_instance: ModInstance = AppContext.get_app().mod_instance
-
         try:
             strings: dict[str, list[String]] = (
-                self.database.importer.extract_strings_from_archive(downloaded_file)
+                self.database.importer.extract_strings_from_archive(
+                    downloaded_file, self.mod_instance
+                )
             )
         except Exception as ex:
             raise InstallationFailedError from ex
@@ -148,7 +157,7 @@ class Worker(QThread):
 
         # TODO: Improve this to work with modfiles from multiple original mods or to get at least the original mod with the most mod files
         modfile_name = list(strings.keys())[0].lower()
-        original_mod: Optional[Mod] = mod_instance.get_mod_with_modfile(
+        original_mod: Optional[Mod] = self.mod_instance.get_mod_with_modfile(
             modfile_name,
             ignore_states=[
                 TranslationStatus.TranslationInstalled,

@@ -11,7 +11,6 @@ from typing import Optional
 import jstyleson as json
 from PySide6.QtCore import QObject
 
-from app_context import AppContext
 from core.config.user_config import UserConfig
 from core.database.string import String
 from core.mod_file.mod_file import ModFile
@@ -32,11 +31,13 @@ class Exporter(QObject):
     database: "TranslationDatabase"
     user_config: UserConfig
 
-    def __init__(self, database: "TranslationDatabase") -> None:
+    def __init__(
+        self, database: "TranslationDatabase", user_config: UserConfig
+    ) -> None:
         super().__init__()
 
         self.database = database
-        self.user_config = AppContext.get_app().user_config
+        self.user_config = user_config
 
     def export_translation_dsd(
         self,
@@ -127,7 +128,7 @@ class Exporter(QObject):
         return dsd_path
 
     def export_additional_files(
-        self, translation: "Translation", original_mod: "Mod", path: Path
+        self, translation: "Translation", original_mod: "Mod", path: Path, tmp_dir: Path
     ) -> None:
         """
         Exports enabled non-plugin files from the translation
@@ -137,6 +138,7 @@ class Exporter(QObject):
             translation (Translation): Translation to export files from.
             original_mod (Mod): Installed original mod.
             path (Path): Path to export to.
+            tmp_dir (Path): Temporary directory to use.
         """
 
         self.log.info(
@@ -145,7 +147,7 @@ class Exporter(QObject):
         )
 
         additional_files: list[str] = self.database.utils.get_additional_files(
-            translation.path / "data"
+            translation.path / "data", tmp_dir
         )
         additional_files = list(
             filter(
@@ -172,6 +174,7 @@ class Exporter(QObject):
         self,
         translation: "Translation",
         path: Path,
+        mod_instance: ModInstance,
         plugins: Optional[list[str]] = None,
     ) -> None:
         """
@@ -180,12 +183,12 @@ class Exporter(QObject):
         Args:
             translation (Translation): Translation to export.
             path (Path): Path to export to.
+            mod_instance (ModInstance): Modinstance to use.
             plugins (Optional[list[str]], optional):
                 List of plugin names to export. Defaults to None.
         """
 
         plugins = plugins or list(translation.strings.keys())
-        modinstance: ModInstance = AppContext.get_app().mod_instance
 
         self.log.info(
             f"Exporting translation {translation.name!r} "
@@ -193,7 +196,7 @@ class Exporter(QObject):
         )
 
         for plugin_name in plugins:
-            plugin: Optional[ModFile] = modinstance.get_modfile(
+            plugin: Optional[ModFile] = mod_instance.get_modfile(
                 plugin_name,
                 ignore_states=[TranslationStatus.IsTranslated],
                 ignore_case=True,
@@ -223,11 +226,20 @@ class Exporter(QObject):
 
         self.log.info("Export complete.")
 
-    def build_output_mod(self, ldialog: Optional[LoadingDialog] = None) -> Path:
+    def build_output_mod(
+        self,
+        output_path: Path,
+        mod_instance: ModInstance,
+        tmp_dir: Path,
+        ldialog: Optional[LoadingDialog] = None,
+    ) -> Path:
         """
         Builds the output mod for DSD at the configured location.
 
         Args:
+            output_path (Path): Path to build the output mod at.
+            mod_instance (ModInstance): Mod instance to use.
+            tmp_dir (Path): Temporary directory to use.
             ldialog (Optional[LoadingDialog], optional):
                 Optional loading dialog. Defaults to None.
 
@@ -235,15 +247,11 @@ class Exporter(QObject):
             Path: The path to the output mod.
         """
 
-        destination: Path = AppContext.get_app().app_config.output_path or (
-            AppContext.get_app().cur_path / "SSE-AT Output"
-        )
-        destination.mkdir(parents=True, exist_ok=True)
-        modinstance: ModInstance = AppContext.get_app().mod_instance
+        output_path.mkdir(parents=True, exist_ok=True)
         translations: list[Translation] = self.database.user_translations
 
         self.log.info(
-            f"Building output mod at {destination!r} for "
+            f"Building output mod at {output_path!r} for "
             f"{len(translations)} translation(s)..."
         )
 
@@ -261,9 +269,9 @@ class Exporter(QObject):
 
             original_mod: Optional[Mod]
             if translation.original_mod_id:
-                original_mod = modinstance.get_mod(translation.original_mod_id)
+                original_mod = mod_instance.get_mod(translation.original_mod_id)
             else:
-                original_mod = modinstance.get_mod_with_modfile(
+                original_mod = mod_instance.get_mod_with_modfile(
                     list(translation.strings.keys())[0], ignore_case=True
                 )
 
@@ -273,12 +281,14 @@ class Exporter(QObject):
                 )
                 continue
 
-            self.export_translation_dsd(translation, destination, output_mod=True)
-            self.export_additional_files(translation, original_mod, destination)
+            self.export_translation_dsd(translation, output_path, output_mod=True)
+            self.export_additional_files(
+                translation, original_mod, output_path, tmp_dir
+            )
 
         self.log.info("Built output mod.")
 
-        return destination
+        return output_path
 
 
 if __name__ == "__main__":

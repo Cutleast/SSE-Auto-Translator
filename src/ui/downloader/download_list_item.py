@@ -10,7 +10,6 @@ from typing import Any
 from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QComboBox, QPushButton, QTreeWidgetItem
 
-from app_context import AppContext
 from core.downloader.translation_download import TranslationDownload
 from core.translation_provider.exceptions import ModNotFoundError
 from core.translation_provider.mod_id import ModId
@@ -37,12 +36,13 @@ class DownloadListItem(QTreeWidgetItem):
         name: str,
         original_mod_id: ModId,
         translation_downloads: list[TranslationDownload],
+        provider: Provider,
     ) -> None:
         super().__init__(["", name, "", "", ""])
 
         self.original_mod_id = original_mod_id
-        self.provider = AppContext.get_app().provider
         self.translation_downloads = translation_downloads
+        self.provider = provider
 
     def init_widgets(self) -> None:
         """

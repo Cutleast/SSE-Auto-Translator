@@ -15,9 +15,9 @@ import jstyleson as json
 from PySide6.QtCore import QObject
 from sse_bsa import BSAArchive
 
-from app_context import AppContext
 from core.archiver.archive import Archive
 from core.cache.cache import Cache
+from core.config.app_config import AppConfig
 from core.config.user_config import UserConfig
 from core.database.string import String
 from core.database.translation import Translation
@@ -41,15 +41,23 @@ class Importer(QObject):
 
     log: logging.Logger = logging.getLogger("Importer")
 
+    cache: Cache
     database: "TranslationDatabase"
+    app_config: AppConfig
     user_config: UserConfig
 
     def __init__(
-        self, database: "TranslationDatabase", user_config: UserConfig
+        self,
+        cache: Cache,
+        database: "TranslationDatabase",
+        app_config: AppConfig,
+        user_config: UserConfig,
     ) -> None:
         super().__init__()
 
+        self.cache = cache
         self.database = database
+        self.app_config = app_config
         self.user_config = user_config
 
     def import_mod_as_translation(self, mod: Mod, original_mod: Mod) -> None:
@@ -158,7 +166,7 @@ class Importer(QObject):
         if ldialog is not None:
             ldialog.updateProgress(text1=self.tr("Processing archive..."))
 
-        tmp_dir: Path = AppContext.get_app().get_tmp_dir()
+        tmp_dir: Path = self.app_config.get_tmp_dir()
         output_folder = tmp_dir / "Output"
 
         if output_folder.is_dir():
@@ -171,7 +179,7 @@ class Importer(QObject):
         bsa_files_to_extract: dict[Path, list[str]] = {}
 
         matching_files: list[str] = self.database.utils.get_additional_files(
-            archive_path, ldialog
+            archive_path, tmp_dir, ldialog
         )
 
         for file in matching_files:
@@ -243,7 +251,10 @@ class Importer(QObject):
             self.log.info("Imported no additional files.")
 
     def extract_strings_from_archive(
-        self, archive_path: Path, ldialog: Optional[LoadingDialog] = None
+        self,
+        archive_path: Path,
+        mod_instance: ModInstance,
+        ldialog: Optional[LoadingDialog] = None,
     ) -> dict[str, list[String]]:
         """
         Extracts strings from a downloaded archive and maps them to the
@@ -251,6 +262,7 @@ class Importer(QObject):
 
         Args:
             archive_path (Path): Path to downloaded archive.
+            mod_instance (ModInstance): Modinstance to use.
             ldialog (Optional[LoadingDialog], optional):
                 Optional loading dialog. Defaults to None.
 
@@ -263,8 +275,7 @@ class Importer(QObject):
         if ldialog is not None:
             ldialog.updateProgress(text1=self.tr("Processing archive..."))
 
-        tmp_dir: Path = AppContext.get_app().get_tmp_dir()
-        mod_instance: ModInstance = AppContext.get_app().mod_instance
+        tmp_dir: Path = self.app_config.get_tmp_dir()
         archive: Archive = Archive.load_archive(archive_path)
 
         modfiles: list[str] = []
@@ -394,10 +405,8 @@ class Importer(QObject):
             list[String]: List of mapped strings
         """
 
-        cache: Cache = AppContext.get_app().cache
-
-        translation_strings: list[String] = translation_modfile.get_strings(cache)
-        original_strings: list[String] = original_modfile.get_strings(cache)
+        translation_strings: list[String] = translation_modfile.get_strings(self.cache)
+        original_strings: list[String] = original_modfile.get_strings(self.cache)
 
         if not translation_strings and not original_strings:
             return []
