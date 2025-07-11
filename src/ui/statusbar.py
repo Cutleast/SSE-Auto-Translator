@@ -4,16 +4,15 @@ Copyright (c) Cutleast
 
 from typing import Optional, override
 
-import pyperclip as clipboard
 import qtawesome as qta
-from PySide6.QtCore import QSize, Qt, Signal
-from PySide6.QtWidgets import QLabel, QPushButton, QStatusBar
+from PySide6.QtCore import QSize, Qt, QTimerEvent, Signal
+from PySide6.QtWidgets import QApplication, QLabel, QPushButton, QStatusBar
 
-from app_context import AppContext
 from core.translation_provider.provider import Provider
 from core.utilities import trim_string
 from core.utilities.logger import Logger
-from ui.widgets.log_window import LogWindow
+
+from .widgets.log_window import LogWindow
 
 
 class StatusBar(QStatusBar):
@@ -25,6 +24,9 @@ class StatusBar(QStatusBar):
     __logger: Logger
     __provider: Provider
 
+    status_label: QLabel
+    api_label: QLabel
+
     __log_window: Optional[LogWindow] = None
 
     def __init__(self, logger: Logger, provider: Provider) -> None:
@@ -35,6 +37,10 @@ class StatusBar(QStatusBar):
 
         self.__provider = provider
 
+        self.__init_ui()
+        self.startTimer(1000, Qt.TimerType.PreciseTimer)
+
+    def __init_ui(self) -> None:
         self.status_label = QLabel()
         self.status_label.setObjectName("protocol")
         self.status_label.setTextFormat(Qt.TextFormat.PlainText)
@@ -61,7 +67,7 @@ class StatusBar(QStatusBar):
         )
         copy_log_button.setIconSize(QSize(16, 16))
         copy_log_button.clicked.connect(
-            lambda: clipboard.copy(self.__logger.get_content())
+            lambda: QApplication.clipboard().setText(self.__logger.get_content())
         )
         copy_log_button.setToolTip(self.tr("Copy log to clipboard"))
         self.addPermanentWidget(copy_log_button)
@@ -76,14 +82,18 @@ class StatusBar(QStatusBar):
         open_log_button.clicked.connect(self.__open_log_window)
         self.addPermanentWidget(open_log_button)
 
-        AppContext.get_app().timer_signal.connect(self.update)
-
     def __open_log_window(self) -> None:
         self.__log_window = LogWindow(self.__logger.get_content())
         self.log_signal.connect(
             self.__log_window.addMessage, Qt.ConnectionType.QueuedConnection
         )
         self.__log_window.show()
+
+    @override
+    def timerEvent(self, event: QTimerEvent) -> None:
+        super().timerEvent(event)
+
+        self.update()
 
     @override
     def update(self) -> None:  # type: ignore

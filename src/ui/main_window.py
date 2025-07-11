@@ -3,11 +3,11 @@ Copyright (c) Cutleast
 """
 
 import logging
-from typing import Optional, override
+from typing import override
 
-from PySide6.QtCore import Signal
+from PySide6.QtCore import Qt, Signal
 from PySide6.QtGui import QCloseEvent, QKeySequence, QShortcut
-from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox, QTabWidget
+from PySide6.QtWidgets import QMainWindow, QMessageBox, QTabWidget
 
 from app_context import AppContext
 from core.cache.cache import Cache
@@ -24,6 +24,10 @@ from core.translation_provider.nm_api.nxm_handler import NXMHandler
 from core.translation_provider.provider import Provider
 from core.translator_api.translator import Translator
 from core.utilities.logger import Logger
+from core.utilities.path_limit_fixer import PathLimitFixer
+from core.utilities.updater import Updater
+from ui.settings.settings_dialog import SettingsDialog
+from ui.widgets.about_dialog import AboutDialog
 
 from .main_page.main_page import MainPageWidget
 from .menubar import MenuBar
@@ -55,9 +59,11 @@ class MainWindow(QMainWindow):
 
     __refresh_shortcut: QShortcut
 
+    __menu_bar: MenuBar
     tab_widget: QTabWidget
     mainpage_widget: MainPageWidget
     translation_editor: EditorPage
+    __status_bar: StatusBar
 
     refresh_signal = Signal()
     """
@@ -100,20 +106,29 @@ class MainWindow(QMainWindow):
 
         self.setObjectName("root")
 
-        self.close_event = self.closeEvent
-        self.closeEvent = lambda event: self.exit(event)
-
         self.__init_ui()
         self.__init_shortcuts()
 
     def __init_ui(self) -> None:
-        self.setMenuBar(MenuBar())
-        self.setStatusBar(StatusBar(self.logger, self.provider))
+        self.__init_menu_bar()
+        self.__init_tab_widget()
+        self.__init_status_bar()
 
         self.resize(1500, 800)
-        self.setStyleSheet(AppContext.get_app().styleSheet())
 
-        self.__init_tab_widget()
+    def __init_menu_bar(self) -> None:
+        self.__menu_bar = MenuBar()
+        self.setMenuBar(self.__menu_bar)
+
+        self.__menu_bar.settings_requested.connect(self.__open_settings)
+        self.__menu_bar.exit_requested.connect(self.close)
+        self.__menu_bar.update_check_requested.connect(self.__check_for_updates)
+        self.__menu_bar.docs_requested.connect(AppContext.get_app().open_documentation)
+        self.__menu_bar.path_limit_fix_requested.connect(
+            lambda: PathLimitFixer.disable_path_limit(AppContext.get_app().res_path)
+        )
+        self.__menu_bar.about_requested.connect(self.__show_about)
+        self.__menu_bar.about_qt_requested.connect(self.__show_about_qt)
 
     def __init_tab_widget(self) -> None:
         self.tab_widget = QTabWidget()
@@ -151,6 +166,10 @@ class MainWindow(QMainWindow):
         self.__refresh_shortcut = QShortcut(QKeySequence("F5"), self)
         self.__refresh_shortcut.activated.connect(self.refresh)
 
+    def __init_status_bar(self) -> None:
+        self.__status_bar = StatusBar(self.logger, self.provider)
+        self.setStatusBar(self.__status_bar)
+
     @override
     def update(self) -> None:  # type: ignore
         """
@@ -170,8 +189,9 @@ class MainWindow(QMainWindow):
     def refresh(self) -> None:
         self.refresh_signal.emit()
 
-    def exit(self, event: Optional[QCloseEvent] = None) -> None:
-        confirmation = True
+    @override
+    def closeEvent(self, event: QCloseEvent) -> None:
+        confirmation: bool = True
 
         # TODO: Move this to the translation editor
         if hasattr(self, "translation_editor"):
@@ -195,18 +215,37 @@ class MainWindow(QMainWindow):
                     self.tr("Cancel")
                 )
 
-                choice = message_box.exec()
-
-                if choice != QMessageBox.StandardButton.Yes:
+                if message_box.exec() != QMessageBox.StandardButton.Yes:
                     confirmation = False
 
         if confirmation:
-            if event:
-                self.close_event(event)
-            else:
-                self.destroy()
-
-            QApplication.exit()
-
-        elif event:
+            super().closeEvent(event)
+        else:
             event.ignore()
+
+    def __open_settings(self) -> None:
+        SettingsDialog(
+            self.cache,
+            self.app_config,
+            self.user_config,
+            self.translator_config,
+            self,
+        ).show()
+
+    def __check_for_updates(self) -> None:
+        upd = Updater(AppContext.get_app().APP_VERSION)
+        if upd.update_available():
+            upd.run()
+        else:
+            messagebox = QMessageBox(self)
+            messagebox.setWindowTitle(self.tr("No Updates Available"))
+            messagebox.setText(self.tr("There are no updates available."))
+            messagebox.setTextFormat(Qt.TextFormat.RichText)
+            messagebox.setIcon(QMessageBox.Icon.Information)
+            messagebox.exec()
+
+    def __show_about(self) -> None:
+        AboutDialog(self).exec()
+
+    def __show_about_qt(self) -> None:
+        QMessageBox.aboutQt(self, self.tr("About Qt"))

@@ -1078,32 +1078,47 @@ Click on &quot;Show Details&quot; to view used filter.</source>
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="src/ui/main_window.py" line="138"/>
+        <location filename="src/ui/main_window.py" line="153"/>
         <source>Modlist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="147"/>
+        <location filename="src/ui/main_window.py" line="162"/>
         <source>Translation Editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="180"/>
+        <location filename="src/ui/main_window.py" line="200"/>
         <source>Exit?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="193"/>
+        <location filename="src/ui/main_window.py" line="213"/>
         <source>Continue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="196"/>
+        <location filename="src/ui/main_window.py" line="216"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="186"/>
+        <location filename="src/ui/main_window.py" line="241"/>
+        <source>No Updates Available</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_window.py" line="242"/>
+        <source>There are no updates available.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_window.py" line="251"/>
+        <source>About Qt</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_window.py" line="206"/>
         <source>Are you sure you want to exit? There are still unsaved translations open in the editor. All unsaved changes will be lost!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1111,59 +1126,48 @@ Click on &quot;Show Details&quot; to view used filter.</source>
 <context>
     <name>MenuBar</name>
     <message>
-        <location filename="src/ui/menubar.py" line="27"/>
+        <location filename="src/ui/menubar.py" line="46"/>
         <source>File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="36"/>
+        <location filename="src/ui/menubar.py" line="55"/>
         <source>Exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="30"/>
+        <location filename="src/ui/menubar.py" line="49"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="40"/>
+        <location filename="src/ui/menubar.py" line="60"/>
         <source>Help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="43"/>
+        <location filename="src/ui/menubar.py" line="65"/>
         <source>Show Documentation...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="47"/>
+        <location filename="src/ui/menubar.py" line="69"/>
         <source>Check for updates...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="53"/>
+        <location filename="src/ui/menubar.py" line="77"/>
         <source>Fix Windows Path Limit...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="65"/>
+        <location filename="src/ui/menubar.py" line="87"/>
         <source>About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="69"/>
-        <location filename="src/ui/menubar.py" line="97"/>
+        <location filename="src/ui/menubar.py" line="91"/>
         <source>About Qt</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="src/ui/menubar.py" line="87"/>
-        <source>No Updates Available</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="src/ui/menubar.py" line="88"/>
-        <source>There are no updates available.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1629,22 +1633,22 @@ Click on &quot;Show Details&quot; to view used filter.</source>
 <context>
     <name>StatusBar</name>
     <message>
-        <location filename="src/ui/statusbar.py" line="54"/>
+        <location filename="src/ui/statusbar.py" line="60"/>
         <source>The hourly limit only applies if the daily limit has been used up.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/statusbar.py" line="66"/>
+        <location filename="src/ui/statusbar.py" line="72"/>
         <source>Copy log to clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/statusbar.py" line="75"/>
+        <location filename="src/ui/statusbar.py" line="81"/>
         <source>View log</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/statusbar.py" line="97"/>
+        <location filename="src/ui/statusbar.py" line="107"/>
         <source>API: Hourly: {0} | Daily: {1}</source>
         <translation type="unfinished"></translation>
     </message>
