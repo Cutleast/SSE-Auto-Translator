@@ -4,10 +4,11 @@ Copyright (c) Cutleast
 
 import logging
 import os
+import webbrowser
 from pathlib import Path
 from typing import Optional
 
-from PySide6.QtCore import Qt
+from PySide6.QtCore import Qt, Signal
 from PySide6.QtGui import QFont
 from PySide6.QtWidgets import (
     QApplication,
@@ -27,30 +28,23 @@ from core.config.user_config import UserConfig
 from core.database.database import TranslationDatabase
 from core.database.string import String
 from core.database.translation import Translation
-from core.downloader.download_manager import DownloadManager
-from core.downloader.translation_download import TranslationDownload
 from core.masterlist.masterlist import Masterlist
 from core.mod_file.mod_file import ModFile
+from core.mod_file.plugin_file import PluginFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.mod_instance.state_service import StateService
 from core.plugin_interface import plugin as esp
-from core.scanner.scanner import Scanner
 from core.translation_provider.exceptions import ModNotFoundError
-from core.translation_provider.mod_id import ModId
-from core.translation_provider.nm_api.nxm_handler import NXMHandler
 from core.translation_provider.provider import Provider
 from core.translation_provider.source import Source
 from core.utilities import matches_filter
-from core.utilities.container_utils import join_dicts
-from core.utilities.exe_info import get_current_path
-from ui.downloader.download_list_dialog import DownloadListDialog
+from core.utilities.filesystem import open_in_explorer
 from ui.utilities.tree_widget import are_children_visible
 from ui.widgets.loading_dialog import LoadingDialog
 from ui.widgets.string_list.string_list_dialog import StringListDialog
 
-from ..result_dialog import ResultDialog
 from .help_dialog import ModInstanceHelpDialog
 from .modinstance_menu import ModInstanceMenu
 
@@ -62,15 +56,24 @@ class ModInstanceWidget(QTreeWidget):
 
     log: logging.Logger = logging.getLogger("ModInstance")
 
+    basic_scan_requested = Signal()
+    """Signal emitted when the user requests a basic scan via the context menu."""
+
+    online_scan_requested = Signal()
+    """Signal emitted when the user requests an online scan via the context menu."""
+
+    downloads_requested = Signal()
+    """Signal emitted when the user requests downloads via the context menu."""
+
+    deep_scan_requested = Signal()
+    """Signal emitted when the user requests a deep scan via the context menu."""
+
     cache: Cache
     database: TranslationDatabase
     app_config: AppConfig
     user_config: UserConfig
     masterlist: Masterlist
-    scanner: Scanner
     provider: Provider
-    download_manager: DownloadManager
-    nxm_listener: NXMHandler
 
     mod_instance: ModInstance
     """
@@ -111,10 +114,7 @@ class ModInstanceWidget(QTreeWidget):
         app_config: AppConfig,
         user_config: UserConfig,
         masterlist: Masterlist,
-        scanner: Scanner,
         provider: Provider,
-        download_manager: DownloadManager,
-        nxm_listener: NXMHandler,
         mod_instance: ModInstance,
         state_service: StateService,
     ) -> None:
@@ -125,14 +125,40 @@ class ModInstanceWidget(QTreeWidget):
         self.app_config = app_config
         self.user_config = user_config
         self.masterlist = masterlist
-        self.scanner = scanner
         self.provider = provider
-        self.download_manager = download_manager
-        self.nxm_listener = nxm_listener
         self.mod_instance = mod_instance
         self.state_service = state_service
 
         self.__init_ui()
+
+        self.__menu.expand_all_clicked.connect(self.expandAll)
+        self.__menu.collapse_all_clicked.connect(self.collapseAll)
+        self.__menu.uncheck_selected_clicked.connect(self.__uncheck_selected)
+        self.__menu.check_selected_clicked.connect(self.__check_selected)
+        self.__menu.basic_scan_requested.connect(self.basic_scan_requested.emit)
+        self.__menu.online_scan_requested.connect(self.online_scan_requested.emit)
+        self.__menu.download_requested.connect(self.downloads_requested.emit)
+        self.__menu.deep_scan_requested.connect(self.deep_scan_requested.emit)
+        self.__menu.import_as_translation_requested.connect(
+            self.__import_as_translation
+        )
+        self.__menu.show_untranslated_strings_requested.connect(
+            self.__show_untranslated_strings
+        )
+        self.__menu.show_translation_requested.connect(self.__show_translation)
+        self.__menu.show_translation_strings_requested.connect(
+            self.__show_translation_strings
+        )
+        self.__menu.edit_translation_requested.connect(self.__edit_translation)
+        self.__menu.create_translation_requested.connect(self.__create_translation)
+        self.__menu.show_plugin_structure_requested.connect(
+            self.__show_plugin_structure
+        )
+        self.__menu.add_to_ignore_list_requested.connect(self.__add_to_ignore_list)
+        self.__menu.open_requested.connect(self.__open_modfile)
+        self.__menu.show_strings_requested.connect(self.__show_strings)
+        self.__menu.open_modpage_requested.connect(self.__open_modpage)
+        self.__menu.open_in_explorer_requested.connect(self.__open_in_explorer)
 
         self.database.update_signal.connect(self.update)
         self.state_service.update_signal.connect(self.__update)
@@ -164,9 +190,12 @@ class ModInstanceWidget(QTreeWidget):
         self.header().setStretchLastSection(False)
 
     def __init_context_menu(self) -> None:
-        self.__menu = ModInstanceMenu(self)
+        self.__menu = ModInstanceMenu()
         self.setContextMenuPolicy(Qt.ContextMenuPolicy.CustomContextMenu)
-        self.customContextMenuRequested.connect(self.__menu.open)
+        self.customContextMenuRequested.connect(self.__open_context_menu)
+
+    def __open_context_menu(self) -> None:
+        self.__menu.open(self.__get_current_item(), self.get_selected_items()[1])
 
     def __load_mod_instance(self) -> None:
         """
@@ -317,12 +346,12 @@ class ModInstanceWidget(QTreeWidget):
                 or Qt.GlobalColor.white,
             )
 
-    def show_strings(self) -> None:
+    def __show_strings(self) -> None:
         """
         Show the strings of the current item.
         """
 
-        current_item: Optional[Mod | ModFile] = self.get_current_item()
+        current_item: Optional[Mod | ModFile] = self.__get_current_item()
 
         if isinstance(current_item, ModFile):
             dialog = StringListDialog(
@@ -340,11 +369,11 @@ class ModInstanceWidget(QTreeWidget):
             dialog = StringListDialog(current_item.name, strings)
             dialog.show()
 
-    def show_structure(self) -> None:
+    def __show_plugin_structure(self) -> None:
         # TODO: Overhaul this
-        current_item: Optional[Mod | ModFile] = self.get_current_item()
+        current_item: Optional[Mod | ModFile] = self.__get_current_item()
 
-        if isinstance(current_item, ModFile):
+        if isinstance(current_item, PluginFile):
             plugin = esp.Plugin(current_item.path)
 
             text = str(plugin)
@@ -375,17 +404,17 @@ class ModInstanceWidget(QTreeWidget):
 
             dialog.exec()
 
-    def check_selected(self) -> None:
+    def __check_selected(self) -> None:
         for item in self.selectedItems():
             if Qt.ItemFlag.ItemIsUserCheckable in item.flags() and not item.text(2):
                 item.setCheckState(0, Qt.CheckState.Checked)
 
-    def uncheck_selected(self) -> None:
+    def __uncheck_selected(self) -> None:
         for item in self.selectedItems():
             if Qt.ItemFlag.ItemIsUserCheckable in item.flags() and not item.text(2):
                 item.setCheckState(0, Qt.CheckState.Unchecked)
 
-    def add_to_ignore_list(self) -> None:
+    def __add_to_ignore_list(self) -> None:
         _, selected_modfiles = self.get_selected_items()
 
         for modfile in selected_modfiles:
@@ -394,31 +423,26 @@ class ModInstanceWidget(QTreeWidget):
         self.user_config.save()
         self.__update()
 
-    def open_modpage(self) -> None:
-        current_item: Optional[Mod | ModFile] = self.get_current_item()
+    def __open_modpage(self) -> None:
+        current_item: Optional[Mod | ModFile] = self.__get_current_item()
 
         if isinstance(current_item, Mod) and current_item.mod_id:
             try:
                 url: Optional[str] = self.provider.get_modpage_url(
                     current_item.mod_id, source=Source.NexusMods
                 )
-                os.startfile(url)
+                webbrowser.open(url)
             except ModNotFoundError:
                 pass
 
-    def open_in_explorer(self) -> None:
-        current_item: Optional[Mod | ModFile] = self.get_current_item()
+    def __open_in_explorer(self) -> None:
+        current_item: Optional[Mod | ModFile] = self.__get_current_item()
 
-        if isinstance(current_item, Mod):
-            if current_item.path.is_dir():
-                os.system(f'explorer.exe "{current_item.path}"')
+        if current_item is not None:
+            open_in_explorer(current_item.path)
 
-        elif isinstance(current_item, ModFile):
-            if current_item.path.is_file():
-                os.system(f'explorer.exe /select,"{current_item.path}"')
-
-    def show_untranslated_strings(self) -> None:
-        current_item: Optional[Mod | ModFile] = self.get_current_item()
+    def __show_untranslated_strings(self) -> None:
+        current_item: Optional[Mod | ModFile] = self.__get_current_item()
         translation: Optional[Translation] = None
 
         if current_item is None:
@@ -444,8 +468,8 @@ class ModInstanceWidget(QTreeWidget):
                 dialog = StringListDialog(translation.name, untranslated_strings)
                 dialog.show()
 
-    def show_translation_strings(self) -> None:
-        current_item: Optional[Mod | ModFile] = self.get_current_item()
+    def __show_translation_strings(self) -> None:
+        current_item: Optional[Mod | ModFile] = self.__get_current_item()
         translation: Optional[Translation] = None
 
         if current_item is None:
@@ -466,8 +490,8 @@ class ModInstanceWidget(QTreeWidget):
             )
             dialog.show()
 
-    def show_translation(self) -> None:
-        current_item: Optional[Mod | ModFile] = self.get_current_item()
+    def __show_translation(self) -> None:
+        current_item: Optional[Mod | ModFile] = self.__get_current_item()
         translation: Optional[Translation] = None
 
         if current_item is None:
@@ -482,8 +506,8 @@ class ModInstanceWidget(QTreeWidget):
 
         self.database.highlight_signal.emit(translation)
 
-    def create_translation(self) -> None:
-        current_item: Optional[Mod | ModFile] = self.get_current_item()
+    def __create_translation(self) -> None:
+        current_item: Optional[Mod | ModFile] = self.__get_current_item()
 
         if isinstance(current_item, ModFile):
             translation: Optional[Translation] = (
@@ -507,8 +531,8 @@ class ModInstanceWidget(QTreeWidget):
 
         # TODO: Implement this for entire mods
 
-    def import_as_translation(self) -> None:
-        current_item: Optional[Mod | ModFile] = self.get_current_item()
+    def __import_as_translation(self) -> None:
+        current_item: Optional[Mod | ModFile] = self.__get_current_item()
 
         if isinstance(current_item, Mod):
 
@@ -552,8 +576,8 @@ class ModInstanceWidget(QTreeWidget):
             )
             messagebox.exec()
 
-    def edit_translation(self) -> None:
-        current_item: Optional[Mod | ModFile] = self.get_current_item()
+    def __edit_translation(self) -> None:
+        current_item: Optional[Mod | ModFile] = self.__get_current_item()
 
         translation: Optional[Translation] = None
         if isinstance(current_item, ModFile):
@@ -566,8 +590,8 @@ class ModInstanceWidget(QTreeWidget):
         if translation is not None:
             self.database.edit_signal.emit(translation)
 
-    def open_modfile(self) -> None:
-        current_item: Optional[Mod | ModFile] = self.get_current_item()
+    def __open_modfile(self) -> None:
+        current_item: Optional[Mod | ModFile] = self.__get_current_item()
 
         if isinstance(current_item, ModFile):
             os.startfile(current_item.path)
@@ -629,7 +653,7 @@ class ModInstanceWidget(QTreeWidget):
             )
         }
 
-    def get_current_item(self) -> Optional[Mod | ModFile]:
+    def __get_current_item(self) -> Optional[Mod | ModFile]:
         """
         Returns the item where the cursor is.
 
@@ -651,7 +675,7 @@ class ModInstanceWidget(QTreeWidget):
         return item
 
     def __item_double_clicked(self, item: QTreeWidgetItem, column: int) -> None:
-        current_item: Optional[Mod | ModFile] = self.get_current_item()
+        current_item: Optional[Mod | ModFile] = self.__get_current_item()
 
         if (
             current_item is not None
@@ -667,123 +691,9 @@ class ModInstanceWidget(QTreeWidget):
                 )
             )
         ) and self.app_config.show_strings_on_double_click:
-            self.show_strings()
+            self.__show_strings()
         else:
             item.setExpanded(not item.isExpanded())
-
-    def basic_scan(self) -> None:
-        selected_mods: list[Mod] = self.get_selected_items()[0]
-        selected_modfiles: dict[Mod, list[ModFile]] = self.get_selected_modfiles()
-
-        scan_result: dict[ModFile, TranslationStatus] = join_dicts(
-            *LoadingDialog.run_callable(
-                QApplication.activeModalWidget(),
-                lambda ldialog: self.scanner.run_basic_scan(selected_modfiles, ldialog),
-            ).values()
-        )
-        self.state_service.set_modfile_states(scan_result)
-
-        if self.app_config.auto_import_translations:
-            LoadingDialog.run_callable(
-                QApplication.activeModalWidget(),
-                lambda ldialog: self.scanner.import_installed_translations(
-                    selected_mods, ldialog
-                ),
-            )
-
-        ResultDialog(
-            self.state_service.get_modfile_state_summary(
-                [m for modfiles in selected_modfiles.values() for m in modfiles]
-            ),
-            QApplication.activeModalWidget(),
-        ).exec()
-
-    def online_scan(self) -> None:
-        selected_modfiles: dict[Mod, list[ModFile]] = self.get_selected_modfiles()
-
-        scan_result: dict[ModFile, TranslationStatus] = join_dicts(
-            *LoadingDialog.run_callable(
-                QApplication.activeModalWidget(),
-                lambda ldialog: self.scanner.run_online_scan(
-                    selected_modfiles, ldialog
-                ),
-            ).values()
-        )
-        self.state_service.set_modfile_states(scan_result)
-
-        ResultDialog(
-            self.state_service.get_modfile_state_summary(
-                [m for modfiles in selected_modfiles.values() for m in modfiles]
-            ),
-            QApplication.activeModalWidget(),
-        ).exec()
-
-    def download_and_install_translations(self) -> None:
-        download_entries: dict[tuple[str, ModId], list[TranslationDownload]] = (
-            LoadingDialog.run_callable(
-                QApplication.activeModalWidget(),
-                lambda ldialog: self.download_manager.collect_available_downloads(
-                    self.get_selected_modfiles(), ldialog
-                ),
-            )
-        )
-
-        DownloadListDialog(
-            download_entries,
-            self.provider,
-            self.database,
-            self.download_manager,
-            self.nxm_listener,
-            parent=QApplication.activeModalWidget(),
-        ).exec()
-
-    def build_output(self) -> None:
-        output_path: Path = LoadingDialog.run_callable(
-            QApplication.activeModalWidget(),
-            lambda ldialog: self.database.exporter.build_output_mod(
-                self.app_config.output_path or (get_current_path() / "SSE-AT Output"),
-                self.mod_instance,
-                self.app_config.get_tmp_dir(),
-                ldialog,
-            ),
-        )
-
-        message_box = QMessageBox()
-        message_box.setWindowTitle(self.tr("Success!"))
-        message_box.setText(self.tr("Created output mod at: ") + str(output_path))
-        message_box.setStandardButtons(
-            QMessageBox.StandardButton.Ok
-            | QMessageBox.StandardButton.Help
-            | QMessageBox.StandardButton.Open
-        )
-        message_box.button(QMessageBox.StandardButton.Ok).setText(self.tr("Ok"))
-        message_box.button(QMessageBox.StandardButton.Help).setText(
-            self.tr("Open output mod in Explorer")
-        )
-        btn = message_box.button(QMessageBox.StandardButton.Open)
-        btn.setText(self.tr("Open DSD modpage on Nexus Mods"))
-        btn.clicked.disconnect()
-        btn.clicked.connect(
-            lambda: os.startfile(
-                "https://www.nexusmods.com/skyrimspecialedition/mods/107676"
-            )
-        )
-
-        choice = message_box.exec()
-
-        if choice == message_box.StandardButton.Help:
-            os.startfile(output_path)
-
-    def deep_scan(self) -> None:
-        result: dict[ModFile, TranslationStatus] = LoadingDialog.run_callable(
-            QApplication.activeModalWidget(), self.scanner.run_deep_scan
-        )
-        self.state_service.set_modfile_states(result)
-
-        ResultDialog(
-            self.state_service.get_modfile_state_summary(),
-            QApplication.activeModalWidget(),
-        ).exec()
 
     def show_help(self) -> None:
         """

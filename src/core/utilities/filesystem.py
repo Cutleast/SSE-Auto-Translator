@@ -293,3 +293,19 @@ def split_path_with_bsa(path: Path) -> tuple[Optional[Path], Optional[Path]]:
         file_path = Path("/".join(parts))
 
     return (bsa_path, file_path)
+
+
+def open_in_explorer(path: Path) -> None:
+    """
+    Opens the specified path in the Windows Explorer.
+    Opens the parent folder and selects the item if the specified path
+    is a file otherwise it just opens the folder.
+
+    Args:
+        path (Path): The path to open.
+    """
+
+    if path.is_dir():
+        os.startfile(path)
+    else:
+        os.system(f'explorer.exe /select,"{path}"')

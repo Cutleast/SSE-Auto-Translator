@@ -146,6 +146,17 @@ class MainPageWidget(QWidget):
         )
         self.__search_bar.searchChanged.connect(self.__database_widget.set_name_filter)
 
+        self.__modinstance_widget.basic_scan_requested.connect(
+            lambda: self.__run_basic_scan(only_selected=True)
+        )
+        self.__modinstance_widget.online_scan_requested.connect(
+            lambda: self.__run_online_scan(only_selected=True)
+        )
+        self.__modinstance_widget.downloads_requested.connect(
+            lambda: self.__run_downloads(only_selected=True)
+        )
+        self.__modinstance_widget.deep_scan_requested.connect(self.__run_deep_scan)
+
         self.state_service.update_signal.connect(self.__update)
         self.__update()
 
@@ -221,10 +232,7 @@ class MainPageWidget(QWidget):
             self.app_config,
             self.user_config,
             self.masterlist,
-            self.scanner,
             self.provider,
-            self.download_manager,
-            self.nxm_listener,
             self.mod_instance,
             self.state_service,
         )
@@ -303,20 +311,29 @@ class MainPageWidget(QWidget):
             QApplication.activeModalWidget(),
         ).exec()
 
-    def __run_basic_scan(self) -> None:
+    def __run_basic_scan(self, only_selected: bool = False) -> None:
         """
         Runs a basic scan over the currently checked mod files.
+
+        Args:
+            only_selected (bool, optional):
+                Whether to scan only the currently selected mods and mod files.
+                Defaults to False.
         """
 
-        checked_items: dict[Mod, list[ModFile]] = (
-            self.__modinstance_widget.get_checked_items()
-        )
-        checked_mods: list[Mod] = list(checked_items.keys())
+        mods: list[Mod]
+        modfiles: dict[Mod, list[ModFile]]
+        if not only_selected:
+            modfiles = self.__modinstance_widget.get_checked_items()
+            mods = self.mod_instance.mods
+        else:
+            mods = self.__modinstance_widget.get_selected_items()[0]
+            modfiles = self.__modinstance_widget.get_selected_modfiles()
 
         scan_result: dict[ModFile, TranslationStatus] = join_dicts(
             *LoadingDialog.run_callable(
                 QApplication.activeModalWidget(),
-                lambda ldialog: self.scanner.run_basic_scan(checked_items, ldialog),
+                lambda ldialog: self.scanner.run_basic_scan(modfiles, ldialog),
             ).values()
         )
         self.state_service.set_modfile_states(scan_result)
@@ -325,42 +342,60 @@ class MainPageWidget(QWidget):
             LoadingDialog.run_callable(
                 QApplication.activeModalWidget(),
                 lambda ldialog: self.scanner.import_installed_translations(
-                    checked_mods, ldialog
+                    mods, ldialog
                 ),
             )
 
         self.__show_scan_result(list(scan_result.keys()))
 
-    def __run_online_scan(self) -> None:
+    def __run_online_scan(self, only_selected: bool = False) -> None:
         """
         Runs an online scan over the currently checked mod files.
+
+        Args:
+            only_selected (bool, optional):
+                Whether to scan only the currently selected mods and mod files.
+                Defaults to False.
         """
 
-        checked_items: dict[Mod, list[ModFile]] = (
-            self.__modinstance_widget.get_checked_items()
-        )
+        modfiles: dict[Mod, list[ModFile]]
+        if not only_selected:
+            modfiles = self.__modinstance_widget.get_checked_items()
+        else:
+            modfiles = self.__modinstance_widget.get_selected_modfiles()
 
         scan_result: dict[ModFile, TranslationStatus] = join_dicts(
             *LoadingDialog.run_callable(
                 QApplication.activeModalWidget(),
-                lambda ldialog: self.scanner.run_online_scan(checked_items, ldialog),
+                lambda ldialog: self.scanner.run_online_scan(modfiles, ldialog),
             ).values()
         )
         self.state_service.set_modfile_states(scan_result)
 
         self.__show_scan_result(list(scan_result.keys()))
 
-    def __run_downloads(self) -> None:
+    def __run_downloads(self, only_selected: bool = False) -> None:
         """
         Collects available translations for the currently checked mod files
         and opens a DownloadListDialog.
+
+        Args:
+            only_selected (bool, optional):
+                Whether to download only for the currently selected mods and mod files.
+                Defaults to False.
         """
+
+        items: dict[Mod, list[ModFile]]
+        if not only_selected:
+            items = self.__modinstance_widget.get_checked_items()
+        else:
+            items = self.__modinstance_widget.get_selected_modfiles()
 
         download_entries: dict[tuple[str, ModId], list[TranslationDownload]] = (
             LoadingDialog.run_callable(
                 QApplication.activeModalWidget(),
                 lambda ldialog: self.download_manager.collect_available_downloads(
-                    self.__modinstance_widget.get_checked_items(), ldialog
+                    items, ldialog
                 ),
             )
         )
