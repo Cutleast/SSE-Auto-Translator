@@ -971,67 +971,67 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
 <context>
     <name>MainPageWidget</name>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="137"/>
+        <location filename="src/ui/main_page/main_page.py" line="163"/>
         <source>Modlist</source>
         <translation>Modliste</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="162"/>
+        <location filename="src/ui/main_page/main_page.py" line="188"/>
         <source>Support us on Ko-Fi</source>
         <translation>Unterstützen Sie uns auf Ko-Fi</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="169"/>
+        <location filename="src/ui/main_page/main_page.py" line="195"/>
         <source>Join us on Discord</source>
         <translation>Treten Sie unserem Discord-Server bei</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="176"/>
+        <location filename="src/ui/main_page/main_page.py" line="202"/>
         <source>Check out my profile on Nexus Mods</source>
         <translation>Besuchen Sie mein Profil auf Nexus Mods</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="383"/>
+        <location filename="src/ui/main_page/main_page.py" line="392"/>
         <source>Success!</source>
         <translation>Erfolgreich!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="143"/>
+        <location filename="src/ui/main_page/main_page.py" line="169"/>
         <source>Translatable files:</source>
         <translation>Übersetzbare Dateien:</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="384"/>
+        <location filename="src/ui/main_page/main_page.py" line="393"/>
         <source>Created output mod at: </source>
         <translation>Output-Mod hier erstellt: </translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="390"/>
+        <location filename="src/ui/main_page/main_page.py" line="399"/>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="393"/>
+        <location filename="src/ui/main_page/main_page.py" line="402"/>
         <source>Open output mod in Explorer</source>
         <translation>Output-Mod im Explorer öffnen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="395"/>
+        <location filename="src/ui/main_page/main_page.py" line="404"/>
         <source>Open DSD modpage on Nexus Mods</source>
         <translation>DSD auf Nexus Mods öffnen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="440"/>
+        <location filename="src/ui/main_page/main_page.py" line="449"/>
         <source>Search Results</source>
         <translation>Suchergebnisse</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="445"/>
+        <location filename="src/ui/main_page/main_page.py" line="454"/>
         <source>No strings found!</source>
         <translation>Keine Strings gefunden!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="449"/>
+        <location filename="src/ui/main_page/main_page.py" line="458"/>
         <source>Did not find any strings matching the given filter!
 Click on &quot;Show Details&quot; to view used filter.</source>
         <translation>Keine passenden Strings für den angegebenen Filter gefunden!
@@ -1041,47 +1041,47 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
 <context>
     <name>MainToolBar</name>
     <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="66"/>
+        <location filename="src/ui/main_page/main_toolbar.py" line="96"/>
         <source>Filter Options</source>
         <translation>Filteroptionen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="76"/>
+        <location filename="src/ui/main_page/main_toolbar.py" line="106"/>
         <source>Open ignore list</source>
         <translation>Ignorierliste öffnen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="82"/>
+        <location filename="src/ui/main_page/main_toolbar.py" line="112"/>
         <source>Help</source>
         <translation>Hilfe</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="90"/>
+        <location filename="src/ui/main_page/main_toolbar.py" line="120"/>
         <source>Scan modlist...</source>
         <translation>Modliste scannen...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="96"/>
+        <location filename="src/ui/main_page/main_toolbar.py" line="125"/>
         <source>Scan Online for available translations...</source>
         <translation>Online nach verfügbaren Übersetzungen scannen...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="102"/>
+        <location filename="src/ui/main_page/main_toolbar.py" line="131"/>
         <source>Download available translations...</source>
         <translation>Verfügbare Übersetzungen herunterladen...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="110"/>
+        <location filename="src/ui/main_page/main_toolbar.py" line="137"/>
         <source>Build output mod...</source>
         <translation>Output-Mod erstellen...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="119"/>
+        <location filename="src/ui/main_page/main_toolbar.py" line="146"/>
         <source>Scan translations for missing strings...</source>
         <translation>Nach unvollständigen Übersetzungen scannen...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_toolbar.py" line="125"/>
+        <location filename="src/ui/main_page/main_toolbar.py" line="152"/>
         <source>Search modlist for string...</source>
         <translation>Modliste nach String durchsuchen...</translation>
     </message>

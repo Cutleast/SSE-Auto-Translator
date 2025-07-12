@@ -63,6 +63,15 @@ class MainPageWidget(QWidget):
     Main page of AT, displays modlist including MO2 separators.
     """
 
+    KOFI_URL: str = "https://ko-fi.com/cutleast"
+    """URL to Ko-fi page."""
+
+    DISCORD_URL: str = "https://discord.gg/pqEHdWDf8z"
+    """URL to Discord server."""
+
+    NEXUS_MODS_PROFILE_URL: str = "https://next.nexusmods.com/profile/Cutleast"
+    """URL to Nexus Mods profile."""
+
     log: logging.Logger = logging.getLogger("Main")
 
     mod_instance: ModInstance
@@ -120,6 +129,23 @@ class MainPageWidget(QWidget):
 
         self.__init_ui()
 
+        self.__tool_bar.filter_changed.connect(
+            self.__modinstance_widget.set_state_filter
+        )
+        self.__tool_bar.ignore_list_requested.connect(self.__open_ignore_list)
+        self.__tool_bar.help_requested.connect(self.__modinstance_widget.show_help)
+        self.__tool_bar.modlist_scan_requested.connect(self.__run_basic_scan)
+        self.__tool_bar.online_scan_requested.connect(self.__run_online_scan)
+        self.__tool_bar.download_requested.connect(self.__run_downloads)
+        self.__tool_bar.build_output_requested.connect(self.__build_output)
+        self.__tool_bar.deep_scan_requested.connect(self.__run_deep_scan)
+        self.__tool_bar.string_search_requested.connect(self.__run_string_search)
+
+        self.__search_bar.searchChanged.connect(
+            self.__modinstance_widget.set_name_filter
+        )
+        self.__search_bar.searchChanged.connect(self.__database_widget.set_name_filter)
+
         self.state_service.update_signal.connect(self.__update)
         self.__update()
 
@@ -151,28 +177,28 @@ class MainPageWidget(QWidget):
         hlayout = QHBoxLayout()
         self.__vlayout.addLayout(hlayout)
 
-        self.__tool_bar = MainToolBar(self)
+        self.__tool_bar = MainToolBar()
         hlayout.addWidget(self.__tool_bar)
 
         self.__search_bar = SearchBar()
         hlayout.addWidget(self.__search_bar)
 
         ko_fi_button = LinkButton(
-            "https://ko-fi.com/cutleast",
+            MainPageWidget.KOFI_URL,
             self.tr("Support us on Ko-Fi"),
             QIcon(":/icons/ko-fi.png"),
         )
         hlayout.addWidget(ko_fi_button)
 
         discord_button = LinkButton(
-            "https://discord.gg/pqEHdWDf8z",
+            MainPageWidget.DISCORD_URL,
             self.tr("Join us on Discord"),
             QIcon(":/icons/discord.png"),
         )
         hlayout.addWidget(discord_button)
 
         nexus_mods_button = LinkButton(
-            "https://next.nexusmods.com/profile/Cutleast",
+            MainPageWidget.NEXUS_MODS_PROFILE_URL,
             self.tr("Check out my profile on Nexus Mods"),
             QIcon(":/icons/nexus_mods.png"),
         )
@@ -214,12 +240,6 @@ class MainPageWidget(QWidget):
             self.nxm_listener,
         )
         splitter.addWidget(self.__database_widget)
-
-        self.__search_bar.searchChanged.connect(
-            self.__modinstance_widget.set_name_filter
-        )
-        self.__search_bar.searchChanged.connect(self.__database_widget.set_name_filter)
-
         splitter.setSizes([int(0.6 * splitter.width()), int(0.4 * splitter.width())])
 
     def __update(self) -> None:
@@ -248,7 +268,7 @@ class MainPageWidget(QWidget):
         self.__modfiles_num_label.setToolTip(num_tooltip)
         self.__bar_chart.setToolTip(num_tooltip)
 
-    def open_ignore_list(self) -> None:
+    def __open_ignore_list(self) -> None:
         """
         Opens Ignore List in a new Popup Dialog.
         """
@@ -261,7 +281,7 @@ class MainPageWidget(QWidget):
         # TODO: Make this more elegant
         self.state_service.update_signal.emit()
 
-    def show_scan_result(self, modfiles: Optional[list[ModFile]] = None) -> None:
+    def __show_scan_result(self, modfiles: Optional[list[ModFile]] = None) -> None:
         """
         Displays scan result popup.
 
@@ -283,14 +303,7 @@ class MainPageWidget(QWidget):
             QApplication.activeModalWidget(),
         ).exec()
 
-    def show_help(self) -> None:
-        """
-        Displays help popup.
-        """
-
-        self.__modinstance_widget.show_help()
-
-    def basic_scan(self) -> None:
+    def __run_basic_scan(self) -> None:
         """
         Runs a basic scan over the currently checked mod files.
         """
@@ -316,10 +329,9 @@ class MainPageWidget(QWidget):
                 ),
             )
 
-        self.show_scan_result(list(scan_result.keys()))
-        self.__tool_bar.highlight_action(self.__tool_bar.online_scan_action)
+        self.__show_scan_result(list(scan_result.keys()))
 
-    def online_scan(self) -> None:
+    def __run_online_scan(self) -> None:
         """
         Runs an online scan over the currently checked mod files.
         """
@@ -336,10 +348,9 @@ class MainPageWidget(QWidget):
         )
         self.state_service.set_modfile_states(scan_result)
 
-        self.show_scan_result(list(scan_result.keys()))
-        self.__tool_bar.highlight_action(self.__tool_bar.download_action)
+        self.__show_scan_result(list(scan_result.keys()))
 
-    def download_and_install_translations(self) -> None:
+    def __run_downloads(self) -> None:
         """
         Collects available translations for the currently checked mod files
         and opens a DownloadListDialog.
@@ -362,9 +373,7 @@ class MainPageWidget(QWidget):
             parent=QApplication.activeModalWidget(),
         ).exec()
 
-        self.__tool_bar.highlight_action(self.__tool_bar.build_output_action)
-
-    def build_output(self) -> None:
+    def __build_output(self) -> None:
         """
         Builds the output mod at the configured location.
         """
@@ -405,7 +414,7 @@ class MainPageWidget(QWidget):
         if choice == message_box.StandardButton.Help:
             os.startfile(output_path)
 
-    def deep_scan(self) -> None:
+    def __run_deep_scan(self) -> None:
         """
         Runs a deep scan over the installed translations.
         """
@@ -414,9 +423,9 @@ class MainPageWidget(QWidget):
             QApplication.activeModalWidget(), self.scanner.run_deep_scan
         )
         self.state_service.set_modfile_states(result)
-        self.show_scan_result(list(result.keys()))
+        self.__show_scan_result(list(result.keys()))
 
-    def run_string_search(self) -> None:
+    def __run_string_search(self) -> None:
         """
         Similar to Database Search feature but for loaded modlist.
         """
@@ -450,13 +459,3 @@ class MainPageWidget(QWidget):
                     details=str(filter),
                     yesno=False,
                 ).show()
-
-    def set_state_filter(self, state_filter: list[TranslationStatus]) -> None:
-        """
-        Sets the state filter.
-
-        Args:
-            state_filter (list[TranslationStatus]): The states to filter by.
-        """
-
-        self.__modinstance_widget.set_state_filter(state_filter)
