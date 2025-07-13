@@ -4,11 +4,11 @@ Copyright (c) Cutleast
 
 from typing import Any
 
-import qtawesome as qta
 from PySide6.QtCore import QSize
 from PySide6.QtWidgets import QCheckBox, QToolBar, QWidgetAction
 
 from core.database.string import String
+from ui.utilities.icon_provider import IconProvider
 from ui.widgets.menu import Menu
 
 
@@ -50,8 +50,7 @@ class StringListToolbar(QToolBar):
             self.__filter_items[status] = filter_box
 
         filter_action = self.addAction(
-            qta.icon("mdi6.filter", color=self.palette().text().color()),
-            self.tr("Filter Options"),
+            IconProvider.get_qta_icon("mdi6.filter"), self.tr("Filter Options")
         )
         filter_action.setMenu(self.__filter_menu)
         filter_action.triggered.connect(

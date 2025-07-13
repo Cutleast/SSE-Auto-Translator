@@ -6,9 +6,10 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 from typing import Any
 
-import qtawesome as qta
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QHBoxLayout, QLineEdit, QPushButton
+
+from ui.utilities.icon_provider import IconProvider
 
 
 class ClearEntry(QLineEdit):
@@ -27,7 +28,7 @@ class ClearEntry(QLineEdit):
 
         clear_button = QPushButton()
         clear_button.setCursor(Qt.CursorShape.ArrowCursor)
-        clear_button.setIcon(qta.icon("fa.close", color="#ffffff"))
+        clear_button.setIcon(IconProvider.get_qta_icon("fa.close"))
         clear_button.clicked.connect(lambda: self.setText(""))
         clear_button.clicked.connect(self.setFocus)
         clear_button.hide()

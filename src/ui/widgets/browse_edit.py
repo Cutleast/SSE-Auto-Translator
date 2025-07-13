@@ -5,9 +5,10 @@ Copyright (c) Cutleast
 import os
 from typing import Any
 
-import qtawesome as qta
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QFileDialog, QHBoxLayout, QLineEdit, QPushButton
+
+from ui.utilities.icon_provider import IconProvider
 
 
 class BrowseLineEdit(QLineEdit):
@@ -30,13 +31,7 @@ class BrowseLineEdit(QLineEdit):
         hlayout.addStretch()
 
         self.__browse_button = QPushButton()
-        self.__browse_button.setIcon(
-            qta.icon(
-                "fa5s.folder-open",
-                color=self.palette().text().color(),
-                scale_factor=1.5,
-            )
-        )
+        self.__browse_button.setIcon(IconProvider.get_qta_icon("fa5s.folder-open"))
         self.__browse_button.clicked.connect(self.__browse)
         self.__browse_button.setCursor(Qt.CursorShape.ArrowCursor)
         hlayout.addWidget(self.__browse_button)

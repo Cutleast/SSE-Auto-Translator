@@ -7,9 +7,8 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 import logging
 from typing import Optional, override
 
-import qtawesome as qta
 from PySide6.QtCore import QEvent, QObject, Qt
-from PySide6.QtGui import QIcon, QWheelEvent
+from PySide6.QtGui import QWheelEvent
 from PySide6.QtWidgets import (
     QApplication,
     QComboBox,
@@ -32,6 +31,7 @@ from core.translation_provider.mod_id import ModId
 from core.translation_provider.nm_api.nxm_handler import NXMHandler
 from core.translation_provider.provider import Provider
 from core.utilities.container_utils import unique
+from ui.utilities.icon_provider import IconProvider, ResourceIcon
 from ui.widgets.loading_dialog import LoadingDialog
 
 from .download_list_item import DownloadListItem
@@ -103,7 +103,7 @@ class DownloadListDialog(QDialog):
 
         self.download_all_button = QPushButton(self.tr("Start all downloads"))
         self.download_all_button.setIcon(
-            qta.icon("mdi.download-multiple", color="#000000")
+            IconProvider.get_qta_icon("mdi.download-multiple", accent_background=True)
         )
         self.download_all_button.setObjectName("accent_button")
         self.download_all_button.clicked.connect(self.__download_all)
@@ -160,7 +160,9 @@ class DownloadListDialog(QDialog):
 
             # TODO: Move this part to DownloadListItem
             original_modpage_button = QPushButton()
-            original_modpage_button.setIcon(QIcon(":/icons/nexus_mods.svg"))
+            original_modpage_button.setIcon(
+                IconProvider.get_res_icon(ResourceIcon.NexusMods)
+            )
             original_modpage_button.setToolTip(
                 self.tr("Open mod page on Nexus Mods...")
             )
@@ -173,7 +175,7 @@ class DownloadListDialog(QDialog):
 
             translation_modpage_button = QPushButton()
             translation_modpage_button.setIcon(
-                qta.icon("fa5s.external-link-alt", color="#ffffff")
+                IconProvider.get_qta_icon("fa5s.external-link-alt")
             )
             translation_modpage_button.setToolTip(
                 self.tr("Open translation on Nexus Mods...")

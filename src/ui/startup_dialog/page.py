@@ -5,7 +5,6 @@ Copyright (c) Cutleast
 from abc import abstractmethod
 from typing import Optional, override
 
-import qtawesome as qta
 from PySide6.QtCore import QEvent, QObject, Qt, Signal
 from PySide6.QtGui import QWheelEvent
 from PySide6.QtWidgets import (
@@ -21,6 +20,7 @@ from PySide6.QtWidgets import (
 
 from core.cache.cache import Cache
 from core.config.user_config import UserConfig
+from ui.utilities.icon_provider import IconProvider
 
 
 class Page(QWidget):
@@ -93,14 +93,14 @@ class Page(QWidget):
         self._vlayout.addLayout(hlayout)
 
         self._back_button = QPushButton(self.tr("Back"))
-        self._back_button.setIcon(qta.icon("fa5s.chevron-left", color="#ffffff"))
+        self._back_button.setIcon(IconProvider.get_qta_icon("fa5s.chevron-left"))
         self._back_button.clicked.connect(self.prev_signal)
         hlayout.addWidget(self._back_button, 0, Qt.AlignmentFlag.AlignLeft)
 
         hlayout.addStretch()
 
         self._next_button = QPushButton(self.tr("Next"))
-        self._next_button.setIcon(qta.icon("fa5s.chevron-right", color="#ffffff"))
+        self._next_button.setIcon(IconProvider.get_qta_icon("fa5s.chevron-right"))
         self._next_button.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
         self._next_button.clicked.connect(self.next_signal)
         hlayout.addWidget(self._next_button)

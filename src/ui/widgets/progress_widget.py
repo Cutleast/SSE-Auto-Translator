@@ -5,10 +5,9 @@ Copyright (c) Cutleast
 import traceback
 from typing import Optional
 
-import qtawesome as qta
-from pyperclip import copy
 from PySide6.QtCore import Qt, Signal
 from PySide6.QtWidgets import (
+    QApplication,
     QHBoxLayout,
     QLabel,
     QProgressBar,
@@ -19,6 +18,7 @@ from PySide6.QtWidgets import (
 )
 
 from core.utilities.exceptions import ExceptionBase
+from ui.utilities.icon_provider import IconProvider
 
 
 class ProgressWidget(QWidget):
@@ -64,19 +64,17 @@ class ProgressWidget(QWidget):
         self.__copy_button = QPushButton()
         self.__copy_button.setFixedSize(35, 35)
         self.__copy_button.setObjectName("download_button")
-        self.__copy_button.setIcon(
-            qta.icon("mdi6.content-copy", color=self.palette().text().color())
+        self.__copy_button.setIcon(IconProvider.get_qta_icon("mdi6.content-copy"))
+        self.__copy_button.clicked.connect(
+            lambda: QApplication.clipboard().setText(self.toolTip())
         )
-        self.__copy_button.clicked.connect(lambda: copy(self.toolTip()))
         hlayout.addWidget(self.__copy_button)
         self.__copy_button.hide()
 
         self.__close_button = QPushButton()
         self.__close_button.setFixedSize(35, 35)
         self.__close_button.setObjectName("download_button")
-        self.__close_button.setIcon(
-            qta.icon("fa.close", color=self.palette().text().color())
-        )
+        self.__close_button.setIcon(IconProvider.get_qta_icon("fa5s.close"))
         self.__close_button.clicked.connect(self.close_signal.emit)
         hlayout.addWidget(self.__close_button)
         self.__close_button.hide()

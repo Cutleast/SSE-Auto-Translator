@@ -2,11 +2,11 @@
 Copyright (c) Cutleast
 """
 
-import qtawesome as qta
 from PySide6.QtGui import QAction, QCursor, QKeySequence
 from PySide6.QtWidgets import QCheckBox, QWidgetAction
 
 from core.database.string import String
+from ui.utilities.icon_provider import IconProvider
 from ui.widgets.menu import Menu
 
 
@@ -35,15 +35,13 @@ class StringListMenu(Menu):
 
     def __init_separator_actions(self) -> None:
         expand_all_action: QAction = self.addAction(
-            qta.icon("mdi6.arrow-expand-vertical", color=self.palette().text().color()),
+            IconProvider.get_qta_icon("mdi6.arrow-expand-vertical"),
             self.tr("Expand all"),
         )
         expand_all_action.triggered.connect(self.__parent.expandAll)
 
         collapse_all_action: QAction = self.addAction(
-            qta.icon(
-                "mdi6.arrow-collapse-vertical", color=self.palette().text().color()
-            ),
+            IconProvider.get_qta_icon("mdi6.arrow-collapse-vertical"),
             self.tr("Collapse all"),
         )
         collapse_all_action.triggered.connect(self.__parent.collapseAll)
@@ -52,12 +50,12 @@ class StringListMenu(Menu):
 
     def __init_copy_menu(self) -> None:
         self.__copy_menu = Menu(
-            qta.icon("mdi6.content-copy", color="#ffffff"), self.tr("Copy")
+            IconProvider.get_qta_icon("mdi6.content-copy"), self.tr("Copy")
         )
         self.addMenu(self.__copy_menu)
 
         copy_all_action = self.__copy_menu.addAction(
-            qta.icon("mdi6.content-copy", color="#ffffff"), self.tr("Copy")
+            IconProvider.get_qta_icon("mdi6.content-copy"), self.tr("Copy")
         )
         copy_all_action.setShortcut(QKeySequence("Ctrl+C"))
         copy_all_action.triggered.connect(self.__copy)

@@ -4,12 +4,12 @@ Copyright (c) Cutleast
 
 from typing import Optional
 
-import qtawesome as qta
 from PySide6.QtCore import Signal
-from PySide6.QtGui import QAction, QCursor, QIcon
+from PySide6.QtGui import QAction, QCursor
 
 from core.database.translation import Translation
 from core.translation_provider.source import Source
+from ui.utilities.icon_provider import IconProvider, ResourceIcon
 from ui.widgets.menu import Menu
 
 
@@ -59,15 +59,13 @@ class TranslationsMenu(Menu):
 
     def __init_item_actions(self) -> None:
         expand_all_action: QAction = self.addAction(
-            qta.icon("mdi6.arrow-expand-vertical", color=self.palette().text().color()),
+            IconProvider.get_qta_icon("mdi6.arrow-expand-vertical"),
             self.tr("Expand all"),
         )
         expand_all_action.triggered.connect(self.expand_all_clicked.emit)
 
         collapse_all_action: QAction = self.addAction(
-            qta.icon(
-                "mdi6.arrow-collapse-vertical", color=self.palette().text().color()
-            ),
+            IconProvider.get_qta_icon("mdi6.arrow-collapse-vertical"),
             self.tr("Collapse all"),
         )
         collapse_all_action.triggered.connect(self.collapse_all_clicked.emit)
@@ -76,7 +74,7 @@ class TranslationsMenu(Menu):
 
     def __init_translation_actions(self) -> None:
         self.__ignore_update_action = self.addAction(
-            qta.icon("mdi6.cloud-alert", color="#ffffff"),
+            IconProvider.get_qta_icon("mdi6.cloud-alert"),
             self.tr("Ignore translation update"),
         )
         self.__ignore_update_action.triggered.connect(
@@ -84,32 +82,32 @@ class TranslationsMenu(Menu):
         )
 
         show_strings_action: QAction = self.addAction(
-            qta.icon("mdi6.book-open-outline", color="#ffffff"),
+            IconProvider.get_qta_icon("mdi6.book-open-outline"),
             self.tr("Show translation strings..."),
         )
         show_strings_action.triggered.connect(self.show_strings_requested.emit)
 
         edit_translation_action: QAction = self.addAction(
-            qta.icon("mdi6.book-edit", color="#ffffff"), self.tr("Edit translation...")
+            IconProvider.get_qta_icon("mdi6.book-edit"), self.tr("Edit translation...")
         )
         edit_translation_action.triggered.connect(self.edit_translation_requested.emit)
 
         rename_translation_action: QAction = self.addAction(
-            qta.icon("mdi6.rename", color="#ffffff"), self.tr("Rename translation...")
+            IconProvider.get_qta_icon("mdi6.rename"), self.tr("Rename translation...")
         )
         rename_translation_action.triggered.connect(
             self.rename_translation_requested.emit
         )
 
         export_translation_action: QAction = self.addAction(
-            qta.icon("fa5s.share", color="#ffffff"), self.tr("Export translation...")
+            IconProvider.get_qta_icon("fa5s.share"), self.tr("Export translation...")
         )
         export_translation_action.triggered.connect(
             self.export_translation_requested.emit
         )
 
         delete_translation_action: QAction = self.addAction(
-            qta.icon("mdi6.delete", color="#ffffff"),
+            IconProvider.get_qta_icon("mdi6.delete"),
             self.tr("Delete selected translation(s)..."),
         )
         delete_translation_action.triggered.connect(
@@ -120,12 +118,13 @@ class TranslationsMenu(Menu):
 
     def __init_open_actions(self) -> None:
         self.__open_modpage_action: QAction = self.addAction(
-            QIcon(":/icons/nexus_mods.svg"), self.tr("Open mod page...")
+            IconProvider.get_res_icon(ResourceIcon.NexusMods),
+            self.tr("Open mod page..."),
         )
         self.__open_modpage_action.triggered.connect(self.open_modpage_requested.emit)
 
         open_in_explorer_action: QAction = self.addAction(
-            qta.icon("fa5s.folder", color="#ffffff"),
+            IconProvider.get_qta_icon("fa5s.folder"),
             self.tr("Open in Explorer..."),
         )
         open_in_explorer_action.triggered.connect(self.open_in_explorer_requested.emit)

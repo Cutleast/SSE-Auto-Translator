@@ -6,7 +6,6 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 from typing import Optional, override
 
-import qtawesome as qta
 from PySide6.QtCore import Qt, Signal
 from PySide6.QtWidgets import (
     QHeaderView,
@@ -24,6 +23,7 @@ from core.config.user_config import UserConfig
 from core.database.database import TranslationDatabase
 from core.database.translation import Translation
 from core.translator_api.translator import Translator
+from ui.utilities.icon_provider import IconProvider
 
 from .editor.editor_tab import EditorTab
 
@@ -217,7 +217,7 @@ class EditorPage(QSplitter):
             close_button = QPushButton()
             close_button.setObjectName("list_close_button")
             close_button.setFocusPolicy(Qt.FocusPolicy.NoFocus)
-            close_button.setIcon(qta.icon("fa.close", color="#ffffff"))
+            close_button.setIcon(IconProvider.get_qta_icon("mdi6.close-thick"))
             close_button.setFixedSize(26, 26)
 
             for modfile_name in sorted(translation.strings, key=lambda m: m.lower()):

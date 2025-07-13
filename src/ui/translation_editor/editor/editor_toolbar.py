@@ -4,12 +4,12 @@ Copyright (c) Cutleast
 
 from typing import Any
 
-import qtawesome as qta
 from PySide6.QtCore import QSize, Signal
 from PySide6.QtGui import QAction
 from PySide6.QtWidgets import QCheckBox, QToolBar, QWidgetAction
 
 from core.database.string import String
+from ui.utilities.icon_provider import IconProvider
 from ui.widgets.menu import Menu
 
 
@@ -81,8 +81,7 @@ class EditorToolbar(QToolBar):
             self.__filter_items[status] = filter_box
 
         filter_action: QAction = self.addAction(
-            qta.icon("mdi6.filter", color="#ffffff"),
-            self.tr("Filter Options"),
+            IconProvider.get_qta_icon("mdi6.filter"), self.tr("Filter Options")
         )
         filter_action.setMenu(self.__filter_menu)
         filter_action.triggered.connect(
@@ -91,7 +90,7 @@ class EditorToolbar(QToolBar):
         self.addAction(filter_action)
 
         help_action: QAction = self.addAction(
-            qta.icon("mdi6.help", color="#ffffff"), self.tr("Help")
+            IconProvider.get_qta_icon("mdi6.help"), self.tr("Help")
         )
         help_action.triggered.connect(self.help_requested.emit)
 
@@ -99,20 +98,19 @@ class EditorToolbar(QToolBar):
 
     def __init_actions(self) -> None:
         import_legacy_action: QAction = self.addAction(
-            qta.icon("ri.inbox-archive-fill", color="#ffffff"),
+            IconProvider.get_qta_icon("ri.inbox-archive-fill"),
             self.tr("Import pre-v1.1 Translation..."),
         )
         import_legacy_action.triggered.connect(self.legacy_import_requested.emit)
 
         apply_database_action: QAction = self.addAction(
-            qta.icon("mdi6.database-refresh-outline", color="#ffffff"),
+            IconProvider.get_qta_icon("mdi6.database-refresh-outline"),
             self.tr("Apply Database to untranslated Strings"),
         )
         apply_database_action.triggered.connect(self.apply_database_requested.emit)
 
         self.__search_and_replace_action = self.addAction(
-            qta.icon("msc.replace", color="#ffffff", color_disabled="#666666"),
-            self.tr("Search and Replace"),
+            IconProvider.get_qta_icon("msc.replace"), self.tr("Search and Replace")
         )
         self.__search_and_replace_action.triggered.connect(
             self.search_and_replace_requested.emit
@@ -120,8 +118,7 @@ class EditorToolbar(QToolBar):
         self.__search_and_replace_action.setDisabled(True)
 
         self.__api_translation_action = self.addAction(
-            qta.icon("ri.translate", color="#ffffff", color_disabled="#666666"),
-            self.tr("Translate with API"),
+            IconProvider.get_qta_icon("ri.translate"), self.tr("Translate with API")
         )
         self.__api_translation_action.triggered.connect(
             self.api_translation_requested.emit
@@ -132,12 +129,12 @@ class EditorToolbar(QToolBar):
 
     def __init_save_actions(self) -> None:
         save_action = self.addAction(
-            qta.icon("fa5s.save", color="#ffffff"), self.tr("Save")
+            IconProvider.get_qta_icon("fa5s.save"), self.tr("Save")
         )
         save_action.triggered.connect(self.save_requested.emit)
 
         export_action = self.addAction(
-            qta.icon("fa5s.share", color="#ffffff"), self.tr("Export translation")
+            IconProvider.get_qta_icon("fa5s.share"), self.tr("Export translation")
         )
         export_action.triggered.connect(self.export_requested.emit)
 

@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import Optional, TypeVar
 
 from PySide6.QtCore import Signal
-from PySide6.QtGui import QColor, QIcon
+from PySide6.QtGui import QColor
 from PySide6.QtWidgets import (
     QApplication,
     QDialog,
@@ -42,6 +42,7 @@ from core.translation_provider.provider import Provider
 from core.utilities.container_utils import join_dicts
 from core.utilities.exe_info import get_current_path
 from ui.downloader.download_list_dialog import DownloadListDialog
+from ui.utilities.icon_provider import IconProvider, ResourceIcon
 from ui.widgets.error_dialog import ErrorDialog
 from ui.widgets.ignore_list_dialog import IgnoreListDialog
 from ui.widgets.lcd_number import LCDNumber
@@ -217,21 +218,21 @@ class MainPageWidget(QWidget):
         ko_fi_button = LinkButton(
             MainPageWidget.KOFI_URL,
             self.tr("Support us on Ko-Fi"),
-            QIcon(":/icons/ko-fi.png"),
+            IconProvider.get_res_icon(ResourceIcon.KoFi),
         )
         hlayout.addWidget(ko_fi_button)
 
         discord_button = LinkButton(
             MainPageWidget.DISCORD_URL,
             self.tr("Join us on Discord"),
-            QIcon(":/icons/discord.png"),
+            IconProvider.get_res_icon(ResourceIcon.Discord),
         )
         hlayout.addWidget(discord_button)
 
         nexus_mods_button = LinkButton(
             MainPageWidget.NEXUS_MODS_PROFILE_URL,
             self.tr("Check out my profile on Nexus Mods"),
-            QIcon(":/icons/nexus_mods.png"),
+            IconProvider.get_res_icon(ResourceIcon.NexusModsColored),
         )
         hlayout.addWidget(nexus_mods_button)
 

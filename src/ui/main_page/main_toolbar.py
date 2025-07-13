@@ -4,13 +4,13 @@ Copyright (c) Cutleast
 
 from typing import Any, Optional
 
-import qtawesome as qta
 from PySide6.QtCore import QSize, Signal
-from PySide6.QtGui import QAction, QIcon
+from PySide6.QtGui import QAction
 from PySide6.QtWidgets import QCheckBox, QToolBar, QWidgetAction
 
 from app_context import AppContext
 from core.mod_file.translation_status import TranslationStatus
+from ui.utilities.icon_provider import IconProvider, ResourceIcon
 from ui.widgets.menu import Menu
 
 
@@ -92,8 +92,7 @@ class MainToolBar(QToolBar):
             self.__filter_items[status] = filter_box
 
         filter_action = self.addAction(
-            qta.icon("mdi6.filter", color=self.palette().text().color()),
-            self.tr("Filter Options"),
+            IconProvider.get_qta_icon("mdi6.filter"), self.tr("Filter Options")
         )
         filter_action.setMenu(self.__filter_menu)
         filter_action.triggered.connect(
@@ -102,13 +101,13 @@ class MainToolBar(QToolBar):
         self.addAction(filter_action)
 
         open_ignore_list_action = self.addAction(
-            qta.icon("mdi6.playlist-remove", color=self.palette().text().color()),
+            IconProvider.get_qta_icon("mdi6.playlist-remove"),
             self.tr("Open ignore list"),
         )
         open_ignore_list_action.triggered.connect(self.ignore_list_requested.emit)
 
         help_action = self.addAction(
-            qta.icon("mdi6.help", color=self.palette().text().color()), self.tr("Help")
+            IconProvider.get_qta_icon("mdi6.help"), self.tr("Help")
         )
         help_action.triggered.connect(self.help_requested.emit)
 
@@ -116,24 +115,25 @@ class MainToolBar(QToolBar):
 
     def __init_actions(self) -> None:
         self.__modlist_scan_action = self.addAction(
-            QIcon(":/icons/detect_lang.svg"), self.tr("Scan modlist...")
+            IconProvider.get_res_icon(ResourceIcon.DetectLang),
+            self.tr("Scan modlist..."),
         )
         self.__modlist_scan_action.triggered.connect(self.__on_modlist_scan_requested)
 
         self.__online_scan_action = self.addAction(
-            QIcon(":/icons/scan_online.svg"),
+            IconProvider.get_res_icon(ResourceIcon.ScanOnline),
             self.tr("Scan Online for available translations..."),
         )
         self.__online_scan_action.triggered.connect(self.__on_online_scan_requested)
 
         self.__download_action = self.addAction(
-            qta.icon("mdi6.download-multiple", color=self.palette().text().color()),
+            IconProvider.get_qta_icon("mdi6.download-multiple"),
             self.tr("Download available translations..."),
         )
         self.__download_action.triggered.connect(self.__on_download_requested)
 
         self.__build_output_action = self.addAction(
-            qta.icon("mdi6.export-variant", color=self.palette().text().color()),
+            IconProvider.get_qta_icon("mdi6.export-variant"),
             self.tr("Build output mod..."),
         )
         self.__build_output_action.triggered.connect(self.__on_build_output_requested)
@@ -142,13 +142,13 @@ class MainToolBar(QToolBar):
 
     def __init_search_actions(self) -> None:
         self.__deep_scan_action = self.addAction(
-            qta.icon("mdi6.line-scan", color=self.palette().text().color()),
+            IconProvider.get_qta_icon("mdi6.line-scan"),
             self.tr("Scan translations for missing strings..."),
         )
         self.__deep_scan_action.triggered.connect(self.deep_scan_requested.emit)
 
         self.__string_search_action = self.addAction(
-            qta.icon("mdi6.layers-search", color=self.palette().text().color()),
+            IconProvider.get_qta_icon("mdi6.layers-search"),
             self.tr("Search modlist for string..."),
         )
         self.__string_search_action.triggered.connect(self.string_search_requested.emit)

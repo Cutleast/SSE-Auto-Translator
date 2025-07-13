@@ -24,7 +24,7 @@ dependencies = [
     "pyuac",
     "pywin32",
     "pyzmq",
-    "qtawesome<1.4.0",
+    "qtawesome",
     "qtpy",
     "rarfile",
     "requests",

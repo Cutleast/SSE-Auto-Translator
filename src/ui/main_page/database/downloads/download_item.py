@@ -3,10 +3,9 @@ Copyright (c) Cutleast
 """
 
 import logging
-import os
+import webbrowser
 from typing import Optional
 
-import qtawesome as qta
 from PySide6.QtCore import QObject, Qt, Signal
 from PySide6.QtWidgets import QPushButton, QTreeWidget, QTreeWidgetItem
 
@@ -14,6 +13,7 @@ from core.downloader.file_download import FileDownload
 from core.translation_provider.nm_api.nm_api import NexusModsApi
 from core.utilities.progress_update import ProgressUpdate
 from core.utilities.scale import scale_value
+from ui.utilities.icon_provider import IconProvider
 from ui.widgets.progress_widget import ProgressWidget
 
 
@@ -59,7 +59,7 @@ class DownloadItem(QTreeWidgetItem, QObject):  # type: ignore
         parent: QTreeWidget = self.treeWidget()
 
         button = QPushButton(
-            qta.icon("ri.download-line", color=parent.palette().text().color()),
+            IconProvider.get_qta_icon("ri.download-line"),
             self.tr("Non-premium download..."),
         )
 
@@ -72,11 +72,9 @@ class DownloadItem(QTreeWidgetItem, QObject):  # type: ignore
             )
 
             self.log.debug(f"Opening {url!r}...")
-            os.startfile(url)
+            webbrowser.open(url)
 
-            button.setIcon(
-                qta.icon("fa5s.check", color=parent.palette().text().color())
-            )
+            button.setIcon(IconProvider.get_qta_icon("fa5s.check"))
 
         button.clicked.connect(open_download_page)
 

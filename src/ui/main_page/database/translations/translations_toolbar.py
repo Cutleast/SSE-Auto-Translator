@@ -2,10 +2,11 @@
 Copyright (c) Cutleast
 """
 
-import qtawesome as qta
 from PySide6.QtCore import QSize, Signal
 from PySide6.QtGui import QAction
 from PySide6.QtWidgets import QToolBar
+
+from ui.utilities.icon_provider import IconProvider, ResourceIcon
 
 
 class TranslationsToolbar(QToolBar):
@@ -40,7 +41,7 @@ class TranslationsToolbar(QToolBar):
 
     def __init_actions(self) -> None:
         show_vanilla_strings_action: QAction = self.addAction(
-            qta.icon("mdi6.book-open-outline", color="#ffffff"),
+            IconProvider.get_qta_icon("mdi6.book-open-outline"),
             self.tr("Show base game (+ AE CC content) strings"),
         )
         show_vanilla_strings_action.triggered.connect(
@@ -48,27 +49,26 @@ class TranslationsToolbar(QToolBar):
         )
 
         search_database_action: QAction = self.addAction(
-            qta.icon("fa.search", color="#ffffff", scale_factor=0.85),
-            self.tr("Search database"),
+            IconProvider.get_res_icon(ResourceIcon.Search), self.tr("Search database")
         )
         search_database_action.triggered.connect(self.search_database_requested.emit)
 
         self.addSeparator()
 
         local_import_action: QAction = self.addAction(
-            qta.icon("mdi6.import", color="#ffffff"),
+            IconProvider.get_qta_icon("mdi6.import"),
             self.tr("Import translation from local disk"),
         )
         local_import_action.triggered.connect(self.local_import_requested.emit)
 
         update_check_action: QAction = self.addAction(
-            qta.icon("mdi6.cloud-refresh", color="#ffffff"),
+            IconProvider.get_qta_icon("mdi6.cloud-refresh"),
             self.tr("Check translations for available updates"),
         )
         update_check_action.triggered.connect(self.update_check_requested.emit)
 
         self.__update_action = self.addAction(
-            qta.icon("mdi6.cloud-download", color="#ffffff", color_disabled="#666666"),
+            IconProvider.get_qta_icon("mdi6.cloud-download"),
             self.tr("Download and install available translation updates"),
         )
         self.__update_action.setDisabled(True)

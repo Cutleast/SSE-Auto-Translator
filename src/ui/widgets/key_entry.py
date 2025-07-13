@@ -6,8 +6,9 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 from typing import Any
 
-import qtawesome as qta
 from PySide6.QtWidgets import QApplication, QLineEdit
+
+from ui.utilities.icon_provider import IconProvider
 
 
 class KeyEntry(QLineEdit):
@@ -15,15 +16,15 @@ class KeyEntry(QLineEdit):
     LineEdit for passwords or keys, has a toggle visibility button.
     """
 
-    __is_visible = False
+    __is_visible: bool = False
 
-    def __init__(self, *args: Any, **kwargs: dict[str, Any]):
+    def __init__(self, *args: Any, **kwargs: dict[str, Any]) -> None:
         super().__init__(*args, **kwargs)
 
         self.setEchoMode(QLineEdit.EchoMode.Password)
 
         self.toggle_visibility_action = self.addAction(
-            qta.icon("mdi6.eye", color="#ffffff"),
+            IconProvider.get_qta_icon("mdi6.eye"),
             QLineEdit.ActionPosition.TrailingPosition,
         )
         self.toggle_visibility_action.triggered.connect(self.toggle_visibility)
@@ -34,11 +35,11 @@ class KeyEntry(QLineEdit):
         if self.__is_visible:
             self.setEchoMode(QLineEdit.EchoMode.Normal)
             self.toggle_visibility_action.setIcon(
-                qta.icon("mdi6.eye-off", color="#ffffff")
+                IconProvider.get_qta_icon("mdi6.eye-off")
             )
         else:
             self.setEchoMode(QLineEdit.EchoMode.Password)
-            self.toggle_visibility_action.setIcon(qta.icon("mdi6.eye", color="#ffffff"))
+            self.toggle_visibility_action.setIcon(IconProvider.get_qta_icon("mdi6.eye"))
 
 
 if __name__ == "__main__":

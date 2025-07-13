@@ -6,9 +6,9 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 from typing import Any
 
-import pyperclip
-import qtawesome as qta
 from PySide6.QtWidgets import QApplication, QLineEdit
+
+from ui.utilities.icon_provider import IconProvider
 
 
 class PasteLineEdit(QLineEdit):
@@ -16,16 +16,18 @@ class PasteLineEdit(QLineEdit):
     LineEdit with paste button.
     """
 
-    def __init__(self, *args: Any, **kwargs: dict[str, Any]):
+    def __init__(self, *args: Any, **kwargs: dict[str, Any]) -> None:
         super().__init__(*args, **kwargs)
 
         self.paste_action = self.addAction(
-            qta.icon("fa5s.paste", color="#ffffff"),
+            IconProvider.get_qta_icon("fa5s.paste"),
             QLineEdit.ActionPosition.TrailingPosition,
         )
         self.paste_action.triggered.connect(
             lambda: (
-                self.setText(pyperclip.paste()) if pyperclip.paste().strip() else None
+                self.setText(QApplication.clipboard().text())
+                if QApplication.clipboard().text().strip()
+                else None
             )
         )
 

@@ -4,9 +4,10 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-import qtawesome as qta
 from PySide6.QtCore import Qt, Signal
 from PySide6.QtWidgets import QHBoxLayout, QLineEdit, QPushButton
+
+from ui.utilities.icon_provider import IconProvider, ResourceIcon
 
 
 class SearchBar(QLineEdit):
@@ -29,7 +30,7 @@ class SearchBar(QLineEdit):
         super().__init__(*args, **kwargs)
 
         self.addAction(
-            qta.icon("fa.search", color="#ffffff"),
+            IconProvider.get_res_icon(ResourceIcon.Search),
             QLineEdit.ActionPosition.LeadingPosition,
         )
         self.setPlaceholderText(self.tr("Search..."))
@@ -42,9 +43,7 @@ class SearchBar(QLineEdit):
 
         self.__cs_toggle = QPushButton()
         self.__cs_toggle.setCursor(Qt.CursorShape.ArrowCursor)
-        self.__cs_toggle.setIcon(
-            qta.icon("mdi6.format-letter-case", color="#ffffff", scale_factor=1.5)
-        )
+        self.__cs_toggle.setIcon(IconProvider.get_qta_icon("mdi6.format-letter-case"))
         self.__cs_toggle.setCheckable(True)
         self.__cs_toggle.clicked.connect(self.setFocus)
         self.__cs_toggle.clicked.connect(self.__on_search_change)
@@ -54,7 +53,7 @@ class SearchBar(QLineEdit):
 
         self.__clear_button = QPushButton()
         self.__clear_button.setCursor(Qt.CursorShape.ArrowCursor)
-        self.__clear_button.setIcon(qta.icon("fa.close", color="#ffffff"))
+        self.__clear_button.setIcon(IconProvider.get_qta_icon("mdi6.close-thick"))
         self.__clear_button.clicked.connect(lambda: self.setText(""))
         self.__clear_button.clicked.connect(self.setFocus)
         self.__clear_button.clicked.connect(self.returnPressed.emit)

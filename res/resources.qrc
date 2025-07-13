@@ -21,6 +21,7 @@
         <file>icons/nexus_mods.svg</file>
         <file>icons/plugin.svg</file>
         <file>icons/scan_online.svg</file>
+        <file>icons/search.svg</file>
 
         <!-- Localisation Files -->
         <file>loc/de_DE.qm</file>

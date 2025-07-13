@@ -7,6 +7,7 @@ from PySide6.QtCore import Signal
 from PySide6.QtGui import QAction, QCursor, QKeySequence
 
 from core.database.string import String
+from ui.utilities.icon_provider import IconProvider
 from ui.widgets.menu import Menu
 
 
@@ -47,15 +48,13 @@ class EditorMenu(Menu):
 
     def __init_separator_actions(self) -> None:
         expand_all_action: QAction = self.addAction(
-            qta.icon("mdi6.arrow-expand-vertical", color=self.palette().text().color()),
+            IconProvider.get_qta_icon("mdi6.arrow-expand-vertical"),
             self.tr("Expand all"),
         )
         expand_all_action.triggered.connect(self.expand_all_clicked.emit)
 
         collapse_all_action: QAction = self.addAction(
-            qta.icon(
-                "mdi6.arrow-collapse-vertical", color=self.palette().text().color()
-            ),
+            IconProvider.get_qta_icon("mdi6.arrow-collapse-vertical"),
             self.tr("Collapse all"),
         )
         collapse_all_action.triggered.connect(self.collapse_all_clicked.emit)
@@ -64,18 +63,18 @@ class EditorMenu(Menu):
 
     def __init_actions(self) -> None:
         edit_string_action: QAction = self.addAction(
-            qta.icon("mdi6.rename", color="#ffffff"), self.tr("Edit String...")
+            IconProvider.get_qta_icon("mdi6.rename"), self.tr("Edit String...")
         )
         edit_string_action.triggered.connect(self.edit_string_requested.emit)
 
         copy_action: QAction = self.addAction(
-            qta.icon("mdi6.content-copy", color="#ffffff"), self.tr("Copy String")
+            IconProvider.get_qta_icon("mdi6.content-copy"), self.tr("Copy String")
         )
         copy_action.setIconVisibleInMenu(True)
         copy_action.triggered.connect(self.copy_string_requested.emit)
 
         reset_string_action: QAction = self.addAction(
-            qta.icon("ri.arrow-go-back-line", color="#ffffff"),
+            IconProvider.get_qta_icon("ri.arrow-go-back-line"),
             self.tr("Reset selected String(s)"),
         )
         reset_string_action.setShortcut(QKeySequence("F4"))

@@ -4,9 +4,10 @@ Copyright (c) Cutleast
 
 import os
 
-import qtawesome as qta
 from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QPushButton
+
+from ui.utilities.icon_provider import IconProvider
 
 
 class LinkButton(QPushButton):
@@ -22,9 +23,6 @@ class LinkButton(QPushButton):
         if display_text is not None:
             self.setText(display_text)
 
-        self.setIcon(
-            icon
-            or qta.icon("fa5s.external-link-alt", color=self.palette().text().color())
-        )
+        self.setIcon(icon or IconProvider.get_qta_icon("fa5s.external-link-alt"))
         self.clicked.connect(lambda: os.startfile(url))
         self.setToolTip(url)

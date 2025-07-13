@@ -4,7 +4,6 @@ Copyright (c) Cutleast
 
 from typing import Optional
 
-import qtawesome as qta
 from PySide6.QtCore import Qt, Signal
 from PySide6.QtWidgets import (
     QApplication,
@@ -17,6 +16,8 @@ from PySide6.QtWidgets import (
     QVBoxLayout,
     QWidget,
 )
+
+from ui.utilities.icon_provider import IconProvider
 
 
 class ErrorDialog(QDialog):
@@ -109,7 +110,7 @@ class ErrorDialog(QDialog):
 
         copy_button = QPushButton()
         copy_button.setToolTip(self.tr("Copy error details..."))
-        copy_button.setIcon(qta.icon("mdi6.content-copy", color="#ffffff"))
+        copy_button.setIcon(IconProvider.get_qta_icon("mdi6.content-copy"))
         copy_button.clicked.connect(
             lambda: QApplication.clipboard().setText(self.__details)
         )
@@ -119,7 +120,7 @@ class ErrorDialog(QDialog):
             self.__toggle_details_button = QPushButton()
             self.__toggle_details_button.setToolTip(self.tr("Show details..."))
             self.__toggle_details_button.setIcon(
-                qta.icon("fa5s.chevron-down", color="#ffffff")
+                IconProvider.get_qta_icon("fa5s.chevron-down")
             )
             self.__toggle_details_button.clicked.connect(self.__toggle_details)
             hlayout.addWidget(self.__toggle_details_button)
@@ -127,7 +128,7 @@ class ErrorDialog(QDialog):
         if self.__dump:
             dump_button = QPushButton()
             dump_button.setToolTip(self.tr("Dump application state..."))
-            dump_button.setIcon(qta.icon("mdi6.package-down", color="#ffffff"))
+            dump_button.setIcon(IconProvider.get_qta_icon("mdi6.package-down"))
             dump_button.clicked.connect(self.dump_signal.emit)
             hlayout.addWidget(dump_button)
 
@@ -135,13 +136,13 @@ class ErrorDialog(QDialog):
         if not self.__details_box.isVisible():
             self.__details_box.show()
             self.__toggle_details_button.setIcon(
-                qta.icon("fa5s.chevron-up", color="#ffffff")
+                IconProvider.get_qta_icon("fa5s.chevron-up")
             )
             self.__toggle_details_button.setToolTip(self.tr("Hide details..."))
         else:
             self.__details_box.hide()
             self.__toggle_details_button.setIcon(
-                qta.icon("fa5s.chevron-down", color="#ffffff")
+                IconProvider.get_qta_icon("fa5s.chevron-down")
             )
             self.__toggle_details_button.setToolTip(self.tr("Show details..."))
 

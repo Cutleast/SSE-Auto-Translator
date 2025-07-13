@@ -6,9 +6,9 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 from typing import Any
 
-import pyperclip
-import qtawesome as qta
 from PySide6.QtWidgets import QApplication, QLineEdit
+
+from ui.utilities.icon_provider import IconProvider
 
 
 class CopyLineEdit(QLineEdit):
@@ -16,15 +16,19 @@ class CopyLineEdit(QLineEdit):
     LineEdit with copy button.
     """
 
-    def __init__(self, *args: Any, **kwargs: dict[str, Any]):
+    def __init__(self, *args: Any, **kwargs: dict[str, Any]) -> None:
         super().__init__(*args, **kwargs)
 
         self.copy_action = self.addAction(
-            qta.icon("fa5s.copy", color="#ffffff"),
+            IconProvider.get_qta_icon("fa5s.copy"),
             QLineEdit.ActionPosition.TrailingPosition,
         )
         self.copy_action.triggered.connect(
-            lambda: (pyperclip.copy(self.text()) if self.text().strip() else None)
+            lambda: (
+                QApplication.clipboard().setText(self.text())
+                if self.text().strip()
+                else None
+            )
         )
 
 

@@ -4,13 +4,13 @@ Copyright (c) Cutleast
 
 from typing import Optional, override
 
-import qtawesome as qta
 from PySide6.QtCore import QSize, Qt, QTimerEvent, Signal
 from PySide6.QtWidgets import QApplication, QLabel, QPushButton, QStatusBar
 
 from core.translation_provider.provider import Provider
 from core.utilities import trim_string
 from core.utilities.logger import Logger
+from ui.utilities.icon_provider import IconProvider
 
 from .widgets.log_window import LogWindow
 
@@ -62,9 +62,7 @@ class StatusBar(QStatusBar):
 
         copy_log_button = QPushButton()
         copy_log_button.setFixedSize(20, 20)
-        copy_log_button.setIcon(
-            qta.icon("mdi6.content-copy", color=self.palette().text().color())
-        )
+        copy_log_button.setIcon(IconProvider.get_qta_icon("mdi6.content-copy"))
         copy_log_button.setIconSize(QSize(16, 16))
         copy_log_button.clicked.connect(
             lambda: QApplication.clipboard().setText(self.__logger.get_content())
@@ -74,9 +72,7 @@ class StatusBar(QStatusBar):
 
         open_log_button = QPushButton()
         open_log_button.setFixedSize(20, 20)
-        open_log_button.setIcon(
-            qta.icon("fa5s.external-link-alt", color=self.palette().text().color())
-        )
+        open_log_button.setIcon(IconProvider.get_qta_icon("fa5s.external-link-alt"))
         open_log_button.setIconSize(QSize(16, 16))
         open_log_button.setToolTip(self.tr("View log"))
         open_log_button.clicked.connect(self.__open_log_window)

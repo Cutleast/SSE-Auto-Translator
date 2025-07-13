@@ -6,7 +6,6 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 from typing import Optional
 
-import qtawesome as qta
 from PySide6.QtCore import Qt, Signal
 from PySide6.QtGui import QCloseEvent, QFont, QKeySequence, QShortcut
 from PySide6.QtWidgets import (
@@ -24,6 +23,7 @@ from core.config.app_config import AppConfig
 from core.config.user_config import UserConfig
 from core.database.string import String
 from core.translator_api.translator import Translator
+from ui.utilities.icon_provider import IconProvider
 from ui.widgets.shortcut_button import ShortcutButton
 from ui.widgets.spell_check.spell_check_edit import SpellCheckEdit
 
@@ -92,7 +92,7 @@ class TranslatorDialog(QWidget):
         vlayout.addLayout(hlayout)
 
         prev_button = ShortcutButton(
-            qta.icon("fa5s.chevron-left", color="#ffffff"),
+            IconProvider.get_qta_icon("fa5s.chevron-left"),
             self.tr("Go to previous String"),
         )
         prev_button.clicked.connect(self.goto_prev)
@@ -103,7 +103,7 @@ class TranslatorDialog(QWidget):
         hlayout.addStretch()
 
         next_button = ShortcutButton(
-            qta.icon("fa5s.chevron-right", color="#ffffff"),
+            IconProvider.get_qta_icon("fa5s.chevron-right"),
             self.tr("Go to next String"),
         )
         next_button.clicked.connect(self.goto_next)
@@ -160,13 +160,13 @@ class TranslatorDialog(QWidget):
         hlayout.addLayout(btn_vlayout)
 
         translate_button = ShortcutButton(self.tr("Translate with API"))
-        translate_button.setIcon(qta.icon("ri.translate", color="#ffffff"))
+        translate_button.setIcon(IconProvider.get_qta_icon("ri.translate"))
         translate_button.clicked.connect(self.__translate_with_api)
         translate_button.setShortcut(QKeySequence("Ctrl+F5"))
         btn_vlayout.addWidget(translate_button)
 
         reset_button = ShortcutButton(self.tr("Reset String"))
-        reset_button.setIcon(qta.icon("ri.arrow-go-back-line", color="#ffffff"))
+        reset_button.setIcon(IconProvider.get_qta_icon("ri.arrow-go-back-line"))
         reset_button.clicked.connect(self.__reset_translation)
         reset_button.setShortcut(QKeySequence("F4"))
         reset_button.setFixedWidth(reset_button.minimumWidth())

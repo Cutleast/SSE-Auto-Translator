@@ -2,10 +2,11 @@
 Copyright (c) Cutleast
 """
 
-import qtawesome as qta
 from PySide6.QtCore import QSize, Signal
 from PySide6.QtGui import QAction
 from PySide6.QtWidgets import QToolBar
+
+from ui.utilities.icon_provider import IconProvider
 
 
 class DownloadsToolbar(QToolBar):
@@ -27,7 +28,7 @@ class DownloadsToolbar(QToolBar):
     __handle_nxm_action: QAction
     __toggle_pause_action: QAction
 
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
 
         self.setIconSize(QSize(32, 32))
@@ -37,7 +38,7 @@ class DownloadsToolbar(QToolBar):
 
     def __init_actions(self) -> None:
         self.__handle_nxm_action = self.addAction(
-            qta.icon("fa.chain", color="#ffffff"),
+            IconProvider.get_qta_icon("fa5s.link"),
             self.tr("Handle Nexus Mods Downloads") + " " + self.tr("[Experimental]"),
         )
         self.__handle_nxm_action.setCheckable(True)
@@ -46,7 +47,7 @@ class DownloadsToolbar(QToolBar):
         )
 
         self.__toggle_pause_action = self.addAction(
-            qta.icon("fa5s.pause", color=self.palette().text().color()), ""
+            IconProvider.get_qta_icon("fa5s.pause"), ""
         )
         self.__toggle_pause_action.triggered.connect(self.toggle_pause_requested.emit)
 
@@ -78,11 +79,7 @@ class DownloadsToolbar(QToolBar):
 
         if paused:
             self.__toggle_pause_action.setText(self.tr("Resume"))
-            self.__toggle_pause_action.setIcon(
-                qta.icon("fa5s.play", color=self.palette().text().color())
-            )
+            self.__toggle_pause_action.setIcon(IconProvider.get_qta_icon("fa5s.play"))
         else:
             self.__toggle_pause_action.setText(self.tr("Pause"))
-            self.__toggle_pause_action.setIcon(
-                qta.icon("fa5s.pause", color=self.palette().text().color())
-            )
+            self.__toggle_pause_action.setIcon(IconProvider.get_qta_icon("fa5s.pause"))
