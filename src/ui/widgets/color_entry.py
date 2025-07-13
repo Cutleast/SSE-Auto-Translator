@@ -41,7 +41,7 @@ class ColorLineEdit(QLineEdit):
         hlayout.addWidget(self.__choose_color_button)
 
     @override
-    def setText(self, text: str) -> None:
+    def setText(self, text: str) -> None:  # type: ignore
         super().setText(text)
 
         self.__choose_color_button.setIcon(
