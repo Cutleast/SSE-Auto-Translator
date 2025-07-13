@@ -14,8 +14,8 @@ from pydantic.dataclasses import dataclass
 from PySide6.QtGui import QColor
 from PySide6.QtWidgets import QApplication
 
-from core.utilities.base_enum import BaseEnum
 from core.utilities.container_utils import unique
+from core.utilities.localized_enum import LocalizedEnum
 
 
 @dataclass
@@ -55,7 +55,7 @@ class String:
     but not all strings do have one.
     """
 
-    class Status(BaseEnum):
+    class Status(LocalizedEnum):
         """
         Enum for string status.
         """
@@ -97,6 +97,7 @@ class String:
 
             return COLORS.get(status)
 
+        @override
         def get_localized_name(self) -> str:
             LOC_NAMES: dict[String.Status, str] = {
                 String.Status.NoneStatus: QApplication.translate(
@@ -117,6 +118,10 @@ class String:
             }
 
             return LOC_NAMES[self]
+
+        @override
+        def get_localized_description(self) -> str:
+            return self.get_localized_name()
 
         def get_localized_filter_name(self) -> str:
             LOC_NAMES: dict[String.Status, str] = {

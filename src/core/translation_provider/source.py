@@ -2,14 +2,15 @@
 Copyright (c) Cutleast
 """
 
-from typing import Optional
+from typing import Optional, override
 
 from PySide6.QtGui import QIcon
+from PySide6.QtWidgets import QApplication
 
-from core.utilities.base_enum import BaseEnum
+from core.utilities.localized_enum import LocalizedEnum
 
 
-class Source(BaseEnum):
+class Source(LocalizedEnum):
     """
     Enum for different Sources (for eg. Nexus Mods or Confrérie des Traducteurs).
     """
@@ -43,3 +44,19 @@ class Source(BaseEnum):
         }
 
         return ICONS.get(self)
+
+    @override
+    def get_localized_name(self) -> str:
+        locs: dict[Source, str] = {
+            Source.NexusMods: QApplication.translate("Source", "Nexus Mods"),
+            Source.Confrerie: QApplication.translate(
+                "Source", "Confrérie des Traducteurs"
+            ),
+            Source.Local: QApplication.translate("Source", "Local"),
+        }
+
+        return locs[self]
+
+    @override
+    def get_localized_description(self) -> str:
+        return self.get_localized_name()

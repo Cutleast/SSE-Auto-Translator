@@ -438,12 +438,12 @@ Wenn Sie nicht über Nexus Mods Premium verfügen, stellen Sie sicher, dass SSE-
     <message>
         <location filename="src/ui/main_page/database/downloads/downloads_toolbar.py" line="80"/>
         <source>Resume</source>
-        <translation type="unfinished">Fortsetzen</translation>
+        <translation>Fortsetzen</translation>
     </message>
     <message>
         <location filename="src/ui/main_page/database/downloads/downloads_toolbar.py" line="85"/>
         <source>Pause</source>
-        <translation type="unfinished">Anhalten</translation>
+        <translation>Anhalten</translation>
     </message>
 </context>
 <context>
@@ -1116,17 +1116,17 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
     <message>
         <location filename="src/ui/main_window.py" line="232"/>
         <source>No Updates Available</source>
-        <translation type="unfinished">Keine Updates verfügbar</translation>
+        <translation>Keine Updates verfügbar</translation>
     </message>
     <message>
         <location filename="src/ui/main_window.py" line="233"/>
         <source>There are no updates available.</source>
-        <translation type="unfinished">Es sind keine Updates verfügbar.</translation>
+        <translation>Es sind keine Updates verfügbar.</translation>
     </message>
     <message>
         <location filename="src/ui/main_window.py" line="242"/>
         <source>About Qt</source>
-        <translation type="unfinished">Über Qt</translation>
+        <translation>Über Qt</translation>
     </message>
     <message>
         <location filename="src/ui/main_window.py" line="197"/>
@@ -1370,6 +1370,29 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
     </message>
 </context>
 <context>
+    <name>ProviderPreference</name>
+    <message>
+        <location filename="src/core/translation_provider/provider_preference.py" line="32"/>
+        <source>Only Nexus Mods</source>
+        <translation>Nur Nexus Mods</translation>
+    </message>
+    <message>
+        <location filename="src/core/translation_provider/provider_preference.py" line="35"/>
+        <source>Prefer Nexus Mods</source>
+        <translation>Nexus Mods bevorzugen</translation>
+    </message>
+    <message>
+        <location filename="src/core/translation_provider/provider_preference.py" line="38"/>
+        <source>Only Confrérie des Traducteurs</source>
+        <translation>Nur Confrérie des Traducteurs</translation>
+    </message>
+    <message>
+        <location filename="src/core/translation_provider/provider_preference.py" line="41"/>
+        <source>Prefer Confrérie des Traducteurs</source>
+        <translation>Confrérie des Traducteurs bevorzugen</translation>
+    </message>
+</context>
+<context>
     <name>ResultDialog</name>
     <message>
         <location filename="src/ui/main_page/result_dialog.py" line="30"/>
@@ -1610,6 +1633,24 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
         <location filename="src/ui/startup_dialog/setup_page.py" line="134"/>
         <source>Nexus Mods API Key</source>
         <translation>Nexus Mods API-Schlüssel</translation>
+    </message>
+</context>
+<context>
+    <name>Source</name>
+    <message>
+        <location filename="src/core/translation_provider/source.py" line="51"/>
+        <source>Nexus Mods</source>
+        <translation>Nexus Mods</translation>
+    </message>
+    <message>
+        <location filename="src/core/translation_provider/source.py" line="54"/>
+        <source>Confrérie des Traducteurs</source>
+        <translation>Confrérie des Traducteurs</translation>
+    </message>
+    <message>
+        <location filename="src/core/translation_provider/source.py" line="55"/>
+        <source>Local</source>
+        <translation>Lokal</translation>
     </message>
 </context>
 <context>
@@ -1978,47 +2019,47 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
         <translation>Größe</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="220"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="224"/>
         <source>Unknown</source>
         <translation>Unbekannt</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="395"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="399"/>
         <source>Rename translation</source>
         <translation>Übersetzung unbenennen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="396"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="400"/>
         <source>Enter new translation name:</source>
         <translation>Neuen Namen der Übersetzung eingeben:</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="399"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="403"/>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="400"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="404"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="431"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="435"/>
         <source>Export translation...</source>
         <translation>Übersetzung exportieren...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="450"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="454"/>
         <source>Export successful!</source>
         <translation>Export erfolgreich!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="451"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="455"/>
         <source>Translation successfully exported.</source>
         <translation>Übersetzung erfolgreich exportiert.</translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="464"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="468"/>
         <source>Delete translation</source>
         <comment>Delete translations</comment>
         <translation>
@@ -2027,7 +2068,7 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="471"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="475"/>
         <source>Are you sure you want to delete this translation?</source>
         <comment>Are you sure you want to delete %n translations?</comment>
         <translation>
@@ -2036,12 +2077,12 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
         </translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="478"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="482"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="479"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="483"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
@@ -2166,7 +2207,7 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
     <message>
         <location filename="src/ui/settings/user_settings.py" line="82"/>
         <source>Translations</source>
-        <translation type="unfinished">Übersetzungen</translation>
+        <translation>Übersetzungen</translation>
     </message>
     <message>
         <location filename="src/ui/settings/user_settings.py" line="96"/>
@@ -2373,92 +2414,92 @@ Antwort: {1}</translation>
 <context>
     <name>mod_file</name>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="84"/>
+        <location filename="src/core/mod_file/translation_status.py" line="85"/>
         <source>No Status (No Color)</source>
         <translation>Kein Status (ohne Farbe)</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="87"/>
+        <location filename="src/core/mod_file/translation_status.py" line="88"/>
         <source>File has no Strings (No Color)</source>
         <translation>Datei hat keine Strings (Ohne Farbe)</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="90"/>
+        <location filename="src/core/mod_file/translation_status.py" line="91"/>
         <source>File is already in target language</source>
         <translation>Datei ist bereits in der Zielsprache</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="93"/>
+        <location filename="src/core/mod_file/translation_status.py" line="94"/>
         <source>Translation for file is already installed in Database</source>
         <translation>Eine Übersetzung für die Datei ist bereits in der Datenbank installiert</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="96"/>
+        <location filename="src/core/mod_file/translation_status.py" line="97"/>
         <source>Translation for file is installed but incomplete</source>
         <translation>Eine Übersetzung für die Datei ist bereits in der Datenbank installiert aber unvollständig</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="99"/>
+        <location filename="src/core/mod_file/translation_status.py" line="100"/>
         <source>Translation for file is available in Database</source>
         <translation>Eine Übersetzung für die Datei ist in der Datenbank verfügbar</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="102"/>
+        <location filename="src/core/mod_file/translation_status.py" line="103"/>
         <source>Translation for file is available online</source>
         <translation>Eine Übersetzung für die Datei ist online verfügbar</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="105"/>
+        <location filename="src/core/mod_file/translation_status.py" line="106"/>
         <source>File has Strings and requires translation</source>
         <translation>Die Datei hat Strings und benötigt eine Übersetzung</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="109"/>
+        <location filename="src/core/mod_file/translation_status.py" line="110"/>
         <source>No Translation for file available online or in Database</source>
         <translation>Keine Übersetzung für die Datei online oder in der Datenbank verfügbar</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="118"/>
+        <location filename="src/core/mod_file/translation_status.py" line="123"/>
         <source>No stateless files</source>
         <translation>Zeige Dateien ohne Status</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="121"/>
+        <location filename="src/core/mod_file/translation_status.py" line="126"/>
         <source>Show files without strings</source>
         <translation>Zeige Dateien ohne Strings</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="124"/>
+        <location filename="src/core/mod_file/translation_status.py" line="129"/>
         <source>Show files that are already in target language</source>
         <translation>Zeige Dateien, die bereits in der Zielsprache sind</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="127"/>
+        <location filename="src/core/mod_file/translation_status.py" line="132"/>
         <source>Show files with an installed translation</source>
         <translation>Zeige Dateien mit installierten Übersetzungen</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="131"/>
+        <location filename="src/core/mod_file/translation_status.py" line="136"/>
         <source>Show files with an installed but incomplete translation</source>
         <translation>Zeige Dateien mit installierten, aber unvollständigen Übersetzungen</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="134"/>
+        <location filename="src/core/mod_file/translation_status.py" line="139"/>
         <source>Show files that can be translated with the database</source>
         <translation>Zeige Dateien, die mit der Datenbank übersetzt werden können</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="137"/>
+        <location filename="src/core/mod_file/translation_status.py" line="142"/>
         <source>Show files that have a translation available online</source>
         <translation>Zeige Dateien, für die online eine Übersetzung verfügbar ist</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="140"/>
+        <location filename="src/core/mod_file/translation_status.py" line="145"/>
         <source>Show files that require a translation</source>
         <translation>Zeige Dateien, die eine Übersetzung benötigen</translation>
     </message>
     <message>
-        <location filename="src/core/mod_file/translation_status.py" line="143"/>
+        <location filename="src/core/mod_file/translation_status.py" line="148"/>
         <source>Show files without an available translation</source>
         <translation>Zeige Dateien, für die keine Übersetzung verfügbar ist</translation>
     </message>
@@ -2466,52 +2507,52 @@ Antwort: {1}</translation>
 <context>
     <name>string</name>
     <message>
-        <location filename="src/core/database/string.py" line="104"/>
+        <location filename="src/core/database/string.py" line="105"/>
         <source>No status (no color)</source>
         <translation>Kein Status (ohne Farbe)</translation>
     </message>
     <message>
-        <location filename="src/core/database/string.py" line="107"/>
+        <location filename="src/core/database/string.py" line="108"/>
         <source>String does not require a translation</source>
         <translation>String benötigt keine Übersetzung</translation>
     </message>
     <message>
-        <location filename="src/core/database/string.py" line="110"/>
+        <location filename="src/core/database/string.py" line="111"/>
         <source>String is completely translated</source>
         <translation>String ist vollständig übersetzt</translation>
     </message>
     <message>
-        <location filename="src/core/database/string.py" line="113"/>
+        <location filename="src/core/database/string.py" line="114"/>
         <source>String is partially translated</source>
         <translation>String ist teilweise übersetzt</translation>
     </message>
     <message>
-        <location filename="src/core/database/string.py" line="116"/>
+        <location filename="src/core/database/string.py" line="117"/>
         <source>String requires a translation</source>
         <translation>String benötigt eine Übersetzung</translation>
     </message>
     <message>
-        <location filename="src/core/database/string.py" line="125"/>
+        <location filename="src/core/database/string.py" line="130"/>
         <source>Show stateless strings</source>
         <translation>Zeige Strings ohne Status</translation>
     </message>
     <message>
-        <location filename="src/core/database/string.py" line="128"/>
+        <location filename="src/core/database/string.py" line="133"/>
         <source>Show strings that do not require a translation</source>
         <translation>Zeige Strings, die keine Übersetzung benötigen</translation>
     </message>
     <message>
-        <location filename="src/core/database/string.py" line="131"/>
+        <location filename="src/core/database/string.py" line="136"/>
         <source>Show strings that are completely translated</source>
         <translation>Zeige Strings, die vollständig übersetzt sind</translation>
     </message>
     <message>
-        <location filename="src/core/database/string.py" line="134"/>
+        <location filename="src/core/database/string.py" line="139"/>
         <source>Show strings that are partially translated</source>
         <translation>Zeige Strings, die unvollständig übersetzt sind</translation>
     </message>
     <message>
-        <location filename="src/core/database/string.py" line="137"/>
+        <location filename="src/core/database/string.py" line="142"/>
         <source>Show strings that require a translation</source>
         <translation>Zeige Strings, die eine Übersetzung benötigen</translation>
     </message>

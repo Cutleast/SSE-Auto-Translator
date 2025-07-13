@@ -217,7 +217,11 @@ class TranslationsWidget(QTreeWidget):
             [
                 translation.name,
                 translation.version,
-                translation.source.name if translation.source else self.tr("Unknown"),
+                (
+                    translation.source.get_localized_name()
+                    if translation.source
+                    else self.tr("Unknown")
+                ),
                 (
                     fmt_timestamp(translation.timestamp)
                     if translation.timestamp is not None

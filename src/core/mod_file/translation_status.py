@@ -3,15 +3,15 @@ Copyright (c) Cutleast
 """
 
 from enum import IntEnum
-from typing import Optional
+from typing import Optional, override
 
 from PySide6.QtGui import QColor
 from PySide6.QtWidgets import QApplication
 
-from core.utilities.base_enum import BaseEnum
+from core.utilities.localized_enum import LocalizedEnum
 
 
-class TranslationStatus(IntEnum, BaseEnum):
+class TranslationStatus(IntEnum, LocalizedEnum):
     """
     Enum for different translation status of mod files.
     """
@@ -77,6 +77,7 @@ class TranslationStatus(IntEnum, BaseEnum):
 
         return COLORS[status]
 
+    @override
     def get_localized_name(self) -> str:
         LOC_NAMES: dict["TranslationStatus", str] = {
             TranslationStatus.NoneStatus: QApplication.translate(
@@ -110,6 +111,10 @@ class TranslationStatus(IntEnum, BaseEnum):
         }
 
         return LOC_NAMES[self]
+
+    @override
+    def get_localized_description(self) -> str:
+        return self.get_localized_name()
 
     def get_localized_filter_name(self) -> str:
         LOC_NAMES: dict["TranslationStatus", str] = {
