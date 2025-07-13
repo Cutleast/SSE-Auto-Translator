@@ -6,8 +6,9 @@ from __future__ import annotations
 
 import logging
 from abc import abstractmethod
+from enum import Enum, auto
 from pathlib import Path
-from typing import Any, TypeVar
+from typing import Any, TypeVar, get_type_hints
 
 import jstyleson as json
 from pydantic import BaseModel, ConfigDict
@@ -21,6 +22,12 @@ class BaseConfig(BaseModel):
     """
     Base class for app configurations.
     """
+
+    class PropertyMarker(Enum):
+        """Enum for custom property markers to be applied to pydantic fields."""
+
+        ExcludeFromLogging = auto()
+        """The field is excluded from logging."""
 
     model_config = ConfigDict(validate_assignment=True)
 
@@ -105,13 +112,48 @@ class BaseConfig(BaseModel):
 
         return logging.getLogger(cls.__name__)
 
+    @classmethod
+    def get_property_markers(cls, field_name: str) -> list[PropertyMarker]:
+        """
+        Returns the property markers for a field.
+
+        Args:
+            field_name (str): Name of the field.
+
+        Raises:
+            AttributeError: If the field doesn't exist.
+
+        Returns:
+            list[PropertyMarker]: List of property markers.
+        """
+
+        fields: dict[str, Any] = get_type_hints(cls, include_extras=True)
+
+        if field_name not in fields:
+            raise AttributeError(f"Field '{field_name}' does not exist.")
+
+        field = fields[field_name]
+        metadata: list[Any] = getattr(field, "__metadata__", [])
+
+        markers: list[BaseConfig.PropertyMarker] = [
+            item for item in metadata if isinstance(item, BaseConfig.PropertyMarker)
+        ]
+
+        return markers
+
     def print_settings_to_log(self) -> None:
         """
         Prints current settings to log.
         """
 
         self._get_logger().info("Current Configuration:")
-        keys: list[str] = list(self.__pydantic_fields__.keys())
+        keys: list[str] = list(
+            filter(
+                lambda f: BaseConfig.PropertyMarker.ExcludeFromLogging
+                not in self.get_property_markers(f),
+                self.__pydantic_fields__.keys(),
+            )
+        )
         indent: int = max(len(key) + 1 for key in keys)
         for key in keys:
             self._get_logger().info(f"{key.rjust(indent)} = {getattr(self, key)!r}")

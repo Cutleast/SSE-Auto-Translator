@@ -3,7 +3,7 @@ Copyright (c) Cutleast
 """
 
 from pathlib import Path
-from typing import Optional, override
+from typing import Annotated, Optional, override
 
 from core.mod_managers.mod_manager import ModManager
 from core.translation_provider.provider_preference import ProviderPreference
@@ -20,7 +20,7 @@ class UserConfig(BaseConfig):
     language: GameLanguage
     """Target language of the game."""
 
-    api_key: str
+    api_key: Annotated[str, BaseConfig.PropertyMarker.ExcludeFromLogging]
     """API key for Nexus Mods."""
 
     mod_manager: ModManager.Type
