@@ -3,6 +3,7 @@ Copyright (c) Cutleast
 """
 
 import qtawesome as qta
+from PySide6.QtCore import Signal
 from PySide6.QtGui import QAction, QCursor, QKeySequence
 
 from core.database.string import String
@@ -14,12 +15,31 @@ class EditorMenu(Menu):
     Context menu for editor tab.
     """
 
-    __parent: "EditorTab"
+    expand_all_clicked = Signal()
+    """Signal emitted when the user clicks on the expand all action."""
 
-    def __init__(self, parent: "EditorTab"):
-        super().__init__(parent=parent)
+    collapse_all_clicked = Signal()
+    """Signal emitted when the user clicks on the collapse all action."""
 
-        self.__parent = parent
+    edit_string_requested = Signal()
+    """Signal emitted when the user clicks on the edit string action."""
+
+    copy_string_requested = Signal()
+    """Signal emitted when the user clicks on the copy string action."""
+
+    reset_translation_requested = Signal()
+    """Signal emitted when the user clicks on the reset translation action."""
+
+    mark_as_requested = Signal(String.Status)
+    """
+    Signal emitted when the user clicks on a mark as action.
+
+    Args:
+        Status: The string status to set.
+    """
+
+    def __init__(self) -> None:
+        super().__init__()
 
         self.__init_separator_actions()
         self.__init_actions()
@@ -30,7 +50,7 @@ class EditorMenu(Menu):
             qta.icon("mdi6.arrow-expand-vertical", color=self.palette().text().color()),
             self.tr("Expand all"),
         )
-        expand_all_action.triggered.connect(self.__parent.expandAll)
+        expand_all_action.triggered.connect(self.expand_all_clicked.emit)
 
         collapse_all_action: QAction = self.addAction(
             qta.icon(
@@ -38,32 +58,28 @@ class EditorMenu(Menu):
             ),
             self.tr("Collapse all"),
         )
-        collapse_all_action.triggered.connect(self.__parent.collapseAll)
+        collapse_all_action.triggered.connect(self.collapse_all_clicked.emit)
 
         self.addSeparator()
 
     def __init_actions(self) -> None:
-        open_translator_action: QAction = self.addAction(
+        edit_string_action: QAction = self.addAction(
             qta.icon("mdi6.rename", color="#ffffff"), self.tr("Edit String...")
         )
-        open_translator_action.triggered.connect(
-            lambda _: self.__parent.open_translator_dialog()
-        )
+        edit_string_action.triggered.connect(self.edit_string_requested.emit)
 
         copy_action: QAction = self.addAction(
             qta.icon("mdi6.content-copy", color="#ffffff"), self.tr("Copy String")
         )
         copy_action.setIconVisibleInMenu(True)
-        copy_action.triggered.connect(lambda _: self.__parent.copy_selected())
+        copy_action.triggered.connect(self.copy_string_requested.emit)
 
-        reset_translation_action: QAction = self.addAction(
+        reset_string_action: QAction = self.addAction(
             qta.icon("ri.arrow-go-back-line", color="#ffffff"),
             self.tr("Reset selected String(s)"),
         )
-        reset_translation_action.setShortcut(QKeySequence("F4"))
-        reset_translation_action.triggered.connect(
-            lambda _: self.__parent.reset_translation()
-        )
+        reset_string_action.setShortcut(QKeySequence("F4"))
+        reset_string_action.triggered.connect(self.reset_translation_requested.emit)
 
         self.addSeparator()
 
@@ -89,14 +105,10 @@ class EditorMenu(Menu):
             if status in status_shortcuts:
                 mark_as_action.setShortcut(status_shortcuts[status])
             mark_as_action.triggered.connect(
-                lambda _, s=status: self.__parent.set_status(s)
+                lambda _, s=status: self.mark_as_requested.emit(s)
             )
 
         self.addSeparator()
 
     def open(self) -> None:
         self.exec(QCursor.pos())
-
-
-if __name__ == "__main__":
-    from .editor_tab import EditorTab

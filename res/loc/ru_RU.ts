@@ -469,32 +469,32 @@ If you don&apos;t have Nexus Mods Premium, make sure that SSE-AT is linked to Mo
 <context>
     <name>EditorMenu</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_menu.py" line="31"/>
+        <location filename="src/ui/translation_editor/editor/editor_menu.py" line="51"/>
         <source>Expand all</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_menu.py" line="39"/>
+        <location filename="src/ui/translation_editor/editor/editor_menu.py" line="59"/>
         <source>Collapse all</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_menu.py" line="48"/>
+        <location filename="src/ui/translation_editor/editor/editor_menu.py" line="68"/>
         <source>Edit String...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_menu.py" line="55"/>
+        <location filename="src/ui/translation_editor/editor/editor_menu.py" line="73"/>
         <source>Copy String</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_menu.py" line="61"/>
+        <location filename="src/ui/translation_editor/editor/editor_menu.py" line="79"/>
         <source>Reset selected String(s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_menu.py" line="87"/>
+        <location filename="src/ui/translation_editor/editor/editor_menu.py" line="103"/>
         <source>Mark as &quot;{0}&quot;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -525,49 +525,49 @@ If you don&apos;t have Nexus Mods Premium, make sure that SSE-AT is linked to Mo
 <context>
     <name>EditorTab</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="116"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="131"/>
         <source>Strings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="216"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="226"/>
         <source>Import pre-v1.1 Translation...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="388"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="398"/>
         <source>Search and Replace</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="442"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="452"/>
         <source>Translate with API</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="496"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="506"/>
         <source>Export Translation (DSD Format only)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="529"/>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="530"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="539"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="540"/>
         <source>Reset selected String(s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="215"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="225"/>
         <source>DSD File (*.json)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="371"/>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="507"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="381"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="517"/>
         <source>Success!</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="376"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="386"/>
         <source>Translated %n String with database.</source>
         <comment>Translated %n Strings with database.</comment>
         <translation type="unfinished">
@@ -577,34 +577,34 @@ If you don&apos;t have Nexus Mods Premium, make sure that SSE-AT is linked to Mo
         </translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="397"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="407"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="400"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="410"/>
         <source>Replace</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="402"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="412"/>
         <source>Case Sensitive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="412"/>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="465"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="422"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="475"/>
         <source>Apply</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="418"/>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="469"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="428"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="479"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="453"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="463"/>
         <source>Are you sure you want to translate %n String via Translator API?
 Depending on the Translator API this can raise unexpected costs.</source>
         <comment>Are you sure you want to translate %n Strings via Translator API?
@@ -616,22 +616,22 @@ Depending on the Translator API this can raise unexpected costs.</comment>
         </translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="473"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="483"/>
         <source>Don&apos;t show again</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="508"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="518"/>
         <source>Translation successfully exported.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="535"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="545"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="536"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="546"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -639,42 +639,42 @@ Depending on the Translator API this can raise unexpected costs.</comment>
 <context>
     <name>EditorToolbar</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="62"/>
+        <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="85"/>
         <source>Filter Options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="72"/>
+        <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="95"/>
         <source>Help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="80"/>
+        <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="103"/>
         <source>Import pre-v1.1 Translation...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="86"/>
+        <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="109"/>
         <source>Apply Database to untranslated Strings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="92"/>
+        <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="115"/>
         <source>Search and Replace</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="100"/>
+        <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="124"/>
         <source>Translate with API</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="109"/>
+        <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="136"/>
         <source>Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="114"/>
+        <location filename="src/ui/translation_editor/editor/editor_toolbar.py" line="141"/>
         <source>Export translation</source>
         <translation type="unfinished"></translation>
     </message>

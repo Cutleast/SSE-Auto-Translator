@@ -5,7 +5,7 @@ Copyright (c) Cutleast
 from typing import Any
 
 import qtawesome as qta
-from PySide6.QtCore import QSize
+from PySide6.QtCore import QSize, Signal
 from PySide6.QtGui import QAction
 from PySide6.QtWidgets import QCheckBox, QToolBar, QWidgetAction
 
@@ -18,20 +18,43 @@ class EditorToolbar(QToolBar):
     Toolbar for an editor tab.
     """
 
-    __parent: "EditorTab"
+    filter_changed = Signal(list)
+    """
+    Signal emitted when the user changes the checked filters.
+
+    Args:
+        list[Status]: List of checked filters
+    """
+
+    help_requested = Signal()
+    """Signal emitted when the user clicks on the help action."""
+
+    legacy_import_requested = Signal()
+    """Signal emitted when the user clicks on the import legacy action."""
+
+    apply_database_requested = Signal()
+    """Signal emitted when the user clicks on the apply database action."""
+
+    search_and_replace_requested = Signal()
+    """Signal emitted when the user clicks on the search and replace action."""
+
+    api_translation_requested = Signal()
+    """Signal emitted when the user clicks on the API translation action."""
+
+    save_requested = Signal()
+    """Signal emitted when the user clicks on the save action."""
+
+    export_requested = Signal()
+    """Signal emitted when the user clicks on the export action."""
 
     __filter_menu: Menu
     __filter_items: dict[String.Status, QCheckBox]
 
-    import_legacy_action: QAction
-    apply_database_action: QAction
-    search_and_replace_action: QAction
-    api_translation_action: QAction
+    __search_and_replace_action: QAction
+    __api_translation_action: QAction
 
-    def __init__(self, parent: "EditorTab"):
-        super().__init__(parent)
-
-        self.__parent = parent
+    def __init__(self) -> None:
+        super().__init__()
 
         self.setIconSize(QSize(32, 32))
         self.setFloatable(False)
@@ -70,36 +93,40 @@ class EditorToolbar(QToolBar):
         help_action: QAction = self.addAction(
             qta.icon("mdi6.help", color="#ffffff"), self.tr("Help")
         )
-        help_action.triggered.connect(self.__parent.show_help)
+        help_action.triggered.connect(self.help_requested.emit)
 
         self.addSeparator()
 
     def __init_actions(self) -> None:
-        self.import_legacy_action = self.addAction(
+        import_legacy_action: QAction = self.addAction(
             qta.icon("ri.inbox-archive-fill", color="#ffffff"),
             self.tr("Import pre-v1.1 Translation..."),
         )
-        self.import_legacy_action.triggered.connect(self.__parent.import_legacy)
+        import_legacy_action.triggered.connect(self.legacy_import_requested.emit)
 
-        self.apply_database_action = self.addAction(
+        apply_database_action: QAction = self.addAction(
             qta.icon("mdi6.database-refresh-outline", color="#ffffff"),
             self.tr("Apply Database to untranslated Strings"),
         )
-        self.apply_database_action.triggered.connect(self.__parent.apply_database)
+        apply_database_action.triggered.connect(self.apply_database_requested.emit)
 
-        self.search_and_replace_action = self.addAction(
-            qta.icon("msc.replace", color="#ffffff"), self.tr("Search and Replace")
+        self.__search_and_replace_action = self.addAction(
+            qta.icon("msc.replace", color="#ffffff", color_disabled="#666666"),
+            self.tr("Search and Replace"),
         )
-        self.search_and_replace_action.triggered.connect(
-            self.__parent.search_and_replace
+        self.__search_and_replace_action.triggered.connect(
+            self.search_and_replace_requested.emit
         )
-        self.search_and_replace_action.setDisabled(True)
+        self.__search_and_replace_action.setDisabled(True)
 
-        self.api_translation_action = self.addAction(
-            qta.icon("ri.translate", color="#ffffff"), self.tr("Translate with API")
+        self.__api_translation_action = self.addAction(
+            qta.icon("ri.translate", color="#ffffff", color_disabled="#666666"),
+            self.tr("Translate with API"),
         )
-        self.api_translation_action.triggered.connect(self.__parent.translate_with_api)
-        self.api_translation_action.setDisabled(True)
+        self.__api_translation_action.triggered.connect(
+            self.api_translation_requested.emit
+        )
+        self.__api_translation_action.setDisabled(True)
 
         self.addSeparator()
 
@@ -107,15 +134,15 @@ class EditorToolbar(QToolBar):
         save_action = self.addAction(
             qta.icon("fa5s.save", color="#ffffff"), self.tr("Save")
         )
-        save_action.triggered.connect(self.__parent.save)
+        save_action.triggered.connect(self.save_requested.emit)
 
         export_action = self.addAction(
             qta.icon("fa5s.share", color="#ffffff"), self.tr("Export translation")
         )
-        export_action.triggered.connect(self.__parent.export)
+        export_action.triggered.connect(self.export_requested.emit)
 
     def __on_filter_change(self, *args: Any) -> None:
-        self.__parent.set_state_filter(
+        self.filter_changed.emit(
             [
                 status
                 for status, filter_box in self.__filter_items.items()
@@ -123,6 +150,13 @@ class EditorToolbar(QToolBar):
             ]
         )
 
+    def set_edit_actions_enabled(self, enabled: bool) -> None:
+        """
+        Set the enabled state of the edit actions api translation and search and replace.
 
-if __name__ == "__main__":
-    from .editor_tab import EditorTab
+        Args:
+            enabled (bool): Whether the actions should be enabled.
+        """
+
+        self.__search_and_replace_action.setEnabled(enabled)
+        self.__api_translation_action.setEnabled(enabled)

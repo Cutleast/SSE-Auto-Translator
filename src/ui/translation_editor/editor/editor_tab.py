@@ -7,7 +7,6 @@ import re
 from pathlib import Path
 from typing import Optional, override
 
-import pyperclip
 from PySide6.QtCore import Qt, Signal
 from PySide6.QtGui import QColor, QKeySequence, QShortcut
 from PySide6.QtWidgets import (
@@ -94,6 +93,22 @@ class EditorTab(QWidget):
         self.__init_ui()
         self.__init_shortcuts()
 
+        self.__tool_bar.filter_changed.connect(self.set_state_filter)
+        self.__tool_bar.help_requested.connect(self.__show_help)
+        self.__tool_bar.legacy_import_requested.connect(self.__import_legacy)
+        self.__tool_bar.apply_database_requested.connect(self.__apply_database)
+        self.__tool_bar.search_and_replace_requested.connect(self.__search_and_replace)
+        self.__tool_bar.api_translation_requested.connect(self.__translate_with_api)
+        self.__tool_bar.save_requested.connect(self.__save)
+        self.__tool_bar.export_requested.connect(self.__export)
+
+        self.__menu.expand_all_clicked.connect(self.expandAll)
+        self.__menu.collapse_all_clicked.connect(self.collapseAll)
+        self.__menu.edit_string_requested.connect(self.__edit_string)
+        self.__menu.copy_string_requested.connect(self.__copy_selected)
+        self.__menu.reset_translation_requested.connect(self.__reset_selected)
+        self.__menu.mark_as_requested.connect(self.__set_status)
+
     def __init_ui(self) -> None:
         self.__vlayout = QVBoxLayout()
         self.setLayout(self.__vlayout)
@@ -124,7 +139,7 @@ class EditorTab(QWidget):
         hlayout = QHBoxLayout()
         self.__vlayout.addLayout(hlayout)
 
-        self.__tool_bar = EditorToolbar(self)
+        self.__tool_bar = EditorToolbar()
         hlayout.addWidget(self.__tool_bar)
 
         self.__search_bar = SearchBar()
@@ -144,18 +159,13 @@ class EditorTab(QWidget):
     def __init_strings_widget(self) -> None:
         self.__strings_widget = StringsWidget(self.__editor.strings)
         self.__strings_widget.itemSelectionChanged.connect(
-            lambda: (
-                self.__tool_bar.search_and_replace_action.setEnabled(
-                    bool(self.__strings_widget.selectedItems())
-                ),
-                self.__tool_bar.api_translation_action.setEnabled(
-                    bool(self.__strings_widget.selectedItems())
-                ),
+            lambda: self.__tool_bar.set_edit_actions_enabled(
+                len(self.__strings_widget.get_selected_strings()) > 0
             ),
         )
         self.__vlayout.addWidget(self.__strings_widget)
         self.__strings_widget.itemActivated.connect(
-            lambda item, col: self.open_translator_dialog()
+            lambda item, col: self.__edit_string()
         )
         self.__strings_num_label.setDigitCount(
             max((len(str(self.__strings_widget.get_visible_string_count())), 4))
@@ -163,7 +173,7 @@ class EditorTab(QWidget):
 
     def __init_shortcuts(self) -> None:
         save_shortcut = QShortcut(QKeySequence("Ctrl+S"), self)
-        save_shortcut.activated.connect(self.save)
+        save_shortcut.activated.connect(self.__save)
 
         close_shortcut = QShortcut(QKeySequence("Ctrl+W"), self)
         close_shortcut.activated.connect(
@@ -176,21 +186,21 @@ class EditorTab(QWidget):
         reset_shortcut = QShortcut(QKeySequence("F4"), self)
 
         complete_shortcut.activated.connect(
-            lambda: self.set_status(String.Status.TranslationComplete)
+            lambda: self.__set_status(String.Status.TranslationComplete)
         )
 
         incomplete_shortcut.activated.connect(
-            lambda: self.set_status(String.Status.TranslationIncomplete)
+            lambda: self.__set_status(String.Status.TranslationIncomplete)
         )
 
         no_required_shortcut.activated.connect(
-            lambda: self.set_status(String.Status.NoTranslationRequired)
+            lambda: self.__set_status(String.Status.NoTranslationRequired)
         )
 
-        reset_shortcut.activated.connect(self.reset_translation)
+        reset_shortcut.activated.connect(self.__reset_selected)
 
     def __init_context_menu(self) -> None:
-        self.__menu = EditorMenu(self)
+        self.__menu = EditorMenu()
 
         self.__strings_widget.setContextMenuPolicy(
             Qt.ContextMenuPolicy.CustomContextMenu
@@ -205,7 +215,7 @@ class EditorTab(QWidget):
 
         return self.__editor.changes_pending
 
-    def import_legacy(self) -> None:
+    def __import_legacy(self) -> None:
         """
         Opens file dialog to choose a DSD JSON of pre-v1.1 format.
         """
@@ -227,7 +237,7 @@ class EditorTab(QWidget):
 
             self.__editor.import_legacy_dsd_translation(filepath)
 
-    def open_translator_dialog(self, string: Optional[String] = None) -> None:
+    def __edit_string(self, string: Optional[String] = None) -> None:
         """
         Opens a string in a translator dialog.
 
@@ -350,7 +360,7 @@ class EditorTab(QWidget):
         self.__strings_num_label.setToolTip(num_tooltip)
         self.__bar_chart.setToolTip(num_tooltip)
 
-    def save(self) -> None:
+    def __save(self) -> None:
         """
         Saves translation.
         """
@@ -358,7 +368,7 @@ class EditorTab(QWidget):
         self.__editor.save()
         self.update()
 
-    def apply_database(self) -> None:
+    def __apply_database(self) -> None:
         """
         Applies database to untranslated strings.
         """
@@ -378,7 +388,7 @@ class EditorTab(QWidget):
         )
         messagebox.exec()
 
-    def search_and_replace(self) -> None:
+    def __search_and_replace(self) -> None:
         """
         Opens dialog for advanced search and replace operations.
         """
@@ -432,7 +442,7 @@ class EditorTab(QWidget):
                 pattern,
             )
 
-    def translate_with_api(self) -> None:
+    def __translate_with_api(self) -> None:
         """
         Opens dialog to configure batch translation via user configured API.
         """
@@ -487,7 +497,7 @@ class EditorTab(QWidget):
             ),
         )
 
-    def export(self) -> None:
+    def __export(self) -> None:
         """
         Exports translation in DSD format to a user selected path.
         """
@@ -508,18 +518,18 @@ class EditorTab(QWidget):
             messagebox.setText(self.tr("Translation successfully exported."))
             messagebox.exec()
 
-    def show_help(self) -> None:
+    def __show_help(self) -> None:
         """
         Displays help popup.
         """
 
         EditorHelpDialog(QApplication.activeModalWidget()).exec()
 
-    def set_status(self, status: String.Status) -> None:
+    def __set_status(self, status: String.Status) -> None:
         selected_items: list[String] = self.__strings_widget.get_selected_strings()
         self.__editor.set_status(selected_items, status)
 
-    def reset_translation(self) -> None:
+    def __reset_selected(self) -> None:
         selected_items: list[String] = self.__strings_widget.get_selected_strings()
 
         if not selected_items:
@@ -539,7 +549,7 @@ class EditorTab(QWidget):
         if choice == QMessageBox.StandardButton.Yes:
             self.__editor.reset_strings(selected_items)
 
-    def copy_selected(self) -> None:
+    def __copy_selected(self) -> None:
         """
         Copies current selected strings to clipboard.
         """
@@ -554,7 +564,7 @@ class EditorTab(QWidget):
             clipboard_text = clipboard_text.removesuffix("\t")
             clipboard_text += "\n"
 
-        pyperclip.copy(clipboard_text.strip())
+        QApplication.clipboard().setText(clipboard_text.strip())
 
     def set_name_filter(self, name_filter: tuple[str, bool]) -> None:
         """
