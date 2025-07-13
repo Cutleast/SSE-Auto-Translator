@@ -7,7 +7,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 from typing import Optional, override
 
 import qtawesome as qta
-from PySide6.QtCore import Qt
+from PySide6.QtCore import Qt, Signal
 from PySide6.QtWidgets import (
     QHeaderView,
     QMessageBox,
@@ -18,7 +18,6 @@ from PySide6.QtWidgets import (
     QTreeWidgetItem,
 )
 
-from app_context import AppContext
 from core.config.app_config import AppConfig
 from core.config.translator_config import TranslatorConfig
 from core.config.user_config import UserConfig
@@ -32,6 +31,14 @@ from .editor.editor_tab import EditorTab
 class EditorPage(QSplitter):
     """
     Page for translation editor.
+    """
+
+    tab_count_updated = Signal(int)
+    """
+    Signal emitted everytime one or more tabs are opened or closed.
+
+    Args:
+        int: New number of open tabs.
     """
 
     database: TranslationDatabase
@@ -66,8 +73,6 @@ class EditorPage(QSplitter):
 
         self.setOrientation(Qt.Orientation.Horizontal)
         self.__init_ui()
-
-        self.database.edit_signal.connect(self.open_translation)
 
     def __init_ui(self) -> None:
         self.__tab_list_widget = QTreeWidget()
@@ -183,7 +188,7 @@ class EditorPage(QSplitter):
         if self.tabs:
             self.__set_tab(self.tabs[-1])
 
-        AppContext.get_app().main_window.update()
+        self.tab_count_updated.emit(len(self.tabs))
         self.update()
 
     def open_translation(self, translation: Translation) -> None:
@@ -239,5 +244,5 @@ class EditorPage(QSplitter):
                 ]
             )
 
-        AppContext.get_app().main_window.update()
+        self.tab_count_updated.emit(len(self.tabs))
         self.update()

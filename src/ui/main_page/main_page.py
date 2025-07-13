@@ -7,6 +7,7 @@ import os
 from pathlib import Path
 from typing import Optional, TypeVar
 
+from PySide6.QtCore import Signal
 from PySide6.QtGui import QColor, QIcon
 from PySide6.QtWidgets import (
     QApplication,
@@ -25,6 +26,7 @@ from core.config.user_config import UserConfig
 from core.database.database import TranslationDatabase
 from core.database.search_filter import SearchFilter
 from core.database.string import String
+from core.database.translation import Translation
 from core.downloader.download_manager import DownloadManager
 from core.downloader.translation_download import TranslationDownload
 from core.masterlist.masterlist import Masterlist
@@ -71,6 +73,14 @@ class MainPageWidget(QWidget):
 
     NEXUS_MODS_PROFILE_URL: str = "https://next.nexusmods.com/profile/Cutleast"
     """URL to Nexus Mods profile."""
+
+    edit_translation_requested = Signal(Translation)
+    """
+    Signal emitted when the user requests to edit a translation.
+
+    Args:
+        Translation: The translation to edit.
+    """
 
     log: logging.Logger = logging.getLogger("Main")
 
@@ -156,6 +166,16 @@ class MainPageWidget(QWidget):
             lambda: self.__run_downloads(only_selected=True)
         )
         self.__modinstance_widget.deep_scan_requested.connect(self.__run_deep_scan)
+        self.__modinstance_widget.highlight_translation_requested.connect(
+            self.__database_widget.highlight_translation
+        )
+        self.__modinstance_widget.edit_translation_requested.connect(
+            self.edit_translation_requested.emit
+        )
+
+        self.__database_widget.edit_translation_requested.connect(
+            self.edit_translation_requested.emit
+        )
 
         self.state_service.update_signal.connect(self.__update)
         self.__update()

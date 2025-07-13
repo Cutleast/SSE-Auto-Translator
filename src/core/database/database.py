@@ -35,13 +35,6 @@ class TranslationDatabase(QObject):
     Class for translation database manager.
     """
 
-    highlight_signal = Signal(Translation)
-    """
-    This signal gets emitted when a translation is to be highlighted.
-
-    TODO: Remove this signal from this class
-    """
-
     update_signal = Signal()
     """
     This signal gets emitted everytime, a translation is added, removed or renamed.
@@ -53,13 +46,6 @@ class TranslationDatabase(QObject):
 
     Args:
         Translation: The added translation.
-    """
-
-    edit_signal = Signal(Translation)
-    """
-    This signal gets emitted when a translation is to be edited.
-
-    TODO: Remove this signal from this class
     """
 
     remove_signal = Signal(Translation)

@@ -49,6 +49,14 @@ class TranslationsWidget(QTreeWidget):
     This signal is emitted when one or more files are dropped on the widget.
     """
 
+    edit_translation_requested = Signal(Translation)
+    """
+    Signal emitted when the user requests to edit a translation.
+
+    Args:
+        Translation: Translation to edit.
+    """
+
     database: TranslationDatabase
     provider: Provider
     mod_instance: ModInstance
@@ -90,7 +98,17 @@ class TranslationsWidget(QTreeWidget):
 
         self.__init_ui()
 
-        self.database.highlight_signal.connect(self.__highlight_translation)
+        self.__menu.expand_all_clicked.connect(self.expandAll)
+        self.__menu.collapse_all_clicked.connect(self.collapseAll)
+        self.__menu.ignore_updates_requested.connect(self.__ignore_updates)
+        self.__menu.show_strings_requested.connect(self.__show_strings)
+        self.__menu.edit_translation_requested.connect(self.__edit_translation)
+        self.__menu.rename_translation_requested.connect(self.__rename_translation)
+        self.__menu.export_translation_requested.connect(self.__export_translation)
+        self.__menu.delete_translation_requested.connect(self.__delete_translation)
+        self.__menu.open_modpage_requested.connect(self.__open_modpage)
+        self.__menu.open_in_explorer_requested.connect(self.__open_in_explorer)
+
         self.database.update_signal.connect(self.__load_translations)
 
         self.__load_translations()
@@ -119,14 +137,25 @@ class TranslationsWidget(QTreeWidget):
         self.header().setSectionResizeMode(0, QHeaderView.ResizeMode.Stretch)
 
     def __init_context_menu(self) -> None:
-        self.__menu = TranslationsMenu(self)
+        self.__menu = TranslationsMenu()
         self.setContextMenuPolicy(Qt.ContextMenuPolicy.CustomContextMenu)
-        self.customContextMenuRequested.connect(self.__menu.open)
+        self.customContextMenuRequested.connect(
+            lambda: self.__menu.open(self.get_current_item())
+        )
 
-    def __highlight_translation(self, translation: Translation) -> None:
+    def highlight_translation(self, translation: Translation) -> None:
+        """
+        Highlights the specified translation by selecting it.
+        Does nothing if the translation is not in the list.
+
+        Args:
+            translation (Translation): Translation to highlight.
+        """
+
         if translation not in self.__translation_items:
             self.log.warning(
-                f"Failed to highlight translation {translation.name!r}: Translation not in list."
+                f"Failed to highlight translation '{translation.name}': Translation not "
+                "in list."
             )
             return
 
@@ -234,7 +263,7 @@ class TranslationsWidget(QTreeWidget):
         current_item: Optional[Translation | str] = self.get_current_item()
 
         if current_item is not None and self.app_config.show_strings_on_double_click:
-            self.show_strings()
+            self.__show_strings()
         else:
             item.setExpanded(not item.isExpanded())
 
@@ -335,7 +364,7 @@ class TranslationsWidget(QTreeWidget):
 
         return path.is_file() and path.suffix.lower() in SUPPORTED_EXTS
 
-    def ignore_update(self) -> None:
+    def __ignore_updates(self) -> None:
         selected_translations: list[Translation] = self.get_selected_items()[0]
 
         for translation in selected_translations:
@@ -343,7 +372,7 @@ class TranslationsWidget(QTreeWidget):
 
         self.__update()
 
-    def show_strings(self) -> None:
+    def __show_strings(self) -> None:
         current_item: Optional[Translation | str] = self.get_current_item()
 
         if isinstance(current_item, Translation) and current_item.strings:
@@ -352,13 +381,13 @@ class TranslationsWidget(QTreeWidget):
             )
             dialog.show()
 
-    def edit_translation(self) -> None:
+    def __edit_translation(self) -> None:
         current_item: Optional[Translation | str] = self.get_current_item()
 
         if isinstance(current_item, Translation):
-            self.database.edit_signal.emit(current_item)
+            self.edit_translation_requested.emit(current_item)
 
-    def rename_translation(self) -> None:
+    def __rename_translation(self) -> None:
         current_item: Optional[Translation | str] = self.get_current_item()
 
         if isinstance(current_item, Translation):
@@ -378,7 +407,7 @@ class TranslationsWidget(QTreeWidget):
                 new_name = dialog.textValue()
                 self.database.rename_translation(current_item, new_name)
 
-    def export_translation(self) -> None:
+    def __export_translation(self) -> None:
         """
         Opens the translation export dialog and exports the current translation.
         """
@@ -423,7 +452,7 @@ class TranslationsWidget(QTreeWidget):
             QMessageBox.StandardButton.Ok,
         )
 
-    def delete_translation(self) -> None:
+    def __delete_translation(self) -> None:
         selected_translations: list[Translation] = self.get_selected_items()[0]
 
         if len(selected_translations) > 0:
@@ -459,7 +488,7 @@ class TranslationsWidget(QTreeWidget):
 
             self.database.save_database()
 
-    def open_modpage(self) -> None:
+    def __open_modpage(self) -> None:
         current_item: Optional[Translation | str] = self.get_current_item()
 
         if isinstance(current_item, Translation) and current_item.source:
@@ -471,7 +500,7 @@ class TranslationsWidget(QTreeWidget):
             except ModNotFoundError:
                 pass
 
-    def open_in_explorer(self) -> None:
+    def __open_in_explorer(self) -> None:
         current_item: Optional[Translation | str] = self.get_current_item()
 
         if isinstance(current_item, Translation) and current_item.path.is_dir():

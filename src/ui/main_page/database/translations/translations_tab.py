@@ -6,6 +6,7 @@ import logging
 from pathlib import Path
 from typing import Optional
 
+from PySide6.QtCore import Signal
 from PySide6.QtWidgets import (
     QApplication,
     QDialog,
@@ -49,6 +50,14 @@ class TranslationsTab(QWidget):
     Tab for Translations Database.
     """
 
+    edit_translation_requested = Signal(Translation)
+    """
+    Signal emitted when the user requests to edit a translation.
+
+    Args:
+        Translation: Translation to edit.
+    """
+
     log: logging.Logger = logging.getLogger("TranslationsTab")
 
     database: TranslationDatabase
@@ -86,6 +95,18 @@ class TranslationsTab(QWidget):
 
         self.__init_ui()
 
+        self.__toolbar.show_vanilla_strings_requested.connect(
+            self.__show_vanilla_strings
+        )
+        self.__toolbar.search_database_requested.connect(self.__search_database)
+        self.__toolbar.local_import_requested.connect(self.__import_local_translation)
+        self.__toolbar.update_check_requested.connect(self.__check_for_updates)
+        self.__toolbar.download_updates_requested.connect(self.__download_updates)
+
+        self.__translations_widget.edit_translation_requested.connect(
+            self.edit_translation_requested.emit
+        )
+
         self.database.update_signal.connect(self.__update)
         self.__update()
 
@@ -100,7 +121,7 @@ class TranslationsTab(QWidget):
         hlayout = QHBoxLayout()
         self.__vlayout.addLayout(hlayout)
 
-        self.__toolbar = TranslationsToolbar(self)
+        self.__toolbar = TranslationsToolbar()
         hlayout.addWidget(self.__toolbar)
 
         hlayout.addStretch()
@@ -119,7 +140,7 @@ class TranslationsTab(QWidget):
         )
         self.__vlayout.addWidget(self.__translations_widget)
 
-    def show_vanilla_strings(self) -> None:
+    def __show_vanilla_strings(self) -> None:
         """
         Displays the vanilla strings in a StringListDialog.
         """
@@ -130,7 +151,7 @@ class TranslationsTab(QWidget):
             show_translation=True,
         ).show()
 
-    def search_database(self) -> None:
+    def __search_database(self) -> None:
         """
         Shows a string search dialog to search the database.
         """
@@ -162,7 +183,7 @@ class TranslationsTab(QWidget):
                     yesno=False,
                 ).exec()
 
-    def import_local_translation(self, files: Optional[list[Path]] = None) -> None:
+    def __import_local_translation(self, files: Optional[list[Path]] = None) -> None:
         """
         Imports a translation from local disk.
         Shows a file dialog if no files are specified.
@@ -231,7 +252,7 @@ class TranslationsTab(QWidget):
                         translation.save_strings()
                         self.database.add_translation(translation)
 
-    def check_for_updates(self) -> None:
+    def __check_for_updates(self) -> None:
         """
         Checks for updates for all installed translations and updates their status.
         """
@@ -259,9 +280,9 @@ class TranslationsTab(QWidget):
         )
         messagebox.exec()
 
-        self.__toolbar.update_action.setEnabled(available_updates_count > 0)
+        self.__toolbar.set_download_updates_enabled(available_updates_count > 0)
 
-    def download_updates(self) -> None:
+    def __download_updates(self) -> None:
         translations: dict[Translation, Mod] = {}
         for translation in filter(
             lambda t: t.status == Translation.Status.UpdateAvailable,
@@ -321,3 +342,14 @@ class TranslationsTab(QWidget):
         """
 
         self.__translations_widget.set_name_filter(name_filter)
+
+    def highlight_translation(self, translation: Translation) -> None:
+        """
+        Highlights the specified translation by selecting it in the translations tree
+        widget.
+
+        Args:
+            translation (Translation): Translation to highlight.
+        """
+
+        self.__translations_widget.highlight_translation(translation)

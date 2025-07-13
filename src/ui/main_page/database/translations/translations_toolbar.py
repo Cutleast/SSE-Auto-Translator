@@ -3,7 +3,7 @@ Copyright (c) Cutleast
 """
 
 import qtawesome as qta
-from PySide6.QtCore import QSize
+from PySide6.QtCore import QSize, Signal
 from PySide6.QtGui import QAction
 from PySide6.QtWidgets import QToolBar
 
@@ -13,14 +13,25 @@ class TranslationsToolbar(QToolBar):
     Toolbar for translations tab.
     """
 
-    __parent: "TranslationsTab"
+    show_vanilla_strings_requested = Signal()
+    """Signal emitted when the user clicks on the show vanilla strings action."""
 
-    update_action: QAction
+    search_database_requested = Signal()
+    """Signal emitted when the user clicks on the search database action."""
 
-    def __init__(self, parent: "TranslationsTab"):
-        super().__init__(parent)
+    local_import_requested = Signal()
+    """Signal emitted when the user clicks on the local import action."""
 
-        self.__parent = parent
+    update_check_requested = Signal()
+    """Signal emitted when the user clicks on the update check action."""
+
+    download_updates_requested = Signal()
+    """Signal emitted when the user clicks on the download updates action."""
+
+    __update_action: QAction
+
+    def __init__(self) -> None:
+        super().__init__()
 
         self.setIconSize(QSize(32, 32))
         self.setFloatable(False)
@@ -33,16 +44,14 @@ class TranslationsToolbar(QToolBar):
             self.tr("Show base game (+ AE CC content) strings"),
         )
         show_vanilla_strings_action.triggered.connect(
-            lambda _: self.__parent.show_vanilla_strings()
+            self.show_vanilla_strings_requested.emit
         )
 
         search_database_action: QAction = self.addAction(
             qta.icon("fa.search", color="#ffffff", scale_factor=0.85),
             self.tr("Search database"),
         )
-        search_database_action.triggered.connect(
-            lambda _: self.__parent.search_database()
-        )
+        search_database_action.triggered.connect(self.search_database_requested.emit)
 
         self.addSeparator()
 
@@ -50,25 +59,20 @@ class TranslationsToolbar(QToolBar):
             qta.icon("mdi6.import", color="#ffffff"),
             self.tr("Import translation from local disk"),
         )
-        local_import_action.triggered.connect(
-            lambda _: self.__parent.import_local_translation()
-        )
+        local_import_action.triggered.connect(self.local_import_requested.emit)
 
         update_check_action: QAction = self.addAction(
             qta.icon("mdi6.cloud-refresh", color="#ffffff"),
             self.tr("Check translations for available updates"),
         )
-        update_check_action.triggered.connect(
-            lambda _: self.__parent.check_for_updates()
-        )
+        update_check_action.triggered.connect(self.update_check_requested.emit)
 
-        self.update_action = self.addAction(
-            qta.icon("mdi6.cloud-download", color="#ffffff"),
+        self.__update_action = self.addAction(
+            qta.icon("mdi6.cloud-download", color="#ffffff", color_disabled="#666666"),
             self.tr("Download and install available translation updates"),
         )
-        self.update_action.setDisabled(True)
-        self.update_action.triggered.connect(lambda _: self.__parent.download_updates())
+        self.__update_action.setDisabled(True)
+        self.__update_action.triggered.connect(self.download_updates_requested.emit)
 
-
-if __name__ == "__main__":
-    from .translations_tab import TranslationsTab
+    def set_download_updates_enabled(self, enabled: bool) -> None:
+        self.__update_action.setEnabled(enabled)

@@ -68,6 +68,23 @@ class ModInstanceWidget(QTreeWidget):
     deep_scan_requested = Signal()
     """Signal emitted when the user requests a deep scan via the context menu."""
 
+    highlight_translation_requested = Signal(Translation)
+    """
+    Signal emitted when the user requests to highlight a translation via the context
+    menu.
+
+    Args:
+        Translation: Translation to highlight in the "Translations" panel.
+    """
+
+    edit_translation_requested = Signal(Translation)
+    """
+    Signal emitted when the user requests to edit a translation via the context menu.
+
+    Args:
+        Translation: Translation to open with the editor.
+    """
+
     cache: Cache
     database: TranslationDatabase
     app_config: AppConfig
@@ -160,7 +177,6 @@ class ModInstanceWidget(QTreeWidget):
         self.__menu.open_modpage_requested.connect(self.__open_modpage)
         self.__menu.open_in_explorer_requested.connect(self.__open_in_explorer)
 
-        self.database.update_signal.connect(self.update)
         self.state_service.update_signal.connect(self.__update)
         AppContext.get_app().exit_chain.append(self.__save_modfile_states)
 
@@ -504,7 +520,7 @@ class ModInstanceWidget(QTreeWidget):
         else:
             translation = self.database.get_translation_by_mod(current_item)
 
-        self.database.highlight_signal.emit(translation)
+        self.highlight_translation_requested.emit(translation)
 
     def __create_translation(self) -> None:
         current_item: Optional[Mod | ModFile] = self.__get_current_item()
@@ -526,8 +542,8 @@ class ModInstanceWidget(QTreeWidget):
 
                 current_item.status = TranslationStatus.TranslationIncomplete
 
-                self.database.highlight_signal.emit(translation)
-                self.database.edit_signal.emit(translation)
+                self.highlight_translation_requested.emit(translation)
+                self.edit_translation_requested.emit(translation)
 
         # TODO: Implement this for entire mods
 
@@ -588,7 +604,7 @@ class ModInstanceWidget(QTreeWidget):
             translation = self.database.get_translation_by_mod(current_item)
 
         if translation is not None:
-            self.database.edit_signal.emit(translation)
+            self.edit_translation_requested.emit(translation)
 
     def __open_modfile(self) -> None:
         current_item: Optional[Mod | ModFile] = self.__get_current_item()

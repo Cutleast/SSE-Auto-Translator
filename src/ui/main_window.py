@@ -109,6 +109,13 @@ class MainWindow(QMainWindow):
         self.__init_ui()
         self.__init_shortcuts()
 
+        self.translation_editor.tab_count_updated.connect(
+            self.__on_editor_tab_count_change
+        )
+        self.mainpage_widget.edit_translation_requested.connect(
+            self.translation_editor.open_translation
+        )
+
     def __init_ui(self) -> None:
         self.__init_menu_bar()
         self.__init_tab_widget()
@@ -169,22 +176,6 @@ class MainWindow(QMainWindow):
     def __init_status_bar(self) -> None:
         self.__status_bar = StatusBar(self.logger, self.provider)
         self.setStatusBar(self.__status_bar)
-
-    @override
-    def update(self) -> None:  # type: ignore
-        """
-        Updates the displayed tabs for main page and translation editor.
-        """
-
-        editor_enabled_before: bool = self.tab_widget.isTabEnabled(1)
-
-        self.tab_widget.setTabEnabled(1, len(self.translation_editor.tabs) > 0)
-
-        if self.tab_widget.isTabEnabled(1) != editor_enabled_before:
-            if self.tab_widget.isTabEnabled(1):
-                self.tab_widget.setCurrentIndex(1)
-            else:
-                self.tab_widget.setCurrentIndex(0)
 
     def refresh(self) -> None:
         self.refresh_signal.emit()
@@ -249,3 +240,11 @@ class MainWindow(QMainWindow):
 
     def __show_about_qt(self) -> None:
         QMessageBox.aboutQt(self, self.tr("About Qt"))
+
+    def __on_editor_tab_count_change(self, new_tab_count: int) -> None:
+        if new_tab_count > 0:
+            self.tab_widget.setCurrentWidget(self.translation_editor)
+        else:
+            self.tab_widget.setCurrentWidget(self.mainpage_widget)
+
+        self.tab_widget.setTabEnabled(1, new_tab_count > 0)
