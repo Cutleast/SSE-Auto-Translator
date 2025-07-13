@@ -52,6 +52,7 @@
 			"*.dic"
 		],
 		"todo-tree.highlights.enabled": false,
+		"autoDocstring.startOnNewLine": true
 	},
 	"launch": {
 		"version": "0.2.0",
