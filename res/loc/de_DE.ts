@@ -403,47 +403,47 @@ Wenn Sie nicht über Nexus Mods Premium verfügen, stellen Sie sicher, dass SSE-
 <context>
     <name>DownloadsTab</name>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="92"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="90"/>
         <source>Downloads:</source>
         <translation>Downloads:</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="107"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="105"/>
         <source>Name</source>
         <translation>Name</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="107"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="105"/>
         <source>Size</source>
         <translation>Größe</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="108"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="106"/>
         <source>Progress</source>
         <translation>Fortschritt</translation>
-    </message>
-    <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="158"/>
-        <source>Resume</source>
-        <translation>Fortsetzen</translation>
-    </message>
-    <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="164"/>
-        <source>Pause</source>
-        <translation>Anhalten</translation>
     </message>
 </context>
 <context>
     <name>DownloadsToolbar</name>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_toolbar.py" line="34"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_toolbar.py" line="41"/>
         <source>Handle Nexus Mods Downloads</source>
         <translation>Mit Nexus Mods Downloads verknüpfen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_toolbar.py" line="34"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_toolbar.py" line="41"/>
         <source>[Experimental]</source>
         <translation>[Experimentell]</translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/database/downloads/downloads_toolbar.py" line="80"/>
+        <source>Resume</source>
+        <translation type="unfinished">Fortsetzen</translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/database/downloads/downloads_toolbar.py" line="85"/>
+        <source>Pause</source>
+        <translation type="unfinished">Anhalten</translation>
     </message>
 </context>
 <context>

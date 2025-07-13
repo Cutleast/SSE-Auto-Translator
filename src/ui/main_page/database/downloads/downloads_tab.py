@@ -4,9 +4,8 @@ Copyright (c) Cutleast
 
 from typing import override
 
-import qtawesome as qta
-from PySide6.QtCore import Qt
-from PySide6.QtGui import QColor, QShowEvent
+from PySide6.QtCore import Qt, QTimerEvent
+from PySide6.QtGui import QShowEvent
 from PySide6.QtWidgets import (
     QHBoxLayout,
     QHeaderView,
@@ -17,7 +16,6 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from app_context import AppContext
 from core.downloader.download_manager import DownloadManager
 from core.downloader.file_download import FileDownload
 from core.translation_provider.nm_api.nxm_handler import NXMHandler
@@ -60,15 +58,15 @@ class DownloadsTab(QWidget):
 
         self.__init_ui()
 
+        self.__toolbar.toggle_nxm_requested.connect(self.__toggle_nxm)
+        self.__toolbar.toggle_pause_requested.connect(self.__toggle_pause)
+
         self.download_manager.download_added.connect(self.__add_download)
-        AppContext.get_app().timer_signal.connect(self.__check_nxm_link)
+        self.startTimer(1000, Qt.TimerType.PreciseTimer)
 
         # Highlight NXM button if the user has no Premium
         if not self.provider.direct_downloads_possible():
-            self.__toolbar.widgetForAction(
-                self.__toolbar.handle_nxm_action
-            ).setObjectName("accent_button")
-            self.__toolbar.setStyleSheet(self.styleSheet())
+            self.__toolbar.highlight_nxm_action()
 
     def __init_ui(self) -> None:
         self.__vlayout = QVBoxLayout()
@@ -84,7 +82,7 @@ class DownloadsTab(QWidget):
         hlayout = QHBoxLayout()
         self.__vlayout.addLayout(hlayout)
 
-        self.__toolbar = DownloadsToolbar(self)
+        self.__toolbar = DownloadsToolbar()
         hlayout.addWidget(self.__toolbar)
 
         hlayout.addStretch()
@@ -139,31 +137,30 @@ class DownloadsTab(QWidget):
         self.__download_items.remove(download_item)
         self.__update()
 
-    def toggle_nxm(self) -> None:
-        if self.__toolbar.handle_nxm_action.isChecked():
+    def __toggle_nxm(self, checked: bool) -> None:
+        if checked:
             self.nxm_listener.bind()
         else:
             self.nxm_listener.unbind()
 
     def __check_nxm_link(self) -> None:
-        self.__toolbar.handle_nxm_action.setChecked(self.nxm_listener.is_bound())
+        self.__toolbar.set_handle_nxm_action_checked(self.nxm_listener.is_bound())
 
-    def toggle_pause(self) -> None:
-        text_color: QColor = self.palette().text().color()
+    @override
+    def timerEvent(self, event: QTimerEvent) -> None:
+        super().timerEvent(event)
+
+        self.__check_nxm_link()
+
+    def __toggle_pause(self) -> None:
         self.setDisabled(True)
 
         if self.download_manager.running:
             thread = BlockingThread(self.download_manager.pause)
             thread.start()
-            self.__toolbar.toggle_pause_action.setText(self.tr("Resume"))
-            self.__toolbar.toggle_pause_action.setIcon(
-                qta.icon("fa5s.play", color=text_color)
-            )
         else:
             self.download_manager.resume()
-            self.__toolbar.toggle_pause_action.setText(self.tr("Pause"))
-            self.__toolbar.toggle_pause_action.setIcon(
-                qta.icon("fa5s.pause", color=text_color)
-            )
+
+        self.__toolbar.update_toggle_pause_action(not self.download_manager.running)
 
         self.setDisabled(False)

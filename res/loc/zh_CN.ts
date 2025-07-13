@@ -397,46 +397,46 @@ If you don&apos;t have Nexus Mods Premium, make sure that SSE-AT is linked to Mo
 <context>
     <name>DownloadsTab</name>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="92"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="90"/>
         <source>Downloads:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="107"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="105"/>
         <source>Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="107"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="105"/>
         <source>Size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="108"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="106"/>
         <source>Progress</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="158"/>
-        <source>Resume</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_tab.py" line="164"/>
-        <source>Pause</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>DownloadsToolbar</name>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_toolbar.py" line="34"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_toolbar.py" line="41"/>
         <source>Handle Nexus Mods Downloads</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/downloads/downloads_toolbar.py" line="34"/>
+        <location filename="src/ui/main_page/database/downloads/downloads_toolbar.py" line="41"/>
         <source>[Experimental]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/database/downloads/downloads_toolbar.py" line="80"/>
+        <source>Resume</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/main_page/database/downloads/downloads_toolbar.py" line="85"/>
+        <source>Pause</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
