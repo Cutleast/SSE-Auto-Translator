@@ -25,7 +25,7 @@ from core.config.user_config import UserConfig
 from core.database.string import String
 from core.translator_api.translator import Translator
 from ui.widgets.shortcut_button import ShortcutButton
-from ui.widgets.spell_check_entry import SpellCheckEntry
+from ui.widgets.spell_check.spell_check_edit import SpellCheckEdit
 
 
 class TranslatorDialog(QWidget):
@@ -56,7 +56,7 @@ class TranslatorDialog(QWidget):
     __index_label: QLabel
 
     __original_entry: QPlainTextEdit
-    __translated_entry: QPlainTextEdit | SpellCheckEntry
+    __translated_entry: QPlainTextEdit | SpellCheckEdit
 
     def __init__(
         self,
@@ -180,7 +180,7 @@ class TranslatorDialog(QWidget):
         splitter.addWidget(self.__original_entry)
 
         if self.app_config.use_spell_check:
-            self.__translated_entry = SpellCheckEntry(
+            self.__translated_entry = SpellCheckEdit(
                 language=self.user_config.language.id
             )
         else:
