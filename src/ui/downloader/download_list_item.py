@@ -5,7 +5,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import webbrowser
-from typing import Any
+from typing import Any, Optional
 
 from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QComboBox, QPushButton, QTreeWidgetItem
@@ -55,12 +55,14 @@ class DownloadListItem(QTreeWidgetItem):
         for translation_download in self.translation_downloads:
             if translation_download.source == Source.NexusMods:
                 text = f"{translation_download.name} ({translation_download.mod_id.mod_id})"
-                icon = QIcon(":/icons/nexus_mods.svg")
             else:
                 text = translation_download.name
-                icon = QIcon(":/icons/cdt.svg")
 
-            self.translations_combobox.addItem(icon, text)
+            icon: Optional[QIcon] = translation_download.source.get_icon()
+            if icon is not None:
+                self.translations_combobox.addItem(icon, text)
+            else:
+                self.translations_combobox.addItem(text)
 
         self.translations_combobox.setDisabled(len(self.translation_downloads) == 1)
         self.translations_combobox.currentIndexChanged.connect(

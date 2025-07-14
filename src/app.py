@@ -16,7 +16,7 @@ from typing import Callable, Optional, override
 
 import jstyleson as json
 from PySide6.QtCore import Qt, QTimerEvent, QTranslator, Signal
-from PySide6.QtGui import QColor, QIcon, QPalette
+from PySide6.QtGui import QColor, QPalette
 from PySide6.QtWidgets import (
     QApplication,
     QDialog,
@@ -53,6 +53,7 @@ from core.utilities.qt_res_provider import read_resource
 from core.utilities.updater import Updater
 from ui.main_window import MainWindow
 from ui.startup_dialog.startup_dialog import StartupDialog
+from ui.utilities.icon_provider import IconProvider, ResourceIcon
 from ui.widgets.api_setup import ApiSetup
 from ui.widgets.loading_dialog import LoadingDialog
 
@@ -154,7 +155,7 @@ class App(QApplication):
         self.setApplicationName(App.APP_NAME)
         self.setApplicationDisplayName(f"{App.APP_NAME} v{App.APP_VERSION}")
         self.setApplicationVersion(App.APP_VERSION)
-        self.setWindowIcon(QIcon(":/icons/icon.png"))
+        self.setWindowIcon(IconProvider.get_res_icon(ResourceIcon.SSEAT))
 
         self.log_basic_info()
 

@@ -8,6 +8,7 @@ from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QApplication
 
 from core.utilities.localized_enum import LocalizedEnum
+from ui.utilities.icon_provider import IconProvider, ResourceIcon
 
 
 class Source(LocalizedEnum):
@@ -39,8 +40,8 @@ class Source(LocalizedEnum):
         """
 
         ICONS: dict[Source, QIcon] = {
-            Source.NexusMods: QIcon(":/icons/nexus_mods.svg"),
-            Source.Confrerie: QIcon(":/icons/cdt.svg"),
+            Source.NexusMods: IconProvider.get_res_icon(ResourceIcon.NexusMods),
+            Source.Confrerie: IconProvider.get_res_icon(ResourceIcon.Confrerie),
         }
 
         return ICONS.get(self)
