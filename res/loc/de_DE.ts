@@ -30,7 +30,7 @@
     <message>
         <location filename="src/ui/widgets/api_setup.py" line="47"/>
         <source>In order to get translations from Nexus Mods this tool needs access to the Nexus Mods API. You can setup access by two methods: insert API key manually or via SSO (Single-Sign-On).</source>
-        <translation>Um Übersetzungen von Nexus Mods herunterladen zu können, benötigt dieses Tool Zugang zur Nexus Mods API. Sie können diesen Zugang auf zwei Weisen einrichten: API-Schlüssel manuell eingeben oder über Anmeldung im Browser (Single-Sign-On).</translation>
+        <translation>Um Übersetzungen von Nexus Mods herunterladen zu können, benötigt dieses Tool Zugang zur Nexus Mods API. Du kannst diesen Zugang auf zwei Weisen einrichten: API-Schlüssel manuell eingeben oder über Anmeldung im Browser (Single-Sign-On).</translation>
     </message>
     <message>
         <location filename="src/ui/widgets/api_setup.py" line="64"/>
@@ -110,9 +110,9 @@
         <source>The NTFS path length limit is enabled and paths longer than 255 characters will cause issues. Would you like to disable it now (admin rights may be required)? A reboot is required for this to take effect.
 
 You can always disable it later under Help &gt; Fix Windows Path Limit.</source>
-        <translation>Die NTFS-Pfadlängenbegrenzung ist aktiviert und Pfade mit mehr als 255 Zeichen verursachen Probleme. Möchten Sie diese Option jetzt deaktivieren (möglicherweise sind Administratorrechte erforderlich)? Ein Neustart ist erforderlich, damit dies wirksam wird.
+        <translation>Die NTFS-Pfadlängenbegrenzung ist aktiviert und Pfade mit mehr als 255 Zeichen verursachen Probleme. Möchtest du diese Option jetzt deaktivieren (möglicherweise sind Administratorrechte erforderlich)? Ein Neustart ist erforderlich, damit dies wirksam wird.
 
-Sie können diese Funktion später unter Hilfe &gt; Windows-Pfadlängenbegrenzung beheben deaktivieren.</translation>
+Du kannst diese Beschränkung später unter Hilfe &gt; Windows-Pfadlängenbegrenzung beheben deaktivieren.</translation>
     </message>
 </context>
 <context>
@@ -319,8 +319,8 @@ Diese Liste hat nur eine Auswirkung auf Übersetzungen von Nexus Mods!</translat
         <location filename="src/ui/downloader/download_list_dialog.py" line="101"/>
         <source>Below are the Translations that are required and available online. Choose desired translations where appropiate and click on &quot;Download all&quot;.
 If you don&apos;t have Nexus Mods Premium, make sure that SSE-AT is linked to Mod Manager Downloads (link button is in Translations panel)</source>
-        <translation>Unten finden Sie die Übersetzungen, die Sie benötigen und die online verfügbar sind. Wählen Sie die gewünschten Übersetzungen aus und klicken Sie auf „ Alle herunterladen“.
-Wenn Sie nicht über Nexus Mods Premium verfügen, stellen Sie sicher, dass SSE-AT mit den Mod Manager Downloads verlinkt ist (der Link-Button befindet sich im Übersetzungs-Panel)</translation>
+        <translation>Unten findest du die Übersetzungen, die du benötigst und die online verfügbar sind. Wähle die gewünschten Übersetzungen aus und klicke auf „ Alle herunterladen“.
+Wenn du nicht über Nexus Mods Premium verfügst, stelle sicher, dass SSE-AT mit den Mod Manager Downloads verlinkt ist (der Link-Button befindet sich im Übersetzungs-Panel)</translation>
     </message>
     <message>
         <location filename="src/ui/downloader/download_list_dialog.py" line="105"/>
@@ -365,7 +365,7 @@ Wenn Sie nicht über Nexus Mods Premium verfügen, stellen Sie sicher, dass SSE-
     <message>
         <location filename="src/ui/downloader/download_list_dialog.py" line="275"/>
         <source>You don&apos;t have Nexus Mods Premium and direct downloads are not possible. Do you want to link to the &quot;Mod Manager Download&quot;buttons on Nexus Mods now?</source>
-        <translation>Sie haben kein Nexus Mods Premium und direkte Downloads sind nicht möglich. Möchten Sie SSE-AT nun mit den &quot;Mod Manager Download&quot; Buttons auf Nexus Mods verknüpfen?</translation>
+        <translation>Du hast kein Nexus Mods Premium und direkte Downloads sind nicht möglich. Möchtest du SSE-AT nun mit den &quot;Mod Manager Download&quot; Buttons auf Nexus Mods verknüpfen?</translation>
     </message>
     <message>
         <location filename="src/ui/downloader/download_list_dialog.py" line="280"/>
@@ -515,7 +515,7 @@ Wenn Sie nicht über Nexus Mods Premium verfügen, stellen Sie sicher, dass SSE-
     <message>
         <location filename="src/ui/translation_editor/editor_page.py" line="171"/>
         <source>Are you sure you want to close? All changes will be lost!</source>
-        <translation>Sind Sie sicher, dass Sie den Tab schließen möchten? Alle Änderungen gehen dabei verloren!</translation>
+        <translation>Bist du sicher, dass du den Tab schließen möchtest? Alle Änderungen gehen dabei verloren!</translation>
     </message>
     <message>
         <location filename="src/ui/translation_editor/editor_page.py" line="176"/>
@@ -615,9 +615,9 @@ Depending on the Translator API this can raise unexpected costs.</source>
         <comment>Are you sure you want to translate %n Strings via Translator API?
 Depending on the Translator API this can raise unexpected costs.</comment>
         <translation>
-            <numerusform>Sind Sie sicher, dass Sie einen String mit der konfigurierten Übersetzer-API übersetzen möchten?
+            <numerusform>Bist du sicher, dass du einen String mit der konfigurierten Übersetzer-API übersetzen möchtest?
 Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform>
-            <numerusform>Sind Sie sicher, dass Sie %n Strings mit der konfigurierten Übersetzer-API übersetzen möchten?
+            <numerusform>Bist du sicher, dass du %n Strings mit der konfigurierten Übersetzer-API übersetzen möchtest?
 Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform>
         </translation>
     </message>
@@ -752,7 +752,7 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
     <message>
         <location filename="src/ui/main_page/database/translations/export_dialog.py" line="56"/>
         <source>Select the format the translation should be exported with:</source>
-        <translation>Bitte wählen Sie das Format aus, in dem die Übersetzung exportiert werden soll:</translation>
+        <translation>Bitte wähle das Format aus, in dem die Übersetzung exportiert werden soll:</translation>
     </message>
     <message>
         <location filename="src/ui/main_page/database/translations/export_dialog.py" line="64"/>
@@ -878,7 +878,7 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
     <message>
         <location filename="src/ui/startup_dialog/instance_page.py" line="87"/>
         <source>On this page you select a Modinstance to load from a Mod Manager. You can always change the selected modinstance and mod manager under Settings &gt; User Settings.</source>
-        <translation>Auf dieser Seite wählen Sie eine Modinstanz aus, die von einem Mod Manager geladen werden soll. Sie können die ausgewählte Modinstanz und den Mod-Manager jederzeit unter Einstellungen &gt; Nutzereinstellungen ändern.</translation>
+        <translation>Auf dieser Seite wählst du eine Modinstanz aus, die von einem Mod Manager geladen werden soll. Du kannst die ausgewählte Modinstanz und den Mod-Manager jederzeit unter Einstellungen &gt; Nutzereinstellungen ändern.</translation>
     </message>
 </context>
 <context>
@@ -891,7 +891,7 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
     <message>
         <location filename="src/ui/startup_dialog/introduction.py" line="41"/>
         <source>This Guide will help you setting up this Tool for your modlist.</source>
-        <translation>Diese Einführung soll Ihnen helfen, das Tool für Ihre Modliste einzurichten.</translation>
+        <translation>Diese Einführung soll dir helfen, das Tool für deine Modliste einzurichten.</translation>
     </message>
     <message>
         <location filename="src/ui/startup_dialog/introduction.py" line="43"/>
@@ -947,7 +947,7 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
     <message>
         <location filename="src/ui/widgets/loading_dialog.py" line="372"/>
         <source>Are you sure you want to cancel? This may have unwanted consequences, depending on the current running process!</source>
-        <translation>Sind Sie sicher, dass Sie abbrechen möchten? Je nach laufendem Prozess kann dies unbeabsichtigte Konsequenzen haben!</translation>
+        <translation>Bist du sicher, dass du abbrechen möchtest? Je nach laufendem Prozess kann dies unbeabsichtigte Konsequenzen haben!</translation>
     </message>
     <message>
         <location filename="src/ui/widgets/loading_dialog.py" line="377"/>
@@ -978,17 +978,17 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
     <message>
         <location filename="src/ui/main_page/main_page.py" line="220"/>
         <source>Support us on Ko-Fi</source>
-        <translation>Unterstützen Sie uns auf Ko-Fi</translation>
+        <translation>Unterstütze uns auf Ko-Fi</translation>
     </message>
     <message>
         <location filename="src/ui/main_page/main_page.py" line="227"/>
         <source>Join us on Discord</source>
-        <translation>Treten Sie unserem Discord-Server bei</translation>
+        <translation>Tritt unserem Discord-Server bei</translation>
     </message>
     <message>
         <location filename="src/ui/main_page/main_page.py" line="234"/>
         <source>Check out my profile on Nexus Mods</source>
-        <translation>Besuchen Sie mein Profil auf Nexus Mods</translation>
+        <translation>Besuche mein Profil auf Nexus Mods</translation>
     </message>
     <message>
         <location filename="src/ui/main_page/main_page.py" line="448"/>
@@ -1131,7 +1131,7 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
     <message>
         <location filename="src/ui/main_window.py" line="197"/>
         <source>Are you sure you want to exit? There are still unsaved translations open in the editor. All unsaved changes will be lost!</source>
-        <translation>Sind Sie sicher, dass Sie beenden möchten? Es sind ungespeicherte Übersetzungen im Editor offen. Alle ungespeicherten Änderungen gehen dabei verloren!</translation>
+        <translation>Bist du sicher, dass du beenden möchtest? Es sind ungespeicherte Übersetzungen im Editor offen. Alle ungespeicherten Änderungen gehen dabei verloren!</translation>
     </message>
 </context>
 <context>
@@ -1499,7 +1499,7 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
     <message>
         <location filename="src/ui/settings/settings_dialog.py" line="66"/>
         <source>Are you sure you want to cancel? All changes will be lost.</source>
-        <translation>Sind Sie sicher, dass Sie abbrechen möchten? Alle ungespeicherten Änderungen gehen dabei verloren.</translation>
+        <translation>Bist du sicher, dass du abbrechen möchtest? Alle ungespeicherten Änderungen gehen dabei verloren.</translation>
     </message>
     <message>
         <location filename="src/ui/settings/settings_dialog.py" line="71"/>
@@ -1580,7 +1580,7 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
     <message>
         <location filename="src/ui/startup_dialog/setup_page.py" line="157"/>
         <source>On this page you setup basic settings.</source>
-        <translation>Auf dieser Seite stellen Sie grundlegende Einstellungen ein.</translation>
+        <translation>Auf dieser Seite stellst du grundlegende Einstellungen ein.</translation>
     </message>
     <message>
         <location filename="src/ui/startup_dialog/setup_page.py" line="62"/>
@@ -2072,8 +2072,8 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
         <source>Are you sure you want to delete this translation?</source>
         <comment>Are you sure you want to delete %n translations?</comment>
         <translation>
-            <numerusform>Sind Sie sicher, dass Sie diese Übersetzung löschen möchten?</numerusform>
-            <numerusform>Sind Sie sicher, dass Sie %n Übersetzungen löschen möchten?</numerusform>
+            <numerusform>Bist du sicher, dass du diese Übersetzung löschen möchtest?</numerusform>
+            <numerusform>Bist du sicher, dass du %n Übersetzungen löschen möchtest?</numerusform>
         </translation>
     </message>
     <message>
@@ -2128,7 +2128,7 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
     <message>
         <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="290"/>
         <source>Are you sure you want to cancel? All changes will be lost!</source>
-        <translation>Sind Sie sicher, dass Sie abbrechen möchten? Alle Änderungen gehen dabei verloren!</translation>
+        <translation>Bist du sicher, dass du abbrechen möchtest? Alle Änderungen gehen dabei verloren!</translation>
     </message>
     <message>
         <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="295"/>
@@ -2148,7 +2148,7 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
     <message>
         <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="331"/>
         <source>String was modified. Do you want to save it before switching to another string?</source>
-        <translation>String wurde verändert. Möchten Sie ihn speichern, bevor Sie zum nächsten String gehen?</translation>
+        <translation>String wurde verändert. Möchtest du ihn speichern, bevor du zum nächsten String gehst?</translation>
     </message>
     <message>
         <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="338"/>
