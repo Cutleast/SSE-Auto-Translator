@@ -12,7 +12,6 @@ LICENSES = {
     "PySide6": "https://code.qt.io/cgit/pyside/pyside-setup.git/tree/LICENSES?h=6.6.1",
     "qtawesome": "https://github.com/spyder-ide/qtawesome/blob/master/LICENSE.txt",
     "nuitka": "https://github.com/Nuitka/Nuitka/blob/develop/LICENSE.txt",
-    "pyperclip": "https://github.com/asweigart/pyperclip/blob/master/LICENSE.txt",
     "requests": "https://github.com/psf/requests/blob/main/LICENSE",
     "jstyleson": "https://github.com/linjackson78/jstyleson/blob/master/LICENSE",
     "semantic-version": "https://github.com/rbarrois/python-semanticversion/blob/master/LICENSE",

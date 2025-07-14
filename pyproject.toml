@@ -18,7 +18,6 @@ dependencies = [
     "plyvel-ci",
     "py7zr",
     "pydantic",
-    "pyperclip",
     "pyside6",
     "pytz",
     "pyuac",

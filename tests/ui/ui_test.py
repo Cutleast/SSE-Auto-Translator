@@ -2,10 +2,14 @@
 Copyright (c) Cutleast
 """
 
+import os
+
 import pytest
 
 from ..base_test import BaseTest
 from ._setup.clipboard import Clipboard
+
+os.environ["QT_QPA_PLATFORM"] = "offscreen"  # render widgets off-screen
 
 
 class UiTest(BaseTest):
@@ -17,7 +21,7 @@ class UiTest(BaseTest):
     def clipboard(self, monkeypatch: pytest.MonkeyPatch) -> Clipboard:
         """
         Fixture to mock the clipboard using `_setup.clipboard.Clipboard`.
-        Patches `pyperclip.copy` and `pyperclip.paste`.
+        Patches `QtGui.QClipboard.setText` and `QtGui.QClipboard.text`.
 
         Args:
             monkeypatch (pytest.MonkeyPatch): The MonkeyPatch fixture.
@@ -28,7 +32,7 @@ class UiTest(BaseTest):
 
         clipboard = Clipboard()
 
-        monkeypatch.setattr("pyperclip.copy", clipboard.copy)
-        monkeypatch.setattr("pyperclip.paste", clipboard.paste)
+        monkeypatch.setattr("PySide6.QtGui.QClipboard.setText", clipboard.copy)
+        monkeypatch.setattr("PySide6.QtGui.QClipboard.text", clipboard.paste)
 
         return clipboard
