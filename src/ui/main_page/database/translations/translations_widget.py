@@ -21,6 +21,7 @@ from PySide6.QtWidgets import (
     QTreeWidgetItem,
 )
 
+from app_context import AppContext
 from core.config.app_config import AppConfig
 from core.database.database import TranslationDatabase
 from core.database.translation import Translation
@@ -481,9 +482,10 @@ class TranslationsWidget(QTreeWidget):
             message_box.setDefaultButton(QMessageBox.StandardButton.Yes)
             message_box.button(QMessageBox.StandardButton.No).setText(self.tr("No"))
             message_box.button(QMessageBox.StandardButton.Yes).setText(self.tr("Yes"))
-            message_box.button(QMessageBox.StandardButton.Yes).setObjectName(
-                "accent_button"
-            )
+
+            # Reapply stylesheet as setDefaultButton() doesn't update the style by itself
+            message_box.setStyleSheet(AppContext.get_stylesheet())
+
             if message_box.exec() != QMessageBox.StandardButton.Yes:
                 return
 

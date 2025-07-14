@@ -66,7 +66,6 @@ class StringListMenu(Menu):
         self.__copy_checkboxes = {}
         for c, column in enumerate(self.__parent.columns):
             checkbox = QCheckBox(self.tr("Copy {0}").format(column), self.__copy_menu)
-            checkbox.setObjectName("menu_checkbox")
             checkbox.setChecked(True)
             widget_action = QWidgetAction(self.__copy_menu)
             widget_action.setDefaultWidget(checkbox)

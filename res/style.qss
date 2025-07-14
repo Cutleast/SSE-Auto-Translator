@@ -107,13 +107,6 @@ QToolButton::menu-button:pressed {
 QToolButton::menu-arrow {
     image: url(:/icons/arrow_down.svg);
 }
-QCheckBox#menu_checkbox {
-    padding: 8px;
-    /* margin: 2px; */
-}
-QCheckBox#menu_checkbox:hover {
-    background: #1cffffff;
-}
 
 
 /* Labels */
@@ -156,20 +149,24 @@ ShortcutButton {
 ShortcutButton QLabel {
     margin: 0px;
 }
-QPushButton#accent_button {
+QPushButton#accent_button,
+QPushButton[default=true] {
     background: <accent_color>;
     color: #000000;
 }
-ShortcutButton#accent_button QLabel {
+ShortcutButton#accent_button QLabel,
+ShortcutButton[default=true] QLabel {
     color: #000000;
 }
 QToolButton#accent_button {
     border-bottom-color: <accent_color>;
 }
-QPushButton#accent_button:hover {
+QPushButton#accent_button:hover,
+QPushButton[default=true]:hover {
     background: <highlighted_accent>;
 }
-QPushButton#accent_button:disabled {
+QPushButton#accent_button:disabled,
+QPushButton[default=true]:disabled {
     background: #66ffffff;
 }
 QPushButton:hover, QToolButton:hover {
@@ -401,53 +398,49 @@ QCheckBox {
 }
 QRadioButton::indicator,
 QCheckBox::indicator,
-QListWidget::indicator,
-QTableView::indicator,
-QTreeView::indicator {
+QAbstractItemView::indicator {
     background: #0affffff;
-    width: 12px;
-    height: 12px;
+    width: 16px;
+    height: 16px;
     border: 0px solid;
     border-radius: 4px;
     padding: 2px;
 }
-QRadioButton::indicator,
-QCheckBox::indicator {
-    width: 16px;
-    height: 16px;
+QAbstractItemView::indicator {
+    width: 12px;
+    height: 12px;
+}
+QMenu QCheckBox {
+    border-radius: 4px;
+}
+QMenu QCheckBox::indicator {
+    margin: 6px;
+    width: 14px;
+    height: 14px;
 }
 QRadioButton::indicator:hover,
 QCheckBox::indicator:hover,
-QListWidget::indicator:hover,
-QTableView::indicator:hover,
-QTreeView::indicator:hover {
+QAbstractItemView::indicator:hover,
+QMenu QCheckBox:hover {
     background: #1cffffff;
 }
 QRadioButton::indicator:checked,
 QCheckBox::indicator:checked,
-QListWidget::indicator:checked,
-QTableView::indicator:checked,
-QTreeView::indicator:checked {
+QAbstractItemView::indicator:checked {
     background: <accent_color>;
 }
 QRadioButton::indicator:hover:checked,
 QCheckBox::indicator:hover:checked,
-QListWidget::indicator:hover:checked,
-QTableView::indicator:hover:checked,
-QTreeView::indicator:hover:checked {
+QAbstractItemView::indicator:hover:checked {
     background: <highlighted_accent>;
 }
 QRadioButton::indicator:disabled:checked,
 QCheckBox::indicator:disabled:checked,
-QListWidget::indicator:disabled:checked,
-QTableView::indicator:disabled:checked,
-QTreeView::indicator:disabled:checked {
+QAbstractItemView::indicator:disabled:checked {
     background: #1cffffff;
 }
 QCheckBox::indicator:checked,
-QListWidget::indicator:checked,
-QTableView::indicator:checked,
-QTreeView::indicator:checked {
+QAbstractItemView::indicator:checked {
     image: url(:/icons/checkmark.svg);
 }
 QRadioButton::indicator {

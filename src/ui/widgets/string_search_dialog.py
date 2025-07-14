@@ -120,7 +120,7 @@ class StringSearchDialog(QDialog):
         hlayout.addStretch()
 
         search_button = ShortcutButton(self.tr("Search"))
-        search_button.setObjectName("accent_button")
+        search_button.setDefault(True)
         search_button.setShortcut(QKeySequence("Return"))
         search_button.clicked.connect(self.accept)
         hlayout.addWidget(search_button)

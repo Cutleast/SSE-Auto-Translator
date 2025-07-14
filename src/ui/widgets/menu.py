@@ -23,7 +23,7 @@ class Menu(QMenu):
         icon: Optional[QIcon | QPixmap] = None,
         title: Optional[str] = None,
         parent: Optional[QWidget] = None,
-    ):
+    ) -> None:
         if title is not None:
             super().__init__(title, parent)
         else:
@@ -39,4 +39,4 @@ class Menu(QMenu):
     def show(self) -> None:
         super().show()
 
-        apply_shadow(self, size=4, shadow_color="#181818")
+        apply_shadow(self, size=8, shadow_color="#181818")

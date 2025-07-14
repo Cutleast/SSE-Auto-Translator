@@ -19,6 +19,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
+from app_context import AppContext
 from core.config.app_config import AppConfig
 from core.config.user_config import UserConfig
 from core.database.string import String
@@ -216,7 +217,7 @@ class TranslatorDialog(QWidget):
         finish_button = ShortcutButton(self.tr("Done"))
         finish_button.clicked.connect(lambda: self.finish())
         finish_button.setShortcut(QKeySequence("Ctrl+Return"))
-        finish_button.setObjectName("accent_button")
+        finish_button.setDefault(True)
         hlayout.addWidget(finish_button)
 
         complete_shortcut = QShortcut(QKeySequence("F1"), self)
@@ -294,6 +295,9 @@ class TranslatorDialog(QWidget):
             message_box.button(QMessageBox.StandardButton.No).setText(self.tr("No"))
             message_box.button(QMessageBox.StandardButton.Yes).setText(self.tr("Yes"))
 
+            # Reapply stylesheet as setDefaultButton() doesn't update the style by itself
+            message_box.setStyleSheet(AppContext.get_stylesheet())
+
             if message_box.exec() != QMessageBox.StandardButton.Yes:
                 event.ignore()
                 return
@@ -335,7 +339,11 @@ class TranslatorDialog(QWidget):
             message_box.button(QMessageBox.StandardButton.Save).setText(
                 self.tr("Save and continue")
             )
-            choice = message_box.exec()
+
+            # Reapply stylesheet as setDefaultButton() doesn't update the style by itself
+            message_box.setStyleSheet(AppContext.get_stylesheet())
+
+            choice: int = message_box.exec()
 
             if choice == QMessageBox.StandardButton.Save:
                 self.finalize_string()

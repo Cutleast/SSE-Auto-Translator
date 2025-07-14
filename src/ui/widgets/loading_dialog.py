@@ -21,6 +21,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
+from app_context import AppContext
 from core.utilities.datetime import get_diff
 from core.utilities.thread import Thread
 from ui.utilities import move_to_center
@@ -375,6 +376,10 @@ class LoadingDialog(QDialog, Generic[T]):
             message_box.setDefaultButton(QMessageBox.StandardButton.Yes)
             message_box.button(QMessageBox.StandardButton.No).setText(self.tr("No"))
             message_box.button(QMessageBox.StandardButton.Yes).setText(self.tr("Yes"))
+
+            # Reapply stylesheet as setDefaultButton() doesn't update the style by itself
+            message_box.setStyleSheet(AppContext.get_stylesheet())
+
             confirmation = message_box.exec() == QMessageBox.StandardButton.Yes
 
         if confirmation:

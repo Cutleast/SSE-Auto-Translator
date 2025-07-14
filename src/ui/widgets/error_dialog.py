@@ -93,7 +93,6 @@ class ErrorDialog(QDialog):
 
         if self.__yesno:
             yes_button = QPushButton(self.tr("Continue"))
-            yes_button.setObjectName("accent_button")
             yes_button.setDefault(True)
             yes_button.clicked.connect(self.reject)
             hlayout.addWidget(yes_button)
@@ -103,7 +102,6 @@ class ErrorDialog(QDialog):
             hlayout.addWidget(no_button)
         else:
             ok_button = QPushButton(self.tr("Ok"))
-            ok_button.setObjectName("accent_button")
             ok_button.setDefault(True)
             ok_button.clicked.connect(self.reject)
             hlayout.addWidget(ok_button)

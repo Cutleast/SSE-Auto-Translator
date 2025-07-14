@@ -23,6 +23,7 @@ from PySide6.QtWidgets import (
 )
 from qtpy.QtWidgets import QMessageBox
 
+from app_context import AppContext
 from core.database.database import TranslationDatabase
 from core.downloader.download_manager import DownloadManager
 from core.downloader.file_download import FileDownload
@@ -105,7 +106,7 @@ class DownloadListDialog(QDialog):
         self.download_all_button.setIcon(
             IconProvider.get_qta_icon("mdi.download-multiple", accent_background=True)
         )
-        self.download_all_button.setObjectName("accent_button")
+        self.download_all_button.setDefault(True)
         self.download_all_button.clicked.connect(self.__download_all)
         hlayout.addWidget(self.download_all_button)
 
@@ -277,10 +278,10 @@ class DownloadListDialog(QDialog):
             )
             messagebox.setDefaultButton(QMessageBox.StandardButton.Yes)
             messagebox.button(QMessageBox.StandardButton.Yes).setText(self.tr("Yes"))
-            messagebox.button(QMessageBox.StandardButton.Yes).setObjectName(
-                "accent_button"
-            )
             messagebox.button(QMessageBox.StandardButton.No).setText(self.tr("No"))
+
+            # Reapply stylesheet as setDefaultButton() doesn't update the style by itself
+            messagebox.setStyleSheet(AppContext.get_stylesheet())
 
             if messagebox.exec() == QMessageBox.StandardButton.Yes:
                 self.nxm_handler.bind()

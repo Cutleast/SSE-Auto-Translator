@@ -62,6 +62,21 @@ class AppContext:
 
         return App
 
+    @classmethod
+    def get_stylesheet(cls) -> str:
+        """
+        Gets the current loaded stylesheet from the app instance or returns an empty
+        string if the app instance has not been initialized.
+
+        Returns:
+            str: The current loaded stylesheet.
+        """
+
+        if cls.has_app():
+            return cls.get_app().styleSheet()
+
+        return ""
+
 
 if __name__ == "__main__":
     from app import App

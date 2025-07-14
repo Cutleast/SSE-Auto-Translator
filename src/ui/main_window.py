@@ -206,6 +206,9 @@ class MainWindow(QMainWindow):
                     self.tr("Cancel")
                 )
 
+                # Reapply stylesheet as setDefaultButton() doesn't update the style by itself
+                message_box.setStyleSheet(AppContext.get_stylesheet())
+
                 if message_box.exec() != QMessageBox.StandardButton.Yes:
                     confirmation = False
 

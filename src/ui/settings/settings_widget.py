@@ -140,7 +140,7 @@ class SettingsWidget(QWidget):
         hlayout.addStretch()
 
         self.__save_button = QPushButton(self.tr("Save"))
-        self.__save_button.setObjectName("accent_button")
+        self.__save_button.setDefault(True)
         self.__save_button.setDisabled(True)
         self.__save_button.clicked.connect(self.__save)
         hlayout.addWidget(self.__save_button)

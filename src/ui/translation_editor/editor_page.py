@@ -17,6 +17,7 @@ from PySide6.QtWidgets import (
     QTreeWidgetItem,
 )
 
+from app_context import AppContext
 from core.config.app_config import AppConfig
 from core.config.translator_config import TranslatorConfig
 from core.config.user_config import UserConfig
@@ -174,9 +175,11 @@ class EditorPage(QSplitter):
             message_box.setDefaultButton(QMessageBox.StandardButton.Yes)
             message_box.button(QMessageBox.StandardButton.No).setText(self.tr("No"))
             message_box.button(QMessageBox.StandardButton.Yes).setText(self.tr("Yes"))
-            choice = message_box.exec()
 
-            if choice != QMessageBox.StandardButton.Yes:
+            # Reapply stylesheet as setDefaultButton() doesn't update the style by itself
+            message_box.setStyleSheet(AppContext.get_stylesheet())
+
+            if message_box.exec() != QMessageBox.StandardButton.Yes:
                 return
 
         self.__tabs.pop(translation)

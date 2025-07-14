@@ -24,6 +24,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
+from app_context import AppContext
 from core.config.app_config import AppConfig
 from core.config.translator_config import TranslatorConfig
 from core.config.user_config import UserConfig
@@ -420,7 +421,6 @@ class EditorTab(QWidget):
         hlayout.addStretch()
 
         apply_button = QPushButton(self.tr("Apply"))
-        apply_button.setObjectName("accent_button")
         apply_button.setDefault(True)
         apply_button.clicked.connect(dialog.accept)
         hlayout.addWidget(apply_button)
@@ -544,9 +544,11 @@ class EditorTab(QWidget):
         message_box.setDefaultButton(QMessageBox.StandardButton.Yes)
         message_box.button(QMessageBox.StandardButton.No).setText(self.tr("No"))
         message_box.button(QMessageBox.StandardButton.Yes).setText(self.tr("Yes"))
-        choice = message_box.exec()
 
-        if choice == QMessageBox.StandardButton.Yes:
+        # Reapply stylesheet as setDefaultButton() doesn't update the style by itself
+        message_box.setStyleSheet(AppContext.get_stylesheet())
+
+        if message_box.exec() == QMessageBox.StandardButton.Yes:
             self.__editor.reset_strings(selected_items)
 
     def __copy_selected(self) -> None:

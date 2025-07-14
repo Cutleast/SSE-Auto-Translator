@@ -82,7 +82,6 @@ class MainToolBar(QToolBar):
             filter_box = QCheckBox(
                 status.get_localized_filter_name(), self.__filter_menu
             )
-            filter_box.setObjectName("menu_checkbox")
             filter_box.setChecked(True)
             filter_box.stateChanged.connect(self.__on_filter_change)
             widget_action = QWidgetAction(self.__filter_menu)

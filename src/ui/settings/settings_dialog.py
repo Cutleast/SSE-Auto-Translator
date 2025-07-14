@@ -8,6 +8,7 @@ from PySide6.QtCore import Qt
 from PySide6.QtGui import QCloseEvent
 from PySide6.QtWidgets import QMessageBox, QWidget
 
+from app_context import AppContext
 from core.cache.cache import Cache
 from core.config.app_config import AppConfig
 from core.config.translator_config import TranslatorConfig
@@ -66,15 +67,14 @@ class SettingsDialog(SettingsWidget):
             message_box.setStandardButtons(
                 QMessageBox.StandardButton.No | QMessageBox.StandardButton.Yes
             )
-            message_box.setDefaultButton(QMessageBox.StandardButton.Yes)
+            message_box.setDefaultButton(QMessageBox.StandardButton.No)
             message_box.button(QMessageBox.StandardButton.No).setText(self.tr("No"))
-            message_box.button(QMessageBox.StandardButton.No).setObjectName(
-                "accent_button"
-            )
             message_box.button(QMessageBox.StandardButton.Yes).setText(self.tr("Yes"))
-            choice = message_box.exec()
 
-            if choice == QMessageBox.StandardButton.Yes:
+            # Reapply stylesheet as setDefaultButton() doesn't update the style by itself
+            message_box.setStyleSheet(AppContext.get_stylesheet())
+
+            if message_box.exec() == QMessageBox.StandardButton.Yes:
                 event.accept()
             elif event:
                 event.ignore()

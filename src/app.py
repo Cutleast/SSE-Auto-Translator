@@ -308,7 +308,7 @@ class App(QApplication):
         hlayout.addStretch()
 
         save_button = QPushButton(self.tr("Save"))
-        save_button.setObjectName("accent_button")
+        save_button.setDefault(True)
         save_button.setDisabled(True)
         api_setup.valid_signal.connect(save_button.setEnabled)
 
@@ -439,7 +439,7 @@ class App(QApplication):
         stylesheet: str = read_resource(self.style_path)
         accent_color: str = self.app_config.accent_color
 
-        highlighted_accent: str = QColor(accent_color).darker(120).name()
+        highlighted_accent: str = QColor(accent_color).lighter(110).name()
 
         stylesheet = stylesheet.replace("<accent_color>", accent_color)
         stylesheet = stylesheet.replace("<highlighted_accent>", highlighted_accent)
