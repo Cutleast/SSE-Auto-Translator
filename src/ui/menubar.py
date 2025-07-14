@@ -83,7 +83,7 @@ class MenuBar(QMenuBar):
 
         about_action: QAction = help_menu.addAction(self.tr("About"))
         about_action.setIcon(IconProvider.get_qta_icon("fa5s.info-circle"))
-        about_action.triggered.connect(self.about_qt_requested.emit)
+        about_action.triggered.connect(self.about_requested.emit)
 
         about_qt_action: QAction = help_menu.addAction(self.tr("About Qt"))
-        about_qt_action.triggered.connect(self.about_requested.emit)
+        about_qt_action.triggered.connect(self.about_qt_requested.emit)
