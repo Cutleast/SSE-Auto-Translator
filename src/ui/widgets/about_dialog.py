@@ -2,7 +2,7 @@
 Copyright (c) Cutleast
 """
 
-import os
+import webbrowser
 from typing import Optional
 
 from PySide6.QtCore import Qt
@@ -97,5 +97,5 @@ class AboutDialog(QDialog):
         licenses_tab.addItems(list(LICENSES.keys()))
 
         licenses_tab.itemDoubleClicked.connect(
-            lambda item: os.startfile(LICENSES[item.text()])
+            lambda item: webbrowser.open(LICENSES[item.text()])
         )

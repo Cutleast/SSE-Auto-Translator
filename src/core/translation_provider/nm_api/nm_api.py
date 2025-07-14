@@ -4,10 +4,10 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-import os
 import re
 import subprocess
 import urllib.parse
+import webbrowser
 from queue import Queue
 from typing import Any, Optional, override
 from uuid import uuid4
@@ -601,7 +601,7 @@ class NexusModsApi(ProviderApi):
 
         self.log.debug("Opening page in Web Browser...")
         url = f"https://www.nexusmods.com/sso?id={uuid}&application={self.APP_SLUG}"
-        os.startfile(url)
+        webbrowser.open(url)
 
         self.log.info("Waiting for User to sign in...")
         connection.settimeout(600)  # Timeout of 5 minutes

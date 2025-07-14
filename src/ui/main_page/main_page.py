@@ -4,6 +4,7 @@ Copyright (c) Cutleast
 
 import logging
 import os
+import webbrowser
 from pathlib import Path
 from typing import Optional, TypeVar
 
@@ -460,7 +461,7 @@ class MainPageWidget(QWidget):
         btn.setText(self.tr("Open DSD modpage on Nexus Mods"))
         btn.clicked.disconnect()
         btn.clicked.connect(
-            lambda: os.startfile(
+            lambda: webbrowser.open(
                 "https://www.nexusmods.com/skyrimspecialedition/mods/107676"
             )
         )

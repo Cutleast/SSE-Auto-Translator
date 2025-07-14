@@ -4,7 +4,7 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-import os
+import webbrowser
 from typing import Any
 
 from PySide6.QtGui import QIcon
@@ -92,7 +92,7 @@ class DownloadListItem(QTreeWidgetItem):
                 self.original_mod_id, source=Source.NexusMods
             )
             modpage_url += "?tab=files"
-            os.startfile(modpage_url)
+            webbrowser.open(modpage_url)
         except ModNotFoundError:
             pass
 
@@ -105,6 +105,6 @@ class DownloadListItem(QTreeWidgetItem):
             modpage_url: str = self.provider.get_modpage_url(
                 translation_download.mod_id, source=translation_download.source
             )
-            os.startfile(modpage_url)
+            webbrowser.open(modpage_url)
         except ModNotFoundError:
             pass

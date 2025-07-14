@@ -2,7 +2,7 @@
 Copyright (c) Cutleast
 """
 
-import os
+import webbrowser
 
 from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QPushButton
@@ -24,5 +24,5 @@ class LinkButton(QPushButton):
             self.setText(display_text)
 
         self.setIcon(icon or IconProvider.get_qta_icon("fa5s.external-link-alt"))
-        self.clicked.connect(lambda: os.startfile(url))
+        self.clicked.connect(lambda: webbrowser.open(url))
         self.setToolTip(url)

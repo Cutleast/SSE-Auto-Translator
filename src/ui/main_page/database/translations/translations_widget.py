@@ -4,6 +4,7 @@ Copyright (c) Cutleast
 
 import logging
 import os
+import webbrowser
 from pathlib import Path
 from typing import Optional, override
 
@@ -502,7 +503,7 @@ class TranslationsWidget(QTreeWidget):
                 url: str = self.provider.get_modpage_url(
                     current_item.mod_id, current_item.source
                 )
-                os.startfile(url)
+                webbrowser.open(url)
             except ModNotFoundError:
                 pass
 
