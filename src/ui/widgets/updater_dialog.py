@@ -4,7 +4,7 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-import os
+import webbrowser
 
 from PySide6.QtGui import QFont
 from PySide6.QtWidgets import (
@@ -62,7 +62,7 @@ class UpdaterDialog(QDialog):
         download_button = QPushButton(self.tr("Download Update"))
         download_button.clicked.connect(
             lambda: (
-                os.startfile(updater.download_url),
+                webbrowser.open(updater.download_url),
                 self.accept(),
             )
         )

@@ -1,3 +1,22 @@
+# v2.1.10 (Hotfix)
+
+- Fix Mod Manager (and non-premium Nexus Mods) downloads
+
+# v2.1.9
+
+- Add Turkish to supported languages (no Vanilla database, though as there is no official localisation of the game)
+- Fix random CTDs when downloading translations
+- Fix crash when launched via Wine (Linux)
+- Fix browser not opening when clicking on links in SSE-AT for some users
+
+# v2.1.8
+
+- Apply default values to translator config when loading user config
+- Improve error handling when requesting mod details
+- Catch exceptions when processing meta.ini files
+- Add support for Indonesian
+- Strip quotation marks from INI file values
+
 # v2.1.7
 
 - Fix online scan for Chinese translations because their named "Mandarin" on Nexus Mods now

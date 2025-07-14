@@ -1,7 +1,7 @@
 [project]
 name = "sse-auto-translator"
 version = "3.0.0-alpha-1"
-description = "A tool for translating entire modlists by auto-downloading available translations from Nexus Mods."
+description = "SSE Auto Translator"
 license = { file = "LICENSE" }
 authors = [{ name = "Cutleast", email = "cutleast@gmail.com" }]
 readme = "README.md"
@@ -37,10 +37,7 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-    "cx-freeze<8.1.0",
     "nuitka",
-    "pyinstaller",
-    "pyinstaller-versionfile",
     "pyright",
     "pytest",
     "pytest-cov",
