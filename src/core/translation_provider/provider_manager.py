@@ -3,7 +3,7 @@ Copyright (c) Cutleast
 """
 
 import logging
-from typing import Literal, NoReturn, overload
+from typing import Literal, NoReturn, TypeVar, overload
 
 from PySide6.QtCore import QObject
 
@@ -15,6 +15,8 @@ from .nm_api.nm_api import NexusModsApi
 from .provider_api import ProviderApi
 from .provider_preference import ProviderPreference
 from .source import Source
+
+T = TypeVar("T", bound=ProviderApi)
 
 
 class ProviderManager(QObject):
@@ -101,7 +103,7 @@ class ProviderManager(QObject):
         raise ValueError("No provider found!")
 
     @classmethod
-    def get_provider[T: ProviderApi](cls, provider_type: type[T]) -> T:
+    def get_provider(cls, provider_type: type[T]) -> T:
         """
         Gets an initialized provider by its type.
 

@@ -46,55 +46,6 @@ dev = [
     "types-requests",
 ]
 
-[tool.cxfreeze]
-executables = [
-    { script = "src/main.py", base = "gui", target_name = "SSE-AT.exe", icon = "res/icons/icon.ico", copyright = "Attribution-NonCommercial-NoDerivatives 4.0 International" },
-    { script = "src/main.py", base = "console", target_name = "SSE-AT_cli.exe", icon = "res/icons/icon.ico", copyright = "Attribution-NonCommercial-NoDerivatives 4.0 International" },
-]
-
-[tool.cxfreeze.build_exe]
-replace_paths = [["*", ""]]
-packages = ["ctypes"]
-includes = ["ctypes.wintypes"]
-excludes = ["tkinter", "unittest"]
-zip_include_packages = ["encodings", "PySide6", "shiboken6"]
-include_path = "src"
-include_files = [
-    [
-        ".venv/Lib/site-packages/plyvel_ci.libs",
-        "lib/plyvel",
-    ],
-    [
-        ".venv/Lib/site-packages/cloudscraper/user_agent/browsers.json",
-        "cloudscraper/user_agent/browsers.json",
-    ],
-    [
-        "res/7-zip",
-        "res/7-zip",
-    ],
-    [
-        "res/app/database",
-        "res/app/database",
-    ],
-    [
-        "res/hunspell",
-        "res/hunspell",
-    ],
-    [
-        "res/path_limit.reg",
-        "res/path_limit.reg",
-    ],
-    [
-        "res/string_records.json",
-        "res/string_records.json",
-    ],
-    [
-        "res/TaskbarLib.tlb",
-        "res/TaskbarLib.tlb",
-    ],
-]
-build_exe = "dist/SSE-AT"
-
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]

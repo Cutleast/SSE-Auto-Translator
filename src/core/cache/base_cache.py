@@ -9,10 +9,13 @@ import time
 from abc import ABCMeta, abstractmethod
 from functools import lru_cache, wraps
 from pathlib import Path
-from typing import Any, Callable, Optional
+from typing import Any, Callable, Optional, ParamSpec, TypeVar
 
 from app_context import AppContext
 from core.database.string import String
+
+P = ParamSpec("P")
+R = TypeVar("R")
 
 
 class BaseCache(metaclass=ABCMeta):
@@ -82,7 +85,7 @@ class BaseCache(metaclass=ABCMeta):
             pickle.dump(data, file)
 
     @classmethod
-    def persistent_cache[**P, R](
+    def persistent_cache(
         cls,
         *,
         cache_subfolder: Optional[Path] = None,

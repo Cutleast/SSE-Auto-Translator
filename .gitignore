@@ -2,6 +2,7 @@
 /.venv
 /.vscode
 /app_state_dump.7z
+/build
 /data
 /dist
 /experiments

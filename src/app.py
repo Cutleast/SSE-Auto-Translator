@@ -64,7 +64,7 @@ class App(QApplication):
     """
 
     APP_NAME: str = "SSE Auto Translator"
-    APP_VERSION: str = "3.0.0-alpha-1"
+    APP_VERSION: str = "development"
 
     args: Namespace
     app_config: AppConfig
