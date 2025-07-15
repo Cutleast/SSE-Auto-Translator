@@ -76,37 +76,37 @@
 <context>
     <name>App</name>
     <message>
-        <location filename="src/app.py" line="297"/>
+        <location filename="src/app.py" line="300"/>
         <source>API Key is invalid!</source>
         <translation>API-Schlüssel ist ungültig!</translation>
     </message>
     <message>
-        <location filename="src/app.py" line="311"/>
+        <location filename="src/app.py" line="314"/>
         <source>Save</source>
         <translation>Speichern</translation>
     </message>
     <message>
-        <location filename="src/app.py" line="328"/>
+        <location filename="src/app.py" line="331"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="src/app.py" line="352"/>
+        <location filename="src/app.py" line="355"/>
         <source>Loading translation database...</source>
         <translation>Übersetzungsdatenbank wird geladen...</translation>
     </message>
     <message>
-        <location filename="src/app.py" line="370"/>
+        <location filename="src/app.py" line="373"/>
         <source>Loading modinstance...</source>
         <translation>Modinstanz wird geladen...</translation>
     </message>
     <message>
-        <location filename="src/app.py" line="469"/>
+        <location filename="src/app.py" line="472"/>
         <source>Path Limit Enabled</source>
         <translation>Pfadlängenbegrenzung aktiviert</translation>
     </message>
     <message>
-        <location filename="src/app.py" line="477"/>
+        <location filename="src/app.py" line="480"/>
         <source>The NTFS path length limit is enabled and paths longer than 255 characters will cause issues. Would you like to disable it now (admin rights may be required)? A reboot is required for this to take effect.
 
 You can always disable it later under Help &gt; Fix Windows Path Limit.</source>
