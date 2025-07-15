@@ -70,7 +70,9 @@ class Cache(BaseCache):
         if self.__cache_version_file.is_file():
             cache_version: str = self.__cache_version_file.read_text().strip()
 
-            if Version(cache_version) < Version(app_version):
+            if app_version != "development" and Version(cache_version) < Version(
+                app_version
+            ):
                 self.clear_caches()
                 self.path.mkdir(parents=True)
                 self.log.info("Cleared caches due to outdated cache version.")

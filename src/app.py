@@ -163,7 +163,10 @@ class App(QApplication):
     def exec(self) -> int:  # type: ignore
         self.log.info("Application started.")
 
-        Updater(self.APP_VERSION).run()
+        try:
+            Updater(self.APP_VERSION).run()
+        except Exception as ex:
+            self.log.warning(f"Failed to check for updates: {ex}", exc_info=ex)
 
         if self.first_start:
             self.setup_complete = (
