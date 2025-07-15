@@ -74,7 +74,7 @@ class ProgressWidget(QWidget):
         self.__close_button = QPushButton()
         self.__close_button.setFixedSize(35, 35)
         self.__close_button.setObjectName("download_button")
-        self.__close_button.setIcon(IconProvider.get_qta_icon("fa5s.close"))
+        self.__close_button.setIcon(IconProvider.get_qta_icon("mdi6.close"))
         self.__close_button.clicked.connect(self.close_signal.emit)
         hlayout.addWidget(self.__close_button)
         self.__close_button.hide()
