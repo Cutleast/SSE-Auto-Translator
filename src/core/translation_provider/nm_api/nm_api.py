@@ -559,7 +559,7 @@ class NexusModsApi(ProviderApi):
             tags = parsed.find_all("a", {"class": f"sortme flag flag-{tag_text}"})
             urls: list[str] = [tag["href"] for tag in tags]  # type: ignore[misc,index]
 
-            lang_name: str = NexusModsApi.LANG_OVERRIDES.get(tag_text, tag_text)
+            lang_name: str = NexusModsApi.LANG_OVERRIDES.get(tag_text, tag_text).lower()
             if lang_name == language:
                 available_translations += [
                     NexusModsApi.get_ids_from_url(url)[1] for url in urls
