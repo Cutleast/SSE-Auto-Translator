@@ -20,7 +20,7 @@ class TestLangDetector:
             editor_id="TestString",
             form_id="00123456|Skyrim.esm",
             type="BOOK FULL",
-            original_string=text,
+            original=text,
         )
 
     def setup(self, language: Language, confidence: float = 0.8) -> LangDetector:

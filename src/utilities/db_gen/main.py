@@ -274,7 +274,9 @@ class DbGen(Utility):
                     )
                     continue
 
-                string_data: dict[str, str | int | None] = string.to_string_data()
+                string_data: dict[str, str | int | None] = string.model_dump(
+                    mode="json"
+                )
                 string_data["original"] = original_string_table[string_id]
                 string_data["string"] = translated_string_table[string_id]
                 string_data.pop("status")  # Don't store status in database
@@ -424,7 +426,7 @@ class DbGen(Utility):
 
         plugin = Plugin(plugin_path)
         string_ids: dict[int, String] = {
-            int(string.original_string): string
+            int(string.original): string
             for string in plugin.extract_strings(
                 extract_localized=True, unfiltered=True
             )

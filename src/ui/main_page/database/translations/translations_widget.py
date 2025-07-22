@@ -218,17 +218,13 @@ class TranslationsWidget(QTreeWidget):
         item = QTreeWidgetItem(
             [
                 translation.name,
-                translation.version,
+                translation.version or "",
                 (
                     translation.source.get_localized_name()
                     if translation.source
                     else self.tr("Unknown")
                 ),
-                (
-                    fmt_timestamp(translation.timestamp)
-                    if translation.timestamp is not None
-                    else ""
-                ),
+                fmt_timestamp(translation.timestamp),
                 scale_value(translation.size),
             ]
         )
@@ -238,10 +234,7 @@ class TranslationsWidget(QTreeWidget):
             )
         )
 
-        if translation.timestamp is not None:
-            item.setToolTip(
-                3, fmt_timestamp(translation.timestamp, "%d.%m.%Y %H:%M:%S")
-            )
+        item.setToolTip(3, fmt_timestamp(translation.timestamp))
         item.setToolTip(4, f"{translation.size} Bytes")
 
         return item
@@ -498,7 +491,11 @@ class TranslationsWidget(QTreeWidget):
     def __open_modpage(self) -> None:
         current_item: Optional[Translation | str] = self.get_current_item()
 
-        if isinstance(current_item, Translation) and current_item.source:
+        if (
+            isinstance(current_item, Translation)
+            and current_item.source
+            and current_item.mod_id
+        ):
             try:
                 url: str = self.provider.get_modpage_url(
                     current_item.mod_id, current_item.source

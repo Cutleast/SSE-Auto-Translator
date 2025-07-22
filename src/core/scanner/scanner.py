@@ -98,7 +98,7 @@ class Scanner(QObject):
             if string.status != String.Status.TranslationRequired
         )
         database_originals: list[str] = unique(
-            string.original_string for string in database_strings
+            string.original for string in database_strings
         )
 
         if ldialog is not None:
@@ -179,7 +179,7 @@ class Scanner(QObject):
                 status = TranslationStatus.TranslationInstalled
 
             elif any(
-                string.original_string not in database_originals
+                string.original not in database_originals
                 and string not in database_strings
                 for string in modfile_strings
             ):
@@ -364,7 +364,7 @@ class Scanner(QObject):
             result[modfile] = self.__deep_scan_modfile_translation(
                 strings, modfile, ldialog
             )
-            translation.save_strings()
+            translation.save()
 
         return result
 
@@ -395,7 +395,7 @@ class Scanner(QObject):
             if matching is None:
                 new_string: String = copy(modfile_string)
                 new_string.status = String.Status.TranslationRequired
-                new_string.translated_string = new_string.original_string
+                new_string.string = new_string.original
                 translation_map[new_string.id] = new_string
                 translation_strings.append(new_string)
                 translation_complete = False

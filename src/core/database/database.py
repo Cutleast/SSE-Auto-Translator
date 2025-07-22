@@ -143,11 +143,12 @@ class TranslationDatabase(QObject):
 
         translation_path: Path = self.appdb_path / self.language.lower()
         translation = Translation(name="", path=translation_path, source=Source.Local)
-        translation.load_strings()
+        translation.strings  # build cache of strings by "calling" the strings property
         self.__vanilla_translation = translation
 
         self.log.info(
-            f"Loaded vanilla database for {len(translation.strings)} base game plugin(s)."
+            f"Loaded vanilla database for {len(translation.strings)} base game "
+            "plugin(s)."
         )
 
     def __load_user_database(self) -> None:
@@ -157,7 +158,8 @@ class TranslationDatabase(QObject):
 
         self.log.info("Loading user database...")
 
-        index_path: Path = self.userdb_path / self.language / "index.json"
+        db_path: Path = self.userdb_path / self.language
+        index_path: Path = db_path / "index.json"
 
         if not index_path.is_file():
             with index_path.open("w", encoding="utf8") as index_file:
@@ -171,31 +173,8 @@ class TranslationDatabase(QObject):
         for translation_data in translation_list:
             name: str = translation_data["name"]
             try:
-                mod_id: int = int(translation_data.pop("mod_id"))
-                file_id: Optional[int] = translation_data.pop("file_id", None)
-                translation_path: Path = self.userdb_path / self.language / name
-                source_name: str = translation_data.pop("source", "")
-                source: Optional[Source] = Source.get(source_name)
-
-                if source is None:
-                    if mod_id and file_id:
-                        source = Source.NexusMods
-                    elif mod_id:
-                        source = Source.Confrerie
-                    else:
-                        source = Source.Local
-
-                translation = Translation(
-                    path=translation_path,
-                    mod_id=ModId(mod_id=mod_id, file_id=file_id),
-                    original_mod_id=ModId(
-                        mod_id=translation_data.pop("original_mod_id", 0),
-                        file_id=translation_data.pop("original_file_id", None),
-                    ),
-                    **translation_data,
-                    source=source,
-                )
-                translation.load_strings()
+                translation = Translation.from_index_data(translation_data, db_path)
+                translation.strings  # build cache of strings by "calling" the strings property
                 translations.append(translation)
             except Exception as ex:
                 self.log.error(
@@ -386,7 +365,7 @@ class TranslationDatabase(QObject):
         ] + self.__user_translations
 
         database_originals: dict[str, String] = {
-            string.original_string: string
+            string.original: string
             for t in installed_translations
             for _modfile_name, modfile_strings in t.strings.items()
             if t != translation or _modfile_name != modfile_name
@@ -430,13 +409,13 @@ class TranslationDatabase(QObject):
             matching = database_strings.get(string.id)
 
             if matching is None:
-                matching = database_originals.get(string.original_string)
+                matching = database_originals.get(string.original)
 
             if matching is None:
                 continue
 
             full_matching = string.id == matching.id
-            string.translated_string = matching.translated_string
+            string.string = matching.string
 
             if full_matching or matching.status == String.Status.NoTranslationRequired:
                 string.status = matching.status
@@ -537,7 +516,7 @@ class TranslationDatabase(QObject):
             modfile_strings: list[String] = modfile.get_strings(self.cache)
 
             for string in modfile_strings:
-                string.translated_string = string.original_string
+                string.string = string.original
                 string.status = String.Status.TranslationRequired
 
             translation_strings.setdefault(modfile.name.lower(), []).extend(
@@ -551,7 +530,7 @@ class TranslationDatabase(QObject):
             self.apply_db_to_translation(translation)
 
         if add_and_save:
-            translation.save_strings()
+            translation.save()
             self.add_translation(translation)
 
         self.log.info(f"Created translation {translation.name!r}.")
@@ -611,9 +590,8 @@ class TranslationDatabase(QObject):
             Translation: The created translation.
         """
 
-        return Translation(
-            name=name, path=self.userdb_path / self.language / name, _strings=strings
-        )
+        path: Path = self.userdb_path / self.language / name
+        return Translation.create(name=name, path=path, strings=strings)
 
     def rename_translation(
         self, translation: Translation, new_name: str, save: bool = True

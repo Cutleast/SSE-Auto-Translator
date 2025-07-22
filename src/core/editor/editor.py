@@ -69,7 +69,7 @@ class Editor(QObject):
         """
 
         self.__translation.strings = self.__strings_cache
-        self.__translation.save_strings()
+        self.__translation.save()
 
         self.log.info(f"Saved translation {self.__translation.name!r}.")
         self.__changes_pending = False
@@ -135,13 +135,13 @@ class Editor(QObject):
         """
 
         if translation is not None:
-            string.translated_string = translation
+            string.string = translation
 
         if status is not None:
             string.status = status
 
             if status == String.Status.NoTranslationRequired:
-                string.translated_string = string.original_string
+                string.string = string.original
 
         self.update_signal.emit()
 
@@ -161,15 +161,13 @@ class Editor(QObject):
 
         self.log.info(f"Translating {len(strings)} string(s) with API...")
 
-        texts: list[str] = [
-            selected_string.original_string for selected_string in strings
-        ]
+        texts: list[str] = [selected_string.original for selected_string in strings]
         src: str = "English"
         dst: str = self.user_config.language.id
         result: dict[str, str] = self.translator.mass_translate(texts, src, dst)
 
         for string in strings:
-            string.translated_string = result[string.original_string]
+            string.string = result[string.original]
             string.status = String.Status.TranslationIncomplete
 
         self.update_signal.emit()
@@ -194,11 +192,11 @@ class Editor(QObject):
 
         modified_strings: int = 0
         for string in strings:
-            src: str = string.translated_string or string.original_string
+            src: str = string.string or string.original
             res: str = pattern.sub(replace_text, src)
-            string.translated_string = res
+            string.string = res
 
-            if src != string.translated_string:
+            if src != string.string:
                 string.status = String.Status.TranslationIncomplete
                 modified_strings += 1
 
@@ -221,7 +219,7 @@ class Editor(QObject):
         self.log.info(f"Applying database to {len(strings)} string(s)...")
 
         database_originals: dict[str, String] = {
-            string.original_string: string for string in self.database.strings
+            string.original: string for string in self.database.strings
         }
         database_strings: dict[str, String] = {
             string.id: string for string in self.database.strings
@@ -230,14 +228,12 @@ class Editor(QObject):
         modified_strings: int = 0
         for string in strings:
             if string.id in database_strings:
-                string.translated_string = database_strings[string.id].translated_string
+                string.string = database_strings[string.id].string
                 string.status = String.Status.TranslationComplete
                 modified_strings += 1
 
-            elif string.original_string in database_originals:
-                string.translated_string = database_originals[
-                    string.original_string
-                ].translated_string
+            elif string.original in database_originals:
+                string.string = database_originals[string.original].string
                 string.status = String.Status.TranslationIncomplete
                 modified_strings += 1
 
@@ -261,10 +257,10 @@ class Editor(QObject):
         modified_strings: int = 0
         for string in self.all_strings:
             if (
-                string.original_string == original
+                string.original == original
                 and string.status != String.Status.TranslationComplete
             ):
-                string.translated_string = translation
+                string.string = translation
                 string.status = String.Status.TranslationIncomplete
                 modified_strings += 1
 
@@ -284,7 +280,7 @@ class Editor(QObject):
         self.log.info(f"Resetting {len(strings)} string(s)...")
 
         for string in strings:
-            string.translated_string = None
+            string.string = None
             string.status = String.Status.TranslationRequired
 
         self.update_signal.emit()
@@ -310,7 +306,7 @@ class Editor(QObject):
 
         translation_strings: dict[str, list[String]] = {}
         for string in self.all_strings:
-            translation_strings.setdefault(string.original_string, []).append(string)
+            translation_strings.setdefault(string.original, []).append(string)
 
         strings_modified: int = 0
         for legacy_string in legacy_strings:
@@ -326,7 +322,7 @@ class Editor(QObject):
                 continue
 
             for matching_string in matching_strings:
-                matching_string.translated_string = translated
+                matching_string.string = translated
 
                 if (
                     legacy_string.get("type") == matching_string.type

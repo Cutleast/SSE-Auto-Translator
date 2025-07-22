@@ -68,8 +68,8 @@ class LangDetector:
         detection_string: str = ""
         c: int = 0
         for string_data in strings:
-            if string_data.original_string not in detection_string:
-                detection_string += string_data.original_string + "\n"
+            if string_data.original not in detection_string:
+                detection_string += string_data.original + "\n"
                 c += 1
                 if c == treshold:
                     break

@@ -263,7 +263,7 @@ class TranslatorDialog(QWidget):
         """
 
         translated: str = self.translator.translate(
-            self.__current_string.original_string,
+            self.__current_string.original,
             "English",
             self.user_config.language.id,
         )
@@ -275,7 +275,7 @@ class TranslatorDialog(QWidget):
         Resets string to original string.
         """
 
-        self.__translated_entry.setPlainText(self.__current_string.original_string)
+        self.__translated_entry.setPlainText(self.__current_string.original)
 
     def cancel(self, event: QCloseEvent) -> None:
         """
@@ -361,14 +361,13 @@ class TranslatorDialog(QWidget):
         self.__type_label.setText(f"{self.tr('Type')}: {self.__current_string.type}")
         self.__index_label.setText(f"{self.tr('Index')}: {self.__current_string.index}")
 
-        self.__original_entry.setPlainText(self.__current_string.original_string)
+        self.__original_entry.setPlainText(self.__current_string.original)
         try:
             self.__translated_entry.textChanged.disconnect(self.changes_signal.emit)
         except RuntimeError:
             pass
         self.__translated_entry.setPlainText(
-            self.__current_string.translated_string
-            or self.__current_string.original_string
+            self.__current_string.string or self.__current_string.original
         )
         self.__translated_entry.textChanged.connect(self.changes_signal.emit)
         self.__prev_text = self.__translated_entry.toPlainText()
@@ -442,20 +441,15 @@ class TranslatorDialog(QWidget):
         self.__current_string.status = status
 
         if self.changes_pending:
-            self.__current_string.translated_string = (
-                self.__translated_entry.toPlainText()
-            )
+            self.__current_string.string = self.__translated_entry.toPlainText()
 
         elif status == String.Status.NoTranslationRequired:
-            self.__current_string.translated_string = (
-                self.__current_string.original_string
-            )
+            self.__current_string.string = self.__current_string.original
 
         if status == String.Status.TranslationComplete:
             self.__parent.update_matching_strings(
-                self.__current_string.original_string,
-                self.__current_string.translated_string
-                or self.__current_string.original_string,
+                self.__current_string.original,
+                self.__current_string.string or self.__current_string.original,
             )
 
         self.changes_pending = False

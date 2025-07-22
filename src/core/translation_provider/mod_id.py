@@ -2,16 +2,17 @@
 Copyright (c) Cutleast
 """
 
-from typing import Optional
+from typing import Optional, override
 
-from pydantic.dataclasses import dataclass
+from pydantic import BaseModel, ConfigDict
 
 
-@dataclass(frozen=True, kw_only=True)
-class ModId:
+class ModId(BaseModel):
     """
     Dataclass for identifying mods at their source.
     """
+
+    model_config = ConfigDict(frozen=True)
 
     mod_id: int
     """The provider specific id of the mod."""
@@ -24,3 +25,7 @@ class ModId:
 
     nm_game_id: str = "skyrimspecialedition"
     """The Nexus Mods game id of the mod. Defaults to "skyrimspecialedition"."""
+
+    @override
+    def __hash__(self) -> int:
+        return hash((self.mod_id, self.file_id, self.nm_id, self.nm_game_id))

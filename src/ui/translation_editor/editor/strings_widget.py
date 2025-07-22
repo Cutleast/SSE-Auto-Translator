@@ -111,8 +111,8 @@ class StringsWidget(QTreeWidget):
                 string.type,
                 string.form_id,
                 string.editor_id if string.editor_id is not None else "",
-                trim_string(string.original_string),
-                trim_string(string.translated_string or string.original_string),
+                trim_string(string.original),
+                trim_string(string.string or string.original),
             ]
         )
 
@@ -144,10 +144,8 @@ class StringsWidget(QTreeWidget):
         )
 
         for string, item in self.__string_items.items():
-            item.setText(3, trim_string(string.original_string))
-            item.setText(
-                4, trim_string(string.translated_string or string.original_string)
-            )
+            item.setText(3, trim_string(string.original))
+            item.setText(4, trim_string(string.string or string.original))
 
             item.setHidden(
                 (
@@ -156,7 +154,7 @@ class StringsWidget(QTreeWidget):
                 )
                 or not matches_filter(
                     # TODO: Make filtering by other stuff possible
-                    string.original_string,
+                    string.original,
                     name_filter,
                     case_sensitive or False,
                 )

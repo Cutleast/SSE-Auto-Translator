@@ -146,11 +146,11 @@ class StringListWidget(QWidget):
         )
 
         for string, item in self.__string_items.items():
-            string_text: str = string.type + string.original_string + string.form_id
+            string_text: str = string.type + string.original + string.form_id
             if string.editor_id is not None:
                 string_text += string.editor_id
-            if string.translated_string is not None:
-                string_text += string.translated_string
+            if string.string is not None:
+                string_text += string.string
 
             item.setHidden(
                 not matches_filter(string_text, text_filter, case_sensitive or False)
@@ -196,9 +196,9 @@ class StringListWidget(QWidget):
         textbox = QPlainTextEdit()
         textbox.setReadOnly(True)
         if column == self.tr("Original"):
-            textbox.setPlainText(string.original_string)
+            textbox.setPlainText(string.original)
         else:
-            textbox.setPlainText(string.translated_string or string.original_string)
+            textbox.setPlainText(string.string or string.original)
         textbox.setTextInteractionFlags(Qt.TextInteractionFlag.TextSelectableByMouse)
         textbox.setCursor(Qt.CursorShape.IBeamCursor)
         textbox.setFocus()
@@ -257,8 +257,8 @@ class StringListWidget(QWidget):
                 string.form_id,
                 string.editor_id if string.editor_id is not None else "",
                 str(string.index) if string.index is not None else "",
-                trim_string(string.original_string),
-                trim_string(string.translated_string or string.original_string),
+                trim_string(string.original),
+                trim_string(string.string or string.original),
             ]
         )
 
@@ -266,8 +266,8 @@ class StringListWidget(QWidget):
         item.setToolTip(1, string.form_id)
         if string.editor_id is not None:
             item.setToolTip(2, string.editor_id)
-        item.setToolTip(4, string.original_string)
-        item.setToolTip(5, string.translated_string or string.original_string)
+        item.setToolTip(4, string.original)
+        item.setToolTip(5, string.string or string.original)
 
         if self.__translation_mode:
             color: Optional[QColor] = String.Status.get_color(string.status)

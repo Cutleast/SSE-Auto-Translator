@@ -11,7 +11,6 @@ from copy import copy
 from pathlib import Path
 from typing import Optional
 
-import jstyleson as json
 from PySide6.QtCore import QObject
 from sse_bsa import BSAArchive
 
@@ -21,6 +20,7 @@ from core.config.app_config import AppConfig
 from core.config.user_config import UserConfig
 from core.database.string import String
 from core.database.translation import Translation
+from core.database.translation_service import TranslationService
 from core.mod_file.mod_file import ModFile
 from core.mod_file.plugin_file import PluginFile
 from core.mod_file.translation_status import TranslationStatus
@@ -106,10 +106,12 @@ class Importer(QObject):
 
         self.log.debug(f"Importing strings from {len(dsd_files)} DSD file(s)...")
         for dsd_file in dsd_files:
-            dsd_path: Path = Path(dsd_file)
+            dsd_path: Path = mod.path / dsd_file
 
             try:
-                plugin_strings: list[String] = self.extract_dsd_strings(dsd_path)
+                plugin_strings: list[String] = (
+                    TranslationService.load_strings_from_json_file(dsd_path)
+                )
 
                 if len(plugin_strings):
                     strings.setdefault(dsd_path.parent.name.lower(), []).extend(
@@ -133,10 +135,10 @@ class Importer(QObject):
             version=mod.version,
             original_mod_id=original_mod.mod_id,
             original_version=original_mod.version,
-            _strings=strings,
             source=source,
         )
-        translation.save_strings()
+        translation.strings = strings
+        translation.save()
         self.database.add_translation(translation)
 
         self.log.info(f"Imported translation for {len(strings)} plugin(s).")
@@ -348,7 +350,9 @@ class Importer(QObject):
                     text2=modfile_name,
                 )
 
-            strings: list[String] = self.extract_dsd_strings(extracted_dsd_file)
+            strings: list[String] = TranslationService.load_strings_from_json_file(
+                extracted_dsd_file
+            )
 
             if len(strings):
                 translation_strings.setdefault(modfile_name.lower(), []).extend(strings)
@@ -362,34 +366,6 @@ class Importer(QObject):
         )
 
         return translation_strings
-
-    def extract_dsd_strings(self, dsd_file: Path) -> list[String]:
-        """
-        Extracts strings from a DSD file.
-
-        Args:
-            dsd_file (Path): Path to DSD file.
-
-        Returns:
-            list[String]: List of strings
-        """
-
-        self.log.debug(f"Extracting strings from DSD file '{dsd_file}'...")
-
-        with open(dsd_file, encoding="utf8") as file:
-            string_items: list[dict[str, str]] = json.load(file)
-
-        strings: list[String] = []
-        for string_item in string_items:
-            try:
-                strings.append(String.from_string_data(string_item))
-            except Exception as ex:
-                self.log.debug(f"File: '{dsd_file}'")
-                self.log.error(f"Failed to process invalid string: {ex}", exc_info=ex)
-
-        self.log.debug(f"Extracted {len(strings)} string(s) from DSD file.")
-
-        return strings
 
     def map_translation_strings(
         self, translation_modfile: ModFile, original_modfile: ModFile
@@ -450,8 +426,8 @@ class Importer(QObject):
                 continue
 
             merged_string: String = copy(translation_string)
-            merged_string.translated_string = merged_string.original_string
-            merged_string.original_string = original_string.original_string
+            merged_string.string = merged_string.original
+            merged_string.original = original_string.original
             merged_string.status = String.Status.TranslationComplete
             merged_strings.append(merged_string)
 

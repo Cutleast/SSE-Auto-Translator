@@ -6,20 +6,20 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 from __future__ import annotations
 
-from dataclasses import field
 from enum import auto
-from typing import Any, Iterable, Optional, override
+from typing import Annotated, Any, Iterable, Optional, TypeVar, override
 
-from pydantic.dataclasses import dataclass
+from pydantic import BaseModel, BeforeValidator, PlainSerializer, model_validator
 from PySide6.QtGui import QColor
 from PySide6.QtWidgets import QApplication
 
 from core.utilities.container_utils import unique
 from core.utilities.localized_enum import LocalizedEnum
 
+T = TypeVar("T")
 
-@dataclass
-class String:
+
+class String(BaseModel):
     """
     Class for translation strings.
     """
@@ -34,22 +34,22 @@ class String:
     Scheme: Record Subrecord, for eg. WEAP FULL
     """
 
-    original_string: str
+    original: str
     """
     String from original Plugin.
     """
 
-    translated_string: str | None = None
+    string: Optional[str] = None
     """
     Is None if string has no translation.
     """
 
-    index: int | None = None
+    index: Optional[int] = None
     """
     String index in current record (only for INFO and QUST).
     """
 
-    editor_id: str | None = None
+    editor_id: Optional[str] = None
     """
     EditorIDs are the IDs that are visible in CK, xTranslator and xEdit
     but not all strings do have one.
@@ -144,73 +144,24 @@ class String:
 
             return LOC_NAMES[self]
 
-    status: Status = field(default=Status.NoneStatus)
+    status: Annotated[
+        Status,
+        # Deserialize by name
+        BeforeValidator(
+            lambda member: (
+                String.Status[member]
+                if not isinstance(member, String.Status)
+                else member
+            )
+        ),
+        # Serialize by name
+        PlainSerializer(
+            lambda member: member.name, return_type=str, when_used="always"
+        ),
+    ] = Status.NoneStatus
     """
     Status visible in Editor Tab.
     """
-
-    @classmethod
-    def from_string_data(cls, string_data: dict[str, Any]) -> String:
-        editor_id: Optional[str] = string_data.get("editor_id")
-        form_id: Optional[str] = string_data.get("form_id")
-        index: Optional[int | str] = string_data.get("index")
-        if isinstance(index, str):
-            index = int(index)
-
-        if form_id is None:
-            raise ValueError("String data has no FormID!")
-
-        if "original" in string_data:
-            status = cls.Status.get(
-                string_data.get("status", "TranslationComplete"),
-                cls.Status.TranslationComplete,
-            )
-
-            return String(
-                editor_id=editor_id,
-                form_id=form_id,
-                index=index,
-                type=string_data["type"],
-                original_string=string_data["original"],
-                translated_string=string_data["string"],
-                status=status,
-            )
-
-        else:
-            status = cls.Status.get(
-                string_data.get("status", "TranslationRequired"),
-                cls.Status.TranslationRequired,
-            )
-
-            return String(
-                editor_id=editor_id,
-                form_id=form_id,
-                index=index,
-                type=string_data["type"],
-                original_string=string_data["string"],
-                status=status,
-            )
-
-    def to_string_data(self) -> dict[str, Optional[str | int]]:
-        if self.translated_string is not None:
-            return {
-                "editor_id": self.editor_id,
-                "form_id": self.form_id,
-                "index": self.index,
-                "type": self.type,
-                "original": self.original_string,
-                "string": self.translated_string,
-                "status": self.status.name,
-            }
-        else:
-            return {
-                "editor_id": self.editor_id,
-                "form_id": self.form_id,
-                "index": self.index,
-                "type": self.type,
-                "string": self.original_string,
-                "status": self.status.name,
-            }
 
     @property
     def id(self) -> str:
@@ -218,7 +169,7 @@ class String:
         Generates a unique ID for the string. Intended only for internal use.
 
         Included attributes:
-        - `form_id`
+        - lowered `form_id` without master index (first two digits)
         - `editor_id`
         - `type`
         - `index`
@@ -226,11 +177,29 @@ class String:
 
         return f"{self.form_id[2:].lower()}###{self.editor_id}###{self.type}###{self.index}"
 
+    @model_validator(mode="before")
+    @classmethod
+    def check_translated_string(cls, data: T) -> T:
+        """
+        Checks if the string has a translation and sets the status if it doesn't.
+
+        Args:
+            data (T): Raw string data.
+
+        Returns:
+            T: Raw string data.
+        """
+
+        if isinstance(data, dict):
+            if "original" not in data and "string" in data:
+                data["original"] = data.pop("string")
+                data["status"] = String.Status.TranslationRequired.name
+
+        return data
+
     @override
     def __hash__(self) -> int:
-        return hash(
-            (self.id, self.original_string, self.translated_string, self.status)
-        )
+        return hash((self.id, self.original, self.string, self.status))
 
     @override
     def __eq__(self, value: Any) -> bool:
@@ -240,7 +209,7 @@ class String:
         return (
             self.id == value.id
             and self.status == value.status
-            and self.translated_string == value.translated_string
+            and self.string == value.string
         )
 
     @staticmethod
@@ -260,14 +229,3 @@ class String:
         """
 
         return unique(strings, key=lambda s: s.id)
-
-    # def __hash__(self) -> int:
-    #     return hash((self.form_id[2:].lower(), self.editor_id, self.type, self.index))
-
-    # def __eq__(self, __value: object) -> bool:
-    #     if isinstance(__value, String):
-    #         return hash(__value) == hash(self)
-
-    #     raise ValueError(
-    #         f"Comparison between String and object of type {type(__value)} not possible!"
-    #     )

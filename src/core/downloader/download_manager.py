@@ -445,6 +445,9 @@ class DownloadManager(QObject):
     def __collect_update_for_translation(
         self, translation: Translation, original_mod: Mod
     ) -> dict[tuple[str, ModId], list[TranslationDownload]]:
+        if translation.mod_id is None:
+            return {}
+
         new_file_id: Optional[ModId] = self.provider.get_updated_mod_id(
             translation.mod_id
         )

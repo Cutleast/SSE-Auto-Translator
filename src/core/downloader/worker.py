@@ -183,12 +183,12 @@ class Worker(QThread):
             version=translation_details.version,
             original_mod_id=original_mod.mod_id,
             original_version=original_mod.version,
-            _strings=strings,
             status=Translation.Status.Ok,
             source=download.source,
             timestamp=translation_details.timestamp,
         )
-        translation.save_strings()
+        translation.strings = strings
+        translation.save()
         self.database.add_translation(translation)
 
         self.database.importer.extract_additional_files(

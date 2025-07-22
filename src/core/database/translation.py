@@ -2,28 +2,25 @@
 Copyright (c) Cutleast
 """
 
-import logging
-import os
-import pickle
-import sys
+from __future__ import annotations
+
 import time
-from dataclasses import dataclass, field
-from enum import StrEnum
+from functools import lru_cache
 from pathlib import Path
 from typing import Any, Optional, override
 
-import jstyleson as json
+from pydantic import BaseModel, Field
+from PySide6.QtWidgets import QApplication
 
-from core import plugin_interface, utilities
-from core.database import string
 from core.database.string import String
+from core.database.translation_service import TranslationService
 from core.translation_provider.mod_id import ModId
 from core.translation_provider.source import Source
 from core.utilities.filesystem import get_folder_size
+from core.utilities.localized_enum import LocalizedEnum
 
 
-@dataclass(kw_only=True)
-class Translation:
+class Translation(BaseModel):
     """
     Class for mod translations.
     """
@@ -38,22 +35,22 @@ class Translation:
     The path to the translation.
     """
 
-    mod_id: ModId = field(default=ModId(mod_id=0))
+    mod_id: Optional[ModId] = None
     """
     The mod identifier of the translation at its source.
     """
 
-    version: str = field(default="")
+    version: Optional[str] = None
     """
     The version of the translation at its source.
     """
 
-    original_mod_id: ModId = field(default=ModId(mod_id=0))
+    original_mod_id: Optional[ModId] = None
     """
     The mod id of the original mod.
     """
 
-    original_version: str = field(default="")
+    original_version: Optional[str] = None
     """
     The version of the original mod.
     """
@@ -63,7 +60,7 @@ class Translation:
     Map of mod file names to list of strings.
     """
 
-    class Status(StrEnum):
+    class Status(LocalizedEnum):
         """
         Enum for different Statuses
         """
@@ -72,117 +69,48 @@ class Translation:
         UpdateAvailable = "Update available"
         UpdateIgnored = "Update ignored"
 
-    status: Optional[Status] = field(default=Status.Ok)
+        @override
+        def get_localized_name(self) -> str:
+            locs: dict[Translation.Status, str] = {
+                Translation.Status.Ok: QApplication.translate("Translation", "Ok"),
+                Translation.Status.UpdateAvailable: QApplication.translate(
+                    "Translation", "Update available"
+                ),
+                Translation.Status.UpdateIgnored: QApplication.translate(
+                    "Translation", "Update ignored"
+                ),
+            }
+
+            return locs[self]
+
+        @override
+        def get_localized_description(self) -> str:
+            locs: dict[Translation.Status, str] = {
+                Translation.Status.Ok: QApplication.translate("Translation", "Ok"),
+                Translation.Status.UpdateAvailable: QApplication.translate(
+                    "Translation", "An update is available for the translation."
+                ),
+                Translation.Status.UpdateIgnored: QApplication.translate(
+                    "Translation", "Available updates have been ignored."
+                ),
+            }
+
+            return locs[self]
+
+    status: Status = Status.Ok
     """
     The (update) status of the translation.
     """
 
-    source: Optional[Source] = field(default=Source.Local)
+    source: Source = Source.Local
     """
     The source of the translation.
     """
 
-    timestamp: Optional[int] = field(default_factory=lambda: int(time.time()))
+    timestamp: int = Field(default_factory=lambda: int(time.time()))
     """
     The install timestamp of the translation.
     """
-
-    log: logging.Logger = logging.getLogger("TranslationDatabase")
-
-    __size: Optional[int] = None  # type: ignore
-
-    def load_strings(self) -> None:
-        """
-        Loads strings from translation.
-        """
-
-        if self._strings is None:
-            self._strings = {}
-
-            translation_paths = list(self.path.glob("*.ats"))
-
-            # Fix translation files that were generated outside of SSE-AT
-            # TODO: Improve this
-            sys.modules["plugin_parser"] = plugin_interface
-            sys.modules["plugin_parser.string"] = string
-            sys.modules["utilities"] = utilities
-            sys.modules["utilities.string"] = string
-            sys.modules["plugin_interface"] = plugin_interface
-            for translation_path in translation_paths:
-                try:
-                    with translation_path.open("rb") as file:
-                        self._strings[translation_path.stem.lower()] = pickle.load(file)
-                except EOFError as ex:
-                    self.log.error(
-                        f"Failed to load strings from database file '{translation_path}'",
-                        exc_info=ex,
-                    )
-
-            sys.modules.pop("plugin_parser.string")
-            sys.modules.pop("plugin_parser")
-            sys.modules.pop("utilities")
-            sys.modules.pop("utilities.string")
-            sys.modules.pop("plugin_interface")
-
-            translation_paths = list(self.path.glob("*.json"))
-
-            for translation_path in translation_paths:
-                if translation_path.stem.lower() in self._strings:
-                    continue
-
-                try:
-                    with open(
-                        translation_path, "r", encoding="utf8"
-                    ) as translation_file:
-                        strings_data: list[dict[str, str]] = json.load(translation_file)
-
-                    strings = [
-                        String.from_string_data(string_data)
-                        for string_data in strings_data
-                    ]
-
-                    self._strings[translation_path.stem.lower()] = String.unique(
-                        strings
-                    )
-                except Exception as ex:
-                    self.log.error(
-                        f"Failed to load strings from database file '{translation_path}'",
-                        exc_info=ex,
-                    )
-
-            self.optimize_strings()
-
-    def save_strings(self) -> None:
-        """
-        Saves strings to folder.
-        """
-
-        if self._strings is None:
-            return
-
-        self.path.mkdir(parents=True, exist_ok=True)
-
-        for modfile_name, modfile_strings in self._strings.items():
-            modfile_name = modfile_name.lower()
-            with open(self.path / (modfile_name + ".ats"), "wb") as file:
-                pickle.dump(String.unique(modfile_strings), file)
-
-        # Reset cached size
-        self.__size = None
-
-    def optimize_strings(self) -> None:
-        """
-        Optimizes translation by converting it from JSON files to pickle files
-        if not already done.
-        """
-
-        json_files = list(self.path.glob("*.json"))
-
-        if json_files:
-            self.save_strings()
-
-            for json_file in json_files:
-                os.remove(json_file)
 
     def to_index_data(self) -> dict[str, Any]:
         """
@@ -194,15 +122,77 @@ class Translation:
 
         return {
             "name": self.name,
-            "mod_id": self.mod_id.mod_id,
-            "file_id": self.mod_id.file_id,
+            "mod_id": self.mod_id.mod_id if self.mod_id else None,
+            "file_id": self.mod_id.file_id if self.mod_id else None,
             "version": self.version,
-            "original_mod_id": self.original_mod_id.mod_id,
-            "original_file_id": self.original_mod_id.file_id,
+            "original_mod_id": (
+                self.original_mod_id.mod_id if self.original_mod_id else None
+            ),
+            "original_file_id": (
+                self.original_mod_id.file_id if self.original_mod_id else None
+            ),
             "original_version": self.original_version,
-            "source": self.source.name if self.source is not None else None,
+            "source": self.source.name,
             "timestamp": self.timestamp,
         }
+
+    @staticmethod
+    def from_index_data(index_data: dict[str, Any], database_path: Path) -> Translation:
+        """
+        Gets a Translation object from the specified index data.
+
+        Args:
+            index_data (dict[str, Any]): Entry from the database's index.json file.
+            database_path (Path): The path to the database.
+
+        Returns:
+            Translation: Translation object.
+        """
+
+        name: str = index_data["name"]
+        mod_id: int = int(index_data.pop("mod_id"))
+        file_id: Optional[int] = index_data.pop("file_id", None)
+        translation_path: Path = database_path / name
+        source_name: str = index_data.pop("source", "")
+        source: Optional[Source] = Source.get(source_name)
+
+        if source is None:
+            if mod_id and file_id:
+                source = Source.NexusMods
+            elif mod_id:
+                source = Source.Confrerie
+            else:
+                source = Source.Local
+
+        return Translation(
+            path=translation_path,
+            mod_id=ModId(mod_id=mod_id, file_id=file_id),
+            original_mod_id=ModId(
+                mod_id=index_data.pop("original_mod_id", 0),
+                file_id=index_data.pop("original_file_id", None),
+            ),
+            **index_data,
+            source=source,
+        )
+
+    @staticmethod
+    def create(
+        name: str, path: Path, strings: Optional[dict[str, list[String]]] = None
+    ) -> Translation:
+        """
+        Creates a new translation.
+
+        Args:
+            name (str): The name of the translation.
+            path (Path): The path to the translation's folder.
+            strings (Optional[dict[str, list[String]]], optional):
+                The initial strings of the translation. Defaults to None.
+
+        Returns:
+            Translation: Created translation.
+        """
+
+        return Translation(name=name, path=path, _strings=strings)
 
     @property
     def id(self) -> str:
@@ -218,7 +208,7 @@ class Translation:
 
     @override
     def __hash__(self) -> int:
-        return hash((self.name, self.path))
+        return hash(self.id)
 
     @property
     def strings(self) -> dict[str, list[String]]:
@@ -227,13 +217,24 @@ class Translation:
         """
 
         if self._strings is None:
-            self.load_strings()
+            self._strings = TranslationService.load_translation_strings(self.path)
 
         return self._strings or {}
 
     @strings.setter
     def strings(self, strings: dict[str, list[String]]) -> None:
         self._strings = strings
+
+    @lru_cache
+    def get_size(self) -> int:
+        """
+        Returns the size of the translation in bytes.
+
+        Returns:
+            int: Size of the translation in bytes.
+        """
+
+        return get_folder_size(self.path)
 
     @property
     def size(self) -> int:
@@ -244,10 +245,7 @@ class Translation:
             int: Size of the translation in bytes.
         """
 
-        if self.__size is None:
-            self.__size = get_folder_size(self.path)
-
-        return self.__size
+        return self.get_size()
 
     def remove_duplicates(self, save: bool = True) -> None:
         """
@@ -261,4 +259,11 @@ class Translation:
             self.strings[modfile_name] = String.unique(modfile_strings)
 
         if save:
-            self.save_strings()
+            self.save()
+
+    def save(self) -> None:
+        """
+        Saves the translation.
+        """
+
+        TranslationService.save_translation_strings(self.path, self.strings)

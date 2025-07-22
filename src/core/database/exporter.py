@@ -8,11 +8,11 @@ import shutil
 from pathlib import Path
 from typing import Optional
 
-import jstyleson as json
 from PySide6.QtCore import QObject
 
 from core.config.user_config import UserConfig
 from core.database.string import String
+from core.database.translation import TranslationService
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
@@ -105,15 +105,7 @@ class Exporter(QObject):
             path / "SKSE" / "Plugins" / "DynamicStringDistributor" / plugin_name
         )
 
-        if not plugin_folder.is_dir():
-            os.makedirs(plugin_folder)
-
-        string_data: list[dict[str, Optional[str | int]]] = [
-            string.to_string_data()
-            for string in strings
-            if string.original_string != string.translated_string
-            and string.translated_string
-        ]
+        plugin_folder.mkdir(parents=True, exist_ok=True)
 
         json_filename: str
         if output_mod:
@@ -121,9 +113,15 @@ class Exporter(QObject):
         else:
             json_filename = "SSE-AT_exported.json"
 
+        strings = list(
+            filter(
+                lambda s: (s.original != s.string and s.string),
+                strings,
+            )
+        )
+
         dsd_path: Path = plugin_folder / json_filename
-        with dsd_path.open("w", encoding="utf8") as dsd_file:
-            json.dump(string_data, dsd_file, indent=4, ensure_ascii=False)
+        TranslationService.save_strings_to_json_file(dsd_path, strings, indent=4)
 
         return dsd_path
 

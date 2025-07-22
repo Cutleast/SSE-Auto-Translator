@@ -146,7 +146,7 @@ class Plugin:
                                 form_id=formid,
                                 index=subrecord.index,
                                 type=f"{record.type} {subrecord.type}",
-                                original_string=str(string),
+                                original=str(string),
                                 status=(
                                     PluginString.Status.TranslationRequired
                                     if isinstance(string, int)
@@ -201,7 +201,7 @@ class Plugin:
                 plugin_string.form_id[2:]
                 == form_id[2:]  # Ignore master index and FE prefix
                 and plugin_string.type == type
-                and plugin_string.original_string == string
+                and plugin_string.original == string
                 and plugin_string.index == index
             ):
                 string_subrecord = subrecord
@@ -216,11 +216,11 @@ class Plugin:
 
         for string in strings:
             subrecord = self.find_string_subrecord(
-                string.form_id, string.type, string.original_string, string.index
+                string.form_id, string.type, string.original, string.index
             )
 
             if subrecord:
-                subrecord.set_string(string.translated_string or string.original_string)
+                subrecord.set_string(string.string or string.original)
             else:
                 self.log.error(
                     f"Failed to replace string {string}: Subrecord not found!"

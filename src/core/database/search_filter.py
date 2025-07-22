@@ -51,10 +51,10 @@ def matches_filter(filter: SearchFilter, string: String) -> bool:
         matching = False
 
     if original_filter and matching:
-        matching = original_filter.lower() in string.original_string.lower()
+        matching = original_filter.lower() in string.original.lower()
 
-    if string_filter and matching and string.translated_string is not None:
-        matching = string_filter.lower() in string.translated_string.lower()
+    if string_filter and matching and string.string is not None:
+        matching = string_filter.lower() in string.string.lower()
     elif string_filter:
         matching = False
 

@@ -778,8 +778,8 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
 <context>
     <name>Exporter</name>
     <message>
-        <location filename="src/core/database/exporter.py" line="259"/>
-        <location filename="src/core/database/exporter.py" line="265"/>
+        <location filename="src/core/database/exporter.py" line="257"/>
+        <location filename="src/core/database/exporter.py" line="263"/>
         <source>Building output mod...</source>
         <translation>Output-Mod wird erstellt...</translation>
     </message>
@@ -815,28 +815,28 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
 <context>
     <name>Importer</name>
     <message>
-        <location filename="src/core/database/importer.py" line="167"/>
-        <location filename="src/core/database/importer.py" line="276"/>
+        <location filename="src/core/database/importer.py" line="169"/>
+        <location filename="src/core/database/importer.py" line="278"/>
         <source>Processing archive...</source>
         <translation>Archiv wird verarbeitet...</translation>
     </message>
     <message>
-        <location filename="src/core/database/importer.py" line="203"/>
+        <location filename="src/core/database/importer.py" line="205"/>
         <source>Extracting files...</source>
         <translation>Dateien werden extrahiert...</translation>
     </message>
     <message>
-        <location filename="src/core/database/importer.py" line="240"/>
+        <location filename="src/core/database/importer.py" line="242"/>
         <source>Copying files...</source>
         <translation>Dateien werden kopiert...</translation>
     </message>
     <message>
-        <location filename="src/core/database/importer.py" line="302"/>
+        <location filename="src/core/database/importer.py" line="304"/>
         <source>Processing plugins...</source>
         <translation>Plugins werden verarbeitet...</translation>
     </message>
     <message>
-        <location filename="src/core/database/importer.py" line="344"/>
+        <location filename="src/core/database/importer.py" line="346"/>
         <source>Processing DSD files...</source>
         <translation>DSD-Dateien werden verarbeitet...</translation>
     </message>
@@ -1842,6 +1842,35 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
     </message>
 </context>
 <context>
+    <name>Translation</name>
+    <message>
+        <location filename="src/core/database/translation.py" line="75"/>
+        <location filename="src/core/database/translation.py" line="89"/>
+        <source>Ok</source>
+        <translation type="unfinished">Ok</translation>
+    </message>
+    <message>
+        <location filename="src/core/database/translation.py" line="78"/>
+        <source>Update available</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/database/translation.py" line="81"/>
+        <source>Update ignored</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/database/translation.py" line="92"/>
+        <source>An update is available for the translation.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/core/database/translation.py" line="95"/>
+        <source>Available updates have been ignored.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>TranslationsMenu</name>
     <message>
         <location filename="src/ui/main_page/database/translations/translations_menu.py" line="63"/>
@@ -1953,12 +1982,12 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
         </translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="324"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="330"/>
         <source>No updates available!</source>
         <translation>Keine Updates verfügbar!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="327"/>
+        <location filename="src/ui/main_page/database/translations/translations_tab.py" line="333"/>
         <source>There are no updates available for translations with installed original mods.</source>
         <translation>Es sind keine Updates für Übersetzungen mit installierter Originalmod verfügbar.</translation>
     </message>
@@ -2024,42 +2053,42 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
         <translation>Unbekannt</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="401"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="394"/>
         <source>Rename translation</source>
         <translation>Übersetzung unbenennen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="402"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="395"/>
         <source>Enter new translation name:</source>
         <translation>Neuen Namen der Übersetzung eingeben:</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="405"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="398"/>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="406"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="399"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="437"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="430"/>
         <source>Export translation...</source>
         <translation>Übersetzung exportieren...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="456"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="449"/>
         <source>Export successful!</source>
         <translation>Export erfolgreich!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="457"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="450"/>
         <source>Translation successfully exported.</source>
         <translation>Übersetzung erfolgreich exportiert.</translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="470"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="463"/>
         <source>Delete translation</source>
         <comment>Delete translations</comment>
         <translation>
@@ -2068,7 +2097,7 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="477"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="470"/>
         <source>Are you sure you want to delete this translation?</source>
         <comment>Are you sure you want to delete %n translations?</comment>
         <translation>
@@ -2077,12 +2106,12 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
         </translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="484"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="477"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="485"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="478"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
