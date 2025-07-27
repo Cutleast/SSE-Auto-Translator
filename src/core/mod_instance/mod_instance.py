@@ -2,6 +2,7 @@
 Copyright (c) Cutleast
 """
 
+from pathlib import Path
 from typing import Optional
 
 from core.mod_file.mod_file import ModFile
@@ -83,10 +84,9 @@ class ModInstance:
 
     def get_modfile(
         self,
-        modfile_name: str,
+        modfile: Path,
         ignore_mods: list[Mod] = [],
         ignore_states: list[TranslationStatus] = [],
-        ignore_case: bool = False,
     ) -> Optional[ModFile]:
         """
         Get a mod file by its name or None if it doesn't exist.
@@ -94,22 +94,20 @@ class ModInstance:
         multiple mod files with the same name.
 
         Args:
-            modfile_name (str): Name of the mod file
+            modfile (Path): Path of the mod file, relative to the game's "Data" folder.
             ignore_mods (list[Mod], optional): List of mods to ignore. Defaults to [].
             ignore_states (list[TranslationStatus], optional):
                 List of mod file states to ignore. Defaults to [].
-            ignore_case (bool, optional): Whether to ignore case. Defaults to False.
 
         Returns:
             Optional[ModFile]: Mod file or None
         """
 
         mods: dict[Mod, ModFile] = {
-            mod: modfile
+            mod: mf
             for mod in filter(lambda m: m not in ignore_mods, self.mods)
-            for modfile in filter(lambda m: m.status not in ignore_states, mod.modfiles)
-            if modfile.name == modfile_name
-            or (ignore_case and modfile.name.lower() == modfile_name.lower())
+            for mf in filter(lambda mf: mf.status not in ignore_states, mod.modfiles)
+            if mf.path == modfile
         }
 
         # Get the mod file from the mod with the highest modlist index
@@ -142,10 +140,9 @@ class ModInstance:
 
     def get_mod_with_modfile(
         self,
-        modfile_name: str,
+        modfile: Path,
         ignore_mods: list[Mod] = [],
         ignore_states: list[TranslationStatus] = [],
-        ignore_case: bool = False,
     ) -> Optional[Mod]:
         """
         Get a mod that has the specified mod file or None if it doesn't exist.
@@ -153,11 +150,11 @@ class ModInstance:
         multiple mods with the same mod file.
 
         Args:
-            modfile_name (str): Name of the mod file
+            modfile_name (Path):
+                Path of the mod file, relative to the game's "Data" folder.
             ignore_mods (list[Mod], optional): List of mods to ignore. Defaults to [].
             ignore_states (list[TranslationStatus], optional):
                 List of mod file states to ignore. Defaults to [].
-            ignore_case (bool, optional): Whether to ignore case. Defaults to False.
 
         Returns:
             Optional[Mod]: Mod or None
@@ -166,9 +163,8 @@ class ModInstance:
         mods: list[Mod] = unique(
             mod
             for mod in filter(lambda m: m not in ignore_mods, self.mods)
-            for modfile in filter(lambda m: m.status not in ignore_states, mod.modfiles)
-            if modfile.name == modfile_name
-            or (ignore_case and modfile.name.lower() == modfile_name.lower())
+            for mf in filter(lambda mf: mf.status not in ignore_states, mod.modfiles)
+            if mf.path == modfile
         )
 
         # Get the mod with the highest modlist index

@@ -187,7 +187,7 @@ class Esp2Dsd(Utility):
 
         output_file_path: Path = Exporter.export_strings_to_dsd(
             mapped_strings,
-            original_plugin_path.name,
+            Path(original_plugin_path.name),
             output_path or Path("esp2dsd Output"),
         )
         self.log.debug(f"Created output file at '{output_file_path}'.")

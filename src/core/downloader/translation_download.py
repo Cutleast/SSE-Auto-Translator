@@ -5,6 +5,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 from dataclasses import dataclass
+from pathlib import Path
 from typing import override
 
 from core.translation_provider.mod_id import ModId
@@ -29,9 +30,10 @@ class TranslationDownload:
     Mod identifier used to open the mod page.
     """
 
-    modfile_name: str
+    modfile: Path
     """
-    The name of the mod file this translation is for.
+    The path of the mod file this translation is for, relative to the game's "Data"
+    folder.
     """
 
     source: Source
@@ -46,4 +48,4 @@ class TranslationDownload:
 
     @override
     def __hash__(self) -> int:
-        return hash((self.mod_id, self.modfile_name, self.source.name))
+        return hash((self.mod_id, self.modfile, self.source.name))

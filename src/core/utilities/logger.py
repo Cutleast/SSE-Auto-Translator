@@ -6,7 +6,9 @@ import logging
 import os
 import re
 import sys
+import time
 from datetime import datetime
+from functools import wraps
 from io import TextIOWrapper
 from pathlib import Path
 from typing import Callable, Optional, TextIO, override
@@ -185,3 +187,35 @@ class Logger(logging.Logger):
         """
 
         return self.__log_file_path
+
+    @classmethod
+    def timeit[**P, R](
+        cls, *, logger_name: Optional[str] = None
+    ) -> Callable[[Callable[P, R]], Callable[P, R]]:
+        """
+        Decorator that logs the execution time of a function.
+
+        Args:
+            logger_name (Optional[str], optional): Name of logger to use.
+                If not specified, uses the root logger.
+
+        Returns:
+            Callable[[Callable[P, R]], Callable[P, R]]: Decorator
+        """
+
+        def decorator(func: Callable[P, R]) -> Callable[P, R]:
+            @wraps(func)
+            def wrapper(*args: P.args, **kwargs: P.kwargs) -> R:
+                start_time: float = time.time()
+                result: R = func(*args, **kwargs)
+                end_time: float = time.time()
+                logger: logging.Logger = logging.getLogger(logger_name)
+                logger.debug(
+                    f"Function '{func.__qualname__}' took {end_time - start_time:.4f} "
+                    "second(s) to execute."
+                )
+                return result
+
+            return wrapper
+
+        return decorator

@@ -25,6 +25,7 @@ from core.cache.cache import Cache
 from core.config.app_config import AppConfig
 from core.config.user_config import UserConfig
 from core.database.database import TranslationDatabase
+from core.database.exporter import Exporter
 from core.database.search_filter import SearchFilter
 from core.database.string import String
 from core.database.translation import Translation
@@ -437,10 +438,12 @@ class MainPageWidget(QWidget):
 
         output_path: Path = LoadingDialog.run_callable(
             QApplication.activeModalWidget(),
-            lambda ldialog: self.database.exporter.build_output_mod(
+            lambda ldialog: Exporter().build_output_mod(
                 self.app_config.output_path or (get_current_path() / "SSE-AT Output"),
                 self.mod_instance,
+                self.database.user_translations,
                 self.app_config.get_tmp_dir(),
+                self.user_config,
                 ldialog,
             ),
         )
@@ -494,7 +497,7 @@ class MainPageWidget(QWidget):
         if dialog.exec() == QDialog.DialogCode.Accepted:
             filter: SearchFilter = dialog.get_filter()
 
-            search_result: dict[str, list[String]] = LoadingDialog.run_callable(
+            search_result: dict[Path, list[String]] = LoadingDialog.run_callable(
                 QApplication.activeModalWidget(),
                 lambda ldialog: self.scanner.run_string_search(
                     self.__modinstance_widget.get_checked_items(), filter, ldialog

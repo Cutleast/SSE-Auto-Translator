@@ -25,6 +25,8 @@ from PySide6.QtWidgets import (
 from app_context import AppContext
 from core.config.app_config import AppConfig
 from core.database.database import TranslationDatabase
+from core.database.database_service import DatabaseService
+from core.database.exporter import Exporter
 from core.database.translation import Translation
 from core.mod_instance.mod_instance import ModInstance
 from core.translation_provider.exceptions import ModNotFoundError
@@ -46,9 +48,12 @@ class TranslationsWidget(QTreeWidget):
 
     log: logging.Logger = logging.getLogger("TranslationsWidget")
 
-    files_dropped = Signal(list[Path])
+    files_dropped = Signal(list)
     """
     This signal is emitted when one or more files are dropped on the widget.
+
+    Args:
+        list[Path]: List of dropped files.
     """
 
     edit_translation_requested = Signal(Translation)
@@ -74,7 +79,7 @@ class TranslationsWidget(QTreeWidget):
     Mapping of loaded translations and their tree items.
     """
 
-    __file_items: dict[Translation, dict[str, QTreeWidgetItem]]
+    __file_items: dict[Translation, dict[Path, QTreeWidgetItem]]
     """
     Mapping of loaded translations to their file tree items.
     """
@@ -116,6 +121,7 @@ class TranslationsWidget(QTreeWidget):
         self.__load_translations()
 
     def __init_ui(self) -> None:
+        self.setAcceptDrops(True)
         self.setAlternatingRowColors(True)
         self.setSelectionMode(QAbstractItemView.SelectionMode.ExtendedSelection)
         self.setExpandsOnDoubleClick(False)
@@ -181,9 +187,13 @@ class TranslationsWidget(QTreeWidget):
             self.__translation_items[translation] = item
             self.addTopLevelItem(item)
 
-        self.__update()
+        self.update_translations()
 
-    def __update(self) -> None:
+    def update_translations(self) -> None:
+        """
+        Updates the visible translations.
+        """
+
         name_filter: Optional[str] = (
             self.__name_filter[0] if self.__name_filter else None
         )
@@ -192,13 +202,13 @@ class TranslationsWidget(QTreeWidget):
         )
 
         for translation, translation_item in self.__translation_items.items():
-            file_items: dict[str, QTreeWidgetItem] = self.__file_items.get(
+            file_items: dict[Path, QTreeWidgetItem] = self.__file_items.get(
                 translation, {}
             )
 
             for file, file_item in file_items.items():
                 file_item.setHidden(
-                    not matches_filter(file, name_filter, case_sensitive or False)
+                    not matches_filter(str(file), name_filter, case_sensitive or False)
                 )
 
             if translation.status == Translation.Status.UpdateAvailable:
@@ -240,13 +250,13 @@ class TranslationsWidget(QTreeWidget):
         return item
 
     def _create_translation_file_items(
-        self, translation: Translation, files: list[str]
+        self, translation: Translation, files: list[Path]
     ) -> list[QTreeWidgetItem]:
         items: list[QTreeWidgetItem] = []
         for file in files:
             item = QTreeWidgetItem(
                 [
-                    file,
+                    str(file),
                     "",  # version
                     "",  # source
                     "",  # date
@@ -259,7 +269,7 @@ class TranslationsWidget(QTreeWidget):
         return items
 
     def __item_double_clicked(self, item: QTreeWidgetItem, column: int) -> None:
-        current_item: Optional[Translation | str] = self.get_current_item()
+        current_item: Optional[Translation | Path] = self.get_current_item()
 
         if current_item is not None and self.app_config.show_strings_on_double_click:
             self.__show_strings()
@@ -270,7 +280,7 @@ class TranslationsWidget(QTreeWidget):
     def dragEnterEvent(self, event: QDragEnterEvent) -> None:
         if (
             all(
-                self.is_valid_translation_file(url.toLocalFile())
+                TranslationsWidget.is_valid_translation_file(url.toLocalFile())
                 for url in event.mimeData().urls()
             )
             and event.mimeData().hasUrls()
@@ -312,12 +322,12 @@ class TranslationsWidget(QTreeWidget):
 
         super().dropEvent(event)
 
-    def get_selected_items(self) -> tuple[list[Translation], list[str]]:
+    def get_selected_items(self) -> tuple[list[Translation], list[Path]]:
         """
         Returns the currently selected items.
 
         Returns:
-            tuple[list[Translation], list[str]]: Selected translations and files
+            tuple[list[Translation], list[Path]]: Selected translations and files
         """
 
         selected_translations: list[Translation] = [
@@ -325,7 +335,7 @@ class TranslationsWidget(QTreeWidget):
             for translation, item in self.__translation_items.items()
             if item.isSelected()
         ]
-        selected_files: list[str] = [
+        selected_files: list[Path] = [
             file
             for file_items in self.__file_items.values()
             for file, item in file_items.items()
@@ -334,7 +344,7 @@ class TranslationsWidget(QTreeWidget):
 
         return selected_translations, selected_files
 
-    def get_current_item(self) -> Optional[Translation | str]:
+    def get_current_item(self) -> Optional[Translation | Path]:
         """
         Returns the item where the cursor is.
 
@@ -342,7 +352,7 @@ class TranslationsWidget(QTreeWidget):
             Optional[Translation]: Current item or None
         """
 
-        item: Optional[Translation | str] = None
+        item: Optional[Translation | Path] = None
 
         for translation in self.__translation_items:
             if self.__translation_items[translation].isSelected():
@@ -361,7 +371,9 @@ class TranslationsWidget(QTreeWidget):
 
         SUPPORTED_EXTS = [".7z", ".rar", ".zip", ".esp", ".esm", ".esl"]
 
-        return path.is_file() and path.suffix.lower() in SUPPORTED_EXTS
+        valid: bool = path.is_file() and path.suffix.lower() in SUPPORTED_EXTS
+
+        return valid
 
     def __ignore_updates(self) -> None:
         selected_translations: list[Translation] = self.get_selected_items()[0]
@@ -369,10 +381,10 @@ class TranslationsWidget(QTreeWidget):
         for translation in selected_translations:
             translation.status = Translation.Status.UpdateIgnored
 
-        self.__update()
+        self.update_translations()
 
     def __show_strings(self) -> None:
-        current_item: Optional[Translation | str] = self.get_current_item()
+        current_item: Optional[Translation | Path] = self.get_current_item()
 
         if isinstance(current_item, Translation) and current_item.strings:
             dialog = StringListDialog(
@@ -381,13 +393,13 @@ class TranslationsWidget(QTreeWidget):
             dialog.show()
 
     def __edit_translation(self) -> None:
-        current_item: Optional[Translation | str] = self.get_current_item()
+        current_item: Optional[Translation | Path] = self.get_current_item()
 
         if isinstance(current_item, Translation):
             self.edit_translation_requested.emit(current_item)
 
     def __rename_translation(self) -> None:
-        current_item: Optional[Translation | str] = self.get_current_item()
+        current_item: Optional[Translation | Path] = self.get_current_item()
 
         if isinstance(current_item, Translation):
             dialog = QInputDialog(QApplication.activeModalWidget())
@@ -404,14 +416,16 @@ class TranslationsWidget(QTreeWidget):
 
             if dialog.exec() == dialog.DialogCode.Accepted:
                 new_name = dialog.textValue()
-                self.database.rename_translation(current_item, new_name)
+                DatabaseService.rename_translation(
+                    current_item, new_name, self.database
+                )
 
     def __export_translation(self) -> None:
         """
         Opens the translation export dialog and exports the current translation.
         """
 
-        current_item: Optional[Translation | str] = self.get_current_item()
+        current_item: Optional[Translation | Path] = self.get_current_item()
 
         if not isinstance(current_item, Translation):
             return
@@ -438,11 +452,9 @@ class TranslationsWidget(QTreeWidget):
 
         match export_format:
             case ExportDialog.ExportFormat.DSD:
-                self.database.exporter.export_translation_dsd(current_item, folder)
+                Exporter.export_translation_dsd(current_item, folder)
             case ExportDialog.ExportFormat.ESP:
-                self.database.exporter.export_translation_esp(
-                    current_item, folder, self.mod_instance
-                )
+                Exporter.export_translation_esp(current_item, folder, self.mod_instance)
 
         QMessageBox.information(
             QApplication.activeModalWidget() or self,
@@ -484,12 +496,14 @@ class TranslationsWidget(QTreeWidget):
                 return
 
             for translation in selected_translations:
-                self.database.delete_translation(translation, save=False)
+                DatabaseService.delete_translation(
+                    translation, self.database, save=False
+                )
 
-            self.database.save_database()
+            DatabaseService.save_database(self.database)
 
     def __open_modpage(self) -> None:
-        current_item: Optional[Translation | str] = self.get_current_item()
+        current_item: Optional[Translation | Path] = self.get_current_item()
 
         if (
             isinstance(current_item, Translation)
@@ -505,7 +519,7 @@ class TranslationsWidget(QTreeWidget):
                 pass
 
     def __open_in_explorer(self) -> None:
-        current_item: Optional[Translation | str] = self.get_current_item()
+        current_item: Optional[Translation | Path] = self.get_current_item()
 
         if isinstance(current_item, Translation) and current_item.path.is_dir():
             os.startfile(current_item.path)
@@ -519,4 +533,4 @@ class TranslationsWidget(QTreeWidget):
         """
 
         self.__name_filter = name_filter if name_filter[0].strip() else None
-        self.__update()
+        self.update_translations()

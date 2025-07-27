@@ -17,6 +17,7 @@ from core.config.app_config import AppConfig
 from core.config.translator_config import TranslatorConfig
 from core.config.user_config import UserConfig
 from core.database.database import TranslationDatabase
+from core.database.database_service import DatabaseService
 from core.downloader.download_manager import DownloadManager
 from core.masterlist.masterlist import Masterlist
 from core.mod_instance.mod_instance import ModInstance
@@ -24,6 +25,7 @@ from core.mod_managers.modorganizer import ModOrganizer
 from core.scanner.scanner import Scanner
 from core.translation_provider.nm_api.nxm_handler import NXMHandler
 from core.translation_provider.provider import Provider
+from core.utilities.game_language import GameLanguage
 
 from .base_test import BaseTest
 
@@ -191,7 +193,6 @@ class AppTest(BaseTest):
             return AppContext.get_app().scanner
 
         return Scanner(
-            self.cache(),
             self.modinstance(),
             self.database(),
             self.app_config(),
@@ -263,22 +264,15 @@ class AppTest(BaseTest):
             return AppContext.get_app().database
 
         user_config: UserConfig = self.user_config()
-        language: str = user_config.language.id
+        language: GameLanguage = user_config.language
         userdb_path: Path = self.tmp_folder() / "user" / "database"
         appdb_path: Path = self.res_path() / "app" / "database"
 
-        index_path: Path = userdb_path / language / "index.json"
+        index_path: Path = userdb_path / language.id / "index.json"
         index_path.parent.mkdir(parents=True, exist_ok=True)
         index_path.write_text("[]", encoding="utf8")
 
-        return TranslationDatabase(
-            userdb_path,
-            appdb_path,
-            language,
-            self.cache(),
-            self.app_config(),
-            user_config,
-        )
+        return DatabaseService.load_database(appdb_path, userdb_path, language)
 
     def provider(self, init: bool = False) -> Provider:
         """

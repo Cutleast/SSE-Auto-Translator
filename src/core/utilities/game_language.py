@@ -3,6 +3,7 @@ Copyright (c) Cutleast
 """
 
 from enum import Enum
+from typing import override
 
 
 class GameLanguage(Enum):
@@ -18,6 +19,10 @@ class GameLanguage(Enum):
     Portuguese = "Portuguese"
     Russian = "Russian"
     Spanish = "Spanish"
+
+    @override
+    def __str__(self) -> str:
+        return self.name
 
     @property
     def iso_code(self) -> str:

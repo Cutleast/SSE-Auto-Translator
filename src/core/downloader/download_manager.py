@@ -138,6 +138,7 @@ class DownloadManager(QObject):
                 self.queue,
                 i,
                 self.app_config,
+                self.user_config,
                 self.provider,
                 self.database,
                 self.mod_instance,
@@ -378,7 +379,7 @@ class DownloadManager(QObject):
                 translation_download = TranslationDownload(
                     name=translation_name,
                     mod_id=download_id,
-                    modfile_name=modfile.name,
+                    modfile=modfile.path,
                     source=source,
                     available_downloads=[],
                 )
@@ -457,12 +458,12 @@ class DownloadManager(QObject):
 
         downloads: dict[tuple[str, ModId], list[TranslationDownload]] = {}
 
-        for modfile_name in translation.strings:
-            downloads[f"{translation.name} > {modfile_name}", translation.mod_id] = [
+        for modfile in translation.strings:
+            downloads[f"{translation.name} > {modfile}", translation.mod_id] = [
                 TranslationDownload(
                     name=translation.name,
                     mod_id=translation.mod_id,
-                    modfile_name=modfile_name,
+                    modfile=modfile,
                     source=Source.NexusMods,  # TODO: Reimplement translation updates from CDT
                     available_downloads=[
                         FileDownload(

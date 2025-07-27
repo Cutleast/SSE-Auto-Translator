@@ -31,7 +31,7 @@ class Editor(QObject):
     translator: Translator
 
     __translation: Translation
-    __strings_cache: dict[str, list[String]]
+    __strings_cache: dict[Path, list[String]]
     """
     Stores a deep copy of the strings in the translation.
     """
@@ -86,7 +86,7 @@ class Editor(QObject):
         return self.__changes_pending
 
     @property
-    def strings(self) -> dict[str, list[String]]:
+    def strings(self) -> dict[Path, list[String]]:
         """
         Map of plugin names to their list of strings.
         Returns their current editing state.

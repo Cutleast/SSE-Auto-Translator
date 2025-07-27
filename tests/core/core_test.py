@@ -4,6 +4,7 @@ Copyright (c) Cutleast
 
 import logging
 
+from core.database.string import String
 from core.mod_file.mod_file import ModFile
 from core.mod_instance.mod import Mod
 
@@ -78,3 +79,27 @@ class CoreTest(AppTest):
         mod: Mod = self.get_mod_by_name(mod_name)
 
         return self.get_modfile_from_mod(mod, modfile_name)
+
+    @staticmethod
+    def calc_unique_string_hash(string: String) -> int:
+        """
+        Calculates a unique hash value from the specified string including all fields.
+
+        Args:
+            string (String): The string to calculate the hash value from.
+
+        Returns:
+            int: The unique hash value.
+        """
+
+        return hash(
+            (
+                string.form_id,
+                string.editor_id,
+                string.type,
+                string.original,
+                string.index,
+                string.string,
+                string.status,
+            )
+        )

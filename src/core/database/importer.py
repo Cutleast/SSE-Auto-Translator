@@ -15,18 +15,15 @@ from PySide6.QtCore import QObject
 from sse_bsa import BSAArchive
 
 from core.archiver.archive import Archive
-from core.cache.cache import Cache
-from core.config.app_config import AppConfig
 from core.config.user_config import UserConfig
 from core.database.string import String
-from core.database.translation import Translation
 from core.database.translation_service import TranslationService
+from core.database.utilities import Utilities
+from core.mod_file import MODFILE_TYPES, get_modfiletype_for_suffix
 from core.mod_file.mod_file import ModFile
-from core.mod_file.plugin_file import PluginFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
-from core.translation_provider.source import Source
 from core.utilities.constants import DSD_FILE_PATTERN
 from core.utilities.container_utils import unique
 from core.utilities.filesystem import parse_path, relative_data_path, safe_copy
@@ -41,42 +38,28 @@ class Importer(QObject):
 
     log: logging.Logger = logging.getLogger("Importer")
 
-    cache: Cache
-    database: "TranslationDatabase"
-    app_config: AppConfig
-    user_config: UserConfig
+    utils = Utilities()
 
-    def __init__(
-        self,
-        cache: Cache,
-        database: "TranslationDatabase",
-        app_config: AppConfig,
-        user_config: UserConfig,
-    ) -> None:
-        super().__init__()
-
-        self.cache = cache
-        self.database = database
-        self.app_config = app_config
-        self.user_config = user_config
-
-    def import_mod_as_translation(self, mod: Mod, original_mod: Mod) -> None:
+    @classmethod
+    def import_mod_as_translation(
+        cls, mod: Mod, original_mod: Mod
+    ) -> dict[Path, list[String]]:
         """
-        Imports a mod as a translation by importing all strings from
-        its mod files and DSD files and creating a new translation in the database.
+        Creates a translation by combining the strings from the mod files of the
+        specified mods.
 
         Args:
-            mod (Mod): The mod to import
-            original_mod (Mod): The original mod
+            mod (Mod): The mod to use as translation.
+            original_mod (Mod): The original mod.
         """
 
-        self.log.info(
-            f"Importing {mod.name!r} as translation for {original_mod.name!r}."
+        cls.log.info(
+            f"Importing '{mod.name}' as translation for '{original_mod.name}'..."
         )
 
-        strings: dict[str, list[String]] = {}
+        strings: dict[Path, list[String]] = {}
 
-        # Import strings from mod files
+        # Get strings from mod files
         ignore_status: list[TranslationStatus] = [
             TranslationStatus.NoStrings,
             TranslationStatus.IsTranslated,
@@ -88,23 +71,28 @@ class Importer(QObject):
             modfile: original_modfile
             for modfile in mod.modfiles
             for original_modfile in original_mod.modfiles
-            if modfile.name.lower() == original_modfile.name.lower()
-            and original_modfile.status not in ignore_status
+            if (
+                (
+                    modfile.path
+                    == original_modfile.full_path.relative_to(original_mod.path)
+                )
+                and original_modfile.status not in ignore_status
+            )
         }
         """
         Map for mod files from translated mod and original mod.
         """
 
-        self.log.debug(f"Importing strings from {len(modfiles)} mod file(s)...")
+        cls.log.debug(f"Extracting strings from {len(modfiles)} mod file(s)...")
         for modfile, original_modfile in modfiles.items():
-            strings[modfile.name.lower()] = self.map_translation_strings(
+            strings[modfile.path] = cls.map_translation_strings(
                 modfile, original_modfile
             )
 
-        # Import strings from DSD files
+        # Get strings from DSD files
         dsd_files: list[str] = mod.dsd_files
 
-        self.log.debug(f"Importing strings from {len(dsd_files)} DSD file(s)...")
+        cls.log.debug(f"Extracting strings from {len(dsd_files)} DSD file(s)...")
         for dsd_file in dsd_files:
             dsd_path: Path = mod.path / dsd_file
 
@@ -114,40 +102,24 @@ class Importer(QObject):
                 )
 
                 if len(plugin_strings):
-                    strings.setdefault(dsd_path.parent.name.lower(), []).extend(
-                        plugin_strings
-                    )
+                    strings.setdefault(Path(dsd_path.parent), []).extend(plugin_strings)
             except Exception as ex:
-                self.log.error(f"Failed to import '{dsd_path}': {ex}", exc_info=ex)
+                cls.log.error(f"Failed to extract from '{dsd_path}': {ex}", exc_info=ex)
 
-        source: Source
-        if mod.mod_id.mod_id and mod.mod_id.file_id:
-            source = Source.NexusMods
-        elif mod.mod_id.mod_id and self.user_config.language == GameLanguage.French:
-            source = Source.Confrerie
-        else:
-            source = Source.Local
-
-        translation = Translation(
-            name=mod.name,
-            path=self.database.userdb_path / self.database.language / mod.name,
-            mod_id=mod.mod_id,
-            version=mod.version,
-            original_mod_id=original_mod.mod_id,
-            original_version=original_mod.version,
-            source=source,
+        cls.log.info(
+            f"Extracted {sum(len(strings) for strings in strings.values())} translated "
+            f"string(s) for {len(strings)} file(s)."
         )
-        translation.strings = strings
-        translation.save()
-        self.database.add_translation(translation)
 
-        self.log.info(f"Imported translation for {len(strings)} plugin(s).")
+        return strings
 
     def extract_additional_files(
         self,
         archive_path: Path,
         original_mod: Mod,
-        translation: "Translation",
+        translation_path: Path,
+        tmp_dir: Path,
+        user_config: UserConfig,
         ldialog: Optional[LoadingDialog] = None,
     ) -> None:
         """
@@ -157,7 +129,9 @@ class Importer(QObject):
         Args:
             archive_path (Path): Path to downloaded translation archive.
             original_mod (Mod): Original mod.
-            translation (Translation): Installed translation.
+            translation_path (Path): Path to the translation's folder.
+            tmp_dir (Path): Temporary directory to use.
+            user_config (UserConfig): User configuration.
             ldialog (Optional[LoadingDialog], optional):
                 Optional loading dialog. Defaults to None.
 
@@ -168,7 +142,6 @@ class Importer(QObject):
         if ldialog is not None:
             ldialog.updateProgress(text1=self.tr("Processing archive..."))
 
-        tmp_dir: Path = self.app_config.get_tmp_dir()
         output_folder = tmp_dir / "Output"
 
         if output_folder.is_dir():
@@ -180,8 +153,8 @@ class Importer(QObject):
         files_to_extract: list[str] = []
         bsa_files_to_extract: dict[Path, list[str]] = {}
 
-        matching_files: list[str] = self.database.utils.get_additional_files(
-            archive_path, tmp_dir, ldialog
+        matching_files: list[str] = self.utils.get_additional_files(
+            archive_path, tmp_dir, user_config, ldialog
         )
 
         for file in matching_files:
@@ -242,10 +215,10 @@ class Importer(QObject):
             ldialog.updateProgress(text1=self.tr("Copying files..."))
 
         if os.listdir(output_folder):
-            self.log.info(f"Moving output to '{translation.path}'...")
+            self.log.info(f"Moving output to '{translation_path}'...")
             shutil.move(
                 output_folder,
-                translation.path / "data",
+                translation_path / "data",
                 copy_function=safe_copy,  # type: ignore[arg-type]
             )
         else:
@@ -256,8 +229,10 @@ class Importer(QObject):
         self,
         archive_path: Path,
         mod_instance: ModInstance,
+        tmp_dir: Path,
+        language: GameLanguage,
         ldialog: Optional[LoadingDialog] = None,
-    ) -> dict[str, list[String]]:
+    ) -> dict[Path, list[String]]:
         """
         Extracts strings from a downloaded archive and maps them to the
         original plugins.
@@ -265,27 +240,29 @@ class Importer(QObject):
         Args:
             archive_path (Path): Path to downloaded archive.
             mod_instance (ModInstance): Modinstance to use.
+            tmp_dir (Path): Path to the temporary directory to use.
+            language (GameLanguage): Language to extract strings for.
             ldialog (Optional[LoadingDialog], optional):
                 Optional loading dialog. Defaults to None.
 
         Returns:
-            dict[str, list[String]]: Mapping of plugin name to list of strings
+            dict[Path, list[String]]: Mapping of plugin name to list of strings
         """
 
-        translation_strings: dict[str, list[String]] = {}
+        translation_strings: dict[Path, list[String]] = {}
 
         if ldialog is not None:
             ldialog.updateProgress(text1=self.tr("Processing archive..."))
 
-        tmp_dir: Path = self.app_config.get_tmp_dir()
         archive: Archive = Archive.load_archive(archive_path)
 
         modfiles: list[str] = []
-        modfiles += archive.glob("**/*.esl")
-        modfiles += archive.glob("**/*.esm")
-        modfiles += archive.glob("**/*.esp")
 
-        dsd_files: list[str] = archive.glob(DSD_FILE_PATTERN)
+        for modfile_type in MODFILE_TYPES:
+            for pattern in modfile_type.get_glob_patterns(language.id):
+                modfiles.extend(archive.glob("**/" + pattern))
+
+        dsd_files: list[str] = archive.glob("**/" + DSD_FILE_PATTERN)
 
         self.log.debug(
             f"Extracting {len(modfiles + dsd_files)} file(s) to '{tmp_dir}'..."
@@ -294,47 +271,46 @@ class Importer(QObject):
 
         self.log.debug("Processing extracted files...")
 
-        modfile_name: str
-        for m, modfile in enumerate(modfiles):
-            extracted_plugin: Path = tmp_dir / modfile
-            modfile_name = extracted_plugin.name
+        for m, modfile_name in enumerate(modfiles):
+            extracted_file: Path = tmp_dir / modfile_name
+            modfile: ModFile = get_modfiletype_for_suffix(extracted_file.suffix)(
+                name=extracted_file.name, full_path=extracted_file
+            )
 
             if ldialog:
                 ldialog.updateProgress(
-                    text1=self.tr("Processing plugins...") + f" ({m}/{len(modfiles)})",
+                    text1=self.tr("Processing mod files...")
+                    + f" ({m}/{len(modfiles)})",
                     value1=m,
                     max1=len(modfiles),
                     show2=True,
-                    text2=modfile_name,
+                    text2=str(modfile.path),
                 )
 
             # Find original plugin in modlist
             original_modfile: Optional[ModFile] = mod_instance.get_modfile(
-                modfile_name,
+                modfile.path,
                 ignore_states=[
                     TranslationStatus.IsTranslated,
                     TranslationStatus.TranslationInstalled,
                 ],
-                ignore_case=True,
             )
 
             if original_modfile is None:
                 self.log.warning(
-                    f"Failed to map strings for mod file {modfile_name!r}: "
+                    f"Failed to map strings for mod file '{modfile.path}': "
                     "Original mod file not found in modlist."
                 )
                 continue
 
             modfile_strings: list[String] = self.map_translation_strings(
-                PluginFile(extracted_plugin.name, extracted_plugin), original_modfile
+                modfile, original_modfile
             )
             if modfile_strings:
                 for string in modfile_strings:
                     string.status = String.Status.TranslationComplete
 
-                translation_strings.setdefault(modfile_name.lower(), []).extend(
-                    modfile_strings
-                )
+                translation_strings.setdefault(modfile.path, []).extend(modfile_strings)
 
         for d, dsd_file in enumerate(dsd_files):
             extracted_dsd_file: Path = archive_path.parent / dsd_file
@@ -355,10 +331,10 @@ class Importer(QObject):
             )
 
             if len(strings):
-                translation_strings.setdefault(modfile_name.lower(), []).extend(strings)
+                translation_strings.setdefault(Path(modfile_name), []).extend(strings)
 
-        for modfile_name, modfile_strings in translation_strings.items():
-            translation_strings[modfile_name] = unique(modfile_strings)
+        for modfile_path, modfile_strings in translation_strings.items():
+            translation_strings[modfile_path] = unique(modfile_strings)
 
         self.log.info(
             f"Extracted {sum(len(strings) for strings in translation_strings.values())}"
@@ -367,8 +343,9 @@ class Importer(QObject):
 
         return translation_strings
 
+    @classmethod
     def map_translation_strings(
-        self, translation_modfile: ModFile, original_modfile: ModFile
+        cls, translation_modfile: ModFile, original_modfile: ModFile
     ) -> list[String]:
         """
         Extracts strings from translation and original mod files and maps them together.
@@ -381,17 +358,17 @@ class Importer(QObject):
             list[String]: List of mapped strings
         """
 
-        translation_strings: list[String] = translation_modfile.get_strings(self.cache)
-        original_strings: list[String] = original_modfile.get_strings(self.cache)
+        translation_strings: list[String] = translation_modfile.get_strings()
+        original_strings: list[String] = original_modfile.get_strings()
 
         if not translation_strings and not original_strings:
             return []
 
-        return Importer.map_strings(translation_strings, original_strings)
+        return cls.map_strings(translation_strings, original_strings)
 
-    @staticmethod
+    @classmethod
     def map_strings(
-        translation_strings: list[String], original_strings: list[String]
+        cls, translation_strings: list[String], original_strings: list[String]
     ) -> list[String]:
         """
         Maps translated strings to the original strings.
@@ -404,7 +381,7 @@ class Importer(QObject):
             list[String]: List of mapped strings
         """
 
-        Importer.log.debug(
+        cls.log.debug(
             f"Mapping {len(translation_strings)} translated string(s) to "
             f"{len(original_strings)} original string(s)..."
         )
@@ -433,15 +410,10 @@ class Importer(QObject):
 
         if len(unmerged_strings) < len(translation_strings):
             for unmerged_string in unmerged_strings:
-                Importer.log.warning(f"Not found in Original: {unmerged_string}")
+                cls.log.warning(f"Not found in Original: {unmerged_string}")
 
-            Importer.log.debug(f"Mapped {len(merged_strings)} String(s).")
+            cls.log.debug(f"Mapped {len(merged_strings)} String(s).")
         else:
-            Importer.log.error("Mapping failed!")
+            cls.log.error("Mapping failed!")
 
         return merged_strings
-
-
-if __name__ == "__main__":
-    from .database import TranslationDatabase
-    from .translation import Translation

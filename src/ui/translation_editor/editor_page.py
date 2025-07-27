@@ -4,6 +4,7 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
+from pathlib import Path
 from typing import Optional, override
 
 from PySide6.QtCore import Qt, Signal
@@ -113,24 +114,25 @@ class EditorPage(QSplitter):
             tab = tabs[item]
         else:
             tab = tabs[item.parent()]
-            tab.go_to_modfile(item.text(0))
+            tab.go_to_modfile(Path(item.text(0)))
 
         self.__page_widget.setCurrentWidget(tab)
 
-    def __set_tab(self, tab: EditorTab, modfile_name: Optional[str] = None) -> None:
+    def __set_tab(self, tab: EditorTab, modfile: Optional[Path] = None) -> None:
         """
         Switches to a specified tab and goes to a specified mod file, if any.
 
         Args:
             tab (EditorTab): The tab to switch to.
-            modfile_name (Optional[str]): The name of the mod file to go to.
+            modfile (Optional[Path]):
+                The path of the mod file to go to, relative to the game's "Data" folder.
         """
 
         item: QTreeWidgetItem = self.__tabs[tab.translation][1]
         self.__tab_list_widget.setCurrentItem(item)
 
-        if modfile_name is not None:
-            tab.go_to_modfile(modfile_name)
+        if modfile is not None:
+            tab.go_to_modfile(modfile)
 
     @property
     def tabs(self) -> list[EditorTab]:
@@ -223,8 +225,8 @@ class EditorPage(QSplitter):
             close_button.setIcon(IconProvider.get_qta_icon("mdi6.close-thick"))
             close_button.setFixedSize(26, 26)
 
-            for modfile_name in sorted(translation.strings, key=lambda m: m.lower()):
-                modfile_item = QTreeWidgetItem([modfile_name])
+            for modfile in sorted(translation.strings, key=lambda m: m.name.lower()):
+                modfile_item = QTreeWidgetItem([str(modfile)])
                 translation_item.addChild(modfile_item)
 
             self.__tab_list_widget.addTopLevelItem(translation_item)

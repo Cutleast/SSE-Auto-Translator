@@ -6,6 +6,8 @@ from typing import Optional, override
 
 from pydantic import BaseModel, ConfigDict
 
+from core.translation_provider.source import Source
+
 
 class ModId(BaseModel):
     """
@@ -29,3 +31,32 @@ class ModId(BaseModel):
     @override
     def __hash__(self) -> int:
         return hash((self.mod_id, self.file_id, self.nm_id, self.nm_game_id))
+
+    def estimate_source(self, is_french: bool = False) -> Source:
+        """
+        Attempts to guess the source of the mod based on the existence of mod id and
+        file id.
+
+        Args:
+            is_french (bool, optional):
+                Whether the mod is in French. This determines, whether the CDT is
+                returned if there is no file id. Defaults to False.
+
+        Returns:
+            Source:
+                The estimated source of the mod or `Source.Local` if the source could
+                not be estimated.
+        """
+
+        if self.mod_id and self.file_id and self.nm_id is None:
+            return Source.NexusMods
+
+        if (
+            self.mod_id
+            and self.file_id is None
+            and self.nm_id is not None
+            and is_french
+        ):
+            return Source.Confrerie
+
+        return Source.Local

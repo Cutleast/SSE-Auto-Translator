@@ -21,15 +21,12 @@ class Utilities(QObject):
 
     log: logging.Logger = logging.getLogger("Database.Utilities")
 
-    user_config: UserConfig
-
-    def __init__(self, user_config: UserConfig) -> None:
-        super().__init__()
-
-        self.user_config = user_config
-
     def get_additional_files(
-        self, path: Path, tmp_dir: Path, ldialog: Optional[LoadingDialog] = None
+        self,
+        path: Path,
+        tmp_dir: Path,
+        user_config: UserConfig,
+        ldialog: Optional[LoadingDialog] = None,
     ) -> list[str]:
         """
         Returns a list of matching additional files from a specified path.
@@ -39,6 +36,7 @@ class Utilities(QObject):
         Args:
             path (Path): Path to downloaded translation archive or folder.
             tmp_dir (Path): Path to temporary directory.
+            user_config (UserConfig): User configuration.
             ldialog (Optional[LoadingDialog], optional):
                 Optional loading dialog. Defaults to None.
 
@@ -48,15 +46,15 @@ class Utilities(QObject):
 
         matching_files: list[str] = []
 
-        lang: str = self.user_config.language.id
+        lang: str = user_config.language.id
         PATTERNS: dict[str, bool] = {
-            f"**/interface/**/*_{lang}.txt": self.user_config.enable_interface_files,
-            "**/scripts/*.pex": self.user_config.enable_scripts,
-            "**/textures/**/*.dds": self.user_config.enable_textures,
-            "**/textures/**/*.png": self.user_config.enable_textures,
-            "**/sound/**/*.fuz": self.user_config.enable_sound_files,
-            "**/sound/**/*.wav": self.user_config.enable_sound_files,
-            "**/sound/**/*.lip": self.user_config.enable_sound_files,
+            f"**/interface/**/*_{lang}.txt": user_config.enable_interface_files,
+            "**/scripts/*.pex": user_config.enable_scripts,
+            "**/textures/**/*.dds": user_config.enable_textures,
+            "**/textures/**/*.png": user_config.enable_textures,
+            "**/sound/**/*.fuz": user_config.enable_sound_files,
+            "**/sound/**/*.wav": user_config.enable_sound_files,
+            "**/sound/**/*.lip": user_config.enable_sound_files,
         }
 
         if not any(PATTERNS.values()):

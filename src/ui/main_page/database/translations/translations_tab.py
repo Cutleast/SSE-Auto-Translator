@@ -20,6 +20,8 @@ from PySide6.QtWidgets import (
 
 from core.config.app_config import AppConfig
 from core.database.database import TranslationDatabase
+from core.database.database_service import DatabaseService
+from core.database.importer import Importer
 from core.database.search_filter import SearchFilter
 from core.database.string import String
 from core.database.translation import Translation
@@ -106,6 +108,9 @@ class TranslationsTab(QWidget):
         self.__translations_widget.edit_translation_requested.connect(
             self.edit_translation_requested.emit
         )
+        self.__translations_widget.files_dropped.connect(
+            self.__import_local_translation
+        )
 
         self.database.update_signal.connect(self.__update)
         self.__update()
@@ -161,7 +166,7 @@ class TranslationsTab(QWidget):
         if dialog.exec() == QDialog.DialogCode.Accepted:
             filter: SearchFilter = dialog.get_filter()
 
-            search_result: dict[str, list[String]] = self.database.search_database(
+            search_result: dict[Path, list[String]] = self.database.search_database(
                 filter
             )
 
@@ -210,47 +215,51 @@ class TranslationsTab(QWidget):
             files = [Path(file) for file in fdialog.selectedFiles()]
 
         translation: Translation
-        strings: dict[str, list[String]]
+        strings: dict[Path, list[String]]
         for file in files:
             if file.suffix.lower() in [".7z", ".rar", ".zip"]:
                 strings = LoadingDialog.run_callable(
                     QApplication.activeModalWidget(),
-                    lambda ldialog: self.database.importer.extract_strings_from_archive(
-                        file, self.mod_instance, ldialog
+                    lambda ldialog: Importer().extract_strings_from_archive(
+                        archive_path=file,
+                        mod_instance=self.mod_instance,
+                        tmp_dir=self.app_config.get_tmp_dir(),
+                        language=self.database.language,
+                        ldialog=ldialog,
                     ),
                 )
 
                 if strings:
-                    translation = self.database.create_blank_translation(
-                        file.stem, strings
+                    translation = DatabaseService.create_blank_translation(
+                        file.stem, strings, self.database
                     )
                     translation.save()
-                    self.database.add_translation(translation)
+                    DatabaseService.add_translation(translation, self.database)
 
             elif file.suffix.lower() in [".esp", ".esm", ".esl"]:
                 original_plugin: Optional[ModFile] = self.mod_instance.get_modfile(
-                    file.name,
+                    Path(file.name),
                     ignore_states=[
                         TranslationStatus.IsTranslated,
                         TranslationStatus.TranslationInstalled,
                     ],
-                    ignore_case=True,
                 )
 
                 if original_plugin is not None:
                     strings = {
-                        original_plugin.name: self.database.importer.map_translation_strings(
+                        original_plugin.path: Importer.map_translation_strings(
                             PluginFile(file.name, file), original_plugin
                         )
                     }
 
                     if strings:
-                        translation = self.database.create_blank_translation(
-                            f"{file.name} - {self.database.language.capitalize()}",
+                        translation = DatabaseService.create_blank_translation(
+                            f"{file.name} - {self.database.language.name}",
                             strings,
+                            self.database,
                         )
                         translation.save()
-                        self.database.add_translation(translation)
+                        DatabaseService.add_translation(translation, self.database)
 
     def __check_for_updates(self) -> None:
         """
@@ -265,8 +274,7 @@ class TranslationsTab(QWidget):
             if update_available:
                 translation.status = Translation.Status.UpdateAvailable
 
-        # TODO: Find better way to update the translations widget
-        self.database.update_signal.emit()
+        self.__translations_widget.update_translations()
 
         available_updates_count: int = sum(scan_result.values())
         messagebox = QMessageBox(QApplication.activeModalWidget())
@@ -329,7 +337,8 @@ class TranslationsTab(QWidget):
                 QApplication.activeModalWidget() or self,
                 self.tr("No updates available!"),
                 self.tr(
-                    "There are no updates available for translations with installed original mods."
+                    "There are no updates available for translations with installed "
+                    "original mods."
                 ),
             )
 

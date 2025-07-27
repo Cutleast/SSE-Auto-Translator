@@ -26,6 +26,8 @@ from core.cache.cache import Cache
 from core.config.app_config import AppConfig
 from core.config.user_config import UserConfig
 from core.database.database import TranslationDatabase
+from core.database.database_service import DatabaseService
+from core.database.importer import Importer
 from core.database.string import String
 from core.database.translation import Translation
 from core.masterlist.masterlist import Masterlist
@@ -370,17 +372,17 @@ class ModInstanceWidget(QTreeWidget):
         current_item: Optional[Mod | ModFile] = self.__get_current_item()
 
         if isinstance(current_item, ModFile):
-            dialog = StringListDialog(
-                current_item.name, current_item.get_strings(self.cache)
-            )
+            dialog = StringListDialog(current_item.name, current_item.get_strings())
             dialog.show()
 
         elif isinstance(current_item, Mod):
-            strings: dict[str, list[String]] = {}
+            strings: dict[Path, list[String]] = {}
 
             for modfile in current_item.modfiles:
-                modfile_strings = modfile.get_strings(self.cache)
-                strings[modfile.name] = modfile_strings
+                modfile_strings = modfile.get_strings()
+                strings[modfile.full_path.relative_to(current_item.path)] = (
+                    modfile_strings
+                )
 
             dialog = StringListDialog(current_item.name, strings)
             dialog.show()
@@ -390,7 +392,7 @@ class ModInstanceWidget(QTreeWidget):
         current_item: Optional[Mod | ModFile] = self.__get_current_item()
 
         if isinstance(current_item, PluginFile):
-            plugin = esp.Plugin(current_item.path)
+            plugin = esp.Plugin(current_item.full_path)
 
             text = str(plugin)
             self.log.debug(f"Text Length: {len(text)}")
@@ -455,29 +457,27 @@ class ModInstanceWidget(QTreeWidget):
         current_item: Optional[Mod | ModFile] = self.__get_current_item()
 
         if current_item is not None:
-            open_in_explorer(current_item.path)
+            open_in_explorer(
+                current_item.path
+                if isinstance(current_item, Mod)
+                else current_item.full_path
+            )
 
     def __show_untranslated_strings(self) -> None:
         current_item: Optional[Mod | ModFile] = self.__get_current_item()
         translation: Optional[Translation] = None
 
-        if current_item is None:
+        if not isinstance(current_item, ModFile):
             return
 
-        if isinstance(current_item, ModFile):
-            translation = self.database.get_translation_by_modfile_name(
-                current_item.name
-            )
-
-        else:
-            translation = self.database.get_translation_by_mod(current_item)
+        translation = self.database.get_translation_by_modfile_path(current_item.path)
 
         if translation is not None:
             untranslated_strings: list[String] = [
                 string
-                for string in translation.strings[current_item.name.lower()]
-                if string.status == string.Status.TranslationRequired
-                or string.status == string.Status.TranslationIncomplete
+                for string in translation.strings[current_item.path]
+                if string.status == String.Status.TranslationRequired
+                or string.status == String.Status.TranslationIncomplete
             ]
 
             if untranslated_strings:
@@ -492,8 +492,8 @@ class ModInstanceWidget(QTreeWidget):
             return
 
         if isinstance(current_item, ModFile):
-            translation = self.database.get_translation_by_modfile_name(
-                current_item.name
+            translation = self.database.get_translation_by_modfile_path(
+                current_item.path
             )
         else:
             translation = self.database.get_translation_by_mod(current_item)
@@ -514,8 +514,8 @@ class ModInstanceWidget(QTreeWidget):
             return
 
         if isinstance(current_item, ModFile):
-            translation = self.database.get_translation_by_modfile_name(
-                current_item.name
+            translation = self.database.get_translation_by_modfile_path(
+                current_item.path
             )
         else:
             translation = self.database.get_translation_by_mod(current_item)
@@ -525,27 +525,36 @@ class ModInstanceWidget(QTreeWidget):
     def __create_translation(self) -> None:
         current_item: Optional[Mod | ModFile] = self.__get_current_item()
 
+        if current_item is None:
+            return
+
         if isinstance(current_item, ModFile):
-            translation: Optional[Translation] = (
-                self.database.get_translation_by_modfile_name(current_item.name)
-            )
-            if translation is None:
 
-                def process(ldialog: LoadingDialog) -> Translation:
-                    ldialog.updateProgress(text1=self.tr("Creating translation..."))
+            def process(ldialog: LoadingDialog) -> Translation:
+                ldialog.updateProgress(text1=self.tr("Creating translation..."))
 
-                    return self.database.create_translation(current_item)
+                return DatabaseService.create_translation_for_modfile(
+                    current_item, self.database
+                )
+        else:
 
-                translation = LoadingDialog.run_callable(
-                    QApplication.activeModalWidget(), process
+            def process(ldialog: LoadingDialog) -> Translation:
+                ldialog.updateProgress(text1=self.tr("Creating translation..."))
+
+                return DatabaseService.create_translation_for_mod(
+                    current_item, self.database
                 )
 
-                current_item.status = TranslationStatus.TranslationIncomplete
+        translation = LoadingDialog.run_callable(
+            QApplication.activeModalWidget(), process
+        )
 
-                self.highlight_translation_requested.emit(translation)
-                self.edit_translation_requested.emit(translation)
+        if isinstance(current_item, ModFile):
+            current_item.status = TranslationStatus.TranslationIncomplete
+        # TODO: Set status of all relevant mod files if current item is a mod
 
-        # TODO: Implement this for entire mods
+        self.highlight_translation_requested.emit(translation)
+        self.edit_translation_requested.emit(translation)
 
     def __import_as_translation(self) -> None:
         current_item: Optional[Mod | ModFile] = self.__get_current_item()
@@ -562,21 +571,23 @@ class ModInstanceWidget(QTreeWidget):
                 original_mod: Optional[Mod] = None
                 for modfile in current_item.modfiles:
                     original_mod = self.mod_instance.get_mod_with_modfile(
-                        modfile.name,
+                        modfile.full_path.relative_to(current_item.path),
                         ignore_mods=[current_item],
                         ignore_states=[
                             TranslationStatus.IsTranslated,
                             TranslationStatus.TranslationInstalled,
                         ],
-                        ignore_case=True,
                     )
 
                     if original_mod is not None:
                         break
 
                 if original_mod is not None:
-                    self.database.importer.import_mod_as_translation(
-                        current_item, original_mod
+                    strings: dict[Path, list[String]] = (
+                        Importer.import_mod_as_translation(current_item, original_mod)
+                    )
+                    DatabaseService.create_translation_from_mod(
+                        current_item, original_mod, strings, self.database
                     )
                 else:
                     raise FileNotFoundError(
@@ -597,8 +608,8 @@ class ModInstanceWidget(QTreeWidget):
 
         translation: Optional[Translation] = None
         if isinstance(current_item, ModFile):
-            translation = self.database.get_translation_by_modfile_name(
-                current_item.name
+            translation = self.database.get_translation_by_modfile_path(
+                current_item.path
             )
         elif isinstance(current_item, Mod):
             translation = self.database.get_translation_by_mod(current_item)
@@ -610,7 +621,7 @@ class ModInstanceWidget(QTreeWidget):
         current_item: Optional[Mod | ModFile] = self.__get_current_item()
 
         if isinstance(current_item, ModFile):
-            os.startfile(current_item.path)
+            os.startfile(current_item.full_path)
 
     def get_selected_items(self) -> tuple[list[Mod], list[ModFile]]:
         """
@@ -742,7 +753,10 @@ class ModInstanceWidget(QTreeWidget):
 
     def __save_modfile_states(self) -> None:
         modfile_states: dict[Path, tuple[bool, TranslationStatus]] = {
-            modfile.path: (item.checkState(0) == Qt.CheckState.Checked, modfile.status)
+            modfile.full_path: (
+                item.checkState(0) == Qt.CheckState.Checked,
+                modfile.status,
+            )
             for modfile_item in self.__modfile_items.values()
             for modfile, item in modfile_item.items()
         }

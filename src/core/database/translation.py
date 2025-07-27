@@ -55,7 +55,7 @@ class Translation(BaseModel):
     The version of the original mod.
     """
 
-    _strings: Optional[dict[str, list[String]]] = None
+    _strings: Optional[dict[Path, list[String]]] = None
     """
     Map of mod file names to list of strings.
     """
@@ -150,34 +150,41 @@ class Translation(BaseModel):
         """
 
         name: str = index_data["name"]
-        mod_id: int = int(index_data.pop("mod_id"))
-        file_id: Optional[int] = index_data.pop("file_id", None)
+        raw_mod_id: Optional[int] = index_data.pop("mod_id", None)
+        raw_file_id: Optional[int] = index_data.pop("file_id", None)
+        mod_id: Optional[ModId] = None
+        if raw_mod_id:
+            mod_id = ModId(mod_id=raw_mod_id, file_id=raw_file_id)
+
+        raw_orig_mod_id: Optional[int] = index_data.pop("original_mod_id", None)
+        raw_orig_file_id: Optional[int] = index_data.pop("original_file_id", None)
+        orig_mod_id: Optional[ModId] = None
+        if raw_orig_mod_id:
+            orig_mod_id = ModId(mod_id=raw_orig_mod_id, file_id=raw_orig_file_id)
+
         translation_path: Path = database_path / name
         source_name: str = index_data.pop("source", "")
         source: Optional[Source] = Source.get(source_name)
 
         if source is None:
-            if mod_id and file_id:
+            if raw_mod_id and raw_file_id:
                 source = Source.NexusMods
-            elif mod_id:
+            elif raw_mod_id:
                 source = Source.Confrerie
             else:
                 source = Source.Local
 
         return Translation(
             path=translation_path,
-            mod_id=ModId(mod_id=mod_id, file_id=file_id),
-            original_mod_id=ModId(
-                mod_id=index_data.pop("original_mod_id", 0),
-                file_id=index_data.pop("original_file_id", None),
-            ),
+            mod_id=mod_id,
+            original_mod_id=orig_mod_id,
             **index_data,
             source=source,
         )
 
     @staticmethod
     def create(
-        name: str, path: Path, strings: Optional[dict[str, list[String]]] = None
+        name: str, path: Path, strings: Optional[dict[Path, list[String]]] = None
     ) -> Translation:
         """
         Creates a new translation.
@@ -185,14 +192,17 @@ class Translation(BaseModel):
         Args:
             name (str): The name of the translation.
             path (Path): The path to the translation's folder.
-            strings (Optional[dict[str, list[String]]], optional):
+            strings (Optional[dict[Path, list[String]]], optional):
                 The initial strings of the translation. Defaults to None.
 
         Returns:
             Translation: Created translation.
         """
 
-        return Translation(name=name, path=path, _strings=strings)
+        translation = Translation(name=name, path=path)
+        if strings is not None:
+            translation.strings = strings
+        return translation
 
     @property
     def id(self) -> str:
@@ -211,7 +221,7 @@ class Translation(BaseModel):
         return hash(self.id)
 
     @property
-    def strings(self) -> dict[str, list[String]]:
+    def strings(self) -> dict[Path, list[String]]:
         """
         List of strings for each mod file name.
         """
@@ -222,7 +232,7 @@ class Translation(BaseModel):
         return self._strings or {}
 
     @strings.setter
-    def strings(self, strings: dict[str, list[String]]) -> None:
+    def strings(self, strings: dict[Path, list[String]]) -> None:
         self._strings = strings
 
     @lru_cache

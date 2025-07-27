@@ -6,7 +6,6 @@ from pathlib import Path
 
 from app import App
 from core.config.user_config import UserConfig
-from core.database.database import TranslationDatabase
 from core.database.utilities import Utilities
 
 from ..core_test import CoreTest
@@ -23,8 +22,7 @@ class TestUtilities(CoreTest):
         """
 
         # given
-        database: TranslationDatabase = app_context.database
-        utils: Utilities = database.utils
+        utils = Utilities()
         user_config: UserConfig = app_context.user_config
         test_file_path: Path = self.data_path() / "Wet and Cold SE - German.7z"
 
@@ -34,7 +32,7 @@ class TestUtilities(CoreTest):
         user_config.enable_sound_files = True
         user_config.enable_textures = True
         additional_files: list[str] = utils.get_additional_files(
-            test_file_path, self.app_config().get_tmp_dir()
+            test_file_path, self.tmp_folder(), self.user_config()
         )
 
         # then
@@ -52,8 +50,7 @@ class TestUtilities(CoreTest):
         """
 
         # given
-        database: TranslationDatabase = app_context.database
-        utils: Utilities = database.utils
+        utils = Utilities()
         test_bsa_path: Path = (
             self.get_mod_by_name("Ordinator - Perks of Skyrim").path
             / "Ordinator - Perks of Skyrim.bsa"

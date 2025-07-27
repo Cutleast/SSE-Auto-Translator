@@ -14,7 +14,6 @@ from argparse import Namespace
 from pathlib import Path
 from typing import Callable, Optional, override
 
-import jstyleson as json
 from PySide6.QtCore import Qt, QTimerEvent, QTranslator, Signal
 from PySide6.QtGui import QColor, QPalette
 from PySide6.QtWidgets import (
@@ -32,6 +31,7 @@ from core.config.app_config import AppConfig
 from core.config.translator_config import TranslatorConfig
 from core.config.user_config import UserConfig
 from core.database.database import TranslationDatabase
+from core.database.database_service import DatabaseService
 from core.downloader.download_manager import DownloadManager
 from core.masterlist.masterlist import Masterlist
 from core.mod_instance.mod_instance import ModInstance
@@ -46,6 +46,7 @@ from core.translator_api.translator import Translator
 from core.utilities.container_utils import unique
 from core.utilities.exception_handler import ExceptionHandler
 from core.utilities.exe_info import get_current_path, get_execution_info
+from core.utilities.game_language import GameLanguage
 from core.utilities.localisation import LocalisationUtils
 from core.utilities.logger import Logger
 from core.utilities.path_limit_fixer import PathLimitFixer
@@ -213,7 +214,6 @@ class App(QApplication):
             self.masterlist,
         )
         self.scanner = Scanner(
-            self.cache,
             self.mod_instance,
             self.database,
             self.app_config,
@@ -337,16 +337,9 @@ class App(QApplication):
             sys.exit()
 
     def __load_database(self) -> None:
-        language = self.user_config.language.id
-        userdb_path: Path = self.data_path / "user" / "database" / language
+        language: GameLanguage = self.user_config.language
+        userdb_path: Path = self.data_path / "user" / "database"
         appdb_path: Path = self.res_path / "app" / "database"
-
-        if not userdb_path.is_dir():
-            os.makedirs(userdb_path, exist_ok=True)
-
-            index_path = userdb_path / "index.json"
-            with open(index_path, "w", encoding="utf8") as index_file:
-                json.dump([], index_file, indent=4)
 
         self.log.info("Loading translation database...")
 
@@ -355,13 +348,8 @@ class App(QApplication):
                 text1=self.tr("Loading translation database..."),
             )
 
-            self.database = TranslationDatabase(
-                userdb_path.parent,
-                appdb_path,
-                language,
-                self.cache,
-                self.app_config,
-                self.user_config,
+            self.database = DatabaseService.load_database(
+                appdb_path, userdb_path, language
             )
 
         LoadingDialog.run_callable(QApplication.activeModalWidget(), process)

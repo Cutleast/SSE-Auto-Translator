@@ -2,6 +2,7 @@
 Copyright (c) Cutleast
 """
 
+from pathlib import Path
 from typing import Optional, override
 
 from PySide6.QtCore import Qt
@@ -31,7 +32,7 @@ class StringsWidget(QTreeWidget):
     but they're mutable and their hash may change.
     """
 
-    __modfile_items: dict[str, QTreeWidgetItem]
+    __modfile_items: dict[Path, QTreeWidgetItem]
     """
     Mapping of mod file names to their tree items.
     """
@@ -46,7 +47,7 @@ class StringsWidget(QTreeWidget):
     Optional state filter.
     """
 
-    def __init__(self, strings: dict[str, list[String]]) -> None:
+    def __init__(self, strings: dict[Path, list[String]]) -> None:
         super().__init__()
 
         self.__init_ui()
@@ -74,17 +75,17 @@ class StringsWidget(QTreeWidget):
         self.header().setDefaultSectionSize(200)
         self.header().setSortIndicatorClearable(True)
 
-    def __init_strings(self, strings: dict[str, list[String]]) -> None:
+    def __init_strings(self, strings: dict[Path, list[String]]) -> None:
         self.__string_items = ReferenceDict()
         self.__modfile_items = {}
 
         self.clear()
 
-        for modfile_name, modfile_strings in sorted(
-            strings.items(), key=lambda p: p[0].lower()
+        for modfile, modfile_strings in sorted(
+            strings.items(), key=lambda p: p[0].name.lower()
         ):
-            modfile_item = QTreeWidgetItem([modfile_name])
-            self.__modfile_items[modfile_name] = modfile_item
+            modfile_item = QTreeWidgetItem([str(modfile)])
+            self.__modfile_items[modfile] = modfile_item
 
             for string in modfile_strings:
                 if string in self.__string_items:
@@ -165,12 +166,12 @@ class StringsWidget(QTreeWidget):
                     c, String.Status.get_color(string.status) or Qt.GlobalColor.white
                 )
 
-        for modfile_name, modfile_item in self.__modfile_items.items():
+        for modfile, modfile_item in self.__modfile_items.items():
             modfile_item.setHidden(
                 not are_children_visible(modfile_item)
                 and (
                     not matches_filter(
-                        modfile_name, name_filter, case_sensitive or False
+                        str(modfile), name_filter, case_sensitive or False
                     )
                     or self.__state_filter is not None
                 )
@@ -181,15 +182,16 @@ class StringsWidget(QTreeWidget):
                 self.currentItem(), QTreeWidget.ScrollHint.PositionAtCenter
             )
 
-    def go_to_modfile(self, modfile_name: str) -> None:
+    def go_to_modfile(self, modfile: Path) -> None:
         """
         Selects and scrolls to a specified mod file item.
 
         Args:
-            modfile_name (str): The name of the mod file.
+            modfile (Path):
+                The path of the mod file, relative to the game's "Data" folder.
         """
 
-        item: QTreeWidgetItem = self.__modfile_items[modfile_name]
+        item: QTreeWidgetItem = self.__modfile_items[modfile]
         item.setSelected(True)
         self.setCurrentItem(item)
         self.scrollToItem(item, QTreeWidget.ScrollHint.PositionAtTop)

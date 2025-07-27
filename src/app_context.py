@@ -2,7 +2,10 @@
 Copyright (c) Cutleast
 """
 
-from typing import Optional
+from typing import TYPE_CHECKING, Optional
+
+if TYPE_CHECKING:
+    from core.cache.cache import Cache
 
 
 class AppContext:
@@ -76,6 +79,21 @@ class AppContext:
             return cls.get_app().styleSheet()
 
         return ""
+
+    @classmethod
+    def get_cache(cls) -> Optional["Cache"]:
+        """
+        Gets the cache of the current app instance or returns `None` if the app instance
+        has not been initialized.
+
+        Returns:
+            Optional[Cache]:
+                The cache of the current app instance or `None` if the app instance has
+                not been initialized.
+        """
+
+        if cls.has_app():
+            return cls.get_app().cache
 
 
 if __name__ == "__main__":

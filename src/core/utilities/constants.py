@@ -95,7 +95,7 @@ AE_CC_PLUGINS = [
 A list of all Creation Club plugins that came with the AE update and upgrade.
 """
 
-DSD_FILE_PATTERN: str = "**/SKSE/Plugins/DynamicStringDistributor/*/*.json"
+DSD_FILE_PATTERN: str = "SKSE/Plugins/DynamicStringDistributor/*/*.json"
 """
 The glob pattern for DSD files.
 """

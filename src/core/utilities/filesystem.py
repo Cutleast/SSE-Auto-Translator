@@ -309,3 +309,21 @@ def open_in_explorer(path: Path) -> None:
         os.startfile(path)
     else:
         os.system(f'explorer.exe /select,"{path}"')
+
+
+def add_suffix(path: Path, suffix: str) -> Path:
+    """
+    Adds a suffix to the specified path.
+
+    Convenience method for
+        `path.with_suffix(path.suffix + suffix)`
+
+    Args:
+        path (Path): Path to add suffix to.
+        suffix (str): Suffix to add.
+
+    Returns:
+        Path: Path with suffix added.
+    """
+
+    return path.with_suffix(path.suffix + suffix)

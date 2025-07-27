@@ -2,6 +2,7 @@
 Copyright (c) Cutleast
 """
 
+from pathlib import Path
 from typing import Optional
 
 from PySide6.QtCore import Signal
@@ -129,12 +130,12 @@ class TranslationsMenu(Menu):
         )
         open_in_explorer_action.triggered.connect(self.open_in_explorer_requested.emit)
 
-    def open(self, current_item: Optional[Translation | str]) -> None:
+    def open(self, current_item: Optional[Translation | Path]) -> None:
         """
         Opens the context menu at the current cursor position.
 
         Args:
-            current_item (Optional[Translation | str]): The current item in the tree view.
+            current_item (Optional[Translation | Path]): The current item in the tree view.
         """
 
         if (

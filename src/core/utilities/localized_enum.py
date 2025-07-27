@@ -3,7 +3,7 @@ Copyright (c) Cutleast
 """
 
 from abc import abstractmethod
-from typing import TypeVar
+from typing import TypeVar, override
 
 from .base_enum import BaseEnum
 
@@ -14,6 +14,10 @@ class LocalizedEnum(BaseEnum):
     """
     Enum with additional get_localized_name() and get_localized_description() methods.
     """
+
+    @override
+    def __repr__(self) -> str:
+        return self.name
 
     @abstractmethod
     def get_localized_name(self) -> str:

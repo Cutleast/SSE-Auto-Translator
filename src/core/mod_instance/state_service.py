@@ -62,15 +62,19 @@ class StateService(QObject):
             translation (Translation): The added translation.
         """
 
+        self.log.debug(
+            f"Translation '{translation.name}' added to database. Updating affected "
+            "mod file states..."
+        )
+
         modfile_states: dict[ModFile, TranslationStatus] = {}
-        for modfile_name in translation.strings:
+        for modfile in translation.strings:
             original_modfile: Optional[ModFile] = self.mod_instance.get_modfile(
-                modfile_name,
+                modfile,
                 ignore_states=[
                     TranslationStatus.TranslationInstalled,
                     TranslationStatus.IsTranslated,
                 ],
-                ignore_case=True,
             )
 
             if original_modfile is not None:
@@ -78,7 +82,7 @@ class StateService(QObject):
                     TranslationStatus.TranslationInstalled
                 )
 
-        self.update_signal.emit()
+        self.set_modfile_states(modfile_states)
 
     def __on_translation_removed(self, translation: Translation) -> None:
         """
@@ -88,17 +92,20 @@ class StateService(QObject):
             translation (Translation): The removed translation.
         """
 
+        self.log.debug(
+            f"Translation '{translation.name}' removed from database. Updating affected "
+            "mod file states..."
+        )
+
         modfile_states: dict[ModFile, TranslationStatus] = {}
-        for modfile_name in translation.strings.keys():
+        for modfile in translation.strings.keys():
             original_modfile: Optional[ModFile] = self.mod_instance.get_modfile(
-                modfile_name,
-                ignore_states=[TranslationStatus.IsTranslated],
-                ignore_case=True,
+                modfile, ignore_states=[TranslationStatus.IsTranslated]
             )
             if original_modfile is not None:
                 modfile_states[original_modfile] = TranslationStatus.RequiresTranslation
 
-        self.update_signal.emit()
+        self.set_modfile_states(modfile_states)
 
     def get_modfile_state_summary(
         self, modfiles: Optional[list[ModFile]] = None
@@ -134,7 +141,7 @@ class StateService(QObject):
         for mod in self.mod_instance.mods:
             for modfile in mod.modfiles:
                 checked, modfile.status = self.cache.get_from_states_cache(
-                    modfile.path
+                    modfile.full_path
                 ) or (
                     True,
                     TranslationStatus.NoneStatus,
@@ -156,6 +163,8 @@ class StateService(QObject):
 
         for modfile, state in states.items():
             modfile.status = state
+
+        self.log.debug(f"Updated states for {len(states)} mod file(s).")
 
         self.update_signal.emit()
 

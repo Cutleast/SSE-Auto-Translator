@@ -29,6 +29,7 @@ from core.config.app_config import AppConfig
 from core.config.translator_config import TranslatorConfig
 from core.config.user_config import UserConfig
 from core.database.database import TranslationDatabase
+from core.database.exporter import Exporter
 from core.database.string import String
 from core.database.translation import Translation
 from core.editor.editor import Editor
@@ -511,7 +512,7 @@ class EditorTab(QWidget):
             folder = os.path.normpath(folder)
             folder_path = Path(folder)
 
-            self.database.exporter.export_translation_dsd(self.translation, folder_path)
+            Exporter.export_translation_dsd(self.translation, folder_path)
 
             messagebox = QMessageBox(QApplication.activeModalWidget())
             messagebox.setWindowTitle(self.tr("Success!"))
@@ -590,15 +591,16 @@ class EditorTab(QWidget):
         self.__strings_widget.set_state_filter(state_filter)
         self.update()
 
-    def go_to_modfile(self, modfile_name: str) -> None:
+    def go_to_modfile(self, modfile: Path) -> None:
         """
         Selects and scrolls to a specified mod file item.
 
         Args:
-            modfile_name (str): The name of the mod file.
+            modfile (Path):
+                The path of the mod file, relative to the game's "Data" folder.
         """
 
-        self.__strings_widget.go_to_modfile(modfile_name)
+        self.__strings_widget.go_to_modfile(modfile)
 
     def collapseAll(self) -> None:
         self.__strings_widget.collapseAll()

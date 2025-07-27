@@ -9,8 +9,10 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Optional, override
 
+from app_context import AppContext
 from core.cache.base_cache import BaseCache
 from core.database.string import String
+from core.utilities.filesystem import relative_data_path
 
 from .translation_status import TranslationStatus
 
@@ -26,7 +28,7 @@ class ModFile(metaclass=ABCMeta):
     The filename of this file.
     """
 
-    path: Path
+    full_path: Path
     """
     The full path to the file in its mod instance.
     """
@@ -36,9 +38,17 @@ class ModFile(metaclass=ABCMeta):
     Translation status of this file.
     """
 
+    @property
+    def path(self) -> Path:
+        """
+        Path of this file, relative to the game's "Data" folder.
+        """
+
+        return Path(relative_data_path(str(self.full_path)))
+
     @override
     def __hash__(self) -> int:
-        return hash((self.name.lower(), str(self.path).lower()))
+        return hash((self.name.lower(), str(self.full_path).lower()))
 
     @classmethod
     @abstractmethod
@@ -54,28 +64,26 @@ class ModFile(metaclass=ABCMeta):
             list[str]: List of glob patterns
         """
 
-    def get_strings(self, cache: Optional[BaseCache] = None) -> list[String]:
+    def get_strings(self) -> list[String]:
         """
-        Extracts and returns all strings from this file.
-        This method uses the specified cache if available.
-
-        Args:
-            cache (Optional[BaseCache], optional): Cache to use. Defaults to None.
+        Extracts and returns all strings from this file. Uses the current app's cache, if
+        available.
 
         Returns:
             list[String]: List of all strings from this file.
         """
 
+        cache: Optional[BaseCache] = AppContext.get_cache()
         strings: Optional[list[String]] = None
 
         if cache is not None:
-            strings = cache.get_strings_from_file_path(self.path)
+            strings = cache.get_strings_from_file_path(self.full_path)
 
         if strings is None:
             strings = self._extract_strings()
 
             if cache is not None:
-                cache.set_strings_for_file_path(self.path, strings)
+                cache.set_strings_for_file_path(self.full_path, strings)
 
         return strings
 

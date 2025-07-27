@@ -25,6 +25,7 @@ from qtpy.QtWidgets import QMessageBox
 
 from app_context import AppContext
 from core.database.database import TranslationDatabase
+from core.database.database_service import DatabaseService
 from core.downloader.download_manager import DownloadManager
 from core.downloader.file_download import FileDownload
 from core.downloader.translation_download import TranslationDownload
@@ -234,11 +235,13 @@ class DownloadListDialog(QDialog):
                     _downloads.append(download)
 
                     if self.updates:
-                        old_translation = self.database.get_translation_by_modfile_name(
-                            translation_download.modfile_name
+                        old_translation = self.database.get_translation_by_modfile_path(
+                            translation_download.modfile
                         )
                         if old_translation is not None:
-                            self.database.delete_translation(old_translation)
+                            DatabaseService.delete_translation(
+                                old_translation, self.database
+                            )
                             self.log.info("Deleted old translation from database.")
                         else:
                             self.log.warning(

@@ -11,7 +11,10 @@ from PySide6.QtCore import QThread, Signal
 
 from core.cache.cache import TranslationStatus
 from core.config.app_config import AppConfig
+from core.config.user_config import UserConfig
 from core.database.database import TranslationDatabase
+from core.database.database_service import DatabaseService
+from core.database.importer import Importer
 from core.database.string import String
 from core.database.translation import Translation
 from core.downloader.downloader import Downloader
@@ -49,6 +52,7 @@ class Worker(QThread):
     download_queue: Queue[tuple[FileDownload, ProgressCallback]]
     downloader: Downloader
     app_config: AppConfig
+    user_config: UserConfig
     provider: Provider
     database: TranslationDatabase
     mod_instance: ModInstance
@@ -58,6 +62,7 @@ class Worker(QThread):
         installer_queue: Queue[tuple[FileDownload, ProgressCallback]],
         thread_id: int,
         app_config: AppConfig,
+        user_config: UserConfig,
         provider: Provider,
         database: TranslationDatabase,
         mod_instance: ModInstance,
@@ -70,6 +75,7 @@ class Worker(QThread):
 
         self.downloader = Downloader()
         self.app_config = app_config
+        self.user_config = user_config
         self.provider = provider
         self.database = database
         self.mod_instance = mod_instance
@@ -144,10 +150,11 @@ class Worker(QThread):
         progress_callback(ProgressUpdate(0, 0, self.tr("Installing translation...")))
 
         try:
-            strings: dict[str, list[String]] = (
-                self.database.importer.extract_strings_from_archive(
-                    downloaded_file, self.mod_instance
-                )
+            strings: dict[Path, list[String]] = Importer().extract_strings_from_archive(
+                downloaded_file,
+                self.mod_instance,
+                self.app_config.get_tmp_dir(),
+                self.database.language,
             )
         except Exception as ex:
             raise InstallationFailedError from ex
@@ -156,14 +163,13 @@ class Worker(QThread):
             raise MappingFailedError
 
         # TODO: Improve this to work with modfiles from multiple original mods or to get at least the original mod with the most mod files
-        modfile_name = list(strings.keys())[0].lower()
+        modfile: Path = list(strings.keys())[0]
         original_mod: Optional[Mod] = self.mod_instance.get_mod_with_modfile(
-            modfile_name,
+            modfile,
             ignore_states=[
                 TranslationStatus.TranslationInstalled,
                 TranslationStatus.IsTranslated,
             ],
-            ignore_case=True,
         )
 
         if original_mod is None:
@@ -176,7 +182,7 @@ class Worker(QThread):
             name=download.display_name,
             path=(
                 self.database.userdb_path
-                / self.database.language
+                / self.database.language.id
                 / download.display_name
             ),
             mod_id=download.mod_id,
@@ -189,10 +195,14 @@ class Worker(QThread):
         )
         translation.strings = strings
         translation.save()
-        self.database.add_translation(translation)
+        DatabaseService.add_translation(translation, self.database)
 
-        self.database.importer.extract_additional_files(
-            downloaded_file, original_mod, translation
+        Importer().extract_additional_files(
+            archive_path=downloaded_file,
+            original_mod=original_mod,
+            translation_path=translation.path,
+            tmp_dir=self.app_config.get_tmp_dir(),
+            user_config=self.user_config,
         )
 
     @override

@@ -2,6 +2,7 @@
 Copyright (c) Cutleast
 """
 
+from pathlib import Path
 from typing import Optional, TypeAlias
 
 from PySide6.QtCore import Qt
@@ -28,7 +29,7 @@ from ui.widgets.search_bar import SearchBar
 from .string_list_menu import StringListMenu
 from .string_list_toolbar import StringListToolbar
 
-Strings: TypeAlias = list[String] | dict[str, list[String]]
+Strings: TypeAlias = list[String] | dict[Path, list[String]]
 """
 A list of strings or several lists of strings.
 """
@@ -213,7 +214,7 @@ class StringListWidget(QWidget):
         item: QTreeWidgetItem
         if self.__nested and isinstance(self.__strings, dict):
             for separator_name, strings in self.__strings.items():
-                separator_item = QTreeWidgetItem([separator_name])
+                separator_item = QTreeWidgetItem([str(separator_name)])
 
                 for string in strings:
                     item = self.__create_string_item(string)

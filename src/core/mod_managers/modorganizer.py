@@ -169,7 +169,7 @@ class ModOrganizer(ModManager):
                 # Only load mod files from non-separators
                 if not mod.name.endswith("_separator"):
                     mod.modfiles = [
-                        modfile_type(name=Path(m).name, path=mod.path / m)
+                        modfile_type(name=Path(m).name, full_path=mod.path / m)
                         for modfile_type in MODFILE_TYPES
                         for p in modfile_type.get_glob_patterns("*")
                         for m in mod.glob(p)

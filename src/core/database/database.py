@@ -3,30 +3,17 @@ Copyright (c) Cutleast
 """
 
 import logging
-import os
-from copy import copy
 from pathlib import Path
-from shutil import rmtree
-from typing import Any, Optional, overload
+from typing import Optional
 
-import jstyleson as json
 from PySide6.QtCore import QObject, Signal
 
-from core.cache.cache import Cache
-from core.config.app_config import AppConfig
-from core.config.user_config import UserConfig
-from core.database.exporter import Exporter
-from core.database.string import String
-from core.database.utilities import Utilities
-from core.mod_file.mod_file import ModFile
-from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.translation_provider.mod_id import ModId
-from core.translation_provider.source import Source
-from core.utilities.container_utils import unique
+from core.utilities.game_language import GameLanguage
 
-from .importer import Importer
 from .search_filter import SearchFilter, matches_filter
+from .string import String
 from .translation import Translation
 
 
@@ -57,13 +44,13 @@ class TranslationDatabase(QObject):
     """
 
     userdb_path: Path
-    appdb_path: Path
-    language: str
+    """The path to the user database directory (language not included)."""
 
-    cache: Cache
-    importer: Importer
-    exporter: Exporter
-    utils: Utilities
+    appdb_path: Path
+    """The path to the app database directory (language not included)."""
+
+    language: GameLanguage
+    """The language of the database."""
 
     __vanilla_translation: Translation
     __user_translations: list[Translation]
@@ -74,23 +61,27 @@ class TranslationDatabase(QObject):
         self,
         userdb_path: Path,
         appdb_path: Path,
-        language: str,
-        cache: Cache,
-        app_config: AppConfig,
-        user_config: UserConfig,
+        language: GameLanguage,
+        vanilla_translation: Translation,
+        user_translations: list[Translation],
     ) -> None:
+        """
+        Args:
+            userdb_path (Path): Path to the user database directory.
+            appdb_path (Path): Path to the application database directory.
+            language (GameLanguage): Language of the database.
+            vanilla_translation (Translation): Translation for base game + AE CC Content.
+            user_translations (list[Translation]): List of user installed translations.
+        """
+
         super().__init__()
 
         self.userdb_path = userdb_path
         self.appdb_path = appdb_path
         self.language = language
-        self.cache = cache
 
-        self.importer = Importer(cache, self, app_config, user_config)
-        self.exporter = Exporter(self, user_config)
-        self.utils = Utilities(user_config)
-
-        self.load_database()
+        self.__vanilla_translation = vanilla_translation
+        self.__user_translations = user_translations
 
     @property
     def vanilla_translation(self) -> Translation:
@@ -104,11 +95,9 @@ class TranslationDatabase(QObject):
     def user_translations(self) -> list[Translation]:
         """
         List of user installed translations.
-
-        **Modifying this list won't affect the database.**
         """
 
-        return copy(self.__user_translations)
+        return self.__user_translations
 
     @property
     def strings(self) -> list[String]:
@@ -134,170 +123,28 @@ class TranslationDatabase(QObject):
 
         return result
 
-    def __load_vanilla_translation(self) -> None:
-        """
-        Loads vanilla translation.
-        """
-
-        self.log.info("Loading vanilla database...")
-
-        translation_path: Path = self.appdb_path / self.language.lower()
-        translation = Translation(name="", path=translation_path, source=Source.Local)
-        translation.strings  # build cache of strings by "calling" the strings property
-        self.__vanilla_translation = translation
-
-        self.log.info(
-            f"Loaded vanilla database for {len(translation.strings)} base game "
-            "plugin(s)."
-        )
-
-    def __load_user_database(self) -> None:
-        """
-        Loads user installed translation database.
-        """
-
-        self.log.info("Loading user database...")
-
-        db_path: Path = self.userdb_path / self.language
-        index_path: Path = db_path / "index.json"
-
-        if not index_path.is_file():
-            with index_path.open("w", encoding="utf8") as index_file:
-                json.dump([], index_file)
-
-        with index_path.open(encoding="utf8") as index_file:
-            translation_list: list[dict[str, Any]] = json.load(index_file)
-
-        translations: list[Translation] = []
-
-        for translation_data in translation_list:
-            name: str = translation_data["name"]
-            try:
-                translation = Translation.from_index_data(translation_data, db_path)
-                translation.strings  # build cache of strings by "calling" the strings property
-                translations.append(translation)
-            except Exception as ex:
-                self.log.error(
-                    f"Failed to load translation {name!r}: {ex}", exc_info=ex
-                )
-
-        self.__user_translations = translations
-        self.log.info(f"Loaded {len(self.__user_translations)} user translation(s).")
-
-    def load_database(self) -> None:
-        """
-        Loads translation database.
-        """
-
-        self.__load_vanilla_translation()
-        self.__load_user_database()
-
-    def save_database(self) -> None:
-        """
-        Saves translation database.
-        """
-
-        self.log.info("Saving database...")
-
-        index_path: Path = self.userdb_path / self.language / "index.json"
-        index_data: list[dict[str, Any]] = [
-            translation.to_index_data()
-            for translation in unique(self.__user_translations, key=lambda t: t.id)
-        ]
-
-        with index_path.open("w", encoding="utf8") as index_file:
-            json.dump(index_data, index_file, indent=4, ensure_ascii=False)
-
-        self.log.info("Database saved.")
-
-    def add_translation(self, translation: Translation, save: bool = True) -> None:
-        """
-        Adds a translation to the database.
-
-        Args:
-            translation (Translation): Translation to add to the database.
-            save (bool, optional): Whether to save the database. Defaults to True.
-        """
-
-        # Add new translation
-        if translation.id not in [t.id for t in self.__user_translations]:
-            self.__user_translations.append(translation)
-            self.log.info(f"Added translation {translation.name!r} to database.")
-
-        # Merge with existing translation
-        else:
-            # Merge new translation with existing one
-            translations: dict[str, Translation] = {
-                t.id: t for t in self.user_translations
-            }
-            installed_translation = translations[translation.id]
-
-            for modfile_name, modfile_strings in translation.strings.items():
-                installed_translation.strings.setdefault(modfile_name, []).extend(
-                    modfile_strings
-                )
-
-                # Remove duplicates
-                installed_translation.strings[modfile_name] = String.unique(
-                    installed_translation.strings[modfile_name]
-                )
-
-            # Merge metadata
-            installed_translation.mod_id = translation.mod_id
-            installed_translation.version = translation.version
-            installed_translation.original_mod_id = translation.original_mod_id
-            installed_translation.original_version = translation.original_version
-            translation = installed_translation
-
-        if save:
-            self.save_database()
-
-        self.add_signal.emit(translation)
-        self.update_signal.emit()
-
-    def delete_translation(self, translation: Translation, save: bool = True) -> None:
-        """
-        Deletes a translation from the database.
-
-        Args:
-            translation (Translation): Translation to delete from the database.
-            save (bool, optional): Whether to save the database. Defaults to True.
-        """
-
-        if translation.path.is_dir():
-            rmtree(translation.path)
-        if translation in self.__user_translations:
-            self.__user_translations.remove(translation)
-
-        self.log.info(f"Deleted translation {translation.name!r} from database.")
-
-        if save:
-            self.save_database()
-
-        self.remove_signal.emit(translation)
-        self.update_signal.emit()
-
-    def get_translation_by_modfile_name(
-        self, modfile_name: str
+    def get_translation_by_modfile_path(
+        self, modfile_path: Path
     ) -> Optional[Translation]:
         """
         Gets a translation that covers a specified mod file.
         This method is case-insensitive.
 
         Args:
-            modfile_name (str): Name of the mod file.
+            modfile_path (Path):
+                Path of the mod file, relative to the game's "Data" folder.
 
         Returns:
             Optional[Translation]: Translation that covers the mod file or None.
         """
 
         translations = {
-            _modfile_name.lower(): translation
-            for translation in self.__user_translations
-            for _modfile_name in translation.strings
+            _modfile: translation
+            for translation in self.user_translations
+            for _modfile in translation.strings
         }
 
-        return translations.get(modfile_name.lower())
+        return translations.get(Path(modfile_path))
 
     def get_translation_by_mod(self, mod: Mod) -> Optional[Translation]:
         """
@@ -312,7 +159,7 @@ class TranslationDatabase(QObject):
 
         installed_translations = {
             translation.id: translation
-            for translation in self.__user_translations
+            for translation in self.user_translations
             if translation.mod_id
         }
 
@@ -323,221 +170,65 @@ class TranslationDatabase(QObject):
             ]
 
         elif mod.modfiles:
-            translation = self.get_translation_by_modfile_name(mod.modfiles[0].name)
+            translation = self.get_translation_by_modfile_path(mod.modfiles[0].path)
 
         return translation
 
-    def get_translation_by_id(self, mod_id: ModId) -> Optional[Translation]:
+    def get_translation_by_mod_id(self, mod_id: ModId) -> Optional[Translation]:
         """
         Gets a translation for a specified mod and file id if installed.
 
         Args:
-            mod_id (int): Mod id.
-            file_id (Optional[int], optional): File id. Defaults to None.
+            mod_id (ModId): Mod id.
 
         Returns:
             Optional[Translation]: Translation or None.
         """
 
-        translation: Optional[Translation] = {
-            translation.mod_id: translation for translation in self.__user_translations
-        }.get(mod_id)
-
-        return translation
-
-    def apply_db_to_translation(
-        self, translation: Translation, modfile_name: Optional[str] = None
-    ) -> None:
-        """
-        Applies database to untranslated strings in a translation.
-
-        Args:
-            translation (Translation): Translation to apply database to.
-            modfile_name (Optional[str], optional):
-                Name of the mod file to apply database to. Defaults to None.
-        """
-
-        translation_strings: Optional[dict[str, list[String]]] = translation.strings
-
-        self.log.debug("Indexing database strings...")
-        installed_translations: list[Translation] = [
-            self.__vanilla_translation
-        ] + self.__user_translations
-
-        database_originals: dict[str, String] = {
-            string.original: string
-            for t in installed_translations
-            for _modfile_name, modfile_strings in t.strings.items()
-            if t != translation or _modfile_name != modfile_name
-            for string in modfile_strings
-            if string.status != String.Status.TranslationRequired
-        }
-        database_strings: dict[str, String] = {
-            string.id: string
-            for t in installed_translations
-            for modfile_strings in t.strings.values()
-            for string in modfile_strings
-            if string.status != String.Status.TranslationRequired
+        translations: dict[ModId, Translation] = {
+            translation.mod_id: translation
+            for translation in self.user_translations
+            if translation.mod_id is not None
         }
 
-        strings: list[String]
-        if modfile_name is not None:
-            strings = [
-                string
-                for string in translation_strings[modfile_name]
-                if string.status == String.Status.TranslationRequired
-            ]
-        else:
-            strings = [
-                string
-                for modfile_strings in translation_strings.values()
-                for string in modfile_strings
-                if string.status == String.Status.TranslationRequired
-            ]
+        return translations.get(mod_id)
 
-        if not len(strings):
-            return
-
-        self.log.info(f"Translating {len(strings)} string(s) from database...")
-        self.log.debug(
-            f"Database size: {len(database_strings)} string(s) "
-            f"({len(database_originals)} original(s))"
-        )
-
-        translated = 0
-        for string in strings:
-            matching = database_strings.get(string.id)
-
-            if matching is None:
-                matching = database_originals.get(string.original)
-
-            if matching is None:
-                continue
-
-            full_matching = string.id == matching.id
-            string.string = matching.string
-
-            if full_matching or matching.status == String.Status.NoTranslationRequired:
-                string.status = matching.status
-            else:
-                string.status = String.Status.TranslationIncomplete
-
-            translated += 1
-
-        self.log.info(f"Translated {translated} string(s) from database.")
-
-    @overload
-    def create_translation(
-        self,
-        item: tuple[Mod, list[ModFile]],
-        apply_db: bool = True,
-        add_and_save: bool = True,
-    ) -> Translation:
+    def get_translation_for_id(self, id: str) -> Translation:
         """
-        Creates translation for a mod by extracting the strings from the specified
-        mod files and applying translations from database to them if enabled.
+        Gets a translation for the specified ID.
 
         Args:
-            item (tuple[Mod, list[ModFile]]):
-                Mod and mod files to create translation for.
-            apply_db (bool, optional): Whether to apply database. Defaults to True.
-            add_and_save (bool, optional):
-                Whether to save the translation. Defaults to True.
+            id (str): ID of the translation to get.
+
+        Raises:
+            KeyError:
+                If the translation with the specified ID is not found in the database.
 
         Returns:
-            Translation: Created translation.
+            Translation: The translation with the specified ID.
         """
 
-    @overload
-    def create_translation(
-        self, item: ModFile, apply_db: bool = True, add_and_save: bool = True
-    ) -> Translation:
-        """
-        Creates translation for a mod file by extracting its strings
-        and applying translations from database to them if enabled.
-
-        Args:
-            item (ModFile): Mod file to create translation for.
-            apply_db (bool, optional): Whether to apply database. Defaults to True.
-            add_and_save (bool, optional):
-                Whether to save the translation and database. Defaults to True.
-
-        Returns:
-            Translation: Created translation.
-        """
-
-    def create_translation(
-        self,
-        item: ModFile | tuple[Mod, list[ModFile]],
-        apply_db: bool = True,
-        add_and_save: bool = True,
-    ) -> Optional[Translation]:
-        mod: Optional[Mod] = None
-        modfiles: list[ModFile] = []
-        translation: Optional[Translation] = None
-        translation_name: str
-
-        if isinstance(item, ModFile):
-            modfiles = [item]
-            translation = self.get_translation_by_modfile_name(item.path.name)
-
-            if translation is not None:
+        for translation in self.user_translations:
+            if translation.id == id:
                 return translation
 
-            translation_name = f"{item.name} - {self.language.capitalize()}"
-
         else:
-            mod, modfiles = item
-            translation = self.get_translation_by_mod(mod)
-            translation_name = f"{mod.name} - {self.language.capitalize()}"
+            raise KeyError(f"Translation with ID '{id}' not found in database.")
 
-        modfiles = list(
-            filter(
-                lambda p: p.status
-                in [
-                    TranslationStatus.RequiresTranslation,
-                    TranslationStatus.TranslationAvailableInDatabase,
-                ],
-                modfiles,
-            )
-        )
+    def is_translation_in_database(self, translation: Translation) -> bool:
+        """
+        Checks if a translation is already installed in the database.
 
-        if not len(modfiles):
-            return translation
+        Args:
+            translation (Translation): Translation to check.
 
-        self.log.info(f"Creating translation for {len(modfiles)} mod file(s)...")
+        Returns:
+            bool: `True` if the translation is in the database, `False` otherwise.
+        """
 
-        if translation is None:
-            translation_path: Path = self.userdb_path / self.language / translation_name
-            translation = Translation(name=translation_name, path=translation_path)
+        return any(t.id == translation.id for t in self.user_translations)
 
-        translation_strings: dict[str, list[String]] = translation.strings or {}
-        for modfile in modfiles:
-            modfile_strings: list[String] = modfile.get_strings(self.cache)
-
-            for string in modfile_strings:
-                string.string = string.original
-                string.status = String.Status.TranslationRequired
-
-            translation_strings.setdefault(modfile.name.lower(), []).extend(
-                modfile_strings
-            )
-
-        translation.strings = translation_strings
-        translation.remove_duplicates(save=False)
-
-        if apply_db:
-            self.apply_db_to_translation(translation)
-
-        if add_and_save:
-            translation.save()
-            self.add_translation(translation)
-
-        self.log.info(f"Created translation {translation.name!r}.")
-
-        return translation
-
-    def search_database(self, filter: SearchFilter) -> dict[str, list[String]]:
+    def search_database(self, filter: SearchFilter) -> dict[Path, list[String]]:
         """
         Returns strings from database that match a specified filter.
 
@@ -545,13 +236,13 @@ class TranslationDatabase(QObject):
             filter (SearchFilter): Filter options.
 
         Returns:
-            dict[str, list[String]]: Strings that match the filter.
+            dict[Path, list[String]]: Strings that match the filter.
         """
 
         self.log.info("Searching database...")
         self.log.debug(f"Filter: {filter}")
 
-        result: dict[str, list[String]] = {}
+        result: dict[Path, list[String]] = {}
         translations: list[Translation] = self.__user_translations + [
             self.__vanilla_translation
         ]
@@ -575,48 +266,3 @@ class TranslationDatabase(QObject):
         )
 
         return result
-
-    def create_blank_translation(
-        self, name: str, strings: dict[str, list[String]]
-    ) -> Translation:
-        """
-        Creates a blank translation with the specified name and strings.
-
-        Args:
-            name (str): The name of the translation.
-            strings (dict[str, list[String]]): Strings to add to the translation.
-
-        Returns:
-            Translation: The created translation.
-        """
-
-        path: Path = self.userdb_path / self.language / name
-        return Translation.create(name=name, path=path, strings=strings)
-
-    def rename_translation(
-        self, translation: Translation, new_name: str, save: bool = True
-    ) -> None:
-        """
-        Renames a translation.
-
-        Args:
-            translation (Translation): The translation to rename.
-            new_name (str): The new name of the translation.
-            save (bool, optional):
-                Whether to save the changes to the database. Defaults to True.
-        """
-
-        if not translation.path.is_dir():
-            raise FileNotFoundError(f"{translation.name!r} is not in database!")
-
-        old_name: str = translation.name
-        new_path = self.userdb_path / self.language / new_name
-        os.rename(translation.path, new_path)
-        translation.name = new_name
-        translation.path = new_path
-
-        if save:
-            self.save_database()
-
-        self.update_signal.emit()
-        self.log.info(f"Renamed translation {old_name!r} to {new_name!r}.")

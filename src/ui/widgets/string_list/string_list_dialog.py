@@ -2,6 +2,8 @@
 Copyright (c) Cutleast
 """
 
+from pathlib import Path
+
 from PySide6.QtCore import Qt
 
 from core.database.string import String
@@ -17,7 +19,7 @@ class StringListDialog(StringListWidget):
     def __init__(
         self,
         name: str,
-        strings: list[String] | dict[str, list[String]],
+        strings: list[String] | dict[Path, list[String]],
         show_translation: bool = False,
     ) -> None:
         super().__init__(strings, show_translation)
