@@ -39,8 +39,7 @@ QMenu {
 QMenu {
     background: #292929;
     border: 1px solid #303030;
-    margin: 4px;
-    padding: 4px;
+    padding: 2px;
     padding-right: 24px;
     border-radius: 8px;
 }
