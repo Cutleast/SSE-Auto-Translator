@@ -185,12 +185,11 @@ class TranslationService:
             strings (dict[Path, list[String]]): Map of mod file names to their list of strings.
         """
 
-        translation_folder.mkdir(parents=True, exist_ok=True)
-
         for modfile_name, modfile_strings in strings.items():
             json_file_path: Path = translation_folder / add_suffix(
                 modfile_name, ".json"
             )
+            json_file_path.parent.mkdir(parents=True, exist_ok=True)
             cls.save_strings_to_json_file(json_file_path, modfile_strings)
 
     @classmethod
