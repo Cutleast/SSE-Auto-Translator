@@ -100,6 +100,8 @@ class ModInstanceMenu(Menu):
     __show_strings_action: QAction
     __import_as_translation_action: QAction
     __show_structure_action: QAction
+    __open_modpage_action: QAction
+    __open_in_explorer_action: QAction
 
     def __init__(self) -> None:
         super().__init__()
@@ -250,16 +252,18 @@ class ModInstanceMenu(Menu):
         )
         self.__show_strings_action.triggered.connect(self.show_strings_requested.emit)
 
-        open_modpage_action: QAction = self.addAction(
+        self.__open_modpage_action = self.addAction(
             IconProvider.get_res_icon(ResourceIcon.NexusMods),
             self.tr("Open mod page on Nexus Mods..."),
         )
-        open_modpage_action.triggered.connect(self.open_modpage_requested.emit)
+        self.__open_modpage_action.triggered.connect(self.open_modpage_requested.emit)
 
-        open_in_explorer_action: QAction = self.addAction(
+        self.__open_in_explorer_action = self.addAction(
             IconProvider.get_qta_icon("fa5s.folder"), self.tr("Open in Explorer...")
         )
-        open_in_explorer_action.triggered.connect(self.open_in_explorer_requested.emit)
+        self.__open_in_explorer_action.triggered.connect(
+            self.open_in_explorer_requested.emit
+        )
 
     def open(
         self, current_item: Optional[Mod | ModFile], selected_modfiles: list[ModFile]
@@ -303,6 +307,11 @@ class ModInstanceMenu(Menu):
                     for modfile in current_item.modfiles
                 )
             )
+        )
+
+        self.__open_in_explorer_action.setVisible(current_item is not None)
+        self.__open_modpage_action.setVisible(
+            isinstance(current_item, Mod) and current_item.mod_id is not None
         )
 
         self.exec(QCursor.pos())
