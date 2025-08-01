@@ -117,7 +117,13 @@ class BaseCache(metaclass=ABCMeta):
         def decorator(func: Callable[P, R]) -> Callable[P, R]:
             @wraps(func)
             def wrapper(*args: P.args, **kwargs: P.kwargs) -> R:
-                cache_path: Path = AppContext.get_app().cache.path
+                cache: Optional[BaseCache] = AppContext.get_cache()
+
+                if cache is None:
+                    cls.log.warning("No cache available!")
+                    return func(*args, **kwargs)
+
+                cache_path: Path = cache.path
 
                 cache_folder: Path
                 if cache_subfolder is None:
