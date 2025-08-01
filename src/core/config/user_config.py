@@ -5,7 +5,10 @@ Copyright (c) Cutleast
 from pathlib import Path
 from typing import Annotated, Optional, override
 
-from core.mod_managers.mod_manager import ModManager
+from pydantic import Field
+
+from core.mod_managers.modorganizer.mo2_instance_info import Mo2InstanceInfo
+from core.mod_managers.vortex.profile_info import ProfileInfo
 from core.translation_provider.provider_preference import ProviderPreference
 from core.utilities.game_language import GameLanguage
 
@@ -23,17 +26,10 @@ class UserConfig(BaseConfig):
     api_key: Annotated[str, BaseConfig.PropertyMarker.ExcludeFromLogging]
     """API key for Nexus Mods."""
 
-    mod_manager: ModManager.Type
-    """Mod manager to use."""
-
-    modinstance: str
+    modinstance: Optional[Mo2InstanceInfo | ProfileInfo] = Field(
+        default=None, discriminator="mod_manager"
+    )
     """Mod instance to load."""
-
-    instance_profile: Optional[str] = None
-    """Instance profile to load."""
-
-    instance_path: Optional[Path] = None
-    """Path to portable MO2 instance."""
 
     use_masterlist: bool = True
     """Whether to use the masterlist."""
@@ -79,8 +75,7 @@ class UserConfig(BaseConfig):
             _config_path=user_config_path,
             language=GameLanguage.German,
             api_key="",
-            mod_manager=ModManager.Type.ModOrganizer,
-            modinstance="",
+            modinstance=None,
         )
         config._config_path = user_config_path
 

@@ -7,7 +7,7 @@ from typing import Optional, TypeVar
 
 import pytest
 
-from core.utilities.filesystem import glob, parse_path
+from core.utilities.filesystem import parse_path, str_glob
 
 T = TypeVar("T")
 
@@ -43,7 +43,7 @@ class TestFilesystem:
         expected_output: list[str] = ["a.txt", "b.txt"]
 
         # when
-        real_output: list[str] = glob(pattern, files)
+        real_output: list[str] = str_glob(pattern, files)
 
         # then
         assert TestFilesystem.compare_lists(real_output, expected_output)
@@ -59,7 +59,7 @@ class TestFilesystem:
         expected_output: list[str] = ["a/b.txt", "e/f.txt"]
 
         # when
-        real_output: list[str] = glob(pattern, files)
+        real_output: list[str] = str_glob(pattern, files)
 
         # then
         assert TestFilesystem.compare_lists(real_output, expected_output)
@@ -75,7 +75,7 @@ class TestFilesystem:
         expected_output: list[str] = ["a/b/c/d/e/f.txt", "g/h/i/j/k/l/m.txt"]
 
         # when
-        real_output: list[str] = glob(pattern, files)
+        real_output: list[str] = str_glob(pattern, files)
 
         # then
         assert TestFilesystem.compare_lists(real_output, expected_output)

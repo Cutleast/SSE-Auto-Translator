@@ -1,5 +1,5 @@
 version = 1
-revision = 2
+revision = 3
 requires-python = ">=3.12"
 resolution-markers = [
     "(platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or sys_platform != 'linux'",
@@ -687,6 +687,15 @@ wheels = [
 ]
 
 [[package]]
+name = "pyfakefs"
+version = "5.9.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/d8/d2/24e3f3de43478eaed10171a67711c36c0975b698db2b500a9614f752e6f9/pyfakefs-5.9.2.tar.gz", hash = "sha256:66c5c6ccd4097b484f8782f9a5078fee0533d465e0d9caf594c9157d54382553", size = 231068, upload-time = "2025-07-30T19:19:48.538Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c1/42/88175921a5b138427237c1cdfaafd67a58b53538578604d2661e2d6ef2b3/pyfakefs-5.9.2-py3-none-any.whl", hash = "sha256:8fcea36051d5b8827d49f5e2d242e91a51c5af6b78eeffa8e7adb899a6763e99", size = 245398, upload-time = "2025-07-30T19:19:46.763Z" },
+]
+
+[[package]]
 name = "pygments"
 version = "2.19.2"
 source = { registry = "https://pypi.org/simple" }
@@ -821,6 +830,18 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/18/99/668cade231f434aaa59bbfbf49469068d2ddd945000621d3d165d2e7dd7b/pytest_cov-6.2.1.tar.gz", hash = "sha256:25cc6cc0a5358204b8108ecedc51a9b57b34cc6b8c967cc2c01a4e00d8a67da2", size = 69432, upload-time = "2025-06-12T10:47:47.684Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/bc/16/4ea354101abb1287856baa4af2732be351c7bee728065aed451b678153fd/pytest_cov-6.2.1-py3-none-any.whl", hash = "sha256:f5bc4c23f42f1cdd23c70b1dab1bbaef4fc505ba950d53e0081d0730dd7e86d5", size = 24644, upload-time = "2025-06-12T10:47:45.932Z" },
+]
+
+[[package]]
+name = "pytest-mock"
+version = "3.14.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pytest" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/71/28/67172c96ba684058a4d24ffe144d64783d2a270d0af0d9e792737bddc75c/pytest_mock-3.14.1.tar.gz", hash = "sha256:159e9edac4c451ce77a5cdb9fc5d1100708d2dd4ba3c3df572f14097351af80e", size = 33241, upload-time = "2025-05-26T13:58:45.167Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b2/05/77b60e520511c53d1c1ca75f1930c7dd8e971d0c4379b7f4b3f9644685ba/pytest_mock-3.14.1-py3-none-any.whl", hash = "sha256:178aefcd11307d874b4cd3100344e7e2d888d9791a6a1d9bfe90fbc1b74fd1d0", size = 9923, upload-time = "2025-05-26T13:58:43.487Z" },
 ]
 
 [[package]]
@@ -1121,9 +1142,11 @@ dependencies = [
 [package.dev-dependencies]
 dev = [
     { name = "nuitka" },
+    { name = "pyfakefs" },
     { name = "pyright" },
     { name = "pytest" },
     { name = "pytest-cov" },
+    { name = "pytest-mock" },
     { name = "pytest-qt" },
     { name = "ruff" },
     { name = "types-requests" },
@@ -1162,9 +1185,11 @@ requires-dist = [
 [package.metadata.requires-dev]
 dev = [
     { name = "nuitka" },
+    { name = "pyfakefs" },
     { name = "pyright" },
     { name = "pytest" },
     { name = "pytest-cov" },
+    { name = "pytest-mock" },
     { name = "pytest-qt" },
     { name = "ruff" },
     { name = "types-requests" },

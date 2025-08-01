@@ -64,6 +64,16 @@ class ModFile(metaclass=ABCMeta):
             list[str]: List of glob patterns
         """
 
+    @classmethod
+    @abstractmethod
+    def can_be_in_bsas(cls) -> bool:
+        """
+        Returns whether this file type can occur in BSA archives.
+
+        Returns:
+            bool: Whether this file type can occur in BSA archives.
+        """
+
     def get_strings(self) -> list[String]:
         """
         Extracts and returns all strings from this file. Uses the current app's cache, if

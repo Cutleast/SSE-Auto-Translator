@@ -218,6 +218,7 @@ class Scanner(QObject):
                 modfile.status == TranslationStatus.RequiresTranslation
                 for modfile in modfiles
             )
+            and mod.mod_id is not None
             and self.provider.is_mod_id_valid(mod.mod_id, check_online=False)
         }
 
@@ -246,6 +247,9 @@ class Scanner(QObject):
     def __online_scan_mod(
         self, mod: Mod, modfiles: list[ModFile], ldialog: Optional[LoadingDialog] = None
     ) -> dict[ModFile, TranslationStatus]:
+        if mod.mod_id is None:
+            return {}
+
         result: dict[ModFile, TranslationStatus] = {}
         for m, modfile in enumerate(modfiles):
             if ldialog is not None:

@@ -228,7 +228,7 @@ class ModInstanceWidget(QTreeWidget):
 
         cur_separator: Optional[QTreeWidgetItem] = None
         for i, mod in enumerate(self.mod_instance.mods):
-            if mod.name.endswith("_separator"):
+            if mod.mod_type == Mod.Type.Separator:
                 cur_separator = ModInstanceWidget._create_separator_item(mod, i)
                 self.__mod_items[mod] = cur_separator
                 self.addTopLevelItem(cur_separator)
@@ -256,7 +256,7 @@ class ModInstanceWidget(QTreeWidget):
     def _create_separator_item(separator: Mod, index: int) -> QTreeWidgetItem:
         separator_item = QTreeWidgetItem(
             [
-                separator.name.removesuffix("_separator"),
+                separator.name,
                 "",
                 str(index + 1),  # Mod Priority
             ]
@@ -293,12 +293,12 @@ class ModInstanceWidget(QTreeWidget):
     def _create_modfile_item(modfile: ModFile, checked: bool = True) -> QTreeWidgetItem:
         modfile_item = QTreeWidgetItem(
             [
-                modfile.name,
+                str(modfile.path),
                 "",  # Version
                 "",  # Priority
             ]
         )
-        modfile_item.setToolTip(0, modfile.name)
+        modfile_item.setToolTip(0, str(modfile.full_path))
         modfile_item.setFlags(
             Qt.ItemFlag.ItemIsUserCheckable | Qt.ItemFlag.ItemIsSelectable
         )

@@ -336,6 +336,9 @@ class DownloadManager(QObject):
     def __collect_downloads_for_modfile(
         self, mod: Mod, modfile: ModFile, ldialog: Optional[LoadingDialog] = None
     ) -> list[TranslationDownload]:
+        if mod.mod_id is None:
+            return []
+
         available_translations: dict[Source, list[ModId]] = (
             self.provider.get_translations(
                 mod.mod_id,

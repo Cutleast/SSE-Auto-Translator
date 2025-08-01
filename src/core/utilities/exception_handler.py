@@ -187,3 +187,34 @@ class ExceptionHandler(QObject):
         finally:
             dump_file_path.unlink(missing_ok=True)
             log_file_path.unlink(missing_ok=True)
+
+    @staticmethod
+    def raises_exception(
+        callable: Callable, expected_exception: type[BaseException] | None = None
+    ) -> bool:
+        """
+        Checks if the callable raises the expected exception.
+
+        Args:
+            callable (Callable): Function or method to check.
+            expected_exception (type[BaseException] | None, optional):
+                Expected exception. Defaults to None.
+
+        Raises:
+            Exception: If the callable does not raise the expected exception.
+
+        Returns:
+            bool: `True` if the callable raises the expected exception, `False` otherwise.
+        """
+
+        try:
+            callable()
+        except Exception as ex:
+            if expected_exception is not None and not isinstance(
+                ex, expected_exception
+            ):
+                raise ex
+
+            return True
+
+        return False

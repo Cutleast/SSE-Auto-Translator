@@ -87,7 +87,7 @@ class LevelDB:
 
             self.log.debug("Symlink deleted.")
 
-    def get_section(self, prefix: Optional[str | bytes] = None) -> dict[str, Any]:
+    def load(self, prefix: Optional[str | bytes] = None) -> dict[str, Any]:
         """
         Loads all keys with a given prefix from the database.
 
@@ -125,57 +125,7 @@ class LevelDB:
 
         self.log.info("Loaded keys from database.")
 
-        self.del_symlink_path()
-
         return parsed
-
-    def dump(self, data: dict, prefix: Optional[str | bytes] = None) -> None:
-        """
-        Dumps the given data to the database.
-
-        Args:
-            data (dict): The data to dump.
-            prefix (str | bytes, optional):
-                The prefix for the flattened keys. Defaults to the database's root.
-        """
-
-        db_path = self.get_symlink_path()
-
-        flat_dict: dict[str, str] = LevelDB.flatten_nested_dict(data)
-
-        if isinstance(prefix, str):
-            prefix = prefix.encode()
-
-        self.log.info(f"Saving keys to '{db_path}'...")
-
-        with ldb.DB(str(db_path)) as database:
-            with database.write_batch() as batch:
-                for key, value in flat_dict.items():
-                    batch.put(((prefix or b"") + key.encode()), value.encode())
-
-        self.log.info("Saved keys to database.")
-
-        self.del_symlink_path()
-
-    def set_key(self, key: str, value: str) -> None:
-        """
-        Sets the value of a single key.
-
-        Args:
-            key (str): The key to set.
-            value (str): The value to set.
-        """
-
-        db_path = self.get_symlink_path()
-
-        self.log.info(f"Saving key to '{db_path}'...")
-
-        with ldb.DB(str(db_path)) as database:
-            database.put(key.encode(), json.dumps(value).encode())
-
-        self.log.info("Saved key to database.")
-
-        self.del_symlink_path()
 
     def get_key(self, key: str) -> Any:
         """
@@ -252,9 +202,9 @@ class LevelDB:
 
         result: dict = {}
 
-        for key_string, value in data.items():
+        for keys, value in data.items():
             try:
-                keys = key_string.strip().split("###")
+                keys = keys.strip().split("###")
 
                 # Add keys and value to result
                 current = result
@@ -265,7 +215,7 @@ class LevelDB:
                 value = json.loads(value)
                 current[keys[-1]] = value
             except ValueError:
-                LevelDB.log.warning(f"Failed to process key: {key_string:20}...")
+                LevelDB.log.warning(f"Failed to process key: {keys:20}...")
                 continue
 
         return result

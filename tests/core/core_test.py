@@ -3,12 +3,24 @@ Copyright (c) Cutleast
 """
 
 import logging
+import shutil
+import tempfile
+from pathlib import Path
+from typing import Generator
+from unittest.mock import MagicMock
+
+import jstyleson as json
+import pytest
+from pyfakefs.fake_filesystem import FakeFilesystem
+from pytest_mock import MockerFixture
 
 from core.database.string import String
 from core.mod_file.mod_file import ModFile
 from core.mod_instance.mod import Mod
+from core.utilities.leveldb import LevelDB
 
 from ..app_test import AppTest
+from .setup.mock_plyvel import MockPlyvelDB
 
 
 class CoreTest(AppTest):
@@ -103,3 +115,44 @@ class CoreTest(AppTest):
                 string.status,
             )
         )
+
+    @pytest.fixture
+    def vortex_db(
+        self, mocker: MockerFixture, state_v2_json: Path, test_fs: FakeFilesystem
+    ) -> Generator[MockPlyvelDB, None, None]:
+        """
+        Pytest fixture to mock the plyvel.DB class and redirect it to use the
+        database with the test instance.
+
+        Yields:
+            Generator[MockPlyvelDB]: The mocked plyvel.DB instance
+        """
+
+        flat_data: dict[str, str] = LevelDB.flatten_nested_dict(
+            json.loads(state_v2_json.read_text())
+        )
+        mock_instance = MockPlyvelDB(
+            {k.encode(): v.encode() for k, v in flat_data.items()}
+        )
+
+        magic: MagicMock = mocker.patch("plyvel.DB", return_value=mock_instance)
+
+        yield mock_instance
+
+        mocker.stop(magic)
+
+    @pytest.fixture
+    def state_v2_json(self) -> Generator[Path, None, None]:
+        """
+        Fixture to return a path to a sample JSON file within a temp folder resembling
+        a Vortex database with the test instance.
+
+        Yields:
+            Generator[Path]: Path to sample JSON file
+        """
+
+        with tempfile.TemporaryDirectory(prefix="SSE-AT_test_") as tmp_dir:
+            src = self.data_path() / "state.v2.json"
+            dst = Path(tmp_dir) / "state.v2.json"
+            shutil.copyfile(src, dst)
+            yield dst

@@ -35,8 +35,8 @@ from core.database.database_service import DatabaseService
 from core.downloader.download_manager import DownloadManager
 from core.masterlist.masterlist import Masterlist
 from core.mod_instance.mod_instance import ModInstance
+from core.mod_instance.mod_instance_loader import ModInstanceLoader
 from core.mod_instance.state_service import StateService
-from core.mod_managers.mod_manager import ModManager
 from core.scanner.scanner import Scanner
 from core.translation_provider.nm_api.nm_api import NexusModsApi
 from core.translation_provider.nm_api.nxm_handler import NXMHandler
@@ -101,7 +101,7 @@ class App(QApplication):
     List of functions to call before the application exits.
     """
 
-    first_start: bool
+    setup_required: bool
     setup_complete: bool = True
 
     # App components
@@ -130,7 +130,10 @@ class App(QApplication):
         self.cache_path = self.data_path / "cache"
         self.log_path = self.data_path / "logs"
 
-        self.first_start: bool = not (self.data_path / "user" / "config.json").is_file()
+        # Check if there is a loadable user config and show setup if required
+        self.setup_required: bool = (
+            not (self.data_path / "user" / "config.json").is_file()
+        ) or ExceptionHandler.raises_exception(lambda: UserConfig.load(self.data_path))
 
     def init(self) -> None:
         """
@@ -169,7 +172,7 @@ class App(QApplication):
         except Exception as ex:
             self.log.warning(f"Failed to check for updates: {ex}", exc_info=ex)
 
-        if self.first_start:
+        if self.setup_required:
             self.setup_complete = (
                 StartupDialog(self.cache, QApplication.activeModalWidget()).exec()
                 == QDialog.DialogCode.Accepted
@@ -360,21 +363,21 @@ class App(QApplication):
         if ldialog is not None:
             ldialog.updateProgress(text1=self.tr("Loading modinstance..."))
 
-        # Backwards-compatibility with portable.txt
-        portable_txt_path: Path = self.data_path / "user" / "portable.txt"
-        if self.user_config.modinstance == "Portable" and portable_txt_path.is_file():
-            self.user_config.instance_path = Path(
-                portable_txt_path.read_text("utf-8").strip()
+        if self.user_config.modinstance is not None:
+            self.mod_instance = ModInstanceLoader().load_instance(
+                self.user_config.modinstance,
+                self.user_config.language,
+                any(
+                    (
+                        self.user_config.enable_interface_files,
+                        self.user_config.enable_scripts,
+                        self.user_config.enable_textures,
+                        self.user_config.enable_sound_files,
+                    )
+                ),
             )
-            os.remove(portable_txt_path)
-            self.user_config.save()
-
-        mod_manager: ModManager = self.user_config.mod_manager.get_mod_manager_class()()
-        self.mod_instance = mod_manager.load_mod_instance(
-            self.user_config.modinstance,
-            self.user_config.instance_profile,
-            self.user_config.instance_path,
-        )
+        else:
+            self.mod_instance = ModInstance(self.tr("<No modinstance selected>"), [])
 
         self.log.info(
             f"Loaded {self.mod_instance.display_name!r} with "
@@ -404,7 +407,7 @@ class App(QApplication):
 {platform.version()} \
 {platform.architecture()[0]}"
         )
-        self.log.info(f"First start: {self.first_start}")
+        self.log.info(f"Setup required: {self.setup_required}")
 
         self.app_config.print_settings_to_log()
 

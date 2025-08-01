@@ -1,8 +1,13 @@
 {
     "language": "German",
     "api_key": "...",
-    "mod_manager": "Mod Organizer 2",
-    "modinstance": "Portable",
-    "instance_path": "tests\\test_data\\mod_instance",
-    "provider_preference": "OnlyNexusMods"
+    "modinstance": {
+        "display_name": "Portable",
+        "profile": "Default",
+        "is_global": false,
+        "base_folder": "tests\\test_data\\mod_instance",
+        "mods_folder": "tests\\test_data\\mod_instance\\mods",
+        "profiles_folder": "tests\\test_data\\mod_instance\\profiles",
+        "mod_manager": "Mod Organizer 2"
+    }
 }

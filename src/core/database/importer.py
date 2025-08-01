@@ -19,8 +19,8 @@ from core.config.user_config import UserConfig
 from core.database.string import String
 from core.database.translation_service import TranslationService
 from core.database.utilities import Utilities
-from core.mod_file import MODFILE_TYPES, get_modfiletype_for_suffix
 from core.mod_file.mod_file import ModFile
+from core.mod_file.mod_file_service import MODFILE_TYPES, ModFileService
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
@@ -273,9 +273,9 @@ class Importer(QObject):
 
         for m, modfile_name in enumerate(modfiles):
             extracted_file: Path = tmp_dir / modfile_name
-            modfile: ModFile = get_modfiletype_for_suffix(extracted_file.suffix)(
-                name=extracted_file.name, full_path=extracted_file
-            )
+            modfile: ModFile = ModFileService.get_modfiletype_for_suffix(
+                extracted_file.suffix
+            )(name=extracted_file.name, full_path=extracted_file)
 
             if ldialog:
                 ldialog.updateProgress(

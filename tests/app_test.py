@@ -21,7 +21,9 @@ from core.database.database_service import DatabaseService
 from core.downloader.download_manager import DownloadManager
 from core.masterlist.masterlist import Masterlist
 from core.mod_instance.mod_instance import ModInstance
-from core.mod_managers.modorganizer import ModOrganizer
+from core.mod_instance.mod_instance_loader import ModInstanceLoader
+from core.mod_managers.mod_manager import ModManager
+from core.mod_managers.modorganizer.mo2_instance_info import Mo2InstanceInfo
 from core.scanner.scanner import Scanner
 from core.translation_provider.nm_api.nxm_handler import NXMHandler
 from core.translation_provider.provider import Provider
@@ -314,8 +316,17 @@ class AppTest(BaseTest):
             return AppContext.get_app().mod_instance
 
         self.log.info("Loading test mod instance...")
-        mod_instance: ModInstance = ModOrganizer().load_mod_instance(
-            instance_name="Portable", instance_path=self.data_path() / "mod_instance"
+        instance_info = Mo2InstanceInfo(
+            display_name="Portable",
+            profile="Default",
+            is_global=False,
+            base_folder=self.data_path() / "mod_instance",
+            mods_folder=self.data_path() / "mod_instance" / "mods",
+            profiles_folder=self.data_path() / "mod_instance" / "profiles",
+            mod_manager=ModManager.ModOrganizer,
+        )
+        mod_instance: ModInstance = ModInstanceLoader().load_instance(
+            instance_info, self.user_config().language, True
         )
         self.log.info("Loaded test mod instance.")
 

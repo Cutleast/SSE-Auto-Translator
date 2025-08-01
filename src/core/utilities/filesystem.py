@@ -68,6 +68,8 @@ def relative_data_path(file: str) -> str:
         str: Relative path to data folder.
     """
 
+    file = file.replace("\\", "/")
+
     filters = ["/interface/", "/scripts/", "/textures/", "/sound/"]
 
     for filter in filters:
@@ -220,7 +222,7 @@ def norm(path: str) -> str:
     return path.replace("\\", "/")
 
 
-def glob(pattern: str, files: list[str], case_sensitive: bool = False) -> list[str]:
+def str_glob(pattern: str, files: list[str], case_sensitive: bool = False) -> list[str]:
     """
     Glob function for a list of files as strings.
 
@@ -251,6 +253,23 @@ def glob(pattern: str, files: list[str], case_sensitive: bool = False) -> list[s
     ]
 
     return matches
+
+
+def glob(pattern: str, files: list[Path], case_sensitive: bool = False) -> list[Path]:
+    """
+    Glob function for a list of files as paths.
+
+    Args:
+        pattern (str): Glob pattern.
+        files (list[Path]): List of files.
+        case_sensitive (bool, optional): Case sensitive. Defaults to False.
+
+    Returns:
+        list[Path]: List of matching files.
+    """
+
+    str_result: list[str] = str_glob(pattern, list(map(str, files)), case_sensitive)
+    return list(map(Path, str_result))
 
 
 def split_path_with_bsa(path: Path) -> tuple[Optional[Path], Optional[Path]]:

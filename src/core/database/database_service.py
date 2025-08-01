@@ -16,6 +16,7 @@ from core.database.translation_service import TranslationService
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
+from core.translation_provider.source import Source
 from core.utilities.container_utils import unique
 from core.utilities.game_language import GameLanguage
 
@@ -520,8 +521,12 @@ class DatabaseService:
                 original_mod_id=original_mod.mod_id if original_mod else None,
                 original_version=original_mod.version if original_mod else None,
                 _strings={},
-                source=mod.mod_id.estimate_source(
-                    is_french=database.language == GameLanguage.French
+                source=(
+                    mod.mod_id.estimate_source(
+                        is_french=database.language == GameLanguage.French
+                    )
+                    if mod.mod_id is not None
+                    else Source.Local
                 ),
             )
 

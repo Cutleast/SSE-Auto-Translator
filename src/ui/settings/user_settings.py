@@ -2,15 +2,12 @@
 Copyright (c) Cutleast
 """
 
-from pathlib import Path
 from typing import override
 
 from PySide6.QtWidgets import (
     QApplication,
     QCheckBox,
-    QComboBox,
     QDialog,
-    QFileDialog,
     QFormLayout,
     QGroupBox,
     QHBoxLayout,
@@ -21,13 +18,10 @@ from PySide6.QtWidgets import (
 )
 
 from core.config.user_config import UserConfig
-from core.mod_managers import SUPPORTED_MOD_MANAGERS
-from core.mod_managers.mod_manager import ModManager
-from core.mod_managers.modorganizer import ModOrganizer
 from core.translation_provider.provider_preference import ProviderPreference
 from core.utilities.game_language import GameLanguage
+from ui.modinstance_selector.instance_selector_widget import InstanceSelectorWidget
 from ui.widgets.api_setup import ApiSetup
-from ui.widgets.browse_edit import BrowseLineEdit
 from ui.widgets.enum_dropdown import EnumDropdown
 from ui.widgets.key_entry import KeyEntry
 from ui.widgets.link_button import LinkButton
@@ -49,12 +43,7 @@ class UserSettings(SettingsPage[UserConfig]):
     __api_key_entry: KeyEntry
     __masterlist_box: QCheckBox
 
-    __mod_manager_box: EnumDropdown[ModManager.Type]
-    __modinstance_box: QComboBox
-    __instance_profile_label: QLabel
-    __instance_profile_box: QComboBox
-    __instance_path_label: QLabel
-    __instance_path_entry: BrowseLineEdit
+    __modinstance_selector: InstanceSelectorWidget
 
     __enable_interface_files_box: QCheckBox
     __enable_scripts_box: QCheckBox
@@ -141,59 +130,18 @@ class UserSettings(SettingsPage[UserConfig]):
         translations_flayout.addRow(author_blacklist_button)
 
     def __init_instance_settings(self) -> None:
-        instance_group = QGroupBox(self.tr("Modinstance"))
+        instance_group = QGroupBox("*" + self.tr("Modinstance"))
         self.__vlayout.addWidget(instance_group)
-        instance_flayout = QFormLayout()
-        instance_group.setLayout(instance_flayout)
+        instance_vlayout = QVBoxLayout()
+        instance_group.setLayout(instance_vlayout)
 
-        self.__mod_manager_box = EnumDropdown(
-            ModManager.Type, self._initial_config.mod_manager
+        self.__modinstance_selector = InstanceSelectorWidget()
+        self.__modinstance_selector.set_cur_instance_data(
+            self._initial_config.modinstance
         )
-        self.__mod_manager_box.installEventFilter(self)
-        self.__mod_manager_box.currentValueChanged.connect(self.__on_mod_manager_select)
-        self.__mod_manager_box.currentValueChanged.connect(self._on_change)
-        self.__mod_manager_box.currentValueChanged.connect(self._on_restart_required)
-        instance_flayout.addRow("*" + self.tr("Mod Manager"), self.__mod_manager_box)
-
-        self.__modinstance_box = QComboBox()
-        self.__modinstance_box.installEventFilter(self)
-        self.__modinstance_box.addItems(
-            self._initial_config.mod_manager.get_mod_manager_class()().get_instances()
-        )
-        self.__modinstance_box.setCurrentText(self._initial_config.modinstance)
-        self.__modinstance_box.currentTextChanged.connect(self.__on_instance_select)
-        self.__modinstance_box.currentTextChanged.connect(self._on_change)
-        self.__modinstance_box.currentTextChanged.connect(self._on_restart_required)
-        instance_flayout.addRow("*" + self.tr("Modinstance"), self.__modinstance_box)
-
-        self.__instance_profile_label = QLabel("*" + self.tr("Instance Profile (MO2)"))
-        self.__instance_profile_box = QComboBox()
-        self.__instance_profile_box.installEventFilter(self)
-        self.__instance_profile_box.addItems(
-            self._initial_config.mod_manager.get_mod_manager_class()().get_instance_profiles(
-                self._initial_config.modinstance, self._initial_config.instance_path
-            )
-        )
-        self.__instance_profile_box.setCurrentText(
-            self._initial_config.instance_profile or ""
-        )
-        self.__instance_profile_box.currentTextChanged.connect(self._on_change)
-        self.__instance_profile_box.currentTextChanged.connect(
-            self._on_restart_required
-        )
-        instance_flayout.addRow(
-            self.__instance_profile_label, self.__instance_profile_box
-        )
-
-        self.__instance_path_label = QLabel("*" + self.tr("Path to Portable Instance"))
-        self.__instance_path_entry = BrowseLineEdit()
-        self.__instance_path_entry.setFileMode(QFileDialog.FileMode.Directory)
-        if self._initial_config.instance_path:
-            self.__instance_path_entry.setText(str(self._initial_config.instance_path))
-        self.__instance_path_entry.textChanged.connect(self.__on_instance_path_change)
-        self.__instance_path_entry.textChanged.connect(self._on_change)
-        self.__instance_path_entry.textChanged.connect(self._on_restart_required)
-        instance_flayout.addRow(self.__instance_path_label, self.__instance_path_entry)
+        self.__modinstance_selector.changed.connect(self._on_change)
+        self.__modinstance_selector.changed.connect(self._on_restart_required)
+        instance_vlayout.addWidget(self.__modinstance_selector)
 
     def __init_file_type_settings(self) -> None:
         filetypes_group = QGroupBox(self.tr("Enabled File Types"))
@@ -248,45 +196,6 @@ class UserSettings(SettingsPage[UserConfig]):
         else:
             self.__source_box.setCurrentValue(ProviderPreference.OnlyNexusMods)
 
-    def __on_mod_manager_select(self, mod_manager_type: ModManager.Type) -> None:
-        mod_manager: ModManager = mod_manager_type.get_mod_manager_class()()
-
-        self.__modinstance_box.clear()
-        instances: list[str] = mod_manager.get_instances()
-        self.__modinstance_box.addItems(instances)
-        self.__modinstance_box.setCurrentIndex(0)
-
-    def __on_instance_select(self, modinstance: str) -> None:
-        self.__instance_path_label.setEnabled(modinstance == "Portable")
-        self.__instance_path_entry.setEnabled(modinstance == "Portable")
-        self.__instance_path_entry.clear()
-
-        mod_manager = SUPPORTED_MOD_MANAGERS[self.__mod_manager_box.currentIndex()]()
-        self.__instance_profile_box.clear()
-        if modinstance != "Portable":
-            profiles: list[str] = mod_manager.get_instance_profiles(modinstance)
-            self.__instance_profile_box.addItems(profiles)
-            if "Default" in profiles:
-                self.__instance_profile_box.setCurrentText("Default")
-            self.__instance_profile_box.setEnabled(len(profiles) > 1)
-            self.__instance_profile_label.setEnabled(len(profiles) > 1)
-        else:
-            self.__instance_profile_label.setDisabled(True)
-            self.__instance_profile_box.setDisabled(True)
-
-    def __on_instance_path_change(self, new_path: str) -> None:
-        ini_path = Path(new_path) / "ModOrganizer.ini"
-
-        if ini_path.is_file():
-            profiles = ModOrganizer.get_profiles_from_ini(ini_path)
-        else:
-            profiles = []
-
-        self.__instance_profile_box.clear()
-        self.__instance_profile_box.addItems(profiles)
-        self.__instance_profile_box.setEnabled(len(profiles) > 1)
-        self.__instance_profile_label.setEnabled(len(profiles) > 1)
-
     def __open_author_blacklist(self) -> None:
         dialog = BlacklistDialog(
             QApplication.activeModalWidget(), self.__author_blacklist
@@ -337,20 +246,8 @@ class UserSettings(SettingsPage[UserConfig]):
     def apply(self, config: UserConfig) -> None:
         config.language = self.__lang_box.getCurrentValue()
         config.api_key = self.__api_key_entry.text()
-        config.mod_manager = self.__mod_manager_box.getCurrentValue()
-        config.modinstance = self.__modinstance_box.currentText()
+        config.modinstance = self.__modinstance_selector.get_cur_instance_data()  # pyright: ignore[reportAttributeAccessIssue]
         config.use_masterlist = self.__masterlist_box.isChecked()
-        config.instance_profile = (
-            self.__instance_profile_box.currentText()
-            if self.__instance_profile_box.currentText()
-            and self.__instance_profile_box.currentText() != "Default"
-            else None
-        )
-        config.instance_path = (
-            Path(self.__instance_path_entry.text())
-            if self.__instance_path_entry.text()
-            else None
-        )
         config.provider_preference = self.__source_box.getCurrentValue()
         config.author_blacklist = self.__author_blacklist
         config.enable_interface_files = self.__enable_interface_files_box.isChecked()

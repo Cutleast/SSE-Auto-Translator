@@ -1,0 +1,380 @@
+{
+    "app": {
+        "appVersion": "1.13.7",
+        "extensions": {},
+        "installType": "regular",
+        "instanceId": "a6e7b802-1642-470d-9a94-b00ce067acb8",
+        "migrations": [],
+        "version": "",
+        "warnedAdmin": 0
+    },
+    "confidential": {
+        "account": {
+            "nexus": {
+                "ForcedLogout": false
+            }
+        }
+    },
+    "features": {
+        "local_game_settings": true,
+        "local_saves": true
+    },
+    "persistent": {
+        "changelogs": {
+            "changelogs": []
+        },
+        "deployment": {
+            "needToDeploy": {
+                "skyrimse": false
+            }
+        },
+        "downloads": {
+            "files": {},
+            "speed": 0,
+            "speedHistory": []
+        },
+        "gameMode": {
+            "versions": {
+                "skyrimse": "1.6.1170.0"
+            }
+        },
+        "history": {
+            "historyStacks": {
+                "mods": [],
+                "plugins": []
+            }
+        },
+        "mods": {
+            "skyrimse": {
+                "Obsidian Weathers - 1.07a-12125-1-07a-1620568126": {
+                    "attributes": {
+                        "customFileName": "Obsidian Weathers and Seasons",
+                        "downloadGame": "skyrimse",
+                        "fileId": 202527,
+                        "fileName": "Obsidian Weathers - 1.07a-12125-1-07a-1620568126.zip",
+                        "installTime": "2025-04-03T16:42:24.195356Z",
+                        "logicalFileName": "Obsidian Weathers - 1.07a",
+                        "modId": 12125,
+                        "source": "nexus",
+                        "version": "f1.07a"
+                    },
+                    "id": "Obsidian Weathers - 1.07a-12125-1-07a-1620568126",
+                    "installationPath": "Obsidian Weathers - 1.07a-12125-1-07a-1620568126",
+                    "rules": [
+                        {
+                            "reference": {
+                                "id": "Obsidian Weathers SE - Deutsch 1.07-16286-1-07-1549797197",
+                                "idHint": "Obsidian Weathers SE - Deutsch 1.07-16286-1-07-1549797197",
+                                "versionMatch": "*"
+                            },
+                            "type": "before"
+                        }
+                    ],
+                    "state": "installed",
+                    "type": null
+                },
+                "Obsidian Weathers SE - Deutsch 1.07-16286-1-07-1549797197": {
+                    "attributes": {
+                        "customFileName": "Obsidian Weathers and Seasons - German",
+                        "downloadGame": "skyrimse",
+                        "fileId": 81278,
+                        "fileName": "Obsidian Weathers SE - Deutsch 1.07-16286-1-07-1549797197.7z",
+                        "installTime": "2025-04-03T16:42:24.392461Z",
+                        "logicalFileName": "Obsidian Weathers SE - Deutsch 1.07",
+                        "modId": 16286,
+                        "source": "nexus",
+                        "version": "f1.07"
+                    },
+                    "id": "Obsidian Weathers SE - Deutsch 1.07-16286-1-07-1549797197",
+                    "installationPath": "Obsidian Weathers SE - Deutsch 1.07-16286-1-07-1549797197",
+                    "state": "installed",
+                    "type": null
+                },
+                "Ordinator 9.31.0-1137-9-31-0-1635693140": {
+                    "attributes": {
+                        "customFileName": "Ordinator - Perks of Skyrim this is a very long mod name aaaaabbbbbbbbbbbbbbbbbbb----------______----",
+                        "downloadGame": "skyrimse",
+                        "fileId": 238199,
+                        "fileName": "Ordinator 9.31.0-1137-9-31-0-1635693140.zip",
+                        "installTime": "2025-04-03T16:42:24.579087Z",
+                        "logicalFileName": "Ordinator 9.31.0",
+                        "modId": 1137,
+                        "source": "nexus",
+                        "version": "9.31"
+                    },
+                    "id": "Ordinator 9.31.0-1137-9-31-0-1635693140",
+                    "installationPath": "Ordinator 9.31.0-1137-9-31-0-1635693140",
+                    "state": "installed",
+                    "type": null
+                },
+                "RSSE Children Overhaul 1.1.3 with hotfix 1-2650-1-1-3HF1-1583835543": {
+                    "attributes": {
+                        "customFileName": "RS Children Overhaul",
+                        "downloadGame": "enderalspecialedition",
+                        "fileId": 128013,
+                        "fileName": "RSSE Children Overhaul 1.1.3 with hotfix 1-2650-1-1-3HF1-1583835543.7z",
+                        "installTime": "2025-04-03T16:42:24.765239Z",
+                        "logicalFileName": "RSSE Children Overhaul 1.1.3 with hotfix 1",
+                        "modId": 2650,
+                        "source": "nexus",
+                        "version": "1.1.3"
+                    },
+                    "id": "RSSE Children Overhaul 1.1.3 with hotfix 1-2650-1-1-3HF1-1583835543",
+                    "installationPath": "RSSE Children Overhaul 1.1.3 with hotfix 1-2650-1-1-3HF1-1583835543",
+                    "state": "installed",
+                    "type": null
+                },
+                "Wet and Cold SE - Deutsch-89391-2-4-0-1716634410": {
+                    "attributes": {
+                        "customFileName": "Wet and Cold SE - German",
+                        "downloadGame": "skyrimse",
+                        "fileId": 504702,
+                        "fileName": "Wet and Cold SE - Deutsch-89391-2-4-0-1716634410.zip",
+                        "installTime": "2025-04-03T16:42:24.003075Z",
+                        "logicalFileName": "Wet and Cold SE - Deutsch",
+                        "modId": 89391,
+                        "source": "nexus",
+                        "version": "2.4"
+                    },
+                    "fileOverrides": [
+                        "E:\\SteamLibrary\\Skyrim Special Edition\\Data\\scripts\\_wetskyuiconfig.pex"
+                    ],
+                    "id": "Wet and Cold SE - Deutsch-89391-2-4-0-1716634410",
+                    "installationPath": "Wet and Cold SE - Deutsch-89391-2-4-0-1716634410",
+                    "state": "installed",
+                    "type": null
+                },
+                "Wet and Cold SE v2.4.0-644-2-4-0-1601332084": {
+                    "attributes": {
+                        "customFileName": "Wet and Cold SE",
+                        "downloadGame": "skyrimse",
+                        "fileId": 163052,
+                        "fileName": "Wet and Cold SE v2.4.0-644-2-4-0-1601332084.7z",
+                        "installTime": "2025-04-03T16:42:23.738799Z",
+                        "logicalFileName": "Wet and Cold SE v2.4.0",
+                        "modId": 644,
+                        "source": "nexus",
+                        "version": "2.4"
+                    },
+                    "id": "Wet and Cold SE v2.4.0-644-2-4-0-1601332084",
+                    "installationPath": "Wet and Cold SE v2.4.0-644-2-4-0-1601332084",
+                    "rules": [
+                        {
+                            "reference": {
+                                "id": "Wet and Cold SE - Deutsch-89391-2-4-0-1716634410",
+                                "idHint": "Wet and Cold SE - Deutsch-89391-2-4-0-1716634410",
+                                "versionMatch": "*"
+                            },
+                            "type": "before"
+                        }
+                    ],
+                    "state": "installed",
+                    "type": null
+                }
+            }
+        },
+        "profiles": {
+            "BkIX54nayg": {
+                "gameId": "skyrimse",
+                "id": "BkIX54nayg",
+                "lastActivated": 1743698462966,
+                "name": "Default"
+            },
+            "1a2b3c4d": {
+                "features": {
+                    "local_game_settings": false,
+                    "local_saves": false
+                },
+                "gameId": "skyrimse",
+                "id": "1a2b3c4d",
+                "lastActivated": 1743698543609,
+                "modState": {
+                    "Obsidian Weathers - 1.07a-12125-1-07a-1620568126": {
+                        "enabled": true,
+                        "enabledTime": 1743698544319
+                    },
+                    "Obsidian Weathers SE - Deutsch 1.07-16286-1-07-1549797197": {
+                        "enabled": true,
+                        "enabledTime": 1743698544499
+                    },
+                    "Ordinator 9.31.0-1137-9-31-0-1635693140": {
+                        "enabled": true,
+                        "enabledTime": 1743698544691
+                    },
+                    "RSSE Children Overhaul 1.1.3 with hotfix 1-2650-1-1-3HF1-1583835543": {
+                        "enabled": true,
+                        "enabledTime": 1743698544879
+                    },
+                    "Wet and Cold SE - Deutsch-89391-2-4-0-1716634410": {
+                        "enabled": true,
+                        "enabledTime": 1743698544117
+                    },
+                    "Wet and Cold SE v2.4.0-644-2-4-0-1601332084": {
+                        "enabled": true,
+                        "enabledTime": 1743698543919
+                    }
+                },
+                "name": "Test Instance"
+            }
+        }
+    },
+    "settings": {
+        "automation": {
+            "deploy": true,
+            "enable": true,
+            "install": true,
+            "minimized": false,
+            "start": false
+        },
+        "baldursgate3": {
+            "autoExportLoadOrder": true,
+            "extensionVersion": "0.0.0",
+            "migration": true,
+            "playerProfile": "global"
+        },
+        "collections": {
+            "sortAdded": "datedownloaded",
+            "sortWorkshop": "recentlyupdated"
+        },
+        "downloads": {
+            "copyOnIFF": false,
+            "maxBandwidth": 0,
+            "maxChunks": 4,
+            "maxParallelDownloads": 1,
+            "minChunkSize": 1048576,
+            "path": "{USERDATA}\\downloads",
+            "showDropzone": true,
+            "showGraph": true
+        },
+        "firststeps": {
+            "dismissAll": false
+        },
+        "fnis": {
+            "autoRun": false
+        },
+        "gameMode": {
+            "discovered": {
+                "skyrimse": {
+                    "environment": {
+                        "SteamAPPId": "489830"
+                    },
+                    "hidden": false,
+                    "path": "E:\\SteamLibrary\\Skyrim Special Edition",
+                    "pathSetManually": true
+                }
+            },
+            "pickerLayout": "small",
+            "searchPaths": [],
+            "sortManaged": "alphabetical",
+            "sortUnmanaged": "alphabetical"
+        },
+        "interface": {
+            "advanced": false,
+            "currentTheme": "__default",
+            "dashboardLayout": [
+                "ToDo List",
+                "Onboarding",
+                "Mods of the Month",
+                "Tools",
+                "Extensions",
+                "Recently Managed",
+                "Go Premium",
+                "Announcements",
+                "Changelog",
+                "News",
+                "Latest Mods"
+            ],
+            "desktopNotifications": true,
+            "foregroundDL": true,
+            "hideTopLevelCategory": false,
+            "language": "en",
+            "primaryTool": {
+                "skyrimse": "skse64"
+            },
+            "profilesVisible": true,
+            "relativeTimes": true,
+            "tools": {
+                "order": {
+                    "skyrimse": [
+                        "SSEEdit",
+                        "WryeBash",
+                        "FNIS",
+                        "skse64",
+                        "bodyslide",
+                        "creation-kit-64"
+                    ]
+                }
+            }
+        },
+        "mods": {
+            "activator": {
+                "skyrimse": "hardlink_activator"
+            },
+            "cleanupOnDeploy": false,
+            "confirmPurge": true,
+            "installPathMode": "userData",
+            "installPath": {
+                "skyrimse": "E:\\Modding\\Vortex\\{game}"
+            },
+            "installerSandbox": true,
+            "showDropzone": true,
+            "suggestInstallPathDirectory": "Vortex Mods"
+        },
+        "nexus": {
+            "associateNXM": true
+        },
+        "notifications": {
+            "suppress": {
+                "switched-to-beta-channel": true,
+                "vortex-update-available-notification": true
+            }
+        },
+        "plugins": {
+            "autoEnable": false,
+            "autoSort": true
+        },
+        "profiles": {
+            "activeProfileId": "1a2b3c4d",
+            "lastActiveProfile": {
+                "skyrimse": "1a2b3c4d"
+            },
+            "nextProfileId": "BkIX54nayg"
+        },
+        "saves": {
+            "monitorEnabled": true
+        },
+        "tables": {
+            "mods": {
+                "attributes": {
+                    "script-extender-error-check": {
+                        "enabled": false
+                    }
+                }
+            }
+        },
+        "update": {
+            "channel": "stable"
+        },
+        "window": {
+            "customTitlebar": true,
+            "maximized": false,
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "tabsMinimized": false,
+            "zoomFactor": 1
+        },
+        "witcher3": {
+            "prioritytype": "prefix-based",
+            "suppressModLimitPatch": false
+        },
+        "workarounds": {
+            "modTypeConflictsEnabled": true,
+            "userSymlinks": false
+        }
+    },
+    "user": {
+        "multiUser": false
+    }
+}

@@ -8,7 +8,6 @@ from typing import Optional, override
 
 from PySide6.QtWidgets import (
     QCheckBox,
-    QComboBox,
     QGroupBox,
     QHBoxLayout,
     QLabel,
@@ -22,7 +21,7 @@ from core.utilities.game_language import GameLanguage
 from core.utilities.localisation import LocalisationUtils
 from ui.startup_dialog.page import Page
 from ui.widgets.api_setup import ApiSetup
-from ui.widgets.enum_dropdown import EnumDropdown
+from ui.widgets.enum_placeholder_dropdown import EnumPlaceholderDropdown
 from ui.widgets.smooth_scroll_area import SmoothScrollArea
 
 
@@ -31,9 +30,9 @@ class SetupPage(Page):
     Second page. For setting up game language and API Key.
     """
 
-    __lang_dropdown: EnumDropdown[GameLanguage]
+    __lang_dropdown: EnumPlaceholderDropdown[GameLanguage]
     __source_label: QLabel
-    __source_dropdown: QComboBox
+    __source_dropdown: EnumPlaceholderDropdown[ProviderPreference]
     __masterlist_box: QCheckBox
     __api_setup: ApiSetup
 
@@ -61,7 +60,7 @@ class SetupPage(Page):
 
         lang_label = QLabel(self.tr("Choose Game Language:"))
         hlayout.addWidget(lang_label)
-        self.__lang_dropdown = EnumDropdown(GameLanguage)
+        self.__lang_dropdown = EnumPlaceholderDropdown(GameLanguage)
         self.__lang_dropdown.installEventFilter(self)
         hlayout.addWidget(self.__lang_dropdown)
 
@@ -74,12 +73,11 @@ class SetupPage(Page):
         self.__source_label = QLabel(self.tr("Source"))
         self.__source_label.setDisabled(True)
         hlayout.addWidget(self.__source_label)
-        self.__source_dropdown = QComboBox()
+        self.__source_dropdown = EnumPlaceholderDropdown(
+            ProviderPreference, ProviderPreference.OnlyNexusMods
+        )
         self.__source_dropdown.installEventFilter(self)
         self.__source_dropdown.setDisabled(True)
-        self.__source_dropdown.setEditable(False)
-        self.__source_dropdown.addItems(ProviderPreference._member_names_)
-        self.__source_dropdown.setCurrentText(ProviderPreference.OnlyNexusMods.name)
         self.__lang_dropdown.currentTextChanged.connect(self.__on_lang_change)
         hlayout.addWidget(self.__source_dropdown)
 
@@ -167,17 +165,25 @@ class SetupPage(Page):
 
     @override
     def _validate(self) -> None:
-        self.valid_signal.emit(self.__api_setup.is_valid)
+        self.valid_signal.emit(
+            self.__lang_dropdown.getCurrentValue() is not None
+            and self.__source_dropdown.getCurrentValue() is not None
+            and self.__api_setup.is_valid
+        )
 
     @override
     def apply(self, config: UserConfig) -> None:
+        lang: Optional[GameLanguage] = self.__lang_dropdown.getCurrentValue()
+        source: Optional[ProviderPreference] = self.__source_dropdown.getCurrentValue()
         if self.__api_setup.api_key is None:
             raise ValueError("API key is required!")
+        elif lang is None:
+            raise ValueError("Language is required!")
+        elif source is None:
+            raise ValueError("Source is required!")
 
-        config.language = self.__lang_dropdown.getCurrentValue()
-        config.provider_preference = ProviderPreference[
-            self.__source_dropdown.currentText()
-        ]
+        config.language = lang
+        config.provider_preference = source
         config.api_key = self.__api_setup.api_key
         config.use_masterlist = self.__masterlist_box.isChecked()
         config.enable_interface_files = self.__interface_files_box.isChecked()

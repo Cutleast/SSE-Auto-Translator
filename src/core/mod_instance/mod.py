@@ -4,23 +4,22 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-from dataclasses import dataclass
+from enum import Enum, auto
 from fnmatch import fnmatch
 from functools import cache
 from pathlib import Path
-from typing import override
+from typing import Optional, override
 
-from sse_bsa import BSAArchive
+from pydantic import BaseModel
 
-from core.cache.cache import Cache
 from core.mod_file.mod_file import ModFile
 from core.translation_provider.mod_id import ModId
+from core.utilities.bsa_file_provider import BsaFileProvider
 from core.utilities.constants import DSD_FILE_PATTERN
-from core.utilities.filesystem import get_file_identifier, glob, parse_path
+from core.utilities.filesystem import parse_path, str_glob
 
 
-@dataclass
-class Mod:
+class Mod(BaseModel):
     """
     Class for mods, their mod files and their metadata.
     """
@@ -34,14 +33,33 @@ class Mod:
     modfiles: list[ModFile]
     """List of translatable files in mod."""
 
-    mod_id: ModId
+    mod_id: Optional[ModId]
     """Identifier of this mod at its source."""
 
     version: str
     """Local version of the mod."""
 
+    class Type(Enum):
+        """
+        Type of the mod.
+        """
+
+        Regular = auto()
+        """
+        The mod is a regular mod.
+        """
+
+        Separator = auto()
+        """
+        The mod is a separator.
+        """
+
+    mod_type: Type = Type.Regular
+    """
+    Type of the mod.
+    """
+
     @property
-    @cache
     def files_names(self) -> list[str]:
         """
         List of files, including from BSAs but removing the BSA parts, relative to this
@@ -98,16 +116,14 @@ class Mod:
             list[str]: List of matching files, relative to this mod's path
         """
 
-        return glob(pattern, [str(f) for f in self.files], case_sensitive)
+        return str_glob(pattern, [str(f) for f in self.files], case_sensitive)
 
     @staticmethod
-    @Cache.persistent_cache(
-        cache_subfolder=Path("mod_cache"),
-        id_generator=lambda bsa_path, mod_path: get_file_identifier(bsa_path),
-    )
     def __get_files_from_bsa(bsa_path: Path, mod_path: Path) -> list[Path]:
-        archive = BSAArchive(bsa_path)
-        return [bsa_path.relative_to(mod_path) / f for f in archive.files]
+        return [
+            bsa_path.relative_to(mod_path) / f
+            for f in BsaFileProvider.get_file_list(bsa_path)
+        ]
 
     @override
     def __hash__(self) -> int:

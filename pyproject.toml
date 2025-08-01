@@ -38,9 +38,11 @@ dependencies = [
 [dependency-groups]
 dev = [
     "nuitka",
+    "pyfakefs",
     "pyright",
     "pytest",
     "pytest-cov",
+    "pytest-mock",
     "pytest-qt",
     "ruff",
     "types-requests",

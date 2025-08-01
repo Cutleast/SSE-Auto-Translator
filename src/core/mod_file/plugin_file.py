@@ -31,5 +31,10 @@ class PluginFile(ModFile):
         ]
 
     @override
+    @classmethod
+    def can_be_in_bsas(cls) -> bool:
+        return False
+
+    @override
     def _extract_strings(self) -> list[String]:
         return Plugin(self.full_path).extract_strings()

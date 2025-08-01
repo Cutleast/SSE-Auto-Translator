@@ -11,7 +11,7 @@ from fnmatch import fnmatch
 from pathlib import Path
 from typing import Optional
 
-from core.utilities.filesystem import glob
+from core.utilities.filesystem import str_glob
 from core.utilities.process_runner import run_process
 
 
@@ -170,7 +170,7 @@ class Archive:
             list[str]: List of matching filenames
         """
 
-        return glob(pattern, self.files, case_sensitive)
+        return str_glob(pattern, self.files, case_sensitive)
 
     @staticmethod
     def load_archive(archive_path: Path) -> "Archive":

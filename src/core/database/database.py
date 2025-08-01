@@ -164,7 +164,10 @@ class TranslationDatabase(QObject):
         }
 
         translation: Optional[Translation] = None
-        if f"{mod.mod_id.mod_id}###{mod.mod_id.file_id}" in installed_translations:
+        if (
+            mod.mod_id is not None
+            and f"{mod.mod_id.mod_id}###{mod.mod_id.file_id}" in installed_translations
+        ):
             translation = installed_translations[
                 f"{mod.mod_id.mod_id}###{mod.mod_id.file_id}"
             ]
