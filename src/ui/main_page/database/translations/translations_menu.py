@@ -50,6 +50,13 @@ class TranslationsMenu(Menu):
     """Signal emitted when the user clicks on the open in explorer action."""
 
     __ignore_update_action: QAction
+    __show_strings_action: QAction
+    __edit_translation_action: QAction
+    __rename_translation_action: QAction
+    __export_translation_action: QAction
+    __delete_translation_action: QAction
+    __open_modpage_action: QAction
+    __open_in_explorer_action: QAction
 
     def __init__(self) -> None:
         super().__init__()
@@ -82,53 +89,57 @@ class TranslationsMenu(Menu):
             self.ignore_updates_requested.emit
         )
 
-        show_strings_action: QAction = self.addAction(
+        self.__show_strings_action = self.addAction(
             IconProvider.get_qta_icon("mdi6.book-open-outline"),
             self.tr("Show translation strings..."),
         )
-        show_strings_action.triggered.connect(self.show_strings_requested.emit)
+        self.__show_strings_action.triggered.connect(self.show_strings_requested.emit)
 
-        edit_translation_action: QAction = self.addAction(
+        self.__edit_translation_action = self.addAction(
             IconProvider.get_qta_icon("mdi6.book-edit"), self.tr("Edit translation...")
         )
-        edit_translation_action.triggered.connect(self.edit_translation_requested.emit)
+        self.__edit_translation_action.triggered.connect(
+            self.edit_translation_requested.emit
+        )
 
-        rename_translation_action: QAction = self.addAction(
+        self.__rename_translation_action = self.addAction(
             IconProvider.get_qta_icon("mdi6.rename"), self.tr("Rename translation...")
         )
-        rename_translation_action.triggered.connect(
+        self.__rename_translation_action.triggered.connect(
             self.rename_translation_requested.emit
         )
 
-        export_translation_action: QAction = self.addAction(
+        self.__export_translation_action = self.addAction(
             IconProvider.get_qta_icon("fa5s.share"), self.tr("Export translation...")
         )
-        export_translation_action.triggered.connect(
+        self.__export_translation_action.triggered.connect(
             self.export_translation_requested.emit
         )
 
-        delete_translation_action: QAction = self.addAction(
+        self.__delete_translation_action = self.addAction(
             IconProvider.get_qta_icon("mdi6.delete"),
             self.tr("Delete selected translation(s)..."),
         )
-        delete_translation_action.triggered.connect(
+        self.__delete_translation_action.triggered.connect(
             self.delete_translation_requested.emit
         )
 
         self.addSeparator()
 
     def __init_open_actions(self) -> None:
-        self.__open_modpage_action: QAction = self.addAction(
+        self.__open_modpage_action = self.addAction(
             IconProvider.get_res_icon(ResourceIcon.NexusMods),
             self.tr("Open mod page..."),
         )
         self.__open_modpage_action.triggered.connect(self.open_modpage_requested.emit)
 
-        open_in_explorer_action: QAction = self.addAction(
+        self.__open_in_explorer_action = self.addAction(
             IconProvider.get_qta_icon("fa5s.folder"),
             self.tr("Open in Explorer..."),
         )
-        open_in_explorer_action.triggered.connect(self.open_in_explorer_requested.emit)
+        self.__open_in_explorer_action.triggered.connect(
+            self.open_in_explorer_requested.emit
+        )
 
     def open(self, current_item: Optional[Translation | Path]) -> None:
         """
@@ -140,7 +151,6 @@ class TranslationsMenu(Menu):
 
         if (
             isinstance(current_item, Translation)
-            and current_item.source is not None
             and current_item.source != Source.Local
         ):
             self.__open_modpage_action.setVisible(True)
@@ -152,5 +162,12 @@ class TranslationsMenu(Menu):
             isinstance(current_item, Translation)
             and current_item.status == Translation.Status.UpdateAvailable
         )
+
+        self.__show_strings_action.setVisible(current_item is not None)
+        self.__edit_translation_action.setVisible(current_item is not None)
+        self.__rename_translation_action.setVisible(current_item is not None)
+        self.__export_translation_action.setVisible(current_item is not None)
+        self.__delete_translation_action.setVisible(current_item is not None)
+        self.__open_in_explorer_action.setVisible(current_item is not None)
 
         self.exec(QCursor.pos())

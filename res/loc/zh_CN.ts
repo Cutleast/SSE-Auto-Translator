@@ -1884,52 +1884,52 @@ Click on &quot;Show Details&quot; to view used filter.</source>
 <context>
     <name>TranslationsMenu</name>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="64"/>
+        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="71"/>
         <source>Expand all</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="70"/>
+        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="77"/>
         <source>Collapse all</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="79"/>
+        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="86"/>
         <source>Ignore translation update</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="87"/>
+        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="94"/>
         <source>Show translation strings...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="93"/>
+        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="100"/>
         <source>Edit translation...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="98"/>
+        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="107"/>
         <source>Rename translation...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="105"/>
+        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="114"/>
         <source>Export translation...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="112"/>
+        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="121"/>
         <source>Delete selected translation(s)...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="123"/>
+        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="132"/>
         <source>Open mod page...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="129"/>
+        <location filename="src/ui/main_page/database/translations/translations_menu.py" line="138"/>
         <source>Open in Explorer...</source>
         <translation type="unfinished"></translation>
     </message>
