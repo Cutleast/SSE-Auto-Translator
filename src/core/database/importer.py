@@ -7,7 +7,6 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 import logging
 import os
 import shutil
-from copy import copy
 from pathlib import Path
 from typing import Optional
 
@@ -22,9 +21,10 @@ from core.mod_file.mod_file_service import MODFILE_TYPES, ModFileService
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
-from core.string import String, StringList
+from core.string import StringList
 from core.string.string_loader import StringLoader
 from core.string.string_status import StringStatus
+from core.string.string_utils import StringUtils
 from core.utilities.constants import DSD_FILE_PATTERN
 from core.utilities.container_utils import unique
 from core.utilities.filesystem import parse_path, relative_data_path, safe_copy
@@ -365,56 +365,4 @@ class Importer(QObject):
         if not translation_strings and not original_strings:
             return []
 
-        return cls.map_strings(translation_strings, original_strings)
-
-    @classmethod
-    def map_strings(
-        cls, translation_strings: StringList, original_strings: StringList
-    ) -> StringList:
-        """
-        Maps translated strings to the original strings.
-
-        Args:
-            translation_strings (StringList): List of translated strings
-            original_strings (StringList): List of original strings
-
-        Returns:
-            StringList: List of mapped strings
-        """
-
-        cls.log.debug(
-            f"Mapping {len(translation_strings)} translated string(s) to "
-            f"{len(original_strings)} original string(s)..."
-        )
-
-        original_strings_ids: dict[str, String] = {
-            string.id: string for string in original_strings
-        }
-
-        merged_strings: StringList = []
-        unmerged_strings: StringList = []
-
-        for translation_string in translation_strings:
-            original_string: Optional[String] = original_strings_ids.get(
-                translation_string.id
-            )
-
-            if original_string is None:
-                unmerged_strings.append(translation_string)
-                continue
-
-            merged_string: String = copy(translation_string)
-            merged_string.string = merged_string.original
-            merged_string.original = original_string.original
-            merged_string.status = StringStatus.TranslationComplete
-            merged_strings.append(merged_string)
-
-        if len(unmerged_strings) < len(translation_strings):
-            for unmerged_string in unmerged_strings:
-                cls.log.warning(f"Not found in Original: {unmerged_string}")
-
-            cls.log.debug(f"Mapped {len(merged_strings)} String(s).")
-        else:
-            cls.log.error("Mapping failed!")
-
-        return merged_strings
+        return StringUtils.map_strings(original_strings, translation_strings)

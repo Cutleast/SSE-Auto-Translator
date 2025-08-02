@@ -73,8 +73,15 @@ class TestPlugin(CoreTest):
                     editor_id="ObsidianMessage",
                     status=StringStatus.TranslationRequired,
                 ),
+                PluginString(
+                    original="ObsidianMagicEffect",
+                    status=StringStatus.NoTranslationRequired,
+                    form_id="04000D63|Obsidian Weathers.esp",
+                    type="MGEF FULL",
+                    editor_id="ObsidianMagicEffect",
+                ),
             ],
-            29,
+            30,
         ),
         (
             Path("Ordinator - Perks of Skyrim") / "Ordinator - Perks of Skyrim.esp",
@@ -142,7 +149,7 @@ class TestPlugin(CoreTest):
                     status=StringStatus.TranslationRequired,
                 ),
             ],
-            5165,
+            5170,
         ),
     ]
     """Test data for `Plugin.extract_strings()`."""
@@ -173,7 +180,9 @@ class TestPlugin(CoreTest):
         plugin_file = self.data_path() / "mod_instance" / "mods" / plugin_file
 
         # when
-        actual_strings: list[PluginString] = Plugin(plugin_file).extract_strings()
+        actual_strings: list[PluginString] = Plugin(plugin_file).extract_strings(
+            unfiltered=True
+        )
 
         # then
         assert len(actual_strings) == expected_num_strings

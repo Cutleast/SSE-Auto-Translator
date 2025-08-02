@@ -37,4 +37,4 @@ class PluginFile(ModFile):
 
     @override
     def _extract_strings(self) -> StringList:
-        return Plugin(self.full_path).extract_strings()
+        return Plugin(self.full_path).extract_strings(unfiltered=True)

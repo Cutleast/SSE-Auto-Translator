@@ -2,7 +2,7 @@
 Copyright (c) Cutleast
 """
 
-from typing import TypeAlias
+from typing import TypeAlias, TypeVar
 
 from pydantic import TypeAdapter
 
@@ -10,6 +10,9 @@ from .plugin_string import PluginString
 
 String: TypeAlias = PluginString
 """Type alias for strings."""
+
+StringType = TypeVar("StringType", bound=String)
+"""Type variable for strings."""
 
 StringList: TypeAlias = list[String]
 """Type alias for a list of strings."""

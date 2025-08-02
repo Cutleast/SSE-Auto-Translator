@@ -9,9 +9,9 @@ from pathlib import Path
 from typing import NoReturn, Optional, override
 
 from core.database.exporter import Exporter
-from core.database.importer import Importer
 from core.plugin_interface.plugin import Plugin
 from core.string.plugin_string import PluginString
+from core.string.string_utils import StringUtils
 from utilities.utility import Utility
 
 
@@ -181,8 +181,8 @@ class Esp2Dsd(Utility):
         original_plugin = Plugin(original_plugin_path)
         original_strings: list[PluginString] = original_plugin.extract_strings()
 
-        mapped_strings: list[PluginString] = Importer.map_strings(
-            translated_strings, original_strings
+        mapped_strings: list[PluginString] = StringUtils.map_strings(
+            original_strings, translated_strings
         )
 
         output_file_path: Path = Exporter.export_strings_to_dsd(

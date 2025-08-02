@@ -140,7 +140,10 @@ class Plugin:
 
                         if (
                             isinstance(string, RawString)
-                            and (utils.is_valid_string(string) or unfiltered)
+                            and (
+                                utils.is_valid_string(string)
+                                or (unfiltered and string.strip())
+                            )
                         ) or extract_localized:
                             string_data = PluginString(
                                 editor_id=edid,
