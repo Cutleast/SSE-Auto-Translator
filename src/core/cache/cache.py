@@ -213,8 +213,6 @@ class Cache(BaseCache):
         Returns cached Response for `url` if existing else None.
 
         Responses older than `max_age` are considered stale and deleted.
-
-        TODO: Optimize the access time by caching them in-memory
         """
 
         response: Optional[requests.Response] = None
