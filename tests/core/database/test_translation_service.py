@@ -6,8 +6,8 @@ from pathlib import Path
 
 import pytest
 
-from core.database.string import String
 from core.database.translation_service import TranslationService
+from core.string.string import String
 
 from ..core_test import CoreTest
 

@@ -22,7 +22,7 @@ from PySide6.QtWidgets import (
 from app_context import AppContext
 from core.config.app_config import AppConfig
 from core.config.user_config import UserConfig
-from core.database.string import String
+from core.string.string import String
 from core.translator_api.translator import Translator
 from ui.utilities.icon_provider import IconProvider
 from ui.widgets.shortcut_button import ShortcutButton

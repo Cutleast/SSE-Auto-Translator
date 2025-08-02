@@ -15,11 +15,11 @@ from core.config.user_config import UserConfig
 from core.database.database import TranslationDatabase
 from core.database.database_service import DatabaseService
 from core.database.importer import Importer
-from core.database.string import String
 from core.database.translation import Translation
 from core.downloader.downloader import Downloader
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
+from core.string.string import String
 from core.translation_provider.mod_details import ModDetails
 from core.translation_provider.provider import Provider
 from core.utilities.exceptions import (

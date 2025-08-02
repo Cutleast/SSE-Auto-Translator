@@ -8,7 +8,7 @@ from PySide6.QtCore import QSize, Signal
 from PySide6.QtGui import QAction
 from PySide6.QtWidgets import QCheckBox, QToolBar, QWidgetAction
 
-from core.database.string import String
+from core.string.string import String
 from ui.utilities.icon_provider import IconProvider
 from ui.widgets.menu import Menu
 

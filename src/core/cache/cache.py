@@ -17,8 +17,8 @@ from typing import Optional, override
 import requests
 from semantic_version import Version
 
-from core.database.string import String
 from core.mod_file.translation_status import TranslationStatus
+from core.string.string import String
 from core.utilities.filesystem import get_file_identifier
 
 from .base_cache import BaseCache

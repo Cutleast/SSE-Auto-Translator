@@ -19,7 +19,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from core.database.string import String
+from core.string.string import String
 from core.utilities import matches_filter, trim_string
 from core.utilities.container_utils import ReferenceDict
 from ui.utilities.tree_widget import are_children_visible, iter_toplevel_items

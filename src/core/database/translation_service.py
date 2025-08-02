@@ -11,12 +11,12 @@ from typing import Optional, TypeAlias
 from pydantic import TypeAdapter
 
 from core import plugin_interface, utilities
+from core.string.string import String
 from core.utilities.alias_unpickler import AliasUnpickler
 from core.utilities.filesystem import add_suffix
 
 from . import legacy_string
 from .legacy_string import LegacyString
-from .string import String
 
 StringList: TypeAlias = list[String]
 StringListModel = TypeAdapter(StringList)

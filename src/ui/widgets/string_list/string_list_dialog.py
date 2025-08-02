@@ -6,7 +6,7 @@ from pathlib import Path
 
 from PySide6.QtCore import Qt
 
-from core.database.string import String
+from core.string.string import String
 
 from .string_list_widget import StringListWidget
 

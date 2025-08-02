@@ -13,8 +13,8 @@ from PySide6.QtCore import QObject, Signal
 
 from core.config.user_config import UserConfig
 from core.database.database import TranslationDatabase
-from core.database.string import String
 from core.database.translation import Translation
+from core.string.string import String
 from core.translator_api.translator import Translator
 from ui.widgets.loading_dialog import LoadingDialog
 

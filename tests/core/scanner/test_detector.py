@@ -6,13 +6,13 @@ from typing import Optional
 
 import pytest
 
-from core.database.string import String
-from core.utilities.detector import LangDetector, Language
+from core.scanner.detector import LangDetector, Language
+from core.string.string import String
 
 
 class TestLangDetector:
     """
-    Tests `core.utilities.detector.LangDetector`.
+    Tests `core.scanner.detector.LangDetector`.
     """
 
     def create_string(self, text: str) -> String:

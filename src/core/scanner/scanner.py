@@ -14,8 +14,6 @@ from core.config.user_config import UserConfig
 from core.database.database import TranslationDatabase
 from core.database.database_service import DatabaseService
 from core.database.importer import Importer
-from core.database.search_filter import SearchFilter, matches_filter
-from core.database.string import String
 from core.database.translation import Translation
 from core.masterlist.masterlist import Masterlist
 from core.masterlist.masterlist_entry import MasterlistEntry
@@ -23,12 +21,15 @@ from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
+from core.string.search_filter import SearchFilter, matches_filter
+from core.string.string import String
 from core.translation_provider.mod_id import ModId
 from core.translation_provider.provider import Provider
 from core.translation_provider.source import Source
 from core.utilities.container_utils import unique
-from core.utilities.detector import LangDetector, Language
 from ui.widgets.loading_dialog import LoadingDialog
+
+from .detector import LangDetector, Language
 
 
 class Scanner(QObject):

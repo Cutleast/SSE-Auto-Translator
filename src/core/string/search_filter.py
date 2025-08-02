@@ -4,7 +4,7 @@ Copyright (c) Cutleast
 
 from typing import Optional, TypedDict
 
-from core.database.string import String
+from .string import String
 
 
 class SearchFilter(TypedDict, total=False):

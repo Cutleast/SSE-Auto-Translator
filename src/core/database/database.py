@@ -9,11 +9,11 @@ from typing import Optional
 from PySide6.QtCore import QObject, Signal
 
 from core.mod_instance.mod import Mod
+from core.string.search_filter import SearchFilter, matches_filter
+from core.string.string import String
 from core.translation_provider.mod_id import ModId
 from core.utilities.game_language import GameLanguage
 
-from .search_filter import SearchFilter, matches_filter
-from .string import String
 from .translation import Translation
 
 

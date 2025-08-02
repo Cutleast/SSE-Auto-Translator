@@ -14,9 +14,9 @@ import pytest
 from pyfakefs.fake_filesystem import FakeFilesystem
 from pytest_mock import MockerFixture
 
-from core.database.string import String
 from core.mod_file.mod_file import ModFile
 from core.mod_instance.mod import Mod
+from core.string.string import String
 from core.utilities.leveldb import LevelDB
 
 from ..app_test import AppTest

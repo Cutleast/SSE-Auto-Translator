@@ -6,8 +6,8 @@ from pathlib import Path
 
 import pytest
 
-from core.database.string import String
 from core.plugin_interface.plugin import Plugin
+from core.string.string import String
 
 from ..core_test import CoreTest
 

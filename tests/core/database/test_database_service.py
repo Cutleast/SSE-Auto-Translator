@@ -8,9 +8,9 @@ from app import App
 from core.database.database import TranslationDatabase
 from core.database.database_service import DatabaseService
 from core.database.importer import Importer
-from core.database.string import String
 from core.database.translation import Translation
 from core.mod_instance.mod import Mod
+from core.string.string import String
 from core.utilities.game_language import GameLanguage
 
 from ..core_test import CoreTest

@@ -10,12 +10,12 @@ from typing import Any, Optional
 
 import jstyleson as json
 
-from core.database.string import String
 from core.database.translation import Translation
 from core.database.translation_service import TranslationService
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
+from core.string.string import String
 from core.translation_provider.source import Source
 from core.utilities.container_utils import unique
 from core.utilities.game_language import GameLanguage

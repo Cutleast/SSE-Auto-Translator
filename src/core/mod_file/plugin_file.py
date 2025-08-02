@@ -5,8 +5,8 @@ Copyright (c) Cutleast
 from pathlib import Path
 from typing import override
 
-from core.database.string import String
 from core.plugin_interface.plugin import Plugin
+from core.string.string import String
 
 from .mod_file import ModFile
 

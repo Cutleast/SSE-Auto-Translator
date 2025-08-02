@@ -7,7 +7,7 @@ from typing import Any
 import pytest
 from pydantic import ValidationError
 
-from core.database.string import String
+from core.string.string import String
 from core.utilities.container_utils import ReferenceDict
 
 

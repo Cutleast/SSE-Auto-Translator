@@ -12,7 +12,7 @@ from pathlib import Path
 from typing import Any, Callable, Optional, ParamSpec, TypeVar
 
 from app_context import AppContext
-from core.database.string import String
+from core.string.string import String
 
 P = ParamSpec("P")
 R = TypeVar("R")

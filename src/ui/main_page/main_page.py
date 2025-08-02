@@ -26,8 +26,6 @@ from core.config.app_config import AppConfig
 from core.config.user_config import UserConfig
 from core.database.database import TranslationDatabase
 from core.database.exporter import Exporter
-from core.database.search_filter import SearchFilter
-from core.database.string import String
 from core.database.translation import Translation
 from core.downloader.download_manager import DownloadManager
 from core.downloader.translation_download import TranslationDownload
@@ -38,6 +36,8 @@ from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.mod_instance.state_service import StateService
 from core.scanner.scanner import Scanner
+from core.string.search_filter import SearchFilter
+from core.string.string import String
 from core.translation_provider.mod_id import ModId
 from core.translation_provider.nm_api.nxm_handler import NXMHandler
 from core.translation_provider.provider import Provider

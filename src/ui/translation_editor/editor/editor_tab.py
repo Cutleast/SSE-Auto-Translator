@@ -30,9 +30,9 @@ from core.config.translator_config import TranslatorConfig
 from core.config.user_config import UserConfig
 from core.database.database import TranslationDatabase
 from core.database.exporter import Exporter
-from core.database.string import String
 from core.database.translation import Translation
 from core.editor.editor import Editor
+from core.string.string import String
 from core.translator_api.translator import Translator
 from ui.translation_editor.editor.help_dialog import EditorHelpDialog
 from ui.widgets.lcd_number import LCDNumber

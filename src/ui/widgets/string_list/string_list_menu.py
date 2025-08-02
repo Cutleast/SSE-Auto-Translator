@@ -5,7 +5,7 @@ Copyright (c) Cutleast
 from PySide6.QtGui import QAction, QCursor, QKeySequence
 from PySide6.QtWidgets import QCheckBox, QWidgetAction
 
-from core.database.string import String
+from core.string.string import String
 from ui.utilities.icon_provider import IconProvider
 from ui.widgets.menu import Menu
 

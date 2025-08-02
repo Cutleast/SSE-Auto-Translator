@@ -6,7 +6,7 @@ import qtawesome as qta
 from PySide6.QtCore import Signal
 from PySide6.QtGui import QAction, QCursor, QKeySequence
 
-from core.database.string import String
+from core.string.string import String
 from ui.utilities.icon_provider import IconProvider
 from ui.widgets.menu import Menu
 

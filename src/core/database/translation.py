@@ -12,8 +12,8 @@ from typing import Any, Optional, override
 from pydantic import BaseModel, Field
 from PySide6.QtWidgets import QApplication
 
-from core.database.string import String
 from core.database.translation_service import TranslationService
+from core.string.string import String
 from core.translation_provider.mod_id import ModId
 from core.translation_provider.source import Source
 from core.utilities.filesystem import get_folder_size

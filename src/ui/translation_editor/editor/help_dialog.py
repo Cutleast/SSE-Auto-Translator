@@ -16,7 +16,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from core.database.string import String
+from core.string.string import String
 
 
 class EditorHelpDialog(QDialog):

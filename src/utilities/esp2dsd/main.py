@@ -10,8 +10,8 @@ from typing import NoReturn, Optional, override
 
 from core.database.exporter import Exporter
 from core.database.importer import Importer
-from core.database.string import String
 from core.plugin_interface.plugin import Plugin
+from core.string.string import String
 from utilities.utility import Utility
 
 

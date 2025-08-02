@@ -16,7 +16,6 @@ from sse_bsa import BSAArchive
 
 from core.archiver.archive import Archive
 from core.config.user_config import UserConfig
-from core.database.string import String
 from core.database.translation_service import TranslationService
 from core.database.utilities import Utilities
 from core.mod_file.mod_file import ModFile
@@ -24,6 +23,7 @@ from core.mod_file.mod_file_service import MODFILE_TYPES, ModFileService
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
+from core.string.string import String
 from core.utilities.constants import DSD_FILE_PATTERN
 from core.utilities.container_utils import unique
 from core.utilities.filesystem import parse_path, relative_data_path, safe_copy

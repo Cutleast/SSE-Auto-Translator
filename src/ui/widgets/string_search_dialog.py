@@ -16,7 +16,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from core.database.search_filter import SearchFilter
+from core.string.search_filter import SearchFilter
 
 from .shortcut_button import ShortcutButton
 

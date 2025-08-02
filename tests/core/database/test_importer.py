@@ -7,8 +7,8 @@ from pathlib import Path
 from app import App
 from core.database.database import TranslationDatabase
 from core.database.importer import Importer
-from core.database.string import String
 from core.mod_instance.mod import Mod
+from core.string.string import String
 
 from ..core_test import CoreTest
 

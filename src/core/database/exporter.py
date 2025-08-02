@@ -11,7 +11,6 @@ from typing import Optional
 from PySide6.QtCore import QObject
 
 from core.config.user_config import UserConfig
-from core.database.string import String
 from core.database.translation import Translation
 from core.database.translation_service import TranslationService
 from core.database.utilities import Utilities
@@ -21,6 +20,7 @@ from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.plugin_interface import plugin as esp
+from core.string.string import String
 from ui.widgets.loading_dialog import LoadingDialog
 
 

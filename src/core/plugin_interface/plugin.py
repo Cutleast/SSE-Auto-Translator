@@ -6,7 +6,7 @@ import logging
 from pathlib import Path
 from typing import Optional, override
 
-from core.database.string import String as PluginString
+from core.string.string import String as PluginString
 
 from . import utilities as utils
 from .datatypes import RawString

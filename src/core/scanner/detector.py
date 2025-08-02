@@ -7,7 +7,7 @@ from typing import Optional
 
 from lingua import Language, LanguageDetector, LanguageDetectorBuilder
 
-from core.database.string import String
+from core.string.string import String
 
 
 class LangDetector:

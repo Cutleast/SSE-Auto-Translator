@@ -28,7 +28,6 @@ from core.config.user_config import UserConfig
 from core.database.database import TranslationDatabase
 from core.database.database_service import DatabaseService
 from core.database.importer import Importer
-from core.database.string import String
 from core.database.translation import Translation
 from core.masterlist.masterlist import Masterlist
 from core.mod_file.mod_file import ModFile
@@ -38,6 +37,7 @@ from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.mod_instance.state_service import StateService
 from core.plugin_interface import plugin as esp
+from core.string.string import String
 from core.translation_provider.exceptions import ModNotFoundError
 from core.translation_provider.provider import Provider
 from core.translation_provider.source import Source

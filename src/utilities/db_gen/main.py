@@ -11,8 +11,8 @@ from typing import Any, NoReturn, Optional, override
 
 from sse_bsa import BSAArchive
 
-from core.database.string import String
 from core.plugin_interface.plugin import Plugin
+from core.string.string import String
 from core.string_table_parser.string_table import StringTable
 from core.string_table_parser.string_table_parser import StringTableParser
 from core.utilities.constants import BASE_GAME_PLUGINS

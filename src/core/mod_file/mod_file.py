@@ -11,7 +11,7 @@ from typing import Optional, override
 
 from app_context import AppContext
 from core.cache.base_cache import BaseCache
-from core.database.string import String
+from core.string.string import String
 from core.utilities.filesystem import relative_data_path
 
 from .translation_status import TranslationStatus

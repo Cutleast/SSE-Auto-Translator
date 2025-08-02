@@ -9,7 +9,7 @@ from PySide6.QtCore import Qt
 from PySide6.QtGui import QFont
 from PySide6.QtWidgets import QTreeWidget, QTreeWidgetItem
 
-from core.database.string import String
+from core.string.string import String
 from core.utilities import matches_filter, trim_string
 from core.utilities.container_utils import ReferenceDict
 from ui.utilities.tree_widget import (
