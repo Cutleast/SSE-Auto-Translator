@@ -9,6 +9,7 @@ from core.database.database import TranslationDatabase
 from core.database.database_service import DatabaseService
 from core.database.importer import Importer
 from core.database.translation import Translation
+from core.mod_file.mod_file import ModFile
 from core.mod_instance.mod import Mod
 from core.string import StringList
 from core.string.plugin_string import PluginString
@@ -66,6 +67,28 @@ class TestDatabaseService(CoreTest):
             Path("RSChildren.esp"),
             Path("RSkyrimChildren.esm"),
         ]
+
+    def test_create_translation_for_mod_file(self, app_context: App) -> None:
+        """
+        Tests `DatabaseService.create_translation_for_mod()`.
+        """
+
+        # given
+        modfile: ModFile = self.get_modfile_from_mod_name(
+            "RS Children Overhaul", "RSChildren.esp"
+        )
+        database: TranslationDatabase = self.database()
+
+        # when
+        created_translation: Translation = (
+            DatabaseService.create_translation_for_modfile(
+                modfile, database, add_and_save=False
+            )
+        )
+
+        # then
+        assert created_translation.name == "RSChildren.esp - German"
+        assert list(created_translation.strings.keys()) == [Path("RSChildren.esp")]
 
     def test_create_translation_from_mod(self, app_context: App) -> None:
         """

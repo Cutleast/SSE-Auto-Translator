@@ -230,7 +230,7 @@ class Translation(BaseModel):
         if self._strings is None:
             self._strings = TranslationService.load_translation_strings(self.path)
 
-        return self._strings or {}
+        return self._strings
 
     @strings.setter
     def strings(self, strings: dict[Path, StringList]) -> None:
