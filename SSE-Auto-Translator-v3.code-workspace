@@ -46,6 +46,9 @@
 		"git.diagnosticsCommitHook.Enabled": true,
 		"python.testing.autoTestDiscoverOnSavePattern": "**/tests/**/*.py",
 		"python.testing.autoTestDiscoverOnSaveEnabled": true,
+		"python.testing.pytestArgs": [
+			"-vv"
+		],
 		"todo-tree.filtering.excludeGlobs": [
 			".venv/**",
 			"dist/**",
