@@ -11,7 +11,7 @@ from typing import Optional, override
 
 from app_context import AppContext
 from core.cache.base_cache import BaseCache
-from core.string.string import String
+from core.string import StringList
 from core.utilities.filesystem import relative_data_path
 
 from .translation_status import TranslationStatus
@@ -74,17 +74,17 @@ class ModFile(metaclass=ABCMeta):
             bool: Whether this file type can occur in BSA archives.
         """
 
-    def get_strings(self) -> list[String]:
+    def get_strings(self) -> StringList:
         """
         Extracts and returns all strings from this file. Uses the current app's cache, if
         available.
 
         Returns:
-            list[String]: List of all strings from this file.
+            StringList: List of all strings from this file.
         """
 
         cache: Optional[BaseCache] = AppContext.get_cache()
-        strings: Optional[list[String]] = None
+        strings: Optional[StringList] = None
 
         if cache is not None:
             strings = cache.get_strings_from_file_path(self.full_path)
@@ -98,10 +98,10 @@ class ModFile(metaclass=ABCMeta):
         return strings
 
     @abstractmethod
-    def _extract_strings(self) -> list[String]:
+    def _extract_strings(self) -> StringList:
         """
         Extracts and returns all strings from this file.
 
         Returns:
-            list[String]: List of all strings from this file.
+            StringList: List of all strings from this file.
         """

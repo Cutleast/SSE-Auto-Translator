@@ -16,7 +16,7 @@ from pytest_mock import MockerFixture
 
 from core.mod_file.mod_file import ModFile
 from core.mod_instance.mod import Mod
-from core.string.string import String
+from core.string.plugin_string import PluginString
 from core.utilities.leveldb import LevelDB
 
 from ..app_test import AppTest
@@ -93,12 +93,12 @@ class CoreTest(AppTest):
         return self.get_modfile_from_mod(mod, modfile_name)
 
     @staticmethod
-    def calc_unique_string_hash(string: String) -> int:
+    def calc_unique_string_hash(string: PluginString) -> int:
         """
         Calculates a unique hash value from the specified string including all fields.
 
         Args:
-            string (String): The string to calculate the hash value from.
+            string (PluginString): The string to calculate the hash value from.
 
         Returns:
             int: The unique hash value.

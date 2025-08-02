@@ -7,7 +7,8 @@ from pathlib import Path
 import pytest
 
 from core.plugin_interface.plugin import Plugin
-from core.string.string import String
+from core.string.plugin_string import PluginString
+from core.string.string_status import StringStatus
 
 from ..core_test import CoreTest
 
@@ -17,60 +18,60 @@ class TestPlugin(CoreTest):
     Tests `core.plugin_interface.plugin.Plugin`.
     """
 
-    EXTRACT_STRINGS_DATA: list[tuple[Path, list[String], int]] = [
+    EXTRACT_STRINGS_DATA: list[tuple[Path, list[PluginString], int]] = [
         (
             Path("Obsidian Weathers and Seasons") / "Obsidian Weathers.esp",
             [
-                String(
+                PluginString(
                     form_id="04000D65|Obsidian Weathers.esp",
                     editor_id="ObsidianSpell",
                     type="SPEL FULL",
                     original="Options: Obsidian Weathers",
-                    status=String.Status.TranslationRequired,
+                    status=StringStatus.TranslationRequired,
                 ),
-                String(
+                PluginString(
                     form_id="04000D65|Obsidian Weathers.esp",
                     type="SPEL DESC",
                     original="Options provided by Obsidian Weathers",
                     editor_id="ObsidianSpell",
-                    status=String.Status.TranslationRequired,
+                    status=StringStatus.TranslationRequired,
                 ),
-                String(
+                PluginString(
                     form_id="000703C2|Skyrim.esm",
                     type="REGN RDMP",
                     original="Windhelm",
                     editor_id="WeatherWindhelm",
-                    status=String.Status.TranslationRequired,
+                    status=StringStatus.TranslationRequired,
                 ),
-                String(
+                PluginString(
                     form_id="0000003C|Skyrim.esm",
                     type="WRLD FULL",
                     original="Skyrim",
                     editor_id="Tamriel",
-                    status=String.Status.TranslationRequired,
+                    status=StringStatus.TranslationRequired,
                 ),
-                String(
+                PluginString(
                     form_id="04000D62|Obsidian Weathers.esp",
                     type="MESG ITXT",
                     original="Default",
                     index=0,
                     editor_id="ObsidianMessage",
-                    status=String.Status.TranslationRequired,
+                    status=StringStatus.TranslationRequired,
                 ),
-                String(
+                PluginString(
                     form_id="04000D62|Obsidian Weathers.esp",
                     type="MESG ITXT",
                     original="Natural",
                     index=1,
                     editor_id="ObsidianMessage",
-                    status=String.Status.TranslationRequired,
+                    status=StringStatus.TranslationRequired,
                 ),
-                String(
+                PluginString(
                     form_id="04000D62|Obsidian Weathers.esp",
                     type="MESG DESC",
                     original="Filters",
                     editor_id="ObsidianMessage",
-                    status=String.Status.TranslationRequired,
+                    status=StringStatus.TranslationRequired,
                 ),
             ],
             29,
@@ -78,43 +79,43 @@ class TestPlugin(CoreTest):
         (
             Path("Ordinator - Perks of Skyrim") / "Ordinator - Perks of Skyrim.esp",
             [
-                String(
+                PluginString(
                     form_id="030A653C|Ordinator - Perks of Skyrim.esp",
                     type="RACE FULL",
                     original="Mind Spider",
                     editor_id="ORD_Ill_MindSpiders_Race",
-                    status=String.Status.TranslationRequired,
+                    status=StringStatus.TranslationRequired,
                 ),
-                String(
+                PluginString(
                     form_id="03007513|Ordinator - Perks of Skyrim.esp",
                     type="MGEF FULL",
                     original="Thieving Raven",
                     editor_id="ORD_Arc_ArcheryOnHit_Effect_ThievingRaven",
-                    status=String.Status.TranslationRequired,
+                    status=StringStatus.TranslationRequired,
                 ),
-                String(
+                PluginString(
                     form_id="03008032|Ordinator - Perks of Skyrim.esp",
                     type="MGEF DNAM",
                     original="Revenge is a bitter drink.",
                     editor_id="ORD_Hea_ReapTheWhirlwind_Effect_Proc",
-                    status=String.Status.TranslationRequired,
+                    status=StringStatus.TranslationRequired,
                 ),
-                String(
+                PluginString(
                     form_id="03034DEC|Ordinator - Perks of Skyrim.esp",
                     type="PERK FULL",
                     original="Lockdown",
                     editor_id="ORD_Loc30_Lockdown_Perk_30_OrdASISExclude",
-                    status=String.Status.TranslationRequired,
+                    status=StringStatus.TranslationRequired,
                 ),
-                String(
+                PluginString(
                     form_id="030358D3|Ordinator - Perks of Skyrim.esp",
                     type="PERK EPF2",
                     original="Hotwire",
                     index=0,
                     editor_id="ORD_Loc50_Hotwire_Perk_50_OrdASISExclude",
-                    status=String.Status.TranslationRequired,
+                    status=StringStatus.TranslationRequired,
                 ),
-                String(
+                PluginString(
                     form_id="03035E3F|Ordinator - Perks of Skyrim.esp",
                     type="PERK DESC",
                     original=(
@@ -122,23 +123,23 @@ class TestPlugin(CoreTest):
                         "causing all incoming attacks and spells to miss."
                     ),
                     editor_id="ORD_Sne60_DodgeRoll_Perk_60",
-                    status=String.Status.TranslationRequired,
+                    status=StringStatus.TranslationRequired,
                 ),
-                String(
+                PluginString(
                     form_id="00000453|Skyrim.esm",
                     type="AVIF FULL",
                     original="Pickpocket",
                     editor_id="AVPickpocket",
-                    status=String.Status.TranslationRequired,
+                    status=StringStatus.TranslationRequired,
                 ),
-                String(
+                PluginString(
                     form_id="00000456|Skyrim.esm",
                     type="AVIF DESC",
                     original=(
                         "An alchemist can create magical potions and deadly poisons."
                     ),
                     editor_id="AVAlchemy",
-                    status=String.Status.TranslationRequired,
+                    status=StringStatus.TranslationRequired,
                 ),
             ],
             5165,
@@ -152,7 +153,7 @@ class TestPlugin(CoreTest):
     def test_extract_strings(
         self,
         plugin_file: Path,
-        expected_strings: list[String],
+        expected_strings: list[PluginString],
         expected_num_strings: int,
     ) -> None:
         """
@@ -161,7 +162,7 @@ class TestPlugin(CoreTest):
         Args:
             plugin_file (Path):
                 Path to the plugin file, relative to the test mod instance's mods folder.
-            expected_strings (list[String]):
+            expected_strings (list[PluginString]):
                 List of strings that are expected to be extracted. This list is not
                 exclusive.
             expected_num_strings (int):
@@ -172,7 +173,7 @@ class TestPlugin(CoreTest):
         plugin_file = self.data_path() / "mod_instance" / "mods" / plugin_file
 
         # when
-        actual_strings: list[String] = Plugin(plugin_file).extract_strings()
+        actual_strings: list[PluginString] = Plugin(plugin_file).extract_strings()
 
         # then
         assert len(actual_strings) == expected_num_strings

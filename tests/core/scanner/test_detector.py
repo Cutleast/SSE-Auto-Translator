@@ -7,7 +7,8 @@ from typing import Optional
 import pytest
 
 from core.scanner.detector import LangDetector, Language
-from core.string.string import String
+from core.string import String
+from core.string.plugin_string import PluginString
 
 
 class TestLangDetector:
@@ -16,7 +17,7 @@ class TestLangDetector:
     """
 
     def create_string(self, text: str) -> String:
-        return String(
+        return PluginString(
             editor_id="TestString",
             form_id="00123456|Skyrim.esm",
             type="BOOK FULL",

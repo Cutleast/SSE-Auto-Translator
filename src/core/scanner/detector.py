@@ -7,7 +7,7 @@ from typing import Optional
 
 from lingua import Language, LanguageDetector, LanguageDetectorBuilder
 
-from core.string.string import String
+from core.string import StringList
 
 
 class LangDetector:
@@ -45,13 +45,13 @@ class LangDetector:
         return langs
 
     def requires_translation(
-        self, strings: list[String], max_string_count: int = 40
+        self, strings: StringList, max_string_count: int = 40
     ) -> bool:
         """
         Checks if a mod file requires a translation.
 
         Args:
-            strings (list[String]): List of strings to check.
+            strings (StringList): List of strings to check.
             max_string_count (int, optional):
                 Maximum number of strings to check. Defaults to 40.
 

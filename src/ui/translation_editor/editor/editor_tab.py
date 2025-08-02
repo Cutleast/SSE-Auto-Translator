@@ -32,7 +32,8 @@ from core.database.database import TranslationDatabase
 from core.database.exporter import Exporter
 from core.database.translation import Translation
 from core.editor.editor import Editor
-from core.string.string import String
+from core.string import String, StringList
+from core.string.string_status import StringStatus
 from core.translator_api.translator import Translator
 from ui.translation_editor.editor.help_dialog import EditorHelpDialog
 from ui.widgets.lcd_number import LCDNumber
@@ -149,10 +150,9 @@ class EditorTab(QWidget):
         hlayout.addWidget(self.__search_bar)
 
         self.__bar_chart = StackedBar(
-            [0 for _ in String.Status],
+            [0 for _ in StringStatus],
             colors=[
-                String.Status.get_color(s) or Qt.GlobalColor.white
-                for s in String.Status
+                StringStatus.get_color(s) or Qt.GlobalColor.white for s in StringStatus
             ],
         )
         self.__bar_chart.setFixedHeight(3)
@@ -188,15 +188,15 @@ class EditorTab(QWidget):
         reset_shortcut = QShortcut(QKeySequence("F4"), self)
 
         complete_shortcut.activated.connect(
-            lambda: self.__set_status(String.Status.TranslationComplete)
+            lambda: self.__set_status(StringStatus.TranslationComplete)
         )
 
         incomplete_shortcut.activated.connect(
-            lambda: self.__set_status(String.Status.TranslationIncomplete)
+            lambda: self.__set_status(StringStatus.TranslationIncomplete)
         )
 
         no_required_shortcut.activated.connect(
-            lambda: self.__set_status(String.Status.NoTranslationRequired)
+            lambda: self.__set_status(StringStatus.NoTranslationRequired)
         )
 
         reset_shortcut.activated.connect(self.__reset_selected)
@@ -266,12 +266,12 @@ class EditorTab(QWidget):
 
         self.__editor.apply_to_matching_strings(original, translation)
 
-    def get_string_states_summary(self) -> dict[String.Status, int]:
+    def get_string_states_summary(self) -> dict[StringStatus, int]:
         """
         Get a summary of string states.
 
         Returns:
-            dict[String.Status, int]:
+            dict[StringStatus, int]:
                 Dictionary of string states and number of strings in each state
         """
 
@@ -283,7 +283,7 @@ class EditorTab(QWidget):
                     if string.status == state
                 ]
             )
-            for state in String.Status
+            for state in StringStatus
         }
 
     def get_visible_string_count(self) -> int:
@@ -342,7 +342,7 @@ class EditorTab(QWidget):
         else:
             self.__title_label.setText(self.translation.name)
 
-        summary: dict[String.Status, int] = self.get_string_states_summary()
+        summary: dict[StringStatus, int] = self.get_string_states_summary()
 
         self.__strings_num_label.display(self.get_visible_string_count())
         self.__bar_chart.setValues(list(summary.values()))
@@ -350,7 +350,7 @@ class EditorTab(QWidget):
         num_tooltip = ""
 
         for status, count in summary.items():
-            color: Optional[QColor] = String.Status.get_color(status)
+            color: Optional[QColor] = StringStatus.get_color(status)
 
             if color is None:
                 num_tooltip += f"<tr><td>{status.get_localized_name()}:\
@@ -526,12 +526,12 @@ class EditorTab(QWidget):
 
         EditorHelpDialog(QApplication.activeModalWidget()).exec()
 
-    def __set_status(self, status: String.Status) -> None:
-        selected_items: list[String] = self.__strings_widget.get_selected_strings()
+    def __set_status(self, status: StringStatus) -> None:
+        selected_items: StringList = self.__strings_widget.get_selected_strings()
         self.__editor.set_status(selected_items, status)
 
     def __reset_selected(self) -> None:
-        selected_items: list[String] = self.__strings_widget.get_selected_strings()
+        selected_items: StringList = self.__strings_widget.get_selected_strings()
 
         if not selected_items:
             return
@@ -580,12 +580,12 @@ class EditorTab(QWidget):
         self.__strings_widget.set_name_filter(name_filter)
         self.update()
 
-    def set_state_filter(self, state_filter: list[String.Status]) -> None:
+    def set_state_filter(self, state_filter: list[StringStatus]) -> None:
         """
         Sets the state filter.
 
         Args:
-            state_filter (list[String.Status]): The states to filter by.
+            state_filter (list[StringStatus]): The states to filter by.
         """
 
         self.__strings_widget.set_state_filter(state_filter)

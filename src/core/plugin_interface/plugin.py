@@ -6,7 +6,8 @@ import logging
 from pathlib import Path
 from typing import Optional, override
 
-from core.string.string import String as PluginString
+from core.string.plugin_string import PluginString
+from core.string.string_status import StringStatus
 
 from . import utilities as utils
 from .datatypes import RawString
@@ -148,10 +149,10 @@ class Plugin:
                                 type=f"{record.type} {subrecord.type}",
                                 original=str(string),
                                 status=(
-                                    PluginString.Status.TranslationRequired
+                                    StringStatus.TranslationRequired
                                     if isinstance(string, int)
                                     or utils.is_valid_string(string)
-                                    else PluginString.Status.NoTranslationRequired
+                                    else StringStatus.NoTranslationRequired
                                 ),
                             )
 

@@ -11,7 +11,7 @@ from typing import NoReturn, Optional, override
 from core.database.exporter import Exporter
 from core.database.importer import Importer
 from core.plugin_interface.plugin import Plugin
-from core.string.string import String
+from core.string.plugin_string import PluginString
 from utilities.utility import Utility
 
 
@@ -177,11 +177,11 @@ class Esp2Dsd(Utility):
         )
 
         translated_plugin = Plugin(translated_plugin_path)
-        translated_strings: list[String] = translated_plugin.extract_strings()
+        translated_strings: list[PluginString] = translated_plugin.extract_strings()
         original_plugin = Plugin(original_plugin_path)
-        original_strings: list[String] = original_plugin.extract_strings()
+        original_strings: list[PluginString] = original_plugin.extract_strings()
 
-        mapped_strings: list[String] = Importer.map_strings(
+        mapped_strings: list[PluginString] = Importer.map_strings(
             translated_strings, original_strings
         )
 

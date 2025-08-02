@@ -13,7 +13,8 @@ from pydantic import BaseModel, Field
 from PySide6.QtWidgets import QApplication
 
 from core.database.translation_service import TranslationService
-from core.string.string import String
+from core.string import StringList
+from core.string.string_utils import StringUtils
 from core.translation_provider.mod_id import ModId
 from core.translation_provider.source import Source
 from core.utilities.filesystem import get_folder_size
@@ -55,7 +56,7 @@ class Translation(BaseModel):
     The version of the original mod.
     """
 
-    _strings: Optional[dict[Path, list[String]]] = None
+    _strings: Optional[dict[Path, StringList]] = None
     """
     Map of mod file names to list of strings.
     """
@@ -184,7 +185,7 @@ class Translation(BaseModel):
 
     @staticmethod
     def create(
-        name: str, path: Path, strings: Optional[dict[Path, list[String]]] = None
+        name: str, path: Path, strings: Optional[dict[Path, StringList]] = None
     ) -> Translation:
         """
         Creates a new translation.
@@ -192,7 +193,7 @@ class Translation(BaseModel):
         Args:
             name (str): The name of the translation.
             path (Path): The path to the translation's folder.
-            strings (Optional[dict[Path, list[String]]], optional):
+            strings (Optional[dict[Path, StringList]], optional):
                 The initial strings of the translation. Defaults to None.
 
         Returns:
@@ -221,7 +222,7 @@ class Translation(BaseModel):
         return hash(self.id)
 
     @property
-    def strings(self) -> dict[Path, list[String]]:
+    def strings(self) -> dict[Path, StringList]:
         """
         List of strings for each mod file name.
         """
@@ -232,7 +233,7 @@ class Translation(BaseModel):
         return self._strings or {}
 
     @strings.setter
-    def strings(self, strings: dict[Path, list[String]]) -> None:
+    def strings(self, strings: dict[Path, StringList]) -> None:
         self._strings = strings
 
     @lru_cache
@@ -266,7 +267,7 @@ class Translation(BaseModel):
         """
 
         for modfile_name, modfile_strings in self.strings.items():
-            self.strings[modfile_name] = String.unique(modfile_strings)
+            self.strings[modfile_name] = StringUtils.unique(modfile_strings)
 
         if save:
             self.save()

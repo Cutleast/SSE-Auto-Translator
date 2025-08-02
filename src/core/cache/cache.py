@@ -18,7 +18,7 @@ import requests
 from semantic_version import Version
 
 from core.mod_file.translation_status import TranslationStatus
-from core.string.string import String
+from core.string import StringList
 from core.utilities.filesystem import get_file_identifier
 
 from .base_cache import BaseCache
@@ -49,7 +49,7 @@ class Cache(BaseCache):
     Path to the cache file for the mod file states.
     """
 
-    __strings_cache: dict[str, list[String]] = {}
+    __strings_cache: dict[str, StringList] = {}
     """
     This cache is persistent and stores extracted strings.
     """
@@ -108,8 +108,8 @@ class Cache(BaseCache):
         self.log.info("Caches cleared.")
 
     @override
-    def get_strings_from_file_path(self, modfile_path: Path) -> Optional[list[String]]:
-        strings: Optional[list[String]]
+    def get_strings_from_file_path(self, modfile_path: Path) -> Optional[StringList]:
+        strings: Optional[StringList]
         identifier: str = get_file_identifier(modfile_path)
 
         if identifier not in self.__strings_cache:
@@ -117,7 +117,7 @@ class Cache(BaseCache):
 
             if cache_file.is_file():
                 with cache_file.open(mode="rb") as data:
-                    cached_strings: list[String] = pickle.load(data)
+                    cached_strings: StringList = pickle.load(data)
 
                 self.__strings_cache[identifier] = cached_strings
 
@@ -134,7 +134,7 @@ class Cache(BaseCache):
 
     @override
     def set_strings_for_file_path(
-        self, modfile_path: Path, strings: list[String]
+        self, modfile_path: Path, strings: StringList
     ) -> None:
         identifier: str = get_file_identifier(modfile_path)
         cache_file: Path = self.__strings_cache_path / f"{identifier}.cache"

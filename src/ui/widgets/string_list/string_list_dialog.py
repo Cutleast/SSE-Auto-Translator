@@ -2,13 +2,9 @@
 Copyright (c) Cutleast
 """
 
-from pathlib import Path
-
 from PySide6.QtCore import Qt
 
-from core.string.string import String
-
-from .string_list_widget import StringListWidget
+from .string_list_widget import StringListWidget, Strings
 
 
 class StringListDialog(StringListWidget):
@@ -17,10 +13,7 @@ class StringListDialog(StringListWidget):
     """
 
     def __init__(
-        self,
-        name: str,
-        strings: list[String] | dict[Path, list[String]],
-        show_translation: bool = False,
+        self, name: str, strings: Strings, show_translation: bool = False
     ) -> None:
         super().__init__(strings, show_translation)
 

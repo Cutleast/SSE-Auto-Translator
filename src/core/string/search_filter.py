@@ -4,7 +4,7 @@ Copyright (c) Cutleast
 
 from typing import Optional, TypedDict
 
-from .string import String
+from .plugin_string import PluginString
 
 
 class SearchFilter(TypedDict, total=False):
@@ -19,13 +19,13 @@ class SearchFilter(TypedDict, total=False):
     string: str
 
 
-def matches_filter(filter: SearchFilter, string: String) -> bool:
+def matches_filter(filter: SearchFilter, string: PluginString) -> bool:
     """
     Checks if a string matches a filter.
 
     Args:
         filter (SearchFilter): The filter to check.
-        string (String): The string to check.
+        string (PluginString): The string to check.
 
     Returns:
         bool: True if the string matches the filter, False otherwise.

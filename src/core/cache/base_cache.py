@@ -12,7 +12,7 @@ from pathlib import Path
 from typing import Any, Callable, Optional, ParamSpec, TypeVar
 
 from app_context import AppContext
-from core.string.string import String
+from core.string import StringList
 
 P = ParamSpec("P")
 R = TypeVar("R")
@@ -26,7 +26,7 @@ class BaseCache(metaclass=ABCMeta):
     log: logging.Logger = logging.getLogger("Cache")
 
     @abstractmethod
-    def get_strings_from_file_path(self, modfile_path: Path) -> Optional[list[String]]:
+    def get_strings_from_file_path(self, modfile_path: Path) -> Optional[StringList]:
         """
         Returns cached strings of the specified mod file.
 
@@ -34,19 +34,19 @@ class BaseCache(metaclass=ABCMeta):
             modfile_path (Path): Path to the mod file
 
         Returns:
-            Optional[list[String]]: List of strings or None if the file is not cached
+            Optional[StringList]: List of strings or None if the file is not cached
         """
 
     @abstractmethod
     def set_strings_for_file_path(
-        self, modfile_path: Path, strings: list[String]
+        self, modfile_path: Path, strings: StringList
     ) -> None:
         """
         Sets cached strings for a mod file.
 
         Args:
             modfile_path (Path): Path to the mod file.
-            strings (list[String]): List of strings from this file.
+            strings (StringList): List of strings from this file.
         """
 
     @staticmethod

@@ -15,7 +15,9 @@ from core.database.translation_service import TranslationService
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
-from core.string.string import String
+from core.string import StringList
+from core.string.string_status import StringStatus
+from core.string.string_utils import StringUtils
 from core.translation_provider.source import Source
 from core.utilities.container_utils import unique
 from core.utilities.game_language import GameLanguage
@@ -234,25 +236,25 @@ class DatabaseService:
     @classmethod
     def merge_translation_strings(
         cls,
-        existing_strings: dict[Path, list[String]],
-        new_strings: dict[Path, list[String]],
-    ) -> dict[Path, list[String]]:
+        existing_strings: dict[Path, StringList],
+        new_strings: dict[Path, StringList],
+    ) -> dict[Path, StringList]:
         """
         Merges the strings of two translations and removes duplicate strings.
 
         Args:
-            existing_strings (dict[Path, list[String]]): Strings that are merged into.
-            new_strings (dict[Path, list[String]]): New strings to merge.
+            existing_strings (dict[Path, StringList]): Strings that are merged into.
+            new_strings (dict[Path, StringList]): New strings to merge.
 
         Returns:
-            dict[Path, list[String]]: The merged strings.
+            dict[Path, StringList]: The merged strings.
         """
 
         for modfile_name, modfile_strings in new_strings.items():
             existing_strings.setdefault(modfile_name, []).extend(modfile_strings)
 
             # Remove duplicates
-            existing_strings[modfile_name] = String.unique(
+            existing_strings[modfile_name] = StringUtils.unique(
                 existing_strings[modfile_name]
             )
 
@@ -328,14 +330,17 @@ class DatabaseService:
 
     @classmethod
     def create_blank_translation(
-        cls, name: str, strings: dict[Path, list[String]], database: TranslationDatabase
+        cls,
+        name: str,
+        strings: dict[Path, StringList],
+        database: TranslationDatabase,
     ) -> Translation:
         """
         Creates a blank translation with the specified name and strings.
 
         Args:
             name (str): The name of the translation.
-            strings (dict[Path, list[String]]): Strings to add to the translation.
+            strings (dict[Path, StringList]): Strings to add to the translation.
             database (TranslationDatabase):
                 Database to determine the translation's path but the translation doesn't
                 get added to it by this method.
@@ -398,13 +403,13 @@ class DatabaseService:
         if not relevant_modfiles:
             return translation
 
-        translation_strings: dict[Path, list[String]] = translation.strings
+        translation_strings: dict[Path, StringList] = translation.strings
         for modfile in relevant_modfiles:
-            modfile_strings: list[String] = modfile.get_strings()
+            modfile_strings: StringList = modfile.get_strings()
 
             for string in modfile_strings:
                 string.string = string.original
-                string.status = String.Status.TranslationRequired
+                string.status = StringStatus.TranslationRequired
 
             if apply_db:
                 TranslationService.update_strings(
@@ -463,10 +468,10 @@ class DatabaseService:
                 database=database,
             )
 
-        modfile_strings: list[String] = modfile.get_strings()
+        modfile_strings: StringList = modfile.get_strings()
         for string in modfile_strings:
             string.string = string.original
-            string.status = String.Status.TranslationRequired
+            string.status = StringStatus.TranslationRequired
 
         if apply_db:
             TranslationService.update_strings(
@@ -490,7 +495,7 @@ class DatabaseService:
         cls,
         mod: Mod,
         original_mod: Optional[Mod],
-        strings: dict[Path, list[String]],
+        strings: dict[Path, StringList],
         database: TranslationDatabase,
         add_and_save: bool = True,
     ) -> Translation:
@@ -501,7 +506,7 @@ class DatabaseService:
         Args:
             mod (Mod): Mod to create translation from.
             original_mod (Optional[Mod]): Original mod that is translated.
-            strings (dict[Path, list[String]]): **Merged** strings to add to the translation.
+            strings (dict[Path, StringList]): **Merged** strings to add to the translation.
             database (TranslationDatabase): Database to add the translation to.
             add_and_save (bool, optional):
                 Whether to add the translation to the database and save them. Defaults

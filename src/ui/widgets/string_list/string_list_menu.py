@@ -5,7 +5,7 @@ Copyright (c) Cutleast
 from PySide6.QtGui import QAction, QCursor, QKeySequence
 from PySide6.QtWidgets import QCheckBox, QWidgetAction
 
-from core.string.string import String
+from core.string import StringList
 from ui.utilities.icon_provider import IconProvider
 from ui.widgets.menu import Menu
 
@@ -85,7 +85,7 @@ class StringListMenu(Menu):
         Opens the context menu at the current cursor position.
         """
 
-        selected_strings: list[String] = self.__parent.get_selected_items()
+        selected_strings: StringList = self.__parent.get_selected_items()
 
         self.__copy_menu.menuAction().setVisible(len(selected_strings) > 0)
 

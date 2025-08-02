@@ -10,7 +10,9 @@ from core.database.database_service import DatabaseService
 from core.database.importer import Importer
 from core.database.translation import Translation
 from core.mod_instance.mod import Mod
-from core.string.string import String
+from core.string import StringList
+from core.string.plugin_string import PluginString
+from core.string.string_status import StringStatus
 from core.utilities.game_language import GameLanguage
 
 from ..core_test import CoreTest
@@ -76,7 +78,7 @@ class TestDatabaseService(CoreTest):
         database: TranslationDatabase = self.database()
 
         # when
-        translation_strings: dict[Path, list[String]] = (
+        translation_strings: dict[Path, StringList] = (
             Importer.import_mod_as_translation(translated_mod, original_mod)
         )
         created_translation: Translation = DatabaseService.create_translation_from_mod(
@@ -91,17 +93,17 @@ class TestDatabaseService(CoreTest):
         assert len(created_translation.strings) == 1
         assert sorted(created_translation.strings.keys()) == [Path("WetandCold.esp")]
 
-        strings: list[String] = created_translation.strings[Path("WetandCold.esp")]
+        strings: StringList = created_translation.strings[Path("WetandCold.esp")]
         string_hashes: list[int] = list(map(CoreTest.calc_unique_string_hash, strings))
 
-        expected_strings: list[String] = [
-            String(
+        expected_strings: StringList = [
+            PluginString(
                 form_id="05062F4E|WetandCold.esp",
                 type="ENCH FULL",
                 original="Fortify Carry Weight",
                 string="Tragfähigkeit verstärken",
                 editor_id="_WetEnchArmorFortifyCarry03",
-                status=String.Status.TranslationComplete,
+                status=StringStatus.TranslationComplete,
             )
         ]
 

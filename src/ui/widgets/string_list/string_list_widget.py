@@ -19,7 +19,8 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from core.string.string import String
+from core.string import String, StringList
+from core.string.string_status import StringStatus
 from core.utilities import matches_filter, trim_string
 from core.utilities.container_utils import ReferenceDict
 from ui.utilities.tree_widget import are_children_visible, iter_toplevel_items
@@ -29,7 +30,7 @@ from ui.widgets.search_bar import SearchBar
 from .string_list_menu import StringListMenu
 from .string_list_toolbar import StringListToolbar
 
-Strings: TypeAlias = list[String] | dict[Path, list[String]]
+Strings: TypeAlias = StringList | dict[Path, StringList]
 """
 A list of strings or several lists of strings.
 """
@@ -47,7 +48,7 @@ class StringListWidget(QWidget):
     __columns: list[str]
     __string_items: ReferenceDict[String, QTreeWidgetItem]
 
-    __state_filter: Optional[list[String.Status]] = None
+    __state_filter: Optional[list[StringStatus]] = None
     __text_filter: Optional[tuple[str, bool]] = None
 
     __vlayout: QVBoxLayout
@@ -271,7 +272,7 @@ class StringListWidget(QWidget):
         item.setToolTip(5, string.string or string.original)
 
         if self.__translation_mode:
-            color: Optional[QColor] = String.Status.get_color(string.status)
+            color: Optional[QColor] = StringStatus.get_color(string.status)
             if color:
                 for c in range(len(self.__columns)):
                     item.setForeground(c, color)
@@ -298,12 +299,12 @@ class StringListWidget(QWidget):
         self.__text_filter = text_filter if text_filter[0].strip() else None
         self.__update()
 
-    def set_state_filter(self, state_filter: list[String.Status]) -> None:
+    def set_state_filter(self, state_filter: list[StringStatus]) -> None:
         """
         Sets the state filter.
 
         Args:
-            state_filter (list[String.Status]): The states to filter by.
+            state_filter (list[StringStatus]): The states to filter by.
         """
 
         self.__state_filter = state_filter
@@ -336,7 +337,7 @@ class StringListWidget(QWidget):
     def collapseAll(self) -> None:
         self.__strings_widget.collapseAll()
 
-    def get_selected_items(self) -> list[String]:
+    def get_selected_items(self) -> StringList:
         return [
             string for string, item in self.__string_items.items() if item.isSelected()
         ]

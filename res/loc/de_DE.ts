@@ -454,7 +454,7 @@ Wenn du nicht über Nexus Mods Premium verfügst, stelle sicher, dass SSE-AT mit
 <context>
     <name>Editor</name>
     <message>
-        <location filename="src/core/editor/editor.py" line="160"/>
+        <location filename="src/core/editor/editor.py" line="161"/>
         <source>Translating with API...</source>
         <translation>Übersetze mit API...</translation>
     </message>
@@ -536,7 +536,7 @@ Wenn du nicht über Nexus Mods Premium verfügst, stelle sicher, dass SSE-AT mit
 <context>
     <name>EditorTab</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="133"/>
+        <location filename="src/ui/translation_editor/editor/editor_tab.py" line="134"/>
         <source>Strings</source>
         <translation>Strings</translation>
     </message>
@@ -783,8 +783,8 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
 <context>
     <name>Exporter</name>
     <message>
-        <location filename="src/core/database/exporter.py" line="263"/>
-        <location filename="src/core/database/exporter.py" line="269"/>
+        <location filename="src/core/database/exporter.py" line="262"/>
+        <location filename="src/core/database/exporter.py" line="268"/>
         <source>Building output mod...</source>
         <translation>Output-Mod wird erstellt...</translation>
     </message>
@@ -820,28 +820,28 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
 <context>
     <name>Importer</name>
     <message>
-        <location filename="src/core/database/importer.py" line="143"/>
-        <location filename="src/core/database/importer.py" line="255"/>
+        <location filename="src/core/database/importer.py" line="144"/>
+        <location filename="src/core/database/importer.py" line="256"/>
         <source>Processing archive...</source>
         <translation>Archiv wird verarbeitet...</translation>
     </message>
     <message>
-        <location filename="src/core/database/importer.py" line="178"/>
+        <location filename="src/core/database/importer.py" line="179"/>
         <source>Extracting files...</source>
         <translation>Dateien werden extrahiert...</translation>
     </message>
     <message>
-        <location filename="src/core/database/importer.py" line="215"/>
+        <location filename="src/core/database/importer.py" line="216"/>
         <source>Copying files...</source>
         <translation>Dateien werden kopiert...</translation>
     </message>
     <message>
-        <location filename="src/core/database/importer.py" line="283"/>
+        <location filename="src/core/database/importer.py" line="284"/>
         <source>Processing mod files...</source>
         <translation>Moddateien werden verarbeitet...</translation>
     </message>
     <message>
-        <location filename="src/core/database/importer.py" line="322"/>
+        <location filename="src/core/database/importer.py" line="323"/>
         <source>Processing DSD files...</source>
         <translation>DSD-Dateien werden verarbeitet...</translation>
     </message>
@@ -1307,38 +1307,38 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
 <context>
     <name>ModInstanceWidget</name>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="201"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="202"/>
         <source>Name</source>
         <translation>Name</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="202"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="203"/>
         <source>Version</source>
         <translation>Version</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="203"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="204"/>
         <source>Priority</source>
         <translation>Priorität</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="534"/>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="542"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="535"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="543"/>
         <source>Creating translation...</source>
         <translation>Übersetzung wird erstellt...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="567"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="568"/>
         <source>Importing installed translation...</source>
         <translation>Installierte Übersetzungen werden importiert...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="600"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="601"/>
         <source>Success!</source>
         <translation>Erfolgreich!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="603"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="604"/>
         <source>Translation successfully imported into database.</source>
         <translation>Übersetzung erfolgreich in die Datenbank importiert.</translation>
     </message>
@@ -1393,6 +1393,29 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
     </message>
 </context>
 <context>
+    <name>PluginString</name>
+    <message>
+        <location filename="src/core/string/plugin_string.py" line="56"/>
+        <source>Form ID</source>
+        <translation>Form ID</translation>
+    </message>
+    <message>
+        <location filename="src/core/string/plugin_string.py" line="60"/>
+        <source>Editor ID</source>
+        <translation>Editor ID</translation>
+    </message>
+    <message>
+        <location filename="src/core/string/plugin_string.py" line="63"/>
+        <source>Type</source>
+        <translation>Typ</translation>
+    </message>
+    <message>
+        <location filename="src/core/string/plugin_string.py" line="65"/>
+        <source>Index</source>
+        <translation>Index</translation>
+    </message>
+</context>
+<context>
     <name>ProviderPreference</name>
     <message>
         <location filename="src/core/translation_provider/provider_preference.py" line="32"/>
@@ -1432,63 +1455,63 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
 <context>
     <name>Scanner</name>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="91"/>
+        <location filename="src/core/scanner/scanner.py" line="94"/>
         <source>Loading database...</source>
         <translation>Datenbank wird geladen...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="103"/>
-        <location filename="src/core/scanner/scanner.py" line="109"/>
+        <location filename="src/core/scanner/scanner.py" line="106"/>
+        <location filename="src/core/scanner/scanner.py" line="112"/>
         <source>Scanning modlist...</source>
         <translation>Modliste wird gescannt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="530"/>
+        <location filename="src/core/scanner/scanner.py" line="533"/>
         <source>Importing translations...</source>
         <translation>Übersetzungen werden importiert...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="162"/>
+        <location filename="src/core/scanner/scanner.py" line="165"/>
         <source>Extracting strings...</source>
         <translation>Strings werden extrahiert...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="170"/>
+        <location filename="src/core/scanner/scanner.py" line="173"/>
         <source>Detecting language...</source>
         <translation>Sprache wird erkannt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="235"/>
+        <location filename="src/core/scanner/scanner.py" line="238"/>
         <source>Scanning online...</source>
         <translation>Übersetzungen werden online gesucht...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="330"/>
+        <location filename="src/core/scanner/scanner.py" line="333"/>
         <source>Running deep scan...</source>
         <translation>Tiefenscan wird ausgeführt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="388"/>
+        <location filename="src/core/scanner/scanner.py" line="391"/>
         <source>Scanning strings...</source>
         <translation>Strings werden gescannt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="455"/>
+        <location filename="src/core/scanner/scanner.py" line="458"/>
         <source>Searching modlist for strings...</source>
         <translation>Modliste wird nach Strings durchsucht...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="576"/>
+        <location filename="src/core/scanner/scanner.py" line="579"/>
         <source>Creating database translations...</source>
         <translation>Datenbank-Übersetzungen werden erstellt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="611"/>
+        <location filename="src/core/scanner/scanner.py" line="614"/>
         <source>Scanning for installed translations...</source>
         <translation>Nach installierten Übersetzungen scannen...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="709"/>
+        <location filename="src/core/scanner/scanner.py" line="712"/>
         <source>Checking for translation updates...</source>
         <translation>Verfügbare Updates für Übersetzungen werden gesucht...</translation>
     </message>
@@ -1710,7 +1733,7 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
 <context>
     <name>StringListDialog</name>
     <message numerus="yes">
-        <location filename="src/ui/widgets/string_list/string_list_dialog.py" line="35"/>
+        <location filename="src/ui/widgets/string_list/string_list_dialog.py" line="28"/>
         <source> (%n Strings)</source>
         <comment> (%n String)</comment>
         <translation>
@@ -1754,40 +1777,40 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
 <context>
     <name>StringListWidget</name>
     <message>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="67"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="68"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="68"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="69"/>
         <source>Form ID</source>
         <translation>Form ID</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="69"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="70"/>
         <source>Editor ID</source>
         <translation>Editor ID</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="70"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="71"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="71"/>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="178"/>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="200"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="72"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="179"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="201"/>
         <source>Original</source>
         <translation>Original</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="72"/>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="179"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="73"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="180"/>
         <source>String</source>
         <translation>String</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="101"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="102"/>
         <source>Strings:</source>
         <translation>Strings:</translation>
     </message>
@@ -1837,29 +1860,82 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
     </message>
 </context>
 <context>
+    <name>StringStatus</name>
+    <message>
+        <location filename="src/core/string/string_status.py" line="63"/>
+        <source>No status (no color)</source>
+        <translation>Kein Status (ohne Farbe)</translation>
+    </message>
+    <message>
+        <location filename="src/core/string/string_status.py" line="66"/>
+        <source>String does not require a translation</source>
+        <translation>String benötigt keine Übersetzung</translation>
+    </message>
+    <message>
+        <location filename="src/core/string/string_status.py" line="69"/>
+        <source>String is completely translated</source>
+        <translation>String ist vollständig übersetzt</translation>
+    </message>
+    <message>
+        <location filename="src/core/string/string_status.py" line="72"/>
+        <source>String is partially translated</source>
+        <translation>String ist teilweise übersetzt</translation>
+    </message>
+    <message>
+        <location filename="src/core/string/string_status.py" line="75"/>
+        <source>String requires a translation</source>
+        <translation>String benötigt eine Übersetzung</translation>
+    </message>
+    <message>
+        <location filename="src/core/string/string_status.py" line="88"/>
+        <source>Show stateless strings</source>
+        <translation>Zeige Strings ohne Status</translation>
+    </message>
+    <message>
+        <location filename="src/core/string/string_status.py" line="91"/>
+        <source>Show strings that do not require a translation</source>
+        <translation>Zeige Strings, die keine Übersetzung benötigen</translation>
+    </message>
+    <message>
+        <location filename="src/core/string/string_status.py" line="94"/>
+        <source>Show strings that are completely translated</source>
+        <translation>Zeige Strings, die vollständig übersetzt sind</translation>
+    </message>
+    <message>
+        <location filename="src/core/string/string_status.py" line="97"/>
+        <source>Show strings that are partially translated</source>
+        <translation>Zeige Strings, die unvollständig übersetzt sind</translation>
+    </message>
+    <message>
+        <location filename="src/core/string/string_status.py" line="100"/>
+        <source>Show strings that require a translation</source>
+        <translation>Zeige Strings, die eine Übersetzung benötigen</translation>
+    </message>
+</context>
+<context>
     <name>StringsWidget</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="67"/>
+        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="68"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="68"/>
+        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="69"/>
         <source>Form ID</source>
         <translation>Form ID</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="69"/>
+        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="70"/>
         <source>Editor ID</source>
         <translation>Editor ID</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="70"/>
+        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="71"/>
         <source>Original</source>
         <translation>Original</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="71"/>
+        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="72"/>
         <source>String</source>
         <translation>String</translation>
     </message>
@@ -1867,28 +1943,28 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
 <context>
     <name>Translation</name>
     <message>
-        <location filename="src/core/database/translation.py" line="75"/>
-        <location filename="src/core/database/translation.py" line="89"/>
+        <location filename="src/core/database/translation.py" line="76"/>
+        <location filename="src/core/database/translation.py" line="90"/>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>
     <message>
-        <location filename="src/core/database/translation.py" line="78"/>
+        <location filename="src/core/database/translation.py" line="79"/>
         <source>Update available</source>
         <translation>Update verfügbar</translation>
     </message>
     <message>
-        <location filename="src/core/database/translation.py" line="81"/>
+        <location filename="src/core/database/translation.py" line="82"/>
         <source>Update ignored</source>
         <translation>Update ignoriert</translation>
     </message>
     <message>
-        <location filename="src/core/database/translation.py" line="92"/>
+        <location filename="src/core/database/translation.py" line="93"/>
         <source>An update is available for the translation.</source>
         <translation>Ein Update ist für die Übersetzung verfügbar.</translation>
     </message>
     <message>
-        <location filename="src/core/database/translation.py" line="95"/>
+        <location filename="src/core/database/translation.py" line="96"/>
         <source>Available updates have been ignored.</source>
         <translation>Verfügbare Updates wurden ignoriert.</translation>
     </message>
@@ -2142,73 +2218,73 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
 <context>
     <name>TranslatorDialog</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="97"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="98"/>
         <source>Go to previous String</source>
         <translation>Gehe zum vorherigen String</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="108"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="109"/>
         <source>Go to next String</source>
         <translation>Gehe zum nächsten String</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="163"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="164"/>
         <source>Translate with API</source>
         <translation>Mit der API übersetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="169"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="170"/>
         <source>Reset String</source>
         <translation>String zurücksetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="196"/>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="287"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="197"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="288"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="210"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="211"/>
         <source>Press F1 (Translation complete), F2 (Translation incomplete/Work in Progress) or F3 (No translation required) to finalize the string and go to the next one.</source>
         <translation>F1 (Übersetzung vollständig), F2 (Übersetzung unvollständig/in Arbeit) oder F3 (Keine Übersetzung erforderlich) drücken, um den String zu finalisieren und zum nächsten zu gehen.</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="217"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="218"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="290"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="291"/>
         <source>Are you sure you want to cancel? All changes will be lost!</source>
         <translation>Bist du sicher, dass du abbrechen möchtest? Alle Änderungen gehen dabei verloren!</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="295"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="296"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="296"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="297"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="326"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="327"/>
         <source>String was modified</source>
         <translation>String wurde verändert</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="331"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="332"/>
         <source>String was modified. Do you want to save it before switching to another string?</source>
         <translation>String wurde verändert. Möchtest du ihn speichern, bevor du zum nächsten String gehst?</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="338"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="339"/>
         <source>Don&apos;t save and continue</source>
         <translation>Nicht speichern und fortfahren</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="341"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="342"/>
         <source>Save and continue</source>
         <translation>Speichern und fortfahren</translation>
     </message>
@@ -2581,59 +2657,6 @@ Antwort: {1}</translation>
         <location filename="src/core/mod_file/translation_status.py" line="148"/>
         <source>Show files without an available translation</source>
         <translation>Zeige Dateien, für die keine Übersetzung verfügbar ist</translation>
-    </message>
-</context>
-<context>
-    <name>string</name>
-    <message>
-        <location filename="src/core/database/string.py" line="105"/>
-        <source>No status (no color)</source>
-        <translation>Kein Status (ohne Farbe)</translation>
-    </message>
-    <message>
-        <location filename="src/core/database/string.py" line="108"/>
-        <source>String does not require a translation</source>
-        <translation>String benötigt keine Übersetzung</translation>
-    </message>
-    <message>
-        <location filename="src/core/database/string.py" line="111"/>
-        <source>String is completely translated</source>
-        <translation>String ist vollständig übersetzt</translation>
-    </message>
-    <message>
-        <location filename="src/core/database/string.py" line="114"/>
-        <source>String is partially translated</source>
-        <translation>String ist teilweise übersetzt</translation>
-    </message>
-    <message>
-        <location filename="src/core/database/string.py" line="117"/>
-        <source>String requires a translation</source>
-        <translation>String benötigt eine Übersetzung</translation>
-    </message>
-    <message>
-        <location filename="src/core/database/string.py" line="130"/>
-        <source>Show stateless strings</source>
-        <translation>Zeige Strings ohne Status</translation>
-    </message>
-    <message>
-        <location filename="src/core/database/string.py" line="133"/>
-        <source>Show strings that do not require a translation</source>
-        <translation>Zeige Strings, die keine Übersetzung benötigen</translation>
-    </message>
-    <message>
-        <location filename="src/core/database/string.py" line="136"/>
-        <source>Show strings that are completely translated</source>
-        <translation>Zeige Strings, die vollständig übersetzt sind</translation>
-    </message>
-    <message>
-        <location filename="src/core/database/string.py" line="139"/>
-        <source>Show strings that are partially translated</source>
-        <translation>Zeige Strings, die unvollständig übersetzt sind</translation>
-    </message>
-    <message>
-        <location filename="src/core/database/string.py" line="142"/>
-        <source>Show strings that require a translation</source>
-        <translation>Zeige Strings, die eine Übersetzung benötigen</translation>
     </message>
 </context>
 </TS>

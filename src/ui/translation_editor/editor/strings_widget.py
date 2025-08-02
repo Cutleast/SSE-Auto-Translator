@@ -9,7 +9,8 @@ from PySide6.QtCore import Qt
 from PySide6.QtGui import QFont
 from PySide6.QtWidgets import QTreeWidget, QTreeWidgetItem
 
-from core.string.string import String
+from core.string import String, StringList
+from core.string.string_status import StringStatus
 from core.utilities import matches_filter, trim_string
 from core.utilities.container_utils import ReferenceDict
 from ui.utilities.tree_widget import (
@@ -42,12 +43,12 @@ class StringsWidget(QTreeWidget):
     Optional name filter and case-sensitivity.
     """
 
-    __state_filter: Optional[list[String.Status]] = None
+    __state_filter: Optional[list[StringStatus]] = None
     """
     Optional state filter.
     """
 
-    def __init__(self, strings: dict[Path, list[String]]) -> None:
+    def __init__(self, strings: dict[Path, StringList]) -> None:
         super().__init__()
 
         self.__init_ui()
@@ -75,7 +76,7 @@ class StringsWidget(QTreeWidget):
         self.header().setDefaultSectionSize(200)
         self.header().setSortIndicatorClearable(True)
 
-    def __init_strings(self, strings: dict[Path, list[String]]) -> None:
+    def __init_strings(self, strings: dict[Path, StringList]) -> None:
         self.__string_items = ReferenceDict()
         self.__modfile_items = {}
 
@@ -163,7 +164,8 @@ class StringsWidget(QTreeWidget):
 
             for c in range(5):
                 item.setForeground(
-                    c, String.Status.get_color(string.status) or Qt.GlobalColor.white
+                    c,
+                    StringStatus.get_color(string.status) or Qt.GlobalColor.white,
                 )
 
         for modfile, modfile_item in self.__modfile_items.items():
@@ -207,23 +209,23 @@ class StringsWidget(QTreeWidget):
         self.__name_filter = name_filter if name_filter[0].strip() else None
         self.update()
 
-    def set_state_filter(self, state_filter: list[String.Status]) -> None:
+    def set_state_filter(self, state_filter: list[StringStatus]) -> None:
         """
         Sets the state filter.
 
         Args:
-            state_filter (list[String.Status]): The states to filter by.
+            state_filter (list[StringStatus]): The states to filter by.
         """
 
         self.__state_filter = state_filter
         self.update()
 
-    def get_selected_strings(self) -> list[String]:
+    def get_selected_strings(self) -> StringList:
         """
         Gets the selected strings.
 
         Returns:
-            list[String]: The selected strings.
+            StringList: The selected strings.
         """
 
         return [

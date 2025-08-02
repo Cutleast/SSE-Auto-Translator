@@ -37,7 +37,8 @@ from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.mod_instance.state_service import StateService
 from core.plugin_interface import plugin as esp
-from core.string.string import String
+from core.string import StringList
+from core.string.string_status import StringStatus
 from core.translation_provider.exceptions import ModNotFoundError
 from core.translation_provider.provider import Provider
 from core.translation_provider.source import Source
@@ -376,7 +377,7 @@ class ModInstanceWidget(QTreeWidget):
             dialog.show()
 
         elif isinstance(current_item, Mod):
-            strings: dict[Path, list[String]] = {}
+            strings: dict[Path, StringList] = {}
 
             for modfile in current_item.modfiles:
                 modfile_strings = modfile.get_strings()
@@ -473,11 +474,11 @@ class ModInstanceWidget(QTreeWidget):
         translation = self.database.get_translation_by_modfile_path(current_item.path)
 
         if translation is not None:
-            untranslated_strings: list[String] = [
+            untranslated_strings: StringList = [
                 string
                 for string in translation.strings[current_item.path]
-                if string.status == String.Status.TranslationRequired
-                or string.status == String.Status.TranslationIncomplete
+                if string.status == StringStatus.TranslationRequired
+                or string.status == StringStatus.TranslationIncomplete
             ]
 
             if untranslated_strings:
@@ -583,7 +584,7 @@ class ModInstanceWidget(QTreeWidget):
                         break
 
                 if original_mod is not None:
-                    strings: dict[Path, list[String]] = (
+                    strings: dict[Path, StringList] = (
                         Importer.import_mod_as_translation(current_item, original_mod)
                     )
                     DatabaseService.create_translation_from_mod(

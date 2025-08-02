@@ -6,7 +6,7 @@ import qtawesome as qta
 from PySide6.QtCore import Signal
 from PySide6.QtGui import QAction, QCursor, QKeySequence
 
-from core.string.string import String
+from core.string.string_status import StringStatus
 from ui.utilities.icon_provider import IconProvider
 from ui.widgets.menu import Menu
 
@@ -31,7 +31,7 @@ class EditorMenu(Menu):
     reset_translation_requested = Signal()
     """Signal emitted when the user clicks on the reset translation action."""
 
-    mark_as_requested = Signal(String.Status)
+    mark_as_requested = Signal(StringStatus)
     """
     Signal emitted when the user clicks on a mark as action.
 
@@ -83,21 +83,21 @@ class EditorMenu(Menu):
         self.addSeparator()
 
     def __init_mark_actions(self) -> None:
-        status_shortcuts: dict[String.Status, QKeySequence] = {
-            String.Status.TranslationComplete: QKeySequence("F1"),
-            String.Status.TranslationIncomplete: QKeySequence("F2"),
-            String.Status.NoTranslationRequired: QKeySequence("F3"),
+        status_shortcuts: dict[StringStatus, QKeySequence] = {
+            StringStatus.TranslationComplete: QKeySequence("F1"),
+            StringStatus.TranslationIncomplete: QKeySequence("F2"),
+            StringStatus.NoTranslationRequired: QKeySequence("F3"),
         }
 
-        for status in String.Status:
+        for status in StringStatus:
             # Skip NoneStatus
-            if status == String.Status.NoneStatus:
+            if status == StringStatus.NoneStatus:
                 continue
 
             mark_as_action: QAction = self.addAction(
                 qta.icon(
                     "mdi6.square-rounded",
-                    color=String.Status.get_color(status),
+                    color=StringStatus.get_color(status),
                 ),
                 self.tr('Mark as "{0}"').format(status.get_localized_name()),
             )

@@ -21,8 +21,10 @@ from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
+from core.string import String, StringList
 from core.string.search_filter import SearchFilter, matches_filter
-from core.string.string import String
+from core.string.string_status import StringStatus
+from core.string.string_utils import StringUtils
 from core.translation_provider.mod_id import ModId
 from core.translation_provider.provider import Provider
 from core.translation_provider.source import Source
@@ -91,10 +93,10 @@ class Scanner(QObject):
         if ldialog is not None:
             ldialog.updateProgress(text1=self.tr("Loading database..."))
 
-        database_strings: list[String] = String.unique(
+        database_strings: StringList = StringUtils.unique(
             string
             for string in self.database.strings
-            if string.status != String.Status.TranslationRequired
+            if string.status != StringStatus.TranslationRequired
         )
         database_originals: list[str] = unique(
             string.original for string in database_strings
@@ -125,7 +127,7 @@ class Scanner(QObject):
         self,
         mod: Mod,
         modfiles: list[ModFile],
-        database_strings: list[String],
+        database_strings: StringList,
         database_originals: list[str],
         ldialog: Optional[LoadingDialog] = None,
     ) -> dict[ModFile, TranslationStatus]:
@@ -155,7 +157,7 @@ class Scanner(QObject):
     def __basic_scan_modfile(
         self,
         modfile: ModFile,
-        database_strings: list[String],
+        database_strings: StringList,
         database_originals: list[str],
         ldialog: Optional[LoadingDialog] = None,
     ) -> TranslationStatus:
@@ -163,7 +165,7 @@ class Scanner(QObject):
             ldialog.updateProgress(show3=True, text3=self.tr("Extracting strings..."))
 
         self.log.debug("Extracting strings...")
-        modfile_strings: list[String] = modfile.get_strings()
+        modfile_strings: StringList = modfile.get_strings()
         if not len(modfile_strings):
             return TranslationStatus.NoStrings
 
@@ -371,11 +373,11 @@ class Scanner(QObject):
 
     def __deep_scan_modfile_translation(
         self,
-        translation_strings: list[String],
+        translation_strings: StringList,
         modfile: ModFile,
         ldialog: Optional[LoadingDialog] = None,
     ) -> TranslationStatus:
-        modfile_strings: list[String] = modfile.get_strings()
+        modfile_strings: StringList = modfile.get_strings()
         translation_map: dict[str, String] = {
             string.id: string for string in translation_strings
         }
@@ -395,15 +397,15 @@ class Scanner(QObject):
 
             if matching is None:
                 new_string: String = copy(modfile_string)
-                new_string.status = String.Status.TranslationRequired
+                new_string.status = StringStatus.TranslationRequired
                 new_string.string = new_string.original
                 translation_map[new_string.id] = new_string
                 translation_strings.append(new_string)
                 translation_complete = False
 
             elif (
-                matching.status == String.Status.TranslationIncomplete
-                or matching.status == String.Status.TranslationRequired
+                matching.status == StringStatus.TranslationIncomplete
+                or matching.status == StringStatus.TranslationRequired
             ):
                 translation_complete = False
 
@@ -419,7 +421,7 @@ class Scanner(QObject):
         items_to_search: dict[Mod, list[ModFile]],
         filter: SearchFilter,
         ldialog: Optional[LoadingDialog] = None,
-    ) -> dict[Path, list[String]]:
+    ) -> dict[Path, StringList]:
         """
         Searches the modlist for strings.
 
@@ -430,7 +432,7 @@ class Scanner(QObject):
                 Optional loading dialog. Defaults to None.
 
         Returns:
-            dict[Path, list[String]]:
+            dict[Path, StringList]:
                 A dictionary of mod file names and their matching strings.
         """
 
@@ -448,7 +450,7 @@ class Scanner(QObject):
 
         self.log.info(f"Searching {len(relevant_items)} mod(s) for strings...")
 
-        results: dict[Path, list[String]] = {}
+        results: dict[Path, StringList] = {}
         for m, (mod, modfiles) in enumerate(relevant_items.items()):
             if ldialog is not None:
                 ldialog.updateProgress(
@@ -459,7 +461,7 @@ class Scanner(QObject):
                 )
 
             self.log.info(f"Searching for strings in {mod.name!r}...")
-            mod_result: dict[Path, list[String]] = self.__search_mod(
+            mod_result: dict[Path, StringList] = self.__search_mod(
                 mod, modfiles, filter, ldialog
             )
             if mod_result:
@@ -475,8 +477,8 @@ class Scanner(QObject):
         modfiles: list[ModFile],
         filter: SearchFilter,
         ldialog: Optional[LoadingDialog] = None,
-    ) -> dict[Path, list[String]]:
-        result: dict[Path, list[String]] = {}
+    ) -> dict[Path, StringList]:
+        result: dict[Path, StringList] = {}
 
         for m, modfile in enumerate(modfiles):
             if ldialog is not None:
@@ -490,16 +492,16 @@ class Scanner(QObject):
             self.log.info(
                 f"Searching for strings in {mod.name!r} > {modfile.name!r}..."
             )
-            modfile_result: list[String] = self.__search_modfile(modfile, filter)
+            modfile_result: StringList = self.__search_modfile(modfile, filter)
             if modfile_result:
                 result[Path(f"{mod.name} > {modfile.name}")] = modfile_result
 
         return result
 
-    def __search_modfile(self, modfile: ModFile, filter: SearchFilter) -> list[String]:
-        result: list[String] = []
+    def __search_modfile(self, modfile: ModFile, filter: SearchFilter) -> StringList:
+        result: StringList = []
 
-        strings: list[String] = modfile.get_strings()
+        strings: StringList = modfile.get_strings()
         for string in strings:
             if matches_filter(filter, string):
                 result.append(string)
@@ -542,7 +544,7 @@ class Scanner(QObject):
                 f"for original mod {original_mod.name!r}..."
             )
 
-            translation_strings: dict[Path, list[String]] = (
+            translation_strings: dict[Path, StringList] = (
                 Importer.import_mod_as_translation(installed_translation, original_mod)
             )
 

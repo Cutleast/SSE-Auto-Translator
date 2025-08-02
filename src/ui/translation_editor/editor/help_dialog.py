@@ -16,7 +16,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from core.string.string import String
+from core.string.string_status import StringStatus
 
 
 class EditorHelpDialog(QDialog):
@@ -46,8 +46,8 @@ class EditorHelpDialog(QDialog):
         flayout.setAlignment(Qt.AlignmentFlag.AlignHCenter)
         vlayout.addLayout(flayout)
 
-        for status in String.Status:
-            color: Optional[QColor] = String.Status.get_color(status)
+        for status in StringStatus:
+            color: Optional[QColor] = StringStatus.get_color(status)
 
             if color is None:
                 label = QLabel(status.get_localized_name())

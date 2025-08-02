@@ -8,7 +8,7 @@ from app import App
 from core.database.database import TranslationDatabase
 from core.database.importer import Importer
 from core.mod_instance.mod import Mod
-from core.string.string import String
+from core.string import StringList
 
 from ..core_test import CoreTest
 
@@ -29,7 +29,7 @@ class TestImporter(CoreTest):
         translation_mod: Mod = self.get_mod_by_name("Wet and Cold SE - German")
 
         # when
-        translation_strings: dict[Path, list[String]] = (
+        translation_strings: dict[Path, StringList] = (
             importer.import_mod_as_translation(translation_mod, original_mod)
         )
 
@@ -52,7 +52,7 @@ class TestImporter(CoreTest):
             self.get_mod_by_name("Wet and Cold SE - German")
         )
         assert database.user_translations == []
-        imported_strings: dict[Path, list[String]] = (
+        imported_strings: dict[Path, StringList] = (
             importer.extract_strings_from_archive(
                 test_file_path, self.modinstance(), self.tmp_folder(), database.language
             )

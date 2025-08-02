@@ -8,7 +8,7 @@ from PySide6.QtCore import QSize, Signal
 from PySide6.QtGui import QAction
 from PySide6.QtWidgets import QCheckBox, QToolBar, QWidgetAction
 
-from core.string.string import String
+from core.string.string_status import StringStatus
 from ui.utilities.icon_provider import IconProvider
 from ui.widgets.menu import Menu
 
@@ -48,7 +48,7 @@ class EditorToolbar(QToolBar):
     """Signal emitted when the user clicks on the export action."""
 
     __filter_menu: Menu
-    __filter_items: dict[String.Status, QCheckBox]
+    __filter_items: dict[StringStatus, QCheckBox]
 
     __search_and_replace_action: QAction
     __api_translation_action: QAction
@@ -67,7 +67,7 @@ class EditorToolbar(QToolBar):
         self.__filter_menu = Menu()
 
         self.__filter_items = {}
-        for status in String.Status:
+        for status in StringStatus:
             filter_box = QCheckBox(
                 status.get_localized_filter_name(), self.__filter_menu
             )

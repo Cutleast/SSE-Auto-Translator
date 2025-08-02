@@ -7,7 +7,7 @@ from typing import Any
 from PySide6.QtCore import QSize
 from PySide6.QtWidgets import QCheckBox, QToolBar, QWidgetAction
 
-from core.string.string import String
+from core.string.string_status import StringStatus
 from ui.utilities.icon_provider import IconProvider
 from ui.widgets.menu import Menu
 
@@ -20,7 +20,7 @@ class StringListToolbar(QToolBar):
     __parent: "StringListWidget"
 
     __filter_menu: Menu
-    __filter_items: dict[String.Status, QCheckBox]
+    __filter_items: dict[StringStatus, QCheckBox]
 
     def __init__(self, parent: "StringListWidget") -> None:
         super().__init__(parent)
@@ -36,7 +36,7 @@ class StringListToolbar(QToolBar):
         self.__filter_menu = Menu()
 
         self.__filter_items = {}
-        for status in String.Status:
+        for status in StringStatus:
             filter_box = QCheckBox(
                 status.get_localized_filter_name(), self.__filter_menu
             )

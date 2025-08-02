@@ -16,14 +16,15 @@ from sse_bsa import BSAArchive
 
 from core.archiver.archive import Archive
 from core.config.user_config import UserConfig
-from core.database.translation_service import TranslationService
 from core.database.utilities import Utilities
 from core.mod_file.mod_file import ModFile
 from core.mod_file.mod_file_service import MODFILE_TYPES, ModFileService
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
-from core.string.string import String
+from core.string import String, StringList
+from core.string.string_loader import StringLoader
+from core.string.string_status import StringStatus
 from core.utilities.constants import DSD_FILE_PATTERN
 from core.utilities.container_utils import unique
 from core.utilities.filesystem import parse_path, relative_data_path, safe_copy
@@ -43,7 +44,7 @@ class Importer(QObject):
     @classmethod
     def import_mod_as_translation(
         cls, mod: Mod, original_mod: Mod
-    ) -> dict[Path, list[String]]:
+    ) -> dict[Path, StringList]:
         """
         Creates a translation by combining the strings from the mod files of the
         specified mods.
@@ -57,7 +58,7 @@ class Importer(QObject):
             f"Importing '{mod.name}' as translation for '{original_mod.name}'..."
         )
 
-        strings: dict[Path, list[String]] = {}
+        strings: dict[Path, StringList] = {}
 
         # Get strings from mod files
         ignore_status: list[TranslationStatus] = [
@@ -97,8 +98,8 @@ class Importer(QObject):
             dsd_path: Path = mod.path / dsd_file
 
             try:
-                plugin_strings: list[String] = (
-                    TranslationService.load_strings_from_json_file(dsd_path)
+                plugin_strings: StringList = StringLoader.load_strings_from_json_file(
+                    dsd_path
                 )
 
                 if len(plugin_strings):
@@ -232,7 +233,7 @@ class Importer(QObject):
         tmp_dir: Path,
         language: GameLanguage,
         ldialog: Optional[LoadingDialog] = None,
-    ) -> dict[Path, list[String]]:
+    ) -> dict[Path, StringList]:
         """
         Extracts strings from a downloaded archive and maps them to the
         original plugins.
@@ -246,10 +247,10 @@ class Importer(QObject):
                 Optional loading dialog. Defaults to None.
 
         Returns:
-            dict[Path, list[String]]: Mapping of plugin name to list of strings
+            dict[Path, StringList]: Mapping of plugin name to list of strings
         """
 
-        translation_strings: dict[Path, list[String]] = {}
+        translation_strings: dict[Path, StringList] = {}
 
         if ldialog is not None:
             ldialog.updateProgress(text1=self.tr("Processing archive..."))
@@ -303,12 +304,12 @@ class Importer(QObject):
                 )
                 continue
 
-            modfile_strings: list[String] = self.map_translation_strings(
+            modfile_strings: StringList = self.map_translation_strings(
                 modfile, original_modfile
             )
             if modfile_strings:
                 for string in modfile_strings:
-                    string.status = String.Status.TranslationComplete
+                    string.status = StringStatus.TranslationComplete
 
                 translation_strings.setdefault(modfile.path, []).extend(modfile_strings)
 
@@ -326,7 +327,7 @@ class Importer(QObject):
                     text2=modfile_name,
                 )
 
-            strings: list[String] = TranslationService.load_strings_from_json_file(
+            strings: StringList = StringLoader.load_strings_from_json_file(
                 extracted_dsd_file
             )
 
@@ -346,7 +347,7 @@ class Importer(QObject):
     @classmethod
     def map_translation_strings(
         cls, translation_modfile: ModFile, original_modfile: ModFile
-    ) -> list[String]:
+    ) -> StringList:
         """
         Extracts strings from translation and original mod files and maps them together.
 
@@ -355,11 +356,11 @@ class Importer(QObject):
             original_modfile (ModFile): The original mod file
 
         Returns:
-            list[String]: List of mapped strings
+            StringList: List of mapped strings
         """
 
-        translation_strings: list[String] = translation_modfile.get_strings()
-        original_strings: list[String] = original_modfile.get_strings()
+        translation_strings: StringList = translation_modfile.get_strings()
+        original_strings: StringList = original_modfile.get_strings()
 
         if not translation_strings and not original_strings:
             return []
@@ -368,17 +369,17 @@ class Importer(QObject):
 
     @classmethod
     def map_strings(
-        cls, translation_strings: list[String], original_strings: list[String]
-    ) -> list[String]:
+        cls, translation_strings: StringList, original_strings: StringList
+    ) -> StringList:
         """
         Maps translated strings to the original strings.
 
         Args:
-            translation_strings (list[String]): List of translated strings
-            original_strings (list[String]): List of original strings
+            translation_strings (StringList): List of translated strings
+            original_strings (StringList): List of original strings
 
         Returns:
-            list[String]: List of mapped strings
+            StringList: List of mapped strings
         """
 
         cls.log.debug(
@@ -390,8 +391,8 @@ class Importer(QObject):
             string.id: string for string in original_strings
         }
 
-        merged_strings: list[String] = []
-        unmerged_strings: list[String] = []
+        merged_strings: StringList = []
+        unmerged_strings: StringList = []
 
         for translation_string in translation_strings:
             original_string: Optional[String] = original_strings_ids.get(
@@ -405,7 +406,7 @@ class Importer(QObject):
             merged_string: String = copy(translation_string)
             merged_string.string = merged_string.original
             merged_string.original = original_string.original
-            merged_string.status = String.Status.TranslationComplete
+            merged_string.status = StringStatus.TranslationComplete
             merged_strings.append(merged_string)
 
         if len(unmerged_strings) < len(translation_strings):

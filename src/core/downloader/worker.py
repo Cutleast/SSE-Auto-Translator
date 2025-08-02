@@ -19,7 +19,7 @@ from core.database.translation import Translation
 from core.downloader.downloader import Downloader
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
-from core.string.string import String
+from core.string import StringList
 from core.translation_provider.mod_details import ModDetails
 from core.translation_provider.provider import Provider
 from core.utilities.exceptions import (
@@ -150,7 +150,7 @@ class Worker(QThread):
         progress_callback(ProgressUpdate(0, 0, self.tr("Installing translation...")))
 
         try:
-            strings: dict[Path, list[String]] = Importer().extract_strings_from_archive(
+            strings: dict[Path, StringList] = Importer().extract_strings_from_archive(
                 downloaded_file,
                 self.mod_instance,
                 self.app_config.get_tmp_dir(),

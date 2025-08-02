@@ -20,7 +20,7 @@ from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.plugin_interface import plugin as esp
-from core.string.string import String
+from core.string import StringList
 from ui.widgets.loading_dialog import LoadingDialog
 
 
@@ -62,9 +62,7 @@ class Exporter(QObject):
         )
 
         for plugin_path in plugins:
-            plugin_strings: Optional[list[String]] = translation.strings.get(
-                plugin_path
-            )
+            plugin_strings: Optional[StringList] = translation.strings.get(plugin_path)
 
             if plugin_strings is None:
                 cls.log.warning(f"Plugin {plugin_path!r} not found in translation.")
@@ -79,13 +77,16 @@ class Exporter(QObject):
 
     @staticmethod
     def export_strings_to_dsd(
-        strings: list[String], plugin_path: Path, path: Path, output_mod: bool = False
+        strings: StringList,
+        plugin_path: Path,
+        path: Path,
+        output_mod: bool = False,
     ) -> Path:
         """
         Exports strings to a DSD file at the specified path.
 
         Args:
-            strings (list[String]): Strings to export.
+            strings (StringList): Strings to export.
             plugin_path (Path): Path of the plugin, relative to the game's "Data"-folder.
             path (Path): Path to export to.
             output_mod (bool, optional):
@@ -207,9 +208,7 @@ class Exporter(QObject):
                 )
                 continue
 
-            plugin_strings: Optional[list[String]] = translation.strings.get(
-                plugin_file
-            )
+            plugin_strings: Optional[StringList] = translation.strings.get(plugin_file)
 
             if plugin_strings is None:
                 cls.log.warning(f"Plugin {plugin_file!r} not found in translation.")

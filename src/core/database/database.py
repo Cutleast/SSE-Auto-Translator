@@ -9,8 +9,9 @@ from typing import Optional
 from PySide6.QtCore import QObject, Signal
 
 from core.mod_instance.mod import Mod
+from core.string import StringList
 from core.string.search_filter import SearchFilter, matches_filter
-from core.string.string import String
+from core.string.string_status import StringStatus
 from core.translation_provider.mod_id import ModId
 from core.utilities.game_language import GameLanguage
 
@@ -100,12 +101,12 @@ class TranslationDatabase(QObject):
         return self.__user_translations
 
     @property
-    def strings(self) -> list[String]:
+    def strings(self) -> StringList:
         """
         A list of all strings in the database.
         """
 
-        result: list[String] = []
+        result: StringList = []
 
         result += [
             string
@@ -118,7 +119,7 @@ class TranslationDatabase(QObject):
             for translation in self.__user_translations
             for modfile_strings in (translation.strings or {}).values()
             for string in modfile_strings
-            if string.status != String.Status.TranslationRequired
+            if string.status != StringStatus.TranslationRequired
         ]
 
         return result
@@ -231,7 +232,7 @@ class TranslationDatabase(QObject):
 
         return any(t.id == translation.id for t in self.user_translations)
 
-    def search_database(self, filter: SearchFilter) -> dict[Path, list[String]]:
+    def search_database(self, filter: SearchFilter) -> dict[Path, StringList]:
         """
         Returns strings from database that match a specified filter.
 
@@ -239,13 +240,13 @@ class TranslationDatabase(QObject):
             filter (SearchFilter): Filter options.
 
         Returns:
-            dict[Path, list[String]]: Strings that match the filter.
+            dict[Path, StringList]: Strings that match the filter.
         """
 
         self.log.info("Searching database...")
         self.log.debug(f"Filter: {filter}")
 
-        result: dict[Path, list[String]] = {}
+        result: dict[Path, StringList] = {}
         translations: list[Translation] = self.__user_translations + [
             self.__vanilla_translation
         ]

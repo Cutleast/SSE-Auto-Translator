@@ -12,7 +12,7 @@ from typing import Any, NoReturn, Optional, override
 from sse_bsa import BSAArchive
 
 from core.plugin_interface.plugin import Plugin
-from core.string.string import String
+from core.string.base_string import BaseString
 from core.string_table_parser.string_table import StringTable
 from core.string_table_parser.string_table_parser import StringTableParser
 from core.utilities.constants import BASE_GAME_PLUGINS
@@ -148,7 +148,7 @@ class DbGen(Utility):
         ]
 
         self.log.debug("Extracting string ids from plugins...")
-        string_ids: dict[Path, dict[int, String]] = {}
+        string_ids: dict[Path, dict[int, BaseString]] = {}
         for plugin_path in plugin_paths:
             string_ids[plugin_path] = self.extract_string_ids(plugin_path)
 
@@ -212,7 +212,7 @@ class DbGen(Utility):
 
     def map_string_tables(
         self,
-        string_ids: dict[Path, dict[int, String]],
+        string_ids: dict[Path, dict[int, BaseString]],
         original_string_tables: dict[str, dict[int, str]],
         translated_string_tables: dict[str, dict[int, str]],
     ) -> dict[str, list[dict[str, str | int | None]]]:
@@ -411,7 +411,7 @@ class DbGen(Utility):
 
         return string_tables
 
-    def extract_string_ids(self, plugin_path: Path) -> dict[int, String]:
+    def extract_string_ids(self, plugin_path: Path) -> dict[int, BaseString]:
         """
         Parses and extracts string ids from the specified plugin.
 
@@ -425,7 +425,7 @@ class DbGen(Utility):
         self.log.info(f"Extracting string ids from {plugin_path.name!r}...")
 
         plugin = Plugin(plugin_path)
-        string_ids: dict[int, String] = {
+        string_ids: dict[int, BaseString] = {
             int(string.original): string
             for string in plugin.extract_strings(
                 extract_localized=True, unfiltered=True

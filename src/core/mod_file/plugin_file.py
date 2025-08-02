@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import override
 
 from core.plugin_interface.plugin import Plugin
-from core.string.string import String
+from core.string import StringList
 
 from .mod_file import ModFile
 
@@ -36,5 +36,5 @@ class PluginFile(ModFile):
         return False
 
     @override
-    def _extract_strings(self) -> list[String]:
+    def _extract_strings(self) -> StringList:
         return Plugin(self.full_path).extract_strings()

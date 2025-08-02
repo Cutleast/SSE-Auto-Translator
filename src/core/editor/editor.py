@@ -14,7 +14,8 @@ from PySide6.QtCore import QObject, Signal
 from core.config.user_config import UserConfig
 from core.database.database import TranslationDatabase
 from core.database.translation import Translation
-from core.string.string import String
+from core.string import String, StringList
+from core.string.string_status import StringStatus
 from core.translator_api.translator import Translator
 from ui.widgets.loading_dialog import LoadingDialog
 
@@ -31,7 +32,7 @@ class Editor(QObject):
     translator: Translator
 
     __translation: Translation
-    __strings_cache: dict[Path, list[String]]
+    __strings_cache: dict[Path, StringList]
     """
     Stores a deep copy of the strings in the translation.
     """
@@ -86,7 +87,7 @@ class Editor(QObject):
         return self.__changes_pending
 
     @property
-    def strings(self) -> dict[Path, list[String]]:
+    def strings(self) -> dict[Path, StringList]:
         """
         Map of plugin names to their list of strings.
         Returns their current editing state.
@@ -95,7 +96,7 @@ class Editor(QObject):
         return copy(self.__strings_cache)
 
     @property
-    def all_strings(self) -> list[String]:
+    def all_strings(self) -> StringList:
         """
         List of all strings.
         """
@@ -104,13 +105,13 @@ class Editor(QObject):
             string for strings in self.__strings_cache.values() for string in strings
         ]
 
-    def set_status(self, strings: list[String], status: String.Status) -> None:
+    def set_status(self, strings: StringList, status: StringStatus) -> None:
         """
         Sets the status of a list of strings.
 
         Args:
-            strings (list[String]): List of strings
-            status (String.Status): The status to set
+            strings (StringList): List of strings
+            status (Status): The status to set
         """
 
         for string in strings:
@@ -123,7 +124,7 @@ class Editor(QObject):
         self,
         string: String,
         translation: Optional[str] = None,
-        status: Optional[String.Status] = None,
+        status: Optional[StringStatus] = None,
     ) -> None:
         """
         Updates a string.
@@ -131,7 +132,7 @@ class Editor(QObject):
         Args:
             string (String): The string
             translation (Optional[str], optional): Translation string to set. Defaults to None.
-            status (Optional[String.Status], optional): Status to set. Defaults to None.
+            status (Optional[Status], optional): Status to set. Defaults to None.
         """
 
         if translation is not None:
@@ -140,19 +141,19 @@ class Editor(QObject):
         if status is not None:
             string.status = status
 
-            if status == String.Status.NoTranslationRequired:
+            if status == StringStatus.NoTranslationRequired:
                 string.string = string.original
 
         self.update_signal.emit()
 
     def translate_with_api(
-        self, strings: list[String], ldialog: Optional[LoadingDialog]
+        self, strings: StringList, ldialog: Optional[LoadingDialog]
     ) -> None:
         """
         Translates a list of strings with a translator API.
 
         Args:
-            strings (list[String]): List of strings
+            strings (StringList): List of strings
             ldialog (Optional[LoadingDialog]): Optional loading dialog, defaults to None
         """
 
@@ -168,19 +169,19 @@ class Editor(QObject):
 
         for string in strings:
             string.string = result[string.original]
-            string.status = String.Status.TranslationIncomplete
+            string.status = StringStatus.TranslationIncomplete
 
         self.update_signal.emit()
         self.log.info("API translation complete.")
 
     def apply_regex(
-        self, strings: list[String], replace_text: str, pattern: re.Pattern
+        self, strings: StringList, replace_text: str, pattern: re.Pattern
     ) -> int:
         """
         Applies a regex to a list of strings.
 
         Args:
-            strings (list[String]): List of strings
+            strings (StringList): List of strings
             replace_text (str): Replacer text
             pattern (re.Pattern): Regex pattern
 
@@ -197,7 +198,7 @@ class Editor(QObject):
             string.string = res
 
             if src != string.string:
-                string.status = String.Status.TranslationIncomplete
+                string.status = StringStatus.TranslationIncomplete
                 modified_strings += 1
 
         self.update_signal.emit()
@@ -205,12 +206,12 @@ class Editor(QObject):
 
         return modified_strings
 
-    def apply_database(self, strings: list[String]) -> int:
+    def apply_database(self, strings: StringList) -> int:
         """
         Applies database to a list of strings.
 
         Args:
-            strings (list[String]): List of strings
+            strings (StringList): List of strings
 
         Returns:
             int: Number of strings modified
@@ -229,12 +230,12 @@ class Editor(QObject):
         for string in strings:
             if string.id in database_strings:
                 string.string = database_strings[string.id].string
-                string.status = String.Status.TranslationComplete
+                string.status = StringStatus.TranslationComplete
                 modified_strings += 1
 
             elif string.original in database_originals:
                 string.string = database_originals[string.original].string
-                string.status = String.Status.TranslationIncomplete
+                string.status = StringStatus.TranslationIncomplete
                 modified_strings += 1
 
         self.update_signal.emit()
@@ -258,10 +259,10 @@ class Editor(QObject):
         for string in self.all_strings:
             if (
                 string.original == original
-                and string.status != String.Status.TranslationComplete
+                and string.status != StringStatus.TranslationComplete
             ):
                 string.string = translation
-                string.status = String.Status.TranslationIncomplete
+                string.status = StringStatus.TranslationIncomplete
                 modified_strings += 1
 
         self.update_signal.emit()
@@ -269,19 +270,19 @@ class Editor(QObject):
 
         return modified_strings
 
-    def reset_strings(self, strings: list[String]) -> None:
+    def reset_strings(self, strings: StringList) -> None:
         """
         Resets the translation and the status of a list of strings.
 
         Args:
-            strings (list[String]): List of strings
+            strings (StringList): List of strings
         """
 
         self.log.info(f"Resetting {len(strings)} string(s)...")
 
         for string in strings:
             string.string = None
-            string.status = String.Status.TranslationRequired
+            string.status = StringStatus.TranslationRequired
 
         self.update_signal.emit()
         self.log.info("Strings reset.")
@@ -304,7 +305,7 @@ class Editor(QObject):
 
         self.log.debug(f"Found {len(legacy_strings)} string(s) in legacy translation.")
 
-        translation_strings: dict[str, list[String]] = {}
+        translation_strings: dict[str, StringList] = {}
         for string in self.all_strings:
             translation_strings.setdefault(string.original, []).append(string)
 
@@ -316,7 +317,7 @@ class Editor(QObject):
             if original is None or translated is None:
                 continue
 
-            matching_strings: Optional[list[String]] = translation_strings.get(original)
+            matching_strings: Optional[StringList] = translation_strings.get(original)
 
             if matching_strings is None:
                 continue
@@ -329,12 +330,12 @@ class Editor(QObject):
                     and legacy_string.get("editor_id") == matching_string.editor_id
                     and legacy_string.get("index") == matching_string.index
                 ):
-                    legacy_status = String.Status.get(legacy_string.get("status") or "")
+                    legacy_status = StringStatus.get(legacy_string.get("status") or "")
 
                     if legacy_status is not None:
                         matching_string.status = legacy_status
                     else:
-                        matching_string.status = String.Status.TranslationComplete
+                        matching_string.status = StringStatus.TranslationComplete
 
             strings_modified += 1
 

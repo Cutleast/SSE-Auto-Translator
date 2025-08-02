@@ -22,7 +22,8 @@ from PySide6.QtWidgets import (
 from app_context import AppContext
 from core.config.app_config import AppConfig
 from core.config.user_config import UserConfig
-from core.string.string import String
+from core.string import String
+from core.string.string_status import StringStatus
 from core.translator_api.translator import Translator
 from ui.utilities.icon_provider import IconProvider
 from ui.widgets.shortcut_button import ShortcutButton
@@ -222,17 +223,17 @@ class TranslatorDialog(QWidget):
 
         complete_shortcut = QShortcut(QKeySequence("F1"), self)
         complete_shortcut.activated.connect(
-            lambda: self.goto_next(String.Status.TranslationComplete)
+            lambda: self.goto_next(StringStatus.TranslationComplete)
         )
 
         incomplete_shortcut = QShortcut(QKeySequence("F2"), self)
         incomplete_shortcut.activated.connect(
-            lambda: self.goto_next(String.Status.TranslationIncomplete)
+            lambda: self.goto_next(StringStatus.TranslationIncomplete)
         )
 
         no_required_shortcut = QShortcut(QKeySequence("F3"), self)
         no_required_shortcut.activated.connect(
-            lambda: self.goto_next(String.Status.NoTranslationRequired)
+            lambda: self.goto_next(StringStatus.NoTranslationRequired)
         )
 
     def __update_title(self) -> None:
@@ -307,14 +308,14 @@ class TranslatorDialog(QWidget):
     def set_string(
         self,
         string: String,
-        finalize_with_status: String.Status | None = None,
+        finalize_with_status: StringStatus | None = None,
     ) -> None:
         """
         Sets the string to be edited.
 
         Args:
             string (String): The string to set.
-            finalize_with_status (String.Status | None, optional):
+            finalize_with_status (Status | None, optional):
                 The status to finalize the current string with. Defaults to None.
         """
 
@@ -376,13 +377,14 @@ class TranslatorDialog(QWidget):
         self.__update_title()
 
     def goto_next(
-        self, finalize_with_status: String.Status = String.Status.TranslationComplete
+        self,
+        finalize_with_status: StringStatus = StringStatus.TranslationComplete,
     ) -> None:
         """
         Goes to next string or closes dialog if there is no other string.
 
         Args:
-            finalize_with_status (String.Status, optional):
+            finalize_with_status (Status, optional):
                 The status to finalize the current string with. Defaults to TranslationComplete.
         """
 
@@ -428,13 +430,13 @@ class TranslatorDialog(QWidget):
         self.set_string(new_string)
 
     def finalize_string(
-        self, status: String.Status = String.Status.TranslationComplete
+        self, status: StringStatus = StringStatus.TranslationComplete
     ) -> None:
         """
         Saves changes to current string and applies translation to similar strings.
 
         Args:
-            status (String.Status, optional):
+            status (Status, optional):
                 The status to finalize the current string with. Defaults to TranslationComplete.
         """
 
@@ -443,10 +445,10 @@ class TranslatorDialog(QWidget):
         if self.changes_pending:
             self.__current_string.string = self.__translated_entry.toPlainText()
 
-        elif status == String.Status.NoTranslationRequired:
+        elif status == StringStatus.NoTranslationRequired:
             self.__current_string.string = self.__current_string.original
 
-        if status == String.Status.TranslationComplete:
+        if status == StringStatus.TranslationComplete:
             self.__parent.update_matching_strings(
                 self.__current_string.original,
                 self.__current_string.string or self.__current_string.original,

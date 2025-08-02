@@ -36,8 +36,8 @@ from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.mod_instance.state_service import StateService
 from core.scanner.scanner import Scanner
+from core.string import StringList
 from core.string.search_filter import SearchFilter
-from core.string.string import String
 from core.translation_provider.mod_id import ModId
 from core.translation_provider.nm_api.nxm_handler import NXMHandler
 from core.translation_provider.provider import Provider
@@ -497,7 +497,7 @@ class MainPageWidget(QWidget):
         if dialog.exec() == QDialog.DialogCode.Accepted:
             filter: SearchFilter = dialog.get_filter()
 
-            search_result: dict[Path, list[String]] = LoadingDialog.run_callable(
+            search_result: dict[Path, StringList] = LoadingDialog.run_callable(
                 QApplication.activeModalWidget(),
                 lambda ldialog: self.scanner.run_string_search(
                     self.__modinstance_widget.get_checked_items(), filter, ldialog
