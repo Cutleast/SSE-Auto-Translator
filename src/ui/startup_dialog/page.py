@@ -18,7 +18,6 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from core.cache.cache import Cache
 from core.config.user_config import UserConfig
 from ui.utilities.icon_provider import IconProvider
 
@@ -43,16 +42,12 @@ class Page(QWidget):
     Signal to toggle the "Next" button.
     """
 
-    cache: Cache
-
     _vlayout: QVBoxLayout
     _back_button: QPushButton
     _next_button: QPushButton
 
-    def __init__(self, cache: Cache, parent: Optional[QWidget] = None) -> None:
+    def __init__(self, parent: Optional[QWidget] = None) -> None:
         super().__init__(parent)
-
-        self.cache = cache
 
         self.setObjectName("primary")
         self.__init_ui()

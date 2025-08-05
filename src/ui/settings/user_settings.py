@@ -215,7 +215,7 @@ class UserSettings(SettingsPage[UserConfig]):
         vlayout = QVBoxLayout()
         dialog.setLayout(vlayout)
 
-        api_setup = ApiSetup(self.cache)
+        api_setup = ApiSetup()
         vlayout.addWidget(api_setup)
 
         hlayout = QHBoxLayout()

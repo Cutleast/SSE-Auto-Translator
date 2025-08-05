@@ -175,7 +175,7 @@ class AppTest(BaseTest):
         if AppContext.has_app() and not init:
             return AppContext.get_app().cache
 
-        return Cache(self.tmp_folder() / "cache", App.APP_VERSION)
+        return Cache.get() or Cache(self.tmp_folder() / "cache", App.APP_VERSION)
 
     def scanner(self, init: bool = False) -> Scanner:
         """
@@ -294,9 +294,8 @@ class AppTest(BaseTest):
             return AppContext.get_app().provider
 
         user_config: UserConfig = self.user_config()
-        cache: Cache = self.cache()
 
-        return Provider(user_config, cache)
+        return Provider(user_config)
 
     def modinstance(self, init: bool = False) -> ModInstance:
         """

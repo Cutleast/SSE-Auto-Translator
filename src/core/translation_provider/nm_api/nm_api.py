@@ -18,9 +18,11 @@ import jstyleson as json
 import requests as req
 import websocket
 
+from core.cache.cache import Cache
 from core.translation_provider.source import Source
 from core.utilities.exe_info import get_execution_info
 from core.utilities.filesystem import extract_file_paths
+from core.utilities.web_utils import get_url_identifier
 
 from ..exceptions import (
     ApiInvalidServerError,
@@ -116,7 +118,7 @@ class NexusModsApi(ProviderApi):
 
         self.log.debug(f"Sending API request to {url!r}...")
         res: req.Response = self._request(
-            url, headers=headers, use_cache=False, handle_status_code=False
+            url, headers=headers, handle_status_code=False
         )
         self.log.debug(f"Status Code: {res.status_code}")
 
@@ -137,25 +139,17 @@ class NexusModsApi(ProviderApi):
         self,
         url: str,
         headers: Optional[dict[str, str]] = None,
-        use_cache: bool = True,
         handle_status_code: bool = True,
     ) -> req.Response:
-        cached: bool = (
-            self.cache.get_from_web_cache(url) is not None if use_cache else False
-        )
-        res: req.Response = super()._request(
-            url, headers, use_cache, handle_status_code
-        )
+        res: req.Response = super()._request(url, headers, handle_status_code)
 
-        # Only update remaining requests if the request was not cached
-        if not cached:
-            rem_hreq: str = res.headers.get("X-RL-Hourly-Remaining", "0")
-            rem_dreq: str = res.headers.get("X-RL-Daily-Remaining", "0")
+        rem_hreq: str = res.headers.get("X-RL-Hourly-Remaining", "0")
+        rem_dreq: str = res.headers.get("X-RL-Daily-Remaining", "0")
 
-            if rem_hreq.isnumeric():
-                self.__rem_hreq = int(rem_hreq)
-            if rem_dreq.isnumeric():
-                self.__rem_dreq = int(rem_dreq)
+        if rem_hreq.isnumeric():
+            self.__rem_hreq = int(rem_hreq)
+        if rem_dreq.isnumeric():
+            self.__rem_dreq = int(rem_dreq)
 
         return res
 
@@ -177,7 +171,10 @@ class NexusModsApi(ProviderApi):
             "User-Agent": self.user_agent,
         }
 
-        return self._request(url, headers, use_cache=cache_result)
+        if cache_result:
+            return self._cached_request(url, headers)
+
+        return self._request(url, headers)
 
     @override
     def is_direct_download_possible(self) -> bool:
@@ -406,14 +403,7 @@ class NexusModsApi(ProviderApi):
 
         url = f"https://file-metadata.nexusmods.com/file/nexus-files-s3-meta/{_game_id}/{mod_id}/{urllib.parse.quote(file_name)}.json"
 
-        cached = self.cache.get_from_web_cache(url)
-
-        if cached is None:
-            res = req.get(url)
-            self.cache.add_to_web_cache(url, res)
-        else:
-            res = cached
-            self.log.debug(f"Got cached Web response for {url!r}.")
+        res: req.Response = self._cached_request(url)
 
         if res.status_code == 200:
             data = res.content.decode()
@@ -522,10 +512,18 @@ class NexusModsApi(ProviderApi):
         if not mod_id:
             raise ProviderApi.raise_mod_not_found_error(ModId(mod_id=mod_id))
 
-        url = f"https://www.nexusmods.com/{game_id}/mods/{mod_id}"
+        url: str = f"https://www.nexusmods.com/{game_id}/mods/{mod_id}"
+        cache_file_path = ProviderApi.CACHE_FOLDER / (
+            get_url_identifier(url) + ".cache"
+        )
 
-        cached = self.cache.get_from_web_cache(url)
+        cached: Optional[req.Response] = None
+        try:
+            cached = Cache.get_from_cache(cache_file_path)
+        except FileNotFoundError:
+            pass
 
+        res: req.Response
         if cached is None:
             if self.__scraper is None:
                 self.__scraper = cs.CloudScraper()
@@ -535,7 +533,7 @@ class NexusModsApi(ProviderApi):
             }
 
             res = self.__scraper.get(url, headers=headers)
-            self.cache.add_to_web_cache(url, res)
+            Cache.save_to_cache(cache_file_path, res)
         else:
             res = cached
             self.log.debug(f"Got cached Web response for {url!r}")

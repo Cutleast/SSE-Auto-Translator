@@ -753,13 +753,10 @@ class ModInstanceWidget(QTreeWidget):
         self.__update()
 
     def __save_modfile_states(self) -> None:
-        modfile_states: dict[Path, tuple[bool, TranslationStatus]] = {
-            modfile.full_path: (
-                item.checkState(0) == Qt.CheckState.Checked,
-                modfile.status,
-            )
-            for modfile_item in self.__modfile_items.values()
-            for modfile, item in modfile_item.items()
-        }
-
-        self.cache.update_states_cache(modfile_states)
+        self.state_service.save_states_to_cache(
+            {
+                modfile: item.checkState(0) == Qt.CheckState.Checked
+                for modfile_item in self.__modfile_items.values()
+                for modfile, item in modfile_item.items()
+            }
+        )

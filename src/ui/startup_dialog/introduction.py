@@ -10,7 +10,6 @@ from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QLabel, QPushButton, QWidget
 
 from app_context import AppContext
-from core.cache.cache import Cache
 from core.config.user_config import UserConfig
 from core.utilities.path_limit_fixer import PathLimitFixer
 from ui.startup_dialog.page import Page
@@ -22,8 +21,8 @@ class IntroductionPage(Page):
     and usage of this application.
     """
 
-    def __init__(self, cache: Cache, parent: Optional[QWidget] = None) -> None:
-        super().__init__(cache, parent)
+    def __init__(self, parent: Optional[QWidget] = None) -> None:
+        super().__init__(parent)
 
         self._back_button.setText("Exit")
         self.valid_signal.emit(True)

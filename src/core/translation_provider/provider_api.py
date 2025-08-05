@@ -11,7 +11,8 @@ import requests as req
 from PySide6.QtCore import QObject
 
 from app_context import AppContext
-from core.cache.cache import Cache
+from core.cache.cache import Cache, Path
+from core.utilities.web_utils import get_url_identifier
 
 from .exceptions import (
     ApiExpiredError,
@@ -36,10 +37,10 @@ class ProviderApi(QObject):
     user_agent: str
     """Application user agent to use for API requests."""
 
-    cache: Cache
+    CACHE_FOLDER = Path("web_cache")
+    """The subfolder within the cache folder to store cached web requests."""
 
-    def __init__(self, cache: Cache) -> None:
-        self.cache = cache
+    def __init__(self) -> None:
         self.log = logging.getLogger(self.__class__.__name__)
 
         self.user_agent = (
@@ -49,11 +50,43 @@ class ProviderApi(QObject):
             f"{platform.architecture()[0]})"
         )
 
+    @Cache.persistent_cache(
+        cache_subfolder=CACHE_FOLDER,
+        id_generator=lambda self, url, *_: get_url_identifier(url),
+        max_age=60 * 60 * 72,
+    )
+    def _cached_request(
+        self,
+        url: str,
+        headers: Optional[dict[str, str]] = None,
+        handle_status_code: bool = True,
+    ) -> req.Response:
+        """
+        Like `_request` but uses a persistent cache with a maximum age of 72 hours.
+
+        Args:
+            url (str): URL to request
+            headers (Optional[dict[str, str]], optional):
+                Additional headers to send. Defaults to None.
+            handle_status_code (bool, optional):
+                Whether to handle the response status code and raise an Exception in case
+                of a non-200 status code. Defaults to True.
+
+        Raises:
+            RequestError:
+                when the request returned a non-200 HTTP status code
+                and the `handle_status_code` parameter is `True`
+
+        Returns:
+            req.Response: The response
+        """
+
+        return self._request(url, headers, handle_status_code)
+
     def _request(
         self,
         url: str,
         headers: Optional[dict[str, str]] = None,
-        use_cache: bool = True,
         handle_status_code: bool = True,
     ) -> req.Response:
         """
@@ -65,7 +98,6 @@ class ProviderApi(QObject):
             url (str): URL to request
             headers (Optional[dict[str, str]], optional):
                 Additional headers to send. Defaults to None.
-            use_cache (bool, optional): Whether to use the cache. Defaults to True.
             handle_status_code (bool, optional):
                 Whether to handle the response status code and raise an Exception in case
                 of a non-200 status code. Defaults to True.
@@ -82,16 +114,8 @@ class ProviderApi(QObject):
         if headers is None:
             headers = {"User-Agent": self.user_agent}
 
-        cached: Optional[req.Response] = self.cache.get_from_web_cache(url)
-        res: req.Response
-        if cached is None or not use_cache:
-            self.log.debug(f"Sending API request to {url!r}...")
-            res = req.get(url, headers=headers)
-            if use_cache:
-                self.cache.add_to_web_cache(url, res)
-        else:
-            res = cached
-            self.log.debug(f"Got cached API response for {url!r}.")
+        self.log.debug(f"Sending API request to {url!r}...")
+        res: req.Response = req.get(url, headers=headers)
 
         if handle_status_code:
             self.handle_status_code(url, res.status_code)

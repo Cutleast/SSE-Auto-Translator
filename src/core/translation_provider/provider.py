@@ -7,7 +7,6 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 import logging
 from typing import Optional
 
-from core.cache.cache import Cache
 from core.config.user_config import UserConfig
 from core.masterlist.masterlist import Masterlist
 from core.masterlist.masterlist_entry import MasterlistEntry
@@ -27,8 +26,8 @@ class Provider:
 
     log: logging.Logger = logging.getLogger("Provider")
 
-    def __init__(self, user_config: UserConfig, cache: Cache) -> None:
-        ProviderManager.init(user_config, cache)
+    def __init__(self, user_config: UserConfig) -> None:
+        ProviderManager.init(user_config)
 
     def direct_downloads_possible(self) -> bool:
         """

@@ -7,7 +7,7 @@ from typing import Optional
 
 import spylls.hunspell as hunspell
 
-from core.utilities.cache import cache
+from core.cache.function_cache import FunctionCache
 
 
 class SpellChecker:
@@ -68,7 +68,7 @@ class SpellChecker:
         return []
 
     @staticmethod
-    @cache
+    @FunctionCache.cache
     def _load_dictionary(language: str) -> hunspell.Dictionary:
         """
         Loads the Hunspell dictionary for the specified language.

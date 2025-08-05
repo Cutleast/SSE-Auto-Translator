@@ -5,7 +5,6 @@ Copyright (c) Cutleast
 from pathlib import Path
 
 from app import App
-from core.cache.cache import Cache
 from core.database.database import TranslationDatabase
 from core.database.database_service import DatabaseService
 from core.database.translation import Translation
@@ -29,7 +28,6 @@ class TestStateService(CoreTest):
         """
 
         # given
-        cache: Cache = self.cache()
         database: TranslationDatabase = self.database()
         modinstance: ModInstance = self.modinstance()
         new_translation: Translation = DatabaseService.create_blank_translation(
@@ -40,7 +38,7 @@ class TestStateService(CoreTest):
         modfile: ModFile = self.get_modfile_from_mod_name(
             "Ordinator - Perks of Skyrim", "Ordinator - Perks of Skyrim.esp"
         )
-        StateService(cache, modinstance, database)
+        StateService(modinstance, database)
 
         # then
         assert modfile.status != TranslationStatus.TranslationInstalled

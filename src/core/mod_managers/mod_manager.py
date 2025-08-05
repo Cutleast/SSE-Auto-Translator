@@ -4,7 +4,7 @@ Copyright (c) Cutleast
 
 from enum import StrEnum
 
-from core.utilities.cache import cache
+from core.cache.function_cache import FunctionCache
 
 from .mod_manager_api import ModManagerApi
 
@@ -15,7 +15,7 @@ class ModManager(StrEnum):
     ModOrganizer = "Mod Organizer 2"
     Vortex = "Vortex"
 
-    @cache
+    @FunctionCache.cache
     def get_api(self) -> ModManagerApi:
         """
         Returns:

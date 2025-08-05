@@ -7,12 +7,11 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 from abc import ABCMeta, abstractmethod
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Optional, override
+from typing import override
 
-from app_context import AppContext
-from core.cache.base_cache import BaseCache
+from core.cache.cache import Cache
 from core.string import StringList
-from core.utilities.filesystem import relative_data_path
+from core.utilities.filesystem import get_file_identifier, relative_data_path
 
 from .translation_status import TranslationStatus
 
@@ -74,6 +73,10 @@ class ModFile(metaclass=ABCMeta):
             bool: Whether this file type can occur in BSA archives.
         """
 
+    @Cache.persistent_cache(
+        cache_subfolder=Path("modfile_strings"),
+        id_generator=lambda self: get_file_identifier(self.full_path),
+    )
     def get_strings(self) -> StringList:
         """
         Extracts and returns all strings from this file. Uses the current app's cache, if
@@ -83,19 +86,7 @@ class ModFile(metaclass=ABCMeta):
             StringList: List of all strings from this file.
         """
 
-        cache: Optional[BaseCache] = AppContext.get_cache()
-        strings: Optional[StringList] = None
-
-        if cache is not None:
-            strings = cache.get_strings_from_file_path(self.full_path)
-
-        if strings is None:
-            strings = self._extract_strings()
-
-            if cache is not None:
-                cache.set_strings_for_file_path(self.full_path, strings)
-
-        return strings
+        return self._extract_strings()
 
     @abstractmethod
     def _extract_strings(self) -> StringList:

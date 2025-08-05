@@ -9,7 +9,6 @@ from typing import Optional, override
 
 from PySide6.QtCore import QThread, Signal
 
-from core.cache.cache import TranslationStatus
 from core.config.app_config import AppConfig
 from core.config.user_config import UserConfig
 from core.database.database import TranslationDatabase
@@ -17,6 +16,7 @@ from core.database.database_service import DatabaseService
 from core.database.importer import Importer
 from core.database.translation import Translation
 from core.downloader.downloader import Downloader
+from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.string import StringList

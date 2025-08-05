@@ -13,7 +13,7 @@ from typing import Any, TypeVar, get_type_hints
 import jstyleson as json
 from pydantic import BaseModel, ConfigDict
 
-from core.utilities.cache import cache
+from core.cache.function_cache import FunctionCache
 
 T = TypeVar("T", bound="BaseConfig")
 
@@ -101,7 +101,7 @@ class BaseConfig(BaseModel):
         """
 
     @classmethod
-    @cache
+    @FunctionCache.cache
     def _get_logger(cls) -> logging.Logger:
         """
         Returns the config's logger.

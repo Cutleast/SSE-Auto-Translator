@@ -28,47 +28,47 @@
 <context>
     <name>ApiSetup</name>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="47"/>
+        <location filename="src/ui/widgets/api_setup.py" line="46"/>
         <source>In order to get translations from Nexus Mods this tool needs access to the Nexus Mods API. You can setup access by two methods: insert API key manually or via SSO (Single-Sign-On).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="64"/>
+        <location filename="src/ui/widgets/api_setup.py" line="63"/>
         <source>Click here to login to Nexus Mods via Browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="69"/>
+        <location filename="src/ui/widgets/api_setup.py" line="68"/>
         <source>Successfully logged into Nexus Mods</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="76"/>
+        <location filename="src/ui/widgets/api_setup.py" line="75"/>
         <source>Single-Sign-On (Browser)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="84"/>
+        <location filename="src/ui/widgets/api_setup.py" line="83"/>
         <source>Insert your API Key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="88"/>
+        <location filename="src/ui/widgets/api_setup.py" line="87"/>
         <source>Check API Key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="101"/>
+        <location filename="src/ui/widgets/api_setup.py" line="100"/>
         <source>API Key is valid!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="106"/>
+        <location filename="src/ui/widgets/api_setup.py" line="105"/>
         <source>API Key is invalid!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/api_setup.py" line="110"/>
+        <location filename="src/ui/widgets/api_setup.py" line="109"/>
         <source>Manual Setup</source>
         <translation type="unfinished"></translation>
     </message>
@@ -76,42 +76,42 @@
 <context>
     <name>App</name>
     <message>
-        <location filename="src/app.py" line="303"/>
+        <location filename="src/app.py" line="301"/>
         <source>API Key is invalid!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/app.py" line="317"/>
+        <location filename="src/app.py" line="315"/>
         <source>Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/app.py" line="334"/>
+        <location filename="src/app.py" line="332"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/app.py" line="351"/>
+        <location filename="src/app.py" line="349"/>
         <source>Loading translation database...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/app.py" line="364"/>
+        <location filename="src/app.py" line="362"/>
         <source>Loading modinstance...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/app.py" line="380"/>
+        <location filename="src/app.py" line="378"/>
         <source>&lt;No modinstance selected&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/app.py" line="463"/>
+        <location filename="src/app.py" line="461"/>
         <source>Path Limit Enabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/app.py" line="471"/>
+        <location filename="src/app.py" line="469"/>
         <source>The NTFS path length limit is enabled and paths longer than 255 characters will cause issues. Would you like to disable it now (admin rights may be required)? A reboot is required for this to take effect.
 
 You can always disable it later under Help &gt; Fix Windows Path Limit.</source>
@@ -860,32 +860,32 @@ Depending on the Translator API this can raise unexpected costs.</comment>
 <context>
     <name>IntroductionPage</name>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="35"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="34"/>
         <source>Welcome!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="41"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="40"/>
         <source>This Guide will help you setting up this Tool for your modlist.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="43"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="42"/>
         <source>Open Documentation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="55"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="54"/>
         <source>Windows has a length limit of 255 characters for paths. Click below, grant admin rights and reboot to disable it.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="59"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="58"/>
         <source>Fix Windows Path Limit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/introduction.py" line="68"/>
+        <location filename="src/ui/startup_dialog/introduction.py" line="67"/>
         <source>Path Limit is already disabled.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -911,27 +911,27 @@ Depending on the Translator API this can raise unexpected costs.</comment>
 <context>
     <name>LoadingDialog</name>
     <message>
-        <location filename="src/ui/widgets/loading_dialog.py" line="278"/>
+        <location filename="src/ui/widgets/loading_dialog.py" line="262"/>
         <source>Elapsed time:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/loading_dialog.py" line="366"/>
+        <location filename="src/ui/widgets/loading_dialog.py" line="356"/>
         <source>Cancel?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/loading_dialog.py" line="372"/>
+        <location filename="src/ui/widgets/loading_dialog.py" line="362"/>
         <source>Are you sure you want to cancel? This may have unwanted consequences, depending on the current running process!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/loading_dialog.py" line="377"/>
+        <location filename="src/ui/widgets/loading_dialog.py" line="367"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/loading_dialog.py" line="378"/>
+        <location filename="src/ui/widgets/loading_dialog.py" line="368"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1363,12 +1363,12 @@ Click on &quot;Show Details&quot; to view used filter.</source>
 <context>
     <name>Page</name>
     <message>
-        <location filename="src/ui/startup_dialog/page.py" line="95"/>
+        <location filename="src/ui/startup_dialog/page.py" line="90"/>
         <source>Back</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/startup_dialog/page.py" line="102"/>
+        <location filename="src/ui/startup_dialog/page.py" line="97"/>
         <source>Next</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1691,7 +1691,7 @@ Click on &quot;Show Details&quot; to view used filter.</source>
 <context>
     <name>StartupDialog</name>
     <message>
-        <location filename="src/ui/startup_dialog/startup_dialog.py" line="49"/>
+        <location filename="src/ui/startup_dialog/startup_dialog.py" line="44"/>
         <source>Welcome!</source>
         <translation type="unfinished"></translation>
     </message>

@@ -3,6 +3,7 @@ Copyright (c) Cutleast
 """
 
 import logging
+from pathlib import Path
 from typing import Optional
 
 from PySide6.QtCore import QObject, Signal
@@ -15,6 +16,8 @@ from core.mod_file.translation_status import TranslationStatus
 
 from .mod_instance import ModInstance
 
+StateCache = dict[Path, tuple[bool, TranslationStatus]]
+
 
 class StateService(QObject):
     """
@@ -24,30 +27,26 @@ class StateService(QObject):
     update_signal = Signal()
     """Signal emitted everytime when the mod file states are updated."""
 
-    cache: Cache
-    """The application cache."""
-
     mod_instance: ModInstance
     """The modinstance with the mod files to update."""
 
     database: TranslationDatabase
     """The database with the installed translations."""
 
+    CACHE_FILE_NAME = Path("modfile_states.cache")
+    """The name of the cache file for the mod file states."""
+
     log: logging.Logger = logging.getLogger("StateService")
 
-    def __init__(
-        self, cache: Cache, modinstance: ModInstance, database: TranslationDatabase
-    ) -> None:
+    def __init__(self, modinstance: ModInstance, database: TranslationDatabase) -> None:
         """
         Args:
-            cache (Cache): The application cache.
             modinstance (ModInstance): The modinstance with the mod files to update.
             database (TranslationDatabase): The database with the installed translations.
         """
 
         super().__init__()
 
-        self.cache = cache
         self.mod_instance = modinstance
         self.database = database
 
@@ -136,21 +135,42 @@ class StateService(QObject):
             dict[ModFile, bool]: Dictionary of mod files and their checkstate.
         """
 
-        check_state: dict[ModFile, bool] = {}
+        modfile_states: StateCache = Cache.get_from_cache(
+            StateService.CACHE_FILE_NAME, default={}
+        )
 
+        check_state: dict[ModFile, bool] = {}
         for mod in self.mod_instance.mods:
             for modfile in mod.modfiles:
-                checked, modfile.status = self.cache.get_from_states_cache(
-                    modfile.full_path
-                ) or (
-                    True,
-                    TranslationStatus.NoneStatus,
-                )
+                checked: bool
+                modfile_status: TranslationStatus
+                if modfile.full_path in modfile_states:
+                    checked, modfile_status = modfile_states[modfile.full_path]
+                else:
+                    checked = True
+                    modfile_status = TranslationStatus.NoneStatus
+
+                modfile.status = modfile_status
                 check_state[modfile] = checked
 
         self.update_signal.emit()
 
         return check_state
+
+    def save_states_to_cache(self, check_states: dict[ModFile, bool]) -> None:
+        """
+        Saves the mod file states to the cache.
+
+        Args:
+            check_states (dict[ModFile, bool]): Dictionary of mod files and their checkstate.
+        """
+
+        state_cache: StateCache = {
+            modfile.full_path: (check_states.get(modfile, True), modfile.status)
+            for modfile in self.mod_instance.modfiles
+        }
+
+        Cache.save_to_cache(StateService.CACHE_FILE_NAME, state_cache)
 
     def set_modfile_states(self, states: dict[ModFile, TranslationStatus]) -> None:
         """

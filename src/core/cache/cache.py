@@ -1,262 +1,230 @@
 """
-This file is part of SSE Auto Translator
-by Cutleast and falls under the license
-Attribution-NonCommercial-NoDerivatives 4.0 International.
+Copyright (c) Cutleast
 """
 
-import hashlib
+from __future__ import annotations
+
+import functools
+import logging
 import os
 import pickle
 import shutil
 import time
-from datetime import datetime
-from functools import lru_cache
 from pathlib import Path
-from typing import Optional, override
+from typing import Any, Callable, Optional, ParamSpec, TypeVar
 
-import requests
 from semantic_version import Version
 
-from core.mod_file.translation_status import TranslationStatus
-from core.string import StringList
-from core.utilities.filesystem import get_file_identifier
+from .function_cache import FunctionCache
 
-from .base_cache import BaseCache
+P = ParamSpec("P")
+R = TypeVar("R")
+T = TypeVar("T")
+C = TypeVar("C", bound="Cache")
 
 
-class Cache(BaseCache):
+class Cache:
     """
-    Class for managing cache data in SSE-AT/data/cache and cache utilities.
+    Class for application cache.
+
+    The class provides the singleton getter `Cache.get()` and can only be instantiated
+    once.
     """
 
     path: Path
-    """
-    Path to the cache folder.
-    """
+    """Path to the cache folder."""
 
     __cache_version_file: Path
-    """
-    Path to the file containing the cache version.
-    """
+    """Path to the file specifying the cache's version."""
 
-    __states_cache: dict[str, tuple[bool, TranslationStatus]] = {}
-    """
-    This cache is persistent and stores the states of the mod files of a modlist.
-    """
+    __instance: Optional[Cache] = None
+    """Singleton cache instance."""
 
-    __states_cache_path: Path
-    """
-    Path to the cache file for the mod file states.
-    """
-
-    __strings_cache: dict[str, StringList] = {}
-    """
-    This cache is persistent and stores extracted strings.
-    """
-
-    __strings_cache_path: Path
-    """
-    Path to the folder for the strings cache files.
-    """
+    log: logging.Logger = logging.getLogger("Cache")
 
     def __init__(self, cache_path: Path, app_version: str) -> None:
+        """
+        Args:
+            cache_path (Path): Path to the cache folder.
+            app_version (str):
+                Application version, used for invalidating caches from older versions.
+
+        Raises:
+            ValueError: If a cache instance already exists.
+        """
+
+        if Cache.__instance is not None:
+            raise ValueError("A cache instance already exists!")
+
+        Cache.__instance = self
+
         self.path = cache_path
         self.__cache_version_file = self.path / "version"
-        self.__states_cache_path = self.path / "modfile_states.cache"
-        self.__strings_cache_path = self.path / "modfile_strings"
-
-        self.path.mkdir(parents=True, exist_ok=True)
 
         if self.__cache_version_file.is_file():
             cache_version: str = self.__cache_version_file.read_text().strip()
 
-            if app_version != "development" and Version(cache_version) < Version(
-                app_version
+            if app_version != "development" and (
+                Version(cache_version) < Version(app_version)
             ):
                 self.clear_caches()
-                self.path.mkdir(parents=True)
                 self.log.info("Cleared caches due to outdated cache version.")
 
-        elif os.listdir(self.path):
+        elif self.path.is_dir() and os.listdir(self.path):
             self.clear_caches()
-            self.path.mkdir(parents=True)
             self.log.info("Cleared caches due to missing cache version file.")
 
+        self.path.mkdir(parents=True, exist_ok=True)
         self.__cache_version_file.write_text(app_version)
-
-    def load_caches(self) -> None:
-        """
-        Loads available caches.
-        """
-
-        if self.path.is_dir():
-            self.log.info("Loading caches...")
-
-            if self.__states_cache_path.is_file():
-                self.load_states_cache(self.__states_cache_path)
-
-            self.log.info("Caches loaded.")
 
     def clear_caches(self) -> None:
         """
         Clears all caches.
         """
 
-        self.clear_states_cache()
         shutil.rmtree(self.path, ignore_errors=True)
-
         self.log.info("Caches cleared.")
 
-    @override
-    def get_strings_from_file_path(self, modfile_path: Path) -> Optional[StringList]:
-        strings: Optional[StringList]
-        identifier: str = get_file_identifier(modfile_path)
-
-        if identifier not in self.__strings_cache:
-            cache_file: Path = self.__strings_cache_path / f"{identifier}.cache"
-
-            if cache_file.is_file():
-                with cache_file.open(mode="rb") as data:
-                    cached_strings: StringList = pickle.load(data)
-
-                self.__strings_cache[identifier] = cached_strings
-
-        strings = self.__strings_cache.get(identifier)
-
-        if strings is not None:
-            self.log.debug(
-                f"Loaded {len(strings)} string(s) for mod file '{modfile_path}' from cache."
-            )
-        else:
-            self.log.debug(f"Strings for mod file '{modfile_path}' are not in cache.")
-
-        return strings
-
-    @override
-    def set_strings_for_file_path(
-        self, modfile_path: Path, strings: StringList
-    ) -> None:
-        identifier: str = get_file_identifier(modfile_path)
-        cache_file: Path = self.__strings_cache_path / f"{identifier}.cache"
-
-        os.makedirs(cache_file.parent, exist_ok=True)
-        with cache_file.open(mode="wb") as data:
-            pickle.dump(strings, data)
-
-        self.log.debug(
-            f"Updated {len(strings)} string(s) for mod file '{modfile_path}'."
-        )
-
-    def clear_strings_cache(self) -> None:
+    @classmethod
+    def get(cls: type[C]) -> Optional[C]:
         """
-        Clears mod file strings cache.
+        Returns the singleton cache instance or `None` if it doesn't exist.
+
+        Returns:
+            Optional[C]: The singleton cache instance or `None` if it doesn't exist.
         """
 
-        shutil.rmtree(self.__strings_cache_path, ignore_errors=True)
+        return cls.__instance  # pyright: ignore[reportReturnType]
 
-    def load_states_cache(self, path: Path) -> None:
-        self.log.debug(f"Loading states cache from '{path}'...")
-
-        try:
-            with path.open("rb") as file:
-                cache: dict[str, tuple[bool, TranslationStatus]] = pickle.load(file)
-
-            self.__states_cache = cache
-
-            self.log.debug(f"Loaded states for {len(self.__states_cache)} mod file(s).")
-        except Exception as ex:
-            self.log.error(f"Failed to load states cache: {ex}", exc_info=ex)
-
-    def clear_states_cache(self) -> None:
+    @classmethod
+    @FunctionCache.cache
+    def get_from_cache(
+        cls, cache_file_path: Path, default: Optional[T] = None
+    ) -> Any | T:
         """
-        Clears states cache.
-        """
+        Gets the content of a cache file and deserializes it with pickle.
+        The data is only read once and then cached in-memory.
 
-        self.__states_cache.clear()
+        Args:
+            cache_file_path (Path):
+                The path to the cache file, relative to the cache folder.
+            default (Optional[T], optional):
+                The default value to return if the cache file does not exist. Defaults
+                to None.
 
-    def update_states_cache(
-        self, states: dict[Path, tuple[bool, TranslationStatus]]
-    ) -> None:
-        """
-        Updates cache from the specified mod file states.
+        Raises:
+            FileNotFoundError:
+                When the cache file does not exist and `default` is None.
+
+        Returns:
+            Any: The deserialized content of the cache file.
         """
 
-        cache: dict[str, tuple[bool, TranslationStatus]] = {
-            get_file_identifier(file): (checked, status)
-            for file, (checked, status) in states.items()
-        }
+        cache: Optional[Cache] = cls.get()
+        if cache is not None:
+            cache_file_path = cache.path / cache_file_path
 
-        self.__states_cache = cache
+        if not cache_file_path.is_file() and default is not None:
+            return default
 
-    def get_from_states_cache(
-        self, modfile_path: Path
-    ) -> Optional[tuple[bool, TranslationStatus]]:
+        with cache_file_path.open("rb") as file:
+            return pickle.load(file)
+
+    @classmethod
+    def save_to_cache(cls, cache_file_path: Path, data: Any) -> None:
         """
-        Returns cached state for `modfile_path` if existing else None.
-        """
+        Serializes data with pickle and saves it to a cache file.
+        **Does nothing if there is no cache instance.**
 
-        return self.__states_cache.get(get_file_identifier(modfile_path))
-
-    def save_states_cache(self, path: Path) -> None:
-        self.log.debug(f"Saving states cache to '{path}'...")
-
-        with path.open("wb") as file:
-            pickle.dump(self.__states_cache, file)
-
-        self.log.debug(f"Saved states for {len(self.__states_cache)} mod file(s).")
-
-    @lru_cache
-    def get_from_web_cache(
-        self, url: str, max_age: int = 43200
-    ) -> Optional[requests.Response]:
-        """
-        Returns cached Response for `url` if existing else None.
-
-        Responses older than `max_age` are considered stale and deleted.
+        Args:
+            cache_file_path (Path):
+                The path to the cache file, relative to the cache folder.
+            data (Any): The data to serialize and save to the cache file.
         """
 
-        response: Optional[requests.Response] = None
+        cache: Optional[Cache] = cls.get()
+        if cache is None:
+            return
 
-        request_id = hashlib.sha256(url.encode()).hexdigest()[:8]
-        cache_file = self.path / "web_cache" / f"{request_id}.cache"
+        cache_file_path = cache.path / cache_file_path
+        cache_file_path.parent.mkdir(parents=True, exist_ok=True)
+        with cache_file_path.open("wb") as file:
+            pickle.dump(data, file)
 
-        if cache_file.is_file():
-            with cache_file.open("rb") as file:
-                _response: requests.Response = pickle.load(file)
-
-            response_timestamp = datetime.strptime(
-                _response.headers["Date"], "%a, %d %b %Y %H:%M:%S %Z"
-            ).timestamp()
-
-            if (time.time() - response_timestamp) < max_age:
-                response = _response
-            else:
-                os.remove(cache_file)
-
-        return response
-
-    def add_to_web_cache(self, url: str, response: requests.Response) -> None:
+    @classmethod
+    def persistent_cache(
+        cls,
+        *,
+        cache_subfolder: Optional[Path] = None,
+        id_generator: Optional[Callable[..., str]] = None,
+        max_age: Optional[float] = None,
+    ) -> Callable[[Callable[P, R]], Callable[P, R]]:
         """
-        Adds `response` to Web Cache for `url`.
+        Caches the result of a function in a specified cache folder using pickle.
+        Deletes old cache files from the cache folder if `max_age` is specified.
+
+        Args:
+            cache_subfolder (Optional[Path]):
+                The subfolder within the cache folder to store the cache files.
+                Defaults to None.
+            id_generator (Optional[Callable[..., str]]):
+                A function that is called with the decorated function's parameters and
+                returns a unique identifier for the cache file. Defaults to
+                `Cache.get_func_identifier()`.
+            max_age (Optional[float]):
+                The maximum age of the cache file in seconds. Defaults to None.
+
+        Returns:
+            Callable[P, R]: The wrapped function with caching enabled.
         """
 
-        request_id = hashlib.sha256(url.encode()).hexdigest()[:8]
-        cache_file = self.path / "web_cache" / f"{request_id}.cache"
+        def decorator(func: Callable[P, R]) -> Callable[P, R]:
+            @functools.wraps(func)
+            def wrapper(*args: P.args, **kwargs: P.kwargs) -> R:
+                cache: Optional[Cache] = cls.get()
 
-        os.makedirs(cache_file.parent, exist_ok=True)
-        with cache_file.open("wb") as file:
-            pickle.dump(response, file)
+                if cache is None:
+                    cls.log.warning("No cache available!")
+                    return func(*args, **kwargs)
 
-    def save_caches(self) -> None:
-        """
-        Saves non-empty caches.
-        """
+                cache_path: Path = cache.path
 
-        self.log.info("Saving caches...")
+                cache_folder: Path
+                if cache_subfolder is None:
+                    cache_folder = cache_path / "function_cache"
+                else:
+                    cache_folder = cache_path / cache_subfolder
 
-        os.makedirs(self.path, exist_ok=True)
+                cache_file_name: str
+                if id_generator is None:
+                    cache_file_name = FunctionCache.get_func_identifier(
+                        func, (args, kwargs)
+                    )
+                else:
+                    cache_file_name = id_generator(*args, **kwargs)
+                cache_file_path: Path = cache_folder / (cache_file_name + ".cache")
 
-        if self.__states_cache:
-            self.save_states_cache(self.__states_cache_path)
+                result: R
+                if cache_file_path.is_file() and (
+                    max_age is None
+                    or (time.time() - cache_file_path.stat().st_mtime) < max_age
+                ):
+                    result = cls.get_from_cache(cache_file_path)
 
-        self.log.info("Caches saved.")
+                    cls.log.debug(f"Loaded result from cache for '{func.__name__}'.")
+
+                else:
+                    result = func(*args, **kwargs)
+
+                    if cache_file_path.is_file():
+                        cls.log.debug(
+                            f"Overwriting result in cache for '{func.__name__}'..."
+                        )
+
+                    cls.save_to_cache(cache_file_path, result)
+
+                return result
+
+            return wrapper
+
+        return decorator

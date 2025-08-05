@@ -6,7 +6,7 @@ from pathlib import Path
 
 from sse_bsa import BSAArchive
 
-from core.cache.base_cache import BaseCache
+from core.cache.cache import Cache
 from core.utilities.filesystem import get_file_identifier, glob
 
 
@@ -16,7 +16,7 @@ class BsaFileProvider:
     """
 
     @staticmethod
-    @BaseCache.persistent_cache(
+    @Cache.persistent_cache(
         cache_subfolder=Path("bsa_cache"),
         id_generator=lambda bsa_archive_path: get_file_identifier(bsa_archive_path),
     )

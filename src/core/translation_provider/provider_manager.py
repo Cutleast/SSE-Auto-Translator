@@ -7,7 +7,6 @@ from typing import Literal, NoReturn, TypeVar, overload
 
 from PySide6.QtCore import QObject
 
-from core.cache.cache import Cache
 from core.config.user_config import UserConfig
 
 from .cdt_api.ctd_api import CDTApi
@@ -33,14 +32,13 @@ class ProviderManager(QObject):
     """The user preference for translation providers."""
 
     @classmethod
-    def init(cls, user_config: UserConfig, cache: Cache) -> None:
+    def init(cls, user_config: UserConfig) -> None:
         """
         Initializes configured translation providers. Clears all previously initialized
         providers.
 
         Args:
             user_config (UserConfig): The user configuration.
-            cache (Cache): The cache.
         """
 
         cls.log.info("Initializing configured translation providers...")
@@ -50,34 +48,34 @@ class ProviderManager(QObject):
         cls.provider_preference = user_config.provider_preference
         match cls.provider_preference:
             case ProviderPreference.OnlyNexusMods:
-                cls.__init_nm_api(user_config, cache)
+                cls.__init_nm_api(user_config)
 
             case ProviderPreference.PreferNexusMods:
-                cls.__init_nm_api(user_config, cache)
-                cls.__init_cdt_api(user_config, cache)
+                cls.__init_nm_api(user_config)
+                cls.__init_cdt_api(user_config)
 
             case ProviderPreference.OnlyConfrerie:
-                cls.__init_cdt_api(user_config, cache)
+                cls.__init_cdt_api(user_config)
 
             case ProviderPreference.PreferConfrerie:
-                cls.__init_cdt_api(user_config, cache)
-                cls.__init_nm_api(user_config, cache)
+                cls.__init_cdt_api(user_config)
+                cls.__init_nm_api(user_config)
 
     @classmethod
-    def __init_nm_api(cls, user_config: UserConfig, cache: Cache) -> None:
+    def __init_nm_api(cls, user_config: UserConfig) -> None:
         cls.log.info("Initializing Nexus Mods API...")
         try:
-            nm_api = NexusModsApi(cache)
+            nm_api = NexusModsApi()
             nm_api.set_api_key(user_config.api_key)
             cls.providers.append(nm_api)
         except Exception as ex:
             cls.log.error(f"Failed to initialize Nexus Mods API: {ex}", exc_info=ex)
 
     @classmethod
-    def __init_cdt_api(cls, user_config: UserConfig, cache: Cache) -> None:
+    def __init_cdt_api(cls, user_config: UserConfig) -> None:
         cls.log.info("Initializing Confrérie des Traducteurs API...")
         try:
-            cdt_api = CDTApi(cache)
+            cdt_api = CDTApi()
             cls.providers.append(cdt_api)
         except Exception as ex:
             cls.log.error(

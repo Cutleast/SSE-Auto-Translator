@@ -2,14 +2,15 @@
 Copyright (c) Cutleast
 """
 
+import hashlib
+
 from requests import Response, get
 
+from core.cache.function_cache import FunctionCache
 from core.translation_provider.exceptions import Non200HttpError
 
-from .cache import cache
 
-
-@cache
+@FunctionCache.cache
 def get_raw_web_content(url: str) -> bytes:
     """
     Fetches raw content from the given URL. The result is cached.
@@ -30,3 +31,17 @@ def get_raw_web_content(url: str) -> bytes:
         raise Non200HttpError(url, res.status_code)
 
     return res.content
+
+
+def get_url_identifier(url: str) -> str:
+    """
+    Calcuates a unique identifier for the given URL.
+
+    Args:
+        url (str): URL
+
+    Returns:
+        str: Unique identifier
+    """
+
+    return hashlib.sha256(url.encode()).hexdigest()[:8]

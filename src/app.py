@@ -152,7 +152,6 @@ class App(QApplication):
         self.load_theme()
 
         self.cache = Cache(self.cache_path, App.APP_VERSION)
-        self.cache.load_caches()
 
         self.exception_handler = ExceptionHandler(self, self.logger)
 
@@ -174,7 +173,7 @@ class App(QApplication):
 
         if self.setup_required:
             self.setup_complete = (
-                StartupDialog(self.cache, QApplication.activeModalWidget()).exec()
+                StartupDialog(QApplication.activeModalWidget()).exec()
                 == QDialog.DialogCode.Accepted
             )
 
@@ -188,7 +187,6 @@ class App(QApplication):
         for function in unique(self.exit_chain):
             function()
 
-        self.cache.save_caches()
         self.clean()
 
         return retcode
@@ -272,7 +270,7 @@ class App(QApplication):
             self.translator_config
         )
 
-        self.provider = Provider(self.user_config, self.cache)
+        self.provider = Provider(self.user_config)
         self.__check_nm_api_key()
 
         self.__load_database()
@@ -281,7 +279,7 @@ class App(QApplication):
             QApplication.activeModalWidget(), self.__load_modinstance
         )
 
-        self.state_service = StateService(self.cache, self.mod_instance, self.database)
+        self.state_service = StateService(self.mod_instance, self.database)
 
         self.log.info("Loaded user data.")
 
@@ -306,7 +304,7 @@ class App(QApplication):
         vlayout = QVBoxLayout()
         dialog.setLayout(vlayout)
 
-        api_setup = ApiSetup(self.cache)
+        api_setup = ApiSetup()
         vlayout.addWidget(api_setup)
 
         hlayout = QHBoxLayout()
