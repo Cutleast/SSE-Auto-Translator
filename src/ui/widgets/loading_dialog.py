@@ -10,7 +10,7 @@ from typing import Any, Callable, Generic, Optional, TypeVar, override
 
 import comtypes.client as cc
 from PySide6.QtCore import Qt, QTimerEvent, Signal
-from PySide6.QtGui import QCloseEvent
+from PySide6.QtGui import QCloseEvent, QResizeEvent
 from PySide6.QtWidgets import (
     QDialog,
     QLabel,
@@ -24,6 +24,7 @@ from PySide6.QtWidgets import (
 from app_context import AppContext
 from core.utilities.datetime import get_diff
 from core.utilities.thread import Thread
+from core.utilities.truncate import TruncateMode, truncate_string
 from ui.utilities import move_to_center
 
 cc.GetModule("res/TaskbarLib.tlb")
@@ -125,6 +126,8 @@ class LoadingDialog(QDialog, Generic[T]):
             self.parent_hwnd = parent.winId()
             taskbar.ActivateTab(self.parent_hwnd)
 
+        self.setWindowFlag(Qt.WindowType.MSWindowsFixedSizeDialogHint, True)
+
     def updateProgress(
         self,
         text1: Optional[str] = None,
@@ -203,7 +206,7 @@ class LoadingDialog(QDialog, Generic[T]):
         if value1 is not None:
             self.pbar1.setValue(int(value1))
         if text1 is not None:
-            self.label1.setText(text1)
+            self.label1.setText(truncate_string(text1, 120, TruncateMode.Middle))
 
         # Update second row
         if show2 is True:
@@ -218,7 +221,7 @@ class LoadingDialog(QDialog, Generic[T]):
         if value2 is not None:
             self.pbar2.setValue(int(value2))
         if text2 is not None:
-            self.label2.setText(text2)
+            self.label2.setText(truncate_string(text2, 120, TruncateMode.Middle))
 
         # Update third row
         if show3 is True:
@@ -233,26 +236,7 @@ class LoadingDialog(QDialog, Generic[T]):
         if value3 is not None:
             self.pbar3.setValue(int(value3))
         if text3 is not None:
-            self.label3.setText(text3)
-
-        # Resize dialog
-        self.setFixedHeight(self.sizeHint().height())
-        widthbefore = self.width()
-        widthhint = self.sizeHint().width()
-
-        # Prevent dialog from getting to wide
-        # and resize only if difference is
-        # bigger than 200 pixels to reduce
-        # flickering
-        if widthhint < widthbefore:
-            if abs(widthbefore - widthhint) > 200:
-                self.setFixedWidth(widthhint)
-        else:
-            # Limit maximum width to 800 px
-            self.setFixedWidth(min(800, widthhint))
-
-        # Move back to center
-        move_to_center(self, self.parentWidget())
+            self.label3.setText(truncate_string(text3, 120, TruncateMode.Middle))
 
         # Update Taskbar Progress
         if self.parent_hwnd is not None:
@@ -358,6 +342,12 @@ class LoadingDialog(QDialog, Generic[T]):
         self.pbar3.setRange(0, 1)
         self.pbar3.setValue(1)
         self.accept()
+
+    @override
+    def resizeEvent(self, event: QResizeEvent) -> None:
+        super().resizeEvent(event)
+
+        move_to_center(self)
 
     @override
     def closeEvent(self, event: QCloseEvent, confirmation: bool = False) -> None:

@@ -911,27 +911,27 @@ Depending on the Translator API this can raise unexpected costs.</comment>
 <context>
     <name>LoadingDialog</name>
     <message>
-        <location filename="src/ui/widgets/loading_dialog.py" line="262"/>
+        <location filename="src/ui/widgets/loading_dialog.py" line="263"/>
         <source>Elapsed time:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/loading_dialog.py" line="356"/>
+        <location filename="src/ui/widgets/loading_dialog.py" line="357"/>
         <source>Cancel?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/loading_dialog.py" line="362"/>
+        <location filename="src/ui/widgets/loading_dialog.py" line="363"/>
         <source>Are you sure you want to cancel? This may have unwanted consequences, depending on the current running process!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/loading_dialog.py" line="367"/>
+        <location filename="src/ui/widgets/loading_dialog.py" line="368"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/loading_dialog.py" line="368"/>
+        <location filename="src/ui/widgets/loading_dialog.py" line="369"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>
