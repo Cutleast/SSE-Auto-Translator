@@ -19,30 +19,22 @@ class StringStatus(LocalizedEnum):
     """
 
     NoneStatus = auto()
-    """
-    String has no particular status.
-    """
+    """String has no particular status."""
 
     NoTranslationRequired = auto()
-    """
-    String is marked as "No Translation Required" by user.
-    """
+    """String is marked as "No Translation Required"."""
 
     TranslationComplete = auto()
-    """
-    String is completely translated and validated by user.
-    """
+    """String is completely translated and validated."""
 
     TranslationIncomplete = auto()
     """
-    String is automatically translated but not validated by user
-    or user has partially translated this string.
+    String is automatically translated but not validated or user has partially
+    translated this string.
     """
 
     TranslationRequired = auto()
-    """
-    String is not translated.
-    """
+    """String is not translated."""
 
     @classmethod
     def get_color(cls, status: StringStatus) -> Optional[QColor]:

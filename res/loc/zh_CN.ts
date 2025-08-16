@@ -1850,52 +1850,52 @@ Click on &quot;Show Details&quot; to view used filter.</source>
 <context>
     <name>StringStatus</name>
     <message>
-        <location filename="src/core/string/string_status.py" line="63"/>
+        <location filename="src/core/string/string_status.py" line="55"/>
         <source>No status (no color)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/string/string_status.py" line="66"/>
+        <location filename="src/core/string/string_status.py" line="58"/>
         <source>String does not require a translation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/string/string_status.py" line="69"/>
+        <location filename="src/core/string/string_status.py" line="61"/>
         <source>String is completely translated</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/string/string_status.py" line="72"/>
+        <location filename="src/core/string/string_status.py" line="64"/>
         <source>String is partially translated</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/string/string_status.py" line="75"/>
+        <location filename="src/core/string/string_status.py" line="67"/>
         <source>String requires a translation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/string/string_status.py" line="88"/>
+        <location filename="src/core/string/string_status.py" line="80"/>
         <source>Show stateless strings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/string/string_status.py" line="91"/>
+        <location filename="src/core/string/string_status.py" line="83"/>
         <source>Show strings that do not require a translation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/string/string_status.py" line="94"/>
+        <location filename="src/core/string/string_status.py" line="86"/>
         <source>Show strings that are completely translated</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/string/string_status.py" line="97"/>
+        <location filename="src/core/string/string_status.py" line="89"/>
         <source>Show strings that are partially translated</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/string/string_status.py" line="100"/>
+        <location filename="src/core/string/string_status.py" line="92"/>
         <source>Show strings that require a translation</source>
         <translation type="unfinished"></translation>
     </message>
