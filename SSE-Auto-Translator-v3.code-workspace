@@ -8,12 +8,10 @@
 		"recommendations": [
 			"njpwerner.autodocstring",
 			"aeschli.vscode-css-formatter",
-			"ms-python.mypy-type-checker",
 			"ms-python.vscode-pylance",
 			"ms-python.python",
 			"ms-python.debugpy",
-			"ms-python.vscode-python-envs",
-			"theqtcompany.qt",
+			"theqtcompany.qt-core",
 			"charliermarsh.ruff",
 			"redhat.vscode-xml",
 			"gruntfuggly.todo-tree"
