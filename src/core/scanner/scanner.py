@@ -165,7 +165,12 @@ class Scanner(QObject):
             ldialog.updateProgress(show3=True, text3=self.tr("Extracting strings..."))
 
         self.log.debug("Extracting strings...")
-        modfile_strings: StringList = modfile.get_strings()
+        modfile_strings: StringList = list(
+            filter(
+                lambda s: s.status != StringStatus.NoTranslationRequired,
+                modfile.get_strings(),
+            )
+        )
         if not len(modfile_strings):
             return TranslationStatus.NoStrings
 
