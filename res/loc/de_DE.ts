@@ -921,27 +921,27 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
 <context>
     <name>LoadingDialog</name>
     <message>
-        <location filename="src/ui/widgets/loading_dialog.py" line="263"/>
+        <location filename="src/ui/widgets/loading_dialog.py" line="262"/>
         <source>Elapsed time:</source>
         <translation>Vergangene Zeit:</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/loading_dialog.py" line="357"/>
+        <location filename="src/ui/widgets/loading_dialog.py" line="356"/>
         <source>Cancel?</source>
         <translation>Abbrechen?</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/loading_dialog.py" line="363"/>
+        <location filename="src/ui/widgets/loading_dialog.py" line="362"/>
         <source>Are you sure you want to cancel? This may have unwanted consequences, depending on the current running process!</source>
         <translation>Bist du sicher, dass du abbrechen möchtest? Je nach laufendem Prozess kann dies unbeabsichtigte Konsequenzen haben!</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/loading_dialog.py" line="368"/>
+        <location filename="src/ui/widgets/loading_dialog.py" line="367"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/loading_dialog.py" line="369"/>
+        <location filename="src/ui/widgets/loading_dialog.py" line="368"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
