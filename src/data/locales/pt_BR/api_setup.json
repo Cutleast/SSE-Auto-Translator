@@ -1,0 +1,11 @@
+{
+  "api_help": "Para obter traduções do Nexus Mods, esta ferramenta precisa de acesso à API do Nexus Mods. Você pode configurar o acesso de duas maneiras: inserir a chave de API manualmente ou via SSO (Single-Sign-On).",
+  "api_key_invalid": "A Chave de API é inválida!",
+  "api_key_valid": "A Chave de API é válida!",
+  "check_api_key": "Verificar Chave de API",
+  "insert_api_key": "Insira sua Chave de API",
+  "manual_setup": "Configuração Manual",
+  "sso_setup": "Single-Sign-On (Navegador)",
+  "sso_successful": "Login no Nexus Mods realizado com sucesso",
+  "start_sso": "Clique aqui para fazer login no Nexus Mods pelo Navegador"
+}

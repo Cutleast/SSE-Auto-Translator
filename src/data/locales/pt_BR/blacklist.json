@@ -1,0 +1,6 @@
+{
+  "add_author": "Adicionar Autor",
+  "blacklist": "Lista Negra de Autores de Tradução",
+  "info": "Esta é uma lista negra para excluir traduções de certos autores.\nTodas as traduções de autores nesta lista abaixo (sem diferenciar maiúsculas/minúsculas) serão ignoradas e não aparecerão durante a varredura online.\nEsta lista afeta apenas traduções do Nexus Mods!",
+  "enter_author_name": "Insira o Nome do Autor:"
+}
