@@ -15,13 +15,13 @@ class TestEsp2Dsd(BaseTest):
     Tests `utilities.esp2dsd.main.Esp2Dsd`.
     """
 
-    def test_map_plugins(self) -> None:
+    def test_map_plugins(self, data_folder: Path) -> None:
         """
         Tests `utilities.esp2dsd.main.Esp2Dsd.map_plugins()` with some valid input.
         """
 
         # given
-        data_path: Path = self.data_path() / "esp2dsd"
+        data_path: Path = data_folder / "esp2dsd"
         translated_plugin_path: Path = data_path / "trans" / "WetandCold.esp"
         original_plugin_path: Path = data_path / "orig" / "WetandCold.esp"
 
@@ -34,7 +34,7 @@ class TestEsp2Dsd(BaseTest):
         assert len(plugins) == 1
         assert plugins[translated_plugin_path] == original_plugin_path
 
-    def test_convert(self) -> None:
+    def test_convert(self, data_folder: Path) -> None:
         """
         Tests `utilities.esp2dsd.main.Esp2Dsd.convert()` on some dummy plugins.
         """
@@ -42,7 +42,7 @@ class TestEsp2Dsd(BaseTest):
         # given
         esp2dsd = Esp2Dsd()
         temp_path: Path = self.tmp_folder()
-        data_path: Path = self.data_path() / "esp2dsd"
+        data_path: Path = data_folder / "esp2dsd"
         translated_plugin_path: Path = data_path / "trans" / "WetandCold.esp"
         original_plugin_path: Path = data_path / "orig" / "WetandCold.esp"
 

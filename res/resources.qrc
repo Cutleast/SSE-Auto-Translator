@@ -1,32 +1,61 @@
 <!DOCTYPE RCC>
 <RCC version="1.0">
     <qresource>
-        <!-- Icons -->
-        <file>icons/arrow_down.svg</file>
-        <file>icons/arrow_left.svg</file>
-        <file>icons/arrow_right.svg</file>
-        <file>icons/arrow_up.svg</file>
+        <!-- Dark mode icons -->
+        <file alias="icons/dark/arrow_down.svg">../core-res/icons/dark/arrow_down.svg</file>
+        <file alias="icons/dark/arrow_left.svg">../core-res/icons/dark/arrow_left.svg</file>
+        <file alias="icons/dark/arrow_right.svg">../core-res/icons/dark/arrow_right.svg</file>
+        <file alias="icons/dark/arrow_up.svg">../core-res/icons/dark/arrow_up.svg</file>
+        <file alias="icons/dark/checkmark.svg">../core-res/icons/dark/checkmark.svg</file>
+        <file alias="icons/dark/exit.svg">../core-res/icons/dark/exit.svg</file>
+        <file alias="icons/dark/horizontal_grip.png">../core-res/icons/dark/horizontal_grip.png</file>
+        <file alias="icons/dark/quick_reference.svg">../core-res/icons/dark/quick_reference.svg</file>
+        <file alias="icons/dark/search.svg">../core-res/icons/dark/search.svg</file>
+        <file alias="icons/dark/vertical_grip.png">../core-res/icons/dark/vertical_grip.png</file>
+
+        <!-- Disabled icons -->
+        <file alias="icons/disabled/arrow_down.svg">../core-res/icons/disabled/arrow_down.svg</file>
+        <file alias="icons/disabled/arrow_left.svg">../core-res/icons/disabled/arrow_left.svg</file>
+        <file alias="icons/disabled/arrow_right.svg">../core-res/icons/disabled/arrow_right.svg</file>
+        <file alias="icons/disabled/arrow_up.svg">../core-res/icons/disabled/arrow_up.svg</file>
+
+        <!-- Light mode icons -->
+        <file alias="icons/light/arrow_down.svg">../core-res/icons/light/arrow_down.svg</file>
+        <file alias="icons/light/arrow_left.svg">../core-res/icons/light/arrow_left.svg</file>
+        <file alias="icons/light/arrow_right.svg">../core-res/icons/light/arrow_right.svg</file>
+        <file alias="icons/light/arrow_up.svg">../core-res/icons/light/arrow_up.svg</file>
+        <file alias="icons/light/checkmark.svg">../core-res/icons/light/checkmark.svg</file>
+        <file alias="icons/light/exit.svg">../core-res/icons/light/exit.svg</file>
+        <file alias="icons/light/horizontal_grip.png">../core-res/icons/light/horizontal_grip.png</file>
+        <file alias="icons/light/quick_reference.svg">../core-res/icons/light/quick_reference.svg</file>
+        <file alias="icons/light/search.svg">../core-res/icons/light/search.svg</file>
+        <file alias="icons/light/vertical_grip.png">../core-res/icons/light/vertical_grip.png</file>
+
+        <!-- Other icons -->
+        <file alias="icons/close.svg">../core-res/icons/close.svg</file>
+        <file alias="icons/discord.png">../core-res/icons/discord.png</file>
+        <file alias="icons/ko-fi.png">../core-res/icons/ko-fi.png</file>
+        <file alias="icons/nexus_mods_colored.png">../core-res/icons/nexus_mods.png</file>
+
+        <!-- SSE-AT Icons -->
         <file>icons/cdt.svg</file>
-        <file>icons/checkmark.svg</file>
-        <file>icons/close.svg</file>
         <file>icons/detect_lang.svg</file>
-        <file>icons/discord.png</file>
-        <file>icons/exit.svg</file>
-        <file>icons/grip.png</file>
         <file>icons/icon.ico</file>
         <file>icons/icon.png</file>
         <file>icons/icon.svg</file>
-        <file>icons/ko-fi.png</file>
-        <file>icons/nexus_mods.png</file>
         <file>icons/nexus_mods.svg</file>
         <file>icons/plugin.svg</file>
         <file>icons/scan_online.svg</file>
-        <file>icons/search.svg</file>
-
+        
         <!-- Localisation Files -->
         <file>loc/de_DE.qm</file>
         <file>loc/ru_RU.qm</file>
         <file>loc/zh_CN.qm</file>
+
+        <!-- Stylesheets -->
+        <file alias="base_stylesheet.qss">../core-res/base_stylesheet.qss</file>
+        <file alias="dark_stylesheet.qss">../core-res/dark_stylesheet.qss</file>
+        <file alias="light_stylesheet.qss">../core-res/light_stylesheet.qss</file>
 
         <!-- Other -->
         <file>string_records.json</file>

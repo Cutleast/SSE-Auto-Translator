@@ -6,7 +6,7 @@ from PySide6.QtCore import QSize, Signal
 from PySide6.QtGui import QAction
 from PySide6.QtWidgets import QToolBar
 
-from ui.utilities.icon_provider import IconProvider, ResourceIcon
+from ui.utilities.icon_provider import IconProvider
 
 
 class TranslationsToolbar(QToolBar):
@@ -49,7 +49,7 @@ class TranslationsToolbar(QToolBar):
         )
 
         search_database_action: QAction = self.addAction(
-            IconProvider.get_res_icon(ResourceIcon.Search), self.tr("Search database")
+            IconProvider.get_icon("search"), self.tr("Search database")
         )
         search_database_action.triggered.connect(self.search_database_requested.emit)
 

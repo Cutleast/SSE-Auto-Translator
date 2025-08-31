@@ -10,10 +10,12 @@ import shutil
 from pathlib import Path
 from typing import Optional
 
+from cutleast_core_lib.core.archive.archive import Archive
+from cutleast_core_lib.core.utilities.filesystem import safe_copy
+from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
 from PySide6.QtCore import QObject
 from sse_bsa import BSAArchive
 
-from core.archiver.archive import Archive
 from core.config.user_config import UserConfig
 from core.database.utilities import Utilities
 from core.mod_file.mod_file import ModFile
@@ -27,9 +29,8 @@ from core.string.string_status import StringStatus
 from core.string.string_utils import StringUtils
 from core.utilities.constants import DSD_FILE_PATTERN
 from core.utilities.container_utils import unique
-from core.utilities.filesystem import parse_path, relative_data_path, safe_copy
+from core.utilities.filesystem import parse_path, relative_data_path
 from core.utilities.game_language import GameLanguage
-from ui.widgets.loading_dialog import LoadingDialog
 
 
 class Importer(QObject):

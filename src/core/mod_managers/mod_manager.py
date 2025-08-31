@@ -4,7 +4,7 @@ Copyright (c) Cutleast
 
 from enum import StrEnum
 
-from core.cache.function_cache import FunctionCache
+from cutleast_core_lib.core.cache.function_cache import FunctionCache
 
 from .mod_manager_api import ModManagerApi
 

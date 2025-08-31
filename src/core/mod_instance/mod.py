@@ -10,13 +10,14 @@ from functools import cache
 from pathlib import Path
 from typing import Optional, override
 
+from cutleast_core_lib.core.utilities.filesystem import str_glob
 from pydantic import BaseModel
 
 from core.mod_file.mod_file import ModFile
 from core.translation_provider.mod_id import ModId
 from core.utilities.bsa_file_provider import BsaFileProvider
 from core.utilities.constants import DSD_FILE_PATTERN
-from core.utilities.filesystem import parse_path, str_glob
+from core.utilities.filesystem import parse_path
 
 
 class Mod(BaseModel):
@@ -84,8 +85,10 @@ class Mod(BaseModel):
             if not f.suffix.lower() == ".bsa" and f.is_file()
         ]
 
-        for bsa_path in self.path.glob("*.bsa"):
-            files += Mod.__get_files_from_bsa(bsa_path, self.path)
+        # Add files from BSA archives
+        if False:  # TODO: Optimize this
+            for bsa_path in self.path.glob("*.bsa"):
+                files += Mod.__get_files_from_bsa(bsa_path, self.path)
 
         return files
 

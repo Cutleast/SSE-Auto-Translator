@@ -7,10 +7,11 @@ import os
 from pathlib import Path
 from typing import Optional
 
+from cutleast_core_lib.core.utilities.filesystem import add_suffix
+
 from core.string import String, StringList, StringListModel
 from core.string.string_loader import StringLoader
 from core.string.string_status import StringStatus
-from core.utilities.filesystem import add_suffix
 
 
 class TranslationService:

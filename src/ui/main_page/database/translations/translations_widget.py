@@ -8,6 +8,9 @@ import webbrowser
 from pathlib import Path
 from typing import Optional, override
 
+from cutleast_core_lib.core.utilities.datetime import fmt_timestamp
+from cutleast_core_lib.core.utilities.scale import scale_value
+from cutleast_core_lib.ui.utilities.tree_widget import are_children_visible
 from PySide6.QtCore import QItemSelectionModel, Qt, QUrl, Signal
 from PySide6.QtGui import QDragEnterEvent, QDragMoveEvent, QDropEvent
 from PySide6.QtWidgets import (
@@ -22,7 +25,6 @@ from PySide6.QtWidgets import (
     QTreeWidgetItem,
 )
 
-from app_context import AppContext
 from core.config.app_config import AppConfig
 from core.database.database import TranslationDatabase
 from core.database.database_service import DatabaseService
@@ -32,9 +34,7 @@ from core.mod_instance.mod_instance import ModInstance
 from core.translation_provider.exceptions import ModNotFoundError
 from core.translation_provider.provider import Provider
 from core.utilities import matches_filter
-from core.utilities.datetime import fmt_timestamp
-from core.utilities.scale import scale_value
-from ui.utilities.tree_widget import are_children_visible
+from ui.utilities.theme_manager import ThemeManager
 from ui.widgets.string_list.string_list_dialog import StringListDialog
 
 from .export_dialog import ExportDialog
@@ -490,7 +490,7 @@ class TranslationsWidget(QTreeWidget):
             message_box.button(QMessageBox.StandardButton.Yes).setText(self.tr("Yes"))
 
             # Reapply stylesheet as setDefaultButton() doesn't update the style by itself
-            message_box.setStyleSheet(AppContext.get_stylesheet())
+            message_box.setStyleSheet(ThemeManager.get_stylesheet() or "")
 
             if message_box.exec() != QMessageBox.StandardButton.Yes:
                 return

@@ -6,7 +6,6 @@ import sys
 from argparse import ArgumentParser, Namespace, _SubParsersAction  # type: ignore
 
 from app import App
-from app_context import AppContext
 from core.translation_provider.nm_api.nxm_handler import NXMHandler
 from utilities import UTILS
 from utilities.utility import Utility
@@ -110,8 +109,6 @@ if __name__ == "__main__":
         util.run(arg_namespace)
 
     app = App(arg_namespace)
-    AppContext.set_app(app)
-    app.init()
 
     retcode: int = app.exec()
 

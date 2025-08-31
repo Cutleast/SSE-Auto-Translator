@@ -4,6 +4,7 @@ Copyright (c) Cutleast
 
 from typing import Optional
 
+from cutleast_core_lib.ui.widgets.menu import Menu
 from PySide6.QtCore import Signal
 from PySide6.QtGui import QAction, QCursor
 
@@ -12,7 +13,6 @@ from core.mod_file.plugin_file import PluginFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from ui.utilities.icon_provider import IconProvider, ResourceIcon
-from ui.widgets.menu import Menu
 
 
 class ModInstanceMenu(Menu):

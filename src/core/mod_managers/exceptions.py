@@ -4,12 +4,11 @@ Copyright (c) Cutleast
 
 from typing import override
 
+from cutleast_core_lib.core.utilities.exceptions import LocalizedException
 from PySide6.QtWidgets import QApplication
 
-from core.utilities.exceptions import ExceptionBase
 
-
-class ModManagerError(ExceptionBase):
+class ModManagerError(LocalizedException):
     """
     Exception for general mod manager-related errors.
     """

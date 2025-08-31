@@ -4,15 +4,15 @@ Copyright (c) Cutleast
 
 from typing import Optional, override
 
+from cutleast_core_lib.core.cache.cache import Cache
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QCloseEvent
 from PySide6.QtWidgets import QMessageBox, QWidget
 
-from app_context import AppContext
-from core.cache.cache import Cache
 from core.config.app_config import AppConfig
 from core.config.translator_config import TranslatorConfig
 from core.config.user_config import UserConfig
+from ui.utilities.theme_manager import ThemeManager
 
 from .settings_widget import SettingsWidget
 
@@ -24,13 +24,14 @@ class SettingsDialog(SettingsWidget):
 
     def __init__(
         self,
-        cache: Cache,
         app_config: AppConfig,
         user_config: UserConfig,
         translator_config: TranslatorConfig,
         parent: Optional[QWidget] = None,
     ) -> None:
-        super().__init__(cache, app_config, user_config, translator_config, parent)
+        super().__init__(
+            Cache.get(), app_config, user_config, translator_config, parent
+        )
 
         self.setWindowModality(Qt.WindowModality.WindowModal)
         self.setWindowFlag(Qt.WindowType.Window, True)
@@ -72,7 +73,7 @@ class SettingsDialog(SettingsWidget):
             message_box.button(QMessageBox.StandardButton.Yes).setText(self.tr("Yes"))
 
             # Reapply stylesheet as setDefaultButton() doesn't update the style by itself
-            message_box.setStyleSheet(AppContext.get_stylesheet())
+            message_box.setStyleSheet(ThemeManager.get_stylesheet() or "")
 
             if message_box.exec() == QMessageBox.StandardButton.Yes:
                 event.accept()

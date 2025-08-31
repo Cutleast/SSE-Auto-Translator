@@ -6,7 +6,6 @@ from typing import Optional
 
 import pytest
 
-from app import App
 from core.translation_provider.exceptions import ModNotFoundError
 from core.translation_provider.mod_id import ModId
 from core.translation_provider.provider_api import ProviderApi
@@ -34,7 +33,6 @@ class TestProviderApi(CoreTest):
         mod_id: int,
         mod_name: Optional[str],
         file_id: Optional[int],
-        app_context: App,  # required for the ExceptionBase.getLocalizedMessage()-method
     ) -> None:
         """
         Tests `ProviderApi.raise_mod_not_found_error()`.

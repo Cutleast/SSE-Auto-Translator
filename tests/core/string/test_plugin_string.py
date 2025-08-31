@@ -5,11 +5,11 @@ Copyright (c) Cutleast
 from typing import Any
 
 import pytest
+from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
 from pydantic import ValidationError
 
 from core.string.plugin_string import PluginString
 from core.string.string_status import StringStatus
-from core.utilities.container_utils import ReferenceDict
 
 
 class TestPluginString:

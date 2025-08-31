@@ -3,12 +3,12 @@ Copyright (c) Cutleast
 """
 
 import qtawesome as qta
+from cutleast_core_lib.ui.widgets.menu import Menu
 from PySide6.QtCore import Signal
 from PySide6.QtGui import QAction, QCursor, QKeySequence
 
 from core.string.string_status import StringStatus
 from ui.utilities.icon_provider import IconProvider
-from ui.widgets.menu import Menu
 
 
 class EditorMenu(Menu):

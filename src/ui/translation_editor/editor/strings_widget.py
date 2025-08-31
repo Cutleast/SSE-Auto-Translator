@@ -5,6 +5,12 @@ Copyright (c) Cutleast
 from pathlib import Path
 from typing import Optional, override
 
+from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
+from cutleast_core_lib.ui.utilities.tree_widget import (
+    are_children_visible,
+    iter_children,
+    iter_toplevel_items,
+)
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QFont
 from PySide6.QtWidgets import QTreeWidget, QTreeWidgetItem
@@ -12,12 +18,6 @@ from PySide6.QtWidgets import QTreeWidget, QTreeWidgetItem
 from core.string import String, StringList
 from core.string.string_status import StringStatus
 from core.utilities import matches_filter, trim_string
-from core.utilities.container_utils import ReferenceDict
-from ui.utilities.tree_widget import (
-    are_children_visible,
-    iter_children,
-    iter_toplevel_items,
-)
 
 
 class StringsWidget(QTreeWidget):

@@ -6,6 +6,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 from typing import Optional
 
+from cutleast_core_lib.ui.widgets.search_bar import SearchBar
 from PySide6.QtWidgets import (
     QDialog,
     QHBoxLayout,
@@ -16,8 +17,6 @@ from PySide6.QtWidgets import (
     QVBoxLayout,
     QWidget,
 )
-
-from ui.widgets.search_bar import SearchBar
 
 
 class BlacklistDialog(QDialog):

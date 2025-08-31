@@ -49,7 +49,7 @@ class Page(QWidget):
     def __init__(self, parent: Optional[QWidget] = None) -> None:
         super().__init__(parent)
 
-        self.setObjectName("primary")
+        self.setObjectName("root")
         self.__init_ui()
 
     def __init_ui(self) -> None:
@@ -63,7 +63,7 @@ class Page(QWidget):
     def __init_header(self) -> None:
         title_label = QLabel(self._get_title())
         title_label.setAlignment(Qt.AlignmentFlag.AlignHCenter)
-        title_label.setObjectName("title_label")
+        title_label.setObjectName("h1")
         self._vlayout.addWidget(title_label, 0, Qt.AlignmentFlag.AlignHCenter)
         self._vlayout.addSpacing(25)
 

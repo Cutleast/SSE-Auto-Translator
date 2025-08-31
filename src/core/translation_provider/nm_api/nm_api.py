@@ -5,7 +5,6 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 import re
-import subprocess
 import urllib.parse
 import webbrowser
 from queue import Queue
@@ -17,10 +16,9 @@ import cloudscraper as cs
 import jstyleson as json
 import requests as req
 import websocket
+from cutleast_core_lib.core.cache.cache import Cache
 
-from core.cache.cache import Cache
 from core.translation_provider.source import Source
-from core.utilities.exe_info import get_execution_info
 from core.utilities.filesystem import extract_file_paths
 from core.utilities.web_utils import get_url_identifier
 
@@ -61,9 +59,6 @@ class NexusModsApi(ProviderApi):
     Regex pattern for capturing, game id, mod id and file id from
     a Nexus Mods modpage url.
     """
-
-    NXM_HANDLER = NXMHandler(subprocess.list2cmdline(get_execution_info()[0]))
-    """Handler class for Mod Manager Download buttons on Nexus Mods modpages."""
 
     __api_key: Optional[str] = None
     """The user-specific API key used for most API requests."""
@@ -723,9 +718,9 @@ class NexusModsApi(ProviderApi):
                 ):
                     queue.put(nxm_request)
 
-            self.NXM_HANDLER.request_signal.connect(process_url)
+            NXMHandler.get().request_signal.connect(process_url)
             nxm_request: NxmRequest = queue.get()
-            self.NXM_HANDLER.request_signal.disconnect(process_url)
+            NXMHandler.get().request_signal.disconnect(process_url)
 
             key: str = nxm_request.key
             expires: int = nxm_request.expires

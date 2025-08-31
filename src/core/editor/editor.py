@@ -9,15 +9,15 @@ from pathlib import Path
 from typing import Optional
 
 import jstyleson as json
+from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
 from PySide6.QtCore import QObject, Signal
 
-from core.config.user_config import UserConfig
 from core.database.database import TranslationDatabase
 from core.database.translation import Translation
 from core.string import String, StringList
 from core.string.string_status import StringStatus
 from core.translator_api.translator import Translator
-from ui.widgets.loading_dialog import LoadingDialog
+from core.utilities.game_language import GameLanguage
 
 
 class Editor(QObject):
@@ -27,8 +27,8 @@ class Editor(QObject):
 
     log: logging.Logger = logging.getLogger("Editor")
 
+    language: GameLanguage
     database: TranslationDatabase
-    user_config: UserConfig
     translator: Translator
 
     __translation: Translation
@@ -47,16 +47,16 @@ class Editor(QObject):
     def __init__(
         self,
         translation: Translation,
+        language: GameLanguage,
         database: TranslationDatabase,
-        user_config: UserConfig,
         translator: Translator,
     ) -> None:
         super().__init__()
 
         self.__translation = translation
 
+        self.language = language
         self.database = database
-        self.user_config = user_config
         self.translator = translator
 
         # Make a deep copy to prevent immediately modifying the translation
@@ -164,7 +164,7 @@ class Editor(QObject):
 
         texts: list[str] = [selected_string.original for selected_string in strings]
         src: str = "English"
-        dst: str = self.user_config.language.id
+        dst: str = self.language.id
         result: dict[str, str] = self.translator.mass_translate(texts, src, dst)
 
         for string in strings:

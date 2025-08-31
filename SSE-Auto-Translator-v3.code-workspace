@@ -81,76 +81,24 @@
 		"version": "2.0.0",
 		"tasks": [
 			{
-				"label": "update-venv",
+				"label": "build",
 				"type": "shell",
-				"command": "${workspaceFolder}/.venv/scripts/pip",
-				"args": [
-					"install",
-					"--upgrade",
-					"-r",
-					"${workspaceFolder}/requirements.txt"
-				],
-				"detail": "Updates virtual environment with requirements.txt",
-				"problemMatcher": []
-			},
-			{
-				"label": "Build",
-				"detail": "Build SSE-AT with build.py",
-				"type": "shell",
-				"group": "build",
 				"command": "${workspaceFolder}/build.bat",
-				"dependsOn": [
-					"compile-qrc"
-				],
-				"problemMatcher": []
-			},
-			{
-				"label": "update-project-file",
-				"type": "shell",
-				"command": "${workspaceFolder}/.venv/scripts/python",
-				"args": [
-					"${workspaceFolder}/scripts/generate_qt_project_file.py",
-					"--relative-to",
-					"${workspaceFolder}",
-					"--include-directory",
-					"${workspaceFolder}/src",
-					"--out-file",
-					"${workspaceFolder}/qt_project.pyproject"
-				]
+				"group": {
+					"kind": "build",
+					"isDefault": true
+				},
+				"detail": "Builds app in ./dist"
 			},
 			{
 				"label": "update-lupdate-file",
 				"type": "shell",
-				"command": "${workspaceFolder}/.venv/scripts/python",
-				"args": [
-					"${workspaceFolder}/scripts/generate_qt_lupdate_file.py",
-					"--include-directory",
-					"${workspaceFolder}/src/ui",
-					"--include-directory",
-					"${workspaceFolder}/src/core",
-					"--include-file",
-					"${workspaceFolder}/src/app.py",
-					"--relative-to",
-					"${workspaceFolder}",
-					"--add-translation",
-					"${workspaceFolder}/res/loc/de_DE.ts",
-					"--add-translation",
-					"${workspaceFolder}/res/loc/ru_RU.ts",
-					"--add-translation",
-					"${workspaceFolder}/res/loc/zh_CN.ts",
-					"--out-file",
-					"${workspaceFolder}/qt_lupdate.json"
-				]
+				"command": "${workspaceFolder}/update_lupdate_file.bat",
 			},
 			{
 				"label": "compile-qrc",
 				"type": "shell",
-				"command": "${workspaceFolder}/.venv/scripts/pyside6-rcc",
-				"args": [
-					"${workspaceFolder}/res/resources.qrc",
-					"-o",
-					"${workspaceFolder}/src/resources_rc.py"
-				],
+				"command": "${workspaceFolder}/compile_qrc.bat",
 				"dependsOn": [
 					"compile-qts"
 				],
@@ -167,37 +115,13 @@
 				"dependsOn": [
 					"compile-qrc"
 				],
-				"detail": "Executes main.py via Python interpreter.",
-				"problemMatcher": []
-			},
-			{
-				"label": "update-venv",
-				"type": "shell",
-				"command": "${workspaceFolder}/.venv/scripts/pip",
-				"args": [
-					"install",
-					"--upgrade",
-					"-r",
-					"${workspaceFolder}/requirements.txt"
-				],
-				"detail": "Updates virtual environment with requirements.txt",
+				"detail": "Runs main.py without debugger.",
 				"problemMatcher": []
 			},
 			{
 				"label": "update-qts",
 				"type": "shell",
-				"command": "${workspaceFolder}/.venv/scripts/pyside6-lupdate",
-				"args": [
-					"-ts",
-					"${workspaceFolder}/res/loc/de_DE.ts",
-					"-ts",
-					"${workspaceFolder}/res/loc/ru_RU.ts",
-					"-ts",
-					"${workspaceFolder}/res/loc/zh_CN.ts",
-					"-project",
-					"${workspaceFolder}/qt_lupdate.json",
-					"-no-obsolete"
-				],
+				"command": "${workspaceFolder}/update_qts.bat",
 				"dependsOn": [
 					"update-lupdate-file"
 				],
@@ -206,11 +130,7 @@
 			{
 				"label": "compile-qts",
 				"type": "shell",
-				"command": "${workspaceFolder}/.venv/scripts/pyside6-lrelease",
-				"args": [
-					"-project",
-					"${workspaceFolder}/qt_lupdate.json"
-				],
+				"command": "${workspaceFolder}/compile_qts.bat",
 				"dependsOn": [
 					"update-qts"
 				],

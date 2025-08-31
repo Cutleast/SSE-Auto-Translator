@@ -7,6 +7,9 @@ import re
 from pathlib import Path
 from typing import Optional, override
 
+from cutleast_core_lib.ui.widgets.lcd_number import LCDNumber
+from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
+from cutleast_core_lib.ui.widgets.search_bar import SearchBar
 from PySide6.QtCore import Qt, Signal
 from PySide6.QtGui import QColor, QKeySequence, QShortcut
 from PySide6.QtWidgets import (
@@ -24,21 +27,16 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from app_context import AppContext
 from core.config.app_config import AppConfig
-from core.config.translator_config import TranslatorConfig
-from core.config.user_config import UserConfig
-from core.database.database import TranslationDatabase
 from core.database.exporter import Exporter
 from core.database.translation import Translation
 from core.editor.editor import Editor
 from core.string import String, StringList
 from core.string.string_status import StringStatus
 from core.translator_api.translator import Translator
+from core.user_data.user_data import UserData
 from ui.translation_editor.editor.help_dialog import EditorHelpDialog
-from ui.widgets.lcd_number import LCDNumber
-from ui.widgets.loading_dialog import LoadingDialog
-from ui.widgets.search_bar import SearchBar
+from ui.utilities.theme_manager import ThemeManager
 from ui.widgets.stacked_bar import StackedBar
 
 from .editor_menu import EditorMenu
@@ -60,10 +58,8 @@ class EditorTab(QWidget):
     __editor: Editor
 
     translation: Translation
-    database: TranslationDatabase
     app_config: AppConfig
-    user_config: UserConfig
-    translator_config: TranslatorConfig
+    user_data: UserData
     translator: Translator
 
     __vlayout: QVBoxLayout
@@ -75,22 +71,20 @@ class EditorTab(QWidget):
     def __init__(
         self,
         translation: Translation,
-        database: TranslationDatabase,
         app_config: AppConfig,
-        user_config: UserConfig,
-        translator_config: TranslatorConfig,
+        user_data: UserData,
         translator: Translator,
     ) -> None:
         super().__init__()
 
         self.translation = translation
-        self.database = database
         self.app_config = app_config
-        self.user_config = user_config
-        self.translator_config = translator_config
+        self.user_data = user_data
         self.translator = translator
 
-        self.__editor = Editor(translation, database, user_config, translator)
+        self.__editor = Editor(
+            translation, user_data.user_config.language, user_data.database, translator
+        )
         self.__editor.update_signal.connect(self.update)
 
         self.__init_ui()
@@ -126,13 +120,13 @@ class EditorTab(QWidget):
         self.__vlayout.addLayout(hlayout)
 
         self.__title_label = QLabel(self.translation.name)
-        self.__title_label.setObjectName("relevant_label")
+        self.__title_label.setObjectName("h3")
         hlayout.addWidget(self.__title_label)
 
         hlayout.addStretch()
 
         num_label = QLabel(self.tr("Strings") + ":")
-        num_label.setObjectName("relevant_label")
+        num_label.setObjectName("h3")
         hlayout.addWidget(num_label)
 
         self.__strings_num_label = LCDNumber()
@@ -254,7 +248,11 @@ class EditorTab(QWidget):
             assert string.id in [s.id for s in self.__editor.all_strings]
 
             dialog = TranslatorDialog(
-                self, string, self.app_config, self.user_config, self.translator
+                self,
+                string,
+                self.app_config,
+                self.user_data.user_config,
+                self.translator,
             )
             dialog.update_signal.connect(self.update)
             dialog.show()
@@ -448,7 +446,7 @@ class EditorTab(QWidget):
         Opens dialog to configure batch translation via user configured API.
         """
 
-        if self.translator_config.show_confirmation_dialogs:
+        if self.user_data.translator_config.show_confirmation_dialogs:
             dialog = QDialog(QApplication.activeModalWidget())
             dialog.setWindowTitle(self.tr("Translate with API"))
 
@@ -486,8 +484,8 @@ class EditorTab(QWidget):
 
             if dialog.exec() == QDialog.DialogCode.Accepted:
                 if do_not_show_again_checkbox.isChecked():
-                    self.translator_config.show_confirmation_dialogs = False
-                    self.translator_config.save()
+                    self.user_data.translator_config.show_confirmation_dialogs = False
+                    self.user_data.translator_config.save()
             else:
                 return
 
@@ -547,7 +545,7 @@ class EditorTab(QWidget):
         message_box.button(QMessageBox.StandardButton.Yes).setText(self.tr("Yes"))
 
         # Reapply stylesheet as setDefaultButton() doesn't update the style by itself
-        message_box.setStyleSheet(AppContext.get_stylesheet())
+        message_box.setStyleSheet(ThemeManager.get_stylesheet() or "")
 
         if message_box.exec() == QMessageBox.StandardButton.Yes:
             self.__editor.reset_strings(selected_items)

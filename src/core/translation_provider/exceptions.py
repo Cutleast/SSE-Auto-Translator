@@ -6,10 +6,10 @@ from typing import Any, override
 
 from PySide6.QtWidgets import QApplication
 
-from core.utilities.exceptions import ExceptionBase
+from core.utilities.exceptions import LocalizedException
 
 
-class ProviderError(ExceptionBase):
+class ProviderError(LocalizedException):
     """
     Base class for translation provider errors.
     """

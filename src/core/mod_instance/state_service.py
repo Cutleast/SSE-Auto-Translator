@@ -6,9 +6,9 @@ import logging
 from pathlib import Path
 from typing import Optional
 
+from cutleast_core_lib.core.cache.cache import Cache
 from PySide6.QtCore import QObject, Signal
 
-from core.cache.cache import Cache
 from core.database.database import TranslationDatabase
 from core.database.translation import Translation
 from core.mod_file.mod_file import ModFile

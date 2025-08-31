@@ -5,6 +5,13 @@ Copyright (c) Cutleast
 from pathlib import Path
 from typing import Optional, TypeAlias
 
+from cutleast_core_lib.core.utilities.reference_dict import ReferenceDict
+from cutleast_core_lib.ui.utilities.tree_widget import (
+    are_children_visible,
+    iter_toplevel_items,
+)
+from cutleast_core_lib.ui.widgets.lcd_number import LCDNumber
+from cutleast_core_lib.ui.widgets.search_bar import SearchBar
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QColor, QFont, QKeySequence, QShortcut
 from PySide6.QtWidgets import (
@@ -22,10 +29,6 @@ from PySide6.QtWidgets import (
 from core.string import String, StringList
 from core.string.string_status import StringStatus
 from core.utilities import matches_filter, trim_string
-from core.utilities.container_utils import ReferenceDict
-from ui.utilities.tree_widget import are_children_visible, iter_toplevel_items
-from ui.widgets.lcd_number import LCDNumber
-from ui.widgets.search_bar import SearchBar
 
 from .string_list_menu import StringListMenu
 from .string_list_toolbar import StringListToolbar
@@ -100,7 +103,7 @@ class StringListWidget(QWidget):
         hlayout.addWidget(self.__search_bar)
 
         strings_num_label = QLabel(self.tr("Strings:"))
-        strings_num_label.setObjectName("relevant_label")
+        strings_num_label.setObjectName("h3")
         hlayout.addWidget(strings_num_label)
 
         self.__strings_num_label = LCDNumber()

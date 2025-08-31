@@ -15,7 +15,6 @@ from core.database.translation import Translation
 from core.downloader.download_manager import DownloadManager
 from core.mod_instance.mod_instance import ModInstance
 from core.scanner.scanner import Scanner
-from core.translation_provider.nm_api.nxm_handler import NXMHandler
 from core.translation_provider.provider import Provider
 
 from .downloads.downloads_tab import DownloadsTab
@@ -46,7 +45,6 @@ class DatabaseWidget(QTabWidget):
         app_config: AppConfig,
         scanner: Scanner,
         download_manager: DownloadManager,
-        nxm_listener: NXMHandler,
     ) -> None:
         super().__init__()
 
@@ -59,11 +57,10 @@ class DatabaseWidget(QTabWidget):
             app_config,
             scanner,
             download_manager,
-            nxm_listener,
         )
         self.addTab(self.__translations_tab, self.tr("Translations"))
 
-        self.__downloads_tab = DownloadsTab(download_manager, provider, nxm_listener)
+        self.__downloads_tab = DownloadsTab(download_manager, provider)
         self.addTab(self.__downloads_tab, self.tr("Downloads"))
 
         self.__translations_tab.edit_translation_requested.connect(

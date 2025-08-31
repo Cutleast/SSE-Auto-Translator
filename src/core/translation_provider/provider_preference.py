@@ -4,9 +4,8 @@ Copyright (c) Cutleast
 
 from typing import override
 
+from cutleast_core_lib.core.utilities.localized_enum import LocalizedEnum
 from PySide6.QtWidgets import QApplication
-
-from core.utilities.localized_enum import LocalizedEnum
 
 
 class ProviderPreference(LocalizedEnum):

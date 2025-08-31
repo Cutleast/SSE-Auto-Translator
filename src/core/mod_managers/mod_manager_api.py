@@ -6,11 +6,11 @@ import logging
 from abc import abstractmethod
 from typing import Generic, Optional, TypeVar
 
+from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
 from PySide6.QtCore import QObject
 
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
-from ui.widgets.loading_dialog import LoadingDialog
 
 from .instance_info import InstanceInfo
 

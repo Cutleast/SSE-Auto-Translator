@@ -4,9 +4,8 @@ Copyright (c) Cutleast
 
 from typing import Optional
 
+from cutleast_core_lib.core.utilities.base_enum import BaseEnum
 from pydantic.dataclasses import dataclass
-
-from core.utilities.base_enum import BaseEnum
 
 from .route_target import RouteTarget
 

@@ -7,6 +7,7 @@ from copy import copy
 from pathlib import Path
 from typing import Optional
 
+from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
 from PySide6.QtCore import QObject
 
 from core.config.app_config import AppConfig
@@ -29,7 +30,6 @@ from core.translation_provider.mod_id import ModId
 from core.translation_provider.provider import Provider
 from core.translation_provider.source import Source
 from core.utilities.container_utils import unique
-from ui.widgets.loading_dialog import LoadingDialog
 
 from .detector import LangDetector, Language
 

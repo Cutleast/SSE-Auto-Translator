@@ -6,6 +6,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 from typing import Optional
 
+from cutleast_core_lib.ui.widgets.search_bar import SearchBar
 from PySide6.QtWidgets import (
     QDialog,
     QListWidget,
@@ -21,8 +22,6 @@ from core.masterlist.masterlist import Masterlist
 from core.masterlist.masterlist_entry import MasterlistEntry
 from core.utilities import matches_filter
 from core.utilities.constants import AE_CC_PLUGINS, BASE_GAME_PLUGINS
-
-from .search_bar import SearchBar
 
 
 class IgnoreListDialog(QDialog):

@@ -23,7 +23,7 @@ def run(args: argparse.Namespace) -> None:
     print(f"Dumping prefixed data '{prefix}' from '{db_path}' to '{out_file}'...")
 
     level_db = LevelDB(db_path)
-    data = level_db.get_section(prefix=prefix)
+    data = level_db.load(prefix=prefix)
 
     with out_file.open("w", encoding="utf-8") as file:
         file.write(json.dumps(data, indent=4))

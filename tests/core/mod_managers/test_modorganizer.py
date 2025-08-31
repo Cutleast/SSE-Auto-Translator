@@ -14,14 +14,14 @@ class TestModOrganizer(CoreTest):
     Tests `core.mod_managers.modorganizer.ModOrganizer`.
     """
 
-    def test_get_instance_profiles(self) -> None:
+    def test_get_instance_profiles(self, data_folder: Path) -> None:
         """
         Tests `core.mod_managers.modorganizer.ModOrganizer.get_instance_profiles()`.
         """
 
         # given
         mo2 = ModOrganizerApi()
-        mo2_ini_path: Path = self.data_path() / "mod_instance" / "ModOrganizer.ini"
+        mo2_ini_path: Path = data_folder / "mod_instance" / "ModOrganizer.ini"
 
         # when
         profiles: list[str] = mo2.get_profile_names(mo2_ini_path)

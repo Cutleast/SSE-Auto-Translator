@@ -7,10 +7,9 @@ from __future__ import annotations
 from enum import auto
 from typing import Optional, override
 
+from cutleast_core_lib.core.utilities.localized_enum import LocalizedEnum
 from PySide6.QtGui import QColor
 from PySide6.QtWidgets import QApplication
-
-from core.utilities.localized_enum import LocalizedEnum
 
 
 class StringStatus(LocalizedEnum):

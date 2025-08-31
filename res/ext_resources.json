@@ -2,7 +2,7 @@
 // that are not included in the Qt resource file
 [
     "7-zip/*",
-    "app/database/*/*.ats",
+    "app/database/*/*.json",
     "hunspell/*.aff",
     "hunspell/*.dic",
     "path_limit.reg",

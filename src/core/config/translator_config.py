@@ -4,9 +4,9 @@ Copyright (c) Cutleast
 
 from typing import Annotated, Optional, override
 
-from core.translator_api.translator_api import TranslatorApi
+from cutleast_core_lib.core.config.base_config import BaseConfig
 
-from ._base_config import BaseConfig
+from core.translator_api.translator_api import TranslatorApi
 
 
 class TranslatorConfig(BaseConfig):

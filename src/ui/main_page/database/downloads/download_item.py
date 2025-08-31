@@ -6,13 +6,13 @@ import logging
 import webbrowser
 from typing import Optional
 
+from cutleast_core_lib.core.utilities.scale import scale_value
 from PySide6.QtCore import QObject, Qt, Signal
 from PySide6.QtWidgets import QPushButton, QTreeWidget, QTreeWidgetItem
 
 from core.downloader.file_download import FileDownload
 from core.translation_provider.nm_api.nm_api import NexusModsApi
 from core.utilities.progress_update import ProgressUpdate
-from core.utilities.scale import scale_value
 from ui.utilities.icon_provider import IconProvider
 from ui.widgets.progress_widget import ProgressWidget
 

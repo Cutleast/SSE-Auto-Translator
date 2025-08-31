@@ -5,18 +5,16 @@ Copyright (c) Cutleast
 from typing import Optional
 
 import pytest
+from cutleast_core_lib.test.utils import Utils
+from pytestqt.qtbot import QtBot
 
-from app import App
 from core.utilities.game_language import GameLanguage
-from tests.utils import Utils
+from tests.base_test import BaseTest
 from ui.startup_dialog.setup_page import SetupPage
 from ui.widgets.enum_placeholder_dropdown import EnumPlaceholderDropdown
 
-from ...app_test import AppTest
-from ..ui_test import UiTest
 
-
-class TestSetupPage(UiTest, AppTest):
+class TestSetupPage(BaseTest):
     """
     Tests `ui.startup_dialog.setup_page.SetupPage`.
     """
@@ -38,8 +36,8 @@ class TestSetupPage(UiTest, AppTest):
         self,
         lang: Optional[str],
         expected_output: Optional[GameLanguage],
-        app_context: App,
         monkeypatch: pytest.MonkeyPatch,
+        qtbot: QtBot,
     ) -> None:
         """
         Tests the preselected language for the game based on the system language.

@@ -7,6 +7,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 import logging
 from typing import Optional, override
 
+from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
 from PySide6.QtCore import QEvent, QObject, Qt
 from PySide6.QtGui import QWheelEvent
 from PySide6.QtWidgets import (
@@ -23,7 +24,6 @@ from PySide6.QtWidgets import (
 )
 from qtpy.QtWidgets import QMessageBox
 
-from app_context import AppContext
 from core.database.database import TranslationDatabase
 from core.database.database_service import DatabaseService
 from core.downloader.download_manager import DownloadManager
@@ -34,7 +34,7 @@ from core.translation_provider.nm_api.nxm_handler import NXMHandler
 from core.translation_provider.provider import Provider
 from core.utilities.container_utils import unique
 from ui.utilities.icon_provider import IconProvider, ResourceIcon
-from ui.widgets.loading_dialog import LoadingDialog
+from ui.utilities.theme_manager import ThemeManager
 
 from .download_list_item import DownloadListItem
 
@@ -52,7 +52,6 @@ class DownloadListDialog(QDialog):
     provider: Provider
     database: TranslationDatabase
     download_manager: DownloadManager
-    nxm_handler: NXMHandler
 
     def __init__(
         self,
@@ -60,7 +59,6 @@ class DownloadListDialog(QDialog):
         provider: Provider,
         database: TranslationDatabase,
         download_manager: DownloadManager,
-        nxm_listener: NXMHandler,
         updates: bool = False,
         parent: Optional[QWidget] = None,
     ) -> None:
@@ -69,12 +67,10 @@ class DownloadListDialog(QDialog):
         self.provider = provider
         self.database = database
         self.download_manager = download_manager
-        self.nxm_handler = nxm_listener
 
         self.translation_downloads = translation_downloads
         self.updates = updates
 
-        self.setObjectName("root")
         self.setWindowFlags(Qt.WindowType.Window)
         self.setModal(False)
         self.setWindowTitle(self.tr("Translation Downloads"))
@@ -84,7 +80,7 @@ class DownloadListDialog(QDialog):
         self.setLayout(vlayout)
 
         title_label = QLabel(self.tr("Translation Downloads"))
-        title_label.setObjectName("subtitle_label")
+        title_label.setObjectName("h2")
         vlayout.addWidget(title_label)
 
         hlayout = QHBoxLayout()
@@ -105,7 +101,7 @@ class DownloadListDialog(QDialog):
 
         self.download_all_button = QPushButton(self.tr("Start all downloads"))
         self.download_all_button.setIcon(
-            IconProvider.get_qta_icon("mdi.download-multiple", accent_background=True)
+            IconProvider.get_qta_icon("mdi.download-multiple", color="#000000")
         )
         self.download_all_button.setDefault(True)
         self.download_all_button.clicked.connect(self.__download_all)
@@ -265,7 +261,7 @@ class DownloadListDialog(QDialog):
 
         if (
             not self.provider.direct_downloads_possible()
-            and not self.nxm_handler.is_bound()
+            and not NXMHandler.get().is_bound()
         ):
             messagebox = QMessageBox(QApplication.activeModalWidget())
             messagebox.setWindowTitle(self.tr("Link to Mod Manager downloads?"))
@@ -284,10 +280,10 @@ class DownloadListDialog(QDialog):
             messagebox.button(QMessageBox.StandardButton.No).setText(self.tr("No"))
 
             # Reapply stylesheet as setDefaultButton() doesn't update the style by itself
-            messagebox.setStyleSheet(AppContext.get_stylesheet())
+            messagebox.setStyleSheet(ThemeManager.get_stylesheet() or "")
 
             if messagebox.exec() == QMessageBox.StandardButton.Yes:
-                self.nxm_handler.bind()
+                NXMHandler.get().bind()
 
     @override
     def eventFilter(self, source: QObject, event: QEvent) -> bool:

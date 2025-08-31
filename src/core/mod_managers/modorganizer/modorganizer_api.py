@@ -6,12 +6,13 @@ import re
 from pathlib import Path
 from typing import Any, Optional, override
 
+from cutleast_core_lib.core.utilities.env_resolver import resolve
+from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
+
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.translation_provider.mod_id import ModId
-from core.utilities.env_resolver import resolve
 from core.utilities.ini_file import INIFile
-from ui.widgets.loading_dialog import LoadingDialog
 
 from ..exceptions import InstanceNotFoundError
 from ..mod_manager_api import ModManagerApi

@@ -2,13 +2,12 @@
 Copyright (c) Cutleast
 """
 
+from cutleast_core_lib.ui.widgets.menu import Menu
 from PySide6.QtCore import Signal
 from PySide6.QtGui import QAction
 from PySide6.QtWidgets import QMenuBar
 
-from ui.utilities.icon_provider import IconProvider, ResourceIcon
-
-from .widgets.menu import Menu
+from ui.utilities.icon_provider import IconProvider
 
 
 class MenuBar(QMenuBar):
@@ -54,7 +53,7 @@ class MenuBar(QMenuBar):
         file_menu.addSeparator()
 
         exit_action: QAction = file_menu.addAction(self.tr("Exit"))
-        exit_action.setIcon(IconProvider.get_res_icon(ResourceIcon.Exit))
+        exit_action.setIcon(IconProvider.get_icon("exit"))
         exit_action.triggered.connect(self.exit_requested.emit)
 
     def __init_help_menu(self) -> None:
@@ -70,6 +69,7 @@ class MenuBar(QMenuBar):
         update_action: QAction = help_menu.addAction(self.tr("Check for updates..."))
         update_action.setIcon(IconProvider.get_qta_icon("mdi6.refresh"))
         update_action.triggered.connect(self.update_check_requested.emit)
+        # update_action.setEnabled(Updater.has_instance())  # TODO: Fix being called before the Updater is initialized
 
         help_menu.addSeparator()
 

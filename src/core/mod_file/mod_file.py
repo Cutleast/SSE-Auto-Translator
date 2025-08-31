@@ -9,9 +9,11 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import override
 
-from core.cache.cache import Cache
+from cutleast_core_lib.core.cache.cache import Cache
+from cutleast_core_lib.core.utilities.filesystem import get_file_identifier
+
 from core.string import StringList
-from core.utilities.filesystem import get_file_identifier, relative_data_path
+from core.utilities.filesystem import relative_data_path
 
 from .translation_status import TranslationStatus
 

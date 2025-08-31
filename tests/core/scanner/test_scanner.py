@@ -2,12 +2,14 @@
 Copyright (c) Cutleast
 """
 
-from app import App
+from core.config.app_config import AppConfig
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.scanner.scanner import Scanner
+from core.translation_provider.provider import Provider
+from core.user_data.user_data import UserData
 
 from ..core_test import CoreTest
 
@@ -17,31 +19,38 @@ class TestScanner(CoreTest):
     Tests `core.scanner.scanner.Scanner`.
     """
 
-    def test_basic_scan(self, app_context: App) -> None:
+    def test_basic_scan(self, app_config: AppConfig, user_data: UserData) -> None:
         """
         Tests `core.scanner.scanner.Scanner.run_basic_scan()` on the test mod instance.
         """
 
         # given
-        scanner: Scanner = self.scanner()
-        modinstance: ModInstance = self.modinstance()
+        modinstance: ModInstance = user_data.modinstance
+        scanner = Scanner(
+            modinstance,
+            user_data.database,
+            app_config,
+            user_data.user_config,
+            Provider(user_data.user_config),
+            user_data.masterlist,
+        )
         items: dict[Mod, list[ModFile]] = {
             mod: mod.modfiles for mod in modinstance.mods
         }
         expected_results: dict[Mod, dict[ModFile, TranslationStatus]] = {
-            self.get_mod_by_name("Wet and Cold SE"): {
+            self.get_mod_by_name("Wet and Cold SE", modinstance): {
                 self.get_modfile_from_mod_name(
-                    "Wet and Cold SE", "WetandCold.esp"
-                ): TranslationStatus.RequiresTranslation
+                    "Wet and Cold SE", "WetandCold.esp", modinstance
+                ): TranslationStatus.TranslationInstalled
             },
-            self.get_mod_by_name("Wet and Cold SE - German"): {
+            self.get_mod_by_name("Wet and Cold SE - German", modinstance): {
                 self.get_modfile_from_mod_name(
-                    "Wet and Cold SE - German", "WetandCold.esp"
+                    "Wet and Cold SE - German", "WetandCold.esp", modinstance
                 ): TranslationStatus.IsTranslated
             },
-            self.get_mod_by_name("Obsidian Weathers and Seasons"): {
+            self.get_mod_by_name("RS Children Overhaul", modinstance): {
                 self.get_modfile_from_mod_name(
-                    "Obsidian Weathers and Seasons", "Obsidian Weathers.esp"
+                    "RS Children Overhaul", "RSChildren.esp", modinstance
                 ): TranslationStatus.RequiresTranslation
             },
         }

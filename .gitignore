@@ -14,3 +14,4 @@
 .pytest_cache
 .vs
 __pycache__
+/SSE-AT Output

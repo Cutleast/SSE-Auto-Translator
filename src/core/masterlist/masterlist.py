@@ -6,12 +6,11 @@ import logging
 from typing import Any, Optional
 
 import jstyleson as json
+from cutleast_core_lib.core.utilities.web_utils import get_raw_web_content
 from pydantic import TypeAdapter
 from pydantic.dataclasses import dataclass
 
-from app_context import AppContext
 from core.utilities.game_language import GameLanguage
-from core.utilities.web_utils import get_raw_web_content
 
 from .masterlist_entry import MasterlistEntry
 
@@ -76,9 +75,11 @@ class Masterlist:
         User-configured ignore list for file names.
         """
 
-        if AppContext.has_app():
+        from core.user_data.user_data_service import UserDataService
+
+        if UserDataService.has_instance():
             # TODO: Improve this
-            return AppContext.get_app().user_config.modfile_ignorelist
+            return UserDataService.get().get_user_data().user_config.modfile_ignorelist
         else:
             return []
 

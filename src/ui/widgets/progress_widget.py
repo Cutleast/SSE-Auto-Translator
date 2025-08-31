@@ -17,7 +17,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from core.utilities.exceptions import ExceptionBase
+from core.utilities.exceptions import LocalizedException
 from ui.utilities.icon_provider import IconProvider
 
 
@@ -51,7 +51,7 @@ class ProgressWidget(QWidget):
         hlayout.addLayout(vlayout)
 
         self.__status_label = QLabel()
-        self.__status_label.setObjectName("console")
+        self.__status_label.setObjectName("protocol")
         vlayout.addWidget(self.__status_label)
 
         vlayout.addSpacing(2)
@@ -124,7 +124,7 @@ class ProgressWidget(QWidget):
         self.__progress_bar.setMaximum(1)
         self.__status_label.setWordWrap(True)
 
-        if isinstance(exception, ExceptionBase):
+        if isinstance(exception, LocalizedException):
             self.__status_label.setText(exception.getLocalizedMessage())
         else:
             self.__status_label.setText(traceback.format_exception(exception)[-1])

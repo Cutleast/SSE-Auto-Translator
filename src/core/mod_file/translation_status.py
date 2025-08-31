@@ -5,10 +5,9 @@ Copyright (c) Cutleast
 from enum import IntEnum
 from typing import Optional, override
 
+from cutleast_core_lib.core.utilities.localized_enum import LocalizedEnum
 from PySide6.QtGui import QColor
 from PySide6.QtWidgets import QApplication
-
-from core.utilities.localized_enum import LocalizedEnum
 
 
 class TranslationStatus(IntEnum, LocalizedEnum):

@@ -6,8 +6,7 @@ import logging
 from typing import Optional
 
 import spylls.hunspell as hunspell
-
-from core.cache.function_cache import FunctionCache
+from cutleast_core_lib.core.cache.function_cache import FunctionCache
 
 
 class SpellChecker:

@@ -66,7 +66,7 @@ class DownloadsToolbar(QToolBar):
         Highlights the handle NXM action.
         """
 
-        self.widgetForAction(self.__handle_nxm_action).setObjectName("accent_button")
+        self.widgetForAction(self.__handle_nxm_action).setObjectName("highlighted")
         self.setStyleSheet(self.styleSheet())
 
     def update_toggle_pause_action(self, paused: bool) -> None:

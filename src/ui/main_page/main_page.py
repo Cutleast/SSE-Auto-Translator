@@ -8,6 +8,12 @@ import webbrowser
 from pathlib import Path
 from typing import Optional, TypeVar
 
+from cutleast_core_lib.core.utilities.exe_info import get_current_path
+from cutleast_core_lib.ui.widgets.error_dialog import ErrorDialog
+from cutleast_core_lib.ui.widgets.lcd_number import LCDNumber
+from cutleast_core_lib.ui.widgets.link_button import LinkButton
+from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
+from cutleast_core_lib.ui.widgets.search_bar import SearchBar
 from PySide6.QtCore import Signal
 from PySide6.QtGui import QColor
 from PySide6.QtWidgets import (
@@ -21,15 +27,11 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from core.cache.cache import Cache
 from core.config.app_config import AppConfig
-from core.config.user_config import UserConfig
-from core.database.database import TranslationDatabase
 from core.database.exporter import Exporter
 from core.database.translation import Translation
 from core.downloader.download_manager import DownloadManager
 from core.downloader.translation_download import TranslationDownload
-from core.masterlist.masterlist import Masterlist
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
@@ -39,18 +41,12 @@ from core.scanner.scanner import Scanner
 from core.string import StringList
 from core.string.search_filter import SearchFilter
 from core.translation_provider.mod_id import ModId
-from core.translation_provider.nm_api.nxm_handler import NXMHandler
 from core.translation_provider.provider import Provider
+from core.user_data.user_data import UserData
 from core.utilities.container_utils import join_dicts
-from core.utilities.exe_info import get_current_path
 from ui.downloader.download_list_dialog import DownloadListDialog
-from ui.utilities.icon_provider import IconProvider, ResourceIcon
-from ui.widgets.error_dialog import ErrorDialog
+from ui.utilities.icon_provider import IconProvider
 from ui.widgets.ignore_list_dialog import IgnoreListDialog
-from ui.widgets.lcd_number import LCDNumber
-from ui.widgets.link_button import LinkButton
-from ui.widgets.loading_dialog import LoadingDialog
-from ui.widgets.search_bar import SearchBar
 from ui.widgets.stacked_bar import StackedBar
 from ui.widgets.string_list.string_list_dialog import StringListDialog
 from ui.widgets.string_search_dialog import StringSearchDialog
@@ -90,17 +86,12 @@ class MainPageWidget(QWidget):
     mod_instance: ModInstance
     ignore_list: list[str]
 
-    cache: Cache
-    database: TranslationDatabase
     app_config: AppConfig
-    user_config: UserConfig
-    masterlist: Masterlist
-    mod_instance: ModInstance
+    user_data: UserData
     scanner: Scanner
     provider: Provider
     download_manager: DownloadManager
     state_service: StateService
-    nxm_listener: NXMHandler
 
     __vlayout: QVBoxLayout
     __title_label: QLabel
@@ -114,31 +105,22 @@ class MainPageWidget(QWidget):
 
     def __init__(
         self,
-        cache: Cache,
-        database: TranslationDatabase,
         app_config: AppConfig,
-        user_config: UserConfig,
-        masterlist: Masterlist,
-        mod_instance: ModInstance,
+        user_data: UserData,
         scanner: Scanner,
         provider: Provider,
         download_manager: DownloadManager,
         state_service: StateService,
-        nxm_listener: NXMHandler,
     ) -> None:
         super().__init__()
 
-        self.cache = cache
-        self.database = database
+        self.mod_instance = user_data.modinstance
         self.app_config = app_config
-        self.user_config = user_config
-        self.masterlist = masterlist
-        self.mod_instance = mod_instance
+        self.user_data = user_data
         self.scanner = scanner
         self.provider = provider
         self.download_manager = download_manager
         self.state_service = state_service
-        self.nxm_listener = nxm_listener
 
         self.__init_ui()
 
@@ -195,13 +177,13 @@ class MainPageWidget(QWidget):
         self.__vlayout.addLayout(hlayout)
 
         self.__title_label = QLabel(self.tr("Modlist"))
-        self.__title_label.setObjectName("relevant_label")
+        self.__title_label.setObjectName("h3")
         hlayout.addWidget(self.__title_label)
 
         hlayout.addStretch()
 
         num_label = QLabel(self.tr("Translatable files:"))
-        num_label.setObjectName("relevant_label")
+        num_label.setObjectName("h3")
         hlayout.addWidget(num_label)
 
         self.__modfiles_num_label = LCDNumber()
@@ -220,21 +202,21 @@ class MainPageWidget(QWidget):
         ko_fi_button = LinkButton(
             MainPageWidget.KOFI_URL,
             self.tr("Support us on Ko-Fi"),
-            IconProvider.get_res_icon(ResourceIcon.KoFi),
+            IconProvider.get_icon("ko-fi"),
         )
         hlayout.addWidget(ko_fi_button)
 
         discord_button = LinkButton(
             MainPageWidget.DISCORD_URL,
             self.tr("Join us on Discord"),
-            IconProvider.get_res_icon(ResourceIcon.Discord),
+            IconProvider.get_icon("discord"),
         )
         hlayout.addWidget(discord_button)
 
         nexus_mods_button = LinkButton(
             MainPageWidget.NEXUS_MODS_PROFILE_URL,
             self.tr("Check out my profile on Nexus Mods"),
-            IconProvider.get_res_icon(ResourceIcon.NexusModsColored),
+            IconProvider.get_icon("nexus_mods_colored"),
         )
         hlayout.addWidget(nexus_mods_button)
 
@@ -250,25 +232,17 @@ class MainPageWidget(QWidget):
         self.__vlayout.addWidget(splitter, stretch=1)
 
         self.__modinstance_widget = ModInstanceWidget(
-            self.cache,
-            self.database,
-            self.app_config,
-            self.user_config,
-            self.masterlist,
-            self.provider,
-            self.mod_instance,
-            self.state_service,
+            self.app_config, self.user_data, self.provider, self.state_service
         )
         splitter.addWidget(self.__modinstance_widget)
 
         self.__database_widget = DatabaseWidget(
-            self.database,
+            self.user_data.database,
             self.provider,
             self.mod_instance,
             self.app_config,
             self.scanner,
             self.download_manager,
-            self.nxm_listener,
         )
         splitter.addWidget(self.__database_widget)
         splitter.setSizes([int(0.6 * splitter.width()), int(0.4 * splitter.width())])
@@ -305,9 +279,11 @@ class MainPageWidget(QWidget):
         """
 
         IgnoreListDialog(
-            self.masterlist, self.user_config, QApplication.activeModalWidget()
+            self.user_data.masterlist,
+            self.user_data.user_config,
+            QApplication.activeModalWidget(),
         ).exec()
-        self.user_config.save()
+        self.user_data.user_config.save()
 
         # TODO: Make this more elegant
         self.state_service.update_signal.emit()
@@ -425,9 +401,8 @@ class MainPageWidget(QWidget):
         DownloadListDialog(
             download_entries,
             self.provider,
-            self.database,
+            self.user_data.database,
             self.download_manager,
-            self.nxm_listener,
             parent=QApplication.activeModalWidget(),
         ).exec()
 
@@ -441,9 +416,9 @@ class MainPageWidget(QWidget):
             lambda ldialog: Exporter().build_output_mod(
                 self.app_config.output_path or (get_current_path() / "SSE-AT Output"),
                 self.mod_instance,
-                self.database.user_translations,
+                self.user_data.database.user_translations,
                 self.app_config.get_tmp_dir(),
-                self.user_config,
+                self.user_data.user_config,
                 ldialog,
             ),
         )

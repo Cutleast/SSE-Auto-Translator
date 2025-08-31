@@ -9,29 +9,18 @@ requires-python = ">=3.12"
 dependencies = [
     "beautifulsoup4",
     "cloudscraper",
-    "comtypes",
+    "cutleast-core-lib",
     "deepl",
     "googletrans==3.1.0a0",
-    "jstyleson",
     "lingua-language-detector",
     "lz4",
     "plyvel-ci",
-    "py7zr",
-    "pydantic",
-    "pyside6",
     "pytz",
     "pyuac",
     "pywin32",
     "pyzmq",
-    "qtawesome",
-    "qtpy",
-    "rarfile",
-    "requests",
-    "semantic-version",
     "spylls",
     "sse-bsa",
-    "unrar",
-    "virtual-glob",
     "websocket-client",
 ]
 
@@ -48,6 +37,14 @@ dev = [
     "types-requests",
 ]
 
+[tool.uv.workspace]
+members = [
+    "core-lib",
+]
+
+[tool.uv.sources]
+cutleast-core-lib = { workspace = true }
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
@@ -58,7 +55,7 @@ log_cli_format = "[%(asctime)s.%(msecs)03d][%(levelname)s][%(name)s.%(funcName)s
 [tool.pyright]
 include = ["src", "tests"]
 typeCheckingMode = "strict"
-exclude = ["**/__pycache__", "**/*.old"]
+exclude = ["**/__pycache__", "**/*.old", "src/resources_rc.py"]
 stubPath = "./stubs"
 
 # Check here for a full list of options: https://github.com/microsoft/pyright/blob/main/docs/configuration.md#diagnostic-settings-defaults

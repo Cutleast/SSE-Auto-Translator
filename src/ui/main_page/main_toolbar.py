@@ -4,14 +4,14 @@ Copyright (c) Cutleast
 
 from typing import Any, Optional
 
+from cutleast_core_lib.ui.widgets.menu import Menu
 from PySide6.QtCore import QSize, Signal
 from PySide6.QtGui import QAction
 from PySide6.QtWidgets import QCheckBox, QToolBar, QWidgetAction
 
-from app_context import AppContext
 from core.mod_file.translation_status import TranslationStatus
 from ui.utilities.icon_provider import IconProvider, ResourceIcon
-from ui.widgets.menu import Menu
+from ui.utilities.theme_manager import ThemeManager
 
 
 class MainToolBar(QToolBar):
@@ -190,8 +190,8 @@ class MainToolBar(QToolBar):
             self.widgetForAction(_action).setObjectName("")
 
         if action is not None:
-            self.widgetForAction(action).setObjectName("accent_button")
+            self.widgetForAction(action).setObjectName("highlighted")
 
         # Reapply stylesheet (the full stylesheet is required as the toolbar doesn't
         # initially have its own)
-        self.setStyleSheet(AppContext.get_app().styleSheet())
+        self.setStyleSheet(ThemeManager.get_stylesheet() or "")

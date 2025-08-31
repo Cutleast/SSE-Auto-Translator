@@ -6,6 +6,8 @@ import logging
 from queue import Queue
 from typing import Optional
 
+from cutleast_core_lib.core.utilities.filesystem import clean_fs_name
+from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
 from PySide6.QtCore import QObject, Signal
 
 from core.config.app_config import AppConfig
@@ -20,9 +22,7 @@ from core.mod_instance.mod_instance import ModInstance
 from core.translation_provider.mod_id import ModId
 from core.translation_provider.provider import ModDetails, Provider
 from core.translation_provider.source import Source
-from core.utilities.filesystem import clean_fs_name
 from core.utilities.progress_update import ProgressCallback
-from ui.widgets.loading_dialog import LoadingDialog
 
 from .file_download import FileDownload
 from .translation_download import TranslationDownload

@@ -7,28 +7,36 @@ import os
 import shutil
 import sys
 import tempfile
-from abc import ABC
+from collections.abc import Generator
 from pathlib import Path
 from typing import Optional
+from unittest.mock import MagicMock
 
+import jstyleson as json
 import pytest
+from cutleast_core_lib.core.utilities.env_resolver import resolve
+from cutleast_core_lib.test.base_test import BaseTest as CoreBaseTest
 from pyfakefs.fake_filesystem import FakeFilesystem
+from pytest_mock import MockerFixture
 
+from core.config.app_config import AppConfig
 from core.mod_managers.mod_manager import ModManager
 from core.mod_managers.modorganizer.mo2_instance_info import Mo2InstanceInfo
 from core.mod_managers.vortex.profile_info import ProfileInfo
-from core.utilities.env_resolver import resolve
+from core.user_data.user_data import UserData
+from core.user_data.user_data_service import UserDataService
+from core.utilities.leveldb import LevelDB
+
+from .setup.mock_plyvel import MockPlyvelDB
 
 logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
 
 
-class BaseTest(ABC):
+class BaseTest(CoreBaseTest):
     """
     Base class for all tests.
     """
 
-    _data_path = Path("tests") / "test_data"
-    _res_path = Path("res")
     _temp_folder: Optional[Path] = None
 
     @classmethod
@@ -48,19 +56,8 @@ class BaseTest(ABC):
 
         cls._temp_folder = None
 
-    @classmethod
-    def data_path(cls) -> Path:
-        """
-        Returns the path to the test data folder.
-
-        Returns:
-            Path: The path to the test data folder
-        """
-
-        return cls._data_path
-
-    @classmethod
-    def res_path(cls) -> Path:
+    @pytest.fixture
+    def res_path(self, real_cwd: Path) -> Path:
         """
         Returns the path to the resource folder.
 
@@ -68,7 +65,39 @@ class BaseTest(ABC):
             Path: The path to the resource folder
         """
 
-        return cls._res_path
+        return real_cwd / "res"
+
+    @pytest.fixture
+    def user_data_path(self, data_folder: Path) -> Path:
+        """
+        Returns the path to the user data folder.
+        """
+
+        return data_folder / "data"
+
+    @pytest.fixture
+    def app_config(self, data_folder: Path) -> AppConfig:
+        """
+        Loads and returns the test app configuration.
+        """
+
+        app_config = AppConfig.load(data_folder)
+        app_config.temp_path = self.tmp_folder()
+
+        return app_config
+
+    @pytest.fixture
+    def user_data(
+        self, test_fs: FakeFilesystem, res_path: Path, user_data_path: Path
+    ) -> UserData:
+        """
+        Loads and returns the test user data.
+        """
+
+        if UserDataService.has_instance():
+            return UserDataService.get().load()
+
+        return UserDataService(res_path, user_data_path).load()
 
     @pytest.fixture
     def mo2_instance_info(self, test_fs: FakeFilesystem) -> Mo2InstanceInfo:
@@ -130,7 +159,9 @@ class BaseTest(ABC):
         )
 
     @pytest.fixture
-    def test_fs(self, fs: FakeFilesystem) -> FakeFilesystem:
+    def test_fs(
+        self, data_folder: Path, res_path: Path, test_fs: FakeFilesystem
+    ) -> FakeFilesystem:
         """
         Creates a fake filesystem for testing.
 
@@ -138,9 +169,10 @@ class BaseTest(ABC):
             FakeFilesystem: The fake filesystem.
         """
 
-        data_folder: Path = self._data_path
+        fs: FakeFilesystem = test_fs
 
-        fs.add_real_directory(data_folder)
+        test_fs.add_real_directory(res_path)
+
         os.chdir(data_folder.parent.parent)
 
         fs.add_real_directory(
@@ -170,6 +202,47 @@ class BaseTest(ABC):
         resolve(Path("%APPDATA%") / "Vortex" / "state.v2").mkdir(parents=True)
 
         return fs
+
+    @pytest.fixture
+    def vortex_db(
+        self, mocker: MockerFixture, state_v2_json: Path, test_fs: FakeFilesystem
+    ) -> Generator[MockPlyvelDB, None, None]:
+        """
+        Pytest fixture to mock the plyvel.DB class and redirect it to use the
+        database with the test instance.
+
+        Yields:
+            Generator[MockPlyvelDB]: The mocked plyvel.DB instance
+        """
+
+        flat_data: dict[str, str] = LevelDB.flatten_nested_dict(
+            json.loads(state_v2_json.read_text())
+        )
+        mock_instance = MockPlyvelDB(
+            {k.encode(): v.encode() for k, v in flat_data.items()}
+        )
+
+        magic: MagicMock = mocker.patch("plyvel.DB", return_value=mock_instance)
+
+        yield mock_instance
+
+        mocker.stop(magic)
+
+    @pytest.fixture
+    def state_v2_json(self, data_folder: Path) -> Generator[Path, None, None]:
+        """
+        Fixture to return a path to a sample JSON file within a temp folder resembling
+        a Vortex database with the test instance.
+
+        Yields:
+            Generator[Path]: Path to sample JSON file
+        """
+
+        with tempfile.TemporaryDirectory(prefix="SSE-AT_test_") as tmp_dir:
+            src = data_folder / "state.v2.json"
+            dst = Path(tmp_dir) / "state.v2.json"
+            shutil.copyfile(src, dst)
+            yield dst
 
     @classmethod
     def tmp_folder(cls) -> Path:

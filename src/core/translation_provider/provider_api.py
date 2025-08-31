@@ -5,13 +5,13 @@ Copyright (c) Cutleast
 import logging
 import platform
 from abc import abstractmethod
+from pathlib import Path
 from typing import NoReturn, Optional
 
 import requests as req
+from cutleast_core_lib.core.cache.cache import Cache
 from PySide6.QtCore import QObject
 
-from app_context import AppContext
-from core.cache.cache import Cache, Path
 from core.utilities.web_utils import get_url_identifier
 
 from .exceptions import (
@@ -41,11 +41,13 @@ class ProviderApi(QObject):
     """The subfolder within the cache folder to store cached web requests."""
 
     def __init__(self) -> None:
+        from app import App
+
         self.log = logging.getLogger(self.__class__.__name__)
 
         self.user_agent = (
-            f"{AppContext.get_app_type().APP_NAME}/"
-            f"{AppContext.get_app_type().APP_VERSION} "
+            f"{App.APP_NAME}/"
+            f"{App.APP_VERSION} "
             f"({platform.system()} {platform.version()}; "
             f"{platform.architecture()[0]})"
         )

@@ -12,12 +12,12 @@ from typing import NoReturn, Optional
 import pyuac
 import pywintypes
 import zmq
-from PySide6.QtCore import QObject, Signal
+from cutleast_core_lib.core.utilities.singleton import SingletonQObject
+from cutleast_core_lib.core.utilities.thread import Thread
+from PySide6.QtCore import Signal
 
-from core.utilities.thread import Thread
 
-
-class NXMHandler(QObject):
+class NXMHandler(SingletonQObject):
     """
     Class for listening for Nexus Mods downloads.
     """

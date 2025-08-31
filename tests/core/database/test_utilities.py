@@ -4,9 +4,9 @@ Copyright (c) Cutleast
 
 from pathlib import Path
 
-from app import App
 from core.config.user_config import UserConfig
 from core.database.utilities import Utilities
+from core.user_data.user_data import UserData
 
 from ..core_test import CoreTest
 
@@ -16,15 +16,15 @@ class TestUtilities(CoreTest):
     Tests `core.database.utilities.Utilities`.
     """
 
-    def test_get_additional_files(self, app_context: App) -> None:
+    def test_get_additional_files(self, data_folder: Path, user_data: UserData) -> None:
         """
         Tests `core.database.utilities.Utilities.get_additional_files()`.
         """
 
         # given
         utils = Utilities()
-        user_config: UserConfig = app_context.user_config
-        test_file_path: Path = self.data_path() / "Wet and Cold SE - German.7z"
+        user_config: UserConfig = user_data.user_config
+        test_file_path: Path = data_folder / "Wet and Cold SE - German.7z"
 
         # when
         user_config.enable_interface_files = True
@@ -32,7 +32,7 @@ class TestUtilities(CoreTest):
         user_config.enable_sound_files = True
         user_config.enable_textures = True
         additional_files: list[str] = utils.get_additional_files(
-            test_file_path, self.tmp_folder(), self.user_config()
+            test_file_path, self.tmp_folder(), user_config
         )
 
         # then
@@ -41,28 +41,28 @@ class TestUtilities(CoreTest):
             "scripts/_wetquestscript.pex",
         ]
 
-        # clean
-        self.reset_app_components(app_context)
-
-    def test_get_additional_files_from_bsa(self, app_context: App) -> None:
+    def test_get_additional_files_from_bsa(self, user_data: UserData) -> None:
         """
         Tests `core.database.utilities.Utilities.get_additional_files_from_bsa()`.
         """
 
         # given
         utils = Utilities()
+        user_config: UserConfig = user_data.user_config
         test_bsa_path: Path = (
-            self.get_mod_by_name("Ordinator - Perks of Skyrim").path
+            self.get_mod_by_name(
+                "Ordinator - Perks of Skyrim", user_data.modinstance
+            ).path
             / "Ordinator - Perks of Skyrim.bsa"
         )
         PATTERNS: dict[str, bool] = {
-            f"**/interface/**/*_{self.user_config().language}.txt": self.user_config().enable_interface_files,
+            f"**/interface/**/*_{user_config.language}.txt": user_config.enable_interface_files,
             "**/scripts/*.pex": True,
-            "**/textures/**/*.dds": self.user_config().enable_textures,
-            "**/textures/**/*.png": self.user_config().enable_textures,
-            "**/sound/**/*.fuz": self.user_config().enable_sound_files,
-            "**/sound/**/*.wav": self.user_config().enable_sound_files,
-            "**/sound/**/*.lip": self.user_config().enable_sound_files,
+            "**/textures/**/*.dds": user_config.enable_textures,
+            "**/textures/**/*.png": user_config.enable_textures,
+            "**/sound/**/*.fuz": user_config.enable_sound_files,
+            "**/sound/**/*.wav": user_config.enable_sound_files,
+            "**/sound/**/*.lip": user_config.enable_sound_files,
         }
 
         # when

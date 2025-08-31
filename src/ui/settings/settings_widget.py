@@ -4,6 +4,7 @@ Copyright (c) Cutleast
 
 from typing import Optional
 
+from cutleast_core_lib.core.cache.cache import Cache
 from PySide6.QtCore import Signal
 from PySide6.QtWidgets import (
     QHBoxLayout,
@@ -15,8 +16,6 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from app_context import AppContext
-from core.cache.cache import Cache
 from core.config.app_config import AppConfig
 from core.config.translator_config import TranslatorConfig
 from core.config.user_config import UserConfig
@@ -84,14 +83,13 @@ class SettingsWidget(QWidget):
 
     def __init_header(self) -> None:
         title_label = QLabel(self.tr("Settings"))
-        title_label.setObjectName("title_label")
+        title_label.setObjectName("h1")
         self.__vlayout.addWidget(title_label)
         self.__vlayout.addSpacing(15)
 
         restart_hint_label = QLabel(
             self.tr("Settings marked with * require a restart to take effect.")
         )
-        restart_hint_label.setObjectName("relevant_label")
         self.__vlayout.addWidget(restart_hint_label)
         self.__vlayout.addSpacing(15)
 
@@ -106,14 +104,12 @@ class SettingsWidget(QWidget):
         self.__app_settings.restart_required_signal.connect(self._on_restart_required)
         self.__tab_widget.addTab(self.__app_settings, self.tr("App Settings"))
 
-        self.__user_settings = UserSettings(self.user_config, self.cache)
+        self.__user_settings = UserSettings(self.user_config)
         self.__user_settings.changed_signal.connect(self._on_change)
         self.__user_settings.restart_required_signal.connect(self._on_restart_required)
         self.__tab_widget.addTab(self.__user_settings, self.tr("User Settings"))
 
-        self.__translator_settings = TranslatorSettings(
-            self.translator_config, self.cache
-        )
+        self.__translator_settings = TranslatorSettings(self.translator_config)
         self.__translator_settings.changed_signal.connect(self._on_change)
         self.__translator_settings.restart_required_signal.connect(
             self._on_restart_required
@@ -172,4 +168,6 @@ class SettingsWidget(QWidget):
             choice = messagebox.exec()
 
             if choice == QMessageBox.StandardButton.Yes:
-                AppContext.get_app().restart_application()
+                from app import App
+
+                App.get().restart_application()

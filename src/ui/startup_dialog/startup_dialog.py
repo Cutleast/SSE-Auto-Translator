@@ -13,7 +13,6 @@ import jstyleson as json
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QDialog, QVBoxLayout, QWidget
 
-from app_context import AppContext
 from core.config.user_config import UserConfig
 from ui.widgets.stacked_widget import StackedWidget
 
@@ -29,18 +28,21 @@ class StartupDialog(QDialog):
 
     log: logging.Logger = logging.getLogger("StartupDialog")
 
+    __data_path: Path
+
     __vlayout: QVBoxLayout
     __page_widget: StackedWidget
     __introduction_page: IntroductionPage
     __setup_page: SetupPage
     __instance_page: InstancePage
 
-    def __init__(self, parent: Optional[QWidget] = None) -> None:
+    def __init__(self, data_path: Path, parent: Optional[QWidget] = None) -> None:
         super().__init__(parent)
+
+        self.__data_path = data_path
 
         # Configure window
         self.setWindowFlag(Qt.WindowType.Window, True)
-        self.setObjectName("root")
         self.setWindowTitle(self.tr("Welcome!"))
         self.setFixedSize(900, 610)
 
@@ -76,10 +78,9 @@ class StartupDialog(QDialog):
         self.__page_widget.setCurrentWidget(self.__introduction_page)
 
     def finish(self) -> None:
-        data_path: Path = AppContext.get_app().data_path
-        user_path: Path = data_path / "user"
+        user_path: Path = self.__data_path / "user"
 
-        user_config = UserConfig.create(data_path)
+        user_config = UserConfig.create(self.__data_path)
         self.__instance_page.apply(user_config)
         self.__setup_page.apply(user_config)
         user_config.save()

@@ -1,0 +1,8 @@
+[submodule "core-lib"]
+	path = core-lib
+	url = https://github.com/Cutleast/cutleast-core-lib.git
+	branch = master
+[submodule "core-res"]
+	path = core-res
+	url = https://github.com/Cutleast/cutleast-core-res.git
+	branch = master

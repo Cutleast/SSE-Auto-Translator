@@ -17,14 +17,14 @@ class TestStringLoader(CoreTest):
     Tests `core.string.string_loader.StringLoader`.
     """
 
-    def test_load_strings_from_legacy_file(self) -> None:
+    def test_load_strings_from_legacy_file(self, data_folder: Path) -> None:
         """
         Tests the deserialization and loading of strings from a legacy .ats file.
         """
 
         # given
         legacy_ats_file_path: Path = (
-            self.data_path()
+            data_folder
             / "translations"
             / "Obsidian Weathers and Seasons - German"
             / "obsidian weathers.esp.ats"
@@ -64,14 +64,14 @@ class TestStringLoader(CoreTest):
                 f"{string} is missing!"
             )
 
-    def test_load_strings_from_json_file(self) -> None:
+    def test_load_strings_from_json_file(self, data_folder: Path) -> None:
         """
         Tests the deserialization and loading of strings from a JSON file.
         """
 
         # given
         json_file_path: Path = (
-            self.data_path()
+            data_folder
             / "translations"
             / "Obsidian Weathers and Seasons - German"
             / "obsidian weathers.esp.json"

@@ -19,13 +19,13 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from app_context import AppContext
 from core.config.app_config import AppConfig
 from core.config.user_config import UserConfig
 from core.string import String
 from core.string.string_status import StringStatus
 from core.translator_api.translator import Translator
 from ui.utilities.icon_provider import IconProvider
+from ui.utilities.theme_manager import ThemeManager
 from ui.widgets.shortcut_button import ShortcutButton
 from ui.widgets.spell_check.spell_check_edit import SpellCheckEdit
 
@@ -85,7 +85,6 @@ class TranslatorDialog(QWidget):
         self.setWindowFlags(Qt.WindowType.Window)
         self.resize(1000, 600)
         self.closeEvent = self.cancel
-        self.setObjectName("root")
 
         vlayout = QVBoxLayout()
         self.setLayout(vlayout)
@@ -297,7 +296,7 @@ class TranslatorDialog(QWidget):
             message_box.button(QMessageBox.StandardButton.Yes).setText(self.tr("Yes"))
 
             # Reapply stylesheet as setDefaultButton() doesn't update the style by itself
-            message_box.setStyleSheet(AppContext.get_stylesheet())
+            message_box.setStyleSheet(ThemeManager.get_stylesheet() or "")
 
             if message_box.exec() != QMessageBox.StandardButton.Yes:
                 event.ignore()
@@ -342,7 +341,7 @@ class TranslatorDialog(QWidget):
             )
 
             # Reapply stylesheet as setDefaultButton() doesn't update the style by itself
-            message_box.setStyleSheet(AppContext.get_stylesheet())
+            message_box.setStyleSheet(ThemeManager.get_stylesheet() or "")
 
             choice: int = message_box.exec()
 

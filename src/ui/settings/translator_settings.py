@@ -4,14 +4,13 @@ Copyright (c) Cutleast
 
 from typing import override
 
+from cutleast_core_lib.ui.settings.settings_page import SettingsPage
+from cutleast_core_lib.ui.widgets.enum_dropdown import EnumDropdown
+from cutleast_core_lib.ui.widgets.key_edit import KeyLineEdit
 from PySide6.QtWidgets import QCheckBox, QFormLayout, QLabel, QWidget
 
 from core.config.translator_config import TranslatorConfig
 from core.translator_api.translator_api import TranslatorApi
-from ui.widgets.enum_dropdown import EnumDropdown
-from ui.widgets.key_entry import KeyEntry
-
-from .settings_page import SettingsPage
 
 
 class TranslatorSettings(SettingsPage[TranslatorConfig]):
@@ -22,7 +21,7 @@ class TranslatorSettings(SettingsPage[TranslatorConfig]):
     __flayout: QFormLayout
 
     __translator_box: EnumDropdown[TranslatorApi]
-    __api_key_entry: KeyEntry
+    __api_key_entry: KeyLineEdit
 
     __show_confirmations_box: QCheckBox
 
@@ -42,16 +41,18 @@ class TranslatorSettings(SettingsPage[TranslatorConfig]):
         self.__translator_box = EnumDropdown(
             TranslatorApi, self._initial_config.translator
         )
-        self.__translator_box.currentValueChanged.connect(self._on_change)
+        self.__translator_box.currentValueChanged.connect(
+            lambda _: self.changed_signal.emit()
+        )
         self.__flayout.addRow(self.tr("Translator API"), self.__translator_box)
 
         api_key_label = QLabel(self.tr("Translator API Key"))
-        self.__api_key_entry = KeyEntry()
+        self.__api_key_entry = KeyLineEdit()
         if self._initial_config.api_key:
             self.__api_key_entry.setText(self._initial_config.api_key)
         api_key_label.setEnabled(bool(self._initial_config.api_key))
         self.__api_key_entry.setEnabled(bool(self._initial_config.api_key))
-        self.__api_key_entry.textChanged.connect(self._on_change)
+        self.__api_key_entry.textChanged.connect(lambda _: self.changed_signal.emit())
         self.__flayout.addRow(api_key_label, self.__api_key_entry)
 
         # TODO: Make this dynamic depending on the selected translator
@@ -69,7 +70,9 @@ class TranslatorSettings(SettingsPage[TranslatorConfig]):
         self.__show_confirmations_box.setChecked(
             self._initial_config.show_confirmation_dialogs
         )
-        self.__show_confirmations_box.stateChanged.connect(self._on_change)
+        self.__show_confirmations_box.stateChanged.connect(
+            lambda _: self.changed_signal.emit()
+        )
         self.__flayout.addRow(self.__show_confirmations_box)
 
     @override

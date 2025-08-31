@@ -7,8 +7,7 @@ from pathlib import Path
 from typing import TypeAlias
 
 import jstyleson as json
-
-from core.utilities.exe_info import get_current_path
+from cutleast_core_lib.core.utilities.exe_info import get_current_path
 
 Stream: TypeAlias = BufferedReader | BytesIO
 """

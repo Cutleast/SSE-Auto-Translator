@@ -6,6 +6,9 @@ import logging
 from pathlib import Path
 from typing import Optional
 
+from cutleast_core_lib.ui.widgets.error_dialog import ErrorDialog
+from cutleast_core_lib.ui.widgets.lcd_number import LCDNumber
+from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
 from PySide6.QtCore import Signal
 from PySide6.QtWidgets import (
     QApplication,
@@ -34,12 +37,8 @@ from core.scanner.scanner import Scanner
 from core.string import StringList
 from core.string.search_filter import SearchFilter
 from core.translation_provider.mod_id import ModId
-from core.translation_provider.nm_api.nxm_handler import NXMHandler
 from core.translation_provider.provider import Provider
 from ui.downloader.download_list_dialog import DownloadListDialog
-from ui.widgets.error_dialog import ErrorDialog
-from ui.widgets.lcd_number import LCDNumber
-from ui.widgets.loading_dialog import LoadingDialog
 from ui.widgets.string_list.string_list_dialog import StringListDialog
 from ui.widgets.string_search_dialog import StringSearchDialog
 
@@ -68,7 +67,6 @@ class TranslationsTab(QWidget):
     app_config: AppConfig
     scanner: Scanner
     download_manager: DownloadManager
-    nxm_listener: NXMHandler
 
     __vlayout: QVBoxLayout
     __toolbar: TranslationsToolbar
@@ -83,7 +81,6 @@ class TranslationsTab(QWidget):
         app_config: AppConfig,
         scanner: Scanner,
         download_manager: DownloadManager,
-        nxm_listener: NXMHandler,
     ) -> None:
         super().__init__()
 
@@ -93,7 +90,6 @@ class TranslationsTab(QWidget):
         self.app_config = app_config
         self.scanner = scanner
         self.download_manager = download_manager
-        self.nxm_listener = nxm_listener
 
         self.__init_ui()
 
@@ -132,7 +128,7 @@ class TranslationsTab(QWidget):
         hlayout.addStretch()
 
         translations_num_label = QLabel(self.tr("Translations:"))
-        translations_num_label.setObjectName("relevant_label")
+        translations_num_label.setObjectName("h3")
         hlayout.addWidget(translations_num_label)
 
         self.__translations_num_label = LCDNumber()
@@ -328,7 +324,6 @@ class TranslationsTab(QWidget):
                 self.provider,
                 self.database,
                 self.download_manager,
-                self.nxm_listener,
                 updates=True,
                 parent=QApplication.activeModalWidget(),
             ).exec()

@@ -4,6 +4,7 @@ Copyright (c) Cutleast
 
 from typing import override
 
+from cutleast_core_lib.core.utilities.blocking_thread import BlockingThread
 from PySide6.QtCore import Qt, QTimerEvent
 from PySide6.QtGui import QShowEvent
 from PySide6.QtWidgets import (
@@ -20,7 +21,6 @@ from core.downloader.download_manager import DownloadManager
 from core.downloader.file_download import FileDownload
 from core.translation_provider.nm_api.nxm_handler import NXMHandler
 from core.translation_provider.provider import Provider
-from core.utilities.blocking_thread import BlockingThread
 
 from .download_item import DownloadItem
 from .downloads_toolbar import DownloadsToolbar
@@ -33,7 +33,6 @@ class DownloadsTab(QWidget):
 
     download_manager: DownloadManager
     provider: Provider
-    nxm_listener: NXMHandler
 
     __download_items: list[DownloadItem]
 
@@ -46,13 +45,11 @@ class DownloadsTab(QWidget):
         self,
         download_manager: DownloadManager,
         provider: Provider,
-        nxm_listener: NXMHandler,
     ) -> None:
         super().__init__()
 
         self.download_manager = download_manager
         self.provider = provider
-        self.nxm_listener = nxm_listener
 
         self.__download_items = []
 
@@ -88,7 +85,7 @@ class DownloadsTab(QWidget):
         hlayout.addStretch()
 
         downloads_num_label = QLabel(self.tr("Downloads:"))
-        downloads_num_label.setObjectName("relevant_label")
+        downloads_num_label.setObjectName("h3")
         hlayout.addWidget(downloads_num_label)
 
         self.__downloads_num_label = QLCDNumber()
@@ -139,12 +136,12 @@ class DownloadsTab(QWidget):
 
     def __toggle_nxm(self, checked: bool) -> None:
         if checked:
-            self.nxm_listener.bind()
+            NXMHandler.get().bind()
         else:
-            self.nxm_listener.unbind()
+            NXMHandler.get().unbind()
 
     def __check_nxm_link(self) -> None:
-        self.__toolbar.set_handle_nxm_action_checked(self.nxm_listener.is_bound())
+        self.__toolbar.set_handle_nxm_action_checked(NXMHandler.get().is_bound())
 
     @override
     def timerEvent(self, event: QTimerEvent) -> None:

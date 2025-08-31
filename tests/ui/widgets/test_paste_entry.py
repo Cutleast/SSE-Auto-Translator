@@ -3,15 +3,14 @@ Copyright (c) Cutleast
 """
 
 import pytest
+from cutleast_core_lib.test.setup.clipboard_mock import ClipboardMock
 from pytestqt.qtbot import QtBot
 
+from tests.base_test import BaseTest
 from ui.widgets.paste_entry import PasteLineEdit
 
-from .._setup.clipboard import Clipboard
-from ..ui_test import UiTest
 
-
-class TestPasteLineEdit(UiTest):
+class TestPasteLineEdit(BaseTest):
     """
     Tests `ui.widgets.paste_entry.PasteLineEdit`.
     """
@@ -43,14 +42,14 @@ class TestPasteLineEdit(UiTest):
         assert widget.text() == ""
 
     def test_paste_action_pastes_text(
-        self, widget: PasteLineEdit, clipboard: Clipboard
+        self, widget: PasteLineEdit, clipboard: ClipboardMock
     ) -> None:
         """
         Test the paste action pastes the text to the clipboard.
 
         Args:
             widget (PasteLineEdit): The PasteLineEdit instance to test.
-            clipboard (Clipboard): The mocked clipboard.
+            clipboard (ClipboardMock): The mocked clipboard.
         """
 
         # given
@@ -64,14 +63,14 @@ class TestPasteLineEdit(UiTest):
         assert widget.text() == test_text
 
     def test_paste_action_ignores_empty_text(
-        self, widget: PasteLineEdit, clipboard: Clipboard
+        self, widget: PasteLineEdit, clipboard: ClipboardMock
     ) -> None:
         """
         Test the paste action does not paste empty text to the clipboard.
 
         Args:
             widget (PasteLineEdit): The PasteLineEdit instance to test.
-            clipboard (Clipboard): The mocked clipboard.
+            clipboard (ClipboardMock): The mocked clipboard.
         """
 
         # given

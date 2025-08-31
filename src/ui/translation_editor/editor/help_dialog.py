@@ -36,7 +36,7 @@ class EditorHelpDialog(QDialog):
         help_label = QLabel(
             self.tr("Below is an overview of the various states a string can have:")
         )
-        help_label.setObjectName("relevant_label")
+        help_label.setObjectName("h2")
         help_label.setWordWrap(True)
         vlayout.addWidget(help_label)
 

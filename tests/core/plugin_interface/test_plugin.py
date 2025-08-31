@@ -162,6 +162,7 @@ class TestPlugin(CoreTest):
         plugin_file: Path,
         expected_strings: list[PluginString],
         expected_num_strings: int,
+        data_folder: Path,
     ) -> None:
         """
         Tests `Plugin.extract_strings()`.
@@ -177,7 +178,7 @@ class TestPlugin(CoreTest):
         """
 
         # given
-        plugin_file = self.data_path() / "mod_instance" / "mods" / plugin_file
+        plugin_file = data_folder / "mod_instance" / "mods" / plugin_file
 
         # when
         actual_strings: list[PluginString] = Plugin(plugin_file).extract_strings(

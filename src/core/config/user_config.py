@@ -5,14 +5,13 @@ Copyright (c) Cutleast
 from pathlib import Path
 from typing import Annotated, Optional, override
 
+from cutleast_core_lib.core.config.base_config import BaseConfig
 from pydantic import Field
 
 from core.mod_managers.modorganizer.mo2_instance_info import Mo2InstanceInfo
 from core.mod_managers.vortex.profile_info import ProfileInfo
 from core.translation_provider.provider_preference import ProviderPreference
 from core.utilities.game_language import GameLanguage
-
-from ._base_config import BaseConfig
 
 
 class UserConfig(BaseConfig):

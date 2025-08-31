@@ -9,6 +9,8 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Any, Optional, override
 
+from cutleast_core_lib.core.utilities.filesystem import get_folder_size
+from cutleast_core_lib.core.utilities.localized_enum import LocalizedEnum
 from pydantic import BaseModel, Field
 from PySide6.QtWidgets import QApplication
 
@@ -17,8 +19,6 @@ from core.string import StringList
 from core.string.string_utils import StringUtils
 from core.translation_provider.mod_id import ModId
 from core.translation_provider.source import Source
-from core.utilities.filesystem import get_folder_size
-from core.utilities.localized_enum import LocalizedEnum
 
 
 class Translation(BaseModel):

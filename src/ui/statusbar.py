@@ -4,15 +4,14 @@ Copyright (c) Cutleast
 
 from typing import Optional, override
 
+from cutleast_core_lib.core.utilities.logger import Logger
+from cutleast_core_lib.ui.widgets.log_window import LogWindow
 from PySide6.QtCore import QSize, Qt, QTimerEvent, Signal
 from PySide6.QtWidgets import QApplication, QLabel, QPushButton, QStatusBar
 
 from core.translation_provider.provider import Provider
 from core.utilities import trim_string
-from core.utilities.logger import Logger
 from ui.utilities.icon_provider import IconProvider
-
-from .widgets.log_window import LogWindow
 
 
 class StatusBar(QStatusBar):
@@ -29,10 +28,10 @@ class StatusBar(QStatusBar):
 
     __log_window: Optional[LogWindow] = None
 
-    def __init__(self, logger: Logger, provider: Provider) -> None:
+    def __init__(self, provider: Provider) -> None:
         super().__init__()
 
-        self.__logger = logger
+        self.__logger = Logger.get()
         self.__logger.set_callback(self.log_signal.emit)
 
         self.__provider = provider

@@ -5,13 +5,13 @@ Copyright (c) Cutleast
 from pathlib import Path
 from typing import Optional
 
+from cutleast_core_lib.ui.widgets.menu import Menu
 from PySide6.QtCore import Signal
 from PySide6.QtGui import QAction, QCursor
 
 from core.database.translation import Translation
 from core.translation_provider.source import Source
 from ui.utilities.icon_provider import IconProvider, ResourceIcon
-from ui.widgets.menu import Menu
 
 
 class TranslationsMenu(Menu):

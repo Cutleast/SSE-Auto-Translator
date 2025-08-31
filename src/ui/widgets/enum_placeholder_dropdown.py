@@ -5,9 +5,9 @@ Copyright (c) Cutleast
 from enum import Enum
 from typing import Generic, Optional, TypeVar
 
+from cutleast_core_lib.core.utilities.localized_enum import LocalizedEnum
 from PySide6.QtCore import Qt, Signal
 
-from core.utilities.localized_enum import LocalizedEnum
 from ui.widgets.placeholder_dropdown import PlaceholderDropdown
 
 E = TypeVar("E", bound="Enum")
@@ -23,7 +23,7 @@ class EnumPlaceholderDropdown(PlaceholderDropdown, Generic[E]):
     This signal gets emitted when the selected enum value changes.
 
     Args:
-        E: The selected enum value
+        Optional[E]: The selected enum value or None
     """
 
     __enum_type: type[E]

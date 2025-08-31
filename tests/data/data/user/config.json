@@ -1,0 +1,13 @@
+{
+    "language": "German",
+    "api_key": "...",
+    "modinstance": {
+        "display_name": "Portable",
+        "profile": "Default",
+        "is_global": false,
+        "base_folder": "E:\\Modding\\Test Instance",
+        "mods_folder": "E:\\Modding\\Test Instance\\mods",
+        "profiles_folder": "E:\\Modding\\Test Instance\\profiles",
+        "mod_manager": "Mod Organizer 2"
+    }
+}

@@ -5,23 +5,22 @@ Copyright (c) Cutleast
 from copy import copy
 
 import pytest
+from cutleast_core_lib.core.cache.cache import Cache
+from cutleast_core_lib.core.utilities.logger import Logger
+from cutleast_core_lib.test.utils import Utils
+from cutleast_core_lib.ui.widgets.browse_edit import BrowseLineEdit
+from cutleast_core_lib.ui.widgets.color_edit import ColorLineEdit
+from cutleast_core_lib.ui.widgets.enum_dropdown import EnumDropdown
 from PySide6.QtWidgets import QCheckBox, QDoubleSpinBox, QPushButton, QSpinBox
+from pytestqt.qtbot import QtBot
 
-from app import App
 from core.config.app_config import AppConfig
 from core.utilities.localisation import Language
-from core.utilities.logger import Logger
-from tests.app_test import AppTest
-from tests.utils import Utils
+from tests.base_test import BaseTest
 from ui.settings.app_settings import AppSettings
-from ui.widgets.browse_edit import BrowseLineEdit
-from ui.widgets.color_entry import ColorLineEdit
-from ui.widgets.enum_dropdown import EnumDropdown
-
-from ..ui_test import UiTest
 
 
-class TestAppSettings(UiTest, AppTest):
+class TestAppSettings(BaseTest):
     """
     Tests `ui.settings.app_settings.AppSettings`.
     """
@@ -77,21 +76,21 @@ class TestAppSettings(UiTest, AppTest):
     )
 
     @pytest.fixture
-    def app_settings(self, app_context: App) -> AppSettings:
+    def app_settings(
+        self, cache: Cache, app_config: AppConfig, qtbot: QtBot
+    ) -> AppSettings:
         """
-        Returns a new `AppSettings` instance for the given `App` instance.
+        Returns a new `AppSettings` instance for tests.
         """
 
-        return AppSettings(app_context.app_config, self.cache())
+        return AppSettings(app_config, cache)
 
-    def test_initial(self, app_settings: AppSettings, app_context: App) -> None:
+    def test_initial(self, app_settings: AppSettings, app_config: AppConfig) -> None:
         """
         Tests the initial state of the `AppSettings` instance.
         """
 
         # given
-        app_config: AppConfig = app_context.app_config
-
         logs_num_box: QSpinBox = Utils.get_private_field(
             app_settings, *TestAppSettings.LOGS_NUM_BOX
         )
@@ -142,7 +141,7 @@ class TestAppSettings(UiTest, AppTest):
         assert log_level_box.getCurrentValue() == app_config.log_level
         assert app_lang_box.getCurrentValue() == app_config.language
         assert accent_color_entry.text() == app_config.accent_color
-        assert clear_cache_button.isEnabled() == app_context.cache.path.is_dir()
+        assert clear_cache_button.isEnabled() == Cache.get().path.is_dir()
 
         assert output_path_entry.text() == str(app_config.output_path or "")
         assert temp_path_entry.text() == str(app_config.temp_path or "")
@@ -160,13 +159,12 @@ class TestAppSettings(UiTest, AppTest):
             double_click_strings.isChecked() == app_config.show_strings_on_double_click
         )
 
-    def test_apply(self, app_settings: AppSettings, app_context: App) -> None:
+    def test_apply(self, app_settings: AppSettings, app_config: AppConfig) -> None:
         """
         Tests the `apply` method of the `AppSettings` instance.
         """
 
         # given
-        app_config: AppConfig = app_context.app_config
         old_config: AppConfig = copy(app_config)
 
         # when

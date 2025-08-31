@@ -35,7 +35,7 @@ class ResultDialog(QDialog):
         vlayout.addSpacing(15)
 
         title_label = QLabel(self.tr("Scan Result"))
-        title_label.setObjectName("title_label")
+        title_label.setObjectName("h1")
         vlayout.addWidget(title_label)
 
         vlayout.addSpacing(15)

@@ -4,12 +4,12 @@ Copyright (c) Cutleast
 
 from typing import Any
 
+from cutleast_core_lib.ui.widgets.menu import Menu
 from PySide6.QtCore import QSize
 from PySide6.QtWidgets import QCheckBox, QToolBar, QWidgetAction
 
 from core.string.string_status import StringStatus
 from ui.utilities.icon_provider import IconProvider
-from ui.widgets.menu import Menu
 
 
 class StringListToolbar(QToolBar):

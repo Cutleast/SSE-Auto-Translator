@@ -4,6 +4,10 @@ Copyright (c) Cutleast
 
 from typing import override
 
+from cutleast_core_lib.ui.settings.settings_page import SettingsPage
+from cutleast_core_lib.ui.widgets.enum_dropdown import EnumDropdown
+from cutleast_core_lib.ui.widgets.key_edit import KeyLineEdit
+from cutleast_core_lib.ui.widgets.link_button import LinkButton
 from PySide6.QtWidgets import (
     QApplication,
     QCheckBox,
@@ -22,12 +26,8 @@ from core.translation_provider.provider_preference import ProviderPreference
 from core.utilities.game_language import GameLanguage
 from ui.modinstance_selector.instance_selector_widget import InstanceSelectorWidget
 from ui.widgets.api_setup import ApiSetup
-from ui.widgets.enum_dropdown import EnumDropdown
-from ui.widgets.key_entry import KeyEntry
-from ui.widgets.link_button import LinkButton
 
 from .blacklist_dialog import BlacklistDialog
-from .settings_page import SettingsPage
 
 
 class UserSettings(SettingsPage[UserConfig]):
@@ -40,7 +40,7 @@ class UserSettings(SettingsPage[UserConfig]):
     __lang_box: EnumDropdown[GameLanguage]
     __source_label: QLabel
     __source_box: EnumDropdown[ProviderPreference]
-    __api_key_entry: KeyEntry
+    __api_key_entry: KeyLineEdit
     __masterlist_box: QCheckBox
 
     __modinstance_selector: InstanceSelectorWidget
@@ -76,8 +76,12 @@ class UserSettings(SettingsPage[UserConfig]):
         self.__lang_box = EnumDropdown(GameLanguage, self._initial_config.language)
         self.__lang_box.installEventFilter(self)
         self.__lang_box.currentValueChanged.connect(self.__on_lang_change)
-        self.__lang_box.currentValueChanged.connect(self._on_change)
-        self.__lang_box.currentValueChanged.connect(self._on_restart_required)
+        self.__lang_box.currentValueChanged.connect(
+            lambda _: self.changed_signal.emit()
+        )
+        self.__lang_box.currentValueChanged.connect(
+            lambda _: self.restart_required_signal.emit()
+        )
         translations_flayout.addRow(
             "*" + self.tr("Choose Game Language:"), self.__lang_box
         )
@@ -91,18 +95,24 @@ class UserSettings(SettingsPage[UserConfig]):
             ProviderPreference, self._initial_config.provider_preference
         )
         self.__source_box.installEventFilter(self)
-        self.__source_box.currentValueChanged.connect(self._on_change)
-        self.__source_box.currentValueChanged.connect(self._on_restart_required)
+        self.__source_box.currentValueChanged.connect(
+            lambda _: self.changed_signal.emit()
+        )
+        self.__source_box.currentValueChanged.connect(
+            lambda _: self.restart_required_signal.emit()
+        )
         self.__source_box.setEnabled(
             self._initial_config.language == GameLanguage.French
         )
         translations_flayout.addRow(self.__source_label, self.__source_box)
 
         api_key_hlayout = QHBoxLayout()
-        self.__api_key_entry = KeyEntry()
+        self.__api_key_entry = KeyLineEdit()
         self.__api_key_entry.setText(self._initial_config.api_key)
-        self.__api_key_entry.textChanged.connect(self._on_change)
-        self.__api_key_entry.textChanged.connect(self._on_restart_required)
+        self.__api_key_entry.textChanged.connect(lambda _: self.changed_signal.emit())
+        self.__api_key_entry.textChanged.connect(
+            lambda _: self.restart_required_signal.emit()
+        )
         api_key_hlayout.addWidget(self.__api_key_entry, 1)
         api_setup_button = QPushButton(self.tr("Start API Setup"))
         api_setup_button.clicked.connect(self.__start_api_setup)
@@ -116,7 +126,7 @@ class UserSettings(SettingsPage[UserConfig]):
             self.tr("Use global Masterlist from GitHub Repository (recommended)")
         )
         self.__masterlist_box.setChecked(self._initial_config.use_masterlist)
-        self.__masterlist_box.stateChanged.connect(self._on_change)
+        self.__masterlist_box.stateChanged.connect(lambda _: self.changed_signal.emit())
         open_masterlist_button = LinkButton(
             "https://github.com/Cutleast/SSE-Auto-Translator/tree/master/masterlists",
             self.tr("Open Masterlist (in Browser)"),
@@ -139,8 +149,8 @@ class UserSettings(SettingsPage[UserConfig]):
         self.__modinstance_selector.set_cur_instance_data(
             self._initial_config.modinstance
         )
-        self.__modinstance_selector.changed.connect(self._on_change)
-        self.__modinstance_selector.changed.connect(self._on_restart_required)
+        self.__modinstance_selector.changed.connect(self.changed_signal.emit)
+        self.__modinstance_selector.changed.connect(self.restart_required_signal.emit)
         instance_vlayout.addWidget(self.__modinstance_selector)
 
     def __init_file_type_settings(self) -> None:
@@ -155,7 +165,9 @@ class UserSettings(SettingsPage[UserConfig]):
         self.__enable_interface_files_box.setChecked(
             self._initial_config.enable_interface_files
         )
-        self.__enable_interface_files_box.stateChanged.connect(self._on_change)
+        self.__enable_interface_files_box.stateChanged.connect(
+            lambda _: self.changed_signal.emit()
+        )
         filetypes_vlayout.addWidget(self.__enable_interface_files_box)
 
         self.__enable_scripts_box = QCheckBox(
@@ -164,7 +176,9 @@ class UserSettings(SettingsPage[UserConfig]):
             + self.tr("[EXPERIMENTAL]")
         )
         self.__enable_scripts_box.setChecked(self._initial_config.enable_scripts)
-        self.__enable_scripts_box.stateChanged.connect(self._on_change)
+        self.__enable_scripts_box.stateChanged.connect(
+            lambda _: self.changed_signal.emit()
+        )
         filetypes_vlayout.addWidget(self.__enable_scripts_box)
 
         self.__enable_textures_box = QCheckBox(
@@ -173,7 +187,9 @@ class UserSettings(SettingsPage[UserConfig]):
             + self.tr("[EXPERIMENTAL]")
         )
         self.__enable_textures_box.setChecked(self._initial_config.enable_textures)
-        self.__enable_textures_box.stateChanged.connect(self._on_change)
+        self.__enable_textures_box.stateChanged.connect(
+            lambda _: self.changed_signal.emit()
+        )
         filetypes_vlayout.addWidget(self.__enable_textures_box)
 
         self.__enable_sound_files_box = QCheckBox(
@@ -184,7 +200,9 @@ class UserSettings(SettingsPage[UserConfig]):
         self.__enable_sound_files_box.setChecked(
             self._initial_config.enable_sound_files
         )
-        self.__enable_sound_files_box.stateChanged.connect(self._on_change)
+        self.__enable_sound_files_box.stateChanged.connect(
+            lambda _: self.changed_signal.emit()
+        )
         filetypes_vlayout.addWidget(self.__enable_sound_files_box)
 
     def __on_lang_change(self, lang: GameLanguage) -> None:
@@ -205,7 +223,7 @@ class UserSettings(SettingsPage[UserConfig]):
             dialog.exec() == QDialog.DialogCode.Accepted
             and self.__author_blacklist != self._initial_config.author_blacklist
         ):
-            self._on_change()
+            self.changed_signal.emit()
 
     def __start_api_setup(self) -> None:
         dialog = QDialog(QApplication.activeModalWidget())

@@ -15,14 +15,14 @@ class TestDbGen(BaseTest):
     Tests `utilities.db_gen.main.DbGen`.
     """
 
-    def test_get_string_tables_german(self) -> None:
+    def test_get_string_tables_german(self, data_folder: Path) -> None:
         """
         Tests `utilities.db_gen.main.DbGen.get_string_tables()` with german.
         """
 
         # given
         db_gen = DbGen()
-        data_path: Path = self.data_path() / "db_gen"
+        data_path: Path = data_folder / "db_gen"
         input_folder: Path = data_path / "orig"
         strings_folder: Path = data_path / "trans"
         language: str = "german"
@@ -38,14 +38,14 @@ class TestDbGen(BaseTest):
         assert plugin_name in string_tables
         assert len(string_tables[plugin_name]) > 0
 
-    def test_get_string_tables_english(self) -> None:
+    def test_get_string_tables_english(self, data_folder: Path) -> None:
         """
         Tests `utilities.db_gen.main.DbGen.get_string_tables()` with english.
         """
 
         # given
         db_gen = DbGen()
-        data_path: Path = self.data_path() / "db_gen"
+        data_path: Path = data_folder / "db_gen"
         input_folder: Path = data_path / "orig"
         language: str = "english"
         plugin_name: str = "_resourcepack.esl"
@@ -60,14 +60,14 @@ class TestDbGen(BaseTest):
         assert plugin_name in string_tables
         assert len(string_tables[plugin_name]) > 0
 
-    def test_create_database(self) -> None:
+    def test_create_database(self, data_folder: Path) -> None:
         """
         Tests `utilities.db_gen.main.DbGen.create_database()`.
         """
 
         # given
         db_gen = DbGen()
-        data_path: Path = self.data_path() / "db_gen"
+        data_path: Path = data_folder / "db_gen"
         tmp_path: Path = self.tmp_folder()
         input_folder: Path = data_path / "orig"
         strings_folder: Path = data_path / "trans"
@@ -92,13 +92,13 @@ class TestDbGen(BaseTest):
         assert db_data[0]["string"]
         assert db_data[0]["original"] != db_data[0]["string"]
 
-    def test_get_strings_files_from_bsa(self) -> None:
+    def test_get_strings_files_from_bsa(self, data_folder: Path) -> None:
         """
         Tests `utilities.db_gen.main.DbGen.get_strings_files_from_bsa()`.
         """
 
         # given
-        data_path: Path = self.data_path() / "db_gen"
+        data_path: Path = data_folder / "db_gen"
         bsa_path: Path = data_path / "trans" / "_ResourcePack.bsa"
         plugin_stem: str = "_ResourcePack"
 
@@ -115,13 +115,13 @@ class TestDbGen(BaseTest):
             "strings/_resourcepack_german.dlstrings",
         ]
 
-    def test_map_strings_files(self) -> None:
+    def test_map_strings_files(self, data_folder: Path) -> None:
         """
         Tests `utilities.db_gen.main.DbGen.map_strings_files()`.
         """
 
         # given
-        data_path: Path = self.data_path() / "db_gen"
+        data_path: Path = data_folder / "db_gen"
         input_folder: Path = data_path / "orig"
         strings_folder: Path = data_path / "trans"
         plugin_path: Path = input_folder / "_ResourcePack.esl"

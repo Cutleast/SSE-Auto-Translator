@@ -8,6 +8,7 @@ import shutil
 from pathlib import Path
 from typing import Optional
 
+from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
 from PySide6.QtCore import QObject
 
 from core.config.user_config import UserConfig
@@ -21,7 +22,6 @@ from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.plugin_interface import plugin as esp
 from core.string import StringList
-from ui.widgets.loading_dialog import LoadingDialog
 
 
 class Exporter(QObject):

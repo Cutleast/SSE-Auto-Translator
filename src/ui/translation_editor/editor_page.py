@@ -18,14 +18,12 @@ from PySide6.QtWidgets import (
     QTreeWidgetItem,
 )
 
-from app_context import AppContext
 from core.config.app_config import AppConfig
-from core.config.translator_config import TranslatorConfig
-from core.config.user_config import UserConfig
-from core.database.database import TranslationDatabase
 from core.database.translation import Translation
 from core.translator_api.translator import Translator
+from core.user_data.user_data import UserData
 from ui.utilities.icon_provider import IconProvider
+from ui.utilities.theme_manager import ThemeManager
 
 from .editor.editor_tab import EditorTab
 
@@ -43,10 +41,8 @@ class EditorPage(QSplitter):
         int: New number of open tabs.
     """
 
-    database: TranslationDatabase
     app_config: AppConfig
-    user_config: UserConfig
-    translator_config: TranslatorConfig
+    user_data: UserData
     translator: Translator
 
     __tabs: dict[Translation, tuple[EditorTab, QTreeWidgetItem]] = {}
@@ -59,18 +55,14 @@ class EditorPage(QSplitter):
 
     def __init__(
         self,
-        database: TranslationDatabase,
         app_config: AppConfig,
-        user_config: UserConfig,
-        translator_config: TranslatorConfig,
+        user_data: UserData,
         translator: Translator,
     ) -> None:
         super().__init__()
 
-        self.database = database
         self.app_config = app_config
-        self.user_config = user_config
-        self.translator_config = translator_config
+        self.user_data = user_data
         self.translator = translator
 
         self.setOrientation(Qt.Orientation.Horizontal)
@@ -179,7 +171,7 @@ class EditorPage(QSplitter):
             message_box.button(QMessageBox.StandardButton.Yes).setText(self.tr("Yes"))
 
             # Reapply stylesheet as setDefaultButton() doesn't update the style by itself
-            message_box.setStyleSheet(AppContext.get_stylesheet())
+            message_box.setStyleSheet(ThemeManager.get_stylesheet() or "")
 
             if message_box.exec() != QMessageBox.StandardButton.Yes:
                 return
@@ -208,12 +200,7 @@ class EditorPage(QSplitter):
             translation_item = QTreeWidgetItem([translation.name])
 
             translation_tab = EditorTab(
-                translation,
-                self.database,
-                self.app_config,
-                self.user_config,
-                self.translator_config,
-                self.translator,
+                translation, self.app_config, self.user_data, self.translator
             )
             translation_tab.close_signal.connect(self.close_translation)
             self.__tabs[translation] = translation_tab, translation_item

@@ -5,11 +5,10 @@ Copyright (c) Cutleast
 import string
 from typing import Optional
 
+from cutleast_core_lib.ui.utilities import apply_shadow
 from PySide6.QtCore import QPoint, Qt
 from PySide6.QtGui import QAction, QCursor, QTextCharFormat, QTextCursor
 from PySide6.QtWidgets import QMenu, QPlainTextEdit, QWidget
-
-from ui.utilities import apply_shadow
 
 from .spell_checker import SpellChecker
 

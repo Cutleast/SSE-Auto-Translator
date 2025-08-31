@@ -4,10 +4,10 @@ Copyright (c) Cutleast
 
 from typing import Optional, override
 
+from cutleast_core_lib.core.utilities.localized_enum import LocalizedEnum
 from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QApplication
 
-from core.utilities.localized_enum import LocalizedEnum
 from ui.utilities.icon_provider import IconProvider, ResourceIcon
 
 

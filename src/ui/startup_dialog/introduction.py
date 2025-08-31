@@ -6,12 +6,11 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 
 from typing import Optional, override
 
+from cutleast_core_lib.core.utilities.path_limit_fixer import PathLimitFixer
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QLabel, QPushButton, QWidget
 
-from app_context import AppContext
 from core.config.user_config import UserConfig
-from core.utilities.path_limit_fixer import PathLimitFixer
 from ui.startup_dialog.page import Page
 
 
@@ -39,8 +38,10 @@ class IntroductionPage(Page):
 
     @override
     def _init_form(self) -> None:
+        from app import App
+
         documentation_button = QPushButton(self.tr("Open Documentation"))
-        documentation_button.clicked.connect(AppContext.get_app().open_documentation)
+        documentation_button.clicked.connect(App.get().open_documentation)
         self._vlayout.addWidget(documentation_button)
 
         self._vlayout.addSpacing(50)
@@ -57,7 +58,7 @@ class IntroductionPage(Page):
 
         fix_button = QPushButton(self.tr("Fix Windows Path Limit"))
         fix_button.clicked.connect(
-            lambda: PathLimitFixer.disable_path_limit(AppContext.get_app().res_path)
+            lambda: PathLimitFixer.disable_path_limit(App.get().res_path)
         )
         self._vlayout.addWidget(fix_button)
 

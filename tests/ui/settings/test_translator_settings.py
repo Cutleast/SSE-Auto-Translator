@@ -5,21 +5,20 @@ Copyright (c) Cutleast
 from copy import copy
 
 import pytest
+from cutleast_core_lib.test.utils import Utils
+from cutleast_core_lib.ui.widgets.enum_dropdown import EnumDropdown
+from cutleast_core_lib.ui.widgets.key_edit import KeyLineEdit
 from PySide6.QtWidgets import QCheckBox
+from pytestqt.qtbot import QtBot
 
-from app import App
 from core.config.translator_config import TranslatorConfig
 from core.translator_api.translator_api import TranslatorApi
-from tests.app_test import AppTest
-from tests.utils import Utils
+from core.user_data.user_data import UserData
+from tests.base_test import BaseTest
 from ui.settings.translator_settings import TranslatorSettings
-from ui.widgets.enum_dropdown import EnumDropdown
-from ui.widgets.key_entry import KeyEntry
-
-from ..ui_test import UiTest
 
 
-class TestTranslatorSettings(UiTest, AppTest):
+class TestTranslatorSettings(BaseTest):
     """
     Tests `ui.settings.translator_settings.TranslatorSettings`.
     """
@@ -28,7 +27,7 @@ class TestTranslatorSettings(UiTest, AppTest):
         "translator_box",
         EnumDropdown[TranslatorApi],
     )
-    API_KEY_ENTRY: tuple[str, type[KeyEntry]] = "api_key_entry", KeyEntry
+    API_KEY_ENTRY: tuple[str, type[KeyLineEdit]] = "api_key_entry", KeyLineEdit
 
     SHOW_CONFIRMATIONS_BOX: tuple[str, type[QCheckBox]] = (
         "show_confirmations_box",
@@ -36,27 +35,29 @@ class TestTranslatorSettings(UiTest, AppTest):
     )
 
     @pytest.fixture
-    def translator_settings(self, app_context: App) -> TranslatorSettings:
+    def translator_settings(
+        self, user_data: UserData, qtbot: QtBot
+    ) -> TranslatorSettings:
         """
-        Returns a new `TranslatorSettings` instance for the given `App` instance.
+        Returns a new `TranslatorSettings` instance for tests.
         """
 
-        return TranslatorSettings(app_context.translator_config, self.cache())
+        return TranslatorSettings(user_data.translator_config)
 
     def test_initial(
-        self, translator_settings: TranslatorSettings, app_context: App
+        self, translator_settings: TranslatorSettings, user_data: UserData
     ) -> None:
         """
         Tests the initial state of the `TranslatorSettings` instance.
         """
 
         # given
-        translator_config: TranslatorConfig = app_context.translator_config
+        translator_config: TranslatorConfig = user_data.translator_config
 
         translator_box: EnumDropdown[TranslatorApi] = Utils.get_private_field(
             translator_settings, *TestTranslatorSettings.TRANSLATOR_BOX
         )
-        api_key_entry: KeyEntry = Utils.get_private_field(
+        api_key_entry: KeyLineEdit = Utils.get_private_field(
             translator_settings, *TestTranslatorSettings.API_KEY_ENTRY
         )
 
@@ -77,14 +78,14 @@ class TestTranslatorSettings(UiTest, AppTest):
         )
 
     def test_apply(
-        self, translator_settings: TranslatorSettings, app_context: App
+        self, translator_settings: TranslatorSettings, user_data: UserData
     ) -> None:
         """
         Tests the `apply` method of the `AppSettings` instance.
         """
 
         # given
-        translator_config: TranslatorConfig = app_context.translator_config
+        translator_config: TranslatorConfig = user_data.translator_config
         old_config: TranslatorConfig = copy(translator_config)
 
         # when

@@ -8,6 +8,9 @@ import webbrowser
 from pathlib import Path
 from typing import Optional
 
+from cutleast_core_lib.core.utilities.filesystem import open_in_explorer
+from cutleast_core_lib.ui.utilities.tree_widget import are_children_visible
+from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
 from PySide6.QtCore import Qt, Signal
 from PySide6.QtGui import QFont
 from PySide6.QtWidgets import (
@@ -21,15 +24,11 @@ from PySide6.QtWidgets import (
     QVBoxLayout,
 )
 
-from app_context import AppContext
-from core.cache.cache import Cache
 from core.config.app_config import AppConfig
-from core.config.user_config import UserConfig
 from core.database.database import TranslationDatabase
 from core.database.database_service import DatabaseService
 from core.database.importer import Importer
 from core.database.translation import Translation
-from core.masterlist.masterlist import Masterlist
 from core.mod_file.mod_file import ModFile
 from core.mod_file.plugin_file import PluginFile
 from core.mod_file.translation_status import TranslationStatus
@@ -42,10 +41,8 @@ from core.string.string_status import StringStatus
 from core.translation_provider.exceptions import ModNotFoundError
 from core.translation_provider.provider import Provider
 from core.translation_provider.source import Source
+from core.user_data.user_data import UserData
 from core.utilities import matches_filter
-from core.utilities.filesystem import open_in_explorer
-from ui.utilities.tree_widget import are_children_visible
-from ui.widgets.loading_dialog import LoadingDialog
 from ui.widgets.string_list.string_list_dialog import StringListDialog
 
 from .help_dialog import ModInstanceHelpDialog
@@ -88,11 +85,9 @@ class ModInstanceWidget(QTreeWidget):
         Translation: Translation to open with the editor.
     """
 
-    cache: Cache
-    database: TranslationDatabase
     app_config: AppConfig
-    user_config: UserConfig
-    masterlist: Masterlist
+    user_data: UserData
+    database: TranslationDatabase
     provider: Provider
 
     mod_instance: ModInstance
@@ -129,24 +124,20 @@ class ModInstanceWidget(QTreeWidget):
 
     def __init__(
         self,
-        cache: Cache,
-        database: TranslationDatabase,
         app_config: AppConfig,
-        user_config: UserConfig,
-        masterlist: Masterlist,
+        user_data: UserData,
         provider: Provider,
-        mod_instance: ModInstance,
         state_service: StateService,
     ) -> None:
+        from app import App
+
         super().__init__()
 
-        self.cache = cache
-        self.database = database
         self.app_config = app_config
-        self.user_config = user_config
-        self.masterlist = masterlist
+        self.user_data = user_data
+        self.database = user_data.database
         self.provider = provider
-        self.mod_instance = mod_instance
+        self.mod_instance = user_data.modinstance
         self.state_service = state_service
 
         self.__init_ui()
@@ -181,7 +172,7 @@ class ModInstanceWidget(QTreeWidget):
         self.__menu.open_in_explorer_requested.connect(self.__open_in_explorer)
 
         self.state_service.update_signal.connect(self.__update)
-        AppContext.get_app().exit_chain.append(self.__save_modfile_states)
+        App.get().exit_chain.append(self.__save_modfile_states)
 
         self.__load_mod_instance()
 
@@ -328,7 +319,7 @@ class ModInstanceWidget(QTreeWidget):
             )
 
             for modfile, item in modfile_items.items():
-                ignored: bool = self.masterlist.is_ignored(modfile.name)
+                ignored: bool = self.user_data.masterlist.is_ignored(modfile.name)
                 item.setDisabled(ignored)
                 if ignored:
                     item.setCheckState(0, Qt.CheckState.Unchecked)
@@ -437,9 +428,9 @@ class ModInstanceWidget(QTreeWidget):
         _, selected_modfiles = self.get_selected_items()
 
         for modfile in selected_modfiles:
-            self.masterlist.add_to_ignore_list(modfile.name)
+            self.user_data.masterlist.add_to_ignore_list(modfile.name)
 
-        self.user_config.save()
+        self.user_data.user_config.save()
         self.__update()
 
     def __open_modpage(self) -> None:

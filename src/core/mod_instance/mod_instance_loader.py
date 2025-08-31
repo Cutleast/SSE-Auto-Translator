@@ -5,6 +5,7 @@ Copyright (c) Cutleast
 import logging
 from typing import Optional
 
+from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
 from PySide6.QtCore import QObject
 
 from core.mod_file.mod_file_service import ModFileService
@@ -16,7 +17,6 @@ from core.mod_managers.modorganizer.modorganizer_api import ModOrganizerApi
 from core.mod_managers.vortex.profile_info import ProfileInfo
 from core.mod_managers.vortex.vortex_api import VortexApi
 from core.utilities.game_language import GameLanguage
-from ui.widgets.loading_dialog import LoadingDialog
 
 
 class ModInstanceLoader(QObject):
@@ -66,7 +66,10 @@ class ModInstanceLoader(QObject):
 
         self.build_modfile_index(instance.mods, language, include_bsas, ldialog)
 
-        self.log.info(f"Loaded mod instance with {len(instance.mods)} mod(s).")
+        self.log.info(
+            f"Loaded mod instance with {len(instance.mods)} mod(s) and "
+            f"{len(instance.modfiles)} mod file(s)."
+        )
 
         return instance
 

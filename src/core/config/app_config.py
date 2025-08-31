@@ -4,50 +4,22 @@ Copyright (c) Cutleast
 
 import tempfile
 from pathlib import Path
-from typing import Annotated, Optional, override
+from typing import Optional, override
 
-from pydantic import Field
+from cutleast_core_lib.core.config.app_config import AppConfig as BaseAppConfig
+from cutleast_core_lib.core.utilities.dynamic_default_model import default_factory
+from cutleast_core_lib.ui.utilities.ui_mode import UIMode
 
 from core.utilities.localisation import Language
-from core.utilities.logger import Logger
-
-from ._base_config import BaseConfig
-
-DEFAULT_ACCENT_COLOR: str = "#a998d2"
-"""Default accent color."""
 
 
-class AppConfig(BaseConfig):
+class AppConfig(BaseAppConfig):
     """
     Class for application settings.
     """
 
-    log_level: Annotated[Logger.Level, Field(alias="log.level")] = Logger.Level.DEBUG
-    """Log level"""
-
-    log_num_of_files: Annotated[int, Field(alias="log.num_of_files", ge=-1)] = 5
-    """Number of newest log files to keep"""
-
-    log_format: Annotated[str, Field(alias="log.format")] = (
-        "[%(asctime)s.%(msecs)03d][%(levelname)s][%(name)s.%(funcName)s]: %(message)s"
-    )
-    """Log format"""
-
-    log_date_format: Annotated[str, Field(alias="log.date_format")] = (
-        "%d.%m.%Y %H:%M:%S"
-    )
-    """Log date format"""
-
-    log_file_name: Annotated[str, Field(alias="log.file_name")] = (
-        "%d-%m-%Y-%H-%M-%S.log"
-    )
-    """Log file name"""
-
     language: Language = Language.System
     """App language"""
-
-    accent_color: str = DEFAULT_ACCENT_COLOR
-    """Accent color"""
 
     detector_confidence: float = 0.8
     """Language detector confidence"""
@@ -109,3 +81,13 @@ class AppConfig(BaseConfig):
     @staticmethod
     def get_config_name() -> str:
         return "app/config.json"
+
+    @default_factory("accent_color")
+    @classmethod
+    def _get_default_accent_color(cls) -> str:
+        return "#a998d2"
+
+    @default_factory("ui_mode")
+    @classmethod
+    def _get_default_ui_mode(cls) -> UIMode:
+        return UIMode.Dark

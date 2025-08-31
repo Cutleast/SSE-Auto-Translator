@@ -2,6 +2,8 @@
 Copyright (c) Cutleast
 """
 
+from pathlib import Path
+
 import pytest
 
 from core.mod_instance.mod_instance import ModInstance
@@ -12,7 +14,7 @@ from core.mod_managers.modorganizer.mo2_instance_info import Mo2InstanceInfo
 from core.mod_managers.vortex.profile_info import ProfileInfo
 from core.utilities.game_language import GameLanguage
 from tests.core.core_test import CoreTest
-from tests.core.setup.mock_plyvel import MockPlyvelDB
+from tests.setup.mock_plyvel import MockPlyvelDB
 
 
 class TestModInstanceLoader(CoreTest):
@@ -60,7 +62,7 @@ class TestModInstanceLoader(CoreTest):
         assert len(mod_instance.mods) == 7
         assert len(mod_instance.modfiles) == 8
 
-    def test_load_non_existing_mo2_instance(self) -> None:
+    def test_load_non_existing_mo2_instance(self, data_folder: Path) -> None:
         """
         Tests `ModInstanceLoader.load_instance()` with invalid arguments.
         """
@@ -70,9 +72,9 @@ class TestModInstanceLoader(CoreTest):
             display_name="Something",
             profile="Lol",
             is_global=False,
-            base_folder=self.data_path() / "lol",
-            mods_folder=self.data_path() / "lol" / "mods",
-            profiles_folder=self.data_path() / "lol" / "profiles",
+            base_folder=data_folder / "lol",
+            mods_folder=data_folder / "lol" / "mods",
+            profiles_folder=data_folder / "lol" / "profiles",
             mod_manager=ModManager.ModOrganizer,
         )
         loader = ModInstanceLoader()

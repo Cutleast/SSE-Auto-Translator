@@ -4,7 +4,6 @@ Copyright (c) Cutleast
 
 from pathlib import Path
 
-from app import App
 from core.database.database import TranslationDatabase
 from core.database.database_service import DatabaseService
 from core.database.importer import Importer
@@ -14,6 +13,7 @@ from core.mod_instance.mod import Mod
 from core.string import StringList
 from core.string.plugin_string import PluginString
 from core.string.string_status import StringStatus
+from core.user_data.user_data import UserData
 from core.utilities.game_language import GameLanguage
 
 from ..core_test import CoreTest
@@ -24,15 +24,15 @@ class TestDatabaseService(CoreTest):
     Tests `core.database.database_service.DatabaseService`.
     """
 
-    def test_load_database(self) -> None:
+    def test_load_database(self, res_path: Path, user_data_path: Path) -> None:
         """
         Tests `DatabaseService.load_database()`.
         """
 
         # given
-        appdb_path: Path = self.res_path() / "app" / "database"
-        userdb_path: Path = self.data_path() / "data" / "user" / "database"
-        language: GameLanguage = self.user_config().language
+        appdb_path: Path = res_path / "app" / "database"
+        userdb_path: Path = user_data_path / "user" / "database"
+        language: GameLanguage = GameLanguage.German
 
         # when
         database: TranslationDatabase = DatabaseService.load_database(
@@ -46,14 +46,14 @@ class TestDatabaseService(CoreTest):
             "Wet and Cold SE - German",
         ]
 
-    def test_create_translation_for_mod(self, app_context: App) -> None:
+    def test_create_translation_for_mod(self, user_data: UserData) -> None:
         """
         Tests `DatabaseService.create_translation_for_mod()`.
         """
 
         # given
-        mod: Mod = self.get_mod_by_name("RS Children Overhaul")
-        database: TranslationDatabase = self.database()
+        mod: Mod = self.get_mod_by_name("RS Children Overhaul", user_data.modinstance)
+        database: TranslationDatabase = user_data.database
 
         # when
         created_translation: Translation = DatabaseService.create_translation_for_mod(
@@ -68,16 +68,16 @@ class TestDatabaseService(CoreTest):
             Path("RSkyrimChildren.esm"),
         ]
 
-    def test_create_translation_for_mod_file(self, app_context: App) -> None:
+    def test_create_translation_for_mod_file(self, user_data: UserData) -> None:
         """
         Tests `DatabaseService.create_translation_for_mod()`.
         """
 
         # given
         modfile: ModFile = self.get_modfile_from_mod_name(
-            "RS Children Overhaul", "RSChildren.esp"
+            "RS Children Overhaul", "RSChildren.esp", user_data.modinstance
         )
-        database: TranslationDatabase = self.database()
+        database: TranslationDatabase = user_data.database
 
         # when
         created_translation: Translation = (
@@ -90,15 +90,19 @@ class TestDatabaseService(CoreTest):
         assert created_translation.name == "RSChildren.esp - German"
         assert list(created_translation.strings.keys()) == [Path("RSChildren.esp")]
 
-    def test_create_translation_from_mod(self, app_context: App) -> None:
+    def test_create_translation_from_mod(self, user_data: UserData) -> None:
         """
         Tests `DatabaseService.create_translation_from_mod()`.
         """
 
         # given
-        original_mod: Mod = self.get_mod_by_name("Wet and Cold SE")
-        translated_mod: Mod = self.get_mod_by_name("Wet and Cold SE - German")
-        database: TranslationDatabase = self.database()
+        original_mod: Mod = self.get_mod_by_name(
+            "Wet and Cold SE", user_data.modinstance
+        )
+        translated_mod: Mod = self.get_mod_by_name(
+            "Wet and Cold SE - German", user_data.modinstance
+        )
+        database: TranslationDatabase = user_data.database
 
         # when
         translation_strings: dict[Path, StringList] = (
