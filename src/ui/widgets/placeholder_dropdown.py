@@ -79,3 +79,24 @@ class PlaceholderDropdown(QComboBox):
         """
 
         return super().setCurrentIndex(index + 1)  # add 1 to account for placeholder
+
+    @override
+    def itemText(self, index: int) -> str:
+        """
+        Args:
+            index (int): Non-placeholder index.
+
+        Returns:
+            str: Non-placeholder text.
+        """
+
+        return super().itemText(index + 1)  # add 1 to account for placeholder
+
+    @override
+    def count(self) -> int:
+        """
+        Returns:
+            int: Number of non-placeholder items.
+        """
+
+        return super().count() - 1  # subtract 1 to account for placeholder
