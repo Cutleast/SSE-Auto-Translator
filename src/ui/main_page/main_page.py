@@ -494,3 +494,16 @@ class MainPageWidget(QWidget):
                     details=str(filter),
                     yesno=False,
                 ).show()
+
+    def save_state(self) -> None:
+        """
+        Saves the state of the widget to the cache.
+        """
+
+        self.state_service.save_states_to_cache(
+            {
+                modfile: self.__modinstance_widget.is_modfile_checked(modfile, mod)
+                for mod in self.user_data.modinstance.mods
+                for modfile in mod.modfiles
+            }
+        )

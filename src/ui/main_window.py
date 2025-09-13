@@ -192,6 +192,15 @@ class MainWindow(QMainWindow):
         else:
             event.ignore()
 
+    @override
+    def close(self) -> bool:
+        closed: bool = super().close()
+
+        if closed:
+            self.mainpage_widget.save_state()
+
+        return closed
+
     def __open_settings(self) -> None:
         SettingsDialog(
             self.app_config,

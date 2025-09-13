@@ -129,8 +129,6 @@ class ModInstanceWidget(QTreeWidget):
         provider: Provider,
         state_service: StateService,
     ) -> None:
-        from app import App
-
         super().__init__()
 
         self.app_config = app_config
@@ -172,7 +170,6 @@ class ModInstanceWidget(QTreeWidget):
         self.__menu.open_in_explorer_requested.connect(self.__open_in_explorer)
 
         self.state_service.update_signal.connect(self.__update)
-        App.get().exit_chain.append(self.__save_modfile_states)
 
         self.__load_mod_instance()
 
@@ -753,12 +750,3 @@ class ModInstanceWidget(QTreeWidget):
 
         self.__state_filter = state_filter if state_filter else None
         self.__update()
-
-    def __save_modfile_states(self) -> None:
-        self.state_service.save_states_to_cache(
-            {
-                modfile: item.checkState(0) == Qt.CheckState.Checked
-                for modfile_item in self.__modfile_items.values()
-                for modfile, item in modfile_item.items()
-            }
-        )

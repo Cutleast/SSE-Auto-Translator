@@ -172,6 +172,8 @@ class StateService(QObject):
 
         Cache.save_to_cache(StateService.CACHE_FILE_NAME, state_cache)
 
+        self.log.info("Saved mod file states to cache.")
+
     def set_modfile_states(self, states: dict[ModFile, TranslationStatus]) -> None:
         """
         Applies the given mod file states to the modlist and emits the update signal.
