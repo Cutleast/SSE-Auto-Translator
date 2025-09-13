@@ -60,10 +60,6 @@ class TestUserSettings(BaseTest):
 
         return UserSettings(user_data.user_config)
 
-    # TODO: Fix this test
-    @pytest.mark.skip(
-        "Access violation when initializing the file dialog of a browse edit"
-    )
     def test_initial(self, user_settings: UserSettings, user_data: UserData) -> None:
         """
         Tests the initial state of the `UserSettings` instance.
@@ -116,10 +112,6 @@ class TestUserSettings(BaseTest):
         assert enable_textures_box.isChecked() == user_config.enable_textures
         assert enable_sound_files_box.isChecked() == user_config.enable_sound_files
 
-    # TODO: Fix this test
-    @pytest.mark.skip(
-        "Access violation when initializing the file dialog of a browse edit"
-    )
     def test_apply(self, user_settings: UserSettings, user_data: UserData) -> None:
         """
         Tests the `apply` method of the `UserSettings` instance.
