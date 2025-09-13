@@ -655,12 +655,14 @@ class ModInstanceWidget(QTreeWidget):
             if any(item.isSelected() for item in modfile_items.values())
         }
 
-    def get_checked_items(self) -> dict[Mod, list[ModFile]]:
+    def get_checked_items(self, filtered: bool = True) -> dict[Mod, list[ModFile]]:
         """
-        Returns the currently checked items.
+        Args:
+            filtered (bool, optional):
+                Whether to return only visible items. Defaults to True.
 
         Returns:
-            dict[Mod, list[ModFile]]: Mods with checked mod files
+            dict[Mod, list[ModFile]]: All mod files whose items are checked.
         """
 
         return {
@@ -668,12 +670,9 @@ class ModInstanceWidget(QTreeWidget):
                 modfile
                 for modfile, item in modfile_items.items()
                 if item.checkState(0) == Qt.CheckState.Checked
+                and (not filtered or not item.isHidden())
             ]
             for mod, modfile_items in self.__modfile_items.items()
-            if any(
-                item.checkState(0) == Qt.CheckState.Checked
-                for item in modfile_items.values()
-            )
         }
 
     def __get_current_item(self) -> Optional[Mod | ModFile]:
@@ -704,7 +703,7 @@ class ModInstanceWidget(QTreeWidget):
             current_item is not None
             and not (
                 isinstance(current_item, Mod)
-                and current_item.name.endswith("_separator")
+                and current_item.mod_type == Mod.Type.Separator
             )
             and (
                 not isinstance(current_item, Mod)
@@ -750,3 +749,41 @@ class ModInstanceWidget(QTreeWidget):
 
         self.__state_filter = state_filter if state_filter else None
         self.__update()
+
+    def get_visible_modfile_item_count(self, only_checked: bool = True) -> int:
+        """
+        Args:
+            only_checked (bool): Only count items that are checked.
+
+        Returns:
+            int: Number of visible modfile items with the current active filter
+        """
+
+        return len(
+            [
+                modfile_item
+                for modfile_items in self.__modfile_items.values()
+                for modfile_item in modfile_items.values()
+                if (
+                    not modfile_item.isHidden()
+                    and (
+                        not only_checked
+                        or modfile_item.checkState(0) == Qt.CheckState.Checked
+                    )
+                )
+            ]
+        )
+
+    def is_modfile_checked(self, modfile: ModFile, mod: Mod) -> bool:
+        """
+        Checks if the item of a mod file is checked.
+
+        Args:
+            modfile (ModFile): Mod file.
+            mod (Mod): Mod the file is belonging to.
+
+        Returns:
+            bool: Whether the item is checked.
+        """
+
+        return self.__modfile_items[mod][modfile].checkState(0) == Qt.CheckState.Checked

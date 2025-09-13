@@ -17,9 +17,13 @@ import pytest
 from cutleast_core_lib.core.utilities.env_resolver import resolve
 from cutleast_core_lib.test.base_test import BaseTest as CoreBaseTest
 from pyfakefs.fake_filesystem import FakeFilesystem
+from PySide6.QtGui import QIcon
 from pytest_mock import MockerFixture
 
 from core.config.app_config import AppConfig
+from core.mod_file.mod_file import ModFile
+from core.mod_instance.mod import Mod
+from core.mod_instance.mod_instance import ModInstance
 from core.mod_managers.mod_manager import ModManager
 from core.mod_managers.modorganizer.mo2_instance_info import Mo2InstanceInfo
 from core.mod_managers.vortex.profile_info import ProfileInfo
@@ -203,6 +207,17 @@ class BaseTest(CoreBaseTest):
 
         return fs
 
+    @pytest.fixture(autouse=True)
+    def mock_icons(self, monkeypatch: pytest.MonkeyPatch) -> None:
+        """
+        Fixture to mock the icon provider as the icon resources may lead to access
+        violations from within Qt.
+        """
+
+        from ui.utilities.icon_provider import IconProvider
+
+        monkeypatch.setattr(IconProvider, "get_res_icon", lambda *a, **k: QIcon())
+
     @pytest.fixture
     def vortex_db(
         self, mocker: MockerFixture, state_v2_json: Path, test_fs: FakeFilesystem
@@ -260,3 +275,67 @@ class BaseTest(CoreBaseTest):
             cls._temp_folder = Path(temp_folder_name)
 
         return cls._temp_folder
+
+    def get_mod_by_name(self, mod_name: str, modinstance: ModInstance) -> Mod:
+        """
+        Gets a mod by its name from the loaded mod instance.
+
+        Args:
+            mod_name (str): The name of the mod
+            modinstance (ModInstance): The mod instance
+
+        Raises:
+            ValueError: When no mod with the specified name is found
+
+        Returns:
+            Mod: The mod
+        """
+
+        try:
+            mod: Mod = next((mod for mod in modinstance.mods if mod.name == mod_name))
+        except StopIteration:
+            raise ValueError(f"No mod with name {mod_name} found in mod instance.")
+
+        return mod
+
+    def get_modfile_from_mod(self, mod: Mod, modfile_name: str) -> ModFile:
+        """
+        Gets a mod file by its name from the specified mod.
+
+        Args:
+            mod (Mod): Mod to get mod file from
+            modfile_name (str): The name of the mod file
+
+        Returns:
+            ModFile: The mod file
+        """
+
+        try:
+            modfile: ModFile = next((m for m in mod.modfiles if m.name == modfile_name))
+        except StopIteration:
+            raise ValueError(f"No mod file with name {modfile_name} found in mod.")
+
+        return modfile
+
+    def get_modfile_from_mod_name(
+        self, mod_name: str, modfile_name: str, modinstance: ModInstance
+    ) -> ModFile:
+        """
+        Gets a mod file by its name from the specified mod.
+
+        Args:
+            mod_name (str): Name of the mod to get mod file from
+            modfile_name (str): The name of the mod file
+            modinstance (ModInstance): The mod instance
+
+        Raises:
+            ValueError: When no mod with the specified name is found
+            ValueError: When no mod file with the specified name is found
+
+        Returns:
+            ModFile: The mod file
+        """
+
+        mod: Mod = self.get_mod_by_name(mod_name, modinstance)
+
+        return self.get_modfile_from_mod(mod, modfile_name)

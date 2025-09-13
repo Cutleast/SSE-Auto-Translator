@@ -4,9 +4,6 @@ Copyright (c) Cutleast
 
 import logging
 
-from core.mod_file.mod_file import ModFile
-from core.mod_instance.mod import Mod
-from core.mod_instance.mod_instance import ModInstance
 from core.string.plugin_string import PluginString
 from tests.base_test import BaseTest
 
@@ -17,70 +14,6 @@ class CoreTest(BaseTest):
     """
 
     log: logging.Logger = logging.getLogger("CoreTest")
-
-    def get_mod_by_name(self, mod_name: str, modinstance: ModInstance) -> Mod:
-        """
-        Gets a mod by its name from the loaded mod instance.
-
-        Args:
-            mod_name (str): The name of the mod
-            modinstance (ModInstance): The mod instance
-
-        Raises:
-            ValueError: When no mod with the specified name is found
-
-        Returns:
-            Mod: The mod
-        """
-
-        try:
-            mod: Mod = next((mod for mod in modinstance.mods if mod.name == mod_name))
-        except StopIteration:
-            raise ValueError(f"No mod with name {mod_name} found in mod instance.")
-
-        return mod
-
-    def get_modfile_from_mod(self, mod: Mod, modfile_name: str) -> ModFile:
-        """
-        Gets a mod file by its name from the specified mod.
-
-        Args:
-            mod (Mod): Mod to get mod file from
-            modfile_name (str): The name of the mod file
-
-        Returns:
-            ModFile: The mod file
-        """
-
-        try:
-            modfile: ModFile = next((m for m in mod.modfiles if m.name == modfile_name))
-        except StopIteration:
-            raise ValueError(f"No mod file with name {modfile_name} found in mod.")
-
-        return modfile
-
-    def get_modfile_from_mod_name(
-        self, mod_name: str, modfile_name: str, modinstance: ModInstance
-    ) -> ModFile:
-        """
-        Gets a mod file by its name from the specified mod.
-
-        Args:
-            mod_name (str): Name of the mod to get mod file from
-            modfile_name (str): The name of the mod file
-            modinstance (ModInstance): The mod instance
-
-        Raises:
-            ValueError: When no mod with the specified name is found
-            ValueError: When no mod file with the specified name is found
-
-        Returns:
-            ModFile: The mod file
-        """
-
-        mod: Mod = self.get_mod_by_name(mod_name, modinstance)
-
-        return self.get_modfile_from_mod(mod, modfile_name)
 
     @staticmethod
     def calc_unique_string_hash(string: PluginString) -> int:
