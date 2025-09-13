@@ -5,6 +5,7 @@ Copyright (c) Cutleast
 from typing import Optional, override
 
 from cutleast_core_lib.core.utilities.logger import Logger
+from cutleast_core_lib.ui.widgets.copy_button import CopyButton
 from cutleast_core_lib.ui.widgets.log_window import LogWindow
 from PySide6.QtCore import QSize, Qt, QTimerEvent, Signal
 from PySide6.QtWidgets import QApplication, QLabel, QPushButton, QStatusBar
@@ -59,9 +60,8 @@ class StatusBar(QStatusBar):
         )
         self.addPermanentWidget(self.api_label)
 
-        copy_log_button = QPushButton()
+        copy_log_button = CopyButton()
         copy_log_button.setFixedSize(20, 20)
-        copy_log_button.setIcon(IconProvider.get_qta_icon("mdi6.content-copy"))
         copy_log_button.setIconSize(QSize(16, 16))
         copy_log_button.clicked.connect(
             lambda: QApplication.clipboard().setText(self.__logger.get_content())

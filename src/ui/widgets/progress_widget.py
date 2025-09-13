@@ -5,6 +5,7 @@ Copyright (c) Cutleast
 import traceback
 from typing import Optional
 
+from cutleast_core_lib.ui.widgets.copy_button import CopyButton
 from PySide6.QtCore import Qt, Signal
 from PySide6.QtWidgets import (
     QApplication,
@@ -61,10 +62,9 @@ class ProgressWidget(QWidget):
         self.__progress_bar.setFixedHeight(2)
         vlayout.addWidget(self.__progress_bar)
 
-        self.__copy_button = QPushButton()
+        self.__copy_button = CopyButton()
         self.__copy_button.setFixedSize(35, 35)
         self.__copy_button.setObjectName("download_button")
-        self.__copy_button.setIcon(IconProvider.get_qta_icon("mdi6.content-copy"))
         self.__copy_button.clicked.connect(
             lambda: QApplication.clipboard().setText(self.toolTip())
         )
