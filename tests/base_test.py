@@ -55,7 +55,7 @@ class BaseTest(CoreBaseTest):
         Cleans up temporary folder (if exists).
         """
 
-        if cls._temp_folder is not None:
+        if cls._temp_folder is not None and cls._temp_folder.is_dir():
             shutil.rmtree(cls._temp_folder)
 
         cls._temp_folder = None
@@ -244,20 +244,16 @@ class BaseTest(CoreBaseTest):
         mocker.stop(magic)
 
     @pytest.fixture
-    def state_v2_json(self, data_folder: Path) -> Generator[Path, None, None]:
+    def state_v2_json(self, data_folder: Path) -> Path:
         """
         Fixture to return a path to a sample JSON file within a temp folder resembling
         a Vortex database with the test instance.
 
-        Yields:
-            Generator[Path]: Path to sample JSON file
+        Returns:
+            Path: Path to sample JSON file
         """
 
-        with tempfile.TemporaryDirectory(prefix="SSE-AT_test_") as tmp_dir:
-            src = data_folder / "state.v2.json"
-            dst = Path(tmp_dir) / "state.v2.json"
-            shutil.copyfile(src, dst)
-            yield dst
+        return data_folder / "state.v2.json"
 
     @classmethod
     def tmp_folder(cls) -> Path:
