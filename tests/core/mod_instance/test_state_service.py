@@ -40,7 +40,7 @@ class TestStateService(CoreTest):
             "Ordinator - Perks of Skyrim.esp",
             modinstance,
         )
-        StateService(modinstance, database)
+        _ = StateService(modinstance, database)
 
         # then
         assert modfile.status != TranslationStatus.TranslationInstalled
