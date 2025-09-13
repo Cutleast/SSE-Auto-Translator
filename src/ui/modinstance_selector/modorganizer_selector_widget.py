@@ -141,7 +141,7 @@ class ModOrganizerSelectorWidget(BaseSelectorWidget[Mo2InstanceInfo, ModOrganize
                 resolve(Path("%LOCALAPPDATA%") / "ModOrganizer") / instance_name
             )
         else:
-            instance_path = Path(self.__portable_path_entry.text())
+            instance_path = self.__portable_path_entry.getPath()
 
         if not (instance_path / "ModOrganizer.ini").is_file():
             raise ValueError(
@@ -167,7 +167,7 @@ class ModOrganizerSelectorWidget(BaseSelectorWidget[Mo2InstanceInfo, ModOrganize
         self.__instance_dropdown.setCurrentText(
             instance_data.display_name if instance_data.is_global else "Portable"
         )
-        self.__portable_path_entry.setText(str(instance_data.base_folder))
+        self.__portable_path_entry.setPath(instance_data.base_folder)
         self.__profile_dropdown.setCurrentText(instance_data.profile)
         self.changed.emit()
 
