@@ -67,6 +67,12 @@ def __init_argparser() -> ArgumentParser:
         help="Overrides the path to the data directory.",
     )
 
+    parser.add_argument(
+        "--debug-mode",
+        action="store_true",
+        help="Enables various debug features and information used for development.",
+    )
+
     return parser
 
 

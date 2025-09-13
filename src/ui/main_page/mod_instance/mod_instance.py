@@ -324,6 +324,9 @@ class ModInstanceWidget(QTreeWidget):
                 if ignored:
                     item.setCheckState(0, Qt.CheckState.Unchecked)
 
+                if self.app_config.debug_mode:
+                    item.setToolTip(1, modfile.status.name)
+
                 item.setHidden(
                     (
                         self.__state_filter is not None

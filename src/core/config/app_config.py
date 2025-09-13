@@ -18,6 +18,11 @@ class AppConfig(BaseAppConfig):
     Class for application settings.
     """
 
+    debug_mode: bool = False
+    """
+    Debug mode. Enables various debug features and information. Used for development.
+    """
+
     language: Language = Language.System
     """App language"""
 

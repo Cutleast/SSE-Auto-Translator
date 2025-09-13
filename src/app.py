@@ -103,7 +103,10 @@ class App(BaseApp, Singleton):
 
     @override
     def _load_app_config(self) -> BaseAppConfig:
-        return AppConfig.load(self.data_path)
+        app_config = AppConfig.load(self.data_path)
+        app_config.debug_mode = getattr(self.args, "debug_mode", False)
+
+        return app_config
 
     @override
     def _get_theme_manager(self) -> Optional[ThemeManager]:

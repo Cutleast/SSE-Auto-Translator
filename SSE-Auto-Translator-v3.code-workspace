@@ -65,6 +65,9 @@
 				"program": "${workspaceFolder}/src/main.py",
 				"console": "internalConsole",
 				"cwd": "${workspaceFolder}",
+				"args": [
+					"--debug-mode"
+				],
 				"preLaunchTask": "compile-qrc",
 			},
 			{
