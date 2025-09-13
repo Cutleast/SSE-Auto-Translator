@@ -524,13 +524,17 @@ class TranslationsWidget(QTreeWidget):
         if isinstance(current_item, Translation) and current_item.path.is_dir():
             os.startfile(current_item.path)
 
-    def set_name_filter(self, name_filter: tuple[str, bool]) -> None:
+    def set_name_filter(self, name_filter: str, case_sensitive: bool) -> None:
         """
         Sets the name filter.
 
         Args:
-            name_filter (tuple[str, bool]): The name to filter by and case-sensitivity.
+            name_filter (str): The name to filter by.
+            case_sensitive (bool): Case sensitivity.
         """
 
-        self.__name_filter = name_filter if name_filter[0].strip() else None
+        if name_filter.strip():
+            self.__name_filter = (name_filter, case_sensitive)
+        else:
+            self.__name_filter = None
         self.update_translations()

@@ -343,15 +343,16 @@ class TranslationsTab(QWidget):
     def __update_translations_num(self) -> None:
         self.__translations_num_label.display(len(self.database.user_translations))
 
-    def set_name_filter(self, name_filter: tuple[str, bool]) -> None:
+    def set_name_filter(self, name_filter: str, case_sensitive: bool) -> None:
         """
         Sets the name filter.
 
         Args:
-            name_filter (tuple[str, bool]): The name to filter by and case-sensitivity.
+            name_filter (str): The name to filter by.
+            case_sensitive (bool): Case sensitivity.
         """
 
-        self.__translations_widget.set_name_filter(name_filter)
+        self.__translations_widget.set_name_filter(name_filter, case_sensitive)
 
     def highlight_translation(self, translation: Translation) -> None:
         """

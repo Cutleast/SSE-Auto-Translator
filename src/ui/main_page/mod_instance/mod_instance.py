@@ -339,7 +339,11 @@ class ModInstanceWidget(QTreeWidget):
                 )
 
             mod_item.setHidden(
-                (self.__state_filter is not None and not are_children_visible(mod_item))
+                (
+                    self.__state_filter is not None
+                    and TranslationStatus.NoneStatus not in self.__state_filter
+                    and not are_children_visible(mod_item)
+                )
                 or (
                     not matches_filter(mod.name, name_filter, case_sensitive or False)
                     and not are_children_visible(mod_item)
@@ -721,15 +725,19 @@ class ModInstanceWidget(QTreeWidget):
 
         ModInstanceHelpDialog(QApplication.activeModalWidget()).exec()
 
-    def set_name_filter(self, name_filter: tuple[str, bool]) -> None:
+    def set_name_filter(self, name_filter: str, case_sensitive: bool) -> None:
         """
         Sets the name filter.
 
         Args:
-            name_filter (tuple[str, bool]): The name to filter by and case-sensitivity.
+            name_filter (str): The name to filter by.
+            case_sensitive (bool): Case sensitivity.
         """
 
-        self.__name_filter = name_filter if name_filter[0].strip() else None
+        if name_filter.strip():
+            self.__name_filter = (name_filter, case_sensitive)
+        else:
+            self.__name_filter = None
         self.__update()
 
     def set_state_filter(self, state_filter: list[TranslationStatus]) -> None:
@@ -740,7 +748,7 @@ class ModInstanceWidget(QTreeWidget):
             state_filter (list[TranslationStatus]): The states to filter by.
         """
 
-        self.__state_filter = state_filter
+        self.__state_filter = state_filter if state_filter else None
         self.__update()
 
     def __save_modfile_states(self) -> None:
