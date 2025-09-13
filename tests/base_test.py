@@ -87,6 +87,7 @@ class BaseTest(CoreBaseTest):
 
         app_config = AppConfig.load(data_folder)
         app_config.temp_path = self.tmp_folder()
+        app_config.debug_mode = True
 
         return app_config
 
