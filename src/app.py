@@ -185,6 +185,8 @@ class App(BaseApp, Singleton):
             self.__component_provider.initialize_components,
         )
 
+        self.__check_nm_api_key(self.__user_data.user_config)
+
         main_window: MainWindow = cast(MainWindow, self.main_window)
         main_window.initialize(
             cast(AppConfig, self.app_config),
@@ -197,7 +199,6 @@ class App(BaseApp, Singleton):
         )
         main_window.showMaximized()
 
-        self.__check_nm_api_key(self.__user_data.user_config)
         self.detect_path_limit()
 
     def __check_nm_api_key(self, user_config: UserConfig) -> None:
