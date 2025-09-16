@@ -300,14 +300,6 @@ This list only affects translations from Nexus Mods!</source>
     </message>
 </context>
 <context>
-    <name>ComponentProvider</name>
-    <message>
-        <location filename="src/core/component_provider.py" line="59"/>
-        <source>Initializing app components...</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>DatabaseWidget</name>
     <message>
         <location filename="src/ui/main_page/database/database_widget.py" line="61"/>

@@ -305,14 +305,6 @@ Diese Liste hat nur eine Auswirkung auf Übersetzungen von Nexus Mods!</translat
     </message>
 </context>
 <context>
-    <name>ComponentProvider</name>
-    <message>
-        <location filename="src/core/component_provider.py" line="59"/>
-        <source>Initializing app components...</source>
-        <translation>App-Komponenten werden initialisiert...</translation>
-    </message>
-</context>
-<context>
     <name>DatabaseWidget</name>
     <message>
         <location filename="src/ui/main_page/database/database_widget.py" line="61"/>

@@ -7,8 +7,7 @@ import subprocess
 from typing import Optional
 
 from cutleast_core_lib.core.utilities.exe_info import get_execution_info
-from cutleast_core_lib.core.utilities.singleton import SingletonQObject
-from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
+from cutleast_core_lib.core.utilities.singleton import Singleton
 
 from core.config.app_config import AppConfig
 from core.downloader.download_manager import DownloadManager
@@ -20,7 +19,7 @@ from core.translator_api.translator import Translator
 from core.user_data.user_data import UserData
 
 
-class ComponentProvider(SingletonQObject):
+class ComponentProvider(Singleton):
     """
     Provider class for initializing and providing the app components.
     """
@@ -42,21 +41,12 @@ class ComponentProvider(SingletonQObject):
         self.__app_config = app_config
         self.__user_data = user_data
 
-    def initialize_components(
-        self, ldialog: Optional[LoadingDialog[None]] = None
-    ) -> None:
+    def initialize_components(self) -> None:
         """
         Initializes the app components.
-
-        Args:
-            ldialog (Optional[LoadingDialog[None]], optional):
-                Optional loading dialog. Defaults to None.
         """
 
         self.log.info("Initializing app components...")
-
-        if ldialog is not None:
-            ldialog.updateProgress(text1=self.tr("Initializing app components..."))
 
         NXMHandler(subprocess.list2cmdline(get_execution_info()[0]))
 

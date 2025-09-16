@@ -179,11 +179,7 @@ class App(BaseApp, Singleton):
         #     lambda url: self.log.info(f"Handled NXM link: {url}")
         # )
         self.__component_provider = ComponentProvider(app_config, self.__user_data)
-
-        LoadingDialog.run_callable(
-            QApplication.activeModalWidget(),
-            self.__component_provider.initialize_components,
-        )
+        self.__component_provider.initialize_components()
 
         self.__check_nm_api_key(self.__user_data.user_config)
 
