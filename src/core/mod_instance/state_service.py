@@ -68,7 +68,7 @@ class StateService(QObject):
 
         modfile_states: dict[ModFile, TranslationStatus] = {}
         for modfile in translation.strings:
-            original_modfile: Optional[ModFile] = self.mod_instance.get_modfile(
+            original_modfiles: list[ModFile] = self.mod_instance.get_modfiles(
                 modfile,
                 ignore_states=[
                     TranslationStatus.TranslationInstalled,
@@ -76,7 +76,7 @@ class StateService(QObject):
                 ],
             )
 
-            if original_modfile is not None:
+            for original_modfile in original_modfiles:
                 modfile_states[original_modfile] = (
                     TranslationStatus.TranslationInstalled
                 )
@@ -98,10 +98,10 @@ class StateService(QObject):
 
         modfile_states: dict[ModFile, TranslationStatus] = {}
         for modfile in translation.strings.keys():
-            original_modfile: Optional[ModFile] = self.mod_instance.get_modfile(
+            original_modfiles: list[ModFile] = self.mod_instance.get_modfiles(
                 modfile, ignore_states=[TranslationStatus.IsTranslated]
             )
-            if original_modfile is not None:
+            for original_modfile in original_modfiles:
                 modfile_states[original_modfile] = TranslationStatus.RequiresTranslation
 
         self.set_modfile_states(modfile_states)

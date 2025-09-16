@@ -103,6 +103,29 @@ class ModInstance:
             Optional[ModFile]: Mod file or None
         """
 
+        modfiles: list[ModFile] = self.get_modfiles(modfile, ignore_mods, ignore_states)
+        return modfiles[-1] if modfiles else None
+
+    def get_modfiles(
+        self,
+        modfile: Path,
+        ignore_mods: list[Mod] = [],
+        ignore_states: list[TranslationStatus] = [],
+    ) -> list[ModFile]:
+        """
+        Gets a list of mod files that match a given path. Returns them sorted in order
+        of modlist index (higher index overwrites lower index).
+
+        Args:
+            modfile (Path): Path of the mod file, relative to the game's "Data" folder.
+            ignore_mods (list[Mod], optional): List of mods to ignore. Defaults to [].
+            ignore_states (list[TranslationStatus], optional):
+                List of mod file states to ignore. Defaults to [].
+
+        Returns:
+            list[ModFile]: List of mod files
+        """
+
         mods: dict[Mod, ModFile] = {
             mod: mf
             for mod in filter(lambda m: m not in ignore_mods, self.mods)
@@ -110,12 +133,10 @@ class ModInstance:
             if mf.path == modfile
         }
 
-        # Get the mod file from the mod with the highest modlist index
-        return max(
-            mods.items(),
-            key=lambda item: self.mods.index(item[0]),
-            default=(None, None),
-        )[1]
+        return [
+            mf
+            for _, mf in sorted(mods.items(), key=lambda item: self.mods.index(item[0]))
+        ]
 
     def get_mod(self, mod_id: ModId) -> Optional[Mod]:
         """
