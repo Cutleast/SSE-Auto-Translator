@@ -1343,23 +1343,23 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
         <translation>Priorität</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="533"/>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="541"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="530"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="538"/>
         <source>Creating translation...</source>
         <translation>Übersetzung wird erstellt...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="566"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="563"/>
         <source>Importing installed translation...</source>
         <translation>Installierte Übersetzungen werden importiert...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="599"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="596"/>
         <source>Success!</source>
         <translation>Erfolgreich!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="602"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="599"/>
         <source>Translation successfully imported into database.</source>
         <translation>Übersetzung erfolgreich in die Datenbank importiert.</translation>
     </message>
@@ -1578,12 +1578,12 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
         <translation>Datenbank-Übersetzungen werden erstellt...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="619"/>
+        <location filename="src/core/scanner/scanner.py" line="621"/>
         <source>Scanning for installed translations...</source>
         <translation>Nach installierten Übersetzungen scannen...</translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="717"/>
+        <location filename="src/core/scanner/scanner.py" line="719"/>
         <source>Checking for translation updates...</source>
         <translation>Verfügbare Updates für Übersetzungen werden gesucht...</translation>
     </message>

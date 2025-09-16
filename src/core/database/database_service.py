@@ -357,6 +357,7 @@ class DatabaseService:
         cls,
         mod: Mod,
         database: TranslationDatabase,
+        only_complete_coverage: bool = False,
         apply_db: bool = True,
         add_and_save: bool = True,
     ) -> Translation:
@@ -366,6 +367,9 @@ class DatabaseService:
         Args:
             mod (Mod): Mod to create translation for.
             database (TranslationDatabase): Database to add the translation to.
+            only_complete_coverage (bool, optional):
+                Whether to only create translations for mod files that are completely
+                covered by the database. Defaults to False.
             apply_db (bool, optional): Whether to apply database. Defaults to True.
             add_and_save (bool, optional):
                 Whether to add the translation to the database and save them. Defaults to
@@ -395,6 +399,11 @@ class DatabaseService:
                         TranslationStatus.IsTranslated,
                     ]
                     and (modfile.path not in translation.strings)
+                    and (
+                        not only_complete_coverage
+                        or modfile.status
+                        == TranslationStatus.TranslationAvailableInDatabase
+                    )
                 ),
                 mod.modfiles,
             )

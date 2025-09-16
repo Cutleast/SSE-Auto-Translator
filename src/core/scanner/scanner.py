@@ -591,7 +591,9 @@ class Scanner(QObject):
                     )
 
                 self.log.info(f"Creating database translation for {mod.name!r}...")
-                DatabaseService.create_translation_for_mod(mod, self.database)
+                DatabaseService.create_translation_for_mod(
+                    mod, self.database, only_complete_coverage=True
+                )
 
     def run_translation_scan(
         self, mods: list[Mod], ldialog: Optional[LoadingDialog] = None

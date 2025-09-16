@@ -9,6 +9,7 @@ from core.database.database_service import DatabaseService
 from core.database.importer import Importer
 from core.database.translation import Translation
 from core.mod_file.mod_file import ModFile
+from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.string import StringList
 from core.string.plugin_string import PluginString
@@ -53,6 +54,8 @@ class TestDatabaseService(CoreTest):
 
         # given
         mod: Mod = self.get_mod_by_name("RS Children Overhaul", user_data.modinstance)
+        main_esp: ModFile = self.get_modfile_from_mod(mod, "RSChildren.esp")
+        main_esp.status = TranslationStatus.TranslationAvailableInDatabase
         database: TranslationDatabase = user_data.database
 
         # when
@@ -67,6 +70,15 @@ class TestDatabaseService(CoreTest):
             Path("RSChildren.esp"),
             Path("RSkyrimChildren.esm"),
         ]
+
+        # when
+        created_translation = DatabaseService.create_translation_for_mod(
+            mod, database, only_complete_coverage=True, add_and_save=False
+        )
+
+        # then
+        assert len(created_translation.strings) == 1
+        assert sorted(created_translation.strings.keys()) == [Path("RSChildren.esp")]
 
     def test_create_translation_for_mod_file(self, user_data: UserData) -> None:
         """
