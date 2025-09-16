@@ -11,6 +11,9 @@ from PySide6.QtWidgets import QTreeWidgetItem
 from pytestqt.qtbot import QtBot
 
 from core.config.app_config import AppConfig
+from core.database.database import TranslationDatabase
+from core.database.database_service import DatabaseService
+from core.database.translation import Translation
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
@@ -312,4 +315,101 @@ class TestModInstanceWidget(BaseTest):
         # then
         assert widget.get_visible_modfile_item_count() == len(
             widget.mod_instance.modfiles
+        )
+
+    def test_modfile_states_are_updated(self, widget: ModInstanceWidget) -> None:
+        """
+        Tests that modfile state changes are reflected in their items when they are
+        changed by the state service.
+        """
+
+        # given
+        state_service: StateService = widget.state_service
+        modfile_items: dict[Mod, dict[ModFile, QTreeWidgetItem]] = (
+            Utils.get_private_field(widget, *TestModInstanceWidget.MODFILE_ITEMS)
+        )
+
+        test_mod: Mod = self.get_mod_by_name("Wet and Cold SE", widget.mod_instance)
+        test_modfile: ModFile = self.get_modfile_from_mod(test_mod, "WetandCold.esp")
+        test_modfile_item: QTreeWidgetItem = modfile_items[test_mod][test_modfile]
+
+        # then
+        assert test_modfile_item.foreground(0).color().name() == (
+            TranslationStatus.get_color(test_modfile.status) or "#ffffff"
+        )
+
+        # when
+        for status in TranslationStatus:
+            state_service.set_modfile_states({test_modfile: status})
+
+            # then
+            assert test_modfile_item.foreground(0).color().name() == (
+                TranslationStatus.get_color(status) or "#ffffff"
+            )
+
+    def test_database_changes_affect_modfile_items(
+        self, widget: ModInstanceWidget
+    ) -> None:
+        """
+        Tests that changes to the translation database (e.g. adding or removing a
+        translation) affect the modfile items so that their colors get updated
+        accordingly.
+        """
+
+        # given
+        database: TranslationDatabase = widget.database
+        modfile_items: dict[Mod, dict[ModFile, QTreeWidgetItem]] = (
+            Utils.get_private_field(widget, *TestModInstanceWidget.MODFILE_ITEMS)
+        )
+
+        original_mod: Mod = self.get_mod_by_name("Wet and Cold SE", widget.mod_instance)
+        original_modfile: ModFile = self.get_modfile_from_mod(
+            original_mod, "WetandCold.esp"
+        )
+        original_modfile.status = TranslationStatus.TranslationInstalled
+        original_modfile_item: QTreeWidgetItem = modfile_items[original_mod][
+            original_modfile
+        ]
+        translated_mod: Mod = self.get_mod_by_name(
+            "Wet and Cold SE - German", widget.mod_instance
+        )
+        translated_modfile: ModFile = self.get_modfile_from_mod(
+            translated_mod, "WetandCold.esp"
+        )
+        translated_modfile.status = TranslationStatus.IsTranslated
+        translated_modfile_item: QTreeWidgetItem = modfile_items[translated_mod][
+            translated_modfile
+        ]
+
+        test_translation: Optional[Translation] = (
+            database.get_translation_by_modfile_path(original_modfile.path)
+        )
+
+        # then
+        assert test_translation is not None
+
+        # when
+        DatabaseService.delete_translation(test_translation, database, save=False)
+
+        # then
+        assert original_modfile.status == TranslationStatus.RequiresTranslation
+        assert original_modfile_item.foreground(0).color().name() == (
+            TranslationStatus.get_color(original_modfile.status) or "#ffffff"
+        )
+        assert translated_modfile.status == TranslationStatus.IsTranslated
+        assert translated_modfile_item.foreground(0).color().name() == (
+            TranslationStatus.get_color(translated_modfile.status) or "#ffffff"
+        )
+
+        # when
+        DatabaseService.add_translation(test_translation, database, save=False)
+
+        # then
+        assert original_modfile.status == TranslationStatus.TranslationInstalled
+        assert original_modfile_item.foreground(0).color().name() == (
+            TranslationStatus.get_color(original_modfile.status) or "#ffffff"
+        )
+        assert translated_modfile.status == TranslationStatus.IsTranslated
+        assert translated_modfile_item.foreground(0).color().name() == (
+            TranslationStatus.get_color(translated_modfile.status) or "#ffffff"
         )
