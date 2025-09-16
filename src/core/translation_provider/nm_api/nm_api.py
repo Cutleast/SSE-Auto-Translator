@@ -122,6 +122,9 @@ class NexusModsApi(ProviderApi):
         if api_key_valid:
             data: dict[str, Any] = json.loads(res.content.decode("utf8"))
             premium = data.get("is_premium", False)
+        else:
+            self.log.error("Response has non-200 status code!")
+            self.log.debug(f"Response content: {res.content}")
 
         return api_key_valid, premium
 
