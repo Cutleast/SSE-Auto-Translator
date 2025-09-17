@@ -79,14 +79,23 @@ class Mod(BaseModel):
         mod's path.
         """
 
+        from core.mod_file.mod_file_service import MODFILE_TYPES
+
+        patterns: list[str] = [
+            pattern
+            for file_type in MODFILE_TYPES
+            for pattern in file_type.get_glob_patterns("*")
+        ]
+
         files: list[Path] = [
             f.relative_to(self.path)
-            for f in self.path.rglob("*")
-            if not f.suffix.lower() == ".bsa" and f.is_file()
+            for pattern in patterns
+            for f in self.path.glob(pattern)
+            if f.is_file()
         ]
 
         # Add files from BSA archives
-        if False:  # TODO: Optimize this
+        if any(file_type.can_be_in_bsas() for file_type in MODFILE_TYPES):
             for bsa_path in self.path.glob("*.bsa"):
                 files += Mod.__get_files_from_bsa(bsa_path, self.path)
 
