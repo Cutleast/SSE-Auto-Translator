@@ -19,6 +19,7 @@ dependencies = [
     "pyuac",
     "pywin32",
     "pyzmq",
+    "requests-mock",
     "spylls",
     "sse-bsa",
     "websocket-client",

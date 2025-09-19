@@ -15,11 +15,15 @@ from unittest.mock import MagicMock
 import jstyleson as json
 import pytest
 from cutleast_core_lib.core.utilities.env_resolver import resolve
+from cutleast_core_lib.core.utilities.logger import Logger
 from cutleast_core_lib.test.base_test import BaseTest as CoreBaseTest
+from cutleast_core_lib.test.utils import Utils
 from pyfakefs.fake_filesystem import FakeFilesystem
 from PySide6.QtGui import QIcon
 from pytest_mock import MockerFixture
+from requests_mock import Mocker as RequestsMock
 
+from core.component_provider import ComponentProvider
 from core.config.app_config import AppConfig
 from core.mod_file.mod_file import ModFile
 from core.mod_instance.mod import Mod
@@ -103,6 +107,48 @@ class BaseTest(CoreBaseTest):
             return UserDataService.get().load()
 
         return UserDataService(res_path, user_data_path).load()
+
+    @pytest.fixture
+    def component_provider(
+        self, app_config: AppConfig, user_data: UserData, requests_mock: RequestsMock
+    ) -> Generator[ComponentProvider, None, None]:
+        """
+        Returns a component provider with all components initialized.
+
+        Yields:
+            ComponentProvider: The component provider
+        """
+
+        # mock validate endpoint for Nexus Mods API key validation
+        requests_mock.get(
+            "https://api.nexusmods.com/v1/users/validate.json",
+            status_code=200,
+            json={"is_premium": True},
+        )
+
+        provider = ComponentProvider(app_config, user_data)
+        provider.initialize_components()
+
+        yield provider
+
+        Utils.reset_singleton(ComponentProvider)
+        logging.debug("ComponentProvider singleton reset.")
+
+    @pytest.fixture
+    def logger(
+        self, app_config: AppConfig, test_fs: FakeFilesystem
+    ) -> Generator[Logger, None, None]:
+        """
+        Returns a logger instance for testing.
+
+        Yields:
+            Logger: The logger instance
+        """
+
+        yield Logger(Path("logs") / "test.log")
+
+        Utils.reset_singleton(Logger)
+        logging.debug("Logger singleton reset.")
 
     @pytest.fixture
     def mo2_instance_info(self, test_fs: FakeFilesystem) -> Mo2InstanceInfo:

@@ -114,7 +114,7 @@ class MainWindow(QMainWindow):
         self.__menu_bar.settings_requested.connect(self.__open_settings)
         self.__menu_bar.exit_requested.connect(self.close)
         self.__menu_bar.update_check_requested.connect(self.__check_for_updates)
-        self.__menu_bar.docs_requested.connect(App.get().open_documentation)
+        self.__menu_bar.docs_requested.connect(App.open_documentation)
         self.__menu_bar.path_limit_fix_requested.connect(
             lambda: PathLimitFixer.disable_path_limit(App.get().res_path)
         )
@@ -189,17 +189,9 @@ class MainWindow(QMainWindow):
 
         if confirmation:
             super().closeEvent(event)
+            self.mainpage_widget.save_state()
         else:
             event.ignore()
-
-    @override
-    def close(self) -> bool:
-        closed: bool = super().close()
-
-        if closed:
-            self.mainpage_widget.save_state()
-
-        return closed
 
     def __open_settings(self) -> None:
         SettingsDialog(
