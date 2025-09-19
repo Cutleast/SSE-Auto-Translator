@@ -1527,7 +1527,7 @@ Click on &quot;Show Details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="538"/>
+        <location filename="src/core/scanner/scanner.py" line="539"/>
         <source>Importing translations...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1562,17 +1562,17 @@ Click on &quot;Show Details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="584"/>
+        <location filename="src/core/scanner/scanner.py" line="587"/>
         <source>Creating database translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="621"/>
+        <location filename="src/core/scanner/scanner.py" line="632"/>
         <source>Scanning for installed translations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/scanner/scanner.py" line="719"/>
+        <location filename="src/core/scanner/scanner.py" line="730"/>
         <source>Checking for translation updates...</source>
         <translation type="unfinished"></translation>
     </message>

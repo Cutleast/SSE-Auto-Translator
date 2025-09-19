@@ -28,20 +28,20 @@ class TranslationDatabase(QObject):
     This signal gets emitted everytime, a translation is added, removed or renamed.
     """
 
-    add_signal = Signal(Translation)
+    add_signal = Signal(list)
     """
-    This signal gets emitted for every translation that is added.
+    This signal gets emitted when at least one translation is added.
 
     Args:
-        Translation: The added translation.
+        list[Translation]: The added translations.
     """
 
-    remove_signal = Signal(Translation)
+    remove_signal = Signal(list)
     """
-    This signal gets emitted for every translation that is removed.
+    This signal gets emitted when at least translation is removed.
 
     Args:
-        Translation: The removed translation.
+        list[Translation]: The removed translations.
     """
 
     userdb_path: Path

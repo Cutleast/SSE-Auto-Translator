@@ -495,12 +495,7 @@ class TranslationsWidget(QTreeWidget):
             if message_box.exec() != QMessageBox.StandardButton.Yes:
                 return
 
-            for translation in selected_translations:
-                DatabaseService.delete_translation(
-                    translation, self.database, save=False
-                )
-
-            DatabaseService.save_database(self.database)
+            DatabaseService.delete_translations(selected_translations, self.database)
 
     def __open_modpage(self) -> None:
         current_item: Optional[Translation | Path] = self.get_current_item()

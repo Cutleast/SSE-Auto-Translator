@@ -181,22 +181,53 @@ class DatabaseService:
             save (bool, optional): Whether to save the database. Defaults to True.
 
         ## Emitted Signals:
-            `TranslationDatabase.add_signal(translation)`:
+            `TranslationDatabase.add_signal([translation])`:
                 If the translation wasn't in the database before.
             `TranslationDatabase.update_signal()`: Always.
         """
 
-        if not database.is_translation_in_database(translation):
-            database.user_translations.append(translation)
-            cls.log.info(f"Added translation '{translation.name}' to database.")
+        cls.add_translations(translations=[translation], database=database, save=save)
 
-            database.add_signal.emit(translation)
-        else:
-            existing_translation: Translation = database.get_translation_for_id(
-                translation.id
-            )
-            cls.merge_translations(existing_translation, translation)
-            cls.log.info(f"Updated translation '{translation.name}' in database.")
+    @classmethod
+    def add_translations(
+        cls,
+        translations: list[Translation],
+        database: TranslationDatabase,
+        save: bool = True,
+    ) -> None:
+        """
+        Adds the specified translations to the specified translation database.
+        Optionally saves the database.
+
+        If a translation with the same ID (same name and path) is already in the database,
+        the existing translation will be updated and their strings are merged.
+
+        Args:
+            translations (list[Translation]): Translations to add.
+            database (TranslationDatabase): Database to add the translations to.
+            save (bool, optional): Whether to save the database. Defaults to True.
+
+        ## Emitted Signals:
+            `TranslationDatabase.add_signal(translations)`:
+                With the translation that weren't in the database before.
+            `TranslationDatabase.update_signal()`: Always.
+        """
+
+        added_translations: list[Translation] = []
+        for translation in translations:
+            if not database.is_translation_in_database(translation):
+                database.user_translations.append(translation)
+                cls.log.info(f"Added translation '{translation.name}' to database.")
+                added_translations.append(translation)
+            else:
+                existing_translation: Translation = database.get_translation_for_id(
+                    translation.id
+                )
+                cls.merge_translations(existing_translation, translation)
+                cls.log.info(f"Updated translation '{translation.name}' in database.")
+
+        if added_translations:
+            database.add_signal.emit(added_translations)
 
         database.update_signal.emit()
 
@@ -273,18 +304,47 @@ class DatabaseService:
             save (bool, optional): Whether to save the database. Defaults to True.
 
         ## Emitted Signals:
-            `TranslationDatabase.remove_signal(translation)`:
+            `TranslationDatabase.remove_signal([translation])`:
                 If the translation was in the database.
             `TranslationDatabase.update_signal()`: Always.
         """
 
-        shutil.rmtree(translation.path, ignore_errors=True)
+        cls.delete_translations(
+            translations=[translation], database=database, save=save
+        )
 
-        if database.is_translation_in_database(translation):
-            database.user_translations.remove(translation)
-            cls.log.info(f"Deleted translation '{translation.name}' from database.")
+    @classmethod
+    def delete_translations(
+        cls,
+        translations: list[Translation],
+        database: TranslationDatabase,
+        save: bool = True,
+    ) -> None:
+        """
+        Deletes the specified translations from the translation database.
 
-            database.remove_signal.emit(translation)
+        Args:
+            translations (list[Translation]): Translations to delete.
+            database (TranslationDatabase): Database to delete from.
+            save (bool, optional): Whether to save the database. Defaults to True.
+
+        ## Emitted Signals:
+            `TranslationDatabase.remove_signal(translations)`:
+                With every translation that was in the database.
+            `TranslationDatabase.update_signal()`: Always.
+        """
+
+        deleted_translations: list[Translation] = []
+        for translation in translations:
+            shutil.rmtree(translation.path, ignore_errors=True)
+
+            if database.is_translation_in_database(translation):
+                database.user_translations.remove(translation)
+                deleted_translations.append(translation)
+                cls.log.info(f"Deleted translation '{translation.name}' from database.")
+
+        if deleted_translations:
+            database.remove_signal.emit(deleted_translations)
 
         database.update_signal.emit()
 

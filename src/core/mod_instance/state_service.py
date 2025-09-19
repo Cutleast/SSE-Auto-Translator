@@ -50,59 +50,75 @@ class StateService(QObject):
         self.mod_instance = modinstance
         self.database = database
 
-        self.database.add_signal.connect(self.__on_translation_added)
-        self.database.remove_signal.connect(self.__on_translation_removed)
+        self.database.add_signal.connect(self.__on_translations_added)
+        self.database.remove_signal.connect(self.__on_translations_removed)
 
-    def __on_translation_added(self, translation: Translation) -> None:
+    def __on_translations_added(self, translations: list[Translation]) -> None:
         """
-        Handles the event when a translation is added to the database.
+        Handles the event when at least one translation is added to the database.
 
         Args:
-            translation (Translation): The added translation.
+            translations (list[Translation]): The added translations.
         """
 
         self.log.debug(
-            f"Translation '{translation.name}' added to database. Updating affected "
-            "mod file states..."
+            f"Updating mod file states for {len(translations)} added translation(s)..."
         )
 
         modfile_states: dict[ModFile, TranslationStatus] = {}
-        for modfile in translation.strings:
-            original_modfiles: list[ModFile] = self.mod_instance.get_modfiles(
-                modfile,
-                ignore_states=[
-                    TranslationStatus.TranslationInstalled,
-                    TranslationStatus.IsTranslated,
-                ],
+        for translation in translations:
+            self.log.debug(
+                f"Translation '{translation.name}' added to database. Updating affected "
+                "mod file states..."
             )
 
-            for original_modfile in original_modfiles:
-                modfile_states[original_modfile] = (
-                    TranslationStatus.TranslationInstalled
+            for modfile in translation.strings:
+                original_modfiles: list[ModFile] = self.mod_instance.get_modfiles(
+                    modfile,
+                    ignore_states=[
+                        TranslationStatus.TranslationInstalled,
+                        TranslationStatus.IsTranslated,
+                    ],
                 )
+
+                for original_modfile in original_modfiles:
+                    modfile_states[original_modfile] = (
+                        TranslationStatus.TranslationInstalled
+                    )
 
         self.set_modfile_states(modfile_states)
 
-    def __on_translation_removed(self, translation: Translation) -> None:
+    def __on_translations_removed(self, translations: list[Translation]) -> None:
         """
-        Handles the event when a translation is removed from the database.
+        Handles the event when at least one translation is removed from the database.
 
         Args:
-            translation (Translation): The removed translation.
+            translations (list[Translation]): The removed translations.
         """
 
         self.log.debug(
-            f"Translation '{translation.name}' removed from database. Updating affected "
-            "mod file states..."
+            f"Updating mod file states for {len(translations)} removed translation(s)..."
         )
 
         modfile_states: dict[ModFile, TranslationStatus] = {}
-        for modfile in translation.strings.keys():
-            original_modfiles: list[ModFile] = self.mod_instance.get_modfiles(
-                modfile, ignore_states=[TranslationStatus.IsTranslated]
+        for translation in translations:
+            self.log.debug(
+                f"Translation '{translation.name}' removed from database. Updating "
+                "affected mod file states..."
             )
-            for original_modfile in original_modfiles:
-                modfile_states[original_modfile] = TranslationStatus.RequiresTranslation
+
+            for modfile in translation.strings.keys():
+                original_modfiles: list[ModFile] = self.mod_instance.get_modfiles(
+                    modfile, ignore_states=[TranslationStatus.IsTranslated]
+                )
+
+                if original_modfiles:
+                    for original_modfile in original_modfiles:
+                        modfile_states[original_modfile] = (
+                            TranslationStatus.RequiresTranslation
+                        )
+                else:
+                    self.log.warning(f"Found no original mod file for '{modfile}'!")
 
         self.set_modfile_states(modfile_states)
 

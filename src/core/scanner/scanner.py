@@ -529,6 +529,7 @@ class Scanner(QObject):
         installed_translations: dict[Mod, Mod] = self.run_translation_scan(
             mods, ldialog
         )
+        new_translations: list[Translation] = []
         for m, (installed_translation, original_mod) in enumerate(
             installed_translations.items()
         ):
@@ -553,12 +554,14 @@ class Scanner(QObject):
                 Importer.import_mod_as_translation(installed_translation, original_mod)
             )
 
-            DatabaseService.create_translation_from_mod(
-                mod=installed_translation,
-                original_mod=original_mod,
-                strings=translation_strings,
-                database=self.database,
-                add_and_save=True,
+            new_translations.append(
+                DatabaseService.create_translation_from_mod(
+                    mod=installed_translation,
+                    original_mod=original_mod,
+                    strings=translation_strings,
+                    database=self.database,
+                    add_and_save=False,
+                )
             )
 
         if self.app_config.auto_create_database_translations:
@@ -591,9 +594,17 @@ class Scanner(QObject):
                     )
 
                 self.log.info(f"Creating database translation for {mod.name!r}...")
-                DatabaseService.create_translation_for_mod(
-                    mod, self.database, only_complete_coverage=True
+                new_translations.append(
+                    DatabaseService.create_translation_for_mod(
+                        mod,
+                        self.database,
+                        only_complete_coverage=True,
+                        add_and_save=False,
+                    )
                 )
+
+        if new_translations:
+            DatabaseService.add_translations(new_translations, self.database)
 
     def run_translation_scan(
         self, mods: list[Mod], ldialog: Optional[LoadingDialog] = None
