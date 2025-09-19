@@ -338,6 +338,9 @@ class ModInstanceWidget(QTreeWidget):
                     TranslationStatus.get_color(modfile.status) or Qt.GlobalColor.white,
                 )
 
+            if self.app_config.debug_mode:
+                mod_item.setToolTip(1, str(mod))
+
             mod_item.setHidden(
                 (
                     self.__state_filter is not None
