@@ -330,7 +330,7 @@ class NexusModsApi(ProviderApi):
     @override
     def get_modpage_url(self, mod_id: ModId) -> str:
         return NexusModsApi.create_nexus_mods_url(
-            game_id=mod_id.nm_game_id, mod_id=mod_id.mod_id, file_id=mod_id.file_id
+            game_id=mod_id.nm_game_id, mod_id=mod_id.mod_id
         )
 
     @override
