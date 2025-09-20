@@ -43,8 +43,14 @@ class IconProvider(BaseIconProvider):
         """
 
         path: str = ":/icons/" + resource_icon.value
+        disabled_path: str = ":/icons/disabled/" + resource_icon.value
 
         if not QFile.exists(path):
             raise FileNotFoundError(f"The icon '{path}' does not exist!")
 
-        return QIcon(path)
+        icon = QIcon(path)
+
+        if QFile.exists(disabled_path):
+            icon.addFile(disabled_path, mode=QIcon.Mode.Disabled)
+
+        return icon
