@@ -603,6 +603,9 @@ class Scanner(QObject):
                     )
                 )
 
+        for new_translation in new_translations:
+            new_translation.save()
+
         if new_translations:
             DatabaseService.add_translations(new_translations, self.database)
 
