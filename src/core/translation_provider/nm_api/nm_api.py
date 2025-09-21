@@ -141,12 +141,12 @@ class NexusModsApi(ProviderApi):
     ) -> req.Response:
         res: req.Response = super()._request(url, headers, handle_status_code)
 
-        rem_hreq: str = res.headers.get("X-RL-Hourly-Remaining", "0")
-        rem_dreq: str = res.headers.get("X-RL-Daily-Remaining", "0")
+        rem_hreq: Optional[str] = res.headers.get("X-RL-Hourly-Remaining", None)
+        rem_dreq: Optional[str] = res.headers.get("X-RL-Daily-Remaining", None)
 
-        if rem_hreq.isnumeric():
+        if rem_hreq is not None and rem_hreq.isnumeric():
             self.__rem_hreq = int(rem_hreq)
-        if rem_dreq.isnumeric():
+        if rem_dreq is not None and rem_dreq.isnumeric():
             self.__rem_dreq = int(rem_dreq)
 
         return res
