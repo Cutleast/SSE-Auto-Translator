@@ -18,6 +18,7 @@ class ResourceIcon(StrEnum):
     DetectLang = "detect_lang.svg"
     SSEAT = "icon.svg"
     NexusMods = "nexus_mods.svg"
+    OpenInBrowser = "open_in_browser.svg"
     Plugin = "plugin.svg"
     ScanOnline = "scan_online.svg"
 

@@ -83,13 +83,27 @@ QListWidget#side_menu {
 }
 
 
-/* Tree View & Table View */
-QTreeView#download_list {
-    selection-background-color: transparent;
+/* Download List Widget */
+DownloadListWidget QHeaderView::section {
+    font-style: bold;
 }
-QTreeView#download_list::item:selected,
-QTreeView#download_list::item:hover {
+DownloadListWidget QTreeView::item {
+    height: 30px;
+}
+DownloadListWidget Dropdown {
+    padding: 3px;
+}
+DownloadListWidget QTreeView QPushButton {
     background: transparent;
+    border-color: transparent;
+}
+DownloadListWidget QTreeView QPushButton:hover {
+    background: #15ffffff;
+    border-color: #15ffffff;
+}
+DownloadListWidget QTreeView QCheckBox::indicator {
+    width: 12px;
+    height: 12px;
 }
 
 

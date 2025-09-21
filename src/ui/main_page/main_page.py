@@ -6,7 +6,7 @@ import logging
 import os
 import webbrowser
 from pathlib import Path
-from typing import Optional, TypeVar
+from typing import Optional, TypeVar, cast
 
 from cutleast_core_lib.core.utilities.exe_info import get_current_path
 from cutleast_core_lib.ui.widgets.error_dialog import ErrorDialog
@@ -30,8 +30,8 @@ from PySide6.QtWidgets import (
 from core.config.app_config import AppConfig
 from core.database.exporter import Exporter
 from core.database.translation import Translation
-from core.downloader.download_manager import DownloadManager
-from core.downloader.translation_download import TranslationDownload
+from core.downloader.download_manager import DownloadListEntries, DownloadManager
+from core.downloader.file_download import FileDownload
 from core.mod_file.mod_file import ModFile
 from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
@@ -40,11 +40,10 @@ from core.mod_instance.state_service import StateService
 from core.scanner.scanner import Scanner
 from core.string import StringList
 from core.string.search_filter import SearchFilter
-from core.translation_provider.mod_id import ModId
 from core.translation_provider.provider import Provider
 from core.user_data.user_data import UserData
 from core.utilities.container_utils import join_dicts
-from ui.downloader.download_list_dialog import DownloadListDialog
+from ui.downloader.download_list_window import DownloadListWindow
 from ui.utilities.icon_provider import IconProvider
 from ui.widgets.ignore_list_dialog import IgnoreListDialog
 from ui.widgets.stacked_bar import StackedBar
@@ -390,21 +389,32 @@ class MainPageWidget(QWidget):
         else:
             items = self.__modinstance_widget.get_selected_modfiles()
 
-        download_entries: dict[tuple[str, ModId], list[TranslationDownload]] = (
-            LoadingDialog.run_callable(
-                QApplication.activeModalWidget(),
-                lambda ldialog: self.download_manager.collect_available_downloads(
-                    items, ldialog
-                ),
-            )
+        download_entries: DownloadListEntries = LoadingDialog.run_callable(
+            QApplication.activeModalWidget(),
+            lambda ldialog: self.download_manager.collect_available_downloads(
+                items, ldialog
+            ),
         )
-        DownloadListDialog(
-            download_entries,
-            self.provider,
-            self.user_data.database,
-            self.download_manager,
-            parent=QApplication.activeModalWidget(),
-        ).exec()
+        if download_entries:
+            download_list_window = DownloadListWindow(download_entries, self.provider)
+            download_list_window.downloads_started.connect(
+                lambda file_downloads, link_nxm: list(
+                    map(
+                        self.download_manager.request_download,
+                        cast(list[FileDownload], file_downloads),
+                    )
+                )
+            )
+            download_list_window.downloads_started.connect(
+                lambda file_downloads, link_nxm: self.download_manager.start()
+            )
+            download_list_window.show()
+        else:
+            QMessageBox.information(
+                QApplication.activeModalWidget() or self,
+                self.tr("No translation downloads available!"),
+                self.tr("There are no translations available to download."),
+            )
 
     def __build_output(self) -> None:
         """

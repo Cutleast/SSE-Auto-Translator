@@ -1,112 +1,160 @@
 """
-This file is part of SSE Auto Translator
-by Cutleast and falls under the license
-Attribution-NonCommercial-NoDerivatives 4.0 International.
+Copyright (c) Cutleast
 """
 
 import webbrowser
-from typing import Any, Optional
+from typing import Optional
 
+from cutleast_core_lib.ui.widgets.dropdown import Dropdown
+from PySide6.QtCore import QObject, Qt, Signal
 from PySide6.QtGui import QIcon
-from PySide6.QtWidgets import QComboBox, QPushButton, QTreeWidgetItem
+from PySide6.QtWidgets import QCheckBox, QComboBox, QPushButton, QTreeWidgetItem
 
+from core.downloader.file_download import FileDownload
 from core.downloader.translation_download import TranslationDownload
-from core.translation_provider.exceptions import ModNotFoundError
-from core.translation_provider.mod_id import ModId
 from core.translation_provider.provider import Provider
-from core.translation_provider.source import Source
+from ui.utilities.icon_provider import IconProvider, ResourceIcon
 
 
-class DownloadListItem(QTreeWidgetItem):
+class DownloadListItem(QTreeWidgetItem, QObject):  # pyright: ignore[reportIncompatibleMethodOverride]
     """
-    Class for download items for DownloadListDialog.
+    Class for the download item of a mod file for the download list.
     """
 
-    original_mod_id: ModId
-    open_original_button: QPushButton
-    translations_combobox: QComboBox
-    open_translation_button: QPushButton
-    files_combobox: QComboBox
-    download_button: QPushButton
+    toggled = Signal(bool, object)
+    """
+    Signal emitted when the checkbox of this item is toggled.
+
+    Args:
+        bool: Whether the checkbox is checked.
+        DownloadListItem: This item.
+    """
 
     provider: Provider
 
-    def __init__(
-        self,
-        name: str,
-        original_mod_id: ModId,
-        translation_downloads: list[TranslationDownload],
-        provider: Provider,
+    __translation_downloads: list[TranslationDownload]
+
+    __checkbox: QCheckBox
+    __translations_combobox: QComboBox
+    __open_translation_button: QPushButton
+    __files_combobox: QComboBox
+
+    def __init__(self) -> None:
+        super().__init__()
+        QObject.__init__(self)
+
+    def post_init(
+        self, translation_downloads: list[TranslationDownload], provider: Provider
     ) -> None:
-        super().__init__(["", name, "", "", ""])
+        """
+        **Must be called after adding this item to the tree widget!**
 
-        self.original_mod_id = original_mod_id
-        self.translation_downloads = translation_downloads
+        Initializes the item's widgets and their functionality.
+
+        Args:
+            translation_downloads (list[TranslationDownload]):
+                Available translations for the mod file.
+            provider (Provider): Translation provider.
+        """
+
         self.provider = provider
+        self.__translation_downloads = translation_downloads
 
-    def init_widgets(self) -> None:
-        """
-        Must be called after setting widgets.
-        """
+        self.__init_ui()
 
-        self.open_original_button.clicked.connect(self.__open_original)
-        self.open_translation_button.clicked.connect(self.__open_translation)
+        self.__checkbox.stateChanged.connect(self.__on_checked_changed)
+        self.__translations_combobox.currentIndexChanged.connect(
+            self.__on_translation_changed
+        )
+        self.__open_translation_button.clicked.connect(self.__open_translation_modpage)
 
-        for translation_download in self.translation_downloads:
-            if translation_download.source == Source.NexusMods:
-                text = f"{translation_download.name} ({translation_download.mod_id.mod_id})"
-            else:
-                text = translation_download.name
-
-            icon: Optional[QIcon] = translation_download.source.get_icon()
+        for d, download in enumerate(translation_downloads):
+            self.__translations_combobox.addItem(download.mod_info.display_name)
+            icon: Optional[QIcon] = download.mod_info.source.get_icon()
             if icon is not None:
-                self.translations_combobox.addItem(icon, text)
-            else:
-                self.translations_combobox.addItem(text)
+                self.__translations_combobox.setItemIcon(d, icon)
 
-        self.translations_combobox.setDisabled(len(self.translation_downloads) == 1)
-        self.translations_combobox.currentIndexChanged.connect(
-            self.__on_translation_selected
+    def __init_ui(self) -> None:
+        self.__checkbox = QCheckBox()
+        self.__checkbox.setChecked(True)
+        self.__checkbox.setFocusPolicy(Qt.FocusPolicy.NoFocus)
+        self.treeWidget().setItemWidget(self, 0, self.__checkbox)
+
+        self.__translations_combobox = Dropdown()
+        self.__translations_combobox.setFocusPolicy(Qt.FocusPolicy.NoFocus)
+        self.treeWidget().setItemWidget(self, 2, self.__translations_combobox)
+
+        self.__open_translation_button = QPushButton(
+            IconProvider.get_res_icon(ResourceIcon.OpenInBrowser), ""
         )
-        self.__on_translation_selected()
+        self.__open_translation_button.setFocusPolicy(Qt.FocusPolicy.NoFocus)
+        # self.__open_translation_button.setObjectName("transparent")
+        self.treeWidget().setItemWidget(self, 3, self.__open_translation_button)
 
-    def __on_translation_selected(self, *args: Any) -> None:
-        translation_download = self.translation_downloads[
-            self.translations_combobox.currentIndex()
+        self.__files_combobox = Dropdown()
+        self.__files_combobox.setFocusPolicy(Qt.FocusPolicy.NoFocus)
+        self.treeWidget().setItemWidget(self, 4, self.__files_combobox)
+
+    def __on_checked_changed(self, checked: bool) -> None:
+        self.__translations_combobox.setEnabled(checked)
+        self.__open_translation_button.setEnabled(checked)
+        self.__files_combobox.setEnabled(checked)
+
+        self.toggled.emit(checked, self)
+
+    def __on_translation_changed(self, new_index: int) -> None:
+        new_translation_download: TranslationDownload = self.__translation_downloads[
+            new_index
         ]
 
-        self.files_combobox.clear()
-
-        for download in translation_download.available_downloads:
-            if translation_download.source == Source.NexusMods:
-                text = f"{download.display_name} ({download.mod_id.file_id})"
-            else:
-                text = download.display_name
-            self.files_combobox.addItem(text)
-
-        self.files_combobox.setDisabled(
-            len(translation_download.available_downloads) == 1
+        self.__files_combobox.clear()
+        self.__files_combobox.addItems(
+            [
+                download.display_name
+                for download in new_translation_download.available_downloads
+            ]
         )
 
-    def __open_original(self) -> None:
-        try:
-            modpage_url: str = self.provider.get_modpage_url(
-                self.original_mod_id, source=Source.NexusMods
-            )
-            modpage_url += "?tab=files"
-            webbrowser.open(modpage_url)
-        except ModNotFoundError:
-            pass
+    def __open_translation_modpage(self) -> None:
+        current_translation_download: TranslationDownload = (
+            self.__translation_downloads[self.__translations_combobox.currentIndex()]
+        )
 
-    def __open_translation(self) -> None:
-        translation_download = self.translation_downloads[
-            self.translations_combobox.currentIndex()
+        if current_translation_download.mod_info.mod_id is not None:
+            url: str = self.provider.get_modpage_url(
+                mod_id=current_translation_download.mod_info.mod_id,
+                source=current_translation_download.mod_info.source,
+            )
+            webbrowser.open(url)
+
+    def set_checked(self, checked: bool) -> None:
+        """
+        Sets the checked state of this item.
+
+        Args:
+            checked (bool): Whether the item should be checked.
+        """
+
+        self.__checkbox.setChecked(checked)
+
+    def is_checked(self) -> bool:
+        """
+        Returns:
+            bool: Whether this item is checked.
+        """
+
+        return self.__checkbox.isChecked()
+
+    def get_current_file_download(self) -> FileDownload:
+        """
+        Returns:
+            FileDownload: The currently selected file download.
+        """
+
+        current_translation_download: TranslationDownload = (
+            self.__translation_downloads[self.__translations_combobox.currentIndex()]
+        )
+
+        return current_translation_download.available_downloads[
+            self.__files_combobox.currentIndex()
         ]
-
-        try:
-            modpage_url: str = self.provider.get_modpage_url(
-                translation_download.mod_id, source=translation_download.source
-            )
-            webbrowser.open(modpage_url)
-        except ModNotFoundError:
-            pass

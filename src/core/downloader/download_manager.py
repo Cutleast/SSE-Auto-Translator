@@ -3,8 +3,9 @@ Copyright (c) Cutleast
 """
 
 import logging
+from pathlib import Path
 from queue import Queue
-from typing import Optional
+from typing import Optional, TypeAlias
 
 from cutleast_core_lib.core.utilities.filesystem import clean_fs_name
 from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
@@ -25,8 +26,22 @@ from core.translation_provider.source import Source
 from core.utilities.progress_update import ProgressCallback
 
 from .file_download import FileDownload
+from .mod_info import ModInfo
 from .translation_download import TranslationDownload
 from .worker import Worker
+
+DownloadListEntries: TypeAlias = dict[ModInfo, dict[Path, list[TranslationDownload]]]
+"""
+Type alias for download list entries. A dict of mod infos to a dict of mod file paths to
+a list of available translation downloads.
+
+```
+ModInfo
+└─ ModFile Path (relative to the game's "Data" folder)
+   └─ TranslationDownload
+      └─ FileDownload
+```
+"""
 
 
 class DownloadManager(QObject):
@@ -241,7 +256,7 @@ class DownloadManager(QObject):
 
     def collect_available_downloads(
         self, items: dict[Mod, list[ModFile]], ldialog: Optional[LoadingDialog] = None
-    ) -> dict[tuple[str, ModId], list[TranslationDownload]]:
+    ) -> DownloadListEntries:
         """
         Collects downloads for required translations that are available online.
 
@@ -251,7 +266,7 @@ class DownloadManager(QObject):
                 Optional Loading dialog. Defaults to None.
 
         Returns:
-            dict[tuple[str, ModId], list[TranslationDownload]]:
+            DownloadListEntries:
                 Dictionary of mod-file combinations and their downloads.
         """
 
@@ -271,7 +286,7 @@ class DownloadManager(QObject):
         }
         items = {mod: modfiles for mod, modfiles in items.items() if modfiles}
 
-        translation_downloads: dict[tuple[str, ModId], list[TranslationDownload]] = {}
+        translation_downloads: DownloadListEntries = {}
         for m, (mod, modfiles) in enumerate(items.items()):
             if ldialog is not None:
                 ldialog.updateProgress(
@@ -281,25 +296,44 @@ class DownloadManager(QObject):
                     max1=len(items),
                 )
 
-            download_units: dict[str, list[TranslationDownload]] = (
+            mod_info = ModInfo(
+                display_name=mod.name,
+                mod_id=mod.mod_id,
+                source=Source.NexusMods if mod.mod_id is not None else Source.Local,
+            )
+
+            download_units: dict[Path, list[TranslationDownload]] = (
                 self.__collect_downloads_for_mod(mod, modfiles, ldialog)
             )
 
-            for name, downloads in download_units.items():
+            for modfile, downloads in download_units.items():
                 if downloads:
-                    translation_downloads.setdefault((name, mod.mod_id), []).extend(
-                        downloads
-                    )
+                    translation_downloads.setdefault(mod_info, {})[modfile] = downloads
 
         # Sort translation downloads in descending order
         # after last updated/uploaded timestamp
+        def sort_key(
+            item: tuple[ModInfo, dict[Path, list[TranslationDownload]]],
+        ) -> int:
+            try:
+                first_download_unit: TranslationDownload = list(item[1].values())[0][0]
+
+                if first_download_unit.mod_info.mod_id is not None:
+                    return self.provider.get_details(
+                        mod_id=first_download_unit.mod_info.mod_id,
+                        source=first_download_unit.mod_info.source,
+                    ).timestamp
+            except Exception as ex:
+                self.log.error(
+                    f"Failed to calculate download priority: {ex}", exc_info=ex
+                )
+
+            return 0
+
         translation_downloads = {
-            index: downloads
-            for index, downloads in sorted(
-                translation_downloads.copy().items(),
-                key=lambda item: self.provider.get_details(
-                    item[1][0].mod_id, source=item[1][0].source
-                ).timestamp,
+            mod_info: download_units
+            for mod_info, download_units in sorted(
+                translation_downloads.copy().items(), key=sort_key
             )
         }
 
@@ -307,8 +341,8 @@ class DownloadManager(QObject):
 
     def __collect_downloads_for_mod(
         self, mod: Mod, modfiles: list[ModFile], ldialog: Optional[LoadingDialog] = None
-    ) -> dict[str, list[TranslationDownload]]:
-        download_units: dict[str, list[TranslationDownload]] = {}
+    ) -> dict[Path, list[TranslationDownload]]:
+        download_units: dict[Path, list[TranslationDownload]] = {}
         for m, modfile in enumerate(modfiles):
             if ldialog is not None:
                 ldialog.updateProgress(
@@ -323,7 +357,7 @@ class DownloadManager(QObject):
                     self.__collect_downloads_for_modfile(mod, modfile, ldialog)
                 )
                 if modfile_downloads:
-                    download_units[f"{mod.name} > {modfile.name}"] = modfile_downloads
+                    download_units[modfile.path] = modfile_downloads
             except Exception as ex:
                 self.log.error(
                     f"Failed to collect downloads for {mod.name!r} > {modfile.name!r}: "
@@ -380,10 +414,7 @@ class DownloadManager(QObject):
                     download_id, source=source
                 ).display_name
                 translation_download = TranslationDownload(
-                    name=translation_name,
-                    mod_id=download_id,
-                    modfile=modfile.path,
-                    source=source,
+                    mod_info=ModInfo(translation_name, download_id, source),
                     available_downloads=[],
                 )
                 translation_downloads.setdefault(
@@ -394,9 +425,13 @@ class DownloadManager(QObject):
 
         # Sort after upload timestamp so that newest translations are first
         result.sort(
-            key=lambda download: self.provider.get_details(
-                download.mod_id, source=download.source
-            ).timestamp,
+            key=lambda download: (
+                self.provider.get_details(
+                    download.mod_info.mod_id, source=download.mod_info.source
+                ).timestamp
+                if download.mod_info.mod_id is not None
+                else 0
+            ),
             reverse=True,
         )
 
@@ -406,7 +441,7 @@ class DownloadManager(QObject):
         self,
         translations: dict[Translation, Mod],
         ldialog: Optional[LoadingDialog] = None,
-    ) -> dict[tuple[str, ModId], list[TranslationDownload]]:
+    ) -> DownloadListEntries:
         """
         Collects available updates for the installed translations.
 
@@ -418,15 +453,14 @@ class DownloadManager(QObject):
                 Optional loading dialog. Defaults to None.
 
         Returns:
-            dict[tuple[str, ModId], list[TranslationDownload]]:
-                Dictionary of mod-file combinations and their downloads.
+            DownloadListEntries: Entries for the download list dialog.
         """
 
         self.log.info(
             f"Collecting available updates for {len(translations)} translation(s)..."
         )
 
-        downloads: dict[tuple[str, ModId], list[TranslationDownload]] = {}
+        downloads: DownloadListEntries = {}
         for t, (translation, original_mod) in enumerate(translations.items()):
             if ldialog is not None:
                 ldialog.updateProgress(
@@ -448,7 +482,7 @@ class DownloadManager(QObject):
 
     def __collect_update_for_translation(
         self, translation: Translation, original_mod: Mod
-    ) -> dict[tuple[str, ModId], list[TranslationDownload]]:
+    ) -> DownloadListEntries:
         if translation.mod_id is None:
             return {}
 
@@ -456,25 +490,24 @@ class DownloadManager(QObject):
             translation.mod_id
         )
 
+        mod_info = ModInfo(translation.name, translation.mod_id, translation.source)
+
         if new_file_id is None:
             return {}
 
-        downloads: dict[tuple[str, ModId], list[TranslationDownload]] = {}
+        downloads: DownloadListEntries = {}
 
         for modfile in translation.strings:
-            downloads[f"{translation.name} > {modfile}", translation.mod_id] = [
+            downloads.setdefault(mod_info, {})[modfile] = [
                 TranslationDownload(
-                    name=translation.name,
-                    mod_id=translation.mod_id,
-                    modfile=modfile,
-                    source=Source.NexusMods,  # TODO: Reimplement translation updates from CDT
+                    mod_info=mod_info,
                     available_downloads=[
                         FileDownload(
                             display_name=translation.name,
-                            source=Source.NexusMods,
+                            source=translation.source,
                             mod_id=translation.mod_id,
                             file_name=self.provider.get_details(
-                                new_file_id, Source.NexusMods
+                                new_file_id, translation.source
                             ).file_name,
                         )
                     ],

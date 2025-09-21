@@ -26,8 +26,7 @@ from core.database.database import TranslationDatabase
 from core.database.database_service import DatabaseService
 from core.database.importer import Importer
 from core.database.translation import Translation
-from core.downloader.download_manager import DownloadManager
-from core.downloader.translation_download import TranslationDownload
+from core.downloader.download_manager import DownloadListEntries, DownloadManager
 from core.mod_file.mod_file import ModFile
 from core.mod_file.plugin_file import PluginFile
 from core.mod_file.translation_status import TranslationStatus
@@ -36,9 +35,8 @@ from core.mod_instance.mod_instance import ModInstance
 from core.scanner.scanner import Scanner
 from core.string import StringList
 from core.string.search_filter import SearchFilter
-from core.translation_provider.mod_id import ModId
 from core.translation_provider.provider import Provider
-from ui.downloader.download_list_dialog import DownloadListDialog
+from ui.downloader.download_list_window import DownloadListWindow
 from ui.widgets.string_list.string_list_dialog import StringListDialog
 from ui.widgets.string_search_dialog import StringSearchDialog
 
@@ -310,23 +308,23 @@ class TranslationsTab(QWidget):
 
             translations[translation] = original_mod
 
-        download_entries: dict[tuple[str, ModId], list[TranslationDownload]] = (
-            LoadingDialog.run_callable(
-                QApplication.activeModalWidget(),
-                lambda ldialog: self.download_manager.collect_available_updates(
-                    translations, ldialog
-                ),
-            )
+        download_entries: DownloadListEntries = LoadingDialog.run_callable(
+            QApplication.activeModalWidget(),
+            lambda ldialog: self.download_manager.collect_available_updates(
+                translations, ldialog
+            ),
         )
         if download_entries:
-            DownloadListDialog(
-                download_entries,
-                self.provider,
-                self.database,
-                self.download_manager,
-                updates=True,
-                parent=QApplication.activeModalWidget(),
-            ).exec()
+            download_list_window = DownloadListWindow(download_entries, self.provider)
+            download_list_window.downloads_started.connect(
+                lambda downloads, link_nxm: list(
+                    map(self.download_manager.request_download, downloads)
+                )
+            )
+            download_list_window.downloads_started.connect(
+                lambda file_downloads, link_nxm: self.download_manager.start()
+            )
+            download_list_window.show()
         else:
             QMessageBox.warning(
                 QApplication.activeModalWidget() or self,
