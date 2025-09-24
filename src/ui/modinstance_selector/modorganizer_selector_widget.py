@@ -87,6 +87,7 @@ class ModOrganizerSelectorWidget(BaseSelectorWidget[Mo2InstanceInfo, ModOrganize
         self.__instance_dropdown.addItem(self.tr("Please select..."))
         self.__instance_dropdown.addItems(self._instance_names)
         self.__instance_dropdown.addItem("Portable")
+        self.__portable_path_entry.setText("")
         self.__update_profile_dropdown()
 
     def __update_profile_dropdown(self) -> None:

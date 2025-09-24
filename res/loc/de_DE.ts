@@ -1430,7 +1430,7 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
         <location filename="src/ui/modinstance_selector/modorganizer_selector_widget.py" line="49"/>
         <location filename="src/ui/modinstance_selector/modorganizer_selector_widget.py" line="77"/>
         <location filename="src/ui/modinstance_selector/modorganizer_selector_widget.py" line="87"/>
-        <location filename="src/ui/modinstance_selector/modorganizer_selector_widget.py" line="109"/>
+        <location filename="src/ui/modinstance_selector/modorganizer_selector_widget.py" line="110"/>
         <source>Please select...</source>
         <translation>Bitte auswählen...</translation>
     </message>

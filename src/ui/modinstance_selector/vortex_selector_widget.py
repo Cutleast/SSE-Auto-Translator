@@ -58,7 +58,9 @@ class VortexSelectorWidget(BaseSelectorWidget[ProfileInfo, VortexApi]):
 
     @override
     def validate(self) -> bool:
-        return self.__profile_dropdown.currentIndex() != 0
+        valid: bool = self.__profile_dropdown.currentIndex() > 0
+
+        return valid
 
     @override
     def get_instance(self) -> ProfileInfo:

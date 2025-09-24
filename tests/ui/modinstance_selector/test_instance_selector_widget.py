@@ -265,3 +265,43 @@ class TestInstanceSelectorWidget(BaseTest):
         assert instance_stack_layout.currentWidget() is placeholder_widget
         assert not widget.validate()
         assert widget.get_cur_instance_data() is None
+
+    def test_change_between_empty_instances(
+        self,
+        widget: InstanceSelectorWidget,
+        mo2_instance_info: Mo2InstanceInfo,
+        qtbot: QtBot,
+    ) -> None:
+        """
+        Tests changing the mod manager between empty instances.
+        """
+
+        # given
+        mod_manager_dropdown: EnumPlaceholderDropdown[ModManager] = (
+            Utils.get_private_field(
+                widget, *TestInstanceSelectorWidget.MOD_MANAGER_DROPDOWN
+            )
+        )
+        # set initial instance
+        widget.set_cur_instance_data(mo2_instance_info)
+
+        # when
+        mod_manager_dropdown.setCurrentValue(ModManager.Vortex)
+
+        # then
+        assert widget.get_cur_instance_data() is None
+        assert not widget.validate()
+
+        # when
+        mod_manager_dropdown.setCurrentValue(ModManager.ModOrganizer)
+
+        # then
+        assert widget.get_cur_instance_data() is None
+        assert not widget.validate()
+
+        # when
+        mod_manager_dropdown.setCurrentValue(ModManager.Vortex)
+
+        # then
+        assert widget.get_cur_instance_data() is None
+        assert not widget.validate()

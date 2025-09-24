@@ -114,14 +114,15 @@ class InstanceSelectorWidget(QWidget):
     def __set_cur_mod_manager(self, mod_manager: Optional[ModManager]) -> None:
         if mod_manager is not None:
             instance_widget: BaseSelectorWidget = self.__mod_managers[mod_manager]
+            self.__cur_mod_manager = mod_manager
             instance_widget.set_instances(mod_manager.get_api().get_instance_names())
             self.__instance_stack_layout.setCurrentWidget(instance_widget)
             self.__on_valid(instance_widget.validate())
         else:
             self.__instance_stack_layout.setCurrentWidget(self.__placeholder_widget)
+            self.__cur_mod_manager = mod_manager
             self.__on_valid(False)
 
-        self.__cur_mod_manager = mod_manager
         self.changed.emit()
 
     def __on_valid(self, valid: bool) -> None:
