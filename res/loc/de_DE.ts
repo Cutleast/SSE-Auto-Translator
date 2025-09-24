@@ -328,22 +328,22 @@ Diese Liste hat nur eine Auswirkung auf Übersetzungen von Nexus Mods!</translat
 <context>
     <name>DownloadListMenu</name>
     <message>
-        <location filename="src/ui/download_list/download_list_menu.py" line="42"/>
+        <location filename="src/ui/downloader/download_list_menu.py" line="43"/>
         <source>Expand all</source>
         <translation>Alle aufklappen</translation>
     </message>
     <message>
-        <location filename="src/ui/download_list/download_list_menu.py" line="48"/>
+        <location filename="src/ui/downloader/download_list_menu.py" line="49"/>
         <source>Collapse all</source>
         <translation>Alle zuklappen</translation>
     </message>
     <message>
-        <location filename="src/ui/download_list/download_list_menu.py" line="54"/>
+        <location filename="src/ui/downloader/download_list_menu.py" line="55"/>
         <source>Uncheck selected download(s)</source>
         <translation>Ausgewählte(n) Download(s) abwählen</translation>
     </message>
     <message>
-        <location filename="src/ui/download_list/download_list_menu.py" line="58"/>
+        <location filename="src/ui/downloader/download_list_menu.py" line="59"/>
         <source>Check selected download(s)</source>
         <translation>Ausgewählte(n) Download(s) anwählen</translation>
     </message>
@@ -351,54 +351,54 @@ Diese Liste hat nur eine Auswirkung auf Übersetzungen von Nexus Mods!</translat
 <context>
     <name>DownloadListWidget</name>
     <message>
-        <location filename="src/ui/download_list/download_list_widget.py" line="118"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="118"/>
         <source>Available Downloads</source>
         <translation>Verfügbare Downloads</translation>
     </message>
     <message>
-        <location filename="src/ui/download_list/download_list_widget.py" line="132"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="132"/>
         <source>Below are the translations that are required and available online. Choose which translations you want to download and click on &quot;Start downloads&quot; when ready.
 If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;Mod Manager Downloads&quot;.</source>
         <translation>Unten sind die Übersetzungen, die benötigt werden und online verfügbar sind. Wähle aus, welche Übersetzungen du herunterladen möchtest und klicke auf &quot;Downloads starten&quot;, wenn du bereit bist.
 Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manager Downloads&quot; verknüpft werden.</translation>
     </message>
     <message>
-        <location filename="src/ui/download_list/download_list_widget.py" line="140"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="140"/>
         <source>Link SSE-AT to &quot;Mod Manager Downloads&quot; before starting</source>
         <translation>SSE-AT vor dem Starten mit &quot;Mod Manager Downloads&quot; verknüpfen</translation>
     </message>
     <message>
-        <location filename="src/ui/download_list/download_list_widget.py" line="143"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="143"/>
         <source>Start downloads</source>
         <translation>Downloads starten</translation>
     </message>
     <message>
-        <location filename="src/ui/download_list/download_list_widget.py" line="156"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="156"/>
         <source>Selected downloads:</source>
         <translation>Ausgewählte Downloads:</translation>
     </message>
     <message>
-        <location filename="src/ui/download_list/download_list_widget.py" line="171"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="171"/>
         <source>Mods / Mod files</source>
         <translation>Mods / Moddateien</translation>
     </message>
     <message>
-        <location filename="src/ui/download_list/download_list_widget.py" line="172"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="172"/>
         <source>Translation mod</source>
         <translation>Übersetzungsmod</translation>
     </message>
     <message>
-        <location filename="src/ui/download_list/download_list_widget.py" line="174"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="174"/>
         <source>Translation file</source>
         <translation>Übersetzungsdatei</translation>
     </message>
     <message>
-        <location filename="src/ui/download_list/download_list_widget.py" line="203"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="203"/>
         <source>Items with the same selected downloads can only be checked or unchecked together.</source>
         <translation>Elemente mit gleichem ausgewählten Download können nur gemeinsam an- oder abgewählt werden.</translation>
     </message>
     <message>
-        <location filename="src/ui/download_list/download_list_widget.py" line="239"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="239"/>
         <source>Open mod page on Nexus Mods...</source>
         <translation>Modpage auf Nexus Mods öffnen...</translation>
     </message>
@@ -406,27 +406,27 @@ Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manage
 <context>
     <name>DownloadListWindow</name>
     <message>
-        <location filename="src/ui/download_list/download_list_window.py" line="31"/>
+        <location filename="src/ui/downloader/download_list_window.py" line="32"/>
         <source>Available downloads</source>
         <translation>Verfügbare Downloads</translation>
     </message>
     <message>
-        <location filename="src/ui/download_list/download_list_window.py" line="50"/>
+        <location filename="src/ui/downloader/download_list_window.py" line="51"/>
         <source>Link to Mod Manager downloads?</source>
         <translation>Mit Mod Manager Downloads verknüpfen?</translation>
     </message>
     <message>
-        <location filename="src/ui/download_list/download_list_window.py" line="57"/>
+        <location filename="src/ui/downloader/download_list_window.py" line="58"/>
         <source>You don&apos;t have Nexus Mods Premium and direct downloads are not possible. Do you want to link to the &quot;Mod Manager Download&quot;buttons on Nexus Mods now?</source>
         <translation>Du hast kein Nexus Mods Premium und direkte Downloads sind nicht möglich. Möchtest du SSE-AT nun mit den &quot;Mod Manager Download&quot; Buttons auf Nexus Mods verknüpfen?</translation>
     </message>
     <message>
-        <location filename="src/ui/download_list/download_list_window.py" line="62"/>
+        <location filename="src/ui/downloader/download_list_window.py" line="63"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
     <message>
-        <location filename="src/ui/download_list/download_list_window.py" line="63"/>
+        <location filename="src/ui/downloader/download_list_window.py" line="64"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
@@ -967,27 +967,27 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
 <context>
     <name>LoadingDialog</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="263"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="267"/>
         <source>Elapsed time:</source>
         <translation>Vergangene Zeit:</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="351"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="355"/>
         <source>Cancel?</source>
         <translation>Abbrechen?</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="357"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="361"/>
         <source>Are you sure you want to cancel? This may have unwanted consequences, depending on the current running process!</source>
         <translation>Bist du sicher, dass du abbrechen möchtest? Je nach laufendem Prozess kann dies unbeabsichtigte Konsequenzen haben!</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="362"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="366"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="363"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="367"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>

@@ -323,22 +323,22 @@ This list only affects translations from Nexus Mods!</source>
 <context>
     <name>DownloadListMenu</name>
     <message>
-        <location filename="src/ui/download_list/download_list_menu.py" line="42"/>
+        <location filename="src/ui/downloader/download_list_menu.py" line="43"/>
         <source>Expand all</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/download_list/download_list_menu.py" line="48"/>
+        <location filename="src/ui/downloader/download_list_menu.py" line="49"/>
         <source>Collapse all</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/download_list/download_list_menu.py" line="54"/>
+        <location filename="src/ui/downloader/download_list_menu.py" line="55"/>
         <source>Uncheck selected download(s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/download_list/download_list_menu.py" line="58"/>
+        <location filename="src/ui/downloader/download_list_menu.py" line="59"/>
         <source>Check selected download(s)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -346,53 +346,53 @@ This list only affects translations from Nexus Mods!</source>
 <context>
     <name>DownloadListWidget</name>
     <message>
-        <location filename="src/ui/download_list/download_list_widget.py" line="118"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="118"/>
         <source>Available Downloads</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/download_list/download_list_widget.py" line="132"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="132"/>
         <source>Below are the translations that are required and available online. Choose which translations you want to download and click on &quot;Start downloads&quot; when ready.
 If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;Mod Manager Downloads&quot;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/download_list/download_list_widget.py" line="140"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="140"/>
         <source>Link SSE-AT to &quot;Mod Manager Downloads&quot; before starting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/download_list/download_list_widget.py" line="143"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="143"/>
         <source>Start downloads</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/download_list/download_list_widget.py" line="156"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="156"/>
         <source>Selected downloads:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/download_list/download_list_widget.py" line="171"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="171"/>
         <source>Mods / Mod files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/download_list/download_list_widget.py" line="172"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="172"/>
         <source>Translation mod</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/download_list/download_list_widget.py" line="174"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="174"/>
         <source>Translation file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/download_list/download_list_widget.py" line="203"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="203"/>
         <source>Items with the same selected downloads can only be checked or unchecked together.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/download_list/download_list_widget.py" line="239"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="239"/>
         <source>Open mod page on Nexus Mods...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -400,27 +400,27 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
 <context>
     <name>DownloadListWindow</name>
     <message>
-        <location filename="src/ui/download_list/download_list_window.py" line="31"/>
+        <location filename="src/ui/downloader/download_list_window.py" line="32"/>
         <source>Available downloads</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/download_list/download_list_window.py" line="50"/>
+        <location filename="src/ui/downloader/download_list_window.py" line="51"/>
         <source>Link to Mod Manager downloads?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/download_list/download_list_window.py" line="57"/>
+        <location filename="src/ui/downloader/download_list_window.py" line="58"/>
         <source>You don&apos;t have Nexus Mods Premium and direct downloads are not possible. Do you want to link to the &quot;Mod Manager Download&quot;buttons on Nexus Mods now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/download_list/download_list_window.py" line="62"/>
+        <location filename="src/ui/downloader/download_list_window.py" line="63"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/download_list/download_list_window.py" line="63"/>
+        <location filename="src/ui/downloader/download_list_window.py" line="64"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>
@@ -961,27 +961,27 @@ Depending on the Translator API this can raise unexpected costs.</comment>
 <context>
     <name>LoadingDialog</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="263"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="267"/>
         <source>Elapsed time:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="351"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="355"/>
         <source>Cancel?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="357"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="361"/>
         <source>Are you sure you want to cancel? This may have unwanted consequences, depending on the current running process!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="362"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="366"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="363"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="367"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>
