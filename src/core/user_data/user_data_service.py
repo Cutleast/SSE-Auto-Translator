@@ -165,7 +165,7 @@ class UserDataService(SingletonQObject):
         return (
             not (self.__data_path / "user" / "config.json").is_file()
         ) or ExceptionHandler.raises_exception(
-            lambda: UserConfig.load(self.__data_path)
+            lambda: UserConfig.load(self.__data_path, log_settings=False)
         )
 
     def get_user_data(self) -> UserData:
