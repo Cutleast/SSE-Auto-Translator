@@ -165,7 +165,7 @@ You can always disable it later under Help &gt; Fix Windows Path Limit.</source>
     </message>
     <message>
         <location filename="src/ui/settings/app_settings.py" line="137"/>
-        <location filename="src/ui/settings/app_settings.py" line="299"/>
+        <location filename="src/ui/settings/app_settings.py" line="301"/>
         <source>Clear Cache (This will reset all mod file states and delete cached API requests!)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -232,22 +232,22 @@ This feature is considered experimental because a crash might prevent it from un
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="246"/>
-        <source>Enable Spell Checking in Translation Editor</source>
+        <location filename="src/ui/settings/app_settings.py" line="248"/>
+        <source>Enable Spell Checking in Translation Editor (Warning: could be slow)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="255"/>
+        <location filename="src/ui/settings/app_settings.py" line="257"/>
         <source>Automatically import installed translations into the database</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="269"/>
+        <location filename="src/ui/settings/app_settings.py" line="271"/>
         <source>Automatically create translations for mod files that are entirely covered by installed translations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="283"/>
+        <location filename="src/ui/settings/app_settings.py" line="285"/>
         <source>Show strings when double clicking a mod or mod file in the modlist or a translation in the &quot;Translations&quot; tab</source>
         <translation type="unfinished"></translation>
     </message>

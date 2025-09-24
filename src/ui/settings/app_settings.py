@@ -242,7 +242,9 @@ class AppSettings(SettingsPage[AppConfig]):
         behavior_flayout.addRow(self.__bind_nxm_checkbox)
 
         self.__use_spell_check_checkbox = QCheckBox(
-            self.tr("Enable Spell Checking in Translation Editor")
+            self.tr(
+                "Enable Spell Checking in Translation Editor (Warning: could be slow)"
+            )
         )
         self.__use_spell_check_checkbox.setChecked(self._initial_config.use_spell_check)
         self.__use_spell_check_checkbox.stateChanged.connect(

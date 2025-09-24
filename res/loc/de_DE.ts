@@ -167,7 +167,7 @@ Du kannst diese Beschränkung später unter Hilfe &gt; Windows-Pfadlängenbegren
     </message>
     <message>
         <location filename="src/ui/settings/app_settings.py" line="137"/>
-        <location filename="src/ui/settings/app_settings.py" line="299"/>
+        <location filename="src/ui/settings/app_settings.py" line="301"/>
         <source>Clear Cache (This will reset all mod file states and delete cached API requests!)</source>
         <translation>Cache leeren (Das löscht alle Moddatei-Zustände und zwischengespeicherte API-Anfragen)</translation>
     </message>
@@ -235,22 +235,22 @@ This feature is considered experimental because a crash might prevent it from un
 Diese Funktion wird als experimentell betrachtet, da ein Absturz verhindern könnte, dass die Verknüpfung korrekt aufgehoben wird.</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="246"/>
-        <source>Enable Spell Checking in Translation Editor</source>
-        <translation>Rechtschreibprüfung im Übersetzungseditor aktivieren</translation>
+        <location filename="src/ui/settings/app_settings.py" line="248"/>
+        <source>Enable Spell Checking in Translation Editor (Warning: could be slow)</source>
+        <translation>Rechtschreibprüfung im Übersetzungseditor aktivieren (Warnung: könnte langsam sein)</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="255"/>
+        <location filename="src/ui/settings/app_settings.py" line="257"/>
         <source>Automatically import installed translations into the database</source>
         <translation>Automatisch installierte Übersetzungen in die Datenbank importieren</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="269"/>
+        <location filename="src/ui/settings/app_settings.py" line="271"/>
         <source>Automatically create translations for mod files that are entirely covered by installed translations</source>
         <translation>Automatisch Übersetzungen für Moddateien erstellen, die vollständig von installierten Übersetzungen abgedeckt sind</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="283"/>
+        <location filename="src/ui/settings/app_settings.py" line="285"/>
         <source>Show strings when double clicking a mod or mod file in the modlist or a translation in the &quot;Translations&quot; tab</source>
         <translation>Bei einem Doppelklick auf eine Mod oder eine Moddatei in der Modliste oder einer Übersetzung im &quot;Übersetzungen&quot; Tab dessen Strings anzeigen</translation>
     </message>
