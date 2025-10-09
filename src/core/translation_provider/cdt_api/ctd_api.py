@@ -26,7 +26,8 @@ class CDTApi(ProviderApi):
     """
 
     DL_URL_PATTERN: re.Pattern[str] = re.compile(
-        r"https://www\.confrerie-des-traducteurs\.fr/skyrim/telechargement_se/([0-9]+)/sse\?fromSseAtAPI=1"
+        r"https://www\.confrerie-des-traducteurs\.fr/skyrim/telechargement_se/([0-9]+)/"
+        r"sse\?fromSseAtAPI=1"
     )
     """
     Regex pattern for capturing the CDT mod id from a download url.
@@ -57,7 +58,8 @@ class CDTApi(ProviderApi):
             ProviderApi.raise_mod_not_found_error(mod_id)
 
         url: str = (
-            f"https://www.confrerie-des-traducteurs.fr/api/skyrim/sse-at/{mod_id.nm_id}"
+            "https://www.confrerie-des-traducteurs.fr/api/skyrim/sse-at/"
+            f"{mod_id.nm_id or mod_id.mod_id}"
         )
         res: req.Response = self._request(url)
 
@@ -114,7 +116,8 @@ class CDTApi(ProviderApi):
             ProviderApi.raise_mod_not_found_error(mod_id)
 
         url: str = (
-            f"https://www.confrerie-des-traducteurs.fr/api/skyrim/sse-at/{mod_id.nm_id}"
+            "https://www.confrerie-des-traducteurs.fr/api/skyrim/sse-at/"
+            f"{mod_id.nm_id or mod_id.mod_id}"
         )
         res: req.Response = self._request(url)
 
