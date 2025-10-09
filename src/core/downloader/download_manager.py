@@ -7,7 +7,6 @@ from pathlib import Path
 from queue import Queue
 from typing import Optional, TypeAlias
 
-from cutleast_core_lib.core.utilities.filesystem import clean_fs_name
 from cutleast_core_lib.ui.widgets.loading_dialog import LoadingDialog
 from PySide6.QtCore import QObject, Signal
 
@@ -297,7 +296,7 @@ class DownloadManager(QObject):
                 )
 
             mod_info = ModInfo(
-                display_name=mod.name,
+                display_name=mod.name + f" [{mod.version}]",
                 mod_id=mod.mod_id,
                 source=Source.NexusMods if mod.mod_id is not None else Source.Local,
             )
@@ -309,33 +308,6 @@ class DownloadManager(QObject):
             for modfile, downloads in download_units.items():
                 if downloads:
                     translation_downloads.setdefault(mod_info, {})[modfile] = downloads
-
-        # Sort translation downloads in descending order
-        # after last updated/uploaded timestamp
-        def sort_key(
-            item: tuple[ModInfo, dict[Path, list[TranslationDownload]]],
-        ) -> int:
-            try:
-                first_download_unit: TranslationDownload = list(item[1].values())[0][0]
-
-                if first_download_unit.mod_info.mod_id is not None:
-                    return self.provider.get_details(
-                        mod_id=first_download_unit.mod_info.mod_id,
-                        source=first_download_unit.mod_info.source,
-                    ).timestamp
-            except Exception as ex:
-                self.log.error(
-                    f"Failed to calculate download priority: {ex}", exc_info=ex
-                )
-
-            return 0
-
-        translation_downloads = {
-            mod_info: download_units
-            for mod_info, download_units in sorted(
-                translation_downloads.copy().items(), key=sort_key
-            )
-        }
 
         return translation_downloads
 
@@ -398,13 +370,7 @@ class DownloadManager(QObject):
                     )
                     continue
 
-                download = FileDownload(
-                    display_name=clean_fs_name(file_details.display_name),
-                    source=source,
-                    mod_id=translation_id,
-                    file_name=file_details.file_name,
-                )
-
+                download = FileDownload(mod_details=file_details, source=source)
                 download_id = ModId(
                     mod_id=translation_id.mod_id,
                     nm_id=translation_id.nm_id,
@@ -422,19 +388,6 @@ class DownloadManager(QObject):
                 ).available_downloads.append(download)
 
         result: list[TranslationDownload] = list(translation_downloads.values())
-
-        # Sort after upload timestamp so that newest translations are first
-        result.sort(
-            key=lambda download: (
-                self.provider.get_details(
-                    download.mod_info.mod_id, source=download.mod_info.source
-                ).timestamp
-                if download.mod_info.mod_id is not None
-                else 0
-            ),
-            reverse=True,
-        )
-
         return result
 
     def collect_available_updates(
@@ -503,12 +456,8 @@ class DownloadManager(QObject):
                     mod_info=mod_info,
                     available_downloads=[
                         FileDownload(
-                            display_name=translation.name,
+                            mod_details=self.provider.get_details(new_file_id),
                             source=translation.source,
-                            mod_id=translation.mod_id,
-                            file_name=self.provider.get_details(
-                                new_file_id, translation.source
-                            ).file_name,
                         )
                     ],
                 )

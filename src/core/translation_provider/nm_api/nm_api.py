@@ -8,7 +8,7 @@ import re
 import urllib.parse
 import webbrowser
 from queue import Queue
-from typing import Any, Optional, override
+from typing import Any, Optional, TypeVar, override
 from uuid import uuid4
 
 import bs4
@@ -17,6 +17,7 @@ import jstyleson as json
 import requests as req
 import websocket
 from cutleast_core_lib.core.cache.cache import Cache
+from pydantic import BaseModel, ValidationError
 
 from core.translation_provider.source import Source
 from core.utilities.filesystem import extract_file_paths
@@ -30,8 +31,14 @@ from ..exceptions import (
 from ..mod_details import ModDetails
 from ..mod_id import ModId
 from ..provider_api import ProviderApi
+from .models.file_update import FileUpdate
+from .models.nm_file import NmFile
+from .models.nm_files import NmFiles
+from .models.nm_mod import NmMod
 from .nxm_handler import NXMHandler
 from .nxm_request import NxmRequest
+
+M = TypeVar("M", bound=BaseModel)
 
 
 class NexusModsApi(ProviderApi):
@@ -174,6 +181,32 @@ class NexusModsApi(ProviderApi):
 
         return self._request(url, headers)
 
+    def __request_with_model(
+        self, path: str, model: type[M], cache_result: bool = True
+    ) -> M:
+        """
+        Sends a request to a given path and attempts to deserialize the response to a
+        given model.
+
+        Args:
+            path (str): Path to the API endpoint, relative to the base URL.
+            model (type[M]): Model to deserialize the response to.
+            cache_result (bool, optional): Whether to cache the result. Defaults to True.
+
+        Raises:
+            UnexpectedResponseError: If the response failed to deserialize to the model.
+
+        Returns:
+            M: Deserialized response.
+        """
+
+        res: req.Response = self.__request(path, cache_result)
+
+        try:
+            return model.model_validate_json(res.content, by_alias=True)
+        except ValidationError as ex:
+            raise UnexpectedResponseError(path, res.content.decode()) from ex
+
     @override
     def is_direct_download_possible(self) -> bool:
         return self.__premium
@@ -184,62 +217,16 @@ class NexusModsApi(ProviderApi):
 
     @override
     def get_mod_details(self, mod_id: ModId) -> ModDetails:
+        mod_details: ModDetails
         if mod_id.file_id:
-            return self.__get_file_details(mod_id)
-        else:
-            return self.__request_mod_details(mod_id)
+            file: NmFile = self.__request_file(mod_id)
 
-    def __get_file_details(self, mod_id: ModId) -> ModDetails:
-        """"""
-
-        """
-        Example response:
-        ```
-        {
-            "id": [
-                405401,
-                1704
-            ],
-            "uid": 7318624677785,
-            "file_id": 405401,
-            "name": "TESL Loading Screens - German",
-            "version": "v2.1.1",
-            "category_id": 1,
-            "category_name": "MAIN",
-            "is_primary": True,
-            "size": 15,
-            "file_name": "TESL Loading Screens - German-73920-v2-1-1-1688886211.7z",
-            "uploaded_timestamp": 1688886211,
-            "uploaded_time": "2023-07-09T07:03:31.000+00:00",
-            "mod_version": "v2.1.1",
-            "external_virus_scan_url": "https://www.virustotal.com/gui/file/e5acb9d2f7cc5b7decc62ad5421f281c294ed27390dfa40570d7f73826e4dcba/detection/f-e5acb9d2f7cc5b7decc62ad5421f281c294ed27390dfa40570d7f73826e4dcba-1688886216",
-            "description": "Die Original-Mod wird zwingend benötigt!!!",
-            "size_kb": 15,
-            "size_in_bytes": 15269,
-            "changelog_html": None,
-            "content_preview_link": "https://file-metadata.nexusmods.com/file/nexus-files-s3-meta/1704/73920/TESL Loading Screens - German-73920-v2-1-1-1688886211.7z.json"
-        }
-        ```
-        """
-
-        if not mod_id.mod_id or not mod_id.file_id:
-            ProviderApi.raise_mod_not_found_error(mod_id)
-
-        self.log.info(f"Requesting mod info for {mod_id.mod_id}...")
-        path: str = f"/games/{mod_id.nm_game_id}/mods/{mod_id.mod_id}/files/{mod_id.file_id}.json"
-        try:
-            res: req.Response = self.__request(path)
-        except FileNotFoundError:
-            ProviderApi.raise_mod_not_found_error(mod_id)
-
-        try:
-            response_data: dict[str, Any] = json.loads(res.content.decode())
-            mod_details: ModDetails = ModDetails(
-                display_name=response_data["name"],
-                version=response_data["version"],
-                file_name=response_data["file_name"],
+            mod_details = ModDetails(
+                display_name=file.name,
+                version=file.version,
+                file_name=file.file_name,
                 mod_id=mod_id,
-                timestamp=response_data["uploaded_timestamp"],
+                timestamp=file.uploaded_timestamp,
                 author=None,
                 uploader=None,
                 modpage_url=NexusModsApi.create_nexus_mods_url(
@@ -248,84 +235,44 @@ class NexusModsApi(ProviderApi):
                     file_id=mod_id.file_id,
                 ),
             )
-        except Exception as ex:
-            raise UnexpectedResponseError(path, res.content.decode()) from ex
 
-        return mod_details
+        else:
+            mod: NmMod = self.__request_mod_details(mod_id)
 
-    def __request_mod_details(self, mod_id: ModId) -> ModDetails:
-        """"""
-
-        """
-        Example response:
-        {
-            "name": "TESL - Loading Screens - German",
-            "summary": "Eine deutsche Übersetzung der Mod The Elder Scrolls Legends - Loading Screens von Jampion.",
-            "description": "...",
-            "picture_url": "https://staticdelivery.nexusmods.com/mods/1704/images/73920/73920-1661277111-1914574655.png",
-            "mod_downloads": 1278,
-            "mod_unique_downloads": 674,
-            "uid": 7318624346304,
-            "mod_id": 73920,
-            "game_id": 1704,
-            "allow_rating": True,
-            "domain_name": "skyrimspecialedition",
-            "category_id": 42,
-            "version": "v2.1.1",
-            "endorsement_count": 46,
-            "created_timestamp": 1661277660,
-            "created_time": "2022-08-23T18:01:00.000+00:00",
-            "updated_timestamp": 1688886211,
-            "updated_time": "2023-07-09T07:03:31.000+00:00",
-            "author": "Cutleast",
-            "uploaded_by": "Cutleast",
-            "uploaded_users_profile_url": "https://nexusmods.com/users/65733731",
-            "contains_adult_content": False,
-            "status": "published",
-            "available": True,
-            "user": {
-                "member_id": 65733731,
-                "member_group_id": 27,
-                "name": "Cutleast"
-            },
-            "endorsement": {
-                "endorse_status": "Undecided",
-                "timestamp": None,
-                "version": None
-            }
-        }
-        """
-
-        if not mod_id.mod_id:
-            ProviderApi.raise_mod_not_found_error(mod_id)
-
-        self.log.info(f"Requesting mod info for {mod_id.mod_id}...")
-        path: str = f"games/{mod_id.nm_game_id}/mods/{mod_id.mod_id}.json"
-        try:
-            res: req.Response = self.__request(path)
-        except FileNotFoundError:
-            ProviderApi.raise_mod_not_found_error(mod_id)
-
-        try:
-            response_data: dict[str, Any] = json.loads(res.content.decode())
-            mod_details: ModDetails = ModDetails(
-                display_name=response_data["name"],
-                version=response_data["version"],
+            mod_details = ModDetails(
+                display_name=mod.name,
+                version=mod.version,
                 file_name="",
                 mod_id=mod_id,
-                timestamp=response_data["updated_timestamp"],
-                author=response_data["author"],
-                uploader=response_data["uploaded_by"],
+                timestamp=mod.updated_timestamp,
+                author=mod.author,
+                uploader=mod.uploader,
                 modpage_url=NexusModsApi.create_nexus_mods_url(
                     game_id=mod_id.nm_game_id,
                     mod_id=mod_id.mod_id,
                     file_id=mod_id.file_id,
                 ),
             )
-        except Exception as ex:
-            raise UnexpectedResponseError(path, res.content.decode()) from ex
 
         return mod_details
+
+    def __request_file(self, mod_id: ModId) -> NmFile:
+        if not mod_id.mod_id or not mod_id.file_id:
+            ProviderApi.raise_mod_not_found_error(mod_id)
+
+        self.log.info(f"Requesting file info for {mod_id.mod_id}...")
+        path: str = f"/games/{mod_id.nm_game_id}/mods/{mod_id.mod_id}/files/{mod_id.file_id}.json"
+
+        return self.__request_with_model(path, NmFile)
+
+    def __request_mod_details(self, mod_id: ModId) -> NmMod:
+        if not mod_id.mod_id:
+            ProviderApi.raise_mod_not_found_error(mod_id)
+
+        self.log.info(f"Requesting mod info for {mod_id.mod_id}...")
+        path: str = f"games/{mod_id.nm_game_id}/mods/{mod_id.mod_id}.json"
+
+        return self.__request_with_model(path, NmMod)
 
     @override
     def get_modpage_url(self, mod_id: ModId) -> str:
@@ -359,36 +306,82 @@ class NexusModsApi(ProviderApi):
                 for file_id in translation_files
             ]
 
+        self.__sort_available_translations(translations, mod_id)
+
         return translations
+
+    def __sort_available_translations(
+        self, available_translations: list[ModId], original_mod_id: ModId
+    ) -> None:
+        """
+        Sorts the available translations after their relevance (and potential
+        compatibility) to the installed original mod.
+
+        Translation relevance is determined by the following factors in this order:
+        1. File has the "same" age as the installed mod (newer than the installed
+        original but older than the original's updates (if any)).
+        2. File upload timestamp (newer first).
+
+        Args:
+            available_translations (list[ModId]): List of available translations.
+            original_mod_id (ModId): Mod identifier of the installed original mod.
+        """
+
+        original_mod_timestamp: int = self.get_mod_details(original_mod_id).timestamp
+
+        # sort translations ascending after their timestamp difference to the original
+        # mod timestamp or their upload timestamp if they're older than the original mod
+        available_translations.sort(
+            key=lambda mod_id: self.__get_sort_key(
+                self.get_mod_details(mod_id).timestamp, original_mod_timestamp
+            )
+        )
+
+        self.log.debug(
+            f"Sorted {len(available_translations)} translations after their potential "
+            "relevance."
+        )
+
+    @staticmethod
+    def __get_sort_key(translation_timestamp: int, original_mod_timestamp: int) -> int:
+        """
+        Calculates a sort key for a translation.
+
+        Args:
+            translation_timestamp (int): Timestamp of the translation.
+            original_mod_timestamp (int): Timestamp of the original mod.
+
+        Returns:
+            int: Sort key
+        """
+
+        # translation is newer => lower difference = lower sort key = higher priority
+        if translation_timestamp > original_mod_timestamp:
+            return translation_timestamp - original_mod_timestamp
+
+        # translation is older => higher sort key = lower priority
+        return int(translation_timestamp + 10e6)
 
     @override
     def is_update_available(self, mod_id: ModId, timestamp: int) -> bool:
-        return mod_id.file_id in self.__get_mod_updates(
-            mod_id.nm_game_id, mod_id.mod_id
+        files: NmFiles = self.__request_mod_files(
+            game_id=mod_id.nm_game_id, mod_id=mod_id.mod_id
         )
+        updates: dict[int, int] = NexusModsApi.__map_file_updates(files.updates)
 
-    def __get_mod_files(self, game_id: str, mod_id: int) -> list[dict[str, Any]]:
+        return mod_id.file_id in updates
+
+    @staticmethod
+    def __map_file_updates(updates: list[FileUpdate]) -> dict[int, int]:
+        return {update.old_file_id: update.new_file_id for update in updates}
+
+    def __request_mod_files(self, game_id: str, mod_id: int) -> NmFiles:
         """
         Requests a list of files a mod has at Nexus Mods.
         """
 
-        categories = [
-            "main",
-            "update",
-            "optional",
-            "miscellaneous",
-        ]
-        category_filter = ",".join(categories)
-
-        path = f"games/{game_id}/mods/{mod_id}/files.json?category={category_filter}"
-        res = self.__request(path)
-
-        if res.status_code == 200:
-            mod_files: list[dict[str, Any]] = json.loads(res.content.decode())["files"]
-            return mod_files
-        else:
-            self.log.error(f"Failed to get mod files! Status code: {res.status_code}")
-            return []
+        path = f"games/{game_id}/mods/{mod_id}/files.json"
+        return self.__request_with_model(path, NmFiles)
 
     def __get_file_contents(
         self, game_id: str, mod_id: int, file_name: str
@@ -424,46 +417,21 @@ class NexusModsApi(ProviderApi):
 
         self.log.debug(f"Scanning mod {mod_id} for file {file_name!r}...")
 
-        mod_files: list[dict[str, Any]] = self.__get_mod_files(game_id, mod_id)
+        mod_files: NmFiles = self.__request_mod_files(game_id, mod_id)
 
         matches: list[int] = []
+        for mod_file in mod_files.files:
+            if mod_file.category_name is None:
+                self.log.debug(f"Skipped file without category: '{mod_file.file_name}'")
+                continue
 
-        # Check main files first
-        mod_file_name: str
-        for mod_file in mod_files.copy():
-            if mod_file["category_name"] == "MAIN":
-                mod_file_name = mod_file["file_name"]
-                self.log.debug(f"Scanning mod file {mod_file_name!r}...")
-                files = self.__get_file_contents(game_id, mod_id, mod_file_name)
-
-                if files is None:
-                    self.log.debug(f"Failed to get file contents of {mod_file_name!r}!")
-                    continue
-
-                if any(
-                    file.lower().strip().endswith(file_name.lower().strip())
-                    or (
-                        f"skse/plugins/dynamicstringdistributor/{file_name.lower().strip()}"
-                        in file.lower()
-                    )
-                    for file in files
-                ):
-                    self.log.debug(f"Found {file_name!r} in file {mod_file_name!r}.")
-                    matches.append(mod_file["file_id"])
-
-                mod_files.remove(mod_file)
-
-        if len(matches):
-            return matches
-
-        # Then check rest of files
-        for mod_file in mod_files:
-            mod_file_name = mod_file["file_name"]
-            self.log.debug(f"Scanning mod file {mod_file_name!r}...")
-            files = self.__get_file_contents(game_id, mod_id, mod_file_name)
+            self.log.debug(f"Scanning mod file '{mod_file.file_name}'...")
+            files = self.__get_file_contents(game_id, mod_id, mod_file.file_name)
 
             if files is None:
-                self.log.debug(f"Failed to get file contents of {mod_file_name!r}!")
+                self.log.debug(
+                    f"Failed to get file contents of '{mod_file.file_name}'!"
+                )
                 continue
 
             if any(
@@ -474,13 +442,13 @@ class NexusModsApi(ProviderApi):
                 )
                 for file in files
             ):
-                self.log.debug(f"Found {file_name!r} in file {mod_file_name!r}.")
-                matches.append(mod_file["file_id"])
+                self.log.debug(f"Found '{file_name}' in file '{mod_file.file_name}'.")
+                matches.append(mod_file.file_id)
 
         matches.reverse()
 
         if not matches:
-            self.log.error(f"File {file_name!r} not found in mod {mod_id}!")
+            self.log.error(f"File '{file_name}' not found in mod {mod_id}!")
 
         return matches
 
@@ -615,21 +583,6 @@ class NexusModsApi(ProviderApi):
         self.log.info("SSO process successful.")
 
         return self.__api_key
-
-    def __get_mod_updates(self, game_id: str, mod_id: int) -> dict[int, int]:
-        """
-        Gets mod updates from `mod_id` at `game_id`.
-
-        Returns {old_file_id: new_file_id}.
-        """
-
-        self.log.info(f"Requesting mod updates for {mod_id!r}...")
-        res = self.__request(f"games/{game_id}/mods/{mod_id}/files.json")
-        data: dict[str, Any] = json.loads(res.content.decode("utf8"))
-        updates: list[dict[str, Any]] = data["file_updates"]
-        self.log.info("Request successful.")
-
-        return {update["old_file_id"]: update["new_file_id"] for update in updates}
 
     def __get_premium_download_url(
         self, game_id: str, mod_id: int, file_id: int, server_id: str = "Nexus CDN"

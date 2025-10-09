@@ -1,4 +1,5 @@
 *.old
+/.env
 /.venv
 /.vscode
 /app_state_dump.7z

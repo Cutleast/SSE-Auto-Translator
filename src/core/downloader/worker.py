@@ -20,7 +20,6 @@ from core.mod_file.translation_status import TranslationStatus
 from core.mod_instance.mod import Mod
 from core.mod_instance.mod_instance import ModInstance
 from core.string import StringList
-from core.translation_provider.mod_details import ModDetails
 from core.translation_provider.provider import Provider
 from core.utilities.exceptions import (
     DownloadFailedError,
@@ -92,7 +91,9 @@ class Worker(QThread):
                 Method or function that is called with a `ProgressUpdate`.
         """
 
-        self.log.info(f"Processing download {download.file_name!r}...")
+        file_name: str = download.mod_details.file_name
+
+        self.log.info(f"Processing download '{file_name}'...")
 
         if self.provider.direct_downloads_possible():
             self.log.info("Downloading translation...")
@@ -106,12 +107,10 @@ class Worker(QThread):
                 ProgressUpdate(0, 0, ProgressUpdate.Status.UserActionRequired)
             )
 
-        if download.file_name is None:
-            raise DownloadFailedError
-
-        file_name: str = download.file_name
         self.waiting = True
-        url: str = self.provider.request_download(download.mod_id, download.source)
+        url: str = self.provider.request_download(
+            download.mod_details.mod_id, download.source
+        )
         self.waiting = False
 
         downloads_folder: Path = (
@@ -175,23 +174,20 @@ class Worker(QThread):
         if original_mod is None:
             raise NoOriginalModFound
 
-        translation_details: ModDetails = self.provider.get_details(
-            mod_id=download.mod_id, source=download.source
-        )
         translation = Translation(
-            name=download.display_name,
+            name=download.mod_details.display_name,
             path=(
                 self.database.userdb_path
                 / self.database.language.id
-                / download.display_name
+                / download.mod_details.display_name
             ),
-            mod_id=download.mod_id,
-            version=translation_details.version,
+            mod_id=download.mod_details.mod_id,
+            version=download.mod_details.version,
             original_mod_id=original_mod.mod_id,
             original_version=original_mod.version,
             status=Translation.Status.Ok,
             source=download.source,
-            timestamp=translation_details.timestamp,
+            timestamp=download.mod_details.timestamp,
         )
         translation.strings = strings
         translation.save()
@@ -236,7 +232,8 @@ class Worker(QThread):
                         ProgressUpdate(1, 1, ProgressUpdate.Status.Failed, exception=ex)
                     )
                     self.log.error(
-                        f"Failed to process translation {download.file_name!r}: {ex}",
+                        f"Failed to process translation '{download.mod_details.file_name}':"
+                        f" {ex}",
                         exc_info=ex,
                     )
             else:

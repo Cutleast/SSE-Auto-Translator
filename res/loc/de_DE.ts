@@ -434,13 +434,13 @@ Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manage
 <context>
     <name>DownloadManager</name>
     <message>
-        <location filename="src/core/downloader/download_manager.py" line="276"/>
-        <location filename="src/core/downloader/download_manager.py" line="294"/>
+        <location filename="src/core/downloader/download_manager.py" line="275"/>
+        <location filename="src/core/downloader/download_manager.py" line="293"/>
         <source>Collecting available downloads...</source>
         <translation>Sammle verfügbare Übersetzungen...</translation>
     </message>
     <message>
-        <location filename="src/core/downloader/download_manager.py" line="468"/>
+        <location filename="src/core/downloader/download_manager.py" line="461"/>
         <source>Collecting available translation updates...</source>
         <translation>Sammle verfügbare Updates für Übersetzungen...</translation>
     </message>
@@ -2652,12 +2652,12 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
 <context>
     <name>Worker</name>
     <message>
-        <location filename="src/core/downloader/worker.py" line="100"/>
+        <location filename="src/core/downloader/worker.py" line="101"/>
         <source>Downloading translation...</source>
         <translation>Wird heruntergeladen...</translation>
     </message>
     <message>
-        <location filename="src/core/downloader/worker.py" line="150"/>
+        <location filename="src/core/downloader/worker.py" line="149"/>
         <source>Installing translation...</source>
         <translation>Wird installiert...</translation>
     </message>

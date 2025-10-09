@@ -5,9 +5,9 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
 from dataclasses import dataclass, field
-from typing import Optional, override
+from typing import override
 
-from core.translation_provider.mod_id import ModId
+from core.translation_provider.mod_details import ModDetails
 from core.translation_provider.source import Source
 
 
@@ -17,24 +17,14 @@ class FileDownload:
     Class for single file downloads.
     """
 
-    display_name: str
+    mod_details: ModDetails
     """
-    Display name of the download.
+    Metadata of the downloaded mod file.
     """
 
     source: Source
     """
     Source the download is from.
-    """
-
-    mod_id: ModId
-    """
-    Nexus Mods mod id.
-    """
-
-    file_name: Optional[str] = None
-    """
-    Full name of the downloaded file.
     """
 
     stale: bool = field(default=False)
@@ -44,4 +34,6 @@ class FileDownload:
 
     @override
     def __hash__(self) -> int:
-        return hash((self.source.name, self.mod_id, self.file_name))
+        return hash(
+            (self.source.name, self.mod_details.mod_id, self.mod_details.file_name)
+        )

@@ -34,6 +34,7 @@ dev = [
     "pytest-cov",
     "pytest-mock",
     "pytest-qt",
+    "python-dotenv",
     "ruff",
     "types-requests",
 ]

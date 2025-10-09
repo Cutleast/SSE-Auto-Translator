@@ -50,7 +50,7 @@ class DownloadItem(QTreeWidgetItem, QObject):  # type: ignore
             self.__update_progress, Qt.ConnectionType.QueuedConnection
         )
 
-        self.setText(0, self.download.display_name)
+        self.setText(0, self.download.mod_details.display_name)
 
     def __show_download_button(self) -> None:
         if isinstance(self.current_widget, QPushButton):
@@ -65,9 +65,9 @@ class DownloadItem(QTreeWidgetItem, QObject):  # type: ignore
 
         def open_download_page() -> None:
             url = NexusModsApi.create_nexus_mods_url(
-                self.download.mod_id.nm_game_id,
-                self.download.mod_id.mod_id,
-                self.download.mod_id.file_id,
+                self.download.mod_details.mod_id.nm_game_id,
+                self.download.mod_details.mod_id.mod_id,
+                self.download.mod_details.mod_id.file_id,
                 mod_manager=True,
             )
 
