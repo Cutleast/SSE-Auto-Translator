@@ -434,7 +434,7 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/downloader/download_manager.py" line="461"/>
+        <location filename="src/core/downloader/download_manager.py" line="421"/>
         <source>Collecting available translation updates...</source>
         <translation type="unfinished"></translation>
     </message>
