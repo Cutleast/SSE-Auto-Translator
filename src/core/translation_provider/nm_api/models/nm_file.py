@@ -2,7 +2,7 @@
 Copyright (c) Cutleast
 """
 
-from typing import Optional
+from typing import Optional, override
 
 from pydantic import BaseModel, Field
 
@@ -58,7 +58,7 @@ class NmFile(BaseModel, frozen=True):
     is_primary: bool
     """Whether the file is the primary file."""
 
-    size: int = Field(alias="size_in_bytes")
+    size: Optional[int] = Field(alias="size_in_bytes")
     """The file size in bytes."""
 
     file_name: str
@@ -72,3 +72,7 @@ class NmFile(BaseModel, frozen=True):
 
     content_preview_link: str
     """URL to a JSON file containing a preview of the file's content."""
+
+    @override
+    def __hash__(self) -> int:
+        return hash((self.id, self.name))

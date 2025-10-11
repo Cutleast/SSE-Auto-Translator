@@ -7,6 +7,7 @@ Attribution-NonCommercial-NoDerivatives 4.0 International.
 import re
 import urllib.parse
 import webbrowser
+from concurrent.futures import Future, ThreadPoolExecutor, as_completed
 from queue import Queue
 from typing import Any, Optional, TypeVar, override
 from uuid import uuid4
@@ -260,10 +261,14 @@ class NexusModsApi(ProviderApi):
         if not mod_id.mod_id or not mod_id.file_id:
             ProviderApi.raise_mod_not_found_error(mod_id)
 
-        self.log.info(f"Requesting file info for {mod_id.mod_id}...")
-        path: str = f"/games/{mod_id.nm_game_id}/mods/{mod_id.mod_id}/files/{mod_id.file_id}.json"
+        self.log.info(f"Requesting file info for {mod_id.mod_id} > {mod_id.file_id}...")
+        files: NmFiles = self.__request_mod_files(mod_id.nm_game_id, mod_id.mod_id)
+        files_by_id: dict[int, NmFile] = {f.file_id: f for f in files.files}
 
-        return self.__request_with_model(path, NmFile)
+        if mod_id.file_id not in files_by_id:
+            ProviderApi.raise_mod_not_found_error(mod_id)
+
+        return files_by_id[mod_id.file_id]
 
     def __request_mod_details(self, mod_id: ModId) -> NmMod:
         if not mod_id.mod_id:
@@ -334,7 +339,8 @@ class NexusModsApi(ProviderApi):
         available_translations.sort(
             key=lambda mod_id: self.__get_sort_key(
                 self.get_mod_details(mod_id).timestamp, original_mod_timestamp
-            )
+            ),
+            reverse=True,
         )
 
         self.log.debug(
@@ -343,7 +349,9 @@ class NexusModsApi(ProviderApi):
         )
 
     @staticmethod
-    def __get_sort_key(translation_timestamp: int, original_mod_timestamp: int) -> int:
+    def __get_sort_key(
+        translation_timestamp: int, original_mod_timestamp: int
+    ) -> tuple[bool, int]:
         """
         Calculates a sort key for a translation.
 
@@ -352,15 +360,10 @@ class NexusModsApi(ProviderApi):
             original_mod_timestamp (int): Timestamp of the original mod.
 
         Returns:
-            int: Sort key
+            tuple[bool, int]: Sort key
         """
 
-        # translation is newer => lower difference = lower sort key = higher priority
-        if translation_timestamp > original_mod_timestamp:
-            return translation_timestamp - original_mod_timestamp
-
-        # translation is older => higher sort key = lower priority
-        return int(translation_timestamp + 10e6)
+        return (translation_timestamp > original_mod_timestamp, translation_timestamp)
 
     @override
     def is_update_available(self, mod_id: ModId, timestamp: int) -> bool:
@@ -380,7 +383,7 @@ class NexusModsApi(ProviderApi):
         Requests a list of files a mod has at Nexus Mods.
         """
 
-        path = f"games/{game_id}/mods/{mod_id}/files.json"
+        path = f"games/{game_id}/mods/{mod_id}/files.json?category=main%2Cupdate%2Coptional%2Cold_version%2Cmiscellaneous"
         return self.__request_with_model(path, NmFiles)
 
     def __get_file_contents(
@@ -394,17 +397,11 @@ class NexusModsApi(ProviderApi):
 
         url = f"https://file-metadata.nexusmods.com/file/nexus-files-s3-meta/{_game_id}/{mod_id}/{urllib.parse.quote(file_name)}.json"
 
-        res: req.Response = self._cached_request(url)
-
-        if res.status_code == 200:
-            data = res.content.decode()
-            json_data: dict[str, Any] = json.loads(data)
-            return extract_file_paths(json_data)
-
-        else:
-            self.log.error(
-                f"Failed to get file contents! Status code: {res.status_code}"
-            )
+        try:
+            res: req.Response = self._cached_request(url)
+            return extract_file_paths(res.json())
+        except Exception as ex:
+            self.log.error(f"Failed to get file contents: {ex}", exc_info=ex)
             self.log.debug(f"Request URL: {url}")
             return None
 
@@ -419,28 +416,41 @@ class NexusModsApi(ProviderApi):
 
         mod_files: NmFiles = self.__request_mod_files(game_id, mod_id)
 
+        file_contents: dict[NmFile, list[str]] = {}
+        with ThreadPoolExecutor(thread_name_prefix="NexusModsApiThread") as executor:
+            futures: dict[Future[Optional[list[str]]], NmFile] = {}
+            for mod_file in mod_files.files:
+                if mod_file.category_name is None:
+                    self.log.debug(
+                        f"Skipped file without category: '{mod_file.file_name}'"
+                    )
+                    continue
+
+                futures[
+                    executor.submit(
+                        self.__get_file_contents, game_id, mod_id, mod_file.file_name
+                    )
+                ] = mod_file
+
+            for future in as_completed(futures):
+                mod_file: NmFile = futures[future]
+                result: Optional[list[str]] = future.result()
+                if result is not None:
+                    file_contents[mod_file] = result
+                else:
+                    self.log.debug(
+                        f"Failed to get file contents of '{mod_file.file_name}'!"
+                    )
+
         matches: list[int] = []
-        for mod_file in mod_files.files:
-            if mod_file.category_name is None:
-                self.log.debug(f"Skipped file without category: '{mod_file.file_name}'")
-                continue
-
-            self.log.debug(f"Scanning mod file '{mod_file.file_name}'...")
-            files = self.__get_file_contents(game_id, mod_id, mod_file.file_name)
-
-            if files is None:
-                self.log.debug(
-                    f"Failed to get file contents of '{mod_file.file_name}'!"
-                )
-                continue
-
+        for mod_file, content in file_contents.items():
             if any(
                 file.lower().strip().endswith(file_name.lower().strip())
                 or (
                     f"skse/plugins/dynamicstringdistributor/{file_name.lower().strip()}"
                     in file.lower()
                 )
-                for file in files
+                for file in content
             ):
                 self.log.debug(f"Found '{file_name}' in file '{mod_file.file_name}'.")
                 matches.append(mod_file.file_id)
