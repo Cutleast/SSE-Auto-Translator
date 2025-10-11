@@ -174,6 +174,7 @@ class ModOrganizerApi(ModManagerApi[Mo2InstanceInfo]):
         raw_mod_id: Optional[int] = None
         raw_file_id: Optional[int] = None
         version: str = ""
+        install_file_name: Optional[str] = None
         if general is not None:
             try:
                 raw_mod_id = int(general.get("modid") or 0) or None
@@ -181,6 +182,9 @@ class ModOrganizerApi(ModManagerApi[Mo2InstanceInfo]):
 
                 while version.endswith(".0") and version.count(".") > 1:
                     version = version.removesuffix(".0")
+
+                if general.get("installationFile"):
+                    install_file_name = Path(general["installationFile"]).name
 
                 if "installedFiles" in meta_ini_data:
                     raw_file_id = (
@@ -195,7 +199,11 @@ class ModOrganizerApi(ModManagerApi[Mo2InstanceInfo]):
             self.log.warning(f"Incomplete meta.ini in {str(meta_ini_path.parent)!r}!")
 
         if raw_mod_id:
-            return ModId(mod_id=raw_mod_id, file_id=raw_file_id), version
+            return ModId(
+                mod_id=raw_mod_id,
+                file_id=raw_file_id,
+                installation_file_name=install_file_name,
+            ), version
 
         return None, version
 

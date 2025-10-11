@@ -167,12 +167,15 @@ class VortexApi(ModManagerApi[ProfileInfo]):
             raw_mod_id: Optional[int] = None
             raw_file_id: Optional[int] = None
             version: str = ""
+            install_file_name: Optional[str] = None
             try:
                 if mod_meta_data.get("modId"):
                     raw_mod_id = int(mod_meta_data["modId"])
                 if mod_meta_data.get("fileId"):
                     raw_file_id = int(mod_meta_data["fileId"])
                 version = mod_meta_data.get("version") or ""
+                if mod_meta_data.get("fileName"):
+                    install_file_name = mod_meta_data["fileName"]
 
                 # Remove trailing .0 if any
                 while version.endswith(".0") and version.count(".") > 1:
@@ -185,7 +188,11 @@ class VortexApi(ModManagerApi[ProfileInfo]):
 
             mod_id: Optional[ModId] = None
             if raw_mod_id:
-                mod_id = ModId(mod_id=raw_mod_id, file_id=raw_file_id)
+                mod_id = ModId(
+                    mod_id=raw_mod_id,
+                    file_id=raw_file_id,
+                    installation_file_name=install_file_name,
+                )
 
             mod = Mod(
                 name=display_name,

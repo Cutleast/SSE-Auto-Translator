@@ -68,6 +68,14 @@ class NexusModsApi(ProviderApi):
     a Nexus Mods modpage url.
     """
 
+    FILE_NAME_PATTERN: re.Pattern[str] = re.compile(
+        r"-([0-9]{2,})-(.*)-([0-9]{9,})\.(zip|rar|7z)$"
+    )
+    """
+    Regex pattern for extracting mod id, version and upload timestamp from a file name,
+    like: `Untarnished UI - RaceMenu Patch-97347-v1-3-1713561432.7z`
+    """
+
     __api_key: Optional[str] = None
     """The user-specific API key used for most API requests."""
 
@@ -260,6 +268,12 @@ class NexusModsApi(ProviderApi):
     def __request_file(self, mod_id: ModId) -> NmFile:
         if not mod_id.mod_id or not mod_id.file_id:
             ProviderApi.raise_mod_not_found_error(mod_id)
+        elif mod_id.mod_id == mod_id.file_id:
+            # Although this could occur naturally, it's most likely due to faulty
+            # metadata written by a modlist installer like the Nolvus Dashboard.
+            # Catching it here prevents a lot of unnecessary requests just to get a
+            # similar exception at a later point.
+            raise ValueError("Mod ID and file ID are the same! Wrong metadata?")
 
         self.log.info(f"Requesting file info for {mod_id.mod_id} > {mod_id.file_id}...")
         files: NmFiles = self.__request_mod_files(mod_id.nm_game_id, mod_id.mod_id)
@@ -311,7 +325,10 @@ class NexusModsApi(ProviderApi):
                 for file_id in translation_files
             ]
 
-        self.__sort_available_translations(translations, mod_id)
+        try:
+            self.__sort_available_translations(translations, mod_id)
+        except Exception as ex:
+            self.log.error(f"Failed to sort translations: {ex}", exc_info=ex)
 
         return translations
 
@@ -332,7 +349,20 @@ class NexusModsApi(ProviderApi):
             original_mod_id (ModId): Mod identifier of the installed original mod.
         """
 
-        original_mod_timestamp: int = self.get_mod_details(original_mod_id).timestamp
+        original_mod_timestamp: int
+        try:
+            original_mod_timestamp = self.get_mod_details(original_mod_id).timestamp
+        except Exception as ex:
+            if original_mod_id.installation_file_name is not None:
+                self.log.debug(
+                    "Falling back to installation file name for "
+                    f"{original_mod_id.mod_id}..."
+                )
+                original_mod_timestamp = NexusModsApi.extract_timestamp_from_file_name(
+                    original_mod_id.installation_file_name
+                )
+            else:
+                raise ex
 
         # sort translations ascending after their timestamp difference to the original
         # mod timestamp or their upload timestamp if they're older than the original mod
@@ -759,3 +789,29 @@ class NexusModsApi(ProviderApi):
             return game_id, mod_id, file_id
 
         raise ValueError(f"Could not extract mod id from {url!r}")
+
+    @staticmethod
+    def extract_timestamp_from_file_name(file_name: str) -> int:
+        """
+        Attempts to extract the upload timestamp from the file name of a file downloaded
+        from Nexus Mods.
+
+        Args:
+            file_name (str): Full name of the downloaded mod archive
+
+        Raises:
+            ValueError:
+                When the file name is not from Nexus Mods or does not contain a timestamp
+
+        Returns:
+            int: Upload timestamp
+        """
+
+        file_name_match: Optional[re.Match[str]] = (
+            NexusModsApi.FILE_NAME_PATTERN.search(file_name)
+        )
+
+        if file_name_match is not None:
+            return int(file_name_match.group(3))
+
+        raise ValueError(f"Could not extract timestamp from {file_name!r}")

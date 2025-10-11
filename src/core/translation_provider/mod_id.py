@@ -28,6 +28,9 @@ class ModId(BaseModel):
     nm_game_id: str = "skyrimspecialedition"
     """The Nexus Mods game id of the mod. Defaults to "skyrimspecialedition"."""
 
+    installation_file_name: Optional[str] = None
+    """The full name of the original download archive, if available."""
+
     @override
     def __hash__(self) -> int:
         return hash((self.mod_id, self.file_id, self.nm_id, self.nm_game_id))
