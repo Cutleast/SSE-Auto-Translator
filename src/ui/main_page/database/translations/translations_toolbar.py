@@ -63,13 +63,20 @@ class TranslationsToolbar(QToolBar):
 
         update_check_action: QAction = self.addAction(
             IconProvider.get_qta_icon("mdi6.cloud-refresh"),
-            self.tr("Check translations for available updates"),
+            self.tr("Check translations for available updates")
+            + " ["
+            + self.tr("Temporarily disabled")
+            + "]",
         )
+        update_check_action.setDisabled(True)
         update_check_action.triggered.connect(self.update_check_requested.emit)
 
         self.__update_action = self.addAction(
             IconProvider.get_qta_icon("mdi6.cloud-download"),
-            self.tr("Download and install available translation updates"),
+            self.tr("Download and install available translation updates")
+            + " ["
+            + self.tr("Temporarily disabled")
+            + "]",
         )
         self.__update_action.setDisabled(True)
         self.__update_action.triggered.connect(self.download_updates_requested.emit)
