@@ -87,6 +87,16 @@ class AppConfig(BaseAppConfig):
     def get_config_name() -> str:
         return "app/config.json"
 
+    @default_factory("log_format")
+    @classmethod
+    def _get_default_log_format(cls) -> str:
+        return "[%(asctime)s.%(msecs)03d][%(levelname)s][%(threadName)s][%(name)s.%(funcName)s]: %(message)s"
+
+    @default_factory("log_date_format")
+    @classmethod
+    def _get_default_log_date_format(cls) -> str:
+        return "%H:%M:%S"
+
     @default_factory("accent_color")
     @classmethod
     def _get_default_accent_color(cls) -> str:
