@@ -75,6 +75,11 @@ class DownloadListItem(QTreeWidgetItem, QObject):  # pyright: ignore[reportIncom
             if icon is not None:
                 self.__translations_combobox.setItemIcon(d, icon)
 
+        self.__translations_combobox.setEnabled(
+            self.__translations_combobox.count() > 1
+        )
+        self.__files_combobox.setEnabled(self.__files_combobox.count() > 1)
+
     def __init_ui(self) -> None:
         self.__checkbox = QCheckBox()
         self.__checkbox.setChecked(True)
@@ -97,9 +102,15 @@ class DownloadListItem(QTreeWidgetItem, QObject):  # pyright: ignore[reportIncom
         self.treeWidget().setItemWidget(self, 4, self.__files_combobox)
 
     def __on_checked_changed(self, checked: bool) -> None:
-        self.__translations_combobox.setEnabled(checked)
+        if checked:
+            self.__translations_combobox.setEnabled(
+                self.__translations_combobox.count() > 1
+            )
+            self.__files_combobox.setEnabled(self.__files_combobox.count() > 1)
+        else:
+            self.__translations_combobox.setEnabled(False)
+            self.__files_combobox.setEnabled(False)
         self.__open_translation_button.setEnabled(checked)
-        self.__files_combobox.setEnabled(checked)
 
         self.toggled.emit(checked, self)
 
@@ -115,6 +126,7 @@ class DownloadListItem(QTreeWidgetItem, QObject):  # pyright: ignore[reportIncom
                 for download in new_translation_download.available_downloads
             ]
         )
+        self.__files_combobox.setEnabled(self.__files_combobox.count() > 1)
 
     def __create_file_display_name(self, download: FileDownload) -> str:
         details: ModDetails = download.mod_details
