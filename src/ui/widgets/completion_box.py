@@ -4,10 +4,10 @@ by Cutleast and falls under the license
 Attribution-NonCommercial-NoDerivatives 4.0 International.
 """
 
-from typing import Sequence, override
+from typing import Optional, Sequence, override
 
 from PySide6.QtCore import Qt
-from PySide6.QtWidgets import QComboBox, QCompleter
+from PySide6.QtWidgets import QAbstractItemView, QComboBox, QCompleter
 
 
 class CompletionBox(QComboBox):
@@ -25,7 +25,9 @@ class CompletionBox(QComboBox):
         super().addItems(texts)
 
         completer = QCompleter(texts)
-        completer.popup().setObjectName("completer_popup")
+        popup: Optional[QAbstractItemView] = completer.popup()
+        if popup:
+            popup.setObjectName("completer_popup")
         completer.setCaseSensitivity(Qt.CaseSensitivity.CaseInsensitive)
         completer.setCompletionMode(QCompleter.CompletionMode.PopupCompletion)
         self.setCompleter(completer)

@@ -519,18 +519,22 @@ class NexusModsApi(ProviderApi):
         html: str = res.content.decode(errors="replace")
         parsed = bs4.BeautifulSoup(html, features="html.parser")
 
-        translation_list = parsed.find("ul", {"class": "translations"})
+        translation_list: Optional[bs4.Tag] = parsed.find(
+            "ul", {"class": "translations"}
+        )
         if translation_list is None:
             return []
 
         available_translations: list[int] = []
-        for tag in translation_list.children:  # type: ignore[attr-defined]
+        for tag in translation_list.children:
             tag_text: Optional[str] = tag.text
 
             if not tag_text or tag_text == "\n":
                 continue
 
-            tags = parsed.find_all("a", {"class": f"sortme flag flag-{tag_text}"})
+            tags: bs4.ResultSet[bs4.Tag] = parsed.find_all(
+                "a", {"class": f"sortme flag flag-{tag_text}"}
+            )
             urls: list[str] = [tag["href"] for tag in tags]  # type: ignore[misc,index]
 
             lang_name: str = NexusModsApi.LANG_OVERRIDES.get(tag_text, tag_text).lower()
