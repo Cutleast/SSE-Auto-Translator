@@ -157,3 +157,9 @@ QStatusBar {
     background: #08ffffff;
     border-radius: 0;
 }
+
+/* Checkbox */
+QCheckBox::indicator:checked {
+    /* default accent color is relatively bright, so we need a black icon */
+    image: url(:/icons/light/checkmark.svg);
+}
