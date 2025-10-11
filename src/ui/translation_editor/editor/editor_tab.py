@@ -567,15 +567,16 @@ class EditorTab(QWidget):
 
         QApplication.clipboard().setText(clipboard_text.strip())
 
-    def set_name_filter(self, name_filter: tuple[str, bool]) -> None:
+    def set_name_filter(self, name_filter: str, case_sensitive: bool) -> None:
         """
         Sets the name filter.
 
         Args:
-            name_filter (tuple[str, bool]): The name to filter by and case-sensitivity.
+            name_filter (str): The name to filter by.
+            case_sensitive (bool): Case sensitivity.
         """
 
-        self.__strings_widget.set_name_filter(name_filter)
+        self.__strings_widget.set_name_filter(name_filter, case_sensitive)
         self.update()
 
     def set_state_filter(self, state_filter: list[StringStatus]) -> None:

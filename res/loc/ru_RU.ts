@@ -2026,27 +2026,27 @@ Click on &quot;Show Details&quot; to view used filter.</source>
 <context>
     <name>StringsWidget</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="68"/>
+        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="70"/>
         <source>Type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="69"/>
+        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="71"/>
         <source>Form ID</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="70"/>
+        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="72"/>
         <source>Editor ID</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="71"/>
+        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="73"/>
         <source>Original</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="72"/>
+        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="74"/>
         <source>String</source>
         <translation type="unfinished"></translation>
     </message>

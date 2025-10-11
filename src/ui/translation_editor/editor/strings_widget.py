@@ -19,13 +19,15 @@ from core.string import String, StringList
 from core.string.string_status import StringStatus
 from core.utilities import matches_filter, trim_string
 
+from .string_item import StringItem
+
 
 class StringsWidget(QTreeWidget):
     """
     Class for strings widget in an editor tab.
     """
 
-    __string_items: ReferenceDict[String, QTreeWidgetItem]
+    __string_items: ReferenceDict[String, StringItem]
     """
     Mapping of strings to their tree items.
 
@@ -107,8 +109,8 @@ class StringsWidget(QTreeWidget):
         self.sortByColumn(1, Qt.SortOrder.AscendingOrder)
         self.update()
 
-    def __create_string_item(self, string: String) -> QTreeWidgetItem:
-        item = QTreeWidgetItem(
+    def __create_string_item(self, string: String) -> StringItem:
+        item = StringItem(
             [
                 string.type,
                 string.form_id,
@@ -117,6 +119,7 @@ class StringsWidget(QTreeWidget):
                 trim_string(string.string or string.original),
             ]
         )
+        item.set_string(string)
 
         item.setFont(0, QFont("Consolas"))
         item.setFont(1, QFont("Consolas"))
@@ -149,17 +152,18 @@ class StringsWidget(QTreeWidget):
             item.setText(3, trim_string(string.original))
             item.setText(4, trim_string(string.string or string.original))
 
+            string_text: str = string.type + string.original + string.form_id
+            if string.editor_id is not None:
+                string_text += string.editor_id
+            if string.string is not None:
+                string_text += string.string
+
             item.setHidden(
                 (
                     self.__state_filter is not None
                     and string.status not in self.__state_filter
                 )
-                or not matches_filter(
-                    # TODO: Make filtering by other stuff possible
-                    string.original,
-                    name_filter,
-                    case_sensitive or False,
-                )
+                or not matches_filter(string_text, name_filter, case_sensitive or False)
             )
 
             for c in range(5):
@@ -198,15 +202,19 @@ class StringsWidget(QTreeWidget):
         self.setCurrentItem(item)
         self.scrollToItem(item, QTreeWidget.ScrollHint.PositionAtTop)
 
-    def set_name_filter(self, name_filter: tuple[str, bool]) -> None:
+    def set_name_filter(self, name_filter: str, case_sensitive: bool) -> None:
         """
         Sets the name filter.
 
         Args:
-            name_filter (tuple[str, bool]): The name to filter by and case-sensitivity.
+            name_filter (str): The name to filter by.
+            case_sensitive (bool): Case sensitivity.
         """
 
-        self.__name_filter = name_filter if name_filter[0].strip() else None
+        if name_filter.strip():
+            self.__name_filter = (name_filter, case_sensitive)
+        else:
+            self.__name_filter = None
         self.update()
 
     def set_state_filter(self, state_filter: list[StringStatus]) -> None:

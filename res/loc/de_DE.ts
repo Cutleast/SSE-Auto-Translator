@@ -2032,27 +2032,27 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
 <context>
     <name>StringsWidget</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="68"/>
+        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="70"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="69"/>
+        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="71"/>
         <source>Form ID</source>
         <translation>Form ID</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="70"/>
+        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="72"/>
         <source>Editor ID</source>
         <translation>Editor ID</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="71"/>
+        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="73"/>
         <source>Original</source>
         <translation>Original</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="72"/>
+        <location filename="src/ui/translation_editor/editor/strings_widget.py" line="74"/>
         <source>String</source>
         <translation>String</translation>
     </message>
