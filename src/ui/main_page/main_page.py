@@ -66,12 +66,6 @@ class MainPageWidget(QWidget):
     KOFI_URL: str = "https://ko-fi.com/cutleast"
     """URL to Ko-fi page."""
 
-    DISCORD_URL: str = "https://discord.gg/pqEHdWDf8z"
-    """URL to Discord server."""
-
-    NEXUS_MODS_PROFILE_URL: str = "https://next.nexusmods.com/profile/Cutleast"
-    """URL to Nexus Mods profile."""
-
     edit_translation_requested = Signal(Translation)
     """
     Signal emitted when the user requests to edit a translation.
@@ -200,24 +194,10 @@ class MainPageWidget(QWidget):
 
         ko_fi_button = LinkButton(
             MainPageWidget.KOFI_URL,
-            self.tr("Support us on Ko-Fi"),
+            self.tr("Support me on Ko-fi"),
             IconProvider.get_icon("ko-fi"),
         )
         hlayout.addWidget(ko_fi_button)
-
-        discord_button = LinkButton(
-            MainPageWidget.DISCORD_URL,
-            self.tr("Join us on Discord"),
-            IconProvider.get_icon("discord"),
-        )
-        hlayout.addWidget(discord_button)
-
-        nexus_mods_button = LinkButton(
-            MainPageWidget.NEXUS_MODS_PROFILE_URL,
-            self.tr("Check out my profile on Nexus Mods"),
-            IconProvider.get_icon("nexus_mods_colored"),
-        )
-        hlayout.addWidget(nexus_mods_button)
 
         self.__bar_chart = StackedBar(
             [0 for _ in TranslationStatus],
