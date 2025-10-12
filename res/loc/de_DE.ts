@@ -1020,7 +1020,7 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
         <translation>Modliste</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="427"/>
+        <location filename="src/ui/main_page/main_page.py" line="426"/>
         <source>Success!</source>
         <translation>Erfolgreich!</translation>
     </message>
@@ -1035,47 +1035,47 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
         <translation>Unterstütze mich auf Ko-fi</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="405"/>
+        <location filename="src/ui/main_page/main_page.py" line="404"/>
         <source>No translation downloads available!</source>
         <translation>Keine Downloads verfügbar!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="406"/>
+        <location filename="src/ui/main_page/main_page.py" line="405"/>
         <source>There are no translations available to download.</source>
         <translation>Es sind keine Übersetzungen zum Herunterladen verfügbar.</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="428"/>
+        <location filename="src/ui/main_page/main_page.py" line="427"/>
         <source>Created output mod at: </source>
         <translation>Output-Mod hier erstellt: </translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="434"/>
+        <location filename="src/ui/main_page/main_page.py" line="433"/>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="436"/>
+        <location filename="src/ui/main_page/main_page.py" line="435"/>
         <source>Open output mod in Explorer</source>
         <translation>Output-Mod im Explorer öffnen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="439"/>
+        <location filename="src/ui/main_page/main_page.py" line="438"/>
         <source>Open DSD modpage on Nexus Mods</source>
         <translation>DSD auf Nexus Mods öffnen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="484"/>
+        <location filename="src/ui/main_page/main_page.py" line="483"/>
         <source>Search Results</source>
         <translation>Suchergebnisse</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="489"/>
+        <location filename="src/ui/main_page/main_page.py" line="488"/>
         <source>No strings found!</source>
         <translation>Keine Strings gefunden!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/main_page.py" line="491"/>
+        <location filename="src/ui/main_page/main_page.py" line="490"/>
         <source>Did not find any strings matching the given filter!
 Click on &quot;Show Details&quot; to view used filter.</source>
         <translation>Keine passenden Strings für den angegebenen Filter gefunden!
@@ -1405,23 +1405,23 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
         <translation>Priorität</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="533"/>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="541"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="534"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="542"/>
         <source>Creating translation...</source>
         <translation>Übersetzung wird erstellt...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="565"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="566"/>
         <source>Importing installed translation...</source>
         <translation>Installierte Übersetzungen werden importiert...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="599"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="600"/>
         <source>Success!</source>
         <translation>Erfolgreich!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="601"/>
+        <location filename="src/ui/main_page/mod_instance/mod_instance.py" line="602"/>
         <source>Translation successfully imported into database.</source>
         <translation>Übersetzung erfolgreich in die Datenbank importiert.</translation>
     </message>
@@ -1911,40 +1911,45 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
 <context>
     <name>StringListWidget</name>
     <message>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="71"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="72"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="81"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="72"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="73"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="82"/>
         <source>Form ID</source>
         <translation>Form ID</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="73"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="74"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="83"/>
         <source>Editor ID</source>
         <translation>Editor ID</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="74"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="75"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="84"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="75"/>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="182"/>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="203"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="76"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="191"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="212"/>
         <source>Original</source>
         <translation>Original</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="76"/>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="182"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="77"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="85"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="191"/>
         <source>String</source>
         <translation>String</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="105"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="114"/>
         <source>Strings:</source>
         <translation>Strings:</translation>
     </message>
