@@ -27,6 +27,19 @@ class Backend(NuitkaBackend):
     )
 
     @override
+    def get_additional_args(
+        self,
+        main_module: Path,
+        exe_stem: str,
+        icon_path: Path | None,
+        metadata: BuildMetadata,
+    ) -> list[str]:
+        return [
+            "--include-data-files=.venv/lib/site-packages/cloudscraper/user_agent/"
+            "browsers.json=cloudscraper/user_agent/browsers.json",
+        ]
+
+    @override
     def preprocess_source(self, source_folder: Path, metadata: BuildMetadata) -> None:
         app_module: Path = source_folder / "app.py"
         app_module.write_text(
