@@ -358,54 +358,59 @@ Diese Liste hat nur eine Auswirkung auf Übersetzungen von Nexus Mods!</translat
 <context>
     <name>DownloadListWidget</name>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="118"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="123"/>
         <source>Available Downloads</source>
         <translation>Verfügbare Downloads</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="127"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="132"/>
         <source>Below are the translations that are required and available online. Choose which translations you want to download and click on &quot;Start downloads&quot; when ready.
 If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;Mod Manager Downloads&quot;.</source>
         <translation>Unten sind die Übersetzungen, die benötigt werden und online verfügbar sind. Wähle aus, welche Übersetzungen du herunterladen möchtest und klicke auf &quot;Downloads starten&quot;, wenn du bereit bist.
 Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manager Downloads&quot; verknüpft werden.</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="139"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="144"/>
         <source>Link SSE-AT to &quot;Mod Manager Downloads&quot; before starting</source>
         <translation>SSE-AT vor dem Starten mit &quot;Mod Manager Downloads&quot; verknüpfen</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="143"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="148"/>
         <source>Start downloads</source>
         <translation>Downloads starten</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="156"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="160"/>
+        <source>Filter items without selection options</source>
+        <translation>Elemente ohne Auswahlmöglichkeiten filtern</translation>
+    </message>
+    <message>
+        <location filename="src/ui/downloader/download_list_widget.py" line="168"/>
         <source>Selected downloads:</source>
         <translation>Ausgewählte Downloads:</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="171"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="183"/>
         <source>Mods / Mod files</source>
         <translation>Mods / Moddateien</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="172"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="184"/>
         <source>Translation mod</source>
         <translation>Übersetzungsmod</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="174"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="186"/>
         <source>Translation file</source>
         <translation>Übersetzungsdatei</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="200"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="212"/>
         <source>Items with the same selected downloads can only be checked or unchecked together.</source>
         <translation>Elemente mit gleichem ausgewählten Download können nur gemeinsam an- oder abgewählt werden.</translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="239"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="251"/>
         <source>Open mod page on Nexus Mods...</source>
         <translation>Modpage auf Nexus Mods öffnen...</translation>
     </message>
@@ -1895,7 +1900,7 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
         <translation>Kopieren</translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_list/string_list_menu.py" line="68"/>
+        <location filename="src/ui/widgets/string_list/string_list_menu.py" line="67"/>
         <source>Copy {0}</source>
         <translation>{0} kopieren</translation>
     </message>
@@ -1936,15 +1941,15 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
     </message>
     <message>
         <location filename="src/ui/widgets/string_list/string_list_widget.py" line="76"/>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="191"/>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="212"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="190"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="211"/>
         <source>Original</source>
         <translation>Original</translation>
     </message>
     <message>
         <location filename="src/ui/widgets/string_list/string_list_widget.py" line="77"/>
         <location filename="src/ui/widgets/string_list/string_list_widget.py" line="85"/>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="191"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="190"/>
         <source>String</source>
         <translation>String</translation>
     </message>

@@ -352,53 +352,58 @@ This list only affects translations from Nexus Mods!</source>
 <context>
     <name>DownloadListWidget</name>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="118"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="123"/>
         <source>Available Downloads</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="127"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="132"/>
         <source>Below are the translations that are required and available online. Choose which translations you want to download and click on &quot;Start downloads&quot; when ready.
 If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;Mod Manager Downloads&quot;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="139"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="144"/>
         <source>Link SSE-AT to &quot;Mod Manager Downloads&quot; before starting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="143"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="148"/>
         <source>Start downloads</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="156"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="160"/>
+        <source>Filter items without selection options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/ui/downloader/download_list_widget.py" line="168"/>
         <source>Selected downloads:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="171"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="183"/>
         <source>Mods / Mod files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="172"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="184"/>
         <source>Translation mod</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="174"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="186"/>
         <source>Translation file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="200"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="212"/>
         <source>Items with the same selected downloads can only be checked or unchecked together.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/downloader/download_list_widget.py" line="239"/>
+        <location filename="src/ui/downloader/download_list_widget.py" line="251"/>
         <source>Open mod page on Nexus Mods...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1882,7 +1887,7 @@ Click on &quot;Show Details&quot; to view used filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/widgets/string_list/string_list_menu.py" line="68"/>
+        <location filename="src/ui/widgets/string_list/string_list_menu.py" line="67"/>
         <source>Copy {0}</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1923,15 +1928,15 @@ Click on &quot;Show Details&quot; to view used filter.</source>
     </message>
     <message>
         <location filename="src/ui/widgets/string_list/string_list_widget.py" line="76"/>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="191"/>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="212"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="190"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="211"/>
         <source>Original</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="src/ui/widgets/string_list/string_list_widget.py" line="77"/>
         <location filename="src/ui/widgets/string_list/string_list_widget.py" line="85"/>
-        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="191"/>
+        <location filename="src/ui/widgets/string_list/string_list_widget.py" line="190"/>
         <source>String</source>
         <translation type="unfinished"></translation>
     </message>

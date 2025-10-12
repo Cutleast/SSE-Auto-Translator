@@ -175,3 +175,14 @@ class DownloadListItem(QTreeWidgetItem, QObject):  # pyright: ignore[reportIncom
         return current_translation_download.available_downloads[
             self.__files_combobox.currentIndex()
         ]
+
+    def has_selection_options(self) -> bool:
+        """
+        Returns:
+            bool: Whether this item has selection options (more than one translation or file).
+        """
+
+        return (
+            self.__translations_combobox.count() > 1
+            or self.__files_combobox.count() > 1
+        )

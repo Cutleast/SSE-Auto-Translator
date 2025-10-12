@@ -5,7 +5,7 @@ Copyright (c) Cutleast
 import logging
 import webbrowser
 from pathlib import Path
-from typing import Optional, override
+from typing import Optional, cast, override
 
 from cutleast_core_lib.core.utilities.filter import matches_filter
 from cutleast_core_lib.ui.utilities.tree_widget import (
@@ -61,11 +61,15 @@ class DownloadListWidget(QWidget):
     __items: dict[Path, DownloadListItem]
     provider: Provider
 
+    __name_filter: Optional[tuple[str, bool]] = None
+    """Optional name filter and case-sensitivity."""
+
     __vlayout: QVBoxLayout
     _link_nxm_checkbox: QCheckBox
     _start_downloads_button: QPushButton
     __tree_widget: QTreeWidget
     __menu: DownloadListMenu
+    __filter_button: QPushButton
     __search_bar: SearchBar
     __selected_downloads_num_label: LCDNumber
 
@@ -97,6 +101,7 @@ class DownloadListWidget(QWidget):
         self.__tree_widget.expandAll()
 
         self._start_downloads_button.clicked.connect(self._on_start_button_clicked)
+        self.__filter_button.toggled.connect(lambda checked: self.__update())
         self.__search_bar.searchChanged.connect(self.__on_search_changed)
 
         self.__menu.expand_all_clicked.connect(self.__tree_widget.expandAll)
@@ -149,6 +154,13 @@ class DownloadListWidget(QWidget):
 
         hlayout = QHBoxLayout()
         self.__vlayout.addLayout(hlayout)
+
+        self.__filter_button = QPushButton(IconProvider.get_qta_icon("mdi6.filter"), "")
+        self.__filter_button.setToolTip(
+            self.tr("Filter items without selection options")
+        )
+        self.__filter_button.setCheckable(True)
+        hlayout.addWidget(self.__filter_button)
 
         self.__search_bar = SearchBar()
         hlayout.addWidget(self.__search_bar, stretch=1)
@@ -301,21 +313,44 @@ class DownloadListWidget(QWidget):
             if isinstance(item, DownloadListItem):
                 item.set_checked(False)
 
-    def __on_search_changed(self, text: str, case_sensitive: bool) -> None:
-        name_filter: Optional[str] = text.strip() or None
+    def __on_search_changed(self, name_filter: str, case_sensitive: bool) -> None:
+        if name_filter.strip():
+            self.__name_filter = (name_filter, case_sensitive)
+        else:
+            self.__name_filter = None
+
+        self.__update()
+
+    def __update(self) -> None:
+        name_filter: Optional[str] = (
+            self.__name_filter[0] if self.__name_filter else None
+        )
+        case_sensitive: Optional[bool] = (
+            self.__name_filter[1] if self.__name_filter else None
+        )
 
         for mod_item in iter_toplevel_items(self.__tree_widget):
             for modfile_item in iter_children(mod_item):
                 modfile_item.setHidden(
-                    not matches_filter(
-                        modfile_item.text(1), name_filter, case_sensitive
+                    (
+                        self.__filter_button.isChecked()
+                        and not cast(
+                            DownloadListItem, modfile_item
+                        ).has_selection_options()
+                    )
+                    or not matches_filter(
+                        modfile_item.text(1), name_filter, case_sensitive or False
                     )
                 )
 
             mod_item.setHidden(
-                name_filter is not None
+                (
+                    self.__filter_button.isChecked()
+                    or not matches_filter(
+                        mod_item.text(1), name_filter, case_sensitive or False
+                    )
+                )
                 and not are_children_visible(mod_item)
-                and not matches_filter(mod_item.text(1), name_filter, case_sensitive)
             )
 
     @override
