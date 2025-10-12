@@ -291,15 +291,19 @@ class StringListWidget(QWidget):
     def columns(self) -> list[str]:
         return self.__columns
 
-    def set_text_filter(self, text_filter: tuple[str, bool]) -> None:
+    def set_text_filter(self, text_filter: str, case_sensitive: bool) -> None:
         """
         Sets the text filter.
 
         Args:
-            text_filter (tuple[str, bool]): The text to filter by and case-sensitivity.
+            text_filter (str): The text to filter by.
+            case_sensitive (bool): Case sensitivity.
         """
 
-        self.__text_filter = text_filter if text_filter[0].strip() else None
+        if text_filter.strip():
+            self.__text_filter = (text_filter, case_sensitive)
+        else:
+            self.__text_filter = None
         self.__update()
 
     def set_state_filter(self, state_filter: list[StringStatus]) -> None:
