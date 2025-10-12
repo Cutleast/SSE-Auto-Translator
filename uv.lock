@@ -606,13 +606,13 @@ wheels = [
 
 [[package]]
 name = "nuitka"
-version = "2.7.16"
+version = "2.8"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "ordered-set" },
     { name = "zstandard" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/e5/87/36bae02fb19e98cdfa5778faf14f90acff396b9b17586355fbefbe971631/Nuitka-2.7.16.tar.gz", hash = "sha256:768909faf365b21ae4777727fc4ae88efc29239c664bd177061fc907e263e0fa", size = 3889164, upload-time = "2025-09-19T09:47:21.982Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/4e/9e/cd802e8d4091b7d623268c7c0ab18f5be26db1333707b0b322fd2cc2c57e/Nuitka-2.8.tar.gz", hash = "sha256:46ad9e1be81fa54b0c0f0698aa560db99666ea128b3c72ede88a15c46bcf27f0", size = 3883900, upload-time = "2025-10-11T11:14:23.351Z" }
 
 [[package]]
 name = "ordered-set"
