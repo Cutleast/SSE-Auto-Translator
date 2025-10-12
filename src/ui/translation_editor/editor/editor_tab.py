@@ -555,14 +555,15 @@ class EditorTab(QWidget):
         Copies current selected strings to clipboard.
         """
 
-        selected_items = self.__strings_widget.selectedItems()
+        selected_strings: StringList = self.__strings_widget.get_selected_strings()
 
         clipboard_text = ""
-        for item in selected_items:
-            for c in range(self.__strings_widget.columnCount()):
-                clipboard_text += f"{item.toolTip(c)!r}"[1:-1] + "\t"
-
-            clipboard_text = clipboard_text.removesuffix("\t")
+        for string in selected_strings:
+            clipboard_text += f"{string.type}\t"
+            clipboard_text += f"{string.form_id}\t"
+            clipboard_text += f"{string.editor_id}\t"
+            clipboard_text += f"{string.original}\t"
+            clipboard_text += f"{string.string}"
             clipboard_text += "\n"
 
         QApplication.clipboard().setText(clipboard_text.strip())
