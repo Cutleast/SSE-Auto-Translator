@@ -434,13 +434,13 @@ If you don’t have a Nexus Mods Premium account SSE-AT must be linked to &quot;
 <context>
     <name>DownloadManager</name>
     <message>
-        <location filename="src/core/downloader/download_manager.py" line="277"/>
-        <location filename="src/core/downloader/download_manager.py" line="294"/>
+        <location filename="src/core/downloader/download_manager.py" line="281"/>
+        <location filename="src/core/downloader/download_manager.py" line="298"/>
         <source>Collecting available downloads...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/downloader/download_manager.py" line="422"/>
+        <location filename="src/core/downloader/download_manager.py" line="426"/>
         <source>Collecting available translation updates...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1121,57 +1121,57 @@ Click on &quot;Show Details&quot; to view used filter.</source>
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="src/ui/main_window.py" line="139"/>
+        <location filename="src/ui/main_window.py" line="142"/>
         <source>Modlist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="144"/>
+        <location filename="src/ui/main_window.py" line="147"/>
         <source>Translation Editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="166"/>
+        <location filename="src/ui/main_window.py" line="173"/>
         <source>Exit?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="178"/>
+        <location filename="src/ui/main_window.py" line="185"/>
         <source>Continue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="181"/>
+        <location filename="src/ui/main_window.py" line="188"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="210"/>
+        <location filename="src/ui/main_window.py" line="217"/>
         <source>No Updates Available</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="211"/>
+        <location filename="src/ui/main_window.py" line="218"/>
         <source>There are no updates available.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="220"/>
+        <location filename="src/ui/main_window.py" line="227"/>
         <source>Created by Cutleast (&lt;a href=&apos;https://www.nexusmods.com/users/65733731&apos;&gt;NexusMods&lt;/a&gt; | &lt;a href=&apos;https://github.com/cutleast&apos;&gt;GitHub&lt;/a&gt; | &lt;a href=&apos;https://ko-fi.com/cutleast&apos;&gt;Ko-Fi&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Icon by Wuerfelhusten (&lt;a href=&apos;https://www.nexusmods.com/users/122160268&apos;&gt;NexusMods&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Licensed under Attribution-NonCommercial-NoDerivatives 4.0 International</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="229"/>
+        <location filename="src/ui/main_window.py" line="236"/>
         <source>&lt;&lt;Put your translator information here.&gt;&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="243"/>
+        <location filename="src/ui/main_window.py" line="250"/>
         <source>About Qt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="169"/>
+        <location filename="src/ui/main_window.py" line="176"/>
         <source>Are you sure you want to exit? There are still unsaved translations open in the editor. All unsaved changes will be lost!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2062,6 +2062,14 @@ Click on &quot;Show Details&quot; to view used filter.</source>
     </message>
 </context>
 <context>
+    <name>ToastNotifier</name>
+    <message>
+        <location filename="src/ui/toast_notifier.py" line="31"/>
+        <source>All downloads finished!</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Translation</name>
     <message>
         <location filename="src/core/database/translation.py" line="76"/>
@@ -2658,12 +2666,12 @@ Click on &quot;Show Details&quot; to view used filter.</source>
 <context>
     <name>Worker</name>
     <message>
-        <location filename="src/core/downloader/worker.py" line="101"/>
+        <location filename="src/core/downloader/worker.py" line="107"/>
         <source>Downloading translation...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/downloader/worker.py" line="149"/>
+        <location filename="src/core/downloader/worker.py" line="155"/>
         <source>Installing translation...</source>
         <translation type="unfinished"></translation>
     </message>

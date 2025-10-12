@@ -26,6 +26,7 @@ from ui.utilities.theme_manager import ThemeManager
 from .main_page.main_page import MainPageWidget
 from .menubar import MenuBar
 from .statusbar import StatusBar
+from .toast_notifier import ToastNotifier
 from .translation_editor.editor_page import EditorPage
 
 
@@ -50,6 +51,7 @@ class MainWindow(QMainWindow):
     tab_widget: QTabWidget
     mainpage_widget: MainPageWidget
     translation_editor: EditorPage
+    toast_notifier: ToastNotifier
     __status_bar: StatusBar
 
     refresh_signal = Signal()
@@ -90,6 +92,7 @@ class MainWindow(QMainWindow):
 
         self.__init_ui()
         self.__init_shortcuts()
+        self.__init_toast_notifier()
 
         self.translation_editor.tab_count_updated.connect(
             self.__on_editor_tab_count_change
@@ -151,6 +154,10 @@ class MainWindow(QMainWindow):
     def __init_status_bar(self) -> None:
         self.__status_bar = StatusBar(self.provider)
         self.setStatusBar(self.__status_bar)
+
+    def __init_toast_notifier(self) -> None:
+        self.toast_notifier = ToastNotifier(self)
+        self.toast_notifier.set_download_manager(self.download_manager)
 
     def refresh(self) -> None:
         self.refresh_signal.emit()

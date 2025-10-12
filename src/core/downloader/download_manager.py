@@ -163,14 +163,18 @@ class DownloadManager(QObject):
         ]
 
         for worker in self.workers:
-            worker.finished.connect(self.__on_worker_finished)
+            worker.task_done.connect(self.__on_worker_finished)
             worker.download_finished.connect(self.download_finished.emit)
             worker.start()
 
         self.log.info("Threads started, ready for downloads.")
 
     def __on_worker_finished(self) -> None:
-        if all(worker.isFinished() for worker in self.workers) and self.running:
+        if (
+            self.queue.qsize() == 0
+            and all(not worker.processing for worker in self.workers)
+            and self.running
+        ):
             self.finished.emit()
 
     def join(self) -> None:

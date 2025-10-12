@@ -39,9 +39,15 @@ class Worker(QThread):
 
     log: logging.Logger
 
+    processing: bool = False
     running: bool = False
     paused: bool = False
     waiting: bool = False
+
+    task_done = Signal()
+    """
+    This signal gets emitted everytime the worker finishes a task.
+    """
 
     download_finished = Signal(FileDownload)
     """
@@ -225,6 +231,7 @@ class Worker(QThread):
                 continue
 
             if not download.stale:
+                self.processing = True
                 try:
                     self.__process_download(download, progress_callback)
                 except Exception as ex:
@@ -236,11 +243,13 @@ class Worker(QThread):
                         f" {ex}",
                         exc_info=ex,
                     )
+                self.processing = False
             else:
                 self.download_finished.emit(download)
                 progress_callback(ProgressUpdate(1, 1, ProgressUpdate.Status.Finished))
 
             self.download_queue.task_done()
+            self.task_done.emit()
 
         self.running = False
         self.log.info("Thread stopped.")
