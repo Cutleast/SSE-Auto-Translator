@@ -71,12 +71,6 @@ QComboBox QAbstractItemView#completer_popup::item:selected {
 }
 
 
-/* Progressbar */
-QProgressBar#error::chunk {
-    background: #d74343;
-}
-
-
 /* List Widget */
 QListWidget#side_menu {
     padding: 4px;
@@ -120,6 +114,11 @@ StackedBar {
 /* ProgressWidget */
 ProgressWidget QToolTip {
     font-family: Consolas;
+}
+
+/* Progressbar */
+ProgressWidget QProgressBar#error::chunk {
+    background: #d74343;
 }
 
 /* Toolbars */

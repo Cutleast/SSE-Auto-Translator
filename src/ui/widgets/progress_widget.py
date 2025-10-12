@@ -20,6 +20,7 @@ from PySide6.QtWidgets import (
 
 from core.utilities.exceptions import LocalizedException
 from ui.utilities.icon_provider import IconProvider
+from ui.utilities.theme_manager import ThemeManager
 
 
 class ProgressWidget(QWidget):
@@ -119,7 +120,7 @@ class ProgressWidget(QWidget):
         self.__copy_button.show()
         self.__close_button.show()
         self.__progress_bar.setObjectName("error")
-        self.__progress_bar.setStyleSheet(self.styleSheet())
+        self.__progress_bar.setStyleSheet(ThemeManager.get_stylesheet() or "")
         self.__progress_bar.setValue(1)
         self.__progress_bar.setMaximum(1)
         self.__status_label.setWordWrap(True)
