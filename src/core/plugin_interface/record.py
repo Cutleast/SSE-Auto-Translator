@@ -10,7 +10,14 @@ from typing import Optional, override
 from .datatypes import Hex, Integer
 from .flags import RecordFlags
 from .subrecord import EPFT, SUBRECORD_MAP, TRDT, StringSubrecord, Subrecord
-from .utilities import STRING_RECORDS, Stream, get_checksum, peek, prettyprint_object
+from .utilities import (
+    STRING_RECORDS,
+    Stream,
+    deterministic_hash,
+    get_checksum,
+    peek,
+    prettyprint_object,
+)
 
 
 class Record:
@@ -101,7 +108,7 @@ class Record:
             if indx_subrecord is None:
                 raise ValueError(f"No INDX subrecord found in record {self.formid}!")
 
-            stage_index = abs(hash(indx_subrecord.data))
+            stage_index = abs(deterministic_hash(indx_subrecord.data))
 
             if not ctda_subrecords:
                 return get_checksum(stage_index)
@@ -111,7 +118,7 @@ class Record:
 
             hash_value: int = 0
             for subrecord in ctda_subrecords:
-                value = abs(hash(subrecord.data))
+                value = abs(deterministic_hash(subrecord.data))
                 hash_value += value
 
             index = get_checksum(hash_value - stage_index)

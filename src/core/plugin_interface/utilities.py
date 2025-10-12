@@ -2,6 +2,7 @@
 Copyright (c) Cutleast
 """
 
+import hashlib
 from io import BufferedReader, BytesIO
 from pathlib import Path
 from typing import TypeAlias
@@ -61,6 +62,20 @@ def get_checksum(number: int) -> int:
     number = abs(number)
 
     return sum(int(digit) for digit in str(number))
+
+
+def deterministic_hash(data: bytes) -> int:
+    """
+    Calculates the hash of a byte array in a deterministic manner.
+
+    Args:
+        data (bytes): Byte array
+
+    Returns:
+        int: Deterministic hash
+    """
+
+    return int(hashlib.blake2b(data, digest_size=8).hexdigest(), base=16)
 
 
 def is_camel_case(text: str) -> bool:
