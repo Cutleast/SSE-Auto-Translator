@@ -50,7 +50,8 @@ class DownloadManager(QObject):
 
     log: logging.Logger = logging.getLogger("DownloadManager")
 
-    THREAD_NUM: int = 1  # TODO: Make this configurable by the user
+    thread_num: int
+    """Number of worker threads."""
 
     queue: Queue[tuple[FileDownload, ProgressCallback]]
     workers: list[Worker]
@@ -94,6 +95,7 @@ class DownloadManager(QObject):
     ) -> None:
         super().__init__()
 
+        self.thread_num = app_config.download_thread_num
         self.queue = Queue()
         self.workers = []
 
@@ -143,7 +145,7 @@ class DownloadManager(QObject):
         if self.running or self.workers:
             return
 
-        self.log.debug(f"Starting {DownloadManager.THREAD_NUM} thread(s)...")
+        self.log.debug(f"Starting {self.thread_num} thread(s)...")
 
         self.running = True
 
@@ -157,7 +159,7 @@ class DownloadManager(QObject):
                 self.database,
                 self.mod_instance,
             )
-            for i in range(DownloadManager.THREAD_NUM)
+            for i in range(self.thread_num)
         ]
 
         for worker in self.workers:

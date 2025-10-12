@@ -29,6 +29,9 @@ class AppConfig(BaseAppConfig):
     detector_confidence: float = 0.8
     """Language detector confidence"""
 
+    download_thread_num: int = 1
+    """Number of threads to use for downloading translation archives."""
+
     auto_bind_nxm: bool = False
     """Automatically bind to "Mod Manager Download" Buttons on Nexus Mods on Startup"""
 

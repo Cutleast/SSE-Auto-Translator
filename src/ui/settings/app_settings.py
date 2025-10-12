@@ -57,6 +57,7 @@ class AppSettings(SettingsPage[AppConfig]):
     __auto_import_checkbox: QCheckBox
     __auto_create_db_translations_checkbox: QCheckBox
     __double_click_strings: QCheckBox
+    __download_threads_box: QSpinBox
 
     def __init__(self, initial_config: AppConfig, cache: Cache) -> None:
         self.cache = cache
@@ -216,6 +217,25 @@ class AppSettings(SettingsPage[AppConfig]):
             "*" + self.tr("Language Detector Confidence"), self.__confidence_box
         )
 
+        self.__download_threads_box = QSpinBox()
+        self.__download_threads_box.installEventFilter(self)
+        self.__download_threads_box.setMinimum(1)
+        self.__download_threads_box.setValue(self._initial_config.download_thread_num)
+        self.__download_threads_box.valueChanged.connect(
+            lambda _: self.changed_signal.emit()
+        )
+        self.__download_threads_box.valueChanged.connect(
+            lambda _: self.restart_required_signal.emit()
+        )
+        behavior_flayout.addRow(
+            "*"
+            + self.tr(
+                "Number of concurrent downloads\nWarning: The app could become "
+                "unresponsive but downloads will be completed faster."
+            ),
+            self.__download_threads_box,
+        )
+
         self.__bind_nxm_checkbox = QCheckBox(
             "*"
             + self.tr(
@@ -308,6 +328,7 @@ class AppSettings(SettingsPage[AppConfig]):
         config.language = self.__app_lang_box.getCurrentValue()
         config.accent_color = self.__accent_color_entry.text()
         config.detector_confidence = self.__confidence_box.value()
+        config.download_thread_num = self.__download_threads_box.value()
         config.auto_bind_nxm = self.__bind_nxm_checkbox.isChecked()
         config.use_spell_check = self.__use_spell_check_checkbox.isChecked()
         config.auto_import_translations = self.__auto_import_checkbox.isChecked()

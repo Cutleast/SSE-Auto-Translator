@@ -144,7 +144,7 @@ class Importer(QObject):
         if ldialog is not None:
             ldialog.updateProgress(text1=self.tr("Processing archive..."))
 
-        output_folder = tmp_dir / "Output"
+        output_folder = tmp_dir / f"{archive_path.stem}_Output"
 
         if output_folder.is_dir():
             shutil.rmtree(output_folder)
@@ -267,14 +267,15 @@ class Importer(QObject):
         dsd_files: list[str] = archive.glob("**/" + DSD_FILE_PATTERN)
 
         self.log.debug(
-            f"Extracting {len(modfiles + dsd_files)} file(s) to '{tmp_dir}'..."
+            f"Extracting {len(modfiles + dsd_files)} file(s) to "
+            f"'{tmp_dir / archive_path.stem}'..."
         )
-        archive.extract_files(modfiles + dsd_files, tmp_dir)
+        archive.extract_files(modfiles + dsd_files, tmp_dir / archive_path.stem)
 
         self.log.debug("Processing extracted files...")
 
         for m, modfile_name in enumerate(modfiles):
-            extracted_file: Path = tmp_dir / modfile_name
+            extracted_file: Path = tmp_dir / archive_path.stem / modfile_name
             modfile: ModFile = ModFileService.get_modfiletype_for_suffix(
                 extracted_file.suffix
             )(name=extracted_file.name, full_path=extracted_file)

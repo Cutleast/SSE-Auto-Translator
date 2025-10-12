@@ -112,13 +112,13 @@ Du kannst diese Beschränkung später unter Hilfe &gt; Windows-Pfadlängenbegren
     <name>AppSettings</name>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="106"/>
-        <location filename="src/ui/settings/app_settings.py" line="94"/>
+        <location filename="src/ui/settings/app_settings.py" line="95"/>
         <source>Number of newest log files to keep</source>
         <translation>Anzahl der zu behaltenden neuesten Logdateien</translation>
     </message>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="112"/>
-        <location filename="src/ui/settings/app_settings.py" line="107"/>
+        <location filename="src/ui/settings/app_settings.py" line="108"/>
         <source>Log Level</source>
         <translation>Loglevel</translation>
     </message>
@@ -144,113 +144,120 @@ Du kannst diese Beschränkung später unter Hilfe &gt; Windows-Pfadlängenbegren
         <translation>Die Akzentfarbe muss ein gültiger hexadezimaler Farbcode sein!</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="117"/>
+        <location filename="src/ui/settings/app_settings.py" line="118"/>
         <source>App language</source>
         <translation>App-Sprache</translation>
     </message>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="126"/>
-        <location filename="src/ui/settings/app_settings.py" line="130"/>
+        <location filename="src/ui/settings/app_settings.py" line="131"/>
         <source>Accent Color</source>
         <translation>Akzentfarbe</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="216"/>
+        <location filename="src/ui/settings/app_settings.py" line="217"/>
         <source>Language Detector Confidence</source>
         <translation>Spracherkennungs-Empfindlichkeit</translation>
     </message>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="97"/>
-        <location filename="src/ui/settings/app_settings.py" line="80"/>
+        <location filename="src/ui/settings/app_settings.py" line="81"/>
         <source>Basic App Settings</source>
         <translation>Grundlegende App Einstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="134"/>
-        <location filename="src/ui/settings/app_settings.py" line="298"/>
+        <location filename="src/ui/settings/app_settings.py" line="135"/>
+        <location filename="src/ui/settings/app_settings.py" line="318"/>
         <source>Clear Cache (This will reset all mod file states and delete cached API requests!)</source>
         <translation>Cache leeren (Das löscht alle Moddatei-Zustände und zwischengespeicherte API-Anfragen)</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="150"/>
+        <location filename="src/ui/settings/app_settings.py" line="151"/>
         <source>Path Settings</source>
         <translation>Konfigurierte Pfade</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="158"/>
-        <location filename="src/ui/settings/app_settings.py" line="173"/>
+        <location filename="src/ui/settings/app_settings.py" line="159"/>
+        <location filename="src/ui/settings/app_settings.py" line="174"/>
         <source>Default: </source>
         <translation>Standard: </translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="166"/>
+        <location filename="src/ui/settings/app_settings.py" line="167"/>
         <source>Path for Output Mod</source>
         <translation>Pfad für Output-Mod</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="166"/>
+        <location filename="src/ui/settings/app_settings.py" line="167"/>
         <source> (No Restart Required)</source>
         <translation> (Kein Neustart erforderlich)</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="179"/>
+        <location filename="src/ui/settings/app_settings.py" line="180"/>
         <source>Path for Temporary Folder</source>
         <translation>Pfad für temporären Ordner</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="181"/>
+        <location filename="src/ui/settings/app_settings.py" line="182"/>
         <source>(for temporary files, will be wiped after exit!)</source>
         <translation>(für temporäre Dateien, wird nach Beenden geleert!)</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="188"/>
+        <location filename="src/ui/settings/app_settings.py" line="189"/>
         <source>Defaults to Temporary Folder configured above</source>
         <translation>Standardmäßig der oben konfigurierte temporäre Ordner</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="197"/>
+        <location filename="src/ui/settings/app_settings.py" line="198"/>
         <source>Downloads Path</source>
         <translation>Downloads-Ordner</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="200"/>
+        <location filename="src/ui/settings/app_settings.py" line="201"/>
         <source>Behavior Settings</source>
         <translation>Verhaltenseinstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="222"/>
+        <location filename="src/ui/settings/app_settings.py" line="233"/>
+        <source>Number of concurrent downloads
+Warning: The app could become unresponsive but downloads will be completed faster.</source>
+        <translation>Anzahl gleichzeitiger Downloads
+Warnung: Die Oberfläche könnte unresponsiv werden, aber die Downloads werden schneller fertig.</translation>
+    </message>
+    <message>
+        <location filename="src/ui/settings/app_settings.py" line="242"/>
         <source>Automatically bind to &quot;Mod Manager Download&quot; Buttons on Nexus Mods on Startup</source>
         <translation>Automatisch beim Start mit &quot;Mod Manager Download&quot; Buttons auf Nexus Mods verknüpfen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="226"/>
+        <location filename="src/ui/settings/app_settings.py" line="246"/>
         <source>[EXPERIMENTAL]</source>
         <translation>[EXPERIMENTELL]</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="230"/>
+        <location filename="src/ui/settings/app_settings.py" line="250"/>
         <source>This will automatically bind to Mod Manager downloads and unbind when SSE-AT is closed.
 This feature is considered experimental because a crash might prevent it from unbinding properly.</source>
         <translation>Dies verknüpft SSE-AT automatisch mit Mod Manager Downloads beim Start und hebt die Verknüpfung auf, wenn SSE-AT geschlossen wird.
 Diese Funktion wird als experimentell betrachtet, da ein Absturz verhindern könnte, dass die Verknüpfung korrekt aufgehoben wird.</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="246"/>
+        <location filename="src/ui/settings/app_settings.py" line="266"/>
         <source>Enable Spell Checking in Translation Editor (Warning: could be slow)</source>
         <translation>Rechtschreibprüfung im Übersetzungseditor aktivieren (Warnung: könnte langsam sein)</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="256"/>
+        <location filename="src/ui/settings/app_settings.py" line="276"/>
         <source>Automatically import installed translations into the database</source>
         <translation>Automatisch installierte Übersetzungen in die Datenbank importieren</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="268"/>
+        <location filename="src/ui/settings/app_settings.py" line="288"/>
         <source>Automatically create translations for mod files that are entirely covered by installed translations</source>
         <translation>Automatisch Übersetzungen für Moddateien erstellen, die vollständig von installierten Übersetzungen abgedeckt sind</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="282"/>
+        <location filename="src/ui/settings/app_settings.py" line="302"/>
         <source>Show strings when double clicking a mod or mod file in the modlist or a translation in the &quot;Translations&quot; tab</source>
         <translation>Bei einem Doppelklick auf eine Mod oder eine Moddatei in der Modliste oder einer Übersetzung im &quot;Übersetzungen&quot; Tab dessen Strings anzeigen</translation>
     </message>
@@ -434,13 +441,13 @@ Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manage
 <context>
     <name>DownloadManager</name>
     <message>
-        <location filename="src/core/downloader/download_manager.py" line="275"/>
-        <location filename="src/core/downloader/download_manager.py" line="292"/>
+        <location filename="src/core/downloader/download_manager.py" line="277"/>
+        <location filename="src/core/downloader/download_manager.py" line="294"/>
         <source>Collecting available downloads...</source>
         <translation>Sammle verfügbare Übersetzungen...</translation>
     </message>
     <message>
-        <location filename="src/core/downloader/download_manager.py" line="420"/>
+        <location filename="src/core/downloader/download_manager.py" line="422"/>
         <source>Collecting available translation updates...</source>
         <translation>Sammle verfügbare Updates für Übersetzungen...</translation>
     </message>
@@ -874,12 +881,12 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
         <translation>Dateien werden kopiert...</translation>
     </message>
     <message>
-        <location filename="src/core/database/importer.py" line="284"/>
+        <location filename="src/core/database/importer.py" line="285"/>
         <source>Processing mod files...</source>
         <translation>Moddateien werden verarbeitet...</translation>
     </message>
     <message>
-        <location filename="src/core/database/importer.py" line="323"/>
+        <location filename="src/core/database/importer.py" line="324"/>
         <source>Processing DSD files...</source>
         <translation>DSD-Dateien werden verarbeitet...</translation>
     </message>
