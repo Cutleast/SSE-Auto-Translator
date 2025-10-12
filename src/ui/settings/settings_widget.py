@@ -73,6 +73,8 @@ class SettingsWidget(QWidget):
 
         self.__init_ui()
 
+        self.__save_button.clicked.connect(self._save)
+
     def __init_ui(self) -> None:
         self.__vlayout = QVBoxLayout()
         self.setLayout(self.__vlayout)
@@ -138,10 +140,9 @@ class SettingsWidget(QWidget):
         self.__save_button = QPushButton(self.tr("Save"))
         self.__save_button.setDefault(True)
         self.__save_button.setDisabled(True)
-        self.__save_button.clicked.connect(self.__save)
         hlayout.addWidget(self.__save_button)
 
-    def __save(self) -> None:
+    def _save(self) -> None:
         self.__app_settings.apply(self.app_config)
         self.__user_settings.apply(self.user_config)
         self.__translator_settings.apply(self.translator_config)
@@ -150,6 +151,7 @@ class SettingsWidget(QWidget):
         self.user_config.save()
         self.translator_config.save()
 
+        self.changes_pending = False
         self.save_signal.emit()
 
         if self.restart_required:

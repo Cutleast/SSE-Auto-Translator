@@ -41,7 +41,6 @@ class SettingsDialog(SettingsWidget):
         self.resize(1000, 650)
 
         self.cancel_signal.connect(self.close)
-        self.save_signal.connect(self.__save)
 
     @override
     def _on_change(self) -> None:
@@ -49,8 +48,10 @@ class SettingsDialog(SettingsWidget):
 
         self.setWindowTitle(self.tr("Settings") + "*")
 
-    def __save(self) -> None:
-        self.changes_pending = False
+    @override
+    def _save(self) -> None:
+        super()._save()
+
         self.close()
 
     @override

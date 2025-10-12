@@ -1672,22 +1672,22 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="64"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="66"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="66"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="68"/>
         <source>Are you sure you want to cancel? All changes will be lost.</source>
         <translation>Bist du sicher, dass du abbrechen möchtest? Alle ungespeicherten Änderungen gehen dabei verloren.</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="72"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="74"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="73"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="75"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
@@ -1695,57 +1695,57 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
 <context>
     <name>SettingsWidget</name>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="85"/>
+        <location filename="src/ui/settings/settings_widget.py" line="87"/>
         <source>Settings</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="91"/>
+        <location filename="src/ui/settings/settings_widget.py" line="93"/>
         <source>Settings marked with * require a restart to take effect.</source>
         <translation>Einstellungen mit * markiert benötigen einen Neustart, um wirksam zu werden.</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="105"/>
+        <location filename="src/ui/settings/settings_widget.py" line="107"/>
         <source>App Settings</source>
         <translation>App-Einstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="110"/>
+        <location filename="src/ui/settings/settings_widget.py" line="112"/>
         <source>User Settings</source>
         <translation>Nutzer-Einstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="118"/>
+        <location filename="src/ui/settings/settings_widget.py" line="120"/>
         <source>Translator Settings</source>
         <translation>Übersetzer-Einstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="132"/>
+        <location filename="src/ui/settings/settings_widget.py" line="134"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="138"/>
+        <location filename="src/ui/settings/settings_widget.py" line="140"/>
         <source>Save</source>
         <translation>Speichern</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="157"/>
+        <location filename="src/ui/settings/settings_widget.py" line="159"/>
         <source>Restart required</source>
         <translation>Neustart erforderlich</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="160"/>
+        <location filename="src/ui/settings/settings_widget.py" line="162"/>
         <source>SSE-AT must be restarted for the changes to take effect! Restart now?</source>
         <translation>SSE-AT muss neugestartet werden, damit die Änderungen wirksam werden! Jetzt neustarten?</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="166"/>
+        <location filename="src/ui/settings/settings_widget.py" line="168"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_widget.py" line="167"/>
+        <location filename="src/ui/settings/settings_widget.py" line="169"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
