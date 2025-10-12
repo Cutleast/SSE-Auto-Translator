@@ -274,8 +274,7 @@ class MainPageWidget(QWidget):
         ).exec()
         self.user_data.user_config.save()
 
-        # TODO: Make this more elegant
-        self.state_service.update_signal.emit()
+        self.__modinstance_widget.update()
 
     def __show_scan_result(self, modfiles: Optional[list[ModFile]] = None) -> None:
         """

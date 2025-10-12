@@ -6,7 +6,7 @@ import logging
 import os
 import webbrowser
 from pathlib import Path
-from typing import Optional
+from typing import Optional, override
 
 from cutleast_core_lib.core.utilities.filesystem import open_in_explorer
 from cutleast_core_lib.ui.utilities.tree_widget import are_children_visible
@@ -169,7 +169,7 @@ class ModInstanceWidget(QTreeWidget):
         self.__menu.open_modpage_requested.connect(self.__open_modpage)
         self.__menu.open_in_explorer_requested.connect(self.__open_in_explorer)
 
-        self.state_service.update_signal.connect(self.__update)
+        self.state_service.update_signal.connect(self.update)
 
         self.__load_mod_instance()
 
@@ -239,7 +239,7 @@ class ModInstanceWidget(QTreeWidget):
                     self.addTopLevelItem(mod_item)
 
         self.resizeColumnToContents(1)
-        self.__update()
+        self.update()
 
     @staticmethod
     def _create_separator_item(separator: Mod, index: int) -> QTreeWidgetItem:
@@ -298,7 +298,8 @@ class ModInstanceWidget(QTreeWidget):
 
         return modfile_item
 
-    def __update(self) -> None:
+    @override
+    def update(self) -> None:  # type: ignore
         """
         Updates the displayed modlist.
         """
@@ -438,7 +439,7 @@ class ModInstanceWidget(QTreeWidget):
             self.user_data.masterlist.add_to_ignore_list(modfile.name)
 
         self.user_data.user_config.save()
-        self.__update()
+        self.update()
 
     def __open_modpage(self) -> None:
         current_item: Optional[Mod | ModFile] = self.__get_current_item()
@@ -740,7 +741,7 @@ class ModInstanceWidget(QTreeWidget):
             self.__name_filter = (name_filter, case_sensitive)
         else:
             self.__name_filter = None
-        self.__update()
+        self.update()
 
     def set_state_filter(self, state_filter: list[TranslationStatus]) -> None:
         """
@@ -751,7 +752,7 @@ class ModInstanceWidget(QTreeWidget):
         """
 
         self.__state_filter = state_filter if state_filter else None
-        self.__update()
+        self.update()
 
     def get_visible_modfiles(self, only_checked: bool = True) -> list[ModFile]:
         """
