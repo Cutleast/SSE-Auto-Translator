@@ -2718,6 +2718,11 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
         <translation>Anfrage an &apos;{0}&apos; mit Status Code {1} fehlgeschlagen!</translation>
     </message>
     <message>
+        <location filename="core-lib/src/cutleast_core_lib/core/utilities/exceptions.py" line="115"/>
+        <source>The process is incomplete and has no result!</source>
+        <translation>Der Vorgang ist unvollständig und hat kein Ergebnis!</translation>
+    </message>
+    <message>
         <location filename="src/core/translation_provider/exceptions.py" line="75"/>
         <source>Request to &apos;{0}&apos; returned an unexpected response!
 Response: {1}</source>
