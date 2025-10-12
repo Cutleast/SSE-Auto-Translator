@@ -753,6 +753,29 @@ class ModInstanceWidget(QTreeWidget):
         self.__state_filter = state_filter if state_filter else None
         self.__update()
 
+    def get_visible_modfiles(self, only_checked: bool = True) -> list[ModFile]:
+        """
+        Args:
+            only_checked (bool, optional):
+                Only return items that are checked. Defaults to True.
+
+        Returns:
+            list[ModFile]: List of visible mod files with the current active filter.
+        """
+
+        return [
+            modfile
+            for modfile_items in self.__modfile_items.values()
+            for modfile, modfile_item in modfile_items.items()
+            if (
+                not modfile_item.isHidden()
+                and (
+                    not only_checked
+                    or modfile_item.checkState(0) == Qt.CheckState.Checked
+                )
+            )
+        ]
+
     def get_visible_modfile_item_count(self, only_checked: bool = True) -> int:
         """
         Args:
@@ -762,20 +785,7 @@ class ModInstanceWidget(QTreeWidget):
             int: Number of visible modfile items with the current active filter
         """
 
-        return len(
-            [
-                modfile_item
-                for modfile_items in self.__modfile_items.values()
-                for modfile_item in modfile_items.values()
-                if (
-                    not modfile_item.isHidden()
-                    and (
-                        not only_checked
-                        or modfile_item.checkState(0) == Qt.CheckState.Checked
-                    )
-                )
-            ]
-        )
+        return len(self.get_visible_modfiles(only_checked))
 
     def is_modfile_checked(self, modfile: ModFile, mod: Mod) -> bool:
         """

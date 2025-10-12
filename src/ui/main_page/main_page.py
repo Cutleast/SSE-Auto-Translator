@@ -117,9 +117,7 @@ class MainPageWidget(QWidget):
 
         self.__init_ui()
 
-        self.__tool_bar.filter_changed.connect(
-            self.__modinstance_widget.set_state_filter
-        )
+        self.__tool_bar.filter_changed.connect(self.__on_state_filter_changed)
         self.__tool_bar.ignore_list_requested.connect(self.__open_ignore_list)
         self.__tool_bar.help_requested.connect(self.__modinstance_widget.show_help)
         self.__tool_bar.modlist_scan_requested.connect(self.__run_basic_scan)
@@ -129,10 +127,7 @@ class MainPageWidget(QWidget):
         self.__tool_bar.deep_scan_requested.connect(self.__run_deep_scan)
         self.__tool_bar.string_search_requested.connect(self.__run_string_search)
 
-        self.__search_bar.searchChanged.connect(
-            self.__modinstance_widget.set_name_filter
-        )
-        self.__search_bar.searchChanged.connect(self.__database_widget.set_name_filter)
+        self.__search_bar.searchChanged.connect(self.__on_search_changed)
 
         self.__modinstance_widget.basic_scan_requested.connect(
             lambda: self.__run_basic_scan(only_selected=True)
@@ -228,12 +223,16 @@ class MainPageWidget(QWidget):
 
     def __update(self) -> None:
         self.__title_label.setText(self.mod_instance.display_name)
-        self.__modfiles_num_label.display(len(self.mod_instance.modfiles))
+        self.__modfiles_num_label.display(
+            self.__modinstance_widget.get_visible_modfile_item_count()
+        )
         self.__update_header()
 
     def __update_header(self) -> None:
         modfile_states: dict[TranslationStatus, int] = (
-            self.state_service.get_modfile_state_summary()
+            self.state_service.get_modfile_state_summary(
+                self.__modinstance_widget.get_visible_modfiles()
+            )
         )
         self.__bar_chart.setValues(list(modfile_states.values()))
 
@@ -251,6 +250,17 @@ class MainPageWidget(QWidget):
 
         self.__modfiles_num_label.setToolTip(num_tooltip)
         self.__bar_chart.setToolTip(num_tooltip)
+
+    def __on_search_changed(self, text: str, case_sensitive: bool) -> None:
+        self.__database_widget.set_name_filter(text, case_sensitive)
+        self.__modinstance_widget.set_name_filter(text, case_sensitive)
+
+        self.__update()
+
+    def __on_state_filter_changed(self, state_filter: list[TranslationStatus]) -> None:
+        self.__modinstance_widget.set_state_filter(state_filter)
+
+        self.__update()
 
     def __open_ignore_list(self) -> None:
         """
