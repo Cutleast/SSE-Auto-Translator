@@ -908,6 +908,11 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
 <context>
     <name>IntroductionPage</name>
     <message>
+        <location filename="src/ui/startup_dialog/introduction.py" line="26"/>
+        <source>Exit</source>
+        <translation>Beenden</translation>
+    </message>
+    <message>
         <location filename="src/ui/startup_dialog/introduction.py" line="31"/>
         <source>Welcome!</source>
         <translation>Willkommen!</translation>

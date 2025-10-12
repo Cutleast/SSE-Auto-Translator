@@ -902,6 +902,11 @@ Depending on the Translator API this can raise unexpected costs.</comment>
 <context>
     <name>IntroductionPage</name>
     <message>
+        <location filename="src/ui/startup_dialog/introduction.py" line="26"/>
+        <source>Exit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="src/ui/startup_dialog/introduction.py" line="31"/>
         <source>Welcome!</source>
         <translation type="unfinished"></translation>

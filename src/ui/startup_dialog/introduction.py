@@ -23,7 +23,7 @@ class IntroductionPage(Page):
     def __init__(self, parent: Optional[QWidget] = None) -> None:
         super().__init__(parent)
 
-        self._back_button.setText("Exit")
+        self._back_button.setText(self.tr("Exit"))
         self.valid_signal.emit(True)
 
     @override
