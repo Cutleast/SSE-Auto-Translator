@@ -73,6 +73,12 @@ def __init_argparser() -> ArgumentParser:
         help="Enables various debug features and information used for development.",
     )
 
+    parser.add_argument(
+        "--disable-nxm-premium",
+        action="store_true",
+        help="Disables premium features of the Nexus Mods API like direct downloads.",
+    )
+
     return parser
 
 

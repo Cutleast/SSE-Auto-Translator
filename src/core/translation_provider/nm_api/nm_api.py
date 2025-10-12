@@ -120,6 +120,8 @@ class NexusModsApi(ProviderApi):
         self.__premium = premium
 
     def __validate_api_key(self, key: str) -> tuple[bool, bool]:
+        from app import App
+
         url = "https://api.nexusmods.com/v1/users/validate.json"
         headers = {
             "accept": "application/json",
@@ -141,6 +143,10 @@ class NexusModsApi(ProviderApi):
         else:
             self.log.error("Response has non-200 status code!")
             self.log.debug(f"Response content: {res.content}")
+
+        if App.has_instance() and App.get().args.disable_nxm_premium:
+            premium = False
+            self.log.info("Premium features disabled by command line argument.")
 
         return api_key_valid, premium
 
