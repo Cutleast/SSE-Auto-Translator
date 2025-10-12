@@ -67,14 +67,23 @@ class StringListWidget(QWidget):
         self.__strings = strings
         self.__nested = isinstance(strings, dict)
         self.__translation_mode = translation_mode
-        self.__columns = [
-            self.tr("Type"),
-            self.tr("Form ID"),
-            self.tr("Editor ID"),
-            self.tr("Index"),
-            self.tr("Original"),
-            self.tr("String"),
-        ]
+        if translation_mode:
+            self.__columns = [
+                self.tr("Type"),
+                self.tr("Form ID"),
+                self.tr("Editor ID"),
+                self.tr("Index"),
+                self.tr("Original"),
+                self.tr("String"),
+            ]
+        else:
+            self.__columns = [
+                self.tr("Type"),
+                self.tr("Form ID"),
+                self.tr("Editor ID"),
+                self.tr("Index"),
+                self.tr("String"),
+            ]
 
         self.__init_ui()
         self.__init_strings()
@@ -132,7 +141,6 @@ class StringListWidget(QWidget):
         self.__vlayout.addWidget(self.__strings_widget)
 
         self.__strings_widget.setHeaderLabels(self.__columns)
-        self.__strings_widget.setColumnHidden(4, not self.__translation_mode)
 
     def __init_context_menu(self) -> None:
         self.__menu = StringListMenu(self, self.__nested)

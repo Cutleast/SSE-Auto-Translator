@@ -62,7 +62,6 @@ class StringListMenu(Menu):
 
         self.__copy_menu.addSeparator()
 
-        # TODO: Hide translated string column if translation mode is False
         self.__copy_checkboxes = {}
         for c, column in enumerate(self.__parent.columns):
             checkbox = QCheckBox(self.tr("Copy {0}").format(column), self.__copy_menu)
