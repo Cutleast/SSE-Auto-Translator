@@ -197,6 +197,7 @@ class MainWindow(QMainWindow):
         if confirmation:
             super().closeEvent(event)
             self.mainpage_widget.save_state()
+            self.__status_bar.close_log_window()
         else:
             event.ignore()
 

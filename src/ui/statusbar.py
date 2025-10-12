@@ -84,6 +84,15 @@ class StatusBar(QStatusBar):
         )
         self.__log_window.show()
 
+    def close_log_window(self) -> None:
+        """
+        Closes the log window if it is open.
+        """
+
+        if self.__log_window is not None:
+            self.__log_window.close()
+            self.__log_window = None
+
     @override
     def timerEvent(self, event: QTimerEvent) -> None:
         super().timerEvent(event)
