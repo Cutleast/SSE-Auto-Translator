@@ -1667,27 +1667,27 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
     <name>SettingsDialog</name>
     <message>
         <location filename="src/ui/settings/settings_dialog.py" line="38"/>
-        <location filename="src/ui/settings/settings_dialog.py" line="50"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="49"/>
         <source>Settings</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="66"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="65"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="68"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="67"/>
         <source>Are you sure you want to cancel? All changes will be lost.</source>
         <translation>Bist du sicher, dass du abbrechen möchtest? Alle ungespeicherten Änderungen gehen dabei verloren.</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="74"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="73"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="75"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="74"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
