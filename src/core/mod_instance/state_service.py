@@ -205,11 +205,3 @@ class StateService(QObject):
         self.log.debug(f"Updated states for {len(states)} mod file(s).")
 
         self.update_signal.emit()
-
-    def reevaluate_states(self) -> None:
-        """
-        Reevaluates the mod file states and emits the update signal.
-        """
-
-        # TODO: Implement this
-        raise NotImplementedError
