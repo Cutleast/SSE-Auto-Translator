@@ -28,9 +28,6 @@ class ModInstance:
     List of all installed mods in this instance.
     """
 
-    __selected_modfiles: Optional[list[ModFile]] = None
-    __selected_mods: Optional[list[Mod]] = None
-
     def __init__(self, display_name: str, mods: list[Mod]) -> None:
         self.display_name = display_name
         self.mods = mods
@@ -42,45 +39,6 @@ class ModInstance:
         """
 
         return [modfile for mod in self.mods for modfile in mod.modfiles]
-
-    @property
-    def selected_modfiles(self) -> list[ModFile]:
-        """
-        List of all mod files that are currently selected
-        or all mod files if none are selected.
-        """
-
-        return self.__selected_modfiles or self.modfiles
-
-    @selected_modfiles.setter
-    def selected_modfiles(self, value: Optional[list[ModFile]]) -> None:
-        self.__selected_modfiles = value
-
-    @property
-    def selected_mods(self) -> list[Mod]:
-        """
-        List of all mods that are currently selected
-        or all mods if none are selected.
-        """
-
-        return self.__selected_mods or self.mods
-
-    @selected_mods.setter
-    def selected_mods(self, value: Optional[list[Mod]]) -> None:
-        self.__selected_mods = value
-
-    @property
-    def selected_items(self) -> dict[Mod, list[ModFile]]:
-        """
-        Dictionary of mods and their mod files that are currently selected.
-        """
-
-        return {
-            mod: [
-                modfile for modfile in mod.modfiles if modfile in self.selected_modfiles
-            ]
-            for mod in self.selected_mods
-        }
 
     def get_modfile(
         self,
