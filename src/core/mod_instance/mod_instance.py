@@ -28,6 +28,8 @@ class ModInstance:
     List of all installed mods in this instance.
     """
 
+    __modfiles_by_path: Optional[dict[Path, list[ModFile]]] = None
+
     def __init__(self, display_name: str, mods: list[Mod]) -> None:
         self.display_name = display_name
         self.mods = mods
@@ -39,6 +41,21 @@ class ModInstance:
         """
 
         return [modfile for mod in self.mods for modfile in mod.modfiles]
+
+    @property
+    def modfiles_by_path(self) -> dict[Path, list[ModFile]]:
+        """
+        Dictionary mapping mod file paths to lists of ModFile objects.
+        This is lazily built and cached on first access.
+        """
+
+        if self.__modfiles_by_path is None:
+            self.__modfiles_by_path = {}
+            for mod in self.mods:
+                for modfile in mod.modfiles:
+                    self.__modfiles_by_path.setdefault(modfile.path, []).append(modfile)
+
+        return self.__modfiles_by_path
 
     def get_modfile(
         self,
@@ -84,16 +101,13 @@ class ModInstance:
             list[ModFile]: List of mod files
         """
 
-        mods: dict[Mod, ModFile] = {
-            mod: mf
-            for mod in filter(lambda m: m not in ignore_mods, self.mods)
-            for mf in filter(lambda mf: mf.status not in ignore_states, mod.modfiles)
-            if mf.path == modfile
-        }
-
         return [
             mf
-            for _, mf in sorted(mods.items(), key=lambda item: self.mods.index(item[0]))
+            for mf in self.modfiles_by_path.get(modfile, [])
+            if (
+                not any(mf in mod.modfiles for mod in ignore_mods)
+                and mf.status not in ignore_states
+            )
         ]
 
     def get_mod(self, mod_id: ModId) -> Optional[Mod]:
