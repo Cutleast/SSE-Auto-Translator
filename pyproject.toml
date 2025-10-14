@@ -19,7 +19,6 @@ dependencies = [
     "pyuac",
     "pywin32",
     "pyzmq",
-    "requests-mock",
     "spylls",
     "sse-bsa",
     "websocket-client",
@@ -35,6 +34,7 @@ dev = [
     "pytest-mock",
     "pytest-qt",
     "python-dotenv",
+    "requests-mock",
     "ruff",
     "types-requests",
 ]
