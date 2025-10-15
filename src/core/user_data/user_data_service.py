@@ -181,3 +181,11 @@ class UserDataService(SingletonQObject):
             raise ValueError("User data is not yet loaded or setup.")
 
         return self.__user_data
+
+    def get_data_path(self) -> Path:
+        """
+        Returns:
+            Path: The path to the user data folder.
+        """
+
+        return self.__data_path

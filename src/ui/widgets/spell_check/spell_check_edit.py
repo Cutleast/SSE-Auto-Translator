@@ -3,6 +3,7 @@ Copyright (c) Cutleast
 """
 
 import string
+from pathlib import Path
 from typing import Optional
 
 from cutleast_core_lib.ui.utilities import apply_shadow
@@ -26,19 +27,24 @@ class SpellCheckEdit(QPlainTextEdit):
     __checker: SpellChecker
 
     def __init__(
-        self, language: str, initial_text: str = "", parent: Optional[QWidget] = None
+        self,
+        language: str,
+        user_data_path: Path,
+        initial_text: str = "",
+        parent: Optional[QWidget] = None,
     ) -> None:
         """
         Args:
             language (str):
                 The lowered name of the language to load the spell checker for.
+            user_data_path (Path): Path to the user data directory.
             initial_text (str, optional): Initial text to insert. Defaults to "".
             parent (Optional[QWidget], optional): Parent widget. Defaults to None.
         """
 
         super().__init__(parent)
 
-        self.__checker = SpellChecker(language)
+        self.__checker = SpellChecker(language, user_data_path)
 
         self.setPlainText(initial_text)
         self.textChanged.connect(self.__on_text_changed)
@@ -131,6 +137,6 @@ if __name__ == "__main__":
     from PySide6.QtWidgets import QApplication
 
     app = QApplication()
-    editor = SpellCheckEdit(language="german")
+    editor = SpellCheckEdit(language="german", user_data_path=Path("user_data"))
     editor.show()
     app.exec()

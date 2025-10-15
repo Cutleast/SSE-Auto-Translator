@@ -1841,7 +1841,7 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
 <context>
     <name>SpellCheckEdit</name>
     <message>
-        <location filename="src/ui/widgets/spell_check/spell_check_edit.py" line="63"/>
+        <location filename="src/ui/widgets/spell_check/spell_check_edit.py" line="69"/>
         <source>Add to dictionary</source>
         <translation>Zum Wörterbuch hinzufügen</translation>
     </message>
@@ -2384,73 +2384,73 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
 <context>
     <name>TranslatorDialog</name>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="97"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="98"/>
         <source>Go to previous String</source>
         <translation>Gehe zum vorherigen String</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="108"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="109"/>
         <source>Go to next String</source>
         <translation>Gehe zum nächsten String</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="163"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="164"/>
         <source>Translate with API</source>
         <translation>Mit der API übersetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="169"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="170"/>
         <source>Reset String</source>
         <translation>String zurücksetzen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="196"/>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="287"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="198"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="289"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="205"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="207"/>
         <source>Press F1 (Translation complete), F2 (Translation incomplete/Work in Progress) or F3 (No translation required) to finalize the string and go to the next one.</source>
         <translation>F1 (Übersetzung vollständig), F2 (Übersetzung unvollständig/in Arbeit) oder F3 (Keine Übersetzung erforderlich) drücken, um den String zu finalisieren und zum nächsten zu gehen.</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="217"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="219"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="289"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="291"/>
         <source>Are you sure you want to cancel? All changes will be lost!</source>
         <translation>Bist du sicher, dass du abbrechen möchtest? Alle Änderungen gehen dabei verloren!</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="295"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="297"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="296"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="298"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="326"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="328"/>
         <source>String was modified</source>
         <translation>String wurde verändert</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="329"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="331"/>
         <source>String was modified. Do you want to save it before switching to another string?</source>
         <translation>String wurde verändert. Möchtest du ihn speichern, bevor du zum nächsten String gehst?</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="337"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="339"/>
         <source>Don&apos;t save and continue</source>
         <translation>Nicht speichern und fortfahren</translation>
     </message>
     <message>
-        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="340"/>
+        <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="342"/>
         <source>Save and continue</source>
         <translation>Speichern und fortfahren</translation>
     </message>
