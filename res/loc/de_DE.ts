@@ -449,12 +449,12 @@ Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manage
         <location filename="src/core/downloader/download_manager.py" line="281"/>
         <location filename="src/core/downloader/download_manager.py" line="298"/>
         <source>Collecting available downloads...</source>
-        <translation>Sammle verfügbare Übersetzungen...</translation>
+        <translation>Verfügbare Übersetzungen werden gesammelt...</translation>
     </message>
     <message>
         <location filename="src/core/downloader/download_manager.py" line="426"/>
         <source>Collecting available translation updates...</source>
-        <translation>Sammle verfügbare Updates für Übersetzungen...</translation>
+        <translation>Verfügbare Updates für Übersetzungen werden gesammelt...</translation>
     </message>
 </context>
 <context>
@@ -516,7 +516,7 @@ Wenn du keinen Nexus Mods Premium Account hast, muss SSE-AT mit &quot;Mod Manage
     <message>
         <location filename="src/core/editor/editor.py" line="161"/>
         <source>Translating with API...</source>
-        <translation>Übersetze mit API...</translation>
+        <translation>Wird mit API übersetzt...</translation>
     </message>
 </context>
 <context>
@@ -1266,7 +1266,7 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
     <message>
         <location filename="src/ui/main_page/mod_instance/help_dialog.py" line="37"/>
         <source>Below is an overview of the various states a mod file can have:</source>
-        <translation>Unten ist eine Übersicht über die Zustände, die eine Moddatei haben kann:</translation>
+        <translation>Das sind die Markierungen, die eine Moddatei haben kann:</translation>
     </message>
     <message>
         <location filename="src/ui/main_page/mod_instance/help_dialog.py" line="66"/>
@@ -1790,12 +1790,12 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
     <message>
         <location filename="src/ui/startup_dialog/setup_page.py" line="100"/>
         <source>Enable Interface Files (Data/Interface/*.txt)</source>
-        <translation>Aktiviere Interface-Dateien (Data/Interface/*.txt)</translation>
+        <translation>Interface-Dateien (Data/Interface/*.txt) aktivieren</translation>
     </message>
     <message>
         <location filename="src/ui/startup_dialog/setup_page.py" line="106"/>
         <source>Enable Papyrus Scripts (Data/Scripts/*.pex)</source>
-        <translation>Aktiviere Papyrus-Skripte (Data/Scripts/*.pex)</translation>
+        <translation>Papyrus-Skripte (Data/Scripts/*.pex) aktivieren</translation>
     </message>
     <message>
         <location filename="src/ui/startup_dialog/setup_page.py" line="108"/>
@@ -1807,12 +1807,12 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
     <message>
         <location filename="src/ui/startup_dialog/setup_page.py" line="114"/>
         <source>Enable Textures (Data/Textures/*)</source>
-        <translation>Aktiviere Texturen (Data/Textures/*)</translation>
+        <translation>Texturen (Data/Textures/*) aktivieren</translation>
     </message>
     <message>
         <location filename="src/ui/startup_dialog/setup_page.py" line="122"/>
         <source>Enable Sound Files (Data/Sound/*)</source>
-        <translation>Aktiviere Sound-Dateien (Data/Sound/*)</translation>
+        <translation>Sound-Dateien (Data/Sound/*) aktivieren</translation>
     </message>
     <message>
         <location filename="src/ui/startup_dialog/setup_page.py" line="132"/>
@@ -2041,27 +2041,27 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
     <message>
         <location filename="src/core/string/string_status.py" line="77"/>
         <source>Show stateless strings</source>
-        <translation>Zeige Strings ohne Status</translation>
+        <translation>Strings ohne Status zeigen</translation>
     </message>
     <message>
         <location filename="src/core/string/string_status.py" line="80"/>
         <source>Show strings that do not require a translation</source>
-        <translation>Zeige Strings, die keine Übersetzung benötigen</translation>
+        <translation>Strings, die keine Übersetzung benötigen, zeigen</translation>
     </message>
     <message>
         <location filename="src/core/string/string_status.py" line="83"/>
         <source>Show strings that are completely translated</source>
-        <translation>Zeige Strings, die vollständig übersetzt sind</translation>
+        <translation>Strings, die vollständig übersetzt sind, zeigen</translation>
     </message>
     <message>
         <location filename="src/core/string/string_status.py" line="86"/>
         <source>Show strings that are partially translated</source>
-        <translation>Zeige Strings, die unvollständig übersetzt sind</translation>
+        <translation>Strings, die unvollständig übersetzt sind, zeigen</translation>
     </message>
     <message>
         <location filename="src/core/string/string_status.py" line="89"/>
         <source>Show strings that require a translation</source>
-        <translation>Zeige Strings, die eine Übersetzung benötigen</translation>
+        <translation>Strings, die eine Übersetzung benötigen, zeigen</translation>
     </message>
 </context>
 <context>
@@ -2386,12 +2386,12 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
     <message>
         <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="98"/>
         <source>Go to previous String</source>
-        <translation>Gehe zum vorherigen String</translation>
+        <translation>Zum vorherigen String gehen</translation>
     </message>
     <message>
         <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="109"/>
         <source>Go to next String</source>
-        <translation>Gehe zum nächsten String</translation>
+        <translation>Zum nächsten String gehen</translation>
     </message>
     <message>
         <location filename="src/ui/translation_editor/editor/translator_dialog.py" line="164"/>
@@ -2552,7 +2552,7 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
     <message>
         <location filename="src/core/user_data/user_data_service.py" line="79"/>
         <source>Loading modinstance...</source>
-        <translation>Modinstanz wird geladen...</translation>
+        <translation>Modliste wird geladen...</translation>
     </message>
     <message>
         <location filename="src/core/user_data/user_data_service.py" line="84"/>
@@ -2621,12 +2621,12 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
     <message>
         <location filename="src/ui/settings/user_settings.py" line="163"/>
         <source>Enable Interface Files (Data/Interface/*.txt)</source>
-        <translation>Aktiviere Interface-Dateien (Data/Interface/*.txt)</translation>
+        <translation>Interface-Dateien (Data/Interface/*.txt) aktivieren</translation>
     </message>
     <message>
         <location filename="src/ui/settings/user_settings.py" line="174"/>
         <source>Enable Scripts (Data/Scripts/*.pex)</source>
-        <translation>Aktiviere Papyrus-Skripte (Data/Scripts/*.pex)</translation>
+        <translation>Papyrus-Skripte (Data/Scripts/*.pex) aktivieren</translation>
     </message>
     <message>
         <location filename="src/ui/settings/user_settings.py" line="176"/>
@@ -2638,12 +2638,12 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
     <message>
         <location filename="src/ui/settings/user_settings.py" line="185"/>
         <source>Enable Textures (Data/Textures/*)</source>
-        <translation>Aktiviere Texturen (Data/Textures/*)</translation>
+        <translation>Texturen (Data/Textures/*) aktivieren</translation>
     </message>
     <message>
         <location filename="src/ui/settings/user_settings.py" line="196"/>
         <source>Enable Sound Files (Data/Sound/*)</source>
-        <translation>Aktiviere Sound-Dateien (Data/Sound/*)</translation>
+        <translation>Sound-Dateien (Data/Sound/*) aktivieren</translation>
     </message>
     <message>
         <location filename="src/ui/settings/user_settings.py" line="244"/>
@@ -2868,42 +2868,42 @@ Antwort: {1}</translation>
     <message>
         <location filename="src/core/mod_file/translation_status.py" line="123"/>
         <source>Show files without strings</source>
-        <translation>Zeige Dateien ohne Strings</translation>
+        <translation>Dateien ohne Strings zeigen</translation>
     </message>
     <message>
         <location filename="src/core/mod_file/translation_status.py" line="126"/>
         <source>Show files that are already in target language</source>
-        <translation>Zeige Dateien, die bereits in der Zielsprache sind</translation>
+        <translation>Dateien, die bereits in der Zielsprache sind, zeigen</translation>
     </message>
     <message>
         <location filename="src/core/mod_file/translation_status.py" line="129"/>
         <source>Show files with an installed translation</source>
-        <translation>Zeige Dateien mit installierten Übersetzungen</translation>
+        <translation>Dateien mit installierten Übersetzungen, zeigen</translation>
     </message>
     <message>
         <location filename="src/core/mod_file/translation_status.py" line="132"/>
         <source>Show files with an installed but incomplete translation</source>
-        <translation>Zeige Dateien mit installierten, aber unvollständigen Übersetzungen</translation>
+        <translation>Dateien mit installierten, aber unvollständigen Übersetzungen, zeigen</translation>
     </message>
     <message>
         <location filename="src/core/mod_file/translation_status.py" line="136"/>
         <source>Show files that can be translated with the database</source>
-        <translation>Zeige Dateien, die mit der Datenbank übersetzt werden können</translation>
+        <translation>Dateien, die mit der Datenbank übersetzt werden können, zeigen</translation>
     </message>
     <message>
         <location filename="src/core/mod_file/translation_status.py" line="139"/>
         <source>Show files that have a translation available online</source>
-        <translation>Zeige Dateien, für die online eine Übersetzung verfügbar ist</translation>
+        <translation>Dateien, für die online eine Übersetzung verfügbar ist, zeigen</translation>
     </message>
     <message>
         <location filename="src/core/mod_file/translation_status.py" line="142"/>
         <source>Show files that require a translation</source>
-        <translation>Zeige Dateien, die eine Übersetzung benötigen</translation>
+        <translation>Dateien, die eine Übersetzung benötigen, zeigen</translation>
     </message>
     <message>
         <location filename="src/core/mod_file/translation_status.py" line="145"/>
         <source>Show files without an available translation</source>
-        <translation>Zeige Dateien, für die keine Übersetzung verfügbar ist</translation>
+        <translation>Dateien, für die keine Übersetzung verfügbar ist, zeigen</translation>
     </message>
 </context>
 </TS>
