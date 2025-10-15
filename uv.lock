@@ -203,6 +203,22 @@ wheels = [
 ]
 
 [[package]]
+name = "chunspell"
+version = "2.0.4"
+source = { registry = "https://pypi.org/simple" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/20/7e/fd1665e199161d7c4dd533d0b9b3d0f6055f5b4245fa7be044b8ea466fec/chunspell-2.0.4-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:38ac79aa68564b7e83a9dbef1f88c5c9d2c1e9ea769115a0fd3806c86e47df77", size = 830365, upload-time = "2024-06-15T10:30:42.336Z" },
+    { url = "https://files.pythonhosted.org/packages/18/67/031dcacc4e613b3dc7ff499400f828fb2eaef753869d501fbd041a713e1c/chunspell-2.0.4-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:a85088d91c433c2f4be4a435e9d2da341ba3461e5770630e7171ef20a39f6397", size = 920287, upload-time = "2024-06-15T10:30:44.057Z" },
+    { url = "https://files.pythonhosted.org/packages/5b/81/fc8322c5229f0013ce7b9f965f085e362526512f4fb7c1fad69c4ca42b2d/chunspell-2.0.4-cp312-cp312-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:d4a1ccfb313faf36a25270a44bf68a612425b1a6f48064efba31b4d5e5aa325e", size = 949312, upload-time = "2024-06-15T10:30:45.806Z" },
+    { url = "https://files.pythonhosted.org/packages/52/eb/d151c8c53c35ace4e3e92be988776dd3b892e85b0d34d08ef89f1b8efdf8/chunspell-2.0.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:1632bfa913f6c91f6fe90685e28ca98ba27472471153c81adb2a6de6e5ea5212", size = 930645, upload-time = "2024-06-15T10:30:47.198Z" },
+    { url = "https://files.pythonhosted.org/packages/fa/b4/9573289f15701b4dbb19c50a1d09edddf7b1825e32f25b23d1e52647d6f3/chunspell-2.0.4-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:f3879848e0ec8fa6e601bc8ef70885c724a1c6793977307853eb38ab3d314f2e", size = 1823968, upload-time = "2024-06-15T10:30:48.685Z" },
+    { url = "https://files.pythonhosted.org/packages/dd/c7/3b9f10cb4b94ece2cc59ec794c3be8de7f3c8361a85907dd83556b09476a/chunspell-2.0.4-cp312-cp312-musllinux_1_2_i686.whl", hash = "sha256:c0bb70c67c04b6e6f3597f729763f344579447b7f845e78ae5e9ebbb6472b5e1", size = 1985648, upload-time = "2024-06-15T10:30:49.943Z" },
+    { url = "https://files.pythonhosted.org/packages/ed/26/50b74e3c27c488344776248157717416cf0b69a1879e4eb6058f53143f4b/chunspell-2.0.4-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:eb54adbadece19b9ee000a6bf5acd821a2fc5799125229002ad9495f7ed5c87b", size = 1878046, upload-time = "2024-06-15T10:30:51.936Z" },
+    { url = "https://files.pythonhosted.org/packages/d8/b1/494a0ae5a485c56e7198b489a470023f40fb0e8220dbd4c77aa5881fa778/chunspell-2.0.4-cp312-cp312-win32.whl", hash = "sha256:92e9339e98d963bfe045d1cef90a076be8f18d02c6e291bc96b7cf223a6f6fef", size = 589226, upload-time = "2024-06-15T10:30:53.18Z" },
+    { url = "https://files.pythonhosted.org/packages/0f/62/32bfac36f8c98e5bebf9f9cd756c9a334bcd21520561b020b68bdd9c260f/chunspell-2.0.4-cp312-cp312-win_amd64.whl", hash = "sha256:2d26f9a99b2c2674f4fb5ade7fd738f207f5d15ced84485eb8b7455110ad697c", size = 606477, upload-time = "2024-06-15T10:30:54.298Z" },
+]
+
+[[package]]
 name = "cloudscraper"
 version = "1.2.71"
 source = { registry = "https://pypi.org/simple" }
@@ -1297,20 +1313,12 @@ wheels = [
 ]
 
 [[package]]
-name = "spylls"
-version = "0.1.7"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/5c/c2/19f34deb2dc1475dfeadafbd5666246041ee7578bb933e82de794f0a9283/spylls-0.1.7.tar.gz", hash = "sha256:7045892dcbd324d3685f69c5a760063e78fb839913724ce18077cf0a0c93f220", size = 1499693, upload-time = "2022-01-23T13:26:54.032Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/cd/19/ce6fcb4b86e188983bcfc1f84e4ac6f3038ca8d68b6d70a678cdc566f66c/spylls-0.1.7-py2.py3-none-any.whl", hash = "sha256:0c7fa4b66615f390bd12fd37939b85934c012309fd3cce8584844c54270b7776", size = 1509482, upload-time = "2022-01-23T13:26:40.203Z" },
-]
-
-[[package]]
 name = "sse-auto-translator"
 version = "3.0.0a1"
 source = { virtual = "." }
 dependencies = [
     { name = "beautifulsoup4" },
+    { name = "chunspell" },
     { name = "cloudscraper" },
     { name = "cutleast-core-lib" },
     { name = "deepl" },
@@ -1322,7 +1330,6 @@ dependencies = [
     { name = "pyuac" },
     { name = "pywin32" },
     { name = "pyzmq" },
-    { name = "spylls" },
     { name = "sse-bsa" },
     { name = "websocket-client" },
 ]
@@ -1345,6 +1352,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "beautifulsoup4" },
+    { name = "chunspell" },
     { name = "cloudscraper" },
     { name = "cutleast-core-lib", editable = "core-lib" },
     { name = "deepl" },
@@ -1356,7 +1364,6 @@ requires-dist = [
     { name = "pyuac" },
     { name = "pywin32" },
     { name = "pyzmq" },
-    { name = "spylls" },
     { name = "sse-bsa" },
     { name = "websocket-client" },
 ]

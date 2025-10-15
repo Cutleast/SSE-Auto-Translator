@@ -1839,6 +1839,14 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
     </message>
 </context>
 <context>
+    <name>SpellCheckEdit</name>
+    <message>
+        <location filename="src/ui/widgets/spell_check/spell_check_edit.py" line="63"/>
+        <source>Add to dictionary</source>
+        <translation>Zum Wörterbuch hinzufügen</translation>
+    </message>
+</context>
+<context>
     <name>StartupDialog</name>
     <message>
         <location filename="src/ui/startup_dialog/startup_dialog.py" line="46"/>
