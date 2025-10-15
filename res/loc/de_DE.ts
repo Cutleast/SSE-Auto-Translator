@@ -2288,72 +2288,72 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
 <context>
     <name>TranslationsWidget</name>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="136"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="137"/>
         <source>Name</source>
         <translation>Name</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="137"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="138"/>
         <source>Version</source>
         <translation>Version</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="138"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="139"/>
         <source>Source</source>
         <translation>Quelle</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="139"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="140"/>
         <source>Date</source>
         <translation>Datum</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="140"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="141"/>
         <source>Size</source>
         <translation>Größe</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="235"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="256"/>
         <source>Unknown</source>
         <translation>Unbekannt</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="406"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="427"/>
         <source>Rename translation</source>
         <translation>Übersetzung unbenennen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="407"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="428"/>
         <source>Enter new translation name:</source>
         <translation>Neuen Namen der Übersetzung eingeben:</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="410"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="431"/>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="411"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="432"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="444"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="465"/>
         <source>Export translation...</source>
         <translation>Übersetzung exportieren...</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="461"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="482"/>
         <source>Export successful!</source>
         <translation>Export erfolgreich!</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="462"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="483"/>
         <source>Translation successfully exported.</source>
         <translation>Übersetzung erfolgreich exportiert.</translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="473"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="494"/>
         <source>Delete translation</source>
         <comment>Delete translations</comment>
         <translation>
@@ -2362,7 +2362,7 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="480"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="501"/>
         <source>Are you sure you want to delete this translation?</source>
         <comment>Are you sure you want to delete %n translations?</comment>
         <translation>
@@ -2371,12 +2371,12 @@ Auf &quot;Mehr Details...&quot; klicken, um den verwendeten Filter zu sehen.</tr
         </translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="489"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="510"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="490"/>
+        <location filename="src/ui/main_page/database/translations/translations_widget.py" line="511"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>

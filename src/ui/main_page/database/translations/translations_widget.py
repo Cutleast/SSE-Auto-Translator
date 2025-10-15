@@ -116,7 +116,8 @@ class TranslationsWidget(QTreeWidget):
         self.__menu.open_modpage_requested.connect(self.__open_modpage)
         self.__menu.open_in_explorer_requested.connect(self.__open_in_explorer)
 
-        self.database.update_signal.connect(self.__load_translations)
+        self.database.add_signal.connect(self.__on_translations_added)
+        self.database.remove_signal.connect(self.__on_translations_removed)
 
         self.__load_translations()
 
@@ -223,6 +224,26 @@ class TranslationsWidget(QTreeWidget):
                     translation.name, name_filter, case_sensitive or False
                 )
             )
+
+    def __on_translations_added(self, new_translations: list[Translation]) -> None:
+        for translation in new_translations:
+            if translation in self.__translation_items:
+                continue
+
+            item: QTreeWidgetItem = self._create_translation_item(translation)
+            self.__translation_items[translation] = item
+            self.addTopLevelItem(item)
+
+    def __on_translations_removed(
+        self, removed_translations: list[Translation]
+    ) -> None:
+        for translation in removed_translations:
+            if translation not in self.__translation_items:
+                continue
+
+            item: QTreeWidgetItem = self.__translation_items.pop(translation)
+            self.takeTopLevelItem(self.indexOfTopLevelItem(item))
+            self.__file_items.pop(translation, None)
 
     def _create_translation_item(self, translation: Translation) -> QTreeWidgetItem:
         item = QTreeWidgetItem(
