@@ -880,7 +880,7 @@ Depending on the Translator API this can raise unexpected costs.</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="src/core/database/importer.py" line="324"/>
+        <location filename="src/core/database/importer.py" line="326"/>
         <source>Processing DSD files...</source>
         <translation type="unfinished"></translation>
     </message>

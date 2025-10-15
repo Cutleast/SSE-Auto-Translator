@@ -316,7 +316,9 @@ class Importer(QObject):
                 translation_strings.setdefault(modfile.path, []).extend(modfile_strings)
 
         for d, dsd_file in enumerate(dsd_files):
-            extracted_dsd_file: Path = archive_path.parent / dsd_file
+            extracted_dsd_file: Path = (
+                archive_path.parent / archive_path.stem / dsd_file
+            )
             modfile_name = extracted_dsd_file.parent.name
 
             if ldialog:

@@ -891,7 +891,7 @@ Abhängig von der API kann dies unerwartete Kosten zur Folge haben.</numerusform
         <translation>Moddateien werden verarbeitet...</translation>
     </message>
     <message>
-        <location filename="src/core/database/importer.py" line="324"/>
+        <location filename="src/core/database/importer.py" line="326"/>
         <source>Processing DSD files...</source>
         <translation>DSD-Dateien werden verarbeitet...</translation>
     </message>
