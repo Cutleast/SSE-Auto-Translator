@@ -105,6 +105,7 @@ class DownloadsTab(QWidget):
         self.__downloads_widget.header().setSectionResizeMode(
             0, QHeaderView.ResizeMode.Stretch
         )
+        self.__downloads_widget.setUniformRowHeights(True)
         self.__vlayout.addWidget(self.__downloads_widget)
 
     @override
