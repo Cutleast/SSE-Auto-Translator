@@ -8,6 +8,7 @@ from cutleast_core_lib.ui.widgets.menu import Menu
 from PySide6.QtCore import Signal
 from PySide6.QtGui import QAction, QCursor
 
+from core.file_source.file_source import FileSource
 from core.mod_file.mod_file import ModFile
 from core.mod_file.plugin_file import PluginFile
 from core.mod_file.translation_status import TranslationStatus
@@ -309,7 +310,13 @@ class ModInstanceMenu(Menu):
             )
         )
 
-        self.__open_in_explorer_action.setVisible(current_item is not None)
+        self.__open_in_explorer_action.setVisible(
+            current_item is not None
+            and not (
+                isinstance(current_item, ModFile)
+                and not FileSource.from_file(current_item.full_path).is_real_file()
+            )
+        )
         self.__open_modpage_action.setVisible(
             isinstance(current_item, Mod) and current_item.mod_id is not None
         )

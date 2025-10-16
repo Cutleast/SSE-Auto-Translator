@@ -10,8 +10,8 @@ from pathlib import Path
 from typing import override
 
 from cutleast_core_lib.core.cache.cache import Cache
-from cutleast_core_lib.core.utilities.filesystem import get_file_identifier
 
+from core.file_source.file_source import FileSource
 from core.string import StringList
 from core.utilities.filesystem import relative_data_path
 
@@ -77,7 +77,9 @@ class ModFile(metaclass=ABCMeta):
 
     @Cache.persistent_cache(
         cache_subfolder=Path("modfile_strings"),
-        id_generator=lambda self: get_file_identifier(self.full_path),
+        id_generator=lambda self: FileSource.from_file(
+            self.full_path
+        ).get_file_identifier(),
     )
     def get_strings(self) -> StringList:
         """

@@ -29,6 +29,8 @@ from core.database.database import TranslationDatabase
 from core.database.database_service import DatabaseService
 from core.database.importer import Importer
 from core.database.translation import Translation
+from core.file_source.bsa_file_source import BsaFileSource
+from core.file_source.file_source import FileSource
 from core.mod_file.mod_file import ModFile
 from core.mod_file.plugin_file import PluginFile
 from core.mod_file.translation_status import TranslationStatus
@@ -280,9 +282,14 @@ class ModInstanceWidget(QTreeWidget):
 
     @staticmethod
     def _create_modfile_item(modfile: ModFile, checked: bool = True) -> QTreeWidgetItem:
+        display_name: str = str(modfile.path)
+        file_source: FileSource = FileSource.from_file(modfile.full_path)
+        if isinstance(file_source, BsaFileSource):
+            display_name = f"{file_source.get_bsa_path().name}/{display_name}"
+
         modfile_item = QTreeWidgetItem(
             [
-                str(modfile.path),
+                display_name,
                 "",  # Version
                 "",  # Priority
             ]
@@ -457,6 +464,13 @@ class ModInstanceWidget(QTreeWidget):
         current_item: Optional[Mod | ModFile] = self.__get_current_item()
 
         if current_item is not None:
+            if (
+                isinstance(current_item, ModFile)
+                and not FileSource.from_file(current_item.full_path).is_real_file()
+            ):
+                # there is no real file to show in explorer
+                return
+
             open_in_explorer(
                 current_item.path
                 if isinstance(current_item, Mod)
@@ -621,7 +635,7 @@ class ModInstanceWidget(QTreeWidget):
         current_item: Optional[Mod | ModFile] = self.__get_current_item()
 
         if isinstance(current_item, ModFile):
-            os.startfile(current_item.full_path)
+            os.startfile(FileSource.from_file(current_item.full_path).get_real_file())
 
     def get_selected_items(self) -> tuple[list[Mod], list[ModFile]]:
         """
