@@ -925,7 +925,7 @@ Abhängig von der Übersetzer-API kann dies zu unerwarteten Kosten führen.</num
     <message>
         <location filename="src/ui/startup_dialog/introduction.py" line="36"/>
         <source>This guide will help you setting up this tool for your modlist.</source>
-        <translation>Diese Einführung wird dir bei der Einrichtung dieses Tools für deine Modlist helfen.</translation>
+        <translation>Diese Einführung wird dir bei der Einrichtung dieses Tools für deine Modliste helfen.</translation>
     </message>
     <message>
         <location filename="src/ui/startup_dialog/introduction.py" line="43"/>
