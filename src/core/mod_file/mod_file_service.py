@@ -59,7 +59,8 @@ class ModFileService(QObject):
         for file_type in MODFILE_TYPES:
             for pattern in file_type.get_glob_patterns(language.id):
                 for path in mod.path.glob(pattern):
-                    modfiles.append(file_type(path.name, mod.path / path))
+                    if path.is_file():
+                        modfiles.append(file_type(path.name, path))
 
         if include_bsas:
             for bsa_file in mod.path.glob("*.bsa"):
