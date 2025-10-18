@@ -9,6 +9,7 @@
         <file alias="icons/dark/checkmark.svg">../core-res/icons/dark/checkmark.svg</file>
         <file alias="icons/dark/exit.svg">../core-res/icons/dark/exit.svg</file>
         <file alias="icons/dark/horizontal_grip.png">../core-res/icons/dark/horizontal_grip.png</file>
+        <file alias="icons/dark/qt.svg">../core-res/icons/dark/qt.svg</file>
         <file alias="icons/dark/quick_reference.svg">../core-res/icons/dark/quick_reference.svg</file>
         <file alias="icons/dark/search.svg">../core-res/icons/dark/search.svg</file>
         <file alias="icons/dark/vertical_grip.png">../core-res/icons/dark/vertical_grip.png</file>
@@ -27,6 +28,7 @@
         <file alias="icons/light/checkmark.svg">../core-res/icons/light/checkmark.svg</file>
         <file alias="icons/light/exit.svg">../core-res/icons/light/exit.svg</file>
         <file alias="icons/light/horizontal_grip.png">../core-res/icons/light/horizontal_grip.png</file>
+        <file alias="icons/light/qt.svg">../core-res/icons/light/qt.svg</file>
         <file alias="icons/light/quick_reference.svg">../core-res/icons/light/quick_reference.svg</file>
         <file alias="icons/light/search.svg">../core-res/icons/light/search.svg</file>
         <file alias="icons/light/vertical_grip.png">../core-res/icons/light/vertical_grip.png</file>
